@@ -1,13 +1,13 @@
-// === Module 14786: CrunchyrollLinkSuccess ===
+// === Module 14866: CrunchyrollLinkSuccess ===
 
-// Module 14786 (CrunchyrollLinkSuccess)
+// Module 14866 (CrunchyrollLinkSuccess)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9862 */;
-import _modDef14787 from "module_14787" /* 14787 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9880 */;
+import _modDef14867 from "module_14867" /* 14867 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,14 +25,14 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14787;
+  obj4.source = _modDef14867;
   obj4.style = tmp.image;
   items = [React4(FastImageDefault, obj4), , ];
   const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.Fnvxvk);
   items[1] = React4(Text_Text.Text, obj5);
-  const obj6 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
+  const obj6 = { variant: "body-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
   const intl2 = util.intl;
   obj6.children = intl2.string(util.t.YwXceg);
   items[2] = React4(Text_Text.Text, obj6);

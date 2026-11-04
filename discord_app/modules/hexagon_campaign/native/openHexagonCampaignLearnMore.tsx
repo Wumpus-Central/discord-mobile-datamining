@@ -1,8 +1,8 @@
-// === Module 16628: openHexagonCampaignLearnMore ===
+// === Module 16718: openHexagonCampaignLearnMore ===
 
-// Module 16628 (openHexagonCampaignLearnMore)
+// Module 16718 (openHexagonCampaignLearnMore)
 import HexagonCampaignConstants from "HexagonCampaignConstants" /* 5166 */;
-import LinkingDefault from "Linking" /* 5829 */;
+import LinkingDefault from "Linking" /* 5843 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = HexagonCampaignConstants.HEXAGON_CAMPAIGN_LEARN_MORE_URL;

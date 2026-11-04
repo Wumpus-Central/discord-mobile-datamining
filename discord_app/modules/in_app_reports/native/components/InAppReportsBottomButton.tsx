@@ -1,12 +1,12 @@
-// === Module 15319: InAppReportsBottomButton ===
+// === Module 15406: InAppReportsBottomButton ===
 
-// Module 15319 (InAppReportsBottomButton)
+// Module 15406 (InAppReportsBottomButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import _modDef2801 from "module_2801" /* 2801 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -65,7 +65,7 @@ export default function InAppReportsBottomButton(button) {
       const obj3 = { style: tmp.paddingHorizontal, children: null };
       let tmp14Result = null;
       if (null != tmp3) {
-        const obj4 = { style: tmp.descriptionText, variant: "text-xs/medium", color: "text-default", children: tmp3 };
+        const obj4 = { style: tmp.descriptionText, variant: "body-xs/medium", color: "text-default", children: tmp3 };
         tmp14Result = React4(Text_Text.Text, obj4);
       }
       const items1 = [tmp14Result, , ];

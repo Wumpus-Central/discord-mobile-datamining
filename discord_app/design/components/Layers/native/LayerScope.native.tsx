@@ -1,8 +1,8 @@
-// === Module 5734: LayerScope ===
+// === Module 5748: LayerScope ===
 
-// Module 5734 (LayerScope)
-import useInitialValueDefault from "useInitialValue" /* 5735 */;
-import LayerContext from "LayerContext" /* 5736 */;
+// Module 5748 (LayerScope)
+import useInitialValueDefault from "useInitialValue" /* 5749 */;
+import LayerContext from "LayerContext" /* 5750 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(5736).LayerContext);
+  const context = noop.useContext(zIndex(5750).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   items = [context];
@@ -39,7 +39,7 @@ function Layer(zIndex) {
   });
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -55,7 +55,7 @@ export function LayerScope(arg0) {
     }),
     children: null
   };
-  items = [children, React6(Layer, { zIndex })];
+  items = [children, React5(Layer, { zIndex })];
   obj.children = items;
-  return React7(LayerContext.LayerContext.Provider, obj);
+  return React6(LayerContext.LayerContext.Provider, obj);
 }

@@ -1,9 +1,9 @@
-// === Module 18395: GameClaimCardStack ===
+// === Module 18489: GameClaimCardStack ===
 
-// Module 18395 (GameClaimCardStack)
+// Module 18489 (GameClaimCardStack)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9704 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 9722 */;
 import noop from "module_19" /* 19 */;
 import n_mod from "module_671" /* 671 */;
 

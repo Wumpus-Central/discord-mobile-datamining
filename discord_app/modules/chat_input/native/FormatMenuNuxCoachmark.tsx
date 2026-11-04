@@ -1,15 +1,15 @@
-// === Module 14124: FormatMenuNuxCoachmark ===
+// === Module 14210: FormatMenuNuxCoachmark ===
 
-// Module 14124 (FormatMenuNuxCoachmark)
+// Module 14210 (FormatMenuNuxCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7227 */;
+import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7247 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const useChatInputKeyboardOffsetDefault = tmp5(14125);
+const useChatInputKeyboardOffsetDefault = tmp5(14211);
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
@@ -50,7 +50,7 @@ export default function FormatMenuNuxCoachmark() {
       const intl2 = util.intl;
       obj.description = intl2.format(util.t["427UqW"], {
         underlineHook(children, key) {
-          return jsx(closure_0(closure_2[14]).Text, { variant: "text-sm/medium", color: "none", style: closure_1_0.underline, children }, key);
+          return jsx(closure_0(closure_2[14]).Text, { variant: "body-sm/medium", color: "none", style: closure_1_0.underline, children }, key);
         }
       });
       obj.visible = visible;
@@ -61,7 +61,7 @@ export default function FormatMenuNuxCoachmark() {
       return obj;
     }, items1);
     const ref = coachmark.useRef(null);
-    coachmark = tmp2(10085).useCoachmark(ref, memo);
+    coachmark = tmp2(10133).useCoachmark(ref, memo);
     const items2 = [coachmark];
     const obj2 = {
       style: tmp.anchor,

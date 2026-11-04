@@ -1,24 +1,24 @@
-// === Module 17872: DevToolsShopScreen ===
+// === Module 17968: DevToolsShopScreen ===
 
-// Module 17872 (DevToolsShopScreen)
+// Module 17968 (DevToolsShopScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import TableSwitchRow from "TableSwitchRow" /* 7489 */;
-import FormSwitch from "FormSwitch" /* 7490 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17760 */;
-import DevSettingsActions from "DevSettingsActions" /* 17845 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import TableSwitchRow from "TableSwitchRow" /* 7505 */;
+import FormSwitch from "FormSwitch" /* 7506 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 17856 */;
+import DevSettingsActions from "DevSettingsActions" /* 17941 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import DevSettingsStore from "DevSettingsStore" /* 5764 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);

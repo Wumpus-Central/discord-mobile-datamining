@@ -1,11 +1,11 @@
-// === Module 8142: useAgeVerificationMethodsV2 ===
+// === Module 8158: useAgeVerificationMethodsV2 ===
 
-// Module 8142 (useAgeVerificationMethodsV2)
+// Module 8158 (useAgeVerificationMethodsV2)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 6847 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 6862 */;
 
 const require = fn;
 const size = fn(2);
@@ -76,8 +76,8 @@ export function useAgeVerificationMethodsV2() {
             tmp75(true);
             v0(false);
             v0 = 2;
-            const result = closure_0(8093).isCurrentUserSuspended();
-            const obj7 = closure_0(8125);
+            const result = closure_0(8109).isCurrentUserSuspended();
+            const obj7 = closure_0(8141);
             if (result) {
               c5 = 4;
               c6 = 1;
@@ -89,7 +89,7 @@ export function useAgeVerificationMethodsV2() {
               const obj9 = { value: obj7.fetchAgeVerificationMethodsV2(), done: false };
               return obj9;
             }
-            const obj6 = closure_0(8093);
+            const obj6 = closure_0(8109);
           }
         } else if (1 === tmp9) {
           v0 = 0;

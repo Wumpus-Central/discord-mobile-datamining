@@ -1,6 +1,6 @@
-// === Module 9363: useLocalSelfMuteDeaf ===
+// === Module 9380: useLocalSelfMuteDeaf ===
 
-// Module 9363 (useLocalSelfMuteDeaf)
+// Module 9380 (useLocalSelfMuteDeaf)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;

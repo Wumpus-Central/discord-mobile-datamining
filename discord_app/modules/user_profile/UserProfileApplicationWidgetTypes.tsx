@@ -1,7 +1,7 @@
-// === Module 7901: UserProfileApplicationWidgetTypes ===
+// === Module 7917: UserProfileApplicationWidgetTypes ===
 
-// Module 7901 (UserProfileApplicationWidgetTypes)
-import WidgetType from "WidgetType" /* 7897 */;
+// Module 7917 (UserProfileApplicationWidgetTypes)
+import WidgetType from "WidgetType" /* 7913 */;
 import size from "module_2" /* 2 */;
 
 let ApplicationWidget;

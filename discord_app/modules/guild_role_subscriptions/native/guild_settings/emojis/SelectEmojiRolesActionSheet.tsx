@@ -1,6 +1,6 @@
-// === Module 20147: SelectEmojiRolesActionSheet ===
+// === Module 20263: SelectEmojiRolesActionSheet ===
 
-// Module 20147 (SelectEmojiRolesActionSheet)
+// Module 20263 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { list: { flex: 1 }, row: { paddingHorizontal: nativeDefault.space.PX_16 }, label: null, roleName: null, saveButtonDisabled: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -67,7 +67,7 @@ export default function SelectEmojiRolesActionSheet(guildId) {
     let intl = tmp8(emoji[13]).intl;
     stringResult = intl.string(tmp8(emoji[13]).t["R3BPH+"]);
   }
-  obj3.children = dependencyMap(guildId(emoji[12]).Text, { variant: "text-md/semibold", color: "text-brand", children: stringResult });
+  obj3.children = dependencyMap(guildId(emoji[12]).Text, { variant: "body-md/semibold", color: "text-brand", children: stringResult });
   let obj2 = guildId(emoji[10]);
   let obj4 = { title: null, subtitle: null, trailing: null };
   const intl3 = tmp8(emoji[13]).intl;
@@ -98,7 +98,7 @@ export default function SelectEmojiRolesActionSheet(guildId) {
         obj4.children = dependencyMap(require("RoleName"), obj5);
         let tmp7Result = dependencyMap(closure_5, obj4);
       } else {
-        const obj6 = { style: closure_3.roleName, lineClamp: 1, variant: "text-md/medium", color: "interactive-text-active", children: tmp.name };
+        const obj6 = { style: closure_3.roleName, lineClamp: 1, variant: "body-md/medium", color: "interactive-text-active", children: tmp.name };
         tmp7Result = dependencyMap(guildId(emoji[12]).Text, obj6);
       }
       items = [tmp7Result, ];

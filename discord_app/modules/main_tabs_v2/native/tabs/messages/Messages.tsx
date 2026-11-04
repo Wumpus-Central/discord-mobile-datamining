@@ -1,30 +1,30 @@
-// === Module 18223: messages/Messages ===
+// === Module 18320: messages/Messages ===
 
-// Module 18223 (messages/Messages)
+// Module 18320 (messages/Messages)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5732 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7778 */;
-import useMessagesSpecsDefault from "useMessagesSpecs" /* 18228 */;
-import MessagesHeaderDefault from "MessagesHeader" /* 18229 */;
-import useMessagesDataDefault from "useMessagesData" /* 18246 */;
-import useMessagesScrollToTopDefault from "useMessagesScrollToTop" /* 18249 */;
-import useMessagesReconnectToCallsEffectDefault from "useMessagesReconnectToCallsEffect" /* 18250 */;
-import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 18252 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7794 */;
+import useMessagesSpecsDefault from "useMessagesSpecs" /* 18325 */;
+import MessagesHeaderDefault from "MessagesHeader" /* 18326 */;
+import useMessagesDataDefault from "useMessagesData" /* 18343 */;
+import useMessagesScrollToTopDefault from "useMessagesScrollToTop" /* 18346 */;
+import useMessagesReconnectToCallsEffectDefault from "useMessagesReconnectToCallsEffect" /* 18347 */;
+import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 18349 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { code: "(function MessagesTsx1(event){let[scrollPosition,handleGuildsNavigationScroll]=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/Messages.tsx");
@@ -58,7 +58,7 @@ export default noop.memo(function Messages(style) {
   useMessagesScrollToTopDefault({ listRef: ref, listRefHappeningNow: ref1 });
   useMessagesReconnectToCallsEffectDefault();
   obj6 = require("PlatformUtils");
-  const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(tmp4(18251).DmGdmListRenderTriggerPoint);
+  const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(tmp4(18348).DmGdmListRenderTriggerPoint);
   items = [dataKey];
   const effect = noop.useEffect(() => {
     if (null != c0) {
@@ -131,12 +131,12 @@ export default noop.memo(function Messages(style) {
   const obj10 = { backgroundColor: nativeDefault.colors.PANEL_BG, children: null };
   const items3 = [closure_6(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), , ];
   if (tmp10.showFullscreenEmptyState) {
-    let tmp25Result = closure_6(tmp(18254), {});
+    let tmp25Result = closure_6(tmp(18351), {});
   } else {
     if ("legend" === list) {
-      let tmp28 = 18259;
+      let tmp28 = 18356;
     } else {
-      tmp28 = "flash" === list ? 18303 : 18304;
+      tmp28 = "flash" === list ? 18400 : 18401;
     }
     const obj11 = { ref };
     const merged = Object.assign(obj7);
@@ -146,7 +146,7 @@ export default noop.memo(function Messages(style) {
   items3[1] = tmp25Result;
   let tmp25Result2 = null;
   if (!doesLandOnHomeDrawer) {
-    tmp25Result2 = closure_6(tmp4(13471).TTIFirstContentfulPaint, { label: "messages_tabs" });
+    tmp25Result2 = closure_6(tmp4(13555).TTIFirstContentfulPaint, { label: "messages_tabs" });
   }
   items3[2] = tmp25Result2;
   obj10.children = items3;

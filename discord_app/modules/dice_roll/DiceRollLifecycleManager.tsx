@@ -1,18 +1,18 @@
-// === Module 19593: DiceRollLifecycleManager ===
+// === Module 19698: DiceRollLifecycleManager ===
 
-// Module 19593 (DiceRollLifecycleManager)
+// Module 19698 (DiceRollLifecycleManager)
 import util from "util" /* 1113 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
-import MessageParserDefault from "MessageParser" /* 7948 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7776 */;
+import MessageParserDefault from "MessageParser" /* 7964 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import DiceRollStore from "DiceRollStore" /* 13855 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import DiceRollStore from "DiceRollStore" /* 13941 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
-const INITIAL_STATE = fn(13855).INITIAL_STATE;
-const DiceRollConstants = fn(9903);
-({ AFTER_ROLL_DELAY_MS: closure_7, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: closure_9, DISMISS_DELAY_MS: closure_10, MAX_DICE_COUNT: closure_11, ROLL_DURATION_MS: closure_12 } = DiceRollConstants);
+const INITIAL_STATE = fn(13941).INITIAL_STATE;
+const DiceRollConstants = fn(9921);
+({ AFTER_ROLL_DELAY_MS: metroImportDefault, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: closure_9, DISMISS_DELAY_MS: closure_10, MAX_DICE_COUNT: closure_11, ROLL_DURATION_MS: closure_12 } = DiceRollConstants);
 const MessageSendLocation = fn(5146).MessageSendLocation;
 class DiceRollLifecycleManager extends tmp3 {
   constructor() {
@@ -89,7 +89,7 @@ prototype["finishRoll"] = function finishRoll(channelId, arg1, arg2, items) {
   this.postRollDismissTimer = setTimeout(() => {
     self.postRollDismissTimer = null;
     self.dismiss();
-  }, React5);
+  }, metroImportDefault);
   this.sendMessage(channelId, arg1, arg2, items);
 };
 prototype["sendMessage"] = function sendMessage(arg0, count, sides, arr) {

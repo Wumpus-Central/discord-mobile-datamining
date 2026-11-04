@@ -1,7 +1,7 @@
-// === Module 16966: FamilyCenterEmpty ===
+// === Module 17058: FamilyCenterEmpty ===
 
-// Module 16966 (FamilyCenterEmpty)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 17058 (FamilyCenterEmpty)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,5 +13,5 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");
 
 export default function FamilyCenterEmpty(children) {
-  return <View style={closure_4().empty}>{jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })}</View>;
+  return <View style={closure_4().empty}>{jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", children: children.text })}</View>;
 };

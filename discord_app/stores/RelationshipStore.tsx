@@ -96,7 +96,7 @@ let closure_15 = 0;
 const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
-let closure_20 = { friends: "Array", blocked: "Path", ignored: "disabled", blockedOrIgnored: "Map" };
+let closure_20 = { friends: "cix", blocked: "construct", ignored: "Button", blockedOrIgnored: "c" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -653,6 +653,49 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     }
     flushStaleUserIdLists();
     recountPending();
+  },
+  RELATIONSHIP_IGNORE_USER_SUCCESS: function handleIgnoreUserSuccess(userId) {
+    userId = userId.userId;
+    if (!set1.has(userId)) {
+      set1.add(userId);
+      set3.add("ignored");
+      set3.add("blockedOrIgnored");
+    }
+    if (map.get(userId) === RelationshipTypes.PENDING_INCOMING) {
+      set2.add(userId);
+    }
+    flushStaleUserIdLists();
+    size = set2.size;
+    value = map1.get(RelationshipTypes.PENDING_INCOMING);
+    let num;
+    if (value != null) {
+      num = value.size;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    closure_17 = Math.max(num - size - size, 0);
+    closure_15 = closure_15 + 1;
+  },
+  RELATIONSHIP_UNIGNORE_USER_SUCCESS: function handleUnignoreUserSuccess(userId) {
+    userId = userId.userId;
+    if (set1.delete(userId)) {
+      set3.add("ignored");
+      set3.add("blockedOrIgnored");
+    }
+    set2.delete(userId);
+    flushStaleUserIdLists();
+    size = set2.size;
+    value = map1.get(RelationshipTypes.PENDING_INCOMING);
+    let num;
+    if (value != null) {
+      num = value.size;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    closure_17 = Math.max(num - size - size, 0);
+    closure_15 = closure_15 + 1;
   },
   UPDATE_STRANGER_STATUS: function handleUpdateStrangerStatus(isStranger) {
     closure_16[isStranger.userId] = { expiry: Date.now() + 300000, isStranger: isStranger.isStranger };

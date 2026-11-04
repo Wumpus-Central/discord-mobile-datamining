@@ -1,18 +1,18 @@
-// === Module 14187: GuildPowerupsModal ===
+// === Module 14273: GuildPowerupsModal ===
 
-// Module 14187 (GuildPowerupsModal)
+// Module 14273 (GuildPowerupsModal)
 import nativeDefault from "native" /* 575 */;
-import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 14222 */;
-import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 14251 */;
-import GuildPowerupsLevelsSectionDefault from "GuildPowerupsLevelsSection" /* 14268 */;
-import GuildPowerupsPerksSectionDefault from "GuildPowerupsPerksSection" /* 14274 */;
+import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 14308 */;
+import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 14337 */;
+import GuildPowerupsLevelsSectionDefault from "GuildPowerupsLevelsSection" /* 14354 */;
+import GuildPowerupsPerksSectionDefault from "GuildPowerupsPerksSection" /* 14360 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildPowerupsConstants = fn(5353);
-({ BoostInfoType: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
+const GuildPowerupsConstants = fn(5354);
+({ BoostInfoType: closure_6, GuildPowerupType: metroImportDefault } = GuildPowerupsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -131,10 +131,10 @@ export default function GuildPowerupsModal(guildId) {
       type = type.type;
       if (constants2.LEVEL === type) {
         const obj2 = { guildId, listings: type.listings };
-        return React6(GuildPowerupsLevelsSectionDefault, obj2, type.type);
+        return React5(GuildPowerupsLevelsSectionDefault, obj2, type.type);
       } else if (tmp.PERK === type) {
         const obj = { guildId, listings: type.listings };
-        return React6(GuildPowerupsPerksSectionDefault, obj, type.type);
+        return React5(GuildPowerupsPerksSectionDefault, obj, type.type);
       } else {
         return null;
       }

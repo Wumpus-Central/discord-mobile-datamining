@@ -1,20 +1,20 @@
-// === Module 19958: SelectConnectionActionSheet ===
+// === Module 20074: SelectConnectionActionSheet ===
 
-// Module 19958 (SelectConnectionActionSheet)
+// Module 20074 (SelectConnectionActionSheet)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import BottomSheetModal from "BottomSheetModal" /* 5398 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7806 */;
-import SegmentedControlState from "SegmentedControlState" /* 9108 */;
-import SegmentedControl from "SegmentedControl" /* 9342 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11728 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import BottomSheetModal from "BottomSheetModal" /* 5400 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7822 */;
+import SegmentedControlState from "SegmentedControlState" /* 9125 */;
+import SegmentedControl from "SegmentedControl" /* 9359 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11783 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ function IdentityApplicationRow(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx");
 

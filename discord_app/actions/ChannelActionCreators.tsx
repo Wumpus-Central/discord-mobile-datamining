@@ -1,21 +1,21 @@
-// === Module 7609: ChannelActionCreators ===
+// === Module 7625: ChannelActionCreators ===
 
-// Module 7609 (ChannelActionCreators)
+// Module 7625 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import shared from "shared" /* 5148 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import transitionToChannel from "transitionToChannel" /* 5876 */;
-import preloadChannelDefault from "preloadChannel" /* 5878 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 7013 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import transitionToChannel from "transitionToChannel" /* 5890 */;
+import preloadChannelDefault from "preloadChannel" /* 5892 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 7028 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7610 */;
+import ChangelogStore from "ChangelogStore" /* 7626 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import ReadStateStore from "ReadStateStore" /* 6962 */;
+import ReadStateStore from "ReadStateStore" /* 6977 */;
 
 const require = globalThis.__r;
 
@@ -421,14 +421,14 @@ export default {
     if (flag3 == null) {
       flag3 = false;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "ao" }, silent: flag2 });
     if (flag) {
       flag3(1099).transitionTo(constants2.FRIENDS);
       const obj6 = flag3(1099);
     }
     const HTTP = flag3(1282).HTTP;
     const request = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "ao" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1282).rejectWithMigratedError();
     const obj8 = flag3(1282);
@@ -544,8 +544,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7622).checkGuildTemplateDirty(closure_128_2);
-        name(7622);
+        const result = name(7638).checkGuildTemplateDirty(closure_128_2);
+        name(7638);
       }
       return closure_128_1;
     })();

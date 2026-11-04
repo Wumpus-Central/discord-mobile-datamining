@@ -1,14 +1,14 @@
-// === Module 11634: UserProfileAboutMeCardCommand ===
+// === Module 11685: UserProfileAboutMeCardCommand ===
 
-// Module 11634 (UserProfileAboutMeCardCommand)
+// Module 11685 (UserProfileAboutMeCardCommand)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7824 */;
-import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11635 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11641 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5817 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7840 */;
+import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11686 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11692 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -27,7 +27,7 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   ({ application: require, command } = channel);
   channel = channel.channel;
   let obj = {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     onPress() {
       const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");
@@ -89,7 +89,7 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   items = ["/", command.displayName];
   obj.children = items;
   return jsxs(require("Text/Text").Text, {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     onPress() {
       const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");

@@ -1,17 +1,17 @@
-// === Module 19907: GuildSettingsServerTagColorPickerActionSheet ===
+// === Module 20023: GuildSettingsServerTagColorPickerActionSheet ===
 
-// Module 19907 (GuildSettingsServerTagColorPickerActionSheet)
+// Module 20023 (GuildSettingsServerTagColorPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 16596 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 16687 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8517);
-({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire, GUILD_TAG_BADGE_PALETTE_PRESETS: closure_7, GuildTagBadgeSize: closure_8 } = GuildTagConstants);
+const GuildTagConstants = fn(8534);
+({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6, GUILD_TAG_BADGE_PALETTE_PRESETS: metroImportDefault, GuildTagBadgeSize: closure_8 } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;

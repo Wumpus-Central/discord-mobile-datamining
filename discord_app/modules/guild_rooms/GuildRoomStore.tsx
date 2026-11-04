@@ -1,12 +1,12 @@
-// === Module 8030: GuildRoomStore ===
+// === Module 8046: GuildRoomStore ===
 
-// Module 8030 (GuildRoomStore)
+// Module 8046 (GuildRoomStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 8031 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 8047 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;

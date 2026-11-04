@@ -1,9 +1,9 @@
-// === Module 15101: UserProfileWidgetContainer ===
+// === Module 15181: UserProfileWidgetContainer ===
 
-// Module 15101 (UserProfileWidgetContainer)
+// Module 15181 (UserProfileWidgetContainer)
 import nativeDefault from "native" /* 575 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7496 */;
-import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 15102 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7512 */;
+import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 15182 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -30,8 +30,8 @@ export default function UserProfileWidgetContainer(style) {
   const obj = userId(504);
   const tmp = userId;
   if (title == null) {
-    title = tmp(15096).getWidgetTitle(widget);
-    const tmpResult = tmp(15096);
+    title = tmp(12563).getWidgetTitle(widget);
+    const tmpResult = tmp(12563);
   }
   obj2.title = title;
   obj2.titleLeadingIcon = titleLeadingIcon;

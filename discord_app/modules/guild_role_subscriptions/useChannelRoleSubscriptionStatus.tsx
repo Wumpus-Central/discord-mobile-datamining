@@ -1,6 +1,6 @@
-// === Module 6165: useChannelRoleSubscriptionStatus ===
+// === Module 6180: useChannelRoleSubscriptionStatus ===
 
-// Module 6165 (useChannelRoleSubscriptionStatus)
+// Module 6180 (useChannelRoleSubscriptionStatus)
 import GatedChannelStore from "GatedChannelStore" /* 5045 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import PermissionStore from "PermissionStore" /* 5073 */;

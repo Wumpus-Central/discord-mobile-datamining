@@ -1,6 +1,6 @@
-// === Module 7524: useIsNewMember ===
+// === Module 7540: useIsNewMember ===
 
-// Module 7524 (useIsNewMember)
+// Module 7540 (useIsNewMember)
 import DurationsDefault from "Durations" /* 1089 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
 import ImpersonateStore from "ImpersonateStore" /* 5046 */;

@@ -1,6 +1,6 @@
-// === Module 7523: GuildOnboardingHomeTypes ===
+// === Module 7539: GuildOnboardingHomeTypes ===
 
-// Module 7523 (GuildOnboardingHomeTypes)
+// Module 7539 (GuildOnboardingHomeTypes)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
 import ChannelStore from "ChannelStore" /* 4990 */;

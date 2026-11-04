@@ -1,17 +1,17 @@
-// === Module 19010: SuggestedFriendsScreen ===
+// === Module 19113: SuggestedFriendsScreen ===
 
-// Module 19010 (SuggestedFriendsScreen)
+// Module 19113 (SuggestedFriendsScreen)
 import nativeDefault from "native" /* 575 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 19003 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 19106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
+({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { emptyContainer: { flex: 1, paddingTop: nativeDefault.space.PX_32 }, container: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
@@ -63,7 +63,7 @@ export default function SuggestedFriendsScreen() {
       itemType: str,
       key: friendSuggestions[arg1].user.id,
       component() {
-        return React5(ContactSuggestionRow.ContactSuggestionRow, {
+        return metroImportDefault(ContactSuggestionRow.ContactSuggestionRow, {
           added: added.includes(suggestedFriend),
           suggestedFriend,
           start: 0 === closure_0,

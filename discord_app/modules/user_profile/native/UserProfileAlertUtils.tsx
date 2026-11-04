@@ -1,14 +1,17 @@
-// === Module 14326: UserProfileAlertUtils ===
+// === Module 12568: UserProfileAlertUtils ===
 
-// Module 14326 (UserProfileAlertUtils)
-import useAlertStore from "useAlertStore" /* 6080 */;
-import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 14327 */;
-import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 14328 */;
-import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 14329 */;
-import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 14330 */;
-import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 14331 */;
-import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 14332 */;
+// Module 12568 (UserProfileAlertUtils)
+import useAlertStore from "useAlertStore" /* 6095 */;
+import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 12569 */;
+import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 12570 */;
+import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 12571 */;
+import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 12572 */;
+import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 12573 */;
+import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 12574 */;
+import UserProfileConfirmRemoveWidgetDefault from "UserProfileConfirmRemoveWidget" /* 12575 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -44,4 +47,23 @@ export function confirmThreadRemove(arg0) {
   const obj2 = {};
   const merged = Object.assign(arg0);
   obj.openAlert("thread-remove", jsx(UserProfileConfirmThreadRemoveDefault, {}));
+}
+export function confirmRemoveWidget(arg0) {
+  ({ onConfirm: require, onDismissWithoutRemoving: importDefault } = arg0);
+  c2 = false;
+  const merged = Object.assign(arg0, Object.assign({ onConfirm: 0, onDismissWithoutRemoving: 0 }));
+  const obj2 = {};
+  const obj = useAlertStore;
+  const merged1 = Object.assign(merged);
+  obj2.onConfirm = function onConfirm() {
+    c2 = true;
+    require();
+  };
+  obj.openAlert("remove-widget", jsx(UserProfileConfirmRemoveWidgetDefault, {}), () => {
+    if (!c2) {
+      if (importDefault != null) {
+        tmp();
+      }
+    }
+  });
 }

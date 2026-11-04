@@ -1,23 +1,23 @@
-// === Module 19228: LaunchPadPullTab ===
+// === Module 19332: LaunchPadPullTab ===
 
-// Module 19228 (LaunchPadPullTab)
+// Module 19332 (LaunchPadPullTab)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12211 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12950 */;
-import showLaunchPadDefault from "showLaunchPad" /* 19164 */;
-import useLaunchPadPullTabMinimizedDefault from "useLaunchPadPullTabMinimized" /* 19229 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 12270 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13032 */;
+import showLaunchPadDefault from "showLaunchPad" /* 19267 */;
+import useLaunchPadPullTabMinimizedDefault from "useLaunchPadPullTabMinimized" /* 19333 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(11673);
+const LaunchPadConstants = fn(11724);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
-({ LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_7, LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_9, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: closure_10, LAUNCH_PAD_PULL_TAB_WIDTH, LAUNCH_PAD_SPRING_CONFIG: closure_11 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(12945).CHAT_INPUT_HEIGHT;
+({ LAUNCH_PAD_PULL_TAB_HIT_SLOP: metroImportDefault, LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_9, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: closure_10, LAUNCH_PAD_PULL_TAB_WIDTH, LAUNCH_PAD_SPRING_CONFIG: closure_11 } = LaunchPadConstants);
+const CHAT_INPUT_HEIGHT = fn(13027).CHAT_INPUT_HEIGHT;
 let jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };
@@ -242,7 +242,7 @@ export default noop.memo(function LaunchPadPullTab(gestureState) {
   obj3.hitSlop = hitSlop;
   obj3.style = tmp.pullTabButton;
   obj3.onTouchStart = function onTouchStart() {
-    const result = _undefined.setLaunchPadPullTabScale(React7);
+    const result = _undefined.setLaunchPadPullTabScale(React6);
   };
   obj3.onPress = showLaunchPadDefault;
   obj3.children = jsx(require("ChannelListMagnifyingGlassIcon").ChannelListMagnifyingGlassIcon, { size: "xs" });

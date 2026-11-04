@@ -1,20 +1,20 @@
-// === Module 18935: ChannelsScreen ===
+// === Module 19038: ChannelsScreen ===
 
-// Module 18935 (ChannelsScreen)
+// Module 19038 (ChannelsScreen)
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
+import TrackingDefault from "Tracking" /* 14124 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 14044 */;
-import SearchQueryStore from "SearchQueryStore" /* 14031 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5901 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 14130 */;
+import SearchQueryStore from "SearchQueryStore" /* 14117 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9958);
-({ EMPTY_VOICE_STATES: closure_7, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(9957).SearchResultContentEntityTypes;
+const SearchConstants = fn(9976);
+({ EMPTY_VOICE_STATES: metroImportDefault, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
+let closure_10 = fn(9975).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ChannelsScreen.tsx");
@@ -69,12 +69,12 @@ export default noop.memo(function ChannelsScreen(searchContext) {
   const items8 = [onPressGuildTextChannel, searchContext];
   const callback = stateFromStores1.useCallback((channelId, index) => {
     onPressGuildTextChannel(channelId);
-    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
+    const result = TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
   }, items8);
   const items9 = [onPressGuildVoiceChannel, searchContext];
   const callback1 = stateFromStores1.useCallback((channelId, index) => {
     onPressGuildVoiceChannel(channelId);
-    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
+    const result = TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
   }, items9);
   const items10 = [fullscreenPlaceholderCount, callback, callback1, stateFromStores3, tmp6, stateFromStores, stateFromStores1, stateFromStores2];
   const memo = stateFromStores1.useMemo(() => {
@@ -148,12 +148,12 @@ export default noop.memo(function ChannelsScreen(searchContext) {
         const obj = { channel: channel.channel, voiceStates: null, speakerVoiceStates: null, onPress: null };
         let tmp2 = stateFromStores2[channel.channel.id];
         if (tmp2 == null) {
-          tmp2 = React5;
+          tmp2 = metroImportDefault;
         }
         obj.voiceStates = tmp2;
         let tmp3 = closure_5[channel.channel.id];
         if (tmp3 == null) {
-          tmp3 = React5;
+          tmp3 = metroImportDefault;
         }
         obj.speakerVoiceStates = tmp3;
         obj.onPress = function onPress(arg0) {

@@ -1,12 +1,12 @@
-// === Module 17595: SettingsChatScreen ===
+// === Module 17685: SettingsChatScreen ===
 
-// Module 17595 (SettingsChatScreen)
+// Module 17685 (SettingsChatScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7282 */;
-import _modDef10408 from "module_10408" /* 10408 */;
-import SettingBuilders from "SettingBuilders" /* 11677 */;
-import SettingLayoutDefault from "SettingLayout" /* 16731 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7298 */;
+import _modDef10456 from "module_10456" /* 10456 */;
+import SettingBuilders from "SettingBuilders" /* 11728 */;
+import SettingLayoutDefault from "SettingLayout" /* 16823 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 import SubscriptionStore from "SubscriptionStore" /* 2181 */;
@@ -22,7 +22,7 @@ function VideoUploadQualityNitroUpsell() {
     currentUser = currentUser.getCurrentUser();
     return closure_0(dependencyMap[11]).hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription);
   });
-  const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  const obj3 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = require("util").intl;
   obj3.children = intl.format(require("util").t["Up+hSO"], { supportURL: "https://support.discord.com/hc/articles/9665451164951" });
   const children = [closure_9(require("Text/Text").Text, obj3), ];
@@ -31,9 +31,9 @@ function VideoUploadQualityNitroUpsell() {
     const obj4 = { style: tmp3.card, children: null };
     const obj5 = { border: "none", shadow: "none", children: null };
     const obj6 = { style: tmp3.cardContent, children: null };
-    const obj7 = { style: tmp3.cardIcon, source: _modDef10408, size: tmp(1187).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+    const obj7 = { style: tmp3.cardIcon, source: _modDef10456, size: tmp(1187).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
     const items2 = [closure_9(tmp(1187).Icon, obj7), ];
-    const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    const obj8 = { variant: "body-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1113).intl;
     const obj9 = {
       onClick() {
@@ -42,17 +42,17 @@ function VideoUploadQualityNitroUpsell() {
         }
     };
     obj8.children = intl2.format(tmp(1113).t.uW1zul, obj9);
-    items2[1] = closure_9(tmp(5747).Text, obj8);
+    items2[1] = closure_9(tmp(5761).Text, obj8);
     obj6.children = items2;
     obj5.children = closure_10(View, obj6);
-    obj4.children = closure_9(tmp(7103).Card, obj5);
+    obj4.children = closure_9(tmp(7118).Card, obj5);
     tmp7Result = closure_9(View, obj4);
   }
   children[1] = tmp7Result;
   return closure_10(View, { children });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -91,7 +91,7 @@ export default function SettingsChatScreen(route) {
     const intl4 = util.intl;
     obj4.subLabel = intl4.string(util.t.eZmJYE);
     items1[1] = obj4;
-    const obj5 = { settings: null, subLabel: React7(VideoUploadQualityNitroUpsell, {}) };
+    const obj5 = { settings: null, subLabel: React6(VideoUploadQualityNitroUpsell, {}) };
     const items3 = [MobileUserSettings.VIDEO_UPLOAD_QUALITY];
     obj5.settings = items3;
     items1[2] = obj5;

@@ -1,8 +1,8 @@
-// === Module 11211: MutedUntilText ===
+// === Module 11261: MutedUntilText ===
 
-// Module 11211 (MutedUntilText)
+// Module 11261 (MutedUntilText)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,17 +33,17 @@ export default function MutedUntilText(arg0) {
       } else {
         return null;
       }
-      const obj2 = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj2 = { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: null };
       const intl5 = tmp15(1113).intl;
       const obj3 = { endTime: null, endTimeHook: null };
       const _Date = Date;
       const date = new Date(muteConfig.end_time);
       obj3.endTime = date.toLocaleString(tmp15(1113).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
       obj3.endTimeHook = function endTimeHook(children) {
-        return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "control-brand-foreground", children }, "muted");
+        return jsx(Text_Text.Text, { variant: "body-sm/medium", color: "control-brand-foreground", children }, "muted");
       };
       obj2.children = intl5.format(N2NXMd, obj3);
-      return jsx(tmp15(5747).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null });
+      return jsx(tmp15(5761).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: null });
     }
   }
   if (obj.SERVER === type) {
@@ -65,7 +65,7 @@ export default function MutedUntilText(arg0) {
   } else {
     return null;
   }
-  obj = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult };
-  return jsx(tmp3(5747).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult });
+  obj = { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: stringResult };
+  return jsx(tmp3(5761).Text, { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: stringResult });
 };
 export { MuteSettingType };

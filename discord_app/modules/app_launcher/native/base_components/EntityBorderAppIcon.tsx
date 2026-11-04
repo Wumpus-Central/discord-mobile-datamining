@@ -1,10 +1,10 @@
-// === Module 12520: EntityBorderAppIcon ===
+// === Module 12601: EntityBorderAppIcon ===
 
-// Module 12520 (EntityBorderAppIcon)
+// Module 12601 (EntityBorderAppIcon)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 

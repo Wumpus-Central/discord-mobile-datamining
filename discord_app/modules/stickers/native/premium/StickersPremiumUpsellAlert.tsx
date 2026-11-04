@@ -1,18 +1,18 @@
-// === Module 10422: StickersPremiumUpsellAlert ===
+// === Module 10470: StickersPremiumUpsellAlert ===
 
-// Module 10422 (StickersPremiumUpsellAlert)
+// Module 10470 (StickersPremiumUpsellAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
-import _modDef10423 from "module_10423" /* 10423 */;
-import _modDef10424 from "module_10424" /* 10424 */;
-import _modDef10425 from "module_10425" /* 10425 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10084 */;
+import _modDef10471 from "module_10471" /* 10471 */;
+import _modDef10472 from "module_10472" /* 10472 */;
+import _modDef10473 from "module_10473" /* 10473 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7721 */;
+import IAPStore from "IAPStore" /* 7737 */;
 
 require = fn;
 function PerkRow(perk) {
@@ -25,21 +25,21 @@ function PerkRow(perk) {
   }
   const obj = { style: items, children: null };
   items[1] = lastPerkRow;
-  const items1 = [state(native.Icon, { style: tmp.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color }), state(Text_Text.Text, { style: tmp.perkText, variant: "text-md/medium", color: "interactive-text-active", children: perk.description() })];
+  const items1 = [state(native.Icon, { style: tmp.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color }), state(Text_Text.Text, { style: tmp.perkText, variant: "body-md/medium", color: "interactive-text-active", children: perk.description() })];
   obj.children = items1;
   return gesture(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, AnalyticsObjects: closure_9 } = Constants);
+({ AnalyticEvents: metroImportDefault, AnalyticsSections: closure_8, AnalyticsObjects: closure_9 } = Constants);
 const PremiumConstants = fn(1387);
 ({ SubscriptionPlans: closure_10, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_11, PRICE_PLACEHOLDER: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef10423,
+    icon: _modDef10471,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -50,7 +50,7 @@ let items = [
 
 ];
 let obj = {
-  icon: _modDef10423,
+  icon: _modDef10471,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -58,21 +58,21 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE
 };
 items[1] = {
-  icon: _modDef10424,
+  icon: _modDef10472,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 let obj2 = {
-  icon: _modDef10424,
+  icon: _modDef10472,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 items[2] = {
-  icon: _modDef10425,
+  icon: _modDef10473,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -82,7 +82,7 @@ items[2] = {
 const createStyles = fn(5141);
 let obj5 = { alert: { paddingTop: 18 }, shortHeightAlert: { height: 500 }, content: { alignItems: "center" }, closeContainer: { flexDirection: "row-reverse", width: "100%", marginBottom: 16 }, description: { textAlign: "center", lineHeight: 20 }, perks: null, perkRow: null, lastPerkRow: null, perkIcon: null, perkText: null, imageHeader: null };
 let obj3 = {
-  icon: _modDef10425,
+  icon: _modDef10473,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -110,12 +110,12 @@ export default function StickersPremiumUpsellAlert(arg0) {
       const obj = analyticsLocations(dependencyMap[14]);
     }
   }, []);
-  const tmp5 = analyticsLocations(10039)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(10087)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(7446)().analyticsLocations;
+  analyticsLocations = tmp3(7462)().analyticsLocations;
   let obj = { cancelText: null, confirmColor: null, confirmText: null, onConfirm: null, onClose: null, onCancel: null, style: null, children: null };
   const intl = util.intl;
   obj.cancelText = intl.string(util.t.f3Pet9);
@@ -126,7 +126,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
     const obj2 = { location: null };
     const obj3 = {};
     const merged = Object.assign(require);
-    obj3.section = React6.STICKER_PREMIUM_TIER_2_UPSELL_MODAL;
+    obj3.section = React5.STICKER_PREMIUM_TIER_2_UPSELL_MODAL;
     obj3.object = constants2.BUTTON_CTA;
     obj2.location = obj3;
     AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, obj2);
@@ -143,8 +143,8 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj.style = items;
   let obj2 = { style: tmp.closeContainer, children: null };
   let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(6150);
-  obj3.children = closure_13(native.Icon, { source: analyticsLocations(8483) });
+  const tmp3Result = analyticsLocations(6165);
+  obj3.children = closure_13(native.Icon, { source: analyticsLocations(8499) });
   obj2.children = closure_13(Pressables.PressableOpacity, obj3);
   const items1 = [closure_13(closure_4, obj2), ];
   const obj5 = {
@@ -155,11 +155,11 @@ export default function StickersPremiumUpsellAlert(arg0) {
     children: null
   };
   const obj6 = { source: null, style: null };
-  const obj4 = { source: analyticsLocations(8483) };
-  obj6.source = analyticsLocations(10426);
+  const obj4 = { source: analyticsLocations(8499) };
+  obj6.source = analyticsLocations(10474);
   obj6.style = tmp.imageHeader;
-  const items2 = [closure_13(analyticsLocations(5837), obj6), , ];
-  const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
+  const items2 = [closure_13(analyticsLocations(5851), obj6), , ];
+  const obj7 = { style: tmp.description, variant: "body-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
     priceString = closure_12;
@@ -167,7 +167,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj8 = { children: null };
   obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_13(Text_Text.Text, obj7);
-  const tmp3Result2 = analyticsLocations(5837);
+  const tmp3Result2 = analyticsLocations(5851);
   items2[2] = closure_13(closure_4, { style: tmp.perks, children: items.map((perk, index) => closure_1_13(PerkRow, { perk, isLastPerk: index === length.length - 1 }, index)) });
   obj5.children = items2;
   obj8.children = closure_14(closure_4, obj5);

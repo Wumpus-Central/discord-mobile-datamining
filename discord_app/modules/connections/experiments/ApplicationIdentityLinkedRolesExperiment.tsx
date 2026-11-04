@@ -1,7 +1,7 @@
-// === Module 19961: ApplicationIdentityLinkedRolesExperiment ===
+// === Module 20077: ApplicationIdentityLinkedRolesExperiment ===
 
-// Module 19961 (ApplicationIdentityLinkedRolesExperiment)
-import createExperiment from "module_5359" /* 5359 */;
+// Module 20077 (ApplicationIdentityLinkedRolesExperiment)
+import createExperiment from "module_5360" /* 5360 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-04_application_identity_linked_roles", label: "Application Identity Linked Roles", defaultConfig: { enabled: false }, treatments: null };

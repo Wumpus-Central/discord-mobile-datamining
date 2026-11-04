@@ -1,6 +1,6 @@
-// === Module 17295: MobileSearchableSelect ===
+// === Module 17387: MobileSearchableSelect ===
 
-// Module 17295 (MobileSearchableSelect)
+// Module 17387 (MobileSearchableSelect)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -200,7 +200,7 @@ class MobileSearchableSelect {
             closure_15(value.value);
           },
           disabled: flag2,
-          children: closure_7(options(value[8]).Text, { variant: "text-sm/medium", color: "text-default", style: dropdownItem.dropdownItemText, children: children.label })
+          children: closure_7(options(value[8]).Text, { variant: "body-sm/medium", color: "text-default", style: dropdownItem.dropdownItemText, children: children.label })
         };
         items[1] = dropdownItemLast;
         return closure_7(ref, obj, "option-" + children.value + "-" + index);
@@ -214,9 +214,9 @@ class MobileSearchableSelect {
   }
 }
 get_ActivityIndicator = fn(17);
-({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
+({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
 const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.md, marginTop: nativeDefault.space.PX_4, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, left: 0, right: 0, zIndex: 999999, elevation: 30, shadowColor: "#000", shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.4, shadowRadius: 8, maxHeight: 250 };
@@ -224,7 +224,7 @@ obj2.dropdownContainer = rect;
 obj2.dropdownItem = { padding: nativeDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_MUTED };
 obj2.dropdownItemLast = { borderBottomWidth: 0 };
 obj2.dropdownItemText = { fontSize: 14 };
-const React7 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileSearchableSelect.tsx");
 

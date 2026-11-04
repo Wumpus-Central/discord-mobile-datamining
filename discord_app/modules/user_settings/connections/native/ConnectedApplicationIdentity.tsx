@@ -1,14 +1,14 @@
-// === Module 16989: ConnectedApplicationIdentity ===
+// === Module 17081: ConnectedApplicationIdentity ===
 
-// Module 16989 (ConnectedApplicationIdentity)
+// Module 17081 (ConnectedApplicationIdentity)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Icon from "Icon" /* 5756 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
-import common_AlertDefault from "common/Alert" /* 6150 */;
-import InfoBoxDefault from "InfoBox" /* 11529 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Icon from "Icon" /* 5770 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
+import common_AlertDefault from "common/Alert" /* 6165 */;
+import InfoBoxDefault from "InfoBox" /* 11579 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ const IconDefault = Icon;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
 
@@ -59,20 +59,20 @@ export default function ConnectedApplicationIdentity(identity) {
   let icon;
   const callback = obj2.useCallback(() => {
     let obj = { children: null };
-    items = [React5(native.Spacer, { size: 8 }), , , ];
-    const obj2 = { variant: "text-md/medium", children: null };
+    items = [metroImportDefault(native.Spacer, { size: 8 }), , , ];
+    const obj2 = { variant: "body-md/medium", children: null };
     const intl = util.intl;
     obj2.children = intl.format(util.t.VgqIPj, { provider: str });
-    items[1] = React5(Text_Text.Text, obj2);
-    items[2] = React5(native.Spacer, { size: 16 });
+    items[1] = metroImportDefault(Text_Text.Text, obj2);
+    items[2] = metroImportDefault(native.Spacer, { size: 16 });
     const obj4 = { children: null };
     const intl2 = util.intl;
     obj4.children = intl2.format(util.t.COW3Xn, { platformName: str });
-    items[3] = React5(InfoBoxDefault, obj4);
+    items[3] = metroImportDefault(InfoBoxDefault, obj4);
     obj.children = items;
     const obj3 = { provider: str };
     const obj5 = { platformName: str };
-    const tmp2 = React6(View, obj);
+    const tmp2 = React5(View, obj);
     const obj7 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
     const intl3 = util.intl;
     obj7.title = intl3.formatToPlainString(util.t.U5x12f, { name: str });

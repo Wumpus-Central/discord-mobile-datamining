@@ -1,16 +1,16 @@
-// === Module 12920: ConjureNativeStatusStrip ===
+// === Module 13002: ConjureNativeStatusStrip ===
 
-// Module 12920 (ConjureNativeStatusStrip)
+// Module 13002 (ConjureNativeStatusStrip)
 import nativeDefault from "native" /* 575 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
-import ConjureStatusLabels from "ConjureStatusLabels" /* 12742 */;
-import ConjureUsageSheet from "ConjureUsageSheet" /* 12926 */;
-import ConjureQueuedSheet from "ConjureQueuedSheet" /* 12927 */;
-import ConjureNativeTurnTimerDefault from "ConjureNativeTurnTimer" /* 12928 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5382 */;
+import ConjureStatusLabels from "ConjureStatusLabels" /* 12823 */;
+import ConjureUsageSheet from "ConjureUsageSheet" /* 13008 */;
+import ConjureQueuedSheet from "ConjureQueuedSheet" /* 13009 */;
+import ConjureNativeTurnTimerDefault from "ConjureNativeTurnTimer" /* 13010 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10997 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11045 */;
 
 const ConjureUsageSheetDefault = ConjureUsageSheet;
 
@@ -103,13 +103,13 @@ function ThinkingIndicator(line) {
     str = "no-hide-descendants";
   }
   obj4.importantForAccessibility = str;
-  obj4.children = closure_8(line(text[10]).AIShimmer, { ref, text, variant: "text-xs/medium", color: "text-subtle", duration: line(text[8]).INDICATOR_PASS_MS, delay: null });
+  obj4.children = closure_8(line(text[10]).AIShimmer, { ref, text, variant: "body-xs/medium", color: "text-subtle", duration: line(text[8]).INDICATOR_PASS_MS, delay: null });
   items3[1] = closure_8(ref2, obj4);
   obj3.children = items3;
   return closure_9(ref2, obj3);
 }
 const View = fn(17).View;
-const AI_LOADER_CYCLE_MS = fn(12381).AI_LOADER_CYCLE_MS;
+const AI_LOADER_CYCLE_MS = fn(12446).AI_LOADER_CYCLE_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -174,13 +174,13 @@ export default function ConjureNativeStatusStrip(projectId) {
   }
   obj2.publishPending = tmp8;
   obj2.publishing = stateFromStores;
-  const thinkingLabelResult = projectId(12742).thinkingLabel(obj2);
+  const thinkingLabelResult = projectId(12823).thinkingLabel(obj2);
   const intl = tmp2(1113).intl;
   const stringResult = intl.string(thinkingLabelResult);
   let runesUsedLabelsResult = null;
   if (null != projectUsage) {
-    runesUsedLabelsResult = tmp2(12742).runesUsedLabels(projectUsage);
-    const tmp2Result2 = tmp2(12742);
+    runesUsedLabelsResult = tmp2(12823).runesUsedLabels(projectUsage);
+    const tmp2Result2 = tmp2(12823);
   }
   let tmp12 = null != activity;
   if (tmp12) {
@@ -195,7 +195,7 @@ export default function ConjureNativeStatusStrip(projectId) {
   const items2 = [projectId];
   [][0] = projectId;
   const callback = noop.useCallback(() => {
-    const obj2 = { content: React6(ConjureUsageSheetDefault, { projectId }), key: ConjureUsageSheet.CONJURE_USAGE_SHEET_KEY };
+    const obj2 = { content: React5(ConjureUsageSheetDefault, { projectId }), key: ConjureUsageSheet.CONJURE_USAGE_SHEET_KEY };
     ActionSheetActionCreators.showActionSheet(obj2);
   }, items2);
   const obj3 = { style: tmp.row, children: null };
@@ -210,7 +210,7 @@ export default function ConjureNativeStatusStrip(projectId) {
       const items3 = [closure_8(View, obj5), ];
       let tmp17Result = null;
       if (null != remixStartedAt) {
-        const obj6 = { startedAt: remixStartedAt, variant: "text-xs/medium" };
+        const obj6 = { startedAt: remixStartedAt, variant: "body-xs/medium" };
         tmp17Result = closure_8(ConjureNativeTurnTimerDefault, obj6);
       }
       items3[1] = tmp17Result;
@@ -222,37 +222,37 @@ export default function ConjureNativeStatusStrip(projectId) {
         if (connFailed) {
           str3 = "text-feedback-critical";
         }
-        const obj7 = { variant: "text-xs/medium", color: str3, children: connLabel };
-        tmp17Result4 = closure_8(tmp2(5747).Text, obj7);
+        const obj7 = { variant: "body-xs/medium", color: str3, children: connLabel };
+        tmp17Result4 = closure_8(tmp2(5761).Text, obj7);
       }
       items4[1] = tmp17Result4;
       let tmp17Result5 = null;
       if (queuedCount > 0) {
         const obj8 = { accessibilityRole: "button", hitSlop: 8, style: tmp.chip, onPress: tmp14, children: null };
-        const obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
+        const obj9 = { variant: "body-xs/medium", color: "text-muted", children: null };
         const intl3 = tmp2(1113).intl;
         const obj10 = { count: queuedCount };
         obj9.children = intl3.formatToPlainString(_modDef3995.REnNUn, obj10);
-        obj8.children = closure_8(tmp2(5747).Text, obj9);
-        tmp17Result5 = closure_8(tmp2(7106).PressableOpacity, obj8);
+        obj8.children = closure_8(tmp2(5761).Text, obj9);
+        tmp17Result5 = closure_8(tmp2(7121).PressableOpacity, obj8);
       }
       items4[2] = tmp17Result5;
       let tmp15Result = null;
       if (null != runesUsedLabelsResult) {
         const obj11 = { accessibilityRole: "button", accessibilityLabel: runesUsedLabelsResult.aria, hitSlop: 8, style: tmp.chip, onPress: callback, children: null };
-        const obj12 = { variant: "text-xs/medium", color: "text-muted", children: runesUsedLabelsResult.text };
-        const items5 = [closure_8(tmp2(5747).Text, obj12), ];
+        const obj12 = { variant: "body-xs/medium", color: "text-muted", children: runesUsedLabelsResult.text };
+        const items5 = [closure_8(tmp2(5761).Text, obj12), ];
         const obj13 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-        items5[1] = closure_8(tmp2(5855).CircleInformationIcon, obj13);
+        items5[1] = closure_8(tmp2(5869).CircleInformationIcon, obj13);
         obj11.children = items5;
-        tmp15Result = closure_9(tmp2(7106).PressableOpacity, obj11);
+        tmp15Result = closure_9(tmp2(7121).PressableOpacity, obj11);
       }
       items4[3] = tmp15Result;
       obj3.children = items4;
       return closure_9(View, obj3);
     }
   }
-  const tmp19 = thinkingLabelResult === projectId(12742).RECALLING_LINES[0];
+  const tmp19 = thinkingLabelResult === projectId(12823).RECALLING_LINES[0];
   let tmp20 = thinking;
   if (!thinking) {
     tmp20 = tmp19;
@@ -282,6 +282,6 @@ export default function ConjureNativeStatusStrip(projectId) {
   obj14.disabled = !thinking;
   obj14.onPress = onToggleThinking;
   obj14.children = closure_8(ThinkingIndicator, { line: stringResult, rotating: tmp19, immediate: saving });
-  tmp17Result6 = closure_8(tmp2(7106).PressableOpacity, obj14);
-  const tmp2Result = projectId(12742);
+  tmp17Result6 = closure_8(tmp2(7121).PressableOpacity, obj14);
+  const tmp2Result = projectId(12823);
 };

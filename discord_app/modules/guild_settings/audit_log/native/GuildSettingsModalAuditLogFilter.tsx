@@ -1,18 +1,18 @@
-// === Module 19864: GuildSettingsModalAuditLogFilter ===
+// === Module 19980: GuildSettingsModalAuditLogFilter ===
 
-// Module 19864 (GuildSettingsModalAuditLogFilter)
+// Module 19980 (GuildSettingsModalAuditLogFilter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
-import FormRadio from "FormRadio" /* 7188 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10949 */;
-import AuditLogUtils from "AuditLogUtils" /* 19862 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 19865 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
+import FormRadio from "FormRadio" /* 7203 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10997 */;
+import AuditLogUtils from "AuditLogUtils" /* 19978 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 19981 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19860 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19976 */;
 
 const require = globalThis.__r;
 
@@ -30,8 +30,8 @@ let closure_13 = noop.memo(function AuditLogFilterUserRow(selected) {
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj2 = { start, end, userId, guildId, onPress, accessibilityRole, accessibilityState, trailing: null };
-  obj2.trailing = React7(FormRadio.FormRadio, { selected });
-  return React7(DetailedGuildIdentityUserRowDefault, obj2);
+  obj2.trailing = React6(FormRadio.FormRadio, { selected });
+  return React6(DetailedGuildIdentityUserRowDefault, obj2);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/audit_log/native/GuildSettingsModalAuditLogFilter.tsx");

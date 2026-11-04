@@ -1,18 +1,18 @@
-// === Module 19607: EntityVersionsManager ===
+// === Module 19712: EntityVersionsManager ===
 
-// Module 19607 (EntityVersionsManager)
+// Module 19712 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 7917 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
-import StickersStore from "StickersStore" /* 6957 */;
+import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 7933 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
+import StickersStore from "StickersStore" /* 6972 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 function handleDeletedEntityIds(guild_id) {
   importDefault = guild_id;

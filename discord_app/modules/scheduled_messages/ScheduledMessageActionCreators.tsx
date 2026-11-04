@@ -1,6 +1,6 @@
-// === Module 14723: ScheduledMessageActionCreators ===
+// === Module 14803: ScheduledMessageActionCreators ===
 
-// Module 14723 (ScheduledMessageActionCreators)
+// Module 14803 (ScheduledMessageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -466,7 +466,7 @@ let closure_12 = async function _fetchScheduledMessages() {
   return value;
 };
 const Constants = fn(1072);
-({ Endpoints: hasOwnProperty, MessageFlags: metroRequire } = Constants);
+({ Endpoints: hasOwnProperty, MessageFlags: closure_6 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
 

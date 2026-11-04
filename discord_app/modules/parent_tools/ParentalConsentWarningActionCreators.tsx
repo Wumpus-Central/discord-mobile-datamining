@@ -1,10 +1,10 @@
-// === Module 19745: ParentalConsentWarningActionCreators ===
+// === Module 19861: ParentalConsentWarningActionCreators ===
 
-// Module 19745 (ParentalConsentWarningActionCreators)
+// Module 19861 (ParentalConsentWarningActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 16914 */;
+import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 17006 */;
 import Backoff from "Backoff" /* 559 */;
 
 const require = fn;
@@ -189,9 +189,9 @@ let closure_13 = async function _maybeFetchWarning() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          let shouldFetchTodayResult = null == React5;
+          let shouldFetchTodayResult = null == metroImportDefault;
           if (shouldFetchTodayResult) {
-            shouldFetchTodayResult = null == React6;
+            shouldFetchTodayResult = null == React5;
           }
           if (shouldFetchTodayResult) {
             shouldFetchTodayResult = ParentalConsentWarningStore.shouldFetchToday();

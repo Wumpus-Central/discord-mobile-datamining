@@ -1,9 +1,9 @@
-// === Module 15867: FormDropdown ===
+// === Module 15955: FormDropdown ===
 
-// Module 15867 (FormDropdown)
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRow from "TableRow" /* 7101 */;
-import LockIcon from "LockIcon" /* 8791 */;
+// Module 15955 (FormDropdown)
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRow from "TableRow" /* 7116 */;
+import LockIcon from "LockIcon" /* 8808 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,8 +16,8 @@ export default function FormDropdown(arg0) {
   ({ leading, onPress, placeholder } = arg0);
   const obj = { start: true, end: true, icon: leading, label: null, trailing: null, arrow: null, disabled: null, onPress: null };
   if (label == null) {
-    const obj2 = { variant: "text-md/medium", color: "text-muted", children: placeholder };
-    label = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", children: placeholder });
+    const obj2 = { variant: "body-md/medium", color: "text-muted", children: placeholder };
+    label = jsx(Text_Text.Text, { variant: "body-md/medium", color: "text-muted", children: placeholder });
   }
   obj.label = label;
   let tmpResult;

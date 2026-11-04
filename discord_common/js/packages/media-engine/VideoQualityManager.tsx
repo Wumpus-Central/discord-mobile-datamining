@@ -1,8 +1,8 @@
-// === Module 5923: VideoQualityManager ===
+// === Module 5937: VideoQualityManager ===
 
-// Module 5923 (VideoQualityManager)
-import MediaSinkWantsLadder from "MediaSinkWantsLadder" /* 5924 */;
-import Constants from "Constants" /* 5888 */;
+// Module 5937 (VideoQualityManager)
+import MediaSinkWantsLadder from "MediaSinkWantsLadder" /* 5938 */;
+import Constants from "Constants" /* 5902 */;
 import size from "module_2" /* 2 */;
 
 ({ defaultVideoQualityOptions: c2, MediaEngineContextTypes: c3, VideoQualityMode, VIDEO_QUALITY_FRAMERATE: closure_4, BIT_FLOOR_PER_PIXEL: hasOwnProperty } = Constants);

@@ -1,13 +1,13 @@
-// === Module 17187: OrbsArcadeSheetActions ===
+// === Module 17279: OrbsArcadeSheetActions ===
 
-// Module 17187 (OrbsArcadeSheetActions)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17173 */;
-import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 17184 */;
-import OrbsArcadeClaimRewardButtonDefault from "OrbsArcadeClaimRewardButton" /* 17188 */;
-import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton" /* 17191 */;
+// Module 17279 (OrbsArcadeSheetActions)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17265 */;
+import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 17276 */;
+import OrbsArcadeClaimRewardButtonDefault from "OrbsArcadeClaimRewardButton" /* 17280 */;
+import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton" /* 17283 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17166 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17258 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -73,7 +73,7 @@ export default function OrbsArcadeSheetActions(game) {
       let tmp19 = null;
       if (null != tmp7) {
         ({ text: obj6.text, onPress: obj6.onPress } = tmp7);
-        tmp19 = closure_4(tmp10(5754).Button, { grow: true, size: "lg", variant: "secondary", text: null, onPress: null });
+        tmp19 = closure_4(tmp10(5768).Button, { grow: true, size: "lg", variant: "secondary", text: null, onPress: null });
         const obj5 = { grow: true, size: "lg", variant: "secondary", text: null, onPress: null };
       }
       items3[1] = tmp19;

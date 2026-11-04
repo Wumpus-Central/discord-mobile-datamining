@@ -1,24 +1,24 @@
-// === Module 19945: RoleIconActionSheet ===
+// === Module 20061: RoleIconActionSheet ===
 
-// Module 19945 (RoleIconActionSheet)
+// Module 20061 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 19942 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19928 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20044 */;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = ["image/png", "image/jpeg"];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/RoleIconActionSheet.tsx");
@@ -120,7 +120,7 @@ export default function RoleIconActionSheet(arg0) {
   let intl = util.intl;
   obj2.title = intl.string(util.t.B9grJw);
   const items2 = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), , ];
-  let obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
+  let obj3 = { variant: "body-sm/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.I3YQeV);
   items2[1] = closure_7(Text_Text.Text, obj3);
@@ -178,18 +178,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(19942).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(19942);
+                  closure_0(20058).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(20058);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(19942);
+                const tmp22 = closure_0(20058);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(19946).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(20062).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
@@ -197,8 +197,8 @@ export default function RoleIconActionSheet(arg0) {
             if (1 === tmp7) {
               c6 = 0;
               const intl = closure_0(1113).intl;
-              closure_0(5831).presentError(intl.string(closure_0(1113).t.R0RpRX));
-              const obj2 = closure_0(5831);
+              closure_0(5845).presentError(intl.string(closure_0(1113).t.R0RpRX));
+              const obj2 = closure_0(5845);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -232,7 +232,7 @@ export default function RoleIconActionSheet(arg0) {
       }
       return applyArgumentsResult;
     };
-    const result = guildId(10070).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(10118).openEmojiPickerActionSheet(obj2, "stack");
   };
   items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;

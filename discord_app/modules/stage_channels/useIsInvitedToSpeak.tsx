@@ -1,8 +1,8 @@
-// === Module 11994: useIsInvitedToSpeak ===
+// === Module 12053: useIsInvitedToSpeak ===
 
-// Module 11994 (useIsInvitedToSpeak)
+// Module 12053 (useIsInvitedToSpeak)
 import initialize from "initialize" /* 504 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6168 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6183 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 

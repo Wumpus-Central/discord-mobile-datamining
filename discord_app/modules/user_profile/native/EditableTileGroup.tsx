@@ -1,10 +1,10 @@
-// === Module 16690: EditableTileGroup ===
+// === Module 16780: EditableTileGroup ===
 
-// Module 16690 (EditableTileGroup)
+// Module 16780 (EditableTileGroup)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export function EditableTileGroup(children) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.labelRow, children: null };
-  items = [React4(Text_Text.Text, { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-strong", children: children.heading }), ];
+  items = [React4(Text_Text.Text, { accessibilityRole: "header", variant: "body-sm/semibold", color: "text-strong", children: children.heading }), ];
   if (flag) {
     const obj3 = { size: "xs", color: nativeDefault.colors.TEXT_STRONG, accessibilityLabel: null };
     const intl = util.intl;

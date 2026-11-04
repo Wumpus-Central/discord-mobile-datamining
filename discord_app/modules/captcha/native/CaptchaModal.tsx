@@ -1,24 +1,24 @@
-// === Module 19528: CaptchaModal ===
+// === Module 19632: CaptchaModal ===
 
-// Module 19528 (CaptchaModal)
+// Module 19632 (CaptchaModal)
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1500 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6658 */;
-import RegistrationUtils from "RegistrationUtils" /* 18141 */;
-import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 19530 */;
-import CaptchaUtilsDefault from "CaptchaUtils" /* 19534 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6673 */;
+import RegistrationUtils from "RegistrationUtils" /* 18238 */;
+import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 19634 */;
+import CaptchaUtilsDefault from "CaptchaUtils" /* 19638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(18132).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(18133);
-({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
+let closure_6 = fn(18229).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(18230);
+({ RegisterTransitionSteps: metroImportDefault, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -35,7 +35,7 @@ let result = size.fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx
 export default function CaptchaModal(arg0) {
   ({ onCaptchaVerify: require, onReject } = arg0);
   ({ close: dependencyMap, sitekey: noop, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
-  const tmp2 = closure_11(onReject(7237)());
+  const tmp2 = closure_11(onReject(7257)());
   const navigation = Link.useNavigation();
   items = [navigation];
   const memo = noop.useMemo(() => {
@@ -56,7 +56,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  closure_9 = onReject(19529)({ onReject, analyticsType: memo });
+  closure_9 = onReject(19633)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);
@@ -67,7 +67,7 @@ export default function CaptchaModal(arg0) {
     headerText = intl.string(util.t.FpoiHe);
   }
   const items2 = [closure_9(Text_Text.Text, { variant: "heading-xl/semibold", accessibilityRole: "header", children: headerText }), ];
-  let obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
+  let obj3 = { variant: "body-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {
     const intl2 = util.intl;
     bodyText = intl2.string(util.t["/CidxO"]);

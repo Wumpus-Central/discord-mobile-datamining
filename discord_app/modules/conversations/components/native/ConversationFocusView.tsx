@@ -1,17 +1,17 @@
-// === Module 10021: ConversationFocusView ===
+// === Module 10069: ConversationFocusView ===
 
-// Module 10021 (ConversationFocusView)
+// Module 10069 (ConversationFocusView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9983 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9998 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 10031 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 10046 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { container: { flex: 1, backgroundColor }, pendingContent: { flex: 1, paddingVertical: nativeDefault.space.PX_24, alignItems: "center", gap: nativeDefault.space.PX_32, backgroundColor } };
@@ -75,7 +75,7 @@ export default function ConversationFocusView(channelId) {
     closure_7(closure_5, obj3);
   } else {
     const obj5 = { style: container.pendingContent, children: null };
-    const obj6 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj6 = { variant: "body-md/normal", color: "text-muted", children: null };
     let intl = ChatPreview(tmp[8]).intl;
     obj6.children = intl.string(ChatPreview(tmp[8]).t.eylmYW);
     const items3 = [closure_7(ChatPreview(tmp[9]).Text, obj6), ];

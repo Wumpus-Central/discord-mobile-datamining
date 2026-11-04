@@ -1,15 +1,15 @@
-// === Module 10242: MessageImpressionAnalyticsHelpers ===
+// === Module 10290: MessageImpressionAnalyticsHelpers ===
 
-// Module 10242 (MessageImpressionAnalyticsHelpers)
-import InviteCodeUtils from "InviteCodeUtils" /* 5870 */;
-import CodedLink from "CodedLink" /* 5872 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8002 */;
-import MessageViewTrackingManager from "MessageViewTrackingManager" /* 10243 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10244 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10245 */;
+// Module 10290 (MessageImpressionAnalyticsHelpers)
+import InviteCodeUtils from "InviteCodeUtils" /* 5884 */;
+import CodedLink from "CodedLink" /* 5886 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 8018 */;
+import MessageViewTrackingManager from "MessageViewTrackingManager" /* 10291 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10292 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10293 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5869 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
+import InviteStore from "InviteStore" /* 5883 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5901 */;
 
 const require = globalThis.__r;
 
@@ -55,9 +55,9 @@ function getVoiceInviteEmbedRenderInfo(state) {
   return null;
 }
 const Constants = fn(1072);
-({ ChannelTypes: metroRequire, GuildFeatures: closure_7, InviteStates: closure_8, MessageFlags: closure_9 } = Constants);
-const LinkType = fn(7956).LinkType;
-const InviteTypes = fn(8003).InviteTypes;
+({ ChannelTypes: closure_6, GuildFeatures: metroImportDefault, InviteStates: closure_8, MessageFlags: closure_9 } = Constants);
+const LinkType = fn(7972).LinkType;
+const InviteTypes = fn(8019).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessageImpressionAnalyticsHelpers.tsx");
 

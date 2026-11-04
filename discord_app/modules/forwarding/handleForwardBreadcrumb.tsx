@@ -1,7 +1,7 @@
-// === Module 13513: handleForwardBreadcrumb ===
+// === Module 13597: handleForwardBreadcrumb ===
 
-// Module 13513 (handleForwardBreadcrumb)
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7645 */;
+// Module 13597 (handleForwardBreadcrumb)
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7661 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -134,7 +134,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
   })();
 };
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, AnalyticsObjects: closure_7, Routes: closure_8 } = Constants);
+({ AnalyticEvents: closure_6, AnalyticsObjects: metroImportDefault, Routes: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");
 

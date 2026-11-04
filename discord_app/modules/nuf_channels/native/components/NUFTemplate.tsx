@@ -1,10 +1,10 @@
-// === Module 15331: NUFTemplate ===
+// === Module 15418: NUFTemplate ===
 
-// Module 15331 (NUFTemplate)
+// Module 15418 (NUFTemplate)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function NUFActionSheetTemplate(arg0) {
   ({ title, description, imageSrc, onCTAPress, CTALabel } = arg0);
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  items = [React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: title }), React4(Text_Text.Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description }), React4(FastImageDefault, { source: imageSrc, style: tmp.image }), React4(components_Button_Button.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true })];
+  items = [React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: title }), React4(Text_Text.Text, { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: description }), React4(FastImageDefault, { source: imageSrc, style: tmp.image }), React4(components_Button_Button.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true })];
   obj.children = items;
   return hasOwnProperty(View, obj);
 };

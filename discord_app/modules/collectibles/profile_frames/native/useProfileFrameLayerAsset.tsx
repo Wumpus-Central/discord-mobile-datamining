@@ -1,6 +1,6 @@
-// === Module 8919: useProfileFrameLayerAsset ===
+// === Module 8936: useProfileFrameLayerAsset ===
 
-// Module 8919 (useProfileFrameLayerAsset)
+// Module 8936 (useProfileFrameLayerAsset)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ function measureProfileFrameLayer(arg0) {
   }
 }
 function getProfileFrameLayerAssetUrl(arg0, arg1, arg2) {
-  const rounded = Math.round(arg2 * React5.get());
+  const rounded = Math.round(arg2 * metroImportDefault.get());
   return "" + arg0 + "?width=" + rounded + "&height=" + Math.round(rounded * arg1);
 }
 let closure_15 = async function _preloadLayer(arg0) {
@@ -73,8 +73,8 @@ let closure_15 = async function _preloadLayer(arg0) {
   return value;
 };
 get_ActivityIndicator = fn(17);
-({ Image: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7497).UserProfileThemeTypes;
+({ Image: closure_6, PixelRatio: metroImportDefault } = get_ActivityIndicator);
+const UserProfileThemeTypes = fn(7513).UserProfileThemeTypes;
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
@@ -260,7 +260,7 @@ export function usePreloadLayerImages(frame) {
         let hasItem = null != value;
         if (hasItem) {
           const _Math = Math;
-          const rounded = Math.round(num * React5.get());
+          const rounded = Math.round(num * metroImportDefault.get());
           const _Math2 = Math;
           const _HermesInternal = HermesInternal;
           hasItem = set.has("" + item + "?width=" + rounded + "&height=" + Math.round(rounded * value));

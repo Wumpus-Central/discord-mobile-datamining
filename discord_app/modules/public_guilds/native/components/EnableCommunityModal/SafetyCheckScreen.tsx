@@ -1,15 +1,15 @@
-// === Module 19987: SafetyCheckScreen ===
+// === Module 20103: SafetyCheckScreen ===
 
-// Module 19987 (SafetyCheckScreen)
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
+// Module 20103 (SafetyCheckScreen)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ VerificationLevels: closure_7, GuildExplicitContentFilterTypes: closure_8 } = Constants);
+({ VerificationLevels: metroImportDefault, GuildExplicitContentFilterTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);
@@ -44,7 +44,7 @@ export default function SafetyCheckScreen() {
   if (null != guild) {
     const obj5 = { headerRef: ref, currentStep: tmp2(tmp3[11]).EnableCommunityModalSteps.STEP_1, disableNextStep: guild.explicitContentFilter !== constants2.ALL_MEMBERS || guild.verificationLevel === constants.NONE, children: null };
     const obj6 = { style: enableCommunitySharedStyles.content, children: null };
-    const obj7 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
+    const obj7 = { ref, accessibilityRole: "header", variant: "body-md/semibold", color: "text-subtle", children: null };
     const intl = tmp2(tmp3[13]).intl;
     obj7.children = intl.formatToPlainString(tmp2(tmp3[13]).t.tInpJj, { number: 1, total: 3 });
     const items1 = [closure_9(tmp2(tmp3[12]).Text, obj7), , , ];
@@ -54,7 +54,7 @@ export default function SafetyCheckScreen() {
     const intl2 = tmp2(tmp3[13]).intl;
     obj9.children = intl2.string(tmp2(tmp3[13]).t.QrjLYl);
     items1[2] = closure_9(tmp2(tmp3[12]).Heading, obj9);
-    const obj10 = { style: enableCommunitySharedStyles.description, variant: "text-md/medium", color: "text-subtle", children: null };
+    const obj10 = { style: enableCommunitySharedStyles.description, variant: "body-md/medium", color: "text-subtle", children: null };
     const intl3 = tmp2(tmp3[13]).intl;
     obj10.children = intl3.string(tmp2(tmp3[13]).t.i1STwu);
     items1[3] = closure_9(tmp2(tmp3[12]).Text, obj10);

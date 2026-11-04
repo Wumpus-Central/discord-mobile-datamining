@@ -1,16 +1,16 @@
-// === Module 16691: UserProfileDisplayNameStyleTileButton ===
+// === Module 16781: UserProfileDisplayNameStyleTileButton ===
 
-// Module 16691 (UserProfileDisplayNameStyleTileButton)
+// Module 16781 (UserProfileDisplayNameStyleTileButton)
 import nativeDefault from "native" /* 575 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8861 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8878 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8872 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { button: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.md }, previewContainer: { flex: 1, minWidth: 0 } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -40,7 +40,7 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   obj3.accessibilityLabel = intl.string(user(1113).t.lsjENp);
   const obj4 = { text: null };
   const obj2 = user(504);
-  obj4.text = user(16692).getDisplayNameStyleAccessibleValue(displayNameStyles);
+  obj4.text = user(16782).getDisplayNameStyleAccessibleValue(displayNameStyles);
   obj3.accessibilityValue = obj4;
   const intl2 = user(1113).intl;
   obj3.accessibilityHint = intl2.string(user(1113).t["4lAcxv"]);
@@ -50,14 +50,14 @@ export default function UserProfileDisplayNameStyleTileButton(user) {
   const obj7 = { userId: user.id, userName: displayName, pendingDisplayNameStyles: displayNameStyles, ignoreDisabledStylesSetting: true, effectDisplayType: null, variant: "heading-xl/semibold", defaultColor: "text-muted", lineClamp: 1 };
   if (!stateFromStores) {
     if (setting) {
-      let STATIC = tmp2(10903).EffectDisplayType.ANIMATED;
+      let STATIC = tmp2(10951).EffectDisplayType.ANIMATED;
     }
     obj7.effectDisplayType = STATIC;
     obj6.children = closure_6(tmp10, obj7);
-    const items2 = [closure_6(View, obj6), closure_6(tmp2(7110).TableRowArrow, {})];
+    const items2 = [closure_6(View, obj6), closure_6(tmp2(7125).TableRowArrow, {})];
     obj3.children = items2;
-    return closure_7(user(7106).PressableHighlight, obj3);
+    return closure_7(user(7121).PressableHighlight, obj3);
   }
-  STATIC = tmp2(10903).EffectDisplayType.STATIC;
-  const obj5 = user(16692);
+  STATIC = tmp2(10951).EffectDisplayType.STATIC;
+  const obj5 = user(16782);
 };

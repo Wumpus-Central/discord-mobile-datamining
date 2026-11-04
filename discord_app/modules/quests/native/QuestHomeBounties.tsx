@@ -1,15 +1,15 @@
-// === Module 17124: QuestHomeBounties ===
+// === Module 17216: QuestHomeBounties ===
 
-// Module 17124 (QuestHomeBounties)
+// Module 17216 (QuestHomeBounties)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 17125 */;
-import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 17138 */;
-import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 17144 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 17217 */;
+import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 17230 */;
+import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 17236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7969 */;
+import BountyStore from "BountyStore" /* 7985 */;
 
 require = fn;
 const View = fn(17).View;
@@ -30,7 +30,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  const questHomeBounties = first(9813).useQuestHomeBounties().questHomeBounties;
+  const questHomeBounties = first(9831).useQuestHomeBounties().questHomeBounties;
   const tmp3 = closure_11();
   first = undefined;
   importDefault = undefined;
@@ -41,8 +41,8 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   } else {
     items1 = [];
   }
-  const obj = first(9813);
-  const tmp4 = _slicedToArray(first(7693).useSelectedDismissibleContent(items1), 2);
+  const obj = first(9831);
+  const tmp4 = _slicedToArray(first(7709).useSelectedDismissibleContent(items1), 2);
   first = tmp4[0];
   importDefault = tmp6;
   dependencyMap = noop.useRef(false);
@@ -71,7 +71,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       };
     }
   }, items3);
-  const tmpResult = first(7693);
+  const tmpResult = first(7709);
   const items4 = [BountyStore];
   ({ placement, buttonVariant, clickable } = shopCarouselConfig.shopCarouselConfig);
   let tmp10 = undefined !== clickable;
@@ -83,8 +83,8 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
     if (!stateFromStores) {
       let tmp11 = "none" !== placement && obtainableOrbRewards > 0;
       if (tmp11) {
-        tmp11 = orbShopProducts.length >= tmp(17131).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-        const tmp12 = orbShopProducts.length >= tmp(17131).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+        tmp11 = orbShopProducts.length >= tmp(17223).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+        const tmp12 = orbShopProducts.length >= tmp(17223).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
       }
       if (!tmp11) {
         const obj2 = { style: tmp3.container, children: null };

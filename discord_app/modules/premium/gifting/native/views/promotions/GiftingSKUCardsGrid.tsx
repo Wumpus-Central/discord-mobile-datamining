@@ -1,25 +1,25 @@
-// === Module 14591: GiftingSKUCardsGrid ===
+// === Module 14671: GiftingSKUCardsGrid ===
 
-// Module 14591 (GiftingSKUCardsGrid)
+// Module 14671 (GiftingSKUCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9413 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11524 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9430 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11574 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GiftingSKUCardItemPreview(arg0) {
   ({ item, isSelected } = arg0);
   const tmp = closure_18();
-  const currentUser = isSelected(8873).useCurrentUser();
+  const currentUser = isSelected(8890).useCurrentUser();
   items = [isSelected, currentUser];
   const memo = noop.useMemo(() => {
     let avatarSource;
@@ -30,30 +30,30 @@ function GiftingSKUCardItemPreview(arg0) {
   }, items);
   if (isNameplateRecord(item)) {
     const obj2 = { item, animate: isSelected };
-    let tmp8 = closure_10(currentUser(9648), obj2);
+    let tmp8 = closure_10(currentUser(9667), obj2);
   } else if (isAvatarDecorationRecord(item)) {
     const obj3 = { item, size, animate: isSelected, avatarSource: memo };
-    tmp8 = closure_10(currentUser(9634), obj3);
+    tmp8 = closure_10(currentUser(9653), obj3);
   } else if (isProfileEffectRecord(item)) {
     const obj4 = { style: tmp.profileEffect, children: null };
     const obj5 = { source: null, style: null, resizeMode: "cover" };
-    const obj6 = { uri: currentUser(9647) };
+    const obj6 = { uri: currentUser(9666) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
-    const items1 = [closure_10(currentUser(5837), obj5), ];
+    const items1 = [closure_10(currentUser(5851), obj5), ];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
-    items1[1] = closure_10(currentUser(9625), obj7);
+    items1[1] = closure_10(currentUser(9644), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
-    const tmp19 = currentUser(5837);
+    const tmp19 = currentUser(5851);
   } else {
     tmp8 = null;
     if (isProfileFrameRecord(item)) {
       const obj8 = { style: tmp.profileFrame, children: null };
       const obj9 = { profileFrame: item, previewWidth, previewHeight, profileBackgroundColor: currentUser(575).colors.BACKGROUND_BASE_LOW };
-      obj8.children = closure_10(currentUser(9646), obj9);
+      obj8.children = closure_10(currentUser(9665), obj9);
       tmp8 = closure_10(closure_4, obj8);
-      const tmp12 = currentUser(9646);
+      const tmp12 = currentUser(9665);
     }
   }
   return tmp8;
@@ -109,10 +109,10 @@ function GiftingSKUCardPreview(isSelected) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7849).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7865).isAvatarDecorationRecord;
 const isNameplateRecord = fn(2114).isNameplateRecord;
-const isProfileEffectRecord = fn(7850).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
+const isProfileEffectRecord = fn(7866).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7867).isProfileFrameRecord;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -136,7 +136,7 @@ obj.claimed = { opacity: 0.4 };
 obj.checkmark = { position: "absolute", opacity: 1, fontWeight: "bold" };
 const rect = { position: "absolute", top: -PX_12, left: 0, right: 0, overflow: "hidden", height: sum + PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.profileEffect = rect;
-obj.sampleProfile = { aspectRatio: fn(9622).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9641).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.profileFrame = { position: "absolute", top: 0, left: 0, right: 0, height: sum, alignItems: "center" };
 const rect1 = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
 obj.collectibleTextFade = rect1;
@@ -175,7 +175,7 @@ let closure_22 = noop.memo(function GiftingSKUCard(rewardSkuId) {
     }
     const items1 = [tmp5, ];
     const obj5 = { style: tmp.textContainer, children: null };
-    const obj6 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: product.name };
+    const obj6 = { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: product.name };
     const items2 = [closure_1_10(Text_Text.Text, obj6), ];
     const intl = util.intl;
     const string = intl.string;
@@ -185,7 +185,7 @@ let closure_22 = noop.memo(function GiftingSKUCard(rewardSkuId) {
     } else {
       stringResult = string(t.QQsaCc);
     }
-    const obj7 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: stringResult };
+    const obj7 = { variant: "body-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: stringResult };
     items2[1] = closure_1_10(Text_Text.Text, obj7);
     obj5.children = items2;
     items1[1] = closure_1_11(React4, obj5);

@@ -1,14 +1,14 @@
-// === Module 7042: MemberVerificationActionCreators ===
+// === Module 7057: MemberVerificationActionCreators ===
 
-// Module 7042 (MemberVerificationActionCreators)
+// Module 7057 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5870 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5884 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 5046 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import InviteStore from "InviteStore" /* 5869 */;
+import InviteStore from "InviteStore" /* 5883 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -25,7 +25,7 @@ let closure_10 = async function _fetchVerificationForm() {
     const id = currentUser.id;
   }
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React7.GUILD_MEMBER_VERIFICATION(closure_0), query: null, oldFormErrors: true, rejectWithError: null };
+  const request = { url: React6.GUILD_MEMBER_VERIFICATION(closure_0), query: null, oldFormErrors: true, rejectWithError: null };
   const obj5 = { with_guild: !member.isMember(closure_0, id), invite_code: null };
   if (null != inviteKeyForGuildId2) {
     const result = InviteCodeUtils.parseInviteCodeFromInviteKey(tmp27);

@@ -1,9 +1,9 @@
-// === Module 7400: GuildCategoryStore ===
+// === Module 7416: GuildCategoryStore ===
 
-// Module 7400 (GuildCategoryStore)
+// Module 7416 (GuildCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7401 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7417 */;
 import FavoriteStore from "FavoriteStore" /* 4993 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -237,7 +237,7 @@ function handleFavoritesUpdate() {
   closure_12[closure_1_10] = obj;
 }
 let GuildChannelStore = fn(5071);
-({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
+({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: closure_6 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, FAVORITES: closure_10 } = Constants);

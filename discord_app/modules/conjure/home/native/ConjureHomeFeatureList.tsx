@@ -1,15 +1,15 @@
-// === Module 13116: ConjureHomeFeatureList ===
+// === Module 13199: ConjureHomeFeatureList ===
 
-// Module 13116 (ConjureHomeFeatureList)
+// Module 13199 (ConjureHomeFeatureList)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7460 */;
-import ShieldIcon from "ShieldIcon" /* 11418 */;
-import RobotIcon from "RobotIcon" /* 12241 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7476 */;
+import ShieldIcon from "ShieldIcon" /* 11468 */;
+import RobotIcon from "RobotIcon" /* 12302 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -27,7 +27,7 @@ function ShowcaseVisual(styles) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { list: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, card: null, visual: null, caption: null, window: null, line: null, lineTitle: null, lineName: null, lineShort: null, lineMedium: null, lineLong: null, windowBar: null, windowDot: null, pollOption: null, pollFill: null, pollFillWinner: null, pollLabel: null, pollLabelWinner: null, gameCanvas: null, cloud: null, pipe: null, player: null, pill: null, joinRow: null, joinArrow: null, message: null, messageBody: null, messageHeader: null, avatar: null, avatarBrand: null, botTag: null, profile: null, profileBanner: null, profileBody: null, profileAvatar: null, statsWidget: null, stats: null, stat: null, statValue: null, statLabel: null, chart: null, chartBar: null, chartBarDown: null, scene: null, sceneHills: null, sceneScrim: null, crosshair: null, overlayPanel: null, overlayMember: null, overlayAvatar: null, speaking: null, overlayName: null, overlayTimer: null, overlayTimerValue: null, redacted: null, blockedNotice: null, blockedText: null, lineCritical: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -137,8 +137,8 @@ const size13 = { width: 20, height: nativeDefault.space.PX_4, backgroundColor: n
 obj.overlayTimerValue = size13;
 obj.redacted = { opacity: 0.4 };
 const obj33 = { borderWidth: 2, borderColor: nativeDefault.colors.STATUS_ONLINE, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-obj.blockedNotice = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_6, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
-const obj34 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_6, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+obj.blockedNotice = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_6, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL };
+const obj34 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_6, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL };
 obj.blockedText = { flex: 1, gap: nativeDefault.space.PX_6 };
 const obj35 = { flex: 1, gap: nativeDefault.space.PX_6 };
 obj.lineCritical = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, opacity: 0.6 };
@@ -206,7 +206,7 @@ let closure_14 = {
     items3[1] = { left: nativeDefault.space.PX_6 };
     obj5.style = items3;
     const obj6 = { left: nativeDefault.space.PX_6 };
-    const items4 = [closure_5(styles(9506).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }), closure_5(styles(5747).Text, { variant: "text-xxs/semibold", color: "text-overlay-light", children: 128 })];
+    const items4 = [closure_5(styles(9524).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }), closure_5(styles(5761).Text, { variant: "footnote/semibold", color: "text-overlay-light", children: 128 })];
     obj5.children = items4;
     items1[4] = closure_6(closure_4, obj5);
     const obj8 = { style: null, children: null };
@@ -215,11 +215,11 @@ let closure_14 = {
     items5[1] = { right: nativeDefault.space.PX_6 };
     obj8.style = items5;
     const obj9 = { right: nativeDefault.space.PX_6 };
-    const items6 = [closure_5(styles(9596).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }), , ];
+    const items6 = [closure_5(styles(9615).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }), , ];
     const obj10 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[1] = closure_5(styles(9596).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
+    items6[1] = closure_5(styles(9615).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
     const obj11 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[2] = closure_5(styles(9596).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
+    items6[2] = closure_5(styles(9615).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
     obj8.children = items6;
     items1[5] = closure_6(closure_4, obj8);
     obj.children = items1;
@@ -242,7 +242,7 @@ let closure_14 = {
     const obj9 = { style: styles.messageHeader, children: null };
     const items4 = [hasOwnProperty(Line, { style: styles.lineName }), ];
     const obj11 = { style: styles.botTag, children: null };
-    const obj12 = { variant: "text-xxs/semibold", color: "text-overlay-light", children: null };
+    const obj12 = { variant: "footnote/semibold", color: "text-overlay-light", children: null };
     const intl = util.intl;
     obj12.children = intl.string(_modDef3995.VlgiLf);
     obj11.children = hasOwnProperty(Text_Text.Text, obj12);
@@ -259,7 +259,7 @@ let closure_14 = {
   "profile-widgets": function ProfileWidgetsVisual(styles) {
     styles = styles.styles;
     let token;
-    token = styles(5719).useToken(token(575).colors.BACKGROUND_BRAND);
+    token = styles(5732).useToken(token(575).colors.BACKGROUND_BRAND);
     items = [token];
     const obj2 = { style: null, children: null };
     items1 = [, ];
@@ -269,7 +269,7 @@ let closure_14 = {
       items = [token, nativeDefault.unsafe_rawColors.ILLO_PINK_40];
       return items;
     }, items);
-    items2 = [closure_5(token(5710), { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } }), ];
+    items2 = [closure_5(token(5723), { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } }), ];
     const obj4 = { style: styles.profileBody, children: null };
     const obj5 = { style: null };
     items3 = [, ];
@@ -286,7 +286,7 @@ let closure_14 = {
       return timestampProducer(React4, obj, item);
     });
     const items6 = [closure_5(closure_4, obj8), ];
-    let obj = styles(5719);
+    let obj = styles(5732);
     const obj3 = { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } };
     const obj6 = { style: styles.lineName };
     items6[1] = closure_5(closure_4, {
@@ -335,7 +335,7 @@ let closure_14 = {
     const obj3 = { style: styles.sceneScrim };
     const obj4 = { style: styles.crosshair };
     const tmp = LinearGradientDefault;
-    items3 = [closure_5(styles(5860).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }), closure_5(Line, { style: styles.overlayTimerValue })];
+    items3 = [closure_5(styles(5874).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }), closure_5(Line, { style: styles.overlayTimerValue })];
     obj6.children = items3;
     items[4] = closure_6(closure_4, obj6);
     obj.children = items;
@@ -409,11 +409,11 @@ export default noop.memo(function ConjureHomeFeatureList() {
     ({ title, description } = id);
     items = [hasOwnProperty(React4, obj2), ];
     const obj4 = { style: styles.caption, children: null };
-    const obj5 = { variant: "text-md/semibold", color: "text-strong", accessibilityRole: "header", children: null };
+    const obj5 = { variant: "body-md/semibold", color: "text-strong", accessibilityRole: "header", children: null };
     const intl = util.intl;
     obj5.children = intl.string(title);
     items1 = [hasOwnProperty(Text_Text.Text, obj5), ];
-    const obj6 = { variant: "text-sm/normal", color: "text-subtle", children: null };
+    const obj6 = { variant: "body-sm/normal", color: "text-subtle", children: null };
     const intl2 = util.intl;
     obj6.children = intl2.string(description);
     items1[1] = hasOwnProperty(Text_Text.Text, obj6);

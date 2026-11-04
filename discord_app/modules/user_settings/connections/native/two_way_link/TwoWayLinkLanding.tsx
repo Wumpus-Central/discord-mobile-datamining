@@ -1,22 +1,22 @@
-// === Module 9861: TwoWayLinkLanding ===
+// === Module 9879: TwoWayLinkLanding ===
 
-// Module 9861 (TwoWayLinkLanding)
+// Module 9879 (TwoWayLinkLanding)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import TableRow from "TableRow" /* 7101 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9862 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import TableRow from "TableRow" /* 7116 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9880 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6692 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6707 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ image: { marginBottom: 32 }, valueProps: { marginTop: 24, maxWidth: "100%" } });
 const size = fn(2);
@@ -46,7 +46,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   }
   items1[1] = imgStyle;
   obj5.style = items1;
-  const items2 = [closure_6(valueProps(5837), obj5), , , ];
+  const items2 = [closure_6(valueProps(5851), obj5), , , ];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: null };
   let tmp11 = headerConnect;
   if (stateFromStores) {
@@ -57,22 +57,22 @@ export function TwoWayLinkLanding(learnMoreLink) {
   }
   obj6.children = tmp11;
   items2[1] = closure_6(Text_Text.Text, obj6);
-  items2[2] = closure_6(Text_Text.Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body });
-  const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-  const tmp10 = valueProps(5837);
+  items2[2] = closure_6(Text_Text.Text, { variant: "body-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body });
+  const obj7 = { variant: "body-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
+  const tmp10 = valueProps(5851);
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label, index) => {
       label = label.label;
       ({ subLabel, icon } = label);
-      return timestampProducer(TableRow.TableRow, { start: 0 === index, end: index === valueProps.length - 1, subLabel, label: timestampProducer(Text_Text.Text, { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: label }), icon: timestampProducer(TableRow.TableRow.Icon, { IconComponent: icon }) }, label);
+      return timestampProducer(TableRow.TableRow, { start: 0 === index, end: index === valueProps.length - 1, subLabel, label: timestampProducer(Text_Text.Text, { variant: "body-sm/normal", color: "mobile-text-heading-primary", children: label }), icon: timestampProducer(TableRow.TableRow.Icon, { IconComponent: icon }) }, label);
     })
   });
   obj4.children = items2;
   const items3 = [closure_7(closure_3, obj4), ];
   let tmp9Result = null;
   if (null != learnMoreLink) {
-    const obj9 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
+    const obj9 = { variant: "body-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
     const intl = util.intl;
     const obj10 = { helpCenterLink: learnMoreLink };
     obj9.children = intl.format(util.t["/l3n+1"], obj10);

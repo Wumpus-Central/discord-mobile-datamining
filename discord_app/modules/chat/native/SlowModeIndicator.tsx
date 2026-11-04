@@ -1,16 +1,16 @@
-// === Module 13880: SlowModeIndicator ===
+// === Module 13966: SlowModeIndicator ===
 
-// Module 13880 (SlowModeIndicator)
+// Module 13966 (SlowModeIndicator)
 import nativeDefault from "native" /* 575 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7955 */;
-import TimerIcon from "TimerIcon" /* 11778 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7971 */;
+import TimerIcon from "TimerIcon" /* 11834 */;
 import noop from "module_19" /* 19 */;
-import SlowmodeStore from "SlowmodeStore" /* 7954 */;
+import SlowmodeStore from "SlowmodeStore" /* 7970 */;
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
@@ -47,7 +47,7 @@ export default noop.memo(function SlowModeIndicator(channel) {
     obj.open("CHANNEL_SLOWMODE_INFO", obj2);
   }, items2);
   const obj3 = { onPress: callback, style: tmp.container, children: null };
-  const items3 = [closure_5(channel(slowmodeType[10]).Text, { lineClamp: 1, allowFontScaling: false, variant: "text-xs/medium", color: "interactive-text-default", children: memo }), closure_5(channel(slowmodeType[8]).TimerIcon, { style: tmp.icon, size: "xxs" })];
+  const items3 = [closure_5(channel(slowmodeType[10]).Text, { lineClamp: 1, allowFontScaling: false, variant: "body-xs/medium", color: "interactive-text-default", children: memo }), closure_5(channel(slowmodeType[8]).TimerIcon, { style: tmp.icon, size: "xxs" })];
   obj3.children = items3;
   return closure_6(channel(slowmodeType[9]).PressableOpacity, obj3);
 });

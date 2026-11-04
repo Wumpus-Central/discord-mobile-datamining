@@ -1,11 +1,11 @@
-// === Module 9803: useHasNewAdContent ===
+// === Module 9821: useHasNewAdContent ===
 
-// Module 9803 (useHasNewAdContent)
+// Module 9821 (useHasNewAdContent)
 import DurationsDefault from "Durations" /* 1089 */;
-import AdCreativeType from "AdCreativeType" /* 6908 */;
+import AdCreativeType from "AdCreativeType" /* 6923 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 9804 */;
-import QuestStore from "QuestStore" /* 7970 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 9822 */;
+import QuestStore from "QuestStore" /* 7986 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;
@@ -40,6 +40,6 @@ export default function useHasNewAdContent() {
   if (stateFromStores) {
     prop = tmp(4974).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
-  const tmp6 = _slicedToArray(stateFromStoresArray(7693).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
+  const tmp6 = _slicedToArray(stateFromStoresArray(7709).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
   return { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
 };

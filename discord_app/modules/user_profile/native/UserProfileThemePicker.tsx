@@ -1,13 +1,13 @@
-// === Module 16641: UserProfileThemePicker ===
+// === Module 16731: UserProfileThemePicker ===
 
-// Module 16641 (UserProfileThemePicker)
+// Module 16731 (UserProfileThemePicker)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 7493 */;
-import PencilIcon from "PencilIcon" /* 10362 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 7509 */;
+import PencilIcon from "PencilIcon" /* 10410 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function ColorButton(arg0) {
   obj5.style = items1;
   obj5.onPress = onPress;
   obj5.children = React3(PencilIcon.PencilIcon, { size: "xs", color: higherContrastColor, style: tmp.editIcon });
-  const items2 = [React3(Pressables.PressableOpacity, obj5), React3(Text_Text.Text, { variant: "text-sm/normal", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: label })];
+  const items2 = [React3(Pressables.PressableOpacity, obj5), React3(Text_Text.Text, { variant: "body-sm/normal", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: label })];
   obj4.children = items2;
   return React4(View, obj4);
 }

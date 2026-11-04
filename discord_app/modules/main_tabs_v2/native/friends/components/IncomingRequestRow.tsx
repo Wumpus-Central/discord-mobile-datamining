@@ -1,10 +1,10 @@
-// === Module 19001: IncomingRequestRow ===
+// === Module 19104: IncomingRequestRow ===
 
-// Module 19001 (IncomingRequestRow)
+// Module 19104 (IncomingRequestRow)
 import util from "util" /* 1113 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14334 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18245 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14414 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18342 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
@@ -71,8 +71,8 @@ function IncomingRequestRow(user) {
   const items5 = [stateFromStores1, applicationId, userTag];
   const memo1 = onAcceptIncomingRequest.useMemo(() => {
     if (null != stateFromStores1) {
-      const obj = { application: stateFromStores1, textVariant: "text-xs/medium", iconSize: 12 };
-      let str = jsx(ApplicationIconAndNameDefault, { application: stateFromStores1, textVariant: "text-xs/medium", iconSize: 12 }, stateFromStores1.id);
+      const obj = { application: stateFromStores1, textVariant: "body-xs/medium", iconSize: 12 };
+      let str = jsx(ApplicationIconAndNameDefault, { application: stateFromStores1, textVariant: "body-xs/medium", iconSize: 12 }, stateFromStores1.id);
     } else {
       str = "";
       if (null == applicationId) {
@@ -104,7 +104,7 @@ function IncomingGameFriendRequestRow(arg0) {
   const intl2 = application(1113).intl;
   obj2.acceptedRequestLabel = intl2.format(application(1113).t.gRgJGR, {
     applicationNameHook() {
-      return jsx(ApplicationIconAndNameDefault, { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
+      return jsx(ApplicationIconAndNameDefault, { application, textVariant: "body-xs/medium", iconSize: 12 }, application.id);
     }
   });
   const intl3 = application(1113).intl;
@@ -116,7 +116,7 @@ function IncomingGameFriendRequestRow(arg0) {
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow user={user} applicationId={application.id} accessibilityLabel={null} acceptedRequestLabel={null} acceptedRequestAccessibilityLabel={null} acceptRequestAccessibilityLabel={null} ignoreRequestAccessibilityLabel={null} />;
 }
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };

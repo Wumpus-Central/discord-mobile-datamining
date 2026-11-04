@@ -1,8 +1,8 @@
-// === Module 19421: ActivityItemMissingCard ===
+// === Module 19525: ActivityItemMissingCard ===
 
-// Module 19421 (ActivityItemMissingCard)
+// Module 19525 (ActivityItemMissingCard)
 import nativeDefault from "native" /* 575 */;
-import NativeViewDefault from "NativeView" /* 7086 */;
+import NativeViewDefault from "NativeView" /* 7101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -76,7 +76,7 @@ function ActivityItemEmptyCard(activity) {
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj = { loadingActivity: null, disabledActivity: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

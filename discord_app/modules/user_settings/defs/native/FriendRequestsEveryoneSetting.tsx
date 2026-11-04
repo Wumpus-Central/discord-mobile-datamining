@@ -1,22 +1,22 @@
-// === Module 17021: FriendRequestsEveryoneSetting ===
+// === Module 17113: FriendRequestsEveryoneSetting ===
 
-// Module 17021 (FriendRequestsEveryoneSetting)
+// Module 17113 (FriendRequestsEveryoneSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16864 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8556).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8573).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsEveryoneSettingValue() {
     const FriendSourceFlagsSetting = setting(4966).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();

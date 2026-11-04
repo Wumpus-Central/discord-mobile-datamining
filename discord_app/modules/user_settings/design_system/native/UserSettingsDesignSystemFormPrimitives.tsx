@@ -1,32 +1,32 @@
-// === Module 17960: UserSettingsDesignSystemFormPrimitives ===
+// === Module 18056: UserSettingsDesignSystemFormPrimitives ===
 
-// Module 17960 (UserSettingsDesignSystemFormPrimitives)
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRadioGroup from "TableRadioGroup" /* 7184 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import TableRadioRow from "TableRadioRow" /* 7187 */;
-import TableSwitchRow from "TableSwitchRow" /* 7489 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8797 */;
-import VoiceXIcon from "VoiceXIcon" /* 12087 */;
-import Checkbox from "Checkbox" /* 14752 */;
-import TableSliderRow from "TableSliderRow" /* 15999 */;
-import Slider from "Slider" /* 16000 */;
+// Module 18056 (UserSettingsDesignSystemFormPrimitives)
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7115 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRadioGroup from "TableRadioGroup" /* 7199 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import TableRadioRow from "TableRadioRow" /* 7202 */;
+import TableSwitchRow from "TableSwitchRow" /* 7505 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8814 */;
+import VoiceXIcon from "VoiceXIcon" /* 12146 */;
+import Checkbox from "Checkbox" /* 14832 */;
+import TableSliderRow from "TableSliderRow" /* 16089 */;
+import Slider from "Slider" /* 16090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function Radio() {
   const obj = { children: null };
-  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Radio" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Radio" }), timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "Select a single option from a short list of multiple options" }), ];
   const obj2 = { title: "Role Colors", hasIcons: false, defaultValue: "color-in-names", onChange: NOOP, children: null };
   const items1 = [timestampProducer(TableRadioRow.TableRadioRow, { label: "Show role colors in names", value: "color-in-names" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Show role colors next to names", value: "color-next-to-names" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Don't show role colors", value: "no-color" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Disabled Item", subLabel: "This should not be selectable", value: "option4", disabled: true })];
   obj2.children = items1;
-  items[2] = React5(TableRadioGroup.TableRadioGroup, obj2);
+  items[2] = metroImportDefault(TableRadioGroup.TableRadioGroup, obj2);
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 function Switch() {
   [tmp2, c0] = noop.useState(true);
@@ -57,7 +57,7 @@ function Switch() {
   [tmp8, c0] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   const obj5 = { children: null };
-  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Switch" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Switch" }), timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
   const obj6 = { title: "Emoji", hasIcons: false, children: null };
   const merged = Object.assign(obj);
   obj6.children = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "Show emoji reactions on messages", subLabel: "Show more information in less space" });
@@ -76,9 +76,9 @@ function Switch() {
   items1[2] = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "With image descriptions" });
   items1[3] = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "Disabled switch item", subLabel: "This should not be switchable", disabled: true, value: false, onValueChange: NOOP });
   obj8.children = items1;
-  items[3] = React5(TableRowGroup.TableRowGroup, obj8);
+  items[3] = metroImportDefault(TableRowGroup.TableRowGroup, obj8);
   obj5.children = items;
-  return React5(React6, obj5);
+  return metroImportDefault(React5, obj5);
 }
 function InlineCheckbox(startChecked) {
   let flag = startChecked.startChecked;
@@ -100,17 +100,17 @@ function InlineCheckboxDemo() {
   const obj = { children: null };
   items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Inline Checkbox" }), timestampProducer(InlineCheckbox, { label: "Checkbox label", description: "This is a description", startChecked: true }), timestampProducer(InlineCheckbox, { label: "Trust google.com links from now on" }), timestampProducer(InlineCheckbox, { label: "I agree to the Terms of Service", required: true })];
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 function CheckboxRowDemo() {
   const obj = { children: null };
-  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Checkbox" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select one or more options from a short list of options" }), ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Checkbox" }), timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "Select one or more options from a short list of options" }), ];
   const obj2 = { title: "Who can send you a friend request?", hasIcons: false, children: null };
   const items1 = [timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Everyone", subLabel: "Anyone can send you a friend request", checked: false, onPress: NOOP }), timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Friends of Friends", subLabel: "Anyone who is friends with your friends can send you a friend request", checked: true, onPress: NOOP }), timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Server Members", subLabel: "Anyone who is in a server with you can send you a friend request", checked: true, onPress: NOOP })];
   obj2.children = items1;
-  items[2] = React5(TableRowGroup.TableRowGroup, obj2);
+  items[2] = metroImportDefault(TableRowGroup.TableRowGroup, obj2);
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 function SliderDemo() {
   const obj = { children: null };
@@ -118,11 +118,11 @@ function SliderDemo() {
   const obj2 = { start: true, end: true, label: "Volume", subLabel: timestampProducer(Slider.Slider, { startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}), endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}), onChange: NOOP, accessibilityLabel: "Volume" }) };
   items[1] = timestampProducer(TableRow.TableRow, obj2);
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 function TableSliderRowDemo() {
   const obj = { children: null };
-  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "TableSliderRow" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "A slider setting with its label and current value, for settings tables" }), ];
+  items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "TableSliderRow" }), timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "A slider setting with its label and current value, for settings tables" }), ];
   const obj2 = {
     hasIcons: false,
     children: timestampProducer(TableSliderRow.TableSliderRow, {
@@ -137,12 +137,12 @@ function TableSliderRowDemo() {
   };
   items[2] = timestampProducer(TableRowGroup.TableRowGroup, obj2);
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 const size = fn(2);
@@ -153,6 +153,6 @@ export default function UserSettingsDesignSystemFormPrimitives() {
   const obj2 = { spacing: 24, style: closure_9().container, children: null };
   items = [timestampProducer(Radio, {}), timestampProducer(Switch, {}), timestampProducer(CheckboxRowDemo, {}), timestampProducer(InlineCheckboxDemo, {}), timestampProducer(SliderDemo, {}), timestampProducer(TableSliderRowDemo, {})];
   obj2.children = items;
-  obj.children = React5(Stack_Stack.Stack, obj2);
+  obj.children = metroImportDefault(Stack_Stack.Stack, obj2);
   return timestampProducer(ScrollView, obj);
 };

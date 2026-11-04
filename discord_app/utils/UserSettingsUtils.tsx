@@ -1,17 +1,17 @@
-// === Module 7286: UserSettingsUtils ===
+// === Module 7302: UserSettingsUtils ===
 
-// Module 7286 (UserSettingsUtils)
+// Module 7302 (UserSettingsUtils)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7287 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7303 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6909 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, FriendSourceFlags: metroRequire, AllFriendSourceFlags: closure_7, ComponentActions: closure_8 } = Constants);
+({ AnalyticEvents: hasOwnProperty, FriendSourceFlags: closure_6, AllFriendSourceFlags: metroImportDefault, ComponentActions: closure_8 } = Constants);
 const NonSpamRetrainingOptInOptions = { UNDECIDED: 0, [0]: "UNDECIDED", OPTIN: 1, [1]: "OPTIN", OPTOUT: 2, [2]: "OPTOUT" };
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/UserSettingsUtils.tsx");
@@ -53,7 +53,7 @@ export function getSanitizedActivityJoiningRestrictedGuilds() {
   return new Set(found);
 }
 export function computeFlags(setting) {
-  if ((setting & React5) === React5) {
+  if ((setting & metroImportDefault) === metroImportDefault) {
     let obj = { all: true, mutualFriends: true, mutualGuilds: true };
   } else {
     obj = { all: false, mutualFriends: (setting & constants2.MUTUAL_FRIENDS) === constants2.MUTUAL_FRIENDS, mutualGuilds: (setting & constants2.MUTUAL_GUILDS) === constants2.MUTUAL_GUILDS };

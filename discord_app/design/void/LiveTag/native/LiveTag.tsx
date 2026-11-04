@@ -1,9 +1,9 @@
-// === Module 16146: LiveTag ===
+// === Module 16235: LiveTag ===
 
-// Module 16146 (LiveTag)
+// Module 16235 (LiveTag)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,11 +29,11 @@ export default function LiveTag(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.tag, style];
   obj.style = items;
-  const obj2 = { variant: "text-xs/semibold", style: null, lineClamp: 1, allowFontScaling, children: null };
+  const obj2 = { variant: "body-xs/semibold", style: null, lineClamp: 1, allowFontScaling, children: null };
   const items1 = [tmp.tagText, textStyle];
   obj2.style = items1;
   const intl = util.intl;
   obj2.children = intl.string(util.t.dI3q4h).toUpperCase();
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: null, lineClamp: 1, allowFontScaling, children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", style: null, lineClamp: 1, allowFontScaling, children: null });
   return <View style={null}>{null}</View>;
 };

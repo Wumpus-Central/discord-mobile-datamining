@@ -1,9 +1,9 @@
-// === Module 9364: HeadphonesDenyIcon ===
+// === Module 9381: HeadphonesDenyIcon ===
 
-// Module 9364 (HeadphonesDenyIcon)
+// Module 9381 (HeadphonesDenyIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod9365 from "module_9365" /* 9365 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod9382 from "module_9382" /* 9382 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HeadphonesDenyIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9365, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9382, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

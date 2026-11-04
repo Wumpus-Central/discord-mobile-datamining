@@ -1,9 +1,9 @@
-// === Module 10080: useEmojiPickerSearchState ===
+// === Module 10128: useEmojiPickerSearchState ===
 
-// Module 10080 (useEmojiPickerSearchState)
+// Module 10128 (useEmojiPickerSearchState)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
 
 const require = fn;
 const size = fn(2);

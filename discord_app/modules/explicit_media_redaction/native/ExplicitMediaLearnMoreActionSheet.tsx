@@ -1,20 +1,20 @@
-// === Module 13440: ExplicitMediaLearnMoreActionSheet ===
+// === Module 13524: ExplicitMediaLearnMoreActionSheet ===
 
-// Module 13440 (ExplicitMediaLearnMoreActionSheet)
+// Module 13524 (ExplicitMediaLearnMoreActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8811 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8828 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7590).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_5 = fn(7606).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const Constants = fn(1072);
-({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
+({ HelpdeskArticles: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -88,7 +88,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   const intl2 = channelId(attachmentId[10]).intl;
   obj6.children = intl2.string(channelId(attachmentId[10]).t.sGW77l);
   const items5 = [closure_8(channelId(attachmentId[20]).Text, obj6), ];
-  const obj7 = { style: tmp.infoDesc, variant: "text-md/medium", color: "text-default", children: null };
+  const obj7 = { style: tmp.infoDesc, variant: "body-md/medium", color: "text-default", children: null };
   if (!memo) {
     const intl3 = tmp4(tmp2[10]).intl;
     const intl4 = tmp4(tmp2[10]).intl;
@@ -112,7 +112,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
     function handleNavigateToAgeVerificationLearnMore() {
       callback(ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
       const obj = AgeVerificationActionCreatorsDefault;
-      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(constants.AGE_VERIFICATION_LEARN_MORE));
     }
     obj9.text = string(t.hvVgAZ);
     obj9.onPress = handleNavigateToAgeVerificationLearnMore;
@@ -147,7 +147,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   items6[1] = closure_8(channelId(attachmentId[21]).Button, obj10);
   let tmp12Result = null != tmp11;
   if (tmp12Result) {
-    const obj11 = { style: tmp.linkSubtext, variant: "text-sm/medium", color: "text-muted", children: tmp11 };
+    const obj11 = { style: tmp.linkSubtext, variant: "body-sm/medium", color: "text-muted", children: tmp11 };
     tmp12Result = closure_8(tmp4(tmp2[20]).Text, obj11);
   }
   const obj12 = { startExpanded: true, children: null };

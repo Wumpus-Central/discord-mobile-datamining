@@ -1,11 +1,11 @@
-// === Module 12762: ConjureShimmer ===
+// === Module 12843: ConjureShimmer ===
 
-// Module 12762 (ConjureShimmer)
+// Module 12843 (ConjureShimmer)
 import _modDef671 from "module_671" /* 671 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import _modDef7164 from "module_7164" /* 7164 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import _modDef7179 from "module_7179" /* 7179 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -15,7 +15,7 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const locations = [0, 0.4, 0.5, 0.6, 1];
@@ -130,7 +130,7 @@ export default function ConjureShimmer(epoch) {
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
     obj8.children = closure_8(LinearGradientDefault, obj10);
     obj6.children = closure_8(_modDef1652.View, obj8);
-    obj5.children = closure_8(_modDef7164, obj6);
+    obj5.children = closure_8(_modDef7179, obj6);
     tmp18 = closure_8(closure_6, obj5);
   }
   items5[1] = tmp18;

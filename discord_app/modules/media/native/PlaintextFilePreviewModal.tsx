@@ -1,15 +1,15 @@
-// === Module 11753: PlaintextFilePreviewModal ===
+// === Module 11808: PlaintextFilePreviewModal ===
 
-// Module 11753 (PlaintextFilePreviewModal)
+// Module 11808 (PlaintextFilePreviewModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7423 */;
-import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11752 */;
-import useDownloadedFile from "useDownloadedFile" /* 11756 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7095 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7439 */;
+import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11807 */;
+import useDownloadedFile from "useDownloadedFile" /* 11811 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,10 +24,10 @@ function PlaintextFilePreviewContent(arg0) {
   const fileContents = downloadedFile.fileContents;
   if (downloadedFile.hadError) {
     const obj2 = { style: tmp.errorContainer, children: null };
-    const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj3 = { variant: "body-md/normal", color: "text-muted", children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t.fEptJP);
-    obj2.children = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: null });
+    obj2.children = jsx(Text_Text.Text, { variant: "body-md/normal", color: "text-muted", children: null });
     return <timestampProducer style={tmp.errorContainer}>{null}</timestampProducer>;
   } else if (null == fileContents) {
     const obj4 = { style: tmp.loadingContainer, children: jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) };
@@ -39,8 +39,8 @@ function PlaintextFilePreviewContent(arg0) {
       const _HermesInternal = HermesInternal;
       combined = "" + fileContents + "\n" + bytesLeftNotice;
     }
-    const obj6 = { variant: "text-sm/normal", color: "text-default", style: tmp.code, selectable: true, children: combined };
-    const tmp10 = jsx(Text_Text.Text, { variant: "text-sm/normal", color: "text-default", style: tmp.code, selectable: true, children: combined });
+    const obj6 = { variant: "body-sm/normal", color: "text-default", style: tmp.code, selectable: true, children: combined };
+    const tmp10 = jsx(Text_Text.Text, { variant: "body-sm/normal", color: "text-default", style: tmp.code, selectable: true, children: combined });
     if (wordWrap) {
       const obj7 = { style: null, contentContainerStyle: null, children: null };
       ({ scroller: obj5.style, scrollerContent: obj5.contentContainerStyle } = tmp);
@@ -55,7 +55,7 @@ function PlaintextFilePreviewContent(arg0) {
   }
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const constants = { PREVIEW: "PREVIEW" };
 const createStyles = fn(5141);
@@ -120,12 +120,12 @@ export default function PlaintextFilePreviewModal(url) {
           items,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { IconComponent: url(9888).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+            const obj = { IconComponent: url(9906).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
             const intl = url(1113).intl;
             obj.accessibilityLabel = intl.string(url(1113).t.PdRCRg);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_7(url(7682).HeaderActionButton, obj);
+            return closure_1_7(url(7698).HeaderActionButton, obj);
           }
         });
       },
@@ -137,5 +137,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[constants.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return jsx(url(11619).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+  return jsx(url(11670).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
 };

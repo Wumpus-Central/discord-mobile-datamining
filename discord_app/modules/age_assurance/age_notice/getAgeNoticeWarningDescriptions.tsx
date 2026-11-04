@@ -1,10 +1,10 @@
-// === Module 6856: getAgeNoticeWarningDescriptions ===
+// === Module 6871: getAgeNoticeWarningDescriptions ===
 
-// Module 6856 (getAgeNoticeWarningDescriptions)
+// Module 6871 (getAgeNoticeWarningDescriptions)
 import util from "util" /* 1113 */;
 import _modDef3255 from "module_3255" /* 3255 */;
-import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6858 */;
-import AgeNoticeConstants from "AgeNoticeConstants" /* 6857 */;
+import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6873 */;
+import AgeNoticeConstants from "AgeNoticeConstants" /* 6872 */;
 import size from "module_2" /* 2 */;
 
 ({ AGE_NOTICE_CHANNEL_LOCATION: c3, AGE_NOTICE_SERVER_LOCATION: closure_4 } = AgeNoticeConstants);

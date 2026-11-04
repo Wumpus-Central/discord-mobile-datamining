@@ -1,9 +1,9 @@
-// === Module 8116: AgeVerificationModal ===
+// === Module 8132: AgeVerificationModal ===
 
-// Module 8116 (AgeVerificationModal)
+// Module 8132 (AgeVerificationModal)
 import nativeDefault from "native" /* 575 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import LinkingDefault from "Linking" /* 5829 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import LinkingDefault from "Linking" /* 5843 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -103,7 +103,7 @@ function AgeVerifyScreen(uri) {
   }, []);
   return jsx(onClose(isExpressiveModalV2[6]), { allowsInlineMediaPlayback: true, mediaPlaybackRequiresUserAction: false, domStorageEnabled: true, javaScriptEnabled: true, javaScriptCanOpenWindowsAutomatically: true, source: { uri: uri.webviewUrl }, onMessage: callback2, onShouldStartLoadWithRequest: callback3, injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n", injectedJavaScriptBeforeContentLoaded: "\n  window.open = function(url) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({type: 'AGEKEY_BREAKOUT', url: url}));\n    return null;\n  };\n" });
 }
-let closure_4 = fn(6848).AGE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(6863).AGE_VERIFICATION_MODAL_KEY;
 let jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
 const createStyles = fn(5141);

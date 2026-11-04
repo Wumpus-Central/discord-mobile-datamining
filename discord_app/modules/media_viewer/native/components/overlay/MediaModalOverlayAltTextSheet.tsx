@@ -1,12 +1,12 @@
-// === Module 11703: MediaModalOverlayAltTextSheet ===
+// === Module 11758: MediaModalOverlayAltTextSheet ===
 
-// Module 11703 (MediaModalOverlayAltTextSheet)
+// Module 11758 (MediaModalOverlayAltTextSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11704 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11759 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,6 +31,6 @@ export default function MediaViewerAltTextSheet(children) {
   obj3.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   items = [tmp.container, { minHeight: num }];
   obj3.contentStyles = items;
-  obj3.children = jsx(Text_Text.Text, { accessibilityRole: "text", variant: "text-md/normal", children: children.description });
+  obj3.children = jsx(Text_Text.Text, { accessibilityRole: "text", variant: "body-md/normal", children: children.description });
   return jsx(Sheet_BottomSheet.BottomSheet, { header: null, contentStyles: null, children: null });
 };

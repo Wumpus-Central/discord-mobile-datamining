@@ -1,19 +1,19 @@
-// === Module 9464: botScopedAccess ===
+// === Module 9482: botScopedAccess ===
 
-// Module 9464 (botScopedAccess)
+// Module 9482 (botScopedAccess)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 9455 */;
-import RPCErrorDefault from "RPCError" /* 9461 */;
-import validateScopeDefault from "validateScope" /* 9463 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9465 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9051 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9473 */;
+import RPCErrorDefault from "RPCError" /* 9479 */;
+import validateScopeDefault from "validateScope" /* 9481 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9483 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;
 const Constants = fn(1072);
-({ ChannelTypes: metroRequire, Permissions: closure_7, RPCErrors: closure_8 } = Constants);
+({ ChannelTypes: closure_6, Permissions: metroImportDefault, RPCErrors: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/botScopedAccess.tsx");
 

@@ -1,18 +1,18 @@
-// === Module 15493: LargeCountDownPill ===
+// === Module 15580: LargeCountDownPill ===
 
-// Module 15493 (LargeCountDownPill)
+// Module 15580 (LargeCountDownPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { largeCountdownPill: { flexDirection: "row", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.round, backgroundColor: "rgba(255, 255, 255, 0.1)", alignSelf: "center", paddingHorizontal: 16, marginBottom: 10 }, largeCountdownPillText: null, iconStyle: null };
 let obj2 = { flexDirection: "row", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.round, backgroundColor: "rgba(255, 255, 255, 0.1)", alignSelf: "center", paddingHorizontal: 16, marginBottom: 10 };
 obj.largeCountdownPillText = { paddingVertical: 8, color: nativeDefault.colors.TEXT_STATUS_IDLE, fontSize: 14, lineHeight: 16, marginRight: 8 };
@@ -34,8 +34,8 @@ export default function LargeCountDownPill(countdownText) {
     children: null
   };
   let obj2 = { style: tmp.largeCountdownPill, children: null };
-  items = [hasOwnProperty(Text_Text.Text, { variant: "text-xs/semibold", style: tmp.largeCountdownPillText, children: countdownText.countdownText.toUpperCase() }), ];
-  const obj3 = { variant: "text-xs/semibold", style: tmp.largeCountdownPillText, children: countdownText.countdownText.toUpperCase() };
+  items = [hasOwnProperty(Text_Text.Text, { variant: "body-xs/semibold", style: tmp.largeCountdownPillText, children: countdownText.countdownText.toUpperCase() }), ];
+  const obj3 = { variant: "body-xs/semibold", style: tmp.largeCountdownPillText, children: countdownText.countdownText.toUpperCase() };
   items[1] = hasOwnProperty(CircleInformationIcon.CircleInformationIcon, { style: tmp.iconStyle, color: nativeDefault.colors.TEXT_STATUS_IDLE });
   obj2.children = items;
   obj.children = timestampProducer(React4, obj2);

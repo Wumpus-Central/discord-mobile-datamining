@@ -1,15 +1,15 @@
-// === Module 9571: GameProfileGuildCard ===
+// === Module 9590: GameProfileGuildCard ===
 
-// Module 9571 (GameProfileGuildCard)
+// Module 9590 (GameProfileGuildCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7238 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 9434 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9566 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7258 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 9452 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9585 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -79,13 +79,13 @@ export default function GameProfileGuildCard(arg0) {
   const obj7 = { style: tmp.guildInfo, children: null };
   const obj8 = { style: tmp.guildNameDescriptionContainer, children: null };
   const obj9 = { style: tmp.guildNameRow, children: null };
-  const items1 = [React4(Text_Text.Text, { style: tmp.guildName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: guild.name }), ];
+  const items1 = [React4(Text_Text.Text, { style: tmp.guildName, variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: guild.name }), ];
   const obj11 = { guild, size: null };
-  const obj10 = { style: tmp.guildName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: guild.name };
+  const obj10 = { style: tmp.guildName, variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: guild.name };
   obj11.size = native.Icon.Sizes.REFRESH_SMALL_16;
   items1[1] = React4(GuildBadgeV2Default, obj11);
   obj9.children = items1;
-  const items2 = [hasOwnProperty(View, obj9), React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 2, children: guild.description })];
+  const items2 = [hasOwnProperty(View, obj9), React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", lineClamp: 2, children: guild.description })];
   obj8.children = items2;
   const items3 = [hasOwnProperty(View, obj8), ];
   const obj13 = { style: tmp.memberCountsContainer, children: null };
@@ -94,7 +94,7 @@ export default function GameProfileGuildCard(arg0) {
     const obj14 = { style: tmp.memberCountContainer, children: null };
     const obj15 = { style: tmp.onlineEllipse };
     const items4 = [React4(View, obj15), ];
-    const obj16 = { variant: "text-xs/normal", color: "text-default", children: null };
+    const obj16 = { variant: "body-xs/normal", color: "text-default", children: null };
     const intl = util.intl;
     const obj17 = { membersOnline: presenceCount };
     obj16.children = intl.formatToPlainString(util.t["LC+S+m"], obj17);
@@ -108,7 +108,7 @@ export default function GameProfileGuildCard(arg0) {
     const obj18 = { style: tmp.memberCountContainer, children: null };
     const obj19 = { style: tmp.membersEllipse };
     const items6 = [React4(View, obj19), ];
-    const obj20 = { variant: "text-xs/normal", color: "text-default", children: null };
+    const obj20 = { variant: "body-xs/normal", color: "text-default", children: null };
     const intl2 = util.intl;
     const obj39 = { count: memberCount };
     obj20.children = intl2.formatToPlainString(util.t.zRl6XR, obj39);

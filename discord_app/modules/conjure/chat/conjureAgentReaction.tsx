@@ -1,6 +1,6 @@
-// === Module 10985: conjureAgentReaction ===
+// === Module 11033: conjureAgentReaction ===
 
-// Module 10985 (conjureAgentReaction)
+// Module 11033 (conjureAgentReaction)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;

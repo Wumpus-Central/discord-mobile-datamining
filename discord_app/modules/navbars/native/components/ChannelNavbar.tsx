@@ -1,6 +1,6 @@
-// === Module 14518: ChannelNavbar ===
+// === Module 14598: ChannelNavbar ===
 
-// Module 14518 (ChannelNavbar)
+// Module 14598 (ChannelNavbar)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,20 +8,20 @@ import native from "native" /* 1187 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import Pressables from "Pressables" /* 7106 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
-import isStreamingDefault from "isStreaming" /* 8955 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10875 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import Pressables from "Pressables" /* 7121 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
+import isStreamingDefault from "isStreaming" /* 8972 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10923 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
-import TextStyles from "TextStyles" /* 6843 */;
+import TextStyles from "TextStyles" /* 6858 */;
 
 require = fn;
 function ChannelTitleContent(arg0) {
@@ -40,7 +40,7 @@ function ChannelTitleContent(arg0) {
   let tmp8 = title;
   if (!noop.isValidElement(title)) {
     const obj2 = { style: tmp.channelNameContainer, children: null };
-    const obj3 = { style: tmp.channelName, lineClamp: 1, variant: "heading-md/semibold", color: "mobile-text-heading-primary", accessibilityLabel: accessibleTitle, maxFontSizeMultiplier: 1, accessibilityRole: "header", children: title };
+    const obj3 = { style: tmp.channelName, lineClamp: 1, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", accessibilityLabel: accessibleTitle, maxFontSizeMultiplier: 1, accessibilityRole: "header", children: title };
     obj2.children = value2(Text_Text.Text, obj3);
     tmp8 = value2(View, obj2);
   }
@@ -58,7 +58,7 @@ function ChannelTitleContent(arg0) {
 }
 function ParentChannelSubTitle(parentChannel) {
   parentChannel = parentChannel.parentChannel;
-  const obj = { lineClamp: 1, style: closure_18().navbarTitleSecondaryText, accessibilityLabel: null, maxFontSizeMultiplier: 1, variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj = { lineClamp: 1, style: closure_18().navbarTitleSecondaryText, accessibilityLabel: null, maxFontSizeMultiplier: 1, variant: "body-xs/medium", color: "text-muted", children: null };
   const intl = util.intl;
   const obj2 = { channelName: null };
   const tmp = closure_18();
@@ -420,7 +420,7 @@ export function ChannelButtons(buttons) {
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      const children1 = [closure_16(closure_1(9237), obj), ];
+      const children1 = [closure_16(closure_1(9254), obj), ];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -440,8 +440,8 @@ export function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10650), obj2);
-        const tmp4Result = closure_1(10650);
+        tmp3Result = closure_16(closure_1(10698), obj2);
+        const tmp4Result = closure_1(10698);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

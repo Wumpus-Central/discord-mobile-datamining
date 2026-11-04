@@ -1,13 +1,13 @@
-// === Module 6901: QuestConstants ===
+// === Module 6916: QuestConstants ===
 
-// Module 6901 (QuestConstants)
+// Module 6916 (QuestConstants)
 import DurationsDefault from "Durations" /* 1089 */;
-import QuestVariants from "QuestVariants" /* 6902 */;
-import Quests from "Quests" /* 6903 */;
-import QuestTypes from "QuestTypes" /* 6904 */;
-import AdCreativeType from "AdCreativeType" /* 6908 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6909 */;
-import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 6910 */;
+import QuestVariants from "QuestVariants" /* 6917 */;
+import Quests from "Quests" /* 6918 */;
+import QuestTypes from "QuestTypes" /* 6919 */;
+import AdCreativeType from "AdCreativeType" /* 6923 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6924 */;
+import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 6925 */;
 import HTTPUtils_mod from "HTTPUtils" /* 1282 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -77,7 +77,6 @@ export const QuestsExperimentLocations = { ACTIVITY_PANEL: "quests_bar_activity_
 export const DismissibleQuestContentFlags = DismissibleQuestContentFlags.DismissibleQuestContentFlags;
 export const QuestVariants = QuestVariants.QuestVariants;
 export const NitroQuestVariants = set;
-export const QUESTS_SETTINGS_SECTION = "inventory";
 export const CONSECUTIVE_HEARTBEAT_PERIOD_MS = result;
 export const QUEST_BAR_SPRING_CONFIG_QUEST_ACCEPTED = { tension: 900, friction: 45, clamp: true };
 export const QUEST_BAR_SPRING_CONFIG_QUEST_UNACCEPTED = { tension: 360, friction: 30, clamp: true };

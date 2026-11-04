@@ -1,11 +1,11 @@
-// === Module 18440: useVoiceChannelStartTime ===
+// === Module 18534: useVoiceChannelStartTime ===
 
-// Module 18440 (useVoiceChannelStartTime)
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11684 */;
+// Module 18534 (useVoiceChannelStartTime)
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11735 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10246 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6909 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10294 */;
 
 const require = globalThis.__r;
 

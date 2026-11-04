@@ -1,19 +1,19 @@
-// === Module 18998: AddFriendsScreen ===
+// === Module 19101: AddFriendsScreen ===
 
-// Module 18998 (AddFriendsScreen)
+// Module 19101 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9074 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14378 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14382 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 19001 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 19003 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9091 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14458 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14462 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 19104 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 19106 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7924 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7940 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -58,11 +58,11 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
   return tmp;
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(14402).Sections;
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
+const Sections = fn(14482).Sections;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-const ContactPermissions = fn(14380).ContactPermissions;
+const ContactPermissions = fn(14460).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };

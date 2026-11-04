@@ -1,13 +1,13 @@
-// === Module 13945: VoiceMessageUtils ===
+// === Module 14031: VoiceMessageUtils ===
 
-// Module 13945 (VoiceMessageUtils)
+// Module 14031 (VoiceMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 13946 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5923 */;
+import downsampleWaveformDefault from "downsampleWaveform" /* 14032 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 import apply from "module_12" /* 12 */;
@@ -43,8 +43,8 @@ let closure_22 = async function _startAudioRecording(arg0) {
           closure_129_0 = closure_0;
           closure_129_1 = undefined;
           c19 = null;
-          React7(constants.REQUESTED);
-          React6(closure_0);
+          React6(constants.REQUESTED);
+          React5(closure_0);
           const mediaEngine = MediaEngineStore.getMediaEngine();
           mediaEngine.on(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, guild);
           c4 = 1;
@@ -263,9 +263,9 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(13856);
-({ addVoiceMessageWave: hasOwnProperty, resetVoiceMessageState: metroRequire, setSavedVoiceMessageUploadData: closure_7, setVoiceMessageRecordingId: closure_8, setVoiceMessageRecordingState: closure_9, setVoiceMessageStartTimeMillis: closure_10, useVoiceMessagesUIStore: closure_11, VoiceMessageRecordingStatus: closure_12 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(13857);
+const VoiceMessagesUIStore = fn(13942);
+({ addVoiceMessageWave: hasOwnProperty, resetVoiceMessageState: closure_6, setSavedVoiceMessageUploadData: metroImportDefault, setVoiceMessageRecordingId: closure_8, setVoiceMessageRecordingState: closure_9, setVoiceMessageStartTimeMillis: closure_10, useVoiceMessagesUIStore: closure_11, VoiceMessageRecordingStatus: closure_12 } = VoiceMessagesUIStore);
+const VoiceMessageConstants = fn(13943);
 ({ WAVEFORM_WAVE_MAX_VALUE: map1, VOICE_RECORDING_MIN_DB: closure_14, VOICE_RECORDING_MAX_DB: closure_15, WAVEFORM_MAX_SAMPLES: closure_16, VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17 } = VoiceMessageConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let c19 = null;

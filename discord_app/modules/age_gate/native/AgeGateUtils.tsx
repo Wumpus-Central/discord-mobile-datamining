@@ -1,15 +1,15 @@
-// === Module 10103: age_gate/AgeGateUtils ===
+// === Module 10151: age_gate/AgeGateUtils ===
 
-// Module 10103 (age_gate/AgeGateUtils)
+// Module 10151 (age_gate/AgeGateUtils)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7509 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7525 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
-({ GuildNSFWContentLevel: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ GuildNSFWContentLevel: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");
 

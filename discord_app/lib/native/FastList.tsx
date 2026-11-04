@@ -1,13 +1,13 @@
-// === Module 7361: FastList ===
+// === Module 7377: FastList ===
 
-// Module 7361 (FastList)
+// Module 7377 (FastList)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import BottomSheetModal from "BottomSheetModal" /* 5398 */;
-import NativeViewDefault from "NativeView" /* 7086 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7363 */;
+import BottomSheetModal from "BottomSheetModal" /* 5400 */;
+import NativeViewDefault from "NativeView" /* 7101 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7379 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -80,7 +80,7 @@ function FastListScrollWorklet(scrollViewRef) {
 }
 let closure_3 = ["manualRef", "onScroll", "onScrollWorklet", "onScrollEnd", "onLayout", "renderHeader", "renderFooter", "renderSection", "renderItem", "renderSectionFooter", "getRecyclerKey", "onEndReached", "endReachedThreshold", "headerSize", "footerSize", "sectionSize", "sectionFooterSize", "itemSize", "sections", "scrollPosValue", "batchesToRender", "optimizeListItemRender", "initialScrollSection", "initialScrollItem", "initialScrollOrientation", "initialScrollStart", "getAnchorIdFromIndex", "getAnchorIndexFromId", "EXPERIMENTAL_enableAnchorWhileScrolling", "chunkBase", "disableContentWrappers", "childrenWrapper", "stickyHeaderFooter", "stickySectionsVariant", "persistantKeys", "disableRecyclingOnFullCompute", "disableLegacyGestureHandling", "viewabilityConfig", "onViewableItemsChanged", "debugLayout", "renderAccessory", "removeClippedSubviews", "inActionSheet"];
 get_ActivityIndicator = fn(17);
-({ PixelRatio: closure_7, ScrollView: closure_8, StyleSheet, findNodeHandle: closure_9 } = get_ActivityIndicator);
+({ PixelRatio: metroImportDefault, ScrollView: closure_8, StyleSheet, findNodeHandle: closure_9 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
 let map = new Map();
@@ -2241,7 +2241,7 @@ prototype4["render"] = function render() {
   if (props.inActionSheet) {
     let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
   } else {
-    BottomSheetScrollView = React6;
+    BottomSheetScrollView = React5;
   }
   const obj3 = {};
   const merged = Object.assign(_objectWithoutProperties(props, closure_3));

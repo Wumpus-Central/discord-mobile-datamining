@@ -1,10 +1,10 @@
-// === Module 9532: findTextStart ===
+// === Module 9551: findTextStart ===
 
-// Module 9532 (findTextStart)
-import _mod9534 from "module_9534" /* 9534 */;
-import HTMLParserRunUtils from "HTMLParserRunUtils" /* 9558 */;
-import HTMLParserLinkUtils from "HTMLParserLinkUtils" /* 9559 */;
-import HTMLParserConstants from "HTMLParserConstants" /* 9533 */;
+// Module 9551 (findTextStart)
+import _mod9553 from "module_9553" /* 9553 */;
+import HTMLParserRunUtils from "HTMLParserRunUtils" /* 9577 */;
+import HTMLParserLinkUtils from "HTMLParserLinkUtils" /* 9578 */;
+import HTMLParserConstants from "HTMLParserConstants" /* 9552 */;
 import size from "module_2" /* 2 */;
 
 function findTextStart(arr) {
@@ -179,18 +179,18 @@ function trimTrailingLineIndentation(runs) {
 function getBreakStyle(spacingLink) {
   if (null != spacingLink) {
     const obj = {};
-    const merged = Object.assign(React7);
+    const merged = Object.assign(React6);
     obj.link = spacingLink;
     let tmp = obj;
   } else {
-    tmp = React7;
+    tmp = React6;
   }
   return tmp;
 }
 function appendRun(trailingNewlines, repeatResult) {
   let tmp = breakStyle;
   if (breakStyle === undefined) {
-    tmp = React7;
+    tmp = React6;
   }
   const index = repeatResult.indexOf("\n");
   if (trailingNewlines.trailingNewlines > 0) {
@@ -332,7 +332,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
   obj.links = [];
   obj.lists = [];
   obj.held = [];
-  const Parser = obj(9534).Parser;
+  const Parser = obj(9553).Parser;
   const fn = () => HermesBuiltin.applyArguments(new.target, new.target);
   class fn extends Parser {
     onclosetag(arg0, arg1) {
@@ -444,11 +444,11 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
               if (null == tmp.heading) {
                 if (null != tmp.links[tmp.links.length - 1]) {
                   const obj4 = {};
-                  const merged = Object.assign(React7);
+                  const merged = Object.assign(React6);
                   obj4.link = tmp39;
                   let tmp40 = obj4;
                 } else {
-                  tmp40 = React7;
+                  tmp40 = React6;
                 }
                 tmp63(tmp, "\n", tmp40);
                 tmp.atBoundary = true;
@@ -511,7 +511,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
                                       const str = markup.slice(startIndex, startIndex + arg0.length + 2);
                                     }
                     };
-                    const parser = new _mod9534.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
+                    const parser = new _mod9553.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
                     parser.end(markup);
                     let map1 = map;
                   } else {
@@ -613,7 +613,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
           appendText(obj, substr);
         }
     };
-    let parser = new obj(9534).Parser(obj3, { decodeEntities: true });
+    let parser = new obj(9553).Parser(obj3, { decodeEntities: true });
     parser.end(str.replace(/</g, "&lt;"));
   }
   const runs = obj.runs;
@@ -629,7 +629,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
   }
   return runs;
 }
-({ BARE_UNKNOWN_TAG: c2, BLOCK_BREAKS: c3, BULLET: closure_4, DEFAULT_MAX_HTML_LENGTH: hasOwnProperty, HIGH_SURROGATE: metroRequire, HTML_WHITESPACE_CODES: closure_7, KNOWN_UNSUPPORTED_HTML_TAGS: closure_8, PLAIN_STYLE: closure_9, SLASH_PREFIXED_MARKER: closure_10, SLASH_SEPARATED_UNKNOWN_TAG: closure_11, TAG_BEHAVIORS: closure_12, TAG_NAME: map1, VOID_HTML_TAGS: closure_14 } = HTMLParserConstants);
+({ BARE_UNKNOWN_TAG: c2, BLOCK_BREAKS: c3, BULLET: closure_4, DEFAULT_MAX_HTML_LENGTH: hasOwnProperty, HIGH_SURROGATE: closure_6, HTML_WHITESPACE_CODES: metroImportDefault, KNOWN_UNSUPPORTED_HTML_TAGS: closure_8, PLAIN_STYLE: closure_9, SLASH_PREFIXED_MARKER: closure_10, SLASH_SEPARATED_UNKNOWN_TAG: closure_11, TAG_BEHAVIORS: closure_12, TAG_NAME: map1, VOID_HTML_TAGS: closure_14 } = HTMLParserConstants);
 let result = size.fileFinishedImporting("modules/html_parser/index.tsx");
 
 export const DEFAULT_MAX_HTML_LENGTH = HTMLParserConstants.DEFAULT_MAX_HTML_LENGTH;
@@ -675,7 +675,7 @@ export function parseHTMLFromText(arr, arg1) {
       const tmp26 = findTextEnd(tmp21Result, tmp24);
       if (tmp26 > tmp24) {
         const obj2 = { text: tmp21Result.slice(tmp24, tmp26) };
-        const merged = Object.assign(React7);
+        const merged = Object.assign(React6);
         items = [obj2];
         items1 = items;
       } else {
@@ -708,7 +708,7 @@ export function parseHTMLFromText(arr, arg1) {
       const tmp7 = findTextEnd(tmp2Result, tmp5);
       if (tmp7 > tmp5) {
         const obj3 = { text: tmp2Result.slice(tmp5, tmp7) };
-        const merged1 = Object.assign(React7);
+        const merged1 = Object.assign(React6);
         const items2 = [obj3];
         items3 = items2;
       } else {

@@ -1,11 +1,11 @@
-// === Module 18298: MessagesItemEmptyState ===
+// === Module 18395: MessagesItemEmptyState ===
 
-// Module 18298 (MessagesItemEmptyState)
+// Module 18395 (MessagesItemEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ export default noop.memo(function MessagesItemEmptyState() {
   const intl = util.intl;
   obj2.children = intl.string(util.t["8JZof8"]);
   items = [React4(Text_Text.Heading, obj2), , ];
-  const obj3 = { color: "text-default", variant: "text-md/medium", style: tmp.body, maxFontSizeMultiplier: 2, children: null };
+  const obj3 = { color: "text-default", variant: "body-md/medium", style: tmp.body, maxFontSizeMultiplier: 2, children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t["qm+H7x"]);
   items[1] = React4(Text_Text.Text, obj3);

@@ -1,9 +1,9 @@
-// === Module 16790: SafetyHubAccountStandingSubwayMarker ===
+// === Module 16882: SafetyHubAccountStandingSubwayMarker ===
 
-// Module 16790 (SafetyHubAccountStandingSubwayMarker)
+// Module 16882 (SafetyHubAccountStandingSubwayMarker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,13 +57,13 @@ export default function SafetyHubAccountStandingSubwayMarker(arg0) {
   items[1] = intl.format(status, {
     hook(children, arg1) {
       if (isSelected) {
-        const obj2 = { style: null, variant: "text-xxs/semibold", children: null };
+        const obj2 = { style: null, variant: "footnote/semibold", children: null };
         const obj3 = { color: color.color };
         obj2.style = obj3;
         obj2.children = children;
         let obj = obj2;
       } else {
-        obj = { color: "interactive-text-default", variant: "text-xxs/normal", style: label.label, children };
+        obj = { color: "interactive-text-default", variant: "footnote/normal", style: label.label, children };
       }
       return React4(Text_Text.Text, obj, arg1);
     }

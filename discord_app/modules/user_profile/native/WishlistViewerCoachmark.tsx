@@ -1,9 +1,9 @@
-// === Module 15159: WishlistViewerCoachmark ===
+// === Module 15239: WishlistViewerCoachmark ===
 
-// Module 15159 (WishlistViewerCoachmark)
+// Module 15239 (WishlistViewerCoachmark)
 import util from "util" /* 1113 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import _modDef15160 from "module_15160" /* 15160 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import _modDef15240 from "module_15240" /* 15240 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ function CoachmarkImage() {
   const tmp = closure_7();
   const obj = { style: tmp.imageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef15160 };
+  const obj3 = { uri: _modDef15240 };
   obj2.source = obj3;
   obj2.style = tmp.image;
   obj.children = jsx(FastImageDefault, { source: null, style: null });

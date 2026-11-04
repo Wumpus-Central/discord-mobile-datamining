@@ -1,20 +1,20 @@
-// === Module 11417: WasThisHelpfulSection ===
+// === Module 11467: WasThisHelpfulSection ===
 
-// Module 11417 (WasThisHelpfulSection)
+// Module 11467 (WasThisHelpfulSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11406 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11407 */;
-import ShieldIcon from "ShieldIcon" /* 11418 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11456 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11457 */;
+import ShieldIcon from "ShieldIcon" /* 11468 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10934 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10982 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(10934).SafetyWarningFeedbackTypes;
-const Constants = fn(11393);
+let closure_7 = fn(10982).SafetyWarningFeedbackTypes;
+const Constants = fn(11443);
 ({ DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8, UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_9, FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -60,7 +60,7 @@ export default function WasThisHelpfulSection(channelId) {
   const items3 = [channelId, warningId, senderId, stateFromStores];
   closure_4 = stateFromStores.useCallback((feedbackType, cta) => {
     const result = ChannelSafetyWarningsActionCreators.setChannelSafetyWarningFeedback(channelId, warningId, feedbackType);
-    const tmp6 = feedbackType === constants.UPVOTE ? React7 : React6;
+    const tmp6 = feedbackType === constants.UPVOTE ? React6 : React5;
     const obj3 = { text: null, icon: null, iconColor: null };
     const intl = util.intl;
     obj3.text = intl.string(util.t["gd/Yqs"]);
@@ -78,7 +78,7 @@ export default function WasThisHelpfulSection(channelId) {
     const tmpResult = SafetyWarningUtils;
   }, items3);
   let obj2 = { style: tmp.container, children: null };
-  let obj3 = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };
+  let obj3 = { variant: "body-sm/normal", color: "mobile-text-heading-primary", children: null };
   let intl = channelId(senderId[10]).intl;
   obj3.children = intl.string(channelId(senderId[10]).t.L84yVm);
   const items4 = [closure_10(channelId(senderId[13]).Text, obj3), ];

@@ -1,6 +1,6 @@
-// === Module 14387: RedesignContactSyncModal ===
+// === Module 14467: RedesignContactSyncModal ===
 
-// Module 14387 (RedesignContactSyncModal)
+// Module 14467 (RedesignContactSyncModal)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
@@ -8,12 +8,12 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14378 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14382 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14388 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14458 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14462 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 14468 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ function headerLeft() {
   return null;
 }
 function OnboardingTrailingLanding() {
-  const obj = { style: closure_19().landingTrailing, variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj = { style: closure_19().landingTrailing, variant: "body-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
   const obj2 = { learnMoreUrl: null };
   const tmp = closure_19();
@@ -117,7 +117,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               obj5.phone = tmp15;
               dependencyMap = 2;
               c3 = 1;
-              const obj7 = { value: tmp2(14386).updateDiscoverability(obj5), done: false };
+              const obj7 = { value: tmp2(14466).updateDiscoverability(obj5), done: false };
               return obj7;
             }
           } else if (1 === tmp5) {
@@ -144,7 +144,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           }
           dependencyMap = 1;
           c3 = 1;
-          const obj9 = { value: tmp2(14378).startContactSync(closure_129_3), done: false };
+          const obj9 = { value: tmp2(14458).startContactSync(closure_129_3), done: false };
           return obj9;
         } catch (tmp2) {
           c3 = tmp;
@@ -172,7 +172,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
     if (openSettingsSheet) {
       const obj2 = { type: "Contact Sync", location: { page: "Contact Sync" } };
       AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj2);
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14389, dependencyMap.paths), "Contact Sync Info Settings");
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14469, dependencyMap.paths), "Contact Sync Info Settings");
     }
   }, items4);
   const items5 = [onNext, onComplete];
@@ -203,7 +203,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(8081).requestPermission(constants.CONTACTS), done: false };
+            const obj5 = { value: v1(8097).requestPermission(constants.CONTACTS), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -218,8 +218,8 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             closure_128_8();
           } else {
             const obj7 = { onComplete: closure_128_2, skip: true };
-            const result = tmp4(14378).closeContactSyncModal(obj7);
-            const obj = tmp4(14378);
+            const result = tmp4(14458).closeContactSyncModal(obj7);
+            const obj = tmp4(14458);
           }
           dependencyMap = 3;
         }
@@ -277,7 +277,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   const tmp5 = closure_10();
   const name = tmp5.name;
   ({ isNameFromContactBook, error } = tmp5);
-  loading(14398)(navigation, navigateToLandingPage.navigateToLandingPage);
+  loading(14478)(navigation, navigateToLandingPage.navigateToLandingPage);
   _require = onNext(function*(arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -305,10 +305,10 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
           } else {
             closure_1 = tmp2;
             dependencyMap(true);
-            React7(options);
+            React6(options);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: options(14378).startContactSync(options), done: false };
+            const obj5 = { value: options(14458).startContactSync(options), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -371,7 +371,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
     tmp12 = isNameFromContactBook;
   }
   obj3.prefilledFromContactBook = tmp12;
-  obj2.children = closure_16(loading(14400), obj3);
+  obj2.children = closure_16(loading(14480), obj3);
   return closure_16(View, obj2);
 }
 function ContactSyncSuggestionScreen(onComplete) {
@@ -557,16 +557,16 @@ class ContactSyncModal {
   }
 }
 const View = fn(17).View;
-const ContactSyncModalStore = fn(14379);
+const ContactSyncModalStore = fn(14459);
 ({ setName: closure_9, useContactSyncModalStore: closure_10, useIsOnboarding: closure_11 } = ContactSyncModalStore);
-const ContactSyncConstants = fn(14380);
+const ContactSyncConstants = fn(14460);
 ({ ContactPermissions: closure_12, ContactSyncScenes: map1 } = ContactSyncConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const NativePermissionTypes = fn(8064).NativePermissionTypes;
+const NativePermissionTypes = fn(8080).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5709).NAV_BAR_HEIGHT + 32 }, landingTrailing: { textAlign: "center" } };
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5722).NAV_BAR_HEIGHT + 32 }, landingTrailing: { textAlign: "center" } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/contact_sync/native/components/RedesignContactSyncModal.tsx");

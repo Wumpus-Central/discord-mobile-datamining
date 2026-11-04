@@ -8,7 +8,7 @@ import ApplicationStore from "ApplicationStore" /* 2167 */;
 import EntitlementRecord from "EntitlementRecord" /* 2168 */;
 
 const Constants = fn(1072);
-({ LibraryApplicationFlags: hasOwnProperty, Distributors: metroRequire, SKUTypes: closure_7 } = Constants);
+({ LibraryApplicationFlags: hasOwnProperty, Distributors: closure_6, SKUTypes: metroImportDefault } = Constants);
 let LibraryApplicationRecord;
 class LibraryApplicationRecord extends tmp2 {
   constructor(arg0) {

@@ -1,9 +1,9 @@
-// === Module 9578: ImageWithPlaceholder ===
+// === Module 9597: ImageWithPlaceholder ===
 
-// Module 9578 (ImageWithPlaceholder)
+// Module 9597 (ImageWithPlaceholder)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 9579 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 9598 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
@@ -17,7 +17,6 @@ if (PlatformUtils.isAndroid()) {
 } else {
   importDefaultResult = requireNativeComponent("DCDImageWithThumbhashPlaceholderView");
 }
-const metroRequire = importDefaultResult;
 const result = size.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
 
 export { ImagePlaceholderVersions };

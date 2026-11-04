@@ -1,10 +1,10 @@
-// === Module 18774: UnavailableNotice ===
+// === Module 18875: UnavailableNotice ===
 
-// Module 18774 (UnavailableNotice)
+// Module 18875 (UnavailableNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import _modDef18451 from "module_18451" /* 18451 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import _modDef18545 from "module_18545" /* 18545 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function UnavailableNotice(brightTitle) {
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.unavailableInfo, children: null };
-  const obj3 = { source: _modDef18451 };
+  const obj3 = { source: _modDef18545 };
   const items1 = [React4(FastImageDefault, obj3), , ];
   const items2 = [tmp.joinCtaTitle, ];
   if (brightTitle) {
@@ -40,7 +40,7 @@ export default function UnavailableNotice(brightTitle) {
   }
   items2[1] = brightTitle;
   items1[1] = React4(Text_Text.Text, { variant: "heading-lg/semibold", color: "text-default", style: items2, children: title });
-  items1[2] = React4(Text_Text.Text, { style: tmp.unavailableDescription, variant: "text-sm/medium", color: "text-default", children: description });
+  items1[2] = React4(Text_Text.Text, { style: tmp.unavailableDescription, variant: "body-sm/medium", color: "text-default", children: description });
   obj2.children = items1;
   obj.children = hasOwnProperty(View, obj2);
   return React4(View, obj);

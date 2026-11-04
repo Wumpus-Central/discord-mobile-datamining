@@ -1,16 +1,16 @@
-// === Module 18939: BaseMessagesScreen ===
+// === Module 19042: BaseMessagesScreen ===
 
-// Module 18939 (BaseMessagesScreen)
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14017 */;
-import SearchUtils from "SearchUtils" /* 14024 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 18941 */;
+// Module 19042 (BaseMessagesScreen)
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14103 */;
+import SearchUtils from "SearchUtils" /* 14110 */;
+import TrackingDefault from "Tracking" /* 14124 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 19044 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6983 */;
-import SearchQueryStore from "SearchQueryStore" /* 14031 */;
+import SearchMessageStore from "SearchMessageStore" /* 6998 */;
+import SearchQueryStore from "SearchQueryStore" /* 14117 */;
 
 require = fn;
-const constants = fn(9957).SearchResultContentEntityTypes;
+const constants = fn(9975).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
@@ -129,5 +129,5 @@ export function trackMessageItemPress(messageId) {
   obj2.userId = id;
   obj2.index = index;
   obj2.entityType = constants.MESSAGE;
-  const result = search_tracking_TrackingDefault.trackSearchResultClicked(obj2);
+  const result = TrackingDefault.trackSearchResultClicked(obj2);
 }

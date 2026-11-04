@@ -1,26 +1,26 @@
-// === Module 16534: EmbeddedActivitiesNativeManager ===
+// === Module 16626: EmbeddedActivitiesNativeManager ===
 
-// Module 16534 (EmbeddedActivitiesNativeManager)
+// Module 16626 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ChatInputUtils from "ChatInputUtils" /* 5330 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 6074 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11863 */;
-import activityWebViewController from "activityWebViewController" /* 11935 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 16535 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 6089 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11922 */;
+import activityWebViewController from "activityWebViewController" /* 11994 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 16627 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 16536 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 16628 */;
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, ComponentActions: closure_7 } = Constants);
+({ AnalyticEvents: closure_6, ComponentActions: metroImportDefault } = Constants);
 const PlatformUtils = fn(1377);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {

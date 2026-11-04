@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
-import useChannelName from "useChannelName" /* 5772 */;
+import useChannelName from "useChannelName" /* 5786 */;
 import GatedChannelStore from "GatedChannelStore" /* 5045 */;
 import FavoriteStore from "FavoriteStore" /* 4993 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -77,9 +77,9 @@ function rebuildGuildChannels(guildId) {
     channel = channel.channel;
     obj.count = obj.count + 1;
     let type = channel.type;
-    if (React5(type)) {
+    if (metroImportDefault(type)) {
       type = SELECTABLE;
-    } else if (React7(type)) {
+    } else if (React6(type)) {
       type = VOCAL;
     }
     if (channel.type === ChannelTypes.GUILD_DIRECTORY) {
@@ -191,7 +191,7 @@ function handleFavoritesUpdate() {
 }
 let closure_6 = fn(5072).createFavoritesGuildChannelRecord;
 const ChannelRecord = fn(4994);
-({ isGuildSelectableChannelType: closure_7, GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8, isGuildVocalChannelType: closure_9, createChannelRecord } = ChannelRecord);
+({ isGuildSelectableChannelType: metroImportDefault, GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8, isGuildVocalChannelType: closure_9, createChannelRecord } = ChannelRecord);
 const Constants = fn(1072);
 ({ FAVORITES: closure_17, ChannelTypes } = Constants);
 ({ Permissions: closure_19, ElevatedPermissions: closure_20 } = Constants);

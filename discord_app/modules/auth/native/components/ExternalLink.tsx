@@ -1,6 +1,6 @@
-// === Module 18168: ExternalLink ===
+// === Module 18265: ExternalLink ===
 
-// Module 18168 (ExternalLink)
+// Module 18265 (ExternalLink)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ Linking: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Linking: closure_4, ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%", display: "flex", justifyContent: null, paddingLeft: null, paddingRight: null };
@@ -49,7 +49,7 @@ export default function ExternalLink(externalURL) {
   const intl = externalURL(onPress[8]).intl;
   obj4.children = intl.string(externalURL(onPress[8]).t["0Niu/F"]);
   const items2 = [closure_7(require("AuthHeader"), obj4), ];
-  const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.description, variant: "body-md/medium", color: "text-default", children: null };
   const intl2 = externalURL(onPress[8]).intl;
   obj5.children = intl2.string(externalURL(onPress[8]).t.nToOEg);
   items2[1] = closure_7(externalURL(onPress[9]).Text, obj5);

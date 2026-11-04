@@ -1,22 +1,22 @@
-// === Module 10745: GiftingBadgeInfoActionSheet ===
+// === Module 10793: GiftingBadgeInfoActionSheet ===
 
-// Module 10745 (GiftingBadgeInfoActionSheet)
+// Module 10793 (GiftingBadgeInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef2763 from "module_2763" /* 2763 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10746 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10794 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10797 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8904 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8887).getSingleRequirementThreshold;
+let closure_7 = fn(8904).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -42,7 +42,7 @@ export default function GiftingBadgeInfoActionSheet() {
   const tmp = closure_11();
   _require = tmp;
   items = [BadgeDirectoryStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => badgeById.getBadgeById(closure_0(8879).BadgeId.GIFTING));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => badgeById.getBadgeById(closure_0(8896).BadgeId.GIFTING));
   let obj = require("initialize");
   const items1 = [AccessibilityStore];
   importDefault = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
@@ -59,7 +59,7 @@ export default function GiftingBadgeInfoActionSheet() {
   let intl = require("util").intl;
   obj6.children = intl.string(_modDef2763["0MB2C6"]);
   const items3 = [closure_9(require("Text/Text").Text, obj6), ];
-  let obj7 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
+  let obj7 = { style: tmp.description, variant: "body-md/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
   obj7.children = intl2.string(_modDef2763.k9sNVH);
   items3[1] = closure_9(require("Text/Text").Text, obj7);
@@ -92,17 +92,17 @@ export default function GiftingBadgeInfoActionSheet() {
         if (tmp9) {
           const obj3 = { style: closure_0.iconWrapper, children: null };
           const obj4 = { icon: simple_icon_url, size: 58 };
-          obj3.children = React7(GiftingBadgeIconDefault, obj4);
-          tmp9 = React7(View, obj3);
+          obj3.children = React6(GiftingBadgeIconDefault, obj4);
+          tmp9 = React6(View, obj3);
         }
-        items = [tmp9, React7(Text_Text.Text, { variant: "text-lg/semibold", color: "text-strong", children: children.name }), ];
+        items = [tmp9, React6(Text_Text.Text, { variant: "body-lg/semibold", color: "text-strong", children: children.name }), ];
         let tmp12Result = null != tmp3;
         if (tmp12Result) {
-          const obj6 = { variant: "text-md/normal", color: "text-subtle", children: null };
+          const obj6 = { variant: "body-md/normal", color: "text-subtle", children: null };
           const intl = util.intl;
           const obj7 = { count: tmp3 };
           obj6.children = intl.formatToPlainString(_modDef2763.qvx9E4, obj7);
-          tmp12Result = React7(Text_Text.Text, obj6);
+          tmp12Result = React6(Text_Text.Text, obj6);
         }
         items[2] = tmp12Result;
         obj.children = items;

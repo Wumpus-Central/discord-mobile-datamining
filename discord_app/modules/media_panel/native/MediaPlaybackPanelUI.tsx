@@ -1,34 +1,34 @@
-// === Module 19510: MediaPlaybackPanelUI ===
+// === Module 19614: MediaPlaybackPanelUI ===
 
-// Module 19510 (MediaPlaybackPanelUI)
+// Module 19614 (MediaPlaybackPanelUI)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import timingPresets from "timingPresets" /* 5380 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import LayerScope from "LayerScope" /* 5734 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10219 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11364 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 19292 */;
-import useMorphablePanelGesture from "useMorphablePanelGesture" /* 19294 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 19509 */;
-import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 19511 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import timingPresets from "timingPresets" /* 5381 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import LayerScope from "LayerScope" /* 5748 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10267 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11414 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 19396 */;
+import useMorphablePanelGesture from "useMorphablePanelGesture" /* 19398 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 19613 */;
+import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 19615 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11985 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 12044 */;
 
 const _modDef1652 = _mod1652;
 const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(16541);
-({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(11361).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(11360).BORDER_RADIUS_PHYSICS;
+const MediaPlaybackPanelConstants = fn(16633);
+({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: metroImportDefault, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
+const IS_IOS = fn(11411).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(11410).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 const obj2 = { wrapperAnimationPresets: { opacity: 0 }, wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 }, mask: null, maskElevation: null, maskEmptyElevation: null, content: null };
@@ -89,7 +89,7 @@ export default function MediaPlaybackPanelUI() {
   MediaPlaybackPanelUITsx1.__closure = items3;
   MediaPlaybackPanelUITsx1.__workletHash = 15013094532527;
   MediaPlaybackPanelUITsx1.__initData = tmp15;
-  const items4 = [closure_14, cheapWorkletShallowEqual.cheapWorkletShallowEqual, React6, updateSharedValueIfChangedDefault, wrapperDimensions, wrapperOffset];
+  const items4 = [closure_14, cheapWorkletShallowEqual.cheapWorkletShallowEqual, React5, updateSharedValueIfChangedDefault, wrapperDimensions, wrapperOffset];
   c0 = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -154,7 +154,7 @@ export default function MediaPlaybackPanelUI() {
   MediaPlaybackPanelUITsx3.__closure = items7;
   MediaPlaybackPanelUITsx3.__workletHash = 7830339562823;
   MediaPlaybackPanelUITsx3.__initData = tmp32;
-  const items8 = [closure_16, cheapWorkletShallowEqual.cheapWorkletShallowEqual, React6, MorphablePanelUtils.getClampedPIPPosition, tmp12, tmp31, sharedValue2, sharedValue3, sharedValue, sharedValue1];
+  const items8 = [closure_16, cheapWorkletShallowEqual.cheapWorkletShallowEqual, React5, MorphablePanelUtils.getClampedPIPPosition, tmp12, tmp31, sharedValue2, sharedValue3, sharedValue, sharedValue1];
   c0 = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -240,15 +240,15 @@ export default function MediaPlaybackPanelUI() {
   MediaPlaybackPanelUITsx4.__workletHash = 13851512553920;
   MediaPlaybackPanelUITsx4.__initData = tmp40;
   const animatedReaction1 = _mod1652.useAnimatedReaction(MediaPlaybackPanelUITsx3, MediaPlaybackPanelUITsx4);
-  if (mode.get() === React6.PIP) {
+  if (mode.get() === React5.PIP) {
     if (IS_IOS) {
       let maskEmptyElevation = tmpResult.maskElevation;
     }
-    if (mode.get() === React6.PIP) {
+    if (mode.get() === React5.PIP) {
       if (!IS_IOS) {
         let maskEmptyElevation2 = tmpResult.maskElevation;
       }
-      const items10 = [closure_17, timing_timing.withTiming, sharedValue2, timingPresets.timingFast, sharedValue3, spring_spring.withSpring, sharedValue, React5, sharedValue1, wrapperDimensions, maskEmptyElevation];
+      const items10 = [closure_17, timing_timing.withTiming, sharedValue2, timingPresets.timingFast, sharedValue3, spring_spring.withSpring, sharedValue, metroImportDefault, sharedValue1, wrapperDimensions, maskEmptyElevation];
       c0 = undefined;
       class MediaPlaybackPanelUITsx7 {
         constructor() {

@@ -1,9 +1,9 @@
-// === Module 9421: useGetGameForAppId ===
+// === Module 9438: useGetGameForAppId ===
 
-// Module 9421 (useGetGameForAppId)
+// Module 9438 (useGetGameForAppId)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7450 */;
-import useGame from "useGame" /* 7604 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7466 */;
+import useGame from "useGame" /* 7620 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2143 */;
 
@@ -87,7 +87,7 @@ export function useGetGameResultsForAppIds(arg0) {
   }), items6);
 }
 export function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(7450)(stateFromStoresArray);
+  const tmp = memo(7466)(stateFromStoresArray);
   _require = tmp;
   items = [tmp];
   memo = noop.useMemo(() => {

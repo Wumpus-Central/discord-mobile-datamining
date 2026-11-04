@@ -1,21 +1,21 @@
-// === Module 13799: CheckpointGuildStats ===
+// === Module 13885: CheckpointGuildStats ===
 
-// Module 13799 (CheckpointGuildStats)
+// Module 13885 (CheckpointGuildStats)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3187 from "module_3187" /* 3187 */;
-import CheckpointConstants from "CheckpointConstants" /* 6186 */;
-import ChatIcon from "ChatIcon" /* 8767 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12109 */;
-import CheckpointTextDefault from "CheckpointText" /* 13779 */;
+import CheckpointConstants from "CheckpointConstants" /* 6201 */;
+import ChatIcon from "ChatIcon" /* 8784 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12168 */;
+import CheckpointTextDefault from "CheckpointText" /* 13865 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { stats: { flexDirection: "row", flexWrap: "wrap", columnGap: nativeDefault.space.PX_16 }, stat: null, text: null };
 let obj2 = { flexDirection: "row", flexWrap: "wrap", columnGap: nativeDefault.space.PX_16 };
 obj.stat = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

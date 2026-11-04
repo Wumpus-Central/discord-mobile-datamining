@@ -1,12 +1,12 @@
-// === Module 18902: SearchResultLinkPreviewMarkup ===
+// === Module 19005: SearchResultLinkPreviewMarkup ===
 
-// Module 18902 (SearchResultLinkPreviewMarkup)
-import MarkupRulesDefault from "MarkupRules" /* 6154 */;
-import combineMarkupRules from "combineMarkupRules" /* 6153 */;
-import MarkupParser from "MarkupParser" /* 8568 */;
+// Module 19005 (SearchResultLinkPreviewMarkup)
+import MarkupRulesDefault from "MarkupRules" /* 6169 */;
+import combineMarkupRules from "combineMarkupRules" /* 6168 */;
+import MarkupParser from "MarkupParser" /* 8585 */;
 
-const items = [MarkupRulesDefault.NATIVE_SEARCH_RESULT_LINK_RULES, fn(18903).createSearchResultLinkPreviewReactRules()];
-const MarkupSearchResultLinkPreviewReactRules = fn(18903);
+const items = [MarkupRulesDefault.NATIVE_SEARCH_RESULT_LINK_RULES, fn(19006).createSearchResultLinkPreviewReactRules()];
+const MarkupSearchResultLinkPreviewReactRules = fn(19006);
 const importDefaultResultResult = combineMarkupRules(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/SearchResultLinkPreviewMarkup.tsx");

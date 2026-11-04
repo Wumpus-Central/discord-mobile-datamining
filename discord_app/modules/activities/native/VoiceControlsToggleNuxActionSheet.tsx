@@ -1,6 +1,6 @@
-// === Module 19444: VoiceControlsToggleNuxActionSheet ===
+// === Module 19548: VoiceControlsToggleNuxActionSheet ===
 
-// Module 19444 (VoiceControlsToggleNuxActionSheet)
+// Module 19548 (VoiceControlsToggleNuxActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -61,7 +61,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   const intl = tmp4(tmp5[13]).intl;
   obj6.children = intl.string(markAsDismissed(isScreenLandscape[13]).t.pT6hue);
   items1[1] = closure_8(markAsDismissed(isScreenLandscape[12]).Text, obj6);
-  const obj7 = { style: tmp.body, variant: "text-sm/normal", children: null };
+  const obj7 = { style: tmp.body, variant: "body-sm/normal", children: null };
   const intl2 = tmp4(tmp5[13]).intl;
   obj7.children = intl2.string(markAsDismissed(isScreenLandscape[13]).t.tNm8AZ);
   items1[2] = closure_8(markAsDismissed(isScreenLandscape[12]).Text, obj7);

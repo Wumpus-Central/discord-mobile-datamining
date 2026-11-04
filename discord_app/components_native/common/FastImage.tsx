@@ -1,15 +1,15 @@
-// === Module 5837: FastImage ===
+// === Module 5851: FastImage ===
 
-// Module 5837 (FastImage)
+// Module 5851 (FastImage)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5839 */;
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5853 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let FastImageApngExperiment = fn(5838);
+let FastImageApngExperiment = fn(5852);
 FastImageApngExperiment = FastImageApngExperiment.initializeFastImageApngExperiment();
 let size = fn(2);
 const result1 = size.fileFinishedImporting("components_native/common/FastImage.tsx");

@@ -1,11 +1,11 @@
-// === Module 9688: VirtualCurrencyActionCreators ===
+// === Module 9707: VirtualCurrencyActionCreators ===
 
-// Module 9688 (VirtualCurrencyActionCreators)
+// Module 9707 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SKUStore from "SKUStore" /* 7016 */;
+import SKUStore from "SKUStore" /* 7031 */;
 
 require = fn;
 function fetchVirtualCurrencyBalance() {
@@ -202,8 +202,8 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -239,8 +239,8 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          const obj6 = { type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: closure_129_0 };
-          closure_130_1(closure_130_2[4]).dispatch(obj6);
+          const obj7 = { type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: closure_129_0 };
+          closure_130_1(closure_130_2[4]).dispatch(obj7);
           if (closure_129_2 != null) {
             closure_129_2();
           }
@@ -254,11 +254,11 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           let result = null != closure_129_7;
           if (result) {
             result = closure_130_0(closure_130_2[7]).isTestModeForApplication(closure_129_7);
-            const obj9 = closure_130_0(closure_130_2[7]);
+            const obj8 = closure_130_0(closure_130_2[7]);
           }
           closure_129_8 = result;
-          const obj8 = { checkout_session_id: closure_129_1 };
-          closure_129_9 = obj8;
+          const obj9 = { checkout_session_id: closure_129_1 };
+          closure_129_9 = obj9;
           if (closure_129_8) {
             closure_129_9.test_mode = true;
           }
@@ -284,7 +284,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           closure_130_7();
         }
         if (closure_129_4 != null) {
-          tmp69(closure_129_13);
+          tmp68(closure_129_13);
         }
         c6 = 3;
         return { value: "HermesInternal", done: null };
@@ -301,18 +301,18 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
         if (null != body) {
           const _Array = Array;
           if (Array.isArray(body)) {
-            const obj13 = { type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId: closure_129_0, entitlements: body };
-            closure_130_1(closure_130_2[4]).dispatch(obj13);
+            const obj = { skuId: closure_129_0, entitlements: body };
+            closure_130_11(obj);
             if (closure_129_5) {
               closure_130_7();
             }
             if (closure_129_3 != null) {
-              tmp20(body);
+              tmp19(body);
             }
             c4 = 0;
             c6 = 3;
-            const obj14 = { value: body, done: true };
-            return obj14;
+            const obj13 = { value: body, done: true };
+            return obj13;
           }
         }
         closure_129_11 = "Could not read entitlements from Virtual Currency redemption response. Response: ";
@@ -320,21 +320,25 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
         const error = new Error(closure_129_11, body);
         closure_129_12 = error;
         closure_130_6.error(closure_129_11, body);
-        const obj15 = { tags: { app_context: "virtual_currency" } };
-        closure_130_1(closure_130_2[8]).captureException(closure_129_12, obj15);
+        const obj14 = { tags: { app_context: "virtual_currency" } };
+        closure_130_1(closure_130_2[8]).captureException(closure_129_12, obj14);
         throw closure_129_12;
       }
-    } catch (tmp98) {
-      closure_3 = tmp98;
+    } catch (tmp97) {
+      closure_3 = tmp97;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp98;
+        throw tmp97;
       } else {
         c5 = tmp;
       }
     }
   }
 };
+function dispatchVirtualCurrencyRedeemSuccess(arg0) {
+  ({ skuId, entitlements } = arg0);
+  DispatcherDefault.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId, entitlements });
+}
 const Endpoints = fn(1072).Endpoints;
 let closure_6 = new LoggerDefault("VirtualCurrencyActionCreators");
 const size = fn(2);
@@ -361,6 +365,7 @@ export function redeemVirtualCurrencyForSKU() {
   }
   return applyArgumentsResult;
 }
+export { dispatchVirtualCurrencyRedeemSuccess };
 export function setBalancePillOverlay(balancePillOverlay) {
   return DispatcherDefault.dispatch({ type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY", balancePillOverlay });
 }

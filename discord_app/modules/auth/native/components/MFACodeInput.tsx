@@ -1,15 +1,15 @@
-// === Module 16809: MFACodeInput ===
+// === Module 16901: MFACodeInput ===
 
-// Module 16809 (MFACodeInput)
+// Module 16901 (MFACodeInput)
 import nativeDefault from "native" /* 575 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const AppStates = fn(1072).AppStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
@@ -139,7 +139,7 @@ export default function MFACodeInput(appState) {
   } else {
     let tmp17Result2 = null;
     if (null != error) {
-      const obj5 = { style: tmp.error, variant: "text-md/medium", children: error };
+      const obj5 = { style: tmp.error, variant: "body-md/medium", children: error };
       tmp17Result2 = closure_9(tmp2(tmp3[14]).Text, obj5);
     }
     const obj6 = { children: null };

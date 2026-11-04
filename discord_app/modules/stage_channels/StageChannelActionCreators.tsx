@@ -1,24 +1,24 @@
-// === Module 8069: StageChannelActionCreators ===
+// === Module 8085: StageChannelActionCreators ===
 
-// Module 8069 (StageChannelActionCreators)
+// Module 8085 (StageChannelActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import Server from "Server" /* 2121 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6168 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7620 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8074 */;
-import StageInstanceActionCreators from "StageInstanceActionCreators" /* 8077 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6183 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7636 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8090 */;
+import StageInstanceActionCreators from "StageInstanceActionCreators" /* 8093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 const HTTPUtils = obj(1282);
-const AppAnalyticsUtils = obj(5880);
-const useStageSpeakingForCurrentUser = obj(6878);
-const StageChannelUtils = obj(8070);
+const AppAnalyticsUtils = obj(5894);
+const useStageSpeakingForCurrentUser = obj(6893);
+const StageChannelUtils = obj(8086);
 require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
@@ -48,7 +48,7 @@ function audienceAckRequestToSpeak(channel, suppress) {
     const objResult4 = StageChannelUtils;
   }
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React7.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
+  const request = { url: React6.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
   if (flag) {
     const obj5 = { silent: flag };
     let obj6 = obj5;
@@ -239,8 +239,8 @@ let closure_14 = async function _endStage(arg0) {
   })();
 };
 const Constants = fn(1072);
-({ AbortCodes: closure_7, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
-const SafetyToastType = fn(7614).SafetyToastType;
+({ AbortCodes: metroImportDefault, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
+const SafetyToastType = fn(7630).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 
@@ -254,7 +254,7 @@ export function toggleRequestToSpeak(channel_id, arg1) {
     obj.trackWithMetadata(constants.REQUEST_TO_SPEAK_INITIATED, obj2);
   }
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React7.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
+  const request = { url: React6.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
   let toISOStringResult = null;
   if (arg1) {
     const _Date = Date;
@@ -269,7 +269,7 @@ export function inviteUserToStage(voiceChannel, id) {
   const guildId = voiceChannel.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React7.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
+  const request = { url: React6.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
   let obj = { suppress: false, request_to_speak_timestamp: new Date().toISOString(), channel_id: voiceChannel.id };
   request.body = obj;
   const date = new Date();
@@ -289,14 +289,14 @@ export function moveSelfToAudience(channel_id) {
   }
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React7.UPDATE_VOICE_STATE(guildId), body: { suppress: true, channel_id: channel_id.id, self_video: false, self_stream: false }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  const request = { url: React6.UPDATE_VOICE_STATE(guildId), body: { suppress: true, channel_id: channel_id.id, self_video: false, self_stream: false }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.patch(request);
 }
 export function setUserSuppress(channel, id, suppress) {
   const guildId = channel.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React7.UPDATE_VOICE_STATE(guildId, id), body: { suppress, channel_id: channel.id }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  const request = { url: React6.UPDATE_VOICE_STATE(guildId, id), body: { suppress, channel_id: channel.id }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   const obj = { suppress, channel_id: channel.id };
   return HTTP.patch(request).catch((error) => {
     if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
@@ -313,7 +313,7 @@ export function moveUserToAudience(user, voiceChannel) {
       const guildId1 = voiceChannel.getGuildId();
       _modDef38(null != guildId1, "This channel cannot be guildless.");
       const HTTP = HTTPUtils.HTTP;
-      const request = { url: React7.UPDATE_VOICE_STATE(guildId1, user.id), body: null, rejectWithError: null };
+      const request = { url: React6.UPDATE_VOICE_STATE(guildId1, user.id), body: null, rejectWithError: null };
       let obj = { suppress: true, channel_id: voiceChannel.id };
       request.body = obj;
       request.rejectWithError = HTTPUtils.rejectWithMigratedError();
@@ -324,7 +324,7 @@ export function moveUserToAudience(user, voiceChannel) {
         return error;
       });
       const HTTP2 = HTTPUtils.HTTP;
-      const request1 = { url: React7.UPDATE_VOICE_STATE(guildId, user.id), body: null, rejectWithError: null };
+      const request1 = { url: React6.UPDATE_VOICE_STATE(guildId, user.id), body: null, rejectWithError: null };
       const obj2 = { suppress: true, channel_id: voiceChannel.id, self_video: false, self_stream: false };
       request1.body = obj2;
       const patchResult = HTTP.patch(request);

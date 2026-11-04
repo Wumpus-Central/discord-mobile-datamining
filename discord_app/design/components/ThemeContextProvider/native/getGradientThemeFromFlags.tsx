@@ -1,6 +1,6 @@
-// === Module 5314: getGradientThemeFromFlags ===
+// === Module 5315: getGradientThemeFromFlags ===
 
-// Module 5314 (getGradientThemeFromFlags)
+// Module 5315 (getGradientThemeFromFlags)
 import native from "native" /* 5207 */;
 import size from "module_2" /* 2 */;
 

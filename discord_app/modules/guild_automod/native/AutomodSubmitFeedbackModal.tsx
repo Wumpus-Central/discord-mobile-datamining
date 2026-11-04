@@ -1,15 +1,15 @@
-// === Module 13432: AutomodSubmitFeedbackModal ===
+// === Module 13516: AutomodSubmitFeedbackModal ===
 
-// Module 13432 (AutomodSubmitFeedbackModal)
+// Module 13516 (AutomodSubmitFeedbackModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import HeaderActionButton from "HeaderActionButton" /* 7682 */;
-import AutomodFeedback from "AutomodFeedback" /* 7821 */;
-import _modDef8483 from "module_8483" /* 8483 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import HeaderActionButton from "HeaderActionButton" /* 7698 */;
+import AutomodFeedback from "AutomodFeedback" /* 7837 */;
+import _modDef8499 from "module_8499" /* 8499 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,10 +22,10 @@ function Navbar(onClose) {
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj2.onPress = onClose.onClose;
-  obj2.source = _modDef8483;
-  obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
-  rect.children = React5(View, obj);
-  return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
+  obj2.source = _modDef8499;
+  obj.children = metroImportDefault(HeaderActionButton.HeaderActionButton, obj2);
+  rect.children = metroImportDefault(View, obj);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, rect);
 }
 function SubmitFeedbackScreen(onSubmit) {
   ({ feedback: require, onChange: importDefault } = onSubmit);
@@ -41,7 +41,7 @@ function SubmitFeedbackScreen(onSubmit) {
   const intl = util.intl;
   obj4.children = intl.string(util.t["7bdzNo"]);
   const items1 = [closure_7(Text_Text.Text, obj4), , , ];
-  const obj5 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.headerSubtitle, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.Lbpk6m);
   items1[1] = closure_7(Text_Text.Text, obj5);
@@ -56,7 +56,7 @@ function SubmitFeedbackScreen(onSubmit) {
           return importDefault(value);
         },
         trailing: closure_1_7(require("native").RadioIndicator, { active: closure_0 === value, style: closure_2.radioIndicator }),
-        label: closure_1_7(require("Text/Text").Text, { style: closure_2.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: children.name })
+        label: closure_1_7(require("Text/Text").Text, { style: closure_2.formRow, variant: "body-md/semibold", color: "interactive-text-active", children: children.name })
       };
       children = [closure_1_7(require("Form").FormRow, obj), index < feedbackOptions.length - 1 && closure_1_7(require("Form").FormDivider, {})];
       return closure_1_8(React.Fragment, { children }, value);
@@ -77,7 +77,7 @@ function SubmitFeedbackScreen(onSubmit) {
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 }, header: null, headerTitle: null, headerSubtitle: null, closeButtonContainer: null, formBody: null, formRow: null, radioIndicator: null, submitButtonContainer: null };

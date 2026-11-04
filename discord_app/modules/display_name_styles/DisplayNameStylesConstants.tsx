@@ -1,41 +1,43 @@
 // === Module 1403: DisplayNameStylesConstants ===
 
 // Module 1403 (DisplayNameStylesConstants)
-import DisplayNameEffect from "DisplayNameEffect" /* 1404 */;
-import DisplayNameFont from "DisplayNameFont" /* 1405 */;
+import DisplayNameFont from "DisplayNameFont" /* 1404 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1405 */;
 import size from "module_2" /* 2 */;
 
-let items = [DisplayNameEffect.DisplayNameEffect.SOLID, DisplayNameEffect.DisplayNameEffect.GRADIENT, DisplayNameEffect.DisplayNameEffect.NEON, DisplayNameEffect.DisplayNameEffect.TOON, DisplayNameEffect.DisplayNameEffect.POP];
-const items1 = [DisplayNameFont.DisplayNameFont.PLAYPEN_SANS, DisplayNameFont.DisplayNameFont.ORBITRON, DisplayNameFont.DisplayNameFont.NEW_ROCKER, DisplayNameFont.DisplayNameFont.KALAM];
-const items2 = [DisplayNameEffect.DisplayNameEffect.GUMMY, DisplayNameEffect.DisplayNameEffect.PRISM];
-const items3 = [DisplayNameFont.DisplayNameFont.HEXAGON];
-const items4 = [2417517, 1874155, 12790527, 14287177, 16332578, 13018645];
-const items5 = [[2797222, 16762000], [14966527, 2522592], [8277963, 6802328], [15709354, 14970082], [16095292, 15031015]];
-const mapped = items5.map((colors) => ({ colors, name: "" }));
-const items6 = [[15313365, 11132400, 12167150, 12184267], [16740290, 16076712, 16751574, 14248631], [16758138, 16749423, 16743544, 15756170], [12905829, 10018400, 7130467, 4570214], [8173823, 9363664, 10327285, 6737904], [14121983, 11889663, 14965989, 9137407], [14170719, 13192139, 9133311, 11562239]];
-const items7 = [[16683586, 3534206, 16769095, 16731346, 5793266], [8316888, 8178687, 8359167, 11890175, 15960792], [7997702, 13114898, 16013848, 16749824, 16766023]];
+let items = [DisplayNameFont.DisplayNameFont.PLAYPEN_SANS, DisplayNameFont.DisplayNameFont.ORBITRON, DisplayNameFont.DisplayNameFont.NEW_ROCKER, DisplayNameFont.DisplayNameFont.KALAM];
+const items1 = [DisplayNameEffect.DisplayNameEffect.GUMMY, DisplayNameEffect.DisplayNameEffect.PRISM];
+const items2 = [DisplayNameFont.DisplayNameFont.DEFAULT, DisplayNameFont.DisplayNameFont.ZILLA_SLAB, DisplayNameFont.DisplayNameFont.CHERRY_BOMB, DisplayNameFont.DisplayNameFont.CHICLE, DisplayNameFont.DisplayNameFont.MUSEO_MODERNO, DisplayNameFont.DisplayNameFont.NEO_CASTEL, DisplayNameFont.DisplayNameFont.PIXELIFY, DisplayNameFont.DisplayNameFont.SINISTRE, ...items];
+const items3 = [DisplayNameEffect.DisplayNameEffect.SOLID, DisplayNameEffect.DisplayNameEffect.GRADIENT, DisplayNameEffect.DisplayNameEffect.NEON, DisplayNameEffect.DisplayNameEffect.TOON, DisplayNameEffect.DisplayNameEffect.POP, ...items1];
+const items4 = [DisplayNameFont.DisplayNameFont.HEXAGON];
+const items5 = [2417517, 1874155, 12790527, 14287177, 16332578, 13018645];
+const items6 = [[2797222, 16762000], [14966527, 2522592], [8277963, 6802328], [15709354, 14970082], [16095292, 15031015]];
+const mapped = items6.map((colors) => ({ colors, name: "" }));
+const items7 = [[15313365, 11132400, 12167150, 12184267], [16740290, 16076712, 16751574, 14248631], [16758138, 16749423, 16743544, 15756170], [12905829, 10018400, 7130467, 4570214], [8173823, 9363664, 10327285, 6737904], [14121983, 11889663, 14965989, 9137407], [14170719, 13192139, 9133311, 11562239]];
+const items8 = [[16683586, 3534206, 16769095, 16731346, 5793266], [8316888, 8178687, 8359167, 11890175, 15960792], [7997702, 13114898, 16013848, 16749824, 16766023]];
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesConstants.tsx");
 
-export const EFFECT_ORDER = items;
-export const FLYWHEEL_FONTS = items1;
-export const FLYWHEEL_EFFECTS = items2;
-export const HEXAGON_CAMPAIGN_FONTS = items3;
-export const DISPLAY_NAME_STYLES_COLOR_PRESETS = items4;
+export const FLYWHEEL_FONTS = items;
+export const FLYWHEEL_EFFECTS = items1;
+export const FONT_ORDER = items2;
+export const EFFECT_ORDER = items3;
+export const HEXAGON_CAMPAIGN_FONTS = items4;
+export const DISPLAY_NAME_STYLES_COLOR_PRESETS = items5;
 export const DISPLAY_NAME_STYLES_GRADIENT_PRESETS = mapped;
-export const DISPLAY_NAME_STYLES_GUMMY_PRESETS = items6;
+export const DISPLAY_NAME_STYLES_GUMMY_PRESETS = items7;
 export const DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION = 0.78;
 export const DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS = 0.72;
 export const MIN_PRISM_GRADIENT_WIDTH = 38;
-export const DISPLAY_NAME_STYLES_PRISM_PRESETS = items7;
+export const DISPLAY_NAME_STYLES_PRISM_PRESETS = items8;
 export function getColorPresetsForEffect(arg0) {
   if (DisplayNameEffect.DisplayNameEffect.GUMMY === arg0) {
-    return items6;
-  } else if (DisplayNameEffect.DisplayNameEffect.PRISM === arg0) {
     return items7;
+  } else if (DisplayNameEffect.DisplayNameEffect.PRISM === arg0) {
+    return items8;
   } else {
     if (DisplayNameEffect.DisplayNameEffect.GRADIENT !== arg0) {
       if (DisplayNameEffect.DisplayNameEffect.GLOW !== arg0) {
-        return items4.map((item) => {
+        return items5.map((item) => {
           items = [item];
           return items;
         });

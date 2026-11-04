@@ -1,15 +1,15 @@
-// === Module 18197: MainTabsNavigatorPanel ===
+// === Module 18294: MainTabsNavigatorPanel ===
 
-// Module 18197 (MainTabsNavigatorPanel)
+// Module 18294 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import ChatInputUtils from "ChatInputUtils" /* 5330 */;
-import transitionToChannel from "transitionToChannel" /* 5876 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 18198 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18199 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 18203 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import transitionToChannel from "transitionToChannel" /* 5890 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 18295 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18296 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 18300 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ ComponentActions: closure_8, ME: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -86,11 +86,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(18198);
+        obj = obj(18295);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(5330).dismissKeyboard();
-        const objResult = obj(5330);
+        obj(5331).dismissKeyboard();
+        const objResult = obj(5331);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;
@@ -302,7 +302,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
     if (type === useChannelScreensFromNavigation.ChannelScreenType.BACKGROUND_SAVED) {
       let guildId = firstScreen.guildId;
       if (guildId == null) {
-        guildId = React7;
+        guildId = React6;
       }
       ChannelActionCreatorsDefault.preload(guildId, firstScreen.channelId);
     }

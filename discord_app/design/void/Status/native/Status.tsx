@@ -1,21 +1,21 @@
-// === Module 16132: Status ===
+// === Module 16221: Status ===
 
-// Module 16132 (Status)
+// Module 16221 (Status)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import EllipsisDefault from "Ellipsis" /* 16118 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 16130 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16131 */;
-import _modDef16133 from "module_16133" /* 16133 */;
-import _modDef16134 from "module_16134" /* 16134 */;
-import _modDef16135 from "module_16135" /* 16135 */;
-import _modDef16136 from "module_16136" /* 16136 */;
-import _modDef16137 from "module_16137" /* 16137 */;
-import _modDef16138 from "module_16138" /* 16138 */;
-import _modDef16139 from "module_16139" /* 16139 */;
-import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 16140 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import EllipsisDefault from "Ellipsis" /* 16207 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 16219 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16220 */;
+import _modDef16222 from "module_16222" /* 16222 */;
+import _modDef16223 from "module_16223" /* 16223 */;
+import _modDef16224 from "module_16224" /* 16224 */;
+import _modDef16225 from "module_16225" /* 16225 */;
+import _modDef16226 from "module_16226" /* 16226 */;
+import _modDef16227 from "module_16227" /* 16227 */;
+import _modDef16228 from "module_16228" /* 16228 */;
+import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 16229 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,8 +25,8 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1188).STATUS_PADDING;
 const StatusTypes = fn(1072).StatusTypes;
-const ChannelAnimationConstants = fn(15016);
-({ TYPING_ENTERING: closure_7, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
+const ChannelAnimationConstants = fn(15096);
+({ TYPING_ENTERING: metroImportDefault, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let createStyles = fn(5141);
@@ -85,23 +85,23 @@ export default function Status(isMobileOnline) {
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef16133;
+    let tmp4Result = _modDef16222;
   } else if (flag2) {
-    tmp4Result = _modDef16134;
+    tmp4Result = _modDef16223;
   } else if (flag) {
-    tmp4Result = _modDef16135;
+    tmp4Result = _modDef16224;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef16136;
+    tmp4Result = _modDef16225;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef16137;
+    tmp4Result = _modDef16226;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef16139;
+        tmp4Result = _modDef16228;
       }
     }
-    tmp4Result = _modDef16138;
+    tmp4Result = _modDef16227;
   }
   obj2.source = tmp4Result;
   obj.children = closure_1_10(FastImageDefault, obj2);
@@ -145,7 +145,7 @@ export function StatusWithTyping(status) {
   }
   const tmp11 = typing ? width / 2 : size2.borderRadius;
   const tmp6 = _slicedToArray(useFlashListAnimationDisabler.useFlashListAnimationDisabler(userId), 2);
-  items = [closure_14, tmp7, spring_spring.withSpring, width, React7, height, tmp8, tmp11, num];
+  items = [closure_14, tmp7, spring_spring.withSpring, width, React6, height, tmp8, tmp11, num];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -179,7 +179,7 @@ export function StatusWithTyping(status) {
     num2 = 0;
   }
   const tmp5Result3 = _mod1652;
-  const items2 = [closure_15, spring_spring.withSpring, num2, React7];
+  const items2 = [closure_15, spring_spring.withSpring, num2, React6];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -212,23 +212,23 @@ export function StatusWithTyping(status) {
   const obj6 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
   const tmp5Result4 = _mod1652;
   if (streaming) {
-    let tmp3Result2 = _modDef16133;
+    let tmp3Result2 = _modDef16222;
   } else if (flag2) {
-    tmp3Result2 = _modDef16134;
+    tmp3Result2 = _modDef16223;
   } else if (flag) {
-    tmp3Result2 = _modDef16135;
+    tmp3Result2 = _modDef16224;
   } else if (StatusTypes.IDLE === status) {
-    tmp3Result2 = _modDef16136;
+    tmp3Result2 = _modDef16225;
   } else if (StatusTypes.DND === status) {
-    tmp3Result2 = _modDef16137;
+    tmp3Result2 = _modDef16226;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp3Result2 = _modDef16139;
+        tmp3Result2 = _modDef16228;
       }
     }
-    tmp3Result2 = _modDef16138;
+    tmp3Result2 = _modDef16227;
   }
   obj6.source = tmp3Result2;
   obj5.children = closure_1_10(FastImageDefault, obj6);

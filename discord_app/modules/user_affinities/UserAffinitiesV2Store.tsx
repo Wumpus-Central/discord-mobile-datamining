@@ -1,6 +1,6 @@
-// === Module 7925: UserAffinitiesV2Store ===
+// === Module 7941: UserAffinitiesV2Store ===
 
-// Module 7925 (UserAffinitiesV2Store)
+// Module 7941 (UserAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
@@ -21,7 +21,7 @@ function recomputeAffinities() {
     const result = map.set(_null.otherUserId, _null);
   }
 }
-const USER_AFFINITY_TTL = fn(7926).USER_AFFINITY_TTL;
+const USER_AFFINITY_TTL = fn(7942).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
 let c4 = null;

@@ -1,9 +1,9 @@
-// === Module 6000: setShouldRecordNextConnection ===
+// === Module 6014: setShouldRecordNextConnection ===
 
-// Module 6000 (setShouldRecordNextConnection)
+// Module 6014 (setShouldRecordNextConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 6001 */;
-import RTCDebugStore from "RTCDebugStore" /* 5907 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 6015 */;
+import RTCDebugStore from "RTCDebugStore" /* 5921 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc_debug/setShouldRecordNextConnection.tsx");

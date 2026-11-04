@@ -1,9 +1,9 @@
-// === Module 8285: LinkExternalSmallIcon ===
+// === Module 8301: LinkExternalSmallIcon ===
 
-// Module 8285 (LinkExternalSmallIcon)
+// Module 8301 (LinkExternalSmallIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod8286 from "module_8286" /* 8286 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod8302 from "module_8302" /* 8302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function LinkExternalSmallIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8286, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8302, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

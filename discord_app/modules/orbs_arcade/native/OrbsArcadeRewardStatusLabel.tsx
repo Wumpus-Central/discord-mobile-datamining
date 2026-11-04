@@ -1,11 +1,11 @@
-// === Module 17177: OrbsArcadeRewardStatusLabel ===
+// === Module 17269: OrbsArcadeRewardStatusLabel ===
 
-// Module 17177 (OrbsArcadeRewardStatusLabel)
+// Module 17269 (OrbsArcadeRewardStatusLabel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LockIcon from "LockIcon" /* 8791 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17167 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LockIcon from "LockIcon" /* 8808 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17259 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function OrbsArcadeRewardStatusLabel(status) {
   status = status.status;
   ({ reward, color } = status);
   const obj = { style: closure_6().statusLabel, children: null };
-  const obj2 = { variant: "heading-sm/semibold", color, children: null };
+  const obj2 = { variant: "heading-xs/semibold", color, children: null };
   if (OrbsArcadeTypes.OrbsArcadeRewardStatus.CLAIMED === status) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.R6Ksr9);

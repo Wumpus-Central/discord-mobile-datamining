@@ -1,10 +1,10 @@
-// === Module 12722: conjureAttachmentDrafts ===
+// === Module 12803: conjureAttachmentDrafts ===
 
-// Module 12722 (conjureAttachmentDrafts)
+// Module 12803 (conjureAttachmentDrafts)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12254 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12283 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12315 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12344 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
@@ -129,10 +129,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10980).sendUserMessage;
+const sendUserMessage = fn(11028).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5334).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5335).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);

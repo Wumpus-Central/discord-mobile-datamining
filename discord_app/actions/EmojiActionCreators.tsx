@@ -1,20 +1,20 @@
-// === Module 10187: EmojiActionCreators ===
+// === Module 10235: EmojiActionCreators ===
 
-// Module 10187 (EmojiActionCreators)
+// Module 10235 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import wrappers from "wrappers" /* 1227 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6921 */;
-import InlineUploaderDefault from "InlineUploader" /* 7274 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6936 */;
+import InlineUploaderDefault from "InlineUploader" /* 7290 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
 import EmojiPackStore from "EmojiPackStore" /* 5092 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6909 */;
 
 const require = globalThis.__r;
 
@@ -225,7 +225,7 @@ export function favoriteEmoji(customEmojiFromJoinedGuild) {
         }
       }
       emojis.emojis = tmp;
-      if (obj2.size(emojis.emojis) >= React7) {
+      if (obj2.size(emojis.emojis) >= React6) {
         const obj3 = { title: null, body: null };
         const intl = util.intl;
         obj3.title = intl.string(util.t["+XYXtZ"]);

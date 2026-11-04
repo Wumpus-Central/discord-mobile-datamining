@@ -1,12 +1,12 @@
-// === Module 13832: CheckpointNavigationControls ===
+// === Module 13918: CheckpointNavigationControls ===
 
-// Module 13832 (CheckpointNavigationControls)
+// Module 13918 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
-import CheckpointTextDefault from "CheckpointText" /* 13779 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 13831 */;
+import CheckpointTextDefault from "CheckpointText" /* 13865 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 13917 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6186 */;
+import CheckpointConstants from "CheckpointConstants" /* 6201 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_PRIMARY: hasOwnProperty } = CheckpointConstants);
 const HelpdeskArticles = Constants.HelpdeskArticles;
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let obj = { container: null, homeContainer: null, link: null, routeControls: null, control: null, editControl: null, editIcon: null, share: null };
 let rect = { position: "absolute", left: nativeDefault.space.PX_24, right: nativeDefault.space.PX_24, bottom: nativeDefault.space.PX_16 };
 obj.container = rect;
@@ -93,21 +93,21 @@ export default function CheckpointNavigationControls(nextDisabled) {
     const obj5 = { disabled: flag2 };
     obj4.accessibilityState = obj5;
     const items2 = [closure_7(tmp5(tmp6[12]), obj4), ];
-    const obj6 = { variant: "text-sm/medium", children: null };
+    const obj6 = { variant: "body-sm/medium", children: null };
     const tmp5Result = tmp5(tmp6[12]);
     const intl7 = require("util").intl;
     const obj7 = {
-      learnMoreHook(children, arg1) {
-          return React5(CheckpointTextDefault, {
-            variant: "text-sm/medium",
+      learnMoreHook(children, id) {
+          return metroImportDefault(CheckpointTextDefault, {
+            variant: "body-sm/medium",
             style: link.link,
             onPress() {
-              const obj = flag(5829);
+              const obj = flag(5843);
               return obj.openURL(flag(2190).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
             children
-          }, arg1);
+          }, id);
         }
     };
     obj6.children = intl7.format(tmp5(tmp6[15]).hcNhyq, obj7);

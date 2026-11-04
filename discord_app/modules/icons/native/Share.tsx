@@ -1,15 +1,15 @@
-// === Module 9289: icons/Share ===
+// === Module 9306: icons/Share ===
 
-// Module 9289 (icons/Share)
-import _modDef9290 from "module_9290" /* 9290 */;
-import _modDef9291 from "module_9291" /* 9291 */;
+// Module 9306 (icons/Share)
+import _modDef9307 from "module_9307" /* 9307 */;
+import _modDef9308 from "module_9308" /* 9308 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 if (PlatformUtils.isIOS()) {
-  let importDefaultResult = _modDef9290;
+  let importDefaultResult = _modDef9307;
 } else {
-  importDefaultResult = _modDef9291;
+  importDefaultResult = _modDef9308;
 }
 const result = size.fileFinishedImporting("modules/icons/native/Share.tsx");
 

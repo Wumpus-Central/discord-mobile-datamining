@@ -1,6 +1,6 @@
-// === Module 17267: VttParser ===
+// === Module 17359: VttParser ===
 
-// Module 17267 (VttParser)
+// Module 17359 (VttParser)
 import size from "module_2" /* 2 */;
 
 const prototype = function VttParserError(arg0, error) {

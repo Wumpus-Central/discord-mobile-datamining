@@ -1,16 +1,16 @@
-// === Module 10188: useEmojiAndSource ===
+// === Module 10236: useEmojiAndSource ===
 
-// Module 10188 (useEmojiAndSource)
+// Module 10236 (useEmojiAndSource)
 import EmojiTypes from "EmojiTypes" /* 5090 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
 
 require = fn;
-const ExpressionSourceRecord = fn(7084);
-({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
+const ExpressionSourceRecord = fn(7099);
+({ ExpressionSourceGuildRecord: metroImportDefault, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");

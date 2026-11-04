@@ -1,10 +1,10 @@
-// === Module 18947: ThreadsScreen ===
+// === Module 19050: ThreadsScreen ===
 
-// Module 18947 (ThreadsScreen)
+// Module 19050 (ThreadsScreen)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 14143 */;
-import ThreadListDefault from "ThreadList" /* 18948 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 14229 */;
+import ThreadListDefault from "ThreadList" /* 19051 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
@@ -12,7 +12,7 @@ require = fn;
 function ThreadsScreen(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const canStartThread = channel(7567).useCanStartThread(channel);
+  const canStartThread = channel(7583).useCanStartThread(channel);
   items = [channel];
   const callback = noop.useCallback(() => {
     const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
@@ -30,7 +30,7 @@ function ThreadsScreen(channel) {
   }, []);
   const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
   let tmp10;
-  let obj = channel(7567);
+  let obj = channel(7583);
   if (canStartThread) {
     tmp10 = callback;
   }

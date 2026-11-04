@@ -1,6 +1,6 @@
-// === Module 10097: PortalKeyboardFooterIOS ===
+// === Module 10145: PortalKeyboardFooterIOS ===
 
-// Module 10097 (PortalKeyboardFooterIOS)
+// Module 10145 (PortalKeyboardFooterIOS)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -8,9 +8,9 @@ import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1641 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import useKeyboardType from "useKeyboardType" /* 5332 */;
-import Portal from "Portal" /* 5337 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
+import useKeyboardType from "useKeyboardType" /* 5333 */;
+import Portal from "Portal" /* 5338 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

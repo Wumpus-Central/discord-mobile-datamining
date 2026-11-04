@@ -1,20 +1,20 @@
-// === Module 9116: EditGuildEventModalNavbar ===
+// === Module 9133: EditGuildEventModalNavbar ===
 
-// Module 9116 (EditGuildEventModalNavbar)
+// Module 9133 (EditGuildEventModalNavbar)
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import HeaderActionButton from "HeaderActionButton" /* 7682 */;
-import _modDef8483 from "module_8483" /* 8483 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9096 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import HeaderActionButton from "HeaderActionButton" /* 7698 */;
+import _modDef8499 from "module_8499" /* 8499 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28 }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
 const size = fn(2);
@@ -45,7 +45,7 @@ export default function EditGuildEventModalNavbar(screen) {
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj5.onPress = screen.onClose;
-  obj5.source = _modDef8483;
+  obj5.source = _modDef8499;
   obj5.style = tmp.rightButton;
   obj4.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
   items1[2] = hasOwnProperty(View, obj4);

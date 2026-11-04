@@ -1,8 +1,8 @@
-// === Module 9559: HTMLParserLinkUtils ===
+// === Module 9578: HTMLParserLinkUtils ===
 
-// Module 9559 (HTMLParserLinkUtils)
-import MarkupLinkRuleDefault from "MarkupLinkRule" /* 6157 */;
-import HTMLParserRunUtils from "HTMLParserRunUtils" /* 9558 */;
+// Module 9578 (HTMLParserLinkUtils)
+import MarkupLinkRuleDefault from "MarkupLinkRule" /* 6172 */;
+import HTMLParserRunUtils from "HTMLParserRunUtils" /* 9577 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import t from "module_2072" /* 2072 */;
 
@@ -52,8 +52,8 @@ function appendParsedNode(items1, content, bold, target) {
 }
 let closure_3 = ["link"];
 let closure_4 = ["link"];
-const HTMLParserConstants = fn(9533);
-({ ASCII_CONTROL_CHARACTERS: metroRequire, HTTP_URL_SCHEME: closure_7, URL_AT_RUN_END: closure_8, URL_CONTINUATION_AT_RUN_START: closure_9, URL_IN_LABEL: closure_10, URL_MATCH: closure_11 } = HTMLParserConstants);
+const HTMLParserConstants = fn(9552);
+({ ASCII_CONTROL_CHARACTERS: closure_6, HTTP_URL_SCHEME: metroImportDefault, URL_AT_RUN_END: closure_8, URL_CONTINUATION_AT_RUN_START: closure_9, URL_IN_LABEL: closure_10, URL_MATCH: closure_11 } = HTMLParserConstants);
 let obj = { text: t.defaultRules.text, link: null, url: null };
 let obj2 = {};
 const MarkupLinkRule = Object.assign(MarkupLinkRuleDefault);
@@ -194,13 +194,13 @@ export function addTextLinks(items1) {
             } while (sum2 < tmp5);
           }
           let tmp9 = link;
-          let obj2 = link(6158);
+          let obj2 = link(6173);
           let str3 = obj2.sanitizeWhitespace(str2);
           let trimmed = str3.trim();
           let str4 = "";
           if (0 !== trimmed.length) {
             link = tmp.link;
-            let tmp9Result = tmp9(6158);
+            let tmp9Result = tmp9(6173);
             let result = tmp9Result.sanitizeUnicodeConfusables(trimmed);
             let _Array = Array;
             let arr = Array.from(result.matchAll(closure_10));
@@ -256,11 +256,11 @@ export function addTextLinks(items1) {
         if ("" === tmp23.link) {
           let link2 = tmp23.link;
           let tmp48 = _objectWithoutProperties(tmp23, closure_4);
-          let obj11 = link(9558);
+          let obj11 = link(9577);
           let mergeRunResult = obj11.mergeRun(items1, tmp23.text, tmp48);
           let flag2 = false;
         } else {
-          let obj10 = link(9558);
+          let obj10 = link(9577);
           let mergeRunResult1 = obj10.mergeRun(items1, tmp23.text, tmp23);
           flag2 = false;
         }
@@ -293,12 +293,12 @@ export function addTextLinks(items1) {
               let tmp39 = appendParsedNode(items1, closure_13(tmp23.text, obj3), tmp23);
               flag2 = isMatch;
             }
-            let obj7 = link(9558);
+            let obj7 = link(9577);
             let mergeRunResult2 = obj7.mergeRun(items1, tmp23.text, tmp23);
             flag2 = isMatch;
           }
         }
-        let obj9 = link(9558);
+        let obj9 = link(9577);
         let mergeRunResult3 = obj9.mergeRun(items1, tmp23.text, tmp23);
         flag2 = isMatch;
       }

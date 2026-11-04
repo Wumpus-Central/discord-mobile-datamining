@@ -1,39 +1,39 @@
-// === Module 17210: QuestCard ===
+// === Module 17302: QuestCard ===
 
-// Module 17210 (QuestCard)
+// Module 17302 (QuestCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
 import design_shared from "design/shared" /* 5149 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
-import MetricEvents from "MetricEvents" /* 6665 */;
-import AdCreativeType from "AdCreativeType" /* 6908 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
-import OrbsIcon from "OrbsIcon" /* 9660 */;
-import QuestUtils from "QuestUtils" /* 9810 */;
-import captureAdUserAction from "captureAdUserAction" /* 9816 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9819 */;
-import AssetUtils from "AssetUtils" /* 9827 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9851 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 17239 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 17246 */;
-import VideoQuestModal from "VideoQuestModal" /* 17247 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6675 */;
+import MetricEvents from "MetricEvents" /* 6680 */;
+import AdCreativeType from "AdCreativeType" /* 6923 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
+import OrbsIcon from "OrbsIcon" /* 9679 */;
+import QuestUtils from "QuestUtils" /* 9828 */;
+import captureAdUserAction from "captureAdUserAction" /* 9834 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9837 */;
+import AssetUtils from "AssetUtils" /* 9845 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9869 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 17331 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 17338 */;
+import VideoQuestModal from "VideoQuestModal" /* 17339 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import QuestStore from "QuestStore" /* 7970 */;
+import QuestStore from "QuestStore" /* 7986 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ StyleSheet, View: metroRequire } = get_ActivityIndicator);
-let QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
+({ StyleSheet, View: closure_6 } = get_ActivityIndicator);
+let QuestsExperimentLocations = fn(6916).QuestsExperimentLocations;
 const Constants = fn(1083);
 ({ NOOP: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
@@ -110,7 +110,7 @@ let result3 = size.fileFinishedImporting("modules/quests/native/QuestCard.tsx");
 export const ESTIMATED_CARD_HEIGHT = 348;
 export const QuestCard = noop.memo(function QuestCard(questContent) {
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17241, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17333, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
   }
   ({ onLayout: closure_0, quest } = questContent);
   let QUEST_HOME_MOBILE = questContent.questContent;
@@ -390,7 +390,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         const tmp3Result71 = tmp3(tmp4[26]);
         const fontScale = tmp3(tmp4[53]).useFontScale();
         const tmp3Result72 = tmp3(tmp4[53]);
-        const scaledTextLineHeight = tmp3(tmp4[54]).useScaledTextLineHeight("text-md/semibold");
+        const scaledTextLineHeight = tmp3(tmp4[54]).useScaledTextLineHeight("body-md/semibold");
         const tmp3Result74 = tmp3(tmp4[43]);
         const _Math = Math;
         const questDescription = tmp3Result74.useQuestDescription(quest, sourceQuestContent, tmp5.QUEST_HOME_MOBILE, tmp3(tmp4[55]).GameProfileSources.QuestHome);
@@ -404,7 +404,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             num = 16 / scaledTextLineHeight;
           }
           result = result3 / 8;
-          const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: authStore.shrinkableText };
+          const obj2 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", style: authStore.shrinkableText };
           const size = { width: result3, height: result3, marginRight: result, marginTop: 0, transform: null };
           items = [{ translateY: num }];
           size.transform = items;
@@ -601,7 +601,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         if (isThemeDarkResult) {
           str3 = "text-muted";
         }
-        const obj28 = { variant: "text-xs/medium", color: str3, style: tmp9.shrinkableText, children: null };
+        const obj28 = { variant: "body-xs/medium", color: str3, style: tmp9.shrinkableText, children: null };
         const intl8 = tmp3(tmp4[46]).intl;
         obj28.children = intl8.string(tmp3(tmp4[46]).t.VAbKhK);
         const items18 = [closure_11(tmp3(tmp4[58]).Text, obj28), , ];
@@ -612,7 +612,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         const intl9 = tmp3(tmp4[46]).intl;
         obj29.accessibilityLabel = intl9.string(tmp3(tmp4[46]).t.OfMjx9);
         items18[1] = closure_11(quest(tmp4[62]), obj29);
-        const obj30 = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp9.shrinkableText, children: quest.config.messages.gamePublisher };
+        const obj30 = { variant: "body-xs/medium", color: "text-overlay-light", style: tmp9.shrinkableText, children: quest.config.messages.gamePublisher };
         items18[2] = closure_11(tmp3(tmp4[58]).Text, obj30);
         obj27.children = items18;
         items17[1] = defaultRewardNameWithArticle(closure_6, obj27);
@@ -626,7 +626,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           if (isThemeDarkResult) {
             str2 = "text-default";
           }
-          const obj31 = { variant: "text-xs/medium", color: str2, style: tmp9.shrinkableText, children: null };
+          const obj31 = { variant: "body-xs/medium", color: str2, style: tmp9.shrinkableText, children: null };
           const intl10 = tmp3(tmp4[46]).intl;
           const obj32 = { expiryDate: questFormattedDate1 };
           obj31.children = intl10.format(tmp3(tmp4[46]).t["7D8r4F"], obj32);
@@ -650,7 +650,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         obj35.children = tmp100Result6;
         const items21 = [closure_11(closure_6, obj35), ];
         const obj37 = { style: tmp9.detailsTextContainer, children: null };
-        const obj38 = { variant: "eyebrow", color: "text-brand", style: tmp9.questName, accessibilityRole: "header", children: formatToPlainStringResult };
+        const obj38 = { variant: "body-sm/medium", color: "text-brand", style: tmp9.questName, accessibilityRole: "header", children: formatToPlainStringResult };
         const items22 = [closure_11(tmp3(tmp4[58]).Text, obj38), ];
         const obj39 = { style: tmp9.bodyContainer, children: null };
         const obj40 = { style: tmp9.subtitleRow, children: null };
@@ -664,7 +664,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         const items24 = [defaultRewardNameWithArticle(closure_6, obj40), ];
         let tmp100Result7 = null != formatToPlainStringResult1;
         if (tmp100Result7) {
-          const obj42 = { variant: "text-sm/medium", color: "text-muted", children: formatToPlainStringResult1 };
+          const obj42 = { variant: "body-sm/medium", color: "text-muted", children: formatToPlainStringResult1 };
           tmp100Result7 = tmp100(tmp3(tmp4[58]).Text, obj42);
         }
         items24[1] = tmp100Result7;
@@ -684,7 +684,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           const items25 = [tmp100(tmp3(tmp4[71]).Button, obj45), ];
           const obj46 = {
             onPress: function showQuestEnrollmentBlockedBottomSheet() {
-                      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17286, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
+                      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17378, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
                     },
             variant: "tertiary",
             text: null
@@ -813,7 +813,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
               openVideoQuestModalDefault(obj4);
             } else {
               const obj5 = { questId: quest.id, questContentPosition, sourceQuestContent };
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17241, dependencyMap.paths), "QuestBottomSheet", obj5);
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17333, dependencyMap.paths), "QuestBottomSheet", obj5);
             }
             const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: AnalyticsTypes.QuestContentCTA.WATCH_VIDEO, surfaceId: QUEST_HOME_MOBILE, sourceQuestContent, impressionId: getQuestImpressionId() };
           };
@@ -858,7 +858,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
               const obj = captureAdUserAction;
               obj.captureAdUserAction({ type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: AnalyticsTypes.QuestContentCTA.VIEW_REQUIREMENTS, surfaceId: QUEST_HOME_MOBILE, sourceQuestContent, impressionId: getQuestImpressionId() });
               const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: AnalyticsTypes.QuestContentCTA.VIEW_REQUIREMENTS, surfaceId: QUEST_HOME_MOBILE, sourceQuestContent, impressionId: getQuestImpressionId() };
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17241, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17333, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
             };
           }
         }

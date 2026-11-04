@@ -1,14 +1,14 @@
-// === Module 12579: NoPermsState ===
+// === Module 12660: NoPermsState ===
 
-// Module 12579 (NoPermsState)
+// Module 12660 (NoPermsState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5148 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11639 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12515 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11690 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12596 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,11 +23,11 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export default function EmptyState() {
   const tmp = closure_6();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12580 : 12581);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12661 : 12662);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   const obj2 = { style: tmp.container, children: null };
   items = [React4(FastImageDefault, { style: tmp.image, resizeMode: "contain", source: tmp4Result }), ];
-  const obj4 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj4 = { style: tmp.textContainer, variant: "body-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.uDnXXj);
   items[1] = React4(Text_Text.Text, obj4);

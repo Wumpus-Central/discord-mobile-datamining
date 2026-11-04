@@ -1,16 +1,16 @@
-// === Module 19098: IntegrationsSettingsEditLinkedLobby ===
+// === Module 19201: IntegrationsSettingsEditLinkedLobby ===
 
-// Module 19098 (IntegrationsSettingsEditLinkedLobby)
+// Module 19201 (IntegrationsSettingsEditLinkedLobby)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { screenContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, header: { alignItems: "center", marginTop: 8, marginBottom: 32, gap: 12 }, divider: null };
 let size = { height: 1, width: 48, backgroundColor: nativeDefault.colors.BORDER_STRONG };
@@ -87,7 +87,7 @@ export default function EditLinkedLobby(channel) {
         const obj2 = {
           username: tmp17.username,
           usernameHook(children, arg1) {
-                return callback1(channel(navigation[16]).Text, { onPress, variant: "text-sm/semibold", color: "text-strong", children }, arg1);
+                return callback1(channel(navigation[16]).Text, { onPress, variant: "body-sm/semibold", color: "text-strong", children }, arg1);
               },
           linkedAtDate: date
         };
@@ -112,14 +112,14 @@ export default function EditLinkedLobby(channel) {
     obj9.source = tmp3(tmp2[20]).getApplicationIconSource({ id: null, icon: null });
     obj9.size = tmp(tmp2[19]).AvatarSizes.XXLARGE;
     const items4 = [callback1(tmp(tmp2[19]).Avatar, obj9), , ];
-    const obj11 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: getOrFetchApplication.name };
+    const obj11 = { variant: "body-md/medium", color: "mobile-text-heading-primary", children: getOrFetchApplication.name };
     items4[1] = callback1(tmp(tmp2[16]).Text, obj11);
     let tmp20Result = null != memo;
     if (tmp20Result) {
       const obj13 = { children: null };
       const obj14 = { style: tmp5.divider };
       const items5 = [tmp19(tmp21, obj14), ];
-      const obj15 = { variant: "text-sm/medium", color: "text-subtle", children: memo };
+      const obj15 = { variant: "body-sm/medium", color: "text-subtle", children: memo };
       items5[1] = tmp19(tmp(tmp2[16]).Text, obj15);
       obj13.children = items5;
       tmp20Result = closure_8(closure_7, obj13);
@@ -127,7 +127,7 @@ export default function EditLinkedLobby(channel) {
     items4[2] = tmp20Result;
     obj8.children = items4;
     const items6 = [closure_8(linked_at, obj8), , ];
-    const obj16 = { variant: "text-sm/normal", color: "text-default", children: null };
+    const obj16 = { variant: "body-sm/normal", color: "text-default", children: null };
     let intl = tmp(tmp2[15]).intl;
     const obj17 = { channelName: tmp10 };
     obj16.children = intl.format(tmp(tmp2[15]).t.DA9v5F, obj17);

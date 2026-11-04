@@ -1,10 +1,10 @@
-// === Module 12046: useIsVoiceChannelFull ===
+// === Module 12105: useIsVoiceChannelFull ===
 
-// Module 12046 (useIsVoiceChannelFull)
-import ChannelUtils from "ChannelUtils" /* 6166 */;
+// Module 12105 (useIsVoiceChannelFull)
+import ChannelUtils from "ChannelUtils" /* 6181 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 const require = globalThis.__r;
 

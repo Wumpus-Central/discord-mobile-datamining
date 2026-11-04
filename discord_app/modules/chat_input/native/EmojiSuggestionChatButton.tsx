@@ -1,12 +1,12 @@
-// === Module 14127: EmojiSuggestionChatButton ===
+// === Module 14213: EmojiSuggestionChatButton ===
 
-// Module 14127 (EmojiSuggestionChatButton)
+// Module 14213 (EmojiSuggestionChatButton)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 14121 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 14207 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);

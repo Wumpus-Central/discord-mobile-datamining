@@ -1,11 +1,11 @@
-// === Module 14752: Checkbox ===
+// === Module 14832: Checkbox ===
 
-// Module 14752 (Checkbox)
+// Module 14832 (Checkbox)
 import util from "util" /* 1113 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import FormCheckbox from "FormCheckbox" /* 7115 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import FormCheckbox from "FormCheckbox" /* 7130 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
@@ -44,18 +44,18 @@ export function Checkbox(onToggle) {
   const obj4 = { style: tmp.labelContainer, children: null };
   const items1 = [label, ];
   if (required) {
-    const obj5 = { variant: "text-md/semibold", color: "text-feedback-critical", "aria-label": null, children: null };
+    const obj5 = { variant: "body-md/semibold", color: "text-feedback-critical", "aria-label": null, children: null };
     const intl2 = util.intl;
     obj5["aria-label"] = intl2.string(util.t.EkokLy);
     obj5.children = [" ", "*"];
     required = hasOwnProperty(Text_Text.Text, obj5);
   }
   items1[1] = required;
-  obj4.children = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", children: items1 });
+  obj4.children = hasOwnProperty(Text_Text.Text, { variant: "body-md/medium", children: items1 });
   const items2 = [React4(React3, obj4), ];
   let tmp5Result = null != description;
   if (tmp5Result) {
-    const obj6 = { variant: "text-sm/normal", color: "text-subtle", children: description };
+    const obj6 = { variant: "body-sm/normal", color: "text-subtle", children: description };
     tmp5Result = React4(Text_Text.Text, obj6);
   }
   const obj7 = { direction: "horizontal", children: null };

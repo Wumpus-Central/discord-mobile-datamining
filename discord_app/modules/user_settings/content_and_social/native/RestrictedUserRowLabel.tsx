@@ -1,10 +1,10 @@
-// === Module 16851: RestrictedUserRowLabel ===
+// === Module 16943: RestrictedUserRowLabel ===
 
-// Module 16851 (RestrictedUserRowLabel)
+// Module 16943 (RestrictedUserRowLabel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export function RestrictedUserRowLabel(userRecord) {
   obj4.children = username;
   items = [React4(Text_Text.Text, obj4), ];
   if (tmp8Result) {
-    const obj5 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, includeFontPadding: true, children: userRecord.username };
+    const obj5 = { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, includeFontPadding: true, children: userRecord.username };
     tmp8Result = React4(Text_Text.Text, obj5);
   }
   items[1] = tmp8Result;

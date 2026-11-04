@@ -1,11 +1,11 @@
-// === Module 13793: CheckpointEmphasis ===
+// === Module 13879: CheckpointEmphasis ===
 
-// Module 13793 (CheckpointEmphasis)
+// Module 13879 (CheckpointEmphasis)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useFontScale from "useFontScale" /* 5762 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useFontScale from "useFontScale" /* 5776 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -13,11 +13,11 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PlatformUtils = fn(1357);
-const CheckpointCustomizationUtils = fn(6554);
+const CheckpointCustomizationUtils = fn(6569);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
 const createStyles = fn(5141);
 let obj4 = { container: { paddingHorizontal: nativeDefault.space.PX_6 }, emphasis: { flexDirection: "row", alignItems: "center" }, text: null };
@@ -47,6 +47,6 @@ export default function CheckpointEmphasis(children) {
   size.children = timestampProducer(inlineStyles.Polygon, { points, fill });
   const items2 = [timestampProducer(inlineStylesDefault, size), timestampProducer(Text_Text.Text, { variant: "mono-md/bold", style: tmp.text, lineClamp: 1, children: children.children })];
   obj6.children = items2;
-  obj3.children = React5(React4, obj6);
+  obj3.children = metroImportDefault(React4, obj6);
   return timestampProducer(React4, obj3);
 };

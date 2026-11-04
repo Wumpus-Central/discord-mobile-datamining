@@ -1,14 +1,14 @@
-// === Module 18425: GuildPowerupsProgressBar ===
+// === Module 18519: GuildPowerupsProgressBar ===
 
-// Module 18425 (GuildPowerupsProgressBar)
+// Module 18519 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 14186 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 18428 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 14272 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 18522 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 18426 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 18520 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import module_1652 from "module_1652" /* 1652 */;
 
@@ -18,7 +18,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
@@ -153,7 +153,7 @@ export default function GuildPowerupsProgressBar(guildId) {
   obj8.children = closure_7(LinearGradient, obj9);
   const items10 = [closure_7(sharedValue, obj8), ];
   const obj10 = { style: tmp.textContainer, children: null };
-  const obj11 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.headerText, children: null };
+  const obj11 = { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.headerText, children: null };
   if (num >= tmp6) {
     const intl5 = tmp2(tmp3[15]).intl;
     const _HermesInternal = HermesInternal;
@@ -165,8 +165,8 @@ export default function GuildPowerupsProgressBar(guildId) {
   obj11.children = combined;
   const items11 = [closure_7(require("Text/Text").Text, obj11), ];
   const obj12 = { style: tmp.rightContent, children: null };
-  const items12 = [closure_7(require("Text/Text").Text, { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult }), ];
-  const obj13 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult };
+  const items12 = [closure_7(require("Text/Text").Text, { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult }), ];
+  const obj13 = { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult };
   const tmp2Result4 = require("module_1652");
   items12[1] = closure_7(require("ChevronSmallRightIcon").ChevronSmallRightIcon, { size: "sm", color: require("native").colors.TEXT_DEFAULT });
   obj12.children = items12;

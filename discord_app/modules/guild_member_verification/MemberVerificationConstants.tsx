@@ -1,6 +1,6 @@
-// === Module 7066: MemberVerificationConstants ===
+// === Module 7081: MemberVerificationConstants ===
 
-// Module 7066 (MemberVerificationConstants)
+// Module 7081 (MemberVerificationConstants)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
 import size from "module_2" /* 2 */;
 

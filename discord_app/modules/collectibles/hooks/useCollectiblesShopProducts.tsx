@@ -1,16 +1,16 @@
-// === Module 9712: useCollectiblesShopProducts ===
+// === Module 9730: useCollectiblesShopProducts ===
 
-// Module 9712 (useCollectiblesShopProducts)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8914 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9714 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9715 */;
+// Module 9730 (useCollectiblesShopProducts)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7859 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8931 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9732 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9733 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9713 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8915 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7845 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7846 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9731 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8932 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7861 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7862 */;
 
 const require = globalThis.__r;
 
@@ -107,11 +107,11 @@ function useAbsentIds(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectiblesShopProducts.tsx");
 
-export function useFetchResolvedAbsent(id, arg1) {
+export function useFetchResolvedAbsent(id, fetchState) {
   [tmp2, tmp3] = noop.useState({ id, sawFetch: false });
   let flag = tmp2.sawFetch;
   if (tmp2.id !== id) {
-    const obj2 = { id, sawFetch: null != arg1 };
+    const obj2 = { id, sawFetch: null != fetchState };
     tmp3(obj2);
     flag = tmp8;
   } else {
@@ -120,11 +120,11 @@ export function useFetchResolvedAbsent(id, arg1) {
       tmp3(obj3);
       flag = true;
     }
-    tmp5 = null == arg1 || tmp2.sawFetch;
+    tmp5 = null == fetchState || tmp2.sawFetch;
   }
   let tmp10 = "" !== id;
   if (tmp10) {
-    tmp10 = null == arg1;
+    tmp10 = null == fetchState;
   }
   if (tmp10) {
     tmp10 = flag;

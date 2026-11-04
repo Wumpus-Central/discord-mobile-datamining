@@ -1,11 +1,11 @@
-// === Module 7459: ConnectionCardView ===
+// === Module 7475: ConnectionCardView ===
 
-// Module 7459 (ConnectionCardView)
+// Module 7475 (ConnectionCardView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7460 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7476 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,13 +34,13 @@ export default function ConnectionCardView(description) {
   const obj2 = { style: tmp.leftContent, children: null };
   items = [React4(React2, { style: tmp.icon, children: icon }), ];
   const obj4 = { style: tmp.textContent, children: null };
-  const items1 = [React4(Text_Text.Text, { variant: "text-md/medium", color: "text-strong", children: displayName }), ];
+  const items1 = [React4(Text_Text.Text, { variant: "body-md/medium", color: "text-strong", children: displayName }), ];
   let tmp4Result = null != description;
   if (tmp4Result) {
     tmp4Result = description.length > 0;
   }
   if (tmp4Result) {
-    const obj5 = { variant: "text-sm/normal", color: "text-subtle", children: description };
+    const obj5 = { variant: "body-sm/normal", color: "text-subtle", children: description };
     tmp4Result = React4(Text_Text.Text, obj5);
   }
   items1[1] = tmp4Result;
@@ -52,7 +52,7 @@ export default function ConnectionCardView(description) {
     let tmp4Result2 = React4(React3, { size: "small" });
   } else if (isConnected) {
     const obj6 = { style: tmp.connectedStatus, children: null };
-    const obj7 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
+    const obj7 = { variant: "body-sm/medium", color: "text-feedback-positive", children: null };
     const intl2 = util.intl;
     obj7.children = intl2.string(util.t["LV+CXH"]);
     const items3 = [React4(Text_Text.Text, obj7), React4(CircleCheckIcon.CircleCheckIcon, { size: "sm", color: "status-positive" })];

@@ -1,12 +1,12 @@
-// === Module 18047: ManageSponsoredContentScreen ===
+// === Module 18144: ManageSponsoredContentScreen ===
 
-// Module 18047 (ManageSponsoredContentScreen)
+// Module 18144 (ManageSponsoredContentScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import _modDef2236 from "module_2236" /* 2236 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,12 +34,12 @@ function AdTopicRow(adTopic) {
     items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7489).TableSwitchRow, obj);
+  return closure_5(adTopic(7505).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {};
 obj[fn(1196).AdTopic.REAL_MONEY_GAMING] = _modDef2236.pmIitA;
 const keys = Object.keys(obj);

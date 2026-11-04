@@ -1,15 +1,15 @@
-// === Module 14640: BalanceCounter ===
+// === Module 14720: BalanceCounter ===
 
-// Module 14640 (BalanceCounter)
+// Module 14720 (BalanceCounter)
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import spring_spring from "spring/spring" /* 5757 */;
+import spring_spring from "spring/spring" /* 5771 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop_mod from "module_19" /* 19 */;
 
 require = fn;
 let noop = fn(19);
-({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);
+({ useState: closure_4, useEffect: hasOwnProperty, useRef: closure_6, useCallback: metroImportDefault } = noop);
 let noop = noop_mod;
 const jsx = fn(21).jsx;
 let closure_10 = { code: "(function BalanceCounterTsx1(){let[scheduleOnRN,setIsAnimating]=this.__closure;scheduleOnRN(setIsAnimating,false);})" };
@@ -23,7 +23,7 @@ class BalanceCounter {
     str = global.textVariant;
     ({ onValueReached, style } = global);
     if (str === undefined) {
-      str = "text-sm/semibold";
+      str = "body-sm/semibold";
     }
     closure_2 = undefined;
     closure_3 = undefined;

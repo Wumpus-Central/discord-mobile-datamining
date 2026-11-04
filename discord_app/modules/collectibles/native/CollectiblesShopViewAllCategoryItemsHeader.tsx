@@ -1,12 +1,12 @@
-// === Module 18029: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 18125: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 18029 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 18125 (CollectiblesShopViewAllCategoryItemsHeader)
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1499 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import HeaderShared from "HeaderShared" /* 9943 */;
-import _modDef9947 from "module_9947" /* 9947 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 15489 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import HeaderShared from "HeaderShared" /* 9961 */;
+import _modDef9965 from "module_9965" /* 9965 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 15576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj4.paddingTop = youBarSettingsCustomHeaderPaddingTop;
   obj3.style = obj4;
   const obj5 = { style: tmp.backButton, children: null };
-  const obj6 = { source: _modDef9947, color: buttonColor, accessibilityLabel: null, onPress: null };
+  const obj6 = { source: _modDef9965, color: buttonColor, accessibilityLabel: null, onPress: null };
   const intl = util.intl;
   obj6.accessibilityLabel = intl.string(util.t["13/7kX"]);
   obj6.onPress = function onPress() {

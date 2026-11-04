@@ -1,12 +1,12 @@
-// === Module 12787: ConjureProjectEventLine ===
+// === Module 12868: ConjureProjectEventLine ===
 
-// Module 12787 (ConjureProjectEventLine)
-import Text_Text from "Text/Text" /* 5747 */;
-import useConjureRemixSettingsRequestDefault from "useConjureRemixSettingsRequest" /* 12753 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12776 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12780 */;
-import ConjureVoiceChannelPinCardDefault from "ConjureVoiceChannelPinCard" /* 12790 */;
-import ConjureSettingsRequestCardDefault from "ConjureSettingsRequestCard" /* 12792 */;
+// Module 12868 (ConjureProjectEventLine)
+import Text_Text from "Text/Text" /* 5761 */;
+import useConjureRemixSettingsRequestDefault from "useConjureRemixSettingsRequest" /* 12834 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12857 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12861 */;
+import ConjureVoiceChannelPinCardDefault from "ConjureVoiceChannelPinCard" /* 12871 */;
+import ConjureSettingsRequestCardDefault from "ConjureSettingsRequestCard" /* 12873 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ function renderMention(arg0, arg1, arg2) {
   closure_0 = arg0;
   const obj = {
     label: "@" + arg1,
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     onPress() {
       return ConjureMessageActionSheet.openMessageAuthorProfile(closure_0);
     }
@@ -33,7 +33,7 @@ export default function ConjureProjectEventLine(arg0) {
     const obj2 = { projectId };
     let tmp8Result = React3(ConjureVoiceChannelPinCardDefault, obj2);
   } else {
-    const obj3 = { variant: "text-md/normal", color: "text-default", children: tmp3 };
+    const obj3 = { variant: "body-md/normal", color: "text-default", children: tmp3 };
     items = [React3(Text_Text.Text, obj3), ];
     let tmp10Result = null;
     if (null != tmp4) {

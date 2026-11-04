@@ -1,24 +1,24 @@
-// === Module 6150: common/Alert ===
+// === Module 6165: common/Alert ===
 
-// Module 6150 (common/Alert)
+// Module 6165 (common/Alert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import Timers from "Timers" /* 4985 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import CustomMarkupAll from "CustomMarkup" /* 6151 */;
-import Pressables from "Pressables" /* 7106 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8897 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10866 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import CustomMarkupAll from "CustomMarkup" /* 6166 */;
+import Pressables from "Pressables" /* 7121 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8914 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10914 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { alert: { borderRadius: nativeDefault.radii.sm, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, titleText: null, divider: null, body: null, buttons: null, cancelButton: null, secondaryConfirm: null, gradient: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -122,18 +122,18 @@ prototype["renderHeader"] = function renderHeader() {
   if (null != title) {
     tmp3Result = null;
     if ("" !== title) {
-      const obj2 = { ref: self.titleRef, accessible: true, accessibilityRole: "header", variant: "heading-md/semibold", color: "text-default", style: tmp.titleText, children: null };
+      const obj2 = { ref: self.titleRef, accessible: true, accessibilityRole: "header", variant: "heading-sm/semibold", color: "text-default", style: tmp.titleText, children: null };
       let renderContentResult = title;
       if (typeof title === "string") {
         renderContentResult = self.renderContent(title);
       }
       const obj = { children: null };
       obj2.children = renderContentResult;
-      items = [React5(Text_Text.Text, obj2), ];
+      items = [metroImportDefault(Text_Text.Text, obj2), ];
       const obj3 = { style: tmp.divider };
-      items[1] = React5(hasOwnProperty, obj3);
+      items[1] = metroImportDefault(hasOwnProperty, obj3);
       obj.children = items;
-      tmp3Result = React6(hasOwnProperty, obj);
+      tmp3Result = React5(hasOwnProperty, obj);
     }
   }
   return tmp3Result;
@@ -147,19 +147,19 @@ prototype["renderBody"] = function renderBody() {
     const obj = { style: null, children: null };
     const obj2 = { maxHeight: self.props.contentHeight };
     obj.style = obj2;
-    const obj3 = { variant: "text-md/normal", style: tmp.body, children: null };
+    const obj3 = { variant: "body-md/normal", style: tmp.body, children: null };
     let renderContentResult = body;
     if (typeof body === "string") {
       renderContentResult = self.renderContent(body);
     }
     obj3.children = renderContentResult;
-    obj.children = React5(Text_Text.Text, obj3);
-    tmp5Result = React5(timestampProducer, obj);
+    obj.children = metroImportDefault(Text_Text.Text, obj3);
+    tmp5Result = metroImportDefault(timestampProducer, obj);
   }
   const obj4 = { children: null };
   items = [tmp5Result, props.children];
   obj4.children = items;
-  return React6(React7, obj4);
+  return React5(React6, obj4);
 };
 prototype["renderButtons"] = function renderButtons() {
   const self = this;
@@ -177,15 +177,15 @@ prototype["renderButtons"] = function renderButtons() {
     if (null != cancelText) {
       const obj = { style: tmp.cancelButton, children: null };
       const obj2 = { variant: "secondary", onPress: self.handleCancel, text: cancelText };
-      obj.children = React5(components_Button_Button.Button, obj2);
-      tmp6 = React5(hasOwnProperty, obj);
+      obj.children = metroImportDefault(components_Button_Button.Button, obj2);
+      tmp6 = metroImportDefault(hasOwnProperty, obj);
     }
     let tmp11;
     if (null != secondaryConfirmText) {
       const obj3 = { accessibilityRole: "button", style: tmp.secondaryConfirm, onPress: self.handleSecondaryConfirm, children: null };
-      const obj4 = { variant: "text-sm/semibold", color: "text-link", children: secondaryConfirmText };
-      obj3.children = React5(Text_Text.Text, obj4);
-      tmp11 = React5(Pressables.PressableOpacity, obj3);
+      const obj4 = { variant: "body-sm/semibold", color: "text-link", children: secondaryConfirmText };
+      obj3.children = metroImportDefault(Text_Text.Text, obj4);
+      tmp11 = metroImportDefault(Pressables.PressableOpacity, obj3);
     }
     const obj5 = { style: tmp.buttons, children: null };
     let renderConfirmButtonResult;
@@ -238,11 +238,11 @@ prototype["renderButtons"] = function renderButtons() {
         str2 = str3;
       }
       obj6.iconPosition = str2;
-      renderConfirmButtonResult = React5(components_Button_Button.Button, obj6);
+      renderConfirmButtonResult = metroImportDefault(components_Button_Button.Button, obj6);
     }
     items = [renderConfirmButtonResult, tmp6, tmp11];
     obj5.children = items;
-    tmp15Result = React6(hasOwnProperty, obj5);
+    tmp15Result = React5(hasOwnProperty, obj5);
   }
   return tmp15Result;
 };
@@ -251,7 +251,7 @@ prototype["renderFooter"] = function renderFooter() {
   let tmp = null;
   if (null != footer) {
     const obj = { children: footer };
-    tmp = React5(hasOwnProperty, obj);
+    tmp = metroImportDefault(hasOwnProperty, obj);
   }
   return tmp;
 };
@@ -261,22 +261,22 @@ prototype["render"] = function render() {
   const width = props.width;
   const obj = { children: null };
   ({ style, isLandscape, onClose } = props);
-  items = [React5(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient }), ];
+  items = [metroImportDefault(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient }), ];
   const obj3 = { onAccessibilityEscape: onClose, style: null, children: null };
   const items1 = [tmp.alert, style, { width }];
   obj3.style = items1;
   const items2 = [this.renderHeader(), this.renderBody(), this.renderButtons(), this.renderFooter()];
   obj3.children = items2;
-  items[1] = React6(hasOwnProperty, obj3);
+  items[1] = React5(hasOwnProperty, obj3);
   obj.children = items;
-  const tmp3 = React6(React7, obj);
+  const tmp3 = React5(React6, obj);
   let tmp2Result = tmp3;
   if (isLandscape) {
     const obj4 = { style: null, children: null };
     const obj5 = { maxHeight: width };
     obj4.style = obj5;
     obj4.children = tmp3;
-    tmp2Result = React5(timestampProducer, obj4);
+    tmp2Result = metroImportDefault(timestampProducer, obj4);
   }
   return tmp2Result;
 };
@@ -287,7 +287,7 @@ const memoResult = noop.memo(function AlertConnected(arg0) {
   const size = useWindowDimensionsDefault();
   const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
   const merged = Object.assign(arg0);
-  return React5(Alert, { width: Math.min(0.9 * Math.min(size.width, size.height), 400), contentHeight: 0.7 * size.height, isLandscape: isScreenLandscape });
+  return metroImportDefault(Alert, { width: Math.min(0.9 * Math.min(size.width, size.height), 400), contentHeight: 0.7 * size.height, isLandscape: isScreenLandscape });
 });
 memoResult.Colors = fn(1187).ButtonColors;
 let size = fn(2);

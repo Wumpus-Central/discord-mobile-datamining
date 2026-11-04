@@ -1,19 +1,19 @@
-// === Module 18671: ForYouShowAllRow ===
+// === Module 18772: ForYouShowAllRow ===
 
-// Module 18671 (ForYouShowAllRow)
+// Module 18772 (ForYouShowAllRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useFontScale from "useFontScale" /* 5762 */;
-import Pressables from "Pressables" /* 7106 */;
-import _modDef7434 from "module_7434" /* 7434 */;
-import ChannelListLayout from "ChannelListLayout" /* 11177 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 16017 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 18666 */;
-import ChannelWrapper from "ChannelWrapper" /* 18667 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useFontScale from "useFontScale" /* 5776 */;
+import Pressables from "Pressables" /* 7121 */;
+import _modDef7450 from "module_7450" /* 7450 */;
+import ChannelListLayout from "ChannelListLayout" /* 11227 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 16107 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 18767 */;
+import ChannelWrapper from "ChannelWrapper" /* 18768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,25 +36,25 @@ function ForYouShowAllRow(panelVariant) {
   const AvatarSizes = native.AvatarSizes;
   const obj9 = { children: null };
   const isLayoutCompactResult = ChannelListLayout.isLayoutCompact(layout);
-  obj7.children = React5(AvatarDuoPile.AvatarDuoPile, { size: ChannelListLayout.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children });
-  const items1 = [React5(View, obj7), , ];
+  obj7.children = metroImportDefault(AvatarDuoPile.AvatarDuoPile, { size: ChannelListLayout.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children });
+  const items1 = [metroImportDefault(View, obj7), , ];
   const obj11 = { style: tmp4.textContainer, children: null };
   const obj12 = { lineClamp: 1, variant: layoutStyles.channelName.text.variant, color: "text-brand", style: tmp4.nameText, children: null };
   const intl = util.intl;
   obj12.children = intl.format(util.t.NrzztX, { count });
-  obj11.children = React5(Text_Text.Text, obj12);
-  items1[1] = React5(View, obj11);
+  obj11.children = metroImportDefault(Text_Text.Text, obj12);
+  items1[1] = metroImportDefault(View, obj11);
   const obj10 = { size: ChannelListLayout.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children };
-  items1[2] = React5(native.Icon, { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7434, size: native.IconSizes.CUSTOM });
+  items1[2] = metroImportDefault(native.Icon, { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7450, size: native.IconSizes.CUSTOM });
   obj9.children = items1;
-  obj5.children = obj6.renderChannelWrapper(React7(React6, obj9), { layout, fontScale, panelVariant });
-  return obj4.renderChannelPressableWrapper(React5(Pressables.PressableHighlight, obj5), { layout, panelVariant });
+  obj5.children = obj6.renderChannelWrapper(React6(React5, obj9), { layout, fontScale, panelVariant });
+  return obj4.renderChannelPressableWrapper(metroImportDefault(Pressables.PressableHighlight, obj5), { layout, panelVariant });
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Sections = fn(14402).Sections;
+const Sections = fn(14482).Sections;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((layout) => {
   const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
@@ -104,7 +104,7 @@ export function ForYouSuggestedFriendShowAllRow(suggestedFriends) {
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: "1 semana" };
+        const obj = { user: user.user, guildId: "Array", size: null };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;

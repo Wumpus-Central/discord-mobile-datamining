@@ -1,7 +1,7 @@
-// === Module 9200: EditGuildEventStepHeader ===
+// === Module 9217: EditGuildEventStepHeader ===
 
-// Module 9200 (EditGuildEventStepHeader)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 9217 (EditGuildEventStepHeader)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default function EditGuildEventStepHeader(children) {
   if (null != subtitle) {
     tmp4Result = null;
     if ("" !== subtitle) {
-      const obj3 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
+      const obj3 = { style: tmp.headerSubtitle, variant: "body-sm/medium", color: "text-default", children: subtitle };
       tmp4Result = React3(Text_Text.Text, obj3);
     }
   }

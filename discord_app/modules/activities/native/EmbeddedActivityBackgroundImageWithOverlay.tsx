@@ -1,16 +1,16 @@
-// === Module 11978: EmbeddedActivityBackgroundImageWithOverlay ===
+// === Module 12037: EmbeddedActivityBackgroundImageWithOverlay ===
 
-// Module 11978 (EmbeddedActivityBackgroundImageWithOverlay)
+// Module 12037 (EmbeddedActivityBackgroundImageWithOverlay)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11979 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12038 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { overlay: { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -66,7 +66,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
         obj4.style = items2;
         items1[1] = timestampProducer(React4, obj4);
         obj2.children = items1;
-        tmp13Result = React5(React4, obj2);
+        tmp13Result = metroImportDefault(React4, obj2);
       }
     }
   }

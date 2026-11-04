@@ -1,9 +1,9 @@
-// === Module 7646: transitionToGuild ===
+// === Module 7662: transitionToGuild ===
 
-// Module 7646 (transitionToGuild)
+// Module 7662 (transitionToGuild)
 import router_utils from "router_utils" /* 1099 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5732 */;
-import getGuildTransitionRoute from "getGuildTransitionRoute" /* 7512 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
+import getGuildTransitionRoute from "getGuildTransitionRoute" /* 7528 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/routing/transitionToGuild.nativ
 
 export function transitionToGuild(id, arg1) {
   const obj = getGuildTransitionRoute;
-  const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation({ duration: 0, create: "r", update: "__d", delete: "ddd" });
+  const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation({ duration: 0, create: "r", update: "__d", delete: "action" });
   const obj3 = router_utils;
   const obj4 = { navigationReplace: true };
   const merged = Object.assign(arg1);

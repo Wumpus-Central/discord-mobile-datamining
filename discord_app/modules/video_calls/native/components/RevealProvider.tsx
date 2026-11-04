@@ -1,13 +1,13 @@
-// === Module 11838: RevealProvider ===
+// === Module 11897: RevealProvider ===
 
-// Module 11838 (RevealProvider)
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 11135 */;
-import StatusBarDefault from "StatusBar" /* 11349 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11839 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 11840 */;
+// Module 11897 (RevealProvider)
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 11183 */;
+import StatusBarDefault from "StatusBar" /* 11399 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11898 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 11899 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5382 */;
-import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import ActionSheetStore from "ActionSheetStore" /* 5383 */;
+import GameConsoleStore from "GameConsoleStore" /* 5899 */;
 
 const require = globalThis.__r;
 
@@ -45,8 +45,8 @@ function useRevealProviderValue(arg0, channel) {
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-const ChannelCallStore = fn(11133);
-({ useChannelCallStore: metroRequire, focusTimeout: closure_7, resetFocusTimer: closure_8, useIsVoiceChatFocused: closure_9 } = ChannelCallStore);
+const ChannelCallStore = fn(11181);
+({ useChannelCallStore: closure_6, focusTimeout: metroImportDefault, resetFocusTimer: closure_8, useIsVoiceChatFocused: closure_9 } = ChannelCallStore);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const context = noop.createContext({ reveal: true });
@@ -70,9 +70,9 @@ export default function RevealProvider(showStatus) {
   items = [tmp];
   const effect = noop.useEffect(() => {
     if (closure_0) {
-      React6();
+      React5();
     } else {
-      React5.stop();
+      metroImportDefault.stop();
     }
   }, items);
   if (!flag2) {

@@ -1,19 +1,19 @@
-// === Module 10218: EmojiPickerCategoriesUnicodeShortcutItem ===
+// === Module 10266: EmojiPickerCategoriesUnicodeShortcutItem ===
 
-// Module 10218 (EmojiPickerCategoriesUnicodeShortcutItem)
+// Module 10266 (EmojiPickerCategoriesUnicodeShortcutItem)
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import Pressables from "Pressables" /* 7106 */;
-import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 10203 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10219 */;
+import Pressables from "Pressables" /* 7121 */;
+import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 10251 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10267 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ EXPRESSION_FOOTER_HEIGHT: metroRequire, NODE_SIZE } = Constants);
+({ EXPRESSION_FOOTER_HEIGHT: closure_6, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };

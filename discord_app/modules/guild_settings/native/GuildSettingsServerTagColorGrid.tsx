@@ -1,15 +1,15 @@
-// === Module 19912: GuildSettingsServerTagColorGrid ===
+// === Module 20028: GuildSettingsServerTagColorGrid ===
 
-// Module 19912 (GuildSettingsServerTagColorGrid)
+// Module 20028 (GuildSettingsServerTagColorGrid)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8517);
-({ GUILD_TAG_BADGE_PALETTE_PRESETS: closure_4, GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: hasOwnProperty, GuildTagBadgeSize: metroRequire } = GuildTagConstants);
+const GuildTagConstants = fn(8534);
+({ GUILD_TAG_BADGE_PALETTE_PRESETS: closure_4, GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: hasOwnProperty, GuildTagBadgeSize: closure_6 } = GuildTagConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, defaultIcon: null };
 const rect = { position: "absolute", right: nativeDefault.space.PX_4, bottom: nativeDefault.space.PX_4 };
@@ -73,7 +73,7 @@ export default function GuildSettingsServerTagColorGrid(badge) {
     tmp12 = tmp7;
   }
   const obj3 = { spacing: primary(tmp11[4]).space.PX_8, children: null };
-  const obj4 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
+  const obj4 = { variant: "body-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
   const intl2 = tmp12(tmp11[6]).intl;
   obj4.children = intl2.string(tmp12(tmp11[6]).t["Fg/TNW"]);
   items = [closure_7(tmp12(tmp11[8]).Text, obj4), ];

@@ -1,12 +1,12 @@
-// === Module 7641: SoundboardActionCreators ===
+// === Module 7657: SoundboardActionCreators ===
 
-// Module 7641 (SoundboardActionCreators)
+// Module 7657 (SoundboardActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4971 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 6178 */;
+import SoundboardStore from "SoundboardStore" /* 6193 */;
 
 const require = globalThis.__r;
 
@@ -64,7 +64,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7644).getGuildIdsToFetchSoundsFor();
+  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7660).getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
   } else {
@@ -82,7 +82,7 @@ function _maybeFetchGuildSoundboardSounds() {
     DispatcherDefault.dispatch(obj4);
     return promise;
   }
-  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7644);
+  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7660);
 }
 let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
   let disableAnalytics = arg0;
@@ -396,9 +396,9 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(6180).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6195).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1072);
-({ Endpoints: metroRequire, AnalyticEvents: closure_7 } = Constants);
+({ Endpoints: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const UserSettingsConstants = fn(1082);
 ({ MAX_FAVORITES: closure_8, UserSettingsDelay: closure_9 } = UserSettingsConstants);
 let c10 = false;
@@ -449,7 +449,7 @@ export function addFavoriteSound(soundId) {
   _require = soundId;
   const FrecencyUserSettingsActionCreators = require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", async (soundIds) => {
-    if (obj.size(soundIds.soundIds) >= React6) {
+    if (obj.size(soundIds.soundIds) >= React5) {
       const obj2 = { title: null, body: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t["+XYXtZ"]);

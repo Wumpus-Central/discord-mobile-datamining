@@ -1,10 +1,10 @@
-// === Module 10250: isNewMessageGroup ===
+// === Module 10298: isNewMessageGroup ===
 
-// Module 10250 (isNewMessageGroup)
+// Module 10298 (isNewMessageGroup)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import DateUtils from "DateUtils" /* 4963 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7008 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7023 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -22,102 +22,97 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
     } else {
       let REPLY = constants;
       if (type.type > constants.DEFAULT) {
-        const tmp37 = isSystemMessageDefault(content);
-        let tmp38 = !tmp37;
-        if (tmp37) {
+        const tmp35 = isSystemMessageDefault(content);
+        let tmp36 = !tmp35;
+        if (tmp35) {
           type = type.type;
           REPLY = REPLY.REPLY;
-          tmp38 = type === REPLY;
+          tmp36 = type === REPLY;
         }
-        let tmp34 = tmp38;
+        let tmp32 = tmp36;
       } else {
-        tmp34 = isSystemMessageDefault(content);
-        if (!tmp34) {
+        tmp32 = isSystemMessageDefault(content);
+        if (!tmp32) {
           let tmp7 = content.author.id !== type.author.id;
           if (!tmp7) {
             let tmp9 = content.hasFlag(constants3.EPHEMERAL) !== type.hasFlag(constants3.EPHEMERAL);
             if (!tmp9) {
-              let tmp11 = content.hasFlag(constants3.IS_SCHEDULED) !== type.hasFlag(constants3.IS_SCHEDULED);
+              let tmp11 = null != type.webhookId && content.author.username !== type.author.username;
               if (!tmp11) {
-                let tmp13 = null != type.webhookId && content.author.username !== type.author.username;
-                if (!tmp13) {
-                  let isForumPostResult;
-                  if (isForumPost != null) {
-                    isForumPostResult = isForumPost.isForumPost();
-                  }
-                  let tmp16 = !isForumPostResult;
-                  if (isForumPostResult) {
-                    tmp16 = content.id !== SnowflakeUtilsDefault.castChannelIdAsMessageId(isForumPost.id);
-                    const tmp40Result = SnowflakeUtilsDefault;
-                  }
-                  let tmp17 = !tmp16;
-                  if (tmp16) {
-                    const isSameDayResult = DateUtils.isSameDay(content.timestamp, type.timestamp);
-                    let tmp20 = !isSameDayResult;
-                    if (isSameDayResult) {
-                      const isWithinIntervalResult = DateUtils.isWithinInterval(content.timestamp, type.timestamp, closure_6);
-                      let tmp23 = !isWithinIntervalResult;
-                      if (isWithinIntervalResult) {
-                        const hasFlagResult3 = type.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
-                        let hasFlagResult4 = !hasFlagResult3;
-                        if (hasFlagResult3) {
-                          hasFlagResult4 = content.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
-                        }
-                        let tmp26 = !hasFlagResult4;
-                        if (hasFlagResult4) {
-                          const hasFlagResult5 = content.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
-                          let hasFlagResult6 = !hasFlagResult5;
-                          if (hasFlagResult5) {
-                            hasFlagResult6 = type.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
-                          }
-                          if (!hasFlagResult6) {
-                            hasFlagResult6 = !(type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone);
-                            const tmp29 = type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone;
-                          }
-                          let tmp30 = !hasFlagResult6;
-                          if (hasFlagResult6) {
-                            let tmp31 = type.applicationId !== content.applicationId;
-                            if (!tmp31) {
-                              const additionalName = type.additionalName;
-                              let tmp32 = null;
-                              if (null != additionalName) {
-                                tmp32 = null;
-                                if ("" !== additionalName) {
-                                  tmp32 = additionalName;
-                                }
-                              }
-                              const additionalName2 = content.additionalName;
-                              let tmp33 = null;
-                              if (null != additionalName2) {
-                                tmp33 = null;
-                                if ("" !== additionalName2) {
-                                  tmp33 = additionalName2;
-                                }
-                              }
-                              tmp31 = tmp32 !== tmp33;
-                            }
-                            tmp30 = tmp31;
-                          }
-                          tmp26 = tmp30;
-                        }
-                        tmp23 = tmp26;
-                      }
-                      tmp20 = tmp23;
-                      const tmp18Result = DateUtils;
-                    }
-                    tmp17 = tmp20;
-                  }
-                  tmp13 = tmp17;
+                let isForumPostResult;
+                if (isForumPost != null) {
+                  isForumPostResult = isForumPost.isForumPost();
                 }
-                tmp11 = tmp13;
+                let tmp14 = !isForumPostResult;
+                if (isForumPostResult) {
+                  tmp14 = content.id !== SnowflakeUtilsDefault.castChannelIdAsMessageId(isForumPost.id);
+                  const tmp38Result = SnowflakeUtilsDefault;
+                }
+                let tmp15 = !tmp14;
+                if (tmp14) {
+                  const isSameDayResult = DateUtils.isSameDay(content.timestamp, type.timestamp);
+                  let tmp18 = !isSameDayResult;
+                  if (isSameDayResult) {
+                    const isWithinIntervalResult = DateUtils.isWithinInterval(content.timestamp, type.timestamp, closure_6);
+                    let tmp21 = !isWithinIntervalResult;
+                    if (isWithinIntervalResult) {
+                      const hasFlagResult2 = type.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
+                      let hasFlagResult3 = !hasFlagResult2;
+                      if (hasFlagResult2) {
+                        hasFlagResult3 = content.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
+                      }
+                      let tmp24 = !hasFlagResult3;
+                      if (hasFlagResult3) {
+                        const hasFlagResult4 = content.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
+                        let hasFlagResult5 = !hasFlagResult4;
+                        if (hasFlagResult4) {
+                          hasFlagResult5 = type.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
+                        }
+                        if (!hasFlagResult5) {
+                          hasFlagResult5 = !(type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone);
+                          const tmp27 = type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone;
+                        }
+                        let tmp28 = !hasFlagResult5;
+                        if (hasFlagResult5) {
+                          let tmp29 = type.applicationId !== content.applicationId;
+                          if (!tmp29) {
+                            const additionalName = type.additionalName;
+                            let tmp30 = null;
+                            if (null != additionalName) {
+                              tmp30 = null;
+                              if ("" !== additionalName) {
+                                tmp30 = additionalName;
+                              }
+                            }
+                            const additionalName2 = content.additionalName;
+                            let tmp31 = null;
+                            if (null != additionalName2) {
+                              tmp31 = null;
+                              if ("" !== additionalName2) {
+                                tmp31 = additionalName2;
+                              }
+                            }
+                            tmp29 = tmp30 !== tmp31;
+                          }
+                          tmp28 = tmp29;
+                        }
+                        tmp24 = tmp28;
+                      }
+                      tmp21 = tmp24;
+                    }
+                    tmp18 = tmp21;
+                    const tmp16Result = DateUtils;
+                  }
+                  tmp15 = tmp18;
+                }
+                tmp11 = tmp15;
               }
               tmp9 = tmp11;
-              const hasFlagResult2 = content.hasFlag(constants3.IS_SCHEDULED);
             }
             tmp7 = tmp9;
             const hasFlagResult1 = content.hasFlag(constants3.EPHEMERAL);
           }
-          tmp34 = tmp7;
+          tmp32 = tmp7;
         }
       }
     }

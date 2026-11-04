@@ -1,18 +1,18 @@
-// === Module 19297: ActivityPanelHeader ===
+// === Module 19401: ActivityPanelHeader ===
 
-// Module 19297 (ActivityPanelHeader)
+// Module 19401 (ActivityPanelHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import native from "native" /* 5207 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7450 */;
-import LeaveActivityButtonDefault from "LeaveActivityButton" /* 19160 */;
-import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19294 */;
-import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 19298 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 19299 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19303 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19304 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7466 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 19263 */;
+import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19398 */;
+import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 19402 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 19403 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19407 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19408 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
@@ -136,7 +136,7 @@ class BaseActivityPanelContent {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(5777);
+const ActivityPanelConstants = fn(5791);
 ({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9, ActivityPanelModes: closure_10 } = ActivityPanelConstants);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
@@ -227,19 +227,19 @@ export default noop.memo(function ActivityPanelHeader() {
   let wrapperDimensions;
   const tmp2 = closure_14();
   const headerContainer = tmp2;
-  const context = noop.useContext(wrapperDimensions(19289));
+  const context = noop.useContext(wrapperDimensions(19393));
   wrapperDimensions = context.wrapperDimensions;
   items = [tmp2.headerContainer, wrapperDimensions.isWindowLandscape];
   ({ setMode, wrapperOffset, pipState } = context);
   const obj = {
     style: noop.useMemo(() => {
       if (wrapperDimensions.isWindowLandscape) {
-        let str2 = React7;
+        let str2 = React6;
         let tmp = 0;
         let num = null;
         let str = "auto";
       } else {
-        str = React6;
+        str = React5;
         str2 = "auto";
         tmp = null;
         num = 0;
@@ -264,12 +264,12 @@ export function useBaseActivityPanelHeader(context) {
   ({ setMode, wrapperOffset, pipState } = context);
   obj.headerStyles = noop.useMemo(() => {
     if (wrapperDimensions.isWindowLandscape) {
-      let str2 = React7;
+      let str2 = React6;
       let tmp = 0;
       let num = null;
       let str = "auto";
     } else {
-      str = React6;
+      str = React5;
       str2 = "auto";
       tmp = null;
       num = 0;

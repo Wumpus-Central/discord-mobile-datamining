@@ -1,12 +1,12 @@
-// === Module 7333: AddPhone ===
+// === Module 7349: AddPhone ===
 
-// Module 7333 (AddPhone)
+// Module 7349 (AddPhone)
 import nativeDefault from "native" /* 575 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7235 */;
+import PhoneStore from "PhoneStore" /* 7255 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const UserFlags = fn(1072).UserFlags;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);

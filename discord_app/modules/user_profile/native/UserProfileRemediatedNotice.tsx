@@ -1,10 +1,10 @@
-// === Module 15154: UserProfileRemediatedNotice ===
+// === Module 15234: UserProfileRemediatedNotice ===
 
-// Module 15154 (UserProfileRemediatedNotice)
+// Module 15234 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7628 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8955 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
@@ -31,24 +31,24 @@ export default function RemediatedUserNotice(user) {
     const items1 = [tmp.container, tmp3.card, user.style];
     obj2.style = items1;
     if (isBlocked) {
-      const obj3 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
+      const obj3 = { variant: "body-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl = tmp4(1113).intl;
       obj3.children = intl.string(tmp4(1113).t["oC/fU6"]);
-      isBlocked = closure_6(tmp4(5747).Text, obj3);
+      isBlocked = closure_6(tmp4(5761).Text, obj3);
     }
     const items2 = [isBlocked, ];
     if (isIgnored) {
       const obj4 = { children: null };
-      const obj5 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
+      const obj5 = { variant: "body-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl2 = tmp4(1113).intl;
       obj5.children = intl2.string(tmp4(1113).t.HXz5An);
-      const items3 = [closure_6(tmp4(5747).Text, obj5), closure_6(tmp4(5747).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
+      const items3 = [closure_6(tmp4(5761).Text, obj5), closure_6(tmp4(5761).Text, { variant: "body-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
       const intl3 = tmp4(1113).intl;
       const obj6 = {
         unignoreHook(children) {
               return timestampProducer(Text_Text.Text, {
                 role: "button",
-                variant: "heading-sm/medium",
+                variant: "heading-xs/medium",
                 color: "text-link",
                 onPress() {
                   return RelationshipActionCreatorsDefault.unignoreUser(id.id, "UserProfileRemediatedNotice");

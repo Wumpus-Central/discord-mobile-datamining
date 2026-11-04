@@ -1,6 +1,6 @@
-// === Module 10183: useSharedMessageEmojiStyles ===
+// === Module 10231: useSharedMessageEmojiStyles ===
 
-// Module 10183 (useSharedMessageEmojiStyles)
+// Module 10231 (useSharedMessageEmojiStyles)
 import nativeDefault from "native" /* 575 */;
 import createStyles from "createStyles" /* 5141 */;
 import size_mod from "module_2" /* 2 */;

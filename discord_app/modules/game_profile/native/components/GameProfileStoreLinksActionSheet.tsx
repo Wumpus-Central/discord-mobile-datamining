@@ -1,16 +1,16 @@
-// === Module 9494: GameProfileStoreLinksActionSheet ===
+// === Module 9512: GameProfileStoreLinksActionSheet ===
 
-// Module 9494 (GameProfileStoreLinksActionSheet)
+// Module 9512 (GameProfileStoreLinksActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import BottomSheetModal from "BottomSheetModal" /* 5398 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9451 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import BottomSheetModal from "BottomSheetModal" /* 5400 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9469 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -39,7 +39,7 @@ export default function GameProfileStoreLinksActionSheet(gameName) {
   const intl = util.intl;
   obj5.children = intl.string(util.t["/4gj6r"]);
   items = [closure_4(Text_Text.Text, obj5), ];
-  const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.headerText, children: null };
+  const obj6 = { variant: "body-md/medium", color: "text-subtle", style: tmp.headerText, children: null };
   const intl2 = util.intl;
   obj6.children = intl2.format(util.t["0acM2Y"], { gameName: gameName.gameName });
   items[1] = closure_4(Text_Text.Text, obj6);

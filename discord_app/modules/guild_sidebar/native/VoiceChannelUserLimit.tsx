@@ -1,10 +1,10 @@
-// === Module 18322: VoiceChannelUserLimit ===
+// === Module 18419: VoiceChannelUserLimit ===
 
-// Module 18322 (VoiceChannelUserLimit)
+// Module 18419 (VoiceChannelUserLimit)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import _modDef15345 from "module_15345" /* 15345 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import _modDef15432 from "module_15432" /* 15432 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,16 +34,16 @@ export default noop.memo(function VoiceChannelUserLimit(videoLimit) {
   const obj2 = { style: rect.left, children: null };
   let tmp3 = null;
   if (videoLimit.videoLimit) {
-    const obj3 = { source: _modDef15345, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj3 = { source: _modDef15432, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp3 = React4(native.Icon, obj3);
   }
   items = [tmp3, ];
-  const obj4 = { variant: "text-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: users.toString().padStart(2, "0") };
+  const obj4 = { variant: "body-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: users.toString().padStart(2, "0") };
   items[1] = React4(Text_Text.Text, obj4);
   obj2.children = items;
   const items1 = [hasOwnProperty(View, obj2), React4(View, { style: rect.mid }), ];
   const obj6 = { style: rect.right, children: null };
-  const obj7 = { variant: "text-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: null };
+  const obj7 = { variant: "body-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: null };
   const obj5 = { style: rect.mid };
   const str = users.toString();
   obj7.children = total.toString().padStart(2, "0");

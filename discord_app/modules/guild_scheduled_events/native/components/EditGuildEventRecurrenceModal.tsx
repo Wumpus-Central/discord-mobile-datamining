@@ -1,17 +1,17 @@
-// === Module 9114: EditGuildEventRecurrenceModal ===
+// === Module 9131: EditGuildEventRecurrenceModal ===
 
-// Module 9114 (EditGuildEventRecurrenceModal)
+// Module 9131 (EditGuildEventRecurrenceModal)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9096 */;
-import useEventExceptionDefault from "useEventException" /* 9104 */;
-import LazyAPIPromiseDefault from "LazyAPIPromise" /* 9107 */;
-import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 9115 */;
-import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 9116 */;
-import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 9117 */;
-import GuildEventScheduleDefault from "GuildEventSchedule" /* 9118 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9113 */;
+import useEventExceptionDefault from "useEventException" /* 9121 */;
+import LazyAPIPromiseDefault from "LazyAPIPromise" /* 9124 */;
+import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 9132 */;
+import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 9133 */;
+import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 9134 */;
+import GuildEventScheduleDefault from "GuildEventSchedule" /* 9135 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -69,7 +69,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
             } else {
               c1 = 1;
               c2 = 1;
-              const obj5 = { value: React7(), done: false };
+              const obj5 = { value: React6(), done: false };
               return obj5;
             }
             obj2 = v0(closure_1_3[9]);
@@ -106,10 +106,10 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(9097).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(9097);
-  const scheduleForRecurrenceWithException = guildEvent(9097).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
-  let obj2 = guildEvent(9097);
+  const baseScheduleForRecurrence = guildEvent(9114).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(9114);
+  const scheduleForRecurrenceWithException = guildEvent(9114).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
+  let obj2 = guildEvent(9114);
   [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
   [first, closure_8] = noop.useState(null);
   const tmp9 = _slicedToArray(LazyAPIPromiseDefault(() => {
@@ -143,31 +143,31 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     return applyArgumentsResult;
   };
   obj3.disabled = null != first;
-  const action = closure_8(guildEvent(5754).Button, obj3);
+  const action = closure_8(guildEvent(5768).Button, obj3);
   let obj5 = {
     style: null,
-    children: closure_8(guildEvent(7290).Navigator, {
+    children: closure_8(guildEvent(7306).Navigator, {
       screens: {
         [closure_11.TIME]: {
           title: "",
           customNavbar() {
             const obj = { screen: EditGuildEventUtils.EditGuildEventScreens.DETAILS, onClose };
-            return React6(EditGuildEventModalNavbarDefault, obj);
+            return React5(EditGuildEventModalNavbarDefault, obj);
           },
           headerLeft() {
             return null;
           },
           render() {
             const obj = { action, children: null };
-            items = [React6(GuildEventScheduleDefault, { guildEvent, recurrenceId, schedule, onChange: handleScheduleChange }), ];
+            items = [React5(GuildEventScheduleDefault, { guildEvent, recurrenceId, schedule, onChange: handleScheduleChange }), ];
             let tmp4Result = null;
             if (null != first) {
-              const obj3 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp5 };
-              tmp4Result = React6(Text_Text.Text, obj3);
+              const obj3 = { variant: "body-md/normal", color: "text-feedback-critical", children: tmp5 };
+              tmp4Result = React5(Text_Text.Text, obj3);
             }
             items[1] = tmp4Result;
             obj.children = items;
-            return React7(EditGuildEventStepContainerDefault, obj);
+            return React6(EditGuildEventStepContainerDefault, obj);
           },
           fullscreen: true
         }

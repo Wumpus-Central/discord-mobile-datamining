@@ -1,7 +1,7 @@
-// === Module 7716: PremiumBundledPlansUtils ===
+// === Module 7732: PremiumBundledPlansUtils ===
 
-// Module 7716 (PremiumBundledPlansUtils)
-import ProductIds from "ProductIds" /* 7717 */;
+// Module 7732 (PremiumBundledPlansUtils)
+import ProductIds from "ProductIds" /* 7733 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -87,7 +87,7 @@ function getProductIdFromSubscriptionItems(subscriptionItemsForProduct) {
   throw error;
 }
 const PremiumConstants = fn(1387);
-({ PREMIUM_GUILD_SUBSCRIPTION_PLANS: c3, PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty, SubscriptionPlans: metroRequire } = PremiumConstants);
+({ PREMIUM_GUILD_SUBSCRIPTION_PLANS: c3, PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty, SubscriptionPlans: closure_6 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/PremiumBundledPlansUtils.tsx");
 
@@ -233,8 +233,8 @@ export function excludeNitroOnlyPlansForActiveTrial(premiumTier) {
 }
 export { getSubscriptionItemsForProduct };
 export function getModifySubscriptionItemsForProduct(productId, subscription) {
-  if (productId in found(7717).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(7717).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(7733).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(7733).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
         const itemsWithUpsertedPremiumPlanId = tmp(2176).getItemsWithUpsertedPremiumPlanId(subscription, tmp8.basePlanId);

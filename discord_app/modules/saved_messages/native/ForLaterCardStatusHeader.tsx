@@ -1,9 +1,9 @@
-// === Module 11312: ForLaterCardStatusHeader ===
+// === Module 11362: ForLaterCardStatusHeader ===
 
-// Module 11312 (ForLaterCardStatusHeader)
+// Module 11362 (ForLaterCardStatusHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
@@ -40,7 +40,7 @@ export function ForLaterCardStatusHeader(isCritical) {
   if (flag) {
     str = "text-feedback-critical";
   }
-  items[1] = React4(Text_Text.Text, { variant: "text-md/semibold", color: str, style: tmp.label, lineClamp, children: label });
+  items[1] = React4(Text_Text.Text, { variant: "body-md/semibold", color: str, style: tmp.label, lineClamp, children: label });
   items[2] = React4(View, { style: tmp.actionsContainer, children: actions });
   obj.children = items;
   return hasOwnProperty(View, obj);

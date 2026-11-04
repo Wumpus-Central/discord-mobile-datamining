@@ -1,6 +1,6 @@
-// === Module 7680: canChannelUseSoundboard ===
+// === Module 7696: canChannelUseSoundboard ===
 
-// Module 7680 (canChannelUseSoundboard)
+// Module 7696 (canChannelUseSoundboard)
 import ChannelStore from "ChannelStore" /* 4990 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const Constants = fn(1072);
-({ ChannelTypesSets: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ ChannelTypesSets: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");
 

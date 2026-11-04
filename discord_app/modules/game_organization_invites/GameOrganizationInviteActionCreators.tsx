@@ -1,10 +1,10 @@
-// === Module 11792: GameOrganizationInviteActionCreators ===
+// === Module 11849: GameOrganizationInviteActionCreators ===
 
-// Module 11792 (GameOrganizationInviteActionCreators)
+// Module 11849 (GameOrganizationInviteActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let closure_4 = fn(11501).GameOrganizationInviteAcceptStatus;
+let closure_4 = fn(11551).GameOrganizationInviteAcceptStatus;
 const Endpoints = fn(1072).Endpoints;
 let obj = {
   resolveGameOrganizationInvite(arg0) {

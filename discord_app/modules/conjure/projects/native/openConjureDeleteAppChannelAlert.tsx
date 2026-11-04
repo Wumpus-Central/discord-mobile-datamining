@@ -1,7 +1,7 @@
-// === Module 19051: openConjureDeleteAppChannelAlert ===
+// === Module 19154: openConjureDeleteAppChannelAlert ===
 
-// Module 19051 (openConjureDeleteAppChannelAlert)
-import useAlertStore from "useAlertStore" /* 6080 */;
+// Module 19154 (openConjureDeleteAppChannelAlert)
+import useAlertStore from "useAlertStore" /* 6095 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -44,7 +44,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(13416)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(13500)(conjureServerApp), done: false };
                 return obj4;
               }
             }
@@ -104,7 +104,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
     const items1 = [tmp8Result, ];
     let tmp8Result2 = null;
     if (null != tmp7) {
-      let obj4 = { variant: "text-sm/medium", color: "text-feedback-critical", children: tmp7 };
+      let obj4 = { variant: "body-sm/medium", color: "text-feedback-critical", children: tmp7 };
       tmp8Result2 = tmp8(require("Text/Text").Text, obj4);
     }
     const obj5 = { spacing: 12, children: null };
@@ -137,7 +137,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
   return closure_6(require("AlertModal").AlertModal, obj2);
 }
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/native/openConjureDeleteAppChannelAlert.tsx");
 

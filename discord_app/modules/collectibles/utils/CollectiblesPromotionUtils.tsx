@@ -1,9 +1,9 @@
-// === Module 15168: CollectiblesPromotionUtils ===
+// === Module 15248: CollectiblesPromotionUtils ===
 
-// Module 15168 (CollectiblesPromotionUtils)
-import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9612 */;
-import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 9683 */;
-import CollectiblesCollectAndClaimPromotionUtils from "CollectiblesCollectAndClaimPromotionUtils" /* 15169 */;
+// Module 15248 (CollectiblesPromotionUtils)
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9631 */;
+import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 9702 */;
+import CollectiblesCollectAndClaimPromotionUtils from "CollectiblesCollectAndClaimPromotionUtils" /* 15249 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromotionUtils.tsx");

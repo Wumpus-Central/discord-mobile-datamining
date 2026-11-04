@@ -1,19 +1,19 @@
-// === Module 17110: BountiesEndCardPressableCta ===
+// === Module 17202: BountiesEndCardPressableCta ===
 
-// Module 17110 (BountiesEndCardPressableCta)
+// Module 17202 (BountiesEndCardPressableCta)
 import nativeDefault from "native" /* 575 */;
-import QuestContent from "QuestContent" /* 6906 */;
-import AdCreativeType from "AdCreativeType" /* 6908 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9851 */;
+import QuestContent from "QuestContent" /* 6921 */;
+import AdCreativeType from "AdCreativeType" /* 6923 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9869 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const END_CARD_IMAGE_SIZE = fn(17111).END_CARD_IMAGE_SIZE;
+const END_CARD_IMAGE_SIZE = fn(17203).END_CARD_IMAGE_SIZE;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { image: null, info: null, ctaContainer: null };
@@ -58,7 +58,7 @@ export default function BountiesEndCardPressableCta(bounty) {
   }
   const obj3 = { onPress: callback, disabled: flag, hitSlop: 16, accessibilityRole: "button", accessibilityLabel: bountyCtaInfo.label, style: tmp.ctaContainer, children: null };
   const items1 = [closure_7(sourceQuestContent(getQuestImpressionId[13]), { source: { uri: scaledImageUrl }, style: tmp.image }), ];
-  const obj5 = { style: tmp.info, children: closure_7(bounty(getQuestImpressionId[14]).Text, { variant: "text-md/semibold", color: "text-strong", children: bountyCtaInfo.label }) };
+  const obj5 = { style: tmp.info, children: closure_7(bounty(getQuestImpressionId[14]).Text, { variant: "body-md/semibold", color: "text-strong", children: bountyCtaInfo.label }) };
   items1[1] = closure_7(closure_5, obj5);
   obj3.children = items1;
   return closure_8(closure_4, obj3);

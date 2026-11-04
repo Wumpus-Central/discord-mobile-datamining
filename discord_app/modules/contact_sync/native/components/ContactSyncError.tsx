@@ -1,9 +1,9 @@
-// === Module 14397: ContactSyncError ===
+// === Module 14477: ContactSyncError ===
 
-// Module 14397 (ContactSyncError)
+// Module 14477 (ContactSyncError)
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -43,8 +43,8 @@ export default function ContactSyncError(error) {
   ContactSyncErrorTsx1.__workletHash = 13817117600464;
   ContactSyncErrorTsx1.__initData = tmp5;
   const animatedStyle = _mod1652.useAnimatedStyle(ContactSyncErrorTsx1);
-  const obj2 = { style: null, children: jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error }) };
+  const obj2 = { style: null, children: jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error }) };
   const items2 = [tmp.container, error.style, animatedStyle];
   obj2.style = items2;
-  return jsx(_modDef1652.View, { style: null, children: jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error }) });
+  return jsx(_modDef1652.View, { style: null, children: jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error }) });
 };

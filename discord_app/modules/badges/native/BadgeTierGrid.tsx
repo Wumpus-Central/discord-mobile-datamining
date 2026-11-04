@@ -1,6 +1,6 @@
-// === Module 11618: BadgeTierGrid ===
+// === Module 11669: BadgeTierGrid ===
 
-// Module 11618 (BadgeTierGrid)
+// Module 11669 (BadgeTierGrid)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,11 +37,11 @@ export default function BadgeTierGrid(badge) {
     isViewingOtherUser = null != targetUsername;
   }
   if (isViewingOtherUser) {
-    const obj2 = { variant: "text-sm/medium", color: "text-default", style: tmp.progressLabel, children: null };
+    const obj2 = { variant: "body-sm/medium", color: "text-default", style: tmp.progressLabel, children: null };
     let intl = badge(1113).intl;
     let obj3 = { username: targetUsername };
     obj2.children = intl.formatToPlainString(badge(1113).t.KyTwIh, obj3);
-    isViewingOtherUser = closure_4(badge(5747).Text, obj2);
+    isViewingOtherUser = closure_4(badge(5761).Text, obj2);
   }
   items = [isViewingOtherUser, ];
   let obj4 = { style: tmp.grid, accessibilityRole: "list", children: null };
@@ -49,8 +49,8 @@ export default function BadgeTierGrid(badge) {
   if (tiers == null) {
     tiers = [];
   }
-  const tmp9 = isViewingOtherUser(10199);
-  obj4.children = isViewingOtherUser(10199)(tiers, 3).map((arr) => React4(View, {
+  const tmp9 = isViewingOtherUser(10247);
+  obj4.children = isViewingOtherUser(10247)(tiers, 3).map((arr) => React4(View, {
     style: row.row,
     collapsable: false,
     children: arr.map((owned) => {
@@ -63,7 +63,7 @@ export default function BadgeTierGrid(badge) {
       if (complex_icon_static_url == null) {
         complex_icon_static_url = owned.complex_icon_static_url;
       }
-      const tierRowSubtitle = badge(11597).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
+      const tierRowSubtitle = badge(11648).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
       const intl = badge(1113).intl;
       const t = badge(1113).t;
       items = [owned.name, tierRowSubtitle, intl.string(owned ? t.sTFApF : t.uHtDcT)];
@@ -84,8 +84,8 @@ export default function BadgeTierGrid(badge) {
         }
         items1[1] = dimmedIcon;
         obj4.style = items1;
-        tmp9Result = closure_2_4(isViewingOtherUser(11589), obj4);
-        const tmp11 = isViewingOtherUser(11589);
+        tmp9Result = closure_2_4(isViewingOtherUser(11639), obj4);
+        const tmp11 = isViewingOtherUser(11639);
       }
       const items2 = [tmp9Result, , ];
       let tmp13Result = null != owned.name;
@@ -94,8 +94,8 @@ export default function BadgeTierGrid(badge) {
         if (owned) {
           str = "text-default";
         }
-        const obj5 = { variant: "text-sm/semibold", color: str, style: item.centeredText, children: owned.name };
-        tmp13Result = closure_2_4(badge(5747).Text, obj5);
+        const obj5 = { variant: "body-sm/semibold", color: str, style: item.centeredText, children: owned.name };
+        tmp13Result = closure_2_4(badge(5761).Text, obj5);
       }
       items2[1] = tmp13Result;
       let tmp5Result = "" !== tierRowSubtitle;
@@ -104,15 +104,15 @@ export default function BadgeTierGrid(badge) {
         let tmp15 = !owned;
         if (!owned) {
           const obj7 = { size: "xxs", color: isViewingOtherUser(575).colors.ICON_MUTED };
-          tmp15 = closure_2_4(badge(8791).LockIcon, obj7);
+          tmp15 = closure_2_4(badge(8808).LockIcon, obj7);
         }
         const items3 = [tmp15, ];
         let str2 = "text-muted";
         if (owned) {
           str2 = "text-default";
         }
-        const obj8 = { variant: "text-sm/normal", color: str2, style: item.centeredText, children: tierRowSubtitle };
-        items3[1] = closure_2_4(badge(5747).Text, obj8);
+        const obj8 = { variant: "body-sm/normal", color: str2, style: item.centeredText, children: tierRowSubtitle };
+        items3[1] = closure_2_4(badge(5761).Text, obj8);
         obj6.children = items3;
         tmp5Result = closure_2_5(closure_3, obj6);
       }

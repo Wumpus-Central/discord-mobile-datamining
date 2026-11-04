@@ -1,6 +1,6 @@
-// === Module 9156: AppChannelExperiment ===
+// === Module 9173: AppChannelExperiment ===
 
-// Module 9156 (AppChannelExperiment)
+// Module 9173 (AppChannelExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

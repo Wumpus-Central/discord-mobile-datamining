@@ -1,9 +1,9 @@
-// === Module 17802: ClipboardCheckIcon ===
+// === Module 17898: ClipboardCheckIcon ===
 
-// Module 17802 (ClipboardCheckIcon)
+// Module 17898 (ClipboardCheckIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod17803 from "module_17803" /* 17803 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod17899 from "module_17899" /* 17899 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ClipboardCheckIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17803, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17899, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

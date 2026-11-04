@@ -1,6 +1,6 @@
-// === Module 14596: IAPUtils ===
+// === Module 14676: IAPUtils ===
 
-// Module 14596 (IAPUtils)
+// Module 14676 (IAPUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -8,13 +8,13 @@ import v1 from "v1" /* 1266 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1376 */;
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
 import DeviceUtils from "DeviceUtils" /* 5098 */;
-import ProductIds from "ProductIds" /* 7717 */;
-import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 14617 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 14618 */;
+import ProductIds from "ProductIds" /* 7733 */;
+import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 14697 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 14698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import DevSettingsStore from "DevSettingsStore" /* 5764 */;
 import UserStore from "UserStore" /* 1385 */;
-import IAPStore from "IAPStore" /* 7721 */;
+import IAPStore from "IAPStore" /* 7737 */;
 
 const require = globalThis.__r;
 
@@ -78,7 +78,7 @@ let closure_16 = async function _makeIAPRequest() {
               const obj6 = { requestJSONString, sku, appAccountToken: convertToUUID(currentUser.id), andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("module_14598").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("module_14678").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -168,7 +168,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("module_14598").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("module_14678").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -410,7 +410,7 @@ function remapStorefront(countryCode) {
       throw error;
     }
   } else {
-    const currency = React6[str.toUpperCase(str)];
+    const currency = React5[str.toUpperCase(str)];
   }
   return { currency, country };
 }
@@ -446,7 +446,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("module_14598").getStorefront(), done: false };
+            const obj6 = { value: require("module_14678").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -486,7 +486,7 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5815).convertToAlpha2;
+const convertToAlpha2 = fn(5829).convertToAlpha2;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
 const NAMESPACE_SNOWFLAKE_UUID = fn(1387).NAMESPACE_SNOWFLAKE_UUID;
@@ -494,9 +494,9 @@ const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 let PlatformUtils = fn(1377);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(14597).default;
+  _default = fn(14677).default;
 }
-let items = [fn(14598).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(14598).ErrorCode.E_UNKNOWN];
+let items = [fn(14678).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(14678).ErrorCode.E_UNKNOWN];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
 let obj = {
@@ -595,7 +595,7 @@ if (PlatformUtils) {
   let obj5 = fn(1377);
 }
 if (PlatformUtils) {
-  obj = fn(14619).default;
+  obj = fn(14699).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();

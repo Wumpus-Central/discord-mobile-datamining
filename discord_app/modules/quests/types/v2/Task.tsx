@@ -1,10 +1,10 @@
-// === Module 7980: Task ===
+// === Module 7996: Task ===
 
-// Module 7980 (Task)
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6909 */;
-import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7981 */;
-import v2_Video from "v2/Video" /* 7982 */;
-import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7983 */;
+// Module 7996 (Task)
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6924 */;
+import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7997 */;
+import v2_Video from "v2/Video" /* 7998 */;
+import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7999 */;
 import size from "module_2" /* 2 */;
 
 function _firstPartyTasksFromServer(tasks) {

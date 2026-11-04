@@ -1,14 +1,14 @@
-// === Module 16810: TwoFASetupSuccess ===
+// === Module 16902: TwoFASetupSuccess ===
 
-// Module 16810 (TwoFASetupSuccess)
+// Module 16902 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 16800 */;
-import _mod16811 from "module_16811" /* 16811 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 16892 */;
+import _mod16903 from "module_16903" /* 16903 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG }, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
 let size = { height: 2, width: 48, margin: 32, backgroundColor: nativeDefault.colors.BORDER_STRONG };
@@ -82,7 +82,7 @@ export default function TwoFASetupSuccess() {
               const intl = setRegistering(1113).intl;
               c5 = 3;
               c6 = 1;
-              const obj5 = { value: setRegistering(6868).finishRegisterWebAuthnCredential(intl.string(setRegistering(1113).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
+              const obj5 = { value: setRegistering(6883).finishRegisterWebAuthnCredential(intl.string(setRegistering(1113).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
               return obj5;
             }
           } else {
@@ -94,9 +94,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(16799).close();
+              setError(16891).close();
               c4 = 0;
-              const obj = setError(16799);
+              const obj = setError(16891);
             }
             c4 = 0;
             c6 = 3;
@@ -134,10 +134,10 @@ export default function TwoFASetupSuccess() {
   let obj3 = { source: null, style: null };
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  obj3.source = _mod16811;
+  obj3.source = _mod16903;
   obj3.style = tmp.image;
   items[1] = closure_7(FastImageDefault, obj3);
-  let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  let obj4 = { style: tmp.success, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);
   items[2] = closure_7(Text_Text.Text, obj4);

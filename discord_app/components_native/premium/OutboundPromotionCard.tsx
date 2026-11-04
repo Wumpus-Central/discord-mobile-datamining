@@ -1,14 +1,14 @@
-// === Module 15588: OutboundPromotionCard ===
+// === Module 15675: OutboundPromotionCard ===
 
-// Module 15588 (OutboundPromotionCard)
+// Module 15675 (OutboundPromotionCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5874 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5888 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ function TermsAndConditionsActionSheet(termsAndConditions) {
   const intl = util.intl;
   obj2.title = intl.string(util.t.PdKWVT);
   obj.header = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
-  const obj3 = { style: closure_8().termsAndConditionsText, variant: "text-sm/medium", children: null };
+  const obj3 = { style: closure_8().termsAndConditionsText, variant: "body-sm/medium", children: null };
   const tmp = closure_8();
   obj3.children = MarkupUtilsDefault.parse(termsAndConditions.termsAndConditions, false, { allowLinks: true });
   obj.children = timestampProducer(Text_Text.Text, obj3);
@@ -27,10 +27,10 @@ function TermsAndConditionsActionSheet(termsAndConditions) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { card: { flex: 1, flexDirection: "column", paddingHorizontal: fn(1072).USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 8 }, mainContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, textContainer: { flexDirection: "row", flexShrink: 1, alignItems: "center" }, imageContainer: null, image: null, title: null, subText: null, claimButton: null, moreDetails: null, termsAndConditionsText: null, buttonContainer: null };
-let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(6898).DARK_BLACK_500_LIGHT_PRIMARY_100 };
+let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(6913).DARK_BLACK_500_LIGHT_PRIMARY_100 };
 obj2.imageContainer = size;
 obj2.image = { width: 28, height: 28, resizeMode: "contain" };
 obj2.title = { lineHeight: 20 };
@@ -101,7 +101,7 @@ export default function OutboundPromotionCard(outboundPromotion) {
   const items1 = [closure_6(View, obj6), , ];
   const obj8 = { style: tmp.textContainer, children: null };
   const obj9 = { children: null };
-  const items2 = [closure_6(outboundPromotion(first[11]).Text, { style: tmp.title, accessibilityRole: "header", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: outboundPromotion.outboundTitle }), closure_6(outboundPromotion(first[11]).Text, { style: tmp.subText, variant: "text-sm/medium", color: "text-default", children: formatToPlainStringResult })];
+  const items2 = [closure_6(outboundPromotion(first[11]).Text, { style: tmp.title, accessibilityRole: "header", variant: "body-md/semibold", color: "mobile-text-heading-primary", children: outboundPromotion.outboundTitle }), closure_6(outboundPromotion(first[11]).Text, { style: tmp.subText, variant: "body-sm/medium", color: "text-default", children: formatToPlainStringResult })];
   obj9.children = items2;
   obj8.children = closure_7(View, obj9);
   items1[1] = closure_6(View, obj8);
@@ -122,7 +122,7 @@ export default function OutboundPromotionCard(outboundPromotion) {
   obj5.children = items1;
   const items3 = [closure_7(View, obj5), ];
   const obj15 = { children: null };
-  const obj16 = { style: tmp.moreDetails, variant: "text-sm/medium", children: null };
+  const obj16 = { style: tmp.moreDetails, variant: "body-sm/medium", children: null };
   const intl3 = tmp5(tmp3[10]).intl;
   obj16.children = intl3.format(outboundPromotion(first[10]).t.sCm3Zb, {
     onClick: function showTermsAndConditions() {

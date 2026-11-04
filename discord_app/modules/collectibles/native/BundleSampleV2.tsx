@@ -1,15 +1,15 @@
-// === Module 9621: BundleSampleV2 ===
+// === Module 9640: BundleSampleV2 ===
 
-// Module 9621 (BundleSampleV2)
+// Module 9640 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import utils from "utils" /* 2113 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9623 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9634 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9641 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9642 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9653 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9660 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -88,7 +88,7 @@ function BundleStaticPreviewContent(mutedBackground) {
   }
   items[1] = tmp24Result;
   obj3.children = items;
-  return React5(React4, obj3);
+  return metroImportDefault(React4, obj3);
 }
 function BundleSampleV2Composed(arg0) {
   ({ deco, pfx, nameplate, size } = arg0);
@@ -115,7 +115,7 @@ function BundleSampleV2Composed(arg0) {
     if (null == nameplateData) {
       items[2] = null;
       obj2.children = items;
-      return React5(React4, obj2);
+      return metroImportDefault(React4, obj2);
     } else {
       const obj5 = { style: tmp.nameplate, children: null };
       let AvatarSizes = dependencyMap;
@@ -142,9 +142,9 @@ function BundleSampleV2Composed(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(9622).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(9641).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
 let obj2 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,12 +1,12 @@
-// === Module 19932: GuildSettingsRolesUtils ===
+// === Module 20048: GuildSettingsRolesUtils ===
 
-// Module 19932 (GuildSettingsRolesUtils)
+// Module 20048 (GuildSettingsRolesUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
-import GuildUtilsDefault from "GuildUtils" /* 7021 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7419 */;
+import fuzzysearchDefault from "fuzzysearch" /* 7034 */;
+import GuildUtilsDefault from "GuildUtils" /* 7036 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7435 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -14,7 +14,7 @@ import UserStore from "UserStore" /* 1385 */;
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(19923).GuildSettingsRoleEditSections;
+const constants = fn(20039).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");

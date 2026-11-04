@@ -1,16 +1,16 @@
-// === Module 15874: ShareEmbed ===
+// === Module 15962: ShareEmbed ===
 
-// Module 15874 (ShareEmbed)
+// Module 15962 (ShareEmbed)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row", height: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, containerRevamp: { borderWidth: 0 }, thumbnail: { width: 80 }, contentContainer: { flex: 1, flexDirection: "column", justifyContent: "center", paddingLeft: 12, paddingRight: 24 }, authorView: { flexDirection: "row", alignItems: "center", marginBottom: 3 }, authorThumbnail: null, loadingSpinner: null };
 let size = { height: 16, width: 16, borderRadius: nativeDefault.radii.sm, marginRight: 4 };
@@ -80,7 +80,7 @@ export default function ShareEmbed(embed) {
         tmp5 = hasOwnProperty(FastImageDefault, obj2);
       }
       items = [tmp5, ];
-      const obj4 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", ellipsizeMode: "tail", lineClamp: 1, children: author.name };
+      const obj4 = { variant: "body-xs/semibold", color: "mobile-text-heading-primary", ellipsizeMode: "tail", lineClamp: 1, children: author.name };
       items[1] = hasOwnProperty(Text_Text.Text, obj4);
       obj.children = items;
       return timestampProducer(View, obj);
@@ -93,7 +93,7 @@ export default function ShareEmbed(embed) {
     }
     let tmp2 = null;
     if (null != title) {
-      const obj = { style: { marginVertical: 1 }, variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, ellipsizeMode: "tail", children: title };
+      const obj = { style: { marginVertical: 1 }, variant: "body-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, ellipsizeMode: "tail", children: title };
       tmp2 = hasOwnProperty(Text_Text.Text, obj);
     }
     return tmp2;
@@ -108,7 +108,7 @@ export default function ShareEmbed(embed) {
     if (null == memo3) {
       tmp = null;
       if (null != description) {
-        const obj = { style: { marginVertical: 1 }, variant: "text-xs/medium", color: "text-default", lineClamp: 1, ellipsizeMode: "tail", children: description };
+        const obj = { style: { marginVertical: 1 }, variant: "body-xs/medium", color: "text-default", lineClamp: 1, ellipsizeMode: "tail", children: description };
         tmp = hasOwnProperty(Text_Text.Text, obj);
       }
     }
@@ -127,7 +127,7 @@ export default function ShareEmbed(embed) {
       let tmp9Result = null != memo;
       if (tmp9Result) {
         let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-        tmp9Result = closure_5(isLoadingEmbed(5837), obj2);
+        tmp9Result = closure_5(isLoadingEmbed(5851), obj2);
       }
       let obj3 = { children: null };
       const items6 = [tmp9Result, ];

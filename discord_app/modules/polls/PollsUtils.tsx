@@ -1,16 +1,16 @@
-// === Module 8527: PollsUtils ===
+// === Module 8544: PollsUtils ===
 
-// Module 8527 (PollsUtils)
+// Module 8544 (PollsUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1266 */;
 import utils_StringUtils from "utils/StringUtils" /* 2156 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
-import useMessageAuthor from "useMessageAuthor" /* 6558 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7520 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
+import useMessageAuthor from "useMessageAuthor" /* 6573 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7536 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 8528 */;
-import MessageStore from "MessageStore" /* 6181 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 8545 */;
+import MessageStore from "MessageStore" /* 6196 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
@@ -19,7 +19,7 @@ const require = globalThis.__r;
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(5738).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(5752).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -94,7 +94,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8530);
+const PollsConstants = fn(8547);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1072);
 ({ ChannelTypesSets: closure_10, Permissions: closure_11 } = Constants);
@@ -275,8 +275,8 @@ export function getPollResultsReplyPreview(message) {
     str = "";
   }
   let truncateTextResult = str;
-  if (null != React6) {
-    truncateTextResult = utils_StringUtils.truncateText(str, React6);
+  if (null != React5) {
+    truncateTextResult = utils_StringUtils.truncateText(str, React5);
     const tmpResult = utils_StringUtils;
   }
   const intl = util.intl;
@@ -300,8 +300,8 @@ export function getPollResultsReplyPreviewMobile(message5) {
       str = "";
     }
     let truncateTextResult = str;
-    if (null != React6) {
-      truncateTextResult = utils_StringUtils.truncateText(str, React6);
+    if (null != React5) {
+      truncateTextResult = utils_StringUtils.truncateText(str, React5);
       const tmp2Result = utils_StringUtils;
     }
     const intl = util.intl;

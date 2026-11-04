@@ -1,12 +1,12 @@
-// === Module 14245: GuildPowerupsDeactivateAlert ===
+// === Module 14331: GuildPowerupsDeactivateAlert ===
 
-// Module 14245 (GuildPowerupsDeactivateAlert)
+// Module 14331 (GuildPowerupsDeactivateAlert)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef2699 from "module_2699" /* 2699 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 14246 */;
-import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 14247 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 14332 */;
+import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 14333 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size_mod from "module_2" /* 2 */;
@@ -44,8 +44,8 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   obj2.content = intl2.formatToPlainString(_modDef2699["7o0K+2"], { perk: powerup.title });
   let tmp7Result = null != error;
   if (tmp7Result) {
-    const obj7 = { style: tmp.warningText, variant: "text-xs/semibold", color: "text-feedback-critical", children: error };
-    tmp7Result = closure_4(tmp5(5747).Text, obj7);
+    const obj7 = { style: tmp.warningText, variant: "body-xs/semibold", color: "text-feedback-critical", children: error };
+    tmp7Result = closure_4(tmp5(5761).Text, obj7);
   }
   const obj8 = { children: null };
   items = [tmp7Result, , ];
@@ -79,9 +79,9 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     style: tmp.extraContentContainer,
     children: arr.map((critical, index) => {
       const obj = { style: warningText.warningText, variant: null, color: null, children: null };
-      let str = "text-sm/medium";
+      let str = "body-sm/medium";
       if (critical.critical) {
-        str = "text-sm/semibold";
+        str = "body-sm/semibold";
       }
       obj.variant = str;
       let str2;

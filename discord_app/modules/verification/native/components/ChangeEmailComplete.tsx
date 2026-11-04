@@ -1,13 +1,13 @@
-// === Module 7289: ChangeEmailComplete ===
+// === Module 7305: ChangeEmailComplete ===
 
-// Module 7289 (ChangeEmailComplete)
+// Module 7305 (ChangeEmailComplete)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7121 */;
-import _modDef7204 from "module_7204" /* 7204 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7136 */;
+import _modDef7219 from "module_7219" /* 7219 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const resetChangeEmailStore = fn(7123).resetChangeEmailStore;
+const resetChangeEmailStore = fn(7138).resetChangeEmailStore;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { contentContainer: { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: 20, alignItems: "center" }, image: { height: 190, width: 220, resizeMode: "contain" }, title: { textAlign: "center" }, body: { textAlign: "center" }, bodyInner: { gap: 2 }, tooltip: null };
 let obj3 = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: 20, alignItems: "center" };
@@ -32,20 +32,20 @@ const result = size.fileFinishedImporting("modules/verification/native/component
 export default function ChangeEmailComplete(email) {
   const tmp = closure_8();
   const obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
-  const obj2 = { style: tmp.image, source: _modDef7204 };
+  const obj2 = { style: tmp.image, source: _modDef7219 };
   items = [timestampProducer(FastImageDefault, obj2), , , ];
   const obj3 = { style: tmp.bodyInner, children: null };
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["8O+nF7"]);
   const items1 = [timestampProducer(Text_Text.Text, obj4), ];
-  const obj5 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.body, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.format(util.t.Zvx0O3, { email: email.email });
   items1[1] = timestampProducer(Text_Text.Text, obj5);
   obj3.children = items1;
-  items[1] = React5(React3, obj3);
-  const obj6 = { style: tmp.tooltip, variant: "text-sm/normal", children: null };
+  items[1] = metroImportDefault(React3, obj3);
+  const obj6 = { style: tmp.tooltip, variant: "body-sm/normal", children: null };
   const intl3 = util.intl;
   obj6.children = intl3.string(util.t.yb7itQ);
   items[2] = timestampProducer(Text_Text.Text, obj6);
@@ -55,5 +55,5 @@ export default function ChangeEmailComplete(email) {
   obj7.onPress = handlePress;
   items[3] = timestampProducer(components_Button_Button.Button, obj7);
   obj.children = items;
-  return React5(React4, obj);
+  return metroImportDefault(React4, obj);
 };

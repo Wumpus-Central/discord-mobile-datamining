@@ -1,8 +1,8 @@
-// === Module 12791: useConjureVoiceChannelPin ===
+// === Module 12872: useConjureVoiceChannelPin ===
 
-// Module 12791 (useConjureVoiceChannelPin)
-import useChannelName from "useChannelName" /* 5772 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11092 */;
+// Module 12872 (useConjureVoiceChannelPin)
+import useChannelName from "useChannelName" /* 5786 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11141 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,8 +11,8 @@ import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
-import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 11001 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 11049 */;
 
 const require = globalThis.__r;
 

@@ -1,18 +1,18 @@
-// === Module 17682: ChangeLogModal ===
+// === Module 17778: ChangeLogModal ===
 
-// Module 17682 (ChangeLogModal)
+// Module 17778 (ChangeLogModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import Navigator from "Navigator" /* 7290 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8689 */;
-import openMediaModal from "openMediaModal" /* 8957 */;
-import common_VideoDefault from "common/Video" /* 8997 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9237 */;
-import _modDef10407 from "module_10407" /* 10407 */;
-import _modDef17683 from "module_17683" /* 17683 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import Navigator from "Navigator" /* 7306 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8706 */;
+import openMediaModal from "openMediaModal" /* 8974 */;
+import common_VideoDefault from "common/Video" /* 9014 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9254 */;
+import _modDef10455 from "module_10455" /* 10455 */;
+import _modDef17779 from "module_17779" /* 17779 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -99,7 +99,7 @@ class ChangeLogScreen {
       obj10.style = legacyClassComponentStyles.empty;
       tmp17 = View;
       Text = tmp(tmp2[25]).Text;
-      obj11 = { variant: "text-md/semibold", children: null };
+      obj11 = { variant: "body-md/semibold", children: null };
       intl = tmp(tmp2[13]).intl;
       string = intl.string;
       t = tmp(tmp2[13]).t;
@@ -135,7 +135,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const CHANGELOG_MODAL_KEY = fn(5043).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
 let createStyles = fn(5141);
 let obj2 = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: { borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, videoOverlay: { position: "absolute", width: "100%", height: "100%" }, playButton: null, playIcon: null, empty: null };
@@ -160,7 +160,7 @@ ListItem.prototype["render"] = function render() {
   const children = this.props.children;
   const tmp = closure_11(this.context);
   const obj = { style: tmp.listItem, children: null };
-  items = [React5(View, { style: tmp.bulletPoint }), ];
+  items = [metroImportDefault(View, { style: tmp.bulletPoint }), ];
   const obj3 = { style: tmp.listText, children: null };
   let childrenResult = children;
   if (typeof children === "function") {
@@ -168,9 +168,9 @@ ListItem.prototype["render"] = function render() {
     childrenResult = children(obj4);
   }
   obj3.children = childrenResult;
-  items[1] = React5(View, obj3);
+  items[1] = metroImportDefault(View, obj3);
   obj.children = items;
-  return React6(View, obj);
+  return React5(View, obj);
 };
 ListItem.contextType = fn(5207).ThemeContext;
 const PureComponent2 = noop.PureComponent;
@@ -233,11 +233,11 @@ prototype["track"] = function track(arg0) {
   const self = this;
   const changeLog = this.props.changeLog;
   if (null != changeLog) {
-    const obj3 = { change_log_id: null };
+    const obj2 = { change_log_id: null };
     const _HermesInternal = HermesInternal;
-    obj3.change_log_id = "" + changeLog.date + ":" + changeLog.revision;
+    obj2.change_log_id = "" + changeLog.date + ":" + changeLog.revision;
     const merged = Object.assign(obj);
-    let tmp10 = obj3;
+    let tmp4 = obj2;
     if (arg0 === AnalyticEvents.CHANGE_LOG_CLOSED) {
       const obj4 = { seconds_open: null, max_scrolled_percentage: null };
       const _Math = Math;
@@ -246,10 +246,10 @@ prototype["track"] = function track(arg0) {
       const _parseInt = parseInt;
       const maxScrolledPercentage = self.maxScrolledPercentage;
       obj4.max_scrolled_percentage = 100 * parseInt(maxScrolledPercentage.toPrecision(4), 10);
-      const merged1 = Object.assign(obj3);
-      tmp10 = obj4;
+      const merged1 = Object.assign(obj2);
+      tmp4 = obj4;
     }
-    AnalyticsUtilsDefault.track(arg0, tmp10);
+    AnalyticsUtilsDefault.track(arg0, tmp4);
   }
 };
 prototype["renderVideo"] = function renderVideo() {
@@ -274,7 +274,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      items = [closure_7(_modDef17683, obj4), ];
+      items = [closure_7(_modDef17779, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -305,9 +305,9 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10407, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1187).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10455, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1187).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(7106).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(7121).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
@@ -320,7 +320,7 @@ prototype["render"] = function render() {
   const merged = Object.assign(this.props);
   obj.video = this.renderVideo();
   obj.onScroll = this.handleScroll;
-  return React5(ChangeLogStandardTemplateDefault, obj);
+  return metroImportDefault(ChangeLogStandardTemplateDefault, obj);
 };
 ChangeLog.contextType = fn(5207).ThemeContext;
 size = fn(2);
@@ -339,7 +339,7 @@ export default function ChangelogModal() {
     obj.CHANGELOG = obj2;
     return obj;
   }, []);
-  return React5(Navigator.Navigator, { screens, initialRouteName: "CHANGELOG" });
+  return metroImportDefault(Navigator.Navigator, { screens, initialRouteName: "CHANGELOG" });
 };
 export { ListItem };
 export { ChangeLogScreen };

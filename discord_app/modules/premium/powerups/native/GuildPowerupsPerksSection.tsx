@@ -1,20 +1,20 @@
-// === Module 14274: GuildPowerupsPerksSection ===
+// === Module 14360: GuildPowerupsPerksSection ===
 
-// Module 14274 (GuildPowerupsPerksSection)
+// Module 14360 (GuildPowerupsPerksSection)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2699 from "module_2699" /* 2699 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 14257 */;
-import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 14275 */;
-import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 14277 */;
-import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 14279 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 14343 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 14361 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 14363 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 14365 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { container: { flexDirection: "column", gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerksSection.tsx");

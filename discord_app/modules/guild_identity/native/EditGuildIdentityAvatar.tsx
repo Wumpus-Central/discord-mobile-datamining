@@ -1,16 +1,16 @@
-// === Module 16718: EditGuildIdentityAvatar ===
+// === Module 16808: EditGuildIdentityAvatar ===
 
-// Module 16718 (EditGuildIdentityAvatar)
+// Module 16808 (EditGuildIdentityAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9917 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9935 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticsSections: metroRequire, AnalyticsObjects: closure_7, UpsellTypes: closure_8 } = Constants);
+({ AnalyticsSections: closure_6, AnalyticsObjects: metroImportDefault, UpsellTypes: closure_8 } = Constants);
 const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

@@ -1,9 +1,9 @@
-// === Module 17376: GuildRoleSubscriptionBenefitUtils ===
+// === Module 17467: GuildRoleSubscriptionBenefitUtils ===
 
-// Module 17376 (GuildRoleSubscriptionBenefitUtils)
+// Module 17467 (GuildRoleSubscriptionBenefitUtils)
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
-import TextIcon2 from "TextIcon" /* 8776 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
+import TextIcon2 from "TextIcon" /* 8793 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export function getChannelIconComponentOrDefault(channel, guild) {
     TextIcon = utils_ChannelUtils.getChannelIconComponent(channel);
   }
   if (TextIcon == null) {
-    TextIcon = tmp(8776).TextIcon;
+    TextIcon = tmp(8793).TextIcon;
   }
   return TextIcon;
 }

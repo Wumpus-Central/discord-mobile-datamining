@@ -1,16 +1,16 @@
-// === Module 18271: happeningNowRankingUtils ===
+// === Module 18368: happeningNowRankingUtils ===
 
-// Module 18271 (happeningNowRankingUtils)
+// Module 18368 (happeningNowRankingUtils)
 import _mod12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 const _modDef12 = _mod12;
 
 require = fn;
-const HappeningNowConstants = fn(17430);
-({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: metroRequire, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_7 } = HappeningNowConstants);
+const HappeningNowConstants = fn(17521);
+({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: metroImportDefault } = HappeningNowConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");
 
@@ -33,7 +33,7 @@ export function cardSize(kind) {
     case "unified-vc":
       return hasOwnProperty;
     case "user":
-      return React5;
+      return metroImportDefault;
     case "invite":
       return timestampProducer;
     case "create-channel":

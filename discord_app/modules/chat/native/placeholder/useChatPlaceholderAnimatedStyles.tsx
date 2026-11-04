@@ -1,10 +1,10 @@
-// === Module 14346: useChatPlaceholderAnimatedStyles ===
+// === Module 14426: useChatPlaceholderAnimatedStyles ===
 
-// Module 14346 (useChatPlaceholderAnimatedStyles)
+// Module 14426 (useChatPlaceholderAnimatedStyles)
 import initialize from "initialize" /* 504 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import timingPresets from "timingPresets" /* 5380 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import timingPresets from "timingPresets" /* 5381 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;

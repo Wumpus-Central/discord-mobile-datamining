@@ -1,10 +1,10 @@
-// === Module 5310: native ===
+// === Module 5311: native ===
 
-// Module 5310 (native)
+// Module 5311 (native)
 import themes from "themes" /* 5163 */;
-import shared_getNodeText from "shared/getNodeText" /* 5311 */;
-import mergeProps from "mergeProps" /* 5312 */;
-import useFocus from "useFocus" /* 5313 */;
+import shared_getNodeText from "shared/getNodeText" /* 5312 */;
+import mergeProps from "mergeProps" /* 5313 */;
+import useFocus from "useFocus" /* 5314 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/utils/native.tsx");

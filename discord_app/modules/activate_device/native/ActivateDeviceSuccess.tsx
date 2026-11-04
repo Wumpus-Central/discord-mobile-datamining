@@ -1,19 +1,19 @@
-// === Module 15856: ActivateDeviceSuccess ===
+// === Module 15944: ActivateDeviceSuccess ===
 
-// Module 15856 (ActivateDeviceSuccess)
+// Module 15944 (ActivateDeviceSuccess)
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import scopes2 from "scopes" /* 9875 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 15855 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import scopes2 from "scopes" /* 9893 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 15943 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ image: { width: 300, height: 200, alignSelf: "center" } });
 const size = fn(2);
@@ -48,7 +48,7 @@ export function ActivateDeviceSuccess(onComplete) {
   const items1 = [React4(Text_Text.Text, obj4), ];
   let tmp18Result = null;
   if (null != stringResult) {
-    const obj5 = { variant: "text-md/medium", color: "text-default", style: ActivateDeviceSharedStylesDefault.centerText, children: stringResult };
+    const obj5 = { variant: "body-md/medium", color: "text-default", style: ActivateDeviceSharedStylesDefault.centerText, children: stringResult };
     tmp18Result = React4(Text_Text.Text, obj5);
   }
   const obj6 = { children: null };

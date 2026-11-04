@@ -1,16 +1,16 @@
-// === Module 14215: useGuildPowerupsNewBadge ===
+// === Module 14301: useGuildPowerupsNewBadge ===
 
-// Module 14215 (useGuildPowerupsNewBadge)
+// Module 14301 (useGuildPowerupsNewBadge)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4975 */;
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 14210 */;
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 14296 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5353 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(5353).GuildPowerupNewPerkMarketingVersion;
+const constants = fn(5354).GuildPowerupNewPerkMarketingVersion;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 let closure_8 = fn(4974).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 const size = fn(2);
@@ -40,11 +40,11 @@ export default function useGuildPowerupsNewBadge(guildId) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = _slicedToArray(tmp(7693).useSelectedVersionedDismissibleContent(tmp6, num), 2);
+  const tmp7 = _slicedToArray(tmp(7709).useSelectedVersionedDismissibleContent(tmp6, num), 2);
   _require = tmp8;
   importDefault = tmp9;
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
-  const tmpResult = tmp(7693);
+  const tmpResult = tmp(7709);
   return {
     showNewBadgeOnRow: tmp7[0] === closure_8,
     dismissNewBadgeIfShown: noop.useCallback(() => {
@@ -64,7 +64,7 @@ export function useAutoDismissGuildPowerupsNewBadge(guildId) {
   items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let obj = require("initialize");
-  const tmp2Result = num(14210)(guildId, stateFromStores);
+  const tmp2Result = num(14296)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

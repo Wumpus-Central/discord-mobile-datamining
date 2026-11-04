@@ -1,8 +1,8 @@
-// === Module 18732: ContentInventoryEntryRow ===
+// === Module 18833: ContentInventoryEntryRow ===
 
-// Module 18732 (ContentInventoryEntryRow)
-import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 18733 */;
-import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 18740 */;
+// Module 18833 (ContentInventoryEntryRow)
+import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 18834 */;
+import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 18841 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
@@ -23,9 +23,9 @@ export default function ContentInventoryEntryRow(content) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8838).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8838).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8838).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8855).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8855).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8855).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           const obj2 = { content, renderForScreenshot: flag, visible: null };
           if (flag2 == null) {
             flag2 = false;

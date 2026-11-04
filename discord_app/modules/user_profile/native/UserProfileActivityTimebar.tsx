@@ -1,9 +1,9 @@
-// === Module 15009: UserProfileActivityTimebar ===
+// === Module 15089: UserProfileActivityTimebar ===
 
-// Module 15009 (UserProfileActivityTimebar)
+// Module 15089 (UserProfileActivityTimebar)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useActivityTimer from "useActivityTimer" /* 15010 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useActivityTimer from "useActivityTimer" /* 15090 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityTimerDefault = useActivityTimer;
@@ -34,9 +34,9 @@ export default function UserProfileActivityTimebar(arg0) {
   obj2.children = React4(View, obj3);
   const items1 = [React4(View, obj2), ];
   const obj5 = { style: tmp.textRow, children: null };
-  const obj6 = { variant: "text-xs/normal", tabularNumbers: true, color: "text-subtle", children: useActivityTimer.formatTime(elapsed) };
+  const obj6 = { variant: "body-xs/normal", tabularNumbers: true, color: "text-subtle", children: useActivityTimer.formatTime(elapsed) };
   const items2 = [React4(Text_Text.Text, obj6), ];
-  const obj8 = { variant: "text-xs/normal", tabularNumbers: true, color: "text-subtle", children: null };
+  const obj8 = { variant: "body-xs/normal", tabularNumbers: true, color: "text-subtle", children: null };
   const obj4 = { width: `${100 * tmp2.percentage}%` };
   obj8.children = useActivityTimer.formatTime(duration);
   items2[1] = React4(Text_Text.Text, obj8);

@@ -1,30 +1,30 @@
-// === Module 11518: GiftCodeRedeemStart ===
+// === Module 11568: GiftCodeRedeemStart ===
 
-// Module 11518 (GiftCodeRedeemStart)
+// Module 11568 (GiftCodeRedeemStart)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6564 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7528 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7641 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10800 */;
-import actions_GiftCodeActionCreatorsDefault from "actions/GiftCodeActionCreators" /* 11511 */;
-import GiftCodeRedeemModal from "GiftCodeRedeemModal" /* 11517 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11530 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11643 */;
-import NameplatePreview from "NameplatePreview" /* 11644 */;
-import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11645 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6579 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7544 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7657 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10848 */;
+import actions_GiftCodeActionCreatorsDefault from "actions/GiftCodeActionCreators" /* 11561 */;
+import GiftCodeRedeemModal from "GiftCodeRedeemModal" /* 11567 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11580 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11694 */;
+import NameplatePreview from "NameplatePreview" /* 11695 */;
+import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11696 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GiftCodeStore from "GiftCodeStore" /* 11508 */;
+import GiftCodeStore from "GiftCodeStore" /* 11558 */;
 import UserStore from "UserStore" /* 1385 */;
-import SKUStore from "SKUStore" /* 7016 */;
+import SKUStore from "SKUStore" /* 7031 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, GiftCodeModalStates: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -224,7 +224,7 @@ export default function GiftCodeRedeemStart(giftCode) {
         items9[2] = tmp30Result;
         if (tmp27Result2) {
           const obj15 = { style: tmp.message, children: null };
-          const obj16 = { variant: "eyebrow", color: "text-default", style: tmp.text, children: null };
+          const obj16 = { variant: "body-sm/medium", color: "text-default", style: tmp.text, children: null };
           const intl2 = tmp2(tmp3[10]).intl;
           const obj17 = { sender: str };
           obj16.children = intl2.format(tmp2(tmp3[10]).t["6yrIzU"], obj17);

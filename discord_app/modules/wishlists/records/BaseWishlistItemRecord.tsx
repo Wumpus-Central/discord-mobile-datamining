@@ -1,6 +1,6 @@
-// === Module 9601: BaseWishlistItemRecord ===
+// === Module 9620: BaseWishlistItemRecord ===
 
-// Module 9601 (BaseWishlistItemRecord)
+// Module 9620 (BaseWishlistItemRecord)
 import Record from "Record" /* 1400 */;
 import SKURecord from "SKURecord" /* 2169 */;
 

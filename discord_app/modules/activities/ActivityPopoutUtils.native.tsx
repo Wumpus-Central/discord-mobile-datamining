@@ -1,6 +1,6 @@
-// === Module 5797: ActivityPopoutUtils ===
+// === Module 5811: ActivityPopoutUtils ===
 
-// Module 5797 (ActivityPopoutUtils)
+// Module 5811 (ActivityPopoutUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/ActivityPopoutUtils.native.tsx");

@@ -1,9 +1,9 @@
-// === Module 14674: DoubleTapEmojiEditNudge ===
+// === Module 14754: DoubleTapEmojiEditNudge ===
 
-// Module 14674 (DoubleTapEmojiEditNudge)
+// Module 14754 (DoubleTapEmojiEditNudge)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8550 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8567 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -89,7 +89,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
               return obj16;
             } else {
               const obj17 = { emoji: closure_129_0 };
-              const result = _location(10082).showDoubleTapEmojiUpdatedToast(obj17);
+              const result = _location(10130).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -110,12 +110,12 @@ function DoubleTapEmojiEditNudgeInner(location) {
       }
       return applyArgumentsResult;
     };
-    let result = _location(10070).openEmojiPickerActionSheet(obj2, "stack");
+    let result = _location(10118).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
-  let obj4 = { color: "text-subtle", variant: "text-sm/normal", children: null };
+  let obj4 = { color: "text-subtle", variant: "body-sm/normal", children: null };
   const intl = _location(1113).intl;
   obj4.children = intl.string(_location(1113).t["1EUr/W"]);
-  const items3 = [closure_11(_location(5747).Text, obj4), , ];
+  const items3 = [closure_11(_location(5761).Text, obj4), , ];
   const obj5 = { style: tmp5.doubleTapEmojiContainer, fastImageStyle: tmp5.doubleTapCustomEmoji, textEmojiStyle: tmp5.doubleTapTextEmoji, src: memo, name: null };
   let str = "";
   let obj2 = _location(504);
@@ -123,13 +123,13 @@ function DoubleTapEmojiEditNudgeInner(location) {
     str = emoji.surrogates;
   }
   obj5.name = str;
-  items3[1] = closure_11(emoji(7420), obj5);
+  items3[1] = closure_11(emoji(7436), obj5);
   let obj6 = { accessibilityRole: "button", onPress: callback, hitSlop, style: tmp5.editButton, children: null };
-  const obj7 = { color: "text-brand", variant: "text-sm/normal", children: null };
+  const obj7 = { color: "text-brand", variant: "body-sm/normal", children: null };
   const intl2 = tmp(1113).intl;
   obj7.children = intl2.string(_location(1113).t.bt75uw);
-  obj6.children = closure_11(_location(5747).Text, obj7);
-  items3[2] = closure_11(_location(7106).PressableOpacity, obj6);
+  obj6.children = closure_11(_location(5761).Text, obj7);
+  items3[2] = closure_11(_location(7121).PressableOpacity, obj6);
   obj3.children = items3;
   return closure_12(View, obj3);
 }

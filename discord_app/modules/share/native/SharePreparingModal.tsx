@@ -1,21 +1,21 @@
-// === Module 9065: SharePreparingModal ===
+// === Module 9082: SharePreparingModal ===
 
-// Module 9065 (SharePreparingModal)
+// Module 9082 (SharePreparingModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Backdrop from "Backdrop" /* 5721 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 9066 */;
-import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 9067 */;
+import Backdrop from "Backdrop" /* 5734 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7095 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 9083 */;
+import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 9084 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { content: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 }, topBar: null, topBarEnd: null };
 let obj4 = {};
@@ -45,7 +45,7 @@ export default function SharePreparingModal(onCancel) {
   obj2.children = hasOwnProperty(MediaModalOverlayHeaderWrapper.MediaModalOverlayHeaderWrapper, obj3);
   items1[1] = hasOwnProperty(React4, obj2);
   items1[2] = hasOwnProperty(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
-  const obj5 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
+  const obj5 = { variant: "body-sm/medium", color: "text-overlay-light", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.DwTQE5);
   items1[3] = hasOwnProperty(Text_Text.Text, obj5);

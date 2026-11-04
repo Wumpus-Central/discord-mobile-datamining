@@ -1,13 +1,13 @@
-// === Module 15219: EditCollectiblesPreviewDetails ===
+// === Module 15302: EditCollectiblesPreviewDetails ===
 
-// Module 15219 (EditCollectiblesPreviewDetails)
+// Module 15302 (EditCollectiblesPreviewDetails)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
 import DateUtils from "DateUtils" /* 4963 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8868 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7872 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8885 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
 
@@ -44,7 +44,7 @@ function EditCollectiblesPreviewDescription(arg0) {
       }
       let tmp17 = null != diffAsUnitsResult;
       if (tmp17) {
-        const obj4 = { variant: "text-sm/medium", color: "text-default", children: null };
+        const obj4 = { variant: "body-sm/medium", color: "text-default", children: null };
         const intl = util.intl;
         const obj5 = { days: diffAsUnitsResult.days.toString() };
         obj4.children = intl.format(util.t.Io7ozn, obj5);
@@ -57,7 +57,7 @@ function EditCollectiblesPreviewDescription(arg0) {
         const purchasedAt = purchase.purchasedAt;
         toLocaleDateStringResult = purchasedAt.toLocaleDateString(stateFromStores, { month: "long", year: "numeric" });
       }
-      const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
+      const obj6 = { variant: "body-sm/medium", color: "text-default", children: null };
       const obj7 = { date: toLocaleDateStringResult };
       obj6.children = intl2.format(util.t.gW9R4B, obj7);
       items1[1] = hasOwnProperty(Text_Text.Text, obj6);
@@ -67,7 +67,7 @@ function EditCollectiblesPreviewDescription(arg0) {
       }
       let tmp19Result = null != expiresAt2;
       if (tmp19Result) {
-        const obj8 = { variant: "text-sm/medium", color: "text-default", children: null };
+        const obj8 = { variant: "body-sm/medium", color: "text-default", children: null };
         const intl3 = util.intl;
         const obj9 = { date: null };
         const expiresAt = purchase.expiresAt;
@@ -78,12 +78,12 @@ function EditCollectiblesPreviewDescription(arg0) {
       const obj10 = { children: null };
       items1[2] = tmp19Result;
       obj10.children = items1;
-      return React5(timestampProducer, obj10);
+      return metroImportDefault(timestampProducer, obj10);
     }
   }
   if (result) {
     if (canUseCollectiblesResult) {
-      const obj11 = { variant: "text-sm/medium", color: "text-default", children: null };
+      const obj11 = { variant: "body-sm/medium", color: "text-default", children: null };
       const intl5 = util.intl;
       stringResult = intl5.string(util.t.hmyYK8);
       obj11.children = stringResult;
@@ -91,7 +91,7 @@ function EditCollectiblesPreviewDescription(arg0) {
     } else {
       const tmp4Result = PremiumUtilsDefault;
       const Text = Text_Text.Text;
-      const obj12 = { variant: "text-sm/medium", color: "text-default", children: null };
+      const obj12 = { variant: "body-sm/medium", color: "text-default", children: null };
       if (isPremiumResult) {
         obj12.children = nitroUpgradeCTA;
         tmp25Result = hasOwnProperty(Text, obj12);
@@ -102,7 +102,7 @@ function EditCollectiblesPreviewDescription(arg0) {
       isPremiumResult = PremiumUtilsDefault.isPremium(user);
     }
   } else {
-    const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj13 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl4 = util.intl;
     obj13.children = intl4.string(util.t.fEGjVQ);
     return hasOwnProperty(Text_Text.Text, obj13);
@@ -110,7 +110,7 @@ function EditCollectiblesPreviewDescription(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ productDetailsContainer: { width: "100%", marginVertical: 12, alignItems: "center", gap: 2 } });
 const size = fn(2);
@@ -136,12 +136,12 @@ export default function EditCollectiblesPreviewDetails(previewSkuId) {
         }
         name = name1;
       }
-      const obj2 = { variant: "text-md/semibold", color: "text-default", children: name };
+      const obj2 = { variant: "body-md/semibold", color: "text-default", children: name };
       items = [hasOwnProperty(Text_Text.Text, obj2), ];
       const obj3 = { user, product, purchase, nitroJoinCTA, nitroUpgradeCTA };
       items[1] = hasOwnProperty(EditCollectiblesPreviewDescription, obj3);
       obj.children = items;
-      tmp5Result = React5(View, obj);
+      tmp5Result = metroImportDefault(View, obj);
     } else {
       tmp5Result = null;
     }

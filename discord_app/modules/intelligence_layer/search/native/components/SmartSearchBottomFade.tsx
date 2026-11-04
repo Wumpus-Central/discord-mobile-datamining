@@ -1,8 +1,8 @@
-// === Module 18923: SmartSearchBottomFade ===
+// === Module 19026: SmartSearchBottomFade ===
 
-// Module 18923 (SmartSearchBottomFade)
+// Module 19026 (SmartSearchBottomFade)
 import _modDef671 from "module_671" /* 671 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/intelligence_layer/search/nat
 export default noop.memo(function SmartSearchBottomFade(height) {
   let searchHostSurfaceColor;
   const tmp = closure_7(height.height);
-  searchHostSurfaceColor = searchHostSurfaceColor(18924).useSearchHostSurfaceColor();
+  searchHostSurfaceColor = searchHostSurfaceColor(19027).useSearchHostSurfaceColor();
   items = [searchHostSurfaceColor];
   const memo = noop.useMemo(() => {
     const obj = _modDef671(searchHostSurfaceColor);

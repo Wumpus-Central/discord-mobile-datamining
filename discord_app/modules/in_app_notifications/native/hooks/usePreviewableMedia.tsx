@@ -1,14 +1,14 @@
-// === Module 11196: usePreviewableMedia ===
+// === Module 11246: usePreviewableMedia ===
 
-// Module 11196 (usePreviewableMedia)
+// Module 11246 (usePreviewableMedia)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5719 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5770 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6171 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 9510 */;
-import WaveformIcon from "WaveformIcon" /* 11197 */;
-import FileIcon from "FileIcon" /* 11199 */;
+import useToken from "useToken" /* 5732 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5784 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6186 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 9528 */;
+import WaveformIcon from "WaveformIcon" /* 11247 */;
+import FileIcon from "FileIcon" /* 11249 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -20,14 +20,14 @@ function VoiceMessageIcon() {
   const obj3 = { children: null };
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_MOD_SUBTLE);
   const size = { width: "100%", height: "100%", viewBox: "0 0 64 61", fill: "none", children: null };
-  size.children = React5(inlineStyles.Path, { d: "M22.2188 59.8545C19.5607 61.6263 16.0003 59.7208 16 56.5264V48C7.16344 48 2.5772e-07 40.8366 0 32V16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V32C64 40.8366 56.8366 48 48 48H40L22.2188 59.8545Z", fill: token, stroke: token1 });
-  items = [React5(inlineStylesDefault, size), ];
+  size.children = metroImportDefault(inlineStyles.Path, { d: "M22.2188 59.8545C19.5607 61.6263 16.0003 59.7208 16 56.5264V48C7.16344 48 2.5772e-07 40.8366 0 32V16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V32C64 40.8366 56.8366 48 48 48H40L22.2188 59.8545Z", fill: token, stroke: token1 });
+  items = [metroImportDefault(inlineStylesDefault, size), ];
   const obj4 = { style: tmp.voiceMessageIconOverlay, children: null };
-  const items1 = [React5(CirclePlayIcon.CirclePlayIcon, { size: "md", color: "background-brand", secondaryColor: "white" }), React5(WaveformIcon.WaveformIcon, { size: "md", color: "background-brand" })];
+  const items1 = [metroImportDefault(CirclePlayIcon.CirclePlayIcon, { size: "md", color: "background-brand", secondaryColor: "white" }), metroImportDefault(WaveformIcon.WaveformIcon, { size: "md", color: "background-brand" })];
   obj4.children = items1;
-  items[1] = React6(React4, obj4);
+  items[1] = React5(React4, obj4);
   obj3.children = items;
-  return React6(React7, obj3);
+  return React5(React6, obj3);
 }
 function getBasePreviewableMedia(arg0) {
   let obj;
@@ -42,7 +42,7 @@ function getBasePreviewableMedia(arg0) {
       obj2.id = "" + first.id + "-" + obj.VOICE_MESSAGE;
       obj2.type = obj.VOICE_MESSAGE;
       obj2.media = first;
-      obj2.icon = React5(VoiceMessageIcon, {});
+      obj2.icon = metroImportDefault(VoiceMessageIcon, {});
       let str10 = null;
       if (isForward) {
         str10 = "forward";
@@ -94,7 +94,7 @@ function getBasePreviewableMedia(arg0) {
               obj5.id = "" + id + "-" + tmp13.AUDIO;
               obj5.type = tmp13.AUDIO;
               obj5.media = tmp6;
-              obj5.icon = React5(CirclePlayIcon.CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
+              obj5.icon = metroImportDefault(CirclePlayIcon.CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
               let str5 = null;
               if (isForward) {
                 str5 = "forward";
@@ -107,7 +107,7 @@ function getBasePreviewableMedia(arg0) {
               obj5.type = tmp13.FILE;
               obj5.media = tmp6;
               let obj6 = { size: "lg", color: nativeDefault.colors.ICON_SUBTLE };
-              obj5.icon = React5(FileIcon.FileIcon, obj6);
+              obj5.icon = metroImportDefault(FileIcon.FileIcon, obj6);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";
@@ -159,9 +159,9 @@ function getBasePreviewableMedia(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ MessageEmbedTypes: hasOwnProperty, MessageFlags: metroRequire } = Constants);
+({ MessageEmbedTypes: hasOwnProperty, MessageFlags: closure_6 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PreviewableMediaTypes = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", FILE: "file", STICKER: "sticker", GIF: "gif", VOICE_MESSAGE: "voice_message" };
 const createStyles = fn(5141);
 let obj3 = { voiceMessageIconOverlay: null };

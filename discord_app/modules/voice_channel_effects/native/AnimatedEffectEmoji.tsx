@@ -1,11 +1,11 @@
-// === Module 11923: AnimatedEffectEmoji ===
+// === Module 11982: AnimatedEffectEmoji ===
 
-// Module 11923 (AnimatedEffectEmoji)
+// Module 11982 (AnimatedEffectEmoji)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import native from "native" /* 1187 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -128,12 +128,12 @@ export default function AnimatedEffectEmoji(onComplete) {
     const obj3 = { style: tmp.voiceChannelEffectEmoji, children: null };
     const obj4 = { url: null, surrogates: null };
     let tmp2Result = tmp2(1187);
-    obj4.url = tmp2(7654).getEffectUrl(emoji);
+    obj4.url = tmp2(7670).getEffectUrl(emoji);
     obj4.surrogates = emoji.name;
     obj3.children = <Emoji url={null} surrogates={null} />;
     obj2.children = <c4 style={tmp.voiceChannelEffectEmoji}>{null}</c4>;
     tmp16Result = jsx(_modDef1652.View, { style: null, children: null });
-    const tmp2Result2 = tmp2(7654);
+    const tmp2Result2 = tmp2(7670);
   }
   return tmp16Result;
 };

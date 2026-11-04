@@ -1,17 +1,17 @@
-// === Module 11451: SafetyToolsAboutActionSheet ===
+// === Module 11501: SafetyToolsAboutActionSheet ===
 
-// Module 11451 (SafetyToolsAboutActionSheet)
+// Module 11501 (SafetyToolsAboutActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11406 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11407 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11456 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11457 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11393).getSafetyToolsActionSheetKey;
+let closure_6 = fn(11443).getSafetyToolsActionSheetKey;
 let HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -79,7 +79,7 @@ export default function SafetyToolsAboutScreen(channelId) {
   obj2.channelId = channelId;
   obj2.onClose = channelId.onClose;
   const obj3 = { style: tmp3.aboutContainer, children: null };
-  const obj4 = { variant: "text-md/medium", style: tmp3.description, children: null };
+  const obj4 = { variant: "body-md/medium", style: tmp3.description, children: null };
   const intl2 = channelId(warningId[13]).intl;
   const obj5 = { learnMoreLink: null };
   const tmp6 = recipientId(warningId[15]);
@@ -93,11 +93,11 @@ export default function SafetyToolsAboutScreen(channelId) {
   items2[1] = closure_8(channelId(warningId[18]).Button, obj7);
   obj3.children = items2;
   const items3 = [closure_9(closure_5, obj3), ];
-  const obj8 = { variant: "text-md/medium", style: tmp3.reportFalsePositive, children: null };
+  const obj8 = { variant: "body-md/medium", style: tmp3.reportFalsePositive, children: null };
   const intl4 = channelId(warningId[13]).intl;
   obj8.children = intl4.format(channelId(warningId[13]).t["2uYViD"], {
     reportFalsePositiveHook(children, arg1) {
-      return React6(Text_Text.Text, { variant: "text-sm/medium", color: "text-link", disabled, onPress, children }, arg1);
+      return React5(Text_Text.Text, { variant: "body-sm/medium", color: "text-link", disabled, onPress, children }, arg1);
     }
   });
   items3[1] = closure_8(channelId(warningId[16]).Text, obj8);

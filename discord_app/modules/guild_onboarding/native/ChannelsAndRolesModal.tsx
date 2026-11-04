@@ -1,11 +1,11 @@
-// === Module 11714: ChannelsAndRolesModal ===
+// === Module 11769: ChannelsAndRolesModal ===
 
-// Module 11714 (ChannelsAndRolesModal)
+// Module 11769 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7638 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10273 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7654 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10321 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -69,7 +69,7 @@ function ChannelsAndRolesScreen(guildId) {
   obj2 = segmentedControlState;
 }
 const View = fn(17).View;
-const GuildOnboardingTab = fn(7389).GuildOnboardingTab;
+const GuildOnboardingTab = fn(7405).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -97,7 +97,7 @@ export default function ChannelsAndRolesModal(arg0) {
     screenKey: "channelAndRolesModal",
     title: stringResult,
     render() {
-      return React6(ChannelsAndRolesScreen, { guildId, defaultTab });
+      return React5(ChannelsAndRolesScreen, { guildId, defaultTab });
     }
   });
 };

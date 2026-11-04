@@ -1,16 +1,16 @@
-// === Module 10446: ApplicationCommandQueryApi ===
+// === Module 10494: ApplicationCommandQueryApi ===
 
-// Module 10446 (ApplicationCommandQueryApi)
+// Module 10494 (ApplicationCommandQueryApi)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7824 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9900 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9902 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 10447 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5817 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7840 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9918 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9920 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 10495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9894 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9912 */;
 
 const require = globalThis.__r;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
@@ -54,20 +54,20 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9894);
-({ useContextIndexState: metroRequire, useDiscoveryState: closure_7, useQueryState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
+let ApplicationCommandIndexStore = fn(9912);
+({ useContextIndexState: closure_6, useDiscoveryState: metroImportDefault, useQueryState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(6155).BuiltInSectionId;
+const BuiltInSectionId = fn(6170).BuiltInSectionId;
 const NOOP = fn(1072).NOOP;
 let items = [fn(2121).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(5803).ApplicationCommandSectionType.APPLICATION, name: "" };
+let section = { id: "placeholder-section", type: fn(5817).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "replace", command: "r", section: "isArray" };
+    return { application: "Array", command: "id", section: "error" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -114,7 +114,7 @@ export function getCachedCommand(type, commandId, applicationId) {
         }
       }
     }
-    return { application: "replace", command: "r", section: "isArray" };
+    return { application: "Array", command: "id", section: "error" };
   }
 }
 export function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -189,7 +189,7 @@ export function useCachedResults(arg0, CHAT, text) {
     }, items),
     text
   };
-  const tmp = React6(arg0, obj, { scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false });
+  const tmp = React5(arg0, obj, { scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false });
   return { commands: tmp.commands, sections: tmp.descriptors };
 }
 export function useDiscovery(options) {
@@ -385,7 +385,7 @@ export function useQuery(arg0, commandTypes, placeholderCount) {
 }
 export function useCommand(arg0, commandId) {
   closure_0 = commandId;
-  const tmp = React7(true, true);
+  const tmp = React6(true, true);
   let result = tmp;
   const tmp2 = timestampProducer(arg0, true, true);
   let result2 = tmp2;
@@ -419,7 +419,7 @@ export function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "flexDirection" };
+    return { command: "PX_8", application: "__closure" };
   }, items);
 }
 export function useCommandsForApplication(arg0, arg1, arg2) {

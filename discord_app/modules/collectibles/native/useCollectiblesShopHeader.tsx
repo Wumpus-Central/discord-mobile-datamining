@@ -1,15 +1,15 @@
-// === Module 18019: useCollectiblesShopHeader ===
+// === Module 18115: useCollectiblesShopHeader ===
 
-// Module 18019 (useCollectiblesShopHeader)
+// Module 18115 (useCollectiblesShopHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 7423 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import ShopIcon from "ShopIcon" /* 12604 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 7439 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import ShopIcon from "ShopIcon" /* 12685 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -18,7 +18,7 @@ function CollectiblesShopHeaderTitle(currentScreen) {
   const tmp = closure_13();
   const obj = { style: tmp.headerTitleContainer, children: null };
   items = [closure_1_11(ShopIcon.ShopIcon, { size: "md", color: "icon-strong" }), ];
-  const obj2 = { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
+  const obj2 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
   if (currentScreen.currentScreen === constants.ORBS) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.ElYQFS);
@@ -54,11 +54,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj.label = intl.string(util.t["xNiB/O"]);
     obj.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      items = [balance(7471).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
+      items = [balance(7487).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = balance(7471).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
+      obj2.analyticsSource = balance(7487).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
       obj2.screen = constants.FEATURED_PAGE;
-      const result = currentScreen(7843).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(7859).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon;
     if (currentScreen === constants.FEATURED_PAGE) {
@@ -71,11 +71,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj2.label = intl2.string(util.t.RSyoZu);
     obj2.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      items = [balance(7471).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
+      items = [balance(7487).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = balance(7471).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
+      obj2.analyticsSource = balance(7487).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
       obj2.screen = constants.SHOP_ALL;
-      const result = currentScreen(7843).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(7859).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon1;
     if (currentScreen === constants.SHOP_ALL) {
@@ -88,11 +88,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj3.label = intl3.string(util.t.fG3RIg);
     obj3.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      items = [balance(7471).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
+      items = [balance(7487).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = balance(7471).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
+      obj2.analyticsSource = balance(7487).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
       obj2.screen = constants.ORBS;
-      const result = currentScreen(7843).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(7859).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon2;
     if (currentScreen === constants.ORBS) {
@@ -184,9 +184,9 @@ function CollectiblesShopHeaderRight(currentScreen) {
 const View = fn(17).View;
 const constants = fn(1074).CollectiblesMobileShopScreen;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, AnalyticsPages: closure_8 } = Constants);
-const RewardFilterTypes = fn(6901).RewardFilterTypes;
-const UserProfileSections = fn(8878).UserProfileSections;
+({ AnalyticEvents: metroImportDefault, AnalyticsPages: closure_8 } = Constants);
+const RewardFilterTypes = fn(6916).RewardFilterTypes;
+const UserProfileSections = fn(8895).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5141);

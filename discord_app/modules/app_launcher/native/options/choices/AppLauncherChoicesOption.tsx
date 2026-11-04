@@ -1,10 +1,10 @@
-// === Module 12632: AppLauncherChoicesOption ===
+// === Module 12713: AppLauncherChoicesOption ===
 
-// Module 12632 (AppLauncherChoicesOption)
+// Module 12713 (AppLauncherChoicesOption)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -62,14 +62,14 @@ export default function AppLauncherChoicesOption(option) {
       onSelect(choice);
     };
     obj3.onDismiss = onDismissChoicesSheet;
-    obj2.openLazy(asyncRequireImpl(12633, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
+    obj2.openLazy(asyncRequireImpl(12714, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
   }, items);
   const tmp = closure_6();
   const animationDelayedAutoFocus = option(onSelect[9]).useAnimationDelayedAutoFocus(autoFocus, callback);
   let obj2 = { start: true, end: true, style: tmp.container, hasError, label: null, subLabel: null, trailing: null, onPress: null };
-  let str = "text-sm/medium";
+  let str = "body-sm/medium";
   if (null == first) {
-    str = "text-md/medium";
+    str = "body-md/medium";
   }
   let obj3 = { variant: str, color: null, lineClamp: 1, children: null };
   let str2 = "interactive-text-default";
@@ -81,7 +81,7 @@ export default function AppLauncherChoicesOption(option) {
   obj2.label = first(option(onSelect[11]).Text, obj3);
   let tmp10Result = null;
   if (null != first) {
-    const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: first.choice.displayName };
+    const obj4 = { variant: "body-md/medium", color: "text-default", lineClamp: 1, children: first.choice.displayName };
     tmp10Result = tmp10(tmp7(tmp8[11]).Text, obj4);
   }
   obj2.subLabel = tmp10Result;

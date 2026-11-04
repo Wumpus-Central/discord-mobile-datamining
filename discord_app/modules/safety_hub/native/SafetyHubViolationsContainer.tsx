@@ -1,22 +1,22 @@
-// === Module 16791: SafetyHubViolationsContainer ===
+// === Module 16883: SafetyHubViolationsContainer ===
 
-// Module 16791 (SafetyHubViolationsContainer)
+// Module 16883 (SafetyHubViolationsContainer)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8093 */;
-import SafetyHubModels from "SafetyHubModels" /* 8095 */;
-import WarningIcon from "WarningIcon" /* 8150 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9237 */;
-import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 11552 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 13449 */;
-import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15603 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8109 */;
+import SafetyHubModels from "SafetyHubModels" /* 8111 */;
+import WarningIcon from "WarningIcon" /* 8166 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9254 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 11602 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 13533 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15690 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8118 */;
+import SafetyHubStore from "SafetyHubStore" /* 8134 */;
 
 require = fn;
 function SafetyHubViolationsHeader(count) {
@@ -38,7 +38,7 @@ function SafetyHubViolationsHeader(count) {
     const obj6 = { count: str.toString() };
     formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj6);
   }
-  const items1 = [closure_1_11(Text_Text.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
+  const items1 = [closure_1_11(Text_Text.Text, { variant: "heading-xs/semibold", children: formatToPlainStringResult }), ];
   const intl2 = util.intl;
   const string = intl2.string;
   const t2 = util.t;
@@ -47,7 +47,7 @@ function SafetyHubViolationsHeader(count) {
   } else {
     stringResult = string(t2.SzGV0g);
   }
-  items1[1] = closure_1_11(Text_Text.Text, { variant: "text-xxs/normal", color: "text-muted", children: stringResult });
+  items1[1] = closure_1_11(Text_Text.Text, { variant: "footnote/normal", color: "text-muted", children: stringResult });
   obj4.children = items1;
   items[1] = application_id(timestampProducer, obj4);
   if (opened) {
@@ -61,11 +61,11 @@ function SafetyHubViolationsHeader(count) {
 }
 function EmptyActiveState() {
   const obj = { style: closure_14().emptyState, children: null };
-  const obj2 = { variant: "heading-sm/semibold", children: null };
+  const obj2 = { variant: "heading-xs/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.reLFaV);
   items = [closure_1_11(Text_Text.Text, obj2), ];
-  const obj3 = { variant: "text-xs/normal", children: null };
+  const obj3 = { variant: "body-xs/normal", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.ERdH1o);
   items[1] = closure_1_11(Text_Text.Text, obj3);
@@ -74,7 +74,7 @@ function EmptyActiveState() {
 }
 function EmptyExpiredState() {
   const obj = { style: closure_14().emptyState, children: null };
-  const obj2 = { variant: "text-xs/normal", children: null };
+  const obj2 = { variant: "body-xs/normal", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.RV3AXf);
   obj.children = closure_1_11(Text_Text.Text, obj2);
@@ -82,7 +82,7 @@ function EmptyExpiredState() {
 }
 function RelativeIncidentTime(timestamp) {
   const obj = { style: closure_14().incidentDate, children: null };
-  const obj2 = { variant: "text-xs/medium", children: SafetyHubUtils.getClassificationRelativeIncidentTime(timestamp.timestamp) };
+  const obj2 = { variant: "body-xs/medium", children: SafetyHubUtils.getClassificationRelativeIncidentTime(timestamp.timestamp) };
   obj.children = closure_1_11(Text_Text.Text, obj2);
   return closure_1_11(timestampProducer, obj);
 }
@@ -92,7 +92,7 @@ function NewBadge() {
   items = [, ];
   ({ incidentDate: arr[0], incidentDateNew: arr[1] } = tmp);
   obj.style = items;
-  const obj2 = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp.newText, children: null };
+  const obj2 = { variant: "body-xs/medium", color: "text-overlay-light", style: tmp.newText, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.QKMRC4);
   obj.children = closure_1_11(Text_Text.Text, obj2);
@@ -114,7 +114,7 @@ function ClassificationDetail(classification) {
   let prop = null;
   const memo = noop.useMemo(() => {
     function hook(children, arg1) {
-      return closure_1_11(id(guild_metadata[11]).Text, { variant: "heading-md/semibold", children }, arg1);
+      return closure_1_11(id(guild_metadata[11]).Text, { variant: "heading-sm/semibold", children }, arg1);
     }
     let obj2 = { description, descriptionHook: hook };
     let tmp4 = null;
@@ -159,7 +159,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13447, dependencyMap.paths), { classificationId: id, source: React6.StandingTab });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13531, dependencyMap.paths), { classificationId: id, source: React5.StandingTab });
     },
     children: null
   };
@@ -171,7 +171,7 @@ function ClassificationDetail(classification) {
     const obj6 = { timestamp: extractTimestampResult };
     tmp8Result = closure_11(RelativeIncidentTime, obj6);
   }
-  const items2 = [tmp8Result, closure_11(tmp5(guild_metadata[11]).Text, { variant: "heading-md/medium", children: memo })];
+  const items2 = [tmp8Result, closure_11(tmp5(guild_metadata[11]).Text, { variant: "heading-sm/medium", children: memo })];
   obj5.children = items2;
   obj4.children = closure_12(closure_6, obj5);
   obj3.children = closure_11(tmp2(guild_metadata[9]), obj4);
@@ -219,7 +219,7 @@ class SafetyHubViolationsContainer {
     items2[3] = stateFromStores;
     effect = closure_4.useEffect(() => {
       if (first) {
-        const obj2 = { action: React7.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: memo.map((id) => Number(id.id)), source: React6.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
+        const obj2 = { action: React6.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: memo.map((id) => Number(id.id)), source: React5.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
         AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_HUB_ACTION, obj2);
       }
     }, items2);
@@ -266,7 +266,7 @@ class SafetyHubViolationsContainer {
         obj18.onPress = function onPress() {
           return closure_4((arg0) => arg0 + num);
         };
-        obj19 = { variant: "heading-sm/semibold", children: null };
+        obj19 = { variant: "heading-xs/semibold", children: null };
         intl = tmp6(tmp7[12]).intl;
         obj20 = { nextPageSize: null };
         obj20.nextPageSize = num;
@@ -308,8 +308,8 @@ class SafetyHubViolationsContainer {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8094);
+({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const SafetyHubConstants = fn(8110);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);

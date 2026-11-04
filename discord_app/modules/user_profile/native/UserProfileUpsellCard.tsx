@@ -1,9 +1,9 @@
-// === Module 16636: UserProfileUpsellCard ===
+// === Module 16726: UserProfileUpsellCard ===
 
-// Module 16636 (UserProfileUpsellCard)
+// Module 16726 (UserProfileUpsellCard)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,14 +11,14 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { upsellButton: { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 }, titleContainer: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 }, linearGradient: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, outer: null, scroll: null, inner: null };
 let obj3 = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
-obj2.outer = { marginHorizontal: fn(7497).PROFILE_SIDE_PADDING - 1 };
-let obj4 = { marginHorizontal: fn(7497).PROFILE_SIDE_PADDING - 1 };
+obj2.outer = { marginHorizontal: fn(7513).PROFILE_SIDE_PADDING - 1 };
+let obj4 = { marginHorizontal: fn(7513).PROFILE_SIDE_PADDING - 1 };
 obj2.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.inner = { paddingVertical: 12, paddingHorizontal: 14 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -42,9 +42,9 @@ export default function UserProfileUpsellCard(headerText) {
   if (null != headerText) {
     const obj3 = { style: tmp.titleContainer, children: null };
     const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const items3 = [closure_6(tmp3(9656).NitroWheelIcon, obj4), ];
-    const obj5 = { variant: "heading-sm/semibold", children: headerText };
-    items3[1] = closure_6(tmp3(5747).Text, obj5);
+    const items3 = [closure_6(tmp3(9675).NitroWheelIcon, obj4), ];
+    const obj5 = { variant: "heading-xs/semibold", children: headerText };
+    items3[1] = closure_6(tmp3(5761).Text, obj5);
     obj3.children = items3;
     tmp6Result = closure_7(closure_3, obj3);
   }

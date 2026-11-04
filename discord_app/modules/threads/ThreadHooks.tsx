@@ -1,21 +1,21 @@
-// === Module 7567: ThreadHooks ===
+// === Module 7583: ThreadHooks ===
 
-// Module 7567 (ThreadHooks)
+// Module 7583 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7008 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7573 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7575 */;
-import useIsRemoteDefault from "useIsRemote" /* 7576 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7023 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7589 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7591 */;
+import useIsRemoteDefault from "useIsRemote" /* 7592 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import createExperiment from "createExperiment" /* 5360 */;
+import createExperiment from "createExperiment" /* 5361 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6961 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7568 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6976 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7584 */;
 
 const require = globalThis.__r;
 
@@ -566,8 +566,8 @@ export function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("shouldAgeVerifyForAgeGate").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(6854).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(6854);
+    shouldAgeVerifyForAgeGate = tmp3(6869).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(6869);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

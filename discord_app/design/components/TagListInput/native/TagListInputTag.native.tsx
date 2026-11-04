@@ -1,11 +1,11 @@
-// === Module 9193: TagListInputTag ===
+// === Module 9210: TagListInputTag ===
 
-// Module 9193 (TagListInputTag)
+// Module 9210 (TagListInputTag)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 9194 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 9211 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -75,7 +75,7 @@ export function TagListInputTagComponent(end) {
     tmp10 = React4(View, obj3);
   }
   const items1 = [tmp10, ];
-  const obj4 = { style: tmp.tagText, lineClamp: 1, variant: "text-sm/medium", color: null, children: null };
+  const obj4 = { style: tmp.tagText, lineClamp: 1, variant: "body-sm/medium", color: null, children: null };
   let str = "text-default";
   if (selected) {
     str = "text-overlay-light";

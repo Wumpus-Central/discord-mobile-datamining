@@ -1,17 +1,17 @@
-// === Module 11404: LikelyAtoWarningBanner ===
+// === Module 11454: LikelyAtoWarningBanner ===
 
-// Module 11404 (LikelyAtoWarningBanner)
+// Module 11454 (LikelyAtoWarningBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7620 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 11208 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11406 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11407 */;
-import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11422 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7636 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 11258 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11456 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11457 */;
+import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11472 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ class LikelyAtoWarningBanner {
       const obj = SafetyWarningUtils;
       obj.trackCtaEvent({ channelId, warningId, senderId, warningType: SafetyWarningTypes.LIKELY_ATO, cta: SafetyWarningUtils.CtaEventTypes.USER_MODAL_LEARN_MORE });
       const obj2 = { channelId, warningId, senderId, warningType: SafetyWarningTypes.LIKELY_ATO, cta: SafetyWarningUtils.CtaEventTypes.USER_MODAL_LEARN_MORE };
-      LinkingDefault.openURL(React5);
+      LinkingDefault.openURL(metroImportDefault);
     };
     closure_3 = closure_13();
     items = [, , ];
@@ -73,10 +73,10 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11411, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11461, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
-        items = [closure_1_10(channelId(5747).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(5747).Text, { variant: "text-xs/medium", color: "text-subtle", children: children.description }, index)];
+        items = [closure_1_10(channelId(5761).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(5761).Text, { variant: "body-xs/medium", color: "text-subtle", children: children.description }, index)];
         obj.children = items;
         return closure_1_12(closure_1_11, obj);
       });
@@ -86,7 +86,7 @@ class LikelyAtoWarningBanner {
           return closure_1_5(channelId(senderId[8]).CtaEventTypes.USER_MODAL_MUTE);
         }
       });
-      const obj4 = { variant: "text-sm/normal", color: "text-link", children: null };
+      const obj4 = { variant: "body-sm/normal", color: "text-link", children: null };
       const intl2 = util.intl;
       obj4.children = intl2.format(util.t.UkH122, { learnMoreLink: handleLearnMore });
       obj2.learnMore = closure_2_10(Text_Text.Text, obj4);
@@ -115,9 +115,9 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10934).SafetyWarningTypes;
-const Constants = fn(11405);
-({ getLikelyAtoMoreTips: hasOwnProperty, LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire, LEARN_MORE_HC_ARTICLE: closure_7 } = Constants);
+const SafetyWarningTypes = fn(10982).SafetyWarningTypes;
+const Constants = fn(11455);
+({ getLikelyAtoMoreTips: hasOwnProperty, LIKELY_ATO_MORE_TIPS_MODAL_KEY: closure_6, LEARN_MORE_HC_ARTICLE: metroImportDefault } = Constants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const MuteUntilSeconds = fn(1082).MuteUntilSeconds;
 const jsxProd = fn(21);

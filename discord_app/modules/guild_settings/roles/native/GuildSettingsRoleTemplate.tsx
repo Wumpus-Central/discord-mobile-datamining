@@ -1,16 +1,16 @@
-// === Module 19931: GuildSettingsRoleTemplate ===
+// === Module 20047: GuildSettingsRoleTemplate ===
 
-// Module 19931 (GuildSettingsRoleTemplate)
+// Module 20047 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7238 */;
-import _modDef8976 from "module_8976" /* 8976 */;
-import PaginationDefault from "Pagination" /* 10759 */;
-import _modDef11729 from "module_11729" /* 11729 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7258 */;
+import _modDef8993 from "module_8993" /* 8993 */;
+import PaginationDefault from "Pagination" /* 10807 */;
+import _modDef11784 from "module_11784" /* 11784 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -20,8 +20,8 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(19927);
+({ View: hasOwnProperty, Dimensions, ScrollView: closure_6 } = get_ActivityIndicator);
+const GuildSettingsRoleConstants = fn(20043);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: closure_10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
@@ -141,7 +141,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
   const values = Object.values(closure_10);
   let obj3 = { ref, style: tmp.container, children: null };
   let obj4 = { style: tmp.sliderContainer, children: null };
-  let obj5 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(_modDef8976, { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" }) };
+  let obj5 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(_modDef8993, { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" }) };
   const items4 = [closure_14(ref1, obj5), ];
   let obj2 = require("useIsScreenReaderEnabled");
   let obj6 = { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" };
@@ -163,7 +163,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
             current.scrollTo(obj);
           }
         },
-        children: closure_1_14(_undefined(_undefined2[18]).Text, { variant: "text-sm/medium", children: title() })
+        children: closure_1_14(_undefined(_undefined2[18]).Text, { variant: "body-sm/medium", children: title() })
       };
       obj.children = closure_1_14(_undefined(_undefined2[17]).PressableOpacity, obj2);
       return closure_1_14(ref1, obj, title());
@@ -190,23 +190,23 @@ export default function GuildSettingsRoleTemplate(arg0) {
         items = [closure_1_14(_undefined(_undefined2[18]).Text, { style: _undefined3.templateTitle, variant: "heading-lg/semibold", children: item.title() }), , ];
         let obj3 = { style: _undefined3.templateTitle, variant: "heading-lg/semibold", children: item.title() };
         const tmp6 = !item.index !== first && undefined;
-        items[1] = closure_1_14(_undefined(_undefined2[18]).Text, { style: _undefined3.templateSubtitle, variant: "text-sm/medium", children: item.description() });
+        items[1] = closure_1_14(_undefined(_undefined2[18]).Text, { style: _undefined3.templateSubtitle, variant: "body-sm/medium", children: item.description() });
         const obj5 = { style: _undefined3.templateContentWrapper, children: null };
         let tmp3Result = null;
         if (null != contentPrefaceResult) {
           tmp3Result = null;
           if ("" !== contentPrefaceResult) {
-            const obj6 = { style: _undefined3.templateSubtitle, variant: "text-sm/medium", children: item.contentPreface() };
+            const obj6 = { style: _undefined3.templateSubtitle, variant: "body-sm/medium", children: item.contentPreface() };
             tmp3Result = closure_1_14(_undefined(_undefined2[18]).Text, obj6);
           }
         }
         const obj7 = { children: null };
         const items1 = [tmp3Result, ];
         const obj8 = { accessibilityRole: "list", children: null };
-        const obj4 = { style: _undefined3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
+        const obj4 = { style: _undefined3.templateSubtitle, variant: "body-sm/medium", children: item.description() };
         obj8.children = item.contents().map((children, index) => {
           const obj = { style: c3.templateContent, children: null };
-          items = [gesture(native.Icon, { source: _modDef11729, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), gesture(Text_Text.Text, { style: c3.templateContentText, variant: "text-sm/medium", children })];
+          items = [gesture(native.Icon, { source: _modDef11784, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), gesture(Text_Text.Text, { style: c3.templateContentText, variant: "body-sm/medium", children })];
           obj.children = items;
           return closure_3_15(hasOwnProperty, obj, "" + item.key + "_content_" + index);
         });

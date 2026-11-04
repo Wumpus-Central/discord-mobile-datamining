@@ -1,14 +1,14 @@
-// === Module 19909: useGuildTagBadgeCollection ===
+// === Module 20025: useGuildTagBadgeCollection ===
 
-// Module 19909 (useGuildTagBadgeCollection)
+// Module 20025 (useGuildTagBadgeCollection)
 import _mod19 from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
-import GuildTagConstants from "GuildTagConstants" /* 8517 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5353 */;
+import GuildTagConstants from "GuildTagConstants" /* 8534 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;
-({ BADGE_PACKS: hasOwnProperty, BADGES: metroRequire, BADGE_PACK_TO_SKU_ID: closure_7 } = GuildTagConstants);
+({ BADGE_PACKS: hasOwnProperty, BADGES: closure_6, BADGE_PACK_TO_SKU_ID: metroImportDefault } = GuildTagConstants);
 const result = size.fileFinishedImporting("modules/guild_tag/useGuildTagBadgeCollection.tsx");
 
 export default function useGuildTagBadgeCollection() {
@@ -46,7 +46,7 @@ export default function useGuildTagBadgeCollection() {
       const item = keys.forEach((item) => {
         let tmp;
         if (stateFromStores1 != null) {
-          tmp = stateFromStores1[React5[item]];
+          tmp = stateFromStores1[metroImportDefault[item]];
         }
         let title;
         if (tmp != null) {

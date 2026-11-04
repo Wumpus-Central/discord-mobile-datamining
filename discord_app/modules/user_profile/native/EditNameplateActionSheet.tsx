@@ -1,13 +1,13 @@
-// === Module 16653: EditNameplateActionSheet ===
+// === Module 16743: EditNameplateActionSheet ===
 
-// Module 16653 (EditNameplateActionSheet)
+// Module 16743 (EditNameplateActionSheet)
 import nativeDefault from "native" /* 575 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8859 */;
-import useShopProductItems from "useShopProductItems" /* 8866 */;
-import EditNameplateSection from "EditNameplateSection" /* 16655 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8876 */;
+import useShopProductItems from "useShopProductItems" /* 8883 */;
+import EditNameplateSection from "EditNameplateSection" /* 16745 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7875 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 require = fn;
@@ -103,7 +103,7 @@ function NameplateActionSheetPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_13();
-  const tmp4 = purchase(8868)(previewSkuId);
+  const tmp4 = purchase(8885)(previewSkuId);
   const product = tmp4.product;
   _require = product;
   purchase = tmp4.purchase;
@@ -139,20 +139,20 @@ function NameplateActionSheetPreview(arg0) {
   }
   obj.accessibilityLabel = formatToPlainStringResult;
   const obj3 = { style: tmp.nameplateGradientContainer, children: null };
-  const items1 = [closure_10(tmp10(9641).NameplateDummyUserPreview, { width: 100 }), closure_10(tmp10(9641).NameplateDummyUserPreview, { width: 140 }), ];
+  const items1 = [closure_10(tmp10(9660).NameplateDummyUserPreview, { width: 100 }), closure_10(tmp10(9660).NameplateDummyUserPreview, { width: 140 }), ];
   const obj4 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.1 }, end: { x: 0, y: 0.8 }, colors: null };
   const items2 = [tmp.nameplatePreviewGradient.color, "" + tmp.nameplatePreviewGradient.color + "00"];
   obj4.colors = items2;
-  items1[2] = closure_10(purchase(5710), obj4);
+  items1[2] = closure_10(purchase(5723), obj4);
   obj3.children = items1;
-  const items3 = [closure_11(View, obj3), closure_10(tmp10(11644).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
+  const items3 = [closure_11(View, obj3), closure_10(tmp10(11695).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
   const obj5 = { style: tmp.nameplateGradientContainer, children: null };
-  const items4 = [closure_10(tmp10(9641).NameplateDummyUserPreview, { width: 140 }), closure_10(tmp10(9641).NameplateDummyUserPreview, { width: 100 }), ];
+  const items4 = [closure_10(tmp10(9660).NameplateDummyUserPreview, { width: 140 }), closure_10(tmp10(9660).NameplateDummyUserPreview, { width: 100 }), ];
   const obj6 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.2 }, end: { x: 0, y: 0.9 }, colors: null };
-  const tmp2Result = purchase(5710);
+  const tmp2Result = purchase(5723);
   const items5 = ["" + tmp.nameplatePreviewGradient.color + "00", tmp.nameplatePreviewGradient.color];
   obj6.colors = items5;
-  items4[2] = closure_10(purchase(5710), obj6);
+  items4[2] = closure_10(purchase(5723), obj6);
   obj5.children = items4;
   items3[2] = closure_11(View, obj5);
   obj.children = items3;
@@ -180,13 +180,13 @@ export default function EditNameplateActionSheet(arg0) {
   if (undefined !== first) {
     tmp6 = first;
   }
-  let obj = guildId(8865);
+  let obj = guildId(8882);
   const tmp7 = first;
-  const analyticsLocations = first(7446)(first(7471).EDIT_NAMEPLATE_SHEET).analyticsLocations;
+  const analyticsLocations = first(7462)(first(7487).EDIT_NAMEPLATE_SHEET).analyticsLocations;
   items = [first, guildId];
   const callback = noop.useCallback(() => {
     const obj = first(1252);
-    obj.track(constants.OPEN_POPOUT, { type: first(7471).EDIT_NAMEPLATE_SHEET, is_fullscreen: true });
+    obj.track(constants.OPEN_POPOUT, { type: first(7487).EDIT_NAMEPLATE_SHEET, is_fullscreen: true });
   }, []);
   const callback1 = noop.useCallback((arg0) => {
     const obj2 = { guildId, nameplate: null };
@@ -206,8 +206,8 @@ export default function EditNameplateActionSheet(arg0) {
   const obj5 = { title: null };
   const intl = guildId(1113).intl;
   obj5.title = intl.string(guildId(1113).t.BwdeM1);
-  obj4.header = closure_10(guildId(7441).BottomSheetTitleHeader, obj5);
-  const tmp8 = first(7446);
+  obj4.header = closure_10(guildId(7457).BottomSheetTitleHeader, obj5);
+  const tmp8 = first(7462);
   const items1 = [closure_10(View, { style: tmp.container, children: closure_10(EditNameplateInner, { user, selectedNameplate: tmp6, setSelectedNameplate: tmp4[1], guildId }) }), ];
   const obj7 = { user, currentSkuId: null, selectedSkuId: null, onApply: null, analyticsLocations: null, analyticsSource: null };
   let skuId;
@@ -223,9 +223,9 @@ export default function EditNameplateActionSheet(arg0) {
   obj7.selectedSkuId = skuId1;
   obj7.onApply = callback1;
   obj7.analyticsLocations = analyticsLocations;
-  obj7.analyticsSource = tmp7(7471).EDIT_NAMEPLATE_SHEET;
-  items1[1] = closure_10(first(8867), obj7);
+  obj7.analyticsSource = tmp7(7487).EDIT_NAMEPLATE_SHEET;
+  items1[1] = closure_10(first(8884), obj7);
   obj4.children = items1;
-  obj3.children = closure_11(guildId(5395).BottomSheet, obj4);
-  return closure_10(guildId(7446).AnalyticsLocationProvider, obj3);
+  obj3.children = closure_11(guildId(5396).BottomSheet, obj4);
+  return closure_10(guildId(7462).AnalyticsLocationProvider, obj3);
 };

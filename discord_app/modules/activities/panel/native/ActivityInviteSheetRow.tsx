@@ -1,6 +1,6 @@
-// === Module 19302: ActivityInviteSheetRow ===
+// === Module 19406: ActivityInviteSheetRow ===
 
-// Module 19302 (ActivityInviteSheetRow)
+// Module 19406 (ActivityInviteSheetRow)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(8003).InviteSendStates;
+const InviteSendStates = fn(8019).InviteSendStates;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { acronym: null };
@@ -75,8 +75,8 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
           } else {
             const obj6 = { style: tmp.acronym, children: null };
             const acronym = require("StringUtils").getAcronym(guild.name);
-            const obj7 = { variant: "text-sm/semibold", children: acronym };
-            obj6.children = jsx(require("Text/Text").Text, { variant: "text-sm/semibold", children: acronym });
+            const obj7 = { variant: "body-sm/semibold", children: acronym };
+            obj6.children = jsx(require("Text/Text").Text, { variant: "body-sm/semibold", children: acronym });
             tmp14 = <id style={tmp.acronym}>{null}</id>;
             const tmp2Result = require("StringUtils");
           }

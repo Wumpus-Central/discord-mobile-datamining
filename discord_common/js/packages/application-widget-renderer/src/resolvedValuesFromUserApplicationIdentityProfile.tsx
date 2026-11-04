@@ -1,8 +1,8 @@
-// === Module 12481: discord_common/resolvedValuesFromUserApplicationIdentityProfile ===
+// === Module 12546: discord_common/resolvedValuesFromUserApplicationIdentityProfile ===
 
-// Module 12481 (discord_common/resolvedValuesFromUserApplicationIdentityProfile)
-import resolvedValues from "resolvedValues" /* 12400 */;
-import ProfileDataDynamicType from "ProfileDataDynamicType" /* 12482 */;
+// Module 12546 (discord_common/resolvedValuesFromUserApplicationIdentityProfile)
+import resolvedValues from "resolvedValues" /* 12465 */;
+import ProfileDataDynamicType from "ProfileDataDynamicType" /* 12547 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -103,13 +103,13 @@ export default function resolvedValuesFromUserApplicationIdentityProfile(profile
   if (null == profile) {
     let obj2 = {};
   } else {
-    const obj3 = {};
+    const obj = {};
     if (null != profile.username) {
-      const obj = { type: resolvedValues.ResolvedValueType.STRING, value: profile.username };
-      obj3.username = obj;
+      const obj3 = { type: resolvedValues.ResolvedValueType.STRING, value: profile.username };
+      obj.username = obj3;
     }
     obj2 = {};
-    const merged = Object.assign(obj3);
+    const merged = Object.assign(obj);
     const merged1 = Object.assign(resolvedValuesFromPrimary(profile));
     const merged2 = Object.assign(resolvedValuesFromDynamic(profile));
   }

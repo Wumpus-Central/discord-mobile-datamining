@@ -1,15 +1,15 @@
-// === Module 19769: BlockedUserInGdmActionSheet ===
+// === Module 19885: BlockedUserInGdmActionSheet ===
 
-// Module 19769 (BlockedUserInGdmActionSheet)
+// Module 19885 (BlockedUserInGdmActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
-import TableRow from "TableRow" /* 7101 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 19770 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
+import TableRow from "TableRow" /* 7116 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 19886 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -23,11 +23,11 @@ function getUserCalloutRowText(arg0) {
     const intl4 = util.intl;
     const obj2 = {
       usernameHook1() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
+          const obj = { variant: "body-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
           return closure_2_10(Text_Text.Text, obj);
         },
       usernameHook2() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
+          const obj = { variant: "body-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
           return closure_2_10(Text_Text.Text, obj);
         },
       numberOfOtherUsers: totalUsers - calledOutUserIds.length
@@ -37,11 +37,11 @@ function getUserCalloutRowText(arg0) {
     const intl3 = util.intl;
     const obj3 = {
       usernameHook1() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
+          const obj = { variant: "body-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
           return closure_2_10(Text_Text.Text, obj);
         },
       usernameHook2() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
+          const obj = { variant: "body-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
           return closure_2_10(Text_Text.Text, obj);
         }
     };
@@ -50,11 +50,11 @@ function getUserCalloutRowText(arg0) {
     const intl2 = util.intl;
     const obj4 = {
       usernameHook1() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
+          const obj = { variant: "body-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
           return closure_2_10(Text_Text.Text, obj);
         },
       usernameHook2() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
+          const obj = { variant: "body-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
           return closure_2_10(Text_Text.Text, obj);
         }
     };
@@ -63,7 +63,7 @@ function getUserCalloutRowText(arg0) {
     const intl = util.intl;
     let obj = {
       usernameHook() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
+          const obj = { variant: "body-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
           return closure_2_10(Text_Text.Text, obj);
         }
     };
@@ -88,11 +88,11 @@ function UserCalloutAvatars(userIds) {
       obj3.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_10(tmp(1187).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(12261).UserIcon, {});
+      tmp6 = closure_10(tmp(12322).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1187).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_10(tmp(10929).FacepileGroupDMAvatar, obj4);
+    return closure_10(tmp(10977).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 }
@@ -134,8 +134,8 @@ function BlockedUserInGDMDescription(arg0) {
   }
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(15767);
-({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
+const SharedSpaceWarningConstants = fn(15855);
+({ BlockWarningEngagements: metroImportDefault, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
@@ -199,7 +199,7 @@ export default function BlockedUserInGdmActionSheet(channelId) {
     const intl3 = tmp7(tmp8[11]).intl;
     obj10.children = intl3.string(tmp7(tmp8[11]).t["mwJJ+f"]);
     const items4 = [closure_10(tmp7(tmp8[9]).Text, obj10), ];
-    const obj11 = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: null };
+    const obj11 = { variant: "body-md/medium", color: "text-default", style: tmp.description, children: null };
     const obj12 = { numOfBlockedUsers: blockedUserIds.length, numOfIgnoredUsers: ignoredUserIds.length };
     obj11.children = closure_10(BlockedUserInGDMDescription, obj12);
     items4[1] = closure_10(tmp7(tmp8[9]).Text, obj11);

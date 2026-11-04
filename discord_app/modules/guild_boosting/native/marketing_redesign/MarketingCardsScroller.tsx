@@ -1,6 +1,6 @@
-// === Module 14269: MarketingCardsScroller ===
+// === Module 14355: MarketingCardsScroller ===
 
-// Module 14269 (MarketingCardsScroller)
+// Module 14355 (MarketingCardsScroller)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,7 +9,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const previous = "previous";
@@ -214,7 +214,7 @@ export function MarketingCardsScroller(ref) {
     }
     obj.importantForAccessibility = str;
     obj.children = children;
-    return React6(timestampProducer, obj);
+    return React5(timestampProducer, obj);
   });
   const items7 = [c8(ref, obj5), , ];
   if (tmp26Result) {

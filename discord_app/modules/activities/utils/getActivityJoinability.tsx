@@ -1,21 +1,21 @@
-// === Module 15021: getActivityJoinability ===
+// === Module 15101: getActivityJoinability ===
 
-// Module 15021 (getActivityJoinability)
+// Module 15101 (getActivityJoinability)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
-import hasFlagDefault from "hasFlag" /* 7607 */;
-import getPartySize from "getPartySize" /* 11819 */;
-import isPartyFull from "isPartyFull" /* 11821 */;
-import getIsInParty from "getIsInParty" /* 11822 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11825 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11826 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11857 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11927 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 15022 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
+import hasFlagDefault from "hasFlag" /* 7623 */;
+import getPartySize from "getPartySize" /* 11876 */;
+import isPartyFull from "isPartyFull" /* 11878 */;
+import getIsInParty from "getIsInParty" /* 11879 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11882 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11883 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11916 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11986 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 15102 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
-({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: closure_6 } = Constants);
 const ActivityJoinability = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" };
 const result = size.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
 

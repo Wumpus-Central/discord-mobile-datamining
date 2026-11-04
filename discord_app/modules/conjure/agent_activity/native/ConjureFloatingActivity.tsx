@@ -1,10 +1,10 @@
-// === Module 12917: ConjureFloatingActivity ===
+// === Module 12999: ConjureFloatingActivity ===
 
-// Module 12917 (ConjureFloatingActivity)
+// Module 12999 (ConjureFloatingActivity)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import timing_timing from "timing/timing" /* 5377 */;
+import timing_timing from "timing/timing" /* 5378 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { root: null, pill: null, pillMain: null, checklistButton: null, panel: null, label: null };
 const rect = { position: "absolute", left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center" };
@@ -76,7 +76,7 @@ export default function ConjureFloatingActivity(agents) {
     if (null != todos) {
       const obj5 = { style: tmp.panel, children: null };
       const obj6 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj5.children = closure_6(tmp13(12856), obj6);
+      obj5.children = closure_6(tmp13(12937), obj6);
       tmp14 = closure_6(View, obj5);
     }
   }
@@ -89,17 +89,17 @@ export default function ConjureFloatingActivity(agents) {
   const tmp9 = _slicedToArray(noop.useState(false), 2);
   const items5 = [closure_6(require("MagicWandIcon").MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
   const obj9 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
-  items5[1] = closure_6(View, { style: tmp.label, children: closure_6(require("Text/Text").Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) });
+  items5[1] = closure_6(View, { style: tmp.label, children: closure_6(require("Text/Text").Text, { variant: "body-sm/medium", color: "text-default", lineClamp: 1, children: line }) });
   obj8.children = items5;
   const items6 = [closure_7(require("Pressables").PressableOpacity, obj8), ];
   let tmp18Result = null;
   if (null != todos) {
     const obj11 = { style: tmp.checklistButton, children: null };
-    const obj12 = { variant: "default", size: "sm", icon: tmp13(7034), pressed: tmp10, accessibilityLabel: null, onPress: null };
+    const obj12 = { variant: "default", size: "sm", icon: tmp13(7049), pressed: tmp10, accessibilityLabel: null, onPress: null };
     const intl2 = tmp2(1113).intl;
     obj12.accessibilityLabel = intl2.string(tmp13(3995).Qp2isI);
     obj12.onPress = callback;
-    obj11.children = closure_6(tmp2(12918).ToggleIconButton, obj12);
+    obj11.children = closure_6(tmp2(13000).ToggleIconButton, obj12);
     tmp18Result = closure_6(View, obj11);
   }
   items6[1] = tmp18Result;

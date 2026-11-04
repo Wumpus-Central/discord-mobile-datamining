@@ -1,9 +1,9 @@
-// === Module 19986: EnableCommunitySharedNavigation ===
+// === Module 20102: EnableCommunitySharedNavigation ===
 
-// Module 19986 (EnableCommunitySharedNavigation)
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19984 */;
+// Module 20102 (EnableCommunitySharedNavigation)
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 20100 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 
 const require = globalThis.__r;
 

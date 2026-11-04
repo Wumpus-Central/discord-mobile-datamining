@@ -1,20 +1,20 @@
-// === Module 6846: AgeVerificationUtils ===
+// === Module 6861: AgeVerificationUtils ===
 
-// Module 6846 (AgeVerificationUtils)
+// Module 6861 (AgeVerificationUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import Server from "Server" /* 2121 */;
 import _modDef3223 from "module_3223" /* 3223 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5813 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6851 */;
-import usePreviousDefault from "usePrevious" /* 6852 */;
-import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 6853 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5827 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6866 */;
+import usePreviousDefault from "usePrevious" /* 6867 */;
+import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 6868 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5814 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5828 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 6847 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 6862 */;
 
 const require = globalThis.__r;
 
@@ -36,7 +36,7 @@ function useShouldCallReactiveCheck() {
   }
   _require = tmp5;
   const obj = require("initialize");
-  const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(tmp(6851).AgeGatedFeature.REACTIVE_CHECK);
+  const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(tmp(6866).AgeGatedFeature.REACTIVE_CHECK);
   const tmpResult = require("RegionalFeatureConfigUtils");
   const items1 = [AgeVerificationStore];
   const items2 = [tmp5, isFeatureAgeGated];
@@ -129,10 +129,10 @@ let closure_15 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(6848).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(6863).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const AgeGateConstants = fn(1097);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: closure_10 } = AgeGateConstants);
-let items = [fn(6849).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(6849).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(6849).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
+let items = [fn(6864).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(6864).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(6864).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
 const set = new Set(items);
 let items1 = [, , , , , ];
 ({ NSFW_SERVER: arr2[0], NSFW_SERVER_INVITE: arr2[1], NSFW_SERVER_INVITE_EMBED: arr2[2], LARGE_GUILD: arr2[3], JOIN_LARGE_GUILD_UNDERAGE: arr2[4], ACCESS_LARGE_GUILD_UNDERAGE: arr2[5] } = AgeGateSource);

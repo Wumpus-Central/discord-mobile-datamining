@@ -1,19 +1,19 @@
-// === Module 14708: ChatLoadingIndicator ===
+// === Module 14788: ChatLoadingIndicator ===
 
-// Module 14708 (ChatLoadingIndicator)
+// Module 14788 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
-import Pressables from "Pressables" /* 7106 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
+import Pressables from "Pressables" /* 7121 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
-import MessageStore from "MessageStore" /* 6181 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
+import MessageStore from "MessageStore" /* 6196 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import UserStore from "UserStore" /* 1385 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
@@ -86,7 +86,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
   if (messagesCached) {
     str2 = "text-feedback-positive";
   }
-  let obj2 = { variant: "text-md/normal", color: str2, children: null };
+  let obj2 = { variant: "body-md/normal", color: str2, children: null };
   let str3 = "false";
   let str4 = "false";
   if (messagesCached) {
@@ -96,7 +96,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
   items1[3] = state(Text_Text.Text, obj2);
   let tmp4Result = null;
   if (messagesCached !== false) {
-    const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj3 = { variant: "body-md/normal", color: "text-muted", children: null };
     const items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
     obj3.children = items2;
     tmp4Result = gesture(Text_Text.Text, obj3);
@@ -108,7 +108,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
   if (messagesReady) {
     str6 = "text-feedback-positive";
   }
-  const obj4 = { variant: "text-md/normal", color: str6, children: null };
+  const obj4 = { variant: "body-md/normal", color: str6, children: null };
   let str7 = str3;
   if (messagesReady) {
     str7 = "true";
@@ -117,7 +117,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
   items4[3] = state(Text_Text.Text, obj4);
   let tmp4Result3 = null;
   if (messagesReady !== true) {
-    const obj5 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj5 = { variant: "body-md/normal", color: "text-muted", children: null };
     const items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj5.children = items5;
     tmp4Result3 = gesture(Text_Text.Text, obj5);
@@ -130,7 +130,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
   if (connected) {
     str10 = "text-feedback-positive";
   }
-  const obj6 = { variant: "text-md/normal", color: str10, children: null };
+  const obj6 = { variant: "body-md/normal", color: str10, children: null };
   let str11 = str3;
   if (connected) {
     str11 = "true";
@@ -139,7 +139,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
   items6[3] = state(Text_Text.Text, obj6);
   let tmp4Result4 = null;
   if (connected !== true) {
-    const obj7 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj7 = { variant: "body-md/normal", color: "text-muted", children: null };
     const items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj7.children = items7;
     tmp4Result4 = gesture(Text_Text.Text, obj7);
@@ -157,13 +157,13 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
   if (messagesCached) {
     str = "text-feedback-positive";
   }
-  const obj8 = { variant: "text-md/normal", color: str, children: null };
+  const obj8 = { variant: "body-md/normal", color: str, children: null };
   if (messagesCached) {
     str3 = "true";
   }
   obj8.children = str3;
   items8[3] = state(Text_Text.Text, obj8);
-  const obj9 = { variant: "text-md/normal", color: "text-default", children: null };
+  const obj9 = { variant: "body-md/normal", color: "text-default", children: null };
   items8[4] = null;
   items3[6] = gesture(closure_1_15, { children: items8 });
   obj9.children = items3;
@@ -294,7 +294,7 @@ export function ChannelHeaderLoadingIndicator() {
   const items4 = [tmp.pulse, animatedStyle];
   obj5.style = items4;
   const items5 = [state(_modDef1652.View, obj5), ];
-  const obj6 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj6 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t.JwIJMV);
   items5[1] = state(Text_Text.Text, obj6);

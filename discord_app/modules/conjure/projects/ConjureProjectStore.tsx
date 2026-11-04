@@ -1,9 +1,9 @@
-// === Module 6964: ConjureProjectStore ===
+// === Module 6979: ConjureProjectStore ===
 
-// Module 6964 (ConjureProjectStore)
+// Module 6979 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6965 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -23,11 +23,16 @@ let c8 = null;
 const map3 = new Map();
 let set = new Set();
 const set1 = new Set();
-let c12 = false;
-let maxProjects = null;
-let c14 = false;
-let obj = null;
 const set2 = new Set();
+const set3 = new Set();
+let c14 = false;
+let userId = null;
+let closure_16 = 0;
+let c17 = false;
+let maxProjects = null;
+let c19 = false;
+let obj = null;
+const set4 = new Set();
 const map4 = new Map();
 let error = "unattempted";
 const Store = initializeDefault.Store;
@@ -40,14 +45,43 @@ prototype["initialize"] = function initialize() {
 prototype["getOwnedProjects"] = function getOwnedProjects() {
   return Array.from(map.values()).filter(isProjectOwner);
 };
+prototype["getRailProjects"] = function getRailProjects() {
+  return Array.from(map.values()).filter((owner_user_id) => {
+    currentUser = currentUser.getCurrentUser();
+    let id;
+    if (currentUser != null) {
+      id = currentUser.id;
+    }
+    let hasItem = owner_user_id.owner_user_id === id;
+    if (!hasItem) {
+      hasItem = set.has(owner_user_id.id);
+    }
+    return hasItem;
+  });
+};
+prototype["getUnloadedParticipatingProjectIds"] = function getUnloadedParticipatingProjectIds() {
+  return Array.from(set2).filter((item) => !set.has(item));
+};
+prototype["isProjectRunning"] = function isProjectRunning(arg0) {
+  return set3.has(arg0);
+};
 prototype["hasFetchedOwnedProjects"] = function hasFetchedOwnedProjects() {
-  return c12;
+  return c17;
+};
+prototype["isReconnectListPending"] = function isReconnectListPending() {
+  return c14;
+};
+prototype["getSessionGeneration"] = function getSessionGeneration() {
+  return closure_16;
+};
+prototype["getMissingProjectsCheckedUserId"] = function getMissingProjectsCheckedUserId() {
+  return userId;
 };
 prototype["getMaxProjects"] = function getMaxProjects() {
   return maxProjects;
 };
 prototype["hasFetchedProjectLimit"] = function hasFetchedProjectLimit() {
-  return c14;
+  return c19;
 };
 prototype["getProject"] = function getProject(arg0) {
   value = map.get(arg0);
@@ -125,7 +159,7 @@ prototype["getProjectsFetchState"] = function getProjectsFetchState() {
   return obj;
 };
 prototype["hasFetchedGuildProjects"] = function hasFetchedGuildProjects(id) {
-  return set2.has(id);
+  return set4.has(id);
 };
 prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(arg0) {
   let str = map4.get(arg0);
@@ -147,6 +181,7 @@ prototype["isConjureProjectApplication"] = function isConjureProjectApplication(
 };
 obj = {
   LOGOUT: function handleLogout() {
+    closure_16 = closure_16 + 1;
     obj = map;
     if (0 === map.size) {
       if (0 === map1.size) {
@@ -155,10 +190,18 @@ obj = {
             if (0 === map3.size) {
               if (0 === set.size) {
                 if (0 === set2.size) {
-                  if (null == obj) {
-                    if (null == maxProjects) {
-                      if (!c14) {
-                        return false;
+                  if (0 === set3.size) {
+                    if (!c14) {
+                      if (null == userId) {
+                        if (0 === set4.size) {
+                          if (null == obj) {
+                            if (null == maxProjects) {
+                              if (!c19) {
+                                return false;
+                              }
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -177,12 +220,16 @@ obj = {
     set.clear();
     set1.clear();
     set2.clear();
+    set3.clear();
+    c14 = false;
+    userId = null;
+    set4.clear();
     map4.clear();
     obj = null;
-    c12 = false;
+    c17 = false;
     error = "unattempted";
     maxProjects = null;
-    c14 = false;
+    c19 = false;
   },
   CONJURE_PROJECTS_FETCH_START: function handleProjectsFetchStart(guildId) {
     guildId = guildId.guildId;
@@ -190,6 +237,7 @@ obj = {
       const result = map4.set(guildId, "loading");
     } else {
       error = "loading";
+      c14 = false;
     }
   },
   CONJURE_PROJECTS_FETCH_SUCCESS: function handleProjectsFetchSuccess(arg0) {
@@ -214,17 +262,31 @@ obj = {
         }
         if (tmp14) {
           let deleteResult = map.delete(tmp7);
+          let deleteResult1 = set3.delete(tmp7);
         }
       }
       continue;
     }
-    for (const item10050 of found) {
-      let result = map.set(item10050.id, item10050);
-      let deleteResult1 = set1.delete(item10050.id);
+    for (const item10053 of found) {
+      let result = map.set(item10053.id, item10053);
+      let deleteResult2 = set1.delete(item10053.id);
       continue;
     }
+    (function syncRunning(found) {
+      const iter = found[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp2 = nextResult;
+        if (true === nextResult.running) {
+          let addResult = set4.add(tmp2.id);
+        } else {
+          let deleteResult = set4.delete(tmp2.id);
+        }
+        continue;
+      }
+    })(found);
     if (null != guildId) {
-      set2.add(guildId);
+      set4.add(guildId);
       const result1 = map4.set(guildId, "success");
     }
     (function pruneProjectScopedState() {
@@ -245,7 +307,7 @@ obj = {
       }
       tmp8 = set3[Symbol.iterator]();
     })();
-    c12 = true;
+    c17 = true;
     error = "success";
     { type: "success", fetchedAt: Date.now() };
     tmp2 = map[Symbol.iterator]();
@@ -259,9 +321,69 @@ obj = {
     }
     { type: "error", fetchedAt: Date.now() };
   },
+  CONJURE_PARTICIPATING_PROJECTS_MARK: function handleParticipatingProjectsMark(arg0) {
+    let flag = false;
+    const iter = arg0.projectIds[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp2 = nextResult;
+      value = map.get(nextResult);
+      let hasItem = null == value;
+      if (!hasItem) {
+        hasItem = isProjectOwner(tmp5);
+      }
+      if (!hasItem) {
+        hasItem = set2.has(tmp2);
+      }
+      if (!hasItem) {
+        let addResult = set2.add(tmp2);
+        flag = true;
+      }
+      continue;
+    }
+    return flag;
+  },
+  CONJURE_MISSING_PROJECTS_CHECK_START: function handleMissingProjectsCheckStart(userId) {
+    userId = userId.userId;
+    if (userId === userId) {
+      return false;
+    }
+  },
+  CONJURE_PROJECT_RUNNING_UPDATE: function handleProjectRunningUpdate(arg0) {
+    ({ projectId, running } = arg0);
+    if (set2.has(projectId)) {
+      if (set3.has(projectId) === running) {
+        return false;
+      }
+    }
+    set2.add(projectId);
+    if (running) {
+      set3.add(projectId);
+    } else {
+      set3.delete(projectId);
+    }
+  },
+  CONJURE_TURN_SETTLED: function handleTurnSettled(projectId) {
+    projectId = projectId.projectId;
+    if (set2.has(projectId)) {
+      return false;
+    } else {
+      set2.add(projectId);
+    }
+  },
+  CONNECTION_OPEN: function handleConnectionOpen() {
+    if (0 === set3.size) {
+      return false;
+    } else {
+      set3.clear();
+      if (c17) {
+        c14 = true;
+      }
+    }
+  },
   CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function handleProjectLimitFetchSettle(maxProjects) {
     maxProjects = maxProjects.maxProjects;
-    c14 = true;
+    c19 = true;
   },
   CONJURE_PROJECT_CREATE_SUCCESS: function handleProjectCreateSuccess(project) {
     project = project.project;
@@ -296,6 +418,8 @@ obj = {
       c8 = null;
     }
     map3.delete(projectId);
+    set2.delete(projectId);
+    set3.delete(projectId);
     tmp6 = map2[Symbol.iterator]();
   },
   CONJURE_PROJECT_DELETE_FAIL: function handleProjectDeleteFail(projectId) {

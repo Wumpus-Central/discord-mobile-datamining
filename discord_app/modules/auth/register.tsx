@@ -1,16 +1,16 @@
-// === Module 18144: auth/register ===
+// === Module 18241: auth/register ===
 
-// Module 18144 (auth/register)
+// Module 18241 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import APIErrorDefault from "APIError" /* 6567 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6658 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6867 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 18146 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 18147 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 18148 */;
+import APIErrorDefault from "APIError" /* 6582 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6673 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6882 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 18243 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 18244 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 18245 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -278,9 +278,9 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(18145);
+const ParentalConsentStore = fn(18242);
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
+({ AnalyticEvents: closure_6, AnalyticsSections: metroImportDefault, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1097);
 ({ AgeGateAnalyticAction: closure_9, AgeGateSource: closure_10 } = AgeGateConstants);
 const size = fn(2);

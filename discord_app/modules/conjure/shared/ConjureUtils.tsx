@@ -1,9 +1,9 @@
-// === Module 7543: ConjureUtils ===
+// === Module 7559: ConjureUtils ===
 
-// Module 7543 (ConjureUtils)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6965 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6999 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 7544 */;
+// Module 7559 (ConjureUtils)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6980 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7014 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 7560 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 5071 */;
 import GuildStore from "GuildStore" /* 5012 */;

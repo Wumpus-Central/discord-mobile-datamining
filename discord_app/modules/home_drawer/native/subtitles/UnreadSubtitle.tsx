@@ -1,7 +1,7 @@
-// === Module 18546: UnreadSubtitle ===
+// === Module 18641: UnreadSubtitle ===
 
-// Module 18546 (UnreadSubtitle)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 18641 (UnreadSubtitle)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,16 +32,16 @@ export default function UnreadSubtitle(arg0) {
     channelName,
     count: diff,
     labelHook(noticeType, key) {
-      return jsx(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: noticeType }, key);
+      return jsx(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: noticeType }, key);
     },
     iconHook(arg0, key) {
       return <channelIconComponentWithGuild key={key} size="xxs" color="icon-muted" style={subtitleStyles.unreadChannelIcon} />;
     },
     channelHook(children, key) {
-      return jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children }, key);
+      return jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children }, key);
     },
     overflowHook(children, key) {
-      return jsx(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", children }, key);
+      return jsx(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "body-xs/medium", color: "text-muted", children }, key);
     }
   });
   return <View style={subtitleStyles.subtitleRow} accessible accessibilityLabel={intl.formatToPlainString(subtitleStyles(channelIconComponentWithGuild[6]).t.gxD5I6, { channelName, count: diff })}>{null}</View>;

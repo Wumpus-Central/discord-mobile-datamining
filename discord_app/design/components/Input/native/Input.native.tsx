@@ -1,11 +1,11 @@
-// === Module 7209: Input ===
+// === Module 7224: Input ===
 
-// Module 7209 (Input)
+// Module 7224 (Input)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5310 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7210 */;
-import ErrorText from "ErrorText" /* 7211 */;
+import native from "native" /* 5311 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7225 */;
+import ErrorText from "ErrorText" /* 7226 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ export function Input(arg0) {
     items[1] = React3(View, obj4);
     let tmp11Result = null;
     if (null != description) {
-      const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.description, children: description };
+      const obj5 = { variant: "body-xs/medium", color: "text-muted", style: tmp.description, children: description };
       tmp11Result = React3(Text_Text.Text, obj5);
     }
     items[2] = tmp11Result;
@@ -53,16 +53,16 @@ export function Input(arg0) {
     return React4(View, obj3);
   } else if (null != labelTrailing) {
     const obj7 = { style: tmp.labelWrapper, children: null };
-    const obj8 = { variant: "text-sm/semibold", color: "text-subtle", nativeID: labelId, accessibilityLabel: requiredFieldA11yName, children: label };
+    const obj8 = { variant: "body-sm/semibold", color: "text-subtle", nativeID: labelId, accessibilityLabel: requiredFieldA11yName, children: label };
     const items1 = [React3(Text_Text.Text, obj8), labelTrailing];
     obj7.children = items1;
     let tmp5Result = React4(View, obj7);
   } else {
-    const obj9 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, nativeID: labelId, accessibilityLabel: requiredFieldA11yName, children: null };
+    const obj9 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.label, nativeID: labelId, accessibilityLabel: requiredFieldA11yName, children: null };
     const items2 = [label, ];
     let tmp5Result2 = null;
     if (required) {
-      const obj10 = { variant: "text-sm/semibold", color: "text-feedback-critical", "aria-hidden": true, children: [" ", "*"] };
+      const obj10 = { variant: "body-sm/semibold", color: "text-feedback-critical", "aria-hidden": true, children: [" ", "*"] };
       tmp5Result2 = React4(Text_Text.Text, obj10);
     }
     items2[1] = tmp5Result2;

@@ -1,8 +1,8 @@
-// === Module 15325: NUFTemplateV2 ===
+// === Module 15412: NUFTemplateV2 ===
 
-// Module 15325 (NUFTemplateV2)
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+// Module 15412 (NUFTemplateV2)
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default function NUFActionSheetTemplate(arg0) {
   ({ title, illustration, description, onCTAPress, CTALabel } = arg0);
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };
-  items = [React3(View, { style: tmp.illustration, children: illustration }), React3(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", children: title }), React3(Text_Text.Text, { style: tmp.description, variant: "text-md/medium", children: description }), React3(components_Button_Button.Button, { text: CTALabel, onPress: onCTAPress, grow: true })];
+  items = [React3(View, { style: tmp.illustration, children: illustration }), React3(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", children: title }), React3(Text_Text.Text, { style: tmp.description, variant: "body-md/medium", children: description }), React3(components_Button_Button.Button, { text: CTALabel, onPress: onCTAPress, grow: true })];
   obj.children = items;
   return React4(View, obj);
 };

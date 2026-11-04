@@ -1,8 +1,8 @@
-// === Module 16168: DerivedQosDataStorage ===
+// === Module 16257: DerivedQosDataStorage ===
 
-// Module 16168 (DerivedQosDataStorage)
+// Module 16257 (DerivedQosDataStorage)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 16167 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 16256 */;
 
 const logger = new LoggerDefault("DerivedQosDataStorage");
 const size = fn(2);

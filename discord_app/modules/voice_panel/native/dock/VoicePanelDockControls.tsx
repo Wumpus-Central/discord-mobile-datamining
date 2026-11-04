@@ -1,16 +1,16 @@
-// === Module 19370: VoicePanelDockControls ===
+// === Module 19474: VoicePanelDockControls ===
 
-// Module 19370 (VoicePanelDockControls)
+// Module 19474 (VoicePanelDockControls)
 import native from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
-import _modDef9967 from "module_9967" /* 9967 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 12107 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19369 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
+import _modDef10015 from "module_10015" /* 10015 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 12166 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19473 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import VoicePanelStore from "VoicePanelStore" /* 6995 */;
+import VoicePanelStore from "VoicePanelStore" /* 7010 */;
 
 const nativeDefault = native;
 
@@ -71,15 +71,15 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1113).intl;
   obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef9967;
+  obj.icon = _modDef10015;
   obj.onPress = callback;
-  return closure_7(channelId(8152).IconButton, obj);
+  return closure_7(channelId(8168).IconButton, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
-let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11378).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
+let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11428).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
 const size = fn(2);
@@ -90,14 +90,14 @@ export default noop.memo(function VoicePanelDockControls() {
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp2Result = useDockBoxShadowDefault(native.Shadow.SHADOW_MEDIUM);
   const obj = { style: tmp.actions, children: null };
-  const obj2 = { style: null, children: React5(DockMuteButton, { channelId }) };
+  const obj2 = { style: null, children: metroImportDefault(DockMuteButton, { channelId }) };
   items = [tmp.buttonShadow, { boxShadow: tmp2Result }];
   obj2.style = items;
-  const items1 = [React5(View, obj2), ];
-  const obj3 = { style: null, children: React5(DockHangUpButton, { channelId }) };
+  const items1 = [metroImportDefault(View, obj2), ];
+  const obj3 = { style: null, children: metroImportDefault(DockHangUpButton, { channelId }) };
   const items2 = [tmp.buttonShadow, { boxShadow: tmp2Result }];
   obj3.style = items2;
-  items1[1] = React5(View, obj3);
+  items1[1] = metroImportDefault(View, obj3);
   obj.children = items1;
-  return React6(View, obj);
+  return React5(View, obj);
 });

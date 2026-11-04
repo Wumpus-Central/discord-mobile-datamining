@@ -1,28 +1,28 @@
-// === Module 8963: MediaSourceUtil ===
+// === Module 8980: MediaSourceUtil ===
 
-// Module 8963 (MediaSourceUtil)
+// Module 8980 (MediaSourceUtil)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
 import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1441 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
 import Server from "Server" /* 2121 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6171 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6185 */;
-import EmbedUtils from "EmbedUtils" /* 6678 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6873 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7587 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7593 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8520 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8706 */;
-import transformMessageComponents from "transformMessageComponents" /* 8818 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8834 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8959 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8964 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8965 */;
-import MediaModalPortal from "MediaModalPortal" /* 8966 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6186 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6200 */;
+import EmbedUtils from "EmbedUtils" /* 6693 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6888 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7603 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7609 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8537 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8723 */;
+import transformMessageComponents from "transformMessageComponents" /* 8835 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8851 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8976 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8981 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8982 */;
+import MediaModalPortal from "MediaModalPortal" /* 8983 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
@@ -594,7 +594,7 @@ function handleDownloadError() {
   actions_AlertActionCreatorsDefault.show(obj2);
 }
 const Constants = fn(1072);
-({ MessageAttachmentFlags: hasOwnProperty, WEBP_RE_IOS: metroRequire } = Constants);
+({ MessageAttachmentFlags: hasOwnProperty, WEBP_RE_IOS: closure_6 } = Constants);
 const re7 = /\.avif$/i;
 const VideoSourceType = { PORTAL: 0, [0]: "PORTAL", TIKTOK_IFRAME: 1, [1]: "TIKTOK_IFRAME", WEB_FILE_IFRAME: 2, [2]: "WEB_FILE_IFRAME", DEFAULT: 3, [3]: "DEFAULT" };
 let size = fn(2);

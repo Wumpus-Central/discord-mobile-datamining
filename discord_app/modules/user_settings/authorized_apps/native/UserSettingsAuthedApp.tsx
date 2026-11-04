@@ -1,34 +1,34 @@
-// === Module 16997: UserSettingsAuthedApp ===
+// === Module 17089: UserSettingsAuthedApp ===
 
-// Module 16997 (UserSettingsAuthedApp)
+// Module 17089 (UserSettingsAuthedApp)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1500 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import useAlertStore from "useAlertStore" /* 6080 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7282 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7403 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7408 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7452 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 9068 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11069 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 14303 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import useAlertStore from "useAlertStore" /* 6095 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7298 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7419 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7424 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7468 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 9085 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11118 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 14389 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7396 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7412 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
 
 require = fn;
 function WarningLabel(children) {
   const tmp = closure_19();
   const obj = { style: tmp.warningContainer, children: null };
-  items = [closure_1_17(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED, style: tmp.warningIcon }), closure_1_17(Text_Text.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
+  items = [closure_1_17(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED, style: tmp.warningIcon }), closure_1_17(Text_Text.Text, { color: "text-default", variant: "body-sm/medium", children: children.text })];
   obj.children = items;
   return collapsedCategories(hasOwnProperty, obj);
 }
@@ -55,8 +55,8 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10267).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11424).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10315).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(11474).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(5141);
@@ -172,7 +172,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
   const toLocaleDateStringResult = new Date(application(stateFromStores[39]).extractTimestamp(oauth2Token.id)).toLocaleDateString(stateFromStores1, { year: "numeric", month: "short", day: "numeric" });
   obj13.iconBorderRadius = application(stateFromStores[13]).radii.md;
   const items9 = [closure_17(application(stateFromStores[40]), obj13), , ];
-  const obj14 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj14 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl = id(stateFromStores[18]).intl;
   obj14.children = intl.format(id(stateFromStores[18]).t.yOApCK, { date: toLocaleDateStringResult });
   items9[1] = closure_17(id(stateFromStores[15]).Text, obj14);
@@ -180,7 +180,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
   if (undefined !== description) {
     tmp20Result = null;
     if ("" !== description) {
-      const obj15 = { style: tmp.appAboutDescription, variant: "text-sm/normal", color: "text-default", children: tmp5(stringResult[41]).parseBioReactWithCachedAST(description) };
+      const obj15 = { style: tmp.appAboutDescription, variant: "body-sm/normal", color: "text-default", children: tmp5(stringResult[41]).parseBioReactWithCachedAST(description) };
       tmp20Result = closure_17(tmp5(stringResult[15]).Text, obj15);
       const tmp5Result = tmp5(stringResult[41]);
     }

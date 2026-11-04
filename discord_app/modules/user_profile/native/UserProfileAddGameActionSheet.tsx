@@ -1,24 +1,24 @@
-// === Module 15090: UserProfileAddGameActionSheet ===
+// === Module 15172: UserProfileAddGameActionSheet ===
 
-// Module 15090 (UserProfileAddGameActionSheet)
+// Module 15172 (UserProfileAddGameActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import TableRow from "TableRow" /* 7101 */;
-import _mod7635 from "module_7635" /* 7635 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7898 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8886 */;
-import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 15089 */;
-import WidgetUtils from "WidgetUtils" /* 15096 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import TableRow from "TableRow" /* 7116 */;
+import _mod7651 from "module_7651" /* 7651 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7914 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8903 */;
+import WidgetUtils from "WidgetUtils" /* 12563 */;
+import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 15171 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import WidgetStore from "WidgetStore" /* 15091 */;
+import WidgetStore from "WidgetStore" /* 12564 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(8878).TrackUserProfileEditActions;
+let closure_8 = fn(8895).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -35,7 +35,7 @@ let closure_12 = noop.memo(function AddGameRow(option) {
   option = option.option;
   const onSelect = option.onSelect;
   ({ start, end } = option);
-  return React7(TableRow.TableRow, {
+  return React6(TableRow.TableRow, {
     label: option.label,
     labelLineClamp: 1,
     disabled: option.disabled,
@@ -203,7 +203,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     if (!closure_4) {
       if ("" !== query.trim()) {
         const obj2 = { keys: ["label"] };
-        let length = _mod7635.matchSorter(memo1, query, obj2).length;
+        let length = _mod7651.matchSorter(memo1, query, obj2).length;
       }
       return length;
     }
@@ -255,7 +255,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     }
   }, items11);
   const items12 = [memo1, callback3];
-  const callback4 = obj.useCallback((arg0, arg1) => React7(closure_12, { option: memo1[arg1], start: 0 === arg1, end: arg1 === memo1.length - 1, onSelect: callback3 }), items12);
+  const callback4 = obj.useCallback((arg0, arg1) => React6(closure_12, { option: memo1[arg1], start: 0 === arg1, end: arg1 === memo1.length - 1, onSelect: callback3 }), items12);
   const obj6 = { scrollable: true, header: null, children: null };
   const obj7 = { title: null };
   let intl = tmp8(tmp3[22]).intl;
@@ -273,7 +273,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     let tmp34Result = tmp34(tmp35, obj10);
   } else if (tmp16) {
     const obj11 = { style: tmp.emptyState, children: null };
-    const obj12 = { variant: "text-md/medium", color: "text-subtle", style: tmp.emptyStateText, children: null };
+    const obj12 = { variant: "body-md/medium", color: "text-subtle", style: tmp.emptyStateText, children: null };
     const intl3 = tmp8(tmp3[22]).intl;
     obj12.children = intl3.string(tmp8(tmp3[22]).t.jkk7t9);
     obj11.children = tmp34(tmp8(tmp3[32]).Text, obj12);

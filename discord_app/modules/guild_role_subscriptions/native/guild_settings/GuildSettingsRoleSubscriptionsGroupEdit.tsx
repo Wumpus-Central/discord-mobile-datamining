@@ -1,9 +1,9 @@
-// === Module 20090: GuildSettingsRoleSubscriptionsGroupEdit ===
+// === Module 20206: GuildSettingsRoleSubscriptionsGroupEdit ===
 
-// Module 20090 (GuildSettingsRoleSubscriptionsGroupEdit)
+// Module 20206 (GuildSettingsRoleSubscriptionsGroupEdit)
 import util from "util" /* 1113 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 20103 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 20219 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -206,6 +206,6 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 
 export default function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
   guildId = guildId.guildId;
-  const obj = { guildId, children: React7(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId }) };
-  return React7(GuildSettingsRoleSubscriptionContainerDefault, obj);
+  const obj = { guildId, children: React6(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId }) };
+  return React6(GuildSettingsRoleSubscriptionContainerDefault, obj);
 };

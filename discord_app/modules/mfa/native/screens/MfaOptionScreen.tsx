@@ -1,19 +1,19 @@
-// === Module 17817: MfaOptionScreen ===
+// === Module 17913: MfaOptionScreen ===
 
-// Module 17817 (MfaOptionScreen)
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7075 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7237 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import MfaScreenUtilsDefault from "MfaScreenUtils" /* 17818 */;
-import BackButtonDefault from "BackButton" /* 17819 */;
+// Module 17913 (MfaOptionScreen)
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import BackgroundImageDefault from "BackgroundImage" /* 7090 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7257 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import MfaScreenUtilsDefault from "MfaScreenUtils" /* 17914 */;
+import BackButtonDefault from "BackButton" /* 17915 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/screens/MfaOptionScreen.tsx");
 
@@ -36,13 +36,13 @@ export default function MFAOptionScreen(arg0) {
   items = [tmp9, React4(Text_Text.Heading, { variant: "heading-xl/semibold", style: screenStyles.mfaContainerHeaderText, children: headerText }), , ];
   let tmp10Result = null != subtitle;
   if (tmp10Result) {
-    const obj4 = { variant: "heading-sm/medium", color: "text-default", children: subtitle };
+    const obj4 = { variant: "heading-xs/medium", color: "text-default", children: subtitle };
     tmp10Result = React4(Text_Text.Text, obj4);
   }
   items[2] = tmp10Result;
   let tmp10Result4 = null != error;
   if (tmp10Result4) {
-    const obj5 = { variant: "text-sm/normal", color: "text-feedback-critical", children: error };
+    const obj5 = { variant: "body-sm/normal", color: "text-feedback-critical", children: error };
     tmp10Result4 = React4(Text_Text.Text, obj5);
   }
   let tmp10Result5 = type === mfaMethod;

@@ -1,9 +1,9 @@
-// === Module 7376: MultipleChoiceField ===
+// === Module 7392: MultipleChoiceField ===
 
-// Module 7376 (MultipleChoiceField)
+// Module 7392 (MultipleChoiceField)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6843 */;
+import TextStyles from "TextStyles" /* 6858 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ export default function MultipleChoiceField(hasIcons) {
   items = [choices];
   const memo = noop.useMemo(() => choices.map((name, value) => ({ name, value })), items);
   const obj = { style: tmp.container, children: null };
-  const items1 = [closure_4(require("Text/Text").Text, { style: tmp.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), ];
+  const items1 = [closure_4(require("Text/Text").Text, { style: tmp.formHeader, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: field.label }), ];
   if (num == null) {
     num = -1;
   }

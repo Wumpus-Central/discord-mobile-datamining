@@ -1,18 +1,18 @@
-// === Module 18512: RoleColorPickerActionSheet ===
+// === Module 18607: RoleColorPickerActionSheet ===
 
-// Module 18512 (RoleColorPickerActionSheet)
+// Module 18607 (RoleColorPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16593 */;
-import ColorBlockDefault from "ColorBlock" /* 16595 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16684 */;
+import ColorBlockDefault from "ColorBlock" /* 16686 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ DEFAULT_ROLE_COLOR: closure_7, ROLE_COLORS } = Constants);
+({ DEFAULT_ROLE_COLOR: metroImportDefault, ROLE_COLORS } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let items = [...ROLE_COLORS.slice(0, 5), ...ROLE_COLORS.slice(10, 15), ...ROLE_COLORS.slice(5, 10), ...ROLE_COLORS.slice(15, 18)];
@@ -83,7 +83,7 @@ export default function RoleColorPickerActionSheet(color) {
   obj6.header = onSelect(color(defaultColor[12]).BottomSheetTitleHeader, obj3);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.colorWrap, children: null };
-  const items3 = [items.map((color) => React6(ColorBlockDefault, { color, style: memo, selected: color === first, onSelect }, color)), ];
+  const items3 = [items.map((color) => React5(ColorBlockDefault, { color, style: memo, selected: color === first, onSelect }, color)), ];
   const obj9 = { style: memo, onPress: callback1, accessibilityLabel: null, accessibilityRole: "button", children: null };
   const intl3 = tmp2(tmp3[13]).intl;
   obj9.accessibilityLabel = intl3.string(color(defaultColor[13]).t["/fkc8a"]);

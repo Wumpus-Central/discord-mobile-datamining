@@ -1,10 +1,10 @@
-// === Module 11630: BioText ===
+// === Module 11681: BioText ===
 
-// Module 11630 (BioText)
+// Module 11681 (BioText)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 11631 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 11682 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,17 +19,17 @@ function LinkButton(arg0) {
     style: tmp.link,
     children: null
   };
-  const obj2 = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: null };
+  const obj2 = { variant: "body-md/normal", color: "text-link", lineClamp, style: tmp.link, children: null };
   items = ["\n", text];
   obj2.children = items;
-  obj.children = React5(Text_Text.Text, obj2);
-  return React6(Pressable, obj);
+  obj.children = metroImportDefault(Text_Text.Text, obj2);
+  return React5(Pressable, obj);
 }
 const Pressable = fn(17).Pressable;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const CHANGELOG_URL = fn(5043).CHANGELOG_URL;
 const jsxProd = fn(21);
-({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsxs: metroImportDefault, jsx: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
 const size = fn(2);
@@ -41,7 +41,7 @@ export default function BioText(lineClamp) {
   ({ userId, guildId } = lineClamp);
   let str = lineClamp.textVariant;
   if (str === undefined) {
-    str = "text-md/normal";
+    str = "body-md/normal";
   }
   const tmp = closure_10();
   items = [bio, guildId, str];
@@ -84,7 +84,7 @@ export default function BioText(lineClamp) {
     const intl2 = bio(guildId[12]).intl;
     const obj5 = {
       blogHook(text, arg1) {
-          return React6(LinkButton, { lineClamp, text }, arg1);
+          return React5(LinkButton, { lineClamp, text }, arg1);
         }
     };
     obj3.children = intl2.format(bio(guildId[12]).t.RCYeBL, obj5);

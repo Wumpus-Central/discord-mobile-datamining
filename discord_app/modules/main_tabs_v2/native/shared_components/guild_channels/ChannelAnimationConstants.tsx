@@ -1,7 +1,7 @@
-// === Module 15016: ChannelAnimationConstants ===
+// === Module 15096: ChannelAnimationConstants ===
 
-// Module 15016 (ChannelAnimationConstants)
-import spring_spring from "spring/spring" /* 5757 */;
+// Module 15096 (ChannelAnimationConstants)
+import spring_spring from "spring/spring" /* 5771 */;
 import size from "module_2" /* 2 */;
 
 let obj = { damping: 35, stiffness: 275, mass: 1, overshootClamping: true };

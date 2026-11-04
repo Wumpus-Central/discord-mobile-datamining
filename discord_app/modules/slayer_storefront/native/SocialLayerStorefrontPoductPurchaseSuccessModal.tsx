@@ -1,24 +1,24 @@
-// === Module 14557: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 14637: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 14557 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 14637 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _modDef3865 from "module_3865" /* 3865 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7528 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10799 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7544 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10847 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import SKUStore from "SKUStore" /* 7016 */;
+import SKUStore from "SKUStore" /* 7031 */;
 
 const require = globalThis.__r;
 
@@ -207,7 +207,7 @@ function PurchaseSuccessModalBase(sku) {
     textLandscape2 = tmp.textLandscape;
   }
   items16[1] = textLandscape2;
-  items15[1] = closure_14(require("Text/Text").Text, { variant: "text-md/medium", color: "text-overlay-light", style: items16, children: body });
+  items15[1] = closure_14(require("Text/Text").Text, { variant: "body-md/medium", color: "text-overlay-light", style: items16, children: body });
   obj6.children = items15;
   const tmp31Result = closure_15(require("module_1652").View, obj6);
   const items17 = [tmp.footer, ];
@@ -224,7 +224,7 @@ function PurchaseSuccessModalBase(sku) {
     if (isScreenLandscape) {
       textLandscape3 = tmp.textLandscape;
     }
-    const obj8 = { variant: "text-xs/normal", color: "text-overlay-light", style: null, children: null };
+    const obj8 = { variant: "body-xs/normal", color: "text-overlay-light", style: null, children: null };
     items18[1] = textLandscape3;
     obj8.style = items18;
     obj8.children = finePrint;
@@ -277,7 +277,7 @@ function PurchaseSuccessModalBase(sku) {
   };
   const intl2 = tmp4(tmp3[21]).intl;
   obj16.accessibilityLabel = intl2.string(require("util").t.cpT0Cq);
-  obj15.children = closure_14(require("module_7131").HeaderBackButton, obj16);
+  obj15.children = closure_14(require("module_7146").HeaderBackButton, obj16);
   const items23 = [closure_14(closure_7, obj15), , ];
   const obj17 = { style: tmp.scroll, contentContainerStyle: null, onLayout: null, alwaysBounceVertical: false, children: null };
   const items24 = [tmp.body, ];
@@ -328,8 +328,8 @@ function PurchaseSuccessModalBase(sku) {
   return closure_15(closure_7, obj11);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(7531).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
+let numDays = fn(7547).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);

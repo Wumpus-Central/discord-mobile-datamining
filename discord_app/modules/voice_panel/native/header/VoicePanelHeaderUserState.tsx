@@ -1,15 +1,15 @@
-// === Module 19377: VoicePanelHeaderUserState ===
+// === Module 19481: VoicePanelHeaderUserState ===
 
-// Module 19377 (VoicePanelHeaderUserState)
+// Module 19481 (VoicePanelHeaderUserState)
 import nativeDefault from "native" /* 575 */;
-import NativeViewDefault from "NativeView" /* 7086 */;
-import native from "native" /* 9120 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9361 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import useStableParticipant from "useStableParticipant" /* 19376 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19378 */;
+import NativeViewDefault from "NativeView" /* 7101 */;
+import native from "native" /* 9137 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9378 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import useStableParticipant from "useStableParticipant" /* 19480 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 19482 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
 import module_1652 from "module_1652" /* 1652 */;
 
 const require = globalThis.__r;
@@ -67,7 +67,7 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   const tmp4Result = tmp4(type, id, guildId);
 }
 const jsx = fn(21).jsx;
-let closure_6 = module_1652.createAnimatedComponent(fn(9120).BackgroundBlurView);
+let closure_6 = module_1652.createAnimatedComponent(fn(9137).BackgroundBlurView);
 let closure_7 = { duration: 100 };
 const createStyles = fn(5141);
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };

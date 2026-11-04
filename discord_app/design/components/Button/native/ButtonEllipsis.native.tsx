@@ -1,6 +1,6 @@
-// === Module 5767: ButtonEllipsis ===
+// === Module 5781: ButtonEllipsis ===
 
-// Module 5767 (ButtonEllipsis)
+// Module 5781 (ButtonEllipsis)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -94,7 +94,7 @@ let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   circle.backgroundColor = backgroundColor;
   return { circle };
 });
-let items = [{ code: "(function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){let[ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING]=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));})" }, 500, fn(1652).withDelay, fn(1652).withRepeat, fn(5377).withTiming, obj];
+let items = [{ code: "(function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){let[ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING]=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));})" }, 500, fn(1652).withDelay, fn(1652).withRepeat, fn(5378).withTiming, obj];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;

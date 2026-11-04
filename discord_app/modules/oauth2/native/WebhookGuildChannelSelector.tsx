@@ -1,10 +1,10 @@
-// === Module 14750: WebhookGuildChannelSelector ===
+// === Module 14830: WebhookGuildChannelSelector ===
 
-// Module 14750 (WebhookGuildChannelSelector)
+// Module 14830 (WebhookGuildChannelSelector)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -52,7 +52,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       obj2.title = intl.string(util.t["Re/64R"]);
       const channels = first.channels;
       obj2.items = channels.map((id) => {
-        const obj = { label: selectedGuildId(5772).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8), value: id.id };
+        const obj = { label: selectedGuildId(5786).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8), value: id.id };
         return obj;
       });
       obj2.onItemSelect = function onItemSelect(arg0) {
@@ -60,8 +60,8 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         selectedChannelId(onChannelChange[10]).hideActionSheet(WebhookGuildChannelSelector);
       };
       obj2.selectedItem = selectedChannelId;
-      obj.openLazy(asyncRequireImpl(9130, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
-      const tmp7 = asyncRequireImpl(9130, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(9147, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
+      const tmp7 = asyncRequireImpl(9147, dependencyMap.paths);
     }
   }, items);
   const effect = noop.useEffect(() => {
@@ -166,7 +166,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       found = channels.find((id) => id.id === selectedChannelId);
     }
     let obj = { style: tmp.selectorGroup, children: null };
-    let obj2 = { variant: "eyebrow", color: "text-default", children: null };
+    let obj2 = { variant: "body-sm/medium", color: "text-default", children: null };
     let intl = selectedGuildId(onChannelChange[13]).intl;
     obj2.children = intl.string(selectedGuildId(onChannelChange[13]).t["8qKd+J"]);
     const items3 = [closure_10(selectedGuildId(onChannelChange[16]).Text, obj2), , , ];

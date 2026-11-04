@@ -1,19 +1,19 @@
-// === Module 8555: DoubleTapNitroAlert ===
+// === Module 8572: DoubleTapNitroAlert ===
 
-// Module 8555 (DoubleTapNitroAlert)
+// Module 8572 (DoubleTapNitroAlert)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 6084 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
+import AlertModal from "AlertModal" /* 6099 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7227 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NITRO_UPSELL_ALERT_KEY = fn(8551).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(8568).NITRO_UPSELL_ALERT_KEY;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
@@ -31,7 +31,7 @@ export default function DoubleTapNitroAlert(emojiName) {
   }, []);
   const obj = { header: null, title: null, content: null, actions: null };
   const tmp = closure_10();
-  obj.header = React5(View, { style: closure_10().icon, children: React5(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) });
+  obj.header = metroImportDefault(View, { style: closure_10().icon, children: metroImportDefault(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) });
   const intl = util.intl;
   obj.title = intl.string(util.t.HRAWfC);
   const intl2 = util.intl;
@@ -40,12 +40,12 @@ export default function DoubleTapNitroAlert(emojiName) {
   const obj4 = { onPress: callback, text: null };
   const intl3 = util.intl;
   obj4.text = intl3.string(util.t.LIIHRy);
-  items = [React5(AlertModal.AlertActionButton, obj4, "confirm"), ];
+  items = [metroImportDefault(AlertModal.AlertActionButton, obj4, "confirm"), ];
   const obj5 = { variant: "secondary", text: null };
   const intl4 = util.intl;
   obj5.text = intl4.string(util.t["Nr6v2+"]);
-  items[1] = React5(AlertModal.AlertActionButton, obj5, "cancel");
+  items[1] = metroImportDefault(AlertModal.AlertActionButton, obj5, "cancel");
   obj3.children = items;
-  obj.actions = React7(React6, obj3);
-  return React5(AlertModal.AlertModal, obj);
+  obj.actions = React6(React5, obj3);
+  return metroImportDefault(AlertModal.AlertModal, obj);
 };

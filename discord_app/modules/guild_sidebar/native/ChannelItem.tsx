@@ -1,17 +1,17 @@
-// === Module 18318: ChannelItem ===
+// === Module 18415: ChannelItem ===
 
-// Module 18318 (ChannelItem)
+// Module 18415 (ChannelItem)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
-import BookCheckIcon2 from "BookCheckIcon" /* 8771 */;
-import BaseChannelItem from "BaseChannelItem" /* 14068 */;
-import _modDef18319 from "module_18319" /* 18319 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
+import BookCheckIcon2 from "BookCheckIcon" /* 8788 */;
+import BaseChannelItem from "BaseChannelItem" /* 14154 */;
+import _modDef18416 from "module_18416" /* 18416 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -65,7 +65,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef18319;
+      let tmp12 = _modDef18416;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -89,7 +89,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return state(tmp9(14068).BaseChannelIcon, obj10);
+    return state(tmp9(14154).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -104,7 +104,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: "hash" };
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: 117.3 };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;
@@ -119,7 +119,7 @@ const Constants = fn(1072);
 const ChannelTypes = Constants.ChannelTypes;
 const Routes = Constants.Routes;
 const StaticChannelRoute = fn(4997).StaticChannelRoute;
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [, ];
@@ -132,9 +132,9 @@ obj.avatarStatus = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }
 obj.groupDmAvatar = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
 obj.channelInfoContainer = { paddingStart: 4 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.avatarStatusSelected = { backgroundColor: fn(6898).DARK_393C42_LIGHT_DEE0E4 };
+obj.avatarStatusSelected = { backgroundColor: fn(6913).DARK_393C42_LIGHT_DEE0E4 };
 let closure_16 = createStyles.createStyles(obj);
-let obj5 = { backgroundColor: fn(6898).DARK_393C42_LIGHT_DEE0E4 };
+let obj5 = { backgroundColor: fn(6913).DARK_393C42_LIGHT_DEE0E4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
 

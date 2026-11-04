@@ -1,11 +1,11 @@
-// === Module 15302: InAppReportsGuildPreviewElement ===
+// === Module 15389: InAppReportsGuildPreviewElement ===
 
-// Module 15302 (InAppReportsGuildPreviewElement)
+// Module 15389 (InAppReportsGuildPreviewElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -38,7 +38,7 @@ export default function GuildPreview(guild) {
   const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
   obj5.size = GuildIcon.GuildIconSizes.LARGE;
   obj5.guild = guild;
-  const items2 = [React4(GuildIconDefault, obj5), React4(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.guildInfo, children: guild.name })];
+  const items2 = [React4(GuildIconDefault, obj5), React4(Text_Text.Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", style: tmp.guildInfo, children: guild.name })];
   obj4.children = items2;
   items[1] = hasOwnProperty(View, obj4);
   obj2.children = items;

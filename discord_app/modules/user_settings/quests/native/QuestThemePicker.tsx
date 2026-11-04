@@ -1,8 +1,8 @@
-// === Module 17294: QuestThemePicker ===
+// === Module 17386: QuestThemePicker ===
 
-// Module 17294 (QuestThemePicker)
+// Module 17386 (QuestThemePicker)
 import nativeDefault from "native" /* 575 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17152 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17244 */;
 import noop from "module_19" /* 19 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -112,7 +112,7 @@ class QuestThemePicker {
         themeCircleSelected = tmp3.themeCircleSelected;
       }
       items[2] = themeCircleSelected;
-      const items1 = [callback(isSynced, { style: items }), callback(backgroundColor(allMobileThemes[17]).Text, { variant: "text-xs/medium", color: "text-muted", style: backgroundColor.themeLabel, children: backgroundColor.name })];
+      const items1 = [callback(isSynced, { style: items }), callback(backgroundColor(allMobileThemes[17]).Text, { variant: "body-xs/medium", color: "text-muted", style: backgroundColor.themeLabel, children: backgroundColor.name })];
       obj.children = items1;
       return closure_1_11(closure_5, obj, backgroundColor.theme);
     });
@@ -120,7 +120,7 @@ class QuestThemePicker {
     obj14 = { style: tmp.resetIcon, children: closure_10(closure_0(closure_2[18]).RefreshIcon, { size: "sm" }) };
     items8 = [, ];
     items8[0] = closure_10(isSynced, obj14);
-    obj15 = { variant: "text-xs/medium", color: "text-muted", style: tmp.themeLabel, children: null };
+    obj15 = { variant: "body-xs/medium", color: "text-muted", style: tmp.themeLabel, children: null };
     intl = closure_0(closure_2[19]).intl;
     obj15.children = intl.string(closure_0(closure_2[19]).t.yBZMsQ);
     items8[1] = closure_10(closure_0(closure_2[17]).Text, obj15);

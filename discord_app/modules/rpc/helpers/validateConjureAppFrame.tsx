@@ -1,13 +1,13 @@
-// === Module 16436: validateConjureAppFrame ===
+// === Module 16528: validateConjureAppFrame ===
 
-// Module 16436 (validateConjureAppFrame)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5771 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
-import isConjureApplicationDefault from "isConjureApplication" /* 6974 */;
-import RPCErrorDefault from "RPCError" /* 9461 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16437 */;
+// Module 16528 (validateConjureAppFrame)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5785 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
+import isConjureApplicationDefault from "isConjureApplication" /* 6989 */;
+import RPCErrorDefault from "RPCError" /* 9479 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16529 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;

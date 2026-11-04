@@ -1,19 +1,21 @@
-// === Module 12230: useConjureNativePublishButton ===
+// === Module 12289: useConjureNativePublishButton ===
 
-// Module 12230 (useConjureNativePublishButton)
+// Module 12289 (useConjureNativePublishButton)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 11090 */;
-import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet" /* 12231 */;
-import useConjurePublishButtonDefault from "useConjurePublishButton" /* 12232 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 11139 */;
+import ConjureSafetyHoldSheetDefault from "ConjureSafetyHoldSheet" /* 12290 */;
+import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet" /* 12292 */;
+import useConjurePublishButtonDefault from "useConjurePublishButton" /* 12293 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let obj = {
   showPublishBlocked: ConjurePublishBlockedSheetDefault,
+  showSafetyHold: ConjureSafetyHoldSheetDefault,
   promptPublishDestination: ConjurePublishDestinationSheetDefault,
   showError(text) {
     return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_FAILED", { text, variant: "critical" });

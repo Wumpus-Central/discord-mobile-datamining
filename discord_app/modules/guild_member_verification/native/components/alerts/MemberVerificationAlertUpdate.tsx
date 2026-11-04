@@ -1,12 +1,12 @@
-// === Module 7378: MemberVerificationAlertUpdate ===
+// === Module 7394: MemberVerificationAlertUpdate ===
 
-// Module 7378 (MemberVerificationAlertUpdate)
+// Module 7394 (MemberVerificationAlertUpdate)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import common_AlertDefault from "common/Alert" /* 6150 */;
-import _modDef7379 from "module_7379" /* 7379 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import common_AlertDefault from "common/Alert" /* 6165 */;
+import _modDef7395 from "module_7395" /* 7395 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,14 +32,14 @@ export default function MemberVerificationAlertUpdate(onClose) {
   obj.onCancel = onClose.onClose;
   const obj2 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj2.source = _modDef7379;
+  obj2.source = _modDef7395;
   obj2.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj2), , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = util.intl;
   obj3.children = intl3.string(util.t.kkjNHU);
   items[1] = React4(Text_Text.Text, obj3);
-  const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj4 = { style: tmp.text, variant: "body-sm/medium", color: "text-default", children: null };
   const intl4 = util.intl;
   obj4.children = intl4.string(util.t.gnkqzQ);
   items[2] = React4(Text_Text.Text, obj4);

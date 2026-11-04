@@ -1,13 +1,13 @@
-// === Module 14279: GuildPowerupsGameServerCard ===
+// === Module 14365: GuildPowerupsGameServerCard ===
 
-// Module 14279 (GuildPowerupsGameServerCard)
+// Module 14365 (GuildPowerupsGameServerCard)
 import nativeDefault from "native" /* 575 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 14276 */;
-import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 14280 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 14281 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 14362 */;
+import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 14366 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 14367 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import GameServerStore from "GameServerStore" /* 8593 */;
+import GameServerStore from "GameServerStore" /* 8610 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -39,7 +39,7 @@ export default function GuildPowerupsGameServerCard(guildId) {
       const obj6 = { stateMachine: "SM_Auto", dataBinding: null };
       const obj10 = { reducedMotion: stateFromStores1 };
       obj6.dataBinding = obj10;
-      obj5.children = jsx(tmp2(5292).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+      obj5.children = jsx(tmp2(5293).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
       obj4.riveComponent = <View style={tmp.riveContainer}>{null}</View>;
       obj4.status = tmp6;
       obj4.onPress = tmp9;

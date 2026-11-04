@@ -1,8 +1,8 @@
-// === Module 19384: getChannelInfoSubtitle ===
+// === Module 19488: getChannelInfoSubtitle ===
 
-// Module 19384 (getChannelInfoSubtitle)
+// Module 19488 (getChannelInfoSubtitle)
 import util from "util" /* 1113 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx");

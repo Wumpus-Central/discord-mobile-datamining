@@ -1,23 +1,23 @@
-// === Module 7007: RecentMentionsStore ===
+// === Module 7022: RecentMentionsStore ===
 
-// Module 7007 (RecentMentionsStore)
+// Module 7022 (RecentMentionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TimeUtils from "TimeUtils" /* 5892 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
-import isMessageMentioned from "isMessageMentioned" /* 6563 */;
-import AgeGateUtils from "AgeGateUtils" /* 6854 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7008 */;
-import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7009 */;
+import TimeUtils from "TimeUtils" /* 5906 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
+import isMessageMentioned from "isMessageMentioned" /* 6578 */;
+import AgeGateUtils from "AgeGateUtils" /* 6869 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7023 */;
+import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7024 */;
 import MessageRecord from "MessageRecord" /* 5084 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import MessageStore from "MessageStore" /* 6181 */;
-import ReadStateStore from "ReadStateStore" /* 6962 */;
+import MessageStore from "MessageStore" /* 6196 */;
+import ReadStateStore from "ReadStateStore" /* 6977 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const isMessageMentionedDefault = isMessageMentioned;

@@ -1,6 +1,6 @@
-// === Module 7790: KvMessage ===
+// === Module 7806: KvMessage ===
 
-// Module 7790 (KvMessage)
+// Module 7806 (KvMessage)
 import _slicedToArray from "module_32" /* 32 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import UserStore from "UserStore" /* 1385 */;

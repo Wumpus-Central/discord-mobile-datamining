@@ -1,19 +1,19 @@
-// === Module 14486: HubEmailConnectionGuildSelectSearch ===
+// === Module 14566: HubEmailConnectionGuildSelectSearch ===
 
-// Module 14486 (HubEmailConnectionGuildSelectSearch)
+// Module 14566 (HubEmailConnectionGuildSelectSearch)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useNavigation from "useNavigation" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import _mod7414 from "module_7414" /* 7414 */;
-import SearchBarNavDefault from "SearchBarNav" /* 7681 */;
-import HubActionCreatorsDefault from "HubActionCreators" /* 14473 */;
-import _modDef14487 from "module_14487" /* 14487 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import fuzzysearchDefault from "fuzzysearch" /* 7034 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import _mod7430 from "module_7430" /* 7430 */;
+import SearchBarNavDefault from "SearchBarNav" /* 7697 */;
+import HubActionCreatorsDefault from "HubActionCreators" /* 14553 */;
+import _modDef14567 from "module_14567" /* 14567 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,17 +24,17 @@ require = fn;
 function EmptyState() {
   const tmp = closure_11();
   const obj = { style: tmp.emptyWrapper, children: null };
-  const obj2 = { style: tmp.emptyStateImage, source: _modDef14487 };
-  items = [React6(FastImageDefault, obj2), ];
-  const obj3 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj2 = { style: tmp.emptyStateImage, source: _modDef14567 };
+  items = [React5(FastImageDefault, obj2), ];
+  const obj3 = { style: tmp.emptyStateTitle, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["6HXiuE"]);
-  items[1] = React6(Text_Text.Text, obj3);
+  items[1] = React5(Text_Text.Text, obj3);
   obj.children = items;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14460).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14540).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -86,7 +86,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
         tmp2 = null;
         if ("" !== anyErrorMessage) {
           const obj = { style: error.error, children: anyErrorMessage };
-          tmp2 = React6(native.LegacyText, obj);
+          tmp2 = React5(native.LegacyText, obj);
         }
       }
       return tmp2;
@@ -138,7 +138,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6566).APIError(closure_128_0);
+                  const aPIError = new id(6581).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);
@@ -188,7 +188,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   };
   const tmp8Result = SearchBarNavDefault;
   obj6.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingTop: 16 };
-  items[1] = anyErrorMessage(_mod7414.FlashList, obj6);
+  items[1] = anyErrorMessage(_mod7430.FlashList, obj6);
   obj3.children = items;
   return closure_9(closure_10, obj3);
 };

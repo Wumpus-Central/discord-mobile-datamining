@@ -1,11 +1,11 @@
-// === Module 17847: PaymentFlowTest ===
+// === Module 17943: PaymentFlowTest ===
 
-// Module 17847 (PaymentFlowTest)
+// Module 17943 (PaymentFlowTest)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
-import NativePaymentContext from "NativePaymentContext" /* 10819 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
+import NativePaymentContext from "NativePaymentContext" /* 10867 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -27,9 +27,9 @@ function TestView() {
   const tmp2Result2 = first2(noop.useState(undefined), 2);
   first2 = tmp2Result2[0];
   let obj3 = { spacing: 16, style: tmp.container, children: null };
-  const items1 = [closure_7(value(first1[9]).Text, { variant: "text-lg/semibold", children: "Android Payment Flow Test" }), ];
+  const items1 = [closure_7(value(first1[9]).Text, { variant: "body-lg/semibold", children: "Android Payment Flow Test" }), ];
   const items2 = [
-    closure_7(value(first1[9]).Text, { style: tmp.title, variant: "text-md/semibold", children: "Gift Purchase SKU" }),
+    closure_7(value(first1[9]).Text, { style: tmp.title, variant: "body-md/semibold", children: "Gift Purchase SKU" }),
     closure_7(value(first1[11]).TextInput, {
       containerStyle: tmp.textInput,
       label: "SKU ID",
@@ -60,7 +60,7 @@ function TestView() {
       if (tmp2) {
         const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
         ActionSheetActionCreatorsDefault.hideActionSheet();
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17848, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17944, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
       }
     }
   });
@@ -71,7 +71,7 @@ function TestView() {
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, textInput: null, title: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -87,6 +87,6 @@ export default noop.memo(function PaymentFlowTest() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   const obj = { skuIDs: [], activeSubscription: null, children: null };
   const tmp = closure_9();
-  obj.children = React5(ScrollView, { style: closure_9().wrap, contentContainerStyle: { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right }, children: React5(TestView, {}) });
-  return React5(NativePaymentContext.NativePaymentContextProvider, obj);
+  obj.children = metroImportDefault(ScrollView, { style: closure_9().wrap, contentContainerStyle: { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right }, children: metroImportDefault(TestView, {}) });
+  return metroImportDefault(NativePaymentContext.NativePaymentContextProvider, obj);
 });

@@ -1,14 +1,14 @@
-// === Module 16632: UserProfileBadgesEditButton ===
+// === Module 16722: UserProfileBadgesEditButton ===
 
-// Module 16632 (UserProfileBadgesEditButton)
+// Module 16722 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11588 */;
-import BadgeUtils from "BadgeUtils" /* 11597 */;
-import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 16633 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11638 */;
+import BadgeUtils from "BadgeUtils" /* 11648 */;
+import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 16723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11596 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11647 */;
 
 const require = globalThis.__r;
 
@@ -117,7 +117,7 @@ export default function UserProfileBadgesEditButton(arg0) {
       const obj4 = { showNewBadge: tmp10 };
       obj3.labelTrailing = closure_8(tmp2(tmp3[16]).UserProfileEditFormLabelBadges, obj4);
       const obj5 = { style: tmp.content, "aria-hidden": true, children: null };
-      const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj6 = { variant: "body-sm/medium", color: "text-muted", children: null };
       const intl4 = tmp2(tmp3[17]).intl;
       obj6.children = intl4.string(tmp2(tmp3[17]).t.xfuQvv);
       obj5.children = closure_8(tmp2(tmp3[18]).Text, obj6);
@@ -171,10 +171,10 @@ export default function UserProfileBadgesEditButton(arg0) {
             const obj2 = { style: closure_1.badge, source: null };
             const obj3 = { uri: value };
             obj2.source = obj3;
-            let tmp6 = React6(FastImageDefault, obj2, badge_id.badge_id);
+            let tmp6 = React5(FastImageDefault, obj2, badge_id.badge_id);
           } else {
             const obj = { badge: badge_id, size: 32, style: closure_1.badge };
-            tmp6 = React6(BadgeCatalogIconDefault, obj, badge_id.badge_id);
+            tmp6 = React5(BadgeCatalogIconDefault, obj, badge_id.badge_id);
           }
           return tmp6;
         });
@@ -185,13 +185,13 @@ export default function UserProfileBadgesEditButton(arg0) {
           const tmp = FastImageDefault;
           obj2.uri = BadgeUtils.getProfileBadgeIconUrl(id);
           obj.source = obj2;
-          return React6(tmp, obj, id.id);
+          return React5(tmp, obj, id.id);
         });
       }
       const items5 = [mapped1, ];
       let tmp22Result = diff > 0;
       if (tmp22Result) {
-        const obj12 = { variant: "text-md/normal", color: "mobile-text-heading-primary", style: tmp.overflowCount, children: null };
+        const obj12 = { variant: "body-md/normal", color: "mobile-text-heading-primary", style: tmp.overflowCount, children: null };
         const _HermesInternal = HermesInternal;
         obj12.children = "+" + diff;
         tmp22Result = tmp22(tmp2(tmp3[18]).Text, obj12);

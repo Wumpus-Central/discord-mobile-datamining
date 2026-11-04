@@ -1,17 +1,17 @@
-// === Module 11286: ReminderNotification ===
+// === Module 11336: ReminderNotification ===
 
-// Module 11286 (ReminderNotification)
+// Module 11336 (ReminderNotification)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ClockIcon from "ClockIcon" /* 5860 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 10322 */;
-import MessagePreviewTextDefault from "MessagePreviewText" /* 11170 */;
-import MessageNotificationHeaderDefault from "MessageNotificationHeader" /* 11215 */;
-import MediaPreviewRightAccessory from "MediaPreviewRightAccessory" /* 11217 */;
-import showForLaterModal from "showForLaterModal" /* 11287 */;
+import ClockIcon from "ClockIcon" /* 5874 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 10370 */;
+import MessagePreviewTextDefault from "MessagePreviewText" /* 11220 */;
+import MessageNotificationHeaderDefault from "MessageNotificationHeader" /* 11265 */;
+import MediaPreviewRightAccessory from "MediaPreviewRightAccessory" /* 11267 */;
+import showForLaterModal from "showForLaterModal" /* 11337 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -38,15 +38,15 @@ function NotificationBody(channel) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channel(504).useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
   const obj2 = channel(504);
-  const hasPreviewableMedia = channel(11155).useHasPreviewableMedia(message);
+  const hasPreviewableMedia = channel(11203).useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(1093).ChannelTypes.DM;
   let num = 1;
   if (tmp6) {
     num = closure_8;
   }
-  obj3 = channel(11155);
+  obj3 = channel(11203);
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(11155).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(11203).getMessagePreviewTextVariant();
   if (!tmp6) {
     const obj4 = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
     tmp10 = closure_10(MessageNotificationHeaderDefault, obj4);
@@ -54,8 +54,8 @@ function NotificationBody(channel) {
   const items2 = [tmp10, ];
   if (!hasPreviewableMedia) {
     if (null == message.poll) {
-      const obj5 = { channel, message, color: "text-default", layout: tmp(5812).ChannelListLayoutTypes.COZY, variant: messagePreviewTextVariant, muted: false, lineClamp: num };
-      let tmp14 = closure_10(tmp(11172).ChannelRowPreview, obj5);
+      const obj5 = { channel, message, color: "text-default", layout: tmp(5826).ChannelListLayoutTypes.COZY, variant: messagePreviewTextVariant, muted: false, lineClamp: num };
+      let tmp14 = closure_10(tmp(11222).ChannelRowPreview, obj5);
     }
     const obj6 = { children: null };
     items2[1] = tmp14;
@@ -64,11 +64,11 @@ function NotificationBody(channel) {
   }
   tmp14 = closure_10(MessagePreviewTextDefault, { message, lineClamp: num, showMessageAuthor: true, maxHeight });
   const obj7 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
-  const tmpResult = channel(11155);
+  const tmpResult = channel(11203);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11156);
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_7, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8, RIGHT_ACCESSORY_LEFT_MARGIN } = InAppNotificationConstants);
+const InAppNotificationConstants = fn(11204);
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroImportDefault, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8, RIGHT_ACCESSORY_LEFT_MARGIN } = InAppNotificationConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -110,5 +110,5 @@ export default noop.memo(function ReminderNotification(notification) {
   }, items);
   let obj = { user: notification.author, guildId: channel.guild_id };
   const tmp2 = closure_10(NotificationAvatar, { user: notification.author, guildId: channel.guild_id });
-  return closure_10(notification(11213).NotificationPressable, { icon: closure_10(NotificationAvatar, { user: notification.author, guildId: channel.guild_id }), header: memo, onPress: callback, notification, rightAccessory: closure_10(closure_16, { message }), children: closure_10(NotificationBody, { channel, message }) });
+  return closure_10(notification(11263).NotificationPressable, { icon: closure_10(NotificationAvatar, { user: notification.author, guildId: channel.guild_id }), header: memo, onPress: callback, notification, rightAccessory: closure_10(closure_16, { message }), children: closure_10(NotificationBody, { channel, message }) });
 });

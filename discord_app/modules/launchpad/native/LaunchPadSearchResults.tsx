@@ -1,27 +1,27 @@
-// === Module 19238: LaunchPadSearchResults ===
+// === Module 19342: LaunchPadSearchResults ===
 
-// Module 19238 (LaunchPadSearchResults)
+// Module 19342 (LaunchPadSearchResults)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildIconDefault from "GuildIcon" /* 7083 */;
-import transitionToGuild from "transitionToGuild" /* 7646 */;
-import sortByMatchScore from "sortByMatchScore" /* 9263 */;
-import RedesignCategory from "RedesignCategory" /* 18308 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 18885 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 18886 */;
-import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 18887 */;
-import renderChannelContentDefault from "renderChannelContent" /* 18888 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 19239 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 19240 */;
-import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 19241 */;
-import shared_TextChannelDefault from "shared/TextChannel" /* 19242 */;
-import shared_DMChannelDefault from "shared/DMChannel" /* 19247 */;
-import VoiceOrStageChannelDefault from "VoiceOrStageChannel" /* 19248 */;
-import LaunchPadSearchResultUserDefault from "LaunchPadSearchResultUser" /* 19250 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildIconDefault from "GuildIcon" /* 7098 */;
+import transitionToGuild from "transitionToGuild" /* 7662 */;
+import sortByMatchScore from "sortByMatchScore" /* 9280 */;
+import RedesignCategory from "RedesignCategory" /* 18405 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 18988 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 18989 */;
+import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 18990 */;
+import renderChannelContentDefault from "renderChannelContent" /* 18991 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 19343 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 19344 */;
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 19345 */;
+import shared_TextChannelDefault from "shared/TextChannel" /* 19346 */;
+import shared_DMChannelDefault from "shared/DMChannel" /* 19351 */;
+import VoiceOrStageChannelDefault from "VoiceOrStageChannel" /* 19352 */;
+import LaunchPadSearchResultUserDefault from "LaunchPadSearchResultUser" /* 19354 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7021 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
@@ -33,25 +33,25 @@ function renderItemJSX(result) {
     const type = result.type;
     if (sortByMatchScore.AutocompleterResultTypes.GUILD === type) {
       const obj2 = { guild: result.record };
-      return React7(closure_14, obj2);
+      return React6(closure_14, obj2);
     } else if (sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL === type) {
       const obj3 = { channel: result.record, navigationReplace: true, showGuildBadgeIcon: true };
-      return React7(shared_TextChannelDefault, obj3);
+      return React6(shared_TextChannelDefault, obj3);
     } else if (sortByMatchScore.AutocompleterResultTypes.GROUP_DM === type) {
       const obj5 = { channel: result.record, navigationReplace: true };
-      return React7(shared_DMChannelDefault, obj5);
+      return React6(shared_DMChannelDefault, obj5);
     } else if (sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj6 = { channel: result.record };
-      return React7(VoiceOrStageChannelDefault, obj6);
+      return React6(VoiceOrStageChannelDefault, obj6);
     } else if (sortByMatchScore.AutocompleterResultTypes.USER === type) {
       ({ record: obj4.user, comparator: obj4.comparator } = result);
-      return React7(LaunchPadSearchResultUserDefault, { user: null, comparator: null });
+      return React6(LaunchPadSearchResultUserDefault, { user: null, comparator: null });
     } else if (sortByMatchScore.AutocompleterResultTypes.HEADER === type) {
       const obj8 = { name: result.record.text, styles: tmp };
       return RedesignCategory.renderCategoryItem(obj8);
     } else {
-      const obj = { variant: "text-sm/semibold", children: result.type };
-      return React7(Text_Text.Text, obj);
+      const obj = { variant: "body-sm/semibold", children: result.type };
+      return React6(Text_Text.Text, obj);
     }
   }
 }
@@ -59,10 +59,10 @@ function renderSearchResultsSection() {
   const obj = { name: null };
   const intl = util.intl;
   obj.name = intl.string(util.t["zkoeq/"]);
-  return React7(closure_16, obj);
+  return React6(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
@@ -86,8 +86,8 @@ let closure_14 = noop.memo(function Guild(guild) {
   const stateFromStoresObject = guild(504).useStateFromStoresObject(items1, () => ({ unread: GuildReadStateStore.hasUnread(guild.id), mentionCount: GuildReadStateStore.getMentionCount(guild.id), isMentionLowImportance: GuildReadStateStore.getIsMentionLowImportance(guild.id) }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
   const obj = guild(504);
-  const fontScale = guild(5762).useFontScale();
-  const obj2 = guild(5762);
+  const fontScale = guild(5776).useFontScale();
+  const obj2 = guild(5776);
   const items2 = [LocaleStore];
   const stateFromStores = guild(504).useStateFromStores(items2, () => locale.locale);
   const obj3 = guild(504);
@@ -108,13 +108,13 @@ let closure_14 = noop.memo(function Guild(guild) {
   items4[2] = renderChannelContentDefault(obj8);
   obj5.children = items4;
   obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-  return tmp7(closure_9(guild(7106).PressableHighlight, obj4));
+  return tmp7(closure_9(guild(7121).PressableHighlight, obj4));
 });
 let closure_16 = noop.memo(function CategoryItemInner(arg0) {
   ({ name, onPress, note } = arg0);
   const tmp = closure_13();
   const categoryStyles = RedesignCategory.useCategoryStyles();
-  return React7(View, { style: tmp.categoryWrapper, children: RedesignCategory.renderCategoryItem({ name, onPress, note, noteAlignment: "end", styles: categoryStyles }) });
+  return React6(View, { style: tmp.categoryWrapper, children: RedesignCategory.renderCategoryItem({ name, onPress, note, noteAlignment: "end", styles: categoryStyles }) });
 });
 let obj5 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 const memoResult = noop.memo(function InitialResultsInner(history) {
@@ -156,7 +156,7 @@ const memoResult = noop.memo(function InitialResultsInner(history) {
       const obj = { name: null, note: null, onPress: null };
       const intl3 = util.intl;
       obj.name = intl3.string(util.t["Xmh+5e"]);
-      const obj2 = { variant: "text-xs/semibold", color: "text-brand", children: null };
+      const obj2 = { variant: "body-xs/semibold", color: "text-brand", children: null };
       const intl4 = util.intl;
       const string = intl4.string;
       let t2 = util.t;
@@ -168,7 +168,7 @@ const memoResult = noop.memo(function InitialResultsInner(history) {
         obj2.children = string(t2["/XSoJ+"]);
         tmp14 = obj2;
       }
-      obj.note = React7(Text_Text.Text, tmp14);
+      obj.note = React6(Text_Text.Text, tmp14);
       obj.onPress = toggleExpandedHistory;
     } else if (null != stateFromStores) {
       const intl2 = util.intl;
@@ -179,7 +179,7 @@ const memoResult = noop.memo(function InitialResultsInner(history) {
       const intl = util.intl;
       const t = util.t;
       const obj3 = { name: intl.string(c7 ? t.C5viSQ : t.ieCAhD) };
-      return React7(tmp2, obj3);
+      return React6(tmp2, obj3);
     }
   }, items2);
   let tmp9 = unreads(toggleExpandedHistory[9])();

@@ -1,7 +1,7 @@
-// === Module 13556: ModalActionButton ===
+// === Module 13640: ModalActionButton ===
 
-// Module 13556 (ModalActionButton)
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+// Module 13640 (ModalActionButton)
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

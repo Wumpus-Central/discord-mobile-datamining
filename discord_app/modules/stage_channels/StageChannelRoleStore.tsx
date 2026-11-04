@@ -1,19 +1,19 @@
-// === Module 6877: StageChannelRoleStore ===
+// === Module 6892: StageChannelRoleStore ===
 
-// Module 6877 (StageChannelRoleStore)
+// Module 6892 (StageChannelRoleStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 4998 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6168 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6878 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6183 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6893 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 require = fn;
 function buildStageChannelUserRoles(user, id2) {

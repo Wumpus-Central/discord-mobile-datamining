@@ -1,11 +1,12 @@
-// === Module 11625: formatClearAfterValue ===
+// === Module 11676: formatClearAfterValue ===
 
-// Module 11625 (formatClearAfterValue)
+// Module 11676 (formatClearAfterValue)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import DateUtils from "DateUtils" /* 4963 */;
-import Constants from "Constants" /* 11537 */;
+import Constants from "Constants" /* 11587 */;
+import getClearAfterDurationDefault from "getClearAfterDuration" /* 11591 */;
 import size from "module_2" /* 2 */;
 
 const ClearAfterValues = Constants.ClearAfterValues;
@@ -14,7 +15,8 @@ let result = size.fileFinishedImporting("modules/custom_status/utils/formatClear
 export default function formatClearAfterValue(type) {
   if (ClearAfterValues.TODAY === type) {
     const _Date10 = Date;
-    const sum = Date.now() + DurationsDefault.Millis.DAY;
+    const sum = Date.now() + getClearAfterDurationDefault(ClearAfterValues.TODAY);
+    const tmp59 = getClearAfterDurationDefault(ClearAfterValues.TODAY);
     const _Date11 = Date;
     const date = new Date();
     const _Date12 = Date;

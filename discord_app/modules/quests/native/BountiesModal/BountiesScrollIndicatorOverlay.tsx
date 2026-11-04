@@ -1,10 +1,10 @@
-// === Module 17104: BountiesScrollIndicatorOverlay ===
+// === Module 17196: BountiesScrollIndicatorOverlay ===
 
-// Module 17104 (BountiesScrollIndicatorOverlay)
+// Module 17196 (BountiesScrollIndicatorOverlay)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import BountiesScrollIndicatorAnimationDefault from "BountiesScrollIndicatorAnimation" /* 17105 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import BountiesScrollIndicatorAnimationDefault from "BountiesScrollIndicatorAnimation" /* 17197 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,9 +13,9 @@ const require = globalThis.__r;
 const require = fn;
 let StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
-let closure_9 = 5000 + fn(5380).timingSlowDuration;
+let closure_9 = 5000 + fn(5381).timingSlowDuration;
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
@@ -73,7 +73,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
             if (closure_1_0) {
               num = closure_2_9;
             }
-            let timeout = setTimeout(/* F140896 */ function() { ... }, num);
+            let timeout = setTimeout(/* F141670 */ function() { ... }, num);
           }, num);
         }, num);
       }, closure_1_9);
@@ -218,7 +218,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
   items10[1] = items11;
   obj6.style = items10;
   const items12 = [c6(BountiesScrollIndicatorAnimationDefault, { visible: first, isFadingInContent: tmp2Result[0] }), ];
-  const obj7 = { variant: "text-sm/semibold", color: "text-default", style: tmp.scrollIndicatorText, children: null };
+  const obj7 = { variant: "body-sm/semibold", color: "text-default", style: tmp.scrollIndicatorText, children: null };
   const intl = tmp16(1113).intl;
   obj7.children = intl.string(require("util").t.eafsh4);
   items12[1] = c6(require("Text/Text").Text, obj7);

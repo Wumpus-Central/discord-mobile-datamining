@@ -1,8 +1,8 @@
-// === Module 9171: getAppChannelApplicationUnsupportedText ===
+// === Module 9188: getAppChannelApplicationUnsupportedText ===
 
-// Module 9171 (getAppChannelApplicationUnsupportedText)
+// Module 9188 (getAppChannelApplicationUnsupportedText)
 import util from "util" /* 1113 */;
-import GuildEmbeddedApplicationUnsupportedReason from "GuildEmbeddedApplicationUnsupportedReason" /* 9172 */;
+import GuildEmbeddedApplicationUnsupportedReason from "GuildEmbeddedApplicationUnsupportedReason" /* 9189 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_channels/getAppChannelApplicationUnsupportedText.tsx");

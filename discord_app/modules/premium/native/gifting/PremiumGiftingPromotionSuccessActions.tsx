@@ -1,15 +1,15 @@
-// === Module 14625: PremiumGiftingPromotionSuccessActions ===
+// === Module 14705: PremiumGiftingPromotionSuccessActions ===
 
-// Module 14625 (PremiumGiftingPromotionSuccessActions)
+// Module 14705 (PremiumGiftingPromotionSuccessActions)
 import nativeDefault from "native" /* 575 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10689 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14626 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10737 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14706 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 }, promoDetails: null };
 let obj3 = { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 };

@@ -1,17 +1,17 @@
-// === Module 9186: ChannelOverwritesItem ===
+// === Module 9203: ChannelOverwritesItem ===
 
-// Module 9186 (ChannelOverwritesItem)
+// Module 9203 (ChannelOverwritesItem)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AlertModal from "AlertModal" /* 6084 */;
-import TableRow from "TableRow" /* 7101 */;
-import FormCheckbox from "FormCheckbox" /* 7115 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9159 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9187 */;
-import _modDef9188 from "module_9188" /* 9188 */;
-import _modDef9189 from "module_9189" /* 9189 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AlertModal from "AlertModal" /* 6099 */;
+import TableRow from "TableRow" /* 7116 */;
+import FormCheckbox from "FormCheckbox" /* 7130 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9176 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9204 */;
+import _modDef9205 from "module_9205" /* 9205 */;
+import _modDef9206 from "module_9206" /* 9206 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -55,15 +55,15 @@ function RemoveIcon(item) {
       prop = tmp.rowRemoveIconDisabled;
     }
     let obj2 = { style: prop };
-    obj.children = closure_7(item(7218).CircleXIcon, obj2);
-    tmp3Result = closure_7(item(7106).PressableOpacity, obj);
+    obj.children = closure_7(item(7233).CircleXIcon, obj2);
+    tmp3Result = closure_7(item(7121).PressableOpacity, obj);
   }
   return tmp3Result;
 }
 function RoleItem(arg0) {
   ({ item, subLabel, trailing } = arg0);
   ({ disabled, channelId, showType, showRemove, start, end, onPress, accessibilityRole, accessibilityState, accessible } = arg0);
-  const obj = { icon: React5(ShieldUserIcon.ShieldUserIcon, { size: "lg", color: item.colorString }), label: item.name, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
+  const obj = { icon: metroImportDefault(ShieldUserIcon.ShieldUserIcon, { size: "lg", color: item.colorString }), label: item.name, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
   if (showType) {
     subLabel = ChannelPermissionsUtilsAll.getRowTypeLabel(item.rowType);
   }
@@ -72,7 +72,7 @@ function RoleItem(arg0) {
   obj.end = end;
   if (showRemove) {
     const obj4 = { item, channelId };
-    trailing = React5(RemoveIcon, obj4);
+    trailing = metroImportDefault(RemoveIcon, obj4);
   }
   obj.trailing = trailing;
   obj.onPress = onPress;
@@ -80,22 +80,22 @@ function RoleItem(arg0) {
   obj.accessibilityRole = accessibilityRole;
   obj.accessibilityState = accessibilityState;
   obj.accessible = accessible;
-  return React5(TableRow.TableRow, obj);
+  return metroImportDefault(TableRow.TableRow, obj);
 }
 function MemberItem(arg0) {
   ({ item, trailing } = arg0);
   ({ channelId, showRemove, onRemove, guildId, start, end, onPress, disabled, accessibilityRole, accessibilityState, accessible } = arg0);
   const tmp = closure_9();
   const obj = { style: tmp.nameWrapper, children: null };
-  const obj2 = { style: null, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: item.name };
+  const obj2 = { style: null, lineClamp: 1, variant: "body-md/semibold", color: "interactive-text-active", children: item.name };
   items = [, ];
   ({ name: arr[0], memberName: arr[1] } = tmp);
   obj2.style = items;
-  const items1 = [React5(Text_Text.Text, obj2), ];
+  const items1 = [metroImportDefault(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9188, disableColor: true, style: tmp.ownerIcon };
-    tmp4Result = React5(native.Icon, obj3);
+    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9205, disableColor: true, style: tmp.ownerIcon };
+    tmp4Result = metroImportDefault(native.Icon, obj3);
   }
   items1[1] = tmp4Result;
   obj.children = items1;
@@ -105,15 +105,15 @@ function MemberItem(arg0) {
     avatarSource = user.getAvatarSource(guildId);
   }
   const obj4 = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
-  const tmp2Result = React6(View, obj);
-  obj4.icon = React5(native.Avatar, { source: avatarSource, size: native.AvatarSizes.SMALL });
+  const tmp2Result = React5(View, obj);
+  obj4.icon = metroImportDefault(native.Avatar, { source: avatarSource, size: native.AvatarSizes.SMALL });
   obj4.label = tmp2Result;
   obj4.subLabel = item.username;
   obj4.start = start;
   obj4.end = end;
   if (showRemove) {
     const obj6 = { item, channelId, onRemove };
-    trailing = React5(RemoveIcon, obj6);
+    trailing = metroImportDefault(RemoveIcon, obj6);
   }
   obj4.trailing = trailing;
   obj4.onPress = onPress;
@@ -121,15 +121,15 @@ function MemberItem(arg0) {
   obj4.accessibilityRole = accessibilityRole;
   obj4.accessibilityState = accessibilityState;
   obj4.accessible = accessible;
-  return React5(TableRow.TableRow, obj4);
+  return metroImportDefault(TableRow.TableRow, obj4);
 }
 function EmptyRoleItem(item) {
   item = item.item;
   const obj = { icon: null, label: null };
   const tmp = closure_9();
-  obj.icon = React5(native.Icon, { source: _modDef9189, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
+  obj.icon = metroImportDefault(native.Icon, { source: _modDef9206, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
   obj.label = item.name;
-  return React5(TableRow.TableRow, obj);
+  return metroImportDefault(TableRow.TableRow, obj);
 }
 class ChannelOverwritesItem {
   constructor(arg0) {
@@ -173,9 +173,9 @@ class ChannelOverwritesItem {
   }
 }
 const View = fn(17).View;
-const RowType = fn(8071).RowType;
+const RowType = fn(8087).RowType;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
 const size = fn(2);
@@ -192,6 +192,6 @@ export function ChannelOverwritesCheckboxItem(checked) {
   obj2.accessible = true;
   obj2.accessibilityRole = accessibilityRole;
   obj2.accessibilityState = accessibilityState;
-  obj2.trailing = React5(FormCheckbox.FormCheckbox, { checked });
-  return React5(ChannelOverwritesItem, obj2);
+  obj2.trailing = metroImportDefault(FormCheckbox.FormCheckbox, { checked });
+  return metroImportDefault(ChannelOverwritesItem, obj2);
 }

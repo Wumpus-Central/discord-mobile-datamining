@@ -1,10 +1,10 @@
-// === Module 10350: MentionGuardUtils ===
+// === Module 10398: MentionGuardUtils ===
 
-// Module 10350 (MentionGuardUtils)
+// Module 10398 (MentionGuardUtils)
 import _modDef38 from "module_38" /* 38 */;
-import MessageParserDefault from "MessageParser" /* 7948 */;
+import MessageParserDefault from "MessageParser" /* 7964 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7570 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7586 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 
 function parsedItemUsesEveryoneRole(content) {
@@ -39,7 +39,7 @@ function parsedItemUsesEveryoneRole(content) {
   return null;
 }
 const Constants = fn(1072);
-({ Permissions: hasOwnProperty, StatusTypes: metroRequire } = Constants);
+({ Permissions: hasOwnProperty, StatusTypes: closure_6 } = Constants);
 const regExp = new RegExp(/@(:?everyone|here)/);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/MentionGuardUtils.tsx");

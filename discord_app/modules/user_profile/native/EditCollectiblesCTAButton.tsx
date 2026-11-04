@@ -1,16 +1,16 @@
-// === Module 8867: EditCollectiblesCTAButton ===
+// === Module 8884: EditCollectiblesCTAButton ===
 
-// Module 8867 (EditCollectiblesCTAButton)
+// Module 8884 (EditCollectiblesCTAButton)
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8868 */;
-import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 8870 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8871 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7859 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8885 */;
+import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 8887 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8888 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -152,13 +152,13 @@ export default noop.memo(function EditCollectiblesCTAButton(user) {
   const tmp2Result = PremiumUtilsDefault;
   let result = require("CollectiblesUtils").isPremiumCollectiblesProduct(product);
   if (!result) {
-    result = tmp4(7856).isPremiumCollectiblesPurchase(purchase);
-    const tmp4Result8 = tmp4(7856);
+    result = tmp4(7872).isPremiumCollectiblesPurchase(purchase);
+    const tmp4Result8 = tmp4(7872);
   }
   let result1 = !canUseCollectiblesResult;
   if (!canUseCollectiblesResult) {
-    result1 = tmp4(7856).isPremiumCollectiblesPurchase(purchase);
-    const tmp4Result9 = tmp4(7856);
+    result1 = tmp4(7872).isPremiumCollectiblesPurchase(purchase);
+    const tmp4Result9 = tmp4(7872);
   }
   let tmp30 = null == selectedSkuId;
   if (!tmp30) {

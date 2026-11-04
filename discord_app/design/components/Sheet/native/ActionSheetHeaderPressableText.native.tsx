@@ -1,9 +1,9 @@
-// === Module 9138: ActionSheetHeaderPressableText ===
+// === Module 9155: ActionSheetHeaderPressableText ===
 
-// Module 9138 (ActionSheetHeaderPressableText)
+// Module 9155 (ActionSheetHeaderPressableText)
 import jsxProd from "jsxProd" /* 21 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
@@ -19,6 +19,6 @@ export function ActionSheetHeaderPressableText(onPress) {
     tmp5 = accessibilityLabel;
   }
   obj.accessibilityLabel = tmp5;
-  obj.children = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-brand", children: label });
+  obj.children = jsx(Text_Text.Text, { variant: "body-md/medium", color: "text-brand", children: label });
   return jsx(Pressables.PressableOpacity, { style: closure_3().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
 }

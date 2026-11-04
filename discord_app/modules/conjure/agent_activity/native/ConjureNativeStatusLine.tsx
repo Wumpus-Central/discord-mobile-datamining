@@ -1,15 +1,15 @@
-// === Module 12761: ConjureNativeStatusLine ===
+// === Module 12842: ConjureNativeStatusLine ===
 
-// Module 12761 (ConjureNativeStatusLine)
+// Module 12842 (ConjureNativeStatusLine)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import MagicWandIcon from "MagicWandIcon" /* 12259 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import MagicWandIcon from "MagicWandIcon" /* 12320 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [nativeDefault.colors.TEXT_BRAND, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, nativeDefault.colors.TEXT_FEEDBACK_WARNING, nativeDefault.colors.TEXT_FEEDBACK_INFO];
 const createStyles = fn(5141);
 let obj2 = { row: { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 }, glyphGutter: { width: 40, marginRight: 12, alignItems: "center" }, label: { flex: 1 }, trailing: null, chevron: null };
@@ -106,9 +106,9 @@ export default function ConjureNativeStatusLine(live) {
     }
     items = [tmp6Result2, , , ];
     const obj4 = { style: row.label, children: null };
-    let str = "text-sm/normal";
+    let str = "body-sm/normal";
     if (inGutter) {
-      str = "text-md/normal";
+      str = "body-md/normal";
     }
     obj4.children = hasOwnProperty(Text_Text.Text, { variant: str, color: str2, children: line });
     items[1] = hasOwnProperty(View, obj4);

@@ -1,6 +1,6 @@
-// === Module 20030: CreatorMonetizationEligibilityActionCreators ===
+// === Module 20146: CreatorMonetizationEligibilityActionCreators ===
 
-// Module 20030 (CreatorMonetizationEligibilityActionCreators)
+// Module 20146 (CreatorMonetizationEligibilityActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -27,15 +27,15 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj5 = { url: Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c2 = 1;
           c1 = 1;
-          const obj5 = { value: HTTP.post(obj4), done: false };
-          return obj5;
+          const obj6 = { value: HTTP.post(obj5), done: false };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c1 = 3;
@@ -48,9 +48,9 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
         c1 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } catch (tmp5) {
+    } catch (tmp9) {
       c1 = tmp;
-      throw tmp5;
+      throw tmp9;
     }
   }
 };
@@ -130,15 +130,15 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj5 = { url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c2 = 1;
           c1 = 1;
-          const obj5 = { value: HTTP.post(obj4), done: false };
-          return obj5;
+          const obj6 = { value: HTTP.post(obj5), done: false };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c1 = 3;
@@ -151,9 +151,9 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
         c1 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } catch (tmp5) {
+    } catch (tmp9) {
       c1 = tmp;
-      throw tmp5;
+      throw tmp9;
     }
   }
 };

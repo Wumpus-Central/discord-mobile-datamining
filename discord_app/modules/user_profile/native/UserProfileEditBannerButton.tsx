@@ -1,16 +1,16 @@
-// === Module 16602: UserProfileEditBannerButton ===
+// === Module 16693: UserProfileEditBannerButton ===
 
-// Module 16602 (UserProfileEditBannerButton)
+// Module 16693 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 575 */;
-import Pressables from "Pressables" /* 7106 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8927 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8943 */;
-import PencilIcon from "PencilIcon" /* 10362 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 13598 */;
+import Pressables from "Pressables" /* 7121 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8944 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8960 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9531 */;
+import PencilIcon from "PencilIcon" /* 10410 */;
 import noop from "module_19" /* 19 */;
 
-const EditButtonDefault = tmp(16603);
+const EditButtonDefault = tmp(16694);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -25,7 +25,7 @@ function ProfilePreviewButton(userId) {
     const obj2 = { style: tmp.previewButton, onPress: tmp4, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = tmp3(tmp2[9]).intl;
     obj2.accessibilityLabel = intl.string(tmp3(tmp2[9]).t["3Qcx6K"]);
-    const obj3 = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
+    const obj3 = { variant: "body-sm/semibold", color: "text-overlay-light", children: null };
     const intl2 = tmp3(tmp2[9]).intl;
     obj3.children = intl2.string(tmp3(tmp2[9]).t["3Qcx6K"]);
     obj2.children = closure_5(tmp3(tmp2[10]).Text, obj3);
@@ -46,7 +46,7 @@ function EditButton(disabled) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { position: "relative" }, editButton: null, previewButton: null, refreshEditButtonContainer: null };
 let size = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round };

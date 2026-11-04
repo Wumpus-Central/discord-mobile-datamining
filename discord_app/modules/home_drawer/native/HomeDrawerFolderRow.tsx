@@ -1,15 +1,15 @@
-// === Module 18526: HomeDrawerFolderRow ===
+// === Module 18621: HomeDrawerFolderRow ===
 
-// Module 18526 (HomeDrawerFolderRow)
+// Module 18621 (HomeDrawerFolderRow)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 11125 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 11173 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7021 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import SortedGuildStore from "SortedGuildStore" /* 6892 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import SortedGuildStore from "SortedGuildStore" /* 6907 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 require = fn;
 function Wrapper(folder) {
@@ -141,7 +141,7 @@ function Wrapper(folder) {
     }
     const obj = { style: closure_1.title, children: null };
     items = [closure_2_11(BellSlashIcon, { size: "xs" }), ];
-    const obj2 = { variant: "text-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: null };
+    const obj2 = { variant: "body-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: null };
     let folderName = folder.folderName;
     if (folderName == null) {
       const intl = util.intl;
@@ -166,7 +166,7 @@ function Wrapper(folder) {
       let tmp14 = formatResult1;
     }
     const items7 = [tmp14, str];
-    const memo2 = obj.useMemo(() => closure_2_11(Text_Text.Text, { variant: "text-xs/medium", color, lineClamp: 1, children: formatResult3 }), items7);
+    const memo2 = obj.useMemo(() => closure_2_11(Text_Text.Text, { variant: "body-xs/medium", color, lineClamp: 1, children: formatResult3 }), items7);
     const obj10 = { title: memo1, subtitle: null };
     let tmp20;
     if (!folder.expanded) {
@@ -221,7 +221,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(5327).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(5328).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

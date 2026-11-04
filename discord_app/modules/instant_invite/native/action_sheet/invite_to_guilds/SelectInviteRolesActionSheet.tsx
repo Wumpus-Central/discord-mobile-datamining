@@ -1,14 +1,14 @@
-// === Module 20165: SelectInviteRolesActionSheet ===
+// === Module 20281: SelectInviteRolesActionSheet ===
 
-// Module 20165 (SelectInviteRolesActionSheet)
+// Module 20281 (SelectInviteRolesActionSheet)
 import _mod12 from "module_12" /* 12 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ list: { flex: 1 } });
 const size = fn(2);
@@ -69,7 +69,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     return closure_1_7(callback, { children });
   }, items2);
   let obj = { onPress: callback1, accessibilityRole: "button", children: null };
-  const obj2 = { variant: "text-md/semibold", children: null };
+  const obj2 = { variant: "body-md/semibold", children: null };
   const intl = assignableRoles(onSave[12]).intl;
   obj2.children = intl.string(assignableRoles(onSave[12]).t.i4jeWR);
   obj.children = closure_5(assignableRoles(onSave[11]).Text, obj2);

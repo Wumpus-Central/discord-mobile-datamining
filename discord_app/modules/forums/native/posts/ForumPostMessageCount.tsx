@@ -1,12 +1,12 @@
-// === Module 13912: ForumPostMessageCount ===
+// === Module 13998: ForumPostMessageCount ===
 
-// Module 13912 (ForumPostMessageCount)
+// Module 13998 (ForumPostMessageCount)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ChatIcon from "ChatIcon" /* 8767 */;
-import ForumHooks from "ForumHooks" /* 9969 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11284 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ChatIcon from "ChatIcon" /* 8784 */;
+import ForumHooks from "ForumHooks" /* 10017 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11334 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,16 +60,16 @@ export default function ForumPostMessageCount(hasUnreads) {
   obj3.color = str2;
   const items1 = [React4(ChatIcon.ChatIcon, obj3), , ];
   if (isMaxMessageCount) {
-    const obj4 = { variant: "text-sm/semibold", color: str, children: messageCountText };
+    const obj4 = { variant: "body-sm/semibold", color: str, children: messageCountText };
     let tmp7Result = React4(Text_Text.Text, obj4);
   } else {
-    const obj5 = { count: messageCount, textVariant: "text-sm/semibold", textColor: str, animate: false };
+    const obj5 = { count: messageCount, textVariant: "body-sm/semibold", textColor: str, animate: false };
     tmp7Result = React4(AnimatedCounterDefault, obj5);
   }
   items1[1] = tmp7Result;
   let tmp5Result = null != unreadCount;
   if (tmp5Result) {
-    const obj6 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.messageUnreadCount, children: null };
+    const obj6 = { variant: "body-sm/semibold", color: "text-brand", style: tmp.messageUnreadCount, children: null };
     const intl2 = util.intl;
     const obj7 = { count: unreadCount };
     const items2 = ["(", intl2.format(util.t.z3PEth, obj7), ")"];

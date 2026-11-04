@@ -1,8 +1,8 @@
-// === Module 14095: ApplicationCommandItem ===
+// === Module 14181: ApplicationCommandItem ===
 
-// Module 14095 (ApplicationCommandItem)
+// Module 14181 (ApplicationCommandItem)
 import nativeDefault from "native" /* 575 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13924 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14010 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
@@ -10,9 +10,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10355).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10403).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { applicationCommandItem: { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) }, highlightedApplicationCommandItem: null, applicationCommandIcon: null, applicationCommandDescriptionWrapper: null, applicationCommandSectionName: null };
@@ -79,10 +79,10 @@ export default function ApplicationCommandItem(highlighted) {
   }
   const items2 = [showIcon, , ];
   const obj7 = { style: tmp3.applicationCommandDescriptionWrapper, children: null };
-  const items3 = [closure_7(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), closure_7(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "text-xs/medium", color: "text-default", children: command.displayDescription })];
+  const items3 = [closure_7(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), closure_7(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "body-xs/medium", color: "text-default", children: command.displayDescription })];
   obj7.children = items3;
   items2[1] = closure_8(View, obj7);
-  items2[2] = closure_7(section(stateFromStores[13]).Text, { style: tmp3.applicationCommandSectionName, variant: "eyebrow", color: "text-muted", children: name });
+  items2[2] = closure_7(section(stateFromStores[13]).Text, { style: tmp3.applicationCommandSectionName, variant: "body-sm/medium", color: "text-muted", children: name });
   obj3.children = items2;
   return closure_8(section(stateFromStores[10]).PressableOpacity, obj3);
 };

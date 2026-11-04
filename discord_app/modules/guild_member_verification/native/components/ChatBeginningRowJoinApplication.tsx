@@ -1,9 +1,9 @@
-// === Module 14338: ChatBeginningRowJoinApplication ===
+// === Module 14418: ChatBeginningRowJoinApplication ===
 
-// Module 14338 (ChatBeginningRowJoinApplication)
+// Module 14418 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 575 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, guildInfoRow: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, divider: null, formQuestion: null };
 let obj3 = { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
@@ -58,7 +58,7 @@ export default function ChatBeginningRowJoinRequest(channelId) {
         const obj5 = { style: tmp.guildInfoRow, children: null };
         const obj6 = { guild: joinRequestGuild, size: tmp5(tmp3[11]).GuildIconSizes.XXSMALL };
         const items2 = [closure_7(tmp2(tmp3[11]), obj6), ];
-        const obj7 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: joinRequestGuild.name };
+        const obj7 = { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", children: joinRequestGuild.name };
         items2[1] = closure_7(tmp5(tmp3[12]).Text, obj7);
         obj5.children = items2;
         tmp10Result = closure_8(View, obj5);
@@ -83,14 +83,14 @@ export default function ChatBeginningRowJoinRequest(channelId) {
           }
           const obj = { children: null };
           const obj2 = { style: closure_0.divider };
-          items = [React5(View, obj2), , ];
-          const obj3 = { style: closure_0.formQuestion, variant: "text-xs/semibold", color: "text-muted", children: field_type.label };
-          items[1] = React5(Text_Text.Text, obj3);
-          const obj4 = { variant: "text-md/medium", color: "text-strong", children: response };
-          items[2] = React5(Text_Text.Text, obj4);
+          items = [metroImportDefault(View, obj2), , ];
+          const obj3 = { style: closure_0.formQuestion, variant: "body-xs/semibold", color: "text-muted", children: field_type.label };
+          items[1] = metroImportDefault(Text_Text.Text, obj3);
+          const obj4 = { variant: "body-md/medium", color: "text-strong", children: response };
+          items[2] = metroImportDefault(Text_Text.Text, obj4);
           obj.children = items;
           const _HermesInternal = HermesInternal;
-          return React6(View, obj, "form-response-" + index);
+          return React5(View, obj, "form-response-" + index);
         }
         response = field_type.response;
       });

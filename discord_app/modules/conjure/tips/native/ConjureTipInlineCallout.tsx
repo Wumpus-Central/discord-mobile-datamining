@@ -1,10 +1,10 @@
-// === Module 12908: ConjureTipInlineCallout ===
+// === Module 12989: ConjureTipInlineCallout ===
 
-// Module 12908 (ConjureTipInlineCallout)
+// Module 12989 (ConjureTipInlineCallout)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import IconButton from "IconButton" /* 8152 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import IconButton from "IconButton" /* 8168 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

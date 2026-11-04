@@ -1,21 +1,21 @@
-// === Module 14986: UserProfileActivityBadges ===
+// === Module 15066: UserProfileActivityBadges ===
 
-// Module 14986 (UserProfileActivityBadges)
+// Module 15066 (UserProfileActivityBadges)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ActivityTypes from "ActivityTypes" /* 5882 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8007 */;
-import GroupIcon from "GroupIcon" /* 8785 */;
-import AppsIcon2 from "AppsIcon" /* 8802 */;
-import utils from "utils" /* 8842 */;
-import GameControllerIcon from "GameControllerIcon" /* 9859 */;
-import TvIcon from "TvIcon" /* 10882 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10887 */;
-import MusicIcon from "MusicIcon" /* 10888 */;
-import TopicsIcon from "TopicsIcon" /* 11804 */;
-import HourglassIcon from "HourglassIcon" /* 12495 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14988 */;
-import Badges from "Badges" /* 14989 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ActivityTypes from "ActivityTypes" /* 5896 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8023 */;
+import GroupIcon from "GroupIcon" /* 8802 */;
+import AppsIcon2 from "AppsIcon" /* 8819 */;
+import utils from "utils" /* 8859 */;
+import GameControllerIcon from "GameControllerIcon" /* 9877 */;
+import TvIcon from "TvIcon" /* 10930 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10935 */;
+import MusicIcon from "MusicIcon" /* 10936 */;
+import TopicsIcon from "TopicsIcon" /* 11861 */;
+import HourglassIcon from "HourglassIcon" /* 12576 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 15068 */;
+import Badges from "Badges" /* 15069 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -104,7 +104,7 @@ export function PartyBadge(activity) {
         const obj = { style: tmp.container, children: null };
         const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
         items = [React4(GroupIcon.GroupIcon, obj2), ];
-        const obj3 = { variant: "text-sm/medium", color: "text-muted", children: richGameStateBadgeText };
+        const obj3 = { variant: "body-sm/medium", color: "text-muted", children: richGameStateBadgeText };
         items[1] = React4(Text_Text.Text, obj3);
         obj.children = items;
         tmp8 = hasOwnProperty(View, obj);
@@ -127,7 +127,7 @@ export function EpisodeBadge(activity) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
     items = [React4(TopicsIcon.TopicsIcon, obj3), ];
-    const obj4 = { variant: "text-sm/medium", color: "text-muted", children: episodeBadgeText };
+    const obj4 = { variant: "body-sm/medium", color: "text-muted", children: episodeBadgeText };
     items[1] = React4(Text_Text.Text, obj4);
     obj2.children = items;
     tmp6 = hasOwnProperty(View, obj2);

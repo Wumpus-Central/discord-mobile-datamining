@@ -1,7 +1,7 @@
-// === Module 12249: useConjureAppIdentityDraft ===
+// === Module 12310: useConjureAppIdentityDraft ===
 
-// Module 12249 (useConjureAppIdentityDraft)
-import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
+// Module 12310 (useConjureAppIdentityDraft)
+import ConjureActionCreators from "ConjureActionCreators" /* 11054 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/conjure/identity/useConjureAppI
 
 export default function useConjureAppIdentityDraft(arg0) {
   closure_0 = arg0;
-  const tmp = first(12250)(arg0);
+  const tmp = first(12311)(arg0);
   items = [arg0];
   const effect = trimmed.useEffect(() => {
     const result = ConjureActionCreators.refreshPreviewApplication(closure_0);

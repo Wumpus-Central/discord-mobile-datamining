@@ -1,7 +1,7 @@
-// === Module 9968: useIsNsfwGated ===
+// === Module 10016: useIsNsfwGated ===
 
-// Module 9968 (useIsNsfwGated)
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6855 */;
+// Module 10016 (useIsNsfwGated)
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6870 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;

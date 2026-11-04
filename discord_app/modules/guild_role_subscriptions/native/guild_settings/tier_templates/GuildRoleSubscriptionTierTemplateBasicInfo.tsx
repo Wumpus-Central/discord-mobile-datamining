@@ -1,12 +1,12 @@
-// === Module 20151: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 20267: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 20151 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 20267 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17363 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17454 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,14 +35,14 @@ export function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   ({ image, name, price_tier, description } = template.listings[0]);
   items = [React4(FastImageDefault, { source: { uri: image }, style: tmp.image }), ];
   const obj4 = { style: tmp.headerText, children: null };
-  const items1 = [React4(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), ];
-  const obj5 = { variant: "heading-md/medium", style: subscriptionPlanTextStyle, children: GuildRoleSubscriptionTypeUtils.formatMonthlyPriceLabel(price_tier) };
+  const items1 = [React4(Text_Text.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), ];
+  const obj5 = { variant: "heading-sm/medium", style: subscriptionPlanTextStyle, children: GuildRoleSubscriptionTypeUtils.formatMonthlyPriceLabel(price_tier) };
   items1[1] = React4(Text_Text.Text, obj5);
   obj4.children = items1;
   items[1] = hasOwnProperty(View, obj4);
   obj2.children = items;
   const items2 = [hasOwnProperty(View, obj2), , ];
-  const obj7 = { variant: "text-sm/normal", style: descriptionTextStyle };
+  const obj7 = { variant: "body-sm/normal", style: descriptionTextStyle };
   const merged = Object.assign(descriptionTextProps);
   obj7.children = description;
   items2[1] = React4(Text_Text.Text, obj7);

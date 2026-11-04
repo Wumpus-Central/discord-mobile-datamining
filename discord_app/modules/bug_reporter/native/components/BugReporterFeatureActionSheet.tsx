@@ -1,17 +1,17 @@
-// === Module 11263: BugReporterFeatureActionSheet ===
+// === Module 11313: BugReporterFeatureActionSheet ===
 
-// Module 11263 (BugReporterFeatureActionSheet)
+// Module 11313 (BugReporterFeatureActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj = { list: { paddingHorizontal: nativeDefault.space.PX_12 }, searchBar: null, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
@@ -24,23 +24,23 @@ let closure_9 = noop.memo(function BugReporterFeatureHeader(arg0) {
   const obj = { style: null, children: null };
   items = [closure_8().sectionHeader, { height }];
   obj.style = items;
-  obj.children = timestampProducer(Text_Text.Text, { variant: "text-sm/semibold", color: "text-muted", children: title });
+  obj.children = timestampProducer(Text_Text.Text, { variant: "body-sm/semibold", color: "text-muted", children: title });
   return timestampProducer(View, obj);
 });
 let closure_10 = noop.memo(function BugReporterFeature(item) {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  const obj = { start, end, value: item(11227).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
-  const obj2 = item(11227);
-  const featureId = item(11227).getFeatureId(item);
-  const obj3 = item(11227);
-  obj.legacyCompat_selected = featureId === item(11227).getFeatureId(feature);
+  const obj = { start, end, value: item(11277).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
+  const obj2 = item(11277);
+  const featureId = item(11277).getFeatureId(item);
+  const obj3 = item(11277);
+  obj.legacyCompat_selected = featureId === item(11277).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return closure_6(item(7187).TableRadioRow, obj);
+  return closure_6(item(7202).TableRadioRow, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");

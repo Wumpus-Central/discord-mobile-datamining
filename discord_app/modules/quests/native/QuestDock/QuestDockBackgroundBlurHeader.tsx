@@ -1,9 +1,9 @@
-// === Module 17307: QuestDockBackgroundBlurHeader ===
+// === Module 17399: QuestDockBackgroundBlurHeader ===
 
-// Module 17307 (QuestDockBackgroundBlurHeader)
+// Module 17399 (QuestDockBackgroundBlurHeader)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17299 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17391 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,9 +11,9 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ AccessibilityInfo: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const QuestDockMode = fn(6901).QuestDockMode;
-const QuestDockConstants = fn(17215);
+({ AccessibilityInfo: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const QuestDockMode = fn(6916).QuestDockMode;
+const QuestDockConstants = fn(17307);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({ QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: closure_10, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT, QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT } = QuestDockConstants);
 const jsxProd = fn(21);
@@ -27,7 +27,7 @@ obj.actionDisclosures = { alignItems: "center", display: "flex", flexDirection: 
 obj.actionDisclosuresIcon = { height: 14, width: 14 };
 obj.tertiaryContent = { opacity: 0.7 };
 let closure_15 = createStyles.createStyles(obj);
-let items = [{ code: "(function questDockHeaderLayoutAnimation_QuestDockBackgroundBlurHeaderTsx1(values){let[withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED]=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}};})" }, fn(5757).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED];
+let items = [{ code: "(function questDockHeaderLayoutAnimation_QuestDockBackgroundBlurHeaderTsx1(values){let[withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED]=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}};})" }, fn(5771).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED];
 let closure_129_0;
 let closure_129_1;
 [tmp5, tmp6, tmp7] = items;
@@ -335,25 +335,25 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     ({ actionDisclosures: arr18[0], tertiaryContent: arr18[1] } = tmp67);
     obj3.style = items16;
     const obj4 = { children: null };
-    const obj5 = { color: "interactive-text-active", variant: "text-sm/medium", children: null };
+    const obj5 = { color: "interactive-text-active", variant: "body-sm/medium", children: null };
     const intl2 = tmp(1113).intl;
     obj5.children = intl2.string(tmp(1113).t.o6FLcF);
-    const items17 = [closure_12(tmp(5747).Text, obj5), ];
+    const items17 = [closure_12(tmp(5761).Text, obj5), ];
     const obj6 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp67.actionDisclosuresIcon };
-    items17[1] = closure_12(tmp(14647).CircleQuestionIcon, obj6);
+    items17[1] = closure_12(tmp(14727).CircleQuestionIcon, obj6);
     obj4.children = items17;
     obj3.children = closure_14(closure_13, obj4);
-    let tmp68Result = closure_12(tmp(7106).PressableOpacity, obj3);
+    let tmp68Result = closure_12(tmp(7121).PressableOpacity, obj3);
     let tmp71 = closure_12;
   } else {
     const obj7 = { style: null, children: null };
     const items18 = [, ];
     ({ actionDisclosures: arr17[0], tertiaryContent: arr17[1] } = tmp67);
     obj7.style = items18;
-    const obj8 = { color: "text-default", variant: "text-sm/medium", children: null };
+    const obj8 = { color: "text-default", variant: "body-sm/medium", children: null };
     const intl = tmp(1113).intl;
     obj8.children = intl.string(tmp(1113).t.o6FLcF);
-    obj7.children = closure_12(tmp(5747).Text, obj8);
+    obj7.children = closure_12(tmp(5761).Text, obj8);
     tmp68Result = closure_12(c6, obj7);
     tmp71 = closure_12;
   }
@@ -364,7 +364,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
   if (tmpResult14.isAndroid()) {
     if (null != blurHash) {
       const obj10 = { placeholder: blurHash, layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation };
-      let tmp71Result = tmp71(tmp7(17308), obj10);
+      let tmp71Result = tmp71(tmp7(17400), obj10);
     }
     const items20 = [tmp71Result, , ];
     let tmp71Result2 = children;
@@ -406,7 +406,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     let tmp74Result = !flag;
     if (!flag) {
       const obj18 = { children: null };
-      const items27 = [tmp68Result, tmp71(tmp7(17310), {})];
+      const items27 = [tmp68Result, tmp71(tmp7(17402), {})];
       obj18.children = items27;
       tmp74Result = closure_14(closure_13, obj18);
     }
@@ -417,8 +417,8 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj19.onPress = onSubmenuPress;
     obj19.style = tmp67.tertiaryContent;
     const obj20 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE };
-    obj19.children = tmp71(tmp(9888).MoreHorizontalIcon, obj20);
-    items28[1] = tmp71(tmp(7106).PressableOpacity, obj19);
+    obj19.children = tmp71(tmp(9906).MoreHorizontalIcon, obj20);
+    items28[1] = tmp71(tmp(7121).PressableOpacity, obj19);
     obj17.children = items28;
     obj16.children = closure_14(tmp7(1652).View, obj17);
     class QuestDockBackgroundBlurHeaderTsx2 {
@@ -478,6 +478,6 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj9.children = items20;
     return closure_14(tmp7(1652).View, obj9);
   }
-  tmp71Result = tmp71(tmp7(17279), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
+  tmp71Result = tmp71(tmp7(17371), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
   tmpResult14 = require("utils/PlatformUtils");
 });

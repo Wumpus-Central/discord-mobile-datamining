@@ -1,31 +1,31 @@
-// === Module 18741: ICYMICustomStatusRow ===
+// === Module 18842: ICYMICustomStatusRow ===
 
-// Module 18741 (ICYMICustomStatusRow)
+// Module 18842 (ICYMICustomStatusRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TrashIcon from "TrashIcon" /* 5858 */;
-import Pressables from "Pressables" /* 7106 */;
-import ReactionIcon from "ReactionIcon" /* 9580 */;
-import PencilIcon from "PencilIcon" /* 10362 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12884 */;
-import _modDef13902 from "module_13902" /* 13902 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TrashIcon from "TrashIcon" /* 5872 */;
+import Pressables from "Pressables" /* 7121 */;
+import ReactionIcon from "ReactionIcon" /* 9599 */;
+import PencilIcon from "PencilIcon" /* 10410 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12965 */;
+import _modDef13988 from "module_13988" /* 13988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import ICYMIStore from "ICYMIStore" /* 9030 */;
+import ICYMIStore from "ICYMIStore" /* 9047 */;
 
 require = fn;
 function UploadPlaceholder() {
   const obj = { style: closure_13(false).uploadContainer, children: null };
-  items = [React6(native.Icon, { source: _modDef13902, size: native.IconSizes.SMALL }), ];
-  const obj3 = { variant: "text-md/normal", color: "text-strong", children: null };
+  items = [React5(native.Icon, { source: _modDef13988, size: native.IconSizes.SMALL }), ];
+  const obj3 = { variant: "body-md/normal", color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3UB9ad"]);
-  items[1] = React6(Text_Text.Text, obj3);
+  items[1] = React5(Text_Text.Text, obj3);
   obj.children = items;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -36,7 +36,7 @@ let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(18682);
+const createICYMIStyles = fn(18783);
 let closure_13 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {
@@ -192,14 +192,14 @@ export default function GravityCustomStatusEntryRow(id) {
       let obj6 = { fontFamily: displayNameStylesFont };
       tmp32 = obj6;
     }
-    const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp32, children: null };
+    const obj7 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", style: tmp32, children: null };
     const tmp14Result8 = tmp14(renderForScreenshot[28]);
     obj7.children = tmp14(renderForScreenshot[29]).getName(stateFromStores1);
     const items6 = [closure_8(tmp2(renderForScreenshot[11]).Text, obj7), ];
     const obj8 = { style: tmp.timestamp, children: null };
     let tmp31Result = hasStatus;
     if (hasStatus) {
-      const obj9 = { lineClamp: 1, variant: "text-sm/normal", color: "text-muted", children: null };
+      const obj9 = { lineClamp: 1, variant: "body-sm/normal", color: "text-muted", children: null };
       const tmp2Result16 = tmp2(renderForScreenshot[30]);
       obj9.children = tmp2Result16.getRelativeTimestamp(tmp14(renderForScreenshot[26]).extractTimestamp(id));
       tmp31Result = closure_8(tmp2(renderForScreenshot[11]).Text, obj9);
@@ -213,7 +213,7 @@ export default function GravityCustomStatusEntryRow(id) {
     items7[1] = tmp31Result7;
     let tmp31Result8 = null;
     if (tmp27) {
-      const obj10 = { lineClamp: 1, variant: "text-sm/medium", color: "text-brand", children: null };
+      const obj10 = { lineClamp: 1, variant: "body-sm/medium", color: "text-brand", children: null };
       const intl = tmp2(renderForScreenshot[12]).intl;
       obj10.children = intl.string(tmp2(renderForScreenshot[12]).t.tWnHcL);
       tmp31Result8 = closure_8(tmp2(renderForScreenshot[11]).Text, obj10);
@@ -225,7 +225,7 @@ export default function GravityCustomStatusEntryRow(id) {
     element.title = closure_9(closure_5, obj5);
     let tmp31Result9 = null;
     if ("otherUserStatus" === variant.kind) {
-      const obj11 = { variant: "text-sm/normal", lineClamp: 1, color: "text-default", children: null };
+      const obj11 = { variant: "body-sm/normal", lineClamp: 1, color: "text-default", children: null };
       const intl2 = tmp2(renderForScreenshot[12]).intl;
       obj11.children = intl2.string(tmp2(renderForScreenshot[12]).t.fxOLPR);
       tmp31Result9 = closure_8(tmp2(renderForScreenshot[11]).Text, obj11);
@@ -275,13 +275,13 @@ export default function GravityCustomStatusEntryRow(id) {
     const obj18 = { style: tmp.emojiTextContainer, children: null };
     const items14 = [tmp20Result, , ];
     if (tmp31Result10) {
-      const obj19 = { style: tmp.emojiText, variant: "text-md/normal", children: gameMentionsAsPlainText };
+      const obj19 = { style: tmp.emojiText, variant: "body-md/normal", children: gameMentionsAsPlainText };
       tmp31Result10 = closure_8(tmp2(renderForScreenshot[11]).Text, obj19);
     }
     items14[1] = tmp31Result10;
     let tmp31Result11 = !hasStatus;
     if (!hasStatus) {
-      const obj20 = { variant: "text-md/normal", children: null };
+      const obj20 = { variant: "body-md/normal", children: null };
       const intl3 = tmp2(renderForScreenshot[12]).intl;
       obj20.children = intl3.string(tmp2(renderForScreenshot[12]).t["6ojWO0"]);
       tmp31Result11 = closure_8(tmp2(renderForScreenshot[11]).Text, obj20);

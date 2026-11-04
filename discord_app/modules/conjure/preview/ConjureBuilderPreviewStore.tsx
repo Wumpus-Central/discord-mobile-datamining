@@ -1,10 +1,10 @@
-// === Module 11056: ConjureBuilderPreviewStore ===
+// === Module 11105: ConjureBuilderPreviewStore ===
 
-// Module 11056 (ConjureBuilderPreviewStore)
+// Module 11105 (ConjureBuilderPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2148 */;
-import FramesStore from "FramesStore" /* 6966 */;
+import FramesStore from "FramesStore" /* 6981 */;
 
 require = fn;
 let applicationId = null;

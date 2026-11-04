@@ -1,6 +1,6 @@
-// === Module 13689: ? ===
+// === Module 13775: ? ===
 
-// Module 13689
+// Module 13775
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_05_athlete_faded.webp.js");

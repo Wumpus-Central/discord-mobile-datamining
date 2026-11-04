@@ -1,13 +1,13 @@
-// === Module 9755: GameProfileFloatingNav ===
+// === Module 9773: GameProfileFloatingNav ===
 
-// Module 9755 (GameProfileFloatingNav)
+// Module 9773 (GameProfileFloatingNav)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import native from "native" /* 9120 */;
-import YouBannerDecorations from "YouBannerDecorations" /* 9756 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 14846 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import native from "native" /* 9137 */;
+import YouBannerDecorations from "YouBannerDecorations" /* 9774 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 14926 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,9 +25,9 @@ function NavItem(arg0) {
   const obj2 = { ref: containerRef, style: null, accessibilityRole: "tab", accessibilityLabel: label, accessibilityState: { selected }, onPress, onLayout: callback, hitSlop: nativeDefault.space.PX_8, children: null };
   const items1 = [style, { width }];
   obj2.style = items1;
-  const items2 = [React5(IconComponent, { size: "md", color: nativeDefault.colors.ICON_STRONG }), React5(Text_Text.Text, { style: labelStyle, variant: "text-xs/semibold", color: "text-strong", lineClamp: 1, maxFontSizeMultiplier: 2, children: label })];
+  const items2 = [metroImportDefault(IconComponent, { size: "md", color: nativeDefault.colors.ICON_STRONG }), metroImportDefault(Text_Text.Text, { style: labelStyle, variant: "body-xs/semibold", color: "text-strong", lineClamp: 1, maxFontSizeMultiplier: 2, children: label })];
   obj2.children = items2;
-  return React6(native.PressableScale, obj2);
+  return React5(native.PressableScale, obj2);
 }
 function FloatingNav(navigation) {
   navigation = navigation.navigation;
@@ -108,19 +108,19 @@ function FloatingNav(navigation) {
   GameProfileFloatingNavTsx1.__workletHash = 15050593289877;
   GameProfileFloatingNavTsx1.__initData = tmp11;
   if (isGameProfileCommunitiesMobileEnabled) {
-    let obj3 = { tab: tmp4(9493).GameProfileNavTab.OVERVIEW, IconComponent: tmp4(9859).GameControllerIcon, label: null };
+    let obj3 = { tab: tmp4(9511).GameProfileNavTab.OVERVIEW, IconComponent: tmp4(9877).GameControllerIcon, label: null };
     const intl = tmp4(1113).intl;
     obj3.label = intl.string(tmp4(1113).t.qHmbyh);
     const items3 = [obj3, ];
-    let obj4 = { tab: tmp4(9493).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(8785).GroupIcon, label: null };
+    let obj4 = { tab: tmp4(9511).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(8802).GroupIcon, label: null };
     const intl2 = tmp4(1113).intl;
     obj4.label = intl2.string(tmp4(1113).t["3xFZEo"]);
     items3[1] = obj4;
     const obj5 = { style: tmp3.wrap, pointerEvents: "box-none", onLayout: navigation.onLayout, children: null };
     const obj6 = { colors: memo, style: tmp3.scrim, pointerEvents: "none" };
-    const items4 = [closure_7(tmp(5710), obj6), ];
+    const items4 = [closure_7(tmp(5723), obj6), ];
     const obj7 = { style: tmp3.pill, accessibilityRole: "tablist", children: null };
-    const obj8 = { style: tmp3.pillBlur, pointerEvents: "none", children: closure_7(tmp4(9120).BackgroundBlurFill, {}) };
+    const obj8 = { style: tmp3.pillBlur, pointerEvents: "none", children: closure_7(tmp4(9137).BackgroundBlurFill, {}) };
     const items5 = [closure_7(closure_5, obj8), ];
     const obj9 = { style: tmp3.pillRow, children: null };
     const obj10 = { style: null, pointerEvents: "none" };
@@ -145,7 +145,7 @@ function FloatingNav(navigation) {
           }, tab);
         })
     };
-    items7[1] = closure_7(tmp4(14846).YouScreenNavIconMeasurer, obj11);
+    items7[1] = closure_7(tmp4(14926).YouScreenNavIconMeasurer, obj11);
     obj9.children = items7;
     items5[1] = closure_8(closure_5, obj9);
     obj7.children = items5;
@@ -158,9 +158,9 @@ function FloatingNav(navigation) {
   const tmp8 = easing(noop.useState({}), 2);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
 const PX_8 = nativeDefault.space.PX_8;
 const PX_48 = nativeDefault.space.PX_48;
@@ -213,7 +213,7 @@ export default function GameProfileFloatingNav(game) {
   if (num >= 3) {
     const obj = {};
     const merged1 = Object.assign(merged);
-    tmp2 = React5(FloatingNav, obj);
+    tmp2 = metroImportDefault(FloatingNav, obj);
   }
   return tmp2;
 };

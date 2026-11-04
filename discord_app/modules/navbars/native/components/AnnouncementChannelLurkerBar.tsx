@@ -1,8 +1,8 @@
-// === Module 11331: AnnouncementChannelLurkerBar ===
+// === Module 11381: AnnouncementChannelLurkerBar ===
 
-// Module 11331 (AnnouncementChannelLurkerBar)
+// Module 11381 (AnnouncementChannelLurkerBar)
 import nativeDefault from "native" /* 575 */;
-import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11332 */;
+import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11382 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ class AnnouncementChannelLurkerBar {
     channel = global.channel;
     tmp = closure_5();
     obj = { style: tmp.wrapper, children: null };
-    obj1 = { style: tmp.text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
+    obj1 = { style: tmp.text, variant: "body-sm/medium", color: "mobile-text-heading-primary", children: null };
     intl = channel(closure_1[6]).intl;
     obj1.children = intl.string(channel(closure_1[6]).t.Hl0Mqh);
     items = [, ];

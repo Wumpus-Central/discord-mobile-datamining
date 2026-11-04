@@ -1,23 +1,23 @@
-// === Module 19337: SoundboardSoundPickerList ===
+// === Module 19441: SoundboardSoundPickerList ===
 
-// Module 19337 (SoundboardSoundPickerList)
+// Module 19441 (SoundboardSoundPickerList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ClockIcon from "ClockIcon" /* 5860 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import FastListDefault from "FastList" /* 7361 */;
-import SoundboardTypes from "SoundboardTypes" /* 7642 */;
-import TrophyIcon from "TrophyIcon" /* 9506 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10104 */;
-import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10152 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10153 */;
-import chunkDefault from "chunk" /* 10199 */;
-import _modDef10401 from "module_10401" /* 10401 */;
-import SoundButton from "SoundButton" /* 19338 */;
-import _modDef19346 from "module_19346" /* 19346 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ClockIcon from "ClockIcon" /* 5874 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import FastListDefault from "FastList" /* 7377 */;
+import SoundboardTypes from "SoundboardTypes" /* 7658 */;
+import TrophyIcon from "TrophyIcon" /* 9524 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10152 */;
+import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 10200 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10201 */;
+import chunkDefault from "chunk" /* 10247 */;
+import _modDef10449 from "module_10449" /* 10449 */;
+import SoundButton from "SoundButton" /* 19442 */;
+import _modDef19450 from "module_19450" /* 19450 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -84,7 +84,7 @@ function SoundPickerButtonRow(row) {
             obj.style = soundButtonNotFirst;
             obj.isSectionLocked = isSectionLocked;
             const _HermesInternal = HermesInternal;
-            return React5(SoundButton.SoundButton, obj, "" + section.category.key + "-" + sound.soundId);
+            return metroImportDefault(SoundButton.SoundButton, obj, "" + section.category.key + "-" + sound.soundId);
           } else if (SoundboardTypes.SoundboardSoundItemType.ADD_SOUND === type) {
             const _Error = Error;
             const error = new Error("ADD_SOUND Not implemented");
@@ -98,10 +98,10 @@ function SoundPickerButtonRow(row) {
   let obj = row(section[10]);
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(19332);
-({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: metroRequire, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
+const SoundboardStyleConstants = fn(19436);
+({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: closure_6, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let sum = SOUND_BUTTON_HEIGHT + 8;
 const createStyles = fn(5141);
 let obj = { row: { height: sum, display: "flex", flexDirection: "row", paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING }, sectionHeader: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 16, paddingBottom: 8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: SOUND_ROW_HORIZONTAL_PADDING }, sectionIcon: { height: 16, width: 16, borderRadius: 8, marginRight: 4 }, soundButtonNotFirst: { marginLeft: SOUND_ROW_SPACING } };
@@ -161,8 +161,8 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
     START = END;
   }
   const currentUser = closure_10();
-  const fontScale = channel(5762).useFontScale();
-  let obj = channel(5762);
+  const fontScale = channel(5776).useFontScale();
+  let obj = channel(5776);
   const tmp3 = (function getFastListSectionsFromCategories(categories, arg1, fontScale) {
     items = [];
     const iter = categories[Symbol.iterator]();
@@ -179,7 +179,7 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
   items = [tmp3];
   closure_7 = noop.useMemo(() => closure_6.map((height) => height.height), items);
   const items1 = [tmp3, channel];
-  const callback = noop.useCallback((sectionIndex, row) => React5(SoundPickerButtonRow, { row, sectionIndex, section: closure_6[sectionIndex], channel }), items1);
+  const callback = noop.useCallback((sectionIndex, row) => metroImportDefault(SoundPickerButtonRow, { row, sectionIndex, section: closure_6[sectionIndex], channel }), items1);
   let tmp2 = (function calculateRowsPerSection(categories, arg1) {
     items = [];
     const iter = categories[Symbol.iterator]();
@@ -296,44 +296,44 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
       }
       const obj2 = { style: currentUser.sectionHeader, children: null };
       if (result) {
-        result = React5(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
+        result = metroImportDefault(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
       }
       items = [result, , ];
       const type = tmp2.category.categoryInfo.type;
       if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
         const obj3 = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: tmp2.category.categoryInfo.guild, style: currentUser.sectionIcon };
-        let tmp8Result = React5(GuildIconDefault, obj3);
+        let tmp8Result = metroImportDefault(GuildIconDefault, obj3);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj4 = { source: _modDef19346, style: currentUser.sectionIcon };
-        tmp8Result = React5(native.Icon, obj4);
+        const obj4 = { source: _modDef19450, style: currentUser.sectionIcon };
+        tmp8Result = metroImportDefault(native.Icon, obj4);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-        const obj5 = { source: _modDef10401, style: currentUser.sectionIcon };
-        tmp8Result = React5(native.Icon, obj5);
+        const obj5 = { source: _modDef10449, style: currentUser.sectionIcon };
+        tmp8Result = metroImportDefault(native.Icon, obj5);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
         const obj6 = { style: currentUser.sectionIcon };
-        tmp8Result = React5(ClockIcon.ClockIcon, obj6);
+        tmp8Result = metroImportDefault(ClockIcon.ClockIcon, obj6);
       } else {
         tmp8Result = null;
         if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH !== type) {
           if (SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
             const obj7 = { style: currentUser.sectionIcon };
-            tmp8Result = React5(TrophyIcon.TrophyIcon, obj7);
+            tmp8Result = metroImportDefault(TrophyIcon.TrophyIcon, obj7);
           }
         }
       }
       const obj8 = { children: null };
       items[1] = tmp8Result;
-      items[2] = React5(Text_Text.Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-sm/semibold", children: getSectionLabel(closure_6[arg0]) });
+      items[2] = metroImportDefault(Text_Text.Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-xs/semibold", children: getSectionLabel(closure_6[arg0]) });
       obj2.children = items;
-      obj8.children = React6(View, obj2);
-      return React5(View, obj8, closure_6[arg0].category.key);
+      obj8.children = React5(View, obj2);
+      return metroImportDefault(View, obj8, closure_6[arg0].category.key);
     },
     renderSectionFooter(section) {
       const tmp = getSectionPosition(section);
       let tmp2 = null;
       if (null != tmp) {
         const obj = { position: tmp };
-        tmp2 = React5(PremiumUpsellSectionDividerDefault, obj);
+        tmp2 = metroImportDefault(PremiumUpsellSectionDividerDefault, obj);
       }
       return tmp2;
     },

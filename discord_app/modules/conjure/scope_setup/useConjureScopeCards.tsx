@@ -1,13 +1,13 @@
-// === Module 12887: useConjureScopeCards ===
+// === Module 12968: useConjureScopeCards ===
 
-// Module 12887 (useConjureScopeCards)
+// Module 12968 (useConjureScopeCards)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import conjureScopeSetup from "conjureScopeSetup" /* 12719 */;
+import conjureScopeSetup from "conjureScopeSetup" /* 12800 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ require = fn;
 function errorStatus(status) {
   return status.status;
 }
-let isProjectOwner = fn(6964).isProjectOwner;
+let isProjectOwner = fn(6979).isProjectOwner;
 let c8 = "scope-setup:q0";
 let closure_9 = "" + "scope-setup:q0" + ":0";
 let closure_10 = "" + "scope-setup:q0" + ":1";
@@ -200,7 +200,7 @@ export function useConjureScopeSetupCard(projectId) {
         }
       }
     }
-    let obj5 = { clarification: tmp(12719).ownerOnlyClarification(memo), readOnly: true, hideSubmit: true, failure: null };
+    let obj5 = { clarification: tmp(12800).ownerOnlyClarification(memo), readOnly: true, hideSubmit: true, failure: null };
     return obj5;
   }
   const tmp8 = _slicedToArray(noop.useState(null), 2);
@@ -249,8 +249,8 @@ export function useConjureScopeSwitchCard(merged) {
   let items1 = [projectId];
   const stateFromStores = projectId(504).useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
   let obj = projectId(504);
-  const conjureEligibleGuilds = projectId(12735).useConjureEligibleGuilds("ConjureScopeSwitchCard");
-  let obj2 = projectId(12735);
+  const conjureEligibleGuilds = projectId(12816).useConjureEligibleGuilds("ConjureScopeSwitchCard");
+  let obj2 = projectId(12816);
   let obj3 = conjureEligibleGuilds;
   [tmp6, c6] = feature(conjureEligibleGuilds.useState(false), 2);
   const tmp5 = feature(conjureEligibleGuilds.useState(false), 2);
@@ -360,6 +360,6 @@ export function useConjureScopeSwitchCard(merged) {
   }
   const obj5 = { clarification: null, readOnly: true, hideSubmit: true, failure: null };
   let tmp7 = feature(conjureEligibleGuilds.useState(null), 2);
-  obj5.clarification = projectId(12719).ownerOnlyClarification(memo);
+  obj5.clarification = projectId(12800).ownerOnlyClarification(memo);
   return obj5;
 }

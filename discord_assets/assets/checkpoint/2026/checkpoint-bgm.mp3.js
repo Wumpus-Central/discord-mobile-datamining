@@ -1,6 +1,6 @@
-// === Module 13596: ? ===
+// === Module 13683: ? ===
 
-// Module 13596
+// Module 13683
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/checkpoint-bgm.mp3.js");

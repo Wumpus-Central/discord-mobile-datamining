@@ -4,7 +4,7 @@
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1404 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1405 */;
 import ColorPaletteUtils from "ColorPaletteUtils" /* 1406 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -12,8 +12,8 @@ const require = globalThis.__r;
 
 require = fn;
 const DisplayNameStylesConstants = fn(1403);
-({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, getColorPresetsForEffect: metroRequire, HEXAGON_CAMPAIGN_FONTS: closure_7 } = DisplayNameStylesConstants);
-let items = [fn(1404).DisplayNameEffect.NEON, fn(1404).DisplayNameEffect.TOON, fn(1404).DisplayNameEffect.POP, fn(1404).DisplayNameEffect.GUMMY];
+({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, getColorPresetsForEffect: closure_6, HEXAGON_CAMPAIGN_FONTS: metroImportDefault } = DisplayNameStylesConstants);
+let items = [fn(1405).DisplayNameEffect.NEON, fn(1405).DisplayNameEffect.TOON, fn(1405).DisplayNameEffect.POP, fn(1405).DisplayNameEffect.GUMMY];
 const set = new Set(items);
 const items1 = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
 const size = fn(2);
@@ -150,9 +150,9 @@ export function parseServerDisplayNameStyles(display_name_styles) {
   }
   return tmp;
 }
-export function generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder) {
+export function generateRandomDisplayNameStyles(visibleFontOrder, EFFECT_ORDER) {
   let arr = visibleFontOrder;
-  const tmp = visibleEffectOrder[Math.floor(Math, Math.random(Math) * visibleEffectOrder.length)];
+  const tmp = EFFECT_ORDER[Math.floor(Math, Math.random(Math) * EFFECT_ORDER.length)];
   const found = visibleFontOrder.filter((item) => !closure_1_7.includes(item));
   if (found.length > 0) {
     arr = found;

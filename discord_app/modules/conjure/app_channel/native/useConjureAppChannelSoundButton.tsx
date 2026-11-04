@@ -1,19 +1,19 @@
-// === Module 14683: useConjureAppChannelSoundButton ===
+// === Module 14763: useConjureAppChannelSoundButton ===
 
-// Module 14683 (useConjureAppChannelSoundButton)
+// Module 14763 (useConjureAppChannelSoundButton)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11065 */;
-import VoiceXIcon from "VoiceXIcon" /* 12087 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11114 */;
+import VoiceXIcon from "VoiceXIcon" /* 12146 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6966 */;
+import FramesStore from "FramesStore" /* 6981 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isLaunched = fn(6967).isLaunched;
+const isLaunched = fn(6982).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/useConjureAppChannelSoundButton.tsx");
 

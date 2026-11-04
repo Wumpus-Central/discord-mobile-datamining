@@ -114,7 +114,7 @@ function getSrcWithWidthAndHeight(quality) {
   return src;
 }
 const Constants = fn(1072);
-({ NOOP: hasOwnProperty, MEDIA_PROXY_MAX_TARGET_RESOLUTION: metroRequire } = Constants);
+({ NOOP: hasOwnProperty, MEDIA_PROXY_MAX_TARGET_RESOLUTION: closure_6 } = Constants);
 const re7 = /\.webp($|\?|#)/i;
 const re8 = /\.avif($|\?|#)/i;
 let closure_9 = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096];
@@ -262,7 +262,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F120961 */ function() { ... });
+                            image.onerror = closure_2_4(/* F121530 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

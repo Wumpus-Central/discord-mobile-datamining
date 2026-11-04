@@ -1,6 +1,6 @@
-// === Module 11102: conjureUsageConnection ===
+// === Module 11150: conjureUsageConnection ===
 
-// Module 11102 (conjureUsageConnection)
+// Module 11150 (conjureUsageConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

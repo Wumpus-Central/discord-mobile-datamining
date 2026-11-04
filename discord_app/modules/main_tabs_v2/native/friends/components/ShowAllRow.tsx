@@ -1,12 +1,12 @@
-// === Module 19000: ShowAllRow ===
+// === Module 19103: ShowAllRow ===
 
-// Module 19000 (ShowAllRow)
+// Module 19103 (ShowAllRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRow from "TableRow" /* 7101 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 16017 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRow from "TableRow" /* 7116 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 16107 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export default function ShowAllRow(users) {
   const substr = users.slice(0, 2);
   obj3.children = substr.map((getAvatarSource, index) => closure_1_3(native.Avatar, { source: getAvatarSource.getAvatarSource(null, false, native.AVATAR_SIZE_MAP[native.AvatarSizes.XSMALL]), size: native.AvatarSizes.XSMALL_20 }, index));
   items = [React3(AvatarDuoPile.AvatarDuoPile, obj3), ];
-  const obj4 = { style: tmp.showAllText, variant: "text-md/semibold", color: "text-brand", children: null };
+  const obj4 = { style: tmp.showAllText, variant: "body-md/semibold", color: "text-brand", children: null };
   const intl = util.intl;
   obj4.children = intl.format(util.t.NrzztX, { count });
   items[1] = React3(Text_Text.Text, obj4);

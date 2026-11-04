@@ -1,12 +1,12 @@
-// === Module 12776: ConjureMessageActionSheet ===
+// === Module 12857: ConjureMessageActionSheet ===
 
-// Module 12776 (ConjureMessageActionSheet)
+// Module 12857 (ConjureMessageActionSheet)
 import util from "util" /* 1113 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import CopyIcon from "CopyIcon" /* 5851 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5382 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import CopyIcon from "CopyIcon" /* 5865 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -125,7 +125,7 @@ function ConjureMessageActionSheet(content) {
   return onViewTrace(content(onQueuedAction[8]).ActionSheet, { children: closure_6(content(onQueuedAction[9]).ActionSheetRow.Group, { hasIcons: true, children: items5 }) });
 }
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = "conjure-message-actions";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMessageActionSheet.tsx");

@@ -1,13 +1,13 @@
-// === Module 6655: actions/BillingActionCreators ===
+// === Module 6670: actions/BillingActionCreators ===
 
-// Module 6655 (actions/BillingActionCreators)
+// Module 6670 (actions/BillingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
-import BillingSharedActionCreators from "BillingSharedActionCreators" /* 6656 */;
-import BillingPaymentGatewayActionCreators from "BillingPaymentGatewayActionCreators" /* 6667 */;
-import HandleConfirmPaymentRegistry from "HandleConfirmPaymentRegistry" /* 6674 */;
+import BillingSharedActionCreators from "BillingSharedActionCreators" /* 6671 */;
+import BillingPaymentGatewayActionCreators from "BillingPaymentGatewayActionCreators" /* 6682 */;
+import HandleConfirmPaymentRegistry from "HandleConfirmPaymentRegistry" /* 6689 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PaymentSourceRecord from "PaymentSourceRecord" /* 2179 */;
@@ -600,11 +600,12 @@ let closure_30 = async function _createSubscription(arg0) {
           closure_135_7 = undefined;
           closure_135_8 = undefined;
           closure_135_9 = undefined;
-          ({ items: closure_135_0, paymentSource: closure_135_1, trialId: closure_135_2, code: closure_135_3, currency: closure_135_4, metadata: closure_135_5, referralCode: closure_135_6, loadId: closure_135_7, expectedInvoicePrice: closure_135_8, expectedRenewalPrice: closure_135_9 } = closure_0);
           closure_135_10 = undefined;
+          ({ items: closure_135_0, paymentSource: closure_135_1, trialId: closure_135_2, code: closure_135_3, currency: closure_135_4, metadata: closure_135_5, referralCode: closure_135_6, loadId: closure_135_7, giftInfoOptions: closure_135_8, expectedInvoicePrice: closure_135_9, expectedRenewalPrice: closure_135_10 } = closure_0);
           closure_135_11 = undefined;
           closure_135_12 = undefined;
           closure_135_13 = undefined;
+          closure_135_14 = undefined;
           c10 = 1;
           c11 = 1;
           return { value: "flexDirection", done: true };
@@ -622,7 +623,7 @@ let closure_30 = async function _createSubscription(arg0) {
             closure_134_1(closure_134_2[8]).dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" });
             const obj26 = closure_134_1(closure_134_2[8]);
             closure_135_0 = closure_134_0(closure_134_2[13]).coerceExistingItemsToNewItemInterval(closure_135_0);
-            closure_135_10 = null;
+            closure_135_11 = null;
             if (null != closure_135_1) {
               if (closure_134_15.has(closure_135_1.type)) {
                 c10 = 2;
@@ -643,31 +644,31 @@ let closure_30 = async function _createSubscription(arg0) {
               const obj6 = { value, done: true };
               return obj6;
             } else {
-              closure_135_11 = value;
-              c1 = closure_135_11;
+              closure_135_12 = value;
+              c1 = closure_135_12;
               const aPIBaseURL = closure_134_0(closure_134_2[9]).getAPIBaseURL();
-              if (closure_135_11 == null) {
+              if (closure_135_12 == null) {
                 c1 = "";
               }
-              closure_135_10 = aPIBaseURL + closure_134_10.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(closure_135_1.type, c1, "success");
+              closure_135_11 = aPIBaseURL + closure_134_10.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(closure_135_1.type, c1, "success");
               const obj13 = closure_134_0(closure_134_2[9]);
             }
           } else if (3 === tmp6) {
             c8 = 0;
-            closure_135_14 = closure_9;
-            if (closure_135_14 instanceof closure_134_0(closure_134_2[10]).BillingError) {
-              let billingError = closure_135_14;
+            closure_135_15 = closure_9;
+            if (closure_135_15 instanceof closure_134_0(closure_134_2[10]).BillingError) {
+              let billingError = closure_135_15;
             } else {
-              billingError = new closure_134_0(closure_134_2[10]).BillingError(closure_135_14);
+              billingError = new closure_134_0(closure_134_2[10]).BillingError(closure_135_15);
             }
-            closure_135_13 = billingError;
-            const obj7 = { type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: closure_135_13 };
+            closure_135_14 = billingError;
+            const obj7 = { type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: closure_135_14 };
             closure_134_1(closure_134_2[8]).dispatch(obj7);
-            if (closure_135_13.code !== closure_134_0(closure_134_2[11]).ErrorCodes.CONFIRMATION_REQUIRED) {
-              throw closure_135_13;
-            } else if (closure_135_14.body.payment_id) {
+            if (closure_135_14.code !== closure_134_0(closure_134_2[11]).ErrorCodes.CONFIRMATION_REQUIRED) {
+              throw closure_135_14;
+            } else if (closure_135_15.body.payment_id) {
               c11 = 3;
-              const obj8 = { value: closure_134_32(closure_135_14.body, closure_135_1), done: true };
+              const obj8 = { value: closure_134_32(closure_135_15.body, closure_135_1), done: true };
               return obj8;
             } else {
               throw closure_134_0(closure_134_2[14]).dispatchConfirmationError("payment id cannot be null on redirected confirmations.");
@@ -700,8 +701,9 @@ let closure_30 = async function _createSubscription(arg0) {
               obj23.purchase_token = closure_134_0(closure_134_2[17]).getPurchaseToken();
               obj23.referral_code = closure_135_6;
               obj23.load_id = closure_135_7;
-              obj23.expected_invoice_price = closure_135_8;
-              obj23.expected_renewal_price = closure_135_9;
+              obj23.gift_info_options = closure_135_8;
+              obj23.expected_invoice_price = closure_135_9;
+              obj23.expected_renewal_price = closure_135_10;
               obj22.body = obj23;
               obj22.oldFormErrors = true;
               obj22.rejectWithError = false;
@@ -719,10 +721,10 @@ let closure_30 = async function _createSubscription(arg0) {
             const obj15 = { value, done: true };
             return obj15;
           } else {
-            closure_135_12 = value;
-            const obj16 = { type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: closure_135_12.body };
+            closure_135_13 = value;
+            const obj16 = { type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: closure_135_13.body };
             closure_134_1(closure_134_2[8]).dispatch(obj16);
-            const obj19 = { subscription: closure_135_12.body, redirectConfirmation: false };
+            const obj19 = { subscription: closure_135_13.body, redirectConfirmation: false };
             c8 = 0;
             c11 = 3;
             const obj21 = { value: obj19, done: true };
@@ -730,7 +732,7 @@ let closure_30 = async function _createSubscription(arg0) {
           }
           obj23.payment_source_token = tmp14;
           obj23.trial_id = closure_135_2;
-          obj23.return_url = closure_135_10;
+          obj23.return_url = closure_135_11;
           obj23.code = closure_135_3;
           if (null != closure_135_1) {
             let USD = closure_135_4;

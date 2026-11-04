@@ -1,10 +1,10 @@
-// === Module 16942: FamilyCenterActivityTotal ===
+// === Module 17034: FamilyCenterActivityTotal ===
 
-// Module 16942 (FamilyCenterActivityTotal)
+// Module 17034 (FamilyCenterActivityTotal)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8496 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 16941 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8513 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 17033 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ export default function FamilyCenterActivityTotal(displayType) {
     num = 0;
   }
   obj4.children = num;
-  items = [React3(Text_Text.Text, obj4), React3(Text_Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
+  items = [React3(Text_Text.Text, obj4), React3(Text_Text.Text, { variant: "body-sm/semibold", children: tooltipHeaderResult })];
   obj3.children = items;
   return React4(View, obj3);
 };

@@ -1,22 +1,22 @@
-// === Module 14753: ApplicationDetails ===
+// === Module 14833: ApplicationDetails ===
 
-// Module 14753 (ApplicationDetails)
+// Module 14833 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LinkIcon from "LinkIcon" /* 5847 */;
-import ClockIcon from "ClockIcon" /* 5860 */;
-import LockIcon from "LockIcon" /* 8791 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9178 */;
-import scopes from "scopes" /* 9875 */;
-import disclosures from "disclosures" /* 9877 */;
-import Utils from "Utils" /* 9879 */;
-import ShieldIcon from "ShieldIcon" /* 11418 */;
-import RobotIcon from "RobotIcon" /* 12241 */;
-import HammerIcon from "HammerIcon" /* 13133 */;
-import EmbedIcon from "EmbedIcon" /* 14754 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LinkIcon from "LinkIcon" /* 5861 */;
+import ClockIcon from "ClockIcon" /* 5874 */;
+import LockIcon from "LockIcon" /* 8808 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9051 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9195 */;
+import scopes from "scopes" /* 9893 */;
+import disclosures from "disclosures" /* 9895 */;
+import Utils from "Utils" /* 9897 */;
+import ShieldIcon from "ShieldIcon" /* 11468 */;
+import RobotIcon from "RobotIcon" /* 12302 */;
+import HammerIcon from "HammerIcon" /* 13216 */;
+import EmbedIcon from "EmbedIcon" /* 14834 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ function ApplicationDetailsEntry(children) {
     const obj2 = { style: tmp.entryIcon };
     iconComponentResult = iconComponent(obj2);
   }
-  items = [iconComponentResult, React4(Text_Text.Text, { variant: "text-sm/normal", color: "text-default", style: tmp.entryText, children: children.text })];
+  items = [iconComponentResult, React4(Text_Text.Text, { variant: "body-sm/normal", color: "text-default", style: tmp.entryText, children: children.text })];
   obj.children = items;
   return hasOwnProperty(View, obj);
 }

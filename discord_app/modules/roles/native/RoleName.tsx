@@ -1,11 +1,11 @@
-// === Module 13401: RoleName ===
+// === Module 13485: RoleName ===
 
-// Module 13401 (RoleName)
+// Module 13485 (RoleName)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8543 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8560 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/roles/native/RoleName.tsx");
 export default function RoleName(dotBackground) {
   ({ role, textVariant } = dotBackground);
   if (textVariant === undefined) {
-    textVariant = "text-md/medium";
+    textVariant = "body-md/medium";
   }
   let flag = dotBackground.dotBackground;
   if (flag === undefined) {

@@ -1,30 +1,30 @@
-// === Module 11915: UserTile ===
+// === Module 11974: UserTile ===
 
-// Module 11915 (UserTile)
+// Module 11974 (UserTile)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import _modDef11917 from "module_11917" /* 11917 */;
-import _modDef11918 from "module_11918" /* 11918 */;
-import _modDef11919 from "module_11919" /* 11919 */;
-import _modDef11920 from "module_11920" /* 11920 */;
-import _modDef11921 from "module_11921" /* 11921 */;
-import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 11922 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import _modDef11976 from "module_11976" /* 11976 */;
+import _modDef11977 from "module_11977" /* 11977 */;
+import _modDef11978 from "module_11978" /* 11978 */;
+import _modDef11979 from "module_11979" /* 11979 */;
+import _modDef11980 from "module_11980" /* 11980 */;
+import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 11981 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 6178 */;
-import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 11916 */;
+import SoundboardStore from "SoundboardStore" /* 6193 */;
+import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 11975 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(11916).clearVoiceChannelEffectForUser;
+let closure_8 = fn(11975).clearVoiceChannelEffectForUser;
 const VideoToggleState = fn(1072).VideoToggleState;
-const ParticipantTypes = fn(5801).ParticipantTypes;
-const MediaEngineContextTypes = fn(5888).MediaEngineContextTypes;
+const ParticipantTypes = fn(5815).ParticipantTypes;
+const MediaEngineContextTypes = fn(5902).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const createStyles = fn(5141);
@@ -106,9 +106,9 @@ let closure_19 = noop.memo(function VideoContent(guildId) {
       items = [, ];
       ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
       obj2.style = items;
-      const obj3 = { source: _modDef11917, size: native.Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef11976, size: native.Icon.Sizes.SMALL, disableColor: true };
       const items1 = [closure_2_15(native.Icon, obj3), ];
-      const obj4 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
+      const obj4 = { variant: "body-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
       const intl = util.intl;
       obj4.children = intl.string(util.t.m2Hyj0);
       items1[1] = closure_2_15(Text_Text.Text, obj4);
@@ -136,11 +136,11 @@ let closure_20 = noop.memo(function VoiceStatus(userId) {
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = _modDef11918;
+    let tmp6 = _modDef11977;
   } else if (deafened) {
-    tmp6 = _modDef11919;
+    tmp6 = _modDef11978;
   } else if (muted) {
-    tmp6 = _modDef11920;
+    tmp6 = _modDef11979;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -151,7 +151,7 @@ let closure_20 = noop.memo(function VoiceStatus(userId) {
       const obj2 = { style: null, children: null };
       const items2 = [tmp.statusWrapper, style];
       obj2.style = items2;
-      const obj3 = { source: _modDef11921, size: tmp2(1187).Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef11980, size: tmp2(1187).Icon.Sizes.SMALL, disableColor: true };
       obj2.children = closure_15(tmp2(1187).Icon, obj3);
       tmp14 = closure_15(View, obj2);
     }
@@ -166,7 +166,7 @@ let closure_20 = noop.memo(function VoiceStatus(userId) {
       const obj5 = { style: null, children: null };
       items4[2] = obj4;
       obj5.style = items4;
-      const obj6 = { source: tmp6, size: tmp2(1187).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef11918 };
+      const obj6 = { source: tmp6, size: tmp2(1187).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef11977 };
       obj5.children = closure_15(tmp2(1187).Icon, obj6);
       tmp19Result = closure_15(View, obj5);
     }

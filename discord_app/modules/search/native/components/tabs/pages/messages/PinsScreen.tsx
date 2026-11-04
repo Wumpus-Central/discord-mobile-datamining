@@ -1,13 +1,13 @@
-// === Module 18956: messages/PinsScreen ===
+// === Module 19059: messages/PinsScreen ===
 
-// Module 18956 (messages/PinsScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
-import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 14665 */;
-import MessagesScreenDefault from "MessagesScreen" /* 18953 */;
+// Module 19059 (messages/PinsScreen)
+import TrackingDefault from "Tracking" /* 14124 */;
+import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 14745 */;
+import MessagesScreenDefault from "MessagesScreen" /* 19056 */;
 import noop from "module_19" /* 19 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 14666 */;
-import SearchMessageStore from "SearchMessageStore" /* 6983 */;
-import SearchQueryStore from "SearchQueryStore" /* 14031 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 14746 */;
+import SearchMessageStore from "SearchMessageStore" /* 6998 */;
+import SearchQueryStore from "SearchQueryStore" /* 14117 */;
 
 const require = fn;
 function InitialPinsScreen(searchContext) {
@@ -68,7 +68,7 @@ function InitialPinsScreen(searchContext) {
     obj2.userId = id;
     obj2.index = index;
     obj2.entityType = constants2.MESSAGE;
-    const result = search_tracking_TrackingDefault.trackSearchResultClicked(obj2);
+    const result = TrackingDefault.trackSearchResultClicked(obj2);
     onPressMessageItem(channelId, messageId);
   }, items5);
   placeholderHeight = fullscreenPlaceholderCount.useRef({});
@@ -137,10 +137,10 @@ function InitialPinsScreen(searchContext) {
     ItemSeparatorComponent: null
   });
 }
-const FetchState = fn(14666).FetchState;
-const SearchConstants = fn(9958);
+const FetchState = fn(14746).FetchState;
+const SearchConstants = fn(9976);
 ({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8, SearchListItemTypes: closure_9, SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_10 } = SearchConstants);
-let closure_11 = fn(9957).SearchResultContentEntityTypes;
+let closure_11 = fn(9975).SearchResultContentEntityTypes;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);

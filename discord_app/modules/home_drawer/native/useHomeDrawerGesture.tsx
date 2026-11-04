@@ -1,31 +1,31 @@
-// === Module 18224: useHomeDrawerGesture ===
+// === Module 18321: useHomeDrawerGesture ===
 
-// Module 18224 (useHomeDrawerGesture)
+// Module 18321 (useHomeDrawerGesture)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import useChatLayoutDefault from "useChatLayout" /* 5324 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11674 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18219 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import useChatLayoutDefault from "useChatLayout" /* 5325 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11725 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18316 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18218 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18225 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 18315 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18322 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18218).computeMaxX;
+let computeMaxX = fn(18315).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const GestureConstants = fn(11379);
+const GestureConstants = fn(11429);
 ({ FLING_MIN_DISTANCE: closure_9, FLING_MIN_VELOCITY: closure_10, PULL_GESTURE_ACTIVATION_DISTANCE: closure_11, PULL_GESTURE_RESISTANCE } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(11673).LaunchPadTypes;
+const LaunchPadTypes = fn(11724).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let closure_18 = 48 + result;
@@ -51,17 +51,17 @@ let closure_37 = { code: "(function useHomeDrawerGestureTsx18(event){let[gesture
 let closure_38 = { code: "(function useHomeDrawerGestureTsx19(event){let[activationOffsetX,dragOffsetX,FLING_MIN_VELOCITY,FLING_MIN_DISTANCE,snappedByDrag,fireThrow,INITIAL_OPEN_WIDTH,scheduleOnRN,triggerHapticFeedback,HapticFeedbackTypes,shouldOpenFromPosition,settleDrawer,didSettle,gestureState,trackServerDrawerInteract,ServerDrawerInteractAction]=this.__closure;const flingDistanceX=activationOffsetX.get()+dragOffsetX.get();const passesOpeningVelocity=event.velocityX>FLING_MIN_VELOCITY;const passesMinDistance=flingDistanceX>FLING_MIN_DISTANCE;const isBlockedByDragSnap=snappedByDrag.get();const isOpeningFling=passesOpeningVelocity&&passesMinDistance;const shouldAttemptThrow=isOpeningFling&&!isBlockedByDragSnap;if(shouldAttemptThrow){fireThrow();}let shouldOpen;if(isOpeningFling){shouldOpen=true;if(flingDistanceX<INITIAL_OPEN_WIDTH){scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.IMPACT_MEDIUM);}}else if(event.velocityX<-FLING_MIN_VELOCITY&&flingDistanceX<-FLING_MIN_DISTANCE){shouldOpen=false;scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.SOFT);}else{shouldOpen=shouldOpenFromPosition();}settleDrawer(shouldOpen);didSettle.set(true);const wasOpenAtStart=gestureState.get().panelX>0;if(shouldOpen&&!wasOpenAtStart){scheduleOnRN(trackServerDrawerInteract,ServerDrawerInteractAction.OPEN);}else if(!wasOpenAtStart){scheduleOnRN(trackServerDrawerInteract,ServerDrawerInteractAction.PEEK);}})" };
 let closure_39 = { code: "(function useHomeDrawerGestureTsx20(){let[gestureState,didSettle,settleDrawer,shouldOpenFromPosition,isPanelTouchActive,scheduleOnRN,noteInteraction,dragOffsetX,activationOffsetX]=this.__closure;if(gestureState.get().active&&!didSettle.get()){settleDrawer(shouldOpenFromPosition());}isPanelTouchActive.set(false);scheduleOnRN(noteInteraction);gestureState.set({active:false,initialX:0,initialY:0,panelX:0});dragOffsetX.set(0);activationOffsetX.set(0);})" };
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null, guildsBarPullX: null };
-let Gesture = fn(5426).Gesture;
+let Gesture = fn(5428).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7362);
+let ReanimatedHelperTypes = fn(7378);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7362);
+ReanimatedHelperTypes = fn(7378);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7362);
+ReanimatedHelperTypes = fn(7378);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7362);
+ReanimatedHelperTypes = fn(7378);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);
@@ -651,7 +651,7 @@ export function useHomeGesture() {
     useHomeDrawerGestureTsx18.__workletHash = 17074708416812;
     useHomeDrawerGestureTsx18.__initData = tmp75;
     const onTouchesMoveResult = result.maxPointers(1).onBegin(useHomeDrawerGestureTsx16).onTouchesMove(useHomeDrawerGestureTsx17);
-    const items16 = [closure_38, c11, c10, closure_2_10, React7, sharedValue6, fireThrow, c16, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, c12, c4, callback, closure_19];
+    const items16 = [closure_38, c11, c10, closure_2_10, React6, sharedValue6, fireThrow, c16, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, c12, c4, callback, closure_19];
     c4 = undefined;
     c9 = undefined;
     c10 = undefined;

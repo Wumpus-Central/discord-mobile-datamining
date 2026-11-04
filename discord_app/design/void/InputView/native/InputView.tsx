@@ -1,21 +1,21 @@
-// === Module 16153: InputView ===
+// === Module 16242: InputView ===
 
-// Module 16153 (InputView)
+// Module 16242 (InputView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import shared from "shared" /* 5148 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleXIcon from "CircleXIcon" /* 7218 */;
-import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12641 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleXIcon from "CircleXIcon" /* 7233 */;
+import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12722 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["numberOfLines", "disableConstantNumberOfLines", "inputTextColor", "placeholder", "placeholderTextColor", "editable", "large", "accessibilityHint", "maxLength", "inActionSheet", "trailingButton", "clearButtonVisibility", "disabled", "style", "inputTextStyle", "onChangeText", "onFocus", "value"];
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire, TouchableWithoutFeedback: closure_7, Platform } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: closure_6, TouchableWithoutFeedback: metroImportDefault, Platform } = get_ActivityIndicator);
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -24,15 +24,15 @@ let obj2 = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignIte
 let obj3 = { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 obj2.inputBorder = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
 let obj4 = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
-obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6898).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6913).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorder = { marginTop: 8, height: 2 };
-let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6898).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(6913).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
 obj2.bottomContainer = { marginTop: 5 };
 let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
-obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6898).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
-let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6898).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6913).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(6913).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.clearButton = { position: "absolute", right: 6 };
 let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -164,7 +164,7 @@ prototype["renderBorder"] = function renderBorder() {
     const obj2 = { style: null };
     items[2] = inputViewBorderActive;
     obj2.style = items;
-    return React7(hasOwnProperty, obj2);
+    return React6(hasOwnProperty, obj2);
   } else {
     return null;
   }
@@ -201,8 +201,8 @@ prototype["renderTopContainer"] = function renderTopContainer() {
         str5 = "text-feedback-critical";
       }
     }
-    const obj2 = { variant: "heading-md/semibold", color: str5, style: tmp.inputViewTitle, children: title };
-    tmp12Result = React7(Text_Text.Text, obj2);
+    const obj2 = { variant: "heading-sm/semibold", color: str5, style: tmp.inputViewTitle, children: title };
+    tmp12Result = React6(Text_Text.Text, obj2);
   }
   let tmp15 = null != helpText;
   if (tmp15) {
@@ -210,8 +210,8 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   }
   let tmp16;
   if (tmp15) {
-    const obj3 = { variant: "text-xs/medium", children: helpText };
-    tmp16 = React7(Text_Text.Text, obj3);
+    const obj3 = { variant: "body-xs/medium", children: helpText };
+    tmp16 = React6(Text_Text.Text, obj3);
   }
   const obj4 = { style: tmp.topContainer, children: null };
   const items2 = [tmp12Result, tmp16, , ];
@@ -221,7 +221,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   }
   if (tmp22) {
     const obj5 = { style: tmp.required, children: "*" };
-    tmp22 = React7(native.LegacyText, obj5);
+    tmp22 = React6(native.LegacyText, obj5);
   }
   items2[2] = tmp22;
   items2[3] = tmp3;
@@ -243,8 +243,8 @@ prototype["renderBottomContainer"] = function renderBottomContainer() {
       const obj3 = { remainingCharacters: maxLength - self.getText().length };
       obj2.accessibilityLabel = intl.formatToPlainString(util.t.fR1cof, obj3);
       obj2.children = maxLength - self.getText().length;
-      obj.children = React7(native.LegacyText, obj2);
-      tmp2 = React7(hasOwnProperty, obj);
+      obj.children = React6(native.LegacyText, obj2);
+      tmp2 = React6(hasOwnProperty, obj);
     }
   }
   return tmp2;
@@ -260,8 +260,8 @@ prototype["renderTrailingButton"] = function renderTrailingButton() {
         clearButtonAccessibilityLabel = intl.string(util.t.VkKicb);
       }
       obj.accessibilityLabel = clearButtonAccessibilityLabel;
-      obj.children = React7(CircleXIcon.CircleXIcon, { size: "sm" });
-      let tmp3Result = React7(timestampProducer, obj);
+      obj.children = React6(CircleXIcon.CircleXIcon, { size: "sm" });
+      let tmp3Result = React6(timestampProducer, obj);
     } else {
       tmp3Result = null;
       if (clearButtonVisibility === tmp9.WITH_CONTENT) {
@@ -337,7 +337,7 @@ prototype["renderTextView"] = function renderTextView() {
     obj9.maxLength = maxLength;
     obj9.accessibilityHint = joined;
     const merged = Object.assign(tmp2);
-    return React7(TextInput, obj9);
+    return React6(TextInput, obj9);
   } else {
     const unsafe_rawColors = nativeDefault.unsafe_rawColors;
     const isThemeDarkResult = shared.isThemeDark(self.context.theme);
@@ -380,7 +380,7 @@ prototype["render"] = function render() {
   items1[4] = renderBorderResult;
   obj2.children = items1;
   obj.children = closure_1_10(hasOwnProperty, obj2);
-  return React7(React5, obj);
+  return React6(metroImportDefault, obj);
 };
 InputView.contextType = fn(5207).ThemeContext;
 InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };

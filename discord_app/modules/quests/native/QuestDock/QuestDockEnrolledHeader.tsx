@@ -1,25 +1,25 @@
-// === Module 17305: QuestDockEnrolledHeader ===
+// === Module 17397: QuestDockEnrolledHeader ===
 
-// Module 17305 (QuestDockEnrolledHeader)
+// Module 17397 (QuestDockEnrolledHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import QuestTypes from "QuestTypes" /* 6904 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 9813 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 14827 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 17243 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 17253 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import QuestTypes from "QuestTypes" /* 6919 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 9831 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 14907 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 17335 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 17345 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-let c7 = "heading-md/semibold";
-let c8 = "text-sm/medium";
-let closure_9 = fn(17215).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+let c7 = "heading-sm/semibold";
+let c8 = "body-sm/medium";
+let closure_9 = fn(17307).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: PX_8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1, minWidth: 0 } });
 const size = fn(2);

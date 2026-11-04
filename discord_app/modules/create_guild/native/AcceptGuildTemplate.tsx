@@ -1,6 +1,6 @@
-// === Module 13358: AcceptGuildTemplate ===
+// === Module 13441: AcceptGuildTemplate ===
 
-// Module 13358 (AcceptGuildTemplate)
+// Module 13441 (AcceptGuildTemplate)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
@@ -9,16 +9,16 @@ import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 5049 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
-import FormDividerDefault from "FormDivider" /* 8307 */;
-import _modDef9133 from "module_9133" /* 9133 */;
-import RolePillDefault from "RolePill" /* 10954 */;
-import InvalidLink from "InvalidLink" /* 13359 */;
-import GuildIconUploaderDefault from "GuildIconUploader" /* 13361 */;
-import _modDef13366 from "module_13366" /* 13366 */;
-import _modDef13367 from "module_13367" /* 13367 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7095 */;
+import FormDividerDefault from "FormDivider" /* 8323 */;
+import _modDef9150 from "module_9150" /* 9150 */;
+import RolePillDefault from "RolePill" /* 11002 */;
+import InvalidLink from "InvalidLink" /* 13442 */;
+import GuildIconUploaderDefault from "GuildIconUploader" /* 13444 */;
+import _modDef13449 from "module_13449" /* 13449 */;
+import _modDef13450 from "module_13450" /* 13450 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6843 */;
+import TextStyles_mod from "TextStyles" /* 6858 */;
 
 require = fn;
 function GuildTemplateResolving() {
@@ -40,7 +40,7 @@ function GuildTemplateResolved(guildTemplate) {
   const obj2 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = guildTemplate(1113).intl;
   obj2.children = intl.string(guildTemplate(1113).t.QzUORX);
-  const items1 = [closure_11(guildTemplate(5747).Text, obj2), closure_11(guildTemplate(5747).Text, { style: tmp.description, variant: "text-lg/medium", color: "text-default", children: guildTemplate.name }), closure_11(GuildIconUploaderDefault, { iconBackgroundColor: tmp.wrapper.backgroundColor, style: tmp.iconUploader, onPress: chooseIcon, icon }), , , , , , , , , ];
+  const items1 = [closure_11(guildTemplate(5761).Text, obj2), closure_11(guildTemplate(5761).Text, { style: tmp.description, variant: "body-lg/medium", color: "text-default", children: guildTemplate.name }), closure_11(GuildIconUploaderDefault, { iconBackgroundColor: tmp.wrapper.backgroundColor, style: tmp.iconUploader, onPress: chooseIcon, icon }), , , , , , , , , ];
   const obj5 = { label: null, errorMessage: null, value: null, onChange: null, autoFocus: true, autoCorrect: false, returnKeyType: "done", clearable: true };
   const intl2 = guildTemplate(1113).intl;
   obj5.label = intl2.string(guildTemplate(1113).t.dBih7e);
@@ -51,11 +51,11 @@ function GuildTemplateResolved(guildTemplate) {
   obj5.errorMessage = name1;
   obj5.value = name;
   obj5.onChange = setName;
-  items1[3] = closure_11(guildTemplate(7208).TextInput, obj5);
-  const obj6 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
+  items1[3] = closure_11(guildTemplate(7223).TextInput, obj5);
+  const obj6 = { style: tmp.hint, variant: "body-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp10(1113).intl;
   obj6.children = intl3.format(guildTemplate(1113).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
-  items1[4] = closure_11(guildTemplate(5747).Text, obj6);
+  items1[4] = closure_11(guildTemplate(5761).Text, obj6);
   const obj8 = { style: tmp.createButtonWrapper, children: null };
   const obj9 = { size: "md", text: null, onPress: null, loading: null, disabled: null, grow: true };
   const intl4 = tmp10(1113).intl;
@@ -63,19 +63,19 @@ function GuildTemplateResolved(guildTemplate) {
   obj9.onPress = createServer;
   obj9.loading = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj9.disabled = guildTemplate.state === GuildTemplateStates.ACCEPTING;
-  obj8.children = closure_11(guildTemplate(5754).Button, obj9);
+  obj8.children = closure_11(guildTemplate(5768).Button, obj9);
   items1[5] = closure_11(closure_4, obj8);
   items1[6] = closure_11(FormDividerDefault, { style: tmp.divider, outer: true });
-  const obj11 = { style: tmp.sectionHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj11 = { style: tmp.sectionHeader, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl5 = tmp10(1113).intl;
   obj11.children = intl5.string(guildTemplate(1113).t.OGiMXJ);
-  items1[7] = closure_11(guildTemplate(5747).Text, obj11);
-  const obj12 = { variant: "text-xs/medium", color: "text-default", children: null };
+  items1[7] = closure_11(guildTemplate(5761).Text, obj11);
+  const obj12 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl6 = tmp10(1113).intl;
   obj12.children = intl6.string(guildTemplate(1113).t.Ztwyoz);
-  items1[8] = closure_11(guildTemplate(5747).Text, obj12);
+  items1[8] = closure_11(guildTemplate(5761).Text, obj12);
   items1[9] = closure_11(Channels, { channels: guildTemplate.serializedSourceGuild.channels });
-  const obj14 = { style: tmp.sectionTip, variant: "text-xs/medium", color: "interactive-text-default", children: null };
+  const obj14 = { style: tmp.sectionTip, variant: "body-xs/medium", color: "interactive-text-default", children: null };
   const obj15 = { style: tmp.protip, children: null };
   const intl7 = tmp10(1113).intl;
   const items2 = [intl7.string(guildTemplate(1113).t["8tvIiN"]), ": "];
@@ -84,18 +84,18 @@ function GuildTemplateResolved(guildTemplate) {
   const intl8 = tmp10(1113).intl;
   items3[1] = intl8.string(guildTemplate(1113).t.de7DpI);
   obj14.children = items3;
-  items1[10] = closure_12(guildTemplate(5747).Text, obj14);
+  items1[10] = closure_12(guildTemplate(5761).Text, obj14);
   let tmp7Result = null;
   if (found.length > 0) {
     const obj16 = { children: null };
-    const obj17 = { style: tmp.sectionHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj17 = { style: tmp.sectionHeader, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl9 = tmp10(1113).intl;
     obj17.children = intl9.string(tmp10(1113).t.mQ0H1p);
-    const items4 = [closure_11(tmp10(5747).Text, obj17), , ];
-    const obj18 = { variant: "text-xs/medium", color: "text-default", children: null };
+    const items4 = [closure_11(tmp10(5761).Text, obj17), , ];
+    const obj18 = { variant: "body-xs/medium", color: "text-default", children: null };
     const intl10 = tmp10(1113).intl;
     obj18.children = intl10.string(tmp10(1113).t.jOPEYC);
-    items4[1] = closure_11(tmp10(5747).Text, obj18);
+    items4[1] = closure_11(tmp10(5761).Text, obj18);
     const obj19 = { roles: found };
     items4[2] = closure_11(Roles, obj19);
     obj16.children = items4;
@@ -141,11 +141,11 @@ function Channels(channels) {
       items[1] = channelCategoryIcon;
       const type = children.type;
       if (isGuildVocalChannelType(type)) {
-        let tmp10Result = _modDef9133;
+        let tmp10Result = _modDef9150;
       } else if (type === constants2.GUILD_CATEGORY) {
-        tmp10Result = _modDef13366;
+        tmp10Result = _modDef13449;
       } else {
-        tmp10Result = _modDef13367;
+        tmp10Result = _modDef13450;
       }
       obj2.source = tmp10Result;
       const items1 = [closure_2_11(native.Icon, obj2), ];
@@ -192,7 +192,7 @@ const isGuildVocalChannelType = fn(4994).isGuildVocalChannelType;
 const isEveryoneRole = fn(5048).isEveryoneRole;
 const Constants = fn(1072);
 ({ MarketingURLs: closure_8, Fonts, ChannelTypes: closure_9 } = Constants);
-const GuildTemplateStates = fn(7625).GuildTemplateStates;
+const GuildTemplateStates = fn(7641).GuildTemplateStates;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(5141);

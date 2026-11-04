@@ -1,6 +1,6 @@
-// === Module 20242: VerifyEmailScreen ===
+// === Module 20358: VerifyEmailScreen ===
 
-// Module 20242 (VerifyEmailScreen)
+// Module 20358 (VerifyEmailScreen)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/VerifyEmailScreen.tsx");
 
@@ -117,7 +117,7 @@ export default function _default() {
   obj3.onAction = onAction;
   obj3.submitting = tmp4[0];
   let obj4 = { spacing: require("native").space.PX_16, children: null };
-  let obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+  let obj5 = { variant: "body-sm/medium", color: "text-subtle", children: null };
   const intl3 = onTaskComplete(value[8]).intl;
   obj5.children = intl3.string(require("module_2963").aveKoG);
   const items3 = [onAction(onTaskComplete(value[13]).Text, obj5), ];

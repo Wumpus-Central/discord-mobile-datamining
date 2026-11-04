@@ -1,8 +1,8 @@
-// === Module 5760: ButtonConstants ===
+// === Module 5774: ButtonConstants ===
 
-// Module 5760 (ButtonConstants)
+// Module 5774 (ButtonConstants)
 import nativeDefault from "native" /* 575 */;
-import Icon_mod from "Icon" /* 5756 */;
+import Icon_mod from "Icon" /* 5770 */;
 import size from "module_2" /* 2 */;
 
 const SMALL = Icon.IconSizes.SMALL;
@@ -35,9 +35,9 @@ export const MEDIUM_BUTTON_PADDING = (diff1 - 2) / 2;
 export const LARGE_BUTTON_PADDING = (diff2 - 2) / 2;
 export const BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER = 3;
 export function getButtonDefaultTextVariant(size) {
-  let str = "text-sm/semibold";
+  let str = "body-sm/semibold";
   if ("lg" === size) {
-    str = "text-md/semibold";
+    str = "body-md/semibold";
   }
   return str;
 }

@@ -1,15 +1,17 @@
-// === Module 15356: ClipsExperiment ===
+// === Module 15443: ClipsExperiment ===
 
-// Module 15356 (ClipsExperiment)
+// Module 15443 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import PlatformUtilsAll from "PlatformUtils" /* 1377 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
+import DevSettingsStore from "DevSettingsStore" /* 5764 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 8004 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const PremiumTypes = fn(1387).PremiumTypes;
-const Features = fn(5888).Features;
+const Features = fn(5902).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
@@ -22,8 +24,16 @@ export function areClipsAvailable() {
   if (isDesktopResult) {
     isDesktopResult = mediaEngine.hasClipsV3Support();
   }
-  let isPremiumAtLeastResult = isDesktopResult;
-  if (isPremiumAtLeastResult) {
+  let tmp4 = !isDesktopResult;
+  if (!isDesktopResult) {
+    let isDeveloper = DeveloperExperimentStore.isDeveloper;
+    if (isDeveloper) {
+      isDeveloper = DevSettingsStore.get("clips_ignore_platform_requirement");
+    }
+    tmp4 = !isDeveloper;
+  }
+  let isPremiumAtLeastResult = !tmp4;
+  if (!tmp4) {
     const currentUser = UserStore.getCurrentUser();
     let premiumType;
     if (currentUser != null) {
@@ -42,15 +52,30 @@ export function useIsClipsAvailable() {
   if (isDesktopResult) {
     isDesktopResult = mediaEngine.hasClipsV3Support();
   }
-  items = [UserStore];
-  return initialize.useStateFromStores(items, () => {
+  items = [DevSettingsStore, DeveloperExperimentStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => {
+    isDeveloper = isDeveloper.isDeveloper;
+    if (isDeveloper) {
+      isDeveloper = DevSettingsStore.get("clips_ignore_platform_requirement");
+    }
+    return isDeveloper;
+  });
+  const items1 = [UserStore];
+  let stateFromStores1 = initialize.useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let premiumType;
     if (currentUser != null) {
       premiumType = currentUser.premiumType;
     }
     return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
-  }) && isDesktopResult;
+  });
+  if (stateFromStores1) {
+    if (!isDesktopResult) {
+      isDesktopResult = stateFromStores;
+    }
+    stateFromStores1 = isDesktopResult;
+  }
+  return stateFromStores1;
 }
 export function isUserPremiumTypeForClipsEarlyAccess(currentUser) {
   let premiumType;

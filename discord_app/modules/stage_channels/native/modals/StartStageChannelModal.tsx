@@ -1,20 +1,20 @@
-// === Module 9233: StartStageChannelModal ===
+// === Module 9250: StartStageChannelModal ===
 
-// Module 9233 (StartStageChannelModal)
+// Module 9250 (StartStageChannelModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import Pressables from "Pressables" /* 7106 */;
-import _modDef7377 from "module_7377" /* 7377 */;
-import HotspotStore2 from "HotspotStore" /* 7501 */;
-import Form from "Form" /* 8301 */;
-import StageSparkleDefault from "StageSparkle" /* 9234 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import Pressables from "Pressables" /* 7121 */;
+import _modDef7393 from "module_7393" /* 7393 */;
+import HotspotStore2 from "HotspotStore" /* 7517 */;
+import Form from "Form" /* 8317 */;
+import StageSparkleDefault from "StageSparkle" /* 9251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -38,10 +38,10 @@ function NavigationBar(guild) {
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef7377 };
+    const obj3 = { source: _modDef7393 };
     obj2.children = gesture(native.Icon, obj3);
     obj.children = gesture(Pressables.PressableOpacity, obj2);
-    tmp2 = gesture(React5, obj);
+    tmp2 = gesture(metroImportDefault, obj);
   }
   return tmp2;
 }
@@ -82,7 +82,7 @@ class NotificationToggle {
     if (stateFromStores) {
       obj9 = { style: null, children: null };
       obj9.style = tmp.pill;
-      obj10 = { style: null, variant: "text-xxs/semibold", color: "text-overlay-light", children: null };
+      obj10 = { style: null, variant: "footnote/semibold", color: "text-overlay-light", children: null };
       obj10.style = tmp.pillLabel;
       intl2 = tmp2(tmp3[13]).intl;
       obj10.children = intl2.string(tmp2(tmp3[13]).t.y2b7CA);
@@ -98,8 +98,8 @@ class NotificationToggle {
   }
 }
 get_ActivityIndicator = fn(17);
-({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(6829);
+({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
+const StageChannelsConstants = fn(6844);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let constants = fn(4996).GuildScheduledEventPrivacyLevel;
@@ -172,17 +172,17 @@ export default function StartStageChannelModal(arg0) {
             closure_128_0 = undefined;
             if ("" !== first1) {
               if (null != first2) {
-                React6(true);
+                React5(true);
                 StageInstanceStore(null);
                 const result = tmp66(2017).dismissGlobalKeyboard();
                 dependencyMap = 1;
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(8069).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(8085).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(8069);
+                  obj5 = tmp66(8085);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
@@ -196,7 +196,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(6566).APIError(closure_128_1);
+            const aPIError = new closure_0(6581).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -211,8 +211,8 @@ export default function StartStageChannelModal(arg0) {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(7505).hideHotspot(closure_0(7501).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(7505);
+                  tmp66(7521).hideHotspot(closure_0(7517).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(7521);
                 }
               }
             } else if (arg0 === 1) {
@@ -260,7 +260,7 @@ export default function StartStageChannelModal(arg0) {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("module_7377");
+      obj.source = require("module_7393");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     }
@@ -346,7 +346,7 @@ export default function StartStageChannelModal(arg0) {
   });
   let obj6 = { style: tmp.header, children: null };
   const items3 = [obj5(HeaderIcon, { guild }), , ];
-  const obj7 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj7 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };
   if (null == memo) {
     const intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.DDF0cJ);
@@ -356,7 +356,7 @@ export default function StartStageChannelModal(arg0) {
   }
   obj7.children = stringResult;
   items3[1] = obj5(require("Text/Text").Text, obj7);
-  let obj8 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  let obj8 = { style: tmp.headerSubtitle, variant: "body-sm/medium", color: "text-default", children: null };
   if (null == memo) {
     const intl4 = require("util").intl;
     let stringResult1 = intl4.string(require("util").t.bqQIwa);
@@ -390,7 +390,7 @@ export default function StartStageChannelModal(arg0) {
   items5[2] = obj5(require("Form").FormInput, obj11);
   let tmp31Result = null != helpText;
   if (tmp31Result) {
-    const obj12 = { style: tmp.optionExplanation, variant: "text-xs/medium", color: "text-default", children: helpText };
+    const obj12 = { style: tmp.optionExplanation, variant: "body-xs/medium", color: "text-default", children: helpText };
     tmp31Result = tmp31(require("Text/Text").Text, obj12);
   }
   items5[3] = tmp31Result;
@@ -415,7 +415,7 @@ export default function StartStageChannelModal(arg0) {
   items5[6] = obj5(require("StageChannelAgeVerificationNotice"), { onConfirmPress, style: tmp.ageVerificationNotice, channelId: channel.id });
   let tmp31Result7 = null;
   if (null != obj2) {
-    const obj16 = { style: tmp.error, variant: "text-xs/medium", color: "text-feedback-critical", children: obj2.getAnyErrorMessage() };
+    const obj16 = { style: tmp.error, variant: "body-xs/medium", color: "text-feedback-critical", children: obj2.getAnyErrorMessage() };
     tmp31Result7 = tmp31(require("Text/Text").Text, obj16);
   }
   items5[7] = tmp31Result7;

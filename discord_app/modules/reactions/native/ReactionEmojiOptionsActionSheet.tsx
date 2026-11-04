@@ -1,23 +1,23 @@
-// === Module 10228: ReactionEmojiOptionsActionSheet ===
+// === Module 10276: ReactionEmojiOptionsActionSheet ===
 
-// Module 10228 (ReactionEmojiOptionsActionSheet)
+// Module 10276 (ReactionEmojiOptionsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8529 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10187 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10191 */;
-import StarIcon from "StarIcon" /* 10193 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8546 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10235 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10239 */;
+import StarIcon from "StarIcon" /* 10241 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiSourceDataTypes = fn(7084).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(7099).EmojiSourceDataTypes;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -146,11 +146,11 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   let obj3 = { children: null };
   let obj4 = { style: tmp.header, children: null };
   let obj5 = { style: tmp.reactionPill, children: null };
-  const items8 = [closure_11(messageId(stateFromStores1[26]), { src: emojiURL, name: str, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emoji }), closure_11(channelId(stateFromStores1[27]).Text, { variant: "text-lg/semibold", color: "text-default", style: tmp.reactionText, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count })];
+  const items8 = [closure_11(messageId(stateFromStores1[26]), { src: emojiURL, name: str, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emoji }), closure_11(channelId(stateFromStores1[27]).Text, { variant: "body-lg/semibold", color: "text-default", style: tmp.reactionText, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count })];
   obj5.children = items8;
   const items9 = [closure_12(emojiURL, obj5), ];
   const Text = tmp3(tmp4[27]).Text;
-  const obj9 = { variant: "text-lg/semibold", color: "text-default", children: null };
+  const obj9 = { variant: "body-lg/semibold", color: "text-default", children: null };
   if (isEmojiPack) {
     let combined = str;
     if (tmp2) {
@@ -161,7 +161,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     items9[1] = closure_11(Text, obj9);
     obj4.children = items9;
     const items10 = [closure_12(tmp23, obj4), , ];
-    const obj10 = { variant: "text-md/normal", color: "text-subtle", style: tmp.packDescription, children: null };
+    const obj10 = { variant: "body-md/normal", color: "text-subtle", style: tmp.packDescription, children: null };
     const intl5 = tmp3(tmp4[19]).intl;
     const obj11 = { helpdeskArticle: tmp9(tmp4[29]).getArticleURL(HelpdeskArticles.NITRO_EMOJI_PACKS) };
     obj10.children = intl5.format(tmp9(tmp4[28])["/jdd/7"], obj11);
@@ -169,7 +169,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     if (canRemoveReactions) {
       const obj12 = { hasIcons: false, children: null };
       const obj13 = { label: null, onPress: null };
-      const obj14 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
+      const obj14 = { variant: "body-md/semibold", color: "text-feedback-critical", children: null };
       const intl6 = tmp3(tmp4[19]).intl;
       obj14.children = intl6.string(tmp3(tmp4[19]).t["zx/e4P"]);
       obj13.label = closure_11(tmp3(tmp4[27]).Text, obj14);
@@ -229,7 +229,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       let tmp24Result3 = canRemoveReactions;
       if (canRemoveReactions) {
         const obj17 = { label: null, onPress: null };
-        const obj18 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
+        const obj18 = { variant: "body-md/semibold", color: "text-feedback-critical", children: null };
         const intl4 = tmp3(tmp4[19]).intl;
         obj18.children = intl4.string(tmp3(tmp4[19]).t["zx/e4P"]);
         obj17.label = closure_11(tmp3(tmp4[27]).Text, obj18);

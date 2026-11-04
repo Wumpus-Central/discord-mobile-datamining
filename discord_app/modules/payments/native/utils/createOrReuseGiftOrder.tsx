@@ -1,13 +1,13 @@
-// === Module 10743: createOrReuseGiftOrder ===
+// === Module 10791: createOrReuseGiftOrder ===
 
-// Module 10743 (createOrReuseGiftOrder)
+// Module 10791 (createOrReuseGiftOrder)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ItemPurchaseType = fn(5867).ItemPurchaseType;
+const ItemPurchaseType = fn(5881).ItemPurchaseType;
 const SubscriptionPlanInfo = fn(1387).SubscriptionPlanInfo;
 const PaymentGateways = fn(1083).PaymentGateways;
 let closure_8 = new LoggerDefault("createOrReuseGiftOrder");
@@ -70,9 +70,9 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
             } else {
               skuId = closure_129_3.skuId;
               c4 = 1;
-              let getOrCreateOrder = _location(7738).getOrCreateOrder;
+              let getOrCreateOrder = _location(7754).getOrCreateOrder;
               const obj6 = { skuId, paymentGateway: null, recipientUserId: null, purchaseType: null, isGift: true, createdAfter: null, subscriptionPlanId: null, externalGatewayFacet: null };
-              const tmp60 = _location(7738);
+              const tmp60 = _location(7754);
               let obj8 = PaymentGateways;
               if (obj16.isAndroid()) {
                 let APPLE = obj8.GOOGLE;
@@ -85,7 +85,7 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
               obj16 = _location(1377);
               const obj7 = _modDef2171();
               const utcResult = _modDef2171().utc();
-              obj6.createdAfter = _modDef2171().utc().subtract(_location(7738).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
+              obj6.createdAfter = _modDef2171().utc().subtract(_location(7754).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
               obj6.subscriptionPlanId = closure_129_0;
               obj8 = { line_items: null };
               const obj9 = { external_product_id: closure_129_2 };
@@ -95,7 +95,7 @@ export function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
               getOrCreateOrder = getOrCreateOrder(obj6);
               c5 = 3;
               c6 = 1;
-              const subtractResult = _modDef2171().utc().subtract(_location(7738).DRAFT_ORDER_LOOKBACK_DAYS, "days");
+              const subtractResult = _modDef2171().utc().subtract(_location(7754).DRAFT_ORDER_LOOKBACK_DAYS, "days");
             }
           }
         } else if (2 === tmp7) {

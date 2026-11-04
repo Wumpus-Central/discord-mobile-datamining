@@ -1,9 +1,9 @@
-// === Module 10684: MediaKeyboardLimitedPickerNotice ===
+// === Module 10732: MediaKeyboardLimitedPickerNotice ===
 
-// Module 10684 (MediaKeyboardLimitedPickerNotice)
+// Module 10732 (MediaKeyboardLimitedPickerNotice)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   }
   const obj = { style: items1, onLayout: callback, children: null };
   items1[1] = absoluteContainer;
-  const obj2 = { style: tmp.text, variant: "text-sm/normal", children: null };
+  const obj2 = { style: tmp.text, variant: "body-sm/normal", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["5g7NcN"]);
   const items2 = [React4(Text_Text.Text, obj2), ];

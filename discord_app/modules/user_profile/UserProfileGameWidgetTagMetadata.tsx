@@ -1,8 +1,8 @@
-// === Module 15081: UserProfileGameWidgetTagMetadata ===
+// === Module 15161: UserProfileGameWidgetTagMetadata ===
 
-// Module 15081 (UserProfileGameWidgetTagMetadata)
+// Module 15161 (UserProfileGameWidgetTagMetadata)
 import util from "util" /* 1113 */;
-import WidgetGameTag from "WidgetGameTag" /* 15082 */;
+import WidgetGameTag from "WidgetGameTag" /* 12567 */;
 import size from "module_2" /* 2 */;
 
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
@@ -106,6 +106,42 @@ let closure_2 = {
     iconRole: obj.FRIENDS
   }
 };
+const obj16 = { LOOKING_FOR: "looking_for", SKILL_LEVEL: "skill_level", RATING: "rating" };
+const obj17 = { RADIO: "radio", CHECKBOX: "checkbox" };
+const obj18 = {};
+const obj19 = {
+  getLabel() {
+    const intl = util.intl;
+    return intl.string(util.t.MKqADM);
+  },
+  type: obj17.RADIO,
+  tags: null
+};
+let items = [WidgetGameTag.WidgetGameTag.CASUAL, WidgetGameTag.WidgetGameTag.INTERMEDIATE, WidgetGameTag.WidgetGameTag.EXPERT, WidgetGameTag.WidgetGameTag.BETTER_THAN_YOU];
+obj19.tags = items;
+obj18[obj16.SKILL_LEVEL] = obj19;
+const obj20 = {
+  getLabel() {
+    const intl = util.intl;
+    return intl.string(util.t["7/umul"]);
+  },
+  type: obj17.CHECKBOX,
+  tags: null
+};
+const items1 = [WidgetGameTag.WidgetGameTag.OBSESSED, WidgetGameTag.WidgetGameTag.LOVE_IT, WidgetGameTag.WidgetGameTag.KIND_OF_LOVE_IT, WidgetGameTag.WidgetGameTag.KIND_OF_HATE_IT, WidgetGameTag.WidgetGameTag.RAGE_QUITTING];
+obj20.tags = items1;
+obj18[obj16.RATING] = obj20;
+const obj21 = {
+  getLabel() {
+    const intl = util.intl;
+    return intl.string(util.t["5Dez17"]);
+  },
+  type: obj17.CHECKBOX,
+  tags: null
+};
+const items2 = [WidgetGameTag.WidgetGameTag.LOOKING_FOR_GROUP, WidgetGameTag.WidgetGameTag.OPEN_TO_PLAY, WidgetGameTag.WidgetGameTag.LOOKING_FOR_TIPS, WidgetGameTag.WidgetGameTag.OPEN_TO_TEACH, WidgetGameTag.WidgetGameTag.LOOKING_TO_DISCUSS];
+obj21.tags = items2;
+obj18[obj16.LOOKING_FOR] = obj21;
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTagMetadata.tsx");
 
 export const WidgetGameTagIconRole = obj;
@@ -126,4 +162,36 @@ export function buildWidgetGameTagMetadata(arg0) {
     continue;
   }
   return obj;
+}
+export const WidgetGameTagSection = obj16;
+export const WidgetGameTagSectionType = obj17;
+export const WIDGET_GAME_TAG_SECTION_METADATA = obj18;
+export function toggleWidgetGameTag(arr, arg1) {
+  closure_0 = arg1;
+  const values = Object.values(obj18);
+  const found = values.find((tags) => {
+    tags = tags.tags;
+    return tags.includes(closure_0);
+  });
+  let type;
+  if (found != null) {
+    type = found.type;
+  }
+  if (type === obj17.RADIO) {
+    items = [];
+    items[HermesBuiltin.arraySpread(arr.filter((item) => {
+      const tags = found.tags;
+      return !tags.includes(item);
+    }), 0)] = arg1;
+    let found1 = items;
+  } else if (arr.includes(arg1)) {
+    found1 = arr.filter((item) => item !== closure_0);
+  } else {
+    found1 = [];
+    found1[HermesBuiltin.arraySpread(arr, 0)] = arg1;
+  }
+  return found1;
+}
+export function clearWidgetGameTagSection(arr, tags) {
+  return arr.filter((item) => !tags.includes(item));
 }

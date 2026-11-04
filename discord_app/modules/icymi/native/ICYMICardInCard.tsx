@@ -1,15 +1,15 @@
-// === Module 18725: ICYMICardInCard ===
+// === Module 18826: ICYMICardInCard ===
 
-// Module 18725 (ICYMICardInCard)
+// Module 18826 (ICYMICardInCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import TextIcon2 from "TextIcon" /* 8776 */;
-import ClipView from "ClipView" /* 9637 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 18724 */;
-import getIconForChannel from "getIconForChannel" /* 18726 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import TextIcon2 from "TextIcon" /* 8793 */;
+import ClipView from "ClipView" /* 9656 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 18825 */;
+import getIconForChannel from "getIconForChannel" /* 18827 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
@@ -31,9 +31,9 @@ function CutoutGuildIconWithUserCustom(guild) {
   const obj3 = { guild, size: null };
   const tmp2 = ClipViewDefault;
   obj3.size = GuildIcon.GuildIconSizes.SMALL_32;
-  obj2.children = React7(GuildIconDefault, obj3);
-  const items1 = [React7(tmp2, obj2), ];
-  items1[1] = React7(native.Avatar, { animate: true, style: tmp.authorAvatar, guildId: guild.id, user: guild.author, size: native.AvatarSizes.XSMALL_20 });
+  obj2.children = React6(GuildIconDefault, obj3);
+  const items1 = [React6(tmp2, obj2), ];
+  items1[1] = React6(native.Avatar, { animate: true, style: tmp.authorAvatar, guildId: guild.id, user: guild.author, size: native.AvatarSizes.XSMALL_20 });
   obj.children = items1;
   return closure_1_10(View, obj);
 }
@@ -41,7 +41,7 @@ const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(18682);
+const createICYMIStyles = fn(18783);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginTop: marginHorizontal.margin }, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin }, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
   const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
@@ -181,7 +181,7 @@ export default function ICYMICardInCard(message) {
     } else {
       if (!flag2) {
         const obj = { guild: stateFromStores1, size: GuildIcon.GuildIconSizes.NORMAL };
-        let tmp10 = React7(GuildIconDefault, obj);
+        let tmp10 = React6(GuildIconDefault, obj);
       } else {
         let author = message;
         let author1;
@@ -192,15 +192,15 @@ export default function ICYMICardInCard(message) {
       const obj2 = { guild: stateFromStores1, author: null };
       author = author.author;
       obj2.author = author;
-      tmp10 = React7(CutoutGuildIconWithUserCustom, obj2);
+      tmp10 = React6(CutoutGuildIconWithUserCustom, obj2);
     }
     tmp2 = null == stateFromStores1;
   }, items6);
   const memo1 = obj6.useMemo(() => {
     let tmp2 = null;
     if (null != stateFromStores1) {
-      const obj = { style: { maxWidth: 225 }, lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
-      tmp2 = React7(Text_Text.Text, obj, stateFromStores1.id);
+      const obj = { style: { maxWidth: 225 }, lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
+      tmp2 = React6(Text_Text.Text, obj, stateFromStores1.id);
     }
     return tmp2;
   }, items7);
@@ -248,7 +248,7 @@ export default function ICYMICardInCard(message) {
                 const obj4 = { fontFamily: tmp41 };
                 tmp42 = obj4;
               }
-              const obj5 = { variant: "text-sm/semibold", style: null, children: null };
+              const obj5 = { variant: "body-sm/semibold", style: null, children: null };
               items[1] = tmp42;
               obj5.style = items;
               let combined = _undefined;
@@ -257,15 +257,15 @@ export default function ICYMICardInCard(message) {
                 combined = "" + _undefined.slice(0, 17) + "...";
               }
               obj5.children = combined;
-              const items1 = [React7(Text_Text.Text, obj5), , ];
-              const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
+              const items1 = [React6(Text_Text.Text, obj5), , ];
+              const obj6 = { variant: "body-sm/medium", color: "text-default", children: null };
               const intl2 = util.intl;
               obj6.children = intl2.string(util.t.CHUAYk);
-              items1[1] = React7(Text_Text.Text, obj6);
+              items1[1] = React6(Text_Text.Text, obj6);
               const obj7 = { style: closure_7.genContentSubtitleChannel, children: null };
-              const items2 = [React7(iconForChannel, { size: "xs", color: "text-default" }), ];
-              const obj9 = { variant: "text-sm/medium", color: "text-default", onPress: onHeaderPress, style: { flex: 1 }, lineClamp: 1, ellipsizeMode: "tail", children };
-              items2[1] = React7(Text_Text.Text, obj9);
+              const items2 = [React6(iconForChannel, { size: "xs", color: "text-default" }), ];
+              const obj9 = { variant: "body-sm/medium", color: "text-default", onPress: onHeaderPress, style: { flex: 1 }, lineClamp: 1, ellipsizeMode: "tail", children };
+              items2[1] = React6(Text_Text.Text, obj9);
               obj7.children = items2;
               items1[2] = closure_2_10(View, obj7);
               obj2.children = items1;
@@ -281,18 +281,18 @@ export default function ICYMICardInCard(message) {
       TextIcon = TextIcon2.TextIcon;
     }
     const obj10 = { style: closure_7.genContentSubtitle, children: null };
-    const items3 = [React7(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: actionLabel }), ];
+    const items3 = [React6(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: actionLabel }), ];
     let tmp13 = null;
     if (null != stateFromStores) {
       const obj12 = { children: null };
-      const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
+      const obj13 = { variant: "body-sm/medium", color: "text-default", children: null };
       const intl = util.intl;
       obj13.children = intl.string(util.t.CHUAYk);
-      const items4 = [React7(Text_Text.Text, obj13), ];
+      const items4 = [React6(Text_Text.Text, obj13), ];
       const obj14 = { style: closure_7.genContentSubtitleChannel, children: null };
-      const items5 = [React7(TextIcon, { size: "xs", color: "text-default" }), ];
-      const obj15 = { variant: "text-sm/medium", color: "text-default", onPress: onHeaderPress, style: { flex: 1 }, lineClamp: 1, ellipsizeMode: "tail", children };
-      items5[1] = React7(Text_Text.Text, obj15);
+      const items5 = [React6(TextIcon, { size: "xs", color: "text-default" }), ];
+      const obj15 = { variant: "body-sm/medium", color: "text-default", onPress: onHeaderPress, style: { flex: 1 }, lineClamp: 1, ellipsizeMode: "tail", children };
+      items5[1] = React6(Text_Text.Text, obj15);
       obj14.children = items5;
       items4[1] = closure_2_10(View, obj14);
       obj12.children = items4;
@@ -333,7 +333,7 @@ export default function ICYMICardInCard(message) {
   const items12 = [memo1, ];
   let tmp28Result = !flag;
   if (!flag) {
-    const obj11 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: tmp2(tmp3[24]).getRelativeTimestamp(timestamp) };
+    const obj11 = { lineClamp: 1, variant: "body-xs/normal", color: "text-muted", children: tmp2(tmp3[24]).getRelativeTimestamp(timestamp) };
     tmp28Result = tmp28(tmp2(tmp3[17]).Text, obj11);
     const tmp2Result8 = tmp2(tmp3[24]);
   }

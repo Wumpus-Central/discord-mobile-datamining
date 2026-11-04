@@ -1,19 +1,19 @@
-// === Module 11064: restartFrames ===
+// === Module 11113: restartFrames ===
 
-// Module 11064 (restartFrames)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11065 */;
-import FramesStore from "FramesStore" /* 6966 */;
+// Module 11113 (restartFrames)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11114 */;
+import FramesStore from "FramesStore" /* 6981 */;
 
-function restartFrame(data) {
+function restartFrame(frame) {
   if (tmp) {
-    FramesActionCreatorsDefault.refreshProxyTicket(data.id).catch(() => {
+    FramesActionCreatorsDefault.refreshProxyTicket(frame.id).catch(() => {
 
     });
-    const refreshProxyTicketResult = FramesActionCreatorsDefault.refreshProxyTicket(data.id);
+    const refreshProxyTicketResult = FramesActionCreatorsDefault.refreshProxyTicket(frame.id);
   }
-  tmp = isLaunched(data) && !data.data.proxyTicketRefreshing;
+  tmp = isLaunched(frame) && !frame.data.proxyTicketRefreshing;
 }
-const isLaunched = fn(6967).isLaunched;
+const isLaunched = fn(6982).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/restartFrames.tsx");
 

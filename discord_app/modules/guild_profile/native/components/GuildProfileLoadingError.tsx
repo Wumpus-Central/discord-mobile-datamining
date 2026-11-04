@@ -1,15 +1,15 @@
-// === Module 14867: GuildProfileLoadingError ===
+// === Module 14941: GuildProfileLoadingError ===
 
-// Module 14867 (GuildProfileLoadingError)
+// Module 14941 (GuildProfileLoadingError)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import WarningIcon from "WarningIcon" /* 8150 */;
-import GuildProfileView from "GuildProfileView" /* 9427 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import WarningIcon from "WarningIcon" /* 8166 */;
+import GuildProfileView from "GuildProfileView" /* 9445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ export default function GuildProfileLoadingError(onPress) {
   obj12.accessibilityLabel = intl2.string(util.t.s1fAEw);
   const obj9 = { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
   const items2 = [React4(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING }), ];
-  const obj14 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+  const obj14 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
   const intl3 = util.intl;
   obj14.children = intl3.string(util.t.tmGHjc);
   items2[1] = React4(Text_Text.Text, obj14);

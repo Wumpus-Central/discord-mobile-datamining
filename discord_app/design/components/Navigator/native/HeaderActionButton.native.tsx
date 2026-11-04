@@ -1,11 +1,11 @@
-// === Module 7682: HeaderActionButton ===
+// === Module 7698: HeaderActionButton ===
 
-// Module 7682 (HeaderActionButton)
+// Module 7698 (HeaderActionButton)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import IconDefault from "Icon" /* 5756 */;
-import ButtonConstants from "ButtonConstants" /* 5760 */;
-import Pressables from "Pressables" /* 7106 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import IconDefault from "Icon" /* 5770 */;
+import ButtonConstants from "ButtonConstants" /* 5774 */;
+import Pressables from "Pressables" /* 7121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export function HeaderActionButton(arg0) {
   ({ style, textStyle, imageStyle, accessibilityHint, accessibilityActions, onAccessibilityAction, icon, IconComponentSize, onPress, foregroundRipple, iconSize, hitSlop, ref } = arg0);
   const tmp = closure_6();
   if (null != text) {
-    const obj2 = { style: null, variant: "text-md/semibold", lineClamp: 1, maxFontSizeMultiplier: null, children: null };
+    const obj2 = { style: null, variant: "body-md/semibold", lineClamp: 1, maxFontSizeMultiplier: null, children: null };
     items = [, , ];
     ({ text: arr[0], buttonFont: arr[1] } = tmp);
     items[2] = textStyle;

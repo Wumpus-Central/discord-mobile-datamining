@@ -1,8 +1,8 @@
-// === Module 9642: Nameplate ===
+// === Module 9661: Nameplate ===
 
-// Module 9642 (Nameplate)
+// Module 9661 (Nameplate)
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
+import timing_timing from "timing/timing" /* 5378 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -46,7 +46,7 @@ function NameplateInner(isFocused) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = closure_7(flag3, isPressed, flag, flag2, flag5);
   let obj = require("initialize");
-  const tmp6 = sharedValue(5376)();
+  const tmp6 = sharedValue(5377)();
   let num = 1;
   if (flag6) {
     num = 0;
@@ -110,26 +110,26 @@ function NameplateInner(isFocused) {
     const items5 = [, ];
     ({ left: arr6[0], right: arr6[1] } = backgroundGradientColors);
     obj4.colors = items5;
-    tmp17Result = closure_5(tmp5(5710), obj4);
-    const tmp5Result = tmp5(5710);
+    tmp17Result = closure_5(tmp5(5723), obj4);
+    const tmp5Result = tmp5(5723);
   }
   const items6 = [tmp17Result, ];
   const tmpResult5 = require("NameplateUtils");
   if (tmpResult6.isAndroid()) {
     if (tmp14) {
       const obj5 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp19 = closure_5(tmp(9632).APNGPlayer, obj5);
+      let tmp19 = closure_5(tmp(9651).APNGPlayer, obj5);
     }
     items6[1] = tmp19;
     obj3.children = items6;
     return closure_6(tmp5(1652).View, obj3);
   }
-  tmp19 = closure_5(tmp5(5837), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
+  tmp19 = closure_5(tmp5(5851), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
   const obj6 = { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" };
   tmpResult6 = require("PlatformUtils");
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   const obj = { container: { position: "absolute", overflow: "hidden", top: 0, bottom: 0, left: 0, right: 0 }, gradient: null, img: null };

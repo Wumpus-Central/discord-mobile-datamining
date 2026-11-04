@@ -1,13 +1,13 @@
-// === Module 13779: CheckpointText ===
+// === Module 13865: CheckpointText ===
 
-// Module 13779 (CheckpointText)
-import Text_Text from "Text/Text" /* 5747 */;
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 13600 */;
+// Module 13865 (CheckpointText)
+import Text_Text from "Text/Text" /* 5761 */;
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 13686 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let closure_5 = { color: fn(6186).CHECKPOINT_PRIMARY };
+let closure_5 = { color: fn(6201).CHECKPOINT_PRIMARY };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointText.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 11477: ConjureAppIconTile ===
+// === Module 11527: ConjureAppIconTile ===
 
-// Module 11477 (ConjureAppIconTile)
-import Text_Text from "Text/Text" /* 5747 */;
-import AppsIcon from "AppsIcon" /* 8802 */;
-import useConjureDefaultAppIconDefault from "useConjureDefaultAppIcon" /* 11478 */;
-import useConjureProjectIcon from "useConjureProjectIcon" /* 11480 */;
+// Module 11527 (ConjureAppIconTile)
+import Text_Text from "Text/Text" /* 5761 */;
+import AppsIcon from "AppsIcon" /* 8819 */;
+import useConjureDefaultAppIconDefault from "useConjureDefaultAppIcon" /* 11528 */;
+import useConjureProjectIcon from "useConjureProjectIcon" /* 11530 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,8 +28,8 @@ export default function ConjureAppIconTile(size) {
   const tmp4 = closure_5(size, useConjureProjectIcon.conjureProjectIconMetrics(size).glyphSize, tmp2.backgroundColor, foregroundColor);
   const obj2 = { style: tmp4.tile, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   if (null != character) {
-    const obj3 = { variant: "heading-md/semibold", color: "none", style: tmp4.character, allowFontScaling: false, children: character };
-    let tmp5Result = jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "none", style: tmp4.character, allowFontScaling: false, children: character });
+    const obj3 = { variant: "heading-sm/semibold", color: "none", style: tmp4.character, allowFontScaling: false, children: character };
+    let tmp5Result = jsx(Text_Text.Text, { variant: "heading-sm/semibold", color: "none", style: tmp4.character, allowFontScaling: false, children: character });
   } else {
     const obj4 = { size: "custom", style: tmp4.glyph, color: foregroundColor };
     tmp5Result = jsx(AppsIcon.AppsIcon, { size: "custom", style: tmp4.glyph, color: foregroundColor });

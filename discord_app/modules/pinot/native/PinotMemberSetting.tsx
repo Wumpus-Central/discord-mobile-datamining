@@ -1,20 +1,20 @@
-// === Module 18043: PinotMemberSetting ===
+// === Module 18140: PinotMemberSetting ===
 
-// Module 18043 (PinotMemberSetting)
+// Module 18140 (PinotMemberSetting)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import _modDef3287 from "module_3287" /* 3287 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import InlineNotice from "InlineNotice" /* 8149 */;
-import SettingsConstants from "SettingsConstants" /* 8556 */;
-import PinotExperiment from "PinotExperiment" /* 9183 */;
-import PinotMemberSettingState from "PinotMemberSettingState" /* 11464 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import InlineNotice from "InlineNotice" /* 8165 */;
+import SettingsConstants from "SettingsConstants" /* 8573 */;
+import PinotExperiment from "PinotExperiment" /* 9200 */;
+import PinotMemberSettingState from "PinotMemberSettingState" /* 11514 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
-import SettingBuilders from "SettingBuilders" /* 11677 */;
+import SettingBuilders from "SettingBuilders" /* 11728 */;
 import size from "module_2" /* 2 */;
 
 function PinotMemberSettingFooter() {
@@ -22,7 +22,7 @@ function PinotMemberSettingFooter() {
   const obj = PinotMemberSettingState;
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.DISCOVERABLE_CONTENT_ON_THE_WEB);
   const obj3 = { style: tmp.footer, children: null };
-  const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj4.children = intl.format(_modDef3287.V0EPTo, { learnMoreURL: articleURL });
   items = [timestampProducer(Text_Text.Text, obj4), ];
@@ -36,12 +36,12 @@ function PinotMemberSettingFooter() {
   }
   items[1] = tmp8Result;
   obj3.children = items;
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 }
 const View = _mod17.View;
 const HelpdeskArticles = Constants.HelpdeskArticles;
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const mobile_user_settings_data_and_privacy = "mobile_user_settings_data_and_privacy";
 let obj = { footer: { gap: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj);

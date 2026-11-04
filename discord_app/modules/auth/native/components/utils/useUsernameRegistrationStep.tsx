@@ -1,20 +1,20 @@
-// === Module 18158: useUsernameRegistrationStep ===
+// === Module 18255: useUsernameRegistrationStep ===
 
-// Module 18158 (useUsernameRegistrationStep)
+// Module 18255 (useUsernameRegistrationStep)
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1500 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16749 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18131 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16841 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18228 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16752 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16844 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(18132).useRegistrationUIStore;
-const RegistrationConstants = fn(18133);
-({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
+const useRegistrationUIStore = fn(18229).useRegistrationUIStore;
+const RegistrationConstants = fn(18230);
+({ authStateToRegisterTransitionStep: metroImportDefault, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
 
@@ -49,7 +49,7 @@ export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
       type = obj3.type;
     }
     if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
-      const obj = { step: React5(closure_0), actionType: constants.INPUT_ERROR, details: null };
+      const obj = { step: metroImportDefault(closure_0), actionType: constants.INPUT_ERROR, details: null };
       items = [obj3.message];
       obj.details = items;
       context(obj);
@@ -58,7 +58,7 @@ export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
       const result = RegistrationStepsUtils.handleRegistrationSubmit(closure_0, navigation, context);
       const tmp3Result = RegistrationStepsUtils;
     } else {
-      const obj2 = { step: React5(closure_0), toStep: RegistrationStepsUtils.getNextRegistrationTransitionStep(closure_0), actionType: constants.SUCCESS };
+      const obj2 = { step: metroImportDefault(closure_0), toStep: RegistrationStepsUtils.getNextRegistrationTransitionStep(closure_0), actionType: constants.SUCCESS };
       context(obj2);
       const tmp3Result3 = RegistrationStepsUtils;
       const nextAuthState = RegistrationStepsUtils.getNextAuthState(closure_0);

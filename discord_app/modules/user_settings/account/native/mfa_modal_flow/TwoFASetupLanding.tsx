@@ -1,13 +1,13 @@
-// === Module 16803: TwoFASetupLanding ===
+// === Module 16895: TwoFASetupLanding ===
 
-// Module 16803 (TwoFASetupLanding)
+// Module 16895 (TwoFASetupLanding)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 16800 */;
-import TwoFASetupStyles from "TwoFASetupStyles" /* 16804 */;
-import _modDef16805 from "module_16805" /* 16805 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 16892 */;
+import TwoFASetupStyles from "TwoFASetupStyles" /* 16896 */;
+import _modDef16897 from "module_16897" /* 16897 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,14 +26,14 @@ export default function TwoFASetupLanding() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
   const obj5 = { source: null, style: null };
-  obj5.source = _modDef16805;
+  obj5.source = _modDef16897;
   obj5.style = tmp.authIcon;
   items = [React4(FastImageDefault, obj5), , ];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["9E74Dx"]);
   items[1] = React4(Text_Text.Heading, obj6);
-  const obj7 = { variant: "text-md/normal", style: null, children: null };
+  const obj7 = { variant: "body-md/normal", style: null, children: null };
   const items1 = [, ];
   ({ modalBody: arr2[0], text: arr2[1] } = twoFASetupStyles);
   obj7.style = items1;

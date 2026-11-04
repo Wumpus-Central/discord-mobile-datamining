@@ -1,8 +1,8 @@
-// === Module 19440: VoiceChannelAppSurface ===
+// === Module 19544: VoiceChannelAppSurface ===
 
-// Module 19440 (VoiceChannelAppSurface)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12376 */;
+// Module 19544 (VoiceChannelAppSurface)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,32 +33,37 @@ export default function VoiceChannelAppSurface(guildId) {
   guildId(left[7])(tmp9);
   state = tmp5.state;
   if (channelId(left[5]).FrameLifecycleState.Launched === state) {
-    const obj2 = { frameId: tmp5.frame.id, level: channelId(tmp2[9]).FrameStackLevel.WithinCallContent, presentation: memo };
-    return jsx(tmp(tmp2[8]), { frameId: tmp5.frame.id, level: channelId(tmp2[9]).FrameStackLevel.WithinCallContent, presentation: memo });
+    const obj2 = { frameId: tmp5.frame.id, children: null };
+    const obj3 = { frameId: tmp5.frame.id, level: null, presentation: null };
+    const tmpResult = tmp(tmp2[8]);
+    obj3.level = channelId(tmp2[10]).FrameStackLevel.WithinCallContent;
+    obj3.presentation = memo;
+    obj2.children = jsx(tmp(tmp2[9]), { frameId: tmp5.frame.id, level: null, presentation: null });
+    return <tmpResult frameId={tmp5.frame.id}>{null}</tmpResult>;
   } else if (channelId(tmp2[5]).FrameLifecycleState.RenderingElsewhere === state) {
-    const obj3 = { description: null };
-    const intl5 = channelId(tmp2[11]).intl;
-    obj3.description = intl5.string(channelId(tmp2[11]).t["2KIDX+"]);
-    return jsx(channelId(tmp2[10]).FrameSurfaceExplanation, { description: null });
-  } else if (channelId(tmp2[5]).FrameLifecycleState.NoApplication === state) {
     const obj4 = { description: null };
-    const intl4 = channelId(tmp2[11]).intl;
-    obj4.description = intl4.string(tmp(tmp2[12]).TQptZV);
-    return jsx(channelId(tmp2[10]).FrameSurfaceExplanation, { description: null });
-  } else if (channelId(tmp2[5]).FrameLifecycleState.DoesNotSupportSurface === state) {
+    const intl5 = channelId(tmp2[12]).intl;
+    obj4.description = intl5.string(channelId(tmp2[12]).t["2KIDX+"]);
+    return jsx(channelId(tmp2[11]).FrameSurfaceExplanation, { description: null });
+  } else if (channelId(tmp2[5]).FrameLifecycleState.NoApplication === state) {
     const obj5 = { description: null };
-    const intl3 = channelId(tmp2[11]).intl;
-    obj5.description = intl3.string(tmp(tmp2[12])["13FYwI"]);
-    return jsx(channelId(tmp2[10]).FrameSurfaceExplanation, { description: null });
+    const intl4 = channelId(tmp2[12]).intl;
+    obj5.description = intl4.string(tmp(tmp2[13]).TQptZV);
+    return jsx(channelId(tmp2[11]).FrameSurfaceExplanation, { description: null });
+  } else if (channelId(tmp2[5]).FrameLifecycleState.DoesNotSupportSurface === state) {
+    const obj6 = { description: null };
+    const intl3 = channelId(tmp2[12]).intl;
+    obj6.description = intl3.string(tmp(tmp2[13])["13FYwI"]);
+    return jsx(channelId(tmp2[11]).FrameSurfaceExplanation, { description: null });
   } else if (channelId(tmp2[5]).FrameLifecycleState.Error === state) {
     const obj = { heading: null, error: null };
-    const intl = channelId(tmp2[11]).intl;
-    obj.heading = intl.string(channelId(tmp2[11]).t.VquUff);
-    const intl2 = channelId(tmp2[11]).intl;
-    obj.error = intl2.string(channelId(tmp2[11]).t["Sd9D/R"]);
-    return jsx(channelId(tmp2[10]).FrameSurfaceExplanation, { heading: null, error: null });
+    const intl = channelId(tmp2[12]).intl;
+    obj.heading = intl.string(channelId(tmp2[12]).t.VquUff);
+    const intl2 = channelId(tmp2[12]).intl;
+    obj.error = intl2.string(channelId(tmp2[12]).t["Sd9D/R"]);
+    return jsx(channelId(tmp2[11]).FrameSurfaceExplanation, { heading: null, error: null });
   } else {
-    return jsx(channelId(tmp2[10]).FrameSurfaceLoading, {});
+    return jsx(channelId(tmp2[11]).FrameSurfaceLoading, {});
   }
   const tmp7 = guildId(left[7]);
 };

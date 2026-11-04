@@ -1,8 +1,8 @@
-// === Module 8143: useInitiateAgeVerification ===
+// === Module 8159: useInitiateAgeVerification ===
 
-// Module 8143 (useInitiateAgeVerification)
+// Module 8159 (useInitiateAgeVerification)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8092 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -100,7 +100,7 @@ function useAgeVerificationRunner(onComplete) {
                 tmp72(false);
                 c7 = 3;
               }
-              entryPoint(flag[9]).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
+              entryPoint(flag[9]).showFailedToast(constants2.AGE_VERIFICATION_ERROR);
               const obj4 = entryPoint(flag[9]);
             } else if (arg0 === 1) {
               c7 = 3;
@@ -127,7 +127,7 @@ function useAgeVerificationRunner(onComplete) {
               obj.entryPoint = entryPoint;
               obj.shouldShowExpressiveModal = shouldShowExpressiveModal;
               if (false === obj10.showAgeVerification(obj)) {
-                entryPoint(flag[9]).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
+                entryPoint(flag[9]).showFailedToast(constants2.AGE_VERIFICATION_ERROR);
                 v3();
                 const obj2 = entryPoint(flag[9]);
               }
@@ -170,7 +170,7 @@ function useAgeVerificationRunner(onComplete) {
   };
 }
 const AbortCodes = fn(1072).AbortCodes;
-const SafetyToastType = fn(7614).SafetyToastType;
+const SafetyToastType = fn(7630).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/hooks/useInitiateAgeVerification.tsx");
 

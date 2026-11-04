@@ -1,35 +1,35 @@
-// === Module 19230: LaunchPad ===
+// === Module 19334: LaunchPad ===
 
-// Module 19230 (LaunchPad)
+// Module 19334 (LaunchPad)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import ChatInputUtils from "ChatInputUtils" /* 5330 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import AutocompleterDefault from "Autocompleter" /* 9264 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9275 */;
-import RouteManagerDefault from "RouteManager" /* 12203 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 14525 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 16579 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import AutocompleterDefault from "Autocompleter" /* 9281 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9292 */;
+import RouteManagerDefault from "RouteManager" /* 12262 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 14605 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 16670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5382 */;
-import ChannelListStore from "ChannelListStore" /* 7829 */;
-import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6994 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6961 */;
+import ActionSheetStore from "ActionSheetStore" /* 5383 */;
+import ChannelListStore from "ChannelListStore" /* 7845 */;
+import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 7009 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6976 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7988 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 8004 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7021 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15787 */;
-import ReadStateStore from "ReadStateStore" /* 6962 */;
-import SortedGuildStore from "SortedGuildStore" /* 6892 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 15875 */;
+import ReadStateStore from "ReadStateStore" /* 6977 */;
+import SortedGuildStore from "SortedGuildStore" /* 6907 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ function TabButton(selected) {
 }
 function TabHeader(children) {
   const tmp = closure_29();
-  return closure_1_27(Text_Text.Text, { style: closure_29().subheader, variant: "heading-md/semibold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
+  return closure_1_27(Text_Text.Text, { style: closure_29().subheader, variant: "heading-sm/semibold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
 }
 function createAndAppendChannel(item10022, set, items) {
   if (!set.has(item10022)) {
@@ -66,7 +66,7 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(6994);
+let NavigationHistoryStore = fn(7009);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: closure_10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(4994);
@@ -213,7 +213,7 @@ let closure_35 = noop.memo(function LaunchPadHeader(tab) {
   const obj5 = { style: tmp.header, children: null };
   if (tab === constants3.SEARCH) {
     const obj6 = { size: "md", returnKeyType: "done", ref: searchRef, onChange: tab.updateQuery, autoComplete: "off", spellCheck: false, autoFocus: false };
-    let tmp24 = closure_27(tmp2(7339).SearchBar, obj6);
+    let tmp24 = closure_27(tmp2(7355).SearchBar, obj6);
     let tmp23 = closure_27;
   } else if (tab === constants3.MEMBERS) {
     const obj7 = { text: null };
@@ -303,7 +303,7 @@ let closure_35 = noop.memo(function LaunchPadHeader(tab) {
   return closure_28(sharedValue, obj5);
 });
 const results = [];
-let items = [fn(9263).AutocompleterResultTypes.GUILD, fn(9263).AutocompleterResultTypes.TEXT_CHANNEL, fn(9263).AutocompleterResultTypes.GROUP_DM, fn(9263).AutocompleterResultTypes.VOICE_CHANNEL, fn(9263).AutocompleterResultTypes.USER];
+let items = [fn(9280).AutocompleterResultTypes.GUILD, fn(9280).AutocompleterResultTypes.TEXT_CHANNEL, fn(9280).AutocompleterResultTypes.GROUP_DM, fn(9280).AutocompleterResultTypes.VOICE_CHANNEL, fn(9280).AutocompleterResultTypes.USER];
 let closure_39 = { code: "(function LaunchPadTsx3(){let[sharedState]=this.__closure;return sharedState.get()===0;})" };
 let closure_40 = { code: "(function LaunchPadTsx4(hidden,prevHidden){let[scheduleOnRN,clearQuery,cancelTimeout]=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){scheduleOnRN(clearQuery);}else if(!hidden&&hidden!==prevHidden){scheduleOnRN(cancelTimeout);}})" };
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -543,15 +543,15 @@ export default noop.memo(function LaunchPad(arg0) {
         let diff = length.length - 1;
         if (0 <= diff) {
           while (null != length[diff]) {
-            if (obj3.startsWith(React6)) {
-              let channel = ChannelStore.getChannel(React7(obj3));
+            if (obj3.startsWith(React5)) {
+              let channel = ChannelStore.getChannel(React6(obj3));
               let guild_id;
               if (channel != null) {
                 guild_id = channel.guild_id;
               }
               let tmp17 = guild_id;
             } else {
-              tmp17 = React7(obj3);
+              tmp17 = React6(obj3);
             }
             guild = GuildStore.getGuild(tmp17);
             let hasItem = null == tmp17 || set.has(tmp17) || set1.has(tmp17) || null == guild;
@@ -751,14 +751,14 @@ export default noop.memo(function LaunchPad(arg0) {
   let tmp59Result = 0 === str.trim().length && first3 === constants3.SEARCH;
   if (tmp59Result) {
     const obj9 = { selectedGuildId: first1, setSelectedGuild: tmp22, unreadPrivateChannelIds: stateFromStores, unreadGuilds: stateFromStoresArray, guildHistory: memo, visible };
-    tmp59Result = closure_27(tmp43(19231), obj9);
+    tmp59Result = closure_27(tmp43(19335), obj9);
   }
   items20[1] = tmp59Result;
   const obj10 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp56) {
       const obj11 = { results, query: str };
-      let tmp59Result2 = closure_27(tmp16(19238).SearchResults, obj11);
+      let tmp59Result2 = closure_27(tmp16(19342).SearchResults, obj11);
     }
     obj10.children = tmp59Result2;
     items20[2] = closure_27(View, obj10);
@@ -785,13 +785,13 @@ export default noop.memo(function LaunchPad(arg0) {
     obj12.history = channelHistory;
     obj12.expandedHistory = tmp3;
     obj12.toggleExpandedHistory = callback;
-    tmp59Result2 = closure_27(tmp16(19238).InitialResults, obj12);
+    tmp59Result2 = closure_27(tmp16(19342).InitialResults, obj12);
   } else if (first3 === constants3.DEV_TOOLS) {
-    tmp59Result2 = closure_27(tmp43(17900), {});
+    tmp59Result2 = closure_27(tmp43(17996), {});
   } else if (first3 === constants3.MEMBERS) {
-    tmp59Result2 = closure_27(tmp43(19251), {});
+    tmp59Result2 = closure_27(tmp43(19355), {});
   } else {
-    tmp59Result2 = closure_27(tmp43(19252), {});
+    tmp59Result2 = closure_27(tmp43(19356), {});
   }
   tmp56 = str.trim().length > 0;
 });

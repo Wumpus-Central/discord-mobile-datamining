@@ -1,22 +1,22 @@
-// === Module 8820: ComponentStateContext ===
+// === Module 8837: ComponentStateContext ===
 
-// Module 8820 (ComponentStateContext)
+// Module 8837 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Server from "Server" /* 2121 */;
-import useMountEffectDefault from "useMountEffect" /* 5716 */;
-import InteractionTypes from "InteractionTypes" /* 6190 */;
-import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6191 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6193 */;
-import InteractionUtils from "InteractionUtils" /* 8824 */;
+import useMountEffectDefault from "useMountEffect" /* 5729 */;
+import InteractionTypes from "InteractionTypes" /* 6205 */;
+import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6206 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6208 */;
+import InteractionUtils from "InteractionUtils" /* 8841 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InteractionStore from "InteractionStore" /* 8513 */;
+import InteractionStore from "InteractionStore" /* 8530 */;
 import LurkingStore from "LurkingStore" /* 5074 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6828 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6843 */;
 import UserStore from "UserStore" /* 1385 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8821 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8838 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -132,11 +132,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(8558);
-  const isThreadModerator = channel(7567).useIsThreadModerator(channel);
-  const tmpResult = channel(7567);
+  const obj5 = channel(8575);
+  const isThreadModerator = channel(7583).useIsThreadModerator(channel);
+  const tmpResult = channel(7583);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(7567).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7583).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }

@@ -1,21 +1,21 @@
-// === Module 17247: VideoQuestModal ===
+// === Module 17339: VideoQuestModal ===
 
-// Module 17247 (VideoQuestModal)
+// Module 17339 (VideoQuestModal)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import AnalyticsActions from "AnalyticsActions" /* 7986 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8965 */;
-import QuestUtils from "QuestUtils" /* 9810 */;
-import applyOrientationLock2 from "applyOrientationLock" /* 14836 */;
-import QuestModalContentCloudBackgroundDefault from "QuestModalContentCloudBackground" /* 17249 */;
+import AnalyticsActions from "AnalyticsActions" /* 8002 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8982 */;
+import QuestUtils from "QuestUtils" /* 9828 */;
+import applyOrientationLock2 from "applyOrientationLock" /* 14916 */;
+import QuestModalContentCloudBackgroundDefault from "QuestModalContentCloudBackground" /* 17341 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(17215).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+let closure_6 = fn(17307).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -75,7 +75,7 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
     }, items);
     const tmp15 = closure_12();
     const pillarboxed = tmp15;
-    const tmp17 = useStateFromSharedValueDefault(obj2.useContext(tmp(17216).QuestDockGestureContext).windowDimensions);
+    const tmp17 = useStateFromSharedValueDefault(obj2.useContext(tmp(17308).QuestDockGestureContext).windowDimensions);
     ({ width, height } = tmp17);
     let bound = null;
     if (tmp17.landscape) {
@@ -122,7 +122,7 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
     }
     sharedValue = tmp(1652).useSharedValue(num3);
     const tmpResult = tmp(1652);
-    const items4 = [closure_13, tmp(5757).withSpring, tmp(1652).clamp, sharedValue, bound, tmp(1652).interpolate, -100];
+    const items4 = [closure_13, tmp(5771).withSpring, tmp(1652).clamp, sharedValue, bound, tmp(1652).interpolate, -100];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -152,7 +152,7 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
     const tmp37 = useSafeAreaInsetsDefault();
     const tmp27 = bound;
     const tmpResult3 = tmp(1652);
-    const items6 = [closure_14, tmp(5757).withSpring, tmp(1652).interpolate, sharedValue, tmp37, tmp27];
+    const items6 = [closure_14, tmp(5771).withSpring, tmp(1652).interpolate, sharedValue, tmp37, tmp27];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -222,19 +222,19 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
         bound = width;
       }
       const obj14 = { contentWidth: bound, isFullscreen: tmp12, onNavigateToPostWatchVideo: callback2, onClose, onEnd: callback2, setIsFullscreen, sourceQuestContent };
-      tmp48Result = tmp48(tmp16(17252), obj14);
-      const tmp16Result = tmp16(17252);
+      tmp48Result = tmp48(tmp16(17344), obj14);
+      const tmp16Result = tmp16(17344);
     }
     const items16 = [tmp48Result, ];
     let tmp48Result2 = first === tmp24.POST_WATCH_VIDEO;
     if (tmp48Result2) {
       const obj15 = { onClose, onRestartVideo: callback1, sourceQuestContent };
-      tmp48Result2 = tmp48(tmp16(17277), obj15);
+      tmp48Result2 = tmp48(tmp16(17369), obj15);
     }
     items16[1] = tmp48Result2;
     obj13.children = items16;
     obj11.children = pillarboxed(c5, obj13);
-    items14[1] = setIsFullscreen(tmp(7412).SafeAreaPaddingView, obj11);
+    items14[1] = setIsFullscreen(tmp(7428).SafeAreaPaddingView, obj11);
     obj4.children = items14;
     obj3.children = pillarboxed(_modDef1652.View, obj4);
     return setIsFullscreen(c5, obj3);

@@ -1,8 +1,8 @@
-// === Module 10095: Graphic ===
+// === Module 10143: Graphic ===
 
-// Module 10095 (Graphic)
-import GraphicTypes from "GraphicTypes" /* 5308 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+// Module 10143 (Graphic)
+import GraphicTypes from "GraphicTypes" /* 5309 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

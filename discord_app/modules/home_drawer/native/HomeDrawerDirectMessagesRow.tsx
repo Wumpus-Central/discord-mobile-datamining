@@ -1,14 +1,14 @@
-// === Module 18531: HomeDrawerDirectMessagesRow ===
+// === Module 18626: HomeDrawerDirectMessagesRow ===
 
-// Module 18531 (HomeDrawerDirectMessagesRow)
+// Module 18626 (HomeDrawerDirectMessagesRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5327 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 18527 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5328 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 18622 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
@@ -23,27 +23,27 @@ function HomeDrawerDMsRow() {
   if (stateFromStores > 0) {
     const obj2 = { style: tmp.subtitle, children: null };
     const obj3 = { style: tmp.onlineDot };
-    const items1 = [React5(View, obj3), ];
-    const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
+    const items1 = [metroImportDefault(View, obj3), ];
+    const obj4 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     const intl = util.intl;
     const obj5 = { numFriends: stateFromStores };
     obj4.children = intl.format(util.t.N5UIKr, obj5);
-    items1[1] = React5(Text_Text.Text, obj4);
+    items1[1] = metroImportDefault(Text_Text.Text, obj4);
     obj2.children = items1;
-    tmp5 = React6(View, obj2);
+    tmp5 = React5(View, obj2);
   }
   const obj6 = { title: null, subtitle: null };
-  const obj7 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
+  const obj7 = { variant: "body-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl2 = util.intl;
   obj7.children = intl2.string(util.t.YUU0RF);
-  obj6.title = React5(Text_Text.Text, obj7);
+  obj6.title = metroImportDefault(Text_Text.Text, obj7);
   obj6.subtitle = tmp5;
-  return React5(HomeDrawerShared.HomeDrawerSharedItem, obj6);
+  return metroImportDefault(HomeDrawerShared.HomeDrawerSharedItem, obj6);
 }
 const View = fn(17).View;
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
@@ -58,7 +58,7 @@ export default function HomeDrawerDMsRowWrapper() {
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;
     if (!tmp) {
-      tmp2 = React5(HomeDrawerDMsRow, {});
+      tmp2 = metroImportDefault(HomeDrawerDMsRow, {});
     }
   }
   return tmp2;

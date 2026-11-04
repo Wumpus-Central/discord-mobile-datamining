@@ -1,15 +1,15 @@
-// === Module 14546: useConjureAppChannelSheet ===
+// === Module 14626: useConjureAppChannelSheet ===
 
-// Module 14546 (useConjureAppChannelSheet)
+// Module 14626 (useConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import UserUtils from "UserUtils" /* 5195 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11477 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11527 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 require = fn;
 function ConjureAppSheetIcon(application) {

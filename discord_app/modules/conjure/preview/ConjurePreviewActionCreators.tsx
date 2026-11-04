@@ -1,15 +1,15 @@
-// === Module 11030: ConjurePreviewActionCreators ===
+// === Module 11079: ConjurePreviewActionCreators ===
 
-// Module 11030 (ConjurePreviewActionCreators)
+// Module 11079 (ConjurePreviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6965 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11032 */;
-import leaveFrame from "leaveFrame" /* 11076 */;
-import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 11077 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6980 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11081 */;
+import leaveFrame from "leaveFrame" /* 11125 */;
+import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 11126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
-import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 11031 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 11080 */;
 
 require = fn;
 let closure_8 = async function _loadConjurePreviewDm() {
@@ -27,8 +27,8 @@ const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");
 
-export function reloadConjureAppFrames(application_id) {
-  ConjurePlatformUtilsDefault.reloadAppFrames(application_id);
+export function reloadConjureAppFrames(applicationId) {
+  ConjurePlatformUtilsDefault.reloadAppFrames(applicationId);
 }
 export function reloadConjureProjectFrames(projectId) {
   const project = ConjureProjectStore.getProject(projectId);

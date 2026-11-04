@@ -1,20 +1,19 @@
-// === Module 9832: QuestRewardUtils ===
+// === Module 9850: QuestRewardUtils ===
 
-// Module 9832 (QuestRewardUtils)
+// Module 9850 (QuestRewardUtils)
 import util from "util" /* 1113 */;
 import _mod4567 from "module_4567" /* 4567 */;
-import QuestTypes from "QuestTypes" /* 6904 */;
-import QuestDataUtils from "QuestDataUtils" /* 7966 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7975 */;
-import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 9833 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9834 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9835 */;
-import FractionalPremiumUtils from "FractionalPremiumUtils" /* 9836 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9837 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 9838 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import QuestTypes from "QuestTypes" /* 6919 */;
+import QuestDataUtils from "QuestDataUtils" /* 7982 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7991 */;
+import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 9851 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9852 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9853 */;
+import FractionalPremiumUtils from "FractionalPremiumUtils" /* 9854 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9855 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 9856 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   if (rewards.some((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM)) {
@@ -75,9 +74,8 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
     }
   }
 }
-let items = [fn(9833).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(9833).QuestRewardExpirationMode.PREMIUM_PERMANENT];
+const items = [QuestRewardExpirationMode.QuestRewardExpirationMode.PREMIUM_EXTENSION, QuestRewardExpirationMode.QuestRewardExpirationMode.PREMIUM_PERMANENT];
 const set = new Set(items);
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestRewardUtils.tsx");
 
 export function getCollectiblesQuestReward(rewardsConfig) {
@@ -224,34 +222,6 @@ export function getInGameQuestReward(rewardsConfig) {
   }
   return found;
 }
-export function getCollectiblesQuestRewardItem(rewardsConfig) {
-  const rewards = rewardsConfig.rewardsConfig.rewards;
-  const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.COLLECTIBLE);
-  let type;
-  if (found != null) {
-    type = found.type;
-  }
-  let tmp3 = null;
-  if (type === QuestRewardTypes.QuestRewardTypes.COLLECTIBLE) {
-    tmp3 = found;
-  }
-  let skuId;
-  if (tmp3 != null) {
-    skuId = tmp3.skuId;
-  }
-  const product = CollectiblesCategoryStore.getProduct(skuId);
-  let first;
-  if (product != null) {
-    items = product.items;
-    if (items != null) {
-      first = items[0];
-    }
-  }
-  if (first == null) {
-    first = null;
-  }
-  return first;
-}
 export function getVirtualCurrencyRewardOrbQuantity(config) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
@@ -260,17 +230,6 @@ export function getVirtualCurrencyRewardOrbQuantity(config) {
     orbQuantity = found.orbQuantity;
   }
   return orbQuantity;
-}
-export function getVirtualCurrencyRewardPremiumOrbQuantity(rewardsConfig) {
-  const rewards = rewardsConfig.rewardsConfig.rewards;
-  const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
-  let type;
-  if (found != null) {
-    type = found.type;
-  }
-  if (type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY) {
-    return found.premiumOrbQuantity;
-  }
 }
 export function isCollectibleQuestRewardPremiumExtendable(config) {
   const rewards = config.rewardsConfig.rewards;
@@ -439,22 +398,4 @@ export function getDefaultPlatform(config) {
     CROSS_PLATFORM = QuestTypes.QuestRewardCodePlatforms.CROSS_PLATFORM;
   }
   return CROSS_PLATFORM;
-}
-export function getPlatformString(arg0) {
-  if (QuestTypes.QuestRewardCodePlatforms.XBOX === arg0) {
-    const intl5 = util.intl;
-    return intl5.string(util.t.G84UWZ);
-  } else if (QuestTypes.QuestRewardCodePlatforms.PLAYSTATION === arg0) {
-    const intl4 = util.intl;
-    return intl4.string(util.t["6IeKx2"]);
-  } else if (QuestTypes.QuestRewardCodePlatforms.SWITCH === arg0) {
-    const intl3 = util.intl;
-    return intl3.string(util.t["1pp0su"]);
-  } else if (QuestTypes.QuestRewardCodePlatforms.PC === arg0) {
-    const intl2 = util.intl;
-    return intl2.string(util.t["YK+wUg"]);
-  } else if (QuestTypes.QuestRewardCodePlatforms.CROSS_PLATFORM === arg0) {
-    const intl = util.intl;
-    return intl.string(util.t.UWVbzV);
-  }
 }

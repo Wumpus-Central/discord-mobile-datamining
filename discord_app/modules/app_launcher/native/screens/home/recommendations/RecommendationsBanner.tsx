@@ -1,26 +1,26 @@
-// === Module 12557: RecommendationsBanner ===
+// === Module 12638: RecommendationsBanner ===
 
-// Module 12557 (RecommendationsBanner)
+// Module 12638 (RecommendationsBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8839 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8881 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8943 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11979 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8856 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8898 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8960 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12038 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1399 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
+({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11638);
-  heroMediaDimensions = heroMediaDimensions(12548).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(11689);
+  heroMediaDimensions = heroMediaDimensions(12629).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   items = [heroMediaDimensions, tmp4];
@@ -55,7 +55,7 @@ let closure_11 = noop.memo(function ReccomendationBannerBot(applicationBot) {
     id = applicationBot.id;
   }
   if (id == null) {
-    id = React5;
+    id = metroImportDefault;
   }
   const obj = { displayProfile: useDisplayProfileDefault(id), user: null };
   const tmp3Result = useDisplayProfileDefault(id);

@@ -1,14 +1,14 @@
-// === Module 12135: StageChannelExpandedControls ===
+// === Module 12194: StageChannelExpandedControls ===
 
-// Module 12135 (StageChannelExpandedControls)
+// Module 12194 (StageChannelExpandedControls)
 import nativeDefault from "native" /* 575 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11329 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11379 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
-const useChannelVideoLimitDefault = tmp2(9352);
+const useChannelVideoLimitDefault = tmp2(9369);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -28,8 +28,8 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
   importDefault = undefined;
   const tmp = closure_8();
   const tmp4 = useCanSpeakInChannelDefault(channel.id);
-  const isConnectedToVoiceChannel = channel(11137).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(11137);
+  const isConnectedToVoiceChannel = channel(11185).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(11185);
   items = [GuildStore];
   const items1 = [channel.guild_id];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);
@@ -48,9 +48,9 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
     num = 0;
   }
   const obj4 = channel(504);
-  const stageHasMedia = channel(6832).useStageHasMedia(channel.id);
+  const stageHasMedia = channel(6847).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(12136).StreamVolumeItem, {}));
+  items5.push(jsx(channel(12195).StreamVolumeItem, {}));
   if (tmp11) {
     const obj5 = { channel, disabled: null };
     let tmp12 = stateFromStoresArray.length > 0;
@@ -65,12 +65,12 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
       tmp12 = reachedLimit;
     }
     obj5.disabled = tmp12;
-    items5.push(jsx(tmp5(12136).ScreenshareButton, { channel, disabled: null }));
+    items5.push(jsx(tmp5(12195).ScreenshareButton, { channel, disabled: null }));
   }
-  items5.push(jsx(channel(12136).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(12136).DeafenButton, { channel }));
+  items5.push(jsx(channel(12195).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(12195).DeafenButton, { channel }));
   const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
   tmp11 = num > 0 && tmp4;
-  const tmp5Result = channel(6832);
+  const tmp5Result = channel(6847);
   return <View style={tmp.container}>{items5.map((children, index) => <View key={index}>{children}</View>)}</View>;
 });

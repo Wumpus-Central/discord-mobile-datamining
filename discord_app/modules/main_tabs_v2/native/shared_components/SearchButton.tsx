@@ -1,10 +1,10 @@
-// === Module 14059: SearchButton ===
+// === Module 14145: SearchButton ===
 
-// Module 14059 (SearchButton)
+// Module 14145 (SearchButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7340 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7356 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export function SearchButtonContent(panelVariant) {
   items = [tmp2.searchButton, panelVariant.panelVariant ? tmp2.roundedCornersAlt : tmp2.roundedCorners, merged.style];
   obj.style = items;
   const items1 = [React3(MagnifyingGlassIcon.MagnifyingGlassIcon, { size: "xs" }), ];
-  const obj2 = { variant: "text-sm/medium", color: "text-muted", style: tmp2.text, maxFontSizeMultiplier: 2, children: null };
+  const obj2 = { variant: "body-sm/medium", color: "text-muted", style: tmp2.text, maxFontSizeMultiplier: 2, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["5h0QOP"]);
   items1[1] = React3(Text_Text.Text, obj2);

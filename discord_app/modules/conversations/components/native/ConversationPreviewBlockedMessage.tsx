@@ -1,12 +1,12 @@
-// === Module 10013: ConversationPreviewBlockedMessage ===
+// === Module 10061: ConversationPreviewBlockedMessage ===
 
-// Module 10013 (ConversationPreviewBlockedMessage)
+// Module 10061 (ConversationPreviewBlockedMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 7261 */;
-import DenyIcon from "DenyIcon" /* 10014 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 7237 */;
+import DenyIcon from "DenyIcon" /* 10062 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default function ConversationPreviewBlockedMessage(reason) {
   const intl = util.intl;
   const t = util.t;
   const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
-  items[1] = React3(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: intl.string("blocked" === reason.reason ? t["WPe+xL"] : t.uxrh1O) });
+  items[1] = React3(Text_Text.Text, { variant: "body-md/normal", color: "text-muted", children: intl.string("blocked" === reason.reason ? t["WPe+xL"] : t.uxrh1O) });
   obj.children = items;
   return React4(Stack_Stack.Stack, obj);
 };

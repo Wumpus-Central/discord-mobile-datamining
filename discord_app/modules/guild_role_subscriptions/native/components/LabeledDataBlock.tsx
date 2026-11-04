@@ -1,9 +1,9 @@
-// === Module 17354: LabeledDataBlock ===
+// === Module 17445: LabeledDataBlock ===
 
-// Module 17354 (LabeledDataBlock)
+// Module 17445 (LabeledDataBlock)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export default function LabeledDataBlock(arg0) {
   items = [tmp.container, style];
   obj.style = items;
   const obj2 = { style: tmp.titleSection, children: null };
-  const items1 = [React3(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", color: "interactive-text-default", children: title }), ];
+  const items1 = [React3(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "body-sm/medium", color: "interactive-text-default", children: title }), ];
   let tmp4Result = null != icon;
   if (tmp4Result) {
     const obj4 = { accessibilityRole: "button", onPress: onPressIcon, children: React3(icon, { size: "sm" }) };

@@ -1,25 +1,25 @@
-// === Module 16650: EditProfileFrameSection ===
+// === Module 16740: EditProfileFrameSection ===
 
-// Module 16650 (EditProfileFrameSection)
+// Module 16740 (EditProfileFrameSection)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9646 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 15215 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15216 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 16649 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9665 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 15298 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15299 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 16739 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
-let closure_6 = fn(8918).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileFrameRecord = fn(7867).isProfileFrameRecord;
+let closure_6 = fn(8935).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const createStyles = fn(5141);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15215).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15215).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(15215).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15298).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15298).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(15298).GUTTER_SIZE };
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {
@@ -37,18 +37,18 @@ const memoResult = noop.memo((arg0) => {
   obj2.children = substr.map((profileFrame, index) => {
     if (profileFrame === useProfileFrameSections.NONE_ITEM) {
       const obj2 = { size: width, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj2, "none");
+      return metroImportDefault(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj2, "none");
     } else if (profileFrame === useProfileFrameSections.SHOP_ITEM) {
       const obj3 = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_PROFILE_FRAME_SHEET };
-      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj3, "shop");
+      return metroImportDefault(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj3, "shop");
     } else if (isProfileFrameRecord(profileFrame)) {
       const obj4 = { profileFrame, isSelected: closure_1_0 === profileFrame.skuId, setSelectedProfileFrame, size: width };
-      return React5(memoResult1, obj4, profileFrame.skuId);
+      return metroImportDefault(memoResult1, obj4, profileFrame.skuId);
     } else {
       const obj = { style: null };
       const size = { height: width, width };
       obj.style = size;
-      return React5(View, obj, index);
+      return metroImportDefault(View, obj, index);
     }
   });
   const items3 = [closure_7(onPress, obj2), closure_7(onPress, { style: tmp.rowSpacer })];
@@ -69,9 +69,9 @@ const memoResult1 = noop.memo((isSelected) => {
   const obj3 = { profileFrame, previewWidth: size * closure_6, previewHeight: size - 2 * PX_8, profileBackgroundColor: null };
   const tmp = closure_11();
   obj3.profileBackgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOW;
-  obj2.children = React5(ProfileFrameSamplePreviewDefault, obj3);
-  obj.children = React5(View, obj2);
-  return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemProduct, obj);
+  obj2.children = metroImportDefault(ProfileFrameSamplePreviewDefault, obj3);
+  obj.children = metroImportDefault(View, obj2);
+  return metroImportDefault(CollectiblesEditUserProfileListItems.EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditProfileFrameItem";
 let size = fn(2);

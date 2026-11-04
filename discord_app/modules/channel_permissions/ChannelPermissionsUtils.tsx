@@ -1,6 +1,6 @@
-// === Module 9159: ChannelPermissionsUtils ===
+// === Module 9176: ChannelPermissionsUtils ===
 
-// Module 9159 (ChannelPermissionsUtils)
+// Module 9176 (ChannelPermissionsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import util from "util" /* 1113 */;
@@ -10,9 +10,9 @@ import GuildRecord from "GuildRecord" /* 5008 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 5051 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import ChannelUtils from "ChannelUtils" /* 6166 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8071 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9160 */;
+import ChannelUtils from "ChannelUtils" /* 6181 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8087 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9177 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 5048 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -94,7 +94,7 @@ function sortMembers(rowType, rowType2) {
 }
 const isGuildVocalChannelType = ChannelRecord.isGuildVocalChannelType;
 const isGuildOwner = GuildRecord.isGuildOwner;
-({ hasPermission: metroRequire, isEveryoneRole: closure_7 } = GuildRoleRecord);
+({ hasPermission: closure_6, isEveryoneRole: metroImportDefault } = GuildRoleRecord);
 const RowType = ChannelPermissionsConstants.RowType;
 ({ Permissions: closure_11, ChannelTypes: closure_12, DEFAULT_ROLE_COLOR_HEX: map1 } = Constants);
 const result = size.fileFinishedImporting("modules/channel_permissions/ChannelPermissionsUtils.tsx");
@@ -127,7 +127,7 @@ export function getRolesRows(guild, stateFromStores, channel, permission) {
     let tmp2 = !tmp;
     if (tmp) {
       if (tmp2) {
-        tmp2 = !React5(name);
+        tmp2 = !metroImportDefault(name);
       }
       if (tmp2) {
         tmp2 = fn(name.name);
@@ -167,7 +167,7 @@ export function getRolesRowsWithPermissionDisabled(guild, stateFromStores, chann
     let tmp2 = !tmp;
     if (tmp) {
       if (tmp2) {
-        tmp2 = !React5(name);
+        tmp2 = !metroImportDefault(name);
       }
       if (tmp2) {
         tmp2 = fn(name.name);
@@ -224,7 +224,7 @@ export function getExistingRoles(guild, sortedRoles, channel, accessPermissions,
       }
       let tmp13 = !flag;
       if (!flag) {
-        tmp13 = !React5(id);
+        tmp13 = !metroImportDefault(id);
       }
       tmp = tmp13;
     }
@@ -262,7 +262,7 @@ export function getAllExistingRolesWithPermission(arg0, arr, arg2, arg3, arg4) {
       }
       let tmp13 = !flag;
       if (!flag) {
-        tmp13 = !React5(id);
+        tmp13 = !metroImportDefault(id);
       }
       hasItem = tmp13;
     }
@@ -308,7 +308,7 @@ export function getExistingRolesRows(guild, sortedGuildRoles, channel, accessPer
       }
       let tmp13 = !flag;
       if (!flag) {
-        tmp13 = !React5(id);
+        tmp13 = !metroImportDefault(id);
       }
       tmp = tmp13;
     }
@@ -361,7 +361,7 @@ export function getExistingRolesRowWithPermissionDisabled(guild, sortedGuildRole
       }
       let tmp13 = !flag;
       if (!flag) {
-        tmp13 = !React5(id);
+        tmp13 = !metroImportDefault(id);
       }
       hasItem = tmp13;
     }

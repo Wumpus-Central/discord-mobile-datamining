@@ -1,11 +1,11 @@
-// === Module 15545: BoostingCountDownPill ===
+// === Module 15632: BoostingCountDownPill ===
 
-// Module 15545 (BoostingCountDownPill)
+// Module 15632 (BoostingCountDownPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
@@ -16,10 +16,10 @@ function handlePress() {
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
   obj2.aboutText = intl.string(util.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(15546, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
+  obj.openLazy(asyncRequireImpl(15633, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { fractionalPremiumBanner: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: nativeDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: nativeDefault.radii.lg, marginBottom: 12 }, fpDurationPill: null, fpDurationText: null, fpUnavailable: null, fpUnavailableTextNoCountdown: null };
 let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: nativeDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: nativeDefault.radii.lg, marginBottom: 12 };
 obj.fpDurationPill = { flex: 1, paddingVertical: 12, paddingHorizontal: 27, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.xxl, justifyContent: "center" };
@@ -43,7 +43,7 @@ export default function BoostingCountDownPill(style) {
   let tmp2Result = !isInReverseTrial;
   if (!isInReverseTrial) {
     const obj3 = { style: tmp.fpDurationPill, children: null };
-    const obj4 = { variant: "text-sm/semibold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
+    const obj4 = { variant: "body-sm/semibold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
     obj3.children = hasOwnProperty(Text_Text.Text, obj4);
     tmp2Result = hasOwnProperty(React4, obj3);
   }
@@ -53,7 +53,7 @@ export default function BoostingCountDownPill(style) {
   if (isInReverseTrial) {
     prop = tmp.fpUnavailableTextNoCountdown;
   }
-  const obj6 = { variant: "text-md/normal", color: "interactive-text-active", style: prop, children: null };
+  const obj6 = { variant: "body-md/normal", color: "interactive-text-active", style: prop, children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["5nrJDO"]);
   obj5.children = hasOwnProperty(Text_Text.Text, obj6);

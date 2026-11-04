@@ -1,22 +1,25 @@
-// === Module 6690: SelfPresenceStore ===
+// === Module 6705: SelfPresenceStore ===
 
-// Module 6690 (SelfPresenceStore)
+// Module 6705 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import ActivityTypes from "ActivityTypes" /* 5882 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7704 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10892 */;
-import SpotifyStore from "SpotifyStore" /* 6691 */;
+import ActivityTypes from "ActivityTypes" /* 5896 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7720 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10940 */;
+import isGuildSpaceEmbeddedActivityDefault from "isGuildSpaceEmbeddedActivity" /* 15753 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import SpotifyStore from "SpotifyStore" /* 6706 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ChannelStore from "ChannelStore" /* 4990 */;
 import DetectableGameStore from "DetectableGameStore" /* 2161 */;
-import IdleStore from "IdleStore" /* 6825 */;
+import IdleStore from "IdleStore" /* 6840 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2165 */;
-import LocalActivityStore from "LocalActivityStore" /* 11662 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
-import SessionsStore from "SessionsStore" /* 5886 */;
+import LocalActivityStore from "LocalActivityStore" /* 11713 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
+import SessionsStore from "SessionsStore" /* 5900 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -50,43 +53,47 @@ function filterPlayingActivities(arg0) {
   }
 }
 function shouldShowActivity(type) {
-  type = type.type;
-  if (ActivityTypes.ActivityTypes.LISTENING === type) {
-    if (isListeningOnSpotifyDefault(type)) {
-      let shouldShowActivityResult = SpotifyStore.shouldShowActivity();
-    } else {
-      shouldShowActivityResult = null != type.application_id;
-      if (shouldShowActivityResult) {
-        shouldShowActivityResult = LibraryApplicationUtils.shouldShareApplicationActivity(type.application_id, LibraryApplicationStore);
-        const tmpResult = LibraryApplicationUtils;
-      }
-    }
-    return shouldShowActivityResult;
-  } else if (ActivityTypes.ActivityTypes.PLAYING === type) {
-    if (null != type.application_id) {
-      let result = LibraryApplicationUtils.shouldShareApplicationActivity(type.application_id, LibraryApplicationStore);
-      const tmpResult4 = LibraryApplicationUtils;
-    } else {
-      const searchGamesByNameResult = DetectableGameStore.searchGamesByName(type.name);
-      if (1 === searchGamesByNameResult.length) {
-        result = LibraryApplicationUtils.shouldShareApplicationActivity(searchGamesByNameResult[0], LibraryApplicationStore);
-        const tmpResult5 = LibraryApplicationUtils;
-      } else {
-        const ShowCurrentGame = UserSettings.ShowCurrentGame;
-        result = ShowCurrentGame.getSetting();
-      }
-    }
-    return result;
+  if (isGuildSpaceEmbeddedActivityDefault(type)) {
+    return false;
   } else {
-    if (ActivityTypes.ActivityTypes.STREAMING !== type) {
-      const WATCHING = ActivityTypes.ActivityTypes.WATCHING;
+    type = type.type;
+    if (ActivityTypes.ActivityTypes.LISTENING === type) {
+      if (isListeningOnSpotifyDefault(type)) {
+        let shouldShowActivityResult = SpotifyStore.shouldShowActivity();
+      } else {
+        shouldShowActivityResult = null != type.application_id;
+        if (shouldShowActivityResult) {
+          shouldShowActivityResult = LibraryApplicationUtils.shouldShareApplicationActivity(type.application_id, LibraryApplicationStore);
+          const tmp3Result = LibraryApplicationUtils;
+        }
+      }
+      return shouldShowActivityResult;
+    } else if (ActivityTypes.ActivityTypes.PLAYING === type) {
+      if (null != type.application_id) {
+        let result = LibraryApplicationUtils.shouldShareApplicationActivity(type.application_id, LibraryApplicationStore);
+        const tmp3Result4 = LibraryApplicationUtils;
+      } else {
+        const searchGamesByNameResult = DetectableGameStore.searchGamesByName(type.name);
+        if (1 === searchGamesByNameResult.length) {
+          result = LibraryApplicationUtils.shouldShareApplicationActivity(searchGamesByNameResult[0], LibraryApplicationStore);
+          const tmp3Result5 = LibraryApplicationUtils;
+        } else {
+          const ShowCurrentGame = UserSettings.ShowCurrentGame;
+          result = ShowCurrentGame.getSetting();
+        }
+      }
+      return result;
+    } else {
+      if (ActivityTypes.ActivityTypes.STREAMING !== type) {
+        const WATCHING = ActivityTypes.ActivityTypes.WATCHING;
+      }
+      let result1 = null == type.application_id;
+      if (!result1) {
+        result1 = LibraryApplicationUtils.shouldShareApplicationActivity(type.application_id, LibraryApplicationStore);
+        const tmp3Result6 = LibraryApplicationUtils;
+      }
+      return result1;
     }
-    let result1 = null == type.application_id;
-    if (!result1) {
-      result1 = LibraryApplicationUtils.shouldShareApplicationActivity(type.application_id, LibraryApplicationStore);
-      const tmpResult6 = LibraryApplicationUtils;
-    }
-    return result1;
   }
 }
 function handleUpdate() {
@@ -94,11 +101,11 @@ function handleUpdate() {
   if (num == null) {
     num = 0;
   }
-  closure_20 = IdleStore.isAFK();
-  if (c21) {
-    IDLE = closure_16;
-    let ONLINE = closure_16;
-  } else if (c14) {
+  closure_22 = IdleStore.isAFK();
+  if (c23) {
+    IDLE = closure_18;
+    let ONLINE = closure_18;
+  } else if (c16) {
     const INVISIBLE = StatusTypes.INVISIBLE;
     IDLE = INVISIBLE;
     ONLINE = INVISIBLE;
@@ -117,14 +124,14 @@ function handleUpdate() {
   if (tmp7) {
     IDLE = StatusTypes.IDLE;
   }
-  if (!c21) {
+  if (!c23) {
     if (IDLE !== StatusTypes.INVISIBLE) {
       activities = LocalActivityStore.getActivities();
       found = activities.filter(shouldShowActivity);
     }
     let flag = false;
     if (!_modDef1342(found, found)) {
-      closure_19 = filterPlayingActivities(found);
+      closure_21 = filterPlayingActivities(found);
       flag = true;
     }
     remoteActivities = SessionsStore.getRemoteActivities();
@@ -139,37 +146,37 @@ function handleUpdate() {
       const arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
       const tmp12ResultResult = tmp12Result(items.sort(sortActivity));
       const iter = tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
-      closure_25 = filterPlayingActivities(tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value());
+      closure_27 = filterPlayingActivities(tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value());
       valueResult = tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
     }
   }
   found = [];
 }
 function handleConnectionOpen() {
-  c21 = false;
+  c23 = false;
   const UNKNOWN = StatusTypes.UNKNOWN;
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5881).sortActivity;
+const sortActivity = fn(5895).sortActivity;
 const Constants = fn(1072);
 const StatusTypes = Constants.StatusTypes;
 const AppStates = Constants.AppStates;
-let c14 = false;
-({ ONLINE: IDLE, UNKNOWN: closure_16 } = StatusTypes);
+let c16 = false;
+({ ONLINE: IDLE, UNKNOWN: closure_18 } = StatusTypes);
 let found = [];
 let activities = [];
 const afk = false;
-let c21 = true;
+let c23 = true;
 let remoteActivities = Object.freeze([]);
 let hiddenActivities = Object.freeze([]);
-let closure_25 = [];
+let closure_27 = [];
 const Store = initializeDefault.Store;
 class SelfPresenceStore extends Store {
 }
 const prototype = SelfPresenceStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(DetectableGameStore, IdleStore, LibraryApplicationStore, LocalActivityStore, PresenceStore, SessionsStore, SpotifyStore, UserSettingsProtoStore);
+  this.waitFor(ChannelStore, DetectableGameStore, EmbeddedActivitiesStore, IdleStore, LibraryApplicationStore, LocalActivityStore, PresenceStore, SessionsStore, SpotifyStore, UserSettingsProtoStore);
   items = [LocalActivityStore];
   this.syncWith(items, handleUpdate);
 };
@@ -184,7 +191,7 @@ prototype["getActivities"] = function getActivities() {
   if (arg0 === undefined) {
     flag = true;
   }
-  return flag ? closure_25 : closure_19;
+  return flag ? closure_27 : closure_21;
 };
 prototype["getUnfilteredActivities"] = function getUnfilteredActivities() {
   let flag = arg0;
@@ -223,7 +230,7 @@ SelfPresenceStore.displayName = "SelfPresenceStore";
 const selfPresenceStore = new SelfPresenceStore(DispatcherDefault, {
   START_SESSION: handleUpdate,
   CONNECTION_OPEN: function handleConnectionOpenTracked() {
-    c21 = false;
+    c23 = false;
     const UNKNOWN = StatusTypes.UNKNOWN;
     handleUpdate();
     const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
@@ -245,8 +252,8 @@ const selfPresenceStore = new SelfPresenceStore(DispatcherDefault, {
   LIBRARY_FETCH_SUCCESS: handleUpdate,
   LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: handleUpdate,
   LOGOUT: function handleLogout() {
-    c21 = true;
-    closure_16 = IDLE;
+    c23 = true;
+    closure_18 = IDLE;
     handleUpdate();
   },
   FORCE_INVISIBLE: function handleForceInvisible(invisible) {
@@ -254,13 +261,13 @@ const selfPresenceStore = new SelfPresenceStore(DispatcherDefault, {
     handleUpdate();
   },
   WINDOW_FOCUS: function handleWindowFocus() {
-    c14 = false;
+    c16 = false;
     handleUpdate();
   },
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
     if (state.state === AppStates.ACTIVE) {
-      if (c14) {
-        c14 = false;
+      if (c16) {
+        c16 = false;
         handleUpdate();
       }
     }

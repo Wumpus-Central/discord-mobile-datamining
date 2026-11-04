@@ -1,7 +1,7 @@
-// === Module 8304: BackgroundBlurView ===
+// === Module 8320: BackgroundBlurView ===
 
-// Module 8304 (BackgroundBlurView)
-import BackgroundBlurFill from "BackgroundBlurFill" /* 8305 */;
+// Module 8320 (BackgroundBlurView)
+import BackgroundBlurFill from "BackgroundBlurFill" /* 8321 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

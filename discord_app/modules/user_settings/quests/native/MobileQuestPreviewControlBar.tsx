@@ -1,13 +1,13 @@
-// === Module 17293: MobileQuestPreviewControlBar ===
+// === Module 17385: MobileQuestPreviewControlBar ===
 
-// Module 17293 (MobileQuestPreviewControlBar)
+// Module 17385 (MobileQuestPreviewControlBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7484 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7500 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7970 */;
+import QuestStore from "QuestStore" /* 7986 */;
 
 require = fn;
 class MobileQuestPreviewControlBar {
@@ -368,7 +368,7 @@ class MobileQuestPreviewControlBar {
     items10[1] = tmp15(tmp16, obj12);
     tmp17Result1 = null != stateFromStores;
     if (tmp17Result1) {
-      obj18 = { variant: "text-sm/medium", color: "text-feedback-critical", style: null, children: null };
+      obj18 = { variant: "body-sm/medium", color: "text-feedback-critical", style: null, children: null };
       obj18.style = tmp.errorText;
       obj18.children = stateFromStores.message;
       tmp17Result1 = tmp17(tmp4(tmp5[20]).Text, obj18);

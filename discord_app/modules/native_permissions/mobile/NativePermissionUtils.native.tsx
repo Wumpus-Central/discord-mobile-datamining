@@ -1,13 +1,13 @@
-// === Module 8086: mobile/NativePermissionUtils ===
+// === Module 8102: mobile/NativePermissionUtils ===
 
-// Module 8086 (mobile/NativePermissionUtils)
+// Module 8102 (mobile/NativePermissionUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1113 */;
-import useAlertStore from "useAlertStore" /* 6080 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 8088 */;
+import useAlertStore from "useAlertStore" /* 6095 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 8104 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import NativePermissionManagerModule_mod from "NativePermissionManagerModule" /* 8087 */;
+import NativePermissionManagerModule_mod from "NativePermissionManagerModule" /* 8103 */;
 
 require = fn;
 function combineStatuses() {
@@ -99,7 +99,7 @@ let closure_8 = async function _combineStatuses(arg0) {
     }
   })();
 };
-const NativePermissionConstants = fn(8064);
+const NativePermissionConstants = fn(8080);
 ({ NativePermissionTypes, NativePermissionStatus: hasOwnProperty } = NativePermissionConstants);
 const jsx = fn(21).jsx;
 let PlatformUtils = fn(1377);
@@ -140,7 +140,7 @@ if (MetaQuestUtils) {
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-const NativePermissionBaseUtils = fn(8083).NativePermissionBaseUtils;
+const NativePermissionBaseUtils = fn(8099).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {
 }
 const prototype = NativePermissionIOSUtils.prototype;

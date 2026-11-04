@@ -1,20 +1,20 @@
-// === Module 18018: ShelfBlock ===
+// === Module 18114: ShelfBlock ===
 
-// Module 18018 (ShelfBlock)
+// Module 18114 (ShelfBlock)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9587 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9590 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7859 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9606 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9609 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7860 */;
 
 require = fn;
 function ListEdgeSpacer() {
-  return React6(View, { style: closure_10().listEdgeSpacer });
+  return React5(View, { style: closure_10().listEdgeSpacer });
 }
 function ListItemSeparator() {
-  return React6(View, { style: closure_10().listItemSeparator });
+  return React5(View, { style: closure_10().listItemSeparator });
 }
 const View = fn(17).View;
 let closure_6 = fn(1074).CollectiblesMobileShopScreen;
@@ -82,8 +82,8 @@ export default function _default(block) {
   }, items2);
   const callback1 = collectiblesAnalyticsContext.useCallback((arg0) => {
     ({ item, index } = arg0);
-    const obj = { newValue: { tilePosition: index, pageSection: block.name }, children: React6(CollectiblesShopCardV2Default, { product: item, preferVCPrice }) };
-    return React6(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+    const obj = { newValue: { tilePosition: index, pageSection: block.name }, children: React5(CollectiblesShopCardV2Default, { product: item, preferVCPrice }) };
+    return React5(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
   }, items3);
   if (0 === filteredAndSortedProducts.length) {
     return null;
@@ -118,7 +118,7 @@ export default function _default(block) {
       const obj12 = { color: str };
       tmp18 = obj12;
     }
-    const obj13 = { variant: "text-md/semibold", style: tmp18, children: block.name };
+    const obj13 = { variant: "body-md/semibold", style: tmp18, children: block.name };
     obj11.children = closure_8(tmp2(tmp3[19]).Heading, obj13);
     const items6 = [closure_8(stateFromStores, obj11), ];
     let tmp14Result2 = block.showButton && null != stateFromStores;

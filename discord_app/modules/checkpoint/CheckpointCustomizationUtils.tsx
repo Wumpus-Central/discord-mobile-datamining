@@ -1,18 +1,18 @@
-// === Module 6554: CheckpointCustomizationUtils ===
+// === Module 6569: CheckpointCustomizationUtils ===
 
-// Module 6554 (CheckpointCustomizationUtils)
+// Module 6569 (CheckpointCustomizationUtils)
 import util from "util" /* 1113 */;
 import _modDef3219 from "module_3219" /* 3219 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6187 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6230 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6231 */;
-import CheckpointTrait from "CheckpointTrait" /* 6232 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6233 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6555 */;
-import CheckpointConstants from "CheckpointConstants" /* 6186 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6202 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6245 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6246 */;
+import CheckpointTrait from "CheckpointTrait" /* 6247 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6248 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6570 */;
+import CheckpointConstants from "CheckpointConstants" /* 6201 */;
 import size from "module_2" /* 2 */;
 
-function getAssetDescription(asset) {
+function getPlaintextAssetDescription(asset) {
   ({ trait, rarity } = asset);
   if (null == rarity) {
     let stringResult;
@@ -133,7 +133,7 @@ export function makeTraitRaritySorter(rarityOrder) {
 export function isNoneOption(traitOption) {
   return CheckpointCharacterTraits.isTraitNoneOptionId(traitOption.trait, traitOption.optionId);
 }
-export { getAssetDescription };
+export { getPlaintextAssetDescription };
 export function getAssetAccessibilityLabel(getName, hideCornerFlag) {
   items = [getName.getName()];
   if (getName.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.LOCKED) {
@@ -148,7 +148,7 @@ export function getAssetAccessibilityLabel(getName, hideCornerFlag) {
       const intl3 = util.intl;
       items.push(intl3.string(React3[getName.rarity]));
     }
-    const tmp11 = getAssetDescription(getName);
+    const tmp11 = getPlaintextAssetDescription(getName);
     if (null != tmp11) {
       items.push(tmp11);
     }

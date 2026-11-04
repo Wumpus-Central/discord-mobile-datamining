@@ -1,12 +1,12 @@
-// === Module 13585: CheckpointShareCardFooter ===
+// === Module 13671: CheckpointShareCardFooter ===
 
-// Module 13585 (CheckpointShareCardFooter)
+// Module 13671 (CheckpointShareCardFooter)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
-import CheckpointShareCardContext from "CheckpointShareCardContext" /* 13582 */;
-import ArrowLargeRightIcon from "ArrowLargeRightIcon" /* 13586 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
+import CheckpointShareCardContext from "CheckpointShareCardContext" /* 13668 */;
+import ArrowLargeRightIcon from "ArrowLargeRightIcon" /* 13672 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let size = { width: 145, height: 28 };
 const createStyles = fn(5141);
 let obj = { footer: null, portraitFooter: null, characterAndStatsFooter: null, footerTitle: null, footerButton: null, portraitFooterButton: null, characterAndStatsFooterButton: null };
@@ -76,5 +76,5 @@ export default function CheckpointShareCardFooter(isCharacterAndStats) {
   obj7.children = timestampProducer(ArrowLargeRightIcon.ArrowLargeRightIcon, { size: "xxs", color: nativeDefault.colors.BLACK });
   items1[2] = timestampProducer(hasOwnProperty, obj7);
   obj2.children = items1;
-  return React5(hasOwnProperty, obj2);
+  return metroImportDefault(hasOwnProperty, obj2);
 };

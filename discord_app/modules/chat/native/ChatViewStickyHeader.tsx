@@ -1,17 +1,17 @@
-// === Module 11392: ChatViewStickyHeader ===
+// === Module 11442: ChatViewStickyHeader ===
 
-// Module 11392 (ChatViewStickyHeader)
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11394 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11399 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11403 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11404 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11423 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11429 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11453 */;
-import PinotLazy from "PinotLazy" /* 11456 */;
-import ForumPostActionBarDefault from "ForumPostActionBar" /* 11486 */;
-import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11490 */;
-import ChatBannerDefault from "ChatBanner" /* 11493 */;
+// Module 11442 (ChatViewStickyHeader)
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11444 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11449 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11453 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11454 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11473 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11479 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11503 */;
+import PinotLazy from "PinotLazy" /* 11506 */;
+import ForumPostActionBarDefault from "ForumPostActionBar" /* 11536 */;
+import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11540 */;
+import ChatBannerDefault from "ChatBanner" /* 11543 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,9 +36,9 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   }
   return tmp5;
 }
-const LOCATION_CONTEXT_MOBILE = fn(11393).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11443).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
 
@@ -87,5 +87,5 @@ export default noop.memo(function StickyHeader(channel) {
   items[3] = tmp17;
   items[4] = timestampProducer(ChatBannerDefault, { channel, handleScrollToNewMessages: scrollToNewMessages });
   obj6.children = items;
-  return React6(React5, obj6);
+  return React5(metroImportDefault, obj6);
 });

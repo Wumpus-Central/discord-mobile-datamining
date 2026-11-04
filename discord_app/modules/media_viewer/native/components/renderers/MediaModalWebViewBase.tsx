@@ -1,7 +1,7 @@
-// === Module 8995: MediaModalWebViewBase ===
+// === Module 9012: MediaModalWebViewBase ===
 
-// Module 8995 (MediaModalWebViewBase)
-import LinkingDefault from "Linking" /* 5829 */;
+// Module 9012 (MediaModalWebViewBase)
+import LinkingDefault from "Linking" /* 5843 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PlatformUtils = fn(1377);
 let str = "";
 if (PlatformUtils.isIOS()) {

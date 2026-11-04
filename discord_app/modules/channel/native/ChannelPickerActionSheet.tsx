@@ -1,11 +1,11 @@
-// === Module 11337: ChannelPickerActionSheet ===
+// === Module 11387: ChannelPickerActionSheet ===
 
-// Module 11337 (ChannelPickerActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import TableRowIcon from "TableRowIcon" /* 7109 */;
-import TableRadioRow from "TableRadioRow" /* 7187 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
+// Module 11387 (ChannelPickerActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import TableRowIcon from "TableRowIcon" /* 7124 */;
+import TableRadioRow from "TableRadioRow" /* 7202 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/ChannelPickerActionSheet.tsx");
 
@@ -41,7 +41,7 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
   items = undefined;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
     let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
-    let obj4 = { source: require("module_11338") };
+    let obj4 = { source: require("module_11388") };
     obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
     items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }

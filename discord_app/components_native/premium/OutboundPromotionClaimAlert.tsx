@@ -1,16 +1,16 @@
-// === Module 15590: OutboundPromotionClaimAlert ===
+// === Module 15677: OutboundPromotionClaimAlert ===
 
-// Module 15590 (OutboundPromotionClaimAlert)
+// Module 15677 (OutboundPromotionClaimAlert)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import PromotionUtils from "PromotionUtils" /* 9799 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import PromotionUtils from "PromotionUtils" /* 9817 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -63,10 +63,10 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     const intl = onCancel(tmp5[13]).intl;
     obj4.children = intl.string(onCancel(tmp5[13]).t["23BfZh"]);
     items1[1] = closure_8(onCancel(tmp5[12]).Heading, obj4);
-    const obj5 = { style: tmp.bodyText, variant: "text-md/medium", children: outboundPromotion.outboundRedemptionModalBody };
+    const obj5 = { style: tmp.bodyText, variant: "body-md/medium", children: outboundPromotion.outboundRedemptionModalBody };
     items1[2] = closure_8(onCancel(tmp5[12]).Text, obj5);
     let obj6 = { style: tmp.copyInputContainer, children: null };
-    const obj7 = { style: tmp.copyInputLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj7 = { style: tmp.copyInputLabel, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl2 = onCancel(tmp5[13]).intl;
     obj7.children = intl2.string(onCancel(tmp5[13]).t.s9LFQh);
     const items2 = [closure_8(onCancel(tmp5[12]).Text, obj7), , ];
@@ -87,7 +87,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
         },
       children: null
     };
-    const obj12 = { lineClamp: 1, variant: "text-sm/medium", color: "interactive-text-active", children: code };
+    const obj12 = { lineClamp: 1, variant: "body-sm/medium", color: "interactive-text-active", children: code };
     obj11.children = closure_8(Text(tmp5[12]).Text, obj12);
     obj10.children = closure_8(closure_6, obj11);
     const items3 = [closure_8(analyticsLocations, obj10), ];
@@ -115,7 +115,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     obj9.children = items3;
     items2[1] = closure_9(closure_6, obj9);
     Text = Text(tmp5[12]).Text;
-    obj9 = closure_8(Text, { variant: "text-sm/medium", color: "text-muted", children: "This code is included in your confirmation email" });
+    obj9 = closure_8(Text, { variant: "body-sm/medium", color: "text-muted", children: "This code is included in your confirmation email" });
     items2[2] = obj9;
     obj6.children = items2;
     obj6 = closure_9(tmp15, obj6);
@@ -129,11 +129,11 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     const obj15 = { style: tmp.body, children: null };
     const obj16 = { source: tmp4(tmp5[16]), style: tmp.errorArt };
     const items4 = [closure_8(tmp4(tmp5[10]), obj16), , ];
-    const obj17 = { style: tmp.errorTitle, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj17 = { style: tmp.errorTitle, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };
     const intl4 = onCancel(tmp5[13]).intl;
     obj17.children = intl4.string(onCancel(tmp5[13]).t.iufib1);
     items4[1] = closure_8(onCancel(tmp5[12]).Text, obj17);
-    const obj18 = { style: tmp.bodyText, variant: "text-md/medium", children: null };
+    const obj18 = { style: tmp.bodyText, variant: "body-md/medium", children: null };
     const intl5 = onCancel(tmp5[13]).intl;
     obj18.children = intl5.string(onCancel(tmp5[13]).t.eAn6z2);
     items4[2] = closure_8(onCancel(tmp5[12]).Text, obj18);

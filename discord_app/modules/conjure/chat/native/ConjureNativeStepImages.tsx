@@ -1,10 +1,10 @@
-// === Module 12854: ConjureNativeStepImages ===
+// === Module 12935: ConjureNativeStepImages ===
 
-// Module 12854 (ConjureNativeStepImages)
+// Module 12935 (ConjureNativeStepImages)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12285 */;
-import openConjureNativeImages from "openConjureNativeImages" /* 12286 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12346 */;
+import openConjureNativeImages from "openConjureNativeImages" /* 12347 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function StepImage(image) {
       const obj3 = { style: tmp.placeholder, children: null };
       tmp = React4;
       obj3.children = <React4 size="small" />;
-      let tmp5Result = <React5 style={tmp.placeholder}>{null}</React5>;
+      let tmp5Result = <metroImportDefault style={tmp.placeholder}>{null}</metroImportDefault>;
     } else {
       const obj4 = { source: null, style: null, resizeMode: "cover", onError: null };
       const obj5 = { uri: src };
@@ -38,7 +38,7 @@ function StepImage(image) {
   }
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_4, Pressable: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ActivityIndicator: closure_4, Pressable: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { strip: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 }, thumb: null, placeholder: null };

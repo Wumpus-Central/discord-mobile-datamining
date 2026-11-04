@@ -1,9 +1,9 @@
-// === Module 20245: AgeVerificationScreen ===
+// === Module 20361: AgeVerificationScreen ===
 
-// Module 20245 (AgeVerificationScreen)
+// Module 20361 (AgeVerificationScreen)
 import Server from "Server" /* 2121 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
-import types from "types" /* 20231 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
+import types from "types" /* 20347 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -62,7 +62,7 @@ export default function AgeVerificationScreen() {
   obj4.subtitle = intl2.format(onTaskComplete(stateFromStores[17]).RpMIT0, {
     handleOnHelpUrlHook() {
       const obj = onTaskComplete(stateFromStores[18]);
-      obj.openUrl(onTaskComplete(stateFromStores[19]).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+      obj.openUrl(onTaskComplete(stateFromStores[19]).getArticleURL(constants.AGE_VERIFICATION_LEARN_MORE));
     }
   });
   const obj6 = { children: null };
@@ -73,10 +73,10 @@ export default function AgeVerificationScreen() {
     },
     children: null
   };
-  const obj8 = { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null };
+  const obj8 = { variant: "body-sm/medium", color: "text-link", style: tmp2.helpLink, children: null };
   const intl3 = memo(stateFromStores[15]).intl;
   obj8.children = intl3.string(memo(stateFromStores[15]).t["2jxGer"]);
-  obj7.children = jsx(memo(stateFromStores[22]).Text, { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null });
+  obj7.children = jsx(memo(stateFromStores[22]).Text, { variant: "body-sm/medium", color: "text-link", style: tmp2.helpLink, children: null });
   obj6.children = <Pressable accessibilityRole="button" onPress={function onPress() {
     onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
   }}>{null}</Pressable>;

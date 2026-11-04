@@ -1,17 +1,17 @@
-// === Module 9943: HeaderShared ===
+// === Module 9961: HeaderShared ===
 
-// Module 9943 (HeaderShared)
+// Module 9961 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import _mod7131 from "module_7131" /* 7131 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9945 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9950 */;
-import ChannelActionsDefault from "ChannelActions" /* 9955 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 14703 */;
+import PlatformUtils from "PlatformUtils" /* 1377 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9963 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9968 */;
+import ChannelActionsDefault from "ChannelActions" /* 9973 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 14783 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -38,7 +38,7 @@ class GenericHeaderTitle {
     tmp3 = icon;
     merged = Object.assign(global, Object.assign({ title: 0, subtitle: 0, color: 0, subtitleColor: 0, icon: 0, maxFontSizeMultiplier: 0 }));
     tmp2 = title;
-    obj = title(icon[7]);
+    obj = title(icon[6]);
     tmp4 = c1;
     variant = merged.variant;
     if (variant == null) {
@@ -51,7 +51,7 @@ class GenericHeaderTitle {
         const obj3 = { lineClamp: 1, variant, color, style: closure_5.headerText, maxFontSizeMultiplier, children };
         items[1] = timestampProducer(Text_Text.Text, obj3);
         obj2.children = items;
-        let tmp10 = React5(React4, obj2);
+        let tmp10 = metroImportDefault(React4, obj2);
       } else {
         const obj = { accessibilityRole: header, lineClamp: 1, variant, color, style: closure_5.headerText, maxFontSizeMultiplier, children };
         tmp10 = timestampProducer(Text_Text.Text, obj);
@@ -61,7 +61,7 @@ class GenericHeaderTitle {
     closure_4 = variant;
     tmp5 = closure_8();
     closure_5 = tmp5;
-    tmp6 = tmp4(tmp3[8])("os-drawn");
+    tmp6 = tmp4(tmp3[7])("os-drawn");
     if (null == subtitle) {
       if (null == tmp6) {
         str3 = "header";
@@ -78,12 +78,12 @@ class GenericHeaderTitle {
     tmp9 = null;
     if (null != subtitle) {
       tmp10 = jsx;
-      obj1 = { lineClamp: 1, variant: "text-xs/medium", color: null, style: null, maxFontSizeMultiplier: null, children: null };
+      obj1 = { lineClamp: 1, variant: "body-xs/medium", color: null, style: null, maxFontSizeMultiplier: null, children: null };
       obj1.color = str;
       obj1.style = tmp5.subtitleText;
       obj1.maxFontSizeMultiplier = maxFontSizeMultiplier;
       obj1.children = subtitle;
-      tmp9 = jsx(tmp2(tmp3[6]).Text, obj1);
+      tmp9 = jsx(tmp2(tmp3[8]).Text, obj1);
     }
     items[1] = tmp9;
     items[2] = tmp6;
@@ -96,23 +96,54 @@ function renderGenericTitle(children) {
 }
 class HeaderTextButton {
   constructor(arg0) {
-    merged = Object.assign(global, Object.assign({ labelStyle: 0 }));
-    tmp2 = closure_8();
-    obj = {
-      labelStyle: null,
-      displayMode: "default",
-      backImage() {
-            return null;
-          },
-      truncatedLabel: merged.label,
-      accessibilityLabel: merged.label
+    ({ label, onPress, disabled, accessibilityLabel } = global);
+    ({ labelStyle, testID, style } = global);
+    tmp = closure_8();
+    tmp2 = jsx;
+    tmp3 = closure_0;
+    tmp4 = closure_2;
+    if (accessibilityLabel == null) {
+      accessibilityLabel = label;
+    }
+    obj = { accessibilityRole: "button", accessibilityLabel, accessibilityState: null, disabled: null, testID: null, onPress: null, hitSlop: null, androidRippleConfig: null, style: null, children: null };
+    tmp5 = true === disabled;
+    obj1 = undefined;
+    if (tmp5) {
+      obj1 = { disabled: true };
+    }
+    obj.accessibilityState = obj1;
+    obj.disabled = disabled;
+    obj.testID = testID;
+    obj.onPress = function handlePress() {
+      if (null != _require) {
+        const _requestAnimationFrame = requestAnimationFrame;
+        const animationFrame = requestAnimationFrame(() => closure_1_0());
+      }
     };
-    items = [, ];
-    items[0] = tmp2.backButtonLabel;
-    items[1] = global.labelStyle;
-    obj.labelStyle = items;
-    merged1 = Object.assign(merged);
-    return jsx(closure_0(closure_2[9]).HeaderBackButton, obj);
+    tmp3Result = tmp3(tmp4[10]);
+    tmp6 = undefined;
+    if (tmp3Result.isAndroid()) {
+      tmp6 = closure_11;
+    }
+    obj.hitSlop = tmp6;
+    obj.androidRippleConfig = { borderless: false, foreground: true };
+    items = [, , , ];
+    items[0] = tmp.headerTextButton;
+    tmp3Result1 = tmp3(tmp4[10]);
+    prop = null;
+    if (tmp3Result1.isAndroid()) {
+      prop = tmp.headerTextButtonAndroid;
+    }
+    items[1] = prop;
+    prop1 = null;
+    if (tmp5) {
+      prop1 = tmp.headerTextButtonDisabled;
+    }
+    items[2] = prop1;
+    items[3] = style;
+    obj.style = items;
+    obj.children = tmp2(tmp3(tmp4[8]).Text, { variant: "body-md/semibold", color: "text-brand", lineClamp: 1, maxFontSizeMultiplier: 1, style: labelStyle, children: label });
+    return tmp2(closure_0(closure_2[9]).PressableHighlight, obj);
   }
 }
 function HeaderChannelActions(arg0) {
@@ -125,22 +156,23 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9944).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9962).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
-let obj = { headerRightContainer: { marginRight: 16 }, headerWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 }, actionButtonPressable: { padding: 8, zIndex: 100, width: 40, height: 40, borderRadius: 20 }, actionButtonIcon: null, headerText: null, subtitleText: null, backButtonLabel: null, titleContainer: null };
+let obj = { headerRightContainer: { marginRight: 16 }, headerWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 }, actionButtonPressable: { padding: 8, zIndex: 100, width: 40, height: 40, borderRadius: 20 }, actionButtonIcon: null, headerText: null, subtitleText: null, headerTextButton: null, headerTextButtonAndroid: null, headerTextButtonDisabled: null, titleContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 };
 obj.actionButtonIcon = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
-let obj5 = {};
-let merged = Object.assign(fn(5747).TextStyleSheet["text-md/semibold"]);
-obj5.color = nativeDefault.colors.TEXT_BRAND;
-obj.backButtonLabel = obj5;
 let obj4 = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
+obj.headerTextButton = { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.md, overflow: "hidden" };
+obj.headerTextButtonAndroid = { marginVertical: 3, marginHorizontal: 3 };
+obj.headerTextButtonDisabled = { opacity: 0.5 };
+let obj5 = { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.md, overflow: "hidden" };
 obj.titleContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-const React6 = createStyles.createStyles(obj);
+const React5 = createStyles.createStyles(obj);
+const rect = { top: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 const memoResult = noop.memo(function HeaderInner(style) {
   ({ navigation, options, back, shouldHandleSafeArea } = style);
   if (shouldHandleSafeArea === undefined) {
@@ -189,7 +221,7 @@ const memoResult = noop.memo(function HeaderInner(style) {
     title = back.title;
   }
   const obj5 = { label: title, canGoBack: null, tintColor: null };
-  const tmp7 = tmp2(num[8])("custom-drawn");
+  const tmp7 = tmp2(num[7])("custom-drawn");
   obj5.canGoBack = navigation.isFocused() && navigation.canGoBack();
   obj5.tintColor = text;
   const items1 = [fn(obj5), , , ];

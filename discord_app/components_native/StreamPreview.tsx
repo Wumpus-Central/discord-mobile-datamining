@@ -1,14 +1,14 @@
-// === Module 12176: StreamPreview ===
+// === Module 12235: StreamPreview ===
 
-// Module 12176 (StreamPreview)
+// Module 12235 (StreamPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import Pressables from "Pressables" /* 7106 */;
-import _modDef12177 from "module_12177" /* 12177 */;
-import _modDef12178 from "module_12178" /* 12178 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12179 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import Pressables from "Pressables" /* 7121 */;
+import _modDef12236 from "module_12236" /* 12236 */;
+import _modDef12237 from "module_12237" /* 12237 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12238 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -16,7 +16,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let createStyles = fn(5141);
 let obj2 = { wrapper: null, text: null, fallbackImage: null };
 let obj3 = {};
@@ -38,9 +38,9 @@ DefaultFallback.prototype["render"] = function render() {
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   const tmp6 = FastImageDefault;
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp4Result = _modDef12177;
+    let tmp4Result = _modDef12236;
   } else {
-    tmp4Result = _modDef12178;
+    tmp4Result = _modDef12237;
   }
   obj2.source = tmp4Result;
   obj.children = hasOwnProperty(tmp6, obj2);

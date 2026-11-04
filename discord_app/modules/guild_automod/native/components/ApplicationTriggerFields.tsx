@@ -1,8 +1,8 @@
-// === Module 19847: ApplicationTriggerFields ===
+// === Module 19963: ApplicationTriggerFields ===
 
-// Module 19847 (ApplicationTriggerFields)
+// Module 19963 (ApplicationTriggerFields)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default function ApplicationTriggerFields(rule) {
   }
   if (null != guildBotApplications) {
     if (0 === guildBotApplications.length) {
-      let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
+      let obj2 = { variant: "body-sm/normal", color: "text-muted", children: null };
       const intl4 = tmp(tmp2[3]).intl;
       obj2.children = intl4.string(tmp(tmp2[3]).t["7/h5vj"]);
       let tmp5Result2 = applicationId(tmp(tmp2[4]).Text, obj2);
@@ -71,7 +71,7 @@ export default function ApplicationTriggerFields(rule) {
             return onChangeRule(obj);
           }
       };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19850, dependencyMap.paths), "AutomodSelectApplication", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19966, dependencyMap.paths), "AutomodSelectApplication", obj2);
     }
   };
   obj3.children = applicationId(rule(guildBotApplications[6]).TableRow, obj4);

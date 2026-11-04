@@ -1,8 +1,8 @@
-// === Module 14542: ChannelSortingUtils ===
+// === Module 14622: ChannelSortingUtils ===
 
-// Module 14542 (ChannelSortingUtils)
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7401 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 14111 */;
+// Module 14622 (ChannelSortingUtils)
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7417 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 14197 */;
 import ChannelRecord from "ChannelRecord" /* 4994 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -406,7 +406,7 @@ function getCategoryKey(parent_id, categories) {
   return tmp;
 }
 ({ isGuildSelectableChannelType: c3, isGuildVocalChannelType: closure_4 } = ChannelRecord);
-({ ChannelTypes: hasOwnProperty, NULL_STRING_CHANNEL_ID: metroRequire } = Constants);
+({ ChannelTypes: hasOwnProperty, NULL_STRING_CHANNEL_ID: closure_6 } = Constants);
 let result = size.fileFinishedImporting("modules/channel_sorting/ChannelSortingUtils.tsx");
 
 export function areTypesInSameSection(arg0, arg1) {

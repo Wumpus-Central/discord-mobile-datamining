@@ -1,33 +1,33 @@
-// === Module 18569: GuildsBarWaterwheelsButton ===
+// === Module 18664: GuildsBarWaterwheelsButton ===
 
-// Module 18569 (GuildsBarWaterwheelsButton)
+// Module 18664 (GuildsBarWaterwheelsButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2537 from "module_2537" /* 2537 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import CompassIcon from "CompassIcon" /* 17737 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18515 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 18527 */;
-import GuildsBarSeparatorDefault from "GuildsBarSeparator" /* 18562 */;
-import WaterwheelsInterestPickerModal from "WaterwheelsInterestPickerModal" /* 18570 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import CompassIcon from "CompassIcon" /* 17833 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18610 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 18622 */;
+import GuildsBarSeparatorDefault from "GuildsBarSeparator" /* 18657 */;
+import WaterwheelsInterestPickerModal from "WaterwheelsInterestPickerModal" /* 18665 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ICYMIStore from "ICYMIStore" /* 9030 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 15775 */;
+import ICYMIStore from "ICYMIStore" /* 9047 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 15863 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
 require = fn;
 function GuildsBarWaterwheelsExpandedChildren() {
   const obj = { title: null, subtitle: null };
-  const obj2 = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj2 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(_modDef2537.zFl2A4);
-  obj.title = React6(Text_Text.Text, obj2);
-  return React6(HomeDrawerShared.HomeDrawerSharedItem, obj);
+  obj.title = React5(Text_Text.Text, obj2);
+  return React5(HomeDrawerShared.HomeDrawerSharedItem, obj);
 }
 function handleWaterwheelsPress() {
   if (InterestPickerSessionStore.hasSeenPicker()) {
@@ -63,14 +63,14 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
   const stateFromStores = initialize.useStateFromStores(items, () => isTabFocused.getIsTabFocused());
   const obj3 = { style: tmp.stretch, children: null };
   const memo = noop.useMemo(() => ({ onPress }), []);
-  const items1 = [React6(GuildsBarSeparatorDefault, {}), ];
-  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "text-xs/normal", expandedChildren: "text-feedback-critical", children: null };
+  const items1 = [React5(GuildsBarSeparatorDefault, {}), ];
+  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: null, expandedChildren: "button", children: null };
   const intl = util.intl;
   obj4.label = intl.string(_modDef2537.zFl2A4);
-  obj4.expandedChildren = React6(GuildsBarWaterwheelsExpandedChildren, {});
+  obj4.expandedChildren = React5(GuildsBarWaterwheelsExpandedChildren, {});
   const colors = nativeDefault.colors;
-  obj4.children = React6(CompassIcon.CompassIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  items1[1] = React6(GuildsBarAnimatedItemWrapperDefault, obj4);
+  obj4.children = React5(CompassIcon.CompassIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
+  items1[1] = React5(GuildsBarAnimatedItemWrapperDefault, obj4);
   obj3.children = items1;
-  return React7(View, obj3);
+  return React6(View, obj3);
 });

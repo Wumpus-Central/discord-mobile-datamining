@@ -1,20 +1,20 @@
-// === Module 14712: GuildChannelHeader ===
+// === Module 14792: GuildChannelHeader ===
 
-// Module 14712 (GuildChannelHeader)
+// Module 14792 (GuildChannelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
-import ChannelHeader from "ChannelHeader" /* 14703 */;
-import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14714 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
+import ChannelHeader from "ChannelHeader" /* 14783 */;
+import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14794 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14713 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7570 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14793 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7586 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5366 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -26,8 +26,8 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(5719).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(5719);
+  const token = channel(5732).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(5732);
   items = [ChannelMemberStore, ChannelMemberCountStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let flag = false;
@@ -69,8 +69,8 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(11474);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(7222).ICON_SIZE[token]);
+    const tmpResult = tmp(11524);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(7242).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
 }
@@ -104,7 +104,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
   const channel = guild.channel;
   _slicedToArray = undefined;
   items = [guild(4974).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = _slicedToArray(guild(7693).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const tmp = _slicedToArray(guild(7709).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp2;
   const tmp3 = tmp[0] === guild(4974).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
@@ -132,8 +132,8 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj.imgSource = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(7693);
-  const coachmark = guild(10085).useCoachmark(guild.iconRef, memo);
+  let obj = guild(7709);
+  const coachmark = guild(10133).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;
@@ -396,7 +396,7 @@ export default noop.memo(function GuildChannelHeader(channelId) {
     if (tmp33) {
       tmp40 = null;
       if (null != result) {
-        tmp40 = closure_19(tmp2(tmp3[25]).Text, { variant: "text-sm/medium", color: "text-subtle", children: "\u2022" });
+        tmp40 = closure_19(tmp2(tmp3[25]).Text, { variant: "body-sm/medium", color: "text-subtle", children: "\u2022" });
       }
     }
     items10[2] = tmp40;

@@ -1,14 +1,14 @@
-// === Module 8989: useMediaViewerSyncer ===
+// === Module 9006: useMediaViewerSyncer ===
 
-// Module 8989 (useMediaViewerSyncer)
+// Module 9006 (useMediaViewerSyncer)
 import _mod1652 from "module_1652" /* 1652 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8963 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(8990);
-({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: metroRequire, THUMBNAIL_MAX_WIDTH: closure_7, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
+const Constants = fn(9007);
+({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: closure_6, THUMBNAIL_MAX_WIDTH: metroImportDefault, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
 const PlatformUtils = fn(1377);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = { code: "(function useMediaViewerSyncerTsx1(){let[thumbnailsScrolling,SCROLLING_DRAG,swipeSource]=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');})" };
@@ -75,7 +75,7 @@ export function useMediaViewerSyncer(sources) {
         if (null != size) {
           let _Math = Math;
           let _Math2 = Math;
-          let sum = num2 + (Math.max(Math.min(size.width * (timestampProducer / size.height), React5), React6) + 2 * hasOwnProperty);
+          let sum = num2 + (Math.max(Math.min(size.width * (timestampProducer / size.height), metroImportDefault), React5) + 2 * hasOwnProperty);
           let num3 = 0;
           if (0 !== num) {
             let _Math3 = Math;

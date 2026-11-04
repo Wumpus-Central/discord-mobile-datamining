@@ -1,24 +1,24 @@
-// === Module 16947: FamilyCenterActivityRow ===
+// === Module 17039: FamilyCenterActivityRow ===
 
-// Module 16947 (FamilyCenterActivityRow)
+// Module 17039 (FamilyCenterActivityRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef2667 from "module_2667" /* 2667 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import GuildIconDefault from "GuildIcon" /* 7083 */;
-import GuildBadgeDefault from "GuildBadge" /* 7087 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8496 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 16948 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16951 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 16952 */;
+import GuildIconDefault from "GuildIcon" /* 7098 */;
+import GuildBadgeDefault from "GuildBadge" /* 7102 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8513 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 17040 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 17043 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 17044 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(7840).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(7856).ACTION_TO_TEXT;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -47,16 +47,16 @@ const memoResult = noop.memo((action) => {
     obj3.children = closure_8(tmp6(1187).Avatar, obj4);
     const items1 = [closure_8(View, obj3), ];
     const obj5 = { style: tmp.textContainer, children: null };
-    const obj6 = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
+    const obj6 = { style: tmp.text, variant: "body-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     const tmp3Result = SnowflakeUtilsDefault;
     obj6.children = UserUtilsDefault.getName(stateFromStores);
-    const items2 = [closure_8(tmp6(5747).Text, obj6), ];
-    const obj7 = { variant: "text-xs/medium", color: "channels-default", children: null };
+    const items2 = [closure_8(tmp6(5761).Text, obj6), ];
+    const obj7 = { variant: "body-xs/medium", color: "channels-default", children: null };
     const tmp3Result2 = UserUtilsDefault;
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj7.children = tmp6(8496).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
-    items2[1] = closure_8(tmp6(5747).Text, obj7);
+    obj7.children = tmp6(8513).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    items2[1] = closure_8(tmp6(5761).Text, obj7);
     obj5.children = items2;
     items1[1] = closure_9(View, obj5);
     obj2.children = items1;
@@ -99,7 +99,7 @@ const memoResult1 = noop.memo((action) => {
     const obj4 = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
     obj4.guild = stateFromStores;
-    obj4.size = tmp2(7083).GuildIconSizes.NORMAL;
+    obj4.size = tmp2(7098).GuildIconSizes.NORMAL;
     const items1 = [closure_8(GuildIconDefault, obj4), ];
     const obj5 = { style: tmp.text, children: null };
     const obj6 = { style: tmp.headerContainer, children: null };
@@ -111,18 +111,18 @@ const memoResult1 = noop.memo((action) => {
       const tmp6Result2 = GuildBadgeDefault;
     }
     const items2 = [tmp11Result, ];
-    const obj9 = { style: tmp.header, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: stateFromStores.name };
-    items2[1] = closure_8(tmp2(5747).Text, obj9);
+    const obj9 = { style: tmp.header, variant: "body-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: stateFromStores.name };
+    items2[1] = closure_8(tmp2(5761).Text, obj9);
     obj7.children = items2;
     obj6.children = closure_9(View, obj7);
     const items3 = [closure_8(View, obj6), ];
     let tmp11Result2 = null;
     if (undefined !== stateFromStores.approximateMemberCount) {
-      const obj10 = { variant: "text-xs/medium", color: "channels-default", children: null };
+      const obj10 = { variant: "body-xs/medium", color: "channels-default", children: null };
       const intl = tmp2(1113).intl;
       const obj19 = { members: stateFromStores.approximateMemberCount };
       obj10.children = intl.format(_modDef2667["5JmNgg"], obj19);
-      tmp11Result2 = closure_8(tmp2(5747).Text, obj10);
+      tmp11Result2 = closure_8(tmp2(5761).Text, obj10);
     }
     items3[1] = tmp11Result2;
     obj5.children = items3;
@@ -156,7 +156,7 @@ export default function FamilyCenterActivityRow(action) {
     let tmp14 = null;
     if (null != purchaseInfo) {
       ({ sku_id: obj11.skuId, subscription_plan_id: obj11.subscriptionPlanId, total: obj11.total, currency: obj11.currency } = purchaseInfo);
-      tmp14 = React6(FamilyCenterActivityPurchaseRowDefault, { skuId: null, subscriptionPlanId: null, total: null, currency: null });
+      tmp14 = React5(FamilyCenterActivityPurchaseRowDefault, { skuId: null, subscriptionPlanId: null, total: null, currency: null });
       const obj2 = { skuId: null, subscriptionPlanId: null, total: null, currency: null };
     }
     return tmp14;
@@ -169,18 +169,18 @@ export default function FamilyCenterActivityRow(action) {
         const giftRowDisplayInfo = FamilyCenterActivityGiftRowUtils.getGiftRowDisplayInfo(giftInfo);
         ({ skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt } = giftRowDisplayInfo);
         const obj3 = { skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt };
-        return React6(FamilyCenterActivityGiftRowDefault, obj3);
+        return React5(FamilyCenterActivityGiftRowDefault, obj3);
       }
     } else {
       if (tmpResult12.isUserAction(action)) {
         const obj4 = { action };
-        let tmp4Result = React6(memoResult, obj4);
+        let tmp4Result = React5(memoResult, obj4);
       } else {
         const obj5 = { action };
-        tmp4Result = React6(memoResult1, obj5);
+        tmp4Result = React5(memoResult1, obj5);
       }
       const obj6 = { children: tmp4Result };
-      return React6(View, obj6);
+      return React5(View, obj6);
     }
     tmpResult10 = FamilyCenterUtils;
   }

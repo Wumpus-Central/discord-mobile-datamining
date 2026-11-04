@@ -1,10 +1,10 @@
-// === Module 17157: HexagonCampaignThemeLegal ===
+// === Module 17249: HexagonCampaignThemeLegal ===
 
-// Module 17157 (HexagonCampaignThemeLegal)
+// Module 17249 (HexagonCampaignThemeLegal)
 import nativeDefault from "native" /* 575 */;
 import _modDef4412 from "module_4412" /* 4412 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16628 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16718 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const HexagonCampaignConstants = fn(5166);
 ({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_4, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: hasOwnProperty } = HexagonCampaignConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { legal: { textAlign: "center" }, legalWithLogo: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, logo: { width: 32, height: 32 }, legalText: { flex: 1 }, link: { textDecorationLine: "underline" } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -28,7 +28,7 @@ export default function HexagonCampaignThemeLegal(animatedStyles) {
   const tmp = closure_8();
   importDefault = tmp;
   dependencyMap = tmp2;
-  let obj = { animated: null != animatedStyles, variant: "text-xs/medium", color: "text-muted", style: null, children: null };
+  let obj = { animated: null != animatedStyles, variant: "body-xs/medium", color: "text-muted", style: null, children: null };
   let headerSecondary;
   if (animatedStyles != null) {
     headerSecondary = animatedStyles.headerSecondary;
@@ -40,7 +40,7 @@ export default function HexagonCampaignThemeLegal(animatedStyles) {
     nonPremiumEndDate,
     premiumEndDate,
     learnMoreHook(children, arg1) {
-      const obj = { animated, variant: "text-xs/medium", color: "text-link", style: null, accessibilityRole: "link", onPress: null, children: null };
+      const obj = { animated, variant: "body-xs/medium", color: "text-link", style: null, accessibilityRole: "link", onPress: null, children: null };
       let tmp5;
       if (animated) {
         let headerPrimary;
@@ -56,15 +56,15 @@ export default function HexagonCampaignThemeLegal(animatedStyles) {
       return timestampProducer(Text_Text.Text, obj, arg1);
     }
   });
-  const tmp3Result = closure_6(animatedStyles(5747).Text, obj);
+  const tmp3Result = closure_6(animatedStyles(5761).Text, obj);
   let tmp9 = tmp3Result;
   if (flag) {
     const obj3 = { style: tmp.legalWithLogo, children: null };
-    const obj4 = { source: tmp7(17158), style: tmp.logo, resizeMode: "contain", accessible: false };
-    const items1 = [closure_6(tmp7(5837), obj4), tmp3Result];
+    const obj4 = { source: tmp7(17250), style: tmp.logo, resizeMode: "contain", accessible: false };
+    const items1 = [closure_6(tmp7(5851), obj4), tmp3Result];
     obj3.children = items1;
     tmp9 = closure_7(View, obj3);
-    const tmp7Result = tmp7(5837);
+    const tmp7Result = tmp7(5851);
   }
   return tmp9;
 };

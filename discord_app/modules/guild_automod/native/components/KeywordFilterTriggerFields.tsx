@@ -1,18 +1,18 @@
-// === Module 19851: KeywordFilterTriggerFields ===
+// === Module 19967: KeywordFilterTriggerFields ===
 
-// Module 19851 (KeywordFilterTriggerFields)
+// Module 19967 (KeywordFilterTriggerFields)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import KeywordsRowDefault from "KeywordsRow" /* 19845 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import KeywordsRowDefault from "KeywordsRow" /* 19961 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(13428);
+const Constants = fn(13512);
 ({ MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE: c3, MAX_KEYWORDS_PER_KEYWORD_FILTER: closure_4 } = Constants);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/KeywordFilterTriggerFields.tsx");
 
@@ -72,5 +72,5 @@ export default function KeywordFilterTriggerFields(rule) {
   };
   items[2] = timestampProducer(KeywordsRowDefault, obj6);
   obj.children = items;
-  return React5(TableRowGroup.TableRowGroup, obj);
+  return metroImportDefault(TableRowGroup.TableRowGroup, obj);
 };

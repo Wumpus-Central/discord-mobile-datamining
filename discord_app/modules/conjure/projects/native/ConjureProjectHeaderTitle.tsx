@@ -1,12 +1,12 @@
-// === Module 12369: ConjureProjectHeaderTitle ===
+// === Module 12434: ConjureProjectHeaderTitle ===
 
-// Module 12369 (ConjureProjectHeaderTitle)
+// Module 12434 (ConjureProjectHeaderTitle)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12258 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default function ConjureProjectHeaderTitle(project) {
     obj2.children = React4(ConjureProjectIconDefault, obj3);
     tmp4 = React4(Pressables.PressableOpacity, obj2);
   }
-  items = [tmp4, React4(View, { style: tmp.titles, children: React4(Text_Text.Text, { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, maxFontSizeMultiplier: 2, variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", children: title }) })];
+  items = [tmp4, React4(View, { style: tmp.titles, children: React4(Text_Text.Text, { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, maxFontSizeMultiplier: 2, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: title }) })];
   obj.children = items;
   return hasOwnProperty(View, obj);
 };

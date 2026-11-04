@@ -1,20 +1,20 @@
-// === Module 12175: TouchableStreamPreview ===
+// === Module 12234: TouchableStreamPreview ===
 
-// Module 12175 (TouchableStreamPreview)
+// Module 12234 (TouchableStreamPreview)
 import nativeDefault from "native" /* 575 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
-import StreamActionCreators from "StreamActionCreators" /* 8025 */;
-import transitionToStreamDefault from "transitionToStream" /* 8062 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6852 */;
+import StreamActionCreators from "StreamActionCreators" /* 8041 */;
+import transitionToStreamDefault from "transitionToStream" /* 8078 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5885 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import GameConsoleStore from "GameConsoleStore" /* 5899 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 const require = globalThis.__r;
 
@@ -102,7 +102,7 @@ function StreamPreviewContainer(disableTransition) {
   const obj7 = { style: tmp.ctaWrapper, children: null };
   const obj8 = { style: tmp.ctaBackground, children: null };
   const obj5 = disableTransition(stream[15]);
-  obj8.children = jsx(disableTransition(stream[24]).Text, { style: tmp.ctaText, variant: "text-md/semibold", color: "text-overlay-light", children: stringResult1 });
+  obj8.children = jsx(disableTransition(stream[24]).Text, { style: tmp.ctaText, variant: "body-md/semibold", color: "text-overlay-light", children: stringResult1 });
   obj7.children = <closure_4 style={tmp.ctaBackground}>{null}</closure_4>;
   obj6.children = <closure_4 style={tmp.ctaWrapper}>{null}</closure_4>;
   return jsx(onPress(stream[23]), { stream, ctaText: stringResult1, style: null, onPress: callback, disabled: flag, children: null });

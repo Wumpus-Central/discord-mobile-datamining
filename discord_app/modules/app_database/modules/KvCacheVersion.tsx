@@ -1,12 +1,12 @@
-// === Module 7920: KvCacheVersion ===
+// === Module 7936: KvCacheVersion ===
 
-// Module 7920 (KvCacheVersion)
+// Module 7936 (KvCacheVersion)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const KvCacheVersionConstants = fn(499);
-({ HELLO_KEY: c3, VERSION_TO_FORCE_RESYNCING_ALL_DATA: closure_4, VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: hasOwnProperty, VERSION_TO_SKIP_READING_THE_DATABASE: metroRequire, VERSION_TO_SKIP_READING_THE_DATABASE_KEY: closure_7 } = KvCacheVersionConstants);
+({ HELLO_KEY: c3, VERSION_TO_FORCE_RESYNCING_ALL_DATA: closure_4, VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: hasOwnProperty, VERSION_TO_SKIP_READING_THE_DATABASE: closure_6, VERSION_TO_SKIP_READING_THE_DATABASE_KEY: metroImportDefault } = KvCacheVersionConstants);
 let closure_8 = new LoggerDefault("KvCacheVersion");
 class KvCacheVersion {
   constructor() {
@@ -132,7 +132,7 @@ prototype["handleWrite"] = function handleWrite(database) {
   this.hasSuccessfullyConnected = true;
   DatabaseDaosDefault.cacheTransaction(database).put(React3, "\u{1F44B}");
   const cacheTransactionResult = DatabaseDaosDefault.cacheTransaction(database);
-  DatabaseDaosDefault.cacheTransaction(database).put(React5, timestampProducer);
+  DatabaseDaosDefault.cacheTransaction(database).put(metroImportDefault, timestampProducer);
   const cacheTransactionResult1 = DatabaseDaosDefault.cacheTransaction(database);
   const result = DatabaseDaosDefault.forceResyncVersionTransaction(database);
   result.put(hasOwnProperty, { version });

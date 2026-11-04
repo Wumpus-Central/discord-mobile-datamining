@@ -1,17 +1,17 @@
-// === Module 17964: UserSettingsDesignSystemAILoader ===
+// === Module 18060: UserSettingsDesignSystemAILoader ===
 
-// Module 17964 (UserSettingsDesignSystemAILoader)
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import Card from "Card" /* 7103 */;
-import AILoader from "AILoader" /* 12380 */;
+// Module 18060 (UserSettingsDesignSystemAILoader)
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import Card from "Card" /* 7118 */;
+import AILoader from "AILoader" /* 12445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function DemoRow(arg0) {
   ({ label, children } = arg0);
   const obj = { style: closure_6().row, children: null };
-  items = [React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: label }), children];
+  items = [React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", children: label }), children];
   obj.children = items;
   return hasOwnProperty(React3, obj);
 }
@@ -32,8 +32,8 @@ export default function UserSettingsDesignSystemAILoader() {
   const obj3 = { children: null };
   const obj4 = { children: null };
   items = [
-    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Sizes" }),
-    React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "`size` is the glyph size in pixels; the gap between slots scales with it. Default 16." }),
+    React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Sizes" }),
+    React4(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: "`size` is the glyph size in pixels; the gap between slots scales with it. Default 16." }),
     closure_7.map((size) => {
       const obj = { label: "" + size + "px", children: closure_1_4(AILoader.AILoader, { size }) };
       return closure_1_4(DemoRow, obj, size);
@@ -45,8 +45,8 @@ export default function UserSettingsDesignSystemAILoader() {
   const obj5 = { children: null };
   const obj6 = { children: null };
   const items2 = [
-    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Colors" }),
-    React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Any semantic text token. Defaults to `text-default`." }),
+    React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Colors" }),
+    React4(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: "Any semantic text token. Defaults to `text-default`." }),
     items.map((color) => {
       const label = color.label;
       return closure_1_4(DemoRow, { label, children: closure_1_4(AILoader.AILoader, { color: color.color }) }, label);

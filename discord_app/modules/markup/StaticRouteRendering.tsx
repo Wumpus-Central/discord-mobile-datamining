@@ -1,6 +1,6 @@
-// === Module 6162: StaticRouteRendering ===
+// === Module 6177: StaticRouteRendering ===
 
-// Module 6162 (StaticRouteRendering)
+// Module 6177 (StaticRouteRendering)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

@@ -1,16 +1,16 @@
-// === Module 9325: InstantInviteFriendsList ===
+// === Module 9342: InstantInviteFriendsList ===
 
-// Module 9325 (InstantInviteFriendsList)
+// Module 9342 (InstantInviteFriendsList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 9326 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 9343 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6843 */;
+import TextStyles_mod from "TextStyles" /* 6858 */;
 
 require = fn;
 function keyExtractor(item) {
@@ -43,7 +43,7 @@ function FriendsEmptyComponent() {
   const intl3 = util.intl;
   obj4.accessibilityLabel = intl3.string(util.t.a7FVbE);
   obj4.hitSlop = { top: 8, left: 8, bottom: 8, right: 8 };
-  const obj7 = { style: tmp.goToFriendsLink, variant: "text-sm/semibold", color: "text-link", children: null };
+  const obj7 = { style: tmp.goToFriendsLink, variant: "body-sm/semibold", color: "text-link", children: null };
   const intl4 = util.intl;
   obj7.children = intl4.string(util.t.a7FVbE);
   obj4.children = React4(Text_Text.Text, obj7);
@@ -53,7 +53,7 @@ function FriendsEmptyComponent() {
 }
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};

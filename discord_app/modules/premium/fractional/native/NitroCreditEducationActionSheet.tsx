@@ -1,21 +1,21 @@
-// === Module 15546: NitroCreditEducationActionSheet ===
+// === Module 15633: NitroCreditEducationActionSheet ===
 
-// Module 15546 (NitroCreditEducationActionSheet)
+// Module 15633 (NitroCreditEducationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7227 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const HelpdeskArticles = Constants.HelpdeskArticles;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { container: { marginTop: 32, marginHorizontal: 30 }, aboutContainer: { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", borderRadius: nativeDefault.radii.lg, marginBottom: 12 }, warningIcon: { margin: 16 }, aboutTextContainer: { justifyContent: "center", flex: 1, marginRight: 30 }, helpdeskText: { textAlign: "center", marginBottom: 24 } };
 let closure_7 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/premium/fractional/native/NitroCreditEducationActionSheet.tsx");
@@ -25,14 +25,14 @@ export default function NitroCreditEducationActionSheet(children) {
   const obj = { children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.aboutContainer, children: null };
-  items = [hasOwnProperty(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), hasOwnProperty(View, { style: tmp.aboutTextContainer, children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
+  items = [hasOwnProperty(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), hasOwnProperty(View, { style: tmp.aboutTextContainer, children: hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
   obj3.children = items;
   const items1 = [timestampProducer(View, obj3), ];
-  const obj6 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
+  const obj6 = { variant: "body-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
   const intl = util.intl;
   const obj7 = { helpCenterLink: null };
   const obj4 = { size: "lg", style: tmp.warningIcon };
-  const obj5 = { style: tmp.aboutTextContainer, children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) };
+  const obj5 = { style: tmp.aboutTextContainer, children: hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: "text-overlay-light", children: children.aboutText }) };
   obj7.helpCenterLink = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.FRACTIONAL_PREMIUM_ABOUT);
   obj6.children = intl.format(util.t.bg3jBj, obj7);
   items1[1] = hasOwnProperty(Text_Text.Text, obj6);

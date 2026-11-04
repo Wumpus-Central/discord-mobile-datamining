@@ -1,8 +1,8 @@
-// === Module 12342: useApplicationWidgetRefresh ===
+// === Module 12407: useApplicationWidgetRefresh ===
 
-// Module 12342 (useApplicationWidgetRefresh)
-import refreshApplicationWidget from "refreshApplicationWidget" /* 12343 */;
-import presentApplicationWidgetRefreshOutcomeDefault from "presentApplicationWidgetRefreshOutcome" /* 12344 */;
+// Module 12407 (useApplicationWidgetRefresh)
+import refreshApplicationWidget from "refreshApplicationWidget" /* 12408 */;
+import presentApplicationWidgetRefreshOutcomeDefault from "presentApplicationWidgetRefreshOutcome" /* 12409 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

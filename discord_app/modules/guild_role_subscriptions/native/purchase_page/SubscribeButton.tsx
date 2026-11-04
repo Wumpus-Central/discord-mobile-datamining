@@ -1,11 +1,11 @@
-// === Module 18787: SubscribeButton ===
+// === Module 18888: SubscribeButton ===
 
-// Module 18787 (SubscribeButton)
+// Module 18888 (SubscribeButton)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,28 +14,28 @@ import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 5066 */
 
 require = fn;
 function emphasisHook(children) {
-  return application_id(Text_Text.Text, { variant: "text-xs/semibold", color: "text-default", children });
+  return application_id(Text_Text.Text, { variant: "body-xs/semibold", color: "text-default", children });
 }
 function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(17359);
+  let obj = changeToListingId(17450);
   const obj3 = { children: null };
   const obj2 = activeListingId(2171)(activeSubscription.currentPeriodEnd);
-  const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1113).intl;
   const formatResult = activeListingId(2171)(activeSubscription.currentPeriodEnd).format("MMMM Do");
   obj4.children = intl.format(activeSubscription(1113).t.lA7ztO, { activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0], billingEndDate: activeListingId(2171)(activeSubscription.currentPeriodEnd).format("MMMM Do"), emphasisHook });
-  items = [closure_12(activeSubscription(5747).Text, obj4), closure_12(activeSubscription(1187).Spacer, { size: 16 }), ];
+  items = [closure_12(activeSubscription(5761).Text, obj4), closure_12(activeSubscription(1187).Spacer, { size: 16 }), ];
   const obj6 = { text: null, onPress: null };
   const intl2 = activeSubscription(1113).intl;
   obj6.text = intl2.string(activeSubscription(1113).t.SACegK);
   obj6.onPress = function handleSwitchTiers() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(18788, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
+    obj.openLazy(asyncRequireImpl(18889, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
   };
-  items[2] = closure_12(activeSubscription(18781).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(18882).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }

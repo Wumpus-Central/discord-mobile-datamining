@@ -1,8 +1,8 @@
-// === Module 8284: SafetyTipsRow ===
+// === Module 8300: SafetyTipsRow ===
 
-// Module 8284 (SafetyTipsRow)
+// Module 8300 (SafetyTipsRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ export default function SafetyTipsRow(arg0) {
   _require = closure_4();
   return jsx(require("TableRow").TableRow, {
     icon: jsx(function TipNumber(children) {
-      return <View style={indexContainer.indexContainer}>{jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: children.index })}</View>;
+      return <View style={indexContainer.indexContainer}>{jsx(Text_Text.Text, { variant: "heading-sm/semibold", color: "text-brand", children: children.index })}</View>;
     }, { index }),
     label: tip,
     subLabel: description,

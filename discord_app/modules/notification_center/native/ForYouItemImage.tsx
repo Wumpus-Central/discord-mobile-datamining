@@ -1,10 +1,10 @@
-// === Module 18651: ForYouItemImage ===
+// === Module 18752: ForYouItemImage ===
 
-// Module 18651 (ForYouItemImage)
+// Module 18752 (ForYouItemImage)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Pressables from "Pressables" /* 7106 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8944 */;
+import Pressables from "Pressables" /* 7121 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8961 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 const View = fn(17).View;
 const getGuildAcronym = fn(5008).getGuildAcronym;
-const Constants = fn(18652);
+const Constants = fn(18753);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
 let createStyles = fn(5141);
@@ -193,9 +193,9 @@ export const ForYouItemImage = noop.memo(function ForYouItemImageWrapped(item) {
           }
           if (obj14.icon === tmp2(obj[12])) {
             if (null != tmp9) {
-              let str2 = "text-lg/normal";
+              let str2 = "body-lg/normal";
               if (tmp9.length > 4) {
-                str2 = "text-md/normal";
+                str2 = "body-md/normal";
               }
               const obj16 = { variant: str2, style: null, children: null };
               const items2 = [, ];

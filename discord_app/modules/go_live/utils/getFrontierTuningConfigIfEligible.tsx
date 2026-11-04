@@ -1,8 +1,8 @@
-// === Module 6029: getFrontierTuningConfigIfEligible ===
+// === Module 6044: getFrontierTuningConfigIfEligible ===
 
-// Module 6029 (getFrontierTuningConfigIfEligible)
+// Module 6044 (getFrontierTuningConfigIfEligible)
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 6030 */;
+import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 6045 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 const require = fn;

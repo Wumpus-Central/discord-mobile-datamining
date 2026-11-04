@@ -1,8 +1,8 @@
-// === Module 10667: MediaKeyboardBottomSheetHeaderSimple ===
+// === Module 10715: MediaKeyboardBottomSheetHeaderSimple ===
 
-// Module 10667 (MediaKeyboardBottomSheetHeaderSimple)
+// Module 10715 (MediaKeyboardBottomSheetHeaderSimple)
 import nativeDefault from "native" /* 575 */;
-import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 10668 */;
+import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 10716 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

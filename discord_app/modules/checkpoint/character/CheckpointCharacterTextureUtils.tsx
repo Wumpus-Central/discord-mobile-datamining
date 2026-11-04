@@ -1,9 +1,8 @@
-// === Module 13601: CheckpointCharacterTextureUtils ===
+// === Module 13687: CheckpointCharacterTextureUtils ===
 
-// Module 13601 (CheckpointCharacterTextureUtils)
-import _mod12 from "module_12" /* 12 */;
+// Module 13687 (CheckpointCharacterTextureUtils)
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13602 */;
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13688 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointCharacterTextureType = { SLOT: "slot", TRAIT: "trait", LAYOUT: "layout", ALWAYS: "always" };
@@ -16,6 +15,9 @@ let closure_9 = { columns: 1, rows: 1 };
 let obj2 = { columns: 5, rows: 5 };
 let obj3 = { columns: 6, rows: 8 };
 let closure_10 = { tex_aura_01_blossom: obj2, tex_aura_02_prism: obj2, tex_aura_03_shock: obj2, tex_aura_04_blaze: obj2, tex_aura_05_fated: obj2, tex_aura_06_luster: obj2, tex_aura_07_bubbly: obj2, tex_aura_08_spooky: obj2, tex_aura_09_cursed: obj2, tex_aura_10_magnetic: obj2, tex_aura_11_radioactive: obj2, tex_aura_12_elemental: obj2, tex_aura_13_shimmer: obj2, tex_aura_14_witchy: obj2, tex_wireframe_spritesheet: { columns: 12, rows: 6 }, tex_wearable_10_sword_spritesheet: { columns: 5, rows: 4 }, tex_wearable_11_deviantTail_smoke_active_spritesheet: obj3, tex_wearable_11_deviantTail_smoke_idle_spritesheet: obj3 };
+const items = [1, 1.25, 1.5, 1.75, 2];
+const items1 = [...items];
+let closure_12 = Math.max.apply(items1);
 let result = size.fileFinishedImporting("modules/checkpoint/character/CheckpointCharacterTextureUtils.tsx");
 
 export { CheckpointCharacterTextureType };
@@ -51,10 +53,14 @@ export function getCheckpointCharacterTextureRole(name) {
     }
   }
 }
-export function getCheckpointCharacterTextureScale(c3, height) {
-  const result = Math.max(c3, height) / 1440;
-  const result1 = 0.25 * Math.ceil(result * getDevicePixelRatioDefault() / 0.25);
-  return _mod12.clamp(result1, 1, 2);
+export function getCheckpointCharacterTextureScale(c4, height) {
+  const result = Math.max(c4, height) / 1440;
+  closure_0 = result * getDevicePixelRatioDefault();
+  let found = items.find((item) => item >= closure_0);
+  if (found == null) {
+    found = closure_12;
+  }
+  return found;
 }
 export function getCheckpointCharacterTextureUrl(name, textureScale) {
   ({ url, width, widthAt1x } = CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name]);

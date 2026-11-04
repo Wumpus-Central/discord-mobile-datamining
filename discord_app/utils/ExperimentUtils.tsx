@@ -1,10 +1,10 @@
-// === Module 8710: ExperimentUtils ===
+// === Module 8727: ExperimentUtils ===
 
-// Module 8710 (ExperimentUtils)
+// Module 8727 (ExperimentUtils)
 import _modDef12 from "module_12" /* 12 */;
-import ExperimentManager from "ExperimentManager" /* 5366 */;
+import ExperimentManager from "ExperimentManager" /* 5367 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5361 */;
+import ExperimentStore from "ExperimentStore" /* 5362 */;
 
 require = fn;
 function getFirstEligibleUserExperiment(arg0) {
@@ -21,8 +21,8 @@ function getFirstEligibleUserExperiment(arg0) {
   }
   return null;
 }
-const ExperimentConstants = fn(5362);
-({ ExperimentTypes: hasOwnProperty, ExperimentBuckets: metroRequire } = ExperimentConstants);
+const ExperimentConstants = fn(5363);
+({ ExperimentTypes: hasOwnProperty, ExperimentBuckets: closure_6 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/ExperimentUtils.tsx");
 

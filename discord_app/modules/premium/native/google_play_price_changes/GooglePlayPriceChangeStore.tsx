@@ -1,6 +1,6 @@
-// === Module 19186: GooglePlayPriceChangeStore ===
+// === Module 19289: GooglePlayPriceChangeStore ===
 
-// Module 19186 (GooglePlayPriceChangeStore)
+// Module 19289 (GooglePlayPriceChangeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;

@@ -1,17 +1,17 @@
-// === Module 7489: TableSwitchRow ===
+// === Module 7505: TableSwitchRow ===
 
-// Module 7489 (TableSwitchRow)
+// Module 7505 (TableSwitchRow)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import native from "native" /* 5310 */;
-import TableRow from "TableRow" /* 7101 */;
-import FormSwitch from "FormSwitch" /* 7490 */;
+import native from "native" /* 5311 */;
+import TableRow from "TableRow" /* 7116 */;
+import FormSwitch from "FormSwitch" /* 7506 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
 const size = fn(2);
@@ -49,8 +49,8 @@ export function TableSwitchRow(value) {
       if ("danger" === variant) {
         str = "text-feedback-critical";
       }
-      const obj7 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
-      tmp10Result = hasOwnProperty(tmp3(5747).Text, obj7);
+      const obj7 = { variant: "body-md/semibold", color: str, includeFontPadding: true, children: label };
+      tmp10Result = hasOwnProperty(tmp3(5761).Text, obj7);
     }
     const items1 = [tmp10Result, trailing];
     obj6.children = items1;

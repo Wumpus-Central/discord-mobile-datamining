@@ -1,23 +1,23 @@
-// === Module 14176: GuildProgressHooks ===
+// === Module 14262: GuildProgressHooks ===
 
-// Module 14176 (GuildProgressHooks)
+// Module 14262 (GuildProgressHooks)
 import _modDef12 from "module_12" /* 12 */;
-import canViewInviteModal from "canViewInviteModal" /* 9111 */;
+import canViewInviteModal from "canViewInviteModal" /* 9128 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 5071 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5365 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5366 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import LayerStore from "LayerStore" /* 14177 */;
-import MessageStore from "MessageStore" /* 6181 */;
+import LayerStore from "LayerStore" /* 14263 */;
+import MessageStore from "MessageStore" /* 6196 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let GuildChannelStore = fn(5071);
-({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
+({ GUILD_SELECTABLE_CHANNELS_KEY: closure_6, GUILD_VOCAL_CHANNELS_KEY: metroImportDefault } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
 ({ Permissions: closure_14, MessageTypes: closure_15 } = Constants);
@@ -69,7 +69,7 @@ export function useGuildChannelCreated(arg0) {
       return tmp2;
     }
     const channels = GuildChannelStore.getChannels(id);
-    return channels[timestampProducer].some(hasNewChannel) || channels[React5].some(hasNewChannel);
+    return channels[timestampProducer].some(hasNewChannel) || channels[metroImportDefault].some(hasNewChannel);
   }, items1);
 }
 export function useGuildPopulated(guild) {
@@ -293,7 +293,7 @@ export function useCompletedStates(guild) {
       return tmp2;
     }
     const channels = GuildChannelStore.getChannels(id);
-    return channels[timestampProducer].some(hasNewChannel) || channels[React5].some(hasNewChannel);
+    return channels[timestampProducer].some(hasNewChannel) || channels[metroImportDefault].some(hasNewChannel);
   }, items11);
   return obj;
 }

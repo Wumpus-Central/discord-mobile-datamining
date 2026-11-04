@@ -1,15 +1,15 @@
-// === Module 12050: StageActionBar ===
+// === Module 12109: StageActionBar ===
 
-// Module 12050 (StageActionBar)
-import StageActionBarButtons from "StageActionBarButtons" /* 12011 */;
-import ChannelCallActionBar from "ChannelCallActionBar" /* 12051 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 12106 */;
+// Module 12109 (StageActionBar)
+import StageActionBarButtons from "StageActionBarButtons" /* 12070 */;
+import ChannelCallActionBar from "ChannelCallActionBar" /* 12110 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 12165 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 12, justifyContent: "center", alignItems: "center", flexDirection: "row", position: "relative" } });
 const size = fn(2);
@@ -69,7 +69,7 @@ export default noop.memo(function StageActionBar(channel) {
         items[3] = hasOwnProperty(StageActionBarButtons.ChatButton, obj6);
         items[4] = callback(isSmallSize);
         obj4.children = items;
-        React5(timestampProducer, obj4);
+        metroImportDefault(timestampProducer, obj4);
         const tmp37 = canModerateRequestToSpeak ? obj4.RequestToSpeakListButton : obj4.MoveToAudienceButton;
       } else {
         let tmp = closure_4;
@@ -95,7 +95,7 @@ export default noop.memo(function StageActionBar(channel) {
         items1[3] = hasOwnProperty(StageActionBarButtons.ChatButton, obj10);
         items1[4] = callback(tmp2);
         obj9.children = items1;
-        return React5(timestampProducer, obj9);
+        return metroImportDefault(timestampProducer, obj9);
       }
     }, items1)
   };

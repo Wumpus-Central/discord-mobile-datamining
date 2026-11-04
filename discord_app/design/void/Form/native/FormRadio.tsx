@@ -1,7 +1,7 @@
-// === Module 7435: Form/FormRadio ===
+// === Module 7451: Form/FormRadio ===
 
-// Module 7435 (Form/FormRadio)
-import FastImageDefault from "FastImage" /* 5837 */;
+// Module 7451 (Form/FormRadio)
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -13,6 +13,6 @@ const result = size.fileFinishedImporting("design/void/Form/native/FormRadio.tsx
 export default function FormRadio(selected) {
   const obj = { style: closure_3().radio, source: null };
   const tmp = closure_3();
-  obj.source = importDefault(selected.selected ? 7436 : 7437);
+  obj.source = importDefault(selected.selected ? 7452 : 7453);
   return jsx(FastImageDefault, { style: closure_3().radio, source: null });
 };

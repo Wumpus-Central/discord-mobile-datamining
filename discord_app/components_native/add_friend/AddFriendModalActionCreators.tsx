@@ -1,8 +1,8 @@
-// === Module 15818: AddFriendModalActionCreators ===
+// === Module 15906: AddFriendModalActionCreators ===
 
-// Module 15818 (AddFriendModalActionCreators)
+// Module 15906 (AddFriendModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -11,12 +11,12 @@ const result = size.fileFinishedImporting("components_native/add_friend/AddFrien
 
 export default {
   openAddFriendModalDeeplink() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15819, dependencyMap.paths));
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15907, dependencyMap.paths));
   },
   openAddFriendModal(sourceMetadata) {
     if (null != UserStore.getCurrentUser()) {
       const obj2 = { sourceMetadata };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15819, dependencyMap.paths), obj2);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15907, dependencyMap.paths), obj2);
     }
   }
 };

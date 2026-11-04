@@ -1,24 +1,24 @@
-// === Module 15134: UserProfileWishlistGrid ===
+// === Module 15214: UserProfileWishlistGrid ===
 
-// Module 15134 (UserProfileWishlistGrid)
+// Module 15214 (UserProfileWishlistGrid)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import native from "native" /* 5207 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7843 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7859 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
-import SentGiftsStore from "SentGiftsStore" /* 14585 */;
-import WishlistStore from "WishlistStore" /* 9599 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7860 */;
+import SentGiftsStore from "SentGiftsStore" /* 14665 */;
+import WishlistStore from "WishlistStore" /* 9618 */;
 import UserStore from "UserStore" /* 1385 */;
-import SKUStore from "SKUStore" /* 7016 */;
-import UserProfileStore from "UserProfileStore" /* 7896 */;
+import SKUStore from "SKUStore" /* 7031 */;
+import UserProfileStore from "UserProfileStore" /* 7912 */;
 
 const require = globalThis.__r;
 
@@ -35,12 +35,12 @@ class WishlistEmptyState {
       str = "text-overlay-light";
     }
     obj1 = { style: tmp.emptyState, children: null };
-    obj6 = { variant: "text-md/medium", color: str, accessibilityRole: "header", children: null };
+    obj6 = { variant: "body-md/medium", color: str, accessibilityRole: "header", children: null };
     intl = tmp2(tmp3[23]).intl;
     obj6.children = intl.string(tmp2(tmp3[23]).t.HGnLLT);
     items = [, ];
     items[0] = jsx(tmp2(tmp3[22]).Text, obj6);
-    obj7 = { variant: "text-sm/normal", color: "mobile-text-heading-primary", style: tmp.emptyStateText, children: null };
+    obj7 = { variant: "body-sm/normal", color: "mobile-text-heading-primary", style: tmp.emptyStateText, children: null };
     intl2 = tmp2(tmp3[23]).intl;
     obj7.children = intl2.string(tmp2(tmp3[23]).t["/X1ny6"]);
     items[1] = jsx(tmp2(tmp3[22]).Text, obj7);
@@ -49,9 +49,9 @@ class WishlistEmptyState {
   }
 }
 const View = fn(17).View;
-let closure_10 = fn(9602).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(9600).getWishlistProductLines;
-let Constants = fn(8878);
+let closure_10 = fn(9621).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(9619).getWishlistProductLines;
+let Constants = fn(8895);
 ({ TrackUserProfileWishlistActions: closure_15, UserProfileSections: closure_16 } = Constants);
 Constants = fn(1072);
 ({ Routes: closure_17, SKUProductLines: closure_18 } = Constants);
@@ -302,7 +302,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                 obj7.analyticsSource = c1(context[43]).USER_PROFILE_WISHLIST;
                                 obj7.screen = constants2.FEATURED_PAGE;
                                 obj7.onNavigateAway = function onNavigateAway() {
-                                  closure_1(8874)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
+                                  closure_1(8891)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
                                 };
                                 const result = wishlistId(context[50]).openCollectiblesShopMobile(obj7);
                                 const obj28 = wishlistId(context[50]);
@@ -402,7 +402,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                             obj29.lockedRecipientUser = lockedRecipientUser;
                             obj29.giftingOrigin = constants3.USER_PROFILE_WISHLIST;
                             obj29.onGiftModalDismiss = function onGiftModalDismiss() {
-                              closure_1(8874)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
+                              closure_1(8891)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
                             };
                             const result4 = wishlistId(context[47]).openSocialLayerStorefrontGiftModal(obj29);
                             const obj55 = wishlistId(context[47]);
@@ -558,7 +558,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     }
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15139, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15219, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
     const obj3 = { wishlistId, analyticsContext: context, analyticsLocations };
   }, items14);
   const callback1 = obj12.useCallback(() => {
@@ -599,14 +599,14 @@ export default function UserProfileWishlistGrid(wishlistId) {
       ({ disclaimer: arr18[0], disclaimerTop: arr18[1] } = tmp);
       obj9.style = items16;
       const items17 = [closure_23(tmp6(tmp3[57]).CircleInformationIcon, { size: "sm" }), ];
-      let obj10 = { variant: "text-xs/medium", color: "text-subtle", children: stringResult };
+      let obj10 = { variant: "body-xs/medium", color: "text-subtle", children: stringResult };
       items17[1] = closure_23(tmp6(tmp3[22]).Text, obj10);
       obj9.children = items17;
       tmp44Result = closure_24(mobileStoreFront, obj9);
     }
     const items18 = [tmp44Result, , ];
     let obj11 = { style: tmp.headerRow, children: null };
-    let obj13 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+    let obj13 = { variant: "body-sm/semibold", color: "text-muted", children: null };
     let intl2 = tmp6(tmp3[23]).intl;
     let obj14 = { count: memo.length };
     obj13.children = intl2.formatToPlainString(tmp6(tmp3[23]).t.r6Y1Lg, obj14);

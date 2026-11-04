@@ -1,12 +1,14 @@
-// === Module 12910: conjurePublishRatings ===
+// === Module 12991: conjurePublishRatings ===
 
-// Module 12910 (conjurePublishRatings)
+// Module 12991 (conjurePublishRatings)
 import Storage4 from "Storage" /* 510 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11003 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 11051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function subscribe(arg0) {
@@ -14,24 +16,66 @@ function subscribe(arg0) {
   set.add(arg0);
   return () => set.delete(closure_0);
 }
-function submitConjurePublishRating(arg0) {
-  ({ projectId, turnId, rating, cta, status } = arg0);
+function markConjurePublishRatingViewed(turnId) {
+  ({ projectId, turnId } = turnId);
   const Storage = Storage4.Storage;
   obj = Storage.get(conjurePublishRatings);
   if (obj == null) {
     obj = {};
   }
-  let tmp5;
+  let tmp4;
   if (obj[projectId] != null) {
-    tmp5 = tmp4[turnId];
+    tmp4 = tmp3[turnId];
   }
-  if (tmp5 == null) {
-    tmp5 = null;
+  if (tmp4 == null) {
+    tmp4 = null;
   }
-  if (null != tmp5) {
+  if (null == tmp4) {
+    const Storage3 = Storage4.Storage;
+    value2 = Storage3.get(conjurePublishRatingViews);
+    if (value2 == null) {
+      value2 = {};
+    }
+    let tmp6;
+    if (value2[turnId.projectId] != null) {
+      tmp6 = tmp5[turnId.turnId];
+    }
+    if (true !== tmp6) {
+      const result = ConjureAnalytics.trackConjureRatingViewed(turnId);
+      const Storage2 = Storage4.Storage;
+      const obj2 = {};
+      const merged = Object.assign(value2);
+      const obj3 = {};
+      const merged1 = Object.assign(value2[turnId.projectId]);
+      obj3[turnId.turnId] = true;
+      obj2[turnId.projectId] = obj3;
+      const result1 = Storage2.set(conjurePublishRatingViews, obj2);
+      const tmpResult = ConjureAnalytics;
+    }
+  }
+}
+function submitConjurePublishRating(rating) {
+  rating = rating.rating;
+  const merged = Object.assign(rating, Object.assign({ rating: 0 }));
+  ({ projectId, turnId } = merged);
+  const Storage = Storage4.Storage;
+  obj = Storage.get(conjurePublishRatings);
+  if (obj == null) {
+    obj = {};
+  }
+  let tmp6;
+  if (obj[projectId] != null) {
+    tmp6 = tmp5[turnId];
+  }
+  if (tmp6 == null) {
+    tmp6 = null;
+  }
+  if (null != tmp6) {
     return null;
   } else {
-    const obj2 = { projectId, turnId, rating, publishReason: null, surface: null };
+    ({ cta, status } = merged);
+    const obj2 = { projectId: null, turnId: null, publishReason: null, surface: null, placement: null, publishState: null };
+    ({ projectId: obj7.projectId, turnId: obj7.turnId } = merged);
     let str = cta.reason;
     if (str == null) {
       str = "first_publish";
@@ -45,30 +89,43 @@ function submitConjurePublishRating(arg0) {
       surface = cta.surface;
     }
     obj2.surface = surface;
-    const result = ConjureAnalytics.trackConjureRatingSubmitted(obj2);
+    obj2.placement = merged.placement;
+    let publishState;
+    if (status != null) {
+      publishState = status.publishState;
+    }
+    if (publishState == null) {
+      publishState = null;
+    }
+    const obj3 = {};
+    obj2.publishState = publishState;
+    const merged1 = Object.assign(obj2);
+    obj3.rating = rating;
+    const result = ConjureAnalytics.trackConjureRatingSubmitted(obj3);
     const Storage2 = Storage4.Storage;
     value2 = Storage2.get(conjurePublishRatings);
     if (value2 == null) {
       value2 = {};
     }
     const Storage3 = Storage4.Storage;
-    const obj3 = {};
-    const merged = Object.assign(value2);
     const obj4 = {};
-    const merged1 = Object.assign(value2[projectId]);
-    obj4[turnId] = rating;
-    obj3[projectId] = obj4;
-    const result1 = Storage3.set(conjurePublishRatings, obj3);
-    closure_8 = closure_8 + 1;
+    const merged2 = Object.assign(value2);
+    const obj5 = {};
+    const merged3 = Object.assign(value2[projectId]);
+    obj5[turnId] = rating;
+    obj4[projectId] = obj5;
+    const result1 = Storage3.set(conjurePublishRatings, obj4);
+    closure_9 = closure_9 + 1;
     const item = set.forEach((fn) => fn());
-    return obj2;
+    return obj3;
   }
 }
 const conjurePublishRatings = "conjurePublishRatings";
+const conjurePublishRatingViews = "conjurePublishRatingViews";
 let obj = { 1: null, 2: _modDef3995.GhbsGA, 3: _modDef3995.cm0nwU, 4: _modDef3995.kGvlh2, 5: _modDef3995.dVBSUg };
 obj[5] = _modDef3995.DKlgF7;
 const set = new Set();
-let closure_8 = 0;
+let closure_9 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishRatings.tsx");
 
@@ -98,6 +155,7 @@ export function conjurePublishRatingThanks(rating) {
   return stringResult;
 }
 export const CONJURE_RATING_FEEDBACK_MAX_LENGTH = 256;
+export { markConjurePublishRatingViewed };
 export { submitConjurePublishRating };
 export function submitConjurePublishRatingFeedback(projectId, str) {
   const trimmed = str.trim();
@@ -107,34 +165,60 @@ export function submitConjurePublishRatingFeedback(projectId, str) {
   }
 }
 export function useConjurePublishRating(projectId) {
+  _require = projectId;
   projectId = projectId.projectId;
   const turnId = projectId.turnId;
-  ({ cta: dependencyMap, status: _slicedToArray } = projectId);
-  const syncExternalStore = noop.useSyncExternalStore(subscribe, () => closure_1_8);
-  const Storage = projectId(510).Storage;
-  obj = Storage.get(conjurePublishRatings);
-  if (obj == null) {
-    obj = {};
+  const syncExternalStore = surface.useSyncExternalStore(subscribe, () => closure_1_9);
+  ({ projectId: projectId2, turnId: turnId2, cta, status, placement } = projectId);
+  let str = cta.reason;
+  if (str == null) {
+    str = "first_publish";
   }
-  let tmp3;
-  if (obj[projectId] != null) {
-    tmp3 = tmp2[turnId];
+  surface = undefined;
+  if (status != null) {
+    surface = status.surface;
   }
-  if (tmp3 == null) {
-    tmp3 = null;
+  if (surface == null) {
+    surface = cta.surface;
+  }
+  let publishState;
+  if (status != null) {
+    publishState = status.publishState;
+  }
+  if (publishState == null) {
+    publishState = null;
+  }
+  items = [projectId, turnId, str, surface, placement, publishState];
+  const effect = surface.useEffect(() => {
+    markConjurePublishRatingViewed({ projectId, turnId, publishReason: str, surface, placement, publishState });
+  }, items);
+  const Storage = require("Storage").Storage;
+  let obj2 = Storage.get(placement);
+  if (obj2 == null) {
+    obj2 = {};
+  }
+  let tmp6;
+  if (obj2[projectId] != null) {
+    tmp6 = tmp5[turnId];
+  }
+  if (tmp6 == null) {
+    tmp6 = null;
   }
   return {
-    rating: tmp3,
+    rating: tmp6,
     rate(stateFromStores) {
-      const tmp = submitConjurePublishRating({ projectId, turnId, rating: stateFromStores, cta, status });
-      let tmp2 = null;
-      if (null != tmp) {
-        tmp2 = null;
+      obj = {};
+      const merged = Object.assign(closure_0);
+      obj.rating = stateFromStores;
+      const tmp2 = submitConjurePublishRating(obj);
+      let tmp3 = null;
+      if (null != tmp2) {
+        tmp3 = null;
         if (stateFromStores <= 2) {
-          tmp2 = tmp;
+          tmp3 = tmp2;
         }
       }
-      return tmp2;
+      return tmp3;
     }
   };
 }

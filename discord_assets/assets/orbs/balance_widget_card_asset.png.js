@@ -1,6 +1,6 @@
-// === Module 17055: ? ===
+// === Module 17147: ? ===
 
-// Module 17055
+// Module 17147
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/balance_widget_card_asset.png.js");

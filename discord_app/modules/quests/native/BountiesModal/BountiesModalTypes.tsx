@@ -1,6 +1,6 @@
-// === Module 17066: BountiesModalTypes ===
+// === Module 17158: BountiesModalTypes ===
 
-// Module 17066 (BountiesModalTypes)
+// Module 17158 (BountiesModalTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalTypes.tsx");

@@ -1,13 +1,13 @@
-// === Module 10688: utils/openGiftModal ===
+// === Module 10736: utils/openGiftModal ===
 
-// Module 10688 (utils/openGiftModal)
+// Module 10736 (utils/openGiftModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/native/utils/openGiftModal.tsx");
 
 export function openGiftModal(navigationParams) {
   const merged = Object.assign(navigationParams, Object.assign({ navigationParams: 0 }));
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10689, dependencyMap.paths), merged, "gift_modal_key", navigationParams.navigationParams);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10737, dependencyMap.paths), merged, "gift_modal_key", navigationParams.navigationParams);
 }

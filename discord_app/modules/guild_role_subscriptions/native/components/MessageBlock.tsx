@@ -1,8 +1,8 @@
-// === Module 12699: MessageBlock ===
+// === Module 12780: MessageBlock ===
 
-// Module 12699 (MessageBlock)
+// Module 12780 (MessageBlock)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,10 +12,10 @@ const MessageBlockColors = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
 const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((arg0) => {
   if (obj.RED === arg0) {
-    obj = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
+    obj = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL, borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
     let tmp2 = obj;
   } else if (tmp.YELLOW === arg0) {
-    const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };
+    const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };
     tmp2 = obj2;
   }
   const obj3 = { container: null, text: null };
@@ -37,7 +37,7 @@ export default function MessageBlock(color) {
   color = color.color;
   const tmp = closure_6(color);
   const obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.text, variant: "text-sm/medium", color: null, children: null };
+  const obj2 = { style: tmp.text, variant: "body-sm/medium", color: null, children: null };
   let str = "text-feedback-critical";
   if (obj.RED !== color) {
     if (obj.YELLOW === color) {
@@ -46,7 +46,7 @@ export default function MessageBlock(color) {
   }
   obj2.color = str;
   obj2.children = color.children;
-  obj.children = jsx(Text_Text.Text, { style: tmp.text, variant: "text-sm/medium", color: null, children: null });
+  obj.children = jsx(Text_Text.Text, { style: tmp.text, variant: "body-sm/medium", color: null, children: null });
   return <View style={tmp.container}>{null}</View>;
 };
 export { MessageBlockColors };

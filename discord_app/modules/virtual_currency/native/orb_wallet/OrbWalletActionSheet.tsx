@@ -1,17 +1,17 @@
-// === Module 17045: OrbWalletActionSheet ===
+// === Module 17137: OrbWalletActionSheet ===
 
-// Module 17045 (OrbWalletActionSheet)
+// Module 17137 (OrbWalletActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef2301 from "module_2301" /* 2301 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 15773 */;
-import OrbWalletCards from "OrbWalletCards" /* 17057 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 15861 */;
+import OrbWalletCards from "OrbWalletCards" /* 17149 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import OrbChallengesStore from "OrbChallengesStore" /* 15771 */;
+import OrbChallengesStore from "OrbChallengesStore" /* 15859 */;
 
 require = fn;
 function StatefulOrbChallengesCard(reopenWallet) {
@@ -48,7 +48,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
         const obj2 = {
           underlineHook(children) {
                 return closure_2_11(reopenWallet(orbWalletAnalyticsPage[17]).Text, {
-                  variant: "text-sm/normal",
+                  variant: "body-sm/normal",
                   color: "text-default",
                   style: tryAgainLink.tryAgainLink,
                   onPress() {
@@ -160,8 +160,8 @@ function OrbWalletContent(reopenWallet) {
   return closure_12(challengesForOrbWallet, obj4);
 }
 const View = fn(17).View;
-let closure_7 = fn(15771).OrbChallengesDisplayErrorType;
-let closure_8 = fn(17044).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_7 = fn(15859).OrbChallengesDisplayErrorType;
+let closure_8 = fn(17136).ORB_WALLET_ACTION_SHEET_KEY;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);

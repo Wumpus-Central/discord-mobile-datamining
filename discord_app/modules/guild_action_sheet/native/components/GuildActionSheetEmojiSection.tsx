@@ -1,16 +1,16 @@
-// === Module 15951: GuildActionSheetEmojiSection ===
+// === Module 16041: GuildActionSheetEmojiSection ===
 
-// Module 15951 (GuildActionSheetEmojiSection)
+// Module 16041 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 575 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9917 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5385 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9935 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserStore from "UserStore" /* 1385 */;
 

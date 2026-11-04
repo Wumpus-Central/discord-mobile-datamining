@@ -1,8 +1,8 @@
-// === Module 16154: Badges/Badges ===
+// === Module 16243: Badges/Badges ===
 
-// Module 16154 (Badges/Badges)
+// Module 16243 (Badges/Badges)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,9 +46,9 @@ export function TextBadge(color) {
   const obj = { style: null, children: null };
   items = [tmp2.base, tmp2[DANGER], style];
   obj.style = items;
-  const obj2 = { variant: "text-xs/semibold", style: null, children: text };
+  const obj2 = { variant: "body-xs/semibold", style: null, children: text };
   const items1 = [tmp3.text, tmp3["" + DANGER + "Text"], textStyle];
   obj2.style = items1;
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: null, children: text });
+  obj.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", style: null, children: text });
   return <View style={null}>{null}</View>;
 }

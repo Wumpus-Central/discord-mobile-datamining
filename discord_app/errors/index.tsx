@@ -1,14 +1,14 @@
-// === Module 6566: V6OrEarlierAPIError ===
+// === Module 6581: V6OrEarlierAPIError ===
 
-// Module 6566 (V6OrEarlierAPIError)
+// Module 6581 (V6OrEarlierAPIError)
 import BillingErrorDefault from "BillingError" /* 4961 */;
 import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4962 */;
-import APIErrorDefault from "APIError" /* 6567 */;
-import StripeErrorDefault from "StripeError" /* 6568 */;
-import NativeDispatchErrorDefault from "NativeDispatchError" /* 6569 */;
-import AppliedGuildBoostErrorDefault from "AppliedGuildBoostError" /* 6572 */;
-import ClientOutdatedAcceptGiftErrorDefault from "ClientOutdatedAcceptGiftError" /* 6573 */;
-import UploadVoiceDebugLogsError from "UploadVoiceDebugLogsError" /* 6574 */;
+import APIErrorDefault from "APIError" /* 6582 */;
+import StripeErrorDefault from "StripeError" /* 6583 */;
+import NativeDispatchErrorDefault from "NativeDispatchError" /* 6584 */;
+import AppliedGuildBoostErrorDefault from "AppliedGuildBoostError" /* 6587 */;
+import ClientOutdatedAcceptGiftErrorDefault from "ClientOutdatedAcceptGiftError" /* 6588 */;
+import UploadVoiceDebugLogsError from "UploadVoiceDebugLogsError" /* 6589 */;
 import size from "module_2" /* 2 */;
 
 const UploadVoiceDebugLogsErrorDefault = UploadVoiceDebugLogsError;

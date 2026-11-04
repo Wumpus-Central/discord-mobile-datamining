@@ -1,6 +1,6 @@
-// === Module 9037: PlatformType ===
+// === Module 9054: PlatformType ===
 
-// Module 9037 (PlatformType)
+// Module 9054 (PlatformType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/PlatformType.tsx");

@@ -1,26 +1,26 @@
-// === Module 9344: EventDetailInfoSheet ===
+// === Module 9361: EventDetailInfoSheet ===
 
-// Module 9344 (EventDetailInfoSheet)
+// Module 9361 (EventDetailInfoSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import StageChannelAgeVerificationNoticeDefault from "StageChannelAgeVerificationNotice" /* 8078 */;
-import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 9093 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9094 */;
-import GuildEventRecurrencesDefault from "GuildEventRecurrences" /* 9224 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import StageChannelAgeVerificationNoticeDefault from "StageChannelAgeVerificationNotice" /* 8094 */;
+import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 9110 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9111 */;
+import GuildEventRecurrencesDefault from "GuildEventRecurrences" /* 9241 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import UserStore from "UserStore" /* 1385 */;
-import TextStyles_mod from "TextStyles" /* 6843 */;
+import TextStyles_mod from "TextStyles" /* 6858 */;
 
 require = fn;
 const View = fn(17).View;
 fn(4996).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
-let closure_11 = fn(9091).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
+let closure_11 = fn(9108).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
@@ -68,14 +68,14 @@ export default function EventDetailInfoSheet(guildEvent) {
     return isConnectedResult;
   }, items2);
   let obj2 = guildEvent(504);
-  const result = guildEvent(9096).recurrenceRuleFromServer(guildEvent.recurrence_rule);
+  const result = guildEvent(9113).recurrenceRuleFromServer(guildEvent.recurrence_rule);
   const items3 = [, ];
   ({ guild_id: arr4[0], id: arr4[1] } = guildEvent);
   const effect = noop.useEffect(() => {
     const guildEventUserCounts = GuildScheduledEventManagerDefault.getGuildEventUserCounts(guildEvent.guild_id, guildEvent.id, []);
     const guildEventsForCurrentUser = GuildScheduledEventManagerDefault.getGuildEventsForCurrentUser(guildEvent.guild_id);
   }, items3);
-  let obj3 = guildEvent(9096);
+  let obj3 = guildEvent(9113);
   const tmp8 = useGuildScheduledEventUserCountDefault(guildEvent.guild_id, guildEvent.id, recurrenceId);
   const items4 = [GuildStore];
   const stateFromStores1 = guildEvent(504).useStateFromStores(items4, () => null != GuildStore.getGuild(guildEvent.guild_id));
@@ -96,13 +96,13 @@ export default function EventDetailInfoSheet(guildEvent) {
   const obj6 = { style: null, onLayout, children: null };
   const items7 = [tmp.eventContainer, { paddingBottom: safeBottomPadding + 16 }];
   obj6.style = items7;
-  const items8 = [closure_12(guildEvent(9109).GuildEventCardHeader, { event: guildEvent, style: tmp.eventHeader, showUserCount: false, showEndDate: true, showCreator: false, recurrenceId }), closure_12(guildEvent(9109).GuildEventCardTitle, { event: guildEvent, textStyle: tmp.eventTitle, style: tmp.eventTitleContainer }), closure_12(guildEvent(9109).GuildEventCardSimpleGuildInfo, { event: guildEvent, textStyle: tmp.guildTextStyle }), closure_12(guildEvent(9109).GuildEventSimpleLocation, { event: guildEvent }), , , , , , ];
+  const items8 = [closure_12(guildEvent(9126).GuildEventCardHeader, { event: guildEvent, style: tmp.eventHeader, showUserCount: false, showEndDate: true, showCreator: false, recurrenceId }), closure_12(guildEvent(9126).GuildEventCardTitle, { event: guildEvent, textStyle: tmp.eventTitle, style: tmp.eventTitleContainer }), closure_12(guildEvent(9126).GuildEventCardSimpleGuildInfo, { event: guildEvent, textStyle: tmp.guildTextStyle }), closure_12(guildEvent(9126).GuildEventSimpleLocation, { event: guildEvent }), , , , , , ];
   const obj11 = { style: tmp.interestedContainer, children: null };
-  const items9 = [closure_12(guildEvent(9336).BellIcon, { size: "sm", style: tmp.interestedIcon }), ];
-  const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const items9 = [closure_12(guildEvent(9353).BellIcon, { size: "sm", style: tmp.interestedIcon }), ];
+  const obj13 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = guildEvent(1113).intl;
   obj13.children = intl.format(guildEvent(1113).t["+DLsD8"], { count: tmp8 });
-  items9[1] = closure_12(guildEvent(5747).Text, obj13);
+  items9[1] = closure_12(guildEvent(5761).Text, obj13);
   obj11.children = items9;
   items8[4] = closure_13(creator, obj11);
   let tmp11Result = null != creator && stateFromStores1;
@@ -110,7 +110,7 @@ export default function EventDetailInfoSheet(guildEvent) {
     const obj14 = { style: tmp.interestedContainer, children: null };
     const obj15 = { user: creator, guildId: guildEvent.guild_id, size: tmp2(1187).AvatarSizes.XSMALL_20, style: tmp.interestedIcon };
     const items10 = [closure_12(tmp2(1187).Avatar, obj15), ];
-    const obj16 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj16 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl2 = tmp2(1113).intl;
     const obj17 = {
       usernameHook: function renderUsername() {
@@ -153,16 +153,16 @@ export default function EventDetailInfoSheet(guildEvent) {
         }
     };
     obj16.children = intl2.format(tmp2(1113).t["66DLFs"], obj17);
-    items10[1] = closure_12(tmp2(5747).Text, obj16);
+    items10[1] = closure_12(tmp2(5761).Text, obj16);
     obj14.children = items10;
     tmp11Result = closure_13(tmp12, obj14);
   }
   items8[5] = tmp11Result;
-  items8[6] = closure_12(guildEvent(9109).GuildEventCardDescription, { event: guildEvent, style: tmp.eventDescriptionContainer });
+  items8[6] = closure_12(guildEvent(9126).GuildEventCardDescription, { event: guildEvent, style: tmp.eventDescriptionContainer });
   let hasItem = set.has(guildEvent.entity_type);
   if (hasItem) {
     const obj19 = { noBackground: true, divider: null, onConfirmPress: null, channelId: null, style: null };
-    const items11 = [tmp2(8078).DividerPosition.TOP, tmp2(8078).DividerPosition.BOTTOM];
+    const items11 = [tmp2(8094).DividerPosition.TOP, tmp2(8094).DividerPosition.BOTTOM];
     obj19.divider = items11;
     obj19.onConfirmPress = function onConfirmPress() {
       return ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -175,7 +175,7 @@ export default function EventDetailInfoSheet(guildEvent) {
   items8[7] = hasItem;
   const obj20 = { direction: "horizontal", style: tmp.controlsContainer, children: null };
   const items12 = [
-    closure_12(guildEvent(9109).GuildEventCardPrimaryAction, {
+    closure_12(guildEvent(9126).GuildEventCardPrimaryAction, {
       event: guildEvent,
       onCloseAction: function handleCloseAction() {
         ActionSheetActionCreatorsDefault.hideActionSheet(closure_11);
@@ -192,12 +192,12 @@ export default function EventDetailInfoSheet(guildEvent) {
   let tmp13Result = null;
   if (stateFromStores1) {
     const obj22 = { event: guildEvent };
-    tmp13Result = closure_12(tmp2(9109).GuildEventShareAction, obj22);
+    tmp13Result = closure_12(tmp2(9126).GuildEventShareAction, obj22);
   }
   items12[1] = tmp13Result;
-  items12[2] = closure_12(guildEvent(9109).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
+  items12[2] = closure_12(guildEvent(9126).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
   obj20.children = items12;
-  items8[8] = closure_13(guildEvent(6887).ButtonGroup, obj20);
+  items8[8] = closure_13(guildEvent(6902).ButtonGroup, obj20);
   let tmp13Result2 = null != result;
   if (tmp13Result2) {
     const obj23 = {

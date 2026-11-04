@@ -1,12 +1,12 @@
-// === Module 12326: ConjureVersionRestoreConfirm ===
+// === Module 12391: ConjureVersionRestoreConfirm ===
 
-// Module 12326 (ConjureVersionRestoreConfirm)
+// Module 12391 (ConjureVersionRestoreConfirm)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import useAlertStore from "useAlertStore" /* 6080 */;
-import AlertModal from "AlertModal" /* 6084 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
+import useAlertStore from "useAlertStore" /* 6095 */;
+import AlertModal from "AlertModal" /* 6099 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7115 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -55,11 +55,11 @@ function ConjureVersionRestoreAlert(matchingBackup) {
   obj6.text = intl6.string(util.t["ETE/oC"]);
   items[1] = hasOwnProperty(AlertModal.AlertActionButton, obj6);
   obj4.children = items;
-  obj.actions = React5(timestampProducer, obj4);
+  obj.actions = metroImportDefault(timestampProducer, obj4);
   return hasOwnProperty(AlertModal.AlertModal, obj);
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/native/ConjureVersionRestoreConfirm.tsx");
 

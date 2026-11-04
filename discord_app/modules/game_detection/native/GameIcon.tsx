@@ -1,12 +1,12 @@
-// === Module 7454: GameIcon ===
+// === Module 7470: GameIcon ===
 
-// Module 7454 (GameIcon)
+// Module 7470 (GameIcon)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import _modDef7455 from "module_7455" /* 7455 */;
-import _modDef7456 from "module_7456" /* 7456 */;
-import _modDef7457 from "module_7457" /* 7457 */;
-import _modDef7458 from "module_7458" /* 7458 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import _modDef7471 from "module_7471" /* 7471 */;
+import _modDef7472 from "module_7472" /* 7472 */;
+import _modDef7473 from "module_7473" /* 7473 */;
+import _modDef7474 from "module_7474" /* 7474 */;
 import noop from "module_19" /* 19 */;
 
 class GameIcon {
@@ -96,7 +96,7 @@ obj4.large = size3;
 obj4.placeholder = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
 const obj5 = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
 obj4.entityWrapper = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-const React5 = createStyles.createStyles(obj4);
+const metroImportDefault = createStyles.createStyles(obj4);
 GameIcon.Sizes = GameIconSizes;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");

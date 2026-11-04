@@ -1,16 +1,16 @@
-// === Module 6164: MarkupChannelMentionRule ===
+// === Module 6179: MarkupChannelMentionRule ===
 
-// Module 6164 (MarkupChannelMentionRule)
+// Module 6179 (MarkupChannelMentionRule)
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _modDef2072 from "module_2072" /* 2072 */;
 import StringUtils from "StringUtils" /* 2155 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import LinkUtils from "LinkUtils" /* 5774 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 6163 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 6165 */;
-import ChannelUtils from "ChannelUtils" /* 6166 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 6174 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import LinkUtils from "LinkUtils" /* 5788 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 6178 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 6180 */;
+import ChannelUtils from "ChannelUtils" /* 6181 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 6189 */;
 import GatedChannelStore from "GatedChannelStore" /* 5045 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -125,7 +125,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
           obj4.content = items3;
           let obj11 = obj4;
         } else if (null != url) {
-          const obj9 = { type: "link", content: null, target: null, title: "channel_id" };
+          const obj9 = { type: "link", content: null, target: null, title: "id" };
           const obj10 = { type: "text", content: url };
           const items4 = [obj10];
           obj9.content = items4;
@@ -351,7 +351,7 @@ obj.channelOrMessageUrl = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "channel_id" };
+      const obj = { type: "link", content: null, target: null, title: "id" };
       const obj2 = { type: "text", content: tmp };
       items = [obj2];
       obj.content = items;
@@ -411,7 +411,7 @@ let obj3 = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "channel_id" };
+      const obj = { type: "link", content: null, target: null, title: "id" };
       const obj2 = { type: "text", content: tmp };
       items = [obj2];
       obj.content = items;
@@ -485,7 +485,7 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "channel_id" };
+    const obj = { type: "link", content: null, target: tmp, title: "id" };
     items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;

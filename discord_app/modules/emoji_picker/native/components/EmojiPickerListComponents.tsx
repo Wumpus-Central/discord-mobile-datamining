@@ -1,17 +1,17 @@
-// === Module 10155: EmojiPickerListComponents ===
+// === Module 10203: EmojiPickerListComponents ===
 
-// Module 10155 (EmojiPickerListComponents)
+// Module 10203 (EmojiPickerListComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import _modDef8851 from "module_8851" /* 8851 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10153 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import _modDef8868 from "module_8868" /* 8868 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10201 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerListConstants = fn(10073);
+const EmojiPickerListConstants = fn(10121);
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -25,8 +25,8 @@ const obj4 = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "cente
 const memoResult = noop.memo(function EmojiPickerListNSFWRow() {
   const tmp = closure_6();
   const obj = { style: tmp.nsfwContainer, children: null };
-  items = [React4(native.Icon, { source: _modDef8851, size: native.Icon.Sizes.SMALL }), ];
-  const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
+  items = [React4(native.Icon, { source: _modDef8868, size: native.Icon.Sizes.SMALL }), ];
+  const obj3 = { style: tmp.nsfwText, variant: "body-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.SLzV5z);
   items[1] = React4(Text_Text.Text, obj3);
@@ -47,7 +47,7 @@ export const Section = noop.memo(function EmojiPickerListSection(useTier0UpsellC
   items = [isSectionNitroLocked, ];
   let tmp6 = null;
   if ("" !== label) {
-    const obj3 = { lineClamp: 1, color: "interactive-text-default", variant: "heading-sm/semibold", children: label };
+    const obj3 = { lineClamp: 1, color: "interactive-text-default", variant: "heading-xs/semibold", children: label };
     tmp6 = React4(Text_Text.Text, obj3);
   }
   items[1] = tmp6;

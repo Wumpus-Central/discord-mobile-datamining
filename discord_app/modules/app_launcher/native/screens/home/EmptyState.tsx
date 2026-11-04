@@ -1,11 +1,11 @@
-// === Module 12578: home/EmptyState ===
+// === Module 12659: home/EmptyState ===
 
-// Module 12578 (home/EmptyState)
+// Module 12659 (home/EmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11639 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12515 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11690 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12596 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,9 +21,9 @@ export default function EmptyState() {
   const tmp = closure_4();
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_EMPTY);
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null };
+  const obj3 = { style: tmp.textContainer, variant: "body-md/semibold", color: "text-default", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["V7+xhH"]);
-  obj2.children = jsx(Text_Text.Text, { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null });
+  obj2.children = jsx(Text_Text.Text, { style: tmp.textContainer, variant: "body-md/semibold", color: "text-default", children: null });
   return <View style={tmp.container}>{null}</View>;
 };

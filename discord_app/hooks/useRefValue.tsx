@@ -1,6 +1,6 @@
-// === Module 7085: useRefValue ===
+// === Module 7100: useRefValue ===
 
-// Module 7085 (useRefValue)
+// Module 7100 (useRefValue)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("hooks/useRefValue.tsx");

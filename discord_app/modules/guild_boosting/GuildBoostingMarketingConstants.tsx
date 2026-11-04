@@ -1,6 +1,6 @@
-// === Module 14271: GuildBoostingMarketingConstants ===
+// === Module 14357: GuildBoostingMarketingConstants ===
 
-// Module 14271 (GuildBoostingMarketingConstants)
+// Module 14357 (GuildBoostingMarketingConstants)
 import util from "util" /* 1113 */;
 import Constants from "Constants" /* 1072 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;

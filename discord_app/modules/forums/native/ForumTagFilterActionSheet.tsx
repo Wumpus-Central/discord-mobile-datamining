@@ -1,13 +1,13 @@
-// === Module 14508: ForumTagFilterActionSheet ===
+// === Module 14588: ForumTagFilterActionSheet ===
 
-// Module 14508 (ForumTagFilterActionSheet)
+// Module 14588 (ForumTagFilterActionSheet)
 import initialize from "initialize" /* 504 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import EmojiDefault from "Emoji" /* 7420 */;
-import Tracking from "Tracking" /* 8328 */;
+import EmojiDefault from "Emoji" /* 7436 */;
+import Tracking from "Tracking" /* 8344 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
 
 require = fn;
 function EmojiIcon(arg0) {
@@ -36,8 +36,8 @@ function EmojiIcon(arg0) {
   obj2.name = emojiName;
   return jsx(EmojiDefault, { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
 }
-const ForumChannelStore = fn(13894);
-({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
+const ForumChannelStore = fn(13980);
+({ useForumChannelStore: closure_6, useForumChannelStoreApi: metroImportDefault } = ForumChannelStore);
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: closure_10 } = Constants);
 const jsx = fn(21).jsx;

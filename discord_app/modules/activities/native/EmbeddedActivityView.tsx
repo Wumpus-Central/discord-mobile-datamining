@@ -1,11 +1,11 @@
-// === Module 11931: EmbeddedActivityView ===
+// === Module 11990: EmbeddedActivityView ===
 
-// Module 11931 (EmbeddedActivityView)
+// Module 11990 (EmbeddedActivityView)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11069 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11932 */;
-import activityWebViewController from "activityWebViewController" /* 11935 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11118 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11991 */;
+import activityWebViewController from "activityWebViewController" /* 11994 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -102,14 +102,14 @@ function EmbeddedActivityWebView(applicationId) {
   const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
   ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0]);
   const merged1 = Object.assign(merged);
-  return closure_13(applicationId(11958).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
+  return closure_13(applicationId(12017).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
 }
 let closure_3 = ["ui_density"];
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_7, View: closure_8 } = get_ActivityIndicator);
+({ ActivityIndicator: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
 const ActivityScreenOrientation = fn(2147).ActivityScreenOrientation;
 fn(1362).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
-const ActivityLayoutMode = fn(11831).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11888).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(5141);

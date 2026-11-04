@@ -1,20 +1,20 @@
-// === Module 13919: ForumPostListFooter ===
+// === Module 14005: ForumPostListFooter ===
 
-// Module 13919 (ForumPostListFooter)
+// Module 14005 (ForumPostListFooter)
 import nativeDefault from "native" /* 575 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7577 */;
-import ForumPostReactions from "ForumPostReactions" /* 11487 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 13861 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13912 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13913 */;
-import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 13920 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7593 */;
+import ForumPostReactions from "ForumPostReactions" /* 11537 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 13947 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13998 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13999 */;
+import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 14006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" }, dot: null };
 let size = { height: 4, width: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
@@ -43,7 +43,7 @@ export default function ForumPostListFooter(parentChannel) {
     const obj7 = { thread, typingUserIds, hasUnreads };
     items1[1] = hasOwnProperty(ForumPostTypingUsersDefault, obj7);
     obj5.children = items1;
-    tmp6Result = React5(timestampProducer, obj5);
+    tmp6Result = metroImportDefault(timestampProducer, obj5);
   }
   items[2] = tmp6Result;
   let tmp8Result = null != firstMessage;
@@ -53,5 +53,5 @@ export default function ForumPostListFooter(parentChannel) {
   }
   items[3] = tmp8Result;
   obj3.children = items;
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 };

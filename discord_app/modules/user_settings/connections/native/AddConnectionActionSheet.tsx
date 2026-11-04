@@ -1,12 +1,12 @@
-// === Module 17000: AddConnectionActionSheet ===
+// === Module 17092: AddConnectionActionSheet ===
 
-// Module 17000 (AddConnectionActionSheet)
+// Module 17092 (AddConnectionActionSheet)
 import Constants from "Constants" /* 1072 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 2151 */;
 import shared from "shared" /* 5148 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import TableRow from "TableRow" /* 7101 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import TableRow from "TableRow" /* 7116 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import native from "native" /* 1187 */;
@@ -19,10 +19,10 @@ function AddApplicationIdentityTableRow(application) {
   _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7447)(application));
-  const tmp2 = analyticsLocations(7447)(application);
-  analyticsLocations = analyticsLocations(7446)(analyticsLocations(7471).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7446);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7463)(application));
+  const tmp2 = analyticsLocations(7463)(application);
+  analyticsLocations = analyticsLocations(7462)(analyticsLocations(7487).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7462);
   const tmp4 = closure_7();
   const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
   const obj2 = {
@@ -49,7 +49,7 @@ function AddApplicationIdentityTableRow(application) {
 }
 const AnalyticsLocations = Constants.AnalyticsLocations;
 let closure_4 = UserApplicationIdentityConstants.getMigratedApplicationIdentityConnectionsScreenApplications;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { list: { paddingHorizontal: 16 }, icon: null };
 let obj2 = { borderRadius: null };
 obj2.borderRadius = native.getIconSize(native.Icon.Sizes.LARGE);

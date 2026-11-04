@@ -1,19 +1,19 @@
-// === Module 15055: GameTimeTier9LargeBadge ===
+// === Module 15135: GameTimeTier9LargeBadge ===
 
-// Module 15055 (GameTimeTier9LargeBadge)
-import assetHelpers from "assetHelpers" /* 7195 */;
-import _modDef15056 from "module_15056" /* 15056 */;
-import _modDef15057 from "module_15057" /* 15057 */;
-import _modDef15058 from "module_15058" /* 15058 */;
+// Module 15135 (GameTimeTier9LargeBadge)
+import assetHelpers from "assetHelpers" /* 7210 */;
+import _modDef15136 from "module_15136" /* 15136 */;
+import _modDef15137 from "module_15137" /* 15137 */;
+import _modDef15138 from "module_15138" /* 15138 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15056 }, 3: null };
-let obj2 = { uri: _modDef15056 };
-obj[2] = { uri: _modDef15057 };
-const obj3 = { uri: _modDef15057 };
-obj[3] = { uri: _modDef15058 };
+let obj = { 1: null, 2: { uri: _modDef15136 }, 3: null };
+let obj2 = { uri: _modDef15136 };
+obj[2] = { uri: _modDef15137 };
+const obj3 = { uri: _modDef15137 };
+obj[3] = { uri: _modDef15138 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameTimeTier9LargeBadge.native.tsx");
 

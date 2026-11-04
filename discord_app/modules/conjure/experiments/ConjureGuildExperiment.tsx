@@ -1,7 +1,7 @@
-// === Module 6999: ConjureGuildExperiment ===
+// === Module 7014: ConjureGuildExperiment ===
 
-// Module 6999 (ConjureGuildExperiment)
-import ConjureUserExperiment from "ConjureUserExperiment" /* 7000 */;
+// Module 7014 (ConjureGuildExperiment)
+import ConjureUserExperiment from "ConjureUserExperiment" /* 7015 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
@@ -53,7 +53,7 @@ function isConjureGuildEnabledWithoutExposure(id, location) {
   }
   return enabled;
 }
-function hasConjureGuildWithoutExposure(conjure_resume) {
+function hasConjureGuildWithoutExposure(ConjureProjectReconnectManager) {
   const values = Object.values(GuildStore.getGuilds());
   for (const item10012 of values) {
     if (isConjureGuildEnabledWithoutExposure(item10012.id, arg0)) {

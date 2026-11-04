@@ -1,6 +1,6 @@
-// === Module 6830: StageChannelPermissionUtils ===
+// === Module 6845: StageChannelPermissionUtils ===
 
-// Module 6830 (StageChannelPermissionUtils)
+// Module 6845 (StageChannelPermissionUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 4998 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;

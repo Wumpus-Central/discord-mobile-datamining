@@ -1,13 +1,13 @@
-// === Module 18447: UnknownChannel ===
+// === Module 18541: UnknownChannel ===
 
-// Module 18447 (UnknownChannel)
+// Module 18541 (UnknownChannel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10932 */;
-import ChannelItemDefault from "ChannelItem" /* 18318 */;
+import useChannelNameDefault from "useChannelName" /* 5786 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10980 */;
+import ChannelItemDefault from "ChannelItem" /* 18415 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,12 +18,12 @@ function handlePress() {
   obj2.icon = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open("UNKNOWN_CHANNEL_UPDATE_DISCORD", obj2);
 }
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
-let obj = { container: { marginVertical: fn(11186).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let obj = { container: { marginVertical: fn(11236).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj);
-const obj3 = { marginVertical: fn(11186).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+const obj3 = { marginVertical: fn(11236).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 6210: CheckpointCardTypes ===
+// === Module 6225: CheckpointCardTypes ===
 
-// Module 6210 (CheckpointCardTypes)
+// Module 6225 (CheckpointCardTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointCardTypes.tsx");

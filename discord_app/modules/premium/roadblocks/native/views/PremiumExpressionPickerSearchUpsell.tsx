@@ -1,9 +1,9 @@
-// === Module 10162: PremiumExpressionPickerSearchUpsell ===
+// === Module 10210: PremiumExpressionPickerSearchUpsell ===
 
-// Module 10162 (PremiumExpressionPickerSearchUpsell)
+// Module 10210 (PremiumExpressionPickerSearchUpsell)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,9 +26,9 @@ export default function PremiumExpressionPickerSearchUpsell(arg0) {
   const obj = { style: tmp.container, collapsable: false, children: null };
   const obj2 = { style: tmp.upsell, accessibilityRole: "button", disabled: loading, onPress, children: null };
   const obj3 = { style: tmp.content, children: null };
-  items = [icon, React3(Text_Text.Text, { lineClamp: 2, variant: "text-sm/medium", color: "interactive-text-active", children: body })];
+  items = [icon, React3(Text_Text.Text, { lineClamp: 2, variant: "body-sm/medium", color: "interactive-text-active", children: body })];
   obj3.children = items;
-  const items1 = [React4(View, obj3), React3(Text_Text.Text, { variant: "text-sm/medium", color: "text-link", children: ctaText })];
+  const items1 = [React4(View, obj3), React3(Text_Text.Text, { variant: "body-sm/medium", color: "text-link", children: ctaText })];
   obj2.children = items1;
   obj.children = React4(Pressables.PressableOpacity, obj2);
   return React3(View, obj);

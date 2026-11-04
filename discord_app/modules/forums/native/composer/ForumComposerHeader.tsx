@@ -1,14 +1,14 @@
-// === Module 10358: ForumComposerHeader ===
+// === Module 10406: ForumComposerHeader ===
 
-// Module 10358 (ForumComposerHeader)
+// Module 10406 (ForumComposerHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import Pressables from "Pressables" /* 7106 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import BookCheckIcon from "BookCheckIcon" /* 8771 */;
-import ForumIcon from "ForumIcon" /* 8784 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelNameDefault from "useChannelName" /* 5786 */;
+import Pressables from "Pressables" /* 7121 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import BookCheckIcon from "BookCheckIcon" /* 8788 */;
+import ForumIcon from "ForumIcon" /* 8801 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = { headerBar: { height, flexDirection: "row", alignItems: "center" }, headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 }, headerBarText: { marginHorizontal: nativeDefault.space.PX_16 }, headerBarSeparator: null, button: null };
@@ -56,7 +56,7 @@ export default function ForumComposerHeader(height) {
     const intl2 = util.intl;
     title = intl2.string(util.t["7EjFCk"]);
   }
-  const items2 = [hasOwnProperty(Text_Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: useChannelNameDefault(channel) })];
+  const items2 = [hasOwnProperty(Text_Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "body-md/semibold", color: "mobile-text-heading-primary", children: title }), hasOwnProperty(Text_Text.Text, { variant: "body-xs/medium", color: "text-default", children: useChannelNameDefault(channel) })];
   obj4.children = items2;
   items1[1] = timestampProducer(React4, obj4);
   obj3.children = items1;

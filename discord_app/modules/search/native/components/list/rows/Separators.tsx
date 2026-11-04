@@ -1,10 +1,10 @@
-// === Module 18872: Separators ===
+// === Module 18975: Separators ===
 
-// Module 18872 (Separators)
+// Module 18975 (Separators)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({ MEDIA_ITEM_GAP_WIDTH, FILES_OR_LINKS_GAP_WIDTH } = SearchConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);

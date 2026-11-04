@@ -1,16 +1,16 @@
-// === Module 14930: MediaViewer ===
+// === Module 15010: MediaViewer ===
 
-// Module 14930 (MediaViewer)
+// Module 15010 (MediaViewer)
 import _modDef1652 from "module_1652" /* 1652 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6142 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import useVideoControls from "useVideoControls" /* 8960 */;
-import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8991 */;
-import StatusBarDefault from "StatusBar" /* 11349 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 11840 */;
-import MediaViewerItem from "MediaViewerItem" /* 14932 */;
-import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 14937 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6157 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import useVideoControls from "useVideoControls" /* 8977 */;
+import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 9008 */;
+import StatusBarDefault from "StatusBar" /* 11399 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 11899 */;
+import MediaViewerItem from "MediaViewerItem" /* 15012 */;
+import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 15017 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -297,7 +297,7 @@ function MediaViewer(arg0) {
   obj14.style = items17;
   if (isMediaViewerImprovementsEnabled) {
     const obj15 = { entranceAnimationDriver: sharedValue, onLongPress, onScrollWorklets, originLayout, pagerIndex, panGestureConfig: mediaViewerPanGestureConfig, renderMedia, sources, useItemVisible, windowWidth: width, windowHeight: height, zoomed };
-    tmp63Result = tmp63(tmp(14939), obj15);
+    tmp63Result = tmp63(tmp(15019), obj15);
   }
   obj14.children = tmp63Result;
   items15[2] = callback(_modDef1652.View, obj14);
@@ -319,7 +319,7 @@ function MediaViewer(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PlatformUtils = fn(1377);
 let closure_9 = PlatformUtils.isAndroid();
 let obj = { pan: null };
@@ -375,7 +375,7 @@ let closure_13 = noop.memo(function MediaViewer(entranceAnimationDriver) {
   const mediaViewerPanGesture = require("useMediaViewerPanGesture").useMediaViewerPanGesture(panGestureConfig, derivedValue);
   panGestureGenerator = mediaViewerPanGesture.panGestureGenerator;
   const items4 = [entranceAnimationDriver, onLongPress, originLayout, panGestureConfig, panGestureGenerator, renderMedia, sources, useItemVisible, windowHeight, windowWidth, zoomed];
-  const callback2 = renderMedia.useCallback((arg0, index) => React5(MediaViewerItem.MediaViewerItem, { originLayout, renderMedia, onLongPress, windowWidth, windowHeight, panGestureConfig, entranceAnimationDriver, source: sources[index], index, zoomed, panGesture: panGestureGenerator(index), useItemVisible }), items4);
+  const callback2 = renderMedia.useCallback((arg0, index) => metroImportDefault(MediaViewerItem.MediaViewerItem, { originLayout, renderMedia, onLongPress, windowWidth, windowHeight, panGestureConfig, entranceAnimationDriver, source: sources[index], index, zoomed, panGesture: panGestureGenerator(index), useItemVisible }), items4);
   const tmpResult = require("useMediaViewerPanGesture");
   const items5 = [closure_12, derivedValue];
   _require = undefined;
@@ -410,6 +410,6 @@ let result = size.fileFinishedImporting("modules/media_viewer/native/components/
 export default noop.memo(function MediaViewerWithProvider(arg0) {
   const obj = { children: null };
   const merged = Object.assign(arg0);
-  obj.children = React5(MediaViewer, {});
-  return React5(MediaViewerDimensionsContext.MediaViewerDimensionsProvider, obj);
+  obj.children = metroImportDefault(MediaViewer, {});
+  return metroImportDefault(MediaViewerDimensionsContext.MediaViewerDimensionsProvider, obj);
 });

@@ -1,10 +1,10 @@
-// === Module 12857: ConjureNativeCollapsibleSection ===
+// === Module 12938: ConjureNativeCollapsibleSection ===
 
-// Module 12857 (ConjureNativeCollapsibleSection)
+// Module 12938 (ConjureNativeCollapsibleSection)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7498 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11552 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7514 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,8 +50,8 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
   let tmp6Result = null;
   if (flag) {
     const obj2 = { style: tmp.header, children: null };
-    const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: title };
-    items = [React4(tmp4(5747).Text, obj3), ];
+    const obj3 = { variant: "body-sm/medium", color: "text-subtle", children: title };
+    items = [React4(tmp4(5761).Text, obj3), ];
     const obj4 = { style: tmp.headerTrailing, children: null };
     const items1 = [meta, ];
     let tmp9Result = null;
@@ -68,7 +68,7 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
         obj5.onPress = onToggleExpanded;
         const obj7 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
         obj5.children = React4(ChevronSmallRightIcon, obj7);
-        tmp9Result = React4(tmp4(9120).PressableScale, obj5);
+        tmp9Result = React4(tmp4(9137).PressableScale, obj5);
       }
     }
     items1[1] = tmp9Result;
@@ -88,5 +88,5 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
 };
 export function ConjureNativeCollapsibleMeta(arg0) {
   ({ children, accessibilityLabel, accessibilityLiveRegion } = arg0);
-  return React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", accessibilityLabel, accessibilityLiveRegion, children });
+  return React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", accessibilityLabel, accessibilityLiveRegion, children });
 }

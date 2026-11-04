@@ -1,16 +1,16 @@
-// === Module 7284: UserSettingsConfirmPassword ===
+// === Module 7300: UserSettingsConfirmPassword ===
 
-// Module 7284 (UserSettingsConfirmPassword)
+// Module 7300 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7207 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7233 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7285 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7288 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7222 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7253 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7301 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7304 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -203,7 +203,7 @@ class UserSettingsConfirmPasswordInner {
       obj12.children = intl.string(tmp3(tmp4[14]).t["x+d9t3"]);
       items3 = [, , , , ];
       items3[0] = jsx(tmp3(tmp4[16]).Text, obj12);
-      obj13 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
+      obj13 = { style: null, variant: "body-sm/medium", color: "text-default", children: null };
       obj13.style = tmp.prompt;
       intl2 = tmp3(tmp4[14]).intl;
       obj13.children = intl2.string(tmp3(tmp4[14]).t.vaZmAx);

@@ -1,26 +1,26 @@
-// === Module 14914: MediaMessagePreview ===
+// === Module 14994: MediaMessagePreview ===
 
-// Module 14914 (MediaMessagePreview)
+// Module 14994 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import RowGeneratorDefault from "RowGenerator" /* 8501 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8529 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8834 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 10025 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 10251 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10317 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 14916 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import RowGeneratorDefault from "RowGenerator" /* 8518 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8546 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8851 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10073 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 10299 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10365 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 14996 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7582 */;
-import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7598 */;
+import SearchMessageStore from "SearchMessageStore" /* 6998 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import MessageStore from "MessageStore" /* 6181 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 9058 */;
+import MessageStore from "MessageStore" /* 6196 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 9075 */;
 
 require = fn;
 function MeasureMessage(message) {
@@ -142,7 +142,7 @@ function MeasureMessageAfterEntrance(entranceAnimationDriver) {
   return tmp13;
 }
 get_ActivityIndicator = fn(17);
-({ findNodeHandle: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ findNodeHandle: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 let ThemeTypes = fn(1072).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);

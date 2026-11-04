@@ -1,10 +1,10 @@
-// === Module 11961: useStableSafeAreaInsets ===
+// === Module 12020: useStableSafeAreaInsets ===
 
-// Module 11961 (useStableSafeAreaInsets)
+// Module 12020 (useStableSafeAreaInsets)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1496 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1627 */;
 import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1639 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 11382 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 11432 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

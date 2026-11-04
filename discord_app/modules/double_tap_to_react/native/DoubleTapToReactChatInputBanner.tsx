@@ -1,6 +1,6 @@
-// === Module 13969: DoubleTapToReactChatInputBanner ===
+// === Module 14055: DoubleTapToReactChatInputBanner ===
 
-// Module 13969 (DoubleTapToReactChatInputBanner)
+// Module 14055 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,15 +8,15 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6148 */;
-import usePreviousDefault from "usePrevious" /* 6852 */;
-import Pressables from "Pressables" /* 7106 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import EmojiDefault from "Emoji" /* 7420 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8553 */;
-import renderChannelBadge from "renderChannelBadge" /* 13970 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6163 */;
+import usePreviousDefault from "usePrevious" /* 6867 */;
+import Pressables from "Pressables" /* 7121 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import EmojiDefault from "Emoji" /* 7436 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8570 */;
+import renderChannelBadge from "renderChannelBadge" /* 14056 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -49,29 +49,29 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
     url = emoji.url;
   }
   obj4.src = url;
-  const items1 = [React7(EmojiDefault, obj4), React7(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
+  const items1 = [React6(EmojiDefault, obj4), React6(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
   obj3.children = items1;
   const items2 = [closure_1_10(View, obj3), , ];
   const obj6 = { style: tmp.text, children: null };
   const obj7 = { style: tmp.header, children: null };
-  const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj8 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj8.children = intl.string(util.t["6RUX7d"]);
-  const items3 = [React7(Text_Text.Text, obj8), React7(renderChannelBadge.NewBadge, {})];
+  const items3 = [React6(Text_Text.Text, obj8), React6(renderChannelBadge.NewBadge, {})];
   obj7.children = items3;
   const items4 = [closure_1_10(View, obj7), ];
-  const obj9 = { variant: "text-xs/medium", color: "text-default", children: null };
+  const obj9 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj9.children = intl2.format(util.t["5/l2rR"], {
     emojiName: emoji.name,
     emojiNameHook(children, arg1) {
-      return closure_1_9(require("Text/Text").Text, { variant: "text-xs/semibold", color: "text-strong", children }, arg1);
+      return closure_1_9(require("Text/Text").Text, { variant: "body-xs/semibold", color: "text-strong", children }, arg1);
     },
     tapHereHook(children, arg1) {
-      return closure_1_9(require("Text/Text").Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
+      return closure_1_9(require("Text/Text").Text, { variant: "body-xs/medium", color: "text-brand", children }, arg1);
     }
   });
-  items4[1] = React7(Text_Text.Text, obj9);
+  items4[1] = React6(Text_Text.Text, obj9);
   obj6.children = items4;
   items2[1] = closure_1_10(View, obj6);
   const obj11 = { hitSlop: 8, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
@@ -79,8 +79,8 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   obj11.accessibilityLabel = intl3.string(util.t.cpT0Cq);
   obj11.onPress = emoji.handleDismissBanner;
   obj11.style = tmp.closeButton;
-  obj11.children = React7(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
-  items2[2] = React7(Pressables.PressableOpacity, obj11);
+  obj11.children = React6(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
+  items2[2] = React6(Pressables.PressableOpacity, obj11);
   obj2.children = items2;
   return closure_1_10(View, obj2);
 }
@@ -152,7 +152,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14071, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14157, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     _undefined2(ContentDismissActionType.TAKE_ACTION);
   }, items4);
   const callback2 = obj.useCallback(() => {
@@ -270,7 +270,7 @@ export function DoubleTapToReactChatInputBanner(channel) {
         let tmp = null;
         if (visibleContent === dismissible_content.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
           const obj = { channel, emoji: memo1, markAsDismissed };
-          tmp = React7(DoubleTapToReactChatInputBannerAnimationContainer, obj);
+          tmp = React6(DoubleTapToReactChatInputBannerAnimationContainer, obj);
         }
         return tmp;
       };

@@ -1,10 +1,10 @@
-// === Module 8653: useDiscountOffer ===
+// === Module 8670: useDiscountOffer ===
 
-// Module 8653 (useDiscountOffer)
+// Module 8670 (useDiscountOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import UserOfferStore from "UserOfferStore" /* 7754 */;
+import UserOfferStore from "UserOfferStore" /* 7770 */;
 
 const require = globalThis.__r;
 
@@ -109,7 +109,7 @@ export default function useDiscountOffer(arg0, arg1) {
                           num = time - Date.now();
                         }
                         if (closure_1_0 != null) {
-                          closure_1_0.start(num, /* F136493 */ function() { ... });
+                          closure_1_0.start(num, /* F137163 */ function() { ... });
                         }
                       }
                     });

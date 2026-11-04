@@ -1,18 +1,18 @@
-// === Module 18934: GroupDMNitroCapBanner ===
+// === Module 19037: GroupDMNitroCapBanner ===
 
-// Module 18934 (GroupDMNitroCapBanner)
+// Module 19037 (GroupDMNitroCapBanner)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 15447 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 15534 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const locations = [0.0065, 0.5046, 0.9196];
 const createStyles = fn(5141);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 }, pill: null, iconContainer: null, trailing: null, gradientClip: null, border: null, text: null };

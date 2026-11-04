@@ -1,9 +1,9 @@
-// === Module 16524: voiceSettingsEventHandlers ===
+// === Module 16616: voiceSettingsEventHandlers ===
 
-// Module 16524 (voiceSettingsEventHandlers)
-import VoiceSettingsEventsFactory from "VoiceSettingsEventsFactory" /* 16525 */;
+// Module 16616 (voiceSettingsEventHandlers)
+import VoiceSettingsEventsFactory from "VoiceSettingsEventsFactory" /* 16617 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/native/events/voiceSettingsEventHandlers.tsx");
 
-export const voiceSettingsEventHandlers = VoiceSettingsEventsFactory(fn(11949).getDeprecatedVoiceSettings, fn(11949).getVoiceSettings);
+export const voiceSettingsEventHandlers = VoiceSettingsEventsFactory(fn(12008).getDeprecatedVoiceSettings, fn(12008).getVoiceSettings);

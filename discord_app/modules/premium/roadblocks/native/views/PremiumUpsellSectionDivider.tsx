@@ -1,19 +1,19 @@
-// === Module 10152: PremiumUpsellSectionDivider ===
+// === Module 10200: PremiumUpsellSectionDivider ===
 
-// Module 10152 (PremiumUpsellSectionDivider)
+// Module 10200 (PremiumUpsellSectionDivider)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10153 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10201 */;
 import noop from "module_19" /* 19 */;
 
-const LockIcon2 = LockIcon(8791);
+const LockIcon2 = LockIcon(8808);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
   let num;
@@ -71,7 +71,7 @@ export default function PremiumUpsellSectionDivider(arg0) {
   if (position !== obj2.START) {
     items[2] = tmp8;
     obj.children = items;
-    return React5(React4, obj);
+    return metroImportDefault(React4, obj);
   } else {
     const obj4 = { style: lock.lockContainer, children: null };
     let obj5 = { style: lock.lockGradient, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: useTier0UpsellContent ? tmp6.PREMIUM_TIER_0 : tmp6.PREMIUM_TIER_2_TRI_COLOR, children: null };

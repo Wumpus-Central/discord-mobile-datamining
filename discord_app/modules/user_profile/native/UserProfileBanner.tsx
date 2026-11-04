@@ -1,7 +1,7 @@
-// === Module 8943: UserProfileBanner ===
+// === Module 8960: UserProfileBanner ===
 
-// Module 8943 (UserProfileBanner)
-import BannerDefault from "Banner" /* 8951 */;
+// Module 8960 (UserProfileBanner)
+import BannerDefault from "Banner" /* 8968 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const BANNER_HEIGHT = fn(1072).BANNER_HEIGHT;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ bannerContainer: { position: "relative" }, gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" } });
 const size = fn(2);
@@ -93,7 +93,7 @@ export default function UserProfileBanner(displayProfile) {
     if (displayProfile != null) {
       banner = displayProfile.banner;
     }
-    return React5(BannerDefault, obj, banner);
+    return metroImportDefault(BannerDefault, obj, banner);
   }
   const tmp2Result = displayProfile(bannerSafeArea[7]);
   const obj3 = { style: tmp.bannerContainer, children: null };

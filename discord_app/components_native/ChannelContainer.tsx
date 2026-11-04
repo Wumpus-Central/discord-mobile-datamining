@@ -1,12 +1,12 @@
-// === Module 11140: ChannelContainer ===
+// === Module 11188: ChannelContainer ===
 
-// Module 11140 (ChannelContainer)
+// Module 11188 (ChannelContainer)
 import initialize from "initialize" /* 504 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
-import useChatLayoutDefault from "useChatLayout" /* 5324 */;
-import common_NotificationsDefault from "common/Notifications" /* 11141 */;
-import useChannelStylesShared from "useChannelStylesShared" /* 11330 */;
+import useChatLayoutDefault from "useChatLayout" /* 5325 */;
+import common_NotificationsDefault from "common/Notifications" /* 11189 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 11380 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 5074 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -51,7 +51,7 @@ export function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(11329)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(11379)(stateFromStoresObject.voiceChannelId);
   }
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
@@ -66,9 +66,9 @@ export function ChannelContainer(children) {
     isPrivateResult = channel.isPrivate();
   }
   dependencyMap = isPrivateResult;
-  const tmp8 = channelId(6852)(isPrivateResult);
+  const tmp8 = channelId(6867)(isPrivateResult);
   noop = tmp8;
-  const tmp9 = channelId(6852)(channelId);
+  const tmp9 = channelId(6867)(channelId);
   closure_4 = tmp9;
   const items2 = [channelId, tmp9, isPrivateResult, tmp8];
   const effect = noop.useEffect(() => {
@@ -104,13 +104,13 @@ export function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(channelId(11331), obj4);
+      tmp15 = closure_10(channelId(11381), obj4);
     }
   }
   const items3 = [tmp15, children.children, ];
   if (tmp5) {
     const obj5 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(11347), obj5);
+    tmp5 = closure_10(channelId(11397), obj5);
   }
   items3[2] = tmp5;
   obj3.children = items3;

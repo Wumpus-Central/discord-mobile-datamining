@@ -1,13 +1,13 @@
-// === Module 11550: UserProfileStackedActionSheet ===
+// === Module 11600: UserProfileStackedActionSheet ===
 
-// Module 11550 (UserProfileStackedActionSheet)
+// Module 11600 (UserProfileStackedActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7128 */;
-import Form from "Form" /* 8301 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7143 */;
+import Form from "Form" /* 8317 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,7 +50,7 @@ export default function UserProfileStackedActionSheet(onBack) {
     obj3.children = React4(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" });
     tmp4Result = React4(Pressables.PressableOpacity, obj3);
   }
-  const items1 = [tmp4Result, React4(Text_Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
+  const items1 = [tmp4Result, React4(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
   if (tmp4Result2) {
     const obj4 = { style: tmp2.headerSpacer };
     tmp4Result2 = React4(View, obj4);
@@ -86,7 +86,7 @@ export function UserProfileStackedActionSheetList(data) {
     index = index.index;
     return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
   };
-  return closure_4(data(7414).BottomSheetFlashList, obj);
+  return closure_4(data(7430).BottomSheetFlashList, obj);
 }
 export function UserProfileStackedActionSheetSectionList(renderItem) {
   renderItem = renderItem.renderItem;
@@ -102,5 +102,5 @@ export function UserProfileStackedActionSheetSectionList(renderItem) {
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return React4(Form.FormDivider, { style: divider.divider });
   };
-  return closure_4(renderItem(5398).BottomSheetSectionList, obj);
+  return closure_4(renderItem(5400).BottomSheetSectionList, obj);
 }

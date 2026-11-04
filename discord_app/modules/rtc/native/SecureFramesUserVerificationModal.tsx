@@ -1,13 +1,13 @@
-// === Module 9398: SecureFramesUserVerificationModal ===
+// === Module 9415: SecureFramesUserVerificationModal ===
 
-// Module 9398 (SecureFramesUserVerificationModal)
+// Module 9415 (SecureFramesUserVerificationModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9393 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9396 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9410 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9413 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9394);
+const SecureFramesConstants = fn(9411);
 ({ USER_VERIFICATION_CHUNK_SIZE: closure_8, USER_VERIFICATION_LENGTH: closure_9, USER_VERIFICATION_NUM_COLUMNS: closure_10, USER_VERIFIED_TOAST_KEY: closure_11 } = SecureFramesConstants);
 const Constants = fn(1072);
 ({ AnalyticsLocations: closure_12, AnalyticsSections: map1 } = Constants);
@@ -96,15 +96,15 @@ export default function SecureFramesUserVerificationModal(userId) {
         const obj = { userId, channelId };
         const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
         if (enabled) {
-          let userVerificationDeeplink = showShareActionSheet(9393).getUserVerificationDeeplink(userId, tmp);
-          const showShareActionSheetResult = showShareActionSheet(9393);
+          let userVerificationDeeplink = showShareActionSheet(9410).getUserVerificationDeeplink(userId, tmp);
+          const showShareActionSheetResult = showShareActionSheet(9410);
         } else {
           userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
         }
-        showShareActionSheet = showShareActionSheet(9059).showShareActionSheet;
+        showShareActionSheet = showShareActionSheet(9076).showShareActionSheet;
         obj2 = { message: userVerificationDeeplink };
         showShareActionSheet(obj2, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-        const showShareActionSheetResult1 = showShareActionSheet(9059);
+        const showShareActionSheetResult1 = showShareActionSheet(9076);
       }
     }
   }, items4);
@@ -153,7 +153,7 @@ export default function SecureFramesUserVerificationModal(userId) {
     obj14.accessibilityLabel = intl2.string(tmp2(tmp3[19]).t.RDE0Sc);
     obj14.androidRippleConfig = ANDROID_FOREGROUND_RIPPLE;
     obj14.onPress = callback2;
-    const obj15 = { variant: "text-md/semibold", color: "text-brand", children: null };
+    const obj15 = { variant: "body-md/semibold", color: "text-brand", children: null };
     const intl3 = tmp2(tmp3[19]).intl;
     obj15.children = intl3.string(tmp2(tmp3[19]).t.RDE0Sc);
     obj14.children = closure_15(tmp2(tmp3[29]).Text, obj15);
@@ -167,7 +167,7 @@ export default function SecureFramesUserVerificationModal(userId) {
   const intl4 = tmp2(tmp3[19]).intl;
   obj17.children = intl4.string(userId(name[19]).t["/WPGnF"]);
   const items11 = [closure_15(userId(name[29]).Text, obj17), ];
-  const obj18 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
+  const obj18 = { style: tmp.subtitle, variant: "body-md/medium", color: "text-default", children: null };
   const intl5 = tmp2(tmp3[19]).intl;
   obj18.children = intl5.format(userId(name[19]).t.oc2kce, { username: name });
   items11[1] = closure_15(userId(name[29]).Text, obj18);
@@ -194,7 +194,7 @@ export default function SecureFramesUserVerificationModal(userId) {
   obj19.children = items12;
   items10[2] = closure_16(readableSecureFramesFingerprint, obj19);
   const obj23 = { style: tmp.footer, children: null };
-  const items13 = [closure_15(userId(name[29]).Text, { style: tmp.footerText, variant: "text-xs/normal", color: "text-default", children: memo1 }), ];
+  const items13 = [closure_15(userId(name[29]).Text, { style: tmp.footerText, variant: "body-xs/normal", color: "text-default", children: memo1 }), ];
   let loading = null == readableSecureFramesFingerprint;
   if (!loading) {
     loading = isPersistentSecureFramesFingerprint.loading;

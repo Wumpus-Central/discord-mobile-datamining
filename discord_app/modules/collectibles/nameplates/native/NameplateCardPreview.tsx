@@ -1,13 +1,13 @@
-// === Module 9648: NameplateCardPreview ===
+// === Module 9667: NameplateCardPreview ===
 
-// Module 9648 (NameplateCardPreview)
+// Module 9667 (NameplateCardPreview)
 import _mod17 from "module_17" /* 17 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import utils from "utils" /* 2113 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9641 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9660 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size_mod from "module_2" /* 2 */;

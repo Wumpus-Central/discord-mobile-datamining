@@ -1,23 +1,23 @@
-// === Module 17120: BountiesModalContent ===
+// === Module 17212: BountiesModalContent ===
 
-// Module 17120 (BountiesModalContent)
+// Module 17212 (BountiesModalContent)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import timingPresets from "timingPresets" /* 5380 */;
-import QuestContent from "QuestContent" /* 6906 */;
-import AdCreativeType from "AdCreativeType" /* 6908 */;
-import QuestDataUtils from "QuestDataUtils" /* 7966 */;
-import AnalyticsActions from "AnalyticsActions" /* 7986 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14793 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 14815 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14830 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17064 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import timingPresets from "timingPresets" /* 5381 */;
+import QuestContent from "QuestContent" /* 6921 */;
+import AdCreativeType from "AdCreativeType" /* 6923 */;
+import QuestDataUtils from "QuestDataUtils" /* 7982 */;
+import AnalyticsActions from "AnalyticsActions" /* 8002 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 14873 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 14895 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14910 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17156 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7969 */;
+import BountyStore from "BountyStore" /* 7985 */;
 
 require = fn;
 function BountiesModalContentInner(bounty) {
@@ -188,7 +188,7 @@ function BountiesModalContentInner(bounty) {
                 do {
                   let _Math = Math;
                   let result = arr[num3] / tmp4;
-                  let rounded = Math.round(result * (closure_1_0(14641).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
+                  let rounded = Math.round(result * (closure_1_0(14721).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
                   let obj2 = { time: num4, type: "continuous", duration: rounded, intensity: num + tmp5 * (num3 / 5), sharpness: 0.5 };
                   let arr4 = items.push(obj2);
                   sum = num4 + rounded;
@@ -198,8 +198,8 @@ function BountiesModalContentInner(bounty) {
                 items.push({ time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 });
                 arr = Array.from({ length: 6 }, (arg0, arg1) => 6 - arg1);
                 const obj3 = { time: sum + 100, type: "transient", intensity: 1, sharpness: 0.95 };
-                closure_1_0(5385).triggerPattern(items);
-                const tmp7Result = closure_1_0(5385);
+                closure_1_0(5386).triggerPattern(items);
+                const tmp7Result = closure_1_0(5386);
               })();
             }
           }
@@ -412,9 +412,9 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_17(height(sharedValue[42]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestConstants = fn(6901);
+const QuestConstants = fn(6916);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(17068);
+const BountiesModalConstants = fn(17160);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);

@@ -1,16 +1,16 @@
-// === Module 13847: tryInjectMessage ===
+// === Module 13933: tryInjectMessage ===
 
-// Module 13847 (tryInjectMessage)
+// Module 13933 (tryInjectMessage)
 import FlagUtils from "FlagUtils" /* 1398 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
-import createMessageDefault from "createMessage" /* 10449 */;
-import ChannelRecipientPrivateUserDataFlags from "ChannelRecipientPrivateUserDataFlags" /* 13848 */;
-import PrivateChannelRecipientActionCreatorsDefault from "PrivateChannelRecipientActionCreators" /* 13849 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
+import createMessageDefault from "createMessage" /* 10497 */;
+import ChannelRecipientPrivateUserDataFlags from "ChannelRecipientPrivateUserDataFlags" /* 13934 */;
+import PrivateChannelRecipientActionCreatorsDefault from "PrivateChannelRecipientActionCreators" /* 13935 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const Constants = fn(1072);
-({ MessageFlags: closure_4, MessageStates: hasOwnProperty, MessageTypes: metroRequire } = Constants);
+({ MessageFlags: closure_4, MessageStates: hasOwnProperty, MessageTypes: closure_6 } = Constants);
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/tryInjectMessage.tsx");

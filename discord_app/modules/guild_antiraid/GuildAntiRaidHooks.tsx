@@ -1,17 +1,17 @@
-// === Module 11158: GuildAntiRaidHooks ===
+// === Module 11206: GuildAntiRaidHooks ===
 
-// Module 11158 (GuildAntiRaidHooks)
+// Module 11206 (GuildAntiRaidHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8606 */;
-import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 11159 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8623 */;
+import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 11207 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11143 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11191 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ function getFirstGuildIncidentId(guildId) {
   }
   return null;
 }
-let closure_10 = fn(8607).IncidentAlertModeratorPermissions;
+let closure_10 = fn(8624).IncidentAlertModeratorPermissions;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_11, GuildFeatures: closure_12 } = Constants);
 const size = fn(2);
@@ -78,7 +78,7 @@ export function useFirstGuildIncidentId() {
       let tmp16 = tmp15;
       if (null != tmp15) {
         let tmp18 = stateFromStores1;
-        let obj8 = stateFromStores1(8606);
+        let obj8 = stateFromStores1(8623);
         if (obj8.hasDetectedActivity(tmp16)) {
           let obj5 = BigFlagUtilsAll;
           let obj6 = PermissionUtilsAll;
@@ -89,7 +89,7 @@ export function useFirstGuildIncidentId() {
             return nextResult.id;
           }
         } else {
-          let tmp18Result = tmp18(8606);
+          let tmp18Result = tmp18(8623);
         }
       }
     }
@@ -126,8 +126,8 @@ export function useGuildIncidentsState(id) {
   const obj3 = { shouldShowIncidentActions: stateFromStores, incidentData: stateFromStores1, isUnderLockdown: null };
   let isUnderLockdownResult = null != stateFromStores1;
   if (isUnderLockdownResult) {
-    isUnderLockdownResult = tmp(8606).isUnderLockdown(stateFromStores1);
-    const tmpResult = tmp(8606);
+    isUnderLockdownResult = tmp(8623).isUnderLockdown(stateFromStores1);
+    const tmpResult = tmp(8623);
   }
   obj3.isUnderLockdown = isUnderLockdownResult;
   return obj3;

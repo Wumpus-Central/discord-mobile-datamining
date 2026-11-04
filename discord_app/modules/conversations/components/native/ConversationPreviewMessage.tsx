@@ -1,10 +1,10 @@
-// === Module 10015: ConversationPreviewMessage ===
+// === Module 10063: ConversationPreviewMessage ===
 
-// Module 10015 (ConversationPreviewMessage)
+// Module 10063 (ConversationPreviewMessage)
 import nativeDefault from "native" /* 575 */;
 import DateUtils from "DateUtils" /* 4963 */;
-import RowGeneratorDefault from "RowGenerator" /* 8501 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8834 */;
+import RowGeneratorDefault from "RowGenerator" /* 8518 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8851 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
@@ -16,7 +16,7 @@ function modifyRow(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderReplies: false, renderReactions: false });
 const createStyles = fn(5141);
@@ -80,7 +80,7 @@ export default function ConversationPreviewMessage(message) {
       const obj8 = { size: "small", color: null, colors: null };
     }
     const items5 = [tmp24Result, ];
-    const obj9 = { variant: "text-md/medium", lineClamp: 1, style: {}, gradientColors: null, children: null };
+    const obj9 = { variant: "body-md/medium", lineClamp: 1, style: {}, gradientColors: null, children: null };
     let tmp27;
     if (isRoleStyleAndRoleColorsEligibleForERC) {
       tmp27 = processColorStringsArray;
@@ -90,7 +90,7 @@ export default function ConversationPreviewMessage(message) {
     items5[1] = closure_7(tmp2(tmp3[15]).Text, obj9);
     obj7.children = items5;
     items4[1] = closure_8(View, obj7);
-    const obj11 = { variant: "text-xs/normal", color: "text-muted", lineClamp: 1, style: tmp.headerTimestamp, children: memo };
+    const obj11 = { variant: "body-xs/normal", color: "text-muted", lineClamp: 1, style: tmp.headerTimestamp, children: memo };
     items4[2] = closure_7(tmp2(tmp3[15]).Text, obj11);
     obj5.children = items4;
     const items6 = [closure_8(View, obj5), ];

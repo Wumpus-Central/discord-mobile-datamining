@@ -1,6 +1,6 @@
-// === Module 7029: MemberVerificationAlertSuccess ===
+// === Module 7044: MemberVerificationAlertSuccess ===
 
-// Module 7029 (MemberVerificationAlertSuccess)
+// Module 7044 (MemberVerificationAlertSuccess)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -8,7 +8,7 @@ import GuildStore from "GuildStore" /* 5012 */;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ alert: { marginTop: 120 }, header: { marginTop: 40, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" }, illustrationContainer: { position: "absolute", display: "flex", flexDirection: "column", alignItems: "center", left: 0, right: 0, top: -220 }, illustration: { height: 246, width: 240 } });
 const size = fn(2);
@@ -54,7 +54,7 @@ export default function MemberVerificationAlertSuccess(guildId) {
     const obj6 = { guildName: stateFromStores.name };
     obj5.children = intl2.format(tmp3(tmp4[8]).t["7hhNEn"], obj6);
     items2[1] = closure_6(tmp3(tmp4[11]).Heading, obj5);
-    const obj7 = { style: tmp2.text, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj7 = { style: tmp2.text, variant: "body-sm/medium", color: "text-default", children: null };
     const intl3 = tmp3(tmp4[8]).intl;
     obj7.children = intl3.string(tmp3(tmp4[8]).t.nwpqyc);
     items2[2] = closure_6(tmp3(tmp4[11]).Text, obj7);

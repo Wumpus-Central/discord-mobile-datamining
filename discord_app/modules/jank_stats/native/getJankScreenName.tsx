@@ -1,9 +1,9 @@
-// === Module 18206: getJankScreenName ===
+// === Module 18303: getJankScreenName ===
 
-// Module 18206 (getJankScreenName)
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import getScreenAnalyticsName from "getScreenAnalyticsName" /* 18208 */;
-import JankScreenConstants from "JankScreenConstants" /* 18207 */;
+// Module 18303 (getJankScreenName)
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import getScreenAnalyticsName from "getScreenAnalyticsName" /* 18305 */;
+import JankScreenConstants from "JankScreenConstants" /* 18304 */;
 import size from "module_2" /* 2 */;
 
 function resolveScreenName(items) {
@@ -86,7 +86,7 @@ function resolveScreenName(items) {
   }
   return name3;
 }
-({ CHANNEL_DETAILS_SCREEN: c2, CREATE_THREAD_SCREEN: c3, EMPTY_CHAT_SCREEN: closure_4, SURFACE_SEPARATOR: hasOwnProperty, UNKNOWN_SCREEN: metroRequire } = JankScreenConstants);
+({ CHANNEL_DETAILS_SCREEN: c2, CREATE_THREAD_SCREEN: c3, EMPTY_CHAT_SCREEN: closure_4, SURFACE_SEPARATOR: hasOwnProperty, UNKNOWN_SCREEN: closure_6 } = JankScreenConstants);
 const set = new Set(["root"]);
 const channel = "channel";
 const tabs = "tabs";
@@ -212,7 +212,7 @@ export default function getJankScreenName() {
         obj7.chatScreens = mapped.join(",");
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "h:mm:ssa" };
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "(function pnpm_useGestureHandlerTs1(event){let[state,State,gestureSource,source,onStart]=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;})" };
           let obj10 = obj9;
         } else {
           obj10 = { screen: resolveScreenName(focused), expectedScreenIds: null, focusedRoute: null, chatScreens: null };

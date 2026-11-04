@@ -1,9 +1,9 @@
-// === Module 18579: HomeDrawerAddServerRow ===
+// === Module 18680: HomeDrawerAddServerRow ===
 
-// Module 18579 (HomeDrawerAddServerRow)
+// Module 18680 (HomeDrawerAddServerRow)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 18527 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 18622 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,9 +13,9 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawer
 
 export function HomeDrawerAddServerRowExpandedChildren() {
   const obj = { title: null, subtitle: null };
-  const obj2 = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj2 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.l5WIbf);
-  obj.title = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: null });
+  obj.title = jsx(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: null });
   return jsx(HomeDrawerShared.HomeDrawerSharedItem, { title: null, subtitle: null });
 }

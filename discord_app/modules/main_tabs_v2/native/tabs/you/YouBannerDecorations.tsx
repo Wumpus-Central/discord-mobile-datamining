@@ -1,16 +1,16 @@
-// === Module 9756: YouBannerDecorations ===
+// === Module 9774: YouBannerDecorations ===
 
-// Module 9756 (YouBannerDecorations)
+// Module 9774 (YouBannerDecorations)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
-import QuestTypes from "QuestTypes" /* 6904 */;
-import useTrialOffer from "useTrialOffer" /* 7753 */;
-import PromotionsHooks from "PromotionsHooks" /* 9757 */;
-import tracking_Tracking from "tracking/Tracking" /* 9809 */;
-import QuestUtils from "QuestUtils" /* 9810 */;
+import QuestTypes from "QuestTypes" /* 6919 */;
+import useTrialOffer from "useTrialOffer" /* 7769 */;
+import PromotionsHooks from "PromotionsHooks" /* 9775 */;
+import Tracking from "Tracking" /* 9827 */;
+import QuestUtils from "QuestUtils" /* 9828 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -151,7 +151,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   const items2 = [tmp15, navigateToSettings, tmp24];
   const items3 = [navigateToPremium];
   const callback = obj4.useCallback(() => {
-    const result = tracking_Tracking.trackYouTabSettingsIconPress({ isBadged });
+    const result = Tracking.trackYouTabSettingsIconPress({ isBadged });
     navigateToSettings();
     let tmp5 = closure_7;
     if (closure_7) {
@@ -166,7 +166,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   }, items2);
   const items4 = [showBadge, dismissBadge];
   const callback1 = obj4.useCallback(() => {
-    const result = tracking_Tracking.trackYouTabNitroIconPress();
+    const result = Tracking.trackYouTabNitroIconPress();
     navigateToPremium();
   }, items3);
   let tmp28 = null;

@@ -1,10 +1,10 @@
-// === Module 16149: EmptyState ===
+// === Module 16238: EmptyState ===
 
-// Module 16149 (EmptyState)
+// Module 16238 (EmptyState)
 import nativeDefault from "native" /* 575 */;
 import shared from "shared" /* 5148 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ export default function EmptyState(Illustration) {
     const items5 = [tmp23, ];
     let tmp25 = null;
     if (null != body) {
-      const obj6 = { variant: "text-md/medium", color: "text-muted", maxFontSizeMultiplier: 2, style: null, children: null };
+      const obj6 = { variant: "body-md/medium", color: "text-muted", maxFontSizeMultiplier: 2, style: null, children: null };
       const items6 = [tmp.emptyBody, tmp18];
       obj6.style = items6;
       obj6.children = body;

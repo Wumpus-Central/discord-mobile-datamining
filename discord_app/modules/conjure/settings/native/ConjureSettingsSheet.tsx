@@ -1,14 +1,14 @@
-// === Module 12263: ConjureSettingsSheet ===
+// === Module 12324: ConjureSettingsSheet ===
 
-// Module 12263 (ConjureSettingsSheet)
+// Module 12324 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10980 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10995 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 6964 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 11028 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 11043 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 6979 */;
 
 const require = fn;
 function SettingsTabStrip(tabs) {
@@ -23,12 +23,12 @@ function SettingsTabStrip(tabs) {
   }, []);
   const memo = noop.useMemo(() => tabs.map((id) => {
     obj = { id, label: null, page: null };
-    const intl = tabs(_undefined[17]).intl;
+    const intl = tabs(_undefined[16]).intl;
     obj.label = intl.string(closure_1_14[id]);
     return obj;
   }), items);
   const tmp = setActiveIndex(noop.useState(0), 2);
-  obj = tabs(9108);
+  obj = tabs(9125);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -50,26 +50,24 @@ function SettingsTabStrip(tabs) {
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(12306).Tabs, obj4);
+    let tmp10Result = closure_12(tmp5(12371).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp10Result = closure_12(tmp5(9342).SegmentedControl, obj5);
+    tmp10Result = closure_12(tmp5(9359).SegmentedControl, obj5);
   }
   obj3.children = tmp10Result;
   return closure_12(View, obj3);
 }
 const View = fn(17).View;
-let ConjureProjectStore = fn(6964);
+let ConjureProjectStore = fn(6979);
 ({ canPublishProject: closure_9, isProjectOwner: closure_10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { project: _modDef3995.W0eQfN, app: _modDef3995.lFaJYF, secrets: _modDef3995.vDpCPU, model: _modDef3995.Rs3qc9, linked: _modDef3995.fBEHdq, experimental: _modDef3995["0Pe9uw"] };
 const createStyles = fn(5141);
-let closure_15 = createStyles.createStyles((paddingBottom) => {
-  obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
-  return obj;
-});
+let obj3 = { container: { gap: nativeDefault.space.PX_16 } };
+let closure_15 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/native/ConjureSettingsSheet.tsx");
 
@@ -89,17 +87,17 @@ export default function ConjureSettingsSheet(projectId) {
   let found;
   let saving;
   let canSave;
-  obj = stateFromStores1;
   ({ guildId, initialTab, scopeKeys, note, notifyAgent, onSaved, isPreview } = projectId);
   const ref = noop.useRef(null);
-  let tmp2 = canSave(ref(stateFromStores1[11])({ includeKeyboardHeight: true }).insets.bottom);
+  let obj16 = stateFromStores1;
+  const tmp = canSave();
   items = [memo];
   const items1 = [projectId];
-  const stateFromStores = projectId(stateFromStores1[12]).useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
-  let obj3 = projectId(stateFromStores1[12]);
+  const stateFromStores = projectId(stateFromStores1[11]).useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
+  let obj3 = projectId(stateFromStores1[11]);
   const items2 = [isScoped];
   const items3 = [projectId];
-  stateFromStores1 = projectId(stateFromStores1[12]).useStateFromStores(items2, () => {
+  stateFromStores1 = projectId(stateFromStores1[11]).useStateFromStores(items2, () => {
     const modelSettings = ConjureModelSettingsStore.getModelSettings(projectId);
     let tierSettings;
     if (modelSettings != null) {
@@ -107,33 +105,33 @@ export default function ConjureSettingsSheet(projectId) {
     }
     return null != tierSettings;
   }, items3);
-  let obj4 = projectId(stateFromStores1[12]);
+  let obj4 = projectId(stateFromStores1[11]);
   const items4 = [closure_7];
   const items5 = [projectId];
-  let tmp8 = null != stateFromStores;
-  const stateFromStores2 = projectId(stateFromStores1[12]).useStateFromStores(items4, () => "open" === ConjureConnectionStore.getConnState(projectId), items5);
-  if (tmp8) {
-    tmp8 = closure_10(stateFromStores);
+  let tmp7 = null != stateFromStores;
+  const stateFromStores2 = projectId(stateFromStores1[11]).useStateFromStores(items4, () => "open" === ConjureConnectionStore.getConnState(projectId), items5);
+  if (tmp7) {
+    tmp7 = closure_10(stateFromStores);
   }
-  asyncGeneratorStep = tmp8;
-  let tmp10 = null != stateFromStores;
-  if (tmp10) {
-    tmp10 = loaded(stateFromStores);
+  asyncGeneratorStep = tmp7;
+  let tmp9 = null != stateFromStores;
+  if (tmp9) {
+    tmp9 = loaded(stateFromStores);
   }
-  _slicedToArray = tmp10;
+  _slicedToArray = tmp9;
   let guild_id;
-  let obj5 = projectId(stateFromStores1[12]);
+  let obj5 = projectId(stateFromStores1[11]);
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
   if (guild_id == null) {
     guild_id = guildId;
   }
-  const tmpResultResult = ref(obj[13])(projectId, guild_id, { readOnly: !tmp8 });
-  noop = tmpResultResult;
-  const tmp15 = ref(obj[14])({ projectId, scopeKeys, note, notifyAgent, onSaved, isPreview });
+  const tmp12Result = ref(obj16[12])(projectId, guild_id, { readOnly: !tmp7 });
+  noop = tmp12Result;
+  const tmp15 = ref(obj16[13])({ projectId, scopeKeys, note, notifyAgent, onSaved, isPreview });
   closure_6 = tmp15;
-  const tmp16 = ref(obj[15])(projectId, tmp10);
+  const tmp16 = ref(obj16[14])(projectId, tmp9);
   closure_7 = tmp17;
   isScoped = tmp15.isScoped;
   loaded = tmp15.loaded;
@@ -142,8 +140,8 @@ export default function ConjureSettingsSheet(projectId) {
     const tmp18 = tmp15.valueCount > 0 || 0 === tmp15.secretCount;
   }
   closure_10 = tmp19;
-  const items6 = [tmp10, tmp16.callers.length > 0, stateFromStores1, tmp8, loaded, tmp15.secretCount > 0];
-  memo = obj2.useMemo(() => {
+  const items6 = [tmp9, tmp16.callers.length > 0, stateFromStores1, tmp7, loaded, tmp15.secretCount > 0];
+  memo = obj.useMemo(() => {
     let tmp2 = closure_3;
     if (!closure_3) {
       tmp2 = closure_4;
@@ -182,15 +180,15 @@ export default function ConjureSettingsSheet(projectId) {
   if (found == null) {
     found = memo[0];
   }
-  saving = tmp8;
-  if (tmp8) {
-    saving = tmpResultResult.saving;
+  saving = tmp7;
+  if (tmp7) {
+    saving = tmp12Result.saving;
   }
   if (!saving) {
     saving = tmp15.saving;
   }
-  let hasItem = tmp8;
-  if (!tmp8) {
+  let hasItem = tmp7;
+  if (!tmp7) {
     hasItem = isScoped;
   }
   if (!hasItem) {
@@ -203,15 +201,15 @@ export default function ConjureSettingsSheet(projectId) {
   if (!canSave) {
     let canSave2 = !isScoped;
     if (!isScoped) {
-      canSave2 = tmp8;
+      canSave2 = tmp7;
     }
     if (canSave2) {
-      canSave2 = tmpResultResult.canSave;
+      canSave2 = tmp12Result.canSave;
     }
     canSave = canSave2;
   }
-  const items8 = [tmp15, canSave, tmp8, tmpResultResult, saving, isScoped, found, memo];
-  const callback = obj2.useCallback(asyncGeneratorStep(async () => {
+  const items8 = [tmp15, canSave, tmp7, tmp12Result, saving, isScoped, found, memo];
+  const callback = obj.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -309,14 +307,14 @@ export default function ConjureSettingsSheet(projectId) {
       }
     }
   }), items8);
-  const obj7 = { ref, startExpanded: true, keyboardShouldPersistTaps: "always", dismissAccessibilityLabel: null, header: null, children: null };
-  const intl = tmp4(obj[17]).intl;
-  obj7.dismissAccessibilityLabel = intl.string(ref(obj[8]).bA4VU5);
-  const intl2 = tmp4(obj[17]).intl;
-  const tmpResult2 = ref(obj[8]);
-  const obj8 = {
-    title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe),
-    trailing: closure_12(projectId(obj[19]).ActionSheetCloseButton, {
+  const obj6 = { ref, startExpanded: true, keyboardShouldPersistTaps: "always", dismissAccessibilityLabel: null, header: null, children: null };
+  const intl = tmp3(obj16[16]).intl;
+  obj6.dismissAccessibilityLabel = intl.string(ref(obj16[8]).bA4VU5);
+  const intl2 = tmp3(obj16[16]).intl;
+  const tmp11Result = ref(obj16[8]);
+  const obj7 = {
+    title: intl2.string(isScoped ? tmp11Result["jZjP+I"] : tmp11Result.I2XSKe),
+    trailing: closure_12(projectId(obj16[18]).ActionSheetCloseButton, {
       onPress() {
         const current = ref.current;
         let closeActionSheetResult;
@@ -327,16 +325,16 @@ export default function ConjureSettingsSheet(projectId) {
       }
     })
   };
-  obj7.header = closure_12(projectId(obj[18]).BottomSheetTitleHeader, obj8);
-  const obj10 = { style: tmp2.container, children: null };
+  obj6.header = closure_12(projectId(obj16[17]).BottomSheetTitleHeader, obj7);
+  const obj9 = { style: tmp.container, children: null };
   let tmp25Result = null;
   if (!isScoped) {
     tmp25Result = null;
     if (memo.length > 1) {
       tmp25Result = null;
       if (null != found) {
-        const obj11 = { tabs: memo, selected: found, onSelect: tmp21 };
-        tmp25Result = tmp25(SettingsTabStrip, obj11, memo.join(","));
+        const obj10 = { tabs: memo, selected: found, onSelect: tmp21 };
+        tmp25Result = tmp25(SettingsTabStrip, obj10, memo.join(","));
       }
     }
   }
@@ -351,12 +349,12 @@ export default function ConjureSettingsSheet(projectId) {
   if (!isScoped) {
     tmp27Result = null;
     if ("project" === found) {
-      const obj12 = { spacing: tmp(obj[10]).space.PX_24, children: null };
-      const items10 = [tmpResultResult.fields, ];
-      const obj13 = { projectId, canEdit: tmp10 };
-      items10[1] = tmp25(tmp(obj[21]), obj13, projectId);
-      obj12.children = items10;
-      tmp27Result = tmp27(tmp4(obj[20]).Stack, obj12);
+      const obj11 = { spacing: tmp11(obj16[10]).space.PX_24, children: null };
+      const items10 = [tmp12Result.fields, ];
+      const obj12 = { projectId, canEdit: tmp9 };
+      items10[1] = tmp25(tmp11(obj16[20]), obj12, projectId);
+      obj11.children = items10;
+      tmp27Result = tmp27(tmp3(obj16[19]).Stack, obj11);
     }
   }
   items9[2] = tmp27Result;
@@ -364,8 +362,8 @@ export default function ConjureSettingsSheet(projectId) {
   if (!isScoped) {
     tmp25Result5 = null;
     if ("linked" === found) {
-      const obj14 = { linkedApps: tmp16 };
-      tmp25Result5 = tmp25(tmp(obj[22]), obj14);
+      const obj13 = { linkedApps: tmp16 };
+      tmp25Result5 = tmp25(tmp11(obj16[21]), obj13);
     }
   }
   items9[3] = tmp25Result5;
@@ -373,7 +371,7 @@ export default function ConjureSettingsSheet(projectId) {
   if (!isScoped) {
     experimentalFields = null;
     if ("experimental" === found) {
-      experimentalFields = tmpResultResult.experimentalFields;
+      experimentalFields = tmp12Result.experimentalFields;
     }
   }
   items9[4] = experimentalFields;
@@ -389,8 +387,8 @@ export default function ConjureSettingsSheet(projectId) {
   if (!isScoped) {
     tmp25Result6 = null;
     if ("model" === found) {
-      const obj15 = { projectId };
-      tmp25Result6 = tmp25(tmp4(obj[23]).ConjureModelSettingsContent, obj15);
+      const obj14 = { projectId };
+      tmp25Result6 = tmp25(tmp3(obj16[22]).ConjureModelSettingsContent, obj14);
     }
   }
   items9[6] = tmp25Result6;
@@ -399,33 +397,33 @@ export default function ConjureSettingsSheet(projectId) {
     tmp37 = null;
     if (null == found) {
       if (stateFromStores2) {
-        const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
-        const intl3 = tmp4(obj[17]).intl;
-        obj16.children = intl3.string(tmp(obj[8]).lJJayk);
-        let tmp25Result7 = tmp25(tmp4(obj[24]).Text, obj16);
+        const obj15 = { variant: "body-sm/normal", color: "text-muted", children: null };
+        const intl3 = tmp3(obj16[16]).intl;
+        obj15.children = intl3.string(tmp11(obj16[8]).lJJayk);
+        let tmp25Result7 = tmp25(tmp3(obj16[23]).Text, obj15);
       } else {
-        tmp25Result7 = tmp25(tmp4(obj[25]).ActivityIndicator, {});
+        tmp25Result7 = tmp25(tmp3(obj16[24]).ActivityIndicator, {});
       }
     }
   }
   items9[7] = tmp37;
   if (!hasItem) {
     items9[8] = null;
-    obj10.children = items9;
-    obj7.children = tmp27(tmp28, obj10);
-    return tmp25(tmp4(obj[16]).ActionSheet, obj7);
+    obj9.children = items9;
+    obj6.children = tmp27(tmp28, obj9);
+    return tmp25(tmp3(obj16[15]).ActionSheet, obj6);
   } else {
-    const intl4 = tmp4(obj[17]).intl;
+    const intl4 = tmp3(obj16[16]).intl;
     if (isScoped) {
-      let A7dQd9 = tmp(obj[8]).A7dQd9;
+      let A7dQd9 = tmp11(obj16[8]).A7dQd9;
     } else {
-      A7dQd9 = tmp4(obj[17]).t["R3BPH+"];
+      A7dQd9 = tmp3(obj16[16]).t["R3BPH+"];
     }
-    obj = { text: intl4.string(A7dQd9), variant: "primary", loading: saving, disabled: !canSave, onPress: callback };
-    tmp25(tmp4(obj[26]).Button, obj);
+    obj16 = { text: intl4.string(A7dQd9), variant: "primary", loading: saving, disabled: !canSave, onPress: callback };
+    tmp25(tmp3(obj16[25]).Button, obj16);
   }
-  const obj6 = { readOnly: !tmp8 };
-  const obj9 = {
+  const obj2 = { readOnly: !tmp7 };
+  const obj8 = {
     onPress() {
       const current = ref.current;
       let closeActionSheetResult;
@@ -435,7 +433,7 @@ export default function ConjureSettingsSheet(projectId) {
       return closeActionSheetResult;
     }
   };
+  const tmp12 = ref(obj16[12]);
   tmp28 = closure_6;
-  const tmpResult = ref(obj[13]);
 };
 export const CONJURE_SETTINGS_SHEET_KEY = "ConjureSettingsSheet";

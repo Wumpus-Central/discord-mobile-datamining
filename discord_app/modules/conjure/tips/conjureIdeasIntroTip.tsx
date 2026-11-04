@@ -1,7 +1,7 @@
-// === Module 12766: conjureIdeasIntroTip ===
+// === Module 12847: conjureIdeasIntroTip ===
 
-// Module 12766 (conjureIdeasIntroTip)
-import conjureBotPermissionsTip from "conjureBotPermissionsTip" /* 12763 */;
+// Module 12847 (conjureIdeasIntroTip)
+import conjureBotPermissionsTip from "conjureBotPermissionsTip" /* 12844 */;
 import size from "module_2" /* 2 */;
 
 function resolveIdeasIntroTip(agentIdle) {

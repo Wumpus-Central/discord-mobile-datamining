@@ -1,23 +1,23 @@
-// === Module 19019: YouScreen ===
+// === Module 19122: YouScreen ===
 
-// Module 19019 (YouScreen)
+// Module 19122 (YouScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import Pressables from "Pressables" /* 7106 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8882 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8942 */;
-import YouBannerDecorations from "YouBannerDecorations" /* 9756 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 18632 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import Pressables from "Pressables" /* 7121 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8899 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8959 */;
+import YouBannerDecorations from "YouBannerDecorations" /* 9774 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 18733 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7896 */;
+import UserProfileStore from "UserProfileStore" /* 7912 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16733 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16825 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7021 */;
 import UserStore from "UserStore" /* 1385 */;
 import module_1652_mod from "module_1652" /* 1652 */;
 
@@ -503,13 +503,13 @@ function UnconnectedYouScreen(arg0) {
   ref1 = noop.useRef(Date.now());
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(18598);
+({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
+const YouConstants = fn(18699);
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YouConstants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 let closure_17 = fn(1074).CollectiblesMobileShopScreen;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
-const Constants = fn(7497);
+const Constants = fn(7513);
 ({ BANNER_ASPECT_RATIO: closure_19, UserProfileThemeTypes: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);

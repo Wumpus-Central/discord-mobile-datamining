@@ -1,9 +1,9 @@
-// === Module 12245: BadgeIcon ===
+// === Module 12306: BadgeIcon ===
 
-// Module 12245 (BadgeIcon)
+// Module 12306 (BadgeIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod12246 from "module_12246" /* 12246 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod12307 from "module_12307" /* 12307 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BadgeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12246, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12307, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

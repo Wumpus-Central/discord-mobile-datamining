@@ -1,10 +1,10 @@
-// === Module 16007: ToastEntity ===
+// === Module 16097: ToastEntity ===
 
-// Module 16007 (ToastEntity)
+// Module 16097 (ToastEntity)
 import nativeDefault from "native" /* 575 */;
 import utils_StringUtils from "utils/StringUtils" /* 2156 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,8 +13,8 @@ function ToastEntityContent(arg0) {
   const type = entity.type;
   if ("emoji" === type) {
     if ("unicode" in entity) {
-      const obj2 = { variant: "text-lg/normal", color: "text-default", style: styles.glyph, lineClamp: 1, children: entity.unicode };
-      let tmp14Result = jsx(Text_Text.Text, { variant: "text-lg/normal", color: "text-default", style: styles.glyph, lineClamp: 1, children: entity.unicode });
+      const obj2 = { variant: "body-lg/normal", color: "text-default", style: styles.glyph, lineClamp: 1, children: entity.unicode };
+      let tmp14Result = jsx(Text_Text.Text, { variant: "body-lg/normal", color: "text-default", style: styles.glyph, lineClamp: 1, children: entity.unicode });
     } else {
       const obj3 = { style: styles.image, source: null, accessibilityLabel: null };
       const obj4 = { uri: entity.src };
@@ -32,11 +32,11 @@ function ToastEntityContent(arg0) {
   } else if ("guild" === type) {
     if (null == entity.src) {
       const acronym = utils_StringUtils.getAcronym(entity.name);
-      let str2 = "text-md/semibold";
+      let str2 = "body-md/semibold";
       if (acronym.length > 2) {
-        let str3 = "text-xs/semibold";
+        let str3 = "body-xs/semibold";
         if (acronym.length <= 4) {
-          str3 = "text-sm/semibold";
+          str3 = "body-sm/semibold";
         }
         str2 = str3;
       }

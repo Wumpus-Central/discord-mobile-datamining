@@ -1,12 +1,12 @@
-// === Module 10088: Tooltip ===
+// === Module 10136: Tooltip ===
 
-// Module 10088 (Tooltip)
+// Module 10136 (Tooltip)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import useTooltipPositionDefault from "useTooltipPosition" /* 10089 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import useTooltipPositionDefault from "useTooltipPosition" /* 10137 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
 const createStyles = fn(5141);
 let obj2 = { container: { position: "absolute", alignItems: "center" }, horizontalContainer: { flexDirection: "row" }, textContainer: { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, maxWidth: 150, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, text: { textAlign: "center" }, arrow: null, bottomArrow: null, topArrow: null, leftArrow: null, rightArrow: null };
@@ -174,7 +174,7 @@ export function Tooltip(targetMeasurements) {
     }
   }
   const items9 = [tmp36, , ];
-  const obj9 = { style: null, children: timestampProducer(Text_Text.Text, { style: tmp.text, variant: "text-xs/semibold", color: "text-overlay-light", children: label }) };
+  const obj9 = { style: null, children: timestampProducer(Text_Text.Text, { style: tmp.text, variant: "body-xs/semibold", color: "text-overlay-light", children: label }) };
   const items10 = [tmp.textContainer, animatedStyle];
   obj9.style = items10;
   items9[1] = timestampProducer(_modDef1652.View, obj9);
@@ -202,5 +202,5 @@ export function Tooltip(targetMeasurements) {
   }
   items9[2] = tmp39Result;
   obj4.children = items9;
-  return React5(Pressable, obj4);
+  return metroImportDefault(Pressable, obj4);
 }

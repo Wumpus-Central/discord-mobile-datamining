@@ -1,11 +1,11 @@
-// === Module 11617: BadgeProgressSection ===
+// === Module 11668: BadgeProgressSection ===
 
-// Module 11617 (BadgeProgressSection)
+// Module 11668 (BadgeProgressSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 11589 */;
-import BadgeDetailsUtils from "BadgeDetailsUtils" /* 11605 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 11639 */;
+import BadgeDetailsUtils from "BadgeDetailsUtils" /* 11656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,7 +57,7 @@ export default function BadgeProgressSection(arg0) {
     num = num5;
   }
   const obj2 = { style: tmp.section, children: null };
-  const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj3 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["2m/g2c"]);
   items = [React4(Text_Text.Text, obj3), ];
@@ -71,7 +71,7 @@ export default function BadgeProgressSection(arg0) {
   const obj6 = { style: tmp.content, children: null };
   let tmp9Result4 = null != helperText;
   if (tmp9Result4) {
-    const obj7 = { variant: "text-sm/medium", "aria-hidden": null != threshold, children: helperText };
+    const obj7 = { variant: "body-sm/medium", "aria-hidden": null != threshold, children: helperText };
     tmp9Result4 = React4(Text_Text.Text, obj7);
   }
   const items2 = [tmp9Result4, ];

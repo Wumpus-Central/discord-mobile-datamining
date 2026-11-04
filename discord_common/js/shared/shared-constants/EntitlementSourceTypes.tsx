@@ -1,6 +1,6 @@
-// === Module 7705: EntitlementSourceTypes ===
+// === Module 7721: EntitlementSourceTypes ===
 
-// Module 7705 (EntitlementSourceTypes)
+// Module 7721 (EntitlementSourceTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { INVOICE_ITEMS: new Set([5, 10]) };

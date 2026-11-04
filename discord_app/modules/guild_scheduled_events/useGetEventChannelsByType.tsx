@@ -1,7 +1,7 @@
-// === Module 9146: useGetEventChannelsByType ===
+// === Module 9163: useGetEventChannelsByType ===
 
-// Module 9146 (useGetEventChannelsByType)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9148 */;
+// Module 9163 (useGetEventChannelsByType)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9165 */;
 import StageInstanceStore from "StageInstanceStore" /* 4995 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
@@ -52,8 +52,8 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
   }
 }
 const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
-const PermissionsConstants = fn(9147);
-({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: metroRequire, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_7 } = PermissionsConstants);
+const PermissionsConstants = fn(9164);
+({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_6, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: metroImportDefault } = PermissionsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");
 
@@ -61,7 +61,7 @@ export function useCanCreateEventInStageChannel(isGuildStageVoice) {
   _require = isGuildStageVoice;
   items = [PermissionStore];
   const items1 = [isGuildStageVoice];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(React5, closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(metroImportDefault, closure_0), items1);
   const obj = require("initialize");
   const items2 = [StageInstanceStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => StageInstanceStore.getStageInstanceByChannel(isGuildStageVoice.id));

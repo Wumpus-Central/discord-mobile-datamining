@@ -1,26 +1,26 @@
-// === Module 9151: StageChannelUpsell ===
+// === Module 9168: StageChannelUpsell ===
 
-// Module 9151 (StageChannelUpsell)
+// Module 9168 (StageChannelUpsell)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import Pressables from "Pressables" /* 7106 */;
-import _modDef8483 from "module_8483" /* 8483 */;
-import _modDef9153 from "module_9153" /* 9153 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import Pressables from "Pressables" /* 7121 */;
+import _modDef8499 from "module_8499" /* 8499 */;
+import _modDef9170 from "module_9170" /* 9170 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const createChannelRecord = fn(4994).createChannelRecord;
-let closure_6 = fn(9152).useStageChannelUpsellCardStore;
-let closure_7 = fn(9091).CREATE_GUILD_EVENT_MODAL_KEY;
+let closure_6 = fn(9169).useStageChannelUpsellCardStore;
+let closure_7 = fn(9108).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -40,24 +40,24 @@ export default function StageChannelUpsell(arg0) {
   if (!tmp2[0]) {
     let obj = { style: tmp.container, children: null };
     let obj2 = { onPress: tmp3, accessibilityRole: "button", style: tmp.closeContainer, children: null };
-    let obj3 = { source: _modDef8483 };
+    let obj3 = { source: _modDef8499 };
     obj2.children = closure_9(native.Icon, obj3);
     items = [closure_9(Pressables.PressableOpacity, obj2), , , , , ];
-    const obj4 = { source: _modDef9153, style: tmp.image };
+    const obj4 = { source: _modDef9170, style: tmp.image };
     items[1] = closure_9(FastImageDefault, obj4);
-    const obj5 = { style: tmp.header, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj5 = { style: tmp.header, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
     obj5.children = intl.string(util.t.Sx8Ezi);
     items[2] = closure_9(Text_Text.Text, obj5);
-    const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj6 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
     const intl2 = util.intl;
     obj6.children = intl2.string(util.t.JUzPhm);
     items[3] = closure_9(Text_Text.Text, obj6);
-    const obj7 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj7 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
     const intl3 = util.intl;
     const obj8 = {
       suggestionsHook(children, arg1) {
-          return closure_1_9(guildId(5747).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+          return closure_1_9(guildId(5761).Text, { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
         }
     };
     obj7.children = intl3.format(util.t.Vh7rP7, obj8);
@@ -68,7 +68,7 @@ export default function StageChannelUpsell(arg0) {
     obj10.text = intl4.string(util.t["X/3SyA"]);
     obj10.onPress = function handleCreateChannel() {
       ModalActionCreatorsDefault.popWithKey(closure_7);
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9154, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9171, dependencyMap.paths), {
         guildId,
         channelType: ChannelTypes.GUILD_STAGE_VOICE,
         onChannelCreated(id) {

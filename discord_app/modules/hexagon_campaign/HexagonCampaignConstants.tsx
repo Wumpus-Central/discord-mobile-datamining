@@ -4,8 +4,8 @@
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import user from "user" /* 1393 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1404 */;
-import DisplayNameFont from "DisplayNameFont" /* 1405 */;
+import DisplayNameFont from "DisplayNameFont" /* 1404 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1405 */;
 import HexagonCampaignDates from "HexagonCampaignDates" /* 5167 */;
 import size from "module_2" /* 2 */;
 

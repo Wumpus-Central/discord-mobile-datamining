@@ -1,7 +1,7 @@
-// === Module 13910: ForumPostTitle ===
+// === Module 13996: ForumPostTitle ===
 
-// Module 13910 (ForumPostTitle)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 13996 (ForumPostTitle)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,5 +26,5 @@ export default function ForumPostTitle(arg0) {
     str = "mobile-text-heading-primary";
   }
   const tmp = closure_3();
-  return jsx(Text_Text.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: closure_3().title, onTextLayout, children: title });
+  return jsx(Text_Text.Text, { variant: "body-md/semibold", color: str, lineClamp, ellipsizeMode, style: closure_3().title, onTextLayout, children: title });
 };

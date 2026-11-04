@@ -1,14 +1,14 @@
-// === Module 19679: LoginRequiredActionManager ===
+// === Module 19784: LoginRequiredActionManager ===
 
-// Module 19679 (LoginRequiredActionManager)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6860 */;
+// Module 19784 (LoginRequiredActionManager)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6875 */;
 import UserStore from "UserStore" /* 1385 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 4983 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 const require = fn;
 const Constants = fn(1072);
-({ LoginRequiredActions: hasOwnProperty, Routes: metroRequire, UserSettingsSections: closure_7 } = Constants);
+({ LoginRequiredActions: hasOwnProperty, Routes: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 class LoginRequiredActionManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -34,8 +34,8 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
                   }
                 }
         };
-        currentUser(7687).openUserSettings(obj3);
-        const obj2 = currentUser(7687);
+        currentUser(7703).openUserSettings(obj3);
+        const obj2 = currentUser(7703);
       }
     }
     if (result1) {

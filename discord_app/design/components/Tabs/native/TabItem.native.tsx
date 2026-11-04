@@ -1,11 +1,11 @@
-// === Module 12307: TabItem ===
+// === Module 12372: TabItem ===
 
-// Module 12307 (TabItem)
+// Module 12372 (TabItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import spring_spring from "spring/spring" /* 5757 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import spring_spring from "spring/spring" /* 5771 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -79,7 +79,7 @@ function TabItemCount(arg0) {
   TabItemNativeTsx2.__workletHash = 15126685663834;
   TabItemNativeTsx2.__initData = tmp6;
   const animatedStyle = _mod1652.useAnimatedStyle(TabItemNativeTsx2);
-  const obj3 = { style: null, children: hasOwnProperty(Text_Text.Text, { animated: true, variant: "text-sm/medium", style: useAnimatedTextStyle({ index, activeIndex, pressed, variant }), lineClamp: 1, children: count }) };
+  const obj3 = { style: null, children: hasOwnProperty(Text_Text.Text, { animated: true, variant: "body-sm/medium", style: useAnimatedTextStyle({ index, activeIndex, pressed, variant }), lineClamp: 1, children: count }) };
   const items3 = [tmp.count, animatedStyle];
   obj3.style = items3;
   return hasOwnProperty(module_1652.View, obj3);
@@ -87,7 +87,7 @@ function TabItemCount(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = module_1652.createAnimatedComponent(Pressable);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let closure_9 = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
@@ -156,7 +156,7 @@ export function TabItem(arg0) {
   }
   obj2.accessibilityHint = formatToPlainStringResult;
   obj2.animatedProps = animatedProps;
-  const items3 = [closure_5(require("Text/Text").Text, { animated: true, variant: "text-sm/semibold", style: tmp9, lineClamp: 1, children: label }), , ];
+  const items3 = [closure_5(require("Text/Text").Text, { animated: true, variant: "body-sm/semibold", style: tmp9, lineClamp: 1, children: label }), , ];
   let tmp14Result = null;
   if (null != count) {
     const obj4 = { count, index, activeIndex, pressed, variant };
@@ -165,7 +165,7 @@ export function TabItem(arg0) {
   items3[1] = tmp14Result;
   let tmp14Result2 = null;
   if (null != indicatorDot) {
-    const obj5 = { style: tmp2.indicatorDot, children: closure_5(tmp3(9619).IndicatorDot, {}) };
+    const obj5 = { style: tmp2.indicatorDot, children: closure_5(tmp3(9638).IndicatorDot, {}) };
     tmp14Result2 = closure_5(closure_4, obj5);
   }
   items3[2] = tmp14Result2;

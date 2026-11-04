@@ -1,17 +1,17 @@
-// === Module 15789: RTCConnectionDesyncStore ===
+// === Module 15877: RTCConnectionDesyncStore ===
 
-// Module 15789 (RTCConnectionDesyncStore)
+// Module 15877 (RTCConnectionDesyncStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import CachedEntriesMapDefault from "CachedEntriesMap" /* 2162 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6973 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 5800 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5923 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6988 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 5814 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 require = fn;
 function retryFailedUsers() {
@@ -35,7 +35,7 @@ function retryFailedUsers() {
           const tmp23 = new VoiceStateRecord(obj4);
           let tmp6 = guildId;
           if (guildId == null) {
-            tmp6 = React7;
+            tmp6 = React6;
           }
           const result = closure_12.set(user.id, makeSortedVoiceState(tmp23, tmp6, user.id));
           const obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp23, voicePlatform: null, speaking: false, playingSoundboard: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: NicknameUtilsDefault.getName(guildId, channelId, user), userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
@@ -49,10 +49,10 @@ function retryFailedUsers() {
     return c2;
   }
 }
-const makeSortedVoiceState = fn(5887).makeSortedVoiceState;
+const makeSortedVoiceState = fn(5901).makeSortedVoiceState;
 const Constants = fn(1072);
 ({ ME: closure_9, RTCConnectionStates: closure_10 } = Constants);
-const ParticipantTypes = fn(5801).ParticipantTypes;
+const ParticipantTypes = fn(5815).ParticipantTypes;
 new CachedEntriesMapDefault();
 const tmp3 = new CachedEntriesMapDefault();
 const set = new Set();
@@ -150,7 +150,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault,
             const tmp21 = new VoiceStateRecord(obj4);
             let tmp2 = closure_1_0;
             if (closure_1_0 == null) {
-              tmp2 = React7;
+              tmp2 = React6;
             }
             const result = closure_12.set(user.id, makeSortedVoiceState(tmp21, tmp2, user.id));
             const obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp21, voicePlatform: null, speaking: false, playingSoundboard: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: NicknameUtilsDefault.getName(closure_1_0, channelId, user), userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };

@@ -1,20 +1,20 @@
-// === Module 15606: GuildPowerupsMarketingHeader ===
+// === Module 15693: GuildPowerupsMarketingHeader ===
 
-// Module 15606 (GuildPowerupsMarketingHeader)
+// Module 15693 (GuildPowerupsMarketingHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _modDef2699 from "module_2699" /* 2699 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14195 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14218 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 15607 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 15608 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 14281 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14304 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 15694 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 15695 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5353 */;
 
 require = fn;
 function PerkText(children) {
-  return jsx(Text_Text.Text, { color: "text-overlay-light", variant: "text-sm/semibold", children: children.powerup.title });
+  return jsx(Text_Text.Text, { color: "text-overlay-light", variant: "body-sm/semibold", children: children.powerup.title });
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -53,7 +53,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
     }
     if (0 !== num) {
       let obj = { style: tmp.container, children: null };
-      const obj2 = { style: tmp.text, variant: "text-sm/semibold", children: null };
+      const obj2 = { style: tmp.text, variant: "body-sm/semibold", children: null };
       const intl = guild(1113).intl;
       let str2 = "";
       if (null != arr) {
@@ -78,7 +78,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       }
       const obj7 = { perks: str2 };
       obj2.children = intl.format(_modDef2699["7lwpzR"], obj7);
-      obj.children = jsx(guild(5747).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+      obj.children = jsx(guild(5761).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

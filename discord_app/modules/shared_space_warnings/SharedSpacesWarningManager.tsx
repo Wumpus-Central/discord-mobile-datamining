@@ -1,14 +1,14 @@
-// === Module 19767: SharedSpacesWarningManager ===
+// === Module 19883: SharedSpacesWarningManager ===
 
-// Module 19767 (SharedSpacesWarningManager)
+// Module 19883 (SharedSpacesWarningManager)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 15766 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 19768 */;
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 15854 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 19884 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15763 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15851 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
 function handleChannelSelect(channelId) {
@@ -24,7 +24,7 @@ function handleChannelSelect(channelId) {
         if (tmp) {
           let blockedUserWarningDismissed = channel.blockedUserWarningDismissed;
           if (!blockedUserWarningDismissed) {
-            blockedUserWarningDismissed = React5(channelId);
+            blockedUserWarningDismissed = metroImportDefault(channelId);
           }
           if (!blockedUserWarningDismissed) {
             const obj2 = { channelId, blockedUserIds: found, ignoredUserIds: found1 };
@@ -48,7 +48,7 @@ function handleAppStateChanged(state) {
           items = [];
           HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
           const set = new Set(items);
-          if (!React6(set)) {
+          if (!React5(set)) {
             const items1 = [];
             HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
             const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, items1[0]);
@@ -62,8 +62,8 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(15765);
-({ isBlockedWarningQueued: hasOwnProperty, dequeueBlockWarning: metroRequire, gdmBlockedWarningInCooldown: closure_7, voiceBlockedWarningInCooldownForUsers: closure_8 } = SharedSpacesWarningStore);
+const SharedSpacesWarningStore = fn(15853);
+({ isBlockedWarningQueued: hasOwnProperty, dequeueBlockWarning: closure_6, gdmBlockedWarningInCooldown: metroImportDefault, voiceBlockedWarningInCooldownForUsers: closure_8 } = SharedSpacesWarningStore);
 const prototype = function SharedSpacesWarningManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CHANNEL_SELECT: handleChannelSelect, APP_STATE_UPDATE: handleAppStateChanged };

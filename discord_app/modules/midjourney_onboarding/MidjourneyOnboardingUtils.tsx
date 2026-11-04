@@ -1,12 +1,12 @@
-// === Module 15826: MidjourneyOnboardingUtils ===
+// === Module 15914: MidjourneyOnboardingUtils ===
 
-// Module 15826 (MidjourneyOnboardingUtils)
+// Module 15914 (MidjourneyOnboardingUtils)
 import initialize from "initialize" /* 504 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;
-const MidjourneyOnboardingConstants = fn(15827);
+const MidjourneyOnboardingConstants = fn(15915);
 ({ MIDJOURNEY_BOT_ID: closure_4, MIDJOURNEY_GUILD_ID: hasOwnProperty } = MidjourneyOnboardingConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx");

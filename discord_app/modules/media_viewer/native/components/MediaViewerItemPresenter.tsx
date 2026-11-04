@@ -1,9 +1,9 @@
-// === Module 14935: MediaViewerItemPresenter ===
+// === Module 15015: MediaViewerItemPresenter ===
 
-// Module 14935 (MediaViewerItemPresenter)
-import MediaViewerEntranceJankExperiment from "MediaViewerEntranceJankExperiment" /* 14915 */;
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 14933 */;
-import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter" /* 14936 */;
+// Module 15015 (MediaViewerItemPresenter)
+import MediaViewerEntranceJankExperiment from "MediaViewerEntranceJankExperiment" /* 14995 */;
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 15013 */;
+import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter" /* 15016 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = tmp5(1652);

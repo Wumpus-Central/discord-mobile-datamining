@@ -1,19 +1,19 @@
-// === Module 18874: DMRow ===
+// === Module 18977: DMRow ===
 
-// Module 18874 (DMRow)
+// Module 18977 (DMRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import UserUtils from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import _modDef9188 from "module_9188" /* 9188 */;
-import BotTagDefault from "BotTag" /* 9330 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10875 */;
-import _modDef15530 from "module_15530" /* 15530 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import _modDef9205 from "module_9205" /* 9205 */;
+import BotTagDefault from "BotTag" /* 9347 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10923 */;
+import _modDef15617 from "module_15617" /* 15617 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const UserUtilsDefault = UserUtils;
@@ -23,7 +23,7 @@ function FriendPresence(user) {
   user = user.user;
   ({ type, animate, guildId } = user);
   if (type === constants2.PENDING_INCOMING) {
-    const obj2 = { lineClamp: 1, variant: "text-sm/medium", color: "text-default", children: UserUtils.getUserTag(user) };
+    const obj2 = { lineClamp: 1, variant: "body-sm/medium", color: "text-default", children: UserUtils.getUserTag(user) };
     let tmp5 = state(Text_Text.Text, obj2);
   } else {
     const obj = { userId: user.id, guildId, iconStyle: null, textStyle: null, emojiSize: 16, animate: null };
@@ -34,7 +34,7 @@ function FriendPresence(user) {
   return tmp5;
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ActivityIndicator: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -156,14 +156,14 @@ export default noop.memo(function DMRow(user) {
   const items5 = [user, status, isMobileOnline, isVROnline, guildId];
   const memo = obj.useMemo(() => {
     const obj = { style: title.title, children: null };
-    items = [state(Text_Text.Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name }), , , ];
+    items = [state(Text_Text.Text, { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: name }), , , ];
     const bot = user.bot;
     if (!bot) {
       items[1] = bot;
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9188, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9205, disableColor: true };
         obj4.children = state(native.Icon, obj5);
         tmp4Result = state(timestampProducer, obj4);
       }
@@ -171,7 +171,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef15530, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef15617, disableColor: true };
         obj6.children = state(native.Icon, obj7);
         tmp4Result3 = state(timestampProducer, obj6);
       }
@@ -186,7 +186,7 @@ export default noop.memo(function DMRow(user) {
       state(tmp8, obj8);
       const isSystemUserResult = user.isSystemUser();
     }
-    const obj2 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
+    const obj2 = { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: name };
   }, items4);
   const items6 = [user, guildId, type, stateFromStores];
   const memo1 = obj.useMemo(() => {
@@ -206,7 +206,7 @@ export default noop.memo(function DMRow(user) {
     const userTag = UserUtilsDefault.getUserTag(user);
     if (null != userTag) {
       if (!user.isProvisional) {
-        const obj2 = { variant: "text-sm/medium", color: "text-muted", children: userTag };
+        const obj2 = { variant: "body-sm/medium", color: "text-muted", children: userTag };
         let tmp6 = state(Text_Text.Text, obj2);
       }
       return tmp6;

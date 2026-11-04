@@ -1,17 +1,17 @@
-// === Module 16689: ChangeAvatarActionSheet ===
+// === Module 16779: ChangeAvatarActionSheet ===
 
-// Module 16689 (ChangeAvatarActionSheet)
+// Module 16779 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import Form from "Form" /* 8301 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 16592 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import Form from "Form" /* 8317 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 16683 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { nitroWheel: { marginLeft: nativeDefault.space.PX_8 }, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
 const obj3 = { marginLeft: nativeDefault.space.PX_8 };
@@ -86,7 +86,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     const obj10 = { style: tmp.nitroWheel, size: "sm" };
     items3[1] = timestampProducer(NitroWheelIcon.NitroWheelIcon, obj10);
     obj8.children = items3;
-    obj7.label = React5(View, obj8);
+    obj7.label = metroImportDefault(View, obj8);
     const obj11 = { children: null };
     const obj12 = { style: tmp.sublabel, numberOfLines: 3, text: null };
     const intl6 = util.intl;
@@ -99,7 +99,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     obj13.children = timestampProducer(UserProfileUpsellButtonDefault, obj14);
     items4[1] = timestampProducer(View, obj13);
     obj11.children = items4;
-    obj7.subLabel = React5(React6, obj11);
+    obj7.subLabel = metroImportDefault(React5, obj11);
     showAnimatedAvatarUpsell = timestampProducer(TableRow.TableRow, obj7);
     const tmp5Result = UserProfileUpsellButtonDefault;
   }
@@ -131,7 +131,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
   }
   const obj36 = { children: null };
   items2[4] = flag;
-  items1[1] = React5(TableRowGroup.TableRowGroup, { hasIcons: false, children: items2 });
+  items1[1] = metroImportDefault(TableRowGroup.TableRowGroup, { hasIcons: false, children: items2 });
   obj36.children = items1;
-  return React5(ActionSheet.ActionSheet, obj36);
+  return metroImportDefault(ActionSheet.ActionSheet, obj36);
 };

@@ -1,13 +1,13 @@
-// === Module 7914: GuildBasicChannels ===
+// === Module 7930: GuildBasicChannels ===
 
-// Module 7914 (GuildBasicChannels)
+// Module 7930 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
 import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5082 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
@@ -304,7 +304,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "Array" }, done: true };
+                            const obj5 = { value: { v: "r" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

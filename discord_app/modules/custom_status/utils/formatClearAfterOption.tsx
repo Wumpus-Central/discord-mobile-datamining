@@ -1,11 +1,12 @@
-// === Module 11624: formatClearAfterOption ===
+// === Module 11675: formatClearAfterOption ===
 
-// Module 11624 (formatClearAfterOption)
+// Module 11675 (formatClearAfterOption)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import DateUtils from "DateUtils" /* 4963 */;
-import Constants from "Constants" /* 11537 */;
+import Constants from "Constants" /* 11587 */;
+import getClearAfterDurationDefault from "getClearAfterDuration" /* 11591 */;
 import size from "module_2" /* 2 */;
 
 const ClearAfterValues = Constants.ClearAfterValues;
@@ -16,7 +17,8 @@ export default function formatClearAfterOption(type) {
     const intl8 = util.intl;
     const formatToPlainStringResult = intl8.formatToPlainString(util.t.Rea2gR, { hours: 24 });
     const _Date10 = Date;
-    const sum = Date.now() + DurationsDefault.Millis.DAY;
+    const sum = Date.now() + getClearAfterDurationDefault(ClearAfterValues.TODAY);
+    const tmp70 = getClearAfterDurationDefault(ClearAfterValues.TODAY);
     const _Date11 = Date;
     const date = new Date();
     const _Date12 = Date;

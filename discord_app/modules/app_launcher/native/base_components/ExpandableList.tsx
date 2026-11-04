@@ -1,13 +1,13 @@
-// === Module 12575: ExpandableList ===
+// === Module 12656: ExpandableList ===
 
-// Module 12575 (ExpandableList)
+// Module 12656 (ExpandableList)
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import timingPresets from "timingPresets" /* 5380 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import usePreviousDefault from "usePrevious" /* 6852 */;
-import TableRow from "TableRow" /* 7101 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import timingPresets from "timingPresets" /* 5381 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import usePreviousDefault from "usePrevious" /* 6867 */;
+import TableRow from "TableRow" /* 7116 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const _modDef1652 = tmp4(1652);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
 let closure_10 = { code: "(function ExpandableListTsx1(){let[expanded,collapsedListHeight,remainingListHeight]=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();})" };
@@ -171,12 +171,12 @@ export default function ExpandableList(onExpand) {
   }
   items10[1] = tmp25Result;
   obj2.children = items10;
-  const items11 = [React5(_modDef1652.View, obj2), ];
+  const items11 = [metroImportDefault(_modDef1652.View, obj2), ];
   if (!showsExpandCTAOverride) {
     const obj8 = { children: null };
     items11[1] = showsExpandCTAOverride;
     obj8.children = items11;
-    return React5(React6, obj8);
+    return metroImportDefault(React5, obj8);
   } else {
     if (first) {
       const intl2 = util.intl;
@@ -195,7 +195,7 @@ export default function ExpandableList(onExpand) {
       stringResult1 = intl3.format(util.t.gVw57p, {});
     }
     obj12 = { children: null };
-    const obj13 = { color: "text-brand", variant: "text-md/semibold", children: stringResult1 };
+    const obj13 = { color: "text-brand", variant: "body-md/semibold", children: stringResult1 };
     obj11.children = timestampProducer(Text_Text.Text, obj13);
     obj11 = timestampProducer(View, obj11);
     obj10.label = obj11;

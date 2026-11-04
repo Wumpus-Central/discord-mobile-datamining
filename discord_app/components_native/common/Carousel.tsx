@@ -1,9 +1,9 @@
-// === Module 10147: Carousel ===
+// === Module 10195: Carousel ===
 
-// Module 10147 (Carousel)
+// Module 10195 (Carousel)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

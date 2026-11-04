@@ -1,15 +1,15 @@
-// === Module 18904: FileGridItem ===
+// === Module 19007: FileGridItem ===
 
-// Module 18904 (FileGridItem)
-import SearchMediaImage from "SearchMediaImage" /* 18892 */;
+// Module 19007 (FileGridItem)
+import SearchMediaImage from "SearchMediaImage" /* 18995 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, useWindowDimensions: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9958);
-({ FILE_OR_LINK_IMAGE_BUFFER: closure_7, SearchFileTypes: closure_8 } = SearchConstants);
+const SearchConstants = fn(9976);
+({ FILE_OR_LINK_IMAGE_BUFFER: metroImportDefault, SearchFileTypes: closure_8 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -59,8 +59,8 @@ export default noop.memo(function FileGridItem(containerStyle) {
       ({ attachment: obj3.attachment, channelId: obj3.channelId } = data);
       obj4.authorId = data.author.id;
       obj4.scale = scale;
-      obj4.containerHeight = imageStyle.height + React5;
-      obj4.containerWidth = imageStyle.width + React5;
+      obj4.containerHeight = imageStyle.height + metroImportDefault;
+      obj4.containerWidth = imageStyle.width + metroImportDefault;
       obj4.renderFallback = function renderFallback() {
         const obj = { style: null, children: null };
         items = [icon.icon, closure_1_2];
@@ -79,15 +79,15 @@ export default noop.memo(function FileGridItem(containerStyle) {
         obj.children = tmpResult;
         return closure_2_9(scale, obj);
       };
-      return React7(SearchMediaImage.SearchAttachmentMediaImage, obj4);
+      return React6(SearchMediaImage.SearchAttachmentMediaImage, obj4);
     } else if (constants.ATTACHMENT === type) {
       const size = { fileName, containerStyle: imageStyle, height: null, width: null };
       ({ height: obj2.height, width: obj2.width } = imageStyle);
-      return React7(SearchMediaImage.SearchFileMediaImage, size);
+      return React6(SearchMediaImage.SearchFileMediaImage, size);
     } else if (constants.AUDIO === type) {
       const size1 = { containerStyle: imageStyle, height: null, width: null };
       ({ height: obj.height, width: obj.width } = imageStyle);
-      return React7(SearchMediaImage.SearchSoundMediaImage, size1);
+      return React6(SearchMediaImage.SearchSoundMediaImage, size1);
     }
   }, items3);
   const obj3 = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };

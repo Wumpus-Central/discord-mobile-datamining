@@ -1,12 +1,12 @@
-// === Module 10388: GIFPickerItemView ===
+// === Module 10436: GIFPickerItemView ===
 
-// Module 10388 (GIFPickerItemView)
+// Module 10436 (GIFPickerItemView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10377 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10425 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ export default function GIFPickerItemView(onPressGIF) {
   }, items);
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10389, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10437, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
     const obj2 = { item };
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);

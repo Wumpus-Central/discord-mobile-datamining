@@ -1,16 +1,16 @@
-// === Module 5348: GuildThemeResolver ===
+// === Module 5349: GuildThemeResolver ===
 
-// Module 5348 (GuildThemeResolver)
+// Module 5349 (GuildThemeResolver)
 import initialize from "initialize" /* 504 */;
-import GuildThemePresets from "GuildThemePresets" /* 5318 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5357 */;
-import Client from "Client" /* 5372 */;
+import GuildThemePresets from "GuildThemePresets" /* 5319 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5358 */;
+import Client from "Client" /* 5373 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
-import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5349 */;
-import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5351 */;
+import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5350 */;
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5352 */;
 
 const require = globalThis.__r;
 

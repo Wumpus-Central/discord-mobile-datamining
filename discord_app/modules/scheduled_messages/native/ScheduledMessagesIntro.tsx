@@ -1,13 +1,13 @@
-// === Module 14726: ScheduledMessagesIntro ===
+// === Module 14806: ScheduledMessagesIntro ===
 
-// Module 14726 (ScheduledMessagesIntro)
+// Module 14806 (ScheduledMessagesIntro)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AttachmentIcon from "AttachmentIcon" /* 10665 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10958 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12696 */;
-import ScheduleMessageSpotIllustration from "ScheduleMessageSpotIllustration" /* 14133 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AttachmentIcon from "AttachmentIcon" /* 10713 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 11006 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12777 */;
+import ScheduleMessageSpotIllustration from "ScheduleMessageSpotIllustration" /* 14219 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
@@ -23,12 +23,12 @@ function MenuRow(arg0) {
   }
   const obj = { style: items, children: null };
   items[1] = menuRowHighlighted;
-  const items1 = [hasOwnProperty(icon, { size: "sm", color: nativeDefault.colors.TEXT_STRONG }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: label })];
+  const items1 = [hasOwnProperty(icon, { size: "sm", color: nativeDefault.colors.TEXT_STRONG }), hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: label })];
   obj.children = items1;
   return timestampProducer(React4, obj);
 }
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { scrollView: { flex: 1 }, pageContainer: { alignItems: "center", flexGrow: 1, justifyContent: "center", paddingBottom: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_32 }, container: { alignItems: "center" }, upsellImage: null, textContainer: null, text: null, demo: null, menu: null, menuRow: null, menuRowHighlighted: null, menuDivider: null, chatInput: null, plusButton: null };
 let obj2 = { alignItems: "center", flexGrow: 1, justifyContent: "center", paddingBottom: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_32 };
 obj.upsellImage = { marginBottom: nativeDefault.space.PX_16 };
@@ -63,7 +63,7 @@ export default function ScheduledMessagesIntro() {
   const intl = util.intl;
   obj5.children = intl.string(util.t["C/j9NE"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj5), ];
-  const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
+  const obj6 = { variant: "body-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
   const intl2 = util.intl;
   obj6.children = intl2.format(util.t.PqmI8J, {});
   items1[1] = hasOwnProperty(Text_Text.Text, obj6);
@@ -87,7 +87,7 @@ export default function ScheduledMessagesIntro() {
   const obj3 = { style: tmp.upsellImage, children: hasOwnProperty(ScheduleMessageSpotIllustration.ScheduleMessageSpotIllustration, { width: 180, height: 120, accessible: false }) };
   obj13.children = hasOwnProperty(PlusLargeIcon.PlusLargeIcon, { size: "xs", color: nativeDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT });
   const items4 = [hasOwnProperty(React4, obj13), ];
-  const obj15 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj15 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl5 = util.intl;
   obj15.children = intl5.string(util.t.fxxYiB);
   items4[1] = hasOwnProperty(Text_Text.Text, obj15);

@@ -1,6 +1,6 @@
-// === Module 9639: shared/colors ===
+// === Module 9658: shared/colors ===
 
-// Module 9639 (shared/colors)
+// Module 9658 (shared/colors)
 import _modDef671 from "module_671" /* 671 */;
 import size from "module_2" /* 2 */;
 

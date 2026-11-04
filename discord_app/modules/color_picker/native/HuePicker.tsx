@@ -1,9 +1,9 @@
-// === Module 16599: HuePicker ===
+// === Module 16690: HuePicker ===
 
-// Module 16599 (HuePicker)
+// Module 16690 (HuePicker)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
 const createStyles = fn(5141);
 let obj2 = { container: { justifyContent: "center", alignItems: "center" }, containerFullWidth: { alignSelf: "stretch", overflow: "visible" }, slider: null, colorBar: null, colorBarFullWidth: null, colorBarInner: null, colorBarInnerFullWidth: null };

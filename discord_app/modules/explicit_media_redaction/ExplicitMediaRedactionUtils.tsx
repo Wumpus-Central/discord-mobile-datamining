@@ -1,23 +1,23 @@
-// === Module 8811: ExplicitMediaRedactionUtils ===
+// === Module 8828: ExplicitMediaRedactionUtils ===
 
-// Module 8811 (ExplicitMediaRedactionUtils)
+// Module 8828 (ExplicitMediaRedactionUtils)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5813 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
-import MetricEvents from "MetricEvents" /* 6665 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6851 */;
-import SelfModUtils from "SelfModUtils" /* 7586 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 7592 */;
-import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5827 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6675 */;
+import MetricEvents from "MetricEvents" /* 6680 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6861 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6866 */;
+import SelfModUtils from "SelfModUtils" /* 7602 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 7608 */;
+import DevSettingsStore from "DevSettingsStore" /* 5764 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7588 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7604 */;
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7590);
-({ EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire, EXPLICIT_MEDIA_MIN_WIDTH: closure_7, MESSAGE_SCAN_TIMEOUT: closure_8 } = ExplicitMediaRedactionConstants);
+const ExplicitMediaRedactionConstants = fn(7606);
+({ EXPLICIT_MEDIA_MIN_HEIGHT: closure_6, EXPLICIT_MEDIA_MIN_WIDTH: metroImportDefault, MESSAGE_SCAN_TIMEOUT: closure_8 } = ExplicitMediaRedactionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
@@ -233,7 +233,7 @@ export function trackExplicitMediaScanComplete(channelId) {
 export function isObscuredMediaBelowConstraints(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
   if (tmp) {
-    let tmp3 = arg0 <= React5;
+    let tmp3 = arg0 <= metroImportDefault;
     if (!tmp3) {
       tmp3 = arg1 <= timestampProducer;
     }

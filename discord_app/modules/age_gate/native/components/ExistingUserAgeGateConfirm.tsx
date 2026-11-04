@@ -1,6 +1,6 @@
-// === Module 19556: ExistingUserAgeGateConfirm ===
+// === Module 19660: ExistingUserAgeGateConfirm ===
 
-// Module 19556 (ExistingUserAgeGateConfirm)
+// Module 19660 (ExistingUserAgeGateConfirm)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -47,14 +47,14 @@ export default function ExistingUserAgeGateConfirm(age) {
   const obj3 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onConfirm(1113).intl;
   obj3.children = intl.format(onConfirm(1113).t.wumolR, { age: age.age });
-  items = [closure_8(onConfirm(5747).Heading, obj3), , ];
-  const obj4 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+  items = [closure_8(onConfirm(5761).Heading, obj3), , ];
+  const obj4 = { style: tmp.body, variant: "body-md/medium", color: "interactive-text-default", children: null };
   const intl2 = onConfirm(1113).intl;
   const obj5 = { helpURL: null };
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   obj5.helpURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_GATE);
   obj4.children = intl2.format(onConfirm(1113).t.n3QjDE, obj5);
-  items[1] = closure_8(onConfirm(5747).Text, obj4);
+  items[1] = closure_8(onConfirm(5761).Text, obj4);
   const obj7 = { style: tmp.buttonWrapper, children: null };
   const obj8 = { loading: tmp3, disabled: tmp3, text: null, onPress: null, grow: true };
   const intl3 = onConfirm(1113).intl;
@@ -69,8 +69,8 @@ export default function ExistingUserAgeGateConfirm(age) {
     }
     return applyArgumentsResult;
   };
-  obj7.children = closure_8(onConfirm(5754).Button, obj8);
+  obj7.children = closure_8(onConfirm(5768).Button, obj8);
   items[2] = closure_8(View, obj7);
   obj2.children = items;
-  return closure_9(onConfirm(7412).SafeAreaPaddingView, obj2);
+  return closure_9(onConfirm(7428).SafeAreaPaddingView, obj2);
 };

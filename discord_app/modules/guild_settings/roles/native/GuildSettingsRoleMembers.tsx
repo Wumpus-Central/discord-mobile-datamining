@@ -1,16 +1,16 @@
-// === Module 19954: GuildSettingsRoleMembers ===
+// === Module 20070: GuildSettingsRoleMembers ===
 
-// Module 19954 (GuildSettingsRoleMembers)
+// Module 20070 (GuildSettingsRoleMembers)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7418 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7434 */;
 
 require = fn;
 function onMembersLoadFail() {
@@ -28,8 +28,8 @@ let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj2.containerSearchBar = { paddingBottom: nativeDefault.space.PX_12 };
 let obj4 = { paddingBottom: nativeDefault.space.PX_12 };
-obj2.missingMembers = { borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, marginBottom: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-let obj5 = { borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, marginBottom: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
+obj2.missingMembers = { borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO, marginBottom: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
+let obj5 = { borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO, marginBottom: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 obj2.missingMembersText = { marginLeft: nativeDefault.space.PX_8, flex: 1 };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -82,7 +82,7 @@ export default function GuildSettingsRoleMembers(guild) {
           const obj2 = { text: null, variant: "critical" };
           const intl = name(1113).intl;
           obj2.text = intl.string(name(1113).t.fEptJP);
-          found(5832).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
+          found(5846).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
         });
       };
       obj2.confirmColor = guild(locked[15]).ButtonColors.RED;
@@ -95,7 +95,7 @@ export default function GuildSettingsRoleMembers(guild) {
   const callback1 = found.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(19933, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
+    obj2.openLazy(asyncRequireImpl(20049, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;
@@ -140,7 +140,7 @@ export default function GuildSettingsRoleMembers(guild) {
     const obj9 = { style: tmp.missingMembers, children: null };
     const obj10 = { color: role(tmp6[7]).colors.TEXT_LINK, size: "md" };
     const items6 = [closure_8(tmp5(tmp6[24]).CircleInformationIcon, obj10), ];
-    const obj11 = { style: tmp.missingMembersText, variant: "text-sm/medium", children: null };
+    const obj11 = { style: tmp.missingMembersText, variant: "body-sm/medium", children: null };
     let intl = tmp5(tmp6[9]).intl;
     obj11.children = intl.string(tmp5(tmp6[9]).t.RQxHZ8);
     items6[1] = closure_8(tmp5(tmp6[25]).Text, obj11);

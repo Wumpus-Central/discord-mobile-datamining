@@ -1,20 +1,20 @@
-// === Module 14989: Badges ===
+// === Module 15069: Badges ===
 
-// Module 14989 (Badges)
+// Module 15069 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import utils from "utils" /* 8842 */;
-import TrophyIcon from "TrophyIcon" /* 9506 */;
-import GameControllerIcon from "GameControllerIcon" /* 9859 */;
-import RetryIcon from "RetryIcon" /* 11220 */;
-import TimerIcon from "TimerIcon" /* 11778 */;
-import FireIcon from "FireIcon" /* 14856 */;
-import NewUserIcon from "NewUserIcon" /* 14990 */;
-import FlashIcon from "FlashIcon" /* 14992 */;
-import TrendingType from "TrendingType" /* 14994 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import utils from "utils" /* 8859 */;
+import TrophyIcon from "TrophyIcon" /* 9524 */;
+import GameControllerIcon from "GameControllerIcon" /* 9877 */;
+import RetryIcon from "RetryIcon" /* 11270 */;
+import TimerIcon from "TimerIcon" /* 11834 */;
+import FireIcon from "FireIcon" /* 14936 */;
+import NewUserIcon from "NewUserIcon" /* 15070 */;
+import FlashIcon from "FlashIcon" /* 15072 */;
+import TrendingType from "TrendingType" /* 15074 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
 
@@ -29,7 +29,7 @@ class ActiveTimestamp {
     items[0] = entry;
     items[1] = now;
     memo = closure_3.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
-    return jsx(entry(closure_2[8]).Text, { style: global.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children: memo });
+    return jsx(entry(closure_2[8]).Text, { style: global.style, variant: "body-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children: memo });
   }
 }
 function ContentTimestamp(entry) {
@@ -41,7 +41,7 @@ function ContentTimestamp(entry) {
     const obj2 = { entry };
     let tmp6Result = timestampProducer(ActiveTimestamp, obj2);
   } else {
-    const obj3 = { variant: "text-sm/medium", color: obj[noop.useContext(noop, closure_11)].text, children: utils.formatEndedTimestamp(entry, tmp5) };
+    const obj3 = { variant: "body-sm/medium", color: obj[noop.useContext(noop, closure_11)].text, children: utils.formatEndedTimestamp(entry, tmp5) };
     tmp6Result = timestampProducer(Text_Text.Text, obj3);
     const tmpResult = utils;
   }
@@ -52,13 +52,13 @@ function BaseBadge(accessibilityLabel) {
   ({ Icon, iconColor, text } = accessibilityLabel);
   const tmp = closure_10(noop.useContext(closure_11));
   obj = { style: tmp.badgeContainer, accessible: null != accessibilityLabel, accessibilityLabel, children: null };
-  items = [timestampProducer(Icon, { style: tmp.icon, color: iconColor }), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: obj[noop.useContext(noop, closure_11)].text, children: text })];
+  items = [timestampProducer(Icon, { style: tmp.icon, color: iconColor }), timestampProducer(Text_Text.Text, { variant: "body-sm/medium", color: obj[noop.useContext(noop, closure_11)].text, children: text })];
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
@@ -95,7 +95,7 @@ export function GameTimestampBadge(entry) {
   const obj2 = { style: tmp.badgeContainer, children: null };
   items = [timestampProducer(GameControllerIcon.GameControllerIcon, { style: tmp.icon, color: icon }), timestampProducer(ContentTimestamp, { entry })];
   obj2.children = items;
-  return React5(View, obj2);
+  return metroImportDefault(View, obj2);
 }
 export function MarathonBadge(entry) {
   entry = entry.entry;
@@ -194,7 +194,7 @@ export function TopGameBadge(entry) {
     obj4.hours = Math.round(entryDuration / DurationsDefault.Seconds.HOUR);
     items[2] = intl2.format(util.t.SDRHgr, obj4);
     obj3.children = items;
-    obj2.text = React5(React6, obj3);
+    obj2.text = metroImportDefault(React5, obj3);
     obj2.iconColor = obj[noop.useContext(noop, closure_11)].icon;
     return timestampProducer(BaseBadge, obj2);
   }
@@ -204,5 +204,5 @@ export function CustomStatusTimestampBadge(entry) {
   obj = { style: tmp.badgeContainer, children: null };
   items = [timestampProducer(TimerIcon.TimerIcon, { style: tmp.icon, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }), timestampProducer(ContentTimestamp, { entry: entry.entry })];
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }

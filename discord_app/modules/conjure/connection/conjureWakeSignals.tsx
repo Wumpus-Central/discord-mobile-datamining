@@ -1,6 +1,6 @@
-// === Module 11106: conjureWakeSignals ===
+// === Module 11154: conjureWakeSignals ===
 
-// Module 11106 (conjureWakeSignals)
+// Module 11154 (conjureWakeSignals)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1477 */;
 import DiscordNativeDefault from "DiscordNative" /* 4952 */;

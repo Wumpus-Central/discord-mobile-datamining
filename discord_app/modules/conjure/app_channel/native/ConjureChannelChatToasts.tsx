@@ -1,13 +1,13 @@
-// === Module 18833: ConjureChannelChatToasts ===
+// === Module 18936: ConjureChannelChatToasts ===
 
-// Module 18833 (ConjureChannelChatToasts)
+// Module 18936 (ConjureChannelChatToasts)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import UserUtils from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Card from "Card" /* 7103 */;
-import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 18834 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Card from "Card" /* 7118 */;
+import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 18937 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,9 +25,9 @@ function ChatToast(message) {
     const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
     const items1 = [hasOwnProperty(native.Avatar, obj4), ];
     const obj5 = { style: tmp.body, children: null };
-    const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };
+    const obj6 = { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, children: name };
     const items2 = [hasOwnProperty(Text_Text.Text, obj6), ];
-    const obj7 = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: trimmed };
+    const obj7 = { variant: "body-sm/normal", color: "text-default", lineClamp: 1, children: trimmed };
     items2[1] = hasOwnProperty(Text_Text.Text, obj7);
     obj5.children = items2;
     items1[1] = timestampProducer(View, obj5);
@@ -45,7 +45,7 @@ function ChatToast(message) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, alignItems: "flex-end", gap: nativeDefault.space.PX_8 };

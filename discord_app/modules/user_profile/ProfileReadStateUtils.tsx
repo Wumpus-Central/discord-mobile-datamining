@@ -1,7 +1,7 @@
-// === Module 7907: ProfileReadStateUtils ===
+// === Module 7923: ProfileReadStateUtils ===
 
-// Module 7907 (ProfileReadStateUtils)
-import ProfileReadStateConstants from "ProfileReadStateConstants" /* 7908 */;
+// Module 7923 (ProfileReadStateUtils)
+import ProfileReadStateSection from "ProfileReadStateSection" /* 7924 */;
 import size from "module_2" /* 2 */;
 
 function parseTimestamp(arg0) {
@@ -18,26 +18,25 @@ function parseTimestamp(arg0) {
     return tmp3;
   }
 }
-const ProfileReadStateSection = ProfileReadStateConstants.ProfileReadStateSection;
 const result = size.fileFinishedImporting("modules/user_profile/ProfileReadStateUtils.tsx");
 
 export function parseProfileReadState(body) {
   if (null != body) {
     const obj = {};
     const _Object = Object;
-    const values = Object.values(ProfileReadStateSection);
+    const values = Object.values(ProfileReadStateSection.ProfileReadStateSection);
     const iter = values[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp10 = body.sections[nextResult];
+      let tmp11 = body.sections[nextResult];
       let acked_at;
-      let tmp8 = nextResult;
-      if (tmp10 != null) {
-        acked_at = tmp10.acked_at;
+      let tmp9 = nextResult;
+      if (tmp11 != null) {
+        acked_at = tmp11.acked_at;
       }
-      let tmp9Result = parseTimestamp(acked_at);
-      if (null != tmp9Result) {
-        obj[tmp8] = tmp13;
+      let tmp10Result = parseTimestamp(acked_at);
+      if (null != tmp10Result) {
+        obj[tmp9] = tmp14;
       }
       continue;
     }
@@ -105,20 +104,20 @@ export function mergeProfileReadState(profileReadState, ackedAt) {
       const obj = {};
       const merged = Object.assign(profileReadState);
       const _Object = Object;
-      const values = Object.values(ProfileReadStateSection);
-      for (const item10018 of values) {
-        let tmp11 = tmp[item10018];
-        let tmp12 = tmp11;
-        let tmp13 = null != tmp11;
-        if (tmp13) {
-          let num = obj[item10018];
+      const values = Object.values(ProfileReadStateSection.ProfileReadStateSection);
+      for (const item10007 of values) {
+        let tmp4 = tmp[item10007];
+        let tmp5 = tmp4;
+        let tmp6 = null != tmp4;
+        if (tmp6) {
+          let num = obj[item10007];
           if (num == null) {
             num = 0;
           }
-          tmp13 = tmp12 > num;
+          tmp6 = tmp5 > num;
         }
-        if (tmp13) {
-          obj[item10018] = tmp12;
+        if (tmp6) {
+          obj[item10007] = tmp5;
         }
         continue;
       }
@@ -134,10 +133,11 @@ export function shouldAckWishlist(wishlistSettings, profileReadState) {
   if (null == profileReadState) {
     return false;
   } else {
-    let tmp8 = null == tmp10;
+    const tmp11 = profileReadState[ProfileReadStateSection.ProfileReadStateSection.WISHLIST];
+    let tmp8 = null == tmp11;
     if (!tmp8) {
       let flag = false;
-      if (null != tmp10) {
+      if (null != tmp11) {
         let updated_at;
         if (wishlistSettings != null) {
           updated_at = wishlistSettings.updated_at;
@@ -153,8 +153,8 @@ export function shouldAckWishlist(wishlistSettings, profileReadState) {
           }
           tmp3 = tmp6;
         }
-        flag = null != tmp3 && tmp3 > tmp10;
-        const tmp7 = null != tmp3 && tmp3 > tmp10;
+        flag = null != tmp3 && tmp3 > tmp11;
+        const tmp7 = null != tmp3 && tmp3 > tmp11;
       }
       tmp8 = flag;
     }

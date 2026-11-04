@@ -1,10 +1,10 @@
-// === Module 9149: EditGuildEventWhere ===
+// === Module 9166: EditGuildEventWhere ===
 
-// Module 9149 (EditGuildEventWhere)
+// Module 9166 (EditGuildEventWhere)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9096 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9113 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -13,7 +13,7 @@ import PermissionStore from "PermissionStore" /* 5073 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = fn(6975).isGuildScheduledEventActive;
+let closure_8 = fn(6990).isGuildScheduledEventActive;
 const GuildScheduledEventsConstants = fn(4996);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: closure_10 } = GuildScheduledEventsConstants);
 const Constants = fn(1072);
@@ -86,7 +86,7 @@ export default function EditGuildEventWhere(guild) {
   }
   let tmp10Result2 = null;
   if (null != tmp8) {
-    const obj7 = { style: tmp.error, variant: "text-sm/normal", color: "text-feedback-critical", children: tmp8 };
+    const obj7 = { style: tmp.error, variant: "body-sm/normal", color: "text-feedback-critical", children: tmp8 };
     tmp10Result2 = closure_13(tmp3(tmp4[15]).Text, obj7);
   }
   const obj8 = { children: null };
@@ -113,7 +113,7 @@ export default function EditGuildEventWhere(guild) {
               const error1 = new Error(intl2.string(guild(1113).t.q91szp));
               throw error1;
             }
-            obj = guild(9100);
+            obj = guild(9117);
           }
           if (null == tmp) {
             if (entityType !== constants.EXTERNAL) {
@@ -151,7 +151,7 @@ export default function EditGuildEventWhere(guild) {
       entityType: guildEvent.entityType,
       onChange: function handleChangeEventEntityType(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "y" };
+        const obj = { entityType, scheduledEndTime: "a" };
         if (entityType === constants.EXTERNAL) {
           let obj2 = _modDef2171(guildEvent.scheduledStartTime);
           if (obj2 == null) {
@@ -173,7 +173,7 @@ export default function EditGuildEventWhere(guild) {
     entityType: guildEvent.entityType,
     onChange: function handleChangeEventEntityType(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "y" };
+      const obj = { entityType, scheduledEndTime: "a" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef2171(guildEvent.scheduledStartTime);
         if (obj2 == null) {
@@ -189,7 +189,7 @@ export default function EditGuildEventWhere(guild) {
   const tmp11Result2 = guildEvent(ref[21]);
   items5[3] = set.has(guildEvent.entityType) && closure_13(guildEvent(ref[23]), {});
   if (stateFromStores1) {
-    const obj13 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
+    const obj13 = { style: tmp.text, variant: "body-sm/normal", color: "text-default", children: null };
     const intl4 = tmp3(tmp4[9]).intl;
     const obj14 = {
       onClick() {

@@ -1,11 +1,11 @@
-// === Module 5216: BaseRive ===
+// === Module 5215: BaseRive ===
 
-// Module 5216 (BaseRive)
+// Module 5215 (BaseRive)
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5155 */;
-import DataBindByName from "DataBindByName" /* 5217 */;
-import ManaContext from "ManaContext" /* 5264 */;
-import useRivePlayback from "useRivePlayback" /* 5265 */;
-import RiveTypes from "RiveTypes" /* 5266 */;
+import DataBindByName from "DataBindByName" /* 5216 */;
+import ManaContext from "ManaContext" /* 5263 */;
+import useRivePlayback from "useRivePlayback" /* 5264 */;
+import RiveTypes from "RiveTypes" /* 5265 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,9 +15,9 @@ function disposeRiveImageLater(current) {
   const timerId = setTimeout(() => current.dispose(), c10);
 }
 get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet, Image: hasOwnProperty, PixelRatio: metroRequire, Platform } = get_ActivityIndicator);
+({ View: closure_4, StyleSheet, Image: hasOwnProperty, PixelRatio: closure_6, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const container = StyleSheet.create({ container: { flexGrow: 1 }, fill: { flex: 1 }, hidden: { opacity: 0 } });
 let c10 = 1000;
 const size = fn(2);
@@ -139,7 +139,7 @@ export const BaseRive = function BaseRiveInner(renderDataBinding) {
     }
     items4[1] = renderDataBindingResult;
     obj5.children = items4;
-    return React6(React4, obj5);
+    return React5(React4, obj5);
   } else {
     const obj7 = { file: riveFile, hybridRef: rive.setHybridRef, artboardName: artboard, autoPlay: true, dataBind: None, style: null };
     const items5 = [container.fill, style];
@@ -172,7 +172,7 @@ export const BaseRive = function BaseRiveInner(renderDataBinding) {
       obj15 = {};
     }
     const merged3 = Object.assign(obj15);
-    React5(DataBindByName.RiveView, obj7);
+    metroImportDefault(DataBindByName.RiveView, obj7);
   }
   const tmpResult6 = useRivePlayback;
 };
@@ -420,7 +420,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
                   closure_128_1 = undefined;
                   c2 = 1;
                   c3 = 1;
-                  const obj3 = { value: tmp2(5267).ignoreErrors(ref3.current), done: false };
+                  const obj3 = { value: tmp2(5266).ignoreErrors(ref3.current), done: false };
                   return obj3;
                 }
               } else {
@@ -435,7 +435,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
                   } else if (dependencyMap()) {
                     c3 = 3;
                   } else {
-                    const RiveImages = tmp2(5217).RiveImages;
+                    const RiveImages = tmp2(5216).RiveImages;
                     closure_128_0 = RiveImages.loadFromURLAsync((function ensureImageUri(source) {
                       if (typeof source === "number") {
                         return closure_1_5.resolveAssetSource(source).uri;

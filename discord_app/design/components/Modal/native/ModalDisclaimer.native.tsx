@@ -1,7 +1,7 @@
-// === Module 16016: ModalDisclaimer ===
+// === Module 16106: ModalDisclaimer ===
 
-// Module 16016 (ModalDisclaimer)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 16106 (ModalDisclaimer)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,6 +14,6 @@ const result = size.fileFinishedImporting("design/components/Modal/native/ModalD
 
 export function ModalDisclaimer(children) {
   const tmp = closure_4();
-  const obj = { style: tmp.container, children: jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", style: tmp.disclaimer, children: children.children }) };
-  return <View style={tmp.container}>{jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", style: tmp.disclaimer, children: children.children })}</View>;
+  const obj = { style: tmp.container, children: jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-muted", style: tmp.disclaimer, children: children.children }) };
+  return <View style={tmp.container}>{jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-muted", style: tmp.disclaimer, children: children.children })}</View>;
 }

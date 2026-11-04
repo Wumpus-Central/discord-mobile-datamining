@@ -1,9 +1,9 @@
-// === Module 19102: ChannelSettingsChangeDefaultForumLayout ===
+// === Module 19205: ChannelSettingsChangeDefaultForumLayout ===
 
-// Module 19102 (ChannelSettingsChangeDefaultForumLayout)
+// Module 19205 (ChannelSettingsChangeDefaultForumLayout)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8323 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -53,7 +53,7 @@ class ChannelSettingsChangeDefaultForumLayout {
     obj1.children = items1;
     items2 = [, , , ];
     items2[0] = tmp5(channel(closure_2[8]).TableRadioGroup, obj1);
-    obj10 = { style: tmp.description, variant: "text-sm/medium", color: "text-muted", children: null };
+    obj10 = { style: tmp.description, variant: "body-sm/medium", color: "text-muted", children: null };
     intl4 = tmp7(tmp8[9]).intl;
     obj10.children = intl4.string(tmp7(tmp8[9]).t.MbX5Hu);
     items2[1] = jsx(tmp7(tmp8[14]).Text, obj10);
@@ -77,13 +77,13 @@ class ChannelSettingsChangeDefaultForumLayout {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 }, description: null, thumbnailImagePortrait: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 };
 obj2.description = { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
 obj2.thumbnailImagePortrait = { alignSelf: "center" };
-const React7 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeDefaultForumLayout.tsx");
 

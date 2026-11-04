@@ -1,9 +1,9 @@
-// === Module 9566: GameProfileSkeleton ===
+// === Module 9585: GameProfileSkeleton ===
 
-// Module 9566 (GameProfileSkeleton)
+// Module 9585 (GameProfileSkeleton)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 9567 */;
+import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 9586 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 13114: ConjureLandingModelChoices ===
+// === Module 13197: ConjureLandingModelChoices ===
 
-// Module 13114 (ConjureLandingModelChoices)
+// Module 13197 (ConjureLandingModelChoices)
 import size from "module_2" /* 2 */;
 
 let closure_0 = { main: [], subagent: [], thinking: ["low", "medium", "high", "xhigh", "max"] };

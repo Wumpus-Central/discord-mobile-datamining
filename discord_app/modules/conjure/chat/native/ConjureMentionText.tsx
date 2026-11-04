@@ -1,10 +1,10 @@
-// === Module 12783: ConjureMentionText ===
+// === Module 12864: ConjureMentionText ===
 
-// Module 12783 (ConjureMentionText)
+// Module 12864 (ConjureMentionText)
 import UserUtils from "UserUtils" /* 5195 */;
-import ConjureFileMentionDefault from "ConjureFileMention" /* 12280 */;
-import conjureMentions from "conjureMentions" /* 12773 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12780 */;
+import ConjureFileMentionDefault from "ConjureFileMention" /* 12341 */;
+import conjureMentions from "conjureMentions" /* 12854 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12861 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -22,7 +22,7 @@ function ConjureUserMention(userId) {
   return closure_5(tmp3, { label: "@" + stateFromStores, variant: userId.variant });
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMentionText.tsx");
 

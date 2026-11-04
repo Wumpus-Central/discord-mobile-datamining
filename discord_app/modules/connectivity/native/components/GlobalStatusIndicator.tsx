@@ -1,18 +1,18 @@
-// === Module 12000: GlobalStatusIndicator ===
+// === Module 12059: GlobalStatusIndicator ===
 
-// Module 12000 (GlobalStatusIndicator)
+// Module 12059 (GlobalStatusIndicator)
 import _mod1652 from "module_1652" /* 1652 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8063 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8079 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5382 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
-import NativeMenuStore from "NativeMenuStore" /* 10334 */;
+import ActionSheetStore from "ActionSheetStore" /* 5383 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
+import NativeMenuStore from "NativeMenuStore" /* 10382 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet: hasOwnProperty, TouchableWithoutFeedback: metroRequire, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
+({ View: closure_4, StyleSheet: hasOwnProperty, TouchableWithoutFeedback: closure_6, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDStatusBarOverlayViewManager);

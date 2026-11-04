@@ -1,6 +1,6 @@
-// === Module 7954: SlowmodeStore ===
+// === Module 7970: SlowmodeStore ===
 
-// Module 7954 (SlowmodeStore)
+// Module 7970 (SlowmodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;

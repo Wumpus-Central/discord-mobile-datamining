@@ -1,15 +1,15 @@
-// === Module 18702: GuildDiscoveryCategoryStore ===
+// === Module 18801: GuildDiscoveryCategoryStore ===
 
-// Module 18702 (GuildDiscoveryCategoryStore)
+// Module 18801 (GuildDiscoveryCategoryStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9204 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9221 */;
 import size from "module_2" /* 2 */;
 
-({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: closure_4, DISCOVERY_ALL_CATEGORIES_ID: hasOwnProperty, DISCOVERY_SIDEBAR_CATEGORIES: metroRequire } = GlobalDiscoveryServersConstants);
+({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: closure_4, DISCOVERY_ALL_CATEGORIES_ID: hasOwnProperty, DISCOVERY_SIDEBAR_CATEGORIES: closure_6 } = GlobalDiscoveryServersConstants);
 let c7 = null;
 let closure_8 = [];
 let closure_9 = [];

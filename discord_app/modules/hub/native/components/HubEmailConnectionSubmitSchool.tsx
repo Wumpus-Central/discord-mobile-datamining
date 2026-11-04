@@ -1,23 +1,23 @@
-// === Module 14481: HubEmailConnectionSubmitSchool ===
+// === Module 14561: HubEmailConnectionSubmitSchool ===
 
-// Module 14481 (HubEmailConnectionSubmitSchool)
+// Module 14561 (HubEmailConnectionSubmitSchool)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useNavigation from "useNavigation" /* 1499 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7207 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14468 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7222 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14548 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(14460).HubEmailConnectionSteps;
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
+const HubEmailConnectionSteps = fn(14540).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -127,7 +127,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   const intl = util.intl;
   obj6.children = intl.string(util.t["2FNWBG"]);
   const items1 = [closure_9(native.LegacyText, obj6), , ];
-  const obj7 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj7 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj7.children = intl2.string(util.t["/4y6ox"]);
   items1[1] = closure_9(Text_Text.Text, obj7);

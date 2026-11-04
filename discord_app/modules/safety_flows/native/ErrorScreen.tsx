@@ -1,6 +1,6 @@
-// === Module 20256: ErrorScreen ===
+// === Module 20372: ErrorScreen ===
 
-// Module 20256 (ErrorScreen)
+// Module 20372 (ErrorScreen)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_16, alignItems: "center" }, buttonContainer: null };
 let obj3 = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_16, alignItems: "center" };
@@ -98,7 +98,7 @@ export default function ErrorScreen() {
   const intl = require("util").intl;
   obj3.children = intl.string(require("util").t.c6kn6F);
   items = [closure_7(require("Text/Text").Text, obj3), , ];
-  let obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
+  let obj4 = { variant: "body-md/normal", color: "text-muted", children: null };
   const intl2 = require("util").intl;
   obj4.children = intl2.string(require("util").t.ZUEGFn);
   items[1] = closure_7(require("Text/Text").Text, obj4);

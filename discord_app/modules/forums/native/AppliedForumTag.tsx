@@ -1,15 +1,15 @@
-// === Module 10652: AppliedForumTag ===
+// === Module 10700: AppliedForumTag ===
 
-// Module 10652 (AppliedForumTag)
+// Module 10700 (AppliedForumTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import EmojiDefault from "Emoji" /* 7420 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10653 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import EmojiDefault from "Emoji" /* 7436 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10701 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
 
 require = fn;
 class AppliedForumTag {
@@ -73,9 +73,9 @@ class AppliedForumTag {
               obj4.name = str;
               tmp11Result = timestampProducer(EmojiDefault, obj4);
             }
-            const items1 = [tmp11Result, timestampProducer(Text_Text.Text, { lineClamp: 1, style: container.tagName, variant: "text-xs/semibold", color: str, children: tagName })];
+            const items1 = [tmp11Result, timestampProducer(Text_Text.Text, { lineClamp: 1, style: container.tagName, variant: "body-xs/semibold", color: str, children: tagName })];
             obj.children = items1;
-            return React5(View, obj);
+            return metroImportDefault(View, obj);
           }
     };
     return c6(closure_1(tmp[8]), obj1);
@@ -84,10 +84,10 @@ class AppliedForumTag {
 const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { pill: { height: 24, paddingHorizontal: 8, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: 4, flexShrink: 1 }, disableEndMargin: { marginRight: 0 }, emoji: { height: 12, width: 12, marginRight: 4, flexShrink: 0 }, textEmoji: { fontSize: 10, marginRight: 4 }, tagName: { flexShrink: 1 }, container: { display: "flex", flexDirection: "row", alignItems: "center" } };
-const React6 = createStyles.createStyles(obj2);
+const React5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/AppliedForumTag.tsx");
 

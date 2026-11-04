@@ -1,6 +1,6 @@
-// === Module 10320: ReportToModStore ===
+// === Module 10368: ReportToModStore ===
 
-// Module 10320 (ReportToModStore)
+// Module 10368 (ReportToModStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;

@@ -1,9 +1,9 @@
-// === Module 13807: CheckpointPressable ===
+// === Module 13893: CheckpointPressable ===
 
-// Module 13807 (CheckpointPressable)
+// Module 13893 (CheckpointPressable)
 import nativeDefault from "native" /* 575 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6186 */;
+import CheckpointConstants from "CheckpointConstants" /* 6201 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
@@ -12,11 +12,11 @@ import size from "module_2" /* 2 */;
 ({ CHECKPOINT_BUTTON_SHADOW: c2, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-let obj = { sm: { height: 32, gap: nativeDefault.space.PX_4, textVariant: "text-md/semibold" }, lg: null };
-let obj2 = { height: 32, gap: nativeDefault.space.PX_4, textVariant: "text-md/semibold" };
-obj.lg = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8, textVariant: "text-lg/medium" };
+let obj = { sm: { height: 32, gap: nativeDefault.space.PX_4, textVariant: "body-md/semibold" }, lg: null };
+let obj2 = { height: 32, gap: nativeDefault.space.PX_4, textVariant: "body-md/semibold" };
+obj.lg = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8, textVariant: "body-lg/medium" };
 let obj4 = { container: { paddingRight: PX_4, paddingBottom: PX_4 }, shadow: { position: "absolute", top: PX_4, left: PX_4, right: 0, bottom: 0 }, pressable: null, sm: null, lg: null, pressed: null };
-let obj3 = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8, textVariant: "text-lg/medium" };
+let obj3 = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8, textVariant: "body-lg/medium" };
 obj4.pressable = { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12 };
 obj4.sm = { height: obj.sm.height, gap: obj.sm.gap };
 obj4.lg = { height: obj.lg.height, gap: obj.lg.gap };

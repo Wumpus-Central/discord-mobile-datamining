@@ -1,9 +1,9 @@
-// === Module 19072: useGetOrFetchChannelOverwriteUsers ===
+// === Module 19175: useGetOrFetchChannelOverwriteUsers ===
 
-// Module 19072 (useGetOrFetchChannelOverwriteUsers)
+// Module 19175 (useGetOrFetchChannelOverwriteUsers)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
-import _modDef19073 from "module_19073" /* 19073 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
+import _modDef19176 from "module_19176" /* 19176 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
@@ -31,7 +31,7 @@ export default function useGetOrFetchChannelOverwriteUsers(arg0, arg1) {
       const found = values.filter((type) => type.type === closure_1_0(stateFromStoresArray[4]).PermissionOverwriteType.MEMBER);
       items = found.map((id) => id.id);
     }
-    return _modDef19073(items, (arg0) => stateFromStoresArray.includes(arg0));
+    return _modDef19176(items, (arg0) => stateFromStoresArray.includes(arg0));
   }, items2), 2);
   first = tmp2[0];
   noop = tmp4;

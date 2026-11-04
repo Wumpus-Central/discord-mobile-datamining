@@ -1,11 +1,11 @@
-// === Module 9495: ObscuredSurface ===
+// === Module 9513: ObscuredSurface ===
 
-// Module 9495 (ObscuredSurface)
+// Module 9513 (ObscuredSurface)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
-import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 9496 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8794 */;
+import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 9514 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,13 +38,13 @@ export default function ObscuredSurface(obscured) {
       const intl = util.intl;
       heading = intl.string(util.t.xC8Saf);
     }
-    const obj7 = { variant: "heading-md/semibold", color: "text-strong", children: heading };
+    const obj7 = { variant: "heading-sm/semibold", color: "text-strong", children: heading };
     items1[1] = React4(Text_Text.Text, obj7);
     if (description == null) {
       const intl2 = util.intl;
       description = intl2.string(util.t["0fc/DG"]);
     }
-    const obj8 = { variant: "text-sm/normal", color: "text-muted", children: description };
+    const obj8 = { variant: "body-sm/normal", color: "text-muted", children: description };
     items1[2] = React4(Text_Text.Text, obj8);
     obj5.children = items1;
     items[2] = hasOwnProperty(View, obj5);

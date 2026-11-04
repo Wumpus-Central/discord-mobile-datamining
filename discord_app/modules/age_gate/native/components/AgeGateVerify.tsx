@@ -1,13 +1,13 @@
-// === Module 19552: AgeGateVerify ===
+// === Module 19656: AgeGateVerify ===
 
-// Module 19552 (AgeGateVerify)
+// Module 19656 (AgeGateVerify)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
-import AgeGateUtils from "AgeGateUtils" /* 6854 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
+import AgeGateUtils from "AgeGateUtils" /* 6869 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function AgeGateVerify(source) {
   const ageGateVerifyContent = AgeGateUtils.useAgeGateVerifyContent(source.source);
   ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
   const obj2 = { top: true, style: tmp.container, children: null };
-  items = [React4(Text_Text.Heading, { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: verifyTitle }), React4(Text_Text.Text, { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription }), ];
+  items = [React4(Text_Text.Heading, { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: verifyTitle }), React4(Text_Text.Text, { style: tmp.body, variant: "body-md/medium", color: "interactive-text-default", children: verifyGateDescription }), ];
   let tmp6Result = null != verifyAgreementButtonText;
   if (tmp6Result) {
     const obj5 = { style: tmp.buttonWrapper, children: null };

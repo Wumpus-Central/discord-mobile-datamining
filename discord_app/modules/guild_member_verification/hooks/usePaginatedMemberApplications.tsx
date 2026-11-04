@@ -1,13 +1,12 @@
-// === Module 18824: usePaginatedMemberApplications ===
+// === Module 18925: usePaginatedMemberApplications ===
 
-// Module 18824 (usePaginatedMemberApplications)
+// Module 18925 (usePaginatedMemberApplications)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const result = fn(5175).MAX_RESULTS_PER_PAGE * fn(5175).MAX_VISIBLE_PAGES;
-const metroRequire = result;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 15479: referralBannerContent ===
+// === Module 15566: referralBannerContent ===
 
-// Module 15479 (referralBannerContent)
+// Module 15566 (referralBannerContent)
 import Constants2 from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7757 */;
-import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 15463 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 15464 */;
-import Constants from "Constants" /* 15462 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7773 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 15550 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 15551 */;
+import Constants from "Constants" /* 15549 */;
 import size from "module_2" /* 2 */;
 
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: c3, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: closure_4 } = Constants);
@@ -66,7 +66,7 @@ export function getReferralBannerBodyText(arg0, numSent, arg2) {
     if (null == arg2) {
       let v1aEjsH = require;
       if (numSent.numSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT) {
-        if (numSent.numRedeemed === v1aEjsH(15463).MAX_REFERRALS_SENT) {
+        if (numSent.numRedeemed === v1aEjsH(15550).MAX_REFERRALS_SENT) {
           const intl4 = v1aEjsH(1113).intl;
           v1aEjsH = v1aEjsH(1113).t["1aEjsH"];
           const obj3 = { helpdeskArticle: articleURL };
@@ -84,8 +84,8 @@ export function getReferralBannerBodyText(arg0, numSent, arg2) {
     }
     let OluhLp = require;
     if (numSent.numRewardGranted !== useReferralProgramBannerDetails.MAX_REFERRALS_SENT) {
-      if (numSent.numSent === OluhLp(15463).MAX_REFERRALS_SENT) {
-        if (arg2 === OluhLp(15464).ReferralRewardType.ORBS) {
+      if (numSent.numSent === OluhLp(15550).MAX_REFERRALS_SENT) {
+        if (arg2 === OluhLp(15551).ReferralRewardType.ORBS) {
           const intl9 = OluhLp(1113).intl;
           const obj6 = { helpdeskArticle: articleURL };
           let formatResult2 = intl9.format(OluhLp(1113).t["1aV1j9"], obj6);
@@ -95,7 +95,7 @@ export function getReferralBannerBodyText(arg0, numSent, arg2) {
           formatResult2 = intl8.format(OluhLp(1113).t.QNrPuS, obj7);
         }
       } else if (arg0) {
-        if (arg2 === OluhLp(15464).ReferralRewardType.ORBS) {
+        if (arg2 === OluhLp(15551).ReferralRewardType.ORBS) {
           const intl7 = OluhLp(1113).intl;
           const obj8 = { numOrbs, helpdeskArticle: articleURL };
           let formatResult3 = intl7.format(OluhLp(1113).t.cfE0uG, obj8);
@@ -110,7 +110,7 @@ export function getReferralBannerBodyText(arg0, numSent, arg2) {
         intl5.format(OluhLp(1113).t["a0+Jwv"], obj10);
       }
     }
-    if (arg2 === OluhLp(15464).ReferralRewardType.ORBS) {
+    if (arg2 === OluhLp(15551).ReferralRewardType.ORBS) {
       const intl11 = OluhLp(1113).intl;
       OluhLp = OluhLp(1113).t.OluhLp;
       obj = { helpdeskArticle: articleURL };

@@ -1,11 +1,11 @@
-// === Module 12490: UserProfileApplicationWidgetBottomCollectionLayout ===
+// === Module 12555: UserProfileApplicationWidgetBottomCollectionLayout ===
 
-// Module 12490 (UserProfileApplicationWidgetBottomCollectionLayout)
+// Module 12555 (UserProfileApplicationWidgetBottomCollectionLayout)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12397 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12484 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12462 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12549 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,17 +36,17 @@ function CollectionItem(arg0) {
   const items1 = [tmp11, ];
   const obj7 = { style: tmp.itemContent, children: null };
   if ("value" === singleStringOrSkeleton.status) {
-    const obj8 = { variant: "text-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
+    const obj8 = { variant: "body-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
     let tmp12Result = tmp12(Text_Text.Text, obj8);
   } else {
-    tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
+    tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "body-xs/medium", widthChars: 6 });
   }
   const items2 = [tmp12Result, ];
   if ("value" === singleStringOrSkeleton1.status) {
-    const obj9 = { variant: "text-xxs/medium", color: "text-subtle", lineClamp: 2, children: singleStringOrSkeleton1.text };
+    const obj9 = { variant: "footnote/medium", color: "text-subtle", lineClamp: 2, children: singleStringOrSkeleton1.text };
     let tmp12Result2 = tmp12(Text_Text.Text, obj9);
   } else {
-    tmp12Result2 = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
+    tmp12Result2 = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "footnote/medium", widthChars: 10 });
   }
   items2[1] = tmp12Result2;
   obj7.children = items2;

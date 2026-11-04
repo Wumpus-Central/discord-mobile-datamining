@@ -1,15 +1,15 @@
-// === Module 16011: GhostInput ===
+// === Module 16101: GhostInput ===
 
-// Module 16011 (GhostInput)
+// Module 16101 (GhostInput)
 import nativeDefault from "native" /* 575 */;
-import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 5210 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Input from "Input" /* 7209 */;
-import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7210 */;
-import useTextField from "useTextField" /* 7216 */;
-import InputFieldContainer from "InputFieldContainer" /* 7223 */;
-import NativeTextInput from "NativeTextInput" /* 7226 */;
-import propsForNativeTextInput from "propsForNativeTextInput" /* 7229 */;
+import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 5209 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Input from "Input" /* 7224 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 7225 */;
+import useTextField from "useTextField" /* 7231 */;
+import InputFieldContainer from "InputFieldContainer" /* 7243 */;
+import NativeTextInput from "NativeTextInput" /* 7246 */;
+import propsForNativeTextInput from "propsForNativeTextInput" /* 7249 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,7 +27,7 @@ let closure_6 = createStyles.createStyles(() => {
     str2 = "default";
   }
   const input = {};
-  const merged = Object.assign({ md: Text_Text.TextStyleSheet["text-md/semibold"], lg: Text_Text.TextStyleSheet["text-lg/semibold"] }[str]);
+  const merged = Object.assign({ md: Text_Text.TextStyleSheet["body-md/semibold"], lg: Text_Text.TextStyleSheet["body-lg/semibold"] }[str]);
   if ("error" === str2) {
     let TEXT_DEFAULT = nativeDefault.colors.TEXT_FEEDBACK_CRITICAL;
   } else {

@@ -1,11 +1,11 @@
-// === Module 15873: ShareAttachments ===
+// === Module 15961: ShareAttachments ===
 
-// Module 15873 (ShareAttachments)
+// Module 15961 (ShareAttachments)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8344 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11248 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8360 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11298 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
 let obj = { duration: 300, easing: fn(1187).STANDARD_EASING };
 const createStyles = fn(5141);

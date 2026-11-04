@@ -1,10 +1,10 @@
-// === Module 14226: GuildPowerupsBoostGem ===
+// === Module 14312: GuildPowerupsBoostGem ===
 
-// Module 14226 (GuildPowerupsBoostGem)
+// Module 14312 (GuildPowerupsBoostGem)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import BoostGemDefault from "BoostGem" /* 14227 */;
+import BoostGemDefault from "BoostGem" /* 14313 */;
 import createStyles from "createStyles" /* 5141 */;
 import size_mod from "module_2" /* 2 */;
 

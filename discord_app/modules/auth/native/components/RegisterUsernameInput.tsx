@@ -1,13 +1,13 @@
-// === Module 18159: RegisterUsernameInput ===
+// === Module 18256: RegisterUsernameInput ===
 
-// Module 18159 (RegisterUsernameInput)
+// Module 18256 (RegisterUsernameInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16015 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16749 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7227 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16105 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16841 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,13 +23,13 @@ function UsernameStatusMessage(arg0) {
   if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
     obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj3 = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-    items = [React7(CircleErrorIcon.CircleErrorIcon, obj3), ];
-    const obj4 = { variant: "text-xs/medium", color: "text-feedback-critical", style: tmp.status };
+    items = [React6(CircleErrorIcon.CircleErrorIcon, obj3), ];
+    const obj4 = { variant: "body-xs/medium", color: "text-feedback-critical", style: tmp.status };
     const merged = Object.assign(obj2);
     const merged1 = Object.assign(obj3);
     obj4.animated = true;
     obj4.children = usernameStatus.message;
-    items[1] = React7(Text_Text.Text, obj4);
+    items[1] = React6(Text_Text.Text, obj4);
     obj2.children = items;
     let tmp6 = closure_1_10(Stack_Stack.Stack, obj2);
   } else {
@@ -43,11 +43,11 @@ function UsernameStatusMessage(arg0) {
         const merged2 = Object.assign(obj2);
         const merged3 = Object.assign(obj3);
         obj5.style = tmp.status;
-        obj5.variant = "text-xs/medium";
+        obj5.variant = "body-xs/medium";
         obj5.animated = true;
-        const obj6 = { variant: "text-xs/medium", color: "text-feedback-positive", children: usernameStatus.message };
-        obj5.children = React7(Text_Text.Text, obj6);
-        tmp6 = React7(Text_Text.Text, obj5);
+        const obj6 = { variant: "body-xs/medium", color: "text-feedback-positive", children: usernameStatus.message };
+        obj5.children = React6(Text_Text.Text, obj6);
+        tmp6 = React6(Text_Text.Text, obj5);
       }
     }
     tmp6 = null;
@@ -56,19 +56,19 @@ function UsernameStatusMessage(arg0) {
       const merged4 = Object.assign(obj2);
       const merged5 = Object.assign(obj3);
       obj.style = tmp.inputHint;
-      obj.variant = "text-xs/medium";
+      obj.variant = "body-xs/medium";
       obj.color = "text-muted";
       obj.animated = true;
       const intl = util.intl;
       obj.children = intl.string(util.t.y7LSyU);
-      tmp6 = React7(Text_Text.Text, obj);
+      tmp6 = React6(Text_Text.Text, obj);
     }
   }
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(18132);
-({ setRegistrationErrors: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
+const RegistrationUIStore = fn(18229);
+({ setRegistrationErrors: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -107,7 +107,7 @@ export function RegisterUsernameInput(setUsername) {
   const callback = noop.useCallback((str) => {
     if (null != user.username) {
       const username = user.username;
-      React5(_objectWithoutProperties(user, closure_3));
+      metroImportDefault(_objectWithoutProperties(user, closure_3));
     }
     setUsername(str.toLowerCase());
   }, items);
@@ -141,13 +141,13 @@ export function RegisterUsernameInput(setUsername) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(16749).NameValidationState.ERROR) {
+  if (type === tmp14(16841).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };
   obj3.status = str2;
   obj3.submitBehavior = submitBehavior;
-  const items3 = [closure_9(setUsername(7208).TextInput, obj3), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [closure_9(setUsername(7223).TextInput, obj3), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj6.children = items3;
   return closure_10(closure_11, obj6);
 }

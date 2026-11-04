@@ -1,6 +1,6 @@
-// === Module 6344: ? ===
+// === Module 6359: ? ===
 
-// Module 6344
+// Module 6359
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/streamer_smiley.png.js");

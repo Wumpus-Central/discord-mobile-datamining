@@ -1,6 +1,6 @@
-// === Module 7530: SocialLayerStorefrontStore ===
+// === Module 7546: SocialLayerStorefrontStore ===
 
-// Module 7530 (SocialLayerStorefrontStore)
+// Module 7546 (SocialLayerStorefrontStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
@@ -50,16 +50,16 @@ prototype["getStorefrontDataForApplicationId"] = function getStorefrontDataForAp
 prototype["getLoadedStorefrontApplicationIds"] = function getLoadedStorefrontApplicationIds() {
   return Object.keys(obj12);
 };
-prototype["getStorefrontFetchState"] = function getStorefrontFetchState(type) {
-  if ("guild" === type.type) {
-    let guildId = type.guildId;
+prototype["getStorefrontFetchState"] = function getStorefrontFetchState(guildOrApplication) {
+  if ("guild" === guildOrApplication.type) {
+    let guildId = guildOrApplication.guildId;
   } else {
-    guildId = dependencyMap3[type.applicationId];
+    guildId = dependencyMap3[guildOrApplication.applicationId];
   }
-  if ("guild" === type.type) {
-    let applicationId = dependencyMap2[type.guildId];
+  if ("guild" === guildOrApplication.type) {
+    let applicationId = dependencyMap2[guildOrApplication.guildId];
   } else {
-    applicationId = type.applicationId;
+    applicationId = guildOrApplication.applicationId;
   }
   if (null != guildId) {
     let tmp3 = obj11[guildId];

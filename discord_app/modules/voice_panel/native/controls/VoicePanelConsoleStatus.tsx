@@ -1,14 +1,14 @@
-// === Module 19463: VoicePanelConsoleStatus ===
+// === Module 19567: VoicePanelConsoleStatus ===
 
-// Module 19463 (VoicePanelConsoleStatus)
+// Module 19567 (VoicePanelConsoleStatus)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import native from "native" /* 5207 */;
-import NativeViewDefault from "NativeView" /* 7086 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19457 */;
-import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19462 */;
-import useControlsTranslationDefault from "useControlsTranslation" /* 19464 */;
+import NativeViewDefault from "NativeView" /* 7101 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 19561 */;
+import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19566 */;
+import useControlsTranslationDefault from "useControlsTranslation" /* 19568 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -164,13 +164,13 @@ class VoicePanelConsoleStatus {
     obj16 = { source: icon, color: tmp2(tmp3[6]).unsafe_rawColors.WHITE, size: tmp6(tmp3[16]).IconSizes.SMALL };
     items6 = [, , ];
     items6[0] = closure_6(tmp6(tmp3[16]).Icon, obj16);
-    obj17 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.consoleText, children: text };
+    obj17 = { variant: "body-sm/medium", color: "text-overlay-light", style: tmp.consoleText, children: text };
     items6[1] = closure_6(tmp6(tmp3[17]).Text, obj17);
     tmp30Result = null;
     if (displayCancel) {
       obj18 = { hitSlop: 4, onPress: null, children: null };
       obj18.onPress = tmp6(tmp3[19]).disconnectRemote;
-      obj19 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
+      obj19 = { variant: "body-sm/medium", color: "text-overlay-light", children: null };
       intl = tmp6(tmp3[20]).intl;
       obj19.children = intl.string(tmp6(tmp3[20]).t["ETE/oC"]);
       obj18.children = tmp30(tmp6(tmp3[17]).Text, obj19);
@@ -192,17 +192,17 @@ class VoicePanelConsoleStatus {
     return tmp29(tmp2(tmp3[9]).View, obj1);
   }
 }
-const EDGE_GUTTER = fn(11363).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(11358).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(11413).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(11408).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { consoleParentContainer: { zIndex: 1, position: "absolute", bottom: 0, overflow: "hidden", left: -0.5, right: 0, alignItems: "center" }, consoleContainer: { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, overflow: "hidden" }, consoleItemContainer: { flexDirection: "row", alignItems: "center", height: 36, marginHorizontal: 18 }, consoleText: { textAlign: "left", marginStart: 4, flex: 1 }, blockingControlCover: null };
 let obj3 = { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, overflow: "hidden" };
 obj2.blockingControlCover = { position: "absolute", bottom: 0, borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, flex: 1, height: CONTROLS_HEIGHT, overflow: "hidden" };
-const React6 = createStyles.createStyles(obj2);
+const React5 = createStyles.createStyles(obj2);
 let obj5 = {};
-let merged = Object.assign(fn(11360).MODE_CHANGE_PHYSICS);
+let merged = Object.assign(fn(11410).MODE_CHANGE_PHYSICS);
 obj5.overshootClamping = true;
 let closure_10 = { code: "(function VoicePanelConsoleStatusTsx1(finished){let[shouldShow,scheduleOnRN,cleanUp]=this.__closure;if(finished&&!shouldShow.get()){scheduleOnRN(cleanUp);}})" };
 let closure_11 = { code: "(function VoicePanelConsoleStatusTsx2(){let[color,windowDimensions,EDGE_GUTTER,CONTROLS_HEIGHT,CONSOLE_STATUS_HEIGHT,withSpring,shouldShow,FADE_IN_MODE_PHYSICS,_worklet_9535056131648_init_data,scheduleOnRN,cleanUp]=this.__closure;return{backgroundColor:color,width:windowDimensions.get().width-EDGE_GUTTER*2,height:CONTROLS_HEIGHT+CONSOLE_STATUS_HEIGHT,borderRadius:32,transform:[{translateY:withSpring(shouldShow.get()?0:100,FADE_IN_MODE_PHYSICS,'respect-motion-settings',function VoicePanelConsoleStatusTsx1Factory([_worklet_9535056131648_init_data,shouldShow,scheduleOnRN,cleanUp]){const VoicePanelConsoleStatusTsx1=function(finished){if(finished&&!shouldShow.get()){scheduleOnRN(cleanUp);}};VoicePanelConsoleStatusTsx1.__closure=[shouldShow,scheduleOnRN,cleanUp];VoicePanelConsoleStatusTsx1.__workletHash=9535056131648;VoicePanelConsoleStatusTsx1.__initData=_worklet_9535056131648_init_data;return VoicePanelConsoleStatusTsx1;}([_worklet_9535056131648_init_data,shouldShow,scheduleOnRN,cleanUp]))}]};})" };

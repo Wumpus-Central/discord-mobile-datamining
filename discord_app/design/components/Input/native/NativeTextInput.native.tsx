@@ -1,6 +1,6 @@
-// === Module 7226: NativeTextInput ===
+// === Module 7246: NativeTextInput ===
 
-// Module 7226 (NativeTextInput)
+// Module 7246 (NativeTextInput)
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1495 */;
 
@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, TextInput: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ Pressable: closure_4, TextInput: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const KeyboardThemes = fn(1072).KeyboardThemes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -99,8 +99,8 @@ export const NativeTextInput = function TextInput(ref) {
   ref(defaultValue[9]);
   if (null != iter.keyboardAppearance) {
     const obj3 = {};
-    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "Array", defaultValue: "flexDirection" }));
-    const obj4 = { value: "Array", defaultValue: "flexDirection" };
+    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "PX_8", defaultValue: "__closure" }));
+    const obj4 = { value: "PX_8", defaultValue: "__closure" };
     const tmp6Result = tmp6(tmp3[10]);
     obj3.ref = tmp6(tmp3[10]).mergeRefs(ref, ref.ref);
     const tmp18 = closure_10(closure_5, obj3);

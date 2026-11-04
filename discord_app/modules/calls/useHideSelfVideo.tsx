@@ -1,14 +1,14 @@
-// === Module 19499: useHideSelfVideo ===
+// === Module 19603: useHideSelfVideo ===
 
-// Module 19499 (useHideSelfVideo)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
+// Module 19603 (useHideSelfVideo)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6050 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 const require = fn;
 const VideoToggleState = fn(1072).VideoToggleState;
-const Constants = fn(5888);
-({ MediaEngineContextTypes: metroRequire, Features: closure_7 } = Constants);
+const Constants = fn(5902);
+({ MediaEngineContextTypes: closure_6, Features: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");
 

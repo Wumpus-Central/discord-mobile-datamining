@@ -1,10 +1,10 @@
-// === Module 16121: NewTag ===
+// === Module 16210: NewTag ===
 
-// Module 16121 (NewTag)
+// Module 16210 (NewTag)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("design/void/NewTag/native/NewTag.tsx"
 export default function NewTag(color) {
   ({ containerStyle, textStyle, variant } = color);
   if (variant === undefined) {
-    variant = "heading-sm/semibold";
+    variant = "heading-xs/semibold";
   }
   let str = color.color;
   if (str === undefined) {

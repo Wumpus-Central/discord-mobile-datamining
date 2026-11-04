@@ -1,9 +1,9 @@
-// === Module 12744: ConjureDither ===
+// === Module 12825: ConjureDither ===
 
-// Module 12744 (ConjureDither)
+// Module 12825 (ConjureDither)
 import _modDef1652 from "module_1652" /* 1652 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
-import _mod12745 from "module_12745" /* 12745 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
+import _mod12826 from "module_12826" /* 12826 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ function BandPicture(width) {
   const size1 = { id: "cells-" + combined, patternUnits: "userSpaceOnUse", width: state(height[3]).TILE, height: state(height[3]).TILE, children: null };
   const tmp8 = width(height[4]);
   size1.children = state(height[3]).TILES[band].map((item) => {
-    const size = { x: item.x, y: item.y, width: _mod12745.CELL, height: _mod12745.CELL, rx: _mod12745.CORNER, fill, fillOpacity };
+    const size = { x: item.x, y: item.y, width: _mod12826.CELL, height: _mod12826.CELL, rx: _mod12826.CORNER, fill, fillOpacity };
     return timestampProducer(inlineStyles.Rect, size, "" + item.x + "-" + item.y);
   });
   items = [bound(state(height[4]).Pattern, size1), , , ];
@@ -40,13 +40,13 @@ function BandPicture(width) {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod12745;
+    const obj3 = _mod12826;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod12745.blobReach(peak, radius, closure_5 + _mod12745.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod12745.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod12826.blobReach(peak, radius, closure_5 + _mod12826.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod12826.blobReach(peak.peak, peak.radius, bound));
     items = [timestampProducer(inlineStyles.Stop, obj2), timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 })];
     obj.children = items;
-    return React5(inlineStyles.RadialGradient, obj, index);
+    return metroImportDefault(inlineStyles.RadialGradient, obj, index);
   });
   const size2 = { id: "iso-" + combined, x: 0, y: 0, width, height, maskUnits: "userSpaceOnUse", children: null };
   let tmp9Result = null;
@@ -60,7 +60,7 @@ function BandPicture(width) {
   const items2 = [tmp9Result, ];
   const BLOBS1 = tmp(tmp2[3]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod12745.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod12826.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {
@@ -88,7 +88,7 @@ function BandPicture(width) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let items = [0, Math.PI];
 let closure_10 = { code: "(function ConjureDitherAndroidTsx1(frame){let[STATE_LERP_MS,speed,targetSpeed,phase,CYCLE_MS]=this.__closure;var _frame$timeSincePrevi;const dtMs=Math.min(64,(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:16);const lerp=1-Math.exp(-dtMs/STATE_LERP_MS);speed.set(speed.get()+(targetSpeed.get()-speed.get())*lerp);phase.set(phase.get()+dtMs/CYCLE_MS*2*Math.PI*speed.get());})" };
 let closure_11 = { code: "(function ConjureDitherAndroidTsx2(){let[phase]=this.__closure;return{opacity:(1+Math.cos(phase.get()))/2};})" };
@@ -189,7 +189,7 @@ export default function ConjureDither(width) {
   let tmp18 = null;
   if (width > 0) {
     const obj3 = { style: absoluteFill.absoluteFill, pointerEvents: "none", children: null };
-    const LEVELS = tmp(12745).LEVELS;
+    const LEVELS = tmp(12826).LEVELS;
     obj3.children = LEVELS.map((item, index) => items.map((item, state) => {
       items = [React4.absoluteFill, ];
       const obj = { style: items, renderToHardwareTextureAndroid: true, children: null };

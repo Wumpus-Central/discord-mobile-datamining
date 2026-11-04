@@ -1,12 +1,12 @@
-// === Module 9905: LeaveGroupDMConfirmationAlert ===
+// === Module 9923: LeaveGroupDMConfirmationAlert ===
 
-// Module 9905 (LeaveGroupDMConfirmationAlert)
+// Module 9923 (LeaveGroupDMConfirmationAlert)
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import useAlertStore from "useAlertStore" /* 6080 */;
-import AlertModal from "AlertModal" /* 6084 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import useAlertStore from "useAlertStore" /* 6095 */;
+import AlertModal from "AlertModal" /* 6099 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7115 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,11 +29,11 @@ function LeaveGroupDMConfirmationAlert(onConfirm) {
   const obj4 = { children: null };
   const items1 = [hasOwnProperty(AlertModal.AlertActionButton, { variant: "primary", text: confirmText, onPress: callback }), hasOwnProperty(AlertModal.AlertActionButton, { variant: "secondary", text: cancelText })];
   obj4.children = items1;
-  obj.actions = React5(timestampProducer, obj4);
+  obj.actions = metroImportDefault(timestampProducer, obj4);
   return hasOwnProperty(AlertModal.AlertModal, obj);
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/LeaveGroupDMConfirmationAlert.tsx");
 

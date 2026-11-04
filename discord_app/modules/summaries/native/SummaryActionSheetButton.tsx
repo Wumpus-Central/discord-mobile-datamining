@@ -1,10 +1,10 @@
-// === Module 11806: SummaryActionSheetButton ===
+// === Module 11863: SummaryActionSheetButton ===
 
-// Module 11806 (SummaryActionSheetButton)
+// Module 11863 (SummaryActionSheetButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export function SummaryActionSheetButton(label) {
   const tmp = closure_5();
   const obj = { style: tmp.container, onPress, accessibilityRole: "button", accessibilityLabel: label, children: null };
   const obj2 = { style: tmp.iconBox, children: React3(native.Icon, { style: tmp.icon, source: iconSource }) };
-  items = [React3(View, obj2), React3(Text_Text.Text, { style: tmp.name, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: label })];
+  items = [React3(View, obj2), React3(Text_Text.Text, { style: tmp.name, variant: "body-xs/medium", color: "interactive-text-default", lineClamp: 1, children: label })];
   obj.children = items;
   return React4(Pressables.PressableOpacity, obj);
 }

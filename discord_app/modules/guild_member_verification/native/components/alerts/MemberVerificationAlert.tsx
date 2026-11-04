@@ -1,9 +1,9 @@
-// === Module 7032: MemberVerificationAlert ===
+// === Module 7047: MemberVerificationAlert ===
 
-// Module 7032 (MemberVerificationAlert)
+// Module 7047 (MemberVerificationAlert)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import common_AlertDefault from "common/Alert" /* 6150 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import common_AlertDefault from "common/Alert" /* 6165 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function MemberVerificationAlert(arg0) {
   items = [tmp7, React4(Text_Text.Heading, { style: tmp2.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: header }), , ];
   let tmp10Result = null;
   if (null != subtitle) {
-    const obj4 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
+    const obj4 = { style: tmp2.subtitle, variant: "body-sm/medium", color: "text-default", children: subtitle };
     tmp10Result = React4(Text_Text.Text, obj4);
   }
   items[2] = tmp10Result;

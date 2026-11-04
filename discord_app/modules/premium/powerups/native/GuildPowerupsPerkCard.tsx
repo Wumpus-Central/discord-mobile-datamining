@@ -1,16 +1,16 @@
-// === Module 14276: GuildPowerupsPerkCard ===
+// === Module 14362: GuildPowerupsPerkCard ===
 
-// Module 14276 (GuildPowerupsPerkCard)
+// Module 14362 (GuildPowerupsPerkCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import shared from "shared" /* 5148 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14228 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14229 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14273 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14314 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14315 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14359 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,7 +60,7 @@ export default function GuildPowerupsPerkCard(arg0) {
   const items2 = [hasOwnProperty(View, obj3), , , ];
   const obj6 = { style: tmp2.contentContainer, children: null };
   const obj7 = { style: tmp2.headerContainer, children: null };
-  const items3 = [React4(Text_Text.Text, { color: "text-strong", variant: "experimental/heading-md/semibold", children: title }), React4(Text_Text.Text, { variant: "body-sm/normal", children: description })];
+  const items3 = [React4(Text_Text.Text, { color: "text-strong", variant: "heading-md/semibold", children: title }), React4(Text_Text.Text, { variant: "body-sm/normal", children: description })];
   obj7.children = items3;
   const items4 = [hasOwnProperty(View, obj7), ];
   const obj8 = {};

@@ -1,21 +1,21 @@
-// === Module 19279: ConjureAppPictureInPicture ===
+// === Module 19383: ConjureAppPictureInPicture ===
 
-// Module 19279 (ConjureAppPictureInPicture)
+// Module 19383 (ConjureAppPictureInPicture)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import GuildIconDefault from "GuildIcon" /* 7083 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8797 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9465 */;
-import VoiceXIcon from "VoiceXIcon" /* 12087 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 12386 */;
-import conjureFrameSound from "conjureFrameSound" /* 14684 */;
-import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19278 */;
-import conjureAppPictureInPictureActions2 from "conjureAppPictureInPictureActions" /* 19280 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import GuildIconDefault from "GuildIcon" /* 7098 */;
+import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8814 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9483 */;
+import VoiceXIcon from "VoiceXIcon" /* 12146 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 12451 */;
+import conjureFrameSound from "conjureFrameSound" /* 14764 */;
+import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19382 */;
+import conjureAppPictureInPictureActions2 from "conjureAppPictureInPictureActions" /* 19384 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6966 */;
+import FramesStore from "FramesStore" /* 6981 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
@@ -32,11 +32,11 @@ function StaticCard(arg0) {
   const obj2 = { style: tmp.card, children: null };
   let tmp9 = null;
   if (null != stateFromStores) {
-    const obj3 = { guild: stateFromStores, size: tmp5(7083).GuildIconSizes.NORMAL };
+    const obj3 = { guild: stateFromStores, size: tmp5(7098).GuildIconSizes.NORMAL };
     tmp9 = closure_10(GuildIconDefault, obj3);
     const tmp2Result = GuildIconDefault;
   }
-  const items2 = [tmp9, closure_10(require("Text/Text").Text, { variant: "text-xs/semibold", color: "text-strong", lineClamp: 2, children: appName })];
+  const items2 = [tmp9, closure_10(require("Text/Text").Text, { variant: "body-xs/semibold", color: "text-strong", lineClamp: 2, children: appName })];
   obj2.children = items2;
   return closure_11(View, obj2);
 }
@@ -60,9 +60,9 @@ function SoundBadge(frame) {
 }
 const View = fn(17).View;
 let ThemeTypes = fn(1072).ThemeTypes;
-const FramesConstants = fn(6967);
+const FramesConstants = fn(6982);
 ({ asLaunched: closure_8, FrameLayoutModes } = FramesConstants);
-const MIN_PAN_GESTURE_MOVE = fn(11361).MIN_PAN_GESTURE_MOVE;
+const MIN_PAN_GESTURE_MOVE = fn(11411).MIN_PAN_GESTURE_MOVE;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let DeviceUtils = fn(5098);
@@ -73,7 +73,7 @@ if (DeviceUtils == null) {
 let closure_12 = tmp4;
 let closure_13 = { mass: 0.25, damping: 40, stiffness: 300, overshootClamping: true };
 const duration = { mass: 0.4, damping: 22, stiffness: 220 };
-let presentation = { layoutMode: FrameLayoutModes.PIP, portraitSafeAreasConfig: fn(19158).DEFAULT_PORTRAIT_LETTERBOX_CONFIG };
+let presentation = { layoutMode: FrameLayoutModes.PIP, portraitSafeAreasConfig: fn(19261).DEFAULT_PORTRAIT_LETTERBOX_CONFIG };
 const createStyles = fn(5141);
 let obj = { window: null, content: null, mask: null, interactiveMask: null, handle: null, grip: null, card: null, soundBadge: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -84,7 +84,7 @@ obj.mask = { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.lg }
 let obj4 = { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.lg };
 obj.interactiveMask = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none };
 let obj5 = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none };
-obj.handle = { height: fn(19278).INTERACTIVE_HANDLE_HEIGHT, alignItems: "center", justifyContent: "center", borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.handle = { height: fn(19382).INTERACTIVE_HANDLE_HEIGHT, alignItems: "center", justifyContent: "center", borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let size = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj.grip = size;
 const rect1 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -99,7 +99,7 @@ let closure_22 = { code: "(function ConjureAppPictureInPictureTsx4(event){let[ov
 let closure_23 = { code: "(function ConjureAppPictureInPictureTsx5(){let[dragging,overCloseTarget,closeTargetShown,closeTargetHovered]=this.__closure;dragging.set(false);overCloseTarget.set(false);closeTargetShown.set(false);closeTargetHovered.set(false);})" };
 let closure_24 = { code: "(function ConjureAppPictureInPictureTsx6(_event,success){let[open]=this.__closure;if(success)open();})" };
 let closure_25 = { code: "(function ConjureAppPictureInPictureTsx7(){let[dragging,overCloseTarget,closing,position,clampToBounds,getBounds,avoidance,DRAGGING_SCALE,closeTargetCenter,windowSize,OVER_CLOSE_TARGET_SCALE,FOLLOW_SPRING,SETTLE_SPRING,withTiming,CLOSE_ANIMATION_MS,withSpring]=this.__closure;const isDragging=dragging.get();const onCloseTarget=overCloseTarget.get()||closing.get();let{x:x,y:y}=isDragging?position.get():clampToBounds(position.get(),getBounds(avoidance.get()));let scale=isDragging?DRAGGING_SCALE:1;if(onCloseTarget){x=closeTargetCenter.x-windowSize.width/2;y=closeTargetCenter.y-windowSize.height/2;scale=closing.get()?0:OVER_CLOSE_TARGET_SCALE;}const spring=isDragging&&!onCloseTarget?FOLLOW_SPRING:SETTLE_SPRING;return{width:windowSize.width,height:windowSize.height,opacity:closing.get()?withTiming(0,{duration:CLOSE_ANIMATION_MS}):1,transform:[{translateX:withSpring(x,spring)},{translateY:withSpring(y,spring)},{scale:withSpring(scale,spring)}]};})" };
-let obj6 = { height: fn(19278).INTERACTIVE_HANDLE_HEIGHT, alignItems: "center", justifyContent: "center", borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj6 = { height: fn(19382).INTERACTIVE_HANDLE_HEIGHT, alignItems: "center", justifyContent: "center", borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/native/ConjureAppPictureInPicture.tsx");
 
@@ -136,7 +136,7 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
   let tmp = sharedValue4();
   items = [c5];
   let items1 = [frameId];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => React6(FramesStore.getFrame(c0)), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => React5(FramesStore.getFrame(c0)), items1);
   ThemeTypes = stateFromStores;
   let obj = require("initialize");
   let applicationId;
@@ -203,7 +203,7 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
   sharedValue5 = require("module_1652").useSharedValue(false);
   let items7 = [frameId];
   callback1 = obj5.useCallback(() => {
-    const tmp = React6(FramesStore.getFrame(c0));
+    const tmp = React5(FramesStore.getFrame(c0));
     if (null != tmp) {
       const result = conjureAppPictureInPictureActions2.openConjureAppPictureInPictureFrame(tmp);
     }
@@ -528,7 +528,7 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
       const obj12 = { style: tmp.grip };
       obj11.children = tmp63(c4, obj12);
       obj10.children = tmp63(c4, obj11);
-      tmp63Result = tmp63(tmp2(5426).GestureDetector, obj10);
+      tmp63Result = tmp63(tmp2(5428).GestureDetector, obj10);
     }
     const items15 = [tmp63Result, ];
     const obj13 = { style: tmp.content, children: null };
@@ -545,7 +545,7 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
       str2 = "auto";
     }
     obj14.pointerEvents = str2;
-    const obj15 = { frameId, level: tmp2(12390).FrameStackLevel.AboveAppContent, presentation };
+    const obj15 = { frameId, level: tmp2(12455).FrameStackLevel.AboveAppContent, presentation };
     const items17 = [c10(FrameRenderTargetDefault, obj15), ];
     let tmp63Result2 = null;
     if (tmp8) {
@@ -561,7 +561,7 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
     items15[1] = c11(c4, obj13);
     obj8.children = items15;
     obj7.children = c11(_modDef1652.View, obj8);
-    obj6.children = c10(tmp2(5426).GestureDetector, obj7);
+    obj6.children = c10(tmp2(5428).GestureDetector, obj7);
     return c10(tmp2(5207).ThemeContextProvider, obj6);
   }
   const tmp2Result18 = require("module_1652");

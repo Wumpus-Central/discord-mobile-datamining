@@ -1,9 +1,9 @@
-// === Module 8092: AgeVerificationURLActionCreators ===
+// === Module 8108: AgeVerificationURLActionCreators ===
 
-// Module 8092 (AgeVerificationURLActionCreators)
+// Module 8108 (AgeVerificationURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8093 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -507,7 +507,7 @@ function fetchAgeVerificationMethodsSuspendedUser() {
   const request = { url: Endpoints.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS, rejectWithError: true, body: { token: suspendedUserToken } };
   return HTTP.post(request);
 }
-const VerificationVendorName = fn(6848).VerificationVendorName;
+const VerificationVendorName = fn(6863).VerificationVendorName;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationURLActionCreators.tsx");

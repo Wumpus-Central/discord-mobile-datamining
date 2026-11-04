@@ -1,6 +1,6 @@
-// === Module 16612: UserProfilePremiumTryItOutMobileRefreshExperiment ===
+// === Module 16702: UserProfilePremiumTryItOutMobileRefreshExperiment ===
 
-// Module 16612 (UserProfilePremiumTryItOutMobileRefreshExperiment)
+// Module 16702 (UserProfilePremiumTryItOutMobileRefreshExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

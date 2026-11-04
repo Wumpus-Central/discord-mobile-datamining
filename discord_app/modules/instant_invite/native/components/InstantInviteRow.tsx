@@ -1,23 +1,23 @@
-// === Module 9326: InstantInviteRow ===
+// === Module 9343: InstantInviteRow ===
 
-// Module 9326 (InstantInviteRow)
+// Module 9343 (InstantInviteRow)
 import nativeDefault from "native" /* 575 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9248 */;
-import InviteQueue from "InviteQueue" /* 9328 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9265 */;
+import InviteQueue from "InviteQueue" /* 9345 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9247 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9264 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9261 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9278 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const InviteQueueDefault = InviteQueue;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9327);
+const InstantInviteSendStateStore = fn(9344);
 ({ setSendState: closure_9, useInstantInviteSendStates: closure_10 } = InstantInviteSendStateStore);
-const InviteSendStates = fn(8003).InviteSendStates;
+const InviteSendStates = fn(8019).InviteSendStates;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { acronym: null };
@@ -103,8 +103,8 @@ export default noop.memo(function InstantInviteRow(row) {
             } else {
               let obj8 = { style: tmp.acronym, children: null };
               const acronym = tmp2(tmp3[22]).getAcronym(guild.name);
-              let obj9 = { variant: "text-sm/semibold", children: acronym };
-              obj8.children = jsx(tmp2(tmp3[23]).Text, { variant: "text-sm/semibold", children: acronym });
+              let obj9 = { variant: "body-sm/semibold", children: acronym };
+              obj8.children = jsx(tmp2(tmp3[23]).Text, { variant: "body-sm/semibold", children: acronym });
               tmp15 = <View style={tmp.acronym}>{null}</View>;
               const tmp2Result = tmp2(tmp3[22]);
             }
@@ -131,7 +131,7 @@ export default noop.memo(function InstantInviteRow(row) {
               }
             }
           }
-          React7(code, id, InviteSendStates.SENDING);
+          React6(code, id, InviteSendStates.SENDING);
           const type = row.type;
           if (InstantInviteUtils.RowTypes.FRIEND !== type) {
             if (InstantInviteUtils.RowTypes.DM !== type) {

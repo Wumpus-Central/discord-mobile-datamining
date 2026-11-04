@@ -1,19 +1,19 @@
-// === Module 19859: GuildSettingsModalAuditLog ===
+// === Module 19975: GuildSettingsModalAuditLog ===
 
-// Module 19859 (GuildSettingsModalAuditLog)
+// Module 19975 (GuildSettingsModalAuditLog)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7483 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 19862 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 19865 */;
-import AuditLogDefault from "AuditLog" /* 19874 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7499 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 19978 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 19981 */;
+import AuditLogDefault from "AuditLog" /* 19990 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19860 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19976 */;
 
 require = fn;
 const View = fn(17).View;
@@ -169,17 +169,17 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
     if (!isInitialLoading) {
       const obj6 = { style: tmp.filtersWrapper, children: null };
       const obj7 = { start: true, end: true, icon: null, label: null, onPress: null, trailing: null };
-      const obj8 = { variant: "text-md/semibold", children: null };
+      const obj8 = { variant: "body-md/semibold", children: null };
       let intl = tmp2(tmp3[16]).intl;
       obj8.children = intl.string(tmp2(tmp3[16]).t.kP6oFy);
       obj7.icon = closure_14(tmp2(tmp3[24]).Text, obj8);
       const obj9 = { style: tmp.filterTrailing, children: null };
       const obj10 = { style: tmp.filterTextWrapper, children: null };
-      const obj11 = { variant: "text-sm/semibold", children: userIdFilterLabel };
+      const obj11 = { variant: "body-sm/semibold", children: userIdFilterLabel };
       obj10.children = closure_14(tmp2(tmp3[24]).Text, obj11);
       const items8 = [closure_14(_logs, obj10), ];
       const obj12 = { style: tmp.filterTextWrapper, children: null };
-      const obj13 = { variant: "text-sm/semibold", children: actionFilterLabel };
+      const obj13 = { variant: "body-sm/semibold", children: actionFilterLabel };
       obj12.children = closure_14(tmp2(tmp3[24]).Text, obj13);
       items8[1] = closure_14(_logs, obj12);
       obj9.children = items8;

@@ -1,17 +1,17 @@
-// === Module 7101: TableRow ===
+// === Module 7116: TableRow ===
 
-// Module 7101 (TableRow)
+// Module 7116 (TableRow)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useFontScale from "useFontScale" /* 5762 */;
-import TableRowDivider from "TableRowDivider" /* 7098 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 7102 */;
-import Card from "Card" /* 7103 */;
-import TableRowArrow from "TableRowArrow" /* 7110 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 7112 */;
-import DragIcon from "DragIcon" /* 7113 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useFontScale from "useFontScale" /* 5776 */;
+import TableRowDivider from "TableRowDivider" /* 7113 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 7117 */;
+import Card from "Card" /* 7118 */;
+import TableRowArrow from "TableRowArrow" /* 7125 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 7127 */;
+import DragIcon from "DragIcon" /* 7128 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -178,7 +178,7 @@ class TableRowInner {
         if ("danger" === variant) {
           str4 = "text-feedback-critical";
         }
-        obj22 = { variant: "text-xs/medium", color: null, lineClamp: null, includeFontPadding: true, children: null };
+        obj22 = { variant: "body-xs/medium", color: null, lineClamp: null, includeFontPadding: true, children: null };
         obj22.color = str4;
         obj22.lineClamp = subLabelLineClamp;
         obj22.children = subLabel;
@@ -224,8 +224,8 @@ class TableRowInner {
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const React7 = { padding: 0 };
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const React6 = { padding: 0 };
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
@@ -283,9 +283,9 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj2.dragHandle = { marginEnd: 8 };
   return obj2;
 });
-TableRow.Icon = fn(7109).TableRowIcon;
-TableRow.Arrow = fn(7110).TableRowArrow;
-TableRow.TrailingText = fn(7112).TableRowTrailingText;
+TableRow.Icon = fn(7124).TableRowIcon;
+TableRow.Arrow = fn(7125).TableRowArrow;
+TableRow.TrailingText = fn(7127).TableRowTrailingText;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 

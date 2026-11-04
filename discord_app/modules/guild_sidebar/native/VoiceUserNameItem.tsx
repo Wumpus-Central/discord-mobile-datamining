@@ -1,19 +1,19 @@
-// === Module 18326: VoiceUserNameItem ===
+// === Module 18423: VoiceUserNameItem ===
 
-// Module 18326 (VoiceUserNameItem)
+// Module 18423 (VoiceUserNameItem)
 import util from "util" /* 1113 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6559 */;
-import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9418 */;
-import VoiceGuildTagDefault from "VoiceGuildTag" /* 18327 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6574 */;
+import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9435 */;
+import VoiceGuildTagDefault from "VoiceGuildTag" /* 18424 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
+({ jsxs: closure_6, jsx: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { marginLeft: 8, flex: 1, flexDirection: "row" }, tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 }, measuringTag: { opacity: 0 } });
 const size = fn(2);
@@ -72,7 +72,7 @@ export default function VoiceUserNameItem(arg0) {
   }
   const items1 = [nick, ];
   if (isGuest) {
-    const obj6 = { variant: "text-sm/normal", lineClamp: 1, color: "status-positive", children: null };
+    const obj6 = { variant: "body-sm/normal", lineClamp: 1, color: "status-positive", children: null };
     const intl = util.intl;
     const items2 = ["\u00A0", intl.string(util.t["pFO/Ph"])];
     obj6.children = items2;
@@ -88,8 +88,8 @@ export default function VoiceUserNameItem(arg0) {
   if (tmp12) {
     const obj7 = { onLayout: callback2, style: tmp.tag, children: null };
     const obj8 = { userId: user.id };
-    obj7.children = React5(VoiceGuildTagDefault, obj8);
-    tmp12 = React5(View, obj7);
+    obj7.children = metroImportDefault(VoiceGuildTagDefault, obj8);
+    tmp12 = metroImportDefault(View, obj7);
   }
   items3[1] = tmp12;
   obj3.children = items3;

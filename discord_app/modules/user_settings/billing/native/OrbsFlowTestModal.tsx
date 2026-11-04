@@ -1,17 +1,17 @@
-// === Module 17849: OrbsFlowTestModal ===
+// === Module 17945: OrbsFlowTestModal ===
 
-// Module 17849 (OrbsFlowTestModal)
+// Module 17945 (OrbsFlowTestModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
-import LayerScope from "LayerScope" /* 5734 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import HeaderShared from "HeaderShared" /* 9943 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10274 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17850 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 17853 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
+import LayerScope from "LayerScope" /* 5748 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import HeaderShared from "HeaderShared" /* 9961 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10322 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 17946 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 17949 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,9 +21,9 @@ require = fn;
 function BalanceWidgetMenuSection() {
   const tmp = closure_10();
   const obj = { spacing: 16, style: tmp.container, children: null };
-  items = [React5(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }), React5(BalanceWidgetMenuDefault, {})];
+  items = [metroImportDefault(Text_Text.Text, { variant: "body-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }), metroImportDefault(BalanceWidgetMenuDefault, {})];
   obj.children = items;
-  return React6(Stack_Stack.Stack, obj);
+  return React5(Stack_Stack.Stack, obj);
 }
 function BalanceWidgetPillSection() {
   const tmp = closure_10();
@@ -64,7 +64,7 @@ function BalanceWidgetPillSection() {
     ActionSheetActionCreatorsDefault.openLazy(() => balance(paths[15])(paths[14], paths.paths).then((result) => result.default), "OrbsFlowTestModalBalanceWidgetMenuKey", obj2);
   }, items1);
   const obj = { spacing: 16, style: tmp.container, children: null };
-  const items2 = [closure_7(balance(first1[11]).Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Pill" }), closure_7(balance(first1[17]).TextInput, { value: first1, onChange: callback, placeholder: "Enter balance amount", keyboardType: "numeric" }), closure_7(balance(first1[18]).Button, { text: "Apply Balance", variant: "primary", onPress: callback1 }), ];
+  const items2 = [closure_7(balance(first1[11]).Text, { variant: "body-lg/semibold", style: tmp.title, children: "Balance Widget Pill" }), closure_7(balance(first1[17]).TextInput, { value: first1, onChange: callback, placeholder: "Enter balance amount", keyboardType: "numeric" }), closure_7(balance(first1[18]).Button, { text: "Apply Balance", variant: "primary", onPress: callback1 }), ];
   let obj3 = { style: tmp.balancePillContainer, children: null };
   const items3 = [closure_7(balance(first1[19]).BalanceWidgetPill, { balance }), closure_7(balance(first1[20]).BalanceWidgetPillButton, { balance, onPress: callback2 })];
   obj3.children = items3;
@@ -76,16 +76,16 @@ function OrbsFlowTest() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   const obj = { children: null };
   const obj2 = { style: closure_10().wrap, contentContainerStyle: { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right }, children: null };
-  items = [React5(BalanceWidgetMenuSection, {}), React5(BalanceWidgetPillSection, {}), React5(OrbCheckoutMenuDefault, {})];
+  items = [metroImportDefault(BalanceWidgetMenuSection, {}), metroImportDefault(BalanceWidgetPillSection, {}), metroImportDefault(OrbCheckoutMenuDefault, {})];
   obj2.children = items;
-  obj.children = React6(hasOwnProperty, obj2);
-  return React5(LayerScope.LayerScope, obj);
+  obj.children = React5(hasOwnProperty, obj2);
+  return metroImportDefault(LayerScope.LayerScope, obj);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(9987);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const NativeStackNavigator = fn(10035);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5141);
 let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, title: null, balancePillContainer: null };

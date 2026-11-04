@@ -1,9 +1,9 @@
-// === Module 16119: GradientBorder ===
+// === Module 16208: GradientBorder ===
 
-// Module 16119 (GradientBorder)
+// Module 16208 (GradientBorder)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import _mod6676 from "module_6676" /* 6676 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import _mod6691 from "module_6691" /* 6691 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -89,7 +89,7 @@ class GradientBorder {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ HorizontalGradient: hasOwnProperty, VerticalGradient: metroRequire } = Constants);
+({ HorizontalGradient: hasOwnProperty, VerticalGradient: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const Direction = { HORIZONTAL: "horizontal", VERTICAL: "vertical", DIAGONAL: "diagonal", ANTI_DIAGONAL: "anti-diagonal" };
 GradientBorder.Direction = Direction;

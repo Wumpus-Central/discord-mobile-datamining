@@ -1,9 +1,9 @@
-// === Module 5841: UserPlusIcon ===
+// === Module 5855: UserPlusIcon ===
 
-// Module 5841 (UserPlusIcon)
+// Module 5855 (UserPlusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod5842 from "module_5842" /* 5842 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod5856 from "module_5856" /* 5856 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function UserPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5842, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5856, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

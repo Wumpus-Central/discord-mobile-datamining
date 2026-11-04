@@ -1,11 +1,11 @@
-// === Module 13386: StringSelectComponentActionSheet ===
+// === Module 13470: StringSelectComponentActionSheet ===
 
-// Module 13386 (StringSelectComponentActionSheet)
+// Module 13470 (StringSelectComponentActionSheet)
 import nativeDefault from "native" /* 575 */;
 import Server from "Server" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import EmojiDefault from "Emoji" /* 7420 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import EmojiDefault from "Emoji" /* 7436 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,8 +26,8 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(8827);
-  let tmp3 = first(noop.useState(new Set(selectionActionComponent(8827).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
+  let obj = selectionActionComponent(8844);
+  let tmp3 = first(noop.useState(new Set(selectionActionComponent(8844).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
   first = tmp3[0];
   noop = tmp3[1];
   items = [selectionActionComponent];
@@ -94,8 +94,8 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
       if (null != description.description) {
         tmp = null;
         if ("" !== description.description) {
-          const obj = { style: closure_2.selectionOptionItemDescription, variant: "text-xs/medium", color: "text-default", children: description.description };
-          tmp = jsx(Text_Text.Text, { style: closure_2.selectionOptionItemDescription, variant: "text-xs/medium", color: "text-default", children: description.description });
+          const obj = { style: closure_2.selectionOptionItemDescription, variant: "body-xs/medium", color: "text-default", children: description.description };
+          tmp = jsx(Text_Text.Text, { style: closure_2.selectionOptionItemDescription, variant: "body-xs/medium", color: "text-default", children: description.description });
         }
       }
       return tmp;
@@ -111,7 +111,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     channelId: null,
     allowEmpty: null
   };
-  let set = new Set(selectionActionComponent(8827).getInitialStringSelectOptions(selectionActionComponent, containerId));
+  let set = new Set(selectionActionComponent(8844).getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
   if (selectionOptionItemWithDescription) {
     selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;
@@ -136,5 +136,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(12292), obj2);
+  return tmp9(onSubmit(12355), obj2);
 };

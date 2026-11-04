@@ -1,12 +1,12 @@
-// === Module 13393: GuildAntiRaidActionCreators ===
+// === Module 13477: GuildAntiRaidActionCreators ===
 
-// Module 13393 (GuildAntiRaidActionCreators)
+// Module 13477 (GuildAntiRaidActionCreators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 11160 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 11208 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
@@ -111,7 +111,7 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   obj5.lockdown_duration_hours = tmp14;
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React5.GUILD_INCIDENT_ACTIONS(closure_0), body: obj5, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  const request = { url: metroImportDefault.GUILD_INCIDENT_ACTIONS(closure_0), body: obj5, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   await HTTP.put(request);
   return value;
 };
@@ -159,7 +159,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
           let tmp5 = null;
           if (null != tmp8) {
             const HTTP = HTTPUtils.HTTP;
-            const obj5 = { url: React5.GUILD_INCIDENT_REPORT_RAID(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+            const obj5 = { url: metroImportDefault.GUILD_INCIDENT_REPORT_RAID(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
             c2 = 1;
             c1 = 1;
             const obj6 = { value: HTTP.post(obj5), done: false };
@@ -186,9 +186,9 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8607).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8624).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
+({ AnalyticEvents: closure_6, Endpoints: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 12930: ConjureScopeSetupCard ===
+// === Module 13012: ConjureScopeSetupCard ===
 
-// Module 12930 (ConjureScopeSetupCard)
-import useConjureScopeCards from "useConjureScopeCards" /* 12887 */;
-import ConjureScopeCardViewDefault from "ConjureScopeCardView" /* 12888 */;
+// Module 13012 (ConjureScopeSetupCard)
+import useConjureScopeCards from "useConjureScopeCards" /* 12968 */;
+import ConjureScopeCardViewDefault from "ConjureScopeCardView" /* 12969 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,7 +1,7 @@
-// === Module 14984: isOnPlayStation ===
+// === Module 15064: isOnPlayStation ===
 
-// Module 14984 (isOnPlayStation)
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9870 */;
+// Module 15064 (isOnPlayStation)
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9888 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/isOnPlayStation.tsx");

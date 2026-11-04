@@ -1,11 +1,11 @@
-// === Module 9094: GuildScheduledEventManager ===
+// === Module 9111: GuildScheduledEventManager ===
 
-// Module 9094 (GuildScheduledEventManager)
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9095 */;
+// Module 9111 (GuildScheduledEventManager)
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9112 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6975 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6990 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 let require = fn;
 function getGuildEventsForCurrentUser() {

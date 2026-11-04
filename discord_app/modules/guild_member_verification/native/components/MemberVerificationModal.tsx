@@ -1,20 +1,20 @@
-// === Module 7067: MemberVerificationModal ===
+// === Module 7082: MemberVerificationModal ===
 
-// Module 7067 (MemberVerificationModal)
+// Module 7082 (MemberVerificationModal)
 import nativeDefault from "native" /* 575 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 7028 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 7043 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7068 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7083 */;
 import module_1652 from "module_1652" /* 1652 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(7069);
-({ SCROLL_EVENT_TIMER_MS: closure_7, SHEET_RADIUS, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
+const MemberVerificationFormConstants = fn(7084);
+({ SCROLL_EVENT_TIMER_MS: metroImportDefault, SHEET_RADIUS, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = module_1652.createAnimatedComponent(fn(1187).Icon);

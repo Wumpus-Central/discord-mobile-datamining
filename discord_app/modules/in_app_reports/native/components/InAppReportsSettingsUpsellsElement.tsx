@@ -1,13 +1,13 @@
-// === Module 15314: InAppReportsSettingsUpsellsElement ===
+// === Module 15401: InAppReportsSettingsUpsellsElement ===
 
-// Module 15314 (InAppReportsSettingsUpsellsElement)
+// Module 15401 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 575 */;
-import useMountEffectDefault from "useMountEffect" /* 5716 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
-import SettingsIcon from "SettingsIcon" /* 7685 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8480 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 15308 */;
+import useMountEffectDefault from "useMountEffect" /* 5729 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
+import SettingsIcon from "SettingsIcon" /* 7701 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8496 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 15395 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -37,7 +37,7 @@ function SettingsUpsellsTableRow(arg0) {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -76,11 +76,11 @@ export default function SettingsUpsellElement(settingsUpsells) {
     obj5.title = intl.string(tmp2(reportId[15]).t["1yxTIJ"]);
     obj5.children = settingsUpsellsConfigs.map((getTitle, index) => {
       ({ getDisabledTitle, getDescription, onApply } = getTitle);
-      return React7(SettingsUpsellsTableRow, { title: getTitle.getTitle(), disabledTitle: getDisabledTitle(), description: getDescription(), onButtonClick: onApply, trackSettingsUpsellsAction: closure_5(settingsUpsells[index]) }, index);
+      return React6(SettingsUpsellsTableRow, { title: getTitle.getTitle(), disabledTitle: getDisabledTitle(), description: getDescription(), onButtonClick: onApply, trackSettingsUpsellsAction: closure_5(settingsUpsells[index]) }, index);
     });
     obj4.children = closure_9(tmp2(reportId[14]).TableRowGroup, obj5);
     const items1 = [closure_9(closure_5, obj4), ];
-    const obj6 = { variant: "text-sm/medium", style: tmp.goToSettingsText, children: null };
+    const obj6 = { variant: "body-sm/medium", style: tmp.goToSettingsText, children: null };
     const intl2 = tmp2(reportId[15]).intl;
     const obj7 = {
       goToSettingsHook() {

@@ -1,6 +1,6 @@
-// === Module 15678: GatewaySocketAnalytics ===
+// === Module 15766: GatewaySocketAnalytics ===
 
-// Module 15678 (GatewaySocketAnalytics)
+// Module 15766 (GatewaySocketAnalytics)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -52,7 +52,7 @@ let closure_2 = ["guilds", "merged_presences", "merged_members", "read_state", "
 let closure_3 = ["features"];
 let closure_4 = ["threads", "guild_scheduled_events"];
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, ChannelTypes: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, ChannelTypes: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewaySocketAnalytics.tsx");
 

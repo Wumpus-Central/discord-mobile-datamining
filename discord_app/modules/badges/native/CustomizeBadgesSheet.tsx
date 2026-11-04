@@ -1,6 +1,6 @@
-// === Module 16634: CustomizeBadgesSheet ===
+// === Module 16724: CustomizeBadgesSheet ===
 
-// Module 16634 (CustomizeBadgesSheet)
+// Module 16724 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,36 +8,36 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import timingPresets from "timingPresets" /* 5380 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import Card from "Card" /* 7103 */;
-import useStableCallbackDefault from "useStableCallback" /* 7257 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 7261 */;
-import EyeIcon from "EyeIcon" /* 7263 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8886 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8892 */;
-import native from "native" /* 9120 */;
-import ContextMenu from "ContextMenu" /* 10005 */;
-import ContextMenuState from "ContextMenuState" /* 10006 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 10007 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10037 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11588 */;
-import BadgeManagementExperimentDefault from "BadgeManagementExperiment" /* 11590 */;
-import BadgeUtils from "BadgeUtils" /* 11597 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12547 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 15121 */;
-import BadgeGrid from "BadgeGrid" /* 16635 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import timingPresets from "timingPresets" /* 5381 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import Card from "Card" /* 7118 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 7237 */;
+import EyeIcon from "EyeIcon" /* 7239 */;
+import useStableCallbackDefault from "useStableCallback" /* 7277 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8903 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8909 */;
+import native from "native" /* 9137 */;
+import ContextMenu from "ContextMenu" /* 10053 */;
+import ContextMenuState from "ContextMenuState" /* 10054 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 10055 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10084 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10085 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11638 */;
+import BadgeManagementExperimentDefault from "BadgeManagementExperiment" /* 11640 */;
+import BadgeUtils from "BadgeUtils" /* 11648 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12628 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 15201 */;
+import BadgeGrid from "BadgeGrid" /* 16725 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8855 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8872 */;
 import UserStore from "UserStore" /* 1385 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8904 */;
 
 const require = globalThis.__r;
 
@@ -109,7 +109,7 @@ function BadgeTileContent(badge) {
   if (flag) {
     str = "text-muted";
   }
-  items1[1] = gesture(Text_Text.Text, { variant: "text-xs/medium", color: str, lineClamp: 1, style: tmp.name, "aria-hidden": true, children: badge.name });
+  items1[1] = gesture(Text_Text.Text, { variant: "body-xs/medium", color: str, lineClamp: 1, style: tmp.name, "aria-hidden": true, children: badge.name });
   let tmp14Result = null != tmp2;
   if (tmp14Result) {
     const obj6 = { style: tmp.indicator, "aria-hidden": true, children: tmp2 };
@@ -123,7 +123,7 @@ get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsObjects: closure_9, AnalyticsPages: closure_10, AnalyticsSections: closure_11 } = Constants);
-const constants3 = fn(5396).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const constants3 = fn(5397).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -154,7 +154,7 @@ let size = { position: "absolute", top: nativeDefault.space.PX_8, end: nativeDef
 obj10.indicator = size;
 obj10.iconHidden = { opacity: 0.3 };
 let closure_18 = createStyles.createStyles(obj10);
-let items = [{ code: "(function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){let[BADGE_GRID_COLUMNS,BADGE_GRID_GAP]=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};})" }, fn(16635).BADGE_GRID_COLUMNS, fn(16635).BADGE_GRID_GAP];
+let items = [{ code: "(function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){let[BADGE_GRID_COLUMNS,BADGE_GRID_GAP]=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};})" }, fn(16725).BADGE_GRID_COLUMNS, fn(16725).BADGE_GRID_GAP];
 let closure_129_0;
 let closure_129_1;
 [tmp5, tmp6, tmp7] = items;
@@ -336,7 +336,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx2.__closure = items1;
     CustomizeBadgesSheetTsx2.__workletHash = 10350129315381;
     CustomizeBadgesSheetTsx2.__initData = tmp15;
-    let items2 = [closure_23, sharedValue, sharedValue2, tmp2(5377).withTiming, tmp2(5380).timingStandard, sharedValue3];
+    let items2 = [closure_23, sharedValue, sharedValue2, tmp2(5378).withTiming, tmp2(5381).timingStandard, sharedValue3];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -381,7 +381,7 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
     CustomizeBadgesSheetTsx3.__workletHash = 7747025592280;
     CustomizeBadgesSheetTsx3.__initData = tmp23;
     const animatedReaction = tmp2(1652).useAnimatedReaction(CustomizeBadgesSheetTsx2, CustomizeBadgesSheetTsx3);
-    let items4 = [items15, orderShared, tileSize, tmp2(16635).BADGE_GRID_GAP, tmp2(1652).clamp, sharedValue2, tmp2(16635).BADGE_GRID_COLUMNS, sharedValue3, slotOffset, tmp2(15121).moveBadgeInDisplayOrder, badge_id, tmp2(1705).scheduleOnRN, tmp2(5383).triggerHapticFeedback, tmp2(5383).HapticFeedbackTypes];
+    let items4 = [items15, orderShared, tileSize, tmp2(16725).BADGE_GRID_GAP, tmp2(1652).clamp, sharedValue2, tmp2(16725).BADGE_GRID_COLUMNS, sharedValue3, slotOffset, tmp2(15201).moveBadgeInDisplayOrder, badge_id, tmp2(1705).scheduleOnRN, tmp2(5384).triggerHapticFeedback, tmp2(5384).HapticFeedbackTypes];
     _require = undefined;
     importDefault = undefined;
     dependencyMap = undefined;
@@ -839,9 +839,9 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   if (analyticsLocations1 == null) {
     analyticsLocations1 = [];
   }
-  analyticsLocations = useAnalyticsLocationsDefault(analyticsLocations1, tmp2(7471).BADGES_REORDER_ACTION_SHEET).analyticsLocations;
+  analyticsLocations = useAnalyticsLocationsDefault(analyticsLocations1, tmp2(7487).BADGES_REORDER_ACTION_SHEET).analyticsLocations;
   noop = analyticsLocations;
-  const context = noop.useContext(tmp2(5714));
+  const context = noop.useContext(tmp2(5727));
   c4 = context;
   const items2 = [context, analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -883,7 +883,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const obj3 = { page: closure_2_10.USER_SETTINGS, section: constants2.USER_PROFILE };
       obj2.location = obj3;
       obj2.location_stack = _undefined2;
-      AnalyticsUtilsDefault.track(React6.PREMIUM_UPSELL_VIEWED, obj2);
+      AnalyticsUtilsDefault.track(React5.PREMIUM_UPSELL_VIEWED, obj2);
     }
   }, items7);
   const items8 = [stateFromStores];
@@ -917,7 +917,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   memo2 = noop.useMemo(() => reorderableBadges.map((badge_id) => badge_id.badge_id), items13);
   const tmp5Result14 = require("initialize");
   sharedValue = require("module_1652").useSharedValue(memo2);
-  onCommitOrder = tmp2(7257)((arr) => {
+  onCommitOrder = tmp2(7277)((arr) => {
     const result = tenureBadgeHideable(canReorder[28]).setPendingBadgeDisplayOrder(arr);
   });
   const tmp5Result15 = require("module_1652");
@@ -928,14 +928,14 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const result = sharedValue.set(memo2);
     }
   }, items14);
-  closure_18 = tmp2(7257)((badgeId) => {
+  closure_18 = tmp2(7277)((badgeId) => {
     const obj = PendingBadgeSettings;
     const result = obj.setPendingBadgeVisibility({ badgeId: badgeId.badge_id, hidden: false, reorderableBadgeIds: memo2, hiddenBadgeIds: hiddenBadges.map((badge_id) => badge_id.badge_id), canReorder });
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.mehuPg, { badgeName: badgeId.name }));
   });
-  onPress = tmp2(7257)((badge_id) => {
+  onPress = tmp2(7277)((badge_id) => {
     if (hiddenBadges.some((badge_id) => badge_id.badge_id === badge_id.badge_id)) {
       closure_18(badge_id);
     } else if (set.has(badge_id.badge_id)) {
@@ -948,14 +948,14 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       obj.open(combined, obj2);
     }
   });
-  closure_20 = tmp2(7257)((badgeId) => {
+  closure_20 = tmp2(7277)((badgeId) => {
     const obj = PendingBadgeSettings;
     const result = obj.setPendingBadgeVisibility({ badgeId: badgeId.badge_id, hidden: true, reorderableBadgeIds: memo2, hiddenBadgeIds: hiddenBadges.map((badge_id) => badge_id.badge_id), canReorder });
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.q3t0Ht, { count: 1 }));
   });
-  onSetHidden = tmp2(7257)((arg0, arg1) => {
+  onSetHidden = tmp2(7277)((arg0, arg1) => {
     if (arg1) {
       closure_20(arg0);
     } else {
@@ -967,12 +967,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const tmp5Result17 = require("Sheet/BottomSheet");
   badgeTileSize = require("BadgeGrid").getBadgeTileSize(bottomSheetWidth);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
-  const rounded = Math.ceil(sum1 / tmp5(16635).BADGE_GRID_COLUMNS);
+  const rounded = Math.ceil(sum1 / tmp5(16725).BADGE_GRID_COLUMNS);
   let num = 0;
   if (rounded > 0) {
     let result = rounded * badgeTileSize;
     const diff = rounded - 1;
-    num = result + diff * tmp5(16635).BADGE_GRID_GAP;
+    num = result + diff * tmp5(16725).BADGE_GRID_GAP;
   }
   const tmp5Result18 = require("BadgeGrid");
   animatedRef = require("module_1652").useAnimatedRef();
@@ -1081,12 +1081,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       obj6.ctaText = intl2.string(tmp5(1113).t.pj0XBN);
       ({ upsellCard: obj22.cardStyle, upsellContent: obj22.contentStyle, upsellCta: obj22.ctaStyle } = tmp);
       obj6.onPress = callback;
-      const obj7 = { variant: "text-sm/normal", style: tmp.upsellText, children: null };
+      const obj7 = { variant: "body-sm/normal", style: tmp.upsellText, children: null };
       const intl3 = tmp5(1113).intl;
       obj7.children = intl3.string(tmp5(1113).t.JrOki0);
-      obj6.children = memo2(tmp5(5747).Text, obj7);
-      tmp56 = memo2(tmp2(16636), obj6);
-      const tmp2Result = tmp2(16636);
+      obj6.children = memo2(tmp5(5761).Text, obj7);
+      tmp56 = memo2(tmp2(16726), obj6);
+      const tmp2Result = tmp2(16726);
     }
     const items22 = [tmp56, ];
     const obj8 = { accessibilityRole: "list", style: null, children: null };
@@ -1115,13 +1115,13 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   } else {
     if (stateFromStoresObject.hasCatalogError) {
       const obj10 = { style: tmp.message, accessibilityRole: "alert", children: null };
-      const obj11 = { variant: "text-md/normal", color: "text-muted", style: tmp.messageText, children: null };
+      const obj11 = { variant: "body-md/normal", color: "text-muted", style: tmp.messageText, children: null };
       let intl = tmp5(1113).intl;
       obj11.children = intl.string(tmp5(1113).t["rTU7/z"]);
-      obj10.children = tmp51(tmp5(5747).Text, obj11);
+      obj10.children = tmp51(tmp5(5761).Text, obj11);
       let obj12 = obj10;
     } else {
-      obj12 = { style: tmp.message, children: tmp51(tmp5(7080).ActivityIndicator, { animating: true, size: "large" }) };
+      obj12 = { style: tmp.message, children: tmp51(tmp5(7095).ActivityIndicator, { animating: true, size: "large" }) };
     }
     tmp51Result = tmp51(c4, obj12);
   }

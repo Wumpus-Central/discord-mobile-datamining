@@ -1,8 +1,8 @@
-// === Module 18907: GenericTextRow ===
+// === Module 19010: GenericTextRow ===
 
-// Module 18907 (GenericTextRow)
-import Text_Text from "Text/Text" /* 5747 */;
-import SearchListRow from "SearchListRow" /* 18860 */;
+// Module 19010 (GenericTextRow)
+import Text_Text from "Text/Text" /* 5761 */;
+import SearchListRow from "SearchListRow" /* 18963 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -69,7 +69,7 @@ export default noop.memo(function GenericTextRow(text) {
       }
     }
   }), items);
-  obj.children = jsx(Text_Text.Text, { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text });
+  obj.children = jsx(Text_Text.Text, { lineClamp: 1, variant: "body-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text });
   const label = <View style={tmp.title}>{null}</View>;
   let icon1 = null != icon;
   if (icon1) {

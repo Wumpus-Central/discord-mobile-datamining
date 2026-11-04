@@ -1,6 +1,6 @@
-// === Module 16573: PlainTextExperiment ===
+// === Module 16664: PlainTextExperiment ===
 
-// Module 16573 (PlainTextExperiment)
+// Module 16664 (PlainTextExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 
@@ -11,6 +11,6 @@ obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/design/PlainTextExperiment.tsx");
 
-export function usePlainTextExperiment(RootThemeContextProvider) {
-  return closure_0.useConfig({ location: RootThemeContextProvider }).enabled;
+export function usePlainTextExperiment(location) {
+  return closure_0.useConfig({ location }).enabled;
 }

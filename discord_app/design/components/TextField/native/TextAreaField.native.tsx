@@ -1,17 +1,17 @@
-// === Module 7374: TextAreaField ===
+// === Module 7390: TextAreaField ===
 
-// Module 7374 (TextAreaField)
+// Module 7390 (TextAreaField)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5310 */;
-import useTextField from "useTextField" /* 7216 */;
-import InputFieldContainer from "InputFieldContainer" /* 7223 */;
+import native from "native" /* 5311 */;
+import useTextField from "useTextField" /* 7231 */;
+import InputFieldContainer from "InputFieldContainer" /* 7243 */;
 import noop from "module_19" /* 19 */;
 
 const util = prop(1113);
-const Text_Text = prop(5747);
-const NativeTextInput = prop(7226);
-const propsForNativeTextInput = prop(7229);
-const useCharacterLimitAnnouncement = prop(7375);
+const Text_Text = prop(5761);
+const NativeTextInput = prop(7246);
+const propsForNativeTextInput = prop(7249);
+const useCharacterLimitAnnouncement = prop(7391);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -83,7 +83,7 @@ export function TextAreaField(ref) {
         str = str2;
       }
     }
-    let obj10 = { variant: "text-xs/semibold", color: str, accessibilityLabel: null, children: null };
+    let obj10 = { variant: "body-xs/semibold", color: str, accessibilityLabel: null, children: null };
     if (null != nodeText) {
       const intl3 = util.intl;
       prop = util.t["8Q+k1s"];

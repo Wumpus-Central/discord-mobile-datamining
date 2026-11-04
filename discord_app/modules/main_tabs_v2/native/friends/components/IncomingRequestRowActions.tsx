@@ -1,10 +1,10 @@
-// === Module 19002: IncomingRequestRowActions ===
+// === Module 19105: IncomingRequestRowActions ===
 
-// Module 19002 (IncomingRequestRowActions)
+// Module 19105 (IncomingRequestRowActions)
 import _modDef1652 from "module_1652" /* 1652 */;
-import _modDef15259 from "module_15259" /* 15259 */;
-import _modDef16972 from "module_16972" /* 16972 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18245 */;
+import _modDef15342 from "module_15342" /* 15342 */;
+import _modDef17064 from "module_17064" /* 17064 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18342 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row" } });
 let closure_8 = { code: "(function IncomingRequestRowActionsTsx1(){let[animate,pressed,withTiming]=this.__closure;return{position:'absolute',right:0,flexDirection:'row',opacity:!animate?!pressed.get()?1:0:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};})" };
@@ -248,9 +248,9 @@ export function IncomingRequestRowActions(user) {
   const tmp2Result6 = require("module_1652");
   const tmp39 = c6;
   const tmp40 = c4;
-  const items13 = [c5(require("IconButton").IconButton, { size: "sm", variant: "tertiary", icon: _modDef16972, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 }), ];
-  const obj9 = { size: "sm", variant: "tertiary", icon: _modDef16972, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
-  items13[1] = c5(require("IconButton").IconButton, { size: "sm", variant: "active", icon: _modDef15259, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 });
+  const items13 = [c5(require("IconButton").IconButton, { size: "sm", variant: "tertiary", icon: _modDef17064, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 }), ];
+  const obj9 = { size: "sm", variant: "tertiary", icon: _modDef17064, onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  items13[1] = c5(require("IconButton").IconButton, { size: "sm", variant: "active", icon: _modDef15342, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 });
   obj8.children = items13;
   obj7.children = c6(require("Stack/Stack").Stack, obj8);
   const items14 = [c5(_modDef1652.View, obj7), ];
@@ -273,14 +273,14 @@ export function IncomingRequestRowActions(user) {
   if (animate) {
     tmp45 = animatedStyle3;
   }
-  const obj10 = { size: "sm", variant: "active", icon: _modDef15259, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  const obj10 = { size: "sm", variant: "active", icon: _modDef15342, onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
   obj13.children = c5(_modDef1652.View, {
     style: tmp45,
     onLayout: function handleWaveLayout(nativeEvent) {
       const result = sharedValue2.set(nativeEvent.nativeEvent.layout.width);
       const result1 = sharedValue3.set(nativeEvent.nativeEvent.layout.height);
     },
-    children: c5(require("Text/Text").Text, { maxFontSizeMultiplier: 2, variant: "text-sm/normal", children: "\u{1F44B}" })
+    children: c5(require("Text/Text").Text, { maxFontSizeMultiplier: 2, variant: "body-sm/normal", children: "\u{1F44B}" })
   });
   obj12.icon = c5(_modDef1652.View, obj13);
   obj12.onPress = callback2;

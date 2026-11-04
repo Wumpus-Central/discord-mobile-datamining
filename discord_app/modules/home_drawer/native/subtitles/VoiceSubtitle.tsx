@@ -1,9 +1,9 @@
-// === Module 18542: VoiceSubtitle ===
+// === Module 18637: VoiceSubtitle ===
 
-// Module 18542 (VoiceSubtitle)
+// Module 18637 (VoiceSubtitle)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/
 
 export default function VoiceSubtitle(arg0) {
   ({ guildId: require, voiceUsers } = arg0);
-  const obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
+  const obj = { variant: "body-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
   const intl = util.intl;
   const obj2 = { users: null, overflowCount: null };
   const substr = voiceUsers.slice(0, 2);
@@ -21,5 +21,5 @@ export default function VoiceSubtitle(arg0) {
   obj2.users = mapped.join(", ");
   obj2.overflowCount = Math.max(voiceUsers.length - 2, 0);
   obj.children = intl.format(util.t.r1Vkoc, obj2);
-  return jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null });
+  return jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null });
 };

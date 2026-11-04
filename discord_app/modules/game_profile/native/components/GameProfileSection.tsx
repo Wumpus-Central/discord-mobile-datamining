@@ -1,12 +1,12 @@
-// === Module 9565: GameProfileSection ===
+// === Module 9584: GameProfileSection ===
 
-// Module 9565 (GameProfileSection)
+// Module 9584 (GameProfileSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7498 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9566 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7514 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9585 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -35,7 +35,7 @@ export default function GameProfileSection(onPressViewAll) {
   const obj2 = { style: null, children: null };
   const items1 = [tmp.header, headerStyle];
   obj2.style = items1;
-  const items2 = [React4(Text_Text.Heading, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: title }), ];
+  const items2 = [React4(Text_Text.Heading, { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", children: title }), ];
   let tmp4Result = null != onPressViewAll;
   if (tmp4Result) {
     const obj3 = { text: null, variant: "tertiary", size: "sm", icon: null, iconPosition: "end", onPress: null };

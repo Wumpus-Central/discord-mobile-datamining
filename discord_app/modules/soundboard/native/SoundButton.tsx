@@ -1,12 +1,12 @@
-// === Module 19338: SoundButton ===
+// === Module 19442: SoundButton ===
 
-// Module 19338 (SoundButton)
+// Module 19442 (SoundButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import EmojiDefault from "Emoji" /* 7420 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 13565 */;
-import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 19344 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import EmojiDefault from "Emoji" /* 7436 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 13649 */;
+import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 19448 */;
 import noop from "module_19" /* 19 */;
 
 const module_1652_mod = _mod1652;
@@ -96,15 +96,15 @@ function SoundButtonEmoji(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let module_1652 = module_1652_mod;
 let closure_7 = module_1652.createAnimatedComponent(View);
 let closure_8 = { damping: 10, stiffness: 300, mass: 1 };
 const createStyles = fn(5141);
 let obj = { button: null, buttonPressed: null, buttonDisabled: null, buttonPlaying: null, playingBackground: null, emoji: null, emojiWrapper: null, text: null, textPlaying: null, lock: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-obj.button = { marginTop: 4, height: fn(19332).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
-let obj2 = { marginTop: 4, height: fn(19332).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+obj.button = { marginTop: 4, height: fn(19436).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+let obj2 = { marginTop: 4, height: fn(19436).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
 obj.buttonPressed = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
 obj.buttonDisabled = { opacity: 0.5 };
 let obj4 = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
@@ -125,7 +125,7 @@ const size1 = { position: "absolute", top: nativeDefault.space.PX_12, end: nativ
 obj.lock = size1;
 let closure_9 = createStyles.createStyles(obj);
 let module_1652 = module_1652_mod;
-let closure_10 = module_1652.createAnimatedComponent(fn(7106).PressableOpacity);
+let closure_10 = module_1652.createAnimatedComponent(fn(7121).PressableOpacity);
 let closure_11 = { code: "(function SoundButtonTsx1(){let[animationConfig,withDelay,withSpring,interpolate,SPRING_CONFIG]=this.__closure;var _animationConfig$play,_animationConfig$pres,_animationConfig;const isNotPressed=animationConfig.sharedValues.pressed.get()===0;const isPlaying=animationConfig.sharedValues.playing.get()>0;const shouldDoPlayingAnimation=isNotPressed&&isPlaying;const playingAnimationScaleValue=withDelay((_animationConfig$play=animationConfig.playingAnimationDelay)!==null&&_animationConfig$play!==void 0?_animationConfig$play:0,withSpring(interpolate(animationConfig.sharedValues.playing.get(),[0,1],[1,animationConfig.scaleFactors.playing]),SPRING_CONFIG));const pressedAnimationScaleValue=withSpring(interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[1,animationConfig.scaleFactors.pressed]),SPRING_CONFIG);const rotationScaleValue=interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[0,(_animationConfig$pres=(_animationConfig=animationConfig)===null||_animationConfig===void 0?void 0:_animationConfig.pressedRotationDegrees)!==null&&_animationConfig$pres!==void 0?_animationConfig$pres:0]);return{transform:[{scale:shouldDoPlayingAnimation?playingAnimationScaleValue:pressedAnimationScaleValue},{rotate:rotationScaleValue+\"deg\"}]};})" };
 let obj5 = { borderStyle: "solid", borderWidth: 2, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 size = fn(2);
@@ -239,7 +239,7 @@ export const SoundButton = noop.memo(function SoundButtonComponent(sound) {
     textPlaying = tmp4.textPlaying;
   }
   items7[1] = textPlaying;
-  items6[2] = isLocked(isPlayingSound(sharedValue1[19]).Text, { lineClamp: 1, style: items7, variant: "text-sm/semibold", children: sound.name });
+  items6[2] = isLocked(isPlayingSound(sharedValue1[19]).Text, { lineClamp: 1, style: items7, variant: "body-sm/semibold", children: sound.name });
   obj3.children = items6;
   const children = [onLockedPress(closure_10, obj3), ];
   if (isLocked) {

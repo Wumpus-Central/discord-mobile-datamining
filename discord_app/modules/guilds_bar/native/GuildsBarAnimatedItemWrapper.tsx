@@ -1,14 +1,14 @@
-// === Module 18515: GuildsBarAnimatedItemWrapper ===
+// === Module 18610: GuildsBarAnimatedItemWrapper ===
 
-// Module 18515 (GuildsBarAnimatedItemWrapper)
+// Module 18610 (GuildsBarAnimatedItemWrapper)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import native from "native" /* 5207 */;
-import useToken from "useToken" /* 5719 */;
-import NativeViewDefault from "NativeView" /* 7086 */;
-import usePressabilityDefault from "usePressability" /* 18516 */;
-import useHomeDrawerToggleAccessibilityActionDefault from "useHomeDrawerToggleAccessibilityAction" /* 18517 */;
+import useToken from "useToken" /* 5732 */;
+import NativeViewDefault from "NativeView" /* 7101 */;
+import usePressabilityDefault from "usePressability" /* 18611 */;
+import useHomeDrawerToggleAccessibilityActionDefault from "useHomeDrawerToggleAccessibilityAction" /* 18612 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -173,11 +173,11 @@ class UnreadIndicator {
   }
 }
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
-  return React6(UnreadIndicator, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
+  return React5(UnreadIndicator, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5764).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(18503);
-({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
+const IOS_POINTER_STYLE = fn(5778).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(18598);
+({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: closure_6, useGuildWrapperSize: metroImportDefault } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { mass: 0.8, damping: 100, stiffness: 150 };
@@ -305,7 +305,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   GuildsBarAnimatedItemWrapperTsx3.__workletHash = 2090076448645;
   GuildsBarAnimatedItemWrapperTsx3.__initData = tmp9;
   const animatedStyle = require("module_1652").useAnimatedStyle(GuildsBarAnimatedItemWrapperTsx3);
-  const enableHome = noop.useContext(tmp2(18224).HomeDrawerStateContext).enableHome;
+  const enableHome = noop.useContext(tmp2(18321).HomeDrawerStateContext).enableHome;
   const obj3 = require("module_1652");
   const drawerOpen = require("useDrawerState").useDrawerOpen(enableHome);
   const items2 = [isDragTarget, dragState, num, overState, zIndex, tmp];
@@ -519,8 +519,8 @@ export default function GuildsBarAnimatedItemWrapper(id) {
       tmp41 = expandedChildren;
     }
     obj10.children = tmp41;
-    tmp29Result = tmp29(tmp4(7086), obj10);
-    const tmp4Result6 = tmp4(7086);
+    tmp29Result = tmp29(tmp4(7101), obj10);
+    const tmp4Result6 = tmp4(7101);
   }
   items14[1] = tmp29Result;
   obj9.children = items14;
@@ -540,7 +540,7 @@ export function useGuildsBarAnimatedWrapperStyles(arg0) {
     flag2 = false;
   }
   const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  return closure_13(flag, flag2, token, React5());
+  return closure_13(flag, flag2, token, metroImportDefault());
 }
 export { UnreadIndicator };
 export { renderUnreadIndicator };

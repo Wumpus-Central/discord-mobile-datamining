@@ -1,6 +1,6 @@
-// === Module 7395: isRoleRequired ===
+// === Module 7411: isRoleRequired ===
 
-// Module 7395 (isRoleRequired)
+// Module 7411 (isRoleRequired)
 import Constants from "Constants" /* 1083 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import ChannelRecord from "ChannelRecord" /* 4994 */;

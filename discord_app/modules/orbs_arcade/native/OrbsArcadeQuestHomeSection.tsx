@@ -1,20 +1,20 @@
-// === Module 17165: OrbsArcadeQuestHomeSection ===
+// === Module 17257: OrbsArcadeQuestHomeSection ===
 
-// Module 17165 (OrbsArcadeQuestHomeSection)
+// Module 17257 (OrbsArcadeQuestHomeSection)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import SkeletonCardDefault from "SkeletonCard" /* 9710 */;
-import GameControllerIcon from "GameControllerIcon" /* 9859 */;
-import useFetchOrbsArcadeGamesDefault from "useFetchOrbsArcadeGames" /* 17170 */;
-import OrbsArcadeGameTileDefault from "OrbsArcadeGameTile" /* 17174 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import SkeletonCardDefault from "SkeletonCard" /* 9728 */;
+import GameControllerIcon from "GameControllerIcon" /* 9877 */;
+import useFetchOrbsArcadeGamesDefault from "useFetchOrbsArcadeGames" /* 17262 */;
+import OrbsArcadeGameTileDefault from "OrbsArcadeGameTile" /* 17266 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17166 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17258 */;
 
 require = fn;
-const OrbsArcadeNativeConstants = fn(17169);
+const OrbsArcadeNativeConstants = fn(17261);
 ({ ORBS_ARCADE_GAME_TILE_MAX_WIDTH, ORBS_ARCADE_GAME_TILE_MIN_HEIGHT } = OrbsArcadeNativeConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -45,13 +45,13 @@ export default function OrbsArcadeQuestHomeSection(location) {
   const obj4 = { style: tmp.sectionHeader, children: null };
   const obj5 = { direction: "horizontal", spacing: nativeDefault.space.PX_8, children: null };
   const items2 = [React4(GameControllerIcon.GameControllerIcon, { size: "custom", style: tmp.sectionIcon }), ];
-  const obj7 = { variant: "text-lg/semibold", color: "text-strong", children: null };
+  const obj7 = { variant: "body-lg/semibold", color: "text-strong", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t["2L068F"]);
   items2[1] = React4(Text_Text.Heading, obj7);
   obj5.children = items2;
   const items3 = [hasOwnProperty(Stack_Stack.Stack, obj5), ];
-  const obj8 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
+  const obj8 = { variant: "heading-xs/medium", color: "text-subtle", children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(util.t.kMY21I);
   items3[1] = React4(Text_Text.Text, obj8);

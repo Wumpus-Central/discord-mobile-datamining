@@ -1,10 +1,10 @@
-// === Module 17253: QuestProgressIndicator ===
+// === Module 17345: QuestProgressIndicator ===
 
-// Module 17253 (QuestProgressIndicator)
+// Module 17345 (QuestProgressIndicator)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
 import noop_mod from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import jsxProd from "jsxProd" /* 21 */;

@@ -1,19 +1,19 @@
-// === Module 11881: confirmActivityAgeGateAlert ===
+// === Module 11940: confirmActivityAgeGateAlert ===
 
-// Module 11881 (confirmActivityAgeGateAlert)
+// Module 11940 (confirmActivityAgeGateAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
-import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 11882 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
+import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 11941 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ConfirmActivityGateContent(children) {
   const tmp = closure_6();
   const obj = { style: tmp.alertContainer, children: null };
-  items = [React4(ActivityAnnouncementDefault, {}), React4(Text_Text.Text, { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description })];
+  items = [React4(ActivityAnnouncementDefault, {}), React4(Text_Text.Text, { style: tmp.alertBodyText, variant: "body-md/normal", children: children.description })];
   obj.children = items;
   return hasOwnProperty(View, obj);
 }

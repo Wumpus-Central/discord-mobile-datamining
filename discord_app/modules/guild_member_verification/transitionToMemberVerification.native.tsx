@@ -1,10 +1,10 @@
-// === Module 7027: transitionToMemberVerification ===
+// === Module 7042: transitionToMemberVerification ===
 
-// Module 7027 (transitionToMemberVerification)
+// Module 7042 (transitionToMemberVerification)
 import router_utils from "router_utils" /* 1099 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 7028 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7064 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 7043 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7079 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5173 */;
 

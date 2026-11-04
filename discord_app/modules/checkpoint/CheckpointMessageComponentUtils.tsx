@@ -1,20 +1,20 @@
-// === Module 6207: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 6222: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 6207 (checkpoint/CheckpointMessageComponentUtils)
+// Module 6222 (checkpoint/CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
 import Server from "Server" /* 2121 */;
 import _modDef3187 from "module_3187" /* 3187 */;
 import _modDef3219 from "module_3219" /* 3219 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
-import TimeUtils from "TimeUtils" /* 5892 */;
-import CheckpointUtils from "CheckpointUtils" /* 6195 */;
-import CheckpointCardColorPalette from "CheckpointCardColorPalette" /* 6209 */;
-import CheckpointCardTypes from "CheckpointCardTypes" /* 6210 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6211 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6231 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6557 */;
-import CheckpointConstants from "CheckpointConstants" /* 6186 */;
+import TimeUtils from "TimeUtils" /* 5906 */;
+import CheckpointUtils from "CheckpointUtils" /* 6210 */;
+import CheckpointCardColorPalette from "CheckpointCardColorPalette" /* 6224 */;
+import CheckpointCardTypes from "CheckpointCardTypes" /* 6225 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6226 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6246 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6572 */;
+import CheckpointConstants from "CheckpointConstants" /* 6201 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -151,7 +151,7 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
     return obj;
   }
 }
-({ CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS: c3, CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS: closure_4, CHECKPOINT_2026_POWER_BAR_UNITS: hasOwnProperty, NATIVE_CHARACTER_LAYER_SIZE: metroRequire, CheckpointVersions: closure_7 } = CheckpointConstants);
+({ CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS: c3, CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS: closure_4, CHECKPOINT_2026_POWER_BAR_UNITS: hasOwnProperty, NATIVE_CHARACTER_LAYER_SIZE: closure_6, CheckpointVersions: metroImportDefault } = CheckpointConstants);
 let items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
 const items1 = [CheckpointCardTypes.CheckpointCardTypes.DEFAULT, CheckpointCardTypes.CheckpointCardTypes.CHARACTER_ONLY];
 const set = new Set(items1);
@@ -218,7 +218,7 @@ export function transformCheckpoint2026CardComponent(checkpoint_data) {
   return tmp3;
 }
 export function toCheckpointMessageComponentData(STATS_ONLY, stateFromStores, stats) {
-  const obj = { version: React5.V2026, character: null, stats: null, cardColorPalette: null };
+  const obj = { version: metroImportDefault.V2026, character: null, stats: null, cardColorPalette: null };
   let tmp;
   if (set.has(STATS_ONLY)) {
     tmp = stateFromStores;
@@ -426,7 +426,7 @@ export function getCheckpointDataFromMessage(contentMessage) {
   return checkpointData;
 }
 export function getCheckpointLabel(checkpointDataFromMessage) {
-  if (React5.V2025 === checkpointDataFromMessage.version) {
+  if (metroImportDefault.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
     return intl.string(_modDef3187.goiR2u);
   } else {

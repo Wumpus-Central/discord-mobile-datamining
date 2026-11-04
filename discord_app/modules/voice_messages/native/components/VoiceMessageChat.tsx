@@ -1,12 +1,12 @@
-// === Module 14355: VoiceMessageChat ===
+// === Module 14435: VoiceMessageChat ===
 
-// Module 14355 (VoiceMessageChat)
+// Module 14435 (VoiceMessageChat)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 8362 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 8378 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -195,14 +195,14 @@ function Duration(animationValue) {
   }
   obj4.color = str;
   obj4.children = memo;
-  items7[1] = closure_13(tmp8(5747).Text, obj4);
+  items7[1] = closure_13(tmp8(5761).Text, obj4);
   obj3.children = items7;
   return closure_14(tmp10(1652).View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13856).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(13857);
+const useVoiceMessagesUIStore = fn(13942).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(13943);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: closure_10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -254,7 +254,7 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
     if (!timeout) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const obj = c0(5377);
+        const obj = c0(5378);
         const result = _undefined2.set(obj.withTiming(1, { easing: c0(1652).Easing.quad, duration: 200 }));
       }, 1000);
       return () => {

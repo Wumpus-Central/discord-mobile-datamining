@@ -1,16 +1,16 @@
-// === Module 18622: YouBarNotificationsButton ===
+// === Module 18723: YouBarNotificationsButton ===
 
-// Module 18622 (YouBarNotificationsButton)
+// Module 18723 (YouBarNotificationsButton)
 import nativeDefault from "native" /* 575 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 18623 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 18724 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10321 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10369 */;
 
 const _modDef1652 = tmp2(1652);
 const require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17218);
-({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_BUTTON_HIT_SLOP: closure_7, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
+const YouBarConstants = fn(17310);
+({ YOU_BAR_SPRING_CONFIG: closure_6, YOU_BAR_BUTTON_HIT_SLOP: metroImportDefault, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -26,7 +26,7 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   let onLongPress;
   const tmp = closure_10();
   value = useNotificationsTabBadgeDefault().value;
-  items = [closure_11, onLongPress(5757).withSpring, value, closure_6, nativeDefault];
+  items = [closure_11, onLongPress(5771).withSpring, value, closure_6, nativeDefault];
   onLongPress = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -114,9 +114,9 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   const obj5 = { children: null };
   obj4.variant = str4;
   const obj6 = { style: tmp.iconContainer, children: null };
-  const tmp16Result = closure_8(onLongPress(9336).BellIcon, obj2);
-  const items4 = [closure_8(onLongPress(18619).YouBarButtonIcon, { icon: closure_8(onLongPress(9336).BellIcon, obj2), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot }), ];
-  const obj7 = { icon: closure_8(onLongPress(9336).BellIcon, obj2), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot };
+  const tmp16Result = closure_8(onLongPress(9353).BellIcon, obj2);
+  const items4 = [closure_8(onLongPress(18720).YouBarButtonIcon, { icon: closure_8(onLongPress(9353).BellIcon, obj2), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot }), ];
+  const obj7 = { icon: closure_8(onLongPress(9353).BellIcon, obj2), hasBadge: stateFromStores > 0 && 0 === value, badgeStyle: tmp.overdueReminderDot };
   items4[1] = closure_8(_modDef1652.View, { style: animatedStyle, children: closure_8(onLongPress(1187).Badge, { value }) });
   obj6.children = items4;
   obj4.icon = closure_9(View, obj6);
@@ -128,6 +128,6 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   };
   obj4.onLongPress = onLongPress;
   obj4.hitSlop = hitSlop;
-  obj5.children = closure_8(onLongPress(8152).IconButton, obj4);
-  return closure_8(onLongPress(18619).YouBarButtonContainer, obj5);
+  obj5.children = closure_8(onLongPress(8168).IconButton, obj4);
+  return closure_8(onLongPress(18720).YouBarButtonContainer, obj5);
 });

@@ -1,12 +1,12 @@
-// === Module 15276: GamePartyStore ===
+// === Module 15363: GamePartyStore ===
 
-// Module 15276 (GamePartyStore)
+// Module 15363 (GamePartyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6690 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6705 */;
 
 function updateParty(id, id2, activities, status) {
   const found = activities.find((party) => {
@@ -139,7 +139,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
 }
 const Constants = fn(1072);
-({ StatusTypes: hasOwnProperty, ME: metroRequire } = Constants);
+({ StatusTypes: hasOwnProperty, ME: closure_6 } = Constants);
 const dependencyMap = {};
 let map = new Map();
 const Store = initializeDefault.Store;

@@ -1,15 +1,15 @@
-// === Module 14891: BlockedDomainActionSheet ===
+// === Module 14971: BlockedDomainActionSheet ===
 
-// Module 14891 (BlockedDomainActionSheet)
+// Module 14971 (BlockedDomainActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import TrafficConeSpotIllustration from "TrafficConeSpotIllustration" /* 7191 */;
-import URLCallout from "URLCallout" /* 14892 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import TrafficConeSpotIllustration from "TrafficConeSpotIllustration" /* 7206 */;
+import URLCallout from "URLCallout" /* 14972 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function BlockedDomainActionSheet(url) {
   const intl = util.intl;
   obj4.children = intl.string(util.t["2B3wj8"]);
   items[1] = React3(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.warningMessage, variant: "text-md/medium", children: null };
+  const obj5 = { style: tmp.warningMessage, variant: "body-md/medium", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.format(util.t.jnHyYU, {});
   items[2] = React3(Text_Text.Text, obj5);

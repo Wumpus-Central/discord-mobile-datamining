@@ -1,10 +1,10 @@
-// === Module 18814: MembersPruneActionSheet ===
+// === Module 18915: MembersPruneActionSheet ===
 
-// Module 18814 (MembersPruneActionSheet)
+// Module 18915 (MembersPruneActionSheet)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7563 */;
-import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 18816 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7579 */;
+import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 18917 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -75,7 +75,7 @@ function MembersPruneActionSheetContent(guild) {
   if (num == null) {
     num = -1;
   }
-  items3[1] = closure_11(guild(days[14]).Text, { variant: "text-sm/medium", children: intl5.format(tmp3.isLoading ? t["98cHOp"] : t.f13az9, { members: num, days }) });
+  items3[1] = closure_11(guild(days[14]).Text, { variant: "body-sm/medium", children: intl5.format(tmp3.isLoading ? t["98cHOp"] : t.f13az9, { members: num, days }) });
   const obj7 = {
     variant: "destructive",
     onPress: function handlePrune() {
@@ -86,7 +86,7 @@ function MembersPruneActionSheetContent(guild) {
       if (tmp2) {
         PruneGuildModalActionCreatorsDefault.prune(id, first);
         ActionSheetActionCreatorsDefault.hideActionSheet();
-        React5();
+        metroImportDefault();
       }
     },
     text: null
@@ -97,8 +97,8 @@ function MembersPruneActionSheetContent(guild) {
   obj.children = items3;
   return closure_12(guild(days[9]).ActionSheet, obj);
 }
-const PrunePreviewStore = fn(18815);
-({ usePrunePreview: hasOwnProperty, setPrunePreview: metroRequire, clearAllPrunePreviews: closure_7 } = PrunePreviewStore);
+const PrunePreviewStore = fn(18916);
+({ usePrunePreview: hasOwnProperty, setPrunePreview: closure_6, clearAllPrunePreviews: metroImportDefault } = PrunePreviewStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const size = fn(2);

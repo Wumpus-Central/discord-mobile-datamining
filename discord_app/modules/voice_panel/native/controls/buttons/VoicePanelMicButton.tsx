@@ -1,26 +1,26 @@
-// === Module 19467: VoicePanelMicButton ===
+// === Module 19571: VoicePanelMicButton ===
 
-// Module 19467 (VoicePanelMicButton)
+// Module 19571 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import useMuteStates from "useMuteStates" /* 7650 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9368 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11348 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 12107 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 12108 */;
-import useDeafStates from "useDeafStates" /* 12140 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import useMuteStates from "useMuteStates" /* 7666 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9385 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11398 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 12166 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 12167 */;
+import useDeafStates from "useDeafStates" /* 12199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import GameConsoleStore from "GameConsoleStore" /* 5899 */;
 import ImpersonateStore from "ImpersonateStore" /* 5046 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 const require = globalThis.__r;
 
@@ -213,7 +213,7 @@ export function PTTButton(arg0) {
   element.children = closure_13(require("MicrophoneIcon").MicrophoneIcon, { color, size: "lg" });
   obj4.children = closure_13(onPress2(sharedValue[25]), element);
   const items10 = [closure_13(require("LegacyBaseButton").GestureDetector, obj4), ];
-  const obj6 = { style: null, variant: "text-xxs/medium", children: null };
+  const obj6 = { style: null, variant: "footnote/medium", children: null };
   const items11 = [tmp.text, voicePanelButtonStyles.iconFill];
   obj6.style = items11;
   const intl2 = tmp6(tmp3[26]).intl;

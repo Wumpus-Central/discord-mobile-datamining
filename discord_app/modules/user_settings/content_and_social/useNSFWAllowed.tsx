@@ -1,6 +1,6 @@
-// === Module 7510: useNSFWAllowed ===
+// === Module 7526: useNSFWAllowed ===
 
-// Module 7510 (useNSFWAllowed)
+// Module 7526 (useNSFWAllowed)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1385 */;
 

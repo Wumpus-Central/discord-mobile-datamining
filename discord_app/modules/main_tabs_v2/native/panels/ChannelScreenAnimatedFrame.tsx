@@ -1,13 +1,13 @@
-// === Module 18203: ChannelScreenAnimatedFrame ===
+// === Module 18300: ChannelScreenAnimatedFrame ===
 
-// Module 18203 (ChannelScreenAnimatedFrame)
+// Module 18300 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9952 */;
-import PanelsConfig from "PanelsConfig" /* 18201 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9970 */;
+import PanelsConfig from "PanelsConfig" /* 18298 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

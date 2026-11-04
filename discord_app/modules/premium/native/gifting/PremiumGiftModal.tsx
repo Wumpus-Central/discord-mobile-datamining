@@ -1,10 +1,10 @@
-// === Module 10689: PremiumGiftModal ===
+// === Module 10737: PremiumGiftModal ===
 
-// Module 10689 (PremiumGiftModal)
+// Module 10737 (PremiumGiftModal)
 import nativeDefault from "native" /* 575 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10690 */;
-import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 10691 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10738 */;
+import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 10739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 const jsx = fn(21).jsx;
 const PremiumGiftScreens = { PLAN_SELECT: "PremiumGiftPlanSelect", REWARD_SELECT: "GiftingSKUSelect", CUSTOMIZATION: "PremiumGiftCustomization", SUCCESS: "PremiumGiftSuccess", GIFTING_BADGE: "GiftingBadgePostPurchase" };
-let obj2 = { [PLAN_SELECT]: fn(10690).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(10690).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(10690).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(10690).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(10690).PaymentFlowStep.CONFIRM };
+let obj2 = { [PLAN_SELECT]: fn(10738).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(10738).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(10738).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(10738).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(10738).PaymentFlowStep.CONFIRM };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
 const createStyles = fn(5141);
 let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
@@ -156,9 +156,9 @@ export default function PremiumGiftModal(analyticsLocations) {
         currentProgress: currentProgress.currentProgress,
         onSendGift() {
           obj2 = { analyticsLocations: null };
-          items = [analyticsLocations(7471).GIFTING_BADGE_POST_PURCHASE];
+          items = [analyticsLocations(7487).GIFTING_BADGE_POST_PURCHASE];
           obj2.analyticsLocations = items;
-          analyticsLocation(10688).openGiftModal(obj2);
+          analyticsLocation(10736).openGiftModal(obj2);
         }
       });
     };

@@ -1,8 +1,8 @@
-// === Module 7715: LinkButton ===
+// === Module 7731: LinkButton ===
 
-// Module 7715 (LinkButton)
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
+// Module 7731 (LinkButton)
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export function LinkButton(textColor) {
   ({ disabled, variant } = textColor);
   ({ onPress, text, containerStyle, textStyle } = textColor);
   if (variant === undefined) {
-    variant = "text-xs/medium";
+    variant = "body-xs/medium";
   }
   let str = textColor.textColor;
   if (str === undefined) {

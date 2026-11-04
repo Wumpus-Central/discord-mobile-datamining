@@ -1,12 +1,12 @@
-// === Module 11313: ForLaterCardHeader ===
+// === Module 11363: ForLaterCardHeader ===
 
-// Module 11313 (ForLaterCardHeader)
+// Module 11363 (ForLaterCardHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import GuildIconDefault from "GuildIcon" /* 7083 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7498 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
+import useChannelNameDefault from "useChannelName" /* 5786 */;
+import GuildIconDefault from "GuildIcon" /* 7098 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7514 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10977 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
@@ -18,7 +18,7 @@ function HeaderIcon(channel) {
   items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   if (null != stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp2(7083).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp2(7098).GuildIconSizes.XSMALL };
     let tmp6Result = closure_5(GuildIconDefault, obj2);
   } else {
     let isGroupDMResult;
@@ -29,7 +29,7 @@ function HeaderIcon(channel) {
       const obj3 = { channel, size: tmp2(1187).AvatarSizes.XSMALL };
       tmp6Result = closure_5(GroupDMAvatarDefault, obj3);
     } else {
-      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(8767).ChatIcon, { size: "xxs" }) };
+      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(8784).ChatIcon, { size: "xxs" }) };
       tmp6Result = closure_5(View, obj4);
     }
   }
@@ -42,7 +42,7 @@ function ChannelName(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp5 = useChannelNameDefault(channel, false);
   const obj = channel(504);
-  const channelIconComponentWithGuild = channel(8727).getChannelIconComponentWithGuild(channel, stateFromStores);
+  const channelIconComponentWithGuild = channel(8744).getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
     isPrivateResult = null == channelIconComponentWithGuild;
@@ -59,12 +59,12 @@ function ChannelName(channel) {
     const obj5 = { style: tmp.channelTypeIcon, size: "xxs" };
     tmp12 = closure_5(channelIconComponentWithGuild, obj5);
   }
-  const items1 = [tmp12, closure_5(channel(5747).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
+  const items1 = [tmp12, closure_5(channel(5761).Text, { style: tmp.channelName, variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
   obj4.children = items1;
   return closure_6(View, obj4);
 }
 const View = _mod17.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { cardHeader: { flexDirection: "row", alignItems: "center", gap: 8 }, dmIcon: { padding: 6, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm }, channelNameContainer: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelName: { flexShrink: 1 }, channelTypeIcon: { marginRight: 4 }, actionsContainer: { marginVertical: -4, marginLeft: "auto" } };
 let closure_7 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardHeader.tsx");

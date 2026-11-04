@@ -1,13 +1,13 @@
-// === Module 18840: NavTTISurfaceProvider ===
+// === Module 18943: NavTTISurfaceProvider ===
 
-// Module 18840 (NavTTISurfaceProvider)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13466 */;
-import useComponentRenderSpan from "useComponentRenderSpan" /* 18769 */;
-import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 18771 */;
-import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 18772 */;
+// Module 18943 (NavTTISurfaceProvider)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13550 */;
+import useComponentRenderSpan from "useComponentRenderSpan" /* 18870 */;
+import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 18872 */;
+import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 18873 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import DevSettingsStore from "DevSettingsStore" /* 5764 */;
 
 require = fn;
 function NavTTISurfaceView(onLayout) {
@@ -31,7 +31,7 @@ function NavTTISurfaceView(onLayout) {
   }
   obj.onLayout = onLayout;
   obj.children = children;
-  return React6(View, obj);
+  return React5(View, obj);
 }
 function VisualizedNavTTISurfaceView(arg0) {
   ({ name, descendantTracking, viewProps } = arg0);
@@ -45,9 +45,9 @@ function VisualizedNavTTISurfaceView(arg0) {
   const navigationTTIRegionMeasurement = useComponentRenderSpan.useNavigationTTIRegionMeasurement("exclude", navigationTTIRegionHierarchy.regionId);
   const merged = Object.assign(tmp);
   obj4.measurementProps = navigationTTIRegionMeasurement;
-  items = [React6(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, { value: navigationTTIRegionHierarchy.contextValue, children }), React6(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, { name, regionId: navigationTTIRegionHierarchy.regionId, tracking: "exclude", descendantTracking, includedDescendants: navigationTTIRegionHierarchy.includedDescendants, excludedDescendants: navigationTTIRegionHierarchy.excludedDescendants, hierarchyDepth: navigationTTIRegionHierarchy.depth, violation: navigationTTIRegionHierarchy.violation })];
+  items = [React5(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, { value: navigationTTIRegionHierarchy.contextValue, children }), React5(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, { name, regionId: navigationTTIRegionHierarchy.regionId, tracking: "exclude", descendantTracking, includedDescendants: navigationTTIRegionHierarchy.includedDescendants, excludedDescendants: navigationTTIRegionHierarchy.excludedDescendants, hierarchyDepth: navigationTTIRegionHierarchy.depth, violation: navigationTTIRegionHierarchy.violation })];
   obj4.children = items;
-  return React7(NavTTISurfaceView, obj4);
+  return React6(NavTTISurfaceView, obj4);
 }
 let closure_3 = ["children"];
 const View = fn(17).View;

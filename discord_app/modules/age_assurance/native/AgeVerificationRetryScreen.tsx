@@ -1,16 +1,16 @@
-// === Module 8287: AgeVerificationRetryScreen ===
+// === Module 8303: AgeVerificationRetryScreen ===
 
-// Module 8287 (AgeVerificationRetryScreen)
+// Module 8303 (AgeVerificationRetryScreen)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
@@ -69,7 +69,7 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(6849).trackAgeVerificationModalClicked(c0, v3(6849).AgeVerificationModalVersion.RETRY, v3(6849).AgeVerificationModalCta.GET_STARTED);
+              const result = v3(6864).trackAgeVerificationModalClicked(c0, v3(6864).AgeVerificationModalVersion.RETRY, v3(6864).AgeVerificationModalCta.GET_STARTED);
               v1 = 1;
               c0 = 1;
               const obj4 = { value: v1(), done: false };
@@ -122,10 +122,10 @@ export default function GetStartedScreen(modalSessionId) {
   const items2 = [closure_9(modalSessionId(stringResult2[11]).ShieldSpotIllustration, {}), closure_9(modalSessionId(stringResult2[12]).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult }), ];
   const obj7 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult };
   const stringResult1 = intl2.string(modalSessionId(stringResult2[9]).t.JNK1ue);
-  items2[2] = closure_9(modalSessionId(stringResult2[12]).Text, { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(stringResult2[9]).t.JNK1ue) });
+  items2[2] = closure_9(modalSessionId(stringResult2[12]).Text, { variant: "heading-sm/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(stringResult2[9]).t.JNK1ue) });
   obj6.children = items2;
   const items3 = [closure_10(closure_7, obj6), , ];
-  const obj8 = { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(stringResult2[9]).t.JNK1ue) };
+  const obj8 = { variant: "heading-sm/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(stringResult2[9]).t.JNK1ue) };
   items3[1] = closure_9(modalSessionId(stringResult2[13]).TableRowGroup, {
     hasIcons: false,
     children: memo.map((item, index) => {
@@ -133,7 +133,7 @@ export default function GetStartedScreen(modalSessionId) {
       return closure_1_9(modalSessionId(stringResult2[14]).TableRow, { arrow: true, label, subLabel, onPress }, index);
     })
   });
-  const obj10 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
+  const obj10 = { variant: "body-xs/medium", color: "text-muted", style: null, children: null };
   const items4 = [, ];
   ({ centerText: arr6[0], helpLink: arr6[1] } = tmp);
   obj10.style = items4;
@@ -141,7 +141,7 @@ export default function GetStartedScreen(modalSessionId) {
   obj10.children = intl4.format(modalSessionId(stringResult2[9]).t["L+FgkZ"], {
     handleOnHelpUrlHook() {
       const obj = AgeVerificationActionCreatorsDefault;
-      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
+      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_VERIFICATION_LEARN_MORE));
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.RETRY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.LEARN_MORE);
     }
   });

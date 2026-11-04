@@ -1,33 +1,33 @@
-// === Module 9029: MediaShareActions ===
+// === Module 9046: MediaShareActions ===
 
-// Module 9029 (MediaShareActions)
+// Module 9046 (MediaShareActions)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import useChatLayout from "useChatLayout" /* 5324 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import LinkIcon from "LinkIcon" /* 5847 */;
-import DownloadIcon from "DownloadIcon" /* 5853 */;
-import transitionToChannel from "transitionToChannel" /* 5876 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6171 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import ActionSheetRow from "ActionSheetRow" /* 7488 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8959 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8963 */;
-import showShareActionSheet from "showShareActionSheet" /* 9059 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 9068 */;
-import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11307 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 13515 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 13527 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 14719 */;
-import ShareIcon from "ShareIcon" /* 14898 */;
+import useChatLayout from "useChatLayout" /* 5325 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import LinkIcon from "LinkIcon" /* 5861 */;
+import DownloadIcon from "DownloadIcon" /* 5867 */;
+import transitionToChannel from "transitionToChannel" /* 5890 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6186 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import ActionSheetRow from "ActionSheetRow" /* 7504 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8794 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8976 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8980 */;
+import showShareActionSheet from "showShareActionSheet" /* 9076 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 9085 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11357 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 13599 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 13611 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 14799 */;
+import ShareIcon from "ShareIcon" /* 14978 */;
 import noop from "module_19" /* 19 */;
-import ICYMIStore from "ICYMIStore" /* 9030 */;
+import ICYMIStore from "ICYMIStore" /* 9047 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import MessageStore from "MessageStore" /* 6181 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 9058 */;
+import MessageStore from "MessageStore" /* 6196 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 9075 */;
 
 require = fn;
 function useMediaShareActions(source) {
@@ -75,7 +75,7 @@ function useMediaShareActions(source) {
     if (null != source.videoURI) {
       const result = MediaSourceUtil.downloadMediaAssetWithContentType(source.videoURI, constants2.VIDEO, source.contentType);
     } else if (null != source.sourceURI) {
-      const result1 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, React7);
+      const result1 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, React6);
       const result2 = MediaSourceUtil.downloadMediaAssetWithContentType(source.sourceURI, result1 ? constants2.GIF : constants2.IMAGE, source.contentType);
     }
   }, items2);
@@ -124,7 +124,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = source.attachmentId;
         if (null != attachmentId) {
-          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "create-new-folder" };
+          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "0.39" };
           const obj4 = { onlyAttachmentIds: null };
           items = [attachmentId];
           obj4.onlyAttachmentIds = items;
@@ -132,7 +132,7 @@ function useMediaShareActions(source) {
           ForwardModalUtils.openForwardModal(obj3);
         }
       } else {
-        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "create-new-folder" };
+        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "0.39" };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
         obj7.onlyEmbedIndices = items1;
@@ -162,7 +162,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13442, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13526, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;
@@ -247,7 +247,7 @@ function useMediaShareActions(source) {
 }
 const Constants = fn(1072);
 ({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: closure_10 } = Constants);
-let closure_11 = fn(7590).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_11 = fn(7606).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");

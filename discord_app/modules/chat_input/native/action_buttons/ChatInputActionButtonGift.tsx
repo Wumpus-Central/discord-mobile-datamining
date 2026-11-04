@@ -1,19 +1,19 @@
-// === Module 13937: ChatInputActionButtonGift ===
+// === Module 14023: ChatInputActionButtonGift ===
 
-// Module 13937 (ChatInputActionButtonGift)
+// Module 14023 (ChatInputActionButtonGift)
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import PromotionsStore from "PromotionsStore" /* 9758 */;
+import PromotionsStore from "PromotionsStore" /* 9776 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(12945).ChatInputActionType;
+const ChatInputActionType = fn(13027).ChatInputActionType;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

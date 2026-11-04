@@ -1,19 +1,19 @@
-// === Module 11333: NewChannelFollower ===
+// === Module 11383: NewChannelFollower ===
 
-// Module 11333 (NewChannelFollower)
+// Module 11383 (NewChannelFollower)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11336 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11339 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11386 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11389 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import SortedGuildStore from "SortedGuildStore" /* 6907 */;
 
 const require = globalThis.__r;
 
@@ -89,9 +89,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("module_11334");
+    let tmp8Result = require("module_11384");
   } else {
-    tmp8Result = require("module_11335");
+    tmp8Result = require("module_11385");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { style: tmp.header, children: null };
@@ -108,7 +108,7 @@ export default function NewChannelFollower(targetChannelId) {
   }
   obj11.source = channelIcon;
   obj11.style = tmp.headerChannelIcon;
-  const items4 = [closure_15(require("native").Icon, obj11), closure_15(require("Text/Text").Text, { lineClamp: 1, variant: "text-sm/medium", children: tmp12 })];
+  const items4 = [closure_15(require("native").Icon, obj11), closure_15(require("Text/Text").Text, { lineClamp: 1, variant: "body-sm/medium", children: tmp12 })];
   obj10.children = items4;
   obj9.children = closure_16(closure_5, obj10);
   items3[1] = closure_15(closure_5, obj9);
@@ -121,7 +121,7 @@ export default function NewChannelFollower(targetChannelId) {
   let intl = require("util").intl;
   obj13.children = intl.string(require("util").t.mvPFbA);
   const items6 = [closure_15(require("Text/Text").Text, obj13), , , , , ];
-  const obj14 = { style: tmp.ctaSubhead, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj14 = { style: tmp.ctaSubhead, variant: "body-sm/medium", color: "text-default", children: null };
   let intl2 = require("util").intl;
   obj14.children = intl2.string(require("util").t.kbpkxJ);
   items6[1] = closure_15(require("Text/Text").Text, obj14);
@@ -174,8 +174,8 @@ export default function NewChannelFollower(targetChannelId) {
     obj2.onClose = function onClose() {
       closure_1_4(targetGuildId, targetChannelId);
     };
-    obj.openLazy(asyncRequireImpl(9130, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
-    const tmp = asyncRequireImpl(9130, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(9147, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
+    const tmp = asyncRequireImpl(9147, dependencyMap.paths);
   };
   obj15.children = closure_15(require("TableRow").TableRow, obj16);
   const items7 = [closure_15(require("TableRowGroup").TableRowGroup, obj15), ];

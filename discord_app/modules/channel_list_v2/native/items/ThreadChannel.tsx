@@ -1,20 +1,20 @@
-// === Module 18315: ThreadChannel ===
+// === Module 18412: ThreadChannel ===
 
-// Module 18315 (ThreadChannel)
+// Module 18412 (ThreadChannel)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 5876 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 11270 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 18316 */;
+import transitionToChannel from "transitionToChannel" /* 5890 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 11320 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 18413 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import ReadStateStore from "ReadStateStore" /* 6962 */;
+import ReadStateStore from "ReadStateStore" /* 6977 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5901 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -187,10 +187,10 @@ function ThreadChannel(channel) {
   tmp8Result = tmp8(obj[24]);
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11186);
+const RedesignChannelListConstants = fn(11236);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1072).Permissions;
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 let closure_16 = fn(1112).OpenThreadAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);

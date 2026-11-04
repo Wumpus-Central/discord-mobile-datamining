@@ -1,20 +1,20 @@
-// === Module 10319: LongPressMessageActionSheet ===
+// === Module 10367: LongPressMessageActionSheet ===
 
-// Module 10319 (LongPressMessageActionSheet)
+// Module 10367 (LongPressMessageActionSheet)
 import FlagUtils from "FlagUtils" /* 1398 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7446 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10318 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10329 */;
-import EmojiRowUtils from "EmojiRowUtils" /* 14670 */;
-import EmojiRowDefault from "EmojiRow" /* 14671 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7462 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10366 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10377 */;
+import EmojiRowUtils from "EmojiRowUtils" /* 14750 */;
+import EmojiRowDefault from "EmojiRow" /* 14751 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8507 */;
-import ReportToModStore from "ReportToModStore" /* 10320 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10321 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8524 */;
+import ReportToModStore from "ReportToModStore" /* 10368 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10369 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;

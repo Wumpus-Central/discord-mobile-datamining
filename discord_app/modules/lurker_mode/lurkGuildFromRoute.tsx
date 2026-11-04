@@ -1,7 +1,7 @@
-// === Module 10316: lurkGuildFromRoute ===
+// === Module 10364: lurkGuildFromRoute ===
 
-// Module 10316 (lurkGuildFromRoute)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+// Module 10364 (lurkGuildFromRoute)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 5012 */;

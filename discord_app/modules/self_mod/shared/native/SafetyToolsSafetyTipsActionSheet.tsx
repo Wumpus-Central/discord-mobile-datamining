@@ -1,16 +1,16 @@
-// === Module 11450: SafetyToolsSafetyTipsActionSheet ===
+// === Module 11500: SafetyToolsSafetyTipsActionSheet ===
 
-// Module 11450 (SafetyToolsSafetyTipsActionSheet)
+// Module 11500 (SafetyToolsSafetyTipsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11412 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 11441 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11462 */;
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 11491 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(11393).getInappropriateConversationsSafetyTips;
+let closure_4 = fn(11443).getInappropriateConversationsSafetyTips;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { safetyTipsContainer: { marginHorizontal: nativeDefault.space.PX_16 } };
@@ -30,7 +30,7 @@ export default function SafetyToolsSafetyTipsActionSheet(arg0) {
   const obj3 = { description: null, safetyTips: null };
   const intl2 = util.intl;
   obj3.description = intl2.string(util.t.DJMZX6);
-  obj3.safetyTips = closure_4().map((children, index) => jsx(Text_Text.Text, { variant: "text-sm/medium", children }, index));
+  obj3.safetyTips = closure_4().map((children, index) => jsx(Text_Text.Text, { variant: "body-sm/medium", children }, index));
   obj2.children = <tmp3 description={null} safetyTips={null} />;
   obj.children = <View style={tmp.safetyTipsContainer}>{null}</View>;
   return <tmp2 hasHeaderBack recipientId={recipientId} warningId={warningId} warningType={warningType} headerTitle={null} channelId={null} onClose={null}>{null}</tmp2>;

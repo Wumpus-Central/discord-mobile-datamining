@@ -1,15 +1,15 @@
-// === Module 15075: UserProfileWidgetsBoardEditNotice ===
+// === Module 15155: UserProfileWidgetsBoardEditNotice ===
 
-// Module 15075 (UserProfileWidgetsBoardEditNotice)
+// Module 15155 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import Pressables from "Pressables" /* 7106 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10650 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import Pressables from "Pressables" /* 7121 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8955 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10698 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_7 = createStyles.createStyles(obj2);
@@ -42,7 +42,7 @@ export default function UserProfileWidgetsBoardEditNotice() {
       const obj3 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
       obj2.children = hasOwnProperty(CircleInformationIcon.CircleInformationIcon, obj3);
       const items1 = [hasOwnProperty(View, obj2), , ];
-      const obj4 = { style: closure_0.text, variant: "text-sm/medium", color: "text-strong", children: null };
+      const obj4 = { style: closure_0.text, variant: "body-sm/medium", color: "text-strong", children: null };
       const intl = util.intl;
       obj4.children = intl.string(util.t.kv8ULD);
       items1[1] = hasOwnProperty(Text_Text.Text, obj4);

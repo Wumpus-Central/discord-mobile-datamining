@@ -1,9 +1,9 @@
-// === Module 13176: SaveIcon ===
+// === Module 13259: SaveIcon ===
 
-// Module 13176 (SaveIcon)
+// Module 13259 (SaveIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod13177 from "module_13177" /* 13177 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod13260 from "module_13260" /* 13260 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function SaveIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13177, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13260, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

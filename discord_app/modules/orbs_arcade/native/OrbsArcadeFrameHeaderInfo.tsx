@@ -1,20 +1,20 @@
-// === Module 19159: OrbsArcadeFrameHeaderInfo ===
+// === Module 19262: OrbsArcadeFrameHeaderInfo ===
 
-// Module 19159 (OrbsArcadeFrameHeaderInfo)
+// Module 19262 (OrbsArcadeFrameHeaderInfo)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17166 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17258 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 }, namePill: null, nameText: null };
 const obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 };
-obj2.namePill = { flexShrink: 1, minHeight: fn(5760).SMALL_BUTTON_HEIGHT, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
-let obj4 = { flexShrink: 1, minHeight: fn(5760).SMALL_BUTTON_HEIGHT, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+obj2.namePill = { flexShrink: 1, minHeight: fn(5774).SMALL_BUTTON_HEIGHT, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+let obj4 = { flexShrink: 1, minHeight: fn(5774).SMALL_BUTTON_HEIGHT, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 obj2.nameText = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -62,7 +62,7 @@ export default function OrbsArcadeFrameHeaderInfo(gameId) {
     tmp9 = null;
     if ("" !== stateFromStores) {
       const obj5 = { style: tmp.namePill, children: null };
-      const obj6 = { variant: "text-sm/semibold", color: "none", lineClamp: 1, maxFontSizeMultiplier: 1, style: tmp.nameText, children: stateFromStores };
+      const obj6 = { variant: "body-sm/semibold", color: "none", lineClamp: 1, maxFontSizeMultiplier: 1, style: tmp.nameText, children: stateFromStores };
       obj5.children = closure_6(tmp2(tmp3[10]).Text, obj6);
       tmp9 = closure_6(tmp8, obj5);
     }

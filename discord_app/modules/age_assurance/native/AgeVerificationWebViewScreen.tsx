@@ -1,20 +1,20 @@
-// === Module 8102: AgeVerificationWebViewScreen ===
+// === Module 8118: AgeVerificationWebViewScreen ===
 
-// Module 8102 (AgeVerificationWebViewScreen)
+// Module 8118 (AgeVerificationWebViewScreen)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8092 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6861 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8108 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6848).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(8080);
-({ AgeVerificationIncodeResultStatus: closure_7, buildIncodeFallbackSessionInjection: closure_8, parseIncodeWebViewMessage: closure_9 } = AgeVerificationIncodeWebViewConstants);
+let closure_6 = fn(6863).AGE_VERIFICATION_MODAL_KEY;
+const AgeVerificationIncodeWebViewConstants = fn(8096);
+({ AgeVerificationIncodeResultStatus: metroImportDefault, buildIncodeFallbackSessionInjection: closure_8, parseIncodeWebViewMessage: closure_9 } = AgeVerificationIncodeWebViewConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
@@ -82,14 +82,14 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
   const callback3 = noop.useCallback((arg0) => {
     const current = ref.current;
     if (current != null) {
-      current.injectJavaScript(React6(arg0));
+      current.injectJavaScript(React5(arg0));
     }
   }, []);
   const items3 = [callback1, callback3, onClose];
   const items4 = [webviewUrl];
   const callback4 = noop.useCallback((nativeEvent) => {
     try {
-      const tmp3 = React7(nativeEvent.nativeEvent.data);
+      const tmp3 = React6(nativeEvent.nativeEvent.data);
       if (null != tmp3) {
         if ("capture_complete" === tmp4.kind) {
           const result = AgeVerificationURLActionCreators.registerIncodeInterview(tmp3.interviewId);

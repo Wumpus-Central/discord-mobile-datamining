@@ -1,26 +1,26 @@
-// === Module 18845: layout/SearchBar ===
+// === Module 18948: layout/SearchBar ===
 
-// Module 18845 (layout/SearchBar)
+// Module 18948 (layout/SearchBar)
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14017 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14042 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14103 */;
+import TrackingDefault from "Tracking" /* 14124 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14128 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
-import SearchQueryStore from "SearchQueryStore" /* 14031 */;
+import SearchQueryStore from "SearchQueryStore" /* 14117 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({ SEARCH_BAR_HEIGHT: closure_10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9975).SearchFilterAddLocations;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
@@ -222,7 +222,7 @@ export default noop.memo(function SearchBarWithRef(searchContext) {
       AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj3));
       if (tmp2.type === constants.COMPLETE) {
         const obj6 = { searchContext, searchTokenType: tmp2.searchTokenType, isDefault: tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD };
-        let result = search_tracking_TrackingDefault.trackSearchFilterRemove(obj6);
+        let result = TrackingDefault.trackSearchFilterRemove(obj6);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (removeTag) => {
         removeTag.removeTag(closure_0);

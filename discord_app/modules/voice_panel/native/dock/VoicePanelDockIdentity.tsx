@@ -1,14 +1,14 @@
-// === Module 19368: VoicePanelDockIdentity ===
+// === Module 19472: VoicePanelDockIdentity ===
 
-// Module 19368 (VoicePanelDockIdentity)
+// Module 19472 (VoicePanelDockIdentity)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 575 */;
 import native2 from "native" /* 1187 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7395 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19369 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7411 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19473 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -72,7 +72,7 @@ function DockChannelIcon() {
   return tmp12;
 }
 const View = fn(17).View;
-const VoicePanelDockConstants = fn(11378);
+const VoicePanelDockConstants = fn(11428);
 ({ DOCK_TILE_RADIUS, DOCK_TILE_SIZE, DOCK_GAP, DOCK_GLYPH_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -109,12 +109,12 @@ export default noop.memo(function VoicePanelDockIdentity() {
   const items3 = [closure_9(DockChannelIcon, {}), ];
   const obj4 = { style: tmp.titleRow, children: null };
   if (stateFromStores) {
-    let VoiceNormalIcon = tmp4(8794).VoiceLockIcon;
+    let VoiceNormalIcon = tmp4(8811).VoiceLockIcon;
   } else {
-    VoiceNormalIcon = tmp4(8797).VoiceNormalIcon;
+    VoiceNormalIcon = tmp4(8814).VoiceNormalIcon;
   }
   const obj2 = channelId(504);
-  const items4 = [closure_9(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }), closure_9(channelId(5747).Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: tmp.title, children: stateFromStores1 })];
+  const items4 = [closure_9(VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_DEFAULT }), closure_9(channelId(5761).Text, { variant: "body-md/medium", color: "text-default", lineClamp: 1, style: tmp.title, children: stateFromStores1 })];
   obj4.children = items4;
   items3[1] = closure_10(View, obj4);
   obj3.children = items3;

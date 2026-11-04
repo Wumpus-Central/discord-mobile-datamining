@@ -1,10 +1,10 @@
-// === Module 8620: StageSpeakerSystemMessage ===
+// === Module 8637: StageSpeakerSystemMessage ===
 
-// Module 8620 (StageSpeakerSystemMessage)
+// Module 8637 (StageSpeakerSystemMessage)
 import util from "util" /* 1113 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8542 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8544 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8546 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8559 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8561 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8563 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageSpeakerSystemMessage.tsx");

@@ -1,9 +1,9 @@
-// === Module 19947: RoleGradientPickerActionSheet ===
+// === Module 20063: RoleGradientPickerActionSheet ===
 
-// Module 19947 (RoleGradientPickerActionSheet)
+// Module 20063 (RoleGradientPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16593 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,9 +11,9 @@ const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const EnhancedRoleColorConstants = fn(19930);
-({ DEFAULT_GRADIENT_ROLE_COLORS: closure_7, GRADIENT_PRESETS: closure_8 } = EnhancedRoleColorConstants);
+({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
+const EnhancedRoleColorConstants = fn(20046);
+({ DEFAULT_GRADIENT_ROLE_COLORS: metroImportDefault, GRADIENT_PRESETS: closure_8 } = EnhancedRoleColorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -169,7 +169,7 @@ export default function RoleGradientPickerActionSheet(arg0) {
   const intl5 = onSelect(first[13]).intl;
   obj13.text = intl5.string(onSelect(first[13]).t.yBZMsQ);
   obj13.onPress = function handleReset() {
-    closure_3(React5);
+    closure_3(metroImportDefault);
   };
   items5[2] = closure_9(onSelect(first[14]).Button, obj13);
   obj6.children = items5;

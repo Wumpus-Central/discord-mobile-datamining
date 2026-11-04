@@ -1,18 +1,18 @@
-// === Module 16928: ConnectGuardianCard ===
+// === Module 17020: ConnectGuardianCard ===
 
-// Module 16928 (ConnectGuardianCard)
+// Module 17020 (ConnectGuardianCard)
 import nativeDefault from "native" /* 575 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16925 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 17017 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7840).FAMILY_CENTER_REQUEST_QR_CODE_URL;
+let closure_6 = fn(7856).FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, compactContainer: null, card: null, countdown: null, divider: null, compactDividerFlush: null, dividerLine: null, dividerText: null, buttonGroup: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -69,7 +69,7 @@ export function ConnectGuardianCard(linkCode) {
     const obj3 = { align: "center", spacing: tmp6(tmp3[6]).space.PX_8, children: null };
     const obj4 = { size: 160, text: tmp16 };
     const items3 = [closure_7(tmp2(tmp3[16]).QRCodeWithOverlay, obj4), ];
-    const obj5 = { style: tmp.countdown, variant: "text-xs/normal", children: null };
+    const obj5 = { style: tmp.countdown, variant: "body-xs/normal", children: null };
     const stringResult = intl5.string(tmp6(tmp3[14]).RfkLDs);
     const _HermesInternal = HermesInternal;
     obj5.children = "" + stringResult + " " + tmp2(tmp3[18]).getTimeFormat(86400 * days + 3600 * hours + 60 * minutes + seconds);
@@ -90,7 +90,7 @@ export function ConnectGuardianCard(linkCode) {
       obj6.style = items4;
       const obj7 = { style: tmp.dividerLine };
       const items5 = [closure_7(View, obj7), , ];
-      const obj8 = { style: tmp.dividerText, variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj8 = { style: tmp.dividerText, variant: "body-sm/medium", color: "text-muted", children: null };
       const intl = tmp2(tmp3[13]).intl;
       const tmp6Result = tmp6(tmp3[14]);
       obj8.children = intl.string("compact" === shareActions ? tmp6Result.XhROZk : tmp6Result.lggBOi);

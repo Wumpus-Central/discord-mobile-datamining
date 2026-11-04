@@ -1,6 +1,6 @@
-// === Module 8362: utils/TimeUtils ===
+// === Module 8378: utils/TimeUtils ===
 
-// Module 8362 (utils/TimeUtils)
+// Module 8378 (utils/TimeUtils)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("utils/native/TimeUtils.tsx");

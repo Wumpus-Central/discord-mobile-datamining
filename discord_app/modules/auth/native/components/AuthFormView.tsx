@@ -1,19 +1,19 @@
-// === Module 7265: AuthFormView ===
+// === Module 7281: AuthFormView ===
 
-// Module 7265 (AuthFormView)
+// Module 7281 (AuthFormView)
 import nativeDefault from "native" /* 575 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7075 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7237 */;
-import WideAuthScrollContext from "WideAuthScrollContext" /* 7266 */;
-import AuthHeaderDefault from "AuthHeader" /* 7267 */;
-import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 7268 */;
+import BackgroundImageDefault from "BackgroundImage" /* 7090 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7257 */;
+import WideAuthScrollContext from "WideAuthScrollContext" /* 7282 */;
+import AuthHeaderDefault from "AuthHeader" /* 7283 */;
+import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 7284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, flex: { flex: 1 }, content: null, subHeader: null };
@@ -85,7 +85,7 @@ export default function AuthFormView(arg0) {
     items1[1] = tmp18;
     items1[2] = children;
     obj2.children = items1;
-    let tmp5Result = React5(hasOwnProperty, obj2);
+    let tmp5Result = metroImportDefault(hasOwnProperty, obj2);
   } else {
     const obj = { style: null, children: null };
     const items2 = [, ];
@@ -115,9 +115,9 @@ export default function AuthFormView(arg0) {
     items5[1] = tmp9Result2;
     items5[2] = children;
     obj6.children = items5;
-    items3[2] = React5(hasOwnProperty, obj6);
+    items3[2] = metroImportDefault(hasOwnProperty, obj6);
     obj.children = items3;
-    tmp5Result = React5(React4, obj);
+    tmp5Result = metroImportDefault(React4, obj);
   }
   return tmp5Result;
 };

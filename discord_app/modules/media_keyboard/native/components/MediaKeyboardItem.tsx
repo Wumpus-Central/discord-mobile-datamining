@@ -1,19 +1,19 @@
-// === Module 10675: MediaKeyboardItem ===
+// === Module 10723: MediaKeyboardItem ===
 
-// Module 10675 (MediaKeyboardItem)
+// Module 10723 (MediaKeyboardItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ImageIcon from "ImageIcon" /* 8783 */;
-import _modDef10407 from "module_10407" /* 10407 */;
-import AttachmentIcon from "AttachmentIcon" /* 10665 */;
-import CameraIcon from "CameraIcon" /* 10680 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ImageIcon from "ImageIcon" /* 8800 */;
+import _modDef10455 from "module_10455" /* 10455 */;
+import AttachmentIcon from "AttachmentIcon" /* 10713 */;
+import CameraIcon from "CameraIcon" /* 10728 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8348 */;
 
 const module_1652 = _mod1652;
 
@@ -24,7 +24,7 @@ function NewCaption(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.labelContainer, style];
   obj.style = items;
-  const items1 = [React7(native.Icon, { source: _modDef10407, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/semibold", children: label })];
+  const items1 = [React6(native.Icon, { source: _modDef10455, style: tmp.icon }), React6(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "body-xs/semibold", children: label })];
   obj.children = items1;
   return closure_1_10(React4, obj);
 }
@@ -222,8 +222,8 @@ function MediaKeyboardDummy(arg0) {
   const obj3 = { style: null };
   const items1 = [tmp.image, { height: size, width: size }];
   obj3.style = items1;
-  obj2.children = React7(React4, obj3);
-  return React7(React4, obj2);
+  obj2.children = React6(React4, obj3);
+  return React6(React4, obj2);
 }
 function MediaKeyboardSpecialButton(arg0) {
   ({ size, disabled, index, totalNumItems, numItemsPerRow } = arg0);
@@ -329,12 +329,12 @@ function MediaKeyboardSpecialButton(arg0) {
   items3[5] = disabled1;
   obj3.style = items3;
   obj3.children = children;
-  return React7(closure_11, obj3);
+  return React6(closure_11, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10676);
-({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
+const DeviceConstants = fn(10724);
+({ ALAssetsType: metroImportDefault, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = module_1652.createAnimatedComponent(Pressable);
@@ -392,7 +392,7 @@ export default noop.memo(function MediaKeyboardItem(arg0) {
     children: items.map((type, index) => {
       if (null == type) {
         const obj2 = { size, isFirstInRow: 0 === index };
-        return React7(MediaKeyboardDummy, obj2, index);
+        return React6(MediaKeyboardDummy, obj2, index);
       } else {
         let hasItem = "type" in type;
         if (hasItem) {
@@ -407,11 +407,11 @@ export default noop.memo(function MediaKeyboardItem(arg0) {
           obj3.totalNumItems = totalNumItems;
           obj3.numItemsPerRow = numPerRow;
           const obj4 = { color: nativeDefault.colors.ICON_SUBTLE, size: "lg" };
-          obj3.children = React7(obj[type.type].Icon, obj4);
-          return React7(MediaKeyboardSpecialButton, obj3, index);
+          obj3.children = React6(obj[type.type].Icon, obj4);
+          return React6(MediaKeyboardSpecialButton, obj3, index);
         } else {
           obj = { channelId: id.id, draftType, index: closure_1_4 * numPerRow + index, totalNumItems, numItemsPerRow: numPerRow, item: type, includedUploadIds, uploadLimit, disableWhenReachedLimit, size, onPressItem, onLongPressItem, disabled };
-          return React7(MediaKeyboardImage, obj, index);
+          return React6(MediaKeyboardImage, obj, index);
         }
       }
     })

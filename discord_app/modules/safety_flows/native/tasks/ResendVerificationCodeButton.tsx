@@ -1,6 +1,6 @@
-// === Module 20243: ResendVerificationCodeButton ===
+// === Module 20359: ResendVerificationCodeButton ===
 
-// Module 20243 (ResendVerificationCodeButton)
+// Module 20359 (ResendVerificationCodeButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -111,7 +111,7 @@ export default function ResendVerificationCodeButton(flowId) {
   };
   let intl = flowId(countdown[8]).intl;
   obj.accessibilityLabel = intl.string(setLoading(countdown[9]).ah0EUu);
-  let obj2 = { variant: "text-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null };
+  let obj2 = { variant: "body-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null };
   const intl2 = flowId(countdown[8]).intl;
   obj2.accessibilityLabel = intl2.string(setLoading(countdown[9]).ah0EUu);
   if (countdown > 0) {
@@ -123,7 +123,7 @@ export default function ResendVerificationCodeButton(flowId) {
     formatResult = intl3.string(tmp8(tmp7[9]).ah0EUu);
   }
   obj2.children = formatResult;
-  obj.children = jsx(flowId(countdown[10]).Text, { variant: "text-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null });
+  obj.children = jsx(flowId(countdown[10]).Text, { variant: "body-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null });
   return <Pressable onPress={noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;

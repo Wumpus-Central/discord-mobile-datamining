@@ -1,17 +1,17 @@
-// === Module 8669: PremiumGiftingIntentStore ===
+// === Module 8686: PremiumGiftingIntentStore ===
 
-// Module 8669 (PremiumGiftingIntentStore)
+// Module 8686 (PremiumGiftingIntentStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import FriendAnniversaryUtils from "FriendAnniversaryUtils" /* 8670 */;
-import FriendAnniversaryGate from "FriendAnniversaryGate" /* 8671 */;
-import ExperimentStore from "ExperimentStore" /* 5361 */;
+import FriendAnniversaryUtils from "FriendAnniversaryUtils" /* 8687 */;
+import FriendAnniversaryGate from "FriendAnniversaryGate" /* 8688 */;
+import ExperimentStore from "ExperimentStore" /* 5362 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7925 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7941 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ConsentStore from "ConsentStore" /* 6862 */;
+import ConsentStore from "ConsentStore" /* 6877 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 require = fn;
@@ -122,7 +122,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = closure_11.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8670).categorizeFriendAnniversariesByAffinity(closure_11, (userId) => {
+          const result = highestAffinity(8687).categorizeFriendAnniversariesByAffinity(closure_11, (userId) => {
             const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -131,14 +131,14 @@ function generateFriendAnniversaries(c15) {
             return dmProbability;
           }, true);
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8670);
+          const highestAffinityResult = highestAffinity(8687);
         }
         sampleSizeResult = _null;
       }
       sampleSizeResult = _modDef12.sampleSize(found, c15);
     }
   }
-  obj2 = set2(8671);
+  obj2 = set2(8688);
 }
 const Consents = fn(1072).Consents;
 let closure_10 = { messageGiftIntentLastShownMap: {}, lastShownFriendsListGiftIntents: [], friendsTabBadgeLastDismissedTime: null, lastKnownGiftIntentDismissedAtMs: 0 };

@@ -1,6 +1,6 @@
-// === Module 13384: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 13468: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 13384 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 13468 (ConnectionsRoleMessageBadgeActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,18 +8,18 @@ import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import shared from "shared" /* 5148 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
-import PlatformsDefault from "Platforms" /* 6694 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7119 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 7468 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import BotTagDefault from "BotTag" /* 9330 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11731 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11735 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
+import PlatformsDefault from "Platforms" /* 6709 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7134 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 7484 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import BotTagDefault from "BotTag" /* 9347 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11786 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11790 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1399 */;
@@ -27,7 +27,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 13385 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 13469 */;
 
 require = fn;
 function PopoutCheck(arg0) {
@@ -62,7 +62,7 @@ function PopoutCheck(arg0) {
     const obj5 = { style: tmp.popoutCheck, children: null };
     const obj6 = { size: "sm", style: tmp.popoutCheckIcon };
     items = [value2(CheckmarkLargeIcon.CheckmarkLargeIcon, obj6), ];
-    const obj7 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: formatResult };
+    const obj7 = { variant: "body-xs/medium", color: "mobile-text-heading-primary", children: formatResult };
     items[1] = value2(Text_Text.Text, obj7);
     obj5.children = items;
     tmp9 = closure_1_17(timestampProducer, obj5);
@@ -152,7 +152,7 @@ class PopoutChecks {
                 }
                 name = name1;
               }
-              const obj7 = { variant: "text-sm/medium", color: "interactive-text-active", children: name };
+              const obj7 = { variant: "body-sm/medium", color: "interactive-text-active", children: name };
               items1[2] = value2(Text_Text.Text, obj7);
               items1[3] = tmp12;
               obj5.children = items1;
@@ -183,8 +183,8 @@ class PopoutChecks {
   }
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(7469).OperatorTypes;
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const OperatorTypes = fn(7485).OperatorTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
@@ -288,9 +288,9 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
       if (stateFromStores3 != null) {
         name = stateFromStores3.name;
       }
-      const obj12 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: name };
+      const obj12 = { variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: name };
       const items8 = [closure_16(tmp5(tmp3[17]).Text, obj12), ];
-      const obj13 = { variant: "text-xs/normal", color: "text-default", children: formatResult };
+      const obj13 = { variant: "body-xs/normal", color: "text-default", children: formatResult };
       items8[1] = closure_16(tmp5(tmp3[17]).Text, obj13);
       obj11.children = items8;
       items7[1] = closure_17(closure_6, obj11);

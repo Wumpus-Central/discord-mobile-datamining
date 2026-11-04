@@ -1,14 +1,14 @@
-// === Module 12907: ConjurePublishCtaCard ===
+// === Module 12988: ConjurePublishCtaCard ===
 
-// Module 12907 (ConjurePublishCtaCard)
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 12233 */;
-import useConjureStartPublishDefault from "useConjureStartPublish" /* 12238 */;
-import conjurePublishCard from "conjurePublishCard" /* 12715 */;
-import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12908 */;
-import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12909 */;
+// Module 12988 (ConjurePublishCtaCard)
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 12294 */;
+import useConjureStartPublishDefault from "useConjureStartPublish" /* 12299 */;
+import conjurePublishCard from "conjurePublishCard" /* 12796 */;
+import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12989 */;
+import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12990 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,13 +42,13 @@ export default function ConjurePublishCtaCard(arg0) {
       items = [React3(PublishCta, obj2), , ];
       let tmp6Result = null;
       if (null != tmp3.failure) {
-        const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp3.failure };
+        const obj3 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp3.failure };
         tmp6Result = React3(Text_Text.Text, obj3);
       }
       items[1] = tmp6Result;
       let tmp6Result3 = null;
       if (null != turnId) {
-        const obj4 = { projectId, turnId, cta, status: tmp3.status };
+        const obj4 = { projectId, turnId, cta, status: tmp3.status, placement: "publish_card" };
         tmp6Result3 = React3(ConjurePublishRatingDefault, obj4, turnId);
       }
       const obj5 = { children: null };

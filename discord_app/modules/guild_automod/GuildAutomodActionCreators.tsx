@@ -1,13 +1,13 @@
-// === Module 13433: GuildAutomodActionCreators ===
+// === Module 13517: GuildAutomodActionCreators ===
 
-// Module 13433 (GuildAutomodActionCreators)
+// Module 13517 (GuildAutomodActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
-import AutomodFeedback from "AutomodFeedback" /* 7821 */;
-import DataUtils from "DataUtils" /* 13434 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
+import AutomodFeedback from "AutomodFeedback" /* 7837 */;
+import DataUtils from "DataUtils" /* 13518 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -110,7 +110,7 @@ let closure_15 = async function _createAutomodRule(arg0) {
 let closure_16 = async function _updateAutomodRule() {
   importDefault = _transformApiRuletoClientRule;
   const HTTP = require("HTTPUtils").HTTP;
-  const request = { url: React6.GUILD_AUTOMOD_RULE(_require.guildId, _require.id), body: _transformClientRuleToApiRule(_require), rejectWithError: null };
+  const request = { url: React5.GUILD_AUTOMOD_RULE(_require.guildId, _require.id), body: _transformClientRuleToApiRule(_require), rejectWithError: null };
   _transformClientRuleToApiRule(_require);
   request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
   await HTTP.patch(request);
@@ -150,7 +150,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
           closure_1 = tmp5;
           closure_129_0 = undefined;
           const HTTP = require("HTTPUtils").HTTP;
-          const obj4 = { url: React6.GUILD_AUTOMOD_RULES(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+          const obj4 = { url: React5.GUILD_AUTOMOD_RULES(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
           c3 = 1;
           c4 = 1;
           const obj5 = { value: HTTP.get(obj4), done: false };
@@ -237,7 +237,7 @@ let closure_19 = async function _executeAlertAction() {
   })();
 };
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, Endpoints: closure_8, Permissions: closure_9 } = Constants);
+({ AnalyticEvents: metroImportDefault, Endpoints: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodActionCreators.tsx");
 
@@ -315,7 +315,7 @@ export function removeMentionRaidRestrictionWithFeedback(arg0, decision_id, arg2
       obj.trackWithMetadata(constants.GUILD_AUTOMOD_FEEDBACK, { feedback_type: AutomodFeedback.Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id });
       const HTTP = HTTPUtils.HTTP;
       const obj2 = { feedback_type: AutomodFeedback.Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id };
-      HTTP.post({ url: React6.GUILD_AUTOMOD_CLEAR_MENTION_RAID(closure_0), rejectWithError: true });
+      HTTP.post({ url: React5.GUILD_AUTOMOD_CLEAR_MENTION_RAID(closure_0), rejectWithError: true });
       closure_2();
     });
     let obj = require("GuildAutomodActionActionCreators");

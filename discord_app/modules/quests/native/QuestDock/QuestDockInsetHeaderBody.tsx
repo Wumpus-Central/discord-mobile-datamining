@@ -1,24 +1,24 @@
-// === Module 17315: QuestDockInsetHeaderBody ===
+// === Module 17407: QuestDockInsetHeaderBody ===
 
-// Module 17315 (QuestDockInsetHeaderBody)
+// Module 17407 (QuestDockInsetHeaderBody)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import QuestRewardTileDefault from "QuestRewardTile" /* 14823 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14824 */;
-import QuestDockHooks from "QuestDockHooks" /* 17212 */;
-import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 17279 */;
-import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 17282 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import QuestRewardTileDefault from "QuestRewardTile" /* 14903 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 14904 */;
+import QuestDockHooks from "QuestDockHooks" /* 17304 */;
+import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 17371 */;
+import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 17374 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(17215);
+const QuestDockConstants = fn(17307);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
 const createStyles = fn(5141);
 let obj = { rewardTile: { borderRadius: nativeDefault.radii.lg }, wrapper: { flexGrow: 1, flexShrink: 0, justifyContent: "flex-end", paddingHorizontal: QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, paddingBottom: QUEST_DOCK_EXPANDED_PADDING_BOTTOM }, rewardContentContainer: { position: "relative" }, rewardContentWrapper: null, contentBadge: null, rewardContent: null, rewardContentCopy: null, premiumRewardPerkPill: null, titleRow: null, questDockCtaWrapper: null, questDockCta: null, questDockCtaRow: null, questDockCtaSaparator: null };
@@ -78,8 +78,8 @@ export default noop.memo(function QuestDockInsetHeaderBody(showBonusOrbsGradient
   }
   const items3 = [tmp8Result, , ];
   const tmp6 = PremiumRewardGradientDefault;
-  items3[1] = hasOwnProperty(View, { style: tmp.titleRow, children: hasOwnProperty(Text_Text.Text, { variant: "heading-md/medium", color: "mobile-text-heading-primary", children: title }) });
-  items3[2] = hasOwnProperty(Text_Text.Text, { color: "text-default", variant: "text-sm/normal", children: description });
+  items3[1] = hasOwnProperty(View, { style: tmp.titleRow, children: hasOwnProperty(Text_Text.Text, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: title }) });
+  items3[2] = hasOwnProperty(Text_Text.Text, { color: "text-default", variant: "body-sm/normal", children: description });
   obj7.children = items3;
   items2[1] = timestampProducer(View, obj7);
   obj6.children = items2;

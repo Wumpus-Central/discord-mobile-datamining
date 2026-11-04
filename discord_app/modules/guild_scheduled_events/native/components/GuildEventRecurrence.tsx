@@ -1,13 +1,13 @@
-// === Module 9227: GuildEventRecurrence ===
+// === Module 9244: GuildEventRecurrence ===
 
-// Module 9227 (GuildEventRecurrence)
+// Module 9244 (GuildEventRecurrence)
 import nativeDefault from "native" /* 575 */;
-import ScheduleUtils from "ScheduleUtils" /* 9097 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9113 */;
+import ScheduleUtils from "ScheduleUtils" /* 9114 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9130 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6975 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6990 */;
 
 require = fn;
 const View = fn(17).View;
@@ -40,8 +40,8 @@ export default function GuildEventRecurrence(recurrenceId) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let obj2 = guildEventId(9104)(recurrenceId, id);
-  const tmp6 = guildEventId(9104);
+  let obj2 = guildEventId(9121)(recurrenceId, id);
+  const tmp6 = guildEventId(9121);
   const items1 = [c6];
   stateFromStores1 = recurrenceId(504).useStateFromStores(items1, () => {
     let guild_id;
@@ -63,9 +63,9 @@ export default function GuildEventRecurrence(recurrenceId) {
   if (stateFromStores2 == null) {
     stateFromStores2 = stateFromStores1;
   }
-  closure_5 = recurrenceId(9148).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
-  const tmp2Result5 = recurrenceId(9148);
-  const eventScheduleById = recurrenceId(9105).useEventScheduleById(guildEventId, recurrenceId);
+  closure_5 = recurrenceId(9165).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
+  const tmp2Result5 = recurrenceId(9165);
+  const eventScheduleById = recurrenceId(9122).useEventScheduleById(guildEventId, recurrenceId);
   let toISOStringResult;
   if (eventScheduleById != null) {
     const startTime = eventScheduleById.startTime;
@@ -126,14 +126,14 @@ export default function GuildEventRecurrence(recurrenceId) {
       children: null
     };
     const obj5 = { isActive, event: stateFromStores, showUserCount: false, showCreator: false, recurrenceId };
-    obj4.children = closure_8(tmp2(9109).GuildEventCardHeader, obj5);
-    const items5 = [closure_8(tmp2(7106).PressableOpacity, obj4), ];
+    obj4.children = closure_8(tmp2(9126).GuildEventCardHeader, obj5);
+    const items5 = [closure_8(tmp2(7121).PressableOpacity, obj4), ];
     const obj6 = { style: tmp.actions, children: null };
     if (tmp21Result) {
-      const obj7 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
+      const obj7 = { variant: "body-sm/semibold", color: "text-feedback-critical", children: null };
       const intl2 = tmp2(1113).intl;
       obj7.children = intl2.string(tmp2(1113).t.fyBVRm);
-      tmp21Result = closure_8(tmp2(5747).Text, obj7);
+      tmp21Result = closure_8(tmp2(5761).Text, obj7);
     }
     const items6 = [tmp21Result, ];
     const obj8 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
@@ -149,13 +149,13 @@ export default function GuildEventRecurrence(recurrenceId) {
       }
     };
     obj8.style = tmp.secondarySmallButton;
-    const obj9 = { source: tmp5(9228), size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
+    const obj9 = { source: tmp5(9245), size: tmp2(1187).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
     obj8.children = closure_8(tmp2(1187).Icon, obj9);
-    items6[1] = closure_8(tmp2(7106).PressableOpacity, obj8);
+    items6[1] = closure_8(tmp2(7121).PressableOpacity, obj8);
     obj6.children = items6;
     items5[1] = closure_9(stateFromStores1, obj6);
     obj3.children = items5;
     return closure_9(stateFromStores1, obj3);
   }
-  const tmp2Result6 = recurrenceId(9105);
+  const tmp2Result6 = recurrenceId(9122);
 };

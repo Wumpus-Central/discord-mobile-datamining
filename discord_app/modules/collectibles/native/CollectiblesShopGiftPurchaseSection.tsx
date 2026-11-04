@@ -1,20 +1,20 @@
-// === Module 14564: CollectiblesShopGiftPurchaseSection ===
+// === Module 14644: CollectiblesShopGiftPurchaseSection ===
 
-// Module 14564 (CollectiblesShopGiftPurchaseSection)
+// Module 14644 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8904 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7749).useNativeCheckoutStore;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
 const PremiumConstants = fn(1387);
@@ -158,7 +158,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     }
   }
   const items2 = [tmp17Result, , ];
-  let obj5 = { variant: "text-xs/normal", style: tmp3.disclaimer, children: null };
+  let obj5 = { variant: "body-xs/normal", style: tmp3.disclaimer, children: null };
   const intl = tmp4(tmp2[28]).intl;
   let obj6 = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
   const intl2 = tmp4(tmp2[28]).intl;

@@ -1,15 +1,15 @@
-// === Module 15256: GroupDMInvite ===
+// === Module 15339: GroupDMInvite ===
 
-// Module 15256 (GroupDMInvite)
+// Module 15339 (GroupDMInvite)
 import util from "util" /* 1113 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8518 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10248 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8535 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10296 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const InviteTypes = fn(8003).InviteTypes;
+const InviteTypes = fn(8019).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
 
@@ -53,8 +53,8 @@ export function createGroupDMInvite(invite, arg1, theme) {
   }
   let channelIconSource = null;
   if (null != channel) {
-    channelIconSource = tmp8(15017).getChannelIconSource(channel);
-    const tmp8Result = tmp8(15017);
+    channelIconSource = tmp8(15097).getChannelIconSource(channel);
+    const tmp8Result = tmp8(15097);
   }
   let uri = null;
   if (null != channelIconSource) {
@@ -65,8 +65,8 @@ export function createGroupDMInvite(invite, arg1, theme) {
   if (flag) {
     channelName = null;
     if (null != channel) {
-      channelName = tmp8(5772).computeChannelName(channel, UserStore, RelationshipStore);
-      const tmp8Result5 = tmp8(5772);
+      channelName = tmp8(5786).computeChannelName(channel, UserStore, RelationshipStore);
+      const tmp8Result5 = tmp8(5786);
     }
   }
   if (!channelName) {
@@ -125,8 +125,8 @@ export function createGroupDMInvite(invite, arg1, theme) {
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
-      channelName1 = tmp8(5772).computeChannelName(channel, UserStore, RelationshipStore);
-      const tmp8Result6 = tmp8(5772);
+      channelName1 = tmp8(5786).computeChannelName(channel, UserStore, RelationshipStore);
+      const tmp8Result6 = tmp8(5786);
     }
   }
   obj2.channelName = channelName1;

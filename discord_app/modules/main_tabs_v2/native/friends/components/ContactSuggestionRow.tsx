@@ -1,15 +1,15 @@
-// === Module 19003: ContactSuggestionRow ===
+// === Module 19106: ContactSuggestionRow ===
 
-// Module 19003 (ContactSuggestionRow)
+// Module 19106 (ContactSuggestionRow)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18245 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18342 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, InstantInviteSources: metroRequire, RelationshipTypes: closure_7 } = Constants);
+({ AnalyticEvents: hasOwnProperty, InstantInviteSources: closure_6, RelationshipTypes: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 let closure_9 = { ADD: "add" };
 const size = fn(2);

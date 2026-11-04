@@ -1,13 +1,13 @@
-// === Module 17286: QuestEnrollmentBlockedBottomSheet ===
+// === Module 17378: QuestEnrollmentBlockedBottomSheet ===
 
-// Module 17286 (QuestEnrollmentBlockedBottomSheet)
+// Module 17378 (QuestEnrollmentBlockedBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useCountdownDefault from "useCountdown" /* 7748 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useCountdownDefault from "useCountdown" /* 7764 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7970 */;
+import QuestStore from "QuestStore" /* 7986 */;
 
 const require = globalThis.__r;
 
@@ -37,13 +37,13 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
     obj2.children = jsx(Text_Text.Text, { variant: "heading-xl/semibold", children: null });
     obj.header = <View style={tmp.heading}>{null}</View>;
     const obj4 = { style: tmp.container, children: null };
-    const obj5 = { variant: "text-md/normal", children: null };
+    const obj5 = { variant: "body-md/normal", children: null };
     const intl2 = util.intl;
     const obj6 = { countdownString: null };
     const _HermesInternal = HermesInternal;
     obj6.countdownString = "" + padStartResult + ":" + padStartResult1 + ":" + padStartResult2;
     obj5.children = intl2.formatToPlainString(util.t["+5XVH+"], obj6);
-    obj4.children = jsx(Text_Text.Text, { variant: "text-md/normal", children: null });
+    obj4.children = jsx(Text_Text.Text, { variant: "body-md/normal", children: null });
     obj.children = <View style={tmp.container}>{null}</View>;
     tmp12 = jsx(Sheet_BottomSheet.BottomSheet, { header: null, footer: null, startExpanded: true, children: null });
   }

@@ -1,8 +1,8 @@
-// === Module 12219: conjurePreviewModes ===
+// === Module 12278: conjurePreviewModes ===
 
-// Module 12219 (conjurePreviewModes)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6965 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11014 */;
+// Module 12278 (conjurePreviewModes)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6980 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11063 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -11,8 +11,8 @@ let obj = {
   frame(hasFrame) {
     return hasFrame.hasFrame;
   },
-  widget(disableInteraction) {
-    return disableInteraction.hasProfileWidget;
+  widget(dependencyMap) {
+    return dependencyMap.hasProfileWidget;
   },
   overlay(hasOverlay) {
     return true === hasOverlay.hasOverlay;

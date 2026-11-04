@@ -1,16 +1,16 @@
-// === Module 14100: ChatInputAppCommandManager ===
+// === Module 14186: ChatInputAppCommandManager ===
 
-// Module 14100 (ChatInputAppCommandManager)
+// Module 14186 (ChatInputAppCommandManager)
 import nativeDefault from "native" /* 575 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 8806 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 13886 */;
-import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 14101 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 8823 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 13972 */;
+import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 14187 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8469 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8470 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8485 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8486 */;
 import GameStore from "GameStore" /* 2143 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8804 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8821 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -303,7 +303,7 @@ class ChatInputAppCommandManager {
     return null;
   }
 }
-const ChannelAutocompleteConstants = fn(6156);
+const ChannelAutocompleteConstants = fn(6171);
 ({ extractGameMentionIds: closure_11, GAME_MENTION_RAW_RE_GLOBAL: closure_12, GAME_MENTION_SENTINEL: map1 } = ChannelAutocompleteConstants);
 const createStyles = fn(5141);
 let obj = { commandOption: { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 }, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };

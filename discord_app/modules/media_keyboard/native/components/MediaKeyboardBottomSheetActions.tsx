@@ -1,20 +1,20 @@
-// === Module 10669: MediaKeyboardBottomSheetActions ===
+// === Module 10717: MediaKeyboardBottomSheetActions ===
 
-// Module 10669 (MediaKeyboardBottomSheetActions)
+// Module 10717 (MediaKeyboardBottomSheetActions)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
   let PX_24 = arg0;
@@ -60,22 +60,22 @@ export default noop.memo(function MediaKeyboardBottomSheetActions(onHeightChange
   dependencyMap = undefined;
   noop = undefined;
   let variant;
-  const gradientValue = onHeightChange(5315).useGradientValue(onHeightChange(5315).GradientPercentage.END);
+  const gradientValue = onHeightChange(5316).useGradientValue(onHeightChange(5316).GradientPercentage.END);
   let hexResult = null;
   if (null != gradientValue) {
     let obj2 = _modDef671(gradientValue);
     hexResult = _modDef671(gradientValue).alpha(0.95).hex();
     let alphaResult = _modDef671(gradientValue).alpha(0.95);
   }
-  let obj = onHeightChange(5315);
-  const tmp6 = closure_8(useSafeAreaInsetsDefault().bottom, onHeightChange(5719).useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER), hexResult);
+  let obj = onHeightChange(5316);
+  const tmp6 = closure_8(useSafeAreaInsetsDefault().bottom, onHeightChange(5732).useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER), hexResult);
   importDefault = tmp6;
-  const tmpResult = onHeightChange(5719);
-  dependencyMap = onHeightChange(5719).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
-  const tmpResult4 = onHeightChange(5719);
-  noop = onHeightChange(5719).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
-  const tmpResult5 = onHeightChange(5719);
-  variant = onHeightChange(5719).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
+  const tmpResult = onHeightChange(5732);
+  dependencyMap = onHeightChange(5732).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
+  const tmpResult4 = onHeightChange(5732);
+  noop = onHeightChange(5732).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
+  const tmpResult5 = onHeightChange(5732);
+  variant = onHeightChange(5732).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
   items = [tmp6.gradient.color];
   const memo = noop.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
@@ -97,7 +97,7 @@ export default noop.memo(function MediaKeyboardBottomSheetActions(onHeightChange
     children: null
   };
   let obj4 = { style: tmp6.gradient };
-  const tmpResult6 = onHeightChange(5719);
+  const tmpResult6 = onHeightChange(5732);
   const merged = Object.assign(memo);
   obj4.pointerEvents = "none";
   const items2 = [closure_6(LinearGradientDefault, obj4), ];
@@ -120,7 +120,7 @@ export default noop.memo(function MediaKeyboardBottomSheetActions(onHeightChange
       obj2.children = accessibilityLabel.text;
       items[1] = timestampProducer(Text_Text.Text, obj2);
       obj.children = items;
-      return React5(Pressables.PressableOpacity, obj, index);
+      return metroImportDefault(Pressables.PressableOpacity, obj, index);
     })
   });
   items2[1] = closure_6(closure_5, obj5);

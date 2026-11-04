@@ -1,14 +1,14 @@
-// === Module 14961: BotReportChooser ===
+// === Module 15041: BotReportChooser ===
 
-// Module 14961 (BotReportChooser)
+// Module 15041 (BotReportChooser)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7001 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import ActionSheetRow from "ActionSheetRow" /* 7488 */;
-import ReportModals from "ReportModals" /* 8476 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7016 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import ActionSheetRow from "ActionSheetRow" /* 7504 */;
+import ReportModals from "ReportModals" /* 8492 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 
@@ -16,11 +16,11 @@ require = fn;
 function ReportAppProfile(arg0) {
   ({ user: require, contextualGuildId: importDefault, onSubmit: dependencyMap, appContext: ApplicationStore } = arg0);
   let obj = { label: null, subLabel: null, onPress: null, arrow: true };
-  const obj2 = { variant: "heading-md/semibold", children: null };
+  const obj2 = { variant: "heading-sm/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.eyEkG1);
   obj.label = closure_4(Text_Text.Text, obj2);
-  const obj3 = { variant: "text-xs/medium", children: null };
+  const obj3 = { variant: "body-xs/medium", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.ptItsj);
   obj.subLabel = closure_4(Text_Text.Text, obj3);
@@ -36,11 +36,11 @@ function ReportAppBehavior(arg0) {
   const stateFromStores = initialize.useStateFromStores(items, () => ApplicationStore.getAppIdForBotUserId(id.id));
   const data = ApplicationActionCreators.useApplication(stateFromStores).data;
   let obj3 = { label: null, subLabel: null, onPress: null, arrow: true, disabled: null };
-  const obj4 = { variant: "heading-md/semibold", children: null };
+  const obj4 = { variant: "heading-sm/semibold", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.atP0yX);
   obj3.label = onSubmit(Text_Text.Text, obj4);
-  const obj5 = { variant: "text-xs/medium", children: null };
+  const obj5 = { variant: "body-xs/medium", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.UGg603);
   obj3.subLabel = onSubmit(Text_Text.Text, obj5);
@@ -62,7 +62,7 @@ let result = size.fileFinishedImporting("modules/in_app_reports/native/BotReport
 
 export default function BotReportChooser(arg0) {
   const obj = { header: null, children: null };
-  const obj2 = { style: { textAlign: "center" }, variant: "redesign/heading-18/semibold", children: null };
+  const obj2 = { style: { textAlign: "center" }, variant: "heading-md/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.Bd10bR);
   obj.header = React4(Text_Text.Text, obj2);

@@ -1,8 +1,8 @@
-// === Module 9055: parseWaterwheelsCard ===
+// === Module 9072: parseWaterwheelsCard ===
 
-// Module 9055 (parseWaterwheelsCard)
+// Module 9072 (parseWaterwheelsCard)
 import _mod12 from "module_12" /* 12 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9056 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9073 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;

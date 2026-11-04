@@ -1,15 +1,15 @@
-// === Module 12116: GameConsoleActionCreators ===
+// === Module 12175: GameConsoleActionCreators ===
 
-// Module 12116 (GameConsoleActionCreators)
+// Module 12175 (GameConsoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 6041 */;
-import ConsoleHandoffType from "ConsoleHandoffType" /* 12117 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 6056 */;
+import ConsoleHandoffType from "ConsoleHandoffType" /* 12176 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
-import SessionsStore from "SessionsStore" /* 5886 */;
-import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
+import SessionsStore from "SessionsStore" /* 5900 */;
+import GameConsoleStore from "GameConsoleStore" /* 5899 */;
 
 require = fn;
 function disconnectRemote() {
@@ -158,7 +158,7 @@ let closure_12 = async function _getConnectNonce() {
 };
 function cancelConnectRequest(nonce) {
   const HTTP = HTTPUtils.HTTP;
-  return HTTP.del({ url: React6.CONNECT_REQUEST(nonce), rejectWithError: false });
+  return HTTP.del({ url: React5.CONNECT_REQUEST(nonce), rejectWithError: false });
 }
 let closure_14 = async function _fetchDevices() {
   c5 = 0;
@@ -328,7 +328,7 @@ let closure_16 = async function _cancelCommand() {
   })();
 };
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, Endpoints: closure_8, PlatformTypes: closure_9 } = Constants);
+({ AnalyticEvents: metroImportDefault, Endpoints: closure_8, PlatformTypes: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");
 

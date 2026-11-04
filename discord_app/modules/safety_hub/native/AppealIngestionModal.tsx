@@ -1,21 +1,21 @@
-// === Module 13455: AppealIngestionModal ===
+// === Module 13539: AppealIngestionModal ===
 
-// Module 13455 (AppealIngestionModal)
+// Module 13539 (AppealIngestionModal)
 import nativeDefault from "native" /* 575 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 13454 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 13538 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8118 */;
+import SafetyHubStore from "SafetyHubStore" /* 8134 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8094);
+const SafetyHubConstants = fn(8110);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: closure_10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
@@ -72,7 +72,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj2 = {
         headerLeft: NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
         headerTitle() {
-          return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "alignItems" });
+          return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
         },
         render() {
           return closure_2_12(flag(flag3[22]), { isDsaEligible, isSpam, isCoppa, isDeveloperClassification });
@@ -84,7 +84,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj4 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj4.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "alignItems" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
       };
       obj4.render = function render() {
         return closure_2_12(flag(flag3[24]), { isDsaEligible });
@@ -95,7 +95,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj6 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj6.headerLeft = NavigatorHeader.getHeaderBackButton();
       obj6.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "alignItems" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
       };
       obj6.render = function render() {
         return closure_2_12(flag(flag3[25]), { isDsaEligible });
@@ -106,7 +106,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj8 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj8.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj8.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "alignItems" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
       };
       obj8.render = function render() {
         return closure_1_12(isSpam(isDeveloperClassification[26]), {});
@@ -117,7 +117,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj10 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj10.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj10.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "alignItems" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
       };
       obj10.render = function render() {
         return closure_1_12(isSpam(isDeveloperClassification[27]), {});
@@ -128,7 +128,7 @@ export default function AppealIngestionModal(classificationId) {
       const obj12 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
       obj12.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
       obj12.headerTitle = function headerTitle() {
-        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "alignItems" });
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "body-md/normal", children: "ao" });
       };
       obj12.render = function render() {
         return closure_1_12(isSpam(isDeveloperClassification[28]), {});
@@ -162,7 +162,7 @@ export function AppealIngestionModalHeader(arg0) {
   if (null != subHeaderText) {
     tmp8 = null;
     if (subHeaderText.length > 0) {
-      const obj3 = { style: tmp.subheader, variant: "text-md/medium", color: "text-default", children: subHeaderText };
+      const obj3 = { style: tmp.subheader, variant: "body-md/medium", color: "text-default", children: subHeaderText };
       tmp8 = application_id(Text_Text.Text, obj3);
     }
   }
@@ -280,7 +280,7 @@ export function AppealIngestionModalScreen(children) {
               v2("");
               v2 = 2;
               c5 = 1;
-              const obj6 = { value: tmp27(13450).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              const obj6 = { value: tmp27(13534).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
               return obj6;
             }
           }
@@ -293,8 +293,8 @@ export function AppealIngestionModalScreen(children) {
             if (body != null) {
               code = body.code;
             }
-            closure_129_4(safetyHubAppealSignal(8093).getRequestReviewErrorFromCode(code));
-            const obj2 = safetyHubAppealSignal(8093);
+            closure_129_4(safetyHubAppealSignal(8109).getRequestReviewErrorFromCode(code));
+            const obj2 = safetyHubAppealSignal(8109);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -331,13 +331,13 @@ export function AppealIngestionModalScreen(children) {
   } else {
     const obj9 = { bottom: true, style: footerText.footerButton, children: null };
     if (first === constants.CONFIRM_SUBMISSION) {
-      const obj10 = { variant: "text-xs/medium", color: "text-default", style: footerText.footerText, children: null };
+      const obj10 = { variant: "body-xs/medium", color: "text-default", style: footerText.footerText, children: null };
       const intl4 = tmp(stringResult[19]).intl;
       obj10.children = intl4.string(tmp(stringResult[19]).t["d6qgY/"]);
       const items8 = [closure_12(tmp(stringResult[10]).Text, obj10), , ];
       let tmp20Result = `` !== intl;
       if (tmp20Result) {
-        const obj11 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null, children: null };
+        const obj11 = { variant: "body-xs/medium", color: "text-feedback-critical", style: null, children: null };
         footerText = footerText.footerText;
         obj11.style = footerText;
         obj11.children = intl;

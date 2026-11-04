@@ -1,23 +1,23 @@
-// === Module 11168: InAppNotificationContainer ===
+// === Module 11218: InAppNotificationContainer ===
 
-// Module 11168 (InAppNotificationContainer)
+// Module 11218 (InAppNotificationContainer)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import useMountEffectDefault from "useMountEffect" /* 5716 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 11155 */;
-import MessageNotificationDefault from "MessageNotification" /* 11169 */;
-import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 11219 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 11222 */;
-import BugReporterNotification from "BugReporterNotification" /* 11223 */;
-import AlertNotificationDefault from "AlertNotification" /* 11266 */;
-import ReactionNotificationDefault from "ReactionNotification" /* 11267 */;
-import ReminderNotificationDefault from "ReminderNotification" /* 11286 */;
-import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 11325 */;
-import MessageRequestNotificationDefault from "MessageRequestNotification" /* 11328 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import useMountEffectDefault from "useMountEffect" /* 5729 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 11203 */;
+import MessageNotificationDefault from "MessageNotification" /* 11219 */;
+import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 11269 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 11272 */;
+import BugReporterNotification from "BugReporterNotification" /* 11273 */;
+import AlertNotificationDefault from "AlertNotification" /* 11316 */;
+import ReactionNotificationDefault from "ReactionNotification" /* 11317 */;
+import ReminderNotificationDefault from "ReminderNotification" /* 11336 */;
+import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 11375 */;
+import MessageRequestNotificationDefault from "MessageRequestNotification" /* 11378 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10334 */;
+import NativeMenuStore from "NativeMenuStore" /* 10382 */;
 
 const require = globalThis.__r;
 
@@ -63,8 +63,8 @@ function NotificationWrapper(notification) {
   }
 }
 let StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(11156);
-({ DEFAULT_ANIMATION_TIMING: closure_7, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: closure_9, MIN_SWIPE_VELOCITY: closure_10, PAN_INPUT_RANGE: closure_11, NOTIFICATION_CONTAINER_MARGIN } = InAppNotificationConstants);
+const InAppNotificationConstants = fn(11204);
+({ DEFAULT_ANIMATION_TIMING: metroImportDefault, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: closure_9, MIN_SWIPE_VELOCITY: closure_10, PAN_INPUT_RANGE: closure_11, NOTIFICATION_CONTAINER_MARGIN } = InAppNotificationConstants);
 const Constants = fn(1072);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);
 const jsx = fn(21).jsx;

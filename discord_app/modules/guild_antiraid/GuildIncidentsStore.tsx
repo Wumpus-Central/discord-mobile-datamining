@@ -1,10 +1,10 @@
-// === Module 11143: GuildIncidentsStore ===
+// === Module 11191: GuildIncidentsStore ===
 
-// Module 11143 (GuildIncidentsStore)
+// Module 11191 (GuildIncidentsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8606 */;
-import ExperimentStore from "ExperimentStore" /* 5361 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8623 */;
+import ExperimentStore from "ExperimentStore" /* 5362 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;

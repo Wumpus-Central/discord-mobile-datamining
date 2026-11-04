@@ -1,11 +1,11 @@
-// === Module 12371: ConjurePublishStatusBadge ===
+// === Module 12436: ConjurePublishStatusBadge ===
 
-// Module 12371 (ConjurePublishStatusBadge)
+// Module 12436 (ConjurePublishStatusBadge)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import ConjureHeaderIconButton from "ConjureHeaderIconButton" /* 12370 */;
-import ProgressCircleDefault from "ProgressCircle" /* 12372 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import ConjureHeaderIconButton from "ConjureHeaderIconButton" /* 12435 */;
+import ProgressCircleDefault from "ProgressCircle" /* 12437 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -52,7 +52,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { dot: null, spinner: null };
-let size = { width: fn(12370).CONJURE_HEADER_BADGE_SIZE, height: fn(12370).CONJURE_HEADER_BADGE_SIZE, borderRadius: fn(12370).CONJURE_HEADER_BADGE_SIZE / 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+let size = { width: fn(12435).CONJURE_HEADER_BADGE_SIZE, height: fn(12435).CONJURE_HEADER_BADGE_SIZE, borderRadius: fn(12435).CONJURE_HEADER_BADGE_SIZE / 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.dot = size;
 obj2.spinner = { width: 12, height: 12 };
 let closure_6 = createStyles.createStyles(obj2);

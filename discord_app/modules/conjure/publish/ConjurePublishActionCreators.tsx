@@ -1,16 +1,16 @@
-// === Module 11079: ConjurePublishActionCreators ===
+// === Module 11128: ConjurePublishActionCreators ===
 
-// Module 11079 (ConjurePublishActionCreators)
+// Module 11128 (ConjurePublishActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11003 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11030 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11080 */;
-import conjureLiveRelaunch from "conjureLiveRelaunch" /* 11082 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 11051 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11054 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11079 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11129 */;
+import conjureLiveRelaunch from "conjureLiveRelaunch" /* 11131 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10997 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11045 */;
 
 require = fn;
 function unpublishProject() {
@@ -364,18 +364,18 @@ let closure_13 = async function _refreshPublishedApplication() {
     }
   })();
 };
-function reloadAfterPublish(application_id, arg1, integrationInstalled) {
+function reloadAfterPublish(applicationId, arg1, integrationInstalled) {
   if (arg1) {
     integrationInstalled = undefined;
     if (integrationInstalled != null) {
       integrationInstalled = integrationInstalled.integrationInstalled;
     }
     if (!tmp7) {
-      const result = conjureLiveRelaunch.reloadAppFramesAfterDeploy(application_id);
+      const result = conjureLiveRelaunch.reloadAppFramesAfterDeploy(applicationId);
     }
     tmp7 = true !== integrationInstalled || integrationInstalled.botPermissionsChanged;
   } else {
-    const result1 = ConjurePreviewActionCreators.reloadConjureAppFrames(application_id);
+    const result1 = ConjurePreviewActionCreators.reloadConjureAppFrames(applicationId);
   }
 }
 const Endpoints = fn(1072).Endpoints;

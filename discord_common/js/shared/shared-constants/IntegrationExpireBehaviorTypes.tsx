@@ -1,6 +1,6 @@
-// === Module 19917: IntegrationExpireBehaviorTypes ===
+// === Module 20033: IntegrationExpireBehaviorTypes ===
 
-// Module 19917 (IntegrationExpireBehaviorTypes)
+// Module 20033 (IntegrationExpireBehaviorTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationExpireBehaviorTypes.tsx");

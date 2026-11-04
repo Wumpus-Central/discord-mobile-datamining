@@ -1,22 +1,22 @@
-// === Module 18733: GamingLikeEntryRow ===
+// === Module 18834: GamingLikeEntryRow ===
 
-// Module 18733 (GamingLikeEntryRow)
+// Module 18834 (GamingLikeEntryRow)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8838 */;
-import utils from "utils" /* 8842 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9048 */;
-import BadgesAll from "Badges" /* 14989 */;
-import TrendingType from "TrendingType" /* 14994 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8855 */;
+import utils from "utils" /* 8859 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9065 */;
+import BadgesAll from "Badges" /* 15069 */;
+import TrendingType from "TrendingType" /* 15074 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8842).isEntryNew }, , , , ];
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8842).isEntryNew };
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8859).isEntryNew }, , , , ];
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8859).isEntryNew };
 items[1] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -69,7 +69,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   }
 };
-const createICYMIStyles = fn(18682);
+const createICYMIStyles = fn(18783);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -125,7 +125,7 @@ export default function GamingLikeEntryRow(content) {
   const memo = noop.useMemo(() => {
     if (content.content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME) {
       let obj = { entry: content };
-      items = [React5(BadgesAll.TopGameBadge, obj, "topgame")];
+      items = [metroImportDefault(BadgesAll.TopGameBadge, obj, "topgame")];
       let found = items;
     } else {
       const mapped = items.map((Badge) => {
@@ -144,7 +144,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(18734, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(18835, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");
@@ -183,11 +183,11 @@ export default function GamingLikeEntryRow(content) {
           tmp20 = obj5;
         }
         const obj6 = { children: null };
-        const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp20, children: null };
+        const obj8 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", style: tmp20, children: null };
         const tmp5Result5 = tmp5(tmp3[23]);
         obj8.children = tmp5(tmp3[25]).getName(stateFromStores);
         const items5 = [closure_7(tmp2(tmp3[24]).Text, obj8), ];
-        const obj9 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
+        const obj9 = { lineClamp: 1, variant: "body-xs/normal", color: "text-muted", children: null };
         const tmp5Result6 = tmp5(tmp3[25]);
         const tmp2Result5 = tmp2(tmp3[26]);
         obj9.children = tmp2Result5.getRelativeTimestamp(tmp5(tmp3[27]).extractTimestamp(content.id));
@@ -199,7 +199,7 @@ export default function GamingLikeEntryRow(content) {
         if (tmp2Result6.isEntryActive(content)) {
           str = "status-positive";
         }
-        const obj10 = { variant: "text-sm/normal", lineClamp: 1, color: str, children: stringResult };
+        const obj10 = { variant: "body-sm/normal", lineClamp: 1, color: str, children: stringResult };
         element.subtitle = closure_7(tmp2(tmp3[24]).Text, obj10);
         const items6 = [tmp.card, ];
         let tmp22 = null;
@@ -228,7 +228,7 @@ export default function GamingLikeEntryRow(content) {
         const intl2 = tmp2(tmp3[22]).intl;
         const obj20 = { gameName: getOrFetchApplication.name };
         obj19.accessibilityLabel = intl2.formatToPlainString(tmp2(tmp3[22]).t["9sZWVp"], obj20);
-        const obj21 = { variant: "text-md/semibold", style: tmp.gameName, children: getOrFetchApplication.name };
+        const obj21 = { variant: "body-md/semibold", style: tmp.gameName, children: getOrFetchApplication.name };
         obj19.children = closure_7(tmp2(tmp3[24]).Text, obj21);
         const items8 = [closure_7(tmp2(tmp3[29]).PressableOpacity, obj19), ];
         let tmp16Result = null != memo;

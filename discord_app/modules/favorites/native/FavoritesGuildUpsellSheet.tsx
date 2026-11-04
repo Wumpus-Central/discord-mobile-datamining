@@ -1,37 +1,37 @@
-// === Module 10965: FavoritesGuildUpsellSheet ===
+// === Module 11013: FavoritesGuildUpsellSheet ===
 
-// Module 10965 (FavoritesGuildUpsellSheet)
+// Module 11013 (FavoritesGuildUpsellSheet)
 import router_utils from "router_utils" /* 1099 */;
 import _modDef3577 from "module_3577" /* 3577 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10037 */;
-import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10966 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10972 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10084 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10085 */;
+import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 11014 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 11020 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const MAX_FAVORITE_CHANNELS = fn(5003).MAX_FAVORITE_CHANNELS;
 const FAVORITES = fn(1072).FAVORITES;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildUpsellSheet.tsx");
 
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(10963).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(11011).FREE_FAVORITE_LIMIT;
   }
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault().analyticsLocations;
   importDefault = noop.useCallback(() => {
-    closure_1(5381).hideActionSheet(analyticsLocations(10964).FAVORITES_UPSELL_SHEET_KEY);
+    closure_1(5382).hideActionSheet(analyticsLocations(11012).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   let obj = { title: null, description: null, illustration: null, actions: null };
   const intl = analyticsLocations(1113).intl;
   obj.title = intl.string(_modDef3577.hINqUs);
   const intl2 = analyticsLocations(1113).intl;
   obj.description = intl2.formatToPlainString(_modDef3577.D7S0Zo, { count: FREE_FAVORITE_LIMIT, maxCount: MAX_FAVORITE_CHANNELS });
-  obj.illustration = closure_6(analyticsLocations(10968).FavoritesSpotIllustration, {});
+  obj.illustration = closure_6(analyticsLocations(11016).FavoritesSpotIllustration, {});
   const obj3 = { children: null };
   const obj4 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = analyticsLocations(1113).intl;
@@ -41,7 +41,7 @@ export default function FavoritesGuildUpsellSheet(limit) {
     const obj = { analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
   };
-  items = [closure_6(analyticsLocations(5754).Button, obj4), ];
+  items = [closure_6(analyticsLocations(5768).Button, obj4), ];
   const obj5 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl4 = analyticsLocations(1113).intl;
   obj5.text = intl4.string(_modDef3577.PprSsy);
@@ -50,8 +50,8 @@ export default function FavoritesGuildUpsellSheet(limit) {
     const result = FavoritesGuildAnalytics.setNextFavoritesGuildViewSource("upsell_modal");
     router_utils.transitionToGuild(FAVORITES);
   };
-  items[1] = closure_6(analyticsLocations(5754).Button, obj5);
+  items[1] = closure_6(analyticsLocations(5768).Button, obj5);
   obj3.children = items;
-  obj.actions = closure_7(analyticsLocations(6887).ButtonGroup, obj3);
-  return closure_6(analyticsLocations(10967).PromoSheet, obj);
+  obj.actions = closure_7(analyticsLocations(6902).ButtonGroup, obj3);
+  return closure_6(analyticsLocations(11015).PromoSheet, obj);
 };

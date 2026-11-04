@@ -1,12 +1,12 @@
-// === Module 10262: useAgeGroupPresentation ===
+// === Module 10310: useAgeGroupPresentation ===
 
-// Module 10262 (useAgeGroupPresentation)
+// Module 10310 (useAgeGroupPresentation)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6861 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -26,7 +26,7 @@ export function useAgeGroupState() {
 }
 export function handleOpenAgeGatedContentArticle() {
   const obj = AgeVerificationActionCreatorsDefault;
-  obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
+  obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_VERIFICATION_LEARN_MORE));
 }
 export function handleShowAgeVerification() {
   const obj = AgeVerificationActionCreatorsDefault;

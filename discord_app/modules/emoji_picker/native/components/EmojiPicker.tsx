@@ -1,6 +1,6 @@
-// === Module 10371: EmojiPicker ===
+// === Module 10419: EmojiPicker ===
 
-// Module 10371 (EmojiPicker)
+// Module 10419 (EmojiPicker)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, ChatInputComponentViewedTypes: metroRequire, VerticalGradient: closure_7 } = Constants);
+({ AnalyticEvents: hasOwnProperty, ChatInputComponentViewedTypes: closure_6, VerticalGradient: metroImportDefault } = Constants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

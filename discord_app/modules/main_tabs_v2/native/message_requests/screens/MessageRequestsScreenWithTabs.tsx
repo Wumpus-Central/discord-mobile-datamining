@@ -1,21 +1,21 @@
-// === Module 19121: MessageRequestsScreenWithTabs ===
+// === Module 19224: MessageRequestsScreenWithTabs ===
 
-// Module 19121 (MessageRequestsScreenWithTabs)
+// Module 19224 (MessageRequestsScreenWithTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import SegmentedControlState from "SegmentedControlState" /* 9108 */;
-import SegmentedControl from "SegmentedControl" /* 9342 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13471 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 14323 */;
-import MessageRequestListDefault from "MessageRequestList" /* 19122 */;
-import SpamMessageListDefault from "SpamMessageList" /* 19138 */;
+import SegmentedControlState from "SegmentedControlState" /* 9125 */;
+import SegmentedControl from "SegmentedControl" /* 9359 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13555 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 14410 */;
+import MessageRequestListDefault from "MessageRequestList" /* 19225 */;
+import SpamMessageListDefault from "SpamMessageList" /* 19241 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
 const createStyles = fn(5141);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, messageRequestContent: { flex: 1 }, tabContainer: null };
@@ -57,5 +57,5 @@ export default noop.memo(function MessageRequestsScreenWithTabs(navigation) {
   items2[1] = timestampProducer(View, { style: tmp.messageRequestContent, children: timestampProducer(SegmentedControlPages.SegmentedControlPages, { state: segmentedControlState }) });
   items2[2] = timestampProducer(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "message_requests" });
   obj5.children = items2;
-  return React5(View, obj5);
+  return metroImportDefault(View, obj5);
 });

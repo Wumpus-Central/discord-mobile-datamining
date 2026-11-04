@@ -1,21 +1,21 @@
-// === Module 19821: GuildSettingsAutoModeration ===
+// === Module 19937: GuildSettingsAutoModeration ===
 
-// Module 19821 (GuildSettingsAutoModeration)
+// Module 19937 (GuildSettingsAutoModeration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 19826 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 19942 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AutomodStore = fn(19822);
+const AutomodStore = fn(19938);
 ({ useAutomodRulesList: closure_4, useSyncAutomodRulesEffect: hasOwnProperty } = AutomodStore);
-let closure_6 = fn(19824).useAutomodEditingRuleState;
+let closure_6 = fn(19940).useAutomodEditingRuleState;
 const Constants = fn(1072);
-({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8 } = Constants);
+({ GuildSettingsSections: metroImportDefault, HelpdeskArticles: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -108,11 +108,11 @@ export default function GuildSettingsAutoModeration(contentContainerStyle) {
   const obj3 = { contentContainerStyle: contentContainerStyle.contentContainerStyle, children: null };
   const obj4 = { style: tmp.stack, spacing: require("native").space.PX_24, children: null };
   const obj5 = { children: null };
-  const obj6 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj6 = { variant: "body-sm/normal", color: "text-default", children: null };
   let intl = guildId(rulesByTriggerType[9]).intl;
   obj6.children = intl.string(guildId(rulesByTriggerType[9]).t.EwuSCR);
   items = [closure_9(guildId(rulesByTriggerType[15]).Text, obj6), ];
-  const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj7 = { variant: "body-sm/normal", color: "text-default", children: null };
   let intl2 = guildId(rulesByTriggerType[9]).intl;
   const obj8 = { helpUrl: null };
   let obj2 = guildId(rulesByTriggerType[8]);
@@ -141,7 +141,7 @@ export default function GuildSettingsAutoModeration(contentContainerStyle) {
           stringResult = intl.string(util.t.fphZb0);
         }
         obj = { title: stringResult, hasIcons: true, children: arr.map(renderTriggerType) };
-        React7(TableRowGroup.TableRowGroup, obj, tmp);
+        React6(TableRowGroup.TableRowGroup, obj, tmp);
       }
     });
   }

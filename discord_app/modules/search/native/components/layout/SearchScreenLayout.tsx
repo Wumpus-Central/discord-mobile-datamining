@@ -1,11 +1,11 @@
-// === Module 18853: SearchScreenLayout ===
+// === Module 18956: SearchScreenLayout ===
 
-// Module 18853 (SearchScreenLayout)
-import AppFreezerDefault from "AppFreezer" /* 18754 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 18854 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 18964 */;
+// Module 18956 (SearchScreenLayout)
+import AppFreezerDefault from "AppFreezer" /* 18855 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 18957 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 19067 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 14031 */;
+import SearchQueryStore from "SearchQueryStore" /* 14117 */;
 
 const require = fn;
 function SearchFreezeContainer(visible) {
@@ -19,7 +19,7 @@ function SearchFreezeContainer(visible) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
 const size = fn(2);

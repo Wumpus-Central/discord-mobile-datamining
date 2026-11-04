@@ -1,18 +1,18 @@
-// === Module 9158: CreateChannelActionCreators ===
+// === Module 9175: CreateChannelActionCreators ===
 
-// Module 9158 (CreateChannelActionCreators)
+// Module 9175 (CreateChannelActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import TypeUtils from "TypeUtils" /* 5002 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6867 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7403 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7408 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7622 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6882 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7419 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7424 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7638 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
 
 require = fn;
 const Constants = fn(1072);
-({ BITRATE_DEFAULT: closure_4, ChannelTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
+({ BITRATE_DEFAULT: closure_4, ChannelTypes: hasOwnProperty, Endpoints: closure_6 } = Constants);
 let closure_7 = fn(1082).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
@@ -78,7 +78,7 @@ export default {
     }
     let obj = permissionOverwrites(572);
     const request = { url: closure_6.GUILD_CHANNELS(guildId), body: obj2, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    const tmpResult = permissionOverwrites(6867);
+    const tmpResult = permissionOverwrites(6882);
     request.trackedActionData = {
       event: guildId(1260).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {

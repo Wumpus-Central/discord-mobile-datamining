@@ -1,9 +1,9 @@
-// === Module 14503: TabsGradient ===
+// === Module 14583: TabsGradient ===
 
-// Module 14503 (TabsGradient)
+// Module 14583 (TabsGradient)
 import _mod1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import spring_spring from "spring/spring" /* 5757 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import spring_spring from "spring/spring" /* 5771 */;
 import noop from "module_19" /* 19 */;
 
 const module_1652 = _mod1652;
@@ -34,7 +34,7 @@ function useGradientAnimatedStyle(tmpResult) {
 }
 const HorizontalGradient = fn(1072).HorizontalGradient;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
 let closure_8 = { mass: 1, damping: 30, stiffness: 250 };
 const createStyles = fn(5141);

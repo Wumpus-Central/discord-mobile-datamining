@@ -1,7 +1,7 @@
-// === Module 10244: VoiceChannelListInviteExperiment ===
+// === Module 10292: VoiceChannelListInviteExperiment ===
 
-// Module 10244 (VoiceChannelListInviteExperiment)
-import createExperiment from "module_5359" /* 5359 */;
+// Module 10292 (VoiceChannelListInviteExperiment)
+import createExperiment from "module_5360" /* 5360 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-05_voice_channel_list_invite_embed", label: "Voice Channel List Invite Embed", defaultConfig: { enabled: false }, treatments: null };

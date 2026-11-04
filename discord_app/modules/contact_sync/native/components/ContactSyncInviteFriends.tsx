@@ -1,13 +1,13 @@
-// === Module 14403: ContactSyncInviteFriends ===
+// === Module 14483: ContactSyncInviteFriends ===
 
-// Module 14403 (ContactSyncInviteFriends)
+// Module 14483 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import showShareActionSheet from "showShareActionSheet" /* 9059 */;
-import _modDef14404 from "module_14404" /* 14404 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import showShareActionSheet from "showShareActionSheet" /* 9076 */;
+import _modDef14484 from "module_14484" /* 14484 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -16,9 +16,9 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
+({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, art: { marginBottom: 16 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center" }, button: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 } };
 let closure_10 = createStyles.createStyles(obj2);
@@ -33,13 +33,13 @@ export default function ContactSyncInviteFriends() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef14404;
+  obj4.source = _modDef14484;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;
   obj5.children = intl.string(require("util").t.ZxBpLf);
   items1[1] = closure_7(require("Text/Text").Text, obj5);
-  const obj6 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj6 = { style: tmp.subtitle, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
   obj6.children = intl2.string(require("util").t["fXtCJ+"]);
   items1[2] = closure_7(require("Text/Text").Text, obj6);

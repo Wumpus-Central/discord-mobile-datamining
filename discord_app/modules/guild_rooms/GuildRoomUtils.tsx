@@ -1,10 +1,10 @@
-// === Module 8033: GuildRoomUtils ===
+// === Module 8049: GuildRoomUtils ===
 
-// Module 8033 (GuildRoomUtils)
-import GuildRoomTypes from "GuildRoomTypes" /* 8031 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 8032 */;
-import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 8035 */;
-import GuildRoomStore from "GuildRoomStore" /* 8030 */;
+// Module 8049 (GuildRoomUtils)
+import GuildRoomTypes from "GuildRoomTypes" /* 8047 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 8048 */;
+import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 8051 */;
+import GuildRoomStore from "GuildRoomStore" /* 8046 */;
 
 require = fn;
 function serverGuildRoomObjectToClient(object_type) {
@@ -37,7 +37,7 @@ function serverGuildRoomObjectToClient(object_type) {
   }
   return obj8;
 }
-let closure_3 = fn(8034).GUILD_ROOM_BACKGROUND_CONFIG;
+let closure_3 = fn(8050).GUILD_ROOM_BACKGROUND_CONFIG;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomUtils.tsx");
 

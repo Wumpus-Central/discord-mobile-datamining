@@ -1,17 +1,18 @@
-// === Module 8484: NodeView ===
+// === Module 8500: NodeView ===
 
-// Module 8484 (NodeView)
+// Module 8500 (NodeView)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
-import CustomMarkupAll from "CustomMarkup" /* 6151 */;
-import MenuTypes from "MenuTypes" /* 8477 */;
-import ArrowDefault from "Arrow" /* 8486 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
+import CustomMarkupAll from "CustomMarkup" /* 6166 */;
+import MenuTypes from "MenuTypes" /* 8493 */;
+import InAppReportsOptionRowDefault from "InAppReportsOptionRow" /* 8502 */;
+import ArrowDefault from "Arrow" /* 8503 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import DevSettingsStore from "DevSettingsStore" /* 5764 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 
@@ -33,7 +34,7 @@ function HeaderView(node) {
   if (null != subheader) {
     tmp9 = null;
     if (subheader.length > 0) {
-      const obj3 = { style: tmp.subheader, variant: "text-md/medium", color: "text-default", children: tmp3(subheader) };
+      const obj3 = { style: tmp.subheader, variant: "body-md/medium", color: "text-default", children: tmp3(subheader) };
       tmp9 = value2(Text_Text.Text, obj3);
     }
   }
@@ -42,7 +43,7 @@ function HeaderView(node) {
   if (null != description) {
     tmp12 = null;
     if (description.length > 0) {
-      const obj4 = { style: tmp.description, variant: "text-xs/medium", color: "text-default", children: description };
+      const obj4 = { style: tmp.description, variant: "body-xs/medium", color: "text-default", children: description };
       tmp12 = value2(Text_Text.Text, obj4);
     }
   }
@@ -63,7 +64,7 @@ function InfoView(node) {
     const obj4 = { size: "md", color: tmp.infoBox.backgroundColor };
     const items1 = [value2(CircleInformationIcon.CircleInformationIcon, obj4), ];
     const obj5 = { style: tmp.infoBoxText, children: null };
-    const obj6 = { variant: "text-sm/normal", color: "interactive-text-active", includeFontPadding: true, children: tmp3(info) };
+    const obj6 = { variant: "body-sm/normal", color: "interactive-text-active", includeFontPadding: true, children: tmp3(info) };
     obj5.children = value2(Text_Text.Text, obj6);
     items1[1] = value2(timestampProducer, obj5);
     obj.children = items1;
@@ -77,28 +78,25 @@ function ChildItem(child) {
   const tmp = closure_18();
   [tmp3, tmp4] = child;
   const tmp2 = _slicedToArray(child, 2);
+  const tmp5 = child;
   items = [DevSettingsStore];
   let stateFromStores = child(504).useStateFromStores(items, () => DevSettingsStore.get("iar_show_report_sub_type_labels"));
   if (child.nodeMap[tmp4] != null) {
     const report_type = tmp8.report_type;
   }
-  const obj2 = { style: tmp.childButton, accessibilityRole: "button", onPress: _slicedToArray(noop.useState(() => () => closure_1_1.onPress(child)), 1)[0], children: null };
-  const obj3 = { style: tmp.childContainer, children: null };
-  const obj4 = { style: tmp.childContent, children: null };
-  const items1 = [closure_16(child(5747).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
+  const obj2 = { label: tmp3, trailing: null, onPress: null, accessibilityRole: "button", children: null };
+  const obj = child(504);
+  obj2.trailing = closure_16(ArrowDefault, {});
+  obj2.onPress = _slicedToArray(noop.useState(() => () => closure_1_1.onPress(child)), 1)[0];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
   if (stateFromStores) {
-    const obj6 = { style: tmp.debugText, variant: "text-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_16(tmp5(5747).Text, obj6);
+    const obj3 = { style: tmp.debugText, variant: "body-xs/normal", color: "text-muted", children: report_type };
+    stateFromStores = closure_16(tmp5(5761).Text, obj3);
   }
-  items1[1] = stateFromStores;
-  obj4.children = items1;
-  const items2 = [closure_17(closure_6, obj4), closure_16(ArrowDefault, {})];
-  obj3.children = items2;
-  obj2.children = closure_17(closure_6, obj3);
-  return closure_16(child(7106).PressableHighlight, obj2);
+  obj2.children = stateFromStores;
+  return closure_16(InAppReportsOptionRowDefault, obj2);
 }
 function ChildrenView(node) {
   const children = node.node.children;
@@ -123,25 +121,25 @@ function NullComponent() {
   return null;
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8485).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8482).IN_APP_REPORTS_NODE;
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
+const REMEDIATION_ELEMENT_TYPES = fn(8501).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8498).IN_APP_REPORTS_NODE;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { container: { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 }, scrollView: { flex: 1, alignSelf: "stretch", marginTop: 24 }, childrenContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 }, headerContainer: { alignSelf: "stretch", marginBottom: 24, paddingHorizontal: 16 }, header: { marginBottom: 8, textAlign: "center" }, subheader: { lineHeight: 20, marginBottom: 8, textAlign: "center" }, description: { lineHeight: 16, marginBottom: 8, textAlign: "center" }, infoBox: null, infoBoxText: null, childButton: null, childContainer: null, childContent: null, childButtonText: null, debugText: null };
+let obj2 = { container: { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 }, scrollView: { flex: 1, alignSelf: "stretch", marginTop: 24 }, childrenContainer: null, headerContainer: null, header: null, subheader: null, description: null, infoBox: null, infoBoxText: null, debugText: null };
 let obj3 = { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 };
+obj2.childrenContainer = { flex: 1, alignSelf: "stretch", paddingHorizontal: 16, gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 };
+obj2.headerContainer = { alignSelf: "stretch", marginBottom: 24, paddingHorizontal: 16 };
+obj2.header = { marginBottom: 8, textAlign: "center" };
+obj2.subheader = { lineHeight: 20, marginBottom: 8, textAlign: "center" };
+obj2.description = { lineHeight: 16, marginBottom: 8, textAlign: "center" };
+let obj4 = { flex: 1, alignSelf: "stretch", paddingHorizontal: 16, gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 };
 obj2.infoBox = { alignSelf: "stretch", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BLUE_345, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
 obj2.infoBoxText = { flex: 1, marginStart: 8 };
-let obj4 = { alignSelf: "stretch", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BLUE_345, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
-obj2.childButton = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
-let obj5 = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
-obj2.childContainer = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
-obj2.childContent = { flex: 1 };
-obj2.childButtonText = { lineHeight: 20 };
 obj2.debugText = { marginTop: 4, lineHeight: 16 };
 let closure_18 = createStyles.createStyles(obj2);
 const size = fn(2);

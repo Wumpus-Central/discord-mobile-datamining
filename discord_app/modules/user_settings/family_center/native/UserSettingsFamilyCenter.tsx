@@ -1,23 +1,23 @@
-// === Module 16916: UserSettingsFamilyCenter ===
+// === Module 17008: UserSettingsFamilyCenter ===
 
-// Module 16916 (UserSettingsFamilyCenter)
+// Module 17008 (UserSettingsFamilyCenter)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef2667 from "module_2667" /* 2667 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6660 */;
-import MetricEvents from "MetricEvents" /* 6665 */;
-import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6859 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7841 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6675 */;
+import MetricEvents from "MetricEvents" /* 6680 */;
+import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6874 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7227 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7857 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -37,7 +37,7 @@ function FamilyCenterLoadError() {
   }, items);
   const obj = { justify: "center", align: "center", spacing: nativeDefault.space.PX_24, style: tmp.loadErrorContainer, children: null };
   const obj2 = { align: "center", spacing: nativeDefault.space.PX_12, children: null };
-  const items1 = [closure_14(CircleErrorIcon.CircleErrorIcon, { size: "lg", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }), closure_14(Text_Text.Text, { variant: "text-md/medium", color: "text-strong", style: tmp.loadErrorText, children: stringResult })];
+  const items1 = [closure_14(CircleErrorIcon.CircleErrorIcon, { size: "lg", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }), closure_14(Text_Text.Text, { variant: "body-md/medium", color: "text-strong", style: tmp.loadErrorText, children: stringResult })];
   obj2.children = items1;
   const items2 = [closure_15(Stack_Stack.Stack, obj2), ];
   const obj5 = { text: null, onPress: null };
@@ -191,10 +191,10 @@ function FamilyCenter() {
   const tmp2Result = navigation(isLoading[27]);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const AgeGateSource = fn(1097).AgeGateSource;
-const FamilyCenterConstants = fn(7840);
+const FamilyCenterConstants = fn(7856);
 ({ FamilyCenterPageLocationAnalyticsIds: closure_11, FamilyCenterSubPageAnalyticsIds: closure_12, FamilyCenterSubPages } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

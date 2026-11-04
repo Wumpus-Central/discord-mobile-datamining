@@ -1,16 +1,16 @@
-// === Module 18894: SearchListCard ===
+// === Module 18997: SearchListCard ===
 
-// Module 18894 (SearchListCard)
+// Module 18997 (SearchListCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import Card from "Card" /* 7103 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
-import ForumIcon from "ForumIcon" /* 8784 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelNameDefault from "useChannelName" /* 5786 */;
+import Card from "Card" /* 7118 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
+import ForumIcon from "ForumIcon" /* 8801 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10977 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ class SearchListContentAuthor {
     obj1 = { source: global.avatarSource, size: closure_0(closure_2[5]).AvatarSizes.SIZE_16, style: tmp.avatar, avatarDecoration: author.avatarDecoration };
     items = [, ];
     items[0] = jsx(closure_0(closure_2[5]).Avatar, obj1);
-    obj5 = { style: tmp.authorName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
+    obj5 = { style: tmp.authorName, variant: "body-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
     obj4 = closure_1(closure_2[7]);
     obj5.children = obj4.getName(author);
     items[1] = jsx(closure_0(closure_2[6]).Text, obj5);
@@ -40,7 +40,7 @@ function SearchListPrivateChannel(channel) {
     const obj3 = { channel, size: native.AvatarSizes.SIZE_16 };
     obj2.children = hasOwnProperty(GroupDMAvatarDefault, obj3);
     items = [hasOwnProperty(View, obj2), ];
-    const obj4 = { style: tmp.channelName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp4 };
+    const obj4 = { style: tmp.channelName, variant: "body-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp4 };
     items[1] = hasOwnProperty(Text_Text.Text, obj4);
     obj.children = items;
     let tmp5Result = timestampProducer(View, obj);
@@ -49,7 +49,7 @@ function SearchListPrivateChannel(channel) {
     obj.style = tmp.privateChannelIcon;
     const obj5 = { style: tmp.icon, size: "xs", color: "interactive-text-default" };
     const items1 = [hasOwnProperty(ForumIcon.ForumIcon, obj5), ];
-    const obj6 = { variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
+    const obj6 = { variant: "body-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
     const intl = util.intl;
     obj6.children = intl.string(util.t.ACgJhM);
     items1[1] = hasOwnProperty(Text_Text.Text, obj6);
@@ -69,7 +69,7 @@ class SearchListGuildChannel {
     obj5 = { size: closure_0(closure_2[5]).Icon.Sizes.REFRESH_SMALL_16, source: channelIcon, color: tmp.channelIcon.color };
     items = [, ];
     items[0] = jsx(closure_0(closure_2[5]).Icon, obj5);
-    obj6 = { style: tmp.channelName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp2 };
+    obj6 = { style: tmp.channelName, variant: "body-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp2 };
     items[1] = jsx(closure_0(closure_2[6]).Text, obj6);
     obj1.children = items;
     return jsxs(View, obj1);
@@ -77,7 +77,7 @@ class SearchListGuildChannel {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { channelName: { flexShrink: 1, marginStart: 4 }, channelIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, avatar: { marginRight: 2 }, channel: { flexDirection: "row", alignItems: "center" }, author: { flexDirection: "row", alignItems: "center" }, authorName: { flexShrink: 1, marginStart: 2 }, container: null, content: null, footer: null, thumbnail: null, privateChannelIcon: null, icon: null, gdmIcon: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -89,7 +89,7 @@ obj2.thumbnail = { flex: 1, overflow: "hidden", borderTopRightRadius: nativeDefa
 obj2.privateChannelIcon = { flexDirection: "row", alignItems: "center" };
 obj2.icon = { marginRight: 4 };
 obj2.gdmIcon = { width: 18 };
-const React5 = createStyles.createStyles(obj2);
+const metroImportDefault = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchListCard.tsx");
 
@@ -110,13 +110,13 @@ export function SearchListCardContent(arg0) {
   const obj = { style: closure_7().content, children: null };
   let tmp3 = label;
   if (typeof label === "string") {
-    const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: label };
+    const obj2 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: label };
     tmp3 = hasOwnProperty(Text_Text.Text, obj2);
   }
   items = [tmp3, ];
   let tmp4 = subLabel;
   if (typeof subLabel === "string") {
-    const obj3 = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: subLabel };
+    const obj3 = { variant: "body-sm/normal", color: "text-default", lineClamp: 1, children: subLabel };
     tmp4 = hasOwnProperty(Text_Text.Text, obj3);
   }
   items[1] = tmp4;

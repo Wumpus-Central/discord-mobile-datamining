@@ -1,19 +1,19 @@
-// === Module 18119: DevWidget ===
+// === Module 18216: DevWidget ===
 
-// Module 18119 (DevWidget)
+// Module 18216 (DevWidget)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import Pressables from "Pressables" /* 7106 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11381 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12950 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 17719 */;
-import VEVOODefault from "VEVOO" /* 18120 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import Pressables from "Pressables" /* 7121 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11431 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13032 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 17815 */;
+import VEVOODefault from "VEVOO" /* 18217 */;
 import noop from "module_19" /* 19 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7987 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8003 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
@@ -148,7 +148,7 @@ function DraggableContainer(arg0) {
 }
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: nativeDefault.radii.xl };
@@ -193,5 +193,5 @@ export default function DevWidget() {
   };
   items[1] = timestampProducer(DraggableContainer, point);
   obj3.children = items;
-  return React6(React5, obj3);
+  return React5(metroImportDefault, obj3);
 };

@@ -1,6 +1,6 @@
-// === Module 7046: GuildProfileVisibility ===
+// === Module 7061: GuildProfileVisibility ===
 
-// Module 7046 (GuildProfileVisibility)
+// Module 7061 (GuildProfileVisibility)
 import size from "module_2" /* 2 */;
 
 const obj = { VISIBLE: new Set([1, 3]) };

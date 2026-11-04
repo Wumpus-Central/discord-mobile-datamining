@@ -1,11 +1,11 @@
-// === Module 13960: VoicePanelControlsDrawerTitle ===
+// === Module 14046: VoicePanelControlsDrawerTitle ===
 
-// Module 13960 (VoicePanelControlsDrawerTitle)
+// Module 14046 (VoicePanelControlsDrawerTitle)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NativeViewDefault from "NativeView" /* 7086 */;
-import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 13961 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NativeViewDefault from "NativeView" /* 7101 */;
+import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 14047 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -15,7 +15,7 @@ const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(5141);
-let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(11358).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
+let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(11408).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
 obj.titlePillBG = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_6 = createStyles.createStyles(obj);
@@ -71,7 +71,7 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
     shown = sharedValue;
   }
   const items3 = [React4(VoicePanelHeaderGlassBlurDefault, { shown, style: StyleSheet.absoluteFillObject, blurStyle }), ];
-  const obj5 = { style: null, children: React4(Text_Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: children.title }) };
+  const obj5 = { style: null, children: React4(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: children.title }) };
   const items4 = [tmp.titlePill, animatedStyle];
   obj5.style = items4;
   items3[1] = React4(_modDef1652.View, obj5);

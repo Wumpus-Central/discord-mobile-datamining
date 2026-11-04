@@ -1,7 +1,7 @@
-// === Module 12229: frameRunsInBackground ===
+// === Module 12288: frameRunsInBackground ===
 
-// Module 12229 (frameRunsInBackground)
-import FramesConstants from "FramesConstants" /* 6967 */;
+// Module 12288 (frameRunsInBackground)
+import FramesConstants from "FramesConstants" /* 6982 */;
 import size from "module_2" /* 2 */;
 
 const isLaunched = FramesConstants.isLaunched;

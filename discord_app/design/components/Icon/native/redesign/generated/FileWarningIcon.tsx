@@ -1,9 +1,9 @@
-// === Module 17715: FileWarningIcon ===
+// === Module 17811: FileWarningIcon ===
 
-// Module 17715 (FileWarningIcon)
+// Module 17811 (FileWarningIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod17716 from "module_17716" /* 17716 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod17812 from "module_17812" /* 17812 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function FileWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17716, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17812, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,14 +1,14 @@
-// === Module 16616: UserProfileDisplayNameStylesEditButton ===
+// === Module 16706: UserProfileDisplayNameStylesEditButton ===
 
-// Module 16616 (UserProfileDisplayNameStylesEditButton)
+// Module 16706 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10902 */;
-import _modDef15217 from "module_15217" /* 15217 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 16620 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 16621 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10950 */;
+import _modDef15300 from "module_15300" /* 15300 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 16710 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 16711 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const noop = fn(19);
 ({ useCallback: closure_4, useMemo: hasOwnProperty } = noop);
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const HexagonCampaignConstants = fn(5166);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: closure_10, HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
@@ -102,8 +102,8 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   }, items1);
   const tmp20 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef15217, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef15217, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef15300, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef15300, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };

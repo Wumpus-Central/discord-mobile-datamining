@@ -1,20 +1,20 @@
-// === Module 12614: FrecencyCommandsSection ===
+// === Module 12695: FrecencyCommandsSection ===
 
-// Module 12614 (FrecencyCommandsSection)
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11639 */;
-import AppDetailContent from "AppDetailContent" /* 12595 */;
-import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12615 */;
+// Module 12695 (FrecencyCommandsSection)
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5817 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11690 */;
+import AppDetailContent from "AppDetailContent" /* 12676 */;
+import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12696 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { container: { marginBottom: fn(12595).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
+let obj2 = { container: { marginBottom: fn(12676).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
@@ -35,10 +35,10 @@ export default function FrecencyCommandsSection(commands) {
   if (0 !== arr.length) {
     let obj = { style: tmp.container, children: null };
     let obj2 = { style: tmp.header, children: null };
-    const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
+    const obj3 = { variant: "body-md/medium", color: "text-default", children: null };
     const intl = context(1113).intl;
     obj3.children = intl.string(context(1113).t.acSE0h);
-    obj2.children = arr(context(5747).Heading, obj3);
+    obj2.children = arr(context(5761).Heading, obj3);
     const items1 = [arr(View, obj2), arr.map((command, index) => timestampProducer(AppDetailContent.CommandRow, { command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
     obj.children = items1;
     tmp4 = closure_7(View, obj);

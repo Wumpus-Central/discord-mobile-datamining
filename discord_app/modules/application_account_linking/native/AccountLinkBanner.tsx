@@ -1,9 +1,9 @@
-// === Module 18398: AccountLinkBanner ===
+// === Module 18492: AccountLinkBanner ===
 
-// Module 18398 (AccountLinkBanner)
+// Module 18492 (AccountLinkBanner)
 import nativeDefault from "native" /* 575 */;
-import ButtonConstants from "ButtonConstants" /* 5760 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
+import ButtonConstants from "ButtonConstants" /* 5774 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -77,16 +77,16 @@ function AccountLinkLargeBanner(arg0) {
 const View = fn(17).View;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const NORMAL = fn(7454).GameIconSizes.NORMAL;
-let closure_14 = fn(7454).GameIconImageSize[NORMAL];
-let c15 = "heading-md/semibold";
-let c16 = "text-sm/medium";
+const NORMAL = fn(7470).GameIconSizes.NORMAL;
+let closure_14 = fn(7470).GameIconImageSize[NORMAL];
+let c15 = "heading-sm/semibold";
+let c16 = "body-sm/medium";
 const PX_162 = nativeDefault.space.PX_16;
 const createStyles = fn(5141);
 let obj = { card: { padding: PX_12 }, closeButton: null, imagesContainer: null, ellipsisContainer: null, ellipsisDot: null, title: null, body: null, ctaContainer: null };

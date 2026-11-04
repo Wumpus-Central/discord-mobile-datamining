@@ -1,6 +1,6 @@
-// === Module 9231: StartEventUtils ===
+// === Module 9248: StartEventUtils ===
 
-// Module 9231 (StartEventUtils)
+// Module 9248 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -242,7 +242,7 @@ let closure_14 = async function _setEventAsActive(arg0) {
 };
 let closure_4 = fn(4994).createChannelRecordFromServer;
 const GuildScheduledEventsConstants = fn(4996);
-({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
+({ GuildScheduledEventEntityTypes: metroImportDefault, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventUtils.tsx");

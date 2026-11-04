@@ -1,22 +1,22 @@
-// === Module 11667: StageChannelSelfRichPresenceStore ===
+// === Module 11718: StageChannelSelfRichPresenceStore ===
 
-// Module 11667 (StageChannelSelfRichPresenceStore)
+// Module 11718 (StageChannelSelfRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import ActivityTypes2 from "ActivityTypes" /* 5882 */;
-import StageMediaHooks from "StageMediaHooks" /* 6832 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6879 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10893 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import ActivityTypes2 from "ActivityTypes" /* 5896 */;
+import StageMediaHooks from "StageMediaHooks" /* 6847 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6894 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10941 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import UserStore from "UserStore" /* 1385 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6833 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6848 */;
 import StageInstanceStore from "StageInstanceStore" /* 4995 */;
 
 require = fn;
@@ -118,7 +118,7 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6829).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(6844).STAGE_APPLICATION_ID;
 const Constants = fn(1072);
 ({ GuildFeatures: map1, Permissions: closure_14, RTCConnectionStates: closure_15 } = Constants);
 let obj = null;

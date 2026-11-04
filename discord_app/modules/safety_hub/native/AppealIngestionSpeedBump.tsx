@@ -1,18 +1,18 @@
-// === Module 13456: AppealIngestionSpeedBump ===
+// === Module 13540: AppealIngestionSpeedBump ===
 
-// Module 13456 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 13458 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 13474 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13475 */;
+// Module 13540 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 13542 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 13558 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13559 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8118 */;
+import SafetyHubStore from "SafetyHubStore" /* 8134 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8094);
-({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
+const SafetyHubConstants = fn(8110);
+({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: closure_6 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -116,10 +116,10 @@ export default function AppealIngestionSpeedBump(arg0) {
   }
   items2[5] = tmp9Result4;
   if (isDsaEligible) {
-    const obj10 = { variant: "text-xs/normal", children: null };
+    const obj10 = { variant: "body-xs/normal", children: null };
     const intl7 = tmp2(1113).intl;
     obj10.children = intl7.format(tmp2(1113).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(5747).Text, obj10);
+    isDsaEligible = closure_8(tmp2(5761).Text, obj10);
   }
   const obj11 = { children: null };
   items2[6] = isDsaEligible;

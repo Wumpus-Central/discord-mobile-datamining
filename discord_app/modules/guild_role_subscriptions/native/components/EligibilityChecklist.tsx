@@ -1,9 +1,9 @@
-// === Module 20036: EligibilityChecklist ===
+// === Module 20152: EligibilityChecklist ===
 
-// Module 20036 (EligibilityChecklist)
+// Module 20152 (EligibilityChecklist)
 import nativeDefault from "native" /* 575 */;
-import CircleXIcon from "CircleXIcon" /* 7218 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7460 */;
+import CircleXIcon from "CircleXIcon" /* 7233 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7476 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,12 +28,12 @@ function EligibilityChecklistRow(item) {
   const items1 = [tmp.rowTextColumn, ];
   const obj4 = { style: items1, children: null };
   items1[1] = item.checked && tmp.eligibleRow;
-  const items2 = [tmp13(tmp10(5747).Text, { style: tmp.rowLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: item.checked ? item.checkedLabel : item.uncheckedLabel }), tmp13(tmp10(5747).Text, { variant: "text-sm/normal", color: "interactive-text-default", children: item.description }), ];
+  const items2 = [tmp13(tmp10(5761).Text, { style: tmp.rowLabel, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: item.checked ? item.checkedLabel : item.uncheckedLabel }), tmp13(tmp10(5761).Text, { variant: "body-sm/normal", color: "interactive-text-default", children: item.description }), ];
   let tmp13Result = null != item.actionHandler && null != item.actionLabel;
   if (tmp13Result) {
     const obj7 = { style: tmp.actionButtonWrapper, children: null };
     ({ actionLabel: obj8.text, actionHandler: obj8.onPress } = item);
-    obj7.children = tmp13(tmp10(5754).Button, { text: null, onPress: null, grow: true });
+    obj7.children = tmp13(tmp10(5768).Button, { text: null, onPress: null, grow: true });
     tmp13Result = tmp13(View, obj7);
     const obj9 = { text: null, onPress: null, grow: true };
   }
@@ -48,14 +48,14 @@ function EligibilityChecklistRow(item) {
     let tmp13Result2 = tmp13(View, obj17);
   } else {
     obj17.style = tmp.divider;
-    tmp13Result2 = tmp13(tmp12(17351), obj17);
+    tmp13Result2 = tmp13(tmp12(17442), obj17);
   }
   children[1] = tmp13Result2;
   return hasOwnProperty(timestampProducer, { children });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ row: { paddingHorizontal: 24, paddingTop: 16, flex: 0, flexDirection: "row" }, eligibleRow: { opacity: 0.8 }, rowStatusIcon: { height: 20, width: 20, marginRight: 16 }, rowTextColumn: { flex: 1, flexDirection: "column" }, rowLabel: { marginBottom: 4 }, actionButtonWrapper: { marginTop: 12 }, divider: { marginHorizontal: 24 }, lastRowSpacer: { height: 16 } });
 const size = fn(2);

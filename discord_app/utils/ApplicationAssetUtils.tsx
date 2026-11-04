@@ -1,13 +1,13 @@
-// === Module 8845: ApplicationAssetUtils ===
+// === Module 8862: ApplicationAssetUtils ===
 
-// Module 8845 (ApplicationAssetUtils)
+// Module 8862 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8846 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8863 */;
 
 require = fn;
 function updateAssets() {
@@ -321,7 +321,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
   return "flexDirection";
 };
 const Constants = fn(1072);
-({ Endpoints: metroRequire, PlatformTypes } = Constants);
+({ Endpoints: closure_6, PlatformTypes } = Constants);
 let c8 = "https://i.scdn.co/image/";
 const re9 = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/;
 const re10 = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/;

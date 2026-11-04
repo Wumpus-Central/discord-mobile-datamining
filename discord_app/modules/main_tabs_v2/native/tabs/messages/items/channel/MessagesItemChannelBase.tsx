@@ -1,16 +1,16 @@
-// === Module 18233: MessagesItemChannelBase ===
+// === Module 18330: MessagesItemChannelBase ===
 
-// Module 18233 (MessagesItemChannelBase)
+// Module 18330 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 5876 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10932 */;
+import transitionToChannel from "transitionToChannel" /* 5890 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10980 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
-import ReadStateStore from "ReadStateStore" /* 6962 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
+import ReadStateStore from "ReadStateStore" /* 6977 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -71,7 +71,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "Array", activities: "flexDirection" };
+      obj3 = { status: "PX_8", activities: "__closure" };
     }
     return obj3;
   });

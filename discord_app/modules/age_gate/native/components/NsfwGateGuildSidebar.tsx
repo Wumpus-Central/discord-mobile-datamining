@@ -1,9 +1,9 @@
-// === Module 18501: NsfwGateGuildSidebar ===
+// === Module 18596: NsfwGateGuildSidebar ===
 
-// Module 18501 (NsfwGateGuildSidebar)
+// Module 18596 (NsfwGateGuildSidebar)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7509 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7525 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -11,7 +11,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7508).NsfwGateSource;
+const NsfwGateSource = fn(7524).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: closure_10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);

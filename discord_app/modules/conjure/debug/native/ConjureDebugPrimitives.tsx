@@ -1,19 +1,19 @@
-// === Module 13166: ConjureDebugPrimitives ===
+// === Module 13249: ConjureDebugPrimitives ===
 
-// Module 13166 (ConjureDebugPrimitives)
+// Module 13249 (ConjureDebugPrimitives)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 13164 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 13247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { toolbar: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 }, toolbarStatus: { flex: 1 }, section: null, statRow: null, statRowHead: null, statLabel: null, statValue: null, statGroup: null, statValueGroup: null, meterTrack: null, meterFill: null, meterFillCritical: null };
 let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 };
@@ -45,14 +45,14 @@ export function DebugSnapshotToolbar(onRefresh) {
   if ("loading" === fetchState) {
     let tmp4Result = hasOwnProperty(React3, { size: "small" });
   } else if ("failed" === fetchState) {
-    const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
+    const obj3 = { variant: "body-xs/normal", color: "text-feedback-critical", children: null };
     const intl2 = util.intl;
     obj3.children = intl2.string(_modDef3995.ZVByPX);
     tmp4Result = hasOwnProperty(Text_Text.Text, obj3);
   } else {
     tmp4Result = null;
     if (null != generatedAt) {
-      const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
+      const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
       const intl = util.intl;
       const obj6 = { time: ConjureDebugFormat.formatObservedAt(generatedAt) };
       obj4.children = intl.formatToPlainString(_modDef3995.INVO50, obj6);
@@ -72,12 +72,12 @@ export function DebugSnapshotToolbar(onRefresh) {
 export function DebugSection(arg0) {
   ({ title, children } = arg0);
   const obj = { style: closure_7().section, children: null };
-  items = [hasOwnProperty(Text_Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: title }), children];
+  items = [hasOwnProperty(Text_Text.Text, { variant: "body-xs/semibold", color: "text-muted", children: title }), children];
   obj.children = items;
   return timestampProducer(React4, obj);
 }
 export function DebugNote(children) {
-  return hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: children.children });
+  return hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-muted", children: children.children });
 }
 export function DebugStatRow(arg0) {
   ({ hint, critical } = arg0);
@@ -93,7 +93,7 @@ export function DebugStatRow(arg0) {
   items = [, ];
   ({ statLabel: arr[0], statGroup: arr[1] } = tmp);
   obj3.style = items;
-  const items1 = [icon, hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: label })];
+  const items1 = [icon, hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-muted", children: label })];
   obj3.children = items1;
   const items2 = [timestampProducer(React4, obj3), ];
   const obj4 = { style: null, children: null };
@@ -105,14 +105,14 @@ export function DebugStatRow(arg0) {
   if (critical) {
     str = "text-feedback-critical";
   }
-  items4[1] = hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: str, style: tmp.statValue, children: value });
+  items4[1] = hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: str, style: tmp.statValue, children: value });
   obj4.children = items4;
   items2[1] = timestampProducer(React4, obj4);
   obj2.children = items2;
   const items5 = [timestampProducer(React4, obj2), ];
   let tmp4Result = null;
   if (null != hint) {
-    const obj6 = { variant: "text-xs/normal", color: "text-muted", children: hint };
+    const obj6 = { variant: "body-xs/normal", color: "text-muted", children: hint };
     tmp4Result = hasOwnProperty(Text_Text.Text, obj6);
   }
   items5[1] = tmp4Result;
@@ -133,12 +133,12 @@ export function DebugMeter(arg0) {
   const obj = { style: tmp.statRow, accessibilityRole: "progressbar", accessibilityLabel: label, accessibilityValue: { text: combined }, children: null };
   const obj2 = { style: tmp.statRowHead, children: null };
   const formatValueResult = formatValue(used);
-  items = [hasOwnProperty(React4, { style: tmp.statLabel, children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: label }) }), ];
+  items = [hasOwnProperty(React4, { style: tmp.statLabel, children: hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-muted", children: label }) }), ];
   let str = "text-default";
   if (meterFillCritical) {
     str = "text-feedback-critical";
   }
-  items[1] = hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: str, children: combined });
+  items[1] = hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: str, children: combined });
   obj2.children = items;
   const items1 = [timestampProducer(React4, obj2), ];
   const obj4 = { style: tmp.meterTrack, children: null };

@@ -1,14 +1,14 @@
-// === Module 11800: PublicGuildAnnouncementProfile ===
+// === Module 11857: PublicGuildAnnouncementProfile ===
 
-// Module 11800 (PublicGuildAnnouncementProfile)
+// Module 11857 (PublicGuildAnnouncementProfile)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8626 */;
-import _modDef11801 from "module_11801" /* 11801 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8643 */;
+import _modDef11858 from "module_11858" /* 11858 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,18 +35,18 @@ export default function PublicGuildAnnouncementProfile() {
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   items = [React4(tmp2, obj3), , , ];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11801, disableColor: true }), ];
+  const items1 = [React4(native.Icon, { source: _modDef11858, disableColor: true }), ];
   const obj7 = { style: tmp.headerText, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t.xfAlNx);
   items1[1] = React4(Text_Text.Text, obj7);
   obj5.children = items1;
   items[1] = hasOwnProperty(View, obj5);
-  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj8 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(util.t.BUZ0sl);
   items[2] = React4(Text_Text.Text, obj8);
-  const obj9 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj9 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;
   obj9.children = intl3.string(util.t.w5beJH);
   items[3] = React4(Text_Text.Text, obj9);

@@ -1,9 +1,9 @@
-// === Module 15471: ReferralProgramShareActionSheetUtils ===
+// === Module 15558: ReferralProgramShareActionSheetUtils ===
 
-// Module 15471 (ReferralProgramShareActionSheetUtils)
+// Module 15558 (ReferralProgramShareActionSheetUtils)
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 13867: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 13953: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 13867 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 13953 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 575 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, examples: null, newBadge: null, title: null, body: null, actions: null, row: null, outerRow: null, innerRow: null, outerStack: null, innerStack: null };
@@ -86,7 +86,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   const items4 = [, ];
   ({ row: arr6[0], outerRow: arr6[1] } = tmp2);
   obj7.style = items4;
-  const obj8 = { name: "Cap", suggestion: null, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, emojiSource: null, style: null };
+  const obj8 = { name: "Cap", suggestion: null, emojiSize: 24, spacing: 8, textVariant: "body-md/medium", textColor: "text-subtle", lineClamp: 1, emojiSource: null, style: null };
   const obj5 = {
     onPress() {
       const current = ref.current;
@@ -107,7 +107,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   const items7 = [, ];
   ({ row: arr9[0], innerRow: arr9[1] } = tmp2);
   obj9.style = items7;
-  const obj10 = { name: "Rose", suggestion: null, emojiSize: 28, spacing: 10, textVariant: "text-lg/medium", textColor: "text-default", lineClamp: 1, style: null, emojiSource: null };
+  const obj10 = { name: "Rose", suggestion: null, emojiSize: 28, spacing: 10, textVariant: "body-lg/medium", textColor: "text-default", lineClamp: 1, style: null, emojiSource: null };
   const tmp3Result = ref(analyticsLocations[13]);
   obj10.suggestion = markAsDismissed(analyticsLocations[14]).TypingSuggestion.YAPPING;
   obj10.style = tmp2.innerStack;
@@ -119,7 +119,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   const items9 = [, ];
   ({ row: arr11[0], outerRow: arr11[1] } = tmp2);
   obj11.style = items9;
-  const obj12 = { name: "Loky", suggestion: null, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, style: null, emojiSource: null };
+  const obj12 = { name: "Loky", suggestion: null, emojiSize: 24, spacing: 8, textVariant: "body-md/medium", textColor: "text-subtle", lineClamp: 1, style: null, emojiSource: null };
   const tmp3Result3 = ref(analyticsLocations[13]);
   obj12.suggestion = markAsDismissed(analyticsLocations[14]).TypingSuggestion.OVERSHARING;
   obj12.style = tmp2.outerStack;
@@ -139,7 +139,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   const intl2 = markAsDismissed(tmp4[23]).intl;
   obj14.children = intl2.string(ref(analyticsLocations[25]).uGxDiu);
   items3[3] = closure_7(markAsDismissed(analyticsLocations[24]).Text, obj14);
-  const obj15 = { variant: "text-md/normal", style: tmp2.body, color: "text-muted", children: null };
+  const obj15 = { variant: "body-md/normal", style: tmp2.body, color: "text-muted", children: null };
   const intl3 = markAsDismissed(tmp4[23]).intl;
   obj15.children = intl3.string(ref(analyticsLocations[25]).yezU3E);
   items3[4] = closure_7(markAsDismissed(analyticsLocations[24]).Text, obj15);

@@ -1,24 +1,24 @@
-// === Module 13497: FamilyCenterDataConfirmation ===
+// === Module 13581: FamilyCenterDataConfirmation ===
 
-// Module 13497 (FamilyCenterDataConfirmation)
+// Module 13581 (FamilyCenterDataConfirmation)
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import UserPlusIcon from "UserPlusIcon" /* 5841 */;
-import ClockIcon from "ClockIcon" /* 5860 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import TableRow from "TableRow" /* 7101 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import SettingsIcon from "SettingsIcon" /* 7685 */;
-import CreditCardIcon from "CreditCardIcon" /* 8139 */;
-import ForumIcon from "ForumIcon" /* 8784 */;
-import ServerIcon from "ServerIcon" /* 9890 */;
-import FlagIcon from "FlagIcon" /* 10214 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 13498 */;
-import PhoneIcon from "PhoneIcon" /* 13499 */;
-import GiftIcon from "GiftIcon" /* 13501 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 13502 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import UserPlusIcon from "UserPlusIcon" /* 5855 */;
+import ClockIcon from "ClockIcon" /* 5874 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import TableRow from "TableRow" /* 7116 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import SettingsIcon from "SettingsIcon" /* 7701 */;
+import CreditCardIcon from "CreditCardIcon" /* 8155 */;
+import ForumIcon from "ForumIcon" /* 8801 */;
+import ServerIcon from "ServerIcon" /* 9908 */;
+import FlagIcon from "FlagIcon" /* 10262 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 13582 */;
+import PhoneIcon from "PhoneIcon" /* 13583 */;
+import GiftIcon from "GiftIcon" /* 13585 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 13586 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ function RowGroup(children) {
   const rows = children.rows;
   let obj = { spacing: 8, children: null };
   items = [
-    React3(Text_Text.Text, { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: children.title }),
+    React3(Text_Text.Text, { accessibilityRole: "header", variant: "body-sm/semibold", color: "text-muted", children: children.title }),
     React3(TableRowGroup.TableRowGroup, {
       hasIcons: true,
       children: rows.map((header) => {

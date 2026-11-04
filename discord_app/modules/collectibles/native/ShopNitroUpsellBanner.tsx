@@ -1,20 +1,20 @@
-// === Module 17986: ShopNitroUpsellBanner ===
+// === Module 18082: ShopNitroUpsellBanner ===
 
-// Module 17986 (ShopNitroUpsellBanner)
+// Module 18082 (ShopNitroUpsellBanner)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import Card from "Card" /* 7103 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10420 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 17982 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import Card from "Card" /* 7118 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10468 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 18078 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -71,7 +71,7 @@ class ShopNitroUpsellBanner {
     obj16 = { size: "md", color: tmp2(tmp3[3]).colors.ICON_DEFAULT };
     obj15.children = jsx(tmp5(tmp3[15]).XSmallIcon, obj16);
     items2[1] = jsx(tmp5(tmp3[14]).PressableOpacity, obj15);
-    obj17 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+    obj17 = { variant: "body-sm/medium", color: "mobile-text-heading-primary", style: tmp.text, children: null };
     intl2 = tmp5(tmp3[10]).intl;
     obj17.children = intl2.string(tmp5(tmp3[10]).t.WjOclf);
     items3 = [, ];

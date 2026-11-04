@@ -1,20 +1,20 @@
-// === Module 19342: useSoundboardSoundLock ===
+// === Module 19446: useSoundboardSoundLock ===
 
-// Module 19342 (useSoundboardSoundLock)
+// Module 19446 (useSoundboardSoundLock)
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5200 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9925 */;
-import BoostGemIcon from "BoostGemIcon" /* 10051 */;
-import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 19343 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9943 */;
+import BoostGemIcon from "BoostGemIcon" /* 10099 */;
+import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 19447 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(6180).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6195).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
 

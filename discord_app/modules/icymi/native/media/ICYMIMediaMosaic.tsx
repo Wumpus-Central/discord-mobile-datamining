@@ -1,28 +1,28 @@
-// === Module 18729: ICYMIMediaMosaic ===
+// === Module 18830: ICYMIMediaMosaic ===
 
-// Module 18729 (ICYMIMediaMosaic)
+// Module 18830 (ICYMIMediaMosaic)
 import _mod12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7399 */;
-import openMediaModal from "openMediaModal" /* 8957 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8963 */;
-import common_VideoDefault from "common/Video" /* 8997 */;
-import ICYMITypes from "ICYMITypes" /* 9043 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9048 */;
-import ICYMIContext from "ICYMIContext" /* 18683 */;
-import ThumbhashUtils from "ThumbhashUtils" /* 18730 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7415 */;
+import openMediaModal from "openMediaModal" /* 8974 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8980 */;
+import common_VideoDefault from "common/Video" /* 9014 */;
+import ICYMITypes from "ICYMITypes" /* 9060 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9065 */;
+import ICYMIContext from "ICYMIContext" /* 18784 */;
+import ThumbhashUtils from "ThumbhashUtils" /* 18831 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
-import ICYMIStore from "ICYMIStore" /* 9030 */;
+import ICYMIStore from "ICYMIStore" /* 9047 */;
 
 require = fn;
 function MediaMosaicVideo(source) {
@@ -145,7 +145,7 @@ function Media(handlePressMedia) {
   if (isSpoiler) {
     const obj5 = { style: tmp.centerContainer, children: null };
     const obj6 = { style: tmp.spoilerText, children: null };
-    const obj7 = { maxFontSizeMultiplier: 1, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj7 = { maxFontSizeMultiplier: 1, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = initialIndex(tmp7[21]).intl;
     obj7.children = intl.string(initialIndex(tmp7[21]).t["F+x38C"]).toUpperCase();
     obj6.children = closure_15(initialIndex(tmp7[20]).Text, obj7);
@@ -506,7 +506,7 @@ class GravityAttachmentMediaMosaic {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
 const jsxProd = fn(21);

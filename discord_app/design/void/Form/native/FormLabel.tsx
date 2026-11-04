@@ -1,7 +1,7 @@
-// === Module 7431: FormLabel ===
+// === Module 7447: FormLabel ===
 
-// Module 7431 (FormLabel)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 7447 (FormLabel)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export default function FormLabel(children) {
   if (color === undefined) {
     color = "mobile-text-heading-primary";
   }
-  return jsx(Text_Text.Text, { variant: "heading-md/semibold", color, lineClamp, style, maxFontSizeMultiplier: 2, accessible, children: children.text });
+  return jsx(Text_Text.Text, { variant: "heading-sm/semibold", color, lineClamp, style, maxFontSizeMultiplier: 2, accessible, children: children.text });
 };

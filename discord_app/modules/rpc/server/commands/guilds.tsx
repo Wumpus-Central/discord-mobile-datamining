@@ -1,22 +1,22 @@
-// === Module 16460: guilds ===
+// === Module 16552: guilds ===
 
-// Module 16460 (guilds)
+// Module 16552 (guilds)
 import GuildRecord from "GuildRecord" /* 5008 */;
-import Constants2 from "Constants" /* 6570 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
-import RPCErrorDefault from "RPCError" /* 9461 */;
-import botScopedAccess from "botScopedAccess" /* 9464 */;
-import RPCHelpers from "RPCHelpers" /* 11950 */;
+import Constants2 from "Constants" /* 6585 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9051 */;
+import RPCErrorDefault from "RPCError" /* 9479 */;
+import botScopedAccess from "botScopedAccess" /* 9482 */;
+import RPCHelpers from "RPCHelpers" /* 12009 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import Constants from "Constants" /* 1072 */;
-import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 16444 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 16536 */;
 import size from "module_2" /* 2 */;
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;
 const RPC_SCOPE_CONFIG = Constants2.RPC_SCOPE_CONFIG;
-({ RPCCommands, RPCErrors: closure_7 } = Constants);
+({ RPCCommands, RPCErrors: metroImportDefault } = Constants);
 let obj = {};
 let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
 let obj2 = { scope: null, validateAccess: null, handler: null };

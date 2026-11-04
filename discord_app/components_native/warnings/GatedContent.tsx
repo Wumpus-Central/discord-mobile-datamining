@@ -1,8 +1,8 @@
-// === Module 11356: GatedContent ===
+// === Module 11406: GatedContent ===
 
-// Module 11356 (GatedContent)
+// Module 11406 (GatedContent)
 import nativeDefault from "native" /* 575 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -53,7 +53,7 @@ export default function GatedContent(onAgree) {
   const tmp10 = channelId(onAgree(onDisagree[5]).Button, { variant: disagreementButtonVariant, text: disagreement, onPress: callback }, "disagree");
   const obj2 = { spacing: 16, style: tmp.container, children: null };
   const obj3 = { align: "center", children: null };
-  const items3 = [channelId(onAgree(onDisagree[7]).Heading, { variant: "heading-xxl/semibold", maxFontSizeMultiplier: 2, style: tmp.title, children: title }), subtitle, channelId(onAgree(onDisagree[7]).Text, { color: "text-muted", variant: "text-md/medium", style: tmp.description, maxFontSizeMultiplier: 2, children: description })];
+  const items3 = [channelId(onAgree(onDisagree[7]).Heading, { variant: "heading-xxl/semibold", maxFontSizeMultiplier: 2, style: tmp.title, children: title }), subtitle, channelId(onAgree(onDisagree[7]).Text, { color: "text-muted", variant: "body-md/medium", style: tmp.description, maxFontSizeMultiplier: 2, children: description })];
   obj3.children = items3;
   const items4 = [guildId(onAgree(onDisagree[6]).Stack, obj3), ];
   const obj6 = { style: tmp.buttonGroup, children: null };

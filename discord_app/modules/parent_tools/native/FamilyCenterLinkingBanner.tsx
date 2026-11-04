@@ -1,14 +1,14 @@
-// === Module 16960: FamilyCenterLinkingBanner ===
+// === Module 17052: FamilyCenterLinkingBanner ===
 
-// Module 16960 (FamilyCenterLinkingBanner)
+// Module 17052 (FamilyCenterLinkingBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8494 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 13498 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 16923 */;
-import WizardHatAndBookSpotIllustration from "WizardHatAndBookSpotIllustration" /* 16961 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8511 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 13582 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 17015 */;
+import WizardHatAndBookSpotIllustration from "WizardHatAndBookSpotIllustration" /* 17053 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ function FamilyCenterLinkingInstructionsRow(arg0) {
   ({ header, description, index, isLast } = arg0);
   const tmp = closure_11();
   const obj = { style: tmp.row, children: null };
-  items = [React4(View, { style: tmp.circle, children: React4(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index }) }), ];
+  items = [React4(View, { style: tmp.circle, children: React4(Text_Text.Text, { variant: "heading-sm/semibold", color: "text-brand", children: index }) }), ];
   const items1 = [tmp.rowContent, ];
   let gap = null;
   if (!isLast) {
@@ -51,7 +51,7 @@ function FamilyCenterLinkingInstructionsRow(arg0) {
   }
   const obj3 = { style: items1, children: null };
   items1[1] = gap;
-  const items2 = [React4(Text_Text.Text, { variant: "heading-sm/semibold", children: header }), React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: description })];
+  const items2 = [React4(Text_Text.Text, { variant: "heading-xs/semibold", children: header }), React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", children: description })];
   obj3.children = items2;
   items[1] = hasOwnProperty(View, obj3);
   obj.children = items;
@@ -105,7 +105,7 @@ export default function FamilyCenterLinkingBanner() {
   obj4.children = React4(WizardHatAndBookSpotIllustration.WizardHatAndBookSpotIllustration, { accessible: false });
   items = [React4(View, obj4), , ];
   const obj5 = { style: tmp.content, children: null };
-  const items1 = [React4(Text_Text.Text, { style: tmp.header, variant: "heading-lg/semibold", children: ageSpecificText }), React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 })];
+  const items1 = [React4(Text_Text.Text, { style: tmp.header, variant: "heading-lg/semibold", children: ageSpecificText }), React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", children: ageSpecificText1 })];
   obj5.children = items1;
   items[1] = hasOwnProperty(View, obj5);
   items[2] = React4(tmp2 ? FamilyCenterLinkingBannerParentContent : FamilyCenterLinkingBannerTeenContent, {});

@@ -1,14 +1,14 @@
-// === Module 10854: SelectedUserField ===
+// === Module 10902: SelectedUserField ===
 
-// Module 10854 (SelectedUserField)
+// Module 10902 (SelectedUserField)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleXIcon from "CircleXIcon" /* 7218 */;
-import InputFieldContainer from "InputFieldContainer" /* 7223 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7340 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleXIcon from "CircleXIcon" /* 7233 */;
+import InputFieldContainer from "InputFieldContainer" /* 7243 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7356 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, content: { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" }, opener: null, openerWithClearButton: null, searchIcon: null, userPill: null, userPillText: null, clearButton: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
@@ -64,12 +64,12 @@ export default function SelectedUserField(onPress) {
     const obj6 = { style: tmp.userPill, children: null };
     const obj7 = { user: selectedUser, guildId: "Array", size: native.AvatarSizes.XSMALL_20 };
     const items2 = [hasOwnProperty(native.Avatar, obj7), ];
-    const obj8 = { variant: "text-md/medium", style: tmp.userPillText, children: UserUtilsDefault.getName(selectedUser) };
+    const obj8 = { variant: "body-md/medium", style: tmp.userPillText, children: UserUtilsDefault.getName(selectedUser) };
     items2[1] = hasOwnProperty(Text_Text.Text, obj8);
     obj6.children = items2;
     let tmp2Result1 = timestampProducer(React4, obj6);
   } else {
-    const obj9 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.userPillText, children: null };
+    const obj9 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.userPillText, children: null };
     const intl4 = util.intl;
     obj9.children = intl4.string(util.t.R0vK0N);
     tmp2Result1 = hasOwnProperty(Text_Text.Text, obj9);

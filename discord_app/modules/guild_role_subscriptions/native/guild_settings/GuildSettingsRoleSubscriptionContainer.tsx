@@ -1,11 +1,11 @@
-// === Module 20103: GuildSettingsRoleSubscriptionContainer ===
+// === Module 20219: GuildSettingsRoleSubscriptionContainer ===
 
-// Module 20103 (GuildSettingsRoleSubscriptionContainer)
-import ErrorBlockDefault from "ErrorBlock" /* 12698 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 17347 */;
-import WarningNoticeDefault from "WarningNotice" /* 20028 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 20078 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20095 */;
+// Module 20219 (GuildSettingsRoleSubscriptionContainer)
+import ErrorBlockDefault from "ErrorBlock" /* 12779 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 17438 */;
+import WarningNoticeDefault from "WarningNotice" /* 20144 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 20194 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20211 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
@@ -75,12 +75,12 @@ function GuildSettingsRoleSubscription(arg0) {
   if (obj.useGroupListingsFetchContext()) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { guildId };
-    items = [React5(ApplicationRejectedNotice, obj3), children];
+    items = [metroImportDefault(ApplicationRejectedNotice, obj3), children];
     obj2.children = items;
-    let tmp5 = React6(React4, obj2);
+    let tmp5 = React5(React4, obj2);
   } else {
-    const obj4 = { style: tmp.spinner, children: React5(React3, {}) };
-    tmp5 = React5(React4, obj4);
+    const obj4 = { style: tmp.spinner, children: metroImportDefault(React3, {}) };
+    tmp5 = metroImportDefault(React4, obj4);
   }
   return tmp5;
 }
@@ -88,7 +88,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
 const size = fn(2);
@@ -98,7 +98,7 @@ export default function GuildSettingsRoleSubscriptionContainer(guildId) {
   const obj = { guildId: guildId.guildId, refetchOnMount: true, children: null };
   const obj2 = { guildId: guildId.guildId, children: null };
   const merged = Object.assign(guildId);
-  obj2.children = React5(GuildSettingsRoleSubscription, {});
-  obj.children = React5(RoleSubscriptionSettingsDisabledContext.RoleSubscriptionSettingsDisabledContextProvider, obj2);
-  return React5(GroupListingsFetchContext.GroupListingsFetchContextProvider, obj);
+  obj2.children = metroImportDefault(GuildSettingsRoleSubscription, {});
+  obj.children = metroImportDefault(RoleSubscriptionSettingsDisabledContext.RoleSubscriptionSettingsDisabledContextProvider, obj2);
+  return metroImportDefault(GroupListingsFetchContext.GroupListingsFetchContextProvider, obj);
 };

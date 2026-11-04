@@ -1,8 +1,8 @@
-// === Module 12656: AppLauncherUserListActionSheet ===
+// === Module 12737: AppLauncherUserListActionSheet ===
 
-// Module 12656 (AppLauncherUserListActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import TableRow from "TableRow" /* 7101 */;
+// Module 12737 (AppLauncherUserListActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import TableRow from "TableRow" /* 7116 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
   };
   items = [onPressRow.query];
   obj.data = items;
-  return jsx(onPressRow(12635).AppLauncherList, {
+  return jsx(onPressRow(12716).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: null,
     renderItem(label) {

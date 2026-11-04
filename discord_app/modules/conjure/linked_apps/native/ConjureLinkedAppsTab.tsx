@@ -1,6 +1,6 @@
-// === Module 12298: ConjureLinkedAppsTab ===
+// === Module 12363: ConjureLinkedAppsTab ===
 
-// Module 12298 (ConjureLinkedAppsTab)
+// Module 12363 (ConjureLinkedAppsTab)
 import nativeDefault from "native" /* 575 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import noop from "module_19" /* 19 */;
@@ -33,7 +33,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
       const project_id = build.project_id;
       const name = tmp;
       let obj2 = {
-        content: closure_1_3(closure_1_1(12299), {
+        content: closure_1_3(closure_1_1(12364), {
           sheetKey,
           title: build[project_id],
           value: build.build,
@@ -52,23 +52,23 @@ export default function ConjureLinkedAppsTab(linkedApps) {
             obj2.onConfirm = function onConfirm() {
               return dependencyMap(closure_0);
             };
-            project_id(6084).showConfirmModal(obj2);
+            project_id(6099).showConfirmModal(obj2);
           }
         }),
         key: sheetKey,
         stackingBehavior: "stack"
       };
-      build(5381).showActionSheet(obj2);
+      build(5382).showActionSheet(obj2);
     };
     return closure_1_3(_undefined(_undefined2[10]).TableRow, obj, build.project_id);
   });
   items = [closure_3(require("TableRowGroup").TableRowGroup, obj2), ];
   let tmp5Result = null;
   if (linkedApps.failed) {
-    const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", accessibilityLiveRegion: "assertive", children: null };
+    const obj3 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", accessibilityLiveRegion: "assertive", children: null };
     let intl2 = tmp2(1113).intl;
     obj3.children = intl2.string(_modDef3995.dIEOrl);
-    tmp5Result = closure_3(tmp2(5747).Text, obj3);
+    tmp5Result = closure_3(tmp2(5761).Text, obj3);
   }
   items[1] = tmp5Result;
   obj.children = items;

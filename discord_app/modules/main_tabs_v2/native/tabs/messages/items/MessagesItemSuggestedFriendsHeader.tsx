@@ -1,19 +1,19 @@
-// === Module 18300: MessagesItemSuggestedFriendsHeader ===
+// === Module 18397: MessagesItemSuggestedFriendsHeader ===
 
-// Module 18300 (MessagesItemSuggestedFriendsHeader)
+// Module 18397 (MessagesItemSuggestedFriendsHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10866 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10914 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(5747).TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
+const sum = fn(5761).TextStyleSheet["body-md/semibold"].lineHeight + nativeDefault.space.PX_24;
 const createStyles = fn(5141);
 let obj = { headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" }, stickyOverlay: null, headerText: null };
 let obj3 = {};
@@ -61,14 +61,14 @@ export default noop.memo(function MessagesItemSuggestedFriendsHeader(stickyLeft)
     const obj5 = { style: tmp.stickyOverlay };
     items3[1] = hasOwnProperty(React4, obj5);
     obj3.children = items3;
-    tmp11Result = React5(timestampProducer, obj3);
+    tmp11Result = metroImportDefault(timestampProducer, obj3);
   }
   const items4 = [tmp11Result, ];
-  const obj6 = { style: tmp.headerText, maxFontSizeMultiplier: 2, lineClamp: 1, accessibilityRole: "header", variant: "text-md/semibold", color: "text-default", children: null };
+  const obj6 = { style: tmp.headerText, maxFontSizeMultiplier: 2, lineClamp: 1, accessibilityRole: "header", variant: "body-md/semibold", color: "text-default", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["1uAmCw"]);
   items4[1] = hasOwnProperty(Text_Text.Text, obj6);
   obj2.children = items4;
-  return React5(React4, obj2);
+  return metroImportDefault(React4, obj2);
 });
 export const MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT = sum;

@@ -1,14 +1,14 @@
-// === Module 17711: DiskUsageManager ===
+// === Module 17807: DiskUsageManager ===
 
-// Module 17711 (DiskUsageManager)
+// Module 17807 (DiskUsageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import NativeClientInfoModule from "NativeClientInfoModule" /* 1355 */;
-import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 10340 */;
-import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 17712 */;
+import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 10388 */;
+import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 17808 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
 function isStable() {
@@ -147,7 +147,7 @@ let closure_11 = async function _measureAndReportInstallSize() {
   }
 };
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, AppStates: metroRequire, DebugLogCategory: closure_7 } = Constants);
+({ AnalyticEvents: hasOwnProperty, AppStates: closure_6, DebugLogCategory: metroImportDefault } = Constants);
 let closure_8 = new LoggerDefault("DiskUsageManager");
 class DiskUsageManager extends tmp4 {
   constructor() {

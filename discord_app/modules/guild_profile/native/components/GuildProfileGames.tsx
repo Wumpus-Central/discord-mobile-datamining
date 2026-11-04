@@ -1,13 +1,13 @@
-// === Module 9443: GuildProfileGames ===
+// === Module 9461: GuildProfileGames ===
 
-// Module 9443 (GuildProfileGames)
+// Module 9461 (GuildProfileGames)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9444 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
-import components_GameIconDefault from "components/GameIcon" /* 14854 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9462 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9486 */;
+import components_GameIconDefault from "components/GameIcon" /* 14934 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,13 +34,13 @@ function ClickableGameIcon(game) {
 function FavoriteGame(activityLevel) {
   const game = activityLevel.game;
   const obj = { style: styles().favoriteGame, children: null };
-  items = [hasOwnProperty(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: game.name })];
+  items = [hasOwnProperty(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }), hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", children: game.name })];
   obj.children = items;
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.xs };
@@ -87,7 +87,7 @@ export default function GuildProfileGames(profile) {
         const obj4 = { style: closure_3.lastItemOverlay };
         items[1] = hasOwnProperty(View, obj4);
         const obj5 = { style: closure_3.lastItemText, children: null };
-        const obj6 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
+        const obj6 = { variant: "body-xs/medium", color: "text-overlay-light", children: null };
         const _HermesInternal = HermesInternal;
         obj6.children = "+" + arr.length;
         obj5.children = hasOwnProperty(Text_Text.Text, obj6);

@@ -1,9 +1,9 @@
-// === Module 16736: SettingTreeManager ===
+// === Module 16828: SettingTreeManager ===
 
-// Module 16736 (SettingTreeManager)
-import SettingRendererConstants from "SettingRendererConstants" /* 11678 */;
-import SettingHookHarness from "SettingHookHarness" /* 16580 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 16582 */;
+// Module 16828 (SettingTreeManager)
+import SettingRendererConstants from "SettingRendererConstants" /* 11729 */;
+import SettingHookHarness from "SettingHookHarness" /* 16671 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 16673 */;
 import size from "module_2" /* 2 */;
 
 const NodeType = SettingRendererConstants.NodeType;

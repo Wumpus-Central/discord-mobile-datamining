@@ -1,12 +1,12 @@
-// === Module 12171: StageSectionHeader ===
+// === Module 12230: StageSectionHeader ===
 
-// Module 12171 (StageSectionHeader)
+// Module 12230 (StageSectionHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import _modDef7442 from "module_7442" /* 7442 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import _modDef7458 from "module_7458" /* 7458 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
+({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, audience: null };
 let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -55,7 +55,7 @@ export default function StageSectionHeader(children) {
   const obj2 = { style: tmp.section, children: null };
   const obj3 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
   const animatedStyle = _mod1652.useAnimatedStyle(StageSectionHeaderTsx1);
-  const obj4 = { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
+  const obj4 = { variant: "body-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
   const items2 = [label, " \u2014 ", count];
   obj4.children = items2;
   const items3 = [hasOwnProperty(Text_Text.Text, obj4), , ];
@@ -67,7 +67,7 @@ export default function StageSectionHeader(children) {
   items3[1] = tmp8Result;
   const obj6 = { style: tmp.collapseButton, children: null };
   const obj7 = { style: animatedStyle, children: null };
-  obj7.children = timestampProducer(native.Icon, { source: _modDef7442, style: tmp.collapseIcon });
+  obj7.children = timestampProducer(native.Icon, { source: _modDef7458, style: tmp.collapseIcon });
   obj6.children = timestampProducer(_modDef1652.View, obj7);
   items3[2] = timestampProducer(React4, obj6);
   obj3.children = items3;

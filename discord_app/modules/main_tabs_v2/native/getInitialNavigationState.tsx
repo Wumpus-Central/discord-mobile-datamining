@@ -1,12 +1,12 @@
-// === Module 5323: getInitialNavigationState ===
+// === Module 5324: getInitialNavigationState ===
 
-// Module 5323 (getInitialNavigationState)
+// Module 5324 (getInitialNavigationState)
 import LoggerDefault from "Logger" /* 3 */;
 import router_utils from "router_utils" /* 1099 */;
 import matchPathCompat from "matchPathCompat" /* 5177 */;
 import RouteUtils from "RouteUtils" /* 5190 */;
-import useChatLayout from "useChatLayout" /* 5324 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5327 */;
+import useChatLayout from "useChatLayout" /* 5325 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DefaultRouteStore from "DefaultRouteStore" /* 5176 */;
@@ -76,7 +76,7 @@ function computeInitialNavigationStateWithoutLogging() {
     const RouteParam = RouteUtils.RouteParam;
     const obj3 = matchPathCompat;
     const RouteParam2 = RouteUtils.RouteParam;
-    obj4.path = React5.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
+    obj4.path = metroImportDefault.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
     const matchPathResult = obj3.matchPath(_location.pathname, obj4);
     const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
@@ -85,7 +85,7 @@ function computeInitialNavigationStateWithoutLogging() {
       const RouteParam3 = RouteUtils.RouteParam;
       const tmpResult = matchPathCompat;
       const RouteParam4 = RouteUtils.RouteParam;
-      obj6.path = React5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
+      obj6.path = metroImportDefault.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
       let matchPathResult1 = tmpResult.matchPath(DefaultRouteStore.lastNonVoiceRoute, obj6);
       let flag = false;
       const guildIdResult1 = RouteParam3.guildId();
@@ -146,7 +146,7 @@ function computeInitialNavigationStateWithoutLogging() {
   }
 }
 const Constants = fn(1072);
-({ ME: metroRequire, Routes: closure_7 } = Constants);
+({ ME: closure_6, Routes: metroImportDefault } = Constants);
 const logger = new LoggerDefault("getInitialNavigationState");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/getInitialNavigationState.tsx");

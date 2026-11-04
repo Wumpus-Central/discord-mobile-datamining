@@ -1,19 +1,19 @@
-// === Module 9593: WishlistNUXAddedItemActionSheet ===
+// === Module 9612: WishlistNUXAddedItemActionSheet ===
 
-// Module 9593 (WishlistNUXAddedItemActionSheet)
+// Module 9612 (WishlistNUXAddedItemActionSheet)
 import nativeDefault from "native" /* 575 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import SKUPreview from "SKUPreview" /* 9594 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import SKUPreview from "SKUPreview" /* 9613 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const UserProfileSections = fn(8878).UserProfileSections;
+const UserProfileSections = fn(8895).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -67,7 +67,7 @@ export default function WishlistNUXAddedItemActionSheet(product) {
     let tmp2 = null;
     if (null != memo) {
       const obj = { collectiblesItemData: tmp };
-      tmp2 = React6(SKUPreview.CollectiblesPreview, obj);
+      tmp2 = React5(SKUPreview.CollectiblesPreview, obj);
     }
     return tmp2;
   }, items3);
@@ -79,7 +79,7 @@ export default function WishlistNUXAddedItemActionSheet(product) {
   const intl = require("util").intl;
   obj5.children = intl.string(require("util").t["3T2jbf"]);
   const items5 = [closure_8(require("Text/Text").Text, obj5), ];
-  const obj6 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
+  const obj6 = { variant: "body-md/normal", color: "text-default", style: tmp.subtitle, children: null };
   const intl2 = require("util").intl;
   obj6.children = intl2.string(require("util").t.SXb73A);
   items5[1] = closure_8(require("Text/Text").Text, obj6);

@@ -1,8 +1,8 @@
-// === Module 15305: InAppReportsBreadCrumbs ===
+// === Module 15392: InAppReportsBreadCrumbs ===
 
-// Module 15305 (InAppReportsBreadCrumbs)
+// Module 15392 (InAppReportsBreadCrumbs)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -58,7 +58,7 @@ export default function Breadcrumbs(element) {
       } else {
         let obj2 = { style: tmp2.container, children: null };
         let map = require("Text/Text").Text;
-        let obj4 = { style: tmp2.title, accessibilityRole: "header", variant: "text-xs/semibold", children: null };
+        let obj4 = { style: tmp2.title, accessibilityRole: "header", variant: "body-xs/semibold", children: null };
         const REPORT_TO_MOD = require("ReportMenuType").ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(element.menuName);
         const intl = require("util").intl;
@@ -80,7 +80,7 @@ export default function Breadcrumbs(element) {
             const obj2 = { style: closure_0.breadCrumbBar };
             tmp4 = React4(View, obj2);
           }
-          items = [tmp4, React4(View, { style: closure_0.breadCrumbDot }), React4(Text_Text.Text, { lineClamp: 2, ellipsizeMode: "tail", style: closure_0.breadCrumbText, variant: "text-md/medium", children })];
+          items = [tmp4, React4(View, { style: closure_0.breadCrumbDot }), React4(Text_Text.Text, { lineClamp: 2, ellipsizeMode: "tail", style: closure_0.breadCrumbText, variant: "body-md/medium", children })];
           obj.children = items;
           return hasOwnProperty(View, obj, "" + children + "+" + arg1);
         });

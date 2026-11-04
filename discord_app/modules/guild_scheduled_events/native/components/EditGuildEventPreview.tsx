@@ -1,13 +1,13 @@
-// === Module 9211: EditGuildEventPreview ===
+// === Module 9228: EditGuildEventPreview ===
 
-// Module 9211 (EditGuildEventPreview)
+// Module 9228 (EditGuildEventPreview)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9096 */;
-import ScheduleUtils from "ScheduleUtils" /* 9097 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 9214 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9113 */;
+import ScheduleUtils from "ScheduleUtils" /* 9114 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 9231 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
@@ -21,7 +21,7 @@ function PreviewBody(event) {
   items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
-  const tmp6 = channel_id(5772)(stateFromStores);
+  const tmp6 = channel_id(5786)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -38,13 +38,13 @@ function PreviewBody(event) {
   const intl = tmp2(1113).intl;
   obj4.children = intl.string(require("util").t.yBsFE3);
   const items2 = [closure_6(require("Text/Text").Text, obj4), ];
-  const obj5 = { style: tmp.headerSubtitle, accessibilityLabel: null, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.headerSubtitle, accessibilityLabel: null, variant: "body-sm/medium", color: "text-default", children: null };
   let formatToPlainStringResult;
   if (null != stateFromStores) {
     const intl2 = tmp2(1113).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(9213)(obj7);
+    obj6.channelName = tmp5(9230)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1113).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;
@@ -71,13 +71,13 @@ function PreviewBody(event) {
             tmp11 = result;
           }
           const obj3 = { children: null };
-          items[1] = timestampProducer(Text_Text.Text, { accessibilityElementsHidden: true, importantForAccessibility: "no", variant: "text-sm/medium", color: "text-default", children: tmp11 });
+          items[1] = timestampProducer(Text_Text.Text, { accessibilityElementsHidden: true, importantForAccessibility: "no", variant: "body-sm/medium", color: "text-default", children: tmp11 });
           obj3.children = items;
           let str = locationFromEvent;
           if (locationFromEvent == null) {
             str = "preview-body";
           }
-          return React5(noop.Fragment, obj3, str);
+          return metroImportDefault(noop.Fragment, obj3, str);
         }
     };
     let formatResult = intl4.format(tmp2(1113).t.f55NX0, obj8);
@@ -92,7 +92,7 @@ function PreviewBody(event) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" }, centered: { flexDirection: "column", alignItems: "center", justifyContent: "center" }, centerContainer: { flexGrow: 0, width: "100%" }, flex: { flex: 1, overflow: "visible" }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, eventContainer: null, channelContainer: null, channelIcon: null, buttonContainer: null, error: null };
 let obj3 = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" };

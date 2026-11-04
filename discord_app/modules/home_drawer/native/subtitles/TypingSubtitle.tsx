@@ -1,10 +1,10 @@
-// === Module 18545: TypingSubtitle ===
+// === Module 18640: TypingSubtitle ===
 
-// Module 18545 (TypingSubtitle)
-import Text_Text from "Text/Text" /* 5747 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
-import TextIcon from "TextIcon" /* 8776 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 18544 */;
+// Module 18640 (TypingSubtitle)
+import Text_Text from "Text/Text" /* 5761 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
+import TextIcon from "TextIcon" /* 8793 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 18639 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,10 +33,10 @@ export default function TypingSubtitle(arg0) {
     tmp7 = React3(channelIconComponentWithGuild, obj3);
   }
   items = [tmp7, ];
-  const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
+  const obj4 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
   let tmp5Result = null;
   if (null != channelName) {
-    const obj5 = { variant: "text-xs/medium", children: null };
+    const obj5 = { variant: "body-xs/medium", children: null };
     const items1 = [channelName, "  \u00B7  "];
     obj5.children = items1;
     tmp5Result = React4(Text_Text.Text, obj5);

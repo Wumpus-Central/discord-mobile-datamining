@@ -1,6 +1,6 @@
-// === Module 17070: BountiesModalTransitionsRefactorExperiment ===
+// === Module 17162: BountiesModalTransitionsRefactorExperiment ===
 
-// Module 17070 (BountiesModalTransitionsRefactorExperiment)
+// Module 17162 (BountiesModalTransitionsRefactorExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

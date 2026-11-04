@@ -1,13 +1,13 @@
-// === Module 17434: SettingsAppearanceGradientBackground ===
+// === Module 17525: SettingsAppearanceGradientBackground ===
 
-// Module 17434 (SettingsAppearanceGradientBackground)
+// Module 17525 (SettingsAppearanceGradientBackground)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import timingPresets from "timingPresets" /* 5380 */;
-import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 17435 */;
-import getGradientStartPontDefault from "getGradientStartPont" /* 17436 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import timingPresets from "timingPresets" /* 5381 */;
+import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 17526 */;
+import getGradientStartPontDefault from "getGradientStartPont" /* 17527 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17408 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17499 */;
 import module_1652_mod from "module_1652" /* 1652 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ if (num == null) {
   num = 0;
 }
 let module_1652 = module_1652_mod;
-let closure_7 = module_1652.createAnimatedComponent(fn(5710).LinearGradientNativeComponent);
+let closure_7 = module_1652.createAnimatedComponent(fn(5723).LinearGradientNativeComponent);
 let obj = { colors: null, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
 let items = [num, num];
 obj.colors = items;

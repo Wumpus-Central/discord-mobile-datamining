@@ -1,13 +1,13 @@
-// === Module 7426: Badge ===
+// === Module 7442: Badge ===
 
-// Module 7426 (Badge)
+// Module 7442 (Badge)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import BadgeShared from "BadgeShared" /* 7427 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import BadgeShared from "BadgeShared" /* 7443 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;

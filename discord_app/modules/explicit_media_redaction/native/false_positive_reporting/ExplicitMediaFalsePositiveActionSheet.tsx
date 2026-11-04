@@ -1,15 +1,15 @@
-// === Module 13445: ExplicitMediaFalsePositiveActionSheet ===
+// === Module 13529: ExplicitMediaFalsePositiveActionSheet ===
 
-// Module 13445 (ExplicitMediaFalsePositiveActionSheet)
+// Module 13529 (ExplicitMediaFalsePositiveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8811 */;
-import media_playback_VideoDefault from "media_playback/Video" /* 8998 */;
-import ShieldIcon from "ShieldIcon" /* 11418 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8828 */;
+import media_playback_VideoDefault from "media_playback/Video" /* 9015 */;
+import ShieldIcon from "ShieldIcon" /* 11468 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,7 +67,7 @@ function ExplicitMediaFalsePositivePreview(url) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { content: { padding: nativeDefault.space.PX_16 }, contentContainer: { justifyContent: "center", textAlign: "center", alignItems: "center" }, heading: null, mediaContainer: null, elevationShadow: null, image: null, media: null, footer: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
@@ -128,7 +128,7 @@ export function ExplicitMediaFalsePositiveActionSheet(channelId) {
   const intl = channelId(onConfirmPress[11]).intl;
   obj2.children = intl.string(channelId(onConfirmPress[11]).t.TPpVkI);
   const items3 = [closure_6(channelId(onConfirmPress[16]).Text, obj2), , , ];
-  const obj3 = { variant: "text-sm/normal", children: null };
+  const obj3 = { variant: "body-sm/normal", children: null };
   const intl2 = channelId(onConfirmPress[11]).intl;
   obj3.children = intl2.string(channelId(onConfirmPress[11]).t["z4du/I"]);
   items3[1] = closure_6(channelId(onConfirmPress[16]).Text, obj3);

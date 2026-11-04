@@ -1,9 +1,9 @@
-// === Module 18199: useChannelScreensFromNavigation ===
+// === Module 18296: useChannelScreensFromNavigation ===
 
-// Module 18199 (useChannelScreensFromNavigation)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import useChatLayoutDefault from "useChatLayout" /* 5324 */;
+// Module 18296 (useChannelScreensFromNavigation)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import useChatLayoutDefault from "useChatLayout" /* 5325 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -220,7 +220,7 @@ export default function useChannelScreensFromNavigation(arg0) {
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(5324).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(5325).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {

@@ -1,13 +1,13 @@
-// === Module 17730: DevToolsLocalMessageCache ===
+// === Module 17826: DevToolsLocalMessageCache ===
 
-// Module 17730 (DevToolsLocalMessageCache)
+// Module 17826 (DevToolsLocalMessageCache)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 7791 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 7807 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
@@ -61,7 +61,7 @@ function CacheLogEntry(entry) {
   return hasOwnProperty(TableRow.TableRow, obj);
 }
 const ScrollView = _mod17.ScrollView;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: null };
 let obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -81,7 +81,7 @@ export default function DevToolsLocalMessageCache() {
   const obj6 = { label: "Cache Misses", subLabel: MessageCacheStatsDefault.channelsFetchedNetwork.size - MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size };
   items[3] = hasOwnProperty(TableRow.TableRow, { label: "Incomplete Fetches", subLabel: MessageCacheStatsDefault.channelsFetchStarted.size - MessageCacheStatsDefault.channelsFetchedNetwork.size });
   obj3.children = items;
-  const items1 = [timestampProducer(TableRowGroup.TableRowGroup, obj3), hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: "Cumulative since app launch. Does not update dynamically." }), ];
+  const items1 = [timestampProducer(TableRowGroup.TableRowGroup, obj3), hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-muted", children: "Cumulative since app launch. Does not update dynamically." }), ];
   const obj8 = { title: "Fetch Log (Reversed)", hasIcons: false, children: null };
   const fetchLogs = MessageCacheStatsDefault.fetchLogs;
   const obj7 = { label: "Incomplete Fetches", subLabel: MessageCacheStatsDefault.channelsFetchStarted.size - MessageCacheStatsDefault.channelsFetchedNetwork.size };

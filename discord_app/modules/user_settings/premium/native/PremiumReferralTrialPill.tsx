@@ -1,11 +1,11 @@
-// === Module 15426: PremiumReferralTrialPill ===
+// === Module 15513: PremiumReferralTrialPill ===
 
-// Module 15426 (PremiumReferralTrialPill)
+// Module 15513 (PremiumReferralTrialPill)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
@@ -19,10 +19,10 @@ export (hasExtraMargin) => {
   const tmp = closure_4();
   const obj = { style: hasExtraMargin.hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent, children: null };
   const obj2 = { style: tmp.pillContainer, children: null };
-  const obj3 = { variant: "text-xs/semibold", style: tmp.text, children: null };
+  const obj3 = { variant: "body-xs/semibold", style: tmp.text, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.Y1q7js).toUpperCase();
-  obj2.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: tmp.text, children: null });
+  obj2.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", style: tmp.text, children: null });
   obj.children = <View style={tmp.pillContainer}>{null}</View>;
   return <View style={hasExtraMargin.hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent}>{null}</View>;
 }

@@ -1,19 +1,19 @@
-// === Module 9343: SegmentedControlItem ===
+// === Module 9360: SegmentedControlItem ===
 
-// Module 9343 (SegmentedControlItem)
+// Module 9360 (SegmentedControlItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 8965 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 8982 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
@@ -82,7 +82,7 @@ export function SegmentedControlItem(index) {
   obj3.accessibilityHint = formatToPlainStringResult;
   const obj5 = { style: tmp.label, children: null };
   const items3 = [icon, ];
-  const obj6 = { animated: true, variant: "text-sm/semibold", style: animatedStyle, lineClamp: 1, maxFontSizeMultiplier: null, children: null };
+  const obj6 = { animated: true, variant: "body-sm/semibold", style: animatedStyle, lineClamp: 1, maxFontSizeMultiplier: null, children: null };
   let num2;
   if ("experimental_Large" === variant) {
     num2 = 1.5;

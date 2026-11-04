@@ -179,7 +179,7 @@ let closure_21 = async function _getEmojiColors() {
   return value;
 };
 const ChannelRecord = fn(4994);
-({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: metroRequire } = ChannelRecord);
+({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: closure_6 } = ChannelRecord);
 const Permissions = fn(1072).Permissions;
 const EmojiConstants = fn(1388);
 ({ EMOJI_MAX_FILESIZE: closure_10, EMOJI_MAX_LENGTH: closure_11, EMOJI_RE: closure_12, EmojiDisabledReasons } = EmojiConstants);

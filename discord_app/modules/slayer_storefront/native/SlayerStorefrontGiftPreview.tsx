@@ -1,10 +1,10 @@
-// === Module 11528: SlayerStorefrontGiftPreview ===
+// === Module 11578: SlayerStorefrontGiftPreview ===
 
-// Module 11528 (SlayerStorefrontGiftPreview)
+// Module 11578 (SlayerStorefrontGiftPreview)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9649 */;
-import InfoBox from "InfoBox" /* 11529 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9668 */;
+import InfoBox from "InfoBox" /* 11579 */;
 import noop from "module_19" /* 19 */;
 
 const InfoBoxDefault = InfoBox;
@@ -68,7 +68,7 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { sku };
     items = [React4(SlayerStorefrontItemCardDefault, obj2), , ];
-    const obj3 = { variant: "heading-md/medium", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+    const obj3 = { variant: "heading-sm/medium", color: "mobile-text-heading-primary", style: tmp.text, children: null };
     const intl = util.intl;
     const obj4 = { sender, skuName: sku.name, applicationName: null };
     let name;

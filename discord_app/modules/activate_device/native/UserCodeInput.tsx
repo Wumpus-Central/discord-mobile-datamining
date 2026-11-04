@@ -1,20 +1,20 @@
-// === Module 15852: UserCodeInput ===
+// === Module 15940: UserCodeInput ===
 
-// Module 15852 (UserCodeInput)
+// Module 15940 (UserCodeInput)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import TextInput from "TextInput" /* 7208 */;
-import useUserCodeSubmit from "useUserCodeSubmit" /* 15854 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 15855 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import TextInput from "TextInput" /* 7223 */;
+import useUserCodeSubmit from "useUserCodeSubmit" /* 15942 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 15943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const OAuthConstants = fn(15853).OAuthConstants;
+const OAuthConstants = fn(15941).OAuthConstants;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
@@ -37,13 +37,13 @@ export function UserCodeInput(prefilledUserCode) {
   const obj4 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.KYPNUv);
-  items = [React5(Text_Text.Text, obj4), ];
-  const obj5 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
+  items = [metroImportDefault(Text_Text.Text, obj4), ];
+  const obj5 = { variant: "body-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.xRHk7f);
-  items[1] = React5(Text_Text.Text, obj5);
+  items[1] = metroImportDefault(Text_Text.Text, obj5);
   obj3.children = items;
-  const items1 = [React6(View, obj3), , ];
+  const items1 = [React5(View, obj3), , ];
   const obj6 = {
     onChange(arg0) {
       return _undefined(arg0);
@@ -58,14 +58,14 @@ export function UserCodeInput(prefilledUserCode) {
   const intl3 = util.intl;
   obj6.placeholder = intl3.formatToPlainString(util.t["0tbz6x"], { number: OAuthConstants.USER_CODE_LENGTH });
   obj6.errorMessage = error;
-  items1[1] = React5(TextInput.TextInput, obj6);
+  items1[1] = metroImportDefault(TextInput.TextInput, obj6);
   const obj8 = { size: "lg", text: null, onPress: null, loading: null, disabled: null, grow: true };
   const intl4 = util.intl;
   obj8.text = intl4.string(util.t["3PatSz"]);
   obj8.onPress = manualSubmit;
   obj8.loading = submitting;
   obj8.disabled = arr.length !== OAuthConstants.USER_CODE_LENGTH;
-  items1[2] = React5(components_Button_Button.Button, obj8);
+  items1[2] = metroImportDefault(components_Button_Button.Button, obj8);
   obj2.children = items1;
-  return React6(React7, obj2);
+  return React5(React6, obj2);
 }

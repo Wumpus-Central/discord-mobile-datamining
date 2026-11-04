@@ -1,14 +1,14 @@
-// === Module 19809: GuildSettingsRoleSubscriptionsSection ===
+// === Module 19925: GuildSettingsRoleSubscriptionsSection ===
 
-// Module 19809 (GuildSettingsRoleSubscriptionsSection)
+// Module 19925 (GuildSettingsRoleSubscriptionsSection)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import TagsIcon from "TagsIcon" /* 11274 */;
-import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17517 */;
-import WalletIcon from "WalletIcon" /* 19810 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import TagsIcon from "TagsIcon" /* 11324 */;
+import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17607 */;
+import WalletIcon from "WalletIcon" /* 19926 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -65,7 +65,7 @@ const isGuildOwner = fn(5008).isGuildOwner;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsSection.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 17673: IcymiTabSetting ===
+// === Module 17769: IcymiTabSetting ===
 
-// Module 17673 (IcymiTabSetting)
+// Module 17769 (IcymiTabSetting)
 import util from "util" /* 1113 */;
-import SettingsConstants from "SettingsConstants" /* 8556 */;
-import useLabFeatureDefault from "useLabFeature" /* 8688 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9048 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 9049 */;
-import LabFeatureActions from "LabFeatureActions" /* 17674 */;
-import SettingBuilders from "SettingBuilders" /* 11677 */;
+import SettingsConstants from "SettingsConstants" /* 8573 */;
+import useLabFeatureDefault from "useLabFeature" /* 8705 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9065 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 9066 */;
+import LabFeatureActions from "LabFeatureActions" /* 17770 */;
+import SettingBuilders from "SettingBuilders" /* 11728 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
@@ -30,9 +30,8 @@ const toggle = SettingBuilders.createToggle({
     LabFeatureActions.toggleLabFeature(ICYMIExperiment.ICYMI_LAB_FEATURE, { enabled });
     const obj2 = { enabled };
   },
-  usePredicate: function useICYMIPredicate() {
-    const ICYMIStaffOnlyExperiment = ICYMIExperiment.ICYMIStaffOnlyExperiment;
-    return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
+  usePredicate: function useLegacyICYMITabSettingVisible() {
+    return false;
   }
 });
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/IcymiTabSetting.tsx");

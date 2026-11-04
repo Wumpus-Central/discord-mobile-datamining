@@ -1,9 +1,9 @@
-// === Module 13787: CheckpointStatsIntroScreen ===
+// === Module 13873: CheckpointStatsIntroScreen ===
 
-// Module 13787 (CheckpointStatsIntroScreen)
+// Module 13873 (CheckpointStatsIntroScreen)
 import nativeDefault from "native" /* 575 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13777 */;
-import CheckpointTextDefault from "CheckpointText" /* 13779 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13863 */;
+import CheckpointTextDefault from "CheckpointText" /* 13865 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -26,7 +26,7 @@ export default function CheckpointStatsIntroScreen(title) {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.title, children: null };
   items = [icon, ];
-  const obj4 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
+  const obj4 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const tmp2 = CheckpointScreenDefault;
   obj4.children = title.toLocaleUpperCase();
   items[1] = React3(CheckpointTextDefault, obj4);

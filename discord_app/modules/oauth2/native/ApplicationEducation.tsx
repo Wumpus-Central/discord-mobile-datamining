@@ -1,16 +1,16 @@
-// === Module 14744: ApplicationEducation ===
+// === Module 14824: ApplicationEducation ===
 
-// Module 14744 (ApplicationEducation)
+// Module 14824 (ApplicationEducation)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FriendsIcon from "FriendsIcon" /* 5835 */;
-import SettingsIcon from "SettingsIcon" /* 7685 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
-import GameControllerIcon from "GameControllerIcon" /* 9859 */;
-import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9880 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 14745 */;
-import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 14747 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FriendsIcon from "FriendsIcon" /* 5849 */;
+import SettingsIcon from "SettingsIcon" /* 7701 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9051 */;
+import GameControllerIcon from "GameControllerIcon" /* 9877 */;
+import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9898 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 14825 */;
+import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 14827 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,14 +23,14 @@ function ApplicationEducationEntry(children) {
     const obj2 = { style: tmp.entryIcon };
     iconComponentResult = iconComponent(obj2);
   }
-  items = [iconComponentResult, hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", style: tmp.entryText, children: children.text })];
+  items = [iconComponentResult, hasOwnProperty(Text_Text.Text, { variant: "body-md/normal", style: tmp.entryText, children: children.text })];
   obj.children = items;
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
 const MAX_FRIENDS = fn(1072).MAX_FRIENDS;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { applicationEducation: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 12 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 20, height: 20, tintColor: nativeDefault.colors.TEXT_MUTED };
@@ -145,7 +145,7 @@ export default function ApplicationEducation(arg0) {
       if (null != arr2) {
         tmp27 = null;
         if (arr2.length > 0) {
-          const obj15 = { variant: "text-sm/normal", color: "text-default", children: arr2 };
+          const obj15 = { variant: "body-sm/normal", color: "text-default", children: arr2 };
           tmp27 = hasOwnProperty(Text_Text.Text, obj15);
         }
       }
@@ -154,7 +154,7 @@ export default function ApplicationEducation(arg0) {
       obj14.children = items1;
       const items2 = [timestampProducer(View, obj14), hasOwnProperty(AuthorizeFormSeparator.AuthorizeFormSeparator, {})];
       obj16.children = items2;
-      tmp30Result = timestampProducer(React5, obj16);
+      tmp30Result = timestampProducer(metroImportDefault, obj16);
     }
     return tmp30Result;
   }

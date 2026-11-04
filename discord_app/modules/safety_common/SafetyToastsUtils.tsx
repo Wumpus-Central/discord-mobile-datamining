@@ -1,16 +1,16 @@
-// === Module 7619: SafetyToastsUtils ===
+// === Module 7635: SafetyToastsUtils ===
 
-// Module 7619 (SafetyToastsUtils)
+// Module 7635 (SafetyToastsUtils)
 import util from "util" /* 1113 */;
 import _modDef2801 from "module_2801" /* 2801 */;
 import _modDef3223 from "module_3223" /* 3223 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const SafetyToastType = fn(7614).SafetyToastType;
+const SafetyToastType = fn(7630).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
 
@@ -58,7 +58,7 @@ export function getSafetyToastTypeContent(BLOCK_SUCCESS, id, channelId) {
     const intl12 = util.intl;
     const obj8 = { username: name };
     return intl12.formatToPlainString(util.t.FOptFU, obj8);
-  } else if (SafetyToastType.TIGGER_PAWTECT_ERROR === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.AGE_VERIFICATION_ERROR === BLOCK_SUCCESS) {
     const intl11 = util.intl;
     return intl11.string(util.t.c6kn6F);
   } else if (SafetyToastType.AGE_VERIFICATION_FAE_FAILED === BLOCK_SUCCESS) {
@@ -70,7 +70,7 @@ export function getSafetyToastTypeContent(BLOCK_SUCCESS, id, channelId) {
   } else if (SafetyToastType.AGE_VERIFICATION_UNDERAGE === BLOCK_SUCCESS) {
     const intl8 = util.intl;
     return intl8.string(_modDef3223.XBGt7g);
-  } else if (SafetyToastType.TIGGER_PAWTECT_VERIFIED === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.AGE_VERIFICATION_VERIFIED === BLOCK_SUCCESS) {
     const intl7 = util.intl;
     return intl7.string(util.t["7nKAXx"]);
   } else if (SafetyToastType.GENERIC_ERROR === BLOCK_SUCCESS) {

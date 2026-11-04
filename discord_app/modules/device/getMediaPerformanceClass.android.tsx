@@ -1,6 +1,6 @@
-// === Module 6010: getMediaPerformanceClass ===
+// === Module 6025: getMediaPerformanceClass ===
 
-// Module 6010 (getMediaPerformanceClass)
+// Module 6025 (getMediaPerformanceClass)
 import DeviceUtils from "DeviceUtils" /* 5098 */;
 import size from "module_2" /* 2 */;
 

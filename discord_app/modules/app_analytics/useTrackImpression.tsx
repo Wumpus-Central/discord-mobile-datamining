@@ -1,12 +1,12 @@
-// === Module 6148: useTrackImpression ===
+// === Module 6163: useTrackImpression ===
 
-// Module 6148 (useTrackImpression)
+// Module 6163 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtils2 from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
-import uniqueIdDefault from "uniqueId" /* 6149 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
+import uniqueIdDefault from "uniqueId" /* 6164 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
@@ -29,7 +29,7 @@ function trackImpression(type) {
     }
   }
   if (!flag2) {
-    React5(type);
+    metroImportDefault(type);
   }
   let guild_id;
   if (properties != null) {
@@ -53,20 +53,20 @@ function trackImpression(type) {
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj2);
   if (flag) {
-    React7(null, null);
+    React6(null, null);
   } else {
     if (tmp15) {
       AnalyticsUtils2.debugLogEvent(name, result);
       closure_12(name, result);
       const tmpResult6 = AnalyticsUtils2;
     }
-    React7(name, result);
+    React6(name, result);
     tmp15 = null != name && null != type;
   }
   const tmpResult5 = AppAnalyticsUtils;
 }
 const ImpressionStore = fn(1253);
-({ setCurrentImpression: closure_7, cleanupImpression: closure_8, setDebugTrackedData: closure_9, getLocation: closure_10, getImpressionStack: closure_11 } = ImpressionStore);
+({ setCurrentImpression: metroImportDefault, cleanupImpression: closure_8, setDebugTrackedData: closure_9, getLocation: closure_10, getImpressionStack: closure_11 } = ImpressionStore);
 const AnalyticsUtils = fn(1260);
 let closure_12 = AnalyticsUtils.trackMaker({ analyticEventConfigs: fn(1252).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 const size = fn(2);
@@ -81,7 +81,7 @@ export default function useTrackImpression(current, arg1) {
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5716)(() => {
+  obj(5729)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = _modDef1342(ref.current, current);
       if (!tmp6) {

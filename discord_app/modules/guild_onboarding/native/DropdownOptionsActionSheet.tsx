@@ -1,18 +1,18 @@
-// === Module 7425: DropdownOptionsActionSheet ===
+// === Module 7441: DropdownOptionsActionSheet ===
 
-// Module 7425 (DropdownOptionsActionSheet)
+// Module 7441 (DropdownOptionsActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import BottomSheetModal from "BottomSheetModal" /* 5398 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import BottomSheetModal from "BottomSheetModal" /* 5400 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7388 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7404 */;
 
 require = fn;
 function DropdownOptionRow(option) {
@@ -89,7 +89,7 @@ function DropdownOptionRow(option) {
     }
   }
   const obj7 = { style: tmp.labelRow, children: null };
-  const items2 = [closure_8(option(selected[11]).Text, { variant: "text-md/normal", children: option.title }), trailing];
+  const items2 = [closure_8(option(selected[11]).Text, { variant: "body-md/normal", children: option.title }), trailing];
   obj7.children = items2;
   const label = closure_9(View, obj7);
   return closure_8(onSelect(selected[12]), { label, selected, leading, trailing, onPress });
@@ -124,7 +124,7 @@ export default function DropdownOptionsActionSheet(arg0) {
     const intl2 = util.intl;
     obj7.accessibilityLabel = intl2.string(util.t.E2ICbC);
     const options = stateFromStores.options;
-    obj7.children = options.map((option) => React6(DropdownOptionRow, { option, responses, onSelect, canBeNew: Boolean(dependencyMap) }, option.id));
+    obj7.children = options.map((option) => React5(DropdownOptionRow, { option, responses, onSelect, canBeNew: Boolean(dependencyMap) }, option.id));
     const items2 = [closure_8(native.CardSection, obj7), ];
     const obj8 = { style: tmp.closeButtonWrapper, children: null };
     const obj9 = { onPress: tmp5, text: null, grow: true };

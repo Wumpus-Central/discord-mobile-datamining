@@ -1,6 +1,6 @@
-// === Module 19322: useTransitionToConnectedActivityInVoice ===
+// === Module 19426: useTransitionToConnectedActivityInVoice ===
 
-// Module 19322 (useTransitionToConnectedActivityInVoice)
+// Module 19426 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -78,12 +78,12 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                 } else {
                   embeddedActivityLocationChannelId = handler(5062).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(5798)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(5812)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(11887)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(11946)(obj5), done: false };
                         return obj6;
                       }
                     }
@@ -107,7 +107,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(11835)(closure_1_3, _location);
+                closure_3_1(11894)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

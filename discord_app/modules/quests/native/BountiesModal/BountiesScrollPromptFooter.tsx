@@ -1,14 +1,14 @@
-// === Module 17069: BountiesScrollPromptFooter ===
+// === Module 17161: BountiesScrollPromptFooter ===
 
-// Module 17069 (BountiesScrollPromptFooter)
+// Module 17161 (BountiesScrollPromptFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import timingPresets from "timingPresets" /* 5380 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10091 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 17070 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 17071 */;
+import timingPresets from "timingPresets" /* 5381 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10139 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 17162 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 17163 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -43,7 +43,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj3.children = closure_7(zIndex(5272).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
+  obj3.children = closure_7(zIndex(5273).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
   const items5 = [closure_7(_modDef1652.View, obj3), ];
   const obj4 = { style: null, onLayout: onContentLayout, children };
   const items6 = [tmp.content, memo1, opacityStyle];
@@ -53,9 +53,9 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(_modDef1652.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6916).QuestsExperimentLocations;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { root: { position: "absolute", bottom: 0, left: 0, right: 0 }, content: { flex: 1, minHeight: 97, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, gradient: null };
@@ -63,7 +63,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj.gradient = {};
   return obj;
 });
-let items = [{ code: "(function BountiesScrollPromptFooterTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5377).withTiming, fn(5380).timingStandard];
+let items = [{ code: "(function BountiesScrollPromptFooterTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5378).withTiming, fn(5381).timingStandard];
 let closure_129_0;
 let closure_129_1;
 [tmp3, tmp4, tmp5] = items;
@@ -77,7 +77,7 @@ let items1 = [tmp4, tmp5];
 BountiesScrollPromptFooterTsx1.__closure = items1;
 BountiesScrollPromptFooterTsx1.__workletHash = 6190498486460;
 BountiesScrollPromptFooterTsx1.__initData = tmp3;
-let items2 = [{ code: "(function BountiesScrollPromptFooterTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})" }, fn(5377).withTiming, fn(5380).timingStandard];
+let items2 = [{ code: "(function BountiesScrollPromptFooterTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})" }, fn(5378).withTiming, fn(5381).timingStandard];
 let closure_130_0;
 let closure_130_1;
 [tmp6, tmp7, tmp8] = items2;
@@ -119,12 +119,12 @@ export default function BountiesScrollPromptFooter(visible) {
     obj5.entering = BountiesScrollPromptFooterTsx1;
     obj5.exiting = BountiesScrollPromptFooterTsx2;
     obj5.renderItem = callback;
-    shouldRender = React5(AnimatedEnterExitItemDefault, obj5);
+    shouldRender = metroImportDefault(AnimatedEnterExitItemDefault, obj5);
   } else if (shouldRender) {
     const obj6 = {};
     const merged1 = Object.assign(merged);
     obj6.visibilityOpacityStyle = tmp7;
-    shouldRender = React5(BountiesScrollPromptFooterContent, obj6);
+    shouldRender = metroImportDefault(BountiesScrollPromptFooterContent, obj6);
   }
   return shouldRender;
 };

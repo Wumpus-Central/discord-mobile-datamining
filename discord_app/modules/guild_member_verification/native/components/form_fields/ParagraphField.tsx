@@ -1,14 +1,14 @@
-// === Module 7372: ParagraphField ===
+// === Module 7388: ParagraphField ===
 
-// Module 7372 (ParagraphField)
+// Module 7388 (ParagraphField)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TextArea from "TextArea" /* 7373 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TextArea from "TextArea" /* 7389 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const maxLength = fn(7066).MAX_PARAGRAPH_RESPONSE_LENGTH;
+const maxLength = fn(7081).MAX_PARAGRAPH_RESPONSE_LENGTH;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
@@ -19,7 +19,7 @@ export default function ParagraphField(field) {
   field = field.field;
   let str = field.response;
   const obj = { style: closure_5().container, children: null };
-  const obj2 = { label: jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength, value: null, placeholder: null, onChange: null };
+  const obj2 = { label: jsx(Text_Text.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength, value: null, placeholder: null, onChange: null };
   if (str == null) {
     str = "";
   }
@@ -27,6 +27,6 @@ export default function ParagraphField(field) {
   const intl = util.intl;
   obj2.placeholder = intl.string(util.t["Sqn+Wh"]);
   obj2.onChange = field.onChange;
-  obj.children = jsx(TextArea.TextArea, { label: jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength, value: null, placeholder: null, onChange: null });
+  obj.children = jsx(TextArea.TextArea, { label: jsx(Text_Text.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength, value: null, placeholder: null, onChange: null });
   return <View style={closure_5().container}>{null}</View>;
 };

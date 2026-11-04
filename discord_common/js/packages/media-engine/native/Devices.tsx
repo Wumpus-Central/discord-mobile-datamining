@@ -1,8 +1,8 @@
-// === Module 5981: Devices ===
+// === Module 5995: Devices ===
 
-// Module 5981 (Devices)
+// Module 5995 (Devices)
 import formatDefault from "format" /* 1353 */;
-import Constants from "Constants" /* 5911 */;
+import Constants from "Constants" /* 5925 */;
 import size from "module_2" /* 2 */;
 
 ({ DEFAULT_DEVICE_ID: c3, DeviceTypes: closure_4 } = Constants);

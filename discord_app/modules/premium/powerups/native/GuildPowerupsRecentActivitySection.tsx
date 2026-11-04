@@ -1,19 +1,19 @@
-// === Module 14284: GuildPowerupsRecentActivitySection ===
+// === Module 14370: GuildPowerupsRecentActivitySection ===
 
-// Module 14284 (GuildPowerupsRecentActivitySection)
+// Module 14370 (GuildPowerupsRecentActivitySection)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import DateUtils from "DateUtils" /* 4963 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8543 */;
-import BoostGemIcon from "BoostGemIcon" /* 10051 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 14285 */;
-import BoostTier1Icon from "BoostTier1Icon" /* 14287 */;
-import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 14289 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 14291 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8560 */;
+import BoostGemIcon from "BoostGemIcon" /* 10099 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 14371 */;
+import BoostTier1Icon from "BoostTier1Icon" /* 14373 */;
+import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 14375 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 14377 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
@@ -64,7 +64,7 @@ function GuildPowerupsRecentActivityRow(row) {
       tmp18Result = hasOwnProperty(native.RoleDot, obj9);
     }
     const items2 = [tmp18Result, , , ];
-    const obj10 = { variant: "text-md/medium", color: "interactive-text-active", lineClamp: 1, style: null, gradientColors: null, children: null };
+    const obj10 = { variant: "body-md/medium", color: "interactive-text-active", lineClamp: 1, style: null, gradientColors: null, children: null };
     const items3 = [tmp.username, {}];
     obj10.style = items3;
     let tmp22;
@@ -74,19 +74,19 @@ function GuildPowerupsRecentActivityRow(row) {
     obj10.gradientColors = tmp22;
     obj10.children = username;
     items2[1] = hasOwnProperty(Text_Text.Text, obj10);
-    items2[2] = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
-    const obj11 = { variant: "text-md/medium", lineClamp: 1, style: tmp.messageText, children: getBoostRowMessageTextDefault(row) };
+    items2[2] = hasOwnProperty(Text_Text.Text, { variant: "body-md/medium", color: "interactive-text-active", children: " " });
+    const obj11 = { variant: "body-md/medium", lineClamp: 1, style: tmp.messageText, children: getBoostRowMessageTextDefault(row) };
     items2[3] = hasOwnProperty(Text_Text.Text, obj11);
     obj8.children = items2;
     items1[1] = timestampProducer(View, obj8);
-    const obj12 = { variant: "text-xs/medium", color: "text-subtle", style: tmp.timestamp, children: calendarFormatResult };
+    const obj12 = { variant: "body-xs/medium", color: "text-subtle", style: tmp.timestamp, children: calendarFormatResult };
     items1[2] = hasOwnProperty(Text_Text.Text, obj12);
     obj5.children = items1;
     return timestampProducer(View, obj5);
   }
 }
 const View = _mod17.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { sectionContainer: { marginTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, boostContainer: null, boostRowContainer: null, boostMessage: null, username: null, messageText: null, timestamp: null };
 let obj2 = { marginTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.boostContainer = { gap: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_16 };

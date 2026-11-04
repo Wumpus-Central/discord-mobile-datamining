@@ -1,13 +1,13 @@
-// === Module 12914: ConjurePublishScheduleProposalCard ===
+// === Module 12995: ConjurePublishScheduleProposalCard ===
 
-// Module 12914 (ConjurePublishScheduleProposalCard)
+// Module 12995 (ConjurePublishScheduleProposalCard)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12272 */;
-import useConjurePublishScheduleProposalDefault from "useConjurePublishScheduleProposal" /* 12915 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12333 */;
+import useConjurePublishScheduleProposalDefault from "useConjurePublishScheduleProposal" /* 12996 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,24 +19,24 @@ const result = size.fileFinishedImporting("modules/conjure/publish_schedule/nati
 export default function ConjurePublishScheduleProposalCard(arg0) {
   ({ projectId, proposal, current } = arg0);
   const tmp3 = useConjurePublishScheduleProposalDefault(projectId, proposal, current);
-  const obj = { variant: "text-sm/semibold", color: "text-muted", children: null };
+  const obj = { variant: "body-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.string(_modDef3995.ZtfX9V);
   items = [React3(Text_Text.Text, obj), , ];
-  const items1 = [React3(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: tmp3.summary }), , , , ];
+  const items1 = [React3(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: tmp3.summary }), , , , ];
   let tmp4Result = null;
   if (null != tmp3.firstPublish) {
-    const obj3 = { variant: "text-sm/normal", color: "text-muted", children: tmp3.firstPublish };
+    const obj3 = { variant: "body-sm/normal", color: "text-muted", children: tmp3.firstPublish };
     tmp4Result = React3(Text_Text.Text, obj3);
   }
   items1[1] = tmp4Result;
-  const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj4 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(_modDef3995.cxNHma);
   items1[2] = React3(Text_Text.Text, obj4);
   let tmp4Result4 = null;
   if ("on" === tmp3.status) {
-    const obj5 = { variant: "text-sm/normal", color: "text-default", accessibilityRole: "alert", children: null };
+    const obj5 = { variant: "body-sm/normal", color: "text-default", accessibilityRole: "alert", children: null };
     const intl3 = util.intl;
     obj5.children = intl3.string(_modDef3995.k4IRsm);
     tmp4Result4 = React3(Text_Text.Text, obj5);
@@ -44,7 +44,7 @@ export default function ConjurePublishScheduleProposalCard(arg0) {
   items1[3] = tmp4Result4;
   let tmp4Result5 = null;
   if ("error" === tmp3.status) {
-    const obj6 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp3.error };
+    const obj6 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp3.error };
     tmp4Result5 = React3(Text_Text.Text, obj6);
   }
   items1[4] = tmp4Result5;
@@ -59,7 +59,7 @@ export default function ConjurePublishScheduleProposalCard(arg0) {
     obj7.onPress = tmp3.onTurnOn;
     tmp4Result6 = React3(components_Button_Button.Button, obj7);
   }
-  const obj2 = { variant: "text-md/medium", color: "text-default", children: tmp3.summary };
+  const obj2 = { variant: "body-md/medium", color: "text-default", children: tmp3.summary };
   const tmp5 = ConjureNativeCardSurfaceDefault;
   items[2] = tmp4Result6;
   return React3(tmp5, { children: React4(Stack_Stack.Stack, { direction: "vertical", spacing: 8, children: items }) });

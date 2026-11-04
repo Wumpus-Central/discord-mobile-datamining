@@ -1,9 +1,9 @@
-// === Module 17427: SettingsAppearanceMessagesHeaderItem ===
+// === Module 17518: SettingsAppearanceMessagesHeaderItem ===
 
-// Module 17427 (SettingsAppearanceMessagesHeaderItem)
+// Module 17518 (SettingsAppearanceMessagesHeaderItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 
 export default function MessagesHeaderItem(animatedStyles) {
   const obj = { style: closure_4().messagesHeaderContainer, children: null };
-  const obj2 = { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/semibold", children: null };
+  const obj2 = { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "body-lg/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.OIgYlQ);
-  obj.children = jsx(Text_Text.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/semibold", children: null });
+  obj.children = jsx(Text_Text.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "body-lg/semibold", children: null });
   return <View style={closure_4().messagesHeaderContainer}>{null}</View>;
 };

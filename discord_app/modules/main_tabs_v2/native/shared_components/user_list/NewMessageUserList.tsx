@@ -1,12 +1,12 @@
-// === Module 14047: NewMessageUserList ===
+// === Module 14133: NewMessageUserList ===
 
-// Module 14047 (NewMessageUserList)
+// Module 14133 (NewMessageUserList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import fuzzysearchDefault from "fuzzysearch" /* 7034 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -95,7 +95,7 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
@@ -289,7 +289,7 @@ export default function NewMessageUserList(selectedUserIds) {
         }
         const element = { type: "user", props: null };
         obj.mode = TOGGLE;
-        const obj2 = { variant: "text-xs/medium", color: "text-muted", children: UserUtilsDefault.getUserTag(user) };
+        const obj2 = { variant: "body-xs/medium", color: "text-muted", children: UserUtilsDefault.getUserTag(user) };
         obj.subLabel = closure_2_10(Text_Text.Text, obj2);
         obj.arrow = !RelationshipStore.isFriend(user.id);
         obj.start = tmp2;

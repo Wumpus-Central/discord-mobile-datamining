@@ -1,10 +1,10 @@
-// === Module 7054: Spellchecker ===
+// === Module 7069: Spellchecker ===
 
-// Module 7054 (Spellchecker)
+// Module 7069 (Spellchecker)
 import LoggerDefault from "Logger" /* 3 */;
 import DOMUtils from "DOMUtils" /* 2158 */;
-import fallbackLocalesDefault from "fallbackLocales" /* 7055 */;
-import _mod7056 from "module_7056" /* 7056 */;
+import fallbackLocalesDefault from "fallbackLocales" /* 7070 */;
+import _mod7071 from "module_7071" /* 7071 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
@@ -59,7 +59,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod7056;
+      obj = _mod7071;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -222,7 +222,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod7056.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod7071.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {

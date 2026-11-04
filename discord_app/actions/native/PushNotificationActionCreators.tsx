@@ -1,6 +1,6 @@
-// === Module 14107: PushNotificationActionCreators ===
+// === Module 14193: PushNotificationActionCreators ===
 
-// Module 14107 (PushNotificationActionCreators)
+// Module 14193 (PushNotificationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -8,9 +8,9 @@ import TokenManagerAll from "TokenManager" /* 1098 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6867 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6882 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 14108 */;
+import MultiAccountStore from "MultiAccountStore" /* 14194 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -115,9 +115,9 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
   })();
 };
 const Constants = fn(1072);
-({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(14109).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(6863);
+({ DEVICE_TOKEN: metroImportDefault, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(14195).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6878);
 ({ BUNDLE_ID: closure_11, DEVICE_PUSH_VOIP_PROVIDER: closure_12, getDevicePushProvider: map1, IS_QUEST_RELEASE: closure_14 } = PushNotificationConstants);
 const logger = new LoggerDefault("PushNotificationActionCreators");
 const size = fn(2);
@@ -131,7 +131,7 @@ export default {
     const canUseMultiAccountNotifications = MultiAccountStore.canUseMultiAccountNotifications;
     logger.log("Registering push notification token: " + token + ", is voip:" + flag + ", multi-account:" + canUseMultiAccountNotifications);
     const Storage = Storage2.Storage;
-    const result = Storage.set(flag ? React6 : React5, token);
+    const result = Storage.set(flag ? React5 : metroImportDefault, token);
     if (canUseMultiAccountNotifications) {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
@@ -218,8 +218,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(14112).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(14112);
+          const result = v2(14198).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(14198);
         }
       }
       return value;

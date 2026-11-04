@@ -1,9 +1,9 @@
-// === Module 12640: AppLauncherTextInputOption ===
+// === Module 12721: AppLauncherTextInputOption ===
 
-// Module 12640 (AppLauncherTextInputOption)
+// Module 12721 (AppLauncherTextInputOption)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10070 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 10076 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10124 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ content: { flex: 1, flexDirection: "row", alignItems: "center" }, stringOptionInput: { maxHeight: 100, flex: 1, padding: 0, paddingTop: 0 }, expressionButton: { marginVertical: -8, marginRight: -8 } });
 const size = fn(2);
@@ -117,7 +117,7 @@ export default function AppLauncherTextInputOption(initialValue) {
   const obj5 = { style: null, children: null };
   const items3 = [inputStyles.padding, tmp.content];
   obj5.style = items3;
-  const obj6 = { ref, autoFocus: false, value, style: null, selectionColor: "Array", maxLength: "off", autoComplete: null, onChangeText: null, onSelectionChange: null, onFocus: null, onBlur: null, onEndEditing: "center", textAlignVertical: "default", returnKeyType: true, multiline: null, keyboardType: null, onPressIn: 169.857 };
+  const obj6 = { ref, autoFocus: false, value, style: null, selectionColor: "Array", maxLength: "off", autoComplete: null, onChangeText: null, onSelectionChange: null, onFocus: null, onBlur: null, onEndEditing: "center", textAlignVertical: "default", returnKeyType: true, multiline: null, keyboardType: null, onPressIn: 60.144 };
   const items4 = [inputStyles.text, tmp.stringOptionInput];
   obj6.style = items4;
   let maxLength;

@@ -1,19 +1,19 @@
-// === Module 19150: SettingsNavigator ===
+// === Module 19253: SettingsNavigator ===
 
-// Module 19150 (SettingsNavigator)
+// Module 19253 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16735 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 18632 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 19151 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16827 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 18733 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 19254 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16733 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16825 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ require = fn;
 function SettingHeaderBadge(badge) {
   if (badge.badge.badgeType === SettingRendererTypes.SettingsBadgeType.BETA) {
     const obj = { size: native.BetaSizes.SMALL };
-    return React7(native.BetaTag, obj);
+    return React6(native.BetaTag, obj);
   }
 }
 function LeftAlignedHeaderTitle(children) {
@@ -31,13 +31,13 @@ function LeftAlignedHeaderTitle(children) {
   if (usePersistentBadge != null) {
     persistentBadge = usePersistentBadge();
   }
-  const tmp5 = React7(Text_Text.Heading, { lineClamp: 1, variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer, children: children.title });
+  const tmp5 = React6(Text_Text.Heading, { lineClamp: 1, variant: "heading-md/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer, children: children.title });
   let tmp6 = tmp5;
   if (null != persistentBadge) {
     const obj = { style: tmp.headerContainerRow, children: null };
     items = [tmp5, ];
     const obj2 = { badge: persistentBadge };
-    items[1] = React7(SettingHeaderBadge, obj2);
+    items[1] = React6(SettingHeaderBadge, obj2);
     obj.children = items;
     tmp6 = closure_1_10(View, obj);
   }
@@ -45,10 +45,10 @@ function LeftAlignedHeaderTitle(children) {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticsPages: closure_7, UserSettingsSections: closure_8 } = Constants);
+({ AnalyticsPages: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const NativeStackNavigator = fn(9987);
+const NativeStackNavigator = fn(10035);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5141);
 let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };
@@ -134,10 +134,10 @@ export default noop.memo(function SettingsNavigator() {
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
     obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-    const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: React7(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-    obj2.children = React7(View, obj3);
-    obj.children = React7(Pressables.PressableOpacity, obj2);
-    return React7(View, obj);
+    const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: React6(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+    obj2.children = React6(View, obj3);
+    obj.children = React6(Pressables.PressableOpacity, obj2);
+    return React6(View, obj);
   }, items3);
   const memo1 = onClose.useMemo(() => ({
     transitionEnd(data) {

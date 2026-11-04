@@ -1,21 +1,21 @@
-// === Module 20275: handleAppStateChanged ===
+// === Module 20391: handleAppStateChanged ===
 
-// Module 20275 (handleAppStateChanged)
+// Module 20391 (handleAppStateChanged)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ThemeActionCreators from "ThemeActionCreators" /* 5206 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7778 */;
-import BundleUpdaterActionCreatorsDefault from "BundleUpdaterActionCreators" /* 20274 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7794 */;
+import BundleUpdaterActionCreatorsDefault from "BundleUpdaterActionCreators" /* 20390 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, AppStates: metroRequire } = Constants);
+({ AnalyticEvents: hasOwnProperty, AppStates: closure_6 } = Constants);
 let closure_7 = new LoggerDefault("index.native.tsx");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/core/native/handleAppStateChanged.tsx");

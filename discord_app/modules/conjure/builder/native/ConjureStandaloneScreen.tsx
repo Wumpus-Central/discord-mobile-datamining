@@ -1,26 +1,26 @@
-// === Module 12208: ConjureStandaloneScreen ===
+// === Module 12267: ConjureStandaloneScreen ===
 
-// Module 12208 (ConjureStandaloneScreen)
+// Module 12267 (ConjureStandaloneScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import ConjureActivity from "ConjureActivity" /* 7517 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
-import ConjureChatSceneDefault from "ConjureChatScene" /* 12209 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 12223 */;
-import selectConjureChannelDefault from "selectConjureChannel" /* 12954 */;
-import ConjureHomeLandingDefault from "ConjureHomeLanding" /* 12955 */;
-import ConjureProjectListDefault from "ConjureProjectList" /* 13119 */;
-import ConjureDebugSceneDefault from "ConjureDebugScene" /* 13150 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import ConjureActivity from "ConjureActivity" /* 7533 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11054 */;
+import ConjureChatSceneDefault from "ConjureChatScene" /* 12268 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 12282 */;
+import selectConjureChannelDefault from "selectConjureChannel" /* 13036 */;
+import ConjureHomeLandingDefault from "ConjureHomeLanding" /* 13037 */;
+import ConjureProjectListDefault from "ConjureProjectList" /* 13202 */;
+import ConjureDebugSceneDefault from "ConjureDebugScene" /* 13233 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
-import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7513 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7529 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -60,7 +60,7 @@ function GlobalChatScene(projectId) {
     }
     return result;
   }, items1);
-  return closure_12(fallbackGuildId(12209), { guildId, projectId, entryPoint, onExit });
+  return closure_12(fallbackGuildId(12268), { guildId, projectId, entryPoint, onExit });
 }
 function RoutedProjectOpener(guildId) {
   guildId = guildId.guildId;

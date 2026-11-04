@@ -1,8 +1,8 @@
-// === Module 10700: openLinkedUsersChannel ===
+// === Module 10748: openLinkedUsersChannel ===
 
-// Module 10700 (openLinkedUsersChannel)
-import transitionToChannel from "transitionToChannel" /* 5876 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
+// Module 10748 (openLinkedUsersChannel)
+import transitionToChannel from "transitionToChannel" /* 5890 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 

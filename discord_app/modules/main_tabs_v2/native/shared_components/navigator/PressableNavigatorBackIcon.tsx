@@ -1,11 +1,11 @@
-// === Module 9945: PressableNavigatorBackIcon ===
+// === Module 9963: PressableNavigatorBackIcon ===
 
-// Module 9945 (PressableNavigatorBackIcon)
+// Module 9963 (PressableNavigatorBackIcon)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7021 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;

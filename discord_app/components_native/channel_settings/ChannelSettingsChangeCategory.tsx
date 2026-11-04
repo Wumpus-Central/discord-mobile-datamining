@@ -1,22 +1,22 @@
-// === Module 19099: ChannelSettingsChangeCategory ===
+// === Module 19202: ChannelSettingsChangeCategory ===
 
-// Module 19099 (ChannelSettingsChangeCategory)
+// Module 19202 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import Form from "Form" /* 8301 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import Form from "Form" /* 8317 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7400 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7416 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
@@ -250,7 +250,7 @@ prototype["render"] = function render() {
     const intl2 = util.intl;
     name = intl2.string(util.t.GSfOoo);
   }
-  items = [state(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", children: intl.formatToPlainString(util.t.OqccVl, { categoryName: name }) }), , ];
+  items = [state(Text_Text.Text, { variant: "body-md/medium", color: "text-muted", children: intl.formatToPlainString(util.t.OqccVl, { categoryName: name }) }), , ];
   let tmp3Result = null;
   if (null != first) {
     tmp3Result = null;
@@ -286,7 +286,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1499).useNavigation();
   const obj2 = channelId(1499);
-  const appChannelBotUserId = channelId(11783).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11839).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

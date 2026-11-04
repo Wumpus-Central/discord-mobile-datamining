@@ -1,12 +1,12 @@
-// === Module 14367: GuildInviteIcon ===
+// === Module 14447: GuildInviteIcon ===
 
-// Module 14367 (GuildInviteIcon)
+// Module 14447 (GuildInviteIcon)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import StringUtils from "StringUtils" /* 2155 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

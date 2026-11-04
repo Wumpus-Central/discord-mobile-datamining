@@ -1,15 +1,15 @@
-// === Module 13327: useCanFulfillStreamRequest ===
+// === Module 13410: useCanFulfillStreamRequest ===
 
-// Module 13327 (useCanFulfillStreamRequest)
-import ActivityTypes from "ActivityTypes" /* 5882 */;
+// Module 13410 (useCanFulfillStreamRequest)
+import ActivityTypes from "ActivityTypes" /* 5896 */;
 import RunningGameStore from "RunningGameStore" /* 2142 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 
 const require = globalThis.__r;
 
@@ -45,18 +45,18 @@ function canFulfillStreamRequest(channel_id) {
     const tmp18 = null != obj.getCurrentUserActiveStream();
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(12052).getVideoPermission(channel);
+    const videoPermission = flag(12111).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
-    tmp19(9870).ActivityGamePlatforms.DESKTOP;
-    const obj8 = flag(12052);
+    tmp19(9888).ActivityGamePlatforms.DESKTOP;
+    const obj8 = flag(12111);
     const tmp19Result = flag(1377);
-    const ActivityGamePlatforms = tmp19(9870).ActivityGamePlatforms;
+    const ActivityGamePlatforms = tmp19(9888).ActivityGamePlatforms;
     dependencyMap = flag(1377).isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.IOS;
     const isAndroidResult = flag(1377).isAndroid();
     const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
-    const tmp5 = id(11818).getConfig(obj5).enabled && null == id;
+    const tmp5 = id(11875).getConfig(obj5).enabled && null == id;
     if (null == id) {
       if (!tmp5) {
         const items1 = [false, obj.NOT_RUNNING_GAME];

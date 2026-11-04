@@ -1,24 +1,24 @@
-// === Module 9190: TagListInput ===
+// === Module 9207: TagListInput ===
 
-// Module 9190 (TagListInput)
+// Module 9207 (TagListInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useInitialValueDefault from "useInitialValue" /* 5735 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import _modDef7164 from "module_7164" /* 7164 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7228 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useInitialValueDefault from "useInitialValue" /* 5749 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import _modDef7179 from "module_7179" /* 7179 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7248 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const TextInput_TextInputDefault = tmp18(9192);
+const TextInput_TextInputDefault = tmp18(9209);
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let createStyles = fn(5141);
@@ -34,7 +34,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.inputInner = { marginHorizontal: nativeDefault.space.PX_4, alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
   obj.horizontalInputInner = { flexWrap: "nowrap" };
   const obj6 = { flex: 1, minHeight: nativeDefault.space.PX_24, minWidth: nativeDefault.space.PX_48, color: nativeDefault.colors.TEXT_DEFAULT };
-  const merged = Object.assign(Text_Text.TextStyleSheet["text-sm/medium"]);
+  const merged = Object.assign(Text_Text.TextStyleSheet["body-sm/medium"]);
   obj6.paddingVertical = 0;
   obj6.marginVertical = 2;
   obj.searchInput = obj6;
@@ -49,12 +49,12 @@ createStyles = fn(5141);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
   const obj2 = {};
-  const merged = Object.assign(React5.absoluteFillObject);
+  const merged = Object.assign(metroImportDefault.absoluteFillObject);
   obj2.flexDirection = "row";
   obj.mask = obj2;
   obj.leadingFade = { width: 32 };
   const obj3 = {};
-  const merged1 = Object.assign(React5.absoluteFillObject);
+  const merged1 = Object.assign(metroImportDefault.absoluteFillObject);
   obj3.backgroundColor = "black";
   obj.leadingCover = obj3;
   obj.maskRemainder = { flex: 1, backgroundColor: "black" };
@@ -285,12 +285,12 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     }
   }, items3);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp2(5398).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp2(5400).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = onChangeText;
   }
   if (inActionSheet) {
-    let BottomSheetTextInput = tmp2(9191).BottomSheetTextInput;
+    let BottomSheetTextInput = tmp2(9208).BottomSheetTextInput;
   } else {
     BottomSheetTextInput = TextInput_TextInputDefault;
   }
@@ -359,20 +359,20 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       const obj = { style: _undefined2.fill, androidRenderingMode: "software", maskElement: null, children: null };
       const obj2 = { style: _undefined2.mask, children: null };
       const obj3 = { style: _undefined2.leadingFade, children: null };
-      const obj4 = { start, end, colors, style: React5.absoluteFill };
-      items = [React6(LinearGradientDefault, obj4), ];
+      const obj4 = { start, end, colors, style: metroImportDefault.absoluteFill };
+      items = [React5(LinearGradientDefault, obj4), ];
       const obj5 = { style: null };
       const items1 = [_undefined2.leadingCover, ref];
       obj5.style = items1;
-      items[1] = React6(_modDef1652.View, obj5);
+      items[1] = React5(_modDef1652.View, obj5);
       obj3.children = items;
-      const items2 = [React7(hasOwnProperty, obj3), ];
+      const items2 = [React6(hasOwnProperty, obj3), ];
       const obj6 = { style: _undefined2.maskRemainder };
-      items2[1] = React6(hasOwnProperty, obj6);
+      items2[1] = React5(hasOwnProperty, obj6);
       obj2.children = items2;
-      obj.maskElement = React7(hasOwnProperty, obj2);
+      obj.maskElement = React6(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = React6(_modDef7164, obj);
+      tmp = React5(_modDef7179, obj);
     }
     return tmp;
   }, items7);
@@ -571,7 +571,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   const obj13 = { size: "sm", disabled, isFocused, children: null };
   if (null == icon) {
     const obj14 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
-    icon = tmp46(tmp2(7340).MagnifyingGlassIcon, obj14);
+    icon = tmp46(tmp2(7356).MagnifyingGlassIcon, obj14);
   }
   const items14 = [icon, obj6.wrap(c8(BottomSheetScrollView, obj7)), ];
   if (null == footer) {

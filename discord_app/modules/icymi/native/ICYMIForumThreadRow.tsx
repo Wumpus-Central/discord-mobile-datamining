@@ -1,11 +1,11 @@
-// === Module 18751: ICYMIForumThreadRow ===
+// === Module 18852: ICYMIForumThreadRow ===
 
-// Module 18751 (ICYMIForumThreadRow)
+// Module 18852 (ICYMIForumThreadRow)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9048 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10932 */;
-import ICYMIShared from "ICYMIShared" /* 18723 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9065 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10980 */;
+import ICYMIShared from "ICYMIShared" /* 18824 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -118,11 +118,11 @@ class ICYMIForumThreadRow {
               tmp17 = View;
               obj17 = { style: null, children: null };
               obj17.style = tmp.container;
-              obj18 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+              obj18 = { variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };
               obj18.children = tmp12;
               items5 = [, , ];
               items5[0] = jsx(tmp2(tmp3[18]).Text, obj18);
-              obj19 = { variant: "text-md/normal", color: "text-subtle", style: null, lineClamp: 5, children: null };
+              obj19 = { variant: "body-md/normal", color: "text-subtle", style: null, lineClamp: 5, children: null };
               obj19.style = tmp.subtitle;
               tmp11Result2 = tmp11(tmp3[19]);
               flag = true;
@@ -160,9 +160,9 @@ class ICYMIForumThreadRow {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createICYMIStyles = fn(18682);
-const React7 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const createICYMIStyles = fn(18783);
+const React6 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { pressable: { flex: 1, paddingLeft: marginHorizontal.inset }, container: { marginHorizontal: marginHorizontal.margin }, subtitle: { marginTop: nativeDefault.space.PX_8, marginBottom: marginHorizontal.margin }, footer: { justifyContent: "flex-end", paddingLeft: marginHorizontal.inset, marginTop: marginHorizontal.margin, gap: marginHorizontal.margin }, threadAsComments: { marginHorizontal: marginHorizontal.margin }, ICYMICardInteractionRow: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin } };
   return obj;
 });
@@ -170,7 +170,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMIForumThreadRow.tsx");
 
 export default function ForumThreadRowWrapper(message) {
-  return React5(ICYMIForumThreadRow, { message: message.message, channel: message.threadChannel, visible: message.visible });
+  return metroImportDefault(ICYMIForumThreadRow, { message: message.message, channel: message.threadChannel, visible: message.visible });
 };
 export const MAX_AVATARS_IN_PILE = 3;
 export { ICYMIForumThreadRow };

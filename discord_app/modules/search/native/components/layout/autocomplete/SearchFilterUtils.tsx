@@ -1,20 +1,20 @@
-// === Module 18848: SearchFilterUtils ===
+// === Module 18951: SearchFilterUtils ===
 
-// Module 18848 (SearchFilterUtils)
+// Module 18951 (SearchFilterUtils)
 import util from "util" /* 1113 */;
-import AtIcon from "AtIcon" /* 8786 */;
-import CalendarIcon from "CalendarIcon" /* 9243 */;
-import TrackingConstants from "TrackingConstants" /* 9957 */;
-import AttachmentIcon from "AttachmentIcon" /* 10665 */;
-import RobotIcon from "RobotIcon" /* 12241 */;
-import UserIcon from "UserIcon" /* 12261 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12696 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14017 */;
-import SearchTokens from "SearchTokens" /* 14025 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14042 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15808 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 18849 */;
-import SearchConstants from "SearchConstants" /* 9958 */;
+import AtIcon from "AtIcon" /* 8803 */;
+import CalendarIcon from "CalendarIcon" /* 9260 */;
+import TrackingConstants from "TrackingConstants" /* 9975 */;
+import AttachmentIcon from "AttachmentIcon" /* 10713 */;
+import RobotIcon from "RobotIcon" /* 12302 */;
+import UserIcon from "UserIcon" /* 12322 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12777 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14103 */;
+import SearchTokens from "SearchTokens" /* 14111 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14128 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 15896 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 18952 */;
+import SearchConstants from "SearchConstants" /* 9976 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ const SearchTokensDefault = SearchTokens;
 
 ({ EMPTY_SEARCH_QUERY_STRING: c3, SearchQueryTagTypes: closure_4 } = SearchConstants);
 const SearchFilterAddLocations = TrackingConstants.SearchFilterAddLocations;
-({ SEARCH_DATE_FORMAT: metroRequire, SearchTokenTypes: closure_7, SearchTypes: closure_8 } = Constants);
+({ SEARCH_DATE_FORMAT: closure_6, SearchTokenTypes: metroImportDefault, SearchTypes: closure_8 } = Constants);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx");
 
 export function getSearchTokenLabel(type, item) {
@@ -213,7 +213,7 @@ export function getSearchTokenPressHandler(_undefined, token, CONTEXT_MENU) {
 export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   items = [];
-  const keys = Object.keys(items(14025));
+  const keys = Object.keys(items(14111));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

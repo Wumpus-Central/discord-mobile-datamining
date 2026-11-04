@@ -1,16 +1,16 @@
-// === Module 9587: CollectiblesShopCardV2 ===
+// === Module 9606: CollectiblesShopCardV2 ===
 
-// Module 9587 (CollectiblesShopCardV2)
+// Module 9606 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1266 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8871 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9590 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8888 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9609 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7860 */;
 
 require = fn;
 function CollectiblesShopCardInternalV2(product) {
@@ -188,7 +188,7 @@ function CollectiblesShopCardInternalV2(product) {
     if (stateFromStores) {
       str2 = "text-overlay-dark";
     }
-    const obj14 = { variant: "text-xs/semibold", color: str2, allowFontScaling: false, style: tmp.badgeOverrideText, lineClamp: 1, children: badgeOverride };
+    const obj14 = { variant: "body-xs/semibold", color: str2, allowFontScaling: false, style: tmp.badgeOverrideText, lineClamp: 1, children: badgeOverride };
     stateFromStores = tmp33(tmp2(tmp3[23]).Text, obj14);
     obj13.children = stateFromStores;
     let tmp33Result = tmp33(showWishlistNUXActionSheet, obj13);
@@ -303,7 +303,7 @@ function CollectiblesShopCardV2Inner(product) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
 const CollectiblesShopConstants = fn(1074);
-({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
+({ EXTERNAL_PRODUCT_SKU_IDS: metroImportDefault, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let num = 170;
@@ -341,8 +341,8 @@ export default noop.memo(function CollectiblesShopCardV2(arg0) {
     let obj = { newValue: memo, children: null };
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    obj.children = React7(CollectiblesShopCardV2Inner, obj2);
-    return React7(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+    obj.children = React6(CollectiblesShopCardV2Inner, obj2);
+    return React6(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
   }
 });
 export const COLLECTIBLES_SHOP_CARD_HEIGHT = num;

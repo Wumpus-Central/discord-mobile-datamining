@@ -1,18 +1,18 @@
-// === Module 9255: InstantInviteActionSheet ===
+// === Module 9272: InstantInviteActionSheet ===
 
-// Module 9255 (InstantInviteActionSheet)
+// Module 9272 (InstantInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5870 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9246 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9256 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9258 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5884 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9263 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9273 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9275 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 4995 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9247 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9264 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 
@@ -32,7 +32,7 @@ function Loading() {
   return gesture(state, obj2);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

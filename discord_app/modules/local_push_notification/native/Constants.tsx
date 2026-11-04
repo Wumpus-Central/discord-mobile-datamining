@@ -1,6 +1,6 @@
-// === Module 11033: Constants ===
+// === Module 11082: Constants ===
 
-// Module 11033 (Constants)
+// Module 11082 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/local_push_notification/native/Constants.tsx");

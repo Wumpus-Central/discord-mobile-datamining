@@ -1,20 +1,20 @@
-// === Module 12797: useConjureAutomodSettingsLink ===
+// === Module 12878: useConjureAutomodSettingsLink ===
 
-// Module 12797 (useConjureAutomodSettingsLink)
+// Module 12878 (useConjureAutomodSettingsLink)
 import _modDef3995 from "module_3995" /* 3995 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6965 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6980 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10997 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11045 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ GuildSettingsSections: closure_7, Permissions: closure_8 } = Constants);
+({ GuildSettingsSections: metroImportDefault, Permissions: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);

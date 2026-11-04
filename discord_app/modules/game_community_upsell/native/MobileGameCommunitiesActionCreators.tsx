@@ -1,13 +1,13 @@
-// === Module 18485: MobileGameCommunitiesActionCreators ===
+// === Module 18579: MobileGameCommunitiesActionCreators ===
 
-// Module 18485 (MobileGameCommunitiesActionCreators)
+// Module 18579 (MobileGameCommunitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef1487 from "module_1487" /* 1487 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15745 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17764 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15833 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17860 */;
 
 require = fn;
 let closure_7 = async function _fetchDetectedGameCommunities() {

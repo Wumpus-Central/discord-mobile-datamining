@@ -1,9 +1,9 @@
-// === Module 14073: DiceRollBar ===
+// === Module 14159: DiceRollBar ===
 
-// Module 14073 (DiceRollBar)
+// Module 14159 (DiceRollBar)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
+import timing_timing from "timing/timing" /* 5378 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -12,9 +12,9 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(13855).useDiceRollState;
+const useDiceRollState = fn(13941).useDiceRollState;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { animatedContainer: { overflow: "hidden" }, container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, gap: 12, borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_9 = createStyles.createStyles(obj2);
@@ -135,15 +135,15 @@ export default function DiceRollBar(channelId) {
   if (null == tmp2) {
     return null;
   } else {
-    const barText = tmp3(14074).getBarText(flag, tmp2.results);
+    const barText = tmp3(14160).getBarText(flag, tmp2.results);
     const obj5 = { style: null, children: null };
     const items7 = [animatedStyle, tmp.animatedContainer];
     obj5.style = items7;
     const obj6 = { style: tmp.container, children: null };
-    const obj7 = { style: tmp23, children: closure_7(tmp3(9657).DiceIcon, { size: "md" }) };
+    const obj7 = { style: tmp23, children: closure_7(tmp3(9676).DiceIcon, { size: "md" }) };
     const items8 = [closure_7(_modDef1652.View, obj7), ];
-    const obj8 = { variant: "text-sm/normal", color: "text-default", children: barText };
-    items8[1] = closure_7(tmp3(5747).Text, obj8);
+    const obj8 = { variant: "body-sm/normal", color: "text-default", children: barText };
+    items8[1] = closure_7(tmp3(5761).Text, obj8);
     obj6.children = items8;
     obj5.children = closure_8(c4, obj6);
     return closure_7(_modDef1652.View, obj5);

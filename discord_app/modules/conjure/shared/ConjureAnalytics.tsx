@@ -1,11 +1,12 @@
-// === Module 11003: ConjureAnalytics ===
+// === Module 11051: ConjureAnalytics ===
 
-// Module 11003 (ConjureAnalytics)
+// Module 11051 (ConjureAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
-import ConjureUtils from "ConjureUtils" /* 7543 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
+import ConjureUtils from "ConjureUtils" /* 7559 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 11052 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 require = fn;
 function projectFields(projectId) {
@@ -86,8 +87,77 @@ function conjureLocation(projectId, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
-const isProjectOwner = fn(6964).isProjectOwner;
+function ratingPromptFields(projectId) {
+  projectId = projectId.projectId;
+  const obj = {};
+  ({ turnId, publishReason, surface } = projectId);
+  const merged = Object.assign(projectFields(projectId));
+  const merged1 = Object.assign(conjureLocation(projectId, true));
+  obj.turn_id = turnId;
+  obj.publish_reason = publishReason;
+  obj.surface = surface;
+  let str = "android";
+  if (!obj2.isAndroid()) {
+    let str2 = "ios";
+    if (!tmp3Result.isIOS()) {
+      let str3 = "web";
+      if (tmp3Result3.isDesktop()) {
+        str3 = "desktop";
+      }
+      str2 = str3;
+      tmp3Result3 = PlatformUtils;
+    }
+    str = str2;
+    tmp3Result = PlatformUtils;
+  }
+  const obj3 = {};
+  obj.client_platform = str;
+  const merged2 = Object.assign(obj);
+  obj3.placement = projectId.placement;
+  const project = ConjureProjectStore.getProject(projectId.projectId);
+  let supported_surfaces;
+  if (project != null) {
+    supported_surfaces = project.supported_surfaces;
+  }
+  if (supported_surfaces == null) {
+    supported_surfaces = [];
+  }
+  items = [...supported_surfaces];
+  let prop;
+  if (project != null) {
+    prop = project.preview_supported_surfaces;
+  }
+  if (prop == null) {
+    prop = [];
+  }
+  HermesBuiltin.arraySpread(prop, tmp7);
+  const mapped = items.map((item) => closure_1_8[item]);
+  obj2 = PlatformUtils;
+  const items1 = [...new Set(mapped.filter((item) => null != item))];
+  obj3.project_kinds = items1.sort();
+  const publishState = projectId.publishState;
+  let tmp10 = null == publishState;
+  if (!tmp10) {
+    tmp10 = !ConjurePublishTypes.isConjureLive(publishState);
+    const tmp3Result4 = ConjurePublishTypes;
+  }
+  if (tmp10) {
+    const project1 = ConjureProjectStore.getProject(projectId.projectId);
+    let supported_surfaces1;
+    if (project1 != null) {
+      supported_surfaces1 = project1.supported_surfaces;
+    }
+    if (supported_surfaces1 == null) {
+      supported_surfaces1 = [];
+    }
+    tmp10 = 0 === supported_surfaces1.length;
+  }
+  obj3.is_new_project = tmp10;
+  return obj3;
+}
+const isProjectOwner = fn(6979).isProjectOwner;
 const AnalyticEvents = fn(1072).AnalyticEvents;
+let closure_8 = { [fn(6980).ConjureSupportedSurface.APP_CHANNEL]: "app_channel", [fn(6980).ConjureSupportedSurface.VOICE_CHANNEL]: "voice_channel", [fn(6980).ConjureSupportedSurface.PROFILE_WIDGET]: "profile_widget", [fn(6980).ConjureSupportedSurface.AUTOMOD]: "automod", [fn(6980).ConjureSupportedSurface.BOT]: "bot", [fn(6980).ConjureSupportedSurface.APPLICATION_COMMANDS]: "application_commands", [fn(6980).ConjureSupportedSurface.OVERLAY]: "overlay", [fn(6980).ConjureSupportedSurface.ACTIVITY]: "activity" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
 
@@ -220,43 +290,22 @@ export function trackConjurePublishActionClicked(project_id, arg1) {
   obj2.action = action;
   AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_PUBLISH_ACTION_CLICKED, obj2);
 }
-export function trackConjureRatingSubmitted(projectId) {
-  projectId = projectId.projectId;
+export function trackConjureRatingViewed(turnId) {
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_RATING_VIEWED, ratingPromptFields(turnId));
+}
+export function trackConjureRatingSubmitted(rating) {
   const obj2 = {};
-  ({ turnId, rating, publishReason, surface } = projectId);
-  const merged = Object.assign(projectFields(projectId));
-  const merged1 = Object.assign(conjureLocation(projectId, true));
-  obj2.turn_id = turnId;
-  obj2.rating = rating;
-  obj2.publish_reason = publishReason;
-  obj2.surface = surface;
-  const obj = AppAnalyticsUtils;
-  let str = "android";
-  if (!obj3.isAndroid()) {
-    let str2 = "ios";
-    if (!tmpResult.isIOS()) {
-      let str3 = "web";
-      if (tmpResult2.isDesktop()) {
-        str3 = "desktop";
-      }
-      str2 = str3;
-      tmpResult2 = PlatformUtils;
-    }
-    str = str2;
-    tmpResult = PlatformUtils;
-  }
-  obj2.client_platform = str;
-  obj.trackWithMetadata(AnalyticEvents.CONJURE_RATING_SUBMITTED, obj2);
-  obj3 = PlatformUtils;
+  const merged = Object.assign(ratingPromptFields(rating));
+  obj2.rating = rating.rating;
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_RATING_SUBMITTED, obj2);
 }
 export function trackConjureRatingFeedbackSubmitted(projectId, substr) {
   projectId = projectId.projectId;
   const obj2 = {};
-  ({ turnId, rating, publishReason, surface } = projectId);
+  ({ turnId, publishReason, surface } = projectId);
   const merged = Object.assign(projectFields(projectId));
   const merged1 = Object.assign(conjureLocation(projectId, true));
   obj2.turn_id = turnId;
-  obj2.rating = rating;
   obj2.publish_reason = publishReason;
   obj2.surface = surface;
   const obj = AppAnalyticsUtils;
@@ -277,6 +326,7 @@ export function trackConjureRatingFeedbackSubmitted(projectId, substr) {
   const obj4 = {};
   obj2.client_platform = str;
   const merged2 = Object.assign(obj2);
+  obj4.rating = projectId.rating;
   obj4.feedback_text = substr;
   obj.trackWithMetadata(AnalyticEvents.CONJURE_RATING_FEEDBACK_SUBMITTED, obj4);
   obj3 = PlatformUtils;

@@ -1,17 +1,17 @@
-// === Module 7290: Navigator ===
+// === Module 7306: Navigator ===
 
-// Module 7290 (Navigator)
+// Module 7306 (Navigator)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import SentryInitUtils from "SentryInitUtils" /* 1243 */;
 import Link from "Link" /* 1500 */;
-import BackPressTracking from "BackPressTracking" /* 6145 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import _mod7131 from "module_7131" /* 7131 */;
-import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7291 */;
-import StackNavigator from "StackNavigator" /* 7292 */;
-import NavigatorScreen from "NavigatorScreen" /* 7325 */;
-import useNavigationTheme from "useNavigationTheme" /* 7330 */;
+import BackPressTracking from "BackPressTracking" /* 6160 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import _mod7146 from "module_7146" /* 7146 */;
+import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7307 */;
+import StackNavigator from "StackNavigator" /* 7308 */;
+import NavigatorScreen from "NavigatorScreen" /* 7341 */;
+import useNavigationTheme from "useNavigationTheme" /* 7346 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -220,7 +220,7 @@ function WrappedNavigationStack(arg0) {
     }
     return tmp2;
   }), 1)[0];
-  const tmp5 = navigationContainerRef(5376)();
+  const tmp5 = navigationContainerRef(5377)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null != navigationTheme) {
@@ -245,7 +245,7 @@ function WrappedNavigationStack(arg0) {
   const merged1 = Object.assign(merged);
   obj4.children = <NavigationStack initialRouteName={initialRouteName} />;
   obj6.children = jsx(Link.NavigationContainer, { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null });
-  obj5.children = jsx(_mod7131.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj5.children = jsx(_mod7146.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);

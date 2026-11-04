@@ -1,6 +1,6 @@
-// === Module 7503: ProcessArgs ===
+// === Module 7519: ProcessArgs ===
 
-// Module 7503 (ProcessArgs)
+// Module 7519 (ProcessArgs)
 import DiscordNativeDefault from "DiscordNative" /* 4952 */;
 import size from "module_2" /* 2 */;
 

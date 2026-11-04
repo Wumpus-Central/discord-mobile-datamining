@@ -1,11 +1,11 @@
-// === Module 18668: ActionStatusSubLabel ===
+// === Module 18769: ActionStatusSubLabel ===
 
-// Module 18668 (ActionStatusSubLabel)
+// Module 18769 (ActionStatusSubLabel)
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import useFontScale from "useFontScale" /* 5762 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import useFontScale from "useFontScale" /* 5776 */;
 import noop from "module_19" /* 19 */;
 
 const module_1652 = _mod1652;
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles(() => ({ container: { overflow: "hidden" }, actionStatus: { position: "absolute" } }));
-let closure_7 = module_1652.createAnimatedComponent(fn(5747).Text);
+let closure_7 = module_1652.createAnimatedComponent(fn(5761).Text);
 let closure_8 = { code: "(function ActionStatusSubLabelTsx1(){let[hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate]=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};})" };
 let closure_9 = { code: "(function ActionStatusSubLabelTsx2(){let[actioned,lineHeight,fontScale,animate,withTiming,interpolate]=this.__closure;const translateYValue=actioned.get()?lineHeight*fontScale:0;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[0,translateYValue]))}]};})" };
 let closure_10 = { code: "(function ActionStatusSubLabelTsx3(){let[actioned,lineHeight,fontScale,animate,withTiming,interpolate]=this.__closure;const translateYValue=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};})" };
@@ -36,7 +36,7 @@ export function ActionStatusSubLabel(lineHeight) {
   }
   let str = lineHeight.textVariant;
   if (str === undefined) {
-    str = "text-xs/medium";
+    str = "body-xs/medium";
   }
   ({ actioned, secondaryLabel, maxFontSizeMultiplier, animate } = lineHeight);
   let tmp = null != secondaryLabel;

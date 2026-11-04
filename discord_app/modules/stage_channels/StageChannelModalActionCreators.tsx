@@ -1,10 +1,10 @@
-// === Module 8074: StageChannelModalActionCreators ===
+// === Module 8090: StageChannelModalActionCreators ===
 
-// Module 8074 (StageChannelModalActionCreators)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8065 */;
+// Module 8090 (StageChannelModalActionCreators)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8081 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
@@ -199,15 +199,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(8065).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8081).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8065);
+    const obj2 = flag2(8081);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8065).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8065);
+      flag2(8081).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8081);
     }
   }
 }

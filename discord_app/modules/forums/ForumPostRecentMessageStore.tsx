@@ -1,11 +1,11 @@
-// === Module 7603: ForumPostRecentMessageStore ===
+// === Module 7619: ForumPostRecentMessageStore ===
 
-// Module 7603 (ForumPostRecentMessageStore)
+// Module 7619 (ForumPostRecentMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import UserStore from "UserStore" /* 1385 */;
 

@@ -1,22 +1,22 @@
-// === Module 7413: GuildOnboardingPrompt ===
+// === Module 7429: GuildOnboardingPrompt ===
 
-// Module 7413 (GuildOnboardingPrompt)
+// Module 7429 (GuildOnboardingPrompt)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 7042 */;
-import TermsFieldListDefault from "TermsFieldList" /* 7097 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7394 */;
-import EmojiDefault from "Emoji" /* 7420 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 7057 */;
+import TermsFieldListDefault from "TermsFieldList" /* 7112 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7410 */;
+import EmojiDefault from "Emoji" /* 7436 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7068 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7083 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7388 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7404 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ function PromptHeader(currentPrompt) {
   ({ numberOfPrompts, currentPromptIndex } = currentPrompt);
   const tmp = closure_16();
   const obj = { style: tmp.promptHeader, children: null };
-  const obj2 = { style: tmp.countText, variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj2 = { style: tmp.countText, variant: "body-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.format(util.t.isV0NW, { currentQuestion: currentPromptIndex + 1, questionCount: numberOfPrompts });
   items = [state(Text_Text.Text, obj2), ];
@@ -39,7 +39,7 @@ function PromptHeader(currentPrompt) {
     const obj4 = { children: null };
     const obj5 = { style: tmp.requiredSeparator };
     const items1 = [state(hasOwnProperty, obj5), ];
-    const obj6 = { variant: "text-sm/medium", color: "text-brand", children: null };
+    const obj6 = { variant: "body-sm/medium", color: "text-brand", children: null };
     const intl2 = util.intl;
     obj6.children = intl2.string(util.t.Ur8Vrt);
     items1[1] = state(Text_Text.Text, obj6);
@@ -135,14 +135,14 @@ function PromptFooter(onPress) {
   const obj7 = { style: tmp.footerContent, children: null };
   let tmp20Result = null;
   if (tmp10) {
-    const obj8 = { style: tmp.helpText, variant: "text-xs/medium", color: "text-default", children: null };
+    const obj8 = { style: tmp.helpText, variant: "body-xs/medium", color: "text-default", children: null };
     const intl2 = require("util").intl;
     obj8.children = intl2.string(require("util").t.dA1dSf);
     tmp20Result = closure_13(require("Text/Text").Text, obj8);
   }
   const items5 = [tmp20Result, , ];
   if ("" !== helpText) {
-    const obj9 = { style: tmp.helpText, variant: "text-xs/medium", color: "text-default", children: null };
+    const obj9 = { style: tmp.helpText, variant: "body-xs/medium", color: "text-default", children: null };
     const items6 = [helpText, " ", helpTextAdditional];
     obj9.children = items6;
     let tmp18Result = closure_14(require("Text/Text").Text, obj9);
@@ -164,7 +164,7 @@ function PromptFooter(onPress) {
   return closure_14(closure_5, obj3);
 }
 function formattedNameHighlight(children, arg1) {
-  return state(Text_Text.Text, { variant: "text-xs/medium", color: "mobile-text-heading-primary", children }, arg1);
+  return state(Text_Text.Text, { variant: "body-xs/medium", color: "mobile-text-heading-primary", children }, arg1);
 }
 function DropdownOption(option) {
   option = option.option;
@@ -211,19 +211,19 @@ function DropdownOption(option) {
   }
   obj4.name = str;
   obj3.children = closure_13(EmojiDefault, obj4);
-  const items1 = [closure_13(closure_5, obj3), closure_13(tmp2(5747).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [closure_13(closure_5, obj3), closure_13(tmp2(5761).Text, { variant: "body-md/semibold", children: option.title })];
   obj2.children = items1;
   return closure_14(closure_5, obj2);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let closure_11 = fn(7385).GuildOnboardingModalStates;
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
+let closure_11 = fn(7401).GuildOnboardingModalStates;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5709).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, scrollContainerGradient: null, promptHeader: null, requiredSeparator: null, countText: null, title: null, helpText: null, footer: null, footerText: null, footerContent: null, optionTextEmoji: null, optionImageEmoji: null, emojiContainer: null, dropdownContainer: null, emptyDropdownText: null, dropdownPill: null, dropdownIconContainer: null, dropdownIcon: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5709).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5722).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, scrollContainerGradient: null, promptHeader: null, requiredSeparator: null, countText: null, title: null, helpText: null, footer: null, footerText: null, footerContent: null, optionTextEmoji: null, optionImageEmoji: null, emojiContainer: null, dropdownContainer: null, emptyDropdownText: null, dropdownPill: null, dropdownIconContainer: null, dropdownIcon: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5722).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollContainer = { display: "flex", flexGrow: 1, justifyContent: "center", paddingHorizontal: 16, paddingTop: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollContainerGradient = { position: "absolute", height: 48, width: "100%", left: 0, top: -48 };
 obj2.promptHeader = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 };
@@ -334,7 +334,7 @@ export function RulesPrompt(guildId) {
     items6[2] = obj12;
     obj11.style = items6;
     let Text = tmp(END[21]).Text;
-    let obj13 = { style: START.footerText, variant: "text-xs/medium", children: null };
+    let obj13 = { style: START.footerText, variant: "body-xs/medium", children: null };
     const intl = tmp(END[22]).intl;
     let intl2 = intl.string;
     let string = tmp(END[22]).t;
@@ -477,7 +477,7 @@ export function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7425, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7441, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
       onSelect(id, flag) {
@@ -492,7 +492,7 @@ export function DropdownPrompt(guildId) {
   const obj4 = { style: tmp.dropdownContainer, onPress: callback, children: null };
   let tmp11Result = 0 === found.length;
   if (tmp11Result) {
-    const obj5 = { style: tmp.emptyDropdownText, variant: "text-sm/normal", color: "text-muted", children: "No answers selected." };
+    const obj5 = { style: tmp.emptyDropdownText, variant: "body-sm/normal", color: "text-muted", children: "No answers selected." };
     tmp11Result = closure_13(tmp4(tmp3[21]).Text, obj5);
   }
   const obj6 = { children: null };

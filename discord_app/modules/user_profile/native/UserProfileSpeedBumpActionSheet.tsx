@@ -1,14 +1,14 @@
-// === Module 8877: UserProfileSpeedBumpActionSheet ===
+// === Module 8894: UserProfileSpeedBumpActionSheet ===
 
-// Module 8877 (UserProfileSpeedBumpActionSheet)
+// Module 8894 (UserProfileSpeedBumpActionSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import TableRow from "TableRow" /* 7101 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import UserActionCreators from "UserActionCreators" /* 8876 */;
-import _modDef8880 from "module_8880" /* 8880 */;
+import TableRow from "TableRow" /* 7116 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import UserActionCreators from "UserActionCreators" /* 8893 */;
+import _modDef8897 from "module_8897" /* 8897 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -18,11 +18,11 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 function InformationTable(speedBumpType) {
   items = undefined;
-  let obj = { icon: _modDef8880, text: null };
+  let obj = { icon: _modDef8897, text: null };
   const intl = items(1113).intl;
   obj.text = intl.string(items(1113).t.kcuWva);
   items = [obj, ];
-  const obj2 = { icon: _modDef8880, text: null };
+  const obj2 = { icon: _modDef8897, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1113).intl;
     let stringResult = intl3.string(tmp2(1113).t.QxrDY1);
@@ -32,7 +32,7 @@ function InformationTable(speedBumpType) {
   }
   obj2.text = stringResult;
   items[1] = obj2;
-  return closure_12(items(7186).TableRowGroup, {
+  return closure_12(items(7201).TableRowGroup, {
     hasIcons: true,
     children: items.map((icon, index) => {
       const obj = { start: 0 === index, end: items.length === index, icon: application_id(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }), label: icon.text };
@@ -41,7 +41,7 @@ function InformationTable(speedBumpType) {
   });
 }
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8878).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8895).UserProfileAnalyticsTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -214,7 +214,7 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
     const intl = tmp2(onClose[12]).intl;
     obj10.children = intl.string(tmp2(onClose[12]).t.b33pLD);
     items9[1] = analyticsLocations(tmp2(onClose[31]).Text, obj10);
-    const obj11 = { style: tmp.bodyText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+    const obj11 = { style: tmp.bodyText, variant: "body-md/medium", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(onClose[12]).intl;
     const t = tmp2(onClose[12]).t;
     const obj12 = { username: tmp4(onClose[32]).getName(guild_id, channelId, tmp7) };
@@ -253,7 +253,7 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
             },
         children: null
       };
-      const obj18 = { variant: "text-sm/normal", color: "text-link", children: null };
+      const obj18 = { variant: "body-sm/normal", color: "text-link", children: null };
       const intl4 = tmp2(onClose[12]).intl;
       obj18.children = intl4.string(tmp2(onClose[12]).t.QbcRCJ);
       obj17.children = tmp35(tmp2(onClose[31]).Text, obj18);

@@ -1,9 +1,9 @@
-// === Module 20099: RoleTierEditStore ===
+// === Module 20215: RoleTierEditStore ===
 
-// Module 20099 (RoleTierEditStore)
+// Module 20215 (RoleTierEditStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _mod5056 from "module_5056" /* 5056 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17346 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17437 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +18,7 @@ function usePriceTiers(guildId) {
   const tiers = tmp[0];
   closure_2 = tmp3;
   dependencyMap = tmp[2];
-  tiers(5716)(() => {
+  tiers(5729)(() => {
     let tmp2 = null == first;
     if (tmp2) {
       tmp2 = closure_2 !== obj.LOADING;
@@ -77,7 +77,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     return (async () => {
       closure_1 = tmp3;
       priceTiers(1259).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
-      await closure_2_2(7554).getPriceTiers(priceTiers);
+      await closure_2_2(7570).getPriceTiers(priceTiers);
       if (1 === tmp7) {
         c2 = 0;
         priceTiers(1259).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));

@@ -1,17 +1,17 @@
-// === Module 18892: SearchMediaImage ===
+// === Module 18995: SearchMediaImage ===
 
-// Module 18892 (SearchMediaImage)
-import ObscureMediaModels from "ObscureMediaModels" /* 7592 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8963 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 9510 */;
-import AttachmentPreview from "AttachmentPreview" /* 11248 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13906 */;
-import generated_SpoilerIcon from "generated/SpoilerIcon" /* 14656 */;
+// Module 18995 (SearchMediaImage)
+import ObscureMediaModels from "ObscureMediaModels" /* 7608 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8794 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8980 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 9528 */;
+import AttachmentPreview from "AttachmentPreview" /* 11298 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13992 */;
+import generated_SpoilerIcon from "generated/SpoilerIcon" /* 14736 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import SearchMessageStore from "SearchMessageStore" /* 6983 */;
+import SearchMessageStore from "SearchMessageStore" /* 6998 */;
 
 require = fn;
 function SearchMediaObscurityIcon(obscureReason) {
@@ -64,7 +64,7 @@ function SearchMediaObscurityIcon(obscureReason) {
   return closure_12(closure_11, { children });
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
@@ -160,23 +160,23 @@ export function SearchAttachmentMediaImage(attachment) {
   const channelId = attachment.channelId;
   const merged = Object.assign(attachment, Object.assign({ attachment: 0, channelId: 0, authorId: 0 }));
   dependencyMap = undefined;
-  const enabledHarmTypesBitmaskForChannelAndAuthorId = attachment(11218).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
-  const obj = attachment(11218);
+  const enabledHarmTypesBitmaskForChannelAndAuthorId = attachment(11268).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
+  const obj = attachment(11268);
   let num = attachment.flags;
   if (num == null) {
     num = 0;
   }
   let hasFlagResult = attachment(1398).hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
   if (!hasFlagResult) {
-    hasFlagResult = tmp2(6873).isChannelSpoilerGated(ChannelStore.getChannel(channelId));
-    const tmp2Result = tmp2(6873);
+    hasFlagResult = tmp2(6888).isChannelSpoilerGated(ChannelStore.getChannel(channelId));
+    const tmp2Result = tmp2(6888);
   }
   dependencyMap = hasFlagResult;
   items = [attachment, enabledHarmTypesBitmaskForChannelAndAuthorId, hasFlagResult];
   const memo = noop.useMemo(() => MessageAttachmentUtils.getObscureReasonForAttachment(attachment, enabledHarmTypesBitmaskForChannelAndAuthorId, c2), items);
   const obj2 = attachment(1398);
   const obj3 = {};
-  const attachmentUrl = attachment(8963).getAttachmentUrl(attachment);
+  const attachmentUrl = attachment(8980).getAttachmentUrl(attachment);
   const merged1 = Object.assign(merged);
   obj3.channelId = channelId;
   obj3.obscureReason = memo;
@@ -188,11 +188,11 @@ export function SearchEmbedMediaImage(embed) {
   embed = embed.embed;
   ({ sources: importDefault, messageId: dependencyMap, channelId } = embed);
   const merged = Object.assign(embed, Object.assign({ embed: 0, sources: 0, messageId: 0, channelId: 0, authorId: 0 }));
-  closure_3 = embed(11218).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
-  const obj = embed(11218);
+  closure_3 = embed(11268).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
+  const obj = embed(11268);
   const tmp2 = embed;
-  closure_4 = embed(6873).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
-  const obj2 = embed(6873);
+  closure_4 = embed(6888).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
+  const obj2 = embed(6888);
   items = [SearchMessageStore];
   let video = embed.thumbnail;
   const stateFromStores = embed(504).useStateFromStores(items, () => {
@@ -224,9 +224,9 @@ export function SearchEmbedMediaImage(embed) {
   let embedUrl = null;
   if (null != video) {
     ({ proxyURL: obj5.proxyURL, url: obj5.url } = video);
-    embedUrl = tmp2(8963).getEmbedUrl({ proxyURL: null, url: null });
+    embedUrl = tmp2(8980).getEmbedUrl({ proxyURL: null, url: null });
     const obj4 = { proxyURL: null, url: null };
-    let tmp2Result = tmp2(8963);
+    let tmp2Result = tmp2(8980);
   }
   let height;
   if (video != null) {

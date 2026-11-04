@@ -1,10 +1,10 @@
-// === Module 9505: GameProfileRankPill ===
+// === Module 9523: GameProfileRankPill ===
 
-// Module 9505 (GameProfileRankPill)
+// Module 9523 (GameProfileRankPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TrophyIcon from "TrophyIcon" /* 9506 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TrophyIcon from "TrophyIcon" /* 9524 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ export default function GameProfileRankPill(arg0) {
     str = formatToPlainString(t.ehZXlZ, obj5);
   }
   const obj3 = { size: "xxs", color: nativeDefault.colors.BLACK };
-  items[1] = React4(Text_Text.Text, { variant: "text-xs/semibold", color: "text-overlay-dark", children: str.toUpperCase() });
+  items[1] = React4(Text_Text.Text, { variant: "body-xs/semibold", color: "text-overlay-dark", children: str.toUpperCase() });
   obj2.children = items;
   obj.children = hasOwnProperty(View, obj2);
   return React4(View, obj);

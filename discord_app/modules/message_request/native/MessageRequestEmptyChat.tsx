@@ -1,8 +1,8 @@
-// === Module 14337: MessageRequestEmptyChat ===
+// === Module 14417: MessageRequestEmptyChat ===
 
-// Module 14337 (MessageRequestEmptyChat)
+// Module 14417 (MessageRequestEmptyChat)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,9 +25,9 @@ const result = size.fileFinishedImporting("modules/message_request/native/Messag
 
 export default function MessageRequestEmptyChat(style) {
   const obj = { style: style.style, children: null };
-  const obj2 = { style: closure_4().text, variant: "text-md/normal", color: "text-muted", children: null };
+  const obj2 = { style: closure_4().text, variant: "body-md/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.eeJvfA);
-  obj.children = jsx(Text_Text.Text, { style: closure_4().text, variant: "text-md/normal", color: "text-muted", children: null });
+  obj.children = jsx(Text_Text.Text, { style: closure_4().text, variant: "body-md/normal", color: "text-muted", children: null });
   return <View style={style.style}>{null}</View>;
 };

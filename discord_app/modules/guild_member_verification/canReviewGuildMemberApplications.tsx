@@ -1,6 +1,6 @@
-// === Module 7562: canReviewGuildMemberApplications ===
+// === Module 7578: canReviewGuildMemberApplications ===
 
-// Module 7562 (canReviewGuildMemberApplications)
+// Module 7578 (canReviewGuildMemberApplications)
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 

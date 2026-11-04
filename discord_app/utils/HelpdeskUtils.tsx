@@ -14,8 +14,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("utils/HelpdeskUtils.tsx");
 
 export default {
-  getArticleURL(REFERRAL_PROGRAM) {
-    return combined + "/hc/" + LocaleStore.locale.toLowerCase() + "/articles/" + REFERRAL_PROGRAM;
+  getArticleURL(AGE_VERIFICATION_LEARN_MORE) {
+    return combined + "/hc/" + LocaleStore.locale.toLowerCase() + "/articles/" + AGE_VERIFICATION_LEARN_MORE;
   },
   getDevArticleURL(arg0) {
     let tmp2 = closure_6;

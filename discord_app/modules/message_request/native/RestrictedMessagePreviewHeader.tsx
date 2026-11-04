@@ -1,19 +1,19 @@
-// === Module 19143: RestrictedMessagePreviewHeader ===
+// === Module 19246: RestrictedMessagePreviewHeader ===
 
-// Module 19143 (RestrictedMessagePreviewHeader)
+// Module 19246 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(14147).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(14233).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 }, avatar: null };
 let obj3 = { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
@@ -43,16 +43,16 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14310, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14397, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
-        const result = channel(8886).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = channel(8886);
-        channel(7646).transitionToGuild(arg0);
-        const obj2 = channel(7646);
-        user(5381).hideActionSheet();
-        const obj3 = user(5381);
-        user(6864).popWithKey(closure_1_5);
+        const result = channel(8903).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = channel(8903);
+        channel(7662).transitionToGuild(arg0);
+        const obj2 = channel(7662);
+        user(5382).hideActionSheet();
+        const obj3 = user(5382);
+        user(6879).popWithKey(closure_1_5);
       }
     });
   }, items2);
@@ -81,11 +81,11 @@ export default function RestrictedMessagePreviewHeader(channel) {
     tmp11Result = closure_6(tmp12(tmp3[17]).PressableOpacity, obj7);
   }
   items3[2] = tmp11Result;
-  const obj9 = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj9 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl4 = tmp12(tmp3[18]).intl;
   obj9.children = intl4.formatToPlainString(channel(analyticsLocations[18]).t["Qvg+6+"], { username: name });
   items3[3] = closure_6(channel(analyticsLocations[20]).Text, obj9);
-  const obj10 = { userId: user.id, onPress: callback2, iconSize: null, textVariant: "text-md/medium" };
+  const obj10 = { userId: user.id, onPress: callback2, iconSize: null, textVariant: "body-md/medium" };
   const obj5 = { style: tmp.avatar, user, guildId: channel.guild_id, size: channel(analyticsLocations[19]).AvatarSizes.XXLARGE, avatarDecoration: user.avatarDecoration };
   obj10.iconSize = channel(analyticsLocations[22]).GuildIconSizes.XSMALL;
   items3[4] = closure_6(user(analyticsLocations[21]), obj10);

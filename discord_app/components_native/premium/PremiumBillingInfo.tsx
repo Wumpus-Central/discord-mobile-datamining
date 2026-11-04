@@ -1,15 +1,15 @@
-// === Module 15421: PremiumBillingInfo ===
+// === Module 15508: PremiumBillingInfo ===
 
-// Module 15421 (PremiumBillingInfo)
+// Module 15508 (PremiumBillingInfo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 7711 */;
-import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 15417 */;
-import BillingInformation from "BillingInformation" /* 15422 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 7727 */;
+import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 15504 */;
+import BillingInformation from "BillingInformation" /* 15509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ class GoogleManagementLink {
       tmp3 = null;
       if (subscription.isPurchasedViaGoogle) {
         tmp4 = jsx;
-        obj1 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
+        obj1 = { style: null, variant: "body-sm/medium", color: "text-link", children: null };
         obj1.style = global.style;
         intl = tmp(tmp2[9]).intl;
         obj5 = { onClick: null };
@@ -43,7 +43,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, billingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 }, billingRenewalInfo: { marginTop: 4 }, billingManageGoogle: { marginTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -62,29 +62,29 @@ export default function PremiumBillingInfo(subscription) {
   } else {
     const externalManagementMessage = PremiumManagementUtils.getExternalManagementMessage(subscription, { shouldAllowExternalManagement: true });
     const obj5 = { style: subscription.style, children: null };
-    const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
+    const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "body-sm/medium", color: "text-default", children: null };
     const intl = util.intl;
     obj6.children = intl.string(util.t.Sb6wI1);
     items = [timestampProducer(Text_Text.Text, obj6), , ];
     const obj7 = { style: tmp.billingContainer, children: null };
-    const obj8 = { variant: "text-md/semibold", children: null };
+    const obj8 = { variant: "body-md/semibold", children: null };
     const intl2 = util.intl;
     obj8.children = intl2.string(util.t.KXQjfc);
     const items1 = [timestampProducer(Text_Text.Text, obj8), , ];
-    const obj9 = { style: tmp.billingRenewalInfo, variant: "text-sm/medium", children: tmp6 };
+    const obj9 = { style: tmp.billingRenewalInfo, variant: "body-sm/medium", children: tmp6 };
     items1[1] = timestampProducer(Text_Text.Text, obj9);
     const obj10 = { style: tmp.billingManageGoogle, subscription };
     items1[2] = timestampProducer(GoogleManagementLink, obj10);
     obj7.children = items1;
-    items[1] = React5(View, obj7);
+    items[1] = metroImportDefault(View, obj7);
     let tmp11Result = null;
     if (null != externalManagementMessage) {
-      const obj11 = { style: tmp.externalSubtext, variant: "text-sm/medium", children: externalManagementMessage };
+      const obj11 = { style: tmp.externalSubtext, variant: "body-sm/medium", children: externalManagementMessage };
       tmp11Result = timestampProducer(Text_Text.Text, obj11);
     }
     items[2] = tmp11Result;
     obj5.children = items;
-    return React5(View, obj5);
+    return metroImportDefault(View, obj5);
   }
   const obj4 = { subscriptionId: subscription.id, preventFetch: subscription.status !== constants.PAST_DUE };
 };

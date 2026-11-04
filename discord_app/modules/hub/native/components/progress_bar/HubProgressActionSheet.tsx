@@ -1,24 +1,24 @@
-// === Module 14375: HubProgressActionSheet ===
+// === Module 14455: HubProgressActionSheet ===
 
-// Module 14375 (HubProgressActionSheet)
+// Module 14455 (HubProgressActionSheet)
 import router_utils from "router_utils" /* 1099 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9246 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9258 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14378 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9263 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9275 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14458 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 
 require = fn;
 const View = fn(17).View;
-const HubProgressBarConstants = fn(9259);
-({ HUB_PROGRESS_ACTION_SHEET_ID: metroRequire, HUB_PROGRESS_NUM_TOTAL_STEPS: closure_7 } = HubProgressBarConstants);
+const HubProgressBarConstants = fn(9276);
+({ HUB_PROGRESS_ACTION_SHEET_ID: closure_6, HUB_PROGRESS_NUM_TOTAL_STEPS: metroImportDefault } = HubProgressBarConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsLocations: closure_9, InstantInviteSources: closure_10, Routes: closure_11 } = Constants);
-let closure_12 = fn(13989).DirectoryChannelScrollBehavior;
-const GuildProgressConstants = fn(14173);
+let closure_12 = fn(14075).DirectoryChannelScrollBehavior;
+const GuildProgressConstants = fn(14259);
 ({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = GuildProgressConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -64,7 +64,7 @@ export default function HubProgressActionSheet(guild) {
     numFinished: size,
     total,
     stepsHook(children, arg1) {
-      return closure_1_15(guild(hubProgressBarCompletedSteps[16]).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children }, arg1);
+      return closure_1_15(guild(hubProgressBarCompletedSteps[16]).Text, { variant: "body-sm/medium", color: "mobile-text-heading-primary", children }, arg1);
     }
   });
   const items1 = [closure_15(guild(hubProgressBarCompletedSteps[15]).GuildProgressHeader, obj3), , , , ];
@@ -90,7 +90,7 @@ export default function HubProgressActionSheet(guild) {
     numFinished: size,
     total,
     stepsHook(children, arg1) {
-      return closure_1_15(guild(hubProgressBarCompletedSteps[16]).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children }, arg1);
+      return closure_1_15(guild(hubProgressBarCompletedSteps[16]).Text, { variant: "body-sm/medium", color: "mobile-text-heading-primary", children }, arg1);
     }
   };
   obj5.source = analyticsSource(hubProgressBarCompletedSteps[19]);
@@ -155,7 +155,7 @@ export default function HubProgressActionSheet(guild) {
     let tmp11Result = closure_15(tmp2(tmp3[25]).Button, obj9);
   } else {
     const obj10 = { accessibilityRole: "button", onPress: handleFinishPress, children: null };
-    const obj11 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj11 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl6 = tmp2(tmp3[14]).intl;
     obj11.children = intl6.string(tmp2(tmp3[14]).t["9E36wf"]);
     obj10.children = closure_15(tmp2(tmp3[16]).Text, obj11);

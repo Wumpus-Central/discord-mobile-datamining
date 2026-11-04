@@ -1,17 +1,17 @@
-// === Module 14130: ChatInputCharCounter ===
+// === Module 14216: ChatInputCharCounter ===
 
-// Module 14130 (ChatInputCharCounter)
+// Module 14216 (ChatInputCharCounter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9917 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9935 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
-({ MAX_MESSAGE_LENGTH: metroRequire, UpsellTypes: closure_7 } = Constants);
+({ MAX_MESSAGE_LENGTH: closure_6, UpsellTypes: metroImportDefault } = Constants);
 const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -87,7 +87,7 @@ class ChatCounter {
       items2[1] = style;
       obj1.style = items2;
       tmp20 = jsx;
-      obj7 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xxs/semibold", children: null };
+      obj7 = { color: "text-feedback-critical", lineClamp: 1, variant: "footnote/semibold", children: null };
       tmp21 = globalThis;
       _HermesInternal = HermesInternal;
       str = "-";
@@ -110,7 +110,7 @@ class ChatCounter {
       items4[1] = style;
       obj8.style = items4;
       tmp17 = jsx;
-      obj9 = { color: "text-default", lineClamp: 1, variant: "text-xxs/semibold", children: null };
+      obj9 = { color: "text-default", lineClamp: 1, variant: "footnote/semibold", children: null };
       obj9.children = -first;
       items5 = [, ];
       items5[0] = jsx(tmp2(tmp3[15]).Text, obj9);

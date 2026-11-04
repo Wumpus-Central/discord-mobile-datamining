@@ -1,26 +1,26 @@
-// === Module 19966: GuildSettingsModalInstantInvites ===
+// === Module 20082: GuildSettingsModalInstantInvites ===
 
-// Module 19966 (GuildSettingsModalInstantInvites)
+// Module 20082 (GuildSettingsModalInstantInvites)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
-import TableRowIcon from "TableRowIcon" /* 7109 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8606 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8608 */;
-import InstantInvite from "InstantInvite" /* 10938 */;
-import _modDef15639 from "module_15639" /* 15639 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7115 */;
+import TableRowIcon from "TableRowIcon" /* 7124 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8623 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8625 */;
+import InstantInvite from "InstantInvite" /* 10986 */;
+import _modDef15726 from "module_15726" /* 15726 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11143 */;
-import InviteRecord from "InviteRecord" /* 8325 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11191 */;
+import InviteRecord from "InviteRecord" /* 8341 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 
 require = fn;
 function InviteSeparator() {
@@ -45,7 +45,7 @@ class InvitesDisabledRow {
       stringResult1 = intl2.format(tmp(tmp2[12]).t.IFBHag, obj);
     }
     tmp7 = jsx;
-    obj1 = { label: stringResult, subLabel: jsx(tmp(tmp2[15]).Text, { variant: "text-xs/medium", children: stringResult1 }), icon: null, checked: null, onPress: null, start: true, end: true };
+    obj1 = { label: stringResult, subLabel: jsx(tmp(tmp2[15]).Text, { variant: "body-xs/medium", children: stringResult1 }), icon: null, checked: null, onPress: null, start: true, end: true };
     tmp7Result = null;
     if (invitesDisabled) {
       obj5 = { source: null };
@@ -149,7 +149,7 @@ function GuildSettingsModalInstantInvites(invites) {
       try {
         const obj = { source: GuildAntiRaidTypes.GuildIncidentActionSources.MESSAGE, alertType: GuildAntiRaidUtils.getIncidentAlertType(stateFromStores) };
         const obj4 = { guild, analyticsData: obj };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13391, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13475, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
         closure_7(false);
       } catch (tmp17) {
         tmp2(false);
@@ -226,7 +226,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
   if (null != stateFromStores) {
     const obj2 = { children: null };
     const obj3 = { guild: stateFromStores, invites: tmp5, contentContainerStyle: guildId.contentContainerStyle, showChannel: true };
-    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5729).NavScrim, {})];
+    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5742).NavScrim, {})];
     obj2.children = items1;
     tmp6 = closure_14(closure_13, obj2);
   }

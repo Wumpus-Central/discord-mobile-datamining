@@ -1,22 +1,22 @@
-// === Module 20152: GuildRoleSubscriptionTierTemplateRolePreview ===
+// === Module 20268: GuildRoleSubscriptionTierTemplateRolePreview ===
 
-// Module 20152 (GuildRoleSubscriptionTierTemplateRolePreview)
+// Module 20268 (GuildRoleSubscriptionTierTemplateRolePreview)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
-import RoleIconDefault from "RoleIcon" /* 7494 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
+import RoleIconDefault from "RoleIcon" /* 7510 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: null, contextRow: null };
 let obj3 = { flexDirection: "row", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -44,17 +44,17 @@ export function GuildRoleSubscriptionRolePreview(content) {
   const items2 = [timestampProducer(FastImageDefault, { style: tmp3.avatar, source: { uri: roleImage } }), ];
   const obj5 = { style: tmp3.content, children: null };
   const obj6 = { style: tmp3.contextRow, children: null };
-  const obj7 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
+  const obj7 = { variant: "body-md/semibold", color: "interactive-text-active", style: null, children: null };
   const obj8 = { color: null };
   const obj4 = { style: tmp3.avatar, source: { uri: roleImage } };
   obj8.color = utils_ColorUtilsAll.int2hex(roleColor);
   obj7.style = obj8;
   obj7.children = name;
-  const items3 = [timestampProducer(Text_Text.Text, obj7), timestampProducer(native.Spacer, { size: 4 }), timestampProducer(RoleIconDefault, { name: roleName, src: roleImage, size: 16 }), timestampProducer(native.Spacer, { size: 8 }), timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
+  const items3 = [timestampProducer(Text_Text.Text, obj7), timestampProducer(native.Spacer, { size: 4 }), timestampProducer(RoleIconDefault, { name: roleName, src: roleImage, size: 16 }), timestampProducer(native.Spacer, { size: 8 }), timestampProducer(Text_Text.Text, { variant: "body-xs/medium", color: "text-muted", children: "4:20 PM" })];
   obj6.children = items3;
-  const items4 = [React5(View, obj6), timestampProducer(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
+  const items4 = [metroImportDefault(View, obj6), timestampProducer(Text_Text.Text, { variant: "body-md/normal", color: "text-default", style: textStyle, children: content })];
   obj5.children = items4;
-  items2[1] = React5(View, obj5);
+  items2[1] = metroImportDefault(View, obj5);
   obj3.children = items2;
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 }

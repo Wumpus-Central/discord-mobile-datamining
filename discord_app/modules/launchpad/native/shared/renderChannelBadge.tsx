@@ -1,11 +1,11 @@
-// === Module 19241: shared/renderChannelBadge ===
+// === Module 19345: shared/renderChannelBadge ===
 
-// Module 19241 (shared/renderChannelBadge)
+// Module 19345 (shared/renderChannelBadge)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import NumberUtils from "NumberUtils" /* 2024 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NewBadgeDefault from "NewBadge" /* 13975 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NewBadgeDefault from "NewBadge" /* 14061 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,17 +35,17 @@ export default function renderChannelBadge(newChannel) {
   } else {
     if (null != newPostCount) {
       if (newPostCount > 0) {
-        const obj3 = { variant: "text-xs/semibold", color: "text-brand", children: null };
+        const obj3 = { variant: "body-xs/semibold", color: "text-brand", children: null };
         const intl = util.intl;
         const obj4 = { count: NumberUtils.humanizeValue(newPostCount, newChannel.locale) };
         obj3.children = intl.format(util.t.GkAbqY, obj4);
-        tmp2 = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-brand", children: null });
+        tmp2 = jsx(Text_Text.Text, { variant: "body-xs/semibold", color: "text-brand", children: null });
       }
     }
     if (null != postsWithUnreadsCount) {
       if (postsWithUnreadsCount > 0) {
-        const obj6 = { variant: "text-xs/semibold", color: "text-muted", children: postsWithUnreadsCount };
-        tmp2 = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: postsWithUnreadsCount });
+        const obj6 = { variant: "body-xs/semibold", color: "text-muted", children: postsWithUnreadsCount };
+        tmp2 = jsx(Text_Text.Text, { variant: "body-xs/semibold", color: "text-muted", children: postsWithUnreadsCount });
       }
     }
     tmp2 = null;

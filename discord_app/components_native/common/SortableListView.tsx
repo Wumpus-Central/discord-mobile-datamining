@@ -1,17 +1,17 @@
-// === Module 18605: SortableListView ===
+// === Module 18706: SortableListView ===
 
-// Module 18605 (SortableListView)
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5732 */;
-import _mod7414 from "module_7414" /* 7414 */;
+// Module 18706 (SortableListView)
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
+import _mod7430 from "module_7430" /* 7430 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Animated: closure_4, Dimensions, PanResponder: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let height = Dimensions.get("window").height;
-const React7 = -5;
+const React6 = -5;
 let closure_10 = { x: 0, y: 0 };
 let closure_11 = noop.memo(function Row(initialHeight) {
   let current = initialHeight;
@@ -77,7 +77,7 @@ let closure_11 = noop.memo(function Row(initialHeight) {
   }
   items[1] = timestampProducer(React3, { style: obj4, children: noop.cloneElement(renderRow(item, index, active), { sortHandlers: { onLongPress: callback, onPressOut } }) });
   obj3.children = items;
-  return React5(React3, obj3);
+  return metroImportDefault(React3, obj3);
 });
 let closure_12 = noop.memo(function SortRow(listPageY) {
   ({ rowData, pan, frameHeight } = listPageY);
@@ -534,9 +534,9 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [timestampProducer(_mod7414.FlashList, obj3), self.renderActive()];
+  const items1 = [timestampProducer(_mod7430.FlashList, obj3), self.renderActive()];
   obj.children = items1;
-  return React5(React3, obj);
+  return metroImportDefault(React3, obj);
 };
 SortableListView.defaultProps = { disableSorting: false };
 let size = fn(2);

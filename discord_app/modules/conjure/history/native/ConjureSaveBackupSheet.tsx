@@ -1,15 +1,15 @@
-// === Module 12329: ConjureSaveBackupSheet ===
+// === Module 12394: ConjureSaveBackupSheet ===
 
-// Module 12329 (ConjureSaveBackupSheet)
+// Module 12394 (ConjureSaveBackupSheet)
 import nativeDefault from "native" /* 575 */;
-import conjureDatabaseLock from "conjureDatabaseLock" /* 12319 */;
+import conjureDatabaseLock from "conjureDatabaseLock" /* 12384 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const ConjureSaveBackupSheet = "ConjureSaveBackupSheet";
 const createStyles = fn(5141);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_16 } };
@@ -59,7 +59,7 @@ export default function ConjureSaveBackupSheet(projectId) {
   obj2.title = intl.string(environment(onSaved[10]).qywOto);
   obj.header = closure_6(projectId(onSaved[13]).BottomSheetTitleHeader, obj2);
   const obj3 = { style: tmp.content, children: null };
-  const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj4 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl2 = projectId(onSaved[9]).intl;
   const obj5 = { environment: null };
   const tmp12 = closure_5;

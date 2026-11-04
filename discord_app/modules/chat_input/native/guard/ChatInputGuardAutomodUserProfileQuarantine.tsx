@@ -1,9 +1,9 @@
-// === Module 14168: ChatInputGuardAutomodUserProfileQuarantine ===
+// === Module 14254: ChatInputGuardAutomodUserProfileQuarantine ===
 
-// Module 14168 (ChatInputGuardAutomodUserProfileQuarantine)
+// Module 14254 (ChatInputGuardAutomodUserProfileQuarantine)
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5079 */;
-import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 13427 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 14152 */;
+import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 13511 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 14238 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
@@ -50,7 +50,7 @@ export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(gui
   }
   const obj3 = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
   const obj2 = guildId(5079);
-  obj3.icon = jsx(guildId(14169).ChatXIcon, {});
+  obj3.icon = jsx(guildId(14255).ChatXIcon, {});
   obj3.message = stringResult1;
   return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });

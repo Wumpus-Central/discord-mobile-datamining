@@ -1,16 +1,16 @@
-// === Module 17005: UserSettingsAuthedAppPermissions ===
+// === Module 17097: UserSettingsAuthedAppPermissions ===
 
-// Module 17005 (UserSettingsAuthedAppPermissions)
-import Text_Text from "Text/Text" /* 5747 */;
-import disclosures from "disclosures" /* 9877 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 16999 */;
+// Module 17097 (UserSettingsAuthedAppPermissions)
+import Text_Text from "Text/Text" /* 5761 */;
+import disclosures from "disclosures" /* 9895 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 17091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
 const size = fn(2);
@@ -41,16 +41,16 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
         }
         continue;
       }
-      const children = [closure_1_5(items(_undefined2[7]).Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: _undefined.name }), , , ];
-      let obj3 = { variant: "heading-sm/semibold", color: "text-default", children: null };
+      const children = [closure_1_5(items(_undefined2[7]).Text, { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", children: _undefined.name }), , , ];
+      let obj3 = { variant: "heading-xs/semibold", color: "text-default", children: null };
       const intl2 = items(_undefined2[6]).intl;
       obj3.children = intl2.string(items(_undefined2[6]).t.xrmhRX);
       children[1] = closure_1_5(items(_undefined2[7]).Text, obj3);
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_2_5(items(7460).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(575).colors.STATUS_POSITIVE });
-        items[1] = closure_2_5(items(5747).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
+        items[0] = closure_2_5(items(7476).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(575).colors.STATUS_POSITIVE });
+        items[1] = closure_2_5(items(5761).Text, { style: items.permissionText, variant: "body-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });
@@ -63,7 +63,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
             const obj2 = { style: items.permissionContainer, children: null };
             const obj3 = { style: items.permissionIcon, disclosure };
             items = [hasOwnProperty(UserSettingsAuthedApps.DisclosureIcon, obj3), ];
-            const obj4 = { style: items.permissionText, variant: "text-sm/normal", children: textForDisclosure };
+            const obj4 = { style: items.permissionText, variant: "body-sm/normal", children: textForDisclosure };
             items[1] = hasOwnProperty(Text_Text.Text, obj4);
             obj2.children = items;
             tmp4 = timestampProducer(React4, obj2, index + items.length);

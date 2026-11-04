@@ -1,12 +1,12 @@
-// === Module 10309: FeedbackActionSheet ===
+// === Module 10357: FeedbackActionSheet ===
 
-// Module 10309 (FeedbackActionSheet)
+// Module 10357 (FeedbackActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import FeedbackUtils from "FeedbackUtils" /* 10291 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import FeedbackUtils from "FeedbackUtils" /* 10339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,9 +15,9 @@ function closeActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet();
 }
 const View = fn(17).View;
-const FeedbackRating = fn(10288).FeedbackRating;
+const FeedbackRating = fn(10336).FeedbackRating;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, ratingsHeader: { textAlign: "center" }, reasonsList: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
@@ -76,8 +76,8 @@ export default function FeedbackActionSheet(feedbackReasons) {
         tmp14 = View(reason);
       }
       obj3.descriptionLabel = tmp14;
-      obj2.pushLazy(asyncRequireImpl(10310, dependencyMap.paths), obj3);
-      const tmp9 = asyncRequireImpl(10310, dependencyMap.paths);
+      obj2.pushLazy(asyncRequireImpl(10358, dependencyMap.paths), obj3);
+      const tmp9 = asyncRequireImpl(10358, dependencyMap.paths);
     } else {
       const obj = { rating, reason, dontShowAgain: first1 };
       trackReport(obj);
@@ -137,7 +137,7 @@ export default function FeedbackActionSheet(feedbackReasons) {
   obj6.contentContainerStyle = items2;
   let tmp21Result4 = null;
   if (null != ratingsBodyLabel) {
-    const obj7 = { style: tmp.ratingsHeader, variant: "text-md/medium", color: "text-default", children: ratingsBodyLabel };
+    const obj7 = { style: tmp.ratingsHeader, variant: "body-md/medium", color: "text-default", children: ratingsBodyLabel };
     tmp21Result4 = tmp21(reasons(tmp4[20]).Text, obj7);
   }
   const items3 = [tmp21Result4, closure_7(feedbackReasons(otherKey[21]), { ratingOptions, textLabels: ratingTextLabels, selectedRating, onChangeRating: callback }), , ];

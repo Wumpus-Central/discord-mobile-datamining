@@ -1,7 +1,7 @@
-// === Module 18213: YouBarStackNavigator ===
+// === Module 18310: YouBarStackNavigator ===
 
-// Module 18213 (YouBarStackNavigator)
-import notifications_Notifications from "notifications/Notifications" /* 18630 */;
+// Module 18310 (YouBarStackNavigator)
+import notifications_Notifications from "notifications/Notifications" /* 18731 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
@@ -18,10 +18,10 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(11651).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11702).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9987);
+const NativeStackNavigator = fn(10035);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");
@@ -58,7 +58,7 @@ export default noop.memo(function YouBarStackNavigator() {
   const items2 = [current, iCYMIEnabled, accessibilityNativeStackOptions];
   obj6.children = noop.useMemo(() => {
     items = [
-      React7(Screen.Screen, {
+      React6(Screen.Screen, {
         name: YouBarNavigatorScreens.GUILDS,
         initialParams: current,
         getComponent: getGuildsComponent,
@@ -80,11 +80,11 @@ export default noop.memo(function YouBarStackNavigator() {
             return {};
           }
       };
-      tmp3Result = React7(Screen.Screen, obj2);
+      tmp3Result = React6(Screen.Screen, obj2);
     }
     const obj3 = { children: null };
     items[1] = tmp3Result;
-    items[2] = React7(Screen.Screen, {
+    items[2] = React6(Screen.Screen, {
       name: YouBarNavigatorScreens.NOTIFICATIONS,
       getComponent: getNotificationsComponent,
       options() {

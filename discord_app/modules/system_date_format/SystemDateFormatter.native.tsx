@@ -1,8 +1,8 @@
-// === Module 5821: SystemDateFormatter ===
+// === Module 5835: SystemDateFormatter ===
 
-// Module 5821 (SystemDateFormatter)
+// Module 5835 (SystemDateFormatter)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import NativeDateFormatUtilsModule from "NativeDateFormatUtilsModule" /* 5822 */;
+import NativeDateFormatUtilsModule from "NativeDateFormatUtilsModule" /* 5836 */;
 
 require = fn;
 let activateResult;

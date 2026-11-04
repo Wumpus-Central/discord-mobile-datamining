@@ -1,15 +1,15 @@
-// === Module 14482: HubEmailConnectionGuildSelect ===
+// === Module 14562: HubEmailConnectionGuildSelect ===
 
-// Module 14482 (HubEmailConnectionGuildSelect)
+// Module 14562 (HubEmailConnectionGuildSelect)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import GuildIconDefault from "GuildIcon" /* 7083 */;
-import Form from "Form" /* 8301 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import GuildIconDefault from "GuildIcon" /* 7098 */;
+import Form from "Form" /* 8317 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -39,8 +39,8 @@ function HubEmailConnectionGuildSelectHeader() {
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.mOMeiR);
-  obj.children = React6(Text_Text.Text, obj2);
-  return React6(View, obj);
+  obj.children = React5(Text_Text.Text, obj2);
+  return React5(View, obj);
 }
 function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   ({ errors, loading } = onFooterButtonPressed);
@@ -53,7 +53,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   const intl = util.intl;
   obj4.text = intl.string(util.t.G3Zk7V);
   obj4.onPress = onFooterButtonPressed.onFooterButtonPressed;
-  const items1 = [React6(components_Button_Button.Button, obj4), ];
+  const items1 = [React5(components_Button_Button.Button, obj4), ];
   let tmp3Result = null != errors;
   if (tmp3Result) {
     const obj5 = { style: tmp.error, children: null };
@@ -62,15 +62,15 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
       anyErrorMessage = errors.getAnyErrorMessage();
     }
     obj5.children = anyErrorMessage;
-    tmp3Result = React6(native.LegacyText, obj5);
+    tmp3Result = React5(native.LegacyText, obj5);
   }
   items1[1] = tmp3Result;
   obj3.children = items1;
-  obj.children = React7(View, obj3);
-  return React6(View, obj);
+  obj.children = React6(View, obj3);
+  return React5(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14460).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14540).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -168,7 +168,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(14473).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(14553).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {
@@ -179,7 +179,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6566).APIError(closure_128_0);
+                  const aPIError = new id(6581).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);
@@ -215,7 +215,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
       });
     },
     ItemSeparatorComponent() {
-      return React6(View, { style: closure_3.separator });
+      return React5(View, { style: closure_3.separator });
     },
     contentContainerStyle: null
   };

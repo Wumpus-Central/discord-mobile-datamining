@@ -1,16 +1,16 @@
-// === Module 19222: LaunchPadContainer ===
+// === Module 19326: LaunchPadContainer ===
 
-// Module 19222 (LaunchPadContainer)
+// Module 19326 (LaunchPadContainer)
 import _mod1652 from "module_1652" /* 1652 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5327 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11674 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 12950 */;
-import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 18202 */;
-import useLaunchPadStateDefault from "useLaunchPadState" /* 19223 */;
-import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19225 */;
-import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19226 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5328 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11725 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13032 */;
+import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 18299 */;
+import useLaunchPadStateDefault from "useLaunchPadState" /* 19327 */;
+import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19329 */;
+import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19330 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -18,10 +18,10 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11673);
+const LaunchPadConstants = fn(11724);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { wrapper: null, container: null };
 let obj3 = {};
@@ -122,7 +122,7 @@ export default function LaunchPadContainer(children) {
   }
   items7[1] = tmp21Result;
   obj4.children = items7;
-  obj3.children = React5(React3, obj4);
+  obj3.children = metroImportDefault(React3, obj4);
   obj2.children = timestampProducer(LegacyBaseButton.GestureDetector, obj3);
   return timestampProducer(LaunchPadGestureRefContextDefault.Provider, obj2);
 };

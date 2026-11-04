@@ -1,11 +1,11 @@
-// === Module 16713: GuildProfileEmptyState ===
+// === Module 16803: GuildProfileEmptyState ===
 
-// Module 16713 (GuildProfileEmptyState)
+// Module 16803 (GuildProfileEmptyState)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 16714 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 16804 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16, alignItems: "center" }, image: { marginBottom: 16, marginTop: 64, textAlign: "center" }, header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 }, createButton: { marginTop: 16, marginBottom: 12 } });
 const size = fn(2);
@@ -28,7 +28,7 @@ export default function GuildProfileEmptyState() {
   const intl = util.intl;
   obj4.children = intl.string(util.t.Z1OZCV);
   items[1] = timestampProducer(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.header, variant: "text-sm/normal", color: "text-default", children: null };
+  const obj5 = { style: tmp.header, variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.UEmBq7);
   items[2] = timestampProducer(Text_Text.Text, obj5);
@@ -139,5 +139,5 @@ export default function GuildProfileEmptyState() {
   });
   items[4] = timestampProducer(components_Button_Button.Button, obj8);
   obj.children = items;
-  return React5(React4, obj);
+  return metroImportDefault(React4, obj);
 };

@@ -1,14 +1,14 @@
-// === Module 16945: FamilyCenterTopServersBottomSheet ===
+// === Module 17037: FamilyCenterTopServersBottomSheet ===
 
-// Module 16945 (FamilyCenterTopServersBottomSheet)
+// Module 17037 (FamilyCenterTopServersBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildIconDefault from "GuildIcon" /* 7083 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildIconDefault from "GuildIcon" /* 7098 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 
 require = fn;
 function GuildRow(guildActivity) {
@@ -19,11 +19,11 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(8496).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(8513).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(7101).TableRow, obj2);
+    return closure_4(tmp2(7116).TableRow, obj2);
   }
   const obj = guildActivity(504);
 }
@@ -38,7 +38,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   topGuildActivities = topGuildActivities.topGuildActivities;
   const obj = { children: null };
-  const obj2 = { variant: "text-md/semibold", style: closure_6().header, children: null };
+  const obj2 = { variant: "body-md/semibold", style: closure_6().header, children: null };
   const intl = util.intl;
   obj2.children = intl.string(_modDef2667.Lq9Set);
   items = [React4(Text_Text.Text, obj2), ];

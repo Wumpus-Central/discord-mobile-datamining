@@ -1,18 +1,18 @@
-// === Module 12946: useChatInputFloatingBounce ===
+// === Module 13028: useChatInputFloatingBounce ===
 
-// Module 12946 (useChatInputFloatingBounce)
+// Module 13028 (useChatInputFloatingBounce)
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import spring_spring from "spring/spring" /* 5757 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import spring_spring from "spring/spring" /* 5771 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChatInputConstants = fn(12945);
-({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: metroRequire, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: closure_7 } = ChatInputConstants);
+const ChatInputConstants = fn(13027);
+({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: closure_6, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: metroImportDefault } = ChatInputConstants);
 let closure_8 = { code: "(function useChatInputFloatingBounceTsx1(finished){let[scheduleOnRN,setEnterFinished]=this.__closure;if(finished===true){scheduleOnRN(setEnterFinished,true);}})" };
 let closure_9 = { code: "(function useChatInputFloatingBounceTsx2(finished){let[scheduleOnRN,handleExitFinished]=this.__closure;if(finished===true){scheduleOnRN(handleExitFinished);}})" };
 let closure_10 = { code: "(function useChatInputFloatingBounceTsx3(){let[opacity,scale]=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};})" };
@@ -128,8 +128,8 @@ export default function useChatInputFloatingBounce(visible) {
       useChatInputFloatingBounceTsx2.__closure = items3;
       useChatInputFloatingBounceTsx2.__workletHash = 14048912962804;
       useChatInputFloatingBounceTsx2.__initData = tmp9;
-      const result2 = sharedValue.set(obj.withTiming(0, React5, "respect-motion-settings", useChatInputFloatingBounceTsx2));
-      const result3 = sharedValue1.set(timing_timing.withTiming(hasOwnProperty, React5, "respect-motion-settings"));
+      const result2 = sharedValue.set(obj.withTiming(0, metroImportDefault, "respect-motion-settings", useChatInputFloatingBounceTsx2));
+      const result3 = sharedValue1.set(timing_timing.withTiming(hasOwnProperty, metroImportDefault, "respect-motion-settings"));
     }
   }, items1);
   const tmpResult = require("module_1652");

@@ -1,16 +1,16 @@
-// === Module 5990: RTCMediaSinkWantsManager ===
+// === Module 6004: RTCMediaSinkWantsManager ===
 
-// Module 5990 (RTCMediaSinkWantsManager)
+// Module 6004 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5993 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5923 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 6007 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5912 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5926 */;
 
 require = fn;
 function getDefaultWants(wantsLevel) {
@@ -25,12 +25,12 @@ function getDefaultWants(wantsLevel) {
   return obj3;
 }
 const VideoToggleState = fn(1072).VideoToggleState;
-const SimulcastOverrideQuality = fn(5888).SimulcastOverrideQuality;
+const SimulcastOverrideQuality = fn(5902).SimulcastOverrideQuality;
 let c7 = 100;
 const DEFAULT_WANTS_DISABLED = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(5991);
+const BrowserUtils = fn(6005);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 let obj3 = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {

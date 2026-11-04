@@ -1,6 +1,6 @@
-// === Module 14670: EmojiRowUtils ===
+// === Module 14750: EmojiRowUtils ===
 
-// Module 14670 (EmojiRowUtils)
+// Module 14750 (EmojiRowUtils)
 import FlagUtils from "FlagUtils" /* 1398 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

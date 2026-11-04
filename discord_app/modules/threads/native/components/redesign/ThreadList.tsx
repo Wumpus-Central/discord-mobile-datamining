@@ -1,23 +1,23 @@
-// === Module 18948: ThreadList ===
+// === Module 19051: ThreadList ===
 
-// Module 18948 (ThreadList)
+// Module 19051 (ThreadList)
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import native from "native" /* 5207 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRow from "TableRow" /* 7101 */;
-import _mod7414 from "module_7414" /* 7414 */;
-import RowButton from "RowButton" /* 8303 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 13929 */;
-import ThreadListTableRowDefault from "ThreadListTableRow" /* 18949 */;
-import ThreadListEmptyDefault from "ThreadListEmpty" /* 18951 */;
-import ThreadListLoadingIndicatorDefault from "ThreadListLoadingIndicator" /* 18952 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRow from "TableRow" /* 7116 */;
+import _mod7430 from "module_7430" /* 7430 */;
+import RowButton from "RowButton" /* 8319 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 14015 */;
+import ThreadListTableRowDefault from "ThreadListTableRow" /* 19052 */;
+import ThreadListEmptyDefault from "ThreadListEmpty" /* 19054 */;
+import ThreadListLoadingIndicatorDefault from "ThreadListLoadingIndicator" /* 19055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ThreadListSection(title) {
   const tmp = closure_7();
-  return jsx(Text_Text.Text, { style: closure_7().section, accessibilityRole: "header", variant: "text-xs/semibold", color: "text-default", children: title.title.toUpperCase() });
+  return jsx(Text_Text.Text, { style: closure_7().section, accessibilityRole: "header", variant: "body-xs/semibold", color: "text-default", children: title.title.toUpperCase() });
 }
 function renderItem(item) {
   item = item.item;
@@ -262,7 +262,7 @@ export default function ThreadList(onCreateThreadPress) {
       }
       obj5.ListFooterComponentStyle = footer;
       obj5.contentContainerStyle = contentContainerStyle;
-      obj.children = jsx(_mod7414.AnimatedFlashList, { data: memo, ListHeaderComponent: memo2, ListHeaderComponentStyle: closure_3.header, renderItem, keyExtractor, onEndReached, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null });
+      obj.children = jsx(_mod7430.AnimatedFlashList, { data: memo, ListHeaderComponent: memo2, ListHeaderComponentStyle: closure_3.header, renderItem, keyExtractor, onEndReached, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null });
       return <EnterExitCrossFadeContainer key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>{null}</EnterExitCrossFadeContainer>;
     }
   }, items4);

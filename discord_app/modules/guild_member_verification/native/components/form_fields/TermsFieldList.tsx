@@ -1,11 +1,11 @@
-// === Module 7097: TermsFieldList ===
+// === Module 7112: TermsFieldList ===
 
-// Module 7097 (TermsFieldList)
+// Module 7112 (TermsFieldList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5874 */;
-import TableRowDivider from "TableRowDivider" /* 7098 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5888 */;
+import TableRowDivider from "TableRowDivider" /* 7113 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,19 +14,19 @@ function TermsFieldListItem(rowNumber) {
   ({ rowCount, rule, rulesChannelId } = rowNumber);
   const tmp = closure_8();
   const obj = { style: tmp.termsRow, children: null };
-  const obj2 = { style: tmp.termsRowNumber, variant: "text-sm/medium", color: "text-muted", accessibilityLabel: null, children: null };
+  const obj2 = { style: tmp.termsRowNumber, variant: "body-sm/medium", color: "text-muted", accessibilityLabel: null, children: null };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.formatToPlainString(util.t.XpgzeO, { number: rowNumber, total: rowCount });
   obj2.children = "" + rowNumber + ".";
   items = [hasOwnProperty(Text_Text.Text, obj2), ];
-  const obj3 = { style: tmp.termsRowContent, variant: "text-md/medium", children: MarkupUtilsDefault.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId }) };
+  const obj3 = { style: tmp.termsRowContent, variant: "body-md/medium", children: MarkupUtilsDefault.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId }) };
   items[1] = hasOwnProperty(Text_Text.Text, obj3);
   obj.children = items;
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { termsContainer: { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, termsRow: null, termsRowContent: null, termsRowNumber: null, title: null };
 let obj3 = { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
@@ -47,11 +47,11 @@ export default function TermsFieldList(rules) {
   const tmp = closure_8();
   dependencyMap = tmp;
   let obj = { children: null };
-  const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = rules(1113).intl;
   obj2.children = intl.string(rules(1113).t.prJqwT);
   items = [
-    closure_5(rules(5747).Text, obj2),
+    closure_5(rules(5761).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

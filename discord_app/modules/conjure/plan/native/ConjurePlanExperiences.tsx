@@ -1,15 +1,15 @@
-// === Module 12874: ConjurePlanExperiences ===
+// === Module 12955: ConjurePlanExperiences ===
 
-// Module 12874 (ConjurePlanExperiences)
+// Module 12955 (ConjurePlanExperiences)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AppsIcon2 from "AppsIcon" /* 8802 */;
-import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12860 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 12868 */;
-import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12877 */;
-import ConjurePlanCommandText from "ConjurePlanCommandText" /* 12878 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AppsIcon2 from "AppsIcon" /* 8819 */;
+import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12941 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 12949 */;
+import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12958 */;
+import ConjurePlanCommandText from "ConjurePlanCommandText" /* 12959 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ function InfoBlock(children) {
   }
   obj = { style: items, children: null };
   items[1] = flag;
-  const items1 = [hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", accessibilityRole: "header", children: children.caption }), children.children];
+  const items1 = [hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-muted", accessibilityRole: "header", children: children.caption }), children.children];
   obj.children = items1;
   return timestampProducer(View, obj);
 }
@@ -36,7 +36,7 @@ function Chips(labels) {
   return closure_5(View, {
     style: tmp.chips,
     children: labels.map((children) => {
-      obj = { style: chip.chip, children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children }) };
+      obj = { style: chip.chip, children: hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", children }) };
       return hasOwnProperty(View, obj, children);
     })
   });
@@ -48,7 +48,7 @@ function ChannelRow(arg0) {
   const obj2 = { style: tmp.iconBox, children: hasOwnProperty(AppsIcon2.AppsIcon, { size: "xs", color: nativeDefault.colors.ICON_STRONG }) };
   items = [hasOwnProperty(View, obj2), ];
   const obj4 = { style: tmp.infoText, children: null };
-  const items1 = [hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", lineClamp: 1, children: name }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: description })];
+  const items1 = [hasOwnProperty(Text_Text.Text, { variant: "body-md/normal", color: "text-default", lineClamp: 1, children: name }), hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", children: description })];
   obj4.children = items1;
   items[1] = timestampProducer(View, obj4);
   obj.children = items;
@@ -66,7 +66,7 @@ function CommandList(commands) {
       if (str2 == null) {
         str2 = "";
       }
-      obj = { name: description.name, size: "text-sm", prefix: conjurePlanFormat.conjurePlanCommandPrefix(description) };
+      obj = { name: description.name, size: "body-sm", prefix: conjurePlanFormat.conjurePlanCommandPrefix(description) };
       const children = [closure_1_5(ConjurePlanCommandText.ConjurePlanCommandMention, obj), ];
       let combined = null;
       if ("" !== str2) {
@@ -74,7 +74,7 @@ function CommandList(commands) {
         combined = " " + str2;
       }
       children[1] = combined;
-      return closure_1_6(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children }, index);
+      return closure_1_6(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", children }, index);
     })
   });
 }
@@ -89,24 +89,24 @@ function ExperienceBlocks(showsRequirements) {
       const items1 = [];
       if (result.channels.length > 0) {
         const obj2 = { channels: true, caption: null, children: null };
-        const intl2 = util.intl;
-        const obj4 = { count: result.channels.length };
-        obj2.caption = intl2.formatToPlainString(_modDef3995.w8F5sy, obj4);
-        const obj5 = { style: tmp.infoRows, children: null };
+        const intl3 = util.intl;
+        const obj3 = { count: result.channels.length };
+        obj2.caption = intl3.formatToPlainString(_modDef3995.w8F5sy, obj3);
+        const obj4 = { style: tmp.infoRows, children: null };
         const channels = result.channels;
-        obj5.children = channels.map((description) => {
+        obj4.children = channels.map((description) => {
           const name = description.name;
           return closure_1_5(ChannelRow, { name, description: description.description }, name);
         });
-        obj2.children = hasOwnProperty(View, obj5);
+        obj2.children = hasOwnProperty(View, obj4);
         items1.push(hasOwnProperty(InfoBlock, obj2, "channels"));
       }
       const result1 = conjurePlanExperienceSections.conjurePlanFrameFeatures(result);
       items = items1;
       if (result1.length > 0) {
         const obj6 = { caption: null, children: null };
-        const intl3 = util.intl;
-        obj6.caption = intl3.string(_modDef3995.MY6UGJ);
+        const intl = util.intl;
+        obj6.caption = intl.string(_modDef3995.MY6UGJ);
         const obj7 = { labels: result1 };
         obj6.children = hasOwnProperty(Chips, obj7);
         items1.push(hasOwnProperty(InfoBlock, obj6, "features"));
@@ -125,8 +125,8 @@ function ExperienceBlocks(showsRequirements) {
         let items3 = [];
       } else {
         const obj8 = { caption: null, children: null };
-        const intl = util.intl;
-        obj8.caption = intl.string(util.t["0hKkS+"]);
+        const intl2 = util.intl;
+        obj8.caption = intl2.string(util.t["0hKkS+"]);
         const obj9 = { commands: proposal.commands };
         obj8.children = hasOwnProperty(CommandList, obj9);
         items3 = [hasOwnProperty(InfoBlock, obj8, "commands")];
@@ -144,12 +144,12 @@ function ExperienceBlocks(showsRequirements) {
       }), arraySpreadResult);
       arr5 = items4;
     }
-    let tmp15 = null;
+    let tmp20 = null;
     if (arr5.length > 0) {
       const obj10 = { style: tmp.infoBlocks, children: arr5 };
-      tmp15 = hasOwnProperty(View, obj10);
+      tmp20 = hasOwnProperty(View, obj10);
     }
-    return tmp15;
+    return tmp20;
   }
 }
 function Bullets(arg0) {
@@ -158,8 +158,8 @@ function Bullets(arg0) {
   return closure_5(View, {
     children: bullets.map((text, index) => {
       obj = { style: closure_1.listItem, children: null };
-      items = [hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: closure_1.bullet, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: "\u2022" }), ];
-      const obj3 = { variant: "text-md/normal", color: "text-default", style: closure_1.listText, children: hasOwnProperty(ConjurePlanCommandText.ConjurePlanCommandText, { text, commandNames, size: "text-md" }) };
+      items = [hasOwnProperty(Text_Text.Text, { variant: "body-md/normal", color: "text-default", style: closure_1.bullet, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: "\u2022" }), ];
+      const obj3 = { variant: "body-md/normal", color: "text-default", style: closure_1.listText, children: hasOwnProperty(ConjurePlanCommandText.ConjurePlanCommandText, { text, commandNames, size: "body-md" }) };
       items[1] = hasOwnProperty(Text_Text.Text, obj3);
       obj.children = items;
       return timestampProducer(View, obj, index);
@@ -188,7 +188,7 @@ function ComponentSection(arg0) {
     BM4Ymz = conjurePlanExperienceSections.CONJURE_PLAN_EXPERIENCE_KIND_LABELS[experience.kind];
   }
   const obj5 = { size: "xs", color: nativeDefault.colors.ICON_STRONG };
-  items[1] = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-strong", accessibilityRole: "header", children: intl.string(BM4Ymz) });
+  items[1] = hasOwnProperty(Text_Text.Text, { variant: "body-md/medium", color: "text-strong", accessibilityRole: "header", children: intl.string(BM4Ymz) });
   obj3.children = items;
   const items1 = [timestampProducer(View, obj3), , , ];
   let tmp8Result = null;
@@ -199,8 +199,8 @@ function ComponentSection(arg0) {
   items1[1] = tmp8Result;
   if ("automod" === experience.kind) {
     if (1 === bullets.length) {
-      const obj8 = { variant: "text-md/normal", color: "text-default", children: null };
-      const obj9 = { text: bullets[0], commandNames, size: "text-md" };
+      const obj8 = { variant: "body-md/normal", color: "text-default", children: null };
+      const obj9 = { text: bullets[0], commandNames, size: "body-md" };
       obj8.children = hasOwnProperty(ConjurePlanCommandText.ConjurePlanCommandText, obj9);
       let tmp8Result2 = hasOwnProperty(Text_Text.Text, obj8);
     }
@@ -215,12 +215,12 @@ function ComponentSection(arg0) {
     const obj11 = { bullets, commandNames };
     tmp8Result2 = hasOwnProperty(Bullets, obj11);
   }
-  const obj6 = { variant: "text-md/medium", color: "text-strong", accessibilityRole: "header", children: intl.string(BM4Ymz) };
+  const obj6 = { variant: "body-md/medium", color: "text-strong", accessibilityRole: "header", children: intl.string(BM4Ymz) };
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { frame: fn(9859).GameControllerIcon, overlay_widget: fn(12875).WindowTopIcon, user_widget: fn(10935).UserCircleIcon, bot: fn(12241).RobotIcon, commands: fn(12241).RobotIcon, automod: fn(11418).ShieldIcon };
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+let obj = { frame: fn(9877).GameControllerIcon, overlay_widget: fn(12956).WindowTopIcon, user_widget: fn(10983).UserCircleIcon, bot: fn(12302).RobotIcon, commands: fn(12302).RobotIcon, automod: fn(11468).ShieldIcon };
 const createStyles = fn(5141);
 let obj3 = { intro: { gap: nativeDefault.space.PX_8 }, divider: null, component: null, componentHeader: null, iconBox: null, preview: null, listItem: null, bullet: null, listText: null, infoBlocks: null, infoBlock: null, channelsBlock: null, infoRows: null, infoRow: null, infoText: null, chips: null, chip: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };

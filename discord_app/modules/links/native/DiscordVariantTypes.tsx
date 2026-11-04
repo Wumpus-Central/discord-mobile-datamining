@@ -1,6 +1,6 @@
-// === Module 18610: DiscordVariantTypes ===
+// === Module 18711: DiscordVariantTypes ===
 
-// Module 18610 (DiscordVariantTypes)
+// Module 18711 (DiscordVariantTypes)
 import nativeDefault from "native" /* 575 */;
 import size from "module_2" /* 2 */;
 

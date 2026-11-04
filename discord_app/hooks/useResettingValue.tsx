@@ -1,12 +1,12 @@
-// === Module 15591: useResettingValue ===
+// === Module 15678: useResettingValue ===
 
-// Module 15591 (useResettingValue)
-import useInitialValueDefault from "useInitialValue" /* 5735 */;
+// Module 15678 (useResettingValue)
+import useInitialValueDefault from "useInitialValue" /* 5749 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
 const noop = fn(19);
-({ useState: closure_4, useCallback: hasOwnProperty, useEffect: metroRequire } = noop);
+({ useState: closure_4, useCallback: hasOwnProperty, useEffect: closure_6 } = noop);
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useResettingValue.tsx");
 

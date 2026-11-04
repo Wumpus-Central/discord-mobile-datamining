@@ -1,13 +1,13 @@
-// === Module 13826: RarityBadge ===
+// === Module 13912: RarityBadge ===
 
-// Module 13826 (RarityBadge)
+// Module 13912 (RarityBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6187 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6554 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6202 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6569 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,8 +15,8 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6186);
-({ CHECKPOINT_NITRO_GRADIENT_COLORS: metroRequire, CHECKPOINT_NITRO_BADGE_GRADIENT_ID: closure_7, CHECKPOINT_RARITY_TO_COLOR: closure_8, CHECKPOINT_RARITY_TO_LABEL_MESSAGE: closure_9 } = CheckpointConstants);
+const CheckpointConstants = fn(6201);
+({ CHECKPOINT_NITRO_GRADIENT_COLORS: closure_6, CHECKPOINT_NITRO_BADGE_GRADIENT_ID: metroImportDefault, CHECKPOINT_RARITY_TO_COLOR: closure_8, CHECKPOINT_RARITY_TO_LABEL_MESSAGE: closure_9 } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -87,7 +87,7 @@ export default function RarityBadge(rarity) {
     const obj7 = { points: null, fill: null };
     const tmp10 = inlineStylesDefault;
     obj7.points = CheckpointCustomizationUtils.getChamferedRectPoints(size.width, size.height, 6);
-    obj7.fill = React6[rarity];
+    obj7.fill = React5[rarity];
     items2[1] = closure_1_10(inlineStyles.Polygon, obj7);
     size1.children = items2;
     tmp5Result = closure_1_11(tmp10, size1);
@@ -97,7 +97,7 @@ export default function RarityBadge(rarity) {
   const obj8 = { style: tmp.badgeContent, children: null };
   const obj9 = { variant: "mono-md/bold", style: tmp.badgeLabel, children: null };
   const intl = util.intl;
-  obj9.children = intl.string(React7[rarity]);
+  obj9.children = intl.string(React6[rarity]);
   const items4 = [closure_1_10(Text_Text.Text, obj9), ];
   if (tmp17Result) {
     const obj10 = { size: "xxs", color: nativeDefault.colors.BLACK };

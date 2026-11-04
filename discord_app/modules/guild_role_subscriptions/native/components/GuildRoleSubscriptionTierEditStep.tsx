@@ -1,13 +1,13 @@
-// === Module 20102: GuildRoleSubscriptionTierEditStep ===
+// === Module 20218: GuildRoleSubscriptionTierEditStep ===
 
-// Module 20102 (GuildRoleSubscriptionTierEditStep)
+// Module 20218 (GuildRoleSubscriptionTierEditStep)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import FormSeparatorDefault from "FormSeparator" /* 17351 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import FormSeparatorDefault from "FormSeparator" /* 17442 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,9 +15,9 @@ function Header(arg0) {
   ({ description, title } = arg0);
   const tmp = closure_8();
   const obj = { top: true, style: tmp.headerContainer, children: null };
-  items = [timestampProducer(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: title }), timestampProducer(Text_Text.Text, { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), timestampProducer(FormSeparatorDefault, { style: tmp.separator })];
+  items = [timestampProducer(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: title }), timestampProducer(Text_Text.Text, { style: tmp.subtitle, variant: "body-sm/medium", color: "text-default", children: description }), timestampProducer(FormSeparatorDefault, { style: tmp.separator })];
   obj.children = items;
-  return React5(common_SafeAreaView.SafeAreaPaddingView, obj);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, obj);
 }
 function Footer(arg0) {
   ({ canProceedToNextStep, nextStep, onProceed, submitting } = arg0);
@@ -35,13 +35,13 @@ function Footer(arg0) {
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5754).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  obj.children = timestampProducer(tmp5(5768).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
   return timestampProducer(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" }, scrollContainer: { flexGrow: 1 }, headerContainer: null, title: null, subtitle: null, separator: null, footerContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
@@ -96,5 +96,5 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
     items2[2] = timestampProducer(Footer, obj8);
     obj6.children = items2;
   }
-  return React5(React4, obj6);
+  return metroImportDefault(React4, obj6);
 };

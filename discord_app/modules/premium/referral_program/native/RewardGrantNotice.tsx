@@ -1,12 +1,12 @@
-// === Module 15483: RewardGrantNotice ===
+// === Module 15570: RewardGrantNotice ===
 
-// Module 15483 (RewardGrantNotice)
+// Module 15570 (RewardGrantNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7423 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 14632 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 15464 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7439 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 14712 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 15551 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,13 +14,13 @@ function OrbsGrantNotice(nRewardsGranted) {
   const tmp = closure_8();
   const obj = { style: tmp.orbsPillContainer, children: null };
   items = [timestampProducer(BalanceWidgetPill.BalanceWidgetPill, { initialRenderedBalance: 0, balance: nRewardsGranted.nRewardsGranted * hasOwnProperty, style: tmp.balancePillOverride }), ];
-  const obj3 = { variant: "text-sm/medium", color: "text-strong", children: null };
+  const obj3 = { variant: "body-sm/medium", color: "text-strong", children: null };
   const intl = util.intl;
   const items1 = [" ", intl.string(util.t.UhguER)];
   obj3.children = items1;
-  items[1] = React5(Text_Text.Text, obj3);
+  items[1] = metroImportDefault(Text_Text.Text, obj3);
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 function DiscountGrantNotice(nRewardsGranted) {
   nRewardsGranted = nRewardsGranted.nRewardsGranted;
@@ -28,18 +28,18 @@ function DiscountGrantNotice(nRewardsGranted) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.formatToPlainString(util.t["P//01n"], { discountPercent, duration: nRewardsGranted });
   items = [timestampProducer(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, size: "xs" }), ];
-  const obj4 = { variant: "text-sm/medium", color: "text-strong", children: null };
+  const obj4 = { variant: "body-sm/medium", color: "text-strong", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.format(util.t["P//01n"], { discountPercent, duration: nRewardsGranted });
   items[1] = timestampProducer(Text_Text.Text, obj4);
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const Constants = fn(15462);
+const Constants = fn(15549);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: closure_4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" }, orbsPillContainer: null, balancePillOverride: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8, alignSelf: "flex-start" };

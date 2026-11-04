@@ -1,18 +1,18 @@
-// === Module 11038: OAuth2AuthorizeContent ===
+// === Module 11087: OAuth2AuthorizeContent ===
 
-// Module 11038 (OAuth2AuthorizeContent)
+// Module 11087 (OAuth2AuthorizeContent)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7081 */;
-import ObscuredSurfaceDefault from "ObscuredSurface" /* 9495 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7096 */;
+import ObscuredSurfaceDefault from "ObscuredSurface" /* 9513 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { fill: { flex: 1 }, scrollView: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 }, scrollViewContentLandscape: { flexDirection: "row", alignItems: "center", width: "100%", flexGrow: 1, gap: 16 }, scrollViewContentPortrait: { flexDirection: "column", width: "100%", flexGrow: 1, gap: 16 }, header: { paddingTop: 24 }, bodyContainer: { flexDirection: "column", gap: 16, padding: 16 }, bodyContainerBackground: null, footerPortrait: null, separator: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
@@ -135,13 +135,13 @@ export default function OAuth2AuthorizeContent(onScroll) {
     const obj9 = { children: appDetails };
     items6[1] = timestampProducer(React4, obj9);
     obj7.children = items6;
-    tmp15Result = React6(React5, obj7);
+    tmp15Result = React5(metroImportDefault, obj7);
   }
   items5[1] = tmp15Result;
   obj6.children = items5;
-  items3[1] = React6(React4, obj6);
+  items3[1] = React5(React4, obj6);
   obj4.children = items3;
-  obj3.children = React6(ObscuredSurfaceDefault, obj4);
+  obj3.children = React5(ObscuredSurfaceDefault, obj4);
   const items7 = [timestampProducer(hasOwnProperty, obj3), ];
   let tmp17Result2 = null;
   if (null != footer) {
@@ -156,5 +156,5 @@ export default function OAuth2AuthorizeContent(onScroll) {
   }
   items7[1] = tmp17Result2;
   obj2.children = items7;
-  return React6(tmp3Result, obj2);
+  return React5(tmp3Result, obj2);
 };

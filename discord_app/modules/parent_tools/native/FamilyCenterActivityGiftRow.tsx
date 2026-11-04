@@ -1,14 +1,14 @@
-// === Module 16952: FamilyCenterActivityGiftRow ===
+// === Module 17044: FamilyCenterActivityGiftRow ===
 
-// Module 16952 (FamilyCenterActivityGiftRow)
+// Module 17044 (FamilyCenterActivityGiftRow)
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8868 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 16940 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16949 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16950 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 16951 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8885 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 17032 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 17041 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 17042 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 17043 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -64,9 +64,9 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj5.subscriptionPlanId = subscriptionPlanId;
     items = [React4(FamilyCenterActivityItemPreviewDefault, obj5), ];
     const obj6 = { style: tmp.textContainer, children: null };
-    const obj7 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: displayName };
+    const obj7 = { variant: "body-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: displayName };
     const items1 = [React4(Text_Text.Text, obj7), ];
-    const obj8 = { variant: "text-xs/medium", color: "text-muted", children: giftSubtext };
+    const obj8 = { variant: "body-xs/medium", color: "text-muted", children: giftSubtext };
     items1[1] = React4(Text_Text.Text, obj8);
     obj6.children = items1;
     items[1] = hasOwnProperty(View, obj6);

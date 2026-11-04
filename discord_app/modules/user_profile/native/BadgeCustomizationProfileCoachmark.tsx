@@ -1,9 +1,9 @@
-// === Module 19034: BadgeCustomizationProfileCoachmark ===
+// === Module 19137: BadgeCustomizationProfileCoachmark ===
 
-// Module 19034 (BadgeCustomizationProfileCoachmark)
+// Module 19137 (BadgeCustomizationProfileCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 5215 */;
+import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 5214 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -52,7 +52,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
       str = "top";
     }
     str2 = str;
-    tmpResult = tmp(9756);
+    tmpResult = tmp(9774);
   }
   const items2 = [stateFromStores, visible, str2, markAsDismissed, onTryItOut, reducedMotion.enabled];
   const memo = obj2.useMemo(() => {
@@ -80,6 +80,6 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
     return obj;
   }, items2);
   const tmp4 = stateFromStores(reducedMotion.useState(null), 2);
-  const coachmark = targetRef(10085).useCoachmark(targetRef, memo);
+  const coachmark = targetRef(10133).useCoachmark(targetRef, memo);
   return null;
 };

@@ -1,19 +1,19 @@
-// === Module 19771: StageBoostUpsellManager ===
+// === Module 19887: StageBoostUpsellManager ===
 
-// Module 19771 (StageBoostUpsellManager)
+// Module 19887 (StageBoostUpsellManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 4998 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import StageMediaHooks from "StageMediaHooks" /* 6832 */;
-import useChannelVideoLimit from "useChannelVideoLimit" /* 9352 */;
-import ActionSheetStore from "ActionSheetStore" /* 5382 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import StageMediaHooks from "StageMediaHooks" /* 6847 */;
+import useChannelVideoLimit from "useChannelVideoLimit" /* 9369 */;
+import ActionSheetStore from "ActionSheetStore" /* 5383 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(6829).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(6844).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
@@ -47,7 +47,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 const obj2 = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6884, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6899, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
                 c8 = true;
               }
             }

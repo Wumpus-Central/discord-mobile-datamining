@@ -1,6 +1,6 @@
-// === Module 15126: UserProfileDismissibleUpsells ===
+// === Module 15206: UserProfileDismissibleUpsells ===
 
-// Module 15126 (UserProfileDismissibleUpsells)
+// Module 15206 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import noop from "module_19" /* 19 */;
@@ -8,19 +8,19 @@ import UserStore from "UserStore" /* 1385 */;
 
 const util = ShopIcon(1113);
 const native = ShopIcon(1187);
-const Text_Text = ShopIcon(5747);
-const components_Button_Button = ShopIcon(5754);
-const Pressables = ShopIcon(7106);
-const XSmallIcon = ShopIcon(7180);
-const NitroWheelIcon = ShopIcon(9656);
-const ShopIcon2 = ShopIcon(12604);
+const Text_Text = ShopIcon(5761);
+const components_Button_Button = ShopIcon(5768);
+const Pressables = ShopIcon(7121);
+const XSmallIcon = ShopIcon(7195);
+const NitroWheelIcon = ShopIcon(9675);
+const ShopIcon2 = ShopIcon(12685);
 require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8878).TrackUserProfileActions;
+const TrackUserProfileActions = fn(8895).TrackUserProfileActions;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(7741).Gradients.PREMIUM_GUILD];
+let items = [...fn(7757).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
 const createStyles = fn(5141);
 let obj2 = { upsellContainer: { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };
@@ -85,20 +85,20 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         const merged1 = Object.assign(tmp2);
         obj3.style = obj2;
         const obj4 = { style: tmp12Result3.header, children: null };
-        const obj5 = { accessibilityRole: "header", variant: "text-sm/semibold", children: null };
+        const obj5 = { accessibilityRole: "header", variant: "body-sm/semibold", children: null };
         const intl = util.intl;
         obj5.children = intl.string(util.t.EIYbj6);
-        items = [React6(Text_Text.Text, obj5), ];
+        items = [React5(Text_Text.Text, obj5), ];
         const obj6 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
         const intl2 = util.intl;
         obj6.accessibilityLabel = intl2.string(util.t["6Xcq+Y"]);
         obj6.onPress = function onPress() {
           return markAsDismissed(constants.USER_DISMISS);
         };
-        obj6.children = React6(XSmallIcon.XSmallIcon, { size: "sm" });
-        items[1] = React6(Pressables.PressableOpacity, obj6);
+        obj6.children = React5(XSmallIcon.XSmallIcon, { size: "sm" });
+        items[1] = React5(Pressables.PressableOpacity, obj6);
         obj4.children = items;
-        const items1 = [React7(View, obj4), ];
+        const items1 = [React6(View, obj4), ];
         let obj7 = { style: tmp12Result3.upsellButtonsContainer, children: null };
         let obj8 = { style: tmp12Result3.upsellButton, children: null };
         let Button = components_Button_Button.Button;
@@ -110,10 +110,10 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         } else {
           stringResult = string(t.x6rkDp);
         }
-        let obj9 = { text: stringResult, onPress: closure_5 ? closure_8 : constants, icon: React6(NitroWheelIcon.NitroWheelIcon, { size: "sm" }), iconPosition: "start", variant: "secondary", shiny: true };
-        obj8.children = React6(Button, obj9);
+        let obj9 = { text: stringResult, onPress: closure_5 ? closure_8 : constants, icon: React5(NitroWheelIcon.NitroWheelIcon, { size: "sm" }), iconPosition: "start", variant: "secondary", shiny: true };
+        obj8.children = React5(Button, obj9);
         obj8 = [, ];
-        obj8[0] = React6(View, obj8);
+        obj8[0] = React5(View, obj8);
         const obj10 = { style: tmp12Result3.upsellButton, children: null };
         Button = components_Button_Button.Button;
         const obj20 = { text: null, onPress: null, icon: null, iconPosition: "start", variant: "secondary" };
@@ -121,20 +121,20 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         obj20.text = intl4.string(util.t.pWG4ze);
         obj20.onPress = onPress;
         ShopIcon = ShopIcon2.ShopIcon;
-        tmp = React6(ShopIcon, { size: "sm" });
+        tmp = React5(ShopIcon, { size: "sm" });
         obj20.icon = tmp;
-        tmp12Result3 = React6(Button, obj20);
+        tmp12Result3 = React5(Button, obj20);
         obj10.children = tmp12Result3;
-        obj9 = React6(View, obj10);
+        obj9 = React5(View, obj10);
         obj8[1] = obj9;
         obj7.children = obj8;
-        obj7 = React7(View, obj7);
+        obj7 = React6(View, obj7);
         items1[1] = obj7;
         obj3.children = items1;
-        obj3 = React7(View, obj3);
+        obj3 = React6(View, obj3);
         obj.children = obj3;
-        React6(native.GradientBorder, obj);
-        const tmp12Result = React6(View, obj8);
+        React5(native.GradientBorder, obj);
+        const tmp12Result = React5(View, obj8);
       }
     };
     tmp5Result = tmp5(tmp6(tmp2[13]), obj5);

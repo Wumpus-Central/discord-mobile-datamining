@@ -1,17 +1,17 @@
-// === Module 17381: SettingsVoiceScreen ===
+// === Module 17472: SettingsVoiceScreen ===
 
-// Module 17381 (SettingsVoiceScreen)
+// Module 17472 (SettingsVoiceScreen)
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5148 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import SettingBuilders from "SettingBuilders" /* 11677 */;
-import KrispLogo2 from "KrispLogo" /* 12097 */;
-import _modDef12098 from "module_12098" /* 12098 */;
-import _modDef12099 from "module_12099" /* 12099 */;
-import SettingLayoutDefault from "SettingLayout" /* 16731 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import SettingBuilders from "SettingBuilders" /* 11728 */;
+import KrispLogo2 from "KrispLogo" /* 12156 */;
+import _modDef12157 from "module_12157" /* 12157 */;
+import _modDef12158 from "module_12158" /* 12158 */;
+import SettingLayoutDefault from "SettingLayout" /* 16823 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2190 */;
@@ -21,32 +21,32 @@ function KrispLogo() {
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef12098;
+    let tmp2Result = _modDef12157;
   } else {
-    tmp2Result = _modDef12099;
+    tmp2Result = _modDef12158;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
   obj = shared;
   const intl = util.intl;
   obj3.accessibilityLabel = intl.string(util.t.vFiCSx);
-  items = [React6(FastImageDefault, obj3), ];
+  items = [React5(FastImageDefault, obj3), ];
   const obj4 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj4.accessibilityLabel = intl2.string(util.t.hvVgAZ);
   obj4.onPress = KrispLogo2.handleKrispLinkPressed;
-  const obj5 = { variant: "text-sm/medium", color: "text-link", children: null };
+  const obj5 = { variant: "body-sm/medium", color: "text-link", children: null };
   const intl3 = util.intl;
   obj5.children = intl3.string(util.t.hvVgAZ);
-  obj4.children = React6(Text_Text.Text, obj5);
-  items[1] = React6(LegacyBaseButton.LegacyPressable, obj4);
+  obj4.children = React5(Text_Text.Text, obj5);
+  items[1] = React5(LegacyBaseButton.LegacyPressable, obj4);
   obj2.children = items;
-  return React7(View, obj2);
+  return React6(View, obj2);
 }
 function SystemProcessingSubLabel() {
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
-    const obj2 = { variant: "text-sm/medium", children: null };
+    const obj2 = { variant: "body-sm/medium", children: null };
     const intl = util.intl;
     const obj3 = {
       onSettingsClick() {
@@ -55,12 +55,12 @@ function SystemProcessingSubLabel() {
         }
     };
     obj2.children = intl.format(util.t.EUNgko, obj3);
-    tmp3 = React6(Text_Text.Text, obj2);
+    tmp3 = React5(Text_Text.Text, obj2);
   }
   return tmp3;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
@@ -141,5 +141,5 @@ export default function SettingsVoiceScreen() {
     obj2.sections = items1;
     return obj.createList(obj2);
   }, []);
-  return React6(SettingLayoutDefault, { node });
+  return React5(SettingLayoutDefault, { node });
 };

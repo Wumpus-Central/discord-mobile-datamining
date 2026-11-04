@@ -1,10 +1,10 @@
-// === Module 15768: BlockedUserInVoiceChannelActionSheet ===
+// === Module 15856: BlockedUserInVoiceChannelActionSheet ===
 
-// Module 15768 (BlockedUserInVoiceChannelActionSheet)
+// Module 15856 (BlockedUserInVoiceChannelActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
@@ -14,8 +14,8 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const setDismissalTimeForUser = fn(15765).setDismissalTimeForUser;
-const SharedSpaceWarningConstants = fn(15767);
+const setDismissalTimeForUser = fn(15853).setDismissalTimeForUser;
+const SharedSpaceWarningConstants = fn(15855);
 ({ BlockWarningEngagements: closure_8, VoiceChannelWarningSurfaces: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
@@ -69,7 +69,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   const obj7 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
   const intl4 = require("util").intl;
   obj7.children = intl4.string(require("util").t["1/gpFh"]);
-  const items5 = [closure_13(require("Text/Text").Text, obj7), closure_13(require("Text/Text").Text, { variant: "text-md/medium", style: tmp.centerText, children: tmp7Result })];
+  const items5 = [closure_13(require("Text/Text").Text, obj7), closure_13(require("Text/Text").Text, { variant: "body-md/medium", style: tmp.centerText, children: tmp7Result })];
   obj6.children = items5;
   items4[1] = closure_12(View, obj6);
   if (null != user) {

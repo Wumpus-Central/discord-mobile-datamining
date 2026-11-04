@@ -1,10 +1,10 @@
-// === Module 11444: VibingWumpusModal ===
+// === Module 11494: VibingWumpusModal ===
 
-// Module 11444 (VibingWumpusModal)
+// Module 11494 (VibingWumpusModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Navigator from "Navigator" /* 7290 */;
-import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 11115 */;
+import Navigator from "Navigator" /* 7306 */;
+import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 11163 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -73,7 +73,7 @@ class VibingWumpusScreen {
     obj16.children = intl.string(tmp5(tmp6[18]).t.L4ifkZ);
     items3 = [, ];
     items3[0] = tmp11(tmp5(tmp6[17]).Text, obj16);
-    obj17 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
+    obj17 = { variant: "body-md/medium", style: tmp.takeoverDescription, children: null };
     intl2 = tmp5(tmp6[18]).intl;
     obj17.children = intl2.string(tmp5(tmp6[18]).t.R8LCMZ);
     items3[1] = tmp11(tmp5(tmp6[17]).Text, obj17);
@@ -155,8 +155,8 @@ class VibingWumpusScreen {
   }
 }
 const View = fn(17).View;
-const VIBING_WUMPUS_MODAL_KEY = fn(11393).VIBING_WUMPUS_MODAL_KEY;
-const InappropriateConversationsConstants = fn(11445);
+const VIBING_WUMPUS_MODAL_KEY = fn(11443).VIBING_WUMPUS_MODAL_KEY;
+const InappropriateConversationsConstants = fn(11495);
 ({ VibingWumpusAction: closure_8, VibingWumpusSource: closure_9 } = InappropriateConversationsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);

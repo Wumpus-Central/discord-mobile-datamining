@@ -1,24 +1,24 @@
-// === Module 9411: SecureFramesUserVerificationBottomSheet ===
+// === Module 9428: SecureFramesUserVerificationBottomSheet ===
 
-// Module 9411 (SecureFramesUserVerificationBottomSheet)
+// Module 9428 (SecureFramesUserVerificationBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import UserActionCreators from "UserActionCreators" /* 8876 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9393 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9396 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9413 */;
-import XLargeBoldIcon from "XLargeBoldIcon" /* 9415 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import UserActionCreators from "UserActionCreators" /* 8893 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9410 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9413 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9430 */;
+import XLargeBoldIcon from "XLargeBoldIcon" /* 9432 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9394);
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const SecureFramesConstants = fn(9411);
 ({ AnalyticsSecureFramesUserVerification: closure_9, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_10, USER_VERIFIED_TOAST_KEY: closure_11 } = SecureFramesConstants);
 const AnalyticsLocations = fn(1072).AnalyticsLocations;
 const jsxProd = fn(21);
@@ -146,7 +146,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     const items9 = [tmp23(tmp25, obj13), , , , ];
     const obj14 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: tmp17 };
     items9[1] = tmp23(tmp2(tmp3[28]).Text, obj14);
-    const obj15 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: tmp18 };
+    const obj15 = { style: tmp.subtitle, variant: "body-md/medium", color: "text-default", children: tmp18 };
     items9[2] = tmp23(tmp2(tmp3[28]).Text, obj15);
     const obj16 = { style: tmp.helpMessage, userId, userKey: fingerprintUserKey };
     items9[3] = tmp23(tmp14(tmp3[29]), obj16);

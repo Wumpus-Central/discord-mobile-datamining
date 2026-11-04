@@ -1,9 +1,9 @@
-// === Module 9064: showSharePreparingModal ===
+// === Module 9081: showSharePreparingModal ===
 
-// Module 9064 (showSharePreparingModal)
+// Module 9081 (showSharePreparingModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 9062 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 9079 */;
 import size from "module_2" /* 2 */;
 
 const SHARE_PREPARING_MODAL_KEY = SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY;
@@ -19,27 +19,27 @@ export function showSharePreparingModal(onCancel) {
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(6864).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(6879).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(6864);
+          const obj = _true(6879);
         }
       }
     };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9065, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9082, dependencyMap.paths), {
       onCancel() {
         if (!_true) {
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(6864).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(6879).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(6864);
+          const obj = _true(6879);
         }
       }
     }, SHARE_PREPARING_MODAL_KEY, { animation: "fade", presentation: "transparentModal" }).then(() => {
       if (_true) {
-        _true(6864).popWithKey(SHARE_PREPARING_MODAL_KEY);
-        const obj = _true(6864);
+        _true(6879).popWithKey(SHARE_PREPARING_MODAL_KEY);
+        const obj = _true(6879);
       }
     });
   }, 1000);

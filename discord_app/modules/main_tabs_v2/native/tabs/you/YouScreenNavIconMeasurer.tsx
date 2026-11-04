@@ -1,15 +1,15 @@
-// === Module 14846: YouScreenNavIconMeasurer ===
+// === Module 14926: YouScreenNavIconMeasurer ===
 
-// Module 14846 (YouScreenNavIconMeasurer)
+// Module 14926 (YouScreenNavIconMeasurer)
 import nativeDefault from "native" /* 575 */;
-import ContextUtilsDefault from "ContextUtils" /* 7737 */;
+import ContextUtilsDefault from "ContextUtils" /* 7753 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const PixelRatio = fn(17).PixelRatio;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-[hasOwnProperty, metroRequire] = ContextUtilsDefault();
+[hasOwnProperty, closure_6] = ContextUtilsDefault();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIconMeasurer.tsx");
 

@@ -1,18 +1,18 @@
-// === Module 12708: MediaKeyboardBottomSheet ===
+// === Module 12789: MediaKeyboardBottomSheet ===
 
-// Module 12708 (MediaKeyboardBottomSheet)
+// Module 12789 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5317 */;
-import ChatInputUtils from "ChatInputUtils" /* 5330 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
-import BottomSheetModalDefault from "BottomSheetModal" /* 5398 */;
-import useMountEffectDefault from "useMountEffect" /* 5716 */;
-import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12543 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5318 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5385 */;
+import BottomSheetModalDefault from "BottomSheetModal" /* 5400 */;
+import useMountEffectDefault from "useMountEffect" /* 5729 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 12624 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,11 +26,11 @@ function MediaKeyboardBackground(arg0) {
   obj.accessibilityLabel = intl.string(util.t.XONG6A);
   items = [style, closure_13().background];
   obj.style = items;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 const View = fn(17).View;
 const MediaKeyboardConstants = fn(1623);
-({ HEADER_HANDLE_HEIGHT: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
+({ HEADER_HANDLE_HEIGHT: closure_6, MediaPickerActionSheetEngagedActions: metroImportDefault } = MediaKeyboardConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

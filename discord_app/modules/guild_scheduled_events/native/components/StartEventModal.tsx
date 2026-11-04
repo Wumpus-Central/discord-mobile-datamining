@@ -1,14 +1,14 @@
-// === Module 9229: StartEventModal ===
+// === Module 9246: StartEventModal ===
 
-// Module 9229 (StartEventModal)
+// Module 9246 (StartEventModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import Pressables from "Pressables" /* 7106 */;
-import _modDef7377 from "module_7377" /* 7377 */;
-import GuildEventCardDefault from "GuildEventCard" /* 9223 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import Pressables from "Pressables" /* 7121 */;
+import _modDef7393 from "module_7393" /* 7393 */;
+import GuildEventCardDefault from "GuildEventCard" /* 9240 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function NavigationBar(onClose) {
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = application_id(native.Icon, { source: _modDef7377 });
+  obj2.children = application_id(native.Icon, { source: _modDef7393 });
   obj.children = application_id(Pressables.PressableOpacity, obj2);
   return application_id(View, obj);
 }
@@ -35,7 +35,7 @@ function StartEventHeader(children) {
   const obj2 = { style: tmp.headerPrivacyLevel, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["q+fFJv"]);
-  items = [application_id(Text_Text.Text, obj2), application_id(Text_Text.Text, { style: tmp.headerTitle, variant: "text-md/medium", color: "text-default", children: children.event.name })];
+  items = [application_id(Text_Text.Text, obj2), application_id(Text_Text.Text, { style: tmp.headerTitle, variant: "body-md/medium", color: "text-default", children: children.event.name })];
   obj.children = items;
   return state(View, obj);
 }
@@ -49,7 +49,7 @@ class PreviewEventCard {
 const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(4996);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: closure_10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(9091).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(9108).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(5141);
@@ -190,7 +190,7 @@ export default function StartEventModal(event) {
   const obj9 = { style: tmp.buttonContainer, children: null };
   let tmp13Result2 = null;
   if (null != error) {
-    const obj10 = { variant: "text-sm/medium", color: "text-feedback-critical", children: error.getAnyErrorMessage() };
+    const obj10 = { variant: "body-sm/medium", color: "text-feedback-critical", children: error.getAnyErrorMessage() };
     tmp13Result2 = closure_12(tmp2(tmp3[16]).Text, obj10);
   }
   const items7 = [tmp13Result2, ];

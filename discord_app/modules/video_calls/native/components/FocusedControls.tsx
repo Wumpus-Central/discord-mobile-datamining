@@ -1,13 +1,13 @@
-// === Module 11993: FocusedControls ===
+// === Module 12052: FocusedControls ===
 
-// Module 11993 (FocusedControls)
+// Module 12052 (FocusedControls)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11994 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 12053 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -59,9 +59,9 @@ function FocusedControlsHeader(arg0) {
   FocusedControlsTsx2.__initData = tmp10;
   const animatedStyle = _mod1652.useAnimatedStyle(FocusedControlsTsx2);
   const obj2 = { style: animatedStyle, children: null };
-  const rect = { top: !tmp9, left: isTouchingLeftScreenEdge, right: true, children: React5(hasOwnProperty, { style: tmp.headerContainer, children: header }) };
-  obj2.children = React5(common_SafeAreaView.SafeAreaPaddingView, rect);
-  return React5(_modDef1652.View, obj2);
+  const rect = { top: !tmp9, left: isTouchingLeftScreenEdge, right: true, children: metroImportDefault(hasOwnProperty, { style: tmp.headerContainer, children: header }) };
+  obj2.children = metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, rect);
+  return metroImportDefault(_modDef1652.View, obj2);
 }
 function FocusedControlsHeaderGradient() {
   const width = useWindowDimensionsDefault().width;
@@ -71,19 +71,19 @@ function FocusedControlsHeaderGradient() {
   const size = { height: "100%", width, children: null };
   const obj2 = { children: null };
   const obj3 = { id: "grad", y1: "0%", x1: "0", x2: "0", y2: "100%", children: null };
-  const items1 = [React5(inlineStyles.Stop, { offset: "0%", stopColor: "black", stopOpacity: ".8" }), React5(inlineStyles.Stop, { offset: "66%", stopColor: "black", stopOpacity: ".51" }), React5(inlineStyles.Stop, { offset: "100%", stopColor: "black", stopOpacity: "0" })];
+  const items1 = [metroImportDefault(inlineStyles.Stop, { offset: "0%", stopColor: "black", stopOpacity: ".8" }), metroImportDefault(inlineStyles.Stop, { offset: "66%", stopColor: "black", stopOpacity: ".51" }), metroImportDefault(inlineStyles.Stop, { offset: "100%", stopColor: "black", stopOpacity: "0" })];
   obj3.children = items1;
-  obj2.children = React6(inlineStyles.LinearGradient, obj3);
-  const items2 = [React5(inlineStyles.Defs, obj2), React5(inlineStyles.Rect, { height: "100%", width, fill: "url(#grad)" })];
+  obj2.children = React5(inlineStyles.LinearGradient, obj3);
+  const items2 = [metroImportDefault(inlineStyles.Defs, obj2), metroImportDefault(inlineStyles.Rect, { height: "100%", width, fill: "url(#grad)" })];
   size.children = items2;
-  obj.children = React6(inlineStyles.Svg, size);
-  return React5(hasOwnProperty, obj);
+  obj.children = React5(inlineStyles.Svg, size);
+  return metroImportDefault(hasOwnProperty, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ backgroundGradient: { position: "absolute", left: 0, right: 0, top: 0, height: 130 }, headerContainer: { position: "relative", height: 54 } });
 let obj = { easing: fn(1187).STANDARD_EASING, duration: 250 };
@@ -114,7 +114,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   const globalStatusIndicatorHeightSharedValue = require("GlobalStatusIndicator").useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
   let obj2 = require("GlobalStatusIndicator");
   let reveal = noop.useContext(require("RevealProvider").RevealContext).reveal;
-  const tmp6 = analyticsLocations(11994)();
+  const tmp6 = analyticsLocations(12053)();
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   if (!reveal) {
     reveal = forceReveal;
@@ -179,8 +179,8 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   FocusedControlsTsx5.__initData = tmp15;
   const animatedStyle = require("module_1652").useAnimatedStyle(FocusedControlsTsx5);
   const tmpResult4 = require("module_1652");
-  analyticsLocations = analyticsLocations(7446)(tmp5(7471).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  dependencyMap = tmp5(11926)();
+  analyticsLocations = analyticsLocations(7462)(tmp5(7487).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+  dependencyMap = tmp5(11985)();
   if (containerStyle == null) {
     containerStyle = absoluteFill.absoluteFill;
   }
@@ -225,7 +225,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
         reveal,
         children
       };
-      tmp27Result = closure_7(tmp5(12003), obj5);
+      tmp27Result = closure_7(tmp5(12062), obj5);
     }
   }
   items7[2] = tmp27Result;

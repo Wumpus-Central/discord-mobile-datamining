@@ -1,16 +1,16 @@
-// === Module 13149: ConjureNumberBadge ===
+// === Module 13232: ConjureNumberBadge ===
 
-// Module 13149 (ConjureNumberBadge)
+// Module 13232 (ConjureNumberBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [nativeDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_1, nativeDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_2, nativeDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_3];
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 1 };

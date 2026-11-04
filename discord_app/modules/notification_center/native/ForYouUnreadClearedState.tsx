@@ -1,11 +1,11 @@
-// === Module 18672: ForYouUnreadClearedState ===
+// === Module 18773: ForYouUnreadClearedState ===
 
-// Module 18672 (ForYouUnreadClearedState)
+// Module 18773 (ForYouUnreadClearedState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import _modDef10679 from "module_10679" /* 10679 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import _modDef10727 from "module_10727" /* 10727 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,13 +25,13 @@ const result = size.fileFinishedImporting("modules/notification_center/native/Fo
 export function ForYouUnreadClearedState() {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef10679, style: tmp.icon, color: tmp.icon.color }), ];
+  items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef10727, style: tmp.icon, color: tmp.icon.color }), ];
   const obj4 = { children: null };
-  const obj5 = { color: "mobile-text-heading-primary", variant: "text-md/semibold", style: tmp.headerText, children: null };
+  const obj5 = { color: "mobile-text-heading-primary", variant: "body-md/semibold", style: tmp.headerText, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.DonStq);
   const items1 = [React4(Text_Text.Text, obj5), ];
-  const obj6 = { color: "text-default", variant: "text-md/medium", children: null };
+  const obj6 = { color: "text-default", variant: "body-md/medium", children: null };
   const intl2 = util.intl;
   obj6.children = intl2.string(util.t.jXFsai);
   items1[1] = React4(Text_Text.Text, obj6);

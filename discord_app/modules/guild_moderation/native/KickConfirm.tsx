@@ -1,9 +1,9 @@
-// === Module 13413: KickConfirm ===
+// === Module 13497: KickConfirm ===
 
-// Module 13413 (KickConfirm)
+// Module 13497 (KickConfirm)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
-import removeConjureServerAppDefault from "removeConjureServerApp" /* 13416 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
+import removeConjureServerAppDefault from "removeConjureServerApp" /* 13500 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -11,7 +11,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -126,21 +126,21 @@ export default noop.memo(function KickConfirm(guildId) {
       const items5 = [ref(tmp4(tmp5[13]), obj9), ];
       if (null == conjureServerApp) {
         const obj10 = { children: null };
-        const obj11 = { style: tmp.redText, variant: "text-md/semibold", children: null };
+        const obj11 = { style: tmp.redText, variant: "body-md/semibold", children: null };
         const intl = tmp7(tmp5[16]).intl;
         const obj12 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
         obj11.children = intl.formatToPlainString(tmp7(tmp5[16]).t["1Ie87p"], obj12);
         const items6 = [tmp20(tmp7(tmp5[15]).Text, obj11), ];
-        const obj13 = { variant: "text-lg/semibold", color: "text-feedback-warning", children: stateFromStores.name };
+        const obj13 = { variant: "body-lg/semibold", color: "text-feedback-warning", children: stateFromStores.name };
         items6[1] = tmp20(tmp7(tmp5[15]).Text, obj13);
         obj10.children = items6;
         let obj14 = obj10;
         const tmp4Result4 = tmp4(tmp5[17]);
       } else {
         obj14 = { children: null };
-        const obj15 = { style: tmp.conjureTitle, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: tmp7(tmp5[18]).formatWithAppTag(tmp4(tmp5[19]).wVNCN7, conjureServerApp.targetAppName) };
+        const obj15 = { style: tmp.conjureTitle, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: tmp7(tmp5[18]).formatWithAppTag(tmp4(tmp5[19]).wVNCN7, conjureServerApp.targetAppName) };
         const items7 = [tmp20(tmp7(tmp5[15]).Text, obj15), ];
-        const obj16 = { style: tmp.conjureServerName, variant: "text-md/semibold", color: "text-muted", children: stateFromStores.name };
+        const obj16 = { style: tmp.conjureServerName, variant: "body-md/semibold", color: "text-muted", children: stateFromStores.name };
         items7[1] = tmp20(tmp7(tmp5[15]).Text, obj16);
         obj14.children = items7;
         const tmp7Result4 = tmp7(tmp5[18]);
@@ -148,7 +148,7 @@ export default noop.memo(function KickConfirm(guildId) {
       items5[1] = closure_11(c10, obj14);
       obj8.children = items5;
       const items8 = [closure_11(conjureServerApp, obj8), , , , , , ];
-      const obj17 = { style: tmp.blurb, variant: "heading-md/medium", color: "text-feedback-warning", children: null };
+      const obj17 = { style: tmp.blurb, variant: "heading-sm/medium", color: "text-feedback-warning", children: null };
       if (null == conjureServerApp) {
         const intl3 = tmp7(tmp5[16]).intl;
         const obj18 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
@@ -208,7 +208,7 @@ export default noop.memo(function KickConfirm(guildId) {
       items8[4] = ref(conjureServerApp, obj23);
       let tmp20Result4 = null;
       if (tmp16[0]) {
-        const obj25 = { style: tmp.errorText, variant: "text-md/semibold", color: "input-text-error-default", children: null };
+        const obj25 = { style: tmp.errorText, variant: "body-md/semibold", color: "input-text-error-default", children: null };
         const intl6 = tmp7(tmp5[16]).intl;
         obj25.children = intl6.string(tmp4(tmp5[19]).PJ2Fkn);
         tmp20Result4 = tmp20(tmp7(tmp5[15]).Text, obj25);
@@ -216,7 +216,7 @@ export default noop.memo(function KickConfirm(guildId) {
       items8[5] = tmp20Result4;
       let tmp20Result5 = null;
       if (tmp18.kickError) {
-        const obj26 = { style: tmp.errorText, variant: "text-md/semibold", color: "input-text-error-default", children: null };
+        const obj26 = { style: tmp.errorText, variant: "body-md/semibold", color: "input-text-error-default", children: null };
         const intl7 = tmp7(tmp5[16]).intl;
         const obj27 = { user: tmp4(tmp5[17]).getName(stateFromStores1) };
         obj26.children = intl7.format(tmp7(tmp5[16]).t.UktD5J, obj27);

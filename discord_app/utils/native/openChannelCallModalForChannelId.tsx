@@ -1,8 +1,8 @@
-// === Module 13320: openChannelCallModalForChannelId ===
+// === Module 13403: openChannelCallModalForChannelId ===
 
-// Module 13320 (openChannelCallModalForChannelId)
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8063 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8074 */;
+// Module 13403 (openChannelCallModalForChannelId)
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8079 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8090 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;

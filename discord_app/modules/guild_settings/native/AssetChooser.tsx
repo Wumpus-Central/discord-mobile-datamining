@@ -1,13 +1,13 @@
-// === Module 19817: AssetChooser ===
+// === Module 19933: AssetChooser ===
 
-// Module 19817 (AssetChooser)
+// Module 19933 (AssetChooser)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import Pressables from "Pressables" /* 7106 */;
-import _modDef19818 from "module_19818" /* 19818 */;
-import _modDef19819 from "module_19819" /* 19819 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import Pressables from "Pressables" /* 7121 */;
+import _modDef19934 from "module_19934" /* 19934 */;
+import _modDef19935 from "module_19935" /* 19935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, assetImage: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
 let size = { width: "100%", height: 192, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -137,21 +137,21 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef19818;
+    tmp9Result = _modDef19934;
   }
-  items = [React5(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
+  items = [metroImportDefault(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef19819 };
-    obj4.children = React5(FastImageDefault, obj5);
-    tmp5Result = React5(React4, obj4);
+    const obj5 = { style: tmp.uploadIcon, source: _modDef19935 };
+    obj4.children = metroImportDefault(FastImageDefault, obj5);
+    tmp5Result = metroImportDefault(React4, obj4);
     const tmp9Result2 = FastImageDefault;
   }
   items[1] = tmp5Result;
   obj2.children = items;
-  obj.children = React6(React4, obj2);
-  const children = [React5(Pressables.PressableOpacity, obj), ];
+  obj.children = React5(React4, obj2);
+  const children = [metroImportDefault(Pressables.PressableOpacity, obj), ];
   let tmp5Result2 = null;
   if (null != source) {
     tmp5Result2 = null;
@@ -160,12 +160,12 @@ prototype["render"] = function render() {
       const obj7 = { style: tmp.remove, children: null };
       const intl2 = util.intl;
       obj7.children = intl2.string(util.t.N86XcP);
-      obj6.children = React5(native.LegacyText, obj7);
-      tmp5Result2 = React5(hasOwnProperty, obj6);
+      obj6.children = metroImportDefault(native.LegacyText, obj7);
+      tmp5Result2 = metroImportDefault(hasOwnProperty, obj6);
     }
   }
   children[1] = tmp5Result2;
-  return React6(React7, { children });
+  return React5(React6, { children });
 };
 AssetChooser.contextType = fn(5207).ThemeContext;
 size = fn(2);

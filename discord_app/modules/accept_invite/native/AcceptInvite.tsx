@@ -1,16 +1,16 @@
-// === Module 14458: AcceptInvite ===
+// === Module 14538: AcceptInvite ===
 
-// Module 14458 (AcceptInvite)
+// Module 14538 (AcceptInvite)
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useToken from "useToken" /* 5719 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5732 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import Card from "Card" /* 7103 */;
-import _modDef14467 from "module_14467" /* 14467 */;
+import useToken from "useToken" /* 5732 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import Card from "Card" /* 7118 */;
+import _modDef14547 from "module_14547" /* 14547 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -64,8 +64,8 @@ function getInviteState(invite) {
 function InviteResolving() {
   const tmp = closure_10();
   const obj2 = { style: tmp.resolvingContainer, children: null };
-  obj2.children = React6(hasOwnProperty, { color: useToken.useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" });
-  return React6(timestampProducer, obj2);
+  obj2.children = React5(hasOwnProperty, { color: useToken.useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" });
+  return React5(timestampProducer, obj2);
 }
 function AcceptInviteCardComponent(invite) {
   invite = invite.invite;
@@ -84,18 +84,18 @@ function AcceptInviteCardComponent(invite) {
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_8(first(14459), obj2);
+    return closure_8(first(14539), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_8(first(14462), obj);
+    return closure_8(first(14542), obj);
   } else {
     return closure_8(InviteResolving, {});
   }
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
 const InviteStates = fn(1072).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -130,7 +130,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef14467;
+    let guildSplashSource = _modDef14547;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);
@@ -145,14 +145,14 @@ export default function AcceptInvite(invite) {
   const obj7 = { source: guildSplashSource, style: null };
   const items1 = [tmp2.imageStyle, { height, width }];
   obj7.style = items1;
-  obj6.children = React6(FastImageDefault, obj7);
-  const items2 = [React6(timestampProducer, obj6), ];
+  obj6.children = React5(FastImageDefault, obj7);
+  const items2 = [React5(timestampProducer, obj6), ];
   const obj8 = { style: tmp2.cardContainer, children: null };
   const obj9 = { style: tmp2.cardContent, children: null };
   const merged1 = Object.assign(merged);
-  obj9.children = React6(AcceptInviteCardComponent, { invite });
-  obj8.children = React6(timestampProducer, obj9);
-  items2[1] = React6(Card.Card, obj8);
+  obj9.children = React5(AcceptInviteCardComponent, { invite });
+  obj8.children = React5(timestampProducer, obj9);
+  items2[1] = React5(Card.Card, obj8);
   obj5.children = items2;
-  return React7(timestampProducer, obj5);
+  return React6(timestampProducer, obj5);
 };

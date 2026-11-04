@@ -1,20 +1,20 @@
-// === Module 18385: ChannelsUnreadBars ===
+// === Module 18479: ChannelsUnreadBars ===
 
-// Module 18385 (ChannelsUnreadBars)
+// Module 18479 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
-import useFontScale from "useFontScale" /* 5762 */;
-import FastList from "FastList" /* 7361 */;
-import ChannelListState from "ChannelListState" /* 7831 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5385 */;
+import useFontScale from "useFontScale" /* 5776 */;
+import FastList from "FastList" /* 7377 */;
+import ChannelListState from "ChannelListState" /* 7847 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
-import ReadStateStore from "ReadStateStore" /* 6962 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7021 */;
+import ReadStateStore from "ReadStateStore" /* 6977 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
 
 const require = globalThis.__r;
 
@@ -202,8 +202,8 @@ function findNearestUnreadItem(c0, c1, headerHeight, youBarTotalHeight) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(11186).getScaledChannelRowHeight;
-const UnreadSetting = fn(6896).UnreadSetting;
+const getScaledChannelRowHeight = fn(11236).getScaledChannelRowHeight;
+const UnreadSetting = fn(6911).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(5141);

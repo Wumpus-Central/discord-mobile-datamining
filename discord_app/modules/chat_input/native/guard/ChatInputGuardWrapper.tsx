@@ -1,27 +1,27 @@
-// === Module 14137: ChatInputGuardWrapper ===
+// === Module 14223: ChatInputGuardWrapper ===
 
-// Module 14137 (ChatInputGuardWrapper)
+// Module 14223 (ChatInputGuardWrapper)
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5060 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5079 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
-import MemberVerificationUtils from "MemberVerificationUtils" /* 7094 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11735 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 14143 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
+import MemberVerificationUtils from "MemberVerificationUtils" /* 7109 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7628 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11790 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 14229 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 5074 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6828 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6843 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const isThread = fn(4994).isThread;
-const TextAreaCta = fn(12945).TextAreaCta;
+const TextAreaCta = fn(13027).TextAreaCta;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = fn(7332).PHONE_VERIFICATION_MODAL_KEY;
+let closure_14 = fn(7348).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");

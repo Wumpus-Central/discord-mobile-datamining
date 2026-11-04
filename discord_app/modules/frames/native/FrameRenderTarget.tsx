@@ -1,14 +1,14 @@
-// === Module 12386: FrameRenderTarget ===
+// === Module 12451: FrameRenderTarget ===
 
-// Module 12386 (FrameRenderTarget)
-import FramePoolManagerDefault from "FramePoolManager" /* 12388 */;
+// Module 12451 (FrameRenderTarget)
+import FramePoolManagerDefault from "FramePoolManager" /* 12453 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { target: { flex: 1 }, loading: null };
 let obj3 = {};

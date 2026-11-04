@@ -1,9 +1,9 @@
-// === Module 18382: ServerPreviewPill ===
+// === Module 18476: ServerPreviewPill ===
 
-// Module 18382 (ServerPreviewPill)
+// Module 18476 (ServerPreviewPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,9 +20,9 @@ const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPrev
 export default function ServerPreviewPill() {
   const tmp = closure_4();
   const obj = { style: tmp.pill, accessibilityRole: "text", children: null };
-  const obj2 = { variant: "text-xs/semibold", style: tmp.text, children: null };
+  const obj2 = { variant: "body-xs/semibold", style: tmp.text, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.KNhFgD);
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: tmp.text, children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", style: tmp.text, children: null });
   return <View style={tmp.pill} accessibilityRole="text">{null}</View>;
 };

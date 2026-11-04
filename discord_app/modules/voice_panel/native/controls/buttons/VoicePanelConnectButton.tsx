@@ -1,15 +1,15 @@
-// === Module 19470: VoicePanelConnectButton ===
+// === Module 19574: VoicePanelConnectButton ===
 
-// Module 19470 (VoicePanelConnectButton)
+// Module 19574 (VoicePanelConnectButton)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useAlertStore from "useAlertStore" /* 6080 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8074 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 14877 */;
-import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 19471 */;
-import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 19474 */;
-import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 19475 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useAlertStore from "useAlertStore" /* 6095 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8090 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 14957 */;
+import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 19575 */;
+import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 19578 */;
+import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 19579 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
@@ -109,6 +109,6 @@ export default function ConnectButton(props) {
   const element = { onPress: callback1, props: props.props, accessibilityLabel: stringResult, style: tmp.connectButton, children: null };
   const items3 = [stringResult, tmp.connectText];
   const tmp6Result2 = require("SpoilerChannelUtils");
-  element.children = canConnect.useMemo(() => jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "text-overlay-light", style: connectText.connectText, children }), items3);
+  element.children = canConnect.useMemo(() => jsx(Text_Text.Text, { variant: "body-sm/semibold", color: "text-overlay-light", style: connectText.connectText, children }), items3);
   return isAtMaxCapacity(tmp2(guildId[18]), element);
 };

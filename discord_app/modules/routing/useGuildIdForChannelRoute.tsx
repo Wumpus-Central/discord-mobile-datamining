@@ -1,6 +1,6 @@
-// === Module 5877: useGuildIdForChannelRoute ===
+// === Module 5891: useGuildIdForChannelRoute ===
 
-// Module 5877 (useGuildIdForChannelRoute)
+// Module 5891 (useGuildIdForChannelRoute)
 import initialize from "initialize" /* 504 */;
 import FavoriteStore from "FavoriteStore" /* 4993 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;

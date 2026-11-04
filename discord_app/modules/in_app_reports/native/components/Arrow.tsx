@@ -1,9 +1,9 @@
-// === Module 8486: Arrow ===
+// === Module 8503: Arrow ===
 
-// Module 8486 (Arrow)
+// Module 8503 (Arrow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import _modDef8487 from "module_8487" /* 8487 */;
+import _modDef8504 from "module_8504" /* 8504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,5 +16,5 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 
 export default function Arrow() {
   const tmp = closure_4();
-  return jsx(native.Icon, { source: _modDef8487, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
+  return jsx(native.Icon, { source: _modDef8504, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
 };

@@ -1,15 +1,15 @@
-// === Module 9198: AddModerators ===
+// === Module 9215: AddModerators ===
 
-// Module 9198 (AddModerators)
+// Module 9215 (AddModerators)
 import nativeDefault from "native" /* 575 */;
-import HeaderActionButton from "HeaderActionButton" /* 7682 */;
+import HeaderActionButton from "HeaderActionButton" /* 7698 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
 const View = fn(17).View;
-const RowType = fn(8071).RowType;
+const RowType = fn(8087).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -41,11 +41,11 @@ export default function AddModerators(guildId) {
     const mapped = found.map((row) => {
       row = row.row;
       if (row.rowType === constants.ROLE) {
-        let moderatorOverwrite = guildId(6830).createModeratorOverwrite(row.id, guildId(2121).PermissionOverwriteType.ROLE);
-        const obj2 = guildId(6830);
+        let moderatorOverwrite = guildId(6845).createModeratorOverwrite(row.id, guildId(2121).PermissionOverwriteType.ROLE);
+        const obj2 = guildId(6845);
       } else {
-        moderatorOverwrite = guildId(6830).createModeratorOverwrite(row.id, guildId(2121).PermissionOverwriteType.MEMBER);
-        const obj = guildId(6830);
+        moderatorOverwrite = guildId(6845).createModeratorOverwrite(row.id, guildId(2121).PermissionOverwriteType.MEMBER);
+        const obj = guildId(6845);
       }
       return moderatorOverwrite;
     });
@@ -71,12 +71,12 @@ export default function AddModerators(guildId) {
       stringResult = intl.string(guildId(navigation[13]).t["5Wxrcd"]);
     }
     guildId = stringResult;
-    navigation.setOptions({ headerRight: first ? (() => closure_1_8(stringResult(navigation[14]).HeaderSubmittingIndicator, {})) : (() => React6(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress })) });
-    const obj = { headerRight: first ? (() => closure_1_8(stringResult(navigation[14]).HeaderSubmittingIndicator, {})) : (() => React6(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress })) };
+    navigation.setOptions({ headerRight: first ? (() => closure_1_8(stringResult(navigation[14]).HeaderSubmittingIndicator, {})) : (() => React5(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress })) });
+    const obj = { headerRight: first ? (() => closure_1_8(stringResult(navigation[14]).HeaderSubmittingIndicator, {})) : (() => React5(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress })) };
   }, items1);
   let obj2 = { style: tmp3.addMembersContainer, children: null };
   const obj3 = { style: tmp3.moderatorDescriptionContainer, children: null };
-  const obj4 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj4 = { variant: "body-sm/medium", color: "text-default", children: null };
   let intl = guildId(navigation[13]).intl;
   obj4.children = intl.string(guildId(navigation[13]).t.f7VbhF);
   obj3.children = closure_8(guildId(navigation[16]).Text, obj4);

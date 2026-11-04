@@ -1,9 +1,9 @@
-// === Module 18284: SpotifyNeutralIcon ===
+// === Module 18381: SpotifyNeutralIcon ===
 
-// Module 18284 (SpotifyNeutralIcon)
+// Module 18381 (SpotifyNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod18285 from "module_18285" /* 18285 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod18382 from "module_18382" /* 18382 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function SpotifyNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18285, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18382, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

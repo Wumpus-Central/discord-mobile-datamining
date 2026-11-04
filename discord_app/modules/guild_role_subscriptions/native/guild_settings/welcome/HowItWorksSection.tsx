@@ -1,13 +1,13 @@
-// === Module 20037: HowItWorksSection ===
+// === Module 20153: HowItWorksSection ===
 
-// Module 20037 (HowItWorksSection)
+// Module 20153 (HowItWorksSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 20038 */;
-import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 20042 */;
-import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 20046 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import PerksTicketSpotIllustration from "PerksTicketSpotIllustration" /* 20154 */;
+import AnnouncementMegaphoneSpotIllustration from "AnnouncementMegaphoneSpotIllustration" /* 20158 */;
+import CoinsAndBagSpotIllustration from "CoinsAndBagSpotIllustration" /* 20162 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ function HowItWorksCard(Illustration) {
   ({ cardNumber, description } = Illustration);
   const tmp = closure_5();
   const obj = { style: tmp.card, accessible: true, accessibilityLabel: "" + cardNumber + " - " + description, children: null };
-  items = [React3(Text_Text.Text, { style: tmp.cardNumber, variant: "text-xs/semibold", color: "text-overlay-light", children: cardNumber }), React3(View, { style: tmp.howItWorksCardIcon, children: React3(Illustration.Illustration, { width: 108 }) }), React3(Text_Text.Text, { style: tmp.howItWorksCardDescription, variant: "text-sm/normal", color: "mobile-text-heading-primary", children: description })];
+  items = [React3(Text_Text.Text, { style: tmp.cardNumber, variant: "body-xs/semibold", color: "text-overlay-light", children: cardNumber }), React3(View, { style: tmp.howItWorksCardIcon, children: React3(Illustration.Illustration, { width: 108 }) }), React3(Text_Text.Text, { style: tmp.howItWorksCardDescription, variant: "body-sm/normal", color: "mobile-text-heading-primary", children: description })];
   obj.children = items;
   return React4(View, obj);
 }

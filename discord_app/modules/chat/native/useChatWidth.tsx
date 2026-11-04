@@ -1,10 +1,10 @@
-// === Module 11692: useChatWidth ===
+// === Module 11743: useChatWidth ===
 
-// Module 11692 (useChatWidth)
-import useChatLayoutDefault from "useChatLayout" /* 5324 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5326 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11693 */;
-import useDrawerWidth from "useDrawerWidth" /* 11694 */;
+// Module 11743 (useChatWidth)
+import useChatLayoutDefault from "useChatLayout" /* 5325 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5327 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11744 */;
+import useDrawerWidth from "useDrawerWidth" /* 11745 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

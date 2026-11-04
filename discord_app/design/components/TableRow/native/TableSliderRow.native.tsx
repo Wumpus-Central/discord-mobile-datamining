@@ -1,10 +1,10 @@
-// === Module 15999: TableSliderRow ===
+// === Module 16089: TableSliderRow ===
 
-// Module 15999 (TableSliderRow)
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 7102 */;
-import Card from "Card" /* 7103 */;
-import Slider from "Slider" /* 16000 */;
+// Module 16089 (TableSliderRow)
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 7117 */;
+import Card from "Card" /* 7118 */;
+import Slider from "Slider" /* 16090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }, label: { flexShrink: 1 }, slider: { marginStart: -4, marginTop: 8 } });
 const size = fn(2);
@@ -49,10 +49,10 @@ export function TableSliderRow(end) {
   }
   obj2.end = tmp9;
   const obj3 = { style: tmp2.header, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-  items = [hasOwnProperty(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp2.label, children: label }), ];
+  items = [hasOwnProperty(Text_Text.Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", style: tmp2.label, children: label }), ];
   let tmp11Result = null;
   if (null != formatValue) {
-    const obj5 = { variant: "text-md/medium", color: "text-muted", children: formatValue(tmp6[0]) };
+    const obj5 = { variant: "body-md/medium", color: "text-muted", children: formatValue(tmp6[0]) };
     tmp11Result = hasOwnProperty(Text_Text.Text, obj5);
   }
   items[1] = tmp11Result;

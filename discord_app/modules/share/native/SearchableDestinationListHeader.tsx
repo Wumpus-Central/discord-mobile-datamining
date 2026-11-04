@@ -1,13 +1,13 @@
-// === Module 13530: SearchableDestinationListHeader ===
+// === Module 13614: SearchableDestinationListHeader ===
 
-// Module 13530 (SearchableDestinationListHeader)
+// Module 13614 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import Link from "Link" /* 1500 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import _mod7131 from "module_7131" /* 7131 */;
-import HeaderShared from "HeaderShared" /* 9943 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import _mod7146 from "module_7146" /* 7146 */;
+import HeaderShared from "HeaderShared" /* 9961 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ export default function SearchableDestinationListHeader(arg0) {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {
-      return jsx(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle, subtitleColor, variant: "redesign/heading-18/semibold" });
+      return jsx(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle, subtitleColor, variant: "heading-md/semibold" });
     },
     headerTitleAlign: "center",
     headerLeft: null,
@@ -67,11 +67,11 @@ export default function SearchableDestinationListHeader(arg0) {
     headerStatusBarHeight = num + nativeDefault.space.PX_8;
   }
   obj3.headerStatusBarHeight = headerStatusBarHeight;
-  return jsx(_mod7131.Header, {
+  return jsx(_mod7146.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {
-      return jsx(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle, subtitleColor, variant: "redesign/heading-18/semibold" });
+      return jsx(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle, subtitleColor, variant: "heading-md/semibold" });
     },
     headerTitleAlign: "center",
     headerLeft: null,

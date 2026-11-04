@@ -1,6 +1,6 @@
-// === Module 7271: EnterEmail ===
+// === Module 7287: EnterEmail ===
 
-// Module 7271 (EnterEmail)
+// Module 7287 (EnterEmail)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,8 +9,8 @@ import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(7123);
+({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
+const ChangeEmailStore = fn(7138);
 ({ useChangeEmailError: closure_10, useChangeEmailStore: closure_11, ChangeEmailFields: closure_12 } = ChangeEmailStore);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
@@ -139,7 +139,7 @@ export default function EnterEmail(isChangeEmail) {
     }
     obj5.children = stringResult;
     const items3 = [closure_14(tmp2(tmp3[15]).Text, obj5), , , ];
-    let obj6 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
+    let obj6 = { style: tmp.prompt, variant: "body-sm/medium", color: "text-default", children: null };
     if (null != stateFromStores.email) {
       const intl4 = tmp2(tmp3[16]).intl;
       const obj7 = { email: stateFromStores.email };

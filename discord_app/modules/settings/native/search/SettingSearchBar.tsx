@@ -1,12 +1,12 @@
-// === Module 16745: SettingSearchBar ===
+// === Module 16837: SettingSearchBar ===
 
-// Module 16745 (SettingSearchBar)
+// Module 16837 (SettingSearchBar)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
-import Search_SearchBar from "Search/SearchBar" /* 7339 */;
-import settings_tracking_Tracking from "settings/tracking/Tracking" /* 16739 */;
+import Search_SearchBar from "Search/SearchBar" /* 7355 */;
+import Tracking from "Tracking" /* 16831 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16733 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16825 */;
 
 require = fn;
 const View = fn(17).View;
@@ -24,7 +24,7 @@ export default function SettingSearchBar() {
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, []);
   const callback1 = noop.useCallback(() => {
-    const result = settings_tracking_Tracking.trackSettingSearchInputFocused();
+    const result = Tracking.trackSettingSearchInputFocused();
     UserSettingSearchStore.setState({ isActive: true, isFocused: true });
   }, []);
   const callback2 = noop.useCallback(() => {

@@ -1,24 +1,24 @@
-// === Module 17343: UserSettingsGuildRoleSubscriptions ===
+// === Module 17434: UserSettingsGuildRoleSubscriptions ===
 
-// Module 17343 (UserSettingsGuildRoleSubscriptions)
+// Module 17434 (UserSettingsGuildRoleSubscriptions)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 17344 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 17345 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 17349 */;
-import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 17350 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 17435 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 17436 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 17440 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 17441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GuildRoleSubscriptionsSectionHeader() {
   const tmp = closure_8();
   const obj = { style: tmp.sectionHeader, children: null };
-  const obj2 = { variant: "eyebrow", color: "text-default", children: null };
+  const obj2 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["KzCF/6"]);
   items = [hasOwnProperty(Text_Text.Text, obj2), ];
-  const obj3 = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj3 = { style: tmp.sectionSubtitle, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t["Y+ucR7"]);
   items[1] = hasOwnProperty(Text_Text.Text, obj3);
@@ -38,7 +38,7 @@ function ItemSeparator() {
 get_ActivityIndicator = fn(17);
 ({ View: c3, SectionList: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = "role-subscriptions";
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });

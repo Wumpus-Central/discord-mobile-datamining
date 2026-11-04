@@ -1,13 +1,13 @@
-// === Module 13347: GameOrganizationBenefitsCarousel ===
+// === Module 13430: GameOrganizationBenefitsCarousel ===
 
-// Module 13347 (GameOrganizationBenefitsCarousel)
+// Module 13430 (GameOrganizationBenefitsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2533 from "module_2533" /* 2533 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import Card from "Card" /* 7103 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import Card from "Card" /* 7118 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,14 +36,14 @@ function BenefitCard(arg0) {
     const obj5 = { style: tmp.benefitImage };
     tmp2Result = timestampProducer(View, obj5);
   }
-  const items1 = [tmp2Result, timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: text })];
+  const items1 = [tmp2Result, timestampProducer(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", children: text })];
   obj2.children = items1;
-  obj.children = React5(Stack_Stack.Stack, obj2);
+  obj.children = metroImportDefault(Stack_Stack.Stack, obj2);
   return timestampProducer(Card.Card, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
 let items = [{ message: _modDef2533.WUVzdk }, ];

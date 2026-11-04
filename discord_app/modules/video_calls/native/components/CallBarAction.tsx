@@ -1,11 +1,11 @@
-// === Module 11852: CallBarAction ===
+// === Module 11911: CallBarAction ===
 
-// Module 11852 (CallBarAction)
+// Module 11911 (CallBarAction)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import Pressables from "Pressables" /* 7106 */;
-import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11854 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import Pressables from "Pressables" /* 7121 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -121,9 +121,9 @@ class ActionButton {
   }
 }
 const View = fn(17).View;
-const resetFocusTimer = fn(11133).resetFocusTimer;
+const resetFocusTimer = fn(11181).resetFocusTimer;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const ColorUtils = fn(5138);
 let closure_8 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let closure_9 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
@@ -210,7 +210,7 @@ export function NotifiedActionButton(isMentioned) {
     const obj3 = { style: null, children: null };
     items[1] = notificationAreaMentioned;
     obj3.style = items;
-    const obj4 = { style: tmp2.notificationText, variant: "text-xs/semibold", color: "text-overlay-light", children: isMentioned.notifications };
+    const obj4 = { style: tmp2.notificationText, variant: "body-xs/semibold", color: "text-overlay-light", children: isMentioned.notifications };
     obj3.children = timestampProducer(Text_Text.Text, obj4);
     obj.children = timestampProducer(View, obj3);
     obj2.children = timestampProducer(ActionButton, obj);

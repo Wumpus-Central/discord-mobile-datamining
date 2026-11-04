@@ -1,6 +1,6 @@
-// === Module 7884: LayerActionCreators ===
+// === Module 7900: LayerActionCreators ===
 
-// Module 7884 (LayerActionCreators)
+// Module 7900 (LayerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

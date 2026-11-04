@@ -1,6 +1,6 @@
-// === Module 8939: useBadges ===
+// === Module 8956: useBadges ===
 
-// Module 8939 (useBadges)
+// Module 8956 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4966 */;

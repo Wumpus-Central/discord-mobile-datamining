@@ -1,15 +1,15 @@
-// === Module 8314: FormSwitchRow ===
+// === Module 8330: FormSwitchRow ===
 
-// Module 8314 (FormSwitchRow)
+// Module 8330 (FormSwitchRow)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import RedesignCompat from "RedesignCompat" /* 7185 */;
-import FormRowDefault from "FormRow" /* 7429 */;
-import FormLabelDefault from "FormLabel" /* 7431 */;
-import TableSwitchRow from "TableSwitchRow" /* 7489 */;
+import RedesignCompat from "RedesignCompat" /* 7200 */;
+import FormRowDefault from "FormRow" /* 7445 */;
+import FormLabelDefault from "FormLabel" /* 7447 */;
+import TableSwitchRow from "TableSwitchRow" /* 7505 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const Form_FormSwitchDefault = tmp13(8312);
+const Form_FormSwitchDefault = tmp13(8328);
 require = fn;
 function FormSwitchRow(onValueChange) {
   onValueChange = onValueChange.onValueChange;
@@ -48,7 +48,7 @@ function FormSwitchRow(onValueChange) {
   const obj3 = { style: tmp2.trailing, children: null };
   const items1 = [timestampProducer(FormLabelDefault, { numberOfLines, text: label }), null != trailing && trailing];
   obj3.children = items1;
-  obj2.label = React5(View, obj3);
+  obj2.label = metroImportDefault(View, obj3);
   obj2.subLabel = subLabel;
   obj2.disabled = flag;
   let handleOnPress;
@@ -85,7 +85,7 @@ function FormSwitchRow(onValueChange) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" } });
 const size = fn(2);

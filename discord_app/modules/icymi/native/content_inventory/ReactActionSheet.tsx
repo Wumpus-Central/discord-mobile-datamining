@@ -1,12 +1,12 @@
-// === Module 18737: ReactActionSheet ===
+// === Module 18838: ReactActionSheet ===
 
-// Module 18737 (ReactActionSheet)
+// Module 18838 (ReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5738 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9048 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10070 */;
-import ICYMIContext from "ICYMIContext" /* 18683 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5752 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9065 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
+import ICYMIContext from "ICYMIContext" /* 18784 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -90,10 +90,10 @@ function ReactActionSheetBase(content) {
               return obj3;
             } else {
               closure_5(true);
-              v1(9048).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(9048);
+              v1(9065).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(9065);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(9048).feedItemActioned(obj4);
+              v1(9065).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };
@@ -264,7 +264,7 @@ function ReactActionSheetBase(content) {
               disabled,
               children: null
             };
-            const obj12 = { variant: "text-md/medium", color: "interactive-text-default", style: null, allowFontScaling: false, children: null };
+            const obj12 = { variant: "body-md/medium", color: "interactive-text-default", style: null, allowFontScaling: false, children: null };
             const items1 = [, ];
             ({ defaultEmoji: arr2[0], emojiText: arr2[1] } = closure_3);
             obj12.style = items1;
@@ -322,7 +322,7 @@ function ReactActionSheetBase(content) {
   tmp2 = loading;
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5397).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -352,8 +352,8 @@ export default function ReactActionSheet(arg0) {
     const obj = { children: null };
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    obj.children = React7(ReactActionSheetBase, obj2);
-    return React7(ICYMIContext.ICYMIContextProvider, obj);
+    obj.children = React6(ReactActionSheetBase, obj2);
+    return React6(ICYMIContext.ICYMIContextProvider, obj);
   }
 };
 export function getStatusReplyContent(reply) {

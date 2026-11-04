@@ -1,9 +1,9 @@
-// === Module 9698: TagIcon ===
+// === Module 9716: TagIcon ===
 
-// Module 9698 (TagIcon)
+// Module 9716 (TagIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod9699 from "module_9699" /* 9699 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod9717 from "module_9717" /* 9717 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TagIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9699, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9717, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

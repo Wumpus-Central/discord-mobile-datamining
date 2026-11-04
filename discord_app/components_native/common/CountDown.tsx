@@ -1,9 +1,9 @@
-// === Module 10279: CountDown ===
+// === Module 10327: CountDown ===
 
-// Module 10279 (CountDown)
+// Module 10327 (CountDown)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -107,7 +107,7 @@ prototype["render"] = function render() {
     const NumberResult = Number(deadline);
     tmp2 = null != freezeAtRemainingSeconds && result <= freezeAtRemainingSeconds;
   }
-  return jsx(Text_Text.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
+  return jsx(Text_Text.Text, { tabularNumbers: true, variant: "body-md/semibold", style: style.style, children });
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/CountDown.tsx");

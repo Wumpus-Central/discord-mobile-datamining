@@ -1,20 +1,20 @@
-// === Module 16763: AgeNoticePromoSheet ===
+// === Module 16855: AgeNoticePromoSheet ===
 
-// Module 16763 (AgeNoticePromoSheet)
+// Module 16855 (AgeNoticePromoSheet)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import _modDef3255 from "module_3255" /* 3255 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
-import openAgeNoticePromoSheet from "openAgeNoticePromoSheet" /* 16762 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
+import openAgeNoticePromoSheet from "openAgeNoticePromoSheet" /* 16854 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const AGE_NOTICE_BLOG_URL = fn(6857).AGE_NOTICE_BLOG_URL;
+const AGE_NOTICE_BLOG_URL = fn(6872).AGE_NOTICE_BLOG_URL;
 const Constants = fn(1072);
-({ HelpdeskArticles: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
+({ HelpdeskArticles: hasOwnProperty, UserSettingsSections: closure_6 } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -30,9 +30,9 @@ let result = size.fileFinishedImporting("modules/age_assurance/age_notice/native
 export default function AgeNoticePromoSheet(markAsDismissed) {
   let dismissOnce;
   const tmp = closure_10();
-  const isVerifiedTeen = dismissOnce(6846).useIsVerifiedTeen();
-  let obj = dismissOnce(6846);
-  dismissOnce = dismissOnce(16764).useDismissOnce(markAsDismissed.markAsDismissed);
+  const isVerifiedTeen = dismissOnce(6861).useIsVerifiedTeen();
+  let obj = dismissOnce(6861);
+  dismissOnce = dismissOnce(16856).useDismissOnce(markAsDismissed.markAsDismissed);
   items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -54,7 +54,7 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
     dismissOnce(ContentDismissActionType.TAKE_ACTION);
     ActionSheetActionCreatorsDefault.hideActionSheet(openAgeNoticePromoSheet.AGE_NOTICE_PROMO_SHEET_KEY);
     const obj2 = AgeVerificationActionCreatorsDefault;
-    obj2.openUrl(HelpdeskUtilsDefault.getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+    obj2.openUrl(HelpdeskUtilsDefault.getArticleURL(constants.AGE_VERIFICATION_LEARN_MORE));
   }, items3);
   const items4 = [dismissOnce];
   const callback4 = noop.useCallback(() => {
@@ -82,10 +82,10 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   const obj5 = { source: null, style: null, resizeMode: "contain" };
-  let obj2 = dismissOnce(16764);
-  obj5.source = tmp14(16765);
+  let obj2 = dismissOnce(16856);
+  obj5.source = tmp14(16857);
   obj5.style = tmp.illustration;
-  obj4.illustration = closure_8(tmp14(5837), obj5);
+  obj4.illustration = closure_8(tmp14(5851), obj5);
   const intl2 = tmp2(1113).intl;
   obj4.title = intl2.string(tmp14(3255).GdTVPF);
   const intl3 = tmp2(1113).intl;
@@ -101,13 +101,13 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   obj4.description = formatResult;
   obj4.onDismiss = callback;
   const obj8 = { size: "lg", style: tmp.actions, children: null };
-  const items5 = [closure_8(dismissOnce(5754).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress }), ];
+  const items5 = [closure_8(dismissOnce(5768).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress }), ];
   const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1113).intl;
   obj10.text = intl4.string(dismissOnce(1113).t["NX+WJN"]);
   obj10.onPress = callback1;
-  items5[1] = closure_8(dismissOnce(5754).Button, obj10);
+  items5[1] = closure_8(dismissOnce(5768).Button, obj10);
   obj8.children = items5;
-  obj4.actions = closure_9(dismissOnce(6887).ButtonGroup, obj8);
-  return closure_8(dismissOnce(10967).PromoSheet, obj4);
+  obj4.actions = closure_9(dismissOnce(6902).ButtonGroup, obj8);
+  return closure_8(dismissOnce(11015).PromoSheet, obj4);
 };

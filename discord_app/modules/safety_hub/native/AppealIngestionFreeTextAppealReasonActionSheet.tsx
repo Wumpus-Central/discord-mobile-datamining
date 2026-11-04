@@ -1,15 +1,15 @@
-// === Module 13477: AppealIngestionFreeTextAppealReasonActionSheet ===
+// === Module 13561: AppealIngestionFreeTextAppealReasonActionSheet ===
 
-// Module 13477 (AppealIngestionFreeTextAppealReasonActionSheet)
+// Module 13561 (AppealIngestionFreeTextAppealReasonActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8118 */;
+import SafetyHubStore from "SafetyHubStore" /* 8134 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { footerText: { textAlign: "center" }, textArea: { marginTop: -16, marginBottom: 36 }, separator: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 }, closeIcon: { alignSelf: "flex-end", flexDirection: "row", marginBottom: -26 } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -43,7 +43,7 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
   obj5.value = value;
   items1[2] = closure_6(onSave(value[14]).TextArea, obj5);
   items1[3] = closure_6(View, { style: tmp.separator });
-  const obj7 = { variant: "text-xs/medium", color: "text-default", style: tmp.footerText, children: null };
+  const obj7 = { variant: "body-xs/medium", color: "text-default", style: tmp.footerText, children: null };
   const intl5 = tmp2(tmp3[8]).intl;
   obj7.children = intl5.string(onSave(value[8]).t.xfNY3L);
   items1[4] = closure_6(onSave(value[15]).Text, obj7);

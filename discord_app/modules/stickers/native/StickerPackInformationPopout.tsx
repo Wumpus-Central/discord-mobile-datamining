@@ -1,9 +1,9 @@
-// === Module 10410: StickerPackInformationPopout ===
+// === Module 10458: StickerPackInformationPopout ===
 
-// Module 10410 (StickerPackInformationPopout)
+// Module 10458 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -34,14 +34,14 @@ export default function StickerPackInformationPopout(stickerPack) {
   let items1 = [tmp.informationContainer, style];
   obj3.style = items1;
   const obj4 = { style: tmp.headerContainer, children: null };
-  const obj5 = { style: tmp.informationHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj5 = { style: tmp.informationHeader, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1113).intl;
   obj5.children = intl2.format(require("util").t.XDm6yN, { stickerPackName: stickerPack.name });
   const items2 = [closure_3(require("Text/Text").Text, obj5), ];
   const obj7 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl3 = tmp2(1113).intl;
   obj7.accessibilityLabel = intl3.string(require("util").t.cpT0Cq);
-  const obj8 = { variant: "text-md/semibold", color: "text-brand", children: null };
+  const obj8 = { variant: "body-md/semibold", color: "text-brand", children: null };
   const intl4 = tmp2(1113).intl;
   obj8.children = intl4.string(require("util").t.cpT0Cq);
   obj7.children = closure_3(require("Text/Text").Text, obj8);
@@ -51,8 +51,8 @@ export default function StickerPackInformationPopout(stickerPack) {
     closure_4(View, obj4),
     items.map(function renderItem(children) {
       const obj = { style: closure_0.informationContentContainer, children: null };
-      items = [React3(Text_Text.Text, { style: closure_0.informationContent, variant: "text-md/medium", color: "text-default", children: "\u2022" }), ];
-      const obj3 = { style: null, variant: "text-md/medium", color: "text-default", children: children.description };
+      items = [React3(Text_Text.Text, { style: closure_0.informationContent, variant: "body-md/medium", color: "text-default", children: "\u2022" }), ];
+      const obj3 = { style: null, variant: "body-md/medium", color: "text-default", children: children.description };
       const items1 = [, ];
       ({ informationContent: arr2[0], informationContentDescription: arr2[1] } = closure_0);
       obj3.style = items1;

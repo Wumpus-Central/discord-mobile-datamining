@@ -1,11 +1,11 @@
-// === Module 14048: NewMessagesTagListInput ===
+// === Module 14134: NewMessagesTagListInput ===
 
-// Module 14048 (NewMessagesTagListInput)
+// Module 14134 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10860 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10908 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -70,10 +70,10 @@ export default noop.memo(function NewMessagesTagListInput(forceSearchResults) {
     }
   }
   obj2.footer = tmp6;
-  const obj4 = { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null };
+  const obj4 = { style: tmp.header, variant: "body-sm/medium", color: "text-muted", accessible: false, children: null };
   const intl2 = require("util").intl;
   obj4.children = intl2.string(require("util").t.kHyiXs);
-  obj2.icon = jsx(require("Text/Text").Text, { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null });
+  obj2.icon = jsx(require("Text/Text").Text, { style: tmp.header, variant: "body-sm/medium", color: "text-muted", accessible: false, children: null });
   obj2.onChangeText = onChangeText;
   obj2.onFocus = onFocus;
   obj2.onRemove = function onRemove(arg0) {

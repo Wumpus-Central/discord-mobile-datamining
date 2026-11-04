@@ -1,9 +1,9 @@
-// === Module 8305: BackgroundBlurFill ===
+// === Module 8321: BackgroundBlurFill ===
 
-// Module 8305 (BackgroundBlurFill)
+// Module 8321 (BackgroundBlurFill)
 import nativeDefault from "native" /* 575 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5722 */;
-import VisualEffectView from "VisualEffectView" /* 5723 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5735 */;
+import VisualEffectView from "VisualEffectView" /* 5736 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -26,8 +26,8 @@ let closure_11 = { code: "(function BackgroundBlurFillNativeTsx2(){let[shouldUse
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx");
 
-export const BlurTheme = fn(5723).BlurTheme;
-export const BlurStyle = fn(5723).BlurStyle;
+export const BlurTheme = fn(5736).BlurTheme;
+export const BlurStyle = fn(5736).BlurStyle;
 export function BackgroundBlurFill(arg0) {
   ({ blurTheme, blurStyle, tintColor, android_fallbackColor } = arg0);
   ({ style, blurAmount, android_blurTargetViewNativeId } = arg0);
@@ -50,7 +50,7 @@ export function BackgroundBlurFill(arg0) {
     tintColor = noop.useMemo(() => VisualEffectView.isBlurThemeLight(blurTheme) ? closure_6 : closure_8, items1);
   }
   obj = blurTheme(5207);
-  const tmpResult = blurTheme(5719);
+  const tmpResult = blurTheme(5732);
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(nativeDefault.colors.BACKGROUND_SCRIM, tmpResult2.normalizeBlurTheme(blurTheme));
   }
@@ -81,7 +81,7 @@ export function BackgroundBlurFillAnimated(arg0) {
     tintColor = noop.useMemo(() => VisualEffectView.isBlurThemeLight(blurTheme) ? closure_6 : closure_8, items1);
   }
   obj = blurTheme(5207);
-  const tmpResult = blurTheme(5719);
+  const tmpResult = blurTheme(5732);
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(nativeDefault.colors.BACKGROUND_SCRIM, tmpResult2.normalizeBlurTheme(blurTheme));
   }
@@ -89,7 +89,7 @@ export function BackgroundBlurFillAnimated(arg0) {
   const items2 = [StyleSheet.absoluteFill, style];
   obj3.style = items2;
   let tmp6 = null != animatedProps;
-  tmpResult2 = blurTheme(5723);
+  tmpResult2 = blurTheme(5736);
   if (tmp6) {
     const obj4 = { animatedProps };
     tmp6 = obj4;

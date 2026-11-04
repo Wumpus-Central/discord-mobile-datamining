@@ -1,17 +1,17 @@
-// === Module 11606: BadgeRarityPill ===
+// === Module 11657: BadgeRarityPill ===
 
-// Module 11606 (BadgeRarityPill)
+// Module 11657 (BadgeRarityPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import BadgeRarity from "BadgeRarity" /* 1389 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
 import shared from "shared" /* 5148 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11607 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11609 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11611 */;
-import ExperimentalMythicIcon from "ExperimentalMythicIcon" /* 11613 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11658 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11660 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11662 */;
+import ExperimentalMythicIcon from "ExperimentalMythicIcon" /* 11664 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -79,7 +79,7 @@ export default function BadgeRarityPill(rarity) {
       obj7.style = items;
       const obj9 = { size: "xxs", color: text };
       const items1 = [React4(tmp5.Icon, obj9), ];
-      const obj11 = { variant: "text-xs/semibold", color: "none", lineClamp: 1, style: null, children: null };
+      const obj11 = { variant: "body-xs/semibold", color: "none", lineClamp: 1, style: null, children: null };
       const items2 = [tmp.label, ];
       const obj12 = { color: text };
       items2[1] = obj12;

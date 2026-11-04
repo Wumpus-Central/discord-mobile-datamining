@@ -1,7 +1,7 @@
-// === Module 7432: FormSubLabel ===
+// === Module 7448: FormSubLabel ===
 
-// Module 7432 (FormSubLabel)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 7448 (FormSubLabel)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,5 +15,5 @@ export default function FormSubLabel(color) {
   if (color === undefined) {
     color = "text-subtle";
   }
-  return jsx(Text_Text.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
+  return jsx(Text_Text.Text, { color, variant: "body-xs/normal", lineClamp, style, accessible, children });
 };

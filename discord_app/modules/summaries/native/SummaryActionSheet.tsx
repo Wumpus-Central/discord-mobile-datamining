@@ -1,22 +1,22 @@
-// === Module 11803: SummaryActionSheet ===
+// === Module 11860: SummaryActionSheet ===
 
-// Module 11803 (SummaryActionSheet)
+// Module 11860 (SummaryActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import ChannelUtils from "ChannelUtils" /* 6166 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8326 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8467 */;
-import showShareActionSheet from "showShareActionSheet" /* 9059 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import ChannelUtils from "ChannelUtils" /* 6181 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8342 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8483 */;
+import showShareActionSheet from "showShareActionSheet" /* 9076 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import MessageStore from "MessageStore" /* 6181 */;
-import SummaryStore from "SummaryStore" /* 10252 */;
+import MessageStore from "MessageStore" /* 6196 */;
+import SummaryStore from "SummaryStore" /* 10300 */;
 
 require = fn;
 const View = fn(17).View;
@@ -72,8 +72,8 @@ export default function SummaryActionSheet(summary) {
         guild_id1 = channel.guild_id;
       }
       const obj2 = { guildId: guild_id1 };
-      tmpResult.openLazy(asyncRequireImpl(10287, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-      const tmp7 = asyncRequireImpl(10287, dependencyMap.paths);
+      tmpResult.openLazy(asyncRequireImpl(10335, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+      const tmp7 = asyncRequireImpl(10335, dependencyMap.paths);
     }
   }, items);
   const items2 = [summary, channel, message];
@@ -130,12 +130,12 @@ export default function SummaryActionSheet(summary) {
   let obj4 = { style: tmp.summaryContainer, children: null };
   let obj5 = { style: tmp.summaryIconContainer, children: closure_10(summary(message[25]).TopicsIcon, { style: tmp.summaryIcon, size: "custom" }) };
   const items4 = [closure_10(View, obj5), , ];
-  const obj7 = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: summary.topic };
+  const obj7 = { style: null, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: summary.topic };
   const items5 = [, ];
   ({ summaryContent: arr6[0], summaryTopic: arr6[1] } = tmp);
   obj7.style = items5;
   items4[1] = closure_10(summary(message[26]).Text, obj7);
-  items4[2] = closure_10(summary(message[26]).Text, { style: tmp.summaryContent, variant: "heading-md/medium", color: "text-default", children: summary.summShort });
+  items4[2] = closure_10(summary(message[26]).Text, { style: tmp.summaryContent, variant: "heading-sm/medium", color: "text-default", children: summary.summShort });
   obj4.children = items4;
   const items6 = [closure_11(View, obj4), closure_10(View, { style: tmp.divider }), ];
   const obj10 = { style: tmp.actionsContainer, children: null };
@@ -182,7 +182,7 @@ export function openSummaryDividerActionSheet(channelId, summaryId) {
     const _HermesInternal = HermesInternal;
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { summary: findSummaryResult };
-    obj.openLazy(asyncRequireImpl(11803, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
-    const tmp5 = asyncRequireImpl(11803, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11860, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
+    const tmp5 = asyncRequireImpl(11860, dependencyMap.paths);
   }
 }

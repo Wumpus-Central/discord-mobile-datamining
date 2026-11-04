@@ -1,10 +1,10 @@
-// === Module 10793: PremiumGiftWishlistBanner ===
+// === Module 10841: PremiumGiftWishlistBanner ===
 
-// Module 10793 (PremiumGiftWishlistBanner)
+// Module 10841 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10798 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10846 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,14 +12,14 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_7 = fn(7529).WishlistRecommendationReason;
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+let closure_7 = fn(7545).WishlistRecommendationReason;
 const PremiumConstants = fn(1387);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1074).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8878).UserProfileSections;
+const UserProfileSections = fn(8895).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
@@ -248,9 +248,9 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
     if (totalUnownedWishlistItemCount > WISHLIST_IN_DM_LENGTH_MOBILE) {
       sku = memo[WISHLIST_IN_DM_LENGTH_MOBILE - 1];
     }
-    let obj6 = { style: tmp12.title, variant: "text-lg/semibold", accessibilityRole: "header", children: obj5.title };
+    let obj6 = { style: tmp12.title, variant: "body-lg/semibold", accessibilityRole: "header", children: obj5.title };
     const items5 = [closure_14(tmp(tmp19Result3[27]).Text, obj6), , ];
-    let obj7 = { style: tmp12.subtitle, variant: "text-sm/medium", color: "text-muted", children: subtitle };
+    let obj7 = { style: tmp12.subtitle, variant: "body-sm/medium", color: "text-muted", children: subtitle };
     items5[1] = closure_14(tmp(tmp19Result3[27]).Text, obj7);
     if (tmp13) {
       let obj8 = { style: tmp12.placeholderRow, children: null };

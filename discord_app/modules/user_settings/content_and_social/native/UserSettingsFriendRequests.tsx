@@ -1,17 +1,17 @@
-// === Module 19012: UserSettingsFriendRequests ===
+// === Module 19115: UserSettingsFriendRequests ===
 
-// Module 19012 (UserSettingsFriendRequests)
+// Module 19115 (UserSettingsFriendRequests)
 import FlagUtilsAll from "FlagUtils" /* 1398 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AllFriendSourceFlags: hasOwnProperty, FriendSourceFlags: metroRequire } = Constants);
+({ AllFriendSourceFlags: hasOwnProperty, FriendSourceFlags: closure_6 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx");
 
@@ -37,7 +37,7 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };
-  const items1 = [closure_7(setting(7489).TableSwitchRow, obj3), , ];
+  const items1 = [closure_7(setting(7505).TableSwitchRow, obj3), , ];
   const obj4 = { label: null, value: null, onValueChange: null };
   const intl3 = setting(1113).intl;
   obj4.label = intl3.string(setting(1113).t.IqlCSq);
@@ -52,7 +52,7 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[1] = closure_7(setting(7489).TableSwitchRow, obj4);
+  items1[1] = closure_7(setting(7505).TableSwitchRow, obj4);
   const obj5 = { label: null, value: null, onValueChange: null };
   const intl4 = setting(1113).intl;
   obj5.label = intl4.string(setting(1113).t.mozb8f);
@@ -67,8 +67,8 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[2] = closure_7(setting(7489).TableSwitchRow, obj5);
+  items1[2] = closure_7(setting(7505).TableSwitchRow, obj5);
   obj2.children = items1;
-  obj.children = closure_8(setting(7186).TableRowGroup, obj2);
+  obj.children = closure_8(setting(7201).TableRowGroup, obj2);
   return closure_7(View, obj);
 };

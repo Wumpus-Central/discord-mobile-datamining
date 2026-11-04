@@ -1,8 +1,8 @@
-// === Module 14742: ForumExplicitMediaAlert ===
+// === Module 14822: ForumExplicitMediaAlert ===
 
-// Module 14742 (ForumExplicitMediaAlert)
+// Module 14822 (ForumExplicitMediaAlert)
 import nativeDefault from "native" /* 575 */;
-import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 13489 */;
+import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 13573 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -28,14 +28,14 @@ export default function ForumExplicitMediaAlert(arg0) {
   ({ channelId: require, messageId: importDefault, onClose } = arg0);
   const tmp = closure_6();
   const obj = { noDefaultButtons: true, style: tmp.container, onClose, children: null };
-  const obj2 = { accessibilityRole: "header", variant: "heading-md/semibold", color: "text-default", style: null, children: null };
+  const obj2 = { accessibilityRole: "header", variant: "heading-sm/semibold", color: "text-default", style: null, children: null };
   items = [, ];
   ({ title: arr[0], text: arr[1] } = tmp);
   obj2.style = items;
   const intl = require("util").intl;
   obj2.children = intl.string(require("util").t.B3vFdU);
   const items1 = [closure_4(require("Text/Text").Text, obj2), , , ];
-  const obj3 = { style: null, maxFontSizeMultiplier: 1, variant: "text-md/normal", children: null };
+  const obj3 = { style: null, maxFontSizeMultiplier: 1, variant: "body-md/normal", children: null };
   const items2 = [, ];
   ({ body: arr3[0], text: arr3[1] } = tmp);
   obj3.style = items2;
@@ -49,7 +49,7 @@ export default function ForumExplicitMediaAlert(arg0) {
   obj5.onPress = onClose;
   obj4.children = closure_4(require("components/Button/Button").Button, obj5);
   items1[2] = closure_4(View, obj4);
-  const obj6 = { style: tmp.text, variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj6 = { style: tmp.text, variant: "body-sm/medium", color: "text-muted", children: null };
   const intl4 = require("util").intl;
   obj6.children = intl4.format(require("util").t["APQGZ+"], {
     handleFalsePositiveHook() {

@@ -1,24 +1,24 @@
-// === Module 13794: CheckpointMessagesStatsScreen ===
+// === Module 13880: CheckpointMessagesStatsScreen ===
 
-// Module 13794 (CheckpointMessagesStatsScreen)
+// Module 13880 (CheckpointMessagesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3187 from "module_3187" /* 3187 */;
 import _modDef3219 from "module_3219" /* 3219 */;
-import CheckpointConstants from "CheckpointConstants" /* 6186 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6557 */;
-import ChatIcon from "ChatIcon" /* 8767 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13793 */;
-import CheckpointStore from "CheckpointStore" /* 13571 */;
+import CheckpointConstants from "CheckpointConstants" /* 6201 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6572 */;
+import ChatIcon from "ChatIcon" /* 8784 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13879 */;
+import CheckpointStore from "CheckpointStore" /* 13656 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let obj = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, title: null, titleText: null, imageContainer: null, image: null, copy: null, number: null };
 let obj2 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -88,37 +88,37 @@ export default function CheckpointMessagesStatsScreen() {
   const obj5 = { style: tmp.imageContainer, children: null };
   const tmp2Result = CheckpointStatsUtils;
   const obj6 = { animatedUri: null, staticUri: null, style: null };
-  const tmp11Result = tmp11(13777);
-  obj6.animatedUri = tmp11(13795);
-  obj6.staticUri = tmp11(13796);
+  const tmp11Result = tmp11(13863);
+  obj6.animatedUri = tmp11(13881);
+  obj6.staticUri = tmp11(13882);
   obj6.style = tmp.image;
-  obj5.children = timestampProducer(tmp11(13784), obj6);
+  obj5.children = timestampProducer(tmp11(13870), obj6);
   const items2 = [timestampProducer(View, obj5), ];
   const obj7 = { style: tmp.copy, children: null };
   const obj8 = { style: tmp.title, children: null };
   const items3 = [timestampProducer(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), ];
-  const obj10 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
+  const obj10 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-  const tmp11Result4 = tmp11(13784);
+  const tmp11Result4 = tmp11(13870);
   obj10.children = stringResult.toLocaleUpperCase();
-  items3[1] = timestampProducer(tmp11(13779), obj10);
+  items3[1] = timestampProducer(tmp11(13865), obj10);
   obj8.children = items3;
-  const items4 = [React5(View, obj8), , ];
+  const items4 = [metroImportDefault(View, obj8), , ];
   if (rounded <= 0 && null != stateFromStores1) {
     const obj11 = { value: stateFromStores1 };
-    let tmp13Result = timestampProducer(tmp11(13791), obj11);
+    let tmp13Result = timestampProducer(tmp11(13877), obj11);
   } else {
     const obj12 = { accessible: true, accessibilityLabel: null, style: null, children: null };
     const _HermesInternal = HermesInternal;
     obj12.accessibilityLabel = "" + rounded + " " + stringResult;
     obj12.style = tmp.number;
     const obj13 = { end: rounded };
-    obj12.children = timestampProducer(tmp11(13792), obj13);
+    obj12.children = timestampProducer(tmp11(13878), obj13);
     tmp13Result = timestampProducer(View, obj12);
   }
   items4[1] = tmp13Result;
   const obj14 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-  const tmp11Result5 = tmp11(13779);
+  const tmp11Result5 = tmp11(13865);
   if (rounded <= 0 && null != stateFromStores1) {
     const intl5 = util.intl;
     const obj15 = { numWords: CheckpointStatsUtils.formatCheckpointCompactNumber(stateFromStores1), numCopies: null };
@@ -144,10 +144,10 @@ export default function CheckpointMessagesStatsScreen() {
   }
   const obj18 = { children: null };
   obj14.children = formatToPlainStringResult1;
-  items4[2] = timestampProducer(tmp11(13779), obj14);
+  items4[2] = timestampProducer(tmp11(13865), obj14);
   obj7.children = items4;
-  items2[1] = React5(View, obj7);
+  items2[1] = metroImportDefault(View, obj7);
   obj4.children = items2;
-  obj18.children = React5(View, obj4);
+  obj18.children = metroImportDefault(View, obj4);
   return timestampProducer(tmp11Result, obj18);
 };

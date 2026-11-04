@@ -1,9 +1,9 @@
-// === Module 18241: MessagesItemChannelWave ===
+// === Module 18338: MessagesItemChannelWave ===
 
-// Module 18241 (MessagesItemChannelWave)
+// Module 18338 (MessagesItemChannelWave)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ export default noop.memo(function MessagesItemChannelWave(hasNameplate) {
   const obj = { text: null, icon: null, variant: null, size: "sm", onPress: null };
   const intl = util.intl;
   obj.text = intl.string(util.t.n8nU4W);
-  obj.icon = jsx(Text_Text.Text, { style: { marginTop: 3 }, variant: "text-sm/semibold", "aria-hidden": true, children: "\u{1F44B}" });
+  obj.icon = jsx(Text_Text.Text, { style: { marginTop: 3 }, variant: "body-sm/semibold", "aria-hidden": true, children: "\u{1F44B}" });
   let str = "secondary";
   if (flag) {
     str = "secondary-overlay";

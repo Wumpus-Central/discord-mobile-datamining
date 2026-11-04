@@ -1,11 +1,11 @@
-// === Module 12195: PanGestureAnimations ===
+// === Module 12254: PanGestureAnimations ===
 
-// Module 12195 (PanGestureAnimations)
+// Module 12254 (PanGestureAnimations)
 import native from "native" /* 1187 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import spring_spring from "spring/spring" /* 5757 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import spring_spring from "spring/spring" /* 5771 */;
 import size from "module_2" /* 2 */;
 
 let obj = { duration: 500, easing: native.STANDARD_EASING };

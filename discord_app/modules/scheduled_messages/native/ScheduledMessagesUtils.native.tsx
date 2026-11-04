@@ -1,13 +1,14 @@
-// === Module 9938: ScheduledMessagesUtils ===
+// === Module 9956: ScheduledMessagesUtils ===
 
-// Module 9938 (ScheduledMessagesUtils)
+// Module 9956 (ScheduledMessagesUtils)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8467 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9939 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8483 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -66,7 +67,7 @@ let closure_5 = async function _editScheduledMessage() {
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_0 = closure_4;
-          const result = closure_131_0(closure_131_2[11]).showScheduledMessageEditFailureToast(closure_130_0.message);
+          const result = closure_131_0(closure_131_2[12]).showScheduledMessageEditFailureToast(closure_130_0.message);
           c7 = 3;
           return { value: false, done: true };
         } else if (arg0 === 1) {
@@ -78,7 +79,7 @@ let closure_5 = async function _editScheduledMessage() {
           const obj8 = { value, done: true };
           return obj8;
         } else {
-          const result1 = closure_131_0(closure_131_2[11]).showScheduledMessageEditSuccessToast();
+          const result1 = closure_131_0(closure_131_2[12]).showScheduledMessageEditSuccessToast();
           c5 = 0;
           c7 = 3;
           return { value: true, done: true };
@@ -101,16 +102,16 @@ let closure_6 = async function _cancelScheduledMessage(arg0) {
   if (1 === tmp7) {
     c4 = 0;
     closure_129_0 = closure_3;
-    const result = closure_130_0(closure_130_2[11]).showScheduleMessageDeleteFailureToast(closure_129_0.message);
+    const result = closure_130_0(closure_130_2[12]).showScheduleMessageDeleteFailureToast(closure_129_0.message);
     c6 = 3;
-    closure_130_0(closure_130_2[11]);
+    closure_130_0(closure_130_2[12]);
   } else if (arg0 === 1) {
     c6 = 3;
     throw value;
   } else if (arg0 !== 2) {
-    const result1 = closure_130_0(closure_130_2[11]).showScheduleMessageDeleteSuccessToast();
+    const result1 = closure_130_0(closure_130_2[12]).showScheduleMessageDeleteSuccessToast();
     c4 = 0;
-    closure_130_0(closure_130_2[11]);
+    closure_130_0(closure_130_2[12]);
   }
   return value;
 };
@@ -120,16 +121,16 @@ let closure_7 = async function _sendScheduledMessageNow(arg0) {
   if (1 === tmp7) {
     c4 = 0;
     closure_129_0 = closure_3;
-    const result = closure_130_0(closure_130_2[11]).showScheduleMessageSentNowFailureToast(closure_129_0.message);
+    const result = closure_130_0(closure_130_2[12]).showScheduleMessageSentNowFailureToast(closure_129_0.message);
     c6 = 3;
-    closure_130_0(closure_130_2[11]);
+    closure_130_0(closure_130_2[12]);
   } else if (arg0 === 1) {
     c6 = 3;
     throw value;
   } else if (arg0 !== 2) {
-    const result1 = closure_130_0(closure_130_2[11]).showScheduleMessageSentNowSuccessToast();
+    const result1 = closure_130_0(closure_130_2[12]).showScheduleMessageSentNowSuccessToast();
     c4 = 0;
-    closure_130_0(closure_130_2[11]);
+    closure_130_0(closure_130_2[12]);
   }
   return value;
 };
@@ -137,11 +138,11 @@ function openSendTimeActionSheet(title) {
   title = title.title;
   ({ startDate: importDefault, scheduledMessageId: dependencyMap, onSelect: asyncGeneratorStep, onClear } = title);
   ({ key, entryPoint, isEditing, channelId } = title);
-  const result = title(9939).trackScheduledMessageTimePickerOpened({ entryPoint, isEditing, channelId });
-  let obj = title(9939);
+  const result = title(9957).trackScheduledMessageTimePickerOpened({ entryPoint, isEditing, channelId });
+  let obj = title(9957);
   let obj3 = { key, header: { title }, hasIcons: false, options: null };
-  let obj2 = title(7483);
-  const presetScheduledTimes = title(9939).getPresetScheduledTimes();
+  let obj2 = title(7499);
+  const presetScheduledTimes = title(9957).getPresetScheduledTimes();
   items = [
     ...presetScheduledTimes.map((label) => {
       title = label.value;
@@ -160,11 +161,11 @@ function openSendTimeActionSheet(title) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj2 = ModalActionCreatorsDefault;
     const obj3 = { title, defaultValue, minimumDate: null, maximumDate: null, getError: null, createReminder: null, onClose: null };
-    const tmp2 = asyncRequireImpl(11305, dependencyMap.paths);
+    const tmp2 = asyncRequireImpl(11355, dependencyMap.paths);
     obj3.minimumDate = ScheduledMessageUtils.getEarliestScheduledTime();
     obj3.maximumDate = ScheduledMessageUtils.getLatestScheduledTime(closure_1_2);
     obj3.getError = function getError(isBefore) {
-      return title(9939).getScheduledTimeError(isBefore, dependencyMap);
+      return title(9957).getScheduledTimeError(isBefore, dependencyMap);
     };
     obj3.createReminder = function createReminder(arg0) {
       return closure_1_3(defaultValue(2171)(arg0));
@@ -186,31 +187,36 @@ function openSendTimeActionSheet(title) {
   HermesBuiltin.arraySpread(items2, tmp4 + 1);
   obj3.options = items;
   const result1 = obj2.showSimpleActionSheet(obj3);
-  let obj4 = title(9939);
+  let obj4 = title(9957);
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx");
 
 export function openScheduleMessageActionSheet(id, ATTACH_MENU, scheduledTimestamp) {
   _require = id;
-  const obj = {
+  let obj = {
     onSelect(scheduledTimestamp) {
-      return DraftActionCreatorsDefault.changeScheduledMessage(closure_0, { scheduledTimestamp });
+      const result = DraftActionCreatorsDefault.changeScheduledMessage(closure_0, { scheduledTimestamp });
+      const obj2 = { scheduledTimestamp };
+      const bestActiveInputForChannelId = ChatInputUtils.getBestActiveInputForChannelId(closure_0);
+      if (bestActiveInputForChannelId != null) {
+        bestActiveInputForChannelId.focusAccessibility(500);
+      }
     },
     currentTimestamp: scheduledTimestamp,
     entryPoint: ATTACH_MENU,
     channelId: id
   };
   ({ onSelect: closure_0, currentTimestamp } = obj);
-  const obj2 = { key: "schedule-message", title: null, startDate: null, onSelect: null, onClear: null, entryPoint: null, isEditing: null, channelId: null };
+  let obj2 = { key: "schedule-message", title: null, startDate: null, onSelect: null, onClear: null, entryPoint: null, isEditing: null, channelId: null };
   ({ onClear, entryPoint, channelId } = obj);
   const intl = require("util").intl;
   obj2.title = intl.string(require("util").t["3+ii4F"]);
   if (null != currentTimestamp) {
     let defaultScheduledTime = _modDef2171(currentTimestamp);
   } else {
-    defaultScheduledTime = tmp2(9939).getDefaultScheduledTime();
-    const tmp2Result = tmp2(9939);
+    defaultScheduledTime = tmp2(9957).getDefaultScheduledTime();
+    const tmp2Result = tmp2(9957);
   }
   obj2.startDate = defaultScheduledTime;
   obj2.onSelect = function onSelect(toISOString) {
@@ -246,10 +252,10 @@ export function pickScheduledMessageTime(arg0) {
   openSendTimeActionSheet(obj);
 }
 export function showScheduledMessagesModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9941, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9959, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
 }
 export function openScheduledMessageEditContentModal(scheduledMessage) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14728, dependencyMap.paths), { scheduledMessage }, "scheduled-message-edit-content", { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14808, dependencyMap.paths), { scheduledMessage }, "scheduled-message-edit-content", { presentation: "modal" });
 }
 export function openRescheduleMessageActionSheet(scheduledMessageId, sendAtTimestamp, channelId) {
   _require = scheduledMessageId;

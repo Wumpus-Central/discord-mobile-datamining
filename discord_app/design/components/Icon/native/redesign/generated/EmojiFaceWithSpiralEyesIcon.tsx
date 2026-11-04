@@ -1,9 +1,9 @@
-// === Module 17513: EmojiFaceWithSpiralEyesIcon ===
+// === Module 17603: EmojiFaceWithSpiralEyesIcon ===
 
-// Module 17513 (EmojiFaceWithSpiralEyesIcon)
+// Module 17603 (EmojiFaceWithSpiralEyesIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod17514 from "module_17514" /* 17514 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod17604 from "module_17604" /* 17604 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiFaceWithSpiralEyesIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17514, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17604, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

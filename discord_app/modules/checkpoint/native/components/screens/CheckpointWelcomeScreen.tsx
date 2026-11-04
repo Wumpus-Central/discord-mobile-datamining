@@ -1,6 +1,6 @@
-// === Module 13776: CheckpointWelcomeScreen ===
+// === Module 13862: CheckpointWelcomeScreen ===
 
-// Module 13776 (CheckpointWelcomeScreen)
+// Module 13862 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -9,9 +9,9 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _modDef3187 from "module_3187" /* 3187 */;
 import _modDef3219 from "module_3219" /* 3219 */;
 import UserUtils from "UserUtils" /* 5195 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13777 */;
-import TextWritingAnimation from "TextWritingAnimation" /* 13778 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 13780 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13863 */;
+import TextWritingAnimation from "TextWritingAnimation" /* 13864 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 13866 */;
 import UserStore from "UserStore" /* 1385 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
@@ -20,7 +20,7 @@ import size from "module_2" /* 2 */;
 const TextWritingAnimationDefault = TextWritingAnimation;
 
 const View = _mod17.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { container: { width: "100%", flexGrow: 1 }, title: { transformOrigin: "left", width: 340 }, titleText: { textTransform: "uppercase", fontSize: 72, lineHeight: 72, letterSpacing: -2.88 }, subtitle: { maxWidth: 327, marginTop: nativeDefault.space.PX_12 }, content: { flex: 1, justifyContent: "center" }, knickKnacks: null };
 let obj2 = { maxWidth: 327, marginTop: nativeDefault.space.PX_12 };
 obj.knickKnacks = { marginTop: nativeDefault.space.PX_16 };

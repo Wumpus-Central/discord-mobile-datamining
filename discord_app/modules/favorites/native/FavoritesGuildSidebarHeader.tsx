@@ -1,15 +1,15 @@
-// === Module 18500: FavoritesGuildSidebarHeader ===
+// === Module 18595: FavoritesGuildSidebarHeader ===
 
-// Module 18500 (FavoritesGuildSidebarHeader)
+// Module 18595 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3577 from "module_3577" /* 3577 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import ChatIcon from "ChatIcon" /* 8767 */;
-import TextIcon from "TextIcon" /* 8776 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8797 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14533 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import ChatIcon from "ChatIcon" /* 8784 */;
+import TextIcon from "TextIcon" /* 8793 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8814 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14613 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ function EmptyBody() {
   const callback = noop.useCallback(() => {
     openFavoritesGuildAddChannelModalDefault({ source: "favorites_empty_sidebar" });
   }, []);
-  const obj = { variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj = { variant: "body-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.format(_modDef3577.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
@@ -33,7 +33,7 @@ function PlaceholderRows() {
   obj4.style = items1;
   items[1] = timestampProducer(View, obj4);
   obj2.children = items;
-  const items2 = [React5(View, obj2), , ];
+  const items2 = [metroImportDefault(View, obj2), , ];
   const obj5 = { style: tmp.placeholderRow, children: null };
   const obj3 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
   const items3 = [timestampProducer(VoiceNormalIcon.VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }), ];
@@ -43,7 +43,7 @@ function PlaceholderRows() {
   obj7.style = items4;
   items3[1] = timestampProducer(View, obj7);
   obj5.children = items3;
-  items2[1] = React5(View, obj5);
+  items2[1] = metroImportDefault(View, obj5);
   const obj8 = { style: tmp.placeholderRow, children: null };
   const obj6 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
   const items5 = [timestampProducer(ChatIcon.ChatIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }), ];
@@ -53,14 +53,14 @@ function PlaceholderRows() {
   obj10.style = items6;
   items5[1] = timestampProducer(View, obj10);
   obj8.children = items5;
-  items2[2] = React5(View, obj8);
+  items2[2] = metroImportDefault(View, obj8);
   obj.children = items2;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(18406).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(18500).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -90,21 +90,21 @@ export default function FavoritesGuildSidebarHeader() {
   }
   items = [tmp7, , ];
   const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
-  const obj4 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj4 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(_modDef3577["1n0TGE"]);
   const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
   obj3.children = items1;
-  items[1] = React5(Stack_Stack.Stack, obj3);
+  items[1] = metroImportDefault(Stack_Stack.Stack, obj3);
   let tmp3Result = null;
   if (!tmp2) {
     const obj5 = { children: null };
     const obj6 = { style: tmp.divider };
     const items2 = [timestampProducer(View, obj6), timestampProducer(PlaceholderRows, {})];
     obj5.children = items2;
-    tmp3Result = React5(React6, obj5);
+    tmp3Result = metroImportDefault(React5, obj5);
   }
   items[2] = tmp3Result;
   obj.children = items;
-  return React5(Stack_Stack.Stack, obj);
+  return metroImportDefault(Stack_Stack.Stack, obj);
 };

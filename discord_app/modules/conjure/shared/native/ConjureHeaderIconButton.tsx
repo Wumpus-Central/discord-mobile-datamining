@@ -1,7 +1,7 @@
-// === Module 12370: ConjureHeaderIconButton ===
+// === Module 12435: ConjureHeaderIconButton ===
 
-// Module 12370 (ConjureHeaderIconButton)
-import ClipView from "ClipView" /* 9637 */;
+// Module 12435 (ConjureHeaderIconButton)
+import ClipView from "ClipView" /* 9656 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -9,7 +9,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((width) => {
   const obj = { button: { width: 40, height: 40, alignItems: "center", justifyContent: "center" }, icon: { width: 24, height: 24 }, disabledIcon: { opacity: 0.5 }, badge: null };
@@ -68,6 +68,6 @@ export default function ConjureHeaderIconButton(ref) {
     tmp3Result = closure_5(View, obj5);
   }
   obj.children = tmp3Result;
-  return closure_5(badgeSize(7106).PressableOpacity, obj);
+  return closure_5(badgeSize(7121).PressableOpacity, obj);
 };
 export const CONJURE_HEADER_BADGE_SIZE = 8;

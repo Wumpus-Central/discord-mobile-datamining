@@ -1,6 +1,6 @@
-// === Module 15495: PremiumMarketingFloatingSubscribeExperiment ===
+// === Module 15582: PremiumMarketingFloatingSubscribeExperiment ===
 
-// Module 15495 (PremiumMarketingFloatingSubscribeExperiment)
+// Module 15582 (PremiumMarketingFloatingSubscribeExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

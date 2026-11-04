@@ -1,8 +1,8 @@
-// === Module 19570: BlockedDomainManager ===
+// === Module 19674: BlockedDomainManager ===
 
-// Module 19570 (BlockedDomainManager)
+// Module 19674 (BlockedDomainManager)
 import js_shim_shim from "js_shim/shim" /* 1363 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
 class BlockedDomainManager extends tmp2 {

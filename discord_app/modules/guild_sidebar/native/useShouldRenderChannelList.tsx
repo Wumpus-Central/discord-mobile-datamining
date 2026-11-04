@@ -1,12 +1,12 @@
-// === Module 18468: useShouldRenderChannelList ===
+// === Module 18562: useShouldRenderChannelList ===
 
-// Module 18468 (useShouldRenderChannelList)
+// Module 18562 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7779 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import CacheStore from "CacheStore" /* 7795 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 
 require = fn;
 const ComponentActions = fn(1072).ComponentActions;
@@ -35,8 +35,8 @@ export function useShouldRenderChannelList() {
       }
     }
     function checkNavigationState() {
-      const obj = first(5321);
-      const rootNavigationRef = first(5322).getRootNavigationRef();
+      const obj = first(5322);
+      const rootNavigationRef = first(5323).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
@@ -45,14 +45,14 @@ export function useShouldRenderChannelList() {
         c7 = true;
         checkGatewayConnection(true);
       }
-      const obj2 = first(5322);
+      const obj2 = first(5323);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(checkGatewayConnection);
       let result1 = CacheStore.addReactChangeListener(checkCacheLoadStatus);
       let ComponentDispatch = first(1108).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(5322).getRootNavigationRef();
+      let rootNavigationRef = first(5323).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", checkNavigationState);
       }

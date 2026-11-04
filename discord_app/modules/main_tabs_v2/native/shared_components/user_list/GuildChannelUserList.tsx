@@ -1,17 +1,17 @@
-// === Module 11758: GuildChannelUserList ===
+// === Module 11813: GuildChannelUserList ===
 
-// Module 11758 (GuildChannelUserList)
+// Module 11813 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1113 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
-import GuildUtilsDefault from "GuildUtils" /* 7021 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import sortByMatchScore from "sortByMatchScore" /* 9263 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
+import GuildUtilsDefault from "GuildUtils" /* 7036 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import sortByMatchScore from "sortByMatchScore" /* 9280 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 7570 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 7586 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -22,8 +22,8 @@ const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(7570);
-({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
+let ChannelMemberStore = fn(7586);
+({ EVERYONE_CHANNEL_ID: metroImportDefault, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1072);
 ({ RelationshipTypes: closure_15, StatusTypes: closure_16 } = Constants);
@@ -155,7 +155,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   const items5 = [closure_9];
   const stateFromStoresObject = channelId(onUserPress[16]).useStateFromStoresObject(items5, () => {
     let tmp3 = null;
-    if (channelId !== React5) {
+    if (channelId !== metroImportDefault) {
       tmp3 = channelId;
     }
     return ChannelMemberStore.getProps(guildId, tmp3);
@@ -166,7 +166,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   let tmp = guildId;
   const items6 = [first];
   const stateFromStores = channelId(onUserPress[16]).useStateFromStores(items6, () => {
-    if (channelId !== React5) {
+    if (channelId !== metroImportDefault) {
       return ChannelStore.getChannel(tmp);
     }
   });
@@ -414,7 +414,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
         obj2.onPress = function onPress(id) {
           if (null == onUserPress) {
             if (flag3) {
-              const obj = { userId: id.id, channelId: channelId !== React5 ? channelId : stateFromStores1, roleId: null, sourceAnalyticsLocations: null };
+              const obj = { userId: id.id, channelId: channelId !== metroImportDefault ? channelId : stateFromStores1, roleId: null, sourceAnalyticsLocations: null };
               let colorRoleId;
               if (memberListMember != null) {
                 colorRoleId = memberListMember.colorRoleId;

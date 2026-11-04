@@ -1,9 +1,9 @@
-// === Module 15339: VoiceMemberEmbeddedActivity ===
+// === Module 15426: VoiceMemberEmbeddedActivity ===
 
-// Module 15339 (VoiceMemberEmbeddedActivity)
+// Module 15426 (VoiceMemberEmbeddedActivity)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11930 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11989 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5397).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const XSMALL = fn(1187).AvatarSizes.XSMALL;
@@ -112,7 +112,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       const obj10 = { style: iconSource === tmp2(tmp3[18]) ? tmp.appIconPlaceholder : tmp.appIcon, source: iconSource };
       const items5 = [closure_9(tmp2(tmp3[22]), obj10), , ];
       const obj11 = { style: tmp.centerGroup, children: null };
-      const obj12 = { style: tmp.applicationName, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
+      const obj12 = { style: tmp.applicationName, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: name };
       obj11.children = closure_9(channelId(tmp3[23]).Text, obj12);
       items5[1] = closure_9(stateFromStores, obj11);
       const items6 = [tmp.overflow, ];
@@ -130,7 +130,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
           tmp5 = obj2;
         }
         obj.cutout = tmp5;
-        return React7(native.CutoutableAvatarImage, obj);
+        return React6(native.CutoutableAvatarImage, obj);
       };
       items5[2] = closure_9(channelId(tmp3[9]).SummarizedIconRow, obj13);
       obj9.children = items5;

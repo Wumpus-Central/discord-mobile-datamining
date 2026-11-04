@@ -1,33 +1,33 @@
-// === Module 16734: SettingRenderer ===
+// === Module 16826: SettingRenderer ===
 
-// Module 16734 (SettingRenderer)
+// Module 16826 (SettingRenderer)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5155 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRadioGroup from "TableRadioGroup" /* 7184 */;
-import TableRadioRow from "TableRadioRow" /* 7187 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import TableSwitchRow from "TableSwitchRow" /* 7489 */;
-import FormSwitch from "FormSwitch" /* 7490 */;
-import ClydeIcon from "ClydeIcon" /* 10815 */;
-import VolumeSliderDefault from "VolumeSlider" /* 12086 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16735 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 16737 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 16738 */;
-import settings_tracking_Tracking from "settings/tracking/Tracking" /* 16739 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5385 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRadioGroup from "TableRadioGroup" /* 7199 */;
+import TableRadioRow from "TableRadioRow" /* 7202 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import TableSwitchRow from "TableSwitchRow" /* 7505 */;
+import FormSwitch from "FormSwitch" /* 7506 */;
+import ClydeIcon from "ClydeIcon" /* 10863 */;
+import VolumeSliderDefault from "VolumeSlider" /* 12145 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16827 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 16829 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 16830 */;
+import Tracking from "Tracking" /* 16831 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16733 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16825 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 const GuildIconDefault = GuildIcon;
@@ -57,14 +57,14 @@ class GuildSelectDefaultIcon {
 }
 function DisabledActionDescriptionWithLink(children) {
   ({ description, descriptionVariant, descriptionColor } = children);
-  const tmp4 = gesture(Text_Text.Text, { variant: "text-xs/medium", color: "text-link", children: children.disabledActionLabel });
+  const tmp4 = gesture(Text_Text.Text, { variant: "body-xs/medium", color: "text-link", children: children.disabledActionLabel });
   if (null == description) {
     return tmp4;
   } else {
     let tmpResult = description;
     if (!noop.isValidElement(description)) {
       if (descriptionVariant == null) {
-        descriptionVariant = "text-xs/medium";
+        descriptionVariant = "body-xs/medium";
       }
       const obj = { variant: descriptionVariant, color: null, children: null };
       if (descriptionColor == null) {
@@ -95,7 +95,7 @@ function SettingSearchResultBreadcrumbs(breadcrumbs) {
   breadcrumbs = breadcrumbs.breadcrumbs;
   let tmp = null;
   if (0 !== breadcrumbs.length) {
-    const obj = { variant: "text-xs/medium", color: "text-muted", children: breadcrumbs.join(" \u2192 ") };
+    const obj = { variant: "body-xs/medium", color: "text-muted", children: breadcrumbs.join(" \u2192 ") };
     tmp = gesture(Text_Text.Text, obj);
   }
   return tmp;
@@ -130,7 +130,7 @@ function RouteSettingSearchResult(setting) {
   items = [preNavigationAction, index, stackNavigation, screen, setting, title, total];
   const callback = noop.useCallback(() => {
     UserSettingSearchStore.setState({ selected: setting });
-    const result = settings_tracking_Tracking.trackSettingSearchResultPress({ setting, title, route: screen.route, searchResultPosition: index, numSearchResults: total });
+    const result = Tracking.trackSettingSearchResultPress({ setting, title, route: screen.route, searchResultPosition: index, numSearchResults: total });
     const obj = { selected: setting };
     const obj3 = { setting, title, route: screen.route, searchResultPosition: index, numSearchResults: total };
     const result1 = SettingRendererUtils.onRouteSettingOnPress({ navigation: stackNavigation, screen, preNavigationAction });
@@ -149,7 +149,7 @@ function PressableSettingSearchResult(setting) {
   items = [setting, title, index, total, onPress];
   ({ IconComponent, breadcrumbs } = setting);
   const callback = noop.useCallback(() => {
-    const result = settings_tracking_Tracking.trackSettingSearchResultPress({ setting, title, searchResultPosition: index, numSearchResults: total });
+    const result = Tracking.trackSettingSearchResultPress({ setting, title, searchResultPosition: index, numSearchResults: total });
     const obj2 = { setting, title, searchResultPosition: index, numSearchResults: total };
     const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
     onPress();
@@ -171,7 +171,7 @@ function StaticSettingSearchResult(title) {
   const callback = noop.useCallback(() => {
     if (null != trailing) {
       const obj2 = { setting, title, searchResultPosition: index, numSearchResults: total };
-      const result = settings_tracking_Tracking.trackSettingSearchResultPress(obj2);
+      const result = Tracking.trackSettingSearchResultPress(obj2);
       ClipboardUtils.copy(tmp);
       const result1 = ToastUtils.presentCopiedToClipboard();
     }
@@ -208,7 +208,7 @@ function SettingSearchResultPlaceholder(arg0) {
 let closure_3 = ["onChangeEnd", "step", "startIcon", "endIcon", "minValue", "maxValue", "valueLabel", "defaultValue", "onChange"];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11678);
+const SettingRendererConstants = fn(11729);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -418,7 +418,7 @@ let closure_23 = noop.memo(function ToggleSetting(arg0) {
   if (typeof isDisabled === "object") {
     const obj6 = {};
     const merged = Object.assign(obj3);
-    const obj7 = { disabledActionLabel: isDisabled.label, description, descriptionVariant: "text-md/semibold", descriptionColor: "mobile-text-heading-primary" };
+    const obj7 = { disabledActionLabel: isDisabled.label, description };
     obj6.subLabel = gesture(DisabledActionDescriptionWithLink, obj7);
     obj6.accessible = true;
     ({ accessibilityHint: obj5.accessibilityHint, onPress: obj5.onPress } = isDisabled);
@@ -494,8 +494,8 @@ let closure_26 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(16737).useHighlightSettingItem(setting);
-  let obj = trailing(16737);
+  let highlightSettingItem = trailing(16829).useHighlightSettingItem(setting);
+  let obj = trailing(16829);
   items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => callback.locale);
   trailing = undefined;
@@ -529,18 +529,18 @@ let closure_26 = noop.memo(function StaticSetting(arg0) {
   let tmp12Result = null;
   if (null != IconComponent) {
     const obj4 = { IconComponent, variant };
-    tmp12Result = closure_14(tmp(7101).TableRow.Icon, obj4);
+    tmp12Result = closure_14(tmp(7116).TableRow.Icon, obj4);
   }
   obj3.icon = tmp12Result;
   let tmp12Result2 = null;
   if (null != trailing) {
     const obj5 = { text: trailing };
-    tmp12Result2 = closure_14(tmp(7101).TableRow.TrailingText, obj5);
+    tmp12Result2 = closure_14(tmp(7116).TableRow.TrailingText, obj5);
   }
   obj3.trailing = tmp12Result2;
   obj3.start = start;
   obj3.end = end;
-  const children = [closure_14(trailing(7101).TableRow, obj3), ];
+  const children = [closure_14(trailing(7116).TableRow, obj3), ];
   if (highlightSettingItem) {
     const obj6 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj6);
@@ -657,7 +657,7 @@ let closure_28 = noop.memo(function SliderSetting(useTrailing) {
   }
   const obj2 = { start, end, shadow: "none", border: "none", children: null };
   const obj3 = { style: tmp8.sliderTitle, children: null };
-  const items7 = [closure_14(onChangeEnd(num2[21]).Text, { variant: "text-md/semibold", children: title }), trailing];
+  const items7 = [closure_14(onChangeEnd(num2[21]).Text, { variant: "body-md/semibold", children: title }), trailing];
   obj3.children = items7;
   const items8 = [closure_16(closure_8, obj3), ];
   let tmp18Result = null != value;
@@ -666,7 +666,7 @@ let closure_28 = noop.memo(function SliderSetting(useTrailing) {
       formatPercentResult = tmp(tmp2[34]).formatPercent(stateFromStores1, value);
       const tmpResult3 = tmp(tmp2[34]);
     }
-    const obj4 = { variant: "text-sm/medium", color: "text-muted", children: formatPercentResult };
+    const obj4 = { variant: "body-sm/medium", color: "text-muted", children: formatPercentResult };
     tmp18Result = closure_14(tmp(tmp2[21]).Text, obj4);
   }
   items8[1] = tmp18Result;

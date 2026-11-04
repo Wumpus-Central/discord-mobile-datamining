@@ -1,11 +1,11 @@
-// === Module 19451: VoicePanelPIPPushToTalkOverlay ===
+// === Module 19555: VoicePanelPIPPushToTalkOverlay ===
 
-// Module 19451 (VoicePanelPIPPushToTalkOverlay)
+// Module 19555 (VoicePanelPIPPushToTalkOverlay)
 import nativeDefault from "native" /* 575 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import NativeViewDefault from "NativeView" /* 7086 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11348 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import NativeViewDefault from "NativeView" /* 7101 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
@@ -13,11 +13,11 @@ import module_1652_mod from "module_1652" /* 1652 */;
 
 const require = globalThis.__r;
 
-const _modDef19452 = tmp9(19452);
+const _modDef19556 = tmp9(19556);
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(11360).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(11410).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let module_1652 = module_1652_mod;
 const NativeView = module_1652.createAnimatedComponent(NativeViewDefault);
 let module_1652 = module_1652_mod;
@@ -222,7 +222,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   const items11 = [tmp4.iconContainer, animatedStyle];
   obj8.style = items11;
   const tmpResult2 = require("module_1652");
-  obj8.children = closure_7(closure_11, { style: animatedStyle1, size: require("native").Icon.Sizes.SMALL_20, source: _modDef19452, disableColor: true });
+  obj8.children = closure_7(closure_11, { style: animatedStyle1, size: require("native").Icon.Sizes.SMALL_20, source: _modDef19556, disableColor: true });
   obj7.children = closure_7(NativeView, obj8);
   items10[1] = closure_7(require("LegacyBaseButton").GestureDetector, obj7);
   obj5.children = items10;

@@ -1,8 +1,8 @@
-// === Module 5729: NavScrim ===
+// === Module 5742: NavScrim ===
 
-// Module 5729 (NavScrim)
+// Module 5742 (NavScrim)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);

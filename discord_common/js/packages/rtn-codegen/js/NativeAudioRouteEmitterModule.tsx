@@ -1,6 +1,6 @@
-// === Module 5906: NativeAudioRouteEmitterModule ===
+// === Module 5920: NativeAudioRouteEmitterModule ===
 
-// Module 5906 (NativeAudioRouteEmitterModule)
+// Module 5920 (NativeAudioRouteEmitterModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

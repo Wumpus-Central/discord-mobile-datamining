@@ -1,13 +1,13 @@
-// === Module 16706: UserProfileWidgetEditingHeader ===
+// === Module 16796: UserProfileWidgetEditingHeader ===
 
-// Module 16706 (UserProfileWidgetEditingHeader)
+// Module 16796 (UserProfileWidgetEditingHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import IconButton from "IconButton" /* 8152 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9704 */;
-import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 12618 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import IconButton from "IconButton" /* 8168 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 9722 */;
+import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 12699 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileWidgetEditingHeader() {
   const tmp = closure_6();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.heading, children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.heading, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.OYlggR);
   items = [React4(Text_Text.Heading, obj2), , ];

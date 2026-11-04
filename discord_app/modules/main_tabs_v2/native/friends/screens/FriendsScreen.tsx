@@ -1,18 +1,18 @@
-// === Module 18987: FriendsScreen ===
+// === Module 19090: FriendsScreen ===
 
-// Module 18987 (FriendsScreen)
+// Module 19090 (FriendsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import SendMessageIcon from "SendMessageIcon" /* 5849 */;
-import TableRow from "TableRow" /* 7101 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import NoResultsDefault from "NoResults" /* 13539 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 17234 */;
-import _modDef18670 from "module_18670" /* 18670 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import SendMessageIcon from "SendMessageIcon" /* 5863 */;
+import TableRow from "TableRow" /* 7116 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import NoResultsDefault from "NoResults" /* 13623 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 17326 */;
+import _modDef18771 from "module_18771" /* 18771 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7924 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7940 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, flex: 1 }, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, flex: 1 };
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     items = [];
     if (tmp2) {
-      const obj = { icon: _modDef18670, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef18771, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -113,9 +113,9 @@ export default function FriendsScreen() {
       obj5.onPress = function onPress() {
         return navigation.navigate("friends", { screen: "add-friends", params: { sourcePage: "Friends Screen" } });
       };
-      obj3.children = React5(components_Button_Button.Button, obj5);
-      obj2.children = React5(View, obj3);
-      items[1] = React5(NoResultsDefault, obj2);
+      obj3.children = metroImportDefault(components_Button_Button.Button, obj5);
+      obj2.children = metroImportDefault(View, obj3);
+      items[1] = metroImportDefault(NoResultsDefault, obj2);
       obj.children = items;
       return tmp(View, obj);
     } else {
@@ -123,9 +123,9 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef18670 };
-      obj7.icon = React5(TableRow.TableRow.Icon, obj8);
-      obj7.trailing = React5(TableRow.TableRow.Arrow, {});
+      const obj8 = { source: _modDef18771 };
+      obj7.icon = metroImportDefault(TableRow.TableRow.Icon, obj8);
+      obj7.trailing = metroImportDefault(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;
       obj7.label = intl5.string(util.t.fyA115);
       if (incoming + outgoing > 0) {
@@ -146,9 +146,9 @@ export default function FriendsScreen() {
           navigation.navigate("friends", { screen: "spam-requests" });
         }
       };
-      obj7 = React5(TableRow.TableRow, obj7);
+      obj7 = metroImportDefault(TableRow.TableRow, obj7);
       obj6.children = obj7;
-      React5(View, obj6);
+      metroImportDefault(View, obj6);
     }
   }, items4);
   let obj3 = { value: analyticsLocations, children: null };

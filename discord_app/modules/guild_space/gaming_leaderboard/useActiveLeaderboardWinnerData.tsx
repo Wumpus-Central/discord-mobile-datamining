@@ -1,6 +1,6 @@
-// === Module 10912: useActiveLeaderboardWinnerData ===
+// === Module 10960: useActiveLeaderboardWinnerData ===
 
-// Module 10912 (useActiveLeaderboardWinnerData)
+// Module 10960 (useActiveLeaderboardWinnerData)
 import DurationsDefault from "Durations" /* 1089 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 

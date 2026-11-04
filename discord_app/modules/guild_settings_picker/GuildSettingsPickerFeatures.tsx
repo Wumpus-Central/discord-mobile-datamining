@@ -1,10 +1,10 @@
-// === Module 15861: GuildSettingsPickerFeatures ===
+// === Module 15949: GuildSettingsPickerFeatures ===
 
-// Module 15861 (GuildSettingsPickerFeatures)
+// Module 15949 (GuildSettingsPickerFeatures)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault from "RoleSubscriptionsOnboardingGuildPickerFeatureSpec" /* 15862 */;
-import RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault from "RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec" /* 15863 */;
+import RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault from "RoleSubscriptionsOnboardingGuildPickerFeatureSpec" /* 15950 */;
+import RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault from "RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec" /* 15951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5073 */;

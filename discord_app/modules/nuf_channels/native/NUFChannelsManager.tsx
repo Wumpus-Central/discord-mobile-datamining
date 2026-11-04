@@ -1,18 +1,18 @@
-// === Module 15323: NUFChannelsManager ===
+// === Module 15410: NUFChannelsManager ===
 
-// Module 15323 (NUFChannelsManager)
+// Module 15410 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import UserUtils from "UserUtils" /* 5195 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 import UserStore from "UserStore" /* 1385 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
 const GuildFeatures = fn(1072).GuildFeatures;
@@ -84,7 +84,7 @@ class NUFChannelsManager extends tmp2 {
             const tmpResult4 = UserUtils;
           }
           if (isNewUserResult) {
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15324, dependencyMap.paths), "NUFChannelsActionSheet");
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15411, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = Storage3.Storage;
             const result = Storage2.set(c9, true);
           }

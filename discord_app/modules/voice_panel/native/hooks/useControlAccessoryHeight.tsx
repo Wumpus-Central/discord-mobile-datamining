@@ -1,7 +1,7 @@
-// === Module 19492: useControlAccessoryHeight ===
+// === Module 19596: useControlAccessoryHeight ===
 
-// Module 19492 (useControlAccessoryHeight)
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19463 */;
+// Module 19596 (useControlAccessoryHeight)
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 19567 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

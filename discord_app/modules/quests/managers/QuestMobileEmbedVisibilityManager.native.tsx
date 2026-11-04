@@ -1,33 +1,33 @@
-// === Module 20183: QuestMobileEmbedVisibilityManager ===
+// === Module 20299: QuestMobileEmbedVisibilityManager ===
 
-// Module 20183 (QuestMobileEmbedVisibilityManager)
+// Module 20299 (QuestMobileEmbedVisibilityManager)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import privDefault from "priv" /* 1453 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import useAlertStore2 from "useAlertStore" /* 6080 */;
-import QuestTypes from "QuestTypes" /* 6904 */;
-import AdCreativeType from "AdCreativeType" /* 6908 */;
-import getQuestLogger from "getQuestLogger" /* 7977 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 14831 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import useAlertStore2 from "useAlertStore" /* 6095 */;
+import QuestTypes from "QuestTypes" /* 6919 */;
+import AdCreativeType from "AdCreativeType" /* 6923 */;
+import getQuestLogger from "getQuestLogger" /* 7993 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 14911 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ActionSheetStore from "ActionSheetStore" /* 5382 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
-import VoicePanelStore from "VoicePanelStore" /* 6995 */;
+import ActionSheetStore from "ActionSheetStore" /* 5383 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
+import VoicePanelStore from "VoicePanelStore" /* 7010 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import AlertStore from "AlertStore" /* 10265 */;
+import AlertStore from "AlertStore" /* 10313 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
-import QuestStore from "QuestStore" /* 7970 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import QuestStore from "QuestStore" /* 7986 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
-const ChannelDetailsStore = fn(9956);
-({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
+const ChannelDetailsStore = fn(9974);
+({ useChannelDetailsStore: metroImportDefault, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
 const isTextChannel = fn(4994).isTextChannel;
-let closure_16 = fn(9818).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_16 = fn(9836).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1072).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -82,7 +82,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const set = new Set();
       codedLinks = codedLinks.codedLinks;
       const item = codedLinks.forEach((type, questContentPosition) => {
-        if (type.type === applyArgumentsResult(5872).CodedLinkType.QUESTS_EMBED) {
+        if (type.type === applyArgumentsResult(5886).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
           if (!set.has(code)) {
             const obj3 = { questId: code, questContentPosition, messageId: null, channelId: null };
@@ -206,8 +206,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(6993).isChannelFocused();
-      applyArgumentsResult(5321);
+      let isChannelFocusedResult = applyArgumentsResult(7008).isChannelFocused();
+      applyArgumentsResult(5322);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }
@@ -216,7 +216,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     applyArgumentsResult.isSearchShowing = function isSearchShowing() {
       let tmp2 = null != applyArgumentsResult.chatChannelId;
       if (tmp2) {
-        tmp2 = React6(tmp.chatChannelId);
+        tmp2 = React5(tmp.chatChannelId);
       }
       return tmp2;
     };

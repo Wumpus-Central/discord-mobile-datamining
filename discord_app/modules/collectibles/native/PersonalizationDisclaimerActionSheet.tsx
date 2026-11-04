@@ -1,22 +1,22 @@
-// === Module 18013: PersonalizationDisclaimerActionSheet ===
+// === Module 18109: PersonalizationDisclaimerActionSheet ===
 
-// Module 18013 (PersonalizationDisclaimerActionSheet)
+// Module 18109 (PersonalizationDisclaimerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import ButtonGroup from "ButtonGroup" /* 6887 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8285 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import ButtonGroup from "ButtonGroup" /* 6902 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8301 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -32,7 +32,7 @@ export default function PersonalizationDisclaimerActionSheet() {
     obj.openURL(HelpdeskUtilsDefault.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
-  const obj2 = { variant: "heading-md/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };
+  const obj2 = { variant: "heading-sm/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.euks4U);
   items = [hasOwnProperty(Text_Text.Text, obj2), ];

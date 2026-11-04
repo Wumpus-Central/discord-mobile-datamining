@@ -1,15 +1,15 @@
-// === Module 17947: UserSettingsDesignSystemBackdrop ===
+// === Module 18043: UserSettingsDesignSystemBackdrop ===
 
-// Module 17947 (UserSettingsDesignSystemBackdrop)
+// Module 18043 (UserSettingsDesignSystemBackdrop)
 import _mod1652 from "module_1652" /* 1652 */;
-import Backdrop from "Backdrop" /* 5721 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import Dialog from "Dialog" /* 6137 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import Card from "Card" /* 7103 */;
+import Backdrop from "Backdrop" /* 5734 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import Dialog from "Dialog" /* 6152 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import Card from "Card" /* 7118 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ function BackdropCard(arg0) {
   const obj2 = { spacing: 12, children: null };
   items = [
     timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: title }),
-    timestampProducer(Text_Text.Text, { variant: "text-md/normal", color: "text-subtle", children: description }),
+    timestampProducer(Text_Text.Text, { variant: "body-md/normal", color: "text-subtle", children: description }),
     timestampProducer(components_Button_Button.Button, {
       text: buttonLabel,
       onPress() {
@@ -31,13 +31,13 @@ function BackdropCard(arg0) {
     })
   ];
   obj2.children = items;
-  obj.children = React5(Stack_Stack.Stack, obj2);
+  obj.children = metroImportDefault(Stack_Stack.Stack, obj2);
   return timestampProducer(Card.Card, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
@@ -82,7 +82,7 @@ export default function UserSettingsDesignSystemBackdrop() {
   const obj3 = { spacing: 24, children: null };
   const items2 = [timestampProducer(BackdropCard, { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp4, setBlurAmount: tmp7 }), timestampProducer(BackdropCard, { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp4, setBlurAmount: tmp7 }), timestampProducer(BackdropCard, { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp4, setBlurAmount: tmp7 })];
   obj3.children = items2;
-  const items3 = [React5(Stack_Stack.Stack, obj3), ];
+  const items3 = [metroImportDefault(Stack_Stack.Stack, obj3), ];
   if (tmp15Result) {
     function handleClose() {
       _undefined(false);
@@ -92,16 +92,16 @@ export default function UserSettingsDesignSystemBackdrop() {
     const items4 = [timestampProducer(Backdrop.Backdrop, obj5), ];
     const obj6 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
     const obj7 = { children: null };
-    const obj8 = { variant: "text-md/normal", children: null };
+    const obj8 = { variant: "body-md/normal", children: null };
     const items5 = ["blur style: ", tmp6];
     obj8.children = items5;
-    obj7.children = React5(Text_Text.Text, obj8);
+    obj7.children = metroImportDefault(Text_Text.Text, obj8);
     obj6.children = timestampProducer(Card.Card, obj7);
     items4[1] = timestampProducer(hasOwnProperty, obj6);
     obj4.children = items4;
-    tmp15Result = React5(Dialog.Dialog, obj4);
+    tmp15Result = metroImportDefault(Dialog.Dialog, obj4);
   }
   items3[1] = tmp15Result;
   obj2.children = items3;
-  return React5(React4, obj2);
+  return metroImportDefault(React4, obj2);
 };

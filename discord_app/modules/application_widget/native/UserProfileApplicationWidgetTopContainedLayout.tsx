@@ -1,11 +1,11 @@
-// === Module 12487: UserProfileApplicationWidgetTopContainedLayout ===
+// === Module 12552: UserProfileApplicationWidgetTopContainedLayout ===
 
-// Module 12487 (UserProfileApplicationWidgetTopContainedLayout)
+// Module 12552 (UserProfileApplicationWidgetTopContainedLayout)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12397 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 12483 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12484 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12462 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 12548 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12549 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   const items1 = [header.header, ];
   const obj5 = { style: tmp.contentRow, children: null };
   const obj6 = { style: tmp.text, children: null };
-  const items2 = [React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  const items2 = [React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues, variant: "body-lg/medium", color: "text-default" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues1, variant: "body-sm/normal", color: "text-muted" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues2, variant: "body-sm/normal", color: "text-muted" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues3, variant: "body-sm/normal", color: "text-muted" })];
   obj6.children = items2;
   const items3 = [hasOwnProperty(View, obj6), ];
   if (null != fieldValue) {

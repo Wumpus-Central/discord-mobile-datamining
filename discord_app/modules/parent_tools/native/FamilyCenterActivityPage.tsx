@@ -1,21 +1,21 @@
-// === Module 16919: FamilyCenterActivityPage ===
+// === Module 17011: FamilyCenterActivityPage ===
 
-// Module 16919 (FamilyCenterActivityPage)
+// Module 17011 (FamilyCenterActivityPage)
 import nativeDefault from "native" /* 575 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import useUserLinks from "useUserLinks" /* 8493 */;
-import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 13497 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 16920 */;
-import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 16922 */;
-import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 16932 */;
-import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 16936 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import useUserLinks from "useUserLinks" /* 8510 */;
+import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 13581 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 17012 */;
+import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 17014 */;
+import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 17024 */;
+import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 17028 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { scrollView: { flex: 1 }, dataConfirmation: { marginTop: nativeDefault.space.PX_8 }, container: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
@@ -36,12 +36,12 @@ export default function FamilyCenterActivityPage() {
     const obj5 = { style: tmp.dataConfirmation, children: hasOwnProperty(FamilyCenterDataConfirmationDefault, {}) };
     items1[2] = hasOwnProperty(React3, obj5);
     obj4.children = items1;
-    let tmp3Result = React5(timestampProducer, obj4);
+    let tmp3Result = metroImportDefault(timestampProducer, obj4);
   } else {
     tmp3Result = hasOwnProperty(FamilyCenterActivityCardDefault, {});
   }
   items[1] = tmp3Result;
   obj3.children = items;
-  obj2.children = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, children: React5(React3, obj3) });
+  obj2.children = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, children: metroImportDefault(React3, obj3) });
   return hasOwnProperty(React4, obj2);
 };

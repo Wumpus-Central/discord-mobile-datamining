@@ -1,23 +1,23 @@
-// === Module 11889: PictureInPictureVideo ===
+// === Module 11948: PictureInPictureVideo ===
 
-// Module 11889 (PictureInPictureVideo)
+// Module 11948 (PictureInPictureVideo)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11835 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11845 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11848 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11849 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11894 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11904 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11907 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11908 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import SpeakingStore from "SpeakingStore" /* 6876 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11842 */;
+import SpeakingStore from "SpeakingStore" /* 6891 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11901 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -27,9 +27,9 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(11133);
+const ChannelCallStore = fn(11181);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5801).ParticipantTypes;
+const ParticipantTypes = fn(5815).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(5141);

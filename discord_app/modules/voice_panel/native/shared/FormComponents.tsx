@@ -1,18 +1,18 @@
-// === Module 9360: FormComponents ===
+// === Module 9377: FormComponents ===
 
-// Module 9360 (FormComponents)
+// Module 9377 (FormComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NativeViewDefault from "NativeView" /* 7086 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7611 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8006 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9361 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NativeViewDefault from "NativeView" /* 7101 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7627 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8022 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9378 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
 
 require = fn;
 function VoiceBadges(arg0) {
@@ -41,7 +41,7 @@ function VoiceBadges(arg0) {
   return timestampProducer(NativeViewDefault, obj);
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -123,7 +123,7 @@ export function MemberRowItem(user) {
       }
       const intl2 = util.intl;
       if (null == obj.details) {
-        obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
+        obj = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: null };
         const obj2 = { name: obj.name };
         obj.children = intl2.format(tmp12, obj2);
         hasOwnProperty(Text_Text.Text, obj);
@@ -154,7 +154,7 @@ export function MemberRowItem(user) {
     if (notConnected) {
       str = "text-muted";
     }
-    const obj12 = { variant: "text-md/semibold", color: str, style: null, children: null };
+    const obj12 = { variant: "body-md/semibold", color: str, style: null, children: null };
     let tmp28 = null != displayNameStylesFont;
     if (tmp28) {
       const obj13 = { fontFamily: displayNameStylesFont };

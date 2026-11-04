@@ -1,7 +1,7 @@
-// === Module 8596: useGuildPowerupsBoostLevelProgress ===
+// === Module 8613: useGuildPowerupsBoostLevelProgress ===
 
-// Module 8596 (useGuildPowerupsBoostLevelProgress)
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8592 */;
+// Module 8613 (useGuildPowerupsBoostLevelProgress)
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8609 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 const require = globalThis.__r;
@@ -9,7 +9,7 @@ const useGuildPowerupsBoostCountDefault = useGuildPowerupsBoostCount;
 
 require = fn;
 const Constants = fn(1072);
-({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4, BoostedGuildTiers: hasOwnProperty, GuildFeatures: metroRequire } = Constants);
+({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4, BoostedGuildTiers: hasOwnProperty, GuildFeatures: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");
 

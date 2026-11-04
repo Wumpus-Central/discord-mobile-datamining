@@ -1,8 +1,8 @@
-// === Module 18857: SuggestedSearchList ===
+// === Module 18960: SuggestedSearchList ===
 
-// Module 18857 (SuggestedSearchList)
+// Module 18960 (SuggestedSearchList)
 import nativeDefault from "native" /* 575 */;
-import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 18859 */;
+import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 18962 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -34,7 +34,7 @@ export default noop.memo(function SuggestedSearchList(smartSearchQuery) {
       num = source(tmp3[4]).space.PX_16;
     }
     const obj2 = { children: null };
-    const obj3 = { variant: "text-sm/semibold", color: "interactive-text-default", style: null, children: null };
+    const obj3 = { variant: "body-sm/semibold", color: "interactive-text-default", style: null, children: null };
     const obj4 = { marginTop: num };
     items[1] = obj4;
     obj3.style = items;

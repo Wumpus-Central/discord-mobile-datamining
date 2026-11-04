@@ -1,15 +1,15 @@
-// === Module 12097: KrispLogo ===
+// === Module 12156: KrispLogo ===
 
-// Module 12097 (KrispLogo)
+// Module 12156 (KrispLogo)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import shared from "shared" /* 5148 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import _modDef12098 from "module_12098" /* 12098 */;
-import _modDef12099 from "module_12099" /* 12099 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import _modDef12157 from "module_12157" /* 12157 */;
+import _modDef12158 from "module_12158" /* 12158 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -28,7 +28,7 @@ function handleKrispLinkPressed() {
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, AnalyticsPages: closure_7, AnalyticsSections: closure_8, HelpdeskArticles: closure_9 } = Constants);
+({ AnalyticEvents: closure_6, AnalyticsPages: metroImportDefault, AnalyticsSections: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = { logo: { marginLeft: 20, height: 30, width: 67 }, detailsView: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingBottom: 12, gap: 12 } };
@@ -39,10 +39,10 @@ export default function KrispLogo() {
   items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef12098;
+    let tmp4Result = _modDef12157;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef12099;
+    tmp4Result = _modDef12158;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };
@@ -50,12 +50,12 @@ export default function KrispLogo() {
   obj2 = shared;
   const intl = util.intl;
   obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
-  const items1 = [closure_1_10(tmp6(5837), obj4), ];
+  const items1 = [closure_1_10(tmp6(5851), obj4), ];
   const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);
   obj5.onPress = handleKrispLinkPressed;
-  const obj6 = { variant: "text-sm/medium", color: "text-link", children: null };
+  const obj6 = { variant: "body-sm/medium", color: "text-link", children: null };
   const intl3 = util.intl;
   obj6.children = intl3.string(util.t.hvVgAZ);
   obj5.children = closure_1_10(Text_Text.Text, obj6);

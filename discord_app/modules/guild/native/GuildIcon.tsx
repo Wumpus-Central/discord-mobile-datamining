@@ -1,14 +1,14 @@
-// === Module 7083: GuildIcon ===
+// === Module 7098: GuildIcon ===
 
-// Module 7083 (GuildIcon)
+// Module 7098 (GuildIcon)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_5 = fn(7084).ExpressionSourceGuildRecord;
+let closure_5 = fn(7099).ExpressionSourceGuildRecord;
 const GuildRecord = fn(5008);
-({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
+({ getGuildIconSource: closure_6, getGuildAcronym: metroImportDefault } = GuildRecord);
 const Fonts = fn(1072).Fonts;
 const jsx = fn(21).jsx;
 const GuildIconSizes = { XXXSMALL: "XXXSMALL", XXSMALL_12: "XXSMALL_12", XXSMALL: "XXSMALL", XSMALL_20: "XSMALL_20", XSMALL: "XSMALL", SMALL: "SMALL", SMALL_32: "SMALL_32", SMALL_36: "SMALL_36", NORMAL: "NORMAL", LARGE: "LARGE", XLARGE: "XLARGE", XXLARGE: "XXLARGE" };

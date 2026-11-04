@@ -1,16 +1,16 @@
-// === Module 14703: ChannelHeader ===
+// === Module 14783: ChannelHeader ===
 
-// Module 14703 (ChannelHeader)
+// Module 14783 (ChannelHeader)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import ChatInputUtils from "ChatInputUtils" /* 5330 */;
-import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11675 */;
-import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 14704 */;
-import HomeChannelHeaderDefault from "HomeChannelHeader" /* 14705 */;
-import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 14706 */;
-import ForumChannelHeaderDefault from "ForumChannelHeader" /* 14711 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14712 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11726 */;
+import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 14784 */;
+import HomeChannelHeaderDefault from "HomeChannelHeader" /* 14785 */;
+import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 14786 */;
+import ForumChannelHeaderDefault from "ForumChannelHeader" /* 14791 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14792 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
@@ -38,7 +38,7 @@ export default function ChannelHeader(channelId) {
   items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(563);
-  const isChannelContentGated = channelId(6854).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(6869).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;

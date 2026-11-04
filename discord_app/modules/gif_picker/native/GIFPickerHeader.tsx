@@ -1,15 +1,15 @@
-// === Module 10383: GIFPickerHeader ===
+// === Module 10431: GIFPickerHeader ===
 
-// Module 10383 (GIFPickerHeader)
+// Module 10431 (GIFPickerHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import timingPresets from "timingPresets" /* 5380 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import Search_SearchBar from "Search/SearchBar" /* 7339 */;
-import GifProvider from "GifProvider" /* 10375 */;
-import ChevronLargeLeftIcon from "ChevronLargeLeftIcon" /* 10384 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import timingPresets from "timingPresets" /* 5381 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import Search_SearchBar from "Search/SearchBar" /* 7355 */;
+import GifProvider from "GifProvider" /* 10423 */;
+import ChevronLargeLeftIcon from "ChevronLargeLeftIcon" /* 10432 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -93,7 +93,7 @@ function FavoritesSearch(onQueryChange) {
     str2 = "no-hide-descendants";
   }
   obj4.importantForAccessibility = str2;
-  const obj5 = { variant: "icon-only", size: "md", icon: require("module_7341"), accessibilityLabel: null, onPress: null };
+  const obj5 = { variant: "icon-only", size: "md", icon: require("module_7357"), accessibilityLabel: null, onPress: null };
   const intl = tmp5(tmp6[14]).intl;
   obj5.accessibilityLabel = intl.string(require("util").t["+Kakw+"]);
   obj5.onPress = callback;
@@ -134,18 +134,18 @@ function FavoritesSearch(onQueryChange) {
 const View = fn(17).View;
 fn(1072).GIFPickerResultTypes;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_8 }, headerContainer: null, header: null, favoritesSearch: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
-obj.headerContainer = { flexDirection: "row", justifyContent: "space-between", gap: fn(10377).GIF_PICKER_GUTTER_SPACING };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10377).GIF_PICKER_GUTTER_SPACING };
-obj.header = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(7224).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj.headerContainer = { flexDirection: "row", justifyContent: "space-between", gap: fn(10425).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10425).GIF_PICKER_GUTTER_SPACING };
+obj.header = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(7244).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj.favoritesSearch = { position: "absolute", top: 0, end: 0, overflow: "hidden" };
 let closure_10 = createStyles.createStyles(obj);
 let closure_11 = { code: "(function GIFPickerHeaderTsx1(){let[progress]=this.__closure;return{opacity:1-progress.get()};})" };
 let closure_12 = { code: "(function GIFPickerHeaderTsx2(){let[progress,columnWidth]=this.__closure;return{width:progress.get()*columnWidth,opacity:progress.get()};})" };
-let obj5 = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(7224).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj5 = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(7244).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerHeader.tsx");
 
@@ -157,7 +157,7 @@ export default noop.memo(function GIFPickerHeader(arg0) {
   const obj = { style: tmp.container, children: null };
   if (categoryType === GIFPickerResultTypes.SEARCH) {
     const obj2 = { size: "md", onChange: onQueryChange, placeholder: tmp5, onClear: onQueryClear, ref: searchInputRef, round: true };
-    let tmp13Result = React5(Search_SearchBar.SearchBar, obj2);
+    let tmp13Result = metroImportDefault(Search_SearchBar.SearchBar, obj2);
   } else {
     const obj3 = { style: tmp.headerContainer, children: null };
     const obj4 = { style: tmp.header, accessibilityRole: "button", onPress: onQueryClear, accessibilityLabel: null, children: null };
@@ -167,7 +167,7 @@ export default noop.memo(function GIFPickerHeader(arg0) {
     obj5.destination = intl5.string(util.t.ffgJrs);
     obj4.accessibilityLabel = intl4.formatToPlainString(util.t.UTypEu, obj5);
     const obj6 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, size: "sm" };
-    items = [React5(ChevronLargeLeftIcon.ChevronLargeLeftIcon, obj6), ];
+    items = [metroImportDefault(ChevronLargeLeftIcon.ChevronLargeLeftIcon, obj6), ];
     if (categoryType === GIFPickerResultTypes.TRENDING_GIFS) {
       const intl3 = util.intl;
       let stringResult = intl3.string(util.t.TsWCdW);
@@ -178,19 +178,19 @@ export default noop.memo(function GIFPickerHeader(arg0) {
       const intl = util.intl;
       stringResult = intl.string(util.t["5h0QOP"]);
     }
-    const obj7 = { variant: "text-sm/semibold", color: "text-default", maxFontSizeMultiplier: 2, children: stringResult };
-    items[1] = React5(Text_Text.Text, obj7);
+    const obj7 = { variant: "body-sm/semibold", color: "text-default", maxFontSizeMultiplier: 2, children: stringResult };
+    items[1] = metroImportDefault(Text_Text.Text, obj7);
     obj4.children = items;
-    const items1 = [React7(Pressables.PressableOpacity, obj4), ];
+    const items1 = [React6(Pressables.PressableOpacity, obj4), ];
     let tmp6Result2 = categoryType === GIFPickerResultTypes.FAVORITES;
     if (tmp6Result2) {
       const obj8 = { columnWidth, onQueryChange: onFavoritesQueryChange };
-      tmp6Result2 = React5(FavoritesSearch, obj8);
+      tmp6Result2 = metroImportDefault(FavoritesSearch, obj8);
     }
     items1[1] = tmp6Result2;
     obj3.children = items1;
-    tmp13Result = React7(View, obj3);
+    tmp13Result = React6(View, obj3);
   }
   obj.children = tmp13Result;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 });

@@ -1,6 +1,6 @@
-// === Module 14054: SearchFetcher ===
+// === Module 14140: SearchFetcher ===
 
-// Module 14054 (SearchFetcher)
+// Module 14140 (SearchFetcher)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef1487 from "module_1487" /* 1487 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -8,7 +8,7 @@ import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 const Constants = fn(1072);
-({ SearchTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
+({ SearchTypes: hasOwnProperty, Endpoints: closure_6 } = Constants);
 class SearchFetcher {
   constructor(arg0, arg1, arg2) {
     merged = Object.assign({ isCanceled: false });

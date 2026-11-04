@@ -1,6 +1,6 @@
-// === Module 17132: Shopfront ===
+// === Module 17224: Shopfront ===
 
-// Module 17132 (Shopfront)
+// Module 17224 (Shopfront)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

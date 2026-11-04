@@ -1,23 +1,23 @@
-// === Module 19025: CustomTypingIndicatorProfileCoachmark ===
+// === Module 19128: CustomTypingIndicatorProfileCoachmark ===
 
-// Module 19025 (CustomTypingIndicatorProfileCoachmark)
+// Module 19128 (CustomTypingIndicatorProfileCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import user from "user" /* 1393 */;
 import _modDef3997 from "module_3997" /* 3997 */;
-import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 13868 */;
-import _modDef13871 from "module_13871" /* 13871 */;
-import _modDef13872 from "module_13872" /* 13872 */;
+import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 13954 */;
+import _modDef13957 from "module_13957" /* 13957 */;
+import _modDef13958 from "module_13958" /* 13958 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function CoachmarkPreview() {
   const tmp = closure_8();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
-  const obj2 = { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null };
-  items = [_modDef13871, _modDef13872, _modDef13871];
+  const obj2 = { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "body-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null };
+  items = [_modDef13957, _modDef13958, _modDef13957];
   obj2.emojiSource = items;
-  obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null });
+  obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "body-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 }
 const View = fn(17).View;

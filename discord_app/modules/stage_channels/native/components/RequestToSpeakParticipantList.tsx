@@ -1,9 +1,9 @@
-// === Module 12031: RequestToSpeakParticipantList ===
+// === Module 12090: RequestToSpeakParticipantList ===
 
-// Module 12031 (RequestToSpeakParticipantList)
+// Module 12090 (RequestToSpeakParticipantList)
 import nativeDefault from "native" /* 575 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8069 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8085 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -45,7 +45,7 @@ function RequestToSpeakParticipant(participant) {
   }
   items2[1] = { color: colorString };
   const items3 = [closure_4(participant(analyticsLocations[10]).LegacyText, { style: items2, numberOfLines: 1, children: participant.user.username }), ];
-  const obj8 = { variant: "text-xs/medium", color: "text-default", children: null };
+  const obj8 = { variant: "body-xs/medium", color: "text-default", children: null };
   const obj5 = { user: participant.user, guildId: channel.guild_id, size: participant(analyticsLocations[10]).AvatarSizes.NORMAL };
   const obj7 = { style: items2, numberOfLines: 1, children: participant.user.username };
   obj8.children = participant(analyticsLocations[9]).participantMemberInfo(participant);
@@ -105,7 +105,7 @@ export default function RequestToSpeakParticipantList(channel) {
     const intl = tmp2(tmp3[13]).intl;
     obj4.children = intl.string(tmp2(tmp3[13]).t["7R24mX"]);
     items = [closure_4(tmp2(tmp3[11]).Text, obj4), ];
-    const obj5 = { style: tmp.emptyBody, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj5 = { style: tmp.emptyBody, variant: "body-sm/medium", color: "text-default", children: null };
     const intl2 = tmp2(tmp3[13]).intl;
     obj5.children = intl2.string(tmp2(tmp3[13]).t.Rpr2s0);
     items[1] = closure_4(tmp2(tmp3[11]).Text, obj5);

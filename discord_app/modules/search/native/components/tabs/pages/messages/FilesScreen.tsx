@@ -1,13 +1,13 @@
-// === Module 18944: FilesScreen ===
+// === Module 19047: FilesScreen ===
 
-// Module 18944 (FilesScreen)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14017 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 18939 */;
+// Module 19047 (FilesScreen)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14103 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 19042 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SearchConstants = fn(9958);
-({ SearchListItemTypes: closure_4, CARD_ESTIMATED_ITEM_SIZE: hasOwnProperty, FILES_OR_LINKS_NUM_COLUMNS: metroRequire, FILES_OR_LINKS_GAP_WIDTH: closure_7 } = SearchConstants);
+const SearchConstants = fn(9976);
+({ SearchListItemTypes: closure_4, CARD_ESTIMATED_ITEM_SIZE: hasOwnProperty, FILES_OR_LINKS_NUM_COLUMNS: closure_6, FILES_OR_LINKS_GAP_WIDTH: metroImportDefault } = SearchConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/FilesScreen.tsx");

@@ -1,11 +1,11 @@
-// === Module 12333: ConjureNativeMarkdown ===
+// === Module 12398: ConjureNativeMarkdown ===
 
-// Module 12333 (ConjureNativeMarkdown)
+// Module 12398 (ConjureNativeMarkdown)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import conjureMarkup from "conjureMarkup" /* 12278 */;
-import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12334 */;
-import useConjureRevealedText from "useConjureRevealedText" /* 12335 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import conjureMarkup from "conjureMarkup" /* 12339 */;
+import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12399 */;
+import useConjureRevealedText from "useConjureRevealedText" /* 12400 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ class ConjureNativeMarkdown {
       style: tmp.blocks,
       children: memo.map((kind, index) => {
             if ("text" === kind.kind) {
-              obj2 = { variant: "text-md/normal", color: "text-default", children: conjureMarkup.parseConjureMarkup(kind.text, true, obj) };
+              obj2 = { variant: "body-md/normal", color: "text-default", children: conjureMarkup.parseConjureMarkup(kind.text, true, obj) };
               let tmp4 = React4(Text_Text.Text, obj2, index);
             } else {
               obj = { style: list.list, accessibilityRole: "list", children: null };
@@ -31,10 +31,10 @@ class ConjureNativeMarkdown {
                 const obj = { style: null, children: null };
                 items = [list.item, { paddingLeft: children.depth * PX_16 }];
                 obj.style = items;
-                const obj3 = { style: list.marker, children: closure_2_4(source(dependencyMap[6]).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
+                const obj3 = { style: list.marker, children: closure_2_4(source(dependencyMap[6]).Text, { variant: "body-md/normal", color: "text-default", children: children.marker }) };
                 const items1 = [closure_2_4(View, obj3), ];
                 const obj5 = { style: list.itemText, children: null };
-                const obj6 = { variant: "text-md/normal", color: "text-default", children: source(dependencyMap[7]).parseConjureMarkup(children.text, true, obj2) };
+                const obj6 = { variant: "body-md/normal", color: "text-default", children: source(dependencyMap[7]).parseConjureMarkup(children.text, true, obj2) };
                 obj5.children = closure_2_4(source(dependencyMap[6]).Text, obj6);
                 items1[1] = closure_2_4(View, obj5);
                 obj.children = items1;
@@ -64,7 +64,7 @@ obj4.item = { flexDirection: "row", alignItems: "flex-start" };
 let obj6 = { gap: nativeDefault.space.PX_4 };
 obj4.marker = { minWidth: nativeDefault.space.PX_20, marginRight: nativeDefault.space.PX_4 };
 obj4.itemText = { flex: 1 };
-const React7 = createStyles.createStyles(obj4);
+const React6 = createStyles.createStyles(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeMarkdown.tsx");
 

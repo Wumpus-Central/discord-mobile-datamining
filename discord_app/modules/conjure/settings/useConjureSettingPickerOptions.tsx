@@ -1,13 +1,13 @@
-// === Module 12288: useConjureSettingPickerOptions ===
+// === Module 12351: useConjureSettingPickerOptions ===
 
-// Module 12288 (useConjureSettingPickerOptions)
-import ConjureUtils from "ConjureUtils" /* 7543 */;
+// Module 12351 (useConjureSettingPickerOptions)
+import ConjureUtils from "ConjureUtils" /* 7559 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import StreamerModeStore from "StreamerModeStore" /* 5196 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 const require = globalThis.__r;
 
@@ -58,7 +58,7 @@ export default function useConjureSettingPickerOptions(arg0, type) {
       if (null != stateFromStores) {
         let result = ConjureUtils.conjureSettingChannels(tmp4, tmp.channel_filter);
         mapped = result.map((id) => {
-          const obj = { id: id.id, label: closure_1_0(5772).computeChannelName(id, closure_1_6, conjureGuildMemberUsers) };
+          const obj = { id: id.id, label: closure_1_0(5786).computeChannelName(id, closure_1_6, conjureGuildMemberUsers) };
           return obj;
         });
       }
@@ -67,10 +67,10 @@ export default function useConjureSettingPickerOptions(arg0, type) {
       return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
     } else if ("user" === type) {
       return conjureGuildMemberUsers.map((id) => {
-        const result = closure_0(12289).conjureMemberUsername(id, stateFromStores1);
+        const result = closure_0(12352).conjureMemberUsername(id, stateFromStores1);
         const obj2 = { id: id.id, label: null };
-        const obj = closure_0(12289);
-        obj2.label = closure_0(6161).getName(closure_1_0, null, id);
+        const obj = closure_0(12352);
+        obj2.label = closure_0(6176).getName(closure_1_0, null, id);
         if ("" === result) {
           let obj4 = {};
         } else {
@@ -132,14 +132,14 @@ export function withSavedPicks(arr, value, arg2) {
     items2 = items3;
   }
 }
-export function withPickCap(arr, arg1) {
-  closure_0 = arg1;
-  if (arg1.length < 25) {
+export function withPickCap(items1, first1) {
+  closure_0 = first1;
+  if (first1.length < 25) {
     items = [];
-    HermesBuiltin.arraySpread(arr, 0);
+    HermesBuiltin.arraySpread(items1, 0);
     let mapped = items;
   } else {
-    mapped = arr.map((id) => {
+    mapped = items1.map((id) => {
       let tmp = id;
       if (!closure_0.includes(id.id)) {
         const obj = {};

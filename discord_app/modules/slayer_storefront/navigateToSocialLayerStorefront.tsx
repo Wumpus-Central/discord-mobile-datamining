@@ -1,12 +1,12 @@
-// === Module 15453: navigateToSocialLayerStorefront ===
+// === Module 15540: navigateToSocialLayerStorefront ===
 
-// Module 15453 (navigateToSocialLayerStorefront)
+// Module 15540 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1099 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7528 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10800 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7544 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10848 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7530 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7546 */;
 
 require = fn;
 function navigateToSocialLayerStorefrontWithGuildPreview() {
@@ -140,7 +140,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
   }
 };
 const Constants = fn(1072);
-({ GuildFeatures: metroRequire, Routes: closure_7 } = Constants);
+({ GuildFeatures: closure_6, Routes: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/navigateToSocialLayerStorefront.tsx");
 
@@ -163,7 +163,7 @@ export default function navigateToSocialLayerStorefront(arg0) {
     }
   }
   if (null != applicationIdFromGuildId) {
-    resolved = Promise.resolve(router_utils.transitionTo(React5.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)));
+    resolved = Promise.resolve(router_utils.transitionTo(metroImportDefault.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)));
   } else {
     const obj2 = { guildId: socialLayerStorefrontGuildId, pageIndex, invite, skuId, slug };
     resolved = navigateToSocialLayerStorefrontWithGuildPreview(obj2);

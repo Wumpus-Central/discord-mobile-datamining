@@ -1,9 +1,9 @@
-// === Module 12488: UserProfileApplicationWidgetBottomStatsLayout ===
+// === Module 12553: UserProfileApplicationWidgetBottomStatsLayout ===
 
-// Module 12488 (UserProfileApplicationWidgetBottomStatsLayout)
+// Module 12553 (UserProfileApplicationWidgetBottomStatsLayout)
 import nativeDefault from "native" /* 575 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12397 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 12483 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12462 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 12548 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,18 +33,18 @@ export default function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
       } else {
         const obj = { style: stat.stat, children: null };
         let Text = require;
-        const obj2 = { field: iter.value, variant: "text-sm/medium", color: "text-default", skeletonWidthChars: 8 };
+        const obj2 = { field: iter.value, variant: "body-sm/medium", color: "text-default", skeletonWidthChars: 8 };
         items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2), ];
         if ("value" === iter.label.status) {
-          Text = Text(5747).Text;
-          const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
+          Text = Text(5761).Text;
+          const obj3 = { variant: "body-xs/normal", color: "text-muted", children: null };
           iter = iter.label.text;
           obj3.children = iter;
           let tmp5Result = React3(Text, obj3);
         } else {
           tmp5Result = null;
           if ("skeleton" === iter.label.status) {
-            tmp5Result = React3(Text(12484).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+            tmp5Result = React3(Text(12549).TextSkeleton, { variant: "body-xs/normal", widthChars: 6 });
           }
         }
         items[1] = tmp5Result;

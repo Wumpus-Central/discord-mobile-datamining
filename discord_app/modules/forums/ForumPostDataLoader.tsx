@@ -1,12 +1,12 @@
-// === Module 7599: ForumPostDataLoader ===
+// === Module 7615: ForumPostDataLoader ===
 
-// Module 7599 (ForumPostDataLoader)
+// Module 7615 (ForumPostDataLoader)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7582 */;
-import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 7603 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7598 */;
+import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 7619 */;
 
 const require = globalThis.__r;
 
@@ -195,7 +195,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
     }
   }
 };
-const computeThreadIdsSnapshot = fn(7600).computeThreadIdsSnapshot;
+const computeThreadIdsSnapshot = fn(7616).computeThreadIdsSnapshot;
 const Endpoints = fn(1072).Endpoints;
 class DefaultDict {
   constructor(arg0) {

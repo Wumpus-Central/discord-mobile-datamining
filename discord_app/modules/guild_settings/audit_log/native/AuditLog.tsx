@@ -1,6 +1,6 @@
-// === Module 19874: AuditLog ===
+// === Module 19990: AuditLog ===
 
-// Module 19874 (AuditLog)
+// Module 19990 (AuditLog)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,14 +8,14 @@ import GlobalUtils from "GlobalUtils" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import PlatformsDefault from "Platforms" /* 6694 */;
-import EmojiDefault from "Emoji" /* 7420 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7450 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import AppliedForumTag from "AppliedForumTag" /* 10652 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 19862 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import PlatformsDefault from "Platforms" /* 6709 */;
+import EmojiDefault from "Emoji" /* 7436 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7466 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import AppliedForumTag from "AppliedForumTag" /* 10700 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 19978 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserRecord from "UserRecord" /* 1399 */;
@@ -34,7 +34,7 @@ function ApplicationHook(applicationId) {
   if (children == null) {
     children = applicationId;
   }
-  return gesture(Text_Text.Text, { variant: "text-sm/semibold", children });
+  return gesture(Text_Text.Text, { variant: "body-sm/semibold", children });
 }
 function InlineSegment(children) {
   children = children.children;
@@ -112,7 +112,7 @@ prototype["renderTitle"] = function renderTitle() {
   if (null == changeTitle) {
     return null;
   } else {
-    let obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+    let obj2 = { style: tmp.title, accessibilityRole: "header", variant: "body-md/medium", color: "mobile-text-heading-primary", children: null };
     let intl = require("util").intl;
     let obj3 = {
       user,
@@ -126,7 +126,7 @@ prototype["renderTitle"] = function renderTitle() {
               const obj3 = { style: closure_0.discriminator, children: `#${obj.discriminator}` };
               tmp22 = gesture(native.LegacyText, obj3);
             }
-            const obj5 = { variant: "text-md/medium", color: "text-default", children: null };
+            const obj5 = { variant: "body-md/medium", color: "text-default", children: null };
             items[1] = tmp22;
             obj5.children = items;
             return closure_2_15(Text_Text.Text, obj5, "user" + user.id);
@@ -140,7 +140,7 @@ prototype["renderTitle"] = function renderTitle() {
               const intl2 = util.intl;
               name = intl2.string(util.t["n+olu7"]);
             }
-            const obj6 = { variant: "text-md/medium", color: "text-default", children: name };
+            const obj6 = { variant: "body-md/medium", color: "text-default", children: name };
             return gesture(Text_Text.Text, obj6, "integration" + subtarget.integration_type);
           } else {
             const intl = util.intl;
@@ -156,7 +156,7 @@ prototype["renderTitle"] = function renderTitle() {
                 const obj2 = { style: closure_0.discriminator, children: `#${tmp3.discriminator}` };
                 tmp12 = gesture(native.LegacyText, obj2);
               }
-              const obj4 = { variant: "text-md/medium", color: "text-default", children: null };
+              const obj4 = { variant: "body-md/medium", color: "text-default", children: null };
               items[1] = tmp12;
               obj4.children = items;
               let tmp8Result = closure_2_15(Text_Text.Text, obj4, `target${tmp3.id}`);
@@ -166,14 +166,14 @@ prototype["renderTitle"] = function renderTitle() {
           if (log.targetType === constants.GUILD) {
             if (typeof target === "object") {
               if (obj6.isGuildRecord(target)) {
-                const obj5 = { variant: "text-md/medium", color: "text-default", children: target.name };
+                const obj5 = { variant: "body-md/medium", color: "text-default", children: target.name };
                 tmp8Result = gesture(Text_Text.Text, obj5, `target${tmp5.id}`);
               }
               obj6 = GuildRecordUtils;
             }
           }
-          tmp8Result = gesture(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children }, arg1);
-          const obj = { variant: "text-md/medium", color: "text-default", children };
+          tmp8Result = gesture(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children }, arg1);
+          const obj = { variant: "body-md/medium", color: "text-default", children };
         },
       count: null,
       member: null,
@@ -205,12 +205,12 @@ prototype["renderTitle"] = function renderTitle() {
           const obj3 = { style: closure_0.discriminator, children: `#${tmp.discriminator}` };
           tmp15 = gesture(native.LegacyText, obj3);
         }
-        const obj4 = { variant: "text-md/medium", color: "text-default", children: null };
+        const obj4 = { variant: "body-md/medium", color: "text-default", children: null };
         items[1] = tmp15;
         obj4.children = items;
         let tmp10Result = closure_2_15(Text_Text.Text, obj4, `member${arg1}${tmp.id}`);
       } else {
-        const obj = { variant: "text-md/medium", color: "text-default", children: null };
+        const obj = { variant: "body-md/medium", color: "text-default", children: null };
         const intl = util.intl;
         obj.children = intl.string(util.t["30mdIx"]);
         tmp10Result = gesture(Text_Text.Text, obj, arg1);
@@ -229,7 +229,7 @@ prototype["renderTitle"] = function renderTitle() {
       }
       obj3.channel = channel;
       obj3.channelHook = function channelHook(children, arg1) {
-        return closure_1_14(closure_0(target[15]).Text, { variant: "text-md/medium", color: "text-default", children }, arg1);
+        return closure_1_14(closure_0(target[15]).Text, { variant: "body-md/medium", color: "text-default", children }, arg1);
       };
       subtarget = subtarget.subtarget;
       obj3.subtarget = subtarget;
@@ -246,7 +246,7 @@ prototype["renderRoleUpdate"] = function renderRoleUpdate(newValue) {
   newValue = newValue.newValue;
   let mapped = null;
   if (Array.isArray(newValue)) {
-    mapped = newValue.map((children) => closure_1_14(require("Text/Text").Text, { variant: "text-sm/medium", color: "text-muted", children: children.name }, children.id));
+    mapped = newValue.map((children) => closure_1_14(require("Text/Text").Text, { variant: "body-sm/medium", color: "text-muted", children: children.name }, children.id));
   }
   return mapped;
 };
@@ -256,7 +256,7 @@ prototype["renderPermissionUpdate"] = function renderPermissionUpdate(newValue) 
   let mapped = null;
   if (Array.isArray(newValue)) {
     mapped = newValue.map((item) => {
-      const obj = { variant: "text-sm/medium", color: "text-muted", children: AuditLogUtilsAll.getStringForPermission(item, self.props.log) };
+      const obj = { variant: "body-sm/medium", color: "text-muted", children: AuditLogUtilsAll.getStringForPermission(item, self.props.log) };
       return gesture(Text_Text.Text, obj, item);
     });
   }
@@ -345,7 +345,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                           str = ", ";
                         }
                         const obj = { children: null };
-                        const obj2 = { variant: "text-sm/semibold", children: null };
+                        const obj2 = { variant: "body-sm/semibold", children: null };
                         const tmp3Result = changeItemTextLine(log[27]);
                         obj2.children = "" + str + changeItemTextLine(log[27]).int2hex(item).toUpperCase() + " ";
                         items = [closure_2_14(changeItemTextLine(log[15]).Text, obj2), ];
@@ -426,7 +426,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                       }
                       changeItemTextLine = changeItemTextLine + 1;
                       const obj12 = { style: children.changeRow, children: null };
-                      const obj13 = { variant: "text-sm/semibold", style: null, children: null };
+                      const obj13 = { variant: "body-sm/semibold", style: null, children: null };
                       items = [children.changeNumberText, ];
                       const obj14 = { color: RED_400 };
                       items[1] = obj14;
@@ -448,7 +448,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                         if (self.isValidElement(type)) {
                           if (type.type === InlineSegment) {
                             if (0 !== children.length) {
-                              const obj = { variant: "text-sm/normal", style: changeItemTextLine, children };
+                              const obj = { variant: "body-sm/normal", style: changeItemTextLine, children };
                               const _HermesInternal = HermesInternal;
                               items3.push(closure_2_14(changeItemTextLine(log[15]).Text, obj, "text-" + items3.length));
                               children = [];
@@ -459,7 +459,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                         children.push(type);
                       });
                       if (0 !== children.length) {
-                        const obj18 = { variant: "text-sm/normal", style: changeItemTextLine, children };
+                        const obj18 = { variant: "body-sm/normal", style: changeItemTextLine, children };
                         let _HermesInternal = HermesInternal;
                         items3.push(closure_1_14(v0(log[15]).Text, obj18, "text-" + items3.length));
                         children = [];
@@ -574,7 +574,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(19866), { action: log.action }), , , ];
+  const items2 = [closure_14(user(19982), { action: log.action }), , , ];
   const obj7 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1113).intl;
   obj7.accessibilityLabel = intl.string(tmp10(1113).t.iXAna6);
@@ -596,7 +596,7 @@ prototype["render"] = function render() {
       if (log.action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            value = tmp18(6694).get(log.options.integration_type);
+            value = tmp18(6709).get(log.options.integration_type);
             if (null != value) {
               const icon = value.icon;
               const tmp9Result = tmp9(5148);
@@ -604,7 +604,7 @@ prototype["render"] = function render() {
               let source = tmp9(1411).makeSource(tmp25);
               const tmp9Result5 = tmp9(1411);
             }
-            const tmp18Result = tmp18(6694);
+            const tmp18Result = tmp18(6709);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -618,7 +618,7 @@ prototype["render"] = function render() {
         obj8.source = source;
         obj8.size = tmp10(1187).AvatarSizes.SMALL;
         obj7.children = closure_14(tmp20, obj8);
-        items2[1] = closure_14(tmp10(7106).PressableOpacity, obj7);
+        items2[1] = closure_14(tmp10(7121).PressableOpacity, obj7);
         obj9 = { accessibilityRole: "button", accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
         const obj10 = { expanded, disabled: !checkChangesToRenderResult };
         obj9.accessibilityState = obj10;
@@ -627,14 +627,14 @@ prototype["render"] = function render() {
         obj9.disabled = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj9.children = items3;
-        items2[2] = closure_15(tmp10(7106).PressableOpacity, obj9);
+        items2[2] = closure_15(tmp10(7121).PressableOpacity, obj9);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj11 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj11.style = items4;
           obj11.size = tmp10(1187).Icon.Sizes.CUSTOM;
-          obj11.source = tmp18(16600);
+          obj11.source = tmp18(16691);
           tmp17Result = closure_14(tmp10(1187).Icon, obj11);
         }
         items2[3] = tmp17Result;
@@ -646,7 +646,7 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj4.children = items5;
-        return closure_15(tmp10(7103).Card, obj4);
+        return closure_15(tmp10(7118).Card, obj4);
       }
     }
   }

@@ -1,20 +1,20 @@
-// === Module 8330: TrackingUtils ===
+// === Module 8346: TrackingUtils ===
 
-// Module 8330 (TrackingUtils)
+// Module 8346 (TrackingUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 4999 */;
-import ForumSessionAnalyticsManagerDefault from "ForumSessionAnalyticsManager" /* 8457 */;
-import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8458 */;
-import ForumPostAnalyticsManagerDefault from "ForumPostAnalyticsManager" /* 8459 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6981 */;
+import ForumSessionAnalyticsManagerDefault from "ForumSessionAnalyticsManager" /* 8473 */;
+import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8474 */;
+import ForumPostAnalyticsManagerDefault from "ForumPostAnalyticsManager" /* 8475 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6996 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
-import ThreadMembersStore from "ThreadMembersStore" /* 8331 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7601 */;
+import ThreadMembersStore from "ThreadMembersStore" /* 8347 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7617 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import DraftStore from "DraftStore" /* 7825 */;
+import DraftStore from "DraftStore" /* 7841 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7582 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8348 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7598 */;
 
 require = fn;
 function collectForumAnalyticsMetadata(sessionId) {
@@ -71,7 +71,7 @@ function collectForumAnalyticsMetadata(sessionId) {
   }
   return tmp;
 }
-const DraftType = fn(7825).DraftType;
+const DraftType = fn(7841).DraftType;
 const Permissions = fn(1072).Permissions;
 const ChannelFlags = fn(4997).ChannelFlags;
 const constants = fn(1112).ThreadSortOrderReadableForAnalytics;

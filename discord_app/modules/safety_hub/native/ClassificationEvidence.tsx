@@ -1,10 +1,10 @@
-// === Module 13459: ClassificationEvidence ===
+// === Module 13543: ClassificationEvidence ===
 
-// Module 13459 (ClassificationEvidence)
+// Module 13543 (ClassificationEvidence)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 13460 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 13544 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export default function ClassificationEvidence(flaggedContent) {
   let tmp2 = null;
   if (0 !== flaggedContent.length) {
     const obj = { style: tmp.sectionContainer, children: null };
-    const obj2 = { variant: "eyebrow", color: "text-default", children: null };
+    const obj2 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl = util.intl;
     obj2.children = intl.string(util.t.s64CMg);
     items = [React4(Text_Text.Text, obj2), ];

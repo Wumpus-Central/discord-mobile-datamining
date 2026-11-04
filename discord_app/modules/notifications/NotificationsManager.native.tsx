@@ -1,19 +1,19 @@
-// === Module 19733: NotificationsManager ===
+// === Module 19849: NotificationsManager ===
 
-// Module 19733 (NotificationsManager)
+// Module 19849 (NotificationsManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8087 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14107 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8103 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14193 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14104 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14190 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
 function haveNotSeenPromptSince(arg0, arg1) {
@@ -89,7 +89,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(19734, dependencyMap.paths), gesture, obj3);
+    obj2.openLazy(asyncRequireImpl(19850, dependencyMap.paths), gesture, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -164,11 +164,11 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
     }
   }
 };
-const PermissionPromptType = fn(14104).PermissionPromptType;
+const PermissionPromptType = fn(14190).PermissionPromptType;
 const Constants = fn(1072);
 ({ RelationshipTypes: closure_10, GuildFeatures: closure_11, AnalyticEvents: closure_12 } = Constants);
-let closure_13 = fn(8064).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(14105);
+let closure_13 = fn(8080).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(14191);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_14, EventActionLocation: closure_15 } = NotificationPermissionConstants);
 const items = [, ];
 ({ FRIEND_REQUEST_SENT: arr[0], INVITE_ACCEPTED: arr[1] } = PermissionPromptType);
@@ -678,7 +678,7 @@ class NotificationsManager extends tmp4 {
               closure_128_0 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(8087).getNotificationAuthorizationStatus(), done: false };
+              const obj5 = { value: tmp5(8103).getNotificationAuthorizationStatus(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -690,7 +690,7 @@ class NotificationsManager extends tmp4 {
             return obj6;
           } else {
             closure_128_0 = value;
-            const result = tmp2(14107).updateNotificationAuthorizationStatus(closure_128_0);
+            const result = tmp2(14193).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }

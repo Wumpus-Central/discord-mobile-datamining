@@ -1,6 +1,6 @@
-// === Module 5810: DismissibleContentFrameworkActionCreators ===
+// === Module 5824: DismissibleContentFrameworkActionCreators ===
 
-// Module 5810 (DismissibleContentFrameworkActionCreators)
+// Module 5824 (DismissibleContentFrameworkActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4982 */;
 import size from "module_2" /* 2 */;

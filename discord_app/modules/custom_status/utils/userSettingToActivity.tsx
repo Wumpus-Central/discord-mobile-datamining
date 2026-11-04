@@ -1,10 +1,10 @@
-// === Module 11532: userSettingToActivity ===
+// === Module 11582: userSettingToActivity ===
 
-// Module 11532 (userSettingToActivity)
+// Module 11582 (userSettingToActivity)
 import _mod19 from "module_19" /* 19 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
-import ActivityTypes from "ActivityTypes" /* 5882 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
+import ActivityTypes from "ActivityTypes" /* 5896 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
 import EmojiPackStore from "EmojiPackStore" /* 5092 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 7847: CollectiblesBundledProductRecord ===
+// === Module 7863: CollectiblesBundledProductRecord ===
 
-// Module 7847 (CollectiblesBundledProductRecord)
+// Module 7863 (CollectiblesBundledProductRecord)
 import size from "module_2" /* 2 */;
 
 const prototype = function CollectiblesBundledProductRecord(arg0) {

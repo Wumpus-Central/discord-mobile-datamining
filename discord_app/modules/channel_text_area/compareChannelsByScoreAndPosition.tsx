@@ -1,6 +1,6 @@
-// === Module 7639: compareChannelsByScoreAndPosition ===
+// === Module 7655: compareChannelsByScoreAndPosition ===
 
-// Module 7639 (compareChannelsByScoreAndPosition)
+// Module 7655 (compareChannelsByScoreAndPosition)
 import ChannelStore from "ChannelStore" /* 4990 */;
 
 const ChannelTypes = fn(1072).ChannelTypes;

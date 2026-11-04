@@ -1,14 +1,14 @@
-// === Module 12258: ConjureProjectIcon ===
+// === Module 12319: ConjureProjectIcon ===
 
-// Module 12258 (ConjureProjectIcon)
+// Module 12319 (ConjureProjectIcon)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import useToken from "useToken" /* 5719 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11477 */;
-import useConjureProjectIcon from "useConjureProjectIcon" /* 11480 */;
-import MagicWandIcon from "MagicWandIcon" /* 12259 */;
+import useToken from "useToken" /* 5732 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11527 */;
+import useConjureProjectIcon from "useConjureProjectIcon" /* 11530 */;
+import MagicWandIcon from "MagicWandIcon" /* 12320 */;
 import noop from "module_19" /* 19 */;
 
 const useConjureProjectIconDefault = useConjureProjectIcon;
@@ -17,7 +17,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const dependencyMap = { header: 20, list: 32, card: 40, dialog: 48 };
 let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {

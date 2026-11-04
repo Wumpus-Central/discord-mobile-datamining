@@ -1,11 +1,11 @@
-// === Module 20097: FormBigRadioBox ===
+// === Module 20213: FormBigRadioBox ===
 
-// Module 20097 (FormBigRadioBox)
+// Module 20213 (FormBigRadioBox)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FormRadio from "FormRadio" /* 7188 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9237 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FormRadio from "FormRadio" /* 7203 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -64,8 +64,8 @@ export default function FormBigRadioBox(arg0) {
   const obj3 = { style: tmp.indicator, children: React4(FormRadio.FormRadio, { selected }) };
   items2[1] = selected;
   items1[1] = React4(View, { style: items2, children: React4(icon, { size: "md" }) });
-  items1[2] = React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-md/semibold", color: "interactive-text-default", children: title });
-  items1[3] = React4(Text_Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: description });
+  items1[2] = React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "body-md/semibold", color: "interactive-text-default", children: title });
+  items1[3] = React4(Text_Text.Text, { variant: "body-sm/medium", color: "interactive-text-default", children: description });
   obj2.children = items1;
   return hasOwnProperty(tmp6, obj2);
 };

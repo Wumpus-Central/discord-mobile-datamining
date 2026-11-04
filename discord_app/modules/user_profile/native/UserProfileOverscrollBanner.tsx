@@ -1,9 +1,9 @@
-// === Module 8941: UserProfileOverscrollBanner ===
+// === Module 8958: UserProfileOverscrollBanner ===
 
-// Module 8941 (UserProfileOverscrollBanner)
+// Module 8958 (UserProfileOverscrollBanner)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8942 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8943 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8959 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8960 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
 

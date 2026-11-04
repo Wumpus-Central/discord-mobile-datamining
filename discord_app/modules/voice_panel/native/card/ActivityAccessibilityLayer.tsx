@@ -1,8 +1,8 @@
-// === Module 19419: ActivityAccessibilityLayer ===
+// === Module 19523: ActivityAccessibilityLayer ===
 
-// Module 19419 (ActivityAccessibilityLayer)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5397 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6141 */;
+// Module 19523 (ActivityAccessibilityLayer)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5398 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6156 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -70,8 +70,8 @@ function FocusedActivityAccessibilityLayer(activityName) {
   return closure_9(closure_6, obj2);
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const IS_IOS = fn(11360).IS_IOS;
+({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const IS_IOS = fn(11410).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -86,7 +86,7 @@ export default function ActivityAccessibilityLayer(isActivityFocused) {
       if (isActivityFocused.isActivityFocused) {
         const obj2 = {};
         const merged1 = Object.assign(merged);
-        let children = React6(FocusedActivityAccessibilityLayer, obj2);
+        let children = React5(FocusedActivityAccessibilityLayer, obj2);
       }
       return children;
     }

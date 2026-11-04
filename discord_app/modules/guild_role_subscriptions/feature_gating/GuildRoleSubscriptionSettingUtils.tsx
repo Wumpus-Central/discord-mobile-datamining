@@ -1,8 +1,8 @@
-// === Module 7558: GuildRoleSubscriptionSettingUtils ===
+// === Module 7574: GuildRoleSubscriptionSettingUtils ===
 
-// Module 7558 (GuildRoleSubscriptionSettingUtils)
+// Module 7574 (GuildRoleSubscriptionSettingUtils)
 import GuildRecord from "GuildRecord" /* 5008 */;
-import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7559 */;
+import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7575 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
@@ -86,7 +86,7 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   return NONE;
 }
 const isGuildOwner = GuildRecord.isGuildOwner;
-({ GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ GuildFeatures: hasOwnProperty, Permissions: closure_6 } = Constants);
 const GuildRoleSubscriptionSettingsVisibility = { NONE: 0, [0]: "NONE", VISIBLE: 1, [1]: "VISIBLE" };
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx");
 

@@ -315,7 +315,7 @@ function applyWinnerUpdateResult(c2) {
         const obj = { epoch: tmp13, source: "candidate" };
         c11 = obj;
       }
-      batchInvocationManager.queue(tmp12).catch(React6);
+      batchInvocationManager.queue(tmp12).catch(React5);
       const queueResult = batchInvocationManager.queue(tmp12);
     }
   }
@@ -341,7 +341,7 @@ function isInCooldown() {
   return flag;
 }
 const Constants = fn(1072);
-({ Endpoints: closure_7, NOOP: closure_8 } = Constants);
+({ Endpoints: metroImportDefault, NOOP: closure_8 } = Constants);
 let closure_9 = new BackoffDefault(1000, 60000);
 let closure_10 = {};
 let c11 = null;

@@ -1,9 +1,9 @@
-// === Module 10225: SlideoutButton ===
+// === Module 10273: SlideoutButton ===
 
-// Module 10225 (SlideoutButton)
+// Module 10273 (SlideoutButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Pressables from "Pressables" /* 7106 */;
+import Pressables from "Pressables" /* 7121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

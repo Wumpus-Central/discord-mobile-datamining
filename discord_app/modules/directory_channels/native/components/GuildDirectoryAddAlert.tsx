@@ -1,11 +1,11 @@
-// === Module 14001: GuildDirectoryAddAlert ===
+// === Module 14087: GuildDirectoryAddAlert ===
 
-// Module 14001 (GuildDirectoryAddAlert)
+// Module 14087 (GuildDirectoryAddAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import common_AlertDefault from "common/Alert" /* 6150 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import common_AlertDefault from "common/Alert" /* 6165 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -32,11 +32,11 @@ export default function GuildDirectoryAddAlert(arg0) {
   const tmp2 = common_AlertDefault;
   obj3.size = GuildIcon.GuildIconSizes.XLARGE;
   items = [React4(GuildIconDefault, obj3), , ];
-  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.CueiPY);
   items[1] = React4(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;
   obj5.children = intl3.format(util.t.R7Pqn5, { guildName: directoryGuildName });
   items[2] = React4(Text_Text.Text, obj5);

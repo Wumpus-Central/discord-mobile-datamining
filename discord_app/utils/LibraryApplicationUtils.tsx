@@ -1,14 +1,14 @@
-// === Module 7704: LibraryApplicationUtils ===
+// === Module 7720: LibraryApplicationUtils ===
 
-// Module 7704 (LibraryApplicationUtils)
+// Module 7720 (LibraryApplicationUtils)
 import UserSettings from "UserSettings" /* 4966 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
-import SKUStore from "SKUStore" /* 7016 */;
+import SKUStore from "SKUStore" /* 7031 */;
 
 require = fn;
 const Constants = fn(1072);
-({ LibraryApplicationFlags: hasOwnProperty, LocalDispatchApplicationStates: metroRequire, StatusTypes: closure_7 } = Constants);
+({ LibraryApplicationFlags: hasOwnProperty, LocalDispatchApplicationStates: closure_6, StatusTypes: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/LibraryApplicationUtils.tsx");
 

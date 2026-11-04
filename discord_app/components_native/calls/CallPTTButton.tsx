@@ -1,14 +1,14 @@
-// === Module 11347: CallPTTButton ===
+// === Module 11397: CallPTTButton ===
 
-// Module 11347 (CallPTTButton)
+// Module 11397 (CallPTTButton)
 import nativeDefault from "native" /* 575 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11329 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11348 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11379 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 
 const require = globalThis.__r;
 
@@ -105,7 +105,7 @@ export default noop.memo((look) => {
     }
     ref.current = tmp;
   }, items4);
-  const Gesture = tmp2(5426).Gesture;
+  const Gesture = tmp2(5428).Gesture;
   const tmp2Result = require("VoiceChatModalContext");
   const items5 = [closure_12, require("module_1705").scheduleOnRN, tmp9[1], tmp6[1], prop];
   _require = undefined;
@@ -191,7 +191,7 @@ export default noop.memo((look) => {
         obj6.children = <style style={buttonBlurPressed} textStyle={string.textStyle} text={null} onTouchStart={null} onTouchEnd={null} darkenOnPress />;
         onEndResult = <View style={items11}>{null}</View>;
         obj4.children = onEndResult;
-        jsx(tmp2(5426).GestureDetector, { gesture: onEndResult, children: null });
+        jsx(tmp2(5428).GestureDetector, { gesture: onEndResult, children: null });
       }
     }
   }

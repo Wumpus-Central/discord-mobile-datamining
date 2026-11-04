@@ -1,21 +1,21 @@
-// === Module 11172: ChannelRowPreview ===
+// === Module 11222: ChannelRowPreview ===
 
-// Module 11172 (ChannelRowPreview)
+// Module 11222 (ChannelRowPreview)
 import UserSettings from "UserSettings" /* 4966 */;
 import createStyles from "createStyles" /* 5141 */;
-import useToken from "useToken" /* 5719 */;
-import LinkIcon from "LinkIcon" /* 5847 */;
-import RowGeneratorDefault from "RowGenerator" /* 8501 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8505 */;
-import ImageIcon from "ImageIcon" /* 8783 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8834 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 9964 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9966 */;
-import AttachmentIcon from "AttachmentIcon" /* 10665 */;
-import MusicIcon from "MusicIcon" /* 10888 */;
-import VideoIcon from "VideoIcon" /* 11173 */;
-import StickerIcon from "StickerIcon" /* 11175 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11184 */;
+import useToken from "useToken" /* 5732 */;
+import LinkIcon from "LinkIcon" /* 5861 */;
+import RowGeneratorDefault from "RowGenerator" /* 8518 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8522 */;
+import ImageIcon from "ImageIcon" /* 8800 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8851 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 10012 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 10014 */;
+import AttachmentIcon from "AttachmentIcon" /* 10713 */;
+import MusicIcon from "MusicIcon" /* 10936 */;
+import VideoIcon from "VideoIcon" /* 11223 */;
+import StickerIcon from "StickerIcon" /* 11225 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11234 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 
@@ -145,7 +145,7 @@ class ChannelRowPreview {
       obj10 = { lineClamp: null, variant: null, maxFontSizeMultiplier: 1.75, color: null, leadingContent: null, mentions: null, style: null, children: null };
       obj10.lineClamp = num;
       if (variant == null) {
-        variant = "text-sm/normal";
+        variant = "body-sm/normal";
       }
       obj10.variant = variant;
       obj10.color = color;
@@ -259,7 +259,7 @@ class NativeChannelRowPreview {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
 

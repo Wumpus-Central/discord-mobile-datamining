@@ -1,8 +1,8 @@
-// === Module 17844: PremiumPerksList ===
+// === Module 17940: PremiumPerksList ===
 
-// Module 17844 (PremiumPerksList)
+// Module 17940 (PremiumPerksList)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export default function PremiumPerksList(perks) {
       const obj = { style: closure_0.perkInfoContainer, children: null };
       items = [React3(View, { style: closure_0.perkIconContainer, children: React3(children.IconComponent, { size: "md" }) }), ];
       const obj3 = { style: closure_0.perkInfoTextContainer, children: null };
-      const items1 = [React3(Text_Text.Text, { variant: "text-md/semibold", color: "text-strong", children: children.label }), React3(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: children.description })];
+      const items1 = [React3(Text_Text.Text, { variant: "body-md/semibold", color: "text-strong", children: children.label }), React3(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: children.description })];
       obj3.children = items1;
       items[1] = React4(View, obj3);
       obj.children = items;

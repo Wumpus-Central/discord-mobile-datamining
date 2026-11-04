@@ -1,9 +1,9 @@
-// === Module 14483: HubEmailConnectionPinVerify ===
+// === Module 14563: HubEmailConnectionPinVerify ===
 
-// Module 14483 (HubEmailConnectionPinVerify)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import EnvelopeIcon from "EnvelopeIcon" /* 7369 */;
-import HubJoinManagerDefault from "HubJoinManager" /* 14484 */;
+// Module 14563 (HubEmailConnectionPinVerify)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import EnvelopeIcon from "EnvelopeIcon" /* 7385 */;
+import HubJoinManagerDefault from "HubJoinManager" /* 14564 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -58,7 +58,7 @@ export default function HubEmailConnectionPinVerify(email) {
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(14484).terminate();
+      closure_1_1(14564).terminate();
     };
   }, items);
   const obj = require("module_12");
@@ -96,17 +96,17 @@ export default function HubEmailConnectionPinVerify(email) {
   const obj4 = { source: null };
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   const tmp7 = email;
-  obj4.source = require("module_14485");
+  obj4.source = require("module_14565");
   const items1 = [closure_8(require("FastImage"), obj4), , , , , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = email(onClose[13]).intl;
   obj5.children = intl.string(email(onClose[13]).t.SJ3Lxc);
   items1[1] = closure_8(email(onClose[19]).Text, obj5);
-  const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj6 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   let intl2 = email(onClose[13]).intl;
   obj6.children = intl2.format(email(onClose[13]).t["b+W0oq"], { onClick: throttleResult, email });
   items1[2] = closure_8(email(onClose[19]).Text, obj6);
-  const obj7 = { style: tmp.label, variant: "text-sm/semibold", color: "text-muted", children: null };
+  const obj7 = { style: tmp.label, variant: "body-sm/semibold", color: "text-muted", children: null };
   const intl3 = email(onClose[13]).intl;
   obj7.children = intl3.string(email(onClose[13]).t.rpWT1s);
   items1[3] = closure_8(email(onClose[19]).Text, obj7);
@@ -128,7 +128,7 @@ export default function HubEmailConnectionPinVerify(email) {
   });
   let tmp6Result = null != obj2;
   if (tmp6Result) {
-    const obj9 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: obj2.getAnyErrorMessage() };
+    const obj9 = { variant: "body-sm/medium", color: "text-feedback-critical", style: tmp.error, children: obj2.getAnyErrorMessage() };
     tmp6Result = closure_8(tmp7(onClose[19]).Text, obj9);
   }
   const obj8 = {

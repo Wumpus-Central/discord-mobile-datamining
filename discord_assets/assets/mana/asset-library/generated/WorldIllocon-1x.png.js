@@ -1,6 +1,6 @@
-// === Module 14448: ? ===
+// === Module 14528: ? ===
 
-// Module 14448
+// Module 14528
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WorldIllocon-1x.png.js");

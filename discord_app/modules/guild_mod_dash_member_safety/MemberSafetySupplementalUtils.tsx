@@ -1,11 +1,11 @@
-// === Module 7805: MemberSafetySupplementalUtils ===
+// === Module 7821: MemberSafetySupplementalUtils ===
 
-// Module 7805 (MemberSafetySupplementalUtils)
+// Module 7821 (MemberSafetySupplementalUtils)
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import shared from "shared" /* 5148 */;
-import PlatformsDefault from "Platforms" /* 6694 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7806 */;
+import PlatformsDefault from "Platforms" /* 6709 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7822 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

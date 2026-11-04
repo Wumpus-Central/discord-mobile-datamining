@@ -1,15 +1,15 @@
-// === Module 20269: handleIncomingURL ===
+// === Module 20385: handleIncomingURL ===
 
-// Module 20269 (handleIncomingURL)
+// Module 20385 (handleIncomingURL)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7778 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8063 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15816 */;
-import DeepLinkTypes from "DeepLinkTypes" /* 20268 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7794 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8079 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15904 */;
+import DeepLinkTypes from "DeepLinkTypes" /* 20384 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
 
 require = fn;
@@ -322,7 +322,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
   })();
 };
 const Constants = fn(1072);
-({ AppStates: closure_7, AnalyticEvents: closure_8, LinkingTypes: closure_9 } = Constants);
+({ AppStates: metroImportDefault, AnalyticEvents: closure_8, LinkingTypes: closure_9 } = Constants);
 let closure_10 = new LoggerDefault("index.native.tsx");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleIncomingURL.tsx");

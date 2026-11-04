@@ -1,9 +1,9 @@
-// === Module 11490: UnreadSettingNotice ===
+// === Module 11540: UnreadSettingNotice ===
 
-// Module 11490 (UnreadSettingNotice)
+// Module 11540 (UnreadSettingNotice)
 import nativeDefault from "native" /* 575 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11491 */;
-import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11492 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11541 */;
+import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11542 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = fn;
 const View = fn(17).View;
 let closure_4 = fn(1082).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -30,7 +30,7 @@ export default function UnreadSettingNoticeConnected(channel) {
   const obj = { style: tmp.content, children: null };
   items = [closure_5(UnreadSettingNoticeImpressionTrackingDefault, { id: channel.channel.id }), , ];
   const obj3 = { style: tmp.informations, children: null };
-  const obj4 = { variant: "text-md/semibold", children: null };
+  const obj4 = { variant: "body-md/semibold", children: null };
   const intl = require("util").intl;
   obj4.children = intl.string(require("util").t.i4xQ5o);
   obj3.children = closure_5(require("Text/Text").Text, obj4);
@@ -45,7 +45,7 @@ export default function UnreadSettingNoticeConnected(channel) {
     },
     children: null
   };
-  const obj7 = { variant: "text-xs/medium", color: "text-link", children: null };
+  const obj7 = { variant: "body-xs/medium", color: "text-link", children: null };
   const intl2 = require("util").intl;
   obj7.children = intl2.string(require("util").t.KyUKhT);
   obj6.children = closure_5(require("Text/Text").Text, obj7);

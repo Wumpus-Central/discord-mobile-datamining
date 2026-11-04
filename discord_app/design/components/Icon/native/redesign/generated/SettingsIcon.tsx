@@ -1,9 +1,9 @@
-// === Module 7685: SettingsIcon ===
+// === Module 7701: SettingsIcon ===
 
-// Module 7685 (SettingsIcon)
+// Module 7701 (SettingsIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod7686 from "module_7686" /* 7686 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod7702 from "module_7702" /* 7702 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function SettingsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7686, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7702, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

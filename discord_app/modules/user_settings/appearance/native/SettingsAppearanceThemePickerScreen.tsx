@@ -1,28 +1,28 @@
-// === Module 17402: SettingsAppearanceThemePickerScreen ===
+// === Module 17493: SettingsAppearanceThemePickerScreen ===
 
-// Module 17402 (SettingsAppearanceThemePickerScreen)
+// Module 17493 (SettingsAppearanceThemePickerScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5168 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5373 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import QuestTypes from "QuestTypes" /* 6904 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
-import Pressables from "Pressables" /* 7106 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import ThemeDarkIcon from "ThemeDarkIcon" /* 11326 */;
-import StatusBarDefault from "StatusBar" /* 11349 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16608 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16609 */;
-import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17151 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17152 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17153 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 17403 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17405 */;
-import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17425 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5374 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import QuestTypes from "QuestTypes" /* 6919 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7095 */;
+import Pressables from "Pressables" /* 7121 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 11376 */;
+import StatusBarDefault from "StatusBar" /* 11399 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 16698 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16699 */;
+import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17243 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17244 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17245 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 17494 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17496 */;
+import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17516 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -195,8 +195,8 @@ function ThemePicker(defaultIndex) {
   [tmp12, c13] = noop.useState(str);
   const tmp8Result = _slicedToArray(noop.useState(str), 2);
   closure_14 = tmp14;
-  const headerHeight = require("module_7131").useHeaderHeight();
-  const tmp3Result = require("module_7131");
+  const headerHeight = require("module_7146").useHeaderHeight();
+  const tmp3Result = require("module_7146");
   [tmp16, c15] = noop.useState(0);
   const callback = obj2.useCallback((nativeEvent) => {
     _undefined9(nativeEvent.nativeEvent.layout.width);
@@ -679,21 +679,21 @@ function ThemePicker(defaultIndex) {
           }
           const obj = { theme: tmp4, children: null };
           const obj2 = { navigation };
-          obj.children = activeIndex(dependencyMap(9950), obj2);
+          obj.children = activeIndex(dependencyMap(9968), obj2);
           return activeIndex(closure_0(5207).ThemeContextProvider, obj);
         } else {
           return null;
         }
       },
       headerTitle() {
-        const obj = { animated: true, variant: "redesign/heading-18/semibold", style: textNormal.textNormal, children: null };
+        const obj = { animated: true, variant: "heading-md/semibold", style: textNormal.textNormal, children: null };
         let stringResult = _undefined6;
         if (_undefined6 == null) {
           const intl = closure_0(1113).intl;
           stringResult = intl.string(closure_0(1113).t.XAS5Pi);
         }
         obj.children = stringResult;
-        return activeIndex(closure_0(5747).Text, obj);
+        return activeIndex(closure_0(5761).Text, obj);
       },
       headerTitleAlign: "center",
       headerRight: null
@@ -711,7 +711,7 @@ function ThemePicker(defaultIndex) {
           if (result) {
             obj2 = { opacity: 0.4 };
           }
-          const obj3 = { animated: true, variant: "text-md/semibold", style: null, children: null };
+          const obj3 = { animated: true, variant: "body-md/semibold", style: null, children: null };
           items[1] = obj2;
           obj3.style = items;
           const intl = util.intl;
@@ -742,7 +742,7 @@ function ThemePicker(defaultIndex) {
   }
   if ("nitro" === themeSelector) {
     const obj5 = { themes: mobileThemes, currentThemeIndex: themeIndex, isPreview, isSynced, defaultIndex, deviceWidth: rounded, animatedStyles: obj4, hasOnyxNux, onThemeSelected: callback5 };
-    let tmp64 = activeIndex(tmp6(17407), obj5);
+    let tmp64 = activeIndex(tmp6(17498), obj5);
     let tmp65 = activeIndex;
   } else {
     let tmp60;
@@ -756,14 +756,14 @@ function ThemePicker(defaultIndex) {
     let obj6 = { style: tmp.segmentedControlContainer, onLayout: callback, children: null };
     let obj7 = { theme: tmp60, children: null };
     let obj8 = { variant: "experimental_Large", state: segmentedControlState };
-    obj7.children = activeIndex(tmp3(9342).SegmentedControl, obj8);
+    obj7.children = activeIndex(tmp3(9359).SegmentedControl, obj8);
     const items15 = [activeIndex(tmp3(5207).ThemeContextProvider, obj7), ];
-    const obj9 = { animated: true, variant: "text-xs/medium", style: null, children: null };
+    const obj9 = { animated: true, variant: "body-xs/medium", style: null, children: null };
     const items16 = [obj4.headerSecondary, tmp.textCentered];
     obj9.style = items16;
     let intl = tmp3(1113).intl;
     obj9.children = intl.string(tmp3(1113).t.d5Gu9A);
-    items15[1] = activeIndex(tmp3(5747).Text, obj9);
+    items15[1] = activeIndex(tmp3(5761).Text, obj9);
     obj6.children = items15;
     tmp64 = obj4(c6, obj6);
     tmp65 = activeIndex;
@@ -786,7 +786,7 @@ function ThemePicker(defaultIndex) {
     }
     _undefined(str);
   }, items17);
-  const memo3 = obj2.useMemo(tmp6(17413), []);
+  const memo3 = obj2.useMemo(tmp6(17504), []);
   const obj10 = { themes: mobileThemes, themeIndex, animatedStyles: obj4, data: memo3, useGradientBackground: "nitro" === themeSelector, isNitroLocked: null };
   let result = tmp14;
   const tmp3Result15 = require("useNavigatorBackPressHandler");
@@ -794,8 +794,8 @@ function ThemePicker(defaultIndex) {
     result = isPreview;
   }
   if (result) {
-    result = tmp3(5373).isNitroGatedMobileTheme(mobileThemes[themeIndex]);
-    const tmp3Result16 = tmp3(5373);
+    result = tmp3(5374).isNitroGatedMobileTheme(mobileThemes[themeIndex]);
+    const tmp3Result16 = tmp3(5374);
   }
   obj10.isNitroLocked = result;
   const tmp65Result = tmp65(SettingsAppearanceChannelListDefault, obj10);
@@ -809,7 +809,7 @@ function ThemePicker(defaultIndex) {
   let tmp65Result2 = null;
   if ("nitro" === themeSelector) {
     const obj12 = { themes: mobileThemes, themeIndex, isDimmed: true };
-    tmp65Result2 = tmp65(tmp6(17434), obj12);
+    tmp65Result2 = tmp65(tmp6(17525), obj12);
   }
   const items19 = [tmp65Result2, ];
   const items20 = [tmp.container, , ];

@@ -1,10 +1,10 @@
-// === Module 16503: auth ===
+// === Module 16595: auth ===
 
-// Module 16503 (auth)
+// Module 16595 (auth)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2153 */;
-import RPCErrorDefault from "RPCError" /* 9461 */;
-import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 16504 */;
+import RPCErrorDefault from "RPCError" /* 9479 */;
+import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 16596 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 
 require = fn;

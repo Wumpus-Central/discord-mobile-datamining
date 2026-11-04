@@ -1,24 +1,24 @@
-// === Module 13119: ConjureProjectList ===
+// === Module 13202: ConjureProjectList ===
 
-// Module 13119 (ConjureProjectList)
+// Module 13202 (ConjureProjectList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 10978 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 12223 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12258 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 12263 */;
-import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 12370 */;
-import ConjureCreateSheet from "ConjureCreateSheet" /* 13124 */;
-import openConjureProjectsSheet from "openConjureProjectsSheet" /* 13141 */;
-import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 13149 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 11026 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11054 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 12282 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12319 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 12324 */;
+import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 12435 */;
+import ConjureCreateSheet from "ConjureCreateSheet" /* 13207 */;
+import openConjureProjectsSheet from "openConjureProjectsSheet" /* 13224 */;
+import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 13232 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 const require = globalThis.__r;
 const ConjureRemixSheetDefault = ConjureRemixSheet;
@@ -30,8 +30,8 @@ function ProjectRow(project) {
   project = project.project;
   const onMore = project.onMore;
   const tmp = closure_11(0);
-  const conjureProjectBadge = project(11007).useConjureProjectBadge(project.id);
-  const obj = project(11007);
+  const conjureProjectBadge = project(11056).useConjureProjectBadge(project.id);
+  const obj = project(11056);
   items = [ConjureProjectStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(items, () => ConjureProjectStore.isProjectDeleting(project.id), items1);
@@ -41,9 +41,9 @@ function ProjectRow(project) {
     const obj3 = { time: null };
     const _Date = Date;
     const date = new Date(project.updated_at);
-    obj3.time = tmp2(6980).getRelativeTimestamp(date.getTime());
+    obj3.time = tmp2(6995).getRelativeTimestamp(date.getTime());
     formatToPlainStringResult = intl.formatToPlainString(_modDef3995.AXydi3, obj3);
-    const tmp2Result = tmp2(6980);
+    const tmp2Result = tmp2(6995);
   }
   const obj4 = { label: project.name, subLabel: null, accessibilityHint: null, disabled: null, icon: null, trailing: null, onPress: null, onLongPress: null };
   if (stateFromStores) {
@@ -69,7 +69,7 @@ function ProjectRow(project) {
       tmp15Result3 = closure_9(ConjureNumberBadgeDefault, obj6);
     }
     const items2 = [tmp15Result3, ];
-    const obj7 = { IconComponent: tmp2(9888).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
+    const obj7 = { IconComponent: tmp2(9906).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
     const intl4 = tmp2(1113).intl;
     obj7.accessibilityLabel = intl4.string(tmp2(1113).t["UKOtz+"]);
     items2[1] = closure_9(ConjureHeaderIconButtonDefault, obj7);
@@ -80,7 +80,7 @@ function ProjectRow(project) {
   obj4.trailing = tmp13Result;
   obj4.onPress = project.onPress;
   obj4.onLongPress = onMore;
-  const children = [closure_9(project(7101).TableRow, obj4), ];
+  const children = [closure_9(project(7116).TableRow, obj4), ];
   let tmp15Result4 = null;
   if (null != conjureProjectBadge) {
     tmp15Result4 = null;
@@ -93,7 +93,7 @@ function ProjectRow(project) {
   return closure_10(closure_6, { children });
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -142,12 +142,12 @@ export default function ConjureProjectList(guildId) {
   const memo1 = callback.useMemo(() => conjureStandaloneScenes.projectOpener(guildId, (arg0) => callback(arg0, "remix")), items2);
   const items3 = [guildId, memo];
   const callback1 = callback.useCallback(() => {
-    const obj2 = { key: ConjureCreateSheet.CONJURE_CREATE_SHEET_KEY, content: React7(ConjureCreateSheetDefault, { guildId, onCreated: memo }) };
+    const obj2 = { key: ConjureCreateSheet.CONJURE_CREATE_SHEET_KEY, content: React6(ConjureCreateSheetDefault, { guildId, onCreated: memo }) };
     ActionSheetActionCreators.showActionSheet(obj2);
   }, items3);
   const items4 = [guildId, memo1];
   const callback2 = callback.useCallback((project) => {
-    const obj2 = { key: ConjureRemixSheet.CONJURE_REMIX_SHEET_KEY, content: React7(ConjureRemixSheetDefault, { project, currentGuildId: guildId, onRemixed: memo1 }) };
+    const obj2 = { key: ConjureRemixSheet.CONJURE_REMIX_SHEET_KEY, content: React6(ConjureRemixSheetDefault, { project, currentGuildId: guildId, onRemixed: memo1 }) };
     ActionSheetActionCreators.showActionSheet(obj2);
   }, items4);
   const items5 = [guildId, callback, callback2];
@@ -173,7 +173,7 @@ export default function ConjureProjectList(guildId) {
         guild_id = guildId;
       }
       obj3.guildId = guild_id;
-      obj2.content = React7(ConjureSettingsSheetDefault, obj3);
+      obj2.content = React6(ConjureSettingsSheetDefault, obj3);
       return obj.showActionSheet(obj2);
     };
     const result = obj.conjureProjectActions(obj2);
@@ -221,10 +221,10 @@ export default function ConjureProjectList(guildId) {
       let tmp = null;
       if (projects.projects.length > 0) {
         const obj = { style: section.section, children: null };
-        const obj2 = { variant: "heading-md/semibold", color: "text-default", accessibilityRole: "header", children: null };
+        const obj2 = { variant: "heading-sm/semibold", color: "text-default", accessibilityRole: "header", children: null };
         const intl = util.intl;
         obj2.children = intl.string(projects.title);
-        items = [React7(Text_Text.Text, obj2), ];
+        items = [React6(Text_Text.Text, obj2), ];
         const obj3 = { hasIcons: true, children: null };
         projects = projects.projects;
         obj3.children = projects.map((project) => closure_1_9(closure_1_12, {
@@ -236,7 +236,7 @@ export default function ConjureProjectList(guildId) {
             return closure_2_8(closure_0);
           }
         }, project.id));
-        items[1] = React7(TableRowGroup.TableRowGroup, obj3);
+        items[1] = React6(TableRowGroup.TableRowGroup, obj3);
         obj.children = items;
         tmp = closure_2_10(timestampProducer, obj, projects.key);
       }
@@ -264,7 +264,7 @@ export default function ConjureProjectList(guildId) {
     const obj11 = { style: tmp3.centered, children: null };
     if ("error" === fetchState) {
       const obj12 = { style: tmp3.listError, children: null };
-      const obj13 = { variant: "text-md/normal", color: "text-muted", children: null };
+      const obj13 = { variant: "body-md/normal", color: "text-muted", children: null };
       const intl2 = tmp4(tmp2[22]).intl;
       obj13.children = intl2.string(tmp(tmp2[24]).DJAPMO);
       const items10 = [closure_9(tmp4(tmp2[23]).Text, obj13), ];
@@ -287,7 +287,7 @@ export default function ConjureProjectList(guildId) {
       } else {
         prop = tmp(tmp2[24])["9/5sLV"];
       }
-      const obj16 = { variant: "text-md/normal", color: "text-muted", children: intl5.string(prop) };
+      const obj16 = { variant: "body-md/normal", color: "text-muted", children: intl5.string(prop) };
       const items11 = [closure_9(tmp4(tmp2[23]).Text, obj16), ];
       const obj17 = { variant: "primary", size: "sm", text: null, onPress: null };
       let intl = tmp4(tmp2[22]).intl;

@@ -1,12 +1,12 @@
-// === Module 16949: FamilyCenterActivityPurchaseRowUtils ===
+// === Module 17041: FamilyCenterActivityPurchaseRowUtils ===
 
-// Module 16949 (FamilyCenterActivityPurchaseRowUtils)
+// Module 17041 (FamilyCenterActivityPurchaseRowUtils)
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7849 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7850 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7865 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7866 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 
@@ -32,7 +32,7 @@ function getCollectibleTypeName(type) {
 }
 const isAvatarDecorationRecord = AvatarDecorationRecord.isAvatarDecorationRecord;
 const isProfileEffectRecord = ProfileEffectRecord.isProfileEffectRecord;
-({ PremiumSubscriptionSKUs: hasOwnProperty, SubscriptionPlanInfo: metroRequire } = PremiumConstants);
+({ PremiumSubscriptionSKUs: hasOwnProperty, SubscriptionPlanInfo: closure_6 } = PremiumConstants);
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx");
 
 export const PREVIEW_SIZE = 40;

@@ -1,15 +1,15 @@
-// === Module 18229: MessagesHeader ===
+// === Module 18326: MessagesHeader ===
 
-// Module 18229 (MessagesHeader)
+// Module 18326 (MessagesHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import ButtonConstants from "ButtonConstants" /* 5760 */;
-import _modDef5842 from "module_5842" /* 5842 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7125 */;
-import _modDef7341 from "module_7341" /* 7341 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12658 */;
-import MessageRequestsButtonDefault from "MessageRequestsButton" /* 18230 */;
+import ButtonConstants from "ButtonConstants" /* 5774 */;
+import _modDef5856 from "module_5856" /* 5856 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7140 */;
+import _modDef7357 from "module_7357" /* 7357 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12739 */;
+import MessageRequestsButtonDefault from "MessageRequestsButton" /* 18327 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const SearchTypes = fn(1072).SearchTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_8 = nativeDefault.space.PX_8;
 const createStyles = fn(5141);
@@ -27,7 +27,7 @@ let obj = { headerPanel: { position: "relative", padding: PX_16, paddingBottom: 
 let obj3 = { position: "relative", padding: PX_16, paddingBottom: nativeDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM };
 obj.headerPanelTitle = { paddingBottom: PX_8, flexDirection: "row", gap: nativeDefault.space.PX_8, justifyContent: "space-between" };
 let obj4 = { paddingBottom: PX_8, flexDirection: "row", gap: nativeDefault.space.PX_8, justifyContent: "space-between" };
-obj.headerPanelButtons = { height: fn(5760).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+obj.headerPanelButtons = { height: fn(5774).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 let obj6 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj6.backgroundColor = nativeDefault.colors.BORDER_SUBTLE;
@@ -36,7 +36,7 @@ obj6.height = 1;
 obj.headerBorder = obj6;
 let closure_10 = createStyles.createStyles(obj);
 let closure_11 = { code: "(function MessagesHeaderTsx1(){let[withSpring,scrollPosition,Reanimated3DefaultSpringConfig]=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0,Reanimated3DefaultSpringConfig)};})" };
-let obj5 = { height: fn(5760).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+let obj5 = { height: fn(5774).SMALL_BUTTON_HEIGHT, gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx");
 
@@ -125,11 +125,11 @@ export default noop.memo(function MessagesHeader(height) {
   obj6.children = closure_6(require("Text/Text").Text, { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: stringResult });
   const items3 = [closure_6(closure_4, obj6), , , ];
   const obj7 = { style: tmp.headerPanelButtons, children: null };
-  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7341, accessibilityLabel: null };
+  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7357, accessibilityLabel: null };
   const intl3 = tmp3(1113).intl;
   obj8.accessibilityLabel = intl3.string(require("util").t["5h0QOP"]);
   const items4 = [closure_6(require("IconButton").IconButton, obj8), closure_6(MessageRequestsButtonDefault, { noMargin: true, onPress: callback, alternateVariant: true }), , ];
-  const obj9 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: _modDef5842, onPress: callback1, maxFontSizeMultiplier: 1, text: null };
+  const obj9 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: _modDef5856, onPress: callback1, maxFontSizeMultiplier: 1, text: null };
   const intl4 = tmp3(1113).intl;
   obj9.text = intl4.string(require("util").t.zIJnA6);
   items4[2] = closure_6(require("components/Button/Button").Button, obj9);
@@ -147,6 +147,6 @@ export default noop.memo(function MessagesHeader(height) {
 export function getMessagesHeaderHeight(fontScale) {
   const bound = Math.min(fontScale, 1.75);
   const refreshToken = MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM);
-  const sum = useScaledTextLineHeight.scaleTextLineHeight("redesign/heading-18/semibold", bound) + PX_8;
+  const sum = useScaledTextLineHeight.scaleTextLineHeight("heading-md/semibold", bound) + PX_8;
   return sum + ButtonConstants.SMALL_BUTTON_HEIGHT + PX_16 + refreshToken;
 }

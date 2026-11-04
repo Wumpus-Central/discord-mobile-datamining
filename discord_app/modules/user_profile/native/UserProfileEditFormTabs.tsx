@@ -1,31 +1,31 @@
-// === Module 16705: UserProfileEditFormTabs ===
+// === Module 16795: UserProfileEditFormTabs ===
 
-// Module 16705 (UserProfileEditFormTabs)
+// Module 16795 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ChatInputUtils from "ChatInputUtils" /* 5330 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7898 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15079 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 15092 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16704 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16706 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 16707 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7914 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8955 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 15159 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 15166 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16794 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16796 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 16797 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const UserProfileTabPagesDefault = tmp2(15146);
+const UserProfileTabPagesDefault = tmp2(15226);
 require = fn;
 function MainPage() {
   const tmp = closure_9();
   return timestampProducer(View, { style: closure_9().page, children: noop.useContext(UserProfileEditFormMainPageContextDefault) });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7497).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7513).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING }, page: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING };
@@ -45,7 +45,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   noop = undefined;
   first = undefined;
   closure_6 = undefined;
-  ({ hasCustomProfileTheme, scrollPosition, scrollViewRef, isBoardTabOnScreen, parentPagerGesture } = userId);
+  ({ hasCustomProfileTheme, scrollPosition, scrollViewRef, isBoardTabOnScreen } = userId);
   const tmp = closure_9();
   dependencyMap = tmp;
   const tmp4 = UserProfileSharedStylesDefault();
@@ -87,7 +87,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
       obj5.cardStyle = items2;
       items1[1] = timestampProducer(UserProfileWidgetsBoardDefault, obj5);
       obj4.children = items1;
-      let tmp2Result = React6(React5, obj4);
+      let tmp2Result = React5(metroImportDefault, obj4);
     } else {
       tmp2Result = timestampProducer(UserProfileWidgetsEmptyStateDefault, {});
     }
@@ -136,7 +136,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     str = "overlay";
   }
   obj6.variant = str;
-  const items7 = [closure_6(tmp11(12306).Tabs, obj6), closure_6(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef, parentPagerGesture })];
+  const items7 = [closure_6(tmp11(12371).Tabs, obj6), closure_6(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
   obj5.children = items7;
   return closure_8(first, obj5);
 });

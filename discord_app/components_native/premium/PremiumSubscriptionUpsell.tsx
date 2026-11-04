@@ -1,20 +1,20 @@
-// === Module 15567: PremiumSubscriptionUpsell ===
+// === Module 15654: PremiumSubscriptionUpsell ===
 
-// Module 15567 (PremiumSubscriptionUpsell)
+// Module 15654 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import NumberUtils from "NumberUtils" /* 2024 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7119 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 10067 */;
-import _modDef15568 from "module_15568" /* 15568 */;
-import _modDef15569 from "module_15569" /* 15569 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7134 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 10115 */;
+import _modDef15655 from "module_15655" /* 15655 */;
+import _modDef15656 from "module_15656" /* 15656 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -22,9 +22,9 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const PremiumConstants = fn(1387);
-({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } = PremiumConstants);
+({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: metroImportDefault, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -64,30 +64,30 @@ export default function PremiumSubscriptionUpsell(arg0) {
       const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "text-overlay-light", children: null };
       const intl2 = util.intl;
       obj6.children = intl2.string(util.t.YYfHlx);
-      const items2 = [React7(Text_Text.Text, obj6), ];
-      const obj7 = { style: tmp.subtitle, variant: "text-md/semibold", color: "text-overlay-light", children: null };
+      const items2 = [React6(Text_Text.Text, obj6), ];
+      const obj7 = { style: tmp.subtitle, variant: "body-md/semibold", color: "text-overlay-light", children: null };
       const intl3 = util.intl;
       const obj8 = { numFreeGuildSubscriptions };
       obj7.children = intl3.format(util.t.Af0zEZ, obj8);
-      items2[1] = React7(Text_Text.Text, obj7);
+      items2[1] = React6(Text_Text.Text, obj7);
       obj5.children = items2;
       let tmp6Result1 = closure_1_11(closure_1_10, obj5);
     } else {
       const obj9 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "text-overlay-light", children: null };
       const intl = util.intl;
       obj9.children = intl.string(util.t["qUl+K4"]);
-      tmp6Result1 = React7(Text_Text.Text, obj9);
+      tmp6Result1 = React6(Text_Text.Text, obj9);
     }
     const items3 = [tmp6Result1, , ];
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     tmp5Result5 = PremiumUtilsDefault;
-    obj11.source = _modDef15568;
-    const items4 = [React7(FastImageDefault, obj11), , ];
+    obj11.source = _modDef15655;
+    const items4 = [React6(FastImageDefault, obj11), , ];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const tmp5Result6 = FastImageDefault;
-    obj12.source = _modDef15569;
-    items4[1] = React7(FastImageDefault, obj12);
+    obj12.source = _modDef15656;
+    items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };
     const tmp5Result7 = FastImageDefault;
@@ -95,7 +95,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const intl4 = util.intl;
     const obj16 = { discountPercentage: null };
     const tmp5Result8 = PremiumFeatureListDefault;
-    obj16.discountPercentage = NumberUtils.formatPercent(LocaleStore.locale, React6 / 100);
+    obj16.discountPercentage = NumberUtils.formatPercent(LocaleStore.locale, React5 / 100);
     obj15.label = intl4.formatToPlainString(util.t.P3aEj6, obj16);
     obj15.color = nativeDefault.unsafe_rawColors.WHITE;
     const items5 = [obj15, ];
@@ -107,7 +107,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
     items5[1] = obj17;
     obj13.features = items5;
     ({ upsellLabel: obj14.labelStyle, upsellRow: obj14.rowStyle } = tmp);
-    items4[2] = React7(tmp5Result8, obj13);
+    items4[2] = React6(tmp5Result8, obj13);
     obj10.children = items4;
     items3[1] = closure_1_11(React3, obj10);
     const obj19 = { style: tmp.upsellButton, children: null };
@@ -116,13 +116,13 @@ export default function PremiumSubscriptionUpsell(arg0) {
     stringResult = intl6.string(util.t.fJOECn);
     obj20.text = stringResult;
     obj20.onPress = onLearnMorePremium;
-    tmp = React7(components_Button_Button.Button, obj20);
+    tmp = React6(components_Button_Button.Button, obj20);
     obj19.children = tmp;
-    items3[2] = React7(React3, obj19);
+    items3[2] = React6(React3, obj19);
     obj4.children = items3;
     obj4 = closure_1_11(tmp5Result, obj4);
     obj3.children = obj4;
-    React7(React3, obj3);
+    React6(React3, obj3);
     const tmp2Result = NumberUtils;
   }
   obj2 = PremiumUtilsDefault;

@@ -1,10 +1,10 @@
-// === Module 13417: BanConfirm ===
+// === Module 13501: BanConfirm ===
 
-// Module 13417 (BanConfirm)
+// Module 13501 (BanConfirm)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let items = [
@@ -170,9 +170,9 @@ export default noop.memo(function BanConfirm(arg0) {
       const obj5 = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj4.contentContainerStyle = obj5;
       const obj6 = { style: tmp.iconLabelBlock, children: null };
-      const obj7 = { style: tmp.iconStyles, source: require("module_13418"), resizeMode: "contain" };
+      const obj7 = { style: tmp.iconStyles, source: require("module_13502"), resizeMode: "contain" };
       const items4 = [closure_9(require("FastImage"), obj7), , ];
-      const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: null };
+      const obj8 = { style: tmp.redText, variant: "body-md/semibold", children: null };
       const intl = require("util").intl;
       const obj9 = { username: null };
       const tmp15 = ref2;
@@ -180,11 +180,11 @@ export default noop.memo(function BanConfirm(arg0) {
       obj9.username = require("UserUtils").getName(stateFromStores1);
       obj8.children = intl.format(require("util").t.Qd6w7T, obj9);
       items4[1] = closure_9(require("Text/Text").Text, obj8);
-      const obj10 = { variant: "text-lg/semibold", color: "text-feedback-warning", children: stateFromStores.name };
+      const obj10 = { variant: "body-lg/semibold", color: "text-feedback-warning", children: stateFromStores.name };
       items4[2] = closure_9(require("Text/Text").Text, obj10);
       obj6.children = items4;
       const items5 = [closure_10(ref, obj6), , , , , ];
-      const obj11 = { style: tmp.blurb, variant: "heading-md/medium", color: "text-feedback-warning", children: null };
+      const obj11 = { style: tmp.blurb, variant: "heading-sm/medium", color: "text-feedback-warning", children: null };
       const intl2 = require("util").intl;
       const obj12 = { user: null };
       const tmp4Result4 = require("UserUtils");
@@ -221,7 +221,7 @@ export default noop.memo(function BanConfirm(arg0) {
       items5[4] = closure_9(ref, obj16);
       let tmp14Result = null;
       if (tmp11.banError) {
-        const obj19 = { style: tmp.errorText, variant: "text-md/semibold", color: "input-text-error-default", children: null };
+        const obj19 = { style: tmp.errorText, variant: "body-md/semibold", color: "input-text-error-default", children: null };
         const intl6 = require("util").intl;
         const obj20 = { user: require("UserUtils").getName(stateFromStores1) };
         obj19.children = intl6.format(require("util").t["/K6eer"], obj20);

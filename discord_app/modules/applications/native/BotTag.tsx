@@ -1,9 +1,9 @@
-// === Module 9330: BotTag ===
+// === Module 9347: BotTag ===
 
-// Module 9330 (BotTag)
+// Module 9347 (BotTag)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9331 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9348 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -114,9 +114,9 @@ class BotTag {
     tmp24 = jsxs;
     tmp25 = View;
     tmp26 = jsx;
-    str3 = "text-xs/semibold";
+    str3 = "body-xs/semibold";
     if ("sm" === size) {
-      str3 = "text-xxs/semibold";
+      str3 = "footnote/semibold";
     }
     items1[1] = tmp26(tmp17(tmp15[8]).Text, { variant: str3, lineClamp: 1, maxFontSizeMultiplier: 2, style: tmp12, children: tmp3 });
     obj1.children = items1;
@@ -126,7 +126,7 @@ class BotTag {
 const View = fn(17).View;
 const BotTagTypes = fn(1362).BotTagTypes;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { tag: { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 }, verifiedTagLeftPadding: { paddingLeft: 1 }, tagNormal: null, tagInverted: null, tagTextNormal: null, tagTextInverted: null };
 const obj3 = { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 };
@@ -137,7 +137,7 @@ const obj5 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.tagTextNormal = { color: nativeDefault.colors.WHITE };
 const obj6 = { color: nativeDefault.colors.WHITE };
 obj2.tagTextInverted = { color: nativeDefault.colors.BACKGROUND_BRAND };
-const React5 = createStyles.createStyles(obj2);
+const metroImportDefault = createStyles.createStyles(obj2);
 BotTag.Types = BotTagTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/native/BotTag.tsx");

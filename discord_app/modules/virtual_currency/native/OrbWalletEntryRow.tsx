@@ -1,14 +1,14 @@
-// === Module 17852: OrbWalletEntryRow ===
+// === Module 17948: OrbWalletEntryRow ===
 
-// Module 17852 (OrbWalletEntryRow)
+// Module 17948 (OrbWalletEntryRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2301 from "module_2301" /* 2301 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Card from "Card" /* 7103 */;
-import Badge from "Badge" /* 7426 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7498 */;
-import OrbsIcon from "OrbsIcon" /* 9660 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Card from "Card" /* 7118 */;
+import Badge from "Badge" /* 7442 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7514 */;
+import OrbsIcon from "OrbsIcon" /* 9679 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,9 +28,9 @@ function OrbWalletEntryBadge(notificationType) {
   }
 }
 const View = fn(17).View;
-const constants = fn(15771).ClientUnreadNotificationType;
+const constants = fn(15859).ClientUnreadNotificationType;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 }, balance: null, balanceText: null, trailing: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 };
@@ -63,7 +63,7 @@ export function OrbWalletEntryRow(onPress) {
   const obj2 = { style: tmp.row, children: null };
   const obj3 = { style: tmp.balance, children: null };
   items = [hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: nativeDefault.colors.ICON_SUBTLE, accessible: false }), ];
-  const obj5 = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.balanceText, children: null };
+  const obj5 = { variant: "body-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.balanceText, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.formatToPlainString(util.t["8xDISf"], { balance: str });
   items[1] = hasOwnProperty(Text_Text.Text, obj5);

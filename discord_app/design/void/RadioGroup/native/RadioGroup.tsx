@@ -1,9 +1,9 @@
-// === Module 16122: RadioGroup ===
+// === Module 16211: RadioGroup ===
 
-// Module 16122 (RadioGroup)
+// Module 16211 (RadioGroup)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
-import FormRowDefault from "FormRow" /* 7429 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
+import FormRowDefault from "FormRow" /* 7445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -254,7 +254,7 @@ class RadioGroup {
               }
             }
             children[1] = tmp2Result;
-            return React5(noop.Fragment, { children }, "radio-option-" + JSON.stringify(option.value) + "-" + index);
+            return metroImportDefault(noop.Fragment, { children }, "radio-option-" + JSON.stringify(option.value) + "-" + index);
           })
     };
     return c6(c4, obj);
@@ -263,7 +263,7 @@ class RadioGroup {
 const View = fn(17).View;
 const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const Sizes = { SMALL: 8, [8]: "SMALL", MEDIUM: 10, [10]: "MEDIUM", LARGE: 12, [12]: "LARGE" };
 const dependencyMap = { [Sizes.SMALL]: 2, [Sizes.MEDIUM]: 3, [Sizes.LARGE]: 4 };
 const createStyles = fn(5141);

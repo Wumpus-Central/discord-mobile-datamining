@@ -1,15 +1,15 @@
-// === Module 7234: Login ===
+// === Module 7254: Login ===
 
-// Module 7234 (Login)
+// Module 7254 (Login)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6079 */;
-import Pressables from "Pressables" /* 7106 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7236 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
+import Pressables from "Pressables" /* 7121 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7256 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7235 */;
+import PhoneStore from "PhoneStore" /* 7255 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ class LinkButton {
     str = global.variant;
     ({ onPress, text, containerStyle, textStyle } = global);
     if (str === undefined) {
-      str = "text-xs/medium";
+      str = "body-xs/medium";
     }
     str2 = global.textColor;
     if (str2 === undefined) {
@@ -551,7 +551,7 @@ export default function Login(isMultiAccount) {
   tmp4Result8 = require("MetaQuestUtils");
   const intl9 = tmp4(tmp2[12]).intl;
   obj13.headerText = intl9.string(require("util").t["7fNJgA"]);
-  const obj14 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj14 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl10 = tmp4(tmp2[12]).intl;
   obj14.children = intl10.string(require("util").t.euS7r4);
   obj13.subHeader = closure_10(require("Text/Text").Text, obj14);

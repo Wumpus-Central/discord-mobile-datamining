@@ -1,14 +1,14 @@
-// === Module 10758: GiftingBadgeProgressBanner ===
+// === Module 10806: GiftingBadgeProgressBanner ===
 
-// Module 10758 (GiftingBadgeProgressBanner)
+// Module 10806 (GiftingBadgeProgressBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import _modDef2763 from "module_2763" /* 2763 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6148 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6163 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10797 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,7 +50,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   }
   obj3.children = tmp10Result;
   const items2 = [React4(View, obj3), ];
-  const obj5 = { variant: "text-md/semibold", children: null };
+  const obj5 = { variant: "body-md/semibold", children: null };
   const intl = util.intl;
   obj5.children = intl.formatToPlainString(_modDef2763["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
   items2[1] = React4(Text_Text.Text, obj5);

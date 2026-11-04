@@ -1,19 +1,19 @@
-// === Module 12360: ConjureRemovedItems ===
+// === Module 12425: ConjureRemovedItems ===
 
-// Module 12360 (ConjureRemovedItems)
+// Module 12425 (ConjureRemovedItems)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
-import FormCheckbox from "FormCheckbox" /* 7115 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import FolderIcon from "FolderIcon" /* 8770 */;
-import AppsIcon from "AppsIcon" /* 8802 */;
-import BotTagDefault from "BotTag" /* 9330 */;
-import RobotIcon from "RobotIcon" /* 12241 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7115 */;
+import FormCheckbox from "FormCheckbox" /* 7130 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import FolderIcon from "FolderIcon" /* 8787 */;
+import AppsIcon from "AppsIcon" /* 8819 */;
+import BotTagDefault from "BotTag" /* 9347 */;
+import RobotIcon from "RobotIcon" /* 12302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,14 +44,14 @@ function ItemsBox(children) {
   const items2 = [
     items.map((kind) => {
       const obj = { direction: "horizontal", spacing: 8, align: "center", children: null };
-      items = [closure_1_6(ItemIcon, { kind: kind.kind }), closure_1_6(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: kind.label })];
+      items = [closure_1_6(ItemIcon, { kind: kind.kind }), closure_1_6(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", children: kind.label })];
       obj.children = items;
       return closure_1_7(Stack_Stack.Stack, obj, kind.key);
     }),
     children.children
   ];
   obj2.children = items2;
-  obj.children = React5(Stack_Stack.Stack, obj2);
+  obj.children = metroImportDefault(Stack_Stack.Stack, obj2);
   return timestampProducer(hasOwnProperty, obj);
 }
 function OptionalItemRow(arg0) {
@@ -69,15 +69,15 @@ function OptionalItemRow(arg0) {
     return importDefault(!checked);
   };
   const obj3 = { direction: "horizontal", spacing: 8, align: "center", children: null };
-  items = [timestampProducer(ItemIcon, { kind: item.kind }), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", style: tmp.optionalLabel, children: item.label }), timestampProducer(FormCheckbox.FormCheckbox, { checked })];
+  items = [timestampProducer(ItemIcon, { kind: item.kind }), timestampProducer(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", style: tmp.optionalLabel, children: item.label }), timestampProducer(FormCheckbox.FormCheckbox, { checked })];
   obj3.children = items;
-  obj2.children = React5(Stack_Stack.Stack, obj3);
+  obj2.children = metroImportDefault(Stack_Stack.Stack, obj3);
   return timestampProducer(React4, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, boxDimmed: { opacity: 0.5 }, optionalLabel: { flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -86,7 +86,7 @@ const result = size.fileFinishedImporting("modules/conjure/projects/native/Conju
 
 export default function ConjureRemovedItems(items) {
   const optionalItem = items.optionalItem;
-  const obj = { variant: "text-md/semibold", color: "text-strong", children: null };
+  const obj = { variant: "body-md/semibold", color: "text-strong", children: null };
   const intl = util.intl;
   obj.children = intl.string(_modDef3995["+E2PqP"]);
   items = [timestampProducer(Text_Text.Text, obj), ];
@@ -101,7 +101,7 @@ export default function ConjureRemovedItems(items) {
   obj2.children = tmp2Result;
   items[1] = timestampProducer(ItemsBox, obj2);
   obj4.children = items;
-  return React5(Stack_Stack.Stack, obj4);
+  return metroImportDefault(Stack_Stack.Stack, obj4);
 };
 export function formatWithAppTag(HmNT_r, targetAppName) {
   const intl = util.intl;
@@ -109,7 +109,7 @@ export function formatWithAppTag(HmNT_r, targetAppName) {
   const obj2 = { children: null };
   items = [targetAppName, " ", timestampProducer(BotTagDefault, {})];
   obj2.children = items;
-  obj.app = React5(noop.Fragment, obj2, "app");
+  obj.app = metroImportDefault(noop.Fragment, obj2, "app");
   return intl.format(HmNT_r, obj);
 }
 export function ConjureRemoveEverythingField(checked) {
@@ -125,5 +125,5 @@ export function ConjureRemoveEverythingField(checked) {
   obj2.children = timestampProducer(TableCheckboxRow.TableCheckboxRow, obj3);
   const items1 = [timestampProducer(TableRowGroup.TableRowGroup, obj2), timestampProducer(ItemsBox, { items, dimmed: !checked })];
   obj.children = items1;
-  return React5(Stack_Stack.Stack, obj);
+  return metroImportDefault(Stack_Stack.Stack, obj);
 }

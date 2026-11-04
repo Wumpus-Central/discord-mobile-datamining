@@ -1,18 +1,18 @@
-// === Module 20244: UpdateAppScreen ===
+// === Module 20360: UpdateAppScreen ===
 
-// Module 20244 (UpdateAppScreen)
+// Module 20360 (UpdateAppScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2963 from "module_2963" /* 2963 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 ({ NativeModules: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { container: { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 }, buttonContainer: null };
 let obj2 = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 };
 obj.buttonContainer = { marginTop: nativeDefault.space.PX_8 };
@@ -26,7 +26,7 @@ export default function UpdateAppScreen() {
   const intl = util.intl;
   obj2.children = intl.string(_modDef2963.yxqMCD);
   items = [hasOwnProperty(Text_Text.Text, obj2), , ];
-  const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
+  const obj3 = { variant: "body-md/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(_modDef2963.VBZJJg);
   items[1] = hasOwnProperty(Text_Text.Text, obj3);

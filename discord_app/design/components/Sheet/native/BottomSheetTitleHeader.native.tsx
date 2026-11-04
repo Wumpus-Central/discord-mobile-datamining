@@ -1,11 +1,11 @@
-// === Module 7441: BottomSheetTitleHeader ===
+// === Module 7457: BottomSheetTitleHeader ===
 
-// Module 7441 (BottomSheetTitleHeader)
+// Module 7457 (BottomSheetTitleHeader)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7125 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 7140 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ function RedesignBottomSheetTitleHeaderBase(children) {
   }
   items[1] = tmp2Result;
   obj2.children = items;
-  obj.children = React5(View, obj2);
+  obj.children = metroImportDefault(View, obj2);
   return timestampProducer(View, obj);
 }
 function RedesignBottomSheetTitleHeaderStacked(subtitle) {
@@ -37,7 +37,7 @@ function RedesignBottomSheetTitleHeaderStacked(subtitle) {
   const obj2 = { style: tmp2.accessories, children: null };
   const items1 = [timestampProducer(View, { style: tmp2.item, children: leading }), timestampProducer(View, { style: tmp2.item, children: trailing })];
   obj2.children = items1;
-  const items2 = [React5(View, obj2), ];
+  const items2 = [metroImportDefault(View, obj2), ];
   const obj5 = { style: tmp.titles, children: null };
   const items3 = [timestampProducer(Title, { children: title }), ];
   let tmp5Result = null;
@@ -47,9 +47,9 @@ function RedesignBottomSheetTitleHeaderStacked(subtitle) {
   }
   items3[1] = tmp5Result;
   obj5.children = items3;
-  items2[1] = React5(View, obj5);
+  items2[1] = metroImportDefault(View, obj5);
   obj.children = items2;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   subtitle = subtitle.subtitle;
@@ -81,7 +81,7 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   const result = diff / 4;
   items1[1] = tmp9Result;
   obj4.children = items1;
-  items[1] = React5(View, obj4);
+  items[1] = metroImportDefault(View, obj4);
   items[2] = timestampProducer(View, { style: { width: tmp5 } });
   const obj7 = { onLayout: callback, style: null, children: leading };
   const items2 = [, , ];
@@ -96,20 +96,20 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   obj8.style = items3;
   items[4] = timestampProducer(View, obj8);
   obj2.children = items;
-  return React5(View, obj2);
+  return metroImportDefault(View, obj2);
 }
 function Title(arg0) {
   const tmp = closure_8();
   const merged = Object.assign(arg0);
-  return timestampProducer(Text_Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: closure_8().title });
+  return timestampProducer(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: closure_8().title });
 }
 function Subtitle(children) {
   const tmp = closure_8();
-  return timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", style: closure_8().subtitle, textBreakStrategy: "balanced", lineBreakStrategyIOS: "push-out", children: children.children });
+  return timestampProducer(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", style: closure_8().subtitle, textBreakStrategy: "balanced", lineBreakStrategyIOS: "push-out", children: children.children });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { container: { paddingHorizontal: nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" }, titles: { flexGrow: 1, flexShrink: 1, gap: 2 }, subtitle: { textAlign: "center" }, title: { textAlign: "center" } };
@@ -154,7 +154,7 @@ export function BottomSheetTitleHeader(arg0) {
     const obj4 = { style: { position: "relative" }, children: null };
     items = [tmp5, tmp3];
     obj4.children = items;
-    tmp16 = React5(View, obj4);
+    tmp16 = metroImportDefault(View, obj4);
   }
   return tmp16;
 }

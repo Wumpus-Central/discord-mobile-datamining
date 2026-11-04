@@ -1,20 +1,20 @@
-// === Module 18171: PrivacyHint ===
+// === Module 18268: PrivacyHint ===
 
-// Module 18171 (PrivacyHint)
+// Module 18268 (PrivacyHint)
 import util from "util" /* 1113 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FormCheckbox from "FormCheckbox" /* 7115 */;
-import Form from "Form" /* 8301 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 18172 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FormCheckbox from "FormCheckbox" /* 7130 */;
+import Form from "Form" /* 8317 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 18269 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function PrivacyPolicyDescription(style) {
-  const obj = { style: style.style, variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj = { style: style.style, variant: "body-xs/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.format(util.t["KI+BSb"], { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
-  return React6(Text_Text.Text, obj);
+  return React5(Text_Text.Text, obj);
 }
 function PrivacyPolicyCheckbox(onToggleConsent) {
   ({ consent, asCheckbox } = onToggleConsent);
@@ -30,25 +30,25 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
   obj2.hitSlop = { top: 11, bottom: 11, left: 11 };
   if (asCheckbox) {
     const obj3 = { checked: consent };
-    let tmp7Result = React6(FormCheckbox.FormCheckbox, obj3);
-    let tmp9 = React6;
+    let tmp7Result = React5(FormCheckbox.FormCheckbox, obj3);
+    let tmp9 = React5;
   } else {
     const obj4 = { selected: consent };
-    tmp7Result = React6(Form.FormRow.Radio, obj4);
-    tmp9 = React6;
+    tmp7Result = React5(Form.FormRow.Radio, obj4);
+    tmp9 = React5;
   }
   items = [tmp7Result, ];
-  const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
+  const obj5 = { variant: "body-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.format(util.t.qMDAP0, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
   items[1] = tmp9(Text_Text.Text, obj5);
   obj2.children = items;
-  return React7(React4, obj2);
+  return React6(React4, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const usePromoEmailConsentStore = fn(6861).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(18132).useRegistrationUIStore;
+const usePromoEmailConsentStore = fn(6876).usePromoEmailConsentStore;
+const useRegistrationUIStore = fn(18229).useRegistrationUIStore;
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -64,22 +64,22 @@ export default function PrivacyHint(arg0) {
   if (!consentRequired) {
     if (tmp2) {
       const obj = { style: items1.multiItem, children: null };
-      items = [React6(PromotionalEmailCheckBoxDefault, {}), React6(PrivacyPolicyDescription, {})];
+      items = [React5(PromotionalEmailCheckBoxDefault, {}), React5(PrivacyPolicyDescription, {})];
       obj.children = items;
-      return React7(React3, obj);
+      return React6(React3, obj);
     }
   }
   if (!consentRequired) {
     if (consentRequired) {
       const obj2 = { consent, onToggleConsent };
-      let tmp9Result = React6(PrivacyPolicyCheckbox, obj2);
+      let tmp9Result = React5(PrivacyPolicyCheckbox, obj2);
     } else {
-      tmp9Result = React6(PrivacyPolicyDescription, {});
+      tmp9Result = React5(PrivacyPolicyDescription, {});
     }
   }
   const obj3 = { style: items1.multiItem, children: null };
-  items1 = [React6(PromotionalEmailCheckBoxDefault, {}), React6(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true })];
+  items1 = [React5(PromotionalEmailCheckBoxDefault, {}), React5(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true })];
   obj3.children = items1;
-  tmp9Result = React7(React3, obj3);
+  tmp9Result = React6(React3, obj3);
   tmp2 = useRegistrationUIStore((registrationOptions) => null != registrationOptions.registrationOptions.email) && usePromoEmailConsentStore((required) => required.required);
 };

@@ -1,14 +1,15 @@
-// === Module 13821: useTraitPickerSelection ===
+// === Module 13907: useTraitPickerSelection ===
 
-// Module 13821 (useTraitPickerSelection)
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6231 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6554 */;
+// Module 13907 (useTraitPickerSelection)
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6246 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6569 */;
+import Tracking from "Tracking" /* 13654 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13571 */;
+import CheckpointStore from "CheckpointStore" /* 13656 */;
 
 require = fn;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/checkpoint/hooks/useTraitPickerSelection.tsx");
+let result = size.fileFinishedImporting("modules/checkpoint/hooks/useTraitPickerSelection.tsx");
 
 export function useTraitPickerSelection(customizationOption) {
   customizationOption = customizationOption.customizationOption;
@@ -46,9 +47,10 @@ export function useTraitPickerSelection(customizationOption) {
   });
   selectedOptionId = savedOptionId.selectedOptionId;
   const items1 = [onSelectOption, selectedOptionId];
-  const onSelectOption1 = noop.useCallback((arg0, arg1) => {
-    if (arg1 !== selectedOptionId) {
-      onSelectOption(arg0, arg1);
+  const onSelectOption1 = noop.useCallback((trait_type, option_id) => {
+    if (option_id !== selectedOptionId) {
+      const result = Tracking.trackCheckpoint2026CharacterChoiceSelected(trait_type, option_id);
+      onSelectOption(trait_type, option_id);
     }
   }, items1);
   if (customizationOption(onSelectOption[2]).CheckpointCustomizationOption.OUTFIT === customizationOption) {

@@ -1,9 +1,9 @@
-// === Module 8784: ForumIcon ===
+// === Module 8801: ForumIcon ===
 
-// Module 8784 (ForumIcon)
+// Module 8801 (ForumIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod8748 from "module_8748" /* 8748 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod8765 from "module_8765" /* 8765 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ForumIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8748, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8765, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

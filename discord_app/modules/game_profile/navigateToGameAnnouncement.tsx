@@ -1,6 +1,6 @@
-// === Module 9585: navigateToGameAnnouncement ===
+// === Module 9604: navigateToGameAnnouncement ===
 
-// Module 9585 (navigateToGameAnnouncement)
+// Module 9604 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
@@ -136,7 +136,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
   }
 };
 const Constants = fn(1072);
-({ GuildFeatures: hasOwnProperty, JoinGuildSources: metroRequire, Routes: closure_7 } = Constants);
+({ GuildFeatures: hasOwnProperty, JoinGuildSources: closure_6, Routes: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");
 

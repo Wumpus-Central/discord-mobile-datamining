@@ -1,22 +1,22 @@
-// === Module 11883: confirmExternalAppLaunchAlert ===
+// === Module 11942: confirmExternalAppLaunchAlert ===
 
-// Module 11883 (confirmExternalAppLaunchAlert)
+// Module 11942 (confirmExternalAppLaunchAlert)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
-import _modDef11884 from "module_11884" /* 11884 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
+import _modDef11943 from "module_11943" /* 11943 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef11884, style: tmp.announcementBirb };
+  const obj2 = { source: _modDef11943, style: tmp.announcementBirb };
   items = [hasOwnProperty(FastImageDefault, obj2), , , ];
-  const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
+  const obj3 = { style: tmp.alertEyebrowText, variant: "body-sm/medium", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["06YebE"]);
   items[1] = hasOwnProperty(Text_Text.Text, obj3);
@@ -24,7 +24,7 @@ function ConfirmActivityGateContent(activityName) {
   const intl2 = util.intl;
   obj4.children = intl2.format(util.t["Z/eMDT"], { activityName: activityName.application.name });
   items[2] = hasOwnProperty(Text_Text.Text, obj4);
-  const obj6 = { style: tmp.alertSubtitleText, variant: "text-sm/normal", children: null };
+  const obj6 = { style: tmp.alertSubtitleText, variant: "body-sm/normal", children: null };
   const intl3 = util.intl;
   obj6.children = intl3.string(util.t.z81WwD);
   items[3] = hasOwnProperty(Text_Text.Text, obj6);
@@ -49,7 +49,7 @@ function LinkButton() {
 const View = fn(17).View;
 const PRIVATE_APPS_HELP_ARTICLE = fn(2147).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
 const size = fn(2);

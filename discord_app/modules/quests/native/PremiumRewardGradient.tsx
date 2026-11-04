@@ -1,12 +1,12 @@
-// === Module 17282: PremiumRewardGradient ===
+// === Module 17374: PremiumRewardGradient ===
 
-// Module 17282 (PremiumRewardGradient)
+// Module 17374 (PremiumRewardGradient)
 import nativeDefault from "native" /* 575 */;
 import design_shared from "design/shared" /* 5149 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import _modDef7164 from "module_7164" /* 7164 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import _modDef7179 from "module_7179" /* 7179 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ function PremiumRewardFillGradient(arg0) {
   }, items1);
   const items3 = [timestampProducer(LinearGradientDefault, { style: tmp.fill, colors: memo, start, end, pointerEvents: "none" }), timestampProducer(LinearGradientDefault, { style: tmp.fill, colors: memo1, start: start2, end: end2, pointerEvents: "none" }), children];
   obj4.children = items3;
-  return React5(hasOwnProperty, obj4);
+  return metroImportDefault(hasOwnProperty, obj4);
 }
 function PremiumRewardGlowGradient(arg0) {
   ({ children, style } = arg0);
@@ -67,14 +67,14 @@ function PremiumRewardGlowGradient(arg0) {
   }
   const obj5 = { style: items2, maskElement: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: ["transparent", "black"], start: start2, end: end2 }), children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: memo, start, end }) };
   items2[1] = glowLight;
-  const items3 = [timestampProducer(_modDef7164, obj5), children];
+  const items3 = [timestampProducer(_modDef7179, obj5), children];
   obj4.children = items3;
-  return React5(hasOwnProperty, obj4);
+  return metroImportDefault(hasOwnProperty, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "hidden" }, fill: { position: "absolute", left: 0, right: 0, bottom: 0, height: "100%" }, glow: { position: "absolute", left: 0, right: 0, bottom: 0, height: "50%" }, glowLight: { opacity: 0.5 } });
 const start = { x: 0, y: 0.5 };

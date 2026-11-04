@@ -1,11 +1,11 @@
-// === Module 18847: SearchFilterSuggestions ===
+// === Module 18950: SearchFilterSuggestions ===
 
-// Module 18847 (SearchFilterSuggestions)
+// Module 18950 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import native from "native" /* 5207 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14017 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 18848 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14103 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 18951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ function SearchFilterPrefixRow(text) {
     onPress(text);
   }, items2);
   const merged1 = Object.assign(merged);
-  return jsx(require("TableRow").TableRow, { icon: memo, onPress: callback, label: jsx(require("Text/Text").Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: text }), subLabel: memo1 });
+  return jsx(require("TableRow").TableRow, { icon: memo, onPress: callback, label: jsx(require("Text/Text").Text, { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: text }), subLabel: memo1 });
 }
 function getSuggestionsKey(arr) {
   const mapped = arr.map((text) => text.text);
@@ -126,7 +126,7 @@ function AnimatedEnterExitContainer(state) {
   return jsx(_modDef1652.View, { style, children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9975).SearchFilterAddLocations;
 let jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { card: null };

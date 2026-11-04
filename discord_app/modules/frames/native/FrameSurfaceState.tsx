@@ -1,9 +1,9 @@
-// === Module 18836: FrameSurfaceState ===
+// === Module 18939: FrameSurfaceState ===
 
-// Module 18836 (FrameSurfaceState)
+// Module 18939 (FrameSurfaceState)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,19 +25,19 @@ export function FrameSurfaceExplanation(icon) {
   items = [icon.icon, , , , ];
   let tmp4 = null;
   if (null != heading) {
-    const obj2 = { variant: "heading-md/semibold", color: "text-default", children: heading };
+    const obj2 = { variant: "heading-sm/semibold", color: "text-default", children: heading };
     tmp4 = React3(Text_Text.Heading, obj2);
   }
   items[1] = tmp4;
   let tmp8 = null;
   if (null != description) {
-    const obj3 = { variant: "text-sm/normal", color: "text-muted", children: description };
+    const obj3 = { variant: "body-sm/normal", color: "text-muted", children: description };
     tmp8 = React3(Text_Text.Text, obj3);
   }
   items[2] = tmp8;
   let tmp12 = null;
   if (null != error) {
-    const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: error };
+    const obj4 = { variant: "body-sm/normal", color: "text-feedback-critical", children: error };
     tmp12 = React3(Text_Text.Text, obj4);
   }
   items[3] = tmp12;

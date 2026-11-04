@@ -1,13 +1,13 @@
-// === Module 9097: ScheduleUtils ===
+// === Module 9114: ScheduleUtils ===
 
-// Module 9097 (ScheduleUtils)
+// Module 9114 (ScheduleUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import DateUtils from "DateUtils" /* 4963 */;
-import m from "m" /* 9099 */;
+import m from "m" /* 9116 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -90,16 +90,16 @@ function getValidWeekends(toDate) {
   }
   return tmp5;
 }
-const RecurrenceOptions = fn(9098).RecurrenceOptions;
+const RecurrenceOptions = fn(9115).RecurrenceOptions;
 const GuildScheduledEventsConstants = fn(4996);
-({ GuildScheduledEventEntityTypes: hasOwnProperty, GuildScheduledEventStatus: metroRequire } = GuildScheduledEventsConstants);
-let items = [fn(9099).RRule.MO.weekday, fn(9099).RRule.TU.weekday, fn(9099).RRule.WE.weekday, fn(9099).RRule.TH.weekday, fn(9099).RRule.FR.weekday];
-let items1 = [fn(9099).RRule.SU.weekday, fn(9099).RRule.MO.weekday, fn(9099).RRule.TU.weekday, fn(9099).RRule.WE.weekday, fn(9099).RRule.TH.weekday];
-let items2 = [fn(9099).RRule.TU.weekday, fn(9099).RRule.WE.weekday, fn(9099).RRule.TH.weekday, fn(9099).RRule.FR.weekday, fn(9099).RRule.SA.weekday];
-let items3 = [fn(9099).RRule.SA.weekday, fn(9099).RRule.SU.weekday];
-const items4 = [fn(9099).RRule.FR.weekday, fn(9099).RRule.SA.weekday];
-const items5 = [fn(9099).RRule.SU.weekday, fn(9099).RRule.MO.weekday];
-const items6 = [fn(9099).RRule.SU.weekday, fn(9099).RRule.MO.weekday, fn(9099).RRule.TU.weekday, fn(9099).RRule.WE.weekday, fn(9099).RRule.TH.weekday, fn(9099).RRule.FR.weekday, fn(9099).RRule.SA.weekday];
+({ GuildScheduledEventEntityTypes: hasOwnProperty, GuildScheduledEventStatus: closure_6 } = GuildScheduledEventsConstants);
+let items = [fn(9116).RRule.MO.weekday, fn(9116).RRule.TU.weekday, fn(9116).RRule.WE.weekday, fn(9116).RRule.TH.weekday, fn(9116).RRule.FR.weekday];
+let items1 = [fn(9116).RRule.SU.weekday, fn(9116).RRule.MO.weekday, fn(9116).RRule.TU.weekday, fn(9116).RRule.WE.weekday, fn(9116).RRule.TH.weekday];
+let items2 = [fn(9116).RRule.TU.weekday, fn(9116).RRule.WE.weekday, fn(9116).RRule.TH.weekday, fn(9116).RRule.FR.weekday, fn(9116).RRule.SA.weekday];
+let items3 = [fn(9116).RRule.SA.weekday, fn(9116).RRule.SU.weekday];
+const items4 = [fn(9116).RRule.FR.weekday, fn(9116).RRule.SA.weekday];
+const items5 = [fn(9116).RRule.SU.weekday, fn(9116).RRule.MO.weekday];
+const items6 = [fn(9116).RRule.SU.weekday, fn(9116).RRule.MO.weekday, fn(9116).RRule.TU.weekday, fn(9116).RRule.WE.weekday, fn(9116).RRule.TH.weekday, fn(9116).RRule.FR.weekday, fn(9116).RRule.SA.weekday];
 const set = new Set([0, 6]);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/ScheduleUtils.tsx");
@@ -249,7 +249,7 @@ export function getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, guildEvent
   ({ scheduled_start_time, scheduled_end_time } = guildEvent);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef2171(scheduled_start_time), endDate: "y" };
+    const obj = { startDate: _modDef2171(scheduled_start_time), endDate: "a" };
     tmp = obj;
     if (null != scheduled_end_time) {
       obj.endDate = _modDef2171(scheduled_end_time);
@@ -296,7 +296,7 @@ export function getScheduleFromEventData(arg0) {
   ({ scheduledStartTime, scheduledEndTime } = arg0);
   let tmp;
   if (null != scheduledStartTime) {
-    const obj = { startDate: _modDef2171(scheduledStartTime), endDate: "y" };
+    const obj = { startDate: _modDef2171(scheduledStartTime), endDate: "a" };
     tmp = obj;
     if (null != scheduledEndTime) {
       obj.endDate = _modDef2171(scheduledEndTime);
@@ -309,7 +309,7 @@ export function getScheduleFromEvent(arg0) {
   ({ scheduled_start_time, scheduled_end_time } = arg0);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef2171(scheduled_start_time), endDate: "y" };
+    const obj = { startDate: _modDef2171(scheduled_start_time), endDate: "a" };
     tmp = obj;
     if (null != scheduled_end_time) {
       obj.endDate = _modDef2171(scheduled_end_time);
@@ -460,38 +460,38 @@ export function isValidRecurrence(start, arg1) {
 }
 export { getValidWeekdays };
 export { getValidWeekends };
-export function recurrenceOptionToRecurrenceRule(c7, toDate) {
-  const tmp = getValidWeekdays(toDate);
-  const tmp2 = getValidWeekends(toDate);
-  const uTCDay = toDate.toDate().getUTCDay();
+export function recurrenceOptionToRecurrenceRule(c6, startOfResult) {
+  const tmp = getValidWeekdays(startOfResult);
+  const tmp2 = getValidWeekends(startOfResult);
+  const uTCDay = startOfResult.toDate().getUTCDay();
   const weekday = new m.Weekday(items6[uTCDay]);
-  const toDateResult = toDate.toDate();
-  const rounded = Math.ceil(toDate.toDate().getUTCDate() / 7);
-  const toDateResult2 = toDate.toDate();
+  const toDateResult = startOfResult.toDate();
+  const rounded = Math.ceil(startOfResult.toDate().getUTCDate() / 7);
+  const toDateResult2 = startOfResult.toDate();
   toDateResult2.setMilliseconds(0);
   let rRule = null;
-  if (RecurrenceOptions.NONE !== c7) {
-    if (RecurrenceOptions.WEEKLY === c7) {
+  if (RecurrenceOptions.NONE !== c6) {
+    if (RecurrenceOptions.WEEKLY === c6) {
       const obj = { dtstart: toDateResult2, freq: m.RRule.WEEKLY };
       rRule = new m.RRule(obj);
-    } else if (RecurrenceOptions.BIWEEKLY === c7) {
+    } else if (RecurrenceOptions.BIWEEKLY === c6) {
       const obj2 = { dtstart: toDateResult2, freq: m.RRule.WEEKLY, interval: 2 };
       rRule = new m.RRule(obj2);
-    } else if (RecurrenceOptions.MONTHLY === c7) {
+    } else if (RecurrenceOptions.MONTHLY === c6) {
       const obj3 = { dtstart: toDateResult2, freq: m.RRule.MONTHLY, byweekday: null };
       items = [weekday.nth(rounded)];
       obj3.byweekday = items;
       rRule = new m.RRule(obj3);
-    } else if (RecurrenceOptions.YEARLY === c7) {
+    } else if (RecurrenceOptions.YEARLY === c6) {
       const obj4 = { dtstart: toDateResult2, freq: m.RRule.YEARLY };
       rRule = new m.RRule(obj4);
-    } else if (RecurrenceOptions.DAILY === c7) {
+    } else if (RecurrenceOptions.DAILY === c6) {
       const obj5 = { dtstart: toDateResult2, freq: m.RRule.DAILY };
       rRule = new m.RRule(obj5);
-    } else if (RecurrenceOptions.WEEKDAY_ONLY === c7) {
+    } else if (RecurrenceOptions.WEEKDAY_ONLY === c6) {
       const obj6 = { dtstart: toDateResult2, freq: m.RRule.DAILY, byweekday: tmp };
       rRule = new m.RRule(obj6);
-    } else if (RecurrenceOptions.WEEKEND_ONLY === c7) {
+    } else if (RecurrenceOptions.WEEKEND_ONLY === c6) {
       const obj7 = { dtstart: toDateResult2, freq: m.RRule.DAILY, byweekday: tmp2 };
       rRule = new m.RRule(obj7);
     }
@@ -522,7 +522,7 @@ export function recurrenceOptionToRecurrenceRule(c7, toDate) {
     obj8.count = count;
     return obj8;
   }
-  const toDateResult1 = toDate.toDate();
+  const toDateResult1 = startOfResult.toDate();
 }
 export function recurrenceRuleToOption(startDate, recurrenceRule) {
   if (null == recurrenceRule) {

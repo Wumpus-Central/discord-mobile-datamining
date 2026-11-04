@@ -1,6 +1,6 @@
-// === Module 11146: FamilyCenterRestrictedHoursUtils ===
+// === Module 11194: FamilyCenterRestrictedHoursUtils ===
 
-// Module 11146 (FamilyCenterRestrictedHoursUtils)
+// Module 11194 (FamilyCenterRestrictedHoursUtils)
 import util from "util" /* 1113 */;
 import user from "user" /* 1393 */;
 import _modDef2667 from "module_2667" /* 2667 */;
@@ -80,8 +80,8 @@ const set2 = new Set(items);
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx");
 
 export const DAYS_ORDERED = items;
-export function getShortDayLabels(narrow) {
-  const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { weekday: narrow });
+export function getDayLabels(long) {
+  const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { weekday: long });
   return items.map((item, index) => dateTimeFormat.format(new Date(2025, 0, 5 + index)));
 }
 export function formatTime(hours) {

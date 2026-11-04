@@ -1,11 +1,11 @@
-// === Module 12054: LottieIcon ===
+// === Module 12113: LottieIcon ===
 
-// Module 12054 (LottieIcon)
+// Module 12113 (LottieIcon)
 import nativeDefault from "native" /* 575 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5155 */;
-import useToken from "useToken" /* 5719 */;
-import _modDef5742 from "module_5742" /* 5742 */;
-import IconSize from "IconSize" /* 7222 */;
+import useToken from "useToken" /* 5732 */;
+import _modDef5756 from "module_5756" /* 5756 */;
+import IconSize from "IconSize" /* 7242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -126,6 +126,6 @@ export function LottieIcon(color) {
   obj3.onAnimationLoaded = callback1;
   const items4 = [size1, { opacity: num }];
   obj3.style = items4;
-  obj2.children = jsx(_modDef5742, { ref: ref1, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
+  obj2.children = jsx(_modDef5756, { ref: ref1, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
   return <View style={size1}>{null}</View>;
 }

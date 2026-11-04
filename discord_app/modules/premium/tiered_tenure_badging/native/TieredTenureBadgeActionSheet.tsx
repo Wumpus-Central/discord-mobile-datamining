@@ -1,16 +1,16 @@
-// === Module 11556: TieredTenureBadgeActionSheet ===
+// === Module 11606: TieredTenureBadgeActionSheet ===
 
-// Module 11556 (TieredTenureBadgeActionSheet)
+// Module 11606 (TieredTenureBadgeActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7905 */;
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8874 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11557 */;
-import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11582 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7921 */;
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8891 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11607 */;
+import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11632 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -41,17 +41,17 @@ function TieredTenureBadgeItem(arg0) {
     obj2.style = items;
     const obj3 = { resizeMode: "contain", source: small };
     const items1 = [closure_1_10(FastImageDefault, obj3), , , ];
-    const obj4 = { style: tmp.badgeName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj4 = { style: tmp.badgeName, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
     obj4.children = intl.string(tieredTenureBadgeData.nameUnformatted);
     items1[1] = closure_1_10(Text_Text.Text, obj4);
-    const obj5 = { style: tmp.badgeRequirement, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: tmp7 };
+    const obj5 = { style: tmp.badgeRequirement, variant: "body-xs/normal", color: "mobile-text-heading-primary", children: tmp7 };
     items1[2] = closure_1_10(Text_Text.Text, obj5);
     if (isUsersBadge) {
       isUsersBadge = null != premiumSince;
     }
     if (isUsersBadge) {
-      const obj6 = { style: tmp.badgePremiumSince, variant: "text-xs/normal", color: "text-muted", children: null };
+      const obj6 = { style: tmp.badgePremiumSince, variant: "body-xs/normal", color: "text-muted", children: null };
       const intl2 = util.intl;
       const obj7 = { date: null };
       const _Date = Date;
@@ -68,7 +68,7 @@ function TieredTenureBadgeItem(arg0) {
 }
 const View = fn(17).View;
 const PremiumConstants = fn(1387);
-({ PremiumTypes: metroRequire, TieredTenureBadge: closure_7 } = PremiumConstants);
+({ PremiumTypes: closure_6, TieredTenureBadge: metroImportDefault } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -162,7 +162,7 @@ export default function TieredTenureBadgeActionSheet(userId) {
   }
   obj9.children = stringResult;
   const items3 = [closure_10(userId(tieredTenureBadgeDataForUser[12]).Text, obj9), ];
-  const obj10 = { variant: "text-md/medium", color: "text-default", style: tmp.subtitle, children: null };
+  const obj10 = { variant: "body-md/medium", color: "text-default", style: tmp.subtitle, children: null };
   const intl2 = tmp2(tmp3[13]).intl;
   if (isPremiumResult) {
     let stringResult1 = intl2.string(tmp2(tmp3[13]).t.IdAP91);

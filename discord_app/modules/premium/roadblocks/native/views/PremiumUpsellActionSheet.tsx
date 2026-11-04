@@ -1,20 +1,20 @@
-// === Module 9926: PremiumUpsellActionSheet ===
+// === Module 9944: PremiumUpsellActionSheet ===
 
-// Module 9926 (PremiumUpsellActionSheet)
+// Module 9944 (PremiumUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
-import ChatInputUtils from "ChatInputUtils" /* 5330 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import APNGPlayer from "APNGPlayer" /* 9632 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9925 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import APNGPlayer from "APNGPlayer" /* 9651 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9943 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -70,8 +70,8 @@ const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_10, PremiumTypes: closure_11, PremiumUpsellTypes: closure_12 } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
-const ApplicationStreamFPS = fn(5984).ApplicationStreamFPS;
-const premiumMax = fn(9927).MAX_SCHEDULED_MESSAGES_PER_USER;
+const ApplicationStreamFPS = fn(5998).ApplicationStreamFPS;
+const premiumMax = fn(9945).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
 const createStyles = fn(5141);
@@ -310,7 +310,7 @@ export default function PremiumUpsellActionSheet(analyticsLocations) {
     const items7 = [tmp22Result, , ];
     const obj26 = { style: tmp.text, variant: "heading-lg/semibold", accessibilityRole: "header", children: tmp23.title };
     items7[1] = closure_18(legacyProps(tmp3[46]).Text, obj26);
-    const obj27 = { style: null, variant: "text-sm/normal", children: null };
+    const obj27 = { style: null, variant: "body-sm/normal", children: null };
     const items8 = [, ];
     ({ text: arr10[0], description: arr10[1] } = tmp);
     obj27.style = items8;

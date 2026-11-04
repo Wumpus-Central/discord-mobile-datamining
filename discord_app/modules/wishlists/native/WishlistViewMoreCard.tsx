@@ -1,17 +1,17 @@
-// === Module 14588: WishlistViewMoreCard ===
+// === Module 14668: WishlistViewMoreCard ===
 
-// Module 14588 (WishlistViewMoreCard)
+// Module 14668 (WishlistViewMoreCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import WishlistItemCardDefault from "WishlistItemCard" /* 14583 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import WishlistItemCardDefault from "WishlistItemCard" /* 14663 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { moreOverlay: null };
@@ -35,11 +35,11 @@ export default function WishlistViewMoreCard(overflowCount) {
   obj.accessibilityLabel = intl.formatToPlainString(util.t.F6iMs4, { count: overflowCount });
   items = [timestampProducer(WishlistItemCardDefault, { accessibilityHidden: true, sku, size, recipientName }), ];
   const obj2 = { style: closure_8().moreOverlay, children: null };
-  const obj3 = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
+  const obj3 = { variant: "body-md/semibold", color: "text-overlay-light", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.format(util.t.F6iMs4, { count: overflowCount });
   obj2.children = timestampProducer(Text_Text.Text, obj3);
   items[1] = timestampProducer(hasOwnProperty, obj2);
   obj.children = items;
-  return React5(React3, obj);
+  return metroImportDefault(React3, obj);
 };

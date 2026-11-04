@@ -1,6 +1,6 @@
-// === Module 7330: useNavigationTheme ===
+// === Module 7346: useNavigationTheme ===
 
-// Module 7330 (useNavigationTheme)
+// Module 7346 (useNavigationTheme)
 import Link from "Link" /* 1500 */;
 import shared from "shared" /* 5148 */;
 import noop from "module_19" /* 19 */;

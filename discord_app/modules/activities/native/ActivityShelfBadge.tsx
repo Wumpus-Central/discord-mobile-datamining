@@ -1,10 +1,10 @@
-// === Module 12550: ActivityShelfBadge ===
+// === Module 12631: ActivityShelfBadge ===
 
-// Module 12550 (ActivityShelfBadge)
+// Module 12631 (ActivityShelfBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Server from "Server" /* 2121 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,10 +35,10 @@ export default function ActivityShelfBadge(arg0) {
     items = [replacementStyles, , ];
     ({ newBadge: arr[1], elevationShadow: arr[2] } = tmp);
     obj.style = items;
-    const obj2 = { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };
+    const obj2 = { variant: "body-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };
     const intl = util.intl;
     obj2.children = intl.string(util.t.y2b7CA);
-    obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null });
+    obj.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null });
     let tmp6 = <View style={null}>{null}</View>;
   } else {
     tmp6 = null;
@@ -47,10 +47,10 @@ export default function ActivityShelfBadge(arg0) {
       const items1 = [replacementStyles, , ];
       ({ updatedBadge: arr2[1], elevationShadow: arr2[2] } = tmp);
       obj3.style = items1;
-      const obj4 = { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };
+      const obj4 = { variant: "body-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t["/qdhkk"]);
-      obj3.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null });
+      obj3.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null });
       tmp6 = <View style={null}>{null}</View>;
     }
   }

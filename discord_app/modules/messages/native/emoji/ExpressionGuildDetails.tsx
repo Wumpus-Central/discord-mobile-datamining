@@ -1,19 +1,19 @@
-// === Module 10197: ExpressionGuildDetails ===
+// === Module 10245: ExpressionGuildDetails ===
 
-// Module 10197 (ExpressionGuildDetails)
+// Module 10245 (ExpressionGuildDetails)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import GuildIconDefault from "GuildIcon" /* 7083 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 10196 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import GuildIconDefault from "GuildIcon" /* 7098 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 10244 */;
 import noop from "module_19" /* 19 */;
 
-const GuildBadgeDefault = tmp10(7087);
+const GuildBadgeDefault = tmp10(7102);
 require = fn;
 const View = fn(17).View;
-const React4 = fn(7084).ExpressionSourceGuildRecord;
+const React4 = fn(7099).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { guildDetailsContainer: { flexDirection: "column" }, guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" }, guildIcon: null, guildNameAndOnlineMembers: null, guildNameWrapper: null, guildPartnerIcon: null, guildDescriptionSection: null, dotSeparator: null, joinGuildButton: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, marginRight: 12 };
@@ -25,7 +25,7 @@ obj2.guildDescriptionSection = { flexDirection: "row", alignItems: "center", mar
 const size1 = { width: 4, height: 4, borderRadius: nativeDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.dotSeparator = size1;
 obj2.joinGuildButton = { borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
-const React6 = createStyles.createStyles(obj2);
+const React5 = createStyles.createStyles(obj2);
 class ExpressionGuildDetails {
   constructor(arg0) {
     guild = global.guild;
@@ -58,7 +58,7 @@ class ExpressionGuildDetails {
       obj23 = { style: null, children: null };
       obj23.style = tmp.guildDetailsContainer;
       tmp16 = guild;
-      obj24 = { variant: "eyebrow", color: "text-default", children: null };
+      obj24 = { variant: "body-sm/medium", color: "text-default", children: null };
       obj24.children = title;
       items = [, ];
       items[0] = tmp12(guild(tmp11[9]).Text, obj24);
@@ -77,7 +77,7 @@ class ExpressionGuildDetails {
       obj28.size = guild(tmp11[14]).Icon.Sizes.REFRESH_SMALL_16;
       items2 = [, ];
       items2[0] = tmp12(tmp10Result, obj28);
-      obj29 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+      obj29 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj29.children = guild.name;
       items2[1] = tmp12(guild(tmp11[9]).Text, obj29);
       obj27.children = items2;
@@ -89,7 +89,7 @@ class ExpressionGuildDetails {
         tmp18 = null;
         if (null != fromGuildType.presenceCount) {
           tmp19 = Fragment;
-          obj31 = { variant: "text-xs/medium", color: "text-default", children: null };
+          obj31 = { variant: "body-xs/medium", color: "text-default", children: null };
           intl2 = tmp16(stringResult[10]).intl;
           obj32 = { membersOnline: null };
           obj32.membersOnline = fromGuildType.presenceCount;
@@ -106,7 +106,7 @@ class ExpressionGuildDetails {
               obj34.onPress = function onPress() {
                 return guild_GuildUtils.handleJoinGuild(guild.id);
               };
-              obj35 = { variant: "text-xs/medium", color: "text-default", children: null };
+              obj35 = { variant: "body-xs/medium", color: "text-default", children: null };
               intl3 = tmp16(stringResult[10]).intl;
               obj35.children = intl3.string(tmp16(stringResult[10]).t.riu2R5);
               obj34.children = tmp9(tmp16(stringResult[9]).Text, obj35);
@@ -117,14 +117,14 @@ class ExpressionGuildDetails {
             obj36.children = items4;
             tmp14Result = tmp14(tmp19, obj36);
           }
-          obj37 = { variant: "text-xs/medium", color: "text-default", children: null };
+          obj37 = { variant: "body-xs/medium", color: "text-default", children: null };
           intl4 = tmp16(stringResult[10]).intl;
           stringResult = intl4.string(tmp16(stringResult[10]).t.inyJqO);
           obj37.children = stringResult;
           tmp9Result = tmp9(tmp16(stringResult[9]).Text, obj37);
         }
       }
-      obj38 = { variant: "text-xs/medium", color: "text-default", children: null };
+      obj38 = { variant: "body-xs/medium", color: "text-default", children: null };
       intl = tmp16(stringResult[10]).intl;
       obj38.children = intl.string(tmp16(stringResult[10]).t.H29mx4);
       obj30.children = tmp9(tmp16(stringResult[9]).Text, obj38);

@@ -1,14 +1,14 @@
-// === Module 12932: conjureComposerPills ===
+// === Module 13014: conjureComposerPills ===
 
-// Module 12932 (conjureComposerPills)
+// Module 13014 (conjureComposerPills)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import UserUtils from "UserUtils" /* 5195 */;
-import _modDef11200 from "module_11200" /* 11200 */;
-import ChatInputParser from "ChatInputParser" /* 12933 */;
+import _modDef11250 from "module_11250" /* 11250 */;
+import ChatInputParser from "ChatInputParser" /* 13015 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12282 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12343 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
 export function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef11200).uri;
+  return Image.resolveAssetSource(_modDef11250).uri;
 }
 export function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
@@ -60,7 +60,7 @@ export function conjureUserPillLabel(id) {
 export function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12773).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(12854).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -111,7 +111,7 @@ export function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef11200).uri;
+        uri = Image.resolveAssetSource(_modDef11250).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);

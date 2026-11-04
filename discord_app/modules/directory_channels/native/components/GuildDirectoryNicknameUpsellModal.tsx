@@ -1,19 +1,19 @@
-// === Module 14369: GuildDirectoryNicknameUpsellModal ===
+// === Module 14449: GuildDirectoryNicknameUpsellModal ===
 
-// Module 14369 (GuildDirectoryNicknameUpsellModal)
+// Module 14449 (GuildDirectoryNicknameUpsellModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
-import useInitialValueDefault from "useInitialValue" /* 5735 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7207 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 14360 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 14368 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
+import useInitialValueDefault from "useInitialValue" /* 5749 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7222 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 14440 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 14448 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -72,7 +72,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
   }
   obj7.children = intl.format(util.t["d+6kzl"], { guildName: name });
   const items3 = [closure_10(Text_Text.Text, obj7), ];
-  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj8 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(util.t.b3L8yx);
   items3[1] = closure_10(Text_Text.Text, obj8);
@@ -130,13 +130,13 @@ function GuildDirectoryNicknameUpsell(arg0) {
   return closure_11(closure_7, obj3);
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(14359).GuildPrompts;
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
+const GuildPrompts = fn(14439).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(5709).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5709).NAV_BAR_HEIGHT };
+let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(5722).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5722).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };

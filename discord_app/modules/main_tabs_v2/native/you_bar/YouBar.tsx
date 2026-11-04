@@ -1,6 +1,6 @@
-// === Module 18589: YouBar ===
+// === Module 18690: YouBar ===
 
-// Module 18589 (YouBar)
+// Module 18690 (YouBar)
 import _mod12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -9,18 +9,18 @@ import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import native from "native" /* 5207 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import transitionToGuild from "transitionToGuild" /* 7646 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
-import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9806 */;
-import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11642 */;
-import YouBarBackgroundDefault from "YouBarBackground" /* 18611 */;
-import YouBarUserDefault from "YouBarUser" /* 18613 */;
-import YouBarNotificationsButtonDefault from "YouBarNotificationsButton" /* 18622 */;
-import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 18624 */;
-import ConnectionBannerDefault from "ConnectionBanner" /* 18625 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import transitionToGuild from "transitionToGuild" /* 7662 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
+import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9824 */;
+import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11693 */;
+import YouBarBackgroundDefault from "YouBarBackground" /* 18712 */;
+import YouBarUserDefault from "YouBarUser" /* 18714 */;
+import YouBarNotificationsButtonDefault from "YouBarNotificationsButton" /* 18723 */;
+import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 18725 */;
+import ConnectionBannerDefault from "ConnectionBanner" /* 18726 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5165 */;
@@ -29,8 +29,8 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const YouBarConstants = fn(17218);
+({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
+const YouBarConstants = fn(17310);
 ({ YOU_BAR_HEIGHT: closure_10, YOU_BAR_PADDING: closure_11, YOU_BAR_SPRING_CONFIG: closure_12, YOU_BAR_AVATAR_LARGE_SIZE: map1, YOU_BAR_AVATAR_SIZE: closure_14, YOU_BAR_BUTTON_HIT_SLOP: closure_15 } = YouBarConstants);
 const ME = fn(1072).ME;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
@@ -64,7 +64,7 @@ let closure_25 = noop.memo(function YouBar() {
     str = str2;
   }
   if (isMobileRTCV2Enabled) {
-    let DOCK_SPACE_SPRING_CONFIG = tmp2(11386).DOCK_SPACE_SPRING_CONFIG;
+    let DOCK_SPACE_SPRING_CONFIG = tmp2(11436).DOCK_SPACE_SPRING_CONFIG;
   } else {
     DOCK_SPACE_SPRING_CONFIG = closure_12;
   }
@@ -308,7 +308,7 @@ let closure_25 = noop.memo(function YouBar() {
       callback3();
     }
   }, items9);
-  const context = obj8.useContext(tmp7(11380));
+  const context = obj8.useContext(tmp7(11430));
   gesture = context.gesture;
   const translateX = context.translateX;
   const tmp2Result23 = require("useYouBarAccessibilityLabel");
@@ -387,7 +387,7 @@ let closure_25 = noop.memo(function YouBar() {
   let tmp50Result = tmp33;
   if (null != nameplate) {
     const obj5 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp47 };
-    tmp50Result = closure_18(tmp7(18612), obj5);
+    tmp50Result = closure_18(tmp7(18713), obj5);
   }
   items12[1] = tmp50Result;
   const obj6 = { gesture: memo3, children: null };
@@ -411,12 +411,12 @@ let closure_25 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj10 = { hasNameplate: tmp33, canUnpin: tmp27.canPin };
-    let tmp50Result2 = closure_18(tmp7(18618), obj10);
+    let tmp50Result2 = closure_18(tmp7(18719), obj10);
   } else {
     tmp50Result2 = null;
     if (iCYMIEnabled) {
       const obj11 = { hasNameplate: tmp33 };
-      tmp50Result2 = closure_18(tmp7(18620), obj11);
+      tmp50Result2 = closure_18(tmp7(18721), obj11);
     }
   }
   const items13 = [tmp50Result2, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];

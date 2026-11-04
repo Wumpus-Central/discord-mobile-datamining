@@ -1,8 +1,8 @@
-// === Module 17476: DisplayNameStylesSheetHeader ===
+// === Module 17566: DisplayNameStylesSheetHeader ===
 
-// Module 17476 (DisplayNameStylesSheetHeader)
+// Module 17566 (DisplayNameStylesSheetHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export default function DisplayNameStylesSheetHeader(children) {
   const tmp = closure_5();
   const obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.row, children: null };
-  const obj3 = { style: tmp.title, children: React3(Text_Text.Heading, { variant: "redesign/heading-18/semibold", color: "text-default", style: tmp.titleText, children: children.title }) };
+  const obj3 = { style: tmp.title, children: React3(Text_Text.Heading, { variant: "heading-md/semibold", color: "text-default", style: tmp.titleText, children: children.title }) };
   items = [React3(View, obj3), , ];
   let tmp2Result = null != leading;
   if (tmp2Result) {

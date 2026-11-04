@@ -1,22 +1,24 @@
-// === Module 11087: conjurePublishConnection ===
+// === Module 11136: conjurePublishConnection ===
 
-// Module 11087 (conjurePublishConnection)
+// Module 11136 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 11059 */;
-import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 11060 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11079 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11092 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11053 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 11108 */;
+import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 11109 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11128 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 11141 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10997 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11045 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {
-  value = map1.get(projectId);
+  value = map2.get(projectId);
   if (null != value) {
-    map1.delete(projectId);
+    map2.delete(projectId);
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timeout);
     const _Error = Error;
@@ -25,9 +27,9 @@ function rejectPendingPatchNotesDraft(projectId, arg1) {
   }
 }
 function rejectPendingPublishOptions(arg0, arg1) {
-  value = map2.get(arg0);
+  value = map3.get(arg0);
   if (null != value) {
-    map2.delete(arg0);
+    map3.delete(arg0);
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timeout);
     const _Error = Error;
@@ -37,9 +39,10 @@ function rejectPendingPublishOptions(arg0, arg1) {
 }
 const map = new Map();
 const map1 = new Map();
-let set = new Set(fn(11093).CONJURE_PUBLISH_PROGRESS_STAGES);
-const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map2 = new Map();
+let set = new Set(fn(11052).CONJURE_PUBLISH_PROGRESS_STAGES);
+const set1 = new Set(["activity", "automod", "widget", "bot"]);
+const map3 = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishConnection.tsx");
 
@@ -48,14 +51,394 @@ export const publishFrameHandlers = {
     DispatcherDefault.dispatch({ type: "CONJURE_CHAT_PUBLISH_NOTICE", projectId: projectId.projectId, id: id.id, content: id.content, timestamp: id.ts, publishNotice: id.publish_notice });
   }
 };
+export function parseSafetyRecheck(status) {
+  status = status.status;
+  if ("pending" !== status) {
+    if ("unavailable" !== status) {
+      if ("not_held" === status) {
+        return { status: "cleared", reason: "" };
+      } else {
+        if ("cleared" !== status) {
+          if ("held" !== status) {
+            if ("limited" === status) {
+              if ("cooldown" === status.limit) {
+                const obj = { status: "limited", limit: status.limit };
+                let tmp2 = obj;
+              } else {
+                tmp2 = null;
+              }
+              return tmp2;
+            } else {
+              return null;
+            }
+          }
+        }
+        let tmp3 = null;
+        if (typeof status.reason === "string") {
+          ({ status: obj3.status, reason: obj3.reason } = status);
+          tmp3 = { status: null, reason: null };
+          const obj2 = { status: null, reason: null };
+        }
+        return tmp3;
+      }
+    }
+  }
+  return { status: status.status };
+}
+export function failPendingSafetyRecheck(projectId) {
+  const safetyRecheck = ConjurePublishStatusStore.getSafetyRecheck(projectId);
+  let status;
+  if (safetyRecheck != null) {
+    status = safetyRecheck.status;
+  }
+  if ("pending" === status) {
+    const obj2 = { status: "unavailable" };
+    closure_0 = projectId;
+    const _clearTimeout = clearTimeout;
+    clearTimeout(map.get(projectId));
+    map.delete(projectId);
+    if ("pending" === obj2.status) {
+      const _setTimeout = setTimeout;
+      const result = map.set(projectId, setTimeout(() => {
+        let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+        let status;
+        if (safetyRecheck != null) {
+          status = safetyRecheck.status;
+        }
+        if ("pending" === status) {
+          let obj2 = { status: "unavailable" };
+          closure_0 = closure_1_0;
+          let _clearTimeout = clearTimeout;
+          clearTimeout(closure_2_7.get(closure_1_0));
+          closure_2_7.delete(closure_1_0);
+          if ("pending" === obj2.status) {
+            let _setTimeout = setTimeout;
+            let result = closure_2_7.set(closure_1_0, setTimeout(() => {
+              let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+              let status;
+              if (safetyRecheck != null) {
+                status = safetyRecheck.status;
+              }
+              if ("pending" === status) {
+                let obj2 = { status: "unavailable" };
+                closure_0 = closure_1_0;
+                let _clearTimeout = clearTimeout;
+                clearTimeout(closure_2_7.get(closure_1_0));
+                closure_2_7.delete(closure_1_0);
+                if ("pending" === obj2.status) {
+                  let _setTimeout = setTimeout;
+                  let result = closure_2_7.set(closure_1_0, setTimeout(() => {
+                    let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+                    let status;
+                    if (safetyRecheck != null) {
+                      status = safetyRecheck.status;
+                    }
+                    if ("pending" === status) {
+                      let obj2 = { status: "unavailable" };
+                      closure_0 = closure_1_0;
+                      let _clearTimeout = clearTimeout;
+                      clearTimeout(closure_2_7.get(closure_1_0));
+                      closure_2_7.delete(closure_1_0);
+                      if ("pending" === obj2.status) {
+                        let _setTimeout = setTimeout;
+                        let result = closure_2_7.set(closure_1_0, setTimeout(() => {
+                          let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+                          let status;
+                          if (safetyRecheck != null) {
+                            status = safetyRecheck.status;
+                          }
+                          if ("pending" === status) {
+                            let obj2 = { status: "unavailable" };
+                            closure_0 = closure_1_0;
+                            let _clearTimeout = clearTimeout;
+                            clearTimeout(closure_2_7.get(closure_1_0));
+                            closure_2_7.delete(closure_1_0);
+                            if ("pending" === obj2.status) {
+                              let _setTimeout = setTimeout;
+                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F99379 */ function() { ... }, 180000));
+                            }
+                            let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+                            closure_2_1(closure_2_2[4]).dispatch(obj3);
+                            let obj = closure_2_1(closure_2_2[4]);
+                          }
+                        }, 180000));
+                      }
+                      let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+                      closure_2_1(closure_2_2[4]).dispatch(obj3);
+                      let obj = closure_2_1(closure_2_2[4]);
+                    }
+                  }, 180000));
+                }
+                let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+                closure_2_1(closure_2_2[4]).dispatch(obj3);
+                let obj = closure_2_1(closure_2_2[4]);
+              }
+            }, 180000));
+          }
+          let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+          closure_2_1(closure_2_2[4]).dispatch(obj3);
+          let obj = closure_2_1(closure_2_2[4]);
+        }
+      }, 180000));
+    }
+    const obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId, recheck: obj2 };
+    DispatcherDefault.dispatch(obj3);
+  }
+}
+export function forgetClearedSafetyRecheck(projectId) {
+  const safetyRecheck = ConjurePublishStatusStore.getSafetyRecheck(projectId);
+  let status;
+  if (safetyRecheck != null) {
+    status = safetyRecheck.status;
+  }
+  if ("cleared" === status) {
+    closure_0 = projectId;
+    const _clearTimeout = clearTimeout;
+    clearTimeout(map.get(projectId));
+    map.delete(projectId);
+    const obj2 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId, recheck: null };
+    DispatcherDefault.dispatch(obj2);
+  }
+}
+export function requestConjureSafetyRecheck(projectId) {
+  const safetyRecheck = ConjurePublishStatusStore.getSafetyRecheck(projectId);
+  let status;
+  if (safetyRecheck != null) {
+    status = safetyRecheck.status;
+  }
+  if ("pending" !== status) {
+    const tmp3 = require("conjureProjectSockets").sendOnConjureSocket(projectId, "safety recheck", (sendSafetyRecheck) => sendSafetyRecheck.sendSafetyRecheck()) ? { status: "pending" } : { status: "unavailable" };
+    _require = projectId;
+    const _clearTimeout = clearTimeout;
+    clearTimeout(map.get(projectId));
+    map.delete(projectId);
+    if ("pending" === tmp3.status) {
+      const _setTimeout = setTimeout;
+      const result = map.set(projectId, setTimeout(() => {
+        let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+        let status;
+        if (safetyRecheck != null) {
+          status = safetyRecheck.status;
+        }
+        if ("pending" === status) {
+          let obj2 = { status: "unavailable" };
+          closure_0 = closure_1_0;
+          let _clearTimeout = clearTimeout;
+          clearTimeout(closure_2_7.get(closure_1_0));
+          closure_2_7.delete(closure_1_0);
+          if ("pending" === obj2.status) {
+            let _setTimeout = setTimeout;
+            let result = closure_2_7.set(closure_1_0, setTimeout(() => {
+              let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+              let status;
+              if (safetyRecheck != null) {
+                status = safetyRecheck.status;
+              }
+              if ("pending" === status) {
+                let obj2 = { status: "unavailable" };
+                closure_0 = closure_1_0;
+                let _clearTimeout = clearTimeout;
+                clearTimeout(closure_2_7.get(closure_1_0));
+                closure_2_7.delete(closure_1_0);
+                if ("pending" === obj2.status) {
+                  let _setTimeout = setTimeout;
+                  let result = closure_2_7.set(closure_1_0, setTimeout(() => {
+                    let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+                    let status;
+                    if (safetyRecheck != null) {
+                      status = safetyRecheck.status;
+                    }
+                    if ("pending" === status) {
+                      let obj2 = { status: "unavailable" };
+                      closure_0 = closure_1_0;
+                      let _clearTimeout = clearTimeout;
+                      clearTimeout(closure_2_7.get(closure_1_0));
+                      closure_2_7.delete(closure_1_0);
+                      if ("pending" === obj2.status) {
+                        let _setTimeout = setTimeout;
+                        let result = closure_2_7.set(closure_1_0, setTimeout(() => {
+                          let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+                          let status;
+                          if (safetyRecheck != null) {
+                            status = safetyRecheck.status;
+                          }
+                          if ("pending" === status) {
+                            let obj2 = { status: "unavailable" };
+                            closure_0 = closure_1_0;
+                            let _clearTimeout = clearTimeout;
+                            clearTimeout(closure_2_7.get(closure_1_0));
+                            closure_2_7.delete(closure_1_0);
+                            if ("pending" === obj2.status) {
+                              let _setTimeout = setTimeout;
+                              let result = closure_2_7.set(closure_1_0, setTimeout(/* F99379 */ function() { ... }, 180000));
+                            }
+                            let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+                            closure_2_1(closure_2_2[4]).dispatch(obj3);
+                            let obj = closure_2_1(closure_2_2[4]);
+                          }
+                        }, 180000));
+                      }
+                      let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+                      closure_2_1(closure_2_2[4]).dispatch(obj3);
+                      let obj = closure_2_1(closure_2_2[4]);
+                    }
+                  }, 180000));
+                }
+                let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+                closure_2_1(closure_2_2[4]).dispatch(obj3);
+                let obj = closure_2_1(closure_2_2[4]);
+              }
+            }, 180000));
+          }
+          let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+          closure_2_1(closure_2_2[4]).dispatch(obj3);
+          let obj = closure_2_1(closure_2_2[4]);
+        }
+      }, 180000));
+    }
+    const obj4 = require("conjureProjectSockets");
+    const obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId, recheck: tmp3 };
+    DispatcherDefault.dispatch(obj3);
+  }
+}
 export const publishStepHandlers = {
+  safety_recheck(status, projectId) {
+    projectId = projectId.projectId;
+    status = status.status;
+    if ("pending" !== status) {
+      if ("unavailable" !== status) {
+        if ("not_held" === status) {
+          let obj2 = { status: "cleared", reason: "" };
+        } else {
+          if ("cleared" !== status) {
+            if ("held" !== status) {
+              obj2 = null;
+              if ("limited" === status) {
+                if ("cooldown" === status.limit) {
+                  const obj = { status: "limited", limit: status.limit };
+                  let tmp2 = obj;
+                } else {
+                  tmp2 = null;
+                }
+                obj2 = tmp2;
+              }
+            }
+          }
+          let tmp3 = null;
+          if (typeof status.reason === "string") {
+            ({ status: obj5.status, reason: obj5.reason } = status);
+            tmp3 = { status: null, reason: null };
+            const obj4 = { status: null, reason: null };
+          }
+          obj2 = tmp3;
+        }
+      }
+      if (null != obj2) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(map.get(projectId));
+        map.delete(projectId);
+        let status1;
+        if (obj2 != null) {
+          status1 = obj2.status;
+        }
+        if ("pending" === status1) {
+          const _setTimeout = setTimeout;
+          const result = map.set(projectId, setTimeout(() => {
+            let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+            let status;
+            if (safetyRecheck != null) {
+              status = safetyRecheck.status;
+            }
+            if ("pending" === status) {
+              let obj2 = { status: "unavailable" };
+              closure_0 = closure_1_0;
+              let _clearTimeout = clearTimeout;
+              clearTimeout(closure_2_7.get(closure_1_0));
+              closure_2_7.delete(closure_1_0);
+              if ("pending" === obj2.status) {
+                let _setTimeout = setTimeout;
+                let result = closure_2_7.set(closure_1_0, setTimeout(() => {
+                  let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+                  let status;
+                  if (safetyRecheck != null) {
+                    status = safetyRecheck.status;
+                  }
+                  if ("pending" === status) {
+                    let obj2 = { status: "unavailable" };
+                    closure_0 = closure_1_0;
+                    let _clearTimeout = clearTimeout;
+                    clearTimeout(closure_2_7.get(closure_1_0));
+                    closure_2_7.delete(closure_1_0);
+                    if ("pending" === obj2.status) {
+                      let _setTimeout = setTimeout;
+                      let result = closure_2_7.set(closure_1_0, setTimeout(() => {
+                        let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+                        let status;
+                        if (safetyRecheck != null) {
+                          status = safetyRecheck.status;
+                        }
+                        if ("pending" === status) {
+                          let obj2 = { status: "unavailable" };
+                          closure_0 = closure_1_0;
+                          let _clearTimeout = clearTimeout;
+                          clearTimeout(closure_2_7.get(closure_1_0));
+                          closure_2_7.delete(closure_1_0);
+                          if ("pending" === obj2.status) {
+                            let _setTimeout = setTimeout;
+                            let result = closure_2_7.set(closure_1_0, setTimeout(() => {
+                              let safetyRecheck = closure_2_6.getSafetyRecheck(closure_1_0);
+                              let status;
+                              if (safetyRecheck != null) {
+                                status = safetyRecheck.status;
+                              }
+                              if ("pending" === status) {
+                                let obj2 = { status: "unavailable" };
+                                closure_0 = closure_1_0;
+                                let _clearTimeout = clearTimeout;
+                                clearTimeout(closure_2_7.get(closure_1_0));
+                                closure_2_7.delete(closure_1_0);
+                                if ("pending" === obj2.status) {
+                                  let _setTimeout = setTimeout;
+                                  let result = closure_2_7.set(closure_1_0, setTimeout(/* F99379 */ function() { ... }, 180000));
+                                }
+                                let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+                                closure_2_1(closure_2_2[4]).dispatch(obj3);
+                                let obj = closure_2_1(closure_2_2[4]);
+                              }
+                            }, 180000));
+                          }
+                          let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+                          closure_2_1(closure_2_2[4]).dispatch(obj3);
+                          let obj = closure_2_1(closure_2_2[4]);
+                        }
+                      }, 180000));
+                    }
+                    let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+                    closure_2_1(closure_2_2[4]).dispatch(obj3);
+                    let obj = closure_2_1(closure_2_2[4]);
+                  }
+                }, 180000));
+              }
+              let obj3 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId: closure_1_0, recheck: obj2 };
+              closure_2_1(closure_2_2[4]).dispatch(obj3);
+              let obj = closure_2_1(closure_2_2[4]);
+            }
+          }, 180000));
+        }
+        const obj10 = { type: "CONJURE_PROJECT_SAFETY_RECHECK", projectId, recheck: obj2 };
+        DispatcherDefault.dispatch(obj10);
+      }
+    }
+    obj2 = { status: status.status };
+    const obj11 = { status: status.status };
+  },
   publish_options(nonce, projectId) {
     projectId = projectId.projectId;
     let options;
-    value = map2.get(projectId);
+    value = map3.get(projectId);
     if (null != value) {
       if (value.nonce === nonce.nonce) {
-        map2.delete(projectId);
+        map3.delete(projectId);
         const _clearTimeout = clearTimeout;
         clearTimeout(value.timeout);
         options = nonce.options;
@@ -150,13 +533,13 @@ export const publishStepHandlers = {
                   v1(tmp21[4]).dispatch(obj5);
                   v1 = 1;
                   c2 = 1;
-                  const obj6 = { value: tmp2(tmp21[8])(tmp21[7], tmp21.paths), done: false };
+                  const obj6 = { value: tmp2(tmp21[9])(tmp21[8], tmp21.paths), done: false };
                   return obj6;
                 }
               } else {
                 c2 = 3;
               }
-              obj7 = tmp2(c2[6]);
+              obj7 = tmp2(c2[7]);
             }
           } else if (arg0 === 1) {
             c2 = 3;
@@ -220,7 +603,7 @@ export const publishStepHandlers = {
   },
   publish_status(publish_state, projectId) {
     DispatcherDefault;
-    let obj = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, publishState: null, surface: null, previewAppChannels: null, previewDevicePermissions: null, publishedRevision: null, publishedAt: null, publishing: null, patchNotesSent: null, newUiUnpublished: null, voiceChannelPin: null };
+    let obj = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, publishState: null, surface: null, previewAppChannels: null, previewDevicePermissions: null, publishedRevision: null, publishedAt: null, publishing: null, patchNotesSent: null, newUiUnpublished: null, safetyHold: null, voiceChannelPin: null };
     if (typeof publish_state.publish_state === "string") {
       if ("" !== publish_state.publish_state) {
         let str = publish_state.publish_state;
@@ -287,6 +670,7 @@ export const publishStepHandlers = {
       }
       obj.patchNotesSent = flatMapResult;
       obj.newUiUnpublished = true === publish_state.new_ui_unpublished;
+      obj.safetyHold = true === publish_state.safety_hold;
       obj.voiceChannelPin = conjureVoiceChannelPin.parseVoiceChannelPinOutcome(publish_state.voice_channel_pin);
       tmp3(obj);
     }
@@ -306,8 +690,8 @@ export const publishStepHandlers = {
   publish_result(ok, projectId) {
     projectId = projectId.projectId;
     DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
-    value = map.get(projectId);
-    map.delete(projectId);
+    value = map1.get(projectId);
+    map1.delete(projectId);
     if (null != value) {
       const _clearTimeout = clearTimeout;
       clearTimeout(value.timeout);
@@ -353,9 +737,9 @@ export const publishStepHandlers = {
   },
   patch_notes_draft(nonce, projectId) {
     projectId = projectId.projectId;
-    value = map1.get(projectId);
+    value = map2.get(projectId);
     if (tmp) {
-      map1.delete(projectId);
+      map2.delete(projectId);
       const _clearTimeout = clearTimeout;
       clearTimeout(value.timeout);
       value.resolve(nonce);
@@ -379,7 +763,7 @@ export function publishProject(projectId, arg1, arg2) {
   const promise = new Promise((resolve, reject) => {
     const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
     if (null != conjureSocket) {
-      if (map.has(projectId)) {
+      if (map1.has(projectId)) {
         let _Error2 = Error;
         let error = new Error("Publish already in flight");
         reject(error);
@@ -390,18 +774,18 @@ export function publishProject(projectId, arg1, arg2) {
           reject,
           timeout: setTimeout(() => {
                 closure_1(flag[4]).dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
-                value = map2.get(projectId);
+                value = map3.get(projectId);
                 if (null != value) {
-                  map2.delete(projectId);
+                  map3.delete(projectId);
                   const _clearTimeout = clearTimeout;
                   clearTimeout(value.timeout);
                   const _Error = Error;
                   const error = new Error("Publish timed out");
                   value.reject(error);
                 }
-                value2 = map.get(projectId);
+                value2 = map1.get(projectId);
                 if (null != value2) {
-                  map.delete(projectId);
+                  map1.delete(projectId);
                   const _clearTimeout2 = clearTimeout;
                   clearTimeout(value2.timeout);
                   const _Error2 = Error;
@@ -412,7 +796,7 @@ export function publishProject(projectId, arg1, arg2) {
                 const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
               }, 900000)
         };
-        const result = map.set(projectId, obj4);
+        const result = map1.set(projectId, obj4);
         c3 = true;
         const obj6 = { type: "CONJURE_PROJECT_PUBLISH_START", projectId };
         DispatcherDefault.dispatch(obj6);
@@ -436,7 +820,7 @@ export function publishProject(projectId, arg1, arg2) {
   return new Promise((resolve, reject) => {
     const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
     if (null != conjureSocket) {
-      if (map.has(projectId)) {
+      if (map1.has(projectId)) {
         let _Error2 = Error;
         let error = new Error("Publish already in flight");
         reject(error);
@@ -447,18 +831,18 @@ export function publishProject(projectId, arg1, arg2) {
           reject,
           timeout: setTimeout(() => {
                 closure_1(flag[4]).dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
-                value = map2.get(projectId);
+                value = map3.get(projectId);
                 if (null != value) {
-                  map2.delete(projectId);
+                  map3.delete(projectId);
                   const _clearTimeout = clearTimeout;
                   clearTimeout(value.timeout);
                   const _Error = Error;
                   const error = new Error("Publish timed out");
                   value.reject(error);
                 }
-                value2 = map.get(projectId);
+                value2 = map1.get(projectId);
                 if (null != value2) {
-                  map.delete(projectId);
+                  map1.delete(projectId);
                   const _clearTimeout2 = clearTimeout;
                   clearTimeout(value2.timeout);
                   const _Error2 = Error;
@@ -469,7 +853,7 @@ export function publishProject(projectId, arg1, arg2) {
                 const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
               }, 900000)
         };
-        const result = map.set(projectId, obj4);
+        const result = map1.set(projectId, obj4);
         c3 = true;
         const obj6 = { type: "CONJURE_PROJECT_PUBLISH_START", projectId };
         DispatcherDefault.dispatch(obj6);
@@ -520,9 +904,9 @@ export function draftPatchNotes(arg0) {
         resolve,
         reject,
         timeout: setTimeout(() => {
-            value = map1.get(closure_1_0);
+            value = map2.get(closure_1_0);
             if (null != value) {
-              map1.delete(closure_1_0);
+              map2.delete(closure_1_0);
               const _clearTimeout = clearTimeout;
               clearTimeout(value.timeout);
               const _Error = Error;
@@ -532,7 +916,7 @@ export function draftPatchNotes(arg0) {
           }, 45000),
         nonce: combined
       };
-      const result = map1.set(closure_0, obj4);
+      const result = map2.set(closure_0, obj4);
       try {
         conjureSocket.sendDraftPatchNotes(combined);
       } catch (error) {
@@ -569,18 +953,18 @@ export function recordPatchNotesSent(projectId, sent, source_sha) {
 }
 export function rejectPendingPublish(projectId, arg1) {
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
-  value = map2.get(projectId);
+  value = map3.get(projectId);
   if (null != value) {
-    map2.delete(projectId);
+    map3.delete(projectId);
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timeout);
     const _Error = Error;
     const error = new Error(arg1);
     value.reject(error);
   }
-  value2 = map.get(projectId);
+  value2 = map1.get(projectId);
   if (null != value2) {
-    map.delete(projectId);
+    map1.delete(projectId);
     const _clearTimeout2 = clearTimeout;
     clearTimeout(value2.timeout);
     const _Error2 = Error;
@@ -631,9 +1015,9 @@ export function requestPublishOptions(id) {
         resolve,
         reject,
         timeout: setTimeout(() => {
-            value = map2.get(id);
+            value = map3.get(id);
             if (null != value) {
-              map2.delete(id);
+              map3.delete(id);
               const _clearTimeout = clearTimeout;
               clearTimeout(value.timeout);
               const _Error = Error;
@@ -643,7 +1027,7 @@ export function requestPublishOptions(id) {
           }, 15000),
         nonce: combined
       };
-      const result = map2.set(closure_0, obj2);
+      const result = map3.set(closure_0, obj2);
       try {
         conjureSocket.sendPublishOptions(combined);
       } catch (err) {

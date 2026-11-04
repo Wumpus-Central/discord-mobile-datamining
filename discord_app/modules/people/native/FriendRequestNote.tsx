@@ -1,8 +1,8 @@
-// === Module 15151: FriendRequestNote ===
+// === Module 15231: FriendRequestNote ===
 
-// Module 15151 (FriendRequestNote)
+// Module 15231 (FriendRequestNote)
 import nativeDefault from "native" /* 575 */;
-import PeopleListTracking from "PeopleListTracking" /* 15153 */;
+import PeopleListTracking from "PeopleListTracking" /* 15233 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
@@ -64,7 +64,7 @@ export default function FriendRequestNote(styles) {
           hidden = tmp.hidden;
         }
         const obj4 = { style: hidden, children: null };
-        const obj5 = { accessible: tmp7, accessibilityElementsHidden: !tmp7, accessibilityLabel: str, variant: "redesign/message-preview/medium", children: note };
+        const obj5 = { accessible: tmp7, accessibilityElementsHidden: !tmp7, accessibilityLabel: str, variant: "heading-sm/medium", children: note };
         obj4.children = closure_8(require("Text/Text").Text, obj5);
         const items3 = [closure_8(closure_5, obj4), ];
         let tmp15Result = null;

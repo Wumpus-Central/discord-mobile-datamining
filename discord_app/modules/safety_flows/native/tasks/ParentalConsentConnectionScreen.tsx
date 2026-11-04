@@ -1,21 +1,21 @@
-// === Module 20247: ParentalConsentConnectionScreen ===
+// === Module 20363: ParentalConsentConnectionScreen ===
 
-// Module 20247 (ParentalConsentConnectionScreen)
+// Module 20363 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import _modDef2963 from "module_2963" /* 2963 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16925 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 17017 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7840).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7856).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
@@ -194,7 +194,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2963.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2963["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(16926, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(17018, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);
@@ -238,7 +238,7 @@ export default function ParentalConsentConnectionScreen() {
     let tmp30Result2 = closure_10(tmp5(tmp3[32]), obj12);
   } else {
     const obj13 = { style: tmp.cardSection, children: null };
-    const obj14 = { style: tmp.cardTitle, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj14 = { style: tmp.cardTitle, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl4 = tmp2(tmp3[22]).intl;
     obj14.children = intl4.string(tmp5(tmp3[34]).pojgfk);
     const items9 = [closure_10(tmp2(tmp3[33]).Text, obj14), ];

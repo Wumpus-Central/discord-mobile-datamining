@@ -1,6 +1,6 @@
-// === Module 6166: ChannelUtils ===
+// === Module 6181: ChannelUtils ===
 
-// Module 6166 (ChannelUtils)
+// Module 6181 (ChannelUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import util from "util" /* 1113 */;
@@ -8,15 +8,15 @@ import PremiumConstants from "PremiumConstants" /* 1387 */;
 import Server from "Server" /* 2121 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import ChannelListUtils from "ChannelListUtils" /* 6167 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6168 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6173 */;
+import ChannelListUtils from "ChannelListUtils" /* 6182 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6183 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6188 */;
 import ChannelRecord from "ChannelRecord" /* 4994 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5901 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -53,7 +53,7 @@ function allowChannelAccess(id, channelType, ROLE) {
   }
   return { id, type: ROLE, deny: PermissionUtilsAll.NONE, allow: addResult2 };
 }
-({ isGuildSelectableChannelType: closure_4, TEXT_CHANNEL_TYPES: hasOwnProperty, THREAD_CHANNEL_TYPES: metroRequire } = ChannelRecord);
+({ isGuildSelectableChannelType: closure_4, TEXT_CHANNEL_TYPES: hasOwnProperty, THREAD_CHANNEL_TYPES: closure_6 } = ChannelRecord);
 const ChannelTypes = Constants.ChannelTypes;
 ({ Permissions: map1, GuildFeatures: closure_14, BoostedGuildTiers: closure_15, BITRATE_MAX: closure_16, BITRATE_DEFAULT: closure_17, Routes: closure_18, AnalyticsPages: closure_19 } = Constants);
 const BoostedGuildFeatures = PremiumConstants.BoostedGuildFeatures;

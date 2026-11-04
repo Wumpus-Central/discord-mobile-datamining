@@ -1,13 +1,13 @@
-// === Module 18995: GroupDMRecipientLimitTitle ===
+// === Module 19098: GroupDMRecipientLimitTitle ===
 
-// Module 18995 (GroupDMRecipientLimitTitle)
+// Module 19098 (GroupDMRecipientLimitTitle)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11764 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12659 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11820 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12740 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const MAX_GROUP_DM_PARTICIPANTS = fn(1072).MAX_GROUP_DM_PARTICIPANTS;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { title: { textAlign: "center", fontSize: 18 }, subtitleRow: { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, subtitle: { textAlign: "center" }, nitroWheelIcon: null };
 const PlatformUtils = fn(1377);
@@ -65,11 +65,11 @@ export default function GroupDMRecipientLimitTitle(arg0) {
     tmp15Result = timestampProducer(NitroWheelIcon.NitroWheelIcon, obj7);
   }
   const obj8 = { children: null };
-  const items1 = [tmp15Result, timestampProducer(Text_Text.Text, { lineClamp: 1, variant: "text-xs/medium", color: str2, style: tmp.subtitle, maxFontSizeMultiplier: 2, children: formatToPlainStringResult })];
+  const items1 = [tmp15Result, timestampProducer(Text_Text.Text, { lineClamp: 1, variant: "body-xs/medium", color: str2, style: tmp.subtitle, maxFontSizeMultiplier: 2, children: formatToPlainStringResult })];
   obj6.children = items1;
-  items[1] = React5(React4, obj6);
+  items[1] = metroImportDefault(React4, obj6);
   obj8.children = items;
-  const tmp13Result = React5(React6, obj8);
+  const tmp13Result = metroImportDefault(React5, obj8);
   if (tmp9) {
     const obj10 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
     const _HermesInternal = HermesInternal;

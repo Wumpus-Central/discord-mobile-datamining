@@ -1,6 +1,6 @@
-// === Module 11969: nativeShellOrigin ===
+// === Module 12028: nativeShellOrigin ===
 
-// Module 11969 (nativeShellOrigin)
+// Module 12028 (nativeShellOrigin)
 import size from "module_2" /* 2 */;
 
 const shell = "shell";

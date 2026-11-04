@@ -1,6 +1,6 @@
-// === Module 8558: useUserCommunicationDisabled ===
+// === Module 8575: useUserCommunicationDisabled ===
 
-// Module 8558 (useUserCommunicationDisabled)
+// Module 8575 (useUserCommunicationDisabled)
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5060 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import UserStore from "UserStore" /* 1385 */;

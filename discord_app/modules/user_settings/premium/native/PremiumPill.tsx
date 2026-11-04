@@ -1,6 +1,6 @@
-// === Module 7747: PremiumPill ===
+// === Module 7763: PremiumPill ===
 
-// Module 7747 (PremiumPill)
+// Module 7763 (PremiumPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
@@ -112,7 +112,7 @@ export (discountOffer) => {
     let obj = { style: null, children: null };
     const items2 = [tmp6.pillContainer, style];
     obj.style = items2;
-    let obj2 = { variant: "text-xs/semibold", color: str2, style: tmp6.discountPillText, children: str3.toUpperCase() };
+    let obj2 = { variant: "body-xs/semibold", color: str2, style: tmp6.discountPillText, children: str3.toUpperCase() };
     obj.children = flag3(tmp(tmp2[9]).Text, obj2);
     tmp11 = flag3(trialOffer, obj);
   }

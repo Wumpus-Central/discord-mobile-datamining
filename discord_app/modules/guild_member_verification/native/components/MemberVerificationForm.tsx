@@ -1,17 +1,17 @@
-// === Module 7093: MemberVerificationForm ===
+// === Module 7108: MemberVerificationForm ===
 
-// Module 7093 (MemberVerificationForm)
+// Module 7108 (MemberVerificationForm)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7068 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7083 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(7068).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(7083).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1072).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -63,7 +63,7 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { text: null, variant: "critical" };
                   const intl = closure_1_0(1113).intl;
                   obj2.text = intl.string(closure_1_0(1113).t.StC497);
-                  closure_1_1(5832).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
+                  closure_1_1(5846).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
                 return { value: "HermesInternal", done: null };

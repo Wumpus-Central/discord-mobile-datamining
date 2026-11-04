@@ -1,10 +1,10 @@
-// === Module 17089: BountiesModalProgress ===
+// === Module 17181: BountiesModalProgress ===
 
-// Module 17089 (BountiesModalProgress)
+// Module 17181 (BountiesModalProgress)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import timingPresets from "timingPresets" /* 5380 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import timingPresets from "timingPresets" /* 5381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,9 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
@@ -89,16 +89,16 @@ export default function BountiesModalProgress(progress) {
   const obj2 = { style: null, children: null };
   const items4 = [tmp.progressContainer, style, animatedStyle];
   obj2.style = items4;
-  const items5 = [React5(timestampProducer, { style: tmp.progressTrack }), , ];
+  const items5 = [metroImportDefault(timestampProducer, { style: tmp.progressTrack }), , ];
   const obj4 = { style: null };
   const items6 = [tmp.progressBarGlowLayer, animatedStyle1];
   obj4.style = items6;
-  items5[1] = React5(_modDef1652.View, obj4);
+  items5[1] = metroImportDefault(_modDef1652.View, obj4);
   const obj5 = { style: null };
   const items7 = [tmp.progressBar, animatedStyle1];
   obj5.style = items7;
-  items5[2] = React5(_modDef1652.View, obj5);
+  items5[2] = metroImportDefault(_modDef1652.View, obj5);
   obj2.children = items5;
-  return React6(_modDef1652.View, obj2);
+  return React5(_modDef1652.View, obj2);
 };
 export const PROGRESS_BAR_HEIGHT = 4;

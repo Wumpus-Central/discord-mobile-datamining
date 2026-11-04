@@ -1,12 +1,12 @@
-// === Module 7288: UserSettingsAccountUnverifiedHeader ===
+// === Module 7304: UserSettingsAccountUnverifiedHeader ===
 
-// Module 7288 (UserSettingsAccountUnverifiedHeader)
+// Module 7304 (UserSettingsAccountUnverifiedHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7121 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7136 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -48,9 +48,9 @@ export default function UserSettingsAccountUnverifiedHeader() {
   let tmp5 = null;
   if (null != tmp4) {
     const obj2 = { accessibilityRole: "button", style: tmp.accountWarning, onPress: handleOpenEmailVerification, children: null };
-    const obj3 = { style: tmp.accountWarningText, variant: "text-xs/semibold", color: "text-overlay-light", children: tmp4.title };
+    const obj3 = { style: tmp.accountWarningText, variant: "body-xs/semibold", color: "text-overlay-light", children: tmp4.title };
     const items1 = [React4(Text_Text.Text, obj3), ];
-    const obj4 = { style: tmp.accountWarningButton, variant: "text-xs/medium", color: "text-overlay-light", children: tmp4.button };
+    const obj4 = { style: tmp.accountWarningButton, variant: "body-xs/medium", color: "text-overlay-light", children: tmp4.button };
     items1[1] = React4(Text_Text.Text, obj4);
     obj2.children = items1;
     tmp5 = hasOwnProperty(Pressables.PressableOpacity, obj2);

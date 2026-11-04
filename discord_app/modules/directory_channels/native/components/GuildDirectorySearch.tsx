@@ -1,18 +1,18 @@
-// === Module 13981: GuildDirectorySearch ===
+// === Module 14067: GuildDirectorySearch ===
 
-// Module 13981 (GuildDirectorySearch)
+// Module 14067 (GuildDirectorySearch)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 13979 */;
-import _modDef13985 from "module_13985" /* 13985 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13987 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 13995 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 14065 */;
+import _modDef14071 from "module_14071" /* 14071 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 14073 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 14081 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 13982 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 14068 */;
 
 const require = globalThis.__r;
 
@@ -21,9 +21,9 @@ function DefaultState() {
   const tmp = closure_12();
   _require = tmp;
   const obj = { style: tmp.emptyWrapper, children: null };
-  const obj2 = { style: tmp.emptyStateImage, source: _modDef13985 };
+  const obj2 = { style: tmp.emptyStateImage, source: _modDef14071 };
   items = [closure_10(FastImageDefault, obj2), ];
-  const obj3 = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj3 = { style: tmp.emptyStateText, variant: "body-sm/medium", color: "text-default", children: null };
   const intl = require("util").intl;
   obj3.children = intl.format(require("util").t.aYLd8O, {
     protipHook(children) {
@@ -40,7 +40,7 @@ function EmptyState(channel) {
   items = [GuildStore];
   importDefault = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.getGuildId()));
   const obj = channel(504);
-  const canCreateOrAddGuildInDirectory = channel(13986).useCanCreateOrAddGuildInDirectory(channel);
+  const canCreateOrAddGuildInDirectory = channel(14072).useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1113).intl;
   if (canCreateOrAddGuildInDirectory) {
     const obj3 = {
@@ -54,14 +54,14 @@ function EmptyState(channel) {
   }
   const obj4 = { style: tmp.emptyWrapper, children: null };
   const obj5 = { style: tmp.emptyStateImage, source: null };
-  const obj2 = channel(13986);
-  obj5.source = _modDef13985;
+  const obj2 = channel(14072);
+  obj5.source = _modDef14071;
   const items1 = [closure_10(FastImageDefault, obj5), , ];
-  const obj6 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj6 = { style: tmp.emptyStateTitle, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1113).intl;
   obj6.children = intl2.string(channel(1113).t["6HXiuE"]);
-  items1[1] = closure_10(channel(5747).Text, obj6);
-  items1[2] = closure_10(channel(5747).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
+  items1[1] = closure_10(channel(5761).Text, obj6);
+  items1[2] = closure_10(channel(5761).Text, { style: tmp.emptyStateText, variant: "body-sm/medium", color: "text-default", children: formatResult });
   obj4.children = items1;
   return closure_11(View, obj4);
 }

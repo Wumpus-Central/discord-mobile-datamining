@@ -1,10 +1,10 @@
-// === Module 7117: UserVerification ===
+// === Module 7132: UserVerification ===
 
-// Module 7117 (UserVerification)
+// Module 7132 (UserVerification)
 import util from "util" /* 1113 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 7118 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 7133 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export default function UserVerification(arg0) {
     items = [tmp5, , ];
     const obj2 = { passesVerification: verification[MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL], platform: MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL };
     items[1] = React3(IdentityVerificationFieldDefault, obj2);
-    const obj3 = { style: tmp.emailPhoneNote, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
+    const obj3 = { style: tmp.emailPhoneNote, variant: "body-xs/medium", color: "text-default", children: null };
     if (platform === MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE) {
       const intl2 = util.intl;
       let stringResult = intl2.string(util.t["jMh+TY"]);

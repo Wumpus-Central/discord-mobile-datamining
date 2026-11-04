@@ -1,12 +1,12 @@
-// === Module 16821: PasskeyInitStep ===
+// === Module 16913: PasskeyInitStep ===
 
-// Module 16821 (PasskeyInitStep)
+// Module 16913 (PasskeyInitStep)
 import nativeDefault from "native" /* 575 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6868 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6883 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 16724 */;
+import WebAuthnStore from "WebAuthnStore" /* 16816 */;
 
 require = fn;
 function CredentialList(navigation) {
@@ -21,11 +21,11 @@ function CredentialList(navigation) {
   [c2, c3] = noop.useState(false);
   if (0 === credentials.length) {
     let obj2 = { style: tmp3.upsellContainer, children: null };
-    const items1 = [closure_9(tmp(16822).PasskeysSpotIllustration, { scale: 0.6 }), ];
-    let obj3 = { variant: "text-md/normal", style: tmp3.upsellText, children: null };
+    const items1 = [closure_9(tmp(16914).PasskeysSpotIllustration, { scale: 0.6 }), ];
+    let obj3 = { variant: "body-md/normal", style: tmp3.upsellText, children: null };
     let intl2 = tmp(1113).intl;
     obj3.children = intl2.string(tmp(1113).t.FSNwFW);
-    items1[1] = closure_9(tmp(5747).Text, obj3);
+    items1[1] = closure_9(tmp(5761).Text, obj3);
     obj2.children = items1;
     return closure_10(View, obj2);
   } else {
@@ -205,7 +205,7 @@ function CredentialList(navigation) {
       obj.subLabel = formatResult;
       return closure_1_9(navigation(_undefined[25]).TableRow, obj, label.id);
     });
-    return closure_9(tmp(7186).TableRowGroup, obj4);
+    return closure_9(tmp(7201).TableRowGroup, obj4);
   }
   const tmp4 = _slicedToArray(noop.useState(false), 2);
 }

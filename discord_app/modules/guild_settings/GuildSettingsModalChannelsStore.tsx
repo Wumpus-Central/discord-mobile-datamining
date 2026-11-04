@@ -1,9 +1,9 @@
-// === Module 18349: GuildSettingsModalChannelsStore ===
+// === Module 18443: GuildSettingsModalChannelsStore ===
 
-// Module 18349 (GuildSettingsModalChannelsStore)
+// Module 18443 (GuildSettingsModalChannelsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7401 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7417 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 5071 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
@@ -17,7 +17,7 @@ function sortCategoryList(channel, channel2) {
   const type2 = channel2.type;
   if (type !== type2) {
     if (!timestampProducer(type)) {
-      if (React5(type)) {
+      if (metroImportDefault(type)) {
         return num;
       }
       num = 1;
@@ -125,7 +125,7 @@ function buildSortedChannels() {
 }
 let closure_3 = ["lock_permissions", "id"];
 const ChannelRecord = fn(4994);
-({ castChannelRecord: hasOwnProperty, isGuildSelectableChannelType: metroRequire, isGuildVocalChannelType: closure_7 } = ChannelRecord);
+({ castChannelRecord: hasOwnProperty, isGuildSelectableChannelType: closure_6, isGuildVocalChannelType: metroImportDefault } = ChannelRecord);
 let GuildChannelStore = fn(5071);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_8, GUILD_VOCAL_CHANNELS_KEY: closure_9 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;

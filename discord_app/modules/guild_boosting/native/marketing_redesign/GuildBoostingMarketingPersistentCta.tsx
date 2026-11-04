@@ -1,14 +1,14 @@
-// === Module 7707: GuildBoostingMarketingPersistentCta ===
+// === Module 7723: GuildBoostingMarketingPersistentCta ===
 
-// Module 7707 (GuildBoostingMarketingPersistentCta)
+// Module 7723 (GuildBoostingMarketingPersistentCta)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import GuildBoostingSubscribeButtonDefault from "GuildBoostingSubscribeButton" /* 7708 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import GuildBoostingSubscribeButtonDefault from "GuildBoostingSubscribeButton" /* 7724 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { stiffness: 70, damping: 10 };
 const createStyles = fn(5141);
 let obj2 = { wrapper: { display: "flex", alignItems: "center", position: "absolute", width: "100%", zIndex: 1, bottom: -76 }, innerWraper: null, guildInfoContainer: null, guildIcon: null, guildIconText: null, guildName: null, buttonContainer: null, button: null, border: null };
@@ -93,13 +93,13 @@ export default function GuildBoostingMarketingPersistentCta(guild) {
   const obj7 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
   const tmp12 = LinearGradientDefault;
   obj7.size = GuildIcon.GuildIconSizes.LARGE;
-  const items5 = [timestampProducer(GuildIconDefault, obj7), timestampProducer(Text_Text.Text, { style: tmp.guildName, variant: "text-md/semibold", lineClamp: 1, children: guild.name })];
+  const items5 = [timestampProducer(GuildIconDefault, obj7), timestampProducer(Text_Text.Text, { style: tmp.guildName, variant: "body-md/semibold", lineClamp: 1, children: guild.name })];
   obj6.children = items5;
-  const items6 = [React5(View, obj6), ];
+  const items6 = [metroImportDefault(View, obj6), ];
   const obj9 = { style: tmp.buttonContainer, children: timestampProducer(GuildBoostingSubscribeButtonDefault, { guild, previousGuildSubscriptionSlot, useShortenedCTA: true, styles: tmp.button, analyticsSection: AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR, fractionalPremiumState, premiumGroupRole }) };
   items6[1] = timestampProducer(View, obj9);
   obj5.children = items6;
-  obj4.children = React5(View, obj5);
+  obj4.children = metroImportDefault(View, obj5);
   obj3.children = timestampProducer(tmp12, obj4);
   return timestampProducer(_modDef1652.View, obj3);
 };

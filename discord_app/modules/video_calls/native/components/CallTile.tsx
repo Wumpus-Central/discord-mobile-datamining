@@ -1,23 +1,23 @@
-// === Module 12174: CallTile ===
+// === Module 12233: CallTile ===
 
-// Module 12174 (CallTile)
+// Module 12233 (CallTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import RevealProvider from "RevealProvider" /* 11838 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 12175 */;
-import _modDef12180 from "module_12180" /* 12180 */;
-import _modDef12181 from "module_12181" /* 12181 */;
-import _modDef12182 from "module_12182" /* 12182 */;
-import _modDef12183 from "module_12183" /* 12183 */;
-import _modDef12184 from "module_12184" /* 12184 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 12185 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import RevealProvider from "RevealProvider" /* 11897 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 12234 */;
+import _modDef12239 from "module_12239" /* 12239 */;
+import _modDef12240 from "module_12240" /* 12240 */;
+import _modDef12241 from "module_12241" /* 12241 */;
+import _modDef12242 from "module_12242" /* 12242 */;
+import _modDef12243 from "module_12243" /* 12243 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 12244 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -32,7 +32,7 @@ class StreamPreviewTile {
     obj1 = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "disabled", borderRadius: false },
+      style: { aspectRatio: "sa", borderRadius: false },
       disableTransition: true,
       onPress() {
             return closure_1_8();
@@ -45,17 +45,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef12180;
+    let tmp3 = _modDef12239;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef12181;
+      tmp3 = _modDef12240;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef12182;
+      tmp3 = _modDef12241;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef12183;
+      tmp3 = _modDef12242;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef12184;
+      tmp3 = _modDef12243;
     }
   }
   let tmp14 = null;
@@ -157,9 +157,9 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(11133);
+const ChannelCallStore = fn(11181);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5801);
+const CallConstants = fn(5815);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
@@ -215,7 +215,7 @@ export default noop.memo(function CallTitle(participant) {
   const activeStream = stateFromStoresObject.activeStream;
   const items1 = [channel.id, participant.id];
   const callback = hasBottomSafeArea.useCallback(() => {
-    React6();
+    React5();
     participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, participant.id);
   }, items1);
   const items2 = [channel.id, analyticsLocations];

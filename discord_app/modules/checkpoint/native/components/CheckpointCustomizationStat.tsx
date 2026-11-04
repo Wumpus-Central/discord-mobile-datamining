@@ -1,30 +1,30 @@
-// === Module 13818: CheckpointCustomizationStat ===
+// === Module 13904: CheckpointCustomizationStat ===
 
-// Module 13818 (CheckpointCustomizationStat)
+// Module 13904 (CheckpointCustomizationStat)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3187 from "module_3187" /* 3187 */;
 import _modDef3219 from "module_3219" /* 3219 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6554 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6557 */;
-import ChatIcon from "ChatIcon" /* 8767 */;
-import CalendarIcon from "CalendarIcon" /* 9243 */;
-import GameControllerIcon from "GameControllerIcon" /* 9859 */;
-import ServerIcon from "ServerIcon" /* 9890 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12109 */;
-import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 13579 */;
-import CheckpointTextDefault from "CheckpointText" /* 13779 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13782 */;
-import CheckpointTagDefault from "CheckpointTag" /* 13801 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6569 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6572 */;
+import ChatIcon from "ChatIcon" /* 8784 */;
+import CalendarIcon from "CalendarIcon" /* 9260 */;
+import GameControllerIcon from "GameControllerIcon" /* 9877 */;
+import ServerIcon from "ServerIcon" /* 9908 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12168 */;
+import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 13665 */;
+import CheckpointTextDefault from "CheckpointText" /* 13865 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13868 */;
+import CheckpointTagDefault from "CheckpointTag" /* 13887 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13571 */;
+import CheckpointStore from "CheckpointStore" /* 13656 */;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { stat: { maxWidth: 144, alignItems: "flex-start" }, label: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, labelText: { flexShrink: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -208,13 +208,13 @@ export default function CheckpointCustomizationStat(customizationOption) {
     const obj12 = { style: tmp.label, children: null };
     const obj13 = { size: "xs", color: CHECKPOINT_PRIMARY };
     const items2 = [timestampProducer(Icon, obj13), ];
-    const obj14 = { variant: "heading-sm/semibold", style: tmp.labelText, children: null };
+    const obj14 = { variant: "heading-xs/semibold", style: tmp.labelText, children: null };
     const tmp2Result = CheckpointStatsUtils;
     obj14.children = title.toLocaleUpperCase();
     items2[1] = timestampProducer(CheckpointTextDefault, obj14);
     obj12.children = items2;
-    items1[2] = React5(View, obj12);
+    items1[2] = metroImportDefault(View, obj12);
     obj9.children = items1;
-    return React5(View, obj9);
+    return metroImportDefault(View, obj9);
   }
 };

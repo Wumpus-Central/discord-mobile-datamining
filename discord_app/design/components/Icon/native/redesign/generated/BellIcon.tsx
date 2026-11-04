@@ -1,9 +1,9 @@
-// === Module 9336: BellIcon ===
+// === Module 9353: BellIcon ===
 
-// Module 9336 (BellIcon)
+// Module 9353 (BellIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod8523 from "module_8523" /* 8523 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod8540 from "module_8540" /* 8540 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BellIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8523, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8540, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

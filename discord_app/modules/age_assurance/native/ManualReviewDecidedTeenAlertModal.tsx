@@ -1,16 +1,16 @@
-// === Module 8292: ManualReviewDecidedTeenAlertModal ===
+// === Module 8308: ManualReviewDecidedTeenAlertModal ===
 
-// Module 8292 (ManualReviewDecidedTeenAlertModal)
+// Module 8308 (ManualReviewDecidedTeenAlertModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import _modDef3319 from "module_3319" /* 3319 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AlertModal from "AlertModal" /* 6084 */;
-import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 8293 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AlertModal from "AlertModal" /* 6099 */;
+import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 8309 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6848).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6863).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -19,10 +19,10 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
   teenAgeRange = teenAgeRange.teenAgeRange;
   function contentAndSettingsHook(children, key) {
     return jsx(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       color: "text-link",
       onPress() {
-        const obj = closure_1_1(8079);
+        const obj = closure_1_1(8095);
         const intl = closure_1_0(1113).intl;
         return obj.openUrl(closure_1_1(2190).getArticleURL(intl.string(closure_1_1(3319).agiNYw)));
       },

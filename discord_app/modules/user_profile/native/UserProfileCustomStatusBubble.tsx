@@ -1,17 +1,17 @@
-// === Module 11534: UserProfileCustomStatusBubble ===
+// === Module 11584: UserProfileCustomStatusBubble ===
 
-// Module 11534 (UserProfileCustomStatusBubble)
+// Module 11584 (UserProfileCustomStatusBubble)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import EmojiDefault from "Emoji" /* 7420 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 11535 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import EmojiDefault from "Emoji" /* 7436 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 11585 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ require = fn;
 function StatusBubbleConnector(arg0) {
   ({ backgroundColor, borderColor, style } = arg0);
   const size = { pointerEvents: "none", style, width: 20, height: 11, viewBox: "0 0 20 11", children: null };
-  items = [React7(inlineStyles.Path, { d: "M0 10 A10 10 0 0 1 20 10 L20 11 L0 11 Z", fill: backgroundColor }), React7(inlineStyles.Path, { d: "M0.5 10 A9.5 9.5 0 0 1 19.5 10", fill: "none", stroke: borderColor, strokeWidth: 1 })];
+  items = [React6(inlineStyles.Path, { d: "M0 10 A10 10 0 0 1 20 10 L20 11 L0 11 Z", fill: backgroundColor }), React6(inlineStyles.Path, { d: "M0.5 10 A9.5 9.5 0 0 1 19.5 10", fill: "none", stroke: borderColor, strokeWidth: 1 })];
   size.children = items;
   return closure_1_10(inlineStylesDefault, size);
 }
@@ -43,7 +43,7 @@ function EmojiImage(id) {
   obj3.animated = tmp4;
   obj3.size = EMOJI_URL_BASE_SIZE;
   obj.source = { uri: obj2.getEmojiURL(obj3) };
-  return React7(tmp3, obj);
+  return React6(tmp3, obj);
 }
 function TextStatusContent(arg0) {
   ({ emoji, lineHeight, isPlaceholderText } = arg0);
@@ -65,12 +65,12 @@ function TextStatusContent(arg0) {
       const obj6 = { emojiId: emoji.id, size: 0.9 * lineHeight, animated: emoji.animated, style: null };
       const obj7 = { marginBottom: 0.1 * -lineHeight };
       obj6.style = obj7;
-      obj5.children = React7(EmojiImage, obj6);
-      items = [React7(timestampProducer, obj5), ];
+      obj5.children = React6(EmojiImage, obj6);
+      items = [React6(timestampProducer, obj5), ];
       const obj8 = { style: null };
       const obj9 = { width: 0.5 * lineHeight };
       obj8.style = obj9;
-      items[1] = React7(timestampProducer, obj8);
+      items[1] = React6(timestampProducer, obj8);
       obj4.children = items;
       let tmp9Result = closure_1_10(closure_1_11, obj4);
     } else {
@@ -85,7 +85,7 @@ function TextStatusContent(arg0) {
         const obj11 = { style: null };
         const obj12 = { width: 0.4 * lineHeight };
         obj11.style = obj12;
-        items1[1] = React7(timestampProducer, obj11);
+        items1[1] = React6(timestampProducer, obj11);
         obj10.children = items1;
         tmp9Result = closure_1_10(closure_1_11, obj10);
       }
@@ -139,11 +139,11 @@ function EmojiOnlyStatusContent(arg0) {
     str = "";
   }
   obj4.name = str;
-  obj3.children = React7(EmojiDefault, obj4);
-  return React7(timestampProducer, obj3);
+  obj3.children = React6(EmojiDefault, obj4);
+  return React6(timestampProducer, obj3);
 }
 get_ActivityIndicator = fn(17);
-({ PixelRatio: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ PixelRatio: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
@@ -181,8 +181,8 @@ let closure_13 = createStyles.createStyles((arg0) => {
   obj.statusBubbleLeftAligned = { alignItems: "flex-start" };
   return obj;
 });
-let closure_15 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-let closure_16 = { [fn(7497).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+let closure_15 = { textVariant: "body-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
+let closure_16 = { [fn(7513).UserProfileThemeTypes.PREVIEW]: { textVariant: "body-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 createStyles = fn(5141);
 let closure_19 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 let size = fn(2);
@@ -405,9 +405,9 @@ export default function UserProfileCustomStatusBubble(ref) {
     obj11.accessibilityHint = formatToPlainStringResult;
     obj11.onPress = handlePressAddOrEditStatus;
     obj11.hitSlop = rect;
-    let str7 = "text-md/medium";
+    let str7 = "body-md/medium";
     if (tmp20) {
-      str7 = "text-md/normal";
+      str7 = "body-md/normal";
     }
     const obj13 = { variant: str7, color: "control-secondary-text-default", lineClamp: null, style: null, children: null };
     let _Math = Math;
@@ -457,10 +457,10 @@ export default function UserProfileCustomStatusBubble(ref) {
         }
         obj2.lineClamp = rounded;
         obj2.lineHeight = scaledTextLineHeight;
-        let tmp7Result = React7(TextStatusContent, obj2);
+        let tmp7Result = React6(TextStatusContent, obj2);
       } else if (closure_6) {
         const obj = { emoji: previewEmoji, size: emojiOnlyEmojiSize };
-        tmp7Result = React7(EmojiOnlyStatusContent, obj);
+        tmp7Result = React6(EmojiOnlyStatusContent, obj);
       }
       return tmp7Result;
     }

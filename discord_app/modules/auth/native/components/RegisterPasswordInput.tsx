@@ -1,14 +1,14 @@
-// === Module 18160: RegisterPasswordInput ===
+// === Module 18257: RegisterPasswordInput ===
 
-// Module 18160 (RegisterPasswordInput)
+// Module 18257 (RegisterPasswordInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import usePasswordScore from "usePasswordScore" /* 18157 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import usePasswordScore from "usePasswordScore" /* 18254 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7235 */;
+import PhoneStore from "PhoneStore" /* 7255 */;
 
 const require = globalThis.__r;
 
@@ -40,7 +40,7 @@ function PasswordStrength(passwordScore) {
           const obj = {};
           const merged = Object.assign(obj6);
           const merged1 = Object.assign(obj7);
-          obj.variant = "text-xs/medium";
+          obj.variant = "body-xs/medium";
           items = [tmp.passwordStrength, strong];
           obj.style = items;
           obj.animated = true;
@@ -55,7 +55,7 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-const RegistrationUIStore = fn(18132);
+const RegistrationUIStore = fn(18229);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
@@ -114,7 +114,7 @@ export function RegisterPasswordInput(ref) {
   const callback = noop.useCallback((arg0) => {
     if (null != user.password) {
       const password = user.password;
-      React6(_objectWithoutProperties(user, closure_3));
+      React5(_objectWithoutProperties(user, closure_3));
     }
     onPasswordChange(arg0);
   }, items);
@@ -195,7 +195,7 @@ export function RegisterPasswordInput(ref) {
       const merged1 = Object.assign(obj6);
       const merged2 = Object.assign(obj7);
       obj6.style = tmp2.inputHint;
-      obj6.variant = "text-xs/medium";
+      obj6.variant = "body-xs/medium";
       obj6.color = "text-muted";
       obj6.animated = true;
       obj6.children = memo;

@@ -1,24 +1,24 @@
-// === Module 19272: VoicePanelPIPUtils ===
+// === Module 19376: VoicePanelPIPUtils ===
 
-// Module 19272 (VoicePanelPIPUtils)
+// Module 19376 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 575 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5796 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6837 */;
-import participantHasVideo from "participantHasVideo" /* 11365 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5810 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6852 */;
+import participantHasVideo from "participantHasVideo" /* 11415 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const VoicePanelConstants = fn(11360);
+const VoicePanelConstants = fn(11410);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(19273);
-({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
+const VoicePanelPIPConstants = fn(19377);
+({ VoicePanelPIPModes: metroImportDefault, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
-const ParticipantTypes = fn(5801).ParticipantTypes;
-const MorphablePanelConstants = fn(11361);
+const ParticipantTypes = fn(5815).ParticipantTypes;
+const MorphablePanelConstants = fn(11411);
 ({ MIN_PIP_TOSS_VELOCITY, PIP_WINDOW_OFFSET } = MorphablePanelConstants);
 let set = new Set();
 let items = [{ code: "(function clamp_VoicePanelPIPUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);})" }];

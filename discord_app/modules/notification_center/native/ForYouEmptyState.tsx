@@ -1,9 +1,9 @@
-// === Module 18674: ForYouEmptyState ===
+// === Module 18775: ForYouEmptyState ===
 
-// Module 18674 (ForYouEmptyState)
+// Module 18775 (ForYouEmptyState)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import MailboxSpotIllustration from "MailboxSpotIllustration" /* 18675 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import MailboxSpotIllustration from "MailboxSpotIllustration" /* 18776 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,14 +21,14 @@ export function ForYouEmptyState(height) {
   items = [tmp.container, { height: height.height }];
   obj.style = items;
   const items1 = [React3(View, { style: tmp.image, children: React3(MailboxSpotIllustration.MailboxSpotIllustration, { scale: 0.75 }) }), , ];
-  const obj3 = { accessibilityRole: "header", color: "mobile-text-heading-primary", variant: "heading-md/semibold", style: null, children: null };
+  const obj3 = { accessibilityRole: "header", color: "mobile-text-heading-primary", variant: "heading-sm/semibold", style: null, children: null };
   const items2 = [, ];
   ({ text: arr3[0], headerText: arr3[1] } = tmp);
   obj3.style = items2;
   const intl = util.intl;
   obj3.children = intl.string(util.t.MwjTvn);
   items1[1] = React3(Text_Text.Text, obj3);
-  const obj4 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
+  const obj4 = { color: "text-default", variant: "body-md/medium", style: tmp.text, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.AKBgPy);
   items1[2] = React3(Text_Text.Text, obj4);

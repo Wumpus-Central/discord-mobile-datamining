@@ -1,7 +1,7 @@
-// === Module 11281: ActionSheetIconHeader ===
+// === Module 11331: ActionSheetIconHeader ===
 
-// Module 11281 (ActionSheetIconHeader)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 11331 (ActionSheetIconHeader)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,10 +20,10 @@ export function ActionSheetIconHeader(subtitle) {
   const obj = { style: tmp.container, children: null };
   items = [React3(View, { children: icon }), ];
   const obj2 = { style: tmp.titles, children: null };
-  const items1 = [React3(Text_Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", lineClamp: 2, children: title }), ];
+  const items1 = [React3(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", lineClamp: 2, children: title }), ];
   let tmp4Result = null;
   if (null != subtitle) {
-    const obj3 = { variant: "text-xs/medium", color: "text-default", children: subtitle };
+    const obj3 = { variant: "body-xs/medium", color: "text-default", children: subtitle };
     tmp4Result = React3(Text_Text.Text, obj3);
   }
   items1[1] = tmp4Result;

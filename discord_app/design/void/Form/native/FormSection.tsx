@@ -1,13 +1,13 @@
-// === Module 8310: FormSection ===
+// === Module 8326: FormSection ===
 
-// Module 8310 (FormSection)
+// Module 8326 (FormSection)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import RedesignCompat from "RedesignCompat" /* 7185 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import FormRowDefault from "FormRow" /* 7429 */;
-import FormDividerDefault from "FormDivider" /* 8307 */;
-import FormTitleDefault from "FormTitle" /* 8311 */;
+import RedesignCompat from "RedesignCompat" /* 7200 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import FormRowDefault from "FormRow" /* 7445 */;
+import FormDividerDefault from "FormDivider" /* 8323 */;
+import FormTitleDefault from "FormTitle" /* 8327 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, Platform } = get_ActivityIndicator);
 const TitleStyleType = fn(1191).TitleStyleType;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 }, titledSectionNoBorder: { marginTop: 24 }, titledSectionNoBorderOrMargin: {}, emptySectionHeader: { marginTop: 24 }, sectionBody: {}, sectionBodyIOSBorder: {} };
 let closure_8 = createStyles.createStyles(obj2);
@@ -76,7 +76,7 @@ export default function FormSection(arg0) {
     }
     items[1] = tmp20Result;
     obj2.children = items;
-    return React5(React4, obj2);
+    return metroImportDefault(React4, obj2);
   } else {
     let tmp6;
     if (null != title) {
@@ -135,6 +135,6 @@ export default function FormSection(arg0) {
     items2[2] = timestampProducer(React4, obj8);
     items2[3] = hint;
     obj7.children = items2;
-    return React5(React4, obj7);
+    return metroImportDefault(React4, obj7);
   }
 };

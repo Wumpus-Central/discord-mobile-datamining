@@ -1,13 +1,13 @@
-// === Module 10182: StandardEmojiContent ===
+// === Module 10230: StandardEmojiContent ===
 
-// Module 10182 (StandardEmojiContent)
+// Module 10230 (StandardEmojiContent)
 import nativeDefault from "native" /* 575 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5091 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10183 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10187 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10231 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10235 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
@@ -25,7 +25,7 @@ function Emoji(surrogate) {
     let tmp9 = timestampProducer(FastImageDefault, obj4);
   } else {
     const obj6 = { style: obj.emojiWrapper, children: null };
-    const obj7 = { style: obj.emojiSurrogate, variant: "text-md/medium", children: surrogate };
+    const obj7 = { style: obj.emojiSurrogate, variant: "body-md/medium", children: surrogate };
     obj6.children = timestampProducer(Text_Text.Text, obj7);
     tmp9 = timestampProducer(View, obj6);
   }
@@ -33,7 +33,7 @@ function Emoji(surrogate) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { emojiSurrogate: { lineHeight: 48, fontSize: 40, margin: 8 }, ctaContainer: { paddingTop: nativeDefault.space.PX_4 } };
 let closure_9 = createStyles.createStyles(obj2);
@@ -58,8 +58,8 @@ export default function StandardEmojiContent(nonce) {
   const obj6 = { surrogate: emojiNode.surrogate };
   const items1 = [closure_6(Emoji, obj6), ];
   const obj7 = { style: obj.emojiDescriptionWrapper, children: null };
-  const items2 = [closure_6(emojiNode(isFavoriteEmoji[9]).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: memo(isFavoriteEmoji[13])(emojiNode.content) }), ];
-  const obj8 = { variant: "text-sm/medium", children: null };
+  const items2 = [closure_6(emojiNode(isFavoriteEmoji[9]).Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: memo(isFavoriteEmoji[13])(emojiNode.content) }), ];
+  const obj8 = { variant: "body-sm/medium", children: null };
   const intl = emojiNode(isFavoriteEmoji[14]).intl;
   obj8.children = intl.string(emojiNode(isFavoriteEmoji[14]).t.sXdH8c);
   items2[1] = closure_6(emojiNode(isFavoriteEmoji[9]).Text, obj8);

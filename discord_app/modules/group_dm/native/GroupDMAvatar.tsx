@@ -1,8 +1,8 @@
-// === Module 10929: GroupDMAvatar ===
+// === Module 10977: GroupDMAvatar ===
 
-// Module 10929 (GroupDMAvatar)
+// Module 10977 (GroupDMAvatar)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ClipView from "ClipView" /* 9637 */;
+import ClipView from "ClipView" /* 9656 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -70,7 +70,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj11);
     items3 = [, ];
     items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
-    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "text-xs/medium" };
+    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Show left-aligned example" };
     obj12.animate = animate;
     if (null == users) {
       obj13 = { source: null };
@@ -88,7 +88,7 @@ class FacepileGroupDMAvatar {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {};
 obj[fn(1187).AvatarSizes.LARGE_48] = fn(1187).AvatarSizes.SMALL;
 obj[fn(1187).AvatarSizes.XLARGE] = fn(1187).AvatarSizes.NORMAL;
@@ -99,7 +99,7 @@ obj[fn(1187).AvatarSizes.XSMALL] = fn(1187).AvatarSizes.SIZE_16;
 obj[fn(1187).AvatarSizes.SIZE_16] = fn(1187).AvatarSizes.XXSMALL_10;
 obj[fn(1187).AvatarSizes.NORMAL] = fn(1187).AvatarSizes.XSMALL;
 const createStyles = fn(5141);
-const React6 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
+const React5 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");
 

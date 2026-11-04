@@ -1,11 +1,11 @@
-// === Module 7864: CollectiblesMarketingRecord ===
+// === Module 7880: CollectiblesMarketingRecord ===
 
-// Module 7864 (CollectiblesMarketingRecord)
-import CollectiblesMarketingBadgeRecord from "CollectiblesMarketingBadgeRecord" /* 7865 */;
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7866 */;
-import CollectiblesMarketingBannerRecord from "CollectiblesMarketingBannerRecord" /* 7867 */;
-import CollectiblesMarketingCoachmarkRecord from "CollectiblesMarketingCoachmarkRecord" /* 7868 */;
-import CollectiblesMarketingTabTooltipRecord from "CollectiblesMarketingTabTooltipRecord" /* 7869 */;
+// Module 7880 (CollectiblesMarketingRecord)
+import CollectiblesMarketingBadgeRecord from "CollectiblesMarketingBadgeRecord" /* 7881 */;
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7882 */;
+import CollectiblesMarketingBannerRecord from "CollectiblesMarketingBannerRecord" /* 7883 */;
+import CollectiblesMarketingCoachmarkRecord from "CollectiblesMarketingCoachmarkRecord" /* 7884 */;
+import CollectiblesMarketingTabTooltipRecord from "CollectiblesMarketingTabTooltipRecord" /* 7885 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = CollectiblesMarketingBadgeRecord.CollectiblesMarketingBadgeRecord;

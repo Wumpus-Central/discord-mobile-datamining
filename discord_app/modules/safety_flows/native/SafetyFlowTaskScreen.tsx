@@ -1,13 +1,13 @@
-// === Module 20241: SafetyFlowTaskScreen ===
+// === Module 20357: SafetyFlowTaskScreen ===
 
-// Module 20241 (SafetyFlowTaskScreen)
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import ModalScreen from "ModalScreen" /* 8096 */;
-import ModalContent from "ModalContent" /* 8097 */;
-import ModalFooter from "ModalFooter" /* 13344 */;
-import ModalActionButton from "ModalActionButton" /* 13556 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 20239 */;
+// Module 20357 (SafetyFlowTaskScreen)
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import ModalScreen from "ModalScreen" /* 8112 */;
+import ModalContent from "ModalContent" /* 8113 */;
+import ModalFooter from "ModalFooter" /* 13427 */;
+import ModalActionButton from "ModalActionButton" /* 13640 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 20355 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ export default function SafetyFlowTaskScreen(action) {
   items = [tmp6, React3(Text_Text.Text, { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.header, children: action.title }), ];
   let tmp7Result = null != subtitle;
   if (tmp7Result) {
-    const obj2 = { variant: "text-md/medium", color: subtitleColor, style: tmp2.header, children: subtitle };
+    const obj2 = { variant: "body-md/medium", color: subtitleColor, style: tmp2.header, children: subtitle };
     tmp7Result = React3(Text_Text.Text, obj2);
   }
   const obj3 = { children: null };

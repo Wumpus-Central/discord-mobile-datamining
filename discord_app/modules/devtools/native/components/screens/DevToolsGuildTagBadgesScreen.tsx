@@ -1,9 +1,9 @@
-// === Module 17860: DevToolsGuildTagBadgesScreen ===
+// === Module 17956: DevToolsGuildTagBadgesScreen ===
 
-// Module 17860 (DevToolsGuildTagBadgesScreen)
+// Module 17956 (DevToolsGuildTagBadgesScreen)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import badges_GuildBadge from "badges/GuildBadge" /* 15886 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import badges_GuildBadge from "badges/GuildBadge" /* 15974 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,10 +12,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(8517);
-({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire, GUILD_TAG_BADGE_PALETTE_PRESETS, GuildTagBadgeKind } = GuildTagConstants);
+const GuildTagConstants = fn(8534);
+({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6, GUILD_TAG_BADGE_PALETTE_PRESETS, GuildTagBadgeKind } = GuildTagConstants);
 const jsxProd = fn(21);
-({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
+({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);
 const entries = Object.entries(GuildTagBadgeKind);
 const found = entries.filter((item) => {
   [tmp] = item;
@@ -25,7 +25,7 @@ let closure_9 = found.map((item) => {
   [tmp, tmp2] = item;
   return { name, value };
 });
-let items = [{ label: "Untinted", primary: "dispatch", secondary: "d" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({ label: "P" + index + 1, primary: primary.primary, secondary: primary.secondary }))];
+let items = [{ label: "Untinted", primary: "displayName", secondary: "d" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({ label: "P" + index + 1, primary: primary.primary, secondary: primary.secondary }))];
 const dependencyMap = [24, 48, 72];
 const createStyles = fn(5141);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, controlRow: null, grid: null, tile: null, badgeBox: null };
@@ -52,7 +52,7 @@ export default function DevToolsGuildTagBadgesScreen() {
   closure_5 = tmp6;
   let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
   let obj2 = { spacing: 16, children: null };
-  let obj3 = { variant: "text-md/normal", children: null };
+  let obj3 = { variant: "body-md/normal", children: null };
   items = ["All ", closure_9.length, " badge kinds. Tint: "];
   items[3] = items[first].label;
   items[4] = " \u00B7 Size: ";
@@ -118,9 +118,9 @@ export default function DevToolsGuildTagBadgesScreen() {
       const obj = { style: closure_0.tile, children: null };
       const obj2 = { style: closure_0.badgeBox, children: null };
       const size = { badge: value, primaryTintColor: closure_4.primary, secondaryTintColor: closure_4.secondary, width: height, height };
-      obj2.children = React6(badges_GuildBadge.GuildBadge, size);
-      items = [React6(hasOwnProperty, obj2), ];
-      const obj3 = { variant: "text-xs/normal", color: "text-muted", style: { textAlign: "center" }, children: null };
+      obj2.children = React5(badges_GuildBadge.GuildBadge, size);
+      items = [React5(hasOwnProperty, obj2), ];
+      const obj3 = { variant: "body-xs/normal", color: "text-muted", style: { textAlign: "center" }, children: null };
       const items1 = [value.name, ];
       let str = "";
       if (2 === timestampProducer[value]) {
@@ -128,9 +128,9 @@ export default function DevToolsGuildTagBadgesScreen() {
       }
       items1[1] = str;
       obj3.children = items1;
-      items[1] = React5(Text_Text.Text, obj3);
+      items[1] = metroImportDefault(Text_Text.Text, obj3);
       obj.children = items;
-      return React5(hasOwnProperty, obj, value);
+      return metroImportDefault(hasOwnProperty, obj, value);
     })
   });
   obj2.children = items1;

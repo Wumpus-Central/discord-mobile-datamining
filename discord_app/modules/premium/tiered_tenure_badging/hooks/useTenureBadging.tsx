@@ -1,11 +1,11 @@
-// === Module 11583: useTenureBadging ===
+// === Module 11633: useTenureBadging ===
 
-// Module 11583 (useTenureBadging)
+// Module 11633 (useTenureBadging)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7905 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11584 */;
-import UserProfileStore from "UserProfileStore" /* 7896 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7921 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11634 */;
+import UserProfileStore from "UserProfileStore" /* 7912 */;
 import UserStore from "UserStore" /* 1385 */;
 import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
@@ -97,7 +97,7 @@ function usePremiumSince() {
   }, items5);
 }
 const useMemo = _mod19.useMemo;
-({ PremiumTypes: metroRequire, TENURE_BADGES: closure_7 } = PremiumConstants);
+({ PremiumTypes: closure_6, TENURE_BADGES: metroImportDefault } = PremiumConstants);
 const TieredTenureBadgeStatus = { UPCOMING: "upcoming", WITHHELD: "withheld", EARNED: "earned" };
 let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTenureBadging.tsx");
 

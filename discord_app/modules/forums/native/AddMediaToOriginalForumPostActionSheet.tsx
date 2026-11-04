@@ -1,17 +1,17 @@
-// === Module 13891: AddMediaToOriginalForumPostActionSheet ===
+// === Module 13977: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 13891 (AddMediaToOriginalForumPostActionSheet)
+// Module 13977 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Tracking from "Tracking" /* 8328 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8344 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Tracking from "Tracking" /* 8344 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8360 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import MessageStore from "MessageStore" /* 6181 */;
+import MessageStore from "MessageStore" /* 6196 */;
 
 require = fn;
 let closure_16 = async function _upload2(arg0) {
@@ -72,28 +72,28 @@ let closure_16 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(8340).maxFileSize(id.id);
-            const obj = closure_0(8340);
-            const effectiveUploadLimit = closure_0(8355).getEffectiveUploadLimit(maxFileSizeResult);
+            const maxFileSizeResult = closure_0(8356).maxFileSize(id.id);
+            const obj = closure_0(8356);
+            const effectiveUploadLimit = closure_0(8371).getEffectiveUploadLimit(maxFileSizeResult);
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(5381).hideActionSheet();
+              closure_1(5382).hideActionSheet();
               const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(9913)(obj4);
-              const obj3 = closure_1(5381);
+              closure_1(9931)(obj4);
+              const obj3 = closure_1(5382);
             }
-            const obj2 = closure_0(8355);
+            const obj2 = closure_0(8371);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(5381).hideActionSheet();
+            closure_1(5382).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(9910).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(9910);
-            closure_1(5381).hideActionSheet();
+            closure_1(9928).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9928);
+            closure_1(5382).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
@@ -141,7 +141,7 @@ let closure_16 = async function _upload2(arg0) {
           closure_1 = 0;
           items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(8336).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(8352).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -227,7 +227,7 @@ let closure_16 = async function _upload2(arg0) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(7825).DraftType;
+const DraftType = fn(7841).DraftType;
 const Constants = fn(1072);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -330,7 +330,7 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   const intl = tmp4(tmp5[27]).intl;
   obj9.children = intl.string(threadId(sendMessage[27]).t["+SZF6S"]);
   items9[1] = closure_13(threadId(sendMessage[34]).Text, obj9);
-  const obj10 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
+  const obj10 = { style: tmp.description, variant: "body-md/medium", color: "text-default", children: null };
   const intl2 = tmp4(tmp5[27]).intl;
   obj10.children = intl2.string(threadId(sendMessage[27]).t["0Ycgw5"]);
   items9[2] = closure_13(threadId(sendMessage[34]).Text, obj10);

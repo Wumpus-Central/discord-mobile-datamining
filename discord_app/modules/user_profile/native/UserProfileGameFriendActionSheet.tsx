@@ -1,9 +1,9 @@
-// === Module 15048: UserProfileGameFriendActionSheet ===
+// === Module 15128: UserProfileGameFriendActionSheet ===
 
-// Module 15048 (UserProfileGameFriendActionSheet)
+// Module 15128 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 14326 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12568 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,14 +30,14 @@ function GameFriendApplicationRow(application) {
     str = "";
   }
   obj3.source = { uri: str };
-  const items1 = [closure_10(application(userDisplayName[12]).Icon, obj3, application.id), closure_10(application(userDisplayName[13]).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: application.name })];
+  const items1 = [closure_10(application(userDisplayName[12]).Icon, obj3, application.id), closure_10(application(userDisplayName[13]).Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: application.name })];
   obj2.children = items1;
   obj.label = closure_11(closure_7, obj2);
   obj.onPress = callback;
   return closure_10(application(userDisplayName[10]).ActionSheetRow, obj, application.id);
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

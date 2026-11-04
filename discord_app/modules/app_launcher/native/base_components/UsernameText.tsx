@@ -1,8 +1,8 @@
-// === Module 12653: UsernameText ===
+// === Module 12734: UsernameText ===
 
-// Module 12653 (UsernameText)
-import Text_Text from "Text/Text" /* 5747 */;
-import NicknameUtils from "NicknameUtils" /* 6161 */;
+// Module 12734 (UsernameText)
+import Text_Text from "Text/Text" /* 5761 */;
+import NicknameUtils from "NicknameUtils" /* 6176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/base_comp
 export default function UsernameText(color) {
   ({ user, variant } = color);
   if (variant === undefined) {
-    variant = "text-md/medium";
+    variant = "body-md/medium";
   }
   let str = color.color;
   if (str === undefined) {

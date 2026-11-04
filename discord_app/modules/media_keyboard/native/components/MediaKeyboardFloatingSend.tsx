@@ -1,21 +1,21 @@
-// === Module 12707: MediaKeyboardFloatingSend ===
+// === Module 12788: MediaKeyboardFloatingSend ===
 
-// Module 12707 (MediaKeyboardFloatingSend)
+// Module 12788 (MediaKeyboardFloatingSend)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8348 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj = { sendContainer: null, gradient: null };
 let obj3 = {};

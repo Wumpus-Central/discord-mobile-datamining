@@ -1,19 +1,19 @@
-// === Module 13554: ShareChatInput ===
+// === Module 13638: ShareChatInput ===
 
-// Module 13554 (ShareChatInput)
+// Module 13638 (ShareChatInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 7106 */;
-import FormInputDefault from "FormInput" /* 8309 */;
-import ReactionIcon from "ReactionIcon" /* 9580 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9907 */;
+import Pressables from "Pressables" /* 7121 */;
+import FormInputDefault from "FormInput" /* 8325 */;
+import ReactionIcon from "ReactionIcon" /* 9599 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9925 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 }, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
 let obj3 = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
@@ -91,5 +91,5 @@ export default function ShareChatInput(onFocus) {
   obj3.children = timestampProducer(ReactionIcon.ReactionIcon, { size: "md" });
   items3[1] = timestampProducer(Pressables.PressableOpacity, obj3);
   obj.children = items3;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 };

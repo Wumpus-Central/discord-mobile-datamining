@@ -1,17 +1,17 @@
-// === Module 10096: ExpressiveGradient ===
+// === Module 10144: ExpressiveGradient ===
 
-// Module 10096 (ExpressiveGradient)
+// Module 10144 (ExpressiveGradient)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { purple: { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_END }, blue: null, green: null, pink: null, "nitro-pink": null, "nitro-green": null };
 let obj2 = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_END };
 obj.blue = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_BLUE_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_BLUE_END };

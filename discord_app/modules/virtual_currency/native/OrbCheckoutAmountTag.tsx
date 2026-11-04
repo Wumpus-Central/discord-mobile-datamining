@@ -1,11 +1,11 @@
-// === Module 14563: OrbCheckoutAmountTag ===
+// === Module 14643: OrbCheckoutAmountTag ===
 
-// Module 14563 (OrbCheckoutAmountTag)
+// Module 14643 (OrbCheckoutAmountTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import OrbsIcon from "OrbsIcon" /* 9660 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import OrbsIcon from "OrbsIcon" /* 9679 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
@@ -29,7 +29,7 @@ export default function OrbCheckoutAmountTag(orbAmount) {
     const obj3 = { orbAmount };
     stringResult = intl.formatToPlainString(util.t.W4DfeF, obj3);
   }
-  const obj4 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
+  const obj4 = { variant: "body-md/semibold", accessibilityLabel: stringResult, children: null };
   let str = "--";
   if (null != orbAmount) {
     str = orbAmount;

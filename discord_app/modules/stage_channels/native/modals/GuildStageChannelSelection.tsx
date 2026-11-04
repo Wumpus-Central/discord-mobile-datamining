@@ -1,11 +1,11 @@
-// === Module 9241: GuildStageChannelSelection ===
+// === Module 9258: GuildStageChannelSelection ===
 
-// Module 9241 (GuildStageChannelSelection)
+// Module 9258 (GuildStageChannelSelection)
 import util from "util" /* 1113 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -45,15 +45,15 @@ export default function GuildStageChannelSelection(channel) {
       id = channel.id;
     }
     obj3.selectedItem = id;
-    obj2.openLazy(asyncRequireImpl(9130, dependencyMap.paths), "SelectUpdatesChannel", obj3);
+    obj2.openLazy(asyncRequireImpl(9147, dependencyMap.paths), "SelectUpdatesChannel", obj3);
   }
   function renderChannelHook(children, key) {
-    return jsx(channel(handleSelectChannel[12]).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, key);
+    return jsx(channel(handleSelectChannel[12]).Text, { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children }, key);
   }
   const tmp = closure_7();
   const channelsUserCanStartStageIn = channel(handleSelectChannel[5]).useChannelsUserCanStartStageIn(channel.guild);
   const tmp3 = onChangeChannel(handleSelectChannel[6])(channel);
-  let obj2 = { style: tmp.channelText, variant: "text-xs/medium", color: "text-default", children: null };
+  let obj2 = { style: tmp.channelText, variant: "body-xs/medium", color: "text-default", children: null };
   let intl = channel(handleSelectChannel[11]).intl;
   const format = intl.format;
   const t = channel(handleSelectChannel[11]).t;
@@ -62,7 +62,7 @@ export default function GuildStageChannelSelection(channel) {
       stageName: tmp3,
       stageHook: renderChannelHook,
       changeHook: function renderChangeHook(children, key) {
-          return jsx(Text_Text.Text, { onPress: handleSelectChannel, variant: "text-xs/medium", color: "text-link", children }, key);
+          return jsx(Text_Text.Text, { onPress: handleSelectChannel, variant: "body-xs/medium", color: "text-link", children }, key);
         }
     };
     obj2.children = format(t.AkzLcV, obj3);

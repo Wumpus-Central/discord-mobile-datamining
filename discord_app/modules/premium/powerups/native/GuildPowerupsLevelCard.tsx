@@ -1,15 +1,15 @@
-// === Module 14270: GuildPowerupsLevelCard ===
+// === Module 14356: GuildPowerupsLevelCard ===
 
-// Module 14270 (GuildPowerupsLevelCard)
+// Module 14356 (GuildPowerupsLevelCard)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import BoostGemIcon from "BoostGemIcon" /* 10051 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14207 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 14224 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14229 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 14272 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14273 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import BoostGemIcon from "BoostGemIcon" /* 10099 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14293 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 14310 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14315 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 14358 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14359 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function GuildLevelPowerupHeader(arg0) {
     }
     const obj = { style: tmp.progressContainer, children: null };
     const obj3 = { start: null, end: null, colors: null, style: null };
-    ({ START: obj2.start, END: obj2.end } = React6);
+    ({ START: obj2.start, END: obj2.end } = React5);
     obj3.colors = items6;
     const items1 = [tmp.progress, , ];
     let progressStart = position === constants.START;
@@ -116,11 +116,11 @@ class GuildPowerupLevelBody {
   }
 }
 const View = fn(17).View;
-const GuildPowerupsConstants = fn(5353);
-({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
+const GuildPowerupsConstants = fn(5354);
+({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: closure_6 } = GuildPowerupsConstants);
 const Constants = fn(1072);
-({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(14271).TIER_CARDS;
+({ BoostedGuildTiers: metroImportDefault, HorizontalGradient: closure_8 } = Constants);
+const TIER_CARDS = fn(14357).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -183,7 +183,7 @@ export default function GuildPowerupsLevelCard(arg0) {
   obj3.nextActive = tmp19;
   const items1 = [closure_1_10(GuildLevelPowerupHeader, obj3), ];
   const obj4 = { style: tmp.contentContainer, children: null };
-  const items2 = [closure_1_10(Text_Text.Text, { color: "text-strong", variant: "experimental/heading-md/semibold", children: powerup.title }), closure_1_10(GuildPowerupLevelBody, { isActive: tmp4.type !== constants2.INACTIVE, index }), ];
+  const items2 = [closure_1_10(Text_Text.Text, { color: "text-strong", variant: "heading-md/semibold", children: powerup.title }), closure_1_10(GuildPowerupLevelBody, { isActive: tmp4.type !== constants2.INACTIVE, index }), ];
   const obj6 = { style: tmp.footerContainer, children: closure_1_10(GuildPowerupsCardFooter.GuildPowerupsCardFooter, { cost: powerup.cost, status: calculatePowerupCardStatus }) };
   items2[2] = closure_1_10(View, obj6);
   obj4.children = items2;

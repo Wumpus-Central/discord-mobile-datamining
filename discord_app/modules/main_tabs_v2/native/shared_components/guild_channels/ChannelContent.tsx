@@ -1,13 +1,13 @@
-// === Module 18882: ChannelContent ===
+// === Module 18985: ChannelContent ===
 
-// Module 18882 (ChannelContent)
-import Text_Text from "Text/Text" /* 5747 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7395 */;
-import WarningIcon from "WarningIcon" /* 8150 */;
-import LockIcon from "LockIcon" /* 8791 */;
-import ChannelListLayout from "ChannelListLayout" /* 11177 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18320 */;
-import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 18883 */;
+// Module 18985 (ChannelContent)
+import Text_Text from "Text/Text" /* 5761 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7411 */;
+import WarningIcon from "WarningIcon" /* 8166 */;
+import LockIcon from "LockIcon" /* 8808 */;
+import ChannelListLayout from "ChannelListLayout" /* 11227 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18417 */;
+import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 18986 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -87,11 +87,11 @@ function ChannelContentComponent(arg0) {
     }
     items3[2] = isSubscriptionGated;
     obj7.children = items3;
-    tmp12Result = React5(View, obj7);
+    tmp12Result = metroImportDefault(View, obj7);
   }
   items1[1] = tmp12Result;
   obj5.children = items1;
-  const items4 = [React5(View, obj5), ];
+  const items4 = [metroImportDefault(View, obj5), ];
   let tmp10Result4 = null;
   if (isValidElementResult) {
     if (mentionCount == null) {
@@ -112,11 +112,11 @@ function ChannelContentComponent(arg0) {
   }
   items4[1] = tmp10Result4;
   obj4.children = items4;
-  const items6 = [React5(View, obj4), ];
+  const items6 = [metroImportDefault(View, obj4), ];
   const obj15 = { style: tmp10Result6 ? tmp.rightContentAbsolute : tmp.rightBox, children: null };
   let tmp10Result5 = obj17;
   if (obj17) {
-    const obj16 = { variant: "text-xs/medium", color: "text-muted", style: { marginLeft: "auto" }, maxFontSizeMultiplier: 1.75, children: lastMessageTimestampString };
+    const obj16 = { variant: "body-xs/medium", color: "text-muted", style: { marginLeft: "auto" }, maxFontSizeMultiplier: 1.75, children: lastMessageTimestampString };
     tmp10Result5 = timestampProducer(Text_Text.Text, obj16);
   }
   const items7 = [tmp10Result5, , ];
@@ -132,15 +132,15 @@ function ChannelContentComponent(arg0) {
   }
   items7[2] = tmp10Result6;
   obj15.children = items7;
-  items6[1] = React5(View, obj15);
+  items6[1] = metroImportDefault(View, obj15);
   obj3.children = items6;
-  obj2.children = React5(View, obj3);
+  obj2.children = metroImportDefault(View, obj3);
   return timestampProducer(View, obj2);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let PlatformUtils = fn(1377);
 let num = -1;
@@ -148,7 +148,7 @@ if (PlatformUtils.isIOS()) {
   num = 2;
 }
 let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
-let obj4 = { opacity: fn(11186).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj4 = { opacity: fn(11236).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1377);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

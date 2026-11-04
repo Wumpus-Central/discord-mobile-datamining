@@ -1,15 +1,15 @@
-// === Module 16642: UserProfileAvatarDecorationEditButton ===
+// === Module 16732: UserProfileAvatarDecorationEditButton ===
 
-// Module 16642 (UserProfileAvatarDecorationEditButton)
+// Module 16732 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 575 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8852 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8869 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(7497).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7513).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1083).NOOP;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);

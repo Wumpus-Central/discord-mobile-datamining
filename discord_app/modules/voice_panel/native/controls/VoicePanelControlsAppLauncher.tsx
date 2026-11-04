@@ -1,24 +1,24 @@
-// === Module 19506: VoicePanelControlsAppLauncher ===
+// === Module 19610: VoicePanelControlsAppLauncher ===
 
-// Module 19506 (VoicePanelControlsAppLauncher)
+// Module 19610 (VoicePanelControlsAppLauncher)
 import _modDef38 from "module_38" /* 38 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8965 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12545 */;
-import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 13960 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8982 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12626 */;
+import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 14046 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsConstants = fn(11358);
+const VoicePanelControlsConstants = fn(11408);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ container: { width: "100%", paddingTop: CONTROLS_DRAWER_HEADER_SIZE } });
 let closure_11 = { code: "(function VoicePanelControlsAppLauncherTsx1(){let[gestureSpecs]=this.__closure;return gestureSpecs.get().active;})" };

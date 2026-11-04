@@ -1,11 +1,11 @@
-// === Module 11284: AnimatedCounter ===
+// === Module 11334: AnimatedCounter ===
 
-// Module 11284 (AnimatedCounter)
+// Module 11334 (AnimatedCounter)
 import _modDef38 from "module_38" /* 38 */;
 import native from "native" /* 5207 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import springPresets from "springPresets" /* 5758 */;
-import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11285 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import springPresets from "springPresets" /* 5772 */;
+import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11335 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -171,7 +171,7 @@ function AnimatedCounterTransitionGroup(count) {
   }, []);
   obj = { style: tmp.container, children: null };
   const obj2 = { value: memo, children: null };
-  const callback1 = textStyle.useCallback((arg0, count, state, cleanUp) => {
+  const callback1 = textStyle.useCallback((id, count, state, cleanUp) => {
     obj = { formatter: ref, springConfig: null, count: null, state: null, cleanUp: null, height: null, textColor: null, textVariant: null, textStyle: null };
     let springStandard = springConfig;
     if (null == springConfig) {
@@ -185,7 +185,7 @@ function AnimatedCounterTransitionGroup(count) {
     obj.textColor = textColor;
     obj.textVariant = textVariant;
     obj.textStyle = textStyle;
-    return React5(AnimatedCount, obj, arg0);
+    return metroImportDefault(AnimatedCount, obj, id);
   }, items3);
   obj2.children = closure_7(count(textColor[7]).TransitionGroup, { items: tmp5, renderItem: callback1, getItemKey });
   const items4 = [closure_7(redux.Provider, obj2), ];
@@ -199,12 +199,12 @@ function AnimatedCounterTransitionGroup(count) {
 }
 function BasicCounter(arg0) {
   ({ count, textStyle, textColor, textVariant, formatter } = arg0);
-  return React5(Text_Text.Text, { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) });
+  return metroImportDefault(Text_Text.Text, { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) });
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { flex: 0, flexGrow: 0, flexShrink: 0, justifyContent: "flex-start", alignItems: "flex-start", overflow: "hidden" }, hidden: { opacity: 0 } });
 let obj = { ABOVE: -1, [-1]: "ABOVE", NEUTRAL: 0, [0]: "NEUTRAL", BELOW: 1, [1]: "BELOW" };
@@ -227,7 +227,7 @@ export default noop.memo(function AnimatedCounter(textColor) {
   }
   let str2 = textColor.textVariant;
   if (str2 === undefined) {
-    str2 = "text-sm/normal";
+    str2 = "body-sm/normal";
   }
   let defaultFormatter = textColor.formatter;
   if (defaultFormatter === undefined) {
@@ -235,10 +235,10 @@ export default noop.memo(function AnimatedCounter(textColor) {
   }
   if (animate) {
     const obj2 = { count, formatter: defaultFormatter, springConfig: textColor.springConfig, textColor: str, textVariant: str2, textStyle };
-    let tmp3Result = React5(AnimatedCounterTransitionGroup, obj2);
+    let tmp3Result = metroImportDefault(AnimatedCounterTransitionGroup, obj2);
   } else {
     obj = { count, formatter: defaultFormatter, textColor: str, textVariant: str2, textStyle };
-    tmp3Result = React5(BasicCounter, obj);
+    tmp3Result = metroImportDefault(BasicCounter, obj);
   }
   return tmp3Result;
 });

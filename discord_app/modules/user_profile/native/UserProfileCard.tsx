@@ -1,18 +1,18 @@
-// === Module 7496: UserProfileCard ===
+// === Module 7512: UserProfileCard ===
 
-// Module 7496 (UserProfileCard)
+// Module 7512 (UserProfileCard)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7498 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7514 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7497);
+const Constants = fn(7513);
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: closure_4 } = Constants);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { title: { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, titleContent: null, text: null, row: null, rowLabel: null, rowLabelText: null, rowSublabel: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -42,7 +42,7 @@ export default function UserProfileCard(arg0) {
     if (tmp3Result) {
       const obj3 = { style: tmp2.titleContent, children: null };
       const items1 = [titleLeadingIcon, , ];
-      const obj4 = { style: tmp2.text, accessibilityRole: "header", variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: title };
+      const obj4 = { style: tmp2.text, accessibilityRole: "header", variant: "body-sm/medium", color: "text-strong", lineClamp: 1, children: title };
       items1[1] = hasOwnProperty(Text_Text.Text, obj4);
       items1[2] = titleIcon;
       obj3.children = items1;
@@ -77,7 +77,7 @@ export function UserProfileFormRow(arg0) {
   if (labelColor == null) {
     labelColor = str2;
   }
-  items[1] = hasOwnProperty(Text_Text.Text, { variant: "text-md/semibold", color: labelColor, style: tmp.rowLabelText, children: label });
+  items[1] = hasOwnProperty(Text_Text.Text, { variant: "body-md/semibold", color: labelColor, style: tmp.rowLabelText, children: label });
   let tmp6Result = null != hint;
   if (tmp6Result) {
     const obj5 = { size, color: str };
@@ -103,5 +103,5 @@ export function UserProfileCardRows(children) {
   const obj = { children: null };
   const Children = noop.Children;
   obj.children = Children.map(children.children, (children, arg1) => closure_1_5(React.Fragment, { children }, arg1));
-  return hasOwnProperty(React5, obj);
+  return hasOwnProperty(metroImportDefault, obj);
 }

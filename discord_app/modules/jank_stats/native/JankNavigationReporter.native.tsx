@@ -1,18 +1,18 @@
-// === Module 19672: JankNavigationReporter ===
+// === Module 19777: JankNavigationReporter ===
 
-// Module 19672 (JankNavigationReporter)
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import useChatLayout from "useChatLayout" /* 5324 */;
-import getJankScreenName from "getJankScreenName" /* 18206 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 18210 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 18211 */;
+// Module 19777 (JankNavigationReporter)
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import useChatLayout from "useChatLayout" /* 5325 */;
+import getJankScreenName from "getJankScreenName" /* 18303 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 18307 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 18308 */;
 import size from "module_2" /* 2 */;
 
 const getJankScreenNameDefault = getJankScreenName;
 
 class JankNavigationReporter {
   constructor() {
-    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "channel_id" });
+    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "url" });
   }
 }
 const prototype = JankNavigationReporter.prototype;
@@ -102,4 +102,4 @@ prototype["shouldSettleInJS"] = function shouldSettleInJS(focusedRoute, _screens
 };
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankNavigationReporter.native.tsx");
 
-export default Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "channel_id" });
+export default Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "url" });

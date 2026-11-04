@@ -1,14 +1,14 @@
-// === Module 16657: UserProfilePrimaryGuildEditButton ===
+// === Module 16747: UserProfilePrimaryGuildEditButton ===
 
-// Module 16657 (UserProfilePrimaryGuildEditButton)
+// Module 16747 (UserProfilePrimaryGuildEditButton)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 
 require = fn;
-const GuildTagBadgeSize = fn(8517).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8534).GuildTagBadgeSize;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: nativeDefault.radii.sm } };
@@ -104,7 +104,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     if (tmp6Result4.isAndroid()) {
       num = 1;
     }
-    const sum = tmp6(tmp7[13]).TextStyleSheet["text-md/semibold"].fontSize + num;
+    const sum = tmp6(tmp7[13]).TextStyleSheet["body-md/semibold"].fontSize + num;
     const obj4 = { label: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, disabled: null };
     const intl2 = tmp6(tmp7[11]).intl;
     obj4.label = intl2.string(tmp6(tmp7[11]).t["DUD+5n"]);
@@ -112,7 +112,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     const obj5 = { text: combined };
     obj4.accessibilityValue = obj5;
     obj4.onPress = function handleOpenSelectPrimaryGuild() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16659, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16749, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild });
     };
     let tmp23Result = null;
     if (null != stateFromStores) {
@@ -123,7 +123,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj4.leading = tmp23Result;
     let tmp23Result2 = null;
     if (null != tag) {
-      const obj7 = { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "text-md/semibold", textColor: "text-default" };
+      const obj7 = { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "body-md/semibold", textColor: "text-default" };
       const items2 = [tmp.tag, tagStyle];
       obj7.containerStyles = items2;
       const obj8 = { lineHeight: sum };
@@ -131,7 +131,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
       obj7.guildTag = tag;
       obj7.guildBadge = guildTagBadgeUrl;
       obj7.badgeSize = GuildTagBadgeSize.SIZE_16;
-      tmp23Result2 = jsx(tmp6(tmp7[19]).BaseGuildTagChiplet, { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "text-md/semibold", textColor: "text-default" });
+      tmp23Result2 = jsx(tmp6(tmp7[19]).BaseGuildTagChiplet, { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "body-md/semibold", textColor: "text-default" });
     }
     obj4.trailing = tmp23Result2;
     obj4.disabled = disabled;

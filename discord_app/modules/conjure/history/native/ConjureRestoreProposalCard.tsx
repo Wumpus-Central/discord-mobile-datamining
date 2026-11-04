@@ -1,13 +1,13 @@
-// === Module 12913: ConjureRestoreProposalCard ===
+// === Module 12994: ConjureRestoreProposalCard ===
 
-// Module 12913 (ConjureRestoreProposalCard)
+// Module 12994 (ConjureRestoreProposalCard)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12272 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 12317 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12333 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 12382 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,14 +19,14 @@ const result = size.fileFinishedImporting("modules/conjure/history/native/Conjur
 export default function ConjureRestoreProposalCard(arg0) {
   ({ proposal, onRestore } = arg0);
   const relative = ConjureHistoryFormat.formatAuthoredAt(proposal.authored_at).relative;
-  const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.string(_modDef3995["t+b0rz"]);
   items = [React3(Text_Text.Text, obj2), , ];
-  const items1 = [React3(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: proposal.subject }), ];
+  const items1 = [React3(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: proposal.subject }), ];
   let tmp3Result = null;
   if (null != relative) {
-    const obj4 = { variant: "text-sm/normal", color: "text-muted", children: relative };
+    const obj4 = { variant: "body-sm/normal", color: "text-muted", children: relative };
     tmp3Result = React3(Text_Text.Text, obj4);
   }
   items1[1] = tmp3Result;
@@ -39,7 +39,7 @@ export default function ConjureRestoreProposalCard(arg0) {
     obj5.onPress = onRestore;
     tmp3Result2 = React3(components_Button_Button.Button, obj5);
   }
-  const obj3 = { variant: "text-md/medium", color: "text-default", children: proposal.subject };
+  const obj3 = { variant: "body-md/medium", color: "text-default", children: proposal.subject };
   const tmp5 = ConjureNativeCardSurfaceDefault;
   items[2] = tmp3Result2;
   return React3(tmp5, { children: React4(Stack_Stack.Stack, { direction: "vertical", spacing: 8, children: items }) });

@@ -1,16 +1,16 @@
-// === Module 15513: PremiumGroupFeaturesTableCard ===
+// === Module 15600: PremiumGroupFeaturesTableCard ===
 
-// Module 15513 (PremiumGroupFeaturesTableCard)
+// Module 15600 (PremiumGroupFeaturesTableCard)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ColorConstants from "ColorConstants" /* 7741 */;
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 10057 */;
-import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 15514 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ColorConstants from "ColorConstants" /* 7757 */;
+import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 10105 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 15601 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
@@ -19,7 +19,7 @@ class BetaPill {
   constructor() {
     tmp = closure_7();
     obj = { style: tmp.betaPill, children: null };
-    obj1 = { variant: "text-xs/semibold", style: tmp.betaText, children: null };
+    obj1 = { variant: "body-xs/semibold", style: tmp.betaText, children: null };
     intl = closure_0(closure_2[6]).intl;
     obj1.children = intl.string(closure_0(closure_2[6]).t.oW0eUd);
     obj.children = jsx(closure_0(closure_2[5]).Text, obj1);
@@ -28,7 +28,7 @@ class BetaPill {
 }
 const View = _mod17.View;
 const Gradients = ColorConstants.Gradients;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { premiumGroupCard: { padding: 16, borderRadius: nativeDefault.radii.sm - 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" }, headerContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 }, betaPill: null, betaText: null, title: null, description: null };
 let obj2 = { padding: 16, borderRadius: nativeDefault.radii.sm - 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" };
 obj.betaPill = { backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
@@ -38,7 +38,7 @@ let obj4 = { color: nativeDefault.colors.BLACK, textAlign: "center", textTransfo
 obj.title = { color: nativeDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
 const obj5 = { color: nativeDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
 obj.description = { color: nativeDefault.colors.TEXT_DEFAULT };
-const React5 = createStyles.createStyles(obj);
+const metroImportDefault = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
 
 export default function PremiumGroupFeaturesTableCard(arg0) {
@@ -62,9 +62,9 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     const items1 = [hasOwnProperty(PremiumGroupWordmarkDefault, { width: 181, height: 16 }), hasOwnProperty(BetaPill, {})];
     obj6.children = items1;
     const items2 = [timestampProducer(View, obj6), , ];
-    const obj7 = { variant: "text-sm/normal", style: tmp.title, children: subheaderString };
+    const obj7 = { variant: "body-sm/normal", style: tmp.title, children: subheaderString };
     items2[1] = hasOwnProperty(Text_Text.Text, obj7);
-    const obj8 = { variant: "text-sm/normal", style: tmp.description, children: bodyString };
+    const obj8 = { variant: "body-sm/normal", style: tmp.description, children: bodyString };
     items2[2] = hasOwnProperty(Text_Text.Text, obj8);
     obj2.children = items2;
     obj.children = timestampProducer(tmp2Result, obj2);

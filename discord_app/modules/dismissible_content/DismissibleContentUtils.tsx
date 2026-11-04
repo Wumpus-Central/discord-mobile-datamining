@@ -10,8 +10,8 @@ import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /*
 import DismissibleContentTypes from "DismissibleContentTypes" /* 4981 */;
 import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4988 */;
 import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5193 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5810 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5811 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5824 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5825 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -57,7 +57,7 @@ function markDismissibleContentAsDismissedPostProcessing(content, groupName) {
     groupName = groupName.groupName;
   }
   obj.groupName = groupName;
-  React7(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
+  React6(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
   const tmp = !DismissibleContentFrameworkStore.hasUserHitDCCap();
 }
 let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(arg0) {

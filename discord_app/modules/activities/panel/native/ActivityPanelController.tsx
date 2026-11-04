@@ -1,19 +1,19 @@
-// === Module 19285: ActivityPanelController ===
+// === Module 19389: ActivityPanelController ===
 
-// Module 19285 (ActivityPanelController)
+// Module 19389 (ActivityPanelController)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2148 */;
-import ChatInputUtils from "ChatInputUtils" /* 5330 */;
-import transitionToChannel from "transitionToChannel" /* 5876 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
-import DeviceOrientation from "DeviceOrientation" /* 9027 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11863 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11932 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 19286 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import transitionToChannel from "transitionToChannel" /* 5890 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
+import DeviceOrientation from "DeviceOrientation" /* 9044 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11922 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11991 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 19390 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
-import AppFreezeStore from "AppFreezeStore" /* 8988 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11985 */;
+import AppFreezeStore from "AppFreezeStore" /* 9005 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 12044 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 
@@ -256,7 +256,7 @@ class BaseActivityPanelController {
   }
 }
 let closure_11 = fn(2147).ACTIVITY_LOCKED_ASPECT_RATIO;
-const ActivityPanelModes = fn(5777).ActivityPanelModes;
+const ActivityPanelModes = fn(5791).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_14 = { x: 0, y: 0, gestureActive: false };
 const FunctionUtils = fn(2163);
@@ -356,6 +356,6 @@ export default function ActivityPanelController(children) {
     }
   }, items1);
   let obj = mode(504);
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(19289)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(19393)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

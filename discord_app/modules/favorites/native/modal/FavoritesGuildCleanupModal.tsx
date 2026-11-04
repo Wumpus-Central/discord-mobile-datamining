@@ -1,222 +1,123 @@
-// === Module 18343: FavoritesGuildCleanupModal ===
+// === Module 18439: FavoritesGuildCleanupModal ===
 
-// Module 18343 (FavoritesGuildCleanupModal)
+// Module 18439 (FavoritesGuildCleanupModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3577 from "module_3577" /* 3577 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
-import TableRadioRow from "TableRadioRow" /* 7187 */;
-import Modal from "Modal" /* 11619 */;
-import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 18346 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import TableRadioRow from "TableRadioRow" /* 7202 */;
+import Modal from "Modal" /* 11670 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function closeCleanup() {
   ModalActionCreatorsDefault.popWithKey("FavoritesGuildCleanupModal");
 }
 function CleanupScreen() {
-  const tmp3 = closure_9(stage(loading[6])().bottom);
-  let validDays = stage(loading[7])(closeCleanup);
-  stage = validDays.stage;
-  loading = validDays.loading;
+  const tmp3 = closure_13(loading(1627)().bottom);
+  const tmp4 = loading(18440)(closeCleanup);
+  _require = tmp4;
+  loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };
   const obj2 = { style: tmp3.scroller, contentContainerStyle: tmp3.content, keyboardShouldPersistTaps: "handled", children: null };
-  const obj3 = { spacing: stage(loading[4]).space.PX_16, children: null };
-  const obj4 = { variant: "text-md/normal", children: null };
-  const intl = validDays(loading[10]).intl;
-  obj4.children = intl.string(stage(loading[11]).DbeF7Y);
-  items = [closure_6(validDays(loading[9]).Text, obj4), , ];
-  const obj5 = { children: null };
-  if ("filter" === stage) {
-    const obj6 = { label: null, value: null, onChange: null, keyboardType: "number-pad", maxLength: 5, disabled: null, errorMessage: null };
-    const intl6 = tmp5(tmp2[10]).intl;
-    obj6.label = intl6.string(tmp(tmp2[11]).VheZQr);
-    ({ days: obj14.value, setDays: obj14.onChange } = validDays);
-    obj6.disabled = loading;
-    let stringResult;
-    if ("" !== validDays.days) {
-      if (!validDays.validDays) {
-        const intl7 = tmp5(tmp2[10]).intl;
-        stringResult = intl7.string(tmp(tmp2[11])["wT+K51"]);
-      }
-    }
-    obj6.errorMessage = stringResult;
-    const items1 = [closure_6(tmp5(tmp2[12]).TextInput, obj6), ];
-    const obj7 = { title: null, hasIcons: false, value: null, onChange: null, children: null };
-    const intl8 = tmp5(tmp2[10]).intl;
-    obj7.title = intl8.string(tmp(tmp2[11]).KIzpqi);
-    let str2 = validDays.categoryId;
-    if (str2 == null) {
-      str2 = "all";
-    }
-    obj7.value = str2;
-    obj7.onChange = function onChange(arg0) {
-      let tmp2 = null;
-      if ("all" !== arg0) {
-        tmp2 = arg0;
-      }
-      return validDays.setCategoryId(tmp2);
-    };
-    const obj8 = { label: null, value: "all", disabled: null };
-    const intl9 = tmp5(tmp2[10]).intl;
-    obj8.label = intl9.string(tmp(tmp2[11])["gOUr+P"]);
-    obj8.disabled = loading;
-    const items2 = [closure_6(tmp5(tmp2[14]).TableRadioRow, obj8), ];
-    const categories = validDays.categories;
-    items2[1] = categories.map((label) => timestampProducer(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: loading }, label.id));
-    obj7.children = items2;
-    items1[1] = closure_7(tmp5(tmp2[13]).TableRadioGroup, obj7);
-    obj5.children = items1;
-    let tmp12 = obj5;
-  } else {
-    const obj9 = { variant: "text-sm/medium", accessibilityLiveRegion: "polite", children: null };
-    const intl2 = tmp5(tmp2[10]).intl;
-    const obj10 = { count: length };
-    obj9.children = intl2.format(tmp(tmp2[11]).kdvwuo, obj10);
-    const items3 = [closure_6(tmp5(tmp2[9]).Text, obj9), , ];
-    if (validDays.candidates.length > 0) {
-      const obj11 = { spacing: tmp(tmp2[4]).space.PX_8, children: null };
-      let Button = tmp5(tmp2[15]).Button;
-      let map = tmp5(tmp2[10]).intl;
-      let string = map.string;
-      let items6 = tmp(tmp2[11]);
-      const obj12 = { text: string(validDays.allSelected ? items6.AX7Fmc : items6.ZuaHVJ), variant: "tertiary", size: "sm", disabled: loading, onPress: validDays.toggleSelection };
-      items6 = [closure_6(Button, obj12), ];
-      const obj13 = { title: null, hasIcons: false, children: null };
-      const intl4 = tmp5(tmp2[10]).intl;
-      obj13.title = intl4.string(tmp(tmp2[11]).wPednI);
-      const candidates = validDays.candidates;
-      map = candidates.map;
-      string = map((channel) => {
-        validDays = channel;
-        const obj = {
-          channel,
-          checked: null,
-          disabled: loading,
-          onChange(arg0) {
-            selectedIds = arg0;
-            return selectedIds.setSelectedIds((arr) => {
-              if (id) {
-                items = [];
-                items[HermesBuiltin.arraySpread(arr, 0)] = id.id;
-                let found = items;
-              } else {
-                found = arr.filter((item) => item !== id.id);
-              }
-              return found;
-            });
-          }
-        };
-        let selectedIds = validDays.selectedIds;
-        obj.checked = selectedIds.includes(channel.id);
-        return closure_1_6(CleanupCandidateRow, obj, channel.id);
-      });
-      obj13.children = string;
-      Button = closure_6(tmp5(tmp2[16]).TableRowGroup, obj13);
-      items6[1] = Button;
-      obj11.children = items6;
-      closure_7(tmp5(tmp2[8]).Stack, obj11);
-    } else {
-      const obj15 = { variant: "text-md/normal", children: null };
-      const intl3 = tmp5(tmp2[10]).intl;
-      obj15.children = intl3.string(tmp(tmp2[11])["4KOdCv"]);
-      items3[1] = closure_6(tmp5(tmp2[9]).Text, obj15);
-      let tmp6Result = null;
-      if (validDays.unknownCount > 0) {
-        const obj16 = { variant: "text-sm/normal", children: null };
-        const intl5 = tmp5(tmp2[10]).intl;
-        const obj17 = { count: validDays.unknownCount };
-        obj16.children = intl5.format(tmp(tmp2[11])["rM/wWh"], obj17);
-        tmp6Result = closure_6(tmp5(tmp2[9]).Text, obj16);
-      }
-      items3[2] = tmp6Result;
-      obj5.children = items3;
-      tmp12 = obj5;
-    }
-  }
-  items[1] = closure_7(closure_8, tmp12);
-  let tmp6Result2 = null;
-  if (validDays.error) {
-    const obj18 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: null };
-    const intl10 = tmp5(tmp2[10]).intl;
-    obj18.children = intl10.string(tmp(tmp2[11]).toOYQw);
-    tmp6Result2 = closure_6(tmp5(tmp2[9]).Text, obj18);
-  }
-  items[2] = tmp6Result2;
-  obj3.children = items;
-  obj2.children = closure_7(validDays(loading[8]).Stack, obj3);
-  const items4 = [closure_6(closure_5, obj2), ];
-  const obj19 = { style: tmp3.actions, spacing: stage(loading[4]).space.PX_8, children: null };
-  const intl11 = tmp5(tmp2[10]).intl;
-  if ("filter" === stage) {
-    let stringResult1 = intl11.string(tmp(tmp2[11]).zAljrZ);
-  } else {
-    const obj20 = { count: length };
-    stringResult1 = intl11.formatToPlainString(tmp(tmp2[11]).jiqJtj, obj20);
-  }
-  const obj21 = { text: stringResult1, variant: null, disabled: null, loading: null, onPress: null };
-  let str3 = "primary";
-  if ("review" === stage) {
-    str3 = "destructive";
-  }
-  obj21.variant = str3;
-  if (loading) {
-    obj21.disabled = loading;
-    obj21.loading = loading;
-    obj21.onPress = function onPress() {
-      React4.dismiss();
-      if ("filter" === stage) {
-        validDays.review();
+  const obj3 = { spacing: loading(575).space.PX_16, children: null };
+  const obj4 = { hasIcons: false, children: null };
+  const obj5 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
+  let intl = require("util").intl;
+  obj5.label = intl.string(loading(3577).DIyQIF);
+  let intl2 = require("util").intl;
+  obj5.subLabel = intl2.string(loading(3577).d15FpO);
+  obj5.checked = tmp4.autoAdd;
+  obj5.disabled = loading;
+  obj5.onPress = tmp4.setAutoAdd;
+  items = [closure_10(require("TableCheckboxRow").TableCheckboxRow, obj5), ];
+  const obj6 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
+  const intl3 = require("util").intl;
+  obj6.label = intl3.string(loading(3577)["bI/czq"]);
+  const intl4 = require("util").intl;
+  obj6.subLabel = intl4.string(loading(3577).RRsgY0);
+  obj6.checked = tmp4.prune;
+  obj6.disabled = loading;
+  obj6.onPress = tmp4.setPrune;
+  items[1] = closure_10(require("TableCheckboxRow").TableCheckboxRow, obj6);
+  obj4.children = items;
+  const items1 = [closure_11(require("TableRowGroup").TableRowGroup, obj4), , ];
+  let tmp5Result = null;
+  if (tmp4.prune) {
+    const obj7 = { children: null };
+    const obj9 = { title: null, hasIcons: false, value: null, onChange: null, children: null };
+    const intl5 = tmp6(1113).intl;
+    obj9.title = intl5.string(tmp(3577).THUVKS);
+    ({ days: obj8.value, setDays: obj8.onChange } = tmp4);
+    obj9.children = closure_6.map((days) => {
+      if (days === React6) {
+        const intl2 = util.intl;
+        let stringResult = intl2.string(_modDef3577.EIVQqq);
       } else {
-        validDays.remove();
+        const intl = util.intl;
+        const obj = { days };
+        stringResult = intl.formatToPlainString(_modDef3577.eic1d0, obj);
       }
+      return closure_2_10(TableRadioRow.TableRadioRow, { label: stringResult, value: days, disabled: loading }, days);
+    });
+    const items2 = [closure_10(tmp6(7199).TableRadioGroup, obj9), ];
+    const obj10 = { title: null, hasIcons: false, value: null, onChange: null, children: null };
+    const intl6 = tmp6(1113).intl;
+    obj10.title = intl6.string(tmp(3577).KIzpqi);
+    obj10.value = tmp4.scope;
+    obj10.onChange = function onChange(arg0) {
+      return scope.setScope(arg0);
     };
-    const items5 = [closure_6(tmp5(tmp2[15]).Button, obj21), ];
-    const intl12 = tmp5(tmp2[10]).intl;
-    const t = tmp5(tmp2[10]).t;
-    const obj41 = {
-      text: intl12.string(tmp9 ? t["ETE/oC"] : t["13/7kX"]),
-      variant: "secondary",
-      disabled: loading,
-      onPress() {
-          if ("filter" === stage) {
-            ModalActionCreatorsDefault.popWithKey("FavoritesGuildCleanupModal");
-          } else {
-            validDays.setStage("filter");
-          }
-        }
-    };
-    items5[1] = closure_6(tmp5(tmp2[15]).Button, obj41);
-    obj19.children = items5;
-    items4[1] = closure_7(tmp5(tmp2[8]).Stack, obj19);
-    obj.children = items4;
-    return closure_7(validDays(loading[8]).Stack, obj);
-  } else if (tmp9) {
-    validDays = validDays.validDays;
-    let tmp17 = !validDays;
-  } else {
-    tmp17 = 0 === length;
+    const obj11 = { label, value: value2, disabled: loading };
+    const items3 = [closure_10(tmp6(7202).TableRadioRow, obj11), ];
+    const obj12 = { label: null, value: null, disabled: null };
+    const intl7 = tmp6(1113).intl;
+    obj12.label = intl7.string(tmp(3577)["gOUr+P"]);
+    obj12.value = value;
+    obj12.disabled = loading;
+    items3[1] = closure_10(tmp6(7202).TableRadioRow, obj12);
+    obj10.children = items3;
+    items2[1] = closure_11(tmp6(7199).TableRadioGroup, obj10);
+    obj7.children = items2;
+    tmp5Result = closure_11(closure_12, obj7);
   }
-}
-function CleanupCandidateRow(channel) {
-  channel = channel.channel;
-  ({ checked, disabled, onChange } = channel);
-  const tmp = useChannelNameDefault(channel);
-  const subLabel = useFavoritesCleanupActivityDefault(channel);
-  let label = tmp;
-  if (tmp == null) {
-    label = "";
+  items1[1] = tmp5Result;
+  let tmp7Result = null;
+  if (tmp4.error) {
+    const obj13 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: null };
+    const intl8 = tmp6(1113).intl;
+    obj13.children = intl8.string(tmp(3577).toOYQw);
+    tmp7Result = closure_10(tmp6(5761).Text, obj13);
   }
-  return timestampProducer(TableCheckboxRow.TableCheckboxRow, { label, subLabel, checked, disabled, onPress });
+  items1[2] = tmp7Result;
+  obj3.children = items1;
+  obj2.children = closure_11(require("Stack/Stack").Stack, obj3);
+  const items4 = [closure_10(ScrollView, obj2), ];
+  const obj14 = { style: tmp3.actions, spacing: loading(575).space.PX_8, children: null };
+  const obj27 = { text: null, disabled: null, loading: null, onPress: null };
+  const intl9 = tmp6(1113).intl;
+  obj27.text = intl9.string(require("util").t["R3BPH+"]);
+  let tmp16 = loading;
+  if (!loading) {
+    tmp16 = !tmp4.canSave;
+  }
+  obj27.disabled = tmp16;
+  obj27.loading = loading;
+  obj27.onPress = tmp4.save;
+  obj14.children = closure_10(require("components/Button/Button").Button, obj27);
+  items4[1] = closure_10(require("Stack/Stack").Stack, obj14);
+  obj.children = items4;
+  return closure_11(require("Stack/Stack").Stack, obj);
 }
-get_ActivityIndicator = fn(17);
-({ Keyboard: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const ScrollView = fn(17).ScrollView;
+const FavoritesConstants = fn(5003);
+({ FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: hasOwnProperty, FAVORITES_PRUNE_INACTIVE_THREADS_DAY_OPTIONS: closure_6, FAVORITES_PRUNE_SCOPE_ALL: metroImportDefault, FAVORITES_PRUNE_SCOPE_AUTO_ADDED: closure_8, FAVORITES_PRUNE_WHEN_ARCHIVED: closure_9 } = FavoritesConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5141);
-let closure_9 = createStyles.createStyles((arg0) => {
+let closure_13 = createStyles.createStyles((arg0) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroller: { flex: 1 }, content: null, actions: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
   obj.content = { padding: nativeDefault.space.PX_16 };
@@ -229,22 +130,16 @@ const result = size.fileFinishedImporting("modules/favorites/native/modal/Favori
 
 export default function FavoritesGuildCleanupModal() {
   const screens = noop.useMemo(() => {
-    let obj = { cleanup: null };
+    const obj = { cleanup: null };
     const obj2 = { title: null, headerLeft: null, render: null };
-    let intl = util.intl;
-    obj2.title = intl.string(_modDef3577["b081B+"]);
-    obj2.headerLeft = function headerLeft() {
-      const obj = { text: null, size: "sm", variant: "tertiary", onPress: null };
-      const intl = closure_1_0(1113).intl;
-      obj.text = intl.string(closure_1_0(1113).t["ETE/oC"]);
-      obj.onPress = onPress;
-      return closure_1_6(closure_1_0(5754).Button, obj);
-    };
+    const intl = require("util").intl;
+    obj2.title = intl.string(_modDef3577.hklnjs);
+    obj2.headerLeft = require("NavigatorHeader").getHeaderCloseButton(closeCleanup);
     obj2.render = function render() {
-      return closure_1_6(closure_1_11, {});
+      return closure_1_10(closure_1_15, {});
     };
     obj.cleanup = obj2;
     return obj;
   }, []);
-  return timestampProducer(Modal.Modal, { screens, initialRouteName: "cleanup" });
+  return closure_1_10(Modal.Modal, { screens, initialRouteName: "cleanup" });
 };

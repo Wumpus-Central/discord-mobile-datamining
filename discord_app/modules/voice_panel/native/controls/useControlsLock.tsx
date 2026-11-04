@@ -1,7 +1,7 @@
-// === Module 19364: useControlsLock ===
+// === Module 19468: useControlsLock ===
 
-// Module 19364 (useControlsLock)
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
+// Module 19468 (useControlsLock)
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

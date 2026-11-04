@@ -1,14 +1,14 @@
-// === Module 12937: useConjureProjectCreator ===
+// === Module 13019: useConjureProjectCreator ===
 
-// Module 12937 (useConjureProjectCreator)
+// Module 13019 (useConjureProjectCreator)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import UserUtils from "UserUtils" /* 5195 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12772 */;
-import ListUtils from "ListUtils" /* 12938 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12853 */;
+import ListUtils from "ListUtils" /* 13020 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureChatStore from "ConjureChatStore" /* 10981 */;
+import ConjureChatStore from "ConjureChatStore" /* 11029 */;
 
 require = fn;
 function useConjureProjectPeople(stateFromStores) {
@@ -97,9 +97,9 @@ export default function useConjureProjectCreator(stateFromStores) {
         let formatToPlainStringResult = intl.formatToPlainString(_modDef3995.t5RWBS, obj2);
       } else {
         const intl2 = intl(1113).intl;
-        const obj4 = { creator: name, collaborators: intl(12938).getListSummaryLabel(mapped) };
+        const obj4 = { creator: name, collaborators: intl(13020).getListSummaryLabel(mapped) };
         formatToPlainStringResult = intl2.formatToPlainString(_modDef3995["b5uCe/"], obj4);
-        const intlResult = intl(12938);
+        const intlResult = intl(13020);
       }
       obj.label = formatToPlainStringResult;
     }

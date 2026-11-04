@@ -67,7 +67,7 @@ const UserSettingsConstants = fn(1082);
 const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;
 const UserSettingsDelay = UserSettingsConstants.UserSettingsDelay;
 const Constants = fn(1072);
-({ AbortCodes: closure_7, Endpoints: closure_8, AnalyticEvents: closure_9 } = Constants);
+({ AbortCodes: metroImportDefault, Endpoints: closure_8, AnalyticEvents: closure_9 } = Constants);
 const UserSettingsProtoLastWriteTimes = "UserSettingsProtoLastWriteTimes";
 let timestamp = Date.now();
 let Dispatcher = Dispatcher_mod;
@@ -573,11 +573,11 @@ prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit(
 };
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   closure_0 = arg0;
-  return obj.updateAsync("guilds", async (arg0) => f86953(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f87288(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   closure_0 = id;
-  const f86942 = (arg0) => {
+  const f87277 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync("guilds", async (guilds) => obj2(1233).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -918,7 +918,7 @@ export { setGuildThemeSourcePreferenceOverride };
 export function clearGuildThemeSourcePreferenceOverride(guildThemeSourcePreference) {
   obj2(1196).GuildThemeSourcePreference.UNSPECIFIED;
   obj2 = guildThemeSourcePreference;
-  const f86942 = (arg0) => {
+  const f87277 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync("guilds", async (guilds) => obj2(1233).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -986,7 +986,7 @@ export function removeDismissedRecurringContent(GUILD_POWERUP_NOTIFICATION) {
   return updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 }
 export function clearGuildDismissedContents() {
-  const f86953 = (guilds) => {
+  const f87288 = (guilds) => {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -1003,7 +1003,7 @@ export function clearGuildDismissedContents() {
       }
     }
   };
-  return obj.updateAsync("guilds", async (arg0) => f86953(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f87288(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 export function clearDismissedContents() {
   return obj.updateAsync("userContent", async (arg0) => {

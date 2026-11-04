@@ -1,22 +1,22 @@
-// === Module 15015: CutoutableAvatarImage ===
+// === Module 15095: CutoutableAvatarImage ===
 
-// Module 15015 (CutoutableAvatarImage)
+// Module 15095 (CutoutableAvatarImage)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import v1 from "v1" /* 1266 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ClipView from "ClipView" /* 9637 */;
-import getChannelIcon from "getChannelIcon" /* 15017 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 15018 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ClipView from "ClipView" /* 9656 */;
+import getChannelIcon from "getChannelIcon" /* 15097 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 15098 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
-const inlineStyles = Circle(8155);
-const inlineStylesDefault = tmp9(8155);
+const inlineStyles = Circle(8171);
+const inlineStylesDefault = tmp9(8171);
 require = fn;
 function StaticNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
@@ -31,8 +31,8 @@ function StaticNativeCutoutAvatarImage(cutout) {
   obj2 = { style: null, source: tmp2, usesSmallCache: true };
   const items1 = [obj2.image, imageStyle];
   obj2.style = items1;
-  obj.children = React5(FastImageDefault, obj2);
-  return React5(ClipViewDefault, obj);
+  obj.children = metroImportDefault(FastImageDefault, obj2);
+  return metroImportDefault(ClipViewDefault, obj);
 }
 function AnimatedNativeCutoutAvatarImage(arg0) {
   ({ cutout, source, style, imageStyle } = arg0);
@@ -82,18 +82,18 @@ function AnimatedNativeCutoutAvatarImage(arg0) {
   const obj3 = { style: null, source: getReactNativeSVGImageSourceDefault(source), usesSmallCache: true };
   const items2 = [obj2.image, imageStyle];
   obj3.style = items2;
-  obj2.children = React5(FastImageDefault, obj3);
-  return React5(ClipView.ClipViewAnimated, obj2);
+  obj2.children = metroImportDefault(FastImageDefault, obj3);
+  return metroImportDefault(ClipView.ClipViewAnimated, obj2);
 }
 function NativeCutoutAvatarImage(animate) {
   if (true === animate.animate) {
     obj2 = {};
     const merged = Object.assign(animate);
-    let tmp6 = React5(AnimatedNativeCutoutAvatarImage, obj2);
+    let tmp6 = metroImportDefault(AnimatedNativeCutoutAvatarImage, obj2);
   } else {
     const obj = {};
     const merged1 = Object.assign(animate);
-    tmp6 = React5(StaticNativeCutoutAvatarImage, obj);
+    tmp6 = metroImportDefault(StaticNativeCutoutAvatarImage, obj);
   }
   return tmp6;
 }
@@ -138,9 +138,9 @@ function CutoutAvatarImage(arg0) {
       const obj4 = { tintColor };
       obj3.style = obj4;
       obj3.source = getReactNativeSVGImageSourceDefault(source);
-      size1.children = React5(FastImageDefault, obj3);
-      let tmp8 = React5(inlineStyles.ForeignObject, size1);
-      let tmp10 = React5;
+      size1.children = metroImportDefault(FastImageDefault, obj3);
+      let tmp8 = metroImportDefault(inlineStyles.ForeignObject, size1);
+      let tmp10 = metroImportDefault;
     }
     obj5 = { style, children: null };
     const size2 = { width: size, height: size, id: v4Result, children: null };
@@ -156,13 +156,13 @@ function CutoutAvatarImage(arg0) {
     const obj8 = { cx: diff, cy: diff1, r: radius, fill: "black" };
     items[1] = tmp10(inlineStyles.Circle, obj8);
     size2.children = items;
-    obj7.children = React6(inlineStyles.Mask, size2);
+    obj7.children = React5(inlineStyles.Mask, size2);
     const items1 = [tmp10(inlineStyles.Defs, obj7), tmp8, ];
     if (null == cutout.border) {
       const size4 = { height: "100%", width: "100%", children: null };
       items1[2] = null;
       size4.children = items1;
-      obj5.children = React6(tmp9Result, size4);
+      obj5.children = React5(tmp9Result, size4);
       return tmp10(hasOwnProperty, obj5);
     } else if (CIRCULAR === tmp4.CIRCULAR) {
       Circle = inlineStyles.Circle;
@@ -184,14 +184,14 @@ function CutoutAvatarImage(arg0) {
     tmp9Result = inlineStylesDefault;
   }
   const size6 = { x: "0", y: "0", height: "100%", width: "100%", href: getReactNativeSVGImageSourceDefault(source), mask: "url(#" + v4Result + ")" };
-  tmp8 = React5(inlineStyles.Image, size6);
-  tmp10 = React5;
+  tmp8 = metroImportDefault(inlineStyles.Image, size6);
+  tmp10 = metroImportDefault;
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHANNEL_SPRING_CONFIG = fn(15016).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(15096).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const logger = new LoggerDefault("UIKit - AvatarImage");
 let obj = { XXSMALL: "xxsmall", XSMALL: "xsmall", SMALL: "small", NORMAL: "normal", LARGE: "large", XLARGE: "xlarge", XLARGE_72: "xlarge72", XXLARGE: "xxlarge", PROFILE: "profile", REFRESH_MEDIUM_32: "refreshMedium32", XXSMALL_10: "xsmall10", XSMALL_20: "xsmall20", SIZE_16: "size16", LARGE_48: "large48", EDIT_AVATAR_DECORATION: "editAvatarDecoration", GIFT_START: "giftStart", GIFT_SUCCESS: "giftSuccess", YOUBAR_60: "youBar60", TABS_22: "tabs22" };
 const frozen = Object.freeze({ [obj.XXSMALL_10]: 10, [obj.SIZE_16]: 16, [obj.XXSMALL]: 18, [obj.XSMALL_20]: 20, [obj.XSMALL]: 24, [obj.SMALL]: 30, [obj.NORMAL]: 40, [obj.LARGE_48]: 48, [obj.LARGE]: 50, [obj.XLARGE]: 64, [obj.XLARGE_72]: 72, [obj.XXLARGE]: 80, [obj.PROFILE]: 128, [obj.EDIT_AVATAR_DECORATION]: 144, [obj.GIFT_START]: 184, [obj.GIFT_SUCCESS]: 236, [obj.REFRESH_MEDIUM_32]: 32, [obj.YOUBAR_60]: 60, [obj.TABS_22]: 22 });
@@ -264,10 +264,10 @@ export default noop.memo(function CutoutableAvatarImage(style) {
         obj6.source = avatarSource;
         obj6.style = items;
         obj6.imageStyle = tmp2;
-        let tmp26 = React5(NativeCutoutAvatarImage, obj6);
+        let tmp26 = metroImportDefault(NativeCutoutAvatarImage, obj6);
       } else {
         const obj7 = { style: items, size: tmp, animate, cutout, source: avatarSource };
-        tmp26 = React5(CutoutAvatarImage, obj7);
+        tmp26 = metroImportDefault(CutoutAvatarImage, obj7);
       }
     } else {
       const obj8 = { style: null, source: null, placeholder: null, usesSmallCache: true };
@@ -279,7 +279,7 @@ export default noop.memo(function CutoutableAvatarImage(style) {
         tmp22 = source1;
       }
       obj8.placeholder = tmp22;
-      return React5(FastImageDefault, obj8, "image");
+      return metroImportDefault(FastImageDefault, obj8, "image");
     }
   }
 }, function customShallowEqual(source, source2) {

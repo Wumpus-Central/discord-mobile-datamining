@@ -1,16 +1,16 @@
-// === Module 15203: UnlockWithNitroButton ===
+// === Module 15286: UnlockWithNitroButton ===
 
-// Module 15203 (UnlockWithNitroButton)
+// Module 15286 (UnlockWithNitroButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import BaseTextButton from "BaseTextButton" /* 5755 */;
-import ProductIds from "ProductIds" /* 7717 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 15189 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import BaseTextButton from "BaseTextButton" /* 5769 */;
+import ProductIds from "ProductIds" /* 7733 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 15269 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7721 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
+import IAPStore from "IAPStore" /* 7737 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7875 */;
 
 require = fn;
 const ShopCtaEnum = fn(1074).ShopCtaEnum;
@@ -39,8 +39,8 @@ export function UnlockWithNitroButton(shouldShrink) {
   }
   let tmp4Result;
   if (flag) {
-    const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
-    tmp4Result = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text });
+    const obj2 = { variant: "body-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
+    tmp4Result = jsx(Text_Text.Text, { variant: "body-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text });
   }
   const obj3 = { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null };
   let tmp6;

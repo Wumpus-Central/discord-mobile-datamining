@@ -1,24 +1,24 @@
-// === Module 18624: YouBarFloatingShade ===
+// === Module 18725: YouBarFloatingShade ===
 
-// Module 18624 (YouBarFloatingShade)
+// Module 18725 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5315 */;
-import useChatLayoutDefault from "useChatLayout" /* 5324 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 17220 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5316 */;
+import useChatLayoutDefault from "useChatLayout" /* 5325 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 17312 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5165 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(17218).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(18503).GUILD_LIST_WIDTH;
+let closure_5 = fn(17310).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(18598).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let size = fn(2);
@@ -63,7 +63,7 @@ export default noop.memo(function YouBarFloatingShade() {
   const obj3 = { style: null, pointerEvents: "box-only" };
   const items1 = [tmp.container, { height: youBarTotalHeight, opacity: 0 }];
   obj3.style = items1;
-  const items2 = [React5(View, obj3), , ];
+  const items2 = [metroImportDefault(View, obj3), , ];
   const obj4 = { style: null, colors: null, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" };
   const items3 = [tmp.container, ];
   const size = { bottom: sum / 2, height: sum / 2, width };
@@ -71,11 +71,11 @@ export default noop.memo(function YouBarFloatingShade() {
   obj4.style = items3;
   const items4 = [str2, str];
   obj4.colors = items4;
-  items2[1] = React5(LinearGradientDefault, obj4);
+  items2[1] = metroImportDefault(LinearGradientDefault, obj4);
   const obj5 = { style: null };
   const items5 = [tmp.container, { width, height: sum / 2, backgroundColor: str }];
   obj5.style = items5;
-  items2[2] = React5(View, obj5);
+  items2[2] = metroImportDefault(View, obj5);
   obj2.children = items2;
-  return React7(React6, obj2);
+  return React6(React5, obj2);
 });

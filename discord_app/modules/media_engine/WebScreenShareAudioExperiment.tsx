@@ -1,6 +1,6 @@
-// === Module 6005: WebScreenShareAudioExperiment ===
+// === Module 6020: WebScreenShareAudioExperiment ===
 
-// Module 6005 (WebScreenShareAudioExperiment)
+// Module 6020 (WebScreenShareAudioExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

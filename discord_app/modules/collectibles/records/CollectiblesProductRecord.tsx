@@ -1,14 +1,14 @@
-// === Module 7846: CollectiblesProductRecord ===
+// === Module 7862: CollectiblesProductRecord ===
 
-// Module 7846 (CollectiblesProductRecord)
+// Module 7862 (CollectiblesProductRecord)
 import getPricesFromServerDefault from "getPricesFromServer" /* 2172 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7847 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7853 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7863 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7869 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7848);
-({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
+const CollectiblesItemRecord = fn(7864);
+({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } = CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1072);
 ({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: closure_9 } = Constants);
@@ -30,7 +30,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   const merged2 = Object.assign(fromServerResult);
   obj.type = type;
   let tmp8 = null;
-  if (premium_type !== React6) {
+  if (premium_type !== React5) {
     tmp8 = premium_type;
   }
   obj.premiumType = tmp8;
@@ -60,7 +60,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.hideBadge = hide_badge;
   obj.isFirstParty = is_first_party;
   if (typeof CollectiblesProductRecord === "function") {
-    const tmp42 = new CollectiblesProductRecord(obj, fromServerResult, merged, this, React6);
+    const tmp42 = new CollectiblesProductRecord(obj, fromServerResult, merged, this, React5);
     ({ summary: tmp17.summary, type: tmp17.type, premiumType: tmp17.premiumType, items: tmp17.items, categorySkuId: tmp17.categorySkuId, isCategoryReward: tmp17.isCategoryReward, prices: tmp17.prices, bundledProducts: tmp17.bundledProducts, previewAssets: tmp17.previewAssets, googleSkuIds: tmp17.googleSkuIds, variants: tmp17.variants, eligibleOffers: tmp17.eligibleOffers, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge, isFirstParty: tmp17.isFirstParty, baseVariantName: tmp17.baseVariantName, variantLabel: tmp17.variantLabel, categoryWillUnpublishAt: tmp17.categoryWillUnpublishAt } = obj);
     return tmp42;
   } else {
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "id", items: "l", categorySkuId: "e", categoryWillUnpublishAt: "channel_id", isCategoryReward: "enabled", prices: "it", previewAssets: "flexDirection", googleSkuIds: "o", eligibleOffers: "id", variants: "parent", bundledProducts: "source", isFirstParty: "l" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "id", items: "ZodSet", categorySkuId: "GOOGLE_WALLET_VERIFY", categoryWillUnpublishAt: "TransitionGroup", isCategoryReward: "o", prices: "isArray", previewAssets: "pluralType", googleSkuIds: "flag_sr", eligibleOffers: "getNextIndex", variants: null, bundledProducts: "\u{1F1F8}\u{1F1FF}", isFirstParty: 6 };
               let str;
               if (first != null) {
                 str = first.optionValue;
@@ -188,9 +188,9 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               obj3.variantValue = str2;
               ({ id: obj2.storeListingId, id: obj2.skuId, name: obj2.name, summary: obj2.summary } = tenantMetadata);
               ({ type: obj2.type, premiumType } = collectibles);
-              let items1 = React6;
+              let items1 = React5;
               let premiumType1 = null;
-              if (premiumType !== React6) {
+              if (premiumType !== React5) {
                 premiumType1 = collectibles.premiumType;
               }
               obj3.premiumType = premiumType1;
@@ -216,8 +216,8 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               if (googleSkuIds == null) {
                 const obj5 = {};
                 item = "";
-                obj5[React7.MOBILE] = "";
-                obj5[React7.MOBILE_PREMIUM_TIER_2] = "";
+                obj5[React6.MOBILE] = "";
+                obj5[React6.MOBILE_PREMIUM_TIER_2] = "";
                 googleSkuIds = obj5;
               }
               obj3.googleSkuIds = googleSkuIds;

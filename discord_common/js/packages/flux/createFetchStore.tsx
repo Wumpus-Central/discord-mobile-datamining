@@ -8,15 +8,15 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-function areStatesEqual(colors, colors2) {
+function areStatesEqual(colors, current) {
   if (Array.isArray(colors)) {
     const _Array = Array;
-    if (Array.isArray(colors2)) {
-      let result = discord_common_shallowEqual.areArraysShallowEqual(colors, colors2);
+    if (Array.isArray(current)) {
+      let result = discord_common_shallowEqual.areArraysShallowEqual(colors, current);
     }
     return result;
   }
-  result = Object.is(colors, colors2);
+  result = Object.is(colors, current);
 }
 function defaultRetryableErrors(status) {
   let tmp = status instanceof HTTPResponseError;
@@ -33,7 +33,7 @@ function defaultBackoff() {
   return new BackoffDefault();
 }
 const noop = fn(19);
-({ useCallback: hasOwnProperty, useEffect: metroRequire, useState: closure_7 } = noop);
+({ useCallback: hasOwnProperty, useEffect: closure_6, useState: metroImportDefault } = noop);
 const SymbolResult = Symbol("NO_DATA");
 class HTTPResponseError extends Error {
   constructor() {

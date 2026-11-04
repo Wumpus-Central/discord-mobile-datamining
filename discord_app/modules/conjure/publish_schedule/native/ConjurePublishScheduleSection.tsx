@@ -1,10 +1,10 @@
-// === Module 12295: ConjurePublishScheduleSection ===
+// === Module 12360: ConjurePublishScheduleSection ===
 
-// Module 12295 (ConjurePublishScheduleSection)
+// Module 12360 (ConjurePublishScheduleSection)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import AlertModal from "AlertModal" /* 6084 */;
-import useConjurePublishScheduleDefault from "useConjurePublishSchedule" /* 12296 */;
+import AlertModal from "AlertModal" /* 6099 */;
+import useConjurePublishScheduleDefault from "useConjurePublishSchedule" /* 12361 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,16 +29,16 @@ export default function ConjurePublishScheduleSection(projectId) {
       }
     }
     const obj = { spacing: tmp(575).space.PX_16, children: null };
-    let obj2 = { variant: "heading-md/semibold", children: null };
+    let obj2 = { variant: "heading-sm/semibold", children: null };
     let intl = projectId(1113).intl;
     obj2.children = intl.string(tmp(3995).ptzKKH);
-    items = [closure_3(projectId(5747).Heading, obj2), , , , , ];
+    items = [closure_3(projectId(5761).Heading, obj2), , , , , ];
     let tmp8Result = null;
     if (tmp3.loading) {
-      const obj3 = { variant: "text-sm/normal", accessibilityLiveRegion: "polite", children: null };
+      const obj3 = { variant: "body-sm/normal", accessibilityLiveRegion: "polite", children: null };
       let intl2 = tmp7(1113).intl;
       obj3.children = intl2.string(tmp(3995)["71yzD9"]);
-      tmp8Result = closure_3(tmp7(5747).Text, obj3);
+      tmp8Result = closure_3(tmp7(5761).Text, obj3);
     }
     items[1] = tmp8Result;
     let tmp6Result = null;
@@ -46,13 +46,13 @@ export default function ConjurePublishScheduleSection(projectId) {
       tmp6Result = null;
       if (null != tmp3.saved) {
         const obj4 = { children: null };
-        const obj5 = { variant: "text-sm/normal", color: "text-subtle", children: null };
+        const obj5 = { variant: "body-sm/normal", color: "text-subtle", children: null };
         let intl3 = tmp7(1113).intl;
         obj5.children = intl3.string(tmp(3995).ubcNP7);
-        const items1 = [closure_3(tmp7(5747).Text, obj5), ];
+        const items1 = [closure_3(tmp7(5761).Text, obj5), ];
         const obj6 = { spacing: tmp(575).space.PX_8, children: null };
-        const result = tmp7(12297).publishScheduleDetails(tmp3.saved);
-        const items2 = [result.map((children, index) => closure_1_3(projectId(dependencyMap[5]).Text, { variant: "text-sm/normal", children }, index)), ];
+        const result = tmp7(12362).publishScheduleDetails(tmp3.saved);
+        const items2 = [result.map((children, index) => closure_1_3(projectId(dependencyMap[5]).Text, { variant: "body-sm/normal", children }, index)), ];
         const obj7 = { variant: "secondary", text: null, disabled: null, onPress: null };
         const intl4 = tmp7(1113).intl;
         obj7.text = intl4.string(tmp(3995).J7ZMMf);
@@ -68,25 +68,25 @@ export default function ConjurePublishScheduleSection(projectId) {
           obj2.onConfirm = remove.remove;
           AlertModal.showConfirmModal(obj2);
         };
-        items2[1] = closure_3(tmp7(5754).Button, obj7);
+        items2[1] = closure_3(tmp7(5768).Button, obj7);
         obj6.children = items2;
-        items1[1] = closure_4(tmp7(6147).Stack, obj6);
+        items1[1] = closure_4(tmp7(6162).Stack, obj6);
         obj4.children = items1;
         tmp6Result = closure_4(closure_5, obj4);
-        const tmp7Result = tmp7(12297);
+        const tmp7Result = tmp7(12362);
       }
     }
     items[2] = tmp6Result;
     let tmp8Result4 = null;
     if (null != tmp3.error) {
-      const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", accessibilityLiveRegion: "assertive", children: tmp3.error };
-      tmp8Result4 = closure_3(tmp7(5747).Text, obj8);
+      const obj8 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", accessibilityLiveRegion: "assertive", children: tmp3.error };
+      tmp8Result4 = closure_3(tmp7(5761).Text, obj8);
     }
     items[3] = tmp8Result4;
     let tmp8Result5 = null;
     if (null != tmp3.status) {
-      const obj9 = { variant: "text-sm/normal", accessibilityLiveRegion: "polite", children: tmp3.status };
-      tmp8Result5 = closure_3(tmp7(5747).Text, obj9);
+      const obj9 = { variant: "body-sm/normal", accessibilityLiveRegion: "polite", children: tmp3.status };
+      tmp8Result5 = closure_3(tmp7(5761).Text, obj9);
     }
     items[4] = tmp8Result5;
     let tmp8Result6 = null;
@@ -97,12 +97,12 @@ export default function ConjurePublishScheduleSection(projectId) {
         const intl5 = tmp7(1113).intl;
         obj10.text = intl5.string(tmp(3995).iLTcFU);
         obj10.onPress = tmp3.retry;
-        tmp8Result6 = closure_3(tmp7(5754).Button, obj10);
+        tmp8Result6 = closure_3(tmp7(5768).Button, obj10);
       }
     }
     items[5] = tmp8Result6;
     obj.children = items;
-    tmp6Result2 = closure_4(projectId(6147).Stack, obj);
+    tmp6Result2 = closure_4(projectId(6162).Stack, obj);
   }
   return tmp4;
 };

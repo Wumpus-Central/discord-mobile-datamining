@@ -1,18 +1,18 @@
-// === Module 13558: DestinationFailedAlertModal ===
+// === Module 13642: DestinationFailedAlertModal ===
 
-// Module 13558 (DestinationFailedAlertModal)
+// Module 13642 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import AlertModal from "AlertModal" /* 6084 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelNameDefault from "useChannelName" /* 5786 */;
+import AlertModal from "AlertModal" /* 6099 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10977 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -25,7 +25,7 @@ function FailedGroupDMRow(channel) {
   const tmp2 = useChannelNameDefault(channel);
   obj2.size = native.AvatarSizes.REFRESH_MEDIUM_32;
   obj2.channel = channel;
-  items = [closure_1_10(GroupDMAvatarDefault, obj2), closure_1_10(Text_Text.Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp2 })];
+  items = [closure_1_10(GroupDMAvatarDefault, obj2), closure_1_10(Text_Text.Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp2 })];
   obj.children = items;
   return closure_1_11(View, obj);
 }
@@ -41,7 +41,7 @@ function FailedUserRow(user) {
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: false, isVROnline: null, size: true, avatarDecoration: 148, autoStatusCutout: "zh-Hant-HK" };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: 45.053, avatarDecoration: null, autoStatusCutout: "\u{1F469}\u{1F3FB}\u200D\u{1F373}" };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;
@@ -52,12 +52,12 @@ function FailedUserRow(user) {
     obj4.size = tmp2(1187).AvatarSizes.XSMALL;
     obj4.avatarDecoration = user.avatarDecoration;
     const items2 = [closure_10(tmp2(1187).Avatar, obj4), ];
-    const obj5 = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
+    const obj5 = { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     if (stateFromStores == null) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(5747).Text, obj5);
+    items2[1] = closure_10(tmp2(5761).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(13559).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(13559).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5747).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(13643).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(13643).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5761).Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }

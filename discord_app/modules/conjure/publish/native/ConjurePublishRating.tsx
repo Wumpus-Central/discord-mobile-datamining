@@ -1,14 +1,14 @@
-// === Module 12909: ConjurePublishRating ===
+// === Module 12990: ConjurePublishRating ===
 
-// Module 12909 (ConjurePublishRating)
+// Module 12990 (ConjurePublishRating)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import ConjureRatingFeedbackSheet from "ConjureRatingFeedbackSheet" /* 12911 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import ConjureRatingFeedbackSheet from "ConjureRatingFeedbackSheet" /* 12992 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -61,9 +61,9 @@ function Star(rating) {
   ConjurePublishRatingTsx1.__initData = tmp7;
   const animatedStyle = require("module_1652").useAnimatedStyle(ConjurePublishRatingTsx1);
   if (tmp2) {
-    let StarOutlineIcon = tmp3(10193).StarIcon;
+    let StarOutlineIcon = tmp3(10241).StarIcon;
   } else {
-    StarOutlineIcon = tmp3(10191).StarOutlineIcon;
+    StarOutlineIcon = tmp3(10239).StarOutlineIcon;
   }
   let obj3 = { style: tmp.star, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: null, onPress: null, children: null };
   let obj2 = require("module_1652");
@@ -79,7 +79,7 @@ function Star(rating) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, stars: { flexDirection: "row" }, star: null, thanks: null };
 let obj3 = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
@@ -96,9 +96,9 @@ export default function ConjurePublishRating(arg0) {
   let stateFromStores;
   let first;
   noop = undefined;
-  ({ projectId, turnId, cta, status } = arg0);
+  ({ projectId, turnId, cta, status, placement } = arg0);
   const tmp = closure_9();
-  const conjurePublishRating = rating(stateFromStores[14]).useConjurePublishRating({ projectId, turnId, cta, status });
+  const conjurePublishRating = rating(stateFromStores[14]).useConjurePublishRating({ projectId, turnId, cta, status, placement });
   rating = conjurePublishRating.rating;
   const rate = conjurePublishRating.rate;
   let obj = rating(stateFromStores[14]);
@@ -123,7 +123,7 @@ export default function ConjurePublishRating(arg0) {
       const obj3 = { style: tmp.thanks, accessibilityLiveRegion: "polite", children: null };
       const obj4 = { size: "xs", color: rate(tmp3[6]).colors.ICON_BRAND };
       const items2 = [closure_7(tmp2(tmp3[16]).SparklesIcon, obj4), ];
-      const obj5 = { variant: "text-xs/medium", color: "text-muted", children: tmp2(tmp3[14]).conjurePublishRatingThanks(rating) };
+      const obj5 = { variant: "body-xs/medium", color: "text-muted", children: tmp2(tmp3[14]).conjurePublishRatingThanks(rating) };
       items2[1] = closure_7(tmp2(tmp3[17]).Text, obj5);
       obj3.children = items2;
       let obj6 = obj3;
@@ -132,7 +132,7 @@ export default function ConjurePublishRating(arg0) {
     return tmp9(View, obj6);
   }
   obj6 = { style: tmp.row, children: null };
-  const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj7 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl = tmp2(tmp3[22]).intl;
   obj7.children = intl.string(rate(stateFromStores[23]).mTV326);
   const items3 = [closure_7(rating(stateFromStores[17]).Text, obj7), ];
@@ -153,8 +153,8 @@ export default function ConjurePublishRating(arg0) {
       if (null != tmp2) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
-        obj.openLazy(asyncRequireImpl(12911, dependencyMap.paths), ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY, obj2);
-        const tmp6 = asyncRequireImpl(12911, dependencyMap.paths);
+        obj.openLazy(asyncRequireImpl(12992, dependencyMap.paths), ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY, obj2);
+        const tmp6 = asyncRequireImpl(12992, dependencyMap.paths);
       }
     };
     return closure_1_7(Star, obj, rating);

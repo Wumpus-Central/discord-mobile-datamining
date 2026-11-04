@@ -1,6 +1,6 @@
-// === Module 16151: Badge/Badge ===
+// === Module 16240: Badge/Badge ===
 
-// Module 16151 (Badge/Badge)
+// Module 16240 (Badge/Badge)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
@@ -103,7 +103,7 @@ class Badge {
 }
 const View = fn(17).View;
 const BadgeConstants = fn(1189);
-({ BADGE_MASK_SIZE: hasOwnProperty, BADGE_MASK_UNREAD_SIZE: metroRequire, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
+({ BADGE_MASK_SIZE: hasOwnProperty, BADGE_MASK_UNREAD_SIZE: closure_6, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);

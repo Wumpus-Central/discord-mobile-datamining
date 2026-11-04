@@ -1,13 +1,13 @@
-// === Module 16938: FamilyCenterModalDataTooltip ===
+// === Module 17030: FamilyCenterModalDataTooltip ===
 
-// Module 16938 (FamilyCenterModalDataTooltip)
+// Module 17030 (FamilyCenterModalDataTooltip)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8494 */;
-import Modal from "Modal" /* 11619 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8511 */;
+import Modal from "Modal" /* 11670 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ function Row(arg0) {
   const obj2 = { style: tmp.iconContainer, children: hasOwnProperty(IconComponent, { style: tmp.icon }) };
   items = [hasOwnProperty(View, obj2), ];
   const obj4 = { style: tmp.content, children: null };
-  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.header, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: header }), hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: description })];
+  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.header, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: header }), hasOwnProperty(Text_Text.Text, { variant: "body-xs/medium", color: "text-default", children: description })];
   obj4.children = items1;
   items[1] = timestampProducer(View, obj4);
   obj.children = items;
@@ -39,7 +39,7 @@ function FamilyCenterModalDataTooltipScreen() {
   const obj4 = { children: null };
   const obj5 = { style: tmp.container, children: null };
   items = [
-    closure_5(require("Text/Text").Text, { style: tmp.groupHeader, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: ageSpecificText }),
+    closure_5(require("Text/Text").Text, { style: tmp.groupHeader, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: ageSpecificText }),
     sortedActivityTypeConfigs.map((item) => {
       [tmp, obj] = item;
       const obj2 = { IconComponent: obj[tmp], header: obj.tooltipHeader(), description: obj.tooltipDescription(closure_0) };
@@ -61,9 +61,9 @@ function FamilyCenterModalDataTooltipScreen() {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(8767).ChatIcon, [USER_CALLED]: fn(13499).PhoneIcon, [USER_ADD]: fn(5835).FriendsIcon, [GUILD_ADD]: fn(15618).ServerGridIcon, [GUILD_INTERACTION]: fn(8769).ThreadIcon, [PURCHASES]: fn(8139).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5860).ClockIcon, [GIFTS]: fn(13501).GiftIcon };
-({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7840).TeenActionDisplayType);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+let obj = { [USER_INTERACTION]: fn(8784).ChatIcon, [USER_CALLED]: fn(13583).PhoneIcon, [USER_ADD]: fn(5849).FriendsIcon, [GUILD_ADD]: fn(15705).ServerGridIcon, [GUILD_INTERACTION]: fn(8786).ThreadIcon, [PURCHASES]: fn(8155).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5874).ClockIcon, [GIFTS]: fn(13585).GiftIcon };
+({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7856).TeenActionDisplayType);
 let createStyles = fn(5141);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };
 let size = { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, flexShrink: 0, marginRight: nativeDefault.space.PX_12 };

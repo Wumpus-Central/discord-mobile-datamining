@@ -1,11 +1,11 @@
-// === Module 15147: UserProfilePrivateBanner ===
+// === Module 15227: UserProfilePrivateBanner ===
 
-// Module 15147 (UserProfilePrivateBanner)
+// Module 15227 (UserProfilePrivateBanner)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LockIcon from "LockIcon" /* 8791 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LockIcon from "LockIcon" /* 8808 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { banner: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(7497).PROFILE_TOP_LAYER_Z_INDEX } };
+let obj2 = { banner: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(7513).PROFILE_TOP_LAYER_Z_INDEX } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateBanner.tsx");
@@ -29,7 +29,7 @@ export default function UserProfilePrivateBanner(primaryColor) {
   const obj3 = { style: items, children: null };
   items[1] = tmp3;
   const items1 = [React4(LockIcon.LockIcon, { size: "xs", color: nativeDefault.colors.TEXT_DEFAULT }), ];
-  const obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.KPnd2O);
   items1[1] = React4(Text_Text.Text, obj5);

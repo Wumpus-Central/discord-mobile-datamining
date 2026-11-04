@@ -1,11 +1,11 @@
-// === Module 8697: GifTag ===
+// === Module 8714: GifTag ===
 
-// Module 8697 (GifTag)
+// Module 8714 (GifTag)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import createStyles from "createStyles" /* 5141 */;
 import n from "module_671" /* 671 */;
 import size from "module_2" /* 2 */;
@@ -27,9 +27,9 @@ export default function GifTag(style) {
   const obj = { style: null, pointerEvents: "none", children: null };
   items = [tmp.gifTag, style.style];
   obj.style = items;
-  const obj2 = { variant: "text-sm/semibold", color: "none", style: tmp.gifTagText, children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "none", style: tmp.gifTagText, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.I5gL2H);
-  obj.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "none", style: tmp.gifTagText, children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "body-sm/semibold", color: "none", style: tmp.gifTagText, children: null });
   return <View style={null} pointerEvents="none">{null}</View>;
 };

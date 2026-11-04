@@ -1,17 +1,17 @@
-// === Module 12164: SpeakerTile ===
+// === Module 12223: SpeakerTile ===
 
-// Module 12164 (SpeakerTile)
+// Module 12223 (SpeakerTile)
 import nativeDefault from "native" /* 575 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8074 */;
-import StageTileTypes from "StageTileTypes" /* 12165 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8090 */;
+import StageTileTypes from "StageTileTypes" /* 12224 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
 
 require = fn;
 const View = fn(17).View;
-const ParticipantTypes = fn(5801).ParticipantTypes;
+const ParticipantTypes = fn(5815).ParticipantTypes;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let obj = { FULL: 212, [212]: "FULL", HALF: 112, [112]: "HALF", THIRD: 112, [112]: "THIRD" };
 const result = obj.FULL * 1.7777777777777777;
 const result1 = obj.HALF * 1.7777777777777777;
@@ -120,7 +120,7 @@ export default noop.memo(function SpeakerTile(channel) {
           tmp10Result = closure_8(View, obj14);
         }
         const items10 = [tmp10Result, ];
-        const obj17 = { lineClamp: 1, style: tmp.nameplateText, variant: "text-sm/medium", color: "text-overlay-light", children: tmp9 };
+        const obj17 = { lineClamp: 1, style: tmp.nameplateText, variant: "body-sm/medium", color: "text-overlay-light", children: tmp9 };
         items10[1] = closure_7(tmp4(tmp3[21]).Text, obj17);
         obj13.children = items10;
         items7[1] = closure_8(View, obj13);

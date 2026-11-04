@@ -1,11 +1,11 @@
-// === Module 8814: RowGeneratorUtils ===
+// === Module 8831: RowGeneratorUtils ===
 
-// Module 8814 (RowGeneratorUtils)
+// Module 8831 (RowGeneratorUtils)
 import nativeDefault from "native" /* 575 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7565 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7581 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -13,8 +13,8 @@ import NativeMediaManagerModule from "NativeMediaManagerModule" /* 1441 */;
 
 require = fn;
 const MessageConstants = fn(5146);
-({ DEFAULT_GUILD_OFFICIAL_COLOR: metroRequire, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_7 } = MessageConstants);
-const SwipeActionsType = fn(8502).SwipeActionsType;
+({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: metroImportDefault } = MessageConstants);
+const SwipeActionsType = fn(8519).SwipeActionsType;
 const Constants = fn(1072);
 ({ MessageFlags: closure_9, MessageTypes: closure_10 } = Constants);
 let createStyles = fn(5141);
@@ -80,7 +80,7 @@ export default {
               }
               tmp3Result2 = MessageRecordUtils;
             }
-            const obj6 = { backgroundColor: officialMessageColor | React5, gutterColor: ephemeralGutterColor };
+            const obj6 = { backgroundColor: officialMessageColor | metroImportDefault, gutterColor: ephemeralGutterColor };
             return obj6;
           }
           tmp3Result = GuildOfficialMessageUtils;

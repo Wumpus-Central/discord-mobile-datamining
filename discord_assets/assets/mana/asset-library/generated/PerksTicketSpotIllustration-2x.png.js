@@ -1,6 +1,6 @@
-// === Module 20040: ? ===
+// === Module 20156: ? ===
 
-// Module 20040
+// Module 20156
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PerksTicketSpotIllustration-2x.png.js");

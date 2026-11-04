@@ -1,13 +1,13 @@
-// === Module 13426: GuildRaidResolveActionSheet ===
+// === Module 13510: GuildRaidResolveActionSheet ===
 
-// Module 13426 (GuildRaidResolveActionSheet)
+// Module 13510 (GuildRaidResolveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7081 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import AutomodFeedback from "AutomodFeedback" /* 7821 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7096 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import AutomodFeedback from "AutomodFeedback" /* 7837 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SafetyToastType = fn(7614).SafetyToastType;
+const SafetyToastType = fn(7630).SafetyToastType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -151,7 +151,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t["1zmw/H"]);
   const items1 = [handleTextInputChange(Text_Text.Text, obj7), , , , ];
-  let obj8 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
+  let obj8 = { style: tmp.subtitle, variant: "body-sm/normal", color: "text-default", children: null };
   const intl6 = util.intl;
   obj8.children = intl6.string(util.t.nF79oO);
   items1[1] = handleTextInputChange(Text_Text.Text, obj8);

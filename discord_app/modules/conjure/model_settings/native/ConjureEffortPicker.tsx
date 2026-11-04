@@ -1,13 +1,13 @@
-// === Module 12302: ConjureEffortPicker ===
+// === Module 12367: ConjureEffortPicker ===
 
-// Module 12302 (ConjureEffortPicker)
+// Module 12367 (ConjureEffortPicker)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import TableRadioRow from "TableRadioRow" /* 7187 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import ConjureEffortTiers from "ConjureEffortTiers" /* 12303 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 12304 */;
+import TableRadioRow from "TableRadioRow" /* 7202 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import ConjureEffortTiers from "ConjureEffortTiers" /* 12368 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 12369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -166,7 +166,7 @@ class ConjureEffortPicker {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/native/ConjureEffortPicker.tsx");
 

@@ -1,18 +1,18 @@
-// === Module 11353: NsfwGateChat ===
+// === Module 11403: NsfwGateChat ===
 
-// Module 11353 (NsfwGateChat)
+// Module 11403 (NsfwGateChat)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import _modDef11354 from "module_11354" /* 11354 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import _modDef11404 from "module_11404" /* 11404 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, border: null, description: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
@@ -27,9 +27,9 @@ export default function NsfwGateChat() {
   const obj = { children: null };
   items = [React4(React3, { style: tmp.border }), ];
   const obj3 = { style: tmp.container, children: null };
-  const obj4 = { source: _modDef11354 };
+  const obj4 = { source: _modDef11404 };
   const items1 = [React4(FastImageDefault, obj4), ];
-  const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
+  const obj5 = { style: tmp.description, variant: "body-md/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.W4Qyxr);
   items1[1] = React4(Text_Text.Text, obj5);

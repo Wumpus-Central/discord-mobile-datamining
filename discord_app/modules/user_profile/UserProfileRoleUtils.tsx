@@ -1,6 +1,6 @@
-// === Module 7495: UserProfileRoleUtils ===
+// === Module 7511: UserProfileRoleUtils ===
 
-// Module 7495 (UserProfileRoleUtils)
+// Module 7511 (UserProfileRoleUtils)
 import GuildRoleUtils from "GuildRoleUtils" /* 5051 */;
 import size from "module_2" /* 2 */;
 

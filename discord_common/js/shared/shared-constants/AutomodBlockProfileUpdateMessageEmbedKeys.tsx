@@ -1,6 +1,6 @@
-// === Module 7814: AutomodBlockProfileUpdateMessageEmbedKeys ===
+// === Module 7830: AutomodBlockProfileUpdateMessageEmbedKeys ===
 
-// Module 7814 (AutomodBlockProfileUpdateMessageEmbedKeys)
+// Module 7830 (AutomodBlockProfileUpdateMessageEmbedKeys)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodBlockProfileUpdateMessageEmbedKeys.tsx");

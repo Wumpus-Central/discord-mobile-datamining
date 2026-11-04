@@ -1,18 +1,18 @@
-// === Module 16729: SafetySettingsNotice ===
+// === Module 16821: SafetySettingsNotice ===
 
-// Module 16729 (SafetySettingsNotice)
+// Module 16821 (SafetySettingsNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 16730 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 16822 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7614).SafetySettingsNoticeAction;
+let closure_4 = fn(7630).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { blockedIgnoredRedirect: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.TEXT_LINK, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO } };
+let obj2 = { blockedIgnoredRedirect: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.TEXT_LINK, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_common/native/SafetySettingsNotice.tsx");
@@ -33,12 +33,12 @@ export default function SafetySettingsNotice(noticeType) {
   }, items1);
   const obj = { style: closure_7().blockedIgnoredRedirect, children: null };
   const items2 = [closure_5(labelHook(noticeType[7]).CircleInformationIcon, { color: "text-link" }), ];
-  const obj2 = { style: { flexShrink: 1 }, variant: "heading-sm/medium", children: null };
+  const obj2 = { style: { flexShrink: 1 }, variant: "heading-xs/medium", children: null };
   if (null != count) {
     const intl2 = labelHook(tmp7[9]).intl;
     const obj3 = {
       hook(children) {
-          return hasOwnProperty(Text_Text.Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress, children });
+          return hasOwnProperty(Text_Text.Text, { role: "link", variant: "heading-xs/medium", color: "text-link", onPress, children });
         },
       count
     };
@@ -47,7 +47,7 @@ export default function SafetySettingsNotice(noticeType) {
     const intl = labelHook(tmp7[9]).intl;
     const obj4 = {
       hook(children) {
-          return hasOwnProperty(Text_Text.Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress, children });
+          return hasOwnProperty(Text_Text.Text, { role: "link", variant: "heading-xs/medium", color: "text-link", onPress, children });
         }
     };
     formatResult = intl.format(label, obj4);

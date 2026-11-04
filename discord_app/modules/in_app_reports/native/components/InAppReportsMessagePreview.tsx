@@ -1,12 +1,12 @@
-// === Module 8500: InAppReportsMessagePreview ===
+// === Module 8517: InAppReportsMessagePreview ===
 
-// Module 8500 (InAppReportsMessagePreview)
+// Module 8517 (InAppReportsMessagePreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import RowGeneratorDefault from "RowGenerator" /* 8501 */;
-import ChatItemDefault from "ChatItem" /* 10016 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import RowGeneratorDefault from "RowGenerator" /* 8518 */;
+import ChatItemDefault from "ChatItem" /* 10064 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 export default function MessagePreview(message) {
   const tmp = closure_6();
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/semibold", children: null };
+  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "body-xs/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.iouM3a);
   items = [React4(Text_Text.Text, obj3), ];

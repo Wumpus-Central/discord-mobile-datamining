@@ -1,12 +1,12 @@
-// === Module 7405: UserGuildSettingsManager ===
+// === Module 7421: UserGuildSettingsManager ===
 
-// Module 7405 (UserGuildSettingsManager)
+// Module 7421 (UserGuildSettingsManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7406 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7422 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -266,7 +266,7 @@ function handleUserGuildSettingsFullUpdate() {
   const merged = Object.assign(CategoryCollapseStore.getCollapsedCategories());
 }
 const Constants = fn(1072);
-({ Endpoints: hasOwnProperty, FAVORITES: metroRequire, ME: closure_7 } = Constants);
+({ Endpoints: hasOwnProperty, FAVORITES: closure_6, ME: metroImportDefault } = Constants);
 let actions = {};
 let closure_9 = 0;
 let closure_10 = 15 * DurationsDefault.Millis.SECOND;

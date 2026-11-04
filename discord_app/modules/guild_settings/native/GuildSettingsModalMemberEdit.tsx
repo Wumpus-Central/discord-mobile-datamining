@@ -1,6 +1,6 @@
-// === Module 13399: GuildSettingsModalMemberEdit ===
+// === Module 13483: GuildSettingsModalMemberEdit ===
 
-// Module 13399 (GuildSettingsModalMemberEdit)
+// Module 13483 (GuildSettingsModalMemberEdit)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,27 +8,27 @@ import native from "native" /* 1187 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5060 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import TableRow2 from "TableRow" /* 7101 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import TableRowGroup2 from "TableRowGroup" /* 7186 */;
-import TextInput from "TextInput" /* 7208 */;
-import HeaderActionButton from "HeaderActionButton" /* 7682 */;
-import Form from "Form" /* 8301 */;
-import BotTagDefault from "BotTag" /* 9330 */;
-import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 13398 */;
-import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 13402 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 13403 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 13408 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import TableRow2 from "TableRow" /* 7116 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import TableRowGroup2 from "TableRowGroup" /* 7201 */;
+import TextInput from "TextInput" /* 7223 */;
+import HeaderActionButton from "HeaderActionButton" /* 7698 */;
+import Form from "Form" /* 8317 */;
+import BotTagDefault from "BotTag" /* 9347 */;
+import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 13482 */;
+import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 13486 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 13487 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 13492 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 13400 */;
+import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 13484 */;
 
 require = fn;
 class GuildSettingsModalMemberEditScene {
@@ -156,7 +156,7 @@ class GuildSettingsModalMemberEditScene {
 }
 const View = fn(17).View;
 const GuildRecord = fn(5008);
-({ isGuildOwner: metroRequire, isGuildOwnerWithRequiredMfaLevel: closure_7 } = GuildRecord);
+({ isGuildOwner: closure_6, isGuildOwnerWithRequiredMfaLevel: metroImportDefault } = GuildRecord);
 const isEveryoneRole = fn(5048).isEveryoneRole;
 const Constants = fn(1072);
 ({ Permissions: closure_15, GuildFeatures: closure_16, GuildSettingsSections: closure_17 } = Constants);
@@ -199,7 +199,7 @@ RolesList.prototype["render"] = function render() {
       closure_1 = tmp;
       const obj = {
         checked: tmp,
-        label: closure_1_18(require("RoleName"), { role: id, textVariant: "text-md/semibold", dotBackground: true, children: id.name }),
+        label: closure_1_18(require("RoleName"), { role: id, textVariant: "body-md/semibold", dotBackground: true, children: id.name }),
         onPress() {
           return onToggleRole(id.id, !closure_1);
         }
@@ -212,7 +212,7 @@ RolesList.prototype["render"] = function render() {
       closure_1 = tmp;
       const obj = {
         checked: tmp,
-        label: closure_1_18(require("RoleName"), { role: id, textVariant: "text-md/semibold", dotBackground: true, children: id.name }),
+        label: closure_1_18(require("RoleName"), { role: id, textVariant: "body-md/semibold", dotBackground: true, children: id.name }),
         onPress() {
           return onToggleRole(id.id, !closure_1);
         }
@@ -224,7 +224,7 @@ RolesList.prototype["render"] = function render() {
     const found3 = require("module_12")(sortedGuildRoles).filter((id) => importDefault.includes(id.id));
     const arr = require("module_12")(sortedGuildRoles);
     const valueResult2 = found3.map((role) => {
-      const obj = { label: closure_1_18(require("RoleName"), { role, textVariant: "text-md/semibold", dotBackground: true, children: role.name }) };
+      const obj = { label: closure_1_18(require("RoleName"), { role, textVariant: "body-md/semibold", dotBackground: true, children: role.name }) };
       return closure_1_18(guild(onToggleRole[18]).TableRow, obj, role.id);
     }).value();
     let obj = { label: null, onPress: null };
@@ -234,7 +234,7 @@ RolesList.prototype["render"] = function render() {
     valueResult2.push(closure_18(guild(onToggleRole[18]).TableRow, obj, "addition"));
     valueResult = valueResult2;
     const iter = found3.map((role) => {
-      const obj = { label: closure_1_18(require("RoleName"), { role, textVariant: "text-md/semibold", dotBackground: true, children: role.name }) };
+      const obj = { label: closure_1_18(require("RoleName"), { role, textVariant: "body-md/semibold", dotBackground: true, children: role.name }) };
       return closure_1_18(guild(onToggleRole[18]).TableRow, obj, role.id);
     });
   }
@@ -337,8 +337,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      fn = self(7124).getHeaderCloseButton(onClose);
-      let obj = self(7124);
+      fn = self(7139).getHeaderCloseButton(onClose);
+      let obj = self(7139);
     }
     let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
@@ -373,7 +373,7 @@ prototype["render"] = function render() {
     return null;
   } else {
     const obj2 = { style: tmp.rowLabel, children: null };
-    const obj3 = { variant: "text-sm/medium", children: UserUtilsDefault.getUserTag(user) };
+    const obj3 = { variant: "body-sm/medium", children: UserUtilsDefault.getUserTag(user) };
     items = [collapsedCategories(Text_Text.Text, obj3), ];
     let tmp17Result = null;
     if (user.bot) {
@@ -386,7 +386,7 @@ prototype["render"] = function render() {
     if (null == member) {
       let bot = timestampProducer(guild, user);
       if (!bot) {
-        bot = !React5(guild, currentUser);
+        bot = !metroImportDefault(guild, currentUser);
       }
       if (!bot) {
         bot = user.bot;
@@ -515,7 +515,7 @@ export default function MemberModalEdit(onClose) {
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  const tmp = onRemove(5735)(guildId);
+  const tmp = onRemove(5749)(guildId);
   closure_2 = tmp;
   items = [onClose, onRemove, tmp];
   const memo = noop.useMemo(() => {
@@ -540,7 +540,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_18(onRemove(13413), obj);
+          return closure_2_18(onRemove(13497), obj);
         }
       },
       [closure_2_17.MEMBER_BAN]: {
@@ -552,7 +552,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(13417), obj);
+          return closure_2_18(onRemove(13501), obj);
         }
       }
     };
@@ -560,6 +560,6 @@ export default function MemberModalEdit(onClose) {
   let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
   const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
   obj.initialRouteStack = items1;
-  return closure_18(onClose(7290).Navigator, obj);
+  return closure_18(onClose(7306).Navigator, obj);
 };
 export { GuildSettingsModalMemberEditScene };

@@ -1,14 +1,14 @@
-// === Module 19423: ActivityShelfItemSummary ===
+// === Module 19527: ActivityShelfItemSummary ===
 
-// Module 19423 (ActivityShelfItemSummary)
+// Module 19527 (ActivityShelfItemSummary)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ButtonPill from "ButtonPill" /* 5765 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5767 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 11739 */;
-import useActivityUsersDefault from "useActivityUsers" /* 19424 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ButtonPill from "ButtonPill" /* 5779 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5781 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11794 */;
+import useActivityUsersDefault from "useActivityUsers" /* 19528 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ function ParticipantsSummary(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
 let obj3 = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: nativeDefault.radii.round, backgroundColor: null, marginBottom: 8 };
@@ -48,7 +48,7 @@ export default function ActivityShelfItemSummary(submitting) {
   const obj2 = { style: tmp.ongoingActivityContainer, children: null };
   const obj3 = { style: tmp.overlayActivityName, children: null };
   let tmp7Result = flag;
-  items = [hasOwnProperty(Text_Text.Text, { variant: "text-md/semibold", style: flag ? tmp.loadingTextColor : tmp.overlayActivityNameText, lineClamp: 2, children: applicationName }), ];
+  items = [hasOwnProperty(Text_Text.Text, { variant: "body-md/semibold", style: flag ? tmp.loadingTextColor : tmp.overlayActivityNameText, lineClamp: 2, children: applicationName }), ];
   const obj5 = { style: null, children: null };
   const items1 = [tmp.ellipsis, _slicedToArray(ButtonPill.useLoadingStyles(flag, "md"), 2)[1]];
   obj5.style = items1;

@@ -1,19 +1,19 @@
-// === Module 9345: EventDetailRsvpSheet ===
+// === Module 9362: EventDetailRsvpSheet ===
 
-// Module 9345 (EventDetailRsvpSheet)
+// Module 9362 (EventDetailRsvpSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import BottomSheetModal from "BottomSheetModal" /* 5398 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import Form from "Form" /* 8301 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import StageSparkleDefault from "StageSparkle" /* 9234 */;
-import _modDef9346 from "module_9346" /* 9346 */;
+import BottomSheetModal from "BottomSheetModal" /* 5400 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import Form from "Form" /* 8317 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import StageSparkleDefault from "StageSparkle" /* 9251 */;
+import _modDef9363 from "module_9363" /* 9363 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
 import UserStore from "UserStore" /* 1385 */;
-import TextStyles from "TextStyles" /* 6843 */;
+import TextStyles from "TextStyles" /* 6858 */;
 
 require = fn;
 function EmptyDisplay(arg0) {
@@ -21,37 +21,37 @@ function EmptyDisplay(arg0) {
   const obj = { style: null, children: null };
   items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  const obj2 = { icon: _modDef9346 };
-  const items1 = [React5(StageSparkleDefault, obj2), children];
+  const obj2 = { icon: _modDef9363 };
+  const items1 = [metroImportDefault(StageSparkleDefault, obj2), children];
   obj.children = items1;
-  return React6(View, obj);
+  return React5(View, obj);
 }
 function FetchErrorDisplay(style) {
   const obj = { style: style.style, children: null };
   const obj2 = { style: closure_9().emptyDisplayTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.obChXk);
-  obj.children = React5(Text_Text.Text, obj2);
-  return React5(EmptyDisplay, obj);
+  obj.children = metroImportDefault(Text_Text.Text, obj2);
+  return metroImportDefault(EmptyDisplay, obj);
 }
 function NoUsersDisplay(style) {
   const obj = { style: style.style, children: null };
   const obj2 = { style: closure_9().emptyDisplayTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.hW0mBR);
-  obj.children = React5(Text_Text.Text, obj2);
-  return React5(EmptyDisplay, obj);
+  obj.children = metroImportDefault(Text_Text.Text, obj2);
+  return metroImportDefault(EmptyDisplay, obj);
 }
 function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
-  const obj3 = { source: _modDef9346, style: tmp.remainingUsersIcon };
-  obj2.children = React5(FastImageDefault, obj3);
-  obj.leading = React5(View, obj2);
+  const obj3 = { source: _modDef9363, style: tmp.remainingUsersIcon };
+  obj2.children = metroImportDefault(FastImageDefault, obj3);
+  obj.leading = metroImportDefault(View, obj2);
   const intl = util.intl;
   obj.label = intl.formatToPlainString(util.t.BdQTfR, { userRemainCount: remainingUsersGroup.remainingUsersGroup.count });
-  return React5(Form.FormRow, obj, "userRemaining");
+  return metroImportDefault(Form.FormRow, obj, "userRemaining");
 }
 function keyExtractor(count) {
   if (obj.isRemainingUsersGroup(count)) {
@@ -65,7 +65,7 @@ function keyExtractor(count) {
 const View = fn(17).View;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { staticMessageContentContainer: { flex: 1, padding: 16 }, userList: { paddingTop: 16 }, userListRow: { paddingVertical: 8 }, userName: { color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 }, emptyDisplayContainer: { alignItems: "center", justifyContent: "center", minHeight: 200 }, staticMessageContent: { height: "100%" }, emptyDisplayTitle: null, remainingUsersIcon: null, remainingUsersIconContainer: null };
 let obj4 = { paddingTop: 24 };
@@ -81,7 +81,7 @@ const memoResult = noop.memo(function UserRow(eventUser) {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
   const tmp = closure_9();
-  analyticsLocations = analyticsLocations(7446)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7462)().analyticsLocations;
   items = [UserStore];
   const stateFromStores = eventUser(504).useStateFromStores(items, () => UserStore.getUser(eventUser.user_id));
   const obj = eventUser(504);
@@ -109,11 +109,11 @@ const memoResult = noop.memo(function UserRow(eventUser) {
   }
   obj6.nick = nick;
   ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);
-  obj3.label = closure_7(analyticsLocations(9329), obj6);
+  obj3.label = closure_7(analyticsLocations(9346), obj6);
   obj3.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8301).FormRow, obj3, eventUser.user_id);
+  return closure_7(eventUser(8317).FormRow, obj3, eventUser.user_id);
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx");
@@ -142,10 +142,10 @@ export default function EventDetailRsvpSheet(arg0) {
     item = item.item;
     if (obj.isRemainingUsersGroup(item)) {
       const obj2 = { remainingUsersGroup: item };
-      let tmpResult = React5(RemainingUsersRow, obj2);
+      let tmpResult = metroImportDefault(RemainingUsersRow, obj2);
     } else {
       const obj3 = { eventUser: item, guildId };
-      tmpResult = React5(memoResult, obj3);
+      tmpResult = metroImportDefault(memoResult, obj3);
     }
     return tmpResult;
   }, items);
@@ -170,7 +170,7 @@ export default function EventDetailRsvpSheet(arg0) {
       }
       items1[1] = { paddingBottom: safeBottomPadding };
       obj3.style = items1;
-      obj2.children = closure_7(guildId(7080).ActivityIndicator, obj3);
+      obj2.children = closure_7(guildId(7095).ActivityIndicator, obj3);
       let tmp8 = closure_7(StaticMessageContainer, obj2);
     }
     return tmp8;
@@ -239,9 +239,9 @@ export default function EventDetailRsvpSheet(arg0) {
     obj.contentContainerStyle = items4;
     obj.data = userListItems;
     obj.renderItem = callback;
-    obj.ItemSeparatorComponent = guildId(8301).FormDivider;
+    obj.ItemSeparatorComponent = guildId(8317).FormDivider;
     obj.keyExtractor = keyExtractor;
-    tmp8 = closure_7(guildId(7414).BottomSheetFlashList, obj);
+    tmp8 = closure_7(guildId(7430).BottomSheetFlashList, obj);
   }
 };
 export const UserRow = memoResult;

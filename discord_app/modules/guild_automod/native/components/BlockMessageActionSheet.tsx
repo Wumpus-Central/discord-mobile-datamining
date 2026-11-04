@@ -1,17 +1,17 @@
-// === Module 19854: BlockMessageActionSheet ===
+// === Module 19970: BlockMessageActionSheet ===
 
-// Module 19854 (BlockMessageActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+// Module 19970 (BlockMessageActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(13428);
-({ AutomodActionType: hasOwnProperty, MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH: metroRequire } = Constants);
+const Constants = fn(13512);
+({ AutomodActionType: hasOwnProperty, MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH: closure_6 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/BlockMessageActionSheet.tsx");
 
@@ -38,9 +38,9 @@ export default function BlockMessageActionSheet(triggerType) {
     const obj2 = { keyboardShouldPersistTaps: "handled", header: null, children: null };
     const obj3 = { title: actionInfo.headerText };
     obj2.header = closure_7(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj3);
-    const obj4 = { variant: "text-md/normal", color: "text-default", children: actionInfo.descriptionText };
+    const obj4 = { variant: "body-md/normal", color: "text-default", children: actionInfo.descriptionText };
     items = [closure_7(require("Text/Text").Text, obj4), , , ];
-    const obj5 = { variant: "text-md/normal", color: "text-default", children: null };
+    const obj5 = { variant: "body-md/normal", color: "text-default", children: null };
     const intl2 = require("util").intl;
     obj5.children = intl2.string(require("util").t.Oa9oWJ);
     items[1] = closure_7(require("Text/Text").Text, obj5);

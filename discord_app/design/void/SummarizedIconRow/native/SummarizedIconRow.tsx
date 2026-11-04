@@ -1,8 +1,8 @@
-// === Module 16124: SummarizedIconRow ===
+// === Module 16213: SummarizedIconRow ===
 
-// Module 16124 (SummarizedIconRow)
+// Module 16213 (SummarizedIconRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,8 +12,8 @@ function OverflowSquircle(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.overflowSquircleWrap, style];
   obj.style = items;
-  const obj2 = { style: tmp.overflowSquircle, children: jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow }) };
-  obj.children = <View style={tmp.overflowSquircle}>{jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow })}</View>;
+  const obj2 = { style: tmp.overflowSquircle, children: jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow }) };
+  obj.children = <View style={tmp.overflowSquircle}>{jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow })}</View>;
   return <View style={null}>{null}</View>;
 }
 const View = fn(17).View;
@@ -121,7 +121,7 @@ export function OverflowText(arg0) {
   const obj = { style: null, children: null };
   items = [closure_4().overflowTextOnly, style];
   obj.style = items;
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
+  obj.children = jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow });
   return <View style={null}>{null}</View>;
 }
 export function OverflowTextSmall(arg0) {
@@ -129,7 +129,7 @@ export function OverflowTextSmall(arg0) {
   const obj = { style: null, children: null };
   items = [closure_4().overflowTextOnly, style];
   obj.style = items;
-  obj.children = jsx(Text_Text.Text, { variant: "text-xxs/medium", children: "+" + overflow });
+  obj.children = jsx(Text_Text.Text, { variant: "footnote/medium", children: "+" + overflow });
   return <View style={null}>{null}</View>;
 }
 export function OverflowCircle(arg0) {
@@ -138,7 +138,7 @@ export function OverflowCircle(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.overflowCircleWrap, style];
   obj.style = items;
-  const obj2 = { style: tmp.overflowCircle, children: jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow }) };
-  obj.children = <View style={tmp.overflowCircle}>{jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow })}</View>;
+  const obj2 = { style: tmp.overflowCircle, children: jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow }) };
+  obj.children = <View style={tmp.overflowCircle}>{jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow })}</View>;
   return <View style={null}>{null}</View>;
 }

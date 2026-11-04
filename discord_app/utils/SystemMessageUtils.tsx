@@ -1,19 +1,19 @@
-// === Module 8567: SystemMessageUtils ===
+// === Module 8584: SystemMessageUtils ===
 
-// Module 8567 (SystemMessageUtils)
+// Module 8584 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
-import useMessageAuthor from "useMessageAuthor" /* 6558 */;
-import GuildSpaceSystemMessageUtils from "GuildSpaceSystemMessageUtils" /* 8531 */;
-import MarkupParser from "MarkupParser" /* 8568 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8572 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8573 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8575 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8576 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8577 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
+import useMessageAuthor from "useMessageAuthor" /* 6573 */;
+import GuildSpaceSystemMessageUtils from "GuildSpaceSystemMessageUtils" /* 8548 */;
+import MarkupParser from "MarkupParser" /* 8585 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8589 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8590 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8592 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8593 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8594 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MessageRecord from "MessageRecord" /* 5084 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

@@ -1,6 +1,6 @@
-// === Module 9939: ScheduledMessageUtils ===
+// === Module 9957: ScheduledMessageUtils ===
 
-// Module 9939 (ScheduledMessageUtils)
+// Module 9957 (ScheduledMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -11,9 +11,9 @@ import GlobalUtils from "GlobalUtils" /* 1380 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2112 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
-import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7950 */;
-import ScheduledMessageTypes from "ScheduledMessageTypes" /* 9940 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
+import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7966 */;
+import ScheduledMessageTypes from "ScheduledMessageTypes" /* 9958 */;
 import _slicedToArray from "module_32" /* 32 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -23,9 +23,9 @@ const parseContentForSuppressNotificationsDefault = parseContentForSuppressNotif
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, MessageFlags: closure_7, Permissions: closure_8 } = Constants);
+({ AnalyticEvents: closure_6, MessageFlags: metroImportDefault, Permissions: closure_8 } = Constants);
 const PremiumTypes = fn(1387).PremiumTypes;
-const ScheduledMessagesConstants = fn(9927);
+const ScheduledMessagesConstants = fn(9945);
 ({ MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: closure_10, MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_11, MAX_SCHEDULED_MESSAGES_PER_USER: closure_12, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: map1 } = ScheduledMessagesConstants);
 class ScheduledMessagesConfig {
   constructor(arg0, arg1) {

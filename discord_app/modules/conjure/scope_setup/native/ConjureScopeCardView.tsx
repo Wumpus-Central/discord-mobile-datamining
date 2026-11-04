@@ -1,10 +1,10 @@
-// === Module 12888: ConjureScopeCardView ===
+// === Module 12969: ConjureScopeCardView ===
 
-// Module 12888 (ConjureScopeCardView)
+// Module 12969 (ConjureScopeCardView)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ConjureScopeServerCardDefault from "ConjureScopeServerCard" /* 12889 */;
-import ConjureClarificationCardDefault from "ConjureClarificationCard" /* 12894 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ConjureScopeServerCardDefault from "ConjureScopeServerCard" /* 12970 */;
+import ConjureClarificationCardDefault from "ConjureClarificationCard" /* 12975 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default function ConjureScopeCardView(onInputFocusChange) {
   items = [tmp6, ];
   let tmp3Result = null;
   if (null != card.failure) {
-    const obj7 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: card.failure };
+    const obj7 = { variant: "body-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: card.failure };
     tmp3Result = tmp3(Text_Text.Text, obj7);
   }
   items[1] = tmp3Result;

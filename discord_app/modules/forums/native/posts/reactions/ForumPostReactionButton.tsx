@@ -1,21 +1,21 @@
-// === Module 11268: ForumPostReactionButton ===
+// === Module 11318: ForumPostReactionButton ===
 
-// Module 11268 (ForumPostReactionButton)
+// Module 11318 (ForumPostReactionButton)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import UserSettings from "UserSettings" /* 4966 */;
 import ReactionUtils from "ReactionUtils" /* 5085 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5738 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import EmojiDefault from "Emoji" /* 7420 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 10027 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 10226 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 11269 */;
-import useReactionPermissionsDefault from "useReactionPermissions" /* 11282 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11284 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5752 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import EmojiDefault from "Emoji" /* 7436 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 10075 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 10274 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 11319 */;
+import useReactionPermissionsDefault from "useReactionPermissions" /* 11332 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11334 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -146,7 +146,7 @@ class ReactionButton {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
+({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 8, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT, minWidth: 32, minHeight: 26, maxHeight: 26 }, selected: null, textEmoji: null, imageEmoji: null, countContainer: null };
 let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 8, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT, backgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT, minWidth: 32, minHeight: 26, maxHeight: 26 };
@@ -154,7 +154,7 @@ obj2.selected = { borderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFA
 obj2.textEmoji = { fontSize: 12 };
 obj2.imageEmoji = { height: 16, width: 16 };
 obj2.countContainer = { paddingStart: 4 };
-const React5 = createStyles.createStyles(obj2);
+const metroImportDefault = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/reactions/ForumPostReactionButton.tsx");
 
@@ -167,7 +167,7 @@ export function AdditionalReactionCount(arg0) {
   items = [closure_7().container, containerStyle];
   obj.style = items;
   obj.onPress = useNativeForumPostHandlersDefault({ threadId }).onTapReactionCount;
-  const obj2 = { variant: "heading-sm/medium", color: "interactive-text-default", children: null };
+  const obj2 = { variant: "heading-xs/medium", color: "interactive-text-default", children: null };
   const items1 = ["+", count];
   obj2.children = items1;
   obj.children = hasOwnProperty(Text_Text.Text, obj2);

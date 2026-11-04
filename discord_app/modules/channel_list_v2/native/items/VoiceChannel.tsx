@@ -1,18 +1,18 @@
-// === Module 18441: VoiceChannel ===
+// === Module 18535: VoiceChannel ===
 
-// Module 18441 (VoiceChannel)
+// Module 18535 (VoiceChannel)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9213 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10932 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12523 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9230 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10980 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12604 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7830 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7846 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import ReadStateStore from "ReadStateStore" /* 6962 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
+import ReadStateStore from "ReadStateStore" /* 6977 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5901 */;
 
 require = fn;
 let closure_17 = async function _handleVoiceChannelPress(arg0) {
@@ -38,8 +38,8 @@ let closure_17 = async function _handleVoiceChannelPress(arg0) {
   })();
 };
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(5887).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(11186);
+const NO_VOICE_STATES = fn(5901).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(11236);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);

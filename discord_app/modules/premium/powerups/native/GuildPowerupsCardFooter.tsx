@@ -1,16 +1,16 @@
-// === Module 14229: GuildPowerupsCardFooter ===
+// === Module 14315: GuildPowerupsCardFooter ===
 
-// Module 14229 (GuildPowerupsCardFooter)
+// Module 14315 (GuildPowerupsCardFooter)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2699 from "module_2699" /* 2699 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7460 */;
-import BoostGemIcon from "BoostGemIcon" /* 10051 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14205 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 14230 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7227 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7476 */;
+import BoostGemIcon from "BoostGemIcon" /* 10099 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14291 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 14316 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
@@ -21,7 +21,7 @@ class GuildPowerupCardFooterActive {
     obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_POSITIVE };
     items = [, ];
     items[0] = jsx(closure_0(closure_2[3]).CircleCheckIcon, obj1);
-    items[1] = jsx(closure_0(closure_2[5]).Text, { color: "status-positive", variant: "text-sm/semibold", children: global.text });
+    items[1] = jsx(closure_0(closure_2[5]).Text, { color: "status-positive", variant: "body-sm/semibold", children: global.text });
     obj.children = items;
     return jsxs(View, obj);
   }
@@ -32,7 +32,7 @@ class GuildPowerupCardFooterExpiring {
     obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [, ];
     items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj1);
-    obj5 = { color: "text-feedback-warning", variant: "text-sm/semibold", children: null };
+    obj5 = { color: "text-feedback-warning", variant: "body-sm/semibold", children: null };
     intl = closure_0(closure_2[7]).intl;
     obj6 = { dateString: closure_1(closure_2[9])(global.dateString) };
     obj5.children = intl.formatToMarkdownString(closure_1(closure_2[8])["ol/ao/"], obj6);
@@ -47,7 +47,7 @@ class GuildPowerupCardFooterRemoving {
     obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [, ];
     items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj1);
-    obj5 = { color: "text-feedback-warning", variant: "text-sm/semibold", children: null };
+    obj5 = { color: "text-feedback-warning", variant: "body-sm/semibold", children: null };
     intl = closure_0(closure_2[7]).intl;
     obj6 = { dateString: closure_1(closure_2[10])(global.removingAt) };
     obj5.children = intl.formatToPlainString(closure_1(closure_2[8])["6e2ry1"], obj6);

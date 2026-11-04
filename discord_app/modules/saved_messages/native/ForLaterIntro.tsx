@@ -1,18 +1,18 @@
-// === Module 11315: ForLaterIntro ===
+// === Module 11365: ForLaterIntro ===
 
-// Module 11315 (ForLaterIntro)
+// Module 11365 (ForLaterIntro)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 5396 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ClockIcon from "ClockIcon" /* 5860 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7498 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 10322 */;
-import BookmarkIcon from "BookmarkIcon" /* 11298 */;
-import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 11316 */;
-import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 11320 */;
-import _modDef11324 from "module_11324" /* 11324 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 5397 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ClockIcon from "ClockIcon" /* 5874 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7514 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 10370 */;
+import BookmarkIcon from "BookmarkIcon" /* 11348 */;
+import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 11366 */;
+import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 11370 */;
+import _modDef11374 from "module_11374" /* 11374 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
@@ -24,24 +24,24 @@ function IntroDemo(isReminder) {
   const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef11324 };
+  const obj4 = { uri: _modDef11374 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
   items = [hasOwnProperty(FastImageDefault, obj3), ];
   const obj5 = { style: tmp.messageLines, children: null };
-  const obj6 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj6 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t.cqpybK);
   const items1 = [hasOwnProperty(Text_Text.Text, obj6), , , ];
-  const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj7 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   obj7.children = intl2.string(util.t["h+KPxy"]);
   items1[1] = hasOwnProperty(Text_Text.Text, obj7);
-  const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj8 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl3 = util.intl;
   obj8.children = intl3.string(util.t["63EVpI"]);
   items1[2] = hasOwnProperty(Text_Text.Text, obj8);
-  const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj9 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl4 = util.intl;
   obj9.children = intl4.string(util.t["KT/TDX"]);
   items1[3] = hasOwnProperty(Text_Text.Text, obj9);
@@ -80,7 +80,7 @@ function SheetRow(hasArrow) {
   }
   const obj = { style: items, children: null };
   items[1] = sheetRowHighlighted;
-  const items1 = [hasOwnProperty(icon, { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", style: tmp.sheetRowLabel, children: label }), ];
+  const items1 = [hasOwnProperty(icon, { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }), hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", style: tmp.sheetRowLabel, children: label }), ];
   let tmp5Result = null;
   if (flag) {
     const obj4 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -92,7 +92,7 @@ function SheetRow(hasArrow) {
 }
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const ACTION_SHEET_BORDER_RADIUS = ActionSheetConstants.ACTION_SHEET_BORDER_RADIUS;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { scrollView: { flex: 1 }, pageContainer: { flexGrow: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_32 }, container: { alignItems: "center" }, upsellImage: null, textContainer: null, text: null, demo: null, messages: null, avatar: null, messageLines: null, sheet: null, grabber: null, sheetRow: null, sheetRowHighlighted: null, sheetRowLabel: null };
 let obj2 = { flexGrow: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_32 };
 obj.upsellImage = { marginBottom: nativeDefault.space.PX_16 };
@@ -137,7 +137,7 @@ export default function ForLaterIntro(type) {
   const t = util.t;
   obj5.children = intl.string(tmp4 ? t["5Iw19e"] : t["93WOd1"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj5), ];
-  const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
+  const obj6 = { variant: "body-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
   const intl2 = util.intl;
   const t2 = util.t;
   const intl3 = util.intl;

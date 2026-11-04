@@ -1,18 +1,18 @@
-// === Module 13911: ForumPostGridFooter ===
+// === Module 13997: ForumPostGridFooter ===
 
-// Module 13911 (ForumPostGridFooter)
+// Module 13997 (ForumPostGridFooter)
 import nativeDefault from "native" /* 575 */;
-import ForumPostReactions from "ForumPostReactions" /* 11487 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 13861 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13912 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13913 */;
+import ForumPostReactions from "ForumPostReactions" /* 11537 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 13947 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13998 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13999 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", marginTop: 12 }, dot: null };
 let size = { height: 4, width: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
@@ -35,7 +35,7 @@ export default function ForumPostGridFooter(parentChannel) {
     const obj5 = { thread, typingUserIds, hasUnreads };
     items1[1] = hasOwnProperty(ForumPostTypingUsersDefault, obj5);
     obj3.children = items1;
-    tmp5Result = React5(timestampProducer, obj3);
+    tmp5Result = metroImportDefault(timestampProducer, obj3);
   }
   items[1] = tmp5Result;
   let tmp7Result = null != firstMessage;
@@ -45,5 +45,5 @@ export default function ForumPostGridFooter(parentChannel) {
   }
   items[2] = tmp7Result;
   obj2.children = items;
-  return React5(View, obj2);
+  return metroImportDefault(View, obj2);
 };

@@ -1,16 +1,16 @@
-// === Module 8029: _guildRoomConnect ===
+// === Module 8045: _guildRoomConnect ===
 
-// Module 8029 (_guildRoomConnect)
+// Module 8045 (_guildRoomConnect)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 8031 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 8032 */;
-import GuildRoomAnalytics from "GuildRoomAnalytics" /* 8051 */;
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 8061 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 8047 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 8048 */;
+import GuildRoomAnalytics from "GuildRoomAnalytics" /* 8067 */;
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 8077 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 8030 */;
+import GuildRoomStore from "GuildRoomStore" /* 8046 */;
 
 require = fn;
 let closure_8 = async function _guildRoomConnect(arg0) {
@@ -55,7 +55,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
           c11 = 1;
           closure_4 = closure_2;
           if (closure_2 == null) {
-            closure_4 = React5;
+            closure_4 = metroImportDefault;
           }
           closure_136_4 = closure_4;
           let UNSET = closure_3;

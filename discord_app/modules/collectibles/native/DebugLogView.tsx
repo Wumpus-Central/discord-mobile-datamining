@@ -1,16 +1,16 @@
-// === Module 18024: DebugLogView ===
+// === Module 18120: DebugLogView ===
 
-// Module 18024 (DebugLogView)
+// Module 18120 (DebugLogView)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import DevSettingsStore from "DevSettingsStore" /* 5764 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-const CollectiblesDebugStore = fn(7858);
-({ useCollectiblesDebugStore: closure_7, addDebugLog: closure_8 } = CollectiblesDebugStore);
+const CollectiblesDebugStore = fn(7874);
+({ useCollectiblesDebugStore: metroImportDefault, addDebugLog: closure_8 } = CollectiblesDebugStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_9, jsx: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -29,7 +29,7 @@ export default function DebugLogView() {
   const items1 = [arr.length, stateFromStores];
   const effect = noop.useEffect(() => {
     if (tmp) {
-      React6("Debug log initialized");
+      React5("Debug log initialized");
     }
     tmp = 0 === arr.length && stateFromStores;
   }, items1);
@@ -39,14 +39,14 @@ export default function DebugLogView() {
       const substr = arr.slice(Math.max(0, arr.length - 10));
       const obj2 = { style: tmp.debugLogContainer, children: null };
       const obj3 = { style: tmp.debugLogHeader, children: null };
-      const obj4 = { variant: "text-xs/normal", style: null, children: null };
+      const obj4 = { variant: "body-xs/normal", style: null, children: null };
       const obj5 = {};
       const merged = Object.assign(tmp.debugLogText);
       obj5.color = "#ffffff";
       obj4.style = obj5;
       const items2 = ["Debug Log (", arr.length, " entries)"];
       obj4.children = items2;
-      const items3 = [closure_9(tmp2(5747).Text, obj4), ];
+      const items3 = [closure_9(tmp2(5761).Text, obj4), ];
       const obj6 = {
         onPress: function handleClear() {
               closure_1();
@@ -54,12 +54,12 @@ export default function DebugLogView() {
         style: tmp.clearButton,
         children: null
       };
-      const obj7 = { variant: "text-xs/semibold", style: tmp.clearButtonText, children: "Clear" };
-      obj6.children = closure_10(tmp2(5747).Text, obj7);
+      const obj7 = { variant: "body-xs/semibold", style: tmp.clearButtonText, children: "Clear" };
+      obj6.children = closure_10(tmp2(5761).Text, obj7);
       items3[1] = closure_10(closure_5, obj6);
       obj3.children = items3;
       const items4 = [closure_9(stateFromStores, obj3), ];
-      const obj8 = { children: substr.map((children, index) => closure_2_10(Text_Text.Text, { variant: "text-xs/normal", style: debugLogText.debugLogText, children }, index)) };
+      const obj8 = { children: substr.map((children, index) => closure_2_10(Text_Text.Text, { variant: "body-xs/normal", style: debugLogText.debugLogText, children }, index)) };
       items4[1] = closure_10(closure_4, obj8);
       obj2.children = items4;
       return closure_9(stateFromStores, obj2);

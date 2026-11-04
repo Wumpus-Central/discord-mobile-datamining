@@ -1,19 +1,19 @@
-// === Module 11665: ConjureRichPresenceStore ===
+// === Module 11716: ConjureRichPresenceStore ===
 
-// Module 11665 (ConjureRichPresenceStore)
+// Module 11716 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActivityTypes from "ActivityTypes" /* 5882 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6999 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10887 */;
+import ActivityTypes from "ActivityTypes" /* 5896 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7014 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10935 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import IdleStore from "IdleStore" /* 6825 */;
+import IdleStore from "IdleStore" /* 6840 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
-import ConjurePagesStore from "ConjurePagesStore" /* 11666 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjurePagesStore from "ConjurePagesStore" /* 11717 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -217,7 +217,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_12);
                         details = closure_1_12.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F99718 */ function() { ... });
+                        let found = prop.filter(/* F100356 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -228,7 +228,7 @@ function updateActivity(withGracePeriod) {
                           timeout = null;
                         }
                         let _setTimeout = setTimeout;
-                        timeout = setTimeout(/* F99719 */ function() { ... }, closure_1_10);
+                        timeout = setTimeout(/* F100357 */ function() { ... }, closure_1_10);
                         closure_1_20.emitChange();
                       }
                     }, closure_1_10);

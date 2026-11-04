@@ -1,15 +1,15 @@
-// === Module 16981: FamilyCenterParentalControlsDataAndPrivacy ===
+// === Module 17073: FamilyCenterParentalControlsDataAndPrivacy ===
 
-// Module 16981 (FamilyCenterParentalControlsDataAndPrivacy)
+// Module 17073 (FamilyCenterParentalControlsDataAndPrivacy)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import SettingBuilders from "SettingBuilders" /* 11677 */;
-import SettingLayoutDefault from "SettingLayout" /* 16731 */;
+import SettingBuilders from "SettingBuilders" /* 11728 */;
+import SettingLayoutDefault from "SettingLayout" /* 16823 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");

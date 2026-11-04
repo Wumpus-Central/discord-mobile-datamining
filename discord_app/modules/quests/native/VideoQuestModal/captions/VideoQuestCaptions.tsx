@@ -1,8 +1,8 @@
-// === Module 17265: VideoQuestCaptions ===
+// === Module 17357: VideoQuestCaptions ===
 
-// Module 17265 (VideoQuestCaptions)
+// Module 17357 (VideoQuestCaptions)
 import nativeDefault from "native" /* 575 */;
-import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 17268 */;
+import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 17360 */;
 import noop from "module_19" /* 19 */;
 import n from "module_671" /* 671 */;
 
@@ -55,8 +55,8 @@ export function VideoQuestCaptions(currentTime) {
       const items1 = [tmp.container, style];
       obj2.style = items1;
       const obj3 = { style: tmp.captionBox, blurTheme: "dark", blurStyle: "default", blurAmount: 0.2, children: null };
-      const obj4 = { variant: "heading-sm/medium", style: tmp.captionText, children: memo.text };
-      obj3.children = jsx(currentTime(tmp3[9]).Text, { variant: "heading-sm/medium", style: tmp.captionText, children: memo.text });
+      const obj4 = { variant: "heading-xs/medium", style: tmp.captionText, children: memo.text };
+      obj3.children = jsx(currentTime(tmp3[9]).Text, { variant: "heading-xs/medium", style: tmp.captionText, children: memo.text });
       obj2.children = jsx(flag(tmp3[8]), { style: tmp.captionBox, blurTheme: "dark", blurStyle: "default", blurAmount: 0.2, children: null });
       tmp6 = <View style={null} importantForAccessibility="no-hide-descendants" accessibilityRole="none" accessible={false}>{null}</View>;
       const tmp10 = flag(tmp3[8]);

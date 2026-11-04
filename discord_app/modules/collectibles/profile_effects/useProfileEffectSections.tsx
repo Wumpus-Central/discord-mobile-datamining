@@ -1,11 +1,11 @@
-// === Module 16645: useProfileEffectSections ===
+// === Module 16735: useProfileEffectSections ===
 
-// Module 16645 (useProfileEffectSections)
+// Module 16735 (useProfileEffectSections)
 import util from "util" /* 1113 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7872 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7860 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7875 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -29,7 +29,7 @@ export default function useProfileEffectSections() {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(563);
-  return first(15209)(useMemo(() => {
+  return first(15292)(useMemo(() => {
     let obj = CollectiblesUtils;
     const profileEffects = obj.getProfileEffects(stateFromStores, first);
     const reduced = profileEffects.reduce((premium_purchase, skuId) => {

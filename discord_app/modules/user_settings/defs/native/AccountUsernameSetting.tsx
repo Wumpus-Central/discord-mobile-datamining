@@ -1,23 +1,23 @@
-// === Module 16747: AccountUsernameSetting ===
+// === Module 16839: AccountUsernameSetting ===
 
-// Module 16747 (AccountUsernameSetting)
+// Module 16839 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 13437 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 13521 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8556).MobileUserSettings.ACCOUNT,
+  parent: fn(8573).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountUsernameSettingTrailing() {
     items = [UserStore];
     return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
@@ -33,8 +33,8 @@ const route = SettingBuilders.createRoute({
     }
     let tmp5 = null;
     if (null != first) {
-      const obj2 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
-      tmp5 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
+      const obj2 = { variant: "body-xs/medium", color: "text-feedback-warning", children: first };
+      tmp5 = jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-feedback-warning", children: first });
     }
     return tmp5;
   },

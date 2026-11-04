@@ -1,6 +1,6 @@
-// === Module 12339: ConjureMcpUiExperiment ===
+// === Module 12404: ConjureMcpUiExperiment ===
 
-// Module 12339 (ConjureMcpUiExperiment)
+// Module 12404 (ConjureMcpUiExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 18915: SmartSearchCitation ===
+// === Module 19018: SmartSearchCitation ===
 
-// Module 18915 (SmartSearchCitation)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18916 */;
+// Module 19018 (SmartSearchCitation)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 19019 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_5 = fn(9958).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+let closure_5 = fn(9976).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchCitation.tsx");
@@ -50,7 +50,7 @@ export function SmartSearchCitation(smartSearchQuery) {
           } else {
             closure_0 = tmp3;
             const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-            const result = v2(14041).trackSmartSearchCitationOpened(obj4, v2(14039));
+            const result = v2(14127).trackSmartSearchCitationOpened(obj4, v2(14125));
             if ("conversation" === citation.sourceType) {
               dependencyMap = 1;
               v2 = 2;
@@ -58,7 +58,7 @@ export function SmartSearchCitation(smartSearchQuery) {
               const obj5 = { value: onPressConversationCitation(citation), done: false };
               return obj5;
             }
-            const obj6 = v2(14041);
+            const obj6 = v2(14127);
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;

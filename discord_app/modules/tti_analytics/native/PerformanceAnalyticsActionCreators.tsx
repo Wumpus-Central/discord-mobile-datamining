@@ -1,6 +1,6 @@
-// === Module 7940: PerformanceAnalyticsActionCreators ===
+// === Module 7956: PerformanceAnalyticsActionCreators ===
 
-// Module 7940 (PerformanceAnalyticsActionCreators)
+// Module 7956 (PerformanceAnalyticsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

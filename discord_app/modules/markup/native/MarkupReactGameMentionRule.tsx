@@ -1,10 +1,10 @@
-// === Module 11187: MarkupReactGameMentionRule ===
+// === Module 11237: MarkupReactGameMentionRule ===
 
-// Module 11187 (MarkupReactGameMentionRule)
+// Module 11237 (MarkupReactGameMentionRule)
 import nativeDefault from "native" /* 575 */;
-import useGame from "useGame" /* 7604 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9448 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9468 */;
+import useGame from "useGame" /* 7620 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9466 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9486 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -171,11 +171,11 @@ function FetchingGameMention(node) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MUTED_OPACITY_CONTENT = fn(11186).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11236).MUTED_OPACITY_CONTENT;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = nativeDefault.space.PX_4 / 2;
-let c9 = "text-sm/semibold";
+let c9 = "body-sm/semibold";
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((width, arg1) => {
   const obj = { inlineRoot: { flexDirection: "row" }, pill: { width: "auto", minWidth: 0, flexShrink: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, borderRadius: nativeDefault.radii.xs, paddingHorizontal: gap, gap }, name: { minWidth: 0, flexShrink: 1 }, icon: null };

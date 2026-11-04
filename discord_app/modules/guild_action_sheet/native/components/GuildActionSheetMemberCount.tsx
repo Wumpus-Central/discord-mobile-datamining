@@ -1,9 +1,9 @@
-// === Module 11476: GuildActionSheetMemberCount ===
+// === Module 11526: GuildActionSheetMemberCount ===
 
-// Module 11476 (GuildActionSheetMemberCount)
+// Module 11526 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -65,7 +65,7 @@ export default noop.memo(function MemberCount(arg0) {
     obj4.children = React3(View, obj5);
     const items2 = [React3(View, obj4), ];
     if (textVariant == null) {
-      textVariant = "text-sm/normal";
+      textVariant = "body-sm/normal";
     }
     const obj6 = { variant: textVariant, color: null, lineClamp: 1, style: null, children: null };
     if (color == null) {

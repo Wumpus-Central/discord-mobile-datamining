@@ -1,9 +1,9 @@
-// === Module 11295: ForLaterMessageCard ===
+// === Module 11345: ForLaterMessageCard ===
 
-// Module 11295 (ForLaterMessageCard)
+// Module 11345 (ForLaterMessageCard)
 import nativeDefault from "native" /* 575 */;
-import _modDef5859 from "module_5859" /* 5859 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 11296 */;
+import _modDef5873 from "module_5873" /* 5873 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 11346 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
@@ -25,7 +25,7 @@ class ForLaterDeletedMessageCard {
     tmp6 = closure_1;
     items1 = [, , ];
     items1[0] = jsx(savedMessage(closure_2[9]).CircleErrorIcon, obj1);
-    obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.deletedText, children: null };
+    obj6 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", style: tmp.deletedText, children: null };
     if (null != savedMessage.saveData.dueAt) {
       intl2 = tmp3(tmp4[11]).intl;
       stringResult = intl2.string(tmp3(tmp4[11]).t["wuQm+j"]);
@@ -51,7 +51,7 @@ class ForLaterDeletedMessageCard {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
+({ AnalyticEvents: metroImportDefault, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -130,7 +130,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     } else {
                       c1 = 1;
                       c2 = 1;
-                      const obj5 = { value: v3(11300).savedMessageJumpToMessage(tmp4, c1), done: false };
+                      const obj5 = { value: v3(11350).savedMessageJumpToMessage(tmp4, c1), done: false };
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -141,8 +141,8 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     const obj6 = { value, done: true };
                     return obj6;
                   } else {
-                    v1(6864).pop();
-                    const arr = v1(6864);
+                    v1(6879).pop();
+                    const arr = v1(6879);
                     const obj8 = { channel_id: tmp4.saveData.channelId, message_id: tmp4.saveData.messageId, message_author_id: null, type: null, due_duration: null };
                     const message = tmp4.message;
                     let id;
@@ -151,9 +151,9 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     }
                     obj8.message_author_id = id;
                     if (null != tmp4.saveData.dueAt) {
-                      let BOOKMARK = v3(10322).SavedMessageSortTypes.REMINDER;
+                      let BOOKMARK = v3(10370).SavedMessageSortTypes.REMINDER;
                     } else {
-                      BOOKMARK = v3(10322).SavedMessageSortTypes.BOOKMARK;
+                      BOOKMARK = v3(10370).SavedMessageSortTypes.BOOKMARK;
                     }
                     obj8.type = BOOKMARK;
                     let diffResult;

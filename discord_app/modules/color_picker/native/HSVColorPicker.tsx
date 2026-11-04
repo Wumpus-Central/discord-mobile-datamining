@@ -1,9 +1,9 @@
-// === Module 16597: HSVColorPicker ===
+// === Module 16688: HSVColorPicker ===
 
-// Module 16597 (HSVColorPicker)
+// Module 16688 (HSVColorPicker)
 import _mod1652 from "module_1652" /* 1652 */;
-import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 16598 */;
-import HuePickerDefault from "HuePicker" /* 16599 */;
+import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 16689 */;
+import HuePickerDefault from "HuePicker" /* 16690 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

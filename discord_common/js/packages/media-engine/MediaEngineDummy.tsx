@@ -1,9 +1,9 @@
-// === Module 5982: MediaEngineDummy ===
+// === Module 5996: MediaEngineDummy ===
 
-// Module 5982 (MediaEngineDummy)
-import MediaEngineEvent from "MediaEngineEvent" /* 5918 */;
-import Constants from "Constants" /* 5888 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5912 */;
+// Module 5996 (MediaEngineDummy)
+import MediaEngineEvent from "MediaEngineEvent" /* 5932 */;
+import Constants from "Constants" /* 5902 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5926 */;
 import size from "module_2" /* 2 */;
 
 function Video() {
@@ -152,6 +152,9 @@ prototype["setClipsV3MLEnabled"] = function setClipsV3MLEnabled() {
 
 };
 prototype["setClipsRecordingEnabled"] = function setClipsRecordingEnabled() {
+
+};
+prototype["setClipsCaptureOverrides"] = function setClipsCaptureOverrides() {
 
 };
 prototype["setClipsUIActive"] = function setClipsUIActive() {

@@ -1,15 +1,15 @@
-// === Module 15135: useProfileWishlistReadState ===
+// === Module 15215: useProfileWishlistReadState ===
 
-// Module 15135 (useProfileWishlistReadState)
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7907 */;
-import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15136 */;
+// Module 15215 (useProfileWishlistReadState)
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7923 */;
+import ProfileReadStateSection from "ProfileReadStateSection" /* 7924 */;
+import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15216 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WishlistStore from "WishlistStore" /* 9599 */;
-import UserProfileStore from "UserProfileStore" /* 7896 */;
+import WishlistStore from "WishlistStore" /* 9618 */;
+import UserProfileStore from "UserProfileStore" /* 7912 */;
 
 require = fn;
-const ProfileReadStateSection = fn(7908).ProfileReadStateSection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileWishlistReadState.tsx");
 
@@ -22,16 +22,16 @@ export default function useProfileWishlistReadState(ownerId) {
   }
   let stateFromStores1;
   closure_4 = undefined;
-  const profileReadStateConfigPeek = ownerId(wishlistId[5]).useProfileReadStateConfigPeek();
-  let obj = ownerId(wishlistId[5]);
+  const profileReadStateConfigPeek = ownerId(wishlistId[4]).useProfileReadStateConfigPeek();
+  let obj = ownerId(wishlistId[4]);
   let tmp = ownerId;
   const tmp2 = wishlistId;
   items = [UserProfileStore];
   const items1 = [ownerId];
-  const stateFromStores = ownerId(wishlistId[6]).useStateFromStores(items, () => {
+  const stateFromStores = ownerId(wishlistId[5]).useStateFromStores(items, () => {
     let profileReadStateSectionAckedAt = null;
     if (null != ownerId) {
-      profileReadStateSectionAckedAt = UserProfileStore.getProfileReadStateSectionAckedAt(tmp, ProfileReadStateSection.WISHLIST);
+      profileReadStateSectionAckedAt = UserProfileStore.getProfileReadStateSectionAckedAt(tmp, ProfileReadStateSection.ProfileReadStateSection.WISHLIST);
     }
     return profileReadStateSectionAckedAt;
   }, items1);
@@ -54,11 +54,11 @@ export default function useProfileWishlistReadState(ownerId) {
     }
     tmp6[1](tmp11);
   }
-  let obj2 = ownerId(wishlistId[6]);
+  let obj2 = ownerId(wishlistId[5]);
   const obj3 = stateFromStores1;
   const items2 = [closure_4, UserProfileStore];
   const items3 = [ownerId, wishlistId];
-  stateFromStores1 = tmp(tmp2[6]).useStateFromStores(items2, () => {
+  stateFromStores1 = tmp(tmp2[5]).useStateFromStores(items2, () => {
     if (null != ownerId) {
       if (null != wishlistId) {
         if (null != WishlistStore.getWishlist(wishlistId)) {

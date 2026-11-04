@@ -1,16 +1,16 @@
-// === Module 10290: FeedbackForm ===
+// === Module 10338: FeedbackForm ===
 
-// Module 10290 (FeedbackForm)
+// Module 10338 (FeedbackForm)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import FeedbackUtils from "FeedbackUtils" /* 10291 */;
+import FeedbackUtils from "FeedbackUtils" /* 10339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let FeedbackRating = fn(10288).FeedbackRating;
+let FeedbackRating = fn(10336).FeedbackRating;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { ratingsLabel: { textAlign: "center" }, reasonsHeader: { marginBottom: 8 }, reasonsList: { overflow: "hidden", marginBottom: 12, padding: 0 }, reason: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }, doNotShowAgainContainer: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
@@ -65,7 +65,7 @@ export function FeedbackForm(otherKey) {
     tmp14 = null;
     if (first.rating !== FeedbackRating.GOOD) {
       let obj2 = { children: null };
-      const obj3 = { style: tmp.reasonsHeader, variant: "eyebrow", color: "text-default", children: reasonsHeaderLabel };
+      const obj3 = { style: tmp.reasonsHeader, variant: "body-sm/medium", color: "text-default", children: reasonsHeaderLabel };
       const items2 = [c6(reasons(tmp3[11]).Text, obj3), ];
       const obj4 = { border: "subtle", style: tmp.reasonsList, children: tmp13 };
       items2[1] = c6(reasons(tmp3[12]).Card, obj4);
@@ -75,7 +75,7 @@ export function FeedbackForm(otherKey) {
   }
   let tmp17 = null;
   if (null != ratingsBodyLabel) {
-    const obj5 = { style: tmp.ratingsLabel, variant: "heading-md/semibold", color: "text-default", children: ratingsBodyLabel };
+    const obj5 = { style: tmp.ratingsLabel, variant: "heading-sm/semibold", color: "text-default", children: ratingsBodyLabel };
     tmp17 = c6(reasons(tmp3[11]).Text, obj5);
   }
   const children = [tmp17, , , ];

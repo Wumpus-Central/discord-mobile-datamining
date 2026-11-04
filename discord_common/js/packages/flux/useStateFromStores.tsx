@@ -24,7 +24,7 @@ function useStateFromStores(items, getCurrentUser, items1) {
   closure_6 = undefined;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentUser, prevDeps: "Boolean", state: "disabled" };
+    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentUser, prevDeps: "Boolean", state: "diversity" };
     tmp2.current = obj;
   }
   current = tmp2.current;
@@ -62,7 +62,7 @@ function useStateFromStores(items, getCurrentUser, items1) {
   return tmp5;
 }
 const noop = fn(19);
-({ useState: closure_4, useRef: hasOwnProperty, useInsertionEffect: metroRequire } = noop);
+({ useState: closure_4, useRef: hasOwnProperty, useInsertionEffect: closure_6 } = noop);
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
 

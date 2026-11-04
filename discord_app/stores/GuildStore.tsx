@@ -32,7 +32,7 @@ function createGuildRecordFromRust(features) {
 }
 ({ constructInPlace: closure_4, set: hasOwnProperty } = PlainRecord);
 const LibdiscoreStore = LibdiscoreStore2.LibdiscoreStore;
-({ GuildRecordTypeTag: metroRequire, updateJoinedAt: closure_7, updateGameApplications: closure_8 } = GuildRecord);
+({ GuildRecordTypeTag: closure_6, updateJoinedAt: metroImportDefault, updateGameApplications: closure_8 } = GuildRecord);
 const FAVORITES_GUILD_RECORD = FavoritesConstants.FAVORITES_GUILD_RECORD;
 class GuildStore extends LibdiscoreStore {
   constructor() {
@@ -220,7 +220,7 @@ const guildStore = new GuildStore({
           date = new Date(joinedAt);
         }
         if (tmp5) {
-          const result = get.set(guildId, React5(value, date));
+          const result = get.set(guildId, metroImportDefault(value, date));
         }
         tmp5 = date !== value.joinedAt && null != date;
       }
@@ -230,7 +230,7 @@ const guildStore = new GuildStore({
     guildId = guildId.guildId;
     value = get.get(guildId);
     if (null != value) {
-      const result = get.set(guildId, React6(value, guildId.gameApplicationIds));
+      const result = get.set(guildId, React5(value, guildId.gameApplicationIds));
     }
   }
 }, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());

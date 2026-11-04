@@ -1,8 +1,8 @@
-// === Module 20142: ActionableNotice ===
+// === Module 20258: ActionableNotice ===
 
-// Module 20142 (ActionableNotice)
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+// Module 20258 (ActionableNotice)
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export default function ActionableNotice(arg0) {
   const obj = { style: null, children: null };
   items = [style, tmp.container];
   obj.style = items;
-  const items1 = [React3(Text_Text.Text, { style: tmp.message, variant: "text-sm/medium", color: "text-default", children: message }), ];
+  const items1 = [React3(Text_Text.Text, { style: tmp.message, variant: "body-sm/medium", color: "text-default", children: message }), ];
   const obj3 = { style: tmp.actionButton, children: null };
   const obj4 = { size: "sm", onPress: onClick, disabled: null, text: null };
   if (!submitting) {

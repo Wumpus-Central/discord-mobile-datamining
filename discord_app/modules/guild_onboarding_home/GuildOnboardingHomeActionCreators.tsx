@@ -1,16 +1,16 @@
-// === Module 13964: GuildOnboardingHomeActionCreators ===
+// === Module 14050: GuildOnboardingHomeActionCreators ===
 
-// Module 13964 (GuildOnboardingHomeActionCreators)
+// Module 14050 (GuildOnboardingHomeActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import transitionToChannel from "transitionToChannel" /* 5876 */;
+import transitionToChannel from "transitionToChannel" /* 5890 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 5046 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7522 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8464 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7538 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8480 */;
 
 require = fn;
 let closure_10 = async function _fetchGuildHomeSettings() {
@@ -255,7 +255,7 @@ export function completeNewMemberAction(guildId, channelId) {
       }
     }
     const HTTP = HTTPUtils.HTTP;
-    const obj5 = { url: React7.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
+    const obj5 = { url: React6.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
     HTTP.post(obj5);
   }
   const obj2 = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId, channelId };

@@ -1,6 +1,6 @@
-// === Module 5783: AgeRestrictionStatus ===
+// === Module 5797: AgeRestrictionStatus ===
 
-// Module 5783 (AgeRestrictionStatus)
+// Module 5797 (AgeRestrictionStatus)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AgeRestrictionStatus.tsx");

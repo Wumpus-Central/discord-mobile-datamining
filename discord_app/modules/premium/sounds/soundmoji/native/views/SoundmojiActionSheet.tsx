@@ -1,14 +1,14 @@
-// === Module 13564: SoundmojiActionSheet ===
+// === Module 13648: SoundmojiActionSheet ===
 
-// Module 13564 (SoundmojiActionSheet)
+// Module 13648 (SoundmojiActionSheet)
 import nativeDefault from "native" /* 575 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 6177 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 6192 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 }, soundmojiContainer: { flexDirection: "row", alignItems: "center" }, emoji: null, textContainer: null };
 const PlatformUtils = fn(1377);
@@ -54,9 +54,9 @@ export default function SoundmojiActionSheet(guildId) {
     }
     const items1 = [tmp4Result, ];
     const obj5 = { style: tmp.textContainer, children: null };
-    const obj6 = { variant: "text-sm/semibold", children: memo.name };
+    const obj6 = { variant: "body-sm/semibold", children: memo.name };
     const items2 = [closure_5(guildId(messageId[10]).Text, obj6), ];
-    const obj11 = { variant: "text-sm/normal", children: null };
+    const obj11 = { variant: "body-sm/normal", children: null };
     const intl = tmp5(tmp6[11]).intl;
     obj11.children = intl.string(guildId(messageId[11]).t.Tj5Nwi);
     items2[1] = closure_5(guildId(messageId[10]).Text, obj11);

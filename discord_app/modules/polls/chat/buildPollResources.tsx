@@ -1,7 +1,7 @@
-// === Module 12686: buildPollResources ===
+// === Module 12767: buildPollResources ===
 
-// Module 12686 (buildPollResources)
-import buildPlatformPollResources from "buildPlatformPollResources" /* 12682 */;
+// Module 12767 (buildPollResources)
+import buildPlatformPollResources from "buildPlatformPollResources" /* 12763 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

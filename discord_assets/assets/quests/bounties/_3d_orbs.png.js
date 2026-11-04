@@ -1,6 +1,6 @@
-// === Module 17115: ? ===
+// === Module 17207: ? ===
 
-// Module 17115
+// Module 17207
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/quests/bounties/_3d_orbs.png.js");

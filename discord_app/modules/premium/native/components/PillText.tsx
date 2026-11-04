@@ -1,12 +1,12 @@
-// === Module 15446: PillText ===
+// === Module 15533: PillText ===
 
-// Module 15446 (PillText)
+// Module 15533 (PillText)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 15447 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 15534 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
@@ -23,6 +23,6 @@ export default function PillText(arg0) {
   items = [tmp.pillTextContainer, style];
   obj.style = items;
   const tmp2 = usePremiumPrimaryGradientColorsDefault();
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
+  obj.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
   return jsx(LinearGradientDefault, { style: null, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColorsDefault(), children: null });
 };

@@ -1,20 +1,20 @@
-// === Module 18996: NewGroupDMScreen ===
+// === Module 19099: NewGroupDMScreen ===
 
-// Module 18996 (NewGroupDMScreen)
+// Module 19099 (NewGroupDMScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
-import HeaderShared from "HeaderShared" /* 9943 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11768 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 18995 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
+import HeaderShared from "HeaderShared" /* 9961 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11824 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19098 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15788 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 15876 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -148,7 +148,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               const obj5 = { value: closure_1_20(length, closure_2_2), done: false };
                               return obj5;
                             } else {
-                              const obj6 = v3(7609);
+                              const obj6 = v3(7625);
                               v3 = 1;
                               dependencyMap = 1;
                               const obj7 = { value: obj6.addRecipients(id.id, length, undefined, closure_2_2), done: false };
@@ -182,21 +182,21 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             const obj = { value, done: true };
                             return obj;
                           } else {
-                            const tmp8 = v3(7611);
+                            const tmp8 = v3(7627);
                             const call = tmp8.call;
                             if (typeof call === "unknown") {
                               tmp8(false, true);
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(13320)(closure_128_3);
+                            v3(13403)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }
                           closure_128_3 = value;
                           v3 = 3;
                           dependencyMap = 1;
-                          const obj10 = { value: id(8063).monkeyPatchCall(), done: false };
+                          const obj10 = { value: id(8079).monkeyPatchCall(), done: false };
                           return obj10;
                         }
                       } catch (tmp26) {
@@ -277,8 +277,8 @@ let closure_22 = async function _handleInviteUsers(arg0) {
   }
 };
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserRowModes = fn(10857).UserRowModes;
+({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
+const UserRowModes = fn(10905).UserRowModes;
 const Constants = fn(1072);
 ({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = Constants);
 const jsxProd = fn(21);

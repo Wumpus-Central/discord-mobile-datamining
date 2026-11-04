@@ -1,8 +1,8 @@
-// === Module 11672: SwipeToReplyExperiment ===
+// === Module 11723: SwipeToReplyExperiment ===
 
-// Module 11672 (SwipeToReplyExperiment)
-import LaunchPadConstants from "LaunchPadConstants" /* 11673 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11674 */;
+// Module 11723 (SwipeToReplyExperiment)
+import LaunchPadConstants from "LaunchPadConstants" /* 11724 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11725 */;
 import size from "module_2" /* 2 */;
 
 const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;

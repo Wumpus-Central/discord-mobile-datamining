@@ -1,9 +1,9 @@
-// === Module 12252: conjureProjectNameError ===
+// === Module 12313: conjureProjectNameError ===
 
-// Module 12252 (conjureProjectNameError)
+// Module 12313 (conjureProjectNameError)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6965 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6980 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureProjectNameError.tsx");

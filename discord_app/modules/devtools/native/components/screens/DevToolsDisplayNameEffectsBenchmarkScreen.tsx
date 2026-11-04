@@ -1,15 +1,16 @@
-// === Module 17886: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 17982: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 17886 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 17982 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1405 */;
 import _modDef3059 from "module_3059" /* 3059 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10902 */;
-import types from "types" /* 10903 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10905 */;
-import _mod10909 from "module_10909" /* 10909 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10950 */;
+import types from "types" /* 10951 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10953 */;
+import _mod10957 from "module_10957" /* 10957 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -28,7 +29,7 @@ function effectName(arg0) {
 function OptionButtons(children) {
   ({ options, value: require, onChange: importDefault } = children);
   let obj = { spacing: 8, children: null };
-  items = [closure_8(Text_Text.Text, { variant: "text-sm/semibold", color: "text-subtle", children: children.caption }), ];
+  items = [closure_8(Text_Text.Text, { variant: "body-sm/semibold", color: "text-subtle", children: children.caption }), ];
   const tmp = closure_15();
   items[1] = closure_8(Stack_Stack.Stack, {
     direction: "horizontal",
@@ -54,20 +55,21 @@ function BenchmarkRow(arg0) {
   ({ userId, effect, userName, style } = arg0);
   const obj2 = { style, children: null };
   const displayNameStylesEffectConfig = useDisplayNameStylesEffectConfigs.useDisplayNameStylesEffectConfig(effect);
-  const obj3 = { userId, userName, effectDisplayType: null, pendingDisplayNameStyles: null, variant: "text-md/semibold" };
+  const obj3 = { userId, userName, effectDisplayType: null, pendingDisplayNameStyles: null, variant: "body-md/semibold" };
   obj3.effectDisplayType = types.EffectDisplayType.STATIC;
   obj3.pendingDisplayNameStyles = displayNameStylesEffectConfig.previewStyles;
-  obj2.children = React6(UsernameWithEffectsDefault, obj3);
-  return React6(timestampProducer, obj2);
+  obj2.children = React5(UsernameWithEffectsDefault, obj3);
+  return React5(timestampProducer, obj2);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const EFFECT_ORDER = fn(1403).EFFECT_ORDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(1403).EFFECT_ORDER, fn(1404).DisplayNameEffect.GUMMY];
+let closure_10 = EFFECT_ORDER.filter((item) => item !== DisplayNameEffect.DisplayNameEffect.PRISM);
 let closure_12 = [10, 50, 100, 200];
 let closure_13 = { overrideSettings: true };
-let items1 = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
+let items = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
 const createStyles = fn(5141);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 }, container: null, batchRow: null, optionButtons: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -108,20 +110,20 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   const run = mountTimer.run;
   const begin = mountTimer.begin;
   const measure = mountTimer.measure;
-  items1 = [addScroll];
+  const items1 = [addScroll];
   const items2 = [first2];
   const callback = first1.useCallback((arg0) => {
     addScroll(arg0);
   }, items1);
-  const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
+  const memo = first1.useMemo(() => items.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10909.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod10957.splitGraphemes(memo).length, items3);
   const items4 = [first];
-  const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
+  const memo2 = first1.useMemo(() => measure.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
   const memo3 = first1.useMemo(() => {
     let str = "All (rotation)";
-    if (memo2.length !== items.length) {
+    if (memo2.length !== measure.length) {
       const mapped = memo2.map(effectName);
       str = mapped.join(" + ");
     }
@@ -163,7 +165,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   const obj5 = { title: "Configuration", hasIcons: false, children: null };
   const obj6 = { label: null };
   const obj7 = { spacing: 8, children: null };
-  const items8 = [run(require("Text/Text").Text, { variant: "text-sm/semibold", color: "text-subtle", children: "Effects (checked render in rotation)" }), ];
+  const items8 = [run(require("Text/Text").Text, { variant: "body-sm/semibold", color: "text-subtle", children: "Effects (checked render in rotation)" }), ];
   const obj3 = require("FRAME_BUDGET_MS");
   const tmp20 = first2;
   const tmp21 = begin;
@@ -240,7 +242,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod10909.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod10957.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);
@@ -248,7 +250,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         }
         obj.userName = sum;
         obj.style = closure_0.batchRow;
-        return React6(BenchmarkRow, obj, arg1);
+        return React5(BenchmarkRow, obj, arg1);
       });
       obj15.children = tmp19(tmp2(tmp3[19]).MountMeasure, obj16, run.batchKey);
       tmp19Result = tmp19(tmp2(tmp3[23]).DisplayNameStylesContext.Provider, obj15);

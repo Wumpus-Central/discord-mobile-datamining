@@ -1,10 +1,10 @@
-// === Module 8152: IconButton ===
+// === Module 8168: IconButton ===
 
-// Module 8152 (IconButton)
+// Module 8168 (IconButton)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Button_BaseButton from "Button/BaseButton" /* 5763 */;
-import BaseIconButton from "BaseIconButton" /* 8153 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Button_BaseButton from "Button/BaseButton" /* 5777 */;
+import BaseIconButton from "BaseIconButton" /* 8169 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ export function IconButton(grow) {
     obj3.size = "lg";
     obj3.maxFontSizeMultiplier = maxFontSizeMultiplier;
     items = [React3(BaseIconButton.BaseIconButton, obj3), ];
-    const obj4 = { style: tmp2.label, variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier, children: label };
+    const obj4 = { style: tmp2.label, variant: "body-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier, children: label };
     items[1] = React3(Text_Text.Text, obj4);
     obj2.children = items;
     let tmp9 = React4(Button_BaseButton.BaseButton, obj2);

@@ -1,6 +1,6 @@
-// === Module 6863: PushNotificationConstants ===
+// === Module 6878: PushNotificationConstants ===
 
-// Module 6863 (PushNotificationConstants)
+// Module 6878 (PushNotificationConstants)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import ClientInfoUtils_mod from "ClientInfoUtils" /* 1376 */;
 import MetaQuestUtils_mod from "MetaQuestUtils" /* 1624 */;

@@ -1,16 +1,16 @@
-// === Module 7005: isOptInEnabled ===
+// === Module 7020: isOptInEnabled ===
 
-// Module 7005 (isOptInEnabled)
+// Module 7020 (isOptInEnabled)
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Constants = fn(1072);
-({ GuildFeatures: metroRequire, Permissions: closure_7 } = Constants);
+({ GuildFeatures: closure_6, Permissions: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/opt_in_channels/isOptInEnabled.tsx");
 

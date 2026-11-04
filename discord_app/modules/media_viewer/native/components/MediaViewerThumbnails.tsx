@@ -1,12 +1,12 @@
-// === Module 14904: MediaViewerThumbnails ===
+// === Module 14984: MediaViewerThumbnails ===
 
-// Module 14904 (MediaViewerThumbnails)
+// Module 14984 (MediaViewerThumbnails)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5719 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5723 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14905 */;
+import useToken from "useToken" /* 5732 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5736 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14985 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,8 +29,8 @@ function ObscuredView(source) {
         str = "dark";
       }
       const obj3 = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
-      obj2.children = React6(tmp7Result, obj3);
-      tmp10Result = React6(_modDef1652.View, obj2);
+      obj2.children = React5(tmp7Result, obj3);
+      tmp10Result = React5(_modDef1652.View, obj2);
       tmpResult = PlatformUtils;
     } else {
       tmp10Result = null;
@@ -39,9 +39,9 @@ function ObscuredView(source) {
   return tmp10Result;
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8990);
-({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
+({ Pressable: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
+const Constants = fn(9007);
+({ THUMBNAIL_WIDTH_MARGIN: metroImportDefault, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -70,10 +70,10 @@ let closure_12 = noop.memo(function MediaThumbnail(source) {
   const items2 = [tmp.thumbnailButtonPortrait, thumbnailStyle];
   obj.style = items2;
   const obj2 = { needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, accessibilityRole: "imagebutton", accessibilityLabel: "Thumbnail preview, " + index + 1 + " of " + numSources, accessibilityHint: "Double tap to focus", accessibilityState: { selected: selectedIndex === index }, onPress: callback, children: null };
-  const items3 = [React6(FastImageDefault, { style: tmp.thumbnailImagePortrait, source: memo, enableAnimation: false }), React6(ObscuredView, { source, index })];
+  const items3 = [React5(FastImageDefault, { style: tmp.thumbnailImagePortrait, source: memo, enableAnimation: false }), React5(ObscuredView, { source, index })];
   obj2.children = items3;
-  obj.children = React7(hasOwnProperty, obj2);
-  return React6(_modDef1652.View, obj);
+  obj.children = React6(hasOwnProperty, obj2);
+  return React5(_modDef1652.View, obj);
 });
 let closure_13 = { code: "(function MediaViewerThumbnailsTsx1(){let[scrollEnabled]=this.__closure;return{scrollEnabled:scrollEnabled.get()};})" };
 const size = fn(2);
@@ -102,7 +102,7 @@ export default function MediaViewerThumbnails(syncer) {
       if (variableWidthThumbnailsEnabled) {
         let arr = push(thumbnailScrollPositions[num].scrollStart);
       } else {
-        let arr3 = push(num * React5);
+        let arr3 = push(num * metroImportDefault);
       }
     }
     return items;
@@ -113,7 +113,7 @@ export default function MediaViewerThumbnails(syncer) {
   const selectedIndex = thumbnailScrollPositions(require("MediaSourceUtil").useSelectedMediaSource(syncer), 1)[0];
   const items1 = [sources, selectedIndex, onSelect, useThumbnailStyle];
   const items2 = [sources.length];
-  const callback = headerBufferStyle.useCallback((arg0, index) => React6(closure_12, { index, source: _undefined[index], numSources: _undefined.length, selectedIndex, onSelect, useThumbnailStyle }), items1);
+  const callback = headerBufferStyle.useCallback((arg0, index) => React5(closure_12, { index, source: _undefined[index], numSources: _undefined.length, selectedIndex, onSelect, useThumbnailStyle }), items1);
   const memo1 = headerBufferStyle.useMemo(() => {
     items = [_undefined.length];
     return items;
@@ -135,9 +135,9 @@ export default function MediaViewerThumbnails(syncer) {
   const items5 = [headerBufferStyle];
   const animatedProps = require("module_1652").useAnimatedProps(MediaViewerThumbnailsTsx1);
   const items6 = [footerBufferStyle];
-  const callback1 = obj.useCallback(() => React6(_modDef1652.View, { style: headerBufferStyle }), items5);
+  const callback1 = obj.useCallback(() => React5(_modDef1652.View, { style: headerBufferStyle }), items5);
   const items7 = [index];
-  const callback2 = obj.useCallback(() => React6(_modDef1652.View, { style: footerBufferStyle }), items6);
+  const callback2 = obj.useCallback(() => React5(_modDef1652.View, { style: footerBufferStyle }), items6);
   const memo2 = obj.useMemo(() => index.get(), items7);
   return selectedIndex(tmp4(tmp5[14]).AnimatedFastList, { ref, style: tmp.containerPortrait, sections: memo1, stickyHeaderFooter: true, disableContentWrappers: true, automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, initialScrollOrientation: "center", initialScrollItem: memo2, itemSize, renderItem: callback, onScroll, horizontal: true, headerSize: headerBufferSize, footerSize: footerBufferSize, renderHeader: callback1, renderFooter: callback2, onEndReached, endReachedThreshold: onEndReachedThreshold, chunkBase: screenWidth, snapToOffsets: memo, animatedProps });
 };

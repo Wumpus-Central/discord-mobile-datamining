@@ -64,9 +64,9 @@ export const MAX_FEED_SIZE = 36;
 export const SHOP_ALL_PAGE_SIZE = 5;
 export const ShopPurchaseType = { FIAT: 0, [0]: "FIAT", ORB: 1, [1]: "ORB", PREMIUM_PURCHASE: 2, [2]: "PREMIUM_PURCHASE", PROMOTIONAL: 3, [3]: "PROMOTIONAL", TENURE_REWARD: 4, [4]: "TENURE_REWARD", GIFT: 5, [5]: "GIFT" };
 export const EXTERNAL_PRODUCT_SKU_IDS = obj2;
-export function isFractionalPremiumSku(arg0) {
+export function isFractionalPremiumSku(skuId) {
   const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
-  return ALL.has(arg0);
+  return ALL.has(skuId);
 }
 export function isExternalProduct(arg0) {
   return set.has(arg0);

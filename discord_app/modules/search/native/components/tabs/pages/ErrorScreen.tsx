@@ -1,9 +1,9 @@
-// === Module 18861: pages/ErrorScreen ===
+// === Module 18964: pages/ErrorScreen ===
 
-// Module 18861 (pages/ErrorScreen)
+// Module 18964 (pages/ErrorScreen)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,6 +26,6 @@ export default noop.memo(function ErrorScreen(text) {
   const obj = { style: null, children: null };
   const items1 = [tmp.container, { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom }];
   obj.style = items1;
-  obj.children = jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", style: tmp.text, children: text });
+  obj.children = jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", style: tmp.text, children: text });
   return <View style={null}>{null}</View>;
 });

@@ -1,21 +1,21 @@
-// === Module 12084: VoiceSensitivity ===
+// === Module 12143: VoiceSensitivity ===
 
-// Module 12084 (VoiceSensitivity)
+// Module 12143 (VoiceSensitivity)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5923 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
-import SpeakingStore from "SpeakingStore" /* 6876 */;
+import SpeakingStore from "SpeakingStore" /* 6891 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
 
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
-const NativePermissionTypes = fn(8064).NativePermissionTypes;
+const NativePermissionTypes = fn(8080).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(5141);
@@ -117,7 +117,7 @@ export default function VoiceSensitivity(auto) {
               closure_0 = tmp4;
               c1 = 1;
               c2 = 1;
-              const obj4 = { value: onThresholdChange(8081).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
+              const obj4 = { value: onThresholdChange(8097).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -134,7 +134,7 @@ export default function VoiceSensitivity(auto) {
             }
             if (tmp5) {
               mediaEngine = mediaEngine.getMediaEngine();
-              mediaEngine.on(auto(5909).MediaEngineEvent.VoiceActivity, callback);
+              mediaEngine.on(auto(5923).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
             return { value: "HermesInternal", done: null };

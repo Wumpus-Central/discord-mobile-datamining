@@ -1,11 +1,11 @@
-// === Module 14555: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 14635: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 14555 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 14635 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10799 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10847 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7749).useNativeCheckoutStore;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const GiftingOrigin = fn(1387).GiftingOrigin;
 const jsxProd = fn(21);
@@ -120,7 +120,7 @@ export default function SocialLayerStorefrontGiftPurchaseSection(skuId) {
   const tmp18 = closure_12;
   let tmpResult = sku(giftOptions[16]);
   const mobileFinePrintMessageForApplication = skuId(giftOptions[21]).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, { shouldAppendDisclaimer: true });
-  obj4.children = mobileFinePrintMessageForApplication.map((children, index) => awaitSync(skuId(giftOptions[22]).Text, { variant: "text-xs/normal", color: "text-muted", children }, index));
+  obj4.children = mobileFinePrintMessageForApplication.map((children, index) => awaitSync(skuId(giftOptions[22]).Text, { variant: "body-xs/normal", color: "text-muted", children }, index));
   const items3 = [awaitSync(closure_6, obj4), ];
   if (!isPurchaseDisabled) {
     isPurchaseDisabled = tmp11;

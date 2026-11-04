@@ -1,15 +1,15 @@
-// === Module 14928: MediaModalSpoilerOverlay ===
+// === Module 15008: MediaModalSpoilerOverlay ===
 
-// Module 14928 (MediaModalSpoilerOverlay)
+// Module 15008 (MediaModalSpoilerOverlay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5719 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5723 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14905 */;
+import useToken from "useToken" /* 5732 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5736 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8794 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14985 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
@@ -56,16 +56,16 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     if (source.obscure) {
       obj6.style = items2.obscureContentContainer;
       items2 = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "white" }), ];
-      const obj7 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
+      const obj7 = { accessibilityRole: "text", variant: "heading-sm/medium", color: "text-overlay-light", children: null };
       const intl2 = util.intl;
       stringResult = intl2.string(util.t.SpxcUR);
       obj7.children = stringResult;
       items2[1] = timestampProducer(Text_Text.Text, obj7);
       obj6.children = items2;
-      let tmp9Result = React5(hasOwnProperty, obj6);
+      let tmp9Result = metroImportDefault(hasOwnProperty, obj6);
     } else {
       obj6.style = items2.spoilerOverlayBackground;
-      const obj8 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
+      const obj8 = { accessibilityRole: "text", variant: "heading-sm/medium", color: "text-overlay-light", children: null };
       const intl = util.intl;
       obj8.children = intl.string(util.t["F+x38C"]).toUpperCase();
       obj6.children = timestampProducer(Text_Text.Text, obj8);
@@ -76,7 +76,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     obj5 = timestampProducer(hasOwnProperty, obj5);
     items1[1] = obj5;
     obj3.children = items1;
-    React5(_modDef1652.View, obj3);
+    metroImportDefault(_modDef1652.View, obj3);
     const tmp3Result = VisualEffectViewDefault;
   }
   tmp5 = _slicedToArray(useMediaItemSpoilerState.useMediaItemSpoilerState(index), 2);

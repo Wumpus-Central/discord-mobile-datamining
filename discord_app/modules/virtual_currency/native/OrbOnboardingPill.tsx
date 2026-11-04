@@ -1,10 +1,10 @@
-// === Module 17851: OrbOnboardingPill ===
+// === Module 17947: OrbOnboardingPill ===
 
-// Module 17851 (OrbOnboardingPill)
+// Module 17947 (OrbOnboardingPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import OrbsIcon from "OrbsIcon" /* 9660 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import OrbsIcon from "OrbsIcon" /* 9679 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ class OrbOnboardingPill {
     obj = { style: closure_5().container, children: null };
     items = [, ];
     items[0] = jsx(closure_0(closure_1[3]).OrbsIcon, { size: "sm" });
-    obj1 = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
+    obj1 = { variant: "body-sm/semibold", color: "redesign-button-tertiary-text", children: null };
     intl = closure_0(closure_1[5]).intl;
     obj1.children = intl.string(closure_0(closure_1[5]).t["9JpRfC"]);
     items[1] = jsx(closure_0(closure_1[4]).Text, obj1);

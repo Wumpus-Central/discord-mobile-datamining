@@ -1,22 +1,22 @@
-// === Module 15096: WidgetUtils ===
+// === Module 12563: WidgetUtils ===
 
-// Module 15096 (WidgetUtils)
+// Module 12563 (WidgetUtils)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
-import utils from "utils" /* 5780 */;
-import useGame2 from "useGame" /* 7604 */;
-import WidgetType from "WidgetType" /* 7897 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7898 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 7900 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7902 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7904 */;
-import WidgetGameTag from "WidgetGameTag" /* 15082 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 15098 */;
+import utils from "utils" /* 5794 */;
+import useGame2 from "useGame" /* 7620 */;
+import WidgetType from "WidgetType" /* 7913 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7914 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 7916 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7918 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7920 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12566 */;
+import WidgetGameTag from "WidgetGameTag" /* 12567 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
-import UserProfileStore from "UserProfileStore" /* 7896 */;
-import WidgetStore from "WidgetStore" /* 15091 */;
+import UserProfileStore from "UserProfileStore" /* 7912 */;
+import WidgetStore from "WidgetStore" /* 12564 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -85,9 +85,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7899).WIDGET_TITLES_BY_TYPE;
+const WIDGET_TITLES_BY_TYPE = fn(7915).WIDGET_TITLES_BY_TYPE;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
-let closure_9 = fn(15097).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_9 = fn(12565).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -178,8 +178,8 @@ export function addWidgetToPending(type) {
     WidgetActionCreatorsDefault.setPendingWidgets(items);
   }
 }
-export function removeWidgetFromPending(arg0) {
-  let uniqueKey = arg0;
+export function removeWidgetFromPending(profileEditAnalyticsOptions) {
+  let uniqueKey = profileEditAnalyticsOptions;
   if (WidgetStore.hasPendingChanges()) {
     let pendingWidgets = WidgetStore.getPendingWidgets();
     if (pendingWidgets == null) {
@@ -715,10 +715,10 @@ export function updatePersonalWidget(fn) {
   const tmpResult = replaceWidgetInList(fn(found));
   WidgetActionCreatorsDefault.setPendingWidgets(tmpResult);
 }
-export function updatePendingGameTags(widgetType, arg1, tags) {
-  closure_0 = arg1;
+export function updatePendingGameTags(arr, gameId, tags) {
+  closure_0 = gameId;
   if (tags.length <= Object.values(WidgetGameTag.WidgetGameTag).length) {
-    const tmp5 = findGameWidget(widgetType);
+    const tmp5 = findGameWidget(arr);
     if (null != tmp5) {
       const games = tmp5.games;
       const found = games.find((gameId) => gameId.gameId === closure_0);

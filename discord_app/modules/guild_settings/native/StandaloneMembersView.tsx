@@ -1,13 +1,13 @@
-// === Module 18807: StandaloneMembersView ===
+// === Module 18908: StandaloneMembersView ===
 
-// Module 18807 (StandaloneMembersView)
+// Module 18908 (StandaloneMembersView)
 import nativeDefault from "native" /* 575 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10866 */;
-import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 13399 */;
-import KickConfirmDefault from "KickConfirm" /* 13413 */;
-import BanConfirmDefault from "BanConfirm" /* 13417 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 18808 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10914 */;
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 13483 */;
+import KickConfirmDefault from "KickConfirm" /* 13497 */;
+import BanConfirmDefault from "BanConfirm" /* 13501 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 18909 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ function OpaqueSceneBackdrop() {
     const obj4 = { style: tmp.sceneBackground };
     items[2] = timestampProducer(View, obj4);
     obj2.children = items;
-    tmp3 = React5(View, obj2);
+    tmp3 = metroImportDefault(View, obj2);
   }
   return tmp3;
 }
@@ -32,7 +32,7 @@ get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
 const createStyles = fn(5141);
 let obj2 = { navigatorContainer: { overflow: "hidden" }, navigatorBackground: null, sceneBackground: null };
@@ -74,7 +74,7 @@ export default function StandaloneMembersView(guildId) {
     const obj = { children: null };
     items = [timestampProducer(OpaqueSceneBackdrop, {}), timestampProducer(GuildSettingsModalMembersWithTabsDefault, { guildId })];
     obj.children = items;
-    return React5(React6, obj);
+    return metroImportDefault(React5, obj);
   };
   obj4[constants.MAIN] = obj5;
   obj4[constants.MEMBER_EDIT] = {
@@ -86,7 +86,7 @@ export default function StandaloneMembersView(guildId) {
       const merged1 = Object.assign(obj2);
       items[1] = timestampProducer(GuildSettingsModalMemberEdit.GuildSettingsModalMemberEditScene, obj2);
       obj.children = items;
-      return React5(React6, obj);
+      return metroImportDefault(React5, obj);
     }
   };
   obj4[constants.MEMBER_KICK] = {
@@ -101,7 +101,7 @@ export default function StandaloneMembersView(guildId) {
       const merged1 = Object.assign(obj2);
       items[1] = timestampProducer(KickConfirmDefault, obj2);
       obj.children = items;
-      return React5(React6, obj);
+      return metroImportDefault(React5, obj);
     }
   };
   obj4[constants.MEMBER_BAN] = {
@@ -116,7 +116,7 @@ export default function StandaloneMembersView(guildId) {
       const merged1 = Object.assign(obj2);
       items[1] = timestampProducer(BanConfirmDefault, obj2);
       obj.children = items;
-      return React5(React6, obj);
+      return metroImportDefault(React5, obj);
     }
   };
   const obj7 = { screens: obj4, initialRouteName: constants.MAIN, headerBackTitle: null, containerStyle: null };

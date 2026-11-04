@@ -1,9 +1,9 @@
-// === Module 14287: BoostTier1Icon ===
+// === Module 14373: BoostTier1Icon ===
 
-// Module 14287 (BoostTier1Icon)
+// Module 14373 (BoostTier1Icon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod14288 from "module_14288" /* 14288 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod14374 from "module_14374" /* 14374 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BoostTier1Icon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14288, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14374, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

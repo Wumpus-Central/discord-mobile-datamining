@@ -1,9 +1,9 @@
-// === Module 16441: useThermalState ===
+// === Module 16533: useThermalState ===
 
-// Module 16441 (useThermalState)
+// Module 16533 (useThermalState)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 6074 */;
-import ThermalStates from "ThermalStates" /* 16442 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 6089 */;
+import ThermalStates from "ThermalStates" /* 16534 */;
 import size from "module_2" /* 2 */;
 
 function _getThermalState(rawThermalState) {

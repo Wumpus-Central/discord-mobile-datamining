@@ -1,19 +1,19 @@
-// === Module 19906: GuildSettingsModalServerTagCustomize ===
+// === Module 20022: GuildSettingsModalServerTagCustomize ===
 
-// Module 19906 (GuildSettingsModalServerTagCustomize)
+// Module 20022 (GuildSettingsModalServerTagCustomize)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9176 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9193 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(9174).GuildProfileFetchStatus;
-const BADGES = fn(8517).BADGES;
+let GuildProfileFetchStatus = fn(9191).GuildProfileFetchStatus;
+const BADGES = fn(8534).BADGES;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -155,7 +155,7 @@ export default function GuildSettingsModalServerTagCustomize(guildId) {
         obj9.style = tmp.warning;
         const obj10 = { size: "sm", color: tmp5(tmp3[7]).colors.ICON_SUBTLE };
         const items11 = [closure_9(tmp2(tmp3[24]).CircleInformationIcon, obj10), ];
-        const obj11 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.warningText, children: null };
+        const obj11 = { variant: "body-sm/medium", color: "text-subtle", style: tmp.warningText, children: null };
         const intl3 = tmp2(tmp3[23]).intl;
         obj11.children = intl3.string(tmp2(tmp3[23]).t["4tVt6P"]);
         items11[1] = closure_9(tmp2(tmp3[25]).Text, obj11);

@@ -1,17 +1,17 @@
-// === Module 17936: UserSettingsDesignSystemToast ===
+// === Module 18032: UserSettingsDesignSystemToast ===
 
-// Module 17936 (UserSettingsDesignSystemToast)
+// Module 18032 (UserSettingsDesignSystemToast)
 import nativeDefault from "native" /* 575 */;
 import EmojiUtils from "EmojiUtils" /* 5091 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import toastUtils from "toastUtils" /* 5833 */;
-import CopyIcon from "CopyIcon" /* 5851 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import Card from "Card" /* 7103 */;
-import Toast from "Toast" /* 16005 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import toastUtils from "toastUtils" /* 5847 */;
+import CopyIcon from "CopyIcon" /* 5865 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import Card from "Card" /* 7118 */;
+import Toast from "Toast" /* 16095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function DemoGroup(demos) {
   ({ title, hint } = demos);
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_8, children: null };
-  items = [React4(Text_Text.Text, { variant: "text-lg/semibold", children: title }), React4(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: hint }), demos.map((label) => closure_1_4(components_Button_Button.Button, { variant: "secondary", size: "sm", text: label.label, onPress: label.onPress }, label.label))];
+  items = [React4(Text_Text.Text, { variant: "body-lg/semibold", children: title }), React4(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", children: hint }), demos.map((label) => closure_1_4(components_Button_Button.Button, { variant: "secondary", size: "sm", text: label.label, onPress: label.onPress }, label.label))];
   obj2.children = items;
   obj.children = hasOwnProperty(Stack_Stack.Stack, obj2);
   return React4(Card.Card, obj);
@@ -48,12 +48,12 @@ function LiveStores() {
     return num;
   });
   const obj3 = { spacing: nativeDefault.space.PX_8, children: null };
-  items = [React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Live store" }), ];
+  items = [React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Live store" }), ];
   let str = "text-subtle";
   if (null != toastStore) {
     str = "text-feedback-positive";
   }
-  const obj4 = { variant: "text-md/medium", color: str, children: null };
+  const obj4 = { variant: "body-md/medium", color: str, children: null };
   let str2;
   if (toastStore != null) {
     str2 = toastStore.text;
@@ -203,7 +203,7 @@ export default function UserSettingsDesignSystemToast() {
   items[2] = React4(DemoGroup, { title: "Queueing", hint: "Toasts queue, but repeats of the key on screen are dropped.", demos: items1 });
   items[3] = React4(DemoGroup, { title: "Placement", hint: "Both are deprecated on the Mana API but still forwarded, so existing call sites keep working.", demos: items2 });
   const obj7 = { spacing: nativeDefault.space.PX_12, style: tmp4.previews, children: null };
-  items1 = [React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Components" }), React4(Toast.Toast, { text, variant: "default" }), , , , , , , , , ];
+  items1 = [React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Components" }), React4(Toast.Toast, { text, variant: "default" }), , , , , , , , , ];
   const obj4 = { title: "Variants and icons", hint: "Status toasts use the success and critical variants. Other toasts can show an icon.", demos: items };
   const obj5 = { title: "Queueing", hint: "Toasts queue, but repeats of the key on screen are dropped.", demos: items1 };
   const obj6 = { title: "Placement", hint: "Both are deprecated on the Mana API but still forwarded, so existing call sites keep working.", demos: items2 };
@@ -213,7 +213,7 @@ export default function UserSettingsDesignSystemToast() {
   items1[3] = React4(Toast.Toast, { text, variant: "default", icon: CircleInformationIcon.CircleInformationIcon, iconColor: nativeDefault.colors.ICON_BRAND, secondaryIconColor: nativeDefault.colors.ICON_DEFAULT });
   items1[4] = React4(Toast.Toast, { text, variant: "success" });
   items1[5] = React4(Toast.Toast, { text, variant: "critical" });
-  items1[6] = React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Entities" });
+  items1[6] = React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Entities" });
   if ("" !== emojiUrl) {
     const obj13 = { type: "emoji", src: emojiUrl, alt: "\u{1F525}" };
     let obj14 = obj13;

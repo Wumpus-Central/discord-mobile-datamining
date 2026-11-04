@@ -1,11 +1,11 @@
-// === Module 18436: ChannelBadge ===
+// === Module 18530: ChannelBadge ===
 
-// Module 18436 (ChannelBadge)
+// Module 18530 (ChannelBadge)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import NumberUtils from "NumberUtils" /* 2024 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NewBadgeDefault from "NewBadge" /* 13975 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 18437 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NewBadgeDefault from "NewBadge" /* 14061 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 18531 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
 
@@ -45,8 +45,8 @@ export default function ChannelBadge(arg0) {
           tmp5 = null;
           if (postsWithUnreadsCount > 0) {
             const obj5 = { style: tmp.channelInfoContainer, children: null };
-            const obj6 = { variant: "text-xs/semibold", color: "text-muted", children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores) };
-            obj5.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores) });
+            const obj6 = { variant: "body-xs/semibold", color: "text-muted", children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores) };
+            obj5.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", color: "text-muted", children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores) });
             tmp5 = <View style={tmp.channelInfoContainer}>{null}</View>;
             const tmp2Result = NumberUtils;
           }

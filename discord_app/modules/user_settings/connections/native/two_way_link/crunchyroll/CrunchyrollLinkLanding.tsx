@@ -1,14 +1,14 @@
-// === Module 14781: CrunchyrollLinkLanding ===
+// === Module 14861: CrunchyrollLinkLanding ===
 
-// Module 14781 (CrunchyrollLinkLanding)
+// Module 14861 (CrunchyrollLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import _modDef14782 from "module_14782" /* 14782 */;
+import _modDef14862 from "module_14862" /* 14862 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(14780).CrunchyrollLinkModalScenes;
+let closure_4 = fn(14860).CrunchyrollLinkModalScenes;
 const Constants = fn(1072);
-({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
+({ HelpdeskArticles: hasOwnProperty, PlatformTypes: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
@@ -23,14 +23,14 @@ export default function CrunchyrollLinkLanding() {
     const obj = { label: null, icon: null };
     const intl = navigation(1113).intl;
     obj.label = intl.string(navigation(1113).t["2TXHQd"]);
-    obj.icon = navigation(8972).PlayIcon;
+    obj.icon = navigation(8989).PlayIcon;
     items = [obj];
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef14782, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
+  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef14862, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
   let intl = navigation(1113).intl;
   obj2.headerConnect = intl.string(navigation(1113).t["Da+3NJ"]);
   const intl2 = navigation(1113).intl;
@@ -39,5 +39,5 @@ export default function CrunchyrollLinkLanding() {
   obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj2.onNext = callback;
   obj2.valueProps = memo;
-  return jsx(navigation(9861).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef14782, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(9879).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef14862, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

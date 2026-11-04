@@ -1,25 +1,25 @@
-// === Module 14960: UserProfileOverflowMenuItems ===
+// === Module 15040: UserProfileOverflowMenuItems ===
 
-// Module 14960 (UserProfileOverflowMenuItems)
+// Module 15040 (UserProfileOverflowMenuItems)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7484 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7620 */;
-import ReportModals from "ReportModals" /* 8476 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 14326 */;
-import BotReportChooser from "BotReportChooser" /* 14961 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7500 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7628 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7636 */;
+import ReportModals from "ReportModals" /* 8492 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12568 */;
+import BotReportChooser from "BotReportChooser" /* 15041 */;
 import Constants from "Constants" /* 1072 */;
-import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11424 */;
+import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11474 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticEvents: c3, AVATAR_MAX_SIZE: closure_4, NOOP: hasOwnProperty } = Constants);
-({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: metroRequire, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_7 } = RestrictionConfirmationConstants);
+({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_6, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: metroImportDefault } = RestrictionConfirmationConstants);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverflowMenuItems.tsx");
 
 export function getIgnoreMenuItem(arg0, isBlocked) {
@@ -43,8 +43,8 @@ export function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11426, dependencyMap.paths);
-        obj.openLazy(tmp, React5, {
+        const tmp = asyncRequireImpl(11476, dependencyMap.paths);
+        obj.openLazy(tmp, metroImportDefault, {
           userId: user.id,
           channelId,
           onBlock() {
@@ -81,7 +81,7 @@ export function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(11425, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11475, dependencyMap.paths);
       obj.openLazy(tmp, timestampProducer, {
         userId: user.id,
         channelId,
@@ -111,7 +111,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14961, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(15041, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {

@@ -1,12 +1,12 @@
-// === Module 11749: UserProfileSection ===
+// === Module 11804: UserProfileSection ===
 
-// Module 11749 (UserProfileSection)
+// Module 11804 (UserProfileSection)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
 import native from "native" /* 5207 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7473 */;
-import FormDivider from "FormDivider" /* 8307 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7489 */;
+import FormDivider from "FormDivider" /* 8323 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ export default function UserProfileSection(title) {
     if (null != title) {
       const obj5 = { style: tmp2.titleContainer, children: null };
       const obj6 = { style: tmp2.title, children: null };
-      const obj7 = { variant: "eyebrow", accessibilityRole: "header", children: title };
+      const obj7 = { variant: "body-sm/medium", accessibilityRole: "header", children: title };
       const items1 = [React3(Text_Text.Text, obj7), headerIcon];
       obj6.children = items1;
       const items2 = [React4(View, obj6), trailingIcon];

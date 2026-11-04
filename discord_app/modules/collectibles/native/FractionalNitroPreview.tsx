@@ -1,13 +1,13 @@
-// === Module 15177: FractionalNitroPreview ===
+// === Module 15257: FractionalNitroPreview ===
 
-// Module 15177 (FractionalNitroPreview)
+// Module 15257 (FractionalNitroPreview)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7423 */;
-import _modDef15178 from "module_15178" /* 15178 */;
-import NitroIconDefault from "NitroIcon" /* 15179 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7439 */;
+import _modDef15258 from "module_15258" /* 15258 */;
+import NitroIconDefault from "NitroIcon" /* 15259 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.lg, overflow: "hidden", alignSelf: "center", gap: nativeDefault.space.PX_16 }, gradient: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, headerImage: { width: 211, height: 157, resizeMode: "cover" }, nitroIconContainer: { alignSelf: "flex-start" }, benefits: null, benefitRow: null };
 let obj3 = { flexDirection: "column", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.lg, overflow: "hidden", alignSelf: "center", gap: nativeDefault.space.PX_16 };
@@ -54,7 +54,7 @@ export function FractionalNitroPreview() {
   const obj8 = { uri: null };
   const obj4 = require("PremiumUtils");
   const obj6 = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
-  obj8.uri = _modDef15178;
+  obj8.uri = _modDef15258;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);
@@ -64,9 +64,9 @@ export function FractionalNitroPreview() {
     style: tmp.benefits,
     children: items.map((children, index) => {
       const obj = { style: benefitRow.benefitRow, children: null };
-      items = [timestampProducer(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: nativeDefault.colors.WHITE }), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children })];
+      items = [timestampProducer(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: nativeDefault.colors.WHITE }), timestampProducer(Text_Text.Text, { variant: "body-sm/medium", color: "text-overlay-light", children })];
       obj.children = items;
-      return React5(View, obj, index);
+      return metroImportDefault(View, obj, index);
     })
   });
   obj5.children = items1;

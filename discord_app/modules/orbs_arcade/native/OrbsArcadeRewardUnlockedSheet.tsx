@@ -1,14 +1,14 @@
-// === Module 17201: OrbsArcadeRewardUnlockedSheet ===
+// === Module 17293: OrbsArcadeRewardUnlockedSheet ===
 
-// Module 17201 (OrbsArcadeRewardUnlockedSheet)
+// Module 17293 (OrbsArcadeRewardUnlockedSheet)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17166 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17258 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { chain: { marginHorizontal: nativeDefault.space.PX_8 } };
 let closure_8 = createStyles.createStyles(obj2);

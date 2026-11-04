@@ -1,16 +1,16 @@
-// === Module 17495: CustomTypingIndicatorEditScreen ===
+// === Module 17585: CustomTypingIndicatorEditScreen ===
 
-// Module 17495 (CustomTypingIndicatorEditScreen)
+// Module 17585 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import user from "user" /* 1393 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1407 */;
 import Link from "Link" /* 1500 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7446 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13864 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7462 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10084 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13950 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -95,10 +95,10 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   }, []);
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17496, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17586, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
   }, items4);
   const callback2 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17497, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17587, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
   }, items5);
   ref = noop.useRef(null);
   const items6 = [analyticsLocations];
@@ -256,7 +256,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   obj7.children = tmp38Result;
   const items10 = [memo1(onChange, obj7), , , ];
   let obj9 = { style: tmp.section, children: null };
-  let obj10 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
+  let obj10 = { accessibilityRole: "header", variant: "body-sm/semibold", color: "text-default", children: null };
   let intl = tmp2(tmp3[10]).intl;
   obj10.children = intl.string(nativeStackNavigation(tmp3[11])["l8CZ7+"]);
   const items11 = [memo1(mode(tmp3[35]).Text, obj10), memo1(nativeStackNavigation(tmp3[36]), { emojis: first1, onChange: callback }), ];
@@ -285,7 +285,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   obj9.children = items11;
   items10[1] = closure_13(onChange, obj9);
   let obj13 = { style: tmp.section, children: null };
-  let obj14 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
+  let obj14 = { accessibilityRole: "header", variant: "body-sm/semibold", color: "text-default", children: null };
   const intl6 = tmp2(tmp3[10]).intl;
   obj14.children = intl6.string(nativeStackNavigation(tmp3[11]).BGCQqw);
   const items12 = [memo1(mode(tmp3[35]).Text, obj14), , ];
@@ -302,7 +302,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   obj16.onPress = callback1;
   obj15.children = memo1(mode(tmp3[38]).TableRow, obj16);
   items12[1] = memo1(mode(tmp3[37]).TableRowGroup, obj15);
-  const obj18 = { style: tmp.description, variant: "text-xs/normal", color: "text-muted", includeFontPadding: true, children: null };
+  const obj18 = { style: tmp.description, variant: "body-xs/normal", color: "text-muted", includeFontPadding: true, children: null };
   const intl9 = tmp2(tmp3[10]).intl;
   const obj19 = { helpCenterUrl: null };
   const tmp2Result2 = mode(tmp3[19]);
@@ -353,7 +353,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   return closure_13(onChange, obj4);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);

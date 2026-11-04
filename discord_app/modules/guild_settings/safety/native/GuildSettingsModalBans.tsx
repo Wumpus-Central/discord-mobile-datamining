@@ -1,21 +1,21 @@
-// === Module 19973: GuildSettingsModalBans ===
+// === Module 20089: GuildSettingsModalBans ===
 
-// Module 19973 (GuildSettingsModalBans)
+// Module 20089 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7483 */;
+import fuzzysearchDefault from "fuzzysearch" /* 7034 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7499 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);

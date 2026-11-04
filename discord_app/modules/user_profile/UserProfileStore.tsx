@@ -1,27 +1,27 @@
-// === Module 7896: UserProfileStore ===
+// === Module 7912: UserProfileStore ===
 
-// Module 7896 (UserProfileStore)
+// Module 7912 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
 import Timers from "Timers" /* 4985 */;
-import WidgetType from "WidgetType" /* 7897 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7898 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7901 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7902 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7904 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7905 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7906 */;
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7907 */;
+import WidgetType from "WidgetType" /* 7913 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7914 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7917 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7918 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7920 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7921 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7922 */;
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7923 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
 import UserRecord from "UserRecord" /* 1399 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
-import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
+import SortedGuildStore from "SortedGuildStore" /* 6907 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -534,7 +534,7 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   let value4 = map1.get(userId);
   if (value4 == null) {
-    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "assign" };
+    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "children" };
     value4 = obj;
   }
   const timestamp = Date.now();
@@ -891,13 +891,13 @@ prototype["getFirstWishlistId"] = function getFirstWishlistId(id) {
     return first;
   }
 };
-prototype["getWishlistSettings"] = function getWishlistSettings(id, wishlistId) {
+prototype["getWishlistSettings"] = function getWishlistSettings(id, firstWishlistId) {
   value = map1.get(id);
   let tmp2;
   if (value != null) {
     const wishlistSettings = value.wishlistSettings;
     if (wishlistSettings != null) {
-      tmp2 = wishlistSettings[wishlistId];
+      tmp2 = wishlistSettings[firstWishlistId];
     }
   }
   if (tmp2 == null) {

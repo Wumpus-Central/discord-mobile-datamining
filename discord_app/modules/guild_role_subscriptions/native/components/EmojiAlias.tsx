@@ -1,7 +1,7 @@
-// === Module 20114: EmojiAlias ===
+// === Module 20230: EmojiAlias ===
 
-// Module 20114 (EmojiAlias)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 20230 (EmojiAlias)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ export default function EmojiAlias(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.emojiAlias, style];
   obj.style = items;
-  const items1 = [React3(Text_Text.Text, { style: tmp.emojiColon, "aria-hidden": true, variant: "text-md/medium", color: "text-muted", children: ":" }), React3(Text_Text.Text, { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", children }), React3(Text_Text.Text, { style: tmp.emojiColon, "aria-hidden": true, variant: "text-md/medium", color: "text-muted", children: ":" })];
+  const items1 = [React3(Text_Text.Text, { style: tmp.emojiColon, "aria-hidden": true, variant: "body-md/medium", color: "text-muted", children: ":" }), React3(Text_Text.Text, { lineClamp: 1, variant: "body-md/medium", color: "mobile-text-heading-primary", children }), React3(Text_Text.Text, { style: tmp.emojiColon, "aria-hidden": true, variant: "body-md/medium", color: "text-muted", children: ":" })];
   obj.children = items1;
   return React4(View, obj);
 };

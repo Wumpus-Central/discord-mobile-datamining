@@ -1,16 +1,16 @@
-// === Module 15030: UserProfileVoiceSettings ===
+// === Module 15110: UserProfileVoiceSettings ===
 
-// Module 15030 (UserProfileVoiceSettings)
+// Module 15110 (UserProfileVoiceSettings)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9397 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 14326 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6050 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9414 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12568 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 6178 */;
+import SoundboardStore from "SoundboardStore" /* 6193 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 
 require = fn;
 function UserVoiceSettings(user) {
@@ -113,7 +113,7 @@ function UserVoiceSettings(user) {
       if (isLocalVideoAutoDisabled) {
         const obj10 = { style: tmp.disableVideoSublabel, children: null };
         const items4 = [closure_11(tmp2(tmp3[25]).CircleErrorIcon, { size: "xxs", color: "text-feedback-warning" }), ];
-        const obj11 = { variant: "text-xs/medium", color: "text-feedback-warning", children: null };
+        const obj11 = { variant: "body-xs/medium", color: "text-feedback-warning", children: null };
         const intl4 = tmp2(tmp3[17]).intl;
         obj11.children = intl4.string(tmp2(tmp3[17]).t.m2Hyj0);
         items4[1] = closure_11(tmp2(tmp3[26]).Text, obj11);
@@ -126,7 +126,7 @@ function UserVoiceSettings(user) {
         if (isLocalVideoAutoDisabled) {
           const result = UserProfileAlertUtils.confirmVideoUnstableConnection(() => channel(trackUserProfileAction[15]).setDisableLocalVideo(id.id, constants.MANUAL_ENABLED));
         } else {
-          AudioActionCreatorsDefault.setDisableLocalVideo(user.id, isLocalVideoDisabled ? React7.MANUAL_ENABLED : React7.DISABLED);
+          AudioActionCreatorsDefault.setDisableLocalVideo(user.id, isLocalVideoDisabled ? React6.MANUAL_ENABLED : React6.DISABLED);
         }
       };
       items3.push(closure_11(tmp2(tmp3[16]).UserProfileFormRow, obj9, "disable-video"));
@@ -196,8 +196,8 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = closure_13();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(8885).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(8885);
+  const trackUserProfileAction = channel(8902).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(8902);
   items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -230,9 +230,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9370).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9387).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(12109).MicrophoneIcon;
+      MicrophoneIcon = tmp2(12168).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -240,11 +240,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_11(tmp2(7496).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_11(tmp2(7496).UserProfileCardRows, obj6);
+    obj6.children = closure_11(tmp2(7512).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_11(tmp2(7512).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_11(trackUserProfileAction(7496), obj4);
-    const tmp6Result = trackUserProfileAction(7496);
+    closure_11(trackUserProfileAction(7512), obj4);
+    const tmp6Result = trackUserProfileAction(7512);
   }
   return tmp8;
 }

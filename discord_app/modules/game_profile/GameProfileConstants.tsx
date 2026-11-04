@@ -1,6 +1,6 @@
-// === Module 9498: GameProfileConstants ===
+// === Module 9516: GameProfileConstants ===
 
-// Module 9498 (GameProfileConstants)
+// Module 9516 (GameProfileConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileConstants.tsx");

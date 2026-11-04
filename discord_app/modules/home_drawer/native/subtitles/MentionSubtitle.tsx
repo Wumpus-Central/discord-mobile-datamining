@@ -1,11 +1,11 @@
-// === Module 18543: MentionSubtitle ===
+// === Module 18638: MentionSubtitle ===
 
-// Module 18543 (MentionSubtitle)
+// Module 18638 (MentionSubtitle)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
-import TextIcon from "TextIcon" /* 8776 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 18544 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
+import TextIcon from "TextIcon" /* 8793 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 18639 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,13 +29,13 @@ export default function MentionSubtitle(channel) {
   }
   const obj2 = { style: subtitleStyles.subtitleRow, children: null };
   items = [React3(channelIconComponentWithGuild, { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon }), ];
-  const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
+  const obj4 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
   const intl = util.intl;
   obj4.children = intl.format(util.t.L9YdGH, {
     channelName,
     count: count - 1,
     channelHook(children, arg1) {
-      return closure_1_3(Text_Text.Text, { variant: "text-xs/medium", children }, arg1);
+      return closure_1_3(Text_Text.Text, { variant: "body-xs/medium", children }, arg1);
     }
   });
   items[1] = React3(Text_Text.Text, obj4);

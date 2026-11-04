@@ -1,15 +1,15 @@
-// === Module 16732: SettingListRenderer ===
+// === Module 16824: SettingListRenderer ===
 
-// Module 16732 (SettingListRenderer)
+// Module 16824 (SettingListRenderer)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import SettingRenderer from "SettingRenderer" /* 16734 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16735 */;
-import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 16744 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import SettingRenderer from "SettingRenderer" /* 16826 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16827 */;
+import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 16836 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16733 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 16581 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16825 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 16672 */;
 
 const require = globalThis.__r;
 
@@ -29,8 +29,8 @@ function SearchListSectionSubLabel(subLabel) {
   subLabel = subLabel.subLabel;
   const obj = { style: closure_9().subLabel, children: null };
   if (typeof subLabel === "string") {
-    const obj2 = { variant: "text-xs/normal", color: "text-muted", children: subLabel };
-    let tmpResult = jsx(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", children: subLabel });
+    const obj2 = { variant: "body-xs/normal", color: "text-muted", children: subLabel };
+    let tmpResult = jsx(Text_Text.Text, { variant: "body-xs/normal", color: "text-muted", children: subLabel });
   } else {
     const _Array = Array;
     tmpResult = subLabel;
@@ -93,7 +93,7 @@ function keyExtractor(type, arg1) {
   return "" + type.type + "-" + label;
 }
 const View = fn(17).View;
-const ListItemType = fn(11678).ListItemType;
+const ListItemType = fn(11729).ListItemType;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 }, contentContainer: { paddingHorizontal: 16 }, searchResultsHeader: { paddingBottom: 24 }, spacer: { paddingTop: 24 }, subLabel: { marginTop: 8 } };
@@ -106,7 +106,7 @@ const memoResult = noop.memo(function SettingsList(node) {
   items = [field, node];
   const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const ref = noop.useRef(null);
-  node(16740).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+  node(16832).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
   const obj4 = {};
@@ -118,7 +118,7 @@ const memoResult = noop.memo(function SettingsList(node) {
   obj3.renderItem = renderItem;
   obj3.data = memo;
   obj3.getItemType = getItemType;
-  obj2.children = jsx(node(7414).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
+  obj2.children = jsx(node(7430).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
   return <View style={tmp.container}>{null}</View>;
 });
 const size = fn(2);

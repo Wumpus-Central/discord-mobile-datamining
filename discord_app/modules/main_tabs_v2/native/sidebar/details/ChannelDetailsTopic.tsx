@@ -1,11 +1,11 @@
-// === Module 18974: ChannelDetailsTopic ===
+// === Module 19077: ChannelDetailsTopic ===
 
-// Module 18974 (ChannelDetailsTopic)
+// Module 19077 (ChannelDetailsTopic)
 import _modDef1652 from "module_1652" /* 1652 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5874 */;
-import ChannelUtils from "ChannelUtils" /* 6166 */;
-import MentionPillOffset from "MentionPillOffset" /* 11189 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5888 */;
+import ChannelUtils from "ChannelUtils" /* 6181 */;
+import MentionPillOffset from "MentionPillOffset" /* 11239 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -116,8 +116,8 @@ function GuildChannelDetailsTopic(channel) {
   const items6 = [sharedValue2, first1];
   const animatedStyle2 = require("module_1652").useAnimatedStyle(ChannelDetailsTopicTsx3);
   const callback = obj2.useCallback((nativeEvent) => {
-    _undefined3(nativeEvent.nativeEvent.lines.length > React6);
-    if (nativeEvent.nativeEvent.lines.length > React6) {
+    _undefined3(nativeEvent.nativeEvent.lines.length > React5);
+    if (nativeEvent.nativeEvent.lines.length > React5) {
       if (!c4) {
         let HIDDEN = constants.VISIBLE;
       }
@@ -128,7 +128,7 @@ function GuildChannelDetailsTopic(channel) {
   const items7 = [sharedValue1];
   const callback1 = obj2.useCallback((nativeEvent) => {
     const lines = nativeEvent.nativeEvent.lines;
-    const substr = lines.slice(0, React6);
+    const substr = lines.slice(0, React5);
     const mapped = substr.map((text) => text.text);
     _undefined5(mapped.join(""));
   }, []);
@@ -167,11 +167,11 @@ function GuildChannelDetailsTopic(channel) {
   if (null == memo) {
     let PressableOpacity = c5;
   } else {
-    PressableOpacity = tmp2(7106).PressableOpacity;
+    PressableOpacity = tmp2(7121).PressableOpacity;
   }
-  const obj7 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_11(require("Text/Text").Text, { variant: "heading-sm/medium", style: tmp.topicText, onTextLayout: callback, onLayout: callback2, children: memo2 }) };
+  const obj7 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_11(require("Text/Text").Text, { variant: "heading-xs/medium", style: tmp.topicText, onTextLayout: callback, onLayout: callback2, children: memo2 }) };
   const items13 = [closure_11(c5, obj7), , ];
-  const obj9 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_11(require("Text/Text").Text, { variant: "heading-sm/medium", style: tmp.topicText, onTextLayout: callback1, children: memo1 }) };
+  const obj9 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_11(require("Text/Text").Text, { variant: "heading-xs/medium", style: tmp.topicText, onTextLayout: callback1, children: memo1 }) };
   items13[1] = closure_11(c5, obj9);
   const obj11 = { style: null, children: null };
   const items14 = [tmp.topic, animatedStyle];
@@ -181,7 +181,7 @@ function GuildChannelDetailsTopic(channel) {
   if (null == memo) {
     const merged = Object.assign(tmp46);
     const obj14 = { pointerEvents: str2, children: null };
-    const obj15 = { color: "interactive-text-default", variant: "heading-sm/medium", onLayout: callback3, lineClamp: null, style: null, children: null };
+    const obj15 = { color: "interactive-text-default", variant: "heading-xs/medium", onLayout: callback3, lineClamp: null, style: null, children: null };
     let tmp51;
     if (!first1) {
       tmp51 = sharedValue1;
@@ -200,7 +200,7 @@ function GuildChannelDetailsTopic(channel) {
     }
     const obj17 = { children: null };
     obj15.children = memo1;
-    obj14.children = closure_11(tmp2(5747).Text, obj15);
+    obj14.children = closure_11(tmp2(5761).Text, obj15);
     obj13.children = closure_11(tmp43, obj14);
     obj12.children = closure_11(PressableOpacity, obj13);
     const items16 = [closure_11(tmp45, obj12), ];
@@ -210,7 +210,7 @@ function GuildChannelDetailsTopic(channel) {
     const obj19 = { style: tmp.gradient, start: null, end: null, colors: null };
     ({ START: obj23.start, END: obj23.end } = VerticalGradient);
     obj19.colors = channelTopicGradientBackground;
-    obj18.children = closure_11(tmp44(5710), obj19);
+    obj18.children = closure_11(tmp44(5723), obj19);
     items16[1] = closure_11(tmp44(1652).View, obj18);
     obj11.children = items16;
     items13[2] = closure_12(_modDef1652.View, obj11);
@@ -228,8 +228,8 @@ function GuildChannelDetailsTopic(channel) {
     const obj21 = { expanded: first1 };
     obj20.accessibilityState = obj21;
   }
-  const obj10 = { variant: "heading-sm/medium", style: tmp.topicText, onTextLayout: callback1, children: memo1 };
-  const obj8 = { variant: "heading-sm/medium", style: tmp.topicText, onTextLayout: callback, onLayout: callback2, children: memo2 };
+  const obj10 = { variant: "heading-xs/medium", style: tmp.topicText, onTextLayout: callback1, children: memo1 };
+  const obj8 = { variant: "heading-xs/medium", style: tmp.topicText, onTextLayout: callback, onLayout: callback2, children: memo2 };
   const tmp2Result2 = require("module_1652");
   tmp43 = c5;
 }
@@ -250,11 +250,11 @@ function PrivateChannelDetailsTopic(channel) {
   });
   let tmp4 = null;
   if (null != stateFromStores) {
-    const obj2 = { variant: "heading-sm/medium", color: "interactive-text-default", style: null, children: null };
+    const obj2 = { variant: "heading-xs/medium", color: "interactive-text-default", style: null, children: null };
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5747).Text, obj2);
+    tmp4 = closure_11(channel(5761).Text, obj2);
   }
   return tmp4;
 }
@@ -264,23 +264,31 @@ function GroupDMChannelDetailsTopic(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => ChannelUtils.getPrivateChannelUserTagsString(channel.recipients, UserStore));
   let tmp4 = null;
   if (null != stateFromStores) {
-    const obj2 = { variant: "heading-sm/medium", color: "interactive-text-default", style: null, children: null };
+    const obj2 = { variant: "heading-xs/medium", color: "interactive-text-default", style: null, children: null };
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5747).Text, obj2);
+    tmp4 = closure_11(channel(5761).Text, obj2);
   }
   return tmp4;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10267);
+({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
+const ChannelDetailsConstants = fn(10315);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(5141);
-let closure_14 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
+let obj = { hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: null };
+const PlatformUtils = fn(1377);
+let obj3 = null;
+if (!PlatformUtils.isAndroid()) {
+  obj3 = { lineHeight: "r" };
+}
+let merged = Object.assign(obj3);
+obj.topicText = { paddingVertical: 5 };
+let closure_14 = createStyles.createStyles(obj);
 let closure_15 = {};
 const constants = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
 let closure_17 = { code: "(function ChannelDetailsTopicTsx1(){let[expandedHeight,truncatedHeight,EMPTY_STYLE,withSpring,expanded,SPRING_CHANNEL_DETAILS]=this.__closure;const _expandedHeight=expandedHeight.get();const _truncatedHeight=truncatedHeight.get();if(_truncatedHeight==null||_expandedHeight==null)return EMPTY_STYLE;return{height:withSpring(expanded?_expandedHeight:_truncatedHeight,SPRING_CHANNEL_DETAILS)};})" };

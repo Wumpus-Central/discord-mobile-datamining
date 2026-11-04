@@ -1,19 +1,19 @@
-// === Module 17900: DevToolsContent ===
+// === Module 17996: DevToolsContent ===
 
-// Module 17900 (DevToolsContent)
+// Module 17996 (DevToolsContent)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 13180 */;
-import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 13182 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 16579 */;
-import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 17901 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 13263 */;
+import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 13265 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 16670 */;
+import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 17997 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11499 */;
-import ExperimentStore from "ExperimentStore" /* 5361 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11549 */;
+import ExperimentStore from "ExperimentStore" /* 5362 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
 const require = globalThis.__r;
@@ -66,7 +66,7 @@ function DevToolsContentSortButtons(arg0) {
   return closure_11(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -79,8 +79,8 @@ obj.disabledButton = { opacity: 0.5 };
 let closure_12 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function DevToolsContentSubLabel(arg0) {
   ({ label, value } = arg0);
-  const obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-  items = [label, closure_1_10(Text_Text.Text, { variant: "text-xs/semibold", children: value })];
+  const obj = { variant: "body-xs/medium", color: "text-subtle", children: null };
+  items = [label, closure_1_10(Text_Text.Text, { variant: "body-xs/semibold", children: value })];
   obj.children = items;
   return closure_1_11(Text_Text.Text, obj);
 });

@@ -1,6 +1,6 @@
-// === Module 15107: WidgetAssetUtils ===
+// === Module 15187: WidgetAssetUtils ===
 
-// Module 15107 (WidgetAssetUtils)
+// Module 15187 (WidgetAssetUtils)
 import Constants from "Constants" /* 1072 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import size from "module_2" /* 2 */;

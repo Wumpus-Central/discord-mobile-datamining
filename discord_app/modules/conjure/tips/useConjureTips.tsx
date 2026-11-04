@@ -1,14 +1,14 @@
-// === Module 12747: useConjureTips ===
+// === Module 12828: useConjureTips ===
 
-// Module 12747 (useConjureTips)
-import conjureTipImpressions from "conjureTipImpressions" /* 12749 */;
-import conjureTipDismissals from "conjureTipDismissals" /* 12755 */;
+// Module 12828 (useConjureTips)
+import conjureTipImpressions from "conjureTipImpressions" /* 12830 */;
+import conjureTipDismissals from "conjureTipDismissals" /* 12836 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let items = [fn(12748).CONJURE_TIP_LIVE_BEHIND_IDLE_MS];
+let items = [fn(12829).CONJURE_TIP_LIVE_BEHIND_IDLE_MS];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/tips/useConjureTips.tsx");
 

@@ -1,17 +1,17 @@
-// === Module 18464: ChannelListLegendList ===
+// === Module 18558: ChannelListLegendList ===
 
-// Module 18464 (ChannelListLegendList)
-import FastList from "FastList" /* 7361 */;
-import useChannelListFlatDataDefault from "useChannelListFlatData" /* 18465 */;
+// Module 18558 (ChannelListLegendList)
+import FastList from "FastList" /* 7377 */;
+import useChannelListFlatDataDefault from "useChannelListFlatData" /* 18559 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
-({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "disabled", positionPercentage: false };
+let closure_8 = { item: "sa", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = { code: "(function ChannelListLegendListTsx1(event){let[scrollPosValue,onScrollWorklet,onScroll,scheduleOnRN]=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){scheduleOnRN(onScroll);}})" };
 const size = fn(2);
@@ -333,7 +333,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   obj4.onScroll = require("module_1652").useAnimatedScrollHandler(ChannelListLegendListTsx1);
   obj4.renderItem = callback;
   obj4.scrollIndicatorInsets = memo4;
-  const items8 = [renderItem(tmp5(14552).AnimatedLegendList, obj4), renderAccessory(memo1)];
+  const items8 = [renderItem(tmp5(14632).AnimatedLegendList, obj4), renderAccessory(memo1)];
   obj5.children = items8;
   return renderSectionFooter(renderHeader, obj5);
 });

@@ -1,17 +1,17 @@
-// === Module 13803: CheckpointEmojiStatsScreen ===
+// === Module 13889: CheckpointEmojiStatsScreen ===
 
-// Module 13803 (CheckpointEmojiStatsScreen)
+// Module 13889 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import CheckpointStore from "CheckpointStore" /* 13571 */;
+import CheckpointStore from "CheckpointStore" /* 13656 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6186);
+const CheckpointConstants = fn(6201);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -110,7 +110,7 @@ export default function CheckpointEmojiStatsScreen() {
   }
   [emoji, _slicedToArray] = noop.useState(tmp11 ? closure_11 : emojis[0]);
   const tmp2Result = require("CheckpointStatsUtils");
-  noop = require("useCheckpointSound")(require("module_13594"));
+  noop = require("useCheckpointSound")(require("module_13681"));
   let intl = tmp2(tmp3[14]).intl;
   const string = intl.string;
   if (tmp11) {
@@ -145,7 +145,7 @@ export default function CheckpointEmojiStatsScreen() {
   const obj9 = { style: items5, children: null };
   items5[1] = titleSpacing;
   const items6 = [closure_9(EmojiSlightlySmilingFaceIcon, { size: "xs", color }), ];
-  const obj11 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
+  const obj11 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj10 = { size: "xs", color };
   const tmp14Result = require("CheckpointScreen");
   obj11.children = stringResult.toLocaleUpperCase();

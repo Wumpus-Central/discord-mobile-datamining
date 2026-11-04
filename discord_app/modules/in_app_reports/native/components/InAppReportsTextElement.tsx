@@ -1,14 +1,14 @@
-// === Module 8499: InAppReportsTextElement ===
+// === Module 8516: InAppReportsTextElement ===
 
-// Module 8499 (InAppReportsTextElement)
-import Text_Text from "Text/Text" /* 5747 */;
-import CustomMarkupAll from "CustomMarkup" /* 6151 */;
+// Module 8516 (InAppReportsTextElement)
+import Text_Text from "Text/Text" /* 5761 */;
+import CustomMarkupAll from "CustomMarkup" /* 6166 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ container: { marginBottom: 16, paddingHorizontal: 16 }, header: { marginBottom: 8 }, body: { marginBottom: 16 } });
 const size = fn(2);
@@ -24,13 +24,13 @@ export default function TextElement(element) {
       const obj2 = { style: tmp.container, children: null };
       let tmp7 = null != header;
       if (tmp7) {
-        const obj3 = { style: tmp.header, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: header };
+        const obj3 = { style: tmp.header, variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: header };
         tmp7 = hasOwnProperty(Text_Text.Text, obj3);
       }
       items = [tmp7, ];
       let tmp10 = null != body;
       if (tmp10) {
-        const obj4 = { style: tmp.body, variant: "text-md/medium", children: ref.current(body) };
+        const obj4 = { style: tmp.body, variant: "body-md/medium", children: ref.current(body) };
         tmp10 = hasOwnProperty(Text_Text.Text, obj4);
       }
       items[1] = tmp10;

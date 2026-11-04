@@ -1,6 +1,6 @@
-// === Module 10323: canForwardMessage ===
+// === Module 10371: canForwardMessage ===
 
-// Module 10323 (canForwardMessage)
+// Module 10371 (canForwardMessage)
 import FlagUtils from "FlagUtils" /* 1398 */;
 import GatedChannelStore from "GatedChannelStore" /* 5045 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -97,8 +97,8 @@ function canForwardMessage(state) {
   }
 }
 const Constants = fn(1072);
-({ GuildFeatures: metroRequire, MessageFlags, MessageStates: closure_7, MessageTypesSets: closure_8, Permissions: closure_9 } = Constants);
-let closure_10 = MessageFlags.CROSSPOSTED | MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | MessageFlags.GUILD_FEED_HIDDEN | MessageFlags.HAS_SNAPSHOT | MessageFlags.HAS_THREAD | MessageFlags.IS_CROSSPOST | MessageFlags.IS_VOICE_MESSAGE | MessageFlags.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | MessageFlags.SUPPRESS_EMBEDS | MessageFlags.SUPPRESS_NOTIFICATIONS | MessageFlags.URGENT | MessageFlags.IS_COMPONENTS_V2 | MessageFlags.IS_GUILD_OFFICIAL | MessageFlags.IS_SCHEDULED;
+({ GuildFeatures: closure_6, MessageFlags, MessageStates: metroImportDefault, MessageTypesSets: closure_8, Permissions: closure_9 } = Constants);
+let closure_10 = MessageFlags.CROSSPOSTED | MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | MessageFlags.GUILD_FEED_HIDDEN | MessageFlags.HAS_SNAPSHOT | MessageFlags.HAS_THREAD | MessageFlags.IS_CROSSPOST | MessageFlags.IS_VOICE_MESSAGE | MessageFlags.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | MessageFlags.SUPPRESS_EMBEDS | MessageFlags.SUPPRESS_NOTIFICATIONS | MessageFlags.URGENT | MessageFlags.IS_COMPONENTS_V2 | MessageFlags.IS_GUILD_OFFICIAL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
 

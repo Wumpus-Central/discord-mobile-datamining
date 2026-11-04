@@ -1,20 +1,20 @@
-// === Module 12719: conjureScopeSetup ===
+// === Module 12800: conjureScopeSetup ===
 
-// Module 12719 (conjureScopeSetup)
+// Module 12800 (conjureScopeSetup)
 import Storage6 from "Storage" /* 510 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import createNonce from "createNonce" /* 10445 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
-import ConjureChatActionCreators from "ConjureChatActionCreators" /* 12721 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12722 */;
+import createNonce from "createNonce" /* 10493 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11053 */;
+import ConjureChatActionCreators from "ConjureChatActionCreators" /* 12802 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12803 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureChatStore from "ConjureChatStore" /* 10981 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12720 */;
-import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 10980 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureChatStore from "ConjureChatStore" /* 11029 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12801 */;
+import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 11028 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 require = fn;
 function _toPropertyKey(obj) {
@@ -48,24 +48,24 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-function restoreToComposer(projectId, nonce, fn) {
+function restoreToComposer(CONJURE_HOME_DRAFT_KEY, nonce, fn) {
   const Storage = Storage6.Storage;
   let obj = Storage.get(ConjureHeldPrompts);
   if (obj == null) {
     obj = {};
   }
-  items = [projectId];
+  items = [CONJURE_HOME_DRAFT_KEY];
   const Storage2 = Storage6.Storage;
   const result = Storage2.set(ConjureHeldPrompts, _objectWithoutProperties(obj, items.map(_toPropertyKey)));
-  closure_1_10(projectId, nonce.nonce);
-  if ("" === ConjureComposerDraftStore.getDraft(projectId)) {
-    ConjureChatActionCreators.setComposerDraft(projectId, nonce.message);
+  closure_1_10(CONJURE_HOME_DRAFT_KEY, nonce.nonce);
+  if ("" === ConjureComposerDraftStore.getDraft(CONJURE_HOME_DRAFT_KEY)) {
+    ConjureChatActionCreators.setComposerDraft(CONJURE_HOME_DRAFT_KEY, nonce.message);
     const tmpResult = ConjureChatActionCreators;
   }
   const tmp4 = _objectWithoutProperties(obj, items.map(_toPropertyKey));
-  if (0 === tmpResult3.getConjureAttachmentDrafts(projectId, "chat").length) {
+  if (0 === tmpResult3.getConjureAttachmentDrafts(CONJURE_HOME_DRAFT_KEY, "chat").length) {
     const attachments = nonce.attachments;
-    const result1 = conjureAttachmentDrafts.addConjureAttachmentDrafts(projectId, "chat", attachments.map((name) => ({ draft: { name: name.name, contentType: name.content_type, status: "ready", ref: name } })));
+    const result1 = conjureAttachmentDrafts.addConjureAttachmentDrafts(CONJURE_HOME_DRAFT_KEY, "chat", attachments.map((name) => ({ draft: { name: name.name, contentType: name.content_type, status: "ready", ref: name } })));
     const tmpResult4 = conjureAttachmentDrafts;
   }
   fn();
@@ -151,8 +151,8 @@ let closure_20 = async function _putInstallScope(arg0) {
     }
   })();
 };
-let ConjureConnectionStore = fn(10980);
-({ optimisticMessageId: closure_7, sendUserMessage: closure_8, showUserMessage: closure_9, withdrawUserMessage: closure_10 } = ConjureConnectionStore);
+let ConjureConnectionStore = fn(11028);
+({ optimisticMessageId: metroImportDefault, sendUserMessage: closure_8, showUserMessage: closure_9, withdrawUserMessage: closure_10 } = ConjureConnectionStore);
 let ConjureConnectionStore = ConjureConnectionStore_mod;
 const Endpoints = fn(1072).Endpoints;
 const ConjureHeldPrompts = "ConjureHeldPrompts";
@@ -197,7 +197,7 @@ export function startConjurePrompt(arg0, trimmed, arg2) {
     const result = Storage.set(ConjureHeldPrompts, obj2);
     const tmp5Result = createNonce;
   } else {
-    React6(arg0, trimmed, items);
+    React5(arg0, trimmed, items);
   }
 }
 export function reconcileHeldConjurePrompt(projectId, fn) {
@@ -212,7 +212,7 @@ export function reconcileHeldConjurePrompt(projectId, fn) {
     if (null != project) {
       if (ConjureChatStore.hasLoadedHistory(projectId)) {
         const messages = ConjureChatStore.getMessages(projectId);
-        closure_1 = React5(tmp4.nonce);
+        closure_1 = metroImportDefault(tmp4.nonce);
         if (true !== tmp4.sent) {
           if (null == project.install_scope_setup) {
             if ("open" === ConjureConnectionStore.getConnState(projectId)) {
@@ -231,13 +231,13 @@ export function reconcileHeldConjurePrompt(projectId, fn) {
               const result = Storage4.set(ConjureHeldPrompts, obj2);
               const result1 = map1.set(projectId, ConjureChatStore.getHistoryLoads(projectId));
               const obj4 = { nonce: tmp4.nonce };
-              if (!React6(projectId, tmp4.message, tmp4.attachments, obj4)) {
+              if (!React5(projectId, tmp4.message, tmp4.attachments, obj4)) {
                 restoreToComposer(projectId, tmp4, fn);
               }
             }
           } else if (!messages.some((id) => id.id === closure_1)) {
             const obj5 = { held: true, nonce: tmp4.nonce };
-            React7(projectId, tmp4.message, tmp4.attachments, obj5);
+            React6(projectId, tmp4.message, tmp4.attachments, obj5);
           }
         } else {
           const historyLoads = ConjureChatStore.getHistoryLoads(projectId);

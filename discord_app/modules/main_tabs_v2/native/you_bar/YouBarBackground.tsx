@@ -1,14 +1,14 @@
-// === Module 18611: YouBarBackground ===
+// === Module 18712: YouBarBackground ===
 
-// Module 18611 (YouBarBackground)
+// Module 18712 (YouBarBackground)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import _modDef7164 from "module_7164" /* 7164 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17299 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import _modDef7179 from "module_7179" /* 7179 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17391 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -31,7 +31,7 @@ function YouBarMaskedBackground(barWidth) {
   const size1 = { position: "absolute", top: YOU_BAR_HEIGHT / 2, width: 8, left: diff - 8, height: YOU_BAR_HEIGHT / 2 };
   obj5.style = size1;
   const obj4 = { style: { position: "absolute", top: YOU_BAR_HEIGHT / 2, left: diff - 1, right: 0, bottom: 0, backgroundColor: "black" } };
-  const tmp3 = _modDef7164;
+  const tmp3 = _modDef7179;
   const tmp4 = LinearGradientDefault;
   const obj9 = _modDef671("#000000");
   const items1 = [_modDef671("#000000").alpha(0).hex(), "#000000"];
@@ -41,7 +41,7 @@ function YouBarMaskedBackground(barWidth) {
   obj5.locations = [0, 1];
   items[2] = timestampProducer(tmp4, obj5);
   obj2.children = items;
-  obj.maskElement = React5(View, obj2);
+  obj.maskElement = metroImportDefault(View, obj2);
   const obj6 = { style: null };
   const items2 = [tmp.youRowFloating, { width: barWidth, height: YOU_BAR_HEIGHT, backgroundColor }];
   obj6.style = items2;
@@ -96,11 +96,11 @@ function YouBarAnimatedBackground(arg0) {
   return timestampProducer(_modDef1652.View, obj3);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17218);
+const YouBarConstants = fn(17310);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj = { youRowFloating: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS, borderTopLeftRadius: YOU_BAR_HEIGHT / 2, borderBottomLeftRadius: YOU_BAR_HEIGHT / 2 } };
 let closure_8 = createStyles.createStyles(obj);

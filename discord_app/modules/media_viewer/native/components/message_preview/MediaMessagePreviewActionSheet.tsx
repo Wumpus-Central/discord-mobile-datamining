@@ -1,10 +1,10 @@
-// === Module 14917: MediaMessagePreviewActionSheet ===
+// === Module 14997: MediaMessagePreviewActionSheet ===
 
-// Module 14917 (MediaMessagePreviewActionSheet)
+// Module 14997 (MediaMessagePreviewActionSheet)
 import router_utils from "router_utils" /* 1099 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import ReportModals from "ReportModals" /* 8476 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import ReportModals from "ReportModals" /* 8492 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -78,5 +78,5 @@ export default noop.memo(function MediaMessagePreviewActionSheet(channel) {
   }
   const obj2 = { IconComponent: channel(closeMediaModal[11]).ChatArrowRightIcon };
   items3[2] = canReportUserResult;
-  return closure_4(channel(closeMediaModal[9]).ActionSheet, { children: closure_5(channel(closeMediaModal[10]).ActionSheetRow.Group, { hasIcons: true, children: items3 }) });
+  return closure_4(channel(closeMediaModal[9]).ActionSheet, { resyncOnRotation: true, children: closure_5(channel(closeMediaModal[10]).ActionSheetRow.Group, { hasIcons: true, children: items3 }) });
 });

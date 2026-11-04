@@ -1,10 +1,10 @@
-// === Module 16707: UserProfileWidgetsEmptyState ===
+// === Module 16797: UserProfileWidgetsEmptyState ===
 
-// Module 16707 (UserProfileWidgetsEmptyState)
+// Module 16797 (UserProfileWidgetsEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,11 +24,11 @@ export default function UserProfileWidgetsEmptyState() {
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.textContainer, children: null };
-  const obj3 = { variant: "heading-md/semibold", color: "text-strong", style: tmp.centeredText, children: null };
+  const obj3 = { variant: "heading-sm/semibold", color: "text-strong", style: tmp.centeredText, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["oqalC+"]);
   items = [React3(Text_Text.Heading, obj3), ];
-  const obj4 = { variant: "text-sm/normal", color: "text-default", style: tmp.centeredText, children: null };
+  const obj4 = { variant: "body-sm/normal", color: "text-default", style: tmp.centeredText, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.O9SQ1c);
   items[1] = React3(Text_Text.Text, obj4);

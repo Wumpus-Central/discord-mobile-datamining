@@ -1,18 +1,18 @@
-// === Module 18120: VEVOO ===
+// === Module 18217: VEVOO ===
 
-// Module 18120 (VEVOO)
+// Module 18217 (VEVOO)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import Form from "Form" /* 8301 */;
-import ActionButtonDefault from "ActionButton" /* 10897 */;
-import VEVOOPropBlurAmountDefault from "VEVOOPropBlurAmount" /* 18121 */;
-import VEVOOPropTintColorDefault from "VEVOOPropTintColor" /* 18123 */;
-import VEVOOPropBlurEffectNameDefault from "VEVOOPropBlurEffectName" /* 18124 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import Form from "Form" /* 8317 */;
+import ActionButtonDefault from "ActionButton" /* 10945 */;
+import VEVOOPropBlurAmountDefault from "VEVOOPropBlurAmount" /* 18218 */;
+import VEVOOPropTintColorDefault from "VEVOOPropTintColor" /* 18220 */;
+import VEVOOPropBlurEffectNameDefault from "VEVOOPropBlurEffectName" /* 18221 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import DevSettingsStore from "DevSettingsStore" /* 5764 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
@@ -47,19 +47,19 @@ function VisualEffectViewOverrideOverlay_(arg0) {
   const obj4 = { title: "Blur View Global Overrides", sectionBodyStyle: tmp.scrollViewContent, children: null };
   const items3 = [timestampProducer(VEVOOPropBlurAmountDefault, {}), timestampProducer(VEVOOPropTintColorDefault, {}), timestampProducer(VEVOOPropBlurEffectNameDefault, {})];
   obj4.children = items3;
-  obj3.children = React5(Form.FormSection, obj4);
+  obj3.children = metroImportDefault(Form.FormSection, obj4);
   const items4 = [timestampProducer(ScrollView, obj3), ];
   const obj5 = { styles: tmp.close, type: "neutral", IconComponent: null, onPress: null, accessibilityLabel: "Close" };
   obj5.IconComponent = XSmallIcon.XSmallIcon;
   obj5.onPress = onClose;
   items4[1] = timestampProducer(ActionButtonDefault, obj5);
   obj2.children = items4;
-  return React5(_modDef1652.View, obj2);
+  return metroImportDefault(_modDef1652.View, obj2);
 }
 const ScrollView = fn(17).ScrollView;
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5141);
 const styles = createStyles.createStyles({ zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 }, zeroPaddingVertical: { paddingVertical: 0 }, zeroPaddingHorizontal: { paddingHorizontal: 0 }, zeroHeight: { height: 0 }, enabledSwitchStyle: { alignSelf: "flex-start" } });
 createStyles = fn(5141);

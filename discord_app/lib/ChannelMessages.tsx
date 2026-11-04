@@ -1,14 +1,14 @@
-// === Module 6683: ChannelMessages ===
+// === Module 6698: ChannelMessages ===
 
-// Module 6683 (ChannelMessages)
+// Module 6698 (ChannelMessages)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import Client from "Client" /* 5372 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
-import EnsureReceivedMessagesAddedInOrderExperimentDefault from "EnsureReceivedMessagesAddedInOrderExperiment" /* 6684 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6685 */;
-import SortedArrayUtilsAll from "SortedArrayUtils" /* 6687 */;
+import Client from "Client" /* 5373 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
+import EnsureReceivedMessagesAddedInOrderExperimentDefault from "EnsureReceivedMessagesAddedInOrderExperiment" /* 6699 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6700 */;
+import SortedArrayUtilsAll from "SortedArrayUtils" /* 6702 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -47,7 +47,7 @@ function mergeMessage(self, id) {
   }
   messageRecord = MessageRecordUtils.createMessageRecord(id);
 }
-({ MAX_MESSAGES_PER_CHANNEL: closure_4, MAX_LOADED_MESSAGES: hasOwnProperty, MAX_MESSAGE_CACHE_SIZE: metroRequire, TRUNCATED_MESSAGE_VIEW_SIZE: closure_7, LOCAL_BOT_ID: closure_8, MessageStates: closure_9 } = Constants);
+({ MAX_MESSAGES_PER_CHANNEL: closure_4, MAX_LOADED_MESSAGES: hasOwnProperty, MAX_MESSAGE_CACHE_SIZE: closure_6, TRUNCATED_MESSAGE_VIEW_SIZE: metroImportDefault, LOCAL_BOT_ID: closure_8, MessageStates: closure_9 } = Constants);
 const logger = new LoggerDefault("ChannelMessages");
 let MessageCache;
 class MessageCache {
@@ -936,7 +936,7 @@ prototype2["insertInOrder"] = function insertInOrder(messageRecord1) {
           if (author != null) {
             id = author.id;
           }
-          tmp2 = id === React6;
+          tmp2 = id === React5;
         }
         if (!tmp2) {
           const _array = self._array;
@@ -979,7 +979,7 @@ prototype2["_insertInOrder"] = function _insertInOrder(messageRecord) {
         if (author != null) {
           id = author.id;
         }
-        tmp3 = id === React6;
+        tmp3 = id === React5;
       }
       if (tmp3) {
         _array1.push(messageRecord);
@@ -993,7 +993,7 @@ prototype2["_insertInOrder"] = function _insertInOrder(messageRecord) {
             if (author2 != null) {
               id1 = author2.id;
             }
-            tmp7 = id1 === React6;
+            tmp7 = id1 === React5;
           }
           let tmp10 = length;
           if (tmp7) {
@@ -1008,7 +1008,7 @@ prototype2["_insertInOrder"] = function _insertInOrder(messageRecord) {
                 if (author3 != null) {
                   id2 = author3.id;
                 }
-                tmp14 = id2 === React6;
+                tmp14 = id2 === React5;
               }
               tmp10 = diff;
               if (tmp14) {
@@ -1057,8 +1057,8 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(6183).createMessageRecord(item));
-    const combined = found.concat(mapped, items1.map((item) => set(6183).createMessageRecord(item)));
+    const mapped = items.map((item) => set(6198).createMessageRecord(item));
+    const combined = found.concat(mapped, items1.map((item) => set(6198).createMessageRecord(item)));
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
 };
@@ -1210,11 +1210,11 @@ prototype2["truncate"] = function truncate(arg0, arg1) {
   if (this.length <= hasOwnProperty) {
     return self;
   } else if (arg0) {
-    let truncateBottomResult = self.truncateBottom(React5);
+    let truncateBottomResult = self.truncateBottom(metroImportDefault);
   } else {
     truncateBottomResult = self;
     if (arg1) {
-      truncateBottomResult = self.truncateTop(React5);
+      truncateBottomResult = self.truncateTop(metroImportDefault);
     }
   }
 };
@@ -1442,7 +1442,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = id(5372).JumpType.ANIMATED;
+        jumpType = id(5373).JumpType.ANIMATED;
       }
       let obj2 = { ready: true, loadingMore: false, jumpType, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
       let flag8;
@@ -1609,7 +1609,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  const result = reversed(6686).requireSortedDescending(messages);
+  const result = reversed(6701).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
@@ -1622,7 +1622,7 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   if (!stale) {
     cached = self.cached;
   }
-  const obj = reversed(6686);
+  const obj = reversed(6701);
   const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {

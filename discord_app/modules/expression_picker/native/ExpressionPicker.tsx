@@ -1,10 +1,10 @@
-// === Module 10368: ExpressionPicker ===
+// === Module 10416: ExpressionPicker ===
 
-// Module 10368 (ExpressionPicker)
+// Module 10416 (ExpressionPicker)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 10076 */;
-import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 10101 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10124 */;
+import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 10149 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const ExpressionPickerConstants = fn(1228);
-({ ExpressionPickerViewType: hasOwnProperty, ExpressionPickerOrder: metroRequire, PADDING_HORIZONTAL } = ExpressionPickerConstants);
+({ ExpressionPickerViewType: hasOwnProperty, ExpressionPickerOrder: closure_6, PADDING_HORIZONTAL } = ExpressionPickerConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);

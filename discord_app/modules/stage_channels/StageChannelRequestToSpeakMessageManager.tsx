@@ -1,14 +1,14 @@
-// === Module 19772: StageChannelRequestToSpeakMessageManager ===
+// === Module 19888: StageChannelRequestToSpeakMessageManager ===
 
-// Module 19772 (StageChannelRequestToSpeakMessageManager)
+// Module 19888 (StageChannelRequestToSpeakMessageManager)
 import MessageTypes from "MessageTypes" /* 1088 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import MessageStore from "MessageStore" /* 6181 */;
+import MessageStore from "MessageStore" /* 6196 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 import UserStore from "UserStore" /* 1385 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 require = fn;
 const MessageFlags = fn(1072).MessageFlags;
@@ -32,8 +32,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(19773).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
-                  const tmp11Result = userId(19773);
+                  const result = userId(19889).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const tmp11Result = userId(19889);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -48,8 +48,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  closure_1(7760).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = closure_1(7760);
+                  closure_1(7776).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = closure_1(7776);
                 }
               }
             }

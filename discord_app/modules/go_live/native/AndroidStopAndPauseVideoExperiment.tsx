@@ -1,6 +1,6 @@
-// === Module 8024: AndroidStopAndPauseVideoExperiment ===
+// === Module 8040: AndroidStopAndPauseVideoExperiment ===
 
-// Module 8024 (AndroidStopAndPauseVideoExperiment)
+// Module 8040 (AndroidStopAndPauseVideoExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 15543: BoostingUnavailablePill ===
+// === Module 15630: BoostingUnavailablePill ===
 
-// Module 15543 (BoostingUnavailablePill)
+// Module 15630 (BoostingUnavailablePill)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import PremiumGroupConstants from "PremiumGroupConstants" /* 2189 */;
 import _modDef3415 from "module_3415" /* 3415 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
@@ -17,7 +17,7 @@ function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(15544, dependencyMap.paths);
+  const tmp = asyncRequireImpl(15631, dependencyMap.paths);
   obj2.aboutText = intl.formatToPlainString(_modDef3415["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }
@@ -35,10 +35,10 @@ export default function BoostingUnavailablePill(style) {
   items = [tmp.premiumGroupBanner, style.style];
   obj2.style = items;
   const obj3 = { style: tmp.pgUnavailable, children: null };
-  const obj4 = { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null };
+  const obj4 = { variant: "body-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["5nrJDO"]);
-  obj3.children = jsx(Text_Text.Text, { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null });
+  obj3.children = jsx(Text_Text.Text, { variant: "body-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null });
   obj2.children = <React4 style={tmp.pgUnavailable}>{null}</React4>;
   obj.children = <React4 style={null}>{null}</React4>;
   return <React3 activeOpacity={0.7} onPress={handlePress}>{null}</React3>;

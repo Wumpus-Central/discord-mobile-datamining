@@ -1,18 +1,18 @@
-// === Module 11835: transitionToActivity ===
+// === Module 11894: transitionToActivity ===
 
-// Module 11835 (transitionToActivity)
+// Module 11894 (transitionToActivity)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5062 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5777 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5798 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5879 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6971 */;
-import ChannelCallStore from "ChannelCallStore" /* 11133 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 11134 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 11836 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11863 */;
-import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 13320 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5791 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5812 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6986 */;
+import ChannelCallStore from "ChannelCallStore" /* 11181 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 11182 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 11895 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11922 */;
+import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 13403 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// === Module 19841: TriggerFields ===
+// === Module 19957: TriggerFields ===
 
-// Module 19841 (TriggerFields)
+// Module 19957 (TriggerFields)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 19825 */;
-import MentionSpamTriggerFieldsDefault from "MentionSpamTriggerFields" /* 19842 */;
-import DefaultKeywordListTriggerFieldsDefault from "DefaultKeywordListTriggerFields" /* 19843 */;
-import ApplicationTriggerFieldsDefault from "ApplicationTriggerFields" /* 19847 */;
-import KeywordFilterTriggerFieldsDefault from "KeywordFilterTriggerFields" /* 19851 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 19941 */;
+import MentionSpamTriggerFieldsDefault from "MentionSpamTriggerFields" /* 19958 */;
+import DefaultKeywordListTriggerFieldsDefault from "DefaultKeywordListTriggerFields" /* 19959 */;
+import ApplicationTriggerFieldsDefault from "ApplicationTriggerFields" /* 19963 */;
+import KeywordFilterTriggerFieldsDefault from "KeywordFilterTriggerFields" /* 19967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,10 +18,10 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function TriggerFields(onValidityChange) {
   ({ rule, onChangeRule } = onValidityChange);
   if (obj.isRuleMLSpamFilter(rule)) {
-    const obj2 = { variant: "text-md/normal", color: "text-default", children: null };
+    const obj2 = { variant: "body-md/normal", color: "text-default", children: null };
     const intl = util.intl;
     obj2.children = intl.string(util.t["1YgPj/"]);
-    let tmp3 = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-default", children: null });
+    let tmp3 = jsx(Text_Text.Text, { variant: "body-md/normal", color: "text-default", children: null });
   } else {
     if (tmpResult.isRuleMentionSpamFilter(rule)) {
       const obj3 = { rule, onChangeRule, onValidityChange: onValidityChange.onValidityChange };

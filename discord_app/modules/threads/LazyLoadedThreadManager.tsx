@@ -1,8 +1,8 @@
-// === Module 7608: LazyLoadedThreadManager ===
+// === Module 7624: LazyLoadedThreadManager ===
 
-// Module 7608 (LazyLoadedThreadManager)
+// Module 7624 (LazyLoadedThreadManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
@@ -133,7 +133,7 @@ export default {
       let nextResult = iter.next();
       while (iter !== undefined) {
         let tmp9 = nextResult;
-        if (nextResult !== items1(7520).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(7536).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           if (!isStaticChannelRoute(tmp9)) {
             if (null == ChannelStore.getChannel(tmp9)) {
               let tmp18 = dependencyMap[tmp9];

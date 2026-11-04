@@ -1,6 +1,6 @@
-// === Module 18645: ForYouMentionPlaceholder ===
+// === Module 18746: ForYouMentionPlaceholder ===
 
-// Module 18645 (ForYouMentionPlaceholder)
+// Module 18746 (ForYouMentionPlaceholder)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { placeholder: { flexDirection: "row", marginBottom: 16, marginHorizontal: 24 }, placeholderImage: null, placeholderText: null, placeholderTextContainer: null, placeholderBody: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, height: 52, width: 52, borderRadius: 26, marginEnd: 12 };

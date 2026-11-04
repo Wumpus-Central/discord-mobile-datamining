@@ -1,6 +1,6 @@
-// === Module 9526: ? ===
+// === Module 9545: ? ===
 
-// Module 9526
+// Module 9545
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/game-profile/opencritic-fair.png.js");

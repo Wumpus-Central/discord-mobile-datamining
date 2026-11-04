@@ -1,6 +1,6 @@
-// === Module 15149: UserProfileIncomingFriendRequest ===
+// === Module 15229: UserProfileIncomingFriendRequest ===
 
-// Module 15149 (UserProfileIncomingFriendRequest)
+// Module 15229 (UserProfileIncomingFriendRequest)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG } };
 let closure_7 = createStyles.createStyles(obj2);
@@ -66,7 +66,7 @@ export default function UserProfileIncomingFriendRequest(style) {
   const items2 = [items4.container, tmp3.card, style.style];
   obj6.style = items2;
   let Text = tmp4(userResult[11]).Text;
-  let obj7 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  let obj7 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = tmp4(userResult[12]).intl;
   const format = intl.format;
   let intl2 = tmp4(userResult[12]).t;

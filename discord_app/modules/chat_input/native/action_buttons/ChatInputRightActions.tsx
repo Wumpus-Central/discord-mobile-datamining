@@ -1,12 +1,12 @@
-// === Module 14126: ChatInputRightActions ===
+// === Module 14212: ChatInputRightActions ===
 
-// Module 14126 (ChatInputRightActions)
+// Module 14212 (ChatInputRightActions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import native from "native" /* 5207 */;
-import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 12944 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12946 */;
-import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 13936 */;
+import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 13026 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 13028 */;
+import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 14022 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -99,15 +99,15 @@ function LeftSlot(state) {
   obj2.style = items;
   const tmp = useChatInputFloatingBounceDefault({ visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs, onExitComplete: cleanup });
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "flexDirection", shouldShowThread: "ModulesLoader" });
-  return React5(_modDef1652.View, obj2);
+  obj2.children = metroImportDefault(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "flexDirection", shouldShowThread: "\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430" });
+  return metroImportDefault(_modDef1652.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12945).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(13027).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
-const React7 = createStyles.createStyles(() => {
+const React6 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP }, leftSlot: { alignItems: "center", justifyContent: "center" } };
   return obj;
 });

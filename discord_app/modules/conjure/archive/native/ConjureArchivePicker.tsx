@@ -1,11 +1,11 @@
-// === Module 12358: ConjureArchivePicker ===
+// === Module 12423: ConjureArchivePicker ===
 
-// Module 12358 (ConjureArchivePicker)
+// Module 12423 (ConjureArchivePicker)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import FilePickerUtils from "FilePickerUtils" /* 11236 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12254 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12283 */;
+import FilePickerUtils from "FilePickerUtils" /* 11286 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12315 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12344 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -97,7 +97,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10980);
+const ConjureConnectionStore = fn(11028);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 let closure_6 = ["zip", "tar", "gz", "tgz", "bz2", "xz"];
 const size = fn(2);

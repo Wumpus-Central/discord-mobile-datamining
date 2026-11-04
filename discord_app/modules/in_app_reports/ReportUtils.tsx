@@ -1,16 +1,16 @@
-// === Module 8480: in_app_reports/ReportUtils ===
+// === Module 8496: in_app_reports/ReportUtils ===
 
-// Module 8480 (in_app_reports/ReportUtils)
+// Module 8496 (in_app_reports/ReportUtils)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7620 */;
-import MenuTypes from "MenuTypes" /* 8477 */;
-import ReportMenuType from "ReportMenuType" /* 8479 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7636 */;
+import MenuTypes from "MenuTypes" /* 8493 */;
+import ReportMenuType from "ReportMenuType" /* 8495 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5750 */;
+import DevSettingsStore from "DevSettingsStore" /* 5764 */;
 
 require = fn;
 function getReportMenu() {
@@ -26,7 +26,7 @@ function getReportMenu() {
 let closure_10 = async function _getReportMenu() {
   closure_3 = tmp4;
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React5.GET_REPORT_MENU(getReportNameSafely(closure_0)), query: null, rejectWithError: false };
+  const request = { url: metroImportDefault.GET_REPORT_MENU(getReportNameSafely(closure_0)), query: null, rejectWithError: false };
   if (importDefault != null) {
     const variant = importDefault.variant;
   }
@@ -47,7 +47,7 @@ let closure_10 = async function _getReportMenu() {
 let closure_11 = async function _getReportMenuForModeratorReport() {
   closure_3 = tmp4;
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React5.GET_REPORT_MENU(getModeratorReportNameSafely(closure_0)), query: null, rejectWithError: false };
+  const request = { url: metroImportDefault.GET_REPORT_MENU(getModeratorReportNameSafely(closure_0)), query: null, rejectWithError: false };
   if (importDefault != null) {
     const variant = importDefault.variant;
   }
@@ -68,7 +68,7 @@ let closure_11 = async function _getReportMenuForModeratorReport() {
 const navigation_history = async function _getUnauthenticatedReportMenu() {
   closure_3 = tmp4;
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React5.GET_UNAUTHENTICATED_REPORT_MENU(getUnauthenticatedReportNameSafely(closure_0)), query: null, rejectWithError: false };
+  const request = { url: metroImportDefault.GET_UNAUTHENTICATED_REPORT_MENU(getUnauthenticatedReportNameSafely(closure_0)), query: null, rejectWithError: false };
   if (importDefault != null) {
     const variant = importDefault.variant;
   }
@@ -229,7 +229,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "Array", message_id: "ao", stage_instance_id: "round", guild_id: "flex", guild_scheduled_event_id: "r", user_id: "isArray", email_token: "useState", application_id: "it", entrypoint: "Array", widget_id: "isArray" };
+  let obj2 = { channel_id: "isArray", message_id: "Path", stage_instance_id: "id", guild_id: "type", guild_scheduled_event_id: "fileFinishedImporting", user_id: "ao", email_token: "useCallback", application_id: "marginBottom", entrypoint: "r", widget_id: "isArray" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -367,8 +367,8 @@ function genSubmitData(version, name, arr, email_token) {
   return obj28;
 }
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
-const SafetyToastType = fn(7614).SafetyToastType;
+({ AnalyticEvents: closure_6, Endpoints: metroImportDefault } = Constants);
+const SafetyToastType = fn(7630).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportUtils.tsx");
 
@@ -407,7 +407,7 @@ export function submitReport(language, name, arr) {
   if (DevSettingsStore.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = obj4(8479).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj4(8495).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       const obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -440,8 +440,8 @@ export function submitReport(language, name, arr) {
         return {};
       }, {});
       let tmp15 = null;
-      if (name.name === tmp4(8477).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "replace", message_id: "r", guild_id: "isArray" };
+      if (name.name === tmp4(8493).ModeratorReportNames.MESSAGE) {
+        let obj2 = { channel_id: "Array", message_id: "id", guild_id: "error" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -453,11 +453,11 @@ export function submitReport(language, name, arr) {
       }
       obj4 = tmp15;
       const HTTP2 = tmp4(1282).HTTP;
-      const REPORT_TO_MOD2 = tmp4(8479).ReportMenuTypeSets.REPORT_TO_MOD;
+      const REPORT_TO_MOD2 = tmp4(8495).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
       _modDef38(hasItem, "Invalid report type " + name.name);
-      if (name.name === tmp4(8477).ModeratorReportNames.MESSAGE) {
+      if (name.name === tmp4(8493).ModeratorReportNames.MESSAGE) {
         const request = { url: closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id), body: tmp15, rejectWithError: false };
         resolved = HTTP2.post(request).then((result) => {
           SafetyToastsActionCreatorsDefault.showSuccessToast(SafetyToastType.REPORT_TO_MOD_SUCCESS);
@@ -493,7 +493,7 @@ export function submitReport(language, name, arr) {
       const request1 = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;
-      const values = Object.values(tmp4(8477).ReportNames);
+      const values = Object.values(tmp4(8493).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
       _modDef38(hasItem1, "Invalid report type " + name.name);
@@ -515,7 +515,7 @@ export function submitUnauthenticatedReport(version, name, arr, email_token) {
     const hasItem = values.includes(name);
     _modDef38(hasItem, "Invalid report type " + name.name);
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: React5.SUBMIT_UNAUTHENTICATED_REPORT_MENU(name), body: genSubmitData(version, name, arr, email_token), rejectWithError: true };
+    const request = { url: metroImportDefault.SUBMIT_UNAUTHENTICATED_REPORT_MENU(name), body: genSubmitData(version, name, arr, email_token), rejectWithError: true };
     return HTTP.post(request);
   }
 }
@@ -525,7 +525,7 @@ export function sendUnauthenticatedReportPincode(name, email) {
   let num = 5381;
   let num2 = 0;
   let num3 = 5381;
-  const result = React5.SEND_UNAUTHENTICATED_REPORT_PINCODE(name);
+  const result = metroImportDefault.SEND_UNAUTHENTICATED_REPORT_PINCODE(name);
   if (0 < email.length) {
     do {
       num = (num << 5) + num + email.charCodeAt(num2) | 0;
@@ -585,7 +585,7 @@ export function getModeratorReportEndpointSafely(name) {
   const hasItem = REPORT_TO_MOD.has(name.name);
   _modDef38(hasItem, "Invalid report type " + name.name);
   if (name.name === MenuTypes.ModeratorReportNames.MESSAGE) {
-    return React5.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id);
+    return metroImportDefault.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;

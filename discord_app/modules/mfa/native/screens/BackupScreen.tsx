@@ -1,13 +1,13 @@
-// === Module 17824: BackupScreen ===
+// === Module 17920: BackupScreen ===
 
-// Module 17824 (BackupScreen)
+// Module 17920 (BackupScreen)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7237 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 17817 */;
-import buttonDefault from "button" /* 17820 */;
-import MFA from "MFA" /* 17822 */;
-import ClipboardCopyInputDefault from "ClipboardCopyInput" /* 17823 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7257 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 17913 */;
+import buttonDefault from "button" /* 17916 */;
+import MFA from "MFA" /* 17918 */;
+import ClipboardCopyInputDefault from "ClipboardCopyInput" /* 17919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ function isValidClipboardCode(arg0) {
   return tmp3;
 }
 const jsxProd = fn(21);
-({ jsxs: metroRequire, jsx: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsxs: closure_6, jsx: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/screens/BackupScreen.tsx");
 
@@ -102,7 +102,7 @@ export default function BackupScreen(finish) {
   const intl2 = util.intl;
   obj.subtitle = intl2.string(util.t.c5J7O0);
   if (first1 > 0) {
-    const obj2 = { variant: "text-md/normal", children: null };
+    const obj2 = { variant: "body-md/normal", children: null };
     const intl3 = util.intl;
     const items2 = [intl3.string(util.t.RRtlLg), ];
     const intl4 = util.intl;
@@ -111,7 +111,7 @@ export default function BackupScreen(finish) {
     obj2.children = items2;
     let obj4 = obj2;
   } else {
-    obj4 = { variant: "text-md/normal", children: null };
+    obj4 = { variant: "body-md/normal", children: null };
     const intl8 = util.intl;
     const items3 = [intl8.string(util.t.RRtlLg), ];
     const intl9 = util.intl;
@@ -139,9 +139,9 @@ export default function BackupScreen(finish) {
   const obj6 = { children: null };
   obj5.isDisabled = tmp20;
   obj5.autoFocus = !tmp3;
-  items4[1] = React5(ClipboardCopyInputDefault, obj5);
+  items4[1] = metroImportDefault(ClipboardCopyInputDefault, obj5);
   obj6.children = items4;
-  obj.input = timestampProducer(React6, obj6);
+  obj.input = timestampProducer(React5, obj6);
   const obj7 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
   const tmpResult = ClipboardCopyInputDefault;
   const intl7 = util.intl;
@@ -164,7 +164,7 @@ export default function BackupScreen(finish) {
     tmp5 = first1 > 0;
   }
   obj7.disabled = tmp5;
-  obj.submit = React5(buttonDefault, obj7);
+  obj.submit = metroImportDefault(buttonDefault, obj7);
   obj.screenProps = { mfaChallenge: finish.mfaChallenge, finish };
-  return React5(tmp15, obj);
+  return metroImportDefault(tmp15, obj);
 };

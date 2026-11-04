@@ -1,18 +1,18 @@
-// === Module 16817: UserSettingsInputAlert ===
+// === Module 16909: UserSettingsInputAlert ===
 
-// Module 16817 (UserSettingsInputAlert)
+// Module 16909 (UserSettingsInputAlert)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import common_AlertDefault from "common/Alert" /* 6150 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7081 */;
-import TextInput from "TextInput" /* 7208 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import common_AlertDefault from "common/Alert" /* 6165 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7096 */;
+import TextInput from "TextInput" /* 7223 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "id" };
+const hasOwnProperty = { input: "", error: "children" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -76,7 +76,7 @@ prototype["renderContent"] = function renderContent() {
     }
     let tmp7 = null != helpText;
     if (tmp7) {
-      const obj = { variant: "text-md/normal", children: helpText };
+      const obj = { variant: "body-md/normal", children: helpText };
       tmp7 = React3(Text_Text.Text, obj);
     }
     items = [tmp7, ];

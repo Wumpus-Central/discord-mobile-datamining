@@ -1,21 +1,21 @@
-// === Module 12092: UserSettingsVoiceProcessing ===
+// === Module 12151: UserSettingsVoiceProcessing ===
 
-// Module 12092 (UserSettingsVoiceProcessing)
+// Module 12151 (UserSettingsVoiceProcessing)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 12093 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 12094 */;
-import KrispLogoDefault from "KrispLogo" /* 12097 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6050 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 12152 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 12153 */;
+import KrispLogoDefault from "KrispLogo" /* 12156 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 const util = EUNgko(1113);
-const Text_Text = EUNgko(5747);
-const TableRadioGroup = EUNgko(7184);
-const TableRadioRow = EUNgko(7187);
-const TableSwitchRow = EUNgko(7489);
-const UserSettingsVoice = EUNgko(12077);
+const Text_Text = EUNgko(5761);
+const TableRadioGroup = EUNgko(7199);
+const TableRadioRow = EUNgko(7202);
+const TableSwitchRow = EUNgko(7505);
+const UserSettingsVoice = EUNgko(12136);
 require = fn;
 class VoiceProcessingOptions {
   constructor() {
@@ -81,7 +81,7 @@ class VoiceProcessingOptions {
       } else {
         formatResult = intl7.string(EUNgko(tmp[11]).t.k6h1F4);
       }
-      obj21 = { variant: "text-xs/medium", color: "text-muted", children: null };
+      obj21 = { variant: "body-xs/medium", color: "text-muted", children: null };
       obj21.children = formatResult;
       items3 = [, ];
       items3[0] = tmp8(Text, obj21);
@@ -119,10 +119,10 @@ class VoiceProcessingOptions {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { optionsParentContainer: { marginTop: 12 }, optionsDescriptionContainer: { paddingTop: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_4 }, krisp: { marginStart: -20 } };
-const React6 = createStyles.createStyles(obj2);
+const React5 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceProcessing.tsx");
 

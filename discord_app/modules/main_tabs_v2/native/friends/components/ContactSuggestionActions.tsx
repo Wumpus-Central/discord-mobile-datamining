@@ -1,10 +1,10 @@
-// === Module 18669: ContactSuggestionActions ===
+// === Module 18770: ContactSuggestionActions ===
 
-// Module 18669 (ContactSuggestionActions)
+// Module 18770 (ContactSuggestionActions)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18245 */;
-import _modDef18670 from "module_18670" /* 18670 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18342 */;
+import _modDef18771 from "module_18771" /* 18771 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { duration: 200, easing: null };
 const Easing = fn(1652).Easing;
 obj.easing = Easing.in(fn(1652).Easing.quad);
@@ -312,7 +312,7 @@ export function ContactSuggestionActions(user) {
   const items10 = [tmp.icon, animatedStyle];
   obj8.style = items10;
   const tmp2Result2 = require("module_1652");
-  obj8.children = c5(require("native").Icon, { source: _modDef18670, color: tmp.icon.color });
+  obj8.children = c5(require("native").Icon, { source: _modDef18771, color: tmp.icon.color });
   const items11 = [c5(_modDef1652.View, obj8), ];
   const obj10 = { style: animatedStyle1, children: null };
   const obj11 = { variant: "secondary", size: str, grow: false, text: null, onPress: null };

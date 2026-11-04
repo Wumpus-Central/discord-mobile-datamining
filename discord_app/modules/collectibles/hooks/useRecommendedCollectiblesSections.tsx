@@ -1,9 +1,9 @@
-// === Module 15209: useRecommendedCollectiblesSections ===
+// === Module 15292: useRecommendedCollectiblesSections ===
 
-// Module 15209 (useRecommendedCollectiblesSections)
+// Module 15292 (useRecommendedCollectiblesSections)
 import _mod19 from "module_19" /* 19 */;
-import useInitialValueDefault from "useInitialValue" /* 5735 */;
-import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15210 */;
+import useInitialValueDefault from "useInitialValue" /* 5749 */;
+import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15293 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

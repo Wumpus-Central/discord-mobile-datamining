@@ -8,7 +8,7 @@ import Constants from "Constants" /* 1072 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
-({ Endpoints: closure_4, PaymentGateways: hasOwnProperty, PaymentSourceTypes: metroRequire } = Constants);
+({ Endpoints: closure_4, PaymentGateways: hasOwnProperty, PaymentSourceTypes: closure_6 } = Constants);
 let client = null;
 let c8 = null;
 let c9 = null;

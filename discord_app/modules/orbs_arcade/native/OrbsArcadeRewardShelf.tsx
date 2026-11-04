@@ -1,22 +1,22 @@
-// === Module 17175: OrbsArcadeRewardShelf ===
+// === Module 17267: OrbsArcadeRewardShelf ===
 
-// Module 17175 (OrbsArcadeRewardShelf)
+// Module 17267 (OrbsArcadeRewardShelf)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useCountdownDefault from "useCountdown" /* 7748 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9670 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17167 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17173 */;
-import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 17176 */;
-import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 17177 */;
-import ChestLogoSpotIllustration from "ChestLogoSpotIllustration" /* 17178 */;
-import OrbsArcadeWindowUtils from "OrbsArcadeWindowUtils" /* 17182 */;
-import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 17184 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useCountdownDefault from "useCountdown" /* 7764 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9689 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17259 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17265 */;
+import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 17268 */;
+import OrbsArcadeRewardStatusLabelDefault from "OrbsArcadeRewardStatusLabel" /* 17269 */;
+import ChestLogoSpotIllustration from "ChestLogoSpotIllustration" /* 17270 */;
+import OrbsArcadeWindowUtils from "OrbsArcadeWindowUtils" /* 17274 */;
+import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 17276 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17166 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17258 */;
 
 require = fn;
 function OrbsArcadeClaimableRewardsShelfContent(rewards) {
@@ -31,12 +31,12 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   }, items1);
   const obj2 = { children: null };
   const obj = rewards(504);
-  const items2 = [closure_9(rewards(13560).Pile, { "aria-label": memo, shape: rewards(9637).CutoutShape.Circle, size: v50, gap: 2, depthX: 0.28, children: rewards.map((reward) => closure_1_9(OrbsArcadePileReward, { reward, size }, reward.id)) }), ];
+  const items2 = [closure_9(rewards(13644).Pile, { "aria-label": memo, shape: rewards(9656).CutoutShape.Circle, size: v50, gap: 2, depthX: 0.28, children: rewards.map((reward) => closure_1_9(OrbsArcadePileReward, { reward, size }, reward.id)) }), ];
   const obj4 = { style: tmp.rewardShelfCopy, children: null };
-  const obj5 = { variant: "heading-sm/semibold", color: "text-default", children: null };
+  const obj5 = { variant: "heading-xs/semibold", color: "text-default", children: null };
   const intl = rewards(1113).intl;
   obj5.children = intl.string(rewards(1113).t.DCCcdz);
-  const items3 = [closure_9(rewards(5747).Text, obj5), closure_9(rewards(5747).Text, { variant: "heading-sm/semibold", color: "text-subtle", lineClamp: 2, children: memo })];
+  const items3 = [closure_9(rewards(5761).Text, obj5), closure_9(rewards(5761).Text, { variant: "heading-xs/semibold", color: "text-subtle", lineClamp: 2, children: memo })];
   obj4.children = items3;
   items2[1] = closure_10(closure_6, obj4);
   obj2.children = items2;
@@ -47,14 +47,14 @@ function OrbsArcadeFocusedRewardShelfContent(arg0) {
   const tmp = closure_14();
   const orbsArcadeRewardStatus = OrbsArcadeRewardUtils.getOrbsArcadeRewardStatus(reward, gameState, ownedRewardSkuIds);
   const obj2 = { children: null };
-  items = [React7(OrbsArcadeRewardPreviewDefault, { reward, size: v50 }), ];
+  items = [React6(OrbsArcadeRewardPreviewDefault, { reward, size: v50 }), ];
   const obj4 = { style: tmp.rewardShelfCopy, children: null };
-  const items1 = [React7(OrbsArcadeRewardStatusLabelDefault, { reward, status: orbsArcadeRewardStatus, color: "text-default" }), React7(Text_Text.Text, { variant: "heading-sm/semibold", color: "text-subtle", children: reward.name }), ];
-  const obj6 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  const items1 = [React6(OrbsArcadeRewardStatusLabelDefault, { reward, status: orbsArcadeRewardStatus, color: "text-default" }), React6(Text_Text.Text, { variant: "heading-xs/semibold", color: "text-subtle", children: reward.name }), ];
+  const obj6 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const obj3 = { reward, size: v50 };
-  const obj5 = { variant: "heading-sm/semibold", color: "text-subtle", children: reward.name };
+  const obj5 = { variant: "heading-xs/semibold", color: "text-subtle", children: reward.name };
   obj6.children = OrbsArcadeRewardUtils.getOrbsArcadeRewardScoreLabel(reward, orbsArcadeRewardStatus, gameState, ownedRewardSkuIds);
-  items1[2] = React7(Text_Text.Text, obj6);
+  items1[2] = React6(Text_Text.Text, obj6);
   obj4.children = items1;
   items[1] = closure_1_10(timestampProducer, obj4);
   obj2.children = items;
@@ -64,12 +64,12 @@ function OrbsArcadePileReward(arg0) {
   ({ reward, size } = arg0);
   if (reward.type !== OrbsArcadeTypes.OrbsArcadeRewardType.FRACTIONAL_PREMIUM) {
     const obj2 = { reward, size };
-    let tmp6 = React7(OrbsArcadeRewardPreviewDefault, obj2);
+    let tmp6 = React6(OrbsArcadeRewardPreviewDefault, obj2);
   } else {
     const obj = { style: tmp.nitroCoin, children: null };
     const obj3 = { height: 0.85 * size };
-    obj.children = React7(NitroCoinSpotIllustration.NitroCoinSpotIllustration, obj3);
-    tmp6 = React7(timestampProducer, obj);
+    obj.children = React6(NitroCoinSpotIllustration.NitroCoinSpotIllustration, obj3);
+    tmp6 = React6(timestampProducer, obj);
   }
   return tmp6;
 }
@@ -82,21 +82,21 @@ function OrbsArcadeAllRewardsClaimedShelfContent(windowEndsAt) {
   }
   const obj = { style: tmp.chestLogo, children: null };
   const obj2 = { style: tmp.chestLogoMirrored, children: null };
-  obj2.children = React7(ChestLogoSpotIllustration.ChestLogoSpotIllustration, { accessible: false, height: v50 });
-  obj.children = React7(timestampProducer, obj2);
-  items = [React7(timestampProducer, obj), ];
+  obj2.children = React6(ChestLogoSpotIllustration.ChestLogoSpotIllustration, { accessible: false, height: v50 });
+  obj.children = React6(timestampProducer, obj2);
+  items = [React6(timestampProducer, obj), ];
   const obj4 = { style: tmp.rewardShelfCopy, children: null };
-  const obj5 = { variant: "heading-sm/semibold", color: "text-default", children: null };
+  const obj5 = { variant: "heading-xs/semibold", color: "text-default", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t["/AJCN+"]);
-  const items1 = [React7(Text_Text.Text, obj5), ];
+  const items1 = [React6(Text_Text.Text, obj5), ];
   let tmp11Result = null;
   if (null != windowEndsAt) {
-    const obj6 = { variant: "text-xs/medium", color: "text-muted", children: null };
+    const obj6 = { variant: "body-xs/medium", color: "text-muted", children: null };
     const intl2 = util.intl;
     const obj7 = { duration: OrbsArcadeWindowUtils.formatOrbsArcadeTimeUntil(tmp3Result) };
     obj6.children = intl2.formatToPlainString(util.t.fkzORZ, obj7);
-    tmp11Result = React7(Text_Text.Text, obj6);
+    tmp11Result = React6(Text_Text.Text, obj6);
     const tmp13Result = OrbsArcadeWindowUtils;
   }
   const obj8 = { children: null };
@@ -107,14 +107,14 @@ function OrbsArcadeAllRewardsClaimedShelfContent(windowEndsAt) {
   return closure_1_10(closure_1_11, obj8);
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let c12 = 50;
 let items = [nativeDefault.unsafe_rawColors.TRANSPARENT, "rgba(16, 142, 77, 0.5)"];
 let createStyles = fn(5141);
 let obj2 = { rewardShelf: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, overflow: "hidden", paddingHorizontal: nativeDefault.space.PX_10, paddingVertical: nativeDefault.space.PX_6, minHeight: 74, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, chevronIconWrapper: null, rewardShelfCopy: null, allRewardsClaimedShelf: null, rewardShelfGlowContainer: null, chestLogo: null, chestLogoMirrored: null };
-let size = { marginLeft: "auto", width: fn(5760).SMALL_BUTTON_HEIGHT, height: fn(5760).SMALL_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center" };
+let size = { marginLeft: "auto", width: fn(5774).SMALL_BUTTON_HEIGHT, height: fn(5774).SMALL_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center" };
 obj2.chevronIconWrapper = size;
 obj2.rewardShelfCopy = { flex: 1 };
 obj2.allRewardsClaimedShelf = { backgroundColor: "rgba(151, 151, 159, 0.08)" };
@@ -259,7 +259,7 @@ export default function OrbsArcadeRewardShelf(game) {
       obj11.children = rewards.map((reward) => closure_1_9(OrbsArcadePileReward, { reward, size: 53 }, reward.id));
       const items7 = [closure_9(tmp2(tmp3[9]).Pile, obj11), ];
       const obj12 = { style: tmp.rewardShelfCopy, children: null };
-      const obj13 = { variant: "heading-sm/semibold", color: "text-default", children: null };
+      const obj13 = { variant: "heading-xs/semibold", color: "text-default", children: null };
       const intl2 = tmp2(tmp3[12]).intl;
       obj13.children = intl2.string(tmp2(tmp3[12]).t.ehbzo8);
       const items8 = [closure_9(tmp2(tmp3[11]).Text, obj13), ];

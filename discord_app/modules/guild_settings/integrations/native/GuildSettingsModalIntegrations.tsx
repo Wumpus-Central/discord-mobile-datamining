@@ -1,10 +1,10 @@
-// === Module 19879: GuildSettingsModalIntegrations ===
+// === Module 19995: GuildSettingsModalIntegrations ===
 
-// Module 19879 (GuildSettingsModalIntegrations)
+// Module 19995 (GuildSettingsModalIntegrations)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const require = fn;
 const Constants = fn(1072);
 ({ GuildSettingsSections: hasOwnProperty, PlatformTypes } = Constants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 let items = [, ];
 ({ TWITCH: arr[0], YOUTUBE: arr[1] } = PlatformTypes);
 const createStyles = fn(5141);

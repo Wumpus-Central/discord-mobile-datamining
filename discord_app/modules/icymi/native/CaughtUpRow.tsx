@@ -1,9 +1,9 @@
-// === Module 18745: CaughtUpRow ===
+// === Module 18846: CaughtUpRow ===
 
-// Module 18745 (CaughtUpRow)
+// Module 18846 (CaughtUpRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,9 +14,9 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let closure_9 = module_1652.createAnimatedComponent(fn(5747).Text);
-const createICYMIStyles = fn(18682);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+let closure_9 = module_1652.createAnimatedComponent(fn(5761).Text);
+const createICYMIStyles = fn(18783);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -85,14 +85,14 @@ export default function ExploreServersRow(visible) {
             return obj3;
           } else {
             dependencyMap(true);
-            v1(9048).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v1(9048);
+            v1(9065).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(9065);
             const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-            v1(9048).feedItemActioned(obj4);
-            const obj6 = v1(9048);
+            v1(9065).feedItemActioned(obj4);
+            const obj6 = v1(9065);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(18701).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(18800).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -269,7 +269,7 @@ export default function ExploreServersRow(visible) {
   const intl = tmp2(1113).intl;
   obj8.children = intl.string(require("util").t.xjxffq);
   items8[1] = closure_7(closure_9, obj8);
-  const obj9 = { variant: "text-md/normal", color: "text-default", style: null, children: null };
+  const obj9 = { variant: "body-md/normal", color: "text-default", style: null, children: null };
   const items10 = [tmp.subtitleText, animatedStyle2];
   obj9.style = items10;
   const intl2 = tmp2(1113).intl;

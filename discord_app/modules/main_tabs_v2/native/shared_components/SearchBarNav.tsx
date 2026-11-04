@@ -1,13 +1,13 @@
-// === Module 7681: SearchBarNav ===
+// === Module 7697: SearchBarNav ===
 
-// Module 7681 (SearchBarNav)
+// Module 7697 (SearchBarNav)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7128 */;
-import Search_SearchBar from "Search/SearchBar" /* 7339 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7143 */;
+import Search_SearchBar from "Search/SearchBar" /* 7355 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,8 +16,8 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { container: { flexDirection: "row", alignItems: "center", height: fn(5709).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG }, cancelText: null, cancelIcon: null, flex: null };
-let obj3 = { flexDirection: "row", alignItems: "center", height: fn(5709).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG };
+let obj2 = { container: { flexDirection: "row", alignItems: "center", height: fn(5722).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG }, cancelText: null, cancelIcon: null, flex: null };
+let obj3 = { flexDirection: "row", alignItems: "center", height: fn(5722).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.cancelText = { paddingLeft: nativeDefault.space.PX_16 };
 let obj4 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.cancelIcon = { marginRight: nativeDefault.space.PX_16 };
@@ -39,7 +39,7 @@ export default function SearchBarNav(arg0) {
     const obj3 = { style: tmp2.cancelIcon };
     let tmp3Result = React3(ArrowLargeLeftIcon.ArrowLargeLeftIcon, obj3);
   } else {
-    const obj4 = { style: tmp2.cancelText, maxFontSizeMultiplier: 2, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj4 = { style: tmp2.cancelText, maxFontSizeMultiplier: 2, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl2 = util.intl;
     obj4.children = intl2.string(util.t["ETE/oC"]);
     tmp3Result = React3(Text_Text.Text, obj4);

@@ -1,19 +1,19 @@
-// === Module 6178: SoundboardStore ===
+// === Module 6193: SoundboardStore ===
 
-// Module 6178 (SoundboardStore)
+// Module 6193 (SoundboardStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import FrecencyDefault from "Frecency" /* 5900 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6043 */;
+import FrecencyDefault from "Frecency" /* 5914 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 6058 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import UserStore from "UserStore" /* 1385 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 6179 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 6194 */;
 import apply_mod from "module_12" /* 12 */;
 
 require = fn;
@@ -73,7 +73,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(6180);
+const SoundboardConstants = fn(6195);
 ({ DEFAULT_SOUND_GUILD_ID: closure_8, EMPTY_SOUND_ID_LIST: closure_9 } = SoundboardConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
@@ -221,7 +221,7 @@ prototype["getTopSoundboardSoundsMetadata"] = function getTopSoundboardSoundsMet
 };
 prototype["getTopSoundboardSoundIds"] = function getTopSoundboardSoundIds(id) {
   if (null == id) {
-    return React7;
+    return React6;
   } else {
     value = map1.get(id);
     let soundIds;
@@ -233,7 +233,7 @@ prototype["getTopSoundboardSoundIds"] = function getTopSoundboardSoundIds(id) {
       soundIds = topSoundboardSoundIdsByGuildId;
     }
     if (soundIds == null) {
-      soundIds = React7;
+      soundIds = React6;
     }
     return soundIds;
   }
@@ -424,7 +424,7 @@ const soundboardStore = new SoundboardStore(DispatcherDefault, {
     FETCHED = obj.FETCHING;
   },
   SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: function handleFetchDefaultSoundsSuccess(soundboardSounds) {
-    const result = map.set(React6, soundboardSounds.soundboardSounds);
+    const result = map.set(React5, soundboardSounds.soundboardSounds);
     FETCHED = obj.FETCHED;
   },
   SOUNDBOARD_SOUNDS_RECEIVED: function handleSoundboardSoundsReceived(updates) {

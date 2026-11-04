@@ -1,6 +1,6 @@
-// === Module 15815: urlPartToSettingsEnum ===
+// === Module 15903: urlPartToSettingsEnum ===
 
-// Module 15815 (urlPartToSettingsEnum)
+// Module 15903 (urlPartToSettingsEnum)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_settings/urlPartToSettingsEnum.tsx");

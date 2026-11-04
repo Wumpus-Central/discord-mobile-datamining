@@ -1,20 +1,20 @@
-// === Module 16800: TwoFASetupModal ===
+// === Module 16892: TwoFASetupModal ===
 
-// Module 16800 (TwoFASetupModal)
+// Module 16892 (TwoFASetupModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useInitialValueDefault from "useInitialValue" /* 5735 */;
-import Navigator from "Navigator" /* 7290 */;
-import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 16799 */;
-import TwoFASetupScanDefault from "TwoFASetupScan" /* 16806 */;
-import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 16807 */;
+import useInitialValueDefault from "useInitialValue" /* 5749 */;
+import Navigator from "Navigator" /* 7306 */;
+import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 16891 */;
+import TwoFASetupScanDefault from "TwoFASetupScan" /* 16898 */;
+import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 16899 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const TwoFAModalSetupSections = fn(16801).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(16893).TwoFAModalSetupSections;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, floatingButton: { position: "absolute", bottom: 12, left: 12, right: 12 } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -30,21 +30,21 @@ export default function TwoFASetupModal(initialRouteName) {
   let obj = {
     initialRouteName: LANDING,
     screens: useInitialValueDefault(() => {
-      totpSecret = totpSecret(7244).generateTotpSecret();
+      totpSecret = totpSecret(7264).generateTotpSecret();
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
-      const obj = totpSecret(7244);
-      obj3.headerLeft = totpSecret(7124).getHeaderCloseButton(closure_1(16799).close);
+      const obj = totpSecret(7264);
+      obj3.headerLeft = totpSecret(7139).getHeaderCloseButton(closure_1(16891).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(16802).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+        return closure_1_6(totpSecret(16894).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(16803), {});
+        return closure_1_6(closure_1_1(16895), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(16802).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(16894).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupScanDefault, { totpSecret });
@@ -52,20 +52,20 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(16802).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(16894).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
         }
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
-      const obj4 = totpSecret(7124);
-      obj5.headerLeft = totpSecret(7124).getHeaderCloseButton(closure_1(16799).close);
+      const obj4 = totpSecret(7139);
+      obj5.headerLeft = totpSecret(7139).getHeaderCloseButton(closure_1(16891).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(16810), {});
+        return closure_1_6(closure_1_1(16902), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;
@@ -103,9 +103,9 @@ export function TwoFASetupModalScreen(children) {
       stringResult = intl.string(tmp2(1113).t.XiOHRX);
     }
     obj5.text = stringResult;
-    obj5 = closure_6(tmp2(5754).Button, obj5);
+    obj5 = closure_6(tmp2(5768).Button, obj5);
     obj4.children = obj5;
-    closure_6(tmp2(7412).SafeAreaPaddingView, obj4);
+    closure_6(tmp2(7428).SafeAreaPaddingView, obj4);
   }
   const obj2 = navigation(1500);
 }

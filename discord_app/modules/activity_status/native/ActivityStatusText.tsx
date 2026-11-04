@@ -1,7 +1,7 @@
-// === Module 10884: ActivityStatusText ===
+// === Module 10932: ActivityStatusText ===
 
-// Module 10884 (ActivityStatusText)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 10932 (ActivityStatusText)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export default function ActivityStatusText(variant) {
   let str = variant.variant;
   ({ children, style } = variant);
   if (str === undefined) {
-    str = "text-xs/medium";
+    str = "body-xs/medium";
   }
   const merged = Object.assign(variant, Object.assign({ children: 0, style: 0, variant: 0 }));
   const obj = { variant: str, color: "text-muted", style: null, lineClamp: 1 };

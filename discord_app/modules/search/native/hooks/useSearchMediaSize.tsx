@@ -1,7 +1,7 @@
-// === Module 18868: useSearchMediaSize ===
+// === Module 18971: useSearchMediaSize ===
 
-// Module 18868 (useSearchMediaSize)
-import SearchConstants from "SearchConstants" /* 9958 */;
+// Module 18971 (useSearchMediaSize)
+import SearchConstants from "SearchConstants" /* 9976 */;
 import size from "module_2" /* 2 */;
 
 ({ SEARCH_LIST_HORIZONTAL_PADDING: closure_0, MEDIA_NUM_COLUMNS: closure_1, MEDIA_ITEM_GAP_WIDTH: c2 } = SearchConstants);

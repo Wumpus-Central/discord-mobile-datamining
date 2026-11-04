@@ -1,17 +1,17 @@
-// === Module 19404: VoicePanelCardView ===
+// === Module 19508: VoicePanelCardView ===
 
-// Module 19404 (VoicePanelCardView)
+// Module 19508 (VoicePanelCardView)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
 import native from "native" /* 5207 */;
-import Suspender from "Suspender" /* 6109 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 19405 */;
+import Suspender from "Suspender" /* 6124 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 19509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 
 const require = globalThis.__r;
 
@@ -269,13 +269,13 @@ function CardContentFreezer(children) {
   }, items8);
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11360);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const VoicePanelConstants = fn(11410);
 ({ LAYOUT_PHYSICS: closure_9, VoicePanelModes: closure_10, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19273).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11363).EDGE_GUTTER;
-const isUserParticipant = fn(5801).isUserParticipant;
+const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19377).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11413).EDGE_GUTTER;
+const isUserParticipant = fn(5815).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);

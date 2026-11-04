@@ -1,18 +1,18 @@
-// === Module 10430: useStickerPickerListData ===
+// === Module 10478: useStickerPickerListData ===
 
-// Module 10430 (useStickerPickerListData)
+// Module 10478 (useStickerPickerListData)
 import _modDef12 from "module_12" /* 12 */;
-import StickersTypes from "StickersTypes" /* 6681 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10103 */;
+import StickersTypes from "StickersTypes" /* 6696 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let useStickerPickerStore = fn(10399).useStickerPickerStore;
-const StickerPickerConstants = fn(10366);
-({ MIN_MARGIN: hasOwnProperty, ROW_HEIGHT: metroRequire, STICKER_SIZE: closure_7, LABEL_HEIGHT } = StickerPickerConstants);
+let useStickerPickerStore = fn(10447).useStickerPickerStore;
+const StickerPickerConstants = fn(10414);
+({ MIN_MARGIN: hasOwnProperty, ROW_HEIGHT: closure_6, STICKER_SIZE: metroImportDefault, LABEL_HEIGHT } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
 let closure_9 = LABEL_HEIGHT + 2 * fn(1228).PADDING_VERTICAL;
-let closure_10 = fn(10152).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10152).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+let closure_10 = fn(10200).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10200).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 
@@ -36,14 +36,13 @@ export default function useStickerPickerListData(containerWidth) {
         flag = false;
       }
       if (true === arg2) {
-        const obj = { type: null, stickersByRow: null };
-        obj.type = obj.NSFW;
-        obj.stickersByRow = [];
-        items3.push(obj);
+        const obj2 = { type: obj.NSFW, stickersByRow: [] };
+        items3.push(obj2);
         num2.push(1);
       } else {
         const found = nitroLocked.filter((format_type) => items1.includes(format_type.format_type));
-        const chunkResult = _modDef12.chunk(found, mapped2);
+        obj = _modDef12;
+        const chunkResult = obj.chunk(found, mapped2);
         const obj3 = { type: obj.STICKERS, stickersByRow: chunkResult };
         items3.push(obj3);
         num2.push(chunkResult.length);

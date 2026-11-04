@@ -1,10 +1,10 @@
-// === Module 13801: CheckpointTag ===
+// === Module 13887: CheckpointTag ===
 
-// Module 13801 (CheckpointTag)
+// Module 13887 (CheckpointTag)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6554 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6569 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,9 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { hidden: { opacity: 0 }, text: { color: nativeDefault.colors.BLACK, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, fontSize: 14, lineHeight: 18 }, shape: { position: "absolute", top: 0, left: 0 }, shapeChamferBottomRight: null };
 let obj4 = { transform: null };
@@ -75,10 +75,10 @@ export default function CheckpointTag(chamferCorner) {
     const tmp10 = inlineStylesDefault;
     obj3.points = CheckpointCustomizationUtils.getChamferedRectPoints(size.width, size.height, 5.5);
     obj3.fill = CHECKPOINT_PRIMARY;
-    size1.children = React5(inlineStyles.Polygon, obj3);
-    tmp7Result = React5(tmp10, size1);
+    size1.children = metroImportDefault(inlineStyles.Polygon, obj3);
+    tmp7Result = metroImportDefault(tmp10, size1);
   }
-  const items2 = [tmp7Result, React5(Text_Text.Text, { variant: "mono-md/bold", style: tmp.text, children: chamferCorner.children })];
+  const items2 = [tmp7Result, metroImportDefault(Text_Text.Text, { variant: "mono-md/bold", style: tmp.text, children: chamferCorner.children })];
   obj.children = items2;
-  return React6(View, obj);
+  return React5(View, obj);
 };

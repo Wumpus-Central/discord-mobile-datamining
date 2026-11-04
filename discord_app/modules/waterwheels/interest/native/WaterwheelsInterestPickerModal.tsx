@@ -1,6 +1,6 @@
-// === Module 18570: WaterwheelsInterestPickerModal ===
+// === Module 18665: WaterwheelsInterestPickerModal ===
 
-// Module 18570 (WaterwheelsInterestPickerModal)
+// Module 18665 (WaterwheelsInterestPickerModal)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,13 +12,13 @@ class WaterwheelsInterestPickerModal {
     tmp4 = closure_1(closure_2[6])("WaterwheelsInterestPickerModal");
     closure_0 = tmp4;
     callback = closure_3.useCallback((gameIds) => {
-      const result = closure_0(18574).setInterestPickerPicks(gameIds);
-      const obj = closure_0(18574);
-      const result1 = closure_0(18574).markInterestPickerSeen();
-      const obj2 = closure_0(18574);
-      callback(6864).popWithKey(closure_1_6);
-      const obj3 = callback(6864);
-      const rootNavigationRef = closure_0(5322).getRootNavigationRef();
+      const result = closure_0(18669).setInterestPickerPicks(gameIds);
+      const obj = closure_0(18669);
+      const result1 = closure_0(18669).markInterestPickerSeen();
+      const obj2 = closure_0(18669);
+      callback(6879).popWithKey(closure_1_6);
+      const obj3 = callback(6879);
+      const rootNavigationRef = closure_0(5323).getRootNavigationRef();
       if (null != rootNavigationRef) {
         const obj5 = { screen: "icymi-screen", params: { inNestedNavigator: true } };
         rootNavigationRef.navigate("icymi", obj5);
@@ -59,7 +59,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let c6 = "waterwheels-interest-picker-modal";
 const createStyles = fn(5141);
-const React5 = createStyles.createStyles({ screen: { flex: 1 } });
+const metroImportDefault = createStyles.createStyles({ screen: { flex: 1 } });
 WaterwheelsInterestPickerModal.modalConfig = { animation: fn(1072).ModalAnimation.SLIDE_IN_OUT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/interest/native/WaterwheelsInterestPickerModal.tsx");

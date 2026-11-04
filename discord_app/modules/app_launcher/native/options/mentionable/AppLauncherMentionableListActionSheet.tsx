@@ -1,9 +1,9 @@
-// === Module 12651: AppLauncherMentionableListActionSheet ===
+// === Module 12732: AppLauncherMentionableListActionSheet ===
 
-// Module 12651 (AppLauncherMentionableListActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6899 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7824 */;
+// Module 12732 (AppLauncherMentionableListActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6914 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const AppLauncherMentionableListActionSheet = "AppLauncherMentionableListActionSheet";
 const MentionableItemTypes = { USER: "user", ROLE: "role", GLOBAL: "global" };
 const size = fn(2);
@@ -76,7 +76,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
             const result3 = item.result;
             const user = result3.user;
             const obj3 = { type: closure_5.NONE, user, nickname: result3.nick, guildId: guild_id, subLabel: null };
-            const obj4 = { color: "text-subtle", variant: "text-xs/normal", children: null };
+            const obj4 = { color: "text-subtle", variant: "body-xs/normal", children: null };
             const tmp25 = onActionSheetDismiss(channel[9]);
             obj4.children = require("UserUtils").getUserTag(user);
             obj3.subLabel = ref(require("Text/Text").Text, obj4);
@@ -101,7 +101,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
               const tmp2Result = onActionSheetDismiss(channel[14]);
             }
             const obj7 = { label: null, icon: null };
-            const obj8 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: result.text };
+            const obj8 = { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: result.text };
             obj7.label = tmp9(tmp8(channel[10]).Text, obj8);
             obj7.icon = tmp7;
             const merged2 = Object.assign(obj);

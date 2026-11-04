@@ -1,10 +1,10 @@
-// === Module 10948: InstantInviteCreator ===
+// === Module 10996: InstantInviteCreator ===
 
-// Module 10948 (InstantInviteCreator)
+// Module 10996 (InstantInviteCreator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import DetailedGuildIdentityUserRow from "DetailedGuildIdentityUserRow" /* 10949 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import DetailedGuildIdentityUserRow from "DetailedGuildIdentityUserRow" /* 10997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

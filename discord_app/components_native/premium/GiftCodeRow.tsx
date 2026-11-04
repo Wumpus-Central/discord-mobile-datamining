@@ -1,11 +1,11 @@
-// === Module 15595: GiftCodeRow ===
+// === Module 15682: GiftCodeRow ===
 
-// Module 15595 (GiftCodeRow)
+// Module 15682 (GiftCodeRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6564 */;
-import showShareActionSheet from "showShareActionSheet" /* 9059 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11509 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6579 */;
+import showShareActionSheet from "showShareActionSheet" /* 9076 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11559 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, TouchableWithoutFeedback: closure_4, StyleSheet } = get_ActivityIndicator);
 const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -70,7 +70,7 @@ prototype["render"] = function render() {
   let obj2 = { style: tmp.giftCodeInput, children: null };
   const obj3 = { children: null };
   const obj4 = { style: tmp.giftCodeInputContent, children: null };
-  const obj5 = { variant: "text-sm/normal", style: tmp.codeText, lineClamp: 1, children: giftCode(self[8]).getGiftCodeURL(giftCode.code) };
+  const obj5 = { variant: "body-sm/normal", style: tmp.codeText, lineClamp: 1, children: giftCode(self[8]).getGiftCodeURL(giftCode.code) };
   const items1 = [closure_6(giftCode(self[11]).Text, obj5), ];
   const obj7 = { style: null, children: null };
   const items2 = [, ];
@@ -89,7 +89,7 @@ prototype["render"] = function render() {
   const obj9 = { style: tmp.subTextRow, children: null };
   let tmp5Result = null;
   if (null != giftCode.expiresAt) {
-    const obj10 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+    const obj10 = { variant: "body-xs/normal", color: "text-subtle", children: null };
     const intl2 = tmp6(tmp7[13]).intl;
     const obj11 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;

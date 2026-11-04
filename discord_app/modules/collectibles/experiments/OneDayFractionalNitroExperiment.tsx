@@ -1,7 +1,7 @@
-// === Module 9707: OneDayFractionalNitroExperiment ===
+// === Module 9725: OneDayFractionalNitroExperiment ===
 
-// Module 9707 (OneDayFractionalNitroExperiment)
-import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 9708 */;
+// Module 9725 (OneDayFractionalNitroExperiment)
+import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 9726 */;
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

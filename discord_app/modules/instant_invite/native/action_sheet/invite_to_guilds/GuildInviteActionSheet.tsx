@@ -1,17 +1,17 @@
-// === Module 14946: GuildInviteActionSheet ===
+// === Module 15026: GuildInviteActionSheet ===
 
-// Module 14946 (GuildInviteActionSheet)
+// Module 15026 (GuildInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Search_SearchBar from "Search/SearchBar" /* 7339 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9248 */;
-import _modDef14947 from "module_14947" /* 14947 */;
-import _modDef14948 from "module_14948" /* 14948 */;
-import GuildInviteRowDefault from "GuildInviteRow" /* 14949 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Search_SearchBar from "Search/SearchBar" /* 7355 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9265 */;
+import _modDef15027 from "module_15027" /* 15027 */;
+import _modDef15028 from "module_15028" /* 15028 */;
+import GuildInviteRowDefault from "GuildInviteRow" /* 15029 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,8 +22,8 @@ function EmptyGuildList() {
   obj.title = intl.string(util.t["2bfiLk"]);
   const intl2 = util.intl;
   obj.body = intl2.string(util.t.V6nAfF);
-  obj.darkSource = _modDef14947;
-  obj.lightSource = _modDef14948;
+  obj.darkSource = _modDef15027;
+  obj.lightSource = _modDef15028;
   return timestampProducer(native.ThemedEmptyState, obj);
 }
 function GuildList(recipientId) {
@@ -31,8 +31,8 @@ function GuildList(recipientId) {
   const source = recipientId.source;
   _slicedToArray = undefined;
   dependencyMap = closure_8();
-  let obj = recipientId(14944);
-  [arr, arr2] = recipientId(14944).useServerInviteRows(recipientId, recipientId.query);
+  let obj = recipientId(15024);
+  [arr, arr2] = recipientId(15024).useServerInviteRows(recipientId, recipientId.query);
   if (0 === arr.length) {
     if (0 === arr2.length) {
       items = [];
@@ -58,7 +58,7 @@ function GuildList(recipientId) {
     if (tmp5) {
       num = 24;
     }
-    const obj3 = { paddingTop: num, paddingBottom: source(5730)().insets.bottom + source(575).space.PX_16 };
+    const obj3 = { paddingTop: num, paddingBottom: source(5743)().insets.bottom + source(575).space.PX_16 };
     obj2.contentContainerStyle = obj3;
     obj2.sections = items;
     obj2.renderSectionHeader = function renderSectionHeader(section) {
@@ -67,7 +67,7 @@ function GuildList(recipientId) {
       if (!closure_3) {
         let tmp2 = null;
         if (section.data.length > 0) {
-          const obj = { style: sectionTitle.sectionTitle, variant: "text-sm/semibold", color: "text-default", children: section.title };
+          const obj = { style: sectionTitle.sectionTitle, variant: "body-sm/semibold", color: "text-default", children: section.title };
           tmp2 = timestampProducer(Text_Text.Text, obj);
         }
         tmp = tmp2;
@@ -78,7 +78,7 @@ function GuildList(recipientId) {
       return guild.guild.id;
     };
     obj2.ListEmptyComponent = EmptyGuildList;
-    return closure_6(tmp(11550).UserProfileStackedActionSheetSectionList, obj2);
+    return closure_6(tmp(11600).UserProfileStackedActionSheetSectionList, obj2);
   }
   const obj4 = { title: null, data: null };
   const intl = tmp(1113).intl;
@@ -90,11 +90,11 @@ function GuildList(recipientId) {
   obj5.title = intl2.string(recipientId(1113).t["c5T+X/"]);
   obj5.data = arr2;
   items[1] = obj5;
-  const tmp3 = _slicedToArray(recipientId(14944).useServerInviteRows(recipientId, recipientId.query), 2);
+  const tmp3 = _slicedToArray(recipientId(15024).useServerInviteRows(recipientId, recipientId.query), 2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, searchbarWrapper: null, sectionTitle: null, emptyStateContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -125,13 +125,13 @@ export default function GuildInviteActionSheet(arg0) {
   const intl2 = util.intl;
   obj4.placeholder = intl2.string(util.t.uohsSv);
   items = [timestampProducer(Search_SearchBar.SearchBar, obj4), ];
-  const obj5 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+  const obj5 = { variant: "body-xs/medium", color: "text-subtle", children: null };
   const intl3 = util.intl;
   const tmp3 = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
   obj5.children = intl3.format(util.t["4UyUHh"], { xDays: InstantInviteUtilsDefault.INVITE_OPTIONS_7_DAYS.label });
   items[1] = timestampProducer(Text_Text.Text, obj5);
   obj3.children = items;
-  const items1 = [React5(View, obj3), timestampProducer(GuildList, { query: tmp2[0], recipientId, source })];
+  const items1 = [metroImportDefault(View, obj3), timestampProducer(GuildList, { query: tmp2[0], recipientId, source })];
   obj2.children = items1;
-  return React5(Sheet_BottomSheet.BottomSheet, obj2);
+  return metroImportDefault(Sheet_BottomSheet.BottomSheet, obj2);
 };

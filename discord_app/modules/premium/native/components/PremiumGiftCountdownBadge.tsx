@@ -1,9 +1,9 @@
-// === Module 10757: PremiumGiftCountdownBadge ===
+// === Module 10805: PremiumGiftCountdownBadge ===
 
-// Module 10757 (PremiumGiftCountdownBadge)
+// Module 10805 (PremiumGiftCountdownBadge)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default function PremiumGiftCountdownBadge(text) {
   const obj = { style: null, children: null };
   items = [tmp.badge, style];
   obj.style = items;
-  const items1 = [icon, React4(Text_Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.text, children: text.text.toUpperCase() })];
+  const items1 = [icon, React4(Text_Text.Text, { variant: "body-xs/semibold", color: "text-overlay-light", style: tmp.text, children: text.text.toUpperCase() })];
   obj.children = items1;
   return hasOwnProperty(View, obj);
 };

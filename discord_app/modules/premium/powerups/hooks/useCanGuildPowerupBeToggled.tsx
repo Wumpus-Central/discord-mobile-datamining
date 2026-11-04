@@ -1,14 +1,14 @@
-// === Module 14239: useCanGuildPowerupBeToggled ===
+// === Module 14325: useCanGuildPowerupBeToggled ===
 
-// Module 14239 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14207 */;
+// Module 14325 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14293 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5353 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(5353).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5354).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
 
@@ -26,7 +26,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   items1[4] = tmp2.type;
   return stateFromStores.useMemo(() => {
     if (null == stateFromStores) {
-      return { disabled: true, reason: "Array" };
+      return { disabled: true, reason: "a" };
     } else {
       if (closure_4.type !== constants.LEVEL_ACTIVATED) {
         if (closure_4.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
@@ -70,7 +70,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           return obj;
         }
       }
-      return { disabled: true, reason: "Array" };
+      return { disabled: true, reason: "a" };
     }
   }, items1);
 };

@@ -1,11 +1,11 @@
-// === Module 7650: useMuteStates ===
+// === Module 7666: useMuteStates ===
 
-// Module 7650 (useMuteStates)
+// Module 7666 (useMuteStates)
 import ImpersonateStore from "ImpersonateStore" /* 5046 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 const require = globalThis.__r;
 

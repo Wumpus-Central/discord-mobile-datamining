@@ -1,13 +1,13 @@
-// === Module 12856: ConjureTodoList ===
+// === Module 12937: ConjureTodoList ===
 
-// Module 12856 (ConjureTodoList)
+// Module 12937 (ConjureTodoList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ConjureTodoState from "ConjureTodoState" /* 12725 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 12740 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 12761 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ConjureTodoState from "ConjureTodoState" /* 12806 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 12821 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 12842 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,13 +35,13 @@ function TodoAgents(agents) {
     ];
     let tmp9 = null;
     if (overflow > 0) {
-      const obj3 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
+      const obj3 = { variant: "body-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
       let intl = tmp2(1113).intl;
       const obj4 = { count: overflow };
       obj3.accessibilityLabel = intl.formatToPlainString(items(3995).SPGdDc, obj4);
       const _HermesInternal = HermesInternal;
       obj3.children = "+" + overflow;
-      tmp9 = closure_6(tmp2(5747).Text, obj3);
+      tmp9 = closure_6(tmp2(5761).Text, obj3);
     }
     items1[1] = tmp9;
     obj2.children = items1;
@@ -104,12 +104,12 @@ function TodoMarker(status) {
     stringResult1 = intl6.string(_modDef3995.lRpwhD);
     tmp21 = require;
   }
-  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(7115).FormCheckbox, { checked: "completed" === status }) };
+  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(7130).FormCheckbox, { checked: "completed" === status }) };
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { list: { gap: nativeDefault.space.PX_8 }, row: null, marker: null, markerUnfinished: null, markerInProgress: null, markerSpinner: null, text: null, agents: null, agentMark: null, agentMarkTint0: null, agentMarkTint1: null, agentMarkTint2: null, agentMarkTint3: null, textCompleted: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
@@ -160,8 +160,8 @@ export default function ConjureTodoList(announceProgress) {
   noop = undefined;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = agents(12725);
-  ({ completed, total } = agents(12725).todoProgress(todos));
+  let obj = agents(12806);
+  ({ completed, total } = agents(12806).todoProgress(todos));
   items = [agents];
   noop = noop.useMemo(() => {
     items = agents;
@@ -174,7 +174,7 @@ export default function ConjureTodoList(announceProgress) {
     return null;
   }
   const intl = agents(1113).intl;
-  const todoProgressResult = agents(12725).todoProgress(todos);
+  const todoProgressResult = agents(12806).todoProgress(todos);
   const intl2 = agents(1113).intl;
   const formatToPlainStringResult = intl.formatToPlainString(flag2(3995)["P/I+JW"], { completed, total });
   let obj2 = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
@@ -188,7 +188,7 @@ export default function ConjureTodoList(announceProgress) {
       str = "polite";
     }
   }
-  obj2.meta = closure_6(agents(12857).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj2.meta = closure_6(agents(12938).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj2.showHeader = total > 0;
   obj2.superseded = flag3;
   obj2.expanded = flag4;
@@ -208,7 +208,7 @@ export default function ConjureTodoList(announceProgress) {
       } else {
         str = "text-muted";
       }
-      const obj3 = { variant: "text-sm/normal", color: str, style: null, children: null };
+      const obj3 = { variant: "body-sm/normal", color: str, style: null, children: null };
       const items1 = [row.text, "completed" === todoMarkResult && row.textCompleted];
       obj3.style = items1;
       obj3.children = ConjureTodoState.todoLabel(status, todoMarkResult);
@@ -224,7 +224,7 @@ export default function ConjureTodoList(announceProgress) {
       }
       items[2] = tmp7Result;
       obj2.children = items;
-      return React5(hasOwnProperty, obj2, status.id);
+      return metroImportDefault(hasOwnProperty, obj2, status.id);
     }),
 
   ];
@@ -234,8 +234,8 @@ export default function ConjureTodoList(announceProgress) {
     if ("" !== provisional) {
       let obj4 = { style: tmp.row, children: null };
       let items2 = [closure_6(TodoMarker, { status: "pending" }), ];
-      const obj5 = { variant: "text-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
-      items2[1] = closure_6(agents(5747).Text, obj5);
+      const obj5 = { variant: "body-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
+      items2[1] = closure_6(agents(5761).Text, obj5);
       obj4.children = items2;
       tmp11Result = closure_7(closure_5, obj4);
     }
@@ -243,5 +243,5 @@ export default function ConjureTodoList(announceProgress) {
   items1[1] = tmp11Result;
   obj3.children = items1;
   obj2.children = closure_7(closure_5, obj3);
-  return closure_6(flag2(12857), obj2);
+  return closure_6(flag2(12938), obj2);
 };

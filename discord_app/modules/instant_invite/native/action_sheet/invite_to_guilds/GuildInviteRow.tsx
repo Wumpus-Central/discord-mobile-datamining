@@ -1,15 +1,15 @@
-// === Module 14949: GuildInviteRow ===
+// === Module 15029: GuildInviteRow ===
 
-// Module 14949 (GuildInviteRow)
-import GuildInviteUtils from "GuildInviteUtils" /* 14944 */;
+// Module 15029 (GuildInviteRow)
+import GuildInviteUtils from "GuildInviteUtils" /* 15024 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const useGuildInviteSendStates = fn(14945).useGuildInviteSendStates;
-const InviteSendStates = fn(8003).InviteSendStates;
+const useGuildInviteSendStates = fn(15025).useGuildInviteSendStates;
+const InviteSendStates = fn(8019).InviteSendStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteRow.tsx");
@@ -35,7 +35,7 @@ export default noop.memo(function GuildInviteRow(arg0) {
   obj2.size = require("GuildIcon").GuildIconSizes.SMALL;
   obj.children = jsx(require("GuildIcon"), { guild, size: null });
   const tmp5 = require("GuildIcon");
-  const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
+  const obj3 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl = require("util").intl;
   obj3.children = intl.format(require("util").t.zRl6XR, { count: row.memberCount });
   let tmp9 = tmp === InviteSendStates.SENDING;
@@ -44,6 +44,6 @@ export default noop.memo(function GuildInviteRow(arg0) {
   if (!tmp9) {
     tmp9 = tmp === InviteSendStates.SENT;
   }
-  const tmp8 = jsx(require("Text/Text").Text, { variant: "text-xs/medium", color: "text-default", children: null });
-  return jsx(require("TableRow").TableRow, { icon: tmp7, label: guild.name, trailing: tmp4, subLabel: jsx(require("Text/Text").Text, { variant: "text-xs/medium", color: "text-default", children: null }), onPress: handlePress, disabled: tmp9, accessibilityState: { disabled: tmp9 }, start, end });
+  const tmp8 = jsx(require("Text/Text").Text, { variant: "body-xs/medium", color: "text-default", children: null });
+  return jsx(require("TableRow").TableRow, { icon: tmp7, label: guild.name, trailing: tmp4, subLabel: jsx(require("Text/Text").Text, { variant: "body-xs/medium", color: "text-default", children: null }), onPress: handlePress, disabled: tmp9, accessibilityState: { disabled: tmp9 }, start, end });
 });

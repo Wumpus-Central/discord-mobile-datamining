@@ -1,6 +1,6 @@
-// === Module 17044: OrbWalletConstants ===
+// === Module 17136: OrbWalletConstants ===
 
-// Module 17044 (OrbWalletConstants)
+// Module 17136 (OrbWalletConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletConstants.tsx");

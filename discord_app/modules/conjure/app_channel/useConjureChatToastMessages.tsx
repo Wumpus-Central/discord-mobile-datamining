@@ -1,18 +1,19 @@
-// === Module 18834: useConjureChatToastMessages ===
+// === Module 18937: useConjureChatToastMessages ===
 
-// Module 18834 (useConjureChatToastMessages)
+// Module 18937 (useConjureChatToastMessages)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6183 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CallChatToastsStore from "CallChatToastsStore" /* 18835 */;
-import MessageStore from "MessageStore" /* 6181 */;
+import CallChatToastsStore from "CallChatToastsStore" /* 18938 */;
+import MessageStore from "MessageStore" /* 6196 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const result = 10 * DurationsDefault.Millis.SECOND;
+const metroImportDefault = result;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/conjure/app_channel/useConjureChatToastMessages.tsx");
 

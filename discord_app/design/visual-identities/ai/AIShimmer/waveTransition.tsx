@@ -1,6 +1,6 @@
-// === Module 12923: waveTransition ===
+// === Module 13005: waveTransition ===
 
-// Module 12923 (waveTransition)
+// Module 13005 (waveTransition)
 import "module_32";
 
 function shiftChar(str, arg1) {

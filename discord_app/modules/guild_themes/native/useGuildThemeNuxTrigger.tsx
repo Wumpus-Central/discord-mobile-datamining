@@ -1,10 +1,10 @@
-// === Module 18363: useGuildThemeNuxTrigger ===
+// === Module 18457: useGuildThemeNuxTrigger ===
 
-// Module 18363 (useGuildThemeNuxTrigger)
+// Module 18457 (useGuildThemeNuxTrigger)
 import initialize from "initialize" /* 504 */;
-import guild_themes_useGuildThemeNuxTriggerDefault from "guild_themes/useGuildThemeNuxTrigger" /* 18369 */;
+import guild_themes_useGuildThemeNuxTriggerDefault from "guild_themes/useGuildThemeNuxTrigger" /* 18463 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5382 */;
+import ActionSheetStore from "ActionSheetStore" /* 5383 */;
 
 const require = globalThis.__r;
 

@@ -1,17 +1,17 @@
-// === Module 18997: AddFriendScreen ===
+// === Module 19100: AddFriendScreen ===
 
-// Module 18997 (AddFriendScreen)
+// Module 19100 (AddFriendScreen)
 import nativeDefault from "native" /* 575 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14382 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14462 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ContactPermissions = fn(14380).ContactPermissions;
+const ContactPermissions = fn(14460).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5141);
@@ -27,10 +27,10 @@ export default function AddFriendScreen(navigation) {
   dependencyMap = undefined;
   let callback;
   const tmp = closure_13();
-  const contactSyncAccount = navigation(14382).useContactSyncAccount();
-  let obj = navigation(14382);
-  let obj2 = navigation(14382);
-  [tmp5, c2] = callback(noop.useState(!navigation(14382).isContactSyncEnabled(contactSyncAccount)), 2);
+  const contactSyncAccount = navigation(14462).useContactSyncAccount();
+  let obj = navigation(14462);
+  let obj2 = navigation(14462);
+  [tmp5, c2] = callback(noop.useState(!navigation(14462).isContactSyncEnabled(contactSyncAccount)), 2);
   callback = noop.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
     let userTag;
@@ -51,7 +51,7 @@ export default function AddFriendScreen(navigation) {
     navigation.setOptions({
       headerRight(arg0) {
         const intl = navigation(1113).intl;
-        const renderHeaderTextButton = navigation(9943).getRenderHeaderTextButton(intl.string(navigation(1113).t.RDE0Sc), callback);
+        const renderHeaderTextButton = navigation(9961).getRenderHeaderTextButton(intl.string(navigation(1113).t.RDE0Sc), callback);
         const merged = Object.assign(arg0);
         return renderHeaderTextButton({});
       }
@@ -61,33 +61,33 @@ export default function AddFriendScreen(navigation) {
       const obj = navigation(1377);
       let tmp5 = result === constants2.NOT_DETERMINED || navigation(1377).isAndroid() && result === constants2.UNAUTHORIZED;
       if (!tmp5) {
-        tmp5 = !navigation(14382).isContactSyncEnabled(contactSyncAccount);
-        const tmp2Result = navigation(14382);
+        tmp5 = !navigation(14462).isContactSyncEnabled(contactSyncAccount);
+        const tmp2Result = navigation(14462);
       }
       dependencyMap(tmp5);
       const tmp4 = navigation(1377).isAndroid() && result === constants2.UNAUTHORIZED;
     });
   }, items);
-  const items1 = [closure_10(contactSyncAccount(10866), { absolute: true }), ];
+  const items1 = [closure_10(contactSyncAccount(10914), { absolute: true }), ];
   let obj3 = { keyboardShouldPersistTaps: "handled", style: tmp.background, children: null };
   let obj4 = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1113).intl;
   obj4.children = intl.string(navigation(1113).t.GWMTSE);
-  const items2 = [closure_10(navigation(5747).Text, obj4), , , ];
-  const obj5 = { style: tmp.subheaderText, variant: "text-sm/medium", color: "text-default", children: null };
+  const items2 = [closure_10(navigation(5761).Text, obj4), , , ];
+  const obj5 = { style: tmp.subheaderText, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1113).intl;
   obj5.children = intl2.string(navigation(1113).t["Rn/sLl"]);
-  items2[1] = closure_10(navigation(5747).Text, obj5);
-  items2[2] = closure_10(contactSyncAccount(15821), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
+  items2[1] = closure_10(navigation(5761).Text, obj5);
+  items2[2] = closure_10(contactSyncAccount(15909), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
   const obj7 = { style: tmp.otherOptionsContainer, children: null };
-  const obj8 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
+  const obj8 = { accessibilityRole: "header", variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = navigation(1113).intl;
   obj8.children = intl3.string(navigation(1113).t.dukg0Z);
-  const items3 = [closure_10(navigation(5747).Text, obj8), ];
+  const items3 = [closure_10(navigation(5761).Text, obj8), ];
   let tmp10Result = null;
   if (tmp5) {
     const obj9 = { style: tmp.rowContainer, location: "Add Friend Modal" };
-    tmp10Result = closure_10(contactSyncAccount(15822), obj9);
+    tmp10Result = closure_10(contactSyncAccount(15910), obj9);
   }
   const obj10 = { children: null };
   items3[1] = tmp10Result;

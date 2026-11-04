@@ -1,6 +1,6 @@
-// === Module 8970: MediaSlider ===
+// === Module 8987: MediaSlider ===
 
-// Module 8970 (MediaSlider)
+// Module 8987 (MediaSlider)
 import _modDef12 from "module_12" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, marginHorizontal: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, icon: { marginRight: 16 }, centerText: null, sliderContainer: null, progressSliderContainer: null, timelineBackgroundSlider: null, downloadProgressSlider: null, playbackSlider: null };
 let PlatformUtils = fn(1377);
@@ -132,7 +132,7 @@ export default function MediaSlider(controls) {
   }
   obj4.children = closure_6(PauseIcon, { size: "md", color: "white" });
   const items6 = [closure_6(controls(setPaused[11]).PressableOpacity, obj4), , , ];
-  const obj5 = { style: null, tabularNumbers: true, lineClamp: 1, color: "text-overlay-light", variant: "text-xs/medium", children: timeFormat };
+  const obj5 = { style: null, tabularNumbers: true, lineClamp: 1, color: "text-overlay-light", variant: "body-xs/medium", children: timeFormat };
   const items7 = [tmp.centerText, { width: tmp8[0] }];
   obj5.style = items7;
   items6[1] = closure_6(controls(setPaused[15]).Text, obj5);
@@ -175,7 +175,7 @@ export default function MediaSlider(controls) {
   items6[2] = c7(c5, obj6);
   const obj13 = {
     style: tmp.centerText,
-    variant: "text-xs/medium",
+    variant: "body-xs/medium",
     color: "text-overlay-light",
     tabularNumbers: true,
     lineClamp: 1,

@@ -1,7 +1,7 @@
-// === Module 7230: FreeFormLabel ===
+// === Module 7250: FreeFormLabel ===
 
-// Module 7230 (FreeFormLabel)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 7250 (FreeFormLabel)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,5 +11,5 @@ const result = size.fileFinishedImporting("design/void/Form/native/FreeFormLabel
 
 export default function FreeFormLabel(arg0) {
   ({ children, style, nativeID } = arg0);
-  return jsx(Text_Text.Text, { style, variant: "text-sm/semibold", color: "text-muted", nativeID, children });
+  return jsx(Text_Text.Text, { style, variant: "body-sm/semibold", color: "text-muted", nativeID, children });
 };

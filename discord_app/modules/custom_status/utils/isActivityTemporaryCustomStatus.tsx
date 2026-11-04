@@ -1,7 +1,7 @@
-// === Module 18269: isActivityTemporaryCustomStatus ===
+// === Module 18366: isActivityTemporaryCustomStatus ===
 
-// Module 18269 (isActivityTemporaryCustomStatus)
-import ActivityTypes from "ActivityTypes" /* 5882 */;
+// Module 18366 (isActivityTemporaryCustomStatus)
+import ActivityTypes from "ActivityTypes" /* 5896 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");

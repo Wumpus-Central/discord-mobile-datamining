@@ -1,6 +1,6 @@
-// === Module 7185: RedesignCompat ===
+// === Module 7200: RedesignCompat ===
 
-// Module 7185 (RedesignCompat)
+// Module 7200 (RedesignCompat)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

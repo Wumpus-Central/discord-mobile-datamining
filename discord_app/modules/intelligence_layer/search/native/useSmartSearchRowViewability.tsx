@@ -1,9 +1,9 @@
-// === Module 18910: useSmartSearchRowViewability ===
+// === Module 19013: useSmartSearchRowViewability ===
 
-// Module 18910 (useSmartSearchRowViewability)
-import useChatLayoutDefault from "useChatLayout" /* 5324 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14039 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14041 */;
+// Module 19013 (useSmartSearchRowViewability)
+import useChatLayoutDefault from "useChatLayout" /* 5325 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14125 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14127 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
 
@@ -12,18 +12,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchRowViewability.tsx");
 
 export function useSmartSearchRowViewability() {
-  const currentNavigationRouteName = stateFromStores(5321).useCurrentNavigationRouteName();
-  const context = noop.useContext(stateFromStores(14129).SwipeForMemberListContext);
-  const obj = stateFromStores(5321);
+  const currentNavigationRouteName = stateFromStores(5322).useCurrentNavigationRouteName();
+  const context = noop.useContext(stateFromStores(14215).SwipeForMemberListContext);
+  const obj = stateFromStores(5322);
   const isFocused = stateFromStores(1500).useIsFocused();
   let isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
   const obj3 = stateFromStores(1500);
-  let tmp6 = null != stateFromStores(5321).coerceChannelRoute({ name: currentNavigationRouteName });
+  let tmp6 = null != stateFromStores(5322).coerceChannelRoute({ name: currentNavigationRouteName });
   if (!tmp6) {
     if (isChatLockedOpen) {
       const obj5 = { name: currentNavigationRouteName };
-      isChatLockedOpen = null != tmp(5321).coerceGuildsRoute(obj5);
-      const tmpResult = tmp(5321);
+      isChatLockedOpen = null != tmp(5322).coerceGuildsRoute(obj5);
+      const tmpResult = tmp(5322);
     }
     tmp6 = isChatLockedOpen;
   }
@@ -37,7 +37,7 @@ export function useSmartSearchRowViewability() {
   const effect = noop.useEffect(() => {
     const result = SmartSearchAnalyticsManagerDefault.setIsNavigationFocused(stateFromStores, SearchSessionAnalyticsManagerDefault);
   }, items);
-  const obj4 = stateFromStores(5321);
+  const obj4 = stateFromStores(5322);
   const items1 = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items1, () => {
     state = state.getState();
@@ -48,7 +48,7 @@ export function useSmartSearchRowViewability() {
     SmartSearchAnalyticsManagerDefault.setIsAppActive(stateFromStores, SearchSessionAnalyticsManagerDefault);
   }, items2);
   const effect2 = noop.useEffect(() => () => {
-    closure_1_1(14041).setIsRowViewable(false, closure_1_1(14039));
+    closure_1_1(14127).setIsRowViewable(false, closure_1_1(14125));
   }, []);
   const tmpResult2 = stateFromStores(504);
 }

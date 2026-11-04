@@ -1,6 +1,6 @@
-// === Module 11098: conjureSettingValues ===
+// === Module 11146: conjureSettingValues ===
 
-// Module 11098 (conjureSettingValues)
+// Module 11146 (conjureSettingValues)
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);

@@ -1,13 +1,13 @@
-// === Module 9232: StartEventPlatformUtils ===
+// === Module 9249: StartEventPlatformUtils ===
 
-// Module 9232 (StartEventPlatformUtils)
+// Module 9249 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1099 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6826 */;
-import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8074 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
+import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8090 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// === Module 8842: utils ===
+// === Module 8859: utils ===
 
-// Module 8842 (utils)
+// Module 8859 (utils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import _mod4567 from "module_4567" /* 4567 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8838 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8843 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8855 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8860 */;
 import size from "module_2" /* 2 */;
 
 function calculateTimestampDurations(end, now) {
@@ -434,8 +434,8 @@ export function getEpisodeBadgeText(large_text) {
       let formatToPlainStringResult = null;
       if (null != match) {
         const intl = util.intl;
-        const obj = { seasonNum: match[1], episodeNum: match[2] };
-        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj);
+        const obj2 = { seasonNum: match[1], episodeNum: match[2] };
+        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj2);
       }
       return formatToPlainStringResult;
     }

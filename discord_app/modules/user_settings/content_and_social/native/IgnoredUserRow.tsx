@@ -1,8 +1,9 @@
-// === Module 16854: IgnoredUserRow ===
+// === Module 16946: IgnoredUserRow ===
 
-// Module 16854 (IgnoredUserRow)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7612 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
+// Module 16946 (IgnoredUserRow)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7628 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -10,7 +11,7 @@ const require = fn;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7446)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7462)().analyticsLocations;
   const intl = userRecord(1113).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -36,7 +37,7 @@ function IgnoredUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16851).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16943).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -56,8 +57,8 @@ function IgnoredUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(5754).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(7101).TableRow, { accessible: false, icon: jsx(userRecord(1187).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
+  obj.trailing = jsx(userRecord(5768).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  return jsx(userRecord(7116).TableRow, { accessible: false, icon: jsx(userRecord(1187).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -67,10 +68,83 @@ export default function ConnectedIgnoredUserRow(userId) {
   userId = userId.userId;
   items = [UserStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
-  let tmp2 = null;
+  const items1 = [stateFromStores, userId];
+  const effect = noop.useEffect(() => {
+    closure_0 = async function _loadUser() {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c0 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c0 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c0 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              c2 = 1;
+              c1 = 2;
+              c0 = 1;
+              const obj5 = { value: userId(dependencyMap[13]).getUser(c0), done: false };
+              return obj5;
+            }
+          } else if (1 === tmp6) {
+            c2 = 0;
+            c0 = 3;
+            return { value: "HermesInternal", done: null };
+          } else if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 0;
+            c0 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            c2 = 0;
+            c0 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp10) {
+          if (tmp3 === c2) {
+            c0 = tmp2;
+            throw tmp10;
+          } else {
+            c1 = tmp;
+          }
+        }
+      }
+    };
+    if (null == stateFromStores) {
+      (function loadUser() {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })();
+    }
+  }, items1);
+  let tmp3 = null;
   if (null != stateFromStores) {
     const obj2 = { userRecord: stateFromStores };
-    tmp2 = <IgnoredUserRow userRecord={stateFromStores} />;
+    tmp3 = <IgnoredUserRow userRecord={stateFromStores} />;
   }
-  return tmp2;
+  return tmp3;
 };

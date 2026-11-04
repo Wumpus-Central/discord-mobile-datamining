@@ -1,6 +1,6 @@
-// === Module 6557: CheckpointStatsUtils ===
+// === Module 6572: CheckpointStatsUtils ===
 
-// Module 6557 (CheckpointStatsUtils)
+// Module 6572 (CheckpointStatsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
 import StringUtils from "StringUtils" /* 2155 */;

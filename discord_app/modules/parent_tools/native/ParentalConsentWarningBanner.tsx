@@ -1,12 +1,12 @@
-// === Module 19253: ParentalConsentWarningBanner ===
+// === Module 19357: ParentalConsentWarningBanner ===
 
-// Module 19253 (ParentalConsentWarningBanner)
+// Module 19357 (ParentalConsentWarningBanner)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7841 */;
-import tinycolorDefault from "tinycolor" /* 7854 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7857 */;
+import tinycolorDefault from "tinycolor" /* 7870 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(7840).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7856).FamilyCenterSubPages;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: closure_10 } = Constants);
 const jsxProd = fn(21);
@@ -56,7 +56,7 @@ export default function ParentalConsentWarningBanner(children) {
   let isOnMainSurface = require("useIsOnMainSurface").useIsOnMainSurface();
   const obj4 = require("useIsOnMainSurface");
   const obj5 = require("useGlobalStatusIndicatorState");
-  token = require("useToken").useToken(token(daysRemaining[5]).colors.BACKGROUND_FEEDBACK_WARNING);
+  token = require("useToken").useToken(token(daysRemaining[5]).colors.BACKGROUND_FEEDBACK_MOD_WARNING);
   items = [token];
   daysRemaining = undefined;
   const memo = noop.useMemo(() => {
@@ -92,7 +92,7 @@ export default function ParentalConsentWarningBanner(children) {
     const tab = FamilyCenterActionCreatorsDefault.selectTab(FamilyCenterSubPages.REQUESTS);
     openUserSettings.openUserSettings({ screen: constants2.FAMILY_CENTER });
   }, items1);
-  const callback1 = noop.useCallback((children, arg1) => closure_2_11(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: link.link, children }, arg1), items2);
+  const callback1 = noop.useCallback((children, arg1) => closure_2_11(Text_Text.Text, { variant: "body-sm/medium", color: "text-strong", style: link.link, children }, arg1), items2);
   const items3 = [StyleSheet.absoluteFill, ];
   let num2 = 0;
   if (isOnMainSurface) {
@@ -121,7 +121,7 @@ export default function ParentalConsentWarningBanner(children) {
       const obj13 = { paddingTop: tmp2.top + 8 };
       items7[1] = obj13;
       obj12.style = items7;
-      let obj14 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, style: tmp.label, children: null };
+      let obj14 = { variant: "body-sm/medium", color: "text-strong", lineClamp: 1, style: tmp.label, children: null };
       if (0 === daysRemaining) {
         intl = intl(obj[19]).intl;
         Gfqlpa = Gfqlpa(obj[20]).Gfqlpa;

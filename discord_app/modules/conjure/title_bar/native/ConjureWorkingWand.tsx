@@ -1,11 +1,11 @@
-// === Module 14847: ConjureWorkingWand ===
+// === Module 14927: ConjureWorkingWand ===
 
-// Module 14847 (ConjureWorkingWand)
+// Module 14927 (ConjureWorkingWand)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -41,7 +41,7 @@ function WandPart(fill) {
   ConjureWorkingWandTsx2.__initData = tmp4;
   const animatedProps = _mod1652.useAnimatedProps(ConjureWorkingWandTsx2);
   const size1 = { width: size, height: size, viewBox: "0 0 24 24", children: null };
-  const items2 = [React5(inlineStyles.Path, { d: path, fill: fill.color }), ];
+  const items2 = [metroImportDefault(inlineStyles.Path, { d: path, fill: fill.color }), ];
   let tmp8Result = null;
   if (null != band) {
     obj2 = { children: null };
@@ -50,11 +50,11 @@ function WandPart(fill) {
     const _HermesInternal = HermesInternal;
     obj4.id = "" + replaced + "band";
     const obj5 = { offset: "0", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 0 };
-    const items3 = [React5(inlineStyles.Stop, obj5), , ];
+    const items3 = [metroImportDefault(inlineStyles.Stop, obj5), , ];
     const obj6 = { offset: "0.5", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 1 };
-    items3[1] = React5(inlineStyles.Stop, obj6);
+    items3[1] = metroImportDefault(inlineStyles.Stop, obj6);
     const obj7 = { offset: "1", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 0 };
-    items3[2] = React5(inlineStyles.Stop, obj7);
+    items3[2] = metroImportDefault(inlineStyles.Stop, obj7);
     class ConjureWorkingWandTsx2 {
       constructor() {
         obj = closure_0;
@@ -68,32 +68,32 @@ function WandPart(fill) {
         return { x: value };
       }
     }
-    const items4 = [React6(inlineStyles.LinearGradient, obj4), ];
+    const items4 = [React5(inlineStyles.LinearGradient, obj4), ];
     const size2 = { id: null, maskUnits: "userSpaceOnUse", x: 0, y: 0, width: 24, height: 24, children: null };
     const _HermesInternal2 = HermesInternal;
     size2.id = "" + replaced + "mask";
     const size3 = { animatedProps, y: 0, width: 19.200000000000003, height: 24, fill: null };
     const _HermesInternal3 = HermesInternal;
     size3.fill = "url(#" + replaced + "band)";
-    size2.children = React5(closure_15, size3);
-    items4[1] = React5(inlineStyles.Mask, size2);
+    size2.children = metroImportDefault(closure_15, size3);
+    items4[1] = metroImportDefault(inlineStyles.Mask, size2);
     obj3.children = items4;
-    const items5 = [React6(inlineStyles.Defs, obj3), ];
+    const items5 = [React5(inlineStyles.Defs, obj3), ];
     const obj8 = { d: path, fill, mask: null };
     const _HermesInternal4 = HermesInternal;
     obj8.mask = "url(#" + replaced + "mask)";
-    items5[1] = React5(inlineStyles.Path, obj8);
+    items5[1] = metroImportDefault(inlineStyles.Path, obj8);
     obj2.children = items5;
-    tmp8Result = React6(React7, obj2);
+    tmp8Result = React5(React6, obj2);
   }
   items2[1] = tmp8Result;
   size1.children = items2;
-  return React6(inlineStylesDefault, size1);
+  return React5(inlineStylesDefault, size1);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const Easing = fn(1652).Easing;
 let closure_10 = Easing.bezier(0.42, 0, 0.58, 1);
 let c11 = -33.6;
@@ -108,7 +108,7 @@ let obj4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PURPLE_30);
 let result4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PINK_40).set("oklch.l", "*0.95");
 let result5 = result4.set("oklch.c", "*0.8");
 const fill = result5.hex();
-let closure_15 = module_1652.createAnimatedComponent(fn(8155).Rect);
+let closure_15 = module_1652.createAnimatedComponent(fn(8171).Rect);
 const createStyles = fn(5141);
 let closure_16 = createStyles.createStyles((width) => ({ root: { width, height: width }, sparkleSmall: { transformOrigin: "33.6% 18.6%" }, sparkleLarge: { transformOrigin: "75% 75%" } }));
 let items = [{ code: "(function twinkle_ConjureWorkingWandTsx1(peak){return{opacity:0.35+0.65*peak,transform:[{scale:0.55+0.7*peak},{rotate:45*peak+\"deg\"}]};})" }];

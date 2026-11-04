@@ -1,16 +1,16 @@
-// === Module 18291: HappeningNowCardEvent ===
+// === Module 18388: HappeningNowCardEvent ===
 
-// Module 18291 (HappeningNowCardEvent)
+// Module 18388 (HappeningNowCardEvent)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9090 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9107 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17430);
+const HappeningNowConstants = fn(17521);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({ HappeningNowCardTrackingType: closure_8, HAPPENING_NOW_CARD_HEIGHT: closure_9, HAPPENING_NOW_EVENT_BANNER_WIDTH } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -33,7 +33,7 @@ obj.ticketContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUB
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: HAPPENING_NOW_CONTENT_HEIGHT, padding: 6, borderTopLeftRadius: nativeDefault.radii.sm, borderBottomLeftRadius: nativeDefault.radii.sm };
 obj.avatarContainer = { width: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.XSMALL_20] };
 let closure_13 = createStyles.createStyles(obj);
-const point = { shape: fn(9637).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+const point = { shape: fn(9656).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 let items = [point];
 let closure_15 = noop.memo(function DottedLineSeparator() {
   const tmp = closure_13();
@@ -129,7 +129,7 @@ export default noop.memo(function HappeningNowCardEvent(event) {
   const items7 = [closure_11(event(creator_id[20]).GroupIcon, { style: tmp.interestedUsersIcon, size: "xxs" }), ];
   let tmp22Result4 = tmp9 > 0;
   if (tmp22Result4) {
-    const obj10 = { color: "mobile-text-heading-primary", variant: "text-xs/semibold", children: tmp25(tmp18[22]).humanizeValue(tmp9, stateFromStores) };
+    const obj10 = { color: "mobile-text-heading-primary", variant: "body-xs/semibold", children: tmp25(tmp18[22]).humanizeValue(tmp9, stateFromStores) };
     tmp22Result4 = closure_11(tmp25(tmp18[21]).Text, obj10);
     const tmp25Result = tmp25(tmp18[22]);
   }
@@ -161,7 +161,7 @@ export default noop.memo(function HappeningNowCardEvent(event) {
   const obj15 = { color: str2, variant: null, children: null };
   let str3;
   if (isLive) {
-    str3 = "text-xs/semibold";
+    str3 = "body-xs/semibold";
   }
   obj15.variant = str3;
   if (isLive) {

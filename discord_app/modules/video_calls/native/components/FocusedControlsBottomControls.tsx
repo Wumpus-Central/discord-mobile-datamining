@@ -1,6 +1,6 @@
-// === Module 12003: FocusedControlsBottomControls ===
+// === Module 12062: FocusedControlsBottomControls ===
 
-// Module 12003 (FocusedControlsBottomControls)
+// Module 12062 (FocusedControlsBottomControls)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
@@ -9,14 +9,14 @@ import native from "native" /* 1187 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5718 */;
-import CallPTTButton from "CallPTTButton" /* 11347 */;
-import useBottomVoiceControlsSheetWidthDefault from "useBottomVoiceControlsSheetWidth" /* 11853 */;
-import useCanShowTooltip from "useCanShowTooltip" /* 12004 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5731 */;
+import CallPTTButton from "CallPTTButton" /* 11397 */;
+import useBottomVoiceControlsSheetWidthDefault from "useBottomVoiceControlsSheetWidth" /* 11912 */;
+import useCanShowTooltip from "useCanShowTooltip" /* 12063 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6843 */;
+import TextStyles from "TextStyles" /* 6858 */;
 
 const _modDef1652 = _mod1652;
 const CallPTTButtonDefault = CallPTTButton;
@@ -63,7 +63,7 @@ function FocusedControlsExpanded(availableHeight) {
   const items3 = [tmp.expandedControlsContainer, animatedStyle];
   obj4.style = items3;
   obj3.children = state(_modDef1652.View, obj4);
-  obj2.children = state(React5, obj3);
+  obj2.children = state(metroImportDefault, obj3);
   return state(width, obj2);
 }
 function FocusedControlsBottomDrawerTooltip(positionY) {
@@ -739,10 +739,10 @@ class FocusedControlsBottomDrawer {
   }
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, TouchableWithoutFeedback: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(11133);
+({ View: hasOwnProperty, TouchableWithoutFeedback: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
+const ChannelCallStore = fn(11181);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(11134);
+const ChannelCallConstants = fn(11182);
 ({ BOX_MODE_THRESHOLD_WIDTH: closure_10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1072);
 ({ ComponentActions: closure_12, Fonts } = Constants);

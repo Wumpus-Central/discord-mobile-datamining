@@ -1,14 +1,14 @@
-// === Module 10978: ConjureRemixSheet ===
+// === Module 11026: ConjureRemixSheet ===
 
-// Module 10978 (ConjureRemixSheet)
+// Module 11026 (ConjureRemixSheet)
 import nativeDefault from "native" /* 575 */;
-import TableRadioRow from "TableRadioRow" /* 7187 */;
-import ConjureRemix from "ConjureRemix" /* 10979 */;
+import TableRadioRow from "TableRadioRow" /* 7202 */;
+import ConjureRemix from "ConjureRemix" /* 11027 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import SortedGuildStore from "SortedGuildStore" /* 6907 */;
 
 require = fn;
 const View = fn(17).View;
@@ -164,7 +164,7 @@ export default function ConjureRemixSheet(project) {
   let tmp21Result = null;
   if (null != tmp10) {
     const obj8 = { accessibilityRole: "alert", children: null };
-    const obj9 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp10 };
+    const obj9 = { variant: "body-xs/normal", color: "text-feedback-critical", children: tmp10 };
     obj8.children = tmp21(tmp15(tmp16[18]).Text, obj9);
     tmp21Result = tmp21(tmp22, obj8);
   }
@@ -214,7 +214,7 @@ export default function ConjureRemixSheet(project) {
       return closure_3(arg0);
     },
     accessibilityLabel: stringResult,
-    children: stateFromStoresArray.map((label) => React7(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: first3 }, label.id))
+    children: stateFromStoresArray.map((label) => React6(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: first3 }, label.id))
   });
   obj11.children = items6;
   obj3.children = memo(project(value[20]).BottomSheetScrollView, obj11);

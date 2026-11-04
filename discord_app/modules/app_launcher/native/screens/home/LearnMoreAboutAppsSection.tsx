@@ -1,21 +1,21 @@
-// === Module 12560: LearnMoreAboutAppsSection ===
+// === Module 12641: LearnMoreAboutAppsSection ===
 
-// Module 12560 (LearnMoreAboutAppsSection)
+// Module 12641 (LearnMoreAboutAppsSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import Pressables from "Pressables" /* 7106 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11639 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12561 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import Pressables from "Pressables" /* 7121 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11690 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12642 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 }, body: { textAlign: "center" }, divider: null, linkButton: null };
 const obj3 = { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 };
@@ -43,15 +43,15 @@ export default function LearnMoreAboutAppsSection(visible) {
   obj.sectionName = AppLauncherTypes.AppLauncherSectionName.NEW_TO_APPS;
   obj.viewed = visible.visible;
   const obj2 = { style: tmp.container, children: null };
-  items = [timestampProducer(View, { style: tmp.divider }), timestampProducer(Text_Text.Text, { accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: stringResult }), timestampProducer(Text_Text.Text, { variant: "text-xs/normal", color: "text-default", style: tmp.body, children: stringResult1 }), timestampProducer(View, { style: tmp.divider }), , ];
+  items = [timestampProducer(View, { style: tmp.divider }), timestampProducer(Text_Text.Text, { accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: stringResult }), timestampProducer(Text_Text.Text, { variant: "body-xs/normal", color: "text-default", style: tmp.body, children: stringResult1 }), timestampProducer(View, { style: tmp.divider }), , ];
   const obj6 = { style: tmp.linkButton, onPress: callback, accessibilityRole: "link", accessibilityLabel: formatToPlainStringResult, children: null };
-  const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj7 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl4 = util.intl;
   obj7.children = intl4.string(util.t.Ye51oT);
   obj6.children = timestampProducer(Text_Text.Text, obj7);
   items[4] = timestampProducer(Pressables.PressableHighlight, obj6);
   items[5] = timestampProducer(View, { style: tmp.divider });
   obj2.children = items;
-  obj.children = React5(View, obj2);
+  obj.children = metroImportDefault(View, obj2);
   return timestampProducer(TrackSectionHeaderDefault, obj);
 };

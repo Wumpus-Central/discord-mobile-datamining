@@ -1,11 +1,11 @@
-// === Module 20249: AgeUpdateFooter ===
+// === Module 20365: AgeUpdateFooter ===
 
-// Module 20249 (AgeUpdateFooter)
+// Module 20365 (AgeUpdateFooter)
 import util from "util" /* 1113 */;
 import _modDef2963 from "module_2963" /* 2963 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
 
 export default function AgeUpdateFooter() {
-  let obj = { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null };
+  let obj = { variant: "body-md/medium", color: "text-muted", style: closure_4().text, children: null };
   const intl = util.intl;
   obj.children = intl.format(_modDef2963.ifObbX, {
     handleAgeVerifyHook() {
@@ -24,5 +24,5 @@ export default function AgeUpdateFooter() {
       return obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT });
     }
   });
-  return jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null });
+  return jsx(Text_Text.Text, { variant: "body-md/medium", color: "text-muted", style: closure_4().text, children: null });
 };

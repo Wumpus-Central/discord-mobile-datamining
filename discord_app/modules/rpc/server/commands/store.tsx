@@ -1,9 +1,9 @@
-// === Module 16479: merged15 ===
+// === Module 16571: merged15 ===
 
-// Module 16479 (merged15)
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7706 */;
-import RPCErrorDefault from "RPCError" /* 9461 */;
-import validateTransportType from "validateTransportType" /* 16481 */;
+// Module 16571 (merged15)
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7722 */;
+import RPCErrorDefault from "RPCError" /* 9479 */;
+import validateTransportType from "validateTransportType" /* 16573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -265,10 +265,10 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(6570);
+let Constants = fn(6585);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
-({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);
+({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: closure_6, SKUTypes: metroImportDefault } = Constants);
 let obj = { [RPCCommands.GET_SKUS]: obj2, [RPCCommands.GET_ENTITLEMENTS]: obj3 };
 obj2 = { scope: null, handler: getSkusHandler };
 let items = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
@@ -276,7 +276,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(16444);
+let CONTEXT_MENU_ICON_NAMES = fn(16536);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -292,7 +292,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(16444);
+CONTEXT_MENU_ICON_NAMES = fn(16536);
 let obj7 = {
   scope: null,
   handler(arg0) {

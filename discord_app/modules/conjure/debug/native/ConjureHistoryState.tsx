@@ -1,10 +1,10 @@
-// === Module 13165: ConjureHistoryState ===
+// === Module 13248: ConjureHistoryState ===
 
-// Module 13165 (ConjureHistoryState)
+// Module 13248 (ConjureHistoryState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,12 +29,12 @@ export function ConjureHistoryPlaceholder(state) {
     const intl = util.intl;
     emptyTitle = intl.string(_modDef3995.h1SE6R);
   }
-  items = [React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: emptyTitle }), ];
+  items = [React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: emptyTitle }), ];
   if ("failed" === state.state.status) {
     const intl2 = util.intl;
     emptyBody = intl2.string(_modDef3995["8SErdg"]);
   }
-  items[1] = React4(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", children: emptyBody });
+  items[1] = React4(Text_Text.Text, { variant: "body-xs/normal", color: "text-muted", children: emptyBody });
   obj.children = items;
   return hasOwnProperty(View, obj);
 }
@@ -43,12 +43,12 @@ export function ConjureHistoryNotice(state) {
   if (!state.hasRows) {
     return null;
   } else if ("failed" === state.status) {
-    const obj2 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
+    const obj2 = { variant: "body-xs/normal", color: "text-feedback-critical", children: null };
     const intl2 = util.intl;
     obj2.children = intl2.string(_modDef3995.h1SE6R);
     let tmp = React4(Text_Text.Text, obj2);
   } else if (state.truncated) {
-    const obj = { variant: "text-xs/normal", color: "text-muted", children: null };
+    const obj = { variant: "body-xs/normal", color: "text-muted", children: null };
     const intl = util.intl;
     obj.children = intl.string(_modDef3995.V7Ri8H);
     tmp = React4(Text_Text.Text, obj);

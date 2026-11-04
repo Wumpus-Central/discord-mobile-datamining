@@ -1,16 +1,16 @@
-// === Module 16813: account/MFAUtils ===
+// === Module 16905: account/MFAUtils ===
 
-// Module 16813 (account/MFAUtils)
+// Module 16905 (account/MFAUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1113 */;
-import MFAUtils from "MFAUtils" /* 7244 */;
+import MFAUtils from "MFAUtils" /* 7264 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
-({ GuildFeatures: hasOwnProperty, Permissions: metroRequire, UserFlags: closure_7 } = Constants);
+({ GuildFeatures: hasOwnProperty, Permissions: closure_6, UserFlags: metroImportDefault } = Constants);
 const MFAAvailability = { AVAILABLE: "available", UNAVAILABLE_NO_CRYPTO: "unavailable_no_crypto", UNAVAILABLE_UNVERIFIED: "unavailable_unverified" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");

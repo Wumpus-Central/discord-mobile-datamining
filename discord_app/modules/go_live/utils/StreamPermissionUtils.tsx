@@ -1,14 +1,14 @@
-// === Module 6844: StreamPermissionUtils ===
+// === Module 6859: StreamPermissionUtils ===
 
-// Module 6844 (StreamPermissionUtils)
-import ChannelUtils from "ChannelUtils" /* 6166 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 6831 */;
-import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6845 */;
-import AgeGateUtils from "AgeGateUtils" /* 6854 */;
-import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+// Module 6859 (StreamPermissionUtils)
+import ChannelUtils from "ChannelUtils" /* 6181 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 6846 */;
+import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6860 */;
+import AgeGateUtils from "AgeGateUtils" /* 6869 */;
+import GameConsoleStore from "GameConsoleStore" /* 5899 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
 
 const require = globalThis.__r;
 

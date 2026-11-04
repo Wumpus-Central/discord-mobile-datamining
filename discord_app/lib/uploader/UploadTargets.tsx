@@ -1,16 +1,16 @@
-// === Module 8365: UploadTargets ===
+// === Module 8381: UploadTargets ===
 
-// Module 8365 (UploadTargets)
-import UploadUtils from "UploadUtils" /* 8336 */;
-import FileUtilsAll from "FileUtils" /* 8340 */;
-import UploadLimits from "UploadLimits" /* 8355 */;
-import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 8366 */;
-import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 8368 */;
+// Module 8381 (UploadTargets)
+import UploadUtils from "UploadUtils" /* 8352 */;
+import FileUtilsAll from "FileUtils" /* 8356 */;
+import UploadLimits from "UploadLimits" /* 8371 */;
+import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 8382 */;
+import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 8384 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
 require = fn;
 const Constants = fn(1072);
-({ Endpoints: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
+({ Endpoints: hasOwnProperty, MAX_UPLOAD_COUNT: closure_6 } = Constants);
 class MessageAttachmentUploadTarget {
 }
 const prototype = MessageAttachmentUploadTarget.prototype;

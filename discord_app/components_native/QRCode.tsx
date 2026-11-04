@@ -1,21 +1,21 @@
-// === Module 9297: components_native/QRCode ===
+// === Module 9314: components_native/QRCode ===
 
-// Module 9297 (components_native/QRCode)
+// Module 9314 (components_native/QRCode)
 import nativeDefault from "native" /* 575 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5723 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8942 */;
-import QRCodeDefault from "QRCode" /* 9298 */;
-import _mod9312 from "module_9312" /* 9312 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5736 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8959 */;
+import QRCodeDefault from "QRCode" /* 9315 */;
+import _mod9329 from "module_9329" /* 9329 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["style", "text", "blur", "accessibilityLabel"];
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { qrCode: { display: "flex", alignSelf: "flex-start", padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs }, qrCodeContainer: { display: "flex", alignSelf: "flex-start", alignItems: "center", justifyContent: "center", position: "relative" }, qrCodeOverlay: { display: "flex", alignItems: "center", justifyContent: "center" }, "size-40": { width: 40, height: 40 }, "size-60": { width: 60, height: 60 } };
 let closure_9 = createStyles.createLegacyClassComponentStyles(obj2);
@@ -37,15 +37,15 @@ QRCode.prototype["render"] = function render() {
   const obj3 = { value: text, level: "M" };
   const tmp = closure_9(this.context);
   const merged = Object.assign(tmp2);
-  const items1 = [React5(QRCodeDefault, obj3), ];
+  const items1 = [metroImportDefault(QRCodeDefault, obj3), ];
   if (blur) {
     obj4 = { style: timestampProducer.absoluteFill, blurTheme: "dark" };
-    tmp3Result = React5(VisualEffectViewDefault, obj4);
+    tmp3Result = metroImportDefault(VisualEffectViewDefault, obj4);
   }
   items1[1] = tmp3Result;
   obj2.children = items1;
-  obj.children = React6(hasOwnProperty, obj2);
-  return React5(hasOwnProperty, obj);
+  obj.children = React5(hasOwnProperty, obj2);
+  return metroImportDefault(hasOwnProperty, obj);
 };
 QRCode.contextType = fn(5207).ThemeContext;
 QRCode.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
@@ -63,21 +63,21 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const obj2 = {};
   const merged = Object.assign(this.props);
   obj2.blur = false;
-  items = [React5(QRCode, obj2), , ];
+  items = [metroImportDefault(QRCode, obj2), , ];
   const obj3 = { style: null, children: null };
   const items1 = [tmp.qrCodeOverlay, timestampProducer.absoluteFill];
   obj3.style = items1;
-  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9312 };
-  obj3.children = React5(FastImageDefault, obj4);
-  items[1] = React5(hasOwnProperty, obj3);
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9329 };
+  obj3.children = metroImportDefault(FastImageDefault, obj4);
+  items[1] = metroImportDefault(hasOwnProperty, obj3);
   let tmp6Result = null;
   if (props.blur) {
     const obj5 = { style: timestampProducer.absoluteFill };
-    tmp6Result = React5(VisualEffectViewThemedDefault, obj5);
+    tmp6Result = metroImportDefault(VisualEffectViewThemedDefault, obj5);
   }
   items[2] = tmp6Result;
   obj.children = items;
-  return React6(hasOwnProperty, obj);
+  return React5(hasOwnProperty, obj);
 };
 QRCodeWithOverlay.contextType = fn(5207).ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };

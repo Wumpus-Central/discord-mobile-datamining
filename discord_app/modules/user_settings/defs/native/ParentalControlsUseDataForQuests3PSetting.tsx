@@ -1,19 +1,19 @@
-// === Module 18091: ParentalControlsUseDataForQuests3PSetting ===
+// === Module 18188: ParentalControlsUseDataForQuests3PSetting ===
 
-// Module 18091 (ParentalControlsUseDataForQuests3PSetting)
+// Module 18188 (ParentalControlsUseDataForQuests3PSetting)
 import util from "util" /* 1113 */;
-import useSelectedTeen from "useSelectedTeen" /* 8495 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16865 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import useSelectedTeen from "useSelectedTeen" /* 8512 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16957 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 
 require = fn;
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.CyLYKZ);
   },
-  parent: fn(8556).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8573).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToSupportQuests3PSettingValue() {
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();
     const ParentalControlledQuests3PDataOptedOut = ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;

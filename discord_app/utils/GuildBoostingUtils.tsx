@@ -1,6 +1,6 @@
-// === Module 8587: GuildBoostingUtils ===
+// === Module 8604: GuildBoostingUtils ===
 
-// Module 8587 (GuildBoostingUtils)
+// Module 8604 (GuildBoostingUtils)
 import util from "util" /* 1113 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -8,14 +8,14 @@ import _modDef2171 from "module_2171" /* 2171 */;
 import PremiumUtilsAll from "PremiumUtils" /* 2176 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import _modDef3415 from "module_3415" /* 3415 */;
-import FileSizeUtils from "FileSizeUtils" /* 6571 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8588 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8589 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8592 */;
+import FileSizeUtils from "FileSizeUtils" /* 6586 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8605 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8606 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7709 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7725 */;
 import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 import apply from "module_12" /* 12 */;
 
@@ -401,13 +401,13 @@ export const minimumRequiredTierForGuildFeature = apply.memoize((arg0) => {
 });
 export function boostedGuildTierToAnalyticsObjectType(arg0) {
   if (BoostedGuildTiers.NONE === arg0) {
-    return React7.NONE;
+    return React6.NONE;
   } else if (BoostedGuildTiers.TIER_1 === arg0) {
-    return React7.TIER_1;
+    return React6.TIER_1;
   } else if (BoostedGuildTiers.TIER_2 === arg0) {
-    return React7.TIER_2;
+    return React6.TIER_2;
   } else if (BoostedGuildTiers.TIER_3 === arg0) {
-    return React7.TIER_3;
+    return React6.TIER_3;
   } else {
     return null;
   }
@@ -758,7 +758,7 @@ export function getNextPremiumTierForSubscriberCount(arg0) {
 }
 export const TierMarkerPositions = obj3;
 export function getGuildBoostingProgressBarFillFactor(c0) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8596).getGuildPowerupBoostLevelProgress(_require.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8613).getGuildPowerupBoostLevelProgress(_require.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

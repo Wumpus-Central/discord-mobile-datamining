@@ -1,11 +1,11 @@
-// === Module 14802: AppStoreOverlayMediaCarousel ===
+// === Module 14882: AppStoreOverlayMediaCarousel ===
 
-// Module 14802 (AppStoreOverlayMediaCarousel)
+// Module 14882 (AppStoreOverlayMediaCarousel)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsActions from "AnalyticsActions" /* 7986 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
-import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 14803 */;
-import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 14804 */;
+import AnalyticsActions from "AnalyticsActions" /* 8002 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
+import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 14883 */;
+import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 14884 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -116,7 +116,7 @@ function AppStoreOverlayMediaCarouselItem(arg0) {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, ScrollView: metroRequire, StyleSheet, View: closure_7 } = get_ActivityIndicator);
+({ Pressable: hasOwnProperty, ScrollView: closure_6, StyleSheet, View: metroImportDefault } = get_ActivityIndicator);
 const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

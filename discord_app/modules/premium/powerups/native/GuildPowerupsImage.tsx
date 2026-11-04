@@ -1,10 +1,10 @@
-// === Module 14228: GuildPowerupsImage ===
+// === Module 14314: GuildPowerupsImage ===
 
-// Module 14228 (GuildPowerupsImage)
+// Module 14314 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9633 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9652 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;

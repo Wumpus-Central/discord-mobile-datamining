@@ -1,9 +1,9 @@
-// === Module 8952: UserProfileAvatar ===
+// === Module 8969: UserProfileAvatar ===
 
-// Module 8952 (UserProfileAvatar)
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 8953 */;
-import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8956 */;
+// Module 8969 (UserProfileAvatar)
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8955 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8970 */;
+import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8973 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -35,10 +35,10 @@ class UserProfileAvatar {
   }
 }
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8878).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(7497).AVATAR_SIZE_VARIANT;
+const TrackUserProfileActions = fn(8895).TrackUserProfileActions;
+const AVATAR_SIZE_VARIANT = fn(7513).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAvatar.tsx");
 

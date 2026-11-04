@@ -1,12 +1,12 @@
-// === Module 8859: UserProfileSettingsActionCreators ===
+// === Module 8876: UserProfileSettingsActionCreators ===
 
-// Module 8859 (UserProfileSettingsActionCreators)
+// Module 8876 (UserProfileSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef5974 from "module_5974" /* 5974 */;
-import GuildTagUtils from "GuildTagUtils" /* 8860 */;
+import _modDef5988 from "module_5988" /* 5988 */;
+import GuildTagUtils from "GuildTagUtils" /* 8877 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import UserStore from "UserStore" /* 1385 */;
-import UserProfileStore from "UserProfileStore" /* 7896 */;
+import UserProfileStore from "UserProfileStore" /* 7912 */;
 
 require = fn;
 const size = fn(2);
@@ -68,7 +68,7 @@ export function setPendingChanges(guildId) {
       if (displayNameStyles2 == null) {
         displayNameStyles2 = null;
       }
-      obj.pendingDisplayNameStyles = _modDef5974(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
+      obj.pendingDisplayNameStyles = _modDef5988(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
     }
     if ("customTypingIndicatorStyle" in merged) {
       const customTypingIndicatorStyle = merged.customTypingIndicatorStyle;
@@ -80,7 +80,7 @@ export function setPendingChanges(guildId) {
       if (typingIndicatorStyle == null) {
         typingIndicatorStyle = null;
       }
-      obj.pendingCustomTypingIndicatorStyle = _modDef5974(tmp17, typingIndicatorStyle) ? undefined : customTypingIndicatorStyle;
+      obj.pendingCustomTypingIndicatorStyle = _modDef5988(tmp17, typingIndicatorStyle) ? undefined : customTypingIndicatorStyle;
     }
     if ("pronouns" in merged) {
       let pronouns;
@@ -283,7 +283,7 @@ export function setPendingChanges(guildId) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (_modDef5974(tmp42, themeColors)) {
+          if (_modDef5988(tmp42, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;

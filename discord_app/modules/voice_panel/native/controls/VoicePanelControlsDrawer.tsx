@@ -1,14 +1,14 @@
-// === Module 19494: VoicePanelControlsDrawer ===
+// === Module 19598: VoicePanelControlsDrawer ===
 
-// Module 19494 (VoicePanelControlsDrawer)
+// Module 19598 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import Suspender from "Suspender" /* 6109 */;
-import useRefValueDefault from "useRefValue" /* 7085 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13958 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19495 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19506 */;
+import Suspender from "Suspender" /* 6124 */;
+import useRefValueDefault from "useRefValue" /* 7100 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 14044 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19599 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19610 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,13 +16,13 @@ const require = globalThis.__r;
 
 require = fn;
 function renderChat(shown) {
-  const obj = { collapsable: false, style: absoluteFill.absoluteFill, children: React7(VoicePanelChatViewDefault, { shown }) };
-  return React7(timestampProducer, obj);
+  const obj = { collapsable: false, style: absoluteFill.absoluteFill, children: React6(VoicePanelChatViewDefault, { shown }) };
+  return React6(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11360);
-({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const VoicePanelConstants = fn(11410);
+({ MODE_CHANGE_PHYSICS: metroImportDefault, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -59,7 +59,7 @@ const memoResult = noop.memo(function LazyContentFreezer(shown) {
   const memo = noop.useMemo(() => renderContent(shown), items1);
   if (useRefValueDefault(ref)) {
     const obj2 = { freeze: tmp2, children: memo };
-    let tmp11 = React7(Suspender.Freeze, obj2);
+    let tmp11 = React6(Suspender.Freeze, obj2);
   } else {
     tmp11 = null;
   }
@@ -172,8 +172,8 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   const animatedReaction = require("module_1652").useAnimatedReaction(VoicePanelControlsDrawerTsx2, VoicePanelControlsDrawerTsx3);
   const items6 = [openTab];
   const items7 = [gestureSpecs];
-  const callback = obj.useCallback((isVisible) => React7(VoicePanelVoiceControlsDefault, { isVisible, openTab }), items6);
-  const callback1 = obj.useCallback(() => React7(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items7);
+  const callback = obj.useCallback((isVisible) => React6(VoicePanelVoiceControlsDefault, { isVisible, openTab }), items6);
+  const callback1 = obj.useCallback(() => React6(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items7);
   const obj3 = { style: null, children: null };
   const items8 = [tmp4.drawer, animatedStyle];
   obj3.style = items8;
@@ -181,7 +181,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(19491), obj4);
+    tmp32 = closure_9(tmp(19595), obj4);
   }
   const items9 = [tmp32, , , ];
   let tmp36 = !tmp6;

@@ -1,14 +1,14 @@
-// === Module 18580: GuildsBarUnreadBars ===
+// === Module 18681: GuildsBarUnreadBars ===
 
-// Module 18580 (GuildsBarUnreadBars)
+// Module 18681 (GuildsBarUnreadBars)
 import initialize from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
-import FastList from "FastList" /* 7361 */;
+import FastList from "FastList" /* 7377 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7006 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7021 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
-import SortedGuildStore from "SortedGuildStore" /* 6892 */;
+import SortedGuildStore from "SortedGuildStore" /* 6907 */;
 
 const require = globalThis.__r;
 
@@ -204,7 +204,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: null, afterItem: "y" };
+            let obj6 = { beforeItem: null, afterItem: "a" };
             let obj7 = { section: sum, row: tmp32.item, mention: true };
             obj6.beforeItem = obj7;
             return obj6;
@@ -216,16 +216,16 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6892).GuildsNodeType;
-const GuildsBarConstants = fn(18503);
+const GuildsNodeType = fn(6907).GuildsNodeType;
+const GuildsBarConstants = fn(18598);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(17218);
+const YouBarConstants = fn(17310);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_15 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
-let closure_17 = { beforeItem: "Array", afterItem: "flexDirection" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "y" };
+let closure_17 = { beforeItem: "PX_8", afterItem: "__closure" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "a" };
 let closure_20 = { code: "(function GuildsBarUnreadBarsTsx1(){let[scrollPosValue]=this.__closure;return scrollPosValue.get();})" };
 let closure_21 = { code: "(function GuildsBarUnreadBarsTsx2(position,lastPosition){let[scheduleOnRN,debouncedUpdate]=this.__closure;if(position!==lastPosition){scheduleOnRN(debouncedUpdate);}})" };
 const size = fn(2);

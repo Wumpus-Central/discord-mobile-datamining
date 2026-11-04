@@ -1,28 +1,28 @@
-// === Module 13884: useChatInputRefs ===
+// === Module 13970: useChatInputRefs ===
 
-// Module 13884 (useChatInputRefs)
+// Module 13970 (useChatInputRefs)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChatInputUtils from "ChatInputUtils" /* 5330 */;
-import StickersUtils from "StickersUtils" /* 6680 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8467 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10329 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10331 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12934 */;
-import ChatInputSendUtils from "ChatInputSendUtils" /* 13890 */;
+import ChatInputUtils from "ChatInputUtils" /* 5331 */;
+import StickersUtils from "StickersUtils" /* 6695 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7776 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8483 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10377 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10379 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 13016 */;
+import ChatInputSendUtils from "ChatInputSendUtils" /* 13976 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8470 */;
-import StickersStore from "StickersStore" /* 6957 */;
-import DraftStore from "DraftStore" /* 7825 */;
-import EditMessageStore from "EditMessageStore" /* 7947 */;
-import SlowmodeStore from "SlowmodeStore" /* 7954 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8486 */;
+import StickersStore from "StickersStore" /* 6972 */;
+import DraftStore from "DraftStore" /* 7841 */;
+import EditMessageStore from "EditMessageStore" /* 7963 */;
+import SlowmodeStore from "SlowmodeStore" /* 7970 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-const DraftType = fn(7825).DraftType;
-let closure_11 = fn(10026).updateChatInputContainerHeight;
+const DraftType = fn(7841).DraftType;
+let closure_11 = fn(10074).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const COMMAND_SENTINEL = fn(6156).COMMAND_SENTINEL;
+const COMMAND_SENTINEL = fn(6171).COMMAND_SENTINEL;
 const MessageSendLocation = fn(5146).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputRefs.tsx");
@@ -41,7 +41,7 @@ export default function useChatInputRefs(chatInputProps) {
   const chatInputNative = noop.useRef(null);
   const chatInputSendButton = noop.useRef(null);
   const chatInputTextFlushedResponses = noop.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5735)(() => ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
+  const tmp2 = chatInputTextFieldHeight(5749)(() => ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
   closure_12 = tmp2;
   const propsPrev = noop.useRef(chatInputProps);
   const props = noop.useRef(chatInputProps);
@@ -67,12 +67,12 @@ export default function useChatInputRefs(chatInputProps) {
       closure_1_12.handleRef(null, channel.channel.id);
     };
   }, items2);
-  state = noop.useRef(chatInputTextFieldHeight(5735)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
+  state = noop.useRef(chatInputTextFieldHeight(5749)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
   noop.useRef({ handledHereMention: false, sending: false });
   const items3 = [tmp2];
   const memo = noop.useMemo(() => {
     closure_0 = chatInputTextFieldHeight(chatInputActions[13]).throttle((arg0, arg1) => {
-      chatInputTextFieldHeight(ref[14]).updateTextBlocks(chatInputNativeRef.current, arg0, arg1);
+      chatInputTextFieldHeight(ref[14]).updateTextBlocks(channelOnCooldown.current, arg0, arg1);
     }, 200);
     let obj = chatInputTextFieldHeight(chatInputActions[13]);
     closure_1 = chatInputTextFieldHeight(chatInputActions[13]).throttle((text) => {
@@ -138,10 +138,10 @@ export default function useChatInputRefs(chatInputProps) {
     }, 32);
     let obj4 = {
       backspace() {
-        chatInputTextFieldHeight(ref[14]).backspace(chatInputNativeRef.current);
+        chatInputTextFieldHeight(ref[14]).backspace(channelOnCooldown.current);
       },
       blur() {
-        chatInputTextFieldHeight(ref[14]).blur(chatInputNativeRef.current);
+        chatInputTextFieldHeight(ref[14]).blur(channelOnCooldown.current);
       },
       chatInputTrackerRegister() {
         closure_1_12.register();
@@ -164,7 +164,7 @@ export default function useChatInputRefs(chatInputProps) {
         }
         const obj = chatInputProps(ref[21]);
         if (!tmpResult3.isAndroid()) {
-          chatInputTextFieldHeight(ref[14]).closeCustomKeyboard(chatInputNativeRef.current);
+          chatInputTextFieldHeight(ref[14]).closeCustomKeyboard(channelOnCooldown.current);
           const obj5 = chatInputTextFieldHeight(ref[14]);
         }
         tmpResult3 = chatInputProps(ref[24]);
@@ -182,7 +182,10 @@ export default function useChatInputRefs(chatInputProps) {
         closure_1.flush();
       },
       focus() {
-        chatInputTextFieldHeight(ref[14]).focus(chatInputNativeRef.current);
+        chatInputTextFieldHeight(ref[14]).focus(channelOnCooldown.current);
+      },
+      focusAccessibility(delay) {
+        const result = chatInputProps(ref[27]).setAccessibilityFocus({ ref: channelOnCooldown, delay });
       },
       focusPhotosButton() {
         const current = ref.current;
@@ -254,8 +257,8 @@ export default function useChatInputRefs(chatInputProps) {
               current2.handleCancelEditing();
             }
           } else if (null != current.pendingReply) {
-            chatInputProps(ref[30]).deletePendingReply(channel.id);
-            const obj = chatInputProps(ref[30]);
+            chatInputProps(ref[31]).deletePendingReply(channel.id);
+            const obj = chatInputProps(ref[31]);
           }
         }
       },
@@ -266,7 +269,7 @@ export default function useChatInputRefs(chatInputProps) {
           editingMessage = editingMessage.getEditingMessage(channel.id);
           if (null != editingMessage) {
             const obj2 = { channel, isEdit: true };
-            const handleLegacyCommandsResult = chatInputProps(dependencyMap[31]).handleLegacyCommands(text, obj2);
+            const handleLegacyCommandsResult = chatInputProps(dependencyMap[32]).handleLegacyCommands(text, obj2);
             let content1;
             if (handleLegacyCommandsResult != null) {
               content1 = handleLegacyCommandsResult.content;
@@ -297,28 +300,28 @@ export default function useChatInputRefs(chatInputProps) {
                   const tmp21Result = chatInputProps(dependencyMap[16]);
                 }
               }
-              const obj3 = chatInputTextFieldHeight(dependencyMap[32]);
+              const obj3 = chatInputTextFieldHeight(dependencyMap[33]);
               const parsed = obj3.parse(channel, result, undefined, mentionGames);
               if (parsed.content !== editingMessage.content) {
-                chatInputTextFieldHeight(dependencyMap[29]).editMessage(channel.id, editingMessage.id, parsed);
-                const tmp8Result = chatInputTextFieldHeight(dependencyMap[29]);
+                chatInputTextFieldHeight(dependencyMap[30]).editMessage(channel.id, editingMessage.id, parsed);
+                const tmp8Result = chatInputTextFieldHeight(dependencyMap[30]);
               }
               if (applicationCommandManager != null) {
                 const result1 = applicationCommandManager.clearTimestampMentions();
               }
             }
-            const obj6 = chatInputProps(dependencyMap[31]);
-            chatInputTextFieldHeight(dependencyMap[29]).endEditMessage(channel.id);
+            const obj6 = chatInputProps(dependencyMap[32]);
+            chatInputTextFieldHeight(dependencyMap[30]).endEditMessage(channel.id);
             const current = chatInputRef.current;
             if (current != null) {
               current.showSideActions();
             }
-            const obj5 = chatInputTextFieldHeight(dependencyMap[29]);
+            const obj5 = chatInputTextFieldHeight(dependencyMap[30]);
           }
           obj = editingMessage;
         }
         if (null == text) {
-          text = ChatInputNativeCommandsDefault.getText(chatInputNativeRef.current, ref3.current, handleSaveEditing);
+          text = ChatInputNativeCommandsDefault.getText(channelOnCooldown.current, ref3.current, handleSaveEditing);
         } else {
           handleSaveEditing(text);
         }
@@ -328,7 +331,7 @@ export default function useChatInputRefs(chatInputProps) {
           ref4.current.sending = true;
           threadCreationCallback.cancel();
           if (null != props.current.threadCreationCallback) {
-            const text = chatInputTextFieldHeight(ref[14]).getText(chatInputNativeRef.current, ref3.current, (text) => {
+            const text = chatInputTextFieldHeight(ref[14]).getText(channelOnCooldown.current, ref3.current, (text) => {
               const obj2 = { text, params: null };
               const obj3 = {};
               const merged = Object.assign(ref.current);
@@ -361,11 +364,11 @@ export default function useChatInputRefs(chatInputProps) {
                 const merged = Object.assign(ref.current);
                 obj4.chatInputRef = chatInputRef;
                 obj2.params = obj4;
-                const result = threadCreationCallback(13890).chatInputSendApplicationCommand(obj2);
+                const result = threadCreationCallback(13976).chatInputSendApplicationCommand(obj2);
               });
             }
             if (!sendCommandResult) {
-              const text1 = chatInputTextFieldHeight(ref[14]).getText(chatInputNativeRef.current, ref3.current, (text) => {
+              const text1 = chatInputTextFieldHeight(ref[14]).getText(channelOnCooldown.current, ref3.current, (text) => {
                 if (null != props.current.pendingEdit) {
                   closure_1_1.cancel();
                   const current = chatInputRef.current;
@@ -382,15 +385,15 @@ export default function useChatInputRefs(chatInputProps) {
                   tmp8 = chatInputRef;
                   obj3.chatInputRef = chatInputRef;
                   obj2.params = obj3;
-                  const result = chatInputProps(13890).chatInputHandleSendText(obj2);
-                  const obj = chatInputProps(13890);
+                  const result = chatInputProps(13976).chatInputHandleSendText(obj2);
+                  const obj = chatInputProps(13976);
                 }
-                const keyboardType = chatInputProps(5332).getKeyboardType();
+                const keyboardType = chatInputProps(5333).getKeyboardType();
                 if (keyboardType === chatInputProps(1625).KeyboardTypes.SYSTEM) {
                   const current2 = tmp8.current;
                   current2.focus();
                 }
-                obj4 = chatInputProps(5332);
+                obj4 = chatInputProps(5333);
               });
               let obj = chatInputTextFieldHeight(ref[14]);
             }
@@ -402,7 +405,7 @@ export default function useChatInputRefs(chatInputProps) {
         url = url.url;
         const current = props.current;
         ({ channel, threadCreationCallback } = current);
-        let isChannelOnCooldownResult = chatInputNativeRef.isChannelOnCooldown(channel);
+        let isChannelOnCooldownResult = channelOnCooldown.isChannelOnCooldown(channel);
         if (!isChannelOnCooldownResult) {
           isChannelOnCooldownResult = 0 === url.length;
         }
@@ -410,12 +413,12 @@ export default function useChatInputRefs(chatInputProps) {
           if (null != threadCreationCallback) {
             const result = threadCreationCallback(url);
           } else {
-            const obj2 = chatInputTextFieldHeight(ref[29]);
+            const obj2 = chatInputTextFieldHeight(ref[30]);
             const id = channel.id;
-            const parsed = chatInputTextFieldHeight(ref[32]).parse(channel, url);
+            const parsed = chatInputTextFieldHeight(ref[33]).parse(channel, url);
             obj4 = {};
-            const obj3 = chatInputTextFieldHeight(ref[32]);
-            const merged = Object.assign(chatInputTextFieldHeight(ref[29]).getSendMessageOptionsForReply(current.pendingReply));
+            const obj3 = chatInputTextFieldHeight(ref[33]);
+            const merged = Object.assign(chatInputTextFieldHeight(ref[30]).getSendMessageOptionsForReply(current.pendingReply));
             obj4.location = closure_14.GIF_REPLY;
             scheduledMessage = scheduledMessage.getScheduledMessage(channel.id);
             let scheduledTimestamp;
@@ -424,9 +427,9 @@ export default function useChatInputRefs(chatInputProps) {
             }
             obj4.scheduledTimestamp = scheduledTimestamp;
             obj2.sendMessage(id, parsed, true, obj4);
-            const obj5 = chatInputTextFieldHeight(ref[29]);
-            chatInputProps(ref[30]).deletePendingReply(channel.id);
-            const obj = chatInputProps(ref[30]);
+            const obj5 = chatInputTextFieldHeight(ref[30]);
+            chatInputProps(ref[31]).deletePendingReply(channel.id);
+            const obj = chatInputProps(ref[31]);
           }
           chatInputRef.current.dismissKeyboard();
         }
@@ -537,32 +540,32 @@ export default function useChatInputRefs(chatInputProps) {
       },
       openCustomKeyboard(keyboardParams) {
         ({ channel, secondaryTextFieldRef } = props.current);
-        chatInputTextFieldHeight(ref[35])({ channelId: channel.id, chatInputRef, chatInputNativeRef, keyboardParams, secondaryTextFieldRef });
+        chatInputTextFieldHeight(ref[36])({ channelId: channel.id, chatInputRef, chatInputNativeRef: channelOnCooldown, keyboardParams, secondaryTextFieldRef });
       },
       openSystemKeyboard() {
         const keyboardType = chatInputProps(ref[21]).getKeyboardType();
         let keyboardIsOpen = keyboardType === chatInputProps(ref[22]).KeyboardTypes.SYSTEM;
         if (keyboardIsOpen) {
-          keyboardIsOpen = chatInputProps(ref[36]).getKeyboardIsOpen({ includeCustomKeyboard: false });
-          const tmpResult = chatInputProps(ref[36]);
+          keyboardIsOpen = chatInputProps(ref[37]).getKeyboardIsOpen({ includeCustomKeyboard: false });
+          const tmpResult = chatInputProps(ref[37]);
         }
         if (!keyboardIsOpen) {
           const obj2 = { type: chatInputProps(ref[22]).KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
           chatInputProps(ref[23]).setKeyboardType(obj2);
           const tmpResult2 = chatInputProps(ref[23]);
-          chatInputTextFieldHeight(ref[14]).openSystemKeyboard(chatInputNativeRef.current);
+          chatInputTextFieldHeight(ref[14]).openSystemKeyboard(channelOnCooldown.current);
           const obj5 = chatInputTextFieldHeight(ref[14]);
         }
         const obj = chatInputProps(ref[21]);
       },
       replaceRange(arg0) {
-        chatInputTextFieldHeight(ref[14]).replaceRange(chatInputNativeRef.current, arg0);
+        chatInputTextFieldHeight(ref[14]).replaceRange(channelOnCooldown.current, arg0);
       },
       setSelectedRange(arg0, arg1) {
-        chatInputTextFieldHeight(ref[14]).setSelectedRange(chatInputNativeRef.current, arg0, arg1);
+        chatInputTextFieldHeight(ref[14]).setSelectedRange(channelOnCooldown.current, arg0, arg1);
       },
       setText(arg0) {
-        chatInputTextFieldHeight(ref[14]).setText(chatInputNativeRef.current, arg0);
+        chatInputTextFieldHeight(ref[14]).setText(channelOnCooldown.current, arg0);
       },
       showSideActions() {
         const current = ref.current;

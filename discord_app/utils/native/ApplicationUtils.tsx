@@ -1,15 +1,15 @@
-// === Module 11039: ApplicationUtils ===
+// === Module 11088: ApplicationUtils ===
 
-// Module 11039 (ApplicationUtils)
+// Module 11088 (ApplicationUtils)
 import Constants from "Constants" /* 1072 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 9034 */;
-import Constants2 from "Constants" /* 11040 */;
-import authorizeCallbackDefault from "authorizeCallback" /* 11041 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 9051 */;
+import Constants2 from "Constants" /* 11089 */;
+import authorizeCallbackDefault from "authorizeCallback" /* 11090 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -30,7 +30,7 @@ export function installApplication(arg0) {
           LinkingDefault.openURL(customInstallUrl);
         }
     };
-    return customInstallUrl(9068).handleClick(obj2);
+    return customInstallUrl(9085).handleClick(obj2);
   } else {
     if (null != integrationTypesConfig) {
       const _Object = Object;
@@ -76,8 +76,8 @@ export function installApplication(arg0) {
           }
           ModalActionCreatorsDefault.popWithKey(closure_5);
         };
-        obj9.pushLazy(customInstallUrl(2123)(11035, dependencyMap.paths), obj6, closure_5);
-        const tmp22 = customInstallUrl(2123)(11035, dependencyMap.paths);
+        obj9.pushLazy(customInstallUrl(2123)(11084, dependencyMap.paths), obj6, closure_5);
+        const tmp22 = customInstallUrl(2123)(11084, dependencyMap.paths);
       }
     }
     if (null != installParams) {
@@ -122,8 +122,8 @@ export function installApplication(arg0) {
         }
         ModalActionCreatorsDefault.popWithKey(closure_5);
       };
-      tmp32Result2.pushLazy(customInstallUrl(2123)(11035, dependencyMap.paths), obj12, closure_5);
-      const tmp10 = customInstallUrl(2123)(11035, dependencyMap.paths);
+      tmp32Result2.pushLazy(customInstallUrl(2123)(11084, dependencyMap.paths), obj12, closure_5);
+      const tmp10 = customInstallUrl(2123)(11084, dependencyMap.paths);
     }
   }
 }
@@ -140,7 +140,7 @@ export function openOAuth2Modal(arg0) {
     }
     ModalActionCreatorsDefault.popWithKey(closure_5);
   };
-  obj2.pushLazy(require("asyncRequireImpl")(11035, dependencyMap.paths), obj3, closure_5);
+  obj2.pushLazy(require("asyncRequireImpl")(11084, dependencyMap.paths), obj3, closure_5);
 }
 export function installPrivateChannelIntegration(arg0) {
   ({ applicationId, channelId, callback } = arg0);
@@ -153,5 +153,5 @@ export function installPrivateChannelIntegration(arg0) {
     return ModalActionCreatorsDefault.popWithKey(closure_1_5);
   };
   obj2.callback = callback;
-  obj.pushLazy(asyncRequireImpl(11035, dependencyMap.paths), obj2, closure_5);
+  obj.pushLazy(asyncRequireImpl(11084, dependencyMap.paths), obj2, closure_5);
 }

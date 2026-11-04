@@ -1,12 +1,12 @@
-// === Module 18999: useUserRowWithSubLabelHeight ===
+// === Module 19102: useUserRowWithSubLabelHeight ===
 
-// Module 18999 (useUserRowWithSubLabelHeight)
+// Module 19102 (useUserRowWithSubLabelHeight)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5719 */;
-import useFontScale from "useFontScale" /* 5762 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12547 */;
-import ActionStatusSubLabel from "ActionStatusSubLabel" /* 18668 */;
+import useToken from "useToken" /* 5732 */;
+import useFontScale from "useFontScale" /* 5776 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12628 */;
+import ActionStatusSubLabel from "ActionStatusSubLabel" /* 18769 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useUserRowWithSubLabelHeight.tsx");
@@ -21,7 +21,7 @@ export function useUserRowWithSubLabelHeight(arg0) {
   }
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
   const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
-  const scaledTextLineHeight = useScaledTextLineHeight.useScaledTextLineHeight("text-md/semibold");
+  const scaledTextLineHeight = useScaledTextLineHeight.useScaledTextLineHeight("body-md/semibold");
   const fontScale = useFontScale.useFontScale();
   return roundToNearestPixelDefault(Math.max(token, 2 * token1 + scaledTextLineHeight + num * (ActionStatusSubLabel.ACTION_STATUS_SUB_LABEL_LINE_HEIGHT * fontScale)));
 }

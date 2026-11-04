@@ -1,15 +1,15 @@
-// === Module 12101: VideoBackgroundOptions ===
+// === Module 12160: VideoBackgroundOptions ===
 
-// Module 12101 (VideoBackgroundOptions)
+// Module 12160 (VideoBackgroundOptions)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 6053 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 6068 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const BLUR_BACKGROUND_OPTION = fn(6047).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(6062).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
 const createStyles = fn(5141);

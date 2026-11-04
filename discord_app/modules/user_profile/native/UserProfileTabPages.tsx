@@ -1,10 +1,9 @@
-// === Module 15146: UserProfileTabPages ===
+// === Module 15226: UserProfileTabPages ===
 
-// Module 15146 (UserProfileTabPages)
+// Module 15226 (UserProfileTabPages)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5397 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTabPages.tsx");
 
 export default noop.memo(function UserProfileTabPages(arg0) {
-  ({ state, pageHeights, scrollPosition, scrollViewRef, parentPagerGesture } = arg0);
+  ({ state, pageHeights, scrollPosition, scrollViewRef } = arg0);
   _require = scrollPosition;
   c3 = undefined;
   noop = undefined;
@@ -65,9 +64,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   const sharedValue2 = require("module_1652").useSharedValue(false);
   const obj4 = require("module_1652");
   const useReducedMotion = state.useReducedMotion;
-  closure_129_0 = scrollViewRef;
-  closure_129_1 = sharedValue1;
-  closure_129_2 = useReducedMotion;
+  _require = scrollViewRef;
   const items1 = [scrollViewRef, sharedValue1, useReducedMotion];
   const sharedValue3 = require("module_1652").useSharedValue(-1);
   const callback1 = noop.useCallback((arg0, arg1) => {
@@ -182,11 +179,11 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   const animatedReaction = require("module_1652").useAnimatedReaction(UserProfileTabPagesTsx1, UserProfileTabPagesTsx2);
   const obj6 = require("module_1652");
   const items6 = [closure_9, pageHeights, visiblePageRange, tmp4, scrollPosition, sharedValue1];
-  closure_130_0 = undefined;
-  closure_130_1 = undefined;
-  closure_130_2 = undefined;
-  closure_130_3 = undefined;
-  closure_130_4 = undefined;
+  closure_129_0 = undefined;
+  closure_129_1 = undefined;
+  closure_129_2 = undefined;
+  closure_129_3 = undefined;
+  closure_129_4 = undefined;
   [tmp26, tmp27, tmp28, tmp29, tmp30, tmp31] = items6;
   class UserProfileTabPagesTsx3 {
     constructor() {
@@ -322,19 +319,9 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   UserProfileTabPagesTsx7.__initData = tmp44;
   const items17 = [sharedValue2];
   const callback2 = obj.useCallback(UserProfileTabPagesTsx6, items14);
-  const items18 = [parentPagerGesture];
   const callback3 = obj.useCallback(UserProfileTabPagesTsx7, items17);
-  const memo = obj.useMemo(() => {
-    let result;
-    if (null != c0) {
-      const Gesture = LegacyBaseButton.Gesture;
-      result = Gesture.Native().blocksExternalGesture(tmp);
-      const NativeResult = Gesture.Native();
-    }
-    return result;
-  }, items18);
   const tmp7Result2 = require("module_1652");
-  return jsx(_modDef1652.View, { ref, onLayout: callback, style: animatedStyle, children: jsx(require("SegmentedControlPages").SegmentedControlPages, { state, nativeGesture: memo, onBeginDragWorklet: callback2, onEndDragWorklet: callback3 }) });
+  return jsx(_modDef1652.View, { ref, onLayout: callback, style: animatedStyle, children: jsx(require("SegmentedControlPages").SegmentedControlPages, { state, onBeginDragWorklet: callback2, onEndDragWorklet: callback3 }) });
 });
 export function useMeasuredTabItems(memo) {
   _require = memo;

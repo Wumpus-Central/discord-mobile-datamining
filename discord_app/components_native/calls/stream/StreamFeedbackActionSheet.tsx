@@ -1,20 +1,20 @@
-// === Module 19618: StreamFeedbackActionSheet ===
+// === Module 19723: StreamFeedbackActionSheet ===
 
-// Module 19618 (StreamFeedbackActionSheet)
+// Module 19723 (StreamFeedbackActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import FeedbackUtils from "FeedbackUtils" /* 10291 */;
-import trackStreamProblemDefault from "trackStreamProblem" /* 19504 */;
-import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 19620 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import FeedbackUtils from "FeedbackUtils" /* 10339 */;
+import trackStreamProblemDefault from "trackStreamProblem" /* 19608 */;
+import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 19725 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Constants = fn(10288);
-({ FeedbackCategory: hasOwnProperty, FeedbackType: metroRequire, StreamFeedbackOption: closure_7 } = Constants);
+const Constants = fn(10336);
+({ FeedbackCategory: hasOwnProperty, FeedbackType: closure_6, StreamFeedbackOption: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/calls/stream/StreamFeedbackActionSheet.tsx");
@@ -22,8 +22,8 @@ const result = size.fileFinishedImporting("components_native/calls/stream/Stream
 export default function StreamFeedbackActionSheet(stream) {
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
-  dependencyMap = stream(8006).useGetStreamApplication(stream);
-  let obj = stream(8006);
+  dependencyMap = stream(8022).useGetStreamApplication(stream);
+  let obj = stream(8022);
   items = [AuthenticationStore];
   const stateFromStores = stream(504).useStateFromStores(items, () => AuthenticationStore.getId() === stream.ownerId);
   const intl = stream(1113).intl;
@@ -46,13 +46,13 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl5 = tmp(1113).intl;
   obj3.problemsHeader = intl5.string(stream(1113).t["6Y1t5P"]);
   const stringResult1 = intl2.string(stream(1113).t["0uxA2V"]);
-  obj3.problemOptions = stream(10291).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  obj3.problemOptions = stream(10339).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   let obj4 = { value: constants2.FREEFORM, label: null };
   const intl6 = tmp(1113).intl;
   obj4.label = intl6.string(stream(1113).t.emlT91);
   obj3.freeformConfig = obj4;
   let obj5 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
-  const tmpResult = stream(10291);
+  const tmpResult = stream(10339);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
@@ -116,7 +116,7 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19621, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19726, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
           const obj7 = { mediaSessionId: null, rtcConnectionId: null };
           const tmp22Result = ActionSheetActionCreatorsDefault;
         }
@@ -125,5 +125,5 @@ export default function StreamFeedbackActionSheet(stream) {
       ToastUtils.presentFeedbackSent();
     }
   };
-  return jsx(tmp10(19619), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
+  return jsx(tmp10(19724), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
 };

@@ -1,30 +1,30 @@
-// === Module 10283: ExecutedApplicationCommandPopout ===
+// === Module 10331: ExecutedApplicationCommandPopout ===
 
-// Module 10283 (ExecutedApplicationCommandPopout)
+// Module 10331 (ExecutedApplicationCommandPopout)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1414 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import Server from "Server" /* 2121 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8825 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8874 */;
-import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 10284 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5817 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8842 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
+import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 10332 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import MessageStore from "MessageStore" /* 6181 */;
+import MessageStore from "MessageStore" /* 6196 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9894 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9912 */;
 
 require = fn;
 function getCommandOptionComponents(option) {
@@ -70,7 +70,7 @@ function getCommandOptionComponents(option) {
           return closure_1_23(user(1187).LegacyText, obj, "optionValue-" + user.name);
         }
         function getCommandValueText(intl) {
-          return closure_2_22(Text_Text.Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: intl }, "optionValue-" + iter.name);
+          return closure_2_22(Text_Text.Text, { variant: "body-sm/medium", color: "mobile-text-heading-primary", children: intl }, "optionValue-" + iter.name);
         }
         const type = iter.type;
         if (tmp6(2121).ApplicationCommandOptionType.USER === type) {
@@ -84,11 +84,11 @@ function getCommandOptionComponents(option) {
           userComponent = null;
           if (null != channel1) {
             let obj = { style: styles.commandOptionMentionText, children: null };
-            const items1 = [closure_19, tmp6(5772).computeChannelName(channel1, UserStore, RelationshipStore)];
+            const items1 = [closure_19, tmp6(5786).computeChannelName(channel1, UserStore, RelationshipStore)];
             obj.children = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = closure_23(tmp6(1187).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(5772);
+            const tmp6Result = tmp6(5786);
           }
         } else {
           function getRoleComponent(role) {
@@ -356,7 +356,7 @@ function CommandContentContainer(channelId) {
       if (closure_14) {
         tmp2 = processColorStringsArray;
       }
-      const obj = { variant: "text-md/semibold", gradientColors: tmp2, style: null, children: null };
+      const obj = { variant: "body-md/semibold", gradientColors: tmp2, style: null, children: null };
       let color = author.colorString;
       if (color == null) {
         color = styles.commandText.color;
@@ -379,14 +379,14 @@ function CommandContentContainer(channelId) {
       } else {
         children = name_localized;
       }
-      return closure_2_22(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children }, "command");
+      return closure_2_22(Text_Text.Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children }, "command");
     },
     applicationHook() {
       const obj = { style: styles.application, children: null };
       const obj2 = { style: styles.applicationIcon, source: null };
       const tmp = FastImageDefault;
       obj2.source = utils_AvatarUtils.ensureAvatarSource(avatarSource.getAvatarSource(guildId));
-      items = [closure_2_22(tmp, obj2, "icon-" + avatarSource.id), closure_2_22(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: avatarSource.username })];
+      items = [closure_2_22(tmp, obj2, "icon-" + avatarSource.id), closure_2_22(Text_Text.Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: avatarSource.username })];
       obj.children = items;
       return dependencyMap2(timestampProducer, obj, "application");
     }
@@ -428,7 +428,7 @@ function CommandContentContainer(channelId) {
       if (closure_14) {
         tmp2 = processColorStringsArray;
       }
-      const obj = { variant: "text-md/semibold", gradientColors: tmp2, style: null, children: null };
+      const obj = { variant: "body-md/semibold", gradientColors: tmp2, style: null, children: null };
       let color = author.colorString;
       if (color == null) {
         color = styles.commandText.color;
@@ -451,26 +451,26 @@ function CommandContentContainer(channelId) {
       } else {
         children = name_localized;
       }
-      return closure_2_22(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children }, "command");
+      return closure_2_22(Text_Text.Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children }, "command");
     },
     applicationHook() {
       const obj = { style: styles.application, children: null };
       const obj2 = { style: styles.applicationIcon, source: null };
       const tmp = FastImageDefault;
       obj2.source = utils_AvatarUtils.ensureAvatarSource(avatarSource.getAvatarSource(guildId));
-      items = [closure_2_22(tmp, obj2, "icon-" + avatarSource.id), closure_2_22(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: avatarSource.username })];
+      items = [closure_2_22(tmp, obj2, "icon-" + avatarSource.id), closure_2_22(Text_Text.Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: avatarSource.username })];
       obj.children = items;
       return dependencyMap2(timestampProducer, obj, "application");
     }
   }), (children, arg1) => {
     let tmp = children;
     if (typeof children === "string") {
-      const obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children };
+      const obj = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children };
       tmp = closure_1_22(channelId(data[22]).Text, obj, arg1);
     }
     return tmp;
   });
-  const items4 = [closure_22(messageId, obj5, "commandName-" + data.name), closure_22(channelId(data[22]).Text, { style: tmp.commandOptionText, variant: "text-md/medium", color: "text-default", children: memo }, "commandOption-" + data.name)];
+  const items4 = [closure_22(messageId, obj5, "commandName-" + data.name), closure_22(channelId(data[22]).Text, { style: tmp.commandOptionText, variant: "body-md/medium", color: "text-default", children: memo }, "commandOption-" + data.name)];
   obj4.children = items4;
   return closure_23(channelId(data[32]).Card, obj4);
 }
@@ -607,7 +607,7 @@ function CommandActionsContainer(channelId) {
   let tmp9 = null;
   if (0 !== items3.length) {
     const obj4 = { spacing: 8, children: null };
-    let obj5 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
+    let obj5 = { variant: "body-sm/semibold", color: "text-subtle", children: null };
     const intl3 = tmp2(tmp3[24]).intl;
     obj5.children = intl3.string(tmp2(tmp3[24]).t["3eF5/L"]);
     const items4 = [closure_22(tmp2(tmp3[22]).Text, obj5), ];
@@ -619,12 +619,12 @@ function CommandActionsContainer(channelId) {
   return tmp9;
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SUB_COMMAND_KEY_SEPARATOR = fn(6155).SUB_COMMAND_KEY_SEPARATOR;
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const SUB_COMMAND_KEY_SEPARATOR = fn(6170).SUB_COMMAND_KEY_SEPARATOR;
 const Constants = fn(1072);
 ({ MessageTypes: closure_16, WHITESPACE_RE: closure_17 } = Constants);
 const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
-const ChannelAutocompleteConstants = fn(6156);
+const ChannelAutocompleteConstants = fn(6171);
 ({ CHANNEL_SENTINEL: closure_19, COMMAND_SENTINEL: closure_20, MENTION_SENTINEL: closure_21 } = ChannelAutocompleteConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
@@ -681,7 +681,7 @@ export default function ExecutedCommandPopout(channelId) {
       const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
     }
   }, items1);
-  const obj2 = { value: messageId(7446)(messageId(7471).EXECUTED_COMMAND).analyticsLocations, children: null };
+  const obj2 = { value: messageId(7462)(messageId(7487).EXECUTED_COMMAND).analyticsLocations, children: null };
   const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -711,6 +711,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = closure_22(closure_5, obj7);
   }
   obj3.children = tmp9Result;
-  obj2.children = closure_22(channelId(5395).BottomSheet, obj3);
-  return closure_22(channelId(7446).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_22(channelId(5396).BottomSheet, obj3);
+  return closure_22(channelId(7462).AnalyticsLocationProvider, obj2);
 };

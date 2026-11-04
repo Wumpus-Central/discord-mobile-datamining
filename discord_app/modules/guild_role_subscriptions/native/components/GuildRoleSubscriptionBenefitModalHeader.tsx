@@ -1,20 +1,20 @@
-// === Module 20124: GuildRoleSubscriptionBenefitModalHeader ===
+// === Module 20240: GuildRoleSubscriptionBenefitModalHeader ===
 
-// Module 20124 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 20240 (GuildRoleSubscriptionBenefitModalHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9237 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17359 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9254 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17450 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { headerContainer: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", paddingBottom: 8, paddingHorizontal: 16 }, headerButtonContainer: { flexDirection: "row", alignSelf: "center", minWidth: 60 }, headerButtonStart: { alignItems: "flex-start" }, headerButtonEnd: { alignItems: "flex-end" }, titleContainer: { flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -31,7 +31,7 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   ({ headerButtonContainer: arr[0], headerButtonStart: arr[1] } = tmp);
   obj3.style = items;
   const obj = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const obj4 = { variant: "text-md/medium", color: "interactive-text-active", children: null };
+  const obj4 = { variant: "body-md/medium", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["ETE/oC"]);
   obj3.children = timestampProducer(Text_Text.Text, obj4);
@@ -46,11 +46,11 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   if (canSave) {
     str = "interactive-text-active";
   }
-  const obj7 = { variant: "text-md/medium", color: str, children: null };
+  const obj7 = { variant: "body-md/medium", color: str, children: null };
   const intl2 = util.intl;
   obj7.children = intl2.string(util.t["R3BPH+"]);
   obj6.children = timestampProducer(Text_Text.Text, obj7);
   items1[2] = timestampProducer(TouchableHitBoxDefault, obj6);
   obj2.children = items1;
-  return React5(common_SafeAreaView.SafeAreaPaddingView, obj2);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, obj2);
 };

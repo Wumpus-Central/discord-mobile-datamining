@@ -1,13 +1,13 @@
-// === Module 11731: OfficialConnectionIcon ===
+// === Module 11786: OfficialConnectionIcon ===
 
-// Module 11731 (OfficialConnectionIcon)
+// Module 11786 (OfficialConnectionIcon)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import native from "native" /* 1187 */;
-import useRoleIconProps from "useRoleIconProps" /* 7475 */;
-import RoleIconDefault from "RoleIcon" /* 7494 */;
-import _modDef11732 from "module_11732" /* 11732 */;
-import _modDef11733 from "module_11733" /* 11733 */;
+import useRoleIconProps from "useRoleIconProps" /* 7491 */;
+import RoleIconDefault from "RoleIcon" /* 7510 */;
+import _modDef11787 from "module_11787" /* 11787 */;
+import _modDef11788 from "module_11788" /* 11788 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_4, EMPTY_STRING_SNOWFLAKE_ID: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ verifiedCheck: { position: "absolute", left: 0, top: 0 } });
 const size = fn(2);
@@ -70,14 +70,14 @@ export default function OfficialConnectionIcon(arg0) {
   const obj5 = { style: null, children: null };
   const items1 = [style, size1];
   obj5.style = items1;
-  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11732, color: roleColor };
+  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11787, color: roleColor };
   const items2 = [tmp.verifiedCheck, size1];
   obj6.style = items2;
   const items3 = [timestampProducer(native.Icon, obj6), ];
-  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11733, color: PRIMARY_630 };
+  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11788, color: PRIMARY_630 };
   const items4 = [tmp.verifiedCheck, size1];
   obj7.style = items4;
   items3[1] = timestampProducer(native.Icon, obj7);
   obj5.children = items3;
-  return React5(View, obj5);
+  return metroImportDefault(View, obj5);
 };

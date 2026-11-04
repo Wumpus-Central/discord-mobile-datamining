@@ -1,16 +1,16 @@
-// === Module 18230: MessageRequestsButton ===
+// === Module 18327: MessageRequestsButton ===
 
-// Module 18230 (MessageRequestsButton)
+// Module 18327 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import IconButton from "IconButton" /* 8152 */;
-import _modDef9316 from "module_9316" /* 9316 */;
-import IconActionButton from "IconActionButton" /* 14686 */;
-import _mod18231 from "module_18231" /* 18231 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import IconButton from "IconButton" /* 8168 */;
+import _modDef9333 from "module_9333" /* 9333 */;
+import IconActionButton from "IconActionButton" /* 14766 */;
+import _mod18328 from "module_18328" /* 18328 */;
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 6976 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6977 */;
+import MessageRequestStore from "MessageRequestStore" /* 6991 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6992 */;
 
 const IconActionButtonDefault = IconActionButton;
 
@@ -32,11 +32,11 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod18231.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return metroImportDefault(_mod18328.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 const size = fn(2);
@@ -64,25 +64,25 @@ export default function MessageRequestsButton(alternateVariant) {
     }
     const obj3 = { style: tmp2.buttonContainer, collapsable: false, children: null };
     if (null != str1) {
-      const obj4 = { icon: React5(MessageRequestAnimation, {}), variant: "secondary", text: str1, size: "sm", accessibilityLabel: null };
+      const obj4 = { icon: metroImportDefault(MessageRequestAnimation, {}), variant: "secondary", text: str1, size: "sm", accessibilityLabel: null };
       const intl3 = util.intl;
       obj4.accessibilityLabel = intl3.string(util.t.e7GWjQ);
       const merged1 = Object.assign(merged);
-      let tmp21 = React5(components_Button_Button.Button, obj4);
-      let tmp16 = React5;
+      let tmp21 = metroImportDefault(components_Button_Button.Button, obj4);
+      let tmp16 = metroImportDefault;
     } else {
-      tmp16 = React5;
-      const obj5 = { variant: "secondary", size: "sm", icon: React5(MessageRequestAnimation, {}), accessibilityLabel: null };
+      tmp16 = metroImportDefault;
+      const obj5 = { variant: "secondary", size: "sm", icon: metroImportDefault(MessageRequestAnimation, {}), accessibilityLabel: null };
       const intl2 = util.intl;
       obj5.accessibilityLabel = intl2.string(util.t.e7GWjQ);
       const merged2 = Object.assign(merged);
-      tmp21 = React5(IconButton.IconButton, obj5);
+      tmp21 = metroImportDefault(IconButton.IconButton, obj5);
     }
     const items2 = [tmp21, str > 0 && tmp16(IconActionButton.ButtonBadge, { badgePosition: "right" })];
     obj3.children = items2;
-    return React6(View, obj3);
+    return React5(View, obj3);
   } else {
-    const obj6 = { source: _modDef9316, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj6 = { source: _modDef9333, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
     const intl = util.intl;
     obj6.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str2;
@@ -92,7 +92,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj6.buttonText = str2;
     obj6.badge = str > 0;
     const merged3 = Object.assign(merged);
-    return React5(IconActionButtonDefault, obj6);
+    return metroImportDefault(IconActionButtonDefault, obj6);
   }
   obj2 = initialize;
 };

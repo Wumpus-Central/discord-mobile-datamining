@@ -1,10 +1,10 @@
-// === Module 11529: InfoBox ===
+// === Module 11579: InfoBox ===
 
-// Module 11529 (InfoBox)
+// Module 11579 (InfoBox)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7227 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { infoBox: { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 }, infoBoxWarning: null, infoText: null };
-const obj3 = { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 };
-obj2.infoBoxWarning = { borderColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
+let obj2 = { infoBox: { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO, flexDirection: "row", alignItems: "center", gap: 8 }, infoBoxWarning: null, infoText: null };
+const obj3 = { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO, flexDirection: "row", alignItems: "center", gap: 8 };
+obj2.infoBoxWarning = { borderColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING };
 obj2.infoText = { flex: 1 };
 let closure_6 = createStyles.createStyles(obj2);
 let obj5 = { INFO: "info", WARNING: "warning" };
@@ -39,7 +39,7 @@ export default function InfoBox(look) {
   const items2 = [style, ...{ [closure_1_7.INFO]: items, [closure_1_7.WARNING]: items1 }[INFO]];
   obj4.style = items2;
   const items3 = [obj[INFO], ];
-  obj5 = { style: tmp2.infoText, variant: "text-sm/semibold", children };
+  obj5 = { style: tmp2.infoText, variant: "body-sm/semibold", children };
   items3[1] = React4(Text_Text.Text, obj5);
   obj4.children = items3;
   return hasOwnProperty(View, obj4);

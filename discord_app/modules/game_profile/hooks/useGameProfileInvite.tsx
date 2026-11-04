@@ -1,13 +1,13 @@
-// === Module 9499: useGameProfileInvite ===
+// === Module 9517: useGameProfileInvite ===
 
-// Module 9499 (useGameProfileInvite)
+// Module 9517 (useGameProfileInvite)
 import DurationsDefault from "Durations" /* 1089 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9074 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2143 */;
 import GuildMembershipStore from "GuildMembershipStore" /* 4992 */;
-import InviteStore from "InviteStore" /* 5869 */;
+import InviteStore from "InviteStore" /* 5883 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ function isUsableGameProfileInvite(state) {
   return tmp;
 }
 const Constants = fn(1072);
-({ InviteStates: closure_7, QueryIds } = Constants);
+({ InviteStates: metroImportDefault, QueryIds } = Constants);
 const initialize = fn(504);
 const obj2 = {
   getQueryId: QueryIds.GAME_PROFILE_INVITE,

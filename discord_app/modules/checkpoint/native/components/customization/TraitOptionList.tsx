@@ -1,14 +1,14 @@
-// === Module 13823: TraitOptionList ===
+// === Module 13909: TraitOptionList ===
 
-// Module 13823 (TraitOptionList)
+// Module 13909 (TraitOptionList)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import useInitialValueDefault from "useInitialValue" /* 5735 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6554 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
-import TraitOptionItem from "TraitOptionItem" /* 13824 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import useInitialValueDefault from "useInitialValue" /* 5749 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6569 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
+import TraitOptionItem from "TraitOptionItem" /* 13910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -24,11 +24,11 @@ function SelectedWindow(size) {
   const size1 = { width, height, style: closure_12().selectorOverlay, pointerEvents: "none", children: null };
   const tmp = closure_12();
   const tmp2 = inlineStylesDefault;
-  size1.children = React6(inlineStyles.Polygon, { points: TraitOptionItem.TRAIT_OPTION_SIZE_TO_SHAPE_POINTS[size], fill: "transparent", stroke: CHECKPOINT_PRIMARY, strokeWidth: CheckpointCustomizationUtils.TRAIT_OPTION_STROKE_WIDTH });
-  return React6(tmp2, size1);
+  size1.children = React5(inlineStyles.Polygon, { points: TraitOptionItem.TRAIT_OPTION_SIZE_TO_SHAPE_POINTS[size], fill: "transparent", stroke: CHECKPOINT_PRIMARY, strokeWidth: CheckpointCustomizationUtils.TRAIT_OPTION_STROKE_WIDTH });
+  return React5(tmp2, size1);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
@@ -77,7 +77,7 @@ export default function TraitOptionList(size) {
   }
   const tmp8Result = useInitialValueDefault(bound);
   [tmp11, c13] = disabled(noop.useState(useWindowDimensionsDefault().width), 2);
-  const width = tmp2(13824).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const width = tmp2(13910).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + animatedRef;
   c14 = sum;
   const bound1 = Math.max(ref, tmp11 - ref - width);
@@ -154,7 +154,7 @@ export default function TraitOptionList(size) {
         TraitOptionListTsx3.__closure = items1;
         TraitOptionListTsx3.__workletHash = 14744162111459;
         TraitOptionListTsx3.__initData = tmp2;
-        return obj.withDelay(250, c0(5377).withTiming(diff, obj3, "respect-motion-settings", TraitOptionListTsx3));
+        return obj.withDelay(250, c0(5378).withTiming(diff, obj3, "respect-motion-settings", TraitOptionListTsx3));
       }), 0);
       const result = sharedValue.set(HermesBuiltin.apply(items, tmp7));
       return () => c0(1652).cancelAnimation(sharedValue);
@@ -198,8 +198,8 @@ export default function TraitOptionList(size) {
           if (null != tmp6) {
             if (tmp6.optionId !== c2) {
               onSelectOption(tmp6.trait, tmp6.optionId);
-              const result = x(5383).triggerHapticFeedback(x(5383).HapticFeedbackTypes.IMPACT_LIGHT);
-              const obj = x(5383);
+              const result = x(5384).triggerHapticFeedback(x(5384).HapticFeedbackTypes.IMPACT_LIGHT);
+              const obj = x(5384);
             }
           }
         }
@@ -264,8 +264,8 @@ export default function TraitOptionList(size) {
       closure_11.current = false;
       if (traitOption.optionId !== c2) {
         onSelectOption(traitOption.trait, traitOption.optionId);
-        const result = traitOption(5383).triggerHapticFeedback(traitOption(5383).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj2 = traitOption(5383);
+        const result = traitOption(5384).triggerHapticFeedback(traitOption(5384).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj2 = traitOption(5384);
       }
       if (!isScreenReaderEnabled) {
         const current = animatedRef.current;

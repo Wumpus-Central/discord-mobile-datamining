@@ -1,15 +1,15 @@
-// === Module 12872: useConjurePlanBotPreviewItems ===
+// === Module 12953: useConjurePlanBotPreviewItems ===
 
-// Module 12872 (useConjurePlanBotPreviewItems)
+// Module 12953 (useConjurePlanBotPreviewItems)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import UserActionCreators from "UserActionCreators" /* 8876 */;
-import conjurePlanBot from "conjurePlanBot" /* 12873 */;
+import UserActionCreators from "UserActionCreators" /* 8893 */;
+import conjurePlanBot from "conjurePlanBot" /* 12954 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import UserRecord from "UserRecord" /* 1399 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 const require = globalThis.__r;
 
@@ -201,26 +201,26 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                 ({ interactionName, messageType } = obj);
                 const StringResult = String(items.length + 1);
                 const obj3 = { channelId: id.id, content: bot, author: bot2, type: null };
-                const obj2 = projectId(6183);
+                const obj2 = projectId(6198);
                 if (messageType == null) {
                   messageType = constants2.DEFAULT;
                 }
                 const obj4 = {};
                 obj3.type = messageType;
-                const merged = Object.assign(exchanges(10449)(obj3));
+                const merged = Object.assign(exchanges(10497)(obj3));
                 obj4.id = StringResult;
                 obj4.state = constants.SENT;
                 if (null != interactionName) {
                   const obj5 = { interaction: null };
-                  obj6 = { id: StringResult, name: interactionName, type: projectId(6190).InteractionTypes.APPLICATION_COMMAND, user: projectId(10449).userRecordToServer(currentUser) };
+                  obj6 = { id: StringResult, name: interactionName, type: projectId(6205).InteractionTypes.APPLICATION_COMMAND, user: projectId(10497).userRecordToServer(currentUser) };
                   obj5.interaction = obj6;
                   let obj7 = obj5;
-                  const tmp2Result = projectId(10449);
+                  const tmp2Result = projectId(10497);
                 } else {
                   obj7 = {};
                 }
                 const merged1 = Object.assign(obj7);
-                const tmp4 = exchanges(10449);
+                const tmp4 = exchanges(10497);
                 items.push({ key: StringResult, record: obj2.createMessageRecord(obj4), isCommandReply: null != interactionName, menu: obj.menu });
                 const obj8 = { key: StringResult, record: obj2.createMessageRecord(obj4), isCommandReply: null != interactionName, menu: obj.menu };
               }

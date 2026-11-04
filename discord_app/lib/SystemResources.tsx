@@ -1,9 +1,9 @@
-// === Module 6022: SystemResources ===
+// === Module 6037: SystemResources ===
 
-// Module 6022 (SystemResources)
+// Module 6037 (SystemResources)
 import ProcessUtilsDefault from "ProcessUtils" /* 1371 */;
-import Histogram from "Histogram" /* 6014 */;
-import DeviceState from "DeviceState" /* 6023 */;
+import Histogram from "Histogram" /* 6029 */;
+import DeviceState from "DeviceState" /* 6038 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

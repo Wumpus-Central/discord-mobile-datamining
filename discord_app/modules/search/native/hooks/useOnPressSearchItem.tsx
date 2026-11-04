@@ -1,20 +1,20 @@
-// === Module 18865: useOnPressSearchItem ===
+// === Module 18968: useOnPressSearchItem ===
 
-// Module 18865 (useOnPressSearchItem)
+// Module 18968 (useOnPressSearchItem)
 import util from "util" /* 1113 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7609 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 9068 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14017 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14042 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 9085 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14103 */;
+import TrackingDefault from "Tracking" /* 14124 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14128 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7894 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7910 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import SearchQueryStore from "SearchQueryStore" /* 14031 */;
+import SearchQueryStore from "SearchQueryStore" /* 14117 */;
 
 const require = globalThis.__r;
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -93,10 +93,10 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: closure_10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18866).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(18969).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9975).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
 const StaticChannelRoute = fn(4997).StaticChannelRoute;
@@ -546,11 +546,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(14017).delayUntilNavigationComplete(() => {
+      const result = searchContext(14103).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(14017);
+      let obj2 = searchContext(14103);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {
@@ -563,7 +563,7 @@ export function useOnPressSearchHistoryText(searchContext) {
       const item = tags.forEach((type) => {
         if (type.type === constants2.COMPLETE) {
           const obj2 = { searchContext, searchTokenType: type.searchTokenType, location: constants3.SEARCH_HISTORY };
-          search_tracking_TrackingDefault.trackSearchFilterAdd(obj2);
+          TrackingDefault.trackSearchFilterAdd(obj2);
         }
       });
     }

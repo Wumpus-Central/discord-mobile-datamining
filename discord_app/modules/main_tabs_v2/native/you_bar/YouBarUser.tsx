@@ -1,8 +1,8 @@
-// === Module 18613: YouBarUser ===
+// === Module 18714: YouBarUser ===
 
-// Module 18613 (YouBarUser)
+// Module 18714 (YouBarUser)
 import nativeDefault from "native" /* 575 */;
-import spring_spring from "spring/spring" /* 5757 */;
+import spring_spring from "spring/spring" /* 5771 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -10,8 +10,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17218);
-({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
+const YouBarConstants = fn(17310);
+({ YOU_BAR_SPRING_CONFIG: closure_6, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: metroImportDefault, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -36,7 +36,7 @@ export default noop.memo(function YouBarUser(isCondensed) {
   const sharedValue = require("module_1652").useSharedValue(isCondensed ? closure_8 : closure_7);
   const items1 = [!isCondensed, sharedValue];
   const effect = noop.useEffect(() => {
-    const result = sharedValue.set(spring_spring.withSpring(c0 ? React5 : React6, timestampProducer));
+    const result = sharedValue.set(spring_spring.withSpring(c0 ? metroImportDefault : React5, timestampProducer));
   }, items1);
   const obj2 = require("module_1652");
   const items2 = [closure_12, sharedValue];
@@ -59,19 +59,19 @@ export default noop.memo(function YouBarUser(isCondensed) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isCondensed.onAvatarPress };
-      const items4 = [closure_9(tmp11(18615), obj5), ];
+      const items4 = [closure_9(tmp11(18716), obj5), ];
       const obj6 = { style: null, children: null };
       const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items5;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp11(18616), obj7);
+      obj6.children = closure_9(tmp11(18717), obj7);
       items4[1] = closure_9(tmp11(1652).View, obj6);
       obj3.children = items4;
     }
     return tmp13(View, obj3);
   }
   const obj8 = { style: tmp.youButton, children: null };
-  const items6 = [closure_9(sharedValue(18614), { isLarge: !isCondensed }), ];
+  const items6 = [closure_9(sharedValue(18715), { isLarge: !isCondensed }), ];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items7 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items7;

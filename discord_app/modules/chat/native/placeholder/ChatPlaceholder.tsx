@@ -1,14 +1,14 @@
-// === Module 14345: ChatPlaceholder ===
+// === Module 14425: ChatPlaceholder ===
 
-// Module 14345 (ChatPlaceholder)
+// Module 14425 (ChatPlaceholder)
 import nativeDefault from "native" /* 575 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 14347 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 14348 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 14427 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 14428 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-let closure_3 = fn(10026).useChatInputContainerHeight;
+let closure_3 = fn(10074).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { placeholder: null };

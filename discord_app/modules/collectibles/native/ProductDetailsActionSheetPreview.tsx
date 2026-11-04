@@ -1,47 +1,42 @@
-// === Module 15171: ProductDetailsActionSheetPreview ===
+// === Module 15251: ProductDetailsActionSheetPreview ===
 
-// Module 15171 (ProductDetailsActionSheetPreview)
+// Module 15251 (ProductDetailsActionSheetPreview)
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
-import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 15172 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 15174 */;
-import _slicedToArray from "module_32" /* 32 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9531 */;
+import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 15252 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 15254 */;
+import createStyles from "createStyles" /* 5141 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const noop = fn(19);
-({ useCallback: closure_4, useState: hasOwnProperty } = noop);
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(5141);
-let obj2 = { previewContainer: { flex: 1 }, previewDivider: { borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: nativeDefault.space.PX_16, flex: 1 } };
-let closure_8 = createStyles.createStyles(obj2);
-const size = fn(2);
+const View = _mod17.View;
+const jsx = jsxProd.jsx;
+let obj = { previewContainer: { flex: 1 }, previewDivider: { borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: nativeDefault.space.PX_16, flex: 1 } };
+let closure_5 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
 
 export default function ProductDetailsActionSheetPreview(onBundleActiveItemChange) {
   ({ product, handlePreviewPress, onTrackPress } = onBundleActiveItemChange);
-  c0 = undefined;
-  const tmp = closure_8();
-  [tmp3, c0] = hasOwnProperty(0);
-  const tmp2 = _slicedToArray(hasOwnProperty(0), 2);
-  const obj = {
-    style: tmp.previewContainer,
-    onLayout: React4((nativeEvent) => {
-      _undefined(nativeEvent.nativeEvent.layout.width);
-    }, []),
-    children: null
-  };
+  const tmp = closure_5();
+  const tmp4 = useMeasuredLayoutDefault();
+  const width = tmp4.width;
+  let num = 0;
+  ({ ref, onLayout } = tmp4);
+  if (undefined !== width) {
+    num = width;
+  }
+  const obj = { style: tmp.previewContainer, ref, onLayout, children: null };
   if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
-    const obj2 = { product, width: tmp3, handlePreviewPress, onTrackPress, onActiveItemChange: onBundleActiveItemChange.onBundleActiveItemChange };
-    let tmp7Result = jsx(BundleProductDetailsActionSheetPreviewDefault, { product, width: tmp3, handlePreviewPress, onTrackPress, onActiveItemChange: onBundleActiveItemChange.onBundleActiveItemChange });
+    const obj2 = { product, width: num, handlePreviewPress, onTrackPress, onActiveItemChange: onBundleActiveItemChange.onBundleActiveItemChange };
+    let tmp6Result = jsx(BundleProductDetailsActionSheetPreviewDefault, { product, width: num, handlePreviewPress, onTrackPress, onActiveItemChange: onBundleActiveItemChange.onBundleActiveItemChange });
   } else {
     const obj3 = { style: tmp.previewDivider, children: null };
-    const obj4 = { product, width: tmp3, handlePreviewPress, onTrackPress };
-    obj3.children = jsx(IndividualProductPreview.IndividualProductPreview, { product, width: tmp3, handlePreviewPress, onTrackPress });
-    tmp7Result = <View style={tmp.previewDivider}>{null}</View>;
+    const obj4 = { product, width: num, handlePreviewPress, onTrackPress };
+    obj3.children = jsx(IndividualProductPreview.IndividualProductPreview, { product, width: num, handlePreviewPress, onTrackPress });
+    tmp6Result = <View style={tmp.previewDivider}>{null}</View>;
   }
-  obj.children = tmp7Result;
-  return <View style={tmp.previewContainer} onLayout={React4((nativeEvent) => {
-    _undefined(nativeEvent.nativeEvent.layout.width);
-  }, [])}>{null}</View>;
+  obj.children = tmp6Result;
+  return <View style={tmp.previewContainer} ref={ref} onLayout={onLayout}>{null}</View>;
 };

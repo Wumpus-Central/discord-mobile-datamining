@@ -1,15 +1,15 @@
-// === Module 13876: CustomTypingIndicatorDisplay ===
+// === Module 13962: CustomTypingIndicatorDisplay ===
 
-// Module 13876 (CustomTypingIndicatorDisplay)
+// Module 13962 (CustomTypingIndicatorDisplay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13864 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 13877 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13950 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 13963 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp3(5747);
-const Stack_Stack = tmp3(6147);
-const Pressables = tmp3(7106);
+const Text_Text = tmp3(5761);
+const Stack_Stack = tmp3(6162);
+const Pressables = tmp3(7121);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
@@ -54,7 +54,7 @@ export default function CustomTypingIndicatorDisplay(showName) {
       tmp10 = React3(CustomTypingIndicatorGlyphDefault, obj5);
     }
     items = [tmp10, ];
-    const obj6 = { style: tmp.text, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, maxFontSizeMultiplier: 2, includeFontPadding: true, ellipsizeMode: "tail", children: formatResult };
+    const obj6 = { style: tmp.text, variant: "body-xs/medium", color: "interactive-text-default", lineClamp: 1, maxFontSizeMultiplier: 2, includeFontPadding: true, ellipsizeMode: "tail", children: formatResult };
     items[1] = React3(Text_Text.Text, obj6);
     obj4.children = items;
     const tmp8Result = React4(Stack_Stack.Stack, obj4);

@@ -1,15 +1,15 @@
-// === Module 12569: SearchLocalAndGlobalContentView ===
+// === Module 12650: SearchLocalAndGlobalContentView ===
 
-// Module 12569 (SearchLocalAndGlobalContentView)
+// Module 12650 (SearchLocalAndGlobalContentView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
-import TableRow from "TableRow" /* 7101 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7824 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11639 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12515 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12518 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5817 */;
+import TableRow from "TableRow" /* 7116 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7840 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11690 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12596 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,15 +39,15 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(12515).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(12596).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(12520), obj2);
+    tmp4 = closure_10(onPressSend(12601), obj2);
   }
-  obj = hasOptions(12515);
-  const tmpResult = hasOptions(12570);
-  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11639).AppLauncherSectionName.SEARCH });
+  obj = hasOptions(12596);
+  const tmpResult = hasOptions(12651);
+  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11690).AppLauncherSectionName.SEARCH });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
   items = [hasOptions];
@@ -69,15 +69,15 @@ function CommandRow(arg0) {
     }
   }, items1);
   const obj4 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
-  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11639).AppLauncherSectionName.SEARCH };
-  obj4.subLabel = hasOptions(9893).getSectionName(application);
+  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11690).AppLauncherSectionName.SEARCH };
+  obj4.subLabel = hasOptions(9911).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(12570), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return closure_10(hasOptions(7101).TableRow, obj4);
+  obj4.trailing = closure_10(onPressSend(12651), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return closure_10(hasOptions(7116).TableRow, obj4);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -151,8 +151,8 @@ function CommandsExpandableList(expandedOverride) {
   return closure_10(context(beforeExecuteCommand[30]), { items: items1, expandedOverride: expandedOverride.expanded, showsExpandCTAOverride: false });
 }
 const View = fn(17).View;
-const getSection = fn(9894).getSection;
-const FetchState = fn(12531).FetchState;
+const getSection = fn(9912).getSection;
+const FetchState = fn(12612).FetchState;
 const AppLauncherNativeConstants = fn(1498);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
@@ -375,7 +375,7 @@ export function SearchLocalAndGlobalContentView(context) {
   const tmp10Result6 = require("AppLauncherFlashList");
   if (0 !== memo.length) {
     let obj4 = { style: tmp.commandsHeaderContainer, children: null };
-    const obj5 = { accessibilityRole: "header", variant: "text-md/medium", color: "text-default", style: tmp.sectionHeader, children: null };
+    const obj5 = { accessibilityRole: "header", variant: "body-md/medium", color: "text-default", style: tmp.sectionHeader, children: null };
     const intl4 = tmp10(tmp3[13]).intl;
     obj5.children = intl4.string(tmp10(tmp3[13]).t["0hKkS+"]);
     const items11 = [tmp31(tmp10(tmp3[29]).Text, obj5), ];
@@ -408,7 +408,7 @@ export function SearchLocalAndGlobalContentView(context) {
       } else {
         string2Result = string2(t2.xal319);
       }
-      const obj9 = { color: "text-brand", variant: "text-md/semibold", children: string2Result };
+      const obj9 = { color: "text-brand", variant: "body-md/semibold", children: string2Result };
       t2 = tmp31(tmp10(tmp3[29]).Text, obj9);
       obj8.children = t2;
       tmp31(tmp10(tmp3[31]).AnimatedPressableHighlight, obj8);
@@ -427,7 +427,7 @@ export function SearchLocalAndGlobalContentView(context) {
   items13[1] = tmp31Result4;
   let tmp31Result5 = null;
   if (0 !== memo1.length) {
-    const obj11 = { accessibilityRole: "header", variant: "text-md/medium", color: "text-default", style: tmp.sectionHeader, children: null };
+    const obj11 = { accessibilityRole: "header", variant: "body-md/medium", color: "text-default", style: tmp.sectionHeader, children: null };
     const intl3 = tmp10(tmp3[13]).intl;
     obj11.children = intl3.string(tmp10(tmp3[13]).t.PHjkRE);
     tmp31Result5 = tmp31(tmp10(tmp3[29]).Text, obj11);

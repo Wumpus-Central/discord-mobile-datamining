@@ -1,10 +1,10 @@
-// === Module 20222: StreamFullAlert ===
+// === Module 20338: StreamFullAlert ===
 
-// Module 20222 (StreamFullAlert)
+// Module 20338 (StreamFullAlert)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AVError from "AVError" /* 6067 */;
-import common_AlertDefault from "common/Alert" /* 6150 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AVError from "AVError" /* 6082 */;
+import common_AlertDefault from "common/Alert" /* 6165 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,10 +26,10 @@ export default function StreamFullAlert(arg0) {
   const merged = Object.assign(arg0);
   const intl2 = util.intl;
   obj2.title = intl2.string(util.t.GzjdO5);
-  const obj3 = { variant: "text-md/normal", style: closure_5.body, children: null };
+  const obj3 = { variant: "body-md/normal", style: closure_5.body, children: null };
   const intl3 = util.intl;
   obj3.children = intl3.string(util.t.VVZDBL);
-  items = [React3(Text_Text.Text, obj3), React3(Text_Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_5.body, children: formatToPlainStringResult })];
+  items = [React3(Text_Text.Text, obj3), React3(Text_Text.Text, { variant: "body-md/normal", selectable: true, color: "text-muted", style: closure_5.body, children: formatToPlainStringResult })];
   obj2.children = items;
   return React4(common_AlertDefault, obj2);
 };

@@ -1,17 +1,17 @@
-// === Module 14240: useGuildPowerupOnActivate ===
+// === Module 14326: useGuildPowerupOnActivate ===
 
-// Module 14240 (useGuildPowerupOnActivate)
-import BoostingActionCreators from "BoostingActionCreators" /* 6888 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8587 */;
+// Module 14326 (useGuildPowerupOnActivate)
+import BoostingActionCreators from "BoostingActionCreators" /* 6903 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8604 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7709 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7725 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5353);
-({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
+const GuildPowerupsConstants = fn(5354);
+({ BoostPurchaseIntent: closure_6, GuildPowerupType: metroImportDefault } = GuildPowerupsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
 
@@ -68,7 +68,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                        return PERK(6864).popWithKey(diff(7719).PREMIUM_KEY);
+                        return PERK(6879).popWithKey(diff(7735).PREMIUM_KEY);
                       },
               onPaymentSuccess() {
                         const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(GuildBoostSlotStore.boostSlots);
@@ -88,7 +88,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                         }
                       },
               onPaymentDismiss() {
-                        return PERK(6864).popWithKey(diff(7719).PREMIUM_KEY);
+                        return PERK(6879).popWithKey(diff(7735).PREMIUM_KEY);
                       }
             };
             const result = tmp17(onToggle[13]).launchGuildBoostFlowOrAlert(obj3);

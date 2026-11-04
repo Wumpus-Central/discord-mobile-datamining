@@ -1,12 +1,12 @@
-// === Module 11520: SubscriptionUtils ===
+// === Module 11570: SubscriptionUtils ===
 
-// Module 11520 (SubscriptionUtils)
+// Module 11570 (SubscriptionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7555 */;
-import CheckoutError from "CheckoutError" /* 11521 */;
-import PauseDuration from "PauseDuration" /* 11523 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7571 */;
+import CheckoutError from "CheckoutError" /* 11571 */;
+import PauseDuration from "PauseDuration" /* 11573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2180 */;
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ SubscriptionStatusTypes: metroRequire, SubscriptionTypes: closure_7 } = Constants);
+({ SubscriptionStatusTypes: closure_6, SubscriptionTypes: metroImportDefault } = Constants);
 const PremiumConstants = fn(1387);
 ({ SubscriptionPlans: closure_8, SubscriptionPlanInfo: closure_9 } = PremiumConstants);
 const size = fn(2);
@@ -51,8 +51,8 @@ export function subscriptionCanSwitchImmediately(getCurrentSubscriptionPlanIdFor
     const checkoutError = new CheckoutError.CheckoutError(obj2);
     throw checkoutError;
   } else {
-    if (currentSubscriptionPlanIdForGroup === React6.PREMIUM_YEAR_TIER_1) {
-      if (newPlanId === React6.PREMIUM_MONTH_TIER_2) {
+    if (currentSubscriptionPlanIdForGroup === React5.PREMIUM_YEAR_TIER_1) {
+      if (newPlanId === React5.PREMIUM_MONTH_TIER_2) {
         const obj3 = { message: "Unexpected plan switch", extraSentryInformation: obj };
         const checkoutError1 = new CheckoutError.CheckoutError(obj3);
         throw checkoutError1;
@@ -71,8 +71,8 @@ export function subscriptionCanDowngrade(getCurrentSubscriptionPlanIdForGroup, n
       const checkoutError = new CheckoutError.CheckoutError(obj2);
       throw checkoutError;
     } else {
-      if (currentSubscriptionPlanIdForGroup === React6.PREMIUM_YEAR_TIER_1) {
-        if (newPlanId === React6.PREMIUM_MONTH_TIER_2) {
+      if (currentSubscriptionPlanIdForGroup === React5.PREMIUM_YEAR_TIER_1) {
+        if (newPlanId === React5.PREMIUM_MONTH_TIER_2) {
           const obj3 = { message: "Unexpected plan switch", extraSentryInformation: obj };
           const checkoutError1 = new CheckoutError.CheckoutError(obj3);
           throw checkoutError1;

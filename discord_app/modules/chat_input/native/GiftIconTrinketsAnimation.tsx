@@ -1,16 +1,16 @@
-// === Module 13940: GiftIconTrinketsAnimation ===
+// === Module 14026: GiftIconTrinketsAnimation ===
 
-// Module 13940 (GiftIconTrinketsAnimation)
+// Module 14026 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import StringUtils from "StringUtils" /* 2155 */;
-import useToken from "useToken" /* 5719 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import useToken from "useToken" /* 5732 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 const PlatformUtils = APNGPlayer(1377);
-const APNGPlayer2 = APNGPlayer(9632);
+const APNGPlayer2 = APNGPlayer(9651);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

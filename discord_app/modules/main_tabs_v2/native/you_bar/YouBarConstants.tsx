@@ -1,6 +1,6 @@
-// === Module 17218: YouBarConstants ===
+// === Module 17310: YouBarConstants ===
 
-// Module 17218 (YouBarConstants)
+// Module 17310 (YouBarConstants)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;

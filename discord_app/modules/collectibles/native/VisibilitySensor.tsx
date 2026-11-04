@@ -1,6 +1,6 @@
-// === Module 18006: VisibilitySensor ===
+// === Module 18102: VisibilitySensor ===
 
-// Module 18006 (VisibilitySensor)
+// Module 18102 (VisibilitySensor)
 import _mod17 from "module_17" /* 17 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import noop_mod from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ let noop = noop_mod;
 ({ useEffect: c2, useRef: c3 } = noop);
 let noop = noop_mod;
 const View = _mod17.View;
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const result = size.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
 
 export default function _default(onChange) {
@@ -71,5 +71,5 @@ export default function _default(onChange) {
   const obj = { collapsable: false, ref: tmp, children: null };
   const items3 = [children, timestampProducer(View, {})];
   obj.children = items3;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 };

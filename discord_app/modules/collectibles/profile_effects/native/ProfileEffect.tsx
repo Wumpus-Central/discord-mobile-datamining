@@ -1,13 +1,13 @@
-// === Module 9625: ProfileEffect ===
+// === Module 9644: ProfileEffect ===
 
-// Module 9625 (ProfileEffect)
+// Module 9644 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8923 */;
-import utils from "utils" /* 9626 */;
-import constants from "constants" /* 9627 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9628 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9631 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8940 */;
+import utils from "utils" /* 9645 */;
+import constants from "constants" /* 9646 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9647 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
@@ -67,13 +67,13 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj3.children = jsx(tmp4(5837), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, accessibilityLabel: null, height: null, width: null, style: null });
-    const tmp4Result = tmp4(5837);
+    obj3.children = jsx(tmp4(5851), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, accessibilityLabel: null, height: null, width: null, style: null });
+    const tmp4Result = tmp4(5851);
   }
   return <closure_5 {...obj3} />;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Image: closure_6 } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ profileEffects: { position: "absolute", width: "100%", top: 0, bottom: 0, left: 0, right: 0, flex: 1, justifyContent: "flex-start" }, effect: { position: "absolute" } });
@@ -114,7 +114,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = noop.useRef(-memo(9627).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = noop.useRef(-memo(9646).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(noop.useState([]), 2);
   noop.useRef([]);
   noop.useRef(false);
@@ -130,7 +130,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(noop.useState([]), 2);
-  const tmp9Result = memo1(9630)(noop.useCallback((arg0) => {
+  const tmp9Result = memo1(9649)(noop.useCallback((arg0) => {
     if (ref.current) {
       if (!ref3.current) {
         tmp.current = true;
@@ -156,7 +156,7 @@ function ProfileEffect(profileEffect) {
   }, items4));
   const stop = tmp9Result.stop;
   const reset = tmp9Result.reset;
-  const tmp9 = memo1(9630);
+  const tmp9 = memo1(9649);
   const items5 = [onLoad];
   const stateFromStores = memo(504).useStateFromStores(items5, () => onLoad.getState());
   noop.useRef(null);

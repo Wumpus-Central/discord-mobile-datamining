@@ -1,12 +1,12 @@
-// === Module 9662: WishlistButton ===
+// === Module 9681: WishlistButton ===
 
-// Module 9662 (WishlistButton)
+// Module 9681 (WishlistButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import native from "native" /* 5207 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 9591 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 9610 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -148,8 +148,8 @@ class WishlistButtonBase {
           WishlistButtonTsx1.__closure = items1;
           WishlistButtonTsx1.__workletHash = 12515096529687;
           WishlistButtonTsx1.__initData = tmp3;
-          const result = sharedValue.set(c0(5377).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
-          obj = c0(5377);
+          const result = sharedValue.set(c0(5378).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
+          obj = c0(5378);
         });
         return () => cancelAnimationFrame(closure_0);
       }
@@ -444,7 +444,7 @@ class WishlistButton {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ Pressable: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const ShopCtaEnum = fn(1074).ShopCtaEnum;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
@@ -452,7 +452,7 @@ const jsxProd = fn(21);
 let obj = { duration: 400, easing: null };
 const Easing = fn(1652).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-let obj2 = { sm: fn(5760).SMALL_BUTTON_HEIGHT, md: fn(5760).MEDIUM_BUTTON_HEIGHT };
+let obj2 = { sm: fn(5774).SMALL_BUTTON_HEIGHT, md: fn(5774).MEDIUM_BUTTON_HEIGHT };
 const value2 = { sm: "sm", md: "md" };
 const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles((arg0) => {

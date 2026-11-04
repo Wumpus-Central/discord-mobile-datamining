@@ -1,6 +1,6 @@
-// === Module 7206: ConfirmEmailCode ===
+// === Module 7221: ConfirmEmailCode ===
 
-// Module 7206 (ConfirmEmailCode)
+// Module 7221 (ConfirmEmailCode)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,8 +9,8 @@ import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(7123);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
+const ChangeEmailStore = fn(7138);
 ({ useChangeEmailError: closure_9, ChangeEmailFields: closure_10 } = ChangeEmailStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -128,7 +128,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
     let obj4 = { children: null };
     const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: headerText };
     const items2 = [closure_11(tmp2(tmp3[11]).Text, obj5), , , ];
-    const obj6 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj6 = { style: tmp.prompt, variant: "body-sm/medium", color: "text-default", children: null };
     let intl = tmp2(tmp3[12]).intl;
     obj6.children = intl.string(tmp2(tmp3[12]).t.SZJowy);
     items2[1] = closure_11(tmp2(tmp3[11]).Text, obj6);
@@ -140,7 +140,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
     obj7.onSubmitEditing = callback;
     obj7.error = tmp7[0];
     items2[2] = closure_11(onSuccess(tmp3[13]), obj7);
-    let obj8 = { text: null, variant: "text-sm/medium", onPress: null };
+    let obj8 = { text: null, variant: "body-sm/medium", onPress: null };
     const intl3 = tmp2(tmp3[12]).intl;
     obj8.text = intl3.string(tmp2(tmp3[12]).t.K0NPQ6);
     obj8.onPress = value(function*() {

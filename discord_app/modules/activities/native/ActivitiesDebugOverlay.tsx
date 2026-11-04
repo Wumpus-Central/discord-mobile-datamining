@@ -1,11 +1,11 @@
-// === Module 19420: ActivitiesDebugOverlay ===
+// === Module 19524: ActivitiesDebugOverlay ===
 
-// Module 19420 (ActivitiesDebugOverlay)
+// Module 19524 (ActivitiesDebugOverlay)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useThermalStateDefault from "useThermalState" /* 16441 */;
-import ThermalStates from "ThermalStates" /* 16442 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useThermalStateDefault from "useThermalState" /* 16533 */;
+import ThermalStates from "ThermalStates" /* 16534 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ export default function ActivitiesDebugOverlay() {
   items = [tmp.container, { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 }];
   obj.style = items;
   const obj3 = { style: tmp.row, children: null };
-  const items1 = [React4(Text_Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: str, children: str2 })];
+  const items1 = [React4(Text_Text.Text, { variant: "body-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), hasOwnProperty(Text_Text.Text, { variant: "body-md/normal", color: str, children: str2 })];
   obj3.children = items1;
   obj.children = React4(View, obj3);
   return hasOwnProperty(View, obj);

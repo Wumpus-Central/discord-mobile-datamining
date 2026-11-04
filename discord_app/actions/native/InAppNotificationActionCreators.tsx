@@ -1,6 +1,6 @@
-// === Module 11157: InAppNotificationActionCreators ===
+// === Module 11205: InAppNotificationActionCreators ===
 
-// Module 11157 (InAppNotificationActionCreators)
+// Module 11205 (InAppNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

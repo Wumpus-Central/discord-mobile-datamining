@@ -3,7 +3,7 @@
 // Module 1237 (resolveTheme)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import AuthenticationUtils from "AuthenticationUtils" /* 7934 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7950 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
@@ -11,7 +11,7 @@ import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 const ThemeConstants = fn(1195);
-({ PROTO_THEME_MAP_MOBILE_REFRESH: metroRequire, SystemTheme: closure_7, SystemThemeState: closure_8 } = ThemeConstants);
+({ PROTO_THEME_MAP_MOBILE_REFRESH: closure_6, SystemTheme: metroImportDefault, SystemThemeState: closure_8 } = ThemeConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/themes/resolveTheme.native.tsx");
 

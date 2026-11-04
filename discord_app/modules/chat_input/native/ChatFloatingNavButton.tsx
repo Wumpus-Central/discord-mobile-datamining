@@ -1,12 +1,12 @@
-// === Module 13956: ChatFloatingNavButton ===
+// === Module 14042: ChatFloatingNavButton ===
 
-// Module 13956 (ChatFloatingNavButton)
+// Module 14042 (ChatFloatingNavButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5719 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import useToken from "useToken" /* 5732 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

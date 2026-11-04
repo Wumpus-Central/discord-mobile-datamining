@@ -1,12 +1,12 @@
-// === Module 7231: FreeFormTextInput ===
+// === Module 7251: FreeFormTextInput ===
 
-// Module 7231 (FreeFormTextInput)
+// Module 7251 (FreeFormTextInput)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Pressables from "Pressables" /* 7106 */;
-import _modDef7232 from "module_7232" /* 7232 */;
+import Pressables from "Pressables" /* 7121 */;
+import _modDef7252 from "module_7252" /* 7252 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,13 +17,13 @@ function ClearButton(onPress) {
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_9();
-  obj.children = React5(native.Icon, { source: _modDef7232, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
-  return React5(Pressables.PressableOpacity, obj);
+  obj.children = metroImportDefault(native.Icon, { source: _modDef7252, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
+  return metroImportDefault(Pressables.PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);
-({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
+({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" }, onPress: { flexDirection: "row" }, input: null, error: null, closeIcon: null, placeholder: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
@@ -173,7 +173,7 @@ export default (editable) => {
   }
   obj4.importantForAccessibility = str4;
   obj4.accessibilityElementsHidden = !flag;
-  items1[1] = React5(native.TextInput, obj4);
+  items1[1] = metroImportDefault(native.TextInput, obj4);
   let result1;
   if (renderTrailingComponent != null) {
     result1 = renderTrailingComponent();
@@ -190,10 +190,10 @@ export default (editable) => {
           return tmpResult;
         }
     };
-    tmp15Result = React5(ClearButton, obj5);
+    tmp15Result = metroImportDefault(ClearButton, obj5);
   }
   items1[3] = tmp15Result;
   obj3.children = items1;
-  obj.children = React6(hasOwnProperty, obj3);
-  return React5(null != onPress ? timestampProducer : React4, obj);
+  obj.children = React5(hasOwnProperty, obj3);
+  return metroImportDefault(null != onPress ? timestampProducer : React4, obj);
 };

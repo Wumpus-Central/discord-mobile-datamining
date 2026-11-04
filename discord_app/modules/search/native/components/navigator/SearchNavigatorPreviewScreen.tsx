@@ -1,7 +1,7 @@
-// === Module 19107: SearchNavigatorPreviewScreen ===
+// === Module 19210: SearchNavigatorPreviewScreen ===
 
-// Module 19107 (SearchNavigatorPreviewScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
+// Module 19210 (SearchNavigatorPreviewScreen)
+import TrackingDefault from "Tracking" /* 14124 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -23,7 +23,7 @@ export default function SearchNavigatorPreviewScreen() {
   const onBeforeJumpToMessage = route.params.onBeforeJumpToMessage;
   items = [searchContext, channelId, onBeforeJumpToMessage, navigation];
   const callback = onBeforeJumpToMessage.useCallback(() => {
-    const result = search_tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
+    const result = TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
     if (onBeforeJumpToMessage != null) {
       onBeforeJumpToMessage();
     }

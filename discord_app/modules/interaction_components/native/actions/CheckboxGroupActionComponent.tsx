@@ -1,6 +1,6 @@
-// === Module 19662: CheckboxGroupActionComponent ===
+// === Module 19767: CheckboxGroupActionComponent ===
 
-// Module 19662 (CheckboxGroupActionComponent)
+// Module 19767 (CheckboxGroupActionComponent)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

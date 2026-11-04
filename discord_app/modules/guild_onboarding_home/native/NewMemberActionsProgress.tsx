@@ -1,12 +1,12 @@
-// === Module 18414: NewMemberActionsProgress ===
+// === Module 18508: NewMemberActionsProgress ===
 
-// Module 18414 (NewMemberActionsProgress)
+// Module 18508 (NewMemberActionsProgress)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7522 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8464 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7538 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8480 */;
 
 const require = fn;
 function ProgressBar(percent) {
@@ -96,14 +96,14 @@ export function NewMemberActionsProgress(guildId) {
         const items5 = [, , ];
         ({ horizontal: arr7[0], spaceBetween: arr7[1], spaceBelow: arr7[2] } = tmp);
         obj5.style = items5;
-        const obj6 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", children: null };
+        const obj6 = { variant: "body-xs/semibold", color: "mobile-text-heading-primary", children: null };
         const intl = tmp2(tmp3[16]).intl;
         obj6.children = intl.string(tmp2(tmp3[16]).t.LhlgY9);
         const items6 = [closure_10(tmp2(tmp3[15]).Text, obj6), ];
         const obj7 = { style: tmp.horizontal, children: null };
-        const obj8 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", children: memo };
-        const items7 = [closure_10(tmp2(tmp3[15]).Text, obj8), closure_10(tmp2(tmp3[15]).Text, { variant: "text-xs/medium", color: "text-default", children: "/" }), , ];
-        const obj9 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", children: num };
+        const obj8 = { variant: "body-xs/semibold", color: "mobile-text-heading-primary", children: memo };
+        const items7 = [closure_10(tmp2(tmp3[15]).Text, obj8), closure_10(tmp2(tmp3[15]).Text, { variant: "body-xs/medium", color: "text-default", children: "/" }), , ];
+        const obj9 = { variant: "body-xs/semibold", color: "mobile-text-heading-primary", children: num };
         items7[2] = closure_10(tmp2(tmp3[15]).Text, obj9);
         const obj10 = { size: tmp2(tmp3[17]).Icon.Sizes.REFRESH_SMALL_16, source: stateFromStores(tmp3[18]) };
         items7[3] = closure_10(tmp2(tmp3[17]).Icon, obj10);

@@ -1,15 +1,15 @@
-// === Module 14643: BalanceWidgetActionSheet ===
+// === Module 14723: BalanceWidgetActionSheet ===
 
-// Module 14643 (BalanceWidgetActionSheet)
+// Module 14723 (BalanceWidgetActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
-import _mod14644 from "module_14644" /* 14644 */;
-import _mod14645 from "module_14645" /* 14645 */;
-import _mod14646 from "module_14646" /* 14646 */;
+import _mod14724 from "module_14724" /* 14724 */;
+import _mod14725 from "module_14725" /* 14725 */;
+import _mod14726 from "module_14726" /* 14726 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, Fonts: closure_7, HelpdeskArticles: closure_8, ThemeTypes: closure_9 } = Constants);
+({ AnalyticEvents: closure_6, Fonts: metroImportDefault, HelpdeskArticles: closure_8, ThemeTypes: closure_9 } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -68,7 +68,7 @@ export default function _default(balance) {
   const memo = noop.useMemo(() => {
     let tmp = null;
     if (num > 4100) {
-      const obj = { backgroundVideo: _mod14644.default, backgroundImage: _mod14645.default, bannerImage: _mod14646.default, bannerText: null };
+      const obj = { backgroundVideo: _mod14724.default, backgroundImage: _mod14725.default, bannerImage: _mod14726.default, bannerText: null };
       const intl = util.intl;
       obj.bannerText = intl.string(util.t.LaMEFL);
       tmp = obj;

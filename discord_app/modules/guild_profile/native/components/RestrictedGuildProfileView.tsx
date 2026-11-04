@@ -1,14 +1,14 @@
-// === Module 9426: RestrictedGuildProfileView ===
+// === Module 9444: RestrictedGuildProfileView ===
 
-// Module 9426 (RestrictedGuildProfileView)
+// Module 9444 (RestrictedGuildProfileView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import GuildProfileView from "GuildProfileView" /* 9427 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import GuildProfileView from "GuildProfileView" /* 9445 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -44,7 +44,7 @@ export default function RestrictedGuildProfileView() {
   const intl = util.intl;
   obj10.children = intl.string(util.t.wZmueu);
   const items1 = [React4(Text_Text.Text, obj10), ];
-  const obj11 = { variant: "text-md/medium", color: "text-subtle", children: null };
+  const obj11 = { variant: "body-md/medium", color: "text-subtle", children: null };
   const intl2 = util.intl;
   obj11.children = intl2.string(util.t["8mfCqY"]);
   items1[1] = React4(Text_Text.Text, obj11);

@@ -1,8 +1,8 @@
-// === Module 8013: VideoStreamStats ===
+// === Module 8029: VideoStreamStats ===
 
-// Module 8013 (VideoStreamStats)
-import TimeUtils from "TimeUtils" /* 5892 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6063 */;
+// Module 8029 (VideoStreamStats)
+import TimeUtils from "TimeUtils" /* 5906 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6078 */;
 
 require = fn;
 const StreamLayouts = fn(1072).StreamLayouts;

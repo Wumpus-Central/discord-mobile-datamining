@@ -1,19 +1,19 @@
-// === Module 16684: UserProfileUpsellCardV2 ===
+// === Module 16774: UserProfileUpsellCardV2 ===
 
-// Module 16684 (UserProfileUpsellCardV2)
+// Module 16774 (UserProfileUpsellCardV2)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { outer: { borderRadius: nativeDefault.radii.lg, padding: 1 }, inner: null, text: null, textCenter: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, padding: 1 };
@@ -56,7 +56,7 @@ export default function UserProfileUpsellCardV2(children) {
     textCenter = tmp.textCenter;
   }
   items2[1] = textCenter;
-  const items3 = [hasOwnProperty(Text_Text.Text, { style: items2, variant: "text-md/normal", color: "text-default", maxFontSizeMultiplier: 2.5, children: children.text }), , ];
+  const items3 = [hasOwnProperty(Text_Text.Text, { style: items2, variant: "body-md/normal", color: "text-default", maxFontSizeMultiplier: 2.5, children: children.text }), , ];
   const obj3 = { icon: null, text: null, onPress: null, variant: null, loading: null, disabled: null, grow: true };
   const tmp5 = LinearGradientDefault;
   obj3.icon = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, { color: nativeDefault.colors.WHITE, size: "xs" });

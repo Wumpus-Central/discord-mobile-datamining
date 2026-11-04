@@ -1,6 +1,6 @@
-// === Module 17020: ClipsOptOutOfVoiceRecordingSetting ===
+// === Module 17112: ClipsOptOutOfVoiceRecordingSetting ===
 
-// Module 17020 (ClipsOptOutOfVoiceRecordingSetting)
+// Module 17112 (ClipsOptOutOfVoiceRecordingSetting)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 4966 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -56,7 +56,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
     }
   }
 };
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -66,7 +66,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["wW9/zQ"]);
   },
-  parent: fn(8556).MobileUserSettings.CLIPS,
+  parent: fn(8573).MobileUserSettings.CLIPS,
   useValue: fn(4966).ClipsAllowVoiceRecording.useSetting,
   onValueChange: function updateClipsAllowVoiceRecording() {
     const self = this;

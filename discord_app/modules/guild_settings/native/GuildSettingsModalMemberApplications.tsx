@@ -1,14 +1,14 @@
-// === Module 18817: GuildSettingsModalMemberApplications ===
+// === Module 18918: GuildSettingsModalMemberApplications ===
 
-// Module 18817 (GuildSettingsModalMemberApplications)
+// Module 18918 (GuildSettingsModalMemberApplications)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18818 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18919 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 7037 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 7052 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 }, spinnerContainer: { padding: 32 }, footerSpinner: { paddingVertical: 16 }, spinner: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 };
@@ -29,14 +29,14 @@ const memoResult = noop.memo(function MemberApplicationUser(user) {
   if (globalName == null) {
     username = user.username;
   }
-  const children = [React5(Text_Text.Text, { variant: "text-md/semibold", children: username }), ];
+  const children = [metroImportDefault(Text_Text.Text, { variant: "body-md/semibold", children: username }), ];
   let tmp5Result = null != globalName;
   if (tmp5Result) {
-    const obj2 = { variant: "text-xs/medium", children: user.username };
-    tmp5Result = React5(Text_Text.Text, obj2);
+    const obj2 = { variant: "body-xs/medium", children: user.username };
+    tmp5Result = metroImportDefault(Text_Text.Text, obj2);
   }
   children[1] = tmp5Result;
-  return React6(hasOwnProperty, { children });
+  return React5(hasOwnProperty, { children });
 });
 let closure_12 = noop.memo(function GuildSettingsModalMemberApplication(joinRequest) {
   joinRequest = joinRequest.joinRequest;
@@ -61,7 +61,7 @@ let closure_12 = noop.memo(function GuildSettingsModalMemberApplication(joinRequ
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(7101).TableRow, obj2);
+      return closure_7(joinRequest(7116).TableRow, obj2);
     }
   }
 });
@@ -95,7 +95,7 @@ export default noop.memo(function GuildSettingsModalMemberApplications(arg0) {
   const items3 = [guildJoinRequests.length];
   const callback1 = fetchNextPage.useCallback((joinRequest) => {
     const index = joinRequest.index;
-    return React5(closure_12, { joinRequest: joinRequest.item, start: 0 === index, end: index === guildJoinRequests.length - 1 });
+    return metroImportDefault(closure_12, { joinRequest: joinRequest.item, start: 0 === index, end: index === guildJoinRequests.length - 1 });
   }, items3);
   const callback2 = fetchNextPage.useCallback((joinRequestId) => joinRequestId.joinRequestId, []);
   if (stateFromStores) {
@@ -127,8 +127,8 @@ export default noop.memo(function GuildSettingsModalMemberApplications(arg0) {
       if (stateFromStores) {
         const obj = { style: closure_1.footerSpinner, children: null };
         const obj2 = { size: "small", color: closure_1.spinner.color };
-        obj.children = React5(React4, obj2);
-        tmp = React5(hasOwnProperty, obj);
+        obj.children = metroImportDefault(React4, obj2);
+        tmp = metroImportDefault(hasOwnProperty, obj);
       }
       return tmp;
     };

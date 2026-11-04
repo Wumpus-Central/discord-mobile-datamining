@@ -1,18 +1,18 @@
-// === Module 19933: action_sheet/AddMembersActionSheet ===
+// === Module 20049: action_sheet/AddMembersActionSheet ===
 
-// Module 19933 (action_sheet/AddMembersActionSheet)
+// Module 20049 (action_sheet/AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5209 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import RegexUtilsDefault from "RegexUtils" /* 5776 */;
-import GuildUtilsDefault from "GuildUtils" /* 7021 */;
-import FormCheckbox from "FormCheckbox" /* 7115 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10949 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19932 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import RegexUtilsDefault from "RegexUtils" /* 5790 */;
+import GuildUtilsDefault from "GuildUtils" /* 7036 */;
+import FormCheckbox from "FormCheckbox" /* 7130 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10997 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 20048 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,10 +23,10 @@ function MemberRow(arg0) {
   const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   const obj2 = { start, end, guildId, userId, onPress, disabled, trailing: null, accessibilityRole: null, accessibilityState: null };
-  obj2.trailing = React5(FormCheckbox.FormCheckbox, { checked });
+  obj2.trailing = metroImportDefault(FormCheckbox.FormCheckbox, { checked });
   obj2.accessibilityRole = accessibilityRole;
   obj2.accessibilityState = accessibilityState;
-  return React5(DetailedGuildIdentityUserRowDefault, obj2);
+  return metroImportDefault(DetailedGuildIdentityUserRowDefault, obj2);
 }
 class AddMembersBody {
   constructor(arg0) {
@@ -214,9 +214,9 @@ class AddMembersBody {
   }
 }
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(19927).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(20043).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, inputContainer: null, tagAvatar: null, emptyStateText: null, addMembersDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
@@ -273,7 +273,7 @@ export default function AddMembersActionSheet(guild) {
   obj4.trailing = closure_7(guild(pendingAdditions[24]).Button, obj5);
   obj6.header = closure_7(guild(pendingAdditions[23]).BottomSheetTitleHeader, obj4);
   const obj7 = { style: tmp.container, children: null };
-  const obj8 = { variant: "text-sm/normal", style: tmp.addMembersDescription, children: null };
+  const obj8 = { variant: "body-sm/normal", style: tmp.addMembersDescription, children: null };
   const intl3 = tmp5(tmp6[14]).intl;
   obj8.children = intl3.format(guild(pendingAdditions[14]).t["3OxP4q"], { numMembers: MAX_BULK_ROLE_MEMBERS_ADD });
   const items1 = [closure_7(guild(pendingAdditions[27]).Text, obj8), closure_7(AddMembersBody, { guild, role, members: guildMembers, pendingAdditions, setPendingAdditions: tmp2[1], autoFocusSearch: true, maxCount: MAX_BULK_ROLE_MEMBERS_ADD, inActionSheet: true })];

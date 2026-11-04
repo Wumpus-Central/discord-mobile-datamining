@@ -1,15 +1,15 @@
-// === Module 19801: GuildSettingsModal ===
+// === Module 19917: GuildSettingsModal ===
 
-// Module 19801 (GuildSettingsModal)
+// Module 19917 (GuildSettingsModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 18350 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 18444 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 
 require = fn;
 function close() {
@@ -17,7 +17,7 @@ function close() {
   GuildSettingsActionCreatorsDefault.close();
 }
 const Constants = fn(1072);
-({ GuildSettingsSections: closure_7, WebhookTypes: closure_8 } = Constants);
+({ GuildSettingsSections: metroImportDefault, WebhookTypes: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");

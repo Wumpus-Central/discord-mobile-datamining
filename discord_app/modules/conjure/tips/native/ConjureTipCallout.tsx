@@ -1,13 +1,13 @@
-// === Module 12767: ConjureTipCallout ===
+// === Module 12848: ConjureTipCallout ===
 
-// Module 12767 (ConjureTipCallout)
+// Module 12848 (ConjureTipCallout)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import IconButton from "IconButton" /* 8152 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12272 */;
-import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 12760 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import IconButton from "IconButton" /* 8168 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12333 */;
+import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 12841 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function ConjureTipCallout(onDismiss) {
   onDismiss = onDismiss.onDismiss;
   ({ icon, children } = onDismiss);
   const tmp = closure_7();
-  const obj = { icon, tone: "brand", firstLine: "text-md/semibold", firstLineInset, children: null };
+  const obj = { icon, tone: "brand", firstLine: "body-md/semibold", firstLineInset, children: null };
   const obj2 = { style: tmp.card, children: null };
   items = [children, ];
   let tmp2Result = null;
@@ -50,10 +50,10 @@ export default function ConjureTipCallout(onDismiss) {
   return React4(tmp4, obj);
 };
 export function ConjureTipTitle(children) {
-  return React4(View, { style: closure_7().title, children: React4(Text_Text.Text, { variant: "text-md/semibold", color: "text-strong", accessibilityRole: "header", children: children.children }) });
+  return React4(View, { style: closure_7().title, children: React4(Text_Text.Text, { variant: "body-md/semibold", color: "text-strong", accessibilityRole: "header", children: children.children }) });
 }
 export function ConjureTipBody(children) {
-  return React4(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: children.children });
+  return React4(Text_Text.Text, { variant: "body-sm/normal", color: "text-muted", children: children.children });
 }
 export function ConjureTipActions(children) {
   return React4(View, { style: closure_7().actions, children: children.children });

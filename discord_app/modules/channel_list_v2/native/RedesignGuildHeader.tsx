@@ -1,28 +1,28 @@
-// === Module 18335: RedesignGuildHeader ===
+// === Module 18432: RedesignGuildHeader ===
 
-// Module 18335 (RedesignGuildHeader)
+// Module 18432 (RedesignGuildHeader)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import FavoritesUtils from "FavoritesUtils" /* 5015 */;
 import shared from "shared" /* 5148 */;
-import useToken from "useToken" /* 5719 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import ButtonConstants from "ButtonConstants" /* 5760 */;
-import useFontScale from "useFontScale" /* 5762 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9953 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10866 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12547 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15877 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 18306 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 18336 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 18337 */;
+import useToken from "useToken" /* 5732 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import ButtonConstants from "ButtonConstants" /* 5774 */;
+import useFontScale from "useFontScale" /* 5776 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9971 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10914 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12628 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15965 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 18403 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 18433 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 18434 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import ActionSheetStore from "ActionSheetStore" /* 5382 */;
+import ActionSheetStore from "ActionSheetStore" /* 5383 */;
 
 const _modDef1652 = _mod1652;
 
@@ -198,7 +198,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.onPressIn = callback;
     obj6.onPressOut = callback1;
     const obj7 = { style: tmp22, source: animatableSourceWithFallback };
-    const items9 = [closure_13(tmp(5837), obj7), ];
+    const items9 = [closure_13(tmp(5851), obj7), ];
     const obj8 = { style: null };
     const items10 = [tmp3.bannerOverlay, animatedStyle1];
     obj8.style = items10;
@@ -206,7 +206,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.children = items9;
     const items11 = [closure_14(closure_6, obj6), ];
     if (tmp28Result) {
-      tmp28Result = closure_13(tmp(18381), {});
+      tmp28Result = closure_13(tmp(18475), {});
     }
     items11[1] = tmp28Result;
     obj5.children = items11;
@@ -215,8 +215,8 @@ function ReanimatedGuildBanner(guild) {
   const tmp4Result = require("module_1652");
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(11186);
+({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
+const RedesignChannelListConstants = fn(11236);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: closure_10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
@@ -274,7 +274,7 @@ export function useRedesignGuildHeaderHeight(id) {
   const tmp9 = null != useStickyServerHeaderSubtitleDefault(id);
   const isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(id.id);
   const tmp11 = useIsGameCommunityServerPreviewDefault(id.id);
-  const scaleTextLineHeightResult = useScaledTextLineHeight.scaleTextLineHeight("redesign/heading-18/semibold", fontScale);
+  const scaleTextLineHeightResult = useScaledTextLineHeight.scaleTextLineHeight("heading-md/semibold", fontScale);
   let num = 0;
   if (isThemeDarkResult) {
     num = 1;

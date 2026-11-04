@@ -1,6 +1,6 @@
-// === Module 19636: NewMemberActionsCompletedModal ===
+// === Module 19741: NewMemberActionsCompletedModal ===
 
-// Module 19636 (NewMemberActionsCompletedModal)
+// Module 19741 (NewMemberActionsCompletedModal)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { screen: { flex: 1, position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0, 0, 0, 0.8)", display: "flex", alignItems: "center", justifyContent: "center" }, text: { marginBottom: 16 }, progressBackground: null, progressForeground: null };
 let size = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: "60%" };
@@ -49,7 +49,7 @@ export default function NewMemberActionsCompleted(arg0) {
   NewMemberActionsCompletedModalTsx1.__initData = tmp6;
   const animatedStyle = require("module_1652").useAnimatedStyle(NewMemberActionsCompletedModalTsx1);
   const effect1 = noop.useEffect(() => {
-    const timerId = setTimeout(() => _undefined2(6864).popWithKey(_undefined(7523).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+    const timerId = setTimeout(() => _undefined2(6879).popWithKey(_undefined(7539).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
   }, []);
   const obj4 = { style: tmp.screen, children: null };
   const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };

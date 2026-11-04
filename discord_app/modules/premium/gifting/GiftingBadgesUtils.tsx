@@ -1,18 +1,18 @@
-// === Module 10746: GiftingBadgesUtils ===
+// === Module 10794: GiftingBadgesUtils ===
 
-// Module 10746 (GiftingBadgesUtils)
+// Module 10794 (GiftingBadgesUtils)
 import util from "util" /* 1113 */;
 import _modDef2763 from "module_2763" /* 2763 */;
-import BadgeId from "BadgeId" /* 8879 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8892 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10740 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10747 */;
+import BadgeId from "BadgeId" /* 8896 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8909 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10788 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10795 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8887 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8904 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-let closure_5 = fn(8887).getSingleRequirementThreshold;
+let closure_5 = fn(8904).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -89,9 +89,9 @@ export function useGiftingBadgeCoachmarkVariant(platform) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(10740).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(10788).GiftingBadgeExperiment;
   const enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = stateFromStores(10747).GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = stateFromStores(10795).GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   let str2 = "-DISABLED";
   if ("web" === platform.platform) {
@@ -105,7 +105,7 @@ export function useGiftingBadgeCoachmarkVariant(platform) {
     }
     tmp4 = enabled3;
   }
-  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10748).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10796).GiftingBadgeCoachmarkAudienceExperiment;
   if (tmp4) {
     str = "";
   }

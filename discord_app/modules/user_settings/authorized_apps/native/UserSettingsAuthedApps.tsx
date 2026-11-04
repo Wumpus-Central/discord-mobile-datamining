@@ -1,23 +1,23 @@
-// === Module 16999: UserSettingsAuthedApps ===
+// === Module 17091: UserSettingsAuthedApps ===
 
-// Module 16999 (UserSettingsAuthedApps)
+// Module 17091 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7282 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7286 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9169 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9178 */;
-import applications from "applications" /* 9878 */;
-import EmbedIcon from "EmbedIcon" /* 14754 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7298 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9186 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9195 */;
+import applications from "applications" /* 9896 */;
+import EmbedIcon from "EmbedIcon" /* 14834 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7396 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7412 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(7396).FetchState;
+const FetchState = fn(7412).FetchState;
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -77,11 +77,11 @@ export function useAuthorizedApps() {
 export function AuthorizedAppsHeader() {
   const tmp = closure_12();
   const obj = { style: tmp.appListHeader, children: null };
-  const obj2 = { color: "text-strong", variant: "heading-md/semibold", children: null };
+  const obj2 = { color: "text-strong", variant: "heading-sm/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["f6kk+r"]);
   items = [closure_1_10(Text_Text.Heading, obj2), ];
-  const obj3 = { style: tmp.headerDescription, color: "text-default", variant: "text-sm/normal", children: null };
+  const obj3 = { style: tmp.headerDescription, color: "text-default", variant: "body-sm/normal", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.G9JfLg);
   items[1] = closure_1_10(Text_Text.Text, obj3);
@@ -94,7 +94,7 @@ export function AuthorizedAppsEmpty(loading) {
     const obj2 = { style: tmp.spinner, animating: true, size: "large" };
     let tmp2Result = closure_1_10(hasOwnProperty, obj2);
   } else {
-    const obj = { color: "text-default", style: tmp.emptyText, variant: "text-sm/normal", children: null };
+    const obj = { color: "text-default", style: tmp.emptyText, variant: "body-sm/normal", children: null };
     const intl = util.intl;
     obj.children = intl.string(util.t["E+SM6T"]);
     tmp2Result = closure_1_10(Text_Text.Text, obj);
@@ -118,5 +118,5 @@ export function AuthorizedAppRow(app) {
     start,
     end
   };
-  return closure_10(app(7101).TableRow, obj2);
+  return closure_10(app(7116).TableRow, obj2);
 }

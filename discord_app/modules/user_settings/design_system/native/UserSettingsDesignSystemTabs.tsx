@@ -1,8 +1,8 @@
-// === Module 17930: UserSettingsDesignSystemTabs ===
+// === Module 18026: UserSettingsDesignSystemTabs ===
 
-// Module 17930 (UserSettingsDesignSystemTabs)
+// Module 18026 (UserSettingsDesignSystemTabs)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,9 +10,9 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
+({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { margin: 16, flex: 1, alignItems: "center" }, item: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 } };
 let closure_9 = createStyles.createStyles(obj2);
@@ -57,8 +57,8 @@ export default function UserSettingsDesignSystemTabs() {
         let obj3 = { variant: "heading-xxl/semibold", children: null };
         let items1 = ["Item ", sum];
         obj3.children = items1;
-        obj2.children = React5(Text_Text.Text, obj3);
-        obj.page = React6(hasOwnProperty, obj2);
+        obj2.children = metroImportDefault(Text_Text.Text, obj3);
+        obj.page = React5(hasOwnProperty, obj2);
         let arr = items.push(obj);
         num = sum;
       } while (sum < closure_0);
@@ -81,7 +81,7 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp20Result = first2;
   if (first2) {
     const obj5 = { state: segmentedControlState, colors: items1 };
-    tmp20Result = closure_8(tmp18(14503), obj5);
+    tmp20Result = closure_8(tmp18(14583), obj5);
   }
   const obj6 = { children: null };
   const obj7 = { spacing: 24, children: null };

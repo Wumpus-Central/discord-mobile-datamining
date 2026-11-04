@@ -1,7 +1,7 @@
-// === Module 12363: openConjureUnpublishUserAppAlert ===
+// === Module 12428: openConjureUnpublishUserAppAlert ===
 
-// Module 12363 (openConjureUnpublishUserAppAlert)
-import useAlertStore from "useAlertStore" /* 6080 */;
+// Module 12428 (openConjureUnpublishUserAppAlert)
+import useAlertStore from "useAlertStore" /* 6095 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -41,7 +41,7 @@ function ConjureUnpublishUserAppAlert(project) {
             importDefault(null);
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp2(11079).unpublishUserApp(id.id), done: false };
+            const obj4 = { value: tmp2(11128).unpublishUserApp(id.id), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -56,7 +56,7 @@ function ConjureUnpublishUserAppAlert(project) {
           const intl2 = tmp2(1113).intl;
           const obj8 = { app: closure_129_2 };
           obj7.text = intl2.formatToPlainString(tmp5(3995).b8LN7N, obj8);
-          tmp5(5832).open("CONJURE_USER_APP_UNPUBLISHED", obj7);
+          tmp5(5846).open("CONJURE_USER_APP_UNPUBLISHED", obj7);
           c3 = 3;
           return { value: "HermesInternal", done: null };
         } else {
@@ -96,7 +96,7 @@ function ConjureUnpublishUserAppAlert(project) {
   obj2.content = intl2.string(require("module_3995").wve4kB);
   let tmp6Result;
   if (null != tmp2) {
-    let obj3 = { variant: "text-sm/medium", color: "text-feedback-critical", children: tmp2 };
+    let obj3 = { variant: "body-sm/medium", color: "text-feedback-critical", children: tmp2 };
     tmp6Result = closure_7(tmp3(tmp4[11]).Text, obj3);
   }
   obj2.extraContent = tmp6Result;
@@ -124,10 +124,10 @@ function ConjureUnpublishUserAppAlert(project) {
   return closure_7(project(stateFromStores[10]).AlertModal, obj2);
 }
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/native/openConjureUnpublishUserAppAlert.tsx");
 
 export default function openConjureUnpublishUserAppAlert(project) {
-  useAlertStore.openAlert("ConjureUnpublishUserApp", React5(ConjureUnpublishUserAppAlert, { project }));
+  useAlertStore.openAlert("ConjureUnpublishUserApp", metroImportDefault(ConjureUnpublishUserAppAlert, { project }));
 };

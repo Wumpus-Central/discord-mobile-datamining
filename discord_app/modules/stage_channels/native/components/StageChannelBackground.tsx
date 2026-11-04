@@ -1,6 +1,6 @@
-// === Module 12161: StageChannelBackground ===
+// === Module 12220: StageChannelBackground ===
 
-// Module 12161 (StageChannelBackground)
+// Module 12220 (StageChannelBackground)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

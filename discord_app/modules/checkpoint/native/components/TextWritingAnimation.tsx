@@ -1,12 +1,12 @@
-// === Module 13778: TextWritingAnimation ===
+// === Module 13864: TextWritingAnimation ===
 
-// Module 13778 (TextWritingAnimation)
+// Module 13864 (TextWritingAnimation)
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 let require = fn;
 const noop = fn(19);
-({ useContext: closure_4, useEffect: hasOwnProperty, useState: metroRequire } = noop);
+({ useContext: closure_4, useEffect: hasOwnProperty, useState: closure_6 } = noop);
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

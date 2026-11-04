@@ -1,14 +1,14 @@
-// === Module 14825: QuestRewardCodeClaimBottomSheet ===
+// === Module 14905: QuestRewardCodeClaimBottomSheet ===
 
-// Module 14825 (QuestRewardCodeClaimBottomSheet)
+// Module 14905 (QuestRewardCodeClaimBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9832 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9850 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7970 */;
+import QuestStore from "QuestStore" /* 7986 */;
 
 const require = globalThis.__r;
 
@@ -98,8 +98,8 @@ function QuestRewardCodeClaimBottomSheet(quest) {
         const obj2 = { text: null, icon: null };
         const intl = quest(1113).intl;
         obj2.text = intl.string(quest(1113).t.MSaeTe);
-        obj2.icon = quest(5851).CopyIcon;
-        rewardCode(5832).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+        obj2.icon = quest(5865).CopyIcon;
+        rewardCode(5846).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
       });
     }
   }, items4);
@@ -123,7 +123,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   const obj8 = { style: tmp3.wrapper, children: null };
   let tmp16Result = null != rewardCode && null != rewardCodeRedemptionInstructions;
   if (tmp16Result) {
-    const obj9 = { style: tmp3.redemptionInstructions, variant: "text-md/normal", color: "text-default", children: tmp(tmp2[20]).parse(rewardCodeRedemptionInstructions, true, { allowLinks: true }) };
+    const obj9 = { style: tmp3.redemptionInstructions, variant: "body-md/normal", color: "text-default", children: tmp(tmp2[20]).parse(rewardCodeRedemptionInstructions, true, { allowLinks: true }) };
     tmp16Result = closure_8(tmp4(tmp2[19]).Text, obj9);
     const tmpResult = tmp(tmp2[20]);
   }
@@ -195,7 +195,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(6901).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(6916).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -224,7 +224,7 @@ export default function QuestRewardCodeClaimBottomSheetConnected(questContentPos
       questContentPosition,
       sourceQuestContent,
       children() {
-          return React6(QuestRewardCodeClaimBottomSheet, { quest: stateFromStores, questContent, questContentPosition, sourceQuestContent });
+          return React5(QuestRewardCodeClaimBottomSheet, { quest: stateFromStores, questContent, questContentPosition, sourceQuestContent });
         }
     };
     tmp5 = closure_8(require("QuestContentImpressionTracker").QuestContentImpressionTrackerNative, obj2);

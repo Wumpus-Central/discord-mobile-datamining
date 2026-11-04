@@ -1,11 +1,11 @@
-// === Module 13115: ConjureHomeBackdrop ===
+// === Module 13198: ConjureHomeBackdrop ===
 
-// Module 13115 (ConjureHomeBackdrop)
+// Module 13198 (ConjureHomeBackdrop)
 import nativeDefault from "native" /* 575 */;
-import useTheme from "useTheme" /* 5376 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import useToken from "useToken" /* 5719 */;
-import inlineStyles from "inlineStyles" /* 8155 */;
+import useTheme from "useTheme" /* 5377 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import useToken from "useToken" /* 5732 */;
+import inlineStyles from "inlineStyles" /* 8171 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -14,7 +14,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const colors = ["rgb(42, 45, 83)", "rgb(83, 39, 75)"];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };

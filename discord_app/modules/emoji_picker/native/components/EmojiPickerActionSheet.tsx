@@ -1,22 +1,22 @@
-// === Module 10072: EmojiPickerActionSheet ===
+// === Module 10120: EmojiPickerActionSheet ===
 
-// Module 10072 (EmojiPickerActionSheet)
+// Module 10120 (EmojiPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Search_SearchBar from "Search/SearchBar" /* 7339 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10070 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 10074 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 10081 */;
-import BurstReactionToggleDefault from "BurstReactionToggle" /* 10083 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Search_SearchBar from "Search/SearchBar" /* 7355 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10122 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 10129 */;
+import BurstReactionToggleDefault from "BurstReactionToggle" /* 10131 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(10073).EmojiPickerSource;
+const EmojiPickerSource = fn(10121).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
@@ -154,7 +154,7 @@ export default function EmojiPickerActionSheet(onClose) {
       const intl = util.intl;
       obj2.children = intl.string(util.t.wHTk2C);
       items = [closure_2_10(Text_Text.Text, obj2), ];
-      const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj3 = { variant: "body-sm/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.string(util.t.VrWSNn);
       items[1] = closure_2_10(Text_Text.Text, obj3);

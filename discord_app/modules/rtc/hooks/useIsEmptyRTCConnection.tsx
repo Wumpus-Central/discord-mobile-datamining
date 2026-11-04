@@ -1,10 +1,10 @@
-// === Module 9417: useIsEmptyRTCConnection ===
+// === Module 9434: useIsEmptyRTCConnection ===
 
-// Module 9417 (useIsEmptyRTCConnection)
+// Module 9434 (useIsEmptyRTCConnection)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8009 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 8025 */;
 
 const require = globalThis.__r;
 

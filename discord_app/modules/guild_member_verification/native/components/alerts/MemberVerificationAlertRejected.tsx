@@ -1,6 +1,6 @@
-// === Module 7039: MemberVerificationAlertRejected ===
+// === Module 7054: MemberVerificationAlertRejected ===
 
-// Module 7039 (MemberVerificationAlertRejected)
+// Module 7054 (MemberVerificationAlertRejected)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
@@ -90,7 +90,7 @@ export default function MemberVerificationAlertRejected(guildId) {
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            const obj4 = v1(7036);
+            const obj4 = v1(7051);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;
@@ -124,7 +124,7 @@ export default function MemberVerificationAlertRejected(guildId) {
           if (closure_128_1 != null) {
             tmp6();
           }
-          const result = guildId(7064).openMemberVerificationModal(closure_128_0);
+          const result = guildId(7079).openMemberVerificationModal(closure_128_0);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -184,7 +184,7 @@ export default function MemberVerificationAlertRejected(guildId) {
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            const obj4 = v1(7036);
+            const obj4 = v1(7051);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;
@@ -218,7 +218,7 @@ export default function MemberVerificationAlertRejected(guildId) {
           if (closure_128_1 != null) {
             tmp6();
           }
-          const result = guildId(7064).openMemberVerificationModal(closure_128_0);
+          const result = guildId(7079).openMemberVerificationModal(closure_128_0);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

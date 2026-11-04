@@ -1,6 +1,6 @@
-// === Module 18483: ? ===
+// === Module 18577: ? ===
 
-// Module 18483
+// Module 18577
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MiniaturesSpotIllustration-2x.png.js");

@@ -1,21 +1,21 @@
-// === Module 6169: MediaPostEmbedUtils ===
+// === Module 6184: MediaPostEmbedUtils ===
 
-// Module 6169 (MediaPostEmbedUtils)
+// Module 6184 (MediaPostEmbedUtils)
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import LinkUtils from "LinkUtils" /* 5774 */;
-import findCodedLinks from "findCodedLinks" /* 5868 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6161 */;
-import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 6170 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import LinkUtils from "LinkUtils" /* 5788 */;
+import findCodedLinks from "findCodedLinks" /* 5882 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
+import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 6185 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
-({ GuildFeatures: metroRequire, MessageAttachmentFlags: closure_7 } = Constants);
+({ GuildFeatures: closure_6, MessageAttachmentFlags: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
 

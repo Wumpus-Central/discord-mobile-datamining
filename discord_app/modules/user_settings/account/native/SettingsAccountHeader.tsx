@@ -1,15 +1,15 @@
-// === Module 16728: SettingsAccountHeader ===
+// === Module 16820: SettingsAccountHeader ===
 
-// Module 16728 (SettingsAccountHeader)
+// Module 16820 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import TableRow from "TableRow" /* 7101 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7121 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7288 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16729 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import TableRow from "TableRow" /* 7116 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 7136 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7304 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16821 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -23,11 +23,11 @@ function RestrictedAccountRedirect() {
     },
     noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE
   };
-  return React7(SafetySettingsNoticeDefault, obj);
+  return React6(SafetySettingsNoticeDefault, obj);
 }
 const View = fn(17).View;
 const AnalyticsSections = fn(1072).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7614).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7630).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -51,7 +51,7 @@ export default noop.memo(function SettingsAccountHeader() {
     const obj4 = { style: tmp.header, children: null };
     let tmp11 = null;
     if (stateFromStores1) {
-      tmp11 = React7(RestrictedAccountRedirect, {});
+      tmp11 = React6(RestrictedAccountRedirect, {});
     }
     const items2 = [tmp11, ];
     let tmp14 = null;
@@ -61,8 +61,8 @@ export default noop.memo(function SettingsAccountHeader() {
       const obj10 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6.text, button: obj6.accessibilityLabel } = bannerText);
       obj10.onPress = callback;
-      obj9.trailing = React7(components_Button_Button.Button, obj10);
-      tmp14 = React7(TableRow.TableRow, obj9);
+      obj9.trailing = React6(components_Button_Button.Button, obj10);
+      tmp14 = React6(TableRow.TableRow, obj9);
     }
     items2[1] = tmp14;
     obj4.children = items2;

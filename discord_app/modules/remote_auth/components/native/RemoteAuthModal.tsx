@@ -1,23 +1,23 @@
-// === Module 15830: RemoteAuthModal ===
+// === Module 15918: RemoteAuthModal ===
 
-// Module 15830 (RemoteAuthModal)
+// Module 15918 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5732 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import ButtonGroup from "ButtonGroup" /* 6887 */;
-import AuthBackgroundArtDefault from "AuthBackgroundArt" /* 7073 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7080 */;
-import _modDef15829 from "module_15829" /* 15829 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15831 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15835 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import ButtonGroup from "ButtonGroup" /* 6902 */;
+import AuthBackgroundArtDefault from "AuthBackgroundArt" /* 7088 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7095 */;
+import _modDef15917 from "module_15917" /* 15917 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15919 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15923 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,10 +36,10 @@ function RemoteAuthBody(remoteAuthFingerprint) {
     HTTP.post(request).then((body) => {
       dependencyMap(body.body.handshake_token);
       closure_1_1(constants.LOADED);
-      const result = remoteAuthFingerprint(5732).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5745).DeprecatedLayoutAnimation();
     }).catch(() => {
       closure_1_1(constants.NOT_FOUND);
-      const result = remoteAuthFingerprint(5732).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5745).DeprecatedLayoutAnimation();
     });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -99,7 +99,7 @@ function RemoteAuthLogin(arg0) {
     });
   }, 1000, { leading: true, trailing: false });
   items = [closure_7(View, { style: tmp.mainImage, children: closure_7(QrLoginSpotIllustration.QrLoginSpotIllustration, { scale: 0.75 }) }), , , ];
-  const obj4 = { variant: "heading-md/semibold", children: null };
+  const obj4 = { variant: "heading-sm/semibold", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.jD2pqF);
   items[1] = closure_7(Text_Text.Heading, obj4);
@@ -132,24 +132,24 @@ function RemoteAuthLogin(arg0) {
 function RemoteAuthLoginSucceeded() {
   const tmp = closure_10();
   const obj = { children: null };
-  items = [React5(View, { style: tmp.mainImage, children: React5(QrSuccessSpotIllustration.QrSuccessSpotIllustration, { scale: 0.75 }) }), , , ];
+  items = [metroImportDefault(View, { style: tmp.mainImage, children: metroImportDefault(QrSuccessSpotIllustration.QrSuccessSpotIllustration, { scale: 0.75 }) }), , , ];
   const obj3 = { variant: "heading-xl/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.HbwTOZ);
-  items[1] = React5(Text_Text.Heading, obj3);
-  const obj4 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
+  items[1] = metroImportDefault(Text_Text.Heading, obj3);
+  const obj4 = { style: tmp.caption, variant: "body-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.wKknJ0);
-  items[2] = React5(Text_Text.Text, obj4);
+  items[2] = metroImportDefault(Text_Text.Text, obj4);
   const obj5 = { style: tmp.buttonGroup, children: null };
   const obj6 = { text: null, onPress: null };
   const intl3 = util.intl;
   obj6.text = intl3.string(util.t.pYWLA0);
   obj6.onPress = ModalActionCreatorsDefault.pop;
-  obj5.children = React5(components_Button_Button.Button, obj6);
-  items[3] = React5(ButtonGroup.ButtonGroup, obj5);
+  obj5.children = metroImportDefault(components_Button_Button.Button, obj6);
+  items[3] = metroImportDefault(ButtonGroup.ButtonGroup, obj5);
   obj.children = items;
-  return React6(React7, obj);
+  return React5(React6, obj);
 }
 function RemoteAuthNotFound() {
   const tmp = closure_10();
@@ -157,28 +157,28 @@ function RemoteAuthNotFound() {
   const obj2 = { variant: "heading-xl/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.NShI3Q);
-  items = [React5(Text_Text.Heading, obj2), , ];
-  const obj3 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
+  items = [metroImportDefault(Text_Text.Heading, obj2), , ];
+  const obj3 = { style: tmp.caption, variant: "body-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.Ygezov);
-  items[1] = React5(Text_Text.Text, obj3);
+  items[1] = metroImportDefault(Text_Text.Text, obj3);
   const obj4 = { style: tmp.buttonGroup, children: null };
   const obj5 = { text: null, onPress: null };
   const intl3 = util.intl;
   obj5.text = intl3.string(util.t["ETE/oC"]);
   obj5.onPress = ModalActionCreatorsDefault.pop;
-  obj4.children = React5(components_Button_Button.Button, obj5);
-  items[2] = React5(ButtonGroup.ButtonGroup, obj4);
+  obj4.children = metroImportDefault(components_Button_Button.Button, obj5);
+  items[2] = metroImportDefault(ButtonGroup.ButtonGroup, obj4);
   obj.children = items;
-  return React6(React7, obj);
+  return React5(React6, obj);
 }
 function RemoteAuthLoading() {
-  return React5(View, { style: closure_10().loadingContainer, children: React5(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) });
+  return metroImportDefault(View, { style: closure_10().loadingContainer, children: metroImportDefault(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) });
 }
 const View = fn(17).View;
 const Endpoints = fn(1072).Endpoints;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { background: { width: "100%", height: "100%" }, container: { flex: 1, alignItems: "stretch", alignContent: "center" }, logo: { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 }, mainImage: { marginTop: 16, marginBottom: 32 }, warningCaption: { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 }, caption: { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 }, mainCard: null, buttonGroup: null, loadingContainer: null };
 let obj3 = { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 };
@@ -193,18 +193,18 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 export default function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  items = [React5(AuthBackgroundArtDefault, {}), , ];
+  items = [metroImportDefault(AuthBackgroundArtDefault, {}), , ];
   const obj2 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items1;
-  obj2.source = _modDef15829;
-  items[1] = React5(FastImageDefault, obj2);
+  obj2.source = _modDef15917;
+  items[1] = metroImportDefault(FastImageDefault, obj2);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.mainCard, children: null };
   const merged = Object.assign(arg0);
-  obj4.children = React5(RemoteAuthBody, {});
-  obj3.children = React5(View, obj4);
-  items[2] = React5(View, obj3);
+  obj4.children = metroImportDefault(RemoteAuthBody, {});
+  obj3.children = metroImportDefault(View, obj4);
+  items[2] = metroImportDefault(View, obj3);
   obj.children = items;
-  return React6(View, obj);
+  return React5(View, obj);
 };

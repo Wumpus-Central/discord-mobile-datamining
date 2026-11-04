@@ -1,14 +1,14 @@
-// === Module 20262: PlayableStore ===
+// === Module 20378: PlayableStore ===
 
-// Module 20262 (PlayableStore)
+// Module 20378 (PlayableStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import QuestTypes from "QuestTypes" /* 6904 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6992 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7968 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7967 */;
-import FramesStore from "FramesStore" /* 6966 */;
+import QuestTypes from "QuestTypes" /* 6919 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 7007 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7984 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7983 */;
+import FramesStore from "FramesStore" /* 6981 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
 
 require = fn;
@@ -70,8 +70,8 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5777).ActivityPanelModes;
-const asLaunched = fn(6967).asLaunched;
+const ActivityPanelModes = fn(5791).ActivityPanelModes;
+const asLaunched = fn(6982).asLaunched;
 let c3 = null;
 const Store = initializeDefault.Store;
 class PlayableStore extends Store {

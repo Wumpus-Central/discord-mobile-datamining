@@ -1,20 +1,20 @@
-// === Module 15348: VoiceChannelHeader ===
+// === Module 15435: VoiceChannelHeader ===
 
-// Module 15348 (VoiceChannelHeader)
+// Module 15435 (VoiceChannelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import Pressables from "Pressables" /* 7106 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7395 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9246 */;
-import _modDef11111 from "module_11111" /* 11111 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11763 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 12046 */;
-import CallStateHooks from "CallStateHooks" /* 15349 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 15350 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 15351 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelNameDefault from "useChannelName" /* 5786 */;
+import Pressables from "Pressables" /* 7121 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7411 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9263 */;
+import _modDef11159 from "module_11159" /* 11159 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11819 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 12105 */;
+import CallStateHooks from "CallStateHooks" /* 15436 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 15437 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 15438 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -31,7 +31,7 @@ function PrivateChannelSubtitle(channel) {
   items = [closure_1_10(OngoingCallStatusLabelDefault, { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle }), , ];
   let tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
-    const obj3 = { style: tmp.subtitle, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
+    const obj3 = { style: tmp.subtitle, variant: "body-xs/medium", color: "text-overlay-light", children: " - " };
     tmp6Result = closure_1_10(Text_Text.Text, obj3);
   }
   items[1] = tmp6Result;
@@ -118,7 +118,7 @@ class VoiceChannelHeader {
     obj15 = { style: tmp.middle, children: null };
     tmp14Result = formatToPlainStringResult;
     if (typeof formatToPlainStringResult === "string") {
-      obj16 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-md/semibold", color: "text-overlay-light", children: null };
+      obj16 = { lineClamp: 1, lineBreakMode: "tail", variant: "body-md/semibold", color: "text-overlay-light", children: null };
       obj16.children = formatToPlainStringResult;
       tmp14Result = tmp14(tmp2(tmp3[11]).Text, obj16);
     }
@@ -126,7 +126,7 @@ class VoiceChannelHeader {
     items4[0] = tmp14Result;
     tmp14Result1 = name;
     if (typeof name === "string") {
-      obj17 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-xs/medium", color: "text-overlay-light", children: null };
+      obj17 = { lineClamp: 1, lineBreakMode: "tail", variant: "body-xs/medium", color: "text-overlay-light", children: null };
       obj17.children = name;
       tmp14Result1 = tmp14(tmp2(tmp3[11]).Text, obj17);
     }
@@ -148,7 +148,7 @@ class VoiceChannelHeader {
   }
 }
 function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef11111, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef11159, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return closure_1_10(IconButton, obj);
@@ -162,7 +162,7 @@ class IconButton {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
+({ Permissions: metroImportDefault, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);

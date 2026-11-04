@@ -1,9 +1,9 @@
-// === Module 12042: HandRequestDenyIcon ===
+// === Module 12101: HandRequestDenyIcon ===
 
-// Module 12042 (HandRequestDenyIcon)
+// Module 12101 (HandRequestDenyIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5836 */;
-import _mod12043 from "module_12043" /* 12043 */;
+import BaseIconImage from "BaseIconImage" /* 5850 */;
+import _mod12102 from "module_12102" /* 12102 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HandRequestDenyIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12043, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12102, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

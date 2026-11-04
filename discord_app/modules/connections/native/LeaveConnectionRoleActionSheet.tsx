@@ -1,10 +1,10 @@
-// === Module 11738: LeaveConnectionRoleActionSheet ===
+// === Module 11793: LeaveConnectionRoleActionSheet ===
 
-// Module 11738 (LeaveConnectionRoleActionSheet)
+// Module 11793 (LeaveConnectionRoleActionSheet)
 import util from "util" /* 1113 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const intl = util.intl;
   obj3.children = intl.string(util.t.vytvJF);
   items = [React3(Text_Text.Text, obj3), , ];
-  const obj4 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
+  const obj4 = { style: tmp.marginTop, variant: "body-md/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.caJwb5);
   items[1] = React3(Text_Text.Text, obj4);

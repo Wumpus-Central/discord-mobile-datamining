@@ -1,6 +1,6 @@
-// === Module 17198: OrbsArcadeRewardRing ===
+// === Module 17290: OrbsArcadeRewardRing ===
 
-// Module 17198 (OrbsArcadeRewardRing)
+// Module 17290 (OrbsArcadeRewardRing)
 import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ function RingArc(arcLength) {
 }
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let closure_4 = module_1652.createAnimatedComponent(fn(8155).Path);
+let closure_4 = module_1652.createAnimatedComponent(fn(8171).Path);
 let closure_5 = { code: "(function OrbsArcadeRewardRingTsx1(){let[arcLength,progress]=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};})" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeRewardRing.tsx");

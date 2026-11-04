@@ -1,6 +1,6 @@
-// === Module 8309: FormInput ===
+// === Module 8325: FormInput ===
 
-// Module 8309 (FormInput)
+// Module 8325 (FormInput)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import native2 from "native" /* 5207 */;
@@ -8,9 +8,9 @@ import noop from "module_19" /* 19 */;
 
 const native = TextArea(1187);
 const shared = TextArea(5148);
-const RedesignCompat = TextArea(7185);
-const TextInput = TextArea(7208);
-const TextArea2 = TextArea(7373);
+const RedesignCompat = TextArea(7200);
+const TextInput = TextArea(7223);
+const TextArea2 = TextArea(7389);
 require = fn;
 const KeyboardThemes = fn(1072).KeyboardThemes;
 const jsx = fn(21).jsx;

@@ -1,8 +1,8 @@
-// === Module 13158: ConjurePerfTraceStatusDot ===
+// === Module 13241: ConjurePerfTraceStatusDot ===
 
-// Module 13158 (ConjurePerfTraceStatusDot)
+// Module 13241 (ConjurePerfTraceStatusDot)
 import nativeDefault from "native" /* 575 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 13154 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 13237 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

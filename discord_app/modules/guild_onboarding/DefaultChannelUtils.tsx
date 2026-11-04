@@ -1,6 +1,6 @@
-// === Module 7390: DefaultChannelUtils ===
+// === Module 7406: DefaultChannelUtils ===
 
-// Module 7390 (DefaultChannelUtils)
+// Module 7406 (DefaultChannelUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
 import GatedChannelStore from "GatedChannelStore" /* 5045 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const Constants = fn(1072);
-({ ChannelTypesSets: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ ChannelTypesSets: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/DefaultChannelUtils.tsx");
 

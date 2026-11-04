@@ -1,12 +1,12 @@
-// === Module 18800: HomeWelcomeMessage ===
+// === Module 18901: HomeWelcomeMessage ===
 
-// Module 18800 (HomeWelcomeMessage)
+// Module 18901 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 575 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8882 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8899 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7522 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7538 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -111,7 +111,7 @@ export default function HomeWelcomeMessage(guildId) {
           const obj10 = { style: tmp.welcomeContent, children: null };
           const obj11 = { style: tmp.adminUsernameContainer, children: null };
           const tmp7Result = tmp7(tmp3[16]);
-          const obj12 = { style: tmp.adminUsername, variant: "text-md/semibold", children: null };
+          const obj12 = { style: tmp.adminUsername, variant: "body-md/semibold", children: null };
           const tmp7Result3 = tmp7(tmp3[18]);
           obj12.children = tmp7(tmp3[20]).getName(guildId, null, stateFromStores2);
           const items7 = [closure_8(tmp2(tmp3[19]).Text, obj12), ];
@@ -133,9 +133,9 @@ export default function HomeWelcomeMessage(guildId) {
           let num3 = 0;
           if (0 < parts.length - 1) {
             do {
-              let obj14 = { variant: "text-sm/normal", style: tmp.message, children: parts[num3] };
+              let obj14 = { variant: "body-sm/normal", style: tmp.message, children: parts[num3] };
               let arr = items9.push(closure_8(guildId(stateFromStores2[19]).Text, obj14, num3));
-              let obj15 = { variant: "text-sm/semibold", style: tmp.message, children: null };
+              let obj15 = { variant: "body-sm/semibold", style: tmp.message, children: null };
               let _HermesInternal = HermesInternal;
               obj15.children = "@" + username;
               let _HermesInternal2 = HermesInternal;
@@ -147,8 +147,8 @@ export default function HomeWelcomeMessage(guildId) {
               diff = parts.length - 1;
             } while (num3 < diff);
           }
-          const obj16 = { variant: "text-sm/normal", children: null };
-          const obj17 = { variant: "text-sm/normal", style: tmp.message, children: parts[parts.length - 1] };
+          const obj16 = { variant: "body-sm/normal", children: null };
+          const obj17 = { variant: "body-sm/normal", style: tmp.message, children: parts[parts.length - 1] };
           items9.push(tmp28(tmp2(tmp3[19]).Text, obj17, parts.length));
           obj16.children = items9;
           items8[1] = closure_8(tmp2(tmp3[19]).Text, obj16);

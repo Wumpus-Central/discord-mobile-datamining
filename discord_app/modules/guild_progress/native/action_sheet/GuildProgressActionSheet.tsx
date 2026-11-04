@@ -1,22 +1,22 @@
-// === Module 14180: GuildProgressActionSheet ===
+// === Module 14266: GuildProgressActionSheet ===
 
-// Module 14180 (GuildProgressActionSheet)
+// Module 14266 (GuildProgressActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import transitionToChannel from "transitionToChannel" /* 5876 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9246 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 14178 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14181 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 14186 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import transitionToChannel from "transitionToChannel" /* 5890 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9263 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 14264 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14267 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 14272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 
 const require = globalThis.__r;
@@ -37,7 +37,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(14173);
+const GuildProgressConstants = fn(14259);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1072);
 ({ UPLOAD_MEDIUM_SIZE: closure_10, AnalyticEvents: closure_11, ComponentActions: closure_12, InstantInviteSources: map1 } = Constants);
@@ -78,14 +78,14 @@ export default function GuildProgressActionSheet(guild) {
             return obj3;
           } else {
             let base64;
-            tmp5(9202).init(View);
-            const obj6 = tmp5(9202);
-            tmp2(14178).hideActionSheet(id.id);
-            const obj7 = tmp2(14178);
+            tmp5(9219).init(View);
+            const obj6 = tmp5(9219);
+            tmp2(14264).hideActionSheet(id.id);
+            const obj7 = tmp2(14264);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(8344).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(8360).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -98,8 +98,8 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            tmp5(9202).updateIcon(closure_129_5, base64);
-            const obj = tmp5(9202);
+            tmp5(9219).updateIcon(closure_129_5, base64);
+            const obj = tmp5(9219);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -153,7 +153,7 @@ export default function GuildProgressActionSheet(guild) {
   };
   let obj5 = { uri: null };
   let obj3 = guild(numFinished[10]);
-  obj5.uri = require("module_14183");
+  obj5.uri = require("module_14269");
   obj4.source = obj5;
   const intl = guild(numFinished[18]).intl;
   obj4.title = intl.string(guild(numFinished[18]).t.q9n0Ta);
@@ -180,7 +180,7 @@ export default function GuildProgressActionSheet(guild) {
   };
   let obj7 = { uri: null };
   const tmp11 = closure_14(require("ProgressItem"), obj4);
-  obj7.uri = require("module_14184");
+  obj7.uri = require("module_14270");
   obj6.source = obj7;
   const intl2 = guild(numFinished[18]).intl;
   obj6.title = intl2.string(guild(numFinished[18]).t.DWB2YZ);
@@ -210,7 +210,7 @@ export default function GuildProgressActionSheet(guild) {
   };
   let obj9 = { uri: null };
   const tmp13 = closure_14(require("ProgressItem"), obj6);
-  obj9.uri = require("module_14185");
+  obj9.uri = require("module_14271");
   obj8.source = obj9;
   const intl3 = guild(numFinished[18]).intl;
   obj8.title = intl3.string(guild(numFinished[18]).t.dNktpr);
@@ -233,7 +233,7 @@ export default function GuildProgressActionSheet(guild) {
   };
   const obj11 = { uri: null };
   const tmp15 = closure_14(require("ProgressItem"), obj8);
-  obj11.uri = require("module_14293");
+  obj11.uri = require("module_14379");
   obj10.source = obj11;
   const intl4 = guild(numFinished[18]).intl;
   obj10.title = intl4.string(guild(numFinished[18]).t["6Qbqxw"]);
@@ -250,7 +250,7 @@ export default function GuildProgressActionSheet(guild) {
     numFinished,
     total: totalSteps,
     stepsHook(children, arg1) {
-      return closure_1_14(guild(numFinished[29]).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children }, arg1);
+      return closure_1_14(guild(numFinished[29]).Text, { variant: "body-sm/medium", color: "mobile-text-heading-primary", children }, arg1);
     }
   });
   const items5 = [closure_14(GuildProgressHeader, obj13), tmp11, tmp13, tmp15, closure_14(require("ProgressItem"), obj10), ];
@@ -273,7 +273,7 @@ export default function GuildProgressActionSheet(guild) {
     let tmp9Result = closure_14(tmp2(tmp3[30]).Button, obj16);
   } else {
     const obj17 = { accessibilityRole: "button", onPress: handleDismissGuildProgress, children: null };
-    const obj18 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj18 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl7 = tmp2(tmp3[18]).intl;
     obj18.children = intl7.string(tmp2(tmp3[18]).t["9E36wf"]);
     obj17.children = closure_14(tmp2(tmp3[29]).Text, obj18);

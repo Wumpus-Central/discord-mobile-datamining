@@ -1,6 +1,6 @@
-// === Module 18975: ChannelDetailsTopicGradient ===
+// === Module 19078: ChannelDetailsTopicGradient ===
 
-// Module 18975 (ChannelDetailsTopicGradient)
+// Module 19078 (ChannelDetailsTopicGradient)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopicGradient.tsx");
 
 export function useChannelTopicGradientBackground() {
-  token = token(5719).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  token = token(5732).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   items = [token];
   return noop.useMemo(() => {
     const obj = _modDef671(token);

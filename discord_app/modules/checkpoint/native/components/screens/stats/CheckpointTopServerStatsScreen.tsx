@@ -1,23 +1,23 @@
-// === Module 13802: CheckpointTopServerStatsScreen ===
+// === Module 13888: CheckpointTopServerStatsScreen ===
 
-// Module 13802 (CheckpointTopServerStatsScreen)
+// Module 13888 (CheckpointTopServerStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3219 from "module_3219" /* 3219 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6557 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import ServerIcon from "ServerIcon" /* 9890 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13777 */;
-import CheckpointTextDefault from "CheckpointText" /* 13779 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13792 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13793 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13799 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 13800 */;
-import CheckpointStore from "CheckpointStore" /* 13571 */;
-import CheckpointConstants from "CheckpointConstants" /* 6186 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6572 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import ServerIcon from "ServerIcon" /* 9908 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13863 */;
+import CheckpointTextDefault from "CheckpointText" /* 13865 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13878 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13879 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13885 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 13886 */;
+import CheckpointStore from "CheckpointStore" /* 13656 */;
+import CheckpointConstants from "CheckpointConstants" /* 6201 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size_mod from "module_2" /* 2 */;
@@ -27,7 +27,7 @@ const GuildIconDefault = GuildIcon;
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let obj = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_64 }, spotlightContainer: { flexGrow: 1, justifyContent: "center", alignItems: "center" }, spotlight: { alignItems: "flex-start" }, card: null, guildIcon: null, guildDetails: null, guildName: null, copy: null, title: null, titleText: null, number: null };
 let obj2 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_64 };
 obj.card = { gap: nativeDefault.space.PX_12, borderWidth: 1, borderColor: CHECKPOINT_PRIMARY, backgroundColor: CHECKPOINT_GUILD_CARD_BACKGROUND };
@@ -107,11 +107,11 @@ export default function CheckpointTopServerStatsScreen() {
     obj10.numMessagesSent = num3;
     items3[1] = timestampProducer(CheckpointGuildStatsDefault, obj10);
     obj8.children = items3;
-    items2[1] = React5(View, obj8);
+    items2[1] = metroImportDefault(View, obj8);
     obj6.children = items2;
-    items1[1] = React5(View, obj6);
+    items1[1] = metroImportDefault(View, obj6);
     obj5.children = items1;
-    tmp12Result = React5(View, obj5);
+    tmp12Result = metroImportDefault(View, obj5);
     const tmp8Result6 = CheckpointGuildStatsDefault;
   }
   obj4.children = tmp12Result;
@@ -119,13 +119,13 @@ export default function CheckpointTopServerStatsScreen() {
   const obj11 = { style: tmp.copy, children: null };
   const obj12 = { style: tmp.title, children: null };
   const items5 = [timestampProducer(ServerIcon.ServerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY }), ];
-  const obj14 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
+  const obj14 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj13 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const tmp8Result = CheckpointScreenDefault;
   obj14.children = stringResult.toLocaleUpperCase();
   items5[1] = timestampProducer(CheckpointTextDefault, obj14);
   obj12.children = items5;
-  const items6 = [React5(View, obj12), , ];
+  const items6 = [metroImportDefault(View, obj12), , ];
   const tmp8Result7 = CheckpointTextDefault;
   items6[1] = timestampProducer(View, { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult, style: tmp.number, children: timestampProducer(CheckpointCountUpStatNumberDefault, { end: rounded }) });
   const obj16 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
@@ -149,8 +149,8 @@ export default function CheckpointTopServerStatsScreen() {
   obj16.children = formatResult;
   items6[2] = timestampProducer(CheckpointTextDefault, obj16);
   obj11.children = items6;
-  items4[1] = React5(View, obj11);
+  items4[1] = metroImportDefault(View, obj11);
   obj3.children = items4;
-  obj19.children = React5(View, obj3);
+  obj19.children = metroImportDefault(View, obj3);
   return timestampProducer(tmp8Result, obj19);
 };

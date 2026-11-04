@@ -1,7 +1,7 @@
-// === Module 7202: ConfirmEmailChangeStart ===
+// === Module 7217: ConfirmEmailChangeStart ===
 
-// Module 7202 (ConfirmEmailChangeStart)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 7217 (ConfirmEmailChangeStart)
+import Text_Text from "Text/Text" /* 5761 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -38,20 +38,20 @@ export default function ConfirmEmailChangeStart() {
     const obj5 = { style: tmp.container, children: null };
     let obj6 = { style: tmp.image, source: null };
     const formatResult = intl.format(tmp2(1113).t.oMFSgi, obj3);
-    obj6.source = navigation(7204);
-    const items1 = [closure_9(navigation(5837), obj6), , , ];
+    obj6.source = navigation(7219);
+    const items1 = [closure_9(navigation(5851), obj6), , , ];
     let obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(1113).intl;
     obj7.children = intl2.string(tmp2(1113).t.dQ71Wa);
-    items1[1] = closure_9(tmp2(5747).Text, obj7);
-    items1[2] = formatResult.map((children, index) => React7(Text_Text.Text, { style: body.body, variant: "text-sm/medium", color: "text-default", children }, index));
+    items1[1] = closure_9(tmp2(5761).Text, obj7);
+    items1[2] = formatResult.map((children, index) => React6(Text_Text.Text, { style: body.body, variant: "body-sm/medium", color: "text-default", children }, index));
     let obj8 = { style: tmp.button, children: null };
     const obj9 = { text: null, onPress: null, loading: null, grow: true };
     const intl3 = tmp2(1113).intl;
     obj9.text = intl3.string(tmp2(1113).t.rXV81H);
     obj9.onPress = tmp7;
     obj9.loading = tmp6[0];
-    obj8.children = closure_9(tmp2(5754).Button, obj9);
+    obj8.children = closure_9(tmp2(5768).Button, obj9);
     items1[3] = closure_9(closure_6, obj8);
     obj5.children = items1;
     obj4.children = closure_10(closure_6, obj5);

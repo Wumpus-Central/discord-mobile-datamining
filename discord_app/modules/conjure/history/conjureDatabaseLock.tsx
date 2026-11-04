@@ -1,6 +1,6 @@
-// === Module 12319: conjureDatabaseLock ===
+// === Module 12384: conjureDatabaseLock ===
 
-// Module 12319 (conjureDatabaseLock)
+// Module 12384 (conjureDatabaseLock)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

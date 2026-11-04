@@ -1,8 +1,8 @@
-// === Module 19586: VoiceCallTriggerPointExperiment ===
+// === Module 19690: VoiceCallTriggerPointExperiment ===
 
-// Module 19586 (VoiceCallTriggerPointExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 5362 */;
-import createExperiment from "module_5359" /* 5359 */;
+// Module 19690 (VoiceCallTriggerPointExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 5363 */;
+import createExperiment from "module_5360" /* 5360 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-04_voice_call_trigger_point", label: "Voice Call Trigger Point Experiment", commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: null };

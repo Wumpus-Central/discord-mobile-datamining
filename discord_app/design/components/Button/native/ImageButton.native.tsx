@@ -1,16 +1,16 @@
-// === Module 9323: ImageButton ===
+// === Module 9340: ImageButton ===
 
-// Module 9323 (ImageButton)
+// Module 9340 (ImageButton)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import ButtonConstants from "ButtonConstants" /* 5760 */;
-import ButtonHooks from "ButtonHooks" /* 5761 */;
-import Button_BaseButton from "Button/BaseButton" /* 5763 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import BaseIconButton from "BaseIconButton" /* 8153 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import ButtonConstants from "ButtonConstants" /* 5774 */;
+import ButtonHooks from "ButtonHooks" /* 5775 */;
+import Button_BaseButton from "Button/BaseButton" /* 5777 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import BaseIconButton from "BaseIconButton" /* 8169 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -18,7 +18,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = ButtonConstants.LARGE_BUTTON_PADDING;
@@ -119,7 +119,7 @@ export function ImageButton(size) {
     obj8.onPressOut = callback1;
     obj8.maxFontSizeMultiplier = maxFontSizeMultiplier;
     const items6 = [hasOwnProperty(BaseIconButton.BaseIconButton, obj8), ];
-    const obj9 = { variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier, children: label };
+    const obj9 = { variant: "body-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier, children: label };
     items6[1] = hasOwnProperty(Text_Text.Text, obj9);
     obj7.children = items6;
     let tmp14Result = timestampProducer(Button_BaseButton.BaseButton, obj7);

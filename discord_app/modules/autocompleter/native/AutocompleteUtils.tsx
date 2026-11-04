@@ -1,11 +1,11 @@
-// === Module 10354: autocompleter/AutocompleteUtils ===
+// === Module 10402: autocompleter/AutocompleteUtils ===
 
-// Module 10354 (autocompleter/AutocompleteUtils)
+// Module 10402 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import FormDividerDefault from "FormDivider" /* 8307 */;
-import TimestampUtils from "TimestampUtils" /* 8724 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import FormDividerDefault from "FormDivider" /* 8323 */;
+import TimestampUtils from "TimestampUtils" /* 8741 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
@@ -18,10 +18,10 @@ function AutocompleteFormDivider() {
 }
 let closure_3 = fn(4994).isGuildSelectableChannelType;
 const Constants = fn(1072);
-({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10355);
+({ AutoCompleteResultTypes: metroImportDefault, WHITESPACE_RE: closure_8 } = Constants);
+const ApplicationCommandsConstants = fn(10403);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: closure_10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(6156);
+const ChannelAutocompleteConstants = fn(6171);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
@@ -39,7 +39,7 @@ export function getItemLayout(arg0, index) {
       type = tmp2.type;
     }
   }
-  const tmp3 = type === constants.EMOJI ? React7 : closure_1_10;
+  const tmp3 = type === constants.EMOJI ? React6 : closure_1_10;
   const obj = { length: tmp3, offset: null, index };
   const result = index * tmp3;
   obj.offset = result + Math.max(0, (index - 1) * hairlineWidth);

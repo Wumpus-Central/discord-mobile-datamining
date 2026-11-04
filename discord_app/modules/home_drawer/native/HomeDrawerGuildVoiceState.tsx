@@ -1,20 +1,20 @@
-// === Module 18539: HomeDrawerGuildVoiceState ===
+// === Module 18634: HomeDrawerGuildVoiceState ===
 
-// Module 18539 (HomeDrawerGuildVoiceState)
+// Module 18634 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12179 */;
-import AvatarPile from "AvatarPile" /* 15014 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12238 */;
+import AvatarPile from "AvatarPile" /* 15094 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5887 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5901 */;
 
 const require = globalThis.__r;
 
@@ -37,7 +37,7 @@ function VoiceUsers(arg0) {
 function LiveTag() {
   const tmp = closure_15();
   const obj = { style: tmp.tag, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
-  const obj2 = { variant: "text-xxs/semibold", style: tmp.tagText, lineClamp: 1, children: null };
+  const obj2 = { variant: "footnote/semibold", style: tmp.tagText, lineClamp: 1, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.dI3q4h).toUpperCase();
   obj.children = closure_1_11(Text_Text.Text, obj2);

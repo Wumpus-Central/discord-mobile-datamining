@@ -1,14 +1,14 @@
-// === Module 8071: ChannelPermissionsConstants ===
+// === Module 8087: ChannelPermissionsConstants ===
 
-// Module 8071 (ChannelPermissionsConstants)
+// Module 8087 (ChannelPermissionsConstants)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import ForumPlatformUtilsDefault from "ForumPlatformUtils" /* 8072 */;
-import GuildTiVPlatformUtilsDefault from "GuildTiVPlatformUtils" /* 8073 */;
+import ForumPlatformUtilsDefault from "ForumPlatformUtils" /* 8088 */;
+import GuildTiVPlatformUtilsDefault from "GuildTiVPlatformUtils" /* 8089 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
-({ ChannelTypes: c3, ChannelTypesSets: closure_4, HelpdeskArticles: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ ChannelTypes: c3, ChannelTypesSets: closure_4, HelpdeskArticles: hasOwnProperty, Permissions: closure_6 } = Constants);
 const result = size.fileFinishedImporting("modules/channel_permissions/ChannelPermissionsConstants.tsx");
 
 export const RowType = { EMPTY_STATE: 0, [0]: "EMPTY_STATE", ADMINISTRATOR: 1, [1]: "ADMINISTRATOR", ROLE: 2, [2]: "ROLE", OWNER: 3, [3]: "OWNER", MEMBER: 4, [4]: "MEMBER", USER: 5, [5]: "USER", GUILD: 6, [6]: "GUILD", APP_CHANNEL_APP: 7, [7]: "APP_CHANNEL_APP" };

@@ -1,19 +1,19 @@
-// === Module 18294: HappeningNowActions ===
+// === Module 18391: HappeningNowActions ===
 
-// Module 18294 (HappeningNowActions)
+// Module 18391 (HappeningNowActions)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9162 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9246 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13987 */;
-import _modDef14517 from "module_14517" /* 14517 */;
-import HappeningNowCardDefault from "HappeningNowCard" /* 17431 */;
-import _modDef18295 from "module_18295" /* 18295 */;
-import _modDef18296 from "module_18296" /* 18296 */;
-import _modDef18297 from "module_18297" /* 18297 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9179 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9263 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 14073 */;
+import _modDef14597 from "module_14597" /* 14597 */;
+import HappeningNowCardDefault from "HappeningNowCard" /* 17522 */;
+import _modDef18392 from "module_18392" /* 18392 */;
+import _modDef18393 from "module_18393" /* 18393 */;
+import _modDef18394 from "module_18394" /* 18394 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -21,7 +21,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17430);
+const HappeningNowConstants = fn(17521);
 ({ HappeningNowCardTrackingType: closure_8, HAPPENING_NOW_CARD_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, InstantInviteSources: closure_10 } = Constants);
@@ -41,7 +41,7 @@ let closure_14 = noop.memo(function ActionCard(panelVariant) {
   const tmp = closure_13();
   const obj = { onPress, style: tmp.actionCard, width: "medium", panelVariant: flag, children: null };
   const obj2 = { style: tmp.actionCardImage, children: closure_1_11(FastImageDefault, { source: imageSource }) };
-  items = [closure_1_11(View, obj2), closure_1_11(Text_Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text })];
+  items = [closure_1_11(View, obj2), closure_1_11(Text_Text.Text, { variant: "body-sm/normal", maxFontSizeMultiplier: 2, children: text })];
   obj.children = items;
   return application_id(HappeningNowCardDefault, obj);
 });
@@ -61,7 +61,7 @@ export function HappeningNowCardCreateChannel(guildId) {
     const obj2 = { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
     CreateChannelModalActionCreatorsDefault.open(null, guildId, null, null);
   }, items);
-  obj.imageSource = _modDef18295;
+  obj.imageSource = _modDef18392;
   obj.onPress = callback;
   const intl = guildId(1113).intl;
   obj.text = intl.string(guildId(1113).t["fUYU+j"]);
@@ -81,7 +81,7 @@ export function HappeningNowCardCustomizeGuild(guildId) {
     const obj2 = { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
     GuildSettingsActionCreatorsDefault.open(guildId);
   }, items);
-  obj.imageSource = _modDef18296;
+  obj.imageSource = _modDef18393;
   obj.onPress = callback;
   obj.panelVariant = flag;
   return closure_11(closure_14, obj);
@@ -105,7 +105,7 @@ export function HappeningNowCardInvite(guildId) {
       const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, constants3.SERVER_PROFILE);
     }
   }, items);
-  obj.imageSource = _modDef18297;
+  obj.imageSource = _modDef18394;
   obj.onPress = callback;
   const intl = guildId(1113).intl;
   obj.text = intl.string(guildId(1113).t.VINpSK);
@@ -133,7 +133,7 @@ export function HappeningNowStudentHubAddServer(guildId) {
     }
     tmp4 = null != guild && null != defaultChannel;
   }, items);
-  obj.imageSource = _modDef14517;
+  obj.imageSource = _modDef14597;
   obj.onPress = callback;
   const intl = guildId(1113).intl;
   obj.text = intl.string(guildId(1113).t.emRpdS);

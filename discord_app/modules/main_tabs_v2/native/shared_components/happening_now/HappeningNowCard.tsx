@@ -1,16 +1,16 @@
-// === Module 17431: HappeningNowCard ===
+// === Module 17522: HappeningNowCard ===
 
-// Module 17431 (HappeningNowCard)
-import Text_Text from "Text/Text" /* 5747 */;
-import Card from "Card" /* 7103 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7238 */;
+// Module 17522 (HappeningNowCard)
+import Text_Text from "Text/Text" /* 5761 */;
+import Card from "Card" /* 7118 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7258 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17430);
+const HappeningNowConstants = fn(17521);
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD_MARGIN_RIGHT;
-({ HAPPENING_NOW_CARD_PADDING: hasOwnProperty, HAPPENING_NOW_CARD_HEIGHT: metroRequire, HAPPENING_NOW_BADGE_SIZE } = HappeningNowConstants);
+({ HAPPENING_NOW_CARD_PADDING: hasOwnProperty, HAPPENING_NOW_CARD_HEIGHT: closure_6, HAPPENING_NOW_BADGE_SIZE } = HappeningNowConstants);
 ({ HAPPENING_NOW_CARD_WIDTH_SMALL_MIN: closure_8, HAPPENING_NOW_CARD_WIDTH_SMALL_MAX: closure_9, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MIN: closure_10, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MAX: closure_11, HAPPENING_NOW_CARD_WIDTH_LARGE_MIN: closure_12, HAPPENING_NOW_CARD_WIDTH_LARGE_MAX: map1, HAPPENING_NOW_CARD_PADDING_RIGHT: closure_14, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MIN: closure_15, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MAX: closure_16, HAPPENING_NOW_CARD_WIDTH_LARGE_PANELS_MAX: closure_17, HAPPENING_NOW_PANELS_CONTAINER_PADDING } = HappeningNowConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
@@ -111,7 +111,7 @@ export function HappeningNowCardHeader(displayNameFont) {
     const obj = { fontFamily: displayNameFont };
     tmp5 = obj;
   }
-  const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", lineClamp: 1, maxFontSizeMultiplier: 2, style: items };
+  const obj2 = { variant: "body-md/medium", color: "mobile-text-heading-primary", lineClamp: 1, maxFontSizeMultiplier: 2, style: items };
   items[1] = tmp5;
   const merged1 = Object.assign(merged);
   obj2.children = children;
@@ -121,7 +121,7 @@ export function HappeningNowCardSubtitle(variant) {
   let str = variant.variant;
   const merged = Object.assign(variant, Object.assign({ children: 0, variant: 0 }));
   if (str == null) {
-    str = "text-sm/normal";
+    str = "body-sm/normal";
   }
   const obj = { variant: str, color: "text-subtle", lineClamp: 1, maxFontSizeMultiplier: 2 };
   const merged1 = Object.assign(merged);

@@ -1,19 +1,19 @@
-// === Module 16959: FamilyCenterRequestsPage ===
+// === Module 17051: FamilyCenterRequestsPage ===
 
-// Module 16959 (FamilyCenterRequestsPage)
+// Module 17051 (FamilyCenterRequestsPage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import useUserLinks from "useUserLinks" /* 8493 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8494 */;
-import useHelpLineVisibility from "useHelpLineVisibility" /* 11435 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 13498 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 16920 */;
-import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 16960 */;
-import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 16965 */;
-import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 16973 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import useUserLinks from "useUserLinks" /* 8510 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8511 */;
+import useHelpLineVisibility from "useHelpLineVisibility" /* 11485 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 13582 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 17012 */;
+import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 17052 */;
+import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 17057 */;
+import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 17065 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,9 +27,9 @@ function FamilyCenterMaxConnectionsBlurb() {
   let tmp10 = null;
   if (hasMaxConnections) {
     const obj2 = { style: tmp.container, children: null };
-    const obj3 = { variant: "text-xxs/medium", color: "text-muted", children: tmp9 };
-    obj2.children = React6(Text_Text.Text, obj3);
-    tmp10 = React6(React3, obj2);
+    const obj3 = { variant: "footnote/medium", color: "text-muted", children: tmp9 };
+    obj2.children = React5(Text_Text.Text, obj3);
+    tmp10 = React5(React3, obj2);
   }
   return tmp10;
 }
@@ -51,22 +51,22 @@ function FamilyCenterHelpLineInfo() {
   let tmp11 = null;
   if (null != formatResult) {
     const obj3 = { style: tmp.container, children: null };
-    const obj4 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: null };
+    const obj4 = { style: tmp.supportHeader, variant: "heading-xs/semibold", children: null };
     const intl3 = util.intl;
     obj4.children = intl3.string(_modDef2667["7/tVhv"]);
-    items = [React6(Text_Text.Text, obj4), ];
-    const obj5 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
-    items[1] = React6(Text_Text.Text, obj5);
+    items = [React5(Text_Text.Text, obj4), ];
+    const obj5 = { variant: "body-xs/medium", color: "text-muted", children: formatResult };
+    items[1] = React5(Text_Text.Text, obj5);
     obj3.children = items;
-    tmp11 = React7(React3, obj3);
+    tmp11 = React6(React3, obj3);
   }
   return tmp11;
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7840);
-({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } = FamilyCenterConstants);
-const THROUGHLINE_URL = fn(11393).THROUGHLINE_URL;
+const FamilyCenterConstants = fn(7856);
+({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: closure_6 } = FamilyCenterConstants);
+const THROUGHLINE_URL = fn(11443).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let createStyles = fn(5141);
@@ -92,9 +92,9 @@ export default function FamilyCenterRequestsPage() {
   const obj = { style: tmp.scrollView, children: null };
   const obj2 = { bottom: true, children: null };
   const obj3 = { style: tmp.container, children: null };
-  items = [React6(FamilyCenterParentalConsentNoticeDefault, {}), React6(FamilyCenterLinkingBannerDefault, {}), React6(FamilyCenterAcceptedLinksDefault, {}), React6(FamilyCenterPendingLinksDefault, {}), React6(FamilyCenterMaxConnectionsBlurb, {}), React6(FamilyCenterHelpLineInfo, {})];
+  items = [React5(FamilyCenterParentalConsentNoticeDefault, {}), React5(FamilyCenterLinkingBannerDefault, {}), React5(FamilyCenterAcceptedLinksDefault, {}), React5(FamilyCenterPendingLinksDefault, {}), React5(FamilyCenterMaxConnectionsBlurb, {}), React5(FamilyCenterHelpLineInfo, {})];
   obj3.children = items;
-  obj2.children = React7(React3, obj3);
-  obj.children = React6(common_SafeAreaView.SafeAreaPaddingView, obj2);
-  return React6(React4, obj);
+  obj2.children = React6(React3, obj3);
+  obj.children = React5(common_SafeAreaView.SafeAreaPaddingView, obj2);
+  return React5(React4, obj);
 };

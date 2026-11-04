@@ -1,21 +1,21 @@
-// === Module 11846: usePipVideoOrStream ===
+// === Module 11905: usePipVideoOrStream ===
 
-// Module 11846 (usePipVideoOrStream)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 11836 */;
+// Module 11905 (usePipVideoOrStream)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 11895 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6963 */;
-import VideoSpeakerStore from "VideoSpeakerStore" /* 11847 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
+import VideoSpeakerStore from "VideoSpeakerStore" /* 11906 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const CallConstants = fn(5801);
+const CallConstants = fn(5815);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");

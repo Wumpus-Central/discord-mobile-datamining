@@ -1,6 +1,6 @@
-// === Module 12720: ConjureComposerDraftStore ===
+// === Module 12801: ConjureComposerDraftStore ===
 
-// Module 12720 (ConjureComposerDraftStore)
+// Module 12801 (ConjureComposerDraftStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -62,7 +62,7 @@ const conjureComposerDraftStore = new ConjureComposerDraftStore(DispatcherDefaul
     closure_6.cancel();
     const Storage = Storage2.Storage;
     Storage.remove(ConjureComposerDrafts);
-    return false;
+    return true;
   },
   CONJURE_COMPOSER_DRAFT_SET: function handleDraftSet(draft) {
     draft = draft.draft;
@@ -71,7 +71,7 @@ const conjureComposerDraftStore = new ConjureComposerDraftStore(DispatcherDefaul
     if ("" === draft) {
       closure_6.flush();
     }
-    return false;
+    return true;
   }
 });
 const size = fn(2);

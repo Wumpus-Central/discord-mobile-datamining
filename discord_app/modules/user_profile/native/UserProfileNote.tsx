@@ -1,8 +1,8 @@
-// === Module 15038: UserProfileNote ===
+// === Module 15118: UserProfileNote ===
 
-// Module 15038 (UserProfileNote)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import openEditNoteModalDefault from "openEditNoteModal" /* 15041 */;
+// Module 15118 (UserProfileNote)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import openEditNoteModalDefault from "openEditNoteModal" /* 15121 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -21,10 +21,10 @@ export default function UserProfileNote(userId) {
     tmp3 = "" !== note;
   }
   const obj2 = { label: null, subLabel: null, accessibilityHint: null, onPress: null, trailing: null, arrow: null, start: true, end: true };
-  const obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj3 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = tmp(tmp2[6]).intl;
   obj3.children = intl.string(userId(trackUserProfileAction[6]).t["mQKv+v"]);
-  obj2.label = jsx(userId(trackUserProfileAction[5]).Text, { variant: "text-sm/semibold", color: "text-default", children: null });
+  obj2.label = jsx(userId(trackUserProfileAction[5]).Text, { variant: "body-sm/semibold", color: "text-default", children: null });
   let tmp5;
   if (tmp3) {
     tmp5 = note;

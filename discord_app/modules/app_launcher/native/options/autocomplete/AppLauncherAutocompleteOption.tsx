@@ -1,15 +1,15 @@
-// === Module 12638: AppLauncherAutocompleteOption ===
+// === Module 12719: AppLauncherAutocompleteOption ===
 
-// Module 12638 (AppLauncherAutocompleteOption)
+// Module 12719 (AppLauncherAutocompleteOption)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import useToken from "useToken" /* 5719 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import InputFieldContainer from "InputFieldContainer" /* 7223 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12637 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import useToken from "useToken" /* 5732 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import InputFieldContainer from "InputFieldContainer" /* 7243 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12718 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
       tmp();
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12639, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12720, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", {
       option,
       initChoice,
       onChoiceSelect(arg0) {

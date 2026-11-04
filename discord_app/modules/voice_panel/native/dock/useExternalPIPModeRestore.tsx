@@ -1,9 +1,9 @@
-// === Module 19361: useExternalPIPModeRestore ===
+// === Module 19465: useExternalPIPModeRestore ===
 
-// Module 19361 (useExternalPIPModeRestore)
+// Module 19465 (useExternalPIPModeRestore)
 import noop from "module_19" /* 19 */;
 
-const VoicePanelModes = fn(11360).VoicePanelModes;
+const VoicePanelModes = fn(11410).VoicePanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useExternalPIPModeRestore.tsx");
 

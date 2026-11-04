@@ -1,14 +1,14 @@
-// === Module 7118: IdentityVerificationField ===
+// === Module 7133: IdentityVerificationField ===
 
-// Module 7118 (IdentityVerificationField)
+// Module 7133 (IdentityVerificationField)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7119 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7253 */;
-import EnvelopeIcon2 from "EnvelopeIcon" /* 7369 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7134 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7273 */;
+import EnvelopeIcon2 from "EnvelopeIcon" /* 7385 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ function BaseIdentityVerificationField(icon) {
     const obj2 = { style: tmp.icon };
     tmp4 = React4(icon, obj2);
   }
-  items = [tmp4, React4(Text_Text.Text, { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label }), ];
+  items = [tmp4, React4(Text_Text.Text, { style: tmp.label, variant: "body-md/medium", color: "mobile-text-heading-primary", children: label }), ];
   if (passesVerification) {
     const obj4 = { style: tmp.verifiedContainer, accessible: true, accessibilityLabel: null, children: null };
     const intl2 = util.intl;

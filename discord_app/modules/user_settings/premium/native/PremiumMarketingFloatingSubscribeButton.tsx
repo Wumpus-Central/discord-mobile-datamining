@@ -1,14 +1,14 @@
-// === Module 15524: PremiumMarketingFloatingSubscribeButton ===
+// === Module 15611: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 15524 (PremiumMarketingFloatingSubscribeButton)
+// Module 15611 (PremiumMarketingFloatingSubscribeButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10420 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 15522 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10468 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 15609 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -18,7 +18,7 @@ const require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 }, gradient: { position: "absolute", left: 0, right: 0, bottom: 0, top: -64 }, buttonContainer: { marginLeft: "auto", marginRight: "auto", width: "100%", paddingHorizontal: 12, paddingTop: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);

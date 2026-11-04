@@ -1,9 +1,9 @@
-// === Module 16909: RequestDataContent ===
+// === Module 17001: RequestDataContent ===
 
-// Module 16909 (RequestDataContent)
+// Module 17001 (RequestDataContent)
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6078 */;
-import DataHarvestActionCreators from "DataHarvestActionCreators" /* 16910 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
+import DataHarvestActionCreators from "DataHarvestActionCreators" /* 17002 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -85,7 +85,7 @@ export default noop.memo(function RequestDataContent() {
   const intl8 = require("util").intl;
   obj12.children = intl8.string(require("util").t.jxXMEz);
   items = [closure_8(require("Text/Text").Text, obj12), ];
-  const obj13 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj13 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl9 = require("util").intl;
   const obj14 = { helpdeskArticle: null };
   let obj = require("useNavigation");
@@ -149,8 +149,8 @@ export default noop.memo(function RequestDataContent() {
         const intl2 = closure_1_0(1113).intl;
         obj2.title = intl2.string(closure_1_0(1113).t.OjbtDm);
         obj2.body = message;
-        closure_1_1(6078).show(obj2);
-        const obj = closure_1_1(6078);
+        closure_1_1(6093).show(obj2);
+        const obj = closure_1_1(6093);
       }).finally(() => closure_1_1(false));
       const nextPromise = dataHarvest.then((body) => {
         if (null != body) {
@@ -195,8 +195,8 @@ export default noop.memo(function RequestDataContent() {
         const intl2 = closure_1_0(1113).intl;
         obj2.title = intl2.string(closure_1_0(1113).t.OjbtDm);
         obj2.body = message;
-        closure_1_1(6078).show(obj2);
-        const obj = closure_1_1(6078);
+        closure_1_1(6093).show(obj2);
+        const obj = closure_1_1(6093);
       });
     } else {
       let obj3 = { title: null, body: null };

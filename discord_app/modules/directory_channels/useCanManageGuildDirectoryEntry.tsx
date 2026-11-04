@@ -1,6 +1,6 @@
-// === Module 13986: useCanManageGuildDirectoryEntry ===
+// === Module 14072: useCanManageGuildDirectoryEntry ===
 
-// Module 13986 (useCanManageGuildDirectoryEntry)
+// Module 14072 (useCanManageGuildDirectoryEntry)
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;

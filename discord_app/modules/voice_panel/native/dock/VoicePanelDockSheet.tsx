@@ -1,24 +1,24 @@
-// === Module 19366: VoicePanelDockSheet ===
+// === Module 19470: VoicePanelDockSheet ===
 
-// Module 19366 (VoicePanelDockSheet)
+// Module 19470 (VoicePanelDockSheet)
 import _mod1652 from "module_1652" /* 1652 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11386 */;
-import VoicePanelDockDefault from "VoicePanelDock" /* 19367 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11436 */;
+import VoicePanelDockDefault from "VoicePanelDock" /* 19471 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(11360);
+const VoicePanelConstants = fn(11410);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelDockConstants = fn(11378);
+const VoicePanelDockConstants = fn(11428);
 ({ DOCK_SETTLE_PROGRESS, DOCK_PRESS_EXTENSION } = VoicePanelDockConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-let items = [{ code: "(function getDockSheetTransform_VoicePanelDockSheetTsx1({connected:connected,progress:progress,wrapperDimensions:wrapperDimensions,dockHeight:dockHeight,dockJoinMorphOrigin:dockJoinMorphOrigin,dockEntryProgress:dockEntryProgress,sheetExitProgress:sheetExitProgress,dockPressProgress:dockPressProgress}){let[getDockRect,shrinkDockAroundCenter,scaleDockAroundCenter,DOCK_PRESS_EXTENSION]=this.__closure;const{drawerWidth:drawerWidth,drawerHeight:drawerHeight,drawerX:drawerX,drawerY:drawerY}=wrapperDimensions;if(!connected&&progress<=0||drawerWidth<=0||drawerHeight<=0){return null;}const fullRect={x:drawerX,y:drawerY,width:drawerWidth,height:drawerHeight};const restRect=getDockRect(fullRect,dockHeight);const origin=dockJoinMorphOrigin!=null?{...dockJoinMorphOrigin,height:drawerHeight*(dockJoinMorphOrigin.width/drawerWidth)}:fullRect;const geometry=shrinkDockAroundCenter(progress,origin,restRect);const{translateX:translateX,translateY:translateY,scale:scale}=scaleDockAroundCenter(geometry,drawerWidth,drawerHeight);const onScreenHeight=dockHeight+(drawerHeight-dockHeight)*(1-progress);const offscreen=(1-dockEntryProgress+sheetExitProgress)*onScreenHeight;const pressExtension=dockPressProgress*DOCK_PRESS_EXTENSION;return{translateX:translateX,translateY:translateY+offscreen-pressExtension,scale:scale};})" }, fn(11386).getDockRect, fn(11386).shrinkDockAroundCenter, fn(11386).scaleDockAroundCenter, DOCK_PRESS_EXTENSION];
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
+let items = [{ code: "(function getDockSheetTransform_VoicePanelDockSheetTsx1({connected:connected,progress:progress,wrapperDimensions:wrapperDimensions,dockHeight:dockHeight,dockJoinMorphOrigin:dockJoinMorphOrigin,dockEntryProgress:dockEntryProgress,sheetExitProgress:sheetExitProgress,dockPressProgress:dockPressProgress}){let[getDockRect,shrinkDockAroundCenter,scaleDockAroundCenter,DOCK_PRESS_EXTENSION]=this.__closure;const{drawerWidth:drawerWidth,drawerHeight:drawerHeight,drawerX:drawerX,drawerY:drawerY}=wrapperDimensions;if(!connected&&progress<=0||drawerWidth<=0||drawerHeight<=0){return null;}const fullRect={x:drawerX,y:drawerY,width:drawerWidth,height:drawerHeight};const restRect=getDockRect(fullRect,dockHeight);const origin=dockJoinMorphOrigin!=null?{...dockJoinMorphOrigin,height:drawerHeight*(dockJoinMorphOrigin.width/drawerWidth)}:fullRect;const geometry=shrinkDockAroundCenter(progress,origin,restRect);const{translateX:translateX,translateY:translateY,scale:scale}=scaleDockAroundCenter(geometry,drawerWidth,drawerHeight);const onScreenHeight=dockHeight+(drawerHeight-dockHeight)*(1-progress);const offscreen=(1-dockEntryProgress+sheetExitProgress)*onScreenHeight;const pressExtension=dockPressProgress*DOCK_PRESS_EXTENSION;return{translateX:translateX,translateY:translateY+offscreen-pressExtension,scale:scale};})" }, fn(11436).getDockRect, fn(11436).shrinkDockAroundCenter, fn(11436).scaleDockAroundCenter, DOCK_PRESS_EXTENSION];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;
@@ -219,5 +219,5 @@ export function VoicePanelContentWithDock(children) {
   const obj = { children: null };
   items = [timestampProducer(closure_10, { children: children.children }), timestampProducer(VoicePanelDockDefault, {})];
   obj.children = items;
-  return React6(React5, obj);
+  return React5(metroImportDefault, obj);
 }

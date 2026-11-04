@@ -1,13 +1,13 @@
-// === Module 7115: FormCheckbox ===
+// === Module 7130: FormCheckbox ===
 
-// Module 7115 (FormCheckbox)
+// Module 7130 (FormCheckbox)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5155 */;
-import IconDefault from "Icon" /* 5756 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import _modDef7116 from "module_7116" /* 7116 */;
+import IconDefault from "Icon" /* 5770 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import _modDef7131 from "module_7131" /* 7131 */;
 import noop from "module_19" /* 19 */;
 
 const module_1652 = _mod1652;
@@ -110,9 +110,9 @@ export function FormCheckbox(checked) {
   const obj2 = { style: null, children: null };
   const items4 = [tmp.checkbox, animatedStyle];
   obj2.style = items4;
-  const obj3 = { source: _modDef7116, size: IconDefault.Sizes.SMALL_20, style: null };
+  const obj3 = { source: _modDef7131, size: IconDefault.Sizes.SMALL_20, style: null };
   const items5 = [tmp.checkmark, animatedStyle1];
   obj3.style = items5;
-  obj2.children = <Icon source={_modDef7116} size={IconDefault.Sizes.SMALL_20} style={null} />;
+  obj2.children = <Icon source={_modDef7131} size={IconDefault.Sizes.SMALL_20} style={null} />;
   return jsx(module_1652.View, { style: null, children: null });
 }

@@ -1,19 +1,19 @@
-// === Module 19704: PresetAvatarSelect ===
+// === Module 19809: PresetAvatarSelect ===
 
-// Module 19704 (PresetAvatarSelect)
+// Module 19809 (PresetAvatarSelect)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import Pressables from "Pressables" /* 7106 */;
-import defaultAvatar1Default from "defaultAvatar1" /* 19705 */;
-import defaultAvatar2Default from "defaultAvatar2" /* 19706 */;
-import defaultAvatar3Default from "defaultAvatar3" /* 19707 */;
-import defaultAvatar4Default from "defaultAvatar4" /* 19708 */;
-import defaultAvatar5Default from "defaultAvatar5" /* 19709 */;
-import defaultAvatar6Default from "defaultAvatar6" /* 19710 */;
-import defaultAvatar7Default from "defaultAvatar7" /* 19711 */;
-import defaultAvatar8Default from "defaultAvatar8" /* 19712 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import Pressables from "Pressables" /* 7121 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 19810 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 19811 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 19812 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 19813 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 19814 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 19815 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 19816 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 19817 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -175,7 +175,7 @@ export default function PresetAvatarSelect(arg0) {
   ({ onAvatarSelect: require, selectedAvatar: importDefault } = arg0);
   const tmp = closure_7();
   const obj = { style: tmp.container, accessibilityRole: "list", children: null };
-  let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
+  let obj2 = { variant: "body-sm/medium", color: "text-default", children: null };
   let intl = util.intl;
   obj2.children = intl.string(util.t.yP28YL);
   items = [closure_4(Text_Text.Text, obj2), , ];

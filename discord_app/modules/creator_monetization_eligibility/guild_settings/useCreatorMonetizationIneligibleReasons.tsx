@@ -1,7 +1,7 @@
-// === Module 20083: useCreatorMonetizationIneligibleReasons ===
+// === Module 20199: useCreatorMonetizationIneligibleReasons ===
 
-// Module 20083 (useCreatorMonetizationIneligibleReasons)
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 20032 */;
+// Module 20199 (useCreatorMonetizationIneligibleReasons)
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 20148 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");

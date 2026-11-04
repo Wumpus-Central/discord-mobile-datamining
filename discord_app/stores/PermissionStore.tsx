@@ -188,7 +188,7 @@ function handleImpersonateUpdate(guildId) {
 }
 function computePermissions(context, overwrites, roles, excludeGuildPermissions) {
   let NONE = PermissionUtilsAll.NONE;
-  if (context instanceof React6) {
+  if (context instanceof React5) {
     if (set.has(context.type)) {
       const channel = ChannelStore.getChannel(context.parent_id);
       if (null == channel) {

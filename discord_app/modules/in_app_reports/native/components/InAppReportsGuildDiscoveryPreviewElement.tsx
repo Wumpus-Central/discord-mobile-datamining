@@ -1,20 +1,20 @@
-// === Module 15304: InAppReportsGuildDiscoveryPreviewElement ===
+// === Module 15391: InAppReportsGuildDiscoveryPreviewElement ===
 
-// Module 15304 (InAppReportsGuildDiscoveryPreviewElement)
+// Module 15391 (InAppReportsGuildDiscoveryPreviewElement)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildIconDefault from "GuildIcon" /* 7083 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildIconDefault from "GuildIcon" /* 7098 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, itemContainer: null, guildInfo: null, guildName: null, guildIcon: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -46,7 +46,7 @@ export default function GuildDiscoveryPreviewElement(guild) {
   const tmp4 = GuildIconDefault;
   obj7.guild = GuildRecordUtils.fromClientDiscoverableGuild(guild);
   obj7.animate = !stateFromStores;
-  const items3 = [hasOwnProperty(tmp4, obj7), hasOwnProperty(Text_Text.Text, { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: guild.name })];
+  const items3 = [hasOwnProperty(tmp4, obj7), hasOwnProperty(Text_Text.Text, { style: tmp.guildName, variant: "body-sm/medium", color: "text-default", children: guild.name })];
   obj6.children = items3;
   obj5.children = timestampProducer(View, obj6);
   items1[1] = hasOwnProperty(View, obj5);

@@ -1,11 +1,11 @@
-// === Module 17599: UserSettingsText ===
+// === Module 17689: UserSettingsText ===
 
-// Module 17599 (UserSettingsText)
+// Module 17689 (UserSettingsText)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 4966 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6052 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7282 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6067 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7298 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 import SubscriptionStore from "SubscriptionStore" /* 2181 */;
@@ -132,7 +132,7 @@ export default function UserSettingsText() {
     const obj20 = { style: tmp5.nitroUpsell, children: null };
     const obj21 = { source: videoUploadQuality(tmp2[19]), size: require("native").Icon.Sizes.SMALL, style: tmp5.nitroIcon };
     const items9 = [closure_12(require("native").Icon, obj21), ];
-    const obj22 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
+    const obj22 = { variant: "body-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
     const intl12 = require("util").intl;
     const obj23 = {
       onClick() {

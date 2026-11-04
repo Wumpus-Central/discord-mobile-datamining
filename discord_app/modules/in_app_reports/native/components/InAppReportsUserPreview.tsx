@@ -1,11 +1,11 @@
-// === Module 15299: InAppReportsUserPreview ===
+// === Module 15386: InAppReportsUserPreview ===
 
-// Module 15299 (InAppReportsUserPreview)
+// Module 15386 (InAppReportsUserPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,10 +37,10 @@ export default function UserPreview(user) {
   const obj6 = { style: tmp.userProfileInfo, children: null };
   let tmp7Result = null != user.globalName;
   if (tmp7Result) {
-    const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
+    const obj7 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
     tmp7Result = React3(Text_Text.Text, obj7);
   }
-  const items3 = [tmp7Result, React3(Text_Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
+  const items3 = [tmp7Result, React3(Text_Text.Text, { color: "text-default", variant: "body-sm/normal", children: user.username })];
   obj6.children = items3;
   items2[1] = React4(View, obj6);
   obj4.children = items2;

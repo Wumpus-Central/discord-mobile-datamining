@@ -1,20 +1,20 @@
-// === Module 17308: QuestDockBlurredHeaderPlaceholder ===
+// === Module 17400: QuestDockBlurredHeaderPlaceholder ===
 
-// Module 17308 (QuestDockBlurredHeaderPlaceholder)
+// Module 17400 (QuestDockBlurredHeaderPlaceholder)
 import _modDef1652 from "module_1652" /* 1652 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import thumbHashToRGBA from "thumbHashToRGBA" /* 17309 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import thumbHashToRGBA from "thumbHashToRGBA" /* 17401 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(6901).QuestDockMode;
-const QuestDockConstants = fn(17215);
+const QuestDockMode = fn(6916).QuestDockMode;
+const QuestDockConstants = fn(17307);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { imageContainer: null, overlay: null };
 let obj3 = {};

@@ -1,15 +1,15 @@
-// === Module 19979: GuildSettingsModalCommunityIntro ===
+// === Module 20095: GuildSettingsModalCommunityIntro ===
 
-// Module 19979 (GuildSettingsModalCommunityIntro)
+// Module 20095 (GuildSettingsModalCommunityIntro)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 19984 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 20100 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ function FeatureCard(arg0) {
   const obj = { style: tmp.featureCard, children: null };
   items = [state(React4, { style: tmp.featureIcon, children: icon() }), ];
   const obj3 = { style: tmp.featureDescription, children: null };
-  const items1 = [state(Text_Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }), state(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: body })];
+  const items1 = [state(Text_Text.Heading, { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: header }), state(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: body })];
   obj3.children = items1;
   items[1] = gesture(React4, obj3);
   obj.children = items;
@@ -89,7 +89,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   const intl = require("util").intl;
   obj9.children = intl.string(require("util").t["M/gBcA"]);
   items5[1] = closure_13(require("Text/Text").Heading, obj9);
-  const obj10 = { style: tmp.body, variant: "text-md/medium", color: "text-default", children: null };
+  const obj10 = { style: tmp.body, variant: "body-md/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
   const obj11 = { helpdeskArticle: null };
   const obj5 = require("IntroHeader");
@@ -109,7 +109,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   };
   obj13.disabled = !stateFromStores1;
   items5[3] = closure_13(require("components/Button/Button").Button, obj13);
-  const obj14 = { style: tmp.details, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj14 = { style: tmp.details, variant: "body-sm/medium", color: "text-default", children: null };
   const intl4 = require("util").intl;
   obj14.children = intl4.string(require("util").t.HgTI2N);
   items5[4] = closure_13(require("Text/Text").Text, obj14);
@@ -126,7 +126,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   const intl6 = require("util").intl;
   obj16.body = intl6.format(require("util").t.A6G7ak, {
     featureHook(children, arg1) {
-      return closure_1_13(require("Text/Text").Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+      return closure_1_13(require("Text/Text").Text, { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
     }
   });
   const items6 = [obj16, , ];
@@ -145,7 +145,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
       return null;
     },
     featureHook(children, arg1) {
-      return closure_1_13(require("Text/Text").Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+      return closure_1_13(require("Text/Text").Text, { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
     }
   });
   items6[1] = obj18;

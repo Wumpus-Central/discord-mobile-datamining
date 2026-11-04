@@ -1,14 +1,14 @@
-// === Module 16956: SpendingLimitDisplay ===
+// === Module 17048: SpendingLimitDisplay ===
 
-// Module 16956 (SpendingLimitDisplay)
+// Module 17048 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import PriceUtils from "PriceUtils" /* 7537 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 7538 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 16867 */;
+import PriceUtils from "PriceUtils" /* 7553 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 7554 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 16959 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 
 require = fn;
 function getSpendingLimitDisplayState(amount, arg1) {

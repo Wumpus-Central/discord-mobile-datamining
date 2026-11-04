@@ -1,10 +1,10 @@
-// === Module 19591: DeviceSilentModeManager ===
+// === Module 19696: DeviceSilentModeManager ===
 
-// Module 19591 (DeviceSilentModeManager)
+// Module 19696 (DeviceSilentModeManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import NativeDeviceSilentModeModuleDefault from "NativeDeviceSilentModeModule" /* 19592 */;
-import FramesStore from "FramesStore" /* 6966 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7407 */;
+import NativeDeviceSilentModeModuleDefault from "NativeDeviceSilentModeModule" /* 19697 */;
+import FramesStore from "FramesStore" /* 6981 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
 
 function handleSilentModeChanged(muted) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_DEVICE_MUTED", muted });
@@ -27,7 +27,7 @@ function updateObserving() {
     _null = null;
   }
 }
-const isLaunched = fn(6967).isLaunched;
+const isLaunched = fn(6982).isLaunched;
 let c4 = null;
 class DeviceSilentModeManager extends tmp2 {
   constructor() {

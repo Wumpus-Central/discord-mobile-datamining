@@ -1,19 +1,19 @@
-// === Module 11724: OptInChannelsUtils ===
+// === Module 11779: OptInChannelsUtils ===
 
-// Module 11724 (OptInChannelsUtils)
+// Module 11779 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7399 */;
-import ChannelListState from "ChannelListState" /* 7831 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11725 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import fuzzysearchDefault from "fuzzysearch" /* 7034 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7415 */;
+import ChannelListState from "ChannelListState" /* 7847 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11780 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7400 */;
-import ReadStateStore from "ReadStateStore" /* 6962 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7416 */;
+import ReadStateStore from "ReadStateStore" /* 6977 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -27,8 +27,8 @@ const Constants = fn(1072);
 ({ Routes: closure_9, ChannelTypes: closure_10 } = Constants);
 const ChannelConstants = fn(4997);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7837).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7853).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6911).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 
@@ -130,7 +130,7 @@ export function clearRecentChannels(arg0, arr) {
   RecentChannelsActionCreators.bulkClearRecents(arg0, arr);
   ReadStateActionCreators.bulkAck(arr.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: ReadStateStore.lastMessageId(channelId) })));
   if (null != tmp) {
-    router_utils.transitionTo(React7.CHANNEL(arg0, tmp));
+    router_utils.transitionTo(React6.CHANNEL(arg0, tmp));
     const tmp2Result = router_utils;
   }
 }

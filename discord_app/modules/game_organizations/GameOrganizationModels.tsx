@@ -1,6 +1,6 @@
-// === Module 11502: GameOrganizationModels ===
+// === Module 11552: GameOrganizationModels ===
 
-// Module 11502 (GameOrganizationModels)
+// Module 11552 (GameOrganizationModels)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organizations/GameOrganizationModels.tsx");

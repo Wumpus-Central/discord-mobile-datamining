@@ -1,8 +1,8 @@
-// === Module 12306: Tabs/Tabs ===
+// === Module 12371: Tabs/Tabs ===
 
-// Module 12306 (Tabs/Tabs)
+// Module 12371 (Tabs/Tabs)
 import nativeDefault from "native" /* 575 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -16,7 +16,7 @@ function defaultCountFormatter(toLocaleString) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = module_1652.createAnimatedComponent(ScrollView);
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
 const createStyles = fn(5141);
@@ -412,7 +412,7 @@ export function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return _undefined7(state(12307).TabItem, obj, id);
+      return _undefined7(state(12372).TabItem, obj, id);
     })
   }), items19);
   const memo1 = obj2.useMemo(() => {
@@ -446,7 +446,7 @@ export function Tabs(state) {
   let tmp55Result = tmp53Result;
   if (null != memo1) {
     const obj8 = { gesture: memo1, children: tmp53Result };
-    tmp55Result = c6(tmp2(5426).GestureDetector, obj8);
+    tmp55Result = c6(tmp2(5428).GestureDetector, obj8);
   }
   return tmp55Result;
 }

@@ -1,20 +1,20 @@
-// === Module 14071: DoubleTapToReactActionSheet ===
+// === Module 14157: DoubleTapToReactActionSheet ===
 
-// Module 14071 (DoubleTapToReactActionSheet)
+// Module 14157 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import UserSettings from "UserSettings" /* 4966 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8550 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8567 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
@@ -356,7 +356,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           const obj = { value, done: true };
           return obj;
         }
-        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7471).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
+        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7487).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
         tmp22(1252).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
@@ -439,25 +439,25 @@ export default function DoubleTapToReactActionSheet(emoji) {
   }
   items12[1] = tmp24Result2;
   obj9.children = items12;
-  const items13 = [callback1(require("module_1652").View, obj9), memo(require("Text/Text").Text, { variant: "text-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" })];
+  const items13 = [callback1(require("module_1652").View, obj9), memo(require("Text/Text").Text, { variant: "body-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" })];
   obj8.children = items13;
   const items14 = [callback1(closure_6, obj8), , , , , ];
-  const obj11 = { variant: "text-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" };
+  const obj11 = { variant: "body-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" };
   const tmp26 = require("Emoji");
-  items14[1] = memo(require("Text/Text").Text, { variant: "text-sm/normal", color: "text-subtle", style: tmp.emojiName, children: ":" + selectedEmoji.name + ":" });
+  items14[1] = memo(require("Text/Text").Text, { variant: "body-sm/normal", color: "text-subtle", style: tmp.emojiName, children: ":" + selectedEmoji.name + ":" });
   const obj13 = { style: tmp.header, children: null };
-  const obj14 = { style: tmp.alignCenter, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj14 = { style: tmp.alignCenter, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp3(tmp4[29]).intl;
   obj14.children = intl.string(require("util").t.F6lRAI);
   const items15 = [memo(require("Text/Text").Text, obj14), memo(require("renderChannelBadge").NewBadge, {})];
   obj13.children = items15;
   items14[2] = callback1(closure_6, obj13);
-  const obj15 = { style: tmp.alignCenter, variant: "text-md/medium", color: "text-default", children: null };
+  const obj15 = { style: tmp.alignCenter, variant: "body-md/medium", color: "text-default", children: null };
   const intl2 = tmp3(tmp4[29]).intl;
   obj15.children = intl2.string(require("util").t.yIax8g);
   items14[3] = memo(require("Text/Text").Text, obj15);
   items14[4] = memo(require("SelectDoubleTapEmojiRow"), { style: tmp.emojiSelectRow, selectedEmoji, onPressEmoji: callback });
-  const obj12 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.emojiName, children: ":" + selectedEmoji.name + ":" };
+  const obj12 = { variant: "body-sm/normal", color: "text-subtle", style: tmp.emojiName, children: ":" + selectedEmoji.name + ":" };
   const obj16 = { style: tmp.emojiSelectRow, selectedEmoji, onPressEmoji: callback };
   const tmp3Result6 = require("DoubleTapToReactUtils");
   const intl3 = tmp3(tmp4[29]).intl;

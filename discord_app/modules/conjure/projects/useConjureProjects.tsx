@@ -1,16 +1,16 @@
-// === Module 12735: useConjureProjects ===
+// === Module 12816: useConjureProjects ===
 
-// Module 12735 (useConjureProjects)
+// Module 12816 (useConjureProjects)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
-import UserProfileStore from "UserProfileStore" /* 7896 */;
+import UserProfileStore from "UserProfileStore" /* 7912 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
-import ConjureChatStore from "ConjureChatStore" /* 10981 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import ConjureChatStore from "ConjureChatStore" /* 11029 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 const require = globalThis.__r;
 
@@ -39,16 +39,16 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
     const _location = nextExpiry;
     function add(item10063, owned) {
       if (!set.has(item10063.id)) {
-        const result = nextExpiry(7517).conjureProjectGuildId(item10063);
+        const result = nextExpiry(7533).conjureProjectGuildId(item10063);
         if (null == result) {
           set.add(item10063.id);
           let num = closure_2_10.getFinishedAt(item10063.id);
           const isThinkingResult = closure_2_10.isThinking(item10063.id);
           const obj4 = { thinking: isThinkingResult, finishedAt: num, now };
-          const conjureActivityResult = nextExpiry(7517).conjureActivity(obj4);
+          const conjureActivityResult = nextExpiry(7533).conjureActivity(obj4);
           if ("done" === conjureActivityResult) {
             if (null != num) {
-              const sum = num + nextExpiry(7517).CONJURE_DONE_WINDOW_MS;
+              const sum = num + nextExpiry(7533).CONJURE_DONE_WINDOW_MS;
               bound = sum;
               if (null != bound) {
                 const _Math = Math;
@@ -92,18 +92,18 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
           }
           obj5.sortTime = num;
           items.push(obj5);
-          const tmpResult = nextExpiry(7517);
+          const tmpResult = nextExpiry(7533);
         } else {
           value = map.get(result);
           if (null == value) {
             const obj6 = { guildId: result, location: _location };
-            const result1 = nextExpiry(6999).isConjureGuildEnabled(obj6);
+            const result1 = nextExpiry(7014).isConjureGuildEnabled(obj6);
             const result2 = map.set(result, result1);
             value = result1;
-            const tmpResult2 = nextExpiry(6999);
+            const tmpResult2 = nextExpiry(7014);
           }
         }
-        const obj2 = nextExpiry(7517);
+        const obj2 = nextExpiry(7533);
       }
     }
     function isEnabled(id) {
@@ -112,7 +112,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
         return value;
       } else {
         const obj3 = { guildId: id, location: _location };
-        const result = nextExpiry(6999).isConjureGuildEnabled(obj3);
+        const result = nextExpiry(7014).isConjureGuildEnabled(obj3);
         const result1 = map.set(id, result);
         return result;
       }
@@ -144,7 +144,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
       }
       continue;
     }
-    let obj2 = { entries: _location(7517).sortConjureProjects(items), nextExpiry: bound };
+    let obj2 = { entries: _location(7533).sortConjureProjects(items), nextExpiry: bound };
     return obj2;
   })(nextExpiry), items1, conjureEntriesEqual);
   nextExpiry = stateFromStores.nextExpiry;

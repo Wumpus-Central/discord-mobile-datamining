@@ -1,17 +1,17 @@
-// === Module 15127: UserProfilePrivacyNotice ===
+// === Module 15207: UserProfilePrivacyNotice ===
 
-// Module 15127 (UserProfilePrivacyNotice)
+// Module 15207 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import UserSettings from "UserSettings" /* 4966 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5855 */;
-import Pressables from "Pressables" /* 7106 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7693 */;
-import useUserIsTeen from "useUserIsTeen" /* 8492 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
+import Pressables from "Pressables" /* 7121 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7709 */;
+import useUserIsTeen from "useUserIsTeen" /* 8509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,9 +22,9 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivacyNotice.tsx");
@@ -49,7 +49,7 @@ export default function UserProfilePrivacyNotice() {
   const ProfileVisibility2 = UserSettings.ProfileVisibility;
   const setting1 = ProfileVisibility2.useSetting();
   const callback = noop.useCallback((children, arg1) => closure_1_7(Text_Text.Text, {
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     color: "text-link",
     onPress() {
       return closure_1_0(closure_1_1[15]).openUserSettings({ screen: constants.DATA_AND_PRIVACY });
@@ -70,7 +70,7 @@ export default function UserProfilePrivacyNotice() {
     const obj3 = { style: tmp.container, children: null };
     const obj4 = { style: tmp.icon, children: closure_7(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }) };
     const items1 = [closure_7(View, obj4), , ];
-    const obj5 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
+    const obj5 = { style: tmp.text, variant: "body-sm/normal", color: "text-default", children: null };
     const intl = util.intl;
     const obj6 = { privacySettingsLink: callback };
     obj5.children = intl.format(dqQ7AN, obj6);

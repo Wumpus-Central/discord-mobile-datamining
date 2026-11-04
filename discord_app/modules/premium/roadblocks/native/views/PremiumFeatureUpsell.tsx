@@ -1,17 +1,17 @@
-// === Module 10176: PremiumFeatureUpsell ===
+// === Module 10224: PremiumFeatureUpsell ===
 
-// Module 10176 (PremiumFeatureUpsell)
+// Module 10224 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5200 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9925 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9943 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 
 require = fn;
 function PremiumFeatureUpsellPill(featureName) {
@@ -84,7 +84,7 @@ function PremiumFeatureUpsellPill(featureName) {
   const obj11 = { style: tmp4.labelContainer, children: null };
   if (result) {
     let items1 = [tmp15, ];
-    const obj12 = { style: tmp4.text, variant: "text-sm/medium", children: formatResult };
+    const obj12 = { style: tmp4.text, variant: "body-sm/medium", children: formatResult };
     items1[1] = closure_12(tmp(tmp2[20]).Text, obj12);
     obj11.children = items1;
     const items2 = [closure_13(tmp14, obj11), ];
@@ -139,9 +139,9 @@ function PremiumFeatureUpsellPill(featureName) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const PremiumConstants = fn(1387);
-({ PremiumSubscriptionSKUs: closure_7, PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
+({ PremiumSubscriptionSKUs: metroImportDefault, PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(5141);
@@ -167,7 +167,7 @@ let closure_14 = createStyles.createStyles((arg0) => {
   obj.gradient = {};
   return obj;
 });
-let items = [{ code: "(function animationEnterExit_PremiumFeatureUpsellTsx2(visible,cleanUp){let[withSpring,springStandard,_worklet_11223997992530_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationEnterExit_PremiumFeatureUpsellTsx2([_worklet_11223997992530_init_data,cleanUp]){const PremiumFeatureUpsellTsx1=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};PremiumFeatureUpsellTsx1.__closure=[cleanUp];PremiumFeatureUpsellTsx1.__workletHash=11223997992530;PremiumFeatureUpsellTsx1.__initData=_worklet_11223997992530_init_data;return PremiumFeatureUpsellTsx1;}([_worklet_11223997992530_init_data,cleanUp]))};})" }, fn(5757).withSpring, fn(5758).springStandard, { code: "(function PremiumFeatureUpsellTsx1(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
+let items = [{ code: "(function animationEnterExit_PremiumFeatureUpsellTsx2(visible,cleanUp){let[withSpring,springStandard,_worklet_11223997992530_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationEnterExit_PremiumFeatureUpsellTsx2([_worklet_11223997992530_init_data,cleanUp]){const PremiumFeatureUpsellTsx1=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};PremiumFeatureUpsellTsx1.__closure=[cleanUp];PremiumFeatureUpsellTsx1.__workletHash=11223997992530;PremiumFeatureUpsellTsx1.__initData=_worklet_11223997992530_init_data;return PremiumFeatureUpsellTsx1;}([_worklet_11223997992530_init_data,cleanUp]))};})" }, fn(5771).withSpring, fn(5772).springStandard, { code: "(function PremiumFeatureUpsellTsx1(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;

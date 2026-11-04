@@ -1,17 +1,17 @@
-// === Module 19461: VoicePanelFloatingCTAContainer ===
+// === Module 19565: VoicePanelFloatingCTAContainer ===
 
-// Module 19461 (VoicePanelFloatingCTAContainer)
+// Module 19565 (VoicePanelFloatingCTAContainer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import native from "native" /* 5207 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import RowButton from "RowButton" /* 8303 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12547 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12658 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19324 */;
-import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 19328 */;
-import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19462 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import RowButton from "RowButton" /* 8319 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12628 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12739 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19428 */;
+import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 19432 */;
+import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 19566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -168,8 +168,8 @@ class VoicePanelFloatingCTAContainer {
     return tmp26(tmp2(tmp3[19]).View, obj1);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(11360).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11363).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(11410).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11413).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1083).ThemeTypes;
 let jsx = fn(21).jsx;
 const createStyles = fn(5141);

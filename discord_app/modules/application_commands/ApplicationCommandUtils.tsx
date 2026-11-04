@@ -1,17 +1,17 @@
-// === Module 7824: ApplicationCommandUtils ===
+// === Module 7840: ApplicationCommandUtils ===
 
-// Module 7824 (ApplicationCommandUtils)
+// Module 7840 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants2 from "Constants" /* 1083 */;
 import Server from "Server" /* 2121 */;
 import ChannelRecord from "ChannelRecord" /* 4994 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5803 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5880 */;
-import DraftStore from "DraftStore" /* 7825 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7827 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6155 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5817 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
+import DraftStore from "DraftStore" /* 7841 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7843 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6170 */;
 import Constants from "Constants" /* 1072 */;
 import BigFlagUtils from "BigFlagUtils" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -38,7 +38,7 @@ function buildCommand(arg0) {
     ({ version: obj3.version, guild_id: obj3.guildId } = rootCommand);
     const items2 = [rootCommand.id];
     HermesBuiltin.arraySpread(mapped, 1);
-    obj4.id = items2.join(React5);
+    obj4.id = items2.join(metroImportDefault);
     const items3 = [rootCommand.name];
     HermesBuiltin.arraySpread(mapped, 1);
     obj4.untranslatedName = items3.join(" ");
@@ -122,13 +122,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F124003 */ function() { ... });
+                      mapped = choices.map(/* F124591 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F91670 */ function() { ... });
+                      mapped1 = options.map(/* F92042 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -426,7 +426,7 @@ function hasAccessGivenPerms(selfMember, id, commandLevelPermissions) {
 }
 const isReadableType = ChannelRecord.isReadableType;
 const DraftType = DraftStore.DraftType;
-({ BuiltInSectionId: metroRequire, SUB_COMMAND_KEY_SEPARATOR: closure_7 } = ApplicationCommandConstants);
+({ BuiltInSectionId: closure_6, SUB_COMMAND_KEY_SEPARATOR: metroImportDefault } = ApplicationCommandConstants);
 ({ AnalyticEvents: closure_8, ID_REGEX: closure_9 } = Constants);
 const Permissions = Constants2.Permissions;
 let deserializeResult = BigFlagUtils.deserialize(0);
@@ -623,7 +623,7 @@ export function extractInteractionDataProps(parsed) {
   let sum = id;
   if (null != found) {
     const _HermesInternal = HermesInternal;
-    sum = id + "" + React5 + found.name;
+    sum = id + "" + metroImportDefault + found.name;
     interactionOptions = found.options;
   }
   let found1;
@@ -633,7 +633,7 @@ export function extractInteractionDataProps(parsed) {
   let commandKey = sum;
   if (null != found1) {
     const _HermesInternal2 = HermesInternal;
-    commandKey = sum + "" + React5 + found1.name;
+    commandKey = sum + "" + metroImportDefault + found1.name;
     interactionOptions = found1.options;
   }
   return { commandKey, interactionOptions };

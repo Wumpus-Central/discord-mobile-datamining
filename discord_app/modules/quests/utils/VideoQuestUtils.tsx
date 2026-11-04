@@ -1,15 +1,15 @@
-// === Module 14815: VideoQuestUtils ===
+// === Module 14895: VideoQuestUtils ===
 
-// Module 14815 (VideoQuestUtils)
+// Module 14895 (VideoQuestUtils)
 import util from "util" /* 1113 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5321 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7976 */;
-import AnalyticsActions from "AnalyticsActions" /* 7986 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7992 */;
-import QuestActionCreators from "QuestActionCreators" /* 9814 */;
-import NetworkStore from "NetworkStore" /* 6021 */;
-import QuestStore from "QuestStore" /* 7970 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7972 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7992 */;
+import AnalyticsActions from "AnalyticsActions" /* 8002 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8008 */;
+import QuestActionCreators from "QuestActionCreators" /* 9832 */;
+import NetworkStore from "NetworkStore" /* 6036 */;
+import QuestStore from "QuestStore" /* 7986 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7988 */;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -17,7 +17,7 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(14816).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(14896).getVideoQuestWatchCtaText;
 export function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
@@ -107,14 +107,6 @@ export function isValidDuration(arg0) {
     isFiniteResult = arg0 > 0;
   }
   return isFiniteResult;
-}
-export function getVideoQuestEndCardCtaText(ctaConfig) {
-  let buttonLabel = ctaConfig.ctaConfig.buttonLabel;
-  if (buttonLabel == null) {
-    const intl = util.intl;
-    buttonLabel = intl.string(util.t.iiTtpJ);
-  }
-  return buttonLabel;
 }
 export function handleVideoQuestModalClose(arg0) {
   ({ questId, sourceQuestContent, videoSessionId } = arg0);

@@ -1,16 +1,16 @@
-// === Module 19280: conjureAppPictureInPictureActions ===
+// === Module 19384: conjureAppPictureInPictureActions ===
 
-// Module 19280 (conjureAppPictureInPictureActions)
+// Module 19384 (conjureAppPictureInPictureActions)
 import _modDef3995 from "module_3995" /* 3995 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7484 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 11013 */;
-import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 11962 */;
-import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 14306 */;
-import getConjureAppSoundButtonDefault from "getConjureAppSoundButton" /* 14527 */;
-import closeFrameDefault from "closeFrame" /* 14528 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16509 */;
-import FramesStore from "FramesStore" /* 6966 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6964 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7500 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 11062 */;
+import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 12021 */;
+import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 14393 */;
+import getConjureAppSoundButtonDefault from "getConjureAppSoundButton" /* 14607 */;
+import closeFrameDefault from "closeFrame" /* 14608 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16601 */;
+import FramesStore from "FramesStore" /* 6981 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
 
 require = fn;
 function getConjureAppPictureInPictureActions(id, c8, c9) {
@@ -45,7 +45,7 @@ function getConjureAppPictureInPictureActions(id, c8, c9) {
   items.push(obj3);
   return items;
 }
-const asLaunched = fn(6967).asLaunched;
+const asLaunched = fn(6982).asLaunched;
 const ConjureAppPictureInPicture = "ConjureAppPictureInPicture";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/native/conjureAppPictureInPictureActions.tsx");

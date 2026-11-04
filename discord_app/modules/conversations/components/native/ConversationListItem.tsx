@@ -1,14 +1,14 @@
-// === Module 10011: ConversationListItem ===
+// === Module 10059: ConversationListItem ===
 
-// Module 10011 (ConversationListItem)
+// Module 10059 (ConversationListItem)
 import nativeDefault from "native" /* 575 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 9980 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9983 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9998 */;
-import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 10013 */;
-import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 10015 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 10028 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 10031 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 10046 */;
+import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 10061 */;
+import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 10063 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7891 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7907 */;
 
 require = fn;
 function ConversationListItemBase(conversation) {
@@ -43,8 +43,8 @@ function ConversationListItemBase(conversation) {
   }, items3);
   const obj3 = { style: tmp.card, onPress: callback, accessibilityLabel: conversation.title, children: null };
   const obj4 = { style: tmp.headerContainer, children: null };
-  const items4 = [closure_8(conversation(stateFromStores[14]).Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 1, style: tmp.title, children: conversation.title }), ];
-  const obj6 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: tmp.timestamp, children: null };
+  const items4 = [closure_8(conversation(stateFromStores[14]).Text, { variant: "body-md/semibold", color: "text-default", lineClamp: 1, style: tmp.title, children: conversation.title }), ];
+  const obj6 = { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, style: tmp.timestamp, children: null };
   const intl = conversation(stateFromStores[15]).intl;
   obj6.children = intl.formatToPlainString(conversation(stateFromStores[15]).t.poZZGL, { count: conversation.messageCount });
   items4[1] = closure_8(conversation(stateFromStores[14]).Text, obj6);
@@ -53,7 +53,7 @@ function ConversationListItemBase(conversation) {
   const obj8 = { style: tmp.previewsMask, maskElement: null, children: null };
   const obj9 = { style: tmp.maskColumn, children: null };
   const obj2 = conversation(stateFromStores[9]);
-  const obj5 = { variant: "text-md/semibold", color: "text-default", lineClamp: 1, style: tmp.title, children: conversation.title };
+  const obj5 = { variant: "body-md/semibold", color: "text-default", lineClamp: 1, style: tmp.title, children: conversation.title };
   const obj7 = { count: conversation.messageCount };
   const tmp9 = navigation;
   const items6 = [closure_8(navigation(stateFromStores[17]), { colors, style: tmp.maskOpaque }), closure_8(navigation(stateFromStores[17]), { colors: colors2, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.maskFade })];
@@ -68,7 +68,7 @@ function ConversationListItemBase(conversation) {
         if (!blocked.ignored) {
           const obj = { message: blocked, guildId: null, channelId: null };
           ({ guildId: obj.guildId, channelId: obj.channelId } = conversation);
-          let tmp6Result = React6(ConversationPreviewMessageDefault, obj, blocked.id);
+          let tmp6Result = React5(ConversationPreviewMessageDefault, obj, blocked.id);
         }
         return tmp6Result;
       }
@@ -76,7 +76,7 @@ function ConversationListItemBase(conversation) {
       if (blocked.blocked) {
         str = "blocked";
       }
-      tmp6Result = React6(ConversationPreviewBlockedMessageDefault, { reason: str }, blocked.id);
+      tmp6Result = React5(ConversationPreviewBlockedMessageDefault, { reason: str }, blocked.id);
     });
   }
   obj12.children = mapped;
@@ -87,7 +87,7 @@ function ConversationListItemBase(conversation) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(5775).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(5789).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

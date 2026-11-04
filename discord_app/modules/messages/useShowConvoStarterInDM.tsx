@@ -1,10 +1,10 @@
-// === Module 13954: useShowConvoStarterInDM ===
+// === Module 14040: useShowConvoStarterInDM ===
 
-// Module 13954 (useShowConvoStarterInDM)
+// Module 14040 (useShowConvoStarterInDM)
 import _mod19 from "module_19" /* 19 */;
 import ChannelConstants from "ChannelConstants" /* 4997 */;
-import MessageRequestStore from "MessageRequestStore" /* 6976 */;
-import MessageStore from "MessageStore" /* 6181 */;
+import MessageRequestStore from "MessageRequestStore" /* 6991 */;
+import MessageStore from "MessageStore" /* 6196 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
@@ -13,7 +13,7 @@ import size from "module_2" /* 2 */;
 const require = globalThis.__r;
 
 let useRef = _mod19.useRef;
-({ RelationshipTypes: closure_7, UserFlags: closure_8 } = Constants);
+({ RelationshipTypes: metroImportDefault, UserFlags: closure_8 } = Constants);
 const ChannelFlags = ChannelConstants.ChannelFlags;
 let result = size.fileFinishedImporting("modules/messages/useShowConvoStarterInDM.tsx");
 

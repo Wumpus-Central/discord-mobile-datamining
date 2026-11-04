@@ -1,16 +1,16 @@
-// === Module 16766: DismissiblePremiumNewBadge ===
+// === Module 16858: DismissiblePremiumNewBadge ===
 
-// Module 16766 (DismissiblePremiumNewBadge)
+// Module 16858 (DismissiblePremiumNewBadge)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10650 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10698 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { newTag: { backgroundColor: "transparent" }, newTagContainer: { borderRadius: nativeDefault.radii.sm, marginLeft: nativeDefault.space.PX_4 } };
@@ -30,9 +30,9 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
       } else {
         let tmp3 = closure_1_5;
         if (null == closure_1_5) {
-          let str = "text-xs/semibold";
+          let str = "body-xs/semibold";
           if (obj.isAndroid()) {
-            str = "text-xxs/semibold";
+            str = "footnote/semibold";
           }
           tmp3 = str;
           obj = PlatformUtils;
@@ -71,9 +71,9 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
       } else {
         let tmp3 = closure_1_5;
         if (null == closure_1_5) {
-          let str = "text-xs/semibold";
+          let str = "body-xs/semibold";
           if (obj.isAndroid()) {
-            str = "text-xxs/semibold";
+            str = "footnote/semibold";
           }
           tmp3 = str;
           obj = PlatformUtils;

@@ -1,10 +1,10 @@
-// === Module 7335: FormPhoneOrEmail ===
+// === Module 7351: FormPhoneOrEmail ===
 
-// Module 7335 (FormPhoneOrEmail)
+// Module 7351 (FormPhoneOrEmail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ function CountryCodeSelector(alpha2) {
     const obj3 = { onPress, style: tmp.selectorPressable, androidRippleConfig: { borderless: true }, accessibilityRole: "button", accessibilityLabel: combined, accessibilityHint: null, children: null };
     const intl = util.intl;
     obj3.accessibilityHint = intl.string(util.t.GwAW3k);
-    const obj4 = { style: tmp.selectorText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: combined };
+    const obj4 = { style: tmp.selectorText, variant: "body-md/medium", color: "mobile-text-heading-primary", children: combined };
     obj3.children = hasOwnProperty(Text_Text.Text, obj4);
     items = [hasOwnProperty(Pressables.PressableOpacity, obj3), ];
     const obj5 = { style: tmp.separator };
@@ -38,7 +38,7 @@ function CountryCodeSelector(alpha2) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 }, selectorOuterContainer: { overflow: "hidden" }, selectorContainer: { flex: 1, flexDirection: "row" }, selectorPressable: { justifyContent: "center" }, selectorText: { alignSelf: "center" }, separator: { borderLeftWidth: 1, borderLeftColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, marginHorizontal: 12, marginVertical: -4 } };
 let closure_7 = createStyles.createStyles(obj2);
@@ -112,7 +112,7 @@ export default function FormPhoneOrEmail(arg0) {
   items1[2] = tmp12Result;
   let tmp12Result2 = null;
   if (null != hint) {
-    const obj7 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
+    const obj7 = { style: tmp2.hint, variant: "body-xs/medium", color: "text-muted", children: hint };
     tmp12Result2 = tmp12(require("Text/Text").Text, obj7);
   }
   items1[3] = tmp12Result2;

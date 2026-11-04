@@ -1,11 +1,11 @@
-// === Module 18023: CollectiblesShopOrbsPage ===
+// === Module 18119: CollectiblesShopOrbsPage ===
 
-// Module 18023 (CollectiblesShopOrbsPage)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8871 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 17988 */;
+// Module 18119 (CollectiblesShopOrbsPage)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8888 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 18084 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7860 */;
 
 require = fn;
 const View = fn(17).View;

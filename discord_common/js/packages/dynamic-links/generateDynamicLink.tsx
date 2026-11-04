@@ -1,9 +1,9 @@
-// === Module 14881: generateDynamicLink ===
+// === Module 14961: generateDynamicLink ===
 
-// Module 14881 (generateDynamicLink)
+// Module 14961 (generateDynamicLink)
 import v1 from "v1" /* 1266 */;
 import formatDefault from "format" /* 1353 */;
-import getDescriptionDefault from "getDescription" /* 14882 */;
+import getDescriptionDefault from "getDescription" /* 14962 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 

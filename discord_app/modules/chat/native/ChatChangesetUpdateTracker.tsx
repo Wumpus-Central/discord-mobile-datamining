@@ -1,6 +1,6 @@
-// === Module 10240: ChatChangesetUpdateTracker ===
+// === Module 10288: ChatChangesetUpdateTracker ===
 
-// Module 10240 (ChatChangesetUpdateTracker)
+// Module 10288 (ChatChangesetUpdateTracker)
 import size from "module_2" /* 2 */;
 
 const weakMap = new WeakMap();

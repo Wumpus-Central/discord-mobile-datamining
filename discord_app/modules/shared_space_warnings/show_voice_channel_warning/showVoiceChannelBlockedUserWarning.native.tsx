@@ -1,16 +1,16 @@
-// === Module 15766: showVoiceChannelBlockedUserWarning ===
+// === Module 15854: showVoiceChannelBlockedUserWarning ===
 
-// Module 15766 (showVoiceChannelBlockedUserWarning)
+// Module 15854 (showVoiceChannelBlockedUserWarning)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
 
 require = fn;
-const SharedSpacesWarningStore = fn(15765);
+const SharedSpacesWarningStore = fn(15853);
 ({ queueBlockWarning: closure_4, dequeueBlockWarning: hasOwnProperty } = SharedSpacesWarningStore);
-const constants = fn(15767).VoiceChannelWarningSurfaces;
+const constants = fn(15855).VoiceChannelWarningSurfaces;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/shared_space_warnings/show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx");
 
@@ -26,8 +26,8 @@ export function showVoiceChannelBlockedUserWarning(channelId, items1) {
     obj3.blocked_user_ids = items;
     obj3.warning_surface = constants.POST_JOIN_SHEET;
     obj2.impressionProperties = obj3;
-    obj.openLazy(asyncRequireImpl(15768, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
-    const tmp11 = asyncRequireImpl(15768, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(15856, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
+    const tmp11 = asyncRequireImpl(15856, dependencyMap.paths);
   } else {
     React4();
   }

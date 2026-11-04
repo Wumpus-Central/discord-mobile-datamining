@@ -1,6 +1,6 @@
-// === Module 13816: CheckpointSummaryStatsScreen ===
+// === Module 13902: CheckpointSummaryStatsScreen ===
 
-// Module 13816 (CheckpointSummaryStatsScreen)
+// Module 13902 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,21 +8,21 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _modDef3187 from "module_3187" /* 3187 */;
 import _modDef3219 from "module_3219" /* 3219 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 6211 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6557 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import EmojiDefault from "Emoji" /* 7420 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8267 */;
-import CheckpointScreen from "CheckpointScreen" /* 13777 */;
-import CheckpointTextDefault from "CheckpointText" /* 13779 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13782 */;
-import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 13817 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 6226 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6572 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import EmojiDefault from "Emoji" /* 7436 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8283 */;
+import CheckpointScreen from "CheckpointScreen" /* 13863 */;
+import CheckpointTextDefault from "CheckpointText" /* 13865 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13868 */;
+import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 13903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import CheckpointStore from "CheckpointStore" /* 13571 */;
+import CheckpointStore from "CheckpointStore" /* 13656 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -36,9 +36,9 @@ function NumberStat(arg0) {
   const obj = { style: tmp.stat, accessible: true, accessibilityLabel: null, children: null };
   const memo = noop.useMemo(() => ({ color }), items);
   obj.accessibilityLabel = "" + label + ", " + value.toLocaleString(util.intl.currentLocale);
-  const items1 = [React6(CheckpointTextDefault, { variant: "text-md/medium", style: memo, children: label }), React6(View, { style: tmp.statNumber, children: React6(CheckpointStatNumberDefault, { value, color, size: 32 }) })];
+  const items1 = [React5(CheckpointTextDefault, { variant: "body-md/medium", style: memo, children: label }), React5(View, { style: tmp.statNumber, children: React5(CheckpointStatNumberDefault, { value, color, size: 32 }) })];
   obj.children = items1;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 function ItemStat(children) {
   ({ label, name, color } = children);
@@ -46,23 +46,23 @@ function ItemStat(children) {
   items = [color];
   const memo = noop.useMemo(() => ({ color }), items);
   const obj = { style: tmp.stat, accessible: true, accessibilityLabel: "" + label + ", " + name, children: null };
-  const items1 = [React6(CheckpointTextDefault, { variant: "text-md/medium", style: memo, children: label }), ];
+  const items1 = [React5(CheckpointTextDefault, { variant: "body-md/medium", style: memo, children: label }), ];
   const obj2 = { style: tmp.item, children: null };
-  const items2 = [React6(View, { style: tmp.itemIcon, children: children.icon }), ];
-  const obj4 = { variant: "text-md/semibold", style: null, children: name };
+  const items2 = [React5(View, { style: tmp.itemIcon, children: children.icon }), ];
+  const obj4 = { variant: "body-md/semibold", style: null, children: name };
   const items3 = [tmp.itemName, memo];
   obj4.style = items3;
-  items2[1] = React6(CheckpointTextDefault, obj4);
+  items2[1] = React5(CheckpointTextDefault, obj4);
   obj2.children = items2;
-  items1[1] = React7(View, obj2);
+  items1[1] = React6(View, obj2);
   obj.children = items1;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(6186).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const sum = fn(6201).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
 const createStyles = fn(5141);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, stats: { alignSelf: "stretch", gap: nativeDefault.space.PX_24 }, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, guildAcronym: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_24 };
@@ -182,7 +182,7 @@ export default function CheckpointSummaryStatsScreen() {
       const items2 = [, ];
       ({ itemIcon: arr9[0], guildAcronym: arr9[1] } = tmp);
       obj5.style = items2;
-      const obj7 = { variant: "text-md/semibold", color: "text-overlay-light", allowFontScaling: false, children: CheckpointStatsUtils.getGuildAcronymCharacter(first.guild.name) };
+      const obj7 = { variant: "body-md/semibold", color: "text-overlay-light", allowFontScaling: false, children: CheckpointStatsUtils.getGuildAcronymCharacter(first.guild.name) };
       obj5.children = closure_8(Text_Text.Text, obj7);
       tmp27Result = closure_8(View, obj5);
       const tmp2Result8 = CheckpointStatsUtils;

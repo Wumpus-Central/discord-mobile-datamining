@@ -1,9 +1,9 @@
-// === Module 9881: oauth2/actions ===
+// === Module 9899: oauth2/actions ===
 
-// Module 9881 (oauth2/actions)
+// Module 9899 (oauth2/actions)
 import utils_PathUtils from "utils/PathUtils" /* 1081 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6860 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6875 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
@@ -320,14 +320,14 @@ let closure_15 = async function _finishUserCodeTwoWayLinkError() {
   })();
 };
 const Constants = fn(1072);
-({ ChannelTypes: metroRequire, Endpoints: closure_7 } = Constants);
+({ ChannelTypes: closure_6, Endpoints: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/oauth2/actions.tsx");
 
 export { getLocationContextServer };
 export function acceptWhitelist(token) {
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React5.OAUTH2_WHITELIST_ACCEPT, query: { token }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  const request = { url: metroImportDefault.OAUTH2_WHITELIST_ACCEPT, query: { token }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.post(request);
 }
 export function authorize() {

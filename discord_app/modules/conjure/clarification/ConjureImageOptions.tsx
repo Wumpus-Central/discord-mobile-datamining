@@ -1,9 +1,9 @@
-// === Module 12895: ConjureImageOptions ===
+// === Module 12976: ConjureImageOptions ===
 
-// Module 12895 (ConjureImageOptions)
+// Module 12976 (ConjureImageOptions)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 9071 */;
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 9088 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -171,16 +171,17 @@ export function ownImageUploadText(question) {
 export function uploadHint(upload) {
   if (true !== upload.upload) {
     return null;
+  } else if (0 === upload.options.length) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(_modDef3995.ZZ641e);
   } else {
-    let tmp2 = dependencyMap;
     const intl = util.intl;
-    if (upload.options.length > 0) {
-      tmp2 = _modDef3995;
-      let ZZ641e = tmp2.dkzChE;
+    if (1 === upload.options.length) {
+      let dkzChE = _modDef3995["2g3gk9"];
     } else {
-      ZZ641e = _modDef3995.ZZ641e;
+      dkzChE = _modDef3995.dkzChE;
     }
-    intl.string(ZZ641e);
+    stringResult = intl.string(dkzChE);
   }
 }
 export function noImageAnswer() {

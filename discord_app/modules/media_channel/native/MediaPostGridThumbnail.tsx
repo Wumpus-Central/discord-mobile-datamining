@@ -1,8 +1,8 @@
-// === Module 13905: MediaPostGridThumbnail ===
+// === Module 13991: MediaPostGridThumbnail ===
 
-// Module 13905 (MediaPostGridThumbnail)
-import FastImageDefault from "FastImage" /* 5837 */;
-import ForumPostMedia from "ForumPostMedia" /* 13903 */;
+// Module 13991 (MediaPostGridThumbnail)
+import FastImageDefault from "FastImage" /* 5851 */;
+import ForumPostMedia from "ForumPostMedia" /* 13989 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -71,12 +71,12 @@ function MediaPostGridThumbnailIOS(arg0) {
     items2[2] = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj7);
     obj4.children = items2;
   }
-  return timestampProducer(React5, obj4);
+  return timestampProducer(metroImportDefault, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/native/MediaPostGridThumbnail.tsx");
 

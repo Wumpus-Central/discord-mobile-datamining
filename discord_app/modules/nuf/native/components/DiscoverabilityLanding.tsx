@@ -1,19 +1,19 @@
-// === Module 14493: DiscoverabilityLanding ===
+// === Module 14573: DiscoverabilityLanding ===
 
-// Module 14493 (DiscoverabilityLanding)
+// Module 14573 (DiscoverabilityLanding)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6843 */;
+import TextStyles from "TextStyles" /* 6858 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const useContactSyncModalStore = fn(14379).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14459).useContactSyncModalStore;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerContainer: { flexGrow: 0, justifyContent: "center", marginBottom: 24 }, header: { paddingHorizontal: 16, alignItems: "center" }, image: { width: "100%", marginHorizontal: 0 }, button: { flexGrow: 0, marginHorizontal: 16, marginBottom: 24 }, title: { textAlign: "center", marginTop: 16 }, subtitle: { textAlign: "center", marginTop: 8 }, formRow: null, formText: null, footerContainer: null, info: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -34,7 +34,7 @@ export default function DiscoverabilityLanding(onNext) {
   const allowPhone = tmp2.allowPhone;
   items = [allowPhone, allowEmail];
   noop = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14494, dependencyMap.paths), "Discoverability Landing", { allowPhone, allowEmail });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14574, dependencyMap.paths), "Discoverability Landing", { allowPhone, allowEmail });
   }, items);
   const obj = { style: tmp.container, contentContainerStyle: { paddingTop: onNext(allowPhone[12]).NAV_BAR_HEIGHT + 32, paddingBottom: allowEmail(allowPhone[8])().bottom + 16 }, children: null };
   const obj3 = { style: tmp.headerContainer, children: null };
@@ -47,7 +47,7 @@ export default function DiscoverabilityLanding(onNext) {
   const intl = onNext(allowPhone[16]).intl;
   obj6.children = intl.string(onNext(allowPhone[16]).t.n8nw6j);
   items1[1] = closure_7(onNext(allowPhone[15]).Text, obj6);
-  const obj7 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-subtle", children: null };
+  const obj7 = { style: tmp.subtitle, variant: "body-sm/medium", color: "text-subtle", children: null };
   const intl2 = onNext(allowPhone[16]).intl;
   obj7.children = intl2.string(onNext(allowPhone[16]).t.KMW0kP);
   items1[2] = closure_7(onNext(allowPhone[15]).Text, obj7);
@@ -66,13 +66,13 @@ export default function DiscoverabilityLanding(onNext) {
   }
   obj9.selected = allowEmail;
   const items3 = [closure_7(onNext(allowPhone[17]).FormCheckboxRow, obj9), , ];
-  const obj11 = { style: tmp.info, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
+  const obj11 = { style: tmp.info, variant: "body-xs/medium", color: "text-default", children: null };
   const intl4 = tmp6(tmp3[16]).intl;
   const items4 = [intl4.string(onNext(allowPhone[16]).t["DGZg+k"]), " ", ];
   const intl5 = tmp6(tmp3[16]).intl;
   items4[2] = intl5.format(onNext(allowPhone[16]).t.QmF5z4, {
-    learnMoreHook: function LearnMore(children, arg1) {
-      return React5(Text_Text.Text, { onPress, variant: "text-sm/medium", color: "text-link", children }, arg1);
+    learnMoreHook: function LearnMore(children, id) {
+      return metroImportDefault(Text_Text.Text, { onPress, variant: "body-sm/medium", color: "text-link", children }, id);
     }
   });
   obj11.children = items4;

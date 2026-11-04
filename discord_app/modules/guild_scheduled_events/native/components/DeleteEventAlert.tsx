@@ -1,9 +1,9 @@
-// === Module 9242: DeleteEventAlert ===
+// === Module 9259: DeleteEventAlert ===
 
-// Module 9242 (DeleteEventAlert)
+// Module 9259 (DeleteEventAlert)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6975 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6990 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ export default function DeleteEventAlert(eventException) {
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(9095);
+            const obj8 = v1(9112);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -75,7 +75,7 @@ export default function DeleteEventAlert(eventException) {
             const obj = { value, done: true };
             return obj;
           }
-          v1(5381).hideActionSheet();
+          v1(5382).hideActionSheet();
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -110,7 +110,7 @@ export default function DeleteEventAlert(eventException) {
   if (null != recurrence_rule) {
     tmp8Result = null;
     if (!tmp7) {
-      let obj3 = { variant: "text-md/medium", color: "text-default", style: tmp.contentText, children: null };
+      let obj3 = { variant: "body-md/medium", color: "text-default", style: tmp.contentText, children: null };
       const intl3 = require("util").intl;
       obj3.children = intl3.format(require("util").t.ZcpcyO, {});
       tmp8Result = tmp8(require("Text/Text").Text, obj3);

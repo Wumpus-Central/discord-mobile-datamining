@@ -1,11 +1,11 @@
-// === Module 19883: GuildSettingsModalEmoji/EmojiRow ===
+// === Module 19999: GuildSettingsModalEmoji/EmojiRow ===
 
-// Module 19883 (GuildSettingsModalEmoji/EmojiRow)
+// Module 19999 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 575 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5091 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5397 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10187 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 19884 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5398 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10235 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 20000 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -182,11 +182,11 @@ export function EmojiRow(guildId) {
     return closure_9(guildId(onSelectRolesForEmoji[18]).TableRow, obj6);
   }
   const obj22 = { style: tmp.nameContainer, children: null };
-  const items11 = [closure_9(guildId(onSelectRolesForEmoji[16]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" }), closure_9(guildId(onSelectRolesForEmoji[16]).Text, { lineClamp: 1, style: tmp.emojiText, variant: "text-md/medium", color: "mobile-text-heading-primary", children }), closure_9(guildId(onSelectRolesForEmoji[16]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" })];
+  const items11 = [closure_9(guildId(onSelectRolesForEmoji[16]).Text, { style: tmp.colon, variant: "body-md/medium", color: "text-muted", children: ":" }), closure_9(guildId(onSelectRolesForEmoji[16]).Text, { lineClamp: 1, style: tmp.emojiText, variant: "body-md/medium", color: "mobile-text-heading-primary", children }), closure_9(guildId(onSelectRolesForEmoji[16]).Text, { style: tmp.colon, variant: "body-md/medium", color: "text-muted", children: ":" })];
   obj22.children = items11;
   tmp14Result4 = closure_10(tmp19, obj22);
   const obj17 = { user: stateFromStores1, guildId, size: guildId(onSelectRolesForEmoji[17]).AvatarSizes.XSMALL };
-  const obj23 = { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" };
-  const obj24 = { lineClamp: 1, style: tmp.emojiText, variant: "text-md/medium", color: "mobile-text-heading-primary", children };
-  const obj25 = { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" };
+  const obj23 = { style: tmp.colon, variant: "body-md/medium", color: "text-muted", children: ":" };
+  const obj24 = { lineClamp: 1, style: tmp.emojiText, variant: "body-md/medium", color: "mobile-text-heading-primary", children };
+  const obj25 = { style: tmp.colon, variant: "body-md/medium", color: "text-muted", children: ":" };
 }

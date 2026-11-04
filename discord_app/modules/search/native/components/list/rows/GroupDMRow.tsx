@@ -1,12 +1,12 @@
-// === Module 18875: rows/GroupDMRow ===
+// === Module 18978: rows/GroupDMRow ===
 
-// Module 18875 (rows/GroupDMRow)
+// Module 18978 (rows/GroupDMRow)
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 10930 */;
-import SearchListRow from "SearchListRow" /* 18860 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelNameDefault from "useChannelName" /* 5786 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10977 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 10978 */;
+import SearchListRow from "SearchListRow" /* 18963 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,8 +28,8 @@ export default function GroupDMRow(channel) {
   const recipientsLabel = useRecipientsLabel.useRecipientsLabel(channel);
   let tmp3Result;
   if (null != recipientsLabel) {
-    const obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
-    tmp3Result = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel });
+    const obj3 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
+    tmp3Result = jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel });
   }
   let str2 = str;
   if (str == null) {

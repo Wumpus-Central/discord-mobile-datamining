@@ -1,13 +1,13 @@
-// === Module 18830: useFrameLifecycle ===
+// === Module 18932: useFrameLifecycle ===
 
-// Module 18830 (useFrameLifecycle)
+// Module 18932 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const FramesConstants = fn(6967);
-({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
+const FramesConstants = fn(6982);
+({ isLaunched: closure_6, makeFrameId: metroImportDefault } = FramesConstants);
 const FrameLifecycleState = { Loading: "loading", AwaitingLaunch: "awaiting-launch", Launched: "launched", RenderingElsewhere: "rendering-elsewhere", NoApplication: "no-application", DoesNotSupportSurface: "does-not-support-surface", Error: "error" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/useFrameLifecycle.tsx");
@@ -20,7 +20,7 @@ export default function useFrameLifecycle(applicationId) {
   closure_129_0 = applicationId;
   closure_129_1 = surface;
   items = [applicationId, surface];
-  const memo = noop.useMemo(() => React5(applicationId, memo1), items);
+  const memo = noop.useMemo(() => metroImportDefault(applicationId, memo1), items);
   closure_129_2 = memo;
   const items1 = [memo];
   const memo1 = noop.useMemo(() => memo1, items1);
@@ -54,7 +54,7 @@ export default function useFrameLifecycle(applicationId) {
         const obj7 = { state: noop.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: noop.Loading, frame: "y" };
+        const obj8 = { state: noop.Loading, frame: "a" };
         obj10 = obj8;
       } else {
         if (null != data) {

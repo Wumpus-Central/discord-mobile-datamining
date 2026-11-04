@@ -1,6 +1,6 @@
-// === Module 10678: Caption ===
+// === Module 10726: Caption ===
 
-// Module 10678 (Caption)
+// Module 10726 (Caption)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;

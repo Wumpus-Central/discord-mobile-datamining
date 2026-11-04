@@ -1,8 +1,8 @@
-// === Module 16939: FamilyCenterUsernameHeader ===
+// === Module 17031: FamilyCenterUsernameHeader ===
 
-// Module 16939 (FamilyCenterUsernameHeader)
+// Module 17031 (FamilyCenterUsernameHeader)
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,8 +20,8 @@ export default function FamilyCenterUsernameHeader(user) {
   const name = UserUtilsDefault.useName(user);
   const obj3 = { style: tmp.container, children: null };
   const combined = " (@" + UserUtilsDefault.getUserTag(user, { decoration: "never" }) + ")";
-  const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
-  items = [name, React4(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", lineClamp: 1, children: combined })];
+  const obj4 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
+  items = [name, React4(Text_Text.Text, { variant: "body-md/medium", color: "text-muted", lineClamp: 1, children: combined })];
   obj4.children = items;
   obj3.children = hasOwnProperty(Text_Text.Text, obj4);
   return React4(View, obj3);

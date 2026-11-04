@@ -1,10 +1,10 @@
-// === Module 17121: BountiesModalEndCard ===
+// === Module 17213: BountiesModalEndCard ===
 
-// Module 17121 (BountiesModalEndCard)
+// Module 17213 (BountiesModalEndCard)
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import timingPresets from "timingPresets" /* 5380 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import timingPresets from "timingPresets" /* 5381 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
@@ -13,7 +13,7 @@ import size from "module_2" /* 2 */;
 const _modDef1652 = _mod1652;
 
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { container: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }, backdropTint: null, backdropGradient: null };
   const obj2 = {};

@@ -1,25 +1,25 @@
-// === Module 5910: destroy ===
+// === Module 5924: destroy ===
 
-// Module 5910 (destroy)
+// Module 5924 (destroy)
 import formatDefault from "format" /* 1353 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import inject from "inject" /* 2137 */;
-import VideoDefault from "Video" /* 5913 */;
-import CameraDefault from "Camera" /* 5917 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 5918 */;
-import pollConnectionStatsDefault from "pollConnectionStats" /* 5919 */;
-import ConnectionDefault from "Connection" /* 5921 */;
-import Devices from "Devices" /* 5981 */;
+import VideoDefault from "Video" /* 5927 */;
+import CameraDefault from "Camera" /* 5931 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 5932 */;
+import pollConnectionStatsDefault from "pollConnectionStats" /* 5933 */;
+import ConnectionDefault from "Connection" /* 5935 */;
+import Devices from "Devices" /* 5995 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5912 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5926 */;
 
 require = fn;
 let closure_3 = ["id", "useGraphicsCapture", "useGraphicsCaptureApiLevel"];
-let Constants = fn(5888);
-({ QUEUE_METRICS_INTERVAL_MS: closure_7, SIDECHAIN_COMPRESSION_MAX_RATIO: closure_8, SIDECHAIN_COMPRESSION_MAX_THRESHOLD: closure_9, SIDECHAIN_COMPRESSION_MIN_RATIO: closure_10, SIDECHAIN_COMPRESSION_MIN_THRESHOLD: closure_11, ProcessPriority: closure_12 } = Constants);
-Constants = fn(5911);
+let Constants = fn(5902);
+({ QUEUE_METRICS_INTERVAL_MS: metroImportDefault, SIDECHAIN_COMPRESSION_MAX_RATIO: closure_8, SIDECHAIN_COMPRESSION_MAX_THRESHOLD: closure_9, SIDECHAIN_COMPRESSION_MIN_RATIO: closure_10, SIDECHAIN_COMPRESSION_MIN_THRESHOLD: closure_11, ProcessPriority: closure_12 } = Constants);
+Constants = fn(5925);
 ({ ClipsRecordingEvent: map1, DEFAULT_VOLUME: closure_14, DeviceTypes: closure_15, DISABLED_DEVICE_ID: closure_16, Features: closure_17, MediaEngineContextTypes: closure_18, NativeFeatures: closure_19, WATCHDOG_TIMEOUT_MS: closure_20 } = Constants);
 class MediaEngineNative extends tmp4 {
   constructor() {
@@ -298,7 +298,7 @@ class MediaEngineNative extends tmp4 {
           } else if (arg0 !== 2) {
             closure_128_1 = value;
             closure_128_1.periodMs = periodMs;
-            closure_129_0.emit(v0(5918).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
+            closure_129_0.emit(v0(5932).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
             const _setTimeout = setTimeout;
             const timerId = setTimeout(closure_129_2, periodMs);
           }
@@ -514,8 +514,8 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   if (flag) {
     flag = self.supports(constants3.VIDEO);
   }
-  obj3 = self(5921).create(arg0, arg1, videoSupported, flag);
-  obj3.on(obj3(5926).BaseConnectionEvent.Destroy, (arg0) => {
+  obj3 = self(5935).create(arg0, arg1, videoSupported, flag);
+  obj3.on(obj3(5940).BaseConnectionEvent.Destroy, (arg0) => {
     const connections = self.connections;
     connections.delete(arg0);
     if (self.connectionsEmpty()) {
@@ -527,15 +527,15 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
       }
     }
   });
-  obj3.on(obj3(5926).BaseConnectionEvent.Connected, () => {
+  obj3.on(obj3(5940).BaseConnectionEvent.Connected, () => {
     obj3.setVideoBroadcast(self.shouldConnectionBroadcastVideo(obj3));
   });
-  obj3.on(obj3(5926).BaseConnectionEvent.Silence, (arg0) => {
+  obj3.on(obj3(5940).BaseConnectionEvent.Silence, (arg0) => {
     self.emit(MediaEngineEvent.MediaEngineEvent.Silence, arg0);
   });
   let connections = self.connections;
   connections.add(obj3);
-  let obj2 = self(5921);
+  let obj2 = self(5935);
   let HIGH = videoSupported.processPriority;
   if (HIGH == null) {
     HIGH = constants.HIGH;
@@ -549,7 +549,7 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
     }
     const tmpResult2 = tmp(2137);
   }
-  self.emit(obj3(5918).MediaEngineEvent.Connection, obj3);
+  self.emit(obj3(5932).MediaEngineEvent.Connection, obj3);
   return obj3;
 };
 prototype["shouldConnectionBroadcastVideo"] = function shouldConnectionBroadcastVideo(context) {
@@ -1353,6 +1353,14 @@ prototype["setClipsRecordingEnabled"] = function setClipsRecordingEnabled(arg0) 
     const result = setClipsRecordingEnabled(arg0);
   }
 };
+prototype["setClipsCaptureOverrides"] = function setClipsCaptureOverrides(captureOverrides) {
+  const voiceEngine = inject.getVoiceEngine();
+  const applyClipsSettings = voiceEngine.applyClipsSettings;
+  if (applyClipsSettings != null) {
+    const obj2 = { captureOverrides };
+    applyClipsSettings(obj2);
+  }
+};
 prototype["setClipBufferLength"] = function setClipBufferLength(arg0) {
   const voiceEngine = inject.getVoiceEngine();
   const setClipBufferLength = voiceEngine.setClipBufferLength;
@@ -1856,7 +1864,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
   const replay = ConnectionDefault.createReplay(arg0, arg1);
   let tmp2 = null;
   if (null != replay) {
-    replay.on(self(5926).BaseConnectionEvent.Destroy, (arg0) => {
+    replay.on(self(5940).BaseConnectionEvent.Destroy, (arg0) => {
       const connections = self.connections;
       connections.delete(arg0);
       if (self.connectionsEmpty()) {
@@ -1866,7 +1874,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
     let connections = self.connections;
     connections.add(replay);
     self(2137).setProcessPriority(constants.HIGH);
-    self.emit(self(5918).MediaEngineEvent.Connection, replay);
+    self.emit(self(5932).MediaEngineEvent.Connection, replay);
     tmp2 = replay;
     const obj3 = self(2137);
   }
@@ -1992,8 +2000,8 @@ prototype["setSidechainCompression"] = function setSidechainCompression(arg0) {
 };
 prototype["setSidechainCompressionStrength"] = function setSidechainCompressionStrength(arg0) {
   const diff = 100 - arg0;
-  const sum = closure_1_11 + (React7 - closure_1_11) * diff / 100;
-  const sum1 = closure_1_10 + (React6 - closure_1_10) * diff / 100;
+  const sum = closure_1_11 + (React6 - closure_1_11) * diff / 100;
+  const sum1 = closure_1_10 + (React5 - closure_1_10) * diff / 100;
   const voiceEngine = inject.getVoiceEngine();
   const applySidechainCompressionSettings = voiceEngine.applySidechainCompressionSettings;
   if (applySidechainCompressionSettings != null) {

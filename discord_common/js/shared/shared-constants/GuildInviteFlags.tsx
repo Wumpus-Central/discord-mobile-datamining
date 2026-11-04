@@ -1,6 +1,6 @@
-// === Module 9087: GuildInviteFlags ===
+// === Module 9104: GuildInviteFlags ===
 
-// Module 9087 (GuildInviteFlags)
+// Module 9104 (GuildInviteFlags)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set([1, 2, 4, 16]) };

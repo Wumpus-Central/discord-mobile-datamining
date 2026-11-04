@@ -1,15 +1,15 @@
-// === Module 15504: PremiumFeaturesTable ===
+// === Module 15591: PremiumFeaturesTable ===
 
-// Module 15504 (PremiumFeaturesTable)
+// Module 15591 (PremiumFeaturesTable)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import shared from "shared" /* 5148 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import LinearGradientDefault from "LinearGradient" /* 5710 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import _modDef15505 from "module_15505" /* 15505 */;
-import _modDef15506 from "module_15506" /* 15506 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import LinearGradientDefault from "LinearGradient" /* 5723 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import _modDef15592 from "module_15592" /* 15592 */;
+import _modDef15593 from "module_15593" /* 15593 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,15 +19,15 @@ function CheckIcon() {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-  return closure_1_11(native.Icon, { source: _modDef15505, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef15592, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef15506, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef15593, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
 function CellText(arg0) {
   ({ text, style } = arg0);
-  return closure_1_11(Text_Text.Text, { style, variant: "text-md/medium", color: "mobile-text-heading-primary", children });
+  return closure_1_11(Text_Text.Text, { style, variant: "body-md/medium", color: "mobile-text-heading-primary", children });
 }
 function Row(withTopBorderRadius) {
   ({ column2, withBottomBorder } = withTopBorderRadius);
@@ -207,7 +207,7 @@ function Row(withTopBorderRadius) {
 const View = fn(17).View;
 const HorizontalGradient = fn(1072).HorizontalGradient;
 const PremiumConstants = fn(1387);
-({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7, PRICE_PLACEHOLDER: closure_8, PremiumTypes: closure_9, SubscriptionPlans: closure_10 } = PremiumConstants);
+({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: metroImportDefault, PRICE_PLACEHOLDER: closure_8, PremiumTypes: closure_9, SubscriptionPlans: closure_10 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
@@ -219,7 +219,7 @@ obj2.cell = { paddingVertical: 12 };
 obj2.labelCell = { flex: 1, justifyContent: "flex-start" };
 obj2.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-obj2.themedHighlightedCell = { backgroundColor: fn(6898).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj2.themedHighlightedCell = { backgroundColor: fn(6913).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj2.nitroHomeHightlightedBorderLeftRight = { borderLeftColor: "rgba(184, 69, 193, 0.5)", borderLeftWidth: 2, borderRightColor: "rgba(184, 69, 193, 0.5)", borderRightWidth: 2 };
 obj2.premiumGroupCard = { marginTop: 16 };
 obj2.priceContainer = { alignItems: "center" };
@@ -227,7 +227,7 @@ obj2.priceText = { textAlign: "center" };
 let closure_14 = createStyles.createStyles(obj2);
 createStyles = fn(5141);
 let obj7 = { icon: null };
-let obj5 = { backgroundColor: fn(6898).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj5 = { backgroundColor: fn(6913).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj7.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj7);
 let size = fn(2);
@@ -344,9 +344,9 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   obj14.label = closure_11(CellText, obj15);
   const intl10 = tmp9(tmp3[15]).intl;
   obj14.rowName = intl10.string(tmp9(tmp3[15]).t["ufhQC+"]);
-  obj14.column1 = closure_11(tmp9(tmp3[14]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: maxFileSizeForPremiumType });
+  obj14.column1 = closure_11(tmp9(tmp3[14]).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: maxFileSizeForPremiumType });
   obj14.column1AccessibilityLabel = maxFileSizeForPremiumType;
-  obj14.column2 = closure_11(tmp9(tmp3[14]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: maxFileSizeForPremiumType1 });
+  obj14.column2 = closure_11(tmp9(tmp3[14]).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: maxFileSizeForPremiumType1 });
   obj14.column2AccessibilityLabel = maxFileSizeForPremiumType1;
   items[4] = obj14;
   const obj16 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null, hidden: null };

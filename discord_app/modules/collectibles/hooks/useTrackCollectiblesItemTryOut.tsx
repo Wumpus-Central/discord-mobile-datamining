@@ -1,12 +1,12 @@
-// === Module 8858: useTrackCollectiblesItemTryOut ===
+// === Module 8875: useTrackCollectiblesItemTryOut ===
 
-// Module 8858 (useTrackCollectiblesItemTryOut)
+// Module 8875 (useTrackCollectiblesItemTryOut)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7844 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7872 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7860 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 _mod19.useCallback;
 const AnalyticEvents = Constants.AnalyticEvents;
-({ AnalyticsPremiumFeatureNames, AnalyticsPremiumFeatureTiers: metroRequire } = PremiumConstants);
+({ AnalyticsPremiumFeatureNames, AnalyticsPremiumFeatureTiers: closure_6 } = PremiumConstants);
 let obj = { [CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION]: AnalyticsPremiumFeatureNames.AVATAR_DECORATION, [CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT]: AnalyticsPremiumFeatureNames.PROFILE_EFFECT, [CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME]: undefined, [CollectiblesItemType.CollectiblesItemType.NAMEPLATE]: undefined, [CollectiblesItemType.CollectiblesItemType.NONE]: undefined, [CollectiblesItemType.CollectiblesItemType.BUNDLE]: undefined, [CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP]: undefined, [CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU]: undefined };
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackCollectiblesItemTryOut.tsx");
 

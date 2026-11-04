@@ -1,13 +1,13 @@
-// === Module 14686: IconActionButton ===
+// === Module 14766: IconActionButton ===
 
-// Module 14686 (IconActionButton)
+// Module 14766 (IconActionButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useFontScale from "useFontScale" /* 5762 */;
-import Pressables from "Pressables" /* 7106 */;
-import shared_components_Badge from "shared_components/Badge" /* 9949 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useFontScale from "useFontScale" /* 5776 */;
+import Pressables from "Pressables" /* 7121 */;
+import shared_components_Badge from "shared_components/Badge" /* 9967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -105,7 +105,7 @@ export default function IconActionButton(variant) {
   obj.style = items;
   const items1 = [React4(closure_7, { IconComponent, color, source }), , , ];
   if (tmp10Result) {
-    const obj2 = { variant: "text-sm/semibold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
+    const obj2 = { variant: "body-sm/semibold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
     tmp10Result = React4(Text_Text.Text, obj2);
   }
   items1[1] = tmp10Result;

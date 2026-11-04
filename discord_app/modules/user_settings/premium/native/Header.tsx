@@ -1,12 +1,12 @@
-// === Module 15496: premium/Header ===
+// === Module 15583: premium/Header ===
 
-// Module 15496 (premium/Header)
+// Module 15583 (premium/Header)
 import util from "util" /* 1113 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import _modDef15497 from "module_15497" /* 15497 */;
-import _modDef15498 from "module_15498" /* 15498 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import _modDef15584 from "module_15584" /* 15584 */;
+import _modDef15585 from "module_15585" /* 15585 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,13 +29,13 @@ export default function Header(style) {
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef15497;
+    let tmp2Result = _modDef15584;
   } else {
-    tmp2Result = _modDef15498;
+    tmp2Result = _modDef15585;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2), ];
-  const obj4 = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+  const obj4 = { style: tmp.headerText, variant: "body-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.SD5MJW);
   items1[1] = React4(Text_Text.Text, obj4);

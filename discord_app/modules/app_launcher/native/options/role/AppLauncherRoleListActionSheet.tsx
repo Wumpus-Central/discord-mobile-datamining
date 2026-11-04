@@ -1,12 +1,12 @@
-// === Module 12652: AppLauncherRoleListActionSheet ===
+// === Module 12733: AppLauncherRoleListActionSheet ===
 
-// Module 12652 (AppLauncherRoleListActionSheet)
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7419 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9187 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12650 */;
+// Module 12733 (AppLauncherRoleListActionSheet)
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7435 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9204 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12731 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7418 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7434 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 
 const require = globalThis.__r;
@@ -65,14 +65,14 @@ class RoleRow {
     }, items1);
     tmp7 = jsx;
     obj1 = { label: null, icon: jsx(RoleIcon, { role: guildRole }), trailing: null };
-    obj5 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildRole.name };
+    obj5 = { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: guildRole.name };
     obj1.label = jsx(guildRole(closure_3[12]).Text, obj5);
     tmp8 = null;
     if (!tmp5) {
       tmp8 = null;
       if (null != stateFromStores) {
         tmp9 = jsxs;
-        obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
+        obj6 = { variant: "body-sm/normal", color: "text-muted", children: null };
         items2 = [, , ];
         items2[0] = tmp7(tmp2(tmp3[13]).GroupIcon, { size: "xxs", color: "text-muted" });
         str = " ";

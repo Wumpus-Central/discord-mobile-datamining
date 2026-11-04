@@ -1,10 +1,10 @@
-// === Module 17544: DisplayNameStylesAccessibilitySetting ===
+// === Module 17634: DisplayNameStylesAccessibilitySetting ===
 
-// Module 17544 (DisplayNameStylesAccessibilitySetting)
+// Module 17634 (DisplayNameStylesAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import _modDef3059 from "module_3059" /* 3059 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16413 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16502 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
 require = fn;
@@ -15,13 +15,13 @@ function useValue() {
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef3059["2gFUEw"]);
   },
-  parent: fn(8556).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8573).MobileUserSettings.ACCESSIBILITY,
   useValue,
   onValueChange
 });

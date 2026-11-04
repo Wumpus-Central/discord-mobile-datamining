@@ -1,15 +1,15 @@
-// === Module 11387: useChannelSafeAreaBottomStyles ===
+// === Module 11437: useChannelSafeAreaBottomStyles ===
 
-// Module 11387 (useChannelSafeAreaBottomStyles)
+// Module 11437 (useChannelSafeAreaBottomStyles)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6688 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
 import LurkingStore from "LurkingStore" /* 5074 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5884 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
 
 const require = globalThis.__r;
 

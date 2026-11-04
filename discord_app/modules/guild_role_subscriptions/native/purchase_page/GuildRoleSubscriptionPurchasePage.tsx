@@ -1,14 +1,14 @@
-// === Module 18775: GuildRoleSubscriptionPurchasePage ===
+// === Module 18876: GuildRoleSubscriptionPurchasePage ===
 
-// Module 18775 (GuildRoleSubscriptionPurchasePage)
+// Module 18876 (GuildRoleSubscriptionPurchasePage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8727 */;
-import _modDef12048 from "module_12048" /* 12048 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 18785 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
+import _modDef12107 from "module_12107" /* 12107 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 18886 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
@@ -21,7 +21,7 @@ function Separator() {
   return gesture(timestampProducer, { style: closure_17().separator });
 }
 function LegalDisclaimer() {
-  const obj = { variant: "text-xs/normal", color: "text-muted", children: null };
+  const obj = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.format(util.t.FSPTDI, { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS });
   return gesture(Text_Text.Text, obj);
@@ -38,9 +38,9 @@ function SocialBadge(onPress) {
   }
   obj.activeOpacity = num;
   obj.onPress = onPress;
-  items = [gesture(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), gesture(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
+  items = [gesture(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), gesture(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef12048, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef12107, style: tmp.socialBadgeArrow };
     tmp5Result = gesture(native.Icon, obj3);
   }
   items[2] = tmp5Result;
@@ -48,7 +48,7 @@ function SocialBadge(onPress) {
   return closure_1_15(hasOwnProperty, obj);
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_4, TouchableOpacity: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ ActivityIndicator: closure_4, TouchableOpacity: hasOwnProperty, View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
@@ -138,7 +138,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
                 unlockHook() {
                               const obj = { style: closure_2.gatedChannel, children: null };
                               const obj2 = { size: native.Icon.Sizes.SMALL_20, style: closure_2.gatedChannelIcon, source: utils_ChannelUtils.getChannelIcon(stateFromStores1) };
-                              items = [gesture(native.Icon, obj2), gesture(Text_Text.Text, { variant: "text-xs/semibold", color: "text-default", children })];
+                              items = [gesture(native.Icon, obj2), gesture(Text_Text.Text, { variant: "body-xs/semibold", color: "text-default", children })];
                               obj.children = items;
                               return closure_2_15(timestampProducer, obj);
                             }
@@ -159,7 +159,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
             obj13.children = intl3.format(tmp5(tmp3[10]).t.mqCkpl, obj14);
             items4[1] = closure_14(tmp5(tmp3[9]).Text, obj13);
             items4[2] = closure_14(tmp5(tmp3[11]).Spacer, { size: 8 });
-            const obj15 = { variant: "text-sm/normal", color: "text-default", lineClamp: 3, children: subscriptionsSettings.description };
+            const obj15 = { variant: "body-sm/normal", color: "text-default", lineClamp: 3, children: subscriptionsSettings.description };
             items4[3] = closure_14(tmp5(tmp3[25]).TruncatedText, obj15);
             let tmp20Result = hasItem;
             if (!hasItem) {

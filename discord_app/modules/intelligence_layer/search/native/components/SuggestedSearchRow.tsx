@@ -1,17 +1,17 @@
-// === Module 18859: SuggestedSearchRow ===
+// === Module 18962: SuggestedSearchRow ===
 
-// Module 18859 (SuggestedSearchRow)
+// Module 18962 (SuggestedSearchRow)
 import nativeDefault from "native" /* 575 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14017 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14039 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14041 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14042 */;
-import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 14058 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14103 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14125 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14127 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14128 */;
+import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 14144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SmartSearchConstants = fn(14019);
+const SmartSearchConstants = fn(14105);
 ({ SUGGESTED_SEARCHES_WINDOW_SIZE: hasOwnProperty, SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT } = SmartSearchConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
@@ -45,9 +45,9 @@ export default noop.memo(function SuggestedSearchRow(suggestedSearch) {
     const initialMessages = SearchPlatformUtilsDefault.fetchInitialMessages(smartSearchQuery.searchContext);
     const result1 = SuggestedSearchActionCreators.advanceSuggestedSearches(smartSearchQuery, SearchSessionAnalyticsManagerDefault, hasOwnProperty);
   }, items);
-  let str2 = "redesign/channel-title/semibold";
+  let str2 = "heading-sm/semibold";
   if ("default" === str) {
-    str2 = "text-md/normal";
+    str2 = "body-md/normal";
   }
   let obj2 = { onPress: callback, accessibilityLabel: suggestedSearch.suggestedSearchText, label: null, icon: null };
   let compactLabel;

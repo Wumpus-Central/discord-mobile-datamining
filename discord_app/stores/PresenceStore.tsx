@@ -1,13 +1,13 @@
-// === Module 5881: PresenceStore ===
+// === Module 5895: PresenceStore ===
 
-// Module 5881 (PresenceStore)
+// Module 5895 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import ActivityTypes from "ActivityTypes" /* 5882 */;
-import hasRichActivityDefault from "hasRichActivity" /* 5883 */;
+import ActivityTypes from "ActivityTypes" /* 5896 */;
+import hasRichActivityDefault from "hasRichActivity" /* 5897 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -384,7 +384,7 @@ function clearPresences(id) {
   tmp2 = keys[Symbol.iterator]();
 }
 const Constants = fn(1072);
-({ StatusTypes: hasOwnProperty, ClientTypes: metroRequire, ME: closure_7, UserFlags: closure_8 } = Constants);
+({ StatusTypes: hasOwnProperty, ClientTypes: closure_6, ME: metroImportDefault, UserFlags: closure_8 } = Constants);
 let closure_9 = Object.freeze([]);
 const presencesForGuilds = {};
 const statuses = {};

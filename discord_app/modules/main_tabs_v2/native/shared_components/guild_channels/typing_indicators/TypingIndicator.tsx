@@ -1,10 +1,10 @@
-// === Module 18287: typing_indicators/TypingIndicator ===
+// === Module 18384: typing_indicators/TypingIndicator ===
 
-// Module 18287 (typing_indicators/TypingIndicator)
+// Module 18384 (typing_indicators/TypingIndicator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import shared from "shared" /* 5148 */;
-import useThemeDefault from "useTheme" /* 5376 */;
+import useThemeDefault from "useTheme" /* 5377 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

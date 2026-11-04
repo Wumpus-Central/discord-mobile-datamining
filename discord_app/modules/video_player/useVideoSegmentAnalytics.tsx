@@ -1,13 +1,13 @@
-// === Module 17256: useVideoSegmentAnalytics ===
+// === Module 17348: useVideoSegmentAnalytics ===
 
-// Module 17256 (useVideoSegmentAnalytics)
-import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7973 */;
+// Module 17348 (useVideoSegmentAnalytics)
+import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7989 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
 
 require = fn;
 const noop = fn(19);
-({ useRef: closure_4, useCallback: hasOwnProperty, useEffect: metroRequire } = noop);
+({ useRef: closure_4, useCallback: hasOwnProperty, useEffect: closure_6 } = noop);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_player/useVideoSegmentAnalytics.tsx");
 

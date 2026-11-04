@@ -1,29 +1,29 @@
-// === Module 18690: ItemDetailsActionSheet ===
+// === Module 18789: ItemDetailsActionSheet ===
 
-// Module 18690 (ItemDetailsActionSheet)
+// Module 18789 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import GuildIcon from "GuildIcon" /* 7083 */;
-import TableRow from "TableRow" /* 7101 */;
-import useDesignToggleDefault from "useDesignToggle" /* 7126 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import ICYMIUtils from "ICYMIUtils" /* 9047 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11281 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18691 */;
+import useChannelNameDefault from "useChannelName" /* 5786 */;
+import GuildIcon from "GuildIcon" /* 7098 */;
+import TableRow from "TableRow" /* 7116 */;
+import useDesignToggleDefault from "useDesignToggle" /* 7141 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import ICYMIUtils from "ICYMIUtils" /* 9064 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11331 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18790 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import ICYMIStore from "ICYMIStore" /* 9030 */;
+import ICYMIStore from "ICYMIStore" /* 9047 */;
 
 const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);

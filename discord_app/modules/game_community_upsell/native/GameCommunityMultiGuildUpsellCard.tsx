@@ -1,13 +1,13 @@
-// === Module 18487: GameCommunityMultiGuildUpsellCard ===
+// === Module 18581: GameCommunityMultiGuildUpsellCard ===
 
-// Module 18487 (GameCommunityMultiGuildUpsellCard)
+// Module 18581 (GameCommunityMultiGuildUpsellCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
-import transitionToGuild from "transitionToGuild" /* 7646 */;
-import IconButton from "IconButton" /* 8152 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9888 */;
+import transitionToGuild from "transitionToGuild" /* 7662 */;
+import IconButton from "IconButton" /* 8168 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -263,7 +263,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   const tmp18 = gameId(onDismiss[20]);
   obj13.size = guild(onDismiss[23]).Icon.Sizes.REFRESH_SMALL_16;
   obj13.style = tmp.guildBadge;
-  const items10 = [closure_12(gameId(onDismiss[22]), obj13), closure_12(guild(onDismiss[24]).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.guildName, lineClamp: 1, children: name })];
+  const items10 = [closure_12(gameId(onDismiss[22]), obj13), closure_12(guild(onDismiss[24]).Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.guildName, lineClamp: 1, children: name })];
   obj12.children = items10;
   const items11 = [closure_13(closure_6, obj12), ];
   let tmp16Result3 = null != description;
@@ -271,7 +271,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
     tmp16Result3 = description.length > 0;
   }
   if (tmp16Result3) {
-    const obj15 = { variant: "text-sm/medium", style: tmp.description, lineClamp: 3, children: description };
+    const obj15 = { variant: "body-sm/medium", style: tmp.description, lineClamp: 3, children: description };
     tmp16Result3 = closure_12(tmp4(tmp5[24]).Text, obj15);
   }
   items11[1] = tmp16Result3;
@@ -282,7 +282,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
     const obj17 = { style: tmp.memberCount, children: null };
     const obj18 = { style: tmp.dotOnline };
     const items13 = [closure_12(tmp15, obj18), ];
-    const obj19 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+    const obj19 = { variant: "body-xs/medium", color: "text-subtle", children: null };
     let intl = tmp4(tmp5[19]).intl;
     const obj20 = { membersOnline: num };
     obj19.children = intl.format(tmp4(tmp5[19]).t["LC+S+m"], obj20);
@@ -296,7 +296,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
     const obj21 = { style: tmp.memberCount, children: null };
     const obj22 = { style: tmp.dot };
     const items15 = [closure_12(tmp15, obj22), ];
-    const obj23 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+    const obj23 = { variant: "body-xs/medium", color: "text-subtle", children: null };
     const intl2 = tmp4(tmp5[19]).intl;
     const obj24 = { count: num2 };
     obj23.children = intl2.format(tmp4(tmp5[19]).t.zRl6XR, obj24);

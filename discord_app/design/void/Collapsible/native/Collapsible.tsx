@@ -1,9 +1,9 @@
-// === Module 16123: Collapsible ===
+// === Module 16212: Collapsible ===
 
-// Module 16123 (Collapsible)
+// Module 16212 (Collapsible)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5757 */;
+import spring_spring from "spring/spring" /* 5771 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { stiffness: 150, overshootClamping: true };
 const createStyles = fn(5141);
 const obj2 = { collapsible: { position: "relative", overflow: "hidden" }, collapsibleContent: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
@@ -80,7 +80,7 @@ export default function Collapsible(isExpanded) {
     const obj7 = { style: tmp.collapsibleContent, onLayout: tmp10, children: collapsibleContent };
     items5[1] = timestampProducer(View, obj7);
     obj4.children = items5;
-    obj3.children = React5(_modDef1652.View, obj4);
+    obj3.children = metroImportDefault(_modDef1652.View, obj4);
     return timestampProducer(View, obj3);
   } else {
     num = 0;

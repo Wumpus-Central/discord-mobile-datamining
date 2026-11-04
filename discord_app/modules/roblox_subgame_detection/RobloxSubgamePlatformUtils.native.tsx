@@ -1,6 +1,6 @@
-// === Module 8018: RobloxSubgamePlatformUtils ===
+// === Module 8034: RobloxSubgamePlatformUtils ===
 
-// Module 8018 (RobloxSubgamePlatformUtils)
+// Module 8034 (RobloxSubgamePlatformUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -37,7 +37,7 @@ export default {
             } else {
               dependencyMap = 1;
               c2 = 1;
-              const obj5 = { value: tmp4(8019).canOpenUrlScheme("roblox"), done: false };
+              const obj5 = { value: tmp4(8035).canOpenUrlScheme("roblox"), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -48,7 +48,7 @@ export default {
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            const obj = tmp4(8017);
+            const obj = tmp4(8033);
             if (value) {
               obj.ROBLOX_PROTOCOL_URL(closure_128_0);
             } else {

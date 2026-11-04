@@ -1,16 +1,16 @@
-// === Module 7337: CountryCallingCodeSelect ===
+// === Module 7353: CountryCallingCodeSelect ===
 
-// Module 7337 (CountryCallingCodeSelect)
+// Module 7353 (CountryCallingCodeSelect)
 import nativeDefault from "native" /* 575 */;
-import fuzzysearchDefault from "fuzzysearch" /* 7019 */;
+import fuzzysearchDefault from "fuzzysearch" /* 7034 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const getI18NCountryName = fn(5815).getI18NCountryName;
+const getI18NCountryName = fn(5829).getI18NCountryName;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: null, paddingTop: null, paddingBottom: null, flex: 1 };
@@ -89,7 +89,7 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
       start: 0 === arg1,
       end: arg1 === rows.length - 1,
       label: rows[arg1].translatedName,
-      trailing: closure_1_7(onCountrySelected(first[12]).Text, { variant: "text-md/semibold", children: country.code }),
+      trailing: closure_1_7(onCountrySelected(first[12]).Text, { variant: "body-md/semibold", children: country.code }),
       onPress() {
         onCountrySelected(country);
         if (onClose != null) {

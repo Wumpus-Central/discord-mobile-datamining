@@ -1,13 +1,13 @@
-// === Module 7025: QuarantineModeInfoAlert ===
+// === Module 7040: QuarantineModeInfoAlert ===
 
-// Module 7025 (QuarantineModeInfoAlert)
+// Module 7040 (QuarantineModeInfoAlert)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import common_AlertDefault from "common/Alert" /* 6150 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import common_AlertDefault from "common/Alert" /* 6165 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6843 */;
+import TextStyles from "TextStyles" /* 6858 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -31,7 +31,7 @@ export default function QuarantineModeInfoAlert(onClose) {
   const intl = util.intl;
   obj2.children = intl.string(util.t.EouHwv);
   items = [React3(native.LegacyText, obj2), ];
-  const obj3 = { style: tmp.text, variant: "text-md/medium", children: null };
+  const obj3 = { style: tmp.text, variant: "body-md/medium", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.zNPBMA);
   items[1] = React3(Text_Text.Text, obj3);

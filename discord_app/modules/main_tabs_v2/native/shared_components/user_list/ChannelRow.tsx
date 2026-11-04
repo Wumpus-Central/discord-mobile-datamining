@@ -1,26 +1,26 @@
-// === Module 10931: ChannelRow ===
+// === Module 10979: ChannelRow ===
 
-// Module 10931 (ChannelRow)
+// Module 10979 (ChannelRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef2171 from "module_2171" /* 2171 */;
 import DateUtils from "DateUtils" /* 4963 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelName from "useChannelName" /* 5772 */;
-import TextIcon2 from "TextIcon" /* 8776 */;
-import ForumIcon from "ForumIcon" /* 8784 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10932 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 13559 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelName from "useChannelName" /* 5786 */;
+import TextIcon2 from "TextIcon" /* 8793 */;
+import ForumIcon from "ForumIcon" /* 8801 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10980 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 13643 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import ReadStateStore from "ReadStateStore" /* 6962 */;
+import ReadStateStore from "ReadStateStore" /* 6977 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10857).UserRowModes;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const UserRowModes = fn(10905).UserRowModes;
+const ReadStateTypes = fn(6911).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(5141);
@@ -133,14 +133,14 @@ export default noop.memo(function ChannelRow(channel) {
       const obj = { style: closure_7.subLabel, children: null };
       const obj2 = { color: nativeDefault.colors.TEXT_SUBTLE, style: closure_7.subLabelIcon };
       items = [application_id(TextIcon, obj2), , ];
-      const obj3 = { style: closure_7.threadName, variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, ellipsizeMode: "tail", children: stateFromStores1 };
+      const obj3 = { style: closure_7.threadName, variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, ellipsizeMode: "tail", children: stateFromStores1 };
       items[1] = application_id(Text_Text.Text, obj3);
       let tmp5Result = null;
       if (null != stateFromStores2) {
         const obj4 = { children: null };
-        const obj5 = { style: closure_7.subLabelSeparator, variant: "text-xs/medium", color: "text-subtle", children: "\u2022" };
+        const obj5 = { style: closure_7.subLabelSeparator, variant: "body-xs/medium", color: "text-subtle", children: "\u2022" };
         const items1 = [application_id(Text_Text.Text, obj5), ];
-        const obj6 = { variant: "text-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef2171(tmp14)) };
+        const obj6 = { variant: "body-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef2171(tmp14)) };
         items1[1] = application_id(Text_Text.Text, obj6);
         obj4.children = items1;
         tmp5Result = gesture(state, obj4);
@@ -168,7 +168,7 @@ export default noop.memo(function ChannelRow(channel) {
   obj5.icon = memo;
   obj5.onPress = callback;
   obj5.onLongPress = callback1;
-  obj5.label = closure_12(channel(onPress[18]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: memo1 });
+  obj5.label = closure_12(channel(onPress[18]).Text, { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: memo1 });
   obj5.subLabel = memo2;
   if (NONE === stateFromStores1.TOGGLE) {
     let obj6 = {};

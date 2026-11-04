@@ -1,15 +1,15 @@
-// === Module 12146: ScreenshareParticipant ===
+// === Module 12205: ScreenshareParticipant ===
 
-// Module 12146 (ScreenshareParticipant)
+// Module 12205 (ScreenshareParticipant)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6834 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
 
 const require = fn;
 const View = fn(17).View;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
 let closure_9 = createStyles.createStyles(obj2);
@@ -62,7 +62,7 @@ export default function ScreenshareParticipant(participant) {
   }
   obj4.children = stringResult;
   const items4 = [closure_7(participant(onDoubleTap[10]).Text, obj4), , ];
-  const obj5 = { style: tmp5.description, variant: "text-sm/medium", color: "interactive-text-default", children: null };
+  const obj5 = { style: tmp5.description, variant: "body-sm/medium", color: "interactive-text-default", children: null };
   const intl2 = tmp6(tmp3[11]).intl;
   const string2 = intl2.string;
   const t2 = tmp6(tmp3[11]).t;

@@ -1,11 +1,11 @@
-// === Module 18583: useGuildsBarCreatePendingFolderNode ===
+// === Module 18684: useGuildsBarCreatePendingFolderNode ===
 
-// Module 18583 (useGuildsBarCreatePendingFolderNode)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 7036 */;
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 13354 */;
+// Module 18684 (useGuildsBarCreatePendingFolderNode)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 7051 */;
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 13437 */;
 import noop from "module_19" /* 19 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5173 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 6893 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 6908 */;
 
 const require = fn;
 const size = fn(2);
@@ -25,15 +25,15 @@ export default function useGuildsBarCreatePendingFolderNode() {
     }
   }, items2);
   if (arr2.length > 0) {
-    const obj3 = { folderId: tmp2(18584).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
+    const obj3 = { folderId: tmp2(18685).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
     const intl = tmp2(1113).intl;
     obj3.folderName = intl.string(tmp2(1113).t["scsU+l"]);
     obj3.expanded = stateFromStores1;
     obj3.guildIds = arr2;
-    const folderNode = tmp2(6897).createFolderNode(obj3);
+    const folderNode = tmp2(6912).createFolderNode(obj3);
     for (const item10054 of arr2) {
       let children = folderNode.children;
-      let obj5 = stateFromStores(6897);
+      let obj5 = stateFromStores(6912);
       let arr = children.push(obj5.createGuildNode(item10054, folderNode.id));
       continue;
     }

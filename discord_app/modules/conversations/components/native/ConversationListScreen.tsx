@@ -1,15 +1,15 @@
-// === Module 10010: ConversationListScreen ===
+// === Module 10058: ConversationListScreen ===
 
-// Module 10010 (ConversationListScreen)
+// Module 10058 (ConversationListScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9983 */;
-import ConversationListItemDefault from "ConversationListItem" /* 10011 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 10031 */;
+import ConversationListItemDefault from "ConversationListItem" /* 10059 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7891 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7907 */;
 
 const require = globalThis.__r;
 
@@ -22,8 +22,8 @@ function keyExtractor(conversationId) {
   return conversationId.conversationId;
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(5775);
+({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
+const ConversationConstants = fn(5789);
 ({ MAX_CONVERSATIONS_PER_CHANNEL: closure_9, MOBILE_FETCH_LIMIT: closure_10, MOBILE_PREVIEW_MESSAGE_COUNT: closure_11 } = ConversationConstants);
 const jsx = fn(21).jsx;
 const viewabilityConfig = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };
@@ -43,11 +43,11 @@ let obj = { empty: { paddingVertical: nativeDefault.space.PX_24, paddingHorizont
 let closure_15 = createStyles.createStyles(obj);
 const ListEmptyComponent = noop.memo(function EmptyComponent() {
   const obj = { style: closure_15().empty, children: null };
-  const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
+  const obj2 = { variant: "body-md/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.LJuFRG);
-  obj.children = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: null });
-  return <React5 style={closure_15().empty}>{null}</React5>;
+  obj.children = jsx(Text_Text.Text, { variant: "body-md/normal", color: "text-muted", children: null });
+  return <metroImportDefault style={closure_15().empty}>{null}</metroImportDefault>;
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationListScreen.tsx");
@@ -238,6 +238,6 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(7414).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
+  obj7.children = jsx(tmp(7430).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
   return <memo style={tmp3.container}>{null}</memo>;
 };

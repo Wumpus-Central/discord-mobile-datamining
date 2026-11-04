@@ -1,14 +1,14 @@
-// === Module 19406: VoicePanelVideoRenderer ===
+// === Module 19510: VoicePanelVideoRenderer ===
 
-// Module 19406 (VoicePanelVideoRenderer)
+// Module 19510 (VoicePanelVideoRenderer)
 import _mod1705 from "module_1705" /* 1705 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11364 */;
-import useVideoSpinnerTimerDefault from "useVideoSpinnerTimer" /* 11903 */;
-import DCDVideoRendererDefault from "DCDVideoRenderer" /* 11910 */;
-import VideoActionCreators from "VideoActionCreators" /* 19270 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11414 */;
+import useVideoSpinnerTimerDefault from "useVideoSpinnerTimer" /* 11962 */;
+import DCDVideoRendererDefault from "DCDVideoRenderer" /* 11969 */;
+import VideoActionCreators from "VideoActionCreators" /* 19374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -17,12 +17,12 @@ const require = globalThis.__r;
 
 require = fn;
 let PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11360);
+const VoicePanelConstants = fn(11410);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(19273).VoicePanelPIPModes;
-const SCALE_PHYSICS = fn(11361).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(19377).VoicePanelPIPModes;
+const SCALE_PHYSICS = fn(11411).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const DCDVideoRenderer = module_1652.createAnimatedComponent(DCDVideoRendererDefault);
@@ -175,7 +175,7 @@ export default noop.memo(function VideoRenderer(id) {
       _undefined4(c0);
     }
   });
-  onReady = tmp5(11905)({ streamId, userId, loading: tmp13, videoSpinnerContext, paused: flag3, streamKey }).onReady;
+  onReady = tmp5(11964)({ streamId, userId, loading: tmp13, videoSpinnerContext, paused: flag3, streamKey }).onReady;
   useVideoSpinnerTimerDefault({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, loading: tmp13 });
   items = [onReady];
   const callback = obj2.useCallback(() => {
@@ -303,7 +303,7 @@ export default noop.memo(function VideoRenderer(id) {
   closure_130_19 = undefined;
   closure_130_20 = undefined;
   closure_130_21 = undefined;
-  const context1 = obj2.useContext(tmp5(11359));
+  const context1 = obj2.useContext(tmp5(11409));
   ({ windowDimensions: windowDimensions2, dismissToPIPGestureRef } = context1);
   closure_130_4 = dismissToPIPGestureRef;
   const setFocused = context1.setFocused;
@@ -1573,7 +1573,7 @@ export default noop.memo(function VideoRenderer(id) {
   const items74 = [onReady(module_1652.View, obj9), ];
   if (tmp13) {
     const obj11 = { animate: true, style: tmp.spinner };
-    let tmp203Result = tmp203(tmp5(11907), obj11);
+    let tmp203Result = tmp203(tmp5(11966), obj11);
   } else {
     const obj12 = { style: animatedStyle1, layout: callback7, pointerEvents: "none" };
     tmp203Result = tmp203(tmp5(1652).View, obj12);

@@ -1,7 +1,7 @@
-// === Module 19536: HcaptchaModal ===
+// === Module 19640: HcaptchaModal ===
 
-// Module 19536 (HcaptchaModal)
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6658 */;
+// Module 19640 (HcaptchaModal)
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6673 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
@@ -110,7 +110,7 @@ class HcaptchaModal {
 }
 let closure_3 = ["onMessage", "onClose"];
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: metroRequire, View: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
+({ ActivityIndicator: closure_6, View: metroImportDefault, StyleSheet: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5141);

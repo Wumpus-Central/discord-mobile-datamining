@@ -1,6 +1,6 @@
-// === Module 10275: ChatGDMCustomize ===
+// === Module 10323: ChatGDMCustomize ===
 
-// Module 10275 (ChatGDMCustomize)
+// Module 10323 (ChatGDMCustomize)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,7 +9,7 @@ import ChannelStore from "ChannelStore" /* 4990 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const MAX_CHANNEL_NAME_LENGTH = fn(1072).MAX_CHANNEL_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -276,7 +276,7 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
     let tmp46Result = null;
     if (tmp20) {
       let obj8 = { onPress: memo.clear, accessibilityRole: "button", children: null };
-      let obj9 = { style: tmp.iconClear, variant: "text-sm/semibold", color: "text-link", children: null };
+      let obj9 = { style: tmp.iconClear, variant: "body-sm/semibold", color: "text-link", children: null };
       let intl = tmp4(tmp3[16]).intl;
       obj9.children = intl.string(tmp4(tmp3[16]).t["uY+Nk/"]);
       obj8.children = tmp46(tmp4(tmp3[20]).Text, obj9);
@@ -313,7 +313,7 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
     let tmp44Result = null;
     if (null != first2) {
       let obj13 = { style: tmp.rateLimitedContainer, children: null };
-      const obj14 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
+      const obj14 = { variant: "body-sm/semibold", color: "text-feedback-critical", children: null };
       const intl4 = tmp4(tmp3[16]).intl;
       obj14.children = intl4.string(tmp4(tmp3[16]).t.Whhv4w);
       const items6 = [tmp46(tmp4(tmp3[20]).Text, obj14), ];

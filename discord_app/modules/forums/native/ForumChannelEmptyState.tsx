@@ -1,13 +1,13 @@
-// === Module 14510: ForumChannelEmptyState ===
+// === Module 14590: ForumChannelEmptyState ===
 
-// Module 14510 (ForumChannelEmptyState)
+// Module 14590 (ForumChannelEmptyState)
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import shared from "shared" /* 5148 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import _modDef14511 from "module_14511" /* 14511 */;
-import _modDef14512 from "module_14512" /* 14512 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import _modDef14591 from "module_14591" /* 14591 */;
+import _modDef14592 from "module_14592" /* 14592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,9 +33,9 @@ export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef14511;
+    let tmp4Result = _modDef14591;
   } else {
-    tmp4Result = _modDef14512;
+    tmp4Result = _modDef14592;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
@@ -48,7 +48,7 @@ export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   }
   obj5.children = formatToPlainStringResult;
   items1[1] = React4(Text_Text.Text, obj5);
-  const obj7 = { style: tmp.subtext, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj7 = { style: tmp.subtext, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   const formatToPlainString = intl2.formatToPlainString;
   const t = util.t;

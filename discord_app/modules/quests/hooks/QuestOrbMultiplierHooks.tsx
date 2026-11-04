@@ -1,9 +1,9 @@
-// === Module 9834: QuestOrbMultiplierHooks ===
+// === Module 9852: QuestOrbMultiplierHooks ===
 
-// Module 9834 (QuestOrbMultiplierHooks)
+// Module 9852 (QuestOrbMultiplierHooks)
 import initialize from "initialize" /* 504 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9835 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9853 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;

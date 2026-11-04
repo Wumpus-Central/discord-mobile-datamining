@@ -1,9 +1,9 @@
-// === Module 16513: isConjureAppChannelFrame ===
+// === Module 16605: isConjureAppChannelFrame ===
 
-// Module 16513 (isConjureAppChannelFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
-import isConjureApplicationDefault from "isConjureApplication" /* 6974 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 11013 */;
+// Module 16605 (isConjureAppChannelFrame)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
+import isConjureApplicationDefault from "isConjureApplication" /* 6989 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 11062 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/background_frames/isConjureAppChannelFrame.tsx");

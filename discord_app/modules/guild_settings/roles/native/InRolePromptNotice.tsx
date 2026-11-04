@@ -1,20 +1,20 @@
-// === Module 19950: InRolePromptNotice ===
+// === Module 20066: InRolePromptNotice ===
 
-// Module 19950 (InRolePromptNotice)
+// Module 20066 (InRolePromptNotice)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import _modDef11917 from "module_11917" /* 11917 */;
-import GuildSettingsUtils from "GuildSettingsUtils" /* 19951 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import _modDef11976 from "module_11976" /* 11976 */;
+import GuildSettingsUtils from "GuildSettingsUtils" /* 20067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const RoleFlags = fn(1072).RoleFlags;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { promptRow: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" }, promptText: null, icon: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
@@ -35,9 +35,9 @@ export default function InRolePromptNotice(role) {
     const tmpResult = GuildSettingsUtils;
     let Icon = native.Icon;
     if (isRolePowerfulResult) {
-      const obj3 = { style: string.icon, source: _modDef11917, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+      const obj3 = { style: string.icon, source: _modDef11976, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
       items = [hasOwnProperty(Icon, obj3), ];
-      const obj4 = { style: string.promptText, variant: "text-sm/medium", children: null };
+      const obj4 = { style: string.promptText, variant: "body-sm/medium", children: null };
       const intl2 = util.intl;
       string = intl2.string;
       stringResult = string(util.t.YRbgXz);
@@ -47,9 +47,9 @@ export default function InRolePromptNotice(role) {
       obj2.children = items;
       let tmp4Result = timestampProducer(View, obj2);
     } else {
-      const obj5 = { style: string.icon, source: _modDef11917 };
+      const obj5 = { style: string.icon, source: _modDef11976 };
       const items1 = [hasOwnProperty(Icon, obj5), ];
-      const obj6 = { style: string.promptText, variant: "text-sm/medium", children: null };
+      const obj6 = { style: string.promptText, variant: "body-sm/medium", children: null };
       const intl = util.intl;
       obj6.children = intl.string(util.t.mqeO2v);
       items1[1] = hasOwnProperty(Text_Text.Text, obj6);

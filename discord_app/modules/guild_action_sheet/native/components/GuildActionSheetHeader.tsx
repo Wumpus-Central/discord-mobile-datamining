@@ -1,14 +1,14 @@
-// === Module 15941: GuildActionSheetHeader ===
+// === Module 16031: GuildActionSheetHeader ===
 
-// Module 15941 (GuildActionSheetHeader)
+// Module 16031 (GuildActionSheetHeader)
 import nativeDefault from "native" /* 575 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 15943 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16033 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 15942 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 16032 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7569 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7585 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(11470).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(11520).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,
@@ -34,15 +34,15 @@ function CommunityPill(guildVisibility) {
   };
   if (tmp4) {
     const obj2 = { size: "xs", color: ExperimentalWebIcon(575).colors.BADGE_INVERTED_BACKGROUND, secondaryColor: ExperimentalWebIcon(575).colors.BADGE_INVERTED_TEXT, style: tmp.communityPillIcon };
-    let tmp7Result = closure_9(tmp2(9435).ExperimentalWebBadgeIcon, obj2);
+    let tmp7Result = closure_9(tmp2(9453).ExperimentalWebBadgeIcon, obj2);
     let tmp10 = closure_9;
   } else {
-    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(9439), disableColor: true };
+    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(9457), disableColor: true };
     tmp7Result = closure_9(tmp2(1187).Icon, obj3);
     tmp10 = closure_9;
   }
   items = [tmp7Result, ];
-  const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
+  const obj4 = { variant: "body-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
   const intl2 = tmp2(1113).intl;
   const t2 = tmp2(1113).t;
   obj4.children = intl2.string(tmp4 ? t2.SiZQ0N : t2.K7iRig);
@@ -215,7 +215,7 @@ export default function GuildActionSheetHeader(guild) {
   items8[1] = closure_10(c4, obj17);
   let tmp18Result5 = null;
   if (null != description) {
-    const obj18 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description };
+    const obj18 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: description };
     tmp18Result5 = tmp18(tmp5(tmp3[18]).Text, obj18);
   }
   items8[2] = tmp18Result5;

@@ -1,22 +1,22 @@
-// === Module 16699: UserProfileTryItOutGetPremiumUpsell ===
+// === Module 16789: UserProfileTryItOutGetPremiumUpsell ===
 
-// Module 16699 (UserProfileTryItOutGetPremiumUpsell)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10037 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16696 */;
+// Module 16789 (UserProfileTryItOutGetPremiumUpsell)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10084 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10085 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16786 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
+({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTryItOutGetPremiumUpsell.tsx");
 
 export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7750).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7766).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   items = [analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -24,7 +24,7 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
     openPremiumModalDefault(obj);
   }, items);
   const obj2 = { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", onButtonPress: null, onLayout: null };
-  let obj = analyticsLocations(7750);
+  let obj = analyticsLocations(7766);
   const intl = analyticsLocations(1113).intl;
   obj2.text = intl.format(analyticsLocations(1113).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {

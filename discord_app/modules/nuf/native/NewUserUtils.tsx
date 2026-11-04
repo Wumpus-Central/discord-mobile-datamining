@@ -1,20 +1,20 @@
-// === Module 19719: NewUserUtils ===
+// === Module 19824: NewUserUtils ===
 
-// Module 19719 (NewUserUtils)
+// Module 19824 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import Link from "Link" /* 1500 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8087 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14385 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14491 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18193 */;
-import InterestPickerExperiment from "InterestPickerExperiment" /* 18572 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 19718 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8103 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14465 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14571 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18290 */;
+import InterestPickerExperiment from "InterestPickerExperiment" /* 18667 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 19823 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 18145 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6692 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 18242 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6707 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -227,12 +227,12 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(14105);
-({ EventActionLocation: closure_7, EventActionType: closure_8 } = NotificationPermissionConstants);
+const NotificationPermissionConstants = fn(14191);
+({ EventActionLocation: metroImportDefault, EventActionType: closure_8 } = NotificationPermissionConstants);
 const Constants = fn(1072);
 ({ PlatformTypes: closure_9, Routes: closure_10 } = Constants);
-const ContactPermissions = fn(14380).ContactPermissions;
-let closure_12 = fn(8064).NotificationAuthorizationStatus;
+const ContactPermissions = fn(14460).ContactPermissions;
+let closure_12 = fn(8080).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_16 = asyncGeneratorStep(async () => {
@@ -485,7 +485,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9246).hasDeferredInvite,
+    shouldShowStep: fn(9263).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

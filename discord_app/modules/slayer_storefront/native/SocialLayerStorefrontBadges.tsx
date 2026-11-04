@@ -1,10 +1,10 @@
-// === Module 10814: SocialLayerStorefrontBadges ===
+// === Module 10862: SocialLayerStorefrontBadges ===
 
-// Module 10814 (SocialLayerStorefrontBadges)
+// Module 10862 (SocialLayerStorefrontBadges)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import ClydeIcon from "ClydeIcon" /* 10815 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import ClydeIcon from "ClydeIcon" /* 10863 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export function ExclusiveBadge() {
   const tmp = closure_6();
   const obj = { style: tmp.exclusiveBadge, children: null };
   items = [React4(ClydeIcon.ClydeIcon, { size: "xs", color: nativeDefault.colors.WHITE }), ];
-  const obj3 = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
+  const obj3 = { variant: "body-xs/semibold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.RiDMFz);
   items[1] = React4(Text_Text.Text, obj3);

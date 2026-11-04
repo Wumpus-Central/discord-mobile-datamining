@@ -1,10 +1,10 @@
-// === Module 8114: AgeVerificationQuestUnsupportedAlertModal ===
+// === Module 8130: AgeVerificationQuestUnsupportedAlertModal ===
 
-// Module 8114 (AgeVerificationQuestUnsupportedAlertModal)
+// Module 8130 (AgeVerificationQuestUnsupportedAlertModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import _modDef3223 from "module_3223" /* 3223 */;
-import AlertModal from "AlertModal" /* 6084 */;
+import AlertModal from "AlertModal" /* 6099 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 11644: NameplatePreview ===
+// === Module 11695: NameplatePreview ===
 
-// Module 11644 (NameplatePreview)
+// Module 11695 (NameplatePreview)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8944 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8961 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
@@ -11,7 +11,7 @@ import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
@@ -114,20 +114,20 @@ export function NameplatePreview(aria_hidden) {
       obj3.guildId = guildId;
       obj3.animate = !stateFromStores;
     }
-    return React5(native.Avatar, obj3);
+    return metroImportDefault(native.Avatar, obj3);
   }, items2);
   const items3 = [closure_7(guildId(pendingAvatarSrc[15]), { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 }), closure_7(stateFromStores, { style: tmp.avatar, children: memo }), ];
   const obj10 = { style: tmp.content, children: null };
   let tmp19Result = null != tmp15;
   if (tmp19Result) {
-    const obj11 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: user(tmp5[17]).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
+    const obj11 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "body-md/semibold", effectDisplayType: user(tmp5[17]).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
     tmp19Result = closure_7(tmp7(tmp5[16]), obj11);
     const tmp7Result = tmp7(tmp5[16]);
   }
   const items4 = [tmp19Result, ];
   let tmp19Result2 = null == tmp15;
   if (tmp19Result2) {
-    const obj12 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: pendingGlobalName };
+    const obj12 = { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: pendingGlobalName };
     tmp19Result2 = closure_7(user(tmp5[18]).Text, obj12);
   }
   items4[1] = tmp19Result2;

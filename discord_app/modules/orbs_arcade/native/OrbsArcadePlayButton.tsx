@@ -1,12 +1,12 @@
-// === Module 17191: OrbsArcadePlayButton ===
+// === Module 17283: OrbsArcadePlayButton ===
 
-// Module 17191 (OrbsArcadePlayButton)
-import Text_Text from "Text/Text" /* 5747 */;
-import ButtonConstants from "ButtonConstants" /* 5760 */;
-import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17194 */;
+// Module 17283 (OrbsArcadePlayButton)
+import Text_Text from "Text/Text" /* 5761 */;
+import ButtonConstants from "ButtonConstants" /* 5774 */;
+import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17286 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9811 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17166 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9829 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17258 */;
 
 require = fn;
 function OrbsArcadePaidPlayLabel(count) {
@@ -17,7 +17,7 @@ function OrbsArcadePaidPlayLabel(count) {
   const formatResult = intl.format(size(1113).t.oSWYca, {
     count: count.orbCost,
     orbIconHook() {
-      return jsx(size(9660).OrbsIcon, { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT }, "orbs-icon");
+      return jsx(size(9679).OrbsIcon, { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT }, "orbs-icon");
     }
   });
   let arr = formatResult;
@@ -46,17 +46,17 @@ export default function OrbsArcadePlayButton(game) {
   game = game.game;
   let DEFAULT_BUTTON_SIZE = game.size;
   if (DEFAULT_BUTTON_SIZE === undefined) {
-    DEFAULT_BUTTON_SIZE = game(5760).DEFAULT_BUTTON_SIZE;
+    DEFAULT_BUTTON_SIZE = game(5774).DEFAULT_BUTTON_SIZE;
   }
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7446)().analyticsLocations;
-  const tmp4 = analyticsLocations(17192)(game);
+  analyticsLocations = analyticsLocations(7462)().analyticsLocations;
+  const tmp4 = analyticsLocations(17284)(game);
   const text = tmp4.text;
   ({ isPaidPlay, canAffordPlay } = tmp4);
   items = [OrbsArcadeStore];
   const items1 = [game.id];
   const stateFromStores = game(504).useStateFromStores(items, () => OrbsArcadeStore.getGameStateForGame(game.id), items1);
-  let result = analyticsLocations(17193)(game, stateFromStores);
+  let result = analyticsLocations(17285)(game, stateFromStores);
   const obj = game(504);
   const items2 = [OrbsArcadeStore];
   const items3 = [game.id];
@@ -69,30 +69,30 @@ export default function OrbsArcadePlayButton(game) {
   const callback1 = noop.useCallback(() => launchOrbsArcadeGameDefault(game, analyticsLocations), items4);
   if (null != stateFromStores) {
     if (tmp5Result.mustClaimOrbsArcadeRewardsToPlay(stateFromStores)) {
-      const obj3 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Boolean" };
+      const obj3 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "a" };
       const intl3 = tmp5(1113).intl;
-      const obj4 = { count: tmp5(17173).getOrbsArcadeClaimableRewards(game.rewards, stateFromStores).length };
+      const obj4 = { count: tmp5(17265).getOrbsArcadeClaimableRewards(game.rewards, stateFromStores).length };
       obj3.text = intl3.formatToPlainString(tmp5(1113).t["18ToNc"], obj4);
-      let tmp18Result2 = jsx(tmp5(5754).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Boolean" });
-      const tmp5Result3 = tmp5(17173);
+      let tmp18Result2 = jsx(tmp5(5768).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "a" });
+      const tmp5Result3 = tmp5(17265);
     }
     return tmp18Result2;
   }
   if (null != result) {
-    const obj5 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Boolean" };
+    const obj5 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "a" };
     if (null != result.timeUntilNextRound) {
       const intl2 = tmp5(1113).intl;
       const obj6 = { duration: null };
-      result = tmp5(17182).formatOrbsArcadeTimeUntil(result.timeUntilNextRound);
+      result = tmp5(17274).formatOrbsArcadeTimeUntil(result.timeUntilNextRound);
       obj6.duration = result;
       let formatToPlainStringResult = intl2.formatToPlainString(tmp5(1113).t["Uk+BE3"], obj6);
-      const tmp5Result4 = tmp5(17182);
+      const tmp5Result4 = tmp5(17274);
     } else {
       const intl = tmp5(1113).intl;
       formatToPlainStringResult = intl.string(tmp5(1113).t.iJjbMd);
     }
     obj5.text = formatToPlainStringResult;
-    jsx(tmp5(5754).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Boolean" });
+    jsx(tmp5(5768).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "a" });
   } else if (canAffordPlay) {
     const obj7 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text, textElement: null, disabled: null, loading: null, onPress: null };
     let tmp18Result;
@@ -106,10 +106,10 @@ export default function OrbsArcadePlayButton(game) {
     obj7.disabled = null == game.applicationId;
     obj7.loading = stateFromStores1;
     obj7.onPress = callback1;
-    tmp18Result2 = jsx(tmp5(5755).BaseTextButton, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text, textElement: null, disabled: null, loading: null, onPress: null });
+    tmp18Result2 = jsx(tmp5(5769).BaseTextButton, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text, textElement: null, disabled: null, loading: null, onPress: null });
   } else {
     const obj9 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text, onPress: callback };
-    tmp18Result2 = jsx(tmp5(5754).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text, onPress: callback });
+    tmp18Result2 = jsx(tmp5(5768).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text, onPress: callback });
   }
   const obj2 = game(504);
 };

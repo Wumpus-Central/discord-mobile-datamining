@@ -1,15 +1,15 @@
-// === Module 10685: MediaKeyboardEmptyState ===
+// === Module 10733: MediaKeyboardEmptyState ===
 
-// Module 10685 (MediaKeyboardEmptyState)
+// Module 10733 (MediaKeyboardEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import SettingsIcon from "SettingsIcon" /* 7685 */;
-import CameraIcon from "CameraIcon" /* 10680 */;
-import _modDef10686 from "module_10686" /* 10686 */;
-import _modDef10687 from "module_10687" /* 10687 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import SettingsIcon from "SettingsIcon" /* 7701 */;
+import CameraIcon from "CameraIcon" /* 10728 */;
+import _modDef10734 from "module_10734" /* 10734 */;
+import _modDef10735 from "module_10735" /* 10735 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ class MediaKeyboardEmptyState {
     obj = { style: tmp.container, children: null };
     items = [, , ];
     items[0] = jsx(closure_1(closure_2[6]), { source: imageSource });
-    obj1 = { variant: "text-sm/semibold", color: "text-muted", style: tmp.label, children: label };
+    obj1 = { variant: "body-sm/semibold", color: "text-muted", style: tmp.label, children: label };
     items[1] = jsx(closure_0(closure_2[7]).Text, obj1);
     items[2] = jsx(closure_0(closure_2[8]).Button, { icon: actionIcon, size: "sm", text: actionLabel, onPress: actionPress });
     obj.children = items;
@@ -28,14 +28,14 @@ class MediaKeyboardEmptyState {
   }
 }
 const View = fn(17).View;
-const NativePermissionStatus = fn(8064).NativePermissionStatus;
+const NativePermissionStatus = fn(8080).NativePermissionStatus;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" }, label: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
 obj2.label = { textAlign: "center", marginVertical: nativeDefault.space.PX_16 };
-const React5 = createStyles.createStyles(obj2);
+const metroImportDefault = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx");
 
@@ -53,7 +53,7 @@ export function getMediaEmptyStateComponentOrNull(photosEmpty) {
           const intl3 = util.intl;
           obj2.actionLabel = intl3.string(util.t.JuXTi6);
           obj2.actionPress = tmp2;
-          obj2.imageSource = _modDef10686;
+          obj2.imageSource = _modDef10734;
           const intl4 = util.intl;
           obj2.label = intl4.string(util.t["5g7NcN"]);
           return hasOwnProperty(MediaKeyboardEmptyState, obj2);
@@ -62,7 +62,7 @@ export function getMediaEmptyStateComponentOrNull(photosEmpty) {
           const intl = util.intl;
           obj.actionLabel = intl.string(util.t.tpoWUd);
           obj.actionPress = tmp;
-          obj.imageSource = _modDef10687;
+          obj.imageSource = _modDef10735;
           const intl2 = util.intl;
           obj.label = intl2.string(util.t.YOvRBZ);
           return hasOwnProperty(MediaKeyboardEmptyState, obj);
@@ -74,7 +74,7 @@ export function getMediaEmptyStateComponentOrNull(photosEmpty) {
   const intl5 = util.intl;
   obj3.actionLabel = intl5.string(util.t["457oeG"]);
   obj3.actionPress = photosEmpty.onPressPrivacySettings;
-  obj3.imageSource = _modDef10686;
+  obj3.imageSource = _modDef10734;
   const intl6 = util.intl;
   obj3.label = intl6.string(util.t["8p9jGu"]);
   return hasOwnProperty(MediaKeyboardEmptyState, obj3);

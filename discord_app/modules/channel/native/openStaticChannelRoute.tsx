@@ -1,11 +1,11 @@
-// === Module 11713: openStaticChannelRoute ===
+// === Module 11768: openStaticChannelRoute ===
 
-// Module 11713 (openStaticChannelRoute)
+// Module 11768 (openStaticChannelRoute)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 7545 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 7561 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
 import GuildRoleStore from "GuildRoleStore" /* 5047 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -13,9 +13,9 @@ import GuildStore from "GuildStore" /* 5012 */;
 require = fn;
 const StaticChannelRoute = fn(4997).StaticChannelRoute;
 const Constants = fn(1072);
-({ GuildFeatures: closure_7, Routes: closure_8 } = Constants);
-const GuildOnboardingTab = fn(7389).GuildOnboardingTab;
-let closure_10 = fn(7385).CHANNELS_AND_ROLES_MODAL_KEY;
+({ GuildFeatures: metroImportDefault, Routes: closure_8 } = Constants);
+const GuildOnboardingTab = fn(7405).GuildOnboardingTab;
+let closure_10 = fn(7401).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/openStaticChannelRoute.tsx");
 
@@ -31,13 +31,13 @@ export default function openStaticChannelRoute(arg0) {
         const features3 = guild.features;
         if (features3.has(constants.COMMUNITY)) {
           const obj3 = { guildId, defaultTab: GuildOnboardingTab.BROWSE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11714, dependencyMap.paths), obj3, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11769, dependencyMap.paths), obj3, closure_10);
         }
       } else if ("customize" === staticRoute) {
         const features2 = guild.features;
         if (features2.has(constants.COMMUNITY)) {
           const obj5 = { guildId, defaultTab: GuildOnboardingTab.CUSTOMIZE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11714, dependencyMap.paths), obj5, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11769, dependencyMap.paths), obj5, closure_10);
         }
       } else {
         if ("home" !== staticRoute) {
@@ -53,14 +53,14 @@ export default function openStaticChannelRoute(arg0) {
                       const _HermesInternal = HermesInternal;
                       const obj2 = ActionSheetActionCreatorsDefault;
                       const obj6 = { role, guildId };
-                      obj2.openLazy(asyncRequireImpl(11727, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + role.id, obj6);
-                      const tmp9 = asyncRequireImpl(11727, dependencyMap.paths);
+                      obj2.openLazy(asyncRequireImpl(11782, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + role.id, obj6);
+                      const tmp9 = asyncRequireImpl(11782, dependencyMap.paths);
                     }
                   }
                 }
               }
               const obj8 = { guildId };
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11736, dependencyMap.paths), obj8);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11791, dependencyMap.paths), obj8);
             } else {
               GlobalUtils.assertNever(staticRoute);
             }
@@ -69,7 +69,7 @@ export default function openStaticChannelRoute(arg0) {
         const features = guild.features;
         if (features.has(constants.COMMUNITY)) {
           const obj10 = { navigationReplace, openChannel: true };
-          safeTransitionToDefault(React6.CHANNEL(guildId, StaticChannelRoute.GUILD_HOME), obj10);
+          safeTransitionToDefault(React5.CHANNEL(guildId, StaticChannelRoute.GUILD_HOME), obj10);
         }
       }
     }

@@ -1,10 +1,10 @@
-// === Module 20139: components/StepsIndicator ===
+// === Module 20255: components/StepsIndicator ===
 
-// Module 20139 (components/StepsIndicator)
+// Module 20255 (components/StepsIndicator)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -72,8 +72,8 @@ function StepNode(isCurrent) {
     const items3 = [tmp.node, animatedStyle, filledNode];
     obj2.style = items3;
     if (isCurrent) {
-      let obj3 = { variant: "heading-deprecated-12/semibold", color: "interactive-text-active", children: label };
-      isCurrent = jsx(Text_Text.Text, { variant: "heading-deprecated-12/semibold", color: "interactive-text-active", children: label });
+      let obj3 = { variant: "body-xs/semibold", color: "interactive-text-active", children: label };
+      isCurrent = jsx(Text_Text.Text, { variant: "body-xs/semibold", color: "interactive-text-active", children: label });
     }
     obj2.children = isCurrent;
     return jsx(_modDef1652.View, { style: null, children: null });

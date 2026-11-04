@@ -1,35 +1,35 @@
-// === Module 17063: QuestHome ===
+// === Module 17155: QuestHome ===
 
-// Module 17063 (QuestHome)
+// Module 17155 (QuestHome)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useNavigation from "useNavigation" /* 1499 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import QuestTypes from "QuestTypes" /* 6904 */;
-import AdCreativeType from "AdCreativeType" /* 6908 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
-import QuestDataUtils from "QuestDataUtils" /* 7966 */;
-import QuestActionCreators from "QuestActionCreators" /* 9814 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14830 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17064 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 17066 */;
-import QuestHomeEmptyStateDefault from "QuestHomeEmptyState" /* 17122 */;
-import QuestHomeBountiesDefault from "QuestHomeBounties" /* 17124 */;
-import HexagonCampaignQuestHomeHeaderDefault from "HexagonCampaignQuestHomeHeader" /* 17147 */;
-import OrbsArcadeQuestHomeSectionDefault from "OrbsArcadeQuestHomeSection" /* 17165 */;
-import QuestHomeOpenTriggerPoint2 from "QuestHomeOpenTriggerPoint" /* 17208 */;
-import QuestHomeRoundtripTrackerDefault from "QuestHomeRoundtripTracker" /* 17287 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import QuestTypes from "QuestTypes" /* 6919 */;
+import AdCreativeType from "AdCreativeType" /* 6923 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
+import QuestDataUtils from "QuestDataUtils" /* 7982 */;
+import QuestActionCreators from "QuestActionCreators" /* 9832 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14910 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17156 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 17158 */;
+import QuestHomeEmptyStateDefault from "QuestHomeEmptyState" /* 17214 */;
+import QuestHomeBountiesDefault from "QuestHomeBounties" /* 17216 */;
+import HexagonCampaignQuestHomeHeaderDefault from "HexagonCampaignQuestHomeHeader" /* 17239 */;
+import OrbsArcadeQuestHomeSectionDefault from "OrbsArcadeQuestHomeSection" /* 17257 */;
+import QuestHomeOpenTriggerPoint2 from "QuestHomeOpenTriggerPoint" /* 17300 */;
+import QuestHomeRoundtripTrackerDefault from "QuestHomeRoundtripTracker" /* 17379 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9811 */;
-import QuestStore from "QuestStore" /* 7970 */;
-import QuestUtmStore from "QuestUtmStore" /* 7991 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9829 */;
+import QuestStore from "QuestStore" /* 7986 */;
+import QuestUtmStore from "QuestUtmStore" /* 8007 */;
 
 require = fn;
 function EmptyStateNoQuestsAvailable(hasContentAbove) {
@@ -84,15 +84,15 @@ function QuestsSectionHeader(onLayout) {
   items = [, ];
   ({ sectionHeader: arr[0], sectionHeaderWithTag: arr[1] } = closure_16());
   obj.style = items;
-  const obj2 = { variant: "text-lg/semibold", color: "text-strong", children: null };
+  const obj2 = { variant: "body-lg/semibold", color: "text-strong", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.JALI2K);
   obj.children = gesture(Text_Text.Text, obj2);
   return gesture(hasOwnProperty, obj);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ActivityIndicator: metroRequire, StyleSheet } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
+({ View: hasOwnProperty, ActivityIndicator: closure_6, StyleSheet } = get_ActivityIndicator);
+const QuestsExperimentLocations = fn(6916).QuestsExperimentLocations;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, UserSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);

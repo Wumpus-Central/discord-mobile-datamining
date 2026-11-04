@@ -1,15 +1,16 @@
-// === Module 18749: useWaterwheelsActions ===
+// === Module 18850: useWaterwheelsActions ===
 
-// Module 18749 (useWaterwheelsActions)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7022 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 8088 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9056 */;
-import NotificationUtilsDefault from "NotificationUtils" /* 14113 */;
+// Module 18850 (useWaterwheelsActions)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 8104 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9073 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9870 */;
+import NotificationUtilsDefault from "NotificationUtils" /* 14199 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14104 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14190 */;
 
 require = fn;
 function openErrorToast(text) {
@@ -17,7 +18,7 @@ function openErrorToast(text) {
 }
 function requestNotifications() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -25,7 +26,7 @@ function requestNotifications() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _requestNotifications() {
+let closure_13 = async function _requestNotifications() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -73,7 +74,7 @@ let closure_11 = async function _requestNotifications() {
     }
   }
 };
-let closure_12 = async function _joinGuild(arg0) {
+let closure_14 = async function _joinGuild(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -123,7 +124,7 @@ let closure_12 = async function _joinGuild(arg0) {
         if (2 === tmp8) {
           c5 = 1;
           if (!(function isJoinFailureAlreadyShown(body) {
-            if (body instanceof closure_1_0(closure_1_2[12]).JoinGuildRefusedError) {
+            if (body instanceof closure_1_0(closure_1_2[13]).JoinGuildRefusedError) {
               return true;
             } else {
               let code;
@@ -141,7 +142,7 @@ let closure_12 = async function _joinGuild(arg0) {
             }
           })(closure_4)) {
             const intl = closure_131_0(closure_131_2[9]).intl;
-            closure_131_9(intl.string(closure_131_1(closure_131_2[10]).grYfmA));
+            closure_131_11(intl.string(closure_131_1(closure_131_2[10]).grYfmA));
           }
         } else if (arg0 === 1) {
           c7 = 3;
@@ -176,7 +177,7 @@ let closure_12 = async function _joinGuild(arg0) {
 };
 function runGuarded() {
   const self = this;
-  const apply = closure_14.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -184,14 +185,14 @@ function runGuarded() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _runGuarded(arg0) {
+let closure_16 = async function _runGuarded(arg0) {
   closure_3 = tmp3;
   closure_2 = tmp5;
   closure_130_0 = closure_1;
   await closure_0();
   if (1 === tmp8) {
     c4 = 0;
-    closure_131_9(closure_130_0());
+    closure_131_11(closure_130_0());
     c6 = 3;
   } else if (arg0 === 1) {
     c6 = 3;
@@ -201,10 +202,14 @@ let closure_14 = async function _runGuarded(arg0) {
   }
   return value;
 };
-let closure_7 = fn(8064).NotificationAuthorizationStatus;
+const Constants = fn(1072);
+({ AbortCodes, PlatformTypes } = Constants);
+let closure_7 = fn(8080).NotificationAuthorizationStatus;
 const items = [, , ];
-({ USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED: arr[0], TOO_MANY_USER_GUILDS: arr[1], GUILD_AT_CAPACITY: arr[2] } = fn(1072).AbortCodes);
+({ USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED: arr[0], TOO_MANY_USER_GUILDS: arr[1], GUILD_AT_CAPACITY: arr[2] } = AbortCodes);
 const set = new Set(items);
+const set1 = new Set(Object.values(PlatformTypes));
+const waterwheels = "waterwheels";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/actions/native/useWaterwheelsActions.tsx");
 
@@ -215,7 +220,7 @@ export function useWaterwheelsActions() {
     if (WaterwheelsCardTypes.WaterwheelsActionType.JOIN_GUILD === type) {
       return (function joinGuild() {
         const self = this;
-        const apply = closure_1_12.apply;
+        const apply = closure_1_14.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -224,12 +229,23 @@ export function useWaterwheelsActions() {
         return applyArgumentsResult;
       })(ref.current, type.value.guild_id);
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD === type) {
-      return runGuarded(() => type(7645).startLurking(type.value.guild_id, {}), () => {
+      return runGuarded(() => type(7661).startLurking(type.value.guild_id, {}), () => {
         const intl = type(1113).intl;
         return intl.string(closure_1_1(2537).d6U01J);
       });
+    } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_CONNECTION === type) {
+      return runGuarded(() => {
+        const provider = type.value.provider;
+        if (set.has(provider)) {
+          const obj = { platformType: provider, location: _location };
+          authorizeConnectionDefault(obj);
+        }
+      }, () => {
+        const intl = type(1113).intl;
+        return intl.string(closure_1_1(2537)["rdTp+3"]);
+      });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_URI === type) {
-      return runGuarded(() => type(9068).handleClick({ href: type.value.url }), () => {
+      return runGuarded(() => type(9085).handleClick({ href: type.value.url }), () => {
         const intl = type(1113).intl;
         return intl.string(closure_1_1(2537)["4a9Wgk"]);
       });

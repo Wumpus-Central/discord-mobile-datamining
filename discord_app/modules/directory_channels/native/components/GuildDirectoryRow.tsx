@@ -1,10 +1,10 @@
-// === Module 14014: GuildDirectoryRow ===
+// === Module 14100: GuildDirectoryRow ===
 
-// Module 14014 (GuildDirectoryRow)
+// Module 14100 (GuildDirectoryRow)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import GuildIconDefault from "GuildIcon" /* 7083 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 13992 */;
+import GuildIconDefault from "GuildIcon" /* 7098 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 14078 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -152,11 +152,11 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   dependencyMap = noop.useRef(0);
   let obj = entry(504);
   const items1 = [entry.guildId];
-  const tmp5 = _slicedToArray(entry(7414).useRecyclingState(false, items1, () => {
+  const tmp5 = _slicedToArray(entry(7430).useRecyclingState(false, items1, () => {
     ref.current = ref.current + 1;
   }), 2);
   closure_3 = tmp5[1];
-  let obj2 = entry(7414);
+  let obj2 = entry(7430);
   const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: entry.guildId, icon: entry.icon, size: 40 });
   const intl = tmp2(1113).intl;
   let stringResult = intl.string(tmp2(1113).t.VJlc0S);
@@ -178,18 +178,18 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   obj9.guild = result;
   const items2 = [closure_10(GuildIconDefault, obj9), ];
   let obj10 = { style: tmp.guildInfoContainer, children: null };
-  const items3 = [closure_10(entry(5747).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
+  const items3 = [closure_10(entry(5761).Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
   let obj11 = { style: tmp.memberInfo, children: null };
   let tmp10Result = null;
   if (null != approximatePresenceCount) {
     const obj12 = { children: null };
     const obj13 = { style: tmp.dotOnline };
     const items4 = [closure_10(View, obj13), ];
-    const obj14 = { variant: "text-xs/medium", color: "text-default", children: null };
+    const obj14 = { variant: "body-xs/medium", color: "text-default", children: null };
     const intl3 = tmp2(1113).intl;
     const obj15 = { membersOnline: approximatePresenceCount };
     obj14.children = intl3.format(tmp2(1113).t["LC+S+m"], obj15);
-    items4[1] = closure_10(tmp2(5747).Text, obj14);
+    items4[1] = closure_10(tmp2(5761).Text, obj14);
     obj12.children = items4;
     tmp10Result = closure_12(closure_11, obj12);
   }
@@ -199,11 +199,11 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     const obj16 = { children: null };
     const obj17 = { style: tmp.dotOffline };
     const items6 = [closure_10(View, obj17), ];
-    const obj18 = { variant: "text-xs/medium", color: "text-default", children: null };
+    const obj18 = { variant: "body-xs/medium", color: "text-default", children: null };
     const intl4 = tmp2(1113).intl;
     const obj19 = { count: approximateMemberCount };
     obj18.children = intl4.format(tmp2(1113).t.zRl6XR, obj19);
-    items6[1] = closure_10(tmp2(5747).Text, obj18);
+    items6[1] = closure_10(tmp2(5761).Text, obj18);
     obj16.children = items6;
     tmp10Result2 = closure_12(closure_11, obj16);
   }
@@ -223,8 +223,8 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     tmp9Result = "" !== description;
   }
   if (tmp9Result) {
-    const obj21 = { lineClamp: 3, style: tmp.guildDescription, variant: "text-sm/medium", color: "text-default", children: description };
-    tmp9Result = closure_10(tmp2(5747).Text, obj21);
+    const obj21 = { lineClamp: 3, style: tmp.guildDescription, variant: "body-sm/medium", color: "text-default", children: description };
+    tmp9Result = closure_10(tmp2(5761).Text, obj21);
   }
   items8[1] = tmp9Result;
   items8[2] = closure_10(View, { style: tmp.flex });
@@ -249,8 +249,8 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   }
   obj23.variant = str2;
   obj23.text = stringResult;
-  items8[3] = closure_10(entry(5754).Button, obj23);
+  items8[3] = closure_10(entry(5768).Button, obj23);
   obj6.children = items8;
   obj5.children = closure_12(View, obj6);
-  return closure_10(entry(7103).Card, obj5);
+  return closure_10(entry(7118).Card, obj5);
 });

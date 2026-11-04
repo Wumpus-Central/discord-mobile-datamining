@@ -1,10 +1,10 @@
-// === Module 8308: FormHint ===
+// === Module 8324: FormHint ===
 
-// Module 8308 (FormHint)
+// Module 8324 (FormHint)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import RedesignCompat from "RedesignCompat" /* 7185 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import RedesignCompat from "RedesignCompat" /* 7200 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,11 +28,11 @@ export default function FormHint(inset) {
     if (!flag) {
       redesignHorizontalPadding = tmp.redesignHorizontalPadding;
     }
-    const obj2 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
+    const obj2 = { variant: "body-sm/medium", color: "text-muted", style: null, children: null };
     items = [redesignHorizontalPadding, style];
     obj2.style = items;
     obj2.children = children;
-    let tmp4Result = jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", style: null, children: null });
+    let tmp4Result = jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", style: null, children: null });
   } else {
     const items1 = [tmp.formHintText, , ];
     let horizonatalPadding = !flag;

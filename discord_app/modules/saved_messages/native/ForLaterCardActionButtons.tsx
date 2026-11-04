@@ -1,13 +1,13 @@
-// === Module 11302: ForLaterCardActionButtons ===
+// === Module 11352: ForLaterCardActionButtons ===
 
-// Module 11302 (ForLaterCardActionButtons)
+// Module 11352 (ForLaterCardActionButtons)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import IconButton from "IconButton" /* 8152 */;
-import _modDef9335 from "module_9335" /* 9335 */;
-import ContextMenu from "ContextMenu" /* 10005 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 11296 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import IconButton from "IconButton" /* 8168 */;
+import _modDef9352 from "module_9352" /* 9352 */;
+import ContextMenu from "ContextMenu" /* 10053 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 11346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default function ForLaterCardActionButtons(items) {
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.e1heBD);
       obj.size = "sm";
-      obj.icon = _modDef9335;
+      obj.icon = _modDef9352;
       return jsx(IconButton.IconButton, { ref: ref.ref });
     }
   });
@@ -46,23 +46,23 @@ export function useForLaterCardMenuItems(savedMessage) {
   items = [savedMessage];
   const obj = { label: null, IconComponent: null, action: null };
   let tmp2Result = dependencyMap;
-  const callback = noop.useCallback(() => ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11303, dependencyMap.paths), "MessageReminderDurationActionSheet", {
+  const callback = noop.useCallback(() => ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11353, dependencyMap.paths), "MessageReminderDurationActionSheet", {
     createReminder(dueAt) {
       const obj2 = {};
       const merged = Object.assign(closure_1_0.saveData);
       obj2.dueAt = dueAt;
-      obj2.source = savedMessage(11306).SavedMessageSources.FOR_LATER_LIST;
-      return savedMessage(11296).addOrUpdateSavedMessage(obj2);
+      obj2.source = savedMessage(11356).SavedMessageSources.FOR_LATER_LIST;
+      return savedMessage(11346).addOrUpdateSavedMessage(obj2);
     },
     removeReminder() {
-      return savedMessage(11296).removeSavedMessage({ channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true });
+      return savedMessage(11346).removeSavedMessage({ channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true });
     },
     channelId: savedMessage.saveData.channelId,
     messageId: savedMessage.saveData.messageId
   }), items);
   const intl = savedMessage(1113).intl;
   obj.label = intl.string(savedMessage(1113).t["+TSRGD"]);
-  obj.IconComponent = savedMessage(11307).ChatArrowRightIcon;
+  obj.IconComponent = savedMessage(11357).ChatArrowRightIcon;
   obj.action = function action() {
     return jumpToMessage();
   };
@@ -75,7 +75,7 @@ export function useForLaterCardMenuItems(savedMessage) {
   }
   items1[1] = {
     label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(7180).XSmallIcon,
+    IconComponent: savedMessage(7195).XSmallIcon,
     action() {
       return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
     },
@@ -88,10 +88,10 @@ export function useForLaterCardMenuItems(savedMessage) {
     const t = tmp2(1113).t;
     let obj3 = { label: intl3.string(savedMessage.throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1), IconComponent: null, action: null };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      tmp2Result = tmp2(11309);
+      tmp2Result = tmp2(11359);
       let PencilIcon = tmp2Result.BellZIcon;
     } else {
-      PencilIcon = tmp2(10362).PencilIcon;
+      PencilIcon = tmp2(10410).PencilIcon;
     }
     obj3.IconComponent = PencilIcon;
     obj3.action = callback;

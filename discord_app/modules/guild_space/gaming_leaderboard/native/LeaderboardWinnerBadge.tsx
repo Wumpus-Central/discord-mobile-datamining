@@ -1,11 +1,11 @@
-// === Module 10911: LeaderboardWinnerBadge ===
+// === Module 10959: LeaderboardWinnerBadge ===
 
-// Module 10911 (LeaderboardWinnerBadge)
-import useActiveLeaderboardWinnerData from "useActiveLeaderboardWinnerData" /* 10912 */;
-import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10913 */;
-import MedalFirstBadge from "MedalFirstBadge" /* 10915 */;
-import StreakTrophyBadge from "StreakTrophyBadge" /* 10919 */;
-import WinnerTrophyBadge2 from "WinnerTrophyBadge" /* 10923 */;
+// Module 10959 (LeaderboardWinnerBadge)
+import useActiveLeaderboardWinnerData from "useActiveLeaderboardWinnerData" /* 10960 */;
+import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10961 */;
+import MedalFirstBadge from "MedalFirstBadge" /* 10963 */;
+import StreakTrophyBadge from "StreakTrophyBadge" /* 10967 */;
+import WinnerTrophyBadge2 from "WinnerTrophyBadge" /* 10971 */;
 import noop from "module_19" /* 19 */;
 
 const useActiveLeaderboardWinnerDataDefault = useActiveLeaderboardWinnerData;

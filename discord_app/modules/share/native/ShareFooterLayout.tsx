@@ -1,12 +1,12 @@
-// === Module 13542: ShareFooterLayout ===
+// === Module 13626: ShareFooterLayout ===
 
-// Module 13542 (ShareFooterLayout)
+// Module 13626 (ShareFooterLayout)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -14,7 +14,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { footer: { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, footerSeparator: null, warningWrapper: null, chatRow: null };
 let obj3 = { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -68,7 +68,7 @@ export default function ShareFooterLayout(arg0) {
   const items6 = [timestampProducer(View, obj6), ];
   let tmp17 = null != warningText;
   if (tmp17) {
-    const obj7 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
+    const obj7 = { variant: "body-sm/normal", color: "text-feedback-warning", children: warningText };
     tmp17 = React4(Text_Text.Text, obj7);
   }
   items6[1] = tmp17;

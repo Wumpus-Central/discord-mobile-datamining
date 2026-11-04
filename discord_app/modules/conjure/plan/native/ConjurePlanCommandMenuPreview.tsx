@@ -1,12 +1,12 @@
-// === Module 12883: ConjurePlanCommandMenuPreview ===
+// === Module 12964: ConjurePlanCommandMenuPreview ===
 
-// Module 12883 (ConjurePlanCommandMenuPreview)
+// Module 12964 (ConjurePlanCommandMenuPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12884 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12965 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ export default function ConjurePlanCommandMenuPreview(appIconSrc) {
   const items1 = [tmp5, ];
   const intl = util.intl;
   const t = util.t;
-  items1[1] = React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: intl.string("message" === target ? t["5IEsGx"] : t.LYju5J) });
+  items1[1] = React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: intl.string("message" === target ? t["5IEsGx"] : t.LYju5J) });
   obj2.children = items1;
   const items2 = [hasOwnProperty(View, obj2), ];
   const obj5 = { style: null, children: null };
@@ -60,7 +60,7 @@ export default function ConjurePlanCommandMenuPreview(appIconSrc) {
     tmp10Result = React4(tmp15, obj6);
     const tmp11Result = AvatarUtils;
   }
-  const items4 = [tmp10Result, React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: tmp.label, children: commandName })];
+  const items4 = [tmp10Result, React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-strong", style: tmp.label, children: commandName })];
   obj5.children = items4;
   items2[1] = hasOwnProperty(View, obj5);
   obj.children = items2;

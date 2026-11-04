@@ -1,6 +1,6 @@
-// === Module 14465: InviteErrorUtils ===
+// === Module 14545: InviteErrorUtils ===
 
-// Module 14465 (InviteErrorUtils)
+// Module 14545 (InviteErrorUtils)
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
@@ -8,7 +8,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const Constants = fn(1072);
-({ AbortCodes: closure_4, HelpdeskArticles: hasOwnProperty, MAX_USER_GUILDS: metroRequire, MAX_USER_GUILDS_PREMIUM: closure_7 } = Constants);
+({ AbortCodes: closure_4, HelpdeskArticles: hasOwnProperty, MAX_USER_GUILDS: closure_6, MAX_USER_GUILDS_PREMIUM: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InviteErrorUtils.tsx");
 
@@ -31,7 +31,7 @@ export function getDescriptiveInviteError(code) {
       obj2.description = intl12.string(util.t.iLyuDO);
       return obj2;
     }
-    tmp18 = React5;
+    tmp18 = metroImportDefault;
     obj7 = PremiumUtilsDefault;
   } else if (constants.GUILD_AT_CAPACITY === code) {
     const obj4 = { title: null, description: null };

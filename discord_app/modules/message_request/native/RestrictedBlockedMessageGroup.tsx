@@ -1,10 +1,10 @@
-// === Module 19148: RestrictedBlockedMessageGroup ===
+// === Module 19251: RestrictedBlockedMessageGroup ===
 
-// Module 19148 (RestrictedBlockedMessageGroup)
+// Module 19251 (RestrictedBlockedMessageGroup)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,9 +13,9 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { toggle: { marginLeft: fn(19146).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
+let obj2 = { toggle: { marginLeft: fn(19249).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");
@@ -29,7 +29,7 @@ export default function RestrictedBlockedMessageGroup(arg0) {
     _undefined((arg0) => !arg0);
   }, []);
   const obj = { style: tmp.toggle, accessibilityRole: "button", accessibilityState: { expanded: mapped }, onPress: callback, children: null };
-  const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj2 = { variant: "body-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.format(util.t["+FcYM/"], { count: messages.length });
   obj.children = closure_5(Text_Text.Text, obj2);

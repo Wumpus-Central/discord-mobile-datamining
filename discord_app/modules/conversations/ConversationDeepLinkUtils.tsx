@@ -1,9 +1,9 @@
-// === Module 10315: ConversationDeepLinkUtils ===
+// === Module 10363: ConversationDeepLinkUtils ===
 
-// Module 10315 (ConversationDeepLinkUtils)
-import ChannelUtils from "ChannelUtils" /* 6166 */;
+// Module 10363 (ConversationDeepLinkUtils)
+import ChannelUtils from "ChannelUtils" /* 6181 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7894 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7910 */;
 
 require = fn;
 function resolveConversationFocusLink() {
@@ -100,8 +100,8 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
     }
   }
 };
-fn(7052).addPostConnectionCallback;
-const CONVERSATION_QUERY_PARAM = fn(5775).CONVERSATION_QUERY_PARAM;
+fn(7067).addPostConnectionCallback;
+const CONVERSATION_QUERY_PARAM = fn(5789).CONVERSATION_QUERY_PARAM;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationDeepLinkUtils.tsx");
 
@@ -168,7 +168,7 @@ export function consumeConversationFocusParam(state) {
                       channelId = tmp4;
                       v2 = 1;
                       dependencyMap = 1;
-                      const obj4 = { value: v2(10316)(guildId), done: false };
+                      const obj4 = { value: v2(10364)(guildId), done: false };
                       return obj4;
                     }
                   } else if (1 === tmp4) {
@@ -195,8 +195,8 @@ export function consumeConversationFocusParam(state) {
                     return obj8;
                   } else {
                     if (value) {
-                      const conversationFocus = channelId(9980).requestConversationFocus();
-                      const obj = channelId(9980);
+                      const conversationFocus = channelId(10028).requestConversationFocus();
+                      const obj = channelId(10028);
                     }
                     dependencyMap = 3;
                     return { value: "HermesInternal", done: null };

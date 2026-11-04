@@ -1,11 +1,11 @@
-// === Module 8149: InlineNotice ===
+// === Module 8165: InlineNotice ===
 
-// Module 8149 (InlineNotice)
+// Module 8165 (InlineNotice)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import _modDef2204 from "module_2204" /* 2204 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function NoticeMessageList(children) {
   dependencyMap = tmp;
   obj = { style: tmp.stack, children: null };
   const items1 = [
-    closure_5(variant(5747).Text, { variant, color, children: children.intro }),
+    closure_5(variant(5761).Text, { variant, color, children: children.intro }),
     closure_5(View, {
       accessibilityRole: "list",
       style: tmp.stack,
@@ -33,15 +33,15 @@ function NoticeMessageList(children) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { critical: { Icon: fn(7212).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2204.uKMqrF }, warning: null, info: null, success: null };
-let obj2 = { Icon: fn(7212).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2204.uKMqrF };
-obj.warning = { Icon: fn(8150).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2204["7vL/d/"] };
-let obj3 = { Icon: fn(8150).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2204["7vL/d/"] };
-obj.info = { Icon: fn(5855).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2204.BReS7U };
-let obj4 = { Icon: fn(5855).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2204.BReS7U };
-obj.success = { Icon: fn(7460).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2204["1MXXPf"] };
-const TextVariantsFlat = fn(5748).TextVariantsFlat;
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+let obj = { critical: { Icon: fn(7227).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2204.uKMqrF }, warning: null, info: null, success: null };
+let obj2 = { Icon: fn(7227).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2204.uKMqrF };
+obj.warning = { Icon: fn(8166).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2204["7vL/d/"] };
+let obj3 = { Icon: fn(8166).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2204["7vL/d/"] };
+obj.info = { Icon: fn(5869).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2204.BReS7U };
+let obj4 = { Icon: fn(5869).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2204.BReS7U };
+obj.success = { Icon: fn(7476).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2204["1MXXPf"] };
+const TextVariantsFlat = fn(5762).TextVariantsFlat;
 let found = TextVariantsFlat.find((name) => "body-sm/normal" === name.name);
 let lineHeight;
 if (found != null) {
@@ -63,7 +63,7 @@ let closure_9 = createStyles.createStyles((arg0, height) => {
 });
 createStyles = fn(5141);
 let obj8 = { stack: null, listItem: null, listItemText: null };
-let obj5 = { Icon: fn(7460).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2204["1MXXPf"] };
+let obj5 = { Icon: fn(7476).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2204["1MXXPf"] };
 obj8.stack = { gap: nativeDefault.space.PX_4 };
 let obj9 = { gap: nativeDefault.space.PX_4 };
 obj8.listItem = { flexDirection: "row", gap: nativeDefault.space.PX_8 };

@@ -1,15 +1,15 @@
-// === Module 9173: CreateChannelTypeDescription ===
+// === Module 9190: CreateChannelTypeDescription ===
 
-// Module 9173 (CreateChannelTypeDescription)
+// Module 9190 (CreateChannelTypeDescription)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildProfileVisibility from "GuildProfileVisibility" /* 7046 */;
-import useGuildProfile from "useGuildProfile" /* 9175 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildProfileVisibility from "GuildProfileVisibility" /* 7061 */;
+import useGuildProfile from "useGuildProfile" /* 9192 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(9174).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9191).GuildProfileFetchStatus;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -39,10 +39,10 @@ export default function CreateChannelTypeDescription(guildId) {
   let tmp9 = null;
   if (tmp6) {
     const obj2 = { children: null };
-    const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: null };
+    const obj3 = { variant: "body-sm/normal", color: "text-subtle", children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t["2Ab4Id"]);
-    obj2.children = jsx(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
+    obj2.children = jsx(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", children: null });
     tmp9 = <View>{null}</View>;
   }
   return tmp9;

@@ -1,14 +1,14 @@
-// === Module 9885: ? ===
+// === Module 9903: ? ===
 
-// Module 9885
+// Module 9903
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import _modDef9886 from "module_9886" /* 9886 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import _modDef9904 from "module_9904" /* 9904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,9 +28,9 @@ export default function ErrorResult(error) {
   const tmp = closure_6();
   const obj = { bottom: true, style: tmp.container, children: null };
   const obj2 = { style: tmp.inner, children: null };
-  const obj3 = { source: _modDef9886, style: tmp.image };
+  const obj3 = { source: _modDef9904, style: tmp.image };
   items = [React4(FastImageDefault, obj3), ];
-  const obj4 = { style: tmp.text, variant: "text-md/medium", children: null };
+  const obj4 = { style: tmp.text, variant: "body-md/medium", children: null };
   if (error == null) {
     const intl = util.intl;
     error = intl.string(util.t.mqn873);

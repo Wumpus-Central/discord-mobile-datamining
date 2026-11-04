@@ -1,12 +1,12 @@
-// === Module 14751: BotPermissions ===
+// === Module 14831: BotPermissions ===
 
-// Module 14751 (BotPermissions)
+// Module 14831 (BotPermissions)
 import nativeDefault from "native" /* 575 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import XSmallIcon from "XSmallIcon" /* 7180 */;
-import permissions from "permissions" /* 9884 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import XSmallIcon from "XSmallIcon" /* 7195 */;
+import permissions from "permissions" /* 9902 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { disabledPermissionIcon: null };
 let size = { width: 24, height: 24, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
@@ -59,12 +59,12 @@ export default function BotPermissions(guild) {
   const mapped1 = found2.map((item) => {
     const permissionName = permissions.getPermissionName(item);
     const obj2 = { direction: "horizontal", align: "center", children: null };
-    items = [timestampProducer(View, { style: closure_4.disabledPermissionIcon, children: timestampProducer(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }) }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: permissionName })];
+    items = [timestampProducer(View, { style: closure_4.disabledPermissionIcon, children: timestampProducer(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }) }), timestampProducer(Text_Text.Text, { variant: "body-md/medium", children: permissionName })];
     obj2.children = items;
-    return React5(Stack_Stack.Stack, obj2, String(item));
+    return metroImportDefault(Stack_Stack.Stack, obj2, String(item));
   });
   let obj = { children: null };
-  let obj2 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+  let obj2 = { variant: "body-sm/medium", color: "text-subtle", children: null };
   const intl = permissions(onPermissionsChange[13]).intl;
   obj2.children = intl.format(permissions(onPermissionsChange[13]).t.sOaT2j, { applicationName: application.name, guildName: guild.name });
   const items1 = [c6(permissions(onPermissionsChange[12]).Text, obj2), c6(permissions(onPermissionsChange[10]).Stack, { spacing: 12, children: mapped })];
@@ -73,7 +73,7 @@ export default function BotPermissions(guild) {
   let tmp6Result = null;
   if (mapped1.length > 0) {
     const obj4 = { children: null };
-    const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+    const obj5 = { variant: "body-sm/medium", color: "text-subtle", children: null };
     const intl2 = permissions(onPermissionsChange[13]).intl;
     const obj6 = { applicationName: application.name };
     obj5.children = intl2.format(permissions(onPermissionsChange[13]).t.fsOkF4, obj6);

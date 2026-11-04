@@ -1,18 +1,18 @@
-// === Module 17962: UserSettingsDesignSystemHaptics ===
+// === Module 18058: UserSettingsDesignSystemHaptics ===
 
-// Module 17962 (UserSettingsDesignSystemHaptics)
-import HapticUtils from "HapticUtils" /* 5383 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
-import Patterns from "Patterns" /* 5385 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import Card from "Card" /* 7103 */;
+// Module 18058 (UserSettingsDesignSystemHaptics)
+import HapticUtils from "HapticUtils" /* 5384 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5385 */;
+import Patterns from "Patterns" /* 5386 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import Card from "Card" /* 7118 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function HapticButton(text) {
   const type = text.type;
-  return closure_3(type(5754).Button, {
+  return closure_3(type(5768).Button, {
     variant: "secondary",
     onPress() {
       return HapticUtils.triggerHapticFeedback(type);
@@ -99,7 +99,7 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj2 = { spacing: 24, children: null };
   const obj3 = { children: null };
   const obj4 = { children: null };
-  items = [React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Semantic Types" }), React3(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Existing haptic types with platform-specific remapping for the best feel." }), ];
+  items = [React3(Text_Text.Text, { variant: "body-lg/semibold", children: "Semantic Types" }), React3(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: "Existing haptic types with platform-specific remapping for the best feel." }), ];
   items[2] = items.map((label) => {
     label = label.label;
     return closure_1_3(HapticButton, { type: label.type, label }, label);
@@ -110,8 +110,8 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj5 = { children: null };
   const obj6 = { children: null };
   items2 = [
-    React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Impact / Notification Types" }),
-    React3(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Direct 1:1 mappings for impact and notification feedback." }),
+    React3(Text_Text.Text, { variant: "body-lg/semibold", children: "Impact / Notification Types" }),
+    React3(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: "Direct 1:1 mappings for impact and notification feedback." }),
     items1.map((label) => {
       label = label.label;
       return closure_1_3(HapticButton, { type: label.type, label }, label);
@@ -123,8 +123,8 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj7 = { children: null };
   const obj8 = { children: null };
   items3 = [
-    React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Gesture / UI Types" }),
-    React3(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Feedback for gestures, toggles, and UI confirmations. New in v3." }),
+    React3(Text_Text.Text, { variant: "body-lg/semibold", children: "Gesture / UI Types" }),
+    React3(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: "Feedback for gestures, toggles, and UI confirmations. New in v3." }),
     items2.map((label) => {
       label = label.label;
       return closure_1_3(HapticButton, { type: label.type, label }, label);
@@ -136,8 +136,8 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj9 = { children: null };
   const obj10 = { children: null };
   items4 = [
-    React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Platform Haptic Types" }),
-    React3(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Native Android haptics with iOS Core Haptics approximations. Cross-platform in v3." }),
+    React3(Text_Text.Text, { variant: "body-lg/semibold", children: "Platform Haptic Types" }),
+    React3(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: "Native Android haptics with iOS Core Haptics approximations. Cross-platform in v3." }),
     items3.map((label) => {
       label = label.label;
       return closure_1_3(HapticButton, { type: label.type, label }, label);
@@ -149,11 +149,11 @@ export default function UserSettingsDesignSystemHaptics() {
   const obj11 = { children: null };
   const obj12 = { children: null };
   const items5 = [
-    React3(Text_Text.Text, { variant: "text-lg/semibold", children: "Pattern Presets" }),
-    React3(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Built-in haptic sequences using triggerPattern(). Each preset uses a compact notation (o=soft, O=strong, .=short gap, -=medium gap, ==long gap)." }),
+    React3(Text_Text.Text, { variant: "body-lg/semibold", children: "Pattern Presets" }),
+    React3(Text_Text.Text, { variant: "body-md/medium", color: "text-subtle", children: "Built-in haptic sequences using triggerPattern(). Each preset uses a compact notation (o=soft, O=strong, .=short gap, -=medium gap, ==long gap)." }),
     items4.map((description) => {
       ({ label, pattern: closure_0 } = description);
-      return closure_3(closure_0(5754).Button, {
+      return closure_3(closure_0(5768).Button, {
         variant: "secondary",
         onPress() {
           return Patterns.triggerPattern(Patterns.Patterns[closure_1_0]);

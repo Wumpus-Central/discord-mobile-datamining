@@ -1,14 +1,14 @@
-// === Module 15632: GuildBoostingMarketingTopPerksCards ===
+// === Module 15719: GuildBoostingMarketingTopPerksCards ===
 
-// Module 15632 (GuildBoostingMarketingTopPerksCards)
+// Module 15719 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5741 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import _modDef15633 from "module_15633" /* 15633 */;
-import _mod15634 from "module_15634" /* 15634 */;
-import _modDef15635 from "module_15635" /* 15635 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5755 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import _modDef15720 from "module_15720" /* 15720 */;
+import _mod15721 from "module_15721" /* 15721 */;
+import _modDef15722 from "module_15722" /* 15722 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -17,7 +17,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { wrapper: { marginTop: 50 }, heading: { marginBottom: 20, textAlign: "center" }, scrollerContent: { alignItems: "stretch", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 16, paddingBottom: 16 }, card: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16, padding: 24, width: 324 }, cardGraphic: null, cardLast: null, cardHeading: null, cardBody: null };
 let size = { borderRadius: nativeDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
@@ -37,7 +37,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15633 };
+      const obj = { style, source: _modDef15720 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   },
@@ -51,7 +51,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod15634, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod15721, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     }
   },
@@ -65,7 +65,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15635 };
+      const obj = { style, source: _modDef15722 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   }
@@ -96,7 +96,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
       items[1] = cardLast;
       const items1 = [getGraphic.getGraphic(card.cardGraphic), hasOwnProperty(Text_Text.Heading, { style: card.cardHeading, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: getGraphic.getHeadingCopy() }), ];
       const obj2 = { style: card.cardHeading, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: getGraphic.getHeadingCopy() };
-      items1[2] = hasOwnProperty(Text_Text.Text, { style: card.cardBody, variant: "text-sm/normal", color: "text-default", children: getGraphic.getBodyCopy() });
+      items1[2] = hasOwnProperty(Text_Text.Text, { style: card.cardBody, variant: "body-sm/normal", color: "text-default", children: getGraphic.getBodyCopy() });
       obj.children = items1;
       return timestampProducer(View, obj, index);
     })

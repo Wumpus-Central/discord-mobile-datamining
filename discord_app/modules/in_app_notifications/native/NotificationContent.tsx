@@ -1,8 +1,8 @@
-// === Module 11214: NotificationContent ===
+// === Module 11264: NotificationContent ===
 
-// Module 11214 (NotificationContent)
+// Module 11264 (NotificationContent)
 import nativeDefault from "native" /* 575 */;
-import MessageNotificationHeader from "MessageNotificationHeader" /* 11215 */;
+import MessageNotificationHeader from "MessageNotificationHeader" /* 11265 */;
 import noop from "module_19" /* 19 */;
 
 const MessageNotificationHeaderDefault = MessageNotificationHeader;

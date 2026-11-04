@@ -1,8 +1,8 @@
-// === Module 14203: useGuildPowerupRollbackEnabled ===
+// === Module 14289: useGuildPowerupRollbackEnabled ===
 
-// Module 14203 (useGuildPowerupRollbackEnabled)
-import Powerups from "Powerups" /* 5356 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 5358 */;
+// Module 14289 (useGuildPowerupRollbackEnabled)
+import Powerups from "Powerups" /* 5357 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 5359 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");

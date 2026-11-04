@@ -1,9 +1,9 @@
-// === Module 11054: conjurePreviewNativeSurfaces ===
+// === Module 11103: conjurePreviewNativeSurfaces ===
 
-// Module 11054 (conjurePreviewNativeSurfaces)
-import RpcCommandInterception from "RpcCommandInterception" /* 9466 */;
-import requestConjureDevicePermissions from "requestConjureDevicePermissions" /* 11060 */;
-import FramesStore from "FramesStore" /* 6966 */;
+// Module 11103 (conjurePreviewNativeSurfaces)
+import RpcCommandInterception from "RpcCommandInterception" /* 9484 */;
+import requestConjureDevicePermissions from "requestConjureDevicePermissions" /* 11109 */;
+import FramesStore from "FramesStore" /* 6981 */;
 
 const require = globalThis.__r;
 
@@ -67,14 +67,14 @@ function answerFor(cmd) {
       if (obj2.hasConjurePreviewGameCapture(applicationId)) {
         if (cmd.cmd === RPCCommands.CAPTURE_SCREEN) {
           const obj3 = { result: null, answered: "returned the selected game capture" };
-          obj = obj(11055);
+          obj = obj(11104);
           conjurePreviewGameCapture = obj.readConjurePreviewGameCapture(applicationId);
           obj3.result = conjurePreviewGameCapture;
           let obj4 = obj3;
         } else {
           obj4 = { result: null, answered: "screen capture allowed for the selected game capture" };
           const obj5 = { permissions: null };
-          const prop = obj(11059).CONJURE_DEVICE_PERMISSION_NAMES;
+          const prop = obj(11108).CONJURE_DEVICE_PERMISSION_NAMES;
           obj5.permissions = prop.map((permission) => {
             if ("screen_capture" === permission) {
               const obj2 = { permission, state: "granted" };
@@ -228,8 +228,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "channel_id", answered: "<string:2672367698>" }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "channel_id", answered: "<string:2672367698>" })
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "id", answered: 10275480959958475000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "id", answered: 10275480959958475000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 })
 };
 let closure_7 = {
   drain() {
@@ -268,7 +268,7 @@ export function beginNativeSurfaceSessionForFrame(iframeId, beneathBatches) {
     } else {
       tmp9 = null;
     }
-    let result = obj2(9466).setRpcCommandInterceptor(tmp9);
+    let result = obj2(9484).setRpcCommandInterceptor(tmp9);
     const obj3 = {
       iframeId,
       drain() {

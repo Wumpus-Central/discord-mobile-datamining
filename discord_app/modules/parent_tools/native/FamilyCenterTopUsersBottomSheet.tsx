@@ -1,15 +1,15 @@
-// === Module 16944: FamilyCenterTopUsersBottomSheet ===
+// === Module 17036: FamilyCenterTopUsersBottomSheet ===
 
-// Module 16944 (FamilyCenterTopUsersBottomSheet)
+// Module 17036 (FamilyCenterTopUsersBottomSheet)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import _modDef2667 from "module_2667" /* 2667 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRow from "TableRow" /* 7101 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import ActionSheet from "ActionSheet" /* 7486 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8496 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRow from "TableRow" /* 7116 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import ActionSheet from "ActionSheet" /* 7502 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8513 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -39,7 +39,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   topUserActivities = topUserActivities.topUserActivities;
   const obj = { children: null };
-  const obj2 = { variant: "text-md/semibold", style: closure_6().header, children: null };
+  const obj2 = { variant: "body-md/semibold", style: closure_6().header, children: null };
   const intl = util.intl;
   obj2.children = intl.string(_modDef2667.BxbvS7);
   items = [React4(Text_Text.Text, obj2), ];

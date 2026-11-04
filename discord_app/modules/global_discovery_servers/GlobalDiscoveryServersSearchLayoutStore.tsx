@@ -1,10 +1,10 @@
-// === Module 15738: GlobalDiscoveryServersSearchLayoutStore ===
+// === Module 15826: GlobalDiscoveryServersSearchLayoutStore ===
 
-// Module 15738 (GlobalDiscoveryServersSearchLayoutStore)
+// Module 15826 (GlobalDiscoveryServersSearchLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15739 */;
-import GlobalDiscoveryServersSearchCountsStore from "GlobalDiscoveryServersSearchCountsStore" /* 15737 */;
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15827 */;
+import GlobalDiscoveryServersSearchCountsStore from "GlobalDiscoveryServersSearchCountsStore" /* 15825 */;
 
 function reset() {
   counts = [];

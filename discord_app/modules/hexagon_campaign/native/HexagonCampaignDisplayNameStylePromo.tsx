@@ -1,11 +1,11 @@
-// === Module 16624: HexagonCampaignDisplayNameStylePromo ===
+// === Module 16714: HexagonCampaignDisplayNameStylePromo ===
 
-// Module 16624 (HexagonCampaignDisplayNameStylePromo)
+// Module 16714 (HexagonCampaignDisplayNameStylePromo)
 import nativeDefault from "native" /* 575 */;
 import _modDef4412 from "module_4412" /* 4412 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16626 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16628 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16716 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16718 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -34,14 +34,14 @@ export default function HexagonCampaignDisplayNameStylePromo(showLearnMore) {
   if (flag) {
     const obj3 = {
       learnMoreHook(children, arg1) {
-          return React4(Text_Text.Text, { variant: "text-xxs/medium", color: "text-strong", style: link.link, accessibilityRole: "link", onPress: openHexagonCampaignLearnMore.openHexagonCampaignLearnMore, children }, arg1);
+          return React4(Text_Text.Text, { variant: "footnote/medium", color: "text-strong", style: link.link, accessibilityRole: "link", onPress: openHexagonCampaignLearnMore.openHexagonCampaignLearnMore, children }, arg1);
         }
     };
     let formatResult = intl.format(_modDef4412.eb99JA, obj3);
   } else {
     formatResult = intl.string(_modDef4412.WyZOg3);
   }
-  items[1] = closure_4(require("Text/Text").Text, { variant: "text-xxs/medium", color: "text-default", lineClamp: 1, children: formatResult });
+  items[1] = closure_4(require("Text/Text").Text, { variant: "footnote/medium", color: "text-default", lineClamp: 1, children: formatResult });
   obj2.children = items;
   obj.children = closure_5(View, obj2);
   return closure_4(require("native").ThemeContextProvider, obj);

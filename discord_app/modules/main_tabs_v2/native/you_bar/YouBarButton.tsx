@@ -1,9 +1,9 @@
-// === Module 18619: YouBarButton ===
+// === Module 18720: YouBarButton ===
 
-// Module 18619 (YouBarButton)
+// Module 18720 (YouBarButton)
 import nativeDefault from "native" /* 575 */;
-import IconButton from "IconButton" /* 8152 */;
-import ClipView from "ClipView" /* 9637 */;
+import IconButton from "IconButton" /* 8168 */;
+import ClipView from "ClipView" /* 9656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -85,7 +85,7 @@ class YouBarButtonIcon {
     items2[0] = memo;
     items2[1] = hasBadge;
     memo1 = obj2.useMemo(() => {
-      const rect = { position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "alignItems", bottom: "enabled", padding: "content", minWidth: "Array" };
+      const rect = { position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "id", bottom: "it", padding: "Icon", minWidth: "y" };
       return rect;
     }, items1);
     obj6 = { style: { position: "relative", height: tmp, width: tmp }, children: null };
@@ -123,13 +123,13 @@ class YouBarButtonContainer {
   }
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17218);
-({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
+const YouBarConstants = fn(17310);
+({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: closure_6 } = YouBarConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { buttonContainer: { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" } };
-const React7 = createStyles.createStyles(obj);
+const React6 = createStyles.createStyles(obj);
 let obj3 = { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");
@@ -143,12 +143,12 @@ export default noop.memo(function YouBarButton(arg0) {
   }
   const obj2 = { children: null };
   obj.variant = str;
-  obj.icon = React5(YouBarButtonIcon, { icon, badgeStyle, hasBadge });
+  obj.icon = metroImportDefault(YouBarButtonIcon, { icon, badgeStyle, hasBadge });
   obj.onPress = onPress;
   obj.onLongPress = onLongPress;
   obj.hitSlop = hitSlop;
-  obj2.children = React5(IconButton.IconButton, obj);
-  return React5(YouBarButtonContainer, obj2);
+  obj2.children = metroImportDefault(IconButton.IconButton, obj);
+  return metroImportDefault(YouBarButtonContainer, obj2);
 });
 export { YouBarButtonIcon };
 export { YouBarButtonContainer };

@@ -1,6 +1,6 @@
-// === Module 7924: GameRelationshipStore ===
+// === Module 7940: GameRelationshipStore ===
 
-// Module 7924 (GameRelationshipStore)
+// Module 7940 (GameRelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;

@@ -1,14 +1,14 @@
-// === Module 8144: AgeVerificationOtherWindowScreen ===
+// === Module 8160: AgeVerificationOtherWindowScreen ===
 
-// Module 8144 (AgeVerificationOtherWindowScreen)
+// Module 8160 (AgeVerificationOtherWindowScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3223 from "module_3223" /* 3223 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7253 */;
-import ModalScreen from "ModalScreen" /* 8096 */;
-import ModalContent from "ModalContent" /* 8097 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7273 */;
+import ModalScreen from "ModalScreen" /* 8112 */;
+import ModalContent from "ModalContent" /* 8113 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ export default function AgeVerificationOtherWindowScreen(copy) {
   const obj3 = { align: "center", justify: "center", spacing: 16, style: tmp.container, children: null };
   items = [React3(MobilePhoneIcon.MobilePhoneIcon, { size: "lg", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT }), ];
   const obj5 = { align: "center", justify: "center", spacing: 8, children: null };
-  const items1 = [React3(Text_Text.Text, { accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), React3(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", style: tmp.text, children: description })];
+  const items1 = [React3(Text_Text.Text, { accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), React3(Text_Text.Text, { variant: "body-md/medium", color: "text-muted", style: tmp.text, children: description })];
   obj5.children = items1;
   items[1] = React4(Stack_Stack.Stack, obj5);
   obj3.children = items;

@@ -1,11 +1,11 @@
-// === Module 8565: ChannelPinnedMessageSystemMessage ===
+// === Module 8582: ChannelPinnedMessageSystemMessage ===
 
-// Module 8565 (ChannelPinnedMessageSystemMessage)
+// Module 8582 (ChannelPinnedMessageSystemMessage)
 import util from "util" /* 1113 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8542 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8544 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8546 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8549 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8559 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8561 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8563 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8566 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");

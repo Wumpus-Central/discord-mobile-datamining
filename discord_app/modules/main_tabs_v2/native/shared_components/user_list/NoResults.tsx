@@ -1,7 +1,7 @@
-// === Module 13539: NoResults ===
+// === Module 13623: NoResults ===
 
-// Module 13539 (NoResults)
-import Text_Text from "Text/Text" /* 5747 */;
+// Module 13623 (NoResults)
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,10 +42,10 @@ export default function NoResults(illustration) {
   }
   const items1 = [tmp5, ];
   const obj4 = { style: tmp.textContainer, children: null };
-  const items2 = [React4(Text_Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), ];
+  const items2 = [React4(Text_Text.Text, { variant: "body-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), ];
   let tmp7Result = null;
   if (null != subtitle) {
-    const obj6 = { variant: "text-xs/medium", color: "interactive-text-default", style: tmp.text, children: subtitle };
+    const obj6 = { variant: "body-xs/medium", color: "interactive-text-default", style: tmp.text, children: subtitle };
     tmp7Result = React4(Text_Text.Text, obj6);
   }
   items2[1] = tmp7Result;

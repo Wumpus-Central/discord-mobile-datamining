@@ -1,6 +1,6 @@
-// === Module 13331: canGoToGameOrganizationGuild ===
+// === Module 13414: canGoToGameOrganizationGuild ===
 
-// Module 13331 (canGoToGameOrganizationGuild)
+// Module 13414 (canGoToGameOrganizationGuild)
 import GuildStore from "GuildStore" /* 5012 */;
 
 const size = fn(2);

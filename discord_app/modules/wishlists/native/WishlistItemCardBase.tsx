@@ -1,17 +1,17 @@
-// === Module 9595: WishlistItemCardBase ===
+// === Module 9614: WishlistItemCardBase ===
 
-// Module 9595 (WishlistItemCardBase)
+// Module 9614 (WishlistItemCardBase)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import native from "native" /* 5207 */;
-import useToken from "useToken" /* 5719 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import LockIcon from "LockIcon" /* 8791 */;
-import useUserProfileColors from "useUserProfileColors" /* 8935 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9413 */;
-import useWishlistHooks from "useWishlistHooks" /* 9598 */;
-import IndicatorDot from "IndicatorDot" /* 9619 */;
+import useToken from "useToken" /* 5732 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import LockIcon from "LockIcon" /* 8808 */;
+import useUserProfileColors from "useUserProfileColors" /* 8952 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9430 */;
+import useWishlistHooks from "useWishlistHooks" /* 9617 */;
+import IndicatorDot from "IndicatorDot" /* 9638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,14 +25,14 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9596).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
+    children: closure_5(toastText(9615).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
   };
   return closure_5(closure_3, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
 const createStyles = fn(5141);
 let obj = { card: { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" }, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, newContentDot: null, lockBadge: null };
@@ -158,7 +158,7 @@ export default function WishlistItemCardBase(arg0) {
     isNew = hasOwnProperty(React4, obj13);
   }
   items3[4] = isNew;
-  const tmp13Result = React5(timestampProducer, { children: items3 });
+  const tmp13Result = metroImportDefault(timestampProducer, { children: items3 });
   if (null == onPress) {
     const obj14 = { style: items, accessible: "" !== formatToPlainStringResult1 || undefined, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
     let tmp23;

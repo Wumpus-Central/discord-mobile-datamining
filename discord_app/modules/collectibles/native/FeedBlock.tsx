@@ -1,10 +1,10 @@
-// === Module 18012: FeedBlock ===
+// === Module 18108: FeedBlock ===
 
-// Module 18012 (FeedBlock)
+// Module 18108 (FeedBlock)
 import initializeDefault from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9679 */;
-import uniqByDefault from "uniqBy" /* 17993 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9698 */;
+import uniqByDefault from "uniqBy" /* 18089 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 import ThemeStore from "ThemeStore" /* 1192 */;

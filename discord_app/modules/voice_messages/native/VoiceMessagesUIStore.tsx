@@ -1,11 +1,11 @@
-// === Module 13856: VoiceMessagesUIStore ===
+// === Module 13942: VoiceMessagesUIStore ===
 
-// Module 13856 (VoiceMessagesUIStore)
+// Module 13942 (VoiceMessagesUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import springPresets from "springPresets" /* 5758 */;
-import VoiceMessageConstants from "VoiceMessageConstants" /* 13857 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import springPresets from "springPresets" /* 5772 */;
+import VoiceMessageConstants from "VoiceMessageConstants" /* 13943 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 ({ VoiceMessageAnimationState: c2, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageConstants);
 let obj = module_560.create(() => {
-  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "flexDirection", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_8", showVoiceMessagesTooltip: "TYPING_START_LOCAL", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: "no_text_color", isUsingHoldGesture: "TYPING_STOP_LOCAL" };
+  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "flexDirection", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_8", showVoiceMessagesTooltip: "showGuildEventModeratorActionSheet", savedVoiceMessageUploadData: "body-md/medium", isVoiceMessageButtonMounted: "text-feedback-critical", isUsingHoldGesture: null };
   items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
   obj.voiceMessageAnimationState = _mod1652.makeMutable(items);
@@ -65,9 +65,9 @@ export function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(5757);
+    obj = waveformVersion(5771);
     const result = arg0 / closure_3;
-    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5758).Reanimated3DefaultSpringConfig));
+    const result1 = currWaveHeight.set(obj.withSpring(result, waveformVersion(5772).Reanimated3DefaultSpringConfig));
   }
   items = [arg0, waveformVersion];
   waveform.push(items);
@@ -90,7 +90,7 @@ export function hideVoiceMessagesTooltip() {
 export function resetVoiceMessageState() {
   obj = ReactBatchUpdates;
   obj.batchUpdates(() => {
-    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "disabled", savedVoiceMessageUploadData: "isArray" });
+    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "sa", savedVoiceMessageUploadData: "isArray" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {

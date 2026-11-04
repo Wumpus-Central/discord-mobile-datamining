@@ -1,19 +1,19 @@
-// === Module 9654: CollectiblesBadges ===
+// === Module 9673: CollectiblesBadges ===
 
-// Module 9654 (CollectiblesBadges)
+// Module 9673 (CollectiblesBadges)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LockIcon from "LockIcon" /* 8791 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9655 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9656 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LockIcon from "LockIcon" /* 8808 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9674 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { badgeTextUppercase: { textTransform: "uppercase" }, badgeSurfaceDarkMode: { backgroundColor: nativeDefault.colors.WHITE }, badgeSurfaceLightMode: null, newIconBadge: null, limitedTimeBadge: null, lockIconBadge: null, newLockIconBadge: null, badgePill: null, iconTextBadge: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
@@ -39,7 +39,7 @@ export function NewBadge(style) {
   const obj = { style: null, children: null };
   items = [tmp.newIconBadge, style.style];
   obj.style = items;
-  const obj2 = { variant: "text-sm/semibold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.y2b7CA);
   obj.children = hasOwnProperty(Text_Text.Text, obj2);
@@ -58,7 +58,7 @@ export function LockBadge(isNew) {
     obj2.style = items;
     const obj3 = { size: "xxs", color: nativeDefault.colors.WHITE };
     const items1 = [hasOwnProperty(LockIcon.LockIcon, obj3), ];
-    const obj4 = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
+    const obj4 = { variant: "body-xs/semibold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
     const intl = util.intl;
     obj4.children = intl.string(util.t.y2b7CA);
     items1[1] = hasOwnProperty(Text_Text.Text, obj4);
@@ -87,7 +87,7 @@ export function PremiumBadge(isNew) {
     obj2.style = items;
     const obj3 = { size: "xxs", color: nativeDefault.colors.WHITE };
     const items1 = [hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj3), ];
-    const obj4 = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
+    const obj4 = { variant: "body-xs/semibold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
     const intl = util.intl;
     obj4.children = intl.string(util.t.y2b7CA);
     items1[1] = hasOwnProperty(Text_Text.Text, obj4);
@@ -108,7 +108,7 @@ export function LimitedTimeBadge(style) {
   const obj = { style: null, children: null };
   items = [tmp.limitedTimeBadge, style.style];
   obj.style = items;
-  const obj2 = { variant: "text-xs/semibold", color: "text-overlay-dark", style: tmp.badgeTextUppercase, children: null };
+  const obj2 = { variant: "body-xs/semibold", color: "text-overlay-dark", style: tmp.badgeTextUppercase, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["h/uBCR"]);
   obj.children = hasOwnProperty(Text_Text.Text, obj2);
@@ -144,7 +144,7 @@ export function IconTextBadge(isDark) {
   if (isDark) {
     str2 = "text-overlay-dark";
   }
-  items1[1] = hasOwnProperty(Text_Text.Text, { variant: "text-xs/semibold", color: str2, style: tmp.badgeTextUppercase, children: label });
+  items1[1] = hasOwnProperty(Text_Text.Text, { variant: "body-xs/semibold", color: str2, style: tmp.badgeTextUppercase, children: label });
   obj.children = items1;
   return timestampProducer(View, obj);
 }

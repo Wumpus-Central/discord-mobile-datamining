@@ -1,9 +1,9 @@
-// === Module 12559: ViewAllRow ===
+// === Module 12640: ViewAllRow ===
 
-// Module 12559 (ViewAllRow)
+// Module 12640 (ViewAllRow)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRow from "TableRow" /* 7101 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRow from "TableRow" /* 7116 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,10 +24,10 @@ export default function ViewAllRow(title) {
   }
   const obj2 = { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true };
   const obj3 = { style: closure_4().expandCTALabelContainer, children: null };
-  const obj4 = { color: "text-brand", variant: "text-md/semibold", children: null };
+  const obj4 = { color: "text-brand", variant: "body-md/semibold", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.format(util.t.gVw57p, {});
-  obj3.children = jsx(Text_Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
+  obj3.children = jsx(Text_Text.Text, { color: "text-brand", variant: "body-md/semibold", children: null });
   obj2.label = <View style={closure_4().expandCTALabelContainer}>{null}</View>;
   obj2.onPress = title.onPress;
   return jsx(TableRow.TableRow, { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true });

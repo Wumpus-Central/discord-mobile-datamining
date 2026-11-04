@@ -1,6 +1,6 @@
-// === Module 6572: AppliedGuildBoostError ===
+// === Module 6587: AppliedGuildBoostError ===
 
-// Module 6572 (AppliedGuildBoostError)
+// Module 6587 (AppliedGuildBoostError)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import DateUtils from "DateUtils" /* 4963 */;

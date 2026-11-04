@@ -1,9 +1,9 @@
-// === Module 12392: ConjureDesignFeedbackOverlay ===
+// === Module 12457: ConjureDesignFeedbackOverlay ===
 
-// Module 12392 (ConjureDesignFeedbackOverlay)
+// Module 12457 (ConjureDesignFeedbackOverlay)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5381 */;
-import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 12393 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5382 */;
+import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 12458 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const ConjureDesignRemarkSheetDefault = ConjureDesignRemarkSheet;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, Pressable: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 24;
@@ -57,14 +57,14 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(5381).hideActionSheet(projectId(12393).CONJURE_DESIGN_REMARK_SHEET_KEY);
-        const obj = size(5381);
+        size(5382).hideActionSheet(projectId(12458).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        const obj = size(5382);
       }
     };
   }, []);
   const items1 = [projectId];
   const effect2 = noop.useEffect(() => () => {
-    const result = projectId(11032).inspectConjurePreviewPoint(closure_1_0, projectId(11052).CONJURE_INSPECT_CLEAR_POINT);
+    const result = projectId(11081).inspectConjurePreviewPoint(closure_1_0, projectId(11101).CONJURE_INSPECT_CLEAR_POINT);
   }, items1);
   const items2 = [first2];
   const effect3 = noop.useEffect(() => {
@@ -83,7 +83,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
   callback1 = noop.useCallback((target) => {
     const obj2 = {
       key: ConjureDesignRemarkSheet.CONJURE_DESIGN_REMARK_SHEET_KEY,
-      content: React6(ConjureDesignRemarkSheetDefault, {
+      content: React5(ConjureDesignRemarkSheetDefault, {
         projectId,
         target,
         onClose() {
@@ -106,7 +106,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(11032).inspectConjurePreviewPoint(point, point);
+        const result = projectId(11081).inspectConjurePreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -135,7 +135,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
             closure_8(true);
           }
         });
-        const obj2 = projectId(11032);
+        const obj2 = projectId(11081);
       }
     }
   }, items4);
@@ -181,8 +181,8 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
   if (null == at) {
     items6[1] = null;
     const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
-    const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-    obj5.children = tmp24(tmp16(5747).Text, obj6);
+    const obj6 = { variant: "body-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
+    obj5.children = tmp24(tmp16(5761).Text, obj6);
     items6[2] = tmp24(tmp27, obj5);
     obj2.children = items6;
     obj.children = closure_9(tmp27, obj2);

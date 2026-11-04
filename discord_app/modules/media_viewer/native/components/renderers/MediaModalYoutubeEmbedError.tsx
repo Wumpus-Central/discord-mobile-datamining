@@ -1,8 +1,8 @@
-// === Module 14919: MediaModalYoutubeEmbedError ===
+// === Module 14999: MediaModalYoutubeEmbedError ===
 
-// Module 14919 (MediaModalYoutubeEmbedError)
+// Module 14999 (MediaModalYoutubeEmbedError)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5829 */;
+import LinkingDefault from "Linking" /* 5843 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -22,17 +22,17 @@ export default noop.memo(function MediaModalYoutubeEmbedError(videoId) {
   videoId = videoId.videoId;
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.text, variant: "text-md/semibold", color: "text-overlay-light", children: null };
+  const obj2 = { style: tmp.text, variant: "body-md/semibold", color: "text-overlay-light", children: null };
   const intl = videoId(1113).intl;
   obj2.children = intl.string(videoId(1113).t.u7vKPs);
-  items = [closure_4(videoId(5747).Text, obj2), ];
+  items = [closure_4(videoId(5761).Text, obj2), ];
   const obj3 = { text: null, variant: "secondary", size: "md", shrink: true, grow: false, onPress: null };
   const intl2 = videoId(1113).intl;
   obj3.text = intl2.string(videoId(1113).t.LLpxJ5);
   obj3.onPress = function onPress() {
     LinkingDefault.openURL("https://youtube.com/watch?v=" + videoId);
   };
-  items[1] = closure_4(videoId(5754).Button, obj3);
+  items[1] = closure_4(videoId(5768).Button, obj3);
   obj.children = items;
   return closure_5(View, obj);
 });

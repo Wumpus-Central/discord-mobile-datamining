@@ -1,20 +1,20 @@
-// === Module 14434: PaintIllocon ===
+// === Module 14514: PaintIllocon ===
 
-// Module 14434 (PaintIllocon)
-import FastImageDefault from "FastImage" /* 5837 */;
-import assetHelpers from "assetHelpers" /* 7195 */;
-import _modDef14435 from "module_14435" /* 14435 */;
-import _modDef14436 from "module_14436" /* 14436 */;
-import _modDef14437 from "module_14437" /* 14437 */;
+// Module 14514 (PaintIllocon)
+import FastImageDefault from "FastImage" /* 5851 */;
+import assetHelpers from "assetHelpers" /* 7210 */;
+import _modDef14515 from "module_14515" /* 14515 */;
+import _modDef14516 from "module_14516" /* 14516 */;
+import _modDef14517 from "module_14517" /* 14517 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14435 }, 3: null };
-const obj2 = { uri: _modDef14435 };
-obj[2] = { uri: _modDef14436 };
-const obj3 = { uri: _modDef14436 };
-obj[3] = { uri: _modDef14437 };
+let obj = { 1: null, 2: { uri: _modDef14515 }, 3: null };
+const obj2 = { uri: _modDef14515 };
+obj[2] = { uri: _modDef14516 };
+const obj3 = { uri: _modDef14516 };
+obj[3] = { uri: _modDef14517 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PaintIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function PaintIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7195).getAssetSource(obj);
+  obj.source = num(7210).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

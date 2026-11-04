@@ -1,18 +1,18 @@
-// === Module 19880: GuildSettingsModalEmoji ===
+// === Module 19996: GuildSettingsModalEmoji ===
 
-// Module 19880 (GuildSettingsModalEmoji)
+// Module 19996 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5095 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 19883 */;
-import HeaderRow from "HeaderRow" /* 19887 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 19888 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 19999 */;
+import HeaderRow from "HeaderRow" /* 20003 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 20004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19881 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19997 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -86,8 +86,8 @@ class ManageEmojisModal {
       ({ item, index } = arg0);
       const type = item.type;
       if ("SECTION" === type) {
-        const obj2 = { style: closure_8.section, variant: "text-xs/semibold", color: "text-default", children: item.section };
-        return React6(Text_Text.Text, obj2);
+        const obj2 = { style: closure_8.section, variant: "body-xs/semibold", color: "text-default", children: item.section };
+        return React5(Text_Text.Text, obj2);
       } else if ("EMOJI" === type) {
         let type1;
         if (emojiItems[index - 1] != null) {
@@ -109,7 +109,7 @@ class ManageEmojisModal {
         obj.onSelectRolesForEmoji = onSelectRolesForEmoji;
         obj.start = "SECTION" === type1;
         obj.end = "SECTION" === type2 || index === emojiItems.length - 1;
-        return React6(GuildSettingsModalEmoji_EmojiRow.EmojiRow, obj);
+        return React5(GuildSettingsModalEmoji_EmojiRow.EmojiRow, obj);
       } else {
         return null;
       }
@@ -136,7 +136,7 @@ class ManageEmojisModal {
       obj.description = headerDescription;
       obj.onSelectRolesForEmoji = onSelectRolesForEmoji;
       obj.uploadDisabled = flag;
-      return React6(HeaderRow.ConnectedHeaderRow, obj);
+      return React5(HeaderRow.ConnectedHeaderRow, obj);
     }, items5);
     callback2 = obj3.useCallback(() => {
       const obj = { Illustration: EmptyServerSettingsEmoji.EmptyServerSettingsEmoji, style: closure_8.emptyState, title: null, body: null };
@@ -144,7 +144,7 @@ class ManageEmojisModal {
       obj.title = intl.string(util.t.lxsmBd);
       const intl2 = util.intl;
       obj.body = intl2.string(util.t.RBbtMy);
-      return React6(native.EmptyState, obj);
+      return React5(native.EmptyState, obj);
     }, items6);
     if (null == emojis) {
       tmp15 = closure_9;
@@ -182,7 +182,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let apply = apply_mod;
-let closure_11 = apply.throttle(fn(10187).fetchEmoji, 1000);
+let closure_11 = apply.throttle(fn(10235).fetchEmoji, 1000);
 const createStyles = fn(5141);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: { paddingHorizontal: nativeDefault.space.PX_12 }, section: null, titleContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };

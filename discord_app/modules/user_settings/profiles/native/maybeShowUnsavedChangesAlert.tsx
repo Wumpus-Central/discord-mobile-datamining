@@ -1,8 +1,8 @@
-// === Module 11545: maybeShowUnsavedChangesAlert ===
+// === Module 11595: maybeShowUnsavedChangesAlert ===
 
-// Module 11545 (maybeShowUnsavedChangesAlert)
+// Module 11595 (maybeShowUnsavedChangesAlert)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 6084 */;
+import AlertModal from "AlertModal" /* 6099 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -124,7 +124,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
   return closure_6(AlertModal.AlertModal, obj);
 }
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = "unsaved-changes-save-prompt";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/maybeShowUnsavedChangesAlert.tsx");
@@ -133,16 +133,16 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
   onReset = onReset.onReset;
   const onContinue = onReset.onContinue;
   if (onReset.hasUnsavedChanges) {
-    onReset(5330).dismissKeyboard();
-    const obj = onReset(5330);
+    onReset(5331).dismissKeyboard();
+    const obj = onReset(5331);
     if (obj2.getIsUserProfileMobileSavePromptEnabled(tmp)) {
-      tmp7(5381).hideActionSheet();
-      const tmp7Result = tmp7(5381);
-      tmp7(6079).close();
-      const tmp4Result = tmp4(6080);
+      tmp7(5382).hideActionSheet();
+      const tmp7Result = tmp7(5382);
+      tmp7(6094).close();
+      const tmp4Result = tmp4(6095);
       const obj3 = { onReset, onContinue, onSave: tmp2 };
       tmp4Result.openAlert(c9, closure_6(UnsavedChangesSavePromptAlert, obj3), undefined, { dismissable: true });
-      const tmp7Result3 = tmp7(6079);
+      const tmp7Result3 = tmp7(6094);
     } else {
       const obj4 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, isDismissable: false };
       const intl = tmp4(1113).intl;
@@ -160,10 +160,10 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       obj4.onCancel = function onCancel() {
         onContinue(dependencyMap[10]).close();
       };
-      tmp7(6079).show(obj4);
-      const tmp7Result4 = tmp7(6079);
+      tmp7(6094).show(obj4);
+      const tmp7Result4 = tmp7(6094);
     }
-    obj2 = onReset(11546);
+    obj2 = onReset(11596);
   } else {
     onContinue();
   }

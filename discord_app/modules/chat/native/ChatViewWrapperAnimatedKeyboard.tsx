@@ -1,14 +1,14 @@
-// === Module 11374: ChatViewWrapperAnimatedKeyboard ===
+// === Module 11424: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 11374 (ChatViewWrapperAnimatedKeyboard)
+// Module 11424 (ChatViewWrapperAnimatedKeyboard)
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5733 */;
-import LayerScope from "LayerScope" /* 5734 */;
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 11375 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11387 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 11389 */;
-import StickyWrapper from "StickyWrapper" /* 11390 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5746 */;
+import LayerScope from "LayerScope" /* 5748 */;
+import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 11425 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11437 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 11439 */;
+import StickyWrapper from "StickyWrapper" /* 11440 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -16,9 +16,9 @@ const _modDef1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const Easing = fn(1652).Easing;
-let obj = { duration: fn(5380).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
+let obj = { duration: fn(5381).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
 let closure_8 = { code: "(function ChatViewWrapperAnimatedKeyboardTsx1(){let[animatedHeight]=this.__closure;return animatedHeight.get();})" };
 let closure_9 = { code: "(function ChatViewWrapperAnimatedKeyboardTsx2(height,heightPrev){let[animatedAdjustedMargin,animatedAdjustedMarginPending]=this.__closure;if(heightPrev==null){return;}if(height<heightPrev){animatedAdjustedMargin.set(height);animatedAdjustedMarginPending.set(-1);}else{animatedAdjustedMarginPending.set(height);}})" };
 let closure_10 = { code: "(function ChatViewWrapperAnimatedKeyboardTsx3(finished){let[animatedAdjustedMarginPending,animatedAdjustedMargin]=this.__closure;if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}})" };

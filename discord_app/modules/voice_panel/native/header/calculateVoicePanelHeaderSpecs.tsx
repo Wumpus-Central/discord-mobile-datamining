@@ -1,6 +1,6 @@
-// === Module 11366: calculateVoicePanelHeaderSpecs ===
+// === Module 11416: calculateVoicePanelHeaderSpecs ===
 
-// Module 11366 (calculateVoicePanelHeaderSpecs)
+// Module 11416 (calculateVoicePanelHeaderSpecs)
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function calculateVoicePanelHeaderSpecs_calculateVoicePanelHeaderSpecsTsx1(safeArea,edgeGutter){let[BASE_VOICE_PANEL_HEADER_HEIGHT]=this.__closure;const paddingTop=Math.max(edgeGutter,safeArea.top);const paddingLeft=Math.max(edgeGutter,safeArea.left);const paddingRight=Math.max(edgeGutter,safeArea.right);const height=BASE_VOICE_PANEL_HEADER_HEIGHT+paddingTop;return{height:height,paddingTop:paddingTop,paddingLeft:paddingLeft,paddingRight:paddingRight};})" }, 44];

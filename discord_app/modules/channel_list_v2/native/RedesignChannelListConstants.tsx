@@ -1,12 +1,12 @@
-// === Module 11186: RedesignChannelListConstants ===
+// === Module 11236: RedesignChannelListConstants ===
 
-// Module 11186 (RedesignChannelListConstants)
+// Module 11236 (RedesignChannelListConstants)
 import _mod17 from "module_17" /* 17 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11182 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11232 */;
 import PlatformUtils_mod from "utils/PlatformUtils" /* 1357 */;
 import size from "module_2" /* 2 */;
 
-let c2 = "text-xs/medium";
+let c2 = "body-xs/medium";
 let PlatformUtils = PlatformUtils_mod;
 let num = 20;
 let num2 = 20;
@@ -17,20 +17,20 @@ let PlatformUtils = PlatformUtils_mod;
 if (PlatformUtils.isIOS()) {
   num = 22;
 }
-let c5 = "text-sm/semibold";
+let c5 = "body-sm/semibold";
 const hairlineWidth = _mod17.StyleSheet.hairlineWidth;
 const frozen = Object.freeze({ waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 25 });
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelListConstants.tsx");
 
-export const CHANNEL_SUBTITLE_TEXT_VARIANT = "text-xs/medium";
+export const CHANNEL_SUBTITLE_TEXT_VARIANT = "body-xs/medium";
 export const CHANNEL_PADDING_VERTICAL = 8;
 export const CHANNEL_TITLE_LINE_HEIGHT = num2;
 export const CATEGORY_NAME_LINE_HEIGHT = num;
 export const SEARCH_BAR_HEIGHT = 40;
 export const SEARCH_BAR_MARGIN_BOTTOM = 8;
 export const SEARCH_BAR_PADDING_VERTICAL = 12;
-export const SEARCH_BAR_TEXT_VARIANT = "text-sm/semibold";
-export const CATEGORY_NAME_TEXT_VARIANT = "text-sm/semibold";
+export const SEARCH_BAR_TEXT_VARIANT = "body-sm/semibold";
+export const CATEGORY_NAME_TEXT_VARIANT = "body-sm/semibold";
 export const PANEL_MARGIN = 8;
 export const CHANNEL_MARGIN_VERTICAL = hairlineWidth;
 export const CHANNEL_LIST_DESIGN_WIDTH = 375;

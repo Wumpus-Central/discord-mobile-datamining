@@ -1,19 +1,19 @@
-// === Module 14911: MediaModalOverlayFooterAction ===
+// === Module 14991: MediaModalOverlayFooterAction ===
 
-// Module 14911 (MediaModalOverlayFooterAction)
+// Module 14991 (MediaModalOverlayFooterAction)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5723 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7412 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 14904 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5736 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 14984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
@@ -41,7 +41,7 @@ export function MediaModalOverlayFooterAction(arg0) {
     const obj3 = { children: null };
     items[2] = tmp12;
     obj3.children = items;
-    let tmp3Result = React5(timestampProducer, obj3);
+    let tmp3Result = metroImportDefault(timestampProducer, obj3);
     const tmp4Result = PlatformUtils;
   } else {
     tmp3Result = null;
@@ -50,5 +50,5 @@ export function MediaModalOverlayFooterAction(arg0) {
   const obj4 = { style: tmp.buttonContainer, children: hasOwnProperty(components_Button_Button.Button, { size: "lg", text: footerAction.text, onPress: footerAction.onPress }) };
   items1[1] = hasOwnProperty(React4, obj4);
   rect.children = items1;
-  return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, rect);
 }

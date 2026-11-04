@@ -1,12 +1,12 @@
-// === Module 20239: LogOutDisclaimer ===
+// === Module 20355: LogOutDisclaimer ===
 
-// Module 20239 (LogOutDisclaimer)
+// Module 20355 (LogOutDisclaimer)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
 import _modDef2963 from "module_2963" /* 2963 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6860 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 16016 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6875 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 16106 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("modules/safety_flows/native/LogOutDis
 
 export default function LogOutDisclaimer() {
   const obj = { children: null };
-  const obj2 = { variant: "text-xs/medium", children: null };
+  const obj2 = { variant: "body-xs/medium", children: null };
   const intl = util.intl;
   obj2.children = intl.format(_modDef2963["0DHxym"], {
     handleLogOut() {
       AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
     }
   });
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "body-xs/medium", children: null });
   return jsx(ModalDisclaimer.ModalDisclaimer, { children: null });
 };

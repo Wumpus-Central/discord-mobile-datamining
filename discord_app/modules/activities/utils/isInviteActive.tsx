@@ -1,9 +1,9 @@
-// === Module 11817: isInviteActive ===
+// === Module 11874: isInviteActive ===
 
-// Module 11817 (isInviteActive)
+// Module 11874 (isInviteActive)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import RequestToStreamNonGamesExperimentDefault from "RequestToStreamNonGamesExperiment" /* 11818 */;
+import RequestToStreamNonGamesExperimentDefault from "RequestToStreamNonGamesExperiment" /* 11875 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 
 const result = 2 * DurationsDefault.Millis.HOUR;

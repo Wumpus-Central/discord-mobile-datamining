@@ -10,7 +10,7 @@ import ApplicationRecord from "ApplicationRecord" /* 2145 */;
 const require = fn;
 fn(2170).THE_GAME_AWARD_WINNER_SKUS;
 const Constants = fn(1072);
-({ GIFTABLE_CURRENCIES: hasOwnProperty, OperatingSystems: metroRequire, SKUFlags: closure_7, SKUTypes: closure_8 } = Constants);
+({ GIFTABLE_CURRENCIES: hasOwnProperty, OperatingSystems: closure_6, SKUFlags: metroImportDefault, SKUTypes: closure_8 } = Constants);
 let SKURecord;
 class SKURecord extends tmp2 {
   constructor(arg0) {

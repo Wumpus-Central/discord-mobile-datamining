@@ -1,14 +1,14 @@
-// === Module 13898: ForumPostUsername ===
+// === Module 13984: ForumPostUsername ===
 
-// Module 13898 (ForumPostUsername)
+// Module 13984 (ForumPostUsername)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
 import ForumLayout from "ForumLayout" /* 5000 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8543 */;
-import ForumHooks from "ForumHooks" /* 9969 */;
-import useChatWidthDefault from "useChatWidth" /* 11692 */;
-import ForumPostGridBody from "ForumPostGridBody" /* 13899 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8560 */;
+import ForumHooks from "ForumHooks" /* 10017 */;
+import useChatWidthDefault from "useChatWidth" /* 11743 */;
+import ForumPostGridBody from "ForumPostGridBody" /* 13985 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -54,23 +54,23 @@ function ForumPostUsername(arg0) {
       if (tmp17) {
         tmp25 = processColorStringsArray;
       }
-      const obj6 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", gradientColors: tmp25, lineClamp: 1, style: null, children: null };
+      const obj6 = { variant: "body-sm/semibold", color: "mobile-text-heading-primary", gradientColors: tmp25, lineClamp: 1, style: null, children: null };
       const items4 = [{}, textStyle, tmp.authorName];
       obj6.style = items4;
       const items5 = [authorName, suffix];
       obj6.children = items5;
-      items3[1] = React5(Text_Text.Text, obj6);
+      items3[1] = metroImportDefault(Text_Text.Text, obj6);
       obj2.children = items3;
-      tmp19Result = React5(View, obj2);
+      tmp19Result = metroImportDefault(View, obj2);
     }
     return tmp19Result;
   }
   const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(13894).useForumChannelStore;
+const useForumChannelStore = fn(13980).useForumChannelStore;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 }, roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 }, authorName: { overflow: "hidden", flexWrap: "nowrap" } });
 const size = fn(2);

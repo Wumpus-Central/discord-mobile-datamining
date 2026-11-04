@@ -1,16 +1,16 @@
-// === Module 6045: applyBackgroundOption ===
+// === Module 6060: applyBackgroundOption ===
 
-// Module 6045 (applyBackgroundOption)
+// Module 6060 (applyBackgroundOption)
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 6048 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 6050 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 6053 */;
-import getFilterImageDefault from "getFilterImage" /* 6058 */;
-import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 6059 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5923 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 6063 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 6065 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 6068 */;
+import getFilterImageDefault from "getFilterImage" /* 6073 */;
+import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 6074 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 6046 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 6061 */;
 
 require = fn;
 let closure_9 = async function _getFilterBlob() {
@@ -252,8 +252,8 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(6047);
-({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
+const VideoBackgroundConstants = fn(6062);
+({ BACKGROUND_REPLACEMENT_SIZE: closure_6, BLUR_BACKGROUND_OPTION: metroImportDefault } = VideoBackgroundConstants);
 const NOOP = fn(1072).NOOP;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/applyBackgroundOption.tsx");

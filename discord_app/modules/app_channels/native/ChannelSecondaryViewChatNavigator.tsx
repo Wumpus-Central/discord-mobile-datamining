@@ -1,12 +1,12 @@
-// === Module 19110: ChannelSecondaryViewChatNavigator ===
+// === Module 19213: ChannelSecondaryViewChatNavigator ===
 
-// Module 19110 (ChannelSecondaryViewChatNavigator)
+// Module 19213 (ChannelSecondaryViewChatNavigator)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import HeaderShared from "HeaderShared" /* 9943 */;
-import ChannelContainer from "ChannelContainer" /* 11140 */;
-import ChatViewDefault from "ChatView" /* 11351 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12497 */;
+import HeaderShared from "HeaderShared" /* 9961 */;
+import ChannelContainer from "ChannelContainer" /* 11188 */;
+import ChatViewDefault from "ChatView" /* 11401 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12578 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function ChannelSecondaryViewChatScreen(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9987);
+const NativeStackNavigator = fn(10035);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5141);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };
@@ -41,8 +41,8 @@ export default function ChannelSecondaryViewChatNavigator(navigation) {
   const params = navigation.route.params;
   const tmp = closure_7();
   dependencyMap = tmp;
-  const tmp2 = params(5317)();
-  const accessibilityNativeStackOptions = navigation(7290).useAccessibilityNativeStackOptions();
+  const tmp2 = params(5318)();
+  const accessibilityNativeStackOptions = navigation(7306).useAccessibilityNativeStackOptions();
   const channelId = params.channelId;
   items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
   const memo = accessibilityNativeStackOptions.useMemo(() => {

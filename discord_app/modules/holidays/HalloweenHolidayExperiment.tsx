@@ -1,6 +1,6 @@
-// === Module 19645: HalloweenHolidayExperiment ===
+// === Module 19750: HalloweenHolidayExperiment ===
 
-// Module 19645 (HalloweenHolidayExperiment)
+// Module 19750 (HalloweenHolidayExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

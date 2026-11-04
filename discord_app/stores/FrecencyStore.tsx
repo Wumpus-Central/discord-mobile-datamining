@@ -1,10 +1,10 @@
-// === Module 7015: FrecencyStore ===
+// === Module 7030: FrecencyStore ===
 
-// Module 7015 (FrecencyStore)
+// Module 7030 (FrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FrecencyDefault from "Frecency" /* 5900 */;
+import FrecencyDefault from "Frecency" /* 5914 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;

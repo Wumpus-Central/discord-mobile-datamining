@@ -1,9 +1,9 @@
-// === Module 12275: conjureSettingsRequired ===
+// === Module 12336: conjureSettingsRequired ===
 
-// Module 12275 (conjureSettingsRequired)
+// Module 12336 (conjureSettingsRequired)
 import size from "module_2" /* 2 */;
 
-const set = new Set(["select", "checkbox", "channel", "role", "user"]);
+const set = new Set(["select", "checkbox", "channel", "role", "user", "game"]);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsRequired.tsx");
 
 export function isConjureSettingRequired(required) {

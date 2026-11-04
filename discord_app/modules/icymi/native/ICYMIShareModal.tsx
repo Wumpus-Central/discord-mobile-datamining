@@ -1,14 +1,14 @@
-// === Module 18734: ICYMIShareModal ===
+// === Module 18835: ICYMIShareModal ===
 
-// Module 18734 (ICYMIShareModal)
+// Module 18835 (ICYMIShareModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5730 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import ShareEventUtils from "ShareEventUtils" /* 9112 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 13541 */;
-import ShareChatInputDefault from "ShareChatInput" /* 13554 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import ShareEventUtils from "ShareEventUtils" /* 9129 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 13625 */;
+import ShareChatInputDefault from "ShareChatInput" /* 13638 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -242,7 +242,7 @@ class ICYMIShareModal {
 }
 const View = fn(17).View;
 const AbortCodes = fn(1072).AbortCodes;
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const MessageSendLocation = fn(5146).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -305,7 +305,7 @@ export function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18735).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18836).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

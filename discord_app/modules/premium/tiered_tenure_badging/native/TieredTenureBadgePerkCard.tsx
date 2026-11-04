@@ -1,12 +1,12 @@
-// === Module 15456: TieredTenureBadgePerkCard ===
+// === Module 15543: TieredTenureBadgePerkCard ===
 
-// Module 15456 (TieredTenureBadgePerkCard)
+// Module 15543 (TieredTenureBadgePerkCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import BadgeId from "BadgeId" /* 8879 */;
-import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 11556 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11600 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import BadgeId from "BadgeId" /* 8896 */;
+import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 11606 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11651 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ badgeNameContainer: { flexDirection: "row" }, tenureRequirements: { marginStart: 4 }, image: { width: "100%", height: "100%" }, imageContainer: { height: 238, paddingVertical: 32 }, upcomingBadge: { opacity: 0.4 }, title: { marginTop: 0 } });
 const size = fn(2);
@@ -105,17 +105,17 @@ export function TieredTenureBadgePerkCard() {
       tmp17 = large;
     }
     const obj7 = { style: tmp9.badgeNameContainer, children: null };
-    const obj8 = { variant: "heading-md/medium", color: "text-default", children: null };
+    const obj8 = { variant: "heading-sm/medium", color: "text-default", children: null };
     const intl6 = tmp(tmp2[20]).intl;
     obj8.children = intl6.string(tieredTenureBadgeData.nameUnformatted);
     const items2 = [closure_7(tmp(tmp2[22]).Text, obj8), ];
-    const obj9 = { variant: "heading-md/medium", color: "text-muted", style: tmp9.tenureRequirements, children: tmp(tmp2[23]).getTenureBadgeRequirementString(tieredTenureBadgeData.id, tieredTenureBadgeData.tenureReqNumMonths) };
+    const obj9 = { variant: "heading-sm/medium", color: "text-muted", style: tmp9.tenureRequirements, children: tmp(tmp2[23]).getTenureBadgeRequirementString(tieredTenureBadgeData.id, tieredTenureBadgeData.tenureReqNumMonths) };
     items2[1] = closure_7(tmp(tmp2[22]).Text, obj9);
     obj7.children = items2;
     const items3 = [closure_8(View, obj7), ];
     let tmp33Result = null != formatResult;
     if (tmp33Result) {
-      const obj10 = { variant: "heading-sm/medium", color: "text-muted", children: formatResult };
+      const obj10 = { variant: "heading-xs/medium", color: "text-muted", children: formatResult };
       tmp33Result = closure_7(tmp(tmp2[22]).Text, obj10);
     }
     const obj11 = { children: null };

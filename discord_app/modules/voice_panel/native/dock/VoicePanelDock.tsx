@@ -1,19 +1,19 @@
-// === Module 19367: VoicePanelDock ===
+// === Module 19471: VoicePanelDock ===
 
-// Module 19367 (VoicePanelDock)
+// Module 19471 (VoicePanelDock)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5426 */;
-import ExternalPipDefault from "ExternalPip" /* 5994 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11359 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11364 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11386 */;
-import VoicePanelDockIdentityDefault from "VoicePanelDockIdentity" /* 19368 */;
-import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19370 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
+import ExternalPipDefault from "ExternalPip" /* 6008 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11409 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11414 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11436 */;
+import VoicePanelDockIdentityDefault from "VoicePanelDockIdentity" /* 19472 */;
+import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19474 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,10 +21,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11360).VoicePanelModes;
-const VoicePanelDockConstants = fn(11378);
-({ DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_7, DOCK_PULL_SNAP_DISTANCE: closure_8, DOCK_PULL_SNAP_GIVE: closure_9, DOCK_TAP_MAX_MOVEMENT: closure_10, getDockInset: closure_11, DOCK_DRAG_HANDLE_TOP, DOCK_DRAG_HANDLE_WIDTH, DOCK_GAP, DOCK_PADDING_TOP, DOCK_ROW_HEIGHT } = VoicePanelDockConstants);
-const GestureConstants = fn(11379);
+const VoicePanelModes = fn(11410).VoicePanelModes;
+const VoicePanelDockConstants = fn(11428);
+({ DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: metroImportDefault, DOCK_PULL_SNAP_DISTANCE: closure_8, DOCK_PULL_SNAP_GIVE: closure_9, DOCK_TAP_MAX_MOVEMENT: closure_10, getDockInset: closure_11, DOCK_DRAG_HANDLE_TOP, DOCK_DRAG_HANDLE_WIDTH, DOCK_GAP, DOCK_PADDING_TOP, DOCK_ROW_HEIGHT } = VoicePanelDockConstants);
+const GestureConstants = fn(11429);
 ({ FLING_MIN_DISTANCE: closure_12, FLING_MIN_VELOCITY: map1, PULL_GESTURE_ACTIVATION_DISTANCE: closure_14, PULL_GESTURE_RESISTANCE: closure_15, PULL_GESTURE_SNAP_TIMING: closure_16, PULL_GESTURE_UNSNAP_TIMING: closure_17 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
@@ -217,7 +217,7 @@ export default noop.memo(function VoicePanelDock() {
     const obj = { bottom: -c0 };
     const hitSlopResult = Gesture.Pan().hitSlop({ bottom: -c0 });
     const activeOffsetYResult = Gesture.Pan().hitSlop({ bottom: -c0 }).activeOffsetY(-gesture);
-    items = [-React5, React5];
+    items = [-metroImportDefault, metroImportDefault];
     const failOffsetYResult = Gesture.Pan().hitSlop({ bottom: -c0 }).activeOffsetY(-gesture).failOffsetY(gesture);
     const items1 = [closure_25, sharedValue, sharedValue1];
     c0 = undefined;
@@ -295,7 +295,7 @@ export default noop.memo(function VoicePanelDock() {
     VoicePanelDockTsx7.__initData = tmp17;
     const onTouchesMoveResult = Gesture.Pan().hitSlop({ bottom: -c0 }).activeOffsetY(-gesture).failOffsetY(gesture).failOffsetX(items).onBegin(VoicePanelDockTsx5).onTouchesMove(VoicePanelDockTsx6);
     const tmp16 = c8;
-    const items7 = [closure_28, React6, sharedValue4, c2, timing_timing.withTiming, VoicePanelSheetMorph.DOCK_CONTENT_SWAP_TIMING, sharedValue3, React7, value2, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, closure_2_17, sharedValue2];
+    const items7 = [closure_28, React5, sharedValue4, c2, timing_timing.withTiming, VoicePanelSheetMorph.DOCK_CONTENT_SWAP_TIMING, sharedValue3, React6, value2, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, closure_2_17, sharedValue2];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;

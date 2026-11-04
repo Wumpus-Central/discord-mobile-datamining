@@ -1,27 +1,27 @@
-// === Module 11217: MediaPreviewRightAccessory ===
+// === Module 11267: MediaPreviewRightAccessory ===
 
-// Module 11217 (MediaPreviewRightAccessory)
+// Module 11267 (MediaPreviewRightAccessory)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1492 */;
-import useToken from "useToken" /* 5719 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5723 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import EyeIcon from "EyeIcon" /* 7263 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7587 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7593 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8777 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8811 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8833 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8963 */;
-import PlayIcon from "PlayIcon" /* 8972 */;
-import common_VideoDefault from "common/Video" /* 8997 */;
-import ClipView from "ClipView" /* 9637 */;
-import StickerDefault from "Sticker" /* 10412 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 11196 */;
-import useContentHarmTypes from "useContentHarmTypes" /* 11218 */;
+import useToken from "useToken" /* 5732 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5736 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import EyeIcon from "EyeIcon" /* 7239 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7603 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7609 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8794 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8828 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8850 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8980 */;
+import PlayIcon from "PlayIcon" /* 8989 */;
+import common_VideoDefault from "common/Video" /* 9014 */;
+import ClipView from "ClipView" /* 9656 */;
+import StickerDefault from "Sticker" /* 10460 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 11246 */;
+import useContentHarmTypes from "useContentHarmTypes" /* 11268 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 
@@ -30,11 +30,11 @@ const ClipViewDefault = ClipView;
 require = fn;
 function VideoBadge() {
   const tmp = closure_11();
-  const obj = { style: tmp.badge, children: React6(PlayIcon.PlayIcon, { style: tmp.icon, size: "custom", color: "white" }) };
-  return React6(View, obj);
+  const obj = { style: tmp.badge, children: React5(PlayIcon.PlayIcon, { style: tmp.icon, size: "custom", color: "white" }) };
+  return React5(View, obj);
 }
 function CountBadge(children) {
-  return React6(View, { style: closure_12().badge, children: React6(Text_Text.Text, { variant: "text-xs/semibold", color: "text-default", children: children.total }) });
+  return React5(View, { style: closure_12().badge, children: React5(Text_Text.Text, { variant: "body-xs/semibold", color: "text-default", children: children.total }) });
 }
 function ObscuredMediaOverlay(isSpoiler) {
   ({ isObscured, children } = isSpoiler);
@@ -53,27 +53,27 @@ function ObscuredMediaOverlay(isSpoiler) {
   let tmp8 = isObscured;
   if (isObscured) {
     const obj2 = { style: tmp.obscureBackground };
-    tmp8 = React6(View, obj2);
+    tmp8 = React5(View, obj2);
   }
   items[1] = tmp8;
   let tmp11 = !isObscured;
   if (!isObscured) {
     const obj3 = { blurTheme: str, android_fallbackColor: token, style: StyleSheet.absoluteFill };
-    tmp11 = React6(VisualEffectViewDefault, obj3);
+    tmp11 = React5(VisualEffectViewDefault, obj3);
   }
   items[2] = tmp11;
   const obj4 = { style: tmp.spoilerIconContainer, children: null };
   if (isObscured) {
-    let tmp14Result = React6(ImageWarningIcon.ImageWarningIcon, { size: "sm", color: "white" });
+    let tmp14Result = React5(ImageWarningIcon.ImageWarningIcon, { size: "sm", color: "white" });
   } else {
-    const obj5 = { style: tmp.spoilerPill, children: React6(EyeIcon.EyeIcon, { size: "sm", color: "white" }) };
-    tmp14Result = React6(View, obj5);
+    const obj5 = { style: tmp.spoilerPill, children: React5(EyeIcon.EyeIcon, { size: "sm", color: "white" }) };
+    tmp14Result = React5(View, obj5);
   }
   const obj6 = { children: null };
   obj4.children = tmp14Result;
-  items[3] = React6(View, obj4);
+  items[3] = React5(View, obj4);
   obj6.children = items;
-  return closure_1_10(React7, obj6);
+  return closure_1_10(React6, obj6);
 }
 function SinglePreviewableMedia(arg0) {
   ({ previewableMedia, size, message } = arg0);
@@ -88,7 +88,7 @@ function SinglePreviewableMedia(arg0) {
     const size1 = { width: size, height: size };
     obj4.style = size1;
     obj4.children = icon;
-    return React6(View, obj4);
+    return React5(View, obj4);
   } else {
     if (usePreviewableMedia.PreviewableMediaTypes.AUDIO !== type) {
       if (usePreviewableMedia.PreviewableMediaTypes.FILE !== type) {
@@ -131,18 +131,18 @@ function SinglePreviewableMedia(arg0) {
                         const obj8 = { videoURI: url };
                         size3.src = obj8;
                         size3.poster = url2;
-                        let tmp16Result = React6(common_VideoDefault, size3);
+                        let tmp16Result = React5(common_VideoDefault, size3);
                       }
                       obj7.children = tmp16Result;
-                      obj6.children = React6(tmp18, obj7);
-                      return React6(tmp17, obj6);
+                      obj6.children = React5(tmp18, obj7);
+                      return React5(tmp17, obj6);
                     }
                   }
                   const obj9 = { source: null, style: null, resizeMode: "cover" };
                   const obj10 = { uri: url2 };
                   obj9.source = obj10;
                   obj9.style = tmp.mediaThumbnail;
-                  tmp16Result = React6(FastImageDefault, obj9);
+                  tmp16Result = React5(FastImageDefault, obj9);
                 }
                 url2 = thumbnail.url;
                 const tmp2Result5 = ObscuredMediaUtils;
@@ -154,8 +154,8 @@ function SinglePreviewableMedia(arg0) {
               items2[1] = size4;
               obj11.style = items2;
               const obj12 = { sticker: media, size, animated: !stateFromStores };
-              obj11.children = React6(StickerDefault, obj12);
-              return React6(View, obj11);
+              obj11.children = React5(StickerDefault, obj12);
+              return React5(View, obj11);
             } else {
               return null;
             }
@@ -189,15 +189,15 @@ function SinglePreviewableMedia(arg0) {
                 const obj19 = { uri: srcWithWidthAndHeight };
                 obj18.source = obj19;
                 obj18.style = tmp.mediaThumbnail;
-                const items4 = [React6(FastImageDefault, obj18), ];
+                const items4 = [React5(FastImageDefault, obj18), ];
                 let tmp24Result = null;
                 if (type === usePreviewableMedia.PreviewableMediaTypes.VIDEO) {
-                  tmp24Result = React6(VideoBadge, {});
+                  tmp24Result = React5(VideoBadge, {});
                 }
                 items4[1] = tmp24Result;
                 obj16.children = items4;
                 obj15.children = closure_1_10(ObscuredMediaOverlay, obj16);
-                return React6(View, obj15);
+                return React5(View, obj15);
               }
             }
           }
@@ -211,7 +211,7 @@ function SinglePreviewableMedia(arg0) {
     items5[1] = size6;
     obj20.style = items5;
     obj20.children = icon;
-    return React6(View, obj20);
+    return React5(View, obj20);
   }
 }
 function MultiplePreviewableMedia(arg0) {
@@ -228,8 +228,8 @@ function MultiplePreviewableMedia(arg0) {
   items = [memo];
   obj2.cutouts = items;
   const tmp = closure_14();
-  obj2.children = React6(SinglePreviewableMedia, { previewableMedia, size: 56, message });
-  const items1 = [React6(ClipViewDefault, obj2), React6(CountBadge, { total: totalMediaCount })];
+  obj2.children = React5(SinglePreviewableMedia, { previewableMedia, size: 56, message });
+  const items1 = [React5(ClipViewDefault, obj2), React5(CountBadge, { total: totalMediaCount })];
   obj.children = items1;
   return closure_1_10(View, obj);
 }
@@ -238,10 +238,10 @@ function MediaPreviewRightAccessoryContent(arg0) {
   const first = arg0.previewableMedia[0];
   if (1 === totalMediaCount) {
     const obj2 = { previewableMedia: first, size: 64, message };
-    let tmp4 = React6(SinglePreviewableMedia, obj2);
+    let tmp4 = React5(SinglePreviewableMedia, obj2);
   } else {
     const obj = { previewableMedia: first, totalMediaCount, message };
-    tmp4 = React6(MultiplePreviewableMedia, obj);
+    tmp4 = React5(MultiplePreviewableMedia, obj);
   }
   return tmp4;
 }
@@ -281,7 +281,7 @@ createStyles = fn(5141);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
 createStyles = fn(5141);
 let obj11 = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(11156).RIGHT_ACCESSORY_LEFT_MARGIN } });
+let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(11204).RIGHT_ACCESSORY_LEFT_MARGIN } });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 
@@ -293,8 +293,8 @@ export function MediaPreviewRightAccessory(message) {
   if (0 !== previewableMedia.length) {
     const obj2 = { style: tmp.rightAccessoryContainer, children: null };
     const obj3 = { previewableMedia, totalMediaCount: length, message };
-    obj2.children = React6(MediaPreviewRightAccessoryContent, obj3);
-    tmp2 = React6(View, obj2);
+    obj2.children = React5(MediaPreviewRightAccessoryContent, obj3);
+    tmp2 = React5(View, obj2);
   }
   return tmp2;
 }

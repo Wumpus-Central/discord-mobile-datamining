@@ -1,17 +1,17 @@
-// === Module 17885: DevToolsInAppNotificationTestingScreen ===
+// === Module 17981: DevToolsInAppNotificationTestingScreen ===
 
-// Module 17885 (DevToolsInAppNotificationTestingScreen)
+// Module 17981 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5832 */;
-import StickersTypes from "StickersTypes" /* 6681 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 11155 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11157 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
+import StickersTypes from "StickersTypes" /* 6696 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 11203 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11205 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6957 */;
+import StickersStore from "StickersStore" /* 6972 */;
 import MessageRecord from "MessageRecord" /* 5084 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildStore from "GuildStore" /* 5012 */;
@@ -495,14 +495,14 @@ export default function DevToolsInAppNotificationTestingScreen() {
       const options = title.options;
       obj2.children = options.map((label) => {
         closure_0 = label;
-        return closure_1_14(closure_1_0(7101).TableRow, {
+        return closure_1_14(closure_1_0(7116).TableRow, {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(closure_1_0(17727).BeakerIcon, {}),
+          icon: closure_1_14(closure_1_0(17823).BeakerIcon, {}),
           onPress() {
             return closure_2_0(closure_0);
           },
-          trailing: closure_1_14(closure_1_0(7110).TableRowArrow, {})
+          trailing: closure_1_14(closure_1_0(7125).TableRowArrow, {})
         }, label.label);
       });
       items = [gesture(TableRowGroup.TableRowGroup, obj2), gesture(native.Spacer, { size: nativeDefault.space.PX_16 })];
@@ -515,14 +515,14 @@ export default function DevToolsInAppNotificationTestingScreen() {
   items1[2] = closure_14(require("TableRowGroup").TableRowGroup, {
     title: "Other Notification Types",
     hasIcons: true,
-    children: items3.map((label) => closure_1_14(label(7101).TableRow, {
+    children: items3.map((label) => closure_1_14(label(7116).TableRow, {
       label: label.label,
       subLabel: label.subLabel,
-      icon: closure_1_14(label(17727).BeakerIcon, {}),
+      icon: closure_1_14(label(17823).BeakerIcon, {}),
       onPress() {
         return label(label);
       },
-      trailing: closure_1_14(label(7110).TableRowArrow, {})
+      trailing: closure_1_14(label(7125).TableRowArrow, {})
     }, label.label))
   });
   obj.children = items1;

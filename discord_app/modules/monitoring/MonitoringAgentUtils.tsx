@@ -1,6 +1,6 @@
-// === Module 6664: MonitoringAgentUtils ===
+// === Module 6679: MonitoringAgentUtils ===
 
-// Module 6664 (MonitoringAgentUtils)
+// Module 6679 (MonitoringAgentUtils)
 import DesignIds from "DesignIds" /* 1356 */;
 import size from "module_2" /* 2 */;
 

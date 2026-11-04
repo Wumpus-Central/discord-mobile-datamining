@@ -1,16 +1,16 @@
-// === Module 15949: GuildProgressOverview ===
+// === Module 16039: GuildProgressOverview ===
 
-// Module 15949 (GuildProgressOverview)
+// Module 16039 (GuildProgressOverview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7483 */;
-import _modDef12048 from "module_12048" /* 12048 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 14178 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14181 */;
-import GuildProgressBarDefault from "GuildProgressBar" /* 15950 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7499 */;
+import _modDef12107 from "module_12107" /* 12107 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 14264 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14267 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 16040 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ class GuildProgressOverviewView {
     obj9.style = items;
     items1 = [, ];
     items1[0] = jsx(closure_0(closure_2[11]).LegacyText, obj9);
-    obj10 = { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle };
+    obj10 = { style: tmp.step, variant: "body-xs/medium", color: "text-default", children: subtitle };
     items1[1] = jsx(closure_0(closure_2[12]).Text, obj10);
     obj8.children = items1;
     items2 = [, ];
@@ -46,10 +46,10 @@ class GuildProgressOverviewView {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: { fontSize: 16, lineHeight: 20, fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 }, step: { lineHeight: 16 }, progressBar: { marginTop: 8 } };
-const React5 = createStyles.createStyles(obj2);
+const metroImportDefault = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
 

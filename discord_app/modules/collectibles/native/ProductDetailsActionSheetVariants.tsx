@@ -1,12 +1,12 @@
-// === Module 15191: ProductDetailsActionSheetVariants ===
+// === Module 15271: ProductDetailsActionSheetVariants ===
 
-// Module 15191 (ProductDetailsActionSheetVariants)
+// Module 15271 (ProductDetailsActionSheetVariants)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 7106 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7423 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9665 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9703 */;
+import Pressables from "Pressables" /* 7121 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7439 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9684 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9721 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -79,13 +79,13 @@ export default function ProductDetailsActionSheetVariants(disabled) {
   if (obj.getIsVariantProduct(product)) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.headerRow, children: null };
-    const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj4 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = selectedVariantIndex(tmp3[7]).intl;
     obj4.children = intl.string(selectedVariantIndex(tmp3[7]).t.wbgaj6);
     items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj4), ];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
-      const obj5 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: tmp.text, children: product.variants[selectedVariantIndex].variantLabel };
+      const obj5 = { variant: "body-md/medium", color: "text-default", lineClamp: 1, style: tmp.text, children: product.variants[selectedVariantIndex].variantLabel };
       tmp7Result = closure_4(selectedVariantIndex(tmp3[11]).Text, obj5);
     }
     items[1] = tmp7Result;

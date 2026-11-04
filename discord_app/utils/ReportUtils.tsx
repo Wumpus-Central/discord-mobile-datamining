@@ -1,6 +1,6 @@
-// === Module 7584: ReportUtils ===
+// === Module 7600: ReportUtils ===
 
-// Module 7584 (ReportUtils)
+// Module 7600 (ReportUtils)
 import ChannelStore from "ChannelStore" /* 4990 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 import UserStore from "UserStore" /* 1385 */;

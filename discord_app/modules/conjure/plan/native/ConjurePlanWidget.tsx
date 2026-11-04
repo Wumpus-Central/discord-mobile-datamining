@@ -1,10 +1,10 @@
-// === Module 12879: ConjurePlanWidget ===
+// === Module 12960: ConjurePlanWidget ===
 
-// Module 12879 (ConjurePlanWidget)
+// Module 12960 (ConjurePlanWidget)
 import nativeDefault from "native" /* 575 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7901 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8938 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12394 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7917 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8955 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12459 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

@@ -1,16 +1,16 @@
-// === Module 18757: NotificationNudgeBottomSheet ===
+// === Module 18858: NotificationNudgeBottomSheet ===
 
-// Module 18757 (NotificationNudgeBottomSheet)
+// Module 18858 (NotificationNudgeBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 14106 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 14192 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NotificationPermissionConstants = fn(14105);
-({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: metroRequire } = NotificationPermissionConstants);
+const NotificationPermissionConstants = fn(14191);
+({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: closure_6 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -61,7 +61,7 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
   }, items3);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const items4 = [closure_9(callback, { style: tmp.illustration, children: closure_9(actionLocation(markAsDismissed[12]).BellSpotIllustration, { scale: 0.8 }) }), closure_9(actionLocation(markAsDismissed[13]).Text, { style: tmp.title, variant: "heading-xl/semibold", accessibilityRole: "header", children: title }), closure_9(actionLocation(markAsDismissed[13]).Text, { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: body }), ];
+  const items4 = [closure_9(callback, { style: tmp.illustration, children: closure_9(actionLocation(markAsDismissed[12]).BellSpotIllustration, { scale: 0.8 }) }), closure_9(actionLocation(markAsDismissed[13]).Text, { style: tmp.title, variant: "heading-xl/semibold", accessibilityRole: "header", children: title }), closure_9(actionLocation(markAsDismissed[13]).Text, { style: tmp.body, variant: "body-sm/medium", color: "text-default", children: body }), ];
   const obj6 = { style: tmp.buttonsContainer, children: null };
   const obj7 = { children: null };
   const obj8 = { text: null, onPress: null };

@@ -1,13 +1,13 @@
-// === Module 19004: AddFriendsContactSyncEmptyState ===
+// === Module 19107: AddFriendsContactSyncEmptyState ===
 
-// Module 19004 (AddFriendsContactSyncEmptyState)
+// Module 19107 (AddFriendsContactSyncEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14378 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14382 */;
-import CompassSpotIllustration from "CompassSpotIllustration" /* 19005 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14458 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14462 */;
+import CompassSpotIllustration from "CompassSpotIllustration" /* 19108 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ export default function AddFriendsContactSyncEmptyState() {
   obj3.children = intl.string(util.t["/G+nci"]);
   items[1] = React3(Text_Text.Heading, obj3);
   const obj4 = { style: tmp.subtitle, children: null };
-  const obj5 = { style: tmp.subtitleText, variant: "text-sm/medium", children: null };
+  const obj5 = { style: tmp.subtitleText, variant: "body-sm/medium", children: null };
   const intl2 = util.intl;
   const obj2 = { style: tmp.headerIllustration, children: React3(CompassSpotIllustration.CompassSpotIllustration, { width: 240, accessible: false }) };
   obj5.children = intl2.format(util.t.OXdOPf, { learnMoreHook: ContactSyncUtils.handleOpenLearnMoreLink });

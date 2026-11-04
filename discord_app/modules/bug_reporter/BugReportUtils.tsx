@@ -1,12 +1,12 @@
-// === Module 11227: bug_reporter/BugReportUtils ===
+// === Module 11277: bug_reporter/BugReportUtils ===
 
-// Module 11227 (bug_reporter/BugReportUtils)
+// Module 11277 (bug_reporter/BugReportUtils)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6867 */;
-import DebugUploadManager from "DebugUploadManager" /* 11228 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6882 */;
+import DebugUploadManager from "DebugUploadManager" /* 11278 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -186,7 +186,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
   })();
 };
 const Constants = fn(1072);
-({ DebugLogCategory: hasOwnProperty, Endpoints: metroRequire } = Constants);
+({ DebugLogCategory: hasOwnProperty, Endpoints: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/BugReportUtils.tsx");
 

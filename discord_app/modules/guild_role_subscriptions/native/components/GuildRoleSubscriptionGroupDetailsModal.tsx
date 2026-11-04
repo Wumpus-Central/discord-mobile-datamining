@@ -1,19 +1,19 @@
-// === Module 20098: GuildRoleSubscriptionGroupDetailsModal ===
+// === Module 20214: GuildRoleSubscriptionGroupDetailsModal ===
 
-// Module 20098 (GuildRoleSubscriptionGroupDetailsModal)
+// Module 20214 (GuildRoleSubscriptionGroupDetailsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import TableRowGroup from "TableRowGroup" /* 7186 */;
-import TextArea from "TextArea" /* 7373 */;
-import FormSeparatorDefault from "FormSeparator" /* 17351 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20095 */;
-import FormStylesDefault from "FormStyles" /* 20100 */;
-import FormImagePicker from "FormImagePicker" /* 20101 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20102 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import TableRowGroup from "TableRowGroup" /* 7201 */;
+import TextArea from "TextArea" /* 7389 */;
+import FormSeparatorDefault from "FormSeparator" /* 17442 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20211 */;
+import FormStylesDefault from "FormStyles" /* 20216 */;
+import FormImagePicker from "FormImagePicker" /* 20217 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20218 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 20099 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 20215 */;
 
 require = fn;
 class Content {
@@ -32,7 +32,7 @@ class Content {
     items[0] = jsx(closure_0(closure_2[11]).TableRowGroupTitle, obj9);
     obj10 = { style: tmp.coverPhoto, image: cover, imageUploadSize: UPLOAD_BANNER_SIZE.width, previewShape: closure_0(closure_2[13]).PreviewShape.SQUIRCLE, setImage: setCover, disabled: roleSubscriptionSettingsDisabled, standalone: true, size: 114 };
     items[1] = jsx(closure_0(closure_2[13]).ImagePickerIcon, obj10);
-    obj11 = { style: tmp.coverDescription, variant: "text-sm/medium", color: "text-default", children: null };
+    obj11 = { style: tmp.coverDescription, variant: "body-sm/medium", color: "text-default", children: null };
     intl2 = closure_0(closure_2[12]).intl;
     obj11.children = intl2.string(closure_0(closure_2[12]).t["0ng4rB"]);
     items[2] = jsx(closure_0(closure_2[14]).Text, obj11);
@@ -55,8 +55,8 @@ class Content {
   }
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(17339);
-({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
+const GuildRoleSubscriptionsConstants = fn(17430);
+({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault } = GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1072).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -87,7 +87,7 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   obj2.cover = tmp2;
   obj2.setCover = tmp3;
   obj2.description = first;
-  obj.children = React7(Content, obj2);
-  return React7(GuildRoleSubscriptionTierEditStepDefault, obj);
+  obj.children = React6(Content, obj2);
+  return React6(GuildRoleSubscriptionTierEditStepDefault, obj);
 };
 export { Content };

@@ -1,11 +1,11 @@
-// === Module 17135: useBadBundleFilter ===
+// === Module 17227: useBadBundleFilter ===
 
-// Module 17135 (useBadBundleFilter)
+// Module 17227 (useBadBundleFilter)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
 import UserStore from "UserStore" /* 1385 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7859 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7875 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;
@@ -23,17 +23,17 @@ export function useBadBundleFilter() {
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          const obj = canUseShopDiscountsResult(9665);
+          const obj = canUseShopDiscountsResult(9684);
           if (obj2.isBundleProduct(product)) {
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                 if (tmpResult5.isOrbsExclusiveProduct(product)) {
                   const obj3 = { product, hasShopDiscount };
-                  return null != canUseShopDiscountsResult(7855).getProductOrbPrice(obj3);
+                  return null != canUseShopDiscountsResult(7871).getProductOrbPrice(obj3);
                 } else {
-                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7856).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult7 = canUseShopDiscountsResult(7856);
-                  let result = canUseShopDiscountsResult(7856).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7872).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                  const tmpResult7 = canUseShopDiscountsResult(7872);
+                  let result = canUseShopDiscountsResult(7872).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                   if (null != result) {
                     if (0 !== result.amount) {
                       let num2 = 0;
@@ -56,10 +56,10 @@ export function useBadBundleFilter() {
                   }
                   return true;
                 }
-                tmpResult5 = canUseShopDiscountsResult(7855);
+                tmpResult5 = canUseShopDiscountsResult(7871);
               }
             }
-            tmpResult = canUseShopDiscountsResult(7856);
+            tmpResult = canUseShopDiscountsResult(7872);
           }
           return true;
         });

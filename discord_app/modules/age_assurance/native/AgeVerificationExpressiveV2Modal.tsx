@@ -1,14 +1,14 @@
-// === Module 8130: AgeVerificationExpressiveV2Modal ===
+// === Module 8146: AgeVerificationExpressiveV2Modal ===
 
-// Module 8130 (AgeVerificationExpressiveV2Modal)
+// Module 8146 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6846 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
-import NavigatorHeader from "NavigatorHeader" /* 7124 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8079 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8112 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8113 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6861 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
+import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8128 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -226,7 +226,7 @@ function MethodsScreen(onClose) {
     const items7 = [tmp19(tmp2(tmp3[29]).AgeVerificationSpotIllustration, { width: 150, height: 100 }), ];
     const obj11 = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: tmp2(tmp3[24]).getAgeVerificationGetStartedTitle(entryPoint, true) };
     const items8 = [tmp19(tmp2(tmp3[30]).Text, obj11), ];
-    const obj12 = { variant: "text-md/medium", color: "text-subtle", style: tmp.header, children: null };
+    const obj12 = { variant: "body-md/medium", color: "text-subtle", style: tmp.header, children: null };
     const tmp2Result2 = tmp2(tmp3[24]);
     let fn;
     if (shouldShowExpressiveModalSubtitleAlt) {
@@ -239,7 +239,7 @@ function MethodsScreen(onClose) {
     const obj14 = { align: "center", justify: "center", spacing: 8, children: null };
     obj12.children = tmp2Result2.getAgeVerificationGetStartedSubtitle(entryPoint, () => {
       const obj = AgeVerificationActionCreatorsDefault;
-      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
+      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_VERIFICATION_LEARN_MORE));
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_V2, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.LEARN_MORE);
     }, undefined, fn, true);
     items8[1] = tmp19(tmp2(tmp3[30]).Text, obj12);
@@ -313,10 +313,10 @@ function MethodsScreen(onClose) {
                         tmp5Result = tmp5(tmp(onComplete[40]).ChevronSmallRightIcon, obj4);
                       }
                       const obj5 = { trailing: tmp5Result, disabled: null != c8, icon: tmp4, label: children.title, subLabel: null, onPress: null };
-                      items = [tmp5(closure_0(onComplete[30]).Text, { variant: "text-sm/normal", color: "text-muted", children: children.description }), ];
+                      items = [tmp5(closure_0(onComplete[30]).Text, { variant: "body-sm/normal", color: "text-muted", children: children.description }), ];
                       let tmp5Result2 = null != children.providedBy;
                       if (tmp5Result2) {
-                        const obj7 = { variant: "text-sm/normal", color: "text-muted", children: children.providedBy };
+                        const obj7 = { variant: "body-sm/normal", color: "text-muted", children: children.providedBy };
                         tmp5Result2 = tmp5(tmp(onComplete[30]).Text, obj7);
                       }
                       items[1] = tmp5Result2;
@@ -368,7 +368,7 @@ function MethodsScreen(onClose) {
       tmp19Result12 = null != footerMessage;
     }
     if (tmp19Result12) {
-      const obj22 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.footer, children: footerMessage };
+      const obj22 = { variant: "body-sm/normal", color: "text-subtle", style: tmp.footer, children: footerMessage };
       tmp19Result12 = tmp19(tmp2(tmp3[30]).Text, obj22);
     }
     const obj23 = { children: null };
@@ -383,7 +383,7 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(6848).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(6863).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

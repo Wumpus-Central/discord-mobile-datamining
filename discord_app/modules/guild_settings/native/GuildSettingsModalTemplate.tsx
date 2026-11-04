@@ -1,29 +1,29 @@
-// === Module 19969: GuildSettingsModalTemplate ===
+// === Module 20085: GuildSettingsModalTemplate ===
 
-// Module 19969 (GuildSettingsModalTemplate)
+// Module 20085 (GuildSettingsModalTemplate)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import ToastUtils from "ToastUtils" /* 5831 */;
-import CopyIcon2 from "CopyIcon" /* 5851 */;
-import AlertModal from "AlertModal" /* 6084 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import Card from "Card" /* 7103 */;
-import Input from "Input" /* 7209 */;
-import CircleXIcon2 from "CircleXIcon" /* 7218 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7460 */;
-import ClipboardUtils from "ClipboardUtils" /* 7478 */;
-import HeaderActionButton from "HeaderActionButton" /* 7682 */;
-import native from "native" /* 9120 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13355 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19970 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import ToastUtils from "ToastUtils" /* 5845 */;
+import CopyIcon2 from "CopyIcon" /* 5865 */;
+import AlertModal from "AlertModal" /* 6099 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import Card from "Card" /* 7118 */;
+import Input from "Input" /* 7224 */;
+import CircleXIcon2 from "CircleXIcon" /* 7233 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7476 */;
+import ClipboardUtils from "ClipboardUtils" /* 7494 */;
+import HeaderActionButton from "HeaderActionButton" /* 7698 */;
+import native from "native" /* 9137 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13438 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 20086 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const SceneLoadingIndicator = Text(7329);
-const Form = Text(8301);
+const SceneLoadingIndicator = Text(7345);
+const Form = Text(8317);
 require = fn;
 function TemplateForm(guildId) {
   guildId = guildId.guildId;
@@ -42,7 +42,7 @@ function TemplateForm(guildId) {
   let callback1;
   let memo;
   closure_17 = async function _handleCreate() {
-    React5(null);
+    metroImportDefault(null);
     closure_2_10(true);
     await tmp3(tmp36[14]).createGuildTemplate(guildId, str, str2);
     if (1 === tmp7) {
@@ -126,7 +126,7 @@ function TemplateForm(guildId) {
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(6084).showConfirmModal(obj2);
+        guildId(6099).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -191,7 +191,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(13355);
+                const obj2 = guildTemplate(13438);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -202,7 +202,7 @@ function TemplateForm(guildId) {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_0 = closure_2;
-              const aPIError = new handleSave(6566).APIError(closure_128_0);
+              const aPIError = new handleSave(6581).APIError(closure_128_0);
               closure_1_7(aPIError);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -245,7 +245,7 @@ function TemplateForm(guildId) {
         const intl = util.intl;
         obj.text = intl.string(util.t["R3BPH+"]);
         obj.disabled = !memo;
-        return React5(HeaderActionButton.HeaderActionButton, obj);
+        return metroImportDefault(HeaderActionButton.HeaderActionButton, obj);
       };
     }
     obj2.headerRight = fn2;
@@ -262,7 +262,7 @@ function TemplateForm(guildId) {
   const items4 = [tmp.containerContent, guildId.contentContainerStyle];
   obj4.contentContainerStyle = items4;
   let obj5 = { spacing: guildTemplate(navigation[6]).space.PX_24, children: null };
-  const obj6 = { variant: "text-sm/normal", color: "text-subtle", children: null };
+  const obj6 = { variant: "body-sm/normal", color: "text-subtle", children: null };
   let intl = tmp2(tmp3[10]).intl;
   const tmp15 = _slicedToArray(first.useState(false), 2);
   const tmp28 = closure_9;
@@ -326,7 +326,7 @@ function TemplateForm(guildId) {
   }
   items5[4] = tmp29Result;
   if (tmp29Result2) {
-    const obj11 = { variant: "text-sm/normal", color: "text-feedback-critical", children: obj3.getAnyErrorMessage() };
+    const obj11 = { variant: "body-sm/normal", color: "text-feedback-critical", children: obj3.getAnyErrorMessage() };
     tmp29Result2 = tmp29(tmp2(tmp3[9]).Text, obj11);
   }
   const obj12 = { children: null };
@@ -356,13 +356,13 @@ function CopyRow(children) {
     tmp10 = importDefault;
   }
   const tmp = closure_10();
-  items = [React5(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(575).colors.WHITE }), React5(tmp4(5747).Text, { variant: "text-sm/normal", children: children.label })];
+  items = [metroImportDefault(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(575).colors.WHITE }), metroImportDefault(tmp4(5761).Text, { variant: "body-sm/normal", children: children.label })];
   obj.children = items;
-  return React6(View, obj);
+  return React5(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { container: { flex: 1 }, containerContent: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, copyRow: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -372,46 +372,46 @@ let closure_12 = noop.memo(function DescriptionBox() {
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_16, children: null };
   const obj3 = { spacing: nativeDefault.space.PX_12, children: null };
-  const obj4 = { variant: "eyebrow", children: null };
+  const obj4 = { variant: "body-sm/medium", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["f8u+VO"]);
-  items = [React5(Text_Text.Heading, obj4), , , ];
+  items = [metroImportDefault(Text_Text.Heading, obj4), , , ];
   const obj5 = { copies: true, label: null };
   const intl2 = util.intl;
   obj5.label = intl2.string(util.t.K2tn16);
-  items[1] = React5(CopyRow, obj5);
+  items[1] = metroImportDefault(CopyRow, obj5);
   const obj6 = { copies: true, label: null };
   const intl3 = util.intl;
   obj6.label = intl3.string(util.t.om5gNq);
-  items[2] = React5(CopyRow, obj6);
+  items[2] = metroImportDefault(CopyRow, obj6);
   const obj7 = { copies: true, label: null };
   const intl4 = util.intl;
   obj7.label = intl4.string(util.t["/VNqdD"]);
-  items[3] = React5(CopyRow, obj7);
+  items[3] = metroImportDefault(CopyRow, obj7);
   obj3.children = items;
-  const items1 = [React6(Stack_Stack.Stack, obj3), ];
+  const items1 = [React5(Stack_Stack.Stack, obj3), ];
   const obj8 = { spacing: nativeDefault.space.PX_12, children: null };
-  const obj9 = { variant: "eyebrow", children: null };
+  const obj9 = { variant: "body-sm/medium", children: null };
   const intl5 = util.intl;
   obj9.children = intl5.string(util.t["8zhJEr"]);
-  const items2 = [React5(Text_Text.Heading, obj9), , , ];
+  const items2 = [metroImportDefault(Text_Text.Heading, obj9), , , ];
   const obj10 = { copies: false, label: null };
   const intl6 = util.intl;
   obj10.label = intl6.string(util.t.WOKI6t);
-  items2[1] = React5(CopyRow, obj10);
+  items2[1] = metroImportDefault(CopyRow, obj10);
   const obj11 = { copies: false, label: null };
   const intl7 = util.intl;
   obj11.label = intl7.string(util.t.ddhDJH);
-  items2[2] = React5(CopyRow, obj11);
+  items2[2] = metroImportDefault(CopyRow, obj11);
   const obj12 = { copies: false, label: null };
   const intl8 = util.intl;
   obj12.label = intl8.string(util.t["6Q/DHk"]);
-  items2[3] = React5(CopyRow, obj12);
+  items2[3] = metroImportDefault(CopyRow, obj12);
   obj8.children = items2;
-  items1[1] = React6(Stack_Stack.Stack, obj8);
+  items1[1] = React5(Stack_Stack.Stack, obj8);
   obj2.children = items1;
-  obj.children = React6(Stack_Stack.Stack, obj2);
-  return React5(Card.Card, obj);
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return metroImportDefault(Card.Card, obj);
 });
 let closure_14 = noop.memo(function TemplateControls(arg0) {
   ({ guildId: require, guildTemplate } = arg0);
@@ -467,7 +467,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(19971)(guildTemplate.code);
+  const tmp3 = guildTemplate(20087)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };
@@ -494,7 +494,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   let isDirty = guildTemplate.isDirty;
   if (isDirty) {
     const obj4 = { children: null };
-    const obj5 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+    const obj5 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
     const intl4 = util.intl;
     obj5.children = intl4.string(util.t.aWsjtD);
     const items1 = [tmp6(Text_Text.Text, obj5), ];
@@ -541,7 +541,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   items[3] = handleDelete(components_Button_Button.Button, obj8);
   let isDirty2 = guildTemplate.isDirty;
   if (isDirty2) {
-    const obj9 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj9 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl8 = util.intl;
     const obj10 = { timestamp: null };
     const _Date = Date;
@@ -576,26 +576,26 @@ export default function GuildSettingsModalTemplate(arg0) {
       items = [containerContent, contentContainerStyle];
       obj3.contentContainerStyle = items;
       Text = Text_Text.Text;
-      const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
+      const obj4 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
       message = message.message;
       obj4.children = message;
-      tmp = React5(Text, obj4);
+      tmp = metroImportDefault(Text, obj4);
       obj3.children = tmp;
-      let tmp8Result = React5(Form.Form, obj3);
+      let tmp8Result = metroImportDefault(Form.Form, obj3);
     } else if (tmp5) {
-      tmp8Result = React5(SceneLoadingIndicator.SceneLoadingIndicator, {});
+      tmp8Result = metroImportDefault(SceneLoadingIndicator.SceneLoadingIndicator, {});
     } else {
       const obj5 = { guildId, guildTemplate: tmp6, contentContainerStyle };
-      tmp8Result = React5(TemplateForm, obj5);
+      tmp8Result = metroImportDefault(TemplateForm, obj5);
     }
   } else {
     const obj7 = { style: items.container, contentContainerStyle: null, children: null };
     const items1 = [items.containerContent, contentContainerStyle];
     obj7.contentContainerStyle = items1;
-    const obj12 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj12 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl = util.intl;
     obj12.children = intl.string(util.t.f0IPAG);
-    obj7.children = React5(Text_Text.Text, obj12);
-    return React5(Form.Form, obj7);
+    obj7.children = metroImportDefault(Text_Text.Text, obj12);
+    return metroImportDefault(Form.Form, obj7);
   }
 };

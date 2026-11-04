@@ -1,11 +1,11 @@
-// === Module 5772: useChannelName ===
+// === Module 5786: useChannelName ===
 
-// Module 5772 (useChannelName)
+// Module 5786 (useChannelName)
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import UserUtilsDefault from "UserUtils" /* 5195 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5361 */;
+import ExperimentStore from "ExperimentStore" /* 5362 */;
 import RelationshipStore from "RelationshipStore" /* 5083 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -151,7 +151,7 @@ function computeChannelName(channel, UserStore, RelationshipStore) {
   }
 }
 const Constants = fn(1072);
-({ ChannelTypes: closure_7, NULL_STRING_CHANNEL_ID: closure_8 } = Constants);
+({ ChannelTypes: metroImportDefault, NULL_STRING_CHANNEL_ID: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useChannelName.tsx");
 

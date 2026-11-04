@@ -1,7 +1,7 @@
-// === Module 8269: GoogleWalletVerificationScreen ===
+// === Module 8285: GoogleWalletVerificationScreen ===
 
-// Module 8269 (GoogleWalletVerificationScreen)
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6849 */;
+// Module 8285 (GoogleWalletVerificationScreen)
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { NOT_AVAILABLE: "not_available", FAILED: "credential_error" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/GoogleWalletVerificationScreen.tsx");
@@ -172,7 +172,7 @@ export default function GoogleWalletVerificationScreen(onClose) {
     const obj4 = { children: null };
     const obj5 = { align: "center", justify: "center", spacing: 16, children: null };
     const items4 = [callback2(callback1, { size: "large" }), ];
-    const obj6 = { variant: "text-md/medium", color: "text-strong", children: null };
+    const obj6 = { variant: "body-md/medium", color: "text-strong", children: null };
     let intl = tmp(tmp2[11]).intl;
     obj6.children = intl.string(onComplete(tmp2[12]).MlFuBI);
     items4[1] = callback2(tmp(tmp2[16]).Text, obj6);
@@ -184,7 +184,7 @@ export default function GoogleWalletVerificationScreen(onClose) {
     const obj7 = { children: null };
     const obj8 = { children: null };
     const obj9 = { align: "center", justify: "center", spacing: 16, children: null };
-    const obj10 = { variant: "text-md/medium", color: "text-strong", children: tmp5.message };
+    const obj10 = { variant: "body-md/medium", color: "text-strong", children: tmp5.message };
     const items5 = [callback2(tmp(tmp2[16]).Text, obj10), ];
     let obj11 = { children: null };
     const obj12 = { variant: "primary", size: "lg", text: null, onPress: null };

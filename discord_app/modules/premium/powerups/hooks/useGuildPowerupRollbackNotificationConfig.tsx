@@ -1,11 +1,11 @@
-// === Module 14204: useGuildPowerupRollbackNotificationConfig ===
+// === Module 14290: useGuildPowerupRollbackNotificationConfig ===
 
-// Module 14204 (useGuildPowerupRollbackNotificationConfig)
+// Module 14290 (useGuildPowerupRollbackNotificationConfig)
 import util from "util" /* 1113 */;
 import _modDef2699 from "module_2699" /* 2699 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14205 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5352 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 14291 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5353 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, useGu
   items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   if (stateFromStores != null) {
-    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5356).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5357).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const obj = require("initialize");
   let tmp5 = null;

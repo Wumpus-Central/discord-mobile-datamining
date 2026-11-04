@@ -1,11 +1,11 @@
-// === Module 13474: AppealIngestionPolicySummary ===
+// === Module 13558: AppealIngestionPolicySummary ===
 
-// Module 13474 (AppealIngestionPolicySummary)
+// Module 13558 (AppealIngestionPolicySummary)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ColorUtils from "ColorUtils" /* 5138 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8093 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,11 +30,11 @@ export default function AppealIngestionPolicySummary(classification) {
   const capitalizeTextResult = SafetyHubUtils.capitalizeText(description);
   const obj2 = { style: tmp.policy, children: null };
   const tmp2Result = ColorUtils;
-  const obj3 = { style: tmp.sectionTitle, variant: "text-sm/semibold", children: null };
+  const obj3 = { style: tmp.sectionTitle, variant: "body-sm/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.xsdcxh);
   items = [React3(Text_Text.Text, obj3), ];
-  const obj4 = { style: null, children: React3(Text_Text.Text, { variant: "text-md/semibold", children: capitalizeTextResult }) };
+  const obj4 = { style: null, children: React3(Text_Text.Text, { variant: "body-md/semibold", children: capitalizeTextResult }) };
   const items1 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
   obj4.style = items1;
   items[1] = React3(View, obj4);

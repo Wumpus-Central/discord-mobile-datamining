@@ -1,12 +1,12 @@
-// === Module 20150: GuildRoleSubscriptionTierTemplateFullCard ===
+// === Module 20266: GuildRoleSubscriptionTierTemplateFullCard ===
 
-// Module 20150 (GuildRoleSubscriptionTierTemplateFullCard)
+// Module 20266 (GuildRoleSubscriptionTierTemplateFullCard)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 17369 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18320 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 20153 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 17460 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18417 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 20269 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,7 @@ function BenefitRow(description) {
   const items1 = [description.title, ];
   let tmp4Result = null;
   if (null != description) {
-    const obj4 = { style: tmp.benefitDescription, variant: "text-sm/normal", color: "interactive-text-default", children: description };
+    const obj4 = { style: tmp.benefitDescription, variant: "body-sm/normal", color: "interactive-text-default", children: description };
     tmp4Result = React4(Text_Text.Text, obj4);
   }
   items1[1] = tmp4Result;
@@ -88,11 +88,11 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   const obj6 = { scrollsToTop: false, contentContainerStyle: null, children: null };
   const items1 = [tmp.content, { paddingBottom: nativeDefault.space.PX_32 + nativeDefault.space.PX_16 + useSafeAreaInsetsDefault().bottom }];
   obj6.contentContainerStyle = items1;
-  const obj8 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj8 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = require("util").intl;
   obj8.children = intl.string(require("util").t.CjC5XZ);
   const items2 = [closure_4(require("Text/Text").Text, obj8), closure_4(require("native").Spacer, { size: 4 }), , , , , , , , , ];
-  const obj9 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj9 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl2 = require("util").intl;
   obj9.children = intl2.string(require("util").t.bCb3c8);
   items2[2] = closure_4(require("Text/Text").Text, obj9);
@@ -109,10 +109,10 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   obj11.sectionTitle = intl4.string(require("util").t.Ofvpfs);
   obj11.children = channels.map((children) => {
     const obj2 = { style: closure_0.channelTitle, children: null };
-    items = [React4(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(children.type), { style: closure_0.channelIcon, size: "xs" }), React4(Text_Text.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name })];
+    items = [React4(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(children.type), { style: closure_0.channelIcon, size: "xs" }), React4(Text_Text.Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.name })];
     obj2.children = items;
     const obj3 = { style: closure_0.channelIcon, size: "xs" };
-    const obj4 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name };
+    const obj4 = { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.name };
     return React4(BenefitRow, { title: hasOwnProperty(View, obj2), description: children.description }, children.id);
   });
   items2[8] = closure_4(BenefitSection, obj11);
@@ -120,7 +120,7 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   const obj12 = { sectionTitle: null, children: null };
   const intl5 = require("util").intl;
   obj12.sectionTitle = intl5.string(require("util").t.w7KA8R);
-  obj12.children = additional_perks.map((children, index) => closure_1_4(BenefitRow, { title: closure_1_4(closure_0(dependencyMap[6]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name }) }, index));
+  obj12.children = additional_perks.map((children, index) => closure_1_4(BenefitRow, { title: closure_1_4(closure_0(dependencyMap[6]).Text, { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.name }) }, index));
   items2[10] = closure_4(BenefitSection, obj12);
   obj6.children = items2;
   items[2] = closure_5(require("BottomSheetModal").BottomSheetScrollView, obj6);

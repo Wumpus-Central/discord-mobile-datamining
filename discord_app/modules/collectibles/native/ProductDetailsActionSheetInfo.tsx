@@ -1,15 +1,15 @@
-// === Module 15181: ProductDetailsActionSheetInfo ===
+// === Module 15261: ProductDetailsActionSheetInfo ===
 
-// Module 15181 (ProductDetailsActionSheetInfo)
+// Module 15261 (ProductDetailsActionSheetInfo)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2116 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7856 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9665 */;
-import useProductDescription from "useProductDescription" /* 15182 */;
-import InlinePriceTagDefault from "InlinePriceTag" /* 15183 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7872 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9684 */;
+import useProductDescription from "useProductDescription" /* 15262 */;
+import InlinePriceTagDefault from "InlinePriceTag" /* 15263 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
@@ -19,7 +19,7 @@ function ProductNameAndDescription(product) {
   const tmp = closure_6();
   const obj2 = { style: tmp.description, children: null };
   const productDescription = useProductDescription.useProductDescription(product);
-  items = [React4(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: product.name }), React4(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
+  items = [React4(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: product.name }), React4(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: productDescription })];
   obj2.children = items;
   return hasOwnProperty(View, obj2);
 }
@@ -28,12 +28,12 @@ function ProductPurchaseStatus(product) {
   const result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
   const productPurchaseState = useProductPurchaseState.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
-    const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
+    const obj3 = { variant: "body-md/semibold", color: "interactive-text-active", children: null };
     const intl2 = util.intl;
     obj3.children = intl2.string(util.t["6cfuDj"]);
     let children = React4(Text_Text.Text, obj3);
   } else if (tmp5) {
-    const obj4 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
+    const obj4 = { variant: "body-md/semibold", color: "interactive-text-active", children: null };
     const intl = util.intl;
     obj4.children = intl.string(util.t.BEjTij);
     children = React4(Text_Text.Text, obj4);

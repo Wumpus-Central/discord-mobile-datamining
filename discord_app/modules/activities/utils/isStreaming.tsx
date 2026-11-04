@@ -1,8 +1,8 @@
-// === Module 8955: isStreaming ===
+// === Module 8972: isStreaming ===
 
-// Module 8955 (isStreaming)
+// Module 8972 (isStreaming)
 import Constants from "Constants" /* 2147 */;
-import ActivityTypes from "ActivityTypes" /* 5882 */;
+import ActivityTypes from "ActivityTypes" /* 5896 */;
 import size from "module_2" /* 2 */;
 
 function _isStreaming(type) {

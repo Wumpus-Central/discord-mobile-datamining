@@ -1,18 +1,18 @@
-// === Module 15857: ActivateDeviceError ===
+// === Module 15945: ActivateDeviceError ===
 
-// Module 15857 (ActivateDeviceError)
+// Module 15945 (ActivateDeviceError)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import _modDef14765 from "module_14765" /* 14765 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 15855 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import _modDef14845 from "module_14845" /* 14845 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 15943 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ image: { width: 254, height: 127, alignSelf: "center" } });
 const size = fn(2);
@@ -22,7 +22,7 @@ export function ActivateDeviceError(onRetry) {
   const obj = { children: null };
   const obj2 = { source: null, style: null };
   const tmp = closure_7();
-  obj2.source = _modDef14765;
+  obj2.source = _modDef14845;
   obj2.style = tmp.image;
   items = [React4(FastImageDefault, obj2), , ];
   const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
@@ -30,7 +30,7 @@ export function ActivateDeviceError(onRetry) {
   const intl = util.intl;
   obj4.children = intl.string(util.t["3dgwPD"]);
   const items1 = [React4(Text_Text.Text, obj4), ];
-  const obj5 = { variant: "text-md/medium", color: "text-default", style: ActivateDeviceSharedStylesDefault.centerText, children: null };
+  const obj5 = { variant: "body-md/medium", color: "text-default", style: ActivateDeviceSharedStylesDefault.centerText, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t["/GAO1P"]);
   items1[1] = React4(Text_Text.Text, obj5);

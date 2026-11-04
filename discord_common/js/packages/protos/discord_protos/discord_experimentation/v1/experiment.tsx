@@ -1,11 +1,11 @@
-// === Module 8712: experiment ===
+// === Module 8729: experiment ===
 
-// Module 8712 (experiment)
+// Module 8729 (experiment)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import wrappers from "wrappers" /* 1227 */;
-import rules from "rules" /* 8713 */;
-import duration from "duration" /* 8714 */;
+import rules from "rules" /* 8730 */;
+import duration from "duration" /* 8731 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -19,17 +19,19 @@ const obj7 = { DEFAULT: 0, [0]: "DEFAULT", HOLDOUT: 1, [1]: "HOLDOUT", NUMBERLIN
 const obj8 = { CUSTOM_UNIT_PREFIX_UNSPECIFIED: 0, [0]: "CUSTOM_UNIT_PREFIX_UNSPECIFIED", SEO_URL_SLUG: 1, [1]: "SEO_URL_SLUG" };
 const obj9 = { EXPOSURE_POINT_ID_UNSPECIFIED: 0, [0]: "EXPOSURE_POINT_ID_UNSPECIFIED", SEO_INSTALLATION_PAGE_LOAD: 1, [1]: "SEO_INSTALLATION_PAGE_LOAD", MARKETING_INSTALLATION_PAGE_LOAD: 2, [2]: "MARKETING_INSTALLATION_PAGE_LOAD", INVITE_GUILD_RESOLVE: 3, [3]: "INVITE_GUILD_RESOLVE", ADS_BUDGET_AB_DECISION: 4, [4]: "ADS_BUDGET_AB_DECISION" };
 const obj10 = { DEFAULT: 0, [0]: "DEFAULT", OFF: 1, [1]: "OFF", OVERRIDES_ONLY: 2, [2]: "OVERRIDES_ONLY" };
-const obj11 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", CONTROL: 1, [1]: "CONTROL", TREATMENT: 2, [2]: "TREATMENT", OVERRIDE: 3, [3]: "OVERRIDE" };
-const obj12 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", FULL: 1, [1]: "FULL", FORCE_CONTROL: 2, [2]: "FORCE_CONTROL", OFF: 3, [3]: "OFF" };
-const obj13 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ENABLED: 1, [1]: "ENABLED", DISABLED: 2, [2]: "DISABLED" };
-const obj14 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ACTIVE: 1, [1]: "ACTIVE", UNUSED: 2, [2]: "UNUSED", BURNED: 3, [3]: "BURNED", PRESERVED: 4, [4]: "PRESERVED" };
-const obj15 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", ACTIVE: 2, [2]: "ACTIVE", PAUSED_MANUAL: 3, [3]: "PAUSED_MANUAL", PAUSED_HEALTH_CHECK: 4, [4]: "PAUSED_HEALTH_CHECK", COMPLETED: 5, [5]: "COMPLETED", CANCELED: 6, [6]: "CANCELED" };
-const obj16 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", PENDING: 1, [1]: "PENDING", IN_PROGRESS: 2, [2]: "IN_PROGRESS", AWAITING_MANUAL_APPROVAL: 3, [3]: "AWAITING_MANUAL_APPROVAL", COMPLETED: 4, [4]: "COMPLETED" };
-const obj17 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", MEASUREMENT: 2, [2]: "MEASUREMENT", ROLLING_OUT: 4, [4]: "ROLLING_OUT", ARCHIVED: 6, [6]: "ARCHIVED", AA_MODE: 7, [7]: "AA_MODE", PAUSED: 8, [8]: "PAUSED" };
+const obj11 = { LEVEL_UNSPECIFIED: 0, [0]: "LEVEL_UNSPECIFIED", ORGANIZATION: 1, [1]: "ORGANIZATION", SQUAD: 2, [2]: "SQUAD" };
+const obj12 = { FISCAL_PERIOD_UNSPECIFIED: 0, [0]: "FISCAL_PERIOD_UNSPECIFIED", H1: 1, [1]: "H1", H2: 2, [2]: "H2" };
+const obj13 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", CONTROL: 1, [1]: "CONTROL", TREATMENT: 2, [2]: "TREATMENT", OVERRIDE: 3, [3]: "OVERRIDE" };
+const obj14 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", FULL: 1, [1]: "FULL", FORCE_CONTROL: 2, [2]: "FORCE_CONTROL", OFF: 3, [3]: "OFF" };
+const obj15 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ENABLED: 1, [1]: "ENABLED", DISABLED: 2, [2]: "DISABLED" };
+const obj16 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ACTIVE: 1, [1]: "ACTIVE", UNUSED: 2, [2]: "UNUSED", BURNED: 3, [3]: "BURNED", PRESERVED: 4, [4]: "PRESERVED" };
+const obj17 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", ACTIVE: 2, [2]: "ACTIVE", PAUSED_MANUAL: 3, [3]: "PAUSED_MANUAL", PAUSED_HEALTH_CHECK: 4, [4]: "PAUSED_HEALTH_CHECK", COMPLETED: 5, [5]: "COMPLETED", CANCELED: 6, [6]: "CANCELED" };
+const obj18 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", PENDING: 1, [1]: "PENDING", IN_PROGRESS: 2, [2]: "IN_PROGRESS", AWAITING_MANUAL_APPROVAL: 3, [3]: "AWAITING_MANUAL_APPROVAL", COMPLETED: 4, [4]: "COMPLETED" };
+const obj19 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", MEASUREMENT: 2, [2]: "MEASUREMENT", ROLLING_OUT: 4, [4]: "ROLLING_OUT", ARCHIVED: 6, [6]: "ARCHIVED", AA_MODE: 7, [7]: "AA_MODE", PAUSED: 8, [8]: "PAUSED" };
 const MessageType = fn(1197).MessageType;
 class Experiment$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "name", kind: "scalar", T: 9 };
     items[2] = {
@@ -86,7 +88,7 @@ class Experiment$Type extends MessageType {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_1_22;
+            return closure_1_25;
           }
     };
     items[15] = {
@@ -103,7 +105,7 @@ class Experiment$Type extends MessageType {
       name: "phase",
       kind: "enum",
       T() {
-            items = ["discord_protos.discord_experimentation.v1.Phase", obj17];
+            items = ["discord_protos.discord_experimentation.v1.Phase", obj19];
             return items;
           }
     };
@@ -222,7 +224,7 @@ class Experiment$Type extends MessageType {
       name: "number_line_settings",
       kind: "message",
       T() {
-            return closure_1_20;
+            return closure_1_22;
           }
     };
     items[43] = {
@@ -234,22 +236,30 @@ class Experiment$Type extends MessageType {
             return items;
           }
     };
-    obj = { no: 48, name: "lifecycle_plan", kind: "message", T: null };
+    items[44] = {
+      no: 48,
+      name: "lifecycle_plan",
+      kind: "message",
+      T() {
+            return bucket_AllocationExposureModeType1;
+          }
+    };
+    items[45] = { no: 49, name: "is_feature_flag", kind: "scalar", T: 8 };
+    items[46] = { no: 50, name: "is_official_holdout", kind: "scalar", T: 8 };
+    obj = { no: 52, name: "holdout_scope", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_25;
+        return closure_1_24;
       }
     }
     obj.T = T;
-    items[44] = obj;
-    items[45] = { no: 49, name: "is_feature_flag", kind: "scalar", T: 8 };
-    items[46] = { no: 50, name: "is_official_holdout", kind: "scalar", T: 8 };
-    items[47] = {
+    items[47] = obj;
+    items[48] = {
       no: 51,
       name: "change_source",
       kind: "message",
       T() {
-            return closure_1_21;
+            return closure_1_23;
           }
     };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.Experiment", items, T);
@@ -355,7 +365,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (0 < id.variations.length) {
     do {
       let tagResult14 = tag.tag(15, _mod1197.WireType.LengthDelimited);
-      let internalBinaryWriteResult4 = closure_22.internalBinaryWrite(id.variations[num15], tagResult14.fork(), writeUnknownFields);
+      let internalBinaryWriteResult4 = closure_25.internalBinaryWrite(id.variations[num15], tagResult14.fork(), writeUnknownFields);
       let joined4 = internalBinaryWriteResult4.join();
       num15 = num15 + 1;
       length = id.variations.length;
@@ -524,8 +534,8 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   }
   if (id.numberLineSettings) {
     const tagResult42 = tag.tag(43, _mod1197.WireType.LengthDelimited);
-    const joined14 = closure_20.internalBinaryWrite(id.numberLineSettings, tag.tag(43, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult11 = closure_20.internalBinaryWrite(id.numberLineSettings, tag.tag(43, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined14 = closure_22.internalBinaryWrite(id.numberLineSettings, tag.tag(43, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult11 = closure_22.internalBinaryWrite(id.numberLineSettings, tag.tag(43, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (0 !== id.eligibilityPersistence) {
     tag.tag(42, _mod1197.WireType.Varint).int32(id.eligibilityPersistence);
@@ -544,10 +554,15 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     tag.tag(50, _mod1197.WireType.Varint).bool(id.isOfficialHoldout);
     const tagResult46 = tag.tag(50, _mod1197.WireType.Varint);
   }
+  if (id.holdoutScope) {
+    const tagResult47 = tag.tag(52, _mod1197.WireType.LengthDelimited);
+    const joined16 = closure_24.internalBinaryWrite(id.holdoutScope, tag.tag(52, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult13 = closure_24.internalBinaryWrite(id.holdoutScope, tag.tag(52, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
   if (id.changeSource) {
-    const tagResult47 = tag.tag(51, _mod1197.WireType.LengthDelimited);
-    const joined16 = closure_21.internalBinaryWrite(id.changeSource, tag.tag(51, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult13 = closure_21.internalBinaryWrite(id.changeSource, tag.tag(51, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult48 = tag.tag(51, _mod1197.WireType.LengthDelimited);
+    const joined17 = closure_23.internalBinaryWrite(id.changeSource, tag.tag(51, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult14 = closure_23.internalBinaryWrite(id.changeSource, tag.tag(51, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -673,7 +688,7 @@ let items = [
   { no: 3, name: "shared_control", kind: "scalar", T: 8 }
 ];
 const tmp9 = new "AWAITING_MANUAL_APPROVAL"("discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings", items, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
-let closure_20 = tmp9;
+let closure_22 = tmp9;
 const MessageType3 = fn(1197).MessageType;
 class Experiment_ChangeSource$Type extends MessageType3 {
   constructor() {
@@ -818,50 +833,38 @@ const items1 = [
   { no: 7, name: "conversation_type", kind: "scalar", T: 9 }
 ];
 let tmp10 = new "AWAITING_MANUAL_APPROVAL"("discord_protos.discord_experimentation.v1.Experiment.ChangeSource", items1, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
-let closure_21 = tmp10;
+let closure_23 = tmp10;
 const MessageType4 = fn(1197).MessageType;
-class Variation$Type extends MessageType4 {
+class HoldoutScope$Type extends MessageType4 {
   constructor() {
-    items = [, , , , , , , ];
-    items[0] = { no: 1, name: "id", kind: "scalar", T: 5 };
-    items[1] = { no: 2, name: "label", kind: "scalar", T: 9 };
-    items[2] = { no: 3, name: "target_allocation", kind: "scalar", T: 5 };
-    items[3] = {
-      no: 4,
-      name: "buckets",
-      kind: "message",
-      repeat: 1,
+    obj = {
+      no: 1,
+      name: "level",
+      kind: "enum",
       T() {
-            return closure_1_23;
+            items = ["discord_protos.discord_experimentation.v1.HoldoutScope.Level", obj11];
+            return items;
           }
     };
-    obj = { no: 5, name: "type", kind: "enum", T: null };
-    class T {
-      constructor() {
-        items = ["discord_protos.discord_experimentation.v1.Variation.Type"];
-        items[1] = closure_1_13;
-        return items;
-      }
-    }
-    obj.T = T;
-    items[4] = obj;
-    items[5] = {
-      no: 6,
-      name: "configuration",
-      kind: "message",
+    items = [, , ];
+    items[0] = obj;
+    items[1] = {
+      no: 2,
+      name: "fiscal_half",
+      kind: "enum",
       T() {
-            return require("wrappers").StringValue;
+            items = ["discord_protos.discord_experimentation.v1.HoldoutScope.FiscalPeriod", obj12];
+            return items;
           }
     };
-    items[6] = { no: 7, name: "owning_experiment_id", kind: "scalar", T: 6 };
-    items[7] = { no: 8, name: "owning_slot_id", kind: "scalar", T: 5 };
-    tmp1 = new tmp("discord_protos.discord_experimentation.v1.Variation", items, T);
+    items[2] = { no: 3, name: "fiscal_year", kind: "scalar", T: 5 };
+    tmp1 = new tmp("discord_protos.discord_experimentation.v1.HoldoutScope", items, new.target);
     return tmp1;
   }
 }
-const prototype4 = Variation$Type.prototype;
+const prototype4 = HoldoutScope$Type.prototype;
 prototype4["create"] = function create(partialSettings) {
-  const obj = { id: 0, label: "", targetAllocation: 0, buckets: [], type: 0, owningExperimentId: "0", owningSlotId: 0 };
+  const obj = { level: 0, fiscalHalf: 0, fiscalYear: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -882,6 +885,147 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        obj.level = pos.int32();
+      } else if (2 === tmp5) {
+        obj.fiscalHalf = pos.int32();
+      } else if (3 === tmp5) {
+        obj.fiscalYear = pos.int32();
+      } else {
+        let onRead = readUnknownField.readUnknownField;
+        if ("throw" === onRead) {
+          let tmp15 = globalThis;
+          let _globalThis = globalThis;
+          let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp18 = new.target;
+          let tmp19 = new.target;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          throw error;
+        } else {
+          let skipResult = pos.skip(tmp6);
+          if (false !== onRead) {
+            if (true === onRead) {
+              onRead = _mod1197.UnknownFieldHandler.onRead;
+            }
+            let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
+          }
+        }
+      }
+    } while (pos.pos < sum);
+  }
+  return obj;
+};
+prototype4["internalBinaryWrite"] = function internalBinaryWrite(level, tag, writeUnknownFields) {
+  if (0 !== level.level) {
+    tag.tag(1, _mod1197.WireType.Varint).int32(level.level);
+    const tagResult = tag.tag(1, _mod1197.WireType.Varint);
+  }
+  if (0 !== level.fiscalHalf) {
+    tag.tag(2, _mod1197.WireType.Varint).int32(level.fiscalHalf);
+    const tagResult1 = tag.tag(2, _mod1197.WireType.Varint);
+  }
+  if (0 !== level.fiscalYear) {
+    tag.tag(3, _mod1197.WireType.Varint).int32(level.fiscalYear);
+    const tagResult2 = tag.tag(3, _mod1197.WireType.Varint);
+  }
+  let onWrite = writeUnknownFields.writeUnknownFields;
+  if (false !== onWrite) {
+    if (1 == onWrite) {
+      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+    }
+    const self = this;
+    onWrite(this.typeName, level, tag);
+  }
+  return tag;
+};
+const items2 = [
+  {
+    no: 1,
+    name: "level",
+    kind: "enum",
+    T() {
+      items = ["discord_protos.discord_experimentation.v1.HoldoutScope.Level", obj11];
+      return items;
+    }
+  },
+  {
+    no: 2,
+    name: "fiscal_half",
+    kind: "enum",
+    T() {
+      items = ["discord_protos.discord_experimentation.v1.HoldoutScope.FiscalPeriod", obj12];
+      return items;
+    }
+  },
+  { no: 3, name: "fiscal_year", kind: "scalar", T: 5 }
+];
+const tmp11 = new "AWAITING_MANUAL_APPROVAL"("discord_protos.discord_experimentation.v1.HoldoutScope", items2, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
+let closure_24 = tmp11;
+const MessageType5 = fn(1197).MessageType;
+class Variation$Type extends MessageType5 {
+  constructor() {
+    items = [, , , , , , , ];
+    items[0] = { no: 1, name: "id", kind: "scalar", T: 5 };
+    items[1] = { no: 2, name: "label", kind: "scalar", T: 9 };
+    items[2] = { no: 3, name: "target_allocation", kind: "scalar", T: 5 };
+    items[3] = {
+      no: 4,
+      name: "buckets",
+      kind: "message",
+      repeat: 1,
+      T() {
+            return closure_1_26;
+          }
+    };
+    obj = { no: 5, name: "type", kind: "enum", T: null };
+    class T {
+      constructor() {
+        items = ["discord_protos.discord_experimentation.v1.Variation.Type"];
+        items[1] = closure_1_15;
+        return items;
+      }
+    }
+    obj.T = T;
+    items[4] = obj;
+    items[5] = {
+      no: 6,
+      name: "configuration",
+      kind: "message",
+      T() {
+            return require("wrappers").StringValue;
+          }
+    };
+    items[6] = { no: 7, name: "owning_experiment_id", kind: "scalar", T: 6 };
+    items[7] = { no: 8, name: "owning_slot_id", kind: "scalar", T: 5 };
+    tmp1 = new tmp("discord_protos.discord_experimentation.v1.Variation", items, T);
+    return tmp1;
+  }
+}
+const prototype5 = Variation$Type.prototype;
+prototype5["create"] = function create(partialSettings) {
+  const obj = { id: 0, label: "", targetAllocation: 0, buckets: [], type: 0, owningExperimentId: "0", owningSlotId: 0 };
+  const _Object = Object;
+  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  if (undefined !== partialSettings) {
+    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1197;
+  }
+  return obj;
+};
+prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+  const self = this;
+  let obj = arg3;
+  if (arg3 == null) {
+    obj = self.create();
+  }
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    do {
+      let tmp4 = _slicedToArray(pos.tag(), 2);
+      [tmp5, tmp6] = tmp4;
+      if (1 === tmp5) {
         obj.id = pos.int32();
       } else if (2 === tmp5) {
         obj.label = pos.string();
@@ -889,7 +1033,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
         obj.targetAllocation = pos.int32();
       } else if (4 === tmp5) {
         let buckets = obj.buckets;
-        let arr = buckets.push(closure_23.internalBinaryRead(pos, pos.uint32(), readUnknownField));
+        let arr = buckets.push(closure_26.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else if (5 === tmp5) {
         obj.type = pos.int32();
       } else if (6 === tmp5) {
@@ -927,7 +1071,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   }
   return obj;
 };
-prototype4["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUnknownFields) {
+prototype5["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUnknownFields) {
   let length;
   if (0 !== id.id) {
     tag.tag(1, _mod1197.WireType.Varint).int32(id.id);
@@ -945,7 +1089,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeU
   if (0 < id.buckets.length) {
     do {
       let tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
-      let internalBinaryWriteResult = closure_23.internalBinaryWrite(id.buckets[num4], tagResult3.fork(), writeUnknownFields);
+      let internalBinaryWriteResult = closure_26.internalBinaryWrite(id.buckets[num4], tagResult3.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
       num4 = num4 + 1;
       length = id.buckets.length;
@@ -979,7 +1123,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeU
   }
   return tag;
 };
-const items2 = [
+const items3 = [
   { no: 1, name: "id", kind: "scalar", T: 5 },
   { no: 2, name: "label", kind: "scalar", T: 9 },
   { no: 3, name: "target_allocation", kind: "scalar", T: 5 },
@@ -989,7 +1133,7 @@ const items2 = [
     kind: "message",
     repeat: 1,
     T() {
-      return closure_1_23;
+      return closure_1_26;
     }
   },
   {
@@ -997,7 +1141,7 @@ const items2 = [
     name: "type",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.Variation.Type", obj11];
+      items = ["discord_protos.discord_experimentation.v1.Variation.Type", obj13];
       return items;
     }
   },
@@ -1012,10 +1156,10 @@ const items2 = [
   { no: 7, name: "owning_experiment_id", kind: "scalar", T: 6 },
   { no: 8, name: "owning_slot_id", kind: "scalar", T: 5 }
 ];
-const tmp11 = new "AWAITING_MANUAL_APPROVAL"("discord_protos.discord_experimentation.v1.Variation", items2, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
-let closure_22 = tmp11;
-const MessageType5 = fn(1197).MessageType;
-class Bucket$Type extends MessageType5 {
+const tmp12 = new "AWAITING_MANUAL_APPROVAL"("discord_protos.discord_experimentation.v1.Variation", items3, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
+let closure_25 = tmp12;
+const MessageType6 = fn(1197).MessageType;
+class Bucket$Type extends MessageType6 {
   constructor() {
     items = [, , , , ];
     items[0] = { no: 1, name: "start", kind: "scalar", T: 5 };
@@ -1025,7 +1169,7 @@ class Bucket$Type extends MessageType5 {
       name: "type",
       kind: "enum",
       T() {
-            items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj14];
+            items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj16];
             return items;
           }
     };
@@ -1033,7 +1177,7 @@ class Bucket$Type extends MessageType5 {
     class T {
       constructor() {
         items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode.Enum"];
-        items[1] = closure_1_14;
+        items[1] = closure_1_16;
         return items;
       }
     }
@@ -1044,7 +1188,7 @@ class Bucket$Type extends MessageType5 {
       name: "exposure_mode",
       kind: "enum",
       T() {
-            items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj13];
+            items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj15];
             return items;
           }
     };
@@ -1052,8 +1196,8 @@ class Bucket$Type extends MessageType5 {
     return tmp1;
   }
 }
-const prototype5 = Bucket$Type.prototype;
-prototype5["create"] = function create(partialSettings) {
+const prototype6 = Bucket$Type.prototype;
+prototype6["create"] = function create(partialSettings) {
   const obj = { start: 0, stop: 0, type: 0, assignmentMode: 0, exposureMode: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
@@ -1063,7 +1207,7 @@ prototype5["create"] = function create(partialSettings) {
   }
   return obj;
 };
-prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -1111,7 +1255,7 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   }
   return obj;
 };
-prototype5["internalBinaryWrite"] = function internalBinaryWrite(start, tag, writeUnknownFields) {
+prototype6["internalBinaryWrite"] = function internalBinaryWrite(start, tag, writeUnknownFields) {
   if (0 !== start.start) {
     tag.tag(1, _mod1197.WireType.Varint).int32(start.start);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -1142,7 +1286,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(start, tag, wri
   }
   return tag;
 };
-const items3 = [
+const items4 = [
   { no: 1, name: "start", kind: "scalar", T: 5 },
   { no: 2, name: "stop", kind: "scalar", T: 5 },
   {
@@ -1150,7 +1294,7 @@ const items3 = [
     name: "type",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj14];
+      items = ["discord_protos.discord_experimentation.v1.Bucket.Type", obj16];
       return items;
     }
   },
@@ -1159,7 +1303,7 @@ const items3 = [
     name: "assignment_mode",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode.Enum", obj12];
+      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode.Enum", obj14];
       return items;
     }
   },
@@ -1168,59 +1312,21 @@ const items3 = [
     name: "exposure_mode",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj13];
+      items = ["discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode.Enum", obj15];
       return items;
     }
   }
 ];
-const tmp12 = new "AWAITING_MANUAL_APPROVAL"("discord_protos.discord_experimentation.v1.Bucket", items3, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
-let closure_23 = tmp12;
-const MessageType6 = fn(1197).MessageType;
-class Bucket_AllocationAssignmentMode$Type extends MessageType6 {
+let tmp13 = new "AWAITING_MANUAL_APPROVAL"("discord_protos.discord_experimentation.v1.Bucket", items4, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
+let closure_26 = tmp13;
+const MessageType7 = fn(1197).MessageType;
+class Bucket_AllocationAssignmentMode$Type extends MessageType7 {
   constructor() {
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode", [], new.target);
     return tmp1;
   }
 }
-const prototype6 = Bucket_AllocationAssignmentMode$Type.prototype;
-prototype6["create"] = function create(partialSettings) {
-  const obj = {};
-  const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
-  }
-  return obj;
-};
-prototype6["internalBinaryRead"] = function internalBinaryRead(arg0, arg1, arg2, arg3) {
-  let obj = arg3;
-  if (arg3 == null) {
-    const self = this;
-    obj = this.create();
-  }
-  return obj;
-};
-prototype6["internalBinaryWrite"] = function internalBinaryWrite(arg0, arg1, writeUnknownFields) {
-  let onWrite = writeUnknownFields.writeUnknownFields;
-  if (false !== onWrite) {
-    if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
-    }
-    const self = this;
-    onWrite(this.typeName, arg0, arg1);
-  }
-  return arg1;
-};
-const items31 = new items3("discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode", [], tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode);
-const MessageType7 = fn(1197).MessageType;
-class Bucket_AllocationExposureMode$Type extends MessageType7 {
-  constructor() {
-    tmp1 = new tmp("discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode", [], new.target);
-    return tmp1;
-  }
-}
-const prototype7 = Bucket_AllocationExposureMode$Type.prototype;
+const prototype7 = Bucket_AllocationAssignmentMode$Type.prototype;
 prototype7["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
@@ -1250,9 +1356,47 @@ prototype7["internalBinaryWrite"] = function internalBinaryWrite(arg0, arg1, wri
   }
   return arg1;
 };
-const items32 = new items3("discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode", [], tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode);
+const items41 = new items4("discord_protos.discord_experimentation.v1.Bucket.AllocationAssignmentMode", [], tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode);
 const MessageType8 = fn(1197).MessageType;
-class DebugConfig$Type extends MessageType8 {
+class Bucket_AllocationExposureMode$Type extends MessageType8 {
+  constructor() {
+    tmp1 = new tmp("discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode", [], new.target);
+    return tmp1;
+  }
+}
+const prototype8 = Bucket_AllocationExposureMode$Type.prototype;
+prototype8["create"] = function create(partialSettings) {
+  const obj = {};
+  const _Object = Object;
+  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  if (undefined !== partialSettings) {
+    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1197;
+  }
+  return obj;
+};
+prototype8["internalBinaryRead"] = function internalBinaryRead(arg0, arg1, arg2, arg3) {
+  let obj = arg3;
+  if (arg3 == null) {
+    const self = this;
+    obj = this.create();
+  }
+  return obj;
+};
+prototype8["internalBinaryWrite"] = function internalBinaryWrite(arg0, arg1, writeUnknownFields) {
+  let onWrite = writeUnknownFields.writeUnknownFields;
+  if (false !== onWrite) {
+    if (1 == onWrite) {
+      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+    }
+    const self = this;
+    onWrite(this.typeName, arg0, arg1);
+  }
+  return arg1;
+};
+const items42 = new items4("discord_protos.discord_experimentation.v1.Bucket.AllocationExposureMode", [], tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode);
+const MessageType9 = fn(1197).MessageType;
+class DebugConfig$Type extends MessageType9 {
   constructor() {
     items = [, , , , , ];
     items[0] = { no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 };
@@ -1265,8 +1409,8 @@ class DebugConfig$Type extends MessageType8 {
     return tmp1;
   }
 }
-const prototype8 = DebugConfig$Type.prototype;
-prototype8["create"] = function create(partialSettings) {
+const prototype9 = DebugConfig$Type.prototype;
+prototype9["create"] = function create(partialSettings) {
   const obj = { enableDecisionLogging: false, metricsSampleRate: 0, logContextOnFailure: false, logRawHeaders: false, tagFilterMetrics: false, decisionLogSampleRate: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
@@ -1276,7 +1420,7 @@ prototype8["create"] = function create(partialSettings) {
   }
   return obj;
 };
-prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -1326,7 +1470,7 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   }
   return obj;
 };
-prototype8["internalBinaryWrite"] = function internalBinaryWrite(enableDecisionLogging, tag, writeUnknownFields) {
+prototype9["internalBinaryWrite"] = function internalBinaryWrite(enableDecisionLogging, tag, writeUnknownFields) {
   if (false !== enableDecisionLogging.enableDecisionLogging) {
     tag.tag(1, _mod1197.WireType.Varint).bool(enableDecisionLogging.enableDecisionLogging);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -1361,10 +1505,10 @@ prototype8["internalBinaryWrite"] = function internalBinaryWrite(enableDecisionL
   }
   return tag;
 };
-const items4 = [{ no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 }, { no: 2, name: "metrics_sample_rate", kind: "scalar", T: 1 }, { no: 3, name: "log_context_on_failure", kind: "scalar", T: 8 }, { no: 4, name: "log_raw_headers", kind: "scalar", T: 8 }, { no: 5, name: "tag_filter_metrics", kind: "scalar", T: 8 }, { no: 6, name: "decision_log_sample_rate", kind: "scalar", T: 1 }];
-const bucket_AllocationExposureModeType = new Bucket_AllocationExposureMode$Type("discord_protos.discord_experimentation.v1.DebugConfig", items4, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
-const MessageType9 = fn(1197).MessageType;
-class LifecyclePlan$Type extends MessageType9 {
+const items5 = [{ no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 }, { no: 2, name: "metrics_sample_rate", kind: "scalar", T: 1 }, { no: 3, name: "log_context_on_failure", kind: "scalar", T: 8 }, { no: 4, name: "log_raw_headers", kind: "scalar", T: 8 }, { no: 5, name: "tag_filter_metrics", kind: "scalar", T: 8 }, { no: 6, name: "decision_log_sample_rate", kind: "scalar", T: 1 }];
+const bucket_AllocationExposureModeType = new Bucket_AllocationExposureMode$Type("discord_protos.discord_experimentation.v1.DebugConfig", items5, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
+const MessageType10 = fn(1197).MessageType;
+class LifecyclePlan$Type extends MessageType10 {
   constructor() {
     obj = {
       no: 1,
@@ -1388,8 +1532,8 @@ class LifecyclePlan$Type extends MessageType9 {
     return tmp1;
   }
 }
-const prototype9 = LifecyclePlan$Type.prototype;
-prototype9["create"] = function create(partialSettings) {
+const prototype10 = LifecyclePlan$Type.prototype;
+prototype10["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
@@ -1399,7 +1543,7 @@ prototype9["create"] = function create(partialSettings) {
   }
   return obj;
 };
-prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -1441,7 +1585,7 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   }
   return obj;
 };
-prototype9["internalBinaryWrite"] = function internalBinaryWrite(measurementPlan, tag, writeUnknownFields) {
+prototype10["internalBinaryWrite"] = function internalBinaryWrite(measurementPlan, tag, writeUnknownFields) {
   if (measurementPlan.measurementPlan) {
     const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
     const joined = bucket_AllocationExposureModeType2.internalBinaryWrite(measurementPlan.measurementPlan, tag.tag(1, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
@@ -1462,7 +1606,7 @@ prototype9["internalBinaryWrite"] = function internalBinaryWrite(measurementPlan
   }
   return tag;
 };
-const items5 = [
+const items6 = [
   {
     no: 1,
     name: "measurement_plan",
@@ -1480,16 +1624,16 @@ const items5 = [
     }
   }
 ];
-const bucket_AllocationExposureModeType1 = new Bucket_AllocationExposureMode$Type("discord_protos.discord_experimentation.v1.LifecyclePlan", items5, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
-const MessageType10 = fn(1197).MessageType;
-class LifecyclePlan_MeasurementPlan$Type extends MessageType10 {
+const bucket_AllocationExposureModeType1 = new Bucket_AllocationExposureMode$Type("discord_protos.discord_experimentation.v1.LifecyclePlan", items6, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2);
+const MessageType11 = fn(1197).MessageType;
+class LifecyclePlan_MeasurementPlan$Type extends MessageType11 {
   constructor() {
     obj = {
       no: 1,
       name: "status",
       kind: "enum",
       T() {
-            items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
+            items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj17, "PLAN_STATUS_"];
             return items;
           }
     };
@@ -1508,137 +1652,7 @@ class LifecyclePlan_MeasurementPlan$Type extends MessageType10 {
     return tmp1;
   }
 }
-const prototype10 = LifecyclePlan_MeasurementPlan$Type.prototype;
-prototype10["create"] = function create(partialSettings) {
-  const obj = { status: 0, rampSteps: [] };
-  const _Object = Object;
-  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
-  if (undefined !== partialSettings) {
-    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1197;
-  }
-  return obj;
-};
-prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
-  const self = this;
-  let obj = arg3;
-  if (arg3 == null) {
-    obj = self.create();
-  }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    do {
-      let tmp4 = _slicedToArray(pos.tag(), 2);
-      [tmp5, tmp6] = tmp4;
-      if (1 === tmp5) {
-        obj.status = pos.int32();
-      } else if (2 === tmp5) {
-        let rampSteps = obj.rampSteps;
-        let arr = rampSteps.push(lifecyclePlan_RolloutPlanType.internalBinaryRead(pos, pos.uint32(), readUnknownField));
-      } else {
-        let onRead = readUnknownField.readUnknownField;
-        if ("throw" === onRead) {
-          let tmp15 = globalThis;
-          let _globalThis = globalThis;
-          let _HermesInternal = HermesInternal;
-          let str = ") for ";
-          let str2 = " (wire type ";
-          let str3 = "Unknown field ";
-          let tmp18 = new.target;
-          let tmp19 = new.target;
-          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          throw error;
-        } else {
-          let skipResult = pos.skip(tmp6);
-          if (false !== onRead) {
-            if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
-            }
-            let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
-          }
-        }
-      }
-    } while (pos.pos < sum);
-  }
-  return obj;
-};
-prototype10["internalBinaryWrite"] = function internalBinaryWrite(status, tag, writeUnknownFields) {
-  let length;
-  if (0 !== status.status) {
-    tag.tag(1, _mod1197.WireType.Varint).int32(status.status);
-    const tagResult = tag.tag(1, _mod1197.WireType.Varint);
-  }
-  let num2 = 0;
-  if (0 < status.rampSteps.length) {
-    do {
-      let tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
-      let internalBinaryWriteResult = lifecyclePlan_RolloutPlanType.internalBinaryWrite(status.rampSteps[num2], tagResult1.fork(), writeUnknownFields);
-      let joined = internalBinaryWriteResult.join();
-      num2 = num2 + 1;
-      length = status.rampSteps.length;
-    } while (num2 < length);
-  }
-  let onWrite = writeUnknownFields.writeUnknownFields;
-  if (false !== onWrite) {
-    if (1 == onWrite) {
-      onWrite = _mod1197.UnknownFieldHandler.onWrite;
-    }
-    const self = this;
-    onWrite(this.typeName, status, tag);
-  }
-  return tag;
-};
-const items6 = [
-  {
-    no: 1,
-    name: "status",
-    kind: "enum",
-    T() {
-      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
-      return items;
-    }
-  },
-
-];
-const obj22 = {
-  no: 2,
-  name: "ramp_steps",
-  kind: "message",
-  repeat: 1,
-  T() {
-    return lifecyclePlan_RolloutPlanType;
-  }
-};
-items6[1] = obj22;
-const bucket_AllocationExposureModeType2 = new Bucket_AllocationExposureMode$Type("discord_protos.discord_experimentation.v1.LifecyclePlan.MeasurementPlan", items6, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", LifecyclePlan_MeasurementPlan$Type, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, experimentType, tmp9, tmp10, tmp11, tmp12, new.target, items31, new.target, items32, bucket_AllocationExposureModeType, bucket_AllocationExposureModeType1, Bucket_AllocationExposureMode$Type, items6, new.target, exports, obj22, undefined);
-const MessageType11 = fn(1197).MessageType;
-class LifecyclePlan_RolloutPlan$Type extends MessageType11 {
-  constructor() {
-    obj = {
-      no: 1,
-      name: "status",
-      kind: "enum",
-      T() {
-            items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
-            return items;
-          }
-    };
-    items = [, ];
-    items[0] = obj;
-    items[1] = {
-      no: 2,
-      name: "ramp_steps",
-      kind: "message",
-      repeat: 1,
-      T() {
-            return lifecyclePlan_RolloutPlanType;
-          }
-    };
-    tmp1 = new tmp("discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan", items, new.target);
-    return tmp1;
-  }
-}
-const prototype11 = LifecyclePlan_RolloutPlan$Type.prototype;
+const prototype11 = LifecyclePlan_MeasurementPlan$Type.prototype;
 prototype11["create"] = function create(partialSettings) {
   const obj = { status: 0, rampSteps: [] };
   const _Object = Object;
@@ -1724,13 +1738,13 @@ const items7 = [
     name: "status",
     kind: "enum",
     T() {
-      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj15, "PLAN_STATUS_"];
+      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj17, "PLAN_STATUS_"];
       return items;
     }
   },
 
 ];
-const obj24 = {
+const obj25 = {
   no: 2,
   name: "ramp_steps",
   kind: "message",
@@ -1739,10 +1753,140 @@ const obj24 = {
     return lifecyclePlan_RolloutPlanType;
   }
 };
-items7[1] = obj24;
-const lifecyclePlan_MeasurementPlanType = new LifecyclePlan_MeasurementPlan$Type("discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan", items7, tmp6, tmp5, "create", LifecyclePlan_RolloutPlan$Type, "internalBinaryRead", "internalBinaryWrite", LifecyclePlan_MeasurementPlan$Type, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, experimentType, tmp9, tmp10, tmp11, tmp12, new.target, items31, new.target, items32, bucket_AllocationExposureModeType, bucket_AllocationExposureModeType1, bucket_AllocationExposureModeType2, items7, new.target, exports, obj24, undefined, 8, 7, 6);
+items7[1] = obj25;
+const bucket_AllocationExposureModeType2 = new Bucket_AllocationExposureMode$Type("discord_protos.discord_experimentation.v1.LifecyclePlan.MeasurementPlan", items7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", LifecyclePlan_MeasurementPlan$Type, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, experimentType, tmp9, tmp10, tmp11, tmp12, tmp13, new.target, items41, new.target, items42, bucket_AllocationExposureModeType, bucket_AllocationExposureModeType1, Bucket_AllocationExposureMode$Type, items7, new.target, exports, obj25, undefined);
 const MessageType12 = fn(1197).MessageType;
-class LifecyclePlan_RampStep$Type extends MessageType12 {
+class LifecyclePlan_RolloutPlan$Type extends MessageType12 {
+  constructor() {
+    obj = {
+      no: 1,
+      name: "status",
+      kind: "enum",
+      T() {
+            items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj17, "PLAN_STATUS_"];
+            return items;
+          }
+    };
+    items = [, ];
+    items[0] = obj;
+    items[1] = {
+      no: 2,
+      name: "ramp_steps",
+      kind: "message",
+      repeat: 1,
+      T() {
+            return lifecyclePlan_RolloutPlanType;
+          }
+    };
+    tmp1 = new tmp("discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan", items, new.target);
+    return tmp1;
+  }
+}
+const prototype12 = LifecyclePlan_RolloutPlan$Type.prototype;
+prototype12["create"] = function create(partialSettings) {
+  const obj = { status: 0, rampSteps: [] };
+  const _Object = Object;
+  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
+  if (undefined !== partialSettings) {
+    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1197;
+  }
+  return obj;
+};
+prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+  const self = this;
+  let obj = arg3;
+  if (arg3 == null) {
+    obj = self.create();
+  }
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    do {
+      let tmp4 = _slicedToArray(pos.tag(), 2);
+      [tmp5, tmp6] = tmp4;
+      if (1 === tmp5) {
+        obj.status = pos.int32();
+      } else if (2 === tmp5) {
+        let rampSteps = obj.rampSteps;
+        let arr = rampSteps.push(lifecyclePlan_RolloutPlanType.internalBinaryRead(pos, pos.uint32(), readUnknownField));
+      } else {
+        let onRead = readUnknownField.readUnknownField;
+        if ("throw" === onRead) {
+          let tmp15 = globalThis;
+          let _globalThis = globalThis;
+          let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp18 = new.target;
+          let tmp19 = new.target;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          throw error;
+        } else {
+          let skipResult = pos.skip(tmp6);
+          if (false !== onRead) {
+            if (true === onRead) {
+              onRead = _mod1197.UnknownFieldHandler.onRead;
+            }
+            let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
+          }
+        }
+      }
+    } while (pos.pos < sum);
+  }
+  return obj;
+};
+prototype12["internalBinaryWrite"] = function internalBinaryWrite(status, tag, writeUnknownFields) {
+  let length;
+  if (0 !== status.status) {
+    tag.tag(1, _mod1197.WireType.Varint).int32(status.status);
+    const tagResult = tag.tag(1, _mod1197.WireType.Varint);
+  }
+  let num2 = 0;
+  if (0 < status.rampSteps.length) {
+    do {
+      let tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
+      let internalBinaryWriteResult = lifecyclePlan_RolloutPlanType.internalBinaryWrite(status.rampSteps[num2], tagResult1.fork(), writeUnknownFields);
+      let joined = internalBinaryWriteResult.join();
+      num2 = num2 + 1;
+      length = status.rampSteps.length;
+    } while (num2 < length);
+  }
+  let onWrite = writeUnknownFields.writeUnknownFields;
+  if (false !== onWrite) {
+    if (1 == onWrite) {
+      onWrite = _mod1197.UnknownFieldHandler.onWrite;
+    }
+    const self = this;
+    onWrite(this.typeName, status, tag);
+  }
+  return tag;
+};
+const items8 = [
+  {
+    no: 1,
+    name: "status",
+    kind: "enum",
+    T() {
+      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", obj17, "PLAN_STATUS_"];
+      return items;
+    }
+  },
+
+];
+const obj27 = {
+  no: 2,
+  name: "ramp_steps",
+  kind: "message",
+  repeat: 1,
+  T() {
+    return lifecyclePlan_RolloutPlanType;
+  }
+};
+items8[1] = obj27;
+const lifecyclePlan_MeasurementPlanType = new LifecyclePlan_MeasurementPlan$Type("discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan", items8, tmp6, tmp5, "create", LifecyclePlan_RolloutPlan$Type, "internalBinaryRead", "internalBinaryWrite", LifecyclePlan_MeasurementPlan$Type, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, experimentType, tmp9, tmp10, tmp11, tmp12, tmp13, new.target, items41, new.target, items42, bucket_AllocationExposureModeType, bucket_AllocationExposureModeType1, bucket_AllocationExposureModeType2, items8, new.target, exports, obj27, undefined, 8, 7, 6);
+const MessageType13 = fn(1197).MessageType;
+class LifecyclePlan_RampStep$Type extends MessageType13 {
   constructor() {
     obj = {
       no: 1,
@@ -1750,7 +1894,7 @@ class LifecyclePlan_RampStep$Type extends MessageType12 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_1_29;
+            return closure_1_32;
           }
     };
     items = [, , , , ];
@@ -1777,7 +1921,7 @@ class LifecyclePlan_RampStep$Type extends MessageType12 {
       name: "status",
       kind: "enum",
       T() {
-            items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj16, "STEP_STATUS_"];
+            items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj18, "STEP_STATUS_"];
             return items;
           }
     };
@@ -1785,8 +1929,8 @@ class LifecyclePlan_RampStep$Type extends MessageType12 {
     return tmp1;
   }
 }
-const prototype12 = LifecyclePlan_RampStep$Type.prototype;
-prototype12["create"] = function create(partialSettings) {
+const prototype13 = LifecyclePlan_RampStep$Type.prototype;
+prototype13["create"] = function create(partialSettings) {
   const obj = { variationBuckets: [], requireManualApproval: false, status: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
@@ -1796,7 +1940,7 @@ prototype12["create"] = function create(partialSettings) {
   }
   return obj;
 };
-prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -1809,7 +1953,7 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let variationBuckets = obj.variationBuckets;
-        let arr = variationBuckets.push(closure_29.internalBinaryRead(pos, pos.uint32(), readUnknownField));
+        let arr = variationBuckets.push(closure_32.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else if (2 === tmp5) {
         let Duration = duration.Duration;
         obj.holdDuration = Duration.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.holdDuration);
@@ -1847,13 +1991,13 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   }
   return obj;
 };
-prototype12["internalBinaryWrite"] = function internalBinaryWrite(variationBuckets, tag, writeUnknownFields) {
+prototype13["internalBinaryWrite"] = function internalBinaryWrite(variationBuckets, tag, writeUnknownFields) {
   let length;
   let num = 0;
   if (0 < variationBuckets.variationBuckets.length) {
     do {
       let tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
-      let internalBinaryWriteResult = closure_29.internalBinaryWrite(variationBuckets.variationBuckets[num], tagResult.fork(), writeUnknownFields);
+      let internalBinaryWriteResult = closure_32.internalBinaryWrite(variationBuckets.variationBuckets[num], tagResult.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
       num = num + 1;
       length = variationBuckets.variationBuckets.length;
@@ -1889,14 +2033,14 @@ prototype12["internalBinaryWrite"] = function internalBinaryWrite(variationBucke
   }
   return tag;
 };
-const items8 = [
+const items9 = [
   {
     no: 1,
     name: "variation_buckets",
     kind: "message",
     repeat: 1,
     T() {
-      return closure_1_29;
+      return closure_1_32;
     }
   },
   {
@@ -1918,19 +2062,19 @@ const items8 = [
   },
 
 ];
-const obj26 = {
+const obj29 = {
   no: 5,
   name: "status",
   kind: "enum",
   T() {
-    items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj16, "STEP_STATUS_"];
+    items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj18, "STEP_STATUS_"];
     return items;
   }
 };
-items8[4] = obj26;
-const lifecyclePlan_RolloutPlanType = new LifecyclePlan_RolloutPlan$Type("discord_protos.discord_experimentation.v1.LifecyclePlan.RampStep", items8, tmp6, LifecyclePlan_RampStep$Type, "create", LifecyclePlan_RolloutPlan$Type, "internalBinaryRead", "internalBinaryWrite", items8, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, experimentType, tmp9, tmp10, tmp11, tmp12, new.target, items31, new.target, items32, bucket_AllocationExposureModeType, bucket_AllocationExposureModeType1, bucket_AllocationExposureModeType2, lifecyclePlan_MeasurementPlanType, new.target, exports, obj26, undefined, 8, 7, 6, 4, 2);
-const MessageType13 = fn(1197).MessageType;
-class LifecyclePlan_VariationBuckets$Type extends MessageType13 {
+items9[4] = obj29;
+const lifecyclePlan_RolloutPlanType = new LifecyclePlan_RolloutPlan$Type("discord_protos.discord_experimentation.v1.LifecyclePlan.RampStep", items9, tmp6, LifecyclePlan_RampStep$Type, "create", LifecyclePlan_RolloutPlan$Type, "internalBinaryRead", "internalBinaryWrite", items9, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, experimentType, tmp9, tmp10, tmp11, tmp12, tmp13, new.target, items41, new.target, items42, bucket_AllocationExposureModeType, bucket_AllocationExposureModeType1, bucket_AllocationExposureModeType2, lifecyclePlan_MeasurementPlanType, new.target, exports, obj29, undefined, 8, 7, 6, 4, 2);
+const MessageType14 = fn(1197).MessageType;
+class LifecyclePlan_VariationBuckets$Type extends MessageType14 {
   constructor() {
     items = [, ];
     items[0] = { no: 1, name: "variation_id", kind: "scalar", T: 5 };
@@ -1940,15 +2084,15 @@ class LifecyclePlan_VariationBuckets$Type extends MessageType13 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_1_23;
+            return closure_1_26;
           }
     };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.LifecyclePlan.VariationBuckets", items, new.target);
     return tmp1;
   }
 }
-const prototype13 = LifecyclePlan_VariationBuckets$Type.prototype;
-prototype13["create"] = function create(partialSettings) {
+const prototype14 = LifecyclePlan_VariationBuckets$Type.prototype;
+prototype14["create"] = function create(partialSettings) {
   const obj = { variationId: 0, buckets: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
@@ -1958,7 +2102,7 @@ prototype13["create"] = function create(partialSettings) {
   }
   return obj;
 };
-prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -1973,7 +2117,7 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
         obj.variationId = pos.int32();
       } else if (2 === tmp5) {
         let buckets = obj.buckets;
-        let arr = buckets.push(closure_23.internalBinaryRead(pos, pos.uint32(), readUnknownField));
+        let arr = buckets.push(closure_26.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -2001,7 +2145,7 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   }
   return obj;
 };
-prototype13["internalBinaryWrite"] = function internalBinaryWrite(variationId, tag, writeUnknownFields) {
+prototype14["internalBinaryWrite"] = function internalBinaryWrite(variationId, tag, writeUnknownFields) {
   let length;
   if (0 !== variationId.variationId) {
     tag.tag(1, _mod1197.WireType.Varint).int32(variationId.variationId);
@@ -2011,7 +2155,7 @@ prototype13["internalBinaryWrite"] = function internalBinaryWrite(variationId, t
   if (0 < variationId.buckets.length) {
     do {
       let tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
-      let internalBinaryWriteResult = closure_23.internalBinaryWrite(variationId.buckets[num2], tagResult1.fork(), writeUnknownFields);
+      let internalBinaryWriteResult = closure_26.internalBinaryWrite(variationId.buckets[num2], tagResult1.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
       num2 = num2 + 1;
       length = variationId.buckets.length;
@@ -2027,19 +2171,19 @@ prototype13["internalBinaryWrite"] = function internalBinaryWrite(variationId, t
   }
   return tag;
 };
-const items9 = [{ no: 1, name: "variation_id", kind: "scalar", T: 5 }, ];
-const obj27 = {
+const items10 = [{ no: 1, name: "variation_id", kind: "scalar", T: 5 }, ];
+const obj30 = {
   no: 2,
   name: "buckets",
   kind: "message",
   repeat: 1,
   T() {
-    return closure_1_23;
+    return closure_1_26;
   }
 };
-items9[1] = obj27;
-const tmp20 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.LifecyclePlan.VariationBuckets", items9, tmp6, LifecyclePlan_RampStep$Type, "create", LifecyclePlan_VariationBuckets$Type, "internalBinaryRead", items9, new.target, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, experimentType, tmp9, tmp10, tmp11, tmp12, new.target, items31, new.target, items32, bucket_AllocationExposureModeType, bucket_AllocationExposureModeType1, bucket_AllocationExposureModeType2, lifecyclePlan_MeasurementPlanType, lifecyclePlan_RolloutPlanType, exports, obj27, undefined, 8, 7, 6);
-let closure_29 = tmp20;
+items10[1] = obj30;
+let tmp21 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.LifecyclePlan.VariationBuckets", items10, tmp6, LifecyclePlan_RampStep$Type, "create", LifecyclePlan_VariationBuckets$Type, "internalBinaryRead", items10, new.target, undefined, tmp, fn, dependencyMap, Experiment_NumberLineSettings_Mode, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, experimentType, tmp9, tmp10, tmp11, tmp12, tmp13, new.target, items41, new.target, items42, bucket_AllocationExposureModeType, bucket_AllocationExposureModeType1, bucket_AllocationExposureModeType2, lifecyclePlan_MeasurementPlanType, lifecyclePlan_RolloutPlanType, exports, obj30, undefined, 8, 7, 6);
+let closure_32 = tmp21;
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx");
 
@@ -2053,23 +2197,26 @@ export const Experiment_Type = obj7;
 export const Experiment_CustomUnitPrefix = obj8;
 export const Experiment_ExposurePointId = obj9;
 export const Experiment_EligibilityPersistence = obj10;
-export const Variation_Type = obj11;
-export const Bucket_AllocationAssignmentMode_Enum = obj12;
-export const Bucket_AllocationExposureMode_Enum = obj13;
-export const Bucket_Type = obj14;
-export const LifecyclePlan_PlanStatus = obj15;
-export const LifecyclePlan_StepStatus = obj16;
-export const Phase = obj17;
+export const HoldoutScope_Level = obj11;
+export const HoldoutScope_FiscalPeriod = obj12;
+export const Variation_Type = obj13;
+export const Bucket_AllocationAssignmentMode_Enum = obj14;
+export const Bucket_AllocationExposureMode_Enum = obj15;
+export const Bucket_Type = obj16;
+export const LifecyclePlan_PlanStatus = obj17;
+export const LifecyclePlan_StepStatus = obj18;
+export const Phase = obj19;
 export const Experiment = experimentType;
 export const Experiment_NumberLineSettings = tmp9;
 export const Experiment_ChangeSource = tmp10;
-export const Variation = tmp11;
-export const Bucket = tmp12;
-export const Bucket_AllocationAssignmentMode = items31;
-export const Bucket_AllocationExposureMode = items32;
+export const HoldoutScope = tmp11;
+export const Variation = tmp12;
+export const Bucket = tmp13;
+export const Bucket_AllocationAssignmentMode = items41;
+export const Bucket_AllocationExposureMode = items42;
 export const DebugConfig = bucket_AllocationExposureModeType;
 export const LifecyclePlan = bucket_AllocationExposureModeType1;
 export const LifecyclePlan_MeasurementPlan = bucket_AllocationExposureModeType2;
 export const LifecyclePlan_RolloutPlan = lifecyclePlan_MeasurementPlanType;
 export const LifecyclePlan_RampStep = lifecyclePlan_RolloutPlanType;
-export const LifecyclePlan_VariationBuckets = tmp20;
+export const LifecyclePlan_VariationBuckets = tmp21;

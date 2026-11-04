@@ -1,7 +1,7 @@
-// === Module 13544: ForwardPreviewUtils ===
+// === Module 13628: ForwardPreviewUtils ===
 
-// Module 13544 (ForwardPreviewUtils)
-import EmbedUtils from "EmbedUtils" /* 6678 */;
+// Module 13628 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 6693 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
 
 require = fn;

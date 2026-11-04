@@ -1,12 +1,12 @@
-// === Module 16948: FamilyCenterActivityPurchaseRow ===
+// === Module 17040: FamilyCenterActivityPurchaseRow ===
 
-// Module 16948 (FamilyCenterActivityPurchaseRow)
+// Module 17040 (FamilyCenterActivityPurchaseRow)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import PriceUtils from "PriceUtils" /* 7537 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8868 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 16949 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 16950 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import PriceUtils from "PriceUtils" /* 7553 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8885 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 17041 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 17042 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,9 +57,9 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj3.subscriptionPlanId = subscriptionPlanId;
     items = [React4(FamilyCenterActivityItemPreviewDefault, obj3), ];
     const obj4 = { style: tmp.textContainer, children: null };
-    const obj5 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: combined };
+    const obj5 = { variant: "body-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: combined };
     const items1 = [React4(Text_Text.Text, obj5), ];
-    const obj6 = { variant: "text-xs/medium", color: "text-muted", children: formatPriceResult };
+    const obj6 = { variant: "body-xs/medium", color: "text-muted", children: formatPriceResult };
     items1[1] = React4(Text_Text.Text, obj6);
     obj4.children = items1;
     items[1] = hasOwnProperty(View, obj4);

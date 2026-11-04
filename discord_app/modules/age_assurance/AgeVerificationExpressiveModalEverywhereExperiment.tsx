@@ -1,6 +1,6 @@
-// === Module 8280: AgeVerificationExpressiveModalEverywhereExperiment ===
+// === Module 8296: AgeVerificationExpressiveModalEverywhereExperiment ===
 
-// Module 8280 (AgeVerificationExpressiveModalEverywhereExperiment)
+// Module 8296 (AgeVerificationExpressiveModalEverywhereExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

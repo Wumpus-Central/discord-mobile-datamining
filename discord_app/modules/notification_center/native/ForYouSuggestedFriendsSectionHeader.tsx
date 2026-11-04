@@ -1,9 +1,9 @@
-// === Module 18664: ForYouSuggestedFriendsSectionHeader ===
+// === Module 18765: ForYouSuggestedFriendsSectionHeader ===
 
-// Module 18664 (ForYouSuggestedFriendsSectionHeader)
+// Module 18765 (ForYouSuggestedFriendsSectionHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,9 +27,9 @@ export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   }
   const obj = { style: items, children: null };
   items[1] = noDivider;
-  const obj2 = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
+  const obj2 = { style: tmp.text, color: "text-muted", variant: "body-sm/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["1uAmCw"]);
-  obj.children = jsx(Text_Text.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
+  obj.children = jsx(Text_Text.Text, { style: tmp.text, color: "text-muted", variant: "body-sm/semibold", children: null });
   return <View style={items}>{null}</View>;
 };

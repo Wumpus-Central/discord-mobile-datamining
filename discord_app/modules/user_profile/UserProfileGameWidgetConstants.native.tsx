@@ -1,11 +1,11 @@
-// === Module 15080: UserProfileGameWidgetConstants ===
+// === Module 15160: UserProfileGameWidgetConstants ===
 
-// Module 15080 (UserProfileGameWidgetConstants)
-import FriendsIcon from "FriendsIcon" /* 5835 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 10001 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 10003 */;
-import RibbonIcon from "RibbonIcon" /* 15083 */;
-import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 15081 */;
+// Module 15160 (UserProfileGameWidgetConstants)
+import FriendsIcon from "FriendsIcon" /* 5849 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 10049 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 10051 */;
+import RibbonIcon from "RibbonIcon" /* 15162 */;
+import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 15161 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};
@@ -17,9 +17,9 @@ const widgetGameTagMetadata = UserProfileGameWidgetTagMetadata.buildWidgetGameTa
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetConstants.native.tsx");
 
 export const WIDGET_GAME_TAG_METADATA = widgetGameTagMetadata;
-export function getWidgetGameTagMetadata(tag) {
+export function getWidgetGameTagMetadata(item) {
   let tmp2 = null;
-  if (null != widgetGameTagMetadata[tag]) {
+  if (null != widgetGameTagMetadata[item]) {
     tmp2 = tmp;
   }
   return tmp2;

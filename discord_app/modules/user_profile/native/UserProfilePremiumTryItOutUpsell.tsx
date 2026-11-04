@@ -1,18 +1,18 @@
-// === Module 16708: UserProfilePremiumTryItOutUpsell ===
+// === Module 16798: UserProfilePremiumTryItOutUpsell ===
 
-// Module 16708 (UserProfilePremiumTryItOutUpsell)
+// Module 16798 (UserProfilePremiumTryItOutUpsell)
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 16684 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 16774 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7497).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7513).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let closure_5 = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
 const createStyles = fn(5141);

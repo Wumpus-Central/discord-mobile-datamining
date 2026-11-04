@@ -1,10 +1,10 @@
-// === Module 16585: UserSettingsEditUserProfile ===
+// === Module 16676: UserSettingsEditUserProfile ===
 
-// Module 16585 (UserSettingsEditUserProfile)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8882 */;
-import UserProfileEditFormDefault from "UserProfileEditForm" /* 16586 */;
+// Module 16676 (UserSettingsEditUserProfile)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8899 */;
+import UserProfileEditFormDefault from "UserProfileEditForm" /* 16677 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -30,7 +30,7 @@ export default function UserSettingsEditUserProfile(arg0) {
     const obj3 = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
     obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-    tmp7 = jsx(tmp4(7446).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
+    tmp7 = jsx(tmp4(7462).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
     const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;

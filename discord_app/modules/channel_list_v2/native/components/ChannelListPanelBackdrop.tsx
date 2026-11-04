@@ -1,10 +1,10 @@
-// === Module 18252: ChannelListPanelBackdrop ===
+// === Module 18349: ChannelListPanelBackdrop ===
 
-// Module 18252 (ChannelListPanelBackdrop)
+// Module 18349 (ChannelListPanelBackdrop)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import QuestHooks from "QuestHooks" /* 17211 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18224 */;
+import QuestHooks from "QuestHooks" /* 17303 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18321 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const DM_WIDTH = fn(1072).DM_WIDTH;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
 let obj3 = {};
@@ -83,5 +83,5 @@ export default function ChannelListPanelBackdrop(children) {
   }
   const items1 = [timestampProducer(ScreenAlignedThemedGradientSliding, { offsetX: DM_WIDTH, offsetY: useSafeAreaInsetsDefault().top }), timestampProducer(React4, { pointerEvents: "none", style: tmp.panelTint }), timestampProducer(React4, { style: tmp.listWrapper, children: children.children })];
   obj3.children = items1;
-  return React5(React4, obj3);
+  return metroImportDefault(React4, obj3);
 };

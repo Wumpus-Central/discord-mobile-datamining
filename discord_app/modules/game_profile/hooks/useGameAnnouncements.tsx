@@ -1,9 +1,9 @@
-// === Module 9582: useGameAnnouncements ===
+// === Module 9601: useGameAnnouncements ===
 
-// Module 9582 (useGameAnnouncements)
+// Module 9601 (useGameAnnouncements)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9583 */;
-import GameProfileStore from "GameProfileStore" /* 9450 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9602 */;
+import GameProfileStore from "GameProfileStore" /* 9468 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

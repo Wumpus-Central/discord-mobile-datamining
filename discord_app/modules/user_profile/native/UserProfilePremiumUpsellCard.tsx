@@ -1,21 +1,21 @@
-// === Module 16709: UserProfilePremiumUpsellCard ===
+// === Module 16799: UserProfilePremiumUpsellCard ===
 
-// Module 16709 (UserProfilePremiumUpsellCard)
+// Module 16799 (UserProfilePremiumUpsellCard)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7282 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7471 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10036 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10037 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16636 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7298 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
+import openPremiumModalDefault from "openPremiumModal" /* 10084 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10085 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function UpsellCardLayout(arg0) {
   ({ style, ctaText, description, onPress } = arg0);
-  const obj = { style, ctaText, showLinearGradient: true, onPress, children: jsx(Text_Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: description }) };
-  return jsx(UserProfileUpsellCardDefault, { style, ctaText, showLinearGradient: true, onPress, children: jsx(Text_Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: description }) });
+  const obj = { style, ctaText, showLinearGradient: true, onPress, children: jsx(Text_Text.Text, { variant: "body-sm/normal", maxFontSizeMultiplier: 2.5, children: description }) };
+  return jsx(UserProfileUpsellCardDefault, { style, ctaText, showLinearGradient: true, onPress, children: jsx(Text_Text.Text, { variant: "body-sm/normal", maxFontSizeMultiplier: 2.5, children: description }) });
 }
 function PreviewNitroCard(style) {
   let navigation;
@@ -35,7 +35,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7750).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7766).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
@@ -54,7 +54,7 @@ function GetNitroCard(style) {
   return <UpsellCardLayout style={style.style} ctaText={null} description={null} onPress={null} />;
 }
 const Constants = fn(1072);
-({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire, UserSettingsSections: closure_7 } = Constants);
+({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
 const createStyles = fn(5141);

@@ -1,7 +1,7 @@
-// === Module 20125: FormEmojiPicker ===
+// === Module 20241: FormEmojiPicker ===
 
-// Module 20125 (FormEmojiPicker)
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10070 */;
+// Module 20241 (FormEmojiPicker)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,27 +21,27 @@ export default function FormEmojiPicker(emoji) {
     emojiId = onChange(5087).convertSurrogateToName(emojiName, false);
     let obj = onChange(5087);
   }
-  const emojiByIdOrName = guildId(17374).useEmojiByIdOrName(guildId, emojiId);
+  const emojiByIdOrName = guildId(17465).useEmojiByIdOrName(guildId, emojiId);
   let allEmojiNamesString = null;
   if (null != emojiByIdOrName) {
     allEmojiNamesString = tmp3(5091).getAllEmojiNamesString(emojiByIdOrName);
     const tmp3Result = tmp3(5091);
   }
   const intl = tmp3(1113).intl;
-  let obj2 = guildId(17374);
+  let obj2 = guildId(17465);
   if (null != emojiId) {
     const obj3 = { guildId, id: emojiId };
-    let tmp9 = jsx(onChange(17373), { guildId, id: emojiId });
+    let tmp9 = jsx(onChange(17464), { guildId, id: emojiId });
     let tmp8 = jsx;
   } else {
     tmp8 = jsx;
-    const obj4 = { IconComponent: tmp3(9580).ReactionIcon };
-    tmp9 = jsx(tmp3(7101).TableRow.Icon, { IconComponent: tmp3(9580).ReactionIcon });
+    const obj4 = { IconComponent: tmp3(9599).ReactionIcon };
+    tmp9 = jsx(tmp3(7116).TableRow.Icon, { IconComponent: tmp3(9599).ReactionIcon });
   }
   const obj5 = { icon: tmp9, label: null, arrow: true, onPress: null };
   if (allEmojiNamesString == null) {
-    const obj6 = { variant: "text-md/medium", color: "text-muted", children: stringResult };
-    allEmojiNamesString = tmp8(tmp3(5747).Text, obj6);
+    const obj6 = { variant: "body-md/medium", color: "text-muted", children: stringResult };
+    allEmojiNamesString = tmp8(tmp3(5761).Text, obj6);
   }
   obj5.label = allEmojiNamesString;
   obj5.onPress = function handleSelectEmoji() {
@@ -63,5 +63,5 @@ export default function FormEmojiPicker(emoji) {
       pickerIntention: EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI
     });
   };
-  return tmp8(guildId(7101).TableRow, obj5);
+  return tmp8(guildId(7116).TableRow, obj5);
 };

@@ -1,12 +1,12 @@
-// === Module 19288: useHandleOAuthNavigation ===
+// === Module 19392: useHandleOAuthNavigation ===
 
-// Module 19288 (useHandleOAuthNavigation)
+// Module 19392 (useHandleOAuthNavigation)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ComponentActions = fn(1072).ComponentActions;
-let closure_5 = fn(11040).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_5 = fn(11089).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
 

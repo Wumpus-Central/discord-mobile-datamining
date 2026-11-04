@@ -1,8 +1,8 @@
-// === Module 19544: ManagerRegistry ===
+// === Module 19648: ManagerRegistry ===
 
-// Module 19544 (ManagerRegistry)
+// Module 19648 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20267 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20383 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -68,6 +68,7 @@ const obj = {
   CommonTriggerPointManager: null,
   CommunicationDisabledManager: null,
   ConjureBackgroundFramesManager: null,
+  ConjureProjectReconnectManager: null,
   ConjureTurnNotificationManager: null,
   ContactSyncLifecycleManager: null,
   CustomStatusManager: null,
@@ -280,6 +281,12 @@ obj.ConjureBackgroundFramesManager = {
   actions: ["FRAME_LAUNCH_START"],
   inlineRequire() {
     return require("ConjureBackgroundFramesManager").default;
+  }
+};
+obj.ConjureProjectReconnectManager = {
+  actions: ["POST_CONNECTION_OPEN"],
+  inlineRequire() {
+    return require("ConjureProjectReconnectManager").default;
   }
 };
 obj.ConjureTurnNotificationManager = {

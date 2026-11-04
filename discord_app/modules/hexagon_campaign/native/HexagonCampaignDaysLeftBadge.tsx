@@ -1,12 +1,12 @@
-// === Module 16631: HexagonCampaignDaysLeftBadge ===
+// === Module 16721: HexagonCampaignDaysLeftBadge ===
 
-// Module 16631 (HexagonCampaignDaysLeftBadge)
+// Module 16721 (HexagonCampaignDaysLeftBadge)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import shared from "shared" /* 5148 */;
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5168 */;
 import native from "native" /* 5207 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -48,15 +48,15 @@ function HexagonCampaignBadge(variant) {
     items[2] = tmp11;
     obj7.style = items;
     const items1 = [renderIcon(iconColor), ];
-    const obj8 = { variant: "text-xxs/semibold", color: textColor, children: text };
+    const obj8 = { variant: "footnote/semibold", color: textColor, children: text };
     items1[1] = timestampProducer(Text_Text.Text, obj8);
     obj7.children = items1;
-    return React5(View, obj7);
+    return metroImportDefault(View, obj7);
   }
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = 60 * DurationsDefault.Millis.SECOND;
 let closure_9 = Object.values(fn(5166).HexagonCampaignPerk);
 const createStyles = fn(5141);
@@ -95,7 +95,7 @@ export default function HexagonCampaignDaysLeftBadge(perk) {
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp6 = stateFromStores(7748)(memo, closure_8);
+  const tmp6 = stateFromStores(7764)(memo, closure_8);
   let num = 0;
   if (tmp6.hours > 0) {
     num = 1;
@@ -103,7 +103,7 @@ export default function HexagonCampaignDaysLeftBadge(perk) {
   const obj2 = {
     variant: perk.variant,
     renderIcon(color) {
-      return closure_1_6(perk(5860).ClockIcon, { size: "xxs", color });
+      return closure_1_6(perk(5874).ClockIcon, { size: "xxs", color });
     },
     text: null
   };
@@ -136,7 +136,7 @@ export function useHexagonCampaignDaysLeft(arg0) {
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp3 = stateFromStores(7748)(memo, closure_8);
+  const tmp3 = stateFromStores(7764)(memo, closure_8);
   let num = 0;
   if (tmp3.hours > 0) {
     num = 1;

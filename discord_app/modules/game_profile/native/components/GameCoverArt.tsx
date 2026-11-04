@@ -1,11 +1,11 @@
-// === Module 9503: GameCoverArt ===
+// === Module 9521: GameCoverArt ===
 
-// Module 9503 (GameCoverArt)
+// Module 9521 (GameCoverArt)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import useGameArtworkDefault from "useGameArtwork" /* 9504 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import useGameArtworkDefault from "useGameArtwork" /* 9522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -110,7 +110,7 @@ function GameCoverArtFallback(arg0) {
     obj2.style = items;
     obj2.accessible = accessible;
     obj2.accessibilityLabel = gameName;
-    const obj3 = { variant: "text-xxs/medium", lineClamp: 3, style: tmp.fallbackText, accessible: false, children: gameName };
+    const obj3 = { variant: "footnote/medium", lineClamp: 3, style: tmp.fallbackText, accessible: false, children: gameName };
     obj2.children = React4(Text_Text.Text, obj3);
     return React4(React3, obj2);
   } else {
@@ -152,7 +152,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const GameCoverArtSize = { SMALL: 0, [0]: "SMALL", LARGE: 1, [1]: "LARGE", COMPACT: 2, [2]: "COMPACT" };
-let closure_7 = { [GameCoverArtSize.SMALL]: { nameVariant: "text-xs/medium", nameLineClamp: 3, releaseYearVariant: "text-xxs/normal" }, [GameCoverArtSize.LARGE]: { nameVariant: "text-md/medium", nameLineClamp: 4, releaseYearVariant: "text-sm/normal" } };
+let closure_7 = { [GameCoverArtSize.SMALL]: { nameVariant: "body-xs/medium", nameLineClamp: 3, releaseYearVariant: "footnote/normal" }, [GameCoverArtSize.LARGE]: { nameVariant: "body-md/medium", nameLineClamp: 4, releaseYearVariant: "body-sm/normal" } };
 const createStyles = fn(5141);
 let obj3 = { container: { borderRadius: nativeDefault.radii.sm }, image: null, iconContainer: null, backdropContainer: null, backdrop: null, icon: null, fallback: null, compactFallback: null, fallbackText: null, spacer: null, placeholder: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
@@ -179,7 +179,7 @@ obj3.fallbackText = { textAlign: "center" };
 obj3.spacer = { flex: 1 };
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
 obj3.placeholder = {};
-const React6 = createStyles.createStyles(obj3);
+const React5 = createStyles.createStyles(obj3);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameCoverArt.tsx");
 

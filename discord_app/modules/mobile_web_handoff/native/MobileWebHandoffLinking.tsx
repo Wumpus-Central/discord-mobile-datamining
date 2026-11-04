@@ -1,9 +1,9 @@
-// === Module 7627: MobileWebHandoffLinking ===
+// === Module 7643: MobileWebHandoffLinking ===
 
-// Module 7627 (MobileWebHandoffLinking)
+// Module 7643 (MobileWebHandoffLinking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import FingerprintUtils from "FingerprintUtils" /* 1265 */;
-import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 7630 */;
+import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 7646 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -226,7 +226,7 @@ let closure_11 = async function _redirectDeveloperPortalWithHandoffToken(arg0) {
   })();
 };
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, MarketingURLs: metroRequire, Routes: closure_7 } = Constants);
+({ AnalyticEvents: hasOwnProperty, MarketingURLs: closure_6, Routes: metroImportDefault } = Constants);
 let c8 = "mweb-handoff";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx");

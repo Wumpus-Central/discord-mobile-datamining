@@ -1,14 +1,14 @@
-// === Module 20157: GuildSettingsModalGuildSpace ===
+// === Module 20273: GuildSettingsModalGuildSpace ===
 
-// Module 20157 (GuildSettingsModalGuildSpace)
+// Module 20273 (GuildSettingsModalGuildSpace)
 import nativeDefault from "native" /* 575 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
 import _modDef2571 from "module_2571" /* 2571 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9202 */;
-import ServerHubAnalytics from "ServerHubAnalytics" /* 19813 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9219 */;
+import ServerHubAnalytics from "ServerHubAnalytics" /* 19929 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9203 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9220 */;
 
 require = fn;
 function GuildSpaceSystemMessageSwitch(guild) {
@@ -26,7 +26,7 @@ function GuildSpaceSystemMessageSwitch(guild) {
   return closure_8(guild(settingType[10]).TableSwitchRow, obj);
 }
 const Constants = fn(1072);
-({ Permissions: metroRequire, SystemChannelFlags: closure_7 } = Constants);
+({ Permissions: closure_6, SystemChannelFlags: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -58,19 +58,19 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     obj6.title = intl.string(tmp2(1113).t["0JLdD3"]);
     const intl2 = tmp2(1113).intl;
     obj6.description = intl2.string(tmp2(1113).t.Xa1KEN);
-    const obj7 = { guild: stateFromStores, flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS, settingType: tmp2(19813).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES, label: null, subLabel: null, disabled: null };
+    const obj7 = { guild: stateFromStores, flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS, settingType: tmp2(19929).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES, label: null, subLabel: null, disabled: null };
     const intl3 = tmp2(1113).intl;
     obj7.label = intl3.string(_modDef2571.btBTIw);
     const intl4 = tmp2(1113).intl;
     obj7.subLabel = intl4.string(tmp2(1113).t.n3aRYQ);
     obj7.disabled = !stateFromStores1;
     const items4 = [closure_8(GuildSpaceSystemMessageSwitch, obj7), , ];
-    const obj8 = { guild: stateFromStores, flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS, settingType: tmp2(19813).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES, label: null, disabled: null };
+    const obj8 = { guild: stateFromStores, flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS, settingType: tmp2(19929).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES, label: null, disabled: null };
     const intl5 = tmp2(1113).intl;
     obj8.label = intl5.string(tmp2(1113).t["9tlK5J"]);
     obj8.disabled = !stateFromStores1;
     items4[1] = closure_8(GuildSpaceSystemMessageSwitch, obj8);
-    const obj9 = { guild: stateFromStores, flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS, settingType: tmp2(19813).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES, label: null, subLabel: null, disabled: null };
+    const obj9 = { guild: stateFromStores, flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS, settingType: tmp2(19929).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES, label: null, subLabel: null, disabled: null };
     const intl6 = tmp2(1113).intl;
     obj9.label = intl6.string(_modDef2571["5xxUI2"]);
     const intl7 = tmp2(1113).intl;
@@ -78,9 +78,9 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     obj9.disabled = !stateFromStores1;
     items4[2] = closure_8(GuildSpaceSystemMessageSwitch, obj9);
     obj6.children = items4;
-    obj5.children = closure_9(tmp2(7186).TableRowGroup, obj6);
-    obj4.children = closure_8(tmp2(6147).Stack, obj5);
-    const items5 = [closure_8(tmp2(8301).Form, obj4), closure_8(tmp2(5729).NavScrim, {})];
+    obj5.children = closure_9(tmp2(7201).TableRowGroup, obj6);
+    obj4.children = closure_8(tmp2(6162).Stack, obj5);
+    const items5 = [closure_8(tmp2(8317).Form, obj4), closure_8(tmp2(5742).NavScrim, {})];
     obj3.children = items5;
     tmp6 = closure_9(closure_10, obj3);
   }

@@ -1,17 +1,17 @@
-// === Module 10928: GroupDMRow ===
+// === Module 10976: GroupDMRow ===
 
-// Module 10928 (GroupDMRow)
+// Module 10976 (GroupDMRow)
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useChannelNameDefault from "useChannelName" /* 5772 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7100 */;
-import TableRow from "TableRow" /* 7101 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10929 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 10930 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useChannelNameDefault from "useChannelName" /* 5786 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7115 */;
+import TableRow from "TableRow" /* 7116 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10977 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 10978 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
@@ -47,8 +47,8 @@ export default function GroupDMRow(channel) {
   obj3.disabled = flag2;
   let tmp5Result;
   if (null != recipientsLabel) {
-    const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
-    tmp5Result = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel });
+    const obj4 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
+    tmp5Result = jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel });
   }
   obj3.subLabel = tmp5Result;
   obj3.icon = tmp8;

@@ -1,14 +1,14 @@
-// === Module 9157: useCreateChannelSubmit ===
+// === Module 9174: useCreateChannelSubmit ===
 
-// Module 9157 (useCreateChannelSubmit)
-import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 9158 */;
+// Module 9174 (useCreateChannelSubmit)
+import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 9175 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const Constants = fn(1072);
-({ ChannelTypes: closure_7, Permissions: closure_8 } = Constants);
+({ ChannelTypes: metroImportDefault, Permissions: closure_8 } = Constants);
 const CreateChannelMode = { PREMIUM_CHANNEL: 0, [0]: "PREMIUM_CHANNEL" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useCreateChannelSubmit.tsx");

@@ -1,10 +1,10 @@
-// === Module 20028: WarningNotice ===
+// === Module 20144: WarningNotice ===
 
-// Module 20028 (WarningNotice)
+// Module 20144 (WarningNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7212 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7227 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5141);
 let obj2 = { container: { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 }, horizontalContainer: { flexDirection: "row", alignItems: "center" }, message: { flex: 1, marginStart: 10, textAlignVertical: "center" }, actionButtonWrapper: { marginTop: 24, alignSelf: "center", width: "100%" }, containerYellow: null, alertIcon: null };
 const obj3 = { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 };
-obj2.containerYellow = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };
+obj2.containerYellow = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };
 obj2.alertIcon = { alignSelf: "flex-start", width: 20, height: 20 };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function WarningNotice(arg0) {
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.horizontalContainer, children: null };
-  const items1 = [React4(CircleErrorIcon.CircleErrorIcon, { style: tmp.alertIcon, size: "custom", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, secondaryColor: nativeDefault.colors.WHITE }), React4(Text_Text.Text, { style: tmp.message, variant: "text-sm/medium", color: "text-feedback-warning", children: notice })];
+  const items1 = [React4(CircleErrorIcon.CircleErrorIcon, { style: tmp.alertIcon, size: "custom", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, secondaryColor: nativeDefault.colors.WHITE }), React4(Text_Text.Text, { style: tmp.message, variant: "body-sm/medium", color: "text-feedback-warning", children: notice })];
   obj2.children = items1;
   const items2 = [hasOwnProperty(View, obj2), ];
   let tmp4Result = null != onClick && null != ctaLabel;

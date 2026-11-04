@@ -1,9 +1,9 @@
-// === Module 9329: DiscordTag ===
+// === Module 9346: DiscordTag ===
 
-// Module 9329 (DiscordTag)
+// Module 9346 (DiscordTag)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import BotTagDefault from "BotTag" /* 9330 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import BotTagDefault from "BotTag" /* 9347 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,17 +25,17 @@ export default function DiscordTag(arg0) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   if (null != nick) {
-    const obj2 = { variant: "text-md/semibold", maxFontSizeMultiplier: 2, style: nicknameStyle, lineClamp: 1, children: nick };
+    const obj2 = { variant: "body-md/semibold", maxFontSizeMultiplier: 2, style: nicknameStyle, lineClamp: 1, children: nick };
     let tmp2Result2 = React4(Text_Text.Text, obj2);
   } else {
     tmp2Result2 = null;
     if (null != user) {
-      const obj3 = { variant: "text-md/semibold", style: usernameStyle, lineClamp: 1, maxFontSizeMultiplier: 2, children: null };
+      const obj3 = { variant: "body-md/semibold", style: usernameStyle, lineClamp: 1, maxFontSizeMultiplier: 2, children: null };
       items = [user.toString(), ];
       const hasUniqueUsernameResult = user.hasUniqueUsername();
       let tmp2Result = !hasUniqueUsernameResult;
       if (!hasUniqueUsernameResult) {
-        const obj4 = { variant: "text-md/semibold", color: "text-muted", style: discriminatorStyle, children: null };
+        const obj4 = { variant: "body-md/semibold", color: "text-muted", style: discriminatorStyle, children: null };
         const items1 = ["#", user.discriminator];
         obj4.children = items1;
         tmp2Result = hasOwnProperty(Text_Text.Text, obj4);

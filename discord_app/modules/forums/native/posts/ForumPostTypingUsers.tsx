@@ -1,6 +1,6 @@
-// === Module 13913: ForumPostTypingUsers ===
+// === Module 13999: ForumPostTypingUsers ===
 
-// Module 13913 (ForumPostTypingUsers)
+// Module 13999 (ForumPostTypingUsers)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -88,7 +88,7 @@ export default function ForumPostTypingUsers(hasUnreads) {
       obj6.style = items3;
       obj6.children = closure_4(tmp2(tmp3[9]).Ellipsis, {});
       items2[1] = closure_4(tmp4(tmp3[8]).View, obj6);
-      const obj7 = { variant: "text-sm/semibold", color: str, style: tmp.typingText, lineClamp: 1, children: tmp5Result };
+      const obj7 = { variant: "body-sm/semibold", color: str, style: tmp.typingText, lineClamp: 1, children: tmp5Result };
       items2[2] = closure_4(tmp2(tmp3[10]).Text, obj7);
       obj5.children = items2;
       tmp14 = closure_5(guildId, obj5);

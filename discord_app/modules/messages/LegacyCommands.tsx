@@ -1,20 +1,20 @@
-// === Module 13889: LegacyCommands ===
+// === Module 13975: LegacyCommands ===
 
-// Module 13889 (LegacyCommands)
+// Module 13975 (LegacyCommands)
 import UserSettings from "UserSettings" /* 4966 */;
 import ReactionUtils from "ReactionUtils" /* 5085 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7760 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8529 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9906 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7776 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8546 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9924 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 6916 */;
-import MessageStore from "MessageStore" /* 6181 */;
+import EmojiStore from "EmojiStore" /* 6931 */;
+import MessageStore from "MessageStore" /* 6196 */;
 import t_mod from "module_2072" /* 2072 */;
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, MARKDOWN_SPOILER_WRAPPER: closure_7, ME: closure_8 } = Constants);
+({ AnalyticEvents: closure_6, MARKDOWN_SPOILER_WRAPPER: metroImportDefault, ME: closure_8 } = Constants);
 const re9 = /\\([*?+/])/g;
 const COMMANDS = {
   tts: {
@@ -53,7 +53,7 @@ const COMMANDS = {
       channel = channel.channel;
       if (null != channel.guild_id) {
         const obj = ChangeNicknameActionCreatorsDefault;
-        obj.changeNickname(channel.guild_id, channel.id, React6, arg0);
+        obj.changeNickname(channel.guild_id, channel.id, React5, arg0);
         return { content: "" };
       }
     }
@@ -134,8 +134,8 @@ obj3.action = function action(str, channel) {
 };
 COMMANDS.searchReplace = obj3;
 COMMANDS.spoiler = {
-  action(arg0) {
-    const obj = { content: React5(arg0).trim() };
+  action(View) {
+    const obj = { content: metroImportDefault(View).trim() };
     return obj;
   }
 };

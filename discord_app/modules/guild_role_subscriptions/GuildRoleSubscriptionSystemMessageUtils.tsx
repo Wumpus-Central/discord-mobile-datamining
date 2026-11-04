@@ -1,10 +1,10 @@
-// === Module 8573: GuildRoleSubscriptionSystemMessageUtils ===
+// === Module 8590: GuildRoleSubscriptionSystemMessageUtils ===
 
-// Module 8573 (GuildRoleSubscriptionSystemMessageUtils)
+// Module 8590 (GuildRoleSubscriptionSystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5880 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7549 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5894 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7565 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -19,7 +19,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
   }
   let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
   if (roleSubscriptionOnClickHandler === undefined) {
-    roleSubscriptionOnClickHandler = React7;
+    roleSubscriptionOnClickHandler = React6;
   }
   const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
   guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
@@ -57,8 +57,8 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     return obj;
   }
 }
-const GuildRoleSubscriptionSystemMessageConstants = fn(8574);
-({ getJoinButtonLabels: hasOwnProperty, getRenewButtonLabels: metroRequire, STICKERS: closure_7 } = GuildRoleSubscriptionSystemMessageConstants);
+const GuildRoleSubscriptionSystemMessageConstants = fn(8591);
+({ getJoinButtonLabels: hasOwnProperty, getRenewButtonLabels: closure_6, STICKERS: metroImportDefault } = GuildRoleSubscriptionSystemMessageConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
 const size = fn(2);
@@ -103,7 +103,7 @@ export function getRoleSubscriptionPurchaseSystemMessageContentMobile(usernameOn
   }
   let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
   if (roleSubscriptionOnClickHandler === undefined) {
-    roleSubscriptionOnClickHandler = React7;
+    roleSubscriptionOnClickHandler = React6;
   }
   const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
   guild = GuildStore.getGuild(usernameOnClickHandler.guildId);

@@ -1,11 +1,11 @@
-// === Module 18471: useChannelNoticeRows ===
+// === Module 18565: useChannelNoticeRows ===
 
-// Module 18471 (useChannelNoticeRows)
+// Module 18565 (useChannelNoticeRows)
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildProgressStore from "GuildProgressStore" /* 14179 */;
+import GuildProgressStore from "GuildProgressStore" /* 14265 */;
 import GuildChannelStore from "GuildChannelStore" /* 5071 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1385 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_9 = fn(7837).ChannelListChannelNoticeRow;
+let closure_9 = fn(7853).ChannelListChannelNoticeRow;
 const MFALevels = fn(1072).MFALevels;
 const DismissibleContentConstants = fn(4987);
 ({ ContentDismissActionType: closure_11, DismissibleContentGroupName: closure_12 } = DismissibleContentConstants);

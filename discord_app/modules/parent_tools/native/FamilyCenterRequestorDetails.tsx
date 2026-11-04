@@ -1,11 +1,11 @@
-// === Module 16969: FamilyCenterRequestorDetails ===
+// === Module 17061: FamilyCenterRequestorDetails ===
 
-// Module 16969 (FamilyCenterRequestorDetails)
+// Module 17061 (FamilyCenterRequestorDetails)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import useUserLinks from "useUserLinks" /* 8493 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 16939 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import useUserLinks from "useUserLinks" /* 8510 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 17031 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export default function FamilyCenterRequestorDetails(otherUser) {
   const obj3 = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: otherUser.avatarDecoration };
   items = [React4(native.Avatar, obj3), ];
   const obj4 = { style: tmp.detailsContainer, children: null };
-  const items1 = [React4(FamilyCenterUsernameHeaderDefault, { user: otherUser }), React4(Text_Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: linkTimestampText })];
+  const items1 = [React4(FamilyCenterUsernameHeaderDefault, { user: otherUser }), React4(Text_Text.Text, { variant: "body-xs/semibold", color: "text-muted", children: linkTimestampText })];
   obj4.children = items1;
   items[1] = hasOwnProperty(View, obj4);
   obj2.children = items;

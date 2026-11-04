@@ -1,17 +1,17 @@
-// === Module 7990: utils/QuestUtils ===
+// === Module 8006: utils/QuestUtils ===
 
-// Module 7990 (utils/QuestUtils)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6844 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7992 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7993 */;
-import QuestType2 from "QuestType" /* 7994 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7995 */;
+// Module 8006 (utils/QuestUtils)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6859 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8008 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 8009 */;
+import QuestType2 from "QuestType" /* 8010 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import GameConsoleStore from "GameConsoleStore" /* 5899 */;
 import GuildStore from "GuildStore" /* 5012 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import VoiceStateStore from "VoiceStateStore" /* 5799 */;
-import QuestUtmStore from "QuestUtmStore" /* 7991 */;
+import VoiceStateStore from "VoiceStateStore" /* 5813 */;
+import QuestUtmStore from "QuestUtmStore" /* 8007 */;
 
 require = fn;
 function isSponsoredPlayQuest(quest) {
@@ -29,14 +29,14 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(6901);
+const QuestConstants = fn(6916);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: closure_10, TaskFilterTypes: closure_11 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
 export { isSponsoredPlayQuest };
 export function isPlayAnyActivityQuest(quest) {
-  return QuestTaskUtils.getPlayActivityApplicationId(quest) === React6;
+  return QuestTaskUtils.getPlayActivityApplicationId(quest) === React5;
 }
 export { hasVariant };
 export function canLaunchActivity(quest) {

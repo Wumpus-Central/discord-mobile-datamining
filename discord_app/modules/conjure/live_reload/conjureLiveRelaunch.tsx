@@ -1,7 +1,7 @@
-// === Module 11082: conjureLiveRelaunch ===
+// === Module 11131: conjureLiveRelaunch ===
 
-// Module 11082 (conjureLiveRelaunch)
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11032 */;
+// Module 11131 (conjureLiveRelaunch)
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11081 */;
 import size from "module_2" /* 2 */;
 
 const map = new Map();

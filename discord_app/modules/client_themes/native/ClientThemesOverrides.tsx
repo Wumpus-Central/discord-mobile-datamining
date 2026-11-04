@@ -1,8 +1,8 @@
-// === Module 9952: ClientThemesOverrides ===
+// === Module 9970: ClientThemesOverrides ===
 
-// Module 9952 (ClientThemesOverrides)
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5315 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9953 */;
+// Module 9970 (ClientThemesOverrides)
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5316 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9971 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,19 +1,19 @@
-// === Module 12521: useActivityShelfItem ===
+// === Module 12602: useActivityShelfItem ===
 
-// Module 12521 (useActivityShelfItem)
+// Module 12602 (useActivityShelfItem)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import Server from "Server" /* 2121 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5062 */;
-import getPlatformDefault from "getPlatform" /* 5802 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7003 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7446 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7450 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11069 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11925 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11926 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11979 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12522 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12523 */;
+import getPlatformDefault from "getPlatform" /* 5816 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7018 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7466 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11118 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11984 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11985 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12038 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12603 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12604 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
 

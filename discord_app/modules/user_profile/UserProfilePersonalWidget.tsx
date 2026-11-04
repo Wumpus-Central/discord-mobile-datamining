@@ -1,13 +1,13 @@
-// === Module 7902: UserProfilePersonalWidget ===
+// === Module 7918: UserProfilePersonalWidget ===
 
-// Module 7902 (UserProfilePersonalWidget)
+// Module 7918 (UserProfilePersonalWidget)
 import _modDef1342 from "module_1342" /* 1342 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2112 */;
 import dismissible_content from "dismissible_content" /* 4974 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
-import WidgetType from "WidgetType" /* 7897 */;
-import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7903 */;
+import WidgetType from "WidgetType" /* 7913 */;
+import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7919 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;

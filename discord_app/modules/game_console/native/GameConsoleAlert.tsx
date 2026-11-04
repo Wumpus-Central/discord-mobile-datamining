@@ -1,13 +1,13 @@
-// === Module 12122: GameConsoleAlert ===
+// === Module 12181: GameConsoleAlert ===
 
-// Module 12122 (GameConsoleAlert)
+// Module 12181 (GameConsoleAlert)
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5885 */;
+import GameConsoleStore from "GameConsoleStore" /* 5899 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ errorCodeText: { marginTop: 16 }, alertBody: { marginTop: 0 }, container: { flex: 1 }, body: { marginTop: 16 } });
 const size = fn(2);
@@ -29,13 +29,13 @@ export function SelfDismissibleAlertBody(errorCodeMessage) {
   let tmp6 = body;
   if (null != errorCodeMessage) {
     const obj2 = { style: tmp.container, children: null };
-    const obj3 = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
+    const obj3 = { maxFontSizeMultiplier: 1, variant: "body-md/normal", style: null, children: null };
     const items2 = [, ];
     ({ body: arr3[0], alertBody: arr3[1] } = tmp);
     obj3.style = items2;
     obj3.children = body;
     const items3 = [closure_5(dismissCallback(tmp3[6]).Text, obj3), ];
-    const obj4 = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
+    const obj4 = { maxFontSizeMultiplier: 1, variant: "body-md/normal", style: null, children: null };
     const items4 = [, ];
     ({ body: arr5[0], errorCodeText: arr5[1] } = tmp);
     obj4.style = items4;

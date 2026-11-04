@@ -1,24 +1,24 @@
-// === Module 13543: ForwardPreview ===
+// === Module 13627: ForwardPreview ===
 
-// Module 13543 (ForwardPreview)
+// Module 13627 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
-import useThemeDefault from "useTheme" /* 5376 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FastImageDefault from "FastImage" /* 5837 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6207 */;
-import ImageIcon from "ImageIcon" /* 8783 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8834 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 9510 */;
-import ClipView from "ClipView" /* 9637 */;
-import ChatItemDefault from "ChatItem" /* 10016 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10665 */;
-import ImagesIcon2 from "ImagesIcon" /* 12939 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13544 */;
-import MosaicMediaType from "MosaicMediaType" /* 13545 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13547 */;
+import useThemeDefault from "useTheme" /* 5377 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FastImageDefault from "FastImage" /* 5851 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6222 */;
+import ImageIcon from "ImageIcon" /* 8800 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8851 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 9528 */;
+import ClipView from "ClipView" /* 9656 */;
+import ChatItemDefault from "ChatItem" /* 10064 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10713 */;
+import ImagesIcon2 from "ImagesIcon" /* 13021 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 13628 */;
+import MosaicMediaType from "MosaicMediaType" /* 13629 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 13631 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -59,7 +59,7 @@ function MessagePreview(content) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 56;
 const createStyles = fn(5141);
 let obj2 = { forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
@@ -207,7 +207,7 @@ export function ForwardPreview(message) {
       obj17.cutouts = items2;
       obj17.children = tmp6;
       const items3 = [hasOwnProperty(ClipViewDefault, obj17), ];
-      const obj18 = { style: tmp.overflowCount, variant: "text-xs/semibold", color: "text-default", children: null };
+      const obj18 = { style: tmp.overflowCount, variant: "body-xs/semibold", color: "text-default", children: null };
       const items4 = ["+", length - 1];
       obj18.children = items4;
       items3[1] = timestampProducer(Text_Text.Text, obj18);
@@ -220,7 +220,7 @@ export function ForwardPreview(message) {
   const obj22 = { style: tmp.contentWrapper, children: null };
   let tmp36Result = null != checkpointDataFromMessage;
   if (tmp36Result) {
-    const obj23 = { variant: "text-md/medium", children: checkpoint_CheckpointMessageComponentUtils.getCheckpointLabel(checkpointDataFromMessage) };
+    const obj23 = { variant: "body-md/medium", children: checkpoint_CheckpointMessageComponentUtils.getCheckpointLabel(checkpointDataFromMessage) };
     tmp36Result = hasOwnProperty(Text_Text.Text, obj23);
     const tmp2Result2 = checkpoint_CheckpointMessageComponentUtils;
   }
@@ -251,9 +251,9 @@ export function ForwardPreview(message) {
     const items7 = [tmp36Result6, ];
     let tmp36Result7 = null != tmp8;
     if (tmp36Result7) {
-      let str3 = "text-md/medium";
+      let str3 = "body-md/medium";
       if (hasContent) {
-        str3 = "text-sm/medium";
+        str3 = "body-sm/medium";
       }
       const obj27 = { variant: str3, color: "text-muted", children: tmp8 };
       tmp36Result7 = hasOwnProperty(Text_Text.Text, obj27);

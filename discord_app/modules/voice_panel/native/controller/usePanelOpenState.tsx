@@ -1,17 +1,17 @@
-// === Module 19360: usePanelOpenState ===
+// === Module 19464: usePanelOpenState ===
 
-// Module 19360 (usePanelOpenState)
+// Module 19464 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoicePanelStore from "VoicePanelStore" /* 6995 */;
+import VoicePanelStore from "VoicePanelStore" /* 7010 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11360).VoicePanelModes;
+const VoicePanelModes = fn(11410).VoicePanelModes;
 const Constants = fn(1072);
-({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
+({ ComponentActions: metroImportDefault, Routes: closure_8 } = Constants);
 let closure_9 = { code: "(function usePanelOpenStateTsx1(){let[connected]=this.__closure;return{connected:connected.get()};})" };
 let closure_10 = { code: "(function usePanelOpenStateTsx2(props,previous){let[scheduleOnRN,doCloseChannel]=this.__closure;const isConnected=props.connected;const wasConnected=(previous===null||previous===void 0?void 0:previous.connected)===true;if(wasConnected&&!isConnected){scheduleOnRN(doCloseChannel);}})" };
 const size = fn(2);
@@ -88,10 +88,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items4);
-  [first, closure_5] = first.useState(() => _undefined2(12203).getHistory().location.pathname);
+  [first, closure_5] = first.useState(() => _undefined2(12262).getHistory().location.pathname);
   const items5 = [arg0, first];
   const effect1 = first.useEffect(() => {
-    closure_0 = _undefined2(12203).addRouteChangeListener((pathname) => {
+    closure_0 = _undefined2(12262).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_5(tmp);
         const obj2 = { path: null };
@@ -107,10 +107,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            c1(11066)();
+            c1(11115)();
           }
         }
-        obj3 = c0(12196);
+        obj3 = c0(12255);
       }
     });
     return () => {

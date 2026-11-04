@@ -1,8 +1,8 @@
-// === Module 15998: ToggleButton ===
+// === Module 16088: ToggleButton ===
 
-// Module 15998 (ToggleButton)
-import BaseTextButton from "BaseTextButton" /* 5755 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 12919 */;
+// Module 16088 (ToggleButton)
+import BaseTextButton from "BaseTextButton" /* 5769 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 13001 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ let merged = Object.assign(function ToggleButton(pressed) {
   }
   obj2.variant = str;
   return jsx(BaseTextButton.BaseTextButton, {});
-}, { Icon: fn(5755).BaseTextButton.Icon });
+}, { Icon: fn(5769).BaseTextButton.Icon });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/ToggleButton.native.tsx");
 

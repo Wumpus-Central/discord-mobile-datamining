@@ -1,6 +1,6 @@
-// === Module 18147: formatDateForAPI ===
+// === Module 18244: formatDateForAPI ===
 
-// Module 18147 (formatDateForAPI)
+// Module 18244 (formatDateForAPI)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/date/formatDateForAPI.tsx");

@@ -1,6 +1,6 @@
-// === Module 19554: ExistingUserAgeGate ===
+// === Module 19658: ExistingUserAgeGate ===
 
-// Module 19554 (ExistingUserAgeGate)
+// Module 19658 (ExistingUserAgeGate)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -13,7 +13,7 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1097);
 ({ AgeGateAnalyticAction: closure_8, AgeGateSource: closure_9 } = AgeGateConstants);
-let closure_10 = fn(19550).ExistingUserAgeGateScreens;
+let closure_10 = fn(19654).ExistingUserAgeGateScreens;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HelpdeskArticles: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -255,7 +255,7 @@ export default function ExistingUserAgeGate(source) {
       let obj3 = { top: true, style: tmp.container, children: null };
       let obj5 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: stringResult1 };
       const items3 = [closure_13(require("Text/Text").Heading, obj5), , , ];
-      let obj7 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: stringResult };
+      let obj7 = { style: tmp.body, variant: "body-md/medium", color: "interactive-text-default", children: stringResult };
       items3[1] = closure_13(require("Text/Text").Text, obj7);
       const obj8 = { style: tmp.inputGroup, ref, label: null, date: null, onChangeDate: null, error: null };
       const intl5 = require("util").intl;

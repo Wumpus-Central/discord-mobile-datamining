@@ -1,27 +1,27 @@
-// === Module 11782: ChannelMembersActionSheet ===
+// === Module 11838: ChannelMembersActionSheet ===
 
-// Module 11782 (ChannelMembersActionSheet)
+// Module 11838 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import BottomSheetModal from "BottomSheetModal" /* 5398 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import Pressables from "Pressables" /* 7106 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7441 */;
-import SettingsIcon from "SettingsIcon" /* 7685 */;
-import InlineNotice from "InlineNotice" /* 8149 */;
-import RowButton from "RowButton" /* 8303 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8323 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9159 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9186 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 11110 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11781 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11783 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11784 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import BottomSheetModal from "BottomSheetModal" /* 5400 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import Pressables from "Pressables" /* 7121 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
+import SettingsIcon from "SettingsIcon" /* 7701 */;
+import InlineNotice from "InlineNotice" /* 8165 */;
+import RowButton from "RowButton" /* 8319 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8339 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9176 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9203 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 11158 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11837 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11839 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11840 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4990 */;
 import GuildMemberStore from "GuildMemberStore" /* 5053 */;
@@ -153,7 +153,7 @@ export default function ChannelMembersActionSheet(arg0) {
         };
         obj15.renderSectionHeader = function renderSectionHeader(section) {
           ({ title, data } = section.section);
-          const obj = { style: sectionRowWrapper.sectionRowWrapper, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: null };
+          const obj = { style: sectionRowWrapper.sectionRowWrapper, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "body-sm/semibold", color: "interactive-text-default", children: null };
           const intl = util.intl;
           obj.children = intl.format(util.t.u8CWLl, { numberOfItems: data.length, sectionTitle: title });
           return closure_2_11(Text_Text.Text, obj);

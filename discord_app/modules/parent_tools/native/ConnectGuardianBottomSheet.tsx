@@ -1,24 +1,24 @@
-// === Module 16926: ConnectGuardianBottomSheet ===
+// === Module 17018: ConnectGuardianBottomSheet ===
 
-// Module 16926 (ConnectGuardianBottomSheet)
+// Module 17018 (ConnectGuardianBottomSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 16927 */;
-import ConnectGuardianCard from "ConnectGuardianCard" /* 16928 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 17019 */;
+import ConnectGuardianCard from "ConnectGuardianCard" /* 17020 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7840).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_6 = fn(7856).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 }, info: null, centered: null, cardContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
@@ -49,16 +49,16 @@ export default function ConnectGuardianBottomSheet(arg0) {
     title = intl.string(_modDef2667.aCUVfL);
   }
   obj5.children = title;
-  const items2 = [React5(Text_Text.Text, obj5), ];
-  const obj6 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
+  const items2 = [metroImportDefault(Text_Text.Text, obj5), ];
+  const obj6 = { style: tmp.centered, variant: "body-md/medium", color: "text-default", children: null };
   if (body == null) {
     const intl2 = util.intl;
     body = intl2.format(_modDef2667["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   }
   obj6.children = body;
-  items2[1] = React5(Text_Text.Text, obj6);
+  items2[1] = metroImportDefault(Text_Text.Text, obj6);
   obj4.children = items2;
-  const items3 = [React6(View, obj4), , ];
+  const items3 = [React5(View, obj4), , ];
   const obj7 = { style: tmp.cardContainer, children: null };
   if (stateFromStores == null) {
     stateFromStores = linkCode;
@@ -70,14 +70,14 @@ export default function ConnectGuardianBottomSheet(arg0) {
   const obj9 = { startExpanded: true, children: null };
   obj8.expiresAt = stateFromStores1;
   obj8.onRefresh = onRefresh;
-  obj7.children = React5(ConnectGuardianCard.ConnectGuardianCard, obj8);
-  items3[1] = React5(View, obj7);
+  obj7.children = metroImportDefault(ConnectGuardianCard.ConnectGuardianCard, obj8);
+  items3[1] = metroImportDefault(View, obj7);
   const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl3 = util.intl;
   obj10.text = intl3.string(_modDef2667.Hsm5IF);
   obj10.onPress = callback;
-  items3[2] = React5(components_Button_Button.Button, obj10);
+  items3[2] = metroImportDefault(components_Button_Button.Button, obj10);
   obj3.children = items3;
-  obj9.children = React6(View, obj3);
-  return React5(Sheet_BottomSheet.BottomSheet, obj9);
+  obj9.children = React5(View, obj3);
+  return metroImportDefault(Sheet_BottomSheet.BottomSheet, obj9);
 };

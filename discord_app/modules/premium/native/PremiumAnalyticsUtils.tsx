@@ -1,13 +1,13 @@
-// === Module 10690: PremiumAnalyticsUtils ===
+// === Module 10738: PremiumAnalyticsUtils ===
 
-// Module 10690 (PremiumAnalyticsUtils)
+// Module 10738 (PremiumAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
-({ SubscriptionTypes: c3, PurchaseTypeToAnalyticsPaymentType: closure_4, PurchaseTypes: hasOwnProperty, AnalyticEvents: metroRequire } = Constants);
+({ SubscriptionTypes: c3, PurchaseTypeToAnalyticsPaymentType: closure_4, PurchaseTypes: hasOwnProperty, AnalyticEvents: closure_6 } = Constants);
 let obj = { WHAT_YOU_LOSE: 1, [1]: "WHAT_YOU_LOSE", CONFIRM: 2, [2]: "CONFIRM", PREVIEW: 3, [3]: "PREVIEW", DOWNGRADE_TO_TIER_0: 4, [4]: "DOWNGRADE_TO_TIER_0", MOBILE_SUBSCRIPTION_MANAGE: 5, [5]: "MOBILE_SUBSCRIPTION_MANAGE" };
 const result = size.fileFinishedImporting("modules/premium/native/PremiumAnalyticsUtils.tsx");
 

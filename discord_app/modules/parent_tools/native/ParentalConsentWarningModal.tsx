@@ -1,26 +1,26 @@
-// === Module 19739: ParentalConsentWarningModal ===
+// === Module 19855: ParentalConsentWarningModal ===
 
-// Module 19739 (ParentalConsentWarningModal)
+// Module 19855 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4975 */;
-import RootNavigationRef from "RootNavigationRef" /* 5322 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6864 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6866 */;
-import openUserSettings from "openUserSettings" /* 7687 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7841 */;
+import RootNavigationRef from "RootNavigationRef" /* 5323 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6881 */;
+import openUserSettings from "openUserSettings" /* 7703 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7857 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7839 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7840);
-({ FamilyCenterSubPages: metroRequire, UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
+const FamilyCenterConstants = fn(7856);
+({ FamilyCenterSubPages: closure_6, UserLinkStatus: metroImportDefault, UserLinkType: closure_8 } = FamilyCenterConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, UserSettingsSections: closure_10 } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
@@ -98,7 +98,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       ModalDispatchQueueDefault.enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19740, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19856, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);
@@ -122,7 +122,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
   obj5.style = items3;
   const obj6 = { spacing: require("native").space.PX_16, children: null };
   let obj = daysRemaining(callback[15]);
-  const items4 = [closure_12(View, { style: tmp.illustration, children: closure_12(daysRemaining(callback[26]).FamilyKeysSpotIllustration, { accessible: false }) }), closure_12(daysRemaining(callback[27]).Text, { variant: "heading-lg/semibold", color: "text-default", style: tmp.title, accessibilityRole: "header", children: stringResult }), closure_12(daysRemaining(callback[27]).Text, { variant: "text-md/medium", color: "text-default", style: tmp.body, children: stringResult1 }), ];
+  const items4 = [closure_12(View, { style: tmp.illustration, children: closure_12(daysRemaining(callback[26]).FamilyKeysSpotIllustration, { accessible: false }) }), closure_12(daysRemaining(callback[27]).Text, { variant: "heading-lg/semibold", color: "text-default", style: tmp.title, accessibilityRole: "header", children: stringResult }), closure_12(daysRemaining(callback[27]).Text, { variant: "body-md/medium", color: "text-default", style: tmp.body, children: stringResult1 }), ];
   const obj10 = { spacing: require("native").space.PX_8, children: null };
   const obj11 = { size: "lg", variant: "primary", grow: true, text: null, onPress: null };
   const intl3 = tmp4(tmp3[15]).intl;

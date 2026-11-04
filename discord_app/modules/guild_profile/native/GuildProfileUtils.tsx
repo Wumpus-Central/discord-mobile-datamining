@@ -1,9 +1,9 @@
-// === Module 9429: guild_profile/GuildProfileUtils ===
+// === Module 9447: guild_profile/GuildProfileUtils ===
 
-// Module 9429 (guild_profile/GuildProfileUtils)
+// Module 9447 (guild_profile/GuildProfileUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import tinycolorDefault from "tinycolor" /* 7854 */;
-import useAvatarColor from "useAvatarColor" /* 8839 */;
+import tinycolorDefault from "tinycolor" /* 7870 */;
+import useAvatarColor from "useAvatarColor" /* 8856 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
 

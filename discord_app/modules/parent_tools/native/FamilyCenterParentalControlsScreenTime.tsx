@@ -1,6 +1,6 @@
-// === Module 16982: FamilyCenterParentalControlsScreenTime ===
+// === Module 17074: FamilyCenterParentalControlsScreenTime ===
 
-// Module 16982 (FamilyCenterParentalControlsScreenTime)
+// Module 17074 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
@@ -17,10 +17,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(11146).getScheduleRuleDateRange(rule);
-  let obj = rule(11146);
-  const obj2 = rule(11146);
-  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(11146).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const scheduleRuleDateRange = rule(11194).getScheduleRuleDateRange(rule);
+  let obj = rule(11194);
+  const obj2 = rule(11194);
+  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(11194).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1113).intl;
   const string = intl.string;
   const tmp4 = _modDef2667;
@@ -29,7 +29,7 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj3.trailing = closure_5(rule(5747).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
+  obj3.trailing = closure_5(rule(5761).Text, { variant: "body-sm/medium", color: "text-subtle", children: stringResult });
   obj3.arrow = !readOnly;
   let fn;
   if (!readOnly) {
@@ -41,11 +41,11 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(7101).TableRow, obj3);
+  return closure_5(rule(7116).TableRow, obj3);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24 }, container: null };
 let obj2 = { paddingTop: nativeDefault.space.PX_24 };
 obj.container = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
@@ -81,7 +81,7 @@ export default function FamilyCenterParentalControlsScreenTime(readOnly) {
   let tmp6 = null;
   if (null != id) {
     const obj3 = { style: tmp.container, children: null };
-    const obj4 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.header, children: null };
+    const obj4 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.header, children: null };
     const intl = tmp2(tmp3[8]).intl;
     obj4.children = intl.string(require("module_2667")["72CmJd"]);
     items = [closure_5(tmp2(tmp3[7]).Text, obj4), ];

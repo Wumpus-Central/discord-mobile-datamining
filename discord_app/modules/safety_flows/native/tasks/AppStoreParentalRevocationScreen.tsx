@@ -1,24 +1,24 @@
-// === Module 20255: AppStoreParentalRevocationScreen ===
+// === Module 20371: AppStoreParentalRevocationScreen ===
 
-// Module 20255 (AppStoreParentalRevocationScreen)
+// Module 20371 (AppStoreParentalRevocationScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2963 from "module_2963" /* 2963 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import LinkingDefault from "Linking" /* 5829 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import ModalScreen from "ModalScreen" /* 8096 */;
-import ModalContent from "ModalContent" /* 8097 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8285 */;
-import ModalFooter from "ModalFooter" /* 13344 */;
-import ModalActionButton from "ModalActionButton" /* 13556 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 20239 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import LinkingDefault from "Linking" /* 5843 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import ModalScreen from "ModalScreen" /* 8112 */;
+import ModalContent from "ModalContent" /* 8113 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8301 */;
+import ModalFooter from "ModalFooter" /* 13427 */;
+import ModalActionButton from "ModalActionButton" /* 13640 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 20355 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { content: { flexGrow: 1, width: "100%" }, upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" }, lowerHalf: { flex: 1 }, text: { textAlign: "center" }, body: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
@@ -40,11 +40,11 @@ export default function AppStoreParentalRevocationScreen() {
   obj6.children = intl.string(_modDef2963.Z87TFb);
   items = [hasOwnProperty(Text_Text.Text, obj6), ];
   const obj7 = { align: "center", spacing: nativeDefault.space.PX_16, style: tmp.body, children: null };
-  const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
+  const obj8 = { variant: "body-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(_modDef2963.VS98dM);
   const items1 = [hasOwnProperty(Text_Text.Text, obj8), ];
-  const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
+  const obj9 = { variant: "body-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl3 = util.intl;
   obj9.children = intl3.string(_modDef2963.BaI6L4);
   items1[1] = hasOwnProperty(Text_Text.Text, obj9);

@@ -1,15 +1,15 @@
-// === Module 9614: SocialLayerStorefrontEligibilityHooks ===
+// === Module 9633: SocialLayerStorefrontEligibilityHooks ===
 
-// Module 9614 (SocialLayerStorefrontEligibilityHooks)
+// Module 9633 (SocialLayerStorefrontEligibilityHooks)
 import initialize from "initialize" /* 504 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 9036 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9053 */;
 import noop from "module_19" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9615 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9634 */;
 import RunningGameStore from "RunningGameStore" /* 2142 */;
-import UserProfileStore from "UserProfileStore" /* 7896 */;
+import UserProfileStore from "UserProfileStore" /* 7912 */;
 import GuildStore from "GuildStore" /* 5012 */;
-import PresenceStore from "PresenceStore" /* 5881 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7530 */;
+import PresenceStore from "PresenceStore" /* 5895 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7546 */;
 
 const require = globalThis.__r;
 

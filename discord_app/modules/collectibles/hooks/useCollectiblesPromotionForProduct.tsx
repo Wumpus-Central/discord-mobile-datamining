@@ -1,8 +1,8 @@
-// === Module 15167: useCollectiblesPromotionForProduct ===
+// === Module 15247: useCollectiblesPromotionForProduct ===
 
-// Module 15167 (useCollectiblesPromotionForProduct)
+// Module 15247 (useCollectiblesPromotionForProduct)
 import Constants from "Constants" /* 1072 */;
-import CollectiblesPromotionUtils from "CollectiblesPromotionUtils" /* 15168 */;
+import CollectiblesPromotionUtils from "CollectiblesPromotionUtils" /* 15248 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = Constants.COLLECTIBLES_APPLICATION_ID;

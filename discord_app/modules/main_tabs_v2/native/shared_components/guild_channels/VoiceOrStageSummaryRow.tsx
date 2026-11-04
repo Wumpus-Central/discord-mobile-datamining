@@ -1,9 +1,9 @@
-// === Module 18879: guild_channels/VoiceOrStageSummaryRow ===
+// === Module 18982: guild_channels/VoiceOrStageSummaryRow ===
 
-// Module 18879 (guild_channels/VoiceOrStageSummaryRow)
+// Module 18982 (guild_channels/VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -56,7 +56,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
             items[1] = obj2;
             obj3.style = items;
             const obj4 = { style: closure_4.overflowCircle, children: null };
-            const obj5 = { variant: "text-xs/medium", children: null };
+            const obj5 = { variant: "body-xs/medium", children: null };
             const _HermesInternal = HermesInternal;
             obj5.children = "+" + tmp2 + 1;
             obj4.children = React4(Text_Text.Text, obj5);
@@ -90,9 +90,9 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj5.style = items3;
-    let obj6 = { size: tmp(tmp2[7]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_18880") };
+    let obj6 = { size: tmp(tmp2[7]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_18983") };
     const items4 = [closure_4(tmp(tmp2[7]).Icon, obj6), ];
-    let obj7 = { variant: "text-sm/semibold", style: { marginLeft: 4 }, children: audienceCount };
+    let obj7 = { variant: "body-sm/semibold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(tmp(tmp2[6]).Text, obj7);
     obj5.children = items4;
     obj4.children = closure_5(tmp6, obj5);

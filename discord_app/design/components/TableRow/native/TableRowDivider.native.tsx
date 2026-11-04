@@ -1,13 +1,13 @@
-// === Module 7098: TableRowDivider ===
+// === Module 7113: TableRowDivider ===
 
-// Module 7098 (TableRowDivider)
+// Module 7113 (TableRowDivider)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5719 */;
+import useToken from "useToken" /* 5732 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const TABLE_DIVIDER_WIDTH = fn(7099).TABLE_DIVIDER_WIDTH;
+const TABLE_DIVIDER_WIDTH = fn(7114).TABLE_DIVIDER_WIDTH;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles((arg0, arg1) => {

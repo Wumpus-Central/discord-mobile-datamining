@@ -1,9 +1,9 @@
-// === Module 17271: QuestGameLogotype ===
+// === Module 17363: QuestGameLogotype ===
 
-// Module 17271 (QuestGameLogotype)
+// Module 17363 (QuestGameLogotype)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,10 +11,10 @@ const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Image: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const obj = {};
-const merged = Object.assign(fn(5758).springSlow);
+const merged = Object.assign(fn(5772).springSlow);
 obj.overshootClamping = true;
 const createStyles = fn(5141);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };

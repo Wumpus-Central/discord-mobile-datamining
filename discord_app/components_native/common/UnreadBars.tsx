@@ -1,22 +1,22 @@
-// === Module 18581: UnreadBars ===
+// === Module 18682: UnreadBars ===
 
-// Module 18581 (UnreadBars)
+// Module 18682 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import HapticUtils from "HapticUtils" /* 5383 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5384 */;
-import TransitionGroup from "TransitionGroup" /* 14118 */;
+import HapticUtils from "HapticUtils" /* 5384 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5385 */;
+import TransitionGroup from "TransitionGroup" /* 14204 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import TextStyles from "TextStyles" /* 6843 */;
+import TextStyles from "TextStyles" /* 6858 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: closure_4, Animated: hasOwnProperty, TouchableWithoutFeedback: metroRequire } = get_ActivityIndicator);
+({ View: closure_4, Animated: hasOwnProperty, TouchableWithoutFeedback: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -151,10 +151,10 @@ prototype["render"] = function render() {
     stringResult = string(t.FCRiT3);
   }
   obj4.children = stringResult;
-  obj3.children = React6(native.LegacyText, obj4);
-  obj2.children = React6(React4, obj3);
-  obj.children = React6(RN.View, obj2);
-  return React6(timestampProducer, obj);
+  obj3.children = React5(native.LegacyText, obj4);
+  obj2.children = React5(React4, obj3);
+  obj.children = React5(RN.View, obj2);
+  return React5(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
 UnreadBar.contextType = fn(5207).ThemeContext;

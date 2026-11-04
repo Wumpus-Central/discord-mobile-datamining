@@ -1,6 +1,6 @@
-// === Module 20230: openSafetyFlow ===
+// === Module 20346: openSafetyFlow ===
 
-// Module 20230 (openSafetyFlow)
+// Module 20346 (openSafetyFlow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
 
@@ -163,13 +163,13 @@ let closure_6 = async function _openSafetyFlow() {
                                                       if (obj10.isAppStoreAgeSignalColdLaunch()) {
                                                         dependencyMap = 1;
                                                         c3 = 1;
-                                                        const obj5 = { value: tmp2(8271).getAppStoreConsentReinstatementProof(), done: false };
+                                                        const obj5 = { value: tmp2(8287).getAppStoreConsentReinstatementProof(), done: false };
                                                         return obj5;
                                                       } else {
                                                         c3 = 3;
                                                         return { value: "HermesInternal", done: null };
                                                       }
-                                                      obj10 = tmp2(8279);
+                                                      obj10 = tmp2(8295);
                                                     }
                                                   } else {
                                                     if (1 === tmp5) {
@@ -185,7 +185,7 @@ let closure_6 = async function _openSafetyFlow() {
                                                         if (null != closure_128_0) {
                                                           dependencyMap = 2;
                                                           c3 = 1;
-                                                          const obj8 = { value: tmp2(8272).reinstateAppStoreConsent(closure_128_0), done: false };
+                                                          const obj8 = { value: tmp2(8288).reinstateAppStoreConsent(closure_128_0), done: false };
                                                           return obj8;
                                                         }
                                                       }

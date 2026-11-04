@@ -1,23 +1,23 @@
-// === Module 19416: UserVideoFailed ===
+// === Module 19520: UserVideoFailed ===
 
-// Module 19416 (UserVideoFailed)
+// Module 19520 (UserVideoFailed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5909 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6035 */;
-import AVError from "AVError" /* 6067 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11906 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5923 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6050 */;
+import AVError from "AVError" /* 6082 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 11965 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const VideoToggleState = Constants.VideoToggleState;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 }, text: { textAlign: "center" }, button: { marginTop: 16, alignSelf: "center" } };
 let closure_7 = createStyles.createStyles(obj);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/UserVideoFailed.tsx");
@@ -31,11 +31,11 @@ export default function UserVideoFailed(arg0) {
   const merged1 = Object.assign(merged);
   items = [tmp2.container, style];
   obj2.style = items;
-  const obj3 = { variant: "text-md/semibold", color: "text-strong", style: tmp2.text, children: null };
+  const obj3 = { variant: "body-md/semibold", color: "text-strong", style: tmp2.text, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["z+mxvo"]);
   const items1 = [closure_5(Text_Text.Text, obj3), , ];
-  const obj4 = { variant: "text-sm/semibold", color: "text-muted", style: tmp2.text, selectable: true, children: null };
+  const obj4 = { variant: "body-sm/semibold", color: "text-muted", style: tmp2.text, selectable: true, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.formatToPlainString(util.t.ejOT95, { errorCode: AVError.getErrorInfo(avError).errorCode });
   items1[1] = closure_5(Text_Text.Text, obj4);

@@ -1,18 +1,18 @@
-// === Module 16512: conjureBackgroundFramePlatform ===
+// === Module 16604: conjureBackgroundFramePlatform ===
 
-// Module 16512 (conjureBackgroundFramePlatform)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5795 */;
-import transitionToChannel from "transitionToChannel" /* 5876 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11065 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 12388 */;
-import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 16513 */;
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16514 */;
-import FramesStore from "FramesStore" /* 6966 */;
+// Module 16604 (conjureBackgroundFramePlatform)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
+import transitionToChannel from "transitionToChannel" /* 5890 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11114 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 12453 */;
+import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 16605 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16606 */;
+import FramesStore from "FramesStore" /* 6981 */;
 
 require = fn;
-const ActivityPanelModes = fn(5777).ActivityPanelModes;
-const FramesConstants = fn(6967);
-({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire } = FramesConstants);
+const ActivityPanelModes = fn(5791).ActivityPanelModes;
+const FramesConstants = fn(6982);
+({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFramePlatform.native.tsx");
 

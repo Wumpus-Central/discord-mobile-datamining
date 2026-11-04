@@ -1,6 +1,6 @@
-// === Module 15008: RequestToStreamConstants ===
+// === Module 15088: RequestToStreamConstants ===
 
-// Module 15008 (RequestToStreamConstants)
+// Module 15088 (RequestToStreamConstants)
 import DurationsDefault from "Durations" /* 1089 */;
 
 const result = 10 * DurationsDefault.Millis.MINUTE;

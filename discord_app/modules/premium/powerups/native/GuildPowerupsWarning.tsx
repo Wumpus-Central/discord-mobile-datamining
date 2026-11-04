@@ -1,8 +1,8 @@
-// === Module 14265: GuildPowerupsWarning ===
+// === Module 14351: GuildPowerupsWarning ===
 
-// Module 14265 (GuildPowerupsWarning)
+// Module 14351 (GuildPowerupsWarning)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,8 +12,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" }, contentContainer: null, warningText: null, text: null };
-let obj3 = { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" };
+let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" }, contentContainer: null, warningText: null, text: null };
+let obj3 = { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" };
 obj2.contentContainer = { flex: 1, gap: nativeDefault.space.PX_4, alignItems: "center" };
 let obj4 = { flex: 1, gap: nativeDefault.space.PX_4, alignItems: "center" };
 obj2.warningText = { marginTop: nativeDefault.space.PX_4 };
@@ -33,7 +33,7 @@ export default function GuildPowerupsWarning(warnings) {
     const obj2 = { style: tmp.contentContainer, children: null };
     const obj3 = { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" };
     items = [closure_4(require("CircleErrorIcon").CircleErrorIcon, obj3), , , ];
-    const obj4 = { variant: "text-md/semibold", color: "text-feedback-warning", style: tmp.text, children: tmp5 };
+    const obj4 = { variant: "body-md/semibold", color: "text-feedback-warning", style: tmp.text, children: tmp5 };
     items[1] = closure_4(require("Text/Text").Text, obj4);
     const obj5 = { variant: "body-sm/normal", style: tmp.text, children: tmp6 };
     items[2] = closure_4(require("Text/Text").Text, obj5);

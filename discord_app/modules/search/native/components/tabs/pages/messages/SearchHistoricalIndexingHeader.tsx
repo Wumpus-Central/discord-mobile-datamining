@@ -1,12 +1,12 @@
-// === Module 18941: SearchHistoricalIndexingHeader ===
+// === Module 19044: SearchHistoricalIndexingHeader ===
 
-// Module 18941 (SearchHistoricalIndexingHeader)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 14038 */;
+// Module 19044 (SearchHistoricalIndexingHeader)
+import TrackingDefault from "Tracking" /* 14124 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
 
 const require = fn;
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({ SearchTabs: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
@@ -31,14 +31,14 @@ export default function HistoricalIndexingHeader(searchContext) {
     return headerMessages;
   }, items1);
   const effect = noop.useEffect(() => {
-    search_tracking_TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
+    TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
   }, items2);
   const obj = { variant: "primary", border: "subtle", style: null, children: null };
   const items3 = [tmp.header, memo1];
   obj.style = items3;
-  const obj2 = { variant: "heading-sm/medium", color: "interactive-text-default", children: null };
+  const obj2 = { variant: "heading-xs/medium", color: "interactive-text-default", children: null };
   const intl = searchContext(tab[8]).intl;
   obj2.children = intl.format(searchContext(tab[8]).t["4Y3O+O"], { count: memo });
-  obj.children = jsx(searchContext(tab[7]).Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: null });
+  obj.children = jsx(searchContext(tab[7]).Text, { variant: "heading-xs/medium", color: "interactive-text-default", children: null });
   return jsx(searchContext(tab[6]).Card, { variant: "primary", border: "subtle", style: null, children: null });
 };

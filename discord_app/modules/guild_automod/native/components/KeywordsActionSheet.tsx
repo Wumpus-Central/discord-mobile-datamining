@@ -1,16 +1,16 @@
-// === Module 19846: KeywordsActionSheet ===
+// === Module 19962: KeywordsActionSheet ===
 
-// Module 19846 (KeywordsActionSheet)
+// Module 19962 (KeywordsActionSheet)
 import _mod12 from "module_12" /* 12 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import KeywordTextUtils from "KeywordTextUtils" /* 19830 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import KeywordTextUtils from "KeywordTextUtils" /* 19946 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_5 = fn(13428).KEYWORDS_REGEX_PLACEHOLDER;
+let closure_5 = fn(13512).KEYWORDS_REGEX_PLACEHOLDER;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/native/components/KeywordsActionSheet.tsx");
 

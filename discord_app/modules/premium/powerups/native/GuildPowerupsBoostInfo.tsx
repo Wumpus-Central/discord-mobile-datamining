@@ -1,19 +1,19 @@
-// === Module 14258: GuildPowerupsBoostInfo ===
+// === Module 14344: GuildPowerupsBoostInfo ===
 
-// Module 14258 (GuildPowerupsBoostInfo)
+// Module 14344 (GuildPowerupsBoostInfo)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5353 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import BoostGemIcon from "BoostGemIcon" /* 10051 */;
-import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 14259 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5354 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import BoostGemIcon from "BoostGemIcon" /* 10099 */;
+import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 14345 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const BoostInfoType = GuildPowerupsConstants.BoostInfoType;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const obj = { container: { flex: 1, alignItems: "center", justifyContent: "center", paddingVertical: nativeDefault.space.PX_12 }, headerContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", display: "flex" } };
 let closure_7 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostInfo.tsx");
@@ -36,7 +36,7 @@ export default function GuildPowerupsBoostInfo(arg0) {
   }
   items[1] = hasOwnProperty(Text_Text.Text, { variant: "body-lg/semibold", color: str, importantForAccessibility: "no-hide-descendants", children: count });
   obj3.children = items;
-  const items1 = [timestampProducer(View, obj3), hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", importantForAccessibility: "no-hide-descendants", children: guildPowerupsBoostInfoText })];
+  const items1 = [timestampProducer(View, obj3), hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", importantForAccessibility: "no-hide-descendants", children: guildPowerupsBoostInfoText })];
   obj2.children = items1;
   return timestampProducer(View, obj2);
 };

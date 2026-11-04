@@ -1,21 +1,21 @@
-// === Module 18978: FavoritesEmptyState ===
+// === Module 19081: FavoritesEmptyState ===
 
-// Module 18978 (FavoritesEmptyState)
+// Module 19081 (FavoritesEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3577 from "module_3577" /* 3577 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import Stack_Stack from "Stack/Stack" /* 6147 */;
-import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10968 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 11621 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14533 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import Stack_Stack from "Stack/Stack" /* 6162 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 11016 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 11672 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 14613 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_48 }, text: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
@@ -30,11 +30,11 @@ export default function FavoritesEmptyState() {
   }, []);
   items = [hasOwnProperty(FavoritesSpotIllustration.FavoritesSpotIllustration, { width: 192, height: 108 }), , ];
   const obj2 = { spacing: nativeDefault.space.PX_8, align: "center", children: null };
-  const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const obj3 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
   obj3.children = intl.string(_modDef3577["wh+Rz1"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj3), ];
-  const obj4 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
+  const obj4 = { variant: "body-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(_modDef3577["+SuGKb"]);
   items1[1] = hasOwnProperty(Text_Text.Text, obj4);

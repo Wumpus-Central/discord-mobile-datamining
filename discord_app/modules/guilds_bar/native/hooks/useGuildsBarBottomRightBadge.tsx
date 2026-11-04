@@ -1,10 +1,10 @@
-// === Module 18518: useGuildsBarBottomRightBadge ===
+// === Module 18613: useGuildsBarBottomRightBadge ===
 
-// Module 18518 (useGuildsBarBottomRightBadge)
+// Module 18613 (useGuildsBarBottomRightBadge)
 import native from "native" /* 1187 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18519 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 18520 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 18524 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18614 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 18615 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 18619 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -101,7 +101,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       obj8.cutouts = items2;
       return obj8;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "isArray" };
+      return { badge: null, cutout: "Array", cutouts: "ao" };
     }
   }, items1);
 };

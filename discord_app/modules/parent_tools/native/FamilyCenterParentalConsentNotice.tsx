@@ -1,9 +1,9 @@
-// === Module 16920: FamilyCenterParentalConsentNotice ===
+// === Module 17012: FamilyCenterParentalConsentNotice ===
 
-// Module 16920 (FamilyCenterParentalConsentNotice)
+// Module 17012 (FamilyCenterParentalConsentNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 16921 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 17013 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -36,7 +36,7 @@ export default function FamilyCenterParentalConsentNotice() {
     if (null != daysRemaining) {
       if (daysRemaining >= 0) {
         function learnMoreHook(children, key) {
-          return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: link.link, accessibilityRole: "link", onPress, children }, key);
+          return jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-strong", style: link.link, accessibilityRole: "link", onPress, children }, key);
         }
         const obj3 = { style: tmp.container, text: null };
         if (0 === daysRemaining) {

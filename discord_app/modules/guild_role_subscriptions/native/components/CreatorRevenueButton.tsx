@@ -1,7 +1,7 @@
-// === Module 10107: CreatorRevenueButton ===
+// === Module 10155: CreatorRevenueButton ===
 
-// Module 10107 (CreatorRevenueButton)
-import ShinyButtonDefault from "ShinyButton" /* 10108 */;
+// Module 10155 (CreatorRevenueButton)
+import ShinyButtonDefault from "ShinyButton" /* 10156 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

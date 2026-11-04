@@ -1,21 +1,21 @@
-// === Module 10069: PremiumUpsellTooltipActionSheet ===
+// === Module 10117: PremiumUpsellTooltipActionSheet ===
 
-// Module 10069 (PremiumUpsellTooltipActionSheet)
+// Module 10117 (PremiumUpsellTooltipActionSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5381 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5395 */;
-import Text_Text from "Text/Text" /* 5747 */;
-import components_Button_Button from "components/Button/Button" /* 5754 */;
-import FastImageDefault from "FastImage" /* 5837 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import Text_Text from "Text/Text" /* 5761 */;
+import components_Button_Button from "components/Button/Button" /* 5768 */;
+import FastImageDefault from "FastImage" /* 5851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { justifyContent: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, img: null, header: null, title: null, description: null, nitroWheel: null, buttonContainer: null };
 let size = { alignSelf: "center", width: 231, height: 231, borderRadius: nativeDefault.radii.sm, marginBottom: 16 };
@@ -65,7 +65,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   const items2 = [closure_5(native.NitroWheel, { style: tmp.nitroWheel }), closure_5(Text_Text.Text, { variant: "heading-xl/semibold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
-  const obj7 = { style: null, variant: "text-md/medium", color: "text-default", children: description };
+  const obj7 = { style: null, variant: "body-md/medium", color: "text-default", children: description };
   const items3 = [tmp.description, descriptionStyle];
   obj7.style = items3;
   items1[2] = closure_5(Text_Text.Text, obj7);

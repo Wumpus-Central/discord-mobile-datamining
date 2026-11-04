@@ -1,8 +1,8 @@
-// === Module 13479: AppealIngestionBreadcrumbs ===
+// === Module 13563: AppealIngestionBreadcrumbs ===
 
-// Module 13479 (AppealIngestionBreadcrumbs)
+// Module 13563 (AppealIngestionBreadcrumbs)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5747 */;
+import Text_Text from "Text/Text" /* 5761 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -29,14 +29,14 @@ export default function AppealIngestionBreadcrumbs(reasons) {
   let tmp2 = null;
   if (0 !== reasons.length) {
     let obj = { style: tmp.container, children: null };
-    const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/semibold", children: null };
+    const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "body-xs/semibold", children: null };
     const intl = require("util").intl;
     obj2.children = intl.string(require("util").t.eQg0Ck);
     items = [
       closure_3(require("Text/Text").Text, obj2),
       reasons.map((children, index) => {
           const obj = { style: closure_0.breadCrumbItemContainer, children: null };
-          items = [React3(View, { style: closure_0.breadCrumbBar }), React3(View, { style: closure_0.breadCrumbDot }), React3(Text_Text.Text, { lineClamp: 2, ellipsizeMode: "tail", style: closure_0.breadCrumbText, variant: "text-md/medium", children })];
+          items = [React3(View, { style: closure_0.breadCrumbBar }), React3(View, { style: closure_0.breadCrumbDot }), React3(Text_Text.Text, { lineClamp: 2, ellipsizeMode: "tail", style: closure_0.breadCrumbText, variant: "body-md/medium", children })];
           obj.children = items;
           return React4(View, obj, "" + children + "+" + index);
         })

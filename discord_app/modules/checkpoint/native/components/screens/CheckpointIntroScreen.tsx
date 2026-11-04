@@ -1,16 +1,16 @@
-// === Module 13781: CheckpointIntroScreen ===
+// === Module 13867: CheckpointIntroScreen ===
 
-// Module 13781 (CheckpointIntroScreen)
+// Module 13867 (CheckpointIntroScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3219 from "module_3219" /* 3219 */;
-import CheckpointStore2 from "CheckpointStore" /* 13571 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13777 */;
-import CheckpointTextDefault from "CheckpointText" /* 13779 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13782 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13783 */;
+import CheckpointStore2 from "CheckpointStore" /* 13656 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13863 */;
+import CheckpointTextDefault from "CheckpointText" /* 13865 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13868 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13869 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5141 */;
 import size from "module_2" /* 2 */;
@@ -19,7 +19,7 @@ const CheckpointStore = CheckpointStore2;
 
 const View = _mod17.View;
 const CheckpointFetchStates = CheckpointStore2.CheckpointFetchStates;
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let obj = { container: { flexGrow: 1, justifyContent: "flex-end", gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_64 }, year: null, globe: null, descriptions: null };
 let obj2 = { flexGrow: 1, justifyContent: "flex-end", gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_64 };
 obj.year = { flexDirection: "row", alignItems: "center", columnGap: nativeDefault.space.PX_8, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
@@ -49,7 +49,7 @@ export default function CheckpointIntroScreen() {
   }
   items1[1] = tmp5Result;
   obj3.children = items1;
-  const items2 = [React5(View, obj3), ];
+  const items2 = [metroImportDefault(View, obj3), ];
   const obj5 = { style: tmp.descriptions, children: null };
   const tmp7 = CheckpointScreenDefault;
   const intl = util.intl;
@@ -67,8 +67,8 @@ export default function CheckpointIntroScreen() {
   const obj8 = { children: null };
   items3[1] = tmp5Result2;
   obj5.children = items3;
-  items2[1] = React5(View, obj5);
+  items2[1] = metroImportDefault(View, obj5);
   obj2.children = items2;
-  obj8.children = React5(View, obj2);
+  obj8.children = metroImportDefault(View, obj2);
   return timestampProducer(tmp7, obj8);
 };

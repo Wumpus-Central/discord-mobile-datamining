@@ -1,22 +1,22 @@
-// === Module 10656: ImageCarousel ===
+// === Module 10704: ImageCarousel ===
 
-// Module 10656 (ImageCarousel)
+// Module 10704 (ImageCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useWindowDimensions from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5377 */;
-import spring_spring from "spring/spring" /* 5757 */;
-import Pressables from "Pressables" /* 7106 */;
-import _modDef7232 from "module_7232" /* 7232 */;
-import Upload from "Upload" /* 8334 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9910 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10658 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10660 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11248 */;
+import timing_timing from "timing/timing" /* 5378 */;
+import spring_spring from "spring/spring" /* 5771 */;
+import Pressables from "Pressables" /* 7121 */;
+import _modDef7252 from "module_7252" /* 7252 */;
+import Upload from "Upload" /* 8350 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9928 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10706 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10708 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11298 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8348 */;
 
 require = fn;
 function useTileEntranceAnimatedStyle(itemKey) {
@@ -150,7 +150,7 @@ function Tile(onEdit) {
     }
     tmp19 = null;
     if (length > 0) {
-      const obj7 = { variant: "text-xs/medium", color: "text-overlay-light", allowFontScaling: false, style: tmp.altTagText, children: null };
+      const obj7 = { variant: "body-xs/medium", color: "text-overlay-light", allowFontScaling: false, style: tmp.altTagText, children: null };
       const intl4 = tmp5(tmp3[16]).intl;
       obj7.children = intl4.string(tmp5(tmp3[16]).t.QEW81z);
       tmp19 = closure_11(tmp5(tmp3[19]).Text, obj7);
@@ -329,8 +329,8 @@ class ImageCarouselRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7825).DraftType;
-const ImageCarouselConstants = fn(10657);
+const DraftType = fn(7841).DraftType;
+const ImageCarouselConstants = fn(10705);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;

@@ -1,17 +1,17 @@
-// === Module 12671: useUploadDisabled ===
+// === Module 12752: useUploadDisabled ===
 
-// Module 12671 (useUploadDisabled)
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7520 */;
-import DraftStore from "DraftStore" /* 7825 */;
+// Module 12752 (useUploadDisabled)
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7536 */;
+import DraftStore from "DraftStore" /* 7841 */;
 import PermissionStore from "PermissionStore" /* 5073 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8332 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8348 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 const DraftType = DraftStore.DraftType;
-({ MAX_UPLOAD_COUNT: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ MAX_UPLOAD_COUNT: hasOwnProperty, Permissions: closure_6 } = Constants);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/useUploadDisabled.tsx");
 
 export default function useUploadDisabled(arg0) {
