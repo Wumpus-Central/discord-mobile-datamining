@@ -1,406 +1,325 @@
 // _runtime/metro/13051__.js
-function charCodeCategory(charCodeAtResult) {
-  if (charCodeAtResult < 128) {
-    let NameStart = arr[charCodeAtResult];
-  } else {
-    NameStart = charCodeCategory.NameStart;
+import _mod13052 from "13052__.js";
+
+function consumeEscaped(arr, sum) {
+  sum = sum + 2;
+  const diff = sum - 1;
+  let num = 0;
+  if (diff < arr.length) {
+    num = arr.charCodeAt(diff);
   }
-  return NameStart;
-}
-const arr = new Array(128);
-charCodeCategory.Eof = 128;
-charCodeCategory.WhiteSpace = 130;
-charCodeCategory.Digit = 131;
-charCodeCategory.NameStart = 132;
-charCodeCategory.NonPrintable = 133;
-for (let num = 0; num < arr.length; num = num + 1) {
-  let tmp = 10 === num;
-  if (10 !== num) {
-    tmp = 13 === num;
-  }
-  if (!tmp) {
-    tmp = 12 === num;
-  }
-  if (!tmp) {
-    tmp = 32 === num;
-  }
-  if (!tmp) {
-    tmp = 9 === num;
-  }
-  if (tmp === true) {
-    arr[num] = charCodeCategory.WhiteSpace;
-  } else {
-    let tmp3 = num >= 48;
-    if (48 <= num) {
-      tmp3 = num <= 57;
-    }
-    if (tmp3 === true) {
-      arr[num] = charCodeCategory.Digit;
-    } else {
-      let tmp4 = num >= 65;
-      if (65 <= num) {
-        tmp4 = num <= 90;
+  let sum3 = sum;
+  if (obj.isHexDigit(num)) {
+    const _Math = Math;
+    const bound = Math.min(arr.length, sum + 5);
+    let tmp8 = sum;
+    if (sum < bound) {
+      let num3 = 0;
+      if (sum < arr.length) {
+        num3 = arr.charCodeAt(sum);
       }
-      if (!tmp4) {
-        let tmp5 = num >= 97;
-        if (97 <= num) {
-          tmp5 = num <= 122;
-        }
-        tmp4 = tmp5;
-      }
-      if (!tmp4) {
-        tmp4 = num >= 128;
-      }
-      if (!tmp4) {
-        tmp4 = 95 === num;
-      }
-      if (tmp4 === true) {
-        arr[num] = charCodeCategory.NameStart;
-      } else {
-        let tmp6 = num >= 0;
-        if (0 <= num) {
-          tmp6 = num <= 8;
-        }
-        if (!tmp6) {
-          tmp6 = 11 === num;
-        }
-        if (!tmp6) {
-          let tmp7 = num >= 14;
-          if (14 <= num) {
-            tmp7 = num <= 31;
+      let tmp9 = sum;
+      tmp8 = sum;
+      if (tmp2Result.isHexDigit(num3)) {
+        const sum1 = tmp9 + 1;
+        tmp8 = sum1;
+        while (sum1 < bound) {
+          let obj2 = _mod13052;
+          let num4 = 0;
+          if (sum1 < arr.length) {
+            num4 = arr.charCodeAt(sum1);
           }
-          tmp6 = tmp7;
-        }
-        if (!tmp6) {
-          tmp6 = 127 === num;
-        }
-        if (tmp6 === true) {
-          arr[num] = charCodeCategory.NonPrintable;
-        } else {
-          let Eof = num;
-          if (!num) {
-            Eof = charCodeCategory.Eof;
+          tmp9 = sum1;
+          tmp8 = sum1;
+          if (!obj2.isHexDigit(num4)) {
+            break;
           }
-          arr[num] = Eof;
         }
       }
+      tmp2Result = _mod13052;
     }
+    let num5 = 0;
+    if (tmp8 < arr.length) {
+      num5 = arr.charCodeAt(tmp8);
+    }
+    sum3 = tmp8;
+    if (obj3.isWhiteSpace(num5)) {
+      let num7 = 1;
+      if (13 === num5) {
+        const sum2 = tmp8 + 1;
+        let num8 = 0;
+        if (sum2 < arr.length) {
+          num8 = arr.charCodeAt(sum2);
+        }
+        num7 = 1;
+        if (10 === num8) {
+          num7 = 2;
+        }
+      }
+      sum3 = tmp8 + num7;
+    }
+    obj3 = _mod13052;
   }
+  return sum3;
 }
 
 export default {
-  isDigit(charCodeAtResult) {
-    let tmp = charCodeAtResult >= 48;
-    if (tmp) {
-      tmp = charCodeAtResult <= 57;
-    }
-    return tmp;
-  },
-  isHexDigit(charCodeAtResult) {
-    let tmp = charCodeAtResult >= 48;
-    if (tmp) {
-      tmp = charCodeAtResult <= 57;
-    }
-    if (!tmp) {
-      let tmp2 = charCodeAtResult >= 65;
-      if (tmp2) {
-        tmp2 = charCodeAtResult <= 70;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = charCodeAtResult >= 97;
-      if (tmp3) {
-        tmp3 = charCodeAtResult <= 102;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  },
-  isUppercaseLetter(charCodeAtResult) {
-    let tmp = charCodeAtResult >= 65;
-    if (tmp) {
-      tmp = charCodeAtResult <= 90;
-    }
-    return tmp;
-  },
-  isLowercaseLetter(arg0) {
-    let tmp = arg0 >= 97;
-    if (tmp) {
-      tmp = arg0 <= 122;
-    }
-    return tmp;
-  },
-  isLetter(arg0) {
-    let tmp = arg0 >= 65;
-    if (tmp) {
-      tmp = arg0 <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 97;
-      if (tmp2) {
-        tmp2 = arg0 <= 122;
-      }
-      tmp = tmp2;
-    }
-    return tmp;
-  },
-  isNonAscii(arg0) {
-    return arg0 >= 128;
-  },
-  isNameStart(arg0) {
-    let tmp = arg0 >= 65;
-    if (tmp) {
-      tmp = arg0 <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 97;
-      if (tmp2) {
-        tmp2 = arg0 <= 122;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      tmp = arg0 >= 128;
-    }
-    if (!tmp) {
-      tmp = 95 === arg0;
-    }
-    return tmp;
-  },
-  isName(charCodeAtResult) {
-    let tmp = charCodeAtResult >= 65;
-    if (tmp) {
-      tmp = charCodeAtResult <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = charCodeAtResult >= 97;
-      if (tmp2) {
-        tmp2 = charCodeAtResult <= 122;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      tmp = charCodeAtResult >= 128;
-    }
-    if (!tmp) {
-      tmp = 95 === charCodeAtResult;
-    }
-    if (!tmp) {
-      let tmp3 = charCodeAtResult >= 48;
-      if (tmp3) {
-        tmp3 = charCodeAtResult <= 57;
-      }
-      tmp = tmp3;
-    }
-    if (!tmp) {
-      tmp = 45 === charCodeAtResult;
-    }
-    return tmp;
-  },
-  isNonPrintable(arg0) {
-    let tmp = arg0 >= 0;
-    if (tmp) {
-      tmp = arg0 <= 8;
-    }
-    if (!tmp) {
-      tmp = 11 === arg0;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 14;
-      if (tmp2) {
-        tmp2 = arg0 <= 31;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      tmp = 127 === arg0;
-    }
-    return tmp;
-  },
-  isNewline(charCodeAtResult) {
-    let tmp = 10 === charCodeAtResult;
-    if (!tmp) {
-      tmp = 13 === charCodeAtResult;
-    }
-    if (!tmp) {
-      tmp = 12 === charCodeAtResult;
-    }
-    return tmp;
-  },
-  isWhiteSpace(arg0) {
-    let tmp = 10 === arg0;
-    if (!tmp) {
-      tmp = 13 === arg0;
-    }
-    if (!tmp) {
-      tmp = 12 === arg0;
-    }
-    if (!tmp) {
-      tmp = 32 === arg0;
-    }
-    if (!tmp) {
-      tmp = 9 === arg0;
-    }
-    return tmp;
-  },
-  isValidEscape(charCodeAtResult, arg1) {
-    let tmp = 92 === charCodeAtResult;
-    if (tmp) {
-      let tmp3 = 10 === arg1;
-      if (!tmp3) {
-        tmp3 = 13 === arg1;
-      }
-      if (!tmp3) {
-        tmp3 = 12 === arg1;
-      }
-      let tmp4 = !tmp3;
-      if (!tmp3) {
-        tmp4 = 0 !== arg1;
-      }
-      tmp = tmp4;
-    }
-    return tmp;
-  },
-  isIdentifierStart(charCodeAtResult, arg1, arg2) {
-    if (45 === charCodeAtResult) {
-      let tmp9 = arg1 >= 65;
-      if (tmp9) {
-        tmp9 = arg1 <= 90;
-      }
-      if (!tmp9) {
-        let tmp10 = arg1 >= 97;
-        if (tmp10) {
-          tmp10 = arg1 <= 122;
-        }
-        tmp9 = tmp10;
-      }
-      if (!tmp9) {
-        tmp9 = arg1 >= 128;
-      }
-      if (!tmp9) {
-        tmp9 = 95 === arg1;
-      }
-      if (!tmp9) {
-        tmp9 = 45 === arg1;
-      }
-      if (!tmp9) {
-        let tmp11 = 92 === arg1;
-        if (tmp11) {
-          let tmp13 = 10 === arg2;
-          if (!tmp13) {
-            tmp13 = 13 === arg2;
+  consumeEscaped,
+  consumeName(StringResult, sum) {
+    let tmp2 = sum;
+    if (sum < StringResult.length) {
+      while (true) {
+        let charCodeAtResult = StringResult.charCodeAt(sum);
+        let obj = _mod13052;
+        let diff = sum;
+        if (obj.isName(charCodeAtResult)) {
+          sum = diff + 1;
+          tmp2 = sum;
+          if (sum >= StringResult.length) {
+            break;
           }
-          if (!tmp13) {
-            tmp13 = 12 === arg2;
-          }
-          let tmp14 = !tmp13;
-          if (!tmp13) {
-            tmp14 = 0 !== arg2;
-          }
-          tmp11 = tmp14;
-        }
-        tmp9 = tmp11;
-      }
-      let tmp3 = tmp9;
-    } else {
-      let tmp = charCodeAtResult >= 65;
-      if (tmp) {
-        tmp = charCodeAtResult <= 90;
-      }
-      if (!tmp) {
-        let tmp2 = charCodeAtResult >= 97;
-        if (tmp2) {
-          tmp2 = charCodeAtResult <= 122;
-        }
-        tmp = tmp2;
-      }
-      if (!tmp) {
-        tmp = charCodeAtResult >= 128;
-      }
-      if (!tmp) {
-        tmp = 95 === charCodeAtResult;
-      }
-      tmp3 = tmp;
-      if (!tmp3) {
-        let tmp5 = tmp4;
-        if (92 === charCodeAtResult) {
-          let tmp6 = tmp4;
-          if (tmp4) {
-            let tmp7 = 10 === arg1;
-            if (!tmp7) {
-              tmp7 = 13 === arg1;
-            }
-            if (!tmp7) {
-              tmp7 = 12 === arg1;
-            }
-            let tmp8 = !tmp7;
-            if (!tmp7) {
-              tmp8 = 0 !== arg1;
-            }
-            tmp6 = tmp8;
-          }
-          tmp5 = tmp6;
-        }
-        tmp3 = tmp5;
-      }
-    }
-    return tmp3;
-  },
-  isNumberStart(charCodeAtResult, arg1, arg2) {
-    if (43 !== charCodeAtResult) {
-      if (45 !== charCodeAtResult) {
-        if (46 === charCodeAtResult) {
-          let tmp2 = arg1 >= 48;
-          if (tmp2) {
-            tmp2 = arg1 <= 57;
-          }
-          let num8 = 0;
-          if (tmp2) {
-            num8 = 2;
-          }
-          let num5 = num8;
         } else {
-          let tmp = charCodeAtResult >= 48;
-          if (tmp) {
-            tmp = charCodeAtResult <= 57;
+          let tmp4Result = _mod13052;
+          let sum1 = sum + 1;
+          let num = 0;
+          if (sum1 < StringResult.length) {
+            num = StringResult.charCodeAt(sum1);
           }
-          num5 = 0;
-          if (tmp) {
-            num5 = 1;
+          tmp2 = sum;
+          if (!tmp4Result.isValidEscape(charCodeAtResult, num)) {
+            break;
+          } else {
+            diff = consumeEscaped(StringResult, sum) - 1;
           }
         }
+        break;
       }
-      return num5;
     }
-    let tmp3 = arg1 >= 48;
-    if (tmp3) {
-      tmp3 = arg1 <= 57;
-    }
-    let num10 = 2;
-    if (!tmp3) {
-      let num12 = 0;
-      if (46 === arg1) {
-        let tmp5 = arg2 >= 48;
-        if (tmp5) {
-          tmp5 = arg2 <= 57;
-        }
-        num12 = 0;
-        if (tmp5) {
-          num12 = 3;
-        }
-      }
-      num10 = num12;
-    }
-    num5 = num10;
+    return tmp2;
   },
-  isBOM(arg0) {
-    if (65279 === arg0) {
-      let num2 = 1;
+  consumeNumber(str, sum) {
+    let charCodeAtResult = str.charCodeAt(sum);
+    let tmp2 = 43 !== charCodeAtResult;
+    if (tmp2) {
+      tmp2 = 45 !== charCodeAtResult;
+    }
+    let tmp3 = sum;
+    if (!tmp2) {
+      sum = sum + 1;
+      charCodeAtResult = str.charCodeAt(sum);
+      tmp3 = sum;
+    }
+    let tmp7 = tmp3;
+    if (obj.isDigit(charCodeAtResult)) {
+      const sum1 = tmp3 + 1;
+      let tmp9 = sum1;
+      if (sum1 < str.length) {
+        let tmp10 = sum1;
+        tmp9 = sum1;
+        if (tmp5Result.isDigit(str.charCodeAt(sum1))) {
+          const sum2 = tmp10 + 1;
+          tmp9 = sum2;
+          while (sum2 < str.length) {
+            let obj3 = _mod13052;
+            tmp10 = sum2;
+            tmp9 = sum2;
+            if (!obj3.isDigit(str.charCodeAt(sum2))) {
+              break;
+            }
+          }
+        }
+        tmp5Result = _mod13052;
+      }
+      charCodeAtResult = str.charCodeAt(tmp9);
+      tmp7 = tmp9;
+    }
+    let isDigitResult = 46 === charCodeAtResult;
+    if (isDigitResult) {
+      isDigitResult = _mod13052.isDigit(str.charCodeAt(tmp7 + 1));
+      const tmp5Result3 = _mod13052;
+    }
+    let tmp15 = tmp7;
+    if (isDigitResult) {
+      const sum3 = tmp7 + 2;
+      str.charCodeAt(sum3);
+      let tmp18 = sum3;
+      if (sum3 < str.length) {
+        let tmp21 = sum3;
+        tmp18 = sum3;
+        if (obj5.isDigit(str.charCodeAt(sum3))) {
+          const sum4 = tmp21 + 1;
+          tmp18 = sum4;
+          while (sum4 < str.length) {
+            let obj6 = _mod13052;
+            tmp21 = sum4;
+            tmp18 = sum4;
+            if (!obj6.isDigit(str.charCodeAt(sum4))) {
+              break;
+            }
+          }
+        }
+        obj5 = _mod13052;
+      }
+      tmp15 = tmp18;
+    }
+    const charCodeAtResult2 = str.charCodeAt(tmp15);
+    obj = _mod13052;
+    let tmp28 = charCodeAtResult2;
+    if (obj7.isUppercaseLetter(charCodeAtResult2)) {
+      tmp28 = charCodeAtResult2 | 32;
+    }
+    let tmp29 = tmp15;
+    if (tmp28 === 101) {
+      let charCodeAtResult3 = str.charCodeAt(tmp15 + 1);
+      let num7 = 0;
+      if (!tmp30) {
+        charCodeAtResult3 = str.charCodeAt(tmp15 + 2);
+        num7 = 1;
+      }
+      tmp29 = tmp15;
+      if (tmp5Result4.isDigit(charCodeAtResult3)) {
+        const sum5 = tmp15 + 1 + num7 + 1;
+        let tmp33 = sum5;
+        if (sum5 < str.length) {
+          let tmp34 = sum5;
+          tmp33 = sum5;
+          if (tmp26Result.isDigit(str.charCodeAt(sum5))) {
+            const sum6 = tmp34 + 1;
+            tmp33 = sum6;
+            while (sum6 < str.length) {
+              let obj10 = _mod13052;
+              tmp34 = sum6;
+              tmp33 = sum6;
+              if (!obj10.isDigit(str.charCodeAt(sum6))) {
+                break;
+              }
+            }
+          }
+          tmp26Result = _mod13052;
+        }
+        tmp29 = tmp33;
+      }
+      tmp30 = 45 !== charCodeAtResult3 && 43 !== charCodeAtResult3;
+      tmp5Result4 = _mod13052;
+    }
+    return tmp29;
+  },
+  consumeBadUrlRemnants(arr2, sum) {
+    let sum1 = sum;
+    let sum2 = sum;
+    if (sum < arr2.length) {
+      const charCodeAtResult = arr2.charCodeAt(sum1);
+      while (41 !== charCodeAtResult) {
+        let obj = _mod13052;
+        sum = sum1 + 1;
+        let num = 0;
+        if (sum < arr2.length) {
+          num = arr2.charCodeAt(sum);
+        }
+        let tmp8 = sum1;
+        if (obj.isValidEscape(charCodeAtResult, num)) {
+          tmp8 = consumeEscaped(arr2, sum1);
+        }
+        sum1 = tmp8 + 1;
+        sum2 = sum1;
+      }
+      sum2 = sum1 + 1;
+    }
+    return sum2;
+  },
+  cmpChar(source, tokenStart, c8) {
+    const charCodeAtResult = source.charCodeAt(tokenStart);
+    let tmp2 = charCodeAtResult;
+    if (obj.isUppercaseLetter(charCodeAtResult)) {
+      tmp2 = charCodeAtResult | 32;
+    }
+    return tmp2 === c8;
+  },
+  cmpStr(source, tokenStart, length, c0) {
+    if (length - tokenStart !== _require.length) {
+      return false;
     } else {
-      num2 = 0;
+      if (tokenStart >= 0) {
+        if (length <= source.length) {
+          let sum = tokenStart;
+          if (tokenStart < length) {
+            while (true) {
+              let charCodeAtResult = source.charCodeAt(sum);
+              let charCodeAtResult1 = _require.charCodeAt(sum - tokenStart);
+              let obj = _mod13052;
+              let tmp8 = charCodeAtResult;
+              if (obj.isUppercaseLetter(charCodeAtResult)) {
+                tmp8 = charCodeAtResult | 32;
+              }
+              if (tmp8 !== charCodeAtResult1) {
+                break;
+              } else {
+                sum = sum + 1;
+              }
+            }
+            return false;
+          }
+          return true;
+        }
+      }
+      return false;
     }
-    return num2;
   },
-  charCodeCategory,
+  getNewlineLength(arr, arg1, charCodeAtResult) {
+    let num = 1;
+    if (13 === charCodeAtResult) {
+      const sum = arg1 + 1;
+      let num2 = 0;
+      if (sum < arr.length) {
+        num2 = arr.charCodeAt(sum);
+      }
+      num = 1;
+      if (10 === num2) {
+        num = 2;
+      }
+    }
+    return num;
+  },
+  findWhiteSpaceStart(source, sum) {
+    let tmp = sum;
+    if (sum >= 0) {
+      let tmp5 = sum;
+      tmp = sum;
+      if (obj.isWhiteSpace(source.charCodeAt(sum))) {
+        const diff = tmp5 - 1;
+        tmp = diff;
+        while (diff >= 0) {
+          let obj2 = _mod13052;
+          tmp5 = diff;
+          tmp = diff;
+          if (!obj2.isWhiteSpace(source.charCodeAt(diff))) {
+            break;
+          }
+        }
+      }
+      obj = _mod13052;
+    }
+    return tmp + 1;
+  },
+  findWhiteSpaceEnd(arr, sum) {
+    let tmp = sum;
+    if (sum < arr.length) {
+      let tmp4 = sum;
+      tmp = sum;
+      if (obj.isWhiteSpace(arr.charCodeAt(sum))) {
+        sum = tmp4 + 1;
+        tmp = sum;
+        while (sum < arr.length) {
+          let obj2 = _mod13052;
+          tmp4 = sum;
+          tmp = sum;
+          if (!obj2.isWhiteSpace(arr.charCodeAt(sum))) {
+            break;
+          }
+        }
+      }
+      obj = _mod13052;
+    }
+    return tmp;
+  },
 };

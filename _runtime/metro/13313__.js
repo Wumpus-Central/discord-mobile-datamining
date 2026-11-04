@@ -1,43 +1,72 @@
 // _runtime/metro/13313__.js
-import _mod13273 from "13273__.js";
+import _mod13274 from "13274__.js";
 import _mod13301 from "13301__.js";
+import _mod13302 from "13302__.js";
+import _mod13306 from "13306__.js";
+import _mod13314 from "13314__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
-          }
-        }
+export function sampleSpan(tracesSampler, normalizedRequest) {
+  if (obj.hasTracingEnabled(tracesSampler)) {
+    const isolationScope = _mod13301.getIsolationScope();
+    const obj2 = {};
+    const merged = Object.assign(normalizedRequest);
+    obj2.normalizedRequest =
+      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
+    if (typeof tracesSampler.tracesSampler === "function") {
+      let num = tracesSampler.tracesSampler(obj2);
+    } else if (undefined !== obj2.parentSampled) {
+      num = obj2.parentSampled;
+    } else {
+      num = 1;
+      if (undefined !== tracesSampler.tracesSampleRate) {
+        num = tracesSampler.tracesSampleRate;
       }
     }
-    if (_mod13301.DEBUG_BUILD) {
-      const logger = _mod13273.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn(
-        "[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " +
-          json +
-          " of type " +
-          JSON.stringify(typeof flag) +
-          ".",
-      );
+    const tmpResult = _mod13301;
+    const parseSampleRateResult = _mod13314.parseSampleRate(num);
+    if (undefined === parseSampleRateResult) {
+      if (_mod13302.DEBUG_BUILD) {
+        const logger3 = _mod13274.logger;
+        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
+      }
+      items = [false];
+      let items3 = items;
+    } else if (parseSampleRateResult) {
+      const _Math = Math;
+      if (Math.random() < parseSampleRateResult) {
+        const items1 = [true, parseSampleRateResult];
+        let items2 = items1;
+      } else {
+        if (_mod13302.DEBUG_BUILD) {
+          const logger2 = _mod13274.logger;
+          const _Number = Number;
+          const _HermesInternal = HermesInternal;
+          logger2.log(
+            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
+              Number(num) +
+              ")",
+          );
+        }
+        items2 = [false, parseSampleRateResult];
+      }
+    } else {
+      if (_mod13302.DEBUG_BUILD) {
+        const logger = _mod13274.logger;
+        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
+        if (typeof tracesSampler.tracesSampler === "function") {
+          str = "tracesSampler returned 0 or false";
+        }
+        logger.log(`[Tracing] Discarding transaction because ${str}`);
+      }
+      items3 = [false, parseSampleRateResult];
     }
+    return items3;
+  } else {
+    const items4 = [false];
+    return items4;
   }
+  obj = _mod13306;
 }

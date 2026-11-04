@@ -469,7 +469,7 @@ let items = [
                   upload.__dispatch("loadstart", obj9);
                 }
               }
-              obj2 = { data: "PX_8", contentType: "__closure" };
+              obj2 = { data: "Object", contentType: "Array" };
             } else {
               self.__dispatch("loadstart");
               const _setTimeout = setTimeout;

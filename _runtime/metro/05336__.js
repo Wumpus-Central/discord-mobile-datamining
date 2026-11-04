@@ -524,7 +524,7 @@ export function persist(arg0, arg1) {
                       then(name) {
                             if (typeof mergeResult === "function") {
                               closure_0 = name;
-                              return (/* F87909 */ function() { ... })(closure_0);
+                              return (/* F88039 */ function() { ... })(closure_0);
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
@@ -544,7 +544,7 @@ export function persist(arg0, arg1) {
                     catch(arg0) {
                         if (typeof mergeResult === "function") {
                           closure_0 = arg0;
-                          return (/* F87909 */ function() { ... })(closure_1);
+                          return (/* F88039 */ function() { ... })(closure_1);
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
@@ -564,7 +564,7 @@ export function persist(arg0, arg1) {
                       then(name) {
                             if (typeof mergeResult === "function") {
                               closure_0 = name;
-                              return (/* F87909 */ function() { ... })(closure_0);
+                              return (/* F88039 */ function() { ... })(closure_0);
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
@@ -584,7 +584,7 @@ export function persist(arg0, arg1) {
                     catch(arg0) {
                         if (typeof mergeResult === "function") {
                           closure_0 = arg0;
-                          return (/* F87909 */ function() { ... })(closure_1);
+                          return (/* F88039 */ function() { ... })(closure_1);
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
@@ -630,7 +630,7 @@ export function persist(arg0, arg1) {
                       then(name) {
                             if (typeof mergeResult === "function") {
                               closure_0 = name;
-                              return (/* F87909 */ function() { ... })(closure_0);
+                              return (/* F88039 */ function() { ... })(closure_0);
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
@@ -650,7 +650,7 @@ export function persist(arg0, arg1) {
                     catch(arg0) {
                         if (typeof mergeResult === "function") {
                           closure_0 = arg0;
-                          return (/* F87909 */ function() { ... })(closure_1);
+                          return (/* F88039 */ function() { ... })(closure_1);
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
@@ -715,7 +715,7 @@ export function persist(arg0, arg1) {
                       then(name) {
                             if (typeof mergeResult === "function") {
                               closure_0 = name;
-                              return (/* F87909 */ function() { ... })(closure_0);
+                              return (/* F88039 */ function() { ... })(closure_0);
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
@@ -735,7 +735,7 @@ export function persist(arg0, arg1) {
                     catch(arg0) {
                         if (typeof mergeResult === "function") {
                           closure_0 = arg0;
-                          return (/* F87909 */ function() { ... })(closure_1);
+                          return (/* F88039 */ function() { ... })(closure_1);
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }

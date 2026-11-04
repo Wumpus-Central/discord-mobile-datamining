@@ -1,21 +1,17 @@
 // _runtime/metro/16400__.js
-import _mod16383 from "16383__.js";
+import _mod16391 from "16391__.js";
+import _mod16399 from "16399__.js";
 import _mod16401 from "16401__.js";
+import _mod16402 from "16402__.js";
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod16401(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod16383(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod16383(arg2, tmp3);
+export default _mod16391
+  ? (arg0) => typeof arg0 === "symbol"
+  : (arg0) => {
+      const tmp3 = _mod16401("Symbol");
+      let tmpResultResult = _mod16399(tmp3);
+      if (tmpResultResult) {
+        tmpResultResult = _mod16402(tmp3.prototype, Object(arg0));
+        const tmpResult = _mod16402;
       }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
-  }
-};
+      return tmpResultResult;
+    };

@@ -1,11 +1,7 @@
 // _runtime/metro/16164__.js
-import _mod16161 from "16161__.js";
+import _mod16162 from "16162__.js";
 
-export default (arg0, arg1) => {
-  const tmp = new _mod16161(arg0, arg1);
-  return new _mod16161(arg0, arg1).set.map((arr) => {
-    const mapped = arr.map((value) => value.value);
-    const str = mapped.join(" ");
-    return mapped.join(" ").trim().split(" ");
-  });
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod16162(arg1, arg0, closure_0));
 };

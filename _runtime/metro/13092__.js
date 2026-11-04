@@ -1,647 +1,366 @@
 // _runtime/metro/13092__.js
-const obj = {
-  atrules: null,
-  properties: {
-    "-moz-background-clip": {
-      comment: "deprecated syntax in old Firefox, https://developer.mozilla.org/en/docs/Web/CSS/background-clip",
-      syntax: "padding | border",
-    },
-    "-moz-border-radius-bottomleft": {
-      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-left-radius",
-      syntax: "<'border-bottom-left-radius'>",
-    },
-    "-moz-border-radius-bottomright": {
-      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-right-radius",
-      syntax: "<'border-bottom-right-radius'>",
-    },
-    "-moz-border-radius-topleft": {
-      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-left-radius",
-      syntax: "<'border-top-left-radius'>",
-    },
-    "-moz-border-radius-topright": {
-      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-right-radius",
-      syntax: "<'border-bottom-right-radius'>",
-    },
-    "-moz-control-character-visibility": {
-      comment: "firefox specific keywords, https://bugzilla.mozilla.org/show_bug.cgi?id=947588",
-      syntax: "visible | hidden",
-    },
-    "-moz-osx-font-smoothing": {
-      comment: "misssed old syntax https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth",
-      syntax: "auto | grayscale",
-    },
-    "-moz-user-select": {
-      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/user-select",
-      syntax: "none | text | all | -moz-none",
-    },
-    "-ms-flex-align": {
-      comment: "misssed old syntax implemented in IE, https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/#flex-align",
-      syntax: "start | end | center | baseline | stretch",
-    },
-    "-ms-flex-item-align": {
-      comment: "misssed old syntax implemented in IE, https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/#flex-align",
-      syntax: "auto | start | end | center | baseline | stretch",
-    },
-    "-ms-flex-line-pack": {
-      comment:
-        "misssed old syntax implemented in IE, https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/#flex-line-pack",
-      syntax: "start | end | center | justify | distribute | stretch",
-    },
-    "-ms-flex-negative": {
-      comment: "misssed old syntax implemented in IE; TODO: find references for comfirmation",
-      syntax: "<'flex-shrink'>",
-    },
-    "-ms-flex-pack": {
-      comment: "misssed old syntax implemented in IE, https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/#flex-pack",
-      syntax: "start | end | center | justify | distribute",
-    },
-    "-ms-flex-order": {
-      comment: "misssed old syntax implemented in IE; https://msdn.microsoft.com/en-us/library/jj127303(v=vs.85).aspx",
-      syntax: "<integer>",
-    },
-    "-ms-flex-positive": {
-      comment: "misssed old syntax implemented in IE; TODO: find references for comfirmation",
-      syntax: "<'flex-grow'>",
-    },
-    "-ms-flex-preferred-size": {
-      comment: "misssed old syntax implemented in IE; TODO: find references for comfirmation",
-      syntax: "<'flex-basis'>",
-    },
-    "-ms-interpolation-mode": {
-      comment: "https://msdn.microsoft.com/en-us/library/ff521095(v=vs.85).aspx",
-      syntax: "nearest-neighbor | bicubic",
-    },
-    "-ms-grid-column-align": {
-      comment:
-        "add this property first since it uses as fallback for flexbox, https://msdn.microsoft.com/en-us/library/windows/apps/hh466338.aspx",
-      syntax: "start | end | center | stretch",
-    },
-    "-ms-grid-row-align": {
-      comment:
-        "add this property first since it uses as fallback for flexbox, https://msdn.microsoft.com/en-us/library/windows/apps/hh466348.aspx",
-      syntax: "start | end | center | stretch",
-    },
-    "-ms-hyphenate-limit-last": {
-      comment: "misssed old syntax implemented in IE; https://www.w3.org/TR/css-text-4/#hyphenate-line-limits",
-      syntax: "none | always | column | page | spread",
-    },
-    "-webkit-appearance": {
-      comment: "webkit specific keywords",
-      references: ["http://css-infos.net/property/-webkit-appearance"],
-      syntax:
-        "none | button | button-bevel | caps-lock-indicator | caret | checkbox | default-button | inner-spin-button | listbox | listitem | media-controls-background | media-controls-fullscreen-background | media-current-time-display | media-enter-fullscreen-button | media-exit-fullscreen-button | media-fullscreen-button | media-mute-button | media-overlay-play-button | media-play-button | media-seek-back-button | media-seek-forward-button | media-slider | media-sliderthumb | media-time-remaining-display | media-toggle-closed-captions-button | media-volume-slider | media-volume-slider-container | media-volume-sliderthumb | menulist | menulist-button | menulist-text | menulist-textfield | meter | progress-bar | progress-bar-value | push-button | radio | scrollbarbutton-down | scrollbarbutton-left | scrollbarbutton-right | scrollbarbutton-up | scrollbargripper-horizontal | scrollbargripper-vertical | scrollbarthumb-horizontal | scrollbarthumb-vertical | scrollbartrack-horizontal | scrollbartrack-vertical | searchfield | searchfield-cancel-button | searchfield-decoration | searchfield-results-button | searchfield-results-decoration | slider-horizontal | slider-vertical | sliderthumb-horizontal | sliderthumb-vertical | square-button | textarea | textfield | -apple-pay-button",
-    },
-    "-webkit-background-clip": {
-      comment: "https://developer.mozilla.org/en/docs/Web/CSS/background-clip",
-      syntax: "[ <box> | border | padding | content | text ]#",
-    },
-    "-webkit-column-break-after": {
-      comment: "added, http://help.dottoro.com/lcrthhhv.php",
-      syntax: "always | auto | avoid",
-    },
-    "-webkit-column-break-before": {
-      comment: "added, http://help.dottoro.com/lcxquvkf.php",
-      syntax: "always | auto | avoid",
-    },
-    "-webkit-column-break-inside": {
-      comment: "added, http://help.dottoro.com/lclhnthl.php",
-      syntax: "always | auto | avoid",
-    },
-    "-webkit-font-smoothing": {
-      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth",
-      syntax: "auto | none | antialiased | subpixel-antialiased",
-    },
-    "-webkit-mask-box-image": {
-      comment: "missed; https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-mask-box-image",
-      syntax: "[ <url> | <gradient> | none ] [ <length-percentage>{4} <-webkit-mask-box-repeat>{2} ]?",
-    },
-    "-webkit-print-color-adjust": {
-      comment: "missed",
-      references: ["https://developer.mozilla.org/en/docs/Web/CSS/-webkit-print-color-adjust"],
-      syntax: "economy | exact",
-    },
-    "-webkit-text-security": {
-      comment: "missed; http://help.dottoro.com/lcbkewgt.php",
-      syntax: "none | circle | disc | square",
-    },
-    "-webkit-user-drag": { comment: "missed; http://help.dottoro.com/lcbixvwm.php", syntax: "none | element | auto" },
-    "-webkit-user-select": {
-      comment: "auto is supported by old webkit, https://developer.mozilla.org/en-US/docs/Web/CSS/user-select",
-      syntax: "auto | none | text | all",
-    },
-    "alignment-baseline": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/text.html#AlignmentBaselineProperty"],
-      syntax:
-        "auto | baseline | before-edge | text-before-edge | middle | central | after-edge | text-after-edge | ideographic | alphabetic | hanging | mathematical",
-    },
-    "baseline-shift": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/text.html#BaselineShiftProperty"],
-      syntax: "baseline | sub | super | <svg-length>",
-    },
-    behavior: {
-      comment: "added old IE property https://msdn.microsoft.com/en-us/library/ms530723(v=vs.85).aspx",
-      syntax: "<url>+",
-    },
-    "clip-rule": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/masking.html#ClipRuleProperty"],
-      syntax: "nonzero | evenodd",
-    },
-    cue: { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "<'cue-before'> <'cue-after'>?" },
-    "cue-after": { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "<url> <decibel>? | none" },
-    "cue-before": { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "<url> <decibel>? | none" },
-    cursor: {
-      comment:
-        "added legacy keywords: hand, -webkit-grab. -webkit-grabbing, -webkit-zoom-in, -webkit-zoom-out, -moz-grab, -moz-grabbing, -moz-zoom-in, -moz-zoom-out",
-      references: ["https://www.sitepoint.com/css3-cursor-styles/"],
-      syntax:
-        "[ [ <url> [ <x> <y> ]? , ]* [ auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll | zoom-in | zoom-out | grab | grabbing | hand | -webkit-grab | -webkit-grabbing | -webkit-zoom-in | -webkit-zoom-out | -moz-grab | -moz-grabbing | -moz-zoom-in | -moz-zoom-out ] ]",
-    },
-    display: { comment: "extended with -ms-flexbox", syntax: "| <-non-standard-display>" },
-    position: { comment: "extended with -webkit-sticky", syntax: "| -webkit-sticky" },
-    "dominant-baseline": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/text.html#DominantBaselineProperty"],
-      syntax:
-        "auto | use-script | no-change | reset-size | ideographic | alphabetic | hanging | mathematical | central | middle | text-after-edge | text-before-edge",
-    },
-    "image-rendering": {
-      comment: "extended with <-non-standard-image-rendering>, added SVG keywords optimizeSpeed and optimizeQuality",
-      references: [
-        "https://developer.mozilla.org/en/docs/Web/CSS/image-rendering",
-        "https://www.w3.org/TR/SVG/painting.html#ImageRenderingProperty",
-      ],
-      syntax: "| optimizeSpeed | optimizeQuality | <-non-standard-image-rendering>",
-    },
-    fill: {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#FillProperty"],
-      syntax: "<paint>",
-    },
-    "fill-opacity": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#FillProperty"],
-      syntax: "<number-zero-one>",
-    },
-    "fill-rule": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#FillProperty"],
-      syntax: "nonzero | evenodd",
-    },
-    filter: { comment: "extend with IE legacy syntaxes", syntax: "| <-ms-filter-function-list>" },
-    "glyph-orientation-horizontal": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/text.html#GlyphOrientationHorizontalProperty"],
-      syntax: "<angle>",
-    },
-    "glyph-orientation-vertical": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/text.html#GlyphOrientationVerticalProperty"],
-      syntax: "<angle>",
-    },
-    kerning: {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/text.html#KerningProperty"],
-      syntax: "auto | <svg-length>",
-    },
-    "letter-spacing": {
-      comment: "fix syntax <length> -> <length-percentage>",
-      references: ["https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/letter-spacing"],
-      syntax: "normal | <length-percentage>",
-    },
-    marker: {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#MarkerProperties"],
-      syntax: "none | <url>",
-    },
-    "marker-end": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#MarkerProperties"],
-      syntax: "none | <url>",
-    },
-    "marker-mid": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#MarkerProperties"],
-      syntax: "none | <url>",
-    },
-    "marker-start": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#MarkerProperties"],
-      syntax: "none | <url>",
-    },
-    "max-width": {
-      comment:
-        "fix auto -> none (https://github.com/mdn/data/pull/431); extend by non-standard width keywords https://developer.mozilla.org/en-US/docs/Web/CSS/max-width",
-      syntax:
-        "none | <length-percentage> | min-content | max-content | fit-content(<length-percentage>) | <-non-standard-width>",
-    },
-    width: {
-      comment:
-        "per spec fit-content should be a function, however browsers are supporting it as a keyword (https://github.com/csstree/stylelint-validator/issues/29)",
-      syntax: "| fit-content | -moz-fit-content | -webkit-fit-content",
-    },
-    "min-width": {
-      comment: "extend by non-standard width keywords https://developer.mozilla.org/en-US/docs/Web/CSS/width",
-      syntax:
-        "auto | <length-percentage> | min-content | max-content | fit-content(<length-percentage>) | <-non-standard-width>",
-    },
-    overflow: {
-      comment: "extend by vendor keywords https://developer.mozilla.org/en-US/docs/Web/CSS/overflow",
-      syntax: "| <-non-standard-overflow>",
-    },
-    pause: {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "<'pause-before'> <'pause-after'>?",
-    },
-    "pause-after": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "<time> | none | x-weak | weak | medium | strong | x-strong",
-    },
-    "pause-before": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "<time> | none | x-weak | weak | medium | strong | x-strong",
-    },
-    rest: { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "<'rest-before'> <'rest-after'>?" },
-    "rest-after": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "<time> | none | x-weak | weak | medium | strong | x-strong",
-    },
-    "rest-before": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "<time> | none | x-weak | weak | medium | strong | x-strong",
-    },
-    "shape-rendering": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#ShapeRenderingPropert"],
-      syntax: "auto | optimizeSpeed | crispEdges | geometricPrecision",
-    },
-    src: {
-      comment: "added @font-face's src property https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src",
-      syntax: "[ <url> [ format( <string># ) ]? | local( <family-name> ) ]#",
-    },
-    speak: { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "auto | none | normal" },
-    "speak-as": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "normal | spell-out || digits || [ literal-punctuation | no-punctuation ]",
-    },
-    stroke: {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
-      syntax: "<paint>",
-    },
-    "stroke-dasharray": {
-      comment: "added SVG property; a list of comma and/or white space separated <length>s and <percentage>s",
-      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
-      syntax: "none | [ <svg-length>+ ]#",
-    },
-    "stroke-dashoffset": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
-      syntax: "<svg-length>",
-    },
-    "stroke-linecap": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
-      syntax: "butt | round | square",
-    },
-    "stroke-linejoin": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
-      syntax: "miter | round | bevel",
-    },
-    "stroke-miterlimit": {
-      comment: "added SVG property (<miterlimit> = <number-one-or-greater>) ",
-      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
-      syntax: "<number-one-or-greater>",
-    },
-    "stroke-opacity": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
-      syntax: "<number-zero-one>",
-    },
-    "stroke-width": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
-      syntax: "<svg-length>",
-    },
-    "text-anchor": {
-      comment: "added SVG property",
-      references: ["https://www.w3.org/TR/SVG/text.html#TextAlignmentProperties"],
-      syntax: "start | middle | end",
-    },
-    "unicode-bidi": {
-      comment: "added prefixed keywords https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-bidi",
-      syntax:
-        "| -moz-isolate | -moz-isolate-override | -moz-plaintext | -webkit-isolate | -webkit-isolate-override | -webkit-plaintext",
-    },
-    "unicode-range": {
-      comment: "added missed property https://developer.mozilla.org/en-US/docs/Web/CSS/%40font-face/unicode-range",
-      syntax: "<urange>#",
-    },
-    "voice-balance": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "<number> | left | center | right | leftwards | rightwards",
-    },
-    "voice-duration": { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "auto | <time>" },
-    "voice-family": {
-      comment: "<name> -> <family-name>, https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "[ [ <family-name> | <generic-voice> ] , ]* [ <family-name> | <generic-voice> ] | preserve",
-    },
-    "voice-pitch": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax:
-        "<frequency> && absolute | [ [ x-low | low | medium | high | x-high ] || [ <frequency> | <semitones> | <percentage> ] ]",
-    },
-    "voice-range": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax:
-        "<frequency> && absolute | [ [ x-low | low | medium | high | x-high ] || [ <frequency> | <semitones> | <percentage> ] ]",
-    },
-    "voice-rate": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "[ normal | x-slow | slow | medium | fast | x-fast ] || <percentage>",
-    },
-    "voice-stress": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "normal | strong | moderate | none | reduced",
-    },
-    "voice-volume": {
-      comment: "https://www.w3.org/TR/css3-speech/#property-index",
-      syntax: "silent | [ [ x-soft | soft | medium | loud | x-loud ] || <decibel> ]",
-    },
-    "writing-mode": { comment: "extend with SVG keywords", syntax: "| <svg-writing-mode>" },
-  },
-  syntaxes: null,
-};
-const obj2 = {
-  charset: { prelude: "<string>" },
-  "font-face": {
-    descriptors: {
-      "unicode-range": { comment: "replaces <unicode-range>, an old production name", syntax: "<urange>#" },
-    },
-  },
-};
-obj.atrules = obj2;
-const point = {
-  "-legacy-gradient": {
-    comment: "added collection of legacy gradient syntaxes",
-    syntax:
-      "<-webkit-gradient()> | <-legacy-linear-gradient> | <-legacy-repeating-linear-gradient> | <-legacy-radial-gradient> | <-legacy-repeating-radial-gradient>",
-  },
-  "-legacy-linear-gradient": {
-    comment:
-      "like standard syntax but w/o `to` keyword https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient",
-    syntax:
-      "-moz-linear-gradient( <-legacy-linear-gradient-arguments> ) | -webkit-linear-gradient( <-legacy-linear-gradient-arguments> ) | -o-linear-gradient( <-legacy-linear-gradient-arguments> )",
-  },
-  "-legacy-repeating-linear-gradient": {
-    comment:
-      "like standard syntax but w/o `to` keyword https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient",
-    syntax:
-      "-moz-repeating-linear-gradient( <-legacy-linear-gradient-arguments> ) | -webkit-repeating-linear-gradient( <-legacy-linear-gradient-arguments> ) | -o-repeating-linear-gradient( <-legacy-linear-gradient-arguments> )",
-  },
-  "-legacy-linear-gradient-arguments": {
-    comment:
-      "like standard syntax but w/o `to` keyword https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient",
-    syntax: "[ <angle> | <side-or-corner> ]? , <color-stop-list>",
-  },
-  "-legacy-radial-gradient": {
-    comment:
-      "deprecated syntax that implemented by some browsers https://www.w3.org/TR/2011/WD-css3-images-20110908/#radial-gradients",
-    syntax:
-      "-moz-radial-gradient( <-legacy-radial-gradient-arguments> ) | -webkit-radial-gradient( <-legacy-radial-gradient-arguments> ) | -o-radial-gradient( <-legacy-radial-gradient-arguments> )",
-  },
-  "-legacy-repeating-radial-gradient": {
-    comment:
-      "deprecated syntax that implemented by some browsers https://www.w3.org/TR/2011/WD-css3-images-20110908/#radial-gradients",
-    syntax:
-      "-moz-repeating-radial-gradient( <-legacy-radial-gradient-arguments> ) | -webkit-repeating-radial-gradient( <-legacy-radial-gradient-arguments> ) | -o-repeating-radial-gradient( <-legacy-radial-gradient-arguments> )",
-  },
-  "-legacy-radial-gradient-arguments": {
-    comment:
-      "deprecated syntax that implemented by some browsers https://www.w3.org/TR/2011/WD-css3-images-20110908/#radial-gradients",
-    syntax:
-      "[ <position> , ]? [ [ [ <-legacy-radial-gradient-shape> || <-legacy-radial-gradient-size> ] | [ <length> | <percentage> ]{2} ] , ]? <color-stop-list>",
-  },
-  "-legacy-radial-gradient-size": {
-    comment:
-      "before a standard it contains 2 extra keywords (`contain` and `cover`) https://www.w3.org/TR/2011/WD-css3-images-20110908/#ltsize",
-    syntax: "closest-side | closest-corner | farthest-side | farthest-corner | contain | cover",
-  },
-  "-legacy-radial-gradient-shape": {
-    comment:
-      "define to double sure it doesn't extends in future https://www.w3.org/TR/2011/WD-css3-images-20110908/#ltshape",
-    syntax: "circle | ellipse",
-  },
-  "-non-standard-font": {
-    comment: "non standard fonts",
-    references: ["https://webkit.org/blog/3709/using-the-system-font-in-web-content/"],
-    syntax:
-      "-apple-system-body | -apple-system-headline | -apple-system-subheadline | -apple-system-caption1 | -apple-system-caption2 | -apple-system-footnote | -apple-system-short-body | -apple-system-short-headline | -apple-system-short-subheadline | -apple-system-short-caption1 | -apple-system-short-footnote | -apple-system-tall-body",
-  },
-  "-non-standard-color": {
-    comment: "non standard colors",
-    references: [
-      "http://cssdot.ru/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA_CSS/color-i305.html",
-      "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Mozilla_Color_Preference_Extensions",
-    ],
-    syntax:
-      "-moz-ButtonDefault | -moz-ButtonHoverFace | -moz-ButtonHoverText | -moz-CellHighlight | -moz-CellHighlightText | -moz-Combobox | -moz-ComboboxText | -moz-Dialog | -moz-DialogText | -moz-dragtargetzone | -moz-EvenTreeRow | -moz-Field | -moz-FieldText | -moz-html-CellHighlight | -moz-html-CellHighlightText | -moz-mac-accentdarkestshadow | -moz-mac-accentdarkshadow | -moz-mac-accentface | -moz-mac-accentlightesthighlight | -moz-mac-accentlightshadow | -moz-mac-accentregularhighlight | -moz-mac-accentregularshadow | -moz-mac-chrome-active | -moz-mac-chrome-inactive | -moz-mac-focusring | -moz-mac-menuselect | -moz-mac-menushadow | -moz-mac-menutextselect | -moz-MenuHover | -moz-MenuHoverText | -moz-MenuBarText | -moz-MenuBarHoverText | -moz-nativehyperlinktext | -moz-OddTreeRow | -moz-win-communicationstext | -moz-win-mediatext | -moz-activehyperlinktext | -moz-default-background-color | -moz-default-color | -moz-hyperlinktext | -moz-visitedhyperlinktext | -webkit-activelink | -webkit-focus-ring-color | -webkit-link | -webkit-text",
-  },
-  "-non-standard-image-rendering": {
-    comment: "non-standard keywords http://phrogz.net/tmp/canvas_image_zoom.html",
-    syntax: "optimize-contrast | -moz-crisp-edges | -o-crisp-edges | -webkit-optimize-contrast",
-  },
-  "-non-standard-overflow": {
-    comment: "non-standard keywords https://developer.mozilla.org/en-US/docs/Web/CSS/overflow",
-    syntax: "-moz-scrollbars-none | -moz-scrollbars-horizontal | -moz-scrollbars-vertical | -moz-hidden-unscrollable",
-  },
-  "-non-standard-width": {
-    comment: "non-standard keywords https://developer.mozilla.org/en-US/docs/Web/CSS/width",
-    syntax:
-      "fill-available | min-intrinsic | intrinsic | -moz-available | -moz-fit-content | -moz-min-content | -moz-max-content | -webkit-min-content | -webkit-max-content",
-  },
-  "-webkit-gradient()": {
-    comment:
-      "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/ - TODO: simplify when after match algorithm improvement ( [, point, radius | , point] -> [, radius]? , point )",
-    syntax:
-      "-webkit-gradient( <-webkit-gradient-type>, <-webkit-gradient-point> [, <-webkit-gradient-point> | , <-webkit-gradient-radius>, <-webkit-gradient-point> ] [, <-webkit-gradient-radius>]? [, <-webkit-gradient-color-stop>]* )",
-  },
-  "-webkit-gradient-color-stop": {
-    comment: "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/",
-    syntax: "from( <color> ) | color-stop( [ <number-zero-one> | <percentage> ] , <color> ) | to( <color> )",
-  },
-  "-webkit-gradient-point": {
-    comment: "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/",
-    syntax: "[ left | center | right | <length-percentage> ] [ top | center | bottom | <length-percentage> ]",
-  },
-  "-webkit-gradient-radius": {
-    comment: "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/",
-    syntax: "<length> | <percentage>",
-  },
-  "-webkit-gradient-type": {
-    comment: "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/",
-    syntax: "linear | radial",
-  },
-  "-webkit-mask-box-repeat": {
-    comment: "missed; https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-mask-box-image",
-    syntax: "repeat | stretch | round",
-  },
-  "-webkit-mask-clip-style": {
-    comment:
-      "missed; there is no enough information about `-webkit-mask-clip` property, but looks like all those keywords are working",
-    syntax: "border | border-box | padding | padding-box | content | content-box | text",
-  },
-  "-ms-filter-function-list": {
-    comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-filter",
-    syntax: "<-ms-filter-function>+",
-  },
-  "-ms-filter-function": {
-    comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-filter",
-    syntax: "<-ms-filter-function-progid> | <-ms-filter-function-legacy>",
-  },
-  "-ms-filter-function-progid": {
-    comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-filter",
-    syntax: "'progid:' [ <ident-token> '.' ]* [ <ident-token> | <function-token> <any-value>? ) ]",
-  },
-  "-ms-filter-function-legacy": {
-    comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-filter",
-    syntax: "<ident-token> | <function-token> <any-value>? )",
-  },
-  "-ms-filter": { syntax: "<string>" },
-  age: { comment: "https://www.w3.org/TR/css3-speech/#voice-family", syntax: "child | young | old" },
-  "attr-name": { syntax: "<wq-name>" },
-  "attr-fallback": { syntax: "<any-value>" },
-  "border-radius": {
-    comment: "missed, https://drafts.csswg.org/css-backgrounds-3/#the-border-radius",
-    syntax: "<length-percentage>{1,2}",
-  },
-  bottom: {
-    comment:
-      "missed; not sure we should add it, but no others except `shape` is using it so it's ok for now; https://drafts.fxtf.org/css-masking-1/#funcdef-clip-rect",
-    syntax: "<length> | auto",
-  },
-  "content-list": {
-    comment:
-      "missed -> https://drafts.csswg.org/css-content/#typedef-content-list (document-url, <target> and leader() is omitted util stabilization)",
-    syntax:
-      "[ <string> | contents | <image> | <quote> | <target> | <leader()> | <attr()> | counter( <ident>, <'list-style-type'>? ) ]+",
-  },
-  "element()": {
-    comment:
-      "https://drafts.csswg.org/css-gcpm/#element-syntax & https://drafts.csswg.org/css-images-4/#element-notation",
-    syntax: "element( <custom-ident> , [ first | start | last | first-except ]? ) | element( <id-selector> )",
-  },
-  "generic-voice": {
-    comment: "https://www.w3.org/TR/css3-speech/#voice-family",
-    syntax: "[ <age>? <gender> <integer>? ]",
-  },
-  gender: { comment: "https://www.w3.org/TR/css3-speech/#voice-family", syntax: "male | female | neutral" },
-  "generic-family": {
-    comment: "added -apple-system",
-    references: ["https://webkit.org/blog/3709/using-the-system-font-in-web-content/"],
-    syntax: "| -apple-system",
-  },
-  gradient: { comment: "added legacy syntaxes support", syntax: "| <-legacy-gradient>" },
-  left: {
-    comment:
-      "missed; not sure we should add it, but no others except `shape` is using it so it's ok for now; https://drafts.fxtf.org/css-masking-1/#funcdef-clip-rect",
-    syntax: "<length> | auto",
-  },
-  "mask-image": {
-    comment: "missed; https://drafts.fxtf.org/css-masking-1/#the-mask-image",
-    syntax: "<mask-reference>#",
-  },
-  "name-repeat": {
-    comment:
-      "missed, and looks like obsolete, keep it as is since other property syntaxes should be changed too; https://www.w3.org/TR/2015/WD-css-grid-1-20150917/#typedef-name-repeat",
-    syntax: "repeat( [ <positive-integer> | auto-fill ], <line-names>+)",
-  },
-  "named-color": { comment: "added non standard color names", syntax: "| <-non-standard-color>" },
-  paint: {
-    comment: "used by SVG https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint",
-    syntax: "none | <color> | <url> [ none | <color> ]? | context-fill | context-stroke",
-  },
-  "page-size": {
-    comment: "https://www.w3.org/TR/css-page-3/#typedef-page-size-page-size",
-    syntax: "A5 | A4 | A3 | B5 | B4 | JIS-B5 | JIS-B4 | letter | legal | ledger",
-  },
-  ratio: { comment: "missed, https://drafts.csswg.org/mediaqueries-4/#typedef-ratio", syntax: "<integer> / <integer>" },
-  right: {
-    comment:
-      "missed; not sure we should add it, but no others except `shape` is using it so it's ok for now; https://drafts.fxtf.org/css-masking-1/#funcdef-clip-rect",
-    syntax: "<length> | auto",
-  },
-  shape: {
-    comment: "missed spaces in function body and add backwards compatible syntax",
-    syntax: "rect( <top>, <right>, <bottom>, <left> ) | rect( <top> <right> <bottom> <left> )",
-  },
-  "svg-length": {
-    comment: "All coordinates and lengths in SVG can be specified with or without a unit identifier",
-    references: ["https://www.w3.org/TR/SVG11/coords.html#Units"],
-    syntax: "<percentage> | <length> | <number>",
-  },
-  "svg-writing-mode": {
-    comment: "SVG specific keywords (deprecated for CSS)",
-    references: [
-      "https://developer.mozilla.org/en/docs/Web/CSS/writing-mode",
-      "https://www.w3.org/TR/SVG/text.html#WritingModeProperty",
-    ],
-    syntax: "lr-tb | rl-tb | tb-rl | lr | rl | tb",
-  },
-  top: {
-    comment:
-      "missed; not sure we should add it, but no others except `shape` is using it so it's ok for now; https://drafts.fxtf.org/css-masking-1/#funcdef-clip-rect",
-    syntax: "<length> | auto",
-  },
-  "track-group": {
-    comment: "used by old grid-columns and grid-rows syntax v0",
-    syntax: "'(' [ <string>* <track-minmax> <string>* ]+ ')' [ '[' <positive-integer> ']' ]? | <track-minmax>",
-  },
-  "track-list-v0": {
-    comment: "used by old grid-columns and grid-rows syntax v0",
-    syntax: "[ <string>* <track-group> <string>* ]+ | none",
-  },
-  "track-minmax": {
-    comment: "used by old grid-columns and grid-rows syntax v0",
-    syntax: "minmax( <track-breadth> , <track-breadth> ) | auto | <track-breadth> | fit-content",
-  },
-  x: {
-    comment:
-      "missed; not sure we should add it, but no others except `cursor` is using it so it's ok for now; https://drafts.csswg.org/css-ui-3/#cursor",
-    syntax: "<number>",
-  },
-  y: {
-    comment:
-      "missed; not sure we should add it, but no others except `cursor` is using so it's ok for now; https://drafts.csswg.org/css-ui-3/#cursor",
-    syntax: "<number>",
-  },
-  declaration: {
-    comment: "missed, restored by https://drafts.csswg.org/css-syntax",
-    syntax: "<ident-token> : <declaration-value>? [ '!' important ]?",
-  },
-  "declaration-list": {
-    comment: "missed, restored by https://drafts.csswg.org/css-syntax",
-    syntax: "[ <declaration>? ';' ]* <declaration>?",
-  },
-  url: {
-    comment: "https://drafts.csswg.org/css-values-4/#urls",
-    syntax: "url( <string> <url-modifier>* ) | <url-token>",
-  },
-  "url-modifier": {
-    comment: "https://drafts.csswg.org/css-values-4/#typedef-url-modifier",
-    syntax: "<ident> | <function-token> <any-value> )",
-  },
-  "number-zero-one": { syntax: "<number [0,1]>" },
-  "number-one-or-greater": { syntax: "<number [1,\u221E]>" },
-  "positive-integer": { syntax: "<integer [0,\u221E]>" },
-  "-non-standard-display": {
-    syntax:
-      "-ms-inline-flexbox | -ms-grid | -ms-inline-grid | -webkit-flex | -webkit-inline-flex | -webkit-box | -webkit-inline-box | -moz-inline-stack | -moz-box | -moz-inline-box",
-  },
-};
-obj.syntaxes = point;
 
-export default obj;
+export default {
+  "absolute-size": { syntax: "xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large" },
+  "alpha-value": { syntax: "<number> | <percentage>" },
+  "angle-percentage": { syntax: "<angle> | <percentage>" },
+  "angular-color-hint": { syntax: "<angle-percentage>" },
+  "angular-color-stop": { syntax: "<color> && <color-stop-angle>?" },
+  "angular-color-stop-list": { syntax: "[ <angular-color-stop> [, <angular-color-hint>]? ]# , <angular-color-stop>" },
+  "animateable-feature": { syntax: "scroll-position | contents | <custom-ident>" },
+  attachment: { syntax: "scroll | fixed | local" },
+  "attr()": { syntax: "attr( <attr-name> <type-or-unit>? [, <attr-fallback> ]? )" },
+  "attr-matcher": { syntax: "[ '~' | '|' | '^' | '$' | '*' ]? '='" },
+  "attr-modifier": { syntax: "i | s" },
+  "attribute-selector": {
+    syntax: "'[' <wq-name> ']' | '[' <wq-name> <attr-matcher> [ <string-token> | <ident-token> ] <attr-modifier>? ']'",
+  },
+  "auto-repeat": { syntax: "repeat( [ auto-fill | auto-fit ] , [ <line-names>? <fixed-size> ]+ <line-names>? )" },
+  "auto-track-list": {
+    syntax:
+      "[ <line-names>? [ <fixed-size> | <fixed-repeat> ] ]* <line-names>? <auto-repeat>\n[ <line-names>? [ <fixed-size> | <fixed-repeat> ] ]* <line-names>?",
+  },
+  "baseline-position": { syntax: "[ first | last ]? baseline" },
+  "basic-shape": { syntax: "<inset()> | <circle()> | <ellipse()> | <polygon()> | <path()>" },
+  "bg-image": { syntax: "none | <image>" },
+  "bg-layer": {
+    syntax: "<bg-image> || <bg-position> [ / <bg-size> ]? || <repeat-style> || <attachment> || <box> || <box>",
+  },
+  "bg-position": {
+    syntax:
+      "[ [ left | center | right | top | bottom | <length-percentage> ] | [ left | center | right | <length-percentage> ] [ top | center | bottom | <length-percentage> ] | [ center | [ left | right ] <length-percentage>? ] && [ center | [ top | bottom ] <length-percentage>? ] ]",
+  },
+  "bg-size": { syntax: "[ <length-percentage> | auto ]{1,2} | cover | contain" },
+  "blur()": { syntax: "blur( <length> )" },
+  "blend-mode": {
+    syntax:
+      "normal | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | hard-light | soft-light | difference | exclusion | hue | saturation | color | luminosity",
+  },
+  box: { syntax: "border-box | padding-box | content-box" },
+  "brightness()": { syntax: "brightness( <number-percentage> )" },
+  "calc()": { syntax: "calc( <calc-sum> )" },
+  "calc-sum": { syntax: "<calc-product> [ [ '+' | '-' ] <calc-product> ]*" },
+  "calc-product": { syntax: "<calc-value> [ '*' <calc-value> | '/' <number> ]*" },
+  "calc-value": { syntax: "<number> | <dimension> | <percentage> | ( <calc-sum> )" },
+  "cf-final-image": { syntax: "<image> | <color>" },
+  "cf-mixing-image": { syntax: "<percentage>? && <image>" },
+  "circle()": { syntax: "circle( [ <shape-radius> ]? [ at <position> ]? )" },
+  "clamp()": { syntax: "clamp( <calc-sum>#{3} )" },
+  "class-selector": { syntax: "'.' <ident-token>" },
+  "clip-source": { syntax: "<url>" },
+  color: {
+    syntax:
+      "<rgb()> | <rgba()> | <hsl()> | <hsla()> | <hex-color> | <named-color> | currentcolor | <deprecated-system-color>",
+  },
+  "color-stop": { syntax: "<color-stop-length> | <color-stop-angle>" },
+  "color-stop-angle": { syntax: "<angle-percentage>{1,2}" },
+  "color-stop-length": { syntax: "<length-percentage>{1,2}" },
+  "color-stop-list": { syntax: "[ <linear-color-stop> [, <linear-color-hint>]? ]# , <linear-color-stop>" },
+  combinator: { syntax: "'>' | '+' | '~' | [ '||' ]" },
+  "common-lig-values": { syntax: "[ common-ligatures | no-common-ligatures ]" },
+  "compat-auto": {
+    syntax:
+      "searchfield | textarea | push-button | slider-horizontal | checkbox | radio | square-button | menulist | listbox | meter | progress-bar | button",
+  },
+  "composite-style": {
+    syntax:
+      "clear | copy | source-over | source-in | source-out | source-atop | destination-over | destination-in | destination-out | destination-atop | xor",
+  },
+  "compositing-operator": { syntax: "add | subtract | intersect | exclude" },
+  "compound-selector": {
+    syntax: "[ <type-selector>? <subclass-selector>* [ <pseudo-element-selector> <pseudo-class-selector>* ]* ]!",
+  },
+  "compound-selector-list": { syntax: "<compound-selector>#" },
+  "complex-selector": { syntax: "<compound-selector> [ <combinator>? <compound-selector> ]*" },
+  "complex-selector-list": { syntax: "<complex-selector>#" },
+  "conic-gradient()": { syntax: "conic-gradient( [ from <angle> ]? [ at <position> ]?, <angular-color-stop-list> )" },
+  "contextual-alt-values": { syntax: "[ contextual | no-contextual ]" },
+  "content-distribution": { syntax: "space-between | space-around | space-evenly | stretch" },
+  "content-list": { syntax: "[ <string> | contents | <image> | <quote> | <target> | <leader()> ]+" },
+  "content-position": { syntax: "center | start | end | flex-start | flex-end" },
+  "content-replacement": { syntax: "<image>" },
+  "contrast()": { syntax: "contrast( [ <number-percentage> ] )" },
+  "counter()": { syntax: "counter( <custom-ident>, <counter-style>? )" },
+  "counter-style": { syntax: "<counter-style-name> | symbols()" },
+  "counter-style-name": { syntax: "<custom-ident>" },
+  "counters()": { syntax: "counters( <custom-ident>, <string>, <counter-style>? )" },
+  "cross-fade()": { syntax: "cross-fade( <cf-mixing-image> , <cf-final-image>? )" },
+  "cubic-bezier-timing-function": {
+    syntax:
+      "ease | ease-in | ease-out | ease-in-out | cubic-bezier(<number [0,1]>, <number>, <number [0,1]>, <number>)",
+  },
+  "deprecated-system-color": {
+    syntax:
+      "ActiveBorder | ActiveCaption | AppWorkspace | Background | ButtonFace | ButtonHighlight | ButtonShadow | ButtonText | CaptionText | GrayText | Highlight | HighlightText | InactiveBorder | InactiveCaption | InactiveCaptionText | InfoBackground | InfoText | Menu | MenuText | Scrollbar | ThreeDDarkShadow | ThreeDFace | ThreeDHighlight | ThreeDLightShadow | ThreeDShadow | Window | WindowFrame | WindowText",
+  },
+  "discretionary-lig-values": { syntax: "[ discretionary-ligatures | no-discretionary-ligatures ]" },
+  "display-box": { syntax: "contents | none" },
+  "display-inside": { syntax: "flow | flow-root | table | flex | grid | ruby" },
+  "display-internal": {
+    syntax:
+      "table-row-group | table-header-group | table-footer-group | table-row | table-cell | table-column-group | table-column | table-caption | ruby-base | ruby-text | ruby-base-container | ruby-text-container",
+  },
+  "display-legacy": { syntax: "inline-block | inline-list-item | inline-table | inline-flex | inline-grid" },
+  "display-listitem": { syntax: "<display-outside>? && [ flow | flow-root ]? && list-item" },
+  "display-outside": { syntax: "block | inline | run-in" },
+  "drop-shadow()": { syntax: "drop-shadow( <length>{2,3} <color>? )" },
+  "east-asian-variant-values": { syntax: "[ jis78 | jis83 | jis90 | jis04 | simplified | traditional ]" },
+  "east-asian-width-values": { syntax: "[ full-width | proportional-width ]" },
+  "element()": { syntax: "element( <id-selector> )" },
+  "ellipse()": { syntax: "ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )" },
+  "ending-shape": { syntax: "circle | ellipse" },
+  "env()": { syntax: "env( <custom-ident> , <declaration-value>? )" },
+  "explicit-track-list": { syntax: "[ <line-names>? <track-size> ]+ <line-names>?" },
+  "family-name": { syntax: "<string> | <custom-ident>+" },
+  "feature-tag-value": { syntax: "<string> [ <integer> | on | off ]?" },
+  "feature-type": {
+    syntax: "@stylistic | @historical-forms | @styleset | @character-variant | @swash | @ornaments | @annotation",
+  },
+  "feature-value-block": { syntax: "<feature-type> '{' <feature-value-declaration-list> '}'" },
+  "feature-value-block-list": { syntax: "<feature-value-block>+" },
+  "feature-value-declaration": { syntax: "<custom-ident>: <integer>+;" },
+  "feature-value-declaration-list": { syntax: "<feature-value-declaration>" },
+  "feature-value-name": { syntax: "<custom-ident>" },
+  "fill-rule": { syntax: "nonzero | evenodd" },
+  "filter-function": {
+    syntax:
+      "<blur()> | <brightness()> | <contrast()> | <drop-shadow()> | <grayscale()> | <hue-rotate()> | <invert()> | <opacity()> | <saturate()> | <sepia()>",
+  },
+  "filter-function-list": { syntax: "[ <filter-function> | <url> ]+" },
+  "final-bg-layer": {
+    syntax:
+      "<'background-color'> || <bg-image> || <bg-position> [ / <bg-size> ]? || <repeat-style> || <attachment> || <box> || <box>",
+  },
+  "fit-content()": { syntax: "fit-content( [ <length> | <percentage> ] )" },
+  "fixed-breadth": { syntax: "<length-percentage>" },
+  "fixed-repeat": { syntax: "repeat( [ <positive-integer> ] , [ <line-names>? <fixed-size> ]+ <line-names>? )" },
+  "fixed-size": {
+    syntax:
+      "<fixed-breadth> | minmax( <fixed-breadth> , <track-breadth> ) | minmax( <inflexible-breadth> , <fixed-breadth> )",
+  },
+  "font-stretch-absolute": {
+    syntax:
+      "normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded | <percentage>",
+  },
+  "font-variant-css21": { syntax: "[ normal | small-caps ]" },
+  "font-weight-absolute": { syntax: "normal | bold | <number [1,1000]>" },
+  "frequency-percentage": { syntax: "<frequency> | <percentage>" },
+  "general-enclosed": { syntax: "[ <function-token> <any-value> ) ] | ( <ident> <any-value> )" },
+  "generic-family": { syntax: "serif | sans-serif | cursive | fantasy | monospace" },
+  "generic-name": { syntax: "serif | sans-serif | cursive | fantasy | monospace" },
+  "geometry-box": { syntax: "<shape-box> | fill-box | stroke-box | view-box" },
+  gradient: {
+    syntax:
+      "<linear-gradient()> | <repeating-linear-gradient()> | <radial-gradient()> | <repeating-radial-gradient()> | <conic-gradient()>",
+  },
+  "grayscale()": { syntax: "grayscale( <number-percentage> )" },
+  "grid-line": {
+    syntax: "auto | <custom-ident> | [ <integer> && <custom-ident>? ] | [ span && [ <integer> || <custom-ident> ] ]",
+  },
+  "historical-lig-values": { syntax: "[ historical-ligatures | no-historical-ligatures ]" },
+  "hsl()": {
+    syntax:
+      "hsl( <hue> <percentage> <percentage> [ / <alpha-value> ]? ) | hsl( <hue>, <percentage>, <percentage>, <alpha-value>? )",
+  },
+  "hsla()": {
+    syntax:
+      "hsla( <hue> <percentage> <percentage> [ / <alpha-value> ]? ) | hsla( <hue>, <percentage>, <percentage>, <alpha-value>? )",
+  },
+  hue: { syntax: "<number> | <angle>" },
+  "hue-rotate()": { syntax: "hue-rotate( <angle> )" },
+  "id-selector": { syntax: "<hash-token>" },
+  image: { syntax: "<url> | <image()> | <image-set()> | <element()> | <paint()> | <cross-fade()> | <gradient>" },
+  "image()": { syntax: "image( <image-tags>? [ <image-src>? , <color>? ]! )" },
+  "image-set()": { syntax: "image-set( <image-set-option># )" },
+  "image-set-option": { syntax: "[ <image> | <string> ] <resolution>" },
+  "image-src": { syntax: "<url> | <string>" },
+  "image-tags": { syntax: "ltr | rtl" },
+  "inflexible-breadth": { syntax: "<length> | <percentage> | min-content | max-content | auto" },
+  "inset()": { syntax: "inset( <length-percentage>{1,4} [ round <'border-radius'> ]? )" },
+  "invert()": { syntax: "invert( <number-percentage> )" },
+  "keyframes-name": { syntax: "<custom-ident> | <string>" },
+  "keyframe-block": { syntax: "<keyframe-selector># {\n  <declaration-list>\n}" },
+  "keyframe-block-list": { syntax: "<keyframe-block>+" },
+  "keyframe-selector": { syntax: "from | to | <percentage>" },
+  "leader()": { syntax: "leader( <leader-type> )" },
+  "leader-type": { syntax: "dotted | solid | space | <string>" },
+  "length-percentage": { syntax: "<length> | <percentage>" },
+  "line-names": { syntax: "'[' <custom-ident>* ']'" },
+  "line-name-list": { syntax: "[ <line-names> | <name-repeat> ]+" },
+  "line-style": { syntax: "none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset" },
+  "line-width": { syntax: "<length> | thin | medium | thick" },
+  "linear-color-hint": { syntax: "<length-percentage>" },
+  "linear-color-stop": { syntax: "<color> <color-stop-length>?" },
+  "linear-gradient()": { syntax: "linear-gradient( [ <angle> | to <side-or-corner> ]? , <color-stop-list> )" },
+  "mask-layer": {
+    syntax:
+      "<mask-reference> || <position> [ / <bg-size> ]? || <repeat-style> || <geometry-box> || [ <geometry-box> | no-clip ] || <compositing-operator> || <masking-mode>",
+  },
+  "mask-position": {
+    syntax: "[ <length-percentage> | left | center | right ] [ <length-percentage> | top | center | bottom ]?",
+  },
+  "mask-reference": { syntax: "none | <image> | <mask-source>" },
+  "mask-source": { syntax: "<url>" },
+  "masking-mode": { syntax: "alpha | luminance | match-source" },
+  "matrix()": { syntax: "matrix( <number>#{6} )" },
+  "matrix3d()": { syntax: "matrix3d( <number>#{16} )" },
+  "max()": { syntax: "max( <calc-sum># )" },
+  "media-and": { syntax: "<media-in-parens> [ and <media-in-parens> ]+" },
+  "media-condition": { syntax: "<media-not> | <media-and> | <media-or> | <media-in-parens>" },
+  "media-condition-without-or": { syntax: "<media-not> | <media-and> | <media-in-parens>" },
+  "media-feature": { syntax: "( [ <mf-plain> | <mf-boolean> | <mf-range> ] )" },
+  "media-in-parens": { syntax: "( <media-condition> ) | <media-feature> | <general-enclosed>" },
+  "media-not": { syntax: "not <media-in-parens>" },
+  "media-or": { syntax: "<media-in-parens> [ or <media-in-parens> ]+" },
+  "media-query": { syntax: "<media-condition> | [ not | only ]? <media-type> [ and <media-condition-without-or> ]?" },
+  "media-query-list": { syntax: "<media-query>#" },
+  "media-type": { syntax: "<ident>" },
+  "mf-boolean": { syntax: "<mf-name>" },
+  "mf-name": { syntax: "<ident>" },
+  "mf-plain": { syntax: "<mf-name> : <mf-value>" },
+  "mf-range": {
+    syntax:
+      "<mf-name> [ '<' | '>' ]? '='? <mf-value>\n| <mf-value> [ '<' | '>' ]? '='? <mf-name>\n| <mf-value> '<' '='? <mf-name> '<' '='? <mf-value>\n| <mf-value> '>' '='? <mf-name> '>' '='? <mf-value>",
+  },
+  "mf-value": { syntax: "<number> | <dimension> | <ident> | <ratio>" },
+  "min()": { syntax: "min( <calc-sum># )" },
+  "minmax()": {
+    syntax:
+      "minmax( [ <length> | <percentage> | min-content | max-content | auto ] , [ <length> | <percentage> | <flex> | min-content | max-content | auto ] )",
+  },
+  "named-color": {
+    syntax:
+      "transparent | aliceblue | antiquewhite | aqua | aquamarine | azure | beige | bisque | black | blanchedalmond | blue | blueviolet | brown | burlywood | cadetblue | chartreuse | chocolate | coral | cornflowerblue | cornsilk | crimson | cyan | darkblue | darkcyan | darkgoldenrod | darkgray | darkgreen | darkgrey | darkkhaki | darkmagenta | darkolivegreen | darkorange | darkorchid | darkred | darksalmon | darkseagreen | darkslateblue | darkslategray | darkslategrey | darkturquoise | darkviolet | deeppink | deepskyblue | dimgray | dimgrey | dodgerblue | firebrick | floralwhite | forestgreen | fuchsia | gainsboro | ghostwhite | gold | goldenrod | gray | green | greenyellow | grey | honeydew | hotpink | indianred | indigo | ivory | khaki | lavender | lavenderblush | lawngreen | lemonchiffon | lightblue | lightcoral | lightcyan | lightgoldenrodyellow | lightgray | lightgreen | lightgrey | lightpink | lightsalmon | lightseagreen | lightskyblue | lightslategray | lightslategrey | lightsteelblue | lightyellow | lime | limegreen | linen | magenta | maroon | mediumaquamarine | mediumblue | mediumorchid | mediumpurple | mediumseagreen | mediumslateblue | mediumspringgreen | mediumturquoise | mediumvioletred | midnightblue | mintcream | mistyrose | moccasin | navajowhite | navy | oldlace | olive | olivedrab | orange | orangered | orchid | palegoldenrod | palegreen | paleturquoise | palevioletred | papayawhip | peachpuff | peru | pink | plum | powderblue | purple | rebeccapurple | red | rosybrown | royalblue | saddlebrown | salmon | sandybrown | seagreen | seashell | sienna | silver | skyblue | slateblue | slategray | slategrey | snow | springgreen | steelblue | tan | teal | thistle | tomato | turquoise | violet | wheat | white | whitesmoke | yellow | yellowgreen",
+  },
+  "namespace-prefix": { syntax: "<ident>" },
+  "ns-prefix": { syntax: "[ <ident-token> | '*' ]? '|'" },
+  "number-percentage": { syntax: "<number> | <percentage>" },
+  "numeric-figure-values": { syntax: "[ lining-nums | oldstyle-nums ]" },
+  "numeric-fraction-values": { syntax: "[ diagonal-fractions | stacked-fractions ]" },
+  "numeric-spacing-values": { syntax: "[ proportional-nums | tabular-nums ]" },
+  nth: { syntax: "<an-plus-b> | even | odd" },
+  "opacity()": { syntax: "opacity( [ <number-percentage> ] )" },
+  "overflow-position": { syntax: "unsafe | safe" },
+  "outline-radius": { syntax: "<length> | <percentage>" },
+  "page-body": { syntax: "<declaration>? [ ; <page-body> ]? | <page-margin-box> <page-body>" },
+  "page-margin-box": { syntax: "<page-margin-box-type> '{' <declaration-list> '}'" },
+  "page-margin-box-type": {
+    syntax:
+      "@top-left-corner | @top-left | @top-center | @top-right | @top-right-corner | @bottom-left-corner | @bottom-left | @bottom-center | @bottom-right | @bottom-right-corner | @left-top | @left-middle | @left-bottom | @right-top | @right-middle | @right-bottom",
+  },
+  "page-selector-list": { syntax: "[ <page-selector># ]?" },
+  "page-selector": { syntax: "<pseudo-page>+ | <ident> <pseudo-page>*" },
+  "path()": { syntax: "path( [ <fill-rule>, ]? <string> )" },
+  "paint()": { syntax: "paint( <ident>, <declaration-value>? )" },
+  "perspective()": { syntax: "perspective( <length> )" },
+  "polygon()": { syntax: "polygon( <fill-rule>? , [ <length-percentage> <length-percentage> ]# )" },
+  position: {
+    syntax:
+      "[ [ left | center | right ] || [ top | center | bottom ] | [ left | center | right | <length-percentage> ] [ top | center | bottom | <length-percentage> ]? | [ [ left | right ] <length-percentage> ] && [ [ top | bottom ] <length-percentage> ] ]",
+  },
+  "pseudo-class-selector": { syntax: "':' <ident-token> | ':' <function-token> <any-value> ')'" },
+  "pseudo-element-selector": { syntax: "':' <pseudo-class-selector>" },
+  "pseudo-page": { syntax: ": [ left | right | first | blank ]" },
+  quote: { syntax: "open-quote | close-quote | no-open-quote | no-close-quote" },
+  "radial-gradient()": {
+    syntax: "radial-gradient( [ <ending-shape> || <size> ]? [ at <position> ]? , <color-stop-list> )",
+  },
+  "relative-selector": { syntax: "<combinator>? <complex-selector>" },
+  "relative-selector-list": { syntax: "<relative-selector>#" },
+  "relative-size": { syntax: "larger | smaller" },
+  "repeat-style": { syntax: "repeat-x | repeat-y | [ repeat | space | round | no-repeat ]{1,2}" },
+  "repeating-linear-gradient()": {
+    syntax: "repeating-linear-gradient( [ <angle> | to <side-or-corner> ]? , <color-stop-list> )",
+  },
+  "repeating-radial-gradient()": {
+    syntax: "repeating-radial-gradient( [ <ending-shape> || <size> ]? [ at <position> ]? , <color-stop-list> )",
+  },
+  "rgb()": {
+    syntax:
+      "rgb( <percentage>{3} [ / <alpha-value> ]? ) | rgb( <number>{3} [ / <alpha-value> ]? ) | rgb( <percentage>#{3} , <alpha-value>? ) | rgb( <number>#{3} , <alpha-value>? )",
+  },
+  "rgba()": {
+    syntax:
+      "rgba( <percentage>{3} [ / <alpha-value> ]? ) | rgba( <number>{3} [ / <alpha-value> ]? ) | rgba( <percentage>#{3} , <alpha-value>? ) | rgba( <number>#{3} , <alpha-value>? )",
+  },
+  "rotate()": { syntax: "rotate( [ <angle> | <zero> ] )" },
+  "rotate3d()": { syntax: "rotate3d( <number> , <number> , <number> , [ <angle> | <zero> ] )" },
+  "rotateX()": { syntax: "rotateX( [ <angle> | <zero> ] )" },
+  "rotateY()": { syntax: "rotateY( [ <angle> | <zero> ] )" },
+  "rotateZ()": { syntax: "rotateZ( [ <angle> | <zero> ] )" },
+  "saturate()": { syntax: "saturate( <number-percentage> )" },
+  "scale()": { syntax: "scale( <number> , <number>? )" },
+  "scale3d()": { syntax: "scale3d( <number> , <number> , <number> )" },
+  "scaleX()": { syntax: "scaleX( <number> )" },
+  "scaleY()": { syntax: "scaleY( <number> )" },
+  "scaleZ()": { syntax: "scaleZ( <number> )" },
+  "self-position": { syntax: "center | start | end | self-start | self-end | flex-start | flex-end" },
+  "shape-radius": { syntax: "<length-percentage> | closest-side | farthest-side" },
+  "skew()": { syntax: "skew( [ <angle> | <zero> ] , [ <angle> | <zero> ]? )" },
+  "skewX()": { syntax: "skewX( [ <angle> | <zero> ] )" },
+  "skewY()": { syntax: "skewY( [ <angle> | <zero> ] )" },
+  "sepia()": { syntax: "sepia( <number-percentage> )" },
+  shadow: { syntax: "inset? && <length>{2,4} && <color>?" },
+  "shadow-t": { syntax: "[ <length>{2,3} && <color>? ]" },
+  shape: { syntax: "rect(<top>, <right>, <bottom>, <left>)" },
+  "shape-box": { syntax: "<box> | margin-box" },
+  "side-or-corner": { syntax: "[ left | right ] || [ top | bottom ]" },
+  "single-animation": {
+    syntax:
+      "<time> || <timing-function> || <time> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state> || [ none | <keyframes-name> ]",
+  },
+  "single-animation-direction": { syntax: "normal | reverse | alternate | alternate-reverse" },
+  "single-animation-fill-mode": { syntax: "none | forwards | backwards | both" },
+  "single-animation-iteration-count": { syntax: "infinite | <number>" },
+  "single-animation-play-state": { syntax: "running | paused" },
+  "single-transition": { syntax: "[ none | <single-transition-property> ] || <time> || <timing-function> || <time>" },
+  "single-transition-property": { syntax: "all | <custom-ident>" },
+  size: {
+    syntax: "closest-side | farthest-side | closest-corner | farthest-corner | <length> | <length-percentage>{2}",
+  },
+  "step-position": { syntax: "jump-start | jump-end | jump-none | jump-both | start | end" },
+  "step-timing-function": { syntax: "step-start | step-end | steps(<integer>[, <step-position>]?)" },
+  "subclass-selector": { syntax: "<id-selector> | <class-selector> | <attribute-selector> | <pseudo-class-selector>" },
+  "supports-condition": {
+    syntax:
+      "not <supports-in-parens> | <supports-in-parens> [ and <supports-in-parens> ]* | <supports-in-parens> [ or <supports-in-parens> ]*",
+  },
+  "supports-in-parens": { syntax: "( <supports-condition> ) | <supports-feature> | <general-enclosed>" },
+  "supports-feature": { syntax: "<supports-decl> | <supports-selector-fn>" },
+  "supports-decl": { syntax: "( <declaration> )" },
+  "supports-selector-fn": { syntax: "selector( <complex-selector> )" },
+  symbol: { syntax: "<string> | <image> | <custom-ident>" },
+  target: { syntax: "<target-counter()> | <target-counters()> | <target-text()>" },
+  "target-counter()": { syntax: "target-counter( [ <string> | <url> ] , <custom-ident> , <counter-style>? )" },
+  "target-counters()": {
+    syntax: "target-counters( [ <string> | <url> ] , <custom-ident> , <string> , <counter-style>? )",
+  },
+  "target-text()": { syntax: "target-text( [ <string> | <url> ] , [ content | before | after | first-letter ]? )" },
+  "time-percentage": { syntax: "<time> | <percentage>" },
+  "timing-function": { syntax: "linear | <cubic-bezier-timing-function> | <step-timing-function>" },
+  "track-breadth": { syntax: "<length-percentage> | <flex> | min-content | max-content | auto" },
+  "track-list": { syntax: "[ <line-names>? [ <track-size> | <track-repeat> ] ]+ <line-names>?" },
+  "track-repeat": { syntax: "repeat( [ <positive-integer> ] , [ <line-names>? <track-size> ]+ <line-names>? )" },
+  "track-size": {
+    syntax:
+      "<track-breadth> | minmax( <inflexible-breadth> , <track-breadth> ) | fit-content( [ <length> | <percentage> ] )",
+  },
+  "transform-function": {
+    syntax:
+      "<matrix()> | <translate()> | <translateX()> | <translateY()> | <scale()> | <scaleX()> | <scaleY()> | <rotate()> | <skew()> | <skewX()> | <skewY()> | <matrix3d()> | <translate3d()> | <translateZ()> | <scale3d()> | <scaleZ()> | <rotate3d()> | <rotateX()> | <rotateY()> | <rotateZ()> | <perspective()>",
+  },
+  "transform-list": { syntax: "<transform-function>+" },
+  "translate()": { syntax: "translate( <length-percentage> , <length-percentage>? )" },
+  "translate3d()": { syntax: "translate3d( <length-percentage> , <length-percentage> , <length> )" },
+  "translateX()": { syntax: "translateX( <length-percentage> )" },
+  "translateY()": { syntax: "translateY( <length-percentage> )" },
+  "translateZ()": { syntax: "translateZ( <length> )" },
+  "type-or-unit": {
+    syntax:
+      "string | color | url | integer | number | length | angle | time | frequency | cap | ch | em | ex | ic | lh | rlh | rem | vb | vi | vw | vh | vmin | vmax | mm | Q | cm | in | pt | pc | px | deg | grad | rad | turn | ms | s | Hz | kHz | %",
+  },
+  "type-selector": { syntax: "<wq-name> | <ns-prefix>? '*'" },
+  "var()": { syntax: "var( <custom-property-name> , <declaration-value>? )" },
+  "viewport-length": { syntax: "auto | <length-percentage>" },
+  "wq-name": { syntax: "<ns-prefix>? <ident-token>" },
+};

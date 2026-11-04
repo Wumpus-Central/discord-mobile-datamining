@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 640,
   height: 360,
   scales: [1],
-  hash: "1959740f5a804a73d247c5716c4838a6",
-  name: "conjure-home-aram-widget",
+  hash: "b88db832be1f753b114623298ec2ec89",
+  name: "conjure-home-movie-night",
   type: "svg",
 });

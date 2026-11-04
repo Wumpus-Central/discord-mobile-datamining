@@ -2,6 +2,6 @@
 
 export default {
   parse() {
-    return this.createSingleNodeList(this.Identifier());
+    return this.createSingleNodeList(this.SelectorList());
   },
 };

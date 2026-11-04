@@ -75,7 +75,7 @@ export function useReanimatedEventHandler(arg0, arg1, handler, changeEventCalcul
       value = current.value;
       value2 = value.get(handlerTag.handlerTag);
       if (undefined === value2) {
-        const obj = { lastUpdateEvent: "r" };
+        const obj = { lastUpdateEvent: "Array" };
         const value4 = current.value;
         const result = value4.set(handlerTag.handlerTag, obj);
         value2 = obj;

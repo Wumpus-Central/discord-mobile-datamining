@@ -2,10 +2,10 @@
 const obj = {
   parse: {
     prelude() {
-      return this.createSingleNodeList(this.SelectorList());
+      return this.createSingleNodeList(this.MediaQueryList());
     },
     block() {
-      return this.Block(true);
+      return this.Block(false);
     },
   },
 };

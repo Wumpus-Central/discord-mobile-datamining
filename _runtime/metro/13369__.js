@@ -1,173 +1,82 @@
 // _runtime/metro/13369__.js
-import errorCallback from "../13269_errorCallback.js";
-import _mod13273 from "13273__.js";
-import _mod13274 from "13274__.js";
-import spanTimeInputToSeconds from "../13278_spanTimeInputToSeconds.js";
-import _mod13287 from "13287__.js";
-import _mod13300 from "13300__.js";
-import _mod13301 from "13301__.js";
-import COUNTER_METRIC_TYPE from "../13370_COUNTER_METRIC_TYPE.js";
-import __SENTRY_DEBUG__ from "13272__.js";
+import stackParserFromStackParserOptions from "../13277_stackParserFromStackParserOptions.js";
+import setupIntegration from "13330__.js";
 
-const require = globalThis.__r;
+let c2 = "_sentryBundlerPluginAppKey:";
 
-function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
-  let obj = arg4;
-  if (arg4 === undefined) {
-    obj = {};
-  }
-  let client = obj.client;
-  if (!client) {
-    client = _mod13300.getClient();
-  }
-  if (client) {
-    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
-    let rootSpan;
-    if (activeSpan) {
-      rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-      const tmp3Result = spanTimeInputToSeconds;
-    }
-    let description = rootSpan;
-    if (rootSpan) {
-      description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
-      const tmp3Result3 = spanTimeInputToSeconds;
-    }
-    ({ unit, tags, timestamp } = obj);
-    const options = client.getOptions();
-    ({ release, environment } = options);
-    const obj4 = {};
-    if (release) {
-      obj4.release = release;
-    }
-    if (environment) {
-      obj4.environment = environment;
-    }
-    if (description) {
-      obj4.transaction = description;
-    }
-    if (_mod13301.DEBUG_BUILD) {
-      const logger = _mod13273.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
-    }
-    const globalSingleton = _mod13274.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(client);
-    if (!value) {
-      const tmp20 = new arg0(client);
-      closure_0 = tmp20;
-      client.on("flush", () => closure_0.flush());
-      client.on("close", () => closure_0.close());
-      const result = globalSingleton.set(client, tmp20);
-      value = tmp20;
-    }
-    const obj5 = {};
-    const merged = Object.assign(obj4);
-    const merged1 = Object.assign(tags);
-    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj5, timestamp);
-    const tmp3Result4 = _mod13274;
-  }
-}
-errorCallback;
-
-export const metrics = {
-  increment(arg0, arg1) {
-    let num = match;
-    if (match === undefined) {
-      num = 1;
-    }
-    let parsed = num;
-    if (typeof num === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(num);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  distribution(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  set(arg0, arg1, parsed, arg3) {
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  gauge(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  timing(arg0, name, fn) {
-    _require = arg0;
-    dependencyMap = name;
-    addToMetricsAggregator = fn;
-    let str = arg3;
-    if (arg3 === undefined) {
-      str = "second";
-    }
-    closure_3 = arg4;
-    c4 = undefined;
-    if (typeof fn === "function") {
-      let timestampInSecondsResult = require("13287__.js").timestampInSeconds();
-      c4 = timestampInSecondsResult;
-      let obj = require("13287__.js");
-      const obj3 = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
-      return require("13307__.js").startSpanManual(obj3, (arg0) => {
-        closure_0 = arg0;
-        return closure_0(name[10]).handleCallbackErrors(
-          () => fn(),
-          () => {},
-          () => {
-            const timestampInSecondsResult = _mod13287.timestampInSeconds();
-            const diff = timestampInSecondsResult - c4;
-            const obj2 = {};
-            const merged = Object.assign(closure_3);
-            obj2.unit = "second";
-            let parsed = diff;
-            if (typeof diff === "string") {
-              const _parseInt = parseInt;
-              parsed = parseInt(diff);
+export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
+  const behaviour = arg0;
+  return {
+    name: "ThirdPartyErrorsFilter",
+    setup(on) {
+      const options = on;
+      on.on("beforeEnvelope", (arg0) => {
+        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp3;
+            if (Array.isArray(arg0)) {
+              tmp3 = arg0[1];
             }
-            addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj2);
-            closure_0.end(timestampInSecondsResult);
-          },
-        );
+            if (tmp3) {
+              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+              arg0[1] = tmp3;
+              const obj = options(dependencyMap[2]);
+            }
+          }
+        });
       });
-    } else {
-      const obj4 = {};
-      let merged = Object.assign(arg4);
-      obj4.unit = str;
-      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
-      let parsed = fn;
-      if (typeof fn === "string") {
-        let _parseInt = parseInt;
-        parsed = parseInt(fn);
+      on.on("applyFrameMetadata", (type) => {
+        if (!type.type) {
+          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
+          const obj = options(dependencyMap[2]);
+        }
+      });
+    },
+    processEvent(tags) {
+      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
+      let mapped;
+      if (framesFromEvent) {
+        let found = framesFromEvent.filter((filename) => filename.filename);
+        mapped = found.map((module_metadata) => {
+          if (module_metadata.module_metadata) {
+            const _Object = Object;
+            const keys = Object.keys(module_metadata.module_metadata);
+            const found = keys.filter((item) => item.startsWith(length));
+            let mapped = found.map((arr) => arr.slice(length.length));
+          } else {
+            mapped = [];
+          }
+          return mapped;
+        });
       }
-      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj4);
-    }
-  },
-  getMetricsAggregatorForClient(on, arg1) {
-    const globalSingleton = _mod13274.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(on);
-    if (value) {
-      return value;
-    } else {
-      const tmp6 = new arg1(on);
-      closure_0 = tmp6;
-      on.on("flush", () => closure_0.flush());
-      on.on("close", () => closure_0.close());
-      const result = globalSingleton.set(on, tmp6);
-      return tmp6;
-    }
-  },
-};
+      if (mapped) {
+        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
+          let str2 = "some";
+        } else {
+          str2 = "every";
+        }
+        if (
+          mapped[str2](
+            (arr) =>
+              !arr.some((item) => {
+                filterKeys = filterKeys.filterKeys;
+                return filterKeys.includes(item);
+              }),
+          )
+        ) {
+          if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
+            if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
+              const obj2 = {};
+              const merged = Object.assign(tags.tags);
+              obj2.third_party_code = true;
+              tags.tags = obj2;
+            }
+          }
+          return null;
+        }
+      }
+      return tags;
+    },
+  };
+});

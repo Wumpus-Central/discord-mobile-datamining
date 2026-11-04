@@ -105,10 +105,10 @@ function pnpm_decayTs3(arg0, arg1) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "dispatch",
+      current: "displayName",
       lastTimestamp: null,
-      startTimestamp: "1\u79D2\u672A\u6E80",
-      reduceMotion: "{{count}}\u79D2\u672A\u6E80",
+      startTimestamp: "\u0431\u0430\u0433\u0430\u0436",
+      reduceMotion: "\u0437\u0430\u043B\u0438\u0448\u0435\u043D\u0456 \u0440\u0435\u0447\u0456",
     };
     let num = obj.velocity;
     if (num == null) {

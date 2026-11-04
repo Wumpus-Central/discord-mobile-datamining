@@ -17,7 +17,7 @@ export function useRiveFile(src, arg1) {
   let str2;
   let uri;
   let riveFile;
-  [tmp2, c1] = str2({ riveFile: "HermesInternal", isLoading: null, error: "<string:659619841>" });
+  [tmp2, c1] = str2({ riveFile: "HermesInternal", isLoading: null, error: "body-sm/medium" });
   items = [obj.referencedAssets];
   let tmp3 = riveFile(() => {
     const referencedAssets = obj.referencedAssets;

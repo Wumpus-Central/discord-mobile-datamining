@@ -1,28 +1,7 @@
 // _runtime/metro/13087__.js
-import _mod13056 from "13056__.js";
+import _mod13072 from "13072__.js";
+import _mod13074 from "13074__.js";
+import _mod13075 from "13075__.js";
+import _mod13086 from "13086__.js";
 
-function clone(obj) {
-  obj = {};
-  for (const key10006 in arg0) {
-    let arr = arg0[key10006];
-    if (!arr) {
-      obj[key10006] = arr;
-      continue;
-    } else {
-      let _Array = Array;
-      if (!Array.isArray(arr)) {
-        if (!(arr instanceof _mod13056)) {
-          let _Object = Object;
-          let mapped = arr;
-          if (arr.constructor === Object) {
-            mapped = clone(arr);
-          }
-        }
-      }
-      mapped = arr.map(clone);
-    }
-  }
-  return obj;
-}
-
-export default clone;
+export default { SyntaxError: _mod13074, parse: _mod13072, generate: _mod13075, walk: _mod13086 };

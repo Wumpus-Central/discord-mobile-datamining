@@ -1,26 +1,4 @@
 // _runtime/metro/16420__.js
-import _mod16383 from "16383__.js";
-import getOwnPropertyDescriptor_mod from "16363__.js";
+import _mod16421 from "16421__.js";
 
-let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = _mod16383(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {}.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-  }
-  tmp3 = tmp5;
-}
-
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+export default (arg0) => _mod16421(arg0.length);

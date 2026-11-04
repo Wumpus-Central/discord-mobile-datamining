@@ -166,14 +166,14 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
         let tmp13 = readTag(byteLength, IFD_TYPE_0TH, sum, tmp22, byteOrder, arg5);
         if (undefined !== tmp13) {
           let obj4 = { id: null, value: null, description: null };
-          ({ id: obj7.id, value: obj7.value, description: obj7.description } = tmp13);
+          ({ id: obj5.id, value: obj5.value, description: obj5.description } = tmp13);
           obj3[tmp13.name] = obj4;
-          let tmp19 = "MakerNote" === tmp13.name;
-          if (!tmp19) {
-            let tmp18 = IFD_TYPE_0TH === IFD_TYPE_0TH2.IFD_TYPE_PENTAX && "LevelInfo" === tmp13.name;
-            tmp19 = tmp18;
+          let tmp16 = "MakerNote" === tmp13.name;
+          if (!tmp16) {
+            let tmp19 = IFD_TYPE_0TH === IFD_TYPE_0TH2.IFD_TYPE_PENTAX && "LevelInfo" === tmp13.name;
+            tmp16 = tmp19;
           }
-          if (tmp19) {
+          if (tmp16) {
             obj3[tmp13.name].__offset = tmp13.__offset;
           }
         }

@@ -128,7 +128,7 @@ export function autoScroll(scrollNow, arg1, arg2, diff, diff1, arg5, arg6) {
                     }
                     if (typeof closure_1_9 === "function") {
                       let _requestAnimationFrame = requestAnimationFrame;
-                      let animationFrame = requestAnimationFrame(/* F136655 */ function() { ... });
+                      let animationFrame = requestAnimationFrame(/* F137193 */ function() { ... });
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }

@@ -1,56 +1,20 @@
 // _runtime/metro/13046__.js
-import dumpMapSyntax from "../13069_dumpMapSyntax.js";
-import _mod13088 from "13088__.js";
+import _mod13165 from "13165__.js";
+import _mod13166 from "13166__.js";
+import 13047__ from "13047__.js";
+import patchDictionary from "../13090_patchDictionary.js";
+import 13137__ from "13137__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function createSyntax(types) {
-  _require = types;
-  const arr = require("13059__.js")(types);
-  const tmp = require("13047__.js")(types);
-  let tmp3 = require("13068__.js")(arr);
-  obj = {
-    List: require("13056__.js"),
-    SyntaxError: require("sourceFragment"),
-    TokenStream: require("TokenStream"),
-    Lexer: require("dumpMapSyntax"),
-    vendorPrefix: require("13083__.js").vendorPrefix,
-    keyword: require("13083__.js").keyword,
-    property: require("13083__.js").property,
-    isCustomProperty: require("13083__.js").isCustomProperty,
-    definitionSyntax: require("13086__.js"),
-    lexer: null,
-    createLexer(arg0) {
-      return new dumpMapSyntax(arg0, obj, obj.lexer.structure);
-    },
-    tokenize: require("13054__.js"),
-    parse: tmp,
-    walk: arr,
-    generate: require("processChildren")(types),
-    find: arr.find,
-    findLast: arr.findLast,
-    findAll: arr.findAll,
-    clone: require("13087__.js"),
-    fromPlainObject: tmp3.fromPlainObject,
-    toPlainObject: tmp3.toPlainObject,
-    createSyntax(arg0) {
-      return createSyntax(types(obj[12])({}, arg0));
-    },
-    fork(fn) {
-      const tmp3 = _mod13088({}, closure_0);
-      if (typeof fn === "function") {
-        const _Object = Object;
-        let tmp6 = fn(tmp3, Object.assign);
-      } else {
-        tmp6 = _mod13088(tmp3, fn);
-      }
-      return createSyntax(tmp6);
+module.exports.version = _mod13166.version;
+
+export default module_13047.create((function merge() {
+  const obj = {};
+  for (let num = 0; num < arguments.length; num = num + 1) {
+    let tmp = arguments[num];
+    for (const key10011 in tmp) {
+      obj[key10011] = tmp[key10011];
+      continue;
     }
-  };
-  const obj2 = { generic: true, types: types.types, atrules: types.atrules, properties: types.properties, node: types.node };
-  const tmp2 = require("processChildren")(types);
-  obj.lexer = new require("dumpMapSyntax")({ generic: true, types: types.types, atrules: types.atrules, properties: types.properties, node: types.node }, obj);
+  }
   return obj;
-}
-
-export (arg0) => createSyntax(_mod13088({}, arg0))
+})(patchDictionary, module_13137, _mod13165));

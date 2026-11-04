@@ -1,45 +1,38 @@
 // _runtime/metro/16417__.js
-import _mod16361 from "16361__.js";
-import _mod16386 from "16386__.js";
-import _mod16414 from "16414__.js";
+import _mod16378 from "16378__.js";
+import _mod16380 from "16380__.js";
+import _mod16396 from "16396__.js";
 import _mod16418 from "16418__.js";
+import _mod16419 from "16419__.js";
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod16386(value)) {
-    _mod16418(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
-    } else {
-      _mod16361(arg1, value);
+let closure_2 = _mod16380([].push);
+
+export default (arg0, arg1) => {
+  const tmp = _mod16378(arg0);
+  items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod16396;
+    let tmp14Result = tmp14(_mod16418, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod16396(tmp, key10010);
     }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod16414.f(arg0, arg1, obj2);
-        const tmp3Result = _mod16414;
-      }
-    } catch (err) {}
+    if (!tmp2) {
+      continue;
+    } else {
+      let tmp4 = closure_2(items, key10010);
+      continue;
+    }
+    continue;
   }
-  return arg0;
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod16396(tmp, tmp7)) {
+      let tmp5Result = _mod16419;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
+      }
+    }
+  }
+  return items;
 };

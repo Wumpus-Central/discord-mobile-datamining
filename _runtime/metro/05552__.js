@@ -46,7 +46,7 @@ export default function createNativeWrapper(displayName, arg1) {
       merged = Object.assign(closure_1);
       obj.gestureHandlerProps = obj1;
       obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
-      reduced = keys.reduce(/* F123299 */ function() { ... }, obj);
+      reduced = keys.reduce(/* F123755 */ function() { ... }, obj);
       ({ gestureHandlerProps, childProps } = reduced);
       tmp3 = useRef(null);
       closure_1 = tmp3;
@@ -55,7 +55,7 @@ export default function createNativeWrapper(displayName, arg1) {
       items = [, ];
       items[0] = tmp3;
       items[1] = tmp4;
-      tmp5 = useImperativeHandle(displayName.ref, /* F123300 */ function() { ... }, items);
+      tmp5 = useImperativeHandle(displayName.ref, /* F123756 */ function() { ... }, items);
       obj5 = {};
       merged1 = Object.assign(gestureHandlerProps);
       obj5.ref = tmp4;

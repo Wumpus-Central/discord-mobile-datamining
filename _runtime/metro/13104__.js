@@ -1,16 +1,16 @@
 // _runtime/metro/13104__.js
-import _mod13054 from "13054__.js";
+import _mod13055 from "13055__.js";
 
-const CDO = _mod13054.TYPE.CDO;
+const CDC = _mod13055.TYPE.CDC;
 
 export default {
-  name: "CDO",
+  name: "CDC",
   structure: [],
   parse() {
-    this.eat(CDO);
-    return { type: "CDO", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
+    this.eat(CDC);
+    return { type: "CDC", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
   },
   generate() {
-    this.chunk("<!--");
+    this.chunk("-->");
   },
 };

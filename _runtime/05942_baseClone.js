@@ -29,7 +29,7 @@ obj["[object Arguments]"] = true;
 obj["[object WeakMap]"] = false;
 obj["[object Function]"] = false;
 obj["[object Error]"] = false;
-function baseClone(arr, arg1, fn, key, length, height) {
+function baseClone(arr, arg1, fn, key, f, height) {
   _require = arr;
   dependencyMap = arg1;
   closure_2 = fn;
@@ -61,7 +61,7 @@ function baseClone(arr, arg1, fn, key, length, height) {
                   closure_4 = tmp14;
                 } else {
                   obj = arr;
-                  if (!length) {
+                  if (!f) {
                     obj = {};
                   }
                   return obj;
@@ -134,8 +134,8 @@ function baseClone(arr, arg1, fn, key, length, height) {
       }
     }
   } else {
-    if (length) {
-      let tmp4 = fn(arr, key, length, height);
+    if (f) {
+      let tmp4 = fn(arr, key, f, height);
     } else {
       tmp4 = fn(arr);
     }

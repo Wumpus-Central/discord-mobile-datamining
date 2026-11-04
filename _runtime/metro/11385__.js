@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 400,
   height: 96,
   scales: [1, 2, 3],
-  hash: "172381e19144655804b8a48af208d5ed",
-  name: "channel-following-backdrop-light",
+  hash: "6d4af89335f89fb4d2742f6a0658e9cc",
+  name: "channel-following-backdrop-dark",
   type: "png",
 });

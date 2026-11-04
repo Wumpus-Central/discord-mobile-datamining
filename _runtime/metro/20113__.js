@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/guild_settings/community_settings",
-  width: 88,
-  height: 80,
+  width: 375,
+  height: 212,
   scales: [2, 3],
-  hash: "d16693419c73a203fe410baf14480d7e",
-  name: "finishing_touches",
+  hash: "032d875e012f721658a4a3ff0300b2d2",
+  name: "intro_header_light",
   type: "png",
 });

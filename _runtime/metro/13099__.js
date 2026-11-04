@@ -1,54 +1,108 @@
 // _runtime/metro/13099__.js
-import _mod13054 from "13054__.js";
+import _mod13055 from "13055__.js";
 
-const Semicolon = _mod13054.TYPE.Semicolon;
-const LeftCurlyBracket = _mod13054.TYPE.LeftCurlyBracket;
-const obj = {
-  name: "AtrulePrelude",
-  structure: null,
-  parse(key10009) {
-    let formatted = key10009;
-    if (null !== key10009) {
-      formatted = key10009.toLowerCase();
-    }
-    const self = this;
-    const scanner = this.scanner;
-    scanner.skipSC();
-    const atrule = this.atrule;
-    if (atrule.hasOwnProperty(formatted)) {
-      if (typeof self.atrule[formatted].prelude === "function") {
-        const prelude = self.atrule[formatted].prelude;
-        const call = prelude.call;
-        typeof call === "unknown" ? prelude() : call(self);
+function getOffsetExcludeWS() {
+  let self = this;
+  if (this.scanner.tokenIndex > 0) {
+    const scanner = self.scanner;
+    if (scanner.lookupType(-1) === WhiteSpace) {
+      let num2 = 1;
+      if (self.scanner.tokenIndex > 1) {
+        const scanner2 = self.scanner;
+        self = self.scanner.tokenIndex;
+        num2 = self - num2;
+        let firstCharOffset = scanner2.getTokenStart(num2);
+      } else {
+        firstCharOffset = self.scanner.firstCharOffset;
       }
     }
-    let sequence = self.readSequence(self.scope.AtrulePrelude);
-    const scanner2 = self.scanner;
-    scanner2.skipSC();
-    let tmp6 = true !== self.scanner.eof;
-    if (tmp6) {
-      tmp6 = self.scanner.tokenType !== LeftCurlyBracket;
+  }
+  return self.scanner.tokenStart;
+}
+function balanceEnd() {
+  return 0;
+}
+const WhiteSpace = _mod13055.TYPE.WhiteSpace;
+const Semicolon = _mod13055.TYPE.Semicolon;
+const LeftCurlyBracket = _mod13055.TYPE.LeftCurlyBracket;
+const Delim = _mod13055.TYPE.Delim;
+let obj = {
+  name: "Raw",
+  structure: { value: String },
+  parse(arg0, balanceEnd, arg2) {
+    const self = this;
+    let tmp = balanceEnd;
+    const scanner = this.scanner;
+    const tokenStart1 = scanner.getTokenStart(arg0);
+    ({ scanner: scanner2, scanner: scanner3 } = this);
+    if (!balanceEnd) {
+      tmp = balanceEnd;
     }
-    if (tmp6) {
-      tmp6 = self.scanner.tokenType !== Semicolon;
+    scanner2.skip(scanner3.getRawLength(arg0, tmp));
+    if (arg2) {
+      if (self.scanner.tokenStart > tokenStart1) {
+        const call = getOffsetExcludeWS.call;
+        if (typeof call !== "unknown") {
+          call(self);
+        }
+        if (self.scanner.tokenIndex <= 0) {
+          const tokenStart2 = self.scanner.tokenStart;
+        } else {
+          const scanner4 = self.scanner;
+        }
+        let num3 = 1;
+        if (self.scanner.tokenIndex > 1) {
+          const scanner5 = self.scanner;
+          num3 = self.scanner.tokenIndex - num3;
+          let firstCharOffset = scanner5.getTokenStart(num3);
+        } else {
+          firstCharOffset = self.scanner.firstCharOffset;
+        }
+      }
     }
-    if (tmp6) {
-      self.error("Semicolon or block is expected");
-    }
-    if (null === sequence) {
-      sequence = self.createList();
-    }
-    const element = { type: "AtrulePrelude", loc: self.getLocationFromList(sequence), children: sequence };
-    return element;
+    const tokenStart = self.scanner.tokenStart;
+    const obj = {
+      type: "Raw",
+      loc: self.getLocation(tokenStart1, tokenStart),
+      value: self.scanner.source.substring(tokenStart1, tokenStart),
+    };
+    return obj;
   },
-  generate(arg0) {
-    this.children(arg0);
+  generate(value) {
+    this.chunk(value.value);
   },
-  walkContext: "atrulePrelude",
+  mode: {
+    default: balanceEnd,
+    leftCurlyBracket(arg0) {
+      let num = 0;
+      if (arg0 === LeftCurlyBracket) {
+        num = 1;
+      }
+      return num;
+    },
+    leftCurlyBracketOrSemicolon(arg0) {
+      if (arg0 === LeftCurlyBracket) {
+        let num = 1;
+      } else {
+        num = 0;
+      }
+      return num;
+    },
+    exclamationMarkOrSemicolon(arg0, str, sum) {
+      if (arg0 !== Delim) {
+        let num2 = 0;
+        return num2;
+      }
+      num2 = 1;
+    },
+    semicolonIncluded(arg0) {
+      let num = 0;
+      if (arg0 === Semicolon) {
+        num = 2;
+      }
+      return num;
+    },
+  },
 };
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

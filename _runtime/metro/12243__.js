@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "436501dcf3af209f85edbd0cde1cf184",
-  name: "ic_vr_headset_24px",
+  hash: "164752cabe6d4eb331413f5b61581302",
+  name: "ic_playstation_24px",
   type: "png",
 });

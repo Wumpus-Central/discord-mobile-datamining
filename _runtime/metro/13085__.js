@@ -1,175 +1,75 @@
 // _runtime/metro/13085__.js
-function noop() {}
+import _mod13057 from "13057__.js";
 
-export default (type, enter, arg2) => {
-  closure_0 = arg2;
-  enter = noop;
-  let leave = noop;
-  if (typeof enter === "function") {
-    let tmp4 = noop;
-    let tmp5 = enter;
-    let tmp6 = noop;
-    let tmp7 = enter;
-    let tmp8 = noop;
-    let tmp9 = enter;
+function getFirstMatchNode(node) {
+  if ("node" in node) {
+    node = node.node;
   } else {
-    tmp4 = noop;
-    tmp5 = noop;
-    tmp6 = noop;
-    tmp7 = noop;
-    tmp8 = noop;
-    tmp9 = noop;
-    if (enter) {
-      enter = enter.enter;
-      let tmp2 = noop;
-      if (typeof enter === "function") {
-        tmp2 = enter;
-      }
-      enter = tmp2;
-      leave = enter.leave;
-      let tmp3 = noop;
-      if (typeof leave === "function") {
-        tmp3 = leave;
-      }
-      leave = tmp3;
-      tmp4 = tmp3;
-      tmp5 = tmp2;
-      tmp6 = tmp3;
-      tmp7 = tmp2;
-      tmp8 = tmp3;
-      tmp9 = tmp2;
-    }
+    node = getFirstMatchNode(node.match[0]);
   }
-  if (tmp9 === noop) {
-    if (tmp8 === noop) {
-      const _Error3 = Error;
-      let error = new Error("Neither `enter` nor `leave` walker handler is set or both aren't a function");
-      throw error;
-    }
-  }
-  function walk(term) {
-    const call = enter.call;
-    if (typeof call === "unknown") {
-      enter(term);
-    } else {
-      call(closure_0, term);
-    }
-    switch (term.type) {
-      case "Group":
-        const terms = term.terms;
-        const item = terms.forEach(walk);
-        const call2 = leave.call;
-        if (typeof call2 === "unknown") {
-          leave(term);
-        } else {
-          call2(closure_0, term);
-        }
-        break;
-      case "Multiplier":
-        walk(term.term);
-        break;
-      case "Type":
-        break;
-      case "Property":
-        break;
-      case "Keyword":
-        break;
-      case "AtKeyword":
-        break;
-      case "Function":
-        break;
-      case "String":
-        break;
-      case "Token":
-        break;
-      case "Comma":
-        break;
-      default:
-        const _Error = Error;
-        const error = new Error("Unknown type: " + term.type);
-        throw error;
-    }
-  }
-  let call = tmp7.call;
-  if (typeof call === "unknown") {
-    tmp7(type);
+  return node;
+}
+function getLastMatchNode(node) {
+  if ("node" in node) {
+    node = node.node;
   } else {
-    call(arg2, type);
+    node = getLastMatchNode(node.match[node.match.length - 1]);
   }
-  switch (type.type) {
-    case "Group":
-      let terms = type.terms;
-      let item = terms.forEach(walk);
-      const call4 = tmp6.call;
-      if (typeof call4 === "unknown") {
-        tmp6(type);
-      } else {
-        call4(arg2, type);
-      }
-      break;
-    case "Multiplier":
-      const term = type.term;
-      let call2 = tmp5.call;
-      if (typeof call2 === "unknown") {
-        tmp5(term);
-      } else {
-        call2(arg2, term);
-      }
-      switch (term.type) {
-        case "Group":
-          const terms1 = term.terms;
-          const item1 = terms1.forEach(walk);
-          const call3 = tmp4.call;
-          if (typeof call3 === "unknown") {
-            tmp4(term);
-          } else {
-            call3(arg2, term);
+  return node;
+}
+
+export default {
+  matchFragments(arg0, value, matched, arg3, arg4) {
+    closure_0 = arg0;
+    closure_1 = value;
+    closure_2 = arg3;
+    closure_3 = arg4;
+    items = [];
+    if (null !== matched.matched) {
+      function findFragments(matched) {
+        if (null !== matched.syntax) {
+          if (matched.syntax.type === closure_2) {
+            if (matched.syntax.name === closure_3) {
+              if ("node" in matched) {
+                let node = matched.node;
+              } else if ("node" in matched.match[0]) {
+                node = str.node;
+              } else {
+                node = closure_2(str.match[0]);
+              }
+              if ("node" in matched) {
+                let node2 = matched.node;
+              } else if ("node" in matched.match[matched.match.length - 1]) {
+                node2 = str2.node;
+              } else {
+                node2 = closure_3(str2.match[str2.match.length - 1]);
+              }
+              const syntax = node.syntax;
+              syntax.walk(node2, (arg0, arg1, parent) => {
+                if (arg0 === node) {
+                  let iter = arg1;
+                  const obj = new _mod13057();
+                  obj.appendData(iter.data);
+                  while (iter.data !== node2) {
+                    iter = iter.next;
+                    if (null === iter) {
+                      break;
+                    }
+                  }
+                  const obj2 = { parent, nodes: obj };
+                  items.push(obj2);
+                }
+              });
+            }
           }
-          break;
-        case "Multiplier":
-          walk(term.term);
-          break;
-        case "Type":
-          break;
-        case "Property":
-          break;
-        case "Keyword":
-          break;
-        case "AtKeyword":
-          break;
-        case "Function":
-          break;
-        case "String":
-          break;
-        case "Token":
-          break;
-        case "Comma":
-          break;
-        default:
-          let _Error = Error;
-          const error1 = new Error("Unknown type: " + term.type);
-          throw error1;
+        }
+        if (Array.isArray(matched.match)) {
+          const match = matched.match;
+          const item = match.forEach(findFragments);
+        }
       }
-      break;
-    case "Type":
-      break;
-    case "Property":
-      break;
-    case "Keyword":
-      break;
-    case "AtKeyword":
-      break;
-    case "Function":
-      break;
-    case "String":
-      break;
-    case "Token":
-      break;
-    case "Comma":
-      break;
-    default:
-      const _Error2 = Error;
-      const error2 = new Error("Unknown type: " + type.type);
-      throw error2;
-  }
+      findFragments(matched.matched);
+    }
+    return items;
+  },
 };

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c6597e29df99a6319981970d49c96987",
-  name: "MagicDoorIcon",
+  hash: "83020ea8b4c0b0d88670e8fd546ddc69",
+  name: "CompassIcon",
   type: "png",
 });

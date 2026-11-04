@@ -1,25 +1,34 @@
 // _runtime/metro/13122__.js
-import _mod13050 from "13050__.js";
-import _mod13054 from "13054__.js";
+import _mod13055 from "13055__.js";
 
-const Percentage = _mod13054.TYPE.Percentage;
-let obj = {
-  name: "Percentage",
-  structure: { value: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Percentage);
-    const obj2 = {
-      type: "Percentage",
-      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
-      value: this.scanner.source.substring(tokenStart, _mod13050.consumeNumber(this.scanner.source, tokenStart)),
+const LeftParenthesis = _mod13055.TYPE.LeftParenthesis;
+const RightParenthesis = _mod13055.TYPE.RightParenthesis;
+const obj = {
+  name: "Parentheses",
+  structure: null,
+  parse(call, arg1) {
+    const self = this;
+    this.eat(LeftParenthesis);
+    call = call.call;
+    if (!self.scanner.eof) {
+      self.eat(RightParenthesis);
+    }
+    const element = {
+      type: "Parentheses",
+      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+      children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
     };
-    return obj2;
+    return element;
   },
-  generate(value) {
-    this.chunk(value.value);
-    this.chunk("%");
+  generate(arg0) {
+    this.chunk("(");
+    this.children(arg0);
+    this.chunk(")");
   },
 };
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

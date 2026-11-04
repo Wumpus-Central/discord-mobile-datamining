@@ -1,16 +1,7 @@
 // _runtime/metro/16382__.js
-import _mod16367 from "16367__.js";
+import _mod16380 from "16380__.js";
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod16367(1.toString);
+let closure_0 = _mod16380({}.toString);
+let closure_1 = _mod16380("".slice);
 
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
-  }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
-};
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

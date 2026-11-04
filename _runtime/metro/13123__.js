@@ -1,57 +1,25 @@
 // _runtime/metro/13123__.js
-import _mod13054 from "13054__.js";
+import _mod13051 from "13051__.js";
+import _mod13055 from "13055__.js";
 
-const Ident = _mod13054.TYPE.Ident;
-const Function = _mod13054.TYPE.Function;
-const Colon = _mod13054.TYPE.Colon;
-const RightParenthesis = _mod13054.TYPE.RightParenthesis;
-const obj = {
-  name: "PseudoClassSelector",
-  structure: null,
+const Percentage = _mod13055.TYPE.Percentage;
+let obj = {
+  name: "Percentage",
+  structure: { value: String },
   parse() {
-    const self = this;
-    this.eat(Colon);
-    if (this.scanner.tokenType === Function) {
-      const str = self.consumeFunctionName();
-      const formatted = str.toLowerCase();
-      const pseudo = self.pseudo;
-      if (!pseudo.hasOwnProperty(formatted)) {
-        const list = self.createList();
-        list.push(self.Raw(self.scanner.tokenIndex, null, false));
-        self.eat(RightParenthesis);
-      }
-      const scanner = self.scanner;
-      scanner.skipSC();
-      let skipSCResult1 = self.pseudo[formatted];
-      const call = skipSCResult1.call;
-      const scanner2 = self.scanner;
-      skipSCResult1 = scanner2.skipSC();
-      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
-    } else {
-      const element = {
-        type: "PseudoClassSelector",
-        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-        name: self.consume(Ident),
-        children: null,
-      };
-      return element;
-    }
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Percentage);
+    const obj2 = {
+      type: "Percentage",
+      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
+      value: this.scanner.source.substring(tokenStart, _mod13051.consumeNumber(this.scanner.source, tokenStart)),
+    };
+    return obj2;
   },
-  generate(name) {
-    const self = this;
-    this.chunk(":");
-    this.chunk(name.name);
-    if (null !== name.children) {
-      self.chunk("(");
-      self.children(name);
-      self.chunk(")");
-    }
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk("%");
   },
-  walkContext: "function",
 };
-const obj2 = { name: String, children: null };
-const items = [["Raw"], null];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

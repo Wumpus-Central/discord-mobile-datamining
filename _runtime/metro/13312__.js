@@ -1,72 +1,93 @@
 // _runtime/metro/13312__.js
-import _mod13273 from "13273__.js";
-import _mod13300 from "13300__.js";
-import _mod13301 from "13301__.js";
-import _mod13305 from "13305__.js";
-import _mod13313 from "13313__.js";
+import _mod13274 from "13274__.js";
+import spanTimeInputToSeconds from "../13279_spanTimeInputToSeconds.js";
+import _mod13302 from "13302__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function sampleSpan(tracesSampler, normalizedRequest) {
-  if (obj.hasTracingEnabled(tracesSampler)) {
-    const isolationScope = _mod13300.getIsolationScope();
-    const obj2 = {};
-    const merged = Object.assign(normalizedRequest);
-    obj2.normalizedRequest =
-      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
-    if (typeof tracesSampler.tracesSampler === "function") {
-      let num = tracesSampler.tracesSampler(obj2);
-    } else if (undefined !== obj2.parentSampled) {
-      num = obj2.parentSampled;
-    } else {
-      num = 1;
-      if (undefined !== tracesSampler.tracesSampleRate) {
-        num = tracesSampler.tracesSampleRate;
-      }
+export function logSpanEnd(spanContext) {
+  if (_mod13302.DEBUG_BUILD) {
+    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
     }
-    const tmpResult = _mod13300;
-    const parseSampleRateResult = _mod13313.parseSampleRate(num);
-    if (undefined === parseSampleRateResult) {
-      if (_mod13301.DEBUG_BUILD) {
-        const logger3 = _mod13273.logger;
-        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
-      }
-      items = [false];
-      let items3 = items;
-    } else if (parseSampleRateResult) {
-      const _Math = Math;
-      if (Math.random() < parseSampleRateResult) {
-        const items1 = [true, parseSampleRateResult];
-        let items2 = items1;
-      } else {
-        if (_mod13301.DEBUG_BUILD) {
-          const logger2 = _mod13273.logger;
-          const _Number = Number;
-          const _HermesInternal = HermesInternal;
-          logger2.log(
-            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
-              Number(num) +
-              ")",
-          );
-        }
-        items2 = [false, parseSampleRateResult];
-      }
-    } else {
-      if (_mod13301.DEBUG_BUILD) {
-        const logger = _mod13273.logger;
-        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
-        if (typeof tracesSampler.tracesSampler === "function") {
-          str = "tracesSampler returned 0 or false";
-        }
-        logger.log(`[Tracing] Discarding transaction because ${str}`);
-      }
-      items3 = [false, parseSampleRateResult];
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
     }
-    return items3;
-  } else {
-    const items4 = [false];
-    return items4;
+    const spanId = spanContext.spanContext().spanId;
+    const tmpResult = spanTimeInputToSeconds;
+    let str3 = "";
+    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
+      str3 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const combined = '[Tracing] Finishing "' + str2 + '" ' + str3 + 'span "' + str + '" with ID ' + spanId;
+    const logger = _mod13274.logger;
+    logger.log(combined);
+    tmpResult2 = spanTimeInputToSeconds;
   }
-  obj = _mod13305;
+}
+export function logSpanStart(spanContext) {
+  if (_mod13302.DEBUG_BUILD) {
+    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
+    }
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const parent_span_id = spanToJSONResult.parent_span_id;
+    const tmpResult = spanTimeInputToSeconds;
+    const tmpResult4 = spanTimeInputToSeconds;
+    const spanIsSampledResult = spanTimeInputToSeconds.spanIsSampled(spanContext);
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    let str3 = "unsampled";
+    if (spanIsSampledResult) {
+      str3 = "sampled";
+    }
+    let str5 = "";
+    if (rootSpan === spanContext) {
+      str5 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const _HermesInternal2 = HermesInternal;
+    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
+    items = ["op: " + str2, ,];
+    const _HermesInternal3 = HermesInternal;
+    items[1] = "name: " + str;
+    const _HermesInternal4 = HermesInternal;
+    items[2] = "ID: " + spanContext.spanContext().spanId;
+    if (parent_span_id) {
+      const _HermesInternal5 = HermesInternal;
+      items.push("parent ID: " + parent_span_id);
+    }
+    if (rootSpan !== spanContext) {
+      const tmpResult6 = spanTimeInputToSeconds;
+      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
+      const _HermesInternal6 = HermesInternal;
+      items.push("root ID: " + rootSpan.spanContext().spanId);
+      if (op2) {
+        const _HermesInternal7 = HermesInternal;
+        items.push("root op: " + op2);
+      }
+      if (description2) {
+        const _HermesInternal8 = HermesInternal;
+        items.push("root description: " + description2);
+      }
+      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
+    }
+    const logger = _mod13274.logger;
+    const _HermesInternal9 = HermesInternal;
+    logger.log("" + combined + "\n  " + items.join("\n  "));
+    const tmpResult5 = spanTimeInputToSeconds;
+  }
 }

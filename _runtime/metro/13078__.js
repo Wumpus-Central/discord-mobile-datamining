@@ -1,191 +1,164 @@
 // _runtime/metro/13078__.js
-import _mod13058 from "13058__.js";
-import _mod13074 from "13074__.js";
+import _mod13049 from "13049__.js";
 
-function fromLoc(loc, start) {
-  if (loc) {
-    loc = loc.loc;
-  }
-  if (loc) {
-    loc = loc.loc[start];
-  }
-  let tmp2 = null;
-  if (loc) {
-    let tmp3 = loc;
-    if ("line" in loc) {
-      const obj = { offset: null, line: null, column: null };
-      ({ offset: obj.offset, line: obj.line, column: obj.column } = loc);
-      tmp3 = obj;
+const require = globalThis.__r;
+
+function isCommaContextStart(type) {
+  let tmp = null === type;
+  if (!tmp) {
+    let tmp4 = type.type === _mod13049.TYPE.Comma;
+    if (!tmp4) {
+      tmp4 = type.type === _mod13049.TYPE.Function;
     }
-    tmp2 = tmp3;
+    if (!tmp4) {
+      tmp4 = type.type === _mod13049.TYPE.LeftParenthesis;
+    }
+    if (!tmp4) {
+      tmp4 = type.type === _mod13049.TYPE.LeftSquareBracket;
+    }
+    if (!tmp4) {
+      tmp4 = type.type === _mod13049.TYPE.LeftCurlyBracket;
+    }
+    if (!tmp4) {
+      let tmp5 = type.type === _mod13049.TYPE.Delim;
+      if (tmp5) {
+        tmp5 = "?" !== type.value;
+      }
+      tmp4 = tmp5;
+    }
+    tmp = tmp4;
   }
-  return tmp2;
+  return tmp;
 }
-let closure_2 = { offset: 0, line: 1, column: 1 };
+function internalMatch(arr, match, self) {
+  _require = arr;
+  dependencyMap = match;
+  c2 = null;
+  type = null;
+  c4 = -1;
+  closure_5 = 0;
+  let prev = { type: 0, syntax: null, token: null, prev: null };
+  while (true) {
+    let sum = c4 + 1;
+    c4 = sum;
+    let tmp3 = null;
+    if (sum < arr.length) {
+      tmp3 = arr[c4];
+    }
+    type = tmp3;
+    if (null === tmp3) {
+      break;
+    } else {
+      let tmp10 = _require;
+      if (tmp3.type === require("13049__.js").TYPE.WhiteSpace) {
+        continue;
+      } else if (type.type !== tmp10(13049).TYPE.Comment) {
+        break;
+      }
+      continue;
+    }
+  }
+}
+const Match = "Match";
+let c4 = 0;
 
 export default {
-  SyntaxReferenceError(arg0, reference) {
-    let str = "";
-    if (reference) {
-      str = `${" `" + reference}\``;
+  matchAsList(arr, match, self) {
+    let obj = self;
+    if (!self) {
+      obj = {};
     }
-    const tmpResult = _mod13058("SyntaxReferenceError", arg0 + str);
-    tmpResult.reference = reference;
-    return tmpResult;
+    const str = internalMatch(arr, match, obj);
+    if (null !== str.match) {
+      let prev = str.match;
+      let tmp3 = null;
+      let tmp4 = null;
+      if (null !== prev) {
+        do {
+          prev.prev = tmp3;
+          tmp3 = prev;
+          tmp4 = prev;
+          prev = prev.prev;
+        } while (null !== tmp2);
+      }
+      let prev2 = tmp4.prev;
+      str.match = [];
+      if (null !== prev2) {
+        do {
+          type = prev2.type;
+          if (0 !== type) {
+            if (2 !== type) {
+              if (3 !== type) {
+                match = str.match;
+                let obj2 = { token: prev2.token.value, node: prev2.token.node };
+                arr = match.push(obj2);
+              }
+            }
+            let match1 = str.match;
+            let obj5 = { type: null, syntax: null };
+            ({ type: obj3.type, syntax: obj3.syntax } = prev2);
+            let arr2 = match1.push(obj5);
+          }
+          prev2 = prev2.prev;
+        } while (null !== prev2);
+      }
+    }
+    return str;
   },
-  SyntaxMatchError(reason, syntax, loc, arg3) {
-    const tmp3 = _mod13058("SyntaxMatchError", reason);
-    ({ tokens, longestMatch } = arg3);
-    let tmp5 = null;
-    if (((longestMatch < tokens.length && tokens[longestMatch].node) || null) !== loc) {
-      tmp5 = tmp4;
+  matchAsTree(arr, match, self) {
+    let obj = self;
+    if (!self) {
+      obj = {};
     }
-    let str = "";
-    let num = 0;
-    let num2 = 0;
-    let num3 = 0;
-    let num4 = 0;
-    let str2 = "";
-    let num5 = 0;
-    let num6 = 0;
-    let num7 = 0;
-    if (0 < tokens.length) {
-      do {
-        value = tokens[num].value;
-        let length = num3;
-        let length2 = num4;
-        if (num === longestMatch) {
-          length = value.length;
-          length2 = ``.length;
-        }
-        let tmp10 = tmp6;
-        if (tmp6) {
-          tmp10 = tokens[num].node === tmp5;
-        }
-        let tmp11 = num2;
-        if (tmp10) {
-          let num8 = 0;
-          if (num <= longestMatch) {
-            num8 = num2 + 1;
-          }
-          tmp11 = num8;
-        }
-        str = str + value;
-        num = num + 1;
-        num2 = tmp11;
-        num3 = length;
-        num4 = length2;
-        str2 = str;
-        num5 = tmp11;
-        num6 = length;
-        num7 = length2;
-      } while (num < tokens.length);
-    }
-    if (longestMatch !== tokens.length) {
-      if (1 >= num5) {
-        let tmp13 = fromLoc(tmp5, "start");
-        if (!tmp13) {
-          let str3 = str2.slice(0, num7);
-          const obj = { offset: null, line: null, column: null };
-          ({ offset: obj.offset, line: obj.line, column: obj.column } = fromLoc(loc, "start") || closure_2);
-          tmp13 = obj;
-          if (str3) {
-            const parts = str3.split(/\n|\r\n?|\f/);
-            obj.offset = obj.offset + str3.length;
-            obj.line = obj.line + (parts.length - 1);
-            if (1 === parts.length) {
-              str3 = str3.length;
-              let sum = obj.column + str3;
-            } else {
-              sum = parts.pop().length + 1;
+    const str = internalMatch(arr, match, obj);
+    if (null === str.match) {
+      return str;
+    } else {
+      let prev = str.match;
+      let obj2 = { syntax: match.syntax || null, match: [] };
+      str.match = obj2;
+      items = [obj2];
+      let tmp3 = null;
+      let tmp4 = null;
+      if (null !== prev) {
+        do {
+          prev.prev = tmp3;
+          tmp3 = prev;
+          tmp4 = prev;
+          prev = prev.prev;
+        } while (null !== tmp5);
+      }
+      let prev2 = tmp4.prev;
+      if (null !== prev2) {
+        do {
+          type = prev2.type;
+          if (2 === type) {
+            match = obj2.match;
+            let obj3 = { syntax: prev2.syntax, match: [] };
+            arr = match.push(obj3);
+            let arr2 = items.push(obj3);
+            let tmp10 = obj3;
+          } else if (3 === type) {
+            let arr3 = items.pop();
+            tmp10 = items[items.length - 1];
+          } else {
+            let match1 = obj2.match;
+            let syntax = prev2.syntax;
+            if (!syntax) {
+              syntax = null;
             }
-            obj.column = sum;
+            let obj4 = { syntax, token: prev2.token.value, node: prev2.token.node };
+            let arr7 = match1.push(obj4);
+            tmp10 = obj2;
           }
-          const tmp12 = fromLoc(loc, "start") || closure_2;
-        }
-        let tmp33Result = fromLoc(tmp5, "end");
-        if (!tmp33Result) {
-          let str5 = str2.substr(num7, num6);
-          const obj4 = { offset: null, line: null, column: null };
-          ({ offset: obj2.offset, line: obj2.line, column: obj2.column } = tmp13);
-          tmp33Result = obj4;
-          if (str5) {
-            const parts1 = str5.split(/\n|\r\n?|\f/);
-            obj4.offset = obj4.offset + str5.length;
-            obj4.line = obj4.line + (parts1.length - 1);
-            if (1 === parts1.length) {
-              str5 = str5.length;
-              let sum1 = obj4.column + str5;
-            } else {
-              sum1 = parts1.pop().length + 1;
-            }
-            obj4.column = sum1;
-          }
-        }
+          prev2 = prev2.prev;
+          obj2 = tmp10;
+        } while (null !== prev2);
       }
-      tmp3.rawMessage = reason;
-      let str6 = "<generic>";
-      if (syntax) {
-        str6 = _mod13074(syntax);
-      }
-      tmp3.syntax = str6;
-      tmp3.css = str2;
-      tmp3.mismatchOffset = num7;
-      tmp3.mismatchLength = num6;
-      let str8 = str2;
-      const text = `${reason}
-      syntax: ${tmp3.syntax}`;
-      if (!str2) {
-        str8 = "<empty string>";
-      }
-      const _HermesInternal = HermesInternal;
-      const _Array = Array;
-      const combined =
-        `${tmp26}
-       value: ` +
-        str8 +
-        "\n  --------";
-      const array = new Array(tmp3.mismatchOffset + 1);
-      tmp3.message = `${tmp28}${obj5.join("-")}^`;
-      const _Object = Object;
-      const merged = Object.assign(tmp3, tmp13);
-      let str13 = loc;
-      if (loc) {
-        str13 = loc.loc;
-      }
-      if (str13) {
-        str13 = loc.loc.source;
-      }
-      if (!str13) {
-        str13 = "<unknown>";
-      }
-      const obj6 = { source: str13, start: tmp13, end: tmp33Result };
-      tmp3.loc = obj6;
-      return tmp3;
+      return str;
     }
-    let tmp20 = tmp5;
-    if (!tmp5) {
-      tmp20 = loc;
-    }
-    let tmp19Result = fromLoc(tmp20, "end");
-    if (!tmp19Result) {
-      const obj10 = { offset: null, line: null, column: null };
-      ({ offset: obj3.offset, line: obj3.line, column: obj3.column } = closure_2);
-      tmp19Result = obj10;
-      if (str2) {
-        const parts2 = str2.split(/\n|\r\n?|\f/);
-        obj10.offset = obj10.offset + str2.length;
-        obj10.line = obj10.line + (parts2.length - 1);
-        if (1 === parts2.length) {
-          let sum2 = obj10.column + str2.length;
-        } else {
-          sum2 = parts2.pop().length + 1;
-        }
-        obj10.column = sum2;
-      }
-    }
-    tmp13 = tmp19Result;
-    tmp33Result = { offset: tmp19Result.offset, line: tmp19Result.line, column: tmp19Result.column };
-    const obj11 = { offset: tmp19Result.offset, line: tmp19Result.line, column: tmp19Result.column };
+  },
+  getTotalIterationCount() {
+    return c4;
   },
 };

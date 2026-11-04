@@ -1,39 +1,74 @@
 // _runtime/metro/13117__.js
-import _mod13054 from "13054__.js";
+import _mod13055 from "13055__.js";
 
-const Comma = _mod13054.TYPE.Comma;
+const WhiteSpace = _mod13055.TYPE.WhiteSpace;
+const Comment = _mod13055.TYPE.Comment;
+const Ident = _mod13055.TYPE.Ident;
+const LeftParenthesis = _mod13055.TYPE.LeftParenthesis;
 const obj = {
-  name: "MediaQueryList",
+  name: "MediaQuery",
   structure: null,
-  parse(arg0) {
+  parse() {
     const self = this;
-    const list = this.createList();
     const scanner = this.scanner;
     scanner.skipSC();
+    const list = this.createList();
+    let tmp2 = null;
+    let tmp3 = null;
+    let tmp4 = null;
     if (!this.scanner.eof) {
-      list.push(self.MediaQuery(arg0));
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.MediaQuery(arg0));
-          if (self.scanner.tokenType !== Comma) {
+      while (true) {
+        let tokenType = self.scanner.tokenType;
+        if (Comment === tokenType) {
+          let iter = self.scanner;
+          let nextResult = iter.next();
+          let WhiteSpaceResult = tmp2;
+          let IdentifierResult = tmp3;
+        } else {
+          if (WhiteSpace === tokenType) {
+            WhiteSpaceResult = self.WhiteSpace();
+            IdentifierResult = tmp3;
+          } else {
+            if (Ident === tokenType) {
+              IdentifierResult = self.Identifier();
+              WhiteSpaceResult = tmp2;
+              if (null !== tmp2) {
+                let arr = list.push(tmp2);
+                WhiteSpaceResult = null;
+              }
+              let arr3 = list.push(IdentifierResult);
+            } else {
+              tmp4 = tmp3;
+              if (LeftParenthesis !== tokenType) {
+                break;
+              } else {
+                IdentifierResult = self.MediaFeature();
+              }
+            }
             break;
           }
+          break;
         }
-        const iter = self.scanner;
+        tmp2 = WhiteSpaceResult;
+        tmp3 = IdentifierResult;
+        tmp4 = IdentifierResult;
+        if (self.scanner.eof) {
+          break;
+        }
       }
     }
-    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
+    if (null === tmp4) {
+      self.error("Identifier or parenthesis is expected");
+    }
+    const element = { type: "MediaQuery", loc: self.getLocationFromList(list), children: list };
     return element;
   },
   generate(arg0) {
-    this.children(arg0, function () {
-      this.chunk(",");
-    });
+    this.children(arg0);
   },
 };
 const obj2 = { children: null };
-const items = [["MediaQuery"]];
+const items = [["Identifier", "MediaFeature", "WhiteSpace"]];
 obj2.children = items;
 obj.structure = obj2;
 

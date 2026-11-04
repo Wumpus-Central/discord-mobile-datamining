@@ -5,12 +5,12 @@ import _mod588 from "metro/00588__.js";
 import castPath from "00591_castPath.js";
 import assignValue from "05951_assignValue.js";
 
-export default function baseSet(length, arg1, arg2, fn) {
-  if (_mod521(length)) {
-    const arr = castPath(arg1, length);
-    if (null != arr.length) {
+export default function baseSet(f, arg1, arg2, fn) {
+  if (_mod521(f)) {
+    const arr = castPath(arg1, f);
+    if (null != f) {
       let num2 = 0;
-      let tmp17 = length;
+      let tmp17 = f;
       if (0 < length) {
         const tmp8 = _mod588(arr[num2]);
         while ("__proto__" !== tmp8) {
@@ -43,11 +43,11 @@ export default function baseSet(length, arg1, arg2, fn) {
             }
           }
         }
-        return length;
+        return f;
       }
     }
-    return arr.length;
+    return f;
   } else {
-    return length;
+    return f;
   }
 }

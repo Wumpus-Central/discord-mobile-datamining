@@ -82,9 +82,9 @@ export function VirtualDetector(children) {
             handlerTags,
             methods: tmp2.gesture.detectorCallbacks,
             viewRef: "a",
-            userSelect: "nam",
-            touchAction: "phi h\u00E0nh gia",
-            enableContextMenu: "phi h\u00E0nh gia nam",
+            userSelect: "hd",
+            touchAction: "Array",
+            enableContextMenu: "isArray",
           };
           ({
             userSelect: obj.userSelect,

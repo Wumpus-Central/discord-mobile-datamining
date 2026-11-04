@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 32,
   height: 32,
   scales: [2, 3],
-  hash: "cf9fbd33b5f8251873e494b446828ceb",
-  name: "invite",
+  hash: "b44246d7ff29916e5a982207e3d0936c",
+  name: "add_server",
   type: "png",
 });

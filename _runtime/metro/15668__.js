@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 64,
   height: 64,
   scales: [1],
-  hash: "7820559d802b687a2589b1c9f32203ab",
-  name: "img_wumpus_nitro_boost",
+  hash: "e56e37c53edc4951356b726ba43f79c4",
+  name: "img_wumpus_nitro_classic_boost",
   type: "png",
 });

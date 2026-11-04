@@ -1,8 +1,41 @@
 // _runtime/metro/13144__.js
-import _mod13145 from "13145__.js";
-import _mod13146 from "13146__.js";
-import _mod13147 from "13147__.js";
-import _mod13148 from "13148__.js";
-import _mod13149 from "13149__.js";
+import _mod13055 from "13055__.js";
+import _mod13099 from "13099__.js";
 
-export default { "font-face": _mod13145, import: _mod13146, media: _mod13147, page: _mod13148, supports: _mod13149 };
+const Comma = _mod13055.TYPE.Comma;
+const WhiteSpace = _mod13055.TYPE.WhiteSpace;
+
+export default function () {
+  const self = this;
+  const list = this.createList();
+  const scanner = this.scanner;
+  scanner.skipSC();
+  list.push(this.Identifier());
+  const scanner2 = this.scanner;
+  scanner2.skipSC();
+  if (this.scanner.tokenType !== Comma) {
+    return list;
+  } else {
+    list.push(self.Operator());
+    if (self.parseCustomProperty) {
+      let element = self.Value(null);
+    } else {
+      element = self.Raw(self.scanner.tokenIndex, _mod13099.mode.exclamationMarkOrSemicolon, false);
+    }
+    if ("Value" === element.type) {
+      const children = element.children;
+      if (children.isEmpty()) {
+        let diff = self.scanner.tokenIndex - self.scanner.tokenIndex;
+        if (diff <= 0) {
+          const scanner3 = self.scanner;
+          while (scanner3.lookupType(diff) !== WhiteSpace) {
+            diff = diff + 1;
+          }
+        }
+        const children2 = element.children;
+        children2.appendData({ type: "WhiteSpace", loc: null, value: " " });
+      }
+    }
+    list.push(element);
+  }
+}

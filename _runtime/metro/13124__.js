@@ -1,16 +1,15 @@
 // _runtime/metro/13124__.js
-import _mod13054 from "13054__.js";
+import _mod13055 from "13055__.js";
 
-const Ident = _mod13054.TYPE.Ident;
-const Function = _mod13054.TYPE.Function;
-const Colon = _mod13054.TYPE.Colon;
-const RightParenthesis = _mod13054.TYPE.RightParenthesis;
+const Ident = _mod13055.TYPE.Ident;
+const Function = _mod13055.TYPE.Function;
+const Colon = _mod13055.TYPE.Colon;
+const RightParenthesis = _mod13055.TYPE.RightParenthesis;
 const obj = {
-  name: "PseudoElementSelector",
+  name: "PseudoClassSelector",
   structure: null,
   parse() {
     const self = this;
-    this.eat(Colon);
     this.eat(Colon);
     if (this.scanner.tokenType === Function) {
       const str = self.consumeFunctionName();
@@ -27,10 +26,10 @@ const obj = {
       const call = skipSCResult1.call;
       const scanner2 = self.scanner;
       skipSCResult1 = scanner2.skipSC();
-      const tmp11 = typeof call === "unknown" ? skipSCResult1() : call(self);
+      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
     } else {
       const element = {
-        type: "PseudoElementSelector",
+        type: "PseudoClassSelector",
         loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
         name: self.consume(Ident),
         children: null,
@@ -40,7 +39,7 @@ const obj = {
   },
   generate(name) {
     const self = this;
-    this.chunk("::");
+    this.chunk(":");
     this.chunk(name.name);
     if (null !== name.children) {
       self.chunk("(");

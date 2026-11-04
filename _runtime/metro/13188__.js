@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 640,
   height: 360,
   scales: [1],
-  hash: "55bbcd85e5d3c90029435d0fc395829e",
-  name: "conjure-home-trivia",
+  hash: "eef5a1c13b7954997988cfc4a799609f",
+  name: "conjure-home-welcome-bot",
   type: "svg",
 });

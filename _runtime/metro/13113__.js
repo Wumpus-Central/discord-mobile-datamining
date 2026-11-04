@@ -1,19 +1,21 @@
 // _runtime/metro/13113__.js
-import _mod13054 from "13054__.js";
+import _mod13055 from "13055__.js";
 
-const Ident = _mod13054.TYPE.Ident;
-const obj = {
-  name: "Identifier",
-  structure: { name: String },
+const Hash = _mod13055.TYPE.Hash;
+let obj = {
+  name: "Hash",
+  structure: { value: String },
   parse() {
-    return {
-      type: "Identifier",
-      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
-      name: this.consume(Ident),
-    };
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Hash);
+    const obj = { type: "Hash", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
+    const scanner = this.scanner;
+    obj.value = scanner.substrToCursor(tokenStart + 1);
+    return obj;
   },
-  generate(name) {
-    this.chunk(name.name);
+  generate(value) {
+    this.chunk("#");
+    this.chunk(value.value);
   },
 };
 

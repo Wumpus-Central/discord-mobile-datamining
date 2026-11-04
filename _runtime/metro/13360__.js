@@ -1,15 +1,36 @@
 // _runtime/metro/13360__.js
+import _mod13272 from "13272__.js";
+import _mod13274 from "13274__.js";
+import _mod13275 from "13275__.js";
 
-export function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
-    }
-    str = str2;
+require = arg1;
+const dependencyMap = arg6;
+function instrumentConsole() {
+  if ("console" in _mod13275.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = _mod13274.CONSOLE_LEVELS;
+    const item = CONSOLE_LEVELS.forEach((item) => {
+      closure_0 = item;
+      if (item in closure_0(13275).GLOBAL_OBJ.console) {
+        tmp(13280).fill(tmp(13275).GLOBAL_OBJ.console, item, (arg0) => {
+          _mod13274.originalConsoleMethods[level] = arg0;
+          return () => {
+            items = [...arguments];
+            level(13272).triggerHandlers("console", { args: items, level });
+            const obj3 = level(13274).originalConsoleMethods[level];
+            if (obj3) {
+              obj3.apply(level(13275).GLOBAL_OBJ.console, items);
+            }
+            const obj = { args: items, level };
+            const obj2 = level(13272);
+          };
+        });
+        const tmpResult = tmp(13280);
+      }
+    });
   }
-  return str;
 }
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];
+
+export function addConsoleInstrumentationHandler(errorCallback) {
+  _mod13272.addHandler("console", errorCallback);
+  _mod13272.maybeInstrument("console", instrumentConsole);
+}

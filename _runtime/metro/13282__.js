@@ -1,138 +1,190 @@
 // _runtime/metro/13282__.js
-import _mod13280 from "13280__.js";
+import _mod13275 from "13275__.js";
+import _mod13281 from "13281__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-
-export function isMatchingPattern(arr, test) {
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
-  }
-  const isStringResult = _mod13280.isString(arr);
-  if (!isStringResult) {
-    return isStringResult;
-  } else {
-    if (tmpResult.isRegExp(test)) {
-      let isMatch = test.test(arr);
-    } else {
-      isMatch = _mod13280.isString(test);
-      if (isMatch) {
-        if (flag) {
-          let hasItem = arr === test;
-        } else {
-          hasItem = arr.includes(test);
+function _htmlElementAsString(tagName, arr) {
+  items = [];
+  if (tagName) {
+    if (tagName.tagName) {
+      if (_mod13275.GLOBAL_OBJ.HTMLElement) {
+        if (tagName instanceof globalThis.HTMLElement) {
+          if (tagName.dataset) {
+            const dataset = tagName.dataset;
+            if (tagName.dataset.sentryComponent) {
+              return dataset.sentryComponent;
+            } else if (dataset.sentryElement) {
+              return tagName.dataset.sentryElement;
+            }
+          }
         }
       }
-      const tmpResult2 = _mod13280;
+      arr = items.push(tagName.tagName.toLowerCase());
+      let mapped = null;
+      if (arr) {
+        mapped = null;
+        if (arr.length) {
+          const found = arr.filter((item) => tagName.getAttribute(item));
+          mapped = found.map((item) => {
+            items = [item, tagName.getAttribute(item)];
+            return items;
+          });
+        }
+      }
+      if (mapped) {
+        if (mapped.length) {
+          const item = mapped.forEach((item) => {
+            items.push("[" + item[0] + '="' + item[1] + '"]');
+          });
+        }
+        const items1 = ["aria-label", "type", "name", "title", "alt"];
+        const iter = items1[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp22 = nextResult;
+          let attr = tagName.getAttribute(nextResult);
+          if (attr) {
+            let _HermesInternal3 = HermesInternal;
+            let str8 = "[";
+            let str9 = '="';
+            let str10 = '"]';
+            let arr2 = items.push("[" + tmp22 + '="' + tmp24 + '"]');
+          }
+          continue;
+        }
+        return items.join("");
+      }
+      if (tagName.id) {
+        const _HermesInternal = HermesInternal;
+        items.push("#" + tagName.id);
+      }
+      if (tagName.className) {
+        if (tmpResult.isString(str3)) {
+          const parts = str3.split(/\s+/);
+          const tmp11 = parts[Symbol.iterator]();
+          while (tmp11 !== undefined) {
+            let _HermesInternal2 = HermesInternal;
+            let arr7 = items.push("." + tmp14);
+            continue;
+          }
+        }
+        tmpResult = _mod13281;
+      }
     }
-    tmpResult = _mod13280;
+  }
+  return "";
+}
+
+export function getComponentName(arg0) {
+  let parentNode = arg0;
+  let num = 0;
+  if (_mod13275.GLOBAL_OBJ.HTMLElement) {
+    while (parentNode) {
+      if (parentNode instanceof globalThis.HTMLElement) {
+        let dataset = parentNode.dataset;
+        if (parentNode.dataset.sentryComponent) {
+          return dataset.sentryComponent;
+        } else if (dataset.sentryElement) {
+          return parentNode.dataset.sentryElement;
+        }
+      }
+      parentNode = parentNode.parentNode;
+      num = num + 1;
+      if (num < 5) {
+        continue;
+      } else {
+        return null;
+      }
+    }
+    return null;
+  } else {
+    return null;
   }
 }
-export function safeJoin(arg0, arg1) {
-  if (Array.isArray(arg0)) {
-    items = [];
-    let num = 0;
-    if (0 < arg0.length) {
-      try {
-        const push = items.push;
-        if (obj.isVueViewModel(tmp2)) {
-          push("[VueViewModel]");
-        } else {
-          const _String = String;
-          push(String(tmp2));
-        }
-        num = num + 1;
-        obj = _mod13280;
-      } catch (err) {
-        arr.push(tmp);
-      }
+export function getDomElement(arg0) {
+  let element = null;
+  if (_mod13275.GLOBAL_OBJ.document) {
+    element = null;
+    if (_mod13275.GLOBAL_OBJ.document.querySelector) {
+      const _document = _mod13275.GLOBAL_OBJ.document;
+      element = _document.querySelector(arg0);
     }
-    return items.join(arg1);
-  } else {
+  }
+  return element;
+}
+export function getLocationHref() {
+  try {
+    return _mod13275.GLOBAL_OBJ.document.location.href;
+  } catch (err) {
     return "";
   }
 }
-export function snipLine(arr, lineno) {
-  if (arr.length <= 150) {
-    return arr;
-  } else {
-    let tmp = lineno;
-    if (lineno > length) {
-      tmp = length;
-    }
-    const _Math = Math;
-    let num3 = Math.max(tmp - 60, 0);
-    if (num3 < 5) {
-      num3 = 0;
-    }
-    const _Math2 = Math;
-    let bound = Math.min(num3 + 140, length);
-    if (bound > length - 5) {
-      bound = length;
-    }
-    if (bound === length) {
-      const _Math3 = Math;
-      num3 = Math.max(bound - 140, 0);
-    }
-    const substr = arr.slice(num3, bound);
-    let combined = substr;
-    if (num3 > 0) {
-      const _HermesInternal = HermesInternal;
-      combined = "'{snip} " + substr;
-    }
-    let text = combined;
-    if (bound < length) {
-      text = `${tmp6} {snip}`;
-    }
-    return text;
+export function htmlTreeAsString(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-}
-export function stringMatchesSomePattern(transaction) {
-  if (items === undefined) {
-    items = [];
-  }
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
-  }
-  return items.some((test) => {
-    const isStringResult = _mod13280.isString(transaction);
-    if (!isStringResult) {
-      return isStringResult;
-    } else {
-      if (tmpResult.isRegExp(test)) {
-        let isMatch = test.test(transaction);
-      } else {
-        isMatch = _mod13280.isString(test);
-        if (isMatch) {
-          if (flag) {
-            let hasItem = transaction === test;
-          } else {
-            hasItem = transaction.includes(test);
+  if (arg0) {
+    try {
+      let tmp = arg0;
+      items = [];
+      let num2 = 0;
+      const _Array = Array;
+      let keyAttrs = obj;
+      if (!Array.isArray(obj)) {
+        keyAttrs = obj.keyAttrs;
+      }
+      const _Array2 = Array;
+      const isArray = Array.isArray(obj);
+      let num3 = !isArray;
+      if (!isArray) {
+        num3 = obj.maxStringLength;
+      }
+      if (!num3) {
+        num3 = 80;
+      }
+      if (tmp) {
+        let sum = tmp7 + 1;
+        if (+0 < 5) {
+          const tmp33 = _htmlElementAsString(tmp, tmp3);
+          let arr2 = tmp33;
+          if ("html" !== tmp33) {
+            if (sum <= 1) {
+              items.push(arr2);
+              num2 = num2 + arr2.length;
+              const parentNode = tmp.parentNode;
+              tmp = parentNode;
+              while (parentNode) {
+                let tmp19 = +sum;
+                sum = tmp19 + 1;
+                if (tmp19 >= 5) {
+                  break;
+                } else {
+                  let tmp23 = _htmlElementAsString(tmp, tmp3);
+                  arr2 = tmp23;
+                  if ("html" === tmp23) {
+                    break;
+                  } else {
+                    if (sum <= 1) {
+                      continue;
+                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
+                      break;
+                    }
+                    continue;
+                  }
+                }
+              }
+            }
           }
         }
-        const tmpResult2 = _mod13280;
       }
-      tmpResult = _mod13280;
+      const reversed = items.reverse();
+      return reversed.join(" > ");
+    } catch (err) {
+      return "<unknown>";
     }
-  });
-}
-export function truncate(str) {
-  let num = maxValueLength;
-  if (maxValueLength === undefined) {
-    num = 0;
+  } else {
+    return "<unknown>";
   }
-  let combined = str;
-  if (typeof str === "string") {
-    combined = str;
-    if (0 !== num) {
-      combined = str;
-      if (str.length > num) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + str.slice(0, num) + "...";
-      }
-    }
-  }
-  return combined;
 }

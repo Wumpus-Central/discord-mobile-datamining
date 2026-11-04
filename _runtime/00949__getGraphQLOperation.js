@@ -55,7 +55,7 @@ function _getGraphQLOperation(operationName) {
           const obj3 = { operationType: match1[1], operationName: "a" };
           obj = obj3;
         } else {
-          obj = { operationType: "PX_8", operationName: "__closure" };
+          obj = { operationType: "Object", operationName: "Array" };
         }
       }
       let operationName2 = obj.operationName;
@@ -337,7 +337,7 @@ export function parseGraphQLQuery(str) {
       const obj3 = { operationType: match1[1], operationName: "a" };
       let obj = obj3;
     } else {
-      obj = { operationType: "PX_8", operationName: "__closure" };
+      obj = { operationType: "Object", operationName: "Array" };
     }
     return obj;
   }

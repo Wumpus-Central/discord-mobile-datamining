@@ -64,14 +64,14 @@ const items = [
   },
   {
     key: "_getCached",
-    value: function _getCached(dateTime, value, fn) {
+    value: function _getCached(get, value, fn) {
       const _getKeyResult = this._getKey(value);
-      value = dateTime.get(_getKeyResult);
+      value = get.get(_getKeyResult);
       if (value) {
         return value;
       } else {
         const tmp4 = fn(value);
-        const result = dateTime.set(_getKeyResult, tmp4);
+        const result = get.set(_getKeyResult, tmp4);
         return tmp4;
       }
     },

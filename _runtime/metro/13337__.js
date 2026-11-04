@@ -1,78 +1,145 @@
 // _runtime/metro/13337__.js
-import _mod13297 from "13297__.js";
+import _mod13274 from "13274__.js";
+import _mod13298 from "13298__.js";
+import _mod13302 from "13302__.js";
+import _mod13318 from "13318__.js";
+import _mod13331 from "13331__.js";
+import _mod13339 from "13339__.js";
+
+const require = globalThis.__r;
 
 require = arg1;
-const dependencyMap = arg6;
+let dependencyMap = arg6;
 
-export function makePromiseBuffer(bufferSize) {
-  items = [];
+export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
+export function createTransport(bufferSize, arg1) {
+  _require = bufferSize;
+  dependencyMap = arg1;
+  let promiseBuffer = arg2;
+  if (arg2 === undefined) {
+    let num = bufferSize.bufferSize;
+    if (!num) {
+      num = 64;
+    }
+    promiseBuffer = require("13338__.js").makePromiseBuffer(num);
+    let obj = require("13338__.js");
+  }
+  closure_3 = {};
   return {
-    $: items,
-    add(fn) {
-      let tmp2 = undefined === promise;
-      if (!tmp2) {
-        tmp2 = items.length < tmp;
-      }
-      if (tmp2) {
-        promise = fn();
-        if (-1 === items.indexOf(promise)) {
-          items.push(promise);
-        }
-        promise
-          .then(() => {
-            let first = items.splice(items.indexOf(promise), 1)[0];
-            if (!first) {
-              first = Promise.resolve(undefined);
+    send(arg0) {
+      items = [];
+      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        const result = _mod13318.envelopeItemTypeToDataCategory(arg1);
+        if (obj2.isRateLimited(closure_3, result)) {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp6;
+            if (Array.isArray(arg0)) {
+              tmp6 = arg0[1];
             }
-            return first;
-          })
-          .then(null, () => {
-            let first = items.splice(items.indexOf(promise), 1)[0];
-            if (!first) {
-              first = Promise.resolve(undefined);
-            }
-            return first.then(null, () => {});
-          });
-        return promise;
-      } else {
-        const sentryError = new bufferSize(items[1]).SentryError(
-          "Not adding Promise because buffer limit was reached.",
-        );
-        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
-      }
-    },
-    drain(arg0) {
-      bufferSize = arg0;
-      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
-        closure_0 = fn;
-        closure_1 = arg1;
-        length = length.length;
-        if (length) {
-          const _setTimeout = setTimeout;
-          const timeout = setTimeout(() => {
-            let tmp2 = closure_0;
-            if (closure_0) {
-              tmp2 = tmp > 0;
-            }
-            if (tmp2) {
-              closure_0(false);
-            }
-          }, closure_0);
-          const item = arr.forEach((item) => {
-            _mod13297.resolvedSyncPromise(item).then(() => {
-              diff = diff - 1;
-              if (!diff) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(closure_1_3);
-                fn(true);
-              }
-            }, closure_1);
-          });
+            const tmp4 = tmp6;
+          }
+          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
         } else {
-          return fn(true);
+          items.push(arg0);
         }
-        arr = length;
+        obj2 = _mod13339;
       });
+      if (0 === items.length) {
+        return bufferSize(tmp2[3]).resolvedSyncPromise({});
+      } else {
+        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
+        function recordEnvelopeLoss(arg0) {}
+        const tmpResult2 = bufferSize(tmp2[1]);
+        return recordEnvelopeLoss
+          .add(() => {
+            const obj = { body: _mod13318.serializeEnvelope(dependencyMap) };
+            return dependencyMap(obj).then(
+              (statusCode) => {
+                let DEBUG_BUILD = undefined !== statusCode.statusCode;
+                if (DEBUG_BUILD) {
+                  let tmp = statusCode.statusCode < 200;
+                  if (!tmp) {
+                    tmp = statusCode.statusCode >= 300;
+                  }
+                  DEBUG_BUILD = tmp;
+                }
+                if (DEBUG_BUILD) {
+                  DEBUG_BUILD = items(13302).DEBUG_BUILD;
+                }
+                if (DEBUG_BUILD) {
+                  const logger = items(13274).logger;
+                  const _HermesInternal = HermesInternal;
+                  logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
+                }
+                closure_3 = items(13339).updateRateLimits(closure_3, statusCode);
+                return statusCode;
+              },
+              (arg0) => {
+                if (typeof recordEnvelopeLoss === "function") {
+                  const network_error = "network_error";
+                  closure_0(13318).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
+                    if ("event" === arg1) {
+                      const _Array = Array;
+                      let tmp4;
+                      if (Array.isArray(arg0)) {
+                        tmp4 = arg0[1];
+                      }
+                      const tmp = tmp4;
+                    }
+                    closure_2_0.recordDroppedEvent(
+                      network_error,
+                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
+                      tmp,
+                    );
+                  });
+                  throw arg0;
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              },
+            );
+          })
+          .then(
+            (result) => result,
+            (arg0) => {
+              if (arg0 instanceof _mod13331.SentryError) {
+                if (_mod13302.DEBUG_BUILD) {
+                  const logger = _mod13274.logger;
+                  logger.error("Skipped sending event because buffer is full.");
+                }
+                if (typeof recordEnvelopeLoss === "function") {
+                  const queue_overflow = "queue_overflow";
+                  _mod13318.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
+                    if ("event" === arg1) {
+                      const _Array = Array;
+                      let tmp4;
+                      if (Array.isArray(arg0)) {
+                        tmp4 = arg0[1];
+                      }
+                      const tmp = tmp4;
+                    }
+                    closure_2_0.recordDroppedEvent(
+                      network_error,
+                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
+                      tmp,
+                    );
+                  });
+                  const tmpResult = _mod13318;
+                  return _mod13298.resolvedSyncPromise({});
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw arg0;
+              }
+            },
+          );
+      }
+      let obj = bufferSize(dependencyMap[1]);
+    },
+    flush(arg0) {
+      return promiseBuffer.drain(arg0);
     },
   };
 }

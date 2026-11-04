@@ -1,19 +1,20 @@
 // _runtime/metro/16401__.js
-import _mod16367 from "16367__.js";
-import _mod16388 from "16388__.js";
-import f2 from "../16402_f.js";
-import _mod16412 from "16412__.js";
-import _mod16413 from "16413__.js";
+import _mod16373 from "16373__.js";
+import _mod16399 from "16399__.js";
 
-let closure_2 = _mod16367([].concat);
-
-export default _mod16388("Reflect", "ownKeys") ||
-  function ownKeys(arg0) {
-    const fResult = f2.f(_mod16412(arg0));
-    const f = _mod16413.f;
-    let tmp2 = fResult;
-    if (f) {
-      tmp2 = closure_2(fResult, f(arg0));
+export default (arg0, arg1) => {
+  if (arguments.length < 2) {
+    const tmp7 = _mod16373[arg0];
+    let tmp8;
+    if (_mod16399(tmp7)) {
+      tmp8 = tmp7;
     }
-    return tmp2;
-  };
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod16373[arg0];
+    if (tmp3) {
+      tmp3 = _mod16373[arg0][arg1];
+    }
+  }
+  return tmp3;
+};
