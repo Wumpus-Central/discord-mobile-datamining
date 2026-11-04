@@ -1,13 +1,53 @@
 // _runtime/metro/06105__.js
-import _mod17 from "00017__.js";
-import _mod26 from "00026__.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import RNSLog2 from "../06106_RNSLog.js";
+import _mod6110 from "06110__.js";
+import _modDef6111 from "06111__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import noop from "00019__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSModalScreen", directEventTypes: { topAppear: { registrationName: "onAppear" }, topDisappear: { registrationName: "onDisappear" }, topDismissed: { registrationName: "onDismissed" }, topNativeDismissCancelled: { registrationName: "onNativeDismissCancelled" }, topWillAppear: { registrationName: "onWillAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topHeaderHeightChange: { registrationName: "onHeaderHeightChange" }, topTransitionProgress: { registrationName: "onTransitionProgress" }, topGestureCancel: { registrationName: "onGestureCancel" }, topHeaderBackButtonClicked: { registrationName: "onHeaderBackButtonClicked" }, topSheetDetentChanged: { registrationName: "onSheetDetentChanged" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAppear: true, onDisappear: true, onDismissed: true, onNativeDismissCancelled: true, onWillAppear: true, onWillDisappear: true, onHeaderHeightChange: true, onTransitionProgress: true, onGestureCancel: true, onHeaderBackButtonClicked: true, onSheetDetentChanged: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { screenId: true, sheetAllowedDetents: true, sheetLargestUndimmedDetent: true, sheetGrabberVisible: true, sheetCornerRadius: true, sheetExpandsWhenScrolledToEdge: true, sheetInitialDetent: true, sheetElevation: true, sheetShouldOverflowTopInset: true, sheetDefaultResizeAnimationEnabled: true, customAnimationOnSwipe: true, fullScreenSwipeEnabled: true, fullScreenSwipeShadowEnabled: true, homeIndicatorHidden: true, preventNativeDismiss: true, gestureEnabled: true, statusBarColor: _mod26.colorAttribute, statusBarHidden: true, screenOrientation: true, statusBarAnimation: true, statusBarStyle: true, statusBarTranslucent: true, gestureResponseDistance: true, stackPresentation: true, stackAnimation: true, transitionDuration: true, replaceAnimation: true, swipeDirection: true, hideKeyboardOnSwipe: true, activityState: true, navigationBarColor: _mod26.colorAttribute, navigationBarTranslucent: true, navigationBarHidden: true, nativeBackButtonDismissalEnabled: true, bottomScrollEdgeEffect: true, leftScrollEdgeEffect: true, rightScrollEdgeEffect: true, topScrollEdgeEffect: true, synchronousShadowStateUpdatesEnabled: true, iosOrientationInheritanceFixEnabled: true };
+require = fn;
+let closure_3 = ["android", "ios"];
+let closure_4 = ["children", "direction", "nativeContainerStyle", "onTabSelected", "navStateRequest"];
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const fillParent = StyleSheet.create({ fillParent: { flex: 1, width: "100%", height: "100%" } });
 
-export default module_65.get("RNSModalScreen", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default function TabsHost(arg0) {
+  const RNSLog = RNSLog2.RNSLog;
+  RNSLog.log("TabsHost render");
+  ({ android, ios } = arg0);
+  const tmp2 = _objectWithoutProperties(arg0, closure_3);
+  const nativeContainerStyle = tmp2.nativeContainerStyle;
+  ({ children, direction, onTabSelected, navStateRequest } = tmp2);
+  const ref = noop.useRef(null);
+  const tmp3 = _objectWithoutProperties(tmp2, closure_4);
+  const obj2 = {
+    style: null,
+    navStateRequest,
+    onTabSelected: _mod6110.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected,
+    nativeContainerBackgroundColor: null,
+    ref: null,
+  };
+  items = [fillParent.fillParent, { direction }];
+  obj2.style = items;
+  let backgroundColor;
+  if (nativeContainerStyle != null) {
+    backgroundColor = nativeContainerStyle.backgroundColor;
+  }
+  obj2.nativeContainerBackgroundColor = backgroundColor;
+  obj2.ref = ref;
+  const merged = Object.assign(tmp3);
+  let prop;
+  if (android != null) {
+    prop = android.tabBarRespectsIMEInsets;
+  }
+  obj2.tabBarRespectsIMEInsets = prop;
+  obj2.children = children;
+  return jsx(_modDef6111, {
+    style: null,
+    navStateRequest,
+    onTabSelected: _mod6110.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected,
+    nativeContainerBackgroundColor: null,
+    ref: null,
+  });
+}

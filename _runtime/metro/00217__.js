@@ -1,5 +1,6 @@
 // _runtime/metro/00217__.js
 import _modDef38 from "00038__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import dispatchDefault from "../00132_dispatch.js";
 import EventDefault from "../00133_Event.js";
 import BlobManagerDefault from "../00200_BlobManager.js";
@@ -13,7 +14,6 @@ import _modDef221 from "00221__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
@@ -37,14 +37,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 let closure_3 = ["headers"];
+_possibleConstructorReturnDefault;
 let c9 = 0;
 class WebSocket {
   constructor(arg0, arg1, arg2) {
     self = this;
     tmp3 = hasOwnProperty(this, WebSocket);
-    tmp4 = closure_7;
-    obj = closure_7(WebSocket);
-    tmp5 = metroRequire;
+    tmp4 = metroImportDefault;
+    obj = metroImportDefault(WebSocket);
+    tmp5 = closure_6;
     if (closure_8()) {
       tmp7 = globalThis;
       _Reflect = Reflect;

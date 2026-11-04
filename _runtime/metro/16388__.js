@@ -1,32 +1,20 @@
 // _runtime/metro/16388__.js
-let closure_0 = { url: "http://localhost:8081" };
+import _mod16360 from "16360__.js";
+import _mod16386 from "16386__.js";
 
-export default () => {
-  if (arg0 === undefined) {
-    let obj = {};
+export default (arg0, arg1) => {
+  if (arguments.length < 2) {
+    const tmp7 = _mod16360[arg0];
+    let tmp8;
+    if (_mod16386(tmp7)) {
+      tmp8 = tmp7;
+    }
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod16360[arg0];
+    if (tmp3) {
+      tmp3 = _mod16360[arg0][arg1];
+    }
   }
-  return () => {
-    url = Object.assign({}, url, obj);
-    obj = {
-      onCommand(type) {
-        if ("editor.open" === type.type) {
-          const payload = type.payload;
-          let num = payload.lineNumber;
-          const _HermesInternal = HermesInternal;
-          obj = { file: payload.file, lineNumber: null };
-          const combined = "" + url.url + "/open-stack-frame";
-          if (!num) {
-            num = 1;
-          }
-          obj.lineNumber = num;
-          const _fetch = fetch;
-          const request = { method: "POST", body: null };
-          const _JSON = JSON;
-          request.body = JSON.stringify(obj);
-          const response = fetch(combined, request);
-        }
-      },
-    };
-    return obj;
-  };
+  return tmp3;
 };

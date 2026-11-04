@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b001972a2062de923c0ef45fb0f2ab23",
-  name: "VideoIcon",
+  hash: "fce86bae946901aed4dd9d012c5d05d2",
+  name: "BellSlashIcon",
   type: "png",
 });

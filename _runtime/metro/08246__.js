@@ -1,5 +1,5 @@
 // _runtime/metro/08246__.js
-import _modDef8179 from "08179__.js";
+import _modDef8195 from "08195__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -7,7 +7,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const RadialGradient = importDefault;
+const LinearGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,14 +27,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const jsx = fn(21).jsx;
-class RadialGradient {
+class LinearGradient {
   constructor() {
     self = this;
-    tmp = c2(this, RadialGradient);
+    tmp = c2(this, LinearGradient);
     tmp2 = closure_4;
-    obj = closure_4(RadialGradient);
+    obj = closure_4(LinearGradient);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,35 +47,15 @@ class RadialGradient {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RadialGradient, _modDef8179);
+_inherits(LinearGradient, _modDef8195);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ rx, ry, r, cx, cy, fx } = props);
-    if (undefined === fx) {
-      fx = cx;
-    }
-    let fy = props.fy;
-    const obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
-    if (undefined === fy) {
-      fy = cy;
-    }
-    obj.fy = fy;
-    if (!rx) {
-      rx = r;
-    }
-    obj.rx = rx;
-    if (!ry) {
-      ry = r;
-    }
-    obj.ry = ry;
-    obj.cx = cx;
-    obj.cy = cy;
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(RadialGradient(8232)(props, this));
-    return jsx(RadialGradient(8247), {
+    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
+    const merged1 = Object.assign(LinearGradient(8248)(props, this));
+    return jsx(LinearGradient(8247), {
       ref(arg0) {
         return self.refMethod(arg0);
       },
@@ -83,8 +63,8 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(RadialGradient, items);
-importDefaultResultResult.displayName = "RadialGradient";
-importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
+const importDefaultResultResult = _createClass(LinearGradient, items);
+importDefaultResultResult.displayName = "LinearGradient";
+importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
 
 export default importDefaultResultResult;

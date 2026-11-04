@@ -214,7 +214,7 @@ function decorateAnimation(isHigherOrder) {
       });
       hasOwnProperty(items);
       items.nonscaledCurrent = items;
-      items.current = timestampProducer(React5(items));
+      items.current = timestampProducer(metroImportDefault(items));
       return c3;
     }
     function transformationMatrixOnFrame(arg0, arg1) {

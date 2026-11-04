@@ -28,7 +28,7 @@ function SkipEntering(children) {
   const tmp = closure_1_10(children.shouldSkip);
   closure_0 = tmp;
   items = [tmp];
-  React7(() => {
+  React6(() => {
     closure_0.current = false;
   }, items);
   return <context value={tmp}>{children.children}</context>;
@@ -36,8 +36,8 @@ function SkipEntering(children) {
 const noop = fn(19);
 ({
   Children: hasOwnProperty,
-  cloneElement: metroRequire,
-  Fragment: closure_7,
+  cloneElement: closure_6,
+  Fragment: metroImportDefault,
   isValidElement: closure_8,
   useEffect: closure_9,
   useRef: closure_10,
@@ -120,9 +120,9 @@ let items = [
       let tmp = children;
       if (undefined !== this.props.skipExiting) {
         tmp = children;
-        if (React6(children)) {
+        if (React5(children)) {
           tmp = children;
-          if (children.type !== React5) {
+          if (children.type !== metroImportDefault) {
             const obj = { ref: self._getMergedRef(children.props.ref) };
             tmp = timestampProducer(children, obj);
           }

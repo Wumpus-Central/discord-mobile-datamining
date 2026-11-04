@@ -98,10 +98,10 @@ class DOMException {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp7 = metroRequire;
-    definePropertyResult = Object.defineProperty(tmp3Result, metroRequire, { writable: true, value: "Array" });
-    tmp9 = closure_7;
-    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_7, { writable: true, value: "Array" });
+    tmp7 = closure_6;
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_6, { writable: true, value: "a" });
+    tmp9 = metroImportDefault;
+    definePropertyResult1 = Object.defineProperty(tmp3Result, metroImportDefault, { writable: true, value: "a" });
     if (undefined === fn) {
       tmp16 = closure_3;
       str = "Error";

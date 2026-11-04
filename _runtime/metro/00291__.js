@@ -1,10 +1,10 @@
 // _runtime/metro/00291__.js
 import processColorDefault from "../00050_processColor.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import _modDef292 from "00292__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
@@ -29,6 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 let closure_3 = ["onBlur", "onFocus"];
+_possibleConstructorReturnDefault;
 const cloneElement = fn(19).cloneElement;
 const jsx = fn(21).jsx;
 class TouchableNativeFeedback {
@@ -37,9 +38,9 @@ class TouchableNativeFeedback {
     items = [...arguments];
     tmp = hasOwnProperty(this, TouchableNativeFeedback);
     items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(TouchableNativeFeedback);
-    tmp3 = metroRequire;
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(TouchableNativeFeedback);
+    tmp3 = closure_6;
     if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

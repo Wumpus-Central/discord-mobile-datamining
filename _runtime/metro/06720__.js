@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1],
-  hash: "e0157f8261da28670f8ce7828f01db25",
-  name: "img_account_sync_skype_white",
+  hash: "579bfc60bdd93580f90ccebe4dc03bbf",
+  name: "img_account_sync_battlenet_light_and_dark",
   type: "svg",
 });

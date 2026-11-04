@@ -10,7 +10,7 @@ const require = globalThis.__r;
   useEffect: c3,
   useMemo: closure_4,
   useRef: hasOwnProperty,
-  useSyncExternalStore: metroRequire,
+  useSyncExternalStore: closure_6,
 } = noop);
 let items = [
   {

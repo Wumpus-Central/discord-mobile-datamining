@@ -13,8 +13,8 @@ let noop = fn(19);
 ({
   useCallback: closure_4,
   useEffect: hasOwnProperty,
-  useImperativeHandle: metroRequire,
-  useMemo: closure_7,
+  useImperativeHandle: closure_6,
+  useMemo: metroImportDefault,
   forwardRef,
 } = noop);
 let noop = noop_mod;

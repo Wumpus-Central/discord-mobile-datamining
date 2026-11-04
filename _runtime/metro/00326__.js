@@ -1,11 +1,11 @@
 // _runtime/metro/00326__.js
 import _modDef38 from "00038__.js";
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import _modDef314 from "00314__.js";
 import _slicedToArray from "00032__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import metroImportDefault from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import "module_19";
@@ -226,7 +226,6 @@ let closure_3 = [
   "sections",
   "stickySectionHeadersEnabled",
 ];
-_possibleConstructorReturnDefault;
 const noop = fn(19);
 ({ useEffect: closure_10, useState: closure_11 } = noop);
 const jsxProd = fn(21);
@@ -236,11 +235,11 @@ class VirtualizedSectionList {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = metroRequire(this, VirtualizedSectionList);
+    tmp = closure_6(this, VirtualizedSectionList);
     items1 = [...items];
     tmp2 = closure_8;
     obj = closure_8(VirtualizedSectionList);
-    tmp3 = closure_7;
+    tmp3 = metroImportDefault;
     if (closure_2_15()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

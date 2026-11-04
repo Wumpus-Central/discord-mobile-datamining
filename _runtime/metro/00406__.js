@@ -35,8 +35,8 @@ class SectionList {
     closure_0 = undefined;
     tmp = closure_4(this, SectionList);
     items1 = [...items];
-    tmp2 = metroRequire;
-    obj = metroRequire(SectionList);
+    tmp2 = closure_6;
+    obj = closure_6(SectionList);
     tmp3 = hasOwnProperty;
     if (closure_8()) {
       tmp5 = globalThis;

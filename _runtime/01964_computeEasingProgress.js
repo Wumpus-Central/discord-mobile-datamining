@@ -102,6 +102,7 @@ function getSwipeSimulator(translationX, screenDimensions, arg2) {
   const isTransitionCanceled = screenDimensions.isTransitionCanceled;
   const point = { x: translationX.translationX, y: translationX.translationY };
   const signResult = Math.sign(translationX.translationX);
+  closure_7 = signResult;
   const signResult1 = Math.sign(translationX.translationY);
   if (isTransitionCanceled) {
     let point2 = { x: 0, y: 0 };
@@ -163,7 +164,7 @@ function getSwipeSimulator(translationX, screenDimensions, arg2) {
         closure_10.y = true;
         translationX.translationY = 0;
       }
-      React5(closure_1, translationX);
+      metroImportDefault(closure_1, translationX);
       if ("x" === closure_2) {
         let y = closure_10.x;
       } else {
@@ -180,7 +181,7 @@ function getSwipeSimulator(translationX, screenDimensions, arg2) {
         translationX.translationY = signResult1 * screenDimensions.height;
         React4(closure_1, translationX);
       }
-      React6(computeFrame, y, closure_1, translationX, isTransitionCanceled);
+      React5(computeFrame, y, closure_1, translationX, isTransitionCanceled);
       const tmp2 = hasOwnProperty(closure_4, point3.y, point4.y);
     }
     return computeFrame;
@@ -215,12 +216,12 @@ function getSwipeSimulator(translationX, screenDimensions, arg2) {
         closure_10.y = true;
         translationX.translationY = -tmp8.height;
       }
-      React5(closure_1, translationX);
+      metroImportDefault(closure_1, translationX);
       let y = closure_10.x;
       if (!y) {
         y = closure_10.y;
       }
-      React6(_computeFrame, y, closure_1, translationX, isTransitionCanceled);
+      React5(_computeFrame, y, closure_1, translationX, isTransitionCanceled);
       const tmp2 = hasOwnProperty(closure_4, point3.y, point4.y);
     }
     return _computeFrame;

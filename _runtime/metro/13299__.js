@@ -1,31 +1,19 @@
 // _runtime/metro/13299__.js
+import _mod13274 from "13274__.js";
+import ScopeClass from "../13294_ScopeClass.js";
 
-export function flatten(arr) {
-  items = [];
-  const item = arr.forEach((arr) => {
-    if (Array.isArray(arr)) {
-      let item = arr.forEach((arr) => {
-        if (Array.isArray(arr)) {
-          let item = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach(/* F128058 */ function() { ... });
-                } else {
-                  arr = closure_1_0.push(arr);
-                }
-              });
-            } else {
-              arr = closure_1_0.push(arr);
-            }
-          });
-        } else {
-          arr = closure_1_0.push(arr);
-        }
-      });
-    } else {
-      arr = closure_1_0.push(arr);
-    }
+require = arg1;
+const dependencyMap = arg6;
+
+export function getDefaultCurrentScope() {
+  return _mod13274.getGlobalSingleton("defaultCurrentScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
   });
-  return items;
+}
+export function getDefaultIsolationScope() {
+  return _mod13274.getGlobalSingleton("defaultIsolationScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
 }

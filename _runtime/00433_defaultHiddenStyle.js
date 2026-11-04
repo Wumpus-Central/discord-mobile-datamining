@@ -11,7 +11,7 @@ function defaultHiddenStyle(height) {
   return { minHeight: height.height, minWidth: height.width };
 }
 const noop = fn(19);
-({ startTransition: hasOwnProperty, useState: metroRequire } = noop);
+({ startTransition: hasOwnProperty, useState: closure_6 } = noop);
 const jsx = fn(21).jsx;
 if (module_68.hasViewManagerConfig("VirtualView")) {
   if (!importDefaultResult1.hasViewManagerConfig("VirtualViewExperimental")) {

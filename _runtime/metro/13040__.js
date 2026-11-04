@@ -1,25 +1,13 @@
 // _runtime/metro/13040__.js
-import _mod12968 from "12968__.js";
-import _mod12972 from "12972__.js";
+import registerAsset from "01119__.js";
 
-const Percentage = _mod12972.TYPE.Percentage;
-let obj = {
-  name: "Percentage",
-  structure: { value: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Percentage);
-    const obj2 = {
-      type: "Percentage",
-      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
-      value: this.scanner.source.substring(tokenStart, _mod12968.consumeNumber(this.scanner.source, tokenStart)),
-    };
-    return obj2;
-  },
-  generate(value) {
-    this.chunk(value.value);
-    this.chunk("%");
-  },
-};
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "07694532fe5b5d77fc59f6774ff08cb4",
+  name: "WidgetsIcon",
+  type: "png",
+});

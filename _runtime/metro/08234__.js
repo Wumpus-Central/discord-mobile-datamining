@@ -1,13 +1,12 @@
 // _runtime/metro/08234__.js
-import _modDef8179 from "08179__.js";
+import _modDef8210 from "08210__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const Marker = importDefault;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,15 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const jsx = fn(21).jsx;
-class Marker {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = c2(this, Marker);
+    tmp = c2(this, FeSpecularLighting);
     tmp2 = closure_4;
-    obj = closure_4(Marker);
+    obj = closure_4(FeSpecularLighting);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,47 +45,18 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Marker, _modDef8179);
+_inherits(FeSpecularLighting, _modDef8210);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-    const obj2 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const obj = {
-      name: props.id,
-      refX: props.refX,
-      refY: props.refY,
-      markerUnits: props.markerUnits,
-      orient: String(props.orient),
-      markerWidth,
-      markerHeight,
-    };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(Marker(8168)({ viewBox, preserveAspectRatio }));
-    obj2.children = children;
-    return jsx(Marker(8235), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const result = FeSpecularLighting(8187).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = {
-  refX: 0,
-  refY: 0,
-  orient: "0",
-  markerWidth: 3,
-  markerHeight: 3,
-  markerUnits: "strokeWidth",
-};
+const importDefaultResultResult = _createClass(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

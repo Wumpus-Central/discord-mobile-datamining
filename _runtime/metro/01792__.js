@@ -130,9 +130,9 @@ class CSSCallbacksManager {
     updateRegistration = function updateRegistration() {
       return self.updateRegistration();
     };
-    tmp2 = new metroRequire(updateRegistration);
+    tmp2 = new closure_6(updateRegistration);
     this.animationCallbacks = tmp2;
-    tmp3 = new closure_7(updateRegistration);
+    tmp3 = new metroImportDefault(updateRegistration);
     this.transitionCallbacks = tmp3;
     return;
   }

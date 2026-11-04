@@ -1,41 +1,13 @@
 // _runtime/metro/13025__.js
-import _mod12972 from "12972__.js";
+import registerAsset from "01119__.js";
 
-const Comment = _mod12972.TYPE.Comment;
-let obj = {
-  name: "Comment",
-  structure: { value: String },
-  parse() {
-    const self = this;
-    const tokenStart = this.scanner.tokenStart;
-    const tokenEnd = this.scanner.tokenEnd;
-    this.eat(Comment);
-    const sum = tokenEnd - tokenStart + 2;
-    let tmp3 = sum >= 2;
-    if (2 <= sum) {
-      const source = self.scanner.source;
-      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
-    }
-    if (tmp3) {
-      const source2 = self.scanner.source;
-      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
-    }
-    let diff = tokenEnd;
-    if (tmp3) {
-      diff = tokenEnd - 2;
-    }
-    const obj = {
-      type: "Comment",
-      loc: self.getLocation(tokenStart, self.scanner.tokenStart),
-      value: self.scanner.source.substring(tokenStart + 2, diff),
-    };
-    return obj;
-  },
-  generate(value) {
-    this.chunk("/*");
-    this.chunk(value.value);
-    this.chunk("*/");
-  },
-};
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "a223df53550492950018c2a994e89fed",
+  name: "FiltersHorizontalIcon",
+  type: "png",
+});

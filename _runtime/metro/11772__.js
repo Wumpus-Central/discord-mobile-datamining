@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/shared_components/user_list/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3, 4],
-  hash: "a7182f0f94a36e3c4d169065a673c788",
-  name: "icon-new-group",
+  httpServerLocation: "/assets/images/native/community",
+  width: 120,
+  height: 80,
+  scales: [2, 3],
+  hash: "4ca23515516a1452487c5deb66a2aa5c",
+  name: "customize_empty_light",
   type: "png",
 });

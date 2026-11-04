@@ -1,30 +1,13 @@
 // _runtime/metro/13264__.js
-import setupIntegration from "13246__.js";
+import registerAsset from "01119__.js";
 
-const weakMap = new WeakMap();
-
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function () {
-        items = [...arguments];
-        const originalFunction = closure_1_0(13196).getOriginalFunction(this);
-        const obj = closure_1_0(13196);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
-          }
-        }
-        return toString.apply(self, items);
-      };
-    } catch (err) {}
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
-  },
-}));
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d6f5a76861191f4dd121da59ef71950f",
+  name: "ArrowSmallUpIcon",
+  type: "png",
+});

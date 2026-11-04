@@ -22,9 +22,9 @@ function useTextPressability(textPressabilityProps) {
   let onResponderTerminationRequest = textPressabilityProps.onResponderTerminationRequest;
   let onStartShouldSetResponder = textPressabilityProps.onStartShouldSetResponder;
   const pressRetentionOffset = textPressabilityProps.pressRetentionOffset;
-  const first = _slicedToArray(React5(false), 2)[0];
+  const first = _slicedToArray(metroImportDefault(false), 2)[0];
   items = [pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut, textPressabilityProps.suppressHighlighting];
-  const tmp = _slicedToArray(React5(false), 2);
+  const tmp = _slicedToArray(metroImportDefault(false), 2);
   const tmp4 = _modDef301(timestampProducer(() => ({ disabled: false, pressRectOffset: pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut }), items));
   closure_12 = tmp4;
   const items1 = [tmp4, onResponderGrant, onResponderMove, onResponderRelease, onResponderTerminate, onResponderTerminationRequest, onStartShouldSetResponder];
@@ -80,7 +80,7 @@ function useTextPressability(textPressabilityProps) {
   }, items2);
 }
 const noop = fn(19);
-({ useContext: hasOwnProperty, useMemo: metroRequire, useState: closure_7 } = noop);
+({ useContext: hasOwnProperty, useMemo: closure_6, useState: metroImportDefault } = noop);
 const jsx = fn(21).jsx;
 class TextImpl {
   constructor(arg0) {

@@ -1,6 +1,4 @@
 // _runtime/metro/06126__.js
-import _mod17 from "00017__.js";
+import noop from "00019__.js";
 
-const Platform = _mod17.Platform;
-
-export const isIOS26OrHigher = false;
+export default noop.createContext(undefined);

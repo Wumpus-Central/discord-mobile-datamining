@@ -1,69 +1,13 @@
 // _runtime/metro/13217__.js
-import _mod13191 from "13191__.js";
-import _mod13196 from "13196__.js";
-import _mod13208 from "13208__.js";
-import _mod13209 from "13209__.js";
-import ScopeClass from "../13211_ScopeClass.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function getClient() {
-  const mainCarrier = _mod13208.getMainCarrier();
-  const asyncContextStrategy = _mod13209.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
-}
-export function getCurrentScope() {
-  const mainCarrier = _mod13208.getMainCarrier();
-  const asyncContextStrategy = _mod13209.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
-}
-export function getGlobalScope() {
-  return _mod13191.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
-export function getIsolationScope() {
-  const mainCarrier = _mod13208.getMainCarrier();
-  const asyncContextStrategy = _mod13209.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-}
-export function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod13196.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-}
-export function withIsolationScope() {
-  items = [...arguments];
-  const mainCarrier = _mod13208.getMainCarrier();
-  const asyncContextStrategy = _mod13209.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
-    } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
-    }
-    return result;
-  } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
-  }
-}
-export function withScope() {
-  items = [...arguments];
-  const mainCarrier = _mod13208.getMainCarrier();
-  const asyncContextStrategy = _mod13209.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
-    }
-    return withSetScopeResult;
-  } else {
-    return asyncContextStrategy.withScope(items[0]);
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "9efbede8b87c94f401364acf34876922",
+  name: "HammerIcon",
+  type: "png",
+});

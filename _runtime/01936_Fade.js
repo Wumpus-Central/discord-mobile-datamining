@@ -39,7 +39,7 @@ class FadeIn {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -118,7 +118,7 @@ class FadeInRight {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -216,7 +216,7 @@ class FadeInLeft {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -314,7 +314,7 @@ class FadeInUp {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -412,7 +412,7 @@ class FadeInDown {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -510,7 +510,7 @@ class FadeOut {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -589,7 +589,7 @@ class FadeOutRight {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -687,7 +687,7 @@ class FadeOutLeft {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -785,7 +785,7 @@ class FadeOutUp {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -883,7 +883,7 @@ class FadeOutDown {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(FadeOutDown);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);

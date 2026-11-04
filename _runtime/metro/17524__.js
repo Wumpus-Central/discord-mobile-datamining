@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "82e1774e7b1dafde5756234a2c6c5214",
-  name: "EmojiSalutingFaceIcon",
+  hash: "714bfdcefc91a8c05361da54def8f212",
+  name: "ic_voice_channel_24px",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "Array", left: "Path", right: "disabled", bottom: "Map" };
+let closure_0 = { top: "cix", left: "construct", right: "Button", bottom: "c" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

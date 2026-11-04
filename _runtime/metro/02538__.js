@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/waterwheels",
   scales: [1],
-  hash: "441f9d49c93b55191a3520ac12f2c28d",
+  hash: "9f5e2d38082b49225cd7d29d81b8acec",
   name: "WaterwheelsUntranslated.compiled.messages",
   type: "jsona",
 });

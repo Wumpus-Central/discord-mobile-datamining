@@ -318,54 +318,54 @@ function pnpm_backgroundImageTs14(arg0, arg1) {
           let obj = { color: null, position: positions[0] };
           let arr = items.push(obj);
         } else {
-          let tmp4 = globalThis;
+          let tmp6 = globalThis;
           let _Error = Error;
           let _HermesInternal = HermesInternal;
           let str = "[Reanimated] ";
-          let tmp7 = new.target;
-          let tmp8 = new.target;
+          let tmp9 = new.target;
+          let tmp10 = new.target;
           let error = new Error("[Reanimated] " + _undefined.invalidPosition(positions[0]));
           throw error;
         }
       }
       continue;
     }
-    let tmp15 = _undefined2(color, arg1);
+    let tmp17 = _undefined2(color, arg1);
     let length1;
     if (positions != null) {
       length1 = positions.length;
     }
     if (length1) {
-      for (const item10052 of positions) {
-        if (_slicedToArray(item10052)) {
+      for (const item10056 of positions) {
+        if (_slicedToArray(item10056)) {
           let obj2 = { color: null, position: null };
-          obj2.color = tmp15;
-          obj2.position = item10052;
+          obj2.color = tmp17;
+          obj2.position = item10056;
           let arr4 = items.push(obj2);
           continue;
         } else {
-          let tmp24 = globalThis;
+          let tmp26 = globalThis;
           let _Error2 = Error;
           let _HermesInternal2 = HermesInternal;
           let str2 = "[Reanimated] ";
-          let tmp27 = new.target;
-          let tmp28 = new.target;
-          let error1 = new Error("[Reanimated] " + _undefined.invalidPosition(item10052));
+          let tmp29 = new.target;
+          let tmp30 = new.target;
+          let error1 = new Error("[Reanimated] " + _undefined.invalidPosition(item10056));
           throw error1;
         }
       }
     } else {
       let obj3 = { color: null, position: null };
-      obj3.color = tmp15;
+      obj3.color = tmp17;
       let arr5 = items.push(obj3);
     }
   }
   let num = 0;
   if (0 < items.length) {
     while (true) {
-      let tmp34 = items[num];
-      position = tmp34.position;
-      if (null === tmp34.color) {
+      let tmp36 = items[num];
+      position = tmp36.position;
+      if (null === tmp36.color) {
         if (0 === num) {
           break;
         } else if (num === items.length - 1) {
@@ -551,15 +551,15 @@ function pnpm_backgroundImageTs20(join, arg1) {
     const match = arr[num].trim().match(c1);
     while (null !== match) {
       if (3 === match.length) {
-        let tmp14 = _undefined2(match[0], arg1);
-        let tmp16 = _undefined3(match[1]);
-        let tmp17 = _undefined3(match[2]);
-        if (null !== tmp14) {
-          if (null !== tmp16) {
-            if (null !== tmp17) {
-              let obj2 = { color: tmp14, position: tmp16 };
+        let tmp16 = _undefined2(match[0], arg1);
+        let tmp18 = _undefined3(match[1]);
+        let tmp19 = _undefined3(match[2]);
+        if (null !== tmp16) {
+          if (null !== tmp18) {
+            if (null !== tmp19) {
+              let obj2 = { color: tmp16, position: tmp18 };
               let arr2 = items.push(obj2);
-              let obj3 = { color: tmp14, position: tmp17 };
+              let obj3 = { color: tmp16, position: tmp19 };
               let arr3 = items.push(obj3);
               let flag2 = false;
             }
@@ -567,11 +567,11 @@ function pnpm_backgroundImageTs20(join, arg1) {
         }
         return null;
       } else if (2 === match.length) {
-        let tmp9 = _undefined2(match[0], arg1);
-        let tmp11 = _undefined3(match[1]);
-        if (null !== tmp9) {
-          if (null !== tmp11) {
-            let obj4 = { color: tmp9, position: tmp11 };
+        let tmp11 = _undefined2(match[0], arg1);
+        let tmp13 = _undefined3(match[1]);
+        if (null !== tmp11) {
+          if (null !== tmp13) {
+            let obj4 = { color: tmp11, position: tmp13 };
             let arr8 = items.push(obj4);
             flag2 = false;
           }
@@ -580,12 +580,12 @@ function pnpm_backgroundImageTs20(join, arg1) {
       } else if (1 !== match.length) {
         return null;
       } else {
-        let tmp22 = _undefined3(match[0]);
-        if (null !== tmp22) {
+        let tmp5 = _undefined3(match[0]);
+        if (null !== tmp5) {
           if (!flag) {
             if (0 !== num) {
               if (num !== arr.length - 1) {
-                let obj5 = { color: null, position: tmp22 };
+                let obj5 = { color: null, position: tmp5 };
                 let arr9 = items.push(obj5);
                 flag2 = true;
               }
@@ -593,11 +593,11 @@ function pnpm_backgroundImageTs20(join, arg1) {
           }
           return null;
         } else {
-          let tmp5 = _undefined2(match[0], arg1);
-          if (null === tmp5) {
+          let tmp7 = _undefined2(match[0], arg1);
+          if (null === tmp7) {
             return null;
           } else {
-            let obj = { color: tmp5, position: null };
+            let obj = { color: tmp7, position: null };
             let arr10 = items.push(obj);
             flag2 = false;
           }
@@ -608,11 +608,11 @@ function pnpm_backgroundImageTs20(join, arg1) {
     }
     return null;
   }
-  let tmp20 = null;
+  let tmp22 = null;
   if (items.length >= c4) {
-    tmp20 = items;
+    tmp22 = items;
   }
-  return tmp20;
+  return tmp22;
 }
 const items32 = [tmp48, tmp49, tmp50, tmp51, tmp52];
 pnpm_backgroundImageTs20.__closure = items32;
@@ -884,7 +884,7 @@ function pnpm_backgroundImageTs24(arg0, arg1) {
           tmp16 = tmp;
           if (!hasOwnProperty.includes(arr5)) {
             if (timestampProducer(arr5)) {
-              let tmp19 = React5(arr5);
+              let tmp19 = metroImportDefault(arr5);
               if (null === tmp19) {
                 break;
               } else {
@@ -909,7 +909,7 @@ function pnpm_backgroundImageTs24(arg0, arg1) {
                     tmp16 = tmp;
                     if (timestampProducer(first)) {
                       let arr6 = arr2.shift();
-                      let tmp18Result = React5(first);
+                      let tmp18Result = metroImportDefault(first);
                       if (null !== tmp18Result) {
                         let _parseFloat = parseFloat;
                         if (parseFloat(first) >= 0) {
@@ -935,7 +935,7 @@ function pnpm_backgroundImageTs24(arg0, arg1) {
               tmp15 = tmp2;
               tmp16 = tmp;
               if ("at" === arr5) {
-                tmp14 = React6(arr2.splice(0));
+                tmp14 = React5(arr2.splice(0));
                 flag7 = flag;
                 flag8 = flag2;
                 flag9 = true;
@@ -993,7 +993,7 @@ function pnpm_backgroundImageTs24(arg0, arg1) {
       }
     }
   }
-  const tmp25 = React7(arr, arg1);
+  const tmp25 = React6(arr, arg1);
   let tmp26 = null;
   if (null !== tmp25) {
     const obj2 = { type: "radial-gradient", shape: tmp22, size: tmp6, position: tmp5, colorStops: tmp25 };

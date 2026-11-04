@@ -6,9 +6,9 @@ let c1 = importDefault;
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
 let dependencyMap = {};
-const f20758 = () => {};
+const f20845 = () => {};
 ({
-  RN$LegacyInterop_UIManager_getConstantsForViewManager: closure_7,
+  RN$LegacyInterop_UIManager_getConstantsForViewManager: metroImportDefault,
   RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8,
   RN$discordUiManagerOptimization,
 } = global);
@@ -18,7 +18,7 @@ if (RN$discordUiManagerOptimization == null) {
 let closure_9 = tmp2;
 c0 = false;
 c1 = null;
-const f77495 = () => {};
+const f77829 = () => {};
 dependencyMap = {};
 let obj = {};
 const merged = Object.assign({
@@ -62,7 +62,7 @@ const merged = Object.assign({
 });
 const merged1 = Object.assign({
   getConstantsForViewManager(arg0) {
-    if (React5) {
+    if (metroImportDefault) {
       obj = tmp(arg0);
     } else {
       const _console = console;
@@ -78,10 +78,10 @@ const merged1 = Object.assign({
     return obj;
   },
   getDefaultEventTypes() {
-    if (React6) {
-      if (typeof f77495 === "function") {
+    if (React5) {
+      if (typeof f77829 === "function") {
         if (!closure_138_0) {
-          closure_138_1 = _null(70)(React6)();
+          closure_138_1 = _null(70)(React5)();
           closure_138_0 = true;
         }
         items = closure_138_1;
@@ -191,7 +191,7 @@ obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
         dependencyMap[arg0] = obj.getConstantsForViewManager(arg0);
       }
       return dependencyMap[arg0];
-    } else if (typeof f20758 === "function") {
+    } else if (typeof f20845 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(tmp)();
         c3 = true;
@@ -234,7 +234,7 @@ obj.hasViewManagerConfig = function hasViewManagerConfig(arg0) {
 };
 obj.getConstants = function getConstants() {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f20758 === "function") {
+    if (typeof f20845 === "function") {
       if (!c3) {
         closure_4 = _null(70)(tmp)();
         c3 = true;
@@ -322,7 +322,7 @@ if (tmp6) {
   }
   const keys = Object.keys(dependencyMap);
   const item = keys.forEach((item) => {
-    if (typeof f20758 === "function") {
+    if (typeof f20845 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(RN$LegacyInterop_UIManager_getConstants)();
         c3 = true;

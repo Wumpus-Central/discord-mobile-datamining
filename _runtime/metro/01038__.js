@@ -94,7 +94,7 @@ class ReactNativeClient {
     tmp13 = closure_4;
     obj4 = closure_4(tmp);
     tmp14 = closure_3;
-    if (metroRequire()) {
+    if (closure_6()) {
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj4, items, tmp13(self).constructor);
     } else {

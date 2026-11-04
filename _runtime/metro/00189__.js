@@ -188,7 +188,7 @@ class SyntheticError {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(SyntheticError);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);

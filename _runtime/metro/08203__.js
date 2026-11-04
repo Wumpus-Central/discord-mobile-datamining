@@ -4,8 +4,9 @@ import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeDistantLight = fn;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,14 +25,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeDistantLight {
+const jsx = fn(21).jsx;
+class Defs {
   constructor() {
     self = this;
-    tmp = c2(this, FeDistantLight);
+    tmp = c2(this, Defs);
     tmp2 = closure_4;
-    obj = closure_4(FeDistantLight);
+    obj = closure_4(Defs);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -44,17 +46,15 @@ class FeDistantLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeDistantLight, fn(19).Component);
+_inherits(Defs, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDistantLight(8171).warnUnimplementedFilter();
-    return null;
+    return jsx(Defs(8204), { children: this.props.children });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeDistantLight, items);
-importDefaultResultResult.displayName = "FeDistantLight";
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

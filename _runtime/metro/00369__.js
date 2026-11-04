@@ -35,7 +35,7 @@ class AnimatedDivision {
     tmp2 = closure_4;
     obj = closure_4(AnimatedDivision);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);

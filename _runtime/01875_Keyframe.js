@@ -187,7 +187,7 @@ const entry = {
                             if (typeof closure_0 === "function") {
                               const obj = { duration: null, value: null, easing: null };
                               const result = tmp8 / 100 * closure_1_3;
-                              obj.duration = result - index[combined].reduce(/* F135363 */ function() { ... }, 0);
+                              obj.duration = result - index[combined].reduce(/* F136033 */ function() { ... }, 0);
                               obj.value = tmp7;
                               obj.easing = tmp9;
                               tmp15(obj);

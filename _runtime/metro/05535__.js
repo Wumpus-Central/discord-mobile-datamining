@@ -1,14 +1,18 @@
 // _runtime/metro/05535__.js
-import ComposedGestureName from "../05485_ComposedGestureName.js";
-import _mod5534 from "05534__.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const jsx = fn(21).jsx;
 
-export function useExclusiveGestures() {
-  items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
-  const applyResult = _mod5534.useComposedGesture.apply(items1);
-  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
-  return applyResult;
+export default function _default(simultaneousWith) {
+  const merged = Object.assign(simultaneousWith);
+  return jsx(
+    importDefault(
+      null != simultaneousWith.simultaneousWith ||
+        null != simultaneousWith.requireToFail ||
+        null != simultaneousWith.block
+        ? 5536
+        : 5547,
+    ),
+    {},
+  );
 }

@@ -44,10 +44,10 @@ class XMLHttpRequestEventTarget {
   constructor() {
     self = this;
     tmp = closure_4(this, XMLHttpRequest);
-    tmp2 = metroRequire;
-    obj = metroRequire(XMLHttpRequest);
+    tmp2 = closure_6;
+    obj = closure_6(XMLHttpRequest);
     tmp3 = hasOwnProperty;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -132,10 +132,10 @@ class XMLHttpRequest {
   constructor() {
     self = this;
     tmp = closure_4(this, XMLHttpRequest);
-    tmp2 = metroRequire;
-    obj = metroRequire(XMLHttpRequest);
+    tmp2 = closure_6;
+    obj = closure_6(XMLHttpRequest);
     tmp3 = hasOwnProperty;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
@@ -770,7 +770,7 @@ const items1 = [
       if (!tmp) {
         self._incrementalEvents = true;
       }
-      let fn = _get(metroRequire(XMLHttpRequest.prototype), "addEventListener", self);
+      let fn = _get(_getPrototypeOf(XMLHttpRequest.prototype), "addEventListener", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

@@ -39,8 +39,8 @@ function addListenersToPropsValue(propValue, arr) {
 const noop = fn(19);
 ({
   useCallback: hasOwnProperty,
-  useContext: metroRequire,
-  useEffect: closure_7,
+  useContext: closure_6,
+  useEffect: metroImportDefault,
   useInsertionEffect: closure_8,
   useReducer: closure_9,
   useRef: closure_10,

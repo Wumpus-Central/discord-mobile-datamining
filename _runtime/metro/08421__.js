@@ -1,114 +1,94 @@
 // _runtime/metro/08421__.js
-import _modDef8420 from "08420__.js";
+import _mod8419 from "08419__.js";
+import _modDef8422 from "08422__.js";
+import _modDef8423 from "08423__.js";
+import sumDefault from "../08425_sum.js";
+import PNG_CHUNK_TYPE_SIZEDefault from "../08426_PNG_CHUNK_TYPE_SIZE.js";
+import _modDef8427 from "08427__.js";
+import _modDef8431 from "08431__.js";
+import _modDef8432 from "08432__.js";
+import _modDef8433 from "08433__.js";
+import _modDef8434 from "08434__.js";
 
+require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  read(buffer, sum) {
-    const shortAt = _modDef8420.getShortAt(buffer, sum);
-    let tmp6;
-    if (15 <= shortAt) {
-      const byteAt = _modDef8420.getByteAt(buffer, sum + 14);
-      const obj2 = { value: byteAt, description: null };
-      const _HermesInternal = HermesInternal;
-      obj2.description = "" + byteAt + "px";
-      tmp6 = obj2;
-      const tmp3Result = _modDef8420;
-    }
-    let tmp9;
-    if (16 <= shortAt) {
-      const byteAt1 = _modDef8420.getByteAt(buffer, sum + 15);
-      const obj3 = { value: byteAt1, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj3.description = "" + byteAt1 + "px";
-      tmp9 = obj3;
-      const tmp3Result7 = _modDef8420;
-    }
-    let tmp12;
-    if (9 <= shortAt) {
-      const byteAt2 = _modDef8420.getByteAt(buffer, sum + 7);
-      const tmp3Result8 = _modDef8420;
-      const byteAt3 = _modDef8420.getByteAt(buffer, sum + 7 + 1);
-      const obj4 = { value: 256 * byteAt2 + byteAt3, description: `${tmp13}.${tmp14}` };
-      tmp12 = obj4;
-      const tmp3Result9 = _modDef8420;
-    }
-    const obj5 = {
-      "JFIF Version": tmp12,
-      "Resolution Unit": null,
-      XResolution: null,
-      YResolution: null,
-      "JFIF Thumbnail Width": null,
-      "JFIF Thumbnail Height": null,
-    };
-    let tmp15;
-    if (10 <= shortAt) {
-      const byteAt4 = _modDef8420.getByteAt(buffer, sum + 9);
-      const obj6 = { value: byteAt4, description: null };
-      let str6 = "None";
-      if (0 !== byteAt4) {
-        let str7 = "inches";
-        if (1 !== byteAt4) {
-          let str8 = "Unknown";
-          if (2 === byteAt4) {
-            str8 = "cm";
-          }
-          str7 = str8;
-        }
-        str6 = str7;
+  parseAppMarkers(byteLength, flag2) {
+    if (_modDef8422.USE_TIFF) {
+      if (tmpResult.isTiffFile(byteLength)) {
+        const tmpResult16 = _modDef8423;
+        const findTiffOffsetsResult = _modDef8423.findTiffOffsets();
+        const obj = { fileType: { value: "tiff", description: "TIFF" } };
+        return _mod8419.objectAssign({}, findTiffOffsetsResult, obj);
       }
-      obj6.description = str6;
-      tmp15 = obj6;
-      const tmp3Result10 = _modDef8420;
+      tmpResult = _modDef8423;
     }
-    obj5["Resolution Unit"] = tmp15;
-    let tmp17;
-    if (12 <= shortAt) {
-      const shortAt1 = _modDef8420.getShortAt(buffer, sum + 10);
-      const obj7 = { value: shortAt1, description: "" + shortAt1 };
-      tmp17 = obj7;
-      const tmp3Result11 = _modDef8420;
-    }
-    obj5.XResolution = tmp17;
-    let tmp19;
-    if (14 <= shortAt) {
-      const shortAt2 = _modDef8420.getShortAt(buffer, sum + 12);
-      const obj8 = { value: shortAt2, description: "" + shortAt2 };
-      tmp19 = obj8;
-      const tmp3Result12 = _modDef8420;
-    }
-    obj5.YResolution = tmp19;
-    obj5["JFIF Thumbnail Width"] = tmp6;
-    obj5["JFIF Thumbnail Height"] = tmp9;
-    if (undefined !== tmp6) {
-      if (undefined !== tmp9) {
-        const result = 3 * tmp6.value * tmp9.value;
-        let tmp22;
-        if (0 !== result) {
-          if (16 + result <= shortAt) {
-            buffer = buffer.buffer;
-            const obj9 = { value: buffer.slice(sum + 16, sum + 16 + result), description: "<24-bit RGB pixel data>" };
-            tmp22 = obj9;
-          }
-        }
-        if (tmp22) {
-          obj5["JFIF Thumbnail"] = tmp22;
-        }
+    if (_modDef8422.USE_JPEG) {
+      if (tmpResult17.isJpegFile(byteLength)) {
+        const tmpResult18 = sumDefault;
+        const findJpegOffsetsResult = sumDefault.findJpegOffsets(byteLength);
+        const obj2 = { fileType: { value: "jpeg", description: "JPEG" } };
+        return _mod8419.objectAssign({}, findJpegOffsetsResult, obj2);
       }
+      tmpResult17 = sumDefault;
     }
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      while (keys[16] !== undefined) {
-        if (undefined !== obj5[tmp24]) {
-          continue;
-        } else {
-          delete tmp[tmp2];
-          continue;
-        }
-        continue;
+    if (_modDef8422.USE_PNG) {
+      if (tmpResult19.isPngFile(byteLength)) {
+        const tmpResult20 = PNG_CHUNK_TYPE_SIZEDefault;
+        const findPngOffsetsResult = PNG_CHUNK_TYPE_SIZEDefault.findPngOffsets(byteLength, flag2);
+        const obj3 = { fileType: { value: "png", description: "PNG" } };
+        return _mod8419.objectAssign({}, findPngOffsetsResult, obj3);
       }
+      tmpResult19 = PNG_CHUNK_TYPE_SIZEDefault;
     }
-    return obj5;
+    if (_modDef8422.USE_HEIC) {
+      if (tmpResult21.isHeicFile(byteLength)) {
+        const tmpResult22 = _modDef8427;
+        const findHeicOffsetsResult = _modDef8427.findHeicOffsets(byteLength);
+        const obj4 = { fileType: { value: "heic", description: "HEIC" } };
+        return _mod8419.objectAssign({}, findHeicOffsetsResult, obj4);
+      }
+      tmpResult21 = _modDef8427;
+    }
+    if (_modDef8422.USE_AVIF) {
+      if (tmpResult23.isAvifFile(byteLength)) {
+        const tmpResult24 = _modDef8431;
+        const findAvifOffsetsResult = _modDef8431.findAvifOffsets(byteLength);
+        const obj5 = { fileType: { value: "avif", description: "AVIF" } };
+        return _mod8419.objectAssign({}, findAvifOffsetsResult, obj5);
+      }
+      tmpResult23 = _modDef8431;
+    }
+    if (_modDef8422.USE_WEBP) {
+      if (tmpResult25.isWebpFile(byteLength)) {
+        const tmpResult26 = _modDef8432;
+        const findOffsetsResult = _modDef8432.findOffsets(byteLength);
+        const obj6 = { fileType: { value: "webp", description: "WebP" } };
+        return _mod8419.objectAssign({}, findOffsetsResult, obj6);
+      }
+      tmpResult25 = _modDef8432;
+    }
+    if (_modDef8422.USE_GIF) {
+      if (tmpResult27.isGifFile(byteLength)) {
+        const tmpResult28 = _modDef8433;
+        const findOffsetsResult1 = _modDef8433.findOffsets(byteLength);
+        const obj7 = { fileType: { value: "gif", description: "GIF" } };
+        return _mod8419.objectAssign({}, findOffsetsResult1, obj7);
+      }
+      tmpResult27 = _modDef8433;
+    }
+    if (_modDef8422.USE_XMP) {
+      if (tmpResult29.isXMLFile(byteLength)) {
+        const tmpResult30 = _modDef8434;
+        const findOffsetsResult2 = _modDef8434.findOffsets(byteLength);
+        const obj8 = { fileType: { value: "xml", description: "XML" } };
+        return _mod8419.objectAssign({}, findOffsetsResult2, obj8);
+      }
+      tmpResult29 = _modDef8434;
+    }
+    const error = new Error("Invalid image format");
+    throw error;
   },
 };

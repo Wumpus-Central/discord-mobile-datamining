@@ -5,8 +5,7 @@ import WorkletEventHandler from "../01863_WorkletEventHandler.js";
 const useRef = _mod19.useRef;
 
 export function useEvent(FastListTsx2) {
-  items = c5;
-  if (c5 === undefined) {
+  if (items === undefined) {
     items = [];
   }
   let flag = doDependenciesDiffer;

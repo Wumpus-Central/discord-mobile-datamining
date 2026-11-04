@@ -1,28 +1,57 @@
 // _runtime/metro/05256__.js
-import c from "../05239_c.js";
-import _mod5252 from "05252__.js";
+import c from "../05238_c.js";
+import _mod5251 from "05251__.js";
 import _slicedToArray from "00032__.js";
 
-require = arg1;
-function getEnumProperty(enumProperty, arg1) {
-  return enumProperty.enumProperty(arg1);
-}
+const RiveColor2 = tmp(5246);
+require = fn;
+fn(19).useCallback;
+const f34594 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
 
-export function useRiveEnum(device, instance) {
-  const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod5252.useRiveProperty(instance, device, getEnumProperty);
-  if (cResult[0] === tmp5) {
-    if (cResult[1] === tmp4) {
-      if (cResult[2] === tmp3) {
-        let tmp6 = cResult[3];
+export function useRiveColor(FillColor, instance) {
+  const cResult = c.c(8);
+  const tmp4 = _slicedToArray(_mod5251.useRiveProperty(instance, FillColor, f34594), 3);
+  [tmp5, tmp6] = tmp4;
+  require = tmp6;
+  if (cResult[0] !== tmp5) {
+    let fromIntResult;
+    if (undefined !== tmp5) {
+      let RiveColor = RiveColor2.RiveColor;
+      fromIntResult = RiveColor.fromInt(tmp5);
+    }
+    cResult[0] = tmp5;
+    cResult[1] = fromIntResult;
+    let tmp8 = fromIntResult;
+  } else {
+    tmp8 = cResult[1];
+  }
+  if (cResult[2] !== tmp6) {
+    const fn = function p(str) {
+      let fromHexStringResult = str;
+      if (typeof str === "string") {
+        const RiveColor = RiveColor2.RiveColor;
+        fromHexStringResult = RiveColor.fromHexString(str);
       }
-      return tmp6;
+      tmp6(fromHexStringResult.toInt());
+    };
+    cResult[2] = tmp6;
+    cResult[3] = fn;
+    let tmp10 = fn;
+  } else {
+    tmp10 = cResult[3];
+  }
+  if (cResult[4] === tmp4[2]) {
+    if (cResult[5] === tmp10) {
+      if (cResult[6] === tmp8) {
+        let tmp11 = cResult[7];
+      }
+      return tmp11;
     }
   }
-  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
-  cResult[0] = tmp5;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = obj3;
-  tmp6 = obj3;
+  const obj3 = { value: tmp8, setValue: tmp10, error: tmp4[2] };
+  cResult[4] = tmp4[2];
+  cResult[5] = tmp10;
+  cResult[6] = tmp8;
+  cResult[7] = obj3;
+  tmp11 = obj3;
 }

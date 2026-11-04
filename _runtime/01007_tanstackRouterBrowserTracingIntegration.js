@@ -26,9 +26,9 @@ export function tanstackRouterBrowserTracingIntegration(arg0) {
   closure_3 = undefined === instrumentNavigation || instrumentNavigation;
   let obj4 = {};
   const merged1 = Object.assign(result);
-  obj4.afterAllSetup = function afterAllSetup(f120689) {
-    let obj3 = f120689;
-    _undefined.afterAllSetup(f120689);
+  obj4.afterAllSetup = function afterAllSetup(f121258) {
+    let obj3 = f121258;
+    _undefined.afterAllSetup(f121258);
     const _location = obj3(_undefined[0]).WINDOW.location;
     if (closure_2) {
       if (_location) {
@@ -71,7 +71,7 @@ export function tanstackRouterBrowserTracingIntegration(arg0) {
         }
         const merged = Object.assign(tmp9);
         obj.attributes = obj2;
-        obj = tmp2(_undefined[0]).startBrowserTracingPageLoadSpan(f120689, obj);
+        obj = tmp2(_undefined[0]).startBrowserTracingPageLoadSpan(f121258, obj);
         const tmp2Result = tmp2(_undefined[0]);
       }
     }

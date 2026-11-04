@@ -39,7 +39,7 @@ class RotateInDownLeft {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(RotateOutUpRight);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -134,7 +134,7 @@ class RotateInDownRight {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(RotateOutUpRight);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -229,7 +229,7 @@ class RotateInUpLeft {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(RotateOutUpRight);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -324,7 +324,7 @@ class RotateInUpRight {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(RotateOutUpRight);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -419,7 +419,7 @@ class RotateOutDownLeft {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(RotateOutUpRight);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -514,7 +514,7 @@ class RotateOutDownRight {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(RotateOutUpRight);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -609,7 +609,7 @@ class RotateOutUpLeft {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(RotateOutUpRight);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -704,7 +704,7 @@ class RotateOutUpRight {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(RotateOutUpRight);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);

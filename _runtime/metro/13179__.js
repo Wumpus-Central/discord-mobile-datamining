@@ -1,13 +1,15 @@
 // _runtime/metro/13179__.js
-import registerAsset from "01119__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "66946e5f24d9f7d485f69d93acc2bd06",
-  name: "CloudDownloadIcon",
-  type: "png",
-});
+const require = arg1;
+const dependencyMap = arg6;
+
+export const parse = require("13180__.js").parse;
+export const compile = require("compile").compile;
+export const generate = require("compile").generate;
+export default function nthCheck(arg0) {
+  return require("compile").compile(require("13180__.js").parse(arg0));
+}
+export function sequence(arg0) {
+  return require("compile").generate(require("13180__.js").parse(arg0));
+}

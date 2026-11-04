@@ -1,13 +1,12 @@
 // _runtime/metro/16139__.js
-import registerAsset from "01119__.js";
+import _mod16131 from "16131__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/status",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "82f333ceda03bd515ab62e8f0d1ea043",
-  name: "StatusOnline",
-  type: "png",
-});
+export default (str, arg1) => {
+  str = str.trim();
+  const tmpResult = _mod16131(str.replace(/^[=v]+/, ""), arg1);
+  let version = null;
+  if (tmpResult) {
+    version = tmpResult.version;
+  }
+  return version;
+};

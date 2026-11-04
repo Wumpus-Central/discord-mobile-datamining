@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300.5,
-  height: 175,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "034593f3dac51b7d85899e7191ac5a9f",
-  name: "client_theme",
+  hash: "f0c32854a135e6d60a3190ac067a0b08",
+  name: "ic_headset_deafened_dark_24px",
   type: "png",
 });

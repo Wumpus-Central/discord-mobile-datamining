@@ -1,6 +1,7 @@
 // _runtime/metro/05700__.js
 import _mod17 from "00017__.js";
+import FlashList from "../05639_FlashList.js";
 
-const StyleSheet = _mod17.StyleSheet;
+const Animated = _mod17.Animated;
 
-export const styles = StyleSheet.create({ container: {} });
+export default Animated.createAnimatedComponent(FlashList.FlashList);

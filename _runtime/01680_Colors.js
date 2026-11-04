@@ -498,7 +498,9 @@ function normalizeColor(key10009) {
                         if (match8) {
                           const tmp13 = closure_1_5(match8[1]);
                           tmp10 =
-                            (255 | React5(tmp13, timestampProducer(match8[2]), timestampProducer(match8[3]))) >>> 0;
+                            (255 |
+                              metroImportDefault(tmp13, timestampProducer(match8[2]), timestampProducer(match8[3]))) >>>
+                            0;
                           const tmp15 = timestampProducer(match8[2]);
                         }
                       }

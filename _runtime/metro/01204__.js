@@ -93,7 +93,7 @@ class PbULong {
     tmp2 = closure_4;
     obj = closure_4(PbLong);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -149,7 +149,7 @@ const entry2 = {
   key: "from",
   value: function from(trimmed) {
     const self = this;
-    if (closure_7) {
+    if (metroImportDefault) {
       if ("string" === tmp) {
         if ("0" == trimmed) {
           return self.ZERO;
@@ -158,7 +158,7 @@ const entry2 = {
           const error = new Error("string is no integer");
           throw error;
         } else {
-          let CResult = closure_7.C(trimmed);
+          let CResult = metroImportDefault.C(trimmed);
         }
       } else {
         CResult = trimmed;
@@ -166,18 +166,18 @@ const entry2 = {
           let CResult1 = trimmed;
         }
         if (CResult1) {
-          if (CResult1 < closure_7.UMIN) {
+          if (CResult1 < metroImportDefault.UMIN) {
             const _Error6 = Error;
             const error1 = new Error("signed value for ulong");
             throw error1;
-          } else if (CResult1 > closure_7.UMAX) {
+          } else if (CResult1 > metroImportDefault.UMAX) {
             const _Error5 = Error;
             const error2 = new Error("ulong too large");
             throw error2;
           } else {
-            const V = closure_7.V;
+            const V = metroImportDefault.V;
             V.setBigUint64(0, CResult1, true);
-            ({ V: V2, V: V3 } = closure_7);
+            ({ V: V2, V: V3 } = metroImportDefault);
             const int32 = V2.getInt32(0, true);
             const int321 = V3.getInt32(4, true);
             const tmp42 = PbLong(int32, int321);
@@ -190,7 +190,7 @@ const entry2 = {
       if (0 === CResult) {
         return self.ZERO;
       } else {
-        CResult1 = closure_7.C(CResult);
+        CResult1 = metroImportDefault.C(CResult);
       }
     } else if ("string" === tmp) {
       if ("0" == trimmed) {
@@ -250,7 +250,7 @@ class PbLong {
     tmp2 = closure_4;
     obj = closure_4(PbLong);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -326,7 +326,7 @@ const entry4 = {
   key: "from",
   value: function from(trimmed) {
     const self = this;
-    if (closure_7) {
+    if (metroImportDefault) {
       if ("string" === tmp) {
         if ("0" == trimmed) {
           return self.ZERO;
@@ -335,7 +335,7 @@ const entry4 = {
           const error = new Error("string is no integer");
           throw error;
         } else {
-          let CResult = closure_7.C(trimmed);
+          let CResult = metroImportDefault.C(trimmed);
         }
       } else {
         CResult = trimmed;
@@ -343,18 +343,18 @@ const entry4 = {
           let CResult1 = trimmed;
         }
         if (CResult1) {
-          if (CResult1 < closure_7.MIN) {
+          if (CResult1 < metroImportDefault.MIN) {
             const _Error4 = Error;
             const error1 = new Error("ulong too small");
             throw error1;
-          } else if (CResult1 > closure_7.MAX) {
+          } else if (CResult1 > metroImportDefault.MAX) {
             const _Error3 = Error;
             const error2 = new Error("ulong too large");
             throw error2;
           } else {
-            const V = closure_7.V;
+            const V = metroImportDefault.V;
             V.setBigInt64(0, CResult1, true);
-            ({ V: V2, V: V3 } = closure_7);
+            ({ V: V2, V: V3 } = metroImportDefault);
             const int32 = V2.getInt32(0, true);
             const int321 = V3.getInt32(4, true);
             const tmp37 = PbLong(int32, int321);
@@ -367,7 +367,7 @@ const entry4 = {
       if (0 === CResult) {
         return self.ZERO;
       } else {
-        CResult1 = closure_7.C(CResult);
+        CResult1 = metroImportDefault.C(CResult);
       }
     } else if ("string" === tmp) {
       if ("0" == trimmed) {

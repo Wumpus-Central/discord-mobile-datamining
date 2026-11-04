@@ -1,69 +1,22 @@
 // _runtime/metro/08422__.js
-import _mod8403 from "08403__.js";
-import _modDef8408 from "08408__.js";
-import get0thIfdOffset from "../08423_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../08424_IFD_TYPE_0TH.js";
-
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-let c3 = "Exif IFD Pointer";
-let c4 = "GPS Info IFD Pointer";
-let c5 = "Interoperability IFD Pointer";
 
 export default {
-  read(getUint16, c5, arg2) {
-    const byteOrder = _modDef8408.getByteOrder(getUint16, c5);
-    const obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(
-      getUint16,
-      IFD_TYPE_0TH.IFD_TYPE_0TH,
-      c5,
-      get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder),
-      byteOrder,
-      arg2,
-    );
-    let objectAssignResult = ifd;
-    if (undefined !== ifd[c3]) {
-      const tmp3Result6 = get0thIfdOffset;
-      objectAssignResult = _mod8403.objectAssign(
-        ifd,
-        tmp3Result6.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
-      );
-      const tmp3Result = _mod8403;
-    }
-    let objectAssignResult3 = objectAssignResult;
-    if (undefined !== objectAssignResult[c4]) {
-      const tmp3Result8 = get0thIfdOffset;
-      objectAssignResult3 = _mod8403.objectAssign(
-        objectAssignResult,
-        tmp3Result8.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_GPS,
-          c5,
-          c5 + objectAssignResult[tmp12].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result7 = _mod8403;
-    }
-    let objectAssignResult4 = objectAssignResult3;
-    if (undefined !== objectAssignResult3[c5]) {
-      const tmp3Result10 = get0thIfdOffset;
-      objectAssignResult4 = _mod8403.objectAssign(
-        objectAssignResult3,
-        tmp3Result10.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY,
-          c5,
-          c5 + objectAssignResult3[tmp19].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result9 = _mod8403;
-    }
-    return { tags: objectAssignResult4, byteOrder };
-  },
+  USE_FILE: true,
+  USE_JFIF: true,
+  USE_PNG_FILE: true,
+  USE_EXIF: true,
+  USE_IPTC: true,
+  USE_XMP: true,
+  USE_ICC: true,
+  USE_MPF: true,
+  USE_PHOTOSHOP: true,
+  USE_THUMBNAIL: true,
+  USE_TIFF: true,
+  USE_JPEG: true,
+  USE_PNG: true,
+  USE_HEIC: true,
+  USE_AVIF: true,
+  USE_WEBP: true,
+  USE_GIF: true,
+  USE_MAKER_NOTES: true,
 };

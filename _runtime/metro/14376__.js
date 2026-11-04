@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/empty_channel",
-  width: 48,
-  height: 48,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "8d7c88bf2a3c70b7581717d42e9c4ec1",
-  name: "send_message_32px",
+  hash: "60410ef8275ee557c4c66e4f0d7dfc15",
+  name: "BoostGemSlashIcon",
   type: "png",
 });

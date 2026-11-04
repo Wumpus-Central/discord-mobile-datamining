@@ -76,7 +76,7 @@ class AnimatedInterpolation {
     tmp2 = closure_4;
     obj = closure_4(AnimatedInterpolation);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
@@ -487,7 +487,7 @@ let items = [
       _classCallCheck(obj2, AnimatedInterpolation);
       items = [_config];
       const obj = _getPrototypeOf(AnimatedInterpolation);
-      if (metroRequire()) {
+      if (_isNativeReflectConstruct()) {
         const _Reflect = Reflect;
         let constructResult = Reflect.construct(obj, items, _getPrototypeOf(obj2).constructor);
       } else {

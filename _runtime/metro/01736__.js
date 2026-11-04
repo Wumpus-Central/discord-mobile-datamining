@@ -76,7 +76,7 @@ class XMLHttpRequest {
     tmp3Result.responseURL = "";
     tmp3Result.timeout = 0;
     tmp3Result.withCredentials = true;
-    tmp7 = new closure_7();
+    tmp7 = new metroImportDefault();
     tmp3Result.upload = tmp7;
     tmp3Result.onreadystatechange = null;
     tmp3Result.onloadstart = null;
@@ -469,7 +469,7 @@ let items = [
                   upload.__dispatch("loadstart", obj9);
                 }
               }
-              obj2 = { data: "Array", contentType: "flexDirection" };
+              obj2 = { data: "PX_8", contentType: "__closure" };
             } else {
               self.__dispatch("loadstart");
               const _setTimeout = setTimeout;

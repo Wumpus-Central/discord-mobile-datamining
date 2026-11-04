@@ -1,16 +1,34 @@
 // _runtime/metro/05600__.js
 import _mod17 from "00017__.js";
-import value2 from "../05399_value2.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import _mod5601 from "05601__.js";
+import noop_mod from "00019__.js";
 
+let noop = noop_mod;
+const useMemo = noop.useMemo;
+let noop = noop_mod;
 const StyleSheet = _mod17.StyleSheet;
-const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
-const size = {
-  alignSelf: "center",
-  width: (7.5 * value2.WINDOW_WIDTH) / 100,
-  height: 4,
-  borderRadius: 4,
-  backgroundColor: "rgba(0, 0, 0, 0.75)",
-};
-obj.indicator = size;
+const jsx = jsxProd.jsx;
+const memoResult = noop.memo((arg0) => {
+  ({ backgroundComponent, backgroundStyle } = arg0);
+  items = [backgroundStyle];
+  ({ animatedIndex, animatedPosition } = arg0);
+  const style = useMemo(() => {
+    items = [_mod5601.styles.container, backgroundStyle];
+    return StyleSheet.flatten(items);
+  }, items);
+  if (backgroundComponent == null) {
+    backgroundComponent = backgroundStyle(5602).BottomSheetBackground;
+  }
+  return (
+    <backgroundComponent
+      pointerEvents="none"
+      animatedIndex={animatedIndex}
+      animatedPosition={animatedPosition}
+      style={style}
+    />
+  );
+});
+memoResult.displayName = "BottomSheetBackgroundContainer";
 
-export const styles = StyleSheet.create(obj);
+export const BottomSheetBackgroundContainer = memoResult;

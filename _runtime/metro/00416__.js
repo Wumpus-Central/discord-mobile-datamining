@@ -1,9 +1,9 @@
 // _runtime/metro/00416__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import _modDef417 from "00417__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
@@ -28,6 +28,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 let closure_3 = ["tintColor", "titleColor", "title"];
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
 class RefreshControl {
   constructor() {
@@ -36,9 +37,9 @@ class RefreshControl {
     closure_0 = undefined;
     tmp = hasOwnProperty(this, RefreshControl);
     items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(RefreshControl);
-    tmp3 = metroRequire;
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(RefreshControl);
+    tmp3 = closure_6;
     if (closure_9()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

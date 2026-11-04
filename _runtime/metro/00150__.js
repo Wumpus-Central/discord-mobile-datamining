@@ -35,7 +35,7 @@ class ReadOnlyCharacterData {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(ReadOnlyCharacterData);
     tmp3 = closure_4;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;

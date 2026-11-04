@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/logos",
-  width: 185,
-  height: 32,
+  width: 51,
+  height: 12,
   scales: [2, 3],
-  hash: "dba969ce1008f0b8964b0d6bd348ad3e",
-  name: "img_logo_premium_tier_1_full",
+  hash: "dfce4abe2b63753703cd28b1bd0f9f1d",
+  name: "img_logo_nitro_small_dark",
   type: "png",
 });

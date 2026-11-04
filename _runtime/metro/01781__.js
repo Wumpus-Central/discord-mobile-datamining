@@ -90,7 +90,7 @@ const items = [
         } else {
           const point4 = canonicalizeResult[canonicalizeResult.length - 2];
           let point2 = canonicalizeResult[canonicalizeResult.length - 1];
-          if (typeof metroRequire === "function") {
+          if (typeof closure_6 === "function") {
             if (point4.x !== point2.x) {
               const point1 = { x: 1, y: point4.y + ((point2.y - point4.y) / (point2.x - point4.x)) * (1 - point4.x) };
               point2 = tmp6(point1);
@@ -101,7 +101,7 @@ const items = [
         }
       } else {
         [point3, point] = canonicalizeResult;
-        if (typeof metroRequire === "function") {
+        if (typeof closure_6 === "function") {
           if (point3.x !== point.x) {
             const point5 = { x: 0, y: point3.y + ((point.y - point3.y) / (point.x - point3.x)) * (0 - point3.x) };
             point = tmp4(point5);

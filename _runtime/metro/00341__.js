@@ -1,9 +1,9 @@
 // _runtime/metro/00341__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
@@ -36,6 +36,7 @@ let closure_2 = [
   "style",
   "onLayout",
 ];
+_possibleConstructorReturnDefault;
 const createRef = fn(19).createRef;
 const jsx = fn(21).jsx;
 let dependencyMap;
@@ -45,9 +46,9 @@ class KeyboardAvoidingView {
     tmp = hasOwnProperty(this, KeyboardAvoidingView);
     items = [];
     items[0] = global;
-    tmp2 = closure_7;
-    obj = closure_7(KeyboardAvoidingView);
-    tmp3 = metroRequire;
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(KeyboardAvoidingView);
+    tmp3 = closure_6;
     if (closure_10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;

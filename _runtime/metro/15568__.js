@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 45.5,
-  height: 8.5,
-  scales: [2, 3],
-  hash: "8d16389f341b45c184ca21d1deb5fd2e",
-  name: "img_logo_discord",
+  httpServerLocation: "/assets/modules/premium/referral_program/native/images",
+  width: 180,
+  height: 180,
+  scales: [1],
+  hash: "7d7d766e7ebb30cec66584e69b89634d",
+  name: "Glow",
   type: "png",
 });

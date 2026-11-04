@@ -1,13 +1,27 @@
 // _runtime/metro/13110__.js
-import registerAsset from "01119__.js";
+import _mod13050 from "13050__.js";
+import _mod13054 from "13054__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/conjure/home/images",
-  width: 640,
-  height: 360,
-  scales: [1],
-  hash: "1959740f5a804a73d247c5716c4838a6",
-  name: "conjure-home-aram-widget",
-  type: "svg",
-});
+const Dimension = _mod13054.TYPE.Dimension;
+const obj = {
+  name: "Dimension",
+  structure: { value: String, unit: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    const consumeNumberResult = _mod13050.consumeNumber(this.scanner.source, tokenStart);
+    this.eat(Dimension);
+    const obj2 = {
+      type: "Dimension",
+      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
+      value: this.scanner.source.substring(tokenStart, consumeNumberResult),
+      unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart),
+    };
+    return obj2;
+  },
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk(value.unit);
+  },
+};
+
+export default obj;

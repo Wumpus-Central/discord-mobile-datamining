@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 195,
-  height: 95,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "6767aee50457385555e7e15b59dff5c6",
-  name: "img_nitro_ticket_bg",
+  hash: "3eb74a78606f69449db155f70f2ac217",
+  name: "NitroWheelIcon",
   type: "png",
 });

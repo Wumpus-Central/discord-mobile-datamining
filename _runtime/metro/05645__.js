@@ -1,10 +1,13 @@
 // _runtime/metro/05645__.js
-import PlatformConfig2 from "../05643_PlatformConfig.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function getInvertedTransformStyle(horizontal) {
-  const PlatformConfig = PlatformConfig2.PlatformConfig;
-  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
+export default function _arrayLikeToArray(arg0, arg1) {
+  let length = arg1;
+  if (tmp) {
+    length = arg0.length;
+  }
+  const ArrayResult = Array(length);
+  for (let num = 0; num < length; num = num + 1) {
+    ArrayResult[num] = arg0[num];
+  }
+  return ArrayResult;
 }

@@ -27,7 +27,7 @@ function _isNativeReflectConstruct() {
   }
 }
 get_ActivityIndicator = fn(17);
-({ UIManager, View: metroRequire } = get_ActivityIndicator);
+({ UIManager, View: closure_6 } = get_ActivityIndicator);
 const RNSentryOnDrawReporter = "RNSentryOnDrawReporter";
 const tmp6 = UIManager.hasViewManagerConfig && UIManager.hasViewManagerConfig("RNSentryOnDrawReporter");
 let closure_10 = tmp6;
@@ -38,7 +38,7 @@ class RNSentryOnDrawReporterNoop {
     tmp2 = closure_4;
     obj = closure_4(RNSentryOnDrawReporterNoop);
     tmp3 = closure_3;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;

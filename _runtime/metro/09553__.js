@@ -1,155 +1,159 @@
 // _runtime/metro/09553__.js
+import ElementType from "../09562_ElementType.js";
 
-export function removeElement(prev) {
-  if (prev.prev) {
-    prev.prev.next = prev.next;
-  }
-  if (prev.next) {
-    prev.next.prev = prev.prev;
-  }
-  if (prev.parent) {
-    const children = prev.parent.children;
-    const lastIndexOfResult = children.lastIndexOf(prev);
-    if (lastIndexOfResult >= 0) {
-      children.splice(lastIndexOfResult, 1);
-    }
-  }
-  prev.next = null;
-  prev.prev = null;
-  prev.parent = null;
+const require = globalThis.__r;
+
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-export function replaceElement(prev, next) {
-  prev = prev.prev;
-  next.prev = prev;
-  if (prev) {
-    prev.next = next;
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-  next = prev.next;
-  next.next = next;
-  if (next) {
-    next.prev = next;
-  }
-  const parent = prev.parent;
-  next.parent = parent;
-  if (parent) {
-    const children = parent.children;
-    children[children.lastIndexOf(prev)] = next;
-    prev.parent = null;
-  }
-}
-export function appendChild(element, node) {
-  if (node.prev) {
-    node.prev.next = node.next;
-  }
-  if (node.next) {
-    node.next.prev = node.prev;
-  }
-  if (node.parent) {
-    const children = node.parent.children;
-    const lastIndexOfResult = children.lastIndexOf(node);
-    if (lastIndexOfResult >= 0) {
-      children.splice(lastIndexOfResult, 1);
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
     }
-  }
-  node.next = null;
-  node.prev = null;
-  node.parent = null;
-  node.next = null;
-  node.parent = element;
-  const children1 = element.children;
-  if (children1.push(node) > 1) {
-    element.children[element.children.length - 2].next = node;
-    node.prev = element.children[element.children.length - 2];
+    if (!fn) {
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          for (const key10009 in arg0) {
+            let tmp9 = "default" !== key10009;
+            if (!tmp9) {
+              if (!tmp9) {
+                continue;
+              } else {
+                let tmp6 = self2(obj, arg0, key10009);
+                continue;
+              }
+              continue;
+            } else {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10009);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10009);
+              }
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__importDefault;
+    }
+    if (!fn2) {
+      fn2 = (__esModule) => {
+        if (!__esModule) {
+          const obj = { default: __esModule };
+          let tmp = obj;
+        } else {
+          tmp = __esModule;
+        }
+        return tmp;
+      };
+    }
+    const _Object3 = Object;
+    function parseDocument(arg0, fn) {
+      const domHandler = new require("cloneNode").DomHandler(undefined, fn);
+      const parser = new require("QuoteType").Parser(domHandler, fn);
+      parser.end(arg0);
+      return domHandler.root;
+    }
+    function parseDOM(arg0, fn) {
+      const domHandler = new require("cloneNode").DomHandler(undefined, fn);
+      const parser = new require("QuoteType").Parser(domHandler, fn);
+      parser.end(arg0);
+      return domHandler.root.children;
+    }
+    exports.Parser = undefined;
+    exports.DomHandler = undefined;
+    exports.DefaultHandler = undefined;
+    exports.parseDocument = undefined;
+    exports.parseDOM = undefined;
+    exports.createDomStream = undefined;
+    exports.Tokenizer = undefined;
+    exports.ElementType = undefined;
+    exports.getFeed = undefined;
+    exports.parseFeed = undefined;
+    exports.DomUtils = undefined;
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+        return require("QuoteType").Parser;
+      },
+    };
+    Object.defineProperty(exports, "Parser", obj);
+    const _Object5 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+        return require("cloneNode").DomHandler;
+      },
+    };
+    Object.defineProperty(exports, "DomHandler", obj2);
+    const _Object6 = Object;
+    const obj3 = {
+      enumerable: true,
+      get() {
+        return require("cloneNode").DomHandler;
+      },
+    };
+    Object.defineProperty(exports, "DefaultHandler", obj3);
+    exports.parseDocument = parseDocument;
+    exports.parseDOM = parseDOM;
+    exports.createDomStream = function createDomStream(arg0, fn, arg2) {
+      const parser = new require("QuoteType").Parser(new require("cloneNode").DomHandler(arg0, fn, arg2), fn);
+      return parser;
+    };
+    const _Object7 = Object;
+    const obj4 = {
+      enumerable: true,
+      get() {
+        return fn2(require("09555__.js")).default;
+      },
+    };
+    Object.defineProperty(exports, "Tokenizer", obj4);
+    exports.ElementType = fn(ElementType);
+    const _Object8 = Object;
+    const obj5 = {
+      enumerable: true,
+      get() {
+        return require("09563__.js").getFeed;
+      },
+    };
+    Object.defineProperty(exports, "getFeed", obj5);
+    let closure_5 = { xmlMode: true };
+    exports.parseFeed = function parseFeed(arg0, fn) {
+      let tmp = fn;
+      if (undefined === fn) {
+        tmp = closure_5;
+      }
+      const domHandler = new require("cloneNode").DomHandler(undefined, tmp);
+      const parser = new require("QuoteType").Parser(domHandler, tmp);
+      parser.end(arg0);
+      return require("09563__.js").getFeed(domHandler.root.children);
+    };
+    exports.DomUtils = fn(require("09563__.js"));
   } else {
-    node.prev = null;
+    const _Object2 = Object;
   }
-}
-export function append(prev, prev2) {
-  if (prev2.prev) {
-    prev2.prev.next = prev2.next;
-  }
-  if (prev2.next) {
-    prev2.next.prev = prev2.prev;
-  }
-  if (prev2.parent) {
-    const children = prev2.parent.children;
-    const lastIndexOfResult = children.lastIndexOf(prev2);
-    if (lastIndexOfResult >= 0) {
-      children.splice(lastIndexOfResult, 1);
-    }
-  }
-  prev2.next = null;
-  prev2.prev = null;
-  prev2.parent = null;
-  ({ parent, next } = prev);
-  prev2.next = next;
-  prev2.prev = prev;
-  prev.next = prev2;
-  prev2.parent = parent;
-  if (next) {
-    next.prev = prev2;
-    if (parent) {
-      const children1 = parent.children;
-      children1.splice(children1.lastIndexOf(next), 0, prev2);
-    }
-  } else if (parent) {
-    const children2 = parent.children;
-    children2.push(prev2);
-  }
-}
-export function prependChild(parent, prev) {
-  if (prev.prev) {
-    prev.prev.next = prev.next;
-  }
-  if (prev.next) {
-    prev.next.prev = prev.prev;
-  }
-  if (prev.parent) {
-    const children = prev.parent.children;
-    const lastIndexOfResult = children.lastIndexOf(prev);
-    if (lastIndexOfResult >= 0) {
-      children.splice(lastIndexOfResult, 1);
-    }
-  }
-  prev.next = null;
-  prev.prev = null;
-  prev.parent = parent;
-  prev.prev = null;
-  const children1 = parent.children;
-  if (1 !== children1.unshift(prev)) {
-    parent.children[1].prev = prev;
-    prev.next = parent.children[1];
-  } else {
-    prev.next = null;
-  }
-}
-export function prepend(parent, next) {
-  if (next.prev) {
-    next.prev.next = next.next;
-  }
-  if (next.next) {
-    next.next.prev = next.prev;
-  }
-  if (next.parent) {
-    const children = next.parent.children;
-    const lastIndexOfResult = children.lastIndexOf(next);
-    if (lastIndexOfResult >= 0) {
-      children.splice(lastIndexOfResult, 1);
-    }
-  }
-  next.next = null;
-  next.prev = null;
-  next.parent = null;
-  parent = parent.parent;
-  if (parent) {
-    const children1 = parent.children;
-    children1.splice(children1.indexOf(parent), 0, next);
-  }
-  if (parent.prev) {
-    parent.prev.next = next;
-  }
-  next.parent = parent;
-  next.prev = parent.prev;
-  next.next = parent;
-  parent.prev = next;
+} else {
+  let _Object = Object;
 }

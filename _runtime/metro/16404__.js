@@ -1,54 +1,38 @@
 // _runtime/metro/16404__.js
-import noop from "00019__.js";
-import module_16386_mod from "16386__.js";
-import _isNativeReflectConstruct_mod from "16405__.js";
-import jsxProd from "../react/00021_jsxProd.js";
+import _mod16365 from "16365__.js";
+import _mod16367 from "16367__.js";
+import _mod16383 from "16383__.js";
+import _mod16405 from "16405__.js";
+import _mod16406 from "16406__.js";
 
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-let module_16386 = module_16386_mod;
-if (!module_16386) {
-  let obj = { default: module_16386 };
-  let tmp4 = obj;
-} else {
-  tmp4 = module_16386;
-}
-module_16386 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  const obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-_isNativeReflectConstruct = tmp6;
+let closure_2 = _mod16367([].push);
 
-export default () => () => {
-  closure_0 = closure_0.default();
-  return {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
+export default (arg0, arg1) => {
+  const tmp = _mod16365(arg0);
+  items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod16383;
+    let tmp14Result = tmp14(_mod16405, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod16383(tmp, key10010);
+    }
+    if (!tmp2) {
+      continue;
+    } else {
+      let tmp4 = closure_2(items, key10010);
+      continue;
+    }
+    continue;
+  }
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod16383(tmp, tmp7)) {
+      let tmp5Result = _mod16406;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
       }
-    },
-    features: {
-      storybookSwitcher(arg0) {
-        closure_0 = arg0;
-        return (arg0) => {
-          closure_0 = arg0;
-          return function StorybookSwitcherContainer(arg0) {
-            const obj = { storybookUi: emitter, emitter, children: null };
-            const merged = Object.assign(arg0);
-            obj.children = <emitter />;
-            return (
-              <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>
-                {null}
-              </_isNativeReflectConstruct.default>
-            );
-          };
-        };
-      },
-    },
-  };
+    }
+  }
+  return items;
 };

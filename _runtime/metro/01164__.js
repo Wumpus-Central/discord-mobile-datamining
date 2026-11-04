@@ -140,7 +140,6 @@ let items = [
   },
 ];
 const _moduleResult = _createClass(AstBuilder, items);
-const metroRequire = _moduleResult;
 
 export { formatToAst };
 export const RichTextNodeType = obj;

@@ -1,41 +1,31 @@
 // _runtime/metro/05659__.js
 import _mod5660 from "05660__.js";
+import _slicedToArray from "05641__.js";
 
-function _get() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect2 = Reflect;
-    if (Reflect.get) {
-      const _Reflect = Reflect;
-      exports = get.bind();
-    }
-    module.exports = exports;
-    const apply = exports.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
-    } else {
-      applyArgumentsResult = apply(null, arguments);
-    }
-    return applyArgumentsResult;
-  }
-  exports = (arg0, arg1, arg2) => {
-    const tmp = _mod5660(arg0, arg1);
-    if (tmp) {
-      const _Object = Object;
-      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
-      if (iter.get) {
-        let tmp3 = arg2;
-        const get = iter.get;
-        const call = get.call;
-        if (arguments.length < 3) {
-          tmp3 = arg0;
-        }
-        typeof call === "unknown" ? get() : call(tmp3);
-      } else {
-        return iter.value;
+require = fn;
+const noop = fn(19);
+({ useState: c3, useCallback: closure_4 } = noop);
+
+export function useLayoutState(arg0) {
+  const tmp = _slicedToArray(React3(arg0), 2);
+  closure_0 = tmp[1];
+  const recyclerViewContext = _mod5660.useRecyclerViewContext();
+  items = [tmp[0]];
+  const items1 = [recyclerViewContext];
+  items[1] = React4((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_0((arg0) => {
+      let tmpResult = closure_0;
+      if (typeof closure_0 === "function") {
+        tmpResult = tmp(arg0);
+      }
+      return tmpResult;
+    });
+    if (!arg1) {
+      if (recyclerViewContext != null) {
+        recyclerViewContext.layout();
       }
     }
-  };
+  }, items1);
+  return items;
 }
-let exports = _get;
-
-export default _get;

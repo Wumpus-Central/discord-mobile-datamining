@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 251,
-  height: 120,
-  scales: [1, 2, 3],
-  hash: "ded9c31a2e9dd512048ecebbadd9fab8",
-  name: "audience_welcome",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 80,
+  height: 80,
+  scales: [1],
+  hash: "efc48aacb0f78e1462efe2b15e5ef702",
+  name: "img_boost",
   type: "png",
 });

@@ -75,7 +75,7 @@ class BrowserClient {
     tmp10 = closure_4;
     obj5 = closure_4(tmp);
     tmp11 = closure_3;
-    if (metroRequire()) {
+    if (closure_6()) {
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj5, items, tmp10(self).constructor);
     } else {

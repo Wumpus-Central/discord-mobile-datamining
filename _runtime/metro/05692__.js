@@ -1,22 +1,27 @@
 // _runtime/metro/05692__.js
+import noop from "00019__.js";
 
-export function useDataMultiplier(arg0, arg1) {
-  const array = new Array(arg1);
-  let flag = false;
-  if (typeof arg0[0] === "object") {
-    flag = true;
-  }
-  for (let num = 0; num < arg1; num = num + 1) {
-    let tmp3 = arg0[num % tmp];
-    if (flag) {
-      let obj = {};
-      let merged = Object.assign(tmp3);
-      let tmp5 = obj;
-    } else {
-      tmp5 = tmp3;
+
+export (renderScrollComponent) => {
+  let BooleanResult = typeof renderScrollComponent === "function";
+  if (typeof renderScrollComponent === "function") {
+    const prototype = renderScrollComponent.prototype;
+    let isReactComponent;
+    if (prototype != null) {
+      isReactComponent = prototype.isReactComponent;
     }
-    array[num] = tmp5;
+    BooleanResult = Boolean(isReactComponent);
   }
-  items = [array];
-  return items;
+  return BooleanResult;
+}
+export (backdropComponent1) => {
+  let tmp = backdropComponent1;
+  if (!noop.isValidElement(backdropComponent1)) {
+    let element = null;
+    if (null != backdropComponent1) {
+      element = <backdropComponent1 />;
+    }
+    tmp = element;
+  }
+  return tmp;
 }

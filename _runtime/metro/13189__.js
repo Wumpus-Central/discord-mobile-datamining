@@ -1,7 +1,13 @@
 // _runtime/metro/13189__.js
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import registerAsset from "01119__.js";
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/conjure/home/images",
+  width: 640,
+  height: 360,
+  scales: [1],
+  hash: "c0003a72b8ff1b39e6b2cebe0eda12b2",
+  name: "conjure-home-flappy",
+  type: "svg",
+});

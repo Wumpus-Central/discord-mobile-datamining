@@ -1,72 +1,9 @@
 // _runtime/metro/05555__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-let items = [{ code: "(function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;})" }];
-[tmp4] = items;
-function changeEventCalculator(arg0, arg1) {
-  return arg0;
-}
-changeEventCalculator.__workletHash = 8372703750542;
-changeEventCalculator.__initData = tmp4;
-class ManualGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, ManualGesture);
-    tmp2 = c2;
-    obj = c2(ManualGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "ManualGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = ManualGesture;
-_inherits(ManualGesture, fn(5447).ContinousBaseGesture);
-const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    items = [arg0];
-    return fn(items);
-  },
-};
-const items1 = [entry];
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { pointerEvents: true, moduleId: true, unstable_forceActive: true } };
 
-export const ManualGesture = _createClass(ManualGesture, items1);
+export default module_65.get("RNGestureHandlerRootView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

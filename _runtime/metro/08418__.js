@@ -1,22 +1,18 @@
 // _runtime/metro/08418__.js
-import _mod8403 from "08403__.js";
-
-require = arg1;
-const dependencyMap = arg6;
-let c2 = 0;
-let c3 = "<?xpacket begin";
-
-export default {
-  isXMLFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod8403.getStringFromDataView(dataView, c2, length.length) === length;
+class MetadataMissingError {
+  constructor(arg0) {
+    obj = { name: "MetadataMissingError" };
+    str = arg0;
+    if (!arg0) {
+      str = "No Exif data";
     }
-    return tmp;
-  },
-  findOffsets(byteLength) {
-    const xmpChunks = [];
-    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
-    return { xmpChunks };
-  },
-};
+    obj.message = str;
+    error = new Error();
+    obj.stack = error.stack;
+    return;
+  }
+}
+let error = new Error();
+MetadataMissingError.prototype = error;
+
+export default { MetadataMissingError };

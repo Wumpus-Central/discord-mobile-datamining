@@ -74,7 +74,7 @@ function processColor(arg0) {
   }
 }
 _possibleConstructorReturnDefault;
-const React6 = { r: 0, g: 0, b: 0, a: 1 };
+const React5 = { r: 0, g: 0, b: 0, a: 1 };
 class AnimatedColor {
   constructor(arg0, arg1) {
     self = this;
@@ -84,7 +84,7 @@ class AnimatedColor {
     tmp2 = hasOwnProperty;
     obj = hasOwnProperty(AnimatedColor);
     tmp3 = closure_4;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
@@ -356,7 +356,7 @@ let items = [
       const a = this.a;
       a.__addChild(this);
       const self = this;
-      let fn = metroRequire(hasOwnProperty(AnimatedColor.prototype), "__attach", this);
+      let fn = _get(hasOwnProperty(AnimatedColor.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -375,7 +375,7 @@ let items = [
       const a = this.a;
       a.__removeChild(this);
       const self = this;
-      let fn = metroRequire(hasOwnProperty(AnimatedColor.prototype), "__detach", this);
+      let fn = _get(hasOwnProperty(AnimatedColor.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -395,7 +395,7 @@ let items = [
     value: function __callListeners(arg0) {
       const self = this;
       if (0 === this._suspendCallbacks) {
-        let fn = metroRequire(hasOwnProperty(AnimatedColor.prototype), "__callListeners", self);
+        let fn = _get(hasOwnProperty(AnimatedColor.prototype), "__callListeners", self);
         if (typeof fn === "function") {
           fn = (items) => fn.apply(self, items);
         }
@@ -416,7 +416,7 @@ let items = [
       const a = this.a;
       a.__makeNative(arg0);
       const self = this;
-      let fn = metroRequire(hasOwnProperty(AnimatedColor.prototype), "__makeNative", this);
+      let fn = _get(hasOwnProperty(AnimatedColor.prototype), "__makeNative", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

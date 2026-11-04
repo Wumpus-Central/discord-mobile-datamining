@@ -1,14 +1,13 @@
 // _runtime/metro/13262__.js
-import _mod13261 from "13261__.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function getTraceMetaTags() {
-  const entries = Object.entries(_mod13261.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
-  });
-  return mapped.join("\n");
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "66946e5f24d9f7d485f69d93acc2bd06",
+  name: "CloudDownloadIcon",
+  type: "png",
+});

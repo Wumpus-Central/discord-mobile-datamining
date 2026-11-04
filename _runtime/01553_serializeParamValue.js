@@ -246,7 +246,7 @@ export function getPathFromState(state, screens) {
                                           let _Object = Object;
                                           let _Object2 = Object;
                                           let entries = Object.entries(tmp14);
-                                          fromEntriesResult = Object.fromEntries(entries.map(/* F81820 */ function() { ... }));
+                                          fromEntriesResult = Object.fromEntries(entries.map(/* F82155 */ function() { ... }));
                                         } else {
                                           throw new TypeError("Trying to call a non-function");
                                         }

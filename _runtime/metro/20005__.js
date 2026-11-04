@@ -1,15 +1,13 @@
 // _runtime/metro/20005__.js
-import arrayReduce from "../05977_arrayReduce.js";
-import words from "../20006_words.js";
-import deburr from "../20010_deburr.js";
+import registerAsset from "01119__.js";
 
-let closure_2 = RegExp("['\u2019]", "g");
-
-export default function createCompounder(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const tmp = arrayReduce;
-    const tmp2 = words;
-    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 181,
+  height: 141,
+  scales: [2, 3],
+  hash: "ed03b4a3566d0ff2258e5577eb7c05bd",
+  name: "empty_server_settings_emoji_dark",
+  type: "png",
+});

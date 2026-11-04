@@ -1,13 +1,19 @@
 // _runtime/metro/14695__.js
-import registerAsset from "01119__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/channel/header/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3, 4],
-  hash: "259a63e8af8c5f3885215d3c5505af89",
-  name: "icon-search",
-  type: "png",
-});
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
+  continue;
+}
+for (const key10017 in require("14688__.js")) {
+  arg5[key10017] = require("14688__.js")[key10017];
+  continue;
+}
+for (const key10021 in require("14689__.js")) {
+  arg5[key10021] = require("14689__.js")[key10021];
+  continue;
+}
+for (const key10025 in require("14696__.js")) {
+  arg5[key10025] = require("14696__.js")[key10025];
+  continue;
+}

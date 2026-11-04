@@ -55,19 +55,19 @@ class PerformanceResourceTiming {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    definePropertyResult = Object.defineProperty(tmp3Result, metroRequire, { writable: true, value: "Array" });
-    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_7, { writable: true, value: "Array" });
-    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_8, { writable: true, value: "Array" });
-    definePropertyResult3 = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "Array" });
-    definePropertyResult4 = Object.defineProperty(tmp3Result, closure_10, { writable: true, value: "Array" });
-    definePropertyResult5 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "Array" });
-    definePropertyResult6 = Object.defineProperty(tmp3Result, closure_12, { writable: true, value: "Array" });
-    definePropertyResult7 = Object.defineProperty(tmp3Result, closure_13, { writable: true, value: "Array" });
-    definePropertyResult8 = Object.defineProperty(tmp3Result, closure_2_14, { writable: true, value: "Array" });
-    definePropertyResult9 = Object.defineProperty(tmp3Result, closure_2_15, { writable: true, value: "Array" });
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_6, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(tmp3Result, metroImportDefault, { writable: true, value: "a" });
+    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_8, { writable: true, value: "a" });
+    definePropertyResult3 = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "a" });
+    definePropertyResult4 = Object.defineProperty(tmp3Result, closure_10, { writable: true, value: "a" });
+    definePropertyResult5 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "a" });
+    definePropertyResult6 = Object.defineProperty(tmp3Result, closure_12, { writable: true, value: "a" });
+    definePropertyResult7 = Object.defineProperty(tmp3Result, closure_13, { writable: true, value: "a" });
+    definePropertyResult8 = Object.defineProperty(tmp3Result, closure_2_14, { writable: true, value: "a" });
+    definePropertyResult9 = Object.defineProperty(tmp3Result, closure_2_15, { writable: true, value: "a" });
     ({
-      fetchStart: closure_4(undefined, tmp6, metroRequire)[metroRequire],
-      requestStart: closure_4(undefined, tmp6, closure_7)[closure_7],
+      fetchStart: closure_4(undefined, tmp6, closure_6)[closure_6],
+      requestStart: closure_4(undefined, tmp6, metroImportDefault)[metroImportDefault],
       connectStart: closure_4(undefined, tmp6, closure_8)[closure_8],
       connectEnd: closure_4(undefined, tmp6, closure_9)[closure_9],
       responseStart: closure_4(undefined, tmp6, closure_10)[closure_10],
@@ -155,8 +155,8 @@ let items = [
       }
       const obj = {};
       const merged = Object.assign(fn([]));
-      obj.fetchStart = _classPrivateFieldBase(self, metroRequire)[metroRequire];
-      obj.requestStart = _classPrivateFieldBase(self, closure_7)[closure_7];
+      obj.fetchStart = _classPrivateFieldBase(self, closure_6)[closure_6];
+      obj.requestStart = _classPrivateFieldBase(self, metroImportDefault)[metroImportDefault];
       obj.connectStart = _classPrivateFieldBase(self, closure_8)[closure_8];
       obj.connectEnd = _classPrivateFieldBase(self, closure_9)[closure_9];
       obj.responseStart = _classPrivateFieldBase(self, closure_10)[closure_10];

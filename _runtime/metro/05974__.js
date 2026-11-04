@@ -1,6 +1,15 @@
 // _runtime/metro/05974__.js
-import baseIsEqual from "../00631_baseIsEqual.js";
+import identity from "../00549_identity.js";
+import _mod668 from "00668__.js";
+import constant from "../05975_constant.js";
 
-export default function isEqual(arg0, arg1) {
-  return baseIsEqual(arg0, arg1);
+if (_mod668) {
+  let fn = (arg0, arg1) => {
+    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
+    return _mod668(arg0, "toString", obj);
+  };
+} else {
+  fn = identity;
 }
+
+export default fn;

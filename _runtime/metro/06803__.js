@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 500,
-  height: 500,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "92530bd573dd795df92f429bb50bdfa5",
-  name: "img_account_sync_letterboxd_dark",
-  type: "svg",
+  hash: "4a45d5464752b264a97efb61145f651f",
+  name: "img_account_sync_ebay_white",
+  type: "png",
 });

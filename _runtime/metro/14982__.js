@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/conjure/presence/native/images",
-  width: 80,
-  height: 80,
-  scales: [1, 2, 3],
-  hash: "147a8fcf8f2b95ff7d26fea87214d381",
-  name: "conjure_activity_dark",
+  httpServerLocation: "/assets/modules/media_viewer/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "05e33949de588de2bb105d38c549ac02",
+  name: "ic_eye_hidden",
   type: "png",
 });

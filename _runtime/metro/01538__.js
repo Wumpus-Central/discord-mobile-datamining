@@ -9,6 +9,7 @@ let closure_2 = ["screen", "if"];
 let closure_3 = ["screens", "groups"];
 const jsx = fn(21).jsx;
 const memoResult = noop.memo((component) => <component.component route={_mod1539.useRoute()} />);
+const metroImportDefault = memoResult;
 memoResult.displayName = "Memo(Screen)";
 function getItemsFromScreens(merged, screens) {
   closure_0 = merged;

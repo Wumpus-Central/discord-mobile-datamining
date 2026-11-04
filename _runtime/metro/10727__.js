@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/activated",
-  width: 279,
-  height: 48,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 40,
+  height: 40,
   scales: [2, 3],
-  hash: "e03e83c5ddeddb7941bbe7457ccf1a98",
-  name: "img_nitro_tier_2_activated_light",
+  hash: "d4d023fcd230d5f7401c0e512db37851",
+  name: "ic_checkmark",
   type: "png",
 });

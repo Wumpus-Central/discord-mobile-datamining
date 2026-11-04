@@ -1,84 +1,86 @@
 // _runtime/metro/05550__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
+import tagMessage from "../05432_tagMessage.js";
+import _mod5433 from "05433__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-let items = [
+const items = [
   {
-    code: "(function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};})",
+    code: "(function pnpm_gestureStateManagerTs1(handlerTag,state){let[tagMessage]=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}})",
   },
+  tagMessage.tagMessage,
 ];
-[tmp4] = items;
-function changeEventCalculator(rotation, rotation2) {
-  if (undefined === rotation2) {
-    const obj2 = { rotationChange: rotation.rotation };
-    let obj = obj2;
+let c0;
+[tmp2, tmp3] = items;
+function pnpm_gestureStateManagerTs1(arg0, arg1) {
+  const _globalThis = globalThis;
+  if (globalThis._setGestureStateSync) {
+    _globalThis._setGestureStateSync(arg0, arg1);
+  } else if (_globalThis._setGestureStateAsync) {
+    const _globalThis2 = globalThis;
+    const result = globalThis._setGestureStateAsync(arg0, arg1);
   } else {
-    obj = { rotationChange: rotation.rotation - rotation2.rotation };
-  }
-  const merged = Object.assign(rotation);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__workletHash = 6562048285106;
-changeEventCalculator.__initData = tmp4;
-class RotationGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, RotationGesture);
-    tmp2 = c2;
-    obj = c2(RotationGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "RotationGestureHandler";
-    return tmp3Result;
+    const _Error = Error;
+    const error = new Error(_undefined("Failed to set gesture state"));
+    throw error;
   }
 }
-_classCallCheck = RotationGesture;
-_inherits(RotationGesture, fn(5447).ContinousBaseGesture);
-const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    items = [arg0];
-    return fn(items);
+const items1 = [tmp3];
+pnpm_gestureStateManagerTs1.__closure = items1;
+pnpm_gestureStateManagerTs1.__workletHash = 7329582373210;
+pnpm_gestureStateManagerTs1.__initData = tmp2;
+const items2 = [
+  {
+    code: "(function activate_Pnpm_gestureStateManagerTs2(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.ACTIVE);})",
   },
-};
-const items1 = [entry];
+  pnpm_gestureStateManagerTs1,
+  _mod5433.State,
+];
+let closure_129_0;
+let closure_129_1;
+[tmp4, tmp5, tmp6] = items2;
+const obj = { activate: null, fail: null, deactivate: null };
+function activate(arg0) {
+  _undefined(arg0, constants.ACTIVE);
+}
+const items3 = [tmp5, tmp6];
+activate.__closure = items3;
+activate.__workletHash = 1857335023251;
+activate.__initData = tmp4;
+obj.activate = activate;
+const items4 = [
+  {
+    code: "(function fail_Pnpm_gestureStateManagerTs3(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.FAILED);})",
+  },
+  pnpm_gestureStateManagerTs1,
+  _mod5433.State,
+];
+let closure_130_0;
+let closure_130_1;
+[tmp7, tmp8, tmp9] = items4;
+function fail(arg0) {
+  _undefined(arg0, constants.FAILED);
+}
+const items5 = [tmp8, tmp9];
+fail.__closure = items5;
+fail.__workletHash = 2377190791686;
+fail.__initData = tmp7;
+obj.fail = fail;
+const items6 = [
+  {
+    code: "(function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.END);})",
+  },
+  pnpm_gestureStateManagerTs1,
+  _mod5433.State,
+];
+let closure_131_0;
+let closure_131_1;
+[tmp10, tmp11, tmp12] = items6;
+function deactivate(arg0) {
+  _undefined(arg0, constants.END);
+}
+const items7 = [tmp11, tmp12];
+deactivate.__closure = items7;
+deactivate.__workletHash = 3880091307703;
+deactivate.__initData = tmp10;
+obj.deactivate = deactivate;
 
-export const RotationGesture = _createClass(RotationGesture, items1);
+export const GestureStateManager = obj;

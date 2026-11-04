@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 240,
-  height: 130,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "c5a514a204d76328abe2ecbd82735ce3",
-  name: "no_mutual_friends_dark",
+  hash: "220c71f96225f35f4c52e38db6b8734b",
+  name: "SoundboardIcon",
   type: "png",
 });

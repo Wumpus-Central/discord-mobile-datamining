@@ -42,7 +42,7 @@ class ServerRuntimeClient {
     tmp4 = hasOwnProperty;
     obj3 = hasOwnProperty(ServerRuntimeClient);
     tmp5 = closure_4;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj3, items, tmp4(self).constructor);
@@ -111,7 +111,7 @@ let items = [
         }
       }
       const self = this;
-      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureException", this);
+      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "captureException", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -161,7 +161,7 @@ let items = [
         const obj = ServerRuntimeClient(712);
       }
       const self = this;
-      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureEvent", this);
+      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "captureEvent", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -263,7 +263,7 @@ let items = [
       if (self._options.serverName) {
         platform.server_name = platform.server_name || self._options.serverName;
       }
-      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "_prepareEvent", self);
+      let fn = _get(hasOwnProperty(ServerRuntimeClient.prototype), "_prepareEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

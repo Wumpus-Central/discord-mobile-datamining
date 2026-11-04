@@ -1,5 +1,6 @@
 // _runtime/metro/00302__.js
 import nullthrowsDefault from "../00070_nullthrows.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import ViewDefault from "../00108_View.js";
 import dismissKeyboardDefault from "../00303_dismissKeyboard.js";
 import _modDef304 from "00304__.js";
@@ -7,7 +8,6 @@ import _modDef309 from "00309__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
@@ -39,6 +39,7 @@ let closure_3 = [
   "onDrawerOpen",
   "onDrawerClose",
 ];
+_possibleConstructorReturnDefault;
 const createRef = fn(19).createRef;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -50,9 +51,9 @@ class DrawerLayoutAndroid {
     closure_0 = undefined;
     tmp = hasOwnProperty(this, DrawerLayoutAndroid);
     items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(DrawerLayoutAndroid);
-    tmp3 = metroRequire;
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(DrawerLayoutAndroid);
+    tmp3 = closure_6;
     if (closure_11()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -122,7 +123,7 @@ const entry = {
     let tmp8 = tmp2;
     if (tmp2) {
       const obj2 = { style: drawerSubview.drawerStatusBar };
-      tmp8 = React7(ViewDefault, obj2);
+      tmp8 = React6(ViewDefault, obj2);
     }
     items1[1] = tmp8;
     obj.children = items1;
@@ -131,7 +132,7 @@ const entry = {
     const tmp3Result = closure_1_10(ViewDefault, obj);
     if (tmp2) {
       const obj4 = { translucent: true, backgroundColor: self.props.statusBarBackgroundColor };
-      tmp12 = React7(_modDef304, obj4);
+      tmp12 = React6(_modDef304, obj4);
     }
     const items2 = [tmp12, ,];
     if (tmp2) {
@@ -140,7 +141,7 @@ const entry = {
       const obj6 = { backgroundColor: self.props.statusBarBackgroundColor };
       items3[1] = obj6;
       obj5.style = items3;
-      tmp2 = React7(ViewDefault, obj5);
+      tmp2 = React6(ViewDefault, obj5);
     }
     items2[1] = tmp2;
     items2[2] = self.props.children;

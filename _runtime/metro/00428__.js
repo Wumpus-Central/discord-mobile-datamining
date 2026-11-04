@@ -36,8 +36,8 @@ class TouchableHighlightImpl {
     items = [...arguments];
     tmp = closure_4(this, TouchableHighlightImpl);
     items1 = [...items];
-    tmp2 = metroRequire;
-    obj = metroRequire(TouchableHighlightImpl);
+    tmp2 = closure_6;
+    obj = closure_6(TouchableHighlightImpl);
     tmp3 = hasOwnProperty;
     if (closure_11()) {
       tmp5 = globalThis;

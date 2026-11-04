@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a55e771de04b13c26603a57cb2527fa8",
-  name: "BoostGemIcon",
+  hash: "dc76a43601a93031b91e3ad463d63b85",
+  name: "ThumbsDownIcon",
   type: "png",
 });

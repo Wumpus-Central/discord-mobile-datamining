@@ -1,13 +1,21 @@
 // _runtime/metro/13134__.js
-import registerAsset from "01119__.js";
+const obj = {
+  name: "Value",
+  structure: null,
+  parse() {
+    const element = { type: "Value", loc: null, children: null };
+    const sequence = this.readSequence(this.scope.Value);
+    element.loc = this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart);
+    element.children = sequence;
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0);
+  },
+};
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "9efbede8b87c94f401364acf34876922",
-  name: "HammerIcon",
-  type: "png",
-});
+export default obj;

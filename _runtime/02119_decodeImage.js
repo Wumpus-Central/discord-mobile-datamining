@@ -2324,9 +2324,9 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
         size1.height = Math.max(rect.y + rect.height, rect2.y + rect2.height) - bound1;
         frames[diff4].dispose = 1;
         if (diff4 !== 0) {
-          let tmp120 = React6(arg0, arg1, arg2, frames, diff4, size1, tmp2);
+          let tmp120 = React5(arg0, arg1, arg2, frames, diff4, size1, tmp2);
         }
-        let tmp129 = React6(arg0, arg1, arg2, frames, tmp111, size1, tmp2);
+        let tmp129 = React5(arg0, arg1, arg2, frames, tmp111, size1, tmp2);
       }
     }
   }
@@ -2392,7 +2392,7 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
       }
       num39 = num39 + length7;
     }
-    const tmp163 = React7(uint8Array5.buffer, arg3);
+    const tmp163 = React6(uint8Array5.buffer, arg3);
     let num45 = 0;
     if (0 < tmp163.plte.length) {
       do {

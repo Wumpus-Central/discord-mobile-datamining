@@ -1,13 +1,34 @@
 // _runtime/metro/10816__.js
-import registerAsset from "01119__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "9dd37f954b23d7c3c7ed4428be93436f",
-  name: "ClydeIcon",
-  type: "png",
-});
+export function usePropsErrorBoundary(arg0) {
+  closure_0 = arg0;
+  items = [arg0];
+  const effect = noop.useEffect(() => {
+    const size = closure_0;
+    ({ defaultIndex, dataLength } = closure_0);
+    if (typeof defaultIndex === "number") {
+      if (dataLength > 0) {
+        const _Error3 = Error;
+        const error = new Error("DefaultIndex must be in the range of data length.");
+        throw error;
+      }
+    }
+    if (!size.mode) {
+      if (!size.vertical) {
+        if (!size.width) {
+          const _Error = Error;
+          const error1 = new Error("`width` must be specified for horizontal carousels.");
+          throw error1;
+        }
+      }
+      if (size.vertical) {
+        if (!size.height) {
+          const _Error2 = Error;
+          const error2 = new Error("`height` must be specified for vertical carousels.");
+          throw error2;
+        }
+      }
+    }
+  }, items);
+}

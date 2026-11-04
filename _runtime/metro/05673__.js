@@ -1,54 +1,29 @@
 // _runtime/metro/05673__.js
-import _slicedToArray from "05628__.js";
+import _mod5671 from "05671__.js";
 
-const noop = fn(19);
-({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
-
-export function useUnmountAwareTimeout() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => closure_1_0.clearTimeout(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { setTimeout: null };
-  const items1 = [first];
-  obj.setTimeout = closure_2((arg0, arg1) => {
-    const timerId = first.setTimeout(() => {
-      first.delete(timerId);
-      closure_0();
-    }, arg1);
-    arg0.add(timerId);
-  }, items1);
-  return obj;
-}
-export function useUnmountAwareAnimationFrame() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => cancelAnimationFrame(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { requestAnimationFrame: null };
-  const items1 = [first];
-  obj.requestAnimationFrame = closure_2((arg0) => {
-    const animationFrame = first.requestAnimationFrame((arg0) => {
-      first.delete(animationFrame);
-      closure_0(arg0);
-    });
-    arg0.add(animationFrame);
-  }, items1);
-  return obj;
+export default function _superPropBase(arg0, key10009) {
+  hasOwnProperty = {}.hasOwnProperty;
+  const call = hasOwnProperty.call;
+  let tmp = arg0;
+  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
+    let tmp4 = _mod5671(arg0);
+    tmp = tmp4;
+    if (null !== tmp4) {
+      while (true) {
+        let hasOwnProperty2 = {}.hasOwnProperty;
+        let call2 = hasOwnProperty2.call;
+        tmp = tmp4;
+        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
+          break;
+        } else {
+          tmp4 = _mod5671(tmp4);
+          tmp = tmp4;
+          if (null === tmp4) {
+            break;
+          }
+        }
+      }
+    }
+  }
+  return tmp;
 }

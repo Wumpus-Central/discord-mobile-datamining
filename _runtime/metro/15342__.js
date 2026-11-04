@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "d8c1977b6a087b3b59e64fe8d7b24249",
-  name: "ic_mic_muted_light_24px",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "cda3a003be131c8b7dcff249dd205483",
+  name: "Check",
   type: "png",
 });

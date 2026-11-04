@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 80,
+  height: 80,
   scales: [2, 3],
-  hash: "43b86c9ce273868bacca6aeb06ae392b",
-  name: "StarIcon",
+  hash: "d6c65250c1813722d34dd286c312a88f",
+  name: "img_nitro_classic_icon_white_80px",
   type: "png",
 });

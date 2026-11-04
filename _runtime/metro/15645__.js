@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
   width: 24,
-  height: 23,
+  height: 24,
   scales: [2, 3],
-  hash: "ded314673e0e4bafd84df14bbd2dcfb3",
-  name: "tier_1_24px",
+  hash: "3301eac470d1db4f813dc4b19265d85e",
+  name: "audio",
   type: "png",
 });

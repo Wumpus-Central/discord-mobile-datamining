@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/native/images",
-  width: 345,
-  height: 82,
+  httpServerLocation: "/assets/modules/hexagon_campaign/images",
+  width: 448,
+  height: 448,
   scales: [1, 2, 3],
-  hash: "91248bc802fa2159ae23ab96ddaf91db",
-  name: "clouds_light_background",
-  type: "png",
+  hash: "2cafb0515248fbc81635d5ff7a9836f9",
+  name: "hexagon_campaign_hero_background",
+  type: "webp",
 });

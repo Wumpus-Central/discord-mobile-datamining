@@ -1,27 +1,13 @@
 // _runtime/metro/10760__.js
-import _mod10761 from "10761__.js";
-import useCommonVariables from "../10764_useCommonVariables.js";
-import _mod10768 from "10768__.js";
-import _mod10769 from "10769__.js";
-import CarouselLayout from "../10770_CarouselLayout.js";
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-
-export default noop.forwardRef((defaultIndex, ref) => {
-  const initProps = _mod10761.useInitProps(defaultIndex);
-  const commonVariables = useCommonVariables.useCommonVariables(initProps);
-  const obj4 = {};
-  const merged = Object.assign(initProps);
-  obj4.dataLength = initProps.dataLength;
-  const propsErrorBoundary = _mod10768.usePropsErrorBoundary(obj4);
-  const obj5 = {
-    value: { props: initProps, common: commonVariables },
-    children: jsx(CarouselLayout.CarouselLayout, { ref }),
-  };
-  return jsx(_mod10769.GlobalStateProvider, {
-    value: { props: initProps, common: commonVariables },
-    children: jsx(CarouselLayout.CarouselLayout, { ref }),
-  });
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 411,
+  height: 134,
+  scales: [2, 3],
+  hash: "44a779cd60ac7d5dac850e6fc886896f",
+  name: "img_nitro_subheader_mobile",
+  type: "png",
 });

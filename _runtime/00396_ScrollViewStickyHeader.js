@@ -9,8 +9,8 @@ require = fn;
 const noop = fn(19);
 ({
   cloneElement: hasOwnProperty,
-  useCallback: metroRequire,
-  useEffect: closure_7,
+  useCallback: closure_6,
+  useEffect: metroImportDefault,
   useMemo: closure_8,
   useRef: closure_9,
   useState: closure_10,

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/roadblocks/images",
-  width: 552,
-  height: 336,
-  scales: [1],
-  hash: "f59c66d6f542b08761b44d6d5de547c8",
-  name: "client_themes_upsell",
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
+  scales: [2, 3],
+  hash: "e92f31ca34ceaeec68c2321f683014ca",
+  name: "img_nitro_global_emoji",
   type: "png",
 });

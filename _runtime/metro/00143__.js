@@ -37,10 +37,10 @@ class ReactNativeElement {
     items = [,];
     items[0] = importDefault;
     items[1] = importAll;
-    tmp2 = metroRequire;
-    obj = metroRequire(ReactNativeElement);
+    tmp2 = closure_6;
+    obj = closure_6(ReactNativeElement);
     tmp3 = hasOwnProperty;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);

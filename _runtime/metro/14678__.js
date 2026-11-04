@@ -1,13 +1,31 @@
 // _runtime/metro/14678__.js
-import registerAsset from "01119__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "4ca3f49624db00fa92c0d848adcbd326",
-  name: "StampIcon",
-  type: "png",
-});
+for (const key10013 in require("14679__.js")) {
+  arg5[key10013] = require("14679__.js")[key10013];
+  continue;
+}
+for (const key10017 in require("ReplacementModesAndroid")) {
+  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
+  continue;
+}
+for (const key10021 in require("purchaseUpdatedListener")) {
+  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
+  continue;
+}
+for (const key10025 in require("14693__.js")) {
+  arg5[key10025] = require("14693__.js")[key10025];
+  continue;
+}
+for (const key10029 in require("14694__.js")) {
+  arg5[key10029] = require("14694__.js")[key10029];
+  continue;
+}
+for (const key10033 in require("PurchaseError")) {
+  arg5[key10033] = require("PurchaseError")[key10033];
+  continue;
+}
+for (const key10037 in require("14695__.js")) {
+  arg5[key10037] = require("14695__.js")[key10037];
+  continue;
+}

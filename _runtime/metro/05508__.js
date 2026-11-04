@@ -1,23 +1,12 @@
 // _runtime/metro/05508__.js
-import ComposedGestureName from "../05485_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../05494_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod5509 from "05509__.js";
+import RNGestureHandlerModuleDefault from "../05457_RNGestureHandlerModule.js";
 
-require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
-const items = [
-  ["maxDistance", "maxDist"],
-  ["maxDuration", "maxDurationMs"],
-  ["maxDelay", "maxDelayMs"],
-];
-const map = new Map(items);
-let closure_3 = {};
 
-export function useTapGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_3;
+export function getModuleId() {
+  if (moduleId == null) {
+    moduleId = RNGestureHandlerModuleDefault.getModuleId();
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
-  return _mod5509.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+  return moduleId;
 }

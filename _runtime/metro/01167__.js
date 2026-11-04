@@ -40,7 +40,7 @@ function _class() {
   const self = this;
   c2(this, _class);
   const obj = hasOwnProperty(_class);
-  if (closure_7()) {
+  if (metroImportDefault()) {
     const _Reflect = Reflect;
     let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
   } else {
@@ -99,7 +99,7 @@ export function makeReactFormatter(arg0) {
     const self = this;
     c2(this, _class);
     const obj = hasOwnProperty(_class);
-    if (closure_7()) {
+    if (metroImportDefault()) {
       const _Reflect = Reflect;
       let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
     } else {

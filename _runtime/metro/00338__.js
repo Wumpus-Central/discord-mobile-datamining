@@ -28,7 +28,7 @@ function _isNativeReflectConstruct() {
 }
 let closure_2 = ["children", "style", "imageStyle", "imageRef", "importantForAccessibility"];
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 class ImageBackground {
   constructor() {
     self = this;
@@ -36,8 +36,8 @@ class ImageBackground {
     closure_0 = undefined;
     tmp = closure_4(this, ImageBackground);
     items1 = [...items];
-    tmp2 = metroRequire;
-    obj = metroRequire(ImageBackground);
+    tmp2 = closure_6;
+    obj = closure_6(ImageBackground);
     tmp3 = hasOwnProperty;
     if (closure_9()) {
       tmp5 = globalThis;
@@ -101,9 +101,9 @@ let items = [
       items[2] = imageStyle;
       obj2.style = items;
       obj2.ref = imageRef;
-      const items1 = [React5(ImageBackground(328), obj2), children];
+      const items1 = [metroImportDefault(ImageBackground(328), obj2), children];
       obj.children = items1;
-      return React6(tmp3, obj);
+      return React5(tmp3, obj);
     },
   },
 ];

@@ -25,7 +25,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_7 = {
+const onRunApplicationHook = {
   appStartReported: false,
   onRunApplicationHook() {
     closure_7.appStartReported = false;
@@ -43,7 +43,7 @@ class ReactNativeProfiler {
     tmp3 = closure_4;
     obj3 = closure_4(ReactNativeProfiler);
     tmp4 = closure_3;
-    if (metroRequire()) {
+    if (closure_6()) {
       tmp6 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj3, items, tmp3(self).constructor);
@@ -65,7 +65,7 @@ const entry = {
       fn = (arg0) => fn.apply(self, arg0);
     }
     !fn([]);
-    if (!closure_7.appStartReported) {
+    if (!metroImportDefault.appStartReported) {
       self._reportAppStart();
       tmp2.appStartReported = true;
     }
@@ -99,7 +99,7 @@ let items = [
           _captureAppStart({ isManual: false });
           const _captureAppStartResult2 = _captureAppStart(1014);
         }
-        appRegistryIntegration.onRunApplication(closure_7.onRunApplicationHook);
+        appRegistryIntegration.onRunApplication(onRunApplicationHook.onRunApplicationHook);
         const _captureAppStartResult1 = _captureAppStart(1015);
         tmp4 = null === addIntegration || undefined === addIntegration;
       }

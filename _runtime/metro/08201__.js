@@ -1,12 +1,14 @@
 // _runtime/metro/08201__.js
-import _modDef8194 from "08194__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8195 from "08195__.js";
+import _modDef8202 from "08202__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeDiffuseLighting = arg1;
+const ClipPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +27,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeDiffuseLighting {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class ClipPath {
   constructor() {
     self = this;
-    tmp = c2(this, FeDiffuseLighting);
-    tmp2 = closure_4;
-    obj = closure_4(FeDiffuseLighting);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, ClipPath);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(ClipPath);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,18 +49,19 @@ class FeDiffuseLighting {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeDiffuseLighting, _modDef8194);
+_inherits(ClipPath, _modDef8195);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDiffuseLighting(8171).warnUnimplementedFilter();
-    return null;
+    const props = this.props;
+    const obj = { ref: this.refMethod };
+    const merged = Object.assign(ClipPath(8186).extract(this, props));
+    obj.children = props.children;
+    return <tmp ref={this.refMethod} />;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeDiffuseLighting, items);
-importDefaultResultResult.displayName = "FeDiffuseLighting";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

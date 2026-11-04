@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "127a752466784cf57691500bcfc955ae",
-  name: "ic_file_small_acrobat",
+  height: 24,
+  scales: [2, 3],
+  hash: "4d46cb9270219102b4f9e899fd51586c",
+  name: "FileIcon",
   type: "png",
 });

@@ -20,7 +20,7 @@ let closure_3 = [
 ];
 let closure_4 = ["onTintColor", "tintColor"];
 const noop = fn(19);
-({ useLayoutEffect: closure_7, useRef: closure_8, useState: closure_9 } = noop);
+({ useLayoutEffect: metroImportDefault, useRef: closure_8, useState: closure_9 } = noop);
 const jsx = fn(21).jsx;
 function returnsFalse() {
   return false;

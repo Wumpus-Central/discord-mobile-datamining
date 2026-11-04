@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/images/native/auto_moderation",
   width: 16,
   height: 16,
-  scales: [1, 2, 3],
-  hash: "c9a4f850f67785dd3a5d71532b973724",
-  name: "ic_verified_icon_white_16px",
+  scales: [2, 3],
+  hash: "9fc7a06bd709251a424bf9095d4f7ecf",
+  name: "ic_auto_moderation_shield",
   type: "png",
 });

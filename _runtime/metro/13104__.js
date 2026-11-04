@@ -1,13 +1,16 @@
 // _runtime/metro/13104__.js
-import registerAsset from "01119__.js";
+import _mod13054 from "13054__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/conjure/home/images",
-  width: 640,
-  height: 360,
-  scales: [1],
-  hash: "d95a32482e4d06c5be43d6a731f0016a",
-  name: "conjure-home-raid-calendar",
-  type: "svg",
-});
+const CDO = _mod13054.TYPE.CDO;
+
+export default {
+  name: "CDO",
+  structure: [],
+  parse() {
+    this.eat(CDO);
+    return { type: "CDO", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
+  },
+  generate() {
+    this.chunk("<!--");
+  },
+};

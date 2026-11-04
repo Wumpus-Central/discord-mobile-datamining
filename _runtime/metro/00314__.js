@@ -1,7 +1,6 @@
 // _runtime/metro/00314__.js
 import _modDef38 from "00038__.js";
 import nullthrowsDefault from "../00070_nullthrows.js";
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import ListMetricsAggregatorDefault from "../00315_ListMetricsAggregator.js";
 import ChildListCollectionDefault from "../00316_ChildListCollection.js";
 import InfoDefault from "../00318_Info.js";
@@ -12,6 +11,7 @@ import _modDef325 from "00325__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import metroImportDefault from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import "module_19";
@@ -36,7 +36,6 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 let closure_4 = ["onContentSizeChange"];
-_possibleConstructorReturnDefault;
 const noop = fn(19);
 ({ cloneElement: closure_10, isValidElement: closure_11 } = noop);
 get_ActivityIndicator = fn(17);

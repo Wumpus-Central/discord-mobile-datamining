@@ -1,34 +1,20 @@
 // _runtime/metro/13045__.js
-const obj = {
-  name: "Selector",
-  structure: null,
-  parse() {
-    const self = this;
-    const sequence = this.readSequence(this.scope.Selector);
-    if (null === this.getFirstListNode(sequence)) {
-      self.error("Selector is expected");
-    }
-    const element = { type: "Selector", loc: self.getLocationFromList(sequence), children: sequence };
-    return element;
-  },
-  generate(arg0) {
-    this.children(arg0);
-  },
-};
-const obj2 = { children: null };
-const items = [
-  [
-    "TypeSelector",
-    "IdSelector",
-    "ClassSelector",
-    "AttributeSelector",
-    "PseudoClassSelector",
-    "PseudoElementSelector",
-    "Combinator",
-    "WhiteSpace",
-  ],
-];
-obj2.children = items;
-obj.structure = obj2;
+import _mod13164 from "13164__.js";
+import _mod13165 from "13165__.js";
+import 13046__ from "13046__.js";
+import patchDictionary from "../13089_patchDictionary.js";
+import 13136__ from "13136__.js";
 
-export default obj;
+module.exports.version = _mod13165.version;
+
+export default module_13046.create((function merge() {
+  const obj = {};
+  for (let num = 0; num < arguments.length; num = num + 1) {
+    let tmp = arguments[num];
+    for (const key10011 in tmp) {
+      obj[key10011] = tmp[key10011];
+      continue;
+    }
+  }
+  return obj;
+})(patchDictionary, module_13136, _mod13164));

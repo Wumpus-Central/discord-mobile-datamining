@@ -66,10 +66,10 @@ class ReadOnlyNode {
   constructor(arg0, arg1) {
     self = this;
     tmp = closure_4(this, ReadOnlyNode);
-    tmp2 = metroRequire;
-    obj = metroRequire(ReadOnlyNode);
+    tmp2 = closure_6;
+    obj = closure_6(ReadOnlyNode);
     tmp3 = hasOwnProperty;
-    if (closure_7()) {
+    if (metroImportDefault()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);

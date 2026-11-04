@@ -1,15 +1,68 @@
 // _runtime/metro/16334__.js
-import _mod16286 from "16286__.js";
-import _mod16293 from "16293__.js";
+import e from "../01159_e.js";
+import calendars from "../16335_calendars.js";
+import hourCycles from "../16336_hourCycles.js";
+import timezones from "../16337_timezones.js";
+import weekData from "../16338_weekData.js";
 
-let closure_2 = _mod16286("keys");
+require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod16293(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
+export function getCalendarPreferenceDataForRegion(region) {
+  let str = null;
+  if (region) {
+    str = region.toUpperCase();
   }
-  return tmp2;
-};
+  if (!str) {
+    str = "";
+  }
+  return (
+    calendars.calendars[str] ||
+    calendars.calendars["001"].map((item) => {
+      let str = "gregory";
+      if ("gregorian" !== item) {
+        let str2 = "islamicc";
+        if ("islamic-civil" !== item) {
+          str2 = item;
+        }
+        str = str2;
+      }
+      return str;
+    })
+  );
+}
+export function getHourCyclesPreferenceDataForLocaleOrRegion(locale, region) {
+  const formatted = locale.toLowerCase();
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  let v001 = hourCycles.hourCycles[formatted] || hourCycles.hourCycles[str];
+  if (!v001) {
+    const concat = "".concat;
+    v001 = hourCycles.hourCycles["".concat("", formatted, "-001")];
+  }
+  if (!v001) {
+    v001 = hourCycles.hourCycles["001"];
+  }
+  return e.__spreadArray([], v001, true);
+}
+export function getTimeZonePreferenceForRegion(region) {
+  const formatted = region.toLowerCase();
+  items = [];
+  if (timezones.timezones[formatted]) {
+    return e.__spreadArray(items, timezones.timezones[formatted], true);
+  } else {
+    return items;
+  }
+}
+export function getWeekDataForRegion(region) {
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  if (!str) {
+    str = "001";
+  }
+  return weekData.weekData[str] || weekData.weekData["001"];
+}
