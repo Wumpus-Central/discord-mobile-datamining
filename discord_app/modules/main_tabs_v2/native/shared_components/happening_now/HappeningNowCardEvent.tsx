@@ -8,7 +8,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17430);
+const HappeningNowConstants = fn(17521);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({
   HappeningNowCardTrackingType: closure_8,
@@ -104,7 +104,7 @@ let obj5 = {
 };
 obj.avatarContainer = { width: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.XSMALL_20] };
 let closure_13 = createStyles.createStyles(obj);
-const point = { shape: fn(9637).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+const point = { shape: fn(9656).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 let items = [point];
 let closure_15 = noop.memo(function DottedLineSeparator() {
   const tmp = closure_13();
@@ -215,7 +215,7 @@ export default noop.memo(function HappeningNowCardEvent(event) {
   if (tmp22Result4) {
     const obj10 = {
       color: "mobile-text-heading-primary",
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       children: tmp25(tmp18[22]).humanizeValue(tmp9, stateFromStores),
     };
     tmp22Result4 = closure_11(tmp25(tmp18[21]).Text, obj10);
@@ -251,7 +251,7 @@ export default noop.memo(function HappeningNowCardEvent(event) {
   const obj15 = { color: str2, variant: null, children: null };
   let str3;
   if (isLive) {
-    str3 = "text-xs/semibold";
+    str3 = "body-xs/semibold";
   }
   obj15.variant = str3;
   if (isLive) {

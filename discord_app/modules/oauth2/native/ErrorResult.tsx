@@ -6,7 +6,7 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef9886 from "../../../../_runtime/metro/09886__.js";
+import _modDef9904 from "../../../../_runtime/metro/09904__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -45,9 +45,9 @@ export default function ErrorResult(error) {
   const tmp = closure_6();
   const obj = { bottom: true, style: tmp.container, children: null };
   const obj2 = { style: tmp.inner, children: null };
-  const obj3 = { source: _modDef9886, style: tmp.image };
+  const obj3 = { source: _modDef9904, style: tmp.image };
   items = [React4(FastImageDefault, obj3)];
-  const obj4 = { style: tmp.text, variant: "text-md/medium", children: null };
+  const obj4 = { style: tmp.text, variant: "body-md/medium", children: null };
   if (error == null) {
     const intl = util.intl;
     error = intl.string(util.t.mqn873);

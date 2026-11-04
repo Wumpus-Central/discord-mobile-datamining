@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -64,5 +64,5 @@ export default function EditGuildEventsStepContainer(arg0) {
   obj3.style = items2;
   items1[1] = timestampProducer(React4, obj3);
   obj.children = items1;
-  return React5(React4, obj);
+  return metroImportDefault(React4, obj);
 }

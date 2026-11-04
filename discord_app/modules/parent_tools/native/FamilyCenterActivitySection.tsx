@@ -37,12 +37,12 @@ function FamilyCenterActivitySectionHeader(displayType) {
       }
       tmp10 = sectionDescriptionResult;
     }
-    const obj2 = { variant: "text-sm/semibold", style: tmp.header, children: sectionHeaderResult };
-    items = [React7(Text_Text.Text, obj2)];
+    const obj2 = { variant: "body-sm/semibold", style: tmp.header, children: sectionHeaderResult };
+    items = [React6(Text_Text.Text, obj2)];
     let tmp14Result = null;
     if (null !== tmp10) {
-      const obj3 = { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: tmp10 };
-      tmp14Result = React7(Text_Text.Text, obj3);
+      const obj3 = { variant: "body-sm/medium", color: "text-muted", style: tmp.description, children: tmp10 };
+      tmp14Result = React6(Text_Text.Text, obj3);
     }
     const obj6 = { children: null };
     items[1] = tmp14Result;
@@ -52,9 +52,10 @@ function FamilyCenterActivitySectionHeader(displayType) {
   length = actionsForDisplayType.length;
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7840);
-({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: closure_7, TeenActionDisplayType: closure_8 } = FamilyCenterConstants);
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const FamilyCenterConstants = fn(7856);
+({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: metroImportDefault, TeenActionDisplayType: closure_8 } =
+  FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let createStyles = fn(5141);
@@ -95,15 +96,15 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  const actionsForDisplayType = displayType(16941).useActionsForDisplayType(displayType);
-  const obj = displayType(16941);
-  const actionTotalsForDisplayType = displayType(16941).useActionTotalsForDisplayType(displayType);
+  const actionsForDisplayType = displayType(17033).useActionsForDisplayType(displayType);
+  const obj = displayType(17033);
+  const actionTotalsForDisplayType = displayType(17033).useActionTotalsForDisplayType(displayType);
   const callback = noop.useCallback(() => {
     const intl = displayType(1113).intl;
-    displayType(5831).presentFailedToast(intl.string(loadMore(2667).Wu8BK2));
+    displayType(5845).presentFailedToast(intl.string(loadMore(2667).Wu8BK2));
   }, []);
-  const obj2 = displayType(16941);
-  const familyCenterActions = displayType(13495).useFamilyCenterActions({ onError: callback });
+  const obj2 = displayType(17033);
+  const familyCenterActions = displayType(13579).useFamilyCenterActions({ onError: callback });
   const loadMore = familyCenterActions.loadMore;
   const tmp7 = _slicedToArray(noop.useState(closure_7), 2);
   dependencyMap = tmp7[1];
@@ -121,7 +122,7 @@ export default function FamilyCenterActivitySection(displayType) {
     const obj6 = { displayType };
     const items1 = [
       closure_9(FamilyCenterActivitySectionHeader, obj6),
-      substr.map((action) => closure_1_9(loadMore(16947), { action }, action.event_id)),
+      substr.map((action) => closure_1_9(loadMore(17039), { action }, action.event_id)),
     ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
@@ -146,16 +147,16 @@ export default function FamilyCenterActivitySection(displayType) {
         };
         const obj11 = {
           style: loadMoreButton.loadMoreButton,
-          variant: "text-xs/semibold",
+          variant: "body-xs/semibold",
           color: "text-overlay-light",
           children: formatToPlainStringResult,
         };
-        obj10.children = closure_9(tmp(5747).Text, obj11);
-        tmp18Result = closure_9(tmp(7106).PressableOpacity, obj10);
+        obj10.children = closure_9(tmp(5761).Text, obj11);
+        tmp18Result = closure_9(tmp(7121).PressableOpacity, obj10);
       }
       obj7.children = tmp18Result;
       closure_9(closure_6, obj7);
     }
   }
-  const obj3 = displayType(13495);
+  const obj3 = displayType(13579);
 }

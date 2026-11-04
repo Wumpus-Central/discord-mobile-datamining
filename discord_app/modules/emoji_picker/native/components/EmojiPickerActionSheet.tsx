@@ -14,7 +14,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(10073).EmojiPickerSource;
+const EmojiPickerSource = fn(10121).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
@@ -169,7 +169,7 @@ export default function EmojiPickerActionSheet(onClose) {
       const intl = util.intl;
       obj2.children = intl.string(util.t.wHTk2C);
       items = [closure_2_10(Text_Text.Text, obj2)];
-      const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj3 = { variant: "body-sm/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.string(util.t.VrWSNn);
       items[1] = closure_2_10(Text_Text.Text, obj3);

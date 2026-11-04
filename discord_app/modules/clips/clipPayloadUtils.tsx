@@ -4,16 +4,16 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const ClipsConstants = fn(8338);
+const ClipsConstants = fn(8354);
 ({
   CLIPS_MAX_PARTICIPANTS: closure_4,
   CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty,
-  ClipSignalTypes: metroRequire,
-  GameEventType: closure_7,
+  ClipSignalTypes: closure_6,
+  GameEventType: metroImportDefault,
   CLIP_RUNTIME: closure_8,
 } = ClipsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SpeakingFlags = fn(5888).SpeakingFlags;
+const SpeakingFlags = fn(5902).SpeakingFlags;
 const ServerClipGameEventType = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",

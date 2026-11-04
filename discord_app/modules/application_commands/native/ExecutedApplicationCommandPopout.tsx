@@ -70,7 +70,7 @@ function getCommandOptionComponents(option) {
         function getCommandValueText(intl) {
           return closure_2_22(
             Text_Text.Text,
-            { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: intl },
+            { variant: "body-sm/medium", color: "mobile-text-heading-primary", children: intl },
             "optionValue-" + iter.name,
           );
         }
@@ -86,11 +86,11 @@ function getCommandOptionComponents(option) {
           userComponent = null;
           if (null != channel1) {
             let obj = { style: styles.commandOptionMentionText, children: null };
-            const items1 = [closure_19, tmp6(5772).computeChannelName(channel1, UserStore, RelationshipStore)];
+            const items1 = [closure_19, tmp6(5786).computeChannelName(channel1, UserStore, RelationshipStore)];
             obj.children = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = closure_23(tmp6(1187).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(5772);
+            const tmp6Result = tmp6(5786);
           }
         } else {
           function getRoleComponent(role) {
@@ -386,7 +386,7 @@ function CommandContentContainer(channelId) {
       if (closure_14) {
         tmp2 = processColorStringsArray;
       }
-      const obj = { variant: "text-md/semibold", gradientColors: tmp2, style: null, children: null };
+      const obj = { variant: "body-md/semibold", gradientColors: tmp2, style: null, children: null };
       let color = author.colorString;
       if (color == null) {
         color = styles.commandText.color;
@@ -411,7 +411,7 @@ function CommandContentContainer(channelId) {
       }
       return closure_2_22(
         Text_Text.Text,
-        { variant: "text-md/semibold", color: "mobile-text-heading-primary", children },
+        { variant: "body-md/semibold", color: "mobile-text-heading-primary", children },
         "command",
       );
     },
@@ -423,7 +423,7 @@ function CommandContentContainer(channelId) {
       items = [
         closure_2_22(tmp, obj2, "icon-" + avatarSource.id),
         closure_2_22(Text_Text.Text, {
-          variant: "text-md/semibold",
+          variant: "body-md/semibold",
           color: "mobile-text-heading-primary",
           children: avatarSource.username,
         }),
@@ -481,7 +481,7 @@ function CommandContentContainer(channelId) {
         if (closure_14) {
           tmp2 = processColorStringsArray;
         }
-        const obj = { variant: "text-md/semibold", gradientColors: tmp2, style: null, children: null };
+        const obj = { variant: "body-md/semibold", gradientColors: tmp2, style: null, children: null };
         let color = author.colorString;
         if (color == null) {
           color = styles.commandText.color;
@@ -506,7 +506,7 @@ function CommandContentContainer(channelId) {
         }
         return closure_2_22(
           Text_Text.Text,
-          { variant: "text-md/semibold", color: "mobile-text-heading-primary", children },
+          { variant: "body-md/semibold", color: "mobile-text-heading-primary", children },
           "command",
         );
       },
@@ -518,7 +518,7 @@ function CommandContentContainer(channelId) {
         items = [
           closure_2_22(tmp, obj2, "icon-" + avatarSource.id),
           closure_2_22(Text_Text.Text, {
-            variant: "text-md/semibold",
+            variant: "body-md/semibold",
             color: "mobile-text-heading-primary",
             children: avatarSource.username,
           }),
@@ -530,7 +530,7 @@ function CommandContentContainer(channelId) {
     (children, arg1) => {
       let tmp = children;
       if (typeof children === "string") {
-        const obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children };
+        const obj = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children };
         tmp = closure_1_22(channelId(data[22]).Text, obj, arg1);
       }
       return tmp;
@@ -540,7 +540,7 @@ function CommandContentContainer(channelId) {
     closure_22(messageId, obj5, "commandName-" + data.name),
     closure_22(
       channelId(data[22]).Text,
-      { style: tmp.commandOptionText, variant: "text-md/medium", color: "text-default", children: memo },
+      { style: tmp.commandOptionText, variant: "body-md/medium", color: "text-default", children: memo },
       "commandOption-" + data.name,
     ),
   ];
@@ -702,7 +702,7 @@ function CommandActionsContainer(channelId) {
   let tmp9 = null;
   if (0 !== items3.length) {
     const obj4 = { spacing: 8, children: null };
-    let obj5 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
+    let obj5 = { variant: "body-sm/semibold", color: "text-subtle", children: null };
     const intl3 = tmp2(tmp3[24]).intl;
     obj5.children = intl3.string(tmp2(tmp3[24]).t["3eF5/L"]);
     const items4 = [closure_22(tmp2(tmp3[22]).Text, obj5)];
@@ -717,12 +717,12 @@ function CommandActionsContainer(channelId) {
   return tmp9;
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SUB_COMMAND_KEY_SEPARATOR = fn(6155).SUB_COMMAND_KEY_SEPARATOR;
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const SUB_COMMAND_KEY_SEPARATOR = fn(6170).SUB_COMMAND_KEY_SEPARATOR;
 const Constants = fn(1072);
 ({ MessageTypes: closure_16, WHITESPACE_RE: closure_17 } = Constants);
 const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
-const ChannelAutocompleteConstants = fn(6156);
+const ChannelAutocompleteConstants = fn(6171);
 ({
   CHANNEL_SENTINEL: closure_19,
   COMMAND_SENTINEL: closure_20,
@@ -792,7 +792,7 @@ export default function ExecutedCommandPopout(channelId) {
       const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
     }
   }, items1);
-  const obj2 = { value: messageId(7446)(messageId(7471).EXECUTED_COMMAND).analyticsLocations, children: null };
+  const obj2 = { value: messageId(7462)(messageId(7487).EXECUTED_COMMAND).analyticsLocations, children: null };
   const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -822,6 +822,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = closure_22(closure_5, obj7);
   }
   obj3.children = tmp9Result;
-  obj2.children = closure_22(channelId(5395).BottomSheet, obj3);
-  return closure_22(channelId(7446).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_22(channelId(5396).BottomSheet, obj3);
+  return closure_22(channelId(7462).AnalyticsLocationProvider, obj2);
 }

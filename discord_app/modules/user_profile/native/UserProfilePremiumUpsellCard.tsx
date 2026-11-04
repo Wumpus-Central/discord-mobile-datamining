@@ -17,14 +17,14 @@ function UpsellCardLayout(arg0) {
     ctaText,
     showLinearGradient: true,
     onPress,
-    children: jsx(Text_Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: description }),
+    children: jsx(Text_Text.Text, { variant: "body-sm/normal", maxFontSizeMultiplier: 2.5, children: description }),
   };
   return jsx(UserProfileUpsellCardDefault, {
     style,
     ctaText,
     showLinearGradient: true,
     onPress,
-    children: jsx(Text_Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: description }),
+    children: jsx(Text_Text.Text, { variant: "body-sm/normal", maxFontSizeMultiplier: 2.5, children: description }),
   });
 }
 function PreviewNitroCard(style) {
@@ -45,7 +45,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7750).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7766).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
@@ -75,8 +75,8 @@ const Constants = fn(1072);
 ({
   AnalyticsObjects: closure_4,
   AnalyticsPages: hasOwnProperty,
-  AnalyticsSections: metroRequire,
-  UserSettingsSections: closure_7,
+  AnalyticsSections: closure_6,
+  UserSettingsSections: metroImportDefault,
 } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];

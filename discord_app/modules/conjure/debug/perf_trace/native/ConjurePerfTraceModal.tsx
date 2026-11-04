@@ -18,11 +18,11 @@ function WaterfallRow(node) {
   ({ onSelect: dependencyMap, onToggle: noop, onExpandSubtree: closure_4 } = node);
   const tmp = closure_11();
   const detail = tmp;
-  const perfCategoryColors = node(13153).usePerfCategoryColors();
+  const perfCategoryColors = node(13236).usePerfCategoryColors();
   if (collapsed) {
-    let ChevronSmallDownIcon = tmp2(7498).ChevronSmallRightIcon;
+    let ChevronSmallDownIcon = tmp2(7514).ChevronSmallRightIcon;
   } else {
-    ChevronSmallDownIcon = tmp2(11552).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp2(11602).ChevronSmallDownIcon;
   }
   if (node.failed) {
     let running = tmp.failed;
@@ -62,7 +62,7 @@ function WaterfallRow(node) {
   obj2.accessibilityState = obj3;
   const obj4 = { style: null, children: null };
   const items1 = [tmp.rowTop];
-  let obj = node(13153);
+  let obj = node(13236);
   items1[1] = { paddingLeft: node.depth * selected(575).space.PX_12 };
   obj4.style = items1;
   if (node.children.length > 0) {
@@ -92,17 +92,17 @@ function WaterfallRow(node) {
   const items2 = [tmp11Result, , , , , , ,];
   let tmp13Result = null;
   if (node.descendants > 0) {
-    const obj9 = { variant: "text-xs/normal", color: "text-muted", children: node.descendants };
-    tmp13Result = tmp13(tmp2(5747).Text, obj9);
+    const obj9 = { variant: "body-xs/normal", color: "text-muted", children: node.descendants };
+    tmp13Result = tmp13(tmp2(5761).Text, obj9);
   }
   items2[1] = tmp13Result;
   const obj10 = { style: null };
   const items3 = [tmp.swatch, perfCategoryColors[node.category]];
   obj10.style = items3;
   items2[2] = tmp13(closure_6, obj10);
-  items2[3] = tmp13(node(5747).Text, { variant: "text-xs/semibold", color: "text-strong", children: node.service });
-  items2[4] = tmp13(node(5747).Text, {
-    variant: "text-xs/normal",
+  items2[3] = tmp13(node(5761).Text, { variant: "body-xs/semibold", color: "text-strong", children: node.service });
+  items2[4] = tmp13(node(5761).Text, {
+    variant: "body-xs/normal",
     color: "text-default",
     style: tmp.operation,
     lineClamp: 1,
@@ -111,31 +111,31 @@ function WaterfallRow(node) {
   let tmp13Result4 = null;
   if (node.count > 1) {
     const obj13 = { style: tmp.badge, children: null };
-    const obj14 = { variant: "text-xxs/semibold", color: "text-default", children: null };
+    const obj14 = { variant: "footnote/semibold", color: "text-default", children: null };
     const _HermesInternal = HermesInternal;
     obj14.children = "\u00D7" + node.count;
-    obj13.children = tmp13(tmp2(5747).Text, obj14);
+    obj13.children = tmp13(tmp2(5761).Text, obj14);
     tmp13Result4 = tmp13(closure_6, obj13);
   }
   items2[5] = tmp13Result4;
   let tmp13Result5 = null;
   if (node.failed) {
     const obj15 = { size: "xs", color: selected(575).colors.STATUS_DANGER };
-    tmp13Result5 = tmp13(tmp2(8150).WarningIcon, obj15);
+    tmp13Result5 = tmp13(tmp2(8166).WarningIcon, obj15);
   }
   items2[6] = tmp13Result5;
-  const obj16 = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const obj11 = { variant: "text-xs/semibold", color: "text-strong", children: node.service };
+  const obj16 = { variant: "body-xs/normal", color: "text-muted", children: null };
+  const obj11 = { variant: "body-xs/semibold", color: "text-strong", children: node.service };
   const obj12 = {
-    variant: "text-xs/normal",
+    variant: "body-xs/normal",
     color: "text-default",
     style: tmp.operation,
     lineClamp: 1,
     children: node.operation,
   };
   const obj5 = { paddingLeft: node.depth * selected(575).space.PX_12 };
-  obj16.children = node(13154).perfNodeDuration(node);
-  items2[7] = tmp13(node(5747).Text, obj16);
+  obj16.children = node(13237).perfNodeDuration(node);
+  items2[7] = tmp13(node(5761).Text, obj16);
   obj4.children = items2;
   const items4 = [closure_9(closure_6, obj4), ,];
   const obj17 = { style: tmp.track, children: null };
@@ -155,16 +155,16 @@ function WaterfallRow(node) {
     const obj21 = { paddingLeft: node.depth * selected(575).space.PX_12 };
     items6[1] = obj21;
     obj20.style = items6;
-    const tmp2Result2 = tmp2(13154);
-    obj20.children = tmp2(13154)
+    const tmp2Result2 = tmp2(13237);
+    obj20.children = tmp2(13237)
       .perfNodeSections(node)
       .map((item) => {
         ({ title, rows } = item);
         let obj = { style: detail.detail, children: null };
         let tmp3 = null;
         if (null != title) {
-          const obj2 = { variant: "text-xs/semibold", color: "text-strong", children: title };
-          tmp3 = React6(Text_Text.Text, obj2);
+          const obj2 = { variant: "body-xs/semibold", color: "text-strong", children: title };
+          tmp3 = React5(Text_Text.Text, obj2);
         }
         items = [
           tmp3,
@@ -179,9 +179,9 @@ function WaterfallRow(node) {
             }
             const obj = { style: detailLine, children: null };
             items = [
-              closure_2_8(node(5747).Text, { variant: "text-xs/semibold", color: "text-muted", children: label }),
-              closure_2_8(node(5747).Text, {
-                variant: "text-xs/normal",
+              closure_2_8(node(5761).Text, { variant: "body-xs/semibold", color: "text-muted", children: label }),
+              closure_2_8(node(5761).Text, {
+                variant: "body-xs/normal",
                 color: "text-default",
                 style: tmp4.operation,
                 selectable: true,
@@ -196,10 +196,10 @@ function WaterfallRow(node) {
         if (title == null) {
           title = "timing";
         }
-        return React7(timestampProducer, obj, title);
+        return React6(timestampProducer, obj, title);
       });
     tmp13Result6 = tmp13(closure_6, obj20);
-    const perfNodeSectionsResult = tmp2(13154).perfNodeSections(node);
+    const perfNodeSectionsResult = tmp2(13237).perfNodeSections(node);
   }
   items4[2] = tmp13Result6;
   obj2.children = items4;
@@ -225,46 +225,46 @@ function SmallerRow(row) {
   obj3.style = items;
   const obj5 = { style: tmp.chevron, children: null };
   const obj4 = { paddingLeft: row.depth * nativeDefault.space.PX_12 };
-  obj5.children = React6(ChevronSmallRightIcon.ChevronSmallRightIcon, {
+  obj5.children = React5(ChevronSmallRightIcon.ChevronSmallRightIcon, {
     size: "xs",
     color: nativeDefault.colors.ICON_SUBTLE,
   });
-  const items1 = [React6(timestampProducer, obj5), , ,];
+  const items1 = [React5(timestampProducer, obj5), , ,];
   const obj7 = { style: null };
   const items2 = [,];
   ({ swatch: arr3[0], smaller: arr3[1] } = tmp);
   obj7.style = items2;
-  items1[1] = React6(timestampProducer, obj7);
-  items1[2] = React6(Text_Text.Text, {
-    variant: "text-xs/normal",
+  items1[1] = React5(timestampProducer, obj7);
+  items1[2] = React5(Text_Text.Text, {
+    variant: "body-xs/normal",
     color: "text-muted",
     style: tmp.operation,
     lineClamp: 1,
     children: perfSmallerLabelResult,
   });
-  const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  const obj9 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const obj6 = { size: "xs", color: nativeDefault.colors.ICON_SUBTLE };
   const obj8 = {
-    variant: "text-xs/normal",
+    variant: "body-xs/normal",
     color: "text-muted",
     style: tmp.operation,
     lineClamp: 1,
     children: perfSmallerLabelResult,
   };
   obj9.children = ConjurePerfTraceFormat.formatPerfMs(row.totalMs);
-  items1[3] = React6(Text_Text.Text, obj9);
+  items1[3] = React5(Text_Text.Text, obj9);
   obj3.children = items1;
-  const items3 = [React7(timestampProducer, obj3)];
+  const items3 = [React6(timestampProducer, obj3)];
   const obj11 = { style: tmp.smallerTrack, children: null };
   const obj12 = { style: null };
   const items4 = [, ,];
   ({ bar: arr5[0], smaller: arr5[1] } = tmp);
   items4[2] = { left: `${(row.start / extent) * 100}%`, width: `${((row.end - row.start) / extent) * 100}%` };
   obj12.style = items4;
-  obj11.children = React6(timestampProducer, obj12);
-  items3[1] = React6(timestampProducer, obj11);
+  obj11.children = React5(timestampProducer, obj12);
+  items3[1] = React5(timestampProducer, obj11);
   obj2.children = items3;
-  return React7(React4, obj2);
+  return React6(React4, obj2);
 }
 function TraceStats(trace) {
   trace = trace.trace;
@@ -284,29 +284,29 @@ function Waterfall(trace) {
   items[1] = { paddingBottom: nativeDefault.space.PX_16 + useSafeAreaInsetsDefault().bottom };
   obj2.contentContainerStyle = items;
   const obj4 = { style: tmp.section, children: null };
-  const obj5 = { variant: "text-md/semibold", color: "text-strong", children: null };
+  const obj5 = { variant: "body-md/semibold", color: "text-strong", children: null };
   let obj3 = { paddingBottom: nativeDefault.space.PX_16 + useSafeAreaInsetsDefault().bottom };
   obj5.children = require("ConjurePerfTraceFormat").perfTraceDuration(trace);
   const items1 = [closure_8(require("Text/Text").Text, obj5), , ,];
-  const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj7 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const obj6 = require("ConjurePerfTraceFormat");
   obj7.children = require("ConjurePerfTraceFormat").perfTraceSummary(trace);
   items1[1] = closure_8(require("Text/Text").Text, obj7);
   let tmp8Result = null;
   if (null != trace.started_by) {
-    const obj9 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj9 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
     obj9.children = "Started by " + trace.started_by.trace_name;
-    tmp8Result = closure_8(tmp4(5747).Text, obj9);
+    tmp8Result = closure_8(tmp4(5761).Text, obj9);
   }
   items1[2] = tmp8Result;
   let tmp8Result2 = null;
   if (0 !== trace.dropped) {
-    const obj10 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+    const obj10 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
     const _HermesInternal2 = HermesInternal;
-    obj10.children = "" + tmp4(13154).formatSpanCount(trace.dropped) + " not recorded";
-    tmp8Result2 = closure_8(tmp4(5747).Text, obj10);
-    const tmp4Result = tmp4(13154);
+    obj10.children = "" + tmp4(13237).formatSpanCount(trace.dropped) + " not recorded";
+    tmp8Result2 = closure_8(tmp4(5761).Text, obj10);
+    const tmp4Result = tmp4(13237);
   }
   items1[3] = tmp8Result2;
   obj4.children = items1;
@@ -335,7 +335,7 @@ function Waterfall(trace) {
   obj11.children = items3;
   items2[2] = closure_9(closure_6, obj11);
   items2[3] = closure_8(require("Text/Text").Text, {
-    variant: "text-xs/normal",
+    variant: "body-xs/normal",
     color: "text-muted",
     children: "Long-press a span to expand everything under it.",
   });
@@ -356,10 +356,10 @@ function Waterfall(trace) {
       obj3.collapsed = collapsed.has(kind.key);
       obj3.selected = kind.key === closure_0.selectedKey;
       ({ select: obj2.onSelect, toggle: obj2.onToggle, expandSubtree: obj2.onExpandSubtree } = closure_0);
-      let tmp5 = React6(WaterfallRow, obj3, kind.key);
+      let tmp5 = React5(WaterfallRow, obj3, kind.key);
     } else {
       const obj = { row: kind, extent, onReveal: closure_0.reveal };
-      tmp5 = React6(SmallerRow, obj, kind.key);
+      tmp5 = React5(SmallerRow, obj, kind.key);
     }
     return tmp5;
   });
@@ -378,8 +378,8 @@ function PerfTraceScreen(projectId) {
     items1,
   );
   if (null == stateFromStores) {
-    let tmp6 = closure_8(projectId(5747).Text, {
-      variant: "text-sm/normal",
+    let tmp6 = closure_8(projectId(5761).Text, {
+      variant: "body-sm/normal",
       color: "text-muted",
       children: "This trace is no longer available.",
     });
@@ -390,7 +390,7 @@ function PerfTraceScreen(projectId) {
   return tmp6;
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: closure_4, ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const perf_trace = "perf_trace";

@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "id" };
+const hasOwnProperty = { input: "", error: "children" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -83,7 +83,7 @@ prototype["renderContent"] = function renderContent() {
     }
     let tmp7 = null != helpText;
     if (tmp7) {
-      const obj = { variant: "text-md/normal", children: helpText };
+      const obj = { variant: "body-md/normal", children: helpText };
       tmp7 = React3(Text_Text.Text, obj);
     }
     items = [tmp7];

@@ -23,7 +23,7 @@ const useAnalyticsLocationsDefault = useAnalyticsLocations;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -44,7 +44,7 @@ obj2.body = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(9498).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9516).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -53,7 +53,7 @@ let obj4 = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(9498).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9516).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };

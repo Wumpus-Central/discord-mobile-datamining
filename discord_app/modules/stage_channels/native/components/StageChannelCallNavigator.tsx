@@ -63,8 +63,8 @@ function ModeratorViewOverlay(channel) {
     items3[2] = animatedStyle;
     obj4.style = items3;
     const obj6 = { channel, onSkip: tmp13 };
-    obj4.children = React6(ModeratorStartStageViewDefault, obj6);
-    tmp14 = React6(_modDef1652.View, obj4);
+    obj4.children = React5(ModeratorStartStageViewDefault, obj6);
+    tmp14 = React5(_modDef1652.View, obj4);
   }
   return tmp14;
 }
@@ -104,23 +104,23 @@ function JoinStageOverlay(channel) {
   items2[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
   items2[2] = animatedStyle;
   obj3.style = items2;
-  obj3.children = React6(JoinStageViewDefault, { channel: channel.channel });
-  return React6(_modDef1652.View, obj3);
+  obj3.children = React5(JoinStageViewDefault, { channel: channel.channel });
+  return React5(_modDef1652.View, obj3);
 }
 function StagePromptWrapper(channel) {
-  return React6(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, {
-    children: React6(StagePromptInner, { channel: channel.channel }),
+  return React5(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, {
+    children: React5(StagePromptInner, { channel: channel.channel }),
   });
 }
 function StagePromptInner(channel) {
   const tmp = closure_17();
-  return React6(StageActionBarButtons.AnimatedStartStagePrompt, {
+  return React5(StageActionBarButtons.AnimatedStartStagePrompt, {
     channel: channel.channel,
     style: closure_17().startStagePrompt,
   });
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);

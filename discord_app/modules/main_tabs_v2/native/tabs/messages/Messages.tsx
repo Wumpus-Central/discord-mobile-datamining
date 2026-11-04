@@ -22,7 +22,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = {
   code: "(function MessagesTsx1(event){let[scrollPosition,handleGuildsNavigationScroll]=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);})",
 };
@@ -60,7 +60,7 @@ export default noop.memo(function Messages(style) {
   useMessagesReconnectToCallsEffectDefault();
   obj6 = require("PlatformUtils");
   const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(
-    tmp4(18251).DmGdmListRenderTriggerPoint,
+    tmp4(18348).DmGdmListRenderTriggerPoint,
   );
   items = [dataKey];
   const effect = noop.useEffect(() => {
@@ -154,12 +154,12 @@ export default noop.memo(function Messages(style) {
   const obj10 = { backgroundColor: nativeDefault.colors.PANEL_BG, children: null };
   const items3 = [closure_6(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), ,];
   if (tmp10.showFullscreenEmptyState) {
-    let tmp25Result = closure_6(tmp(18254), {});
+    let tmp25Result = closure_6(tmp(18351), {});
   } else {
     if ("legend" === list) {
-      let tmp28 = 18259;
+      let tmp28 = 18356;
     } else {
-      tmp28 = "flash" === list ? 18303 : 18304;
+      tmp28 = "flash" === list ? 18400 : 18401;
     }
     const obj11 = { ref };
     const merged = Object.assign(obj7);
@@ -169,7 +169,7 @@ export default noop.memo(function Messages(style) {
   items3[1] = tmp25Result;
   let tmp25Result2 = null;
   if (!doesLandOnHomeDrawer) {
-    tmp25Result2 = closure_6(tmp4(13471).TTIFirstContentfulPaint, { label: "messages_tabs" });
+    tmp25Result2 = closure_6(tmp4(13555).TTIFirstContentfulPaint, { label: "messages_tabs" });
   }
   items3[2] = tmp25Result2;
   obj10.children = items3;

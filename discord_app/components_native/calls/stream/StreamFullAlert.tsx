@@ -24,13 +24,13 @@ export default function StreamFullAlert(arg0) {
   const merged = Object.assign(arg0);
   const intl2 = util.intl;
   obj2.title = intl2.string(util.t.GzjdO5);
-  const obj3 = { variant: "text-md/normal", style: closure_5.body, children: null };
+  const obj3 = { variant: "body-md/normal", style: closure_5.body, children: null };
   const intl3 = util.intl;
   obj3.children = intl3.string(util.t.VVZDBL);
   items = [
     React3(Text_Text.Text, obj3),
     React3(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       selectable: true,
       color: "text-muted",
       style: closure_5.body,

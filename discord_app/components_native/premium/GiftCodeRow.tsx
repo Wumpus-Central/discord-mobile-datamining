@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, TouchableWithoutFeedback: closure_4, StyleSheet } = get_ActivityIndicator);
 const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   giftCodeRow: { paddingHorizontal: 16 },
@@ -110,7 +110,7 @@ prototype["render"] = function render() {
   const obj3 = { children: null };
   const obj4 = { style: tmp.giftCodeInputContent, children: null };
   const obj5 = {
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     style: tmp.codeText,
     lineClamp: 1,
     children: giftCode(self[8]).getGiftCodeURL(giftCode.code),
@@ -133,7 +133,7 @@ prototype["render"] = function render() {
   const obj9 = { style: tmp.subTextRow, children: null };
   let tmp5Result = null;
   if (null != giftCode.expiresAt) {
-    const obj10 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+    const obj10 = { variant: "body-xs/normal", color: "text-subtle", children: null };
     const intl2 = tmp6(tmp7[13]).intl;
     const obj11 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;

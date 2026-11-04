@@ -7,6 +7,7 @@ import AnalyticsLocationDefault from "../../../../../app_analytics/AnalyticsLoca
 import ChatIcon from "../../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import utils_openGiftModal from "../../../../../premium/native/utils/openGiftModal.tsx";
 import MicrophoneIcon from "../../../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
+import Tracking from "../../../../tracking/Tracking.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointStatNumberDefault from "../../CheckpointStatNumber.tsx";
 import CheckpointDisplayTextDefault from "../../CheckpointDisplayText.tsx";
@@ -27,25 +28,25 @@ function FriendsHeader(children) {
   obj2 = { style: tmp.heading, children: null };
   const obj3 = { style: tmp.title, children: null };
   items = [state(FriendsIcon.FriendsIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY })];
-  const obj5 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
+  const obj5 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const intl = util.intl;
   const obj4 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const tmp2 = CheckpointTextDefault;
   obj5.children = intl.string(_modDef3187.ZQakPR).toLocaleUpperCase();
   items[1] = state(tmp2, obj5);
   obj3.children = items;
-  const items1 = [gesture(React5, obj3)];
+  const items1 = [gesture(metroImportDefault, obj3)];
   const obj6 = { children: null };
   const stringResult = intl.string(_modDef3187.ZQakPR);
   obj6.children = title.toLocaleUpperCase();
   items1[1] = state(CheckpointDisplayTextDefault, obj6);
   obj2.children = items1;
   const items2 = [
-    gesture(React5, obj2),
+    gesture(metroImportDefault, obj2),
     state(CheckpointTextDefault, { variant: "heading-lg/medium", children: children.description }),
   ];
   obj.children = items2;
-  return gesture(React5, obj);
+  return gesture(metroImportDefault, obj);
 }
 function SidekickStats(sidekick) {
   sidekick = sidekick.sidekick;
@@ -67,7 +68,7 @@ function SidekickStats(sidekick) {
     state(CheckpointStatNumberDefault, { value: rounded }),
   ];
   obj2.children = items;
-  const items1 = [gesture(React5, obj2)];
+  const items1 = [gesture(metroImportDefault, obj2)];
   const obj4 = {
     accessible: true,
     accessibilityLabel:
@@ -80,9 +81,9 @@ function SidekickStats(sidekick) {
     state(CheckpointStatNumberDefault, { value: rounded1 }),
   ];
   obj4.children = items2;
-  items1[1] = gesture(React5, obj4);
+  items1[1] = gesture(metroImportDefault, obj4);
   obj.children = items1;
-  return gesture(React5, obj);
+  return gesture(metroImportDefault, obj);
 }
 function SidekickMessageInput(user) {
   user = user.user;
@@ -207,7 +208,7 @@ function SidekickMessageInput(user) {
     if (tmp5) {
       let stringResult = intl.string(tmp15(1113).t.fjcCk5);
     } else {
-      const obj3 = { name: user.username };
+      let obj3 = { name: user.username };
       stringResult = intl.formatToPlainString(tmp15(1113).t["0ZQw/X"], obj3);
     }
     obj2.placeholder = stringResult;
@@ -215,10 +216,11 @@ function SidekickMessageInput(user) {
     let obj4 = { style: tmp.messageInputActions, children: null };
     let obj5 = {
       onPress: function handleGift() {
-        obj2 = { recipientUserId: user.id, analyticsLocations: null };
-        items = [AnalyticsLocationDefault.CHECKPOINT];
-        obj2.analyticsLocations = items;
-        utils_openGiftModal.openGiftModal(obj2);
+        const result = Tracking.trackCheckpoint2026GiftCtaClicked(user.id);
+        const obj3 = { recipientUserId: user.id, analyticsLocations: null };
+        items = [AnalyticsLocationDefault.CHECKPOINT, AnalyticsLocationDefault.CHECKPOINT_SIDEKICK];
+        obj3.analyticsLocations = items;
+        utils_openGiftModal.openGiftModal(obj3);
       },
       accessibilityRole: "button",
       accessibilityLabel: null,
@@ -227,7 +229,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1113).intl;
     obj5.accessibilityLabel = intl2.string(user(1113).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(13501).GiftIcon, obj6);
+    obj5.children = closure_13(user(13585).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5)];
     const obj7 = {
       onPress: function handleSend() {
@@ -257,7 +259,7 @@ function SidekickMessageInput(user) {
     const obj8 = { disabled: !tmp10 };
     obj7.accessibilityState = obj8;
     const obj9 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj7.children = closure_13(user(5849).SendMessageIcon, obj9);
+    obj7.children = closure_13(user(5863).SendMessageIcon, obj9);
     items1[1] = closure_13(closure_6, obj7);
     obj4.children = items1;
     items[1] = closure_14(closure_7, obj4);
@@ -267,8 +269,8 @@ function SidekickMessageInput(user) {
   return tmp12Result;
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6186);
+({ Pressable: closure_6, View: metroImportDefault } = get_ActivityIndicator);
+const CheckpointConstants = fn(6201);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);

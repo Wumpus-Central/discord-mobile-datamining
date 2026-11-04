@@ -13,7 +13,7 @@ function ConfirmActivityGateContent(children) {
   const obj = { style: tmp.alertContainer, children: null };
   items = [
     React4(ActivityAnnouncementDefault, {}),
-    React4(Text_Text.Text, { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description }),
+    React4(Text_Text.Text, { style: tmp.alertBodyText, variant: "body-md/normal", children: children.description }),
   ];
   obj.children = items;
   return hasOwnProperty(View, obj);

@@ -33,7 +33,6 @@ const obj = {
   ]),
   PRIVATE: null,
   TEAM_USER: null,
-  PERSONAL_ACCESS_TOKEN: null,
   EMBEDDED_APPS: null,
   CLIENT_CREDENTIALS: null,
   CONFIDENTIAL_REQUEST_SCOPES: null,
@@ -167,38 +166,36 @@ const set2 = new Set([
   "applications.store.update",
   "identify",
 ]);
-obj.PERSONAL_ACCESS_TOKEN = new Set(["connections", "guilds", "guilds.members.read", "identify"]);
-const set3 = new Set(["connections", "guilds", "guilds.members.read", "identify"]);
 obj.EMBEDDED_APPS = new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]);
-const set4 = new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]);
+const set3 = new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]);
 obj.CLIENT_CREDENTIALS = new Set(["applications.commands.update"]);
-const set5 = new Set(["applications.commands.update"]);
+const set4 = new Set(["applications.commands.update"]);
 obj.CONFIDENTIAL_REQUEST_SCOPES = new Set(["role_connections.write"]);
-const set6 = new Set(["role_connections.write"]);
+const set5 = new Set(["role_connections.write"]);
 obj.BYPASS = new Set(["applications.commands", "bot"]);
-const set7 = new Set(["applications.commands", "bot"]);
+const set6 = new Set(["applications.commands", "bot"]);
 obj.BASE_INTEGRATION = new Set(["applications.commands"]);
-const set8 = new Set(["applications.commands"]);
+const set7 = new Set(["applications.commands"]);
 obj.GUILD_INTEGRATION = new Set(["applications.commands", "bot", "webhook.incoming"]);
-const set9 = new Set(["applications.commands", "bot", "webhook.incoming"]);
+const set8 = new Set(["applications.commands", "bot", "webhook.incoming"]);
 obj.USER_INTEGRATION = new Set(["applications.commands", "managed_platform.application_identities.write"]);
-const set10 = new Set(["applications.commands", "managed_platform.application_identities.write"]);
+const set9 = new Set(["applications.commands", "managed_platform.application_identities.write"]);
 obj.GUILD_INTEGRATION_EXCLUSIVE = new Set(["bot", "webhook.incoming"]);
-const set11 = new Set(["bot", "webhook.incoming"]);
+const set10 = new Set(["bot", "webhook.incoming"]);
 obj.ALL_INTEGRATION_SCOPES = new Set([
   "applications.commands",
   "bot",
   "managed_platform.application_identities.write",
   "webhook.incoming",
 ]);
-const set12 = new Set([
+const set11 = new Set([
   "applications.commands",
   "bot",
   "managed_platform.application_identities.write",
   "webhook.incoming",
 ]);
 obj.PRIVATE_CHANNEL_INTEGRATION = new Set(["applications.commands"]);
-const set13 = new Set(["applications.commands"]);
+const set12 = new Set(["applications.commands"]);
 obj.SLAYER_UMBRELLA_DEFAULT_SCOPES_MASK = new Set([
   "activities.invites.write",
   "activities.read",
@@ -215,7 +212,7 @@ obj.SLAYER_UMBRELLA_DEFAULT_SCOPES_MASK = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-const set14 = new Set([
+const set13 = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -232,10 +229,10 @@ const set14 = new Set([
   "relationships.write",
 ]);
 obj.SLAYER_INTEGRATION_PROVISIONAL_ACCOUNT = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
-const set15 = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
+const set14 = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
 obj.UMBRELLA = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
 const obj2 = { "sdk.social_layer_presence": null, "sdk.social_layer": null };
-const set16 = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
+const set15 = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
 obj2["sdk.social_layer_presence"] = new Set([
   "activities.invites.write",
   "activities.read",
@@ -247,7 +244,7 @@ obj2["sdk.social_layer_presence"] = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-const set17 = new Set([
+const set16 = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -276,7 +273,7 @@ obj2["sdk.social_layer"] = new Set([
   "relationships.write",
 ]);
 obj.UMBRELLA_PERMISSIBLE_SCOPES = obj2;
-const set18 = new Set([
+const set17 = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -294,7 +291,7 @@ const set18 = new Set([
   "relationships.write",
 ]);
 obj.SDK_SOCIAL_LAYER_UMBRELLA_SCOPES = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
-const set19 = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
+const set18 = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
 obj.SDK_SOCIAL_LAYER_UMBRELLA_DEFAULT_SCOPES = new Set([
   "activities.invites.write",
   "activities.read",
@@ -311,7 +308,7 @@ obj.SDK_SOCIAL_LAYER_UMBRELLA_DEFAULT_SCOPES = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-const set20 = new Set([
+const set19 = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -328,12 +325,12 @@ const set20 = new Set([
   "relationships.write",
 ]);
 obj.CONNECTED_ACCOUNT_SDK_SCOPES = new Set(["activities.write", "managed_platform.application_identities.write"]);
-const set21 = new Set(["activities.write", "managed_platform.application_identities.write"]);
+const set20 = new Set(["activities.write", "managed_platform.application_identities.write"]);
 obj.APPLICATION_IDENTITIES_SCOPES = new Set([
   "application_identities.write",
   "managed_platform.application_identities.write",
 ]);
-const set22 = new Set(["application_identities.write", "managed_platform.application_identities.write"]);
+const set21 = new Set(["application_identities.write", "managed_platform.application_identities.write"]);
 obj.PERSONAL = new Set([
   "personal.activities.write",
   "personal.dm_channels.messages.read",
@@ -345,7 +342,7 @@ obj.PERSONAL = new Set([
   "personal.mentions.read",
   "personal.relationships.read",
 ]);
-const set23 = new Set([
+const set22 = new Set([
   "personal.activities.write",
   "personal.dm_channels.messages.read",
   "personal.dm_channels.messages.search",
@@ -365,7 +362,7 @@ obj.SCOPES_CAN_READ_MESSAGES = new Set([
   "personal.guilds.messages.search",
   "personal.mentions.read",
 ]);
-const set24 = new Set([
+const set23 = new Set([
   "dm_channels.messages.read",
   "messages.read",
   "personal.dm_channels.messages.read",

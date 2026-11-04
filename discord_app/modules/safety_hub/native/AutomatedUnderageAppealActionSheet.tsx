@@ -12,8 +12,8 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8094);
-({ AGE_APPEAL_ACTION_SHEET_NAME: metroRequire, SafetyHubLinks: closure_7 } = SafetyHubConstants);
+const SafetyHubConstants = fn(8110);
+({ AGE_APPEAL_ACTION_SHEET_NAME: closure_6, SafetyHubLinks: metroImportDefault } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -120,26 +120,26 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   const obj8 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onClose(1113).intl;
   obj8.children = intl.string(onClose(1113).t["9SDLnj"]);
-  const items5 = [closure_8(onClose(5747).Text, obj8)];
-  const obj9 = { variant: "heading-md/medium", color: "text-default", children: null };
+  const items5 = [closure_8(onClose(5761).Text, obj8)];
+  const obj9 = { variant: "heading-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1113).intl;
   obj9.children = intl2.string(onClose(1113).t["yvx//1"]);
-  items5[1] = closure_8(onClose(5747).Text, obj9);
+  items5[1] = closure_8(onClose(5761).Text, obj9);
   obj7.children = items5;
   const items6 = [closure_9(callback, obj7), , ,];
   const obj10 = { children: null };
   let obj2 = onClose(504);
-  obj10.children = closure_8(onClose(7186).TableRowGroup, {
+  obj10.children = closure_8(onClose(7201).TableRowGroup, {
     hasIcons: true,
     children: items.map((item, index) => {
       ({ title, description } = item);
       const obj = { label: title, subLabel: description, icon: null };
       const obj2 = {
         style: number.number,
-        children: React6(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index + 1 }),
+        children: React5(Text_Text.Text, { variant: "heading-sm/semibold", color: "text-brand", children: index + 1 }),
       };
-      obj.icon = React6(View, obj2);
-      return React6(TableRow.TableRow, obj, index);
+      obj.icon = React5(View, obj2);
+      return React5(TableRow.TableRow, obj, index);
     }),
   });
   items6[1] = closure_8(callback, obj10);
@@ -155,8 +155,8 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   obj14.onPress = function openForm() {
     return classificationId(number[19]).openURL(constants.AGE_VERIFICATION_LINK);
   };
-  obj13.children = closure_8(onClose(7101).TableRow, obj14);
-  obj12.children = closure_8(onClose(7186).TableRowGroup, obj13);
+  obj13.children = closure_8(onClose(7116).TableRow, obj14);
+  obj12.children = closure_8(onClose(7201).TableRowGroup, obj13);
   items6[2] = closure_8(callback, obj12);
   const obj15 = { style: tmp.footer, children: null };
   const obj16 = {
@@ -169,15 +169,15 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   };
   const intl6 = onClose(1113).intl;
   obj16.text = intl6.string(onClose(1113).t["54b8V0"]);
-  const items7 = [closure_8(onClose(5754).Button, obj16)];
-  const obj17 = { variant: "heading-sm/medium", color: "text-subtle", style: tmp.learnMore, children: null };
+  const items7 = [closure_8(onClose(5768).Button, obj16)];
+  const obj17 = { variant: "heading-xs/medium", color: "text-subtle", style: tmp.learnMore, children: null };
   const intl7 = onClose(1113).intl;
   obj17.children = intl7.format(onClose(1113).t.ZbWsOF, { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK });
-  items7[1] = closure_8(onClose(5747).Text, obj17);
+  items7[1] = closure_8(onClose(5761).Text, obj17);
   obj15.children = items7;
   items6[3] = closure_9(callback, obj15);
   obj5.children = items6;
   obj4.children = closure_9(callback, obj5);
-  obj3.children = closure_8(onClose(5398).BottomSheetScrollView, obj4);
-  return closure_8(onClose(5395).BottomSheet, obj3);
+  obj3.children = closure_8(onClose(5400).BottomSheetScrollView, obj4);
+  return closure_8(onClose(5396).BottomSheet, obj3);
 }

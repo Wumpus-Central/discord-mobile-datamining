@@ -113,7 +113,7 @@ class QuestThemePicker {
       const items1 = [
         callback(isSynced, { style: items }),
         callback(backgroundColor(allMobileThemes[17]).Text, {
-          variant: "text-xs/medium",
+          variant: "body-xs/medium",
           color: "text-muted",
           style: backgroundColor.themeLabel,
           children: backgroundColor.name,
@@ -126,7 +126,7 @@ class QuestThemePicker {
     obj14 = { style: tmp.resetIcon, children: closure_10(closure_0(closure_2[18]).RefreshIcon, { size: "sm" }) };
     items8 = [,];
     items8[0] = closure_10(isSynced, obj14);
-    obj15 = { variant: "text-xs/medium", color: "text-muted", style: tmp.themeLabel, children: null };
+    obj15 = { variant: "body-xs/medium", color: "text-muted", style: tmp.themeLabel, children: null };
     intl = closure_0(closure_2[19]).intl;
     obj15.children = intl.string(closure_0(closure_2[19]).t.yBZMsQ);
     items8[1] = closure_10(closure_0(closure_2[17]).Text, obj15);

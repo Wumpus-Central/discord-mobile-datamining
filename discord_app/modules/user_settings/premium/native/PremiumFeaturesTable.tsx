@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef15505 from "../../../../../_runtime/metro/15505__.js";
-import _modDef15506 from "../../../../../_runtime/metro/15506__.js";
+import _modDef15592 from "../../../../../_runtime/metro/15592__.js";
+import _modDef15593 from "../../../../../_runtime/metro/15593__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,20 +18,20 @@ function CheckIcon() {
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   return closure_1_11(native.Icon, {
-    source: _modDef15505,
+    source: _modDef15592,
     color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860,
     size: native.IconSizes.SMALL,
   });
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef15506, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef15593, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
 function CellText(arg0) {
   ({ text, style } = arg0);
   return closure_1_11(Text_Text.Text, {
     style,
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "mobile-text-heading-primary",
     children,
   });
@@ -233,7 +233,7 @@ const View = fn(17).View;
 const HorizontalGradient = fn(1072).HorizontalGradient;
 const PremiumConstants = fn(1387);
 ({
-  NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7,
+  NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: metroImportDefault,
   PRICE_PLACEHOLDER: closure_8,
   PremiumTypes: closure_9,
   SubscriptionPlans: closure_10,
@@ -269,7 +269,7 @@ obj2.cell = { paddingVertical: 12 };
 obj2.labelCell = { flex: 1, justifyContent: "flex-start" };
 obj2.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-obj2.themedHighlightedCell = { backgroundColor: fn(6898).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj2.themedHighlightedCell = { backgroundColor: fn(6913).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj2.nitroHomeHightlightedBorderLeftRight = {
   borderLeftColor: "rgba(184, 69, 193, 0.5)",
   borderLeftWidth: 2,
@@ -282,7 +282,7 @@ obj2.priceText = { textAlign: "center" };
 let closure_14 = createStyles.createStyles(obj2);
 createStyles = fn(5141);
 let obj7 = { icon: null };
-let obj5 = { backgroundColor: fn(6898).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj5 = { backgroundColor: fn(6913).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj7.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj7);
 let size = fn(2);
@@ -434,13 +434,13 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   const intl10 = tmp9(tmp3[15]).intl;
   obj14.rowName = intl10.string(tmp9(tmp3[15]).t["ufhQC+"]);
   obj14.column1 = closure_11(tmp9(tmp3[14]).Text, {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "mobile-text-heading-primary",
     children: maxFileSizeForPremiumType,
   });
   obj14.column1AccessibilityLabel = maxFileSizeForPremiumType;
   obj14.column2 = closure_11(tmp9(tmp3[14]).Text, {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "mobile-text-heading-primary",
     children: maxFileSizeForPremiumType1,
   });

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelListPreviewNitroUpsell.tsx
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05723_LinearGradient.js";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import openPremiumModalDefault from "../../../../../components_native/premium/openPremiumModal.tsx";
@@ -15,7 +15,7 @@ require = fn;
 function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   let analyticsLocations;
   const tmp = closure_16();
-  items = [closure_17, theme.theme, closure_9, c4, analyticsLocations(5757).withSpring, analyticsLocations(5758).springStandard];
+  items = [closure_17, theme.theme, closure_9, c4, analyticsLocations(5771).withSpring, analyticsLocations(5772).springStandard];
   analyticsLocations = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -53,7 +53,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   obj4.text = intl.string(analyticsLocations(1113).t.pj0XBN);
   obj4.icon = closure_10(analyticsLocations(1187).NitroWheel, { style: tmp.nitroWheelIcon });
   obj4.onPress = callback;
-  items3[1] = closure_10(analyticsLocations(5754).Button, obj4);
+  items3[1] = closure_10(analyticsLocations(5768).Button, obj4);
   obj2.children = items3;
   return closure_11(View, obj2);
 }
@@ -61,12 +61,12 @@ get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const Constants = fn(1072);
-({ AnalyticsPages: closure_7, AnalyticsSections: closure_8, ThemeTypes: closure_9 } = Constants);
+({ AnalyticsPages: metroImportDefault, AnalyticsSections: closure_8, ThemeTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"];
-let items = [{ code: "(function animationEntering_SettingsAppearanceChannelListPreviewNitroUpsellTsx1(visible){let[withSpring,springStandard]=this.__closure;return{opacity:withSpring(visible,springStandard)};})" }, fn(5757).withSpring, fn(5758).springStandard];
+let items = [{ code: "(function animationEntering_SettingsAppearanceChannelListPreviewNitroUpsellTsx1(visible){let[withSpring,springStandard]=this.__closure;return{opacity:withSpring(visible,springStandard)};})" }, fn(5771).withSpring, fn(5772).springStandard];
 let closure_129_0;
 let closure_129_1;
 [tmp5, tmp6, tmp7] = items;
@@ -77,7 +77,7 @@ let items1 = [tmp6, tmp7];
 animationEntering.__closure = items1;
 animationEntering.__workletHash = 2802270631824;
 animationEntering.__initData = tmp5;
-let items2 = [{ code: "(function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3(visible,cleanUp){let[withSpring,springStandard,_worklet_1236385840160_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3([_worklet_1236385840160_init_data,cleanUp]){const SettingsAppearanceChannelListPreviewNitroUpsellTsx2=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__closure=[cleanUp];SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__workletHash=1236385840160;SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__initData=_worklet_1236385840160_init_data;return SettingsAppearanceChannelListPreviewNitroUpsellTsx2;}([_worklet_1236385840160_init_data,cleanUp]))};})" }, fn(5757).withSpring, fn(5758).springStandard, { code: "(function SettingsAppearanceChannelListPreviewNitroUpsellTsx2(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
+let items2 = [{ code: "(function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3(visible,cleanUp){let[withSpring,springStandard,_worklet_1236385840160_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3([_worklet_1236385840160_init_data,cleanUp]){const SettingsAppearanceChannelListPreviewNitroUpsellTsx2=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__closure=[cleanUp];SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__workletHash=1236385840160;SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__initData=_worklet_1236385840160_init_data;return SettingsAppearanceChannelListPreviewNitroUpsellTsx2;}([_worklet_1236385840160_init_data,cleanUp]))};})" }, fn(5771).withSpring, fn(5772).springStandard, { code: "(function SettingsAppearanceChannelListPreviewNitroUpsellTsx2(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
 let closure_130_0;
 let closure_130_1;
 let closure_130_2;

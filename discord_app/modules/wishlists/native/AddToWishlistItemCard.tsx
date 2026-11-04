@@ -43,18 +43,18 @@ export default function AddToWishlistItemCard(sku) {
   items = [sku, tmp2.heartOverlay, merged.size];
   const callback = wishlistAnalyticsContext.useCallback(() => {
     const obj = { children: null };
-    items = [React6(SKUPreviewDefault, { sku, size: merged.size })];
+    items = [React5(SKUPreviewDefault, { sku, size: merged.size })];
     const obj3 = {
       style: heartOverlay.heartOverlay,
       pointerEvents: "none",
-      children: React6(HeartOutlineIcon.HeartOutlineIcon, {
+      children: React5(HeartOutlineIcon.HeartOutlineIcon, {
         size: "sm",
         color: nativeDefault.colors.ICON_OVERLAY_LIGHT,
       }),
     };
-    items[1] = React6(View, obj3);
+    items[1] = React5(View, obj3);
     obj.children = items;
-    return closure_2_10(React7, obj);
+    return closure_2_10(React6, obj);
   }, items);
   const items1 = [first, wishlistAnalyticsContext, , , ,];
   ({ id: arr2[2], productLine: arr2[3] } = sku);

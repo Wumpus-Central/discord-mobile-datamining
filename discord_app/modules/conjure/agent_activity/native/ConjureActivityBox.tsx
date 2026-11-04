@@ -7,7 +7,7 @@ import ConjureSubagentMark from "ConjureSubagentMark.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ConjureNativeStepImagesDefault = tmp5(12854);
+const ConjureNativeStepImagesDefault = tmp5(12935);
 require = fn;
 function TurnStatusLine(epoch) {
   ({ projectId: require, tree, turnActive } = epoch);
@@ -163,7 +163,7 @@ function LaneStatusLine(arg0) {
           detail.map((children, index) =>
             closure_1_6(
               projectId(epoch[15]).Text,
-              { variant: "text-xs/normal", color: "text-feedback-critical", children },
+              { variant: "body-xs/normal", color: "text-feedback-critical", children },
               index,
             ),
           ),
@@ -224,7 +224,7 @@ function TimelineRow(inGutter) {
     trailing: null,
   };
   let tmp7 = ConjureNativeStatusLineDefault;
-  obj.line = node(12726).describeNode(node);
+  obj.line = node(12807).describeNode(node);
   obj.live = flag2;
   let tmp9 = !flag2;
   if (!flag2) {
@@ -243,12 +243,12 @@ function TimelineRow(inGutter) {
   let tmp4Result = null;
   if (null != node.durationMs) {
     let obj3 = {
-      variant: "text-xs/normal",
+      variant: "body-xs/normal",
       color: "text-subtle",
-      children: node(12237).describeDuration(node.durationMs),
+      children: node(12298).describeDuration(node.durationMs),
     };
-    tmp4Result = closure_6(node(5747).Text, obj3);
-    const tmp8Result = node(12237);
+    tmp4Result = closure_6(node(5761).Text, obj3);
+    const tmp8Result = node(12298);
   }
   obj.trailing = tmp4Result;
   const children = [closure_6(tmp7, obj), ,];
@@ -263,7 +263,7 @@ function TimelineRow(inGutter) {
       }
       const tmpResult = timestampProducer(
         Text_Text.Text,
-        { variant: "text-sm/normal", color: "text-muted", style: stepCommand, children },
+        { variant: "body-sm/normal", color: "text-muted", style: stepCommand, children },
         index,
       );
       let tmp7 = node.detailError[index];
@@ -279,7 +279,7 @@ function TimelineRow(inGutter) {
         obj3.children = timestampProducer(WarningIcon.WarningIcon, obj4);
         items[1] = timestampProducer(View, obj3);
         obj2.children = items;
-        tmp8 = React5(View, obj2, index);
+        tmp8 = metroImportDefault(View, obj2, index);
       }
       return tmp8;
     });
@@ -301,18 +301,18 @@ function TimelineRow(inGutter) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
-  activityBox: { marginLeft: -fn(12770).RAIL_INDENT },
+  activityBox: { marginLeft: -fn(12851).RAIL_INDENT },
   activityDetail: null,
   stepDetail: null,
   stepLine: null,
   stepCommand: null,
 };
-let obj3 = { marginLeft: -fn(12770).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(12770).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(12770).RAIL_INDENT };
+let obj3 = { marginLeft: -fn(12851).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(12851).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(12851).RAIL_INDENT };
 obj2.stepDetail = {
   marginTop: nativeDefault.space.PX_4,
   paddingLeft: nativeDefault.space.PX_12,

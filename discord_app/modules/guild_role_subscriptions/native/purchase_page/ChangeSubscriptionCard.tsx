@@ -12,12 +12,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function emphasisHook(children) {
-  return React5(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children });
+  return metroImportDefault(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children });
 }
 const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { paddingVertical: 16, paddingHorizontal: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -44,11 +44,11 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const intl = activeSubscription(1113).intl;
   obj6.children = intl.format(activeSubscription(1113).t.l3uCCX, { activeListingName: first });
   const items1 = [
-    closure_7(activeSubscription(5747).Text, obj6),
+    closure_7(activeSubscription(5761).Text, obj6),
     closure_7(activeSubscription(1187).Spacer, { size: 16 }),
     ,
   ];
-  const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj7 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = activeSubscription(1113).intl;
   const obj5 = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
   const items2 = [
@@ -63,7 +63,7 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const intl3 = activeSubscription(1113).intl;
   items2[2] = intl3.format(activeSubscription(1113).t.KIiWca, { emphasisHook });
   obj7.children = items2;
-  items1[2] = closure_8(activeSubscription(5747).Text, obj7);
+  items1[2] = closure_8(activeSubscription(5761).Text, obj7);
   let tmp7Result = null;
   if (activeSubscription.status !== SubscriptionStatusTypes.CANCELED) {
     const obj10 = { children: null };
@@ -72,13 +72,13 @@ export default function ChangeSubscriptionCard(activeSubscription) {
     const intl4 = tmp6(1113).intl;
     obj11.text = intl4.string(tmp6(1113).t.UwHVxr);
     obj11.onPress = function handleCancelSubscription() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18789, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18890, dependencyMap.paths), {
         subscriptionId: activeSubscription.id,
       });
       const obj2 = { subscriptionId: activeSubscription.id };
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    items3[1] = closure_7(tmp6(18781).ArrowButton, obj11);
+    items3[1] = closure_7(tmp6(18882).ArrowButton, obj11);
     obj10.children = items3;
     tmp7Result = closure_8(closure_9, obj10);
   }
@@ -91,5 +91,5 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const obj9 = { emphasisHook };
   items1[3] = tmp7Result;
   obj4.children = items1;
-  return closure_7(activeSubscription(5395).BottomSheet, { startExpanded: true, children: closure_8(View, obj4) });
+  return closure_7(activeSubscription(5396).BottomSheet, { startExpanded: true, children: closure_8(View, obj4) });
 }

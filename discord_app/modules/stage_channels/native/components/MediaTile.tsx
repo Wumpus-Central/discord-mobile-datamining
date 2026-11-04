@@ -5,7 +5,7 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const ParticipantTypes = fn(5801).ParticipantTypes;
+const ParticipantTypes = fn(5815).ParticipantTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = {
@@ -22,11 +22,11 @@ export default noop.memo(function MediaTile(channel) {
   const participant = channel.participant;
   const size = channel.size;
   const tmp = closure_7();
-  const speakerTileStyles = channel(12164).useSpeakerTileStyles();
-  const obj = channel(12164);
+  const speakerTileStyles = channel(12223).useSpeakerTileStyles();
+  const obj = channel(12223);
   const tmp5 = participant;
-  const isScreenLandscape = channel(8897).useIsScreenLandscape();
-  const obj2 = channel(8897);
+  const isScreenLandscape = channel(8914).useIsScreenLandscape();
+  const obj2 = channel(8914);
   items = [ChannelRTCStore];
   const items1 = [channel.id, participant.id];
   const stateFromStores = channel(504).useStateFromStores(
@@ -39,9 +39,9 @@ export default noop.memo(function MediaTile(channel) {
     tmp8 = null;
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       const obj4 = { style: null, children: null };
-      const items2 = [tmp.container, tmp2(12164).getSizeStyle(size, speakerTileStyles)];
-      const tmp2Result = tmp2(12164);
-      items2[2] = tmp2(12164).getTileWidthStyle(size, participant(1493)().width, isScreenLandscape);
+      const items2 = [tmp.container, tmp2(12223).getSizeStyle(size, speakerTileStyles)];
+      const tmp2Result = tmp2(12223);
+      items2[2] = tmp2(12223).getTileWidthStyle(size, participant(1493)().width, isScreenLandscape);
       obj4.style = items2;
       const obj5 = {
         hasBottomSafeArea: false,
@@ -54,11 +54,11 @@ export default noop.memo(function MediaTile(channel) {
         shrinkStreamEmptyState: false,
         contentStyle: null,
       };
-      const tmp2Result2 = tmp2(12164);
+      const tmp2Result2 = tmp2(12223);
       obj5.avatarSize = tmp2(1187).AvatarSizes.XLARGE;
       obj5.channel = channel;
       obj5.contentStyle = tmp.media;
-      obj4.children = jsx(tmp5(12174), {
+      obj4.children = jsx(tmp5(12233), {
         hasBottomSafeArea: false,
         hasLeftSafeArea: false,
         hasRightSafeArea: false,
@@ -70,7 +70,7 @@ export default noop.memo(function MediaTile(channel) {
         contentStyle: null,
       });
       tmp8 = <View style={null}>{null}</View>;
-      const tmp5Result = tmp5(12174);
+      const tmp5Result = tmp5(12233);
     }
   }
   return tmp8;

@@ -46,7 +46,7 @@ export default function ConjureSettingsRequestCard(projectId) {
   if (conjureSettingsAsk.superseded) {
     if (!done) {
       const obj3 = { style: tmp.card, children: null };
-      const obj4 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+      const obj4 = { variant: "body-xs/semibold", color: "text-muted", children: null };
       const intl = Text(obj[9]).intl;
       obj4.children = intl.string(request(obj[10])["+uXDk+"]);
       obj3.children = closure_4(Text(obj[8]).Text, obj4);
@@ -57,21 +57,21 @@ export default function ConjureSettingsRequestCard(projectId) {
   let obj2 = projectId(flag[4]);
   let Text1 = Text(obj[8]).Text;
   if (done) {
-    const obj6 = { variant: "text-xs/semibold", color: "text-feedback-positive", children: null };
+    const obj6 = { variant: "body-xs/semibold", color: "text-feedback-positive", children: null };
     const intl5 = Text(obj[9]).intl;
     obj6.children = intl5.string(tmp8(obj[10]).AxBLLy);
     const items1 = [closure_4(Text1, obj6)];
     Text1 = null;
     if (summary.length > 0) {
       Text = Text(obj[8]).Text;
-      obj = { variant: "text-sm/normal", color: "text-default", children: summary.join(" \u00B7 ") };
+      obj = { variant: "body-sm/normal", color: "text-default", children: summary.join(" \u00B7 ") };
       Text1 = closure_4(Text, obj);
     }
     items1[1] = Text1;
     obj5.children = items1;
     let tmp14 = obj5;
   } else {
-    const obj7 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+    const obj7 = { variant: "body-xs/semibold", color: "text-muted", children: null };
     const intl2 = Text(obj[9]).intl;
     obj7.children = intl2.string(tmp8(obj[10])["jZjP+I"]);
     const items2 = [closure_4(Text1, obj7), ,];
@@ -79,7 +79,7 @@ export default function ConjureSettingsRequestCard(projectId) {
       if ("" !== request.note) {
         let note = request.note;
       }
-      const obj8 = { text: note, variant: "text-sm/normal", color: "text-default" };
+      const obj8 = { text: note, variant: "body-sm/normal", color: "text-default" };
       items2[1] = closure_4(tmp12, obj8);
       const obj9 = { variant: "secondary", size: "sm", onPress: callback, text: null };
       const intl4 = Text(obj[9]).intl;

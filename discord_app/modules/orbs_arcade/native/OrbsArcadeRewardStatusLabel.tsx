@@ -19,7 +19,7 @@ export default function OrbsArcadeRewardStatusLabel(status) {
   status = status.status;
   ({ reward, color } = status);
   const obj = { style: closure_6().statusLabel, children: null };
-  const obj2 = { variant: "heading-sm/semibold", color, children: null };
+  const obj2 = { variant: "heading-xs/semibold", color, children: null };
   if (OrbsArcadeTypes.OrbsArcadeRewardStatus.CLAIMED === status) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.R6Ksr9);

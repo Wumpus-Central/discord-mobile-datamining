@@ -18,7 +18,7 @@ function GroupDMInviteManagement(channelId) {
   [first, dependencyMap] = noop.useState([]);
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   closure_3 = tmp3[1];
-  first(5716)(() => {
+  first(5729)(() => {
     closure_0 = async function _fetchInvites() {
       if (v3 === 2) {
         v3 = 3;
@@ -118,22 +118,22 @@ function GroupDMInviteManagement(channelId) {
   );
   const callback = noop.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp12 = jsx(channelId(7329).SceneLoadingIndicator, {});
+    let tmp12 = jsx(channelId(7345).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(10956), darkSource: tmp4(10957), title: null, body: null };
+    let obj2 = { lightSource: tmp4(11004), darkSource: tmp4(11005), title: null, body: null };
     const intl = channelId(1113).intl;
     obj2.title = intl.string(channelId(1113).t["+nLJkZ"]);
     const intl2 = channelId(1113).intl;
     obj2.body = intl2.string(channelId(1113).t.F53CAc);
     tmp12 = jsx(channelId(1187).EmptyState, {
-      lightSource: tmp4(10956),
-      darkSource: tmp4(10957),
+      lightSource: tmp4(11004),
+      darkSource: tmp4(11005),
       title: null,
       body: null,
     });
   } else {
     let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
-    tmp12 = jsx(channelId(7414).FlashList, {
+    tmp12 = jsx(channelId(7430).FlashList, {
       contentContainerStyle: tmp.listContent,
       data: memo,
       keyExtractor: callback,
@@ -143,8 +143,8 @@ function GroupDMInviteManagement(channelId) {
   return tmp12;
 }
 get_ActivityIndicator = fn(17);
-({ Platform, View: metroRequire } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(8324);
+({ Platform, View: closure_6 } = get_ActivityIndicator);
+const ChannelSettingsStore = fn(8340);
 const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_8, Endpoints: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -172,5 +172,5 @@ export default noop.memo(function GroupDMInviteManagementScreen(channelId) {
     obj[constants.INSTANT_INVITES_MANAGEMENT] = obj2;
     return obj;
   }, items);
-  return jsx(channelId(7290).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(7306).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });

@@ -27,7 +27,7 @@ export default function MessagesHeaderItem(animatedStyles) {
   const obj2 = {
     animated: true,
     style: animatedStyles.animatedStyles.textNormal,
-    variant: "text-lg/semibold",
+    variant: "body-lg/semibold",
     children: null,
   };
   const intl = util.intl;
@@ -35,7 +35,7 @@ export default function MessagesHeaderItem(animatedStyles) {
   obj.children = jsx(Text_Text.Text, {
     animated: true,
     style: animatedStyles.animatedStyles.textNormal,
-    variant: "text-lg/semibold",
+    variant: "body-lg/semibold",
     children: null,
   });
   return <View style={closure_4().messagesHeaderContainer}>{null}</View>;

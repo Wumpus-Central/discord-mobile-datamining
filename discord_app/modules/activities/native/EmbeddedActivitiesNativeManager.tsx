@@ -18,7 +18,7 @@ import EmbeddedActivitiesManager from "../EmbeddedActivitiesManager.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, ComponentActions: closure_7 } = Constants);
+({ AnalyticEvents: closure_6, ComponentActions: metroImportDefault } = Constants);
 const PlatformUtils = fn(1377);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {

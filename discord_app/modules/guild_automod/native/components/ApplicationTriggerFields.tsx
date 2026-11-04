@@ -21,7 +21,7 @@ export default function ApplicationTriggerFields(rule) {
   }
   if (null != guildBotApplications) {
     if (0 === guildBotApplications.length) {
-      let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
+      let obj2 = { variant: "body-sm/normal", color: "text-muted", children: null };
       const intl4 = tmp(tmp2[3]).intl;
       obj2.children = intl4.string(tmp(tmp2[3]).t["7/h5vj"]);
       let tmp5Result2 = applicationId(tmp(tmp2[4]).Text, obj2);
@@ -70,7 +70,7 @@ export default function ApplicationTriggerFields(rule) {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(19850, dependencyMap.paths),
+        asyncRequireImpl(19966, dependencyMap.paths),
         "AutomodSelectApplication",
         obj2,
       );

@@ -30,12 +30,12 @@ export default function FormHint(inset) {
     if (!flag) {
       redesignHorizontalPadding = tmp.redesignHorizontalPadding;
     }
-    const obj2 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
+    const obj2 = { variant: "body-sm/medium", color: "text-muted", style: null, children: null };
     items = [redesignHorizontalPadding, style];
     obj2.style = items;
     obj2.children = children;
     let tmp4Result = jsx(Text_Text.Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-muted",
       style: null,
       children: null,

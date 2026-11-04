@@ -411,7 +411,7 @@ let closure_15 = async function _finishUserCodeTwoWayLinkError() {
   })();
 };
 const Constants = fn(1072);
-({ ChannelTypes: metroRequire, Endpoints: closure_7 } = Constants);
+({ ChannelTypes: closure_6, Endpoints: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/oauth2/actions.tsx");
 
@@ -419,7 +419,7 @@ export { getLocationContextServer };
 export function acceptWhitelist(token) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: React5.OAUTH2_WHITELIST_ACCEPT,
+    url: metroImportDefault.OAUTH2_WHITELIST_ACCEPT,
     query: { token },
     oldFormErrors: true,
     rejectWithError: HTTPUtils.rejectWithMigratedError(),

@@ -2,14 +2,14 @@
 import FramesActionCreatorsDefault from "../FramesActionCreators.native.tsx";
 import FramesStore from "../FramesStore.tsx";
 
-function restartFrame(data) {
+function restartFrame(frame) {
   if (tmp) {
-    FramesActionCreatorsDefault.refreshProxyTicket(data.id).catch(() => {});
-    const refreshProxyTicketResult = FramesActionCreatorsDefault.refreshProxyTicket(data.id);
+    FramesActionCreatorsDefault.refreshProxyTicket(frame.id).catch(() => {});
+    const refreshProxyTicketResult = FramesActionCreatorsDefault.refreshProxyTicket(frame.id);
   }
-  tmp = isLaunched(data) && !data.data.proxyTicketRefreshing;
+  tmp = isLaunched(frame) && !frame.data.proxyTicketRefreshing;
 }
-const isLaunched = fn(6967).isLaunched;
+const isLaunched = fn(6982).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/restartFrames.tsx");
 

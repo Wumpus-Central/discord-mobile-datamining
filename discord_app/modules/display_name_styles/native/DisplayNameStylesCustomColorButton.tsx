@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((color) => {
   const size = {
@@ -124,5 +124,5 @@ export default function DisplayNameStylesCustomColorButton(onPress) {
   obj3.children = timestampProducer(hasOwnProperty, obj4);
   items1[2] = timestampProducer(hasOwnProperty, obj3);
   obj.children = items1;
-  return React5(React3, obj);
+  return metroImportDefault(React3, obj);
 }

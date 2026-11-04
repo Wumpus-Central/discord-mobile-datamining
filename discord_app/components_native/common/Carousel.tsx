@@ -1,7 +1,7 @@
 // discord_app/components_native/common/Carousel.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../design/void/native.tsx";
-import LegacyBaseButton from "../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../_runtime/05428_LegacyBaseButton.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;

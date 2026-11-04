@@ -107,14 +107,14 @@ class GiftBackgroundSelect {
   }
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = module_1652.createAnimatedComponent(fn(17).ScrollView);
 const createStyles = fn(5141);
 let obj = {
   scrollView: { flex: 1, marginTop: nativeDefault.space.PX_24 },
   contentContainer: { justifyContent: "center" },
 };
-const React7 = createStyles.createStyles(obj);
+const React6 = createStyles.createStyles(obj);
 let closure_10 = {
   code: "(function PremiumGiftBackgroundSelectTsx1(){let[STANDARD_EASING,withTiming,visibility]=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};})",
 };

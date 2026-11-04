@@ -17,9 +17,10 @@ const require = globalThis.__r;
 
 require = fn;
 const AppLauncherNativeConstants = fn(1498);
-({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
+({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: metroImportDefault, AppLauncherRouteName: closure_8 } =
+  AppLauncherNativeConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const BuiltInSectionId = fn(6155).BuiltInSectionId;
+const BuiltInSectionId = fn(6170).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
@@ -256,7 +257,7 @@ export function getAppLauncherIconSource(application) {
       applicationIconSource = obj2.getApplicationIconSource({ id: null, icon: null, bot: null, botIconFirst: false });
       const obj4 = { id: null, icon: null, bot: null, botIconFirst: false };
     } else {
-      applicationIconSource = obj2.makeSource(React5);
+      applicationIconSource = obj2.makeSource(metroImportDefault);
     }
     isRealApplicationResult = AppLauncherUtils.isRealApplication(application);
   }

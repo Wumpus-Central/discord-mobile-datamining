@@ -30,7 +30,7 @@ export default function MentionSubtitle(channel) {
     React3(channelIconComponentWithGuild, { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon }),
   ];
   const obj4 = {
-    variant: "text-xs/medium",
+    variant: "body-xs/medium",
     color: "text-muted",
     lineClamp: 1,
     style: subtitleStyles.subtitleText,
@@ -41,7 +41,7 @@ export default function MentionSubtitle(channel) {
     channelName,
     count: count - 1,
     channelHook(children, arg1) {
-      return closure_1_3(Text_Text.Text, { variant: "text-xs/medium", children }, arg1);
+      return closure_1_3(Text_Text.Text, { variant: "body-xs/medium", children }, arg1);
     },
   });
   items[1] = React3(Text_Text.Text, obj4);

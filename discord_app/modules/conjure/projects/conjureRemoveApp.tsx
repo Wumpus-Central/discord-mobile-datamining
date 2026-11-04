@@ -3,8 +3,8 @@ import util from "../../../intl/index.native.tsx";
 import _modDef3995 from "../intl/ConjureUntranslated.messages.js";
 import useChannelName from "../../channel/useChannelName.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
-import conjureAppInServer from "conjureAppInServer.tsx";
 import ConjurePublishTypes from "../publish/ConjurePublishTypes.tsx";
+import conjureAppInServer from "conjureAppInServer.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
@@ -27,7 +27,7 @@ function readConjureRemoveTarget(project) {
   }
   if (null != guild) {
     if ("in_server" === obj5.readConjureAppServerPresence(project)) {
-      const result = tmp10(11021).findConjureAppChannels(guild.id, project.application_id);
+      const result = tmp10(11070).findConjureAppChannels(guild.id, project.application_id);
       const found = result.filter((item) => PermissionStore.can(constants.MANAGE_CHANNELS, item));
       const obj = {
         projectName: project.name,
@@ -66,22 +66,22 @@ function readConjureRemoveTarget(project) {
       obj.channelNames = found.map(channelName);
       const found1 = result.filter((item) => !found.includes(item));
       obj.keptChannelNames = found1.map(channelName);
-      const tmp10Result = tmp10(11021);
-      const tmp10Result5 = tmp10(11021);
-      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(11021).conjureProductionBotUserId(project));
+      const tmp10Result = tmp10(11070);
+      const tmp10Result5 = tmp10(11070);
+      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(11070).conjureProductionBotUserId(project));
       let canRemoveConjureBotResult = null == project.preview_application_id;
       if (!canRemoveConjureBotResult) {
-        const tmp10Result7 = tmp10(11021);
+        const tmp10Result7 = tmp10(11070);
         canRemoveConjureBotResult = tmp10Result7.canRemoveConjureBot(
           guild,
-          tmp10(11021).conjurePreviewBotUserId(project),
+          tmp10(11070).conjurePreviewBotUserId(project),
         );
-        const tmp10Result8 = tmp10(11021);
+        const tmp10Result8 = tmp10(11070);
       }
       obj.canRemovePreviewBot = canRemoveConjureBotResult;
       return obj;
     }
-    obj5 = found(11021);
+    obj5 = found(11070);
   }
   return null;
 }

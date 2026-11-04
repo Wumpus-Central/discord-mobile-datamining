@@ -2,21 +2,6 @@
 import Constants from "../Constants.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import UserApplicationIdentityConstants from "../modules/user_application_identity/UserApplicationIdentityConstants.tsx";
-import _mod6695 from "../../_runtime/metro/06695__.js";
-import _mod6696 from "../../_runtime/metro/06696__.js";
-import _mod6697 from "../../_runtime/metro/06697__.js";
-import _mod6698 from "../../_runtime/metro/06698__.js";
-import _mod6699 from "../../_runtime/metro/06699__.js";
-import _mod6700 from "../../_runtime/metro/06700__.js";
-import _mod6701 from "../../_runtime/metro/06701__.js";
-import _mod6702 from "../../_runtime/metro/06702__.js";
-import _mod6703 from "../../_runtime/metro/06703__.js";
-import _mod6704 from "../../_runtime/metro/06704__.js";
-import _mod6705 from "../../_runtime/metro/06705__.js";
-import _mod6706 from "../../_runtime/metro/06706__.js";
-import _mod6707 from "../../_runtime/metro/06707__.js";
-import _mod6708 from "../../_runtime/metro/06708__.js";
-import _mod6709 from "../../_runtime/metro/06709__.js";
 import _mod6710 from "../../_runtime/metro/06710__.js";
 import _mod6711 from "../../_runtime/metro/06711__.js";
 import _mod6712 from "../../_runtime/metro/06712__.js";
@@ -130,6 +115,21 @@ import _mod6819 from "../../_runtime/metro/06819__.js";
 import _mod6820 from "../../_runtime/metro/06820__.js";
 import _mod6821 from "../../_runtime/metro/06821__.js";
 import _mod6822 from "../../_runtime/metro/06822__.js";
+import _mod6823 from "../../_runtime/metro/06823__.js";
+import _mod6824 from "../../_runtime/metro/06824__.js";
+import _mod6825 from "../../_runtime/metro/06825__.js";
+import _mod6826 from "../../_runtime/metro/06826__.js";
+import _mod6827 from "../../_runtime/metro/06827__.js";
+import _mod6828 from "../../_runtime/metro/06828__.js";
+import _mod6829 from "../../_runtime/metro/06829__.js";
+import _mod6830 from "../../_runtime/metro/06830__.js";
+import _mod6831 from "../../_runtime/metro/06831__.js";
+import _mod6832 from "../../_runtime/metro/06832__.js";
+import _mod6833 from "../../_runtime/metro/06833__.js";
+import _mod6834 from "../../_runtime/metro/06834__.js";
+import _mod6835 from "../../_runtime/metro/06835__.js";
+import _mod6836 from "../../_runtime/metro/06836__.js";
+import _mod6837 from "../../_runtime/metro/06837__.js";
 import shims_mod from "../../discord_common/js/packages/tokens/shims.native.tsx";
 import apply from "../../_runtime/metro/00012__.js";
 import size from "../../_runtime/metro/00002__.js";
@@ -148,12 +148,12 @@ let obj = {
 let shims = shims_mod;
 obj.color = shims.unsafe_getRawColor("PLATFORM_TWITCH");
 obj.icon = {
-  lightPNG: _mod6695,
-  darkPNG: _mod6695,
-  whitePNG: _mod6696,
-  lightSVG: _mod6697,
-  darkSVG: _mod6697,
-  whiteSVG: _mod6698,
+  lightPNG: _mod6710,
+  darkPNG: _mod6710,
+  whitePNG: _mod6711,
+  lightSVG: _mod6712,
+  darkSVG: _mod6712,
+  whiteSVG: _mod6713,
 };
 obj.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://www.twitch.tv/" + encodeURIComponent(name.name);
@@ -172,20 +172,20 @@ const obj3 = {
 let shims = shims_mod;
 obj3.color = shims.unsafe_getRawColor("PLATFORM_YOUTUBE");
 const obj2 = {
-  lightPNG: _mod6695,
-  darkPNG: _mod6695,
-  whitePNG: _mod6696,
-  lightSVG: _mod6697,
-  darkSVG: _mod6697,
-  whiteSVG: _mod6698,
+  lightPNG: _mod6710,
+  darkPNG: _mod6710,
+  whitePNG: _mod6711,
+  lightSVG: _mod6712,
+  darkSVG: _mod6712,
+  whiteSVG: _mod6713,
 };
 obj3.icon = {
-  lightPNG: _mod6699,
-  darkPNG: _mod6699,
-  whitePNG: _mod6700,
-  lightSVG: _mod6701,
-  darkSVG: _mod6701,
-  whiteSVG: _mod6702,
+  lightPNG: _mod6714,
+  darkPNG: _mod6714,
+  whitePNG: _mod6715,
+  lightSVG: _mod6716,
+  darkSVG: _mod6716,
+  whiteSVG: _mod6717,
 };
 obj3.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://www.youtube.com/channel/" + encodeURIComponent(id.id);
@@ -203,21 +203,21 @@ const obj5 = {
 let shims = shims_mod;
 obj5.color = shims.unsafe_getRawColor("PLATFORM_BATTLENET");
 const obj4 = {
-  lightPNG: _mod6699,
-  darkPNG: _mod6699,
-  whitePNG: _mod6700,
-  lightSVG: _mod6701,
-  darkSVG: _mod6701,
-  whiteSVG: _mod6702,
+  lightPNG: _mod6714,
+  darkPNG: _mod6714,
+  whitePNG: _mod6715,
+  lightSVG: _mod6716,
+  darkSVG: _mod6716,
+  whiteSVG: _mod6717,
 };
 obj5.icon = {
-  lightPNG: _mod6703,
-  darkPNG: _mod6703,
-  whitePNG: _mod6704,
-  lightSVG: _mod6705,
-  darkSVG: _mod6705,
-  whiteSVG: _mod6706,
-  blackSVG: _mod6705,
+  lightPNG: _mod6718,
+  darkPNG: _mod6718,
+  whitePNG: _mod6719,
+  lightSVG: _mod6720,
+  darkSVG: _mod6720,
+  whiteSVG: _mod6721,
+  blackSVG: _mod6720,
 };
 const obj7 = {
   replacedBy: ApplicationIdentityAppIds.BATTLENET,
@@ -225,13 +225,13 @@ const obj7 = {
   deprecationDate: null,
 };
 const obj6 = {
-  lightPNG: _mod6703,
-  darkPNG: _mod6703,
-  whitePNG: _mod6704,
-  lightSVG: _mod6705,
-  darkSVG: _mod6705,
-  whiteSVG: _mod6706,
-  blackSVG: _mod6705,
+  lightPNG: _mod6718,
+  darkPNG: _mod6718,
+  whitePNG: _mod6719,
+  lightSVG: _mod6720,
+  darkSVG: _mod6720,
+  whiteSVG: _mod6721,
+  blackSVG: _mod6720,
 };
 obj7.deprecationDate = new Date("2026-09-22Z-07:00");
 obj5.migrationData = obj7;
@@ -247,12 +247,12 @@ const obj8 = {
 };
 const date = new Date("2026-09-22Z-07:00");
 obj8.icon = {
-  lightPNG: _mod6707,
-  darkPNG: _mod6707,
-  whitePNG: _mod6708,
-  lightSVG: _mod6709,
-  darkSVG: _mod6709,
-  whiteSVG: _mod6710,
+  lightPNG: _mod6722,
+  darkPNG: _mod6722,
+  whitePNG: _mod6723,
+  lightSVG: _mod6724,
+  darkSVG: _mod6724,
+  whiteSVG: _mod6725,
 };
 obj8.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://bsky.app/profile/" + encodeURIComponent(id.id).replaceAll("%3A", ":");
@@ -262,20 +262,20 @@ const obj10 = { type: PlatformTypes.BUNGIE, name: "Bungie.net", color: null, ico
 let shims = shims_mod;
 obj10.color = shims.unsafe_getRawColor("PLATFORM_BUNGIE");
 const obj9 = {
-  lightPNG: _mod6707,
-  darkPNG: _mod6707,
-  whitePNG: _mod6708,
-  lightSVG: _mod6709,
-  darkSVG: _mod6709,
-  whiteSVG: _mod6710,
+  lightPNG: _mod6722,
+  darkPNG: _mod6722,
+  whitePNG: _mod6723,
+  lightSVG: _mod6724,
+  darkSVG: _mod6724,
+  whiteSVG: _mod6725,
 };
 obj10.icon = {
-  lightPNG: _mod6711,
-  darkPNG: _mod6712,
-  whitePNG: _mod6713,
-  lightSVG: _mod6714,
-  darkSVG: _mod6715,
-  whiteSVG: _mod6716,
+  lightPNG: _mod6726,
+  darkPNG: _mod6727,
+  whitePNG: _mod6728,
+  lightSVG: _mod6729,
+  darkSVG: _mod6730,
+  whiteSVG: _mod6731,
 };
 items[4] = obj10;
 const obj12 = {
@@ -289,20 +289,20 @@ const obj12 = {
 let shims = shims_mod;
 obj12.color = shims.unsafe_getRawColor("PLATFORM_SKYPE");
 const obj11 = {
-  lightPNG: _mod6711,
-  darkPNG: _mod6712,
-  whitePNG: _mod6713,
-  lightSVG: _mod6714,
-  darkSVG: _mod6715,
-  whiteSVG: _mod6716,
+  lightPNG: _mod6726,
+  darkPNG: _mod6727,
+  whitePNG: _mod6728,
+  lightSVG: _mod6729,
+  darkSVG: _mod6730,
+  whiteSVG: _mod6731,
 };
 obj12.icon = {
-  lightPNG: _mod6717,
-  darkPNG: _mod6717,
-  whitePNG: _mod6718,
-  lightSVG: _mod6719,
-  darkSVG: _mod6719,
-  whiteSVG: _mod6720,
+  lightPNG: _mod6732,
+  darkPNG: _mod6732,
+  whitePNG: _mod6733,
+  lightSVG: _mod6734,
+  darkSVG: _mod6734,
+  whiteSVG: _mod6735,
 };
 obj12.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "skype:" + encodeURIComponent(id.id) + "?userinfo";
@@ -319,20 +319,20 @@ const obj14 = {
 let shims = shims_mod;
 obj14.color = shims.unsafe_getRawColor("PLATFORM_LOL");
 const obj13 = {
-  lightPNG: _mod6717,
-  darkPNG: _mod6717,
-  whitePNG: _mod6718,
-  lightSVG: _mod6719,
-  darkSVG: _mod6719,
-  whiteSVG: _mod6720,
+  lightPNG: _mod6732,
+  darkPNG: _mod6732,
+  whitePNG: _mod6733,
+  lightSVG: _mod6734,
+  darkSVG: _mod6734,
+  whiteSVG: _mod6735,
 };
 obj14.icon = {
-  lightPNG: _mod6721,
-  darkPNG: _mod6721,
-  whitePNG: _mod6722,
-  lightSVG: _mod6723,
-  darkSVG: _mod6723,
-  whiteSVG: _mod6724,
+  lightPNG: _mod6736,
+  darkPNG: _mod6736,
+  whitePNG: _mod6737,
+  lightSVG: _mod6738,
+  darkSVG: _mod6738,
+  whiteSVG: _mod6739,
 };
 const obj16 = {
   replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
@@ -340,12 +340,12 @@ const obj16 = {
   deprecationDate: null,
 };
 const obj15 = {
-  lightPNG: _mod6721,
-  darkPNG: _mod6721,
-  whitePNG: _mod6722,
-  lightSVG: _mod6723,
-  darkSVG: _mod6723,
-  whiteSVG: _mod6724,
+  lightPNG: _mod6736,
+  darkPNG: _mod6736,
+  whitePNG: _mod6737,
+  lightSVG: _mod6738,
+  darkSVG: _mod6738,
+  whiteSVG: _mod6739,
 };
 obj16.deprecationDate = new Date("2026-07-10Z-07:00");
 obj14.migrationData = obj16;
@@ -363,12 +363,12 @@ let shims = shims_mod;
 obj17.color = shims.unsafe_getRawColor("PLATFORM_STEAM");
 const date1 = new Date("2026-07-10Z-07:00");
 obj17.icon = {
-  lightPNG: _mod6725,
-  darkPNG: _mod6726,
-  whitePNG: _mod6726,
-  lightSVG: _mod6727,
-  darkSVG: _mod6728,
-  whiteSVG: _mod6728,
+  lightPNG: _mod6740,
+  darkPNG: _mod6741,
+  whitePNG: _mod6741,
+  lightSVG: _mod6742,
+  darkSVG: _mod6743,
+  whiteSVG: _mod6743,
 };
 obj17.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://steamcommunity.com/profiles/" + encodeURIComponent(id.id);
@@ -387,20 +387,20 @@ const obj19 = {
 let shims = shims_mod;
 obj19.color = shims.unsafe_getRawColor("PLATFORM_REDDIT");
 const obj18 = {
-  lightPNG: _mod6725,
-  darkPNG: _mod6726,
-  whitePNG: _mod6726,
-  lightSVG: _mod6727,
-  darkSVG: _mod6728,
-  whiteSVG: _mod6728,
+  lightPNG: _mod6740,
+  darkPNG: _mod6741,
+  whitePNG: _mod6741,
+  lightSVG: _mod6742,
+  darkSVG: _mod6743,
+  whiteSVG: _mod6743,
 };
 obj19.icon = {
-  lightPNG: _mod6729,
-  darkPNG: _mod6729,
-  whitePNG: _mod6730,
-  lightSVG: _mod6731,
-  darkSVG: _mod6731,
-  whiteSVG: _mod6732,
+  lightPNG: _mod6744,
+  darkPNG: _mod6744,
+  whitePNG: _mod6745,
+  lightSVG: _mod6746,
+  darkSVG: _mod6746,
+  whiteSVG: _mod6747,
 };
 obj19.domains = ["reddit.com"];
 obj19.getPlatformUserUrl = function getPlatformUserUrl(name) {
@@ -411,20 +411,20 @@ const obj21 = { type: PlatformTypes.FACEBOOK, name: "Facebook", color: null, ico
 let shims = shims_mod;
 obj21.color = shims.unsafe_getRawColor("PLATFORM_FACEBOOK");
 const obj20 = {
-  lightPNG: _mod6729,
-  darkPNG: _mod6729,
-  whitePNG: _mod6730,
-  lightSVG: _mod6731,
-  darkSVG: _mod6731,
-  whiteSVG: _mod6732,
+  lightPNG: _mod6744,
+  darkPNG: _mod6744,
+  whitePNG: _mod6745,
+  lightSVG: _mod6746,
+  darkSVG: _mod6746,
+  whiteSVG: _mod6747,
 };
 obj21.icon = {
-  lightPNG: _mod6733,
-  darkPNG: _mod6733,
-  whitePNG: _mod6734,
-  lightSVG: _mod6735,
-  darkSVG: _mod6735,
-  whiteSVG: _mod6736,
+  lightPNG: _mod6748,
+  darkPNG: _mod6748,
+  whitePNG: _mod6749,
+  lightSVG: _mod6750,
+  darkSVG: _mod6750,
+  whiteSVG: _mod6751,
 };
 obj21.domains = ["facebook.com"];
 items[9] = obj21;
@@ -441,20 +441,20 @@ const obj23 = {
 let shims = shims_mod;
 obj23.color = shims.unsafe_getRawColor("PLATFORM_TWITTER");
 const obj22 = {
-  lightPNG: _mod6733,
-  darkPNG: _mod6733,
-  whitePNG: _mod6734,
-  lightSVG: _mod6735,
-  darkSVG: _mod6735,
-  whiteSVG: _mod6736,
+  lightPNG: _mod6748,
+  darkPNG: _mod6748,
+  whitePNG: _mod6749,
+  lightSVG: _mod6750,
+  darkSVG: _mod6750,
+  whiteSVG: _mod6751,
 };
 obj23.icon = {
-  lightPNG: _mod6737,
-  darkPNG: _mod6737,
-  whitePNG: _mod6738,
-  lightSVG: _mod6739,
-  darkSVG: _mod6739,
-  whiteSVG: _mod6740,
+  lightPNG: _mod6752,
+  darkPNG: _mod6752,
+  whitePNG: _mod6753,
+  lightSVG: _mod6754,
+  darkSVG: _mod6754,
+  whiteSVG: _mod6755,
 };
 obj23.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://twitter.com/" + encodeURIComponent(name.name);
@@ -474,20 +474,20 @@ const obj25 = {
 let shims = shims_mod;
 obj25.color = shims.unsafe_getRawColor("PLATFORM_TWITTER");
 const obj24 = {
-  lightPNG: _mod6737,
-  darkPNG: _mod6737,
-  whitePNG: _mod6738,
-  lightSVG: _mod6739,
-  darkSVG: _mod6739,
-  whiteSVG: _mod6740,
+  lightPNG: _mod6752,
+  darkPNG: _mod6752,
+  whitePNG: _mod6753,
+  lightSVG: _mod6754,
+  darkSVG: _mod6754,
+  whiteSVG: _mod6755,
 };
 obj25.icon = {
-  lightPNG: _mod6741,
-  darkPNG: _mod6742,
-  whitePNG: _mod6743,
-  lightSVG: _mod6744,
-  darkSVG: _mod6745,
-  whiteSVG: _mod6746,
+  lightPNG: _mod6756,
+  darkPNG: _mod6757,
+  whitePNG: _mod6758,
+  lightSVG: _mod6759,
+  darkSVG: _mod6760,
+  whiteSVG: _mod6761,
 };
 obj25.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://x.com/" + encodeURIComponent(name.name);
@@ -505,20 +505,20 @@ const obj27 = {
 let shims = shims_mod;
 obj27.color = shims.unsafe_getRawColor("PLATFORM_SPOTIFY");
 const obj26 = {
-  lightPNG: _mod6741,
-  darkPNG: _mod6742,
-  whitePNG: _mod6743,
-  lightSVG: _mod6744,
-  darkSVG: _mod6745,
-  whiteSVG: _mod6746,
+  lightPNG: _mod6756,
+  darkPNG: _mod6757,
+  whitePNG: _mod6758,
+  lightSVG: _mod6759,
+  darkSVG: _mod6760,
+  whiteSVG: _mod6761,
 };
 obj27.icon = {
-  lightPNG: _mod6747,
-  darkPNG: _mod6747,
-  whitePNG: _mod6748,
-  lightSVG: _mod6749,
-  darkSVG: _mod6749,
-  whiteSVG: _mod6750,
+  lightPNG: _mod6762,
+  darkPNG: _mod6762,
+  whitePNG: _mod6763,
+  lightSVG: _mod6764,
+  darkSVG: _mod6764,
+  whiteSVG: _mod6765,
 };
 obj27.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://open.spotify.com/user/" + encodeURIComponent(id.id);
@@ -528,42 +528,42 @@ const obj29 = { type: PlatformTypes.XBOX, name: "Xbox", color: null, icon: null,
 let shims = shims_mod;
 obj29.color = shims.unsafe_getRawColor("PLATFORM_XBOX");
 const obj28 = {
-  lightPNG: _mod6747,
-  darkPNG: _mod6747,
-  whitePNG: _mod6748,
-  lightSVG: _mod6749,
-  darkSVG: _mod6749,
-  whiteSVG: _mod6750,
+  lightPNG: _mod6762,
+  darkPNG: _mod6762,
+  whitePNG: _mod6763,
+  lightSVG: _mod6764,
+  darkSVG: _mod6764,
+  whiteSVG: _mod6765,
 };
 obj29.icon = {
-  lightPNG: _mod6751,
-  darkPNG: _mod6752,
-  whitePNG: _mod6752,
-  lightSVG: _mod6753,
-  darkSVG: _mod6754,
-  whiteSVG: _mod6754,
-  customPNG: _mod6755,
+  lightPNG: _mod6766,
+  darkPNG: _mod6767,
+  whitePNG: _mod6767,
+  lightSVG: _mod6768,
+  darkSVG: _mod6769,
+  whiteSVG: _mod6769,
+  customPNG: _mod6770,
 };
 items[13] = obj29;
 const obj31 = { type: PlatformTypes.SAMSUNG, name: "Samsung Galaxy", color: null, icon: null, enabled: false };
 let shims = shims_mod;
 obj31.color = shims.unsafe_getRawColor("PLATFORM_SAMSUNG");
 const obj30 = {
-  lightPNG: _mod6751,
-  darkPNG: _mod6752,
-  whitePNG: _mod6752,
-  lightSVG: _mod6753,
-  darkSVG: _mod6754,
-  whiteSVG: _mod6754,
-  customPNG: _mod6755,
+  lightPNG: _mod6766,
+  darkPNG: _mod6767,
+  whitePNG: _mod6767,
+  lightSVG: _mod6768,
+  darkSVG: _mod6769,
+  whiteSVG: _mod6769,
+  customPNG: _mod6770,
 };
 obj31.icon = {
-  lightPNG: _mod6756,
-  darkPNG: _mod6756,
-  whitePNG: _mod6757,
-  lightSVG: _mod6758,
-  darkSVG: _mod6758,
-  whiteSVG: _mod6759,
+  lightPNG: _mod6771,
+  darkPNG: _mod6771,
+  whitePNG: _mod6772,
+  lightSVG: _mod6773,
+  darkSVG: _mod6773,
+  whiteSVG: _mod6774,
 };
 items[14] = obj31;
 const obj33 = {
@@ -578,20 +578,20 @@ const obj33 = {
 let shims = shims_mod;
 obj33.color = shims.unsafe_getRawColor("PLATFORM_GITHUB");
 const obj32 = {
-  lightPNG: _mod6756,
-  darkPNG: _mod6756,
-  whitePNG: _mod6757,
-  lightSVG: _mod6758,
-  darkSVG: _mod6758,
-  whiteSVG: _mod6759,
+  lightPNG: _mod6771,
+  darkPNG: _mod6771,
+  whitePNG: _mod6772,
+  lightSVG: _mod6773,
+  darkSVG: _mod6773,
+  whiteSVG: _mod6774,
 };
 obj33.icon = {
-  lightPNG: _mod6760,
-  darkPNG: _mod6761,
-  whitePNG: _mod6761,
-  lightSVG: _mod6762,
-  darkSVG: _mod6763,
-  whiteSVG: _mod6763,
+  lightPNG: _mod6775,
+  darkPNG: _mod6776,
+  whitePNG: _mod6776,
+  lightSVG: _mod6777,
+  darkSVG: _mod6778,
+  whiteSVG: _mod6778,
 };
 obj33.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://github.com/" + encodeURIComponent(name.name);
@@ -602,20 +602,20 @@ const obj35 = { type: PlatformTypes.PLAYSTATION, name: "PlayStation Network", co
 let shims = shims_mod;
 obj35.color = shims.unsafe_getRawColor("PLATFORM_PLAYSTATION");
 const obj34 = {
-  lightPNG: _mod6760,
-  darkPNG: _mod6761,
-  whitePNG: _mod6761,
-  lightSVG: _mod6762,
-  darkSVG: _mod6763,
-  whiteSVG: _mod6763,
+  lightPNG: _mod6775,
+  darkPNG: _mod6776,
+  whitePNG: _mod6776,
+  lightSVG: _mod6777,
+  darkSVG: _mod6778,
+  whiteSVG: _mod6778,
 };
 obj35.icon = {
-  lightPNG: _mod6764,
-  darkPNG: _mod6765,
-  whitePNG: _mod6765,
-  lightSVG: _mod6766,
-  darkSVG: _mod6767,
-  whiteSVG: _mod6767,
+  lightPNG: _mod6779,
+  darkPNG: _mod6780,
+  whitePNG: _mod6780,
+  lightSVG: _mod6781,
+  darkSVG: _mod6782,
+  whiteSVG: _mod6782,
 };
 items[16] = obj35;
 const obj37 = {
@@ -628,57 +628,57 @@ const obj37 = {
 let shims = shims_mod;
 obj37.color = shims.unsafe_getRawColor("PLATFORM_PLAYSTATION");
 const obj36 = {
-  lightPNG: _mod6764,
-  darkPNG: _mod6765,
-  whitePNG: _mod6765,
-  lightSVG: _mod6766,
-  darkSVG: _mod6767,
-  whiteSVG: _mod6767,
+  lightPNG: _mod6779,
+  darkPNG: _mod6780,
+  whitePNG: _mod6780,
+  lightSVG: _mod6781,
+  darkSVG: _mod6782,
+  whiteSVG: _mod6782,
 };
 obj37.icon = {
-  lightPNG: _mod6765,
-  darkPNG: _mod6764,
-  whitePNG: _mod6764,
-  lightSVG: _mod6767,
-  darkSVG: _mod6766,
-  whiteSVG: _mod6766,
+  lightPNG: _mod6780,
+  darkPNG: _mod6779,
+  whitePNG: _mod6779,
+  lightSVG: _mod6782,
+  darkSVG: _mod6781,
+  whiteSVG: _mod6781,
 };
 items[17] = obj37;
 const obj39 = { type: PlatformTypes.EPIC_GAMES, name: "Epic Games", icon: null, enabled: true };
 const obj38 = {
-  lightPNG: _mod6765,
-  darkPNG: _mod6764,
-  whitePNG: _mod6764,
-  lightSVG: _mod6767,
-  darkSVG: _mod6766,
-  whiteSVG: _mod6766,
+  lightPNG: _mod6780,
+  darkPNG: _mod6779,
+  whitePNG: _mod6779,
+  lightSVG: _mod6782,
+  darkSVG: _mod6781,
+  whiteSVG: _mod6781,
 };
 obj39.icon = {
-  lightPNG: _mod6768,
-  darkPNG: _mod6769,
-  whitePNG: _mod6769,
-  lightSVG: _mod6770,
-  darkSVG: _mod6771,
-  whiteSVG: _mod6771,
+  lightPNG: _mod6783,
+  darkPNG: _mod6784,
+  whitePNG: _mod6784,
+  lightSVG: _mod6785,
+  darkSVG: _mod6786,
+  whiteSVG: _mod6786,
 };
 items[18] = obj39;
 const obj41 = { type: PlatformTypes.RIOT_GAMES, name: "Riot Games", icon: null, enabled: true, migrationData: null };
 const obj40 = {
-  lightPNG: _mod6768,
-  darkPNG: _mod6769,
-  whitePNG: _mod6769,
-  lightSVG: _mod6770,
-  darkSVG: _mod6771,
-  whiteSVG: _mod6771,
+  lightPNG: _mod6783,
+  darkPNG: _mod6784,
+  whitePNG: _mod6784,
+  lightSVG: _mod6785,
+  darkSVG: _mod6786,
+  whiteSVG: _mod6786,
 };
 obj41.icon = {
-  lightPNG: _mod6772,
-  darkPNG: _mod6772,
-  whitePNG: _mod6773,
-  lightSVG: _mod6774,
-  darkSVG: _mod6774,
-  whiteSVG: _mod6775,
-  blackSVG: _mod6776,
+  lightPNG: _mod6787,
+  darkPNG: _mod6787,
+  whitePNG: _mod6788,
+  lightSVG: _mod6789,
+  darkSVG: _mod6789,
+  whiteSVG: _mod6790,
+  blackSVG: _mod6791,
 };
 const obj43 = {
   replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
@@ -686,13 +686,13 @@ const obj43 = {
   deprecationDate: null,
 };
 const obj42 = {
-  lightPNG: _mod6772,
-  darkPNG: _mod6772,
-  whitePNG: _mod6773,
-  lightSVG: _mod6774,
-  darkSVG: _mod6774,
-  whiteSVG: _mod6775,
-  blackSVG: _mod6776,
+  lightPNG: _mod6787,
+  darkPNG: _mod6787,
+  whitePNG: _mod6788,
+  lightSVG: _mod6789,
+  darkSVG: _mod6789,
+  whiteSVG: _mod6790,
+  blackSVG: _mod6791,
 };
 obj43.deprecationDate = new Date("2026-07-10Z-07:00");
 obj41.migrationData = obj43;
@@ -700,12 +700,12 @@ items[19] = obj41;
 const obj44 = { type: PlatformTypes.ROBLOX, name: "Roblox", icon: null, enabled: true, getPlatformUserUrl: null };
 const date2 = new Date("2026-07-10Z-07:00");
 obj44.icon = {
-  lightPNG: _mod6777,
-  darkPNG: _mod6778,
-  whitePNG: _mod6779,
-  lightSVG: _mod6780,
-  darkSVG: _mod6781,
-  whiteSVG: _mod6782,
+  lightPNG: _mod6792,
+  darkPNG: _mod6793,
+  whitePNG: _mod6794,
+  lightSVG: _mod6795,
+  darkSVG: _mod6796,
+  whiteSVG: _mod6797,
 };
 obj44.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://roblox.com/users/" + encodeURIComponent(id.id) + "/profile";
@@ -713,20 +713,20 @@ obj44.getPlatformUserUrl = function getPlatformUserUrl(id) {
 items[20] = obj44;
 const obj46 = { type: PlatformTypes.PAYPAL, name: "PayPal", icon: null, enabled: true, hasMetadata: true };
 const obj45 = {
-  lightPNG: _mod6777,
-  darkPNG: _mod6778,
-  whitePNG: _mod6779,
-  lightSVG: _mod6780,
-  darkSVG: _mod6781,
-  whiteSVG: _mod6782,
+  lightPNG: _mod6792,
+  darkPNG: _mod6793,
+  whitePNG: _mod6794,
+  lightSVG: _mod6795,
+  darkSVG: _mod6796,
+  whiteSVG: _mod6797,
 };
 obj46.icon = {
-  lightPNG: _mod6783,
-  darkPNG: _mod6783,
-  whitePNG: _mod6784,
-  lightSVG: _mod6785,
-  darkSVG: _mod6785,
-  whiteSVG: _mod6786,
+  lightPNG: _mod6798,
+  darkPNG: _mod6798,
+  whitePNG: _mod6799,
+  lightSVG: _mod6800,
+  darkSVG: _mod6800,
+  whiteSVG: _mod6801,
 };
 items[21] = obj46;
 const obj48 = {
@@ -738,20 +738,20 @@ const obj48 = {
   getPlatformUserUrl: null,
 };
 const obj47 = {
-  lightPNG: _mod6783,
-  darkPNG: _mod6783,
-  whitePNG: _mod6784,
-  lightSVG: _mod6785,
-  darkSVG: _mod6785,
-  whiteSVG: _mod6786,
+  lightPNG: _mod6798,
+  darkPNG: _mod6798,
+  whitePNG: _mod6799,
+  lightSVG: _mod6800,
+  darkSVG: _mod6800,
+  whiteSVG: _mod6801,
 };
 obj48.icon = {
-  lightPNG: _mod6787,
-  darkPNG: _mod6787,
-  whitePNG: _mod6788,
-  lightSVG: _mod6789,
-  darkSVG: _mod6789,
-  whiteSVG: _mod6790,
+  lightPNG: _mod6802,
+  darkPNG: _mod6802,
+  whitePNG: _mod6803,
+  lightSVG: _mod6804,
+  darkSVG: _mod6804,
+  whiteSVG: _mod6805,
 };
 obj48.getPlatformUserUrl = function getPlatformUserUrl(name) {
   return "https://www.ebay.com/usr/" + encodeURIComponent(name.name);
@@ -767,20 +767,20 @@ const obj50 = {
   getPlatformUserUrl: null,
 };
 const obj49 = {
-  lightPNG: _mod6787,
-  darkPNG: _mod6787,
-  whitePNG: _mod6788,
-  lightSVG: _mod6789,
-  darkSVG: _mod6789,
-  whiteSVG: _mod6790,
+  lightPNG: _mod6802,
+  darkPNG: _mod6802,
+  whitePNG: _mod6803,
+  lightSVG: _mod6804,
+  darkSVG: _mod6804,
+  whiteSVG: _mod6805,
 };
 obj50.icon = {
-  lightPNG: _mod6791,
-  darkPNG: _mod6792,
-  whitePNG: _mod6792,
-  lightSVG: _mod6793,
-  darkSVG: _mod6794,
-  whiteSVG: _mod6794,
+  lightPNG: _mod6806,
+  darkPNG: _mod6807,
+  whitePNG: _mod6807,
+  lightSVG: _mod6808,
+  darkSVG: _mod6809,
+  whiteSVG: _mod6809,
 };
 obj50.domains = ["tiktok.com"];
 obj50.getPlatformUserUrl = function getPlatformUserUrl(name) {
@@ -796,20 +796,20 @@ const obj52 = {
   getPlatformUserUrl: null,
 };
 const obj51 = {
-  lightPNG: _mod6791,
-  darkPNG: _mod6792,
-  whitePNG: _mod6792,
-  lightSVG: _mod6793,
-  darkSVG: _mod6794,
-  whiteSVG: _mod6794,
+  lightPNG: _mod6806,
+  darkPNG: _mod6807,
+  whitePNG: _mod6807,
+  lightSVG: _mod6808,
+  darkSVG: _mod6809,
+  whiteSVG: _mod6809,
 };
 obj52.icon = {
-  lightPNG: _mod6795,
-  darkPNG: _mod6795,
-  whitePNG: _mod6796,
-  lightSVG: _mod6797,
-  darkSVG: _mod6797,
-  whiteSVG: _mod6798,
+  lightPNG: _mod6810,
+  darkPNG: _mod6810,
+  whitePNG: _mod6811,
+  lightSVG: _mod6812,
+  darkSVG: _mod6812,
+  whiteSVG: _mod6813,
 };
 obj52.domains = ["instagram.com"];
 obj52.getPlatformUserUrl = function getPlatformUserUrl(name) {
@@ -826,20 +826,20 @@ const obj54 = {
   getPlatformUserUrl: null,
 };
 const obj53 = {
-  lightPNG: _mod6795,
-  darkPNG: _mod6795,
-  whitePNG: _mod6796,
-  lightSVG: _mod6797,
-  darkSVG: _mod6797,
-  whiteSVG: _mod6798,
+  lightPNG: _mod6810,
+  darkPNG: _mod6810,
+  whitePNG: _mod6811,
+  lightSVG: _mod6812,
+  darkSVG: _mod6812,
+  whiteSVG: _mod6813,
 };
 obj54.icon = {
-  lightPNG: _mod6799,
-  darkPNG: _mod6800,
-  whitePNG: _mod6801,
-  lightSVG: _mod6802,
-  darkSVG: _mod6803,
-  whiteSVG: _mod6804,
+  lightPNG: _mod6814,
+  darkPNG: _mod6815,
+  whitePNG: _mod6816,
+  lightSVG: _mod6817,
+  darkSVG: _mod6818,
+  whiteSVG: _mod6819,
 };
 obj54.domains = ["letterboxd.com"];
 obj54.getPlatformUserUrl = function getPlatformUserUrl(name) {
@@ -856,20 +856,20 @@ const obj56 = {
   hasMetadata: true,
 };
 const obj55 = {
-  lightPNG: _mod6799,
-  darkPNG: _mod6800,
-  whitePNG: _mod6801,
-  lightSVG: _mod6802,
-  darkSVG: _mod6803,
-  whiteSVG: _mod6804,
+  lightPNG: _mod6814,
+  darkPNG: _mod6815,
+  whitePNG: _mod6816,
+  lightSVG: _mod6817,
+  darkSVG: _mod6818,
+  whiteSVG: _mod6819,
 };
 obj56.icon = {
-  lightPNG: _mod6805,
-  darkPNG: _mod6805,
-  whitePNG: _mod6806,
-  lightSVG: _mod6807,
-  darkSVG: _mod6807,
-  whiteSVG: _mod6808,
+  lightPNG: _mod6820,
+  darkPNG: _mod6820,
+  whitePNG: _mod6821,
+  lightSVG: _mod6822,
+  darkSVG: _mod6822,
+  whiteSVG: _mod6823,
 };
 obj56.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return id.id;
@@ -879,38 +879,38 @@ const obj58 = { type: PlatformTypes.CRUNCHYROLL, name: "Crunchyroll", color: nul
 let shims = shims_mod;
 obj58.color = shims.unsafe_getRawColor("PLATFORM_CRUNCHYROLL");
 const obj57 = {
-  lightPNG: _mod6805,
-  darkPNG: _mod6805,
-  whitePNG: _mod6806,
-  lightSVG: _mod6807,
-  darkSVG: _mod6807,
-  whiteSVG: _mod6808,
+  lightPNG: _mod6820,
+  darkPNG: _mod6820,
+  whitePNG: _mod6821,
+  lightSVG: _mod6822,
+  darkSVG: _mod6822,
+  whiteSVG: _mod6823,
 };
 obj58.icon = {
-  lightPNG: _mod6809,
-  darkPNG: _mod6809,
-  whitePNG: _mod6809,
-  lightSVG: _mod6810,
-  darkSVG: _mod6810,
-  whiteSVG: _mod6811,
+  lightPNG: _mod6824,
+  darkPNG: _mod6824,
+  whitePNG: _mod6824,
+  lightSVG: _mod6825,
+  darkSVG: _mod6825,
+  whiteSVG: _mod6826,
 };
 items[27] = obj58;
 const obj60 = { type: PlatformTypes.DOMAIN, name: "Domain", icon: null, getPlatformUserUrl: null, enabled: true };
 const obj59 = {
-  lightPNG: _mod6809,
-  darkPNG: _mod6809,
-  whitePNG: _mod6809,
-  lightSVG: _mod6810,
-  darkSVG: _mod6810,
-  whiteSVG: _mod6811,
+  lightPNG: _mod6824,
+  darkPNG: _mod6824,
+  whitePNG: _mod6824,
+  lightSVG: _mod6825,
+  darkSVG: _mod6825,
+  whiteSVG: _mod6826,
 };
 obj60.icon = {
-  lightPNG: _mod6812,
-  darkPNG: _mod6813,
-  whitePNG: _mod6813,
-  lightSVG: _mod6814,
-  darkSVG: _mod6815,
-  whiteSVG: _mod6815,
+  lightPNG: _mod6827,
+  darkPNG: _mod6828,
+  whitePNG: _mod6828,
+  lightSVG: _mod6829,
+  darkSVG: _mod6830,
+  whiteSVG: _mod6830,
 };
 obj60.getPlatformUserUrl = function getPlatformUserUrl(id) {
   return "https://" + id.id + "/";
@@ -918,38 +918,38 @@ obj60.getPlatformUserUrl = function getPlatformUserUrl(id) {
 items[28] = obj60;
 const obj62 = { type: PlatformTypes.AMAZON_MUSIC, name: "Amazon Music", icon: null, enabled: true };
 const obj61 = {
-  lightPNG: _mod6812,
-  darkPNG: _mod6813,
-  whitePNG: _mod6813,
-  lightSVG: _mod6814,
-  darkSVG: _mod6815,
-  whiteSVG: _mod6815,
+  lightPNG: _mod6827,
+  darkPNG: _mod6828,
+  whitePNG: _mod6828,
+  lightSVG: _mod6829,
+  darkSVG: _mod6830,
+  whiteSVG: _mod6830,
 };
 obj62.icon = {
-  lightPNG: _mod6816,
-  darkPNG: _mod6816,
-  whitePNG: _mod6816,
-  lightSVG: _mod6817,
-  darkSVG: _mod6817,
-  whiteSVG: _mod6817,
+  lightPNG: _mod6831,
+  darkPNG: _mod6831,
+  whitePNG: _mod6831,
+  lightSVG: _mod6832,
+  darkSVG: _mod6832,
+  whiteSVG: _mod6832,
 };
 items[29] = obj62;
 const obj64 = { type: PlatformTypes.META_QUEST_OR_HORIZON, name: "Meta Quest", icon: null, enabled: false };
 const obj63 = {
-  lightPNG: _mod6816,
-  darkPNG: _mod6816,
-  whitePNG: _mod6816,
-  lightSVG: _mod6817,
-  darkSVG: _mod6817,
-  whiteSVG: _mod6817,
+  lightPNG: _mod6831,
+  darkPNG: _mod6831,
+  whitePNG: _mod6831,
+  lightSVG: _mod6832,
+  darkSVG: _mod6832,
+  whiteSVG: _mod6832,
 };
 obj64.icon = {
-  lightPNG: _mod6818,
-  darkPNG: _mod6819,
-  whitePNG: _mod6820,
-  lightSVG: _mod6821,
-  darkSVG: _mod6822,
-  whiteSVG: _mod6822,
+  lightPNG: _mod6833,
+  darkPNG: _mod6834,
+  whitePNG: _mod6835,
+  lightSVG: _mod6836,
+  darkSVG: _mod6837,
+  whiteSVG: _mod6837,
 };
 items[30] = obj64;
 let closure_3 = apply.keyBy(items, "type");

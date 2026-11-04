@@ -113,15 +113,15 @@ let obj3 = {
 };
 obj.icon = { marginHorizontal: nativeDefault.space.PX_8 };
 let obj4 = { marginHorizontal: nativeDefault.space.PX_8 };
-obj.denyActive = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
-let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+obj.denyActive = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL };
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL };
 obj.denySelected = {
   backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
   borderRadius: nativeDefault.radii.sm - 2,
 };
 const obj6 = { backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.sm - 2 };
-obj.allowActive = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE };
-const obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE };
+obj.allowActive = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_POSITIVE };
+const obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_POSITIVE };
 obj.allowSelected = { backgroundColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
 const obj8 = { backgroundColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
 obj.passthroughSelected = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };

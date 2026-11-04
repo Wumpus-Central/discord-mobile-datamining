@@ -48,10 +48,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "BetaTag vs. beta, brand",
+    label: "CONJURE_DEBUG_GIT_INFO_RESULT",
     externalChildren: null,
-    expandedChildren: null,
-    children: "destructive",
+    expandedChildren: "Not connected",
+    children: null,
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -68,9 +68,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "BetaTag vs. beta, brand",
+    label: "CONJURE_DEBUG_GIT_INFO_RESULT",
     externalChildren: null,
-    expandedChildren: null,
-    children: "destructive",
+    expandedChildren: "Not connected",
+    children: null,
   });
 });

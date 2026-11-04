@@ -3,12 +3,12 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import native from "../../../../design/void/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import SelectedDismissibleContentDefault from "../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = {
@@ -37,9 +37,9 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
       } else {
         let tmp3 = closure_1_5;
         if (null == closure_1_5) {
-          let str = "text-xs/semibold";
+          let str = "body-xs/semibold";
           if (obj.isAndroid()) {
-            str = "text-xxs/semibold";
+            str = "footnote/semibold";
           }
           tmp3 = str;
           obj = PlatformUtils;
@@ -103,9 +103,9 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
       } else {
         let tmp3 = closure_1_5;
         if (null == closure_1_5) {
-          let str = "text-xs/semibold";
+          let str = "body-xs/semibold";
           if (obj.isAndroid()) {
-            str = "text-xxs/semibold";
+            str = "footnote/semibold";
           }
           tmp3 = str;
           obj = PlatformUtils;

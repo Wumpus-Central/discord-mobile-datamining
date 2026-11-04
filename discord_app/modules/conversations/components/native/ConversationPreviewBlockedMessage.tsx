@@ -27,7 +27,7 @@ export default function ConversationPreviewBlockedMessage(reason) {
   const t = util.t;
   const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
   items[1] = React3(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     color: "text-muted",
     children: intl.string("blocked" === reason.reason ? t["WPe+xL"] : t.uxrh1O),
   });

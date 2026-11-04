@@ -68,7 +68,7 @@ export default function ForLaterModal(type) {
   tmp4Result = require("PlatformUtils");
   obj3.headerLeft = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
-  items = [closure_4(require("../../../../_runtime/metro/07131__.js").Header, obj3)];
+  items = [closure_4(require("../../../../_runtime/metro/07146__.js").Header, obj3)];
   const obj4 = { type, onClose: null };
   const tmp4Result2 = require("NavigatorHeader");
   obj4.onClose = ModalActionCreatorsDefault.pop;

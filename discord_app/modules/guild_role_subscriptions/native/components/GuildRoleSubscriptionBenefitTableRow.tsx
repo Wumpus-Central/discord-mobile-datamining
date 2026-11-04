@@ -15,7 +15,7 @@ function ChannelBenefitLabel(benefit) {
     benefit.benefit.ref_id,
   );
   if (null == channelWithTemplateFallback) {
-    const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj2 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
     obj2.children = "[" + intl.string(util.t.bz1PZX) + "]";
@@ -24,7 +24,7 @@ function ChannelBenefitLabel(benefit) {
     const obj3 = { style: tmp.channelLabel, children: null };
     const obj4 = { style: tmp.channelIcon, size: "xs", color: "interactive-text-default" };
     items = [GuildRoleSubscriptionBenefitUtils.renderChannelIcon(channelWithTemplateFallback, obj4)];
-    const obj5 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: tmp5 };
+    const obj5 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: tmp5 };
     items[1] = hasOwnProperty(Text_Text.Text, obj5);
     obj3.children = items;
     tmp8 = timestampProducer(View, obj3);
@@ -33,9 +33,9 @@ function ChannelBenefitLabel(benefit) {
   return tmp8;
 }
 const View = fn(17).View;
-const constants = fn(17339).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(17430).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   channelLabel: { flexDirection: "row", alignItems: "center" },

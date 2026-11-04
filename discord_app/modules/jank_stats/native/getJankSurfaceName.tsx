@@ -27,14 +27,14 @@ function composeJankSurfaceName(getBaseScreenName) {
       componentDisplayName = getJankScreenName.getComponentDisplayName(tmp3.content.type);
     }
     if (null == componentDisplayName) {
-      let combined = React6;
+      let combined = React5;
     } else {
       let key = componentDisplayName;
       if (set.has(componentDisplayName)) {
         key = tmp3.key;
       }
       const _HermesInternal = HermesInternal;
-      combined = "" + React6 + ":" + key;
+      combined = "" + React5 + ":" + key;
     }
   }
   if (null != tmp2) {
@@ -46,7 +46,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     } else if (null != closure_11[closure_11.length - 1]) {
       if ("voice" !== tmp16) {
         const _HermesInternal4 = HermesInternal;
-        let combined1 = "" + React5 + ":" + tmp16;
+        let combined1 = "" + metroImportDefault + ":" + tmp16;
       } else {
         const _Array = Array;
         let arr2 = Array.from(map.values()).pop();
@@ -55,10 +55,10 @@ function composeJankSurfaceName(getBaseScreenName) {
         }
         if (null != arr2) {
           const _HermesInternal3 = HermesInternal;
-          combined1 = "" + React5 + ":" + tmp16 + ":" + arr2;
+          combined1 = "" + metroImportDefault + ":" + tmp16 + ":" + arr2;
         } else {
           const _HermesInternal2 = HermesInternal;
-          combined1 = "" + React5 + ":" + tmp16;
+          combined1 = "" + metroImportDefault + ":" + tmp16;
         }
         const arr = Array.from(map.values());
       }
@@ -83,11 +83,11 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(18207);
+const JankScreenConstants = fn(18304);
 ({
   CHANNEL_DETAILS_SCREEN: hasOwnProperty,
-  INTERACTION_NONE: metroRequire,
-  PANEL_SURFACE: closure_7,
+  INTERACTION_NONE: closure_6,
+  PANEL_SURFACE: metroImportDefault,
   SHEET_SURFACE: closure_8,
 } = JankScreenConstants);
 const set = new Set(["SimpleActionSheet"]);

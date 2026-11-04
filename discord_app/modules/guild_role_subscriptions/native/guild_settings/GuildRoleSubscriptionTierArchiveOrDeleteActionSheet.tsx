@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05400_BottomSheetModal.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import useArchiveOrDeleteDefault from "useArchiveOrDelete.tsx";
@@ -16,7 +16,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 },
@@ -45,7 +45,7 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
       children: headerText,
     }),
     hasOwnProperty(native.Spacer, { size: 12 }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-default", children: descriptionText }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-default", children: descriptionText }),
     hasOwnProperty(native.Spacer, { size: 24 }),
     ,
     ,
@@ -66,7 +66,7 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
     activeOpacity: 0.5,
     children: null,
   };
-  const obj6 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
+  const obj6 = { variant: "body-sm/semibold", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["ETE/oC"]);
   obj5.children = hasOwnProperty(Text_Text.Text, obj6);

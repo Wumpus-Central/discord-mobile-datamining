@@ -40,7 +40,7 @@ export default function UnreadSubtitle(arg0) {
     labelHook(noticeType, key) {
       return jsx(
         subtitleStyles(channelIconComponentWithGuild[7]).Text,
-        { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: noticeType },
+        { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: noticeType },
         key,
       );
     },
@@ -57,14 +57,14 @@ export default function UnreadSubtitle(arg0) {
     channelHook(children, key) {
       return jsx(
         Text_Text.Text,
-        { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children },
+        { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children },
         key,
       );
     },
     overflowHook(children, key) {
       return jsx(
         subtitleStyles(channelIconComponentWithGuild[7]).Text,
-        { variant: "text-xs/medium", color: "text-muted", children },
+        { variant: "body-xs/medium", color: "text-muted", children },
         key,
       );
     },

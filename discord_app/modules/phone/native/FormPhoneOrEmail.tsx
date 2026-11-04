@@ -33,7 +33,7 @@ function CountryCodeSelector(alpha2) {
     obj3.accessibilityHint = intl.string(util.t.GwAW3k);
     const obj4 = {
       style: tmp.selectorText,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "mobile-text-heading-primary",
       children: combined,
     };
@@ -49,7 +49,7 @@ function CountryCodeSelector(alpha2) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   label: { marginBottom: 8 },
@@ -154,7 +154,7 @@ export default function FormPhoneOrEmail(arg0) {
   items1[2] = tmp12Result;
   let tmp12Result2 = null;
   if (null != hint) {
-    const obj7 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
+    const obj7 = { style: tmp2.hint, variant: "body-xs/medium", color: "text-muted", children: hint };
     tmp12Result2 = tmp12(require("Text/Text").Text, obj7);
   }
   items1[3] = tmp12Result2;

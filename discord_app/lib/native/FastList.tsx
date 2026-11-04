@@ -3,7 +3,7 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import _mod1652 from "../../../_runtime/metro/01652__.js";
-import BottomSheetModal from "../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/05400_BottomSheetModal.js";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -120,7 +120,12 @@ let closure_3 = [
   "inActionSheet",
 ];
 get_ActivityIndicator = fn(17);
-({ PixelRatio: closure_7, ScrollView: closure_8, StyleSheet, findNodeHandle: closure_9 } = get_ActivityIndicator);
+({
+  PixelRatio: metroImportDefault,
+  ScrollView: closure_8,
+  StyleSheet,
+  findNodeHandle: closure_9,
+} = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
 let map = new Map();
@@ -2571,7 +2576,7 @@ prototype4["render"] = function render() {
   if (props.inActionSheet) {
     let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
   } else {
-    BottomSheetScrollView = React6;
+    BottomSheetScrollView = React5;
   }
   const obj3 = {};
   const merged = Object.assign(_objectWithoutProperties(props, closure_3));

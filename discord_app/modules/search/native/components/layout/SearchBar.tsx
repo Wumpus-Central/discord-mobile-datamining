@@ -3,7 +3,7 @@ import util from "../../../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
 import SearchPlatformUtils from "../../SearchPlatformUtils.tsx";
-import search_tracking_TrackingDefault from "../../tracking/Tracking.tsx";
+import TrackingDefault from "../../tracking/Tracking.tsx";
 import SearchPlatformActionCreatorsDefault from "../../SearchPlatformActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -16,9 +16,9 @@ const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({ SEARCH_BAR_HEIGHT: closure_10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9975).SearchFilterAddLocations;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
@@ -239,7 +239,7 @@ export default noop.memo(function SearchBarWithRef(searchContext) {
           searchTokenType: tmp2.searchTokenType,
           isDefault: tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD,
         };
-        let result = search_tracking_TrackingDefault.trackSearchFilterRemove(obj6);
+        let result = TrackingDefault.trackSearchFilterRemove(obj6);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (removeTag) => {
         removeTag.removeTag(closure_0);

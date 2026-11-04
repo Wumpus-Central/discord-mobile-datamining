@@ -44,7 +44,7 @@ class GuildsEmptyContent {
     items1 = [,];
     items1[0] = jsx(View, obj12);
     obj13 = { style: tmp.textWrapper, children: null };
-    obj14 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", style: null, children: null };
+    obj14 = { color: "mobile-text-heading-primary", variant: "heading-sm/semibold", style: null, children: null };
     items2 = [,];
     ({ text: arr3[0], headerText: arr3[1] } = tmp);
     obj14.style = items2;
@@ -52,7 +52,7 @@ class GuildsEmptyContent {
     obj14.children = intl.string(closure_0(closure_2[14]).t["Y7Ml/I"]);
     items3 = [,];
     items3[0] = jsx(closure_0(closure_2[11]).Heading, obj14);
-    obj15 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
+    obj15 = { color: "text-default", variant: "body-md/medium", style: tmp.text, children: null };
     intl2 = closure_0(closure_2[14]).intl;
     obj15.children = intl2.string(closure_0(closure_2[14]).t.kuyE4r);
     items3[1] = jsx(closure_0(closure_2[11]).Text, obj15);
@@ -81,7 +81,7 @@ class GuildsEmptyContent {
   }
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const isGuildLurker = fn(5008).isGuildLurker;
 const Constants = fn(1072);
 ({ ME: closure_11, MOBILE_GUILD_UPSELL_LIST: closure_12 } = Constants);
@@ -138,7 +138,7 @@ let obj8 = {
 };
 obj.textWrapper = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
 let obj10 = {};
-const merged = Object.assign(fn(5747).TextStyleSheet["heading-md/semibold"]);
+const merged = Object.assign(fn(5761).TextStyleSheet["heading-sm/semibold"]);
 obj10.fontSize = 18;
 obj10.marginBottom = 8;
 obj.headerText = obj10;
@@ -166,7 +166,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   const obj2 = navigation(563);
   obj3.type = navigation(1260).ImpressionTypes.VIEW;
   obj3.name = navigation(1260).ImpressionNames.GUILDS_EMPTY_NUX;
-  selectedGuildId(6148)(obj3);
+  selectedGuildId(6163)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -231,9 +231,9 @@ export default noop.memo(function GuildsEmpty(arg0) {
       }
     }
   }, items1);
-  const tmp7 = selectedGuildId(6148);
-  const isScreenLandscape = navigation(8897).useIsScreenLandscape();
-  navigation(17220);
+  const tmp7 = selectedGuildId(6163);
+  const isScreenLandscape = navigation(8914).useIsScreenLandscape();
+  navigation(17312);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };
@@ -250,7 +250,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
     };
     const intl = tmp2(1113).intl;
     obj7.children = intl.string(tmp2(1113).t["7hB4kg"]);
-    obj6.children = closure_13(tmp2(5747).Text, obj7);
+    obj6.children = closure_13(tmp2(5761).Text, obj7);
     obj5.children = closure_13(closure_5, obj6);
     const items3 = [closure_13(closure_5, obj5)];
     let tmp18;

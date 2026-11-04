@@ -86,9 +86,9 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
   throw error;
 }
 const Constants = fn(1072);
-({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(7613).ClearFriendRequestFilters;
-const SafetyToastType = fn(7614).SafetyToastType;
+({ Endpoints: closure_6, AbortCodes: metroImportDefault, RelationshipTypes: closure_8 } = Constants);
+const ClearFriendRequestFilters = fn(7629).ClearFriendRequestFilters;
+const SafetyToastType = fn(7630).SafetyToastType;
 const RelationshipErrorUXConfig = {
   SHOW_ALWAYS: 0,
   [0]: "SHOW_ALWAYS",
@@ -299,16 +299,17 @@ let obj2 = {
     const putResult = HTTP.put(obj);
     return HTTP.put(obj)
       .then(() => {
+        obj = DispatcherDefault;
+        obj.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
+        obj2 = { type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() };
         const result = SafetyToastsActionCreatorsDefault.showIgnoreSuccessToast(userId, closure_1);
         const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(
           SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.IGNORE_SUCCESS, userId, closure_1),
         );
-        const obj3 = DispatcherDefault;
-        obj3.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
       })
       .catch(() => {
-        channelId(7620).showFailedToast();
+        channelId(7636).showFailedToast();
         const AccessibilityAnnouncer = userId(5148).AccessibilityAnnouncer;
         const intl = userId(1113).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
@@ -323,21 +324,23 @@ let obj2 = {
       rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
     };
     obj2 = { location: UserProfileRemediatedNotice };
-    const obj3 = require("HTTPUtils");
+    let obj3 = require("HTTPUtils");
     const delResult = HTTP.del(obj);
     return HTTP.del(obj)
       .then(() => {
-        const result = SafetyToastsActionCreatorsDefault.showUnignoreSuccessToast(closure_0, closure_1);
+        DispatcherDefault.dispatch({ type: "RELATIONSHIP_UNIGNORE_USER_SUCCESS", userId });
+        obj2 = { type: "RELATIONSHIP_UNIGNORE_USER_SUCCESS", userId };
+        const result = SafetyToastsActionCreatorsDefault.showUnignoreSuccessToast(userId, closure_1);
         const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(
-          SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, closure_0, closure_1),
+          SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, userId, closure_1),
         );
       })
       .catch(() => {
-        channelId(7620).showFailedToast();
-        const AccessibilityAnnouncer = id(5148).AccessibilityAnnouncer;
-        const intl = id(1113).intl;
-        AccessibilityAnnouncer.announce(intl.string(id(1113).t.n6Jo3E));
+        channelId(7636).showFailedToast();
+        const AccessibilityAnnouncer = userId(5148).AccessibilityAnnouncer;
+        const intl = userId(1113).intl;
+        AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
       });
   },
 };

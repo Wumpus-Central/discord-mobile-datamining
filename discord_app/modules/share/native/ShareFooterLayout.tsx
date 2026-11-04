@@ -12,7 +12,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   footer: {
@@ -104,7 +104,7 @@ export default function ShareFooterLayout(arg0) {
   const items6 = [timestampProducer(View, obj6)];
   let tmp17 = null != warningText;
   if (tmp17) {
-    const obj7 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
+    const obj7 = { variant: "body-sm/normal", color: "text-feedback-warning", children: warningText };
     tmp17 = React4(Text_Text.Text, obj7);
   }
   items6[1] = tmp17;

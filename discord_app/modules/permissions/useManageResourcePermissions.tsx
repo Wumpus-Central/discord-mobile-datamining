@@ -58,9 +58,9 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(9147);
+const PermissionsConstants = fn(9164);
 ({
-  CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7,
+  CREATE_GUILD_EVENT_CORE_PERMISSIONS: metroImportDefault,
   CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8,
   CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9,
 } = PermissionsConstants);
@@ -86,11 +86,11 @@ export function attachChannelPermissions(channel) {
     ({ CREATE_EVENTS: arr2[0], MANAGE_EVENTS: arr2[1] } = Permissions);
     return items;
   } else {
-    let tmp = React5;
+    let tmp = metroImportDefault;
     if (channel.isGuildStageVoice()) {
-      tmp = React6;
+      tmp = React5;
     } else if (channel.isGuildVoice()) {
-      tmp = React7;
+      tmp = React6;
     }
     const items1 = [BigFlagUtilsAll.combine(tmp, Permissions.CREATE_EVENTS)];
     items1[1] = BigFlagUtilsAll.combine(tmp, Permissions.MANAGE_EVENTS);

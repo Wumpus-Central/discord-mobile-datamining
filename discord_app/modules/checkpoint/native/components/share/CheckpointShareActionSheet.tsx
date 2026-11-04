@@ -10,14 +10,14 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const ACTION_SHEET_MAX_WIDTH = fn(5397).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(6210).CheckpointCardTypes.DEFAULT] = _modDef3219.DZQzJn;
-obj[fn(6210).CheckpointCardTypes.CHARACTER_ONLY] = _modDef3219.tUU3fe;
-obj[fn(6210).CheckpointCardTypes.STATS_ONLY] = _modDef3219.e2UHGT;
+obj[fn(6225).CheckpointCardTypes.DEFAULT] = _modDef3219.DZQzJn;
+obj[fn(6225).CheckpointCardTypes.CHARACTER_ONLY] = _modDef3219.tUU3fe;
+obj[fn(6225).CheckpointCardTypes.STATS_ONLY] = _modDef3219.e2UHGT;
 const createStyles = fn(5141);
 let obj3 = {
   carousel: { marginHorizontal: -nativeDefault.space.PX_16, height: 284 },
@@ -189,7 +189,7 @@ export default function CheckpointShareActionSheet(character) {
       closure_6(closure_1);
     };
     obj7.children = items7.map((cardType) =>
-      React6(CheckpointShareCardDefault, { cardType, character, stats: memo }, cardType),
+      React5(CheckpointShareCardDefault, { cardType, character, stats: memo }, cardType),
     );
     obj6.children = items7(first, obj7);
     obj4.children = items7(tmp6(tmp3[10]).GestureDetector, obj6);
@@ -207,7 +207,7 @@ export default function CheckpointShareActionSheet(character) {
             activePageDot = closure_3.activePageDot;
           }
           style[1] = activePageDot;
-          return React6(timestampProducer, { style }, item);
+          return React5(timestampProducer, { style }, item);
         }),
       };
       tmp16Result = tmp16(tmp17, obj9);

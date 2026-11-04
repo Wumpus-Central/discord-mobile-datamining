@@ -8,7 +8,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ GuildFeatures: hasOwnProperty, Permissions: metroRequire, UserFlags: closure_7 } = Constants);
+({ GuildFeatures: hasOwnProperty, Permissions: closure_6, UserFlags: metroImportDefault } = Constants);
 const MFAAvailability = {
   AVAILABLE: "available",
   UNAVAILABLE_NO_CRYPTO: "unavailable_no_crypto",

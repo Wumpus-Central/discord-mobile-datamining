@@ -48,6 +48,6 @@ export default function BurstReactionAnimation(arg0) {
     const merged1 = Object.assign(merged);
     const merged2 = Object.assign(obj3);
     obj4.source = burstReactionAnimationSource;
-    return jsx(importDefault(withFadeOut ? 5740 : 5741), { style: tmp2.content, loop: false, speed: null });
+    return jsx(importDefault(withFadeOut ? 5754 : 5755), { style: tmp2.content, loop: false, speed: null });
   }
 }

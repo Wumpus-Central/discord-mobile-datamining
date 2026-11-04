@@ -125,7 +125,7 @@ function ConjureMessageActionSheet(content) {
   });
 }
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = "conjure-message-actions";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMessageActionSheet.tsx");

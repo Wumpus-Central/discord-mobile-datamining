@@ -1,0 +1,49 @@
+// discord_app/modules/user_settings/defs/native/EmailNotificationsSetting.tsx
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import notifications_NotificationSettingsUtils from "../../../notifications/NotificationSettingsUtils.tsx";
+import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
+import SettingBuilders_mod from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
+
+const require = globalThis.__r;
+
+const obj = {
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.TPchzM);
+  },
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(util.t["16PQ3M"]);
+  },
+  screen: {
+    route: Constants.UserSettingsSections.EMAILS,
+    getComponent() {
+      return require("SettingsEmailNotificationsScreen").default;
+    },
+  },
+};
+let SettingBuilders = SettingBuilders_mod;
+const obj3 = {};
+const merged = Object.assign(obj);
+obj3.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
+obj3.usePredicate = function usePredicate() {
+  return !notifications_NotificationSettingsUtils.useIsDeclarativeSettingsUIAvailable("EmailNotificationsSetting");
+};
+const route = SettingBuilders.createRoute(obj3);
+let SettingBuilders = SettingBuilders_mod;
+const obj4 = {};
+const merged1 = Object.assign(obj);
+obj4.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
+obj4.usePredicate = function usePredicate() {
+  return notifications_NotificationSettingsUtils.useIsDeclarativeSettingsUIAvailable(
+    "RedesignEmailNotificationsSetting",
+  );
+};
+const route1 = SettingBuilders.createRoute(obj4);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/EmailNotificationsSetting.tsx");
+
+export default route;
+export const RedesignEmailNotificationsSetting = route1;

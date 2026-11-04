@@ -176,7 +176,7 @@ class ReactionButton {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
+({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -219,7 +219,7 @@ obj2.selected = {
 obj2.textEmoji = { fontSize: 12 };
 obj2.imageEmoji = { height: 16, width: 16 };
 obj2.countContainer = { paddingStart: 4 };
-const React5 = createStyles.createStyles(obj2);
+const metroImportDefault = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/reactions/ForumPostReactionButton.tsx");
 
@@ -232,7 +232,7 @@ export function AdditionalReactionCount(arg0) {
   items = [closure_7().container, containerStyle];
   obj.style = items;
   obj.onPress = useNativeForumPostHandlersDefault({ threadId }).onTapReactionCount;
-  const obj2 = { variant: "heading-sm/medium", color: "interactive-text-default", children: null };
+  const obj2 = { variant: "heading-xs/medium", color: "interactive-text-default", children: null };
   const items1 = ["+", count];
   obj2.children = items1;
   obj.children = hasOwnProperty(Text_Text.Text, obj2);

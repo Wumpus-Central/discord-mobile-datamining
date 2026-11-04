@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 },
@@ -37,17 +37,17 @@ export default function InviteRolesList(invite) {
     tmp2 = null;
     if (0 !== memo.length) {
       const obj = { spacing: 4, style: invite.style, children: null };
-      const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
+      const obj2 = { variant: "body-sm/semibold", color: "text-default", children: null };
       const intl = guild(1113).intl;
       obj2.children = intl.string(guild(1113).t.stcSfI);
-      const items1 = [closure_5(guild(5747).Text, obj2)];
+      const items1 = [closure_5(guild(5761).Text, obj2)];
       const obj3 = {
         style: tmp.rolesRow,
         children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)),
       };
       items1[1] = closure_5(View, obj3);
       obj.children = items1;
-      tmp2 = closure_6(guild(6147).Stack, obj);
+      tmp2 = closure_6(guild(6162).Stack, obj);
     }
   }
   return tmp2;

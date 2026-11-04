@@ -218,7 +218,7 @@ class TableRowInner {
         if ("danger" === variant) {
           str4 = "text-feedback-critical";
         }
-        obj22 = { variant: "text-xs/medium", color: null, lineClamp: null, includeFontPadding: true, children: null };
+        obj22 = { variant: "body-xs/medium", color: null, lineClamp: null, includeFontPadding: true, children: null };
         obj22.color = str4;
         obj22.lineClamp = subLabelLineClamp;
         obj22.children = subLabel;
@@ -264,8 +264,8 @@ class TableRowInner {
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const React7 = { padding: 0 };
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const React6 = { padding: 0 };
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = {
@@ -343,9 +343,9 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj2.dragHandle = { marginEnd: 8 };
   return obj2;
 });
-TableRow.Icon = fn(7109).TableRowIcon;
-TableRow.Arrow = fn(7110).TableRowArrow;
-TableRow.TrailingText = fn(7112).TableRowTrailingText;
+TableRow.Icon = fn(7124).TableRowIcon;
+TableRow.Arrow = fn(7125).TableRowArrow;
+TableRow.TrailingText = fn(7127).TableRowTrailingText;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 

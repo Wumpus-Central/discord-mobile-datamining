@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { rowGap: 16, flexDirection: "column" },
@@ -84,7 +84,7 @@ export default function UserProfileIncomingFriendRequest(style) {
   const items2 = [items4.container, tmp3.card, style.style];
   obj6.style = items2;
   let Text = tmp4(userResult[11]).Text;
-  let obj7 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  let obj7 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = tmp4(userResult[12]).intl;
   const format = intl.format;
   let intl2 = tmp4(userResult[12]).t;

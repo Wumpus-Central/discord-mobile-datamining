@@ -46,7 +46,7 @@ export default function ContextMenuCommandItem(item) {
   }, items);
   const tmp = closure_6();
   const tmp5 = item;
-  const applicationCommandsIconSource = item(13924).getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = item(14010).getApplicationCommandsIconSource(section);
   const obj2 = {
     accessibilityLabel: memo,
     onPress,
@@ -59,13 +59,13 @@ export default function ContextMenuCommandItem(item) {
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {
     const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-    tmp8Result = jsx(section(5837), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+    tmp8Result = jsx(section(5851), { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
   obj2.icon = tmp8Result;
-  obj2.trailing = jsx(tmp5(5849).SendMessageIcon, {});
+  obj2.trailing = jsx(tmp5(5863).SendMessageIcon, {});
   obj2.start = start;
   obj2.end = end;
-  return jsx(item(7101).TableRow, {
+  return jsx(item(7116).TableRow, {
     accessibilityLabel: memo,
     onPress,
     label: item.displayName,

@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterEmpty(children) {
   return (
     <View style={closure_4().empty}>
-      {jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })}
+      {jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", children: children.text })}
     </View>
   );
 }

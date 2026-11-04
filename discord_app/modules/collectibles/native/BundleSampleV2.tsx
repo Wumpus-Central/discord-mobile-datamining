@@ -98,7 +98,7 @@ function BundleStaticPreviewContent(mutedBackground) {
   }
   items[1] = tmp24Result;
   obj3.children = items;
-  return React5(React4, obj3);
+  return metroImportDefault(React4, obj3);
 }
 function BundleSampleV2Composed(arg0) {
   ({ deco, pfx, nameplate, size } = arg0);
@@ -125,7 +125,7 @@ function BundleSampleV2Composed(arg0) {
     if (null == nameplateData) {
       items[2] = null;
       obj2.children = items;
-      return React5(React4, obj2);
+      return metroImportDefault(React4, obj2);
     } else {
       const obj5 = { style: tmp.nameplate, children: null };
       let AvatarSizes = dependencyMap;
@@ -155,9 +155,9 @@ function BundleSampleV2Composed(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(9622).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(9641).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
 let obj2 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

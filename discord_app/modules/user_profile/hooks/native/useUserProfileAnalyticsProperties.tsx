@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const UserProfileAnalyticsTypes = fn(8878).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8895).UserProfileAnalyticsTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
 

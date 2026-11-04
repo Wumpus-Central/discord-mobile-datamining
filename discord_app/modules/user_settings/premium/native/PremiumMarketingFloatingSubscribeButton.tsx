@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import NitroUpsellButtonDefault from "../../../premium/components/native/NitroUpsellButton.tsx";
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment.tsx";
@@ -16,7 +16,7 @@ const require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 },

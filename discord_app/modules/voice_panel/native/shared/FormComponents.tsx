@@ -39,7 +39,7 @@ function VoiceBadges(arg0) {
   return timestampProducer(NativeViewDefault, obj);
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { marginHorizontal: 16 },
@@ -141,7 +141,7 @@ export function MemberRowItem(user) {
       }
       const intl2 = util.intl;
       if (null == obj.details) {
-        obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
+        obj = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: null };
         const obj2 = { name: obj.name };
         obj.children = intl2.format(tmp12, obj2);
         hasOwnProperty(Text_Text.Text, obj);
@@ -172,7 +172,7 @@ export function MemberRowItem(user) {
     if (notConnected) {
       str = "text-muted";
     }
-    const obj12 = { variant: "text-md/semibold", color: str, style: null, children: null };
+    const obj12 = { variant: "body-md/semibold", color: str, style: null, children: null };
     let tmp28 = null != displayNameStylesFont;
     if (tmp28) {
       const obj13 = { fontFamily: displayNameStylesFont };

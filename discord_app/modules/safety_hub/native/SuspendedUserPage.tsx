@@ -7,17 +7,17 @@ import LinkingDefault from "../../../lib/native/Linking.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8483 from "../../../../_runtime/metro/08483__.js";
+import _modDef8499 from "../../../../_runtime/metro/08499__.js";
 import SafetyHubPageDefault from "SafetyHubPage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8094);
-({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
+const SafetyHubConstants = fn(8110);
+({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: closure_6 } = SafetyHubConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -68,14 +68,14 @@ export default function SuspendedUserSafetyHubPage() {
     obj4.onPress = function onClose() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    obj4.icon = _modDef8483;
-    const items1 = [React5(IconButton.IconButton, obj4)];
+    obj4.icon = _modDef8499;
+    const items1 = [metroImportDefault(IconButton.IconButton, obj4)];
     const obj5 = {
       style: tmp.text,
       onPress: function openLearnMore() {
         LinkingDefault.openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
       },
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "control-critical-primary-text-default",
       children: null,
     };
@@ -83,21 +83,21 @@ export default function SuspendedUserSafetyHubPage() {
     const items2 = [intl2.string(util.t["MG+Bzb"]), " "];
     const obj6 = {
       style: tmp.link,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "control-critical-primary-text-default",
       children: null,
     };
     const intl3 = util.intl;
     obj6.children = intl3.string(util.t["9JceHN"]);
-    items2[2] = React5(Text_Text.Text, obj6);
+    items2[2] = metroImportDefault(Text_Text.Text, obj6);
     obj5.children = items2;
-    items1[1] = React6(Text_Text.Text, obj5);
+    items1[1] = React5(Text_Text.Text, obj5);
     obj3.children = items1;
-    tmp6Result = React6(View, obj3);
+    tmp6Result = React5(View, obj3);
   }
   const rect = { top: true, right: true, left: true, children: null };
-  const items3 = [tmp6Result, React5(SafetyHubPageDefault, { visible: true })];
+  const items3 = [tmp6Result, metroImportDefault(SafetyHubPageDefault, { visible: true })];
   obj2.children = items3;
-  rect.children = React6(View, obj2);
-  return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
+  rect.children = React5(View, obj2);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, rect);
 }

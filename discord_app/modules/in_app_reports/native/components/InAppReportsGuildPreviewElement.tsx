@@ -55,7 +55,7 @@ export default function GuildPreview(guild) {
   const items2 = [
     React4(GuildIconDefault, obj5),
     React4(Text_Text.Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       style: tmp.guildInfo,
       children: guild.name,

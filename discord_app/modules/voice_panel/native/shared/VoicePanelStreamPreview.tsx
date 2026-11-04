@@ -13,11 +13,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let module_1652 = module_1652_mod;
 let closure_9 = module_1652.createAnimatedComponent(Pressable);
 let module_1652 = module_1652_mod;
-let closure_10 = module_1652.createAnimatedComponent(fn(5754).Button);
+let closure_10 = module_1652.createAnimatedComponent(fn(5768).Button);
 let closure_11 = { duration: 200 };
 const createStyles = fn(5141);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
@@ -136,7 +136,7 @@ export function VoicePanelStreamPreview(stream) {
     const obj6 = { uri: previewUrl };
     obj5.source = obj6;
     obj5.style = absoluteFill.absoluteFill;
-    obj4.children = closure_7(tmp2(5837), obj5);
+    obj4.children = closure_7(tmp2(5851), obj5);
     tmp18 = closure_7(tmp2(1652).View, obj4);
   }
   const items4 = [tmp18];
@@ -145,14 +145,14 @@ export function VoicePanelStreamPreview(stream) {
   if (stateFromStores) {
     const obj9 = { style: tmp.ownStreamTextContainer, children: null };
     const obj10 = {
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: "text-overlay-light",
       style: tmp.ownStreamText,
       children: null,
     };
     const intl2 = tmp8(1113).intl;
     obj10.children = intl2.string(tmp8(1113).t["ro/HN8"]);
-    obj9.children = closure_7(tmp8(5747).Text, obj10);
+    obj9.children = closure_7(tmp8(5761).Text, obj10);
     let tmp21Result = closure_7(closure_4, obj9);
   } else {
     const obj11 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };

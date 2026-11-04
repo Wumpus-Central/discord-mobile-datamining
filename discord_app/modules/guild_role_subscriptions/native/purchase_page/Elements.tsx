@@ -7,7 +7,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef18782 from "../../../../../_runtime/metro/18782__.js";
+import _modDef18883 from "../../../../../_runtime/metro/18883__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SubscriptionPlanStore from "../../../../stores/billing/SubscriptionPlanStore.tsx";
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -105,7 +105,7 @@ export function TruncatedText(lineClamp) {
         closure_3(nativeEvent.nativeEvent.lines.length > num);
       }
     };
-    items = [React7(Text_Text.Text, obj3), first];
+    items = [React6(Text_Text.Text, obj3), first];
     obj2.children = items;
     return closure_1_10(timestampProducer, obj2);
   } else {
@@ -118,10 +118,10 @@ export function TruncatedText(lineClamp) {
     } else {
       stringResult = string(t.Fbrd8J);
     }
-    const obj4 = { variant: "text-sm/medium", color: "text-default", children: stringResult };
-    t = React7(Text_Text.Text, obj4);
+    const obj4 = { variant: "body-sm/medium", color: "text-default", children: stringResult };
+    t = React6(Text_Text.Text, obj4);
     obj.children = t;
-    React7(React5, obj);
+    React6(metroImportDefault, obj);
   }
   const tmp3 = _slicedToArray(noop.useState(false), 2);
 }
@@ -130,13 +130,13 @@ export function ArrowButton(arg0) {
   const tmp = closure_11();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
   items = [
-    React7(Text_Text.Text, {
-      variant: "text-md/semibold",
+    React6(Text_Text.Text, {
+      variant: "body-md/semibold",
       color: "text-default",
       style: tmp.arrowButtonText,
       children: text,
     }),
-    React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18782, style: tmp.arrowButtonIcon }),
+    React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18883, style: tmp.arrowButtonIcon }),
   ];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
@@ -153,8 +153,8 @@ export function useFormattedSubscriptionPlan(listingId) {
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(7537).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(7537);
+    str = "" + tmp3(7553).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(7553);
   }
   return str;
 }

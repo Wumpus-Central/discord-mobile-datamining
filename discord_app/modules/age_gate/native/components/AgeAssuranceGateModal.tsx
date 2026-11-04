@@ -8,7 +8,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
 const AgeGateSource = fn(1097).AgeGateSource;
-let closure_6 = fn(19550).ExistingUserAgeGateScreens;
+let closure_6 = fn(19654).ExistingUserAgeGateScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/AgeAssuranceGateModal.tsx");
@@ -63,7 +63,7 @@ export default function AgeAssuranceGateModal(source) {
     obj3.render = function render() {
       return jsx(channelId(stateFromStores[8]), { source });
     };
-    obj2[closure_6.Pawtect] = obj3;
+    obj2[closure_6.AgeVerify] = obj3;
     const obj4 = { fullscreen: true, headerLeft: null, headerTitle: null, impressionName: null, render: null };
     const tmpResult = NavigatorHeader;
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton(onReturnToSafety);
@@ -97,11 +97,11 @@ export default function AgeAssuranceGateModal(source) {
     return obj2;
   }, items3);
   if (null != tmp4) {
-    let Pawtect = closure_6.NSFWVoiceChannel;
+    let AgeVerify = closure_6.NSFWVoiceChannel;
   } else {
-    Pawtect = closure_6.Pawtect;
+    AgeVerify = closure_6.AgeVerify;
   }
-  obj2.initialRouteName = Pawtect;
+  obj2.initialRouteName = AgeVerify;
   const intl = tmp(tmp2[15]).intl;
   obj2.headerBackTitle = intl.string(source(stateFromStores[15]).t["13/7kX"]);
   return jsx(source(stateFromStores[14]).Navigator, { screens: null, initialRouteName: null, headerBackTitle: null });

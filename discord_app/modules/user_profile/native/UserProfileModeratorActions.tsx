@@ -9,11 +9,11 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import StageChannelActionCreators from "../../stage_channels/StageChannelActionCreators.tsx";
+import UserProfileAlertUtils from "UserProfileAlertUtils.tsx";
 import GuildMemberUtils from "../../guild_member/GuildMemberUtils.tsx";
 import GuildDisableCommunicationActionCreators from "../../guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx";
 import showKickConfirmModalDefault from "../../guild_moderation/native/showKickConfirmModal.tsx";
 import showBanConfirmModalDefault from "../../guild_moderation/native/showBanConfirmModal.tsx";
-import UserProfileAlertUtils from "UserProfileAlertUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StageChannelRoleStore from "../../stage_channels/StageChannelRoleStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -362,7 +362,7 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[34]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11337, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(11387, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(
           <ModeratorActionRow
@@ -400,7 +400,7 @@ export default function UserProfileModeratorActions(user) {
         obj11.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MANAGE_USER" });
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13399, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13483, dependencyMap.paths), {
             userId: user.id,
             guildId: stateFromStores.id,
             onClose() {
@@ -408,7 +408,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              guildId(6864).pop();
+              guildId(6879).pop();
             },
           });
         };

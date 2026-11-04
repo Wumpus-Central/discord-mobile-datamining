@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx
-import search_tracking_TrackingDefault from "../../tracking/Tracking.tsx";
+import TrackingDefault from "../../tracking/Tracking.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -21,7 +21,7 @@ export default function SearchNavigatorPreviewScreen() {
   const onBeforeJumpToMessage = route.params.onBeforeJumpToMessage;
   items = [searchContext, channelId, onBeforeJumpToMessage, navigation];
   const callback = onBeforeJumpToMessage.useCallback(() => {
-    const result = search_tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
+    const result = TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
     if (onBeforeJumpToMessage != null) {
       onBeforeJumpToMessage();
     }

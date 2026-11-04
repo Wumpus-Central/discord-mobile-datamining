@@ -7,7 +7,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ GuildNSFWContentLevel: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ GuildNSFWContentLevel: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");
 

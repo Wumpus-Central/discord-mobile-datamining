@@ -4,7 +4,7 @@ import AnalyticsUtils2 from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import AppAnalyticsUtils from "AppAnalyticsUtils.tsx";
-import uniqueIdDefault from "../../../_runtime/06149_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/06164_uniqueId.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
@@ -27,7 +27,7 @@ function trackImpression(type) {
     }
   }
   if (!flag2) {
-    React5(type);
+    metroImportDefault(type);
   }
   let guild_id;
   if (properties != null) {
@@ -51,21 +51,21 @@ function trackImpression(type) {
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj2);
   if (flag) {
-    React7(null, null);
+    React6(null, null);
   } else {
     if (tmp15) {
       AnalyticsUtils2.debugLogEvent(name, result);
       closure_12(name, result);
       const tmpResult6 = AnalyticsUtils2;
     }
-    React7(name, result);
+    React6(name, result);
     tmp15 = null != name && null != type;
   }
   const tmpResult5 = AppAnalyticsUtils;
 }
 const ImpressionStore = fn(1253);
 ({
-  setCurrentImpression: closure_7,
+  setCurrentImpression: metroImportDefault,
   cleanupImpression: closure_8,
   setDebugTrackedData: closure_9,
   getLocation: closure_10,
@@ -89,7 +89,7 @@ export default function useTrackImpression(current, arg1) {
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5716)(() => {
+  obj(5729)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = _modDef1342(ref.current, current);
       if (!tmp6) {

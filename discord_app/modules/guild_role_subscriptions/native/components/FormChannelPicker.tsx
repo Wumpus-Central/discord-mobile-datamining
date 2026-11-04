@@ -19,22 +19,22 @@ export default function FormChannelPicker(channelId) {
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp5Result = useChannelNameDefault(stateFromStores);
   if (null != stateFromStores) {
-    let TextIcon = tmp(17376).getChannelIconComponentOrDefault(stateFromStores);
-    const tmpResult = tmp(17376);
+    let TextIcon = tmp(17467).getChannelIconComponentOrDefault(stateFromStores);
+    const tmpResult = tmp(17467);
   } else {
-    TextIcon = tmp(8776).TextIcon;
+    TextIcon = tmp(8793).TextIcon;
   }
   let obj2 = {
-    icon: jsx(channelId(7101).TableRow.Icon, { IconComponent: TextIcon }),
+    icon: jsx(channelId(7116).TableRow.Icon, { IconComponent: TextIcon }),
     label: null,
     arrow: true,
     onPress: null,
   };
   if (tmp5Result == null) {
-    const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
+    const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp(1113).intl;
     obj3.children = intl.string(tmp(1113).t.r2ptsz);
-    tmp5Result = jsx(tmp(5747).Text, { variant: "text-md/medium", color: "text-muted", children: null });
+    tmp5Result = jsx(tmp(5761).Text, { variant: "body-md/medium", color: "text-muted", children: null });
   }
   obj2.label = tmp5Result;
   obj2.onPress = function handleSelectChannel() {
@@ -46,10 +46,10 @@ export default function FormChannelPicker(channelId) {
     }
     obj2.selectedChannelId = id;
     obj2.onChannelSelected = onChannelSelected;
-    obj.openLazy(asyncRequireImpl(20123, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(20239, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
   };
-  return jsx(channelId(7101).TableRow, {
-    icon: jsx(channelId(7101).TableRow.Icon, { IconComponent: TextIcon }),
+  return jsx(channelId(7116).TableRow, {
+    icon: jsx(channelId(7116).TableRow.Icon, { IconComponent: TextIcon }),
     label: null,
     arrow: true,
     onPress: null,

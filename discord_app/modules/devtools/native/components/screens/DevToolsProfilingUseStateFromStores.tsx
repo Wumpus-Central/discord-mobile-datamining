@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx",
@@ -62,7 +62,7 @@ export function DevToolsProfilingUseStateFromStores() {
     const obj8 = { label: "Execution time window threshold", subLabel: null };
     const obj9 = { children: null };
     const obj10 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-subtle",
       style: { marginBottom: 4 },
       children: "Time window to wait for before reporting violations.",
@@ -95,7 +95,7 @@ export function DevToolsProfilingUseStateFromStores() {
     const obj12 = { label: "Cumulative execution time warning threshold", subLabel: null };
     const obj13 = { children: null };
     const obj14 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-subtle",
       style: { marginBottom: 4 },
       children: "Total execution time limit for hooks before reporting violations.",
@@ -118,7 +118,7 @@ export function DevToolsProfilingUseStateFromStores() {
     const obj16 = { label: "Cumulative execution count warning threshold", subLabel: null };
     const obj17 = { children: null };
     const obj18 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-subtle",
       style: { marginBottom: 4 },
       children: "Execution counts limit for hooks before reporting violations.",
@@ -141,7 +141,7 @@ export function DevToolsProfilingUseStateFromStores() {
     const obj20 = { label: "Track specific hook", subLabel: null };
     const obj21 = { children: null };
     const obj22 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-subtle",
       style: { marginBottom: 4 },
       children: "Include a specific hook in the profiling regardless of limits.",

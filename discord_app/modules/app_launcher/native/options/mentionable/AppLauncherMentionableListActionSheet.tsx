@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const AppLauncherMentionableListActionSheet = "AppLauncherMentionableListActionSheet";
 const MentionableItemTypes = { USER: "user", ROLE: "role", GLOBAL: "global" };
 const size = fn(2);
@@ -93,7 +93,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
           const result3 = item.result;
           const user = result3.user;
           const obj3 = { type: closure_5.NONE, user, nickname: result3.nick, guildId: guild_id, subLabel: null };
-          const obj4 = { color: "text-subtle", variant: "text-xs/normal", children: null };
+          const obj4 = { color: "text-subtle", variant: "body-xs/normal", children: null };
           const tmp25 = onActionSheetDismiss(channel[9]);
           obj4.children = require("UserUtils").getUserTag(user);
           obj3.subLabel = ref(require("Text/Text").Text, obj4);
@@ -122,7 +122,7 @@ export default function AppLauncherMentionableListActionSheet(channel) {
           const obj7 = { label: null, icon: null };
           const obj8 = {
             lineClamp: 1,
-            variant: "text-md/semibold",
+            variant: "body-md/semibold",
             color: "mobile-text-heading-primary",
             children: result.text,
           };

@@ -7,7 +7,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const AppStates = fn(1072).AppStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
@@ -163,7 +163,7 @@ export default function MFACodeInput(appState) {
   } else {
     let tmp17Result2 = null;
     if (null != error) {
-      const obj5 = { style: tmp.error, variant: "text-md/medium", children: error };
+      const obj5 = { style: tmp.error, variant: "body-md/medium", children: error };
       tmp17Result2 = closure_9(tmp2(tmp3[14]).Text, obj5);
     }
     const obj6 = { children: null };

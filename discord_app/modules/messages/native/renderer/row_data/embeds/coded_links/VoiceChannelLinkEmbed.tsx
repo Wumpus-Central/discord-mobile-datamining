@@ -16,7 +16,7 @@ require = fn;
 const Image = fn(17).Image;
 const getGuildAcronym = fn(5008).getGuildAcronym;
 const Permissions = fn(1072).Permissions;
-const InviteTypes = fn(8003).InviteTypes;
+const InviteTypes = fn(8019).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx",

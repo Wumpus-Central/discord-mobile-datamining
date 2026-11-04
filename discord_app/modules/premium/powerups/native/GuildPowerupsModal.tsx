@@ -9,8 +9,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildPowerupsConstants = fn(5353);
-({ BoostInfoType: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
+const GuildPowerupsConstants = fn(5354);
+({ BoostInfoType: closure_6, GuildPowerupType: metroImportDefault } = GuildPowerupsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -167,10 +167,10 @@ export default function GuildPowerupsModal(guildId) {
       type = type.type;
       if (constants2.LEVEL === type) {
         const obj2 = { guildId, listings: type.listings };
-        return React6(GuildPowerupsLevelsSectionDefault, obj2, type.type);
+        return React5(GuildPowerupsLevelsSectionDefault, obj2, type.type);
       } else if (tmp.PERK === type) {
         const obj = { guildId, listings: type.listings };
-        return React6(GuildPowerupsPerksSectionDefault, obj, type.type);
+        return React5(GuildPowerupsPerksSectionDefault, obj, type.type);
       } else {
         return null;
       }

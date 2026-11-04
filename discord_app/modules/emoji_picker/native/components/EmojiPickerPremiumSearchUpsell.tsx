@@ -9,7 +9,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 const require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7 } = Constants);
+({ AnalyticEvents: hasOwnProperty, AnalyticsPages: closure_6, AnalyticsSections: metroImportDefault } = Constants);
 const PremiumConstants = fn(1387);
 ({
   PremiumSubscriptionSKUs: closure_8,
@@ -41,7 +41,7 @@ export function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
       const obj3 = { page: DM_CHANNEL, section: constants3.EMOJI_PICKER_POPOUT };
       obj2.location = obj3;
       obj2.location_stack = location_stack;
-      obj2.sku_id = dependencyMap ? React6.TIER_0 : React6.TIER_2;
+      obj2.sku_id = dependencyMap ? React5.TIER_0 : React5.TIER_2;
       obj2 = AnalyticsUtilsDefault.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
     }
   }, items);
@@ -49,11 +49,11 @@ export function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
 export function useEmojiPickerPremiumSearchUpsellClick(arg0) {
   let onPress;
   ({ analyticsLocations, useTier0UpsellContent } = arg0);
-  const obj = onPress(9917);
+  const obj = onPress(9935);
   const tmp = usePremiumFeatureUpsellGetNitroDefault(
     useTier0UpsellContent,
     obj.usePremiumUpsellConfig(
-      onPress(10104).getUpsellType(onPress(5200).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
+      onPress(10152).getUpsellType(onPress(5200).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
       analyticsLocations,
     ).onViewAllPerks,
     constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
@@ -77,11 +77,11 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
   let onPress;
   ({ analyticsLocations, useTier0UpsellContent } = guildId);
   const tmp = closure_12();
-  let obj = onPress(9917);
+  let obj = onPress(9935);
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(
     useTier0UpsellContent,
     obj.usePremiumUpsellConfig(
-      onPress(10104).getUpsellType(onPress(5200).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
+      onPress(10152).getUpsellType(onPress(5200).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
       analyticsLocations,
     ).onViewAllPerks,
     constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
@@ -119,11 +119,11 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
       const obj3 = { page: DM_CHANNEL, section: constants3.EMOJI_PICKER_POPOUT };
       obj2.location = obj3;
       obj2.location_stack = location_stack;
-      obj2.sku_id = dependencyMap ? React6.TIER_0 : React6.TIER_2;
+      obj2.sku_id = dependencyMap ? React5.TIER_0 : React5.TIER_2;
       obj2 = AnalyticsUtilsDefault.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
     }
   }, items1);
-  let obj2 = onPress(10104);
+  let obj2 = onPress(10152);
   const intl = onPress(1113).intl;
   if (guildId.useTier0UpsellContent) {
     let obj3 = { planName: tmp2(2176).getTierDisplayNameByPlanId(PREMIUM_MONTH_TIER_0.PREMIUM_MONTH_TIER_0) };
@@ -142,7 +142,7 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
     stringResult = string(t.pj0XBN);
   }
   obj4.ctaText = stringResult;
-  obj4.icon = jsx(onPress(9656).NitroWheelIcon, {
+  obj4.icon = jsx(onPress(9675).NitroWheelIcon, {
     size: "sm",
     color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
     style: tmp.nitroIcon,

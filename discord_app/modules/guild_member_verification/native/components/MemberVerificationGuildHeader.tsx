@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
@@ -16,11 +16,11 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(7069);
+const MemberVerificationFormConstants = fn(7084);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 ({ useBannerHeight: hasOwnProperty, SHEET_RADIUS } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   header: { alignItems: "center", marginBottom: 12 },
@@ -145,7 +145,7 @@ export default function MemberVerificationGuildHeader(scrollTop) {
     timestampProducer(GuildBadgeDefault, { style: tmp.featureIcon, guild, disableColor: true }),
   ];
   obj4.children = items5;
-  const items6 = [React5(_modDef1652.View, obj4), ,];
+  const items6 = [metroImportDefault(_modDef1652.View, obj4), ,];
   const obj7 = {
     style: tmp.headerTitle,
     variant: "heading-xl/semibold",
@@ -164,7 +164,7 @@ export default function MemberVerificationGuildHeader(scrollTop) {
   }
   obj7.children = formatResult;
   items6[1] = timestampProducer(Text_Text.Heading, obj7);
-  const obj10 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj10 = { style: tmp.headerDescription, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   const string = intl2.string;
   const t2 = util.t;
@@ -176,7 +176,7 @@ export default function MemberVerificationGuildHeader(scrollTop) {
   obj10.children = stringResult;
   items6[2] = timestampProducer(Text_Text.Text, obj10);
   obj3.children = items6;
-  obj2.children = React5(View, obj3);
+  obj2.children = metroImportDefault(View, obj3);
   return timestampProducer(View, obj2);
 }
 export function MemberVerificationGuildBanner(arg0) {
@@ -256,7 +256,7 @@ export function MemberVerificationGuildBanner(arg0) {
         return -1 * closure_0.get();
       }
     }
-    tmp19 = React5(_modDef1652.View, obj4);
+    tmp19 = metroImportDefault(_modDef1652.View, obj4);
     const tmp3Result2 = AvatarUtilsDefault;
   }
   return tmp19;

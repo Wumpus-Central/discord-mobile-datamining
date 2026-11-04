@@ -19,37 +19,37 @@ function NotificationCenterBannerImpl(onDismiss) {
   let obj = { style: tmp.container, children: null };
   const obj2 = {
     style: tmp.iconContainer,
-    children: closure_14(onDismiss(11125).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
+    children: closure_14(onDismiss(11173).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
   };
   items = [closure_14(View, obj2), ,];
   const obj4 = { style: tmp.contentContainer, children: null };
-  const obj5 = { variant: "text-md/semibold", color: "text-default", children: null };
+  const obj5 = { variant: "body-md/semibold", color: "text-default", children: null };
   const intl = onDismiss(1113).intl;
   obj5.children = intl.string(onDismiss(1113).t.G6YBna);
-  const items1 = [closure_14(onDismiss(5747).Text, obj5), ,];
-  const obj6 = { variant: "text-md/medium", color: "text-muted", style: null, children: null };
+  const items1 = [closure_14(onDismiss(5761).Text, obj5), ,];
+  const obj6 = { variant: "body-md/medium", color: "text-muted", style: null, children: null };
   const obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
   obj6.style = { marginTop: nativeDefault.space.PX_4 };
   const intl2 = onDismiss(1113).intl;
   obj6.children = intl2.string(onDismiss(1113).t["9CoPDE"]);
-  items1[1] = closure_14(onDismiss(5747).Text, obj6);
+  items1[1] = closure_14(onDismiss(5761).Text, obj6);
   const obj8 = { style: tmp.ctaButton, children: null };
   const obj9 = { variant: "primary", size: "md", text: null, onPress: null };
   const intl3 = onDismiss(1113).intl;
   obj9.text = intl3.string(onDismiss(1113).t.a4bgO0);
   obj9.onPress = function handlePress() {
-    const pushNotificationPermission = onDismiss(14106).requestPushNotificationPermission(
+    const pushNotificationPermission = onDismiss(14192).requestPushNotificationPermission(
       constants2.ALLOW_TO_REQUEST,
       constants3.NOTIFICATION_CENTER,
       closure_1_8,
     );
-    const obj = onDismiss(14106);
+    const obj = onDismiss(14192);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
       action: constants4.ACCEPT,
       prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
     });
   };
-  obj8.children = closure_14(onDismiss(5754).Button, obj9);
+  obj8.children = closure_14(onDismiss(5768).Button, obj9);
   items1[2] = closure_14(View, obj8);
   obj4.children = items1;
   items[1] = closure_15(View, obj4);
@@ -68,8 +68,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   };
   const intl4 = onDismiss(1113).intl;
   obj10.accessibilityLabel = intl4.string(onDismiss(1113).t.WAI6xu);
-  obj10.children = closure_14(onDismiss(7180).XSmallIcon, { size: "sm", color: "icon-strong" });
-  items[2] = closure_14(onDismiss(7106).PressableHighlight, obj10);
+  obj10.children = closure_14(onDismiss(7195).XSmallIcon, { size: "sm", color: "icon-strong" });
+  items[2] = closure_14(onDismiss(7121).PressableHighlight, obj10);
   obj.children = items;
   return closure_15(View, obj);
 }
@@ -77,9 +77,9 @@ const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, NOOP: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
-const NotificationPermissionConstants = fn(14105);
+const NotificationPermissionConstants = fn(14191);
 ({
   EventActionType: closure_10,
   EventActionLocation: closure_11,

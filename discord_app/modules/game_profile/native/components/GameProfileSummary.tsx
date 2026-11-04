@@ -7,7 +7,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "column", overflow: "hidden" },
@@ -57,14 +57,14 @@ export default function GameProfileSummary(arg0) {
         importantForAccessibility: "no-hide-descendants",
         children: null,
       };
-      const obj4 = { variant: "text-md/normal", color: "interactive-text-active", onTextLayout: tmp6, children: null };
+      const obj4 = { variant: "body-md/normal", color: "interactive-text-active", onTextLayout: tmp6, children: null };
       const obj5 = { runs: memo, onLinkPress: callback };
       obj4.children = closure_5(trackAction(tmp3[9]).HTMLText, obj5);
       obj3.children = closure_5(trackAction(tmp3[8]).Text, obj4);
       tmp10 = closure_5(closure_3, obj3);
     }
     const items2 = [tmp10, ,];
-    const obj6 = { variant: "text-md/normal", color: "interactive-text-active", lineClamp: 3, children: null };
+    const obj6 = { variant: "body-md/normal", color: "interactive-text-active", lineClamp: 3, children: null };
     const obj7 = { runs: memo, onLinkPress: callback };
     obj6.children = closure_5(trackAction(tmp3[9]).HTMLText, obj7);
     items2[1] = closure_5(trackAction(tmp3[8]).Text, obj6);
@@ -79,7 +79,7 @@ export default function GameProfileSummary(arg0) {
       };
       const obj9 = { expanded: isExpanded };
       obj8.accessibilityState = obj9;
-      const obj10 = { variant: "text-md/medium", color: "text-brand", children: stringResult };
+      const obj10 = { variant: "body-md/medium", color: "text-brand", children: stringResult };
       obj8.children = closure_5(trackAction(tmp3[8]).Text, obj10);
       tmp12Result = closure_5(closure_4, obj8);
     }

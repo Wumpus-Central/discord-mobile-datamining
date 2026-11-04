@@ -31,14 +31,14 @@ function GuildProfileTraitView(trait) {
   const obj = { style: closure_7().trait, children: null };
   items = [
     hasOwnProperty(TraitEmoji, { emoji: trait.emoji }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: trait.label }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: trait.label }),
   ];
   obj.children = items;
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 },

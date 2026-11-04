@@ -10,7 +10,7 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
   let contentText = closure_8();
   let Text = onConfirmPress;
   let tmp = dependencyMap;
-  const isVerifiedTeen = onConfirmPress(6846).useIsVerifiedTeen();
+  const isVerifiedTeen = onConfirmPress(6861).useIsVerifiedTeen();
   const intl = onConfirmPress(1113).intl;
   const format = intl.format;
   const t = onConfirmPress(1113).t;
@@ -18,12 +18,12 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
     const obj2 = {
       hook(children) {
         return hasOwnProperty(Text_Text.Text, {
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           color: "text-default",
           style: contentText.linkText,
           onPress() {
-            const tmp = contentText(5825);
-            tmp(contentText(2190).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+            const tmp = contentText(5839);
+            tmp(contentText(2190).getArticleURL(constants.AGE_VERIFICATION_LEARN_MORE));
             if (onConfirmPress != null) {
               onConfirmPress();
             }
@@ -37,13 +37,13 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
     const obj3 = {
       hook(children) {
         return hasOwnProperty(Text_Text.Text, {
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           color: "text-default",
           style: contentText.linkText,
           onPress() {
-            const obj = contentText(8079);
+            const obj = contentText(8095);
             const result = obj.showAgeVerificationGetStartedModal({
-              entryPoint: onConfirmPress(6849).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+              entryPoint: onConfirmPress(6864).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
             });
             if (closure_1_0 != null) {
               closure_1_0();
@@ -58,14 +58,14 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
   if (onConfirmPress.noBackground) {
     const obj4 = { style: contentText.noticeContainer, children: null };
     if (isVerifiedTeen) {
-      let WarningIcon = Text(5855).CircleInformationIcon;
+      let WarningIcon = Text(5869).CircleInformationIcon;
     } else {
-      WarningIcon = Text(8150).WarningIcon;
+      WarningIcon = Text(8166).WarningIcon;
     }
     const obj5 = { size: "refresh_sm", color: contentText(575).colors.TEXT_DEFAULT, style: contentText.icon };
     items = [closure_5(WarningIcon, obj5)];
-    Text = Text(5747).Text;
-    const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
+    Text = Text(5761).Text;
+    const obj6 = { variant: "body-sm/medium", color: "text-subtle", style: null, children: null };
     contentText = contentText.contentText;
     obj6.style = contentText;
     obj6.children = formatResult;
@@ -79,14 +79,14 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
       str = "info";
     }
     obj7 = { type: str, message: formatResult, role: "none" };
-    return closure_5(Text(8149).InlineNotice, obj7);
+    return closure_5(Text(8165).InlineNotice, obj7);
   }
-  let obj = onConfirmPress(6846);
+  let obj = onConfirmPress(6861);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { marginTop: nativeDefault.space.PX_16 },
@@ -144,7 +144,7 @@ export default function StageChannelAgeVerificationNotice(arg0) {
       const obj6 = { children: null };
       items[2] = hasItem1;
       obj6.children = items;
-      return timestampProducer(React5, obj6);
+      return timestampProducer(metroImportDefault, obj6);
     } else if (null != divider) {
       const items2 = [divider];
       let items3 = items2;

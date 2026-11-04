@@ -13,7 +13,7 @@ import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurr
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: closure_6 } = Constants);
 const ActivityJoinability = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" };
 const result = size.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
 

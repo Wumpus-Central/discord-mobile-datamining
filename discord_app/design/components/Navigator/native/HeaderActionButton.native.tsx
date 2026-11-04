@@ -42,7 +42,7 @@ export function HeaderActionButton(arg0) {
   if (null != text) {
     const obj2 = {
       style: null,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       lineClamp: 1,
       maxFontSizeMultiplier: null,
       children: null,

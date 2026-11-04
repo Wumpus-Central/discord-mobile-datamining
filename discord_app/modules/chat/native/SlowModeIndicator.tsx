@@ -8,7 +8,7 @@ import SlowmodeStore from "../../../stores/SlowmodeStore.tsx";
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
@@ -51,7 +51,7 @@ export default noop.memo(function SlowModeIndicator(channel) {
     closure_5(channel(slowmodeType[10]).Text, {
       lineClamp: 1,
       allowFontScaling: false,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       children: memo,
     }),

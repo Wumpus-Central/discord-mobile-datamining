@@ -33,9 +33,9 @@ export const MEDIUM_BUTTON_PADDING = (diff1 - 2) / 2;
 export const LARGE_BUTTON_PADDING = (diff2 - 2) / 2;
 export const BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER = 3;
 export function getButtonDefaultTextVariant(size) {
-  let str = "text-sm/semibold";
+  let str = "body-sm/semibold";
   if ("lg" === size) {
-    str = "text-md/semibold";
+    str = "body-md/semibold";
   }
   return str;
 }

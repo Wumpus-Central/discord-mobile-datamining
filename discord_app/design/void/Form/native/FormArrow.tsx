@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../native.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
-import _modDef7434 from "../../../../../_runtime/metro/07434__.js";
+import _modDef7450 from "../../../../../_runtime/metro/07450__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -23,12 +23,12 @@ export default function FormArrow(arg0) {
   const tmp = closure_6();
   if (null != label) {
     const obj2 = { style: tmp.wrapper, children: null };
-    const obj3 = { maxFontSizeMultiplier: 1.5, variant: "text-md/medium", color: "text-muted", children: label };
+    const obj3 = { maxFontSizeMultiplier: 1.5, variant: "body-md/medium", color: "text-muted", children: label };
     items = [React4(Text_Text.Text, obj3)];
     const obj4 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
     obj4.style = items1;
-    obj4.source = _modDef7434;
+    obj4.source = _modDef7450;
     obj4.size = native.Icon.Sizes.MEDIUM;
     items[1] = React4(native.Icon, obj4);
     obj2.children = items;
@@ -37,7 +37,7 @@ export default function FormArrow(arg0) {
     const obj = { style: null, source: null, size: null };
     const items2 = [tmp.icon, style];
     obj.style = items2;
-    obj.source = _modDef7434;
+    obj.source = _modDef7450;
     obj.size = native.Icon.Sizes.MEDIUM;
     tmp6 = React4(native.Icon, obj);
   }

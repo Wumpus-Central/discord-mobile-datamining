@@ -35,7 +35,7 @@ obj2.missingMembers = {
   borderRadius: nativeDefault.radii.md,
   borderWidth: 1,
   borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
   marginBottom: nativeDefault.space.PX_16,
   padding: nativeDefault.space.PX_8,
   flexDirection: "row",
@@ -45,7 +45,7 @@ let obj5 = {
   borderRadius: nativeDefault.radii.md,
   borderWidth: 1,
   borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
   marginBottom: nativeDefault.space.PX_16,
   padding: nativeDefault.space.PX_8,
   flexDirection: "row",
@@ -114,7 +114,7 @@ export default function GuildSettingsRoleMembers(guild) {
           const obj2 = { text: null, variant: "critical" };
           const intl = name(1113).intl;
           obj2.text = intl.string(name(1113).t.fEptJP);
-          found(5832).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
+          found(5846).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
         });
       };
       obj2.confirmColor = guild(locked[15]).ButtonColors.RED;
@@ -131,7 +131,7 @@ export default function GuildSettingsRoleMembers(guild) {
       location_section: "Members",
     });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(19933, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
+    obj2.openLazy(asyncRequireImpl(20049, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
       guild,
       role,
     });
@@ -195,7 +195,7 @@ export default function GuildSettingsRoleMembers(guild) {
     const obj9 = { style: tmp.missingMembers, children: null };
     const obj10 = { color: role(tmp6[7]).colors.TEXT_LINK, size: "md" };
     const items6 = [closure_8(tmp5(tmp6[24]).CircleInformationIcon, obj10)];
-    const obj11 = { style: tmp.missingMembersText, variant: "text-sm/medium", children: null };
+    const obj11 = { style: tmp.missingMembersText, variant: "body-sm/medium", children: null };
     let intl = tmp5(tmp6[9]).intl;
     obj11.children = intl.string(tmp5(tmp6[9]).t.RQxHZ8);
     items6[1] = closure_8(tmp5(tmp6[25]).Text, obj11);

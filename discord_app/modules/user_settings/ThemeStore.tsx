@@ -21,7 +21,7 @@ function handleThemeChange() {
   return flag;
 }
 const ThemeConstants = fn(1195);
-({ SystemTheme: metroRequire, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
+({ SystemTheme: closure_6, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
 const UserSettingsDelay = fn(1082).UserSettingsDelay;
 const ThemeTypes = fn(1072).ThemeTypes;
 let obj = { UNSET: 0, [0]: "UNSET", SET: 1, [1]: "SET" };

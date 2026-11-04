@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ ComponentActions: closure_8, ME: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -86,11 +86,11 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(18198);
+        obj = obj(18295);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(5330).dismissKeyboard();
-        const objResult = obj(5330);
+        obj(5331).dismissKeyboard();
+        const objResult = obj(5331);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;
@@ -313,7 +313,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
     if (type === useChannelScreensFromNavigation.ChannelScreenType.BACKGROUND_SAVED) {
       let guildId = firstScreen.guildId;
       if (guildId == null) {
-        guildId = React7;
+        guildId = React6;
       }
       ChannelActionCreatorsDefault.preload(guildId, firstScreen.channelId);
     }

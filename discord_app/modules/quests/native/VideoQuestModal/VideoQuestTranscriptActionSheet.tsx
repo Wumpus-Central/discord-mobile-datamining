@@ -7,10 +7,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const VideoQuestUIStore = fn(7972);
-({ FetchStatus: hasOwnProperty, useVideoQuestUIStore: metroRequire } = VideoQuestUIStore);
+const VideoQuestUIStore = fn(7988);
+({ FetchStatus: hasOwnProperty, useVideoQuestUIStore: closure_6 } = VideoQuestUIStore);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_8 }, loadingSpinner: { height: 100 } };
 let closure_9 = createStyles.createStyles(obj2);
@@ -73,7 +73,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   const obj2 = { title: null };
   const intl = quest(1113).intl;
   obj2.title = intl.string(quest(1113).t["1YS80z"]);
-  obj.header = closure_7(quest(7441).BottomSheetTitleHeader, obj2);
+  obj.header = closure_7(quest(7457).BottomSheetTitleHeader, obj2);
   const obj3 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const obj4 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
@@ -91,13 +91,13 @@ export default function VideoQuestTranscriptActionSheet(quest) {
       memo.map((children, index) =>
         closure_1_7(
           quest(dependencyMap[14]).Text,
-          { variant: "heading-md/medium", color: "text-muted", children },
+          { variant: "heading-sm/medium", color: "text-muted", children },
           index,
         ),
       ),
   ];
   obj4.children = items2;
-  obj3.children = closure_8(quest(6147).Stack, obj4);
-  obj.children = closure_7(quest(5398).BottomSheetScrollView, obj3);
-  return closure_7(quest(7486).ActionSheet, obj);
+  obj3.children = closure_8(quest(6162).Stack, obj4);
+  obj.children = closure_7(quest(5400).BottomSheetScrollView, obj3);
+  return closure_7(quest(7502).ActionSheet, obj);
 }

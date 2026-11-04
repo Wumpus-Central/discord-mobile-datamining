@@ -76,13 +76,13 @@ function getPrice(planId) {
     tmp2 = null != currency && null != contextPlanPrices[planId] && contextPlanPrices[planId].currency !== currency;
   }
   if (null != SubscriptionPlanStore.get(planId)) {
-    let str2 = constants3.DEFAULT;
+    let str3 = constants3.DEFAULT;
     if (flag2) {
-      str2 = constants3.GIFT;
+      str3 = constants3.GIFT;
     } else if (flag) {
-      str2 = constants3.PREMIUM_TIER_1;
+      str3 = constants3.PREMIUM_TIER_1;
     }
-    const obj5 = { paymentSourceId, purchaseType: str2, currency };
+    const obj5 = { paymentSourceId, purchaseType: str3, currency };
     ({ paymentSourceId: paymentSourceId2, purchaseType, currency: currency2 } = obj5);
     const obj6 = { paymentSourceId: paymentSourceId2, purchaseType };
     const arr = experimentalGetPrices(planId, obj6);
@@ -104,7 +104,7 @@ function getPrice(planId) {
         if (null != paymentSourceId2) {
           const obj7 = { purchaseType };
           found1 = experimentalGetPrices(planId, obj7).find((currency) => currency.currency === currency.toLowerCase());
-          const tmp10Result = experimentalGetPrices(planId, obj7);
+          const tmp15Result = experimentalGetPrices(planId, obj7);
         }
         found = found1;
       }
@@ -113,13 +113,13 @@ function getPrice(planId) {
       first = arr[0];
     }
     if (null == first) {
-      const _Error = Error;
+      const _Error2 = Error;
       const error = new Error("Couldn't find price");
       if (flag3) {
         const obj8 = { extra: null, tags: null };
         const obj9 = { paymentSourceId };
         obj8.extra = obj9;
-        const obj11 = { purchaseType: str2.toString(), planId, currency: null };
+        const obj11 = { purchaseType: str3.toString(), planId, currency: null };
         if (currency == null) {
           currency = "unknown";
         }
@@ -132,16 +132,16 @@ function getPrice(planId) {
       return first;
     }
   } else {
-    const _Error2 = Error;
+    const _Error = Error;
     const error1 = new Error("Plan not found");
     if (flag3) {
       const obj12 = { planId, currency: null };
-      let str = currency;
+      let str2 = currency;
       if (currency == null) {
-        str = "unknown";
+        str2 = "unknown";
       }
       const obj13 = { tags: null, extra: null };
-      obj12.currency = str;
+      obj12.currency = str2;
       obj13.tags = obj12;
       const obj23 = {};
       const merged = Object.assign(obj);
@@ -2431,35 +2431,35 @@ const frozen = Object.freeze({
   calculateYearlyPlanMonthlyRateAmount,
   getDaysSincePremium,
   getDaysRemainingUntilSubscriptionCurrentPeriodEnds,
-  canUseAnimatedEmojis: fn(16018).canUseAnimatedEmojis,
-  canUseEmojisEverywhere: fn(16018).canUseEmojisEverywhere,
-  canUseSoundboardEverywhere: fn(16018).canUseSoundboardEverywhere,
-  canUseCustomCallSounds: fn(16018).canUseCustomCallSounds,
-  canUploadLargeFiles: fn(16018).canUploadLargeFiles,
-  canUseBadges: fn(16018).canUseBadges,
-  canUseHighVideoUploadQuality: fn(16018).canUseHighVideoUploadQuality,
-  canEditDiscriminator: fn(16018).canEditDiscriminator,
-  hasBoostDiscount: fn(16018).hasBoostDiscount,
-  canUseAnimatedAvatar: fn(16018).canUseAnimatedAvatar,
-  canInstallPremiumApplications: fn(16018).canInstallPremiumApplications,
-  canUseIncreasedMessageLength: fn(16018).canUseIncreasedMessageLength,
-  canUseIncreasedGuildCap: fn(16018).canUseIncreasedGuildCap,
-  canRedeemPremiumPerks: fn(16018).canRedeemPremiumPerks,
-  canUsePremiumProfileCustomization: fn(16018).canUsePremiumProfileCustomization,
-  canUsePremiumAppIcons: fn(16018).canUsePremiumAppIcons,
-  canUsePremiumGuildMemberProfile: fn(16018).canUsePremiumGuildMemberProfile,
-  canUseClientThemes: fn(16018).canUseClientThemes,
-  canStreamQuality: fn(16018).canStreamQuality,
-  canUseQuestOrbMultiplier: fn(16018).canUseQuestOrbMultiplier,
-  hasFreeBoosts: fn(16018).hasFreeBoosts,
-  canUseCustomStickersEverywhere: fn(16018).canUseCustomStickersEverywhere,
-  canUseCustomBackgrounds: fn(16018).canUseCustomBackgrounds,
-  canUseCollectibles: fn(16018).canUseCollectibles,
-  canUseMonthlyOrbs: fn(16018).canUseMonthlyOrbs,
-  canUseShopDiscounts: fn(16018).canUseShopDiscounts,
-  canUseMoreQuestOrbs: fn(16018).canUseMoreQuestOrbs,
+  canUseAnimatedEmojis: fn(16108).canUseAnimatedEmojis,
+  canUseEmojisEverywhere: fn(16108).canUseEmojisEverywhere,
+  canUseSoundboardEverywhere: fn(16108).canUseSoundboardEverywhere,
+  canUseCustomCallSounds: fn(16108).canUseCustomCallSounds,
+  canUploadLargeFiles: fn(16108).canUploadLargeFiles,
+  canUseBadges: fn(16108).canUseBadges,
+  canUseHighVideoUploadQuality: fn(16108).canUseHighVideoUploadQuality,
+  canEditDiscriminator: fn(16108).canEditDiscriminator,
+  hasBoostDiscount: fn(16108).hasBoostDiscount,
+  canUseAnimatedAvatar: fn(16108).canUseAnimatedAvatar,
+  canInstallPremiumApplications: fn(16108).canInstallPremiumApplications,
+  canUseIncreasedMessageLength: fn(16108).canUseIncreasedMessageLength,
+  canUseIncreasedGuildCap: fn(16108).canUseIncreasedGuildCap,
+  canRedeemPremiumPerks: fn(16108).canRedeemPremiumPerks,
+  canUsePremiumProfileCustomization: fn(16108).canUsePremiumProfileCustomization,
+  canUsePremiumAppIcons: fn(16108).canUsePremiumAppIcons,
+  canUsePremiumGuildMemberProfile: fn(16108).canUsePremiumGuildMemberProfile,
+  canUseClientThemes: fn(16108).canUseClientThemes,
+  canStreamQuality: fn(16108).canStreamQuality,
+  canUseQuestOrbMultiplier: fn(16108).canUseQuestOrbMultiplier,
+  hasFreeBoosts: fn(16108).hasFreeBoosts,
+  canUseCustomStickersEverywhere: fn(16108).canUseCustomStickersEverywhere,
+  canUseCustomBackgrounds: fn(16108).canUseCustomBackgrounds,
+  canUseCollectibles: fn(16108).canUseCollectibles,
+  canUseMonthlyOrbs: fn(16108).canUseMonthlyOrbs,
+  canUseShopDiscounts: fn(16108).canUseShopDiscounts,
+  canUseMoreQuestOrbs: fn(16108).canUseMoreQuestOrbs,
   formatPriceString,
-  StreamQuality: fn(16018).StreamQuality,
+  StreamQuality: fn(16108).StreamQuality,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/PremiumUtils.tsx");
@@ -3462,8 +3462,8 @@ export const isPremiumAtLeast = fn(2112).isPremiumAtLeast;
 export const isPremiumAtMost = fn(2112).isPremiumAtMost;
 export const isPremium = fn(2112).isPremium;
 export const isPremiumExactly = fn(2112).isPremiumExactly;
-export const getMaxFileSizeForPremiumType = fn(16018).getMaxFileSizeForPremiumType;
-export const StreamQuality = fn(16018).StreamQuality;
+export const getMaxFileSizeForPremiumType = fn(16108).getMaxFileSizeForPremiumType;
+export const StreamQuality = fn(16108).StreamQuality;
 export function useHasTier2Premium() {
   items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());

@@ -73,9 +73,9 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(6037).DEFAULT_SPATIAL_AUDIO_OPTIONS;
-const Constants = fn(5888);
-({ Features: closure_7, MediaEngineContextTypes: closure_8, SpatialAudioStatus } = Constants);
+const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(6052).DEFAULT_SPATIAL_AUDIO_OPTIONS;
+const Constants = fn(5902);
+({ Features: metroImportDefault, MediaEngineContextTypes: closure_8, SpatialAudioStatus } = Constants);
 let obj = {};
 let isSpatial = {};
 apply.cloneDeep(DEFAULT_SPATIAL_AUDIO_OPTIONS);
@@ -95,10 +95,10 @@ prototype["initialize"] = function initialize(enabled) {
   items = [ApexExperimentStore];
   self.syncWith(items, handleExperimentChange);
   const mediaEngine = MediaEngineStore.getMediaEngine();
-  mediaEngine.on(self(5909).MediaEngineEvent.Connection, (setSpatialAudioEnabled) =>
+  mediaEngine.on(self(5923).MediaEngineEvent.Connection, (setSpatialAudioEnabled) =>
     setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial.isSpatial),
   );
-  mediaEngine.on(self(5909).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
+  mediaEngine.on(self(5923).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
     let flag = arg0 !== global;
     if (flag) {
       global = arg0;

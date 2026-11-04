@@ -2,6 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
+import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import TTIAnalyticsUtils from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import NativePermissionManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativePermissionManagerModule.tsx";
@@ -17,10 +18,10 @@ const require = globalThis.__r;
 
 require = fn;
 fn(17).BackHandler;
-const AnalyticsTrackingStore = fn(7764);
-const ShareStore = fn(16370);
+const AnalyticsTrackingStore = fn(7780);
+const ShareStore = fn(16459);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_8 = fn(14109).MultiAccountSwitchLocation;
+let closure_8 = fn(14195).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const share = "share";
@@ -57,8 +58,8 @@ export default function AppShare(targetUserId) {
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const obj = closure_0(14112);
-        closure_0(14112)
+        const obj = closure_0(14198);
+        closure_0(14198)
           .switchAccount(targetUserId, false, constants.SHARE_EXTENSION)
           .then(() => {
             closure_1_3(true);
@@ -96,6 +97,7 @@ export default function AppShare(targetUserId) {
     const obj2 = { has_content: tmp2, has_attachment: targetUserId.attachments.length > 0 };
   }, items4);
   useMountEffectDefault(() => {
+    actions_AlertActionCreatorsDefault.closeAll();
     const attachments = targetUserId.attachments;
     const mapped = attachments.map((mimeType) => {
       let str = mimeType.mimeType;
@@ -122,11 +124,11 @@ export default function AppShare(targetUserId) {
     closure_9(tmp14Result, obj4);
     tmp9Result = tmp9(1624);
   } else {
-    const items5 = [closure_9(tmp9(7329).SceneLoadingIndicator, {}), , ,];
+    const items5 = [closure_9(tmp9(7345).SceneLoadingIndicator, {}), , ,];
     const obj5 = { appEntryKey: share };
-    items5[1] = closure_9(tmp9(19161).ActionSheetContainer, obj5);
+    items5[1] = closure_9(tmp9(19264).ActionSheetContainer, obj5);
     items5[2] = closure_9(AppToastContainerDefault, { appChrome: false });
-    items5[3] = closure_9(tmp9(6084).AlertModalContainer, {});
+    items5[3] = closure_9(tmp9(6099).AlertModalContainer, {});
     obj3.children = items5;
     return closure_10(tmp17, obj3);
   }

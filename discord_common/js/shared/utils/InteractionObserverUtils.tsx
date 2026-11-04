@@ -35,27 +35,27 @@ export function getIntersectionObserver(current) {
   }
   return value;
 }
-export function watch(current2, current, arg2) {
-  weakMap = weakMap1.get(current2);
+export function watch(observe, current, arg2) {
+  weakMap = weakMap1.get(observe);
   if (weakMap == null) {
     const _WeakMap = WeakMap;
     weakMap = new WeakMap();
   }
   if (!weakMap.has(current)) {
-    current2.observe(current);
+    observe.observe(current);
   }
   const result = weakMap.set(current, arg2);
-  const result1 = weakMap1.set(current2, weakMap);
+  const result1 = weakMap1.set(observe, weakMap);
 }
-export function unwatch(current2, current) {
-  weakMap = weakMap1.get(current2);
+export function unwatch(unobserve, arg1) {
+  weakMap = weakMap1.get(unobserve);
   if (weakMap == null) {
     const _WeakMap = WeakMap;
     weakMap = new WeakMap();
   }
-  if (weakMap.has(current)) {
-    weakMap.delete(current);
-    current2.unobserve(current);
-    const result = weakMap1.set(current2, weakMap);
+  if (weakMap.has(arg1)) {
+    weakMap.delete(arg1);
+    unobserve.unobserve(arg1);
+    const result = weakMap1.set(unobserve, weakMap);
   }
 }

@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -74,7 +74,7 @@ export default function RedesignAddAvatarModal(route) {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8344).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8360).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -90,23 +90,23 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16591);
-              obj11.description = tmp2(8864).generateAvatarDescription();
+              const obj = tmp2(16682);
+              obj11.description = tmp2(8881).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(8864);
+              const obj3 = tmp2(8881);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(8859).setPendingChanges(obj12);
-            const obj4 = tmp2(8859);
+            tmp2(8876).setPendingChanges(obj12);
+            const obj4 = tmp2(8876);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8861).announcePendingAvatarChange(str);
+            const result = tmp2(8878).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(8861);
+            const obj6 = tmp2(8878);
           }
           closure_129_1(true);
         }
@@ -163,7 +163,7 @@ export default function RedesignAddAvatarModal(route) {
   const intl = tmp9(tmp8[19]).intl;
   obj7.children = intl.string(onComplete(selectedAvatar[19]).t.XQRWvR);
   const items2 = [closure_10(onComplete(selectedAvatar[18]).Text, obj7)];
-  const obj8 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj8 = { style: tmp.subtitle, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = tmp9(tmp8[19]).intl;
   obj8.children = intl2.string(onComplete(selectedAvatar[19]).t.fH9TLT);
   items2[1] = closure_10(onComplete(selectedAvatar[18]).Text, obj8);
@@ -186,7 +186,7 @@ export default function RedesignAddAvatarModal(route) {
   });
   let obj10 = { style: tmp.errorContainer, children: null };
   if (tmp17Result) {
-    let obj11 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
+    let obj11 = { variant: "body-sm/medium", color: "text-feedback-critical", children: null };
     const intl3 = tmp9(tmp8[19]).intl;
     obj11.children = intl3.string(tmp9(tmp8[19]).t.XyLlVm);
     tmp17Result = closure_10(tmp9(tmp8[18]).Text, obj11);

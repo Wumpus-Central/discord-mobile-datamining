@@ -26,9 +26,9 @@ export default function GroupDMRow(channel) {
   const recipientsLabel = useRecipientsLabel.useRecipientsLabel(channel);
   let tmp3Result;
   if (null != recipientsLabel) {
-    const obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
+    const obj3 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
     tmp3Result = jsx(Text_Text.Text, {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-muted",
       lineClamp: 1,
       children: recipientsLabel,

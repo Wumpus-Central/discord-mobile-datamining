@@ -14,9 +14,9 @@ import OwnedGameServersStore from "OwnedGameServersStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GAME_SERVER_COLLECTION_ID = fn(5354).GAME_SERVER_COLLECTION_ID;
+const GAME_SERVER_COLLECTION_ID = fn(5355).GAME_SERVER_COLLECTION_ID;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_server/GameServerActionCreators.tsx");
 
@@ -84,7 +84,7 @@ export function fetchGameServerGlobalCatalog() {
     flag = false;
   }
   const request = {
-    url: React6.STOREFRONT_COLLECTION_WITH_PRODUCTS(GAME_SERVER_COLLECTION_ID),
+    url: React5.STOREFRONT_COLLECTION_WITH_PRODUCTS(GAME_SERVER_COLLECTION_ID),
     query: { locale: LocaleStore.locale, include_unpublished_products: flag, include_unpublished_collection: flag },
     oldFormErrors: true,
     rejectWithError: null,
@@ -190,7 +190,7 @@ export function updateGameServerRegionPingState(pingUrl, state) {
 export function enableGameServerForGuild(arg0, arg1, game_server_name, game_server_region) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: React6.GUILD_POWERUP_TOGGLE(arg0, arg1),
+    url: React5.GUILD_POWERUP_TOGGLE(arg0, arg1),
     body: { game_server_name, game_server_region },
     rejectWithError: true,
     oldFormErrors: true,
@@ -200,7 +200,7 @@ export function enableGameServerForGuild(arg0, arg1, game_server_name, game_serv
 export function updateGameServerForGuild(arg0, arg1, sku_id, game_server_name) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: React6.GUILD_POWERUP_UPDATE(arg0, arg1),
+    url: React5.GUILD_POWERUP_UPDATE(arg0, arg1),
     body: { game_server_name, sku_id },
     rejectWithError: true,
     oldFormErrors: true,
@@ -210,7 +210,7 @@ export function updateGameServerForGuild(arg0, arg1, sku_id, game_server_name) {
 export function disableGameServerForGuild(arg0, arg1, entitlement_id) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: React6.GUILD_POWERUP_TOGGLE(arg0, arg1),
+    url: React5.GUILD_POWERUP_TOGGLE(arg0, arg1),
     query: { entitlement_id },
     rejectWithError: true,
     oldFormErrors: true,
@@ -219,7 +219,7 @@ export function disableGameServerForGuild(arg0, arg1, entitlement_id) {
 }
 export function fetchGameServerRegions(arg0) {
   const HTTP = HTTPUtils.HTTP;
-  value = HTTP.get({ url: React6.GAME_SERVER_REGIONS(arg0), rejectWithError: true, oldFormErrors: true, retries: 3 });
+  value = HTTP.get({ url: React5.GAME_SERVER_REGIONS(arg0), rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
     const obj2 = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null };
     body = body.body;
@@ -233,7 +233,7 @@ export function fetchGameServerRegions(arg0) {
 }
 export function fetchMyGameServerRegions() {
   const HTTP = HTTPUtils.HTTP;
-  value = HTTP.get({ url: React6.GAME_SERVER_MY_REGIONS, rejectWithError: true, oldFormErrors: true, retries: 3 });
+  value = HTTP.get({ url: React5.GAME_SERVER_MY_REGIONS, rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
     const obj2 = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null, creationDisabled: null };
     const regions = body.body.regions;
@@ -248,7 +248,7 @@ export function fetchMyGameServerRegions() {
 }
 export function fetchMyGameServers() {
   const HTTP = HTTPUtils.HTTP;
-  value = HTTP.get({ url: React6.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
+  value = HTTP.get({ url: React5.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
     body = body.body;
     let game_servers = body.game_servers;
@@ -267,7 +267,7 @@ export function optimisticallyMarkGameServerResizing(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "unknown_error" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "UNKNOWN_AUTH_RESPONSE" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
@@ -282,7 +282,7 @@ export function updateMyGameServerName(arg0, name) {
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "unknown_error" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "UNKNOWN_AUTH_RESPONSE" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -357,7 +357,7 @@ export function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "unknown_error" };
+    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "UNKNOWN_AUTH_RESPONSE" };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -371,10 +371,10 @@ export function wakeMyGameServer(arg0) {
     .then((body) => {
       body = body.body;
       let tmp3 = body;
-      if (body.status === closure_0(14192).GameServerStatus.SLEEPING) {
+      if (body.status === closure_0(14278).GameServerStatus.SLEEPING) {
         const obj2 = {};
         const merged = Object.assign(body);
-        obj2.status = closure_0(14192).GameServerStatus.STARTING;
+        obj2.status = closure_0(14278).GameServerStatus.STARTING;
         tmp3 = obj2;
       }
       const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

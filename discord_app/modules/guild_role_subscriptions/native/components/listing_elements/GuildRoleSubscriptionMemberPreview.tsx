@@ -16,7 +16,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -80,7 +80,7 @@ export function GuildRoleSubscriptionMemberPreview(content) {
     const items2 = [timestampProducer(FastImageDefault, obj3)];
     const obj4 = { style: tmp3.content, children: null };
     const obj5 = { style: tmp3.contextRow, children: null };
-    const obj6 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
+    const obj6 = { variant: "body-md/semibold", color: "interactive-text-active", style: null, children: null };
     const obj7 = { color: null };
     const tmp4Result = RoleIconUtils;
     obj7.color = utils_ColorUtilsAll.int2hex(role.color);
@@ -95,22 +95,22 @@ export function GuildRoleSubscriptionMemberPreview(content) {
       ({ customIconSrc: obj13.src, unicodeEmoji: obj13.unicodeEmoji } = roleIconData);
       items4[1] = timestampProducer(RoleIconDefault, obj9);
       obj8.children = items4;
-      tmp12Result = React6(React5, obj8);
+      tmp12Result = React5(metroImportDefault, obj8);
     }
     items3[1] = tmp12Result;
     items3[2] = timestampProducer(native.Spacer, { size: 8 });
     items3[3] = timestampProducer(Text_Text.Text, {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-muted",
       children: "4:20 PM",
     });
     obj5.children = items3;
-    const items5 = [React6(View, obj5)];
-    const obj10 = { variant: "text-md/normal", color: "text-default", style: textStyle, children: content };
+    const items5 = [React5(View, obj5)];
+    const obj10 = { variant: "body-md/normal", color: "text-default", style: textStyle, children: content };
     items5[1] = timestampProducer(Text_Text.Text, obj10);
     obj4.children = items5;
-    items2[1] = React6(View, obj4);
+    items2[1] = React5(View, obj4);
     obj2.children = items2;
-    return React6(View, obj2);
+    return React5(View, obj2);
   }
 }

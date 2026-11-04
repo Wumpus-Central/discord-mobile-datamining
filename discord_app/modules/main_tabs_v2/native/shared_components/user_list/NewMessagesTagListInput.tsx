@@ -106,12 +106,12 @@ export default noop.memo(function NewMessagesTagListInput(forceSearchResults) {
     }
   }
   obj2.footer = tmp6;
-  const obj4 = { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null };
+  const obj4 = { style: tmp.header, variant: "body-sm/medium", color: "text-muted", accessible: false, children: null };
   const intl2 = require("util").intl;
   obj4.children = intl2.string(require("util").t.kHyiXs);
   obj2.icon = jsx(require("Text/Text").Text, {
     style: tmp.header,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-muted",
     accessible: false,
     children: null,

@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Linking: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(9855).XboxLinkModalScenes;
-const GameConsoleConstants = fn(9869);
+({ View: hasOwnProperty, Linking: closure_6, Pressable: metroImportDefault } = get_ActivityIndicator);
+const XboxLinkModalScenes = fn(9873).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9887);
 ({ XBOX_ANDROID_APP_LINK: closure_9, XBOX_IOS_APP_LINK: closure_10, XBOX_URL_BASE: closure_11 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -73,7 +73,7 @@ export default function XboxLinkDiscordSuccess() {
     if (!first) {
       const openURL = timestampProducer.openURL;
       if (obj.isAndroid()) {
-        openURL(React7);
+        openURL(React6);
       } else {
         openURL(closure_2_10);
       }
@@ -90,7 +90,7 @@ export default function XboxLinkDiscordSuccess() {
   }, items1);
   const obj5 = { source: null, style: null };
   const obj2 = first(navigation[10]);
-  obj5.source = require("../../../../../../../_runtime/metro/14758__.js");
+  obj5.source = require("../../../../../../../_runtime/metro/14838__.js");
   obj5.style = tmp.image;
   const items2 = [closure_12(require("FastImage"), obj5), , ,];
   const obj6 = {
@@ -102,7 +102,7 @@ export default function XboxLinkDiscordSuccess() {
   const intl = first(navigation[14]).intl;
   obj6.children = intl.string(first(navigation[14]).t.aGRPVq);
   items2[1] = closure_12(first(navigation[13]).Text, obj6);
-  const obj7 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
+  const obj7 = { variant: "body-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
   const intl2 = first(navigation[14]).intl;
   obj7.children = intl2.string(first(navigation[14]).t.m3mBYE);
   items2[2] = closure_12(first(navigation[13]).Text, obj7);
@@ -110,13 +110,13 @@ export default function XboxLinkDiscordSuccess() {
   const obj9 = { style: tmp.appLogoBox, children: null };
   const obj10 = { source: null, style: null };
   const tmp15 = require("FastImage");
-  obj10.source = require("../../../../../../../_runtime/metro/12182__.js");
+  obj10.source = require("../../../../../../../_runtime/metro/12241__.js");
   obj10.style = tmp.appLogo;
   obj9.children = closure_12(require("FastImage"), obj10);
   const items3 = [closure_12(closure_5, obj9), ,];
   const obj11 = {
     style: tmp.getAppTitle,
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };

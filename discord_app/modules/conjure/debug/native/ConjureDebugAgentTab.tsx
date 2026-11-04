@@ -16,7 +16,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { tab: { gap: nativeDefault.space.PX_24 }, forceCompaction: null };
 let obj3 = { gap: nativeDefault.space.PX_24 };
@@ -304,7 +304,7 @@ export default function ConjureDebugAgentTab(arg0) {
       }
     }
     const obj29 = {
-      variant: "text-xs/normal",
+      variant: "body-xs/normal",
       color: str9,
       children: ConjureDebugLabels.forceCompactionStatus(forceState),
     };
@@ -321,7 +321,7 @@ export default function ConjureDebugAgentTab(arg0) {
       obj31.text = intl43.string(_modDef3995.ZxG2AI);
       obj31.onPress = handleForceCompactionOverride;
       const items6 = [React4(components_Button_Button.Button, obj31)];
-      const obj32 = { variant: "text-xs/normal", color: "text-muted", children: null };
+      const obj32 = { variant: "body-xs/normal", color: "text-muted", children: null };
       const intl44 = util.intl;
       obj32.children = intl44.string(_modDef3995.V73vdN);
       items6[1] = React4(Text_Text.Text, obj32);
@@ -350,7 +350,7 @@ export default function ConjureDebugAgentTab(arg0) {
         str11 = "text-feedback-critical";
       }
     }
-    const obj35 = { variant: "text-xs/normal", accessibilityLiveRegion: "polite", color: str11, children: null };
+    const obj35 = { variant: "body-xs/normal", accessibilityLiveRegion: "polite", color: str11, children: null };
     const tmp9Result75 = ConjureDebugLabels;
     obj35.children = ConjureDebugLabels.sandboxRestartStatus(restartState);
     items7[1] = React4(Text_Text.Text, obj35);

@@ -34,7 +34,7 @@ export default function NUFActionSheetTemplate(arg0) {
     }),
     React4(Text_Text.Text, {
       style: tmp.description,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       children: description,
     }),

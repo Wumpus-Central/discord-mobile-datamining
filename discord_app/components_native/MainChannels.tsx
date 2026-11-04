@@ -132,11 +132,11 @@ function LeftPanelHomeDrawerContainer() {
   return application_id(useHomeDrawerGesture.HomeDrawerStateContext.Provider, obj2);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
 const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
-const HOME_DRAWER_SCREEN = fn(18207).HOME_DRAWER_SCREEN;
+const HOME_DRAWER_SCREEN = fn(18304).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5141);

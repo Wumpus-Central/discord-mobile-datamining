@@ -196,7 +196,7 @@ const navigation = {
           }
           if (request === cleanupPromise) {
             let flag = true;
-            if (!(error instanceof metroRequire)) {
+            if (!(error instanceof closure_6)) {
               let status;
               if (typeof error === "object") {
                 if (null != error) {
@@ -207,7 +207,7 @@ const navigation = {
               }
               let hasItem = typeof status === "number";
               if (typeof status === "number") {
-                hasItem = set.has(status);
+                hasItem = metroImportDefault.has(status);
               }
               flag = hasItem;
             }
@@ -538,7 +538,7 @@ let obj = {
           }
           if (request === cleanupPromise) {
             let flag = true;
-            if (!(error instanceof metroRequire)) {
+            if (!(error instanceof closure_6)) {
               let status;
               if (typeof error === "object") {
                 if (null != error) {
@@ -549,7 +549,7 @@ let obj = {
               }
               let hasItem = typeof status === "number";
               if (typeof status === "number") {
-                hasItem = set.has(status);
+                hasItem = metroImportDefault.has(status);
               }
               flag = hasItem;
             }

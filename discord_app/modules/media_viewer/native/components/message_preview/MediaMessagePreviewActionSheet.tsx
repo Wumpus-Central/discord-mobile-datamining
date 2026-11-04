@@ -85,6 +85,7 @@ export default noop.memo(function MediaMessagePreviewActionSheet(channel) {
   const obj2 = { IconComponent: channel(closeMediaModal[11]).ChatArrowRightIcon };
   items3[2] = canReportUserResult;
   return closure_4(channel(closeMediaModal[9]).ActionSheet, {
+    resyncOnRotation: true,
     children: closure_5(channel(closeMediaModal[10]).ActionSheetRow.Group, { hasIcons: true, children: items3 }),
   });
 });

@@ -1,6 +1,6 @@
 // discord_app/design/mana/components/Toast/Toast.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod16006 from "../../../../../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx";
+import _mod16096 from "../../../../../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx";
 import ToastEntity from "ToastEntity.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -8,13 +8,13 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let wrapper = {
-  success: { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7460).CircleCheckIcon },
+  success: { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7476).CircleCheckIcon },
   critical: null,
 };
-let obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7460).CircleCheckIcon };
-wrapper.critical = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(7212).CircleErrorIcon };
+let obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7476).CircleCheckIcon };
+wrapper.critical = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(7227).CircleErrorIcon };
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   wrapper = {
@@ -78,7 +78,7 @@ export function Toast(variant) {
   obj3.style = items1;
   const memo = secondaryIconColor.useMemo(() => {
     if (null == obj[str]) {
-      obj = _mod16006;
+      obj = _mod16096;
       if (obj.isToastEntity(icon)) {
         const obj3 = { entity: tmp4 };
         return timestampProducer(ToastEntity.ToastEntity, obj3);
@@ -95,7 +95,7 @@ export function Toast(variant) {
         tmp9 = tmp8;
       }
       icon = tmp9;
-      obj2 = _mod16006;
+      obj2 = _mod16096;
       tmp8 = icon;
     }
     if (null == icon) {
@@ -124,7 +124,7 @@ export function Toast(variant) {
   let tmp9 = icon(iconColor[10])(text);
   let tmp8Result = !tmp9;
   if (!tmp9) {
-    let obj4 = { variant: "text-md/normal", color: "text-strong", lineClamp: token, style: tmp.text, children: text };
+    let obj4 = { variant: "body-md/normal", color: "text-strong", lineClamp: token, style: tmp.text, children: text };
     tmp8Result = closure_6(str(iconColor[11]).Text, obj4);
   }
   items2[2] = tmp8Result;

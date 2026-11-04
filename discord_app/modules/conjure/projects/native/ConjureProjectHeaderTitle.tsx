@@ -50,7 +50,7 @@ export default function ConjureProjectHeaderTitle(project) {
         "aria-level": "1",
         lineClamp: 1,
         maxFontSizeMultiplier: 2,
-        variant: "redesign/heading-18/semibold",
+        variant: "heading-md/semibold",
         color: "mobile-text-heading-primary",
         children: title,
       }),

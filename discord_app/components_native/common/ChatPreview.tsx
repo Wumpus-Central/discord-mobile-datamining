@@ -40,7 +40,7 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8502);
+const RowGeneratorConstants = fn(8519);
 ({ Changeset: closure_10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -285,9 +285,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "PX_8",
           shouldInitialScroll: "Array",
-          animated: "premium-guild",
-          scrollPosition: null,
-          focusTargetId: null,
+          animated: 0,
+          scrollPosition: 1,
+          focusTargetId: 3,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -319,12 +319,12 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9980).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(10028).setSelectedConversation(closure_1_0, roleStyle, {
             cacheType: "preview",
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9980);
-          applyArgumentsResult(5876).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(10028);
+          applyArgumentsResult(5890).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -357,14 +357,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(5876).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(5876);
+            applyArgumentsResult(5890).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5890);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "GET",
-        selectedChannelId: "HEAD",
-        tapLinkData: "POST",
+        messageChannel: "GUILD_SEARCH_RECENT_MEMBERS",
+        selectedChannelId: null,
+        tapLinkData: null,
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -626,7 +626,7 @@ prototype["render"] = function render() {
     onPress: self.handleJumpToChat,
     children: state(Text_Text.Text, {
       style: tmp.jumpToChatText,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "interactive-text-default",
       children: self.props.jumpToChatProps.jumpToChatText,
     }),
@@ -634,7 +634,7 @@ prototype["render"] = function render() {
   obj9.children = state(Pressables.PressableOpacity, obj10);
   const obj17 = {
     style: tmp.jumpToChatText,
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "interactive-text-default",
     children: self.props.jumpToChatProps.jumpToChatText,
   };
@@ -661,10 +661,10 @@ export function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6873).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6873);
-  const isChannelContentGated = channelId(6854).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(6854);
+  const isChannelSpoilerGated = channelId(6888).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6888);
+  const isChannelContentGated = channelId(6869).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(6869);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

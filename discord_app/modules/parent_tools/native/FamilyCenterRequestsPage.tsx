@@ -27,9 +27,9 @@ function FamilyCenterMaxConnectionsBlurb() {
   let tmp10 = null;
   if (hasMaxConnections) {
     const obj2 = { style: tmp.container, children: null };
-    const obj3 = { variant: "text-xxs/medium", color: "text-muted", children: tmp9 };
-    obj2.children = React6(Text_Text.Text, obj3);
-    tmp10 = React6(React3, obj2);
+    const obj3 = { variant: "footnote/medium", color: "text-muted", children: tmp9 };
+    obj2.children = React5(Text_Text.Text, obj3);
+    tmp10 = React5(React3, obj2);
   }
   return tmp10;
 }
@@ -53,23 +53,23 @@ function FamilyCenterHelpLineInfo() {
   let tmp11 = null;
   if (null != formatResult) {
     const obj3 = { style: tmp.container, children: null };
-    const obj4 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: null };
+    const obj4 = { style: tmp.supportHeader, variant: "heading-xs/semibold", children: null };
     const intl3 = util.intl;
     obj4.children = intl3.string(_modDef2667["7/tVhv"]);
-    items = [React6(Text_Text.Text, obj4)];
-    const obj5 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
-    items[1] = React6(Text_Text.Text, obj5);
+    items = [React5(Text_Text.Text, obj4)];
+    const obj5 = { variant: "body-xs/medium", color: "text-muted", children: formatResult };
+    items[1] = React5(Text_Text.Text, obj5);
     obj3.children = items;
-    tmp11 = React7(React3, obj3);
+    tmp11 = React6(React3, obj3);
   }
   return tmp11;
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7840);
-({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } =
+const FamilyCenterConstants = fn(7856);
+({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: closure_6 } =
   FamilyCenterConstants);
-const THROUGHLINE_URL = fn(11393).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(11443).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let createStyles = fn(5141);
@@ -110,15 +110,15 @@ export default function FamilyCenterRequestsPage() {
   const obj2 = { bottom: true, children: null };
   const obj3 = { style: tmp.container, children: null };
   items = [
-    React6(FamilyCenterParentalConsentNoticeDefault, {}),
-    React6(FamilyCenterLinkingBannerDefault, {}),
-    React6(FamilyCenterAcceptedLinksDefault, {}),
-    React6(FamilyCenterPendingLinksDefault, {}),
-    React6(FamilyCenterMaxConnectionsBlurb, {}),
-    React6(FamilyCenterHelpLineInfo, {}),
+    React5(FamilyCenterParentalConsentNoticeDefault, {}),
+    React5(FamilyCenterLinkingBannerDefault, {}),
+    React5(FamilyCenterAcceptedLinksDefault, {}),
+    React5(FamilyCenterPendingLinksDefault, {}),
+    React5(FamilyCenterMaxConnectionsBlurb, {}),
+    React5(FamilyCenterHelpLineInfo, {}),
   ];
   obj3.children = items;
-  obj2.children = React7(React3, obj3);
-  obj.children = React6(common_SafeAreaView.SafeAreaPaddingView, obj2);
-  return React6(React4, obj);
+  obj2.children = React6(React3, obj3);
+  obj.children = React5(common_SafeAreaView.SafeAreaPaddingView, obj2);
+  return React5(React4, obj);
 }

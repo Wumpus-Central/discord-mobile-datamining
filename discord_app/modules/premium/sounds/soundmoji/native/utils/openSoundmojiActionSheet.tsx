@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/nati
 export default function openSoundmojiActionSheet(arg0) {
   if (obj.getSoundmojiRenderingExperiment({ location: "openSoundmojiActionSheet" })) {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13564, dependencyMap.paths),
+      asyncRequireImpl(13648, dependencyMap.paths),
       "soundmoji_actionsheet_key",
       arg0,
     );

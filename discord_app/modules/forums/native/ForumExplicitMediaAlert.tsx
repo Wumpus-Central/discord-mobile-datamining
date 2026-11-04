@@ -34,7 +34,7 @@ export default function ForumExplicitMediaAlert(arg0) {
   const obj = { noDefaultButtons: true, style: tmp.container, onClose, children: null };
   const obj2 = {
     accessibilityRole: "header",
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     color: "text-default",
     style: null,
     children: null,
@@ -45,7 +45,7 @@ export default function ForumExplicitMediaAlert(arg0) {
   const intl = require("util").intl;
   obj2.children = intl.string(require("util").t.B3vFdU);
   const items1 = [closure_4(require("Text/Text").Text, obj2), , ,];
-  const obj3 = { style: null, maxFontSizeMultiplier: 1, variant: "text-md/normal", children: null };
+  const obj3 = { style: null, maxFontSizeMultiplier: 1, variant: "body-md/normal", children: null };
   const items2 = [,];
   ({ body: arr3[0], text: arr3[1] } = tmp);
   obj3.style = items2;
@@ -59,7 +59,7 @@ export default function ForumExplicitMediaAlert(arg0) {
   obj5.onPress = onClose;
   obj4.children = closure_4(require("components/Button/Button").Button, obj5);
   items1[2] = closure_4(View, obj4);
-  const obj6 = { style: tmp.text, variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj6 = { style: tmp.text, variant: "body-sm/medium", color: "text-muted", children: null };
   const intl4 = require("util").intl;
   obj6.children = intl4.format(require("util").t["APQGZ+"], {
     handleFalsePositiveHook() {

@@ -11,6 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const result = 10 * DurationsDefault.Millis.SECOND;
+const metroImportDefault = result;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/conjure/app_channel/useConjureChatToastMessages.tsx");
 

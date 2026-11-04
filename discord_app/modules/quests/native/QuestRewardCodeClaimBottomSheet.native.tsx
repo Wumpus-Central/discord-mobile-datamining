@@ -119,8 +119,8 @@ function QuestRewardCodeClaimBottomSheet(quest) {
         const obj2 = { text: null, icon: null };
         const intl = quest(1113).intl;
         obj2.text = intl.string(quest(1113).t.MSaeTe);
-        obj2.icon = quest(5851).CopyIcon;
-        rewardCode(5832).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+        obj2.icon = quest(5865).CopyIcon;
+        rewardCode(5846).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
       });
     }
   }, items4);
@@ -159,7 +159,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   if (tmp16Result) {
     const obj9 = {
       style: tmp3.redemptionInstructions,
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       color: "text-default",
       children: tmp(tmp2[20]).parse(rewardCodeRedemptionInstructions, true, { allowLinks: true }),
     };
@@ -242,7 +242,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(6901).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(6916).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -277,7 +277,7 @@ export default function QuestRewardCodeClaimBottomSheetConnected(questContentPos
       questContentPosition,
       sourceQuestContent,
       children() {
-        return React6(QuestRewardCodeClaimBottomSheet, {
+        return React5(QuestRewardCodeClaimBottomSheet, {
           quest: stateFromStores,
           questContent,
           questContentPosition,

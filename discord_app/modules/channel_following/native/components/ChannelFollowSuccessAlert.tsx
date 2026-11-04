@@ -11,8 +11,8 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let items = [fn(11341), fn(11342), fn(11343)];
-let items1 = [fn(11344), fn(11345), fn(11346)];
+let items = [fn(11391), fn(11392), fn(11393)];
+let items1 = [fn(11394), fn(11395), fn(11396)];
 const items2 = [
   () => {
     const intl = util.intl;
@@ -88,7 +88,7 @@ export default function ChannelFollowSuccessAlert(arg0) {
     color: "mobile-text-heading-primary",
     children: stableMemo1(),
   });
-  const obj5 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
+  const obj5 = { style: tmp.text, variant: "body-md/medium", color: "text-muted", children: null };
   const intl2 = tmp5(1113).intl;
   obj5.children = intl2.string(require("util").t["2QbSea"]);
   items1[2] = closure_3(require("Text/Text").Text, obj5);

@@ -74,12 +74,12 @@ let closure_14 = async function _handleBoostPress() {
 let View = fn(17).View;
 const Constants = fn(1072);
 ({
-  AnalyticsObjects: closure_7,
+  AnalyticsObjects: metroImportDefault,
   AnalyticsObjectTypes: closure_8,
   AnalyticsPages: closure_9,
   NOOP: closure_10,
 } = Constants);
-let closure_11 = fn(6890).PremiumGuildSubscribeModalScenes;
+let closure_11 = fn(6905).PremiumGuildSubscribeModalScenes;
 const FractionalPremiumStates = fn(1387).FractionalPremiumStates;
 let jsx = fn(21).jsx;
 const size = fn(2);

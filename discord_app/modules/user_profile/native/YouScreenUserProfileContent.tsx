@@ -5,7 +5,7 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import UserProfileAvatarDefault from "UserProfileAvatar.tsx";
-import tracking_Tracking from "../../main_tabs_v2/native/tabs/you/tracking/Tracking.tsx";
+import Tracking from "../../main_tabs_v2/native/tabs/you/tracking/Tracking.tsx";
 import getRandomCustomStatusPromptDefault from "../../custom_status/utils/getRandomCustomStatusPrompt.tsx";
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import BadgeManagementExperiment from "../../badges/BadgeManagementExperiment.tsx";
@@ -40,7 +40,7 @@ const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 require = fn;
 function YouAvatar(arg0) {
   const callback = noop.useCallback(() => {
-    const result = tracking_Tracking.trackYouTabAvatarPress();
+    const result = Tracking.trackYouTabAvatarPress();
     const result1 = showYouAccountActionSheet.showYouAccountActionSheet();
   }, []);
   const isAndroidResult = PlatformUtils.isAndroid();
@@ -118,7 +118,7 @@ function EditSection(navigateToProfileCustomization) {
   const items1 = [navigateToProfileCustomization];
   const callback = noop.useCallback(() => {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
-    const result = tracking_Tracking.trackYouTabEditProfilePress();
+    const result = Tracking.trackYouTabEditProfilePress();
     navigateToProfileCustomization();
     let tmp4 = closure_3;
     if (!closure_3) {
@@ -272,10 +272,10 @@ function YouScreenPrimaryInfoSection(navigateToProfileCustomization) {
 }
 const View = fn(17).View;
 const useIsContentShown = fn(4982).useIsContentShown;
-const UserProfileSections = fn(8878).UserProfileSections;
-let UserProfileThemeTypes = fn(7497).UserProfileThemeTypes;
+const UserProfileSections = fn(8895).UserProfileSections;
+let UserProfileThemeTypes = fn(7513).UserProfileThemeTypes;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
-let closure_12 = fn(16587).UserProfileEditAutoFocusElement;
+let closure_12 = fn(16678).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const size = fn(2);
@@ -325,7 +325,7 @@ export default function YouScreenUserProfileContent(user) {
   const userProfileColors = user(navigateToPremium[46]).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   const containerBorderColor = userProfileColors.containerBorderColor;
-  ({ avatarBackground, statusBackground } = userProfileColors);
+  const statusBackground = userProfileColors.statusBackground;
   let items2 = [trackUserProfileAction];
   let obj5 = user(navigateToPremium[46]);
   const callback = initialTab.useCallback(() => {
@@ -602,7 +602,7 @@ export default function YouScreenUserProfileContent(user) {
   const items13 = [
     enabled(stateFromStores1, {
       user,
-      backgroundColor: avatarBackground,
+      backgroundColor: userProfileColors.avatarBackground,
       statusStyle: { backgroundColor: statusBackground },
       animate: flag,
     }),
@@ -633,6 +633,7 @@ export default function YouScreenUserProfileContent(user) {
     pronouns: null,
     badges: null,
     badgeContainerBackground: null,
+    profileBackgroundColor: null,
     onPressDisplayName: null,
     displayNameAccessibilityHint: null,
     themeType: null,
@@ -646,12 +647,13 @@ export default function YouScreenUserProfileContent(user) {
   obj20.pronouns = pronouns;
   obj20.badges = tmp8;
   obj20.badgeContainerBackground = containerBackground;
+  obj20.profileBackgroundColor = statusBackground;
   obj20.onPressDisplayName = callback;
   let intl = tmp4(tmp2[28]).intl;
   const obj21 = { status: null };
   const obj17 = {
     user,
-    backgroundColor: avatarBackground,
+    backgroundColor: userProfileColors.avatarBackground,
     statusStyle: { backgroundColor: statusBackground },
     animate: flag,
   };

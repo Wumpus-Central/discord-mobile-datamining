@@ -652,7 +652,6 @@ let closure_15 = async function _orderSKU() {
             if (closure_3) {
               const obj11 = { is_gift: true, gift_customization: null };
               ({
-                is_recurring: obj7.is_recurring,
                 recipient_id: obj7.recipient_id,
                 gift_style: obj7.gift_style,
                 emoji_id: obj7.emoji_id,
@@ -662,7 +661,6 @@ let closure_15 = async function _orderSKU() {
                 custom_message: obj7.custom_message_contents,
               } = closure_4);
               obj11.gift_customization = {
-                is_recurring: null,
                 recipient_id: null,
                 gift_style: null,
                 emoji_id: null,
@@ -673,7 +671,6 @@ let closure_15 = async function _orderSKU() {
               };
               obj4.gifting_facet = obj11;
               const obj12 = {
-                is_recurring: null,
                 recipient_id: null,
                 gift_style: null,
                 emoji_id: null,
@@ -1081,7 +1078,7 @@ let closure_17 = async function _resendPaymentVerificationEmail() {
   }
 };
 const Constants = fn(1072);
-({ ADYEN_PAYMENT_SOURCES: metroRequire, Endpoints: closure_7 } = Constants);
+({ ADYEN_PAYMENT_SOURCES: closure_6, Endpoints: metroImportDefault } = Constants);
 let closure_14 = { isGift: false };
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/SKUActionCreators.tsx");

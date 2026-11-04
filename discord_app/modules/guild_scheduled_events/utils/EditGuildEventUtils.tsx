@@ -9,7 +9,7 @@ const GuildScheduledEventsConstants = fn(4996);
   GuildScheduledEventEntityTypes: c3,
   GuildScheduledEventStatus: closure_4,
   GuildScheduledEventPrivacyLevel: hasOwnProperty,
-  FAKE_EVENT_ID: metroRequire,
+  FAKE_EVENT_ID: closure_6,
 } = GuildScheduledEventsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/EditGuildEventUtils.tsx");

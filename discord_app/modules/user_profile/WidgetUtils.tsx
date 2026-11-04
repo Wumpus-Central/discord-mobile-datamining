@@ -9,8 +9,8 @@ import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes.tsx";
 import GameWidgetLimits from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import UserProfilePersonalWidget from "UserProfilePersonalWidget.tsx";
 import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes.tsx";
-import WidgetGameTag from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
 import WidgetActionCreatorsDefault from "WidgetActionCreators.tsx";
+import WidgetGameTag from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import UserProfileStore from "UserProfileStore.tsx";
@@ -83,9 +83,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7899).WIDGET_TITLES_BY_TYPE;
+const WIDGET_TITLES_BY_TYPE = fn(7915).WIDGET_TITLES_BY_TYPE;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
-let closure_9 = fn(15097).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_9 = fn(12565).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -185,8 +185,8 @@ export function addWidgetToPending(type) {
     WidgetActionCreatorsDefault.setPendingWidgets(items);
   }
 }
-export function removeWidgetFromPending(arg0) {
-  let uniqueKey = arg0;
+export function removeWidgetFromPending(profileEditAnalyticsOptions) {
+  let uniqueKey = profileEditAnalyticsOptions;
   if (WidgetStore.hasPendingChanges()) {
     let pendingWidgets = WidgetStore.getPendingWidgets();
     if (pendingWidgets == null) {
@@ -724,10 +724,10 @@ export function updatePersonalWidget(fn) {
   const tmpResult = replaceWidgetInList(fn(found));
   WidgetActionCreatorsDefault.setPendingWidgets(tmpResult);
 }
-export function updatePendingGameTags(widgetType, arg1, tags) {
-  closure_0 = arg1;
+export function updatePendingGameTags(arr, gameId, tags) {
+  closure_0 = gameId;
   if (tags.length <= Object.values(WidgetGameTag.WidgetGameTag).length) {
-    const tmp5 = findGameWidget(widgetType);
+    const tmp5 = findGameWidget(arr);
     if (null != tmp5) {
       const games = tmp5.games;
       const found = games.find((gameId) => gameId.gameId === closure_0);

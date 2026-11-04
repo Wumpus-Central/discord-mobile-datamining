@@ -264,7 +264,7 @@ function handleUserGuildSettingsFullUpdate() {
   const merged = Object.assign(CategoryCollapseStore.getCollapsedCategories());
 }
 const Constants = fn(1072);
-({ Endpoints: hasOwnProperty, FAVORITES: metroRequire, ME: closure_7 } = Constants);
+({ Endpoints: hasOwnProperty, FAVORITES: closure_6, ME: metroImportDefault } = Constants);
 let actions = {};
 let closure_9 = 0;
 let closure_10 = 15 * DurationsDefault.Millis.SECOND;

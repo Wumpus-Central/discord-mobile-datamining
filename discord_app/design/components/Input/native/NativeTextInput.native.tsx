@@ -9,8 +9,8 @@ get_ActivityIndicator = fn(17);
 ({
   Pressable: closure_4,
   TextInput: hasOwnProperty,
-  StyleSheet: metroRequire,
-  View: closure_7,
+  StyleSheet: closure_6,
+  View: metroImportDefault,
 } = get_ActivityIndicator);
 const KeyboardThemes = fn(1072).KeyboardThemes;
 const jsxProd = fn(21);
@@ -102,10 +102,8 @@ export const NativeTextInput = function TextInput(ref) {
   ref(defaultValue[9]);
   if (null != iter.keyboardAppearance) {
     const obj3 = {};
-    let merged = Object.assign(
-      tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "Array", defaultValue: "flexDirection" }),
-    );
-    const obj4 = { value: "Array", defaultValue: "flexDirection" };
+    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "PX_8", defaultValue: "__closure" }));
+    const obj4 = { value: "PX_8", defaultValue: "__closure" };
     const tmp6Result = tmp6(tmp3[10]);
     obj3.ref = tmp6(tmp3[10]).mergeRefs(ref, ref.ref);
     const tmp18 = closure_10(closure_5, obj3);

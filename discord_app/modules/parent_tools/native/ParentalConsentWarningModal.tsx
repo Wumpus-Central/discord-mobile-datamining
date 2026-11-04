@@ -17,8 +17,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7840);
-({ FamilyCenterSubPages: metroRequire, UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
+const FamilyCenterConstants = fn(7856);
+({
+  FamilyCenterSubPages: closure_6,
+  UserLinkStatus: metroImportDefault,
+  UserLinkType: closure_8,
+} = FamilyCenterConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, UserSettingsSections: closure_10 } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
@@ -103,7 +107,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       );
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19740, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19856, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);
@@ -140,7 +144,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       children: stringResult,
     }),
     closure_12(daysRemaining(callback[27]).Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-default",
       style: tmp.body,
       children: stringResult1,

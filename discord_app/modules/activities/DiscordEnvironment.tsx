@@ -37,11 +37,11 @@ function getDiscordCustomTheme() {
   }
   return null;
 }
-const UIDensityConstants = fn(11934);
+const UIDensityConstants = fn(11993);
 ({
   RESPONSIVE_DENSITY_FALLBACK: closure_4,
   RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty,
-  resolveUIDensity: metroRequire,
+  resolveUIDensity: closure_6,
 } = UIDensityConstants);
 const frozen = Object.freeze({
   baseTheme: "dark",

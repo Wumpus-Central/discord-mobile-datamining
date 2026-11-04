@@ -9,7 +9,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7377 from "../../../../../_runtime/metro/07377__.js";
+import _modDef7393 from "../../../../../_runtime/metro/07393__.js";
 import HotspotStore2 from "../../../hotspot/index.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import StageSparkleDefault from "../components/StageSparkle.tsx";
@@ -36,10 +36,10 @@ function NavigationBar(guild) {
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef7377 };
+    const obj3 = { source: _modDef7393 };
     obj2.children = gesture(native.Icon, obj3);
     obj.children = gesture(Pressables.PressableOpacity, obj2);
-    tmp2 = gesture(React5, obj);
+    tmp2 = gesture(metroImportDefault, obj);
   }
   return tmp2;
 }
@@ -80,7 +80,7 @@ class NotificationToggle {
     if (stateFromStores) {
       obj9 = { style: null, children: null };
       obj9.style = tmp.pill;
-      obj10 = { style: null, variant: "text-xxs/semibold", color: "text-overlay-light", children: null };
+      obj10 = { style: null, variant: "footnote/semibold", color: "text-overlay-light", children: null };
       obj10.style = tmp.pillLabel;
       intl2 = tmp2(tmp3[13]).intl;
       obj10.children = intl2.string(tmp2(tmp3[13]).t.y2b7CA);
@@ -96,8 +96,8 @@ class NotificationToggle {
   }
 }
 get_ActivityIndicator = fn(17);
-({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(6829);
+({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
+const StageChannelsConstants = fn(6844);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let constants = fn(4996).GuildScheduledEventPrivacyLevel;
@@ -221,17 +221,17 @@ export default function StartStageChannelModal(arg0) {
             closure_128_0 = undefined;
             if ("" !== first1) {
               if (null != first2) {
-                React6(true);
+                React5(true);
                 StageInstanceStore(null);
                 const result = tmp66(2017).dismissGlobalKeyboard();
                 dependencyMap = 1;
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(8069).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(8085).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(8069);
+                  obj5 = tmp66(8085);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
@@ -245,7 +245,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(6566).APIError(closure_128_1);
+            const aPIError = new closure_0(6581).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -260,8 +260,8 @@ export default function StartStageChannelModal(arg0) {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(7505).hideHotspot(closure_0(7501).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(7505);
+                  tmp66(7521).hideHotspot(closure_0(7517).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(7521);
                 }
               }
             } else if (arg0 === 1) {
@@ -316,7 +316,7 @@ export default function StartStageChannelModal(arg0) {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("../../../../../_runtime/metro/07377__.js");
+      obj.source = require("../../../../../_runtime/metro/07393__.js");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     },
@@ -410,7 +410,7 @@ export default function StartStageChannelModal(arg0) {
   const obj7 = {
     style: tmp.headerTitle,
     accessibilityRole: "header",
-    variant: "text-lg/semibold",
+    variant: "body-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -423,7 +423,7 @@ export default function StartStageChannelModal(arg0) {
   }
   obj7.children = stringResult;
   items3[1] = obj5(require("Text/Text").Text, obj7);
-  let obj8 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  let obj8 = { style: tmp.headerSubtitle, variant: "body-sm/medium", color: "text-default", children: null };
   if (null == memo) {
     const intl4 = require("util").intl;
     let stringResult1 = intl4.string(require("util").t.bqQIwa);
@@ -477,7 +477,7 @@ export default function StartStageChannelModal(arg0) {
   if (tmp31Result) {
     const obj12 = {
       style: tmp.optionExplanation,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-default",
       children: helpText,
     };
@@ -511,7 +511,7 @@ export default function StartStageChannelModal(arg0) {
   if (null != obj2) {
     const obj16 = {
       style: tmp.error,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-feedback-critical",
       children: obj2.getAnyErrorMessage(),
     };

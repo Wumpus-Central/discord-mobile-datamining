@@ -98,23 +98,23 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) 
     }
   }
 }
-const QuestConstants = fn(6901);
+const QuestConstants = fn(6916);
 ({
-  DismissibleQuestContentFlags: closure_7,
+  DismissibleQuestContentFlags: metroImportDefault,
   BILLABLE_PLACEMENTS: closure_8,
   NON_BILLABLE_CREATIVE_TYPES: closure_9,
   EMPTY_AD_DECISION_DATA: closure_10,
 } = QuestConstants);
 let c11 = 2592000000;
 let obj = {};
-obj[fn(6904).QuestContent.QUEST_BAR] = fn(6904).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6904).QuestContent.QUEST_BAR_V2] = fn(6904).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6904).QuestContent.QUEST_BAR_MOBILE] = fn(6904).AdPlacement.MOBILE_HOME_DOCK_AREA;
-obj[fn(6904).QuestContent.QUEST_HOME_HERO] = fn(6904).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6904).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6904).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6904).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6904).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6904).QuestContent.VIDEO_MODAL_MOBILE] = fn(6904).AdPlacement.VIDEO_MODAL_MOBILE;
-let items = [fn(6904).AdPlacement.VIDEO_MODAL_MOBILE];
+obj[fn(6919).QuestContent.QUEST_BAR] = fn(6919).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6919).QuestContent.QUEST_BAR_V2] = fn(6919).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6919).QuestContent.QUEST_BAR_MOBILE] = fn(6919).AdPlacement.MOBILE_HOME_DOCK_AREA;
+obj[fn(6919).QuestContent.QUEST_HOME_HERO] = fn(6919).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6919).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6919).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6919).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6919).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6919).QuestContent.VIDEO_MODAL_MOBILE] = fn(6919).AdPlacement.VIDEO_MODAL_MOBILE;
+let items = [fn(6919).AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
@@ -167,15 +167,15 @@ export function findQuestOrReplacement(questId, quests, excludedQuests) {
   }
 }
 export function isDismissible(content) {
-  const keys = Object.keys(React5);
+  const keys = Object.keys(metroImportDefault);
   return keys.includes(QuestTypes.QuestContent[content]);
 }
 export function isDismissed(dismissedQuestContent, ACTIVITY_PANEL) {
-  const keys = Object.keys(React5);
+  const keys = Object.keys(metroImportDefault);
   if (keys.includes(QuestTypes.QuestContent[ACTIVITY_PANEL])) {
     return FlagUtils.hasFlag(
       dismissedQuestContent.dismissedQuestContent,
-      React5[QuestTypes.QuestContent[ACTIVITY_PANEL]],
+      metroImportDefault[QuestTypes.QuestContent[ACTIVITY_PANEL]],
     );
   } else {
     return false;

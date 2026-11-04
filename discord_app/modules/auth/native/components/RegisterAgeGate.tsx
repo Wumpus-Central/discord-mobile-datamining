@@ -11,9 +11,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(18132);
-({ updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(18133);
+const RegistrationUIStore = fn(18229);
+({ updateRegistrationOptions: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
+const RegistrationConstants = fn(18230);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: closure_10 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
@@ -146,7 +146,7 @@ export default function RegisterAgeGate() {
         tmp4 = !stateFromStores;
       }
       obj.consent = tmp4;
-      React5(obj);
+      metroImportDefault(obj);
       context({ step: constants.AGE_GATE, actionType: constants2.SUBMITTED });
       const result = RegistrationStepsUtils.handleRegistrationSubmit(AuthStates.AGE_GATE, closure_0, context);
       const obj2 = { step: constants.AGE_GATE, actionType: constants2.SUBMITTED };

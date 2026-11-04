@@ -37,7 +37,7 @@ class LikelyAtoWarningBanner {
         warningType: SafetyWarningTypes.LIKELY_ATO,
         cta: SafetyWarningUtils.CtaEventTypes.USER_MODAL_LEARN_MORE,
       };
-      LinkingDefault.openURL(React5);
+      LinkingDefault.openURL(metroImportDefault);
     };
     closure_3 = closure_13();
     items = [, ,];
@@ -117,18 +117,18 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11411, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11461, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
         items = [
           closure_1_10(
-            channelId(5747).Text,
-            { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title },
+            channelId(5761).Text,
+            { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.title },
             index,
           ),
           closure_1_10(
-            channelId(5747).Text,
-            { variant: "text-xs/medium", color: "text-subtle", children: children.description },
+            channelId(5761).Text,
+            { variant: "body-xs/medium", color: "text-subtle", children: children.description },
             index,
           ),
         ];
@@ -141,7 +141,7 @@ class LikelyAtoWarningBanner {
           return closure_1_5(channelId(senderId[8]).CtaEventTypes.USER_MODAL_MUTE);
         },
       });
-      const obj4 = { variant: "text-sm/normal", color: "text-link", children: null };
+      const obj4 = { variant: "body-sm/normal", color: "text-link", children: null };
       const intl2 = util.intl;
       obj4.children = intl2.format(util.t.UkH122, { learnMoreLink: handleLearnMore });
       obj2.learnMore = closure_2_10(Text_Text.Text, obj4);
@@ -176,12 +176,12 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10934).SafetyWarningTypes;
-const Constants = fn(11405);
+const SafetyWarningTypes = fn(10982).SafetyWarningTypes;
+const Constants = fn(11455);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
-  LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire,
-  LEARN_MORE_HC_ARTICLE: closure_7,
+  LIKELY_ATO_MORE_TIPS_MODAL_KEY: closure_6,
+  LEARN_MORE_HC_ARTICLE: metroImportDefault,
 } = Constants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const MuteUntilSeconds = fn(1082).MuteUntilSeconds;

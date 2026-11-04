@@ -7,8 +7,8 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Search_SearchBar from "../../../../../design/components/Search/native/SearchBar.native.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import InstantInviteUtilsDefault from "../../../../../utils/InstantInviteUtils.tsx";
-import _modDef14947 from "../../../../../../_runtime/metro/14947__.js";
-import _modDef14948 from "../../../../../../_runtime/metro/14948__.js";
+import _modDef15027 from "../../../../../../_runtime/metro/15027__.js";
+import _modDef15028 from "../../../../../../_runtime/metro/15028__.js";
 import GuildInviteRowDefault from "GuildInviteRow.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -26,8 +26,8 @@ function EmptyGuildList() {
   obj.title = intl.string(util.t["2bfiLk"]);
   const intl2 = util.intl;
   obj.body = intl2.string(util.t.V6nAfF);
-  obj.darkSource = _modDef14947;
-  obj.lightSource = _modDef14948;
+  obj.darkSource = _modDef15027;
+  obj.lightSource = _modDef15028;
   return timestampProducer(native.ThemedEmptyState, obj);
 }
 function GuildList(recipientId) {
@@ -35,8 +35,8 @@ function GuildList(recipientId) {
   const source = recipientId.source;
   _slicedToArray = undefined;
   dependencyMap = closure_8();
-  let obj = recipientId(14944);
-  [arr, arr2] = recipientId(14944).useServerInviteRows(recipientId, recipientId.query);
+  let obj = recipientId(15024);
+  [arr, arr2] = recipientId(15024).useServerInviteRows(recipientId, recipientId.query);
   if (0 === arr.length) {
     if (0 === arr2.length) {
       items = [];
@@ -62,7 +62,7 @@ function GuildList(recipientId) {
     if (tmp5) {
       num = 24;
     }
-    const obj3 = { paddingTop: num, paddingBottom: source(5730)().insets.bottom + source(575).space.PX_16 };
+    const obj3 = { paddingTop: num, paddingBottom: source(5743)().insets.bottom + source(575).space.PX_16 };
     obj2.contentContainerStyle = obj3;
     obj2.sections = items;
     obj2.renderSectionHeader = function renderSectionHeader(section) {
@@ -73,7 +73,7 @@ function GuildList(recipientId) {
         if (section.data.length > 0) {
           const obj = {
             style: sectionTitle.sectionTitle,
-            variant: "text-sm/semibold",
+            variant: "body-sm/semibold",
             color: "text-default",
             children: section.title,
           };
@@ -87,7 +87,7 @@ function GuildList(recipientId) {
       return guild.guild.id;
     };
     obj2.ListEmptyComponent = EmptyGuildList;
-    return closure_6(tmp(11550).UserProfileStackedActionSheetSectionList, obj2);
+    return closure_6(tmp(11600).UserProfileStackedActionSheetSectionList, obj2);
   }
   const obj4 = { title: null, data: null };
   const intl = tmp(1113).intl;
@@ -99,11 +99,11 @@ function GuildList(recipientId) {
   obj5.title = intl2.string(recipientId(1113).t["c5T+X/"]);
   obj5.data = arr2;
   items[1] = obj5;
-  const tmp3 = _slicedToArray(recipientId(14944).useServerInviteRows(recipientId, recipientId.query), 2);
+  const tmp3 = _slicedToArray(recipientId(15024).useServerInviteRows(recipientId, recipientId.query), 2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   content: { paddingHorizontal: nativeDefault.space.PX_16 },
@@ -151,13 +151,16 @@ export default function GuildInviteActionSheet(arg0) {
   const intl2 = util.intl;
   obj4.placeholder = intl2.string(util.t.uohsSv);
   items = [timestampProducer(Search_SearchBar.SearchBar, obj4)];
-  const obj5 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+  const obj5 = { variant: "body-xs/medium", color: "text-subtle", children: null };
   const intl3 = util.intl;
   const tmp3 = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
   obj5.children = intl3.format(util.t["4UyUHh"], { xDays: InstantInviteUtilsDefault.INVITE_OPTIONS_7_DAYS.label });
   items[1] = timestampProducer(Text_Text.Text, obj5);
   obj3.children = items;
-  const items1 = [React5(View, obj3), timestampProducer(GuildList, { query: tmp2[0], recipientId, source })];
+  const items1 = [
+    metroImportDefault(View, obj3),
+    timestampProducer(GuildList, { query: tmp2[0], recipientId, source }),
+  ];
   obj2.children = items1;
-  return React5(Sheet_BottomSheet.BottomSheet, obj2);
+  return metroImportDefault(Sheet_BottomSheet.BottomSheet, obj2);
 }

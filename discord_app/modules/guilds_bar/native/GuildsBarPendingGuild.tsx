@@ -9,7 +9,7 @@ import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
 const GuildRecord = fn(5008);
-({ getGuildIconSource: hasOwnProperty, getGuildIconURL: metroRequire } = GuildRecord);
+({ getGuildIconSource: hasOwnProperty, getGuildIconURL: closure_6 } = GuildRecord);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { guildIcon: null };
@@ -160,8 +160,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children:
-      '(function pnpm_indexTs1(event){let[handler]=this.__closure;if(event.eventName.endsWith("onKeyboardMoveStart")){var _handler$onStart,_handler;(_handler$onStart=(_handler=handler).onStart)===null||_handler$onStart===void 0||_handler$onStart.call(_handler,event);}if(event.eventName.endsWith("onKeyboardMove")){var _handler$onMove,_handler2;(_handler$onMove=(_handler2=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler2,event);}if(event.eventName.endsWith("onKeyboardMoveEnd")){var _handler$onEnd,_handler3;(_handler$onEnd=(_handler3=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler3,event);}if(event.eventName.endsWith("onKeyboardMoveInteractive")){var _handler$onInteractiv,_handler4;(_handler$onInteractiv=(_handler4=handler).onInteractive)===null||_handler$onInteractiv===void 0||_handler$onInteractiv.call(_handler4,event);}})',
+    children: "hds",
   };
   let str = guildName;
   const tmp2Result2 = guildId(stateFromStores[19]);
@@ -207,7 +206,6 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children:
-      '(function pnpm_indexTs1(event){let[handler]=this.__closure;if(event.eventName.endsWith("onKeyboardMoveStart")){var _handler$onStart,_handler;(_handler$onStart=(_handler=handler).onStart)===null||_handler$onStart===void 0||_handler$onStart.call(_handler,event);}if(event.eventName.endsWith("onKeyboardMove")){var _handler$onMove,_handler2;(_handler$onMove=(_handler2=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler2,event);}if(event.eventName.endsWith("onKeyboardMoveEnd")){var _handler$onEnd,_handler3;(_handler$onEnd=(_handler3=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler3,event);}if(event.eventName.endsWith("onKeyboardMoveInteractive")){var _handler$onInteractiv,_handler4;(_handler$onInteractiv=(_handler4=handler).onInteractive)===null||_handler$onInteractiv===void 0||_handler$onInteractiv.call(_handler4,event);}})',
+    children: "hds",
   });
 });

@@ -35,7 +35,7 @@ function useShouldCallReactiveCheck() {
   _require = tmp5;
   const obj = require("initialize");
   const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-    tmp(6851).AgeGatedFeature.REACTIVE_CHECK,
+    tmp(6866).AgeGatedFeature.REACTIVE_CHECK,
   );
   const tmpResult = require("RegionalFeatureConfigUtils");
   const items1 = [AgeVerificationStore];
@@ -135,13 +135,13 @@ let closure_15 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(6848).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(6863).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const AgeGateConstants = fn(1097);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: closure_10 } = AgeGateConstants);
 let items = [
-  fn(6849).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(6849).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(6849).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(6864).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(6864).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(6864).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];

@@ -22,14 +22,14 @@ function getUserCalloutRowText(arg0) {
     const obj2 = {
       usernameHook1() {
         const obj = {
-          variant: "text-md/semibold",
+          variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19),
         };
         return closure_2_10(Text_Text.Text, obj);
       },
       usernameHook2() {
         const obj = {
-          variant: "text-md/semibold",
+          variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17),
         };
         return closure_2_10(Text_Text.Text, obj);
@@ -42,14 +42,14 @@ function getUserCalloutRowText(arg0) {
     const obj3 = {
       usernameHook1() {
         const obj = {
-          variant: "text-md/semibold",
+          variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19),
         };
         return closure_2_10(Text_Text.Text, obj);
       },
       usernameHook2() {
         const obj = {
-          variant: "text-md/semibold",
+          variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17),
         };
         return closure_2_10(Text_Text.Text, obj);
@@ -61,14 +61,14 @@ function getUserCalloutRowText(arg0) {
     const obj4 = {
       usernameHook1() {
         const obj = {
-          variant: "text-md/semibold",
+          variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19),
         };
         return closure_2_10(Text_Text.Text, obj);
       },
       usernameHook2() {
         const obj = {
-          variant: "text-md/semibold",
+          variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17),
         };
         return closure_2_10(Text_Text.Text, obj);
@@ -80,7 +80,7 @@ function getUserCalloutRowText(arg0) {
     let obj = {
       usernameHook() {
         const obj = {
-          variant: "text-md/semibold",
+          variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19),
         };
         return closure_2_10(Text_Text.Text, obj);
@@ -111,11 +111,11 @@ function UserCalloutAvatars(userIds) {
       obj3.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_10(tmp(1187).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(12261).UserIcon, {});
+      tmp6 = closure_10(tmp(12322).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1187).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_10(tmp(10929).FacepileGroupDMAvatar, obj4);
+    return closure_10(tmp(10977).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 }
@@ -157,8 +157,8 @@ function BlockedUserInGDMDescription(arg0) {
   }
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(15767);
-({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
+const SharedSpaceWarningConstants = fn(15855);
+({ BlockWarningEngagements: metroImportDefault, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
@@ -240,7 +240,7 @@ export default function BlockedUserInGdmActionSheet(channelId) {
     const intl3 = tmp7(tmp8[11]).intl;
     obj10.children = intl3.string(tmp7(tmp8[11]).t["mwJJ+f"]);
     const items4 = [closure_10(tmp7(tmp8[9]).Text, obj10)];
-    const obj11 = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: null };
+    const obj11 = { variant: "body-md/medium", color: "text-default", style: tmp.description, children: null };
     const obj12 = { numOfBlockedUsers: blockedUserIds.length, numOfIgnoredUsers: ignoredUserIds.length };
     obj11.children = closure_10(BlockedUserInGDMDescription, obj12);
     items4[1] = closure_10(tmp7(tmp8[9]).Text, obj11);

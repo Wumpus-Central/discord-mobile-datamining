@@ -13,7 +13,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 const HelpdeskArticles = Constants.HelpdeskArticles;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   container: { marginTop: 32, marginHorizontal: 30 },
   aboutContainer: {
@@ -40,7 +40,7 @@ export default function NitroCreditEducationActionSheet(children) {
     hasOwnProperty(View, {
       style: tmp.aboutTextContainer,
       children: hasOwnProperty(Text_Text.Text, {
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-overlay-light",
         children: children.aboutText,
       }),
@@ -48,14 +48,14 @@ export default function NitroCreditEducationActionSheet(children) {
   ];
   obj3.children = items;
   const items1 = [timestampProducer(View, obj3)];
-  const obj6 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
+  const obj6 = { variant: "body-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
   const intl = util.intl;
   const obj7 = { helpCenterLink: null };
   const obj4 = { size: "lg", style: tmp.warningIcon };
   const obj5 = {
     style: tmp.aboutTextContainer,
     children: hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-overlay-light",
       children: children.aboutText,
     }),

@@ -34,7 +34,7 @@ export default function EditGuildEventStepHeader(children) {
   if (null != subtitle) {
     tmp4Result = null;
     if ("" !== subtitle) {
-      const obj3 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
+      const obj3 = { style: tmp.headerSubtitle, variant: "body-sm/medium", color: "text-default", children: subtitle };
       tmp4Result = React3(Text_Text.Text, obj3);
     }
   }

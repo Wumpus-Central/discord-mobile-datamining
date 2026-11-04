@@ -6,9 +6,9 @@ import FrecencyDefault from "../../lib/Frecency.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const Constants = fn(5888);
+const Constants = fn(5902);
 const DeviceTypes = Constants.DeviceTypes;
-({ MediaEngineContextTypes: hasOwnProperty, SpeakingFlags: metroRequire } = Constants);
+({ MediaEngineContextTypes: hasOwnProperty, SpeakingFlags: closure_6 } = Constants);
 let closure_7 = {
   inputDeviceFrecency: DeviceTypes.AUDIO_INPUT,
   outputDeviceFrecency: DeviceTypes.AUDIO_OUTPUT,
@@ -26,11 +26,11 @@ let obj = {
   numFrequentlyItems: Infinity,
 };
 let obj2 = {};
-const stopWatch = new fn(5892).StopWatch();
+const stopWatch = new fn(5906).StopWatch();
 obj2[DeviceTypes.AUDIO_INPUT] = stopWatch;
-const stopWatch1 = new fn(5892).StopWatch();
+const stopWatch1 = new fn(5906).StopWatch();
 obj2[DeviceTypes.AUDIO_OUTPUT] = stopWatch1;
-const stopWatch2 = new fn(5892).StopWatch();
+const stopWatch2 = new fn(5906).StopWatch();
 obj2[DeviceTypes.VIDEO_INPUT] = stopWatch2;
 let dependencyMap = { [DeviceTypes.AUDIO_INPUT]: {}, [DeviceTypes.AUDIO_OUTPUT]: {}, [DeviceTypes.VIDEO_INPUT]: {} };
 let obj3 = {};

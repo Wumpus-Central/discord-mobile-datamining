@@ -7,7 +7,7 @@ import GuildSettingsStore from "../../../../guild_settings/GuildSettingsStore.ts
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ VerificationLevels: closure_7, GuildExplicitContentFilterTypes: closure_8 } = Constants);
+({ VerificationLevels: metroImportDefault, GuildExplicitContentFilterTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);
@@ -53,7 +53,7 @@ export default function SafetyCheckScreen() {
     const obj7 = {
       ref,
       accessibilityRole: "header",
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "text-subtle",
       children: null,
     };
@@ -73,7 +73,7 @@ export default function SafetyCheckScreen() {
     items1[2] = closure_9(tmp2(tmp3[12]).Heading, obj9);
     const obj10 = {
       style: enableCommunitySharedStyles.description,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children: null,
     };

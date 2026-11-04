@@ -14,8 +14,8 @@ import ICYMITypes from "../ICYMITypes.tsx";
 import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
 import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import FiltersHorizontalIcon from "../../../design/components/Icon/native/redesign/generated/FiltersHorizontalIcon.tsx";
-import ICYMIStoreUtils from "../ICYMIStoreUtils.tsx";
 import NativeICYMIUtils from "NativeICYMIUtils.tsx";
+import ICYMIStoreUtils from "../ICYMIStoreUtils.tsx";
 import AnnouncementMessageRowDefault from "AnnouncementMessageRow.tsx";
 import ICYMIMessageRowDefault from "ICYMIMessageRow.tsx";
 import ContentInventoryEntryRowDefault from "ContentInventoryEntryRow.tsx";
@@ -40,10 +40,10 @@ import ICYMIStore from "../ICYMIStore.tsx";
 const require = globalThis.__r;
 
 const util = LeftBackIconWithBadge(1113);
-const Pressables = LeftBackIconWithBadge(7106);
-const XSmallIcon = LeftBackIconWithBadge(7180);
-const notifications_Notifications = LeftBackIconWithBadge(18630);
-const BackIconWithBadge = LeftBackIconWithBadge(18632);
+const Pressables = LeftBackIconWithBadge(7121);
+const XSmallIcon = LeftBackIconWithBadge(7195);
+const notifications_Notifications = LeftBackIconWithBadge(18731);
+const BackIconWithBadge = LeftBackIconWithBadge(18733);
 require = fn;
 function SettingsButton() {
   return gesture(IconButton.IconButton, {
@@ -107,7 +107,7 @@ function ICYMIHeaderTextWrapper() {
       const intl = require("util").intl;
       obj2.children = intl.string(require("util").t.SY4sdZ);
       items = [closure_1_14(require("Text/Text").Text, obj2)];
-      const obj3 = { color: "text-brand", variant: "text-xs/semibold", style: { marginTop: 4 }, children: null };
+      const obj3 = { color: "text-brand", variant: "body-xs/semibold", style: { marginTop: 4 }, children: null };
       const intl2 = require("util").intl;
       obj3.children = intl2.string(require("util").t.Ac2OZA);
       items[1] = closure_1_14(require("Text/Text").Text, obj3);
@@ -185,7 +185,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18707, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18806, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -231,7 +231,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-          isFocused(11287).showForLaterModal(isFocused(10322).SavedMessageSortTypes.BOOKMARK);
+          isFocused(11337).showForLaterModal(isFocused(10370).SavedMessageSortTypes.BOOKMARK);
         },
       };
       ref1.current = obj;
@@ -420,8 +420,8 @@ function keyExtractor(id) {
   return id.id;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, RefreshControl: metroRequire } = get_ActivityIndicator);
-let closure_12 = fn(18681).NUM_GUILDS_EXTENDED_ONBOARDING;
+({ View: hasOwnProperty, RefreshControl: closure_6 } = get_ActivityIndicator);
+let closure_12 = fn(18782).NUM_GUILDS_EXTENDED_ONBOARDING;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -438,7 +438,7 @@ let closure_17 = createStyles.createStyles((paddingTop) => {
   };
   return obj;
 });
-const createICYMIStyles = fn(18682);
+const createICYMIStyles = fn(18783);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: { flex: 1, flexShrink: 1, flexGrow: 1 },

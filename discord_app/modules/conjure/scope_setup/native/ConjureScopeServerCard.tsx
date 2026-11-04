@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = [];
 const createStyles = fn(5141);
 let obj2 = {
@@ -72,16 +72,16 @@ export default function ConjureScopeServerCard(card) {
   }
   const obj = { style: tmp.surface, children: null };
   const obj2 = { style: tmp.header, children: null };
-  const obj3 = { variant: "text-md/semibold", color: "text-default", accessibilityRole: "header", children: null };
+  const obj3 = { variant: "body-md/semibold", color: "text-default", accessibilityRole: "header", children: null };
   const intl = util.intl;
   obj3.children = intl.string(_modDef3995.ickKBI);
   items = [timestampProducer(Text_Text.Text, obj3)];
-  const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(_modDef3995.OyM4SV);
   items[1] = timestampProducer(Text_Text.Text, obj4);
   obj2.children = items;
-  const items1 = [React5(View, obj2), ,];
+  const items1 = [metroImportDefault(View, obj2), ,];
   const obj5 = { style: tmp.content, children: null };
   const items2 = [
     timestampProducer(ConjureClarificationEntityPickerDefault, {
@@ -95,12 +95,12 @@ export default function ConjureScopeServerCard(card) {
   ];
   let tmp14Result = null;
   if (null != first.note) {
-    const obj7 = { variant: "text-xs/normal", color: "text-muted", children: first.note };
+    const obj7 = { variant: "body-xs/normal", color: "text-muted", children: first.note };
     tmp14Result = timestampProducer(Text_Text.Text, obj7);
   }
   items2[1] = tmp14Result;
   obj5.children = items2;
-  items1[1] = React5(View, obj5);
+  items1[1] = metroImportDefault(View, obj5);
   const obj8 = { style: tmp.footer, children: null };
   const obj9 = { variant: "primary", size: "sm", text: null, disabled: null, onPress: null };
   const intl3 = util.intl;
@@ -124,7 +124,7 @@ export default function ConjureScopeServerCard(card) {
   }
   items3[1] = tmp14Result2;
   obj8.children = items3;
-  items1[2] = React5(View, obj8);
+  items1[2] = metroImportDefault(View, obj8);
   obj.children = items1;
-  return React5(ConjureNativeCardSurfaceDefault, obj);
+  return metroImportDefault(ConjureNativeCardSurfaceDefault, obj);
 }

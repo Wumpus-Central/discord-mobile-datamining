@@ -4,7 +4,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../../../components_native/common/Alert.tsx";
-import _modDef7379 from "../../../../../../_runtime/metro/07379__.js";
+import _modDef7395 from "../../../../../../_runtime/metro/07395__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -36,7 +36,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   obj.onCancel = onClose.onClose;
   const obj2 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj2.source = _modDef7379;
+  obj2.source = _modDef7395;
   obj2.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj2), ,];
   const obj3 = {
@@ -48,7 +48,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   const intl3 = util.intl;
   obj3.children = intl3.string(util.t.kkjNHU);
   items[1] = React4(Text_Text.Text, obj3);
-  const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj4 = { style: tmp.text, variant: "body-sm/medium", color: "text-default", children: null };
   const intl4 = util.intl;
   obj4.children = intl4.string(util.t.gnkqzQ);
   items[2] = React4(Text_Text.Text, obj4);

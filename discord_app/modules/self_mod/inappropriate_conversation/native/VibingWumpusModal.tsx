@@ -71,7 +71,7 @@ class VibingWumpusScreen {
     obj16.children = intl.string(tmp5(tmp6[18]).t.L4ifkZ);
     items3 = [,];
     items3[0] = tmp11(tmp5(tmp6[17]).Text, obj16);
-    obj17 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
+    obj17 = { variant: "body-md/medium", style: tmp.takeoverDescription, children: null };
     intl2 = tmp5(tmp6[18]).intl;
     obj17.children = intl2.string(tmp5(tmp6[18]).t.R8LCMZ);
     items3[1] = tmp11(tmp5(tmp6[17]).Text, obj17);
@@ -153,8 +153,8 @@ class VibingWumpusScreen {
   }
 }
 const View = fn(17).View;
-const VIBING_WUMPUS_MODAL_KEY = fn(11393).VIBING_WUMPUS_MODAL_KEY;
-const InappropriateConversationsConstants = fn(11445);
+const VIBING_WUMPUS_MODAL_KEY = fn(11443).VIBING_WUMPUS_MODAL_KEY;
+const InappropriateConversationsConstants = fn(11495);
 ({ VibingWumpusAction: closure_8, VibingWumpusSource: closure_9 } = InappropriateConversationsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);

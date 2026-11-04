@@ -64,9 +64,9 @@ function Star(rating) {
   ConjurePublishRatingTsx1.__initData = tmp7;
   const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjurePublishRatingTsx1);
   if (tmp2) {
-    let StarOutlineIcon = tmp3(10193).StarIcon;
+    let StarOutlineIcon = tmp3(10241).StarIcon;
   } else {
-    StarOutlineIcon = tmp3(10191).StarOutlineIcon;
+    StarOutlineIcon = tmp3(10239).StarOutlineIcon;
   }
   let obj3 = {
     style: tmp.star,
@@ -90,7 +90,7 @@ function Star(rating) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
@@ -114,9 +114,15 @@ export default function ConjurePublishRating(arg0) {
   let stateFromStores;
   let first;
   noop = undefined;
-  ({ projectId, turnId, cta, status } = arg0);
+  ({ projectId, turnId, cta, status, placement } = arg0);
   const tmp = closure_9();
-  const conjurePublishRating = rating(stateFromStores[14]).useConjurePublishRating({ projectId, turnId, cta, status });
+  const conjurePublishRating = rating(stateFromStores[14]).useConjurePublishRating({
+    projectId,
+    turnId,
+    cta,
+    status,
+    placement,
+  });
   rating = conjurePublishRating.rating;
   const rate = conjurePublishRating.rate;
   let obj = rating(stateFromStores[14]);
@@ -142,7 +148,7 @@ export default function ConjurePublishRating(arg0) {
       const obj4 = { size: "xs", color: rate(tmp3[6]).colors.ICON_BRAND };
       const items2 = [closure_7(tmp2(tmp3[16]).SparklesIcon, obj4)];
       const obj5 = {
-        variant: "text-xs/medium",
+        variant: "body-xs/medium",
         color: "text-muted",
         children: tmp2(tmp3[14]).conjurePublishRatingThanks(rating),
       };
@@ -154,7 +160,7 @@ export default function ConjurePublishRating(arg0) {
     return tmp9(View, obj6);
   }
   obj6 = { style: tmp.row, children: null };
-  const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj7 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl = tmp2(tmp3[22]).intl;
   obj7.children = intl.string(rate(stateFromStores[23]).mTV326);
   const items3 = [closure_7(rating(stateFromStores[17]).Text, obj7)];
@@ -176,11 +182,11 @@ export default function ConjurePublishRating(arg0) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
         obj.openLazy(
-          asyncRequireImpl(12911, dependencyMap.paths),
+          asyncRequireImpl(12992, dependencyMap.paths),
           ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY,
           obj2,
         );
-        const tmp6 = asyncRequireImpl(12911, dependencyMap.paths);
+        const tmp6 = asyncRequireImpl(12992, dependencyMap.paths);
       }
     };
     return closure_1_7(Star, obj, rating);

@@ -11,13 +11,16 @@ const require = globalThis.__r;
 
 require = fn;
 function renderWebIcon() {
-  return React5(ExperimentalWebIcon.ExperimentalWebIcon, { size: "lg", color: nativeDefault.colors.ICON_STRONG });
+  return metroImportDefault(ExperimentalWebIcon.ExperimentalWebIcon, {
+    size: "lg",
+    color: nativeDefault.colors.ICON_STRONG,
+  });
 }
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/pinot/native/useAttachPinotMemberCoachmark.tsx");
 
@@ -57,7 +60,7 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
     const intl2 = util.intl;
     items = [intl2.string(_modDef3287.x9NGts), "\n"];
     let obj3 = {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-link",
       accessibilityRole: "link",
       onPress() {
@@ -74,9 +77,9 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
     };
     const intl3 = util.intl;
     obj3.children = intl3.string(_modDef3287.eJZ8MS);
-    items[2] = React5(Text_Text.Text, obj3);
+    items[2] = metroImportDefault(Text_Text.Text, obj3);
     obj2.children = items;
-    obj.description = React7(React6, obj2);
+    obj.description = React6(React5, obj2);
     obj.renderImgComponent = renderWebIcon;
     obj.visible = visible;
     obj.position = position;

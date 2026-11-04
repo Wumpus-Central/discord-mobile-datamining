@@ -68,9 +68,9 @@ function AddDescription(id) {
             const obj2 = {};
             const merged = Object.assign(dependencyMap);
             obj2.description = ref.current;
-            id(9910).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-            const obj = id(9910);
-            id(14653).close();
+            id(9928).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+            const obj = id(9928);
+            id(14733).close();
           },
         );
         let merged = Object.assign(arg0);
@@ -119,9 +119,9 @@ function AddDescription(id) {
   return closure_12(closure_7, obj4);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7825).DraftType;
-const maxLength = fn(14655).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+({ View: hasOwnProperty, Image: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
+const DraftType = fn(7841).DraftType;
+const maxLength = fn(14735).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5141);

@@ -10,7 +10,7 @@ import createStyles from "../../../../design/components/Styles/native/createStyl
 import size from "../../../../../_runtime/metro/00002__.js";
 
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   largeCountdownPill: {
     flexDirection: "row",
@@ -62,13 +62,13 @@ export default function LargeCountDownPill(countdownText) {
   let obj2 = { style: tmp.largeCountdownPill, children: null };
   items = [
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       style: tmp.largeCountdownPillText,
       children: countdownText.countdownText.toUpperCase(),
     }),
   ];
   const obj3 = {
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     style: tmp.largeCountdownPillText,
     children: countdownText.countdownText.toUpperCase(),
   };

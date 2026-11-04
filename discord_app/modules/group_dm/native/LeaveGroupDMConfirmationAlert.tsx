@@ -30,11 +30,11 @@ function LeaveGroupDMConfirmationAlert(onConfirm) {
     hasOwnProperty(AlertModal.AlertActionButton, { variant: "secondary", text: cancelText }),
   ];
   obj4.children = items1;
-  obj.actions = React5(timestampProducer, obj4);
+  obj.actions = metroImportDefault(timestampProducer, obj4);
   return hasOwnProperty(AlertModal.AlertModal, obj);
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/LeaveGroupDMConfirmationAlert.tsx");
 

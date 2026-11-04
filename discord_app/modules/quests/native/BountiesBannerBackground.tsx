@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesBannerBackground.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import common_Video from "../../../components_native/common/Video.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const locations = [0, 0.6];
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.9)"];
 const size = fn(2);
@@ -34,5 +34,5 @@ export default noop.memo(function BountiesBannerBackground(arg0) {
     children,
   ];
   obj2.children = items1;
-  return React5(React4, obj2);
+  return metroImportDefault(React4, obj2);
 });

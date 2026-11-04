@@ -13,8 +13,8 @@ import UserGuildSettingsStore from "../../../../../stores/UserGuildSettingsStore
 import PushNotificationPermissionStore from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
 
 require = fn;
-const PermissionPromptType = fn(14104).PermissionPromptType;
-const NotificationPermissionConstants = fn(14105);
+const PermissionPromptType = fn(14190).PermissionPromptType;
+const NotificationPermissionConstants = fn(14191);
 ({ EventActionLocation: closure_11, NotificationNudgeSurface: closure_12 } = NotificationPermissionConstants);
 const Constants = fn(1072);
 ({ UserNotificationSettings: map1, ZERO_STRING_GUILD_ID: closure_14 } = Constants);
@@ -69,9 +69,9 @@ export function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(504);
-  let obj2 = stateFromStores3(17620);
-  const canSeePushNotificationNudge = stateFromStores(14106).useCanSeePushNotificationNudge();
-  let obj3 = stateFromStores(14106);
+  let obj2 = stateFromStores3(17710);
+  const canSeePushNotificationNudge = stateFromStores(14192).useCanSeePushNotificationNudge();
+  let obj3 = stateFromStores(14192);
   const items1 = [UserGuildSettingsStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
     let isMutedResult = null == stateFromStores;
@@ -161,7 +161,7 @@ export function useGuildOpenNudge() {
     tmp15 = closure_14;
   }
   const tmp8Result = tmp8(
-    stateFromStores(7693).useSelectedTimeRecurringGuildDismissibleContent(prop, tmp15, closure_17),
+    stateFromStores(7709).useSelectedTimeRecurringGuildDismissibleContent(prop, tmp15, closure_17),
     2,
   );
   first = tmp8Result[0];
@@ -177,8 +177,8 @@ export function useGuildOpenNudge() {
         PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET,
       );
       const obj3 = { guildId: stateFromStores, markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18756, dependencyMap.paths), c16, obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18857, dependencyMap.paths), c16, obj3);
     }
   }, items6);
-  const tmpResult2 = stateFromStores(7693);
+  const tmpResult2 = stateFromStores(7709);
 }

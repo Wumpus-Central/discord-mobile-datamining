@@ -6,7 +6,7 @@ import GuildTagConstants from "GuildTagConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const useMemo = _mod19.useMemo;
-({ BADGE_PACKS: hasOwnProperty, BADGES: metroRequire, BADGE_PACK_TO_SKU_ID: closure_7 } = GuildTagConstants);
+({ BADGE_PACKS: hasOwnProperty, BADGES: closure_6, BADGE_PACK_TO_SKU_ID: metroImportDefault } = GuildTagConstants);
 const result = size.fileFinishedImporting("modules/guild_tag/useGuildTagBadgeCollection.tsx");
 
 export default function useGuildTagBadgeCollection() {
@@ -44,7 +44,7 @@ export default function useGuildTagBadgeCollection() {
       const item = keys.forEach((item) => {
         let tmp;
         if (stateFromStores1 != null) {
-          tmp = stateFromStores1[React5[item]];
+          tmp = stateFromStores1[metroImportDefault[item]];
         }
         let title;
         if (tmp != null) {

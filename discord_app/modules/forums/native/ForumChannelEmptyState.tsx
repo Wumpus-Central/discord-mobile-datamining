@@ -4,8 +4,8 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef14511 from "../../../../_runtime/metro/14511__.js";
-import _modDef14512 from "../../../../_runtime/metro/14512__.js";
+import _modDef14591 from "../../../../_runtime/metro/14591__.js";
+import _modDef14592 from "../../../../_runtime/metro/14592__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -36,9 +36,9 @@ export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef14511;
+    let tmp4Result = _modDef14591;
   } else {
-    tmp4Result = _modDef14512;
+    tmp4Result = _modDef14592;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), ,];
   const obj5 = {
@@ -57,7 +57,7 @@ export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   }
   obj5.children = formatToPlainStringResult;
   items1[1] = React4(Text_Text.Text, obj5);
-  const obj7 = { style: tmp.subtext, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj7 = { style: tmp.subtext, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   const formatToPlainString = intl2.formatToPlainString;
   const t = util.t;

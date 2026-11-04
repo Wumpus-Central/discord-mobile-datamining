@@ -30,11 +30,11 @@ export default function GifTag(style) {
   const obj = { style: null, pointerEvents: "none", children: null };
   items = [tmp.gifTag, style.style];
   obj.style = items;
-  const obj2 = { variant: "text-sm/semibold", color: "none", style: tmp.gifTagText, children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "none", style: tmp.gifTagText, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.I5gL2H);
   obj.children = jsx(Text_Text.Text, {
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     color: "none",
     style: tmp.gifTagText,
     children: null,

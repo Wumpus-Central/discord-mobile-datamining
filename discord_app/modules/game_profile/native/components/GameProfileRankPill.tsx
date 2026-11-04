@@ -45,7 +45,7 @@ export default function GameProfileRankPill(arg0) {
   }
   const obj3 = { size: "xxs", color: nativeDefault.colors.BLACK };
   items[1] = React4(Text_Text.Text, {
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     color: "text-overlay-dark",
     children: str.toUpperCase(),
   });

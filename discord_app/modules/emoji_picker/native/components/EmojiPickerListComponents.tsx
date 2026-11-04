@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef8851 from "../../../../../_runtime/metro/08851__.js";
+import _modDef8868 from "../../../../../_runtime/metro/08868__.js";
 import PremiumUpsellGradientBackground from "../../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerListConstants = fn(10073);
+const EmojiPickerListConstants = fn(10121);
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -57,8 +57,8 @@ const obj4 = {
 const memoResult = noop.memo(function EmojiPickerListNSFWRow() {
   const tmp = closure_6();
   const obj = { style: tmp.nsfwContainer, children: null };
-  items = [React4(native.Icon, { source: _modDef8851, size: native.Icon.Sizes.SMALL })];
-  const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
+  items = [React4(native.Icon, { source: _modDef8868, size: native.Icon.Sizes.SMALL })];
+  const obj3 = { style: tmp.nsfwText, variant: "body-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.SLzV5z);
   items[1] = React4(Text_Text.Text, obj3);
@@ -79,7 +79,7 @@ export const Section = noop.memo(function EmojiPickerListSection(useTier0UpsellC
   items = [isSectionNitroLocked];
   let tmp6 = null;
   if ("" !== label) {
-    const obj3 = { lineClamp: 1, color: "interactive-text-default", variant: "heading-sm/semibold", children: label };
+    const obj3 = { lineClamp: 1, color: "interactive-text-default", variant: "heading-xs/semibold", children: label };
     tmp6 = React4(Text_Text.Text, obj3);
   }
   items[1] = tmp6;

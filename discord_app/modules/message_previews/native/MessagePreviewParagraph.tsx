@@ -143,7 +143,7 @@ function MeasuredParagraph(leadingContent) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
+({ jsxs: closure_6, jsx: metroImportDefault } = jsxProd);
 let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ paragraph: { width: "100%", minWidth: 0, flexShrink: 1 } });
 createStyles = fn(5141);
@@ -166,7 +166,7 @@ export function MessagePreviewParagraph(arg0) {
       obj.leadingContent = leadingContent;
       obj.mentions = mentions;
       obj.children = children;
-      let tmp7 = React5(MeasuredParagraph, obj);
+      let tmp7 = metroImportDefault(MeasuredParagraph, obj);
     }
     return tmp7;
   }

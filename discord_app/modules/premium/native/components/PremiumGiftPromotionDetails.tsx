@@ -20,7 +20,7 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   const obj2 = { style: tmp.textContainer, children: null };
   const items2 = [topContent, ,];
   if (titleVariant == null) {
-    titleVariant = "text-md/semibold";
+    titleVariant = "body-md/semibold";
   }
   const obj3 = { variant: titleVariant, color: null, children: null };
   if (titleColor == null) {
@@ -28,9 +28,9 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   }
   obj3.color = titleColor;
   obj3.children = title;
-  items2[1] = React5(Text_Text.Text, obj3);
+  items2[1] = metroImportDefault(Text_Text.Text, obj3);
   if (subtitleVariant == null) {
-    subtitleVariant = "text-sm/medium";
+    subtitleVariant = "body-sm/medium";
   }
   const obj4 = { variant: subtitleVariant, color: null, children: null };
   if (subtitleColor == null) {
@@ -38,11 +38,11 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   }
   obj4.color = subtitleColor;
   obj4.children = subtitle;
-  items2[2] = React5(Text_Text.Text, obj4);
+  items2[2] = metroImportDefault(Text_Text.Text, obj4);
   obj2.children = items2;
-  items1[1] = React6(View, obj2);
+  items1[1] = React5(View, obj2);
   obj.children = items1;
-  return React6(View, obj);
+  return React5(View, obj);
 }
 function AnimatedImage(arg0) {
   ({ imageUrl, style, shouldAnimate } = arg0);
@@ -104,7 +104,7 @@ function AnimatedImage(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
 let createStyles = fn(5141);
 let closure_10 = createStyles.createStyles(() => {
@@ -139,10 +139,10 @@ export default function PremiumGiftPromotionDetails(imageUrl) {
   let tmp3Result = null != imageUrl;
   if (tmp3Result) {
     const obj = { style: tmp2.image, imageUrl, shouldAnimate: imageUrl.shouldAnimate };
-    tmp3Result = React5(AnimatedImage, obj);
+    tmp3Result = metroImportDefault(AnimatedImage, obj);
   }
   const merged1 = Object.assign(merged);
-  return React5(PremiumGiftPromotionDetailsBase, { graphic: tmp3Result });
+  return metroImportDefault(PremiumGiftPromotionDetailsBase, { graphic: tmp3Result });
 }
 export function PremiumGiftPromotionCollectibleRewardDetails(product) {
   product = product.product;

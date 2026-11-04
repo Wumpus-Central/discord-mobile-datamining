@@ -9,8 +9,8 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
-  ChatInputComponentViewedTypes: metroRequire,
-  VerticalGradient: closure_7,
+  ChatInputComponentViewedTypes: closure_6,
+  VerticalGradient: metroImportDefault,
 } = Constants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);

@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { marginHorizontal: nativeDefault.space.PX_16 },
@@ -117,7 +117,7 @@ export default function SelectedUserField(onPress) {
     const obj7 = { user: selectedUser, guildId: "Array", size: native.AvatarSizes.XSMALL_20 };
     const items2 = [hasOwnProperty(native.Avatar, obj7)];
     const obj8 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       style: tmp.userPillText,
       children: UserUtilsDefault.getName(selectedUser),
     };
@@ -125,7 +125,7 @@ export default function SelectedUserField(onPress) {
     obj6.children = items2;
     let tmp2Result1 = timestampProducer(React4, obj6);
   } else {
-    const obj9 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.userPillText, children: null };
+    const obj9 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.userPillText, children: null };
     const intl4 = util.intl;
     obj9.children = intl4.string(util.t.R0vK0N);
     tmp2Result1 = hasOwnProperty(Text_Text.Text, obj9);

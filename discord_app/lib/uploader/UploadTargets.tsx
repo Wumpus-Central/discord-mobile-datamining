@@ -8,7 +8,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ Endpoints: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
+({ Endpoints: hasOwnProperty, MAX_UPLOAD_COUNT: closure_6 } = Constants);
 class MessageAttachmentUploadTarget {}
 const prototype = MessageAttachmentUploadTarget.prototype;
 prototype["getCreateAttachmentURL"] = function getCreateAttachmentURL(arg0) {

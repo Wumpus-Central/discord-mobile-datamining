@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ GuildFeatures: closure_7, ME: closure_8 } = Constants);
+({ GuildFeatures: metroImportDefault, ME: closure_8 } = Constants);
 const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
@@ -27,7 +27,7 @@ export function useCanSeeOnboardingHome(guild_id) {
   return require("useStateFromStores").useStateFromStores(
     items,
     () => {
-      if (closure_0 !== React6) {
+      if (closure_0 !== React5) {
         let enabled = require;
         let hasItem1 = dependencyMap;
         if (!obj2.isFavoritesGuildId(closure_0)) {
@@ -41,7 +41,7 @@ export function useCanSeeOnboardingHome(guild_id) {
             return tmp7;
           } else if (ImpersonateStore.isFullServerPreview(closure_0)) {
             const id = has.id;
-            const isSettingsEmptyResult = enabled(7523).isSettingsEmpty(
+            const isSettingsEmptyResult = enabled(7539).isSettingsEmpty(
               GuildOnboardingHomeSettingsStore.getSettings(id),
             );
             hasItem1 = !isSettingsEmptyResult;
@@ -57,7 +57,7 @@ export function useCanSeeOnboardingHome(guild_id) {
               const tmp23 = has(constants.GUILD_ONBOARDING) && !enabled;
             }
             let tmp10 = hasItem1;
-            const enabledResult = enabled(7523);
+            const enabledResult = enabled(7539);
           } else {
             tmp10 = guildHasOnboardingHomeDefault(has);
             if (tmp10) {
@@ -94,7 +94,7 @@ export function canSeeOnboardingHome(id) {
   if (null == guild) {
     return false;
   } else {
-    if (id !== React6) {
+    if (id !== React5) {
       if (!obj3.isFavoritesGuildId(id)) {
         if (tmp2) {
           id = guild.id;

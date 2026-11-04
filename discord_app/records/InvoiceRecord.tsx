@@ -97,8 +97,8 @@ BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(bi
     }
   }
 };
-prototype["getInvoicePreviewLineItemForSku"] = function getInvoicePreviewLineItemForSku(arg0) {
-  closure_0 = arg0;
+prototype["getInvoicePreviewLineItemForSku"] = function getInvoicePreviewLineItemForSku(skuId) {
+  closure_0 = skuId;
   const invoiceItems = this.invoiceItems;
   let found = invoiceItems.find((skuId) => skuId.skuId === closure_0);
   if (found == null) {
@@ -106,8 +106,8 @@ prototype["getInvoicePreviewLineItemForSku"] = function getInvoicePreviewLineIte
   }
   return found;
 };
-prototype["getInvoicePreviewLineItemUnitPriceForSku"] = function getInvoicePreviewLineItemUnitPriceForSku(arg0) {
-  const invoicePreviewLineItemForSku = this.getInvoicePreviewLineItemForSku(arg0);
+prototype["getInvoicePreviewLineItemUnitPriceForSku"] = function getInvoicePreviewLineItemUnitPriceForSku(skuId) {
+  const invoicePreviewLineItemForSku = this.getInvoicePreviewLineItemForSku(skuId);
   let amount = null;
   if (null != invoicePreviewLineItemForSku) {
     amount = null;

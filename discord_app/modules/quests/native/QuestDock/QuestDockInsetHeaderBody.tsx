@@ -13,10 +13,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(17215);
+const QuestDockConstants = fn(17307);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
 const createStyles = fn(5141);
 let obj = {
@@ -123,14 +123,14 @@ export default noop.memo(function QuestDockInsetHeaderBody(showBonusOrbsGradient
   items3[1] = hasOwnProperty(View, {
     style: tmp.titleRow,
     children: hasOwnProperty(Text_Text.Text, {
-      variant: "heading-md/medium",
+      variant: "heading-sm/medium",
       color: "mobile-text-heading-primary",
       children: title,
     }),
   });
   items3[2] = hasOwnProperty(Text_Text.Text, {
     color: "text-default",
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     children: description,
   });
   obj7.children = items3;

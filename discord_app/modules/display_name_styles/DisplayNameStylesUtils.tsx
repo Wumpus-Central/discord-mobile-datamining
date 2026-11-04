@@ -13,14 +13,14 @@ const DisplayNameStylesConstants = fn(1403);
 ({
   DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4,
   DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty,
-  getColorPresetsForEffect: metroRequire,
-  HEXAGON_CAMPAIGN_FONTS: closure_7,
+  getColorPresetsForEffect: closure_6,
+  HEXAGON_CAMPAIGN_FONTS: metroImportDefault,
 } = DisplayNameStylesConstants);
 let items = [
-  fn(1404).DisplayNameEffect.NEON,
-  fn(1404).DisplayNameEffect.TOON,
-  fn(1404).DisplayNameEffect.POP,
-  fn(1404).DisplayNameEffect.GUMMY,
+  fn(1405).DisplayNameEffect.NEON,
+  fn(1405).DisplayNameEffect.TOON,
+  fn(1405).DisplayNameEffect.POP,
+  fn(1405).DisplayNameEffect.GUMMY,
 ];
 const set = new Set(items);
 const items1 = [
@@ -171,9 +171,9 @@ export function parseServerDisplayNameStyles(display_name_styles) {
   }
   return tmp;
 }
-export function generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder) {
+export function generateRandomDisplayNameStyles(visibleFontOrder, EFFECT_ORDER) {
   let arr = visibleFontOrder;
-  const tmp = visibleEffectOrder[Math.floor(Math, Math.random(Math) * visibleEffectOrder.length)];
+  const tmp = EFFECT_ORDER[Math.floor(Math, Math.random(Math) * EFFECT_ORDER.length)];
   const found = visibleFontOrder.filter((item) => !closure_1_7.includes(item));
   if (found.length > 0) {
     arr = found;

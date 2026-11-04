@@ -141,11 +141,11 @@ function PublishSheetBody(entryPoint) {
     }
   };
   const tmp = closure_13();
-  const tmp4 = entryPoint(12247)(project, publish);
+  const tmp4 = entryPoint(12308)(project, publish);
   dependencyMap = tmp4;
-  entryPoint(6142)(() => true, tmp4.saving);
+  entryPoint(6157)(() => true, tmp4.saving);
   closure_3 = noop.useRef(false);
-  const context = noop.useContext(entryPoint(5714));
+  const context = noop.useContext(entryPoint(5727));
   let transitionState;
   if (context != null) {
     transitionState = context.transitionState;
@@ -169,15 +169,17 @@ function PublishSheetBody(entryPoint) {
     isPrivate = appChannelsPrivate.isPrivate;
   }
   if (true === isPrivate) {
-    AppsIcon = publish(8801).AppsLockIcon;
+    AppsIcon = publish(8818).AppsLockIcon;
     let tmp12 = publish;
   } else {
-    AppsIcon = publish(8802).AppsIcon;
+    AppsIcon = publish(8819).AppsIcon;
     tmp12 = publish;
   }
   if (tmp4.initial) {
     const initialChannelNames = tmp4.initialChannelNames;
-    let mapped = initialChannelNames.map((label) => React5(ContentRow, { icon: AppsIcon, label }, "channel:" + label));
+    let mapped = initialChannelNames.map((label) =>
+      metroImportDefault(ContentRow, { icon: AppsIcon, label }, "channel:" + label),
+    );
   } else {
     const channels = tmp4.channels;
     mapped = channels.map((channel) => closure_7(ChannelRow, { channel }, channel.id));
@@ -209,15 +211,15 @@ function PublishSheetBody(entryPoint) {
       onError(text) {
         if (null != text) {
           obj2 = { text, variant: "critical" };
-          entryPoint(5832).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
-          obj = entryPoint(5832);
+          entryPoint(5846).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
+          obj = entryPoint(5846);
         }
       },
     };
-    let tmp15Result = tmp15(tmp12(12253).ConjureAppIconTile, obj4);
+    let tmp15Result = tmp15(tmp12(12314).ConjureAppIconTile, obj4);
   } else {
     const obj5 = { project, size: "dialog" };
-    tmp15Result = tmp15(tmp2(12258), obj5);
+    tmp15Result = tmp15(tmp2(12319), obj5);
   }
   const items2 = [tmp15Result, , , , , ,];
   if (editable) {
@@ -225,30 +227,30 @@ function PublishSheetBody(entryPoint) {
     const intl2 = tmp12(1113).intl;
     obj6.label = intl2.string(tmp2(3995).knevPu);
     ({ name: obj9.value, setName: obj9.onChange } = tmp4);
-    obj6.maxLength = tmp12(6965).MAX_PROJECT_NAME_LENGTH;
+    obj6.maxLength = tmp12(6980).MAX_PROJECT_NAME_LENGTH;
     ({ saving: obj9.disabled, nameError } = tmp4);
     const obj7 = { children: null };
     obj6.errorMessage = nameError;
-    const items3 = [tmp15(tmp12(7208).TextInput, obj6)];
+    const items3 = [tmp15(tmp12(7223).TextInput, obj6)];
     const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
     const intl3 = tmp12(1113).intl;
     obj8.label = intl3.string(tmp2(3995).ynaGa1);
     const intl4 = tmp12(1113).intl;
     obj8.placeholder = intl4.string(tmp2(3995)["I+3UTL"]);
     ({ description: obj11.value, setDescription: obj11.onChange } = identity);
-    obj8.maxLength = tmp12(6965).MAX_APP_DESCRIPTION_LENGTH;
+    obj8.maxLength = tmp12(6980).MAX_APP_DESCRIPTION_LENGTH;
     obj8.disabled = tmp4.saving;
-    items3[1] = tmp15(tmp12(7373).TextArea, obj8);
+    items3[1] = tmp15(tmp12(7389).TextArea, obj8);
     obj7.children = items3;
     let tmp16Result = closure_9(closure_8, obj7);
   } else {
     const obj10 = { style: tmp.nameGroup, children: null };
     const obj12 = { variant: "heading-lg/semibold", color: "text-strong", lineClamp: 1, children: tmp4.displayName };
-    const items4 = [tmp15(tmp12(5747).Text, obj12)];
+    const items4 = [tmp15(tmp12(5761).Text, obj12)];
     let tmp15Result6 = null;
     if ("" !== tmp4.description) {
-      const obj13 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 2, children: tmp4.description };
-      tmp15Result6 = tmp15(tmp12(5747).Text, obj13);
+      const obj13 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 2, children: tmp4.description };
+      tmp15Result6 = tmp15(tmp12(5761).Text, obj13);
     }
     items4[1] = tmp15Result6;
     obj10.children = items4;
@@ -274,7 +276,7 @@ function PublishSheetBody(entryPoint) {
   obj16.rows = devicePermissions.map((item) => {
     obj = { icon: closure_1_11[item], label: null };
     const intl = publish(1113).intl;
-    obj.label = intl.string(publish(12247).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
+    obj.label = intl.string(publish(12308).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
     return closure_7(ContentRow, obj, item);
   });
   items2[4] = closure_7(RowSection, obj16);
@@ -286,13 +288,13 @@ function PublishSheetBody(entryPoint) {
     const items5 = [tmp15(SectionTitle, obj17)];
     const obj18 = { style: tmp.sharingRow, children: null };
     if (null != sharing.guild) {
-      const obj19 = { guild: sharing.guild, size: tmp12(7083).GuildIconSizes.SMALL_36 };
-      let tmp15Result8 = tmp15(tmp2(7083), obj19);
-      const tmp2Result = tmp2(7083);
+      const obj19 = { guild: sharing.guild, size: tmp12(7098).GuildIconSizes.SMALL_36 };
+      let tmp15Result8 = tmp15(tmp2(7098), obj19);
+      const tmp2Result = tmp2(7098);
     } else {
       const obj20 = { style: tmp.onlyMeIcon, children: null };
       const obj21 = { size: "xs", color: tmp2(575).colors.ICON_DEFAULT };
-      obj20.children = tmp15(tmp12(12261).UserIcon, obj21);
+      obj20.children = tmp15(tmp12(12322).UserIcon, obj21);
       tmp15Result8 = tmp15(tmp17, obj20);
     }
     const items6 = [tmp15Result8];
@@ -306,12 +308,12 @@ function PublishSheetBody(entryPoint) {
       const intl8 = tmp12(1113).intl;
       name = intl8.string(tmp2(3995)["37xgkF"]);
     }
-    const obj23 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: name };
-    const items7 = [tmp15(tmp12(5747).Text, obj23)];
+    const obj23 = { variant: "body-sm/medium", color: "text-strong", lineClamp: 1, children: name };
+    const items7 = [tmp15(tmp12(5761).Text, obj23)];
     let tmp15Result9 = null;
     if (null != sharing.caption) {
-      const obj24 = { variant: "text-xs/normal", color: "text-subtle", children: sharing.caption };
-      tmp15Result9 = tmp15(tmp12(5747).Text, obj24);
+      const obj24 = { variant: "body-xs/normal", color: "text-subtle", children: sharing.caption };
+      tmp15Result9 = tmp15(tmp12(5761).Text, obj24);
     }
     const obj25 = { children: null };
     items7[1] = tmp15Result9;
@@ -326,8 +328,8 @@ function PublishSheetBody(entryPoint) {
   const obj26 = { style: tmp.footer, children: null };
   let tmp15Result10 = null;
   if (null != tmp4.note) {
-    const obj27 = { variant: "text-sm/normal", color: "text-subtle", children: tmp4.note };
-    tmp15Result10 = tmp15(tmp12(5747).Text, obj27);
+    const obj27 = { variant: "body-sm/normal", color: "text-subtle", children: tmp4.note };
+    tmp15Result10 = tmp15(tmp12(5761).Text, obj27);
   }
   const items8 = [tmp15Result10];
   const obj28 = { style: tmp.actions, children: null };
@@ -336,7 +338,7 @@ function PublishSheetBody(entryPoint) {
   obj55.text = intl9.string(tmp12(1113).t["ETE/oC"]);
   obj55.disabled = tmp4.saving;
   obj55.onPress = hidePublishSheet;
-  const items9 = [closure_7(tmp12(5754).Button, obj55)];
+  const items9 = [closure_7(tmp12(5768).Button, obj55)];
   const obj56 = {
     variant: "primary",
     size: "md",
@@ -362,19 +364,19 @@ function PublishSheetBody(entryPoint) {
     }
     return applyArgumentsResult;
   };
-  items9[1] = closure_7(tmp12(5754).Button, obj56);
+  items9[1] = closure_7(tmp12(5768).Button, obj56);
   obj28.children = items9;
   items8[1] = closure_9(closure_5, obj28);
   obj26.children = items8;
   items2[6] = closure_9(closure_5, obj26);
   obj3.children = items2;
   obj2.children = closure_9(closure_5, obj3);
-  return closure_7(tmp12(7486).ActionSheet, obj2);
+  return closure_7(tmp12(7502).ActionSheet, obj2);
 }
 function SectionTitle(children) {
   const tmp = closure_13();
-  return React5(Text_Text.Text, {
-    variant: "text-sm/semibold",
+  return metroImportDefault(Text_Text.Text, {
+    variant: "body-sm/semibold",
     color: "text-subtle",
     accessibilityRole: "header",
     style: closure_13().sectionTitle,
@@ -393,9 +395,9 @@ function RowSection(title) {
     }
     obj = { style: following, children: null };
     obj2 = { title: title.title };
-    items = [React5(SectionTitle, obj2), rows];
+    items = [metroImportDefault(SectionTitle, obj2), rows];
     obj.children = items;
-    tmp3Result = React7(View, obj);
+    tmp3Result = React6(View, obj);
   }
   return tmp3Result;
 }
@@ -403,11 +405,16 @@ function ContentRow(arg0) {
   ({ icon, label } = arg0);
   obj = { style: closure_13().row, children: null };
   items = [
-    React5(icon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }),
-    React5(Text_Text.Text, { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: label }),
+    metroImportDefault(icon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-md/semibold",
+      color: "text-strong",
+      lineClamp: 1,
+      children: label,
+    }),
   ];
   obj.children = items;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 function AppChannelsPrivateSection(appChannelsPrivate) {
   appChannelsPrivate = appChannelsPrivate.appChannelsPrivate;
@@ -418,14 +425,14 @@ function AppChannelsPrivateSection(appChannelsPrivate) {
     str = "text-default";
   }
   obj = { start: true, end: true, label: null, value: null, disabled: null, onValueChange: null };
-  obj2 = { variant: "text-md/medium", color: str, children: null };
+  obj2 = { variant: "body-md/medium", color: str, children: null };
   const intl = util.intl;
   obj2.children = intl.formatToPlainString(_modDef3995.Td1mlg, { count: channelCount });
-  obj.label = React5(Text_Text.Text, obj2);
+  obj.label = metroImportDefault(Text_Text.Text, obj2);
   obj.value = isPrivate;
   obj.disabled = disabled;
   obj.onValueChange = appChannelsPrivate.setPrivate;
-  return React5(TableSwitchRow.TableSwitchRow, obj);
+  return metroImportDefault(TableSwitchRow.TableSwitchRow, obj);
 }
 function ChannelRow(channel) {
   obj = { icon: AppsIcon2.AppsIcon, label: null };
@@ -434,19 +441,19 @@ function ChannelRow(channel) {
     str = "";
   }
   obj.label = str;
-  return React5(ContentRow, obj);
+  return metroImportDefault(ContentRow, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 ConjurePublishSheet = "ConjurePublishSheet";
-let obj = { screen_capture: fn(9719).ScreenIcon, connect_user_to_voice: fn(8797).VoiceNormalIcon };
+let obj = { screen_capture: fn(9737).ScreenIcon, connect_user_to_voice: fn(8814).VoiceNormalIcon };
 let obj2 = {};
-obj2[fn(6965).ConjureSupportedSurface.BOT] = fn(12241).RobotIcon;
-obj2[fn(6965).ConjureSupportedSurface.ACTIVITY] = fn(12243).ActivitiesIcon;
-obj2[fn(6965).ConjureSupportedSurface.VOICE_CHANNEL] = fn(8797).VoiceNormalIcon;
-obj2[fn(6965).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12245).BadgeIcon;
-obj2[fn(6965).ConjureSupportedSurface.AUTOMOD] = fn(11418).ShieldIcon;
+obj2[fn(6980).ConjureSupportedSurface.BOT] = fn(12302).RobotIcon;
+obj2[fn(6980).ConjureSupportedSurface.ACTIVITY] = fn(12304).ActivitiesIcon;
+obj2[fn(6980).ConjureSupportedSurface.VOICE_CHANNEL] = fn(8814).VoiceNormalIcon;
+obj2[fn(6980).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12306).BadgeIcon;
+obj2[fn(6980).ConjureSupportedSurface.AUTOMOD] = fn(11468).ShieldIcon;
 const createStyles = fn(5141);
 let obj4 = {
   content: { gap: nativeDefault.space.PX_16 },
@@ -522,6 +529,6 @@ const result = size.fileFinishedImporting("modules/conjure/publish/native/Conjur
 export default function showConjurePublishSheet(arg0) {
   obj2 = { key: ConjurePublishSheet, content: null };
   const merged = Object.assign(arg0);
-  obj2.content = React5(ConjurePublishSheet, {});
+  obj2.content = metroImportDefault(ConjurePublishSheet, {});
   ActionSheetActionCreators.showActionSheet(obj2);
 }

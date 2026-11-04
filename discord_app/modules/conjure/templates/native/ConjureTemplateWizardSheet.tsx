@@ -15,7 +15,7 @@ import ConjureChatStore from "../../chat/ConjureChatStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10980);
+const ConjureConnectionStore = fn(11028);
 ({
   ensureConnection: closure_10,
   sendUserMessage: closure_11,
@@ -64,7 +64,7 @@ let obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.action = { flex: 1 };
 let closure_17 = createStyles.createStyles(obj2);
-let obj9 = { shield: fn(13131).ChatShieldIcon, hammer: fn(13133).HammerIcon, group: fn(8785).GroupIcon };
+let obj9 = { shield: fn(13214).ChatShieldIcon, hammer: fn(13216).HammerIcon, group: fn(8802).GroupIcon };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/templates/native/ConjureTemplateWizardSheet.tsx");
 
@@ -95,7 +95,7 @@ export default function ConjureTemplateWizardSheet(template) {
   let result3 = dependencyMap;
   items = [first, closure_8];
   const stateFromStores = template(504).useStateFromStores(items, () =>
-    template(13135).conjureTemplateWizardGuilds(first.getGuildsArray(), "ConjureTemplateWizardSheet"),
+    template(13218).conjureTemplateWizardGuilds(first.getGuildsArray(), "ConjureTemplateWizardSheet"),
   );
   let obj2 = template(504);
   [tmp4, c6] = stateFromStores.useState(0);
@@ -132,24 +132,24 @@ export default function ConjureTemplateWizardSheet(template) {
     if (null != first) {
       c0 = false;
       const obj2 = { guild_id: tmp, install_scope: "guild" };
-      const project = template(11005).createProject(obj2);
-      let obj = template(11005);
+      const project = template(11054).createProject(obj2);
+      let obj = template(11054);
       project
         .then((current) => {
           closure_0 = current;
           ref.current = current;
           ref2.current = current;
           if (closure_0) {
-            const obj3 = template(11005);
-            template(11005)
+            const obj3 = template(11054);
+            template(11054)
               .deleteProject(current)
               .catch(() => {});
-            const deleteProjectResult = template(11005).deleteProject(current);
+            const deleteProjectResult = template(11054).deleteProject(current);
           } else {
             const obj = { templateId: _true.id };
             closure_10(current, obj);
             first3(current, dependencyMap);
-            const result = template(13135).startConjureTemplateWizard(current, _true);
+            const result = template(13218).startConjureTemplateWizard(current, _true);
             return result.then((result) => {
               if (!c0) {
                 c11(result);
@@ -206,7 +206,7 @@ export default function ConjureTemplateWizardSheet(template) {
   if (tmp25) {
     tmp25 = null != stateFromStores1;
   }
-  guildId(13137)(first2, template.id, tmp25);
+  guildId(13220)(first2, template.id, tmp25);
   if (stateFromStores2) {
     stateFromStores2 = null == tmp21;
   }
@@ -226,14 +226,14 @@ export default function ConjureTemplateWizardSheet(template) {
       onCreated(first2, current);
     }
   }, items5);
-  const tmp24 = guildId(13137);
-  const conjureWizardIntroResult = obj(13135).conjureWizardIntro(tmp21);
-  const objResult6 = obj(13135);
-  let result = obj(13135).conjureWizardServerCopy(tmp21);
-  const objResult7 = obj(13135);
-  result1 = obj(13135).conjureWizardQuestions(tmp21);
-  const objResult8 = obj(13135);
-  const result2 = obj(13135).conjureTemplateWizardSteps(result1, first1);
+  const tmp24 = guildId(13220);
+  const conjureWizardIntroResult = obj(13218).conjureWizardIntro(tmp21);
+  const objResult6 = obj(13218);
+  let result = obj(13218).conjureWizardServerCopy(tmp21);
+  const objResult7 = obj(13218);
+  result1 = obj(13218).conjureWizardQuestions(tmp21);
+  const objResult8 = obj(13218);
+  const result2 = obj(13218).conjureTemplateWizardSteps(result1, first1);
   const tmp31 = result2[Math.min(Math, tmp4, result2.length - 1)];
   length = result2.length;
   let tmp32;
@@ -267,7 +267,7 @@ export default function ConjureTemplateWizardSheet(template) {
     }
   }, []);
   const callback1 = obj3.useCallback(() => {
-    guildId(5381).hideActionSheet(c16);
+    guildId(5382).hideActionSheet(c16);
   }, []);
   const items6 = [first3, onCreated, first, first2, result1, first4, template.id];
   closure_24 = obj3.useCallback(
@@ -317,11 +317,11 @@ export default function ConjureTemplateWizardSheet(template) {
                           value: result(tmp48[16])
                             .setGuildHints(first2, obj8)
                             .catch((error) => {
-                              result = closure_1_0(11009).classifyCreateFailure(error);
-                              const obj = closure_1_0(11009);
-                              const conjureCreateError = new closure_1_0(11009).ConjureCreateError(
+                              result = closure_1_0(11058).classifyCreateFailure(error);
+                              const obj = closure_1_0(11058);
+                              const conjureCreateError = new closure_1_0(11058).ConjureCreateError(
                                 result,
-                                closure_1_0(11009).createFailureStatus(error),
+                                closure_1_0(11058).createFailureStatus(error),
                               );
                               throw conjureCreateError;
                             }),
@@ -391,19 +391,19 @@ export default function ConjureTemplateWizardSheet(template) {
     }
   }
   if (null != tmp17) {
-    let obj5 = { variant: "text-sm/normal", color: "text-feedback-critical", children: tmp17 };
-    let tmp43Result2 = closure_13(obj(5747).Text, obj5);
+    let obj5 = { variant: "body-sm/normal", color: "text-feedback-critical", children: tmp17 };
+    let tmp43Result2 = closure_13(obj(5761).Text, obj5);
     let tmp39 = closure_13;
   } else {
     tmp39 = closure_13;
-    let obj6 = { style: tmp.loading, children: closure_13(obj(7080).ActivityIndicator, {}) };
+    let obj6 = { style: tmp.loading, children: closure_13(obj(7095).ActivityIndicator, {}) };
     tmp43Result2 = closure_13(c6, obj6);
   }
   let obj7 = {
     startExpanded: true,
     keyboardShouldPersistTaps: "handled",
     onDismiss: callback,
-    header: tmp39(obj(7441).BottomSheetTitleHeader, { title: name }),
+    header: tmp39(obj(7457).BottomSheetTitleHeader, { title: name }),
     children: null,
   };
   let obj8 = { style: tmp.content, children: null };
@@ -412,8 +412,8 @@ export default function ConjureTemplateWizardSheet(template) {
     let tmp43Result = tmp43Result2;
     if (null != conjureWizardIntroResult) {
       obj9 = { children: null };
-      let obj10 = { variant: "text-md/medium", color: "text-default", children: conjureWizardIntroResult.lead };
-      const items7 = [tmp39(obj(5747).Text, obj10)];
+      let obj10 = { variant: "body-md/medium", color: "text-default", children: conjureWizardIntroResult.lead };
+      const items7 = [tmp39(obj(5761).Text, obj10)];
       const points = conjureWizardIntroResult.points;
       items7[1] = points.map((children, index) => {
         const obj = { style: closure_4.pointCard, children: null };
@@ -426,13 +426,13 @@ export default function ConjureTemplateWizardSheet(template) {
         ];
         const obj3 = { style: closure_4.point, children: null };
         const items1 = [
-          state(Text_Text.Text, { variant: "text-md/normal", color: "text-default", children: children.title }),
+          state(Text_Text.Text, { variant: "body-md/normal", color: "text-default", children: children.title }),
         ];
         let tmp3Result = null;
         if (null != children.subtext) {
           tmp3Result = null;
           if ("" !== children.subtext) {
-            const obj5 = { variant: "text-sm/normal", color: "text-muted", children: children.subtext };
+            const obj5 = { variant: "body-sm/normal", color: "text-muted", children: children.subtext };
             tmp3Result = state(Text_Text.Text, obj5);
           }
         }
@@ -470,17 +470,17 @@ export default function ConjureTemplateWizardSheet(template) {
           },
           disabled: first4,
         };
-        const items9 = [tmp39(obj(7373).TextArea, obj12), ,];
+        const items9 = [tmp39(obj(7389).TextArea, obj12), ,];
         let tmp39Result = null;
         if (null != tmp32.hint) {
-          const obj13 = { variant: "text-sm/normal", color: "text-muted", children: tmp32.hint };
-          tmp39Result = tmp39(obj(5747).Text, obj13);
+          const obj13 = { variant: "body-sm/normal", color: "text-muted", children: tmp32.hint };
+          tmp39Result = tmp39(obj(5761).Text, obj13);
         }
         items9[1] = tmp39Result;
         let tmp39Result4 = null;
         if (null != tmp17) {
-          const obj14 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp17 };
-          tmp39Result4 = tmp39(obj(5747).Text, obj14);
+          const obj14 = { variant: "body-xs/normal", color: "text-feedback-critical", children: tmp17 };
+          tmp39Result4 = tmp39(obj(5761).Text, obj14);
         }
         items9[2] = tmp39Result4;
         obj11.children = items9;
@@ -507,7 +507,7 @@ export default function ConjureTemplateWizardSheet(template) {
         return _undefined((arg0) => Math.max(0, arg0 - 1));
       };
     }
-    obj16.children = tmp39(obj(5754).Button, obj18);
+    obj16.children = tmp39(obj(5768).Button, obj18);
     const items10 = [tmp39(tmp44, obj16)];
     if ("none" === first1) {
       items10[1] = null;
@@ -515,7 +515,7 @@ export default function ConjureTemplateWizardSheet(template) {
       items8[3] = tmp43(tmp44, obj15);
       obj8.children = items8;
       obj7.children = tmp43(tmp44, obj8);
-      return tmp39(obj(7486).ActionSheet, obj7);
+      return tmp39(obj(7502).ActionSheet, obj7);
     } else {
       const obj19 = { style: tmp.action, children: null };
       if (tmp4 === length - 1) {
@@ -524,7 +524,7 @@ export default function ConjureTemplateWizardSheet(template) {
         obj20.text = intl5.string(tmp23(3995)["5iv8MF"]);
         let tmp56 = null == first2 || null == first;
         if (!tmp56) {
-          obj = obj(13135);
+          obj = obj(13218);
           result3 = obj.isConjureWizardComplete(result1, first3);
           tmp56 = !result3;
         }
@@ -549,8 +549,8 @@ export default function ConjureTemplateWizardSheet(template) {
         if (!tmp48) {
           let tmp55 = typeof tmp31 === "object";
           if (typeof tmp31 === "object") {
-            tmp55 = !obj(13135).canLeaveConjureWizardQuestion(tmp32, str);
-            const objResult10 = obj(13135);
+            tmp55 = !obj(13218).canLeaveConjureWizardQuestion(tmp32, str);
+            const objResult10 = obj(13218);
           }
           tmp48 = tmp55;
         }
@@ -559,14 +559,14 @@ export default function ConjureTemplateWizardSheet(template) {
           return _undefined((arg0) => Math.min(length - 1, arg0 + 1));
         };
       }
-      obj19.children = tmp39(obj(5754).Button, obj21);
+      obj19.children = tmp39(obj(5768).Button, obj21);
       tmp39(tmp44, obj19);
     }
   } else if (0 === stateFromStores.length) {
-    const obj22 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj22 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl2 = obj(1113).intl;
     obj22.children = intl2.string(tmp23(3995)["6ys5dn"]);
-    let tmp39Result6 = tmp39(obj(5747).Text, obj22);
+    let tmp39Result6 = tmp39(obj(5761).Text, obj22);
   } else {
     let str4 = first;
     if (first == null) {
@@ -587,9 +587,9 @@ export default function ConjureTemplateWizardSheet(template) {
     obj24.children = stateFromStores.map((label) =>
       state(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: first4 }, label.id),
     );
-    const items11 = [tmp39(obj(7184).TableRadioGroup, obj24)];
-    const obj25 = { variant: "text-sm/normal", color: "text-muted", children: result.hint };
-    items11[1] = tmp39(obj(5747).Text, obj25);
+    const items11 = [tmp39(obj(7199).TableRadioGroup, obj24)];
+    const obj25 = { variant: "body-sm/normal", color: "text-muted", children: result.hint };
+    items11[1] = tmp39(obj(5761).Text, obj25);
     obj23.children = items11;
     tmp39Result6 = tmp43(closure_15, obj23);
   }

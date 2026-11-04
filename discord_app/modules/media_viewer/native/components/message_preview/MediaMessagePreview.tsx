@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05428_LegacyBaseButton.js";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -140,7 +140,7 @@ function MeasureMessageAfterEntrance(entranceAnimationDriver) {
   return tmp13;
 }
 get_ActivityIndicator = fn(17);
-({ findNodeHandle: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ findNodeHandle: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 let ThemeTypes = fn(1072).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);

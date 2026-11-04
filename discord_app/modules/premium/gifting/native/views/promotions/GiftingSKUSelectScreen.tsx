@@ -10,9 +10,9 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -97,15 +97,15 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   };
   const intl = util.intl;
   obj4.children = intl.string(util.t["+ByEeM"]);
-  const items3 = [React5(Text_Text.Text, obj4)];
-  const obj5 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
+  const items3 = [metroImportDefault(Text_Text.Text, obj4)];
+  const obj5 = { style: tmp.subtitle, variant: "body-md/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.vPeaOS);
-  items3[1] = React5(Text_Text.Text, obj5);
+  items3[1] = metroImportDefault(Text_Text.Text, obj5);
   obj3.children = items3;
   const items4 = [
-    React6(hasOwnProperty, obj3),
-    React5(GiftingSKUCardsGridDefault, {
+    React5(hasOwnProperty, obj3),
+    metroImportDefault(GiftingSKUCardsGridDefault, {
       rewardsToDisplay: rewardsToDisplay.allRewards,
       claimableRewards,
       onSelect: callback1,
@@ -113,7 +113,7 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
     }),
   ];
   obj2.children = items4;
-  const items5 = [React6(timestampProducer, obj2)];
+  const items5 = [React5(timestampProducer, obj2)];
   const obj6 = { style: null, children: null };
   const items6 = [tmp.buttonContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj6.style = items6;
@@ -122,8 +122,8 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   obj7.text = intl3.string(util.t["3d0Nmb"]);
   obj7.onPress = callback;
   obj7.disabled = null == highlightedSkuId || !memo;
-  obj6.children = React5(components_Button_Button.Button, obj7);
-  items5[1] = React5(hasOwnProperty, obj6);
+  obj6.children = metroImportDefault(components_Button_Button.Button, obj7);
+  items5[1] = metroImportDefault(hasOwnProperty, obj6);
   obj.children = items5;
-  return React6(hasOwnProperty, obj);
+  return React5(hasOwnProperty, obj);
 }

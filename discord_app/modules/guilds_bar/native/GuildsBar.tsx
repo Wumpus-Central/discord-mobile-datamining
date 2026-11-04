@@ -78,7 +78,7 @@ export default noop.memo(function GuildsBar(enableHome) {
   }, items1);
   let obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(11700).Profiles.Guilds;
+  obj.profile = fastListRef(11755).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp10 = StartupProfilerDefault;
@@ -105,6 +105,6 @@ export default noop.memo(function GuildsBar(enableHome) {
   const items2 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {})];
   obj3.children = items2;
   obj2.children = closure_5(tmp12, obj3);
-  obj.children = closure_4(fastListRef(5426).GestureDetector, obj2);
+  obj.children = closure_4(fastListRef(5428).GestureDetector, obj2);
   return closure_4(tmp10, obj);
 });

@@ -137,7 +137,7 @@ export default function ConnectButton(props) {
   element.children = canConnect.useMemo(
     () =>
       jsx(Text_Text.Text, {
-        variant: "text-sm/semibold",
+        variant: "body-sm/semibold",
         color: "text-overlay-light",
         style: connectText.connectText,
         children,

@@ -12,7 +12,7 @@ function isAnimatedBackgroundOption(type) {
     tmp = type in OPTION_1;
   }
   if (tmp) {
-    let hasItem = React5.includes(type);
+    let hasItem = metroImportDefault.includes(type);
   } else {
     let tmp3 = null != type && typeof type === "object";
     if (tmp3) {
@@ -90,11 +90,11 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(6047);
+const VideoBackgroundConstants = fn(6062);
 ({
   DefaultVideoBackground: hasOwnProperty,
-  VideoFilterType: metroRequire,
-  ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: closure_7,
+  VideoFilterType: closure_6,
+  ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: metroImportDefault,
 } = VideoBackgroundConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -184,7 +184,7 @@ export function trackBackgroundOptionDeleted(type) {
 }
 export function getVideoBackgroundProtoFromOption(type) {
   if (null == type) {
-    let obj = { oneofKind: "Array" };
+    let obj = { oneofKind: "r" };
   } else {
     let tmp = null != type && typeof type === "object";
     if (tmp) {

@@ -13,7 +13,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   stats: { flexDirection: "row", flexWrap: "wrap", columnGap: nativeDefault.space.PX_16 },
   stat: null,

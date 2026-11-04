@@ -21,7 +21,7 @@ function Radio() {
   items = [
     timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Radio" }),
     timestampProducer(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       children: "Select a single option from a short list of multiple options",
     }),
   ];
@@ -47,9 +47,9 @@ function Radio() {
     }),
   ];
   obj2.children = items1;
-  items[2] = React5(TableRadioGroup.TableRadioGroup, obj2);
+  items[2] = metroImportDefault(TableRadioGroup.TableRadioGroup, obj2);
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 function Switch() {
   [tmp2, c0] = noop.useState(true);
@@ -83,7 +83,7 @@ function Switch() {
   items = [
     timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Switch" }),
     timestampProducer(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       children: "Toggle the state of a single setting on or off, immediately",
     }),
     ,
@@ -115,9 +115,9 @@ function Switch() {
     onValueChange: NOOP,
   });
   obj8.children = items1;
-  items[3] = React5(TableRowGroup.TableRowGroup, obj8);
+  items[3] = metroImportDefault(TableRowGroup.TableRowGroup, obj8);
   obj5.children = items;
-  return React5(React6, obj5);
+  return metroImportDefault(React5, obj5);
 }
 function InlineCheckbox(startChecked) {
   let flag = startChecked.startChecked;
@@ -148,14 +148,14 @@ function InlineCheckboxDemo() {
     timestampProducer(InlineCheckbox, { label: "I agree to the Terms of Service", required: true }),
   ];
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 function CheckboxRowDemo() {
   const obj = { children: null };
   items = [
     timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Checkbox" }),
     timestampProducer(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       children: "Select one or more options from a short list of options",
     }),
   ];
@@ -181,9 +181,9 @@ function CheckboxRowDemo() {
     }),
   ];
   obj2.children = items1;
-  items[2] = React5(TableRowGroup.TableRowGroup, obj2);
+  items[2] = metroImportDefault(TableRowGroup.TableRowGroup, obj2);
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 function SliderDemo() {
   const obj = { children: null };
@@ -201,14 +201,14 @@ function SliderDemo() {
   };
   items[1] = timestampProducer(TableRow.TableRow, obj2);
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 function TableSliderRowDemo() {
   const obj = { children: null };
   items = [
     timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "TableSliderRow" }),
     timestampProducer(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       children: "A slider setting with its label and current value, for settings tables",
     }),
   ];
@@ -226,12 +226,12 @@ function TableSliderRowDemo() {
   };
   items[2] = timestampProducer(TableRowGroup.TableRowGroup, obj2);
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 const size = fn(2);
@@ -251,6 +251,6 @@ export default function UserSettingsDesignSystemFormPrimitives() {
     timestampProducer(TableSliderRowDemo, {}),
   ];
   obj2.children = items;
-  obj.children = React5(Stack_Stack.Stack, obj2);
+  obj.children = metroImportDefault(Stack_Stack.Stack, obj2);
   return timestampProducer(ScrollView, obj);
 }

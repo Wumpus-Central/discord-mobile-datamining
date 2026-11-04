@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -62,7 +62,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const intl = util.intl;
   obj4.children = intl.string(util.t.n8nw6j);
   items[1] = hasOwnProperty(Text_Text.Text, obj4);
-  const obj5 = { variant: "text-sm/medium", color: "text-default", style: tmp.subtitle, children: null };
+  const obj5 = { variant: "body-sm/medium", color: "text-default", style: tmp.subtitle, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.KMW0kP);
   items[2] = hasOwnProperty(Text_Text.Text, obj5);
@@ -77,7 +77,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
     style: tmp.illustration,
     children: hasOwnProperty(LanternSpotIllustration.LanternSpotIllustration, { accessible: false }),
   });
-  const obj7 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj7 = { style: tmp.info, variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;
   const items1 = [intl3.string(util.t.ci12MJ), " "];
   const intl4 = util.intl;
@@ -85,7 +85,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
     learnMoreHook: function LearnMore(children, arg1) {
       return closure_1_5(
         Text_Text.Text,
-        { onPress: ContactSyncUtils.handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children },
+        { onPress: ContactSyncUtils.handleOpenLearnMoreLink, variant: "body-sm/medium", color: "text-link", children },
         arg1,
       );
     },

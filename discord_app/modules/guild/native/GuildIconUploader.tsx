@@ -5,17 +5,17 @@ import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef13362 from "../../../../_runtime/metro/13362__.js";
-import _modDef13363 from "../../../../_runtime/metro/13363__.js";
-import _modDef13364 from "../../../../_runtime/metro/13364__.js";
-import _modDef13365 from "../../../../_runtime/metro/13365__.js";
+import _modDef13445 from "../../../../_runtime/metro/13445__.js";
+import _modDef13446 from "../../../../_runtime/metro/13446__.js";
+import _modDef13447 from "../../../../_runtime/metro/13447__.js";
+import _modDef13448 from "../../../../_runtime/metro/13448__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { width: 82, height: 82, marginTop: 4 },
@@ -90,13 +90,13 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef13362;
+      let tmp10Result = _modDef13445;
     } else {
-      tmp10Result = _modDef13363;
+      tmp10Result = _modDef13446;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj)];
-    const obj5 = { style: tmp.emptyGuildIconText, variant: "text-xs/semibold", color: "text-default", children: null };
+    const obj5 = { style: tmp.emptyGuildIconText, variant: "body-xs/semibold", color: "text-default", children: null };
     const intl = util.intl;
     obj6 = shared;
     obj5.children = intl.string(util.t["3UB9ad"]).toUpperCase();
@@ -123,13 +123,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef13364;
+    obj5.source = _modDef13447;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef13365 };
+    const obj7 = { source: _modDef13448 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);

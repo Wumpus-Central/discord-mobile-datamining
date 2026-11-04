@@ -57,12 +57,12 @@ function ConnectionsSection(onAdd) {
   const obj6 = { style: tmp.section, children: null };
   const obj7 = { children: null };
   const obj8 = { style: tmp.header, children: null };
-  const obj9 = { style: tmp.title, variant: "heading-md/semibold", color: "text-strong", children: null };
+  const obj9 = { style: tmp.title, variant: "heading-sm/semibold", color: "text-strong", children: null };
   const intl = tmp4(1113).intl;
   obj9.children = intl.string(require("util").t["3fe7U5"]);
   const items4 = [closure_11(require("Text/Text").Heading, obj9)];
   const obj10 = {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-link",
     style: tmp.addAction,
     accessibilityRole: "button",
@@ -78,7 +78,7 @@ function ConnectionsSection(onAdd) {
   items4[1] = closure_11(require("Text/Text").Text, obj10);
   obj8.children = items4;
   const items5 = [closure_12(closure_5, obj8)];
-  const obj11 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj11 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl4 = tmp4(1113).intl;
   obj11.children = intl4.string(_modDef4414["0y44+Q"]);
   items5[1] = closure_11(require("Text/Text").Text, obj11);
@@ -101,7 +101,7 @@ function ConnectionsSection(onAdd) {
       accounts.map((account) => closure_2_11(ConnectedAccountDefault, { theme, locale, account }, account.id)),
     ];
     obj12.children = items7;
-    let tmp12Result = closure_12(tmp4(6147).Stack, obj12);
+    let tmp12Result = closure_12(tmp4(6162).Stack, obj12);
   } else {
     if (!fetching) {
       if (!tmp7.isLoading) {
@@ -118,8 +118,8 @@ function ConnectionsSection(onAdd) {
               style: tile.tile,
               accessibilityLabel: accessibilityLabel.name,
               onPress() {
-                closure_1(9852)({ platformType: type, location: constants.CONNECTIONS_EMPTY_STATE });
-                const result = type(16998).trackEmptyStateCardClicked({ platformType: type });
+                closure_1(9870)({ platformType: type, location: constants.CONNECTIONS_EMPTY_STATE });
+                const result = type(17090).trackEmptyStateCardClicked({ platformType: type });
               },
               children: null,
             };
@@ -139,7 +139,7 @@ function ConnectionsSection(onAdd) {
         const intl5 = tmp4(1113).intl;
         obj15.text = intl5.string(tmp4(1113).t["UKOtz+"]);
         obj15.onPress = onAdd;
-        obj14.children = closure_11(tmp4(5754).Button, obj15);
+        obj14.children = closure_11(tmp4(5768).Button, obj15);
         items8[1] = closure_11(closure_5, obj14);
         obj13.children = items8;
         tmp12Result = closure_12(closure_5, obj13);
@@ -210,9 +210,9 @@ let result = size.fileFinishedImporting("modules/user_settings/connected_apps/na
 
 export default function ConnectedAppsScreen() {
   const tmp = closure_14();
-  const authorizedApps = apps(16999).useAuthorizedApps();
+  const authorizedApps = apps(17091).useAuthorizedApps();
   apps = authorizedApps.apps;
-  let obj = apps(16999);
+  let obj = apps(17091);
   const stackNavigation = apps(1499).useStackNavigation();
   items = [stackNavigation];
   const callback = noop.useCallback(() => {
@@ -239,11 +239,11 @@ export default function ConnectedAppsScreen() {
   const obj5 = { children: null };
   const items2 = [
     closure_11(ConnectionsSection, { onAdd: callback }),
-    closure_11(apps(16999).AuthorizedAppsHeader, {}),
+    closure_11(apps(17091).AuthorizedAppsHeader, {}),
   ];
   obj5.children = items2;
   obj3.ListHeaderComponent = closure_12(closure_13, obj5);
-  obj3.ListEmptyComponent = closure_11(apps(16999).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
+  obj3.ListEmptyComponent = closure_11(apps(17091).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
   obj3.data = apps;
   obj3.renderItem = function renderItem(app) {
     const index = app.index;
@@ -256,5 +256,5 @@ export default function ConnectedAppsScreen() {
   obj3.keyExtractor = function keyExtractor(id) {
     return id.id;
   };
-  return closure_11(apps(7414).FlashList, obj3);
+  return closure_11(apps(7430).FlashList, obj3);
 }

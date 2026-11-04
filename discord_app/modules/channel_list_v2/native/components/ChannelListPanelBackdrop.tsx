@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const DM_WIDTH = fn(1072).DM_WIDTH;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
 let obj3 = {};
@@ -88,5 +88,5 @@ export default function ChannelListPanelBackdrop(children) {
     timestampProducer(React4, { style: tmp.listWrapper, children: children.children }),
   ];
   obj3.children = items1;
-  return React5(React4, obj3);
+  return metroImportDefault(React4, obj3);
 }

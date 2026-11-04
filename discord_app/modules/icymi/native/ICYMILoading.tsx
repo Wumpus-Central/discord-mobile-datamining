@@ -68,12 +68,12 @@ function ICYMILoadingItem() {
   obj2.children = items3;
   const items7 = [timestampProducer(View, obj2), hasOwnProperty(ICYMIShared.Separator, {})];
   obj.children = items7;
-  return timestampProducer(React5, obj);
+  return timestampProducer(metroImportDefault, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createICYMIStyles = fn(18682);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
+const createICYMIStyles = fn(18783);
 let closure_8 = createICYMIStyles.createICYMIStyles((marginBottom) => {
   const obj = {
     backgroundColor: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE },
@@ -120,5 +120,5 @@ export function ICYMILoading() {
   const obj = { children: null };
   items = [hasOwnProperty(ICYMILoadingItem, {}), hasOwnProperty(ICYMILoadingItem, {})];
   obj.children = items;
-  return timestampProducer(React5, obj);
+  return timestampProducer(metroImportDefault, obj);
 }

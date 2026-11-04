@@ -13,7 +13,7 @@ const require = globalThis.__r;
 const _modDef1652 = _mod1652;
 
 require = fn;
-const InAppNotificationConstants = fn(11156);
+const InAppNotificationConstants = fn(11204);
 ({
   MIN_SWIPE_VELOCITY: closure_4,
   STARTED_SWIPE_THRESHOLD: hasOwnProperty,
@@ -21,7 +21,7 @@ const InAppNotificationConstants = fn(11156);
 } = InAppNotificationConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { shadow: null, container: null };
 let obj3 = {};

@@ -77,7 +77,7 @@ const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/nati
 
 export default function ConjurePerfTraceStatsHeader(stats) {
   stats = stats.stats;
-  const perfModelSummaryResult = stats(13154).perfModelSummary(stats);
+  const perfModelSummaryResult = stats(13237).perfModelSummary(stats);
   const tmp4 = closure_6();
   dependencyMap = styles();
   let obj2 = { style: tmp4.header, children: null };
@@ -103,7 +103,7 @@ export default function ConjurePerfTraceStatsHeader(stats) {
   });
   items = [closure_3(dependencyMap, obj3), ,];
   const obj4 = { style: tmp4.legend, children: null };
-  const PERF_CATEGORIES = stats(11024).PERF_CATEGORIES;
+  const PERF_CATEGORIES = stats(11073).PERF_CATEGORIES;
   obj4.children = PERF_CATEGORIES.map((item) => {
     const perfCategoryTotalResult = ConjurePerfTraceFormat.perfCategoryTotal(stats, item);
     const obj2 = { style: closure_1.legendItem, children: null };
@@ -112,13 +112,13 @@ export default function ConjurePerfTraceStatsHeader(stats) {
     obj3.style = items;
     const items1 = [React3(View, obj3), ,];
     items1[1] = React3(Text_Text.Text, {
-      variant: "text-xs/normal",
+      variant: "body-xs/normal",
       color: "text-muted",
       children: ConjurePerfTraceFormat.PERF_CATEGORY_LABELS[item],
     });
     let tmp6Result = null;
     if (null != perfCategoryTotalResult) {
-      const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: perfCategoryTotalResult };
+      const obj5 = { variant: "body-xs/normal", color: "text-subtle", children: perfCategoryTotalResult };
       tmp6Result = React3(Text_Text.Text, obj5);
     }
     items1[2] = tmp6Result;
@@ -128,8 +128,8 @@ export default function ConjurePerfTraceStatsHeader(stats) {
   items[1] = closure_3(dependencyMap, obj4);
   let tmp7Result = null;
   if (null != perfModelSummaryResult) {
-    let obj5 = { variant: "text-sm/normal", color: "text-default", children: perfModelSummaryResult };
-    tmp7Result = closure_3(stats(5747).Text, obj5);
+    let obj5 = { variant: "body-sm/normal", color: "text-default", children: perfModelSummaryResult };
+    tmp7Result = closure_3(stats(5761).Text, obj5);
   }
   items[2] = tmp7Result;
   obj2.children = items;

@@ -75,13 +75,13 @@ function ModelSettingsPicker(projectId) {
   } else {
     stringResult = string(tmp8["/rJzr6"]);
   }
-  items3[1] = closure_8(projectId(5747).Text, {
-    variant: "text-xs/normal",
+  items3[1] = closure_8(projectId(5761).Text, {
+    variant: "body-xs/normal",
     color: "text-muted",
     children: stringResult,
   });
   obj2.children = items3;
-  return closure_9(projectId(6147).Stack, obj2);
+  return closure_9(projectId(6162).Stack, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -94,9 +94,9 @@ export default function ConjureModelSettingsSheet(projectId) {
   const obj2 = { title: null };
   const intl = util.intl;
   obj2.title = intl.string(_modDef3995["3E7Yc0"]);
-  obj.header = React6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
-  obj.children = React6(View, { children: React6(ConjureModelSettingsContent, { projectId: projectId.projectId }) });
-  return React6(ActionSheet.ActionSheet, obj);
+  obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  obj.children = React5(View, { children: React5(ConjureModelSettingsContent, { projectId: projectId.projectId }) });
+  return React5(ActionSheet.ActionSheet, obj);
 }
 export const CONJURE_MODEL_SETTINGS_SHEET_KEY = "ConjureModelSettingsSheet";
 export { ConjureModelSettingsContent };

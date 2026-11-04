@@ -73,7 +73,7 @@ export default function LimitedTimeBadge(unpublishedAt) {
     }
     const obj6 = {
       color: str2,
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       accessibilityLabel: null,
       allowFontScaling: false,
       children: null,
@@ -84,7 +84,7 @@ export default function LimitedTimeBadge(unpublishedAt) {
     obj6.children = sum;
     obj5.children = jsx(Text_Text.Text, {
       color: str2,
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       accessibilityLabel: null,
       allowFontScaling: false,
       children: null,

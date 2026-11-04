@@ -41,14 +41,14 @@ function ContentMaskGradient(offsetX) {
   const obj3 = { pointerEvents: "none", style: null, children: null };
   const items2 = [absoluteFill.absoluteFill, animatedStyle];
   obj3.style = items2;
-  obj3.children = React7(ThemedGradientDefault, {
+  obj3.children = React6(ThemedGradientDefault, {
     absolute: true,
     tall: true,
     wide: true,
     mix: true,
     componentStyles: { height: useWindowDimensionsDefault({ ignoreKeyboard: true }).height },
   });
-  return React7(_modDef1652.View, obj3);
+  return React6(_modDef1652.View, obj3);
 }
 function HomeDrawerPanelContent() {
   const tmp2 = closure_11();
@@ -203,7 +203,7 @@ function HomeDrawerPanelContent() {
   items7[1] = closure_9(_modDef1652.View, obj11);
   let tmp34Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp34Result2 = closure_9(tmp11(18587), {});
+    tmp34Result2 = closure_9(tmp11(18688), {});
   }
   items7[2] = tmp34Result2;
   obj10.children = items7;
@@ -213,7 +213,7 @@ function HomeDrawerPanelContent() {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1072).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(18503).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(18598).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -241,12 +241,12 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds
 export const HomePanelContent = noop.memo(function HomePanelContent() {
   const tmp = closure_11(DM_WIDTH);
   if (obj.useIsHomeDrawerEnabled()) {
-    let tmp3Result = React7(HomeDrawerPanelContent, {});
+    let tmp3Result = React6(HomeDrawerPanelContent, {});
   } else {
     const obj2 = { style: tmp.container, children: null };
-    const obj3 = { style: tmp.guildLisetContainerDefault, children: React7(GuildsBarDefault, {}) };
-    obj2.children = React7(hasOwnProperty, obj3);
-    tmp3Result = React7(hasOwnProperty, obj2);
+    const obj3 = { style: tmp.guildLisetContainerDefault, children: React6(GuildsBarDefault, {}) };
+    obj2.children = React6(hasOwnProperty, obj3);
+    tmp3Result = React6(hasOwnProperty, obj2);
   }
   return tmp3Result;
 });

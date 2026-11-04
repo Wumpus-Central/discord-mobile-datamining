@@ -5,17 +5,17 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import StickersUtils from "../StickersUtils.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef10407 from "../../../../_runtime/metro/10407__.js";
-import _modDef10408 from "../../../../_runtime/metro/10408__.js";
+import _modDef10455 from "../../../../_runtime/metro/10455__.js";
+import _modDef10456 from "../../../../_runtime/metro/10456__.js";
 import StickerPackBannerDefault from "StickerPackBanner.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(10366);
+const StickerPickerConstants = fn(10414);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 let result = 2 * PADDING_VERTICAL;
 const createStyles = fn(5141);
 let obj = {
@@ -79,7 +79,7 @@ export default noop.memo(function StickerPackHeader(withDescription) {
     React4(Text_Text.Text, {
       style: tmp.label,
       lineClamp: 1,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: stickerPack.name,
     }),
@@ -89,7 +89,7 @@ export default noop.memo(function StickerPackHeader(withDescription) {
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
     const obj6 = {
-      source: _modDef10407,
+      source: _modDef10455,
       style: tmp.animatedIcon,
       size: native.Icon.Sizes.EXTRA_SMALL,
       color: tmp.icon.color,
@@ -102,12 +102,12 @@ export default noop.memo(function StickerPackHeader(withDescription) {
   const obj3 = {
     style: tmp.label,
     lineClamp: 1,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "mobile-text-heading-primary",
     children: stickerPack.name,
   };
   obj7.children = React4(native.Icon, {
-    source: _modDef10408,
+    source: _modDef10456,
     style: tmp.premiumIcon,
     size: native.Icon.Sizes.EXTRA_SMALL,
     color: tmp.icon.color,
@@ -120,12 +120,12 @@ export default noop.memo(function StickerPackHeader(withDescription) {
     flag = null != stickerPack.description;
   }
   if (flag) {
-    const obj9 = { variant: "text-sm/medium", children: stickerPack.description };
+    const obj9 = { variant: "body-sm/medium", children: stickerPack.description };
     flag = React4(Text_Text.Text, obj9);
   }
   const obj10 = { children: null };
   items1[1] = flag;
-  const obj11 = { lineClamp: 1, variant: "text-xs/medium", color: "text-default", children: null };
+  const obj11 = { lineClamp: 1, variant: "body-xs/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj11.children = intl.format(util.t["0S3JpO"], { numStickers: stickerPack.stickers.length });
   items1[2] = React4(Text_Text.Text, obj11);

@@ -131,9 +131,9 @@ let closure_5 = createStyles.createStyles(() => {
   obj.cardWithBlur = { overflow: "hidden" };
   return obj;
 });
-RowButton.Icon = fn(7109).TableRowIcon;
+RowButton.Icon = fn(7124).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(7109).TableRowIconProps;
+export const RowButtonIconProps = fn(7124).TableRowIconProps;
 export { RowButton };

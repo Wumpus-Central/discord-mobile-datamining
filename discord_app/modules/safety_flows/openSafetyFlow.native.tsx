@@ -169,7 +169,7 @@ let closure_6 = async function _openSafetyFlow() {
                                       dependencyMap = 1;
                                       c3 = 1;
                                       const obj5 = {
-                                        value: tmp2(8271).getAppStoreConsentReinstatementProof(),
+                                        value: tmp2(8287).getAppStoreConsentReinstatementProof(),
                                         done: false,
                                       };
                                       return obj5;
@@ -177,7 +177,7 @@ let closure_6 = async function _openSafetyFlow() {
                                       c3 = 3;
                                       return { value: "HermesInternal", done: null };
                                     }
-                                    obj10 = tmp2(8279);
+                                    obj10 = tmp2(8295);
                                   }
                                 } else {
                                   if (1 === tmp5) {
@@ -194,7 +194,7 @@ let closure_6 = async function _openSafetyFlow() {
                                         dependencyMap = 2;
                                         c3 = 1;
                                         const obj8 = {
-                                          value: tmp2(8272).reinstateAppStoreConsent(closure_128_0),
+                                          value: tmp2(8288).reinstateAppStoreConsent(closure_128_0),
                                           done: false,
                                         };
                                         return obj8;

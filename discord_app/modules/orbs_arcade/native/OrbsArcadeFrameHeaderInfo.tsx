@@ -7,7 +7,7 @@ import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 },
@@ -17,7 +17,7 @@ let obj2 = {
 const obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 };
 obj2.namePill = {
   flexShrink: 1,
-  minHeight: fn(5760).SMALL_BUTTON_HEIGHT,
+  minHeight: fn(5774).SMALL_BUTTON_HEIGHT,
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_12,
   paddingVertical: nativeDefault.space.PX_4,
@@ -26,7 +26,7 @@ obj2.namePill = {
 };
 let obj4 = {
   flexShrink: 1,
-  minHeight: fn(5760).SMALL_BUTTON_HEIGHT,
+  minHeight: fn(5774).SMALL_BUTTON_HEIGHT,
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_12,
   paddingVertical: nativeDefault.space.PX_4,
@@ -88,7 +88,7 @@ export default function OrbsArcadeFrameHeaderInfo(gameId) {
     if ("" !== stateFromStores) {
       const obj5 = { style: tmp.namePill, children: null };
       const obj6 = {
-        variant: "text-sm/semibold",
+        variant: "body-sm/semibold",
         color: "none",
         lineClamp: 1,
         maxFontSizeMultiplier: 1,

@@ -3,43 +3,43 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import _modDef2731 from "../../gifting/PremiumGifting.messages.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef14569 from "../../../../../_runtime/metro/14569__.js";
-import _modDef14570 from "../../../../../_runtime/metro/14570__.js";
-import _modDef14571 from "../../../../../_runtime/metro/14571__.js";
-import _modDef14572 from "../../../../../_runtime/metro/14572__.js";
-import _modDef14573 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import _modDef14574 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
-import _modDef14575 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";
-import _modDef14576 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_coffee.png.js";
-import _modDef14577 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js";
+import _modDef14649 from "../../../../../_runtime/metro/14649__.js";
+import _modDef14650 from "../../../../../_runtime/metro/14650__.js";
+import _modDef14651 from "../../../../../_runtime/metro/14651__.js";
+import _modDef14652 from "../../../../../_runtime/metro/14652__.js";
+import _modDef14653 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef14654 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
+import _modDef14655 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";
+import _modDef14656 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_coffee.png.js";
+import _modDef14657 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const PremiumGiftStyles = fn(1387).PremiumGiftStyles;
-const GIFT_STYLE_DESCRIPTIONS = fn(14568).GIFT_STYLE_DESCRIPTIONS;
+const GIFT_STYLE_DESCRIPTIONS = fn(14648).GIFT_STYLE_DESCRIPTIONS;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const GIFT_STYLE_IMG = {
-  [STANDARD_BOX]: _modDef14569,
-  [CAKE]: _modDef14570,
-  [CHEST]: _modDef14571,
-  [COFFEE]: _modDef14572,
+  [STANDARD_BOX]: _modDef14649,
+  [CAKE]: _modDef14650,
+  [CHEST]: _modDef14651,
+  [COFFEE]: _modDef14652,
 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef14573 };
+GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef14653 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SNOWGLOBE] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.BOX] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.CUP] = null;
-let obj2 = { uri: _modDef14573 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef14574 };
-let obj3 = { uri: _modDef14574 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef14575 };
-let obj4 = { uri: _modDef14575 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef14576 };
-const obj5 = { uri: _modDef14576 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef14577 };
+let obj2 = { uri: _modDef14653 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef14654 };
+let obj3 = { uri: _modDef14654 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef14655 };
+let obj4 = { uri: _modDef14655 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef14656 };
+const obj5 = { uri: _modDef14656 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef14657 };
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const size = {
@@ -93,7 +93,7 @@ export default function GiftBackgroundSelectTile(index) {
     const obj4 = { resizeMode: "contain", style: tmp.image, source: tmp2 };
     items[1] = timestampProducer(FastImageDefault, obj4);
     obj.children = items;
-    tmp4Result = React5(React4, obj);
+    tmp4Result = metroImportDefault(React4, obj);
   }
   return tmp4Result;
 }

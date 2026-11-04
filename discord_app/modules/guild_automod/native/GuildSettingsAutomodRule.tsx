@@ -9,10 +9,11 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAutomodRulesList = fn(19822).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(19824);
-({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(13428).MAX_RULE_NAME_LENGTH;
+const useAutomodRulesList = fn(19938).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(19940);
+({ useAutomodEditingRuleActions: metroImportDefault, useAutomodEditingRuleState: closure_8 } =
+  GuildSettingsAutomodRuleStore);
+const MAX_RULE_NAME_LENGTH = fn(13512).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
@@ -220,7 +221,7 @@ export default function GuildSettingsAutomodRule(guildId) {
       let tmp29Result = null != errorMessage;
       if (tmp29Result) {
         let obj6 = {
-          variant: "text-sm/normal",
+          variant: "body-sm/normal",
           color: "text-feedback-critical",
           accessibilityLiveRegion: "polite",
           children: errorMessage,
@@ -337,20 +338,20 @@ export default function GuildSettingsAutomodRule(guildId) {
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(13433).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(13517).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {
                       v0 = 0;
                       closure_129_0 = closure_3;
-                      const aPIError = new closure_0(6566).APIError(closure_129_0);
+                      const aPIError = new closure_0(6581).APIError(closure_129_0);
                       const anyErrorMessage = aPIError.getAnyErrorMessage();
                       closure_0 = anyErrorMessage;
                       if (anyErrorMessage == null) {
                         const intl = closure_0(1113).intl;
                         closure_0 = intl.string(closure_0(1113).t.fEptJP);
                       }
-                      closure_0(5831).presentError(closure_0);
+                      closure_0(5845).presentError(closure_0);
                       throw closure_129_0;
                     } else if (arg0 === 1) {
                       c6 = 3;

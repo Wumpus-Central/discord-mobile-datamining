@@ -17,7 +17,7 @@ const IconDefault = Icon;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
 
@@ -59,20 +59,20 @@ export default function ConnectedApplicationIdentity(identity) {
   let icon;
   const callback = obj2.useCallback(() => {
     let obj = { children: null };
-    items = [React5(native.Spacer, { size: 8 }), , ,];
-    const obj2 = { variant: "text-md/medium", children: null };
+    items = [metroImportDefault(native.Spacer, { size: 8 }), , ,];
+    const obj2 = { variant: "body-md/medium", children: null };
     const intl = util.intl;
     obj2.children = intl.format(util.t.VgqIPj, { provider: str });
-    items[1] = React5(Text_Text.Text, obj2);
-    items[2] = React5(native.Spacer, { size: 16 });
+    items[1] = metroImportDefault(Text_Text.Text, obj2);
+    items[2] = metroImportDefault(native.Spacer, { size: 16 });
     const obj4 = { children: null };
     const intl2 = util.intl;
     obj4.children = intl2.format(util.t.COW3Xn, { platformName: str });
-    items[3] = React5(InfoBoxDefault, obj4);
+    items[3] = metroImportDefault(InfoBoxDefault, obj4);
     obj.children = items;
     const obj3 = { provider: str };
     const obj5 = { platformName: str };
-    const tmp2 = React6(View, obj);
+    const tmp2 = React5(View, obj);
     const obj7 = {
       title: null,
       body: null,

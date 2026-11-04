@@ -53,7 +53,7 @@ export function Input(arg0) {
     items[1] = React3(View, obj4);
     let tmp11Result = null;
     if (null != description) {
-      const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.description, children: description };
+      const obj5 = { variant: "body-xs/medium", color: "text-muted", style: tmp.description, children: description };
       tmp11Result = React3(Text_Text.Text, obj5);
     }
     items[2] = tmp11Result;
@@ -68,7 +68,7 @@ export function Input(arg0) {
   } else if (null != labelTrailing) {
     const obj7 = { style: tmp.labelWrapper, children: null };
     const obj8 = {
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: "text-subtle",
       nativeID: labelId,
       accessibilityLabel: requiredFieldA11yName,
@@ -79,7 +79,7 @@ export function Input(arg0) {
     let tmp5Result = React4(View, obj7);
   } else {
     const obj9 = {
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: "text-subtle",
       style: tmp.label,
       nativeID: labelId,
@@ -90,7 +90,7 @@ export function Input(arg0) {
     let tmp5Result2 = null;
     if (required) {
       const obj10 = {
-        variant: "text-sm/semibold",
+        variant: "body-sm/semibold",
         color: "text-feedback-critical",
         "aria-hidden": true,
         children: [" ", "*"],

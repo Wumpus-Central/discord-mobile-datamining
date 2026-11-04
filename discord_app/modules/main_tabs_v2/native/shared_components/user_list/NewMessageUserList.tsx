@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/07019_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/07034_fuzzysearch.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -93,7 +93,7 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
@@ -316,7 +316,7 @@ export default function NewMessageUserList(selectedUserIds) {
         }
         const element = { type: "user", props: null };
         obj.mode = TOGGLE;
-        const obj2 = { variant: "text-xs/medium", color: "text-muted", children: UserUtilsDefault.getUserTag(user) };
+        const obj2 = { variant: "body-xs/medium", color: "text-muted", children: UserUtilsDefault.getUserTag(user) };
         obj.subLabel = closure_2_10(Text_Text.Text, obj2);
         obj.arrow = !RelationshipStore.isFriend(user.id);
         obj.start = tmp2;

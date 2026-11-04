@@ -18,12 +18,12 @@ function getNamedExperiment(experiment) {
     return tmp;
   }
 }
-const NotificationSettingsConstants = fn(16419);
+const NotificationSettingsConstants = fn(16511);
 ({
   NOTIF_CATEGORIES: closure_4,
   NOTIF_SETTING_MAPPING: hasOwnProperty,
-  NOTIF_SETTING_REDESIGN_MAPPING: metroRequire,
-  NOTIF_SETTINGS: closure_7,
+  NOTIF_SETTING_REDESIGN_MAPPING: closure_6,
+  NOTIF_SETTINGS: metroImportDefault,
 } = NotificationSettingsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");

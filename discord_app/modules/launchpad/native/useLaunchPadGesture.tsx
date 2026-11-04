@@ -2,18 +2,18 @@
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import _mod1705 from "../../../../_runtime/metro/01705__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05428_LegacyBaseButton.js";
 import updateSharedValueIfChangedDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import useWindowDimensionsSharedValue from "../../screen/useWindowDimensionsSharedValue.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LaunchPadConstants = fn(11673);
+const LaunchPadConstants = fn(11724);
 ({
   LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: closure_4,
   LAUNCH_PAD_END_TRANSLATION_THRESHOLD: hasOwnProperty,
-  LAUNCH_PAD_END_VELOCITY_THRESHOLD: metroRequire,
-  LAUNCH_PAD_PULL_TAB_HEIGHT: closure_7,
+  LAUNCH_PAD_END_VELOCITY_THRESHOLD: closure_6,
+  LAUNCH_PAD_PULL_TAB_HEIGHT: metroImportDefault,
   LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_8,
   LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_9,
   LAUNCH_PAD_PULL_TAB_WIDTH: closure_10,
@@ -102,11 +102,11 @@ export default function useLaunchPadGesture(launchPadType) {
         constants,
         React4,
         closure_2_10,
-        React6,
-        launchPadPullTabState,
         React5,
+        launchPadPullTabState,
+        metroImportDefault,
         updaters,
-        React7,
+        React6,
         launchPadSharedState,
         3,
       ];

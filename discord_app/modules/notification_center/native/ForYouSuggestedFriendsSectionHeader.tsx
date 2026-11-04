@@ -47,13 +47,13 @@ export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   }
   const obj = { style: items, children: null };
   items[1] = noDivider;
-  const obj2 = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
+  const obj2 = { style: tmp.text, color: "text-muted", variant: "body-sm/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["1uAmCw"]);
   obj.children = jsx(Text_Text.Text, {
     style: tmp.text,
     color: "text-muted",
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     children: null,
   });
   return <View style={items}>{null}</View>;

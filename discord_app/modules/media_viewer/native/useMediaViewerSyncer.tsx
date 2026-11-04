@@ -5,11 +5,11 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(8990);
+const Constants = fn(9007);
 ({
   THUMBNAIL_MARGIN: hasOwnProperty,
-  THUMBNAIL_HEIGHT: metroRequire,
-  THUMBNAIL_MAX_WIDTH: closure_7,
+  THUMBNAIL_HEIGHT: closure_6,
+  THUMBNAIL_MAX_WIDTH: metroImportDefault,
   THUMBNAIL_MIN_WIDTH: closure_8,
   THUMBNAIL_WIDTH_MARGIN: closure_9,
 } = Constants);
@@ -150,7 +150,8 @@ export function useMediaViewerSyncer(sources) {
           let _Math2 = Math;
           let sum =
             num2 +
-            (Math.max(Math.min(size.width * (timestampProducer / size.height), React5), React6) + 2 * hasOwnProperty);
+            (Math.max(Math.min(size.width * (timestampProducer / size.height), metroImportDefault), React5) +
+              2 * hasOwnProperty);
           let num3 = 0;
           if (0 !== num) {
             let _Math3 = Math;

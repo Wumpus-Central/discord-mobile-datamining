@@ -88,7 +88,7 @@ function transitionTo(CHANNELResult, guildScheduledEvent2) {
     _extends.push(CHANNELResult);
   }
 }
-({ Routes: hasOwnProperty, PageAnalyticsLocations: metroRequire, ComponentActions: closure_7 } = Constants);
+({ Routes: hasOwnProperty, PageAnalyticsLocations: closure_6, ComponentActions: metroImportDefault } = Constants);
 const logger = new LoggerDefault("Routing/Utils");
 const items = [Constants.RelativeMarketingURLs.DEVELOPER_PORTAL];
 let _extends = _extends_mod;

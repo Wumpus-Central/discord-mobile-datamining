@@ -30,7 +30,7 @@ function ApplicationDetailsEntry(children) {
   items = [
     iconComponentResult,
     React4(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-default",
       style: tmp.entryText,
       children: children.text,

@@ -15,40 +15,41 @@ export function useRivePlayback(riveViewRef, isReady) {
   closure_4 = noop.useRef(false);
   closure_5 = noop.useRef("background" === isReady.currentState);
   closure_6 = noop.useRef(false);
+  noop.useRef(false);
   noop.useRef(null);
   noop.useRef(false);
-  closure_9 = noop.useRef(true);
+  closure_10 = noop.useRef(true);
   const effect = noop.useEffect(() => {
-    closure_9.current = true;
+    closure_10.current = true;
     return () => {
-      closure_1_9.current = false;
+      closure_1_10.current = false;
     };
   }, []);
   const callback = noop.useCallback(() => {
-    if (null != ref.current) {
+    if (null != ref2.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(ref.current);
-      ref.current = null;
+      clearTimeout(ref2.current);
+      ref2.current = null;
     }
   }, []);
   items = [callback, riveViewRef];
-  const pause = noop.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     callback();
     if (closure_0 != null) {
       closure_0.pause();
     }
     closure_4.current = false;
   }, items);
-  const items1 = [callback, shouldShortLoopForReducedMotion, pause];
+  const items1 = [callback, shouldShortLoopForReducedMotion, callback1];
   const callback2 = noop.useCallback(() => {
     callback();
     if (shouldShortLoopForReducedMotion) {
       const _setTimeout = setTimeout;
-      closure_7.current = setTimeout(() => pause(), 5000);
+      closure_8.current = setTimeout(() => callback1(), 5000);
     }
   }, items1);
   const items2 = [riveViewRef, callback2];
-  const play = noop.useCallback(() => {
+  const callback3 = noop.useCallback(() => {
     if (closure_0 != null) {
       closure_0.play();
     }
@@ -57,23 +58,25 @@ export function useRivePlayback(riveViewRef, isReady) {
   }, items2);
   const items3 = [appStatePlaybackEnabled, riveViewRef, callback2];
   const items4 = [isReady];
-  const playIfNeeded = noop.useCallback(() => {
-    if (!ref2.current) {
+  const callback4 = noop.useCallback(() => {
+    if (!ref3.current) {
       tmp.current = true;
       const _queueMicrotask = queueMicrotask;
       queueMicrotask(() => {
-        closure_1_8.current = false;
-        if (ref2.current) {
-          if (appStatePlaybackEnabled) {
-            if (ref.current) {
-              closure_1_6.current = true;
+        closure_1_9.current = false;
+        if (ref3.current) {
+          if (!ref2.current) {
+            if (appStatePlaybackEnabled) {
+              if (ref.current) {
+                closure_1_6.current = true;
+              }
             }
+            if (riveViewRef != null) {
+              riveViewRef.playIfNeeded();
+            }
+            closure_1_4.current = true;
+            callback2();
           }
-          if (riveViewRef != null) {
-            riveViewRef.playIfNeeded();
-          }
-          closure_1_4.current = true;
-          callback2();
         }
       });
     }
@@ -90,8 +93,18 @@ export function useRivePlayback(riveViewRef, isReady) {
       return callback;
     }
   }, items5);
-  const items6 = [appStatePlaybackEnabled, isReady, play, pause];
+  const items6 = [isReady, callback1];
   const effect3 = noop.useEffect(() => {
+    let current = isReady;
+    if (isReady) {
+      current = ref.current;
+    }
+    if (current) {
+      callback1();
+    }
+  }, items6);
+  const items7 = [appStatePlaybackEnabled, isReady, callback3, callback1];
+  const effect4 = noop.useEffect(() => {
     if (appStatePlaybackEnabled) {
       closure_0 = isReady.addEventListener("change", (event) => {
         if ("background" === event) {
@@ -102,7 +115,7 @@ export function useRivePlayback(riveViewRef, isReady) {
           }
           if (current2) {
             ref2.current = true;
-            pause();
+            callback1();
           }
         } else if ("active" === event) {
           closure_1_5.current = false;
@@ -112,12 +125,27 @@ export function useRivePlayback(riveViewRef, isReady) {
           }
           if (current) {
             ref2.current = false;
-            play();
+            if (!ref3.current) {
+              callback3();
+            }
           }
         }
       });
       return () => closure_0.remove();
     }
-  }, items6);
-  return { play, pause, playIfNeeded };
+  }, items7);
+  const items8 = [callback1];
+  const obj = { play: null, pause: null, playIfNeeded: null };
+  const items9 = [callback3];
+  const callback5 = noop.useCallback(() => {
+    closure_7.current = true;
+    callback1();
+  }, items8);
+  obj.play = noop.useCallback(() => {
+    closure_7.current = false;
+    callback3();
+  }, items9);
+  obj.pause = callback5;
+  obj.playIfNeeded = callback4;
+  return obj;
 }

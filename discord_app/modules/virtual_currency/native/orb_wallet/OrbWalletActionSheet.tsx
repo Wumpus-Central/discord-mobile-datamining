@@ -50,7 +50,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
         const obj2 = {
           underlineHook(children) {
             return closure_2_11(reopenWallet(orbWalletAnalyticsPage[17]).Text, {
-              variant: "text-sm/normal",
+              variant: "body-sm/normal",
               color: "text-default",
               style: tryAgainLink.tryAgainLink,
               onPress() {
@@ -215,8 +215,8 @@ function OrbWalletContent(reopenWallet) {
   return closure_12(challengesForOrbWallet, obj4);
 }
 const View = fn(17).View;
-let closure_7 = fn(15771).OrbChallengesDisplayErrorType;
-let closure_8 = fn(17044).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_7 = fn(15859).OrbChallengesDisplayErrorType;
+let closure_8 = fn(17136).ORB_WALLET_ACTION_SHEET_KEY;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);

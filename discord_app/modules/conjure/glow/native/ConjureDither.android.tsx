@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/glow/native/ConjureDither.android.tsx
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
-import _mod12745 from "../../../../../_runtime/metro/12745__.js";
+import inlineStyles from "../../../../../_runtime/08171_inlineStyles.js";
+import _mod12826 from "../../../../../_runtime/metro/12826__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -31,9 +31,9 @@ function BandPicture(width) {
     const size = {
       x: item.x,
       y: item.y,
-      width: _mod12745.CELL,
-      height: _mod12745.CELL,
-      rx: _mod12745.CORNER,
+      width: _mod12826.CELL,
+      height: _mod12826.CELL,
+      rx: _mod12826.CORNER,
       fill,
       fillOpacity,
     };
@@ -55,16 +55,16 @@ function BandPicture(width) {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod12745;
+    const obj3 = _mod12826;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod12745.blobReach(peak, radius, closure_5 + _mod12745.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod12745.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod12826.blobReach(peak, radius, closure_5 + _mod12826.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod12826.blobReach(peak.peak, peak.radius, bound));
     items = [
       timestampProducer(inlineStyles.Stop, obj2),
       timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 }),
     ];
     obj.children = items;
-    return React5(inlineStyles.RadialGradient, obj, index);
+    return metroImportDefault(inlineStyles.RadialGradient, obj, index);
   });
   const size2 = { id: "iso-" + combined, x: 0, y: 0, width, height, maskUnits: "userSpaceOnUse", children: null };
   let tmp9Result = null;
@@ -84,7 +84,7 @@ function BandPicture(width) {
   const items2 = [tmp9Result];
   const BLOBS1 = tmp(tmp2[3]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod12745.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod12826.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {
@@ -118,7 +118,7 @@ function BandPicture(width) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let items = [0, Math.PI];
 let closure_10 = {
   code: "(function ConjureDitherAndroidTsx1(frame){let[STATE_LERP_MS,speed,targetSpeed,phase,CYCLE_MS]=this.__closure;var _frame$timeSincePrevi;const dtMs=Math.min(64,(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:16);const lerp=1-Math.exp(-dtMs/STATE_LERP_MS);speed.set(speed.get()+(targetSpeed.get()-speed.get())*lerp);phase.set(phase.get()+dtMs/CYCLE_MS*2*Math.PI*speed.get());})",
@@ -225,7 +225,7 @@ export default function ConjureDither(width) {
   let tmp18 = null;
   if (width > 0) {
     const obj3 = { style: absoluteFill.absoluteFill, pointerEvents: "none", children: null };
-    const LEVELS = tmp(12745).LEVELS;
+    const LEVELS = tmp(12826).LEVELS;
     obj3.children = LEVELS.map((item, index) =>
       items.map((item, state) => {
         items = [React4.absoluteFill];

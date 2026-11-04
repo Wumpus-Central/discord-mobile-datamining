@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import MediaEngineActionCreators from "../../../media_engine/MediaEngineActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -11,11 +11,11 @@ import module_1652_mod from "../../../../../_runtime/metro/01652__.js";
 
 const require = globalThis.__r;
 
-const _modDef19452 = tmp9(19452);
+const _modDef19556 = tmp9(19556);
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(11360).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(11410).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let module_1652 = module_1652_mod;
 const NativeView = module_1652.createAnimatedComponent(NativeViewDefault);
 let module_1652 = module_1652_mod;
@@ -270,7 +270,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   obj8.children = closure_7(closure_11, {
     style: animatedStyle1,
     size: require("native").Icon.Sizes.SMALL_20,
-    source: _modDef19452,
+    source: _modDef19556,
     disableColor: true,
   });
   obj7.children = closure_7(NativeView, obj8);

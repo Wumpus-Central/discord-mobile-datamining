@@ -6,7 +6,7 @@ import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.t
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: 8 },
@@ -28,9 +28,9 @@ export default function GameInviteVoiceCount(channel) {
   if (0 !== stateFromStores) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-    const items2 = [closure_5(tmp2(8797).VoiceNormalIcon, obj3)];
-    const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-    items2[1] = closure_5(tmp2(5747).Text, obj4);
+    const items2 = [closure_5(tmp2(8814).VoiceNormalIcon, obj3)];
+    const obj4 = { variant: "body-sm/medium", color: "text-feedback-positive", children: stateFromStores };
+    items2[1] = closure_5(tmp2(5761).Text, obj4);
     obj2.children = items2;
     tmp5 = closure_6(View, obj2);
   }

@@ -79,14 +79,14 @@ export default function UserSettingsAccountUnverifiedHeader() {
     };
     const obj3 = {
       style: tmp.accountWarningText,
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-overlay-light",
       children: tmp4.title,
     };
     const items1 = [React4(Text_Text.Text, obj3)];
     const obj4 = {
       style: tmp.accountWarningButton,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-overlay-light",
       children: tmp4.button,
     };

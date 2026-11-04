@@ -846,16 +846,16 @@ let closure_29 = async function _fetchCollectiblesShopHome() {
     return value;
   })();
 };
-const addDebugLog = fn(7858).addDebugLog;
-let closure_10 = fn(7860).CollectiblesCategoriesRecord;
-const CollectiblesMarketingRecord = fn(7864);
+const addDebugLog = fn(7874).addDebugLog;
+let closure_10 = fn(7876).CollectiblesCategoriesRecord;
+const CollectiblesMarketingRecord = fn(7880);
 ({ CollectiblesMarketingsRecord: closure_11, rehydratePersistedMarketings: closure_12 } = CollectiblesMarketingRecord);
-let closure_15 = fn(7871).CollectiblesShopHomeRecord;
+let closure_15 = fn(7887).CollectiblesShopHomeRecord;
 const constants = fn(1074).CollectiblesMobileShopScreen;
 const Constants = fn(1072);
 ({ Endpoints: closure_17, Routes, UserSettingsSections: closure_18 } = Constants);
-const CollectiblesShopHomeStore = fn(5808);
-const CollectiblesShopStore = fn(7883);
+const CollectiblesShopHomeStore = fn(5822);
+const CollectiblesShopStore = fn(7899);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
@@ -863,7 +863,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(5322).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(5323).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

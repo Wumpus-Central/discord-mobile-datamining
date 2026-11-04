@@ -56,7 +56,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          React7();
+          React6();
           const tmp22 = getNextAuthState(closure_0);
           if (null != tmp22) {
             const obj4 = { step: closure_2_10(closure_0), toStep: closure_2_10(tmp22), actionType: constants.SUCCESS };
@@ -115,7 +115,7 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   if (state.required) {
     obj6.promoEmailConsent = state;
   }
-  React5(true);
+  metroImportDefault(true);
   timestampProducer({});
   await auth_register.registerFull(obj6);
   if (1 === tmp7) {
@@ -146,10 +146,10 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6861).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(18132);
-({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(18133);
+const usePromoEmailConsentStore = fn(6876).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(18229);
+({ setRegistrationErrors: closure_6, setSubmitting: metroImportDefault, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
+const RegistrationConstants = fn(18230);
 ({ authStateToRegisterTransitionStep: closure_10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsx = fn(21).jsx;
@@ -303,7 +303,7 @@ export function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(7337), {
+      return closure_15(closure_1(7353), {
         onClose() {
           return closure_0.pop();
         },

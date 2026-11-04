@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/
 
 export default function VoiceSubtitle(arg0) {
   ({ guildId: require, voiceUsers } = arg0);
-  const obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
+  const obj = { variant: "body-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
   const intl = util.intl;
   const obj2 = { users: null, overflowCount: null };
   const substr = voiceUsers.slice(0, 2);
@@ -20,7 +20,7 @@ export default function VoiceSubtitle(arg0) {
   obj2.overflowCount = Math.max(voiceUsers.length - 2, 0);
   obj.children = intl.format(util.t.r1Vkoc, obj2);
   return jsx(Text_Text.Text, {
-    variant: "text-xs/medium",
+    variant: "body-xs/medium",
     color: "text-voice-connected",
     lineClamp: 1,
     children: null,

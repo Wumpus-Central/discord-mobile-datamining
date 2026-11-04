@@ -14,7 +14,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
 
 export default function AgeUpdateFooter() {
-  let obj = { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null };
+  let obj = { variant: "body-md/medium", color: "text-muted", style: closure_4().text, children: null };
   const intl = util.intl;
   obj.children = intl.format(_modDef2963.ifObbX, {
     handleAgeVerifyHook() {
@@ -25,7 +25,7 @@ export default function AgeUpdateFooter() {
     },
   });
   return jsx(Text_Text.Text, {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "text-muted",
     style: closure_4().text,
     children: null,

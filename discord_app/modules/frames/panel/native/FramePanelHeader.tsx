@@ -29,7 +29,7 @@ function FramePanelHeaderContentInner(arg0) {
   if (first != null) {
     id = first.id;
   }
-  const tmp7Result = React5(InviteActivityButtonDefault, { applicationId: id });
+  const tmp7Result = metroImportDefault(InviteActivityButtonDefault, { applicationId: id });
   const obj3 = { hasConnectedActivity: true, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
   const items1 = [minimizeAndQuestButtonContainerStyles.buttonContainer];
   let prop;
@@ -47,8 +47,8 @@ function FramePanelHeaderContentInner(arg0) {
     tmp15 = name;
   }
   const items2 = [
-    React5(MinimizeActivityButtonDefault, { activityName: tmp15, setMode }),
-    React5(QuestActivityButtonDefault, { applicationId: frame.applicationId }),
+    metroImportDefault(MinimizeActivityButtonDefault, { activityName: tmp15, setMode }),
+    metroImportDefault(QuestActivityButtonDefault, { applicationId: frame.applicationId }),
   ];
   let tmp17 = null;
   if (landscape) {
@@ -56,20 +56,20 @@ function FramePanelHeaderContentInner(arg0) {
   }
   items2[2] = tmp17;
   obj4.children = items2;
-  const items3 = [React6(View, obj4), ,];
+  const items3 = [React5(View, obj4), ,];
   let tmp18 = null;
   if (!landscape) {
     tmp18 = tmp7Result;
   }
   items3[1] = tmp18;
-  items3[2] = React5(panel_LeaveActivityButtonDefault, { frame, setMode });
+  items3[2] = metroImportDefault(panel_LeaveActivityButtonDefault, { frame, setMode });
   obj3.children = items3;
-  return React6(ActivityPanelHeader.BaseActivityPanelContent, obj3);
+  return React5(ActivityPanelHeader.BaseActivityPanelContent, obj3);
 }
 const View = fn(17).View;
-const asLaunched = fn(6967).asLaunched;
+const asLaunched = fn(6982).asLaunched;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_10 = noop.memo(function FramePanelHeaderContent(arg0) {
   items = [FramesStore];
   const stateFromStores = initialize.useStateFromStores(items, () => asLaunched(mainFrame.getMainFrame()));
@@ -77,7 +77,7 @@ let closure_10 = noop.memo(function FramePanelHeaderContent(arg0) {
   if (null != stateFromStores) {
     const obj2 = { frame: stateFromStores };
     const merged = Object.assign(arg0);
-    tmp2 = React5(FramePanelHeaderContentInner, obj2);
+    tmp2 = metroImportDefault(FramePanelHeaderContentInner, obj2);
   }
   return tmp2;
 });
@@ -89,12 +89,12 @@ export default noop.memo(function FramePanelHeader() {
   const baseActivityPanelHeader = obj.useBaseActivityPanelHeader({ context: FramePanelStateContextDefault });
   const obj3 = {
     style: baseActivityPanelHeader.headerStyles,
-    children: React5(closure_10, {
+    children: metroImportDefault(closure_10, {
       landscape: baseActivityPanelHeader.wrapperDimensions.isWindowLandscape,
       setMode: baseActivityPanelHeader.setMode,
       wrapperOffset: baseActivityPanelHeader.wrapperOffset,
       pipState: baseActivityPanelHeader.pipState,
     }),
   };
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 });

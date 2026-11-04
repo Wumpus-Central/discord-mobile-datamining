@@ -26,7 +26,7 @@ function BaseIdentityVerificationField(icon) {
     tmp4,
     React4(Text_Text.Text, {
       style: tmp.label,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "mobile-text-heading-primary",
       children: label,
     }),

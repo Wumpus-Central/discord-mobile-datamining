@@ -7,7 +7,7 @@ import TableSwitchRow from "../../../components/TableRow/native/TableSwitchRow.n
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Form_FormSwitchDefault = tmp13(8312);
+const Form_FormSwitchDefault = tmp13(8328);
 require = fn;
 function FormSwitchRow(onValueChange) {
   onValueChange = onValueChange.onValueChange;
@@ -59,7 +59,7 @@ function FormSwitchRow(onValueChange) {
   const obj3 = { style: tmp2.trailing, children: null };
   const items1 = [timestampProducer(FormLabelDefault, { numberOfLines, text: label }), null != trailing && trailing];
   obj3.children = items1;
-  obj2.label = React5(View, obj3);
+  obj2.label = metroImportDefault(View, obj3);
   obj2.subLabel = subLabel;
   obj2.disabled = flag;
   let handleOnPress;
@@ -96,7 +96,7 @@ function FormSwitchRow(onValueChange) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" },

@@ -76,13 +76,13 @@ class AppliedForumTag {
           timestampProducer(Text_Text.Text, {
             lineClamp: 1,
             style: container.tagName,
-            variant: "text-xs/semibold",
+            variant: "body-xs/semibold",
             color: str,
             children: tagName,
           }),
         ];
         obj.children = items1;
-        return React5(View, obj);
+        return metroImportDefault(View, obj);
       },
     };
     return c6(closure_1(tmp[8]), obj1);
@@ -91,7 +91,7 @@ class AppliedForumTag {
 const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   pill: {
@@ -110,7 +110,7 @@ const obj2 = {
   tagName: { flexShrink: 1 },
   container: { display: "flex", flexDirection: "row", alignItems: "center" },
 };
-const React6 = createStyles.createStyles(obj2);
+const React5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/AppliedForumTag.tsx");
 

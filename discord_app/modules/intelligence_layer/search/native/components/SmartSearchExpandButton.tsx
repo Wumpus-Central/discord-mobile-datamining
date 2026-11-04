@@ -6,9 +6,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((backgroundColor) => {
@@ -40,11 +40,11 @@ let result = size.fileFinishedImporting(
 
 export default noop.memo(function SmartSearchExpandButton(arg0) {
   ({ isCollapsed, onPress } = arg0);
-  const tmp3 = closure_10(onPress(18924).useSearchHostSurfaceColor());
+  const tmp3 = closure_10(onPress(19027).useSearchHostSurfaceColor());
   if (isCollapsed) {
-    let ChevronSmallUpIcon = onPress(11552).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = onPress(11602).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = onPress(15603).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = onPress(15690).ChevronSmallUpIcon;
   }
   items = [onPress];
   const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
@@ -72,7 +72,7 @@ export default noop.memo(function SmartSearchExpandButton(arg0) {
   obj3.accessibilityLabel = intl.string(FKLBbW);
   obj3.onPress = callback;
   const items1 = [closure_7(closure_6, { style: tmp3.surface, pointerEvents: "none" })];
-  const obj = onPress(18924);
+  const obj = onPress(19027);
   const obj4 = { style: tmp3.surface, pointerEvents: "none" };
   items1[1] = closure_7(ChevronSmallUpIcon, { size: "sm", color: tmp11(575).colors.INTERACTIVE_ICON_DEFAULT });
   obj3.children = items1;

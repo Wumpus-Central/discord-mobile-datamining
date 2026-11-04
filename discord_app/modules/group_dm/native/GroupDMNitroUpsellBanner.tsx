@@ -6,7 +6,7 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef8643 from "../../../../_runtime/metro/08643__.js";
+import _modDef8660 from "../../../../_runtime/metro/08660__.js";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import GroupDMNitroCapExperimentDefault from "../GroupDMNitroCapExperiment.tsx";
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction.tsx";
@@ -172,8 +172,8 @@ function FloatingBanner(children) {
   return closure_9(require("../../../../_runtime/metro/01652__.js").View, obj4);
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11766).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const number = fn(11822).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -245,17 +245,17 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
     tmp15 = !stateFromStores;
   }
   obj7.shiny = tmp15;
-  obj7.icon = _modDef8643;
+  obj7.icon = _modDef8660;
   obj7.onPress = tmp7Result;
-  obj6.trailing = React7(components_Button_Button.Button, obj7);
-  const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  obj6.trailing = React6(components_Button_Button.Button, obj7);
+  const obj8 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(util.t.KCD0Hp);
-  const items2 = [React7(Text_Text.Text, obj8)];
-  const obj9 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
+  const items2 = [React6(Text_Text.Text, obj8)];
+  const obj9 = { variant: "body-xs/medium", color: "mobile-text-heading-primary", children: null };
   const intl3 = util.intl;
   obj9.children = intl3.formatToPlainString(util.t["8o8Zk5"], { number });
-  items2[1] = React7(Text_Text.Text, obj9);
+  items2[1] = React6(Text_Text.Text, obj9);
   obj6.children = items2;
   const tmp11Result = closure_1_10(tmp5Result, obj6);
   let tmp14Result = tmp11Result;
@@ -266,7 +266,7 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
       onListInsetChange: onFloatingListInsetChange,
       children: tmp11Result,
     };
-    tmp14Result = React7(FloatingBanner, obj11);
+    tmp14Result = React6(FloatingBanner, obj11);
   }
   return tmp14Result;
 }

@@ -17,7 +17,7 @@ const CheckpointStore = CheckpointStore2;
 
 const View = _mod17.View;
 const CheckpointFetchStates = CheckpointStore2.CheckpointFetchStates;
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let obj = {
   container: {
     flexGrow: 1,
@@ -74,7 +74,7 @@ export default function CheckpointIntroScreen() {
   }
   items1[1] = tmp5Result;
   obj3.children = items1;
-  const items2 = [React5(View, obj3)];
+  const items2 = [metroImportDefault(View, obj3)];
   const obj5 = { style: tmp.descriptions, children: null };
   const tmp7 = CheckpointScreenDefault;
   const intl = util.intl;
@@ -97,8 +97,8 @@ export default function CheckpointIntroScreen() {
   const obj8 = { children: null };
   items3[1] = tmp5Result2;
   obj5.children = items3;
-  items2[1] = React5(View, obj5);
+  items2[1] = metroImportDefault(View, obj5);
   obj2.children = items2;
-  obj8.children = React5(View, obj2);
+  obj8.children = metroImportDefault(View, obj2);
   return timestampProducer(tmp7, obj8);
 }

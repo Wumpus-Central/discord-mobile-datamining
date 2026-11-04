@@ -7,8 +7,9 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(12163);
-({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
+const StageChannelListStore = fn(12222);
+({ useActiveSpeakerPillScrollHandler: closure_6, useActiveSpeakerPillState: metroImportDefault } =
+  StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -73,7 +74,7 @@ export default noop.memo(function ActiveSpeakerTooltip(channel) {
         return items;
       },
       items1,
-      channel(6886).isVersionEqual,
+      channel(6901).isVersionEqual,
     ),
     1,
   )[0];
@@ -96,18 +97,18 @@ export default noop.memo(function ActiveSpeakerTooltip(channel) {
       const obj6 = { style: tmp.participantNameplateContainer, children: null };
       const obj7 = {
         style: tmp.participantNameplateSpeakingText,
-        variant: "text-xs/medium",
+        variant: "body-xs/medium",
         color: "text-default",
         children: null,
       };
       const intl = tmp2(1113).intl;
       const obj8 = { count: first.length };
       obj7.children = intl.format(tmp2(1113).t["+dia6l"], obj8);
-      obj6.children = closure_8(tmp2(5747).Text, obj7);
+      obj6.children = closure_8(tmp2(5761).Text, obj7);
       items2[1] = closure_8(View, obj6);
       obj3.children = items2;
       obj2.children = closure_9(View, obj3);
-      tmp5 = closure_8(tmp2(7106).PressableOpacity, obj2);
+      tmp5 = closure_8(tmp2(7121).PressableOpacity, obj2);
     }
   }
   return tmp5;

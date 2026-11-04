@@ -13,8 +13,8 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticsPages: metroRequire, RelationshipTypes: closure_7 } = Constants);
-let closure_8 = fn(11424).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+({ AnalyticsPages: closure_6, RelationshipTypes: metroImportDefault } = Constants);
+let closure_8 = fn(11474).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -70,7 +70,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   }, items5);
   const items7 = [user.id];
   const callback4 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11425, dependencyMap.paths), closure_8, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11475, dependencyMap.paths), closure_8, {
       userId: user.id,
       channelId: channel.id,
     });
@@ -144,7 +144,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     tmp18 = null;
     formatResult = null;
   } else if (constants2.PENDING_OUTGOING === stateFromStores) {
-    const obj11 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "id" };
+    const obj11 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "Boolean" };
     const intl3 = tmp2(tmp3[20]).intl;
     obj11.text = intl3.string(tmp2(tmp3[20]).t.xMH6vD);
     tmp19 = closure_9(tmp2(tmp3[19]).Button, obj11);
@@ -167,7 +167,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   const obj13 = { style: tmp.container, children: null };
   let tmp28 = null != formatResult;
   if (tmp28) {
-    const obj14 = { variant: "text-sm/normal", color: "text-default", children: formatResult };
+    const obj14 = { variant: "body-sm/normal", color: "text-default", children: formatResult };
     tmp28 = closure_9(tmp2(tmp3[21]).Text, obj14);
   }
   const items9 = [tmp28];

@@ -170,7 +170,7 @@ function CaptchaTestScreen(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let createStyles = fn(5141);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -196,11 +196,11 @@ obj2.footerButton = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { margin: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 let closure_9 = createStyles.createStyles(obj2);
-const prop = fn(17835).HCAPTCHA_DIFFICULTY_OPTIONS;
+const prop = fn(17931).HCAPTCHA_DIFFICULTY_OPTIONS;
 const options = prop.map((label) => ({ name: label.label, value: label.value }));
-let items = [fn(17836).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(17836).CaptchaDeciderType.SMITE_RQDATA];
+let items = [fn(17932).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(17932).CaptchaDeciderType.SMITE_RQDATA];
 const set = new Set(items);
-const prop1 = fn(17835).CAPTCHA_DECIDER_TYPE_OPTIONS;
+const prop1 = fn(17931).CAPTCHA_DECIDER_TYPE_OPTIONS;
 const mapped = prop1.map((label) => ({ name: label.label, value: label.value }));
 const options2 = mapped.filter((value) => set.has(value.value));
 const constants = { TEST_CAPTCHA: "TEST_CAPTCHA" };

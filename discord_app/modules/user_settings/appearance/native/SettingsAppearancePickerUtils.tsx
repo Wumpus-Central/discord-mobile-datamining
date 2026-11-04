@@ -211,7 +211,7 @@ export function convertThemesToAnimatedThemes(c1) {
 }
 export function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(5719).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(5732).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

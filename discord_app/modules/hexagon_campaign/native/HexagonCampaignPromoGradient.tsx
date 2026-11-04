@@ -1,6 +1,6 @@
 // discord_app/modules/hexagon_campaign/native/HexagonCampaignPromoGradient.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,16 +9,16 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const angleCenter = { x: 0.5, y: 0.5 };
-[closure_9, closure_10, closure_11, closure_12] = fn(16627).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
-const prop = fn(16627).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
+[closure_9, closure_10, closure_11, closure_12] = fn(16717).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
+const prop = fn(16717).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
 const locations = prop.map((location) => location.location);
 const createStyles = fn(5141);
 let obj2 = { shade: null };
-const importDefaultResultResult = _slicedToArray(fn(16627).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS, 4);
+const importDefaultResultResult = _slicedToArray(fn(16717).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS, 4);
 obj2.shade = {
-  backgroundColor: nativeDefault.colors[fn(undefined, 16627).HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE_TOKEN],
+  backgroundColor: nativeDefault.colors[fn(undefined, 16717).HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE_TOKEN],
 };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -48,5 +48,5 @@ export default function HexagonCampaignPromoGradient(angle) {
   obj7.style = items2;
   items1[1] = hasOwnProperty(React4, obj7);
   obj5.children = items1;
-  return React5(timestampProducer, obj5);
+  return metroImportDefault(timestampProducer, obj5);
 }

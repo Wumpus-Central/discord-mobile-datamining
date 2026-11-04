@@ -64,6 +64,7 @@ const obj5 = {
   PREMIUM_YEAR_LEGACY: "511651860671627264",
   PREMIUM_GROUP_MONTH: "1432523012455792640",
 };
+const frozen2 = Object.freeze({ [obj.TIER_0]: obj2.TIER_0, [obj.TIER_1]: obj2.TIER_1, [obj.TIER_2]: obj2.TIER_2 });
 const items3 = [, , , , , , , , , ,];
 ({
   PREMIUM_MONTH_TIER_0: arr4[0],
@@ -78,7 +79,10 @@ const items3 = [, , , , , , , , , ,];
   PREMIUM_MONTH_LEGACY: arr4[9],
   PREMIUM_YEAR_LEGACY: arr4[10],
 } = obj5);
-const frozen2 = Object.freeze({ [obj.TIER_0]: obj2.TIER_0, [obj.TIER_1]: obj2.TIER_1, [obj.TIER_2]: obj2.TIER_2 });
+const frozen3 = Object.freeze({
+  PREMIUM_GIFT_MONTH_TIER_2: "1557530423154966550",
+  PREMIUM_GIFT_YEAR_TIER_2: "1557530423154966551",
+});
 const items4 = [, , ,];
 ({
   PREMIUM_MONTH_TIER_2: arr5[0],
@@ -109,7 +113,7 @@ const set2 = new Set(items5);
 const items7 = [, , ,];
 ({ NONE_MONTH: arr8[0], NONE_3_MONTH: arr8[1], NONE_6_MONTH: arr8[2], NONE_YEAR: arr8[3] } = obj5);
 const set3 = new Set(items6);
-const frozen3 = Object.freeze({
+const frozen4 = Object.freeze({
   [obj2.TIER_0]: obj5.PREMIUM_MONTH_TIER_0,
   [obj2.TIER_1]: obj5.PREMIUM_MONTH_TIER_1,
   [obj2.TIER_2]: obj5.PREMIUM_MONTH_TIER_2,
@@ -119,7 +123,7 @@ const frozen3 = Object.freeze({
 });
 const obj8 = { MONTH: 1, [1]: "MONTH", YEAR: 2, [2]: "YEAR", DAY: 3, [3]: "DAY" };
 const obj9 = {};
-const frozen4 = Object.freeze({
+const frozen5 = Object.freeze({
   [obj2.TIER_0]: obj5.PREMIUM_YEAR_TIER_0,
   [obj2.TIER_1]: obj5.PREMIUM_YEAR_TIER_1,
   [obj2.TIER_2]: obj5.PREMIUM_YEAR_TIER_2,
@@ -130,9 +134,9 @@ const frozen4 = Object.freeze({
 obj9[obj.TIER_0] = util.t["t9uG/o"];
 obj9[obj.TIER_1] = util.t.FSOz78;
 obj9[obj.TIER_2] = util.t.lG6a5x;
-const frozen5 = Object.freeze(obj9);
+const frozen6 = Object.freeze(obj9);
 const items8 = [obj5.PREMIUM_MONTH_TIER_2];
-const frozen6 = Object.freeze({
+const frozen7 = Object.freeze({
   [obj5.NONE_MONTH]: {
     id: obj5.NONE_MONTH,
     name: "None Monthly",
@@ -514,7 +518,7 @@ const obj40 = {
   PREMIUM_TIER_0: 8,
   [8]: "PREMIUM_TIER_0",
 };
-const frozen7 = Object.freeze(obj29);
+const frozen8 = Object.freeze(obj29);
 const obj42 = {
   [BoostedGuildTiers.NONE]: 5,
   [BoostedGuildTiers.TIER_1]: 10,
@@ -600,7 +604,7 @@ const items26 = [, , , , ,];
   ROLE_ICONS: arr27[5],
 } = GuildFeatures);
 obj48.features = items26;
-const frozen8 = Object.freeze(obj41);
+const frozen9 = Object.freeze(obj41);
 const items27 = [, , , , , , , ,];
 ({
   PREMIUM_MONTH_TIER_0: arr28[0],
@@ -621,7 +625,7 @@ const items28 = [, , ,];
   PREMIUM_YEAR_GUILD: arr29[3],
 } = obj5);
 const obj49 = { HIGH_STREAMING_QUALITY: "high_streaming_quality", MID_STREAMING_QUALITY: "mid_streaming_quality" };
-const frozen9 = Object.freeze({
+const frozen10 = Object.freeze({
   [BoostedGuildTiers.NONE]: {
     features: [],
     limits: {
@@ -665,16 +669,16 @@ const obj51 = {
   NITROWEEN_STANDARD: 12,
   [12]: "NITROWEEN_STANDARD",
 };
-const frozen10 = Object.freeze({
+const frozen11 = Object.freeze({
   [obj49.HIGH_STREAMING_QUALITY]: obj.TIER_2,
   [obj49.MID_STREAMING_QUALITY]: obj.TIER_1,
 });
-const frozen11 = Object.freeze({
+const frozen12 = Object.freeze({
   IS_BLOCKED_IOS: 32,
   IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
   SUPPRESS_NOTIFICATION: 128,
 });
-const frozen12 = Object.freeze({
+const frozen13 = Object.freeze({
   [obj.TIER_0]: { fileSize: 52428800 },
   [obj.TIER_1]: { fileSize: 52428800 },
   [obj.TIER_2]: { fileSize: 524288000 },
@@ -883,13 +887,15 @@ export const ACTIVE_PREMIUM_SKUS = items2;
 export const PremiumSubscriptionSKUToPremiumType = frozen1;
 export const PremiumTypeToActivePremiumSubscriptionSKU = frozen2;
 export const SubscriptionPlans = obj5;
+export const GIFT_SUBSCRIPTION_SKU_ID = "1557530423154966548";
+export const GiftSubscriptionPlans = frozen3;
 export const PREMIUM_PLANS = set;
 export const PREMIUM_TIER_2_PLANS = set1;
 export const PREMIUM_GUILD_SUBSCRIPTION_PLANS = set2;
 export const PREMIUM_MONTHLY_PLANS = set3;
 export const NONE_PLANS = set4;
-export const PREMIUM_SKU_TO_MONTHLY_PLAN = frozen3;
-export const PREMIUM_SKU_TO_YEARLY_PLAN = frozen4;
+export const PREMIUM_SKU_TO_MONTHLY_PLAN = frozen4;
+export const PREMIUM_SKU_TO_YEARLY_PLAN = frozen5;
 export const SubscriptionIntervalTypes = obj8;
 export const DiscountUserUsageLimitIntervalTypes = {
   DAY: 1,
@@ -901,8 +907,8 @@ export const DiscountUserUsageLimitIntervalTypes = {
   YEAR: 4,
   [4]: "YEAR",
 };
-export const PREMIUM_TYPE_DISPLAY_NAME = frozen5;
-export const SubscriptionPlanInfo = frozen6;
+export const PREMIUM_TYPE_DISPLAY_NAME = frozen6;
+export const SubscriptionPlanInfo = frozen7;
 export const PAUSE_ELIGIBLE_PLANS = set5;
 export const PREMIUM_YEARLY_DISCOUNT_PERCENT = 16;
 export const PREMIUM_6_MONTH_DISCOUNT_PERCENT = 8;
@@ -965,7 +971,7 @@ export const TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT = items13;
 export const DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT = [];
 export const DEFAULT_SOUND_SLOTS = 8;
 export const MORE_SOUNDBOARD_SOUNDS = 200;
-export const SubscriptionTrials = frozen7;
+export const SubscriptionTrials = frozen8;
 export const PremiumUpsellTypes = {
   ANIMATED_GUILD_BANNER_TOOLTIP: "animated_guild_banner_tooltip",
   EMOJI_PICKER_SEARCH: "emoji_picker_search",
@@ -1073,7 +1079,7 @@ export const PremiumUpsellTypes = {
   STREAM_QUALITY_UPSELL: "stream_quality_upsell",
 };
 export const PurchasedFlags = obj40;
-export const SKU_ID_PURCHASED_FLAGS = frozen8;
+export const SKU_ID_PURCHASED_FLAGS = frozen9;
 export const MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE = 52428800;
 export const MAX_PREMIUM_TIER_1_ATTACHMENT_SIZE = 52428800;
 export const MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE = 524288000;
@@ -1111,7 +1117,7 @@ export const PerkIcons = {
   SOUNDBOARD: 13,
   [13]: "SOUNDBOARD",
 };
-export const BoostedGuildFeatures = frozen9;
+export const BoostedGuildFeatures = frozen10;
 export const ORDERED_PREMIUM_SUBSCRIPTION_PLANS = items27;
 export const ORDERED_PREMIUM_GUILD_SUBSCRIPTION_PLANS = items28;
 export const AnalyticsPremiumFeatureNames = {
@@ -1135,7 +1141,7 @@ export const DISCOUNTS = {
   [obj5.PREMIUM_3_MONTH_TIER_2]: 5,
 };
 export const StreamQualities = obj49;
-export const StreamQualitiesToPremiumType = frozen10;
+export const StreamQualitiesToPremiumType = frozen11;
 export const PremiumMarketingEntrypoints = {
   UserSettings: 0,
   [0]: "UserSettings",
@@ -1152,8 +1158,8 @@ export const InboundPromotionErrorCodes = {
   PREVIOUS_SUBSCRIBER: "previous_subscriber",
   BLOCKED_PAYMENT: "blocked_payment",
 };
-export const PromotionFlags = frozen11;
-export const PremiumUserLimits = frozen12;
+export const PromotionFlags = frozen12;
+export const PremiumUserLimits = frozen13;
 export const PremiumFeatureHelperActions = {
   EXPLORE_ALL_PERKS_CLICKED: "explore_all_perks_clicked",
   HELPER_COLLAPSED: "helper_collapsed",

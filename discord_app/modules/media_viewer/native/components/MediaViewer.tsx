@@ -370,7 +370,7 @@ function MediaViewer(arg0) {
       windowHeight: height,
       zoomed,
     };
-    tmp63Result = tmp63(tmp(14939), obj15);
+    tmp63Result = tmp63(tmp(15019), obj15);
   }
   obj14.children = tmp63Result;
   items15[2] = callback(_modDef1652.View, obj14);
@@ -395,7 +395,7 @@ function MediaViewer(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PlatformUtils = fn(1377);
 let closure_9 = PlatformUtils.isAndroid();
 let obj = { pan: null };
@@ -475,7 +475,7 @@ let closure_13 = noop.memo(function MediaViewer(entranceAnimationDriver) {
   ];
   const callback2 = renderMedia.useCallback(
     (arg0, index) =>
-      React5(MediaViewerItem.MediaViewerItem, {
+      metroImportDefault(MediaViewerItem.MediaViewerItem, {
         originLayout,
         renderMedia,
         onLongPress,
@@ -556,6 +556,6 @@ let result = size.fileFinishedImporting("modules/media_viewer/native/components/
 export default noop.memo(function MediaViewerWithProvider(arg0) {
   const obj = { children: null };
   const merged = Object.assign(arg0);
-  obj.children = React5(MediaViewer, {});
-  return React5(MediaViewerDimensionsContext.MediaViewerDimensionsProvider, obj);
+  obj.children = metroImportDefault(MediaViewer, {});
+  return metroImportDefault(MediaViewerDimensionsContext.MediaViewerDimensionsProvider, obj);
 });

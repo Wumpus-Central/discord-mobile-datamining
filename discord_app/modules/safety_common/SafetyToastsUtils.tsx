@@ -8,7 +8,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyToastType = fn(7614).SafetyToastType;
+const SafetyToastType = fn(7630).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
 
@@ -56,7 +56,7 @@ export function getSafetyToastTypeContent(BLOCK_SUCCESS, id, channelId) {
     const intl12 = util.intl;
     const obj8 = { username: name };
     return intl12.formatToPlainString(util.t.FOptFU, obj8);
-  } else if (SafetyToastType.TIGGER_PAWTECT_ERROR === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.AGE_VERIFICATION_ERROR === BLOCK_SUCCESS) {
     const intl11 = util.intl;
     return intl11.string(util.t.c6kn6F);
   } else if (SafetyToastType.AGE_VERIFICATION_FAE_FAILED === BLOCK_SUCCESS) {
@@ -68,7 +68,7 @@ export function getSafetyToastTypeContent(BLOCK_SUCCESS, id, channelId) {
   } else if (SafetyToastType.AGE_VERIFICATION_UNDERAGE === BLOCK_SUCCESS) {
     const intl8 = util.intl;
     return intl8.string(_modDef3223.XBGt7g);
-  } else if (SafetyToastType.TIGGER_PAWTECT_VERIFIED === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.AGE_VERIFICATION_VERIFIED === BLOCK_SUCCESS) {
     const intl7 = util.intl;
     return intl7.string(util.t["7nKAXx"]);
   } else if (SafetyToastType.GENERIC_ERROR === BLOCK_SUCCESS) {

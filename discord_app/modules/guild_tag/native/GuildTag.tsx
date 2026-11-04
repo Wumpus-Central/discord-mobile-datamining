@@ -11,9 +11,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(8517).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(8534).GuildTagBadgeSize;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   container: {
@@ -53,7 +53,7 @@ const memoResult = noop.memo(function GuildTagBadge(arg0) {
     obj.accessibilityLabel = intl.string(util.t.HHYPgJ);
     const size1 = { width: size, height: size };
     obj.style = size1;
-    tmp2 = React5(FastImageDefault, obj);
+    tmp2 = metroImportDefault(FastImageDefault, obj);
   }
   return tmp2;
 });
@@ -64,7 +64,7 @@ const memoResult1 = noop.memo(function BaseGuildTagChiplet(textVariant) {
   }
   let str = textVariant.textVariant;
   if (str === undefined) {
-    str = "text-xs/semibold";
+    str = "body-xs/semibold";
   }
   let str2 = textVariant.textColor;
   if (str2 === undefined) {
@@ -83,7 +83,7 @@ const memoResult1 = noop.memo(function BaseGuildTagChiplet(textVariant) {
         const obj3 = { uri: importDefault };
         obj2.source = obj3;
         obj2.size = badgeSize;
-        tmp4 = React5(memoResult, obj2);
+        tmp4 = metroImportDefault(memoResult, obj2);
       }
     }
     const obj = { children: null };
@@ -91,9 +91,9 @@ const memoResult1 = noop.memo(function BaseGuildTagChiplet(textVariant) {
     const obj4 = { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: null, children };
     const items1 = [tag.tag, View];
     obj4.style = items1;
-    items[1] = React5(Text_Text.Text, obj4);
+    items[1] = metroImportDefault(Text_Text.Text, obj4);
     obj.children = items;
-    return React7(React6, obj);
+    return React6(React5, obj);
   }
   const tmp2 = closure_10();
   GuildTagBadgeSize = tmp2;

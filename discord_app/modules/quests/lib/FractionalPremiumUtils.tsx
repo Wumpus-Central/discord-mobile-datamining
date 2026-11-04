@@ -8,21 +8,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
-export function getDurationStringOfFractionalPremium(arr) {
-  const fractionalPremiumUnitsHoursFromSkuIds = PremiumUtils.getFractionalPremiumUnitsHoursFromSkuIds(
-    arr.map((skuId) => skuId.skuId),
-  );
-  if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
-    const intl2 = util.intl;
-    const obj2 = { days: fractionalPremiumUnitsHoursFromSkuIds / 24 };
-    let formatToPlainStringResult = intl2.formatToPlainString(util.t.Cz1G97, obj2);
-  } else {
-    const intl = util.intl;
-    const obj3 = { hours: fractionalPremiumUnitsHoursFromSkuIds };
-    formatToPlainStringResult = intl.formatToPlainString(util.t.J9Lu4h, obj3);
-  }
-  return formatToPlainStringResult;
-}
 export function getFractionalPremiumQuestRewards(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
   return rewards.filter((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM);

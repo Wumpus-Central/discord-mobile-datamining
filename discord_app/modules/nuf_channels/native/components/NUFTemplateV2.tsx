@@ -29,7 +29,7 @@ export default function NUFActionSheetTemplate(arg0) {
       variant: "heading-xl/semibold",
       children: title,
     }),
-    React3(Text_Text.Text, { style: tmp.description, variant: "text-md/medium", children: description }),
+    React3(Text_Text.Text, { style: tmp.description, variant: "body-md/medium", children: description }),
     React3(components_Button_Button.Button, { text: CTALabel, onPress: onCTAPress, grow: true }),
   ];
   obj.children = items;

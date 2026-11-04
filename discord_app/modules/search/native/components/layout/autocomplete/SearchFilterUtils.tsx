@@ -21,7 +21,7 @@ const SearchTokensDefault = SearchTokens;
 
 ({ EMPTY_SEARCH_QUERY_STRING: c3, SearchQueryTagTypes: closure_4 } = SearchConstants);
 const SearchFilterAddLocations = TrackingConstants.SearchFilterAddLocations;
-({ SEARCH_DATE_FORMAT: metroRequire, SearchTokenTypes: closure_7, SearchTypes: closure_8 } = Constants);
+({ SEARCH_DATE_FORMAT: closure_6, SearchTokenTypes: metroImportDefault, SearchTypes: closure_8 } = Constants);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx");
 
 export function getSearchTokenLabel(type, item) {
@@ -215,7 +215,7 @@ export function getSearchTokenPressHandler(_undefined, token, CONTEXT_MENU) {
 export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   items = [];
-  const keys = Object.keys(items(14025));
+  const keys = Object.keys(items(14111));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

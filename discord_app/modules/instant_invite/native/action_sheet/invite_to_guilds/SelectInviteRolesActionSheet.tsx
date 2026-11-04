@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ list: { flex: 1 } });
 const size = fn(2);
@@ -77,7 +77,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     return closure_1_7(callback, { children });
   }, items2);
   let obj = { onPress: callback1, accessibilityRole: "button", children: null };
-  const obj2 = { variant: "text-md/semibold", children: null };
+  const obj2 = { variant: "body-md/semibold", children: null };
   const intl = assignableRoles(onSave[12]).intl;
   obj2.children = intl.string(assignableRoles(onSave[12]).t.i4jeWR);
   obj.children = closure_5(assignableRoles(onSave[11]).Text, obj2);

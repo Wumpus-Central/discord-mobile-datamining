@@ -31,7 +31,7 @@ size.transform = items;
 obj2.diamond = size;
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.backgroundColor = nativeDefault.colors.BACKGROUND_FEEDBACK_INFO;
+obj3.backgroundColor = nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO;
 obj2.diamondFill = obj3;
 let closure_6 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -45,10 +45,10 @@ export function PinotMemberNoticeHeaderArrow(channelId) {
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj = channelId(504);
-  const isForumChannelSearchActive = channelId(11484).useIsForumChannelSearchActive(channelId);
-  const obj2 = channelId(11484);
-  const obj3 = channelId(11459);
-  const pinotChannelLabelCenter = channelId(11468).usePinotChannelLabelCenter(channelId, ref);
+  const isForumChannelSearchActive = channelId(11534).useIsForumChannelSearchActive(channelId);
+  const obj2 = channelId(11534);
+  const obj3 = channelId(11509);
+  const pinotChannelLabelCenter = channelId(11518).usePinotChannelLabelCenter(channelId, ref);
   const center = pinotChannelLabelCenter.center;
   let tmp9Result2 = null;
   if (obj3.usePinotMemberNotice(stateFromStores, "mobile_channel_header").visible) {

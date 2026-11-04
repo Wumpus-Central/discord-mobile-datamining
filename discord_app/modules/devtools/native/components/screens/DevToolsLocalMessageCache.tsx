@@ -80,7 +80,7 @@ function CacheLogEntry(entry) {
   return hasOwnProperty(TableRow.TableRow, obj);
 }
 const ScrollView = _mod17.ScrollView;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: null };
 let obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -126,7 +126,7 @@ export default function DevToolsLocalMessageCache() {
   const items1 = [
     timestampProducer(TableRowGroup.TableRowGroup, obj3),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
       children: "Cumulative since app launch. Does not update dynamically.",
     }),

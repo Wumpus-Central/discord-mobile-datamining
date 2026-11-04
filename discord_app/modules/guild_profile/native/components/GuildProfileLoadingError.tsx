@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -51,7 +51,7 @@ export default function GuildProfileLoadingError(onPress) {
   obj12.accessibilityLabel = intl2.string(util.t.s1fAEw);
   const obj9 = { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
   const items2 = [React4(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING })];
-  const obj14 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+  const obj14 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
   const intl3 = util.intl;
   obj14.children = intl3.string(util.t.tmGHjc);
   items2[1] = React4(Text_Text.Text, obj14);

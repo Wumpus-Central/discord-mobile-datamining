@@ -105,7 +105,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
   }
 };
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, FriendDiscoveryFlags: metroRequire, PlatformTypes: closure_7 } = Constants);
+({ AnalyticEvents: hasOwnProperty, FriendDiscoveryFlags: closure_6, PlatformTypes: metroImportDefault } = Constants);
 asyncGeneratorStep(async (name) => {
   c3 = 0;
   c4 = 0;

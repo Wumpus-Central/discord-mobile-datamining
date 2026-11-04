@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
@@ -83,10 +83,10 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(6849).trackAgeVerificationModalClicked(
+              const result = v3(6864).trackAgeVerificationModalClicked(
                 c0,
-                v3(6849).AgeVerificationModalVersion.RETRY,
-                v3(6849).AgeVerificationModalCta.GET_STARTED,
+                v3(6864).AgeVerificationModalVersion.RETRY,
+                v3(6864).AgeVerificationModalCta.GET_STARTED,
               );
               v1 = 1;
               c0 = 1;
@@ -154,7 +154,7 @@ export default function GetStartedScreen(modalSessionId) {
   };
   const stringResult1 = intl2.string(modalSessionId(stringResult2[9]).t.JNK1ue);
   items2[2] = closure_9(modalSessionId(stringResult2[12]).Text, {
-    variant: "heading-md/medium",
+    variant: "heading-sm/medium",
     color: "text-strong",
     style: tmp.centerText,
     children: intl2.string(modalSessionId(stringResult2[9]).t.JNK1ue),
@@ -162,7 +162,7 @@ export default function GetStartedScreen(modalSessionId) {
   obj6.children = items2;
   const items3 = [closure_10(closure_7, obj6), ,];
   const obj8 = {
-    variant: "heading-md/medium",
+    variant: "heading-sm/medium",
     color: "text-strong",
     style: tmp.centerText,
     children: intl2.string(modalSessionId(stringResult2[9]).t.JNK1ue),
@@ -174,7 +174,7 @@ export default function GetStartedScreen(modalSessionId) {
       return closure_1_9(modalSessionId(stringResult2[14]).TableRow, { arrow: true, label, subLabel, onPress }, index);
     }),
   });
-  const obj10 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
+  const obj10 = { variant: "body-xs/medium", color: "text-muted", style: null, children: null };
   const items4 = [,];
   ({ centerText: arr6[0], helpLink: arr6[1] } = tmp);
   obj10.style = items4;
@@ -182,7 +182,7 @@ export default function GetStartedScreen(modalSessionId) {
   obj10.children = intl4.format(modalSessionId(stringResult2[9]).t["L+FgkZ"], {
     handleOnHelpUrlHook() {
       const obj = AgeVerificationActionCreatorsDefault;
-      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
+      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_VERIFICATION_LEARN_MORE));
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(
         modalSessionId,
         AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.RETRY,

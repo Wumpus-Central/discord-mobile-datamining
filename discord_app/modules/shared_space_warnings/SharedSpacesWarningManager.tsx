@@ -22,7 +22,7 @@ function handleChannelSelect(channelId) {
         if (tmp) {
           let blockedUserWarningDismissed = channel.blockedUserWarningDismissed;
           if (!blockedUserWarningDismissed) {
-            blockedUserWarningDismissed = React5(channelId);
+            blockedUserWarningDismissed = metroImportDefault(channelId);
           }
           if (!blockedUserWarningDismissed) {
             const obj2 = { channelId, blockedUserIds: found, ignoredUserIds: found1 };
@@ -49,7 +49,7 @@ function handleAppStateChanged(state) {
             HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0),
           );
           const set = new Set(items);
-          if (!React6(set)) {
+          if (!React5(set)) {
             const items1 = [];
             HermesBuiltin.arraySpread(
               ignoredUsersForVoiceChannel,
@@ -66,11 +66,11 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(15765);
+const SharedSpacesWarningStore = fn(15853);
 ({
   isBlockedWarningQueued: hasOwnProperty,
-  dequeueBlockWarning: metroRequire,
-  gdmBlockedWarningInCooldown: closure_7,
+  dequeueBlockWarning: closure_6,
+  gdmBlockedWarningInCooldown: metroImportDefault,
   voiceBlockedWarningInCooldownForUsers: closure_8,
 } = SharedSpacesWarningStore);
 const prototype = function SharedSpacesWarningManager() {

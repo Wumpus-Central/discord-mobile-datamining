@@ -30,7 +30,7 @@ function getCollectibleTypeName(type) {
 }
 const isAvatarDecorationRecord = AvatarDecorationRecord.isAvatarDecorationRecord;
 const isProfileEffectRecord = ProfileEffectRecord.isProfileEffectRecord;
-({ PremiumSubscriptionSKUs: hasOwnProperty, SubscriptionPlanInfo: metroRequire } = PremiumConstants);
+({ PremiumSubscriptionSKUs: hasOwnProperty, SubscriptionPlanInfo: closure_6 } = PremiumConstants);
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx");
 
 export const PREVIEW_SIZE = 40;

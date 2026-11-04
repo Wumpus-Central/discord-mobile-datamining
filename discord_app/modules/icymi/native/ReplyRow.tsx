@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createICYMIStyles = fn(18682);
+const createICYMIStyles = fn(18783);
 let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
   const obj = {
     separator: null,
@@ -119,7 +119,7 @@ export function ContentInventoryReplyRow(onPress) {
   const obj3 = { style: tmp.contentInventoryContainer, children: null };
   items = [
     React4(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "input-placeholder-text-default",
       lineClamp: 1,
       style: tmp.contentInventoryText,

@@ -95,11 +95,11 @@ function ChannelContentComponent(arg0) {
     }
     items3[2] = isSubscriptionGated;
     obj7.children = items3;
-    tmp12Result = React5(View, obj7);
+    tmp12Result = metroImportDefault(View, obj7);
   }
   items1[1] = tmp12Result;
   obj5.children = items1;
-  const items4 = [React5(View, obj5)];
+  const items4 = [metroImportDefault(View, obj5)];
   let tmp10Result4 = null;
   if (isValidElementResult) {
     if (mentionCount == null) {
@@ -120,12 +120,12 @@ function ChannelContentComponent(arg0) {
   }
   items4[1] = tmp10Result4;
   obj4.children = items4;
-  const items6 = [React5(View, obj4)];
+  const items6 = [metroImportDefault(View, obj4)];
   const obj15 = { style: tmp10Result6 ? tmp.rightContentAbsolute : tmp.rightBox, children: null };
   let tmp10Result5 = obj17;
   if (obj17) {
     const obj16 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-muted",
       style: { marginLeft: "auto" },
       maxFontSizeMultiplier: 1.75,
@@ -146,15 +146,15 @@ function ChannelContentComponent(arg0) {
   }
   items7[2] = tmp10Result6;
   obj15.children = items7;
-  items6[1] = React5(View, obj15);
+  items6[1] = metroImportDefault(View, obj15);
   obj3.children = items6;
-  obj2.children = React5(View, obj3);
+  obj2.children = metroImportDefault(View, obj3);
   return timestampProducer(View, obj2);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let PlatformUtils = fn(1377);
 let num = -1;
@@ -170,7 +170,7 @@ let obj3 = {
   channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" },
   channelTraitIcon: null,
 };
-let obj4 = { opacity: fn(11186).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj4 = { opacity: fn(11236).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1377);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

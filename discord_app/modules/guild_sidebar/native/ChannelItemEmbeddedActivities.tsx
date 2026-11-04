@@ -58,7 +58,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
       const obj6 = { height: tmp13, minWidth: tmp13 };
       items1[1] = obj6;
       obj5.style = items1;
-      const obj7 = { style: tmp3.overflow, variant: "text-xs/semibold", children: null };
+      const obj7 = { style: tmp3.overflow, variant: "body-xs/semibold", children: null };
       const _HermesInternal = HermesInternal;
       obj7.children = "+" + diff;
       obj5.children = React4(Text_Text.Text, obj7);

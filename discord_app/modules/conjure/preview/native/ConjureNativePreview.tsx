@@ -35,7 +35,7 @@ function StatusCard(body) {
   const obj4 = { style: tmp.cardCopy, children: null };
   items = [
     closure_1_22(Text_Text.Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "text-default",
       style: tmp.cardText,
       children: title,
@@ -43,16 +43,16 @@ function StatusCard(body) {
   ];
   let tmp2Result = null;
   if (null != body) {
-    const obj6 = { variant: "text-sm/normal", color: "text-muted", style: tmp.cardText, children: body };
+    const obj6 = { variant: "body-sm/normal", color: "text-muted", style: tmp.cardText, children: body };
     tmp2Result = closure_1_22(Text_Text.Text, obj6);
   }
   items[1] = tmp2Result;
   obj4.children = items;
-  const items1 = [dependencyMap2(React5, obj4), children];
+  const items1 = [dependencyMap2(metroImportDefault, obj4), children];
   obj3.children = items1;
-  obj2.children = dependencyMap2(React5, obj3);
+  obj2.children = dependencyMap2(metroImportDefault, obj3);
   obj.children = closure_1_22(Card.Card, obj2);
-  return closure_1_22(React5, obj);
+  return closure_1_22(metroImportDefault, obj);
 }
 function HoldSwipeExit() {
   useEdgeOnlySwipeExitDefault(true);
@@ -414,7 +414,7 @@ function PreviewBot(projectId) {
     const intl3 = tmp7(1113).intl;
     obj4.text = intl3.string(tmp7(1113).t["5911Lb"]);
     obj4.onPress = callback;
-    obj3.children = closure_22(tmp7(5754).Button, obj4);
+    obj3.children = closure_22(tmp7(5768).Button, obj4);
     let tmp28Result = closure_22(StatusCard, obj3);
   } else if (null == stateFromStores) {
     const obj5 = { style: tmp.centered, children: closure_22(closure_5, {}) };
@@ -429,10 +429,10 @@ function PreviewBot(projectId) {
       alwaysRespectKeyboard: true,
       disableGradient: true,
     };
-    const items8 = [closure_22(previewApplicationId(11351), obj7, stateFromStores.id)];
+    const items8 = [closure_22(previewApplicationId(11401), obj7, stateFromStores.id)];
     let tmp30Result = null;
     if (tmp7Result4.isAndroid()) {
-      tmp30Result = closure_22(tmp7(12497).PortalKeyboardRenderer, { portal: true });
+      tmp30Result = closure_22(tmp7(12578).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp30Result;
     obj6.children = items8;
@@ -442,8 +442,8 @@ function PreviewBot(projectId) {
   return tmp28Result;
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(12350);
+({ ActivityIndicator: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
+const conjureDesignFeedbackStore = fn(12415);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1072);
 ({
@@ -453,7 +453,7 @@ const Constants = fn(1072);
   AppStates: closure_19,
   ME: closure_20,
 } = Constants);
-const isLaunched = fn(6967).isLaunched;
+const isLaunched = fn(6982).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
 const createStyles = fn(5141);

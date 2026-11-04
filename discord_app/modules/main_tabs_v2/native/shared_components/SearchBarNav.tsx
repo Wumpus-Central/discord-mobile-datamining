@@ -18,7 +18,7 @@ let obj2 = {
   container: {
     flexDirection: "row",
     alignItems: "center",
-    height: fn(5709).NAV_BAR_HEIGHT,
+    height: fn(5722).NAV_BAR_HEIGHT,
     paddingHorizontal: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -31,7 +31,7 @@ let obj2 = {
 let obj3 = {
   flexDirection: "row",
   alignItems: "center",
-  height: fn(5709).NAV_BAR_HEIGHT,
+  height: fn(5722).NAV_BAR_HEIGHT,
   paddingHorizontal: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomWidth: StyleSheet.hairlineWidth,
@@ -61,7 +61,7 @@ export default function SearchBarNav(arg0) {
     const obj4 = {
       style: tmp2.cancelText,
       maxFontSizeMultiplier: 2,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };

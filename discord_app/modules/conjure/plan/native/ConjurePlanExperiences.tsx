@@ -25,7 +25,7 @@ function InfoBlock(children) {
   items[1] = flag;
   const items1 = [
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
       accessibilityRole: "header",
       children: children.caption,
@@ -44,7 +44,7 @@ function Chips(labels) {
     children: labels.map((children) => {
       obj = {
         style: chip.chip,
-        children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children }),
+        children: hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", children }),
       };
       return hasOwnProperty(View, obj, children);
     }),
@@ -61,8 +61,8 @@ function ChannelRow(arg0) {
   items = [hasOwnProperty(View, obj2)];
   const obj4 = { style: tmp.infoText, children: null };
   const items1 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", lineClamp: 1, children: name }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: description }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-md/normal", color: "text-default", lineClamp: 1, children: name }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", children: description }),
   ];
   obj4.children = items1;
   items[1] = timestampProducer(View, obj4);
@@ -83,7 +83,7 @@ function CommandList(commands) {
       }
       obj = {
         name: description.name,
-        size: "text-sm",
+        size: "body-sm",
         prefix: conjurePlanFormat.conjurePlanCommandPrefix(description),
       };
       const children = [closure_1_5(ConjurePlanCommandText.ConjurePlanCommandMention, obj)];
@@ -93,7 +93,7 @@ function CommandList(commands) {
         combined = " " + str2;
       }
       children[1] = combined;
-      return closure_1_6(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children }, index);
+      return closure_1_6(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", children }, index);
     }),
   });
 }
@@ -108,24 +108,24 @@ function ExperienceBlocks(showsRequirements) {
       const items1 = [];
       if (result.channels.length > 0) {
         const obj2 = { channels: true, caption: null, children: null };
-        const intl2 = util.intl;
-        const obj4 = { count: result.channels.length };
-        obj2.caption = intl2.formatToPlainString(_modDef3995.w8F5sy, obj4);
-        const obj5 = { style: tmp.infoRows, children: null };
+        const intl3 = util.intl;
+        const obj3 = { count: result.channels.length };
+        obj2.caption = intl3.formatToPlainString(_modDef3995.w8F5sy, obj3);
+        const obj4 = { style: tmp.infoRows, children: null };
         const channels = result.channels;
-        obj5.children = channels.map((description) => {
+        obj4.children = channels.map((description) => {
           const name = description.name;
           return closure_1_5(ChannelRow, { name, description: description.description }, name);
         });
-        obj2.children = hasOwnProperty(View, obj5);
+        obj2.children = hasOwnProperty(View, obj4);
         items1.push(hasOwnProperty(InfoBlock, obj2, "channels"));
       }
       const result1 = conjurePlanExperienceSections.conjurePlanFrameFeatures(result);
       items = items1;
       if (result1.length > 0) {
         const obj6 = { caption: null, children: null };
-        const intl3 = util.intl;
-        obj6.caption = intl3.string(_modDef3995.MY6UGJ);
+        const intl = util.intl;
+        obj6.caption = intl.string(_modDef3995.MY6UGJ);
         const obj7 = { labels: result1 };
         obj6.children = hasOwnProperty(Chips, obj7);
         items1.push(hasOwnProperty(InfoBlock, obj6, "features"));
@@ -144,8 +144,8 @@ function ExperienceBlocks(showsRequirements) {
         let items3 = [];
       } else {
         const obj8 = { caption: null, children: null };
-        const intl = util.intl;
-        obj8.caption = intl.string(util.t["0hKkS+"]);
+        const intl2 = util.intl;
+        obj8.caption = intl2.string(util.t["0hKkS+"]);
         const obj9 = { commands: proposal.commands };
         obj8.children = hasOwnProperty(CommandList, obj9);
         items3 = [hasOwnProperty(InfoBlock, obj8, "commands")];
@@ -166,12 +166,12 @@ function ExperienceBlocks(showsRequirements) {
       );
       arr5 = items4;
     }
-    let tmp15 = null;
+    let tmp20 = null;
     if (arr5.length > 0) {
       const obj10 = { style: tmp.infoBlocks, children: arr5 };
-      tmp15 = hasOwnProperty(View, obj10);
+      tmp20 = hasOwnProperty(View, obj10);
     }
-    return tmp15;
+    return tmp20;
   }
 }
 function Bullets(arg0) {
@@ -182,7 +182,7 @@ function Bullets(arg0) {
       obj = { style: closure_1.listItem, children: null };
       items = [
         hasOwnProperty(Text_Text.Text, {
-          variant: "text-md/normal",
+          variant: "body-md/normal",
           color: "text-default",
           style: closure_1.bullet,
           accessibilityElementsHidden: true,
@@ -191,13 +191,13 @@ function Bullets(arg0) {
         }),
       ];
       const obj3 = {
-        variant: "text-md/normal",
+        variant: "body-md/normal",
         color: "text-default",
         style: closure_1.listText,
         children: hasOwnProperty(ConjurePlanCommandText.ConjurePlanCommandText, {
           text,
           commandNames,
-          size: "text-md",
+          size: "body-md",
         }),
       };
       items[1] = hasOwnProperty(Text_Text.Text, obj3);
@@ -232,7 +232,7 @@ function ComponentSection(arg0) {
   }
   const obj5 = { size: "xs", color: nativeDefault.colors.ICON_STRONG };
   items[1] = hasOwnProperty(Text_Text.Text, {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "text-strong",
     accessibilityRole: "header",
     children: intl.string(BM4Ymz),
@@ -247,8 +247,8 @@ function ComponentSection(arg0) {
   items1[1] = tmp8Result;
   if ("automod" === experience.kind) {
     if (1 === bullets.length) {
-      const obj8 = { variant: "text-md/normal", color: "text-default", children: null };
-      const obj9 = { text: bullets[0], commandNames, size: "text-md" };
+      const obj8 = { variant: "body-md/normal", color: "text-default", children: null };
+      const obj9 = { text: bullets[0], commandNames, size: "body-md" };
       obj8.children = hasOwnProperty(ConjurePlanCommandText.ConjurePlanCommandText, obj9);
       let tmp8Result2 = hasOwnProperty(Text_Text.Text, obj8);
     }
@@ -264,7 +264,7 @@ function ComponentSection(arg0) {
     tmp8Result2 = hasOwnProperty(Bullets, obj11);
   }
   const obj6 = {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "text-strong",
     accessibilityRole: "header",
     children: intl.string(BM4Ymz),
@@ -272,14 +272,14 @@ function ComponentSection(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
-  frame: fn(9859).GameControllerIcon,
-  overlay_widget: fn(12875).WindowTopIcon,
-  user_widget: fn(10935).UserCircleIcon,
-  bot: fn(12241).RobotIcon,
-  commands: fn(12241).RobotIcon,
-  automod: fn(11418).ShieldIcon,
+  frame: fn(9877).GameControllerIcon,
+  overlay_widget: fn(12956).WindowTopIcon,
+  user_widget: fn(10983).UserCircleIcon,
+  bot: fn(12302).RobotIcon,
+  commands: fn(12302).RobotIcon,
+  automod: fn(11468).ShieldIcon,
 };
 const createStyles = fn(5141);
 let obj3 = {

@@ -8,7 +8,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   flex: { flex: 1 },
@@ -40,7 +40,7 @@ export default function CreateGuild(arg0) {
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
   }
-  isScreenReaderEnabled = isScreenReaderEnabled(5397).useIsScreenReaderEnabled();
+  isScreenReaderEnabled = isScreenReaderEnabled(5398).useIsScreenReaderEnabled();
   ref = noop.useRef(null);
   items = [isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
@@ -75,15 +75,15 @@ export default function CreateGuild(arg0) {
     customTitle = intl.string(tmp4(1113).t.XioBx6);
   }
   obj3.children = customTitle;
-  const items1 = [closure_7(isScreenReaderEnabled(5747).Text, obj3), , , , , , ,];
-  const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const items1 = [closure_7(isScreenReaderEnabled(5761).Text, obj3), , , , , , ,];
+  const obj4 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   if (customDescription == null) {
     const intl2 = tmp4(1113).intl;
     customDescription = intl2.string(tmp4(1113).t["/k/L/j"]);
   }
   obj4.children = customDescription;
-  items1[1] = closure_7(isScreenReaderEnabled(5747).Text, obj4);
-  items1[2] = closure_7(ref(13361), {
+  items1[1] = closure_7(isScreenReaderEnabled(5761).Text, obj4);
+  items1[2] = closure_7(ref(13444), {
     iconBackgroundColor: tmp.contentContainer.backgroundColor,
     style: tmp.iconUploader,
     onPress: onIconPress,
@@ -113,7 +113,7 @@ export default function CreateGuild(arg0) {
   }
   let tmp9Result = !!isStaffResult;
   obj6.autoFocus = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(7208).TextInput, obj6);
+  items1[3] = closure_7(isScreenReaderEnabled(7223).TextInput, obj6);
   if (tmp9Result) {
     const obj7 = {
       onValueChange: onStaffOnlyChange,
@@ -125,13 +125,13 @@ export default function CreateGuild(arg0) {
     };
     const intl4 = tmp4(1113).intl;
     obj7.subLabel = intl4.string(tmp4(1113).t.edQ5va);
-    tmp9Result = closure_7(tmp4(7489).TableSwitchRow, obj7);
+    tmp9Result = closure_7(tmp4(7505).TableSwitchRow, obj7);
   }
   items1[4] = tmp9Result;
-  const obj8 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj8 = { style: tmp.hint, variant: "body-xs/medium", color: "text-muted", children: null };
   const intl5 = tmp4(1113).intl;
   obj8.children = intl5.format(isScreenReaderEnabled(1113).t["2bprXx"], { guidelinesURL: MarketingURLs.GUIDELINES });
-  items1[5] = closure_7(isScreenReaderEnabled(5747).Text, obj8);
+  items1[5] = closure_7(isScreenReaderEnabled(5761).Text, obj8);
   const obj10 = { disabled: "" === guild.name, size: "md", grow: true, text: null, onPress: null, loading: null };
   if (customButtonLabel == null) {
     const intl6 = tmp4(1113).intl;
@@ -140,7 +140,7 @@ export default function CreateGuild(arg0) {
   obj10.text = customButtonLabel;
   obj10.onPress = onCreate;
   obj10.loading = submitting;
-  items1[6] = closure_7(isScreenReaderEnabled(5754).Button, obj10);
+  items1[6] = closure_7(isScreenReaderEnabled(5768).Button, obj10);
   let firstFieldErrorMessage1;
   if (error != null) {
     firstFieldErrorMessage1 = error.getFirstFieldErrorMessage("name");
@@ -164,12 +164,12 @@ export default function CreateGuild(arg0) {
           message2 = error.message;
         }
         const obj11 = { children: message2 };
-        tmp9Result2 = closure_7(ref(7233), obj11);
-        const tmp12Result = ref(7233);
+        tmp9Result2 = closure_7(ref(7253), obj11);
+        const tmp12Result = ref(7253);
       }
     }
   }
   items1[7] = tmp9Result2;
-  obj.children = closure_8(isScreenReaderEnabled(6147).Stack, { children: items1 });
+  obj.children = closure_8(isScreenReaderEnabled(6162).Stack, { children: items1 });
   return closure_7(ScrollView, obj);
 }

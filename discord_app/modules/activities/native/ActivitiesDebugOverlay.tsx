@@ -51,11 +51,11 @@ export default function ActivitiesDebugOverlay() {
   const obj3 = { style: tmp.row, children: null };
   const items1 = [
     React4(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       color: "text-overlay-light",
       children: ["thermal state:", " "],
     }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: str, children: str2 }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-md/normal", color: str, children: str2 }),
   ];
   obj3.children = items1;
   obj.children = React4(View, obj3);

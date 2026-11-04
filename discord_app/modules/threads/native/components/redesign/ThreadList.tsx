@@ -4,7 +4,7 @@ import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
 import native from "../../../../../../discord_common/js/packages/design/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import _mod7414 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7430 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import RowButton from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
 import ThreadPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
 import ThreadListTableRowDefault from "ThreadListTableRow.tsx";
@@ -18,7 +18,7 @@ function ThreadListSection(title) {
   return jsx(Text_Text.Text, {
     style: closure_7().section,
     accessibilityRole: "header",
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     color: "text-default",
     children: title.title.toUpperCase(),
   });
@@ -340,7 +340,7 @@ export default function ThreadList(onCreateThreadPress) {
       }
       obj5.ListFooterComponentStyle = footer;
       obj5.contentContainerStyle = contentContainerStyle;
-      obj.children = jsx(_mod7414.AnimatedFlashList, {
+      obj.children = jsx(_mod7430.AnimatedFlashList, {
         data: memo,
         ListHeaderComponent: memo2,
         ListHeaderComponentStyle: closure_3.header,

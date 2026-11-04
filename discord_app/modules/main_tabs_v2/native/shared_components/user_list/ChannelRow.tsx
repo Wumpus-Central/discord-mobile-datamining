@@ -17,8 +17,8 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10857).UserRowModes;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const UserRowModes = fn(10905).UserRowModes;
+const ReadStateTypes = fn(6911).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(5141);
@@ -160,7 +160,7 @@ export default noop.memo(function ChannelRow(channel) {
       items = [application_id(TextIcon, obj2), ,];
       const obj3 = {
         style: closure_7.threadName,
-        variant: "text-xs/medium",
+        variant: "body-xs/medium",
         color: "text-subtle",
         lineClamp: 1,
         ellipsizeMode: "tail",
@@ -172,13 +172,13 @@ export default noop.memo(function ChannelRow(channel) {
         const obj4 = { children: null };
         const obj5 = {
           style: closure_7.subLabelSeparator,
-          variant: "text-xs/medium",
+          variant: "body-xs/medium",
           color: "text-subtle",
           children: "\u2022",
         };
         const items1 = [application_id(Text_Text.Text, obj5)];
         const obj6 = {
-          variant: "text-xs/medium",
+          variant: "body-xs/medium",
           color: "text-subtle",
           children: DateUtils.calendarFormatCompact(_modDef2171(tmp14)),
         };
@@ -211,7 +211,7 @@ export default noop.memo(function ChannelRow(channel) {
   obj5.onLongPress = callback1;
   obj5.label = closure_12(channel(onPress[18]).Text, {
     lineClamp: 1,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "mobile-text-heading-primary",
     children: memo1,
   });

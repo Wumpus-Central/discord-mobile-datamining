@@ -114,38 +114,38 @@ export default function MuteSettings(guildId) {
 export function MuteSettingsHint(guildMessageNotifications) {
   guildMessageNotifications = guildMessageNotifications.guildMessageNotifications;
   if (guildMessageNotifications.isMuted) {
-    const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj2 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl5 = util.intl;
     obj2.children = intl5.string(util.t.t0mEt2);
-    let tmp3 = React7(Text_Text.Text, obj2);
+    let tmp3 = React6(Text_Text.Text, obj2);
   } else if (tmp) {
-    const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj3 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl4 = util.intl;
     const obj4 = {
       mutedHook(children, arg1) {
         return closure_1_9(
           Text_Text.Text,
-          { variant: "text-sm/medium", color: "text-feedback-critical", children },
+          { variant: "body-sm/medium", color: "text-feedback-critical", children },
           arg1,
         );
       },
     };
     obj3.children = intl4.format(util.t.O34r15, obj4);
-    tmp3 = React7(Text_Text.Text, obj3);
+    tmp3 = React6(Text_Text.Text, obj3);
   } else if (guildMessageNotifications === UserNotificationSettings.NO_MESSAGES) {
-    const obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj5 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl3 = util.intl;
     const obj6 = {
       notificationHook(children, arg1) {
         return closure_1_9(
           Text_Text.Text,
-          { variant: "text-sm/medium", color: "text-feedback-warning", children },
+          { variant: "body-sm/medium", color: "text-feedback-warning", children },
           arg1,
         );
       },
     };
     obj5.children = intl3.format(util.t.nRwUIL, obj6);
-    tmp3 = React7(Text_Text.Text, obj5);
+    tmp3 = React6(Text_Text.Text, obj5);
   } else {
     if (guildMessageNotifications !== UserNotificationSettings.ALL_MESSAGES) {
       tmp3 = null;
@@ -158,8 +158,8 @@ export function MuteSettingsHint(guildMessageNotifications) {
       const intl = util.intl;
       stringResult = intl.string(util.t.GGAdHV);
     }
-    obj = { variant: "text-sm/medium", color: "text-default", children: stringResult };
-    React7(Text_Text.Text, obj);
+    obj = { variant: "body-sm/medium", color: "text-default", children: stringResult };
+    React6(Text_Text.Text, obj);
   }
   return tmp3;
 }

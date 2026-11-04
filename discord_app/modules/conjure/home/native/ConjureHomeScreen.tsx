@@ -6,7 +6,7 @@ import GatewayConnectionStore from "../../../gateway/GatewayConnectionStore.tsx"
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -127,7 +127,7 @@ export default function ConjureHomeScreen(navigation) {
       const intl = tmp2(tmp3[13]).intl;
       obj9.children = intl.string(projectId(tmp3[14])["c+8IMp"]);
       const items5 = [tmp15(tmp2(tmp3[12]).Text, obj9), ,];
-      const obj10 = { variant: "text-md/normal", color: "text-muted", children: null };
+      const obj10 = { variant: "body-md/normal", color: "text-muted", children: null };
       const intl2 = tmp2(tmp3[13]).intl;
       obj10.children = intl2.string(projectId(tmp3[14])["5PqGKy"]);
       items5[1] = tmp15(tmp2(tmp3[12]).Text, obj10);

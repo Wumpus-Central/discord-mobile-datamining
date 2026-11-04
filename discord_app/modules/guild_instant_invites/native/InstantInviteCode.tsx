@@ -29,7 +29,7 @@ class InstantInviteDetails {
     tmp5 = jsx;
     items = [,];
     items[0] = jsx(TextIcon, { color: "icon-subtle", size: "xs" });
-    obj8 = { variant: "text-md/semibold", color: "text-subtle", style: tmp.channel, lineClamp: 1, children: null };
+    obj8 = { variant: "body-md/semibold", color: "text-subtle", style: tmp.channel, lineClamp: 1, children: null };
     tmp2Result = tmp2(tmp3[12]);
     obj8.children = tmp2Result.computeChannelName(channel, closure_7, closure_6, false);
     items[1] = jsx(tmp2(tmp3[11]).Text, obj8);
@@ -41,7 +41,7 @@ class InstantInviteDetails {
       obj9 = { direction: "horizontal", align: "center", children: null };
       items2 = [, ,];
       items2[0] = tmp5(tmp2(tmp3[13]).ClockIcon, { size: "xs", color: "icon-subtle" });
-      obj10 = { variant: "text-md/semibold", color: "text-subtle", children: null };
+      obj10 = { variant: "body-md/semibold", color: "text-subtle", children: null };
       intl = tmp2(tmp3[14]).intl;
       obj10.children = intl.string(tmp2(tmp3[14]).t.aTABYx);
       items2[1] = tmp5(tmp2(tmp3[11]).Text, obj10);
@@ -74,13 +74,13 @@ export default function InstantInviteCode(invite) {
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
   const obj2 = { children: null };
   const items1 = [
-    closure_8(invite(5747).Text, { variant: "text-lg/semibold", tabularNumbers: true, children: invite.code }),
+    closure_8(invite(5761).Text, { variant: "body-lg/semibold", tabularNumbers: true, children: invite.code }),
   ];
-  const obj3 = { variant: "text-lg/semibold", tabularNumbers: true, children: invite.code };
+  const obj3 = { variant: "body-lg/semibold", tabularNumbers: true, children: invite.code };
   const tmp = closure_10();
   items1[1] = closure_8(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(6147).Stack, obj2);
+  obj.children = closure_9(invite(6162).Stack, obj2);
   return closure_8(View, obj);
 }
 export { InstantInviteDetails };

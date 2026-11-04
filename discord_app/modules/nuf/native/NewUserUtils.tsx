@@ -233,12 +233,12 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(14105);
-({ EventActionLocation: closure_7, EventActionType: closure_8 } = NotificationPermissionConstants);
+const NotificationPermissionConstants = fn(14191);
+({ EventActionLocation: metroImportDefault, EventActionType: closure_8 } = NotificationPermissionConstants);
 const Constants = fn(1072);
 ({ PlatformTypes: closure_9, Routes: closure_10 } = Constants);
-const ContactPermissions = fn(14380).ContactPermissions;
-let closure_12 = fn(8064).NotificationAuthorizationStatus;
+const ContactPermissions = fn(14460).ContactPermissions;
+let closure_12 = fn(8080).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_16 = asyncGeneratorStep(async () => {
@@ -500,7 +500,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9246).hasDeferredInvite,
+    shouldShowStep: fn(9263).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

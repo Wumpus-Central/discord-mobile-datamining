@@ -37,7 +37,7 @@ export default noop.memo(function SuggestedSearchList(smartSearchQuery) {
       num = source(tmp3[4]).space.PX_16;
     }
     const obj2 = { children: null };
-    const obj3 = { variant: "text-sm/semibold", color: "interactive-text-default", style: null, children: null };
+    const obj3 = { variant: "body-sm/semibold", color: "interactive-text-default", style: null, children: null };
     const obj4 = { marginTop: num };
     items[1] = obj4;
     obj3.style = items;

@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -78,7 +78,7 @@ export default function LearnMoreAboutAppsSection(visible) {
       children: stringResult,
     }),
     timestampProducer(Text_Text.Text, {
-      variant: "text-xs/normal",
+      variant: "body-xs/normal",
       color: "text-default",
       style: tmp.body,
       children: stringResult1,
@@ -93,13 +93,13 @@ export default function LearnMoreAboutAppsSection(visible) {
     accessibilityLabel: formatToPlainStringResult,
     children: null,
   };
-  const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj7 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl4 = util.intl;
   obj7.children = intl4.string(util.t.Ye51oT);
   obj6.children = timestampProducer(Text_Text.Text, obj7);
   items[4] = timestampProducer(Pressables.PressableHighlight, obj6);
   items[5] = timestampProducer(View, { style: tmp.divider });
   obj2.children = items;
-  obj.children = React5(View, obj2);
+  obj.children = metroImportDefault(View, obj2);
   return timestampProducer(TrackSectionHeaderDefault, obj);
 }

@@ -46,9 +46,9 @@ export default noop.memo(function LaunchPadMembers() {
       }
     }
     return {
-      channelId: "channel_id",
+      channelId: "id",
       type:
-        -198609602824364700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001257323325157122,
     };
   });
   if ("private" === stateFromStoresObject.type) {
@@ -94,10 +94,10 @@ export default noop.memo(function LaunchPadMembers() {
     tmp8 = <View style={tmp.wrapper}>{null}</View>;
   } else {
     const obj17 = { style: tmp.emptyWrapper, children: null };
-    const obj18 = { style: tmp.emptyText, variant: "text-md/semibold", children: null };
+    const obj18 = { style: tmp.emptyText, variant: "body-md/semibold", children: null };
     const intl = util.intl;
     obj18.children = intl.string(util.t["+7wtJq"]);
-    obj17.children = jsx(Text_Text.Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
+    obj17.children = jsx(Text_Text.Text, { style: tmp.emptyText, variant: "body-md/semibold", children: null });
     tmp8 = <View style={tmp.emptyWrapper}>{null}</View>;
   }
   return tmp8;

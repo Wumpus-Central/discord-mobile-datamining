@@ -156,7 +156,7 @@ function Media(handlePressMedia) {
     const obj6 = { style: tmp.spoilerText, children: null };
     const obj7 = {
       maxFontSizeMultiplier: 1,
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };
@@ -551,7 +551,7 @@ class GravityAttachmentMediaMosaic {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
 const jsxProd = fn(21);

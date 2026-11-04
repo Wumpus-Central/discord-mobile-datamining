@@ -129,14 +129,14 @@ export default function ProductDetailsActionSheetVariants(disabled) {
   if (obj.getIsVariantProduct(product)) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.headerRow, children: null };
-    const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj4 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = selectedVariantIndex(tmp3[7]).intl;
     obj4.children = intl.string(selectedVariantIndex(tmp3[7]).t.wbgaj6);
     items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj4)];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
       const obj5 = {
-        variant: "text-md/medium",
+        variant: "body-md/medium",
         color: "text-default",
         lineClamp: 1,
         style: tmp.text,

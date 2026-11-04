@@ -11,8 +11,8 @@ import ChannelSafetyWarningsStore from "../../../../ChannelSafetyWarningsStore.t
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(10934).SafetyWarningFeedbackTypes;
-const Constants = fn(11393);
+let closure_7 = fn(10982).SafetyWarningFeedbackTypes;
+const Constants = fn(11443);
 ({
   DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8,
   UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_9,
@@ -92,7 +92,7 @@ export default function WasThisHelpfulSection(channelId) {
       warningId,
       feedbackType,
     );
-    const tmp6 = feedbackType === constants.UPVOTE ? React7 : React6;
+    const tmp6 = feedbackType === constants.UPVOTE ? React6 : React5;
     const obj3 = { text: null, icon: null, iconColor: null };
     const intl = util.intl;
     obj3.text = intl.string(util.t["gd/Yqs"]);
@@ -110,7 +110,7 @@ export default function WasThisHelpfulSection(channelId) {
     const tmpResult = SafetyWarningUtils;
   }, items3);
   let obj2 = { style: tmp.container, children: null };
-  let obj3 = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };
+  let obj3 = { variant: "body-sm/normal", color: "mobile-text-heading-primary", children: null };
   let intl = channelId(senderId[10]).intl;
   obj3.children = intl.string(channelId(senderId[10]).t.L84yVm);
   const items4 = [closure_10(channelId(senderId[13]).Text, obj3)];

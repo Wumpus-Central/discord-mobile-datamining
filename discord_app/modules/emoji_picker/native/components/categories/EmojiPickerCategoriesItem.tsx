@@ -16,9 +16,9 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const EmojiCategoryTypes = fn(6919).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6934).EmojiCategoryTypes;
 const Constants = fn(1072);
-({ CATEGORY_ICON_RIPPLE_CONFIG: closure_7, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
+({ CATEGORY_ICON_RIPPLE_CONFIG: metroImportDefault, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -173,21 +173,21 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   obj4.style = items7;
   if (category.type === EmojiCategoryTypes.GUILD) {
     const obj5 = { guild: category.guild, loadingStyle, size: GuildIcon.GuildIconSizes.XSMALL, style: tmp.guildItem };
-    let tmp23Result = React6(GuildIconDefault, obj5);
+    let tmp23Result = React5(GuildIconDefault, obj5);
     const tmp26Result = GuildIconDefault;
   } else {
     const obj6 = { id: category.id };
-    tmp23Result = React6(EmojiPickerCategoryIconDefault, obj6);
+    tmp23Result = React5(EmojiPickerCategoryIconDefault, obj6);
   }
   const items8 = [tmp23Result];
   if (locked) {
     const obj7 = { style: tmp.lockContainer, children: null };
     const obj8 = { style: tmp.lock };
-    obj7.children = React6(LockIcon.LockIcon, obj8);
-    locked = React6(View, obj7);
+    obj7.children = React5(LockIcon.LockIcon, obj8);
+    locked = React5(View, obj7);
   }
   items8[1] = locked;
   obj4.children = items8;
-  obj3.children = React7(_modDef1652.View, obj4);
-  return React6(Pressables.PressableOpacity, obj3);
+  obj3.children = React6(_modDef1652.View, obj4);
+  return React5(Pressables.PressableOpacity, obj3);
 });

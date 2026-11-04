@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
@@ -44,7 +44,7 @@ export function MediaModalOverlayFooterAction(arg0) {
     const obj3 = { children: null };
     items[2] = tmp12;
     obj3.children = items;
-    let tmp3Result = React5(timestampProducer, obj3);
+    let tmp3Result = metroImportDefault(timestampProducer, obj3);
     const tmp4Result = PlatformUtils;
   } else {
     tmp3Result = null;
@@ -60,5 +60,5 @@ export function MediaModalOverlayFooterAction(arg0) {
   };
   items1[1] = hasOwnProperty(React4, obj4);
   rect.children = items1;
-  return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, rect);
 }

@@ -35,7 +35,7 @@ function ColorButton(arg0) {
   const items2 = [
     React3(Pressables.PressableOpacity, obj5),
     React3(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-default",
       accessibilityElementsHidden: true,
       importantForAccessibility: "no-hide-descendants",

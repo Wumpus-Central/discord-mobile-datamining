@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CheckpointCustomizationUtils from "../../CheckpointCustomizationUtils.tsx";
-import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08171_inlineStyles.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,9 +10,9 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   hidden: { opacity: 0 },
@@ -84,13 +84,13 @@ export default function CheckpointTag(chamferCorner) {
     const tmp10 = inlineStylesDefault;
     obj3.points = CheckpointCustomizationUtils.getChamferedRectPoints(size.width, size.height, 5.5);
     obj3.fill = CHECKPOINT_PRIMARY;
-    size1.children = React5(inlineStyles.Polygon, obj3);
-    tmp7Result = React5(tmp10, size1);
+    size1.children = metroImportDefault(inlineStyles.Polygon, obj3);
+    tmp7Result = metroImportDefault(tmp10, size1);
   }
   const items2 = [
     tmp7Result,
-    React5(Text_Text.Text, { variant: "mono-md/bold", style: tmp.text, children: chamferCorner.children }),
+    metroImportDefault(Text_Text.Text, { variant: "mono-md/bold", style: tmp.text, children: chamferCorner.children }),
   ];
   obj.children = items2;
-  return React6(View, obj);
+  return React5(View, obj);
 }

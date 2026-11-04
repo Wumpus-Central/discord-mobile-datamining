@@ -54,7 +54,7 @@ export default function MemberVerificationAlert(arg0) {
   ];
   let tmp10Result = null;
   if (null != subtitle) {
-    const obj4 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
+    const obj4 = { style: tmp2.subtitle, variant: "body-sm/medium", color: "text-default", children: subtitle };
     tmp10Result = React4(Text_Text.Text, obj4);
   }
   items[2] = tmp10Result;

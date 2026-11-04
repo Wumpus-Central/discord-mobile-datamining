@@ -14,9 +14,9 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7840).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_6 = fn(7856).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   container: {
@@ -66,16 +66,16 @@ export default function ConnectGuardianBottomSheet(arg0) {
     title = intl.string(_modDef2667.aCUVfL);
   }
   obj5.children = title;
-  const items2 = [React5(Text_Text.Text, obj5)];
-  const obj6 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
+  const items2 = [metroImportDefault(Text_Text.Text, obj5)];
+  const obj6 = { style: tmp.centered, variant: "body-md/medium", color: "text-default", children: null };
   if (body == null) {
     const intl2 = util.intl;
     body = intl2.format(_modDef2667["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   }
   obj6.children = body;
-  items2[1] = React5(Text_Text.Text, obj6);
+  items2[1] = metroImportDefault(Text_Text.Text, obj6);
   obj4.children = items2;
-  const items3 = [React6(View, obj4), ,];
+  const items3 = [React5(View, obj4), ,];
   const obj7 = { style: tmp.cardContainer, children: null };
   if (stateFromStores == null) {
     stateFromStores = linkCode;
@@ -87,14 +87,14 @@ export default function ConnectGuardianBottomSheet(arg0) {
   const obj9 = { startExpanded: true, children: null };
   obj8.expiresAt = stateFromStores1;
   obj8.onRefresh = onRefresh;
-  obj7.children = React5(ConnectGuardianCard.ConnectGuardianCard, obj8);
-  items3[1] = React5(View, obj7);
+  obj7.children = metroImportDefault(ConnectGuardianCard.ConnectGuardianCard, obj8);
+  items3[1] = metroImportDefault(View, obj7);
   const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl3 = util.intl;
   obj10.text = intl3.string(_modDef2667.Hsm5IF);
   obj10.onPress = callback;
-  items3[2] = React5(components_Button_Button.Button, obj10);
+  items3[2] = metroImportDefault(components_Button_Button.Button, obj10);
   obj3.children = items3;
-  obj9.children = React6(View, obj3);
-  return React5(Sheet_BottomSheet.BottomSheet, obj9);
+  obj9.children = React5(View, obj3);
+  return metroImportDefault(Sheet_BottomSheet.BottomSheet, obj9);
 }

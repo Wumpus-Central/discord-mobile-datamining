@@ -1,8 +1,8 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7164 from "../../../../_runtime/metro/07164__.js";
+import _modDef7179 from "../../../../_runtime/metro/07179__.js";
 import UserProfileSharedStyles from "../../user_profile/native/UserProfileSharedStyles.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
@@ -13,9 +13,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const HorizontalGradient = fn(1072).HorizontalGradient;
-const CARD_PADDING = fn(7497).CARD_PADDING;
+const CARD_PADDING = fn(7513).CARD_PADDING;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const colors = ["transparent", "black"];
 const createStyles = fn(5141);
 let obj2 = {
@@ -91,39 +91,39 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   const obj7 = { style: tmp.heroText, children: null };
   const userProfileCardRadius = UserProfileSharedStyles.useUserProfileCardRadius();
   const items2 = [
-    React5(UserProfileApplicationWidgetFieldUtils.FieldText, {
+    metroImportDefault(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues,
-      variant: "text-lg/medium",
+      variant: "body-lg/medium",
       color: "text-default",
     }),
-    React5(UserProfileApplicationWidgetFieldUtils.FieldText, {
+    metroImportDefault(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues1,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
     }),
-    React5(UserProfileApplicationWidgetFieldUtils.FieldText, {
+    metroImportDefault(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues2,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
     }),
-    React5(UserProfileApplicationWidgetFieldUtils.FieldText, {
+    metroImportDefault(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues3,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
     }),
   ];
   obj7.children = items2;
-  const items3 = [React6(View, obj7)];
+  const items3 = [React5(View, obj7)];
   const obj8 = { style: tmp.heroImageColumn, children: null };
   let tmp15Result = null == fieldValue || null == tmp3;
   if (tmp15Result) {
     const obj9 = { style: tmp.heroImageSkeleton };
-    tmp15Result = React5(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj9);
+    tmp15Result = metroImportDefault(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj9);
   }
   obj8.children = tmp15Result;
-  items3[1] = React5(View, obj8);
+  items3[1] = metroImportDefault(View, obj8);
   obj6.children = items3;
-  items1[1] = React6(View, obj6);
+  items1[1] = React5(View, obj6);
   let tmp15Result4 = null != fieldValue;
   if (tmp15Result4) {
     const obj10 = { style: null, pointerEvents: "none", onLayout: null, children: null };
@@ -147,22 +147,22 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
       ({ START: obj16.start, END: obj16.end } = HorizontalGradient);
       obj14.colors = colors;
       obj14.style = tmp.heroImageFadeGradient;
-      const items5 = [React5(LinearGradientDefault, obj14)];
+      const items5 = [metroImportDefault(LinearGradientDefault, obj14)];
       const obj15 = { style: tmp.heroImageMaskRemainder };
-      items5[1] = React5(View, obj15);
+      items5[1] = metroImportDefault(View, obj15);
       obj13.children = items5;
-      obj12.maskElement = React6(View, obj13);
+      obj12.maskElement = React5(View, obj13);
       const obj17 = { source: null, style: null };
       const obj18 = { uri: fieldValue.media.url };
       obj17.source = obj18;
       obj17.style = { width: "100%", height: "100%" };
-      obj12.children = React5(FastImageDefault, obj17);
-      tmp15Result3 = React5(_modDef7164, obj12);
+      obj12.children = metroImportDefault(FastImageDefault, obj17);
+      tmp15Result3 = metroImportDefault(_modDef7179, obj12);
     }
     obj10.children = tmp15Result3;
-    tmp15Result4 = React5(View, obj10);
+    tmp15Result4 = metroImportDefault(View, obj10);
   }
   items1[2] = tmp15Result4;
   obj5.children = items1;
-  return React6(View, obj5);
+  return React5(View, obj5);
 }

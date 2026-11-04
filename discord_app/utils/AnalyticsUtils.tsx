@@ -111,7 +111,7 @@ function expandEventProperties(arg0) {
 let closure_4 = ["location"];
 let closure_5 = ["source"];
 const ImpressionStore = fn(1253);
-({ setDebugTrackedData: closure_7, getLocation: closure_8 } = ImpressionStore);
+({ setDebugTrackedData: metroImportDefault, getLocation: closure_8 } = ImpressionStore);
 const Constants = fn(1072);
 ({ AnalyticEvents, AnalyticsObjectTypes: closure_10, AnalyticsSections: closure_11 } = Constants);
 const AccessibilityFeatureFlags = fn(1361).AccessibilityFeatureFlags;
@@ -788,11 +788,11 @@ export function isGameApplicationType(arg0) {
 }
 export function trackNetworkAction(event, arg1) {
   const merged = Object.assign(arg1);
-  const obj = { location: React6() };
+  const obj = { location: React5() };
   const obj2 = { type: "action" };
   const merged1 = Object.assign(arg1);
-  React5(event, obj2);
-  const tmp2 = expandEventProperties({ location: React6() });
+  metroImportDefault(event, obj2);
+  const tmp2 = expandEventProperties({ location: React5() });
   LogAggregatorAll.report("Analytics", event);
   closure_26(event, tmp2);
 }

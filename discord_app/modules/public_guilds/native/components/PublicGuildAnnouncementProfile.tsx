@@ -6,7 +6,7 @@ import Sheet_BottomSheet from "../../../../design/components/Sheet/native/Bottom
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import PublicGuildsUtils from "../../PublicGuildsUtils.tsx";
-import _modDef11801 from "../../../../../_runtime/metro/11801__.js";
+import _modDef11858 from "../../../../../_runtime/metro/11858__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -33,7 +33,7 @@ export default function PublicGuildAnnouncementProfile() {
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   items = [React4(tmp2, obj3), , ,];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11801, disableColor: true })];
+  const items1 = [React4(native.Icon, { source: _modDef11858, disableColor: true })];
   const obj7 = {
     style: tmp.headerText,
     variant: "heading-xl/semibold",
@@ -45,11 +45,11 @@ export default function PublicGuildAnnouncementProfile() {
   items1[1] = React4(Text_Text.Text, obj7);
   obj5.children = items1;
   items[1] = hasOwnProperty(View, obj5);
-  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj8 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(util.t.BUZ0sl);
   items[2] = React4(Text_Text.Text, obj8);
-  const obj9 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj9 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;
   obj9.children = intl3.string(util.t.w5beJH);
   items[3] = React4(Text_Text.Text, obj9);

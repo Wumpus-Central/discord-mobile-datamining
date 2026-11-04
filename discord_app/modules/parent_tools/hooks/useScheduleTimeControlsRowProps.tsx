@@ -10,11 +10,11 @@ const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSchedul
 
 export default function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
-    const obj2 = { subLabel: null, trailing: "y" };
-    const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
+    const obj2 = { subLabel: null, trailing: "a" };
+    const obj3 = { variant: "body-xs/medium", color: "text-muted", children: null };
     const intl = util.intl;
     obj3.children = intl.string(_modDef2667.fOBIZH);
-    obj2.subLabel = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
+    obj2.subLabel = jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-muted", children: null });
     return obj2;
   } else {
     const obj4 = { subLabel: null, trailing: null };
@@ -29,8 +29,8 @@ export default function useScheduleTimeControlsRowProps(arr) {
     } else {
       stringResult = string(tmp11["4z9fN+"]);
     }
-    const obj = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
-    obj4.trailing = jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: stringResult });
+    const obj = { variant: "body-sm/medium", color: "text-muted", children: stringResult };
+    obj4.trailing = jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", children: stringResult });
     return obj4;
   }
 }

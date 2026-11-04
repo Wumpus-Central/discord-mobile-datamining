@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7497);
+const Constants = fn(7513);
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: closure_4 } = Constants);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   title: {
@@ -72,7 +72,7 @@ export default function UserProfileCard(arg0) {
       const obj4 = {
         style: tmp2.text,
         accessibilityRole: "header",
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-strong",
         lineClamp: 1,
         children: title,
@@ -119,7 +119,7 @@ export function UserProfileFormRow(arg0) {
     labelColor = str2;
   }
   items[1] = hasOwnProperty(Text_Text.Text, {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: labelColor,
     style: tmp.rowLabelText,
     children: label,
@@ -149,5 +149,5 @@ export function UserProfileCardRows(children) {
   const obj = { children: null };
   const Children = noop.Children;
   obj.children = Children.map(children.children, (children, arg1) => closure_1_5(React.Fragment, { children }, arg1));
-  return hasOwnProperty(React5, obj);
+  return hasOwnProperty(metroImportDefault, obj);
 }

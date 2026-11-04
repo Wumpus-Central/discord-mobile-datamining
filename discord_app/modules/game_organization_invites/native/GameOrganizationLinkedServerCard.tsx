@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const XLARGE = fn(7083).GuildIconSizes.XLARGE;
+const XLARGE = fn(7098).GuildIconSizes.XLARGE;
 const createStyles = fn(5141);
 const obj2 = {
   card: { padding: nativeDefault.space.PX_16 },
@@ -60,7 +60,7 @@ export default function GameOrganizationLinkedServerCard(linkedGuild) {
   const obj6 = { spacing: nativeDefault.space.PX_4, style: tmp.info, children: null };
   const items1 = [
     React4(Text_Text.Text, {
-      variant: "text-lg/semibold",
+      variant: "body-lg/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       children: name,
@@ -87,7 +87,7 @@ export default function GameOrganizationLinkedServerCard(linkedGuild) {
     ({ dot: arr3[0], onlineDot: arr3[1] } = tmp);
     obj9.style = items2;
     const items3 = [React4(View, obj9)];
-    const obj10 = { variant: "text-md/medium", color: "text-muted", children: null };
+    const obj10 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = util.intl;
     const obj11 = { membersOnline: presenceCount };
     obj10.children = intl.formatToPlainString(util.t["LC+S+m"], obj11);
@@ -110,7 +110,7 @@ export default function GameOrganizationLinkedServerCard(linkedGuild) {
     ({ dot: arr6[0], membersDot: arr6[1] } = tmp);
     obj13.style = items5;
     const items6 = [React4(View, obj13)];
-    const obj14 = { variant: "text-md/medium", color: "text-muted", children: null };
+    const obj14 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl2 = util.intl;
     const obj15 = { count: memberCount };
     obj14.children = intl2.formatToPlainString(util.t.zRl6XR, obj15);

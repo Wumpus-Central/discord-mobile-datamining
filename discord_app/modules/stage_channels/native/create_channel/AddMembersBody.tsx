@@ -47,8 +47,8 @@ function _toPropertyKey(obj) {
   return text;
 }
 get_ActivityIndicator = fn(17);
-({ View: closure_7, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(8071);
+({ View: metroImportDefault, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
+const ChannelPermissionsConstants = fn(8087);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
@@ -184,12 +184,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(5398).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(5400).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(5398).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(5400).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -218,13 +218,13 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(9190), obj10);
+  obj9.children = closure_16(pendingAdditions(9207), obj10);
   const items5 = [closure_16(closure_7, obj9), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
     const obj11 = { style: tmp3.inputDescContainer, children: null };
-    const obj12 = { style: tmp3.inputDescText, variant: "text-xs/medium", color: "text-default", children: inputDesc };
-    obj11.children = closure_16(guild(5747).Text, obj12);
+    const obj12 = { style: tmp3.inputDescText, variant: "body-xs/medium", color: "text-default", children: inputDesc };
+    obj11.children = closure_16(guild(5761).Text, obj12);
     tmp27Result = closure_16(tmp28, obj11);
   }
   items5[1] = tmp27Result;
@@ -233,7 +233,7 @@ export default function AddMembersBody(pendingAdditions) {
     const obj14 = { type: "warning", message: null, role: "status" };
     const intl4 = guild(1113).intl;
     obj14.message = intl4.string(guild(1113).t["5f3HIC"]);
-    obj13.children = closure_16(guild(8149).InlineNotice, obj14);
+    obj13.children = closure_16(guild(8165).InlineNotice, obj14);
     canEveryoneRoleResult = closure_16(tmp28, obj13);
   }
   items5[2] = canEveryoneRoleResult;
@@ -241,7 +241,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(9195).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(9212).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1113).intl;
         const obj17 = { query: str };
@@ -262,10 +262,10 @@ export default function AddMembersBody(pendingAdditions) {
     sections: null,
     keyboardShouldPersistTaps: "always",
   };
-  const tmp4Result = pendingAdditions(9190);
+  const tmp4Result = pendingAdditions(9207);
   obj19.contentContainerStyle = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5730)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5743)(obj).insets.bottom,
   };
   obj19.renderItem = function renderItem(item) {
     item = item.item;
@@ -356,7 +356,7 @@ export default function AddMembersBody(pendingAdditions) {
         style: sectionRowWrapper.sectionRowWrapper,
         maxFontSizeMultiplier: 2,
         accessibilityRole: "header",
-        variant: "text-sm/semibold",
+        variant: "body-sm/semibold",
         color: "interactive-text-default",
         children: tmp,
       };
@@ -368,6 +368,6 @@ export default function AddMembersBody(pendingAdditions) {
   tmp27Result2 = closure_16(BottomSheetSectionList, obj19);
   const obj20 = {
     paddingHorizontal: pendingAdditions(575).space.PX_16,
-    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5730)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(575).space.PX_16 + pendingAdditions(5743)(obj).insets.bottom,
   };
 }

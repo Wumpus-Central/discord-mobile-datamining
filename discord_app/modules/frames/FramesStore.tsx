@@ -16,7 +16,7 @@ function computeMuted(poolVisibility, userMuted) {
 function findFrameByIframeId(iframeId) {
   const values = map.values();
   for (const item10009 of values) {
-    if (React5(item10009)) {
+    if (metroImportDefault(item10009)) {
       if (item10009.data.iframeId === arg0) {
         obj.return();
         return item10009;
@@ -29,8 +29,8 @@ function findFrameByIframeId(iframeId) {
   asLaunched: c3,
   FrameIntent: closure_4,
   FrameLayoutModes: hasOwnProperty,
-  getFrameIntentForSurface: metroRequire,
-  isLaunched: closure_7,
+  getFrameIntentForSurface: closure_6,
+  isLaunched: metroImportDefault,
   makeFrameId: closure_8,
 } = FramesConstants);
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
@@ -49,7 +49,7 @@ prototype["getFrame"] = function getFrame(frameId) {
 };
 prototype["isFramePooled"] = function isFramePooled(frameId) {
   value = map.get(frameId);
-  let tmp2 = React5(value);
+  let tmp2 = metroImportDefault(value);
   if (tmp2) {
     tmp2 = "unpooled" !== value.data.poolVisibility;
   }
@@ -57,7 +57,7 @@ prototype["isFramePooled"] = function isFramePooled(frameId) {
 };
 prototype["isFrameVisible"] = function isFrameVisible(frameId) {
   value = map.get(frameId);
-  const tmp2 = React5(value);
+  const tmp2 = metroImportDefault(value);
   let tmp3 = !tmp2;
   if (tmp2) {
     tmp3 = "hidden" !== value.data.poolVisibility;
@@ -95,12 +95,12 @@ prototype["getFrameByEmbeddedContext"] = function getFrameByEmbeddedContext(cont
   }
 };
 prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
-  return map.get(React6(arg0, arg1));
+  return map.get(React5(arg0, arg1));
 };
 prototype["getFramesForSurface"] = function getFramesForSurface(arg0) {
   closure_0 = arg0;
   return Array.from(map.values()).filter(
-    (applicationId) => React6(applicationId.applicationId, closure_0) === applicationId.id,
+    (applicationId) => React5(applicationId.applicationId, closure_0) === applicationId.id,
   );
 };
 prototype["getFramesForChannel"] = function getFramesForChannel(id) {
@@ -235,7 +235,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     if (frameId === frameId) {
       frameId = null;
     }
-    if (!arr.some(React5)) {
+    if (!arr.some(metroImportDefault)) {
       muted = false;
     }
     arr = Array.from(map.values());
@@ -258,7 +258,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp5 = React5(value);
+      let tmp5 = metroImportDefault(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -282,7 +282,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp5 = React5(value);
+      let tmp5 = metroImportDefault(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -306,7 +306,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp4 = React5(value);
+      let tmp4 = metroImportDefault(value);
       if (tmp4) {
         let flag2 = tmp(value.data);
         if (flag2) {
@@ -338,7 +338,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp5 = React5(value);
+      let tmp5 = metroImportDefault(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -362,7 +362,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp5 = React5(value);
+      let tmp5 = metroImportDefault(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -386,7 +386,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp5 = React5(value);
+      let tmp5 = metroImportDefault(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -410,7 +410,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp5 = React5(value);
+      let tmp5 = metroImportDefault(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -434,7 +434,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp4 = React5(value);
+      let tmp4 = metroImportDefault(value);
       if (tmp4) {
         let flag2 = tmp(value.data);
         if (flag2) {
@@ -460,7 +460,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp3 = React5(value);
+      let tmp3 = metroImportDefault(value);
       if (tmp3) {
         let flag2 = value.data.userMuted !== muted;
         if (flag2) {
@@ -491,7 +491,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp4 = nextResult;
-        if (React5(nextResult)) {
+        if (metroImportDefault(nextResult)) {
           let obj = {};
           let merged = Object.assign(nextResult);
           let obj2 = {};
@@ -512,7 +512,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
       let flag = false;
       if (null != id) {
         value = map.get(id);
-        let tmp6 = React5(value);
+        let tmp6 = metroImportDefault(value);
         if (tmp6) {
           let flag2 = tmp3(value.data);
           if (flag2) {
@@ -541,7 +541,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
       let flag = false;
       if (null != id) {
         value = map.get(id);
-        let tmp6 = React5(value);
+        let tmp6 = metroImportDefault(value);
         if (tmp6) {
           let flag2 = tmp3(value.data);
           if (flag2) {
@@ -567,7 +567,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp3 = React5(value);
+      let tmp3 = metroImportDefault(value);
       if (tmp3) {
         let flag2 = value.data.iframeId !== iframeId;
         if (flag2) {
@@ -593,7 +593,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp4 = React5(value);
+      let tmp4 = metroImportDefault(value);
       if (tmp4) {
         let flag2 = value.data.iframeId === tmp;
         if (flag2) {
@@ -619,7 +619,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp5 = React5(value);
+      let tmp5 = metroImportDefault(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -643,7 +643,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp4 = React5(value);
+      let tmp4 = metroImportDefault(value);
       if (tmp4) {
         let flag2 = value.data.hostWindowKey === tmp;
         if (flag2) {
@@ -666,7 +666,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       value = map.get(frameId);
-      let tmp5 = React5(value);
+      let tmp5 = metroImportDefault(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {

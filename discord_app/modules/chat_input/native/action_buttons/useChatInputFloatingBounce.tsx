@@ -9,12 +9,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChatInputConstants = fn(12945);
+const ChatInputConstants = fn(13027);
 ({
   CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4,
   CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty,
-  CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: metroRequire,
-  CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: closure_7,
+  CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: closure_6,
+  CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: metroImportDefault,
 } = ChatInputConstants);
 let closure_8 = {
   code: "(function useChatInputFloatingBounceTsx1(finished){let[scheduleOnRN,setEnterFinished]=this.__closure;if(finished===true){scheduleOnRN(setEnterFinished,true);}})",
@@ -143,9 +143,11 @@ export default function useChatInputFloatingBounce(visible) {
       useChatInputFloatingBounceTsx2.__workletHash = 14048912962804;
       useChatInputFloatingBounceTsx2.__initData = tmp9;
       const result2 = sharedValue.set(
-        obj.withTiming(0, React5, "respect-motion-settings", useChatInputFloatingBounceTsx2),
+        obj.withTiming(0, metroImportDefault, "respect-motion-settings", useChatInputFloatingBounceTsx2),
       );
-      const result3 = sharedValue1.set(timing_timing.withTiming(hasOwnProperty, React5, "respect-motion-settings"));
+      const result3 = sharedValue1.set(
+        timing_timing.withTiming(hasOwnProperty, metroImportDefault, "respect-motion-settings"),
+      );
     }
   }, items1);
   const tmpResult = require("../../../../../_runtime/metro/01652__.js");

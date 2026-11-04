@@ -38,8 +38,8 @@ function dismissTopAlert() {
     if (first != null) {
       key = first.key;
     }
-    tmp(6080).dismissAlert(key);
-    const tmpResult = tmp(6080);
+    tmp(6095).dismissAlert(key);
+    const tmpResult = tmp(6095);
     tmp(1259).batchUpdates(() => {
       const useAlertStore = alerts(c2[11]).useAlertStore;
       return useAlertStore.setState({ alerts });
@@ -327,7 +327,7 @@ class AlertModal {
       str2 = "";
       tmp37Result = null;
       if ("" !== content) {
-        obj14 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
+        obj14 = { variant: "body-md/medium", color: "text-default", style: null, children: null };
         obj14.style = tmp3.contentText;
         obj14.children = content;
         tmp37Result = tmp37(tmp5(tmp6[26]).Text, obj14);
@@ -544,7 +544,7 @@ class AlertActionButton {
   }
 }
 get_ActivityIndicator = fn(17);
-({ View: closure_7, StyleSheet: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
+({ View: metroImportDefault, StyleSheet: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
 const ImpressionTypes = fn(1340).ImpressionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -587,7 +587,7 @@ let items = [
   {
     code: "(function withAlertModalSpring_AlertModalNativeTsx3(value,callback){let[withSpring,MODAL_SPRING]=this.__closure;return withSpring(value,MODAL_SPRING,'animate-always',callback);})",
   },
-  fn(5757).withSpring,
+  fn(5771).withSpring,
   { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5 },
 ];
 let closure_129_0;
@@ -639,7 +639,7 @@ export const AlertModalContainer = noop.memo(function AlertModalContainer() {
     const obj = { style: absoluteFillObject.absoluteFillObject, children: null };
     const obj2 = {
       onDismiss: dismissTopAlert,
-      children: closure_2_11(React5, { style: items.root, pointerEvents: "box-none", children }),
+      children: closure_2_11(metroImportDefault, { style: items.root, pointerEvents: "box-none", children }),
     };
     obj.children = closure_2_11(Dialog.Dialog, obj2);
     return closure_2_11(OverlayViewDefault, obj);

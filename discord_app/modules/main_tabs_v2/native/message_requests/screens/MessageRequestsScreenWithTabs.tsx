@@ -13,7 +13,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
 const createStyles = fn(5141);
 let obj = {
@@ -75,5 +75,5 @@ export default noop.memo(function MessageRequestsScreenWithTabs(navigation) {
   });
   items2[2] = timestampProducer(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "message_requests" });
   obj5.children = items2;
-  return React5(View, obj5);
+  return metroImportDefault(View, obj5);
 });

@@ -66,6 +66,7 @@ const obj = {
   CommonTriggerPointManager: null,
   CommunicationDisabledManager: null,
   ConjureBackgroundFramesManager: null,
+  ConjureProjectReconnectManager: null,
   ConjureTurnNotificationManager: null,
   ContactSyncLifecycleManager: null,
   CustomStatusManager: null,
@@ -286,6 +287,12 @@ obj.ConjureBackgroundFramesManager = {
   actions: ["FRAME_LAUNCH_START"],
   inlineRequire() {
     return require("ConjureBackgroundFramesManager").default;
+  },
+};
+obj.ConjureProjectReconnectManager = {
+  actions: ["POST_CONNECTION_OPEN"],
+  inlineRequire() {
+    return require("ConjureProjectReconnectManager").default;
   },
 };
 obj.ConjureTurnNotificationManager = {

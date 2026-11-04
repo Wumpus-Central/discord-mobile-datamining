@@ -10,8 +10,8 @@ fn(2170).THE_GAME_AWARD_WINNER_SKUS;
 const Constants = fn(1072);
 ({
   GIFTABLE_CURRENCIES: hasOwnProperty,
-  OperatingSystems: metroRequire,
-  SKUFlags: closure_7,
+  OperatingSystems: closure_6,
+  SKUFlags: metroImportDefault,
   SKUTypes: closure_8,
 } = Constants);
 let SKURecord;

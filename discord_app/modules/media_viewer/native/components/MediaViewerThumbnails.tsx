@@ -27,8 +27,8 @@ function ObscuredView(source) {
         str = "dark";
       }
       const obj3 = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
-      obj2.children = React6(tmp7Result, obj3);
-      tmp10Result = React6(_modDef1652.View, obj2);
+      obj2.children = React5(tmp7Result, obj3);
+      tmp10Result = React5(_modDef1652.View, obj2);
       tmpResult = PlatformUtils;
     } else {
       tmp10Result = null;
@@ -37,9 +37,9 @@ function ObscuredView(source) {
   return tmp10Result;
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8990);
-({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
+({ Pressable: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
+const Constants = fn(9007);
+({ THUMBNAIL_WIDTH_MARGIN: metroImportDefault, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -82,12 +82,12 @@ let closure_12 = noop.memo(function MediaThumbnail(source) {
     children: null,
   };
   const items3 = [
-    React6(FastImageDefault, { style: tmp.thumbnailImagePortrait, source: memo, enableAnimation: false }),
-    React6(ObscuredView, { source, index }),
+    React5(FastImageDefault, { style: tmp.thumbnailImagePortrait, source: memo, enableAnimation: false }),
+    React5(ObscuredView, { source, index }),
   ];
   obj2.children = items3;
-  obj.children = React7(hasOwnProperty, obj2);
-  return React6(_modDef1652.View, obj);
+  obj.children = React6(hasOwnProperty, obj2);
+  return React5(_modDef1652.View, obj);
 });
 let closure_13 = {
   code: "(function MediaViewerThumbnailsTsx1(){let[scrollEnabled]=this.__closure;return{scrollEnabled:scrollEnabled.get()};})",
@@ -118,7 +118,7 @@ export default function MediaViewerThumbnails(syncer) {
       if (variableWidthThumbnailsEnabled) {
         let arr = push(thumbnailScrollPositions[num].scrollStart);
       } else {
-        let arr3 = push(num * React5);
+        let arr3 = push(num * metroImportDefault);
       }
     }
     return items;
@@ -131,7 +131,7 @@ export default function MediaViewerThumbnails(syncer) {
   const items2 = [sources.length];
   const callback = headerBufferStyle.useCallback(
     (arg0, index) =>
-      React6(closure_12, {
+      React5(closure_12, {
         index,
         source: _undefined[index],
         numSources: _undefined.length,
@@ -162,9 +162,9 @@ export default function MediaViewerThumbnails(syncer) {
   const items5 = [headerBufferStyle];
   const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(MediaViewerThumbnailsTsx1);
   const items6 = [footerBufferStyle];
-  const callback1 = obj.useCallback(() => React6(_modDef1652.View, { style: headerBufferStyle }), items5);
+  const callback1 = obj.useCallback(() => React5(_modDef1652.View, { style: headerBufferStyle }), items5);
   const items7 = [index];
-  const callback2 = obj.useCallback(() => React6(_modDef1652.View, { style: footerBufferStyle }), items6);
+  const callback2 = obj.useCallback(() => React5(_modDef1652.View, { style: footerBufferStyle }), items6);
   const memo2 = obj.useMemo(() => index.get(), items7);
   return selectedIndex(tmp4(tmp5[14]).AnimatedFastList, {
     ref,

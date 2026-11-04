@@ -99,7 +99,7 @@ function usePremiumSince() {
   }, items5);
 }
 const useMemo = _mod19.useMemo;
-({ PremiumTypes: metroRequire, TENURE_BADGES: closure_7 } = PremiumConstants);
+({ PremiumTypes: closure_6, TENURE_BADGES: metroImportDefault } = PremiumConstants);
 const TieredTenureBadgeStatus = { UPCOMING: "upcoming", WITHHELD: "withheld", EARNED: "earned" };
 let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTenureBadging.tsx");
 

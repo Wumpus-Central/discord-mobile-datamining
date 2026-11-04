@@ -21,8 +21,8 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(12515).useLogAppLauncherEmptyStateView(
-    flag(11639).AppLauncherEmptyStateType.SEARCH_EMPTY,
+  const logAppLauncherEmptyStateView = flag(12596).useLogAppLauncherEmptyStateView(
+    flag(11690).AppLauncherEmptyStateType.SEARCH_EMPTY,
     showsGenericMessage.query,
   );
   items = [flag];
@@ -40,7 +40,7 @@ export default function EmptyState(showsGenericMessage) {
   }, items);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.textContainer, children: null };
-  const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj4 = { style: tmp.text, variant: "body-sm/medium", color: "text-default", children: null };
   let intl = flag(1113).intl;
   let string = intl.string;
   let t = flag(1113).t;
@@ -50,9 +50,9 @@ export default function EmptyState(showsGenericMessage) {
     stringResult = string(t.LSNOYf);
   }
   obj4.children = stringResult;
-  obj3.children = jsx(flag(5747).Text, {
+  obj3.children = jsx(flag(5761).Text, {
     style: tmp.text,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     children: null,
   });

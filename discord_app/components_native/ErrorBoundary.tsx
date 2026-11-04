@@ -60,12 +60,12 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(5754).Button, obj2);
+    return closure_9(tmp2(5768).Button, obj2);
   }
   obj = require("initialize");
 }
 get_ActivityIndicator = fn(17);
-({ NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ NativeModules: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -145,7 +145,7 @@ prototype["render"] = function render() {
     const intl2 = util.intl;
     obj.body = intl2.string(util.t.CvQlAH);
     ({ text: obj.titleStyle, text: obj.bodyStyle } = tmp);
-    const obj2 = { style: tmp.error, variant: "text-sm/medium", color: "text-muted", children: null };
+    const obj2 = { style: tmp.error, variant: "body-sm/medium", color: "text-muted", children: null };
     let str;
     if (error != null) {
       str = error.message;
@@ -161,16 +161,16 @@ prototype["render"] = function render() {
       str = "Unknown Error";
     }
     obj2.children = str;
-    items = [React7(Text_Text.Text, obj2), ,];
+    items = [React6(Text_Text.Text, obj2), ,];
     const obj3 = { style: tmp.buttons, children: null };
-    const items1 = [React7(MaybeClearBuildOverride, {})];
+    const items1 = [React6(MaybeClearBuildOverride, {})];
     const obj4 = { text: null, onPress: null };
     const intl3 = util.intl;
     obj4.text = intl3.string(util.t["4n8OJn"]);
     obj4.onPress = self.handleReload;
-    items1[1] = React7(components_Button_Button.Button, obj4);
+    items1[1] = React6(components_Button_Button.Button, obj4);
     obj3.children = items1;
-    items[1] = closure_1_10(React5, obj3);
+    items[1] = closure_1_10(metroImportDefault, obj3);
     items[2] = null;
     obj.children = items;
     let children = closure_1_10(native.EmptyState, obj);

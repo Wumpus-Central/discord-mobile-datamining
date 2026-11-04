@@ -16,10 +16,10 @@ export default function openConjureProjectsSheet() {
       }
     }
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13142, dependencyMap.paths), "ConjureProjectsSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13225, dependencyMap.paths), "ConjureProjectsSheet");
 }
 export function openConjureProjectsSheetForGuild(guildId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13142, dependencyMap.paths), "ConjureProjectsSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13225, dependencyMap.paths), "ConjureProjectsSheet", {
     guildId,
   });
 }

@@ -16,10 +16,10 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function TriggerFields(onValidityChange) {
   ({ rule, onChangeRule } = onValidityChange);
   if (obj.isRuleMLSpamFilter(rule)) {
-    const obj2 = { variant: "text-md/normal", color: "text-default", children: null };
+    const obj2 = { variant: "body-md/normal", color: "text-default", children: null };
     const intl = util.intl;
     obj2.children = intl.string(util.t["1YgPj/"]);
-    let tmp3 = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-default", children: null });
+    let tmp3 = jsx(Text_Text.Text, { variant: "body-md/normal", color: "text-default", children: null });
   } else {
     if (tmpResult.isRuleMentionSpamFilter(rule)) {
       const obj3 = { rule, onChangeRule, onValidityChange: onValidityChange.onValidityChange };

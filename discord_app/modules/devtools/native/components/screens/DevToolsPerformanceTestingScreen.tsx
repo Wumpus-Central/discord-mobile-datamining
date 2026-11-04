@@ -31,10 +31,10 @@ export default noop.memo(function DevToolsPerformanceTestingScreen() {
   obj4.children = entries.map((item) => {
     [tmp] = item;
     return jsx(
-      screenKey(7101).TableRow,
+      screenKey(7116).TableRow,
       {
         label: tmp2,
-        icon: jsx(screenKey(7101).TableRow.Icon, { IconComponent: tmp3 }),
+        icon: jsx(screenKey(7116).TableRow.Icon, { IconComponent: tmp3 }),
         arrow: true,
         onPress() {
           if (null != screenKey.push) {

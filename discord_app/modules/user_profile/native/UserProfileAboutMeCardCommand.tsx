@@ -37,7 +37,7 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   ({ application: require, command } = channel);
   channel = channel.channel;
   let obj = {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     onPress() {
       const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");
@@ -106,7 +106,7 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   items = ["/", command.displayName];
   obj.children = items;
   return jsxs(require("Text/Text").Text, {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     onPress() {
       const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");

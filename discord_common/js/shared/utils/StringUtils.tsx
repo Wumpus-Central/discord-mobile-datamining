@@ -44,7 +44,7 @@ export function upperCaseFirstChar(item) {
   }
   return str;
 }
-export (name, React6) => {
+export (name, React5) => {
   let str = arg2;
   if (arg2 === undefined) {
     str = "\u2026";
@@ -53,17 +53,17 @@ export (name, React6) => {
   let str2 = "";
   if (null != name) {
     str2 = "";
-    if (null != React6) {
-      if (concat.length <= React6) {
+    if (null != React5) {
+      if (concat.length <= React5) {
         str2 = concat;
       } else {
         if (re3.test(concat)) {
           items = [];
           HermesBuiltin.arraySpread(concat, 0);
-          const substr = items.slice(0, React6 - str.length);
+          const substr = items.slice(0, React5 - str.length);
           let str3 = substr.join("");
         } else {
-          str3 = concat.substring(0, React6 - str.length);
+          str3 = concat.substring(0, React5 - str.length);
         }
         const _HermesInternal = HermesInternal;
         concat = HermesInternal.concat;

@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/CaughtUpRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../_runtime/metro/00671__.js";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,9 +12,9 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let closure_9 = module_1652.createAnimatedComponent(fn(5747).Text);
-const createICYMIStyles = fn(18682);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+let closure_9 = module_1652.createAnimatedComponent(fn(5761).Text);
+const createICYMIStyles = fn(18783);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -83,14 +83,14 @@ export default function ExploreServersRow(visible) {
             return obj3;
           } else {
             dependencyMap(true);
-            v1(9048).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v1(9048);
+            v1(9065).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(9065);
             const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-            v1(9048).feedItemActioned(obj4);
-            const obj6 = v1(9048);
+            v1(9065).feedItemActioned(obj4);
+            const obj6 = v1(9065);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(18701).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(18800).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -267,7 +267,7 @@ export default function ExploreServersRow(visible) {
   const intl = tmp2(1113).intl;
   obj8.children = intl.string(require("util").t.xjxffq);
   items8[1] = closure_7(closure_9, obj8);
-  const obj9 = { variant: "text-md/normal", color: "text-default", style: null, children: null };
+  const obj9 = { variant: "body-md/normal", color: "text-default", style: null, children: null };
   const items10 = [tmp.subtitleText, animatedStyle2];
   obj9.style = items10;
   const intl2 = tmp2(1113).intl;

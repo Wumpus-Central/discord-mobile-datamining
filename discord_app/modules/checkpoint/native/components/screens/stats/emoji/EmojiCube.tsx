@@ -55,7 +55,7 @@ let obj2 = {
     width: 200,
     height: 200,
     borderWidth: 2,
-    borderColor: fn(6186).CHECKPOINT_PRIMARY,
+    borderColor: fn(6201).CHECKPOINT_PRIMARY,
     overflow: "hidden",
   },
   customEmoji: { width: 196, height: 196 },
@@ -93,41 +93,43 @@ let result = size.fileFinishedImporting("modules/checkpoint/native/components/sc
 
 export default function EmojiCube(emoji) {
   emoji = emoji.emoji;
+  let emojiURL;
   dependencyMap = undefined;
   items = [AccessibilityStore];
   const stateFromStores = emoji(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let emojiURL;
+  const result = emojiURL(1493)().width / 392;
+  emojiURL = undefined;
   if (null != emoji.id) {
-    const obj3 = { id: emoji.id, animated: null, size: 48 };
-    let tmp5 = !stateFromStores;
+    let obj2 = { id: emoji.id, animated: null, size: null };
+    let tmp6 = !stateFromStores;
     if (!stateFromStores) {
-      tmp5 = true === emoji.animated;
+      tmp6 = true === emoji.animated;
     }
-    obj3.animated = tmp5;
-    emojiURL = emojiURL(1411).getEmojiURL(obj3);
-    let obj2 = emojiURL(1411);
+    obj2.animated = tmp6;
+    obj2.size = 196 * result;
+    emojiURL = emojiURL(1411).getEmojiURL(obj2);
+    const tmp3Result = emojiURL(1411);
   }
-  const tmp6 = closure_7();
-  dependencyMap = tmp6;
-  const obj4 = { style: null, children: null };
-  let items1 = [tmp6.container, ,];
-  const obj5 = { transform: null };
-  let obj = emoji(504);
-  const items2 = [{ scale: emojiURL(1493)().width / 392 }];
-  obj5.transform = items2;
-  items1[1] = obj5;
+  const tmp7 = closure_7();
+  dependencyMap = tmp7;
+  const obj3 = { style: null, children: null };
+  let items1 = [tmp7.container, ,];
+  const obj4 = { transform: null };
+  const items2 = [{ scale: result }];
+  obj4.transform = items2;
+  items1[1] = obj4;
   items1[2] = emoji.style;
-  obj4.style = items1;
+  obj3.style = items1;
   const items3 = [,];
-  ({ topFace: arr4[0], topEmoji: arr4[1] } = tmp6);
+  ({ topFace: arr4[0], topEmoji: arr4[1] } = tmp7);
   const items4 = [items3, ,];
   const items5 = [,];
-  ({ leftFace: arr6[0], leftEmoji: arr6[1] } = tmp6);
+  ({ leftFace: arr6[0], leftEmoji: arr6[1] } = tmp7);
   items4[1] = items5;
   const items6 = [,];
-  ({ rightFace: arr7[0], rightEmoji: arr7[1] } = tmp6);
+  ({ rightFace: arr7[0], rightEmoji: arr7[1] } = tmp7);
   items4[2] = items6;
-  obj4.children = items4.map((item, index) => {
+  obj3.children = items4.map((item, index) => {
     [tmp, tmp2] = item;
     const obj = { style: null, children: null };
     items = [closure_2.face, tmp];

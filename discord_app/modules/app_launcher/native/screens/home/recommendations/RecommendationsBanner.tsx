@@ -11,7 +11,7 @@ import UserRecord from "../../../../../../records/UserRecord.tsx";
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
+({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
@@ -20,8 +20,8 @@ let closure_9 = createStyles.createStyles({
 });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11638);
-  heroMediaDimensions = heroMediaDimensions(12548).useHeroMediaDimensions({
+  let obj = heroMediaDimensions(11689);
+  heroMediaDimensions = heroMediaDimensions(12629).useHeroMediaDimensions({
     width: obj.useRequiredAppLauncherContext().width,
   });
   const tmp4 = useEmbeddedActivityBackgroundDefault({
@@ -67,7 +67,7 @@ let closure_11 = noop.memo(function ReccomendationBannerBot(applicationBot) {
     id = applicationBot.id;
   }
   if (id == null) {
-    id = React5;
+    id = metroImportDefault;
   }
   const obj = { displayProfile: useDisplayProfileDefault(id), user: null };
   const tmp3Result = useDisplayProfileDefault(id);

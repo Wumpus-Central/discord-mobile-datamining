@@ -6,7 +6,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod16811 from "../../../../../../_runtime/metro/16811__.js";
+import _mod16903 from "../../../../../../_runtime/metro/16903__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -127,7 +127,7 @@ export default function TwoFASetupSuccess() {
               c5 = 3;
               c6 = 1;
               const obj5 = {
-                value: setRegistering(6868).finishRegisterWebAuthnCredential(
+                value: setRegistering(6883).finishRegisterWebAuthnCredential(
                   intl.string(setRegistering(1113).t["8H5RmH"]),
                   closure_129_0,
                   closure_129_1,
@@ -145,9 +145,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(16799).close();
+              setError(16891).close();
               c4 = 0;
-              const obj = setError(16799);
+              const obj = setError(16891);
             }
             c4 = 0;
             c6 = 3;
@@ -185,10 +185,10 @@ export default function TwoFASetupSuccess() {
   let obj3 = { source: null, style: null };
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  obj3.source = _mod16811;
+  obj3.source = _mod16903;
   obj3.style = tmp.image;
   items[1] = closure_7(FastImageDefault, obj3);
-  let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  let obj4 = { style: tmp.success, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);
   items[2] = closure_7(Text_Text.Text, obj4);

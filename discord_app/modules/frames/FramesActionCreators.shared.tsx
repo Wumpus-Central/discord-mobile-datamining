@@ -269,7 +269,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(11076);
+    obj2 = obj2(11125);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -326,7 +326,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
             const applicationId = frame.applicationId;
             closure_129_1 = applicationId;
             const surface = frame.surface;
-            if (React7(frame)) {
+            if (React6(frame)) {
               let invite = frame.data.invite;
             } else {
               invite = frame.invite;
@@ -445,15 +445,15 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(6967);
+const FramesConstants = fn(6982);
 ({
-  FrameIntent: metroRequire,
-  FrameLayoutModes: closure_7,
+  FrameIntent: closure_6,
+  FrameLayoutModes: metroImportDefault,
   getFrameIntentForSurface: closure_8,
   isLaunched: closure_9,
   makeFrameId: closure_10,
 } = FramesConstants);
-const ActivityPanelModes = fn(5777).ActivityPanelModes;
+const ActivityPanelModes = fn(5791).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");

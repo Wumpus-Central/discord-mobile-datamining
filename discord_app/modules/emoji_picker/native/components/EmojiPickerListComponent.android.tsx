@@ -11,16 +11,16 @@ const require = globalThis.__r;
 const EmojiPickerNativeComponentDefault = EmojiPickerNativeComponent2;
 
 require = fn;
-const EmojiCategoryTypes = fn(6919).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(10073).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6934).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(10121).IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1228).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
 let closure_11 = createStyles.createStyles({ container: { flex: 1 } });
 const EmojiPickerNativeComponent = module_1652.createAnimatedComponent(EmojiPickerNativeComponentDefault);
-const BottomSheetModal = fn(5398);
-let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(fn(5398).SCROLLABLE_TYPE.SCROLLVIEW, EmojiPickerNativeComponent);
+const BottomSheetModal = fn(5400);
+let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(fn(5400).SCROLLABLE_TYPE.SCROLLVIEW, EmojiPickerNativeComponent);
 const MetaQuestUtils = fn(1624);
 let closure_13 = MetaQuestUtils.isMetaQuest();
 let closure_14 = { code: "(function EmojiPickerListComponentAndroidTsx1(){let[bottomSheetIndex]=this.__closure;return bottomSheetIndex.get();})" };
@@ -180,8 +180,8 @@ export default function EmojiPickerListComponent(analyticsLocations) {
       if (_undefined2.hasSearchUpsell) {
         const obj = { portalId: EmojiCategoryTypes.PREMIUM_UPSELL, children: null };
         const obj2 = { guildId, analyticsLocations, useTier0UpsellContent };
-        obj.children = React6(EmojiPickerPremiumSearchUpsell.PremiumSearchUpsell, obj2);
-        tmp = React6(PortalToNativeViewDefault, obj);
+        obj.children = React5(EmojiPickerPremiumSearchUpsell.PremiumSearchUpsell, obj2);
+        tmp = React5(PortalToNativeViewDefault, obj);
       }
       return tmp;
     }, items11)

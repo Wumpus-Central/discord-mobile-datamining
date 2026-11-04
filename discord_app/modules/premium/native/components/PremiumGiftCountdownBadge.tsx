@@ -52,7 +52,7 @@ export default function PremiumGiftCountdownBadge(text) {
   const items1 = [
     icon,
     React4(Text_Text.Text, {
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-overlay-light",
       style: tmp.text,
       children: text.text.toUpperCase(),

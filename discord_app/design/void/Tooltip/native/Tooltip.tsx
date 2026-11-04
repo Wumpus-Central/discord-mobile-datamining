@@ -102,7 +102,7 @@ export default function Tooltip(arrowHeight) {
   obj4.style = items3;
   let tmp10 = null;
   if (null != title) {
-    const obj5 = { style: tmp3.title, variant: "text-md/semibold", color: "text-overlay-light", children: title };
+    const obj5 = { style: tmp3.title, variant: "body-md/semibold", color: "text-overlay-light", children: title };
     tmp10 = closure_4(num2(LEFT[7]).Heading, obj5);
   }
   const items4 = [tmp10, ,];

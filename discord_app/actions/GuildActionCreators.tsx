@@ -220,7 +220,7 @@ let closure_26 = async function _joinGuild(arg0) {
                 obj2.title = intl.string(closure_1_0(1113).t.ZZlox4);
                 const intl2 = closure_1_0(1113).intl;
                 obj2.body = intl2.string(closure_1_0(1113).t.ZUEGFn);
-                closure_1_1(6078).show(obj2);
+                closure_1_1(6093).show(obj2);
               })();
               const obj17 = { cause: closure_131_12 };
               const joinGuildRefusedError3 = new closure_132_0(closure_132_3[16]).JoinGuildRefusedError(obj17);
@@ -821,7 +821,7 @@ export default {
               obj6(572).dispatch(obj10);
               const obj = obj6(572);
             }
-            const result = obj6(7622).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(7638).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -865,7 +865,7 @@ export default {
       request.rejectWithError = tmp5(1282).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(7622).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(7638).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -901,7 +901,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7622).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7638).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -919,7 +919,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7622).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7638).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },

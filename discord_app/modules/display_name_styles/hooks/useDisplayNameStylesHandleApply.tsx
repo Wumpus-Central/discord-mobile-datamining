@@ -118,8 +118,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                             closure_0 = tmp8;
                             closure_128_0 = undefined;
                             if (closure_2_1) {
-                              const result = displayNameStyles(16608).saveHexagonCampaignPreviousDisplayNameStyles();
-                              const obj4 = displayNameStyles(16608);
+                              const result = displayNameStyles(16698).saveHexagonCampaignPreviousDisplayNameStyles();
+                              const obj4 = displayNameStyles(16698);
                             }
                             if (closure_1_10) {
                               closure_1_12.current = true;
@@ -128,17 +128,17 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                               colors = 3;
                               c5 = 1;
                               const obj6 = {
-                                value: displayNameStyles(7273).saveProfileAndAccountChanges(obj5),
+                                value: displayNameStyles(7289).saveProfileAndAccountChanges(obj5),
                                 done: false,
                               };
                               return obj6;
                             } else if (closure_1_7) {
-                              const result1 = displayNameStyles(8862).setTryItOutDisplayNameStyles(displayNameStyles);
-                              const tmp31Result = displayNameStyles(8862);
+                              const result1 = displayNameStyles(8879).setTryItOutDisplayNameStyles(displayNameStyles);
+                              const tmp31Result = displayNameStyles(8879);
                             } else {
                               const obj7 = { guildId, displayNameStyles };
-                              displayNameStyles(8859).setPendingChanges(obj7);
-                              const tmp31Result2 = displayNameStyles(8859);
+                              displayNameStyles(8876).setPendingChanges(obj7);
+                              const tmp31Result2 = displayNameStyles(8876);
                             }
                           }
                         } else if (1 === tmp8) {
@@ -185,17 +185,17 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           }
                         }
                         const obj13 = {
-                          font_name: displayNameStyles(1405).DisplayNameFont[closure_2],
-                          effect_name: displayNameStyles(1404).DisplayNameEffect[c3],
+                          font_name: displayNameStyles(1404).DisplayNameFont[closure_2],
+                          effect_name: displayNameStyles(1405).DisplayNameEffect[c3],
                           colors,
                           entry_point,
                         };
                         closure_2_1(1252).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                         if (closure_129_1) {
-                          const result2 = displayNameStyles(16608).markHexagonCampaignPerkApplied(
+                          const result2 = displayNameStyles(16698).markHexagonCampaignPerkApplied(
                             constants2.DISPLAY_NAME_STYLE,
                           );
-                          const obj10 = displayNameStyles(16608);
+                          const obj10 = displayNameStyles(16698);
                         }
                         if (closure_1_8 != null) {
                           closure_1_8();

@@ -10,8 +10,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const InAppNotificationConstants = fn(11156);
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: metroRequire } =
+const InAppNotificationConstants = fn(11204);
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_6 } =
   InAppNotificationConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
@@ -98,7 +98,7 @@ export default noop.memo(function MessageNotification(notification) {
   const callback1 = guild.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(11204, dependencyMap.paths),
+        asyncRequireImpl(11254, dependencyMap.paths),
         { channelId: channel.id },
         "in-app-notification-settings-modal",
       ),

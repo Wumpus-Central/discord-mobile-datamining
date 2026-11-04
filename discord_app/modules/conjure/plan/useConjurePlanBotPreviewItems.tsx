@@ -218,13 +218,13 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                 ({ interactionName, messageType } = obj);
                 const StringResult = String(items.length + 1);
                 const obj3 = { channelId: id.id, content: bot, author: bot2, type: null };
-                const obj2 = projectId(6183);
+                const obj2 = projectId(6198);
                 if (messageType == null) {
                   messageType = constants2.DEFAULT;
                 }
                 const obj4 = {};
                 obj3.type = messageType;
-                const merged = Object.assign(exchanges(10449)(obj3));
+                const merged = Object.assign(exchanges(10497)(obj3));
                 obj4.id = StringResult;
                 obj4.state = constants.SENT;
                 if (null != interactionName) {
@@ -232,17 +232,17 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                   obj6 = {
                     id: StringResult,
                     name: interactionName,
-                    type: projectId(6190).InteractionTypes.APPLICATION_COMMAND,
-                    user: projectId(10449).userRecordToServer(currentUser),
+                    type: projectId(6205).InteractionTypes.APPLICATION_COMMAND,
+                    user: projectId(10497).userRecordToServer(currentUser),
                   };
                   obj5.interaction = obj6;
                   let obj7 = obj5;
-                  const tmp2Result = projectId(10449);
+                  const tmp2Result = projectId(10497);
                 } else {
                   obj7 = {};
                 }
                 const merged1 = Object.assign(obj7);
-                const tmp4 = exchanges(10449);
+                const tmp4 = exchanges(10497);
                 items.push({
                   key: StringResult,
                   record: obj2.createMessageRecord(obj4),

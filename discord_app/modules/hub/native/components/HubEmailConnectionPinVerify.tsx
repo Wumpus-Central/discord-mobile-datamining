@@ -62,7 +62,7 @@ export default function HubEmailConnectionPinVerify(email) {
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(14484).terminate();
+      closure_1_1(14564).terminate();
     };
   }, items);
   const obj = require("../../../../../_runtime/metro/00012__.js");
@@ -103,7 +103,7 @@ export default function HubEmailConnectionPinVerify(email) {
   const obj4 = { source: null };
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   const tmp7 = email;
-  obj4.source = require("../../../../../_runtime/metro/14485__.js");
+  obj4.source = require("../../../../../_runtime/metro/14565__.js");
   const items1 = [closure_8(require("FastImage"), obj4), , , , ,];
   const obj5 = {
     style: tmp.title,
@@ -115,11 +115,11 @@ export default function HubEmailConnectionPinVerify(email) {
   let intl = email(onClose[13]).intl;
   obj5.children = intl.string(email(onClose[13]).t.SJ3Lxc);
   items1[1] = closure_8(email(onClose[19]).Text, obj5);
-  const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj6 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   let intl2 = email(onClose[13]).intl;
   obj6.children = intl2.format(email(onClose[13]).t["b+W0oq"], { onClick: throttleResult, email });
   items1[2] = closure_8(email(onClose[19]).Text, obj6);
-  const obj7 = { style: tmp.label, variant: "text-sm/semibold", color: "text-muted", children: null };
+  const obj7 = { style: tmp.label, variant: "body-sm/semibold", color: "text-muted", children: null };
   const intl3 = email(onClose[13]).intl;
   obj7.children = intl3.string(email(onClose[13]).t.rpWT1s);
   items1[3] = closure_8(email(onClose[19]).Text, obj7);
@@ -142,7 +142,7 @@ export default function HubEmailConnectionPinVerify(email) {
   let tmp6Result = null != obj2;
   if (tmp6Result) {
     const obj9 = {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-feedback-critical",
       style: tmp.error,
       children: obj2.getAnyErrorMessage(),

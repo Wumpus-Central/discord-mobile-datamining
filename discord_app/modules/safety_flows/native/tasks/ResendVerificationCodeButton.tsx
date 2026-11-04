@@ -113,7 +113,7 @@ export default function ResendVerificationCodeButton(flowId) {
   let intl = flowId(countdown[8]).intl;
   obj.accessibilityLabel = intl.string(setLoading(countdown[9]).ah0EUu);
   let obj2 = {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-link",
     accessibilityLabel: null,
     importantForAccessibility: "no",
@@ -131,7 +131,7 @@ export default function ResendVerificationCodeButton(flowId) {
   }
   obj2.children = formatResult;
   obj.children = jsx(flowId(countdown[10]).Text, {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-link",
     accessibilityLabel: null,
     importantForAccessibility: "no",

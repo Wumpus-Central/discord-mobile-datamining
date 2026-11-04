@@ -12,7 +12,7 @@ import GuildThemePresets from "../../guild_themes/GuildThemePresets.tsx";
 import useRoutedActiveGuildThemeDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../ClientThemesBackgroundStore.tsx";
 
@@ -357,8 +357,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5710), obj);
-    const tmp2Result = reduced(5710);
+    tmp10Result = closure_6(reduced(5723), obj);
+    const tmp2Result = reduced(5723);
   }
   return tmp10Result;
 }
@@ -397,7 +397,7 @@ function ActiveGuildThemeGradient(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   softenGradient: { flex: 1 },
@@ -450,7 +450,7 @@ export default function ThemedGradient(overlayOpacity) {
           obj4.style = items2;
           items1[1] = timestampProducer(View, obj4);
           obj3.children = items1;
-          tmp64 = React5(View, obj3);
+          tmp64 = metroImportDefault(View, obj3);
           const tmp6Result10 = ColorUtils;
         }
         return tmp64;
@@ -473,7 +473,7 @@ export default function ThemedGradient(overlayOpacity) {
         obj8.style = items4;
         items3[1] = timestampProducer(View, obj8);
         obj7.children = items3;
-        tmp53 = React5(View, obj7);
+        tmp53 = metroImportDefault(View, obj7);
         const tmp6Result12 = ColorUtils;
       }
       return tmp53;
@@ -496,7 +496,7 @@ export default function ThemedGradient(overlayOpacity) {
       obj12.style = items6;
       items5[1] = timestampProducer(View, obj12);
       obj11.children = items5;
-      tmp42 = React5(View, obj11);
+      tmp42 = metroImportDefault(View, obj11);
       const tmp6Result13 = ColorUtils;
     }
     let tmp13 = tmp42;
@@ -519,7 +519,7 @@ export default function ThemedGradient(overlayOpacity) {
           obj16.style = items8;
           items7[1] = timestampProducer(View, obj16);
           obj15.children = items7;
-          tmp33 = React5(View, obj15);
+          tmp33 = metroImportDefault(View, obj15);
           const tmp6Result14 = ColorUtils;
         }
         tmp13 = tmp33;
@@ -543,7 +543,7 @@ export default function ThemedGradient(overlayOpacity) {
         obj20.style = items10;
         items9[1] = timestampProducer(View, obj20);
         obj19.children = items9;
-        tmp22 = React5(View, obj19);
+        tmp22 = metroImportDefault(View, obj19);
         const tmp6Result16 = ColorUtils;
       }
       tmp13 = tmp22;
@@ -593,7 +593,7 @@ export function CustomThemedGradient(overlayOpacity) {
     obj4.style = items1;
     items[1] = timestampProducer(View, obj4);
     obj3.children = items;
-    tmp12 = React5(View, obj3);
+    tmp12 = metroImportDefault(View, obj3);
     const tmp5Result = ColorUtils;
   }
   return tmp12;

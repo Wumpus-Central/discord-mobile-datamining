@@ -8,7 +8,7 @@ import MfaOptionScreenDefault from "MfaOptionScreen.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const buttonDefault = tmp15(17820);
+const buttonDefault = tmp15(17916);
 require = fn;
 function AndroidAuthRadioGroup(setAuthenticator) {
   setAuthenticator = setAuthenticator.setAuthenticator;
@@ -85,9 +85,9 @@ export default function WebAuthnScreen(arg0) {
           const intl = finish(1113).intl;
           dependencyMap(intl.string(finish(1113).t.xSCvBf));
         } else {
-          const result = finish(7244).captureWebAuthnException(error, {});
+          const result = finish(7264).captureWebAuthnException(error, {});
           dependencyMap(error.message);
-          const tmpResult = finish(7244);
+          const tmpResult = finish(7264);
         }
       })
       .finally(() => _undefined(false));
@@ -107,7 +107,7 @@ export default function WebAuthnScreen(arg0) {
   obj3.headerText = intl.string(finish(1113).t.saHocI);
   const intl2 = finish(1113).intl;
   obj3.subtitle = intl2.string(finish(1113).t.YpMrqM);
-  obj3.headerImage = challenge(finish(16833).KeyImage, {});
+  obj3.headerImage = challenge(finish(16925).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj4 = { authenticatorSelection, setAuthenticator: tmpResult[1], inProgress: null };

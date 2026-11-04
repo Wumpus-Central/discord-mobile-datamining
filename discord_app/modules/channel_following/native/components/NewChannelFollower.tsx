@@ -120,9 +120,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("../../../../../_runtime/metro/11334__.js");
+    let tmp8Result = require("../../../../../_runtime/metro/11384__.js");
   } else {
-    tmp8Result = require("../../../../../_runtime/metro/11335__.js");
+    tmp8Result = require("../../../../../_runtime/metro/11385__.js");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { style: tmp.header, children: null };
@@ -141,7 +141,7 @@ export default function NewChannelFollower(targetChannelId) {
   obj11.style = tmp.headerChannelIcon;
   const items4 = [
     closure_15(require("native").Icon, obj11),
-    closure_15(require("Text/Text").Text, { lineClamp: 1, variant: "text-sm/medium", children: tmp12 }),
+    closure_15(require("Text/Text").Text, { lineClamp: 1, variant: "body-sm/medium", children: tmp12 }),
   ];
   obj10.children = items4;
   obj9.children = closure_16(closure_5, obj10);
@@ -160,7 +160,7 @@ export default function NewChannelFollower(targetChannelId) {
   let intl = require("util").intl;
   obj13.children = intl.string(require("util").t.mvPFbA);
   const items6 = [closure_15(require("Text/Text").Text, obj13), , , , ,];
-  const obj14 = { style: tmp.ctaSubhead, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj14 = { style: tmp.ctaSubhead, variant: "body-sm/medium", color: "text-default", children: null };
   let intl2 = require("util").intl;
   obj14.children = intl2.string(require("util").t.kbpkxJ);
   items6[1] = closure_15(require("Text/Text").Text, obj14);
@@ -213,8 +213,8 @@ export default function NewChannelFollower(targetChannelId) {
     obj2.onClose = function onClose() {
       closure_1_4(targetGuildId, targetChannelId);
     };
-    obj.openLazy(asyncRequireImpl(9130, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
-    const tmp = asyncRequireImpl(9130, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(9147, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
+    const tmp = asyncRequireImpl(9147, dependencyMap.paths);
   };
   obj15.children = closure_15(require("TableRow").TableRow, obj16);
   const items7 = [closure_15(require("TableRowGroup").TableRowGroup, obj15)];

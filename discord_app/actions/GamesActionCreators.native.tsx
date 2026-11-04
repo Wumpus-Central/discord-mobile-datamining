@@ -2,6 +2,7 @@
 import DispatcherDefault from "../Dispatcher.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
 import getOrFetchApplicationDefault from "../modules/applications/getOrFetchApplication.tsx";
+import fetchDetectableGamesDefault from "../modules/game_detection/fetchDetectableGames.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
@@ -40,8 +41,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         const join_url = body.body.join_url;
         const secret = body.body.secret;
         if (null != join_url) {
-          applicationId(5829).openURL(join_url, constants.SAFARI);
-          const obj3 = applicationId(5829);
+          applicationId(5843).openURL(join_url, constants.SAFARI);
+          const obj3 = applicationId(5843);
           const obj2 = {
             type: "ACTIVITY_JOIN",
             applicationId,
@@ -66,8 +67,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         } else {
           const _HermesInternal = HermesInternal;
           const combined = "" + closure_1_4.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-          applicationId(5829).openURL(combined, constants.SAFARI);
-          const obj6 = applicationId(5829);
+          applicationId(5843).openURL(combined, constants.SAFARI);
+          const obj6 = applicationId(5843);
           const obj8 = {
             type: "ACTIVITY_JOIN",
             applicationId,
@@ -127,10 +128,10 @@ const Constants = fn(1072);
 ({
   Endpoints: closure_4,
   DiscordConnectDeeplinks: hasOwnProperty,
-  WebBrowserType: metroRequire,
-  ActivityFlags: closure_7,
+  WebBrowserType: closure_6,
+  ActivityFlags: metroImportDefault,
 } = Constants);
-const ActivityIntent = fn(11831).ActivityIntent;
+const ActivityIntent = fn(11888).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
@@ -142,12 +143,14 @@ export default {
     const error = new Error("not supported");
     return Promise.reject(error);
   },
-  getDetectableGames() {},
+  getDetectableGames() {
+    return fetchDetectableGamesDefault();
+  },
   deleteEntry() {},
   launch(arg0) {
     closure_0 = arg0;
     return (async () => {
-      await value(c2[9]).tryStartAsEmbeddedApp(closure_0);
+      await value(c2[10]).tryStartAsEmbeddedApp(closure_0);
       if (value == null) {
         value = false;
       }
@@ -207,7 +210,7 @@ export default {
               remotePartyId = closure_0.remotePartyId;
               c4 = 1;
               c5 = 1;
-              const obj4 = { value: c0(tmp2[9]).tryJoinAsFrame(closure_0), done: false };
+              const obj4 = { value: c0(tmp2[10]).tryJoinAsFrame(closure_0), done: false };
               return obj4;
             }
           } else {
@@ -257,7 +260,7 @@ export default {
                 obj7.analyticsLocations = closure_130_5;
                 c4 = 2;
                 c5 = num5;
-                const obj8 = { value: activityChannelId(tmp2[10])(obj7), done: false };
+                const obj8 = { value: activityChannelId(tmp2[11])(obj7), done: false };
                 return obj8;
               }
             } else if (arg0 === num5) {

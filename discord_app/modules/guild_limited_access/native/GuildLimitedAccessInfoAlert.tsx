@@ -9,9 +9,9 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
 require = fn;
-const helpdeskArticle = fn(6842).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(6857).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { header: null, text: null };
 let obj3 = {};
@@ -45,7 +45,7 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   obj4.children = intl3.string(util.t.kJwpBW);
   items = [
     hasOwnProperty(native.LegacyText, obj4),
-    hasOwnProperty(Text_Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 }),
+    hasOwnProperty(Text_Text.Text, { style: tmp.text, variant: "body-md/medium", children: formatResult1 }),
   ];
   obj3.children = items;
   return timestampProducer(common_AlertDefault, obj3);

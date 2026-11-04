@@ -7,7 +7,11 @@ import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, InstantInviteSources: metroRequire, RelationshipTypes: closure_7 } = Constants);
+({
+  AnalyticEvents: hasOwnProperty,
+  InstantInviteSources: closure_6,
+  RelationshipTypes: metroImportDefault,
+} = Constants);
 const jsx = fn(21).jsx;
 let closure_9 = { ADD: "add" };
 const size = fn(2);

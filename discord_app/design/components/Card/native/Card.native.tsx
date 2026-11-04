@@ -169,7 +169,7 @@ function PressableCard(start) {
 }
 let closure_3 = ["accessibilityRole"];
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, Pressable } = get_ActivityIndicator);
+({ View: closure_6, Pressable } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let closure_8 = module_1652.createAnimatedComponent(Pressable);
 let createStyles = fn(5141);

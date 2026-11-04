@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8517);
+const GuildTagConstants = fn(8534);
 ({
-  GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire,
-  GUILD_TAG_BADGE_PALETTE_PRESETS: closure_7,
+  GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6,
+  GUILD_TAG_BADGE_PALETTE_PRESETS: metroImportDefault,
   GuildTagBadgeSize: closure_8,
 } = GuildTagConstants);
 const jsxProd = fn(21);

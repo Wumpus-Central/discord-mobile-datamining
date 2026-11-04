@@ -13,9 +13,9 @@ function closeActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet();
 }
 const View = fn(17).View;
-const FeedbackRating = fn(10288).FeedbackRating;
+const FeedbackRating = fn(10336).FeedbackRating;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
@@ -78,8 +78,8 @@ export default function FeedbackActionSheet(feedbackReasons) {
         tmp14 = View(reason);
       }
       obj3.descriptionLabel = tmp14;
-      obj2.pushLazy(asyncRequireImpl(10310, dependencyMap.paths), obj3);
-      const tmp9 = asyncRequireImpl(10310, dependencyMap.paths);
+      obj2.pushLazy(asyncRequireImpl(10358, dependencyMap.paths), obj3);
+      const tmp9 = asyncRequireImpl(10358, dependencyMap.paths);
     } else {
       const obj = { rating, reason, dontShowAgain: first1 };
       trackReport(obj);
@@ -141,7 +141,7 @@ export default function FeedbackActionSheet(feedbackReasons) {
   if (null != ratingsBodyLabel) {
     const obj7 = {
       style: tmp.ratingsHeader,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-default",
       children: ratingsBodyLabel,
     };

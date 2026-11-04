@@ -17,7 +17,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
@@ -56,7 +56,7 @@ export default function ConjureAppBuildRequestCard(arg0) {
   let obj3 = { style: tmp.header, children: null };
   const obj4 = { style: tmp.heading, children: null };
   obj4.children = closure_5(Text_Text.Text, {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "text-default",
     accessibilityRole: "header",
     children: request.summary,
@@ -75,7 +75,7 @@ export default function ConjureAppBuildRequestCard(arg0) {
   obj3.children = items;
   const items1 = [closure_6(closure_4, obj3), , ,];
   if (0 === conjureAppBuildRequestForm.projects.length) {
-    const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj7 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl4 = util.intl;
     obj7.children = intl4.string(tmp5(3995).TbbzW5);
     let tmp10Result = closure_5(Text_Text.Text, obj7);
@@ -161,5 +161,5 @@ export default function ConjureAppBuildRequestCard(arg0) {
   obj13.children = closure_5(components_Button_Button.Button, obj24);
   items1[3] = closure_5(closure_4, obj13);
   obj2.children = items1;
-  return closure_6(conjureAppBuildRequestForm(12272), obj2);
+  return closure_6(conjureAppBuildRequestForm(12333), obj2);
 }

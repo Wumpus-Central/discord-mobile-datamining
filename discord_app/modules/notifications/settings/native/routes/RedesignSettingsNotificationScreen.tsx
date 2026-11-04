@@ -10,8 +10,8 @@ import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilder
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(17619).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+let closure_4 = fn(17709).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -26,7 +26,7 @@ export default noop.memo(function RedesignSettingsNotificationsScreen() {
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };
     const obj = SettingBuilders;
-    items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection()];
+    items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection(), ,];
     const obj4 = { label: null, settings: null };
     const intl = util.intl;
     obj4.label = intl.string(_modDef2995.nvBHcD);
@@ -42,6 +42,10 @@ export default noop.memo(function RedesignSettingsNotificationsScreen() {
     } = MobileUserSettings);
     obj4.settings = items1;
     items[1] = obj4;
+    const obj5 = { settings: null };
+    const items2 = [MobileUserSettings.REDESIGN_EMAIL_NOTIFICATIONS];
+    obj5.settings = items2;
+    items[2] = obj5;
     obj2.sections = items;
     let tmp2Result;
     if (closure_0) {

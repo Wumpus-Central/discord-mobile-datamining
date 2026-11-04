@@ -16,7 +16,7 @@ import DevSettingsStore from "../../../dev_settings/DevSettingsStore.tsx";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },

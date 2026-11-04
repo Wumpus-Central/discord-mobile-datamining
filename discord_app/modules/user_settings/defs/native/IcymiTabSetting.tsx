@@ -35,9 +35,8 @@ const toggle = SettingBuilders.createToggle({
     LabFeatureActions.toggleLabFeature(ICYMIExperiment.ICYMI_LAB_FEATURE, { enabled });
     const obj2 = { enabled };
   },
-  usePredicate: function useICYMIPredicate() {
-    const ICYMIStaffOnlyExperiment = ICYMIExperiment.ICYMIStaffOnlyExperiment;
-    return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
+  usePredicate: function useLegacyICYMITabSettingVisible() {
+    return false;
   },
 });
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/IcymiTabSetting.tsx");

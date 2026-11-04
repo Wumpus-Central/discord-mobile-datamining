@@ -10,8 +10,8 @@ const PremiumConstants = fn(1387);
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c3,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_4,
   PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID: hasOwnProperty,
-  PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID: metroRequire,
-  PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_7,
+  PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID: closure_6,
+  PREMIUM_TIER_2_REFERRAL_TRIAL_ID: metroImportDefault,
   PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID: closure_8,
 } = PremiumConstants);
 const size = fn(2);
@@ -52,16 +52,16 @@ export function useAndroidAndLegacyIOSPremiumTrialOfferCandidates() {
     tmp10 = trialOffer3;
   }
   const tmpResult6 = useTrialOffer;
-  const trialOffer4 = useTrialOffer.useTrialOffer(React5);
-  const values9 = Object.values(ProductIds.TrialIdToProductOfferId[React5]);
+  const trialOffer4 = useTrialOffer.useTrialOffer(metroImportDefault);
+  const values9 = Object.values(ProductIds.TrialIdToProductOfferId[metroImportDefault]);
   let tmp12 = null;
   if (values9.every((item) => offerIds.has(item))) {
     tmp12 = trialOffer4;
   }
   const items1 = [tmp12, tmp4, tmp6, tmp8, ,];
   const tmpResult7 = useTrialOffer;
-  const trialOffer5 = useTrialOffer.useTrialOffer(React6);
-  const values10 = Object.values(ProductIds.TrialIdToProductOfferId[React6]);
+  const trialOffer5 = useTrialOffer.useTrialOffer(React5);
+  const values10 = Object.values(ProductIds.TrialIdToProductOfferId[React5]);
   let tmp14 = null;
   if (values10.every((item) => offerIds.has(item))) {
     tmp14 = trialOffer5;

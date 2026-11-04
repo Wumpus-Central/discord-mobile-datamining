@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = {
@@ -71,12 +71,12 @@ export default function ForumComposerHeader(height) {
     hasOwnProperty(Text_Text.Text, {
       lineClamp: 1,
       ellipsizeMode: "tail",
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-default",
       children: useChannelNameDefault(channel),
     }),

@@ -9,7 +9,7 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import SlowmodeStore from "../../stores/SlowmodeStore.tsx";
 
 require = fn;
-const SlowmodeType = fn(7954).SlowmodeType;
+const SlowmodeType = fn(7970).SlowmodeType;
 const ActivityActionTypes = fn(1072).ActivityActionTypes;
 const ChannelFlags = fn(4997).ChannelFlags;
 const size = fn(2);

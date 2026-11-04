@@ -49,7 +49,7 @@ export function SummaryActionSheetButton(label) {
     React3(View, obj2),
     React3(Text_Text.Text, {
       style: tmp.name,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       lineClamp: 1,
       children: label,

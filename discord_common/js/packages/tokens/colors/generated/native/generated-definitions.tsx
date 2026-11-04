@@ -18,11 +18,11 @@ const obj2 = {
   BACKGROUND_BASE_LOWEST: null,
   BACKGROUND_BRAND: null,
   BACKGROUND_CODE: null,
-  BACKGROUND_FEEDBACK_CRITICAL: null,
-  BACKGROUND_FEEDBACK_INFO: null,
+  BACKGROUND_FEEDBACK_MOD_CRITICAL: null,
+  BACKGROUND_FEEDBACK_MOD_INFO: null,
+  BACKGROUND_FEEDBACK_MOD_POSITIVE: null,
+  BACKGROUND_FEEDBACK_MOD_WARNING: null,
   BACKGROUND_FEEDBACK_NOTIFICATION: null,
-  BACKGROUND_FEEDBACK_POSITIVE: null,
-  BACKGROUND_FEEDBACK_WARNING: null,
   BACKGROUND_MOD_MUTED: null,
   BACKGROUND_MOD_NORMAL: null,
   BACKGROUND_MOD_STRONG: null,
@@ -547,31 +547,31 @@ obj16[Themes.ASH] = { raw: "OPACITY_RED_8", opacity: 0.0784313725490196 };
 obj16[Themes.LIGHT] = { raw: "OPACITY_RED_8", opacity: 0.0784313725490196 };
 obj16[Themes.ONYX] = { raw: "OPACITY_RED_8", opacity: 0.0784313725490196 };
 obj16[Themes.DARK] = { raw: "OPACITY_RED_8", opacity: 0.0784313725490196 };
-obj2.BACKGROUND_FEEDBACK_CRITICAL = obj16;
+obj2.BACKGROUND_FEEDBACK_MOD_CRITICAL = obj16;
 const obj17 = { category: "background" };
 obj17[Themes.ASH] = { raw: "OPACITY_BLUE_8", opacity: 0.0784313725490196 };
 obj17[Themes.LIGHT] = { raw: "OPACITY_BLUE_8", opacity: 0.0784313725490196 };
 obj17[Themes.ONYX] = { raw: "OPACITY_BLUE_8", opacity: 0.0784313725490196 };
 obj17[Themes.DARK] = { raw: "OPACITY_BLUE_8", opacity: 0.0784313725490196 };
-obj2.BACKGROUND_FEEDBACK_INFO = obj17;
+obj2.BACKGROUND_FEEDBACK_MOD_INFO = obj17;
 const obj18 = { category: "background" };
-obj18[Themes.ASH] = { raw: "RED_NEW_50", opacity: 1 };
-obj18[Themes.LIGHT] = { raw: "RED_NEW_50", opacity: 1 };
-obj18[Themes.ONYX] = { raw: "RED_NEW_50", opacity: 1 };
-obj18[Themes.DARK] = { raw: "RED_NEW_50", opacity: 1 };
-obj2.BACKGROUND_FEEDBACK_NOTIFICATION = obj18;
+obj18[Themes.ASH] = { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 };
+obj18[Themes.LIGHT] = { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 };
+obj18[Themes.ONYX] = { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 };
+obj18[Themes.DARK] = { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 };
+obj2.BACKGROUND_FEEDBACK_MOD_POSITIVE = obj18;
 const obj19 = { category: "background" };
-obj19[Themes.ASH] = { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 };
-obj19[Themes.LIGHT] = { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 };
-obj19[Themes.ONYX] = { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 };
-obj19[Themes.DARK] = { raw: "OPACITY_GREEN_8", opacity: 0.0784313725490196 };
-obj2.BACKGROUND_FEEDBACK_POSITIVE = obj19;
+obj19[Themes.ASH] = { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 };
+obj19[Themes.LIGHT] = { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 };
+obj19[Themes.ONYX] = { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 };
+obj19[Themes.DARK] = { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 };
+obj2.BACKGROUND_FEEDBACK_MOD_WARNING = obj19;
 const obj20 = { category: "background" };
-obj20[Themes.ASH] = { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 };
-obj20[Themes.LIGHT] = { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 };
-obj20[Themes.ONYX] = { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 };
-obj20[Themes.DARK] = { raw: "OPACITY_YELLOW_8", opacity: 0.0784313725490196 };
-obj2.BACKGROUND_FEEDBACK_WARNING = obj20;
+obj20[Themes.ASH] = { raw: "RED_NEW_50", opacity: 1 };
+obj20[Themes.LIGHT] = { raw: "RED_NEW_50", opacity: 1 };
+obj20[Themes.ONYX] = { raw: "RED_NEW_50", opacity: 1 };
+obj20[Themes.DARK] = { raw: "RED_NEW_50", opacity: 1 };
+obj2.BACKGROUND_FEEDBACK_NOTIFICATION = obj20;
 const obj21 = { category: "background" };
 obj21[Themes.ASH] = { raw: "OPACITY_8", opacity: 0.0784313725490196 };
 obj21[Themes.LIGHT] = { raw: "OPACITY_8", opacity: 0.0784313725490196 };

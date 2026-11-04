@@ -17,7 +17,7 @@ function BurstReactionAnimationContainerInner() {
       dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
       closure_1_4(true);
       _undefined4.current = true;
-      const result = handleEffectReceived(5383).triggerHapticFeedback(c1(5384).IMPACT_HEAVY);
+      const result = handleEffectReceived(5384).triggerHapticFeedback(c1(5385).IMPACT_HEAVY);
     }
     const subscription = _undefined2(_undefined3[10]).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
@@ -150,7 +150,7 @@ function BurstReactionAnimationContainerInner() {
         _undefined(_undefined3[15]).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
         const obj8 = { children: null };
-        const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
+        const obj9 = { style: tmp4.dismissTextContainer, variant: "body-sm/medium", children: null };
         const intl = _undefined(_undefined3[19]).intl;
         obj9.children = intl.string(_undefined(_undefined3[19]).t.QpPMih);
         const items2 = [closure_1_8(_undefined(_undefined3[18]).Text, obj9)];
@@ -170,7 +170,7 @@ function BurstReactionAnimationContainerInner() {
   return tmp15;
 }
 get_ActivityIndicator = fn(17);
-({ TouchableOpacity: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ TouchableOpacity: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
@@ -208,8 +208,8 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx");
 
 export default function BurstReactionAnimationContainer() {
-  return React6(native.ThemeContextProvider, {
+  return React5(native.ThemeContextProvider, {
     theme: nativeDefault.themes.DARK,
-    children: React6(BurstReactionAnimationContainerInner, {}),
+    children: React5(BurstReactionAnimationContainerInner, {}),
   });
 }

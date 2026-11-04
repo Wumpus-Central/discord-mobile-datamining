@@ -53,7 +53,7 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
   });
 }
 let closure_4 = fn(4994).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8327).PAGE_SIZE;
+const PAGE_SIZE = fn(8343).PAGE_SIZE;
 const Constants = fn(1072);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
 const ChannelFlags = fn(4997).ChannelFlags;

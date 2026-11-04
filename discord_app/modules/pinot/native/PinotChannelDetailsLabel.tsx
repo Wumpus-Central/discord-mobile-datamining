@@ -57,14 +57,14 @@ export function PinotChannelDetailsLabel(channel) {
       accessibilityHint: stringResult1,
       children: null,
     };
-    const obj3 = { variant: "text-xs/medium", color: "none", style: tmp.text, children: stringResult };
-    obj2.children = jsx(tmp2(5747).Text, {
-      variant: "text-xs/medium",
+    const obj3 = { variant: "body-xs/medium", color: "none", style: tmp.text, children: stringResult };
+    obj2.children = jsx(tmp2(5761).Text, {
+      variant: "body-xs/medium",
       color: "none",
       style: tmp.text,
       children: stringResult,
     });
-    return jsx(tmp2(7106).PressableOpacity, {
+    return jsx(tmp2(7121).PressableOpacity, {
       onPress: function handlePress() {
         ToastActionCreatorsDefault.open("PINOT_CHANNEL_DETAILS_LABEL", { text: stringResult1 });
       },
@@ -78,5 +78,5 @@ export function PinotChannelDetailsLabel(channel) {
   } else {
     return null;
   }
-  obj = stringResult1(11457);
+  obj = stringResult1(11507);
 }

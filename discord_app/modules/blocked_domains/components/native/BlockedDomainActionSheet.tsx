@@ -39,7 +39,7 @@ export default function BlockedDomainActionSheet(url) {
   const intl = util.intl;
   obj4.children = intl.string(util.t["2B3wj8"]);
   items[1] = React3(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.warningMessage, variant: "text-md/medium", children: null };
+  const obj5 = { style: tmp.warningMessage, variant: "body-md/medium", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.format(util.t.jnHyYU, {});
   items[2] = React3(Text_Text.Text, obj5);

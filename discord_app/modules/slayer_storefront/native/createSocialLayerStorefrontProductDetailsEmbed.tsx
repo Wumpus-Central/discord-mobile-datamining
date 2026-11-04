@@ -1,147 +1,261 @@
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
+import _mod17 from "../../../../_runtime/metro/00017__.js";
 import util from "../../../intl/index.native.tsx";
-import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import PremiumConstants from "../../premium/PremiumConstants.tsx";
+import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import _modDef3865 from "../intl/SlayerStorefront.messages.js";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
+import OrbCheckoutUtils from "../../virtual_currency/checkout/OrbCheckoutUtils.tsx";
+import Constants from "../../instant_invite/Constants.tsx";
 import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
+import _modDef9680 from "../../../../_runtime/metro/09680__.js";
+import CodedLinksConstants from "../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksConstants.tsx";
+import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice.android.tsx";
+import SocialLayerStorefrontMobileEmbedExperiment from "../experiments/SocialLayerStorefrontMobileEmbedExperiment.tsx";
 import isSocialLayerApplicationDefault from "../../applications/isSocialLayerApplication.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails.tsx";
+import socialLayerStorefrontEmbedColors from "socialLayerStorefrontEmbedColors.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
+import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
+import WishlistStore from "../../wishlists/WishlistStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 import SKUStore from "../../../stores/game_store/SKUStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-
-require = fn;
-const InviteTypes = fn(8003).InviteTypes;
-const size = fn(2);
+const Image = _mod17.Image;
+const InviteTypes = Constants.InviteTypes;
+const CodedLinkExtendedType = CodedLinksConstants.CodedLinkExtendedType;
+const PremiumTypes = PremiumConstants.PremiumTypes;
 let result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx",
 );
 
-export function createSocialLayerStorefrontProductDetailsEmbed(theme) {
-  ({ skuId, guildOrApplication } = theme);
-  ({ colors, baseColors } = getEmbedThemeColorsDefault(theme.theme));
+export function createSocialLayerStorefrontProductDetailsEmbed(arg0) {
+  ({ skuId, guildOrApplication, theme } = arg0);
+  const isEligibleForSocialLayerStorefrontMobileEmbed =
+    SocialLayerStorefrontMobileEmbedExperiment.getIsEligibleForSocialLayerStorefrontMobileEmbed({
+      location: "create_coded_link_embeds",
+      autoTrackExposure: true,
+    });
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(theme));
   value = SKUStore.get(skuId);
-  let applicationId;
-  if (value != null) {
-    applicationId = value.applicationId;
-  }
-  const application = ApplicationStore.getApplication(applicationId);
-  const tmp3 = getEmbedThemeColorsDefault(theme.theme);
-  let result = null != applicationId;
-  SKUStore.didFetchingSkuFail(skuId);
-  if (result) {
-    result = ApplicationStore.isFetchingApplication(applicationId);
-  }
-  null != applicationId && ApplicationStore.didFetchingApplicationFail(applicationId);
-  let name;
-  if (application != null) {
-    name = application.name;
-  }
-  if (name == null) {
-    const intl = util.intl;
-    name = intl.string(util.t.vyaWs7).toUpperCase();
-    const str = intl.string(util.t.vyaWs7);
-  }
-  if (!isFetchingResult) {
-    if (null == value) {
-      return null;
-    } else {
-      if (null != application) {
-        if (isSocialLayerApplicationDefault(application)) {
-          if ("guild" !== guildOrApplication.type) {
-            const result1 = StorefrontUtils.isSlayerSkuAvailableOnThisPlatform(value);
-            const str4 = SlayerStorefrontUtils.getCardImageURL(value);
-            let str1;
-            if (str4 != null) {
-              str1 = str4.toString();
+  if (isEligibleForSocialLayerStorefrontMobileEmbed) {
+    let applicationId;
+    if (!tmp7) {
+      applicationId = value.applicationId;
+    }
+    const application = ApplicationStore.getApplication(applicationId);
+    let result = null != applicationId;
+    SKUStore.didFetchingSkuFail(skuId);
+    if (result) {
+      result = ApplicationStore.isFetchingApplication(applicationId);
+    }
+    null != applicationId && ApplicationStore.didFetchingApplicationFail(applicationId);
+    let name;
+    if (application != null) {
+      name = application.name;
+    }
+    if (name == null) {
+      const intl4 = util.intl;
+      name = intl4.string(util.t.vyaWs7).toUpperCase();
+      const str5 = intl4.string(util.t.vyaWs7);
+    }
+    if (!isFetchingResult) {
+      if (!result) {
+        if (null != applicationId) {
+          if (null == application) {
+            if (!result) {
+              const obj4 = {};
+              baseColors = Object.assign(baseColors);
+              obj4.headerText = name;
+              name = colors.resolvingGradientEnd;
+              obj4.resolvingGradientEnd = name;
+              obj4.resolvingGradientStart = colors.resolvingGradientStart;
+              colors = InviteTypes.GUILD;
+              obj4.type = colors;
+              obj4.extendedType = CodedLinkExtendedType.SOCIAL_LAYER_STOREFRONT_EMBED;
+              obj4.skuId = skuId;
             }
-            if (str1 == null) {
-              str1 = application.getIconURL(64);
-            }
-            const obj3 = {};
-            const merged = Object.assign(baseColors);
-            obj3.headerText = name;
-            obj3.headerColor = colors.headerColor;
-            obj3.titleText = value.name;
-            obj3.titleColor = colors.titleColor;
-            const intl2 = util.intl;
-            obj3.subtitle = intl2.string(util.t.V91tvy);
-            obj3.subtitleColor = colors.subtitleColor;
-            obj3.thumbnailUrl = str1;
-            obj3.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-            const intl3 = util.intl;
-            const string = intl3.string;
-            if (result1) {
-              let stringResult = string(util.t.boqtTA);
-            } else {
-              stringResult = string(_modDef3865.BKf0MM);
-            }
-            obj3.acceptLabelText = stringResult;
-            let prop;
-            if (result1) {
-              prop = colors.acceptLabelGreenColor;
-            }
-            obj3.acceptLabelColor = prop;
-            obj3.acceptLabelBackgroundColor = result1
-              ? colors.acceptLabelGreenBackgroundColor
-              : colors.acceptBlurpleLabelBackgroundColor;
-            obj3.embedCanBeTapped = true;
-            obj3.canBeAccepted = true;
-            obj3.type = InviteTypes.GUILD;
-            return obj3;
           }
         }
       }
-      return null;
-    }
-  }
-  const obj6 = {};
-  const merged1 = Object.assign(baseColors);
-  obj6.headerText = name;
-  ({ resolvingGradientEnd: obj7.resolvingGradientEnd, resolvingGradientStart: obj7.resolvingGradientStart } = colors);
-  obj6.type = InviteTypes.GUILD;
-  return obj6;
-}
-export function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(stateFromStores) {
-  _require = stateFromStores;
-  items = [stateFromStores];
-  const memo = noop.useMemo(
-    () =>
-      stateFromStores.reduce((arr, item) => {
-        const iter = item.codedLinks[Symbol.iterator]();
-        while (iter !== undefined) {
-          ({ type, code } = nextResult);
-          if (type === stateFromStores(dependencyMap[10]).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
-            let tmp3Result = stateFromStores(dependencyMap[11]);
-            let result = tmp3Result.parseStorefrontCodedLink(code);
-            let tmp8 = result;
-            let tmp9 = null != result;
-            if (tmp9) {
-              tmp9 = 1 === tmp8.skuIds.length;
-            }
-            if (tmp9) {
-              arr = arr.push(tmp8.skuIds[0]);
+      if (null != value) {
+        if (null != application) {
+          if (isSocialLayerApplicationDefault(application)) {
+            if ("guild" !== guildOrApplication.type) {
+              if ("application" !== guildOrApplication.type) {
+                const socialLayerStorefrontSkuEmbedDetails =
+                  getSocialLayerStorefrontSkuEmbedDetails.getSocialLayerStorefrontSkuEmbedDetails(value, application);
+                const tmpResult = getSocialLayerStorefrontSkuEmbedDetails;
+                const socialLayerStorefrontEmbedPrice =
+                  socialLayerStorefrontEmbedPrice2.getSocialLayerStorefrontEmbedPrice(value);
+                const currentUser = UserStore.getCurrentUser();
+                const tmpResult7 = socialLayerStorefrontEmbedPrice2;
+                const tmp4Result = PremiumUtilsDefault;
+                const isPremiumResult = PremiumUtilsDefault.isPremium(currentUser, PremiumTypes.TIER_2);
+                const orbPriceFromPrices = OrbCheckoutUtils.getOrbPriceFromPrices(value.prices, isPremiumResult);
+                const id = AuthenticationStore.getId();
+                let firstWishlistId = null;
+                if (null != id) {
+                  firstWishlistId = UserProfileStore.getFirstWishlistId(id);
+                }
+                let hasSkuIdResult = null != firstWishlistId;
+                if (hasSkuIdResult) {
+                  hasSkuIdResult = WishlistStore.hasSkuId(firstWishlistId, value.id);
+                }
+                const obj5 = {};
+                const merged = Object.assign(baseColors);
+                obj5.headerText = name;
+                obj5.headerColor = colors.headerColor;
+                obj5.titleText = socialLayerStorefrontSkuEmbedDetails.title;
+                obj5.titleColor = colors.titleColor;
+                ({ titleIconUrl: obj14.titleIconUrl, subtitle: obj14.subtitle } = socialLayerStorefrontSkuEmbedDetails);
+                obj5.subtitleColor = colors.subtitleColor;
+                ({
+                  foregroundImageUrl: obj14.foregroundImageUrl,
+                  backgroundImageUrl: obj14.backgroundImageUrl,
+                  foregroundImageUrl: obj14.thumbnailUrl,
+                } = socialLayerStorefrontSkuEmbedDetails);
+                obj5.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
+                obj5.normalPriceText = socialLayerStorefrontEmbedPrice;
+                let StringResult;
+                if (null != orbPriceFromPrices) {
+                  const _String = String;
+                  StringResult = String(orbPriceFromPrices.amount);
+                }
+                obj5.orbPriceText = StringResult;
+                let uri;
+                if (null != orbPriceFromPrices) {
+                  uri = Image.resolveAssetSource(_modDef9680).uri;
+                }
+                obj5.orbIconUrl = uri;
+                ({ badgeText: obj14.overlayBadgeText, badgeIconUrl: obj14.overlayBadgeIconUrl } =
+                  socialLayerStorefrontSkuEmbedDetails);
+                obj5.overlayBadgeBackgroundColor = colors.acceptBlurpleLabelBackgroundColor;
+                const tmpResult8 = OrbCheckoutUtils;
+                obj5.overlayBadgeTextColor =
+                  socialLayerStorefrontEmbedColors.getSocialLayerStorefrontEmbedColors(theme).overlayTextColor;
+                const tmpResult9 = socialLayerStorefrontEmbedColors;
+                obj5.backgroundColor =
+                  socialLayerStorefrontEmbedColors.getSocialLayerStorefrontEmbedColors(theme).backgroundColor;
+                obj5.showWishlistButton = true;
+                obj5.wishlistButtonIconUrl = Image.resolveAssetSource(importDefault(hasSkuIdResult ? 9616 : 9683)).uri;
+                const intl5 = util.intl;
+                const t = util.t;
+                obj5.wishlistButtonAccessibilityLabel = intl5.string(hasSkuIdResult ? t["19b82d"] : t.Hcgz2S);
+                obj5.embedCanBeTapped = true;
+                obj5.canBeAccepted = false;
+                obj5.type = InviteTypes.GUILD;
+                obj5.extendedType = CodedLinkExtendedType.SOCIAL_LAYER_STOREFRONT_EMBED;
+                obj5.skuId = skuId;
+                const tmpResult10 = socialLayerStorefrontEmbedColors;
+              }
             }
           }
-          continue;
         }
-        return arr;
-      }, []),
-    items,
-  );
-  const items1 = [SKUStore];
-  const items2 = [memo];
-  const stateFromStoresArray = require("initialize").useStateFromStoresArray(
-    items1,
-    () => {
-      const mapped = memo.map((item) => closure_1_5.get(item));
-      const found = mapped.filter(GlobalUtils.isNotNullish);
-      items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
-      return items;
-    },
-    items2,
-  );
-  memo(7450)(stateFromStoresArray);
+      }
+    }
+    isFetchingResult = SKUStore.isFetching(skuId);
+  } else {
+    let applicationId1;
+    if (!tmp7) {
+      applicationId1 = value.applicationId;
+    }
+    const application1 = ApplicationStore.getApplication(applicationId1);
+    let result1 = null != applicationId1;
+    SKUStore.didFetchingSkuFail(skuId);
+    if (result1) {
+      result1 = ApplicationStore.isFetchingApplication(applicationId1);
+    }
+    null != applicationId1 && ApplicationStore.didFetchingApplicationFail(applicationId1);
+    let name1;
+    if (application1 != null) {
+      name1 = application1.name;
+    }
+    if (name1 == null) {
+      const intl = util.intl;
+      name1 = intl.string(util.t.vyaWs7).toUpperCase();
+      const str = intl.string(util.t.vyaWs7);
+    }
+    if (!isFetchingResult1) {
+      if (!result1) {
+        if (null != applicationId1) {
+          if (null == application1) {
+            if (!result1) {
+              return tmp15;
+            }
+          }
+        }
+      }
+      tmp15 = null;
+      if (null != value) {
+        tmp15 = null;
+        if (null != application1) {
+          tmp15 = null;
+          if (isSocialLayerApplicationDefault(application1)) {
+            if ("guild" !== guildOrApplication.type) {
+              if ("application" !== guildOrApplication.type) {
+                const result2 = StorefrontUtils.isSlayerSkuAvailableOnThisPlatform(value);
+                const tmpResult11 = StorefrontUtils;
+                const str4 = SlayerStorefrontUtils.getCardImageURL(value);
+                let str1;
+                if (str4 != null) {
+                  str1 = str4.toString();
+                }
+                if (str1 == null) {
+                  str1 = application1.getIconURL(64);
+                }
+                const obj6 = {};
+                const merged1 = Object.assign(baseColors);
+                obj6.headerText = name1;
+                obj6.headerColor = colors.headerColor;
+                obj6.titleText = value.name;
+                obj6.titleColor = colors.titleColor;
+                const intl2 = util.intl;
+                obj6.subtitle = intl2.string(util.t.V91tvy);
+                obj6.subtitleColor = colors.subtitleColor;
+                obj6.thumbnailUrl = str1;
+                obj6.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
+                const intl3 = util.intl;
+                const string = intl3.string;
+                if (result2) {
+                  let stringResult = string(util.t.boqtTA);
+                } else {
+                  stringResult = string(_modDef3865.BKf0MM);
+                }
+                obj6.acceptLabelText = stringResult;
+                let prop;
+                if (result2) {
+                  prop = colors.acceptLabelGreenColor;
+                }
+                obj6.acceptLabelColor = prop;
+                obj6.acceptLabelBackgroundColor = result2
+                  ? colors.acceptLabelGreenBackgroundColor
+                  : colors.acceptBlurpleLabelBackgroundColor;
+                obj6.embedCanBeTapped = true;
+                obj6.canBeAccepted = true;
+                obj6.type = InviteTypes.GUILD;
+                tmp15 = obj6;
+                const tmpResult12 = SlayerStorefrontUtils;
+              } else {
+                tmp15 = null;
+              }
+            } else {
+              tmp15 = null;
+            }
+          }
+        }
+      }
+    }
+    const obj7 = {};
+    const merged2 = Object.assign(baseColors);
+    obj7.headerText = name1;
+    ({ resolvingGradientEnd: obj8.resolvingGradientEnd, resolvingGradientStart: obj8.resolvingGradientStart } = colors);
+    obj7.type = InviteTypes.GUILD;
+    tmp15 = obj7;
+    isFetchingResult1 = SKUStore.isFetching(skuId);
+  }
+  const tmp5 = getEmbedThemeColorsDefault(theme);
 }

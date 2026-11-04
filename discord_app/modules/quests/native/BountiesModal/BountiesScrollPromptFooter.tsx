@@ -41,7 +41,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj3.children = closure_7(zIndex(5272).BountiesScrollGradientRive, {
+  obj3.children = closure_7(zIndex(5273).BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",
@@ -56,9 +56,9 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(_modDef1652.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6916).QuestsExperimentLocations;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
@@ -80,8 +80,8 @@ let items = [
   {
     code: "(function BountiesScrollPromptFooterTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})",
   },
-  fn(5377).withTiming,
-  fn(5380).timingStandard,
+  fn(5378).withTiming,
+  fn(5381).timingStandard,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -100,8 +100,8 @@ let items2 = [
   {
     code: "(function BountiesScrollPromptFooterTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})",
   },
-  fn(5377).withTiming,
-  fn(5380).timingStandard,
+  fn(5378).withTiming,
+  fn(5381).timingStandard,
 ];
 let closure_130_0;
 let closure_130_1;
@@ -151,12 +151,12 @@ export default function BountiesScrollPromptFooter(visible) {
     obj5.entering = BountiesScrollPromptFooterTsx1;
     obj5.exiting = BountiesScrollPromptFooterTsx2;
     obj5.renderItem = callback;
-    shouldRender = React5(AnimatedEnterExitItemDefault, obj5);
+    shouldRender = metroImportDefault(AnimatedEnterExitItemDefault, obj5);
   } else if (shouldRender) {
     const obj6 = {};
     const merged1 = Object.assign(merged);
     obj6.visibilityOpacityStyle = tmp7;
-    shouldRender = React5(BountiesScrollPromptFooterContent, obj6);
+    shouldRender = metroImportDefault(BountiesScrollPromptFooterContent, obj6);
   }
   return shouldRender;
 }

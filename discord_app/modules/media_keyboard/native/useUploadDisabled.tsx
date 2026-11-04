@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 
 const DraftType = DraftStore.DraftType;
-({ MAX_UPLOAD_COUNT: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ MAX_UPLOAD_COUNT: hasOwnProperty, Permissions: closure_6 } = Constants);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/useUploadDisabled.tsx");
 
 export default function useUploadDisabled(arg0) {

@@ -287,9 +287,9 @@ let closure_24 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const result = closure_1_0(2153).supportsEmbeddedSurface(application, closure_1_0(5795).EmbeddedSurfaceType.MAIN);
+                const result = closure_1_0(2153).supportsEmbeddedSurface(application, closure_1_0(5809).EmbeddedSurfaceType.MAIN);
                 const obj = closure_1_0(2153);
-                const result1 = closure_1_0(9089).isActivityInTextSupportedForChannel(type);
+                const result1 = closure_1_0(9106).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = result;
                 }
@@ -589,26 +589,26 @@ let closure_26 = async function _maybeSendPrimaryAppCommand(arg0) {
                               const obj3 = { status: error_status, body: null };
                               const obj4 = { message: error_message, code: error_code };
                               obj3.body = obj4;
-                              const tmp21 = new nonce(6567)(obj3);
+                              const tmp21 = new nonce(6582)(obj3);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in nonce(6189).ReasonCodes) {
-                            const tmp14 = new nonce(6189)(error_reason_code);
+                          if (error_reason_code in nonce(6204).ReasonCodes) {
+                            const tmp14 = new nonce(6204)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
                         const obj = nonce(1252);
-                        const tmp3Result = nonce(6189);
-                        closure_1_1(new nonce(6189)(nonce(6189).ReasonCodes.UNKNOWN));
-                        const tmp3Result1 = new nonce(6189)(nonce(6189).ReasonCodes.UNKNOWN);
+                        const tmp3Result = nonce(6204);
+                        closure_1_1(new nonce(6204)(nonce(6204).ReasonCodes.UNKNOWN));
+                        const tmp3Result1 = new nonce(6204)(nonce(6204).ReasonCodes.UNKNOWN);
                       }
                     };
                   }
                 };
-                nonce(10440)(obj);
+                nonce(10488)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -1305,7 +1305,7 @@ let closure_34 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_5 = fn(9894).getOrFetchApplicationCommandIndexForTarget;
+let closure_5 = fn(9912).getOrFetchApplicationCommandIndexForTarget;
 let closure_16 = fn(2147).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_17, AnalyticsGameOpenTypes: closure_18, ChannelTypes: closure_19, Endpoints: closure_20, PopoutWindowKeys: closure_21 } = Constants);

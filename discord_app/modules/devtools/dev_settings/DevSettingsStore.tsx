@@ -17,8 +17,11 @@ const obj = {
   [5]: "SHOP",
   LIBDISCORE: 6,
   [6]: "LIBDISCORE",
+  CLIPS: 7,
+  [7]: "CLIPS",
 };
 const obj2 = {
+  clips_ignore_platform_requirement: { label: "Ignore Clips platform requirement", category: obj.CLIPS },
   visual_effect_view_overrides: { label: "Blur view overrides for designers to test with", category: obj.OVERLAYS },
   obscure_blur_effect_explicit_content_enabled: {
     label: "Force explicit content obscure blur effect on for message media and embeds",
@@ -164,5 +167,6 @@ export const CATEGORY_LABELS = {
   [obj.PREMIUM]: "Premium Toggles",
   [obj.SHOP]: "Shop Toggles",
   [obj.LIBDISCORE]: "Libdiscore Toggles",
+  [obj.CLIPS]: "Clips Toggles",
 };
 export const toggles = obj2;

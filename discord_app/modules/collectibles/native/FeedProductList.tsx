@@ -7,7 +7,7 @@ function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = closure_5();
-  const cardLayout = num(18008).useCardLayout();
+  const cardLayout = num(18104).useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   items = [];
   num = 0;
@@ -26,9 +26,9 @@ function SkeletonGrid(accessibilityLabel) {
       obj3.style = items1;
       obj3.children = arr.map((item, index) => {
         const obj = { width: require, style: null };
-        const obj2 = { marginBottom: num(9587).COLLECTIBLES_SHOP_CARD_GAP };
+        const obj2 = { marginBottom: num(9606).COLLECTIBLES_SHOP_CARD_GAP };
         obj.style = obj2;
-        return closure_4(closure_1(9710), obj, "" + num + "-" + index);
+        return closure_4(closure_1(9728), obj, "" + num + "-" + index);
       });
       let _HermesInternal = HermesInternal;
       let arr2 = items.push(
@@ -60,8 +60,8 @@ let obj2 = {
   skeletonGrid: { flex: 1, alignItems: "center" },
   skeletonRow: {
     flexDirection: "row",
-    gap: fn(9587).COLLECTIBLES_SHOP_CARD_GAP,
-    paddingBottom: fn(9587).COLLECTIBLES_SHOP_CARD_GAP,
+    gap: fn(9606).COLLECTIBLES_SHOP_CARD_GAP,
+    paddingBottom: fn(9606).COLLECTIBLES_SHOP_CARD_GAP,
   },
 };
 let closure_5 = createStyles.createStyles(obj2);

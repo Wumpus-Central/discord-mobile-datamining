@@ -9,13 +9,13 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8556).MobileUserSettings.ACCOUNT,
+  parent: fn(8573).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountUsernameSettingTrailing() {
     items = [UserStore];
     return initialize.useStateFromStores(items, () =>
@@ -33,8 +33,8 @@ const route = SettingBuilders.createRoute({
     }
     let tmp5 = null;
     if (null != first) {
-      const obj2 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
-      tmp5 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
+      const obj2 = { variant: "body-xs/medium", color: "text-feedback-warning", children: first };
+      tmp5 = jsx(Text_Text.Text, { variant: "body-xs/medium", color: "text-feedback-warning", children: first });
     }
     return tmp5;
   },

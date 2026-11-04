@@ -107,13 +107,13 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(14381);
+const ContactSyncPersistedStore = fn(14461);
 ({
-  useContactSyncStore: metroRequire,
-  clearDismissState: closure_7,
+  useContactSyncStore: closure_6,
+  clearDismissState: metroImportDefault,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(14380);
+const ContactSyncConstants = fn(14460);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: closure_10,
@@ -197,8 +197,8 @@ export function bulkAddFriends(user_ids, bulkAddToken) {
   return obj.post(request).then((body) => body.body);
 }
 export function adminDeleteContactSync() {
+  metroImportDefault();
   React5();
-  React6();
   const result = ContactSyncManager.removeLastUserContactsUpload();
   const ContactSyncEnabled = UserSettings.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);
@@ -311,5 +311,5 @@ export function handleOpenLearnMoreLink() {
   obj.openURL(HelpdeskUtilsDefault.getArticleURL(constants4.CONTACT_SYNC));
 }
 export function transitionToAddFriendsLandingPage() {
-  ModalActionCreatorsDefault.popWithKey(React7);
+  ModalActionCreatorsDefault.popWithKey(React6);
 }

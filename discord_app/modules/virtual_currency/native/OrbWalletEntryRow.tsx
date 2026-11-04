@@ -26,9 +26,9 @@ function OrbWalletEntryBadge(notificationType) {
   }
 }
 const View = fn(17).View;
-const constants = fn(15771).ClientUnreadNotificationType;
+const constants = fn(15859).ClientUnreadNotificationType;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 },
@@ -75,7 +75,7 @@ export function OrbWalletEntryRow(onPress) {
     hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: nativeDefault.colors.ICON_SUBTLE, accessible: false }),
   ];
   const obj5 = {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-subtle",
     lineClamp: 1,
     style: tmp.balanceText,

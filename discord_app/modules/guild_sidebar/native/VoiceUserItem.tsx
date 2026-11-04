@@ -12,8 +12,8 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let c8 = "text-sm/medium";
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
+let c8 = "body-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
 const XSMALL_20 = fn(1187).AvatarSizes.XSMALL_20;
 const createStyles = fn(5141);
@@ -37,7 +37,7 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11177);
+const ChannelListLayout = fn(11227);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

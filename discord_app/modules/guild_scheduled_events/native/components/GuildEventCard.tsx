@@ -14,7 +14,7 @@ function GuildEventCardControls(onCloseAction) {
   const primaryActionButtonType = GuildEventCardComponents.usePrimaryActionButtonType(event, isConnected);
   const obj2 = { direction: "horizontal", style: tmp.actionContainer, children: null };
   items = [
-    React5(GuildEventCardComponents.GuildEventCardPrimaryAction, {
+    metroImportDefault(GuildEventCardComponents.GuildEventCardPrimaryAction, {
       event,
       onCloseAction: onCloseAction.onCloseAction,
       isConnected,
@@ -24,18 +24,18 @@ function GuildEventCardControls(onCloseAction) {
   let tmp6Result = primaryActionButtonType === GuildEventCardComponents.PrimaryActionType.START;
   if (tmp6Result) {
     const obj3 = { event };
-    tmp6Result = React5(GuildEventCardComponents.GuildEventCardRSVPAction, obj3);
+    tmp6Result = metroImportDefault(GuildEventCardComponents.GuildEventCardRSVPAction, obj3);
   }
   items[1] = tmp6Result;
-  items[2] = React5(GuildEventCardComponents.GuildEventShareAction, { event });
+  items[2] = metroImportDefault(GuildEventCardComponents.GuildEventShareAction, { event });
   obj2.children = items;
-  return React6(ButtonGroup.ButtonGroup, obj2);
+  return React5(ButtonGroup.ButtonGroup, obj2);
 }
 const View = fn(17).View;
-let closure_5 = fn(6975).isGuildScheduledEventActive;
+let closure_5 = fn(6990).isGuildScheduledEventActive;
 fn(4996).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { actionContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 } };
 const styles = createStyles.createStyles(obj);

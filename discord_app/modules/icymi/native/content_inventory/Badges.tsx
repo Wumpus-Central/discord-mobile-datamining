@@ -29,7 +29,7 @@ class ActiveTimestamp {
     memo = closure_3.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
     return jsx(entry(closure_2[8]).Text, {
       style: global.style,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       tabularNumbers: true,
       color: "text-feedback-positive",
       children: memo,
@@ -46,7 +46,7 @@ function ContentTimestamp(entry) {
     let tmp6Result = timestampProducer(ActiveTimestamp, obj2);
   } else {
     const obj3 = {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: obj[noop.useContext(noop, closure_11)].text,
       children: utils.formatEndedTimestamp(entry, tmp5),
     };
@@ -63,17 +63,17 @@ function BaseBadge(accessibilityLabel) {
   items = [
     timestampProducer(Icon, { style: tmp.icon, color: iconColor }),
     timestampProducer(Text_Text.Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: obj[noop.useContext(noop, closure_11)].text,
       children: text,
     }),
   ];
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 let obj = {
   overlay: {
     text: "content-inventory-overlay-text-secondary",
@@ -131,7 +131,7 @@ export function GameTimestampBadge(entry) {
     timestampProducer(ContentTimestamp, { entry }),
   ];
   obj2.children = items;
-  return React5(View, obj2);
+  return metroImportDefault(View, obj2);
 }
 export function MarathonBadge(entry) {
   entry = entry.entry;
@@ -230,7 +230,7 @@ export function TopGameBadge(entry) {
     obj4.hours = Math.round(entryDuration / DurationsDefault.Seconds.HOUR);
     items[2] = intl2.format(util.t.SDRHgr, obj4);
     obj3.children = items;
-    obj2.text = React5(React6, obj3);
+    obj2.text = metroImportDefault(React5, obj3);
     obj2.iconColor = obj[noop.useContext(noop, closure_11)].icon;
     return timestampProducer(BaseBadge, obj2);
   }
@@ -243,5 +243,5 @@ export function CustomStatusTimestampBadge(entry) {
     timestampProducer(ContentTimestamp, { entry: entry.entry }),
   ];
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }

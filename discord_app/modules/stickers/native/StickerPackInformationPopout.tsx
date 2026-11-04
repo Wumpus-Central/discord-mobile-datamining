@@ -51,7 +51,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   const obj4 = { style: tmp.headerContainer, children: null };
   const obj5 = {
     style: tmp.informationHeader,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -61,7 +61,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   const obj7 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl3 = tmp2(1113).intl;
   obj7.accessibilityLabel = intl3.string(require("util").t.cpT0Cq);
-  const obj8 = { variant: "text-md/semibold", color: "text-brand", children: null };
+  const obj8 = { variant: "body-md/semibold", color: "text-brand", children: null };
   const intl4 = tmp2(1113).intl;
   obj8.children = intl4.string(require("util").t.cpT0Cq);
   obj7.children = closure_3(require("Text/Text").Text, obj8);
@@ -74,12 +74,12 @@ export default function StickerPackInformationPopout(stickerPack) {
       items = [
         React3(Text_Text.Text, {
           style: closure_0.informationContent,
-          variant: "text-md/medium",
+          variant: "body-md/medium",
           color: "text-default",
           children: "\u2022",
         }),
       ];
-      const obj3 = { style: null, variant: "text-md/medium", color: "text-default", children: children.description };
+      const obj3 = { style: null, variant: "body-md/medium", color: "text-default", children: children.description };
       const items1 = [,];
       ({ informationContent: arr2[0], informationContentDescription: arr2[1] } = closure_0);
       obj3.style = items1;

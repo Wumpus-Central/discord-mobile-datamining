@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const rect = { size: 240, top: nativeDefault.space.PX_16, left: -20 };
-const CheckpointStatNumber = fn(13782);
+const CheckpointStatNumber = fn(13868);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
 const createStyles = fn(5141);
 let obj = { year: null };
@@ -36,8 +36,8 @@ export default function CheckpointRecapCard(character) {
     num = Math.min(Math.max(maxHeight / 268, 0.75), 1);
   }
   const tmp = closure_7();
-  const characterCardColorPalette = character(6211).getCharacterCardColorPalette(character);
-  const obj2 = character(6211);
+  const characterCardColorPalette = character(6226).getCharacterCardColorPalette(character);
+  const obj2 = character(6226);
   items = [character];
   const memo = noop.useMemo(() => {
     let checkpointCharacterAccessibilityLabel = null;
@@ -58,7 +58,7 @@ export default function CheckpointRecapCard(character) {
     children: null,
   };
   const obj5 = { style: tmp.year, children: null };
-  const obj3 = character(6211);
+  const obj3 = character(6226);
   obj5.children = jsx(CheckpointStatNumberDefault, {
     value: 2026,
     color: obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor,

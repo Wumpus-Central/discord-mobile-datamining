@@ -19,10 +19,10 @@ function TierTemplatesRenderer(groupListingId) {
     const obj2 = { color: tmp.activityIndicator.color };
     let tmp3 = closure_13(closure_6, obj2);
   } else if (null != error) {
-    let obj = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
+    let obj = { variant: "body-xs/normal", color: "text-feedback-critical", children: null };
     items = ["Error: ", error.message];
     obj.children = items;
-    tmp3 = closure_14(guildId(5747).Text, obj);
+    tmp3 = closure_14(guildId(5761).Text, obj);
   } else {
     tmp3 = null;
     if (null != templates) {
@@ -49,7 +49,7 @@ function TierTemplatesRenderer(groupListingId) {
           obj.style = size;
           return closure_1_13(closure_1_8, obj);
         };
-        obj3.snapToInterval = guildId(20149).CARD_WIDTH + PX_16;
+        obj3.snapToInterval = guildId(20265).CARD_WIDTH + PX_16;
         obj3.renderItem = function renderItem(template) {
           return state(GuildRoleSubscriptionTierTemplatePreviewCardDefault, {
             template: template.item,
@@ -59,7 +59,7 @@ function TierTemplatesRenderer(groupListingId) {
             editGroupId: guildId,
           });
         };
-        tmp3 = closure_13(guildId(7414).FlashList, obj3);
+        tmp3 = closure_13(guildId(7430).FlashList, obj3);
       }
     }
   }
@@ -140,7 +140,7 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
         };
         items = [closure_2_13(closure_2_8, obj2)];
         const obj4 = { children: null };
-        const obj5 = { variant: "text-md/medium", color: "interactive-text-active", children: null };
+        const obj5 = { variant: "body-md/medium", color: "interactive-text-active", children: null };
         const intl = guildId(groupListingId[23]).intl;
         obj5.children = intl.string(guildId(groupListingId[23]).t.WNWtkB);
         obj4.children = closure_2_13(guildId(groupListingId[9]).Text, obj5);
@@ -179,12 +179,12 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
     ,
     ,
   ];
-  const obj8 = { variant: "text-sm/medium", style: tmp.text, children: null };
+  const obj8 = { variant: "body-sm/medium", style: tmp.text, children: null };
   const intl2 = tmp2(tmp3[23]).intl;
   obj8.children = intl2.string(guildId(groupListingId[23]).t["ne+rg6"]);
   items7[2] = closure_13(guildId(groupListingId[9]).Text, obj8);
   items7[3] = closure_13(guildId(groupListingId[28]).Spacer, { size: 8 });
-  const obj9 = { variant: "text-sm/medium", style: tmp.text, children: null };
+  const obj9 = { variant: "body-sm/medium", style: tmp.text, children: null };
   const intl3 = tmp2(tmp3[23]).intl;
   obj9.children = intl3.format(guildId(groupListingId[23]).t.iQML2g, {
     creatorPortalUrl: "https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons",
@@ -205,8 +205,8 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
   return closure_13(guildId(groupListingId[27]).RoleSubscriptionSettingsDisabledContextProvider, obj5);
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: metroRequire, TouchableOpacity: closure_7, View: closure_8 } = get_ActivityIndicator);
-const usePriceTiers = fn(20099).usePriceTiers;
+({ ActivityIndicator: closure_6, TouchableOpacity: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
+const usePriceTiers = fn(20215).usePriceTiers;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);

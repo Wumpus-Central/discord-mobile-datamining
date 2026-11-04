@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/WishlistViewerCoachmark.tsx
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef15160 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
+import _modDef15240 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -9,7 +9,7 @@ function CoachmarkImage() {
   const tmp = closure_7();
   const obj = { style: tmp.imageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef15160 };
+  const obj3 = { uri: _modDef15240 };
   obj2.source = obj3;
   obj2.style = tmp.image;
   obj.children = jsx(FastImageDefault, { source: null, style: null });

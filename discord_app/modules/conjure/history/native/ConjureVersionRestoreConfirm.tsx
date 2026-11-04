@@ -53,11 +53,11 @@ function ConjureVersionRestoreAlert(matchingBackup) {
   obj6.text = intl6.string(util.t["ETE/oC"]);
   items[1] = hasOwnProperty(AlertModal.AlertActionButton, obj6);
   obj4.children = items;
-  obj.actions = React5(timestampProducer, obj4);
+  obj.actions = metroImportDefault(timestampProducer, obj4);
   return hasOwnProperty(AlertModal.AlertModal, obj);
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/native/ConjureVersionRestoreConfirm.tsx");
 

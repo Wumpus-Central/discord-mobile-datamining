@@ -6,7 +6,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
-import _modDef18319 from "../../../../_runtime/metro/18319__.js";
+import _modDef18416 from "../../../../_runtime/metro/18416__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -63,7 +63,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef18319;
+      let tmp12 = _modDef18416;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -87,7 +87,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return state(tmp9(14068).BaseChannelIcon, obj10);
+    return state(tmp9(14154).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -118,7 +118,7 @@ function DMChannelIcon(userId) {
     status,
     isMobileOnline,
     isVROnline,
-    statusStyle: "hash",
+    statusStyle: 117.3,
   };
   const items4 = [tmp.avatarStatus];
   if (avatarStatusSelected) {
@@ -134,7 +134,7 @@ const Constants = fn(1072);
 const ChannelTypes = Constants.ChannelTypes;
 const Routes = Constants.Routes;
 const StaticChannelRoute = fn(4997).StaticChannelRoute;
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [,];
@@ -154,9 +154,9 @@ obj.avatarStatus = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }
 obj.groupDmAvatar = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
 obj.channelInfoContainer = { paddingStart: 4 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.avatarStatusSelected = { backgroundColor: fn(6898).DARK_393C42_LIGHT_DEE0E4 };
+obj.avatarStatusSelected = { backgroundColor: fn(6913).DARK_393C42_LIGHT_DEE0E4 };
 let closure_16 = createStyles.createStyles(obj);
-let obj5 = { backgroundColor: fn(6898).DARK_393C42_LIGHT_DEE0E4 };
+let obj5 = { backgroundColor: fn(6913).DARK_393C42_LIGHT_DEE0E4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
 

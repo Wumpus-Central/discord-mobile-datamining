@@ -8,10 +8,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(7578).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7594).ForumTimestampFormats;
 const ChannelFlags = fn(4997).ChannelFlags;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   pinIcon: { marginEnd: 8 },
@@ -47,7 +47,10 @@ export default function ForumPostGridHeader(arg0) {
   }
   items[3] = isNew;
   obj2.children = items;
-  const items1 = [React5(View, obj2), timestampProducer(ForumPostTitleDefault, { title: thread.name, hasUnreads })];
+  const items1 = [
+    metroImportDefault(View, obj2),
+    timestampProducer(ForumPostTitleDefault, { title: thread.name, hasUnreads }),
+  ];
   obj.children = items1;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }

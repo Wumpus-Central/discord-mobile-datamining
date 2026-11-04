@@ -9,7 +9,7 @@ import AppLauncherOnboardingPersistedStore from "../stores/AppLauncherOnboarding
 import AppLauncherOnboardingStore from "../stores/AppLauncherOnboardingStore.tsx";
 
 const require = fn;
-const BuiltInSectionId = fn(6155).BuiltInSectionId;
+const BuiltInSectionId = fn(6170).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;
 let closure_12 = 14 * DurationsDefault.Millis.DAY;
@@ -66,7 +66,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     items4.push(tmp2(4974).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
   const tmp2Result10 = channelId(504);
-  const tmp2Result11 = channelId(7693);
+  const tmp2Result11 = channelId(7709);
   const items5 = [AppLauncherOnboardingStore];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items5, () => ({
     recentMessageMetadata: AppLauncherOnboardingStore.getRecentMessageMetadata(),

@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const rect = {
   top: nativeDefault.space.PX_12,
   bottom: nativeDefault.space.PX_12,
@@ -58,13 +58,13 @@ export default function AppStoreOverlayAboutSection(children) {
   const t = util.t;
   const stringResult = intl.string(tmp3 ? t["6MwJo/"] : t.lBeKY2);
   const obj = { style: tmp.aboutSection, children: null };
-  const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = util.intl;
   obj2.children = intl2.string(util.t.CI0vSJ);
   const items2 = [
     timestampProducer(Text_Text.Text, obj2),
     timestampProducer(Text_Text.Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       lineClamp: num,
       onTextLayout: callback,
@@ -84,11 +84,11 @@ export default function AppStoreOverlayAboutSection(children) {
     const obj4 = { expanded: tmp3 };
     obj3.accessibilityState = obj4;
     obj3.onPress = callback1;
-    const obj5 = { variant: "text-sm/medium", color: "text-link", children: stringResult };
+    const obj5 = { variant: "body-sm/medium", color: "text-link", children: stringResult };
     obj3.children = timestampProducer(Text_Text.Text, obj5);
     tmp13Result = timestampProducer(React4, obj3);
   }
   items2[2] = tmp13Result;
   obj.children = items2;
-  return React5(hasOwnProperty, obj);
+  return metroImportDefault(hasOwnProperty, obj);
 }

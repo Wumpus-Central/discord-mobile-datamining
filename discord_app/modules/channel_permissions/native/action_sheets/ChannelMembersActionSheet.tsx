@@ -6,7 +6,7 @@ import useNavigation from "../../../../design/components/Navigator/native/useNav
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05400_BottomSheetModal.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -199,7 +199,7 @@ export default function ChannelMembersActionSheet(arg0) {
             style: sectionRowWrapper.sectionRowWrapper,
             maxFontSizeMultiplier: 2,
             accessibilityRole: "header",
-            variant: "text-sm/semibold",
+            variant: "body-sm/semibold",
             color: "interactive-text-default",
             children: null,
           };

@@ -61,7 +61,7 @@ function TabHeader(children) {
   const tmp = closure_29();
   return closure_1_27(Text_Text.Text, {
     style: closure_29().subheader,
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     maxFontSizeMultiplier: 1.75,
     accessibilityRole: "header",
     children: children.text,
@@ -77,7 +77,7 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(6994);
+let NavigationHistoryStore = fn(7009);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: closure_10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(4994);
@@ -307,7 +307,7 @@ let closure_35 = noop.memo(function LaunchPadHeader(tab) {
       spellCheck: false,
       autoFocus: false,
     };
-    let tmp24 = closure_27(tmp2(7339).SearchBar, obj6);
+    let tmp24 = closure_27(tmp2(7355).SearchBar, obj6);
     let tmp23 = closure_27;
   } else if (tab === constants3.MEMBERS) {
     const obj7 = { text: null };
@@ -398,11 +398,11 @@ let closure_35 = noop.memo(function LaunchPadHeader(tab) {
 });
 const results = [];
 let items = [
-  fn(9263).AutocompleterResultTypes.GUILD,
-  fn(9263).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(9263).AutocompleterResultTypes.GROUP_DM,
-  fn(9263).AutocompleterResultTypes.VOICE_CHANNEL,
-  fn(9263).AutocompleterResultTypes.USER,
+  fn(9280).AutocompleterResultTypes.GUILD,
+  fn(9280).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(9280).AutocompleterResultTypes.GROUP_DM,
+  fn(9280).AutocompleterResultTypes.VOICE_CHANNEL,
+  fn(9280).AutocompleterResultTypes.USER,
 ];
 let closure_39 = { code: "(function LaunchPadTsx3(){let[sharedState]=this.__closure;return sharedState.get()===0;})" };
 let closure_40 = {
@@ -671,15 +671,15 @@ export default noop.memo(function LaunchPad(arg0) {
         let diff = length.length - 1;
         if (0 <= diff) {
           while (null != length[diff]) {
-            if (obj3.startsWith(React6)) {
-              let channel = ChannelStore.getChannel(React7(obj3));
+            if (obj3.startsWith(React5)) {
+              let channel = ChannelStore.getChannel(React6(obj3));
               let guild_id;
               if (channel != null) {
                 guild_id = channel.guild_id;
               }
               let tmp17 = guild_id;
             } else {
-              tmp17 = React7(obj3);
+              tmp17 = React6(obj3);
             }
             guild = GuildStore.getGuild(tmp17);
             let hasItem = null == tmp17 || set.has(tmp17) || set1.has(tmp17) || null == guild;
@@ -892,14 +892,14 @@ export default noop.memo(function LaunchPad(arg0) {
       guildHistory: memo,
       visible,
     };
-    tmp59Result = closure_27(tmp43(19231), obj9);
+    tmp59Result = closure_27(tmp43(19335), obj9);
   }
   items20[1] = tmp59Result;
   const obj10 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp56) {
       const obj11 = { results, query: str };
-      let tmp59Result2 = closure_27(tmp16(19238).SearchResults, obj11);
+      let tmp59Result2 = closure_27(tmp16(19342).SearchResults, obj11);
     }
     obj10.children = tmp59Result2;
     items20[2] = closure_27(View, obj10);
@@ -932,13 +932,13 @@ export default noop.memo(function LaunchPad(arg0) {
     obj12.history = channelHistory;
     obj12.expandedHistory = tmp3;
     obj12.toggleExpandedHistory = callback;
-    tmp59Result2 = closure_27(tmp16(19238).InitialResults, obj12);
+    tmp59Result2 = closure_27(tmp16(19342).InitialResults, obj12);
   } else if (first3 === constants3.DEV_TOOLS) {
-    tmp59Result2 = closure_27(tmp43(17900), {});
+    tmp59Result2 = closure_27(tmp43(17996), {});
   } else if (first3 === constants3.MEMBERS) {
-    tmp59Result2 = closure_27(tmp43(19251), {});
+    tmp59Result2 = closure_27(tmp43(19355), {});
   } else {
-    tmp59Result2 = closure_27(tmp43(19252), {});
+    tmp59Result2 = closure_27(tmp43(19356), {});
   }
   tmp56 = str.trim().length > 0;
 });

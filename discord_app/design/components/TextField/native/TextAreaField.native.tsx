@@ -6,10 +6,10 @@ import InputFieldContainer from "../../Input/native/InputFieldContainer.native.t
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = prop(1113);
-const Text_Text = prop(5747);
-const NativeTextInput = prop(7226);
-const propsForNativeTextInput = prop(7229);
-const useCharacterLimitAnnouncement = prop(7375);
+const Text_Text = prop(5761);
+const NativeTextInput = prop(7246);
+const propsForNativeTextInput = prop(7249);
+const useCharacterLimitAnnouncement = prop(7391);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -81,7 +81,7 @@ export function TextAreaField(ref) {
         str = str2;
       }
     }
-    let obj10 = { variant: "text-xs/semibold", color: str, accessibilityLabel: null, children: null };
+    let obj10 = { variant: "body-xs/semibold", color: str, accessibilityLabel: null, children: null };
     if (null != nodeText) {
       const intl3 = util.intl;
       prop = util.t["8Q+k1s"];

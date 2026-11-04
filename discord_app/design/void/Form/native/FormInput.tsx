@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const native = TextArea(1187);
 const shared = TextArea(5148);
-const RedesignCompat = TextArea(7185);
-const TextInput = TextArea(7208);
-const TextArea2 = TextArea(7373);
+const RedesignCompat = TextArea(7200);
+const TextInput = TextArea(7223);
+const TextArea2 = TextArea(7389);
 require = fn;
 const KeyboardThemes = fn(1072).KeyboardThemes;
 const jsx = fn(21).jsx;

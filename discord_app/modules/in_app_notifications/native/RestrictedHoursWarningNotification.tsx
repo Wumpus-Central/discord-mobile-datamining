@@ -7,9 +7,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const lineClamp = fn(11156).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const lineClamp = fn(11204).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const Constants = fn(1072);
-({ InAppNotificationTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
+({ InAppNotificationTypes: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { iconContainer: null };
@@ -31,7 +31,7 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
   const type = notification.type;
   let obj = {
     style: closure_9().iconContainer,
-    children: jsx(notification(11326).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE }),
+    children: jsx(notification(11376).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE }),
   };
   items = [notification.title];
   let obj2 = { size: "sm", color: type(575).colors.WHITE };
@@ -48,12 +48,12 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
   let obj3 = {
     icon: (
       <View style={closure_9().iconContainer}>
-        {jsx(notification(11326).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE })}
+        {jsx(notification(11376).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE })}
       </View>
     ),
     header: memo,
-    children: jsx(notification(5747).Text, {
-      variant: "redesign/message-preview/medium",
+    children: jsx(notification(5761).Text, {
+      variant: "heading-sm/medium",
       color: "text-subtle",
       lineClamp,
       children: notification.subtitle,
@@ -61,15 +61,15 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
     onPress: callback,
     notification,
   };
-  return jsx(notification(11213).NotificationPressable, {
+  return jsx(notification(11263).NotificationPressable, {
     icon: (
       <View style={closure_9().iconContainer}>
-        {jsx(notification(11326).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE })}
+        {jsx(notification(11376).ThemeDarkIcon, { size: "sm", color: type(575).colors.WHITE })}
       </View>
     ),
     header: memo,
-    children: jsx(notification(5747).Text, {
-      variant: "redesign/message-preview/medium",
+    children: jsx(notification(5761).Text, {
+      variant: "heading-sm/medium",
       color: "text-subtle",
       lineClamp,
       children: notification.subtitle,

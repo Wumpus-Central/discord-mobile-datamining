@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersLegendList.tsx
-import BottomSheetModal from "../../../../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/05400_BottomSheetModal.js";
 import FastestListItemTypeDefault from "../../../../fastest_list/FastestListItemType.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -318,5 +318,5 @@ export default noop.memo(function UsersLegendList(insetStart) {
   obj4.sharedValues = memo;
   obj4.stickyHeaderIndices = memo1.stickyHeaderIndices;
   obj4.style = style;
-  return renderListHeader(tmp3(14552).AnimatedLegendList, obj4);
+  return renderListHeader(tmp3(14632).AnimatedLegendList, obj4);
 });

@@ -11,7 +11,7 @@ import TableRowIcon from "../../../design/components/TableRow/native/TableRowIco
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
 import GuildAntiRaidTypes from "../../guild_antiraid/GuildAntiRaidTypes.tsx";
 import InstantInvite from "../../guild_instant_invites/native/InstantInvite.tsx";
-import _modDef15639 from "../../../../_runtime/metro/15639__.js";
+import _modDef15726 from "../../../../_runtime/metro/15726__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildIncidentsStore from "../../guild_antiraid/GuildIncidentsStore.tsx";
@@ -45,7 +45,7 @@ class InvitesDisabledRow {
     tmp7 = jsx;
     obj1 = {
       label: stringResult,
-      subLabel: jsx(tmp(tmp2[15]).Text, { variant: "text-xs/medium", children: stringResult1 }),
+      subLabel: jsx(tmp(tmp2[15]).Text, { variant: "body-xs/medium", children: stringResult1 }),
       icon: null,
       checked: null,
       onPress: null,
@@ -166,7 +166,7 @@ function GuildSettingsModalInstantInvites(invites) {
         };
         const obj4 = { guild, analyticsData: obj };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(13391, dependencyMap.paths),
+          asyncRequireImpl(13475, dependencyMap.paths),
           "GuildIncidentActionsActionSheet",
           obj4,
         );
@@ -255,7 +255,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
       contentContainerStyle: guildId.contentContainerStyle,
       showChannel: true,
     };
-    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5729).NavScrim, {})];
+    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5742).NavScrim, {})];
     obj2.children = items1;
     tmp6 = closure_14(closure_13, obj2);
   }

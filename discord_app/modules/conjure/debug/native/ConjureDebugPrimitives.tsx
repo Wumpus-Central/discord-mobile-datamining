@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   toolbar: {
@@ -86,14 +86,14 @@ export function DebugSnapshotToolbar(onRefresh) {
   if ("loading" === fetchState) {
     let tmp4Result = hasOwnProperty(React3, { size: "small" });
   } else if ("failed" === fetchState) {
-    const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
+    const obj3 = { variant: "body-xs/normal", color: "text-feedback-critical", children: null };
     const intl2 = util.intl;
     obj3.children = intl2.string(_modDef3995.ZVByPX);
     tmp4Result = hasOwnProperty(Text_Text.Text, obj3);
   } else {
     tmp4Result = null;
     if (null != generatedAt) {
-      const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
+      const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
       const intl = util.intl;
       const obj6 = { time: ConjureDebugFormat.formatObservedAt(generatedAt) };
       obj4.children = intl.formatToPlainString(_modDef3995.INVO50, obj6);
@@ -114,7 +114,7 @@ export function DebugSection(arg0) {
   ({ title, children } = arg0);
   const obj = { style: closure_7().section, children: null };
   items = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: title }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-xs/semibold", color: "text-muted", children: title }),
     children,
   ];
   obj.children = items;
@@ -122,7 +122,7 @@ export function DebugSection(arg0) {
 }
 export function DebugNote(children) {
   return hasOwnProperty(Text_Text.Text, {
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     color: "text-muted",
     children: children.children,
   });
@@ -143,7 +143,7 @@ export function DebugStatRow(arg0) {
   obj3.style = items;
   const items1 = [
     icon,
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: label }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-muted", children: label }),
   ];
   obj3.children = items1;
   const items2 = [timestampProducer(React4, obj3)];
@@ -157,7 +157,7 @@ export function DebugStatRow(arg0) {
     str = "text-feedback-critical";
   }
   items4[1] = hasOwnProperty(Text_Text.Text, {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: str,
     style: tmp.statValue,
     children: value,
@@ -168,7 +168,7 @@ export function DebugStatRow(arg0) {
   const items5 = [timestampProducer(React4, obj2)];
   let tmp4Result = null;
   if (null != hint) {
-    const obj6 = { variant: "text-xs/normal", color: "text-muted", children: hint };
+    const obj6 = { variant: "body-xs/normal", color: "text-muted", children: hint };
     tmp4Result = hasOwnProperty(Text_Text.Text, obj6);
   }
   items5[1] = tmp4Result;
@@ -198,14 +198,14 @@ export function DebugMeter(arg0) {
   items = [
     hasOwnProperty(React4, {
       style: tmp.statLabel,
-      children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: label }),
+      children: hasOwnProperty(Text_Text.Text, { variant: "body-sm/normal", color: "text-muted", children: label }),
     }),
   ];
   let str = "text-default";
   if (meterFillCritical) {
     str = "text-feedback-critical";
   }
-  items[1] = hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: str, children: combined });
+  items[1] = hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: str, children: combined });
   obj2.children = items;
   const items1 = [timestampProducer(React4, obj2)];
   const obj4 = { style: tmp.meterTrack, children: null };

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_5 = createStyles.createStyleProperties({

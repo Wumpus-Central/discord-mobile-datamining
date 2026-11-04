@@ -95,7 +95,7 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   return NONE;
 }
 const isGuildOwner = GuildRecord.isGuildOwner;
-({ GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
+({ GuildFeatures: hasOwnProperty, Permissions: closure_6 } = Constants);
 const GuildRoleSubscriptionSettingsVisibility = { NONE: 0, [0]: "NONE", VISIBLE: 1, [1]: "VISIBLE" };
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx",

@@ -7,8 +7,8 @@ import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackType
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import ReactionActionCreators from "../ReactionActionCreators.tsx";
-import _modDef10235 from "../../../../_runtime/metro/10235__.js";
-import _modDef10236 from "../../../../_runtime/metro/10236__.js";
+import _modDef10283 from "../../../../_runtime/metro/10283__.js";
+import _modDef10284 from "../../../../_runtime/metro/10284__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -18,15 +18,15 @@ const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, AnalyticsPages: closure_8, AnalyticsSections: closure_9 } = Constants);
+({ AnalyticEvents: metroImportDefault, AnalyticsPages: closure_8, AnalyticsSections: closure_9 } = Constants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(5738).ReactionTypes.NORMAL] = _modDef10235;
-obj[fn(5738).ReactionTypes.BURST] = _modDef10236;
+obj[fn(5752).ReactionTypes.NORMAL] = _modDef10283;
+obj[fn(5752).ReactionTypes.BURST] = _modDef10284;
 let obj2 = {};
-obj2[fn(5738).ReactionTypes.NORMAL] = fn(9580).ReactionIcon;
-obj2[fn(5738).ReactionTypes.BURST] = fn(10049).SuperReactionIcon;
+obj2[fn(5752).ReactionTypes.NORMAL] = fn(9599).ReactionIcon;
+obj2[fn(5752).ReactionTypes.BURST] = fn(10097).SuperReactionIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
 
@@ -37,7 +37,7 @@ export function handleOutOfSuperReactions(onDismiss) {
     if (!obj.isPremium(currentUser)) {
       const obj3 = { onDismiss };
       openLazyResult = ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(10028, dependencyMap.paths),
+        asyncRequireImpl(10076, dependencyMap.paths),
         "SuperReactionUpsellActionSheet",
         obj3,
       );
@@ -69,7 +69,7 @@ export function handleAddNewReactions(channel, id) {
           require("ActionSheetActionCreators").openLazy(
             tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths),
             "SuperReactionUpsellActionSheet",
-            { onDismiss: "Array" },
+            { onDismiss: "r" },
           );
           const obj3 = require("ActionSheetActionCreators");
         }
@@ -159,14 +159,14 @@ export function handleViewReactions(isPoll) {
     const obj4 = { messageId, channelId, emoji: isPoll.emoji };
     const obj6 = ActionSheetActionCreatorsDefault;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl(10223, dependencyMap.paths), "MessageReactions", obj4);
-    const tmp19 = asyncRequireImpl(10223, dependencyMap.paths);
+    obj6.openLazy(asyncRequireImpl(10271, dependencyMap.paths), "MessageReactions", obj4);
+    const tmp19 = asyncRequireImpl(10271, dependencyMap.paths);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
-  tmp4 = isPrivateResult ? React6.DM_CHANNEL : React6.GUILD_CHANNEL;
+  tmp4 = isPrivateResult ? React5.DM_CHANNEL : React5.GUILD_CHANNEL;
 }
 export function handleViewPreviewReactions(id2, id, emoji) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10234, dependencyMap.paths), "MessagePreviewReactions", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10282, dependencyMap.paths), "MessagePreviewReactions", {
     messageId: id2,
     channelId: id,
     emoji,
@@ -180,10 +180,10 @@ export function handleRemoveAllReactions(arg0, arg1) {
   const obj2 = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
   const intl = require("util").intl;
   obj2.title = intl.string(require("util").t.ZbtGBm);
-  const obj3 = { variant: "text-md/normal", children: null };
+  const obj3 = { variant: "body-md/normal", children: null };
   const intl2 = require("util").intl;
   obj3.children = intl2.string(require("util").t.VpjOCo);
-  obj2.children = jsx(require("Text/Text").Text, { variant: "text-md/normal", children: null });
+  obj2.children = jsx(require("Text/Text").Text, { variant: "body-md/normal", children: null });
   const intl3 = require("util").intl;
   obj2.cancelText = intl3.string(require("util").t["ETE/oC"]);
   const intl4 = require("util").intl;

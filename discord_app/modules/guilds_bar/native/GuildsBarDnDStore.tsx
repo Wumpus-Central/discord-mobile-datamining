@@ -16,17 +16,17 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "disabled",
+    overSpecs: "sa",
     dropSpecs: "isArray",
     dragRegion: require("../../../../_runtime/metro/01652__.js").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "es-BO",
-    scrollPosition: "es-419",
-    windowSize: "colors",
-    setStateShallow: "Object",
-    dropStart: "key",
-    dropComplete: "marginBottom",
+    listInsets: "CHANNEL_SETTINGS_UPDATE",
+    scrollPosition: null,
+    windowSize: null,
+    setStateShallow: null,
+    dropStart: null,
+    dropComplete: null,
   };
   let obj2 = require("../../../../_runtime/metro/01652__.js");
   obj.gestureState = require("../../../../_runtime/metro/01652__.js").makeMutable(obj);
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
+      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "ao" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -93,7 +93,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -122,13 +122,7 @@ export function useItemDragState(guildId, flag) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = {
-          isDragTarget: false,
-          dragState: "disabled",
-          overState: "isArray",
-          itemSize: null,
-          dragDropInProgress,
-        };
+        const obj2 = { isDragTarget: false, dragState: "sa", overState: "isArray", itemSize: null, dragDropInProgress };
         return obj2;
       }
     }

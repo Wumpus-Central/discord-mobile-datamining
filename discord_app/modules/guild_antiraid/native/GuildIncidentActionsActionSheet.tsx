@@ -16,9 +16,9 @@ function DurationSelectionActionSheet(onClose) {
   const obj2 = { title: null };
   const intl = onClose(1113).intl;
   obj2.title = intl.string(onClose(1113).t.vKYZzc);
-  items = [closure_14(onClose(7441).BottomSheetTitleHeader, obj2)];
+  items = [closure_14(onClose(7457).BottomSheetTitleHeader, obj2)];
   const arr = getTimeframes();
-  items[1] = closure_14(onClose(7488).ActionSheetRow.Group, {
+  items[1] = closure_14(onClose(7504).ActionSheetRow.Group, {
     hasIcons: false,
     children: getTimeframes().map((label) =>
       closure_1_14(
@@ -26,7 +26,7 @@ function DurationSelectionActionSheet(onClose) {
         {
           label: label.label,
           onPress() {
-            React7(label.value);
+            React6(label.value);
             onClose();
           },
         },
@@ -35,18 +35,18 @@ function DurationSelectionActionSheet(onClose) {
     ),
   });
   obj.children = items;
-  return closure_15(onClose(7486).ActionSheet, obj);
+  return closure_15(onClose(7502).ActionSheet, obj);
 }
-const GuildIncidentsActionSheetStore = fn(13392);
+const GuildIncidentsActionSheetStore = fn(13476);
 ({
   resetGuildIncidentsActionSheetStore: hasOwnProperty,
-  setInitialTime: metroRequire,
-  setPauseDms: closure_7,
+  setInitialTime: closure_6,
+  setPauseDms: metroImportDefault,
   setPauseInvites: closure_8,
   setTime: closure_9,
   useGuildIncidentsActionSheetStore: closure_10,
 } = GuildIncidentsActionSheetStore);
-const getTimeframes = fn(8607).getTimeframes;
+const getTimeframes = fn(8624).getTimeframes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
@@ -100,8 +100,8 @@ class GuildIncidentActionsActionSheet {
     items1[0] = hasDMsDisabledResult;
     items1[1] = hasInvitesDisabledResult;
     effect = pauseInvites.useEffect(() => {
-      React6(c5);
-      React5(c6);
+      React5(c5);
+      metroImportDefault(c6);
     }, items1);
     items2 = [];
     items2[0] = result;
@@ -168,7 +168,7 @@ class GuildIncidentActionsActionSheet {
     }
     obj19.value = tmp16;
     obj19.onValueChange = function handleTogglePauseInvites() {
-      React6(!pauseInvites);
+      React5(!pauseInvites);
     };
     obj19.disabled = hasItem;
     items5 = [,];
@@ -193,7 +193,7 @@ class GuildIncidentActionsActionSheet {
     obj22.subLabel = intl8.string(tmp3(tmp4[9]).t.UQbJW7);
     obj22.value = pauseDms;
     obj22.onValueChange = function handleTogglePauseDms() {
-      React5(!pauseDms);
+      metroImportDefault(!pauseDms);
     };
     items4[2] = tmp15(tmp3(tmp4[17]).TableSwitchRow, obj22);
     obj23 = {

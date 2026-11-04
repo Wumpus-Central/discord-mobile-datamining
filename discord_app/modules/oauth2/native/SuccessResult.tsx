@@ -112,7 +112,7 @@ export default function SuccessResultModal(guild) {
         id3 = guild.id;
       }
       obj.guild_id = id3;
-      AnalyticsUtilsDefault.track(React7.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
+      AnalyticsUtilsDefault.track(React6.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
       const tmp9Result = AnalyticsUtilsDefault;
     }
   }, items1);
@@ -133,7 +133,7 @@ export default function SuccessResultModal(guild) {
     }
     if (tmp5) {
       let obj2 = { application_id: application.id };
-      AnalyticsUtilsDefault.track(React7.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
+      AnalyticsUtilsDefault.track(React6.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
       const _setImmediate = setImmediate;
       setImmediate(() => {
         const bestActiveInput = guild(stateFromStores[17]).getBestActiveInput();
@@ -159,7 +159,7 @@ export default function SuccessResultModal(guild) {
     if (application != null) {
       id = application.id;
     }
-    AnalyticsUtilsDefault.track(React7.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+    AnalyticsUtilsDefault.track(React6.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
   }, items5);
   if (application != null) {
     id2 = application.id;
@@ -170,7 +170,7 @@ export default function SuccessResultModal(guild) {
     if (application != null) {
       id = application.id;
     }
-    AnalyticsUtilsDefault.track(React7.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
+    AnalyticsUtilsDefault.track(React6.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
   }, items6);
   const tmp2Result3 = guild(stateFromStores[15]);
   const items7 = [PermissionStore];
@@ -184,13 +184,13 @@ export default function SuccessResultModal(guild) {
   const tmp2Result4 = guild(stateFromStores[15]);
   obj6.source = application(stateFromStores[21]);
   const items8 = [closure_12(application(stateFromStores[20]), obj6), ,];
-  const obj7 = { style: tmp.text, variant: "text-lg/medium", children: null };
+  const obj7 = { style: tmp.text, variant: "body-lg/medium", children: null };
   let intl = tmp2(tmp3[11]).intl;
   obj7.children = intl.string(guild(stateFromStores[11]).t.se5gLj);
   items8[1] = closure_12(guild(stateFromStores[22]).Text, obj7);
   let tmp15Result = null;
   if (null != memo) {
-    const obj8 = { style: tmp.text, variant: "text-sm/normal", children: memo };
+    const obj8 = { style: tmp.text, variant: "body-sm/normal", children: memo };
     tmp15Result = closure_12(tmp2(tmp3[22]).Text, obj8);
   }
   items8[2] = tmp15Result;

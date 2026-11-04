@@ -95,7 +95,7 @@ class GuildContentPost {
     items1[0] = title;
     tmp7Result = !hideTimestamp;
     if (!hideTimestamp) {
-      obj20 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
+      obj20 = { lineClamp: 1, variant: "body-xs/normal", color: "text-muted", children: null };
       tmp2Result = tmp2(tmp3[28]);
       obj20.children = tmp2Result.getRelativeTimestamp(timestamp);
       tmp7Result = tmp7(tmp2(tmp3[27]).Text, obj20);
@@ -163,7 +163,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(18682);
+const createICYMIStyles = fn(18783);
 let guild = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -359,11 +359,11 @@ export function AnnouncementContentPost(guild) {
   element.avatar = closure_18(CutoutGuildIconWithUser, { guild, author });
   element.title = closure_18(
     guild(author[27]).Text,
-    { style: { maxWidth: 225 }, lineClamp: 1, variant: "text-sm/medium", color: "text-muted", children: guild.name },
+    { style: { maxWidth: 225 }, lineClamp: 1, variant: "body-sm/medium", color: "text-muted", children: guild.name },
     channel.id,
   );
-  const obj3 = { lineClamp: 2, variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
-  const obj4 = { variant: "text-md/semibold", onPress: callback, style: { color: colorString }, children: null };
+  const obj3 = { lineClamp: 2, variant: "body-md/normal", color: "text-default", style: tmp.subtitle, children: null };
+  const obj4 = { variant: "body-md/semibold", onPress: callback, style: { color: colorString }, children: null };
   let combined = name;
   if (name.length > 20) {
     const _HermesInternal = HermesInternal;
@@ -374,7 +374,7 @@ export function AnnouncementContentPost(guild) {
   const obj2 = {
     style: { maxWidth: 225 },
     lineClamp: 1,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-muted",
     children: guild.name,
   };
@@ -497,12 +497,12 @@ export function GuildEventPost(guild) {
   element.avatar = tmp13Result;
   element.title = closure_18(
     guild(event[27]).Text,
-    { style: { maxWidth: 225 }, lineClamp: 1, variant: "text-sm/medium", color: "text-muted", children: guild.name },
+    { style: { maxWidth: 225 }, lineClamp: 1, variant: "body-sm/medium", color: "text-muted", children: guild.name },
     event.id,
   );
-  const obj5 = { lineClamp: 2, variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
+  const obj5 = { lineClamp: 2, variant: "body-md/normal", color: "text-default", style: tmp.subtitle, children: null };
   if (null != stateFromStores) {
-    const obj6 = { variant: "text-md/semibold", onPress: callback, style: null, children: null };
+    const obj6 = { variant: "body-md/semibold", onPress: callback, style: null, children: null };
     const obj7 = { color: colorString };
     obj6.style = obj7;
     const username = stateFromStores.username;
@@ -544,7 +544,7 @@ export function GuildEventPost(guild) {
   let obj4 = {
     style: { maxWidth: 225 },
     lineClamp: 1,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-muted",
     children: guild.name,
   };
@@ -608,7 +608,7 @@ export function MessageContentPost(guild) {
       {
         style: { maxWidth: 225 },
         lineClamp: 1,
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-default",
         children: guild.name,
       },
@@ -623,12 +623,12 @@ export function MessageContentPost(guild) {
   };
   const obj4 = {
     lineClamp: 2,
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     color: "text-default",
     style: { marginRight: message.useContext(guild(author[40]).ICYMIContext).margin },
     children: null,
   };
-  const obj5 = { style: { color: colorString }, onPress: callback, variant: "text-md/semibold", children: null };
+  const obj5 = { style: { color: colorString }, onPress: callback, variant: "body-md/semibold", children: null };
   let combined = name;
   if (name.length > 20) {
     const _HermesInternal = HermesInternal;
@@ -639,7 +639,7 @@ export function MessageContentPost(guild) {
   const obj3 = {
     style: { maxWidth: 225 },
     lineClamp: 1,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     children: guild.name,
   };
@@ -793,7 +793,7 @@ export function ThreadAsComments(arg0) {
         }
         const obj4 = { user: author, guildId: thread.guild_id, size: parentMessage(1187).AvatarSizes.XSMALL };
         const items4 = [closure_18(parentMessage(1187).Avatar, obj4), ,];
-        const obj5 = { variant: "text-sm/semibold", lineClamp: 1, style: tmp.recentCommentText, children: null };
+        const obj5 = { variant: "body-sm/semibold", lineClamp: 1, style: tmp.recentCommentText, children: null };
         if (mostRecentMessage.content.length > 0) {
           let parseInlineReplyResult = MarkupUtilsDefault.parseInlineReply(mostRecentMessage.content, true);
         } else {
@@ -801,18 +801,18 @@ export function ThreadAsComments(arg0) {
           parseInlineReplyResult = intl.string(parentMessage(1113).t["6kp9H2"]);
         }
         obj5.children = parseInlineReplyResult;
-        items4[1] = closure_18(parentMessage(5747).Text, obj5);
+        items4[1] = closure_18(parentMessage(5761).Text, obj5);
         const obj7 = { style: tmp.commentCount, children: null };
         const obj8 = { style: tmp.commentsIcon };
-        const items5 = [closure_18(parentMessage(8767).ChatIcon, obj8), ,];
-        const obj9 = { variant: "text-sm/semibold", color: "interactive-text-default", children: str };
-        items5[1] = closure_18(parentMessage(5747).Text, obj9);
+        const items5 = [closure_18(parentMessage(8784).ChatIcon, obj8), ,];
+        const obj9 = { variant: "body-sm/semibold", color: "interactive-text-default", children: str };
+        items5[1] = closure_18(parentMessage(5761).Text, obj9);
         const obj10 = { style: tmp.chevron, size: "xxs" };
-        items5[2] = closure_18(parentMessage(7498).ChevronSmallRightIcon, obj10);
+        items5[2] = closure_18(parentMessage(7514).ChevronSmallRightIcon, obj10);
         obj7.children = items5;
         items4[2] = closure_19(View, obj7);
         obj3.children = items4;
-        return closure_19(parentMessage(7106).PressableHighlight, obj3);
+        return closure_19(parentMessage(7121).PressableHighlight, obj3);
       }
     }
     const obj11 = { style: null, onPress: null, children: null };
@@ -820,7 +820,7 @@ export function ThreadAsComments(arg0) {
     obj11.style = items6;
     obj11.onPress = onPress;
     const obj12 = {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "text-muted",
       lineClamp: 1,
       style: tmp.recentCommentText,
@@ -828,16 +828,16 @@ export function ThreadAsComments(arg0) {
     };
     const intl2 = parentMessage(1113).intl;
     obj12.children = intl2.string(parentMessage(1113).t.VMWjXW);
-    const items7 = [closure_18(parentMessage(5747).Text, obj12)];
+    const items7 = [closure_18(parentMessage(5761).Text, obj12)];
     const obj13 = { style: tmp.commentCount, children: null };
     const obj14 = { style: tmp.commentsIcon };
-    const items8 = [closure_18(parentMessage(8767).ChatIcon, obj14)];
+    const items8 = [closure_18(parentMessage(8784).ChatIcon, obj14)];
     const obj15 = { style: tmp.chevron, size: "xxs" };
-    items8[1] = closure_18(parentMessage(7498).ChevronSmallRightIcon, obj15);
+    items8[1] = closure_18(parentMessage(7514).ChevronSmallRightIcon, obj15);
     obj13.children = items8;
     items7[1] = closure_19(View, obj13);
     obj11.children = items7;
-    return closure_19(parentMessage(7106).PressableHighlight, obj11);
+    return closure_19(parentMessage(7121).PressableHighlight, obj11);
   } else {
     return null;
   }

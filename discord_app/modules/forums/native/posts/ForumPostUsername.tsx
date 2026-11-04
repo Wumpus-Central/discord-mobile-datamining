@@ -54,7 +54,7 @@ function ForumPostUsername(arg0) {
         tmp25 = processColorStringsArray;
       }
       const obj6 = {
-        variant: "text-sm/semibold",
+        variant: "body-sm/semibold",
         color: "mobile-text-heading-primary",
         gradientColors: tmp25,
         lineClamp: 1,
@@ -65,18 +65,18 @@ function ForumPostUsername(arg0) {
       obj6.style = items4;
       const items5 = [authorName, suffix];
       obj6.children = items5;
-      items3[1] = React5(Text_Text.Text, obj6);
+      items3[1] = metroImportDefault(Text_Text.Text, obj6);
       obj2.children = items3;
-      tmp19Result = React5(View, obj2);
+      tmp19Result = metroImportDefault(View, obj2);
     }
     return tmp19Result;
   }
   const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(13894).useForumChannelStore;
+const useForumChannelStore = fn(13980).useForumChannelStore;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 },

@@ -219,7 +219,7 @@ function PurchaseSuccessModalBase(sku) {
   }
   items16[1] = textLandscape2;
   items15[1] = closure_14(require("Text/Text").Text, {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "text-overlay-light",
     style: items16,
     children: body,
@@ -240,7 +240,7 @@ function PurchaseSuccessModalBase(sku) {
     if (isScreenLandscape) {
       textLandscape3 = tmp.textLandscape;
     }
-    const obj8 = { variant: "text-xs/normal", color: "text-overlay-light", style: null, children: null };
+    const obj8 = { variant: "body-xs/normal", color: "text-overlay-light", style: null, children: null };
     items18[1] = textLandscape3;
     obj8.style = items18;
     obj8.children = finePrint;
@@ -303,7 +303,7 @@ function PurchaseSuccessModalBase(sku) {
   };
   const intl2 = tmp4(tmp3[21]).intl;
   obj16.accessibilityLabel = intl2.string(require("util").t.cpT0Cq);
-  obj15.children = closure_14(require("../../../../_runtime/metro/07131__.js").HeaderBackButton, obj16);
+  obj15.children = closure_14(require("../../../../_runtime/metro/07146__.js").HeaderBackButton, obj16);
   const items23 = [closure_14(closure_7, obj15), ,];
   const obj17 = {
     style: tmp.scroll,
@@ -360,8 +360,8 @@ function PurchaseSuccessModalBase(sku) {
   return closure_15(closure_7, obj11);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(7531).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
+let numDays = fn(7547).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);

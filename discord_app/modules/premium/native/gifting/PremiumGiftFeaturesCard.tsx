@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import StringUtils from "../../../../utils/StringUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
@@ -60,9 +60,9 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   if (tmp8Result) {
     const obj7 = { text: tickingFormattedLimitedOfferTimeLeft, icon: null, style: null };
     obj8 = { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT };
-    obj7.icon = React7(ClockIcon.ClockIcon, obj8);
+    obj7.icon = React6(ClockIcon.ClockIcon, obj8);
     obj7.style = tmp.countdownBadge;
-    tmp8Result = React7(PremiumGiftCountdownBadgeDefault, obj7);
+    tmp8Result = React6(PremiumGiftCountdownBadgeDefault, obj7);
     const tmp10Result = PremiumGiftCountdownBadgeDefault;
   }
   obj6.topContent = tmp8Result;
@@ -84,21 +84,21 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   }
   obj6.subtitle = mobileBody;
   obj6.shouldAnimate = isSelected;
-  const items1 = [React7(tmp12, obj6)];
+  const items1 = [React6(tmp12, obj6)];
   const obj10 = { variant: "primary-overlay", text: null, onPress: null };
   const intl3 = util.intl;
   obj10.text = intl3.string(util.t.Ve9Ge6);
   obj10.onPress = onPress;
-  items1[1] = React7(components_Button_Button.Button, obj10);
+  items1[1] = React6(components_Button_Button.Button, obj10);
   obj5.children = items1;
   obj4.children = closure_1_10(tmp11, obj5);
-  return React7(native.ThemeContextProvider, obj4);
+  return React6(native.ThemeContextProvider, obj4);
 }
 const View = fn(17).View;
 const PremiumConstants = fn(1387);
-({ PremiumTypes: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
+({ PremiumTypes: hasOwnProperty, SubscriptionIntervalTypes: closure_6 } = PremiumConstants);
 const Constants = fn(1083);
-({ Fonts: closure_7, ThemeTypes: closure_8 } = Constants);
+({ Fonts: metroImportDefault, ThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let obj = { default: { paddingVertical: nativeDefault.space.PX_8 }, compact: null, smallCompact: null };
@@ -236,29 +236,29 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   obj3.style = items2;
   const tmp10 = usePremiumProductPricingStringDefault(premiumType, constants.YEAR);
   const merged1 = Object.assign(merged);
-  const items3 = [React7(PremiumFeaturesWumpusDefault, { premiumType }), , , , , ,];
+  const items3 = [React6(PremiumFeaturesWumpusDefault, { premiumType }), , , , , ,];
   obj4 = { style: tmp6.logo, premiumType };
-  items3[1] = React7(PremiumFeaturesLogoDefault, obj4);
-  const obj5 = { style: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
+  items3[1] = React6(PremiumFeaturesLogoDefault, obj4);
+  const obj5 = { style: null, variant: "body-sm/medium", color: "text-overlay-light", children: null };
   const items4 = [tmp6.pricing, obj8[str]];
   obj5.style = items4;
   const intl = util.intl;
   obj5.children = intl.format(util.t.Ob6fwp, { monthlyPrice: tmp9, yearlyPrice: tmp10 });
-  items3[2] = React7(Text_Text.Text, obj5);
-  const obj6 = { style: null, variant: "heading-sm/semibold", color: "text-overlay-light", children: null };
+  items3[2] = React6(Text_Text.Text, obj5);
+  const obj6 = { style: null, variant: "heading-xs/semibold", color: "text-overlay-light", children: null };
   const items5 = [tmp6.featureTitle, obj4[str]];
   obj6.style = items5;
   const intl2 = util.intl;
   obj6.children = intl2.string(util.t.JgsVht);
-  items3[3] = React7(Text_Text.Text, obj6);
-  items3[4] = React7(PremiumFeatureListDefault, {
+  items3[3] = React6(Text_Text.Text, obj6);
+  items3[4] = React6(PremiumFeatureListDefault, {
     style: tmp6.features,
     features: tmp8,
     iconStyle: tmp6.featureIcon,
     labelStyle: tmp6.featureText,
     rowStyle: obj[str],
   });
-  items3[5] = React7(View, { style: { flexGrow: 1 } });
+  items3[5] = React6(View, { style: { flexGrow: 1 } });
   if (tmp11) {
     if (null != stateFromStores) {
       if (premiumType === hasOwnProperty.TIER_2) {
@@ -269,12 +269,12 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
           isSelected,
           onPress,
         };
-        let tmp12Result = React7(PremiumGiftPlanSelectPromotionDetails, obj8);
+        let tmp12Result = React6(PremiumGiftPlanSelectPromotionDetails, obj8);
       }
       items3[6] = tmp12Result;
       obj3.children = items3;
       obj2.children = closure_1_10(tmp7Result, obj3);
-      return React7(View, obj2);
+      return React6(View, obj2);
     }
   }
   const obj9 = { style: null, children: null };
@@ -287,8 +287,8 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
     const intl3 = util.intl;
     stringResult = intl3.string(util.t.Ve9Ge6);
   }
-  obj9.children = React7(components_Button_Button.Button, { variant: "primary-overlay", text: stringResult, onPress });
-  tmp12Result = React7(View, obj9);
+  obj9.children = React6(components_Button_Button.Button, { variant: "primary-overlay", text: stringResult, onPress });
+  tmp12Result = React6(View, obj9);
   const obj7 = {
     style: tmp6.features,
     features: tmp8,

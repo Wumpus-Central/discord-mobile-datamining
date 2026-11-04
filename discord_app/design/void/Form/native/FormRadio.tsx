@@ -11,6 +11,6 @@ const result = size.fileFinishedImporting("design/void/Form/native/FormRadio.tsx
 export default function FormRadio(selected) {
   const obj = { style: closure_3().radio, source: null };
   const tmp = closure_3();
-  obj.source = importDefault(selected.selected ? 7436 : 7437);
+  obj.source = importDefault(selected.selected ? 7452 : 7453);
   return jsx(FastImageDefault, { style: closure_3().radio, source: null });
 }

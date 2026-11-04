@@ -48,35 +48,35 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   }
   obj4.src = url;
   const items1 = [
-    React7(EmojiDefault, obj4),
-    React7(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" }),
+    React6(EmojiDefault, obj4),
+    React6(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" }),
   ];
   obj3.children = items1;
   const items2 = [closure_1_10(View, obj3), ,];
   const obj6 = { style: tmp.text, children: null };
   const obj7 = { style: tmp.header, children: null };
-  const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj8 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj8.children = intl.string(util.t["6RUX7d"]);
-  const items3 = [React7(Text_Text.Text, obj8), React7(renderChannelBadge.NewBadge, {})];
+  const items3 = [React6(Text_Text.Text, obj8), React6(renderChannelBadge.NewBadge, {})];
   obj7.children = items3;
   const items4 = [closure_1_10(View, obj7)];
-  const obj9 = { variant: "text-xs/medium", color: "text-default", children: null };
+  const obj9 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj9.children = intl2.format(util.t["5/l2rR"], {
     emojiName: emoji.name,
     emojiNameHook(children, arg1) {
       return closure_1_9(
         require("Text/Text").Text,
-        { variant: "text-xs/semibold", color: "text-strong", children },
+        { variant: "body-xs/semibold", color: "text-strong", children },
         arg1,
       );
     },
     tapHereHook(children, arg1) {
-      return closure_1_9(require("Text/Text").Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
+      return closure_1_9(require("Text/Text").Text, { variant: "body-xs/medium", color: "text-brand", children }, arg1);
     },
   });
-  items4[1] = React7(Text_Text.Text, obj9);
+  items4[1] = React6(Text_Text.Text, obj9);
   obj6.children = items4;
   items2[1] = closure_1_10(View, obj6);
   const obj11 = {
@@ -91,8 +91,8 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   obj11.accessibilityLabel = intl3.string(util.t.cpT0Cq);
   obj11.onPress = emoji.handleDismissBanner;
   obj11.style = tmp.closeButton;
-  obj11.children = React7(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
-  items2[2] = React7(Pressables.PressableOpacity, obj11);
+  obj11.children = React6(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
+  items2[2] = React6(Pressables.PressableOpacity, obj11);
   obj2.children = items2;
   return closure_1_10(View, obj2);
 }
@@ -174,7 +174,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14071, dependencyMap.paths),
+      asyncRequireImpl(14157, dependencyMap.paths),
       "DoubleTapToReactActionSheet",
       { emoji },
     );
@@ -343,7 +343,7 @@ export function DoubleTapToReactChatInputBanner(channel) {
         let tmp = null;
         if (visibleContent === dismissible_content.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
           const obj = { channel, emoji: memo1, markAsDismissed };
-          tmp = React7(DoubleTapToReactChatInputBannerAnimationContainer, obj);
+          tmp = React6(DoubleTapToReactChatInputBannerAnimationContainer, obj);
         }
         return tmp;
       };

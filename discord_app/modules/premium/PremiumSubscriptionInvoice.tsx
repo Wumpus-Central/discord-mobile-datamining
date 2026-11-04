@@ -562,7 +562,7 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
 };
 let closure_3 = ["subscriptionId"];
 const noop = fn(19);
-({ useCallback: closure_7, useEffect: closure_8, useState: closure_9, useRef: closure_10 } = noop);
+({ useCallback: metroImportDefault, useEffect: closure_8, useState: closure_9, useRef: closure_10 } = noop);
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoice.tsx");

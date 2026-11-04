@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, Platform } = get_ActivityIndicator);
 const TitleStyleType = fn(1191).TitleStyleType;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 },
@@ -81,7 +81,7 @@ export default function FormSection(arg0) {
     }
     items[1] = tmp20Result;
     obj2.children = items;
-    return React5(React4, obj2);
+    return metroImportDefault(React4, obj2);
   } else {
     let tmp6;
     if (null != title) {
@@ -151,6 +151,6 @@ export default function FormSection(arg0) {
     items2[2] = timestampProducer(React4, obj8);
     items2[3] = hint;
     obj7.children = items2;
-    return React5(React4, obj7);
+    return metroImportDefault(React4, obj7);
   }
 }

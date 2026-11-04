@@ -5,19 +5,19 @@ import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager.ts
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
+function renderActivityOrPIP(id, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 19291;
+    let tmp4 = 19395;
   } else {
-    tmp4 = 19296;
+    tmp4 = 19400;
   }
-  return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
+  return metroImportDefault(importDefault(tmp4), { transitionState, transitionCleanUp }, id);
 }
 function getKey(arg0) {
   return arg0;
 }
 function wrapChildren(items3) {
-  return React5(React4, { style: absoluteFill.absoluteFill, pointerEvents: "box-none", children: items3 });
+  return metroImportDefault(React4, { style: absoluteFill.absoluteFill, pointerEvents: "box-none", children: items3 });
 }
 class BaseActivityPanelUI {
   constructor(arg0) {
@@ -50,9 +50,9 @@ class BaseActivityPanelUI {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const ActivityPanelModes = fn(5777).ActivityPanelModes;
+const ActivityPanelModes = fn(5791).ActivityPanelModes;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_12 = [];
 let closure_13 = ["pip"];
 let closure_14 = ["activity"];
@@ -67,7 +67,7 @@ export default function ActivityPanelUI() {
   items = [renderActivityPanelSystemUIManager];
   return noop.useMemo(
     () =>
-      React5(BaseActivityPanelUI, {
+      metroImportDefault(BaseActivityPanelUI, {
         renderActivityOrPIP,
         context: ActivityPanelStateContextDefault,
         renderActivityPanelSystemUIManager,

@@ -4,12 +4,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ContactSyncModalStore = fn(14379);
+const ContactSyncModalStore = fn(14459);
 ({
   useContactSyncModalStore: closure_4,
   setAllowSync: hasOwnProperty,
-  setAllowPhone: metroRequire,
-  setAllowEmail: closure_7,
+  setAllowPhone: closure_6,
+  setAllowEmail: metroImportDefault,
 } = ContactSyncModalStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -59,7 +59,7 @@ export default function DiscoverabilityActionSheet() {
   }, items1);
   const obj = { style: tmp.container, children: null };
   const callback2 = allowEmail.useCallback(() => {
-    React5(!allowEmail);
+    metroImportDefault(!allowEmail);
   }, items2);
   const obj2 = { DEPRECATED_style: null, label: null, onPress: null, trailing: null };
   const items3 = [,];
@@ -88,7 +88,7 @@ export default function DiscoverabilityActionSheet() {
         allowPhone(allowEmail[9]).Text,
         {
           onPress: allowPhone(allowEmail[10]).handleOpenLearnMoreLink,
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           color: "text-link",
           children,
         },
@@ -106,7 +106,7 @@ export default function DiscoverabilityActionSheet() {
   const intl6 = allowPhone(allowEmail[8]).intl;
   obj10.text = intl6.string(allowPhone(allowEmail[8]).t["eJnn0+"]);
   obj9.label = closure_8(allowPhone(allowEmail[7]).FormRow.Label, obj10);
-  const obj11 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj11 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl7 = allowPhone(allowEmail[8]).intl;
   obj11.children = intl7.string(allowPhone(allowEmail[8]).t.X7pIKN);
   obj9.subLabel = closure_8(allowPhone(allowEmail[9]).Text, obj11);
@@ -118,7 +118,7 @@ export default function DiscoverabilityActionSheet() {
   const intl8 = allowPhone(allowEmail[8]).intl;
   obj13.text = intl8.string(allowPhone(allowEmail[8]).t.dI4d4S);
   obj12.label = closure_8(allowPhone(allowEmail[7]).FormRow.Label, obj13);
-  const obj14 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj14 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl9 = allowPhone(allowEmail[8]).intl;
   obj14.children = intl9.string(allowPhone(allowEmail[8]).t.ilGsHE);
   obj12.subLabel = closure_8(allowPhone(allowEmail[9]).Text, obj14);

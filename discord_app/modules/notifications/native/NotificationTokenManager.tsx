@@ -106,8 +106,8 @@ const prototype = NotificationTokenManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const self = this;
   if (obj.isAndroid()) {
-    self._denylistUnsubscribe = tmp(16422).initializeClientNotifDenylist();
-    const tmpResult = tmp(16422);
+    self._denylistUnsubscribe = tmp(16514).initializeClientNotifDenylist();
+    const tmpResult = tmp(16514);
   }
   if (null != self.token) {
     self.handleToken(self.token);

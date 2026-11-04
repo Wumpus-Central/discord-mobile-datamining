@@ -1,7 +1,7 @@
 // discord_app/design/void/NewTag/native/NewTag.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("design/void/NewTag/native/NewTag.tsx"
 export default function NewTag(color) {
   ({ containerStyle, textStyle, variant } = color);
   if (variant === undefined) {
-    variant = "heading-sm/semibold";
+    variant = "heading-xs/semibold";
   }
   let str = color.color;
   if (str === undefined) {

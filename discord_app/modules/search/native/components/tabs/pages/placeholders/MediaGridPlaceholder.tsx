@@ -13,15 +13,15 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({
   MEDIA_NUM_COLUMNS: hasOwnProperty,
-  MEDIA_ITEM_GAP_WIDTH: metroRequire,
+  MEDIA_ITEM_GAP_WIDTH: closure_6,
   SEARCH_LIST_SECTION_TOP_PADDING,
   SEARCH_LIST_HORIZONTAL_PADDING,
 } = SearchConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { zIndex: 1, position: "absolute", width: "100%" },
@@ -52,11 +52,11 @@ export default function MediaGridPlaceholderItem(arg0) {
   const obj2 = {
     style: null,
     pointerEvents: "none",
-    children: React5(GridItemPlaceholderDefault, { height: size, width: size, style: containerStyle }),
+    children: metroImportDefault(GridItemPlaceholderDefault, { height: size, width: size, style: containerStyle }),
   };
   items = [containerStyle, placeholderAnimatedStyle];
   obj2.style = items;
-  return React5(_modDef1652.View, obj2);
+  return metroImportDefault(_modDef1652.View, obj2);
 }
 export function RecentsMediaGridPlaceholder(visible) {
   ({ size: require, numRows } = visible);
@@ -79,7 +79,7 @@ export function RecentsMediaGridPlaceholder(visible) {
     style: tmp.sectionText,
     maxFontSizeMultiplier: 2,
     accessibilityRole: "header",
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     color: "interactive-text-default",
     children: null,
   };
@@ -88,7 +88,7 @@ export function RecentsMediaGridPlaceholder(visible) {
   obj4.children = closure_7(Text_Text.Text, obj5);
   const items3 = [closure_7(memo1, obj4)];
   const obj6 = { style: tmp.sectionItem, children: null };
-  const obj7 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.sectionText, children: null };
+  const obj7 = { variant: "body-sm/semibold", color: "text-brand", style: tmp.sectionText, children: null };
   const intl2 = util.intl;
   obj7.children = intl2.string(util.t.LFTAUp);
   obj6.children = closure_7(Text_Text.Text, obj7);
@@ -110,7 +110,7 @@ export function RecentsMediaGridPlaceholder(visible) {
               numColumns,
               spacing,
             });
-            return React5(tmp, size, index);
+            return metroImportDefault(tmp, size, index);
           }),
         }),
       ];

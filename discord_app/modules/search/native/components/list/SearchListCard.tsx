@@ -27,7 +27,7 @@ class SearchListContentAuthor {
     items[0] = jsx(closure_0(closure_2[5]).Avatar, obj1);
     obj5 = {
       style: tmp.authorName,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       lineClamp: 1,
       children: null,
@@ -51,7 +51,7 @@ function SearchListPrivateChannel(channel) {
     items = [hasOwnProperty(View, obj2)];
     const obj4 = {
       style: tmp.channelName,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       lineClamp: 1,
       children: tmp4,
@@ -64,7 +64,7 @@ function SearchListPrivateChannel(channel) {
     obj.style = tmp.privateChannelIcon;
     const obj5 = { style: tmp.icon, size: "xs", color: "interactive-text-default" };
     const items1 = [hasOwnProperty(ForumIcon.ForumIcon, obj5)];
-    const obj6 = { variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
+    const obj6 = { variant: "body-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
     const intl = util.intl;
     obj6.children = intl.string(util.t.ACgJhM);
     items1[1] = hasOwnProperty(Text_Text.Text, obj6);
@@ -90,7 +90,7 @@ class SearchListGuildChannel {
     items[0] = jsx(closure_0(closure_2[5]).Icon, obj5);
     obj6 = {
       style: tmp.channelName,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       lineClamp: 1,
       children: tmp2,
@@ -102,7 +102,7 @@ class SearchListGuildChannel {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   channelName: { flexShrink: 1, marginStart: 4 },
@@ -136,7 +136,7 @@ obj2.thumbnail = {
 obj2.privateChannelIcon = { flexDirection: "row", alignItems: "center" };
 obj2.icon = { marginRight: 4 };
 obj2.gdmIcon = { width: 18 };
-const React5 = createStyles.createStyles(obj2);
+const metroImportDefault = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchListCard.tsx");
 
@@ -157,13 +157,13 @@ export function SearchListCardContent(arg0) {
   const obj = { style: closure_7().content, children: null };
   let tmp3 = label;
   if (typeof label === "string") {
-    const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: label };
+    const obj2 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: label };
     tmp3 = hasOwnProperty(Text_Text.Text, obj2);
   }
   items = [tmp3];
   let tmp4 = subLabel;
   if (typeof subLabel === "string") {
-    const obj3 = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: subLabel };
+    const obj3 = { variant: "body-sm/normal", color: "text-default", lineClamp: 1, children: subLabel };
     tmp4 = hasOwnProperty(Text_Text.Text, obj3);
   }
   items[1] = tmp4;

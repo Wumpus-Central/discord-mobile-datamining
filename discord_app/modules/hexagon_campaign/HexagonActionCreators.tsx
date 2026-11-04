@@ -257,6 +257,7 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
 let closure_5 = fn(5166).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
 let closure_6 = new LoggerDefault("HexagonActionCreators");
 const result = 5 * DurationsDefault.Millis.SECOND;
+const metroImportDefault = result;
 let closure_10 = null;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/hexagon_campaign/HexagonActionCreators.tsx");

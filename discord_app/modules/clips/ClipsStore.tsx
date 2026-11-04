@@ -239,10 +239,10 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8338);
+const ClipsConstants = fn(8354);
 ({
-  CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire,
-  ClipSaveTypes: closure_7,
+  CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6,
+  ClipSaveTypes: metroImportDefault,
   ClipsUserEducationType: closure_8,
   ClipsLogger: closure_9,
   MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: closure_10,
@@ -254,7 +254,7 @@ const ClipsConstants = fn(8338);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ MessageAttachmentFlags: closure_14, MessageReferenceTypes: closure_15, VoiceFlags: closure_16 } = Constants);
-const StreamSettingsConstants = fn(5984);
+const StreamSettingsConstants = fn(5998);
 const ApplicationStreamFPS = StreamSettingsConstants.ApplicationStreamFPS;
 let c18 = "default";
 let c19 = "Discord Clips";
@@ -296,7 +296,7 @@ obj = {
   hardwareClassification: null,
   hardwareClassificationForDecoupled: null,
   hardwareClassificationVersion: 0,
-  clipsDefaultSettingsState: fn(16021).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  clipsDefaultSettingsState: fn(16111).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
   newClipIds: [],
   hasClips: false,
   hasTakenDecoupledClip: false,

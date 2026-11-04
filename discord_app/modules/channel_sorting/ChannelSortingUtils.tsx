@@ -407,7 +407,7 @@ function getCategoryKey(parent_id, categories) {
   return tmp;
 }
 ({ isGuildSelectableChannelType: c3, isGuildVocalChannelType: closure_4 } = ChannelRecord);
-({ ChannelTypes: hasOwnProperty, NULL_STRING_CHANNEL_ID: metroRequire } = Constants);
+({ ChannelTypes: hasOwnProperty, NULL_STRING_CHANNEL_ID: closure_6 } = Constants);
 let result = size.fileFinishedImporting("modules/channel_sorting/ChannelSortingUtils.tsx");
 
 export function areTypesInSameSection(arg0, arg1) {

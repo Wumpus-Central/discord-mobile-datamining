@@ -190,9 +190,9 @@ let closure_13 = async function _maybeFetchWarning() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          let shouldFetchTodayResult = null == React5;
+          let shouldFetchTodayResult = null == metroImportDefault;
           if (shouldFetchTodayResult) {
-            shouldFetchTodayResult = null == React6;
+            shouldFetchTodayResult = null == React5;
           }
           if (shouldFetchTodayResult) {
             shouldFetchTodayResult = ParentalConsentWarningStore.shouldFetchToday();

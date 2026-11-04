@@ -174,7 +174,7 @@ function FloatingSlot(arg0) {
   return jsx(_modDef1652.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(12945).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(13027).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = {
   BUTTON_SEND: "send-button",

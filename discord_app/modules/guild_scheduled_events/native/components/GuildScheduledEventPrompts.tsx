@@ -49,7 +49,7 @@ export function ScheduleEventPrompt(isLive) {
           { channel },
         );
       },
-      iconSource: channel(9244),
+      iconSource: channel(9261),
       iconStyle: tmp.promptIconStyle,
       completed: isLive.isLive,
       title: null,
@@ -67,7 +67,7 @@ export function ScheduleEventPrompt(isLive) {
           { channel },
         );
       },
-      iconSource: channel(9244),
+      iconSource: channel(9261),
       iconStyle: tmp.promptIconStyle,
       completed: isLive.isLive,
       title: null,
@@ -92,7 +92,7 @@ export function StartEventPrompt(event) {
           recurrenceId,
         );
       },
-      iconSource: recurrenceId(9340),
+      iconSource: recurrenceId(9357),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -109,7 +109,7 @@ export function StartEventPrompt(event) {
     const intl2 = tmp2(1113).intl;
     const obj4 = { startTime: tmp2(4963).calendarFormat(recurrenceId(2171)(scheduled_start_time)) };
     obj2.subtitle = intl2.formatToPlainString(tmp2(1113).t.PTebCR, obj4);
-    tmp4 = jsx(tmp2(8301).FormCTA, {
+    tmp4 = jsx(tmp2(8317).FormCTA, {
       style: tmp.actionBarCTAContainer,
       onPress: function handleStartEvent() {
         const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openStartGuildEventModal(
@@ -117,7 +117,7 @@ export function StartEventPrompt(event) {
           recurrenceId,
         );
       },
-      iconSource: recurrenceId(9340),
+      iconSource: recurrenceId(9357),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,

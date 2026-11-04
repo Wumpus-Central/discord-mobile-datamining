@@ -14,9 +14,9 @@ function ChangeSpendingLimitScreen(teenId) {
     if (1 === tmp7) {
       dependencyMap = 0;
       const intl = tmp3(1113).intl;
-      tmp3(5831).presentFailedToast(intl.string(v2(2667).Wu8BK2));
+      tmp3(5845).presentFailedToast(intl.string(v2(2667).Wu8BK2));
       c3 = 3;
-      tmp3(5831);
+      tmp3(5845);
     } else if (dependencyMap === 1) {
       c3 = 3;
       throw value;
@@ -24,11 +24,11 @@ function ChangeSpendingLimitScreen(teenId) {
       const obj7 = { text: null, variant: "success" };
       const intl2 = tmp3(1113).intl;
       obj7.text = intl2.string(v2(2667)["2WKfG1"]);
-      v2(5832).open("SPENDING_CONTROLS_CHANGED", obj7);
-      v2(5832);
-      v2(6864).pop();
+      v2(5846).open("SPENDING_CONTROLS_CHANGED", obj7);
+      v2(5846);
+      v2(6879).pop();
       dependencyMap = 0;
-      v2(6864);
+      v2(6879);
     }
     return value;
   };
@@ -42,17 +42,17 @@ function ChangeSpendingLimitScreen(teenId) {
   if (null != monthlySpend) {
     formatPriceResult = null;
     if (monthlySpend > 0) {
-      formatPriceResult = tmp2(7537).formatPrice(monthlySpend, tmp5);
-      const tmp2Result = tmp2(7537);
+      formatPriceResult = tmp2(7553).formatPrice(monthlySpend, tmp5);
+      const tmp2Result = tmp2(7553);
     }
   }
   const obj2 = { spacing: nativeDefault.space.PX_16, children: null };
-  const obj3 = { variant: "text-sm/normal", children: null };
+  const obj3 = { variant: "body-sm/normal", children: null };
   let intl = tmp2(1113).intl;
   obj3.children = intl.string(_modDef2667.IFguF2);
   items = [closure_6(require("Text/Text").Text, obj3)];
   const obj4 = { spacing: nativeDefault.space.PX_8, children: null };
-  const obj5 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
+  const obj5 = { variant: "body-sm/semibold", color: "text-subtle", children: null };
   let intl2 = tmp2(1113).intl;
   obj5.children = intl2.string(_modDef2667["1fHSu2"]);
   const items1 = [closure_6(require("Text/Text").Text, obj5), ,];
@@ -103,10 +103,10 @@ function ChangeSpendingLimitScreen(teenId) {
     const obj8 = { children: null };
     items1[2] = null;
     obj4.children = items1;
-    items[1] = closure_7(tmp2(6147).Stack, obj4);
+    items[1] = closure_7(tmp2(6162).Stack, obj4);
     obj2.children = items;
-    obj8.children = closure_7(tmp2(6147).Stack, obj2);
-    const items3 = [closure_6(tmp2(8097).ModalContent, obj8)];
+    obj8.children = closure_7(tmp2(6162).Stack, obj2);
+    const items3 = [closure_6(tmp2(8113).ModalContent, obj8)];
     if (isClearingCap) {
       const obj9 = { variant: "destructive", text: null, onPress: null, disabled: null, loading: null };
       const intl8 = tmp2(1113).intl;
@@ -130,35 +130,35 @@ function ChangeSpendingLimitScreen(teenId) {
     const obj11 = { children: null };
     const obj12 = { children: null };
     const obj13 = { children: null };
-    const items4 = [closure_6(tmp2(5754).Button, obj10)];
+    const items4 = [closure_6(tmp2(5768).Button, obj10)];
     const obj14 = { variant: "tertiary", text: null, onPress: null };
     const intl9 = tmp2(1113).intl;
     obj14.text = intl9.string(tmp2(1113).t["ETE/oC"]);
-    obj14.onPress = tmp10(6864).pop;
-    items4[1] = closure_6(tmp2(5754).Button, obj14);
+    obj14.onPress = tmp10(6879).pop;
+    items4[1] = closure_6(tmp2(5768).Button, obj14);
     obj13.children = items4;
-    obj12.children = closure_7(tmp2(6887).ButtonGroup, obj13);
-    items3[1] = closure_6(tmp2(13344).ModalFooter, obj12);
+    obj12.children = closure_7(tmp2(6902).ButtonGroup, obj13);
+    items3[1] = closure_6(tmp2(13427).ModalFooter, obj12);
     obj11.children = items3;
-    return closure_7(tmp2(8096).ModalScreen, obj11);
+    return closure_7(tmp2(8112).ModalScreen, obj11);
   } else if (isOverspending) {
     const obj15 = { style: formatToPlainStringResult.warningRow, children: null };
     const obj16 = { size: "xs", color: tmp10(575).colors.ICON_FEEDBACK_WARNING };
-    const items5 = [closure_6(tmp2(8150).WarningIcon, obj16)];
-    const obj17 = { variant: "text-sm/normal", style: formatToPlainStringResult.warningText, children: null };
+    const items5 = [closure_6(tmp2(8166).WarningIcon, obj16)];
+    const obj17 = { variant: "body-sm/normal", style: formatToPlainStringResult.warningText, children: null };
     const intl6 = tmp2(1113).intl;
     const obj18 = { amount: formatPriceResult, date: renewalDate };
     formatToPlainStringResult = intl6.formatToPlainString(tmp10(2667).Tk6x4X, obj18);
     obj17.children = formatToPlainStringResult;
-    items5[1] = closure_6(tmp2(5747).Text, obj17);
+    items5[1] = closure_6(tmp2(5761).Text, obj17);
     obj15.children = items5;
     let tmp9Result1 = closure_7(closure_5, obj15);
   } else {
-    const obj19 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj19 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl5 = tmp2(1113).intl;
     const obj20 = { amount: formatPriceResult };
     obj19.children = intl5.formatToPlainString(tmp10(2667).pfAlRY, obj20);
-    tmp9Result1 = closure_6(tmp2(5747).Text, obj19);
+    tmp9Result1 = closure_6(tmp2(5761).Text, obj19);
   }
   const obj = require("ChangeSpendingLimitFormState");
   tmp7 = amountInput.length > 0;
@@ -166,7 +166,7 @@ function ChangeSpendingLimitScreen(teenId) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { warningOverlay: null, warningRow: null, warningText: null };
 let obj3 = {};
@@ -174,7 +174,7 @@ const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.borderRadius = nativeDefault.modules.mobile.INPUT_FIELD_RADIUS_LG;
 obj3.borderWidth = 1;
 obj3.borderColor = nativeDefault.colors.ICON_FEEDBACK_WARNING;
-obj3.backgroundColor = nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING;
+obj3.backgroundColor = nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING;
 obj2.warningOverlay = obj3;
 obj2.warningRow = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
 let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
@@ -192,10 +192,10 @@ export default function ChangeSpendingLimitModal(teenId) {
       headerShown: true,
       headerLeft: NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
       headerTitle() {
-        const obj = { variant: "text-md/semibold", children: null };
+        const obj = { variant: "body-md/semibold", children: null };
         const intl = teenId(1113).intl;
         obj.children = intl.string(closure_1_1(2667).xMRO6A);
-        return closure_1_6(teenId(5747).Text, obj);
+        return closure_1_6(teenId(5761).Text, obj);
       },
       render() {
         return closure_2_6(ChangeSpendingLimitScreen, { teenId });
@@ -207,5 +207,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1113).intl;
   obj.headerBackTitle = intl.string(teenId(1113).t["13/7kX"]);
-  return closure_6(teenId(11619).Modal, obj);
+  return closure_6(teenId(11670).Modal, obj);
 }

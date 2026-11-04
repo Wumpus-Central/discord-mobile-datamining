@@ -42,12 +42,12 @@ function Footer(eligibleToReceivePremiumRewards) {
     const intl3 = util.intl;
     obj2.text = intl3.string(util.t.hvVgAZ);
     obj2.onPress = callback1;
-    items = [React6(Button, obj2)];
+    items = [React5(Button, obj2)];
     const obj3 = { size: "lg", variant: "secondary", text: null, onPress: null };
     const intl4 = util.intl;
     obj3.text = intl4.string(util.t.cpT0Cq);
     obj3.onPress = callback2;
-    items[1] = React6(components_Button_Button.Button, obj3);
+    items[1] = React5(components_Button_Button.Button, obj3);
     obj.children = items;
     let tmp11 = obj;
   } else {
@@ -56,30 +56,30 @@ function Footer(eligibleToReceivePremiumRewards) {
     obj4.text = intl.string(util.t.pj0XBN);
     obj4.onPress = onPress;
     obj4.loading = loading;
-    const items1 = [React6(Button, obj4)];
+    const items1 = [React5(Button, obj4)];
     const obj5 = { size: "lg", variant: "secondary", text: null, onPress: null };
     const intl2 = util.intl;
     obj5.text = intl2.string(util.t.PcTCB7);
     obj5.onPress = callback;
-    items1[1] = React6(components_Button_Button.Button, obj5);
+    items1[1] = React5(components_Button_Button.Button, obj5);
     obj.children = items1;
     tmp11 = obj;
   }
-  return React7(View, tmp11);
+  return React6(View, tmp11);
 }
 function SheetContent(arg0) {
   ({ title, body, eligibleToReceivePremiumRewards } = arg0);
   const tmp = closure_12();
   const obj = { children: null };
-  items = [React6(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating" })];
+  items = [React5(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating" })];
   const obj2 = { style: null, children: null };
   const items1 = [tmp.container, { marginBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items1;
   const obj3 = { style: tmp.contentContainer, children: null };
   const items2 = [
-    React6(View, {
+    React5(View, {
       style: tmp.riveContainer,
-      children: React6(NitroQuestOrbsMultiplierRive.NitroQuestOrbsMultiplierRive, {}),
+      children: React5(NitroQuestOrbsMultiplierRive.NitroQuestOrbsMultiplierRive, {}),
     }),
     ,
     ,
@@ -94,18 +94,18 @@ function SheetContent(arg0) {
   const items3 = [,];
   ({ text: arr4[0], title: arr4[1] } = tmp);
   obj5.style = items3;
-  items2[1] = React6(Text_Text.Text, obj5);
-  items2[2] = React6(Text_Text.Text, { style: tmp.text, variant: "text-sm/normal", children: body });
-  items2[3] = React6(Footer, { eligibleToReceivePremiumRewards });
+  items2[1] = React5(Text_Text.Text, obj5);
+  items2[2] = React5(Text_Text.Text, { style: tmp.text, variant: "body-sm/normal", children: body });
+  items2[3] = React5(Footer, { eligibleToReceivePremiumRewards });
   obj3.children = items2;
-  obj2.children = React7(View, obj3);
-  items[1] = React6(View, obj2);
+  obj2.children = React6(View, obj3);
+  items[1] = React5(View, obj2);
   obj.children = items;
-  return React7(closure_1_10, obj);
+  return React6(closure_1_10, obj);
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticsPages: hasOwnProperty, HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
+({ AnalyticsPages: hasOwnProperty, HelpdeskArticles: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const contentStyles = { marginBottom: 0 };
@@ -141,9 +141,9 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestOrbMultiplie
 export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   multiplier = multiplier.multiplier;
   const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-  const result = multiplier(9835).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+  const result = multiplier(9853).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   dependencyMap = result;
-  let obj = multiplier(9835);
+  let obj = multiplier(9853);
   items = [orbMultiplierEligibility];
   const items1 = [result, orbMultiplierEligibility, multiplier];
   const memo = noop.useMemo(() => {
@@ -178,14 +178,14 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
   let obj3 = {
     visible:
-      orbMultiplierEligibility === multiplier(9835).QuestOrbMultiplierEligibilityType.NITRO ||
-      orbMultiplierEligibility === multiplier(9835).QuestOrbMultiplierEligibilityType.UPSELL,
+      orbMultiplierEligibility === multiplier(9853).QuestOrbMultiplierEligibilityType.NITRO ||
+      orbMultiplierEligibility === multiplier(9853).QuestOrbMultiplierEligibilityType.UPSELL,
     children: null,
   };
   const tmp4 =
-    orbMultiplierEligibility === multiplier(9835).QuestOrbMultiplierEligibilityType.NITRO ||
-    orbMultiplierEligibility === multiplier(9835).QuestOrbMultiplierEligibilityType.UPSELL;
+    orbMultiplierEligibility === multiplier(9853).QuestOrbMultiplierEligibilityType.NITRO ||
+    orbMultiplierEligibility === multiplier(9853).QuestOrbMultiplierEligibilityType.UPSELL;
   obj3.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj2.children = closure_8(orbMultiplierEligibility(17282), obj3);
-  return closure_8(multiplier(5395).BottomSheet, obj2);
+  obj2.children = closure_8(orbMultiplierEligibility(17374), obj3);
+  return closure_8(multiplier(5396).BottomSheet, obj2);
 }

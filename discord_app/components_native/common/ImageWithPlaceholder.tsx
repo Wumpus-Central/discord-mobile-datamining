@@ -15,7 +15,6 @@ if (PlatformUtils.isAndroid()) {
 } else {
   importDefaultResult = requireNativeComponent("DCDImageWithThumbhashPlaceholderView");
 }
-const metroRequire = importDefaultResult;
 const result = size.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
 
 export { ImagePlaceholderVersions };

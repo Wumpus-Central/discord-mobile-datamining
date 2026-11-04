@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const BotTagTypes = fn(1362).BotTagTypes;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 },
@@ -69,7 +69,7 @@ export default function InteractionIframeModal(application) {
   const obj6 = { style: tmp.headerTitleContainer, children: null };
   const items4 = [
     closure_7(id2(onDisallowedNavigation[16]).Text, {
-      variant: "heading-sm/semibold",
+      variant: "heading-xs/semibold",
       color: "mobile-text-heading-primary",
       children: application.name,
     }),
@@ -77,7 +77,7 @@ export default function InteractionIframeModal(application) {
   const obj8 = { type: BotTagTypes.BOT, verified: null, style: null };
   const bot = application.bot;
   let verified;
-  const obj7 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: application.name };
+  const obj7 = { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", children: application.name };
   const tmp6 = _slicedToArray(noop.useState(require("makeIframeId")), 2);
   if (bot != null) {
     verified = bot.verified;
@@ -89,7 +89,7 @@ export default function InteractionIframeModal(application) {
   const items5 = [
     closure_8(View, obj6),
     closure_7(id2(onDisallowedNavigation[16]).Text, {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       children: title,
     }),

@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const JankScreenConstants = fn(18207);
+const JankScreenConstants = fn(18304);
 ({ INTERACTION_NONE: closure_4, INTERACTION_TRANSITION: hasOwnProperty } = JankScreenConstants);
 let closure_6 = {
   code: "(function JankSlidingSurfaceReporterNativeTsx1(){let[position]=this.__closure;return position.get();})",

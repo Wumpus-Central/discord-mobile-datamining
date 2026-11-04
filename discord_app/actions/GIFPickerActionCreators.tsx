@@ -81,8 +81,8 @@ function doSearchRequest(q, arg1, limit) {
 }
 const Constants = fn(1072);
 ({
-  AnalyticEvents: metroRequire,
-  Endpoints: closure_7,
+  AnalyticEvents: closure_6,
+  Endpoints: metroImportDefault,
   SearchTypes: closure_8,
   GIFPickerResultTypes: closure_9,
 } = Constants);

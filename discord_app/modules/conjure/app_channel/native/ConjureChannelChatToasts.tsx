@@ -30,9 +30,9 @@ function ChatToast(message) {
     const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
     const items1 = [hasOwnProperty(native.Avatar, obj4)];
     const obj5 = { style: tmp.body, children: null };
-    const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };
+    const obj6 = { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, children: name };
     const items2 = [hasOwnProperty(Text_Text.Text, obj6)];
-    const obj7 = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: trimmed };
+    const obj7 = { variant: "body-sm/normal", color: "text-default", lineClamp: 1, children: trimmed };
     items2[1] = hasOwnProperty(Text_Text.Text, obj7);
     obj5.children = items2;
     items1[1] = timestampProducer(View, obj5);
@@ -50,7 +50,7 @@ function ChatToast(message) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = {

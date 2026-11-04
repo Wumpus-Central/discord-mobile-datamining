@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
 import ButtonConstants from "../../../../../design/components/Button/native/ButtonConstants.native.tsx";
-import _modDef5842 from "../../../../../../_runtime/metro/05842__.js";
+import _modDef5856 from "../../../../../../_runtime/metro/05856__.js";
 import HeaderDebugOverlayDefault from "../../../../devtools/design_toggles/HeaderDebugOverlay.native.tsx";
-import _modDef7341 from "../../../../../../_runtime/metro/07341__.js";
+import _modDef7357 from "../../../../../../_runtime/metro/07357__.js";
 import useScaledTextLineHeight from "../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import MobileVisualRefreshExperiment from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import MessageRequestsButtonDefault from "../../shared_components/MessageRequestsButton.tsx";
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const SearchTypes = fn(1072).SearchTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_8 = nativeDefault.space.PX_8;
 const createStyles = fn(5141);
@@ -49,7 +49,7 @@ let obj4 = {
   justifyContent: "space-between",
 };
 obj.headerPanelButtons = {
-  height: fn(5760).SMALL_BUTTON_HEIGHT,
+  height: fn(5774).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -65,7 +65,7 @@ let closure_11 = {
   code: "(function MessagesHeaderTsx1(){let[withSpring,scrollPosition,Reanimated3DefaultSpringConfig]=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0,Reanimated3DefaultSpringConfig)};})",
 };
 let obj5 = {
-  height: fn(5760).SMALL_BUTTON_HEIGHT,
+  height: fn(5774).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -169,7 +169,7 @@ export default noop.memo(function MessagesHeader(height) {
   });
   const items3 = [closure_6(closure_4, obj6), , ,];
   const obj7 = { style: tmp.headerPanelButtons, children: null };
-  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7341, accessibilityLabel: null };
+  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7357, accessibilityLabel: null };
   const intl3 = tmp3(1113).intl;
   obj8.accessibilityLabel = intl3.string(require("util").t["5h0QOP"]);
   const items4 = [
@@ -182,7 +182,7 @@ export default noop.memo(function MessagesHeader(height) {
     grow: true,
     shrink: true,
     size: "sm",
-    icon: _modDef5842,
+    icon: _modDef5856,
     onPress: callback1,
     maxFontSizeMultiplier: 1,
     text: null,
@@ -206,6 +206,6 @@ export function getMessagesHeaderHeight(fontScale) {
   const refreshToken = MobileVisualRefreshExperiment.resolveRefreshToken(
     nativeDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM,
   );
-  const sum = useScaledTextLineHeight.scaleTextLineHeight("redesign/heading-18/semibold", bound) + PX_8;
+  const sum = useScaledTextLineHeight.scaleTextLineHeight("heading-md/semibold", bound) + PX_8;
   return sum + ButtonConstants.SMALL_BUTTON_HEIGHT + PX_16 + refreshToken;
 }

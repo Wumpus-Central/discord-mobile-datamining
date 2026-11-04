@@ -744,7 +744,7 @@ function handleDownloadError() {
   actions_AlertActionCreatorsDefault.show(obj2);
 }
 const Constants = fn(1072);
-({ MessageAttachmentFlags: hasOwnProperty, WEBP_RE_IOS: metroRequire } = Constants);
+({ MessageAttachmentFlags: hasOwnProperty, WEBP_RE_IOS: closure_6 } = Constants);
 const re7 = /\.avif$/i;
 const VideoSourceType = {
   PORTAL: 0,

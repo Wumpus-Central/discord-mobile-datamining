@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import AnimatedEnterExitItemDefault from "../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import BountiesModalTransitionsRefactorExperiment from "../../experiments/BountiesModalTransitionsRefactorExperiment.tsx";
 import useVisibilityTransition from "useVisibilityTransition.tsx";
@@ -60,8 +60,8 @@ function BountiesScrollEndCardContent(arg0) {
   const items2 = [tmp.container, opacityStyle];
   obj2.style = items2;
   const items3 = [
-    React6(hasOwnProperty, { style: tmp.backdropTint, pointerEvents: "none" }),
-    React6(LinearGradientDefault, {
+    React5(hasOwnProperty, { style: tmp.backdropTint, pointerEvents: "none" }),
+    React5(LinearGradientDefault, {
       colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"],
       style: tmp.backdropGradient,
       pointerEvents: "none",
@@ -70,11 +70,11 @@ function BountiesScrollEndCardContent(arg0) {
   const obj5 = { style: null, pointerEvents: "box-none", children: null };
   const items4 = [tmp.overlayContent, animatedStyle];
   obj5.style = items4;
-  const items5 = [React6(BountiesEndCardPressableCtaDefault, { bounty, sourceQuestContent, disabled: !isActive })];
+  const items5 = [React5(BountiesEndCardPressableCtaDefault, { bounty, sourceQuestContent, disabled: !isActive })];
   const obj7 = {
     style: tmp.endedCtaButtonsContainer,
     pointerEvents: "box-none",
-    children: React6(BountiesModalEndedCtaButtonsDefault, {
+    children: React5(BountiesModalEndedCtaButtonsDefault, {
       bounty,
       visible,
       sourceQuestContent,
@@ -83,15 +83,15 @@ function BountiesScrollEndCardContent(arg0) {
       disabled: !isActive,
     }),
   };
-  items5[1] = React6(hasOwnProperty, obj7);
+  items5[1] = React5(hasOwnProperty, obj7);
   obj5.children = items5;
-  items3[2] = React7(_modDef1652.View, obj5);
+  items3[2] = React6(_modDef1652.View, obj5);
   obj2.children = items3;
-  return React7(_modDef1652.View, obj2);
+  return React6(_modDef1652.View, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6916).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -129,8 +129,8 @@ let items = [
   {
     code: "(function BountiesScrollEndCardTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})",
   },
-  fn(5377).withTiming,
-  fn(5380).timingStandard,
+  fn(5378).withTiming,
+  fn(5381).timingStandard,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -149,8 +149,8 @@ let items2 = [
   {
     code: "(function BountiesScrollEndCardTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})",
   },
-  fn(5377).withTiming,
-  fn(5380).timingStandard,
+  fn(5378).withTiming,
+  fn(5381).timingStandard,
 ];
 let closure_130_0;
 let closure_130_1;
@@ -202,12 +202,12 @@ export default function BountiesScrollEndCard(visible) {
     obj5.entering = BountiesScrollEndCardTsx1;
     obj5.exiting = BountiesScrollEndCardTsx2;
     obj5.renderItem = callback;
-    shouldRender = React6(AnimatedEnterExitItemDefault, obj5);
+    shouldRender = React5(AnimatedEnterExitItemDefault, obj5);
   } else if (shouldRender) {
     const obj6 = {};
     let merged = Object.assign(visible);
     obj6.opacityStyle = tmp6;
-    shouldRender = React6(BountiesScrollEndCardContent, obj6);
+    shouldRender = React5(BountiesScrollEndCardContent, obj6);
   }
   return shouldRender;
 }

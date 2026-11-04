@@ -80,7 +80,7 @@ function MembersPruneActionSheetContent(guild) {
     num = -1;
   }
   items3[1] = closure_11(guild(days[14]).Text, {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     children: intl5.format(tmp3.isLoading ? t["98cHOp"] : t.f13az9, { members: num, days }),
   });
   const obj7 = {
@@ -93,7 +93,7 @@ function MembersPruneActionSheetContent(guild) {
       if (tmp2) {
         PruneGuildModalActionCreatorsDefault.prune(id, first);
         ActionSheetActionCreatorsDefault.hideActionSheet();
-        React5();
+        metroImportDefault();
       }
     },
     text: null,
@@ -104,11 +104,11 @@ function MembersPruneActionSheetContent(guild) {
   obj.children = items3;
   return closure_12(guild(days[9]).ActionSheet, obj);
 }
-const PrunePreviewStore = fn(18815);
+const PrunePreviewStore = fn(18916);
 ({
   usePrunePreview: hasOwnProperty,
-  setPrunePreview: metroRequire,
-  clearAllPrunePreviews: closure_7,
+  setPrunePreview: closure_6,
+  clearAllPrunePreviews: metroImportDefault,
 } = PrunePreviewStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

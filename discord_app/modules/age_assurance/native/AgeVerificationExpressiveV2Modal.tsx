@@ -243,7 +243,7 @@ function MethodsScreen(onClose) {
       children: tmp2(tmp3[24]).getAgeVerificationGetStartedTitle(entryPoint, true),
     };
     const items8 = [tmp19(tmp2(tmp3[30]).Text, obj11)];
-    const obj12 = { variant: "text-md/medium", color: "text-subtle", style: tmp.header, children: null };
+    const obj12 = { variant: "body-md/medium", color: "text-subtle", style: tmp.header, children: null };
     const tmp2Result2 = tmp2(tmp3[24]);
     let fn;
     if (shouldShowExpressiveModalSubtitleAlt) {
@@ -262,7 +262,7 @@ function MethodsScreen(onClose) {
       entryPoint,
       () => {
         const obj = AgeVerificationActionCreatorsDefault;
-        obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
+        obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_VERIFICATION_LEARN_MORE));
         const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(
           modalSessionId,
           AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_V2,
@@ -358,14 +358,14 @@ function MethodsScreen(onClose) {
               };
               items = [
                 tmp5(closure_0(onComplete[30]).Text, {
-                  variant: "text-sm/normal",
+                  variant: "body-sm/normal",
                   color: "text-muted",
                   children: children.description,
                 }),
               ];
               let tmp5Result2 = null != children.providedBy;
               if (tmp5Result2) {
-                const obj7 = { variant: "text-sm/normal", color: "text-muted", children: children.providedBy };
+                const obj7 = { variant: "body-sm/normal", color: "text-muted", children: children.providedBy };
                 tmp5Result2 = tmp5(tmp(onComplete[30]).Text, obj7);
               }
               items[1] = tmp5Result2;
@@ -421,7 +421,7 @@ function MethodsScreen(onClose) {
       tmp19Result12 = null != footerMessage;
     }
     if (tmp19Result12) {
-      const obj22 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.footer, children: footerMessage };
+      const obj22 = { variant: "body-sm/normal", color: "text-subtle", style: tmp.footer, children: footerMessage };
       tmp19Result12 = tmp19(tmp2(tmp3[30]).Text, obj22);
     }
     const obj23 = { children: null };
@@ -436,7 +436,7 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(6848).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(6863).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

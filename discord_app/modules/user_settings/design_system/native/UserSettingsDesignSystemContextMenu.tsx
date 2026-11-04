@@ -3,15 +3,15 @@ import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef5861 from "../../../../../_runtime/metro/05861__.js";
+import _modDef5875 from "../../../../../_runtime/metro/05875__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7382 from "../../../../../_runtime/metro/07382__.js";
-import _modDef8548 from "../../../../../_runtime/metro/08548__.js";
-import _modDef11729 from "../../../../../_runtime/metro/11729__.js";
-import _modDef11734 from "../../../../../_runtime/metro/11734__.js";
-import _modDef14517 from "../../../../../_runtime/metro/14517__.js";
-import _modDef17933 from "../../../../../_runtime/metro/17933__.js";
-import _modDef17934 from "../../../../../_runtime/metro/17934__.js";
+import _modDef7398 from "../../../../../_runtime/metro/07398__.js";
+import _modDef8565 from "../../../../../_runtime/metro/08565__.js";
+import _modDef11784 from "../../../../../_runtime/metro/11784__.js";
+import _modDef11789 from "../../../../../_runtime/metro/11789__.js";
+import _modDef14597 from "../../../../../_runtime/metro/14597__.js";
+import _modDef18029 from "../../../../../_runtime/metro/18029__.js";
+import _modDef18030 from "../../../../../_runtime/metro/18030__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,8 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: 0.003,
-            action: -3.334,
+            variant: true,
+            action: true,
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -74,8 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: 0.003,
-          action: -3.334,
+          variant: true,
+          action: true,
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -108,16 +108,16 @@ function DemoContextMenu(align) {
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [
-  _modDef14517,
-  _modDef7382,
-  _modDef8548,
-  _modDef11734,
-  _modDef5861,
-  _modDef17933,
-  _modDef17934,
-  _modDef11729,
+  _modDef14597,
+  _modDef7398,
+  _modDef8565,
+  _modDef11789,
+  _modDef5875,
+  _modDef18029,
+  _modDef18030,
+  _modDef11784,
 ];
 let closure_8 = [
   "Launch Probe!",
@@ -150,9 +150,9 @@ export default function UserSettingsDesignSystemAlertModal() {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.card, children: null };
   items = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Basic Example" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-lg/semibold", children: "Basic Example" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children:
         "You press the button to open the menu and then select an action, or tap and pan down in a single gesture.",
@@ -163,9 +163,9 @@ export default function UserSettingsDesignSystemAlertModal() {
   const items1 = [timestampProducer(Card.Card, obj3), , , , ,];
   const obj4 = { style: tmp.card, children: null };
   const items2 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Long Press" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-lg/semibold", children: "Long Press" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "You can also have the menu open on long press instead.",
     }),
@@ -175,9 +175,9 @@ export default function UserSettingsDesignSystemAlertModal() {
   items1[1] = timestampProducer(Card.Card, obj4);
   const obj5 = { style: tmp.card, children: null };
   const items3 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Sections" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-lg/semibold", children: "Sections" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "You can pass an array of arrays of items to create sections in the menu.",
     }),
@@ -187,16 +187,16 @@ export default function UserSettingsDesignSystemAlertModal() {
   items1[2] = timestampProducer(Card.Card, obj5);
   const obj6 = { style: tmp.card, children: null };
   const items4 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Automatic Alignment" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-lg/semibold", children: "Automatic Alignment" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "The menu will automatically align itself so that it doesn't overflow offscreen horizontally.",
     }),
     hasOwnProperty(DemoContextMenu, { alignButton: "flex-end", label: "Open Right-Aligned Menu" }),
     hasOwnProperty(React3, { style: tmp.divider }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "It will also position itself vertically, so that it doesn't overflow offscreen vertically.",
     }),
@@ -206,15 +206,15 @@ export default function UserSettingsDesignSystemAlertModal() {
   items1[3] = timestampProducer(Card.Card, obj6);
   const obj8 = { style: tmp.card, children: null };
   const items5 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Intentional Alignment" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-lg/semibold", children: "Intentional Alignment" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children:
         "Menus can take an align prop to intentionally align the menu, instead of using the automatic menu positioning.",
     }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children:
         "The align prop can be set to above, below, left, or right of the menu trigger. How the menu positions relative to the start or end of the trigger is then automatically determined based on the available space.",
@@ -232,9 +232,9 @@ export default function UserSettingsDesignSystemAlertModal() {
   items1[4] = timestampProducer(Card.Card, obj8);
   const obj13 = { style: tmp.card, children: null };
   const items6 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-lg/semibold", children: "Overflow Scrolling" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-lg/semibold", children: "Overflow Scrolling" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children:
         "Menus should not typically have enough items to require scrolling, but with font scaling and smaller devices its possible. In this case, the menu will allow the user to scroll.",

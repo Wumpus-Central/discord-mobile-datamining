@@ -10,9 +10,9 @@ const module_1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = "#2ECC71";
-let result = (fn(5760).SMALL_BUTTON_HEIGHT - 4) / 2;
+let result = (fn(5774).SMALL_BUTTON_HEIGHT - 4) / 2;
 const strokeDasharray = 2 * Math.PI * result;
 const Easing = fn(1652).Easing;
 let closure_10 = Easing.bezier(0.15, 0.21, 0.58, 1);
@@ -20,7 +20,7 @@ const Easing2 = fn(1652).Easing;
 let closure_11 = Easing2.bezier(0.61, 0, 0.58, 1);
 const Easing3 = fn(1652).Easing;
 let closure_12 = Easing3.bezier(0.42, 0, 0.58, 1);
-let closure_13 = module_1652.createAnimatedComponent(fn(8155).Circle);
+let closure_13 = module_1652.createAnimatedComponent(fn(8171).Circle);
 const createStyles = fn(5141);
 let obj = {
   progress: null,
@@ -36,8 +36,8 @@ let size = {
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
   borderRadius: nativeDefault.radii.round,
-  width: fn(5760).SMALL_BUTTON_HEIGHT,
-  height: fn(5760).SMALL_BUTTON_HEIGHT,
+  width: fn(5774).SMALL_BUTTON_HEIGHT,
+  height: fn(5774).SMALL_BUTTON_HEIGHT,
 };
 obj.progress = size;
 let obj3 = { position: "absolute", transform: null };
@@ -231,7 +231,7 @@ export default function BountiesModalTimer(arg0) {
   const items9 = [closure_6(tmp26, size), , ,];
   let tmp27Result = !tmp2;
   if (!tmp2) {
-    let obj8 = { variant: "text-sm/semibold", style: tmp.countdownText, maxFontSizeMultiplier: 1, children: bound };
+    let obj8 = { variant: "body-sm/semibold", style: tmp.countdownText, maxFontSizeMultiplier: 1, children: bound };
     tmp27Result = tmp27(tmp5(tmp6[10]).Text, obj8);
   }
   items9[1] = tmp27Result;

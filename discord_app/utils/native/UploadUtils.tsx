@@ -1267,7 +1267,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      obj8 = { uri, overrideType: "y" };
+                      obj8 = { uri, overrideType: "a" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1286,7 +1286,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj9 = { uri, overrideType: "y" };
+                  const obj9 = { uri, overrideType: "a" };
                   isVideo = UploadUtils.getFile(obj9).isVideo;
                   const tmp12Result12 = UploadUtils;
                 }
@@ -1945,7 +1945,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(8352);
+                      tmpResult = closure_1_0(8368);
                     }
                     const obj = closure_1_0(1377);
                   })(closure_130_0, closure_130_1)) {
@@ -2589,12 +2589,12 @@ let closure_45 = async function _calculateImageQualityMetrics(arg0) {
 let closure_3 = ["filename"];
 const Image = fn(17).Image;
 let UnsyncedUserSettingsStore = fn(1194);
-({ VideoCompressionQuality: closure_7, VideoQualitySettings: closure_8 } = UnsyncedUserSettingsStore);
+({ VideoCompressionQuality: metroImportDefault, VideoQualitySettings: closure_8 } = UnsyncedUserSettingsStore);
 let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1072);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(8064).NativePermissionTypes;
+const NativePermissionTypes = fn(8080).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2663,8 +2663,8 @@ export function getFileSize(uri) {
 }
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(8352).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(8352).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(8368).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(8368).shouldForceConvertToJPG;
 export function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

@@ -8,10 +8,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function NewBadge() {
   const obj = { style: closure_9().badge, children: null };
-  const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.c2GSIl);
-  obj.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "text-default", children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "body-sm/semibold", color: "text-default", children: null });
   return <View style={closure_9().badge}>{null}</View>;
 }
 const View = fn(17).View;
@@ -45,7 +45,7 @@ export function ConversationCoachmark(arg0) {
   ({ children, isLast } = arg0);
   const ref = noop.useRef(null);
   const tmp = closure_9();
-  const tmp3 = _slicedToArray(first(7693).useSelectedDismissibleContent(items), 2);
+  const tmp3 = _slicedToArray(first(7709).useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
   items = [tmp3[1], first];
@@ -71,8 +71,8 @@ export function ConversationCoachmark(arg0) {
     };
     return obj;
   }, items);
-  let obj = first(7693);
-  const coachmark = first(10085).useCoachmark(ref, memo);
+  let obj = first(7709);
+  const coachmark = first(10133).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   const callback = noop.useCallback(() => {
@@ -82,7 +82,7 @@ export function ConversationCoachmark(arg0) {
     coachmarkWrapper = tmp.coachmarkWrapper;
   }
   const obj3 = { style: coachmarkWrapper, children: null };
-  const obj2 = first(10085);
+  const obj2 = first(10133);
   obj3.children = <View ref={ref}>{children(callback)}</View>;
   return <View style={coachmarkWrapper}>{null}</View>;
 }

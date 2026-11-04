@@ -82,7 +82,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const obj5 = v1(7948);
+              const obj5 = v1(7964);
               const obj4 = {
                 content: obj5.parse(stateFromStores, first).content,
                 flags: scheduledMessage.createArgs.flags,
@@ -90,7 +90,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               v1 = 1;
               dependencyMap = 1;
               const obj7 = {
-                value: tmp4(9938).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
+                value: tmp4(9956).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
                 done: false,
               };
               return obj7;
@@ -104,8 +104,8 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             return obj;
           } else {
             if (value) {
-              v1(6864).pop();
-              const arr = v1(6864);
+              v1(6879).pop();
+              const arr = v1(6879);
             }
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
@@ -125,7 +125,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
   let obj5 = {
     title: stringResult,
     headerTitle() {
-      return React6(HeaderShared.GenericHeaderTitle, { title });
+      return React5(HeaderShared.GenericHeaderTitle, { title });
     },
     headerTitleAlign: "center",
     headerStatusBarHeight: null,
@@ -145,11 +145,11 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
   ({ headerLeftContainer: obj3.headerLeftContainerStyle, headerRightContainer: obj3.headerRightContainerStyle } = tmp);
   obj5.headerRight = function headerRight() {
     const obj = { accessibilityRole: "button", onPress, children: null };
-    const obj2 = { variant: "text-md/semibold", color: "control-brand-foreground", children: null };
+    const obj2 = { variant: "body-md/semibold", color: "control-brand-foreground", children: null };
     const intl = util.intl;
     obj2.children = intl.string(util.t["R3BPH+"]);
-    obj.children = React6(Text_Text.Text, obj2);
-    return React6(Pressables.PressableOpacity, obj);
+    obj.children = React5(Text_Text.Text, obj2);
+    return React5(Pressables.PressableOpacity, obj);
   };
   const items2 = [closure_8(scheduledMessage(stateFromStores[16]).Header, obj5)];
   const tmp5Result = scheduledMessage(stateFromStores[19]);

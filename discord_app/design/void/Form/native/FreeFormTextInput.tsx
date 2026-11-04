@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../native.tsx";
 import Pressables from "../../Pressables/native/Pressables.tsx";
-import _modDef7232 from "../../../../../_runtime/metro/07232__.js";
+import _modDef7252 from "../../../../../_runtime/metro/07252__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -22,17 +22,17 @@ function ClearButton(onPress) {
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_9();
-  obj.children = React5(native.Icon, {
-    source: _modDef7232,
+  obj.children = metroImportDefault(native.Icon, {
+    source: _modDef7252,
     style: closure_9().closeIcon,
     size: native.Icon.Sizes.MEDIUM,
   });
-  return React5(Pressables.PressableOpacity, obj);
+  return metroImportDefault(Pressables.PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);
-({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
+({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -229,7 +229,7 @@ export default (editable) => {
   }
   obj4.importantForAccessibility = str4;
   obj4.accessibilityElementsHidden = !flag;
-  items1[1] = React5(native.TextInput, obj4);
+  items1[1] = metroImportDefault(native.TextInput, obj4);
   let result1;
   if (renderTrailingComponent != null) {
     result1 = renderTrailingComponent();
@@ -246,10 +246,10 @@ export default (editable) => {
         return tmpResult;
       },
     };
-    tmp15Result = React5(ClearButton, obj5);
+    tmp15Result = metroImportDefault(ClearButton, obj5);
   }
   items1[3] = tmp15Result;
   obj3.children = items1;
-  obj.children = React6(hasOwnProperty, obj3);
-  return React5(null != onPress ? timestampProducer : React4, obj);
+  obj.children = React5(hasOwnProperty, obj3);
+  return metroImportDefault(null != onPress ? timestampProducer : React4, obj);
 };

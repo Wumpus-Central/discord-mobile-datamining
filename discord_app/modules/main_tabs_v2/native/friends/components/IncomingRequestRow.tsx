@@ -85,10 +85,10 @@ function IncomingRequestRow(user) {
   const items5 = [stateFromStores1, applicationId, userTag];
   const memo1 = onAcceptIncomingRequest.useMemo(() => {
     if (null != stateFromStores1) {
-      const obj = { application: stateFromStores1, textVariant: "text-xs/medium", iconSize: 12 };
+      const obj = { application: stateFromStores1, textVariant: "body-xs/medium", iconSize: 12 };
       let str = jsx(
         ApplicationIconAndNameDefault,
-        { application: stateFromStores1, textVariant: "text-xs/medium", iconSize: 12 },
+        { application: stateFromStores1, textVariant: "body-xs/medium", iconSize: 12 },
         stateFromStores1.id,
       );
     } else {
@@ -147,7 +147,7 @@ function IncomingGameFriendRequestRow(arg0) {
     applicationNameHook() {
       return jsx(
         ApplicationIconAndNameDefault,
-        { application, textVariant: "text-xs/medium", iconSize: 12 },
+        { application, textVariant: "body-xs/medium", iconSize: 12 },
         application.id,
       );
     },
@@ -180,7 +180,7 @@ function IncomingGameFriendRequestRow(arg0) {
     />
   );
 }
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };

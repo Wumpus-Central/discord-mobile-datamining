@@ -5,11 +5,11 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({
   SEARCH_FILTERS_BY_TAB: hasOwnProperty,
-  SearchFilter: metroRequire,
-  SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_7,
+  SearchFilter: closure_6,
+  SEARCH_PINNED_MESSAGES_LINE_CLAMP: metroImportDefault,
   SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8,
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_9,
   SearchListItemTypes: closure_10,

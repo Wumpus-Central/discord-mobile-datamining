@@ -22,7 +22,7 @@ function useGoreContentNonFriendsDmSettingValue() {
 function onGoreContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    const obj = selectedTeenId(16868);
+    const obj = selectedTeenId(16960);
     const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1113).intl;
     obj3.title = intl.string(selectedTeenId(1113).t["16/3Bi"]);
@@ -34,17 +34,17 @@ function onGoreContentNonFriendsDmOnPress() {
     obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     items = [selectedTeenId(1196).ExplicitContentRedaction.SHOW];
     obj3.excluded = items;
-    const result = selectedTeenId(16873).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(16873);
+    const result = selectedTeenId(16965).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(16965);
   }
 }
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
     return intl.string(util.t["Yh+HX1"]);
   },
-  parent: fn(8556).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8573).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: useGoreContentNonFriendsDmSettingValue,
   onPress: onGoreContentNonFriendsDmOnPress,
   unsearchable: true,

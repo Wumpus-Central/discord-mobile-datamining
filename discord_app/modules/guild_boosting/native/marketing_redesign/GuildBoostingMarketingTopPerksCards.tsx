@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15633 from "../../../../../_runtime/metro/15633__.js";
-import _mod15634 from "../../../../../_runtime/metro/15634__.js";
-import _modDef15635 from "../../../../../_runtime/metro/15635__.js";
+import _modDef15720 from "../../../../../_runtime/metro/15720__.js";
+import _mod15721 from "../../../../../_runtime/metro/15721__.js";
+import _modDef15722 from "../../../../../_runtime/metro/15722__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   wrapper: { marginTop: 50 },
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15633 };
+      const obj = { style, source: _modDef15720 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -76,7 +76,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod15634, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod15721, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     },
   },
@@ -90,7 +90,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15635 };
+      const obj = { style, source: _modDef15722 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -143,7 +143,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
       };
       items1[2] = hasOwnProperty(Text_Text.Text, {
         style: card.cardBody,
-        variant: "text-sm/normal",
+        variant: "body-sm/normal",
         color: "text-default",
         children: getGraphic.getBodyCopy(),
       });

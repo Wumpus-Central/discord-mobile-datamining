@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef10408 from "../../../../../_runtime/metro/10408__.js";
+import _modDef10456 from "../../../../../_runtime/metro/10456__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ function VideoUploadQualityNitroUpsell() {
     currentUser = currentUser.getCurrentUser();
     return closure_0(dependencyMap[11]).hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription);
   });
-  const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  const obj3 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = require("util").intl;
   obj3.children = intl.format(require("util").t["Up+hSO"], {
     supportURL: "https://support.discord.com/hc/articles/9665451164951",
@@ -33,12 +33,12 @@ function VideoUploadQualityNitroUpsell() {
     const obj6 = { style: tmp3.cardContent, children: null };
     const obj7 = {
       style: tmp3.cardIcon,
-      source: _modDef10408,
+      source: _modDef10456,
       size: tmp(1187).Icon.Sizes.SMALL,
       color: nativeDefault.unsafe_rawColors.PRIMARY_400,
     };
     const items2 = [closure_9(tmp(1187).Icon, obj7)];
-    const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    const obj8 = { variant: "body-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1113).intl;
     const obj9 = {
       onClick() {
@@ -47,17 +47,17 @@ function VideoUploadQualityNitroUpsell() {
       },
     };
     obj8.children = intl2.format(tmp(1113).t.uW1zul, obj9);
-    items2[1] = closure_9(tmp(5747).Text, obj8);
+    items2[1] = closure_9(tmp(5761).Text, obj8);
     obj6.children = items2;
     obj5.children = closure_10(View, obj6);
-    obj4.children = closure_9(tmp(7103).Card, obj5);
+    obj4.children = closure_9(tmp(7118).Card, obj5);
     tmp7Result = closure_9(View, obj4);
   }
   children[1] = tmp7Result;
   return closure_10(View, { children });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -105,7 +105,7 @@ export default function SettingsChatScreen(route) {
     const intl4 = util.intl;
     obj4.subLabel = intl4.string(util.t.eZmJYE);
     items1[1] = obj4;
-    const obj5 = { settings: null, subLabel: React7(VideoUploadQualityNitroUpsell, {}) };
+    const obj5 = { settings: null, subLabel: React6(VideoUploadQualityNitroUpsell, {}) };
     const items3 = [MobileUserSettings.VIDEO_UPLOAD_QUALITY];
     obj5.settings = items3;
     items1[2] = obj5;

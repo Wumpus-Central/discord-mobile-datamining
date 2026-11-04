@@ -116,21 +116,21 @@ function LeftSlot(state) {
     onExitComplete: cleanup,
   });
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, {
+  obj2.children = metroImportDefault(ChatInputActionButtonGiftOrThreadDefault, {
     canStartThreads: false,
     channel,
     onPress,
     styleButton: "flexDirection",
-    shouldShowThread: "ModulesLoader",
+    shouldShowThread: "\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430",
   });
-  return React5(_modDef1652.View, obj2);
+  return metroImportDefault(_modDef1652.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12945).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(13027).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
-const React7 = createStyles.createStyles(() => {
+const React6 = createStyles.createStyles(() => {
   const obj = {
     container: {
       flexDirection: "row",

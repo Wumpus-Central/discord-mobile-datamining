@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
-const GuildTagBadgeSize = fn(8517).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8534).GuildTagBadgeSize;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: nativeDefault.radii.sm } };
@@ -108,7 +108,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     if (tmp6Result4.isAndroid()) {
       num = 1;
     }
-    const sum = tmp6(tmp7[13]).TextStyleSheet["text-md/semibold"].fontSize + num;
+    const sum = tmp6(tmp7[13]).TextStyleSheet["body-md/semibold"].fontSize + num;
     const obj4 = {
       label: null,
       buttonText: null,
@@ -125,7 +125,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj4.accessibilityValue = obj5;
     obj4.onPress = function handleOpenSelectPrimaryGuild() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(16659, dependencyMap.paths),
+        asyncRequireImpl(16749, dependencyMap.paths),
         "UserPrimaryGuildListBottomSheet",
         {
           availableGuilds: userAvailableGuildsWithTags,
@@ -152,7 +152,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
         guildTag: null,
         guildBadge: null,
         badgeSize: null,
-        textVariant: "text-md/semibold",
+        textVariant: "body-md/semibold",
         textColor: "text-default",
       };
       const items2 = [tmp.tag, tagStyle];
@@ -168,7 +168,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
         guildTag: null,
         guildBadge: null,
         badgeSize: null,
-        textVariant: "text-md/semibold",
+        textVariant: "body-md/semibold",
         textColor: "text-default",
       });
     }

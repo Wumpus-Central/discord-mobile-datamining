@@ -6,13 +6,13 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02123_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef5857 from "../../../../_runtime/metro/05857__.js";
+import _modDef5871 from "../../../../_runtime/metro/05871__.js";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import RelationshipActionCreatorsDefault from "../../../actions/RelationshipActionCreators.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import _modDef8880 from "../../../../_runtime/metro/08880__.js";
+import _modDef8897 from "../../../../_runtime/metro/08897__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -37,8 +37,8 @@ function IgnoredInformationTable() {
   });
 }
 const View = fn(17).View;
-const UserRemediationAction = fn(7613).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11424);
+const UserRemediationAction = fn(7629).UserRemediationAction;
+const RestrictionConfirmationConstants = fn(11474);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: closure_10 } =
   RestrictionConfirmationConstants);
 const Constants = fn(1072);
@@ -86,7 +86,7 @@ let closure_15 = createStyles.createStyles(obj);
 let obj9 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let items = [
   {
-    icon: _modDef8880,
+    icon: _modDef8897,
     text() {
       const intl = util.intl;
       return intl.string(util.t.ruhGkg);
@@ -103,7 +103,7 @@ let items = [
   ,
 ];
 let obj10 = {
-  icon: _modDef8880,
+  icon: _modDef8897,
   text() {
     const intl = util.intl;
     return intl.string(util.t.ruhGkg);
@@ -118,7 +118,7 @@ let obj10 = {
   },
 };
 items[1] = {
-  icon: _modDef8880,
+  icon: _modDef8897,
   text() {
     const intl = util.intl;
     return intl.string(util.t.N9v3eq);
@@ -133,7 +133,7 @@ items[1] = {
   },
 };
 let obj11 = {
-  icon: _modDef8880,
+  icon: _modDef8897,
   text() {
     const intl = util.intl;
     return intl.string(util.t.N9v3eq);
@@ -148,7 +148,7 @@ let obj11 = {
   },
 };
 items[2] = {
-  icon: _modDef5857,
+  icon: _modDef5871,
   text() {
     const intl = util.intl;
     return intl.string(util.t["4ycGE0"]);
@@ -163,7 +163,7 @@ items[2] = {
   },
 };
 let obj12 = {
-  icon: _modDef5857,
+  icon: _modDef5871,
   text() {
     const intl = util.intl;
     return intl.string(util.t["4ycGE0"]);
@@ -189,8 +189,8 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
   [tmp3, c5] = noop.useState(false);
   const bottom = channelId(1627)().bottom;
   let tmp2 = _slicedToArray(noop.useState(false), 2);
-  items = [channelId(7471).IGNORE_CONFIRMATION_ACTION_SHEET];
-  const tmp6 = channelId(7446);
+  items = [channelId(7487).IGNORE_CONFIRMATION_ACTION_SHEET];
+  const tmp6 = channelId(7462);
   const items1 = [UserStore];
   const items2 = [userId];
   const stateFromStores = userId(504).useStateFromStores(items1, () => UserStore.getUser(userId), items2);
@@ -243,7 +243,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     };
     const items6 = [closure_13(tmp7(1187).Avatar, obj9)];
     const obj10 = { style: tmp.avatarIconContainer, children: null };
-    const obj11 = { size: tmp7(1187).Icon.Sizes.MEDIUM, source: tmp4(7262) };
+    const obj11 = { size: tmp7(1187).Icon.Sizes.MEDIUM, source: tmp4(7238) };
     obj10.children = closure_13(tmp7(1187).Icon, obj11);
     items6[1] = closure_13(c5, obj10);
     obj7.children = items6;
@@ -256,19 +256,19 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       children: null,
     };
     const intl = tmp7(1113).intl;
-    const obj13 = { username: tmp4(6161).getName(stateFromStores1, channelId, stateFromStores) };
+    const obj13 = { username: tmp4(6176).getName(stateFromStores1, channelId, stateFromStores) };
     obj12.children = intl.format(tmp7(1113).t["WrQD/Y"], obj13);
-    items7[1] = closure_13(tmp7(5747).Text, obj12);
+    items7[1] = closure_13(tmp7(5761).Text, obj12);
     const obj14 = {
       style: tmp.subTitle,
-      variant: "heading-md/medium",
+      variant: "heading-sm/medium",
       color: "text-default",
       accessibilityRole: "header",
       children: null,
     };
     const intl2 = tmp7(1113).intl;
     obj14.children = intl2.string(tmp7(1113).t.JKL1u1);
-    items7[2] = closure_13(tmp7(5747).Text, obj14);
+    items7[2] = closure_13(tmp7(5761).Text, obj14);
     obj6.children = items7;
     const items8 = [closure_14(c5, obj6), , ,];
     const obj15 = { style: tmp.tableContainer, children: closure_13(IgnoredInformationTable, {}) };
@@ -286,14 +286,14 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       onPress: null,
       arrow: true,
     };
-    const obj19 = { size: tmp7(1187).Icon.Sizes.MEDIUM, source: tmp4(8895), color: tmp.destructiveIcon.color };
+    const obj19 = { size: tmp7(1187).Icon.Sizes.MEDIUM, source: tmp4(8912), color: tmp.destructiveIcon.color };
     obj18.icon = closure_13(tmp7(1187).Icon, obj19);
     const intl4 = tmp7(1113).intl;
     obj18.label = intl4.string(tmp7(1113).t.bwxY30);
-    const obj20 = { variant: "text-xs/medium", color: "text-feedback-critical", children: null };
+    const obj20 = { variant: "body-xs/medium", color: "text-feedback-critical", children: null };
     const intl5 = tmp7(1113).intl;
     obj20.children = intl5.string(tmp7(1113).t.NTnf1T);
-    obj18.subLabel = closure_13(tmp7(5747).Text, obj20);
+    obj18.subLabel = closure_13(tmp7(5761).Text, obj20);
     const intl6 = tmp7(1113).intl;
     obj18.accessibilityLabel = intl6.string(tmp7(1113).t["fZ+p9C"]);
     obj18.onPress = function onPress() {
@@ -303,10 +303,10 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       });
       const obj2 = { action: UserRemediationAction.GOTO_BLOCK, location: "user-profile-context-menu" };
       const obj3 = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(11425, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(11475, dependencyMap.paths);
       obj3.openLazy(
         tmp2,
-        React7,
+        React6,
         {
           userId,
           channelId,
@@ -318,8 +318,8 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
         "replaceTopSheet",
       );
     };
-    obj17.children = closure_13(tmp7(7101).TableRow, obj18);
-    obj16.children = closure_13(tmp7(7186).TableRowGroup, obj17);
+    obj17.children = closure_13(tmp7(7116).TableRow, obj18);
+    obj16.children = closure_13(tmp7(7201).TableRowGroup, obj17);
     items8[2] = closure_13(c5, obj16);
     const obj21 = { style: tmp.button, children: null };
     const obj22 = { size: "lg", text: null, onPress: null, disabled: null, loading: null };
@@ -350,11 +350,11 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     };
     obj22.disabled = tmp3;
     obj22.loading = tmp3;
-    const items9 = [closure_13(tmp7(5754).Button, obj22)];
+    const items9 = [closure_13(tmp7(5768).Button, obj22)];
     const obj23 = {
       onPress: handleClose,
       style: null,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-default",
       children: null,
     };
@@ -371,14 +371,14 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       },
     };
     obj23.children = intl8.format(tmp7(1113).t.iX9qtL, obj25);
-    items9[1] = closure_13(tmp7(5747).Text, obj23);
+    items9[1] = closure_13(tmp7(5761).Text, obj23);
     obj21.children = items9;
     items8[3] = closure_14(c5, obj21);
     obj8.children = items8;
-    obj4.children = closure_14(tmp7(5398).BottomSheetScrollView, obj8);
-    obj3.children = closure_13(tmp7(5395).BottomSheet, obj4);
-    tmp12Result = closure_13(tmp7(7446).AnalyticsLocationProvider, obj3);
-    const tmp4Result = tmp4(6161);
+    obj4.children = closure_14(tmp7(5400).BottomSheetScrollView, obj8);
+    obj3.children = closure_13(tmp7(5396).BottomSheet, obj4);
+    tmp12Result = closure_13(tmp7(7462).AnalyticsLocationProvider, obj3);
+    const tmp4Result = tmp4(6176);
   }
   return tmp12Result;
 });

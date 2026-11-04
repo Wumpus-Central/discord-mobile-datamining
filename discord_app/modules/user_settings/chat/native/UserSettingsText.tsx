@@ -168,7 +168,7 @@ export default function UserSettingsText() {
       style: tmp5.nitroIcon,
     };
     const items9 = [closure_12(require("native").Icon, obj21)];
-    const obj22 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
+    const obj22 = { variant: "body-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
     const intl12 = require("util").intl;
     const obj23 = {
       onClick() {

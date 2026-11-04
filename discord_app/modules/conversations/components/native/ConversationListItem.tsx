@@ -59,14 +59,14 @@ function ConversationListItemBase(conversation) {
   const obj4 = { style: tmp.headerContainer, children: null };
   const items4 = [
     closure_8(conversation(stateFromStores[14]).Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "text-default",
       lineClamp: 1,
       style: tmp.title,
       children: conversation.title,
     }),
   ];
-  const obj6 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: tmp.timestamp, children: null };
+  const obj6 = { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, style: tmp.timestamp, children: null };
   const intl = conversation(stateFromStores[15]).intl;
   obj6.children = intl.formatToPlainString(conversation(stateFromStores[15]).t.poZZGL, {
     count: conversation.messageCount,
@@ -78,7 +78,7 @@ function ConversationListItemBase(conversation) {
   const obj9 = { style: tmp.maskColumn, children: null };
   const obj2 = conversation(stateFromStores[9]);
   const obj5 = {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "text-default",
     lineClamp: 1,
     style: tmp.title,
@@ -106,7 +106,7 @@ function ConversationListItemBase(conversation) {
         if (!blocked.ignored) {
           const obj = { message: blocked, guildId: null, channelId: null };
           ({ guildId: obj.guildId, channelId: obj.channelId } = conversation);
-          let tmp6Result = React6(ConversationPreviewMessageDefault, obj, blocked.id);
+          let tmp6Result = React5(ConversationPreviewMessageDefault, obj, blocked.id);
         }
         return tmp6Result;
       }
@@ -114,7 +114,7 @@ function ConversationListItemBase(conversation) {
       if (blocked.blocked) {
         str = "blocked";
       }
-      tmp6Result = React6(ConversationPreviewBlockedMessageDefault, { reason: str }, blocked.id);
+      tmp6Result = React5(ConversationPreviewBlockedMessageDefault, { reason: str }, blocked.id);
     });
   }
   obj12.children = mapped;
@@ -125,7 +125,7 @@ function ConversationListItemBase(conversation) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(5775).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(5789).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

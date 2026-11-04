@@ -10,7 +10,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildOnboardingPromptsActionCreators from "../GuildOnboardingPromptsActionCreators.tsx";
 import GuildOnboardingUtils from "../GuildOnboardingUtils.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
-import _modDef7442 from "../../../../_runtime/metro/07442__.js";
+import _modDef7458 from "../../../../_runtime/metro/07458__.js";
 import ConnectionCardDefault from "ConnectionCard.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import useBatchUpdateSelectOptionDefault from "../useBatchUpdateSelectOption.tsx";
@@ -35,13 +35,13 @@ function EmptyCustomizeCommunity(setTab) {
   const obj3 = { style: tmp.emptyContainer, children: null };
   const obj4 = { style: tmp.emptyContainerImage, source: null };
   const obj2 = setTab(504);
-  obj4.source = tmp4(isThemeDarkResult ? 11716 : 11717);
+  obj4.source = tmp4(isThemeDarkResult ? 11771 : 11772);
   const items1 = [closure_15(FastImageDefault, obj4), ,];
   const obj5 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1113).intl;
   obj5.children = intl.string(setTab(1113).t.leKHQz);
   items1[1] = closure_15(setTab(1187).LegacyText, obj5);
-  const obj6 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+  const obj6 = { variant: "body-sm/medium", color: "text-subtle", children: null };
   const intl2 = tmp2(1113).intl;
   obj6.children = intl2.format(setTab(1113).t["jH+ktB"], {
     onBrowseChannels() {
@@ -50,7 +50,7 @@ function EmptyCustomizeCommunity(setTab) {
       }
     },
   });
-  items1[2] = closure_15(setTab(5747).Text, obj6);
+  items1[2] = closure_15(setTab(5761).Text, obj6);
   obj3.children = items1;
   return closure_16(closure_4, obj3);
 }
@@ -60,12 +60,12 @@ function PromptTitle(item) {
   items = [item.title];
   let tmp3Result = null;
   if (item.required) {
-    const obj2 = { variant: "text-md/semibold", color: "text-feedback-critical", children: [" ", "*"] };
+    const obj2 = { variant: "body-md/semibold", color: "text-feedback-critical", children: [" ", "*"] };
     tmp3Result = value2(Text_Text.Text, obj2);
   }
   items[1] = tmp3Result;
   obj.children = value2(Text_Text.Heading, {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "mobile-text-heading-primary",
     children: items,
   });
@@ -112,7 +112,7 @@ function PromptHelpText(arg0) {
     itemHook: function formattedNameHighlight(children, arg1) {
       return closure_1_15(
         require("Text/Text").Text,
-        { variant: "text-xs/medium", color: "mobile-text-heading-primary", children },
+        { variant: "body-xs/medium", color: "mobile-text-heading-primary", children },
         arg1,
       );
     },
@@ -125,13 +125,13 @@ function PromptHelpText(arg0) {
     itemHook: function formattedNameHighlight(children, arg1) {
       return closure_1_15(
         require("Text/Text").Text,
-        { variant: "text-xs/medium", color: "mobile-text-heading-primary", children },
+        { variant: "body-xs/medium", color: "mobile-text-heading-primary", children },
         arg1,
       );
     },
   }));
   if ("" !== helpText) {
-    const obj3 = { style: tmp.helpText, variant: "text-xs/medium", color: "text-default", children: null };
+    const obj3 = { style: tmp.helpText, variant: "body-xs/medium", color: "text-default", children: null };
     const items3 = [helpText, " ", helpTextAdditional];
     obj3.children = items3;
     let tmp9 = closure_16(require("Text/Text").Text, obj3);
@@ -152,17 +152,17 @@ function ConnectionsPrompt(guildId) {
     const obj2 = { style: tmp.connectionsPromptContainer, children: null };
     const obj3 = {
       style: tmp.connectionsTitle,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t.eDVMrA);
-    const items1 = [closure_15(tmp2(5747).Text, obj3), ,];
-    const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
+    const items1 = [closure_15(tmp2(5761).Text, obj3), ,];
+    const obj4 = { variant: "body-xs/medium", color: "text-muted", children: null };
     const intl2 = tmp2(1113).intl;
     obj4.children = intl2.string(tmp2(1113).t.BozOXu);
-    items1[1] = closure_15(tmp2(5747).Text, obj4);
+    items1[1] = closure_15(tmp2(5761).Text, obj4);
     const obj5 = {
       style: tmp.connectionsContainer,
       children: stateFromStores.map((connection, index) => {
@@ -237,7 +237,7 @@ function DropdownOption(option) {
     obj3.children = closure_15(EmojiDefault, obj5);
     tmp10Result = closure_15(closure_4, obj3);
   }
-  const items1 = [tmp10Result, closure_15(option(5747).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [tmp10Result, closure_15(option(5761).Text, { variant: "body-md/semibold", children: option.title })];
   obj2.children = items1;
   return closure_16(closure_4, obj2);
 }
@@ -305,10 +305,10 @@ function DropdownPrompt(guildId) {
   CustomizeCommunityTsx1.__workletHash = 9001393483162;
   CustomizeCommunityTsx1.__initData = tmp6;
   const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(CustomizeCommunityTsx1);
-  handleSelectOption = tmp4(11719)(guildId).handleSelectOption;
+  handleSelectOption = tmp4(11774)(guildId).handleSelectOption;
   const items3 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = handleSelectOption.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7425, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7441, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: _undefined.id,
       onSelect: function handleOptionSelected(arg0, flag) {
@@ -345,16 +345,16 @@ function DropdownPrompt(guildId) {
   const obj7 = { style: tmp.dropdownContainer, onPress: callback, children: null };
   let tmp17Result = 0 === found.length;
   if (tmp17Result) {
-    const obj8 = { style: tmp.emptyDropdownText, variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj8 = { style: tmp.emptyDropdownText, variant: "body-sm/normal", color: "text-muted", children: null };
     const intl2 = tmp2(1113).intl;
     obj8.children = intl2.string(tmp2(1113).t.GmSvdA);
-    tmp17Result = closure_15(tmp2(5747).Text, obj8);
+    tmp17Result = closure_15(tmp2(5761).Text, obj8);
   }
   const items6 = [tmp17Result, found.map((option) => closure_1_15(DropdownOption, { option }, option.id))];
   const obj9 = { style: tmp.dropdownIconContainer, children: null };
   const obj15 = { style: tmp.dropdownIcon, source: null };
   let obj3 = require("../../../../_runtime/metro/01652__.js");
-  obj15.source = _modDef7442;
+  obj15.source = _modDef7458;
   obj9.children = closure_15(FastImageDefault, obj15);
   items6[2] = closure_15(c4, obj9);
   obj7.children = items6;
@@ -469,10 +469,10 @@ function MultipleChoicePrompt(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildOnboardingPromptsConstants = fn(7389);
+const GuildOnboardingPromptsConstants = fn(7405);
 ({ GuildOnboardingTab: closure_11, OnboardingPromptType: closure_12 } = GuildOnboardingPromptsConstants);
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const ReadStateTypes = fn(6911).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const createStyles = fn(5141);
@@ -636,7 +636,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11718)(guildId);
+  const tmp7 = stateFromStores(11773)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);
@@ -655,13 +655,13 @@ export default function CustomizeCommunity(guildId) {
     () =>
       null != guildId
         ? () => {
-            guildId(7399).ackGuildFeature(
+            guildId(7415).ackGuildFeature(
               closure_1_0,
               constants.GUILD_ONBOARDING_QUESTION,
               GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0),
             );
-            const obj = guildId(7399);
-            const result = stateFromStores(7393).updateOnboardingResponses(closure_1_0);
+            const obj = guildId(7415);
+            const result = stateFromStores(7409).updateOnboardingResponses(closure_1_0);
           }
         : undefined,
     items3,
@@ -693,7 +693,7 @@ export default function CustomizeCommunity(guildId) {
       const obj8 = { children: null };
       const obj9 = {
         style: tmp.sheetTitle,
-        variant: "text-md/medium",
+        variant: "body-md/medium",
         color: "mobile-text-heading-primary",
         children: null,
       };
@@ -701,7 +701,7 @@ export default function CustomizeCommunity(guildId) {
       const obj10 = { count: newOnboardingPrompts.length + newAnswersCount };
       obj9.children = intl.format(tmp4(1113).t.iB5Gqe, obj10);
       const items5 = [
-        closure_15(tmp4(5747).Text, obj9),
+        closure_15(tmp4(5761).Text, obj9),
         newOnboardingPrompts.map(callback),
         onboardingPromptsWithNewAnswers.map(callback),
       ];
@@ -716,17 +716,17 @@ export default function CustomizeCommunity(guildId) {
       const obj12 = { children: null };
       const obj13 = {
         style: tmp.sheetTitle,
-        variant: "text-md/medium",
+        variant: "body-md/medium",
         color: "mobile-text-heading-primary",
         children: null,
       };
       const intl2 = tmp4(1113).intl;
       obj13.children = intl2.string(tmp4(1113).t.BGkaer);
-      const items7 = [closure_15(tmp4(5747).Text, obj13), ,];
-      const obj14 = { variant: "text-xs/medium", color: "text-muted", children: null };
+      const items7 = [closure_15(tmp4(5761).Text, obj13), ,];
+      const obj14 = { variant: "body-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp4(1113).intl;
       obj14.children = intl3.string(tmp4(1113).t.r6Vm8T);
-      items7[1] = closure_15(tmp4(5747).Text, obj14);
+      items7[1] = closure_15(tmp4(5761).Text, obj14);
       items7[2] = onboardingPrompts.map(callback);
       obj12.children = items7;
       tmp24Result3 = closure_16(closure_17, obj12);

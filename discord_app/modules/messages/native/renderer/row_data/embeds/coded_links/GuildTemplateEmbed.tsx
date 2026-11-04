@@ -6,9 +6,9 @@ import GuildTemplatesConstants from "../../../../../../guild_templates/GuildTemp
 import Constants from "../../../../../../instant_invite/Constants.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
-import _modDef13371 from "../../../../../../../../_runtime/metro/13371__.js";
-import _modDef13372 from "../../../../../../../../_runtime/metro/13372__.js";
-import _modDef15265 from "../../../../../../../../_runtime/metro/15265__.js";
+import _modDef13454 from "../../../../../../../../_runtime/metro/13454__.js";
+import _modDef13455 from "../../../../../../../../_runtime/metro/13455__.js";
+import _modDef15348 from "../../../../../../../../_runtime/metro/15348__.js";
 import GuildTemplateStore from "../../../../../../guild_templates/GuildTemplateStore.tsx";
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
@@ -42,9 +42,9 @@ export function createGuildTemplateEmbed(code, theme) {
     const intl2 = util.intl;
     obj.titleText = intl2.string(util.t.A6MwXE);
     if (obj3.isThemeDark(theme)) {
-      let tmpResult = _modDef13371;
+      let tmpResult = _modDef13454;
     } else {
-      tmpResult = _modDef13372;
+      tmpResult = _modDef13455;
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -63,7 +63,7 @@ export function createGuildTemplateEmbed(code, theme) {
     obj10.titleColor = colors.titleColor;
     obj10.subtitle = formatToPlainStringResult;
     obj10.subtitleColor = colors.subtitleColor;
-    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef15265).uri;
+    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef15348).uri;
     ({
       acceptLabelGreenColor: obj6.acceptLabelColor,
       acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor,

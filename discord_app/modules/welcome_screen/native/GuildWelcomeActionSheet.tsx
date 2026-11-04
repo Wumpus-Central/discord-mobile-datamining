@@ -84,7 +84,7 @@ class WelcomeChannelRow {
             flag = false;
             if (null != tmp5Result2.getByName(tmp5Result3.convertSurrogateToName(welcomeChannel.emoji_name, false))) {
               tmp14 = jsx;
-              obj18 = { style: null, variant: "text-sm/medium", children: null };
+              obj18 = { style: null, variant: "body-sm/medium", children: null };
               obj18.style = tmp.emoji;
               obj18.children = welcomeChannel.emoji_name;
               tmp13 = jsx(tmp2(tmp3[22]).Text, obj18);
@@ -104,12 +104,12 @@ class WelcomeChannelRow {
         obj21 = { DEPRECATED_style: null, leading: null, label: null, subLabel: null, onPress: null, trailing: null };
         obj21.DEPRECATED_style = tmp.welcomeChannel;
         obj21.leading = tmp13;
-        obj22 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
+        obj22 = { variant: "body-sm/semibold", color: "interactive-text-active", children: null };
         obj22.children = welcomeChannel.description;
         obj21.label = tmp11(tmp2(tmp3[22]).Text, obj22);
         tmp11Result = null;
         if (null != stateFromStores) {
-          obj23 = { variant: "text-sm/medium", color: "text-default", children: null };
+          obj23 = { variant: "body-sm/medium", color: "text-default", children: null };
           obj23.children = tmp6;
           tmp11Result = tmp11(tmp2(tmp3[22]).Text, obj23);
         }
@@ -124,8 +124,8 @@ class WelcomeChannelRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const NO_WELCOME_SCREEN = fn(14362).NO_WELCOME_SCREEN;
-const WELCOME_SCREEN_TYPE = fn(14366).WELCOME_SCREEN_TYPE;
+const NO_WELCOME_SCREEN = fn(14442).NO_WELCOME_SCREEN;
+const WELCOME_SCREEN_TYPE = fn(14446).WELCOME_SCREEN_TYPE;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, Fonts, Routes: closure_14 } = Constants);
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
@@ -284,8 +284,8 @@ export default function GuildWelcomeActionSheet(guildId) {
     if (null != welcomeScreen) {
       const obj3 = { startExpanded: true, children: null };
       const obj4 = { contentContainerStyle: tmp.container, children: null };
-      const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(14367).Sizes.MEDIUM, textScale: 2 };
-      const items9 = [closure_17(onHide(14367), obj5), , , ,];
+      const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(14447).Sizes.MEDIUM, textScale: 2 };
+      const items9 = [closure_17(onHide(14447), obj5), , , ,];
       const obj6 = { style: tmp.header, variant: "heading-xl/semibold", color: "text-default", children: null };
       const intl = tmp2(1113).intl;
       const obj7 = {
@@ -304,19 +304,19 @@ export default function GuildWelcomeActionSheet(guildId) {
         },
       };
       obj6.children = intl.format(tmp2(1113).t["0aydCN"], obj7);
-      items9[1] = closure_17(tmp2(5747).Text, obj6);
+      items9[1] = closure_17(tmp2(5761).Text, obj6);
       const obj8 = {
         style: tmp.guildDescription,
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-default",
         children: welcomeScreen.description,
       };
-      items9[2] = closure_17(tmp2(5747).Text, obj8);
-      const obj9 = { style: tmp.channelsTitle, variant: "eyebrow", color: "text-default", children: null };
+      items9[2] = closure_17(tmp2(5761).Text, obj8);
+      const obj9 = { style: tmp.channelsTitle, variant: "body-sm/medium", color: "text-default", children: null };
       const intl2 = tmp2(1113).intl;
-      const tmp17 = onHide(14367);
+      const tmp17 = onHide(14447);
       obj9.children = intl2.string(tmp2(1113).t["haj5+i"]).toUpperCase();
-      items9[3] = closure_17(tmp2(5747).Text, obj9);
+      items9[3] = closure_17(tmp2(5761).Text, obj9);
       let welcome_channels = welcomeScreen.welcome_channels;
       items9[4] = welcome_channels.map((welcomeChannel, index) => {
         closure_0 = index;
@@ -333,7 +333,7 @@ export default function GuildWelcomeActionSheet(guildId) {
       });
       obj4.children = items9;
       obj3.children = closure_18(hasError, obj4);
-      tmp12 = closure_17(tmp2(7486).ActionSheet, obj3);
+      tmp12 = closure_17(tmp2(7502).ActionSheet, obj3);
       const str = intl2.string(tmp2(1113).t["haj5+i"]);
     }
   }

@@ -8,13 +8,11 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5353);
-({
-  GuildPowerupNewPerkMarketingVersion: hasOwnProperty,
-  NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire,
-} = GuildPowerupsConstants);
+const GuildPowerupsConstants = fn(5354);
+({ GuildPowerupNewPerkMarketingVersion: hasOwnProperty, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: closure_6 } =
+  GuildPowerupsConstants);
 const Constants = fn(1072);
-({ GuildFeatures: closure_7, Permissions: closure_8 } = Constants);
+({ GuildFeatures: metroImportDefault, Permissions: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
 

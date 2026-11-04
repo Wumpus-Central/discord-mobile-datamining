@@ -211,11 +211,11 @@ function handleGuildUpdate() {
   return true;
 }
 const ChannelRecord = fn(4994);
-({ THREAD_CHANNEL_TYPES: metroRequire, isPrivate: closure_7 } = ChannelRecord);
+({ THREAD_CHANNEL_TYPES: closure_6, isPrivate: metroImportDefault } = ChannelRecord);
 const Constants = fn(1072);
 const UserNotificationSettings = Constants.UserNotificationSettings;
 const AccountNotificationFlags = fn(5086).AccountNotificationFlags;
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 const UserSettingsConstants = fn(1082);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};
@@ -504,7 +504,7 @@ prototype["resolvedMessageNotifications"] = function resolvedMessageNotification
 prototype["resolveUnreadSetting"] = function resolveUnreadSetting(channel) {
   if (set.has(channel.type)) {
     return UnreadSetting.ALL_MESSAGES;
-  } else if (React5(channel.type)) {
+  } else if (metroImportDefault(channel.type)) {
     return UnreadSetting.ALL_MESSAGES;
   } else if (closure_18) {
     const self = this;

@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   container: { flex: 1, paddingTop: nativeDefault.space.PX_12, alignItems: "stretch" },
@@ -113,7 +113,7 @@ export default noop.memo(function UnifiedGiftModalDetailsScreen(recipientUser) {
     ,
     ,
   ];
-  const obj5 = { variant: "text-sm/semibold", style: tmp.sectionHeader, children: null };
+  const obj5 = { variant: "body-sm/semibold", style: tmp.sectionHeader, children: null };
   const intl = recipientUser(navigation[11]).intl;
   obj5.children = intl.string(recipientUser(navigation[11]).t.xFn72s);
   items4[1] = first1(recipientUser(navigation[10]).Text, obj5);
@@ -123,7 +123,7 @@ export default noop.memo(function UnifiedGiftModalDetailsScreen(recipientUser) {
       let tmp22Result = tmp22(validateRecipient(tmp3[12]), obj6);
     }
     items4[2] = tmp22Result;
-    const obj7 = { variant: "text-sm/semibold", style: tmp.sectionHeader, children: null };
+    const obj7 = { variant: "body-sm/semibold", style: tmp.sectionHeader, children: null };
     const intl2 = tmp2(tmp3[11]).intl;
     obj7.children = intl2.string(tmp2(tmp3[11]).t.PpoJzt);
     items4[3] = tmp22(tmp2(tmp3[10]).Text, obj7);

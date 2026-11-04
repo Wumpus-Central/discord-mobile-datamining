@@ -120,22 +120,36 @@ export function clarificationDraftPlaceholder(options) {
 export function isClarificationComplete(questions, arg1) {
   closure_0 = arg1;
   questions = questions.questions;
-  return questions.every((item) => {
-    let tmp2 = null != tmp;
-    if (tmp2) {
-      tmp2 = "" !== tmp.text.trim();
+  return questions.every((optional) => {
+    let tmp2 = true === optional.optional;
+    if (!tmp2) {
+      let tmp4 = null != tmp;
+      if (tmp4) {
+        tmp4 = "" !== tmp.text.trim();
+      }
+      tmp2 = tmp4;
     }
     return tmp2;
   });
 }
 export function nextClarificationStep(questions, arg1, arg2) {
+  let result;
   questions = questions.questions;
   let num = 1;
   if (1 <= questions.length) {
-    const result = (arg2 + num) % questions.length;
-    while (null != arg1[questions[result].id]) {
-      let str = tmp2.text;
-      if ("" === str.trim()) {
+    while (true) {
+      result = (arg2 + num) % questions.length;
+      let tmp2 = arg1[questions[result].id];
+      let tmp3 = true === questions[result].optional;
+      if (!tmp3) {
+        let tmp5 = null != tmp2;
+        if (tmp5) {
+          let str = tmp2.text;
+          tmp5 = "" !== str.trim();
+        }
+        tmp3 = tmp5;
+      }
+      if (!tmp3) {
         break;
       } else {
         num = num + 1;
@@ -153,12 +167,20 @@ export function followingClarificationStep(clarification, arg1, bound) {
     let num = 1;
     sum = null;
     if (1 <= questions.length) {
-      const result = (bound + num) % questions.length;
-      sum = result;
-      while (null != arg1[questions[result].id]) {
-        let str2 = tmp4.text;
+      while (true) {
+        let result = (bound + num) % questions.length;
+        let tmp2 = arg1[questions[result].id];
+        let tmp3 = true === questions[result].optional;
+        if (!tmp3) {
+          let tmp5 = null != tmp2;
+          if (tmp5) {
+            let str = tmp2.text;
+            tmp5 = "" !== str.trim();
+          }
+          tmp3 = tmp5;
+        }
         sum = result;
-        if ("" === str2.trim()) {
+        if (!tmp3) {
           break;
         } else {
           let sum1 = num + 1;
@@ -172,6 +194,79 @@ export function followingClarificationStep(clarification, arg1, bound) {
     }
   }
   return sum;
+}
+export function skippedClarificationAnswers(clarification, arg1, bound) {
+  const id = tmp;
+  let optional;
+  if (clarification.questions[bound] != null) {
+    optional = tmp.optional;
+  }
+  if (true !== optional) {
+    return null;
+  } else {
+    const _Object = Object;
+    const _Object2 = Object;
+    const entries = Object.entries(arg1);
+    const fromEntriesResult = Object.fromEntries(
+      entries.filter((item) => {
+        [tmp] = item;
+        return tmp !== id.id;
+      }),
+    );
+    if (bound < clarification.questions.length - 1) {
+      let sum = bound + 1;
+    } else {
+      const questions = clarification.questions;
+      let num = 1;
+      sum = null;
+      if (1 <= questions.length) {
+        while (true) {
+          let result = (bound + num) % questions.length;
+          let tmp4 = fromEntriesResult[questions[result].id];
+          let tmp5 = true === questions[result].optional;
+          if (!tmp5) {
+            let tmp7 = null != tmp4;
+            if (tmp7) {
+              let str = tmp4.text;
+              tmp7 = "" !== str.trim();
+            }
+            tmp5 = tmp7;
+          }
+          sum = result;
+          if (!tmp5) {
+            break;
+          } else {
+            let sum1 = num + 1;
+            num = sum1;
+            sum = null;
+            if (sum1 > questions.length) {
+              break;
+            }
+          }
+        }
+      }
+    }
+    if (null != sum) {
+      let tmp10 = fromEntriesResult;
+    } else {
+      closure_129_0 = fromEntriesResult;
+      const questions1 = clarification.questions;
+      const mapped = questions1.map((question, index) => ({ question, index, answer: questions[question.id] }));
+      const found = mapped.filter((answer) => {
+        let tmp = null != answer.answer;
+        if (tmp) {
+          tmp = "" !== answer.answer.text.trim();
+        }
+        return tmp;
+      });
+      const mapped1 = found.map((answer) => {
+        const sum = answer.index + 1;
+        return "" + sum + ". " + answer.question.question + " \u2192 " + answer.answer.text.trim();
+      });
+      tmp10 = null;
+    }
+    return tmp10;
+  }
 }
 export function formatClarificationAnswers(questions, arg1) {
   closure_0 = arg1;

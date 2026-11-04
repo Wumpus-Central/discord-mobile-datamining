@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
 const HEXAGON_CAMPAIGN_FONTS = fn(1403).HEXAGON_CAMPAIGN_FONTS;
 const HexagonCampaignConstants = fn(5166);
 const HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT = HexagonCampaignConstants.HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT;
@@ -115,7 +115,7 @@ obj2.campaignLogoFrame = { width: 48, height: 48, alignItems: "center", justifyC
 obj2.campaignLogo = { width: 32, height: 24 };
 obj2.campaignName = {
   flex: 1,
-  fontFamily: fn(9418).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT],
+  fontFamily: fn(9435).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT],
 };
 obj2.campaignLegal = { paddingHorizontal: 2 };
 const size1 = {
@@ -224,7 +224,7 @@ export default function DisplayNameStylesFontPickerSheet(arg0) {
     const obj10 = { style: tmp.campaignSection, children: null };
     const obj11 = { style: tmp.campaignContent, children: null };
     const obj12 = { style: tmp.campaignHeader, children: null };
-    const obj13 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
+    const obj13 = { variant: "body-sm/semibold", color: "text-subtle", children: null };
     const intl3 = onSelectFont(tmp3[23]).intl;
     obj13.children = intl3.string(tmp19(tmp3[27])["2UCcmW"]);
     let items2 = [closure_14(onSelectFont(tmp3[26]).Text, obj13)];
@@ -268,7 +268,7 @@ export default function DisplayNameStylesFontPickerSheet(arg0) {
     obj16.children = closure_15(tmp21, obj17);
     obj15.children = closure_14(closure_6, obj16);
     items3[1] = closure_14(onSelectFont(tmp3[29]).ThemeContextProvider, obj15);
-    const obj22 = { variant: "text-xs/medium", color: "text-muted", style: tmp.campaignLegal, children: null };
+    const obj22 = { variant: "body-xs/medium", color: "text-muted", style: tmp.campaignLegal, children: null };
     const intl5 = onSelectFont(tmp3[23]).intl;
     const obj23 = {
       nonPremiumEndDate,
@@ -277,7 +277,7 @@ export default function DisplayNameStylesFontPickerSheet(arg0) {
         return closure_1_14(
           onSelectFont(visibleFontOrder[26]).Text,
           {
-            variant: "text-xs/medium",
+            variant: "body-xs/medium",
             color: "text-link",
             accessibilityRole: "link",
             onPress: onSelectFont(visibleFontOrder[36]).openHexagonCampaignLearnMore,
@@ -334,7 +334,7 @@ export default function DisplayNameStylesFontPickerSheet(arg0) {
       if (item === first) {
         str = "mobile-text-heading-primary";
       }
-      const obj3 = { variant: "text-lg/semibold", color: str, style: null, children: "Gg" };
+      const obj3 = { variant: "body-lg/semibold", color: str, style: null, children: "Gg" };
       const items1 = [hasItem.fontText, { fontFamily: PRIMARY_SEMIBOLD }];
       obj3.style = items1;
       const items2 = [closure_1_14(onSelectFont(visibleFontOrder[26]).Text, obj3)];
@@ -358,7 +358,7 @@ export default function DisplayNameStylesFontPickerSheet(arg0) {
   if (tmp22Result) {
     const obj25 = { style: tmp.nonLatinDisclaimer, children: null };
     const items7 = [closure_14(onSelectFont(tmp3[38]).CircleInformationIcon, { size: "sm" })];
-    const obj26 = { variant: "text-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: null };
+    const obj26 = { variant: "body-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: null };
     const intl6 = onSelectFont(tmp3[23]).intl;
     obj26.children = intl6.string(tmp19(tmp3[24])["+O1xL2"]);
     items7[1] = closure_14(onSelectFont(tmp3[26]).Text, obj26);

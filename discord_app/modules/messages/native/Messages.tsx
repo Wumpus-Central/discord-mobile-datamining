@@ -938,8 +938,7 @@ class MessagesConnected {
       return displayNameStyles;
     });
     tmp2Result77 = tmp2(tmp3[93]);
-    fetchSocialLayerStorefrontProductDetailsEmbedApplications =
-      tmp2Result77.useFetchSocialLayerStorefrontProductDetailsEmbedApplications(stateFromStores);
+    socialLayerStorefrontEmbedData = tmp2Result77.useSocialLayerStorefrontEmbedData(stateFromStores);
     tmp124 = jsxs;
     obj1 = { profile: null, children: null };
     tmp26Result = tmp26(tmp3[94]);
@@ -995,6 +994,7 @@ class MessagesConnected {
       joinedGameOrganizationGuildIds: stateFromStoresArray7,
       buildOverrides: stateFromStores8,
       fetchingSkuIds: stateFromStoresArray2,
+      socialLayerStorefrontEmbedData,
       experimentEmbeds: codedLinksExperimentEmbeds,
       quests,
       isFetchingCurrentQuests,
@@ -1125,7 +1125,7 @@ class MessagesConnected {
     return tmp124(tmp26Result, obj1);
   }
 }
-const PollsInteractionStore = fn(11506);
+const PollsInteractionStore = fn(11556);
 ({ useChannelPollInteractions: closure_28, useMessagePollInteractions: closure_29 } = PollsInteractionStore);
 const Constants = fn(1072);
 ({
@@ -1135,7 +1135,7 @@ const Constants = fn(1072);
   MessageTypes: closure_62,
   Permissions: closure_63,
 } = Constants);
-let closure_64 = fn(11501).GameOrganizationInviteStates;
+let closure_64 = fn(11551).GameOrganizationInviteStates;
 const PremiumConstants = fn(1387);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_65, PremiumTypes: closure_66 } = PremiumConstants);
 const jsxProd = fn(21);

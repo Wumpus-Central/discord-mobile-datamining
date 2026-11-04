@@ -41,7 +41,7 @@ export default noop.memo(function QuestDockLimitedTimePill() {
   const tmp = closure_6();
   const obj = { style: tmp.pill, accessible: true, accessibilityRole: "text", children: null };
   items = [React4(TimerIcon.TimerIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT })];
-  const obj3 = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.text, children: null };
+  const obj3 = { variant: "body-xs/semibold", color: "text-overlay-light", style: tmp.text, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["h/uBCR"]);
   items[1] = React4(Text_Text.Text, obj3);

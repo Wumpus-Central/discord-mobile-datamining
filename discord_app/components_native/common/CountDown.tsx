@@ -104,7 +104,7 @@ prototype["render"] = function render() {
     const NumberResult = Number(deadline);
     tmp2 = null != freezeAtRemainingSeconds && result <= freezeAtRemainingSeconds;
   }
-  return jsx(Text_Text.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
+  return jsx(Text_Text.Text, { tabularNumbers: true, variant: "body-md/semibold", style: style.style, children });
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/CountDown.tsx");

@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15500 from "../../../../../_runtime/metro/15500__.js";
-import _modDef15501 from "../../../../../_runtime/metro/15501__.js";
-import _modDef15502 from "../../../../../_runtime/metro/15502__.js";
-import _modDef15503 from "../../../../../_runtime/metro/15503__.js";
+import _modDef15587 from "../../../../../_runtime/metro/15587__.js";
+import _modDef15588 from "../../../../../_runtime/metro/15588__.js";
+import _modDef15589 from "../../../../../_runtime/metro/15589__.js";
+import _modDef15590 from "../../../../../_runtime/metro/15590__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -39,7 +39,7 @@ function CarouselCard(arg0) {
   const obj = { style, children: null };
   items = [
     closure_1_10(Text_Text.Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "text-overlay-light",
       style: tmp.cardTitle,
       children: title,
@@ -57,7 +57,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   noop = undefined;
   const tmp = closure_14();
-  const isScreenReaderEnabled = onEndReached(5397).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = onEndReached(5398).useIsScreenReaderEnabled();
   const tmp5 = mapped(noop.useState(0), 2);
   const currentIndex = tmp5[0];
   dependencyMap = tmp7;
@@ -69,7 +69,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef15500;
+    obj.imageSrc = _modDef15587;
     obj.imageStyle = first.emojiImage;
     items = [,];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -78,7 +78,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef15501;
+    obj2.imageSrc = _modDef15588;
     const items2 = [,];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
@@ -87,7 +87,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef15502;
+    obj3.imageSrc = _modDef15589;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -95,7 +95,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef15503;
+    obj4.imageSrc = _modDef15590;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);
@@ -143,7 +143,7 @@ function PremiumFeaturesCarousel(arg0) {
         modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
         onSnapToItem: tmp7,
       };
-      let tmp19 = closure_10(currentIndex(10759), obj3);
+      let tmp19 = closure_10(currentIndex(10807), obj3);
     }
     let items3 = [tmp19];
     let obj4 = { containerStyle: tmp.indicators, numberOfItems: mapped.length, currentIndex };
@@ -151,7 +151,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj2.children = items3;
     return closure_11(closure_6, obj2);
   }
-  let obj = onEndReached(5397);
+  let obj = onEndReached(5398);
   tmp19 = closure_10(closure_5, {
     style: tmp.carousel,
     contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 },
@@ -177,9 +177,9 @@ function PremiumFeaturesCarousel(arg0) {
   };
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -224,22 +224,18 @@ let result = size.fileFinishedImporting("modules/user_settings/premium/native/Pr
 export default function PremiumFeaturesCarouselSection(style) {
   first = undefined;
   dependencyMap = undefined;
-  _slicedToArray = undefined;
   const tmp = closure_14();
-  const analyticsLocations = first(7446)().analyticsLocations;
+  const analyticsLocations = first(7462)().analyticsLocations;
   [first, dependencyMap] = noop.useState(false);
-  const tmp4 = _slicedToArray(noop.useState(analyticsLocations(1493).getWindowDimensions().width), 2);
-  _slicedToArray = tmp4[1];
+  ({ width, ref, onLayout } = first(9531)());
+  if (undefined === width) {
+    width = analyticsLocations(1493).getWindowDimensions().width;
+    let obj2 = analyticsLocations(1493);
+  }
   items = [analyticsLocations, first];
-  let obj2 = {
-    style: null,
-    onLayout(nativeEvent) {
-      return closure_3(nativeEvent.nativeEvent.layout.width);
-    },
-    children: null,
-  };
+  const obj3 = { style: null, ref, onLayout, children: null };
   const items1 = [tmp.container, style.style];
-  obj2.style = items1;
+  obj3.style = items1;
   const callback = noop.useCallback(() => {
     if (!first) {
       const obj2 = { location_stack: analyticsLocations };
@@ -247,7 +243,7 @@ export default function PremiumFeaturesCarouselSection(style) {
       closure_2(true);
     }
   }, items);
-  const obj3 = {
+  const obj4 = {
     style: tmp.headerText,
     variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
@@ -255,13 +251,13 @@ export default function PremiumFeaturesCarouselSection(style) {
     children: null,
   };
   const intl = analyticsLocations(1113).intl;
-  obj3.children = intl.string(analyticsLocations(1113).t.RGadQR);
+  obj4.children = intl.string(analyticsLocations(1113).t.RGadQR);
   const items2 = [
-    closure_10(analyticsLocations(5747).Text, obj3),
-    closure_10(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback }),
+    closure_10(analyticsLocations(5761).Text, obj4),
+    closure_10(PremiumFeaturesCarousel, { width, onEndReached: callback }),
   ];
-  obj2.children = items2;
-  return closure_11(closure_6, obj2);
+  obj3.children = items2;
+  return closure_11(closure_6, obj3);
 }
 export const PREMIUM_FEATURES_PROPORTIONAL_CARD_WIDTH = 0.85;
 export { PremiumFeaturesCardBackground };

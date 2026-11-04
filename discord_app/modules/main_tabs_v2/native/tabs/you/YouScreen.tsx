@@ -595,8 +595,8 @@ function UnconnectedYouScreen(arg0) {
   ref1 = noop.useRef(Date.now());
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(18598);
+({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
+const YouConstants = fn(18699);
 ({
   YOU_ACTION_SHEET_TOP_INSET: closure_12,
   YOU_AVATAR_SIZE: map1,
@@ -606,7 +606,7 @@ const YouConstants = fn(18598);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 let closure_17 = fn(1074).CollectiblesMobileShopScreen;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
-const Constants = fn(7497);
+const Constants = fn(7513);
 ({ BANNER_ASPECT_RATIO: closure_19, UserProfileThemeTypes: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);

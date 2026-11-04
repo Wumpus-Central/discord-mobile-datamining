@@ -11,8 +11,8 @@ import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import _modDef15420 from "../../../../_runtime/metro/15420__.js";
-import _modDef16937 from "../../../../_runtime/metro/16937__.js";
+import _modDef15507 from "../../../../_runtime/metro/15507__.js";
+import _modDef17029 from "../../../../_runtime/metro/17029__.js";
 import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader.tsx";
 import useSelectedTeenUser from "../hooks/useSelectedTeenUser.tsx";
 import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal.tsx";
@@ -38,42 +38,49 @@ function FamilyCenterActivityCardPrefaceText() {
     intl.formatToPlainString(_modDef2667.tazvHQ, { activeLinks: activeLinkUserIds.length }),
     intl2.string(_modDef2667.KrLnkE),
   );
-  const obj6 = { style: tmp.container, children: null };
-  let tmp12 = null;
-  if (!tmp4) {
-    const obj7 = { color: tmp.icon.color, source: _modDef16937, style: tmp.icon };
-    tmp12 = React6(native.Icon, obj7);
-  }
-  items = [tmp12, ,];
-  const obj8 = { style: tmp.text, variant: "text-xs/semibold", color: "text-subtle", children: null };
-  let tmp15 = ageSpecificText;
-  if (activeLinkUserIds.length > 1) {
-    tmp15 = ageSpecificText;
-    if (tmp4) {
-      tmp15 = activityWindowTimeStamp;
-    }
-  }
-  obj8.children = tmp15;
-  items[1] = React6(Text_Text.Text, obj8);
-  const obj9 = {
-    onPress: function handlePress() {
-      require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[18], paths.paths));
-    },
-    children: null,
-  };
   const formatToPlainStringResult = intl.formatToPlainString(_modDef2667.tazvHQ, {
     activeLinks: activeLinkUserIds.length,
   });
+  const intl3 = util.intl;
+  const obj6 = useAgeSpecificText;
+  const intl4 = util.intl;
+  const obj7 = { style: tmp.container, children: null };
+  let tmp14 = null;
+  const ageSpecificText1 = obj6.useAgeSpecificText(intl3.string(_modDef2667.n6LOrh), intl4.string(_modDef2667.JNLpDZ));
+  if (!tmp4) {
+    const obj8 = { color: tmp.icon.color, source: _modDef17029, style: tmp.icon };
+    tmp14 = React5(native.Icon, obj8);
+  }
+  items = [tmp14, ,];
+  const obj9 = { style: tmp.text, variant: "body-xs/semibold", color: "text-subtle", children: null };
+  let tmp17 = ageSpecificText;
+  if (activeLinkUserIds.length > 1) {
+    tmp17 = ageSpecificText;
+    if (tmp4) {
+      tmp17 = activityWindowTimeStamp;
+    }
+  }
+  obj9.children = tmp17;
+  items[1] = React5(Text_Text.Text, obj9);
+  const obj10 = {
+    onPress: function handlePress() {
+      require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[18], paths.paths));
+    },
+    accessibilityRole: "button",
+    accessibilityLabel: ageSpecificText1,
+    children: null,
+  };
+  const stringResult = intl3.string(_modDef2667.n6LOrh);
   const tmp2Result = TouchableHitBoxDefault;
-  obj9.children = React6(native.Icon, {
+  obj10.children = React5(native.Icon, {
     color: tmp.icon.color,
-    source: _modDef15420,
+    source: _modDef15507,
     size: native.Icon.Sizes.EXTRA_SMALL,
     style: tmp.icon,
   });
-  items[2] = React6(tmp2Result, obj9);
-  obj6.children = items;
-  return React7(View, obj6);
+  items[2] = React5(tmp2Result, obj10);
+  obj7.children = items;
+  return React6(View, obj7);
 }
 function FamilyCenterHeaderSubText() {
   const tmp2 = useIsInAdultAgeGroupDefault();
@@ -81,8 +88,8 @@ function FamilyCenterHeaderSubText() {
   const activityWindowTimestampFormatter = FamilyCenterUtils.getActivityWindowTimestampFormatter(tmp2);
   useUserLinks;
   if (!tmp2) {
-    const obj3 = { variant: "text-sm/medium", color: "text-muted", children: tmp6 };
-    let tmp7 = React6(Text_Text.Text, obj3);
+    const obj3 = { variant: "body-sm/medium", color: "text-muted", children: tmp6 };
+    let tmp7 = React5(Text_Text.Text, obj3);
   } else {
     tmp7 = null;
   }
@@ -163,7 +170,7 @@ class FamilyCenterActivityCardAccountSelect {
       obj9 = { children: null };
       tmp9 = jsxs;
       tmp10 = closure_1;
-      obj10 = { style: null, accessibilityRole: "spinbutton", onPress: null, children: null };
+      obj10 = { style: null, accessibilityRole: "button", onPress: null, children: null };
       obj10.style = tmp.touch;
       obj10.onPress = function handleOnPress() {
         if (undefined !== selectedTeenUser) {
@@ -188,8 +195,8 @@ class FamilyCenterActivityCardAccountSelect {
             });
           };
           obj2.selectedItem = tmp.id;
-          obj.openLazy(asyncRequireImpl(9130, dependencyMap.paths), FamilyCenterTeenAccountSelect, obj2);
-          const tmp5 = asyncRequireImpl(9130, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(9147, dependencyMap.paths), FamilyCenterTeenAccountSelect, obj2);
+          const tmp5 = asyncRequireImpl(9147, dependencyMap.paths);
         }
       };
       tmp12 = closure_15;
@@ -211,8 +218,8 @@ class FamilyCenterActivityCardAccountSelect {
   }
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7840);
-({ FamilyCenterAction: hasOwnProperty, TeenActionDisplayType: metroRequire } = FamilyCenterConstants);
+const FamilyCenterConstants = fn(7856);
+({ FamilyCenterAction: hasOwnProperty, TeenActionDisplayType: closure_6 } = FamilyCenterConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -285,8 +292,8 @@ const memoResult = noop.memo((arg0) => {
     avatarDecoration: user.avatarDecoration,
     size: NORMAL,
   };
-  obj2.children = React6(tmp4(1187).Avatar, obj3);
-  items = [React6(View, obj2)];
+  obj2.children = React5(tmp4(1187).Avatar, obj3);
+  items = [React5(View, obj2)];
   const items1 = [tmp.userHeader];
   let nonSelectorHeader;
   if (!inSelector) {
@@ -294,16 +301,16 @@ const memoResult = noop.memo((arg0) => {
   }
   const obj4 = { style: items1, children: null };
   items1[1] = nonSelectorHeader;
-  const items2 = [React6(FamilyCenterUsernameHeaderDefault, { user }), React6(FamilyCenterHeaderSubText, {})];
+  const items2 = [React5(FamilyCenterUsernameHeaderDefault, { user }), React5(FamilyCenterHeaderSubText, {})];
   obj4.children = items2;
-  items[1] = React7(View, obj4);
+  items[1] = React6(View, obj4);
   obj.children = items;
-  return React7(View, obj);
+  return React6(View, obj);
 });
 memoResult.displayName = "FamilyCenterActivityCardAccount";
 createStyles = fn(5141);
 const obj11 = { touch: null, icon: null };
-const obj10 = { flex: 1, paddingRight: nativeDefault.space.PX_16 };
+let obj10 = { flex: 1, paddingRight: nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj11.touch = {
   display: "flex",
@@ -394,7 +401,7 @@ export default function FamilyCenterActivityCard() {
   if (undefined === selectedTeenUser) {
     return null;
   } else {
-    const sortedActivityTypeConfigs = tmp2(8496).getSortedActivityTypeConfigs();
+    const sortedActivityTypeConfigs = tmp2(8513).getSortedActivityTypeConfigs();
     const obj2 = { style: tmp.card, children: null };
     const obj3 = { style: tmp.preface, children: closure_8(FamilyCenterActivityCardPrefaceText, {}) };
     items = [closure_8(View, obj3), ,];
@@ -413,9 +420,9 @@ export default function FamilyCenterActivityCard() {
       } else {
         other = closure_0.other;
       }
-      return React6(
+      return React5(
         View,
-        { style: other, children: React6(FamilyCenterActivityTotalDefault, { displayType: tmp }) },
+        { style: other, children: React5(FamilyCenterActivityTotalDefault, { displayType: tmp }) },
         "total-" + tmp,
       );
     });

@@ -31,7 +31,7 @@ export default noop.memo(function ErrorScreen(text) {
   ];
   obj.style = items1;
   obj.children = jsx(Text_Text.Text, {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-muted",
     style: tmp.text,
     children: text,

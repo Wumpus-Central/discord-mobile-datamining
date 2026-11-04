@@ -86,7 +86,7 @@ function ConjureAppPictureInPictureLayer(frameIds) {
       obj.closeTargetCenter = memo;
       obj.closeTargetShown = sharedValue;
       obj.closeTargetHovered = sharedValue1;
-      return React6(ConjureAppPictureInPictureWithSize, obj, frameId);
+      return React5(ConjureAppPictureInPictureWithSize, obj, frameId);
     }),
   ];
   obj4.children = items5;
@@ -99,7 +99,7 @@ function ConjureAppPictureInPictureWithSize(frameId) {
   const items1 = [frameId];
   stateFromStores = frameId(stateFromStores[12]).useStateFromStores(
     items,
-    () => React5(timestampProducer(FramesStore.getFrame(frameId))),
+    () => metroImportDefault(timestampProducer(FramesStore.getFrame(frameId))),
     items1,
   );
   const items2 = [windowWidth, stateFromStores];
@@ -114,8 +114,8 @@ function ConjureAppPictureInPictureWithSize(frameId) {
   return closure_8(windowWidth(stateFromStores[14]), obj2);
 }
 const View = fn(17).View;
-const FramesConstants = fn(6967);
-({ asLaunched: metroRequire, getPipOrientationLockStateForFrame: closure_7 } = FramesConstants);
+const FramesConstants = fn(6982);
+({ asLaunched: closure_6, getPipOrientationLockStateForFrame: metroImportDefault } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -132,7 +132,7 @@ export default function ConjureAppPictureInPictures() {
   let tmp2 = null;
   if (conjureAppPictureInPictureFrameIds.length > 0) {
     const obj2 = { frameIds: conjureAppPictureInPictureFrameIds };
-    tmp2 = React6(ConjureAppPictureInPictureLayer, obj2);
+    tmp2 = React5(ConjureAppPictureInPictureLayer, obj2);
   }
   return tmp2;
 }

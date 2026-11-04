@@ -2,14 +2,13 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import useMeasuredLayoutDefault from "../../../screen/native/useMeasuredLayout.tsx";
 import conjureHomeCarouselFan from "../conjureHomeCarouselFan.tsx";
-import SvgCss from "../../../../../_runtime/12960_SvgCss.js";
+import SvgCss from "../../../../../_runtime/13042_SvgCss.js";
 import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt.tsx";
 import conjureHomeInspirationEntries from "../conjureHomeInspirationEntries.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
@@ -17,22 +16,23 @@ import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
 
+const _modDef3995 = tmp7(3995);
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-let closure_11 = 240 + nativeDefault.space.PX_24;
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let closure_10 = 240 + nativeDefault.space.PX_24;
 const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
 let obj = {
-  games: fn(9859).GameControllerIcon,
-  apps: fn(8802).AppsIcon,
-  profile_widget: fn(12957).WidgetsIcon,
-  overlay_widget: fn(9719).ScreenIcon,
-  automod: fn(11418).ShieldIcon,
-  chat_bot: fn(12241).RobotIcon,
+  games: fn(9877).GameControllerIcon,
+  apps: fn(8819).AppsIcon,
+  profile_widget: fn(13039).WidgetsIcon,
+  overlay_widget: fn(9737).ScreenIcon,
+  automod: fn(11468).ShieldIcon,
+  chat_bot: fn(12302).RobotIcon,
 };
 const createStyles = fn(5141);
 let obj2 = {
@@ -110,22 +110,22 @@ const size1 = {
 };
 obj2.categoryIcon = size1;
 obj2.footerText = { flex: 1 };
-let closure_13 = createStyles.createStyles(obj2);
-let closure_14 = {
+let closure_12 = createStyles.createStyles(obj2);
+let closure_13 = {
   code: '(function ConjureHomeCarouselTsx1(){let[wrapConjureHomeCarouselDistance,index,STEP,offset,loop,conjureHomeCarouselFan,viewportWidth,CARD_WIDTH]=this.__closure;const distance=wrapConjureHomeCarouselDistance(index*STEP,offset.get(),loop);const{angleDeg:angleDeg,dropPx:dropPx}=conjureHomeCarouselFan(distance/STEP,STEP);return{transform:[{translateX:viewportWidth/2-CARD_WIDTH/2+distance},{translateY:dropPx},{rotate:angleDeg+"deg"}]};})',
 };
-let closure_15 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
+let closure_14 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
   inspiration = inspiration.inspiration;
   ({ index, count, offset, viewportWidth } = inspiration);
-  const tmp = closure_13();
+  const tmp = closure_12();
   obj = _mod1652;
   items = [
-    closure_14,
+    closure_13,
     conjureHomeCarouselFan.wrapConjureHomeCarouselDistance,
     index,
-    closure_11,
+    closure_10,
     offset,
-    closure_11 * count,
+    closure_10 * count,
     conjureHomeCarouselFan.conjureHomeCarouselFan,
     viewportWidth,
     240,
@@ -168,54 +168,54 @@ let closure_15 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
   const tmp14 = FastImageDefault;
   const tmp2Result = AvatarUtils;
   obj4.source = tmp2Result.makeSource(AvatarUtils.getDefaultAvatarURL(undefined, inspiration.authorAvatarSeed));
-  const items3 = [React7(tmp14, obj4)];
+  const items3 = [React5(tmp14, obj4)];
   const obj5 = {
     style: tmp.bubble,
-    children: React7(Text_Text.Text, {
-      variant: "text-sm/medium",
+    children: React5(Text_Text.Text, {
+      variant: "body-sm/medium",
       color: "text-strong",
       lineClamp: 2,
       children: inspiration.shortPrompt,
     }),
   };
-  items3[1] = React7(View, obj5);
+  items3[1] = React5(View, obj5);
   obj3.children = items3;
-  const items4 = [closure_1_10(View, obj3)];
+  const items4 = [React6(View, obj3)];
   const obj7 = { style: tmp.card, children: null };
   const obj8 = { style: tmp.thumbnail, children: null };
   const size = { asset: conjureHomeInspirationArtDefault[inspiration.id], width: "100%", height: "100%" };
-  obj8.children = React7(SvgCss.LocalSvg, size);
-  const items5 = [React7(View, obj8)];
+  obj8.children = React5(SvgCss.LocalSvg, size);
+  const items5 = [React5(View, obj8)];
   const obj9 = { style: tmp.footer, children: null };
   const obj10 = { style: tmp.categoryIcon, children: null };
-  const obj6 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 2, children: inspiration.shortPrompt };
+  const obj6 = { variant: "body-sm/medium", color: "text-strong", lineClamp: 2, children: inspiration.shortPrompt };
   const tmp2Result3 = AvatarUtils;
-  obj10.children = React7(obj[inspiration.category], { size: "sm", color: nativeDefault.colors.ICON_STRONG });
-  const items6 = [React7(View, obj10)];
+  obj10.children = React5(obj[inspiration.category], { size: "sm", color: nativeDefault.colors.ICON_STRONG });
+  const items6 = [React5(View, obj10)];
   const obj12 = { style: tmp.footerText, children: null };
   const items7 = [
-    React7(Text_Text.Text, {
-      variant: "text-md/semibold",
+    React5(Text_Text.Text, {
+      variant: "body-md/semibold",
       color: "text-strong",
       lineClamp: 1,
       children: inspiration.name,
     }),
   ];
-  const obj14 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
+  const obj14 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
   const obj11 = { size: "sm", color: nativeDefault.colors.ICON_STRONG };
-  const obj13 = { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: inspiration.name };
+  const obj13 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: inspiration.name };
   obj14.children = conjureHomeInspirationEntries.conjureHomeCategoryLabel(inspiration.category);
-  items7[1] = React7(Text_Text.Text, obj14);
+  items7[1] = React5(Text_Text.Text, obj14);
   obj12.children = items7;
-  items6[1] = closure_1_10(View, obj12);
+  items6[1] = React6(View, obj12);
   obj9.children = items6;
-  items5[1] = closure_1_10(View, obj9);
+  items5[1] = React6(View, obj9);
   obj7.children = items5;
-  items4[1] = closure_1_10(View, obj7);
+  items4[1] = React6(View, obj7);
   obj2.children = items4;
-  return closure_1_10(_modDef1652.View, obj2);
+  return React6(_modDef1652.View, obj2);
 });
-let closure_16 = {
+let closure_15 = {
   code: "(function ConjureHomeCarouselTsx2(frame){let[offset,CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,loop]=this.__closure;var _frame$timeSincePrevi;const elapsed=(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:0;offset.set((offset.get()+CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND*elapsed/1000)%loop);})",
 };
 let obj9 = {
@@ -228,14 +228,14 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/home/native/ConjureHomeCarousel.tsx");
 
 export default noop.memo(function ConjureHomeCarousel(onScreen) {
-  let sharedValue;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let frameCallback;
   onScreen = undefined;
-  const memo = frameCallback.useMemo(() => _undefined(_undefined2[22]).conjureHomeInspirationEntries(), []);
+  const memo = frameCallback.useMemo(() => _undefined(offset[21]).conjureHomeInspirationEntries(), []);
   _require = memo;
   obj = frameCallback;
-  const tmp = closure_13();
-  const tmp2 = _require;
+  const tmp = closure_12();
   items = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = require("initialize");
@@ -246,14 +246,20 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   );
   const obj3 = require("initialize");
   const isFocused = require("Link").useIsFocused();
-  const tmp7 = sharedValue(frameCallback.useState(0), 2);
-  const first = tmp7[0];
+  const tmp8 = useMeasuredLayoutDefault();
+  const width = tmp8.width;
+  let num = 0;
+  ({ ref, onLayout } = tmp8);
+  if (undefined !== width) {
+    num = width;
+  }
+  importDefault = num;
   const obj4 = require("Link");
-  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let result = closure_11 * memo.length;
-  const obj5 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let result = closure_10 * memo.length;
+  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
   const items2 = [
-    closure_16,
+    closure_15,
     sharedValue,
     require("conjureHomeCarouselFan").CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,
     result,
@@ -288,29 +294,31 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     onScreen = onScreen.onScreen;
   }
   if (onScreen) {
-    onScreen = first > 0;
+    onScreen = num > 0;
   }
   const items4 = [frameCallback, onScreen];
   const effect = obj.useEffect(() => {
     frameCallback.setActive(onScreen);
   }, items4);
-  const obj7 = { style: tmp.carousel, accessible: true, accessibilityLabel: null, onLayout: null, children: null };
-  const intl = tmp2(1113).intl;
-  obj7.accessibilityLabel = intl.string(_modDef3995.Qc4S39);
-  obj7.onLayout = function onLayout(nativeEvent) {
-    return _undefined2(nativeEvent.nativeEvent.layout.width);
+  const obj5 = {
+    style: tmp.carousel,
+    accessible: true,
+    accessibilityLabel: null,
+    ref: null,
+    onLayout: null,
+    children: null,
   };
+  const intl = tmp2(1113).intl;
+  obj5.accessibilityLabel = intl.string(_modDef3995.Qc4S39);
+  obj5.ref = ref;
+  obj5.onLayout = onLayout;
   let mapped = null;
-  if (first > 0) {
+  if (num > 0) {
     mapped = memo.map((inspiration, index) =>
-      React7(
-        closure_15,
-        { inspiration, index, count: _undefined.length, offset: sharedValue, viewportWidth },
-        inspiration.id,
-      ),
+      React5(closure_14, { inspiration, index, count: _undefined.length, offset, viewportWidth }, inspiration.id),
     );
   }
-  obj7.children = mapped;
-  return closure_9(onScreen, obj7);
+  obj5.children = mapped;
+  return closure_8(onScreen, obj5);
 });
 export const CONJURE_HOME_CAROUSEL_ROOM_BELOW = PX_24;

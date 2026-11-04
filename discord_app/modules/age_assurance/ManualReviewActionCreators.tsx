@@ -127,7 +127,7 @@ let closure_14 = async function _handleManualReviewCta() {
         throw dependencyMap;
       } else if (2 === tmp8) {
         c3 = 1;
-        closure_129_1(closure_129_2[9]).showFailedToast(closure_129_6.TIGGER_PAWTECT_ERROR);
+        closure_129_1(closure_129_2[9]).showFailedToast(closure_129_6.AGE_VERIFICATION_ERROR);
         let obj2 = closure_129_1(closure_129_2[9]);
       } else if (arg0 === 1) {
         c5 = 3;
@@ -160,7 +160,7 @@ let closure_14 = async function _handleManualReviewCta() {
   }
 };
 const Endpoints = fn(1072).Endpoints;
-const SafetyToastType = fn(7614).SafetyToastType;
+const SafetyToastType = fn(7630).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

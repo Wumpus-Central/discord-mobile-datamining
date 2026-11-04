@@ -7,9 +7,9 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import EmojiStore from "../EmojiStore.tsx";
 
 require = fn;
-const ExpressionSourceRecord = fn(7084);
+const ExpressionSourceRecord = fn(7099);
 ({
-  ExpressionSourceGuildRecord: closure_7,
+  ExpressionSourceGuildRecord: metroImportDefault,
   EmojiSourceDataTypes: closure_8,
   getEmojiSourceData: closure_9,
 } = ExpressionSourceRecord);

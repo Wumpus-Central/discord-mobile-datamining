@@ -22,7 +22,7 @@ let obj = {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    height: fn(11358).CONTROLS_DRAWER_HEADER_SIZE,
+    height: fn(11408).CONTROLS_DRAWER_HEADER_SIZE,
   },
   titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 },
   titlePillBG: null,
@@ -87,7 +87,7 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   const obj5 = {
     style: null,
     children: React4(Text_Text.Text, {
-      variant: "redesign/heading-18/semibold",
+      variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       children: children.title,

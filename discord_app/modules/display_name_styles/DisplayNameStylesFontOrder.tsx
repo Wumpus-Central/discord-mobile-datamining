@@ -3,20 +3,9 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const DisplayNameStylesConstants = fn(1403);
-({ FLYWHEEL_FONTS, HEXAGON_CAMPAIGN_FONTS: c3 } = DisplayNameStylesConstants);
+({ FONT_ORDER: c3, HEXAGON_CAMPAIGN_FONTS: closure_4 } = DisplayNameStylesConstants);
 const HexagonCampaignConstants = fn(5166);
-({ HexagonCampaignPerk: closure_4, HexagonCampaignPerkAvailability: hasOwnProperty } = HexagonCampaignConstants);
-let items = [
-  fn(1405).DisplayNameFont.DEFAULT,
-  fn(1405).DisplayNameFont.ZILLA_SLAB,
-  fn(1405).DisplayNameFont.CHERRY_BOMB,
-  fn(1405).DisplayNameFont.CHICLE,
-  fn(1405).DisplayNameFont.MUSEO_MODERNO,
-  fn(1405).DisplayNameFont.NEO_CASTEL,
-  fn(1405).DisplayNameFont.PIXELIFY,
-  fn(1405).DisplayNameFont.SINISTRE,
-];
-const items1 = [...FLYWHEEL_FONTS];
+({ HexagonCampaignPerk: hasOwnProperty, HexagonCampaignPerkAvailability: closure_6 } = HexagonCampaignConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFontOrder.tsx");
 
@@ -38,10 +27,10 @@ export function useVisibleFontOrder(arg0) {
   return noop.useMemo(() => {
     if (flag) {
       items = [];
-      HermesBuiltin.arraySpread(React3, HermesBuiltin.arraySpread(items1, 0));
+      HermesBuiltin.arraySpread(React4, HermesBuiltin.arraySpread(React3, 0));
       let tmp2 = items;
     } else {
-      tmp2 = items1;
+      tmp2 = React3;
     }
     return tmp2;
   }, items);

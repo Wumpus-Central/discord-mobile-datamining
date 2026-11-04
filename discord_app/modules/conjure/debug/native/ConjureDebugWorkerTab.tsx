@@ -103,7 +103,7 @@ function BotEnvBlock(arg0) {
     const obj12 = { children: null };
     items[4] = tmp8Result;
     obj12.children = items;
-    let tmp6Result = React5(timestampProducer, obj12);
+    let tmp6Result = metroImportDefault(timestampProducer, obj12);
     const tmp9Result8 = ConjureDebugFormat;
   } else {
     const obj = { label: ConjureDebugLabels.debugEnvLabel(env), value: null };
@@ -149,11 +149,11 @@ function RuntimeEnvBlock(env) {
   let obj = { children: null };
   const obj2 = { label: null, value: null };
   let intl = env(1113).intl;
-  let obj3 = { env: env(13163).debugEnvLabel(env) };
+  let obj3 = { env: env(13246).debugEnvLabel(env) };
   obj2.label = intl.formatToPlainString(_modDef3995["92gVTm"], obj3);
-  let obj4 = env(13163);
-  obj2.value = env(13164).formatCount(runtime.connections);
-  items = [closure_5(env(13166).DebugStatRow, obj2)];
+  let obj4 = env(13246);
+  obj2.value = env(13247).formatCount(runtime.connections);
+  items = [closure_5(env(13249).DebugStatRow, obj2)];
   const schedules = runtime.schedules;
   items[1] = schedules.map((id) => {
     const obj = { label: null, value: null, hint: null };
@@ -235,7 +235,7 @@ function EnvMetricsSection(arg0) {
         obj8.hint = intl6.formatToPlainString(_modDef3995.JqMU05, obj9);
         items1[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj8);
         obj6.children = items1;
-        let tmp = React5(timestampProducer, obj6);
+        let tmp = metroImportDefault(timestampProducer, obj6);
         const tmp9Result8 = ConjureDebugFormat;
       } else {
         const obj = { label: null, value: null, hint: null };
@@ -293,7 +293,7 @@ function EnvMetricsSection(arg0) {
       }
       items[6] = tmp11Result4;
       obj2.children = items;
-      return React5(ConjureDebugPrimitives.DebugSection, obj2);
+      return metroImportDefault(ConjureDebugPrimitives.DebugSection, obj2);
     }
   }
   const obj15 = { title, children: null };
@@ -317,15 +317,15 @@ function StorageSection(status) {
     let tmp4 = limits;
     let items1 = items;
   } else {
-    let obj = { key: "preview", label: limits(13163).debugEnvLabel("preview"), metrics: tmp };
+    let obj = { key: "preview", label: limits(13246).debugEnvLabel("preview"), metrics: tmp };
     items1 = [obj];
     let obj5 = { key: "stable", label: null, metrics: null };
-    let obj2 = limits(13163);
-    obj5.label = limits(13163).debugEnvLabel("stable");
+    let obj2 = limits(13246);
+    obj5.label = limits(13246).debugEnvLabel("stable");
     obj5.metrics = stable;
     items1[1] = obj5;
     tmp4 = limits;
-    let obj4 = limits(13163);
+    let obj4 = limits(13246);
   }
   let obj6 = { title: null, children: null };
   let intl2 = tmp4(1113).intl;
@@ -362,15 +362,15 @@ function StorageSection(status) {
       const obj8 = { children: null };
       items[1] = tmp4;
       obj8.children = items;
-      tmp18Result = React5(noop.Fragment, obj8, key);
+      tmp18Result = metroImportDefault(noop.Fragment, obj8, key);
     }
     return tmp18Result;
   });
-  return closure_5(tmp4(13166).DebugSection, obj6);
+  return closure_5(tmp4(13249).DebugSection, obj6);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { tab: { gap: nativeDefault.space.PX_24 } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -488,12 +488,12 @@ export default function ConjureDebugWorkerTab(status) {
     obj12.value = str2;
     items2[1] = hasOwnProperty(ConjureDebugPrimitives.DebugStatRow, obj12);
     obj10.children = items2;
-    items1[8] = React5(ConjureDebugPrimitives.DebugSection, obj10);
+    items1[8] = metroImportDefault(ConjureDebugPrimitives.DebugSection, obj10);
     obj13.children = items1;
-    tmpResult = React5(timestampProducer, obj13);
+    tmpResult = metroImportDefault(timestampProducer, obj13);
     const tmp4Result5 = ConjureDebugLabels;
   }
   items[1] = tmpResult;
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }

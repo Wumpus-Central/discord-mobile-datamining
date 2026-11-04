@@ -4,11 +4,11 @@ import util from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import _mod7635 from "../../../../_runtime/metro/07635__.js";
+import _mod7651 from "../../../../_runtime/metro/07651__.js";
 import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
-import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet.tsx";
 import WidgetUtils from "../WidgetUtils.tsx";
+import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -16,7 +16,7 @@ import WidgetStore from "../WidgetStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(8878).TrackUserProfileEditActions;
+let closure_8 = fn(8895).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -39,7 +39,7 @@ let closure_12 = noop.memo(function AddGameRow(option) {
   option = option.option;
   const onSelect = option.onSelect;
   ({ start, end } = option);
-  return React7(TableRow.TableRow, {
+  return React6(TableRow.TableRow, {
     label: option.label,
     labelLineClamp: 1,
     disabled: option.disabled,
@@ -217,7 +217,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     if (!closure_4) {
       if ("" !== query.trim()) {
         const obj2 = { keys: ["label"] };
-        let length = _mod7635.matchSorter(memo1, query, obj2).length;
+        let length = _mod7651.matchSorter(memo1, query, obj2).length;
       }
       return length;
     }
@@ -281,7 +281,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
   const items12 = [memo1, callback3];
   const callback4 = obj.useCallback(
     (arg0, arg1) =>
-      React7(closure_12, {
+      React6(closure_12, {
         option: memo1[arg1],
         start: 0 === arg1,
         end: arg1 === memo1.length - 1,
@@ -306,7 +306,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     let tmp34Result = tmp34(tmp35, obj10);
   } else if (tmp16) {
     const obj11 = { style: tmp.emptyState, children: null };
-    const obj12 = { variant: "text-md/medium", color: "text-subtle", style: tmp.emptyStateText, children: null };
+    const obj12 = { variant: "body-md/medium", color: "text-subtle", style: tmp.emptyStateText, children: null };
     const intl3 = tmp8(tmp3[22]).intl;
     obj12.children = intl3.string(tmp8(tmp3[22]).t.jkk7t9);
     obj11.children = tmp34(tmp8(tmp3[32]).Text, obj12);

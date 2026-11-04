@@ -13,7 +13,7 @@ const _modDef1652 = tmp4(1652);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   animatedListContainer: { overflow: "hidden" },
@@ -176,12 +176,12 @@ export default function ExpandableList(onExpand) {
   }
   items10[1] = tmp25Result;
   obj2.children = items10;
-  const items11 = [React5(_modDef1652.View, obj2)];
+  const items11 = [metroImportDefault(_modDef1652.View, obj2)];
   if (!showsExpandCTAOverride) {
     const obj8 = { children: null };
     items11[1] = showsExpandCTAOverride;
     obj8.children = items11;
-    return React5(React6, obj8);
+    return metroImportDefault(React5, obj8);
   } else {
     if (first) {
       const intl2 = util.intl;
@@ -200,7 +200,7 @@ export default function ExpandableList(onExpand) {
       stringResult1 = intl3.format(util.t.gVw57p, {});
     }
     obj12 = { children: null };
-    const obj13 = { color: "text-brand", variant: "text-md/semibold", children: stringResult1 };
+    const obj13 = { color: "text-brand", variant: "body-md/semibold", children: stringResult1 };
     obj11.children = timestampProducer(Text_Text.Text, obj13);
     obj11 = timestampProducer(View, obj11);
     obj10.label = obj11;

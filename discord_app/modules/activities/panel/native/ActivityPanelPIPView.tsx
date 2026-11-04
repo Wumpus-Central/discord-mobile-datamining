@@ -373,7 +373,7 @@ class BaseActivityPanelPIPView {
   }
 }
 const View = fn(17).View;
-const ActivityPanelConstants = fn(5777);
+const ActivityPanelConstants = fn(5791);
 const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
   ActivityPanelModes: closure_10,
@@ -381,10 +381,10 @@ const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1,
 } = ActivityPanelConstants);
-let closure_14 = fn(19158).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_14 = fn(19261).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 let ThemeTypes = fn(1072).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11361).PIP_WINDOW_OFFSET;
-const ActivityLayoutMode = fn(11831).ActivityLayoutMode;
+const PIP_WINDOW_OFFSET = fn(11411).PIP_WINDOW_OFFSET;
+const ActivityLayoutMode = fn(11888).ActivityLayoutMode;
 let jsx = fn(21).jsx;
 let closure_19 = { duration: 300 };
 const native = fn(1187);

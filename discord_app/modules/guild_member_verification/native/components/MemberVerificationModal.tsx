@@ -11,8 +11,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(7069);
-({ SCROLL_EVENT_TIMER_MS: closure_7, SHEET_RADIUS, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
+const MemberVerificationFormConstants = fn(7084);
+({ SCROLL_EVENT_TIMER_MS: metroImportDefault, SHEET_RADIUS, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = module_1652.createAnimatedComponent(fn(1187).Icon);

@@ -123,7 +123,7 @@ function GameCoverArtFallback(arg0) {
     obj2.accessible = accessible;
     obj2.accessibilityLabel = gameName;
     const obj3 = {
-      variant: "text-xxs/medium",
+      variant: "footnote/medium",
       lineClamp: 3,
       style: tmp.fallbackText,
       accessible: false,
@@ -178,8 +178,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const GameCoverArtSize = { SMALL: 0, [0]: "SMALL", LARGE: 1, [1]: "LARGE", COMPACT: 2, [2]: "COMPACT" };
 let closure_7 = {
-  [GameCoverArtSize.SMALL]: { nameVariant: "text-xs/medium", nameLineClamp: 3, releaseYearVariant: "text-xxs/normal" },
-  [GameCoverArtSize.LARGE]: { nameVariant: "text-md/medium", nameLineClamp: 4, releaseYearVariant: "text-sm/normal" },
+  [GameCoverArtSize.SMALL]: { nameVariant: "body-xs/medium", nameLineClamp: 3, releaseYearVariant: "footnote/normal" },
+  [GameCoverArtSize.LARGE]: { nameVariant: "body-md/medium", nameLineClamp: 4, releaseYearVariant: "body-sm/normal" },
 };
 const createStyles = fn(5141);
 let obj3 = {
@@ -240,7 +240,7 @@ obj3.fallbackText = { textAlign: "center" };
 obj3.spacer = { flex: 1 };
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
 obj3.placeholder = {};
-const React6 = createStyles.createStyles(obj3);
+const React5 = createStyles.createStyles(obj3);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameCoverArt.tsx");
 

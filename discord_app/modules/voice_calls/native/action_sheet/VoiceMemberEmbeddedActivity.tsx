@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5397).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const XSMALL = fn(1187).AvatarSizes.XSMALL;
@@ -148,7 +148,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       const obj11 = { style: tmp.centerGroup, children: null };
       const obj12 = {
         style: tmp.applicationName,
-        variant: "text-md/semibold",
+        variant: "body-md/semibold",
         color: "mobile-text-heading-primary",
         children: name,
       };
@@ -180,7 +180,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
           tmp5 = obj2;
         }
         obj.cutout = tmp5;
-        return React7(native.CutoutableAvatarImage, obj);
+        return React6(native.CutoutableAvatarImage, obj);
       };
       items5[2] = closure_9(channelId(tmp3[9]).SummarizedIconRow, obj13);
       obj9.children = items5;

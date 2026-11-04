@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
 const JoinGuildSources = fn(1072).JoinGuildSources;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = module_1652.createAnimatedComponent(Pressable);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
@@ -86,16 +86,16 @@ export default function ChannelListStickyHeader(guild) {
   const tmp10 = useStickyServerHeaderSubtitleDefault(guild);
   const obj2 = guild(5015);
   const tmp8 = isFavoritesGuildIdResult ? t.hW8QDk : t["Gpyp/e"];
-  const tmp6Result = guild(9432);
-  const isDiscoverableGuildResult = guild(9432).isDiscoverableGuild(guild);
-  const iOSPressEffects = guild(7108).useIOSPressEffects(4);
+  const tmp6Result = guild(9450);
+  const isDiscoverableGuildResult = guild(9450).isDiscoverableGuild(guild);
+  const iOSPressEffects = guild(7123).useIOSPressEffects(4);
   ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
-  const tmp6Result5 = guild(7108);
+  const tmp6Result5 = guild(7123);
   const favoritesAwareGuildName = guild(5015).getFavoritesAwareGuildName(guild);
   const tmp6Result6 = guild(5015);
-  const token = guild(5719).useToken(tmp2(575).modules.mobile.CHANNEL_LIST_TITLE_TEXT_STYLE);
-  const tmp6Result7 = guild(5719);
-  const token1 = guild(5719).useToken(tmp2(575).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
+  const token = guild(5732).useToken(tmp2(575).modules.mobile.CHANNEL_LIST_TITLE_TEXT_STYLE);
+  const tmp6Result7 = guild(5732);
+  const token1 = guild(5732).useToken(tmp2(575).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
   const obj3 = { style: null, onPress: null, onPressIn: null, onPressOut: null, accessible: true, accessibilityRole: null, accessibilityHint: null, children: null };
   const items1 = [pressableStyles, tmp.headerRowTitle];
   obj3.style = items1;
@@ -129,20 +129,20 @@ export default function ChannelListStickyHeader(guild) {
   let tmp23 = null;
   if (isFavoritesGuildIdResult) {
     const obj5 = { style: tmp.headerIcon, size: "sm", color: tmp2(575).colors.MOBILE_TEXT_HEADING_PRIMARY };
-    tmp23 = closure_6(tmp6(10193).StarIcon, obj5);
+    tmp23 = closure_6(tmp6(10241).StarIcon, obj5);
   }
   const items2 = [tmp23, , , ];
-  const tmp6Result8 = guild(5719);
-  items2[1] = closure_6(closure_4, { ref, collapsable: false, style: tmp.flex, children: closure_6(guild(5747).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) });
+  const tmp6Result8 = guild(5732);
+  items2[1] = closure_6(closure_4, { ref, collapsable: false, style: tmp.flex, children: closure_6(guild(5761).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) });
   const obj7 = { guild, size: null, style: null };
-  const obj6 = { ref, collapsable: false, style: tmp.flex, children: closure_6(guild(5747).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) };
+  const obj6 = { ref, collapsable: false, style: tmp.flex, children: closure_6(guild(5761).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) };
   obj7.size = guild(1187).Icon.Sizes.REFRESH_SMALL_16;
   obj7.style = tmp.guildBadge;
   items2[2] = closure_6(GuildBadgeV2Default, obj7);
   let tmp25Result = null;
   if (flag2) {
     const obj8 = { size: "xxs", color: tmp2(575).colors.TEXT_SUBTLE, style: tmp.chevron };
-    tmp25Result = closure_6(tmp6(7498).ChevronSmallRightIcon, obj8);
+    tmp25Result = closure_6(tmp6(7514).ChevronSmallRightIcon, obj8);
   }
   items2[3] = tmp25Result;
   obj4.children = items2;
@@ -156,14 +156,14 @@ export default function ChannelListStickyHeader(guild) {
       const intl2 = tmp6(1113).intl;
       const obj11 = { count: tmp10 };
       obj10.children = intl2.format(tmp6(1113).t.zRl6XR, obj11);
-      const items4 = [closure_6(tmp6(5747).Text, obj10), , ];
+      const items4 = [closure_6(tmp6(5761).Text, obj10), , ];
       const obj12 = { style: tmp.ellipse };
       items4[1] = closure_6(closure_4, obj12);
       let obj13 = { experimental_useNativeText: true, color: "text-muted", variant: token1, lineClamp: 1, children: null };
       const intl3 = tmp6(1113).intl;
       const t2 = tmp6(1113).t;
       obj13.children = intl3.string(isDiscoverableGuildResult ? t2["B/vjCu"] : t2["1g9A/f"]);
-      obj13 = closure_6(tmp6(5747).Text, obj13);
+      obj13 = closure_6(tmp6(5761).Text, obj13);
       items4[2] = obj13;
       obj9.children = items4;
       closure_7(closure_4, obj9);
@@ -183,7 +183,7 @@ export default function ChannelListStickyHeader(guild) {
   const items6 = [closure_7(closure_8, obj3), ];
   let tmp25Result5 = null;
   if (isFavoritesGuildIdResult) {
-    tmp25Result5 = closure_6(tmp6(18355).FavoritesGuildHeaderActionButton, {});
+    tmp25Result5 = closure_6(tmp6(18449).FavoritesGuildHeaderActionButton, {});
   }
   items6[1] = tmp25Result5;
   obj15.children = items6;
@@ -191,13 +191,13 @@ export default function ChannelListStickyHeader(guild) {
   let tmp25Result6 = null;
   if (flag) {
     const obj16 = { guild, useButtonComponent: true, useEventsButton: true };
-    tmp25Result6 = closure_6(tmp2(13976), obj16);
+    tmp25Result6 = closure_6(tmp2(14062), obj16);
   }
   items7[1] = tmp25Result6;
   if (tmp25Result7) {
     const obj17 = { style: tmp.joinButton, children: null };
     const obj18 = { guildId: guild.id, joinSource: JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER };
-    obj17.children = closure_6(tmp2(18359), obj18);
+    obj17.children = closure_6(tmp2(18453), obj18);
     tmp25Result7 = closure_6(closure_4, obj17);
   }
   items7[2] = tmp25Result7;
@@ -205,7 +205,7 @@ export default function ChannelListStickyHeader(guild) {
   let tmp25Result8 = null;
   if (flag3) {
     const obj20 = { targetRef: ref, guild };
-    tmp25Result8 = closure_6(tmp2(18360), obj20);
+    tmp25Result8 = closure_6(tmp2(18454), obj20);
   }
   items7[4] = tmp25Result8;
   obj14.children = items7;

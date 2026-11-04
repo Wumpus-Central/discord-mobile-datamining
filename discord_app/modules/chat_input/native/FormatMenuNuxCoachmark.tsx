@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const useChatInputKeyboardOffsetDefault = tmp5(14125);
+const useChatInputKeyboardOffsetDefault = tmp5(14211);
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
@@ -51,7 +51,7 @@ export default function FormatMenuNuxCoachmark() {
         underlineHook(children, key) {
           return jsx(
             closure_0(closure_2[14]).Text,
-            { variant: "text-sm/medium", color: "none", style: closure_1_0.underline, children },
+            { variant: "body-sm/medium", color: "none", style: closure_1_0.underline, children },
             key,
           );
         },
@@ -64,7 +64,7 @@ export default function FormatMenuNuxCoachmark() {
       return obj;
     }, items1);
     const ref = coachmark.useRef(null);
-    coachmark = tmp2(10085).useCoachmark(ref, memo);
+    coachmark = tmp2(10133).useCoachmark(ref, memo);
     const items2 = [coachmark];
     const obj2 = {
       style: tmp.anchor,

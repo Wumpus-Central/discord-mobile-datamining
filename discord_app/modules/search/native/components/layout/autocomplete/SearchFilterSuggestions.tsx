@@ -37,7 +37,7 @@ function SearchFilterPrefixRow(text) {
     onPress: callback,
     label: jsx(require("Text/Text").Text, {
       lineClamp: 1,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: text,
     }),
@@ -144,7 +144,7 @@ function AnimatedEnterExitContainer(state) {
   return jsx(_modDef1652.View, { style, children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9975).SearchFilterAddLocations;
 let jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { card: null };

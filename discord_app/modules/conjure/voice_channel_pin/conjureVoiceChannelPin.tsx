@@ -98,7 +98,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
   })();
 };
 const Constants = fn(1072);
-({ ChannelTypes: metroRequire, Permissions: closure_7 } = Constants);
+({ ChannelTypes: closure_6, Permissions: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/voice_channel_pin/conjureVoiceChannelPin.tsx");
 

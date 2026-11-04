@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const UserFlags = fn(1072).UserFlags;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   header: {
@@ -78,7 +78,7 @@ export default function Header(accountScopes) {
   const obj11 = { style: tmp.applicationNameWrapper, children: null };
   const items3 = [
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-lg/semibold",
+      variant: "body-lg/semibold",
       color: "mobile-text-heading-primary",
       children: application.name,
     }),
@@ -106,7 +106,7 @@ export default function Header(accountScopes) {
     stringResult = intl.string(util.t["X+Fdpo"]);
   }
   items2[2] = hasOwnProperty(Text_Text.Text, {
-    variant: "heading-md/medium",
+    variant: "heading-sm/medium",
     color: "text-default",
     children: stringResult,
   });

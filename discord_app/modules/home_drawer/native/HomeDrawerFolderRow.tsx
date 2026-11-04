@@ -140,7 +140,7 @@ function Wrapper(folder) {
     const obj = { style: closure_1.title, children: null };
     items = [closure_2_11(BellSlashIcon, { size: "xs" })];
     const obj2 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       style: closure_1.titleText,
       lineClamp: 1,
       color: "text-default",
@@ -171,7 +171,7 @@ function Wrapper(folder) {
     }
     const items7 = [tmp14, str];
     const memo2 = obj.useMemo(
-      () => closure_2_11(Text_Text.Text, { variant: "text-xs/medium", color, lineClamp: 1, children: formatResult3 }),
+      () => closure_2_11(Text_Text.Text, { variant: "body-xs/medium", color, lineClamp: 1, children: formatResult3 }),
       items7,
     );
     const obj10 = { title: memo1, subtitle: null };
@@ -231,7 +231,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(5327).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(5328).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

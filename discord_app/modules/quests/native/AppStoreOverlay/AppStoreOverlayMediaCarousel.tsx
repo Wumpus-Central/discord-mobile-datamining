@@ -169,7 +169,7 @@ function AppStoreOverlayMediaCarouselItem(arg0) {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, ScrollView: metroRequire, StyleSheet, View: closure_7 } = get_ActivityIndicator);
+({ Pressable: hasOwnProperty, ScrollView: closure_6, StyleSheet, View: metroImportDefault } = get_ActivityIndicator);
 const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

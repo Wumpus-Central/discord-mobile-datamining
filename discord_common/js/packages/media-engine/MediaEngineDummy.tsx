@@ -119,6 +119,7 @@ prototype["hasClipsV3Support"] = function hasClipsV3Support() {
 };
 prototype["setClipsV3MLEnabled"] = function setClipsV3MLEnabled() {};
 prototype["setClipsRecordingEnabled"] = function setClipsRecordingEnabled() {};
+prototype["setClipsCaptureOverrides"] = function setClipsCaptureOverrides() {};
 prototype["setClipsUIActive"] = function setClipsUIActive() {};
 prototype["setClipBufferLength"] = function setClipBufferLength() {};
 prototype["getSystemSteadyClockNowMs"] = function getSystemSteadyClockNowMs() {

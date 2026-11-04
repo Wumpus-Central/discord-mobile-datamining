@@ -28,8 +28,8 @@ export default function UserProfileWidgetContainer(style) {
   const obj = userId(504);
   const tmp = userId;
   if (title == null) {
-    title = tmp(15096).getWidgetTitle(widget);
-    const tmpResult = tmp(15096);
+    title = tmp(12563).getWidgetTitle(widget);
+    const tmpResult = tmp(12563);
   }
   obj2.title = title;
   obj2.titleLeadingIcon = titleLeadingIcon;

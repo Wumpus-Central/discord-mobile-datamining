@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
 const createStyles = fn(5141);
 let obj2 = {
@@ -30,7 +30,7 @@ obj2.bar = {
   borderBottomWidth: 1,
   borderTopColor: nativeDefault.colors.BORDER_FEEDBACK_INFO,
   borderBottomColor: nativeDefault.colors.BORDER_FEEDBACK_INFO,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
 };
 obj2.text = { flex: 1 };
 obj2.link = { textDecorationLine: "underline" };
@@ -55,14 +55,14 @@ export function PinotMemberNoticeBar(channel) {
   }, items);
   let obj = { style: tmp.underlay, children: null };
   let obj2 = { style: tmp.bar, children: null };
-  let obj3 = { variant: "text-sm/normal", color: "text-default", style: tmp.text, children: null };
+  let obj3 = { variant: "body-sm/normal", color: "text-default", style: tmp.text, children: null };
   const intl = channel(1113).intl;
   obj3.children = intl.format(onDismiss(3287).Jry6Gr, {
     learnMoreHook(children, arg1) {
       return timestampProducer(
         Text_Text.Text,
         {
-          variant: "text-sm/normal",
+          variant: "body-sm/normal",
           color: "text-default",
           style: link.link,
           accessibilityRole: "link",
@@ -73,7 +73,7 @@ export function PinotMemberNoticeBar(channel) {
       );
     },
   });
-  const items1 = [closure_6(channel(5747).Text, obj3)];
+  const items1 = [closure_6(channel(5761).Text, obj3)];
   const obj5 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
   const intl2 = channel(1113).intl;
   obj5.accessibilityLabel = intl2.string(channel(1113).t.WAI6xu);
@@ -82,8 +82,8 @@ export function PinotMemberNoticeBar(channel) {
     const result = PinotAnalytics.trackPinotNoticeAction({ noticeType: "member_channel", channel }, "dismiss");
     onDismiss();
   };
-  obj5.children = closure_6(channel(7180).XSmallIcon, { size: "sm", color: "icon-muted" });
-  items1[1] = closure_6(channel(7106).PressableOpacity, obj5);
+  obj5.children = closure_6(channel(7195).XSmallIcon, { size: "sm", color: "icon-muted" });
+  items1[1] = closure_6(channel(7121).PressableOpacity, obj5);
   obj2.children = items1;
   obj.children = closure_7(View, obj2);
   return closure_6(View, obj);

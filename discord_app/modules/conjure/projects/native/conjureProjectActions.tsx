@@ -86,13 +86,13 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1113).intl;
-          await tmp3(12358).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3995).Owerd3));
+          await tmp3(12423).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3995).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1113).intl;
-            tmp3(5831).presentError(intl.string(v2(3995)["Q+l4Hv"]));
+            tmp3(5845).presentError(intl.string(v2(3995)["Q+l4Hv"]));
             c3 = 3;
-            tmp3(5831);
+            tmp3(5845);
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -134,7 +134,7 @@ function deleteConjureProject(project, removeTarget) {
     obj3.onConfirm = function onConfirm() {
       const result = ConjureActionCreators.deleteProjectInBackground(project.id, () => {
         const intl = project(1113).intl;
-        return project(5831).presentError(intl.string(closure_1_1(3995)["0XDHob"]));
+        return project(5845).presentError(intl.string(closure_1_1(3995)["0XDHob"]));
       });
     };
     require("AlertModal").showConfirmModal(obj3);
@@ -144,10 +144,14 @@ function deleteConjureProject(project, removeTarget) {
     openConjureRemoveAppAlertDefault(obj);
   }
 }
-const ConjureConnectionStore = fn(10980);
+const ConjureConnectionStore = fn(11028);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(6964);
-({ canPublishProject: closure_7, canRemixProject: closure_8, isProjectOwner: closure_9 } = ConjureProjectStore);
+const ConjureProjectStore = fn(6979);
+({
+  canPublishProject: metroImportDefault,
+  canRemixProject: closure_8,
+  isProjectOwner: closure_9,
+} = ConjureProjectStore);
 const StaticChannelRoute = fn(4997).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/conjureProjectActions.tsx");
@@ -172,7 +176,7 @@ export function importConjureProject(project, arg1) {
     return applyArgumentsResult;
   })(project, arg1).catch(() => {
     const intl = project(1113).intl;
-    project(5831).presentError(intl.string(closure_1_1(3995)["Q+l4Hv"]));
+    project(5845).presentError(intl.string(closure_1_1(3995)["Q+l4Hv"]));
   });
 }
 export function copyConjureProjectLink(project, guild_id) {
@@ -189,7 +193,7 @@ export function copyConjureProjectId(project) {
   ToastActionCreatorsDefault.open("CONJURE_PROJECT_ID_COPIED", obj3);
 }
 export function canUnpublishConjureUserApp(project) {
-  let result = React7(project);
+  let result = React6(project);
   if (result) {
     result = conjureRemoveApp.isPublishedConjureUserApp(
       project,
@@ -264,7 +268,7 @@ export function conjureProjectActions(project) {
         return applyArgumentsResult;
       })(project, closure_1_4).catch(() => {
         const intl = project(1113).intl;
-        project(5831).presentError(intl.string(closure_1_1(3995)["Q+l4Hv"]));
+        project(5845).presentError(intl.string(closure_1_1(3995)["Q+l4Hv"]));
       });
     };
     items.push(obj4);

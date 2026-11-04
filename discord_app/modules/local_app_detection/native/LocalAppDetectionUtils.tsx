@@ -135,7 +135,7 @@ let closure_8 = async function _detectLocalApps(arg0) {
   })();
 };
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, Consents: metroRequire } = Constants);
+({ AnalyticEvents: hasOwnProperty, Consents: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionUtils.tsx");
 

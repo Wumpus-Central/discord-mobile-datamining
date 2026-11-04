@@ -6,8 +6,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelAutocompleteConstants = fn(6156);
-({ extractGameMentionIds: hasOwnProperty, GAME_MENTION_RAW_RE_GLOBAL: metroRequire } = ChannelAutocompleteConstants);
+const ChannelAutocompleteConstants = fn(6171);
+({ extractGameMentionIds: hasOwnProperty, GAME_MENTION_RAW_RE_GLOBAL: closure_6 } = ChannelAutocompleteConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx");
 

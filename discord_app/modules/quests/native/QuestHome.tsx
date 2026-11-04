@@ -87,15 +87,15 @@ function QuestsSectionHeader(onLayout) {
   items = [,];
   ({ sectionHeader: arr[0], sectionHeaderWithTag: arr[1] } = closure_16());
   obj.style = items;
-  const obj2 = { variant: "text-lg/semibold", color: "text-strong", children: null };
+  const obj2 = { variant: "body-lg/semibold", color: "text-strong", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.JALI2K);
   obj.children = gesture(Text_Text.Text, obj2);
   return gesture(hasOwnProperty, obj);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ActivityIndicator: metroRequire, StyleSheet } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
+({ View: hasOwnProperty, ActivityIndicator: closure_6, StyleSheet } = get_ActivityIndicator);
+const QuestsExperimentLocations = fn(6916).QuestsExperimentLocations;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, UserSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);

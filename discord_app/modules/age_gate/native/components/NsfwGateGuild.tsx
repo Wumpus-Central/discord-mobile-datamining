@@ -8,7 +8,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7508).NsfwGateSource;
+const NsfwGateSource = fn(7524).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -74,34 +74,34 @@ export default function NsfwGateGuild(guildId) {
     AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
   let obj3 = { style: tmp.container, children: null };
-  const items1 = [closure_10(currentUser(7075), {}), , , , ,];
+  const items1 = [closure_10(currentUser(7090), {}), , , , ,];
   const obj4 = { source: null, style: null };
   const formatResult = intl3.format(guildId(1113).t.Z12LNW, obj);
-  obj4.source = currentUser(7511);
+  obj4.source = currentUser(7527);
   obj4.style = tmp.image;
-  items1[1] = closure_10(currentUser(5837), obj4);
-  items1[2] = closure_10(guildId(5747).Heading, {
+  items1[1] = closure_10(currentUser(5851), obj4);
+  items1[2] = closure_10(guildId(5761).Heading, {
     style: tmp.header,
     variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: stringResult,
   });
-  items1[3] = closure_10(guildId(5747).Text, {
+  items1[3] = closure_10(guildId(5761).Text, {
     style: tmp.description,
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     color: "text-default",
     children: stringResult1,
   });
-  items1[4] = closure_10(guildId(5747).Text, {
+  items1[4] = closure_10(guildId(5761).Text, {
     style: tmp.description,
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     color: "text-default",
     children: formatResult,
   });
   const obj8 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1113).intl;
   obj8.text = intl4.string(guildId(1113).t.gRqiWV);
-  items1[5] = closure_10(guildId(5754).Button, obj8);
+  items1[5] = closure_10(guildId(5768).Button, obj8);
   obj3.children = items1;
   return closure_11(View, obj3);
 }

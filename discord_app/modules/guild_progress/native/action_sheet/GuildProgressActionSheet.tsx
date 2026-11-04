@@ -41,7 +41,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(14173);
+const GuildProgressConstants = fn(14259);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1072);
 ({
@@ -94,14 +94,14 @@ export default function GuildProgressActionSheet(guild) {
             return obj3;
           } else {
             let base64;
-            tmp5(9202).init(View);
-            const obj6 = tmp5(9202);
-            tmp2(14178).hideActionSheet(id.id);
-            const obj7 = tmp2(14178);
+            tmp5(9219).init(View);
+            const obj6 = tmp5(9219);
+            tmp2(14264).hideActionSheet(id.id);
+            const obj7 = tmp2(14264);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(8344).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(8360).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -114,8 +114,8 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            tmp5(9202).updateIcon(closure_129_5, base64);
-            const obj = tmp5(9202);
+            tmp5(9219).updateIcon(closure_129_5, base64);
+            const obj = tmp5(9219);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -268,7 +268,7 @@ export default function GuildProgressActionSheet(guild) {
     stepsHook(children, arg1) {
       return closure_1_14(
         guild(numFinished[29]).Text,
-        { variant: "text-sm/medium", color: "mobile-text-heading-primary", children },
+        { variant: "body-sm/medium", color: "mobile-text-heading-primary", children },
         arg1,
       );
     },
@@ -304,7 +304,7 @@ export default function GuildProgressActionSheet(guild) {
     let tmp9Result = closure_14(tmp2(tmp3[30]).Button, obj16);
   } else {
     const obj17 = { accessibilityRole: "button", onPress: handleDismissGuildProgress, children: null };
-    const obj18 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj18 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl7 = tmp2(tmp3[18]).intl;
     obj18.children = intl7.string(tmp2(tmp3[18]).t["9E36wf"]);
     obj17.children = closure_14(tmp2(tmp3[29]).Text, obj18);

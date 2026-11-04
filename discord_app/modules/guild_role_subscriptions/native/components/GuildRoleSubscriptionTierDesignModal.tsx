@@ -23,18 +23,18 @@ function MemberPreviews(role) {
   ({ member: arr[0], memberLight: arr[1] } = tmp);
   items[2] = { backgroundColor: token1 };
   obj6.style = items;
-  const items1 = [React7(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj6)];
+  const items1 = [React6(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj6)];
   const obj7 = { style: null, textStyle: { color: token2 }, role };
   const items2 = [, ,];
   ({ member: arr3[0], memberDark: arr3[1] } = tmp);
   items2[2] = { backgroundColor: token };
   obj7.style = items2;
-  items1[1] = React7(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj7);
+  items1[1] = React6(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj7);
   obj5.children = items1;
   return closure_1_10(View, obj5);
 }
 function Content() {
-  const tmp3 = role(20100)();
+  const tmp3 = role(20216)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -83,22 +83,22 @@ function Content() {
   obj9.imageUploadSize = UPLOAD_SMALL_SIZE;
   obj9.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
   obj9.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "y" });
+    return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
   };
   obj9.disabled = roleSubscriptionSettingsDisabled;
-  items3[1] = closure_9(role(20101), obj9);
+  items3[1] = closure_9(role(20217), obj9);
   obj7.children = items3;
   items2[1] = closure_10(View, obj7);
   const obj10 = { title: null, hasIcons: true, children: null };
   const intl3 = tmp4(1113).intl;
   obj10.title = intl3.string(require("util").t["W7hH+z"]);
-  obj10.children = closure_9(role(20136), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  obj10.children = closure_9(role(20252), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   items2[2] = closure_9(require("TableRowGroup").TableRowGroup, obj10);
   obj6.children = items2;
   return closure_10(View, obj6);
 }
 const View = fn(17).View;
-const constants = fn(17339).GuildRoleSubscriptionsTierScenes;
+const constants = fn(17430).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -129,9 +129,9 @@ export default function GuildRoleSubscriptionTierDesignModal(arg0) {
   obj.description = intl2.string(util.t.YAUjGn);
   obj.nextStep = constants.CONFIRMATION;
   const merged = Object.assign(arg0);
-  obj.children = React7(Content, {});
-  return React7(GuildRoleSubscriptionTierEditStepDefault, obj);
+  obj.children = React6(Content, {});
+  return React6(GuildRoleSubscriptionTierEditStepDefault, obj);
 }
 export function GuildRoleSubscriptionTierDesignTab() {
-  return React7(Content, {});
+  return React6(Content, {});
 }

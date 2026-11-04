@@ -1,6 +1,6 @@
 // discord_app/modules/zoom_layout/ZoomLayoutGesture.native.tsx
 import _modDef1652 from "../../../_runtime/metro/01652__.js";
-import LegacyBaseButton from "../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../_runtime/05428_LegacyBaseButton.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -30,8 +30,8 @@ let items2 = [
     code: "(function releaseTranslation_ZoomLayoutGestureNativeTsx3(translation,bound,velocity){let[MAX_PAN_VELOCITY,accessibilityPreferencesSharedValue,withSpring,SPRING_CONFIG,MAX_FLING_OVERSHOOT,withDecay,PAN_DECELERATION,_worklet_10161841114284_init_data]=this.__closure;const position=translation.get();const clamped=Math.max(-bound,Math.min(bound,position));const releaseVelocity=Math.max(-MAX_PAN_VELOCITY,Math.min(MAX_PAN_VELOCITY,velocity));if(accessibilityPreferencesSharedValue.get().reduceMotion){translation.set(clamped);}else if(position!==clamped||bound===0){translation.set(withSpring(clamped,SPRING_CONFIG));}else{const overshoot=Math.min(MAX_FLING_OVERSHOOT,Math.abs(releaseVelocity)*0.02);translation.set(withDecay({velocity:releaseVelocity,deceleration:PAN_DECELERATION,clamp:[-bound-overshoot,bound+overshoot]},function releaseTranslation_ZoomLayoutGestureNativeTsx3([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG]){const ZoomLayoutGestureNativeTsx2=function(finished){if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));};ZoomLayoutGestureNativeTsx2.__closure=[bound,translation,withSpring,SPRING_CONFIG];ZoomLayoutGestureNativeTsx2.__workletHash=10161841114284;ZoomLayoutGestureNativeTsx2.__initData=_worklet_10161841114284_init_data;return ZoomLayoutGestureNativeTsx2;}([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG])));}})",
   },
   4000,
-  fn(5379).accessibilityPreferencesSharedValue,
-  fn(5757).withSpring,
+  fn(5380).accessibilityPreferencesSharedValue,
+  fn(5771).withSpring,
   deceleration,
   48,
   fn(1652).withDecay,

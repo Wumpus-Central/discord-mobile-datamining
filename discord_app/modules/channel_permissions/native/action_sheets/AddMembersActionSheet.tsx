@@ -57,7 +57,7 @@ class AddMembersBody {
       tmp2 = closure_3;
       permission = setPendingAdditions(closure_3[14]).NONE;
     }
-    inActionSheet = global.inActionSheet;
+    emptyStateInActionSheet = global.inActionSheet;
     merged = Object.assign(
       global,
       Object.assign({
@@ -101,7 +101,7 @@ class AddMembersBody {
     closure_7 = tmp7[1];
     tmp8 = pendingAdditions;
     tmp9 = closure_3;
-    obj1 = { isKeyboardAwareOnAndroid: !inActionSheet };
+    obj1 = { isKeyboardAwareOnAndroid: !emptyStateInActionSheet };
     tmp10 = setPendingAdditions;
     obj3 = setPendingAdditions(closure_3[14]);
     canEveryoneRoleResult = obj3.canEveryoneRole(Permissions.ADMINISTRATOR, guild);
@@ -194,7 +194,7 @@ class AddMembersBody {
     intl4 = tmp12(tmp9[20]).intl;
     obj24.title = intl4.string(tmp12(tmp9[20]).t["9Oq93m"]);
     obj24.data = membersRows;
-    arr16 = items9.push(obj24);
+    arr17 = items9.push(obj24);
     values = Object.values(pendingAdditions);
     mapped = values.map((display) => {
       const obj = {};
@@ -202,7 +202,7 @@ class AddMembersBody {
       obj.id = display.row.id;
       return obj;
     });
-    if (inActionSheet) {
+    if (emptyStateInActionSheet) {
       BottomSheetScrollView = tmp12(tmp9[24]).BottomSheetScrollView;
     } else {
       BottomSheetScrollView = c9;
@@ -210,7 +210,7 @@ class AddMembersBody {
     tmp12Result = tmp12(tmp9[25]);
     tmp34 = jsx;
     obj25 = { style: tmp4.inputContainer, children: null };
-    tmp31 = inActionSheet ? tmp12Result.BottomSheetFlashList : tmp12Result.FlashList;
+    tmp31 = emptyStateInActionSheet ? tmp12Result.BottomSheetFlashList : tmp12Result.FlashList;
     tmp32 = jsxs;
     tmp33 = Fragment;
     tmp35 = closure_8;
@@ -261,7 +261,14 @@ class AddMembersBody {
           merged1 = Object.assign(merged);
           obj30 = { Illustration: null, style: null, bodyStyle: null, body: null };
           obj30.Illustration = tmp12(tmp9[29]).NoResultsAlt;
-          ({ emptyState: obj19.style, emptyStateText: obj19.bodyStyle } = tmp4);
+          items11 = [,];
+          items11[0] = tmp4.emptyState;
+          if (emptyStateInActionSheet) {
+            emptyStateInActionSheet = tmp4.emptyStateInActionSheet;
+          }
+          items11[1] = emptyStateInActionSheet;
+          obj30.style = items11;
+          obj30.bodyStyle = tmp4.emptyStateText;
           intl8 = tmp12(tmp9[20]).intl;
           obj31 = { query: null };
           obj31.query = str;
@@ -293,7 +300,7 @@ class AddMembersBody {
           style: null,
           maxFontSizeMultiplier: 2,
           accessibilityRole: "header",
-          variant: "text-sm/semibold",
+          variant: "body-sm/semibold",
           color: "interactive-text-default",
           children: null,
         };
@@ -370,7 +377,7 @@ class AddMembersBody {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(8071);
+const ChannelPermissionsConstants = fn(8087);
 ({ RowType: closure_14, MEMBER_REQUEST_COUNT: closure_15 } = ChannelPermissionsConstants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
@@ -386,6 +393,7 @@ let obj2 = {
   tagRoleColor: { height: 12, width: 12, borderRadius: 6 },
   tagAvatar: null,
   emptyState: null,
+  emptyStateInActionSheet: null,
   emptyStateText: null,
   sectionRowWrapper: null,
   adminWarning: null,
@@ -398,6 +406,7 @@ let obj3 = {
   paddingVertical: nativeDefault.space.PX_12,
 };
 obj2.emptyState = { paddingTop: nativeDefault.space.PX_16 };
+obj2.emptyStateInActionSheet = { backgroundColor: "transparent" };
 let obj4 = { paddingTop: nativeDefault.space.PX_16 };
 obj2.emptyStateText = { color: nativeDefault.colors.TEXT_DEFAULT };
 let obj5 = { color: nativeDefault.colors.TEXT_DEFAULT };
@@ -425,16 +434,16 @@ export default function AddMembersActionSheet(channel) {
       if (tmp) {
         if (row.rowType === constants.ROLE) {
           closure_2 = closure_2 + 1;
-          closure_1_0.push(channel(6166).permissionOverwriteForRole(row.id, closure_0.type));
-          const obj = channel(6166);
+          closure_1_0.push(channel(6181).permissionOverwriteForRole(row.id, closure_0.type));
+          const obj = channel(6181);
         } else if (row.rowType === tmp2.MEMBER) {
           closure_1 = closure_1 + 1;
-          closure_1_0.push(channel(6166).permissionOverwriteForUser(row.id, closure_0.type));
-          const obj2 = channel(6166);
+          closure_1_0.push(channel(6181).permissionOverwriteForUser(row.id, closure_0.type));
+          const obj2 = channel(6181);
         }
       }
     });
-    await closure_0(9160).savePermissionUpdates(channel.id, items);
+    await closure_0(9177).savePermissionUpdates(channel.id, items);
     if (1 === tmp7) {
       dependencyMap = 0;
       c5 = 3;
@@ -442,11 +451,11 @@ export default function AddMembersActionSheet(channel) {
       c5 = 3;
       throw value;
     } else if (arg0 !== 2) {
-      const result = channel(5831).memberOrRoleAddedToast(closure_128_2, closure_128_1);
-      channel(5831);
-      tmp3(5381).hideActionSheet();
+      const result = channel(5845).memberOrRoleAddedToast(closure_128_2, closure_128_1);
+      channel(5845);
+      tmp3(5382).hideActionSheet();
       dependencyMap = 0;
-      tmp3(5381);
+      tmp3(5382);
     }
     return value;
   };
@@ -461,7 +470,7 @@ export default function AddMembersActionSheet(channel) {
     }
     return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(5772)(channel, true);
+  let str = pendingAdditions(5786)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -486,7 +495,7 @@ export default function AddMembersActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = closure_17(tmp12, obj7);
-      obj4.header = closure_17(tmp4(7441).BottomSheetTitleHeader, obj2);
+      obj4.header = closure_17(tmp4(7457).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = {
         channel,
@@ -498,7 +507,7 @@ export default function AddMembersActionSheet(channel) {
       };
       obj5.children = closure_17(AddMembersBody, obj6);
       obj4.children = closure_17(closure_8, obj5);
-      return closure_17(tmp4(5395).BottomSheet, obj4);
+      return closure_17(tmp4(5396).BottomSheet, obj4);
     }
     obj7 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1113).intl;

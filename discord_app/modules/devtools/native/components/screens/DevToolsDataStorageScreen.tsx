@@ -16,10 +16,10 @@ require = fn;
 function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(7441).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(7457).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(7488).ActionSheetRow, {
+    children: jsx(store(7504).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -32,9 +32,9 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   };
-  obj.children = jsx(store(7488).ActionSheetRow.Group, {
+  obj.children = jsx(store(7504).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7488).ActionSheetRow, {
+    children: jsx(store(7504).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -47,8 +47,8 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   });
-  return jsx(store(7486).ActionSheet, {
-    header: jsx(store(7441).BottomSheetTitleHeader, { title: store.getName() }),
+  return jsx(store(7502).ActionSheet, {
+    header: jsx(store(7457).BottomSheetTitleHeader, { title: store.getName() }),
     children: null,
   });
 }
@@ -255,7 +255,7 @@ export default function DevToolsDataStorageScreen() {
     }
   }, items);
   const callback2 = noop.useCallback((arg0) => {
-    const obj = { style: closure_0.sectionHeader, variant: "text-sm/semibold", color: "text-default", children: null };
+    const obj = { style: closure_0.sectionHeader, variant: "body-sm/semibold", color: "text-default", children: null };
     let str = "Database Controls";
     if (constants.DATABASE_CONTROLS !== arg0) {
       str = "Database (Current)";
@@ -268,7 +268,7 @@ export default function DevToolsDataStorageScreen() {
     obj.children = str;
     return jsx(Text_Text.Text, {
       style: closure_0.sectionHeader,
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: "text-default",
       children: null,
     });

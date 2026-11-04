@@ -9,19 +9,19 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const _modDef1652 = tmp(1652);
-const isVoiceEmbeddedActivityDefault = tmp(5798);
-const EmbeddedActivityViewDefault = tmp(11931);
-const FrameRenderTargetDefault = tmp(12386);
-const getActivityContainerPIPStylesSpecDefault = tmp(19293);
+const isVoiceEmbeddedActivityDefault = tmp(5812);
+const EmbeddedActivityViewDefault = tmp(11990);
+const FrameRenderTargetDefault = tmp(12451);
+const getActivityContainerPIPStylesSpecDefault = tmp(19397);
 const require = fn;
-const ActivityPanelModes = fn(5777).ActivityPanelModes;
-const FramesConstants = fn(6967);
+const ActivityPanelModes = fn(5791).ActivityPanelModes;
+const FramesConstants = fn(6982);
 ({
   asLaunched: closure_8,
   FrameLayoutModes: closure_9,
   getPipOrientationLockStateForFrame: closure_10,
 } = FramesConstants);
-const ActivityLayoutMode = fn(11831).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11888).ActivityLayoutMode;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_13 = createStyles.createStyles({

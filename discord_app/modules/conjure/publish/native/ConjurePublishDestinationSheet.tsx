@@ -56,7 +56,7 @@ function PublishDestinationSheet(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const ConjurePublishDestinationSheet = "ConjurePublishDestinationSheet";
 const createStyles = fn(5141);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };

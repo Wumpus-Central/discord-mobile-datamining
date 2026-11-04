@@ -83,10 +83,11 @@ export function useOrbCheckoutRedemption(skuId) {
   skuId = skuId.skuId;
   const loadId = skuId.loadId;
   const onCheckoutSuccess = skuId.onCheckoutSuccess;
-  ({ onSignFailure, order, onSetIsSubmitting } = skuId);
+  ({ useOrdersAPI, onSignFailure, order, onSetIsSubmitting } = skuId);
   const redeemVirtualCurrency1 = useRedeemVirtualCurrency.useRedeemVirtualCurrency({
     skuId,
     loadId,
+    useOrdersAPI,
     order,
     onSignFailure,
     onSetIsSubmitting,

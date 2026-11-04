@@ -31,18 +31,18 @@ function Placeholder(arg0) {
     )[0],
   ];
   obj3.style = items;
-  obj2.label = React5(View, obj3);
-  obj2.icon = React5(View, { style: fastestListTableRowPlaceholderStyles.placeholderAvatar });
-  return React5(TableRow.TableRow, obj2);
+  obj2.label = metroImportDefault(View, obj3);
+  obj2.icon = metroImportDefault(View, { style: fastestListTableRowPlaceholderStyles.placeholderAvatar });
+  return metroImportDefault(TableRow.TableRow, obj2);
 }
 function PlaceholderSection() {
-  return React5(View, {});
+  return metroImportDefault(View, {});
 }
 const View = fn(17).View;
-const UsersFastListConstants = fn(10864);
+const UsersFastListConstants = fn(10912);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   sectionHeader: { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING },
@@ -186,13 +186,13 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   if (null == title) {
     if (null == actionTitle) {
       const obj4 = { style: tmp.emptySection };
-      return React5(View, obj4);
+      return metroImportDefault(View, obj4);
     }
   }
   const obj5 = {
     maxFontSizeMultiplier: 2,
     accessibilityRole: "header",
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "text-subtle",
     style: memo,
     children: null,
@@ -202,18 +202,18 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   if (null != badge) {
     const obj6 = { style: tmp.badgeWrapper, children: null };
     const obj7 = { style: tmp.badge, value: badge };
-    obj6.children = React5(native.Badge, obj7);
-    tmp20 = React5(View, obj6);
+    obj6.children = metroImportDefault(native.Badge, obj7);
+    tmp20 = metroImportDefault(View, obj6);
   }
   items9[1] = tmp20;
   obj5.children = items9;
-  const tmp19Result = React6(Text_Text.Text, obj5);
+  const tmp19Result = React5(Text_Text.Text, obj5);
   let tmp19Result4 = tmp19Result;
   if (null != titleLeading) {
     const obj8 = { style: tmp.titleRow, children: null };
     const items10 = [titleLeading, tmp19Result];
     obj8.children = items10;
-    tmp19Result4 = React6(View, obj8);
+    tmp19Result4 = React5(View, obj8);
   }
   let tmp26 = tmp19Result4;
   if (null != onTitlePress) {
@@ -223,20 +223,20 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
       onPress: onTitlePress,
       children: tmp19Result4,
     };
-    tmp26 = React5(Pressables.PressableOpacity, obj9);
+    tmp26 = metroImportDefault(Pressables.PressableOpacity, obj9);
   }
   const obj10 = { style: memo1, children: null };
   const items11 = [tmp26];
   let tmp29 = null;
   if (null != actionTitle) {
     const obj11 = { onPress: action, children: null };
-    const obj12 = { variant: "text-sm/semibold", color: "text-brand", children: actionTitle };
-    obj11.children = React5(Text_Text.Text, obj12);
-    tmp29 = React5(Pressables.PressableOpacity, obj11);
+    const obj12 = { variant: "body-sm/semibold", color: "text-brand", children: actionTitle };
+    obj11.children = metroImportDefault(Text_Text.Text, obj12);
+    tmp29 = metroImportDefault(Pressables.PressableOpacity, obj11);
   }
   items11[1] = tmp29;
   obj10.children = items11;
-  const tmp19Result5 = React6(View, obj10);
+  const tmp19Result5 = React5(View, obj10);
   let tmp19Result6 = tmp19Result5;
   if (!disableStickySections) {
     const obj13 = { style: memo2, children: null };
@@ -244,13 +244,13 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
     if (!disableThemedGradient) {
       const obj14 = {
         style: animatedStyle1,
-        children: React5(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: true }),
+        children: metroImportDefault(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: true }),
       };
-      tmp34 = React5(_modDef1652.View, obj14);
+      tmp34 = metroImportDefault(_modDef1652.View, obj14);
     }
     const items12 = [tmp34, tmp19Result5];
     obj13.children = items12;
-    tmp19Result6 = React6(_modDef1652.View, obj13);
+    tmp19Result6 = React5(_modDef1652.View, obj13);
   }
   return tmp19Result6;
 });
@@ -297,7 +297,7 @@ export const UsersFastList = function UsersFastListInner(onSelectUser) {
       type = element.type;
     }
     if ("placeholder" === type) {
-      return React5(PlaceholderSection, {});
+      return metroImportDefault(PlaceholderSection, {});
     } else if ("section" === type) {
       const obj = {};
       const merged = Object.assign(element.props);
@@ -305,7 +305,7 @@ export const UsersFastList = function UsersFastListInner(onSelectUser) {
       obj.disableThemedGradient = disableThemedGradient;
       obj.scrollPosValue = scrollPosValue;
       obj.stickyAt = stickyAt;
-      return React5(closure_16, obj);
+      return metroImportDefault(closure_16, obj);
     } else {
       return null;
     }
@@ -320,22 +320,22 @@ export const UsersFastList = function UsersFastListInner(onSelectUser) {
     if ("user" === type) {
       const obj2 = {};
       const merged = Object.assign(element.props);
-      return React5(UserRowDefault, obj2);
+      return metroImportDefault(UserRowDefault, obj2);
     } else if ("placeholder" === type) {
       const obj3 = {};
       const merged1 = Object.assign(element.props);
-      return React5(Placeholder, obj3);
+      return metroImportDefault(Placeholder, obj3);
     } else if ("gdm" === type) {
       const obj4 = {};
       const merged2 = Object.assign(element.props);
-      return React5(GroupDMRowDefault, obj4);
+      return metroImportDefault(GroupDMRowDefault, obj4);
     } else if ("channel" === type) {
       const obj5 = {};
       const merged3 = Object.assign(element.props);
-      return React5(ChannelRowDefault, obj5);
+      return metroImportDefault(ChannelRowDefault, obj5);
     } else if ("custom" === type) {
       const obj = { children: element.component() };
-      return React5(React7, obj);
+      return metroImportDefault(React6, obj);
     } else {
       return null;
     }

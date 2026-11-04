@@ -3,7 +3,7 @@ import util from "../../../intl/index.native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import _modDef9947 from "../../../../_runtime/metro/09947__.js";
+import _modDef9965 from "../../../../_runtime/metro/09965__.js";
 import useYouBarSettingsSafeArea from "../../main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -38,7 +38,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj4.paddingTop = youBarSettingsCustomHeaderPaddingTop;
   obj3.style = obj4;
   const obj5 = { style: tmp.backButton, children: null };
-  const obj6 = { source: _modDef9947, color: buttonColor, accessibilityLabel: null, onPress: null };
+  const obj6 = { source: _modDef9965, color: buttonColor, accessibilityLabel: null, onPress: null };
   const intl = util.intl;
   obj6.accessibilityLabel = intl.string(util.t["13/7kX"]);
   obj6.onPress = function onPress() {

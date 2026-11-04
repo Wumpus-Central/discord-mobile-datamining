@@ -14,9 +14,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(18132).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(18133);
-({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
+let closure_6 = fn(18229).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(18230);
+({ RegisterTransitionSteps: metroImportDefault, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -45,7 +45,7 @@ export default function CaptchaModal(arg0) {
     rqtoken: closure_6,
     userflow: closure_7,
   } = arg0);
-  const tmp2 = closure_11(onReject(7237)());
+  const tmp2 = closure_11(onReject(7257)());
   const navigation = Link.useNavigation();
   items = [navigation];
   const memo = noop.useMemo(() => {
@@ -66,7 +66,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  closure_9 = onReject(19529)({ onReject, analyticsType: memo });
+  closure_9 = onReject(19633)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);
@@ -79,7 +79,7 @@ export default function CaptchaModal(arg0) {
   const items2 = [
     closure_9(Text_Text.Text, { variant: "heading-xl/semibold", accessibilityRole: "header", children: headerText }),
   ];
-  let obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
+  let obj3 = { variant: "body-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {
     const intl2 = util.intl;
     bodyText = intl2.string(util.t["/CidxO"]);

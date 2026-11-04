@@ -20,9 +20,9 @@ import CheckpointStore from "../../CheckpointStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6186).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   stat: { maxWidth: 144, alignItems: "flex-start" },
@@ -215,13 +215,13 @@ export default function CheckpointCustomizationStat(customizationOption) {
     const obj12 = { style: tmp.label, children: null };
     const obj13 = { size: "xs", color: CHECKPOINT_PRIMARY };
     const items2 = [timestampProducer(Icon, obj13)];
-    const obj14 = { variant: "heading-sm/semibold", style: tmp.labelText, children: null };
+    const obj14 = { variant: "heading-xs/semibold", style: tmp.labelText, children: null };
     const tmp2Result = CheckpointStatsUtils;
     obj14.children = title.toLocaleUpperCase();
     items2[1] = timestampProducer(CheckpointTextDefault, obj14);
     obj12.children = items2;
-    items1[2] = React5(View, obj12);
+    items1[2] = metroImportDefault(View, obj12);
     obj9.children = items1;
-    return React5(View, obj9);
+    return metroImportDefault(View, obj9);
   }
 }

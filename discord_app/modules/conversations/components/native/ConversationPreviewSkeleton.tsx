@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(5775).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_5 = fn(5789).MOBILE_PREVIEW_MESSAGE_COUNT;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   row: {
@@ -89,10 +89,10 @@ export default function ConversationPreviewSkeleton() {
   let obj3 = {
     style: animatedStyle,
     "aria-hidden": true,
-    children: Array.from({ length: closure_5 }, (arg0, arg1) => {
+    children: Array.from({ length: closure_5 }, (arg0, id) => {
       items = [_undefined.row];
       const obj = { style: items, children: null };
-      items[1] = arg1 > 0 && _undefined.rowSpacing;
+      items[1] = id > 0 && _undefined.rowSpacing;
       const items1 = [timestampProducer(View, { style: _undefined.avatar })];
       const obj3 = { style: _undefined.lines, children: null };
       const items2 = [
@@ -100,9 +100,9 @@ export default function ConversationPreviewSkeleton() {
         timestampProducer(View, { style: _undefined.lineText }),
       ];
       obj3.children = items2;
-      items1[1] = React5(View, obj3);
+      items1[1] = metroImportDefault(View, obj3);
       obj.children = items1;
-      return React5(View, obj, arg1);
+      return metroImportDefault(View, obj, id);
     }),
   };
   return closure_6(sharedValue(1652).View, obj3);

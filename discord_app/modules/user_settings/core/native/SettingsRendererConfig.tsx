@@ -148,6 +148,8 @@ import SystemNotificationsSettingDefault from "../../defs/native/SystemNotificat
 import ReactionNotificationsSettingsDefault from "../../defs/native/ReactionNotificationsSettings.tsx";
 import CustomStatusNotificationSettingsDefault from "../../defs/native/CustomStatusNotificationSettings.tsx";
 import IOSNativePhoneIntegrationSetting from "../../defs/native/IOSNativePhoneIntegrationSetting.tsx";
+import EmailNotificationsSetting from "../../defs/native/EmailNotificationsSetting.tsx";
+import EmailCategoryNotificationSettings from "../../defs/native/EmailCategoryNotificationSettings.tsx";
 import AndroidMessageNotificationsSetting from "../../defs/native/AndroidMessageNotificationsSetting.tsx";
 import AndroidNotificationLightsSetting from "../../defs/native/AndroidNotificationLightsSetting.tsx";
 import AndroidNotificationVibrationsSetting from "../../defs/native/AndroidNotificationVibrationsSetting.tsx";
@@ -275,6 +277,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const InAppNotificationsSettingDefault = InAppNotificationsSetting;
 const IOSNativePhoneIntegrationSettingDefault = IOSNativePhoneIntegrationSetting;
+const EmailNotificationsSettingDefault = EmailNotificationsSetting;
 const AndroidMessageNotificationsSettingDefault = AndroidMessageNotificationsSetting;
 const AndroidNotificationLightsSettingDefault = AndroidNotificationLightsSetting;
 const AndroidNotificationVibrationsSettingDefault = AndroidNotificationVibrationsSetting;
@@ -433,6 +436,13 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   REACTION_NOTIFICATIONS,
   CUSTOM_STATUS_NOTIFICATIONS,
   IOS_NATIVE_PHONE_INTEGRATION,
+  EMAIL_NOTIFICATIONS,
+  EMAIL_COMMUNICATION,
+  EMAIL_SOCIAL,
+  EMAIL_UPDATES_AND_ANNOUNCEMENTS,
+  EMAIL_TIPS,
+  EMAIL_RECOMMENDATIONS_AND_EVENTS,
+  EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING,
   ANDROID_MESSAGE_NOTIFICATIONS,
   ANDROID_NOTIFICATION_LIGHTS,
   ANDROID_NOTIFICATION_VIBRATIONS,
@@ -445,6 +455,13 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS,
   REDESIGN_ANDROID_NOTIFICATION_SOUNDS,
   REDESIGN_IOS_NATIVE_PHONE_INTEGRATION,
+  REDESIGN_EMAIL_NOTIFICATIONS,
+  REDESIGN_EMAIL_COMMUNICATION,
+  REDESIGN_EMAIL_SOCIAL,
+  REDESIGN_EMAIL_UPDATES_AND_ANNOUNCEMENTS,
+  REDESIGN_EMAIL_TIPS,
+  REDESIGN_EMAIL_RECOMMENDATIONS_AND_EVENTS,
+  REDESIGN_EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING,
   FRIEND_STREAM_NOTIFICATIONS,
   FRIEND_ANNIVERSARY_NOTIFICATIONS,
   VOICE_ACTIVITY_NOTIFICATIONS,
@@ -547,8 +564,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_DIRECT_MESSAGES,
   PARENTAL_CONTROLS_MESSAGE_REQUESTS,
   PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE,
-  PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS,
-  PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -700,6 +715,13 @@ const frozen = Object.freeze({
   [REACTION_NOTIFICATIONS]: ReactionNotificationsSettingsDefault,
   [CUSTOM_STATUS_NOTIFICATIONS]: CustomStatusNotificationSettingsDefault,
   [IOS_NATIVE_PHONE_INTEGRATION]: IOSNativePhoneIntegrationSettingDefault,
+  [EMAIL_NOTIFICATIONS]: EmailNotificationsSettingDefault,
+  [EMAIL_COMMUNICATION]: EmailCategoryNotificationSettings.EmailSettings.communication,
+  [EMAIL_SOCIAL]: EmailCategoryNotificationSettings.EmailSettings.social,
+  [EMAIL_UPDATES_AND_ANNOUNCEMENTS]: EmailCategoryNotificationSettings.EmailSettings.updatesAndAnnouncements,
+  [EMAIL_TIPS]: EmailCategoryNotificationSettings.EmailSettings.tips,
+  [EMAIL_RECOMMENDATIONS_AND_EVENTS]: EmailCategoryNotificationSettings.EmailSettings.recommendationsAndEvents,
+  [EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING]: EmailCategoryNotificationSettings.EmailSettings.unsubscribeFromAllMarketing,
   [ANDROID_MESSAGE_NOTIFICATIONS]: AndroidMessageNotificationsSettingDefault,
   [ANDROID_NOTIFICATION_LIGHTS]: AndroidNotificationLightsSettingDefault,
   [ANDROID_NOTIFICATION_VIBRATIONS]: AndroidNotificationVibrationsSettingDefault,
@@ -714,6 +736,16 @@ const frozen = Object.freeze({
     AndroidNotificationVibrationsSetting.RedesignAndroidNotificationVibrationsSetting,
   [REDESIGN_ANDROID_NOTIFICATION_SOUNDS]: AndroidNotificationSoundsSetting.RedesignAndroidNotificationSoundsSetting,
   [REDESIGN_IOS_NATIVE_PHONE_INTEGRATION]: IOSNativePhoneIntegrationSetting.RedesignIOSNativePhoneIntegrationSetting,
+  [REDESIGN_EMAIL_NOTIFICATIONS]: EmailNotificationsSetting.RedesignEmailNotificationsSetting,
+  [REDESIGN_EMAIL_COMMUNICATION]: EmailCategoryNotificationSettings.RedesignEmailSettings.communication,
+  [REDESIGN_EMAIL_SOCIAL]: EmailCategoryNotificationSettings.RedesignEmailSettings.social,
+  [REDESIGN_EMAIL_UPDATES_AND_ANNOUNCEMENTS]:
+    EmailCategoryNotificationSettings.RedesignEmailSettings.updatesAndAnnouncements,
+  [REDESIGN_EMAIL_TIPS]: EmailCategoryNotificationSettings.RedesignEmailSettings.tips,
+  [REDESIGN_EMAIL_RECOMMENDATIONS_AND_EVENTS]:
+    EmailCategoryNotificationSettings.RedesignEmailSettings.recommendationsAndEvents,
+  [REDESIGN_EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING]:
+    EmailCategoryNotificationSettings.RedesignEmailSettings.unsubscribeFromAllMarketing,
   [FRIEND_STREAM_NOTIFICATIONS]: FriendStreamNotificationsSettingDefault,
   [FRIEND_ANNIVERSARY_NOTIFICATIONS]: FriendAnniversaryNotificationSettingDefault,
   [VOICE_ACTIVITY_NOTIFICATIONS]: VoiceActivityNotificationSettingDefault,
@@ -816,8 +848,10 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_DIRECT_MESSAGES]: ParentalControlsDirectMessagesDefault,
   [PARENTAL_CONTROLS_MESSAGE_REQUESTS]: ParentalControlsMessageRequestsDefault,
   [PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE]: ParentalControlsFriendRequestsEveryoneSettingDefault,
-  [PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]: ParentalControlsFriendRequestsMutualFriendsSettingDefault,
-  [PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS]: ParentalControlsFriendRequestsMutualGuildsSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]:
+    ParentalControlsFriendRequestsMutualFriendsSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS]:
+    ParentalControlsFriendRequestsMutualGuildsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS]:
     ParentalControlsExplicitMediaFiltersFriendsDMsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS]:

@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/roles/native/RoleName.tsx");
 export default function RoleName(dotBackground) {
   ({ role, textVariant } = dotBackground);
   if (textVariant === undefined) {
-    textVariant = "text-md/medium";
+    textVariant = "body-md/medium";
   }
   let flag = dotBackground.dotBackground;
   if (flag === undefined) {

@@ -12,10 +12,10 @@ get_ActivityIndicator = fn(17);
   Pressable: c3,
   StyleSheet: closure_4,
   TouchableWithoutFeedback: hasOwnProperty,
-  View: metroRequire,
+  View: closure_6,
 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
   if ("floating" === arg0) {
@@ -77,9 +77,9 @@ export function ActionSheetHeaderBar(accessibilityLabel) {
   const items1 = [tmp3.indicator, tabStyle];
   obj5.style = items1;
   const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
-  obj4.children = React5(timestampProducer, obj5);
-  obj3.children = React5(timestampProducer, obj4);
-  const tmp6 = React5(hasOwnProperty, obj3);
+  obj4.children = metroImportDefault(timestampProducer, obj5);
+  obj3.children = metroImportDefault(timestampProducer, obj4);
+  const tmp6 = metroImportDefault(hasOwnProperty, obj3);
   let tmp7 = tmp6;
   if (isScreenReaderEnabled) {
     const obj6 = { children: null };
@@ -90,9 +90,9 @@ export function ActionSheetHeaderBar(accessibilityLabel) {
       accessibilityRole: "button",
       onPress,
     };
-    const items2 = [React5(React3, obj7), tmp6];
+    const items2 = [metroImportDefault(React3, obj7), tmp6];
     obj6.children = items2;
-    tmp7 = React7(React6, obj6);
+    tmp7 = React6(React5, obj6);
   }
   return tmp7;
 }

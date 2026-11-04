@@ -6,9 +6,9 @@ import CollectiblesItemType from "../../../../discord_common/js/shared/shared-co
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import _mod7131 from "../../../../_runtime/metro/07131__.js";
+import _mod7146 from "../../../../_runtime/metro/07146__.js";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import tinycolorDefault from "../../../../_runtime/07854_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07870_tinycolor.js";
 import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators.tsx";
 import useCollectiblesShopStylesDefault from "../useCollectiblesShopStyles.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -42,7 +42,7 @@ function CancelButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-  return closure_11(_mod7131.HeaderBackButton, obj);
+  return closure_11(_mod7146.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
@@ -95,7 +95,7 @@ function ProductPurchaseGradientBackground(product) {
   });
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ Orientation: closure_9, VerticalGradient: closure_10 } = Constants);
 const jsxProd = fn(21);
@@ -419,7 +419,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       let obj5 = { uri: mobileBgUrl };
       obj3.source = obj5;
       obj3.style = tmp6.imageBackground;
-      let tmp38 = closure_11(tmp4(5837), obj3);
+      let tmp38 = closure_11(tmp4(5851), obj3);
       let tmp39 = closure_11;
       let tmp40 = closure_11;
     }
@@ -437,7 +437,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj8 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
       const obj9 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp40(tmp2(14632).BalanceWidgetPill, obj9);
+      showOrbBalancePill = tmp40(tmp2(14712).BalanceWidgetPill, obj9);
     }
     obj8.children = showOrbBalancePill;
     const items11 = [tmp40(closure_7, obj8)];
@@ -478,7 +478,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
         } = shopProductItems);
         obj14.previewAssets = product.previewAssets;
         obj14.targetSize = tmp34;
-        tmp39Result = tmp39(tmp4(9621), obj14);
+        tmp39Result = tmp39(tmp4(9640), obj14);
       }
       obj13.children = tmp39Result;
       let tmp39Result2 = tmp39(closure_7, obj13);
@@ -489,18 +489,18 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
         avatarSource,
         animate: !stateFromStores,
       };
-      tmp39Result2 = tmp39(tmp4(9634), obj15);
+      tmp39Result2 = tmp39(tmp4(9653), obj15);
     } else if (tmp2(2116).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj16 = { user: currentUser, profileEffect: product.items[0] };
-      tmp39Result2 = tmp39(tmp4(11530), obj16);
+      tmp39Result2 = tmp39(tmp4(11580), obj16);
     } else if (tmp2(2116).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj17 = { user: currentUser, profileFrame: product.items[0] };
-      tmp39Result2 = tmp39(tmp4(11643), obj17);
+      tmp39Result2 = tmp39(tmp4(11694), obj17);
     } else {
       tmp39Result2 = null;
       if (tmp2(2116).CollectiblesItemType.NAMEPLATE === type) {
         const obj18 = { user: currentUser, nameplate: product.items[0], animate: true };
-        tmp39Result2 = tmp39(tmp2(11644).NameplatePreview, obj18);
+        tmp39Result2 = tmp39(tmp2(11695).NameplatePreview, obj18);
       }
     }
     obj12.children = tmp39Result2;
@@ -515,9 +515,9 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl3 = tmp2(1113).intl;
       const obj21 = { itemName: product.name };
       obj20.children = intl3.format(tmp2(1113).t.YNaxMp, obj21);
-      const items16 = [tmp40(tmp2(5747).Text, obj20)];
-      const obj22 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
-      let result = tmp2(7856).isPremiumCollectiblesProduct(product);
+      const items16 = [tmp40(tmp2(5761).Text, obj20)];
+      const obj22 = { variant: "body-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
+      let result = tmp2(7872).isPremiumCollectiblesProduct(product);
       const intl4 = tmp2(1113).intl;
       const format = intl4.format;
       const t = tmp2(1113).t;
@@ -530,10 +530,10 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       }
       const obj25 = { children: null };
       obj22.children = formatResult;
-      items16[1] = tmp40(tmp2(5747).Text, obj22);
+      items16[1] = tmp40(tmp2(5761).Text, obj22);
       obj25.children = items16;
       renderMessagesResult = closure_12(closure_13, obj25);
-      const tmp2Result24 = tmp2(7856);
+      const tmp2Result24 = tmp2(7872);
     }
     obj19.children = renderMessagesResult;
     items14[1] = tmp40(tmp4(1652).View, obj19);
@@ -558,11 +558,11 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl = tmp2(1113).intl;
       obj29.text = intl.string(tmp2(1113).t["2p2aYz"]);
     }
-    obj27.children = tmp40(tmp2(5754).Button, obj29);
+    obj27.children = tmp40(tmp2(5768).Button, obj29);
     obj26.children = tmp40(closure_7, obj27);
     items12[2] = tmp40(closure_7, obj26);
     rect.children = items12;
-    items9[1] = closure_12(tmp2(7412).SafeAreaPaddingView, rect);
+    items9[1] = closure_12(tmp2(7428).SafeAreaPaddingView, rect);
     const obj30 = { style: null, pointerEvents: "none" };
     const items17 = [tmp6.curtain, animatedStyle2];
     obj30.style = items17;

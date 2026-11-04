@@ -4,12 +4,12 @@ import BaseMessagesScreen from "BaseMessagesScreen.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({
   SearchListItemTypes: closure_4,
   CARD_ESTIMATED_ITEM_SIZE: hasOwnProperty,
-  FILES_OR_LINKS_NUM_COLUMNS: metroRequire,
-  FILES_OR_LINKS_GAP_WIDTH: closure_7,
+  FILES_OR_LINKS_NUM_COLUMNS: closure_6,
+  FILES_OR_LINKS_GAP_WIDTH: metroImportDefault,
 } = SearchConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);

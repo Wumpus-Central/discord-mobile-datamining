@@ -37,7 +37,7 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
       permission = permission.permission;
       const decision = permission.decision;
       const obj = {
-        label: _undefined(11059).getConjureDevicePermissionLabel(permission),
+        label: _undefined(11108).getConjureDevicePermissionLabel(permission),
         subLabel: null,
         value: null,
         onValueChange: null,
@@ -53,9 +53,9 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
         return permission(permission, arg0);
       };
       return jsx(
-        _undefined(7489).TableSwitchRow,
+        _undefined(7505).TableSwitchRow,
         {
-          label: _undefined(11059).getConjureDevicePermissionLabel(permission),
+          label: _undefined(11108).getConjureDevicePermissionLabel(permission),
           subLabel: null,
           value: null,
           onValueChange: null,

@@ -5,13 +5,13 @@ import UserSettingsVoiceUtils from "../../voice/native/UserSettingsVoiceUtils.ts
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(8556).MobileUserSettings.VOICE,
+  parent: fn(8573).MobileUserSettings.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
     items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());

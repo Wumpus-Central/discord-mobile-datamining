@@ -184,8 +184,8 @@ function PreviewItem(overState) {
           id: -1,
           parentId: "flexDirection",
           name: "Array",
-          color: "applicationId",
-          expanded: "r",
+          color: "ao",
+          expanded: "Boolean",
           children: "isArray",
         };
         items = [tmp2];
@@ -398,7 +398,7 @@ function AnimatedItemPreview(cleanUp) {
     };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(18514), obj5);
+    let tmp22Result = tmp22(tmp4(18609), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
@@ -406,14 +406,14 @@ function AnimatedItemPreview(cleanUp) {
       tmp25 = transitionState === tmp2(5207).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(18535), obj6);
-    const tmp4Result = tmp4(18535);
+    tmp22Result = tmp22(tmp4(18630), obj6);
+    const tmp4Result = tmp4(18630);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1652.View, obj4);
 }
-let GuildsNodeType = fn(6892).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(18503).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6907).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(18598).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
 let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
@@ -505,16 +505,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState:
-              "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC \u03AD\u03BD\u03B1 \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03BF",
-            scrollPosition:
-              "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC {{count}} \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1",
-            dragRegion: "1 \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03BF",
-            windowSize: "{{count}} \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1",
-            dropComplete:
-              "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC \u03AD\u03BD\u03B1 \u03BB\u03B5\u03C0\u03C4\u03CC",
-            listInsets:
-              "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC {{count}} \u03BB\u03B5\u03C0\u03C4\u03AC",
+            gestureState: "safety-tools-button",
+            scrollPosition: "heading-md/semibold",
+            dragRegion: "mobile-text-heading-primary",
+            windowSize: 1,
+            dropComplete: null,
+            listInsets: null,
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;

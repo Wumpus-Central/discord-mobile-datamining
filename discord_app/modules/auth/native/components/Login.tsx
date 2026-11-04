@@ -18,7 +18,7 @@ class LinkButton {
     str = global.variant;
     ({ onPress, text, containerStyle, textStyle } = global);
     if (str === undefined) {
-      str = "text-xs/medium";
+      str = "body-xs/medium";
     }
     str2 = global.textColor;
     if (str2 === undefined) {
@@ -596,7 +596,7 @@ export default function Login(isMultiAccount) {
   tmp4Result8 = require("MetaQuestUtils");
   const intl9 = tmp4(tmp2[12]).intl;
   obj13.headerText = intl9.string(require("util").t["7fNJgA"]);
-  const obj14 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj14 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl10 = tmp4(tmp2[12]).intl;
   obj14.children = intl10.string(require("util").t.euS7r4);
   obj13.subHeader = closure_10(require("Text/Text").Text, obj14);

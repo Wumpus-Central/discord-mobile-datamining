@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ MessageFlags: hasOwnProperty, MessageStates: metroRequire } = Constants);
+({ MessageFlags: hasOwnProperty, MessageStates: closure_6 } = Constants);
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/replies/canReplyToMessage.tsx");

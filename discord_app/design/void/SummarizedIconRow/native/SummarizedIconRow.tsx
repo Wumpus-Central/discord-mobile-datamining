@@ -12,11 +12,11 @@ function OverflowSquircle(arg0) {
   obj.style = items;
   const obj2 = {
     style: tmp.overflowSquircle,
-    children: jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow }),
+    children: jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow }),
   };
   obj.children = (
     <View style={tmp.overflowSquircle}>
-      {jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow })}
+      {jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow })}
     </View>
   );
   return <View style={null}>{null}</View>;
@@ -192,7 +192,7 @@ export function OverflowText(arg0) {
   const obj = { style: null, children: null };
   items = [closure_4().overflowTextOnly, style];
   obj.style = items;
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
+  obj.children = jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow });
   return <View style={null}>{null}</View>;
 }
 export function OverflowTextSmall(arg0) {
@@ -200,7 +200,7 @@ export function OverflowTextSmall(arg0) {
   const obj = { style: null, children: null };
   items = [closure_4().overflowTextOnly, style];
   obj.style = items;
-  obj.children = jsx(Text_Text.Text, { variant: "text-xxs/medium", children: "+" + overflow });
+  obj.children = jsx(Text_Text.Text, { variant: "footnote/medium", children: "+" + overflow });
   return <View style={null}>{null}</View>;
 }
 export function OverflowCircle(arg0) {
@@ -211,11 +211,11 @@ export function OverflowCircle(arg0) {
   obj.style = items;
   const obj2 = {
     style: tmp.overflowCircle,
-    children: jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow }),
+    children: jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow }),
   };
   obj.children = (
     <View style={tmp.overflowCircle}>
-      {jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow })}
+      {jsx(Text_Text.Text, { variant: "body-xs/medium", children: "+" + overflow })}
     </View>
   );
   return <View style={null}>{null}</View>;

@@ -9,13 +9,13 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   flex: { flex: 1 },
-  safePadding: { marginTop: fn(5709).NAV_BAR_HEIGHT, flex: 1 },
+  safePadding: { marginTop: fn(5722).NAV_BAR_HEIGHT, flex: 1 },
   contentContainer: { paddingHorizontal: 16 },
   guildIcon: { alignSelf: "center" },
   guildName: { marginTop: 8, textAlign: "center" },
@@ -125,7 +125,7 @@ export default function ChannelPrompt(guildId) {
     const obj9 = {
       style: tmp.guildName,
       lineClamp: 1,
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: "mobile-text-heading-primary",
       children: stateFromStores.name,
     };
@@ -140,7 +140,7 @@ export default function ChannelPrompt(guildId) {
     let intl = tmp2(tmp3[12]).intl;
     obj10.children = intl.string(tmp2(tmp3[12]).t["8VRa7d"]);
     items3[2] = closure_10(tmp2(tmp3[18]).Text, obj10);
-    const obj11 = { style: tmp.subTitle, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj11 = { style: tmp.subTitle, variant: "body-sm/medium", color: "text-default", children: null };
     const intl2 = tmp2(tmp3[12]).intl;
     obj11.children = intl2.string(tmp2(tmp3[12]).t["+855Pm"]);
     items3[3] = closure_10(tmp2(tmp3[18]).Text, obj11);

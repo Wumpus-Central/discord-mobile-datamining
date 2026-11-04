@@ -23,14 +23,14 @@ function CodeRow(code) {
   let tmp2Result = null;
   if (showCheckMark) {
     const obj2 = { color: nativeDefault.colors.TEXT_BRAND };
-    tmp2Result = closure_6(code(7423).CheckmarkSmallIcon, obj2);
+    tmp2Result = closure_6(code(7439).CheckmarkSmallIcon, obj2);
   }
   obj.trailing = tmp2Result;
-  return closure_6(code(7101).TableRow, obj);
+  return closure_6(code(7116).TableRow, obj);
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { generateCode: { color: nativeDefault.colors.TEXT_BRAND } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -44,8 +44,8 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     headerLabel = intl.format(stateFromStores(1113).t.OhmvYt, {});
   }
   stateFromStores = undefined;
-  const token = stateFromStores(5719).useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
-  const obj = stateFromStores(5719);
+  const token = stateFromStores(5732).useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+  const obj = stateFromStores(5732);
   const tmp6 = closure_8();
   items = [MFAStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => MFAStore.getBackupCodes());
@@ -75,7 +75,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   obj3.style = { paddingHorizontal: token, paddingTop: nativeDefault.space.PX_16 };
   const items2 = [
     headerLabel.map((children, index) =>
-      closure_1_6(stateFromStores(5747).Text, { variant: "text-sm/medium", children }, index),
+      closure_1_6(stateFromStores(5761).Text, { variant: "body-sm/medium", children }, index),
     ),
     ,
     ,
@@ -88,7 +88,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     obj5.children = unusedCodes.map((code, index) =>
       closure_1_6(CodeRow, { code: code.code, showCheckMark: false }, index),
     );
-    tmp10Result = closure_6(tmp3(7186).TableRowGroup, obj5);
+    tmp10Result = closure_6(tmp3(7201).TableRowGroup, obj5);
   }
   items2[1] = tmp10Result;
   let tmp10Result3 = usedCodes.length > 0;
@@ -99,26 +99,26 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     obj6.children = usedCodes.map((code, index) =>
       closure_1_6(CodeRow, { code: code.code, showCheckMark: true }, index),
     );
-    tmp10Result3 = closure_6(tmp3(7186).TableRowGroup, obj6);
+    tmp10Result3 = closure_6(tmp3(7201).TableRowGroup, obj6);
   }
   items2[2] = tmp10Result3;
   let tmp10Result4 = null !== headerLabel.onGenerate;
   if (tmp10Result4) {
     const obj7 = { hasIcons: false, children: null };
     const obj8 = { label: null, onPress: null };
-    const obj9 = { variant: "text-md/semibold", style: tmp6.generateCode, children: null };
+    const obj9 = { variant: "body-md/semibold", style: tmp6.generateCode, children: null };
     const intl4 = tmp3(1113).intl;
     obj9.children = intl4.string(tmp3(1113).t.RIThUu);
-    obj8.label = closure_6(tmp3(5747).Text, obj9);
+    obj8.label = closure_6(tmp3(5761).Text, obj9);
     obj8.onPress = function onPress() {
       const verificationKey = MFAStore.getVerificationKey();
       const result = MFAActionCreatorsDefault.confirmViewBackupCodes(verificationKey, true);
     };
-    obj7.children = closure_6(tmp3(7101).TableRow, obj8);
-    tmp10Result4 = closure_6(tmp3(7186).TableRowGroup, obj7);
+    obj7.children = closure_6(tmp3(7116).TableRow, obj8);
+    tmp10Result4 = closure_6(tmp3(7201).TableRowGroup, obj7);
   }
   const obj4 = { paddingHorizontal: token, paddingTop: nativeDefault.space.PX_16 };
   items2[3] = tmp10Result4;
   obj3.children = items2;
-  return closure_6(ScrollView, { children: closure_7(stateFromStores(6147).Stack, obj3) });
+  return closure_6(ScrollView, { children: closure_7(stateFromStores(6162).Stack, obj3) });
 }

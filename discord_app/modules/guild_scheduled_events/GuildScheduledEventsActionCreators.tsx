@@ -14,8 +14,8 @@ const require = globalThis.__r;
 require = fn;
 const GuildScheduledEventsConstants = fn(4996);
 ({
-  ENTITY_TYPES_REQUIRED_CHANNEL_ID: metroRequire,
-  ENTITY_TYPES_REQUIRED_ENTITY_METADATA: closure_7,
+  ENTITY_TYPES_REQUIRED_CHANNEL_ID: closure_6,
+  ENTITY_TYPES_REQUIRED_ENTITY_METADATA: metroImportDefault,
   GuildScheduledEventStatus: closure_8,
   MAX_RSVP_USER_DISPLAY_COUNT: closure_9,
 } = GuildScheduledEventsConstants);
@@ -114,7 +114,7 @@ export default {
       return applyArgumentsResult;
     }
     closure_4 = async function _fetch() {
-      await tmp5(6575).httpGetWithCountryCodeQuery({
+      await tmp5(6590).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENT(closure_2_0, closure_2_1),
         rejectWithError: tmp5(1282).rejectWithMigratedError(),
       });
@@ -148,7 +148,7 @@ export default {
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(6575).httpGetWithCountryCodeQuery({
+      await tmp5(6590).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5),
         rejectWithError: tmp5(1282).rejectWithMigratedError(),
       });

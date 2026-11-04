@@ -9,7 +9,7 @@ import useRecipientsLabel from "../../../useRecipientsLabel.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
@@ -45,9 +45,9 @@ export default function GroupDMRow(channel) {
   obj3.disabled = flag2;
   let tmp5Result;
   if (null != recipientsLabel) {
-    const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
+    const obj4 = { variant: "body-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
     tmp5Result = jsx(Text_Text.Text, {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-muted",
       lineClamp: 1,
       children: recipientsLabel,

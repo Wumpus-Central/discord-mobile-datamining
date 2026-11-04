@@ -61,7 +61,7 @@ function FocusedControlsExpanded(availableHeight) {
   const items3 = [tmp.expandedControlsContainer, animatedStyle];
   obj4.style = items3;
   obj3.children = state(_modDef1652.View, obj4);
-  obj2.children = state(React5, obj3);
+  obj2.children = state(metroImportDefault, obj3);
   return state(width, obj2);
 }
 function FocusedControlsBottomDrawerTooltip(positionY) {
@@ -789,13 +789,13 @@ class FocusedControlsBottomDrawer {
 get_ActivityIndicator = fn(17);
 ({
   View: hasOwnProperty,
-  TouchableWithoutFeedback: metroRequire,
-  ScrollView: closure_7,
+  TouchableWithoutFeedback: closure_6,
+  ScrollView: metroImportDefault,
   StyleSheet,
 } = get_ActivityIndicator);
-const ChannelCallStore = fn(11133);
+const ChannelCallStore = fn(11181);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(11134);
+const ChannelCallConstants = fn(11182);
 ({ BOX_MODE_THRESHOLD_WIDTH: closure_10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1072);
 ({ ComponentActions: closure_12, Fonts } = Constants);

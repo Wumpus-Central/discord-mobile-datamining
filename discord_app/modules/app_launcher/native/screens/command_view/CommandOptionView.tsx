@@ -8,7 +8,7 @@ import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [
   fn(2121).ApplicationCommandOptionType.STRING,
   fn(2121).ApplicationCommandOptionType.INTEGER,
@@ -64,7 +64,7 @@ export default function CommandOptionView(option) {
   const ReduceMotion = option(1652).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
   const obj = option(504);
-  const optionEnteringAnimation = option(12629).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(12710).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -94,8 +94,8 @@ export default function CommandOptionView(option) {
     const obj5 = {
       collapsable: false,
       entering: optionEnteringAnimation.EnteringAnimation,
-      exiting: tmp2(12629).ExitingAnimation,
-      layout: tmp2(12629).LayoutAnimation,
+      exiting: tmp2(12710).ExitingAnimation,
+      layout: tmp2(12710).LayoutAnimation,
       onLayout(arg0) {
         importDefault(arg0, option);
       },
@@ -105,11 +105,11 @@ export default function CommandOptionView(option) {
     if (hasItem1) {
       const obj7 = {
         style: tmp.labelText,
-        variant: "text-sm/semibold",
+        variant: "body-sm/semibold",
         color: "text-subtle",
         children: option.displayName,
       };
-      hasItem1 = closure_5(tmp2(5747).Text, obj7);
+      hasItem1 = closure_5(tmp2(5761).Text, obj7);
     }
     const items2 = [hasItem1, , ,];
     const obj8 = {
@@ -136,11 +136,11 @@ export default function CommandOptionView(option) {
     items2[1] = closure_5(AppLauncherCommandOptionDefault, obj8);
     const obj9 = {
       style: tmp.optionDescription,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-muted",
       children: option.displayDescription,
     };
-    items2[2] = closure_5(tmp2(5747).Text, obj9);
+    items2[2] = closure_5(tmp2(5761).Text, obj9);
     if (hasItem) {
       const obj10 = {
         collapsable: false,
@@ -149,13 +149,13 @@ export default function CommandOptionView(option) {
         style: tmp.optionErrorContainer,
         children: null,
       };
-      const items3 = [closure_5(tmp2(7212).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" })];
+      const items3 = [closure_5(tmp2(7227).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" })];
       const obj11 = {
-        variant: "text-xs/medium",
+        variant: "body-xs/medium",
         color: "text-feedback-critical",
         children: optionValidationResults[option.name].error,
       };
-      items3[1] = closure_5(tmp2(5747).Text, obj11);
+      items3[1] = closure_5(tmp2(5761).Text, obj11);
       obj10.children = items3;
       hasItem = closure_6(_modDef1652.View, obj10);
     }
@@ -163,10 +163,10 @@ export default function CommandOptionView(option) {
     obj6.children = items2;
     obj5.children = closure_6(View, obj6);
     obj4.children = closure_5(_modDef1652.View, obj5);
-    obj3.children = closure_5(tmp2(12630).AwaitAnimationContext, obj4);
+    obj3.children = closure_5(tmp2(12711).AwaitAnimationContext, obj4);
     return closure_5(tmp2(1652).LayoutAnimationConfig, obj3);
   } else {
     return null;
   }
-  const tmp2Result = option(12629);
+  const tmp2Result = option(12710);
 }

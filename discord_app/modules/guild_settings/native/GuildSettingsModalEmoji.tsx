@@ -89,11 +89,11 @@ class ManageEmojisModal {
       if ("SECTION" === type) {
         const obj2 = {
           style: closure_8.section,
-          variant: "text-xs/semibold",
+          variant: "body-xs/semibold",
           color: "text-default",
           children: item.section,
         };
-        return React6(Text_Text.Text, obj2);
+        return React5(Text_Text.Text, obj2);
       } else if ("EMOJI" === type) {
         let type1;
         if (emojiItems[index - 1] != null) {
@@ -122,7 +122,7 @@ class ManageEmojisModal {
         obj.onSelectRolesForEmoji = onSelectRolesForEmoji;
         obj.start = "SECTION" === type1;
         obj.end = "SECTION" === type2 || index === emojiItems.length - 1;
-        return React6(GuildSettingsModalEmoji_EmojiRow.EmojiRow, obj);
+        return React5(GuildSettingsModalEmoji_EmojiRow.EmojiRow, obj);
       } else {
         return null;
       }
@@ -149,7 +149,7 @@ class ManageEmojisModal {
       obj.description = headerDescription;
       obj.onSelectRolesForEmoji = onSelectRolesForEmoji;
       obj.uploadDisabled = flag;
-      return React6(HeaderRow.ConnectedHeaderRow, obj);
+      return React5(HeaderRow.ConnectedHeaderRow, obj);
     }, items5);
     callback2 = obj3.useCallback(() => {
       const obj = {
@@ -162,7 +162,7 @@ class ManageEmojisModal {
       obj.title = intl.string(util.t.lxsmBd);
       const intl2 = util.intl;
       obj.body = intl2.string(util.t.RBbtMy);
-      return React6(native.EmptyState, obj);
+      return React5(native.EmptyState, obj);
     }, items6);
     if (null == emojis) {
       tmp15 = closure_9;
@@ -209,7 +209,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let apply = apply_mod;
-let closure_11 = apply.throttle(fn(10187).fetchEmoji, 1000);
+let closure_11 = apply.throttle(fn(10235).fetchEmoji, 1000);
 const createStyles = fn(5141);
 let obj = {
   loadingContainer: { flex: 1, paddingTop: 40 },

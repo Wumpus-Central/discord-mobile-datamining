@@ -6,7 +6,7 @@ import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { marginTop: 8 },
@@ -33,10 +33,10 @@ export default function InviteRolesDisplay(roleIds) {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { style: tmp.container, children: null };
-    const obj3 = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
+    const obj3 = { variant: "body-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t.stcSfI);
-    const items2 = [closure_5(tmp2(5747).Text, obj3)];
+    const items2 = [closure_5(tmp2(5761).Text, obj3)];
     const obj4 = {
       style: tmp.rolesRow,
       children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)),

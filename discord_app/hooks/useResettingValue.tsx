@@ -4,7 +4,7 @@ import _slicedToArray from "../../_runtime/metro/00032__.js";
 
 const require = fn;
 const noop = fn(19);
-({ useState: closure_4, useCallback: hasOwnProperty, useEffect: metroRequire } = noop);
+({ useState: closure_4, useCallback: hasOwnProperty, useEffect: closure_6 } = noop);
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useResettingValue.tsx");
 

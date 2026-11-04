@@ -39,11 +39,8 @@ export default function retrySendMessage(id, id2, arr) {
     const tmpResult = MessageActionCreatorsDefault;
     id = id.id;
     const obj3 = { content, tts, invalidEmojis: [], validNonShortcutEmojis: [] };
-    const obj4 = {};
+    const obj4 = { nonce, flags, messageReference };
     const merged = Object.assign(obj);
-    obj4.nonce = nonce;
-    obj4.flags = flags;
-    obj4.messageReference = messageReference;
     obj4.location = MessageSendLocation.RETRY;
     obj4.attachmentsToUpload = mapped;
     obj4.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {

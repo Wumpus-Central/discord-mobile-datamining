@@ -177,7 +177,7 @@ const GuildScheduledEventsConstants = fn(4996);
 ({
   GuildScheduledEventStatus: closure_4,
   GuildScheduledEventStatusDone: hasOwnProperty,
-  GuildScheduledEventUserResponses: metroRequire,
+  GuildScheduledEventUserResponses: closure_6,
 } = GuildScheduledEventsConstants);
 const StaticGuildEventIndexes = {
   EVENT: "event",

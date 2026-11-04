@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef12048 from "../../../../../_runtime/metro/12048__.js";
+import _modDef12107 from "../../../../../_runtime/metro/12107__.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";
@@ -33,7 +33,7 @@ class GuildProgressOverviewView {
     obj9.style = items;
     items1 = [,];
     items1[0] = jsx(closure_0(closure_2[11]).LegacyText, obj9);
-    obj10 = { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle };
+    obj10 = { style: tmp.step, variant: "body-xs/medium", color: "text-default", children: subtitle };
     items1[1] = jsx(closure_0(closure_2[12]).Text, obj10);
     obj8.children = items1;
     items2 = [,];
@@ -51,7 +51,7 @@ class GuildProgressOverviewView {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16 },
@@ -66,7 +66,7 @@ let obj2 = {
   step: { lineHeight: 16 },
   progressBar: { marginTop: 8 },
 };
-const React5 = createStyles.createStyles(obj2);
+const metroImportDefault = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
 

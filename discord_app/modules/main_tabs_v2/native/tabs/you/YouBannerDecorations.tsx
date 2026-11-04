@@ -7,7 +7,7 @@ import DismissibleContentUnsafeUtils from "../../../../dismissible_content/Dismi
 import QuestTypes from "../../../../quests/QuestTypes.tsx";
 import useTrialOffer from "../../../../premium/useTrialOffer.tsx";
 import PromotionsHooks from "../../../../premium/promotions/PromotionsHooks.tsx";
-import tracking_Tracking from "tracking/Tracking.tsx";
+import Tracking from "tracking/Tracking.tsx";
 import QuestUtils from "../../../../quests/native/QuestUtils.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -201,7 +201,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   const items2 = [tmp15, navigateToSettings, tmp24];
   const items3 = [navigateToPremium];
   const callback = obj4.useCallback(() => {
-    const result = tracking_Tracking.trackYouTabSettingsIconPress({ isBadged });
+    const result = Tracking.trackYouTabSettingsIconPress({ isBadged });
     navigateToSettings();
     let tmp5 = closure_7;
     if (closure_7) {
@@ -220,7 +220,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   }, items2);
   const items4 = [showBadge, dismissBadge];
   const callback1 = obj4.useCallback(() => {
-    const result = tracking_Tracking.trackYouTabNitroIconPress();
+    const result = Tracking.trackYouTabNitroIconPress();
     navigateToPremium();
   }, items3);
   let tmp28 = null;

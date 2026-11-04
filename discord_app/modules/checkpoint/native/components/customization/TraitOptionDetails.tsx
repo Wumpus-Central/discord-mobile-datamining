@@ -11,7 +11,7 @@ function AssetDescription(asset) {
   _require = closure_7();
   if (asset.hidden) {
     const obj2 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       accessibilityElementsHidden: null == null,
       children: null,
@@ -28,14 +28,14 @@ function AssetDescription(asset) {
           return React4(
             Text_Text.Text,
             {
-              variant: "text-md/medium",
+              variant: "body-md/medium",
               color: "text-subtle",
               style: subscribeLink.subscribeLink,
               onPress() {
                 const obj = { analyticsLocations: null };
-                items = [closure_1_1(7471).CHECKPOINT];
+                items = [closure_1_1(7487).CHECKPOINT, closure_1_1(7487).CHECKPOINT_TRAIT];
                 obj.analyticsLocations = items;
-                return closure_1_1(10036)(obj);
+                return closure_1_1(10084)(obj);
               },
               accessibilityRole: "link",
               children,
@@ -46,14 +46,14 @@ function AssetDescription(asset) {
       };
       let formatResult = format(_modDef3219["3Wq/bk"], obj);
     } else {
-      formatResult = format(6554).getAssetDescription(asset);
-      const formatResult1 = format(6554);
+      formatResult = format(6569).getPlaintextAssetDescription(asset);
+      const formatResult1 = format(6569);
     }
   }
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
@@ -71,7 +71,7 @@ export default function TraitOptionDetails(arg0) {
   const obj = { style: tmp.titleRow, children: null };
   items = [
     React4(Text_Text.Text, {
-      variant: "text-lg/medium",
+      variant: "body-lg/medium",
       color: "text-default",
       style: tmp.title,
       children: asset.getName(),

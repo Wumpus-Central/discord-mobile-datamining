@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { height: "100%" }, stepContainer: null };
 const rect = {
@@ -19,7 +19,7 @@ const rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(5709).NAV_BAR_HEIGHT,
+  height: fn(5722).NAV_BAR_HEIGHT,
   zIndex: 1,
 };
 obj2.stepContainer = rect;
@@ -71,5 +71,5 @@ export function StepModal(steps) {
   obj4.children = timestampProducer(ModalStepIndicator.ModalStepIndicator, obj5);
   items1[1] = timestampProducer(View, obj4);
   obj.children = items1;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }

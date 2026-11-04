@@ -23,13 +23,13 @@ function MenuRow(arg0) {
   items[1] = menuRowHighlighted;
   const items1 = [
     hasOwnProperty(icon, { size: "sm", color: nativeDefault.colors.TEXT_STRONG }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: label }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: label }),
   ];
   obj.children = items1;
   return timestampProducer(React4, obj);
 }
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   scrollView: { flex: 1 },
   pageContainer: {
@@ -163,7 +163,7 @@ export default function ScheduledMessagesIntro() {
   obj5.children = intl.string(util.t["C/j9NE"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj5)];
   const obj6 = {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     style: tmp.text,
     includeFontPadding: true,
@@ -207,7 +207,7 @@ export default function ScheduledMessagesIntro() {
     color: nativeDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT,
   });
   const items4 = [hasOwnProperty(React4, obj13)];
-  const obj15 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj15 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl5 = util.intl;
   obj15.children = intl5.string(util.t.fxxYiB);
   items4[1] = hasOwnProperty(Text_Text.Text, obj15);

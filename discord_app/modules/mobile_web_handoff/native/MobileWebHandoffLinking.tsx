@@ -228,7 +228,7 @@ let closure_11 = async function _redirectDeveloperPortalWithHandoffToken(arg0) {
   })();
 };
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, MarketingURLs: metroRequire, Routes: closure_7 } = Constants);
+({ AnalyticEvents: hasOwnProperty, MarketingURLs: closure_6, Routes: metroImportDefault } = Constants);
 let c8 = "mweb-handoff";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx");

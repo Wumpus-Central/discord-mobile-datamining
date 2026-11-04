@@ -7,7 +7,7 @@ import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import _modDef10407 from "../../../../../_runtime/metro/10407__.js";
+import _modDef10455 from "../../../../../_runtime/metro/10455__.js";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -23,11 +23,11 @@ function NewCaption(arg0) {
   items = [tmp.labelContainer, style];
   obj.style = items;
   const items1 = [
-    React7(native.Icon, { source: _modDef10407, style: tmp.icon }),
-    React7(Text_Text.Text, {
+    React6(native.Icon, { source: _modDef10455, style: tmp.icon }),
+    React6(Text_Text.Text, {
       style: textStyle,
       color: "text-overlay-light",
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       children: label,
     }),
   ];
@@ -255,8 +255,8 @@ function MediaKeyboardDummy(arg0) {
   const obj3 = { style: null };
   const items1 = [tmp.image, { height: size, width: size }];
   obj3.style = items1;
-  obj2.children = React7(React4, obj3);
-  return React7(React4, obj2);
+  obj2.children = React6(React4, obj3);
+  return React6(React4, obj2);
 }
 function MediaKeyboardSpecialButton(arg0) {
   ({ size, disabled, index, totalNumItems, numItemsPerRow } = arg0);
@@ -376,12 +376,12 @@ function MediaKeyboardSpecialButton(arg0) {
   items3[5] = disabled1;
   obj3.style = items3;
   obj3.children = children;
-  return React7(closure_11, obj3);
+  return React6(closure_11, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10676);
-({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
+const DeviceConstants = fn(10724);
+({ ALAssetsType: metroImportDefault, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = module_1652.createAnimatedComponent(Pressable);
@@ -496,7 +496,7 @@ export default noop.memo(function MediaKeyboardItem(arg0) {
     children: items.map((type, index) => {
       if (null == type) {
         const obj2 = { size, isFirstInRow: 0 === index };
-        return React7(MediaKeyboardDummy, obj2, index);
+        return React6(MediaKeyboardDummy, obj2, index);
       } else {
         let hasItem = "type" in type;
         if (hasItem) {
@@ -520,8 +520,8 @@ export default noop.memo(function MediaKeyboardItem(arg0) {
           obj3.totalNumItems = totalNumItems;
           obj3.numItemsPerRow = numPerRow;
           const obj4 = { color: nativeDefault.colors.ICON_SUBTLE, size: "lg" };
-          obj3.children = React7(obj[type.type].Icon, obj4);
-          return React7(MediaKeyboardSpecialButton, obj3, index);
+          obj3.children = React6(obj[type.type].Icon, obj4);
+          return React6(MediaKeyboardSpecialButton, obj3, index);
         } else {
           obj = {
             channelId: id.id,
@@ -538,7 +538,7 @@ export default noop.memo(function MediaKeyboardItem(arg0) {
             onLongPressItem,
             disabled,
           };
-          return React7(MediaKeyboardImage, obj, index);
+          return React6(MediaKeyboardImage, obj, index);
         }
       }
     }),

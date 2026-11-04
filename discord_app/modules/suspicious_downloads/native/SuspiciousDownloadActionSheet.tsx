@@ -26,7 +26,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items;
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [closure_3(href(7191).TrafficConeSpotIllustration, {}), ,];
+  const items1 = [closure_3(href(7206).TrafficConeSpotIllustration, {}), ,];
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",
@@ -36,13 +36,13 @@ export default function SuspiciousDownloadActionSheet(href) {
   };
   const intl = href(1113).intl;
   obj4.children = intl.string(href(1113).t.XtDo9Z);
-  items1[1] = closure_3(href(5747).Text, obj4);
-  const obj5 = { style: tmp.body, variant: "text-md/medium", children: null };
+  items1[1] = closure_3(href(5761).Text, obj4);
+  const obj5 = { style: tmp.body, variant: "body-md/medium", children: null };
   const intl2 = href(1113).intl;
   obj5.children = intl2.string(href(1113).t.L9yFko);
-  items1[2] = closure_3(href(5747).Text, obj5);
+  items1[2] = closure_3(href(5761).Text, obj5);
   obj3.children = items1;
-  const items2 = [closure_4(href(6147).Stack, obj3)];
+  const items2 = [closure_4(href(6162).Stack, obj3)];
   const obj6 = { spacing: 8, children: null };
   const obj7 = { text: null, onPress: null };
   const intl3 = href(1113).intl;
@@ -50,7 +50,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   obj7.onPress = function onPress() {
     return ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  const items3 = [closure_3(href(5754).Button, obj7)];
+  const items3 = [closure_3(href(5768).Button, obj7)];
   const obj8 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = href(1113).intl;
   obj8.text = intl4.string(href(1113).t["/bHu89"]);
@@ -58,10 +58,10 @@ export default function SuspiciousDownloadActionSheet(href) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     openURLDefault(href, true);
   };
-  items3[1] = closure_3(href(5754).Button, obj8);
+  items3[1] = closure_3(href(5768).Button, obj8);
   obj6.children = items3;
-  items2[1] = closure_4(href(6147).Stack, obj6);
+  items2[1] = closure_4(href(6162).Stack, obj6);
   obj2.children = items2;
-  obj.children = closure_4(href(6147).Stack, obj2);
-  return closure_3(href(5395).BottomSheet, obj);
+  obj.children = closure_4(href(6162).Stack, obj2);
+  return closure_3(href(5396).BottomSheet, obj);
 }

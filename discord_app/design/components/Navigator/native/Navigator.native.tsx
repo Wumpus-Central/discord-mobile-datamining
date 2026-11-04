@@ -5,9 +5,9 @@ import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.t
 import Link from "../../../../../_runtime/01500_Link.js";
 import BackPressTracking from "../../../../modules/routing/native/BackPressTracking.android.tsx";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod7131 from "../../../../../_runtime/metro/07131__.js";
+import _mod7146 from "../../../../../_runtime/metro/07146__.js";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
-import StackNavigator from "../../../../../_runtime/07292_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07308_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -256,7 +256,7 @@ function WrappedNavigationStack(arg0) {
     }),
     1,
   )[0];
-  const tmp5 = navigationContainerRef(5376)();
+  const tmp5 = navigationContainerRef(5377)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = {
     ref: navigationContainerRef,
@@ -295,7 +295,7 @@ function WrappedNavigationStack(arg0) {
     onStateChange: null,
     children: null,
   });
-  obj5.children = jsx(_mod7131.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj5.children = jsx(_mod7146.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);

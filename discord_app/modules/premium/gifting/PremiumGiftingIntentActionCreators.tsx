@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const GiftIntentType = fn(1387).GiftIntentType;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx");
 

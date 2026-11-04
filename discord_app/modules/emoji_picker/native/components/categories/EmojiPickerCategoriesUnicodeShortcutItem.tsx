@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ EXPRESSION_FOOTER_HEIGHT: metroRequire, NODE_SIZE } = Constants);
+({ EXPRESSION_FOOTER_HEIGHT: closure_6, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };

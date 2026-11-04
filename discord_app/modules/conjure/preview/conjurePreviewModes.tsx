@@ -9,8 +9,8 @@ let obj = {
   frame(hasFrame) {
     return hasFrame.hasFrame;
   },
-  widget(disableInteraction) {
-    return disableInteraction.hasProfileWidget;
+  widget(dependencyMap) {
+    return dependencyMap.hasProfileWidget;
   },
   overlay(hasOverlay) {
     return true === hasOverlay.hasOverlay;

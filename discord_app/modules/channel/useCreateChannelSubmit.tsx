@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const Constants = fn(1072);
-({ ChannelTypes: closure_7, Permissions: closure_8 } = Constants);
+({ ChannelTypes: metroImportDefault, Permissions: closure_8 } = Constants);
 const CreateChannelMode = { PREMIUM_CHANNEL: 0, [0]: "PREMIUM_CHANNEL" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useCreateChannelSubmit.tsx");

@@ -307,8 +307,85 @@ let closure_12 = async function _requestBadgeSummary(arg0) {
   }
   return value;
 };
+let closure_13 = async function _ackBadge(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp5;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          currentUser = currentUser.getCurrentUser();
+          let id;
+          if (currentUser != null) {
+            id = currentUser.id;
+          }
+          closure_129_1 = id;
+          if (null != id) {
+            c4 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const obj5 = { url: hasOwnProperty.USER_BADGE_ACK(closure_0), rejectWithError: true };
+            c5 = 2;
+            c6 = 1;
+            const obj6 = { value: HTTP.post(obj5), done: false };
+            return obj6;
+          }
+        }
+      } else {
+        if (1 === tmp8) {
+          c4 = 0;
+          closure_129_2 = closure_3;
+          closure_130_1(closure_130_2[7]).captureException(closure_129_2);
+          const obj4 = closure_130_1(closure_130_2[7]);
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          const obj7 = { type: "BADGE_ACK_SUCCESS", userId: closure_129_1, badgeId: closure_129_0 };
+          closure_130_1(closure_130_2[3]).dispatch(obj7);
+          c4 = 0;
+          const obj = closure_130_1(closure_130_2[3]);
+        }
+        c4 = 0;
+        c6 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      }
+      c6 = 3;
+    } catch (tmp28) {
+      closure_3 = tmp28;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp28;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
 const Constants = fn(1072);
-({ Endpoints: hasOwnProperty, ME: metroRequire } = Constants);
+({ Endpoints: hasOwnProperty, ME: closure_6 } = Constants);
 const map = new Map();
 const map1 = new Map();
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
@@ -388,6 +465,16 @@ export function fetchBadgeSummary(GIFTING, id) {
       }
     }
   }
+}
+export function ackBadge() {
+  const self = this;
+  const apply = closure_13.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
 export function markBadgeDirectoryBadgeIndicatorSeen(badgeId) {
   Dispatcher.dispatch({ type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId });

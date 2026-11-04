@@ -56,13 +56,13 @@ const result = size.fileFinishedImporting("modules/premium/promotions/native/Pre
 export default function PremiumMarketingMomentActionSheet(component_id) {
   const markAsDismissed = component_id.markAsDismissed;
   const bottomSheetData = component_id.bottomSheetData;
-  const promotionId = component_id.promotionId;
-  let helpArticleLinkProps;
+  ({ copy, promotionId } = component_id);
+  let helpArticleLink;
   const tmp = closure_10();
-  items = [helpArticleLinkProps];
+  items = [helpArticleLink];
   const stateFromStores = markAsDismissed(promotionId[8]).useStateFromStores(
     items,
-    () => helpArticleLinkProps.useReducedMotion,
+    () => helpArticleLink.useReducedMotion,
   );
   const analyticsLocations = bottomSheetData(promotionId[9])().analyticsLocations;
   const items1 = [markAsDismissed, promotionId];
@@ -122,83 +122,75 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
     promotion_id: promotionId,
   };
   tmp5Result(obj3);
+  helpArticleLink = copy.helpArticleLink;
+  const obj5 = { onDismiss: callback2, children: null };
+  const obj6 = { style: tmp.container, children: null };
   const obj4 = {
     component_type: markAsDismissed(promotionId[14]).MarketingComponentType.MOBILE_BOTTOM_SHEET,
     component_id: component_id.componentId,
     dismissible_content: bottomSheetData.dismissibleContent,
     promotion_id: promotionId,
   };
-  helpArticleLinkProps = markAsDismissed(promotionId[15]).getHelpArticleLinkProps(
-    bottomSheetData.helpArticle,
-    bottomSheetData.helpArticleId,
-  );
-  const obj5 = { onDismiss: callback2, children: null };
-  const obj6 = { style: tmp.container, children: null };
-  const tmp2Result = markAsDismissed(promotionId[15]);
-  if (tmp2Result2.getFile(obj7).isVideo) {
+  if (tmp2Result.getFile(obj7).isVideo) {
     const size = { src: null, style: null, muted: true, height: 188, width: 335, paused: null, resizeMode: "contain" };
-    ({ assetUrl: obj13.videoURI, assetUrl: obj13.uri } = bottomSheetData);
+    ({ assetUrl: obj12.videoURI, assetUrl: obj12.uri } = bottomSheetData);
     size.src = { videoURI: null, uri: null };
     size.style = tmp.video;
     size.paused = stateFromStores;
-    let tmp14Result = closure_8(tmp5(tmp3[18]), size);
+    let tmp13Result = closure_8(tmp5(promotionId[17]), size);
     const obj8 = { videoURI: null, uri: null };
   } else {
     const obj9 = { source: null, style: null, resizeMode: "contain" };
     const obj10 = { uri: bottomSheetData.assetUrl };
     obj9.source = obj10;
     obj9.style = tmp.image;
-    tmp14Result = closure_8(tmp5(tmp3[19]), obj9);
+    tmp13Result = closure_8(tmp5(promotionId[18]), obj9);
   }
   const items4 = [
-    tmp14Result,
-    closure_8(markAsDismissed(promotionId[20]).Text, {
+    tmp13Result,
+    closure_8(markAsDismissed(promotionId[19]).Text, {
       style: tmp.header,
       color: "mobile-text-heading-primary",
       variant: "heading-lg/semibold",
-      children: bottomSheetData.header,
+      children: copy.header,
     }),
     ,
   ];
-  const obj12 = { style: tmp.body, color: "text-default", variant: "text-sm/normal", children: null };
-  const items5 = [bottomSheetData.body, " "];
-  let tmp14Result2 = null != helpArticleLinkProps;
-  if (tmp14Result2) {
+  const obj13 = { style: tmp.body, color: "text-default", variant: "body-sm/normal", children: null };
+  const items5 = [copy.body, " "];
+  let tmp13Result2 = null != helpArticleLink;
+  if (tmp13Result2) {
     const obj14 = {
       color: "text-link",
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       accessibilityRole: "link",
       onPress() {
-        return LinkingDefault.openURL(helpArticleLinkProps.url);
+        return LinkingDefault.openURL(helpArticleLink.url);
       },
-      children: helpArticleLinkProps.linkText,
+      children: helpArticleLink.linkText,
     };
-    tmp14Result2 = closure_8(tmp2(tmp3[20]).Text, obj14);
+    tmp13Result2 = closure_8(tmp2(promotionId[19]).Text, obj14);
   }
-  items5[2] = tmp14Result2;
-  obj12.children = items5;
-  items4[2] = closure_9(markAsDismissed(promotionId[20]).Text, obj12);
+  items5[2] = tmp13Result2;
+  obj13.children = items5;
+  items4[2] = closure_9(markAsDismissed(promotionId[19]).Text, obj13);
   const obj15 = { style: tmp.buttonContainer, children: null };
-  const button3 = bottomSheetData.button;
-  let copy;
+  let buttonCopy = copy.buttonCopy;
   const obj11 = {
     style: tmp.header,
     color: "mobile-text-heading-primary",
     variant: "heading-lg/semibold",
-    children: bottomSheetData.header,
+    children: copy.header,
   };
   obj7 = { uri: bottomSheetData.assetUrl };
-  tmp2Result2 = markAsDismissed(promotionId[17]);
-  if (button3 != null) {
-    copy = button3.copy;
+  tmp2Result = markAsDismissed(promotionId[16]);
+  if (buttonCopy == null) {
+    const intl = tmp2(promotionId[22]).intl;
+    buttonCopy = intl.string(tmp2(promotionId[22]).t.J61px0);
   }
-  if (copy == null) {
-    const intl = tmp2(tmp3[23]).intl;
-    copy = intl.string(tmp2(tmp3[23]).t.J61px0);
-  }
-  obj15.children = closure_8(bottomSheetData(promotionId[22]), { text: copy, onPress: callback1 });
+  obj15.children = closure_8(bottomSheetData(promotionId[21]), { text: buttonCopy, onPress: callback1 });
   items4[3] = closure_8(callback, obj15);
   obj6.children = items4;
   obj5.children = closure_9(callback, obj6);
-  return closure_8(markAsDismissed(promotionId[16]).BottomSheet, obj5);
+  return closure_8(markAsDismissed(promotionId[15]).BottomSheet, obj5);
 }

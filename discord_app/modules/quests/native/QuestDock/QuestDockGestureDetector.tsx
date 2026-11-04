@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockGestureDetector.tsx
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
 import useSafeAreaInsetsSharedValueDefault from "../../../safe_area/useSafeAreaInsetsSharedValue.native.tsx";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext.tsx";
@@ -108,8 +108,8 @@ function useQuestDockSwipeGesture() {
       state,
       restingQuestDockMode,
       QuestDockMode,
+      React5,
       React6,
-      React7,
       c1,
     ];
     c0 = undefined;
@@ -249,7 +249,7 @@ function useQuestDockSwipeGesture() {
       _mod1705.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,
-      React5,
+      metroImportDefault,
       QuestDockUtils.getQuestDockCollapsedWidth,
     ];
     c0 = undefined;
@@ -676,12 +676,12 @@ function useQuestDockSwipeGesture() {
   );
   return memo;
 }
-const QuestDockMode = fn(6901).QuestDockMode;
-const QuestDockConstants = fn(17215);
+const QuestDockMode = fn(6916).QuestDockMode;
+const QuestDockConstants = fn(17307);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
-  QUEST_DOCK_CLOSED_HEIGHT: metroRequire,
-  QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: closure_7,
+  QUEST_DOCK_CLOSED_HEIGHT: closure_6,
+  QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: metroImportDefault,
   QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: closure_8,
   QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: closure_9,
   QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: closure_10,

@@ -43,7 +43,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9279).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9296).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -87,12 +87,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = {
-              user,
-              guildId: "r",
-              size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: "/assets/modules/video_calls/native/images",
-            };
+            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -102,7 +97,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: "/assets/modules/video_calls/native/images",
+              cutout: null,
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>
@@ -122,12 +117,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = {
-              user,
-              guildId: "r",
-              size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: "/assets/modules/video_calls/native/images",
-            };
+            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -137,7 +127,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1187).AvatarSizes.XSMALL,
-              cutout: "/assets/modules/video_calls/native/images",
+              cutout: null,
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>
@@ -158,10 +148,10 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
     start: true,
     end: true,
   };
-  const obj5 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj5 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = require("util").intl;
   obj5.children = intl.string(require("util").t.TdEu5X);
-  obj4.label = jsx(require("Text/Text").Text, { variant: "text-sm/semibold", color: "text-default", children: null });
+  obj4.label = jsx(require("Text/Text").Text, { variant: "body-sm/semibold", color: "text-default", children: null });
   const intl2 = require("util").intl;
   obj4.accessibilityLabel = intl2.string(require("util").t.TdEu5X);
   obj4.onPress = navigateToFriends.navigateToFriends;

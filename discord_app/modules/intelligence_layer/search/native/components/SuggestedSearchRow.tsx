@@ -9,7 +9,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SmartSearchConstants = fn(14019);
+const SmartSearchConstants = fn(14105);
 ({ SUGGESTED_SEARCHES_WINDOW_SIZE: hasOwnProperty, SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT } = SmartSearchConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
@@ -57,9 +57,9 @@ export default noop.memo(function SuggestedSearchRow(suggestedSearch) {
       hasOwnProperty,
     );
   }, items);
-  let str2 = "redesign/channel-title/semibold";
+  let str2 = "heading-sm/semibold";
   if ("default" === str) {
-    str2 = "text-md/normal";
+    str2 = "body-md/normal";
   }
   let obj2 = { onPress: callback, accessibilityLabel: suggestedSearch.suggestedSearchText, label: null, icon: null };
   let compactLabel;

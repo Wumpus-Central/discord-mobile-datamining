@@ -7,7 +7,7 @@ import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef11111 from "../../../../../_runtime/metro/11111__.js";
+import _modDef11159 from "../../../../../_runtime/metro/11159__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
@@ -37,7 +37,7 @@ function PrivateChannelSubtitle(channel) {
   ];
   let tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
-    const obj3 = { style: tmp.subtitle, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
+    const obj3 = { style: tmp.subtitle, variant: "body-xs/medium", color: "text-overlay-light", children: " - " };
     tmp6Result = closure_1_10(Text_Text.Text, obj3);
   }
   items[1] = tmp6Result;
@@ -131,7 +131,7 @@ class VoiceChannelHeader {
       obj16 = {
         lineClamp: 1,
         lineBreakMode: "tail",
-        variant: "text-md/semibold",
+        variant: "body-md/semibold",
         color: "text-overlay-light",
         children: null,
       };
@@ -145,7 +145,7 @@ class VoiceChannelHeader {
       obj17 = {
         lineClamp: 1,
         lineBreakMode: "tail",
-        variant: "text-xs/medium",
+        variant: "body-xs/medium",
         color: "text-overlay-light",
         children: null,
       };
@@ -172,7 +172,7 @@ class VoiceChannelHeader {
 function AddMemberButton(onPress) {
   const obj = {
     onPress: onPress.onPress,
-    iconSource: _modDef11111,
+    iconSource: _modDef11159,
     iconStyle: closure_12().icons,
     accessibilityLabel: null,
   };
@@ -195,7 +195,7 @@ class IconButton {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
+({ Permissions: metroImportDefault, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);

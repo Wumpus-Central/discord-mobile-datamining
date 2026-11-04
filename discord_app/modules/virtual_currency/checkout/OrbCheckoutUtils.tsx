@@ -12,8 +12,8 @@ const EXTERNAL_PRODUCT_SKU_IDS = CollectiblesShopConstants.EXTERNAL_PRODUCT_SKU_
 const ConstraintReasonCode = OrderConstants.ConstraintReasonCode;
 const result = size.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutUtils.tsx");
 
-export function getOrbPriceFromPrices(prices, memo1) {
-  if (memo1) {
+export function getOrbPriceFromPrices(prices, isPremiumResult) {
+  if (isPremiumResult) {
     if (null != prices[React4.PREMIUM_TIER_2]) {
       let tmp2 = prices[React4.PREMIUM_TIER_2];
     }
@@ -53,23 +53,23 @@ export function getOrbCheckoutDisclaimerMessage(skuId) {
   items = [intl.format(util.t["5qdUrO"], obj), " ", stringResult];
   return items;
 }
-export function resolveOrbCheckoutErrorMessage(code, arg1) {
-  if (null == code) {
+export function resolveOrbCheckoutErrorMessage(orbRedemptionError, result) {
+  if (null == orbRedemptionError) {
     return null;
   } else {
     let keFvXM = dependencyMap;
     let OrderSigningFailedWithConstraintsError = OrderActionCreators.OrderSigningFailedWithConstraintsError;
-    if (!(code instanceof OrderSigningFailedWithConstraintsError)) {
-      if (code instanceof OrderActionCreators.OrderProcessingPendingError) {
+    if (!(orbRedemptionError instanceof OrderSigningFailedWithConstraintsError)) {
+      if (orbRedemptionError instanceof OrderActionCreators.OrderProcessingPendingError) {
         const intl5 = util.intl;
         let stringResult = intl5.string(util.t["2BmwgV"]);
-      } else if (code.code === BillingError.ErrorCodes.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE) {
+      } else if (orbRedemptionError.code === BillingError.ErrorCodes.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE) {
         const intl4 = util.intl;
         stringResult = intl4.string(util.t.keFvXM);
-      } else if (code.code === BillingError.ErrorCodes.ALREADY_PURCHASED) {
+      } else if (orbRedemptionError.code === BillingError.ErrorCodes.ALREADY_PURCHASED) {
         const intl3 = util.intl;
         stringResult = intl3.string(util.t.m371Mx);
-      } else if (code.code === BillingError.ErrorCodes.BILLING_ORDER_NOT_SIGNABLE) {
+      } else if (orbRedemptionError.code === BillingError.ErrorCodes.BILLING_ORDER_NOT_SIGNABLE) {
         const intl2 = util.intl;
         stringResult = intl2.string(util.t.ZHgEG7);
       } else {
@@ -77,7 +77,7 @@ export function resolveOrbCheckoutErrorMessage(code, arg1) {
         stringResult = intl.string(util.t.fqJZ11);
       }
     } else {
-      OrderSigningFailedWithConstraintsError = arg1;
+      OrderSigningFailedWithConstraintsError = result;
     }
     if (ConstraintReasonCode.INSUFFICIENT_ORB_BALANCE === OrderSigningFailedWithConstraintsError) {
       const intl9 = util.intl;

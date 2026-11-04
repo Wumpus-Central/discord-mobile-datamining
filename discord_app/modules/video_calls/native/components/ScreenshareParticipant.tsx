@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -77,7 +77,7 @@ export default function ScreenshareParticipant(participant) {
   const items4 = [closure_7(participant(onDoubleTap[10]).Text, obj4), ,];
   const obj5 = {
     style: tmp5.description,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "interactive-text-default",
     children: null,
   };

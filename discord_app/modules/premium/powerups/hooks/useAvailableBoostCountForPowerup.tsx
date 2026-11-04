@@ -6,10 +6,10 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5353);
+const GuildPowerupsConstants = fn(5354);
 ({
-  GuildPowerupType: metroRequire,
-  POWERUPS_INCLUDED_IN_LEVEL: closure_7,
+  GuildPowerupType: closure_6,
+  POWERUPS_INCLUDED_IN_LEVEL: metroImportDefault,
   LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_8,
 } = GuildPowerupsConstants);
 const size = fn(2);

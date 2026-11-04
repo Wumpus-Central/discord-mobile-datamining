@@ -47,12 +47,12 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_9(merged(7186).TableRowGroup, obj2);
+    obj.children = closure_9(merged(7201).TableRowGroup, obj2);
     return closure_9(View, obj);
   }
 }
 const View = fn(17).View;
-const isHexagonCampaignAppIcon = fn(10111).isHexagonCampaignAppIcon;
+const isHexagonCampaignAppIcon = fn(10159).isHexagonCampaignAppIcon;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
@@ -92,7 +92,7 @@ export default function AppIconRows(onSelect) {
       isPending: onSelect.pendingAppIconId === AppIconTypes.LimitedTimeAppIconIds.HEXAGON,
       onSelect,
     };
-    tmp12 = React7(HexagonCampaignAppIconSectionDefault, obj4);
+    tmp12 = React6(HexagonCampaignAppIconSectionDefault, obj4);
   }
   const items1 = [tmp12, ,];
   let tmp16 = null;
@@ -101,7 +101,7 @@ export default function AppIconRows(onSelect) {
     const intl3 = util.intl;
     obj5.title = intl3.string(util.t.anqaFd);
     obj5.onSelect = onSelect;
-    tmp16 = React7(BackwardsCompatibleAppIconRows, obj5);
+    tmp16 = React6(BackwardsCompatibleAppIconRows, obj5);
   }
   items1[1] = tmp16;
   let bottomUpsellPadding = !isPremiumResult;
@@ -109,9 +109,9 @@ export default function AppIconRows(onSelect) {
     bottomUpsellPadding = tmp.bottomUpsellPadding;
   }
   const obj6 = { children: null };
-  items1[2] = React7(View, {
+  items1[2] = React6(View, {
     style: bottomUpsellPadding,
-    children: React7(BackwardsCompatibleAppIconRows, {
+    children: React6(BackwardsCompatibleAppIconRows, {
       hasNitro: isPremiumResult,
       icons: officialAppIcons,
       currentAppIcon,

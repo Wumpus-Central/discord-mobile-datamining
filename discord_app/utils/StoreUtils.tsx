@@ -8,7 +8,7 @@ import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 import BillingInfoStore from "../stores/billing/BillingInfoStore.tsx";
 import PaymentSourceStore from "../stores/billing/PaymentSourceStore.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
-import allSettled_mod from "../../_runtime/06576_allSettled.js";
+import allSettled_mod from "../../_runtime/06591_allSettled.js";
 
 require = fn;
 let closure_10 = async function _waitForSubscriptionsToBeFetched() {
@@ -240,24 +240,24 @@ let closure_12 = async function _httpGetWithCountryCodeQuery(arg0) {
   }
 };
 const Constants = fn(1072);
-({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
+({ Endpoints: metroImportDefault, OperatingSystems: closure_8 } = Constants);
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
-const isMobile = fn(6072).isMobile;
+const isMobile = fn(6087).isMobile;
 let tmp4 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(6072).isTablet;
+  tmp4 = !fn(6087).isTablet;
 }
 if (tmp4) {
-  tmp4 = -1 !== fn(5991).getChromeVersion();
-  let obj2 = fn(5991);
+  tmp4 = -1 !== fn(6005).getChromeVersion();
+  let obj2 = fn(6005);
 }
 let closure_9 = tmp4;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/StoreUtils.tsx");
 
 export const SUPPORTS_WEBP = tmp4;
-export function getAssetURL(application_id, mimeType, size, mp4) {
+export function getAssetURL(applicationId, mimeType, size, mp4) {
   let str = mp4;
   if (null == mp4) {
     if (typeof mimeType === "string") {
@@ -279,11 +279,11 @@ export function getAssetURL(application_id, mimeType, size, mp4) {
   }
   if (null != CDN_HOST) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "" + "https:" + "//" + CDN_HOST + "/app-assets/" + application_id + "/store/" + id + "." + str;
+    let combined = "" + "https:" + "//" + CDN_HOST + "/app-assets/" + applicationId + "/store/" + id + "." + str;
   } else {
     const _window = window;
     const _HermesInternal = HermesInternal;
-    combined = "" + "https:" + window.GLOBAL_ENV.API_ENDPOINT + React5.STORE_ASSET(application_id, id, str);
+    combined = "" + "https:" + window.GLOBAL_ENV.API_ENDPOINT + metroImportDefault.STORE_ASSET(applicationId, id, str);
   }
   let sum = combined;
   if (null != size) {

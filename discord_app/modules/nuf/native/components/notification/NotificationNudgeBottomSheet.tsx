@@ -7,8 +7,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const NotificationPermissionConstants = fn(14105);
-({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: metroRequire } = NotificationPermissionConstants);
+const NotificationPermissionConstants = fn(14191);
+({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: closure_6 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -93,7 +93,7 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
     }),
     closure_9(actionLocation(markAsDismissed[13]).Text, {
       style: tmp.body,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       children: body,
     }),

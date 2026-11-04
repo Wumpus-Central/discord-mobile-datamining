@@ -17,7 +17,7 @@ let obj2 = {
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: nativeDefault.colors.TEXT_LINK,
-    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
@@ -31,14 +31,14 @@ const obj3 = {
   borderStyle: "solid",
   borderWidth: 1,
   borderColor: nativeDefault.colors.TEXT_LINK,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
   flexDirection: "row",
   alignItems: "center",
   gap: 8,
 };
 obj2.infoBoxWarning = {
   borderColor: nativeDefault.colors.ICON_FEEDBACK_WARNING,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING,
 };
 obj2.infoText = { flex: 1 };
 let closure_6 = createStyles.createStyles(obj2);
@@ -64,7 +64,7 @@ export default function InfoBox(look) {
   const items2 = [style, ...{ [closure_1_7.INFO]: items, [closure_1_7.WARNING]: items1 }[INFO]];
   obj4.style = items2;
   const items3 = [obj[INFO]];
-  obj5 = { style: tmp2.infoText, variant: "text-sm/semibold", children };
+  obj5 = { style: tmp2.infoText, variant: "body-sm/semibold", children };
   items3[1] = React4(Text_Text.Text, obj5);
   obj4.children = items3;
   return hasOwnProperty(View, obj4);

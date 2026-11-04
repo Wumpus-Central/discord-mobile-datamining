@@ -9,13 +9,13 @@ import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 require = fn;
 const View = fn(17).View;
 const ThemeTypes = fn(1072).ThemeTypes;
-const FramesConstants = fn(6967);
+const FramesConstants = fn(6982);
 ({ getFrameLaunchParams: closure_8, isLaunched: closure_9, FrameLayoutModes } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const presentation = {
   layoutMode: FrameLayoutModes.FOCUSED,
-  portraitSafeAreasConfig: fn(19158).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG,
+  portraitSafeAreasConfig: fn(19261).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG,
 };
 const createStyles = fn(5141);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, wrapper: null, header: null };
@@ -32,7 +32,7 @@ let rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(5777).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT,
+  height: fn(5791).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",

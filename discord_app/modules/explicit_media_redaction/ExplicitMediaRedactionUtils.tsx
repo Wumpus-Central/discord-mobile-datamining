@@ -14,10 +14,10 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7590);
+const ExplicitMediaRedactionConstants = fn(7606);
 ({
-  EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire,
-  EXPLICIT_MEDIA_MIN_WIDTH: closure_7,
+  EXPLICIT_MEDIA_MIN_HEIGHT: closure_6,
+  EXPLICIT_MEDIA_MIN_WIDTH: metroImportDefault,
   MESSAGE_SCAN_TIMEOUT: closure_8,
 } = ExplicitMediaRedactionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -312,7 +312,7 @@ export function trackExplicitMediaScanComplete(channelId) {
 export function isObscuredMediaBelowConstraints(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
   if (tmp) {
-    let tmp3 = arg0 <= React5;
+    let tmp3 = arg0 <= metroImportDefault;
     if (!tmp3) {
       tmp3 = arg1 <= timestampProducer;
     }

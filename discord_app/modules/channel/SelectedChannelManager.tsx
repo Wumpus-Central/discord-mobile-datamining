@@ -11,7 +11,7 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 require = fn;
 const findFirstVoiceChannelId = fn(5044).findFirstVoiceChannelId;
 const Constants = fn(1072);
-({ ChannelTypes: closure_7, Routes: closure_8, ME: closure_9, NULL_STRING_GUILD_ID: closure_10 } = Constants);
+({ ChannelTypes: metroImportDefault, Routes: closure_8, ME: closure_9, NULL_STRING_GUILD_ID: closure_10 } = Constants);
 class SelectedChannelManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -26,7 +26,7 @@ class SelectedChannelManager extends tmp3 {
 const prototype = SelectedChannelManager.prototype;
 prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   guild = guild.guild;
-  const channelId = SelectedChannelStore.getChannelId(React7);
+  const channelId = SelectedChannelStore.getChannelId(React6);
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (guild.id === channelId) {
     transitionToGuild.transitionToGuild(guild.id);
@@ -48,7 +48,7 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const originChannelId = channel.originChannelId;
     const channelId = SelectedChannelStore.getChannelId(closure_1_10);
     if (tmp) {
-      router_utils.transitionTo(React6.CHANNEL(React7, channel.id));
+      router_utils.transitionTo(React5.CHANNEL(React6, channel.id));
     }
     tmp = null == SelectedGuildStore.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {

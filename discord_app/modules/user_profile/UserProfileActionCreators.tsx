@@ -67,13 +67,13 @@ let closure_11 = async function _saveProfileChanges(arg0) {
             DispatcherDefault.dispatch(obj4);
             if (null != bannerSurface) {
               const obj6 = {
-                url: React5.USER_GUILD_PROFILE(bannerSurface, React6),
+                url: metroImportDefault.USER_GUILD_PROFILE(bannerSurface, React5),
                 bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_GUILD_PROFILE_BANNER,
               };
               let obj7 = obj6;
             } else {
               obj7 = {
-                url: React5.USER_PROFILE(React6),
+                url: metroImportDefault.USER_PROFILE(React5),
                 bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_BANNER,
               };
             }
@@ -152,7 +152,12 @@ let closure_11 = async function _saveProfileChanges(arg0) {
   }
 };
 const Constants = fn(1072);
-({ ComponentActions: hasOwnProperty, AnalyticEvents: metroRequire, Endpoints: closure_7, ME: closure_8 } = Constants);
+({
+  ComponentActions: hasOwnProperty,
+  AnalyticEvents: closure_6,
+  Endpoints: metroImportDefault,
+  ME: closure_8,
+} = Constants);
 const PremiumConstants = fn(1387);
 ({ AnalyticsPremiumFeatureTiers: closure_9, AnalyticsPremiumFeatureNames: closure_10 } = PremiumConstants);
 const size = fn(2);

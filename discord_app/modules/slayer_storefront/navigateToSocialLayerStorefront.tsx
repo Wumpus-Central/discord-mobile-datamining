@@ -156,7 +156,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
   }
 };
 const Constants = fn(1072);
-({ GuildFeatures: metroRequire, Routes: closure_7 } = Constants);
+({ GuildFeatures: closure_6, Routes: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/navigateToSocialLayerStorefront.tsx");
 
@@ -180,7 +180,9 @@ export default function navigateToSocialLayerStorefront(arg0) {
   }
   if (null != applicationIdFromGuildId) {
     resolved = Promise.resolve(
-      router_utils.transitionTo(React5.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)),
+      router_utils.transitionTo(
+        metroImportDefault.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug),
+      ),
     );
   } else {
     const obj2 = { guildId: socialLayerStorefrontGuildId, pageIndex, invite, skuId, slug };

@@ -40,7 +40,7 @@ export default function CheckpointStatsIntroScreen(title) {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.title, children: null };
   items = [icon];
-  const obj4 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
+  const obj4 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const tmp2 = CheckpointScreenDefault;
   obj4.children = title.toLocaleUpperCase();
   items[1] = React3(CheckpointTextDefault, obj4);

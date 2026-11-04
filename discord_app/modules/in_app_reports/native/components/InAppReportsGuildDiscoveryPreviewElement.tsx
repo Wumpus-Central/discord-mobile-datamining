@@ -12,7 +12,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
@@ -58,7 +58,7 @@ export default function GuildDiscoveryPreviewElement(guild) {
     hasOwnProperty(tmp4, obj7),
     hasOwnProperty(Text_Text.Text, {
       style: tmp.guildName,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       children: guild.name,
     }),

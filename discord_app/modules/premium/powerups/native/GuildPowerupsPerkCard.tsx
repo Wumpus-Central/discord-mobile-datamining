@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildPowerupsImageDefault from "GuildPowerupsImage.tsx";
 import GuildPowerupsCardFooter from "GuildPowerupsCardFooter.tsx";
@@ -80,7 +80,7 @@ export default function GuildPowerupsPerkCard(arg0) {
   const obj6 = { style: tmp2.contentContainer, children: null };
   const obj7 = { style: tmp2.headerContainer, children: null };
   const items3 = [
-    React4(Text_Text.Text, { color: "text-strong", variant: "experimental/heading-md/semibold", children: title }),
+    React4(Text_Text.Text, { color: "text-strong", variant: "heading-md/semibold", children: title }),
     React4(Text_Text.Text, { variant: "body-sm/normal", children: description }),
   ];
   obj7.children = items3;

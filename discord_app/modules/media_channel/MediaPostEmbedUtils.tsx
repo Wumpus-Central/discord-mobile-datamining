@@ -13,7 +13,7 @@ import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ GuildFeatures: metroRequire, MessageAttachmentFlags: closure_7 } = Constants);
+({ GuildFeatures: closure_6, MessageAttachmentFlags: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
 

@@ -21,13 +21,13 @@ function SizeRow(children) {
   const obj = { direction: "horizontal", justify: "space-between", spacing: nativeDefault.space.PX_16, children: null };
   items = [
     timestampProducer(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-subtle",
       style: indented ? iter.nestedLabel : iter.label,
       children: children.label,
     }),
   ];
-  const obj3 = { variant: "text-sm/semibold", tabularNumbers: true, style: iter.value, children: null };
+  const obj3 = { variant: "body-sm/semibold", tabularNumbers: true, style: iter.value, children: null };
   if (null != bytes) {
     let formatKbSizeResult = FileSizeUtils.formatKbSize(bytes);
     const tmp2Result = FileSizeUtils;
@@ -38,7 +38,7 @@ function SizeRow(children) {
   obj3.children = formatKbSizeResult;
   items[1] = timestampProducer(Text_Text.Text, obj3);
   obj.children = items;
-  return React5(Stack_Stack.Stack, obj);
+  return metroImportDefault(Stack_Stack.Stack, obj);
 }
 function DiskUsageResults(metricKitSize) {
   ({ report, kvDatabaseUsage: require } = metricKitSize);
@@ -122,7 +122,7 @@ function DiskUsageResults(metricKitSize) {
     isIOSResult = closure_6(SizeRow, obj5);
   }
   items[1] = isIOSResult;
-  const obj6 = { variant: "heading-sm/semibold", children: null };
+  const obj6 = { variant: "heading-xs/semibold", children: null };
   const intl22 = require("util").intl;
   obj6.children = intl22.string(require("util").t.CoudPr);
   let items1 = [closure_6(require("Text/Text").Heading, obj6), ,];
@@ -156,10 +156,10 @@ function DiskUsageResults(metricKitSize) {
       obj2.bytes = free;
       items1[1] = timestampProducer(SizeRow, obj2);
       obj3.children = items1;
-      tmpResult = React5(React6, obj3);
+      tmpResult = metroImportDefault(React5, obj3);
     }
     children[1] = tmpResult;
-    return React5(noop.Fragment, { children }, root);
+    return metroImportDefault(noop.Fragment, { children }, root);
   });
   const complete = report.complete;
   let tmp4Result = !complete;
@@ -170,7 +170,7 @@ function DiskUsageResults(metricKitSize) {
     tmp4Result = report.unmeasuredRootCount > 0;
   }
   if (tmp4Result) {
-    const obj7 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+    const obj7 = { variant: "body-sm/normal", color: "text-feedback-warning", children: null };
     const intl23 = require("util").intl;
     ({ errorCount: obj9.errors, unmeasuredRootCount: obj9.unavailable } = report);
     obj7.children = intl23.formatToPlainString(require("util").t.kt7tAT, { errors: null, unavailable: null });
@@ -183,7 +183,7 @@ function DiskUsageResults(metricKitSize) {
   return closure_7(require("Stack/Stack").Stack, obj3);
 }
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   label: { flex: 1 },
@@ -196,13 +196,13 @@ const result = size.fileFinishedImporting("modules/user_settings/defs/native/Cac
 
 export default function CacheActionsDiskUsageSection(state) {
   state = state.state;
-  const obj = { variant: "heading-md/semibold", children: null };
+  const obj = { variant: "heading-sm/semibold", children: null };
   const intl = util.intl;
   obj.children = intl.string(util.t.m8BOpo);
   const children = [timestampProducer(Text_Text.Heading, obj), ,];
   let tmp4Result = "loading" === state.status;
   if (tmp4Result) {
-    const obj2 = { variant: "text-sm/normal", children: null };
+    const obj2 = { variant: "body-sm/normal", children: null };
     const intl2 = util.intl;
     obj2.children = intl2.string(util.t.Ynmbie);
     tmp4Result = timestampProducer(Text_Text.Text, obj2);
@@ -210,7 +210,7 @@ export default function CacheActionsDiskUsageSection(state) {
   const items1 = [tmp4Result, ,];
   let tmp4Result3 = "error" === state.status;
   if (tmp4Result3) {
-    const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
+    const obj3 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = util.intl;
     obj3.children = intl3.string(util.t["hj/3qI"]);
     tmp4Result3 = timestampProducer(Text_Text.Text, obj3);
@@ -223,7 +223,7 @@ export default function CacheActionsDiskUsageSection(state) {
     const obj5 = { report: null, metricKitSize: null, kvDatabaseUsage: null };
   }
   items1[2] = tmp4Result4;
-  children[1] = React5(Card.Card, { children: items1 });
+  children[1] = metroImportDefault(Card.Card, { children: items1 });
   let isIOSResult = "success" === state.status;
   if (isIOSResult) {
     isIOSResult = PlatformUtils.isIOS();
@@ -234,7 +234,7 @@ export default function CacheActionsDiskUsageSection(state) {
     isIOSResult = timestampProducer(CacheActionsStorageDiagnosticsDefault, obj6);
   }
   children[2] = isIOSResult;
-  return React5(Stack_Stack.Stack, { children });
+  return metroImportDefault(Stack_Stack.Stack, { children });
 }
 export function useDiskUsageMeasurement() {
   closure_2 = async function _handleCalculateSize() {

@@ -42,18 +42,18 @@ function CollectionItem(arg0) {
   const items1 = [tmp11];
   const obj7 = { style: tmp.itemContent, children: null };
   if ("value" === singleStringOrSkeleton.status) {
-    const obj8 = { variant: "text-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
+    const obj8 = { variant: "body-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
     let tmp12Result = tmp12(Text_Text.Text, obj8);
   } else {
     tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       widthChars: 6,
     });
   }
   const items2 = [tmp12Result];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj9 = {
-      variant: "text-xxs/medium",
+      variant: "footnote/medium",
       color: "text-subtle",
       lineClamp: 2,
       children: singleStringOrSkeleton1.text,
@@ -61,7 +61,7 @@ function CollectionItem(arg0) {
     let tmp12Result2 = tmp12(Text_Text.Text, obj9);
   } else {
     tmp12Result2 = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
-      variant: "text-xxs/medium",
+      variant: "footnote/medium",
       widthChars: 10,
     });
   }

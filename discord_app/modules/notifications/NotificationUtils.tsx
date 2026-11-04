@@ -9,7 +9,7 @@ import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 require = fn;
 const UserNotificationSettings = fn(1072).UserNotificationSettings;
 const UserSettingsConstants = fn(1082);
-({ MuteUntilSeconds: metroRequire, ChannelNotificationSettingsFlags: closure_7 } = UserSettingsConstants);
+({ MuteUntilSeconds: closure_6, ChannelNotificationSettingsFlags: metroImportDefault } = UserSettingsConstants);
 let closure_8 = { ignoreMute: false, ignoreUnreadSetting: true, ignoreNotificationSetting: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/NotificationUtils.tsx");

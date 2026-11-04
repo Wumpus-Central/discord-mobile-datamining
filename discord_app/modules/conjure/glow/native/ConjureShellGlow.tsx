@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import ConjureDitherDefault from "ConjureDither.android.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
 
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const PlatformUtils = fn(1377);
@@ -209,25 +209,25 @@ export default function ConjureShellGlow(thinking) {
       num = 1;
     }
     const result = _undefined6.set(
-      _undefined(5377).withTiming(num, { duration: 700, easing: bezierResult }, "animate-always"),
+      _undefined(5378).withTiming(num, { duration: 700, easing: bezierResult }, "animate-always"),
     );
-    const obj = _undefined(5377);
+    const obj = _undefined(5378);
     let num2 = 0;
     if (_undefined) {
       num2 = 1;
     }
     const result1 = sharedValue1.set(
-      _undefined(5377).withTiming(num2, { duration: 700, easing: bezierResult }, "animate-always"),
+      _undefined(5378).withTiming(num2, { duration: 700, easing: bezierResult }, "animate-always"),
     );
-    const tmpResult = _undefined(5377);
+    const tmpResult = _undefined(5378);
     let num3 = 0;
     if (_undefined) {
       num3 = c13;
     }
     const result2 = sharedValue2.set(
-      _undefined(5377).withTiming(num3, { duration: 400, easing: bezierResult }, "animate-always"),
+      _undefined(5378).withTiming(num3, { duration: 400, easing: bezierResult }, "animate-always"),
     );
-    const tmpResult2 = _undefined(5377);
+    const tmpResult2 = _undefined(5378);
   }, items4);
   const items5 = [sharedValue4, sharedValue5, stateFromStores, thinking];
   const effect1 = obj4.useEffect(() => {
@@ -243,19 +243,19 @@ export default function ConjureShellGlow(thinking) {
       const obj3 = { duration: 24000, easing: null };
       const Easing = _undefined(1652).Easing;
       obj3.easing = Easing.inOut(_undefined(1652).Easing.ease);
-      const result2 = sharedValue4.set(obj.withRepeat(_undefined(5377).withTiming(1, obj3), -1, true));
-      const obj2 = _undefined(5377);
+      const result2 = sharedValue4.set(obj.withRepeat(_undefined(5378).withTiming(1, obj3), -1, true));
+      const obj2 = _undefined(5378);
       const obj4 = _undefined(1652);
       const obj6 = { duration: 12000, easing: null };
       const Easing2 = _undefined(1652).Easing;
       obj6.easing = Easing2.inOut(_undefined(1652).Easing.ease);
-      const result3 = sharedValue5.set(obj4.withRepeat(_undefined(5377).withTiming(1, obj6), -1, true));
+      const result3 = sharedValue5.set(obj4.withRepeat(_undefined(5378).withTiming(1, obj6), -1, true));
       const fn = () => {
         c0(1652).cancelAnimation(sharedValue4);
         const obj = c0(1652);
         c0(1652).cancelAnimation(sharedValue5);
       };
-      const obj5 = _undefined(5377);
+      const obj5 = _undefined(5378);
     }
     return fn;
   }, items5);
@@ -266,16 +266,16 @@ export default function ConjureShellGlow(thinking) {
         const result = sharedValue3.set(0);
         const obj = _undefined(1652);
         const obj3 = { duration: 5500, easing: _undefined(1652).Easing.ease };
-        const result1 = sharedValue3.set(obj.withRepeat(_undefined(5377).withTiming(1, obj3), -1, false));
+        const result1 = sharedValue3.set(obj.withRepeat(_undefined(5378).withTiming(1, obj3), -1, false));
         const fn = () => c0(c2[12]).cancelAnimation(sharedValue3);
-        const obj2 = _undefined(5377);
+        const obj2 = _undefined(5378);
       }
       return fn;
     }
     _undefined(1652).cancelAnimation(sharedValue3);
     const obj4 = _undefined(1652);
-    const result2 = sharedValue3.set(_undefined(5377).withTiming(0, { duration: 700 }));
-    const obj5 = _undefined(5377);
+    const result2 = sharedValue3.set(_undefined(5378).withTiming(0, { duration: 700 }));
+    const obj5 = _undefined(5378);
   }, items6);
   const tmp2Result14 = _undefined(1652);
   const items7 = [closure_22, sharedValue, pulseAt, sharedValue3, height];
@@ -440,7 +440,7 @@ export default function ConjureShellGlow(thinking) {
     obj16.style = c5.absoluteFill;
     obj16.maskElement = tmp55;
     obj16.children = tmp57;
-    tmp50Result5 = tmp50(tmp51(7164), obj16);
+    tmp50Result5 = tmp50(tmp51(7179), obj16);
   }
   obj14.children = tmp50Result5;
   const items20 = [sharedValue4(_modDef1652.View, obj14), ,];
@@ -452,7 +452,7 @@ export default function ConjureShellGlow(thinking) {
     let tmp50Result6 = tmp50Result;
     if (!closure_12) {
       const obj18 = { style: tmp62.absoluteFill, maskElement: tmp55, children: tmp50Result };
-      tmp50Result6 = tmp50(tmp51(7164), obj18);
+      tmp50Result6 = tmp50(tmp51(7179), obj18);
     }
     obj17.children = tmp50Result6;
     tmp50Result7 = tmp50(tmp51(1652).View, obj17);
@@ -464,7 +464,7 @@ export default function ConjureShellGlow(thinking) {
     const items22 = [tmp.band, animatedStyle];
     obj19.style = items22;
     const obj20 = { style: tmp.fill, colors: memo, locations, start, end };
-    obj19.children = tmp50(tmp51(5710), obj20);
+    obj19.children = tmp50(tmp51(5723), obj20);
     tmp50Result8 = tmp50(tmp51(1652).View, obj19);
   }
   items20[2] = tmp50Result8;

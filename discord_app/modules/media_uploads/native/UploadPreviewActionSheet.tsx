@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7825).DraftType;
+({ Image: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const DraftType = fn(7841).DraftType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5397).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -199,13 +199,13 @@ export default function UploadPreviewActionSheet(onAdd) {
     },
     children: null,
   };
-  const items5 = [width(onAdd(onRemove[25]).Text, { variant: "text-md/semibold", children: item.filename }), , ,];
+  const items5 = [width(onAdd(onRemove[25]).Text, { variant: "body-md/semibold", children: item.filename }), , ,];
   const obj7 = { style: tmp.imageWrap, children: null };
   const obj8 = { style: null, children: null };
   const items6 = [tmp.imageContainer, { width: size.width, height: size.height }];
   obj8.style = items6;
   const obj4 = { padding: onEdit(onRemove[8]).space.PX_16, paddingBottom: bottom };
-  const obj6 = { variant: "text-md/semibold", children: item.filename };
+  const obj6 = { variant: "body-md/semibold", children: item.filename };
   if (tmp6Result.isIOS()) {
     if (isVideo) {
       const uri = item.uri;

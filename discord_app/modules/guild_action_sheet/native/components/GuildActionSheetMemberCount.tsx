@@ -72,7 +72,7 @@ export default noop.memo(function MemberCount(arg0) {
     obj4.children = React3(View, obj5);
     const items2 = [React3(View, obj4)];
     if (textVariant == null) {
-      textVariant = "text-sm/normal";
+      textVariant = "body-sm/normal";
     }
     const obj6 = { variant: textVariant, color: null, lineClamp: 1, style: null, children: null };
     if (color == null) {

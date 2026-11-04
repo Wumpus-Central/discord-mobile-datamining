@@ -9,7 +9,7 @@ import ThemeStore from "../ThemeStore.tsx";
 
 require = fn;
 const ThemeConstants = fn(1195);
-({ SystemTheme: hasOwnProperty, SystemThemeState: metroRequire } = ThemeConstants);
+({ SystemTheme: hasOwnProperty, SystemThemeState: closure_6 } = ThemeConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx");
 

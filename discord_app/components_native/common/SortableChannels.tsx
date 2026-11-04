@@ -8,11 +8,11 @@ get_ActivityIndicator = fn(17);
   View: c3,
   Animated: closure_4,
   PanResponder: hasOwnProperty,
-  SectionList: metroRequire,
+  SectionList: closure_6,
   StyleSheet,
 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
+({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);
 const createElement = fn(19).createElement;
 let closure_10 = 24 + StyleSheet.hairlineWidth;
 let closure_11 = apply.memoize((arr) => {
@@ -106,7 +106,7 @@ Row.prototype["render"] = function render() {
   }
   items1[2] = tmp9;
   obj4.children = items1;
-  return React5(React3, obj4);
+  return metroImportDefault(React3, obj4);
 };
 const Component2 = noop.Component;
 class SortRow extends Component2 {
@@ -156,7 +156,7 @@ SortRow.prototype["render"] = function render() {
   items[2] = pan.getLayout();
   obj.style = items;
   obj.children = renderItem(rowData.data, true);
-  return React6(RN.View, obj);
+  return React5(RN.View, obj);
 };
 const Component3 = noop.Component;
 class SortableChannels extends Component3 {
@@ -313,7 +313,7 @@ class SortableChannels extends Component3 {
           obj = { style: null };
           const obj2 = { height: frameHeight };
           obj.style = obj2;
-          renderActiveDividerResult = React6(React3, obj);
+          renderActiveDividerResult = React5(React3, obj);
         }
         return renderActiveDividerResult;
       }
@@ -654,9 +654,9 @@ prototype["render"] = function render() {
     return key.key;
   };
   obj3.getItemLayout = self.getItemLayout;
-  items = [React6(timestampProducer, obj3), self.renderActive()];
+  items = [React5(timestampProducer, obj3), self.renderActive()];
   obj.children = items;
-  return React5(React3, obj);
+  return metroImportDefault(React3, obj);
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/SortableChannels.tsx");

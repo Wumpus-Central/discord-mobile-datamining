@@ -29,7 +29,6 @@ function deleteNonce(nonce) {
   }
 }
 const result = 5 * DurationsDefault.Millis.MINUTE;
-const metroRequire = result;
 const result1 = 10 * DurationsDefault.Millis.SECOND;
 const dependencyMap = {};
 const dependencyMap2 = {};
@@ -280,7 +279,7 @@ obj = {
       interactionId: applicationId.id,
       customId: applicationId.customId,
       channelId: applicationId.channelId,
-      modalKey: "fill",
+      modalKey: "filter",
     };
     if (null != nonce) {
       if (null != dependencyMap[nonce]) {

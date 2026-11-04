@@ -29,7 +29,7 @@ export default function ConjureTipCallout(onDismiss) {
   onDismiss = onDismiss.onDismiss;
   ({ icon, children } = onDismiss);
   const tmp = closure_7();
-  const obj = { icon, tone: "brand", firstLine: "text-md/semibold", firstLineInset, children: null };
+  const obj = { icon, tone: "brand", firstLine: "body-md/semibold", firstLineInset, children: null };
   const obj2 = { style: tmp.card, children: null };
   items = [children];
   let tmp2Result = null;
@@ -57,7 +57,7 @@ export function ConjureTipTitle(children) {
   return React4(View, {
     style: closure_7().title,
     children: React4(Text_Text.Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "text-strong",
       accessibilityRole: "header",
       children: children.children,
@@ -65,7 +65,7 @@ export function ConjureTipTitle(children) {
   });
 }
 export function ConjureTipBody(children) {
-  return React4(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: children.children });
+  return React4(Text_Text.Text, { variant: "body-sm/normal", color: "text-muted", children: children.children });
 }
 export function ConjureTipActions(children) {
   return React4(View, { style: closure_7().actions, children: children.children });

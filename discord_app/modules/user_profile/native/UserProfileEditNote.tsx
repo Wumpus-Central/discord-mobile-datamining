@@ -8,7 +8,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const NOTE_MAX_LENGTH = fn(1072).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const size = fn(2);
@@ -65,7 +65,7 @@ export default function UserProfileEditNote(userId) {
             if (closure_5 == null) {
               str = "";
             }
-            closure_1_1(11545)({
+            closure_1_1(11595)({
               location: "UserProfileEditNote",
               hasUnsavedChanges: str !== closure_6,
               onReset() {
@@ -106,7 +106,7 @@ export default function UserProfileEditNote(userId) {
     navigation.setOptions(obj);
   }, items2);
   const obj3 = { contentContainerStyle: tmp.contentContainer, keyboardShouldPersistTaps: "always", children: null };
-  const obj4 = { variant: "text-sm/semibold", children: null };
+  const obj4 = { variant: "body-sm/semibold", children: null };
   let intl = tmp2(tmp3[12]).intl;
   obj4.children = intl.string(userId(onClose[12]).t["mQKv+v"]);
   const items3 = [closure_7(userId(onClose[13]).Text, obj4)];

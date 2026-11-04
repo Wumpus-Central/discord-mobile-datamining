@@ -9,9 +9,9 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_5 = fn(9957).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
+let closure_5 = fn(9975).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
 const Constants = fn(1072);
-({ SearchTokenTypes: metroRequire, AnalyticEvents: closure_7 } = Constants);
+({ SearchTokenTypes: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/tracking/Tracking.tsx");
 
@@ -38,7 +38,7 @@ export default {
       type = channel.type;
     }
     obj4.channel_type = type;
-    obj3.trackWithMetadata(React5.SEARCH_OPENED_MOBILE, obj4);
+    obj3.trackWithMetadata(metroImportDefault.SEARCH_OPENED_MOBILE, obj4);
   },
   trackSearchStarted(searchContext) {
     searchContext = searchContext.searchContext;
@@ -71,7 +71,7 @@ export default {
       obj5.channel_type = type;
       obj5.search_query_length = str.trim().length;
       obj5.search_query_content_length = str2.trim().length;
-      obj4.trackWithMetadata(React5.SEARCH_STARTED_MOBILE, obj5);
+      obj4.trackWithMetadata(metroImportDefault.SEARCH_STARTED_MOBILE, obj5);
     }
   },
   trackSearchResultClicked(arg0) {
@@ -129,7 +129,7 @@ export default {
         type1 = channel.type;
       }
       obj5.channel_type = type1;
-      obj4.trackWithMetadata(React5.SEARCH_RESULT_CLICKED_MOBILE, obj5);
+      obj4.trackWithMetadata(metroImportDefault.SEARCH_RESULT_CLICKED_MOBILE, obj5);
     }
   },
   trackSearchResultReturned(searchContext) {
@@ -191,7 +191,7 @@ export default {
         type = channel.type;
       }
       obj5.channel_type = type;
-      obj4.trackWithMetadata(React5.SEARCH_RESULT_RETURNED_MOBILE, obj5);
+      obj4.trackWithMetadata(metroImportDefault.SEARCH_RESULT_RETURNED_MOBILE, obj5);
       const SearchResultExactCountEnabled = UserSettings.SearchResultExactCountEnabled;
     }
   },
@@ -226,7 +226,7 @@ export default {
         type = channel.type;
       }
       obj5.channel_type = type;
-      obj4.trackWithMetadata(React5.SEARCH_EMPTY_RESULT_MOBILE, obj5);
+      obj4.trackWithMetadata(metroImportDefault.SEARCH_EMPTY_RESULT_MOBILE, obj5);
     }
   },
   trackSearchEmptyMessageResult(searchContext) {
@@ -260,7 +260,7 @@ export default {
         type = channel.type;
       }
       obj5.channel_type = type;
-      obj4.trackWithMetadata(React5.SEARCH_EMPTY_MESSAGE_RESULT_MOBILE, obj5);
+      obj4.trackWithMetadata(metroImportDefault.SEARCH_EMPTY_MESSAGE_RESULT_MOBILE, obj5);
     }
   },
   trackSearchClosed(searchContext) {
@@ -283,7 +283,7 @@ export default {
     obj2.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
     obj2.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
     obj2.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
-    obj.trackWithMetadata(React5.SEARCH_V2_INDEXING_VIEWED, obj2);
+    obj.trackWithMetadata(metroImportDefault.SEARCH_V2_INDEXING_VIEWED, obj2);
   },
   trackSearchHistoryClicked(searchContext) {
     searchContext = searchContext.searchContext;
@@ -305,7 +305,7 @@ export default {
     }
     obj2.search_result_channel_type = type;
     obj2.search_history_type = closure_5[searchContext.searchHistoryItemType];
-    obj.trackWithMetadata(React5.SEARCH_V2_HISTORY_CLICKED, obj2);
+    obj.trackWithMetadata(metroImportDefault.SEARCH_V2_HISTORY_CLICKED, obj2);
   },
   trackSuggestedSearchClicked(searchContext) {
     searchContext = searchContext.searchContext;
@@ -325,7 +325,7 @@ export default {
       type = channel.type;
     }
     obj2.search_result_channel_type = type;
-    obj.trackWithMetadata(React5.SEARCH_V2_SUGGESTED_CLICKED, obj2);
+    obj.trackWithMetadata(metroImportDefault.SEARCH_V2_SUGGESTED_CLICKED, obj2);
   },
   trackSearchFilterAdd(location) {
     ({ searchContext, searchTokenType } = location);
@@ -366,7 +366,7 @@ export default {
     }
     obj2.search_filter_type = str;
     obj2.location = location.location;
-    obj.trackWithMetadata(React5.SEARCH_V2_FILTER_ADD, obj2);
+    obj.trackWithMetadata(metroImportDefault.SEARCH_V2_FILTER_ADD, obj2);
   },
   trackSearchFilterRemove(isDefault) {
     ({ searchContext, searchTokenType } = isDefault);
@@ -407,7 +407,7 @@ export default {
     }
     obj2.search_filter_type = str;
     obj2.is_default_search_filter = isDefault.isDefault;
-    obj.trackWithMetadata(React5.SEARCH_V2_FILTER_REMOVE, obj2);
+    obj.trackWithMetadata(metroImportDefault.SEARCH_V2_FILTER_REMOVE, obj2);
   },
   trackSearchTabSelected(searchContext) {
     searchContext = searchContext.searchContext;
@@ -417,7 +417,7 @@ export default {
     obj2.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
     obj2.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
     obj2.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-    obj.trackWithMetadata(React5.SEARCH_V2_TAB_SELECTED, obj2);
+    obj.trackWithMetadata(metroImportDefault.SEARCH_V2_TAB_SELECTED, obj2);
   },
   trackSearchJumpToMessage(arg0) {
     ({ searchContext, channelId } = arg0);
@@ -441,6 +441,6 @@ export default {
     }
     obj2.search_result_channel_type = type;
     obj2.search_result_channel_id = channelId;
-    obj.trackWithMetadata(React5.SEARCH_V2_JUMP_TO_MESSAGE, obj2);
+    obj.trackWithMetadata(metroImportDefault.SEARCH_V2_JUMP_TO_MESSAGE, obj2);
   },
 };

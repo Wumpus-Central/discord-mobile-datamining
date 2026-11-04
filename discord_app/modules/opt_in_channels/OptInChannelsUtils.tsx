@@ -4,7 +4,7 @@ import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
 import _modDef2171 from "../../../_runtime/metro/02171__.js";
 import useChannelName from "../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../_runtime/07019_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/07034_fuzzysearch.js";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ChannelListState from "../guild_sidebar/ChannelListState.tsx";
 import RecentChannelsActionCreators from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -25,8 +25,8 @@ const Constants = fn(1072);
 ({ Routes: closure_9, ChannelTypes: closure_10 } = Constants);
 const ChannelConstants = fn(4997);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7837).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7853).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6911).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 
@@ -137,7 +137,7 @@ export function clearRecentChannels(arg0, arr) {
     })),
   );
   if (null != tmp) {
-    router_utils.transitionTo(React7.CHANNEL(arg0, tmp));
+    router_utils.transitionTo(React6.CHANNEL(arg0, tmp));
     const tmp2Result = router_utils;
   }
 }

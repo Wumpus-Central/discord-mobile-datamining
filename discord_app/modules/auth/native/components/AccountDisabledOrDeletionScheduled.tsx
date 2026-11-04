@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const LoginStates = fn(1072).LoginStates;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const space = nativeDefault.space;
@@ -127,7 +127,7 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
     }),
     closure_7(handleLogin(navigation[14]).Text, {
       style: tmp9.description,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       children: string2Result,
     }),

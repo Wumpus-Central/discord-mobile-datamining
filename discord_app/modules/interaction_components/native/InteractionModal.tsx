@@ -123,9 +123,9 @@ class InteractionModal {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const InteractionModalState = fn(16372).InteractionModalState;
+const InteractionModalState = fn(16461).InteractionModalState;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const interaction_modal = "interaction_modal";
 const createStyles = fn(5141);
 let obj2 = {
@@ -162,7 +162,7 @@ let obj7 = { marginTop: "auto", marginBottom: nativeDefault.space.PX_16 };
 obj2.closeIcon = { color: nativeDefault.colors.TEXT_MUTED };
 let obj8 = { color: nativeDefault.colors.TEXT_MUTED };
 obj2.error = { marginBottom: nativeDefault.space.PX_16 };
-const React7 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/InteractionModal.tsx");
 

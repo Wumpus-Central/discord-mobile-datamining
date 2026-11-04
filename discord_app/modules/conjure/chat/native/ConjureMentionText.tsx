@@ -24,7 +24,7 @@ function ConjureUserMention(userId) {
   return closure_5(tmp3, { label: "@" + stateFromStores, variant: userId.variant });
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMentionText.tsx");
 

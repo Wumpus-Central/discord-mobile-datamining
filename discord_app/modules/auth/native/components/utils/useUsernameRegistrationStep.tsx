@@ -10,9 +10,9 @@ import UniqueUsernamesStore from "../../../../unique_usernames/UniqueUsernamesSt
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(18132).useRegistrationUIStore;
-const RegistrationConstants = fn(18133);
-({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } =
+const useRegistrationUIStore = fn(18229).useRegistrationUIStore;
+const RegistrationConstants = fn(18230);
+({ authStateToRegisterTransitionStep: metroImportDefault, RegistrationTransitionActionTypes: closure_8 } =
   RegistrationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
@@ -51,7 +51,7 @@ export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
       type = obj3.type;
     }
     if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
-      const obj = { step: React5(closure_0), actionType: constants.INPUT_ERROR, details: null };
+      const obj = { step: metroImportDefault(closure_0), actionType: constants.INPUT_ERROR, details: null };
       items = [obj3.message];
       obj.details = items;
       context(obj);
@@ -61,7 +61,7 @@ export function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
       const tmp3Result = RegistrationStepsUtils;
     } else {
       const obj2 = {
-        step: React5(closure_0),
+        step: metroImportDefault(closure_0),
         toStep: RegistrationStepsUtils.getNextRegistrationTransitionStep(closure_0),
         actionType: constants.SUCCESS,
       };

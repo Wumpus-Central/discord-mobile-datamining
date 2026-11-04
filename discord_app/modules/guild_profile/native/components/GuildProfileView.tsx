@@ -6,7 +6,7 @@ import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import themes from "../../../../design/utils/shared/themes.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import utils_getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.web.tsx";
@@ -57,12 +57,12 @@ function GuildProfileGradient(guildProfile) {
   }
   items[1] = brightenColorResult;
   obj3.colors = items;
-  return React5(tmp6, obj3);
+  return metroImportDefault(tmp6, obj3);
 }
 const View = fn(17).View;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -92,8 +92,9 @@ const frozen = Object.freeze({ START: { x: 0, y: 1 }, END: { x: 1.5, y: 0 } });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileView.tsx");
 
-export default function GuildProfileView(guildProfile) {
-  guildProfile = guildProfile.guildProfile;
+export default function GuildProfileView(disableNameNavigation) {
+  const guildProfile = disableNameNavigation.guildProfile;
+  let banner = disableNameNavigation.banner;
   const tmp = styles();
   items = [guildProfile];
   const obj = { style: tmp.container, children: null };
@@ -115,26 +116,34 @@ export default function GuildProfileView(guildProfile) {
       return uri;
     }
   }, items);
-  const items1 = [
-    closure_7(GuildProfileBackground, { guildProfile }),
-    closure_7(GuildProfileHeaderDefault, { profile: guildProfile, guildIconSource: memo }),
-  ];
-  const obj2 = { style: tmp.body, children: null };
-  let tmp5Result = null != guildProfile.description;
-  if (tmp5Result) {
-    tmp5Result = guildProfile.description.length > 0;
+  if (banner == null) {
+    const obj2 = { guildProfile };
+    banner = closure_7(GuildProfileBackground, obj2);
   }
-  if (tmp5Result) {
-    const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-    tmp5Result = closure_7(guildProfile(5747).Text, obj3);
+  const items1 = [
+    banner,
+    closure_7(GuildProfileHeaderDefault, {
+      profile: guildProfile,
+      guildIconSource: memo,
+      disableNameNavigation: disableNameNavigation.disableNameNavigation,
+    }),
+  ];
+  const obj3 = { style: tmp.body, children: null };
+  let tmp7Result = null != guildProfile.description;
+  if (tmp7Result) {
+    tmp7Result = guildProfile.description.length > 0;
+  }
+  if (tmp7Result) {
+    const obj4 = { variant: "body-md/medium", color: "text-subtle", children: guildProfile.description };
+    tmp7Result = closure_7(guildProfile(5761).Text, obj4);
   }
   const items2 = [
-    tmp5Result,
+    tmp7Result,
     closure_7(GuildProfileGamesDefault, { profile: guildProfile }),
     closure_7(GuildProfileTraitsDefault, { profile: guildProfile }),
   ];
-  obj2.children = items2;
-  items1[2] = closure_8(View, obj2);
+  obj3.children = items2;
+  items1[2] = closure_8(View, obj3);
   obj.children = items1;
   return closure_8(View, obj);
 }

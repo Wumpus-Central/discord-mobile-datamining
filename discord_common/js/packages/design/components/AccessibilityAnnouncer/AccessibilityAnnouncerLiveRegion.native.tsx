@@ -5,7 +5,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, Text: closure_0 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const module_5152 = fn(5152);
-const state = module_5152.create(() => ({ message: "disabled", version: false }));
+const state = module_5152.create(() => ({ message: "sa", version: false }));
 const liveRegion = StyleSheet.create({
   liveRegion: { position: "absolute", top: 0, left: 0, width: 1, height: 1, opacity: 0 },
 });

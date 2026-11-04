@@ -21,7 +21,7 @@ export default noop.memo(function MessagesItemChannelWave(hasNameplate) {
   obj.text = intl.string(util.t.n8nU4W);
   obj.icon = jsx(Text_Text.Text, {
     style: { marginTop: 3 },
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     "aria-hidden": true,
     children: "\u{1F44B}",
   });

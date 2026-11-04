@@ -10,7 +10,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import _modDef8832 from "../../../../../../_runtime/metro/08832__.js";
+import _modDef8849 from "../../../../../../_runtime/metro/08849__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
@@ -117,13 +117,13 @@ export default {
       style: { marginLeft: 8, height: 56, flexDirection: "column", justifyContent: "center" },
       children: null,
     };
-    const obj5 = { style: tmp.nickname, variant: "text-sm/semibold", children: null };
+    const obj5 = { style: tmp.nickname, variant: "body-sm/semibold", children: null };
     if (nick == null) {
       nick = UserUtilsDefault.getName(user);
     }
     obj5.children = nick;
     const items2 = [closure_1_11(Text_Text.Text, obj5)];
-    const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
+    const obj7 = { variant: "body-xs/medium", color: "text-muted", children: null };
     const obj3 = {
       status,
       statusStyle: tmp.status,
@@ -176,19 +176,19 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8832;
+      let channelIconWithGuild = _modDef8849;
     } else {
-      channelIconWithGuild = tmp2(8727).getChannelIconWithGuild(channel, tmp5);
-      const tmp2Result = tmp2(8727);
+      channelIconWithGuild = tmp2(8744).getChannelIconWithGuild(channel, tmp5);
+      const tmp2Result = tmp2(8744);
     }
     const tmp = closure_13();
     const tmp8 = closure_11(channel(1187).Icon, { source: channelIconWithGuild });
     const obj = { onPress: channel.onPress, children: null };
     items = [tmp8];
-    const channelName = channel(5772).computeChannelName(channel, UserStore, RelationshipStore);
-    items[1] = closure_11(channel(5747).Text, {
+    const channelName = channel(5786).computeChannelName(channel, UserStore, RelationshipStore);
+    items[1] = closure_11(channel(5761).Text, {
       style: tmp.channelName,
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       children: channelName,
     });
     obj.children = items;
@@ -219,7 +219,7 @@ export default {
     const obj4 = { onPress, children: null };
     const items2 = [
       tmp6(React4, { children: tmp5 }),
-      tmp6(Text_Text.Text, { style: tmp.emojiName, variant: "text-sm/semibold", children: ":" + name + ":" }),
+      tmp6(Text_Text.Text, { style: tmp.emojiName, variant: "body-sm/semibold", children: ":" + name + ":" }),
     ];
     obj4.children = items2;
     return application_id(HorizontalAutocompleteOption, obj4);

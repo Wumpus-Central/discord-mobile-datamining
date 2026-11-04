@@ -6,7 +6,7 @@ import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.ts
 
 const require = fn;
 const Constants = fn(1072);
-({ LoginRequiredActions: hasOwnProperty, Routes: metroRequire, UserSettingsSections: closure_7 } = Constants);
+({ LoginRequiredActions: hasOwnProperty, Routes: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 class LoginRequiredActionManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -32,8 +32,8 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
             }
           },
         };
-        currentUser(7687).openUserSettings(obj3);
-        const obj2 = currentUser(7687);
+        currentUser(7703).openUserSettings(obj3);
+        const obj2 = currentUser(7703);
       }
     }
     if (result1) {

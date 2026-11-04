@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx
 import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod7414 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7430 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod14553 from "../../../../../../../_runtime/metro/14553__.js";
+import _mod14633 from "../../../../../../../_runtime/metro/14633__.js";
 import MessagesItemChannelBase from "channel/MessagesItemChannelBase.tsx";
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -47,7 +47,7 @@ const memoResult = noop.memo(function MessagesItemChannelFast(arg0) {
 });
 const memoResult1 = noop.memo(function MessagesItemChannelFlash(channelId) {
   items = [channelId.channelId];
-  const tmp = _slicedToArray(_mod7414.useRecyclingState(false, items), 2);
+  const tmp = _slicedToArray(_mod7430.useRecyclingState(false, items), 2);
   closure_0 = tmp2;
   const items1 = [tmp[1]];
   const obj2 = {};
@@ -61,11 +61,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx");
 
 export function getMessagesItemChannelSizes(fontScale) {
-  const scaleTextLineHeightResult = useScaledTextLineHeight.scaleTextLineHeight(
-    "redesign/channel-title/semibold",
-    fontScale,
-  );
-  const scaleTextLineHeightResult1 = useScaledTextLineHeight.scaleTextLineHeight("text-xs/medium", fontScale);
+  const scaleTextLineHeightResult = useScaledTextLineHeight.scaleTextLineHeight("heading-sm/semibold", fontScale);
+  const scaleTextLineHeightResult1 = useScaledTextLineHeight.scaleTextLineHeight("body-xs/medium", fontScale);
   const PX_16 = nativeDefault.space.PX_16;
   const PX_32 = nativeDefault.space.PX_32;
   const obj3 = { avatar: PX_32, height: null, label: null, labelSecondary: null, padding: null };
@@ -80,7 +77,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo(function MessagesItemChannelLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod14553.useRecyclingState(false);
+  [tmp2, tmp3] = _mod14633.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

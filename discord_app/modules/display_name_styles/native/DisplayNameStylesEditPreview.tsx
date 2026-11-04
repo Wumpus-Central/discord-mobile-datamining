@@ -48,14 +48,14 @@ function ChatPreview(chatMessage) {
   } else {
     obj5 = { user, size: native.AvatarSizes.NORMAL, guildId, avatarDecoration: tmp8, animate: !stateFromStores };
   }
-  const items1 = [React5(native.Avatar, obj5)];
+  const items1 = [metroImportDefault(native.Avatar, obj5)];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = {
     userId: user.id,
     guildId,
     userName: displayName,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     effectDisplayType: null,
     lineClamp: 1,
     pendingDisplayNameStyles: null,
@@ -65,31 +65,31 @@ function ChatPreview(chatMessage) {
   obj8.pendingDisplayNameStyles = displayNameStyles;
   obj8.style = tmp.chatUsername;
   const items2 = [
-    React5(UsernameWithEffectsDefault, obj8),
-    React5(Text_Text.Text, {
-      variant: "text-xs/medium",
+    metroImportDefault(UsernameWithEffectsDefault, obj8),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-xs/medium",
       color: "text-muted",
       style: tmp.chatTimestamp,
       children: memo,
     }),
   ];
   obj7.children = items2;
-  const items3 = [React6(View, obj7)];
-  const obj10 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
+  const items3 = [React5(View, obj7)];
+  const obj10 = { variant: "body-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
   if (chatMessage == null) {
     const intl = util.intl;
     chatMessage = intl.string(_modDef3059.h5Cuej);
   }
   obj10.children = chatMessage;
-  items3[1] = React5(Text_Text.Text, obj10);
+  items3[1] = metroImportDefault(Text_Text.Text, obj10);
   obj6.children = items3;
-  items1[1] = React6(View, obj6);
+  items1[1] = React5(View, obj6);
   obj3.children = items1;
-  return React6(View, obj3);
+  return React5(View, obj3);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let createStyles = fn(5141);
 let obj2 = {
   previewSection: {

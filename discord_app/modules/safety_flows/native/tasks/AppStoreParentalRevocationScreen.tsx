@@ -16,7 +16,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   content: { flexGrow: 1, width: "100%" },
@@ -50,11 +50,11 @@ export default function AppStoreParentalRevocationScreen() {
   obj6.children = intl.string(_modDef2963.Z87TFb);
   items = [hasOwnProperty(Text_Text.Text, obj6)];
   const obj7 = { align: "center", spacing: nativeDefault.space.PX_16, style: tmp.body, children: null };
-  const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
+  const obj8 = { variant: "body-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(_modDef2963.VS98dM);
   const items1 = [hasOwnProperty(Text_Text.Text, obj8)];
-  const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
+  const obj9 = { variant: "body-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl3 = util.intl;
   obj9.children = intl3.string(_modDef2963.BaI6L4);
   items1[1] = hasOwnProperty(Text_Text.Text, obj9);

@@ -8,8 +8,8 @@ require = fn;
 const PremiumConstants = fn(1387);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: hasOwnProperty,
-  PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: metroRequire,
-  PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: closure_7,
+  PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_6,
+  PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: metroImportDefault,
   PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_8,
   PREMIUM_TRIAL_IDS_ALL: closure_9,
 } = PremiumConstants);
@@ -47,10 +47,10 @@ export function isEligibleTrialSub(trialId) {
       tmp4 = trialId.trialId === timestampProducer;
     }
     if (!tmp4) {
-      tmp4 = trialId.trialId === React5;
+      tmp4 = trialId.trialId === metroImportDefault;
     }
     if (!tmp4) {
-      tmp4 = trialId.trialId === React6;
+      tmp4 = trialId.trialId === React5;
     }
     tmp2 = tmp4;
   }
@@ -78,7 +78,7 @@ export function useCurrentPremiumTrialTier() {
   return tmp4;
 }
 export function getPremiumTrialOffer() {
-  const mapped = React7.map((item) => userTrialOffer.getUserTrialOffer(item));
+  const mapped = React6.map((item) => userTrialOffer.getUserTrialOffer(item));
   const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired);
   return found.shift();
 }

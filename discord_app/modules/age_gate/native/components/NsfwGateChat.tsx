@@ -3,14 +3,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef11354 from "../../../../../_runtime/metro/11354__.js";
+import _modDef11404 from "../../../../../_runtime/metro/11404__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   container: {
@@ -39,9 +39,9 @@ export default function NsfwGateChat() {
   const obj = { children: null };
   items = [React4(React3, { style: tmp.border })];
   const obj3 = { style: tmp.container, children: null };
-  const obj4 = { source: _modDef11354 };
+  const obj4 = { source: _modDef11404 };
   const items1 = [React4(FastImageDefault, obj4)];
-  const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
+  const obj5 = { style: tmp.description, variant: "body-md/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.W4Qyxr);
   items1[1] = React4(Text_Text.Text, obj5);

@@ -125,10 +125,10 @@ class ThemedNotifications {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(11651).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11702).YouBarNavigatorScreens;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   containerOuter: { flex: 1 },
@@ -176,7 +176,7 @@ const size1 = {
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 obj.headerBorder = size1;
-const React7 = createStyles.createStyles(obj);
+const React6 = createStyles.createStyles(obj);
 let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
   nestedInLaunchPad = nestedInLaunchPad.nestedInLaunchPad;
   const tmp = closure_9();
@@ -197,8 +197,8 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp11(1113).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1113).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(18632).LeftBackIconWithBadge, {});
-    const items1 = [closure_7(tmp11(7106).PressableOpacity, obj3), ,];
+    obj3.children = closure_7(tmp11(18733).LeftBackIconWithBadge, {});
+    const items1 = [closure_7(tmp11(7121).PressableOpacity, obj3), ,];
     const obj4 = {
       color: "mobile-text-heading-primary",
       variant: "heading-lg/semibold",
@@ -209,13 +209,13 @@ let closure_11 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     };
     const intl2 = tmp11(1113).intl;
     obj4.children = intl2.string(tmp11(1113).t.HcoRu0);
-    items1[1] = closure_7(tmp11(5747).Text, obj4);
+    items1[1] = closure_7(tmp11(5761).Text, obj4);
     const obj5 = { style: tmp.actionButtons, children: null };
-    const obj6 = { ref, type: tmp11(10322).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
+    const obj6 = { ref, type: tmp11(10370).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
     const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj6), ,];
     const obj7 = { type: null, onOpen: null };
     const tmp2Result = ForLaterOpenActionButtonDefault;
-    obj7.type = tmp11(10322).SavedMessageSortTypes.REMINDER;
+    obj7.type = tmp11(10370).SavedMessageSortTypes.REMINDER;
     obj7.onOpen = callback;
     items2[1] = closure_7(ForLaterOpenActionButtonDefault, obj7);
     items2[2] = closure_7(NotificationCenterActionButtonDefault, {});
@@ -241,5 +241,5 @@ export default Notifications;
 export { goBack };
 export { ThemedNotifications };
 export function ThemedNotificationsModal() {
-  return React5(ThemedNotifications, { inNestedNavigator: true });
+  return metroImportDefault(ThemedNotifications, { inNestedNavigator: true });
 }

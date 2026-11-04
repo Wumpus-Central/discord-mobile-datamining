@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: closure_7, Linking: closure_8 } = get_ActivityIndicator);
+({ View: metroImportDefault, Linking: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -138,19 +138,19 @@ export default function TextLineElement(element) {
     let obj = { style: tmp.container, children: null };
     let obj2 = {
       style: tmp.header,
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       children: title,
     };
     items = [closure_9(sms(tmp4[12]).Text, obj2), ,];
-    let obj3 = { style: tmp.description, variant: "text-md/medium", children: tmp5(body) };
+    let obj3 = { style: tmp.description, variant: "body-md/medium", children: tmp5(body) };
     items[1] = closure_9(sms(tmp4[12]).Text, obj3);
     let obj4 = { style: tmp.smsInfoContainer, children: null };
     let obj5 = { style: null, children: null };
     const items1 = [tmp.smsNumberContainer, tmp3 ? tmp.smsNumberContainerSuccess : {}];
     obj5.style = items1;
-    const obj6 = { variant: "text-sm/semibold", color: "interactive-text-active", children: sms };
+    const obj6 = { variant: "body-sm/semibold", color: "interactive-text-active", children: sms };
     const items2 = [closure_9(sms(tmp4[12]).Text, obj6)];
     const obj7 = { style: tmp.trailingButtonContainer, children: null };
     const intl = sms(tmp4[14]).intl;

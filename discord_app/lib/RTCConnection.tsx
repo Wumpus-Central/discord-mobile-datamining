@@ -16,7 +16,7 @@ import RTCControlSocket from "RTCControlSocket.tsx";
 import DiscordNativeDefault from "DiscordNative.tsx";
 import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import flatRestDefault from "../../_runtime/05956_flatRest.js";
+import flatRestDefault from "../../_runtime/05970_flatRest.js";
 import DaveJoinTimerDefault from "../modules/rtc/DaveJoinTimer.tsx";
 import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager.tsx";
 import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager.tsx";
@@ -25,6 +25,7 @@ import setShouldRecordNextConnectionDefault from "../modules/rtc_debug/setShould
 import RTCConnectionEvent from "RTCConnectionEvent.tsx";
 import DesktopGeneralPerfExperiment from "../modules/desktop_perf/DesktopGeneralPerfExperiment.tsx";
 import ProportionalVadIndicatorExperimentDefault from "../modules/calls/ProportionalVadIndicatorExperiment.tsx";
+import VoiceQualityScoringExperiment2 from "../modules/media_engine/VoiceQualityScoringExperiment.tsx";
 import WebScreenShareAudioExperiment2 from "../modules/media_engine/WebScreenShareAudioExperiment.tsx";
 import WebStreamingOptimizationsExperiment2 from "../modules/media_engine/WebStreamingOptimizationsExperiment.tsx";
 import VideoStabilizationExperimentDefault from "../modules/calls/VideoStabilizationExperiment.tsx";
@@ -106,7 +107,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5903).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5917).getSystemAnalyticsInfo;
 let Constants = fn(1072);
 ({
   AnalyticEvents: closure_17,
@@ -115,10 +116,10 @@ let Constants = fn(1072);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(5984);
+const StreamSettingsConstants = fn(5998);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(5985).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5888);
+let closure_24 = fn(5999).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5902);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -213,7 +214,7 @@ class RTCConnection extends tmp5 {
     };
     tmp11 = closure_1;
     tmp12 = closure_2;
-    obj._alertMLSFailureDebouced = closure_1(closure_2[74])(obj._alertMLSFailure, 100);
+    obj._alertMLSFailureDebouced = closure_1(closure_2[75])(obj._alertMLSFailure, 100);
     obj._handleNetworkOnline = function _handleNetworkOnline() {
       obj.expeditedHeartbeat(5000, "network detected online.");
     };
@@ -1267,6 +1268,10 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
   if (config.dontEmitVolumeOnlySpeakingEvents) {
     items.push("dont_emit_volume_only_speaking_events");
   }
+  const VoiceQualityScoringExperiment = VoiceQualityScoringExperiment2.VoiceQualityScoringExperiment;
+  if (VoiceQualityScoringExperiment.getConfig({ location: "_chooseExperiments" }).enabled) {
+    items.push("voice_quality_scoring");
+  }
   let enabled = PlatformUtils.isWeb();
   if (enabled) {
     enabled = self.context === constants6.STREAM;
@@ -1292,7 +1297,7 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
           items.push("web_streaming_balanced");
         } else if ("maintain-resolution" === degradationPreference) {
           items.push("web_streaming_maintain_resolution");
-          if (tmp16) {
+          if (tmp17) {
             items.push("web_streaming_cpu_fallback");
           }
         }
@@ -1324,12 +1329,12 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
   const tmpResult11 = PlatformUtils;
   if (tmpResult13.isLinux()) {
     const mode2 = LinuxGpuDecodeExperiment.getLinuxGpuDecodeExperimentConfig("_chooseExperiments").mode;
-    let tmp26 = "disable_all" === mode2;
-    if (!tmp26) {
-      tmp26 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
-      const tmp27 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
+    let tmp27 = "disable_all" === mode2;
+    if (!tmp27) {
+      tmp27 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
+      const tmp28 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
     }
-    if (tmp26) {
+    if (tmp27) {
       items.push("disable_electron_decode");
     }
     const tmpResult14 = LinuxGpuDecodeExperiment;
@@ -1785,7 +1790,8 @@ prototype["_collectVoiceStreamEndedEvents"] = function _collectVoiceStreamEndedE
           const merged3 = Object.assign(_voiceQuality.getInboundDurationStats(sender_user_id));
           const merged4 = Object.assign(_voiceQuality.getInboundJitterStats(sender_user_id));
           const merged5 = Object.assign(_voiceQuality.getInboundLatencyStats(sender_user_id));
-          const merged6 = Object.assign(closure_3);
+          const merged6 = Object.assign(_voiceQuality.getInboundVoiceQualityStats(sender_user_id));
+          const merged7 = Object.assign(closure_3);
           obj2.ping_average = rounded;
           obj2.connect_count = self._connectCount;
           items.push(obj2);
@@ -1846,13 +1852,13 @@ prototype["_trackVoiceDisconnect"] = function _trackVoiceDisconnect(sfuEndpoint)
   let tmp11Result;
   if (null != self._voiceQuality) {
     const _voiceQuality = self._voiceQuality;
-    tmp11Result = self(obj4[50])(_voiceQuality.getTransportStats(), ["decryption_failures", "routing_failures"]);
-    const tmp11 = self(obj4[50]);
+    tmp11Result = self(obj4[51])(_voiceQuality.getTransportStats(), ["decryption_failures", "routing_failures"]);
+    const tmp11 = self(obj4[51]);
   }
   let tmp15Result;
   if (null != self._voiceQuality) {
     const _voiceQuality2 = self._voiceQuality;
-    tmp15Result = self(obj4[50])(_voiceQuality2.getAudioDeviceStats(), [
+    tmp15Result = self(obj4[51])(_voiceQuality2.getAudioDeviceStats(), [
       "input_device_restart_count",
       "output_device_restart_count",
       "input_device_time_to_first_audio",
@@ -1866,7 +1872,7 @@ prototype["_trackVoiceDisconnect"] = function _trackVoiceDisconnect(sfuEndpoint)
       "input_device_time_from_connect_to_first_audio_ms",
       "output_device_time_from_connect_to_first_audio_ms",
     ]);
-    const tmp15 = self(obj4[50]);
+    const tmp15 = self(obj4[51]);
   }
   obj4 = {};
   let merged = Object.assign(self._getAnalyticsProperties());
@@ -1989,7 +1995,7 @@ prototype["_trackVoiceDisconnect"] = function _trackVoiceDisconnect(sfuEndpoint)
   } = settings);
   obj4.encryption_mode = self._encryptionMode;
   obj4.channel_count = self.channelIds.size;
-  obj4.device_performance_class = self(obj4[49])();
+  obj4.device_performance_class = self(obj4[50])();
   let diff = null;
   if (null != numFastUdpReconnects) {
     diff = numFastUdpReconnects - self._fastUdpReconnectsAtFragmentStart;
@@ -2042,7 +2048,7 @@ prototype["_trackVoiceDisconnect"] = function _trackVoiceDisconnect(sfuEndpoint)
       }
       return applyArgumentsResult;
     })(),
-    self(obj4[51]).getKrispModel(),
+    self(obj4[52]).getKrispModel(),
   ];
   if (MediaEngineStore.getKrispEnableStats()) {
     const mediaEngine2 = MediaEngineStore.getMediaEngine();
@@ -2051,7 +2057,7 @@ prototype["_trackVoiceDisconnect"] = function _trackVoiceDisconnect(sfuEndpoint)
     noiseCancellationStats = Promise.resolve(null);
   }
   items[2] = noiseCancellationStats;
-  const tmp47Result = self(obj4[51]);
+  const tmp47Result = self(obj4[52]);
   Promise.all(items).then((result) => {
     [, tmp2, tmp3] = result;
     const logger = self.logger;
@@ -2333,9 +2339,9 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
           }
           if (tmp6) {
             const result = closure_128_0.setAvx512EntropyHistogram(
-              tmp2(dependencyMap[55]).getIsAvx512EntropyHistogramEnabled("RTCConnection"),
+              tmp2(dependencyMap[56]).getIsAvx512EntropyHistogramEnabled("RTCConnection"),
             );
-            const obj = tmp2(dependencyMap[55]);
+            const obj = tmp2(dependencyMap[56]);
           }
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
@@ -2508,7 +2514,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   });
   if (self.context === constants6.STREAM) {
     if ("streamer" === self.getVoiceParticipantType()) {
-      const tmp19ResultResult = tmp19(tmp3[58])("RTCConnection", UserStore.getCurrentUser(), self.guildId);
+      const tmp19ResultResult = tmp19(tmp3[59])("RTCConnection", UserStore.getCurrentUser(), self.guildId);
       let maxResolution;
       if (tmp19ResultResult != null) {
         maxResolution = tmp19ResultResult.maxResolution;
@@ -2518,11 +2524,11 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
         num = 921600;
       }
       const result1 = connectResult.setFakeGoLiveEncodePixelCount(num);
-      const tmp19Result = tmp19(tmp3[58]);
+      const tmp19Result = tmp19(tmp3[59]);
     }
   }
   if (MediaEngineStore.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
-    const SingleCpuCopyExperiment = tmp2(tmp3[61]).SingleCpuCopyExperiment;
+    const SingleCpuCopyExperiment = tmp2(tmp3[62]).SingleCpuCopyExperiment;
     const enabled = SingleCpuCopyExperiment.getConfig({ location: "RTCConnection" }).enabled;
     let str4 = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
     if (enabled) {
@@ -4181,7 +4187,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5892).now();
+  const commitReceivedTime = _connection(5906).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -4221,7 +4227,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5892).now();
+  const welcomeReceivedTime = _connection(5906).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

@@ -26,7 +26,7 @@ export default function LockedRecipientField(user) {
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.avatar, user, guildId: "Array", size: native.AvatarSizes.NORMAL };
   items = [React4(native.Avatar, obj2)];
-  const obj3 = { variant: "text-md/semibold", children: UserUtilsDefault.getName(user) };
+  const obj3 = { variant: "body-md/semibold", children: UserUtilsDefault.getName(user) };
   items[1] = React4(Text_Text.Text, obj3);
   obj.children = items;
   return hasOwnProperty(View, obj);

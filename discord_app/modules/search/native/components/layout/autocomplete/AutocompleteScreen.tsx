@@ -2,7 +2,7 @@
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import useChannelName from "../../../../../channel/useChannelName.tsx";
 import SearchPlatformUtilsDefault from "../../../SearchPlatformUtils.tsx";
-import search_tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
+import TrackingDefault from "../../../tracking/Tracking.tsx";
 import SearchPlatformActionCreatorsDefault from "../../../SearchPlatformActionCreators.tsx";
 import AutocompleteScreenUtils from "AutocompleteScreenUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -14,7 +14,7 @@ import SearchAutocompleteStore from "../../../../SearchAutocompleteStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({
   SearchListItemTypes: closure_10,
   SearchQueryTagTypes: closure_11,
@@ -71,7 +71,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
       });
       const obj4 = { searchContext, searchTokenType: null, location: null };
       ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
-      search_tracking_TrackingDefault.trackSearchFilterAdd(obj4);
+      TrackingDefault.trackSearchFilterAdd(obj4);
       callback();
     }
   }, items5);
@@ -89,7 +89,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
         });
         const obj4 = { searchContext, searchTokenType: null, location: null };
         ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
-        search_tracking_TrackingDefault.trackSearchFilterAdd(obj4);
+        TrackingDefault.trackSearchFilterAdd(obj4);
         callback();
       }
     }
@@ -119,7 +119,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
         });
         let obj = { searchContext, searchTokenType: null, location: null };
         ({ searchTokenType: obj4.searchTokenType, location: obj4.location } = prefixTag);
-        search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
+        TrackingDefault.trackSearchFilterAdd(obj);
         callback();
       }
     }

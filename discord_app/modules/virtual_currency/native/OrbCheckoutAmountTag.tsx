@@ -30,7 +30,7 @@ export default function OrbCheckoutAmountTag(orbAmount) {
     const obj3 = { orbAmount };
     stringResult = intl.formatToPlainString(util.t.W4DfeF, obj3);
   }
-  const obj4 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
+  const obj4 = { variant: "body-md/semibold", accessibilityLabel: stringResult, children: null };
   let str = "--";
   if (null != orbAmount) {
     str = orbAmount;

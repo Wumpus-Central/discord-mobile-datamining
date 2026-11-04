@@ -1,10 +1,10 @@
 // discord_app/modules/game_detection/native/GameIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7455 from "../../../../_runtime/metro/07455__.js";
-import _modDef7456 from "../../../../_runtime/metro/07456__.js";
-import _modDef7457 from "../../../../_runtime/metro/07457__.js";
-import _modDef7458 from "../../../../_runtime/metro/07458__.js";
+import _modDef7471 from "../../../../_runtime/metro/07471__.js";
+import _modDef7472 from "../../../../_runtime/metro/07472__.js";
+import _modDef7473 from "../../../../_runtime/metro/07473__.js";
+import _modDef7474 from "../../../../_runtime/metro/07474__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 class GameIcon {
@@ -112,7 +112,7 @@ obj4.large = size3;
 obj4.placeholder = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
 const obj5 = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
 obj4.entityWrapper = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-const React5 = createStyles.createStyles(obj4);
+const metroImportDefault = createStyles.createStyles(obj4);
 GameIcon.Sizes = GameIconSizes;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");

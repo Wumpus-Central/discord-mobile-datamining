@@ -32,12 +32,12 @@ function AdTopicRow(adTopic) {
     items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7489).TableSwitchRow, obj);
+  return closure_5(adTopic(7505).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {};
 obj[fn(1196).AdTopic.REAL_MONEY_GAMING] = _modDef2236.pmIitA;
 const keys = Object.keys(obj);

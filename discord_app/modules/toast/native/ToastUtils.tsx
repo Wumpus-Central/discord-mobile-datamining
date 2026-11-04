@@ -40,10 +40,10 @@ export function presentFriendRequestAcceptedToast(dependencyMap) {
   const obj = ToastActionCreatorsDefault;
   obj.open("TOAST_FRIEND_REQUEST_ACCEPTED", {
     text: stringResult,
-    icon: tmp2(5841).UserPlusIcon,
+    icon: tmp2(5855).UserPlusIcon,
     iconColor: "status-positive",
   });
-  const obj3 = { text: stringResult, icon: tmp2(5841).UserPlusIcon, iconColor: "status-positive" };
+  const obj3 = { text: stringResult, icon: tmp2(5855).UserPlusIcon, iconColor: "status-positive" };
 }
 export function presentGameFriendRequestAcceptedToast() {
   const obj2 = { text: null, icon: null, iconColor: "status-positive" };

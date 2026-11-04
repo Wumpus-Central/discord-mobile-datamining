@@ -29,17 +29,17 @@ function PremiumText(basePlanId) {
     const obj4 = { product: title, description: text };
     obj3.accessibilityLabel = intl3.formatToPlainString(util.t.E0lS2r, obj4);
     obj3.children = text;
-    items = [React5(native.LegacyText, obj3)];
+    items = [metroImportDefault(native.LegacyText, obj3)];
     let tmp16Result = null;
     if (null != combined) {
       const obj5 = { style: tmp.discount, children: null };
       const obj6 = { style, numberOfLines: 1, children: combined };
-      obj5.children = React5(native.LegacyText, obj6);
-      tmp16Result = React5(View, obj5);
+      obj5.children = metroImportDefault(native.LegacyText, obj6);
+      tmp16Result = metroImportDefault(View, obj5);
     }
     items[1] = tmp16Result;
     obj2.children = items;
-    return React6(View, obj2);
+    return React5(View, obj2);
   } else {
     let priceString;
     if (product != null) {
@@ -77,10 +77,10 @@ const PremiumConstants = fn(1387);
 ({
   PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4,
   PRICE_PLACEHOLDER: hasOwnProperty,
-  SubscriptionIntervalTypes: metroRequire,
+  SubscriptionIntervalTypes: closure_6,
 } = PremiumConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { discount: null, premiumText: null };
 let obj3 = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
@@ -94,5 +94,5 @@ const result = size.fileFinishedImporting("modules/premium/native/renderPremiumB
 
 export default function renderPremiumText(arg0) {
   const merged = Object.assign(arg0);
-  return React5(PremiumText, {});
+  return metroImportDefault(PremiumText, {});
 }

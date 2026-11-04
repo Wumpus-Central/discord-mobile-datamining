@@ -17,7 +17,7 @@ import Pressables from "../../../../../design/void/Pressables/native/Pressables.
 import useDesignToggleDefault from "../../../../devtools/design_toggles/useDesignToggle.tsx";
 import TableRadioGroup from "../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import _modDef7377 from "../../../../../../_runtime/metro/07377__.js";
+import _modDef7393 from "../../../../../../_runtime/metro/07393__.js";
 import EmojiDefault from "../../../../emojis/native/Emoji.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
@@ -48,9 +48,9 @@ import DeveloperExperimentStore from "../../../../../stores/DeveloperExperimentS
 import StreamerModeStore from "../../../../../stores/StreamerModeStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const TableRowGroup = currentLocale(7186);
-const TableSwitchRow = currentLocale(7489);
-const BellSlashIcon = currentLocale(11125);
+const TableRowGroup = currentLocale(7201);
+const TableSwitchRow = currentLocale(7505);
+const BellSlashIcon = currentLocale(11173);
 require = fn;
 function AccountSectionHeading(children) {
   const tmp = closure_21();
@@ -65,23 +65,23 @@ function AccountSectionHeading(children) {
 function YouStatusRadioGroup() {
   const memo = noop.useMemo(() => {
     const obj = {
-      icon: closure_1_19(setting(7109).TableRowIcon, { source: closure_1(16139), variant: "text-status-online" }),
+      icon: closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16228), variant: "text-status-online" }),
       value: constants.ONLINE,
     };
     items = [obj, , ,];
     const obj3 = { icon: null, value: null };
-    const obj2 = { source: closure_1(16139), variant: "text-status-online" };
-    obj3.icon = closure_1_19(setting(7109).TableRowIcon, { source: closure_1(16136), variant: "text-status-idle" });
+    const obj2 = { source: closure_1(16228), variant: "text-status-online" };
+    obj3.icon = closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16225), variant: "text-status-idle" });
     obj3.value = constants.IDLE;
     items[1] = obj3;
     const obj5 = { icon: null, value: null };
-    const obj4 = { source: closure_1(16136), variant: "text-status-idle" };
-    obj5.icon = closure_1_19(setting(7109).TableRowIcon, { source: closure_1(16137), variant: "text-status-dnd" });
+    const obj4 = { source: closure_1(16225), variant: "text-status-idle" };
+    obj5.icon = closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16226), variant: "text-status-dnd" });
     obj5.value = constants.DND;
     items[2] = obj5;
     const obj7 = { icon: null, value: null };
-    const obj6 = { source: closure_1(16137), variant: "text-status-dnd" };
-    obj7.icon = closure_1_19(setting(7109).TableRowIcon, { source: closure_1(16138), variant: "text-status-offline" });
+    const obj6 = { source: closure_1(16226), variant: "text-status-dnd" };
+    obj7.icon = closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16227), variant: "text-status-offline" });
     obj7.value = constants.INVISIBLE;
     items[3] = obj7;
     return items;
@@ -132,7 +132,7 @@ function YouStatusRadioGroup() {
   };
   const items1 = [
     closure_19(AccountSectionHeading, { children: stringResult }),
-    closure_19(setting(7184).TableRadioGroup, {
+    closure_19(setting(7199).TableRadioGroup, {
       accessibilityLabel: stringResult,
       onChange: callback,
       defaultValue: setting,
@@ -213,9 +213,9 @@ function YouAccountRadioGroup() {
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(18138).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(18235).useMultiAccountUsers().multiAccountUsers;
   closure_129_0 = multiAccountUsers;
-  let obj2 = stateFromStores(18138);
+  let obj2 = stateFromStores(18235);
   const items1 = [StreamerModeStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(
     items1,
@@ -245,8 +245,12 @@ function YouAccountRadioGroup() {
           subLabel: combined,
           icon: null,
         };
-        const obj4 = { user: obj, guildId: "Array", size: stateFromStores(1187).AvatarSizes.REFRESH_MEDIUM_32 };
-        obj3.icon = closure_2_19(stateFromStores(1187).Avatar, obj4);
+        const obj2 = multiAccountUsers(5195);
+        obj3.icon = closure_2_19(stateFromStores(1187).Avatar, {
+          user: obj,
+          guildId: "Array",
+          size: stateFromStores(1187).AvatarSizes.REFRESH_MEDIUM_32,
+        });
         return obj3;
       }),
     items2,
@@ -266,15 +270,15 @@ function YouAccountRadioGroup() {
     let obj5 = { style: tmp.manage, children: null };
     const obj6 = {
       onPress() {
-        return multiAccountUsers(18602)();
+        return multiAccountUsers(18703)();
       },
       children: null,
     };
-    const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
+    const obj7 = { variant: "body-sm/semibold", color: "text-brand", children: null };
     const intl2 = tmp2(1113).intl;
     obj7.children = intl2.string(tmp2(1113).t.HxrBOZ);
-    obj6.children = closure_19(tmp2(5747).Text, obj7);
-    obj5.children = closure_19(tmp2(7106).PressableOpacity, obj6);
+    obj6.children = closure_19(tmp2(5761).Text, obj7);
+    obj5.children = closure_19(tmp2(7121).PressableOpacity, obj6);
     const items4 = [closure_19(View, obj5), ,];
     const obj8 = { children: stringResult };
     items4[1] = closure_19(AccountSectionHeading, obj8);
@@ -285,10 +289,10 @@ function YouAccountRadioGroup() {
       hasIcons: true,
       children: memo.map((value) => {
         const merged = Object.assign(value);
-        return closure_1_19(stateFromStores(7187).TableRadioRow, {}, value.value);
+        return closure_1_19(stateFromStores(7202).TableRadioRow, {}, value.value);
       }),
     };
-    items4[2] = closure_19(tmp2(7184).TableRadioGroup, obj9);
+    items4[2] = closure_19(tmp2(7199).TableRadioGroup, obj9);
     obj4.children = items4;
     return closure_20(View, obj4);
   }
@@ -323,11 +327,11 @@ function FocusModeSetting() {
       if (arg0) {
         const obj3 = {
           onSelect(quiet_mode_enabled, arg1) {
-            closure_1_0(11151).setFocusMode(quiet_mode_enabled, arg1);
-            const obj = closure_1_0(11151);
-            closure_1_1(5381).hideActionSheet();
-            const obj2 = closure_1_1(5381);
-            const result = closure_1_0(18597).showYouAccountActionSheet();
+            closure_1_0(11199).setFocusMode(quiet_mode_enabled, arg1);
+            const obj = closure_1_0(11199);
+            closure_1_1(5382).hideActionSheet();
+            const obj2 = closure_1_1(5382);
+            const result = closure_1_0(18698).showYouAccountActionSheet();
           },
         };
         require("ActionSheetActionCreators").openLazy(
@@ -498,7 +502,7 @@ function CustomStatus() {
     const intl4 = util.intl;
     obj11.accessibilityLabel = intl4.string(util.t.wfYTHe);
     obj11.style = tmp.customStatusRemoveButton;
-    const obj12 = { style: tmp.trailingIcon, source: _modDef7377 };
+    const obj12 = { style: tmp.trailingIcon, source: _modDef7393 };
     obj11.children = expandedHeight(FastImageDefault, obj12);
     tmp21Result2 = expandedHeight(Pressables.PressableOpacity, obj11);
     const tmp18Result = FastImageDefault;
@@ -509,11 +513,11 @@ function CustomStatus() {
   return expandedHeight(TableRowGroup.TableRowGroup, { hasIcons: false, children: dependencyMap(Card.Card, obj4) });
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(14108).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(14194).MultiAccountTokenStatus;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AuthStates: closure_14, StatusTypes: closure_15, ThemeTypes: closure_16 } = Constants);
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
-let closure_18 = fn(14109).MultiAccountSwitchLocation;
+let closure_18 = fn(14195).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
 const createStyles = fn(5141);

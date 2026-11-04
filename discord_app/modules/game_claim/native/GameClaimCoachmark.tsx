@@ -21,7 +21,7 @@ const GameClaimCardStackDefault = GameClaimCardStack;
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: metroRequire } = Constants);
+({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: closure_6 } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -91,12 +91,12 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
     items = [closure_8(Pressables.PressableOpacity, obj3), , , ,];
     let obj4 = { imageSrc: coverImageUrl };
     items[1] = closure_8(GameClaimCardStackDefault, obj4);
-    let obj5 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp.centeredText, children: null };
+    let obj5 = { variant: "body-md/medium", color: "text-overlay-light", style: tmp.centeredText, children: null };
     const intl2 = util.intl;
     const obj6 = { gameName: tmp8 };
     obj5.children = intl2.format(util.t.Q11WTQ, obj6);
     items[2] = closure_8(Text_Text.Text, obj5);
-    const obj7 = { variant: "text-sm/normal", color: "text-overlay-light", style: null, children: null };
+    const obj7 = { variant: "body-sm/normal", color: "text-overlay-light", style: null, children: null };
     const items1 = [,];
     ({ body: arr2[0], centeredText: arr2[1] } = tmp);
     obj7.style = items1;
@@ -136,9 +136,9 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
               v1 = 1;
               v3 = 1;
               const obj5 = {
-                value: v1(7627).redirectDeveloperPortalWithHandoffToken(
+                value: v1(7643).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(7631).LoginHandoffSource.GAME_CLAIM,
+                  v3(7647).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };
@@ -173,9 +173,9 @@ export const GAME_CLAIM_NOTICE_MARGIN_BOTTOM = PX_82;
 export function getScaledGameClaimNoticeHeight(fontScale) {
   const sum = PX_8 + closure_12;
   const sum1 = sum + GameClaimCardStack.CARD_STACK_HEIGHT;
-  const sum2 = sum1 + useScaledTextLineHeight.scaleTextLineHeight("text-md/medium", fontScale);
+  const sum2 = sum1 + useScaledTextLineHeight.scaleTextLineHeight("body-md/medium", fontScale);
   const sum3 = sum2 + nativeDefault.space.PX_4;
-  const result = 2 * useScaledTextLineHeight.scaleTextLineHeight("text-sm/normal", fontScale);
+  const result = 2 * useScaledTextLineHeight.scaleTextLineHeight("body-sm/normal", fontScale);
   const sum4 = sum3 + result + nativeDefault.space.PX_8;
   return sum4 + ButtonConstants.SMALL_BUTTON_HEIGHT + PX_82;
 }

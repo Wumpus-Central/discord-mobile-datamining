@@ -28,7 +28,7 @@ export function EditableTileGroup(children) {
   items = [
     React4(Text_Text.Text, {
       accessibilityRole: "header",
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: "text-strong",
       children: children.heading,
     }),

@@ -9,8 +9,8 @@ import size from "../../../../_runtime/metro/00002__.js";
   AVATAR_CUSTOM_STATUS_GAP: c3,
   AVATAR_PADDING: closure_4,
   CARD_PADDING: hasOwnProperty,
-  PROFILE_CONTENT_BOTTOM_PADDING: metroRequire,
-  PROFILE_SIDE_PADDING: closure_7,
+  PROFILE_CONTENT_BOTTOM_PADDING: closure_6,
+  PROFILE_SIDE_PADDING: metroImportDefault,
   PROFILE_TOP_LAYER_Z_INDEX: closure_8,
 } = Constants);
 let closure_9 = createStyles.createStyles(() => {

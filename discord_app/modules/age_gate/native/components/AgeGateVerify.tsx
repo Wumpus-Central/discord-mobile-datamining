@@ -43,7 +43,7 @@ export default function AgeGateVerify(source) {
     }),
     React4(Text_Text.Text, {
       style: tmp.body,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "interactive-text-default",
       children: verifyGateDescription,
     }),

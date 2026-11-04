@@ -5,9 +5,9 @@ import CustomTypingIndicatorUtils from "../CustomTypingIndicatorUtils.tsx";
 import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp3(5747);
-const Stack_Stack = tmp3(6147);
-const Pressables = tmp3(7106);
+const Text_Text = tmp3(5761);
+const Stack_Stack = tmp3(6162);
+const Pressables = tmp3(7121);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
@@ -57,7 +57,7 @@ export default function CustomTypingIndicatorDisplay(showName) {
     items = [tmp10];
     const obj6 = {
       style: tmp.text,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       lineClamp: 1,
       maxFontSizeMultiplier: 2,

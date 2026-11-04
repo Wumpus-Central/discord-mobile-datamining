@@ -10,8 +10,8 @@ let result = size.fileFinishedImporting("modules/activity_privacy/native/Activit
 export default function ActivityPrivacyUpsellActionSheet(direction) {
   direction = direction.direction;
   const affectedGuildIds = direction.affectedGuildIds;
-  const upsellStrings = direction(16898).getUpsellStrings(
-    direction === direction(16898).ChangeDirection.RESTRICTING,
+  const upsellStrings = direction(16990).getUpsellStrings(
+    direction === direction(16990).ChangeDirection.RESTRICTING,
     direction.settingName,
   );
   items = [direction, affectedGuildIds];
@@ -19,7 +19,7 @@ export default function ActivityPrivacyUpsellActionSheet(direction) {
   const onConfirm = noop.useCallback(() => {
     const result = ActivityPrivacyUpsellUtils.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
   }, items);
-  return jsx(affectedGuildIds(16900), {
+  return jsx(affectedGuildIds(16992), {
     direction,
     affectedGuildIds,
     title,

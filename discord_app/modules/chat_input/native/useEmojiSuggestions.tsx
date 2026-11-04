@@ -99,9 +99,9 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(6916).LoadState;
-const EnglishEmojiSuggestionsConstants = fn(14123);
-({ QUERY_DENYLIST: closure_7, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
+const LoadState = fn(6931).LoadState;
+const EnglishEmojiSuggestionsConstants = fn(14209);
+({ QUERY_DENYLIST: metroImportDefault, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const re10 = /(\S+)\s$/;
 const re11 =

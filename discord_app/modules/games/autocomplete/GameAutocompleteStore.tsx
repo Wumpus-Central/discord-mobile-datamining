@@ -58,10 +58,10 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(result, filter_g
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp(8805).shouldSuppressAutocompleteFetch(result, (arg0) =>
+      result1 = tmp(8822).shouldSuppressAutocompleteFetch(result, (arg0) =>
         closure_3.peek("" + closure_0 + ":" + arg0),
       );
-      const tmpResult = tmp(8805);
+      const tmpResult = tmp(8822);
     }
     return result1;
   }

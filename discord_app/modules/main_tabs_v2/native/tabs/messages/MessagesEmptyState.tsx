@@ -14,7 +14,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, justifyContent: "center" },
@@ -67,21 +67,21 @@ export default function MessagesEmptyState() {
   const obj9 = { style: tmp.textWrapper, children: null };
   const obj10 = {
     color: "mobile-text-heading-primary",
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     style: tmp.title,
     children: null,
   };
   const intl = util.intl;
   obj10.children = intl.string(util.t["8JZof8"]);
   const items3 = [timestampProducer(Text_Text.Heading, obj10)];
-  const obj11 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
+  const obj11 = { color: "text-default", variant: "body-md/medium", style: tmp.body, children: null };
   const intl2 = util.intl;
   obj11.children = intl2.string(util.t["qm+H7x"]);
   items3[1] = timestampProducer(Text_Text.Text, obj11);
   obj9.children = items3;
-  items2[1] = React5(React4, obj9);
+  items2[1] = metroImportDefault(React4, obj9);
   obj7.children = items2;
-  const items4 = [React5(React4, obj7)];
+  const items4 = [metroImportDefault(React4, obj7)];
   const obj12 = { style: tmp.buttonWrapper, children: null };
   const obj13 = { text: null, onPress: null, size: "lg" };
   const intl3 = util.intl;
@@ -90,6 +90,6 @@ export default function MessagesEmptyState() {
   obj12.children = timestampProducer(components_Button_Button.Button, obj13);
   items4[1] = timestampProducer(React4, obj12);
   obj6.children = items4;
-  obj5.children = React5(React4, obj6);
+  obj5.children = metroImportDefault(React4, obj6);
   return timestampProducer(hasOwnProperty, obj5);
 }

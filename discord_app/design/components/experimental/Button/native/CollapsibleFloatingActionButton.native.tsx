@@ -50,15 +50,15 @@ function CollapsableButton(arg0) {
   const merged1 = Object.assign(merged);
   obj2.size = "lg";
   obj2.variant = "primary";
-  obj2.textVariant = "text-md/semibold";
+  obj2.textVariant = "body-md/semibold";
   obj2.collapseText = collapseText;
   obj2.style = style;
   obj2.pillStyle = animatedStyle;
   return jsx(BaseTextButton.BaseTextButton, {});
 }
 const jsx = fn(21).jsx;
-const ButtonConstants = fn(5760);
-const buttonPadding = ButtonConstants.getButtonPadding(fn(5760).FAB_BUTTON_SIZE, fn(5760).FAB_BUTTON_ICON_SIZE);
+const ButtonConstants = fn(5774);
+const buttonPadding = ButtonConstants.getButtonPadding(fn(5774).FAB_BUTTON_SIZE, fn(5774).FAB_BUTTON_ICON_SIZE);
 const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({
   textButtonPill: { paddingHorizontal: 20, paddingVertical: buttonPadding },
@@ -108,7 +108,7 @@ export function CollapsibleFloatingActionButton(arg0) {
     obj5.text = text;
     obj5.size = "lg";
     obj5.variant = "primary";
-    obj5.textVariant = "text-md/semibold";
+    obj5.textVariant = "body-md/semibold";
     obj5.icon = cloneElementResult;
     obj5.style = items;
     obj5.pillStyle = tmp2.textButtonPill;

@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let c6 = "text-sm/normal";
+let c6 = "body-sm/normal";
 const createStyles = fn(5141);
 let obj2 = {
   line: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 },
@@ -19,7 +19,7 @@ let obj2 = {
   dismiss: null,
 };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
-obj2.dismiss = { height: fn(5747).TextStyleSheet["text-sm/normal"].lineHeight, justifyContent: "center" };
+obj2.dismiss = { height: fn(5761).TextStyleSheet["body-sm/normal"].lineHeight, justifyContent: "center" };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/tips/native/ConjureTipHint.tsx");
@@ -28,11 +28,11 @@ export default function ConjureTipHint(onDismiss) {
   onDismiss = onDismiss.onDismiss;
   ({ icon, children } = onDismiss);
   const tmp = closure_7();
-  const obj = { icon, tone: "muted", firstLine: textsmnormal, children: null };
+  const obj = { icon, tone: "muted", firstLine: bodysmnormal, children: null };
   const obj2 = { style: tmp.line, children: null };
   const obj3 = {
     style: tmp.text,
-    children: React4(Text_Text.Text, { variant: textsmnormal, color: "text-muted", children }),
+    children: React4(Text_Text.Text, { variant: bodysmnormal, color: "text-muted", children }),
   };
   items = [React4(View, obj3)];
   let tmp2Result = null;

@@ -7,55 +7,44 @@ const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
-({ useState: hasOwnProperty, useEffect: metroRequire, useCallback: closure_7 } = noop);
+({ useState: closure_4, useEffect: hasOwnProperty, useCallback: closure_6 } = noop);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useRedeemVirtualCurrency.tsx");
+let result = size.fileFinishedImporting("modules/virtual_currency/hooks/useRedeemVirtualCurrency.tsx");
 
-export function useRedeemVirtualCurrency(order) {
-  [tmp2, closure_0] = enabled("");
-  [entitlements, dependencyMap] = enabled([]);
-  const tmp = _slicedToArray(enabled(""), 2);
-  [error, asyncGeneratorStep] = enabled(null);
-  const isSubmitting = _slicedToArray(enabled(false), 2);
-  _slicedToArray = isSubmitting[1];
-  const tmp5 = _slicedToArray(enabled(null), 2);
-  enabled = entitlements(9692).useConfig({ location: "orb_checkout_modal" }).enabled;
-  order = undefined;
-  if (order != null) {
-    order = order.order;
-  }
+export function useRedeemVirtualCurrency(onSignFailure) {
+  [tmp2, closure_0] = closure_4("");
+  [entitlements, asyncGeneratorStep] = closure_4([]);
+  const tmp = _slicedToArray(closure_4(""), 2);
+  [error, _slicedToArray] = closure_4(null);
+  const isSubmitting = _slicedToArray(closure_4(false), 2);
+  closure_4 = isSubmitting[1];
+  const useOrdersAPI = onSignFailure.useOrdersAPI;
+  let order = onSignFailure.order;
   if (order == null) {
     order = null;
   }
-  let onSignFailure;
-  if (order != null) {
-    onSignFailure = order.onSignFailure;
-  }
-  let obj = entitlements(9692);
+  const tmp5 = _slicedToArray(closure_4(null), 2);
   const orderSigning = require("useOrderSigning").useOrderSigning({
     order,
     errorSource: "orb_redeem_orders_api",
-    onSignFailure,
+    onSignFailure: onSignFailure.onSignFailure,
   });
   const signOrder = orderSigning.signOrder;
   const _reportError = orderSigning.reportError;
-  if (enabled) {
+  if (useOrdersAPI) {
     error = orderSigning.error;
   }
-  let onSetIsSubmitting = null;
-  if (null != order) {
-    onSetIsSubmitting = order.onSetIsSubmitting;
-  }
+  const onSetIsSubmitting = onSignFailure.onSetIsSubmitting;
   items = [onSetIsSubmitting];
-  const tmp12 = _reportError((arg0) => {
+  const tmp9 = signOrder((arg0) => {
     closure_4(arg0);
     if (null != onSetIsSubmitting) {
       onSetIsSubmitting(arg0);
     }
   }, items);
-  closure_10 = tmp12;
+  closure_10 = tmp9;
   _require = asyncGeneratorStep(async (skuId, loadId, arg2) => {
-    dependencyMap = arg2;
+    closure_2 = arg2;
     c7 = 0;
     c8 = 0;
     c6 = 0;
@@ -81,23 +70,23 @@ export function useRedeemVirtualCurrency(order) {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_4 = tmp4;
               closure_3 = tmp8;
               closure_131_0 = skuId;
               closure_131_1 = loadId;
-              closure_131_2 = dependencyMap;
+              closure_131_2 = closure_2;
               closure_131_3 = undefined;
               closure_131_4 = undefined;
               closure_1_10(true);
-              const obj5 = { loadId, errorExtra: null };
+              const obj4 = { loadId, errorExtra: null };
               const obj6 = { skuId, loadId };
-              obj5.errorExtra = obj6;
+              obj4.errorExtra = obj6;
               v4 = 1;
               c8 = 1;
-              const obj7 = { value: v0(obj5), done: false };
+              const obj7 = { value: v0(obj4), done: false };
               return obj7;
             }
           } else {
@@ -116,7 +105,7 @@ export function useRedeemVirtualCurrency(order) {
                   v4 = 4;
                   c8 = 1;
                   const obj9 = {
-                    value: skuId(7542).fetchOrderEntitlementsWithRetry(closure_131_3.order.id),
+                    value: skuId(entitlements[4]).fetchOrderEntitlementsWithRetry(closure_131_3.order.id),
                     done: false,
                   };
                   return obj9;
@@ -137,19 +126,22 @@ export function useRedeemVirtualCurrency(order) {
                 v0 = 0;
                 closure_1_10(false);
                 c8 = 3;
-                const obj = { value, done: true };
-                return obj;
+                const obj11 = { value, done: true };
+                return obj11;
               } else {
                 closure_131_4 = value;
                 if (0 === closure_131_4.length) {
-                  const orderProcessingPendingError = new skuId(7542).OrderProcessingPendingError();
+                  const orderProcessingPendingError = new skuId(entitlements[4]).OrderProcessingPendingError();
                   throw orderProcessingPendingError;
                 } else {
-                  dependencyMap(closure_131_4);
+                  closure_2(closure_131_4);
+                  const obj12 = { skuId: closure_131_0, entitlements: closure_131_4 };
+                  const result = skuId(entitlements[5]).dispatchVirtualCurrencyRedeemSuccess(obj12);
                   if (closure_131_2 != null) {
-                    tmp14(closure_131_4);
+                    tmp19(closure_131_4);
                   }
                   v0 = 1;
+                  const obj = skuId(entitlements[5]);
                 }
               }
               v0 = 0;
@@ -159,12 +151,12 @@ export function useRedeemVirtualCurrency(order) {
             closure_1_10(false);
             throw closure_5;
           }
-        } catch (tmp53) {
-          closure_5 = tmp53;
+        } catch (tmp64) {
+          closure_5 = tmp64;
           if (tmp5 === v0) {
             c8 = tmp3;
-            throw tmp53;
-          } else if (tmp2 === tmp55) {
+            throw tmp64;
+          } else if (tmp2 === tmp66) {
             v4 = tmp;
           } else {
             v4 = tmp3;
@@ -173,8 +165,8 @@ export function useRedeemVirtualCurrency(order) {
       }
     })();
   });
-  const items1 = [signOrder, _reportError, tmp12];
-  const tmp13 = _reportError(function () {
+  const items1 = [signOrder, _reportError, tmp9];
+  const tmp10 = signOrder(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -184,11 +176,11 @@ export function useRedeemVirtualCurrency(order) {
     }
     return applyArgumentsResult;
   }, items1);
-  closure_11 = tmp13;
-  const items2 = [tmp12];
-  const tmp14 = _reportError((skuId, loadId, arg2) => {
+  closure_11 = tmp10;
+  const items2 = [tmp9];
+  const tmp11 = signOrder((skuId, loadId, arg2) => {
     closure_0 = arg2;
-    return closure_0(closure_2[6]).redeemVirtualCurrencyForSKU({
+    return closure_0(entitlements[5]).redeemVirtualCurrencyForSKU({
       skuId,
       loadId,
       onRedeemStart() {
@@ -208,17 +200,17 @@ export function useRedeemVirtualCurrency(order) {
       },
     });
   }, items2);
-  closure_12 = tmp14;
-  const items3 = [enabled, tmp13, tmp14];
+  closure_12 = tmp11;
+  const items3 = [useOrdersAPI, tmp10, tmp11];
   const items4 = [entitlements, error];
-  const redeemVirtualCurrency = _reportError((arg0, arg1, arg2) => {
-    if (enabled) {
+  const redeemVirtualCurrency = signOrder((arg0, arg1, arg2) => {
+    if (useOrdersAPI) {
       closure_11(arg0, arg1, arg2);
     } else {
       closure_12(arg0, arg1, arg2);
     }
   }, items3);
-  signOrder(() => {
+  useOrdersAPI(() => {
     if (null == error) {
       if (null != entitlements) {
         if (entitlements.length > 0) {

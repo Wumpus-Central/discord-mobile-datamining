@@ -17,7 +17,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 function UserOptionTag(user) {
   const tmp = closure_10();
-  return React6(DiscordTagDefault, {
+  return React5(DiscordTagDefault, {
     user: user.user,
     usernameStyle: tmp.name,
     discriminatorStyle: tmp.discriminator,
@@ -28,20 +28,20 @@ function RoleMemberCount(children) {
   const tmp = closure_10();
   const obj = { style: tmp.roleCountContainer, children: null };
   items = [
-    React6(Text_Text.Text, {
+    React5(Text_Text.Text, {
       style: tmp.roleCountText,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "interactive-text-default",
       children: children.count,
     }),
-    React6(UserIcon.UserIcon, { size: "xs" }),
+    React5(UserIcon.UserIcon, { size: "xs" }),
   ];
   obj.children = items;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_7 } = Constants);
+({ Fonts, DEFAULT_ROLE_COLOR_HEX: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -95,7 +95,7 @@ export function renderMentionableOptionIcon(type, guild, guildId) {
         guildId: tmp15,
         size: native.AvatarSizes.XSMALL,
       };
-      return React6(native.Avatar, obj);
+      return React5(native.Avatar, obj);
     }
   } else if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
     if (null != guild) {
@@ -109,7 +109,7 @@ export function renderMentionableOptionIcon(type, guild, guildId) {
             const obj2 = { src: null, unicodeEmoji: null, size: 24, name: null };
             ({ customIconSrc: obj3.src, unicodeEmoji: obj3.unicodeEmoji } = roleIconData);
             obj2.name = role.name;
-            return React6(RoleIconDefault, obj2);
+            return React5(RoleIconDefault, obj2);
           }
           const tmpResult2 = RoleIconUtils;
         }
@@ -118,10 +118,10 @@ export function renderMentionableOptionIcon(type, guild, guildId) {
           colorString = role.colorString;
         }
         if (colorString == null) {
-          colorString = React5;
+          colorString = metroImportDefault;
         }
         const obj4 = { color: colorString };
-        return React6(ShieldUserIcon.ShieldUserIcon, obj4);
+        return React5(ShieldUserIcon.ShieldUserIcon, obj4);
       }
     }
     return null;
@@ -130,7 +130,7 @@ export function renderMentionableOptionIcon(type, guild, guildId) {
 export function renderMentionableOptionDescription(type) {
   if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
     const obj = { user: UserStore.getUser(type.value) };
-    return React6(UserOptionTag, obj);
+    return React5(UserOptionTag, obj);
   }
 }
 export function renderMentionableOptionSuffix(type, guild, arg2) {
@@ -149,7 +149,7 @@ export function renderMentionableOptionSuffix(type, guild, arg2) {
     }
     if (null != tmp5) {
       const obj = { count: tmp5 };
-      return React6(RoleMemberCount, obj);
+      return React5(RoleMemberCount, obj);
     }
   }
 }

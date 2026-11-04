@@ -24,15 +24,15 @@ export default function EmojiAlias(arg0) {
     React3(Text_Text.Text, {
       style: tmp.emojiColon,
       "aria-hidden": true,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-muted",
       children: ":",
     }),
-    React3(Text_Text.Text, { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", children }),
+    React3(Text_Text.Text, { lineClamp: 1, variant: "body-md/medium", color: "mobile-text-heading-primary", children }),
     React3(Text_Text.Text, {
       style: tmp.emojiColon,
       "aria-hidden": true,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-muted",
       children: ":",
     }),

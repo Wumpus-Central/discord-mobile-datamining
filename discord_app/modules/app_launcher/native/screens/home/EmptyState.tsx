@@ -30,12 +30,12 @@ export default function EmptyState() {
     AppLauncherTypes.AppLauncherEmptyStateType.HOME_EMPTY,
   );
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null };
+  const obj3 = { style: tmp.textContainer, variant: "body-md/semibold", color: "text-default", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["V7+xhH"]);
   obj2.children = jsx(Text_Text.Text, {
     style: tmp.textContainer,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "text-default",
     children: null,
   });

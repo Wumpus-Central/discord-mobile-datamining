@@ -62,7 +62,7 @@ export default function ChannelAccessInfo(guild) {
   }
   const memberIds = GuildMemberStore.getMemberIds(id);
   let obj = guild(504);
-  const existingMembers = guild(9159).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
+  const existingMembers = guild(9176).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
   let tmp8 = 0 === stateFromStoresArray.length;
   if (tmp8) {
     tmp8 = 1 === existingMembers.length;
@@ -74,7 +74,7 @@ export default function ChannelAccessInfo(guild) {
   if (tmp8) {
     first = existingMembers[0];
   }
-  const items2 = [closure_8(guild(5747).Text, { variant: "eyebrow", children: stringResult })];
+  const items2 = [closure_8(guild(5761).Text, { variant: "body-sm/medium", children: stringResult })];
   let obj2 = {
     accessibilityLabel: stringResult,
     accessibilityRole: "button",
@@ -93,12 +93,12 @@ export default function ChannelAccessInfo(guild) {
     let obj5 = { style: tmp.avatar, user: first, guildId: guild.id, size: tmp2(1187).AvatarSizes.XSMALL };
     const items3 = [closure_8(tmp2(1187).Avatar, obj5)];
     let obj6 = { children: null };
-    let obj7 = { variant: "text-sm/semibold", children: first.tag };
-    const items4 = [closure_8(tmp2(5747).Text, obj7)];
-    let obj8 = { variant: "text-xs/medium", children: null };
+    let obj7 = { variant: "body-sm/semibold", children: first.tag };
+    const items4 = [closure_8(tmp2(5761).Text, obj7)];
+    let obj8 = { variant: "body-xs/medium", children: null };
     let intl2 = tmp2(1113).intl;
     obj8.children = intl2.string(tmp2(1113).t.rt0ERW);
-    items4[1] = closure_8(tmp2(5747).Text, obj8);
+    items4[1] = closure_8(tmp2(5761).Text, obj8);
     obj6.children = items4;
     items3[1] = closure_9(View, obj6);
     obj4.children = items3;
@@ -138,29 +138,29 @@ export default function ChannelAccessInfo(guild) {
         }
         const obj6 = { children: null };
         const obj7 = { size: "sm", style: closure_2.sectionIcon };
-        items = [React6(GroupIcon, obj7)];
-        const obj8 = { style: closure_2.labelDetail, variant: "text-sm/medium", children: tmp5 };
-        items[1] = React6(tmp4(5747).Text, obj8);
+        items = [React5(GroupIcon, obj7)];
+        const obj8 = { style: closure_2.labelDetail, variant: "body-sm/medium", children: tmp5 };
+        items[1] = React5(tmp4(5761).Text, obj8);
         obj6.children = items;
-        return React7(noop.Fragment, obj6);
+        return React6(noop.Fragment, obj6);
       }
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(14174);
-    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(8785).GroupIcon)];
+    channel(14260);
+    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(8802).GroupIcon)];
     const ROLES = constants.ROLES;
-    channel(9189);
-    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(9187).ShieldUserIcon);
+    channel(9206);
+    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(9204).ShieldUserIcon);
     obj9.children = items5;
   }
   const obj10 = { children: null };
   obj3.children = closure_9(closure_10, obj9);
   const items6 = [closure_8(View, obj3)];
-  const tmp2Result = guild(9159);
-  items6[1] = closure_8(guild(1187).Icon, { source: channel(12048), size: guild(1187).Icon.Sizes.SMALL });
+  const tmp2Result = guild(9176);
+  items6[1] = closure_8(guild(1187).Icon, { source: channel(12107), size: guild(1187).Icon.Sizes.SMALL });
   obj2.children = items6;
-  items2[1] = closure_9(guild(7106).PressableOpacity, obj2);
+  items2[1] = closure_9(guild(7121).PressableOpacity, obj2);
   obj10.children = items2;
   return closure_9(closure_10, obj10);
 }

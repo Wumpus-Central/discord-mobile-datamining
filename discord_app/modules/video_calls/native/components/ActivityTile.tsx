@@ -67,7 +67,7 @@ function ActivityTileInner(participant) {
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(11834)(obj4), done: false };
+              const obj5 = { value: v1(11893)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -77,8 +77,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(11929).setOrientationLockState(closure_128_3);
-          const obj = tmp2(11929);
+          const result = tmp2(11988).setOrientationLockState(closure_128_3);
+          const obj = tmp2(11988);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -247,7 +247,7 @@ function ActivityTileInner(participant) {
     const obj14 = {
       style: tmp.subtitleText,
       lineClamp: 2,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       children: formatToPlainStringResult,
     };
     items5[1] = closure_10(tmp5(tmp3[30]).Text, obj14);
@@ -273,7 +273,7 @@ function ActivityTileInner(participant) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(11831).ActivityLayoutMode;
+let ActivityLayoutMode = fn(11888).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1187).AvatarSizes.XSMALL;

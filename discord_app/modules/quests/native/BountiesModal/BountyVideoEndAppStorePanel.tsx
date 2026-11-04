@@ -6,7 +6,7 @@ import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
 import openURLDefault from "../../../../lib/openURL.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AppStoreOverlayContent from "../AppStoreOverlay/AppStoreOverlayContent.tsx";
@@ -221,9 +221,9 @@ function BountyVideoEndAppStorePanelInner(metadata) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_BORDER_RADIUS = fn(5396).ACTION_SHEET_BORDER_RADIUS;
+const ACTION_SHEET_BORDER_RADIUS = fn(5397).ACTION_SHEET_BORDER_RADIUS;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   root: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 10 },
@@ -246,7 +246,7 @@ let obj3 = {
   overflow: "hidden",
   flexDirection: "column",
 };
-obj2.scrollContent = { paddingBottom: fn(14798).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+obj2.scrollContent = { paddingBottom: fn(14878).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = {
   code: "(function BountyVideoEndAppStorePanelTsx1(){let[interpolate,revealProgress,sheetHeight,Extrapolation]=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};})",
@@ -268,6 +268,6 @@ export default function BountyVideoEndAppStorePanel(arg0) {
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   const obj2 = { theme: stateFromStores, children: null };
   const merged = Object.assign(arg0);
-  obj2.children = React5(BountyVideoEndAppStorePanelInner, {});
-  return React5(native.ThemeContextProvider, obj2);
+  obj2.children = metroImportDefault(BountyVideoEndAppStorePanelInner, {});
+  return metroImportDefault(native.ThemeContextProvider, obj2);
 }

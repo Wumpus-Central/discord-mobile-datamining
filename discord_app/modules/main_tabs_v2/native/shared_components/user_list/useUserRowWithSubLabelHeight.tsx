@@ -24,7 +24,7 @@ export function useUserRowWithSubLabelHeight(arg0) {
   }
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
   const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
-  const scaledTextLineHeight = useScaledTextLineHeight.useScaledTextLineHeight("text-md/semibold");
+  const scaledTextLineHeight = useScaledTextLineHeight.useScaledTextLineHeight("body-md/semibold");
   const fontScale = useFontScale.useFontScale();
   return roundToNearestPixelDefault(
     Math.max(

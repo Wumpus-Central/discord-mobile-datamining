@@ -53,7 +53,7 @@ let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: n
 obj.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj.muted = { opacity: fn(11186).MUTED_OPACITY_CONTENT };
+obj.muted = { opacity: fn(11236).MUTED_OPACITY_CONTENT };
 let closure_7 = createStyles.createLegacyClassComponentStyles(obj);
 const redux = noop.createContext(null);
 const PureComponent = noop.PureComponent;
@@ -161,7 +161,7 @@ Spoiler.prototype["render"] = function render() {
                         }
                         const obj = { children: null, style: null, onPress: "Array" };
                         ({ Children, cloneElement } = validElement);
-                        obj.children = Children.map(props.props.children, /* F98905 */ function() { ... });
+                        obj.children = Children.map(props.props.children, /* F99542 */ function() { ... });
                         items = [flattenResult, spoiler.spoiler];
                         obj.style = items;
                         return cloneElement(props, obj);

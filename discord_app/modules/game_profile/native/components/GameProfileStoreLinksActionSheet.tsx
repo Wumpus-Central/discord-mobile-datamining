@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import BottomSheetModal from "../../../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05400_BottomSheetModal.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
@@ -58,7 +58,7 @@ export default function GameProfileStoreLinksActionSheet(gameName) {
   const intl = util.intl;
   obj5.children = intl.string(util.t["/4gj6r"]);
   items = [closure_4(Text_Text.Text, obj5)];
-  const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.headerText, children: null };
+  const obj6 = { variant: "body-md/medium", color: "text-subtle", style: tmp.headerText, children: null };
   const intl2 = util.intl;
   obj6.children = intl2.format(util.t["0acM2Y"], { gameName: gameName.gameName });
   items[1] = closure_4(Text_Text.Text, obj6);

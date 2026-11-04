@@ -76,7 +76,7 @@ export default function HeaderAvatar(animate) {
   });
   const obj4 = guildId(504);
   const tmp9 = id;
-  const tmp10 = id(8954);
+  const tmp10 = id(8971);
   const obj6 = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
@@ -100,25 +100,25 @@ export default function HeaderAvatar(animate) {
     avatarDecoration: null,
   };
   let tmp14 = null;
-  const obj5 = guildId(8861);
+  const obj5 = guildId(8878);
   if (!disableStatus) {
     tmp14 = status;
   }
   obj7.status = tmp14;
   const items4 = [tmp4.avatarStatusStyle, statusStyle];
   obj7.statusStyle = items4;
-  obj7.streaming = tmp9(8955)(activities);
+  obj7.streaming = tmp9(8972)(activities);
   if (flag) {
     flag = !stateFromStores;
   }
   obj7.animate = flag;
-  obj7.avatarDecoration = tmp10(guildId(8861).getProfilePreviewValue(obj6));
+  obj7.avatarDecoration = tmp10(guildId(8878).getProfilePreviewValue(obj6));
   if (null != onPress) {
     const obj8 = { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" };
     const merged1 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj9 = { source: null };
-      obj = obj(8944);
+      obj = obj(8961);
       avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       obj9.source = avatarSource;
       obj7 = Object.assign(obj7);
@@ -128,7 +128,7 @@ export default function HeaderAvatar(animate) {
       const merged2 = Object.assign(obj7);
     }
     obj8.children = jsx(obj(1187).Avatar, obj10);
-    jsx(obj(7106).PressableOpacity, {
+    jsx(obj(7121).PressableOpacity, {
       ref,
       onPress,
       onLongPress: onPress,
@@ -141,7 +141,7 @@ export default function HeaderAvatar(animate) {
     const merged3 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj12 = { source: null };
-      const objResult = obj(8944);
+      const objResult = obj(8961);
       obj12.source = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       const merged4 = Object.assign(obj7);
       let obj13 = obj12;
@@ -152,5 +152,5 @@ export default function HeaderAvatar(animate) {
     obj11.children = jsx(obj(1187).Avatar, obj13);
     return <View ref={ref} style={style} accessibilityRole="image" accessible />;
   }
-  const tmp10Result = tmp10(guildId(8861).getProfilePreviewValue(obj6));
+  const tmp10Result = tmp10(guildId(8878).getProfilePreviewValue(obj6));
 }

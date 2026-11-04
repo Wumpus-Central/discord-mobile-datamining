@@ -57,7 +57,7 @@ export default function NoResults(illustration) {
   const obj4 = { style: tmp.textContainer, children: null };
   const items2 = [
     React4(Text_Text.Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       style: tmp.text,
       children: title,
@@ -65,7 +65,7 @@ export default function NoResults(illustration) {
   ];
   let tmp7Result = null;
   if (null != subtitle) {
-    const obj6 = { variant: "text-xs/medium", color: "interactive-text-default", style: tmp.text, children: subtitle };
+    const obj6 = { variant: "body-xs/medium", color: "interactive-text-default", style: tmp.text, children: subtitle };
     tmp7Result = React4(Text_Text.Text, obj6);
   }
   items2[1] = tmp7Result;

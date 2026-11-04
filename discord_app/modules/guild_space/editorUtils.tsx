@@ -35,34 +35,39 @@ function createDraftWidget(type, name, locked) {
 }
 let c3 = "draft:";
 let closure_4 = 0;
-let items = [
-  fn(19816).GuildSpaceWidgetType.POPULAR_MUSIC,
-  fn(19816).GuildSpaceWidgetType.LEADERBOARD,
-  fn(19816).GuildSpaceWidgetType.POPULAR_GAMES,
-];
+let items = [fn(19932).GuildSpaceWidgetType.LEADERBOARD, fn(19932).GuildSpaceWidgetType.WHITEBOARD];
+const items1 = [items];
+const items2 = [fn(19932).GuildSpaceWidgetType.POPULAR_GAMES];
+items1[1] = items2;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_space/editorUtils.tsx");
 
 export { createDraftWidget };
 export function createDefaultDraftWidgets(arg0) {
   closure_0 = arg0;
-  return items.flatMap((item, order) => {
-    closure_0 = item;
-    const found = closure_0.find((type) => type.type === closure_0);
-    if (null == found) {
-      items = [];
-    } else {
-      const obj = {};
-      const merged = Object.assign(createDraftWidget(item, found.name, found.locked));
-      const obj2 = { column: guildSpaceWidgetLayout.LEFT_COLUMN, order };
-      obj.position = obj2;
-      items = [obj];
-    }
-    return items;
+  return items1.flatMap((arr, index) => {
+    let column = index;
+    return arr
+      .flatMap((item) => {
+        column = item;
+        const found = column.find((type) => type.type === closure_0);
+        if (null == found) {
+          items = [];
+        } else {
+          items = [found];
+        }
+        return items;
+      })
+      .map((type, order) => {
+        const obj = {};
+        const merged = Object.assign(createDraftWidget(type.type, type.name, type.locked));
+        obj.position = { column, order };
+        return obj;
+      });
   });
 }
-export function isDraftWidgetId(widget_id) {
-  return widget_id.startsWith(c3);
+export function isDraftWidgetId(id) {
+  return id.startsWith(c3);
 }
 export function filterCatalogWidgetsAtMaxInstances(arr, arg1) {
   const map = new Map();

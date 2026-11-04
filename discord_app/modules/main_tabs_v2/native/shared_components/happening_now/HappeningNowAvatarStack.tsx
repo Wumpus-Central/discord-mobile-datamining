@@ -14,7 +14,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(15016).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(15096).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
@@ -217,7 +217,7 @@ export function HappeningNowAvatarStack(userLimit) {
   c10 = diff;
   const mapped = substr.map((user, index) => {
     const diff = substr.length - 1;
-    const tmp6 = React6(native.Avatar, { user, guildId, size });
+    const tmp6 = React5(native.Avatar, { user, guildId, size });
     let shiftedAvatar;
     if (0 !== index) {
       shiftedAvatar = _undefined3.shiftedAvatar;
@@ -234,7 +234,7 @@ export function HappeningNowAvatarStack(userLimit) {
       items = [point];
       obj3.cutouts = items;
       obj3.children = tmp6;
-      let tmp2Result = React6(ClipViewDefault, obj3);
+      let tmp2Result = React5(ClipViewDefault, obj3);
     } else {
       tmp2Result = tmp6;
       if (!c2) {
@@ -242,7 +242,7 @@ export function HappeningNowAvatarStack(userLimit) {
       }
     }
     obj2.children = tmp2Result;
-    return React6(View, obj2, user.id);
+    return React5(View, obj2, user.id);
   });
   const tmp6Result5 = require("../../../../../../_runtime/metro/01652__.js");
   const items4 = [
@@ -311,10 +311,10 @@ export function HappeningNowAvatarStack(userLimit) {
     const items8 = [sharedValue(_modDef1652.View, obj4)];
     const obj5 = {
       color: "text-default",
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       children: tmp6(2024).humanizeValue(userCount, stateFromStores),
     };
-    items8[1] = sharedValue(tmp6(5747).Text, obj5);
+    items8[1] = sharedValue(tmp6(5761).Text, obj5);
     obj3.children = items8;
     let tmp33 = obj3;
     const tmp6Result7 = tmp6(2024);
@@ -329,10 +329,10 @@ export function HappeningNowAvatarStack(userLimit) {
     let tmp31Result = null;
     if (diff > 0) {
       const obj8 = { style: tmp3.userCounter, children: null };
-      const obj9 = { color: "text-default", variant: "text-xxs/semibold", allowFontScaling: false, children: null };
+      const obj9 = { color: "text-default", variant: "footnote/semibold", allowFontScaling: false, children: null };
       const items12 = ["+", tmp6(2024).humanizeValue(diff, stateFromStores)];
       obj9.children = items12;
-      obj8.children = tmp28(tmp6(5747).Text, obj9);
+      obj8.children = tmp28(tmp6(5761).Text, obj9);
       tmp31Result = tmp31(tmp29, obj8);
       const tmp6Result8 = tmp6(2024);
     }
@@ -347,7 +347,7 @@ export function HappeningNowAvatarStack(userLimit) {
       const items14 = [tmp3.ellipsisWrapper, animatedStyle];
       obj10.style = items14;
       const obj11 = { style: tmp3.ellipsisBorder };
-      obj10.children = tmp31(tmp6(18287).TypingIndicator, obj11);
+      obj10.children = tmp31(tmp6(18384).TypingIndicator, obj11);
       tmp31Result2 = tmp31(tmp30(1652).View, obj10);
     }
     items13[1] = tmp31Result2;

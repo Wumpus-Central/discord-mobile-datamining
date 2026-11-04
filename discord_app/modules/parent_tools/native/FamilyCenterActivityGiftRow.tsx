@@ -73,14 +73,14 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     items = [React4(FamilyCenterActivityItemPreviewDefault, obj5)];
     const obj6 = { style: tmp.textContainer, children: null };
     const obj7 = {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "interactive-text-active",
       ellipsizeMode: "tail",
       lineClamp: 1,
       children: displayName,
     };
     const items1 = [React4(Text_Text.Text, obj7)];
-    const obj8 = { variant: "text-xs/medium", color: "text-muted", children: giftSubtext };
+    const obj8 = { variant: "body-xs/medium", color: "text-muted", children: giftSubtext };
     items1[1] = React4(Text_Text.Text, obj8);
     obj6.children = items1;
     items[1] = hasOwnProperty(View, obj6);

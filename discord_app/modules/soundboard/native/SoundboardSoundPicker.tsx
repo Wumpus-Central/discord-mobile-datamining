@@ -8,9 +8,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(19331);
-({ setSearchQuery: metroRequire, useExpressionPickerStore: closure_7 } = ExpressionPickerStore);
-const SoundboardPickerType = fn(6180).SoundboardPickerType;
+const ExpressionPickerStore = fn(19435);
+({ setSearchQuery: closure_6, useExpressionPickerStore: metroImportDefault } = ExpressionPickerStore);
+const SoundboardPickerType = fn(6195).SoundboardPickerType;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -19,7 +19,7 @@ let obj = {
   title: { marginBottom: 8 },
   container: { flex: 1, alignItems: "center" },
   header: {
-    paddingHorizontal: fn(19332).SOUND_ROW_HORIZONTAL_PADDING,
+    paddingHorizontal: fn(19436).SOUND_ROW_HORIZONTAL_PADDING,
     padding: nativeDefault.space.PX_8,
     width: "100%",
   },
@@ -27,7 +27,7 @@ let obj = {
 };
 let closure_14 = createStyles.createStyles(obj);
 let obj3 = {
-  paddingHorizontal: fn(19332).SOUND_ROW_HORIZONTAL_PADDING,
+  paddingHorizontal: fn(19436).SOUND_ROW_HORIZONTAL_PADDING,
   padding: nativeDefault.space.PX_8,
   width: "100%",
 };

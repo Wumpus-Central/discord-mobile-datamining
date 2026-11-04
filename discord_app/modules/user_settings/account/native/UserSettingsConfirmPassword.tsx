@@ -16,7 +16,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -218,7 +218,7 @@ class UserSettingsConfirmPasswordInner {
       obj12.children = intl.string(tmp3(tmp4[14]).t["x+d9t3"]);
       items3 = [, , , ,];
       items3[0] = jsx(tmp3(tmp4[16]).Text, obj12);
-      obj13 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
+      obj13 = { style: null, variant: "body-sm/medium", color: "text-default", children: null };
       obj13.style = tmp.prompt;
       intl2 = tmp3(tmp4[14]).intl;
       obj13.children = intl2.string(tmp3(tmp4[14]).t.vaZmAx);

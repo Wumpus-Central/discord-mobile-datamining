@@ -8,7 +8,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
@@ -127,7 +127,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     suggestion: null,
     emojiSize: 24,
     spacing: 8,
-    textVariant: "text-md/medium",
+    textVariant: "body-md/medium",
     textColor: "text-subtle",
     lineClamp: 1,
     emojiSource: null,
@@ -158,7 +158,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     suggestion: null,
     emojiSize: 28,
     spacing: 10,
-    textVariant: "text-lg/medium",
+    textVariant: "body-lg/medium",
     textColor: "text-default",
     lineClamp: 1,
     style: null,
@@ -180,7 +180,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     suggestion: null,
     emojiSize: 24,
     spacing: 8,
-    textVariant: "text-md/medium",
+    textVariant: "body-md/medium",
     textColor: "text-subtle",
     lineClamp: 1,
     style: null,
@@ -205,7 +205,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   const intl2 = markAsDismissed(tmp4[23]).intl;
   obj14.children = intl2.string(ref(analyticsLocations[25]).uGxDiu);
   items3[3] = closure_7(markAsDismissed(analyticsLocations[24]).Text, obj14);
-  const obj15 = { variant: "text-md/normal", style: tmp2.body, color: "text-muted", children: null };
+  const obj15 = { variant: "body-md/normal", style: tmp2.body, color: "text-muted", children: null };
   const intl3 = markAsDismissed(tmp4[23]).intl;
   obj15.children = intl3.string(ref(analyticsLocations[25]).yezU3E);
   items3[4] = closure_7(markAsDismissed(analyticsLocations[24]).Text, obj15);

@@ -189,7 +189,7 @@ export default function ReferralProgramShareActionSheet(actionSheetKey) {
     }
     return stringResult;
   }, items10);
-  const items11 = [isFetching(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: memo5 }), isFetching(require("Text/Text").Text, { variant: "text-xs/medium", color: "text-default", lineClamp: 2, style: tmp.subtitle, children: stringResult })];
+  const items11 = [isFetching(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: memo5 }), isFetching(require("Text/Text").Text, { variant: "body-xs/medium", color: "text-default", lineClamp: 2, style: tmp.subtitle, children: stringResult })];
   { style: tmp.header, children: null }.children = items11;
   if (hasError) {
     const obj6 = { style: tmp.centeredContainer, children: null };
@@ -202,7 +202,7 @@ export default function ReferralProgramShareActionSheet(actionSheetKey) {
     const intl4 = tmp3(tmp4[16]).intl;
     obj9.children = intl4.string(tmp3(tmp4[16]).t.a9HOKg);
     items12[1] = tmp29(tmp3(tmp4[28]).Text, obj9);
-    const obj10 = { variant: "text-md/medium", color: "text-default", style: tmp.subtitle, children: null };
+    const obj10 = { variant: "body-md/medium", color: "text-default", style: tmp.subtitle, children: null };
     const intl5 = tmp3(tmp4[16]).intl;
     obj10.children = intl5.string(tmp3(tmp4[16]).t.JjjeZb);
     items12[2] = tmp29(tmp3(tmp4[28]).Text, obj10);
@@ -222,7 +222,7 @@ export default function ReferralProgramShareActionSheet(actionSheetKey) {
       let intl2 = tmp3(tmp4[16]).intl;
       obj14.children = intl2.string(tmp3(tmp4[16]).t["PFp+aJ"]);
       items13[1] = tmp29(tmp3(tmp4[28]).Text, obj14);
-      const obj15 = { variant: "text-md/medium", color: "text-default", style: tmp.subtitle, children: null };
+      const obj15 = { variant: "body-md/medium", color: "text-default", style: tmp.subtitle, children: null };
       const intl3 = tmp3(tmp4[16]).intl;
       obj15.children = intl3.string(tmp3(tmp4[16]).t.eBIGB4);
       items13[2] = tmp29(tmp3(tmp4[28]).Text, obj15);
@@ -233,7 +233,7 @@ export default function ReferralProgramShareActionSheet(actionSheetKey) {
     tmp31 = 0 === eligibleUsers.length && arr3.length > 0;
   }
   const obj4 = { style: tmp.header, children: null };
-  const obj5 = { variant: "text-xs/medium", color: "text-default", lineClamp: 2, style: tmp.subtitle, children: stringResult };
+  const obj5 = { variant: "body-xs/medium", color: "text-default", lineClamp: 2, style: tmp.subtitle, children: stringResult };
   const tmp25 = ref(stateFromStores[19]);
   const tmp35 = str2.trim().length > 0;
   const obj16 = { actions: [], style: null };

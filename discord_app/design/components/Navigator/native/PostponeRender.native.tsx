@@ -41,7 +41,7 @@ export function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(7329).SceneLoadingIndicator, {});
+    children = jsx(first(7345).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;

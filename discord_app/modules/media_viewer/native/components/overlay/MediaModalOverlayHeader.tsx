@@ -21,9 +21,9 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const SHARE_PREPARING_MODAL_KEY = fn(9062).SHARE_PREPARING_MODAL_KEY;
+const SHARE_PREPARING_MODAL_KEY = fn(9079).SHARE_PREPARING_MODAL_KEY;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   navbarInner: { flex: 1, justifyContent: "space-between" },
@@ -114,7 +114,7 @@ export function MediaModalOverlayHeader(arg0) {
     const obj14 = { style: tmp.navbarNameShrinkWrapper, children: null };
     const obj15 = {
       accessibilityRole: "header",
-      variant: "heading-md/medium",
+      variant: "heading-sm/medium",
       lineClamp: 1,
       ellipsizeMode: "tail",
       color: "text-overlay-light",
@@ -123,12 +123,12 @@ export function MediaModalOverlayHeader(arg0) {
     obj14.children = timestampProducer(Text_Text.Text, obj15);
     items4[1] = timestampProducer(React4, obj14);
     obj12.children = items4;
-    obj11.children = React5(React4, obj12);
+    obj11.children = metroImportDefault(React4, obj12);
     tmp13Result3 = timestampProducer(React4, obj11);
   }
   items3[1] = tmp13Result3;
   obj9.children = items3;
-  const items5 = [React5(React4, obj9)];
+  const items5 = [metroImportDefault(React4, obj9)];
   let tmp15Result = !tmp7;
   if (!tmp7) {
     const obj16 = { style: tmp.navbarRight, children: null };
@@ -143,14 +143,14 @@ export function MediaModalOverlayHeader(arg0) {
           const obj = { accessibilityLabel: null, icon: null, ref: null };
           const intl = _undefined(1113).intl;
           obj.accessibilityLabel = intl.string(_undefined(1113).t.PdRCRg);
-          const tmp4 = _undefined2(9067);
+          const tmp4 = _undefined2(9084);
           if (obj2.isAndroid()) {
-            let tmp2Result = closure_1_6(_undefined(14908).MoreVerticalIcon, {
+            let tmp2Result = closure_1_6(_undefined(14988).MoreVerticalIcon, {
               size: "md",
               color: "interactive-text-active",
             });
           } else {
-            tmp2Result = closure_1_6(_undefined(9888).MoreHorizontalIcon, {
+            tmp2Result = closure_1_6(_undefined(9906).MoreHorizontalIcon, {
               size: "md",
               color: "interactive-text-active",
             });
@@ -165,11 +165,11 @@ export function MediaModalOverlayHeader(arg0) {
     }
     items6[1] = tmp13Result4;
     obj16.children = items6;
-    tmp15Result = React5(React4, obj16);
+    tmp15Result = metroImportDefault(React4, obj16);
   }
   items5[1] = tmp15Result;
   obj8.children = items5;
-  obj7.children = React5(MediaModalOverlayHeaderWrapper.MediaModalOverlayHeaderWrapper, obj8);
+  obj7.children = metroImportDefault(MediaModalOverlayHeaderWrapper.MediaModalOverlayHeaderWrapper, obj8);
   obj5.children = timestampProducer(_modDef1652.View, obj7);
   return timestampProducer(_modDef1652.View, obj5);
 }

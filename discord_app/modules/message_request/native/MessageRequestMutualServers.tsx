@@ -18,15 +18,15 @@ export default function MessageRequestMutualServers(textVariant) {
   ({ onPress, iconSize } = textVariant);
   ({ userId, style } = textVariant);
   if (iconSize === undefined) {
-    iconSize = iconSize(7083).GuildIconSizes.XXSMALL_12;
+    iconSize = iconSize(7098).GuildIconSizes.XXSMALL_12;
   }
   let str = textVariant.textVariant;
   if (str === undefined) {
-    str = "text-xs/medium";
+    str = "body-xs/medium";
   }
   const suffix = textVariant.suffix;
   const tmp3 = closure_6();
-  const mutualGuildsForMessageRequests = iconSize(19127).useMutualGuildsForMessageRequests(userId);
+  const mutualGuildsForMessageRequests = iconSize(19230).useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
     const intl2 = tmp4(1113).intl;
@@ -46,7 +46,7 @@ export default function MessageRequestMutualServers(textVariant) {
       names: substr.map((name) => name.name),
       children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)),
     };
-    tmp9 = closure_4(tmp4(14325).GuildIconPile, obj4);
+    tmp9 = closure_4(tmp4(14412).GuildIconPile, obj4);
   }
   const items1 = [tmp9];
   const obj5 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };
@@ -56,7 +56,7 @@ export default function MessageRequestMutualServers(textVariant) {
     combined = "" + formatResult + " \u00B7 " + suffix;
   }
   obj5.children = combined;
-  items1[1] = closure_4(iconSize(5747).Text, obj5);
+  items1[1] = closure_4(iconSize(5761).Text, obj5);
   obj3.children = items1;
   const tmp7Result = closure_5(View, obj3);
   let tmp11Result = tmp7Result;
@@ -64,7 +64,7 @@ export default function MessageRequestMutualServers(textVariant) {
     tmp11Result = tmp7Result;
     if (length > 0) {
       const obj6 = { accessibilityRole: "button", onPress, children: tmp7Result };
-      tmp11Result = closure_4(tmp4(7106).PressableOpacity, obj6);
+      tmp11Result = closure_4(tmp4(7121).PressableOpacity, obj6);
     }
   }
   return tmp11Result;

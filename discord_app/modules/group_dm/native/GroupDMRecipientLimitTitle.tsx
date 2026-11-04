@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const MAX_GROUP_DM_PARTICIPANTS = fn(1072).MAX_GROUP_DM_PARTICIPANTS;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   title: { textAlign: "center", fontSize: 18 },
@@ -84,7 +84,7 @@ export default function GroupDMRecipientLimitTitle(arg0) {
     tmp15Result,
     timestampProducer(Text_Text.Text, {
       lineClamp: 1,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: str2,
       style: tmp.subtitle,
       maxFontSizeMultiplier: 2,
@@ -92,9 +92,9 @@ export default function GroupDMRecipientLimitTitle(arg0) {
     }),
   ];
   obj6.children = items1;
-  items[1] = React5(React4, obj6);
+  items[1] = metroImportDefault(React4, obj6);
   obj8.children = items;
-  const tmp13Result = React5(React6, obj8);
+  const tmp13Result = metroImportDefault(React5, obj8);
   if (tmp9) {
     const obj10 = {
       accessible: true,

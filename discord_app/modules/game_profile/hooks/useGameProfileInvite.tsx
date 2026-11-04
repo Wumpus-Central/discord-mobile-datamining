@@ -33,7 +33,7 @@ function isUsableGameProfileInvite(state) {
   return tmp;
 }
 const Constants = fn(1072);
-({ InviteStates: closure_7, QueryIds } = Constants);
+({ InviteStates: metroImportDefault, QueryIds } = Constants);
 const initialize = fn(504);
 const obj2 = {
   getQueryId: QueryIds.GAME_PROFILE_INVITE,

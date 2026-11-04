@@ -16,11 +16,11 @@ import BountyStore from "../BountyStore.tsx";
 
 require = fn;
 function ListEdgeSpacer(width) {
-  return React7(View, { style: { width: width.width } });
+  return React6(View, { style: { width: width.width } });
 }
 function ItemSeparator() {
   const obj = { style: { width: PX_12 } };
-  return React7(View, obj);
+  return React6(View, obj);
 }
 function QuestHomeOrbShopCarouselHeading(orbAmount) {
   let flag = orbAmount.belowCarousel;
@@ -43,19 +43,19 @@ function QuestHomeOrbShopCarouselHeading(orbAmount) {
   }
   const obj2 = { style: obj, children: null };
   obj.marginBottom = num2;
-  let str = "text-xs/medium";
+  let str = "body-xs/medium";
   if (!flag) {
-    let str2 = "text-md/semibold";
+    let str2 = "body-md/semibold";
     if (compactHeading) {
-      str2 = "text-sm/semibold";
+      str2 = "body-sm/semibold";
     }
     str = str2;
   }
   const obj3 = { variant: str, color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.format(util.t.CXlsRP, { orbAmount: orbAmount.orbRewardAmount });
-  obj2.children = React7(Text_Text.Heading, obj3);
-  return React7(View, obj2);
+  obj2.children = React6(Text_Text.Heading, obj3);
+  return React6(View, obj2);
 }
 function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   cardWidth = cardWidth.cardWidth;
@@ -65,13 +65,13 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   ({ listStyle, cardStride } = cardWidth);
   const callback = noop.useCallback(() => {
     const size = { width: cardWidth, height: cardHeight };
-    return React7(SkeletonCardDefault, size);
+    return React6(SkeletonCardDefault, size);
   }, items);
   const items1 = [listEdgeSpacing];
   const callback1 = noop.useCallback((arg0) => "placeholder-" + arg0, []);
   const items2 = [listEdgeSpacing];
-  const callback2 = noop.useCallback(() => React7(ListEdgeSpacer, { width: listEdgeSpacing }), items1);
-  const callback3 = noop.useCallback(() => React7(ListEdgeSpacer, { width: listEdgeSpacing }), items2);
+  const callback2 = noop.useCallback(() => React6(ListEdgeSpacer, { width: listEdgeSpacing }), items1);
+  const callback3 = noop.useCallback(() => React6(ListEdgeSpacer, { width: listEdgeSpacing }), items2);
   const obj = {
     horizontal: true,
     accessibilityRole: "list",
@@ -105,13 +105,13 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   return closure_9(cardWidth(listEdgeSpacing[14]).FlashList, obj);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6901).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6916).BOUNTY_ORB_AMOUNT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_20 = nativeDefault.space.PX_20;
 const PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-const data = Array.from({ length: fn(17131).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const data = Array.from({ length: fn(17223).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
 const createStyles = fn(5141);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
@@ -176,8 +176,8 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
   const memo = flag4.useMemo(() => ({ height: COLLECTIBLES_SHOP_CARD_HEIGHT }), items);
   const items1 = [listEdgeSpacing];
   const items2 = [listEdgeSpacing];
-  const callback = flag4.useCallback(() => React7(ListEdgeSpacer, { width: listEdgeSpacing }), items1);
-  const callback1 = flag4.useCallback(() => React7(ListEdgeSpacer, { width: listEdgeSpacing }), items2);
+  const callback = flag4.useCallback(() => React6(ListEdgeSpacer, { width: listEdgeSpacing }), items1);
+  const callback1 = flag4.useCallback(() => React6(ListEdgeSpacer, { width: listEdgeSpacing }), items2);
   const tmp10 = listEdgeSpacing(flag4.useState(0), 2);
   first = tmp10[0];
   closure_9 = tmp10[1];
@@ -227,7 +227,7 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
     ({ item, index } = arg0);
     const obj = {
       newValue: { tilePosition: index, pageSection: "quest_home_orb_shop" },
-      children: React7(QuestHomeOrbShopRewardCardDefault, {
+      children: React6(QuestHomeOrbShopRewardCardDefault, {
         product: item,
         cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH,
         cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT,
@@ -235,7 +235,7 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
         clickable: flag4,
       }),
     };
-    return React7(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+    return React6(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
   }, items5);
   if (tmp12) {
     if (flag3) {

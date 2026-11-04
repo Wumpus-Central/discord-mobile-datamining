@@ -72,7 +72,7 @@ export function ForLaterCardStatusHeader(isCritical) {
     str = "text-feedback-critical";
   }
   items[1] = React4(Text_Text.Text, {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: str,
     style: tmp.label,
     lineClamp,

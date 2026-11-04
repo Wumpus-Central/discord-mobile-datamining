@@ -369,18 +369,18 @@ let closure_13 = async function _refreshPublishedApplication() {
     }
   })();
 };
-function reloadAfterPublish(application_id, arg1, integrationInstalled) {
+function reloadAfterPublish(applicationId, arg1, integrationInstalled) {
   if (arg1) {
     integrationInstalled = undefined;
     if (integrationInstalled != null) {
       integrationInstalled = integrationInstalled.integrationInstalled;
     }
     if (!tmp7) {
-      const result = conjureLiveRelaunch.reloadAppFramesAfterDeploy(application_id);
+      const result = conjureLiveRelaunch.reloadAppFramesAfterDeploy(applicationId);
     }
     tmp7 = true !== integrationInstalled || integrationInstalled.botPermissionsChanged;
   } else {
-    const result1 = ConjurePreviewActionCreators.reloadConjureAppFrames(application_id);
+    const result1 = ConjurePreviewActionCreators.reloadConjureAppFrames(applicationId);
   }
 }
 const Endpoints = fn(1072).Endpoints;

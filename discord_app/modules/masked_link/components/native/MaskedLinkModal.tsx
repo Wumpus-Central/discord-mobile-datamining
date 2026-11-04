@@ -59,9 +59,9 @@ export default function MaskedLinkModal(isProtocol) {
   obj2.actions = hasOwnProperty(AlertModal.AlertActions, obj4);
   const obj6 = { style: tmp.emphasis, children: null };
   const obj7 = { style: tmp.linkCalloutContainer, children: null };
-  let str = "text-md/normal";
+  let str = "body-md/normal";
   if (isProtocol) {
-    str = "text-md/semibold";
+    str = "body-md/semibold";
   }
   const obj8 = { variant: str, color: null, children: null };
   let str2 = "text-muted";
@@ -72,9 +72,9 @@ export default function MaskedLinkModal(isProtocol) {
   const items1 = [protocol, authorityPrefix];
   obj8.children = items1;
   const items2 = [hasOwnProperty(Text_Text.Text, obj8), ,];
-  let str3 = "text-md/semibold";
+  let str3 = "body-md/semibold";
   if (isProtocol) {
-    str3 = "text-md/normal";
+    str3 = "body-md/normal";
   }
   const obj9 = { variant: str3, color: null, children: null };
   let str4 = "text-default";
@@ -82,11 +82,11 @@ export default function MaskedLinkModal(isProtocol) {
     str4 = "text-muted";
   }
   const obj10 = { start: true, end: true, label: null };
-  const obj11 = { variant: "text-md/normal", children: null };
+  const obj11 = { variant: "body-md/normal", children: null };
   obj9.color = str4;
   obj9.children = hostname;
   items2[1] = React4(Text_Text.Text, obj9);
-  items2[2] = React4(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl });
+  items2[2] = React4(Text_Text.Text, { variant: "body-md/normal", color: "text-muted", children: theRestOfTheUrl });
   obj11.children = items2;
   obj7.children = hasOwnProperty(Text_Text.Text, obj11);
   obj10.label = React4(React3, obj7);
@@ -112,7 +112,7 @@ export default function MaskedLinkModal(isProtocol) {
     formatResult1 = format(t2.ZgXDsI, obj14);
   }
   const obj15 = { spacing: 16, children: null };
-  obj12.label = React4(Text_Text.Text, { variant: "text-md/medium", children: formatResult1 });
+  obj12.label = React4(Text_Text.Text, { variant: "body-md/medium", children: formatResult1 });
   items3[1] = React4(Form.FormCheckboxRow, obj12);
   obj15.children = items3;
   obj2.extraContent = hasOwnProperty(Stack_Stack.Stack, obj15);

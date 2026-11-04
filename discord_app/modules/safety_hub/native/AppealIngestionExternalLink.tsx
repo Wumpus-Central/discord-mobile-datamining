@@ -4,7 +4,7 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _mod8487 from "../../../../_runtime/metro/08487__.js";
+import _mod8504 from "../../../../_runtime/metro/08504__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -65,11 +65,11 @@ export default function AppealIngestionExternalLink(children) {
   items = [
     closure_4(Text_Text.Text, {
       style: tmp.childButtonText,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: children.text,
     }),
-    closure_4(native.Icon, { source: _mod8487, color: tmp.chevron.color }),
+    closure_4(native.Icon, { source: _mod8504, color: tmp.chevron.color }),
   ];
   obj2.children = items;
   obj.children = closure_5(View, obj2);

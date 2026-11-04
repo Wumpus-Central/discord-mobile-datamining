@@ -100,7 +100,7 @@ export function useMaybeFetchCollectiblesShopHome(HOME, arg1, memo) {
     let tmp = !hasExpiredShopBlocks;
     if (!hasExpiredShopBlocks) {
       const _Date = Date;
-      tmp = Date.now() - c6 < React7;
+      tmp = Date.now() - c6 < React6;
     }
     return tmp;
   }, items5);

@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -91,7 +91,7 @@ export default function ChatBeginningRowJoinRequest(channelId) {
         const obj6 = { guild: joinRequestGuild, size: tmp5(tmp3[11]).GuildIconSizes.XXSMALL };
         const items2 = [closure_7(tmp2(tmp3[11]), obj6)];
         const obj7 = {
-          variant: "heading-sm/semibold",
+          variant: "heading-xs/semibold",
           color: "mobile-text-heading-primary",
           children: joinRequestGuild.name,
         };
@@ -121,19 +121,19 @@ export default function ChatBeginningRowJoinRequest(channelId) {
           }
           const obj = { children: null };
           const obj2 = { style: closure_0.divider };
-          items = [React5(View, obj2), ,];
+          items = [metroImportDefault(View, obj2), ,];
           const obj3 = {
             style: closure_0.formQuestion,
-            variant: "text-xs/semibold",
+            variant: "body-xs/semibold",
             color: "text-muted",
             children: field_type.label,
           };
-          items[1] = React5(Text_Text.Text, obj3);
-          const obj4 = { variant: "text-md/medium", color: "text-strong", children: response };
-          items[2] = React5(Text_Text.Text, obj4);
+          items[1] = metroImportDefault(Text_Text.Text, obj3);
+          const obj4 = { variant: "body-md/medium", color: "text-strong", children: response };
+          items[2] = metroImportDefault(Text_Text.Text, obj4);
           obj.children = items;
           const _HermesInternal = HermesInternal;
-          return React6(View, obj, "form-response-" + index);
+          return React5(View, obj, "form-response-" + index);
         }
         response = field_type.response;
       });

@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -95,7 +95,7 @@ export default function ShareEmbed(embed) {
       }
       items = [tmp5];
       const obj4 = {
-        variant: "text-xs/semibold",
+        variant: "body-xs/semibold",
         color: "mobile-text-heading-primary",
         ellipsizeMode: "tail",
         lineClamp: 1,
@@ -115,7 +115,7 @@ export default function ShareEmbed(embed) {
     if (null != title) {
       const obj = {
         style: { marginVertical: 1 },
-        variant: "text-xs/semibold",
+        variant: "body-xs/semibold",
         color: "mobile-text-heading-primary",
         lineClamp: 1,
         ellipsizeMode: "tail",
@@ -137,7 +137,7 @@ export default function ShareEmbed(embed) {
       if (null != description) {
         const obj = {
           style: { marginVertical: 1 },
-          variant: "text-xs/medium",
+          variant: "body-xs/medium",
           color: "text-default",
           lineClamp: 1,
           ellipsizeMode: "tail",
@@ -161,7 +161,7 @@ export default function ShareEmbed(embed) {
       let tmp9Result = null != memo;
       if (tmp9Result) {
         let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-        tmp9Result = closure_5(isLoadingEmbed(5837), obj2);
+        tmp9Result = closure_5(isLoadingEmbed(5851), obj2);
       }
       let obj3 = { children: null };
       const items6 = [tmp9Result];

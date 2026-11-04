@@ -39,7 +39,7 @@ export default function ShowAllRow(users) {
     ),
   );
   items = [React3(AvatarDuoPile.AvatarDuoPile, obj3)];
-  const obj4 = { style: tmp.showAllText, variant: "text-md/semibold", color: "text-brand", children: null };
+  const obj4 = { style: tmp.showAllText, variant: "body-md/semibold", color: "text-brand", children: null };
   const intl = util.intl;
   obj4.children = intl.format(util.t.NrzztX, { count });
   items[1] = React3(Text_Text.Text, obj4);

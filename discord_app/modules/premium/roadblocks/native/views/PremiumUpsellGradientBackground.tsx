@@ -1,10 +1,10 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05723_LinearGradient.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 const obj2 = { gradient: null };

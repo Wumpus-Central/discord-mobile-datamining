@@ -28,11 +28,11 @@ export default function UserProfileNote(userId) {
     start: true,
     end: true,
   };
-  const obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj3 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = tmp(tmp2[6]).intl;
   obj3.children = intl.string(userId(trackUserProfileAction[6]).t["mQKv+v"]);
   obj2.label = jsx(userId(trackUserProfileAction[5]).Text, {
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     color: "text-default",
     children: null,
   });

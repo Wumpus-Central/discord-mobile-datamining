@@ -3,7 +3,7 @@ import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../../../Constants.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import SafetyHubConstants from "../../../../../safety_hub/SafetyHubConstants.tsx";
-import _modDef8151 from "../../../../../../../_runtime/metro/08151__.js";
+import _modDef8167 from "../../../../../../../_runtime/metro/08167__.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import SafetyWarningAgeUtils from "../../../../../safety_hub/SafetyWarningAgeUtils.tsx";
 import SafetyWarningAgeTextExperiment from "../../../../../safety_hub/experiments/SafetyWarningAgeTextExperiment.tsx";
@@ -63,7 +63,7 @@ export function createSafetyPolicyNoticeEmbed(message) {
             };
             const intl = util.intl;
             obj.titleText = intl.string(util.t["4CxGXi"]);
-            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8151));
+            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8167));
             const obj3 = SafetyWarningAgeUtils;
             const daysAgo = SafetyWarningAgeUtils.getDaysAgo(parsed);
             obj.subtitleText = obj3.formatSafetyWarningAge(

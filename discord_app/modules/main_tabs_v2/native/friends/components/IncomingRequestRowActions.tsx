@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx
 import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
-import _modDef15259 from "../../../../../../_runtime/metro/15259__.js";
-import _modDef16972 from "../../../../../../_runtime/metro/16972__.js";
+import _modDef15342 from "../../../../../../_runtime/metro/15342__.js";
+import _modDef17064 from "../../../../../../_runtime/metro/17064__.js";
 import AddFriendsScreenUtils from "AddFriendsScreenUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row" } });
 let closure_8 = {
@@ -279,7 +279,7 @@ export function IncomingRequestRowActions(user) {
     c5(require("IconButton").IconButton, {
       size: "sm",
       variant: "tertiary",
-      icon: _modDef16972,
+      icon: _modDef17064,
       onPress: callback1,
       accessibilityLabel: ignoreRequestAccessibilityLabel,
       maxFontSizeMultiplier: 2,
@@ -288,7 +288,7 @@ export function IncomingRequestRowActions(user) {
   const obj9 = {
     size: "sm",
     variant: "tertiary",
-    icon: _modDef16972,
+    icon: _modDef17064,
     onPress: callback1,
     accessibilityLabel: ignoreRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,
@@ -296,7 +296,7 @@ export function IncomingRequestRowActions(user) {
   items13[1] = c5(require("IconButton").IconButton, {
     size: "sm",
     variant: "active",
-    icon: _modDef15259,
+    icon: _modDef15342,
     onPress: callback,
     accessibilityLabel: acceptRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,
@@ -331,7 +331,7 @@ export function IncomingRequestRowActions(user) {
   const obj10 = {
     size: "sm",
     variant: "active",
-    icon: _modDef15259,
+    icon: _modDef15342,
     onPress: callback,
     accessibilityLabel: acceptRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,
@@ -344,7 +344,7 @@ export function IncomingRequestRowActions(user) {
     },
     children: c5(require("Text/Text").Text, {
       maxFontSizeMultiplier: 2,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       children: "\u{1F44B}",
     }),
   });

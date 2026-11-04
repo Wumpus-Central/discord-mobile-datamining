@@ -7,7 +7,7 @@ import AgeVerificationActionCreatorsDefault from "../../../../../age_assurance/A
 import SearchPlatformUtils from "../../../SearchPlatformUtils.tsx";
 import SmartSearchUtils from "../../../../../intelligence_layer/search/SmartSearchUtils.tsx";
 import SearchUtils from "../../../../SearchUtils.tsx";
-import search_tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
+import TrackingDefault from "../../../tracking/Tracking.tsx";
 import SearchPlatformActionCreatorsDefault from "../../../SearchPlatformActionCreators.tsx";
 import ExplicitMediaRedactionNativeUtils from "../../../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -32,11 +32,11 @@ function ClearAllHistory(searchContext) {
   };
   const intl = searchContext(1113).intl;
   obj.accessibilityLabel = intl.string(searchContext(1113).t.LFTAUp);
-  const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1113).intl;
   obj2.children = intl2.string(searchContext(1113).t.LFTAUp);
-  obj.children = jsx(searchContext(5747).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(7106).PressableHighlight, {
+  obj.children = jsx(searchContext(5761).Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(7121).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -56,10 +56,10 @@ function ViewAll(onJumpToMedia) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.Ofpgwh);
-  const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "text-brand", children: null };
   const intl2 = util.intl;
   obj2.children = intl2.string(util.t.Ofpgwh);
-  obj.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "body-sm/semibold", color: "text-brand", children: null });
   return jsx(Pressables.PressableHighlight, {
     onPress: onJumpToMedia.onJumpToMedia,
     accessibilityRole: "button",
@@ -68,14 +68,14 @@ function ViewAll(onJumpToMedia) {
     children: null,
   });
 }
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({
   EMPTY_SEARCH_QUERY_STRING: closure_10,
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11,
   SearchListItemTypes: closure_12,
   SearchTabs: map1,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(14033).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(14119).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo(function RecentScreen(searchContext) {
@@ -379,7 +379,7 @@ let closure_21 = noop.memo(function RecentGuildScreen(searchContext) {
   isLoadingSuggestedSearches = suggestedSearches1.isLoadingSuggestedSearches;
   const items3 = [onPressGuildTextChannel, searchContext];
   const onPress = memo1.useCallback((channelId) => {
-    const result = search_tracking_TrackingDefault.trackSuggestedSearchClicked({ searchContext, channelId });
+    const result = TrackingDefault.trackSuggestedSearchClicked({ searchContext, channelId });
     onPressGuildTextChannel(channelId);
   }, items3);
   const items4 = [onPress, memo1, memo, suggestedSearches, isLoadingSuggestedSearches];

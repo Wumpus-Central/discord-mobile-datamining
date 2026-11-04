@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(18503).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(18598).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
@@ -38,7 +38,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(18515);
+  let obj = restrictedGuild(18610);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -75,7 +75,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18515).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18610).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -84,12 +84,11 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren:
-      "(function CarouselPaginationTsx1(){let[withTiming,active,STANDARD_EASING]=this.__closure;return withTiming(active?1:0,{duration:250,easing:STANDARD_EASING},'animate-always');})",
-    expandedChildren: null,
-    children: 1,
+    externalChildren: "flexDirection",
+    expandedChildren: "count",
+    children: 263,
   };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(18515).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(18610).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
@@ -107,13 +106,13 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(7083).GuildIconSizes.LARGE,
+      size: tmp2(7098).GuildIconSizes.LARGE,
     };
     tmp8Result = jsx(GuildIconDefault, {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(7083).GuildIconSizes.LARGE,
+      size: tmp2(7098).GuildIconSizes.LARGE,
     });
     const tmp9Result = GuildIconDefault;
   }
@@ -122,7 +121,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18515).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18610).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -131,9 +130,8 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren:
-      "(function CarouselPaginationTsx1(){let[withTiming,active,STANDARD_EASING]=this.__closure;return withTiming(active?1:0,{duration:250,easing:STANDARD_EASING},'animate-always');})",
-    expandedChildren: null,
-    children: 1,
+    externalChildren: "flexDirection",
+    expandedChildren: "count",
+    children: 263,
   });
 });

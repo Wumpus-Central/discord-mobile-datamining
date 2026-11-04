@@ -14,22 +14,22 @@ const PhoneActionCreatorsDefault = PhoneActionCreators;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(14379).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14459).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
-  container: { paddingTop: fn(5709).NAV_BAR_HEIGHT + 32 },
+  container: { paddingTop: fn(5722).NAV_BAR_HEIGHT + 32 },
   redesignContainer: null,
   header: null,
   title: null,
   subtitle: null,
 };
-let obj3 = { paddingTop: fn(5709).NAV_BAR_HEIGHT + 32 };
+let obj3 = { paddingTop: fn(5722).NAV_BAR_HEIGHT + 32 };
 obj2.redesignContainer = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  paddingTop: fn(5709).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5722).NAV_BAR_HEIGHT + 32,
 };
 obj2.header = { alignItems: "center" };
 obj2.title = { textAlign: "center" };
@@ -52,7 +52,7 @@ export function AddPhoneScreen() {
   const intl = require("util").intl;
   obj3.children = intl.string(require("util").t.Xgb497);
   items = [closure_9(require("Text/Text").Text, obj3)];
-  const obj4 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj4 = { style: tmp.subtitle, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
   obj4.children = intl2.string(require("util").t.qFmzyo);
   items[1] = closure_9(require("Text/Text").Text, obj4);

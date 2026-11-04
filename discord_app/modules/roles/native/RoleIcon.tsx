@@ -18,11 +18,10 @@ export default function RoleIcon(arg0) {
   const obj = {
     fontFamily: "System",
     fontSize: size * num,
-    lineHeight: "channel_id",
-    textAlign:
-      -15731819779118550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    lineHeight: "id",
+    textAlign: false,
     width: size,
-    marginBottom: 16247960436100152000000000000000000000000000000000000000000000000000000000000000000,
+    marginBottom: false,
   };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
@@ -33,7 +32,7 @@ export default function RoleIcon(arg0) {
   } else {
     tmp = null;
     if (null != unicodeEmoji) {
-      const obj4 = { allowFontScaling: false, color: "none", style: null, variant: "text-lg/normal", children: null };
+      const obj4 = { allowFontScaling: false, color: "none", style: null, variant: "body-lg/normal", children: null };
       items = [size1, obj];
       obj4.style = items;
       obj4.children = unicodeEmoji.surrogates;
@@ -41,7 +40,7 @@ export default function RoleIcon(arg0) {
         allowFontScaling: false,
         color: "none",
         style: null,
-        variant: "text-lg/normal",
+        variant: "body-lg/normal",
         children: null,
       });
     }

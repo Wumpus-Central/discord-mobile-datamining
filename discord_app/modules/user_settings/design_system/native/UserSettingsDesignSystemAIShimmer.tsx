@@ -39,7 +39,7 @@ function Stage(children) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { padding: 16 },
@@ -47,7 +47,7 @@ let closure_8 = createStyles.createStyles({
   stage: { minHeight: 28, justifyContent: "center" },
 });
 const text = ["Reading the channel", "Finding the highlights", "Writing it up"];
-const options = ["text-xs/normal", "text-sm/normal", "text-md/normal", "text-lg/semibold"];
+const options = ["body-xs/normal", "body-sm/normal", "body-md/normal", "body-lg/semibold"];
 const options2 = ["text-default", "text-subtle"];
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -57,7 +57,7 @@ const result = size.fileFinishedImporting(
 export default function UserSettingsDesignSystemAIShimmer() {
   const tmp = closure_8();
   const ref = noop.useRef(null);
-  const tmp3 = _slicedToArray(noop.useState("text-md/normal"), 2);
+  const tmp3 = _slicedToArray(noop.useState("body-md/normal"), 2);
   const first = tmp3[0];
   const tmp5 = _slicedToArray(noop.useState("text-default"), 2);
   const first1 = tmp5[0];
@@ -68,44 +68,44 @@ export default function UserSettingsDesignSystemAIShimmer() {
   const obj3 = { children: null };
   const obj4 = { children: null };
   items = [
-    timestampProducer(Text_Text.Text, { variant: "text-lg/semibold", children: "Variant" }),
+    timestampProducer(Text_Text.Text, { variant: "body-lg/semibold", children: "Variant" }),
     timestampProducer(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
-      children: "Any Mana text variant. The glyph band scales with the font size. Default `text-md/normal`.",
+      children: "Any Mana text variant. The glyph band scales with the font size. Default `body-md/normal`.",
     }),
     timestampProducer(Picker, { options, value: first, onChange: tmp3[1] }),
   ];
   const obj6 = { children: timestampProducer(AIShimmer.AIShimmer, { text, variant: first }) };
   items[3] = timestampProducer(Stage, obj6);
   obj4.children = items;
-  obj3.children = React5(Stack_Stack.Stack, obj4);
+  obj3.children = metroImportDefault(Stack_Stack.Stack, obj4);
   const items1 = [timestampProducer(Card.Card, obj3), ,];
   const obj8 = { children: null };
   const obj9 = { children: null };
   const items2 = [
-    timestampProducer(Text_Text.Text, { variant: "text-lg/semibold", children: "Colors" }),
+    timestampProducer(Text_Text.Text, { variant: "body-lg/semibold", children: "Colors" }),
     timestampProducer(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "The text and moving glyph band can use different colors.",
     }),
-    timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: "Text color" }),
+    timestampProducer(Text_Text.Text, { variant: "body-md/medium", children: "Text color" }),
     timestampProducer(Picker, { options: options2, value: first1, onChange: tmp5[1] }),
-    timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: "Glyph color" }),
+    timestampProducer(Text_Text.Text, { variant: "body-md/medium", children: "Glyph color" }),
     timestampProducer(Picker, { options: options2, value: first2, onChange: tmp7[1] }),
   ];
   const obj12 = { children: timestampProducer(AIShimmer.AIShimmer, { text, color: first1, glyphColor: first2 }) };
   items2[6] = timestampProducer(Stage, obj12);
   obj9.children = items2;
-  obj8.children = React5(Stack_Stack.Stack, obj9);
+  obj8.children = metroImportDefault(Stack_Stack.Stack, obj9);
   items1[1] = timestampProducer(Card.Card, obj8);
   const obj14 = { children: null };
   const obj15 = { children: null };
   const items3 = [
-    timestampProducer(Text_Text.Text, { variant: "text-lg/semibold", children: "Manual Trigger" }),
-    React5(Text_Text.Text, {
-      variant: "text-md/medium",
+    timestampProducer(Text_Text.Text, { variant: "body-lg/semibold", children: "Manual Trigger" }),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-md/medium",
       color: "text-subtle",
       children: ["`delay=", null, "` turns off automatic changes. Use play() to run the next animation."],
     }),
@@ -141,13 +141,13 @@ export default function UserSettingsDesignSystemAIShimmer() {
     }),
   ];
   obj16.children = items4;
-  items3[2] = React5(hasOwnProperty, obj16);
+  items3[2] = metroImportDefault(hasOwnProperty, obj16);
   const obj19 = { children: timestampProducer(AIShimmer.AIShimmer, { ref, text, delay: null }) };
   items3[3] = timestampProducer(Stage, obj19);
   obj15.children = items3;
-  obj14.children = React5(Stack_Stack.Stack, obj15);
+  obj14.children = metroImportDefault(Stack_Stack.Stack, obj15);
   items1[2] = timestampProducer(Card.Card, obj14);
   obj2.children = items1;
-  obj.children = React5(Stack_Stack.Stack, obj2);
+  obj.children = metroImportDefault(Stack_Stack.Stack, obj2);
   return timestampProducer(React4, obj);
 }

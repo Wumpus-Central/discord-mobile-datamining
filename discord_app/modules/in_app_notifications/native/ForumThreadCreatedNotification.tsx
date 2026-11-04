@@ -5,7 +5,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(11156).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_4 = fn(11204).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
@@ -40,7 +40,7 @@ export default function ForumThreadCreatedNotification(notification) {
   const callback1 = guild.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(11204, dependencyMap.paths),
+        asyncRequireImpl(11254, dependencyMap.paths),
         { channelId: notification.parentChannel.id },
         "in-app-notification-settings-modal",
       ),
@@ -54,7 +54,7 @@ export default function ForumThreadCreatedNotification(notification) {
     guildId: thread.guild_id,
   });
   obj2.children = jsx(notification(parentChannel[12]).Text, {
-    variant: "redesign/message-preview/medium",
+    variant: "heading-sm/medium",
     color: "text-subtle",
     lineClamp: userAuthor,
     children: formatToPlainStringResult,

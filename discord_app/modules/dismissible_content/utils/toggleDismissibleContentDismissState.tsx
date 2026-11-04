@@ -10,7 +10,7 @@ const UserSettingsProtoActionCreators = obj(4971);
 const DismissibleContentUtils = obj(4975);
 const DismissibleContentTypes = obj(4981);
 const VersionedDismissibleContentUtils = obj(4988);
-const DismissibleContentFrameworkActionCreators = obj(5810);
+const DismissibleContentFrameworkActionCreators = obj(5824);
 _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
 

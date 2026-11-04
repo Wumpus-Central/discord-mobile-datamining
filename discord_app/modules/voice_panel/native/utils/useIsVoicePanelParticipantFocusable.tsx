@@ -40,9 +40,9 @@ function isVoicePanelParticipantFocusable(c0, c1, id2) {
       }
       return null != applicationId && participant.applicationId === currentEmbeddedActivity.applicationId;
     } else {
-      if (React5(participant)) {
+      if (metroImportDefault(participant)) {
         let result = null != obj3.getActiveStreamForUser(participant.user.id, c0);
-      } else if (React6(participant)) {
+      } else if (React5(participant)) {
         result = participantHasVideo.canRenderParticipantVideo(participant, tmp);
         const tmp4Result = participantHasVideo;
       } else {
@@ -53,8 +53,12 @@ function isVoicePanelParticipantFocusable(c0, c1, id2) {
     }
   }
 }
-const CallConstants = fn(5801);
-({ isActivityParticipant: metroRequire, isStreamParticipant: closure_7, isUserParticipant: closure_8 } = CallConstants);
+const CallConstants = fn(5815);
+({
+  isActivityParticipant: closure_6,
+  isStreamParticipant: metroImportDefault,
+  isUserParticipant: closure_8,
+} = CallConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx");
 

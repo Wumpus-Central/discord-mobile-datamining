@@ -1,14 +1,14 @@
 // discord_app/modules/game_profile/native/components/GameProfileHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
 import GameCoverArt from "GameCoverArt.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
-import _modDef9507 from "../../../../../_runtime/metro/09507__.js";
+import _modDef9525 from "../../../../../_runtime/metro/09525__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const _modDef1652 = _mod1652;
@@ -16,10 +16,10 @@ const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(9498);
+const GameProfileConstants = fn(9516);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
@@ -147,7 +147,7 @@ export default function GameProfileHeader(arg0) {
   obj7.colors = items5;
   items4[1] = timestampProducer(LinearGradientDefault, obj7);
   obj4.children = items4;
-  const items6 = [React5(_modDef1652.View, obj4)];
+  const items6 = [metroImportDefault(_modDef1652.View, obj4)];
   const obj8 = { style: tmp.headerContent, children: null };
   const obj9 = { style: tmp.shadowContainer, children: null };
   const obj10 = { game, imageSize: 114, size: null, style: null };
@@ -176,19 +176,19 @@ export default function GameProfileHeader(arg0) {
   const items10 = [timestampProducer(Text_Text.Text, obj14)];
   let tmp15Result3 = game.id === hasOwnProperty;
   if (tmp15Result3) {
-    const obj15 = { source: _modDef9507, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj15 = { source: _modDef9525, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp15Result3 = timestampProducer(FastImageDefault, obj15);
     const tmp9Result2 = FastImageDefault;
   }
   items10[1] = tmp15Result3;
   obj13.children = items10;
-  items8[1] = React5(View, obj13);
+  items8[1] = metroImportDefault(View, obj13);
   let tmp15Result4 = null;
   if (null != joined) {
     tmp15Result4 = null;
     if ("" !== joined) {
       const obj16 = {
-        variant: "text-md/normal",
+        variant: "body-md/normal",
         color: "text-overlay-light",
         lineClamp: 2,
         style: tmp.textShadow,
@@ -199,9 +199,9 @@ export default function GameProfileHeader(arg0) {
   }
   items8[2] = tmp15Result4;
   obj11.children = items8;
-  items7[1] = React5(View, obj11);
+  items7[1] = metroImportDefault(View, obj11);
   obj8.children = items7;
-  items6[1] = React5(View, obj8);
+  items6[1] = metroImportDefault(View, obj8);
   obj3.children = items6;
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 }

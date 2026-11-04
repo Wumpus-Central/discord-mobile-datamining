@@ -615,7 +615,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "assign",
+      fetchError: "children",
     };
     value4 = obj;
   }
@@ -981,13 +981,13 @@ prototype["getFirstWishlistId"] = function getFirstWishlistId(id) {
     return first;
   }
 };
-prototype["getWishlistSettings"] = function getWishlistSettings(id, wishlistId) {
+prototype["getWishlistSettings"] = function getWishlistSettings(id, firstWishlistId) {
   value = map1.get(id);
   let tmp2;
   if (value != null) {
     const wishlistSettings = value.wishlistSettings;
     if (wishlistSettings != null) {
-      tmp2 = wishlistSettings[wishlistId];
+      tmp2 = wishlistSettings[firstWishlistId];
     }
   }
   if (tmp2 == null) {

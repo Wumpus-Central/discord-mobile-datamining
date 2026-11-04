@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
-({ useEffect: metroRequire, useRef: closure_7 } = noop);
+({ useEffect: closure_6, useRef: metroImportDefault } = noop);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx",
@@ -48,7 +48,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
             const obj4 = { title, body, confirmText, confirmColor: tmp2(1187).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj5 = { value: v2(6079).confirm(obj4), done: false };
+            const obj5 = { value: v2(6094).confirm(obj4), done: false };
             return obj5;
           }
         } else {

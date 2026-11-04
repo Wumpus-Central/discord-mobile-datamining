@@ -7,7 +7,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
@@ -38,10 +38,10 @@ export default function ChannelPreview(stageInstance) {
     if (null != stageInstance) {
       const obj2 = { style: tmp.container, children: null };
       const tmp2Result = tmp2(5138);
-      const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/semibold", children: null };
+      const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "body-xs/semibold", children: null };
       const intl = tmp2(1113).intl;
       obj3.children = intl.string(tmp2(1113).t.InbJ8x);
-      const items1 = [closure_5(tmp2(5747).Text, obj3)];
+      const items1 = [closure_5(tmp2(5761).Text, obj3)];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.itemContainer];
       const obj5 = { borderColor: tmp2(5138).hexWithOpacity(tmp.borderColor.color, 0.08) };
@@ -50,24 +50,24 @@ export default function ChannelPreview(stageInstance) {
       const obj6 = { style: tmp.guildInfo, children: null };
       const obj7 = { guild: stateFromStores, size: null, selected: false };
       const hexWithOpacityResult = tmp2(5138).hexWithOpacity(tmp.borderColor.color, 0.08);
-      obj7.size = tmp2(7083).GuildIconSizes.XXSMALL;
+      obj7.size = tmp2(7098).GuildIconSizes.XXSMALL;
       const items3 = [closure_5(GuildIconDefault, obj7)];
       const obj8 = {
         style: tmp.guildName,
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-default",
         children: stateFromStores.name,
       };
-      items3[1] = closure_5(tmp2(5747).Text, obj8);
+      items3[1] = closure_5(tmp2(5761).Text, obj8);
       obj6.children = items3;
       const items4 = [closure_6(View, obj6)];
       const obj9 = {
         style: tmp.topic,
-        variant: "text-md/semibold",
+        variant: "body-md/semibold",
         color: "mobile-text-heading-primary",
         children: stageInstance.topic,
       };
-      items4[1] = closure_5(tmp2(5747).Text, obj9);
+      items4[1] = closure_5(tmp2(5761).Text, obj9);
       obj4.children = items4;
       items1[1] = closure_6(View, obj4);
       obj2.children = items1;

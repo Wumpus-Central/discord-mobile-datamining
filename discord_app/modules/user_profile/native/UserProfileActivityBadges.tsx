@@ -105,7 +105,7 @@ export function PartyBadge(activity) {
         const obj = { style: tmp.container, children: null };
         const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
         items = [React4(GroupIcon.GroupIcon, obj2)];
-        const obj3 = { variant: "text-sm/medium", color: "text-muted", children: richGameStateBadgeText };
+        const obj3 = { variant: "body-sm/medium", color: "text-muted", children: richGameStateBadgeText };
         items[1] = React4(Text_Text.Text, obj3);
         obj.children = items;
         tmp8 = hasOwnProperty(View, obj);
@@ -128,7 +128,7 @@ export function EpisodeBadge(activity) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
     items = [React4(TopicsIcon.TopicsIcon, obj3)];
-    const obj4 = { variant: "text-sm/medium", color: "text-muted", children: episodeBadgeText };
+    const obj4 = { variant: "body-sm/medium", color: "text-muted", children: episodeBadgeText };
     items[1] = React4(Text_Text.Text, obj4);
     obj2.children = items;
     tmp6 = hasOwnProperty(View, obj2);

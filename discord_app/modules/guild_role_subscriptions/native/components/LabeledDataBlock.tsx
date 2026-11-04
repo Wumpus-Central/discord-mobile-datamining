@@ -36,7 +36,7 @@ export default function LabeledDataBlock(arg0) {
     React3(Text_Text.Text, {
       style: tmp.title,
       accessibilityRole: "header",
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "interactive-text-default",
       children: title,
     }),

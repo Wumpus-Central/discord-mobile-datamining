@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import Suspender from "../../../../../_runtime/06109_Suspender.js";
+import Suspender from "../../../../../_runtime/06124_Suspender.js";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoicePanelChatViewDefault from "VoicePanelChatView.tsx";
@@ -17,14 +17,14 @@ function renderChat(shown) {
   const obj = {
     collapsable: false,
     style: absoluteFill.absoluteFill,
-    children: React7(VoicePanelChatViewDefault, { shown }),
+    children: React6(VoicePanelChatViewDefault, { shown }),
   };
-  return React7(timestampProducer, obj);
+  return React6(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11360);
-({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const VoicePanelConstants = fn(11410);
+({ MODE_CHANGE_PHYSICS: metroImportDefault, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -61,7 +61,7 @@ const memoResult = noop.memo(function LazyContentFreezer(shown) {
   const memo = noop.useMemo(() => renderContent(shown), items1);
   if (useRefValueDefault(ref)) {
     const obj2 = { freeze: tmp2, children: memo };
-    let tmp11 = React7(Suspender.Freeze, obj2);
+    let tmp11 = React6(Suspender.Freeze, obj2);
   } else {
     tmp11 = null;
   }
@@ -201,10 +201,10 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   const items6 = [openTab];
   const items7 = [gestureSpecs];
   const callback = obj.useCallback(
-    (isVisible) => React7(VoicePanelVoiceControlsDefault, { isVisible, openTab }),
+    (isVisible) => React6(VoicePanelVoiceControlsDefault, { isVisible, openTab }),
     items6,
   );
-  const callback1 = obj.useCallback(() => React7(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items7);
+  const callback1 = obj.useCallback(() => React6(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items7);
   const obj3 = { style: null, children: null };
   const items8 = [tmp4.drawer, animatedStyle];
   obj3.style = items8;
@@ -212,7 +212,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(19491), obj4);
+    tmp32 = closure_9(tmp(19595), obj4);
   }
   const items9 = [tmp32, , ,];
   let tmp36 = !tmp6;

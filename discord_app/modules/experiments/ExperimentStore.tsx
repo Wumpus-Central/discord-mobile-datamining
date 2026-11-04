@@ -897,8 +897,12 @@ function handleGuildChange(arg0) {
     continue;
   }
 }
-const ExperimentConstants = fn(5362);
-({ ExperimentBuckets: hasOwnProperty, ExperimentTypes: metroRequire, ExposureTypes: closure_7 } = ExperimentConstants);
+const ExperimentConstants = fn(5363);
+({
+  ExperimentBuckets: hasOwnProperty,
+  ExperimentTypes: closure_6,
+  ExposureTypes: metroImportDefault,
+} = ExperimentConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, EMPTY_STRING_SNOWFLAKE_ID: closure_9, UserFlags: closure_10 } = Constants);
 let c11 = "scientist:triggered";
@@ -1095,7 +1099,7 @@ prototype["getUserExperimentDescriptor"] = function getUserExperimentDescriptor(
 prototype["getGuildExperimentDescriptor"] = function getGuildExperimentDescriptor(id, guildId) {
   let tmp = guildId;
   if (guildId == null) {
-    tmp = React7;
+    tmp = React6;
   }
   if (c26) {
     if (null != tmp2) {

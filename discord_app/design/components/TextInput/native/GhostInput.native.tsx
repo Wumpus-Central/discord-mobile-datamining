@@ -26,7 +26,7 @@ let closure_6 = createStyles.createStyles(() => {
   }
   const input = {};
   const merged = Object.assign(
-    { md: Text_Text.TextStyleSheet["text-md/semibold"], lg: Text_Text.TextStyleSheet["text-lg/semibold"] }[str],
+    { md: Text_Text.TextStyleSheet["body-md/semibold"], lg: Text_Text.TextStyleSheet["body-lg/semibold"] }[str],
   );
   if ("error" === str2) {
     let TEXT_DEFAULT = nativeDefault.colors.TEXT_FEEDBACK_CRITICAL;

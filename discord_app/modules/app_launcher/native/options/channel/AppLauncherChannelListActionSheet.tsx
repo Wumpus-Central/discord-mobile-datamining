@@ -56,7 +56,7 @@ function ChannelListItem(arg0) {
       onPress,
       label: timestampProducer(Text_Text.Text, {
         lineClamp: 1,
-        variant: "text-md/semibold",
+        variant: "body-md/semibold",
         color: "mobile-text-heading-primary",
         children: useChannelNameDefault(channel),
       }),
@@ -68,11 +68,11 @@ function ChannelListItem(arg0) {
   );
 }
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
 const createStyles = fn(5141);
 const obj2 = { channelIconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
-const React7 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx",

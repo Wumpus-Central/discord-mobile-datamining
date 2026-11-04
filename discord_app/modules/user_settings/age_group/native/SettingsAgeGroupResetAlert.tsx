@@ -40,13 +40,13 @@ export default function SettingsAgeGroupResetAlert() {
             dependencyMap = 1;
             c1 = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(6853).resetAgeVerification(), done: false };
+            const obj6 = { value: tmp3(6868).resetAgeVerification(), done: false };
             return obj6;
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;
           const intl = tmp3(1113).intl;
-          tmp3(5831).presentError(intl.string(tmp3(1113).t.fEptJP));
+          tmp3(5845).presentError(intl.string(tmp3(1113).t.fEptJP));
           const _Error = Error;
           const error = new Error("Reset failed");
           throw error;
@@ -59,7 +59,7 @@ export default function SettingsAgeGroupResetAlert() {
           const obj7 = { value, done: true };
           return obj7;
         } else {
-          tmp3(6080).dismissAlert(closure_1_6);
+          tmp3(6095).dismissAlert(closure_1_6);
           closure_128_0.goBack();
           dependencyMap = 0;
           c3 = 3;

@@ -8,7 +8,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   screenContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
@@ -95,7 +95,7 @@ export default function EditLinkedLobby(channel) {
           usernameHook(children, arg1) {
             return callback1(
               channel(navigation[16]).Text,
-              { onPress, variant: "text-sm/semibold", color: "text-strong", children },
+              { onPress, variant: "body-sm/semibold", color: "text-strong", children },
               arg1,
             );
           },
@@ -123,7 +123,7 @@ export default function EditLinkedLobby(channel) {
     obj9.size = tmp(tmp2[19]).AvatarSizes.XXLARGE;
     const items4 = [callback1(tmp(tmp2[19]).Avatar, obj9), ,];
     const obj11 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "mobile-text-heading-primary",
       children: getOrFetchApplication.name,
     };
@@ -133,7 +133,7 @@ export default function EditLinkedLobby(channel) {
       const obj13 = { children: null };
       const obj14 = { style: tmp5.divider };
       const items5 = [tmp19(tmp21, obj14)];
-      const obj15 = { variant: "text-sm/medium", color: "text-subtle", children: memo };
+      const obj15 = { variant: "body-sm/medium", color: "text-subtle", children: memo };
       items5[1] = tmp19(tmp(tmp2[16]).Text, obj15);
       obj13.children = items5;
       tmp20Result = closure_8(closure_7, obj13);
@@ -141,7 +141,7 @@ export default function EditLinkedLobby(channel) {
     items4[2] = tmp20Result;
     obj8.children = items4;
     const items6 = [closure_8(linked_at, obj8), ,];
-    const obj16 = { variant: "text-sm/normal", color: "text-default", children: null };
+    const obj16 = { variant: "body-sm/normal", color: "text-default", children: null };
     let intl = tmp(tmp2[15]).intl;
     const obj17 = { channelName: tmp10 };
     obj16.children = intl.format(tmp(tmp2[15]).t.DA9v5F, obj17);

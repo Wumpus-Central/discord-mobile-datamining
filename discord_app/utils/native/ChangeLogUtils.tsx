@@ -38,7 +38,7 @@ function ChangeLogList(styling) {
       item = item.forEach((type, index) => {
         if ("list" === type.type) {
           if (closure_4.length > 0) {
-            const obj2 = { variant: "text-sm/normal" };
+            const obj2 = { variant: "body-sm/normal" };
             const merged = Object.assign(closure_2);
             obj2.children = closure_0(closure_4, obj);
             const _HermesInternal = HermesInternal;
@@ -53,11 +53,11 @@ function ChangeLogList(styling) {
         }
       });
       if (length.length > 0) {
-        let obj2 = { variant: "text-sm/normal" };
+        let obj2 = { variant: "body-sm/normal" };
         const merged1 = Object.assign(arg0);
         obj2.children = closure_2_0(length, obj);
         let _HermesInternal = HermesInternal;
-        items.push(jsx(Text_Text.Text, { variant: "text-sm/normal" }, "text-" + items.length));
+        items.push(jsx(Text_Text.Text, { variant: "body-sm/normal" }, "text-" + items.length));
         length = [];
       }
       return items;
@@ -76,9 +76,9 @@ function ChangeLogParagraph(state) {
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = output(5747).Text;
+    Paragraph = output(5761).Text;
   }
-  const result = output(8694).splitParagraphAtImages(node.content);
+  const result = output(8711).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -92,8 +92,8 @@ function ChangeLogParagraph(state) {
                 obj2.children = output(items, obj3);
                 let tmp6 = < key={index}>{null}</>;
               } else {
-                const obj = { variant: "text-sm/normal", style: text.text, children: output(type.nodes, state) };
-                tmp6 = <Paragraph key={index} variant="text-sm/normal" style={text.text}>{output(type.nodes, state)}</Paragraph>;
+                const obj = { variant: "body-sm/normal", style: text.text, children: output(type.nodes, state) };
+                tmp6 = <Paragraph key={index} variant="body-sm/normal" style={text.text}>{output(type.nodes, state)}</Paragraph>;
               }
               return tmp6;
             })
@@ -108,17 +108,17 @@ function ChangeLogParagraph(state) {
           obj2.children = output(items, obj3);
           let tmp6 = < key={index}>{null}</>;
         } else {
-          const obj = { variant: "text-sm/normal", style: text.text, children: output(type.nodes, state) };
-          tmp6 = <Paragraph key={index} variant="text-sm/normal" style={text.text}>{output(type.nodes, state)}</Paragraph>;
+          const obj = { variant: "body-sm/normal", style: text.text, children: output(type.nodes, state) };
+          tmp6 = <Paragraph key={index} variant="body-sm/normal" style={text.text}>{output(type.nodes, state)}</Paragraph>;
         }
         return tmp6;
       })}</View>;
     }
     return tmp7;
   }
-  let obj = output(8694);
-  tmp7 = <Paragraph key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
-  let obj3 = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
+  let obj = output(8711);
+  tmp7 = <Paragraph key={state.key} variant="body-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
+  let obj3 = { variant: "body-sm/normal", style: tmp.text, children: output(node.content, state) };
 }
 function ChangeLogStrong(state) {
   state = state.state;
@@ -138,12 +138,12 @@ function ChangeLogBlockQuote(state) {
   ({ node, output } = state);
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const obj2 = { variant: "text-sm/normal", style: tmp.text, children: null };
+  const obj2 = { variant: "body-sm/normal", style: tmp.text, children: null };
   const obj3 = {};
   const merged = Object.assign(state);
   obj3.changelogImagesDisabled = true;
   obj2.children = output(node.content, obj3);
-  obj.children = jsx(Text_Text.Text, { variant: "text-sm/normal", style: tmp.text, children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "body-sm/normal", style: tmp.text, children: null });
   return <View key={state.key} style={tmp.container}>{null}</View>;
 }
 const View = fn(17).View;
@@ -151,8 +151,8 @@ const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, container: null, text: null };
 let obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6898).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6898).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6913).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6913).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});

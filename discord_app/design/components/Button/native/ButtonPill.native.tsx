@@ -4,7 +4,7 @@ import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import shared from "../../../shared.tsx";
 import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
@@ -40,7 +40,7 @@ function PillWrapper(expressivePressState) {
   let tmp7 = null;
   if (shiny) {
     const obj7 = { variant };
-    tmp7 = React5(ButtonShine.ButtonShine, obj7);
+    tmp7 = metroImportDefault(ButtonShine.ButtonShine, obj7);
   }
   if ("experimental_premium-primary" !== variant) {
     if ("experimental_premium-basic" !== variant) {
@@ -64,8 +64,8 @@ function PillWrapper(expressivePressState) {
         const obj10 = { buttonColor: tmp5.expressiveRiveFill.color, cornerRadius: tmp5.expressivePill.borderRadius };
         const merged = Object.assign(expressivePressState);
         obj9.dataBinding = obj10;
-        obj8.children = React5(native.ExpressiveButtonRive, obj9);
-        tmp11Result = React5(hasOwnProperty, obj8);
+        obj8.children = metroImportDefault(native.ExpressiveButtonRive, obj9);
+        tmp11Result = metroImportDefault(hasOwnProperty, obj8);
         tmpResult = shared;
       }
       let obj11 = { children: null };
@@ -75,10 +75,10 @@ function PillWrapper(expressivePressState) {
       obj12.style = items4;
       const items5 = [children, tmp7];
       obj12.children = items5;
-      items3[1] = React6(_modDef1652.View, obj12);
+      items3[1] = React5(_modDef1652.View, obj12);
       obj11.children = items3;
     }
-    return React6(tmp10, obj11);
+    return React5(tmp10, obj11);
   }
   const obj13 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, style: null, colors: null };
   const items6 = [style, gradientPillStyles, timestampProducer.absoluteFill];
@@ -88,13 +88,13 @@ function PillWrapper(expressivePressState) {
   }
   const obj14 = { children: null };
   obj13.colors = items;
-  const items7 = [React5(LinearGradientDefault, obj13)];
+  const items7 = [metroImportDefault(LinearGradientDefault, obj13)];
   const obj15 = { style: null, children: null };
   const items8 = [style, buttonPillStyles];
   obj15.style = items8;
   const items9 = [children, tmp7];
   obj15.children = items9;
-  items7[1] = React6(_modDef1652.View, obj15);
+  items7[1] = React5(_modDef1652.View, obj15);
   obj14.children = items7;
   obj11 = obj14;
   const tmp6Result = LinearGradientDefault;
@@ -363,20 +363,20 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
   return items4;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-let ButtonConstants = fn(5760);
-const paddingVertical = ButtonConstants.getButtonPadding(fn(5760).SMALL_BUTTON_HEIGHT, fn(5760).SMALL_BUTTON_ICON_SIZE);
-ButtonConstants = fn(5760);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+let ButtonConstants = fn(5774);
+const paddingVertical = ButtonConstants.getButtonPadding(fn(5774).SMALL_BUTTON_HEIGHT, fn(5774).SMALL_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5774);
 const paddingVertical2 = ButtonConstants.getButtonPadding(
-  fn(5760).MEDIUM_BUTTON_HEIGHT,
-  fn(5760).MEDIUM_BUTTON_ICON_SIZE,
+  fn(5774).MEDIUM_BUTTON_HEIGHT,
+  fn(5774).MEDIUM_BUTTON_ICON_SIZE,
 );
-ButtonConstants = fn(5760);
+ButtonConstants = fn(5774);
 const paddingVertical3 = ButtonConstants.getButtonPadding(
-  fn(5760).LARGE_BUTTON_HEIGHT,
-  fn(5760).LARGE_BUTTON_ICON_SIZE,
+  fn(5774).LARGE_BUTTON_HEIGHT,
+  fn(5774).LARGE_BUTTON_ICON_SIZE,
 );
 const createStyles = fn(5141);
 const state = createStyles.createStyles((arg0, arg1) => {
@@ -458,11 +458,11 @@ export function ButtonPill(loading) {
   if (null == loading.loading) {
     const obj2 = {};
     const merged = Object.assign(loading);
-    let tmp6 = React5(BasicButtonPill, obj2);
+    let tmp6 = metroImportDefault(BasicButtonPill, obj2);
   } else {
     const obj = {};
     const merged1 = Object.assign(loading);
-    tmp6 = React5(LoadingButtonPill, obj);
+    tmp6 = metroImportDefault(LoadingButtonPill, obj);
   }
   return tmp6;
 }

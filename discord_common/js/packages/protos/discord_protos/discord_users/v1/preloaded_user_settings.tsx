@@ -2893,7 +2893,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(partialSettings) {
-  const obj = { videoBackgroundFilterDesktop: { oneofKind: "Array" } };
+  const obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -7985,34 +7985,53 @@ let closure_54 = tmp38;
 const MessageType32 = fn(1197).MessageType;
 class Favorites$Type extends MessageType32 {
   constructor() {
-    obj = { no: 1, name: "favorite_channels", kind: "map", K: 6, V: null };
-    obj1 = { kind: "message", T: null };
+    obj = {
+      no: 1,
+      name: "favorite_channels",
+      kind: "map",
+      K: 6,
+      V: {
+        kind: "message",
+        T() {
+          return closure_1_56;
+        },
+      },
+    };
+    items = [, , , , , ,];
+    items[0] = obj;
+    items[1] = { no: 2, name: "muted", kind: "scalar", T: 8 };
+    obj1 = { no: 3, name: "guild_visible", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_56;
+        return closure_1_0(closure_1_1[4]).BoolValue;
       }
     }
     obj1.T = T;
-    obj.V = obj1;
-    items = [, , ,];
-    items[0] = obj;
-    items[1] = { no: 2, name: "muted", kind: "scalar", T: 8 };
-    items[2] = {
-      no: 3,
-      name: "guild_visible",
+    items[2] = obj1;
+    items[3] = { no: 4, name: "auto_add_joined_threads", kind: "scalar", T: 8 };
+    items[4] = {
+      no: 5,
+      name: "prune_inactive_threads",
       kind: "message",
       T() {
         return require("wrappers").BoolValue;
       },
     };
-    items[3] = { no: 4, name: "auto_add_joined_threads", kind: "scalar", T: 8 };
+    items[5] = { no: 6, name: "prune_inactive_threads_days", kind: "scalar", T: 13 };
+    items[6] = { no: 7, name: "prune_all_favorited_threads", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.discord_users.v1.Favorites", items, T);
     return tmp1;
   }
 }
 const prototype32 = Favorites$Type.prototype;
 prototype32["create"] = function create(partialSettings) {
-  const obj = { favoriteChannels: {}, muted: false, autoAddJoinedThreads: false };
+  const obj = {
+    favoriteChannels: {},
+    muted: false,
+    autoAddJoinedThreads: false,
+    pruneInactiveThreadsDays: 0,
+    pruneAllFavoritedThreads: false,
+  };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -8037,10 +8056,22 @@ prototype32["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         obj.muted = pos.bool();
       } else if (3 === tmp5) {
-        let BoolValue = wrappers.BoolValue;
-        obj.guildVisible = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.guildVisible);
+        let BoolValue2 = wrappers.BoolValue;
+        obj.guildVisible = BoolValue2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.guildVisible);
       } else if (4 === tmp5) {
         obj.autoAddJoinedThreads = pos.bool();
+      } else if (5 === tmp5) {
+        let BoolValue = wrappers.BoolValue;
+        obj.pruneInactiveThreads = BoolValue.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.pruneInactiveThreads,
+        );
+      } else if (6 === tmp5) {
+        obj.pruneInactiveThreadsDays = pos.uint32();
+      } else if (7 === tmp5) {
+        obj.pruneAllFavoritedThreads = pos.bool();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -8147,6 +8178,28 @@ prototype32["internalBinaryWrite"] = function internalBinaryWrite(favoriteChanne
     tag.tag(4, _mod1197.WireType.Varint).bool(favoriteChannels.autoAddJoinedThreads);
     const tagResult5 = tag.tag(4, _mod1197.WireType.Varint);
   }
+  if (favoriteChannels.pruneInactiveThreads) {
+    const BoolValue2 = wrappers.BoolValue;
+    const tagResult6 = tag.tag(5, _mod1197.WireType.LengthDelimited);
+    const joined3 = BoolValue2.internalBinaryWrite(
+      favoriteChannels.pruneInactiveThreads,
+      tag.tag(5, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult2 = BoolValue2.internalBinaryWrite(
+      favoriteChannels.pruneInactiveThreads,
+      tag.tag(5, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
+  if (0 !== favoriteChannels.pruneInactiveThreadsDays) {
+    tag.tag(6, _mod1197.WireType.Varint).uint32(favoriteChannels.pruneInactiveThreadsDays);
+    const tagResult7 = tag.tag(6, _mod1197.WireType.Varint);
+  }
+  if (false !== favoriteChannels.pruneAllFavoritedThreads) {
+    tag.tag(7, _mod1197.WireType.Varint).bool(favoriteChannels.pruneAllFavoritedThreads);
+    const tagResult8 = tag.tag(7, _mod1197.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -8180,6 +8233,16 @@ const items25 = [
     },
   },
   { no: 4, name: "auto_add_joined_threads", kind: "scalar", T: 8 },
+  {
+    no: 5,
+    name: "prune_inactive_threads",
+    kind: "message",
+    T() {
+      return require("wrappers").BoolValue;
+    },
+  },
+  { no: 6, name: "prune_inactive_threads_days", kind: "scalar", T: 13 },
+  { no: 7, name: "prune_all_favorited_threads", kind: "scalar", T: 8 },
 ];
 let tmp39 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.Favorites",

@@ -373,21 +373,21 @@ class BaseActivityPanelFocusedView {
     return tmp48(tmp(tmp2[19]).ThemeContextProvider, obj1);
   }
 }
-const ActivityPanelConstants = fn(5777);
+const ActivityPanelConstants = fn(5791);
 ({
-  ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_7,
+  ACTIVITY_LAYOUT_PHYSICS_GESTURE: metroImportDefault,
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8,
   ActivityPanelModes: closure_9,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(19158);
+const ActivityPanelNativeConstants = fn(19261);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_10,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11,
   DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: closure_12,
 } = ActivityPanelNativeConstants);
 let ThemeTypes = fn(1072).ThemeTypes;
-const IS_IOS = fn(11360).IS_IOS;
-const ActivityLayoutMode = fn(11831).ActivityLayoutMode;
+const IS_IOS = fn(11410).IS_IOS;
+const ActivityLayoutMode = fn(11888).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = { duration: 300 };

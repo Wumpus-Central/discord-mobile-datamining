@@ -21,14 +21,14 @@ function HowItWorksCard(Illustration) {
   items = [
     React3(Text_Text.Text, {
       style: tmp.cardNumber,
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-overlay-light",
       children: cardNumber,
     }),
     React3(View, { style: tmp.howItWorksCardIcon, children: React3(Illustration.Illustration, { width: 108 }) }),
     React3(Text_Text.Text, {
       style: tmp.howItWorksCardDescription,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "mobile-text-heading-primary",
       children: description,
     }),

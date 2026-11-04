@@ -42,7 +42,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(9600).getWishlistSkuIds;
+const getWishlistSkuIds = fn(9619).getWishlistSkuIds;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);
@@ -242,8 +242,8 @@ export default {
       }
     })();
   },
-  removeSkuFromWishlist(wishlistId, skuId, analyticsLocations) {
-    closure_0 = wishlistId;
+  removeSkuFromWishlist(firstWishlistId, skuId, analyticsLocations) {
+    closure_0 = firstWishlistId;
     closure_1 = skuId;
     closure_2 = analyticsLocations;
     return (async () => {
@@ -272,7 +272,7 @@ export default {
               return obj4;
             } else {
               skuId = tmp3;
-              wishlistId = tmp7;
+              const wishlistId = tmp7;
               let body;
               closure_128_1 = undefined;
               closure_128_2 = undefined;

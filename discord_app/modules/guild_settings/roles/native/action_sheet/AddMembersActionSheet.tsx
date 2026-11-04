@@ -31,10 +31,10 @@ function MemberRow(arg0) {
     accessibilityRole: null,
     accessibilityState: null,
   };
-  obj2.trailing = React5(FormCheckbox.FormCheckbox, { checked });
+  obj2.trailing = metroImportDefault(FormCheckbox.FormCheckbox, { checked });
   obj2.accessibilityRole = accessibilityRole;
   obj2.accessibilityState = accessibilityState;
-  return React5(DetailedGuildIdentityUserRowDefault, obj2);
+  return metroImportDefault(DetailedGuildIdentityUserRowDefault, obj2);
 }
 class AddMembersBody {
   constructor(arg0) {
@@ -228,9 +228,9 @@ class AddMembersBody {
   }
 }
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(19927).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(20043).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
@@ -296,7 +296,7 @@ export default function AddMembersActionSheet(guild) {
   obj4.trailing = closure_7(guild(pendingAdditions[24]).Button, obj5);
   obj6.header = closure_7(guild(pendingAdditions[23]).BottomSheetTitleHeader, obj4);
   const obj7 = { style: tmp.container, children: null };
-  const obj8 = { variant: "text-sm/normal", style: tmp.addMembersDescription, children: null };
+  const obj8 = { variant: "body-sm/normal", style: tmp.addMembersDescription, children: null };
   const intl3 = tmp5(tmp6[14]).intl;
   obj8.children = intl3.format(guild(pendingAdditions[14]).t["3OxP4q"], { numMembers: MAX_BULK_ROLE_MEMBERS_ADD });
   const items1 = [

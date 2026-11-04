@@ -19,7 +19,7 @@ require = fn;
 function SettingHeaderBadge(badge) {
   if (badge.badge.badgeType === SettingRendererTypes.SettingsBadgeType.BETA) {
     const obj = { size: native.BetaSizes.SMALL };
-    return React7(native.BetaTag, obj);
+    return React6(native.BetaTag, obj);
   }
 }
 function LeftAlignedHeaderTitle(children) {
@@ -29,9 +29,9 @@ function LeftAlignedHeaderTitle(children) {
   if (usePersistentBadge != null) {
     persistentBadge = usePersistentBadge();
   }
-  const tmp5 = React7(Text_Text.Heading, {
+  const tmp5 = React6(Text_Text.Heading, {
     lineClamp: 1,
-    variant: "redesign/heading-18/semibold",
+    variant: "heading-md/semibold",
     color: "mobile-text-heading-primary",
     maxFontSizeMultiplier: 2,
     style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer,
@@ -42,7 +42,7 @@ function LeftAlignedHeaderTitle(children) {
     const obj = { style: tmp.headerContainerRow, children: null };
     items = [tmp5];
     const obj2 = { badge: persistentBadge };
-    items[1] = React7(SettingHeaderBadge, obj2);
+    items[1] = React6(SettingHeaderBadge, obj2);
     obj.children = items;
     tmp6 = closure_1_10(View, obj);
   }
@@ -50,10 +50,10 @@ function LeftAlignedHeaderTitle(children) {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticsPages: closure_7, UserSettingsSections: closure_8 } = Constants);
+({ AnalyticsPages: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const NativeStackNavigator = fn(9987);
+const NativeStackNavigator = fn(10035);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5141);
 let obj = {
@@ -172,11 +172,11 @@ export default noop.memo(function SettingsNavigator() {
         style: navigation.backIcon,
         importantForAccessibility: "no-hide-descendants",
         accessibilityElementsHidden: true,
-        children: React7(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+        children: React6(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
       };
-      obj2.children = React7(View, obj3);
-      obj.children = React7(Pressables.PressableOpacity, obj2);
-      return React7(View, obj);
+      obj2.children = React6(View, obj3);
+      obj.children = React6(Pressables.PressableOpacity, obj2);
+      return React6(View, obj);
     },
     items3,
   );

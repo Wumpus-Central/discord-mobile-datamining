@@ -32,11 +32,11 @@ prototype["getWishlistItems"] = function getWishlistItems(firstWishlistId) {
   }
   return items;
 };
-prototype["hasSkuId"] = function hasSkuId(arg0, arg1) {
-  const data = this.get(arg0).data;
+prototype["hasSkuId"] = function hasSkuId(firstWishlistId, id) {
+  const data = this.get(firstWishlistId).data;
   let tmp = null != data;
   if (tmp) {
-    tmp = React4(data, arg1);
+    tmp = React4(data, id);
   }
   return tmp;
 };

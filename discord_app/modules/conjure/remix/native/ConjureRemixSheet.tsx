@@ -182,7 +182,7 @@ export default function ConjureRemixSheet(project) {
   let tmp21Result = null;
   if (null != tmp10) {
     const obj8 = { accessibilityRole: "alert", children: null };
-    const obj9 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp10 };
+    const obj9 = { variant: "body-xs/normal", color: "text-feedback-critical", children: tmp10 };
     obj8.children = tmp21(tmp15(tmp16[18]).Text, obj9);
     tmp21Result = tmp21(tmp22, obj8);
   }
@@ -236,7 +236,7 @@ export default function ConjureRemixSheet(project) {
     },
     accessibilityLabel: stringResult,
     children: stateFromStoresArray.map((label) =>
-      React7(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: first3 }, label.id),
+      React6(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: first3 }, label.id),
     ),
   });
   obj11.children = items6;

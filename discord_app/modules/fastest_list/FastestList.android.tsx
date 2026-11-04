@@ -5,14 +5,14 @@ import module_1652_mod from "../../../_runtime/metro/01652__.js";
 
 const require = fn;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let module_1652 = module_1652_mod;
 module_1652.createAnimatedComponent(FastestListNativeComponentDefault);
 let module_1652 = module_1652_mod;
 const FastestListNativeComponent = module_1652.createAnimatedComponent(FastestListNativeComponentDefault);
-const BottomSheetModal = fn(5398);
+const BottomSheetModal = fn(5400);
 let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(
-  fn(5398).SCROLLABLE_TYPE.SCROLLVIEW,
+  fn(5400).SCROLLABLE_TYPE.SCROLLVIEW,
   FastestListNativeComponent,
 );
 let closure_9 = 0;

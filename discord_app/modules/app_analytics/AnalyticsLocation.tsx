@@ -519,6 +519,8 @@ export default {
   GO_LIVE_MODAL_SETTINGS_SELECTION: "go live modal settings selection",
   MOBILE_GO_LIVE_ACTION_SHEET: "mobile go live action sheet",
   CHECKPOINT: "checkpoint",
+  CHECKPOINT_TRAIT: "checkpoint_trait",
+  CHECKPOINT_SIDEKICK: "checkpoint_sidekick",
   GUILD_SETTINGS_OFFICIAL_MESSAGES: "guild settings official messages",
   APP_DMS_QUICK_LAUNCHER: "app_dms_quick_launcher",
   APP_DMS_QUICK_LAUNCHER_FRECENCY: "app_dms_quick_launcher_frecency",

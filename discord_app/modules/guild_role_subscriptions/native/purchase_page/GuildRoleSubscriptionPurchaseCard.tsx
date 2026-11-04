@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05400_BottomSheetModal.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
 import GuildRoleSubscriptionCard from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
@@ -16,7 +16,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 },
@@ -62,23 +62,23 @@ export default function GuildRoleSubscriptionPurchaseCard(guildId) {
   const obj7 = { style: tmp.headerText, children: null };
   items = [
     timestampProducer(Text_Text.Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       children: _slicedToArray(obj2.useName(listingId), 1)[0],
     }),
     timestampProducer(View, { style: tmp.headerDot }),
     timestampProducer(Text_Text.Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       children: formattedSubscriptionPlan,
     }),
   ];
   obj7.children = items;
   const items1 = [
-    React5(View, obj7),
+    metroImportDefault(View, obj7),
     timestampProducer(native.Spacer, { size: 16 }),
     timestampProducer(Elements.TruncatedText, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-default",
       lineClamp: 2,
       children: _slicedToArray(obj.useDescription(listingId), 1)[0],
@@ -87,12 +87,12 @@ export default function GuildRoleSubscriptionPurchaseCard(guildId) {
     timestampProducer(SubscribeButtonDefault, { listingId }),
   ];
   obj6.children = items1;
-  const items2 = [React5(View, obj6), timestampProducer(View, { style: tmp.seperator })];
+  const items2 = [metroImportDefault(View, obj6), timestampProducer(View, { style: tmp.seperator })];
   const obj10 = { scrollsToTop: false, style: tmp.content, contentContainerStyle: null, children: null };
   const obj8 = { style: tmp.headerDot };
   const obj9 = { style: tmp.seperator };
   obj10.contentContainerStyle = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
-  const obj12 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj12 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = util.intl;
   obj12.children = intl.string(util.t.UdEvUi);
   const items3 = [
@@ -101,8 +101,8 @@ export default function GuildRoleSubscriptionPurchaseCard(guildId) {
     timestampProducer(GuildRoleSubscriptionCard.Content, { listingId, guildId: guildId.guildId }),
   ];
   obj10.children = items3;
-  items2[2] = React5(BottomSheetModal.BottomSheetScrollView, obj10);
+  items2[2] = metroImportDefault(BottomSheetModal.BottomSheetScrollView, obj10);
   obj5.children = items2;
-  obj4.children = React5(View, obj5);
+  obj4.children = metroImportDefault(View, obj5);
   return timestampProducer(Sheet_BottomSheet.BottomSheet, obj4);
 }

@@ -4,7 +4,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 let require = fn;
 const noop = fn(19);
-({ useContext: closure_4, useEffect: hasOwnProperty, useState: metroRequire } = noop);
+({ useContext: closure_4, useEffect: hasOwnProperty, useState: closure_6 } = noop);
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

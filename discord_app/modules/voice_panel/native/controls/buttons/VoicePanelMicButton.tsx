@@ -2,7 +2,7 @@
 import LoggerDefault from "../../../../debug/Logger.tsx";
 import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05428_LegacyBaseButton.js";
 import useMuteStates from "../../../../video_calls/useMuteStates.tsx";
 import MicrophoneDenyIcon from "../../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import MediaEngineActionCreators from "../../../../media_engine/MediaEngineActionCreators.tsx";
@@ -243,7 +243,7 @@ export function PTTButton(arg0) {
   element.children = closure_13(require("MicrophoneIcon").MicrophoneIcon, { color, size: "lg" });
   obj4.children = closure_13(onPress2(sharedValue[25]), element);
   const items10 = [closure_13(require("LegacyBaseButton").GestureDetector, obj4)];
-  const obj6 = { style: null, variant: "text-xxs/medium", children: null };
+  const obj6 = { style: null, variant: "footnote/medium", children: null };
   const items11 = [tmp.text, voicePanelButtonStyles.iconFill];
   obj6.style = items11;
   const intl2 = tmp6(tmp3[26]).intl;

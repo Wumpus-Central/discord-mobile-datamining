@@ -11,7 +11,7 @@ const HexagonCampaignConstants = fn(5166);
 ({
   HEXAGON_CAMPAIGN_AD_CONTENT_ID: closure_4,
   HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: hasOwnProperty,
-  HEXAGON_SPECIAL_EVENT_ID: metroRequire,
+  HEXAGON_SPECIAL_EVENT_ID: closure_6,
 } = HexagonCampaignConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

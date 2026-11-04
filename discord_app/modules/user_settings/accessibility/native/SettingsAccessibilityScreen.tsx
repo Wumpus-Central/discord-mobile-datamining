@@ -9,9 +9,9 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import UserSettingsOverridesStore from "../../UserSettingsOverridesStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const Constants = fn(1072);
-({ HelpdeskArticles: closure_7, UserSettingsSections: closure_8 } = Constants);
+({ HelpdeskArticles: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/accessibility/native/SettingsAccessibilityScreen.tsx");

@@ -29,7 +29,7 @@ function ComparisonRow(entry) {
   if (hasItem) {
     str = "text-default";
   }
-  const obj2 = { variant: "text-xs/medium", color: str, children: null };
+  const obj2 = { variant: "body-xs/medium", color: str, children: null };
   const items1 = [combined, " \u2192 "];
   let str2 = redesignVariant;
   if (redesignVariant == null) {
@@ -41,7 +41,7 @@ function ComparisonRow(entry) {
   const obj3 = { style: tmp.comparisonButtons, children: null };
   const obj4 = { style: tmp.comparisonSide, children: null };
   const items3 = [
-    hasOwnProperty(Text_Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "legacy" }),
+    hasOwnProperty(Text_Text.Text, { variant: "footnote/medium", color: "text-muted", children: "legacy" }),
   ];
   const obj5 = {
     look: entry.look,
@@ -67,7 +67,7 @@ function ComparisonRow(entry) {
   if (null != redesignVariant) {
     const obj6 = { style: tmp.comparisonSide, children: null };
     const items5 = [
-      hasOwnProperty(Text_Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }),
+      hasOwnProperty(Text_Text.Text, { variant: "footnote/medium", color: "text-muted", children: "mana" }),
     ];
     const obj7 = {
       variant: redesignVariant,
@@ -82,7 +82,7 @@ function ComparisonRow(entry) {
     const obj8 = {
       style: tmp.comparisonSide,
       children: hasOwnProperty(Text_Text.Text, {
-        variant: "text-xs/medium",
+        variant: "body-xs/medium",
         color: "text-muted",
         children: "no mapping",
       }),
@@ -116,7 +116,7 @@ function ComboRow(combo) {
   if (hasItem) {
     str2 = "text-default";
   }
-  const obj2 = { variant: "text-xs/medium", color: str2, children: null };
+  const obj2 = { variant: "body-xs/medium", color: str2, children: null };
   const items1 = [combined, " (", combo.count, ")"];
   obj2.children = items1;
   const items2 = [React4(Text_Text.Text, obj2)];
@@ -869,7 +869,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   items = [
     hasOwnProperty(Text_Text.Text, { variant: "heading-xl/semibold", children: "Migration Mapping" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
       children: "Legacy (uikit-native) \u2192 Mana side-by-side",
     }),
@@ -889,7 +889,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   const items2 = [
     hasOwnProperty(Text_Text.Text, { variant: "heading-xl/semibold", children: "Legacy Button Audit" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
       children: "41 combinations across 185 importers",
     }),

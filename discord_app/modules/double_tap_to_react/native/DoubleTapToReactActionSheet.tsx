@@ -456,7 +456,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
             emoji_name: closure_129_2.name,
             emoji_animated: closure_129_2.animated,
             recommended: closure_129_4.current,
-            location: tmp22(7471).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+            location: tmp22(7487).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
           };
           tmp22(1252).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
           const _setTimeout = setTimeout;
@@ -552,7 +552,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   const items13 = [
     callback1(require("../../../../_runtime/metro/01652__.js").View, obj9),
     memo(require("Text/Text").Text, {
-      variant: "text-lg/semibold",
+      variant: "body-lg/semibold",
       style: tmp.selectedEmojiText,
       color: "interactive-text-default",
       children: "1",
@@ -561,14 +561,14 @@ export default function DoubleTapToReactActionSheet(emoji) {
   obj8.children = items13;
   const items14 = [callback1(closure_6, obj8), , , , ,];
   const obj11 = {
-    variant: "text-lg/semibold",
+    variant: "body-lg/semibold",
     style: tmp.selectedEmojiText,
     color: "interactive-text-default",
     children: "1",
   };
   const tmp26 = require("Emoji");
   items14[1] = memo(require("Text/Text").Text, {
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     color: "text-subtle",
     style: tmp.emojiName,
     children: ":" + selectedEmoji.name + ":",
@@ -576,7 +576,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   const obj13 = { style: tmp.header, children: null };
   const obj14 = {
     style: tmp.alignCenter,
-    variant: "text-lg/semibold",
+    variant: "body-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -585,7 +585,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   const items15 = [memo(require("Text/Text").Text, obj14), memo(require("renderChannelBadge").NewBadge, {})];
   obj13.children = items15;
   items14[2] = callback1(closure_6, obj13);
-  const obj15 = { style: tmp.alignCenter, variant: "text-md/medium", color: "text-default", children: null };
+  const obj15 = { style: tmp.alignCenter, variant: "body-md/medium", color: "text-default", children: null };
   const intl2 = tmp3(tmp4[29]).intl;
   obj15.children = intl2.string(require("util").t.yIax8g);
   items14[3] = memo(require("Text/Text").Text, obj15);
@@ -595,7 +595,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
     onPressEmoji: callback,
   });
   const obj12 = {
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     color: "text-subtle",
     style: tmp.emojiName,
     children: ":" + selectedEmoji.name + ":",

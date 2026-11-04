@@ -11,11 +11,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const FavoritesGuildSuggestionsStore = fn(18406);
-({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } =
+const FavoritesGuildSuggestionsStore = fn(18500);
+({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: closure_6 } =
   FavoritesGuildSuggestionsStore);
 const NOOP = fn(1072).NOOP;
-let closure_8 = fn(11186).getScaledCategoryRowHeight;
+let closure_8 = fn(11236).getScaledCategoryRowHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGui
 
 export default function FavoritesGuildSuggestedChannels() {
   let tmp = closure_13();
-  const categoryStyles = arr(18308).useCategoryStyles();
+  const categoryStyles = arr(18405).useCategoryStyles();
   arr = closure_5();
   const tmp5 = closure_6();
   importDefault = tmp5;
@@ -55,7 +55,7 @@ export default function FavoritesGuildSuggestedChannels() {
     obj3.name = intl.string(_modDef3577.oHWnLy);
     obj3.styles = categoryStyles;
     obj3.trailingAction = memo;
-    const items2 = [tmp2(18308).renderCategoryItem(obj3)];
+    const items2 = [tmp2(18405).renderCategoryItem(obj3)];
     const obj4 = {
       style: tmp.rows,
       children: arr.map((item, index) => {
@@ -73,18 +73,18 @@ export default function FavoritesGuildSuggestedChannels() {
         const intl = util.intl;
         obj3.text = intl.string(util.t.OYkgVk);
         obj3.onPress = function onPress() {
-          const tmp = closure_1(18408);
-          return tmp(arr(13520).getDestinationIdFromResult(closure_0));
+          const tmp = closure_1(18502);
+          return tmp(arr(13604).getDestinationIdFromResult(closure_0));
         };
-        obj2.trailing = React7(components_Button_Button.Button, obj3);
-        obj.children = React7(SearchableDestinationListRowDefault, obj2);
-        return React7(View, obj, "" + item.type + "-" + item.record.id);
+        obj2.trailing = React6(components_Button_Button.Button, obj3);
+        obj.children = React6(SearchableDestinationListRowDefault, obj2);
+        return React6(View, obj, "" + item.type + "-" + item.record.id);
       }),
     };
     items2[1] = closure_9(View, obj4);
     obj2.children = items2;
     tmp9 = closure_10(View, obj2);
-    const tmp2Result = tmp2(18308);
+    const tmp2Result = tmp2(18405);
   }
   return tmp9;
 }

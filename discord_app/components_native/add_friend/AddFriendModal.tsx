@@ -98,13 +98,13 @@ function AddFriendModalScene(onSkip) {
   let intl = onSkip(contactSyncAccount[17]).intl;
   obj4.children = intl.string(onSkip(contactSyncAccount[17]).t.GWMTSE);
   const items2 = [closure_10(onSkip(contactSyncAccount[22]).Text, obj4), , ,];
-  const obj5 = { style: tmp.subheaderText, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.subheaderText, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = onSkip(contactSyncAccount[17]).intl;
   obj5.children = intl2.string(onSkip(contactSyncAccount[17]).t["Rn/sLl"]);
   items2[1] = closure_10(onSkip(contactSyncAccount[22]).Text, obj5);
   items2[2] = closure_10(sourceMetadata(contactSyncAccount[23]), { style: tmp.input, autoFocusInput: false });
   const obj7 = { style: tmp.otherOptionsContainer, children: null };
-  const obj8 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
+  const obj8 = { accessibilityRole: "header", variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = onSkip(contactSyncAccount[17]).intl;
   obj8.children = intl3.string(onSkip(contactSyncAccount[17]).t.dukg0Z);
   const items3 = [closure_10(onSkip(contactSyncAccount[22]).Text, obj8)];
@@ -121,10 +121,10 @@ function AddFriendModalScene(onSkip) {
   return closure_11(callback1, obj10);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, Fonts } = Constants);
-const ContactPermissions = fn(14380).ContactPermissions;
+const ContactPermissions = fn(14460).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);

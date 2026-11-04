@@ -11,7 +11,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 const BoostInfoType = GuildPowerupsConstants.BoostInfoType;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const obj = {
   container: { flex: 1, alignItems: "center", justifyContent: "center", paddingVertical: nativeDefault.space.PX_12 },
   headerContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", display: "flex" },
@@ -55,7 +55,7 @@ export default function GuildPowerupsBoostInfo(arg0) {
   const items1 = [
     timestampProducer(View, obj3),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-subtle",
       importantForAccessibility: "no-hide-descendants",
       children: guildPowerupsBoostInfoText,

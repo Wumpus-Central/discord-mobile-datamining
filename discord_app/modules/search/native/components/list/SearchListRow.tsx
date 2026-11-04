@@ -6,9 +6,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const paddingVertical = fn(9958).SEARCH_ROW_TAP_STATE_PADDING;
+const paddingVertical = fn(9976).SEARCH_ROW_TAP_STATE_PADDING;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((marginLeft) => {
   const obj = {
@@ -69,7 +69,7 @@ export const SearchListRow = noop.memo(function SearchListRow(accessibilityRole)
   if (typeof label === "string") {
     const obj5 = {
       lineClamp: 1,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       style: tmpResult.text,
       children: label,

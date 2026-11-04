@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   header: { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" },
@@ -61,7 +61,7 @@ export function TableSliderRow(end) {
   };
   items = [
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       style: tmp2.label,
       children: label,
@@ -69,7 +69,7 @@ export function TableSliderRow(end) {
   ];
   let tmp11Result = null;
   if (null != formatValue) {
-    const obj5 = { variant: "text-md/medium", color: "text-muted", children: formatValue(tmp6[0]) };
+    const obj5 = { variant: "body-md/medium", color: "text-muted", children: formatValue(tmp6[0]) };
     tmp11Result = hasOwnProperty(Text_Text.Text, obj5);
   }
   items[1] = tmp11Result;

@@ -26,13 +26,13 @@ function LaunchpadChannelIcon(channel) {
   obj3.children = closure_8(GuildIconDefault, { guild: stateFromStores, size: tmp2.icon.guildBadgeIconSize });
   const items1 = [
     closure_8(View, obj3),
-    closure_8(channel(12662).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
+    closure_8(channel(12743).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
   ];
   obj2.children = items1;
   return closure_10(closure_9, obj2);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6896).UnreadSetting;
+const UnreadSetting = fn(6911).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -107,13 +107,13 @@ export default function renderChannelItem(unread) {
   obj2.style = size;
   if (channel.isGroupDM()) {
     const obj3 = { channel, size: tmp7.icon.avatarSize };
-    let tmp11Result = React6(GroupDMAvatarDefault, obj3);
+    let tmp11Result = React5(GroupDMAvatarDefault, obj3);
   } else {
     const obj4 = { channel };
-    tmp11Result = React6(LaunchpadChannelIcon, obj4);
+    tmp11Result = React5(LaunchpadChannelIcon, obj4);
   }
   obj2.children = tmp11Result;
-  children[1] = React6(View, obj2);
+  children[1] = React5(View, obj2);
   const tmp8 = renderChannelWrapperDefault;
   if (channelName == null) {
     channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
@@ -138,10 +138,10 @@ export default function renderChannelItem(unread) {
   let tmp11Result2 = null;
   if (null != end) {
     const obj5 = { style: { paddingLeft: 8 }, children: end };
-    tmp11Result2 = React6(View, obj5);
+    tmp11Result2 = React5(View, obj5);
   }
   children[3] = tmp11Result2;
-  return tmp8(closure_1_10(React7, { children }), { fontScale });
+  return tmp8(closure_1_10(React6, { children }), { fontScale });
 }
 export function getChannelAccessibilityProps(channel) {
   channel = channel.channel;

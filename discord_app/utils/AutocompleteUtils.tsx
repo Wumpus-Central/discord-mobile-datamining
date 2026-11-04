@@ -11,7 +11,7 @@ import UserUtilsDefault from "UserUtils.tsx";
 import useChannelName from "../modules/channel/useChannelName.tsx";
 import RegexUtilsDefault from "RegexUtils.tsx";
 import StickersTypes from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/07019_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/07034_fuzzysearch.js";
 import autocompleter_sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import GuildUtilsDefault from "GuildUtils.tsx";
 import OnboardingHomeUtils from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -436,8 +436,8 @@ function getCategoryName(parent_id, arg1) {
     return tmp2;
   }
 }
-const InAppNavigationRecord = fn(6900);
-({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: metroRequire } = InAppNavigationRecord);
+const InAppNavigationRecord = fn(6915);
+({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: closure_6 } = InAppNavigationRecord);
 const ChannelRecord = fn(4994);
 ({
   ChannelRecordBase: map1,
@@ -456,18 +456,18 @@ let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(7017).AutocompleterResultTypes;
+fn(7032).AutocompleterResultTypes;
 const StaticChannelId = fn(4997).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(7018).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(7018).default.MENTION_HERE;
-const MENTION_GAME = fn(7018).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(7018).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(7018).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(7033).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(7033).default.MENTION_HERE;
+const MENTION_GAME = fn(7033).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(7033).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(7033).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({
@@ -908,10 +908,10 @@ export default {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + closure_1_1(5776).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + closure_1_1(5790).escape(toLocaleLowerCaseResult), "i");
         obj.exactQuery = regExp;
-        const obj2 = closure_1_1(5776);
-        const regExp1 = new RegExp(closure_1_1(5776).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = closure_1_1(5790);
+        const regExp1 = new RegExp(closure_1_1(5790).escape(toLocaleLowerCaseResult), "i");
         obj.containQuery = regExp1;
         return obj;
       });
@@ -919,17 +919,17 @@ export default {
         let toLocaleLowerCaseResult = query.toLocaleLowerCase();
         let obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: true };
         const _RegExp = RegExp;
-        let obj2 = closure_1(5776);
+        let obj2 = closure_1(5790);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + closure_1(5776).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + closure_1(5790).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj.exactQuery = regExp;
         const _RegExp2 = RegExp;
-        const str = closure_1(5776).escape(toLocaleLowerCaseResult);
-        const obj3 = closure_1(5776);
-        let regExp1 = new RegExp(closure_1(5776).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = closure_1(5790).escape(toLocaleLowerCaseResult);
+        const obj3 = closure_1(5790);
+        let regExp1 = new RegExp(closure_1(5790).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj.containQuery = regExp1;
         mapped.unshift(obj);
-        const str6 = closure_1(5776).escape(toLocaleLowerCaseResult);
+        const str6 = closure_1(5790).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -1866,21 +1866,7 @@ export default {
       type,
       allowEmptyQueries: null,
     };
-    obj.channels = this.queryChannels({
-      query: channelTypes.query,
-      guildId: channel.getGuildId(),
-      limit: "r",
-      fuzzy: "HermesInternal",
-      filter(type) {
-        let hasItem = null == channelTypes;
-        if (!hasItem) {
-          hasItem = channelTypes.includes(type.type);
-        }
-        return hasItem;
-      },
-      type,
-      allowEmptyQueries: null,
-    }).map((record) => record.record);
+    obj.channels = this.queryChannels(obj2).map((record) => record.record);
     return obj;
   },
   queryApplicationCommandChannelResults(limit) {
@@ -1986,11 +1972,11 @@ export default {
         const _RegExp = RegExp;
         let obj2 = toLocaleLowerCaseResult(2155);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(5776).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(5790).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(5776);
+        const obj3 = nextResult(5790);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(5776).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(5790).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = StickersStore.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((item, index) => {
@@ -2013,12 +1999,12 @@ export default {
                     } else if (regex.test(value)) {
                       num4 = 7 * tmp9;
                     } else {
-                      let tmp18 = tmp7 !== flag(6681).StickerMetadataTypes.GUILD_NAME;
+                      let tmp18 = tmp7 !== flag(6696).StickerMetadataTypes.GUILD_NAME;
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6681).StickerMetadataTypes.PACK_NAME;
+                        tmp18 = tmp7 !== flag(6696).StickerMetadataTypes.PACK_NAME;
                       }
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6681).StickerMetadataTypes.STICKER_NAME;
+                        tmp18 = tmp7 !== flag(6696).StickerMetadataTypes.STICKER_NAME;
                       }
                       if (!tmp18) {
                         tmp18 = !regex2.test(value);
@@ -2056,11 +2042,11 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7640);
+              obj2 = flag(7656);
             }
           });
         });
-        const obj4 = nextResult(5776);
+        const obj4 = nextResult(5790);
       }
     }
     let iter2 = items[Symbol.iterator]();

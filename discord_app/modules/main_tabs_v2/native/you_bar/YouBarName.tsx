@@ -25,7 +25,7 @@ function Username(userId) {
       userId,
       userName: userId.username,
       defaultColor: "mobile-text-heading-primary",
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       lineClamp: 1,
       ellipsizeMode: "tail",
       maxFontSizeMultiplier: 1.75,
@@ -62,14 +62,14 @@ export default noop.memo(function YouName(username) {
   items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(11532).useCustomStatusActivity();
-  let obj2 = userId(11532);
+  const customStatusActivity = userId(11582).useCustomStatusActivity();
+  let obj2 = userId(11582);
   state = undefined;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10879).useGameMentionsAsPlainText(state);
-  let obj3 = userId(10879);
+  const gameMentionsAsPlainText = userId(10927).useGameMentionsAsPlainText(state);
+  let obj3 = userId(10927);
   const items1 = [
     PresenceStore,
     ApplicationStreamingStore,
@@ -103,7 +103,7 @@ export default noop.memo(function YouName(username) {
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_11(stateFromStores(10875), obj6);
+    let tmp9Result = closure_11(stateFromStores(10923), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -112,11 +112,11 @@ export default noop.memo(function YouName(username) {
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_11(stateFromStores(10896), obj7);
+      tmp11Result2 = closure_11(stateFromStores(10944), obj7);
     }
     const items3 = [tmp11Result2];
     const obj8 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-muted",
       lineClamp: 1,
       ellipsizeMode: "tail",
@@ -131,7 +131,7 @@ export default noop.memo(function YouName(username) {
     }
     const obj9 = { children: null };
     obj8.children = humanizeStatusResult;
-    items3[1] = closure_11(tmp2(5747).Text, obj8);
+    items3[1] = closure_11(tmp2(5761).Text, obj8);
     obj9.children = items3;
     tmp9Result = closure_12(closure_13, obj9);
   }

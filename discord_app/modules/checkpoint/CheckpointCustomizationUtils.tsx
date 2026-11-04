@@ -10,7 +10,7 @@ import CheckpointNavigation from "CheckpointNavigation.tsx";
 import CheckpointConstants from "CheckpointConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-function getAssetDescription(asset) {
+function getPlaintextAssetDescription(asset) {
   ({ trait, rarity } = asset);
   if (null == rarity) {
     let stringResult;
@@ -179,7 +179,7 @@ export function makeTraitRaritySorter(rarityOrder) {
 export function isNoneOption(traitOption) {
   return CheckpointCharacterTraits.isTraitNoneOptionId(traitOption.trait, traitOption.optionId);
 }
-export { getAssetDescription };
+export { getPlaintextAssetDescription };
 export function getAssetAccessibilityLabel(getName, hideCornerFlag) {
   items = [getName.getName()];
   if (getName.status === CheckpointCharacterAssets.CheckpointTraitOptionStatus.LOCKED) {
@@ -194,7 +194,7 @@ export function getAssetAccessibilityLabel(getName, hideCornerFlag) {
       const intl3 = util.intl;
       items.push(intl3.string(React3[getName.rarity]));
     }
-    const tmp11 = getAssetDescription(getName);
+    const tmp11 = getPlaintextAssetDescription(getName);
     if (null != tmp11) {
       items.push(tmp11);
     }

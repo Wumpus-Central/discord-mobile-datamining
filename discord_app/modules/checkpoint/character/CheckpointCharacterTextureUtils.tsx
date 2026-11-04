@@ -1,5 +1,4 @@
 // discord_app/modules/checkpoint/character/CheckpointCharacterTextureUtils.tsx
-import _mod12 from "../../../../_runtime/metro/00012__.js";
 import getDevicePixelRatioDefault from "../../../utils/getDevicePixelRatio.native.tsx";
 import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -58,6 +57,9 @@ let closure_10 = {
   tex_wearable_11_deviantTail_smoke_active_spritesheet: obj3,
   tex_wearable_11_deviantTail_smoke_idle_spritesheet: obj3,
 };
+const items = [1, 1.25, 1.5, 1.75, 2];
+const items1 = [...items];
+let closure_12 = Math.max.apply(items1);
 let result = size.fileFinishedImporting("modules/checkpoint/character/CheckpointCharacterTextureUtils.tsx");
 
 export { CheckpointCharacterTextureType };
@@ -93,10 +95,14 @@ export function getCheckpointCharacterTextureRole(name) {
     }
   }
 }
-export function getCheckpointCharacterTextureScale(c3, height) {
-  const result = Math.max(c3, height) / 1440;
-  const result1 = 0.25 * Math.ceil((result * getDevicePixelRatioDefault()) / 0.25);
-  return _mod12.clamp(result1, 1, 2);
+export function getCheckpointCharacterTextureScale(c4, height) {
+  const result = Math.max(c4, height) / 1440;
+  closure_0 = result * getDevicePixelRatioDefault();
+  let found = items.find((item) => item >= closure_0);
+  if (found == null) {
+    found = closure_12;
+  }
+  return found;
 }
 export function getCheckpointCharacterTextureUrl(name, textureScale) {
   ({ url, width, widthAt1x } = CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET[name]);

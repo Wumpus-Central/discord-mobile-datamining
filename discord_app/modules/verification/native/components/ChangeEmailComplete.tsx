@@ -5,7 +5,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import EmailVerificationModalActionCreatorsDefault from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import _modDef7204 from "../../../../../_runtime/metro/07204__.js";
+import _modDef7219 from "../../../../../_runtime/metro/07219__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,9 +15,9 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const resetChangeEmailStore = fn(7123).resetChangeEmailStore;
+const resetChangeEmailStore = fn(7138).resetChangeEmailStore;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   contentContainer: {
@@ -62,7 +62,7 @@ export default function ChangeEmailComplete(email) {
     contentContainerStyle: tmp.contentContainer,
     children: null,
   };
-  const obj2 = { style: tmp.image, source: _modDef7204 };
+  const obj2 = { style: tmp.image, source: _modDef7219 };
   items = [timestampProducer(FastImageDefault, obj2), , ,];
   const obj3 = { style: tmp.bodyInner, children: null };
   const obj4 = {
@@ -75,13 +75,13 @@ export default function ChangeEmailComplete(email) {
   const intl = util.intl;
   obj4.children = intl.string(util.t["8O+nF7"]);
   const items1 = [timestampProducer(Text_Text.Text, obj4)];
-  const obj5 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.body, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.format(util.t.Zvx0O3, { email: email.email });
   items1[1] = timestampProducer(Text_Text.Text, obj5);
   obj3.children = items1;
-  items[1] = React5(React3, obj3);
-  const obj6 = { style: tmp.tooltip, variant: "text-sm/normal", children: null };
+  items[1] = metroImportDefault(React3, obj3);
+  const obj6 = { style: tmp.tooltip, variant: "body-sm/normal", children: null };
   const intl3 = util.intl;
   obj6.children = intl3.string(util.t.yb7itQ);
   items[2] = timestampProducer(Text_Text.Text, obj6);
@@ -91,5 +91,5 @@ export default function ChangeEmailComplete(email) {
   obj7.onPress = handlePress;
   items[3] = timestampProducer(components_Button_Button.Button, obj7);
   obj.children = items;
-  return React5(React4, obj);
+  return metroImportDefault(React4, obj);
 }

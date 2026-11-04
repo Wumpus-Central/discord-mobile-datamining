@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
@@ -85,7 +85,7 @@ export default function AgeGateUnderage(onClose) {
     closure_6(existingUser(flag2[14]), { style: tmp4.header, children: stringResult }),
     ,
   ];
-  const obj5 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+  const obj5 = { style: tmp4.body, variant: "body-md/medium", color: "interactive-text-default", children: null };
   const intl2 = tmp5(tmp2[10]).intl;
   if (flag) {
     let stringResult1 = intl2.string(tmp5(tmp2[10]).t.GDQgHL);
@@ -103,7 +103,7 @@ export default function AgeGateUnderage(onClose) {
   let tmp10Result = null;
   if (existingUser) {
     const obj7 = { children: null };
-    const obj8 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+    const obj8 = { style: tmp4.body, variant: "body-md/medium", color: "interactive-text-default", children: null };
     const intl4 = tmp5(tmp2[10]).intl;
     obj8.children = intl4.format(tmp5(tmp2[10]).t.fjqIZp, { days: 30 });
     const items2 = [closure_6(tmp5(tmp2[15]).Text, obj8)];

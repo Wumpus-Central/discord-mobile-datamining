@@ -58,7 +58,7 @@ function EditProfileFrameInner(user) {
   let skuId;
   const callback = noop.useCallback((arg0) => {
     ({ items, size, selectedSkuId } = arg0);
-    return React7(EditProfileFrameSection.EditProfileFrameRow, {
+    return React6(EditProfileFrameSection.EditProfileFrameRow, {
       items,
       size,
       selectedSkuId,
@@ -112,7 +112,7 @@ function ProfileFrameSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(8868)(previewSkuId);
+  const tmp2 = purchase(8885)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -136,17 +136,17 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11643), { user, guildId, profileFrame: memo, maxWidth: 280 })];
+  const items1 = [closure_9(purchase(11694), { user, guildId, profileFrame: memo, maxWidth: 280 })];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
-  items1[1] = closure_9(purchase(5710), obj2);
+  items1[1] = closure_9(purchase(5723), obj2);
   obj.children = items1;
   return closure_10(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileFrameRecord = fn(7851).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7867).isProfileFrameRecord;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);

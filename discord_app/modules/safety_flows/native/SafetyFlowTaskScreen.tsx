@@ -46,7 +46,7 @@ export default function SafetyFlowTaskScreen(action) {
   ];
   let tmp7Result = null != subtitle;
   if (tmp7Result) {
-    const obj2 = { variant: "text-md/medium", color: subtitleColor, style: tmp2.header, children: subtitle };
+    const obj2 = { variant: "body-md/medium", color: subtitleColor, style: tmp2.header, children: subtitle };
     tmp7Result = React3(Text_Text.Text, obj2);
   }
   const obj3 = { children: null };

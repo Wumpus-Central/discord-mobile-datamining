@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildOfficialMessageUtils from "../../messages/GuildOfficialMessageUtils.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef17418 from "../../../../_runtime/metro/17418__.js";
+import _modDef17509 from "../../../../_runtime/metro/17509__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -48,26 +48,26 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef671(selectedColor).alpha(closure_1_10).hex() }];
   obj4.style = items1;
   const hexResult1 = _modDef671(selectedColor).alpha(closure_1_10).hex();
-  const items2 = [application_id(native.Avatar, { source: _modDef17418 })];
+  const items2 = [application_id(native.Avatar, { source: _modDef17509 })];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = {
     animated: true,
     style: animatedStyles.textStrong,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     lineClamp: 1,
     children: null,
   };
   const intl = util.intl;
   obj8.children = intl.string(util.t.cqpybK);
   const items3 = [application_id(Text_Text.Text, obj8)];
-  const obj9 = { animated: true, variant: "text-xs/medium", style: null, children: memo };
+  const obj9 = { animated: true, variant: "body-xs/medium", style: null, children: memo };
   const items4 = [tmp.chatTimestamp, animatedStyles.textMuted];
   obj9.style = items4;
   items3[1] = application_id(Text_Text.Text, obj9);
   obj7.children = items3;
   const items5 = [state(hasOwnProperty, obj7)];
-  const obj10 = { animated: true, variant: "text-md/normal", style: { color: hexResult }, children: null };
+  const obj10 = { animated: true, variant: "body-md/normal", style: { color: hexResult }, children: null };
   const intl2 = util.intl;
   obj10.children = intl2.string(util.t.Mi9Kbe);
   items5[1] = application_id(Text_Text.Text, obj10);
@@ -112,8 +112,8 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_16,
 };
-obj2.chatSection = { paddingHorizontal: fn(7099).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
-let obj5 = { paddingHorizontal: fn(7099).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+obj2.chatSection = { paddingHorizontal: fn(7114).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+let obj5 = { paddingHorizontal: fn(7114).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
 obj2.chatContainer = {
   paddingVertical: nativeDefault.space.PX_24,
   borderRadius: nativeDefault.radii.xl,
@@ -195,7 +195,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
         officialMessageColor = guild.officialMessageColor;
       }
       if (officialMessageColor == null) {
-        officialMessageColor = React7;
+        officialMessageColor = React6;
       }
       return officialMessageColor;
     },
@@ -242,7 +242,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       _undefined2(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(18512, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(18607, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp2Result = require("initialize");
   [tmp14, c6] = hasChanges(officialMessageColor.useState(0), 2);
@@ -329,7 +329,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   obj5.subLabel = require("utils/ColorUtils").int2hex(officialMessageColor);
   const items10 = [closure_12(require("TableRow").TableRow, obj5)];
   const obj8 = { style: tmp.chatSection, children: null };
-  const obj9 = { variant: "heading-md/semibold", children: null };
+  const obj9 = { variant: "heading-sm/semibold", children: null };
   let intl2 = tmp2(tmp3[12]).intl;
   obj9.children = intl2.string(require("util").t.VI0jGW);
   const items11 = [

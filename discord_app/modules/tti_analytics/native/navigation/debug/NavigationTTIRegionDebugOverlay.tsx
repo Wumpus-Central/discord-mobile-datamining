@@ -68,19 +68,19 @@ function NavigationTTIMilestoneReadout(surface) {
   }
   const obj2 = { style: tmp.milestoneReadout, pointerEvents: "none", accessible: false, children: null };
   const obj3 = {
-    variant: "text-xs/normal",
+    variant: "body-xs/normal",
     color: "text-default",
     style: tmp.badgeText,
     lineClamp: 1,
     accessible: false,
     children: null,
   };
-  const obj4 = { variant: "text-xs/semibold", color: "none", children: null };
+  const obj4 = { variant: "body-xs/semibold", color: "none", children: null };
   const items1 = ["FP ", str5];
   obj4.children = items1;
-  const items2 = [closure_7(surface(5747).Text, obj4), " \u00B7 FCP ", str4];
+  const items2 = [closure_7(surface(5761).Text, obj4), " \u00B7 FCP ", str4];
   obj3.children = items2;
-  obj2.children = closure_7(surface(5747).Text, obj3);
+  obj2.children = closure_7(surface(5761).Text, obj3);
   return closure_8(closure_6, obj2);
 }
 function NavigationTTIDebugFreezeControl(arg0) {
@@ -171,7 +171,7 @@ function NavigationTTIDebugFreezeControl(arg0) {
     str5 = "text-feedback-info";
   }
   obj.children = closure_8(Text_Text.Text, {
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     color: str5,
     style: tmp.badgeText,
     lineClamp: 1,
@@ -181,9 +181,9 @@ function NavigationTTIDebugFreezeControl(arg0) {
   return closure_8(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ Pressable: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsxs: metroImportDefault, jsx: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = ["time_start", "first_paint", "first_contentful_paint"];
 const createStyles = fn(5141);
 let obj2 = {
@@ -211,11 +211,11 @@ obj3.borderWidth = 2;
 obj2.outline = obj3;
 obj2.includedOutline = {
   borderColor: nativeDefault.colors.STATUS_POSITIVE,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_POSITIVE,
 };
 let obj4 = {
   borderColor: nativeDefault.colors.STATUS_POSITIVE,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_POSITIVE,
 };
 obj2.excludedOutline = {
   borderColor: nativeDefault.colors.BORDER_STRONG,
@@ -227,29 +227,29 @@ let obj5 = {
   borderStyle: "dashed",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
-obj2.mixedOutline = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
-let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
+obj2.mixedOutline = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO };
+let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO };
 obj2.violationOutline = {
   borderColor: nativeDefault.colors.STATUS_DANGER,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL,
 };
 obj2.badge = { position: "absolute", maxWidth: "48%" };
 obj2.expandedBadge = { maxWidth: "92%" };
 let obj7 = {
   borderColor: nativeDefault.colors.STATUS_DANGER,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL,
 };
 obj2.badgeText = { paddingHorizontal: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4 };
 let rect = { top: 0, left: 0, backgroundColor: nativeDefault.colors.STATUS_POSITIVE };
 obj2.includedBadge = rect;
 const rect1 = { top: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj2.excludedBadge = rect1;
-const rect2 = { top: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
+const rect2 = { top: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO };
 obj2.mixedBadge = rect2;
 const rect3 = { top: 0, left: 0, backgroundColor: nativeDefault.colors.STATUS_DANGER };
 obj2.violationBadge = rect3;
 let obj8 = { paddingHorizontal: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4 };
-obj2.armedBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
+obj2.armedBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO };
 const rect4 = {
   position: "absolute",
   right: 0,
@@ -258,8 +258,8 @@ const rect4 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
 };
 obj2.freezeControl = rect4;
-let obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
-obj2.armedFreezeControl = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
+let obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO };
+obj2.armedFreezeControl = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO };
 const rect5 = {
   position: "absolute",
   left: 0,
@@ -283,20 +283,20 @@ export function NavigationTTIRegionDebugOverlay(name) {
   noop = undefined;
   closure_5 = undefined;
   const tmp = closure_11();
-  const navTTISurface = name(13465).useNavTTISurface();
-  let obj = name(13465);
+  const navTTISurface = name(13549).useNavTTISurface();
+  let obj = name(13549);
   const tmp2 = name;
   [tmp6, c2] = noop.useState(false);
   const syncExternalStore = noop.useSyncExternalStore(
-    name(13468).subscribeNavigationTTIDebugFreezeTarget,
-    name(13468).getNavigationTTIDebugFreezeTarget,
-    name(13468).getNavigationTTIDebugFreezeTarget,
+    name(13552).subscribeNavigationTTIDebugFreezeTarget,
+    name(13552).getNavigationTTIDebugFreezeTarget,
+    name(13552).getNavigationTTIDebugFreezeTarget,
   );
   closure_129_0 = name;
   closure_129_1 = regionId;
   closure_129_2 = tracking;
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-  const navTTISurface1 = name(13465).useNavTTISurface();
+  const navTTISurface1 = name(13549).useNavTTISurface();
   closure_129_3 = navTTISurface1;
   items = [name, regionId, navTTISurface1, tracking];
   const callback = noop.useCallback((arg0) => {
@@ -577,7 +577,7 @@ export function NavigationTTIRegionDebugOverlay(name) {
     }
     obj4.accessibilityHint = tmp54;
     const obj6 = {
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: str26,
       style: tmp.badgeText,
       lineClamp: null,
@@ -590,7 +590,7 @@ export function NavigationTTIRegionDebugOverlay(name) {
     }
     obj6.lineClamp = num2;
     obj6.children = combined1;
-    obj4.children = closure_8(tmp2(5747).Text, obj6);
+    obj4.children = closure_8(tmp2(5761).Text, obj6);
     const items3 = [closure_8(closure_5, obj4)];
     let tmp41Result = null;
     if (0 === hierarchyDepth) {
@@ -607,5 +607,5 @@ export function NavigationTTIRegionDebugOverlay(name) {
     return closure_7(closure_6, obj3);
   }
   str21 = " \u00B7 " + combined;
-  let obj2 = name(13465);
+  let obj2 = name(13549);
 }

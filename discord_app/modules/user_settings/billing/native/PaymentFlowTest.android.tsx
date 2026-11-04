@@ -26,10 +26,10 @@ function TestView() {
   first2 = tmp2Result2[0];
   let obj3 = { spacing: 16, style: tmp.container, children: null };
   const items1 = [
-    closure_7(value(first1[9]).Text, { variant: "text-lg/semibold", children: "Android Payment Flow Test" }),
+    closure_7(value(first1[9]).Text, { variant: "body-lg/semibold", children: "Android Payment Flow Test" }),
   ];
   const items2 = [
-    closure_7(value(first1[9]).Text, { style: tmp.title, variant: "text-md/semibold", children: "Gift Purchase SKU" }),
+    closure_7(value(first1[9]).Text, { style: tmp.title, variant: "body-md/semibold", children: "Gift Purchase SKU" }),
     closure_7(value(first1[11]).TextInput, {
       containerStyle: tmp.textInput,
       label: "SKU ID",
@@ -74,7 +74,7 @@ function TestView() {
         const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
         ActionSheetActionCreatorsDefault.hideActionSheet();
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17848, dependencyMap.paths),
+          asyncRequireImpl(17944, dependencyMap.paths),
           "SimpleRequestOTPActionSheet",
           obj,
         );
@@ -88,7 +88,7 @@ function TestView() {
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -109,7 +109,7 @@ export default noop.memo(function PaymentFlowTest() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   const obj = { skuIDs: [], activeSubscription: null, children: null };
   const tmp = closure_9();
-  obj.children = React5(ScrollView, {
+  obj.children = metroImportDefault(ScrollView, {
     style: closure_9().wrap,
     contentContainerStyle: {
       paddingBottom: insets.bottom,
@@ -117,7 +117,7 @@ export default noop.memo(function PaymentFlowTest() {
       paddingLeft: insets.left,
       paddingRight: insets.right,
     },
-    children: React5(TestView, {}),
+    children: metroImportDefault(TestView, {}),
   });
-  return React5(NativePaymentContext.NativePaymentContextProvider, obj);
+  return metroImportDefault(NativePaymentContext.NativePaymentContextProvider, obj);
 });

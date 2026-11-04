@@ -5,12 +5,12 @@ import useGetOrFetchApplications from "../../../../applications/useGetOrFetchApp
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const util = BPDKoA(1113);
-const Text_Text = BPDKoA(5747);
+const Text_Text = BPDKoA(5761);
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
+({ Fragment: hasOwnProperty, jsxs: closure_6, jsx: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
@@ -45,7 +45,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
       const intl2 = util.intl;
       formatResult = intl2.string(util.t.yQqVss);
     }
-    const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
+    const obj4 = { variant: "body-sm/normal", color: "text-default", children: null };
     const obj5 = { children: null };
     const items1 = [formatResult, "  \u2022  "];
     intl = util.intl;
@@ -56,11 +56,11 @@ export default function ChannelDetailsLinkedLobby(channel) {
     items1[2] = intl.format(BPDKoA, obj6);
     obj5.children = items1;
     obj4.children = timestampProducer(hasOwnProperty, obj5);
-    const items2 = [React5(Text, obj4)];
+    const items2 = [metroImportDefault(Text, obj4)];
     const obj7 = { style: null };
     divider = divider.divider;
     obj7.style = divider;
-    Text = React5(View, obj7);
+    Text = metroImportDefault(View, obj7);
     items2[1] = Text;
     obj2.children = items2;
     timestampProducer(View, obj2);

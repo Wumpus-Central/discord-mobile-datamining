@@ -11,8 +11,9 @@ import GuildChannelStore from "../../../../../stores/GuildChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HubProgressBarConstants = fn(9259);
-({ HUB_PROGRESS_ACTION_SHEET_ID: metroRequire, HUB_PROGRESS_NUM_TOTAL_STEPS: closure_7 } = HubProgressBarConstants);
+const HubProgressBarConstants = fn(9276);
+({ HUB_PROGRESS_ACTION_SHEET_ID: closure_6, HUB_PROGRESS_NUM_TOTAL_STEPS: metroImportDefault } =
+  HubProgressBarConstants);
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_8,
@@ -20,8 +21,8 @@ const Constants = fn(1072);
   InstantInviteSources: closure_10,
   Routes: closure_11,
 } = Constants);
-let closure_12 = fn(13989).DirectoryChannelScrollBehavior;
-const GuildProgressConstants = fn(14173);
+let closure_12 = fn(14075).DirectoryChannelScrollBehavior;
+const GuildProgressConstants = fn(14259);
 ({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = GuildProgressConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -86,7 +87,7 @@ export default function HubProgressActionSheet(guild) {
     stepsHook(children, arg1) {
       return closure_1_15(
         guild(hubProgressBarCompletedSteps[16]).Text,
-        { variant: "text-sm/medium", color: "mobile-text-heading-primary", children },
+        { variant: "body-sm/medium", color: "mobile-text-heading-primary", children },
         arg1,
       );
     },
@@ -116,7 +117,7 @@ export default function HubProgressActionSheet(guild) {
     stepsHook(children, arg1) {
       return closure_1_15(
         guild(hubProgressBarCompletedSteps[16]).Text,
-        { variant: "text-sm/medium", color: "mobile-text-heading-primary", children },
+        { variant: "body-sm/medium", color: "mobile-text-heading-primary", children },
         arg1,
       );
     },
@@ -189,7 +190,7 @@ export default function HubProgressActionSheet(guild) {
     let tmp11Result = closure_15(tmp2(tmp3[25]).Button, obj9);
   } else {
     const obj10 = { accessibilityRole: "button", onPress: handleFinishPress, children: null };
-    const obj11 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj11 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl6 = tmp2(tmp3[14]).intl;
     obj11.children = intl6.string(tmp2(tmp3[14]).t["9E36wf"]);
     obj10.children = closure_15(tmp2(tmp3[16]).Text, obj11);

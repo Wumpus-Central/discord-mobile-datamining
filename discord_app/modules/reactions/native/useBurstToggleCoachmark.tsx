@@ -49,7 +49,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     items2 = [];
   }
   obj2 = first(2176);
-  const tmp5 = _slicedToArray(first(7693).useSelectedDismissibleContent(items2), 2);
+  const tmp5 = _slicedToArray(first(7709).useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
   const items3 = [first, tmp5[1]];
@@ -75,7 +75,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  const tmpResult = first(7693);
-  const coachmark = first(10085).useCoachmark(targetRef, memo);
+  const tmpResult = first(7709);
+  const coachmark = first(10133).useCoachmark(targetRef, memo);
   return tmp5[1];
 }

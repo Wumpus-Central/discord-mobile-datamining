@@ -6,7 +6,7 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   applicationHeaderWrapper: {
@@ -41,7 +41,7 @@ export default function ApplicationSectionHeader(section) {
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(13924).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(14010).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -57,11 +57,11 @@ export default function ApplicationSectionHeader(section) {
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(5837), obj4);
+    tmp9 = closure_5(guildId(5851), obj4);
   }
   const items1 = [
     tmp9,
-    closure_5(section(5747).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
+    closure_5(section(5761).Text, { variant: "body-sm/medium", color: "interactive-text-default", children: name }),
   ];
   obj3.children = items1;
   return closure_6(View, obj3);

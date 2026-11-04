@@ -399,13 +399,13 @@ export const minimumRequiredTierForGuildFeature = apply.memoize((arg0) => {
 });
 export function boostedGuildTierToAnalyticsObjectType(arg0) {
   if (BoostedGuildTiers.NONE === arg0) {
-    return React7.NONE;
+    return React6.NONE;
   } else if (BoostedGuildTiers.TIER_1 === arg0) {
-    return React7.TIER_1;
+    return React6.TIER_1;
   } else if (BoostedGuildTiers.TIER_2 === arg0) {
-    return React7.TIER_2;
+    return React6.TIER_2;
   } else if (BoostedGuildTiers.TIER_3 === arg0) {
-    return React7.TIER_3;
+    return React6.TIER_3;
   } else {
     return null;
   }
@@ -756,7 +756,7 @@ export function getNextPremiumTierForSubscriberCount(arg0) {
 }
 export const TierMarkerPositions = obj3;
 export function getGuildBoostingProgressBarFillFactor(c0) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8596).getGuildPowerupBoostLevelProgress(_require.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8613).getGuildPowerupBoostLevelProgress(_require.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

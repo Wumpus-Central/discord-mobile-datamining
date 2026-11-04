@@ -25,14 +25,14 @@ function PriceTier(arg0) {
     children: PriceUtils.formatPrice(price, currency),
   };
   items = [timestampProducer(Text_Text.Text, obj2)];
-  const obj4 = { style: tmp2.priceInterval, variant: "eyebrow", color: "text-default", children: null };
+  const obj4 = { style: tmp2.priceInterval, variant: "body-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   const obj5 = { period: null };
   obj5.period = GuildRoleSubscriptionTypeUtils.formatPlanInterval(merged);
   obj4.children = intl.format(util.t.isLGyX, obj5);
   items[1] = timestampProducer(Text_Text.Text, obj4);
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 function Header(onPress) {
   const listingId = onPress.listingId;
@@ -43,7 +43,7 @@ function Header(onPress) {
   const obj5 = { style: tmp.header, children: null };
   items = [
     timestampProducer(Text_Text.Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "interactive-text-active",
       children: _slicedToArray(obj2.useName(listingId), 1)[0],
     }),
@@ -64,11 +64,11 @@ function Header(onPress) {
     onPress: onPress.onSubscribePress,
   });
   items[4] = timestampProducer(Text_Text.Text, {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     children: _slicedToArray(obj4.useDescription(listingId), 1)[0],
   });
   obj5.children = items;
-  return React5(View, obj5);
+  return metroImportDefault(View, obj5);
 }
 function Content(arg0) {
   ({ children, noBackground, style } = arg0);
@@ -89,7 +89,7 @@ function SectionLabel(children) {
   const tmp2 = closure_9();
   obj.children = timestampProducer(Text_Text.Text, {
     style: closure_9().sectionLabel,
-    variant: "eyebrow",
+    variant: "body-sm/medium",
     color: "text-default",
     children: children.label,
   });
@@ -108,7 +108,7 @@ function LabeledSection(arg0) {
   obj3.children = children;
   items[1] = timestampProducer(Content, obj3);
   obj.children = items;
-  return React5(React6, obj);
+  return metroImportDefault(React5, obj);
 }
 function Separator() {
   const obj = { children: timestampProducer(View, { style: closure_9().separator }) };
@@ -179,7 +179,7 @@ class BenefitsSection {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
@@ -241,7 +241,7 @@ obj2.roundedBenefitsContainer = {
   padding: nativeDefault.space.PX_16,
 };
 obj2.footer = { borderBottomStartRadius: 8, borderBottomEndRadius: 8, height: 16 };
-const React7 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 const obj12 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
 BenefitsSection.Looks = obj12;
 size = fn(2);
@@ -271,7 +271,7 @@ export function GuildRoleSubscriptionListingPreview(arg0) {
     const obj8 = { guildId, benefits: first, label: util.t.sqjII9, listingId };
     items1[1] = timestampProducer(BenefitsSection, obj8);
     obj7.children = items1;
-    tmp4Result = React5(React6, obj7);
+    tmp4Result = metroImportDefault(React5, obj7);
   }
   items[2] = tmp4Result;
   let tmp4Result2 = first1.length > 0;
@@ -281,10 +281,10 @@ export function GuildRoleSubscriptionListingPreview(arg0) {
     const obj10 = { guildId, benefits: first1, label: util.t.aBE7f9, listingId };
     items2[1] = timestampProducer(BenefitsSection, obj10);
     obj9.children = items2;
-    tmp4Result2 = React5(React6, obj9);
+    tmp4Result2 = metroImportDefault(React5, obj9);
   }
   items[3] = tmp4Result2;
   items[4] = timestampProducer(Content, { style: tmp.footer });
   obj4.children = items;
-  return React5(View, obj4);
+  return metroImportDefault(View, obj4);
 }

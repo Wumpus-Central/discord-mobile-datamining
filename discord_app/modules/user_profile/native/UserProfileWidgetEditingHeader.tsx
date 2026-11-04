@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileWidgetEditingHeader() {
   const tmp = closure_6();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.heading, children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.heading, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.OYlggR);
   items = [React4(Text_Text.Heading, obj2), ,];

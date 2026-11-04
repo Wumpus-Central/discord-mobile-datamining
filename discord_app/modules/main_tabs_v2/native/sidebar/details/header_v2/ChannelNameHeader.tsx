@@ -88,12 +88,12 @@ function ThreadParentChannelLink(channel) {
     transitionToChannel.transitionToChannel(channel.id, { navigationReplace: true });
   }, items);
   const obj2 = { onPress: callback, children: null };
-  const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
+  const obj3 = { variant: "body-sm/medium", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
   const intl = channel(navigation[18]).intl;
   obj3.children = intl.format(channel(navigation[18]).t.YbkB3U, {
     channelName: tmp,
     channelNameHook() {
-      return application_id(Text_Text.Text, { variant: "text-sm/medium", color: "text-brand", lineClamp: 1, children });
+      return application_id(Text_Text.Text, { variant: "body-sm/medium", color: "text-brand", lineClamp: 1, children });
     },
   });
   obj2.children = closure_12(channel(navigation[17]).Text, obj3);
@@ -119,8 +119,8 @@ function ChannelSubtitle(channel) {
     if (null != stateFromStores) {
       tmp8 = null;
       if ("" !== stateFromStores) {
-        const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(5747).Text, obj2);
+        const obj2 = { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
+        tmp8 = closure_12(tmp(5761).Text, obj2);
       }
     }
     return tmp8;
@@ -128,8 +128,8 @@ function ChannelSubtitle(channel) {
     const intl = tmp(1113).intl;
     let stringResult = intl.string(_modDef3931["D+2/QP"]);
   } else {
-    stringResult = tmp(6166).channelTypeString(channel);
-    const tmpResult = tmp(6166);
+    stringResult = tmp(6181).channelTypeString(channel);
+    const tmpResult = tmp(6181);
   }
   let obj = channel(504);
 }
@@ -231,7 +231,7 @@ function ChannelNameHeaderContent(channel) {
       userId: channel.getRecipientId(),
       guildId: channel.guild_id,
       userName: tmp4,
-      variant: "redesign/heading-18/semibold",
+      variant: "heading-md/semibold",
       defaultColor: "mobile-text-heading-primary",
       lineClamp: 1,
       ellipsizeMode: "tail",
@@ -240,7 +240,7 @@ function ChannelNameHeaderContent(channel) {
     const tmp2Result = tmp2(tmp3[23]);
   } else {
     let obj6 = {
-      variant: "redesign/heading-18/semibold",
+      variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       ellipsizeMode: "tail",
@@ -258,7 +258,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7446)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7462)().analyticsLocations;
   items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -270,7 +270,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(7106).PressableOpacity, obj);
+  return closure_12(channel(7121).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);

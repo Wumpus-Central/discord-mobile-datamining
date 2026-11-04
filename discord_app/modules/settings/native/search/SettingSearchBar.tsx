@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import Search_SearchBar from "../../../../design/components/Search/native/SearchBar.native.tsx";
-import settings_tracking_Tracking from "../../tracking/Tracking.tsx";
+import Tracking from "../../tracking/Tracking.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStore.tsx";
 
@@ -22,7 +22,7 @@ export default function SettingSearchBar() {
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, []);
   const callback1 = noop.useCallback(() => {
-    const result = settings_tracking_Tracking.trackSettingSearchInputFocused();
+    const result = Tracking.trackSettingSearchInputFocused();
     UserSettingSearchStore.setState({ isActive: true, isFocused: true });
   }, []);
   const callback2 = noop.useCallback(() => {

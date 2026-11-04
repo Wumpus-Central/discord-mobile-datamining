@@ -12,8 +12,8 @@ require = fn;
 const HexagonCampaignConstants = fn(5166);
 ({
   HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: hasOwnProperty,
-  HexagonCampaignPerk: metroRequire,
-  HexagonCampaignPerkAvailability: closure_7,
+  HexagonCampaignPerk: closure_6,
+  HexagonCampaignPerkAvailability: metroImportDefault,
 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/useHexagonCampaignNewFontBadge.tsx");

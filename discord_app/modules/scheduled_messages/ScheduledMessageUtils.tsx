@@ -21,9 +21,9 @@ const parseContentForSuppressNotificationsDefault = parseContentForSuppressNotif
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, MessageFlags: closure_7, Permissions: closure_8 } = Constants);
+({ AnalyticEvents: closure_6, MessageFlags: metroImportDefault, Permissions: closure_8 } = Constants);
 const PremiumTypes = fn(1387).PremiumTypes;
-const ScheduledMessagesConstants = fn(9927);
+const ScheduledMessagesConstants = fn(9945);
 ({
   MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: closure_10,
   MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_11,

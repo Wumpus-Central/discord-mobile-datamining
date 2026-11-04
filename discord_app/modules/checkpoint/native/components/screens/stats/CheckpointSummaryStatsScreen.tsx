@@ -35,11 +35,11 @@ function NumberStat(arg0) {
   const memo = noop.useMemo(() => ({ color }), items);
   obj.accessibilityLabel = "" + label + ", " + value.toLocaleString(util.intl.currentLocale);
   const items1 = [
-    React6(CheckpointTextDefault, { variant: "text-md/medium", style: memo, children: label }),
-    React6(View, { style: tmp.statNumber, children: React6(CheckpointStatNumberDefault, { value, color, size: 32 }) }),
+    React5(CheckpointTextDefault, { variant: "body-md/medium", style: memo, children: label }),
+    React5(View, { style: tmp.statNumber, children: React5(CheckpointStatNumberDefault, { value, color, size: 32 }) }),
   ];
   obj.children = items1;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 function ItemStat(children) {
   ({ label, name, color } = children);
@@ -47,23 +47,23 @@ function ItemStat(children) {
   items = [color];
   const memo = noop.useMemo(() => ({ color }), items);
   const obj = { style: tmp.stat, accessible: true, accessibilityLabel: "" + label + ", " + name, children: null };
-  const items1 = [React6(CheckpointTextDefault, { variant: "text-md/medium", style: memo, children: label })];
+  const items1 = [React5(CheckpointTextDefault, { variant: "body-md/medium", style: memo, children: label })];
   const obj2 = { style: tmp.item, children: null };
-  const items2 = [React6(View, { style: tmp.itemIcon, children: children.icon })];
-  const obj4 = { variant: "text-md/semibold", style: null, children: name };
+  const items2 = [React5(View, { style: tmp.itemIcon, children: children.icon })];
+  const obj4 = { variant: "body-md/semibold", style: null, children: name };
   const items3 = [tmp.itemName, memo];
   obj4.style = items3;
-  items2[1] = React6(CheckpointTextDefault, obj4);
+  items2[1] = React5(CheckpointTextDefault, obj4);
   obj2.children = items2;
-  items1[1] = React7(View, obj2);
+  items1[1] = React6(View, obj2);
   obj.children = items1;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(6186).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const sum = fn(6201).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -215,7 +215,7 @@ export default function CheckpointSummaryStatsScreen() {
       ({ itemIcon: arr9[0], guildAcronym: arr9[1] } = tmp);
       obj5.style = items2;
       const obj7 = {
-        variant: "text-md/semibold",
+        variant: "body-md/semibold",
         color: "text-overlay-light",
         allowFontScaling: false,
         children: CheckpointStatsUtils.getGuildAcronymCharacter(first.guild.name),

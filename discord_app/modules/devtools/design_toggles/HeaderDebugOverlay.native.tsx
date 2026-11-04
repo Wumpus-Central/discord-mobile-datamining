@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = {
   "os-drawn": "OS-Drawn",
   "custom-drawn": "Custom-Drawn",
@@ -58,7 +58,7 @@ export default function useHeaderDebugOverlay(arg0, arg1) {
     const obj4 = { style: null, children: null };
     const items2 = [tmp3.badge, tmp8];
     obj4.style = items2;
-    const obj5 = { variant: "text-xs/semibold", color: "text-overlay-light", children: tmp6 };
+    const obj5 = { variant: "body-xs/semibold", color: "text-overlay-light", children: tmp6 };
     obj4.children = React4(Text_Text.Text, obj5);
     obj3.children = React4(View, obj4);
     items1[1] = React4(View, obj3);

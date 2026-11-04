@@ -54,13 +54,13 @@ function getVoiceInviteEmbedRenderInfo(state) {
 }
 const Constants = fn(1072);
 ({
-  ChannelTypes: metroRequire,
-  GuildFeatures: closure_7,
+  ChannelTypes: closure_6,
+  GuildFeatures: metroImportDefault,
   InviteStates: closure_8,
   MessageFlags: closure_9,
 } = Constants);
-const LinkType = fn(7956).LinkType;
-const InviteTypes = fn(8003).InviteTypes;
+const LinkType = fn(7972).LinkType;
+const InviteTypes = fn(8019).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessageImpressionAnalyticsHelpers.tsx");
 

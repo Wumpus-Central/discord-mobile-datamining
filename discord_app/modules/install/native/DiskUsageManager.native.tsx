@@ -145,7 +145,7 @@ let closure_11 = async function _measureAndReportInstallSize() {
   }
 };
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, AppStates: metroRequire, DebugLogCategory: closure_7 } = Constants);
+({ AnalyticEvents: hasOwnProperty, AppStates: closure_6, DebugLogCategory: metroImportDefault } = Constants);
 let closure_8 = new LoggerDefault("DiskUsageManager");
 class DiskUsageManager extends tmp4 {
   constructor() {

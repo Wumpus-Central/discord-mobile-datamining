@@ -15,7 +15,7 @@ function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(15544, dependencyMap.paths);
+  const tmp = asyncRequireImpl(15631, dependencyMap.paths);
   obj2.aboutText = intl.formatToPlainString(_modDef3415["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }
@@ -48,7 +48,7 @@ export default function BoostingUnavailablePill(style) {
   obj2.style = items;
   const obj3 = { style: tmp.pgUnavailable, children: null };
   const obj4 = {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     color: "interactive-text-active",
     style: tmp.pgUnavailableText,
     children: null,
@@ -56,7 +56,7 @@ export default function BoostingUnavailablePill(style) {
   const intl = util.intl;
   obj4.children = intl.string(util.t["5nrJDO"]);
   obj3.children = jsx(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     color: "interactive-text-active",
     style: tmp.pgUnavailableText,
     children: null,

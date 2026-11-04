@@ -1,17 +1,17 @@
 // discord_app/modules/safety_hub/native/AppealIngestionRequestSent.tsx
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink.tsx";
-import _modDef13481 from "../../../../_runtime/metro/13481__.js";
+import _modDef13565 from "../../../../_runtime/metro/13565__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8094);
+const SafetyHubConstants = fn(8110);
 ({ SafetyHubAnalyticsActions: closure_4, SafetyHubLinks: hasOwnProperty } = SafetyHubConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, padding: 8 },
@@ -32,7 +32,7 @@ export default function AppealIngestionRequestSent() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  obj4.source = _modDef13481;
+  obj4.source = _modDef13565;
   obj4.style = tmp.checkboxPng;
   items = [
     closure_6(FastImageDefault, obj4),
@@ -44,7 +44,7 @@ export default function AppealIngestionRequestSent() {
     ,
   ];
   const obj5 = {
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.actionsHeader,
     children: null,

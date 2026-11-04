@@ -17,8 +17,8 @@ require = fn;
 const ChannelRecord = fn(4994);
 ({
   ChannelRecordBase: hasOwnProperty,
-  isGuildChannelType: metroRequire,
-  createChannelRecord: closure_7,
+  isGuildChannelType: closure_6,
+  createChannelRecord: metroImportDefault,
 } = ChannelRecord);
 const Constants = fn(1072);
 ({ MessageFlags: closure_12, Permissions: map1 } = Constants);
@@ -26,7 +26,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(13520).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(13604).getChannelIdFromDestinationId);
   found = mapped.find(found(1380).isNotNullish);
   items = [ChannelStore];
   const items1 = [found];
@@ -36,7 +36,7 @@ export function useSelectedDestinationChannel(selectedDestinations) {
     let tmp = stateFromStores;
     if (stateFromStores == null) {
       const obj = { id: "1", type: ChannelTypes.ChannelTypes.DM };
-      tmp = React5(obj);
+      tmp = metroImportDefault(obj);
     }
     return tmp;
   }, items2);
@@ -66,7 +66,7 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
     if (null != channel) {
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp2) {
-          tmp12(6854);
+          tmp12(6869);
         }
         const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp12(1113).intl;
@@ -82,10 +82,10 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
           if (currentUser != null) {
             nsfwAllowed = currentUser.nsfwAllowed;
           }
-          let result = tmp12(6846).shouldShowTiggerPawtect();
+          let result = tmp12(6861).shouldShowTiggerPawtect();
           if (result) {
-            result = tmp12(5813).isFeatureAgeGated(tmp12(6851).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(5813);
+            result = tmp12(5827).isFeatureAgeGated(tmp12(6866).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(5827);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {
@@ -98,9 +98,9 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
             }).disableAgeRestrictedDestinations;
           }
           flag2 = disableAgeRestrictedDestinations;
-          const tmp12Result9 = tmp12(6846);
+          const tmp12Result9 = tmp12(6861);
         }
-        tmp12Result8 = tmp12(6854);
+        tmp12Result8 = tmp12(6869);
       }
       if (flag2) {
         const obj3 = { label: null, lineClamp: 2 };
@@ -127,9 +127,9 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
                 obj5.label = intl3.string(tmp12(1113).t.Wr4RIX);
                 return obj5;
               }
-              tmp12Result12 = tmp12(6678);
+              tmp12Result12 = tmp12(6693);
             }
-            tmp12Result11 = tmp12(6678);
+            tmp12Result11 = tmp12(6693);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -140,14 +140,14 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
               obj6.label = intl4.string(tmp12(1113).t.Wr4RIX);
               return obj6;
             }
-            tmp12Result13 = tmp12(6678);
+            tmp12Result13 = tmp12(6693);
           }
           items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp12Result14 = tmp12(6680);
+          const tmp12Result14 = tmp12(6695);
           HermesBuiltin.arraySpread(
             messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)),
-            HermesBuiltin.arraySpread(tmp12(6680).getMessageStickers(components), 0),
+            HermesBuiltin.arraySpread(tmp12(6695).getMessageStickers(components), 0),
           );
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
@@ -182,7 +182,7 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(6680).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(6695).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");
@@ -224,7 +224,7 @@ export function useSelectedDestinationNames(arg0) {
           channel = channel.getChannel(id);
           let channelName = null;
           if (null != channel) {
-            const obj = closure_1_0(5772);
+            const obj = closure_1_0(5786);
             channelName = obj.computeChannelName(channel, user, nickname, true);
           }
           return channelName;

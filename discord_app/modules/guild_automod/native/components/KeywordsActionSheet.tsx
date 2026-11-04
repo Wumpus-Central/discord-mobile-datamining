@@ -6,9 +6,9 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_5 = fn(13428).KEYWORDS_REGEX_PLACEHOLDER;
+let closure_5 = fn(13512).KEYWORDS_REGEX_PLACEHOLDER;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/native/components/KeywordsActionSheet.tsx");
 

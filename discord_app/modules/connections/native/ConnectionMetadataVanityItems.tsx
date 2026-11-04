@@ -6,8 +6,8 @@ import native from "../../../design/void/native.tsx";
 import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConnectionsUtils from "../ConnectionsUtils.tsx";
-import _modDef11743 from "../../../../_runtime/metro/11743__.js";
-import _modDef11744 from "../../../../_runtime/metro/11744__.js";
+import _modDef11798 from "../../../../_runtime/metro/11798__.js";
+import _modDef11799 from "../../../../_runtime/metro/11799__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -40,7 +40,7 @@ function VanityMetric(label) {
     const obj3 = { value: sum };
     formatResult = intl2.format(label, obj3);
   }
-  const obj4 = { variant: "text-xs/normal", color: "text-muted", style: null, children: formatResult };
+  const obj4 = { variant: "body-xs/normal", color: "text-muted", style: null, children: formatResult };
   items = [tmp.connectedAccountVanityMetadata, style];
   obj4.style = items;
   return timestampProducer(Text_Text.Text, obj4);
@@ -61,17 +61,17 @@ function VanityItem(style) {
       style: tmp.connectedAccountVanityMetadataItemIcon,
       disableColor: true,
     }),
-    timestampProducer(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", style, children: label }),
+    timestampProducer(Text_Text.Text, { variant: "body-xs/normal", color: "text-muted", style, children: label }),
   ];
   obj.children = items1;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 function VanityTag(arg0) {
   ({ label, style, textStyle } = arg0);
   const obj = {
     style: null,
     children: timestampProducer(Text_Text.Text, {
-      variant: "text-xs/normal",
+      variant: "body-xs/normal",
       color: "text-muted",
       style: textStyle,
       children: label,
@@ -85,7 +85,7 @@ function VanityTag(arg0) {
 }
 function VanityDate(arg0) {
   ({ date, label, locale, style } = arg0);
-  const obj = { variant: "text-xs/normal", color: "text-muted", style: null, children: null };
+  const obj = { variant: "body-xs/normal", color: "text-muted", style: null, children: null };
   items = [closure_8().connectedAccountVanityMetadata, style];
   obj.style = items;
   const intl = util.intl;
@@ -97,10 +97,10 @@ function VanityDate(arg0) {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-const Constants = fn(7469);
+const Constants = fn(7485);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 },
@@ -247,7 +247,7 @@ export function generateSteamMetadataItems(metadata) {
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11743;
+    obj2.imageSrc = _modDef11798;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(VanityItem, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -257,7 +257,7 @@ export function generateSteamMetadataItems(metadata) {
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11744;
+    obj4.imageSrc = _modDef11799;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(VanityItem, obj4, constants.STEAM_ITEM_COUNT_TF2));

@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { container: { flex: 1, gap: nativeDefault.space.PX_8 }, copy: null };
 let obj3 = { flex: 1, gap: nativeDefault.space.PX_8 };
@@ -55,11 +55,11 @@ export default noop.memo(function SmartSearchEmptyScreen(smartSearchQuery) {
     }),
   ];
   const obj2 = { style: tmp.copy, children: null };
-  const obj3 = { variant: "text-sm/semibold", color: "text-muted", accessibilityRole: "header", children: null };
+  const obj3 = { variant: "body-sm/semibold", color: "text-muted", accessibilityRole: "header", children: null };
   let intl = util.intl;
   obj3.children = intl.string(_modDef4250["HX/WYf"]);
   const items2 = [hasOwnProperty(Text_Text.Text, obj3)];
-  const obj4 = { variant: "text-sm/semibold", color: "text-muted", accessibilityRole: "header", children: null };
+  const obj4 = { variant: "body-sm/semibold", color: "text-muted", accessibilityRole: "header", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(_modDef4250["0ySxbu"]);
   items2[1] = hasOwnProperty(Text_Text.Text, obj4);

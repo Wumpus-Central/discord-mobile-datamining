@@ -1,9 +1,9 @@
 // discord_app/modules/conjure/home/native/ConjureHomeBackdrop.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useTheme from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../_runtime/08155_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08171_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -12,7 +12,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const colors = ["rgb(42, 45, 83)", "rgb(83, 39, 75)"];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };

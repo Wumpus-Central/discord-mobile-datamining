@@ -102,7 +102,7 @@ function SoundButtonEmoji(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let module_1652 = module_1652_mod;
 let closure_7 = module_1652.createAnimatedComponent(View);
 let closure_8 = { damping: 10, stiffness: 300, mass: 1 };
@@ -122,7 +122,7 @@ let obj = {
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.button = {
   marginTop: 4,
-  height: fn(19332).SOUND_BUTTON_HEIGHT,
+  height: fn(19436).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -134,7 +134,7 @@ obj.button = {
 };
 let obj2 = {
   marginTop: 4,
-  height: fn(19332).SOUND_BUTTON_HEIGHT,
+  height: fn(19436).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -193,7 +193,7 @@ const size1 = {
 obj.lock = size1;
 let closure_9 = createStyles.createStyles(obj);
 let module_1652 = module_1652_mod;
-let closure_10 = module_1652.createAnimatedComponent(fn(7106).PressableOpacity);
+let closure_10 = module_1652.createAnimatedComponent(fn(7121).PressableOpacity);
 let closure_11 = {
   code: '(function SoundButtonTsx1(){let[animationConfig,withDelay,withSpring,interpolate,SPRING_CONFIG]=this.__closure;var _animationConfig$play,_animationConfig$pres,_animationConfig;const isNotPressed=animationConfig.sharedValues.pressed.get()===0;const isPlaying=animationConfig.sharedValues.playing.get()>0;const shouldDoPlayingAnimation=isNotPressed&&isPlaying;const playingAnimationScaleValue=withDelay((_animationConfig$play=animationConfig.playingAnimationDelay)!==null&&_animationConfig$play!==void 0?_animationConfig$play:0,withSpring(interpolate(animationConfig.sharedValues.playing.get(),[0,1],[1,animationConfig.scaleFactors.playing]),SPRING_CONFIG));const pressedAnimationScaleValue=withSpring(interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[1,animationConfig.scaleFactors.pressed]),SPRING_CONFIG);const rotationScaleValue=interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[0,(_animationConfig$pres=(_animationConfig=animationConfig)===null||_animationConfig===void 0?void 0:_animationConfig.pressedRotationDegrees)!==null&&_animationConfig$pres!==void 0?_animationConfig$pres:0]);return{transform:[{scale:shouldDoPlayingAnimation?playingAnimationScaleValue:pressedAnimationScaleValue},{rotate:rotationScaleValue+"deg"}]};})',
 };
@@ -331,7 +331,7 @@ export const SoundButton = noop.memo(function SoundButtonComponent(sound) {
   items6[2] = isLocked(isPlayingSound(sharedValue1[19]).Text, {
     lineClamp: 1,
     style: items7,
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     children: sound.name,
   });
   obj3.children = items6;

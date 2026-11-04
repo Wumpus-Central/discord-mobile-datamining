@@ -9,7 +9,7 @@ import StateManager from "../../lib/StateManager.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ ChannelTypes: hasOwnProperty, VoiceFlags: metroRequire } = Constants);
+({ ChannelTypes: hasOwnProperty, VoiceFlags: closure_6 } = Constants);
 class LocalVoiceStateManager extends tmp3 {
   constructor(arg0) {
     tmp = new LocalVoiceStateManager(new.target);

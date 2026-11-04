@@ -85,7 +85,7 @@ export default function AddFriendsContactSyncEmptyState() {
   obj3.children = intl.string(util.t["/G+nci"]);
   items[1] = React3(Text_Text.Heading, obj3);
   const obj4 = { style: tmp.subtitle, children: null };
-  const obj5 = { style: tmp.subtitleText, variant: "text-sm/medium", children: null };
+  const obj5 = { style: tmp.subtitleText, variant: "body-sm/medium", children: null };
   const intl2 = util.intl;
   const obj2 = {
     style: tmp.headerIllustration,

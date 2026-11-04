@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { overlay: { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -64,7 +64,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
         obj4.style = items2;
         items1[1] = timestampProducer(React4, obj4);
         obj2.children = items1;
-        tmp13Result = React5(React4, obj2);
+        tmp13Result = metroImportDefault(React4, obj2);
       }
     }
   }

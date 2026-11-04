@@ -27,10 +27,10 @@ function questMatchesActivity(arg0, id) {
       if (!tmp11) {
         let tmp12 = tmp2 != id;
         if (tmp12) {
-          tmp12 = id.id === React5;
+          tmp12 = id.id === metroImportDefault;
         }
         if (tmp12) {
-          tmp12 = formatted.application_id === React6;
+          tmp12 = formatted.application_id === React5;
         }
         if (!tmp12) {
           let tmp15 = tmp2 != formatted.application_id;
@@ -79,10 +79,10 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(6901);
+const QuestConstants = fn(6916);
 ({
-  DISCORD_APPLICATION_ID: metroRequire,
-  PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: closure_7,
+  DISCORD_APPLICATION_ID: closure_6,
+  PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: metroImportDefault,
   PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_8,
 } = QuestConstants);
 let closure_9 = fn(2147).XBOX_ACTIVITY_APPLICATION_ID;
@@ -106,24 +106,6 @@ export function getQuestByApplicationId(arg0, arg1) {
     }
     continue;
   }
-}
-export function allPlayOnDesktopQuestsByApplicationId(arr, arg1) {
-  closure_0 = arg1;
-  arr = Array.from(arr.values());
-  return arr.filter((quest) => {
-    const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
-    let hasPlayOnDesktopTaskResult = null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
-    if (hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = !QuestExpirationUtils.isQuestExpired(quest);
-      const tmpResult = QuestExpirationUtils;
-    }
-    if (hasPlayOnDesktopTaskResult) {
-      const obj2 = { quest };
-      hasPlayOnDesktopTaskResult = QuestTaskUtils.hasPlayOnDesktopTask(obj2);
-      const tmpResult2 = QuestTaskUtils;
-    }
-    return hasPlayOnDesktopTaskResult;
-  });
 }
 export function getQuestsFromActivities(result, arg1) {
   if (null != arg1) {

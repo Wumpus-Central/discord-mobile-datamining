@@ -39,7 +39,7 @@ class Content {
       size: 114,
     };
     items[1] = jsx(closure_0(closure_2[13]).ImagePickerIcon, obj10);
-    obj11 = { style: tmp.coverDescription, variant: "text-sm/medium", color: "text-default", children: null };
+    obj11 = { style: tmp.coverDescription, variant: "body-sm/medium", color: "text-default", children: null };
     intl2 = closure_0(closure_2[12]).intl;
     obj11.children = intl2.string(closure_0(closure_2[12]).t["0ng4rB"]);
     items[2] = jsx(closure_0(closure_2[14]).Text, obj11);
@@ -62,8 +62,8 @@ class Content {
   }
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(17339);
-({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } =
+const GuildRoleSubscriptionsConstants = fn(17430);
+({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault } =
   GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1072).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
@@ -97,7 +97,7 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   obj2.cover = tmp2;
   obj2.setCover = tmp3;
   obj2.description = first;
-  obj.children = React7(Content, obj2);
-  return React7(GuildRoleSubscriptionTierEditStepDefault, obj);
+  obj.children = React6(Content, obj2);
+  return React6(GuildRoleSubscriptionTierEditStepDefault, obj);
 }
 export { Content };

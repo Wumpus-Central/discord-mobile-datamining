@@ -35,7 +35,7 @@ function SettingsUpsellsTableRow(arg0) {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -82,7 +82,7 @@ export default function SettingsUpsellElement(settingsUpsells) {
     obj5.title = intl.string(tmp2(reportId[15]).t["1yxTIJ"]);
     obj5.children = settingsUpsellsConfigs.map((getTitle, index) => {
       ({ getDisabledTitle, getDescription, onApply } = getTitle);
-      return React7(
+      return React6(
         SettingsUpsellsTableRow,
         {
           title: getTitle.getTitle(),
@@ -96,7 +96,7 @@ export default function SettingsUpsellElement(settingsUpsells) {
     });
     obj4.children = closure_9(tmp2(reportId[14]).TableRowGroup, obj5);
     const items1 = [closure_9(closure_5, obj4)];
-    const obj6 = { variant: "text-sm/medium", style: tmp.goToSettingsText, children: null };
+    const obj6 = { variant: "body-sm/medium", style: tmp.goToSettingsText, children: null };
     const intl2 = tmp2(reportId[15]).intl;
     const obj7 = {
       goToSettingsHook() {

@@ -1,8 +1,8 @@
 // discord_app/modules/hexagon_campaign/HexagonCampaignUtils.tsx
 import PerksStateUtils from "../premium/perks_state/PerksStateUtils.tsx";
 import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
+import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import HexagonCampaignConstants from "HexagonCampaignConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -12,8 +12,8 @@ import size from "../../../_runtime/metro/00002__.js";
   HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: c3,
   HEXAGON_CAMPAIGN_END_AT_MS: closure_4,
   HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: hasOwnProperty,
-  HEXAGON_CAMPAIGN_PERK_MINIMUM_PREMIUM_TYPE: metroRequire,
-  HEXAGON_CAMPAIGN_PERK_TO_PERK: closure_7,
+  HEXAGON_CAMPAIGN_PERK_MINIMUM_PREMIUM_TYPE: closure_6,
+  HEXAGON_CAMPAIGN_PERK_TO_PERK: metroImportDefault,
   HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: closure_8,
   HexagonCampaignPerkAvailability: closure_9,
 } = HexagonCampaignConstants);
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampa
 export function getHexagonCampaignPerkCutoffMs(item, stateFromStores) {
   if (null != stateFromStores) {
     if (obj.isPremiumAtLeast(stateFromStores, dependencyMap[item])) {
-      let tmp5 = React6;
+      let tmp5 = React5;
     }
     return tmp5;
   }
@@ -42,7 +42,7 @@ export function isHexagonCampaignOver() {
     const _Date = Date;
     timestamp = Date.now();
   }
-  return timestamp >= React6;
+  return timestamp >= React5;
 }
 export function isHexagonCampaignPerkExpired(CLIENT_THEME, premiumType, arg2) {
   let timestamp = arg2;
@@ -52,7 +52,7 @@ export function isHexagonCampaignPerkExpired(CLIENT_THEME, premiumType, arg2) {
   }
   if (null != premiumType) {
     if (obj.isPremiumAtLeast(premiumType, dependencyMap[CLIENT_THEME])) {
-      let tmp7 = React6;
+      let tmp7 = React5;
     }
     return timestamp >= tmp7;
   }
@@ -132,8 +132,8 @@ export function getHexagonCampaignPerkAvailability(arg0) {
       const _Date2 = Date;
       timestamp = Date.now();
     }
-    let tmp5 = React6;
-    if (timestamp < React6) {
+    let tmp5 = React5;
+    if (timestamp < React5) {
       if (!tmp2) {
         const _Date3 = Date;
         now = Date.now();

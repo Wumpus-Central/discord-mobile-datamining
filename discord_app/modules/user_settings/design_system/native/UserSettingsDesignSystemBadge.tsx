@@ -29,7 +29,7 @@ function Playground() {
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   const first3 = tmp7[0];
   const obj = { spacing: nativeDefault.space.PX_12, children: null };
-  items = [React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Playground" }), , , , ,];
+  items = [metroImportDefault(Text_Text.Heading, { variant: "body-lg/semibold", children: "Playground" }), , , , ,];
   const obj2 = { style: closure_9().preview, children: null };
   let tmp15 = first1;
   if ("custom" === first1) {
@@ -43,8 +43,8 @@ function Playground() {
   const obj4 = { type: tmp15, variant: first, icon: null };
   if (!first3) {
     obj4.icon = undefined;
-    obj2.children = React5(Badge.Badge, obj4);
-    items[1] = React5(timestampProducer, obj2);
+    obj2.children = metroImportDefault(Badge.Badge, obj4);
+    items[1] = metroImportDefault(timestampProducer, obj2);
     const obj5 = {
       title: "Variant",
       value: first,
@@ -54,7 +54,7 @@ function Playground() {
         closure_1_7(require("TableRadioRow").TableRadioRow, { label, value: label }, label),
       ),
     };
-    items[2] = React5(TableRadioGroup.TableRadioGroup, obj5);
+    items[2] = metroImportDefault(TableRadioGroup.TableRadioGroup, obj5);
     const obj6 = {
       title: "Type",
       value: first1,
@@ -64,17 +64,17 @@ function Playground() {
         closure_1_7(require("TableRadioRow").TableRadioRow, { label: label.label, value: label.value }, label.value),
       ),
     };
-    items[3] = React5(TableRadioGroup.TableRadioGroup, obj6);
+    items[3] = metroImportDefault(TableRadioGroup.TableRadioGroup, obj6);
     let tmp12Result = null;
     if (tmp14) {
       const obj7 = { label: "Custom text", value: first2, onChange: tmp6[1] };
-      tmp12Result = React5(TextInput.TextInput, obj7);
+      tmp12Result = metroImportDefault(TextInput.TextInput, obj7);
     }
     items[4] = tmp12Result;
     const obj8 = { label: "Leading icon", value: first3, onValueChange: tmp7[1], start: true, end: true };
-    items[5] = React5(TableSwitchRow.TableSwitchRow, obj8);
+    items[5] = metroImportDefault(TableSwitchRow.TableSwitchRow, obj8);
     obj.children = items;
-    return React6(Stack_Stack.Stack, obj);
+    return React5(Stack_Stack.Stack, obj);
   } else if ("premium" === first) {
     let ExperimentalMythicIcon = LockIcon.LockIcon;
   } else if ("inverted" === first) {
@@ -98,21 +98,21 @@ function VariantMatrix() {
   let obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_16, children: null };
   items = [
-    closure_7(require("Text/Text").Heading, { variant: "text-lg/semibold", children: "Variants" }),
+    closure_7(require("Text/Text").Heading, { variant: "body-lg/semibold", children: "Variants" }),
     closure_7(require("Text/Text").Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-subtle",
       children:
         "Every variant with built-in types, custom text, and a leading icon. With no variant, a badge uses the grey default.",
     }),
     closure_10.map((variant) => {
       const obj = { spacing: nativeDefault.space.PX_8, children: null };
-      items = [React5(Text_Text.Text, { variant: "text-sm/medium", children: variant })];
+      items = [metroImportDefault(Text_Text.Text, { variant: "body-sm/medium", children: variant })];
       const obj3 = { style: badgeRow.badgeRow, children: null };
       const items1 = [
-        React5(Badge.Badge, { type: "new", variant }),
-        React5(Badge.Badge, { type: "beta", variant }),
-        React5(Badge.Badge, { type: { text: "Custom" }, variant }),
+        metroImportDefault(Badge.Badge, { type: "new", variant }),
+        metroImportDefault(Badge.Badge, { type: "beta", variant }),
+        metroImportDefault(Badge.Badge, { type: { text: "Custom" }, variant }),
         ,
       ];
       const obj7 = { type: "new", variant, icon: null };
@@ -132,7 +132,7 @@ function VariantMatrix() {
         StarIcon = StarIcon3.StarIcon;
       }
       obj7.icon = StarIcon;
-      items1[3] = React5(Badge.Badge, obj7);
+      items1[3] = metroImportDefault(Badge.Badge, obj7);
       const obj8 = { type: { text: "Custom" }, variant, icon: null };
       if ("premium" === variant) {
         let StarIcon2 = LockIcon.LockIcon;
@@ -150,11 +150,11 @@ function VariantMatrix() {
         StarIcon2 = StarIcon3.StarIcon;
       }
       obj8.icon = StarIcon2;
-      items1[4] = React5(Badge.Badge, obj8);
+      items1[4] = metroImportDefault(Badge.Badge, obj8);
       obj3.children = items1;
-      items[1] = React6(timestampProducer, obj3);
+      items[1] = React5(timestampProducer, obj3);
       obj.children = items;
-      return React6(Stack_Stack.Stack, obj, variant);
+      return React5(Stack_Stack.Stack, obj, variant);
     }),
   ];
   obj2.children = items;
@@ -166,9 +166,9 @@ function Truncation() {
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_12, children: null };
   items = [
-    React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Long text" }),
-    React5(Text_Text.Text, {
-      variant: "text-sm/normal",
+    metroImportDefault(Text_Text.Heading, { variant: "body-lg/semibold", children: "Long text" }),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-sm/normal",
       color: "text-subtle",
       children: "Labels stay on one line and truncate with an ellipsis when space runs out. The icon never shrinks.",
     }),
@@ -177,46 +177,46 @@ function Truncation() {
   ];
   const obj3 = { style: tmp.narrow, children: null };
   const obj4 = { type: { text } };
-  obj3.children = React5(Badge.Badge, obj4);
-  items[2] = React5(timestampProducer, obj3);
+  obj3.children = metroImportDefault(Badge.Badge, obj4);
+  items[2] = metroImportDefault(timestampProducer, obj3);
   const obj6 = {
     style: tmp.narrow,
-    children: React5(Badge.Badge, { type: { text }, variant: "primary", icon: StarIcon3.StarIcon }),
+    children: metroImportDefault(Badge.Badge, { type: { text }, variant: "primary", icon: StarIcon3.StarIcon }),
   };
-  items[3] = React5(timestampProducer, obj6);
+  items[3] = metroImportDefault(timestampProducer, obj6);
   const obj8 = { style: tmp.narrow, children: null };
   const obj5 = { text };
   const obj7 = { type: { text }, variant: "primary", icon: StarIcon3.StarIcon };
-  obj8.children = React5(Badge.Badge, {
+  obj8.children = metroImportDefault(Badge.Badge, {
     type: { text },
     variant: "rarity-epic",
     icon: ExperimentalEpicIcon.ExperimentalEpicIcon,
   });
-  items[4] = React5(timestampProducer, obj8);
+  items[4] = metroImportDefault(timestampProducer, obj8);
   obj2.children = items;
-  obj.children = React6(Stack_Stack.Stack, obj2);
-  return React5(Card.Card, obj);
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return metroImportDefault(Card.Card, obj);
 }
 function ComparisonRow(arg0) {
   ({ label, legacy, mana } = arg0);
   const tmp = closure_9();
   const obj = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_12, children: null };
   items = [
-    React5(Text_Text.Text, { variant: "text-sm/normal", style: tmp.comparisonLabel, children: label }),
-    React5(timestampProducer, { style: tmp.comparisonCell, children: legacy }),
-    React5(timestampProducer, { style: tmp.comparisonCell, children: mana }),
+    metroImportDefault(Text_Text.Text, { variant: "body-sm/normal", style: tmp.comparisonLabel, children: label }),
+    metroImportDefault(timestampProducer, { style: tmp.comparisonCell, children: legacy }),
+    metroImportDefault(timestampProducer, { style: tmp.comparisonCell, children: mana }),
   ];
   obj.children = items;
-  return React6(Stack_Stack.Stack, obj);
+  return React5(Stack_Stack.Stack, obj);
 }
 function LegacyComparison() {
   const tmp = closure_9();
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_12, children: null };
   items = [
-    React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Legacy vs. Mana" }),
-    React5(Text_Text.Text, {
-      variant: "text-sm/normal",
+    metroImportDefault(Text_Text.Heading, { variant: "body-lg/semibold", children: "Legacy vs. Mana" }),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-sm/normal",
       color: "text-subtle",
       children:
         "Legacy defaults on the left, the closest Mana Badge on the right. A bare type renders the grey default, so brand needs an explicit variant.",
@@ -229,93 +229,109 @@ function LegacyComparison() {
   ];
   const obj3 = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_12, children: null };
   const items1 = [
-    React5(timestampProducer, { style: tmp.comparisonLabel }),
-    React5(timestampProducer, {
+    metroImportDefault(timestampProducer, { style: tmp.comparisonLabel }),
+    metroImportDefault(timestampProducer, {
       style: tmp.comparisonCell,
-      children: React5(Text_Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: "Legacy" }),
+      children: metroImportDefault(Text_Text.Text, {
+        variant: "body-xs/semibold",
+        color: "text-subtle",
+        children: "Legacy",
+      }),
     }),
   ];
   const obj4 = { style: tmp.comparisonLabel };
   const obj5 = {
     style: tmp.comparisonCell,
-    children: React5(Text_Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: "Legacy" }),
+    children: metroImportDefault(Text_Text.Text, {
+      variant: "body-xs/semibold",
+      color: "text-subtle",
+      children: "Legacy",
+    }),
   };
-  items1[2] = React5(timestampProducer, {
+  items1[2] = metroImportDefault(timestampProducer, {
     style: tmp.comparisonCell,
-    children: React5(Text_Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: "Mana" }),
+    children: metroImportDefault(Text_Text.Text, {
+      variant: "body-xs/semibold",
+      color: "text-subtle",
+      children: "Mana",
+    }),
   });
   obj3.children = items1;
-  items[2] = React6(Stack_Stack.Stack, obj3);
+  items[2] = React5(Stack_Stack.Stack, obj3);
   const obj6 = {
     style: tmp.comparisonCell,
-    children: React5(Text_Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: "Mana" }),
+    children: metroImportDefault(Text_Text.Text, {
+      variant: "body-xs/semibold",
+      color: "text-subtle",
+      children: "Mana",
+    }),
   };
-  items[3] = React5(ComparisonRow, {
+  items[3] = metroImportDefault(ComparisonRow, {
     label: "TextBadge vs. default",
-    legacy: React5(native.TextBadge, { text: "New" }),
-    mana: React5(Badge.Badge, { type: { text: "New" } }),
+    legacy: metroImportDefault(native.TextBadge, { text: "New" }),
+    mana: metroImportDefault(Badge.Badge, { type: { text: "New" } }),
   });
   const obj7 = {
     label: "TextBadge vs. default",
-    legacy: React5(native.TextBadge, { text: "New" }),
-    mana: React5(Badge.Badge, { type: { text: "New" } }),
+    legacy: metroImportDefault(native.TextBadge, { text: "New" }),
+    mana: metroImportDefault(Badge.Badge, { type: { text: "New" } }),
   };
-  items[4] = React5(ComparisonRow, {
+  items[4] = metroImportDefault(ComparisonRow, {
     label: "NewTag vs. new",
-    legacy: React5(native.NewTag, {}),
-    mana: React5(Badge.Badge, { type: "new" }),
+    legacy: metroImportDefault(native.NewTag, {}),
+    mana: metroImportDefault(Badge.Badge, { type: "new" }),
   });
   const obj8 = {
     label: "NewTag vs. new",
-    legacy: React5(native.NewTag, {}),
-    mana: React5(Badge.Badge, { type: "new" }),
+    legacy: metroImportDefault(native.NewTag, {}),
+    mana: metroImportDefault(Badge.Badge, { type: "new" }),
   };
-  items[5] = React5(ComparisonRow, {
+  items[5] = metroImportDefault(ComparisonRow, {
     label: "NewTag vs. new, brand",
-    legacy: React5(native.NewTag, {}),
-    mana: React5(Badge.Badge, { type: "new", variant: "primary" }),
+    legacy: metroImportDefault(native.NewTag, {}),
+    mana: metroImportDefault(Badge.Badge, { type: "new", variant: "primary" }),
   });
   const obj9 = {
     label: "NewTag vs. new, brand",
-    legacy: React5(native.NewTag, {}),
-    mana: React5(Badge.Badge, { type: "new", variant: "primary" }),
+    legacy: metroImportDefault(native.NewTag, {}),
+    mana: metroImportDefault(Badge.Badge, { type: "new", variant: "primary" }),
   };
-  items[6] = React5(ComparisonRow, {
+  items[6] = metroImportDefault(ComparisonRow, {
     label: "BetaTag vs. beta",
-    legacy: React5(native.BetaTag, {}),
-    mana: React5(Badge.Badge, { type: "beta" }),
+    legacy: metroImportDefault(native.BetaTag, {}),
+    mana: metroImportDefault(Badge.Badge, { type: "beta" }),
   });
   const obj10 = {
     label: "BetaTag vs. beta",
-    legacy: React5(native.BetaTag, {}),
-    mana: React5(Badge.Badge, { type: "beta" }),
+    legacy: metroImportDefault(native.BetaTag, {}),
+    mana: metroImportDefault(Badge.Badge, { type: "beta" }),
   };
-  items[7] = React5(ComparisonRow, {
+  items[7] = metroImportDefault(ComparisonRow, {
     label: "BetaTag vs. beta, brand",
-    legacy: React5(native.BetaTag, {}),
-    mana: React5(Badge.Badge, { type: "beta", variant: "primary" }),
+    legacy: metroImportDefault(native.BetaTag, {}),
+    mana: metroImportDefault(Badge.Badge, { type: "beta", variant: "primary" }),
   });
   obj2.children = items;
-  obj.children = React6(Stack_Stack.Stack, obj2);
-  return React5(Card.Card, obj);
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return metroImportDefault(Card.Card, obj);
 }
 function LayoutCase(arg0) {
   ({ title, children } = arg0);
   const obj = { spacing: nativeDefault.space.PX_4, children: null };
-  items = [React5(Text_Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: title })];
+  items = [metroImportDefault(Text_Text.Text, { variant: "body-xs/semibold", color: "text-subtle", children: title })];
   const tmp = closure_9();
-  items[1] = React5(timestampProducer, { style: closure_9().layoutCase, children });
+  items[1] = metroImportDefault(timestampProducer, { style: closure_9().layoutCase, children });
   obj.children = items;
-  return React6(Stack_Stack.Stack, obj);
+  return React5(Stack_Stack.Stack, obj);
 }
 function ParentLayouts() {
   const tmp = closure_9();
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_12, children: null };
   items = [
-    React5(Text_Text.Heading, { variant: "text-lg/semibold", children: "Parent layouts" }),
-    React5(Text_Text.Text, {
-      variant: "text-sm/normal",
+    metroImportDefault(Text_Text.Heading, { variant: "body-lg/semibold", children: "Parent layouts" }),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-sm/normal",
       color: "text-subtle",
       children:
         "Legacy and Mana badges in the same parents. Both follow the parent's alignment; use parent/container layout to position Mana badges.",
@@ -328,79 +344,88 @@ function ParentLayouts() {
   const obj3 = { title: "Row next to text (TextBadge, then Mana)", children: null };
   const obj4 = { style: tmp.inlineRow, children: null };
   const items1 = [
-    React5(Text_Text.Text, { variant: "text-md/semibold", children: "Channel name" }),
-    React5(native.TextBadge, { text: "New", style: tmp.inlineBadge }),
+    metroImportDefault(Text_Text.Text, { variant: "body-md/semibold", children: "Channel name" }),
+    metroImportDefault(native.TextBadge, { text: "New", style: tmp.inlineBadge }),
   ];
   obj4.children = items1;
-  const items2 = [React6(timestampProducer, obj4)];
+  const items2 = [React5(timestampProducer, obj4)];
   const obj6 = { style: tmp.inlineRow, children: null };
   const items3 = [
-    React5(Text_Text.Text, { variant: "text-md/semibold", children: "Channel name" }),
-    React5(timestampProducer, { style: tmp.inlineBadge, children: React5(Badge.Badge, { type: { text: "New" } }) }),
+    metroImportDefault(Text_Text.Text, { variant: "body-md/semibold", children: "Channel name" }),
+    metroImportDefault(timestampProducer, {
+      style: tmp.inlineBadge,
+      children: metroImportDefault(Badge.Badge, { type: { text: "New" } }),
+    }),
   ];
   obj6.children = items3;
-  items2[1] = React6(timestampProducer, obj6);
+  items2[1] = React5(timestampProducer, obj6);
   obj3.children = items2;
-  items[2] = React6(LayoutCase, obj3);
+  items[2] = React5(LayoutCase, obj3);
   const obj8 = { title: "Row next to text (BetaTag, then Mana brand)", children: null };
   const obj9 = { style: tmp.inlineRow, children: null };
   const items4 = [
-    React5(Text_Text.Text, { variant: "text-md/semibold", children: "Feature name" }),
-    React5(native.BetaTag, {}),
+    metroImportDefault(Text_Text.Text, { variant: "body-md/semibold", children: "Feature name" }),
+    metroImportDefault(native.BetaTag, {}),
   ];
   obj9.children = items4;
-  const items5 = [React6(timestampProducer, obj9)];
+  const items5 = [React5(timestampProducer, obj9)];
   const obj10 = { style: tmp.inlineRow, children: null };
-  const items6 = [React5(Text_Text.Text, { variant: "text-md/semibold", children: "Feature name" })];
+  const items6 = [metroImportDefault(Text_Text.Text, { variant: "body-md/semibold", children: "Feature name" })];
   const obj5 = { text: "New", style: tmp.inlineBadge };
-  const obj7 = { style: tmp.inlineBadge, children: React5(Badge.Badge, { type: { text: "New" } }) };
-  items6[1] = React5(timestampProducer, {
+  const obj7 = { style: tmp.inlineBadge, children: metroImportDefault(Badge.Badge, { type: { text: "New" } }) };
+  items6[1] = metroImportDefault(timestampProducer, {
     style: tmp.inlineBadge,
-    children: React5(Badge.Badge, { type: "beta", variant: "primary" }),
+    children: metroImportDefault(Badge.Badge, { type: "beta", variant: "primary" }),
   });
   obj10.children = items6;
-  items5[1] = React6(timestampProducer, obj10);
+  items5[1] = React5(timestampProducer, obj10);
   obj8.children = items5;
-  items[3] = React6(LayoutCase, obj8);
+  items[3] = React5(LayoutCase, obj8);
   const obj12 = { title: "Column, default alignment (TextBadge, then Mana)", children: null };
-  const items7 = [React5(native.TextBadge, { text: "New" }), React5(Badge.Badge, { type: { text: "New" } })];
+  const items7 = [
+    metroImportDefault(native.TextBadge, { text: "New" }),
+    metroImportDefault(Badge.Badge, { type: { text: "New" } }),
+  ];
   obj12.children = items7;
-  items[4] = React6(LayoutCase, obj12);
+  items[4] = React5(LayoutCase, obj12);
   const obj13 = { title: "Column with alignSelf: 'flex-start' (TextBadge, then Mana)", children: null };
-  const items8 = [React5(native.TextBadge, { text: "New", style: tmp.selfStart })];
-  const obj11 = { style: tmp.inlineBadge, children: React5(Badge.Badge, { type: "beta", variant: "primary" }) };
+  const items8 = [metroImportDefault(native.TextBadge, { text: "New", style: tmp.selfStart })];
+  const obj11 = {
+    style: tmp.inlineBadge,
+    children: metroImportDefault(Badge.Badge, { type: "beta", variant: "primary" }),
+  };
   const obj14 = { text: "New", style: tmp.selfStart };
-  items8[1] = React5(timestampProducer, {
+  items8[1] = metroImportDefault(timestampProducer, {
     style: tmp.selfStartParent,
-    children: React5(Badge.Badge, { type: { text: "New" } }),
+    children: metroImportDefault(Badge.Badge, { type: { text: "New" } }),
   });
   obj13.children = items8;
-  items[5] = React6(LayoutCase, obj13);
+  items[5] = React5(LayoutCase, obj13);
   const obj16 = { title: "Trailing edge of a list row (TextBadge, then Mana)", children: null };
   const obj17 = { style: tmp.trailingRow, children: null };
   const items9 = [
-    React5(Text_Text.Text, { variant: "text-md/normal", children: "Notifications" }),
-    React5(native.TextBadge, { text: "New" }),
+    metroImportDefault(Text_Text.Text, { variant: "body-md/normal", children: "Notifications" }),
+    metroImportDefault(native.TextBadge, { text: "New" }),
   ];
   obj17.children = items9;
-  const items10 = [React6(timestampProducer, obj17)];
+  const items10 = [React5(timestampProducer, obj17)];
   const obj18 = { style: tmp.trailingRow, children: null };
   const items11 = [
-    React5(Text_Text.Text, { variant: "text-md/normal", children: "Notifications" }),
-    React5(Badge.Badge, { type: { text: "New" } }),
+    metroImportDefault(Text_Text.Text, { variant: "body-md/normal", children: "Notifications" }),
+    metroImportDefault(Badge.Badge, { type: { text: "New" } }),
   ];
   obj18.children = items11;
-  items10[1] = React6(timestampProducer, obj18);
+  items10[1] = React5(timestampProducer, obj18);
   obj16.children = items10;
-  items[6] = React6(LayoutCase, obj16);
+  items[6] = React5(LayoutCase, obj16);
   obj2.children = items;
-  obj.children = React6(Stack_Stack.Stack, obj2);
-  return React5(Card.Card, obj);
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return metroImportDefault(Card.Card, obj);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
@@ -470,18 +495,18 @@ export default function UserSettingsDesignSystemBadge() {
   const obj = { contentContainerStyle: closure_9().container, children: null };
   const obj2 = { spacing: nativeDefault.space.PX_24, children: null };
   items = [
-    React5(Text_Text.Text, {
-      variant: "text-md/normal",
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-md/normal",
       color: "text-subtle",
       children: "Badges label feature status, like New or Beta. They are not for counts or notifications.",
     }),
-    React5(Playground, {}),
-    React5(VariantMatrix, {}),
-    React5(Truncation, {}),
-    React5(LegacyComparison, {}),
-    React5(ParentLayouts, {}),
+    metroImportDefault(Playground, {}),
+    metroImportDefault(VariantMatrix, {}),
+    metroImportDefault(Truncation, {}),
+    metroImportDefault(LegacyComparison, {}),
+    metroImportDefault(ParentLayouts, {}),
   ];
   obj2.children = items;
-  obj.children = React6(Stack_Stack.Stack, obj2);
-  return React5(hasOwnProperty, obj);
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return metroImportDefault(hasOwnProperty, obj);
 }

@@ -102,7 +102,7 @@ function GhostInputActionSheet() {
   };
   items[1] = timestampProducer(Stack_Stack.Stack, obj2);
   obj.children = items;
-  return React5(Sheet_BottomSheet.BottomSheet, obj);
+  return metroImportDefault(Sheet_BottomSheet.BottomSheet, obj);
 }
 function GhostInputActionSheetLeftAligned() {
   const obj = { children: null };
@@ -120,7 +120,7 @@ function GhostInputActionSheetLeftAligned() {
   };
   items[1] = timestampProducer(Stack_Stack.Stack, obj2);
   obj.children = items;
-  return React5(Sheet_BottomSheet.BottomSheet, obj);
+  return metroImportDefault(Sheet_BottomSheet.BottomSheet, obj);
 }
 function CustomAttachmentExample() {
   [tmp2, require] = noop.useState("default");
@@ -160,7 +160,7 @@ function CustomAttachmentExample() {
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { padding: 16 },
@@ -203,13 +203,16 @@ export default function UserSettingsDesignSystemTextInput() {
   ];
   obj3.children = items;
   const items1 = [
-    React5(Sample, obj3),
+    metroImportDefault(Sample, obj3),
     timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Sizing" }),
     timestampProducer(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       children:
         "All inputs except TextArea accept a size prop, either sm, md, or lg. By default, inputs will use the large variant.",
     }),
+    ,
+    ,
+    ,
     ,
     ,
     ,
@@ -254,10 +257,10 @@ export default function UserSettingsDesignSystemTextInput() {
     timestampProducer(TextInput.TextInput, { label: "Large (default)" }),
   ];
   obj4.children = items2;
-  items1[3] = React5(Sample, obj4);
+  items1[3] = metroImportDefault(Sample, obj4);
   items1[4] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Attachments" });
   items1[5] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children:
       "Inputs can have either text and icon attachments, either on the leading or trailing edge. If both text and icon are given for a single side, the icon will take precedence.",
   });
@@ -278,28 +281,28 @@ export default function UserSettingsDesignSystemTextInput() {
     trailingIcon: AtIcon.AtIcon,
   });
   obj5.children = items3;
-  items1[6] = React5(Sample, obj5);
+  items1[6] = metroImportDefault(Sample, obj5);
   items1[7] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children:
       "Text attachments should be kept as short as possible to preserve space for the user to see their input value while editing.",
   });
   items1[8] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Pressable Attachments" });
   items1[9] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children:
       "Inputs do not allow custom nodes to be passed as leading or trailing attachments, but they can be made interactive by passing `*PressableProps` respectively. If given, the attachment will be wrapped by a Pressable and have the props passed to it.",
   });
   const obj8 = { label: "Combination", leadingText: "To:", trailingIcon: AtIcon.AtIcon };
   items1[10] = timestampProducer(Sample, { children: timestampProducer(CustomAttachmentExample, {}) });
   items1[11] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children:
       "Note that the props do not allow for changing the styling of the pressable. Styling is instead handled by the Input itself.",
   });
   items1[12] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Rounding" });
   items1[13] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children:
       "All inputs except TextArea can use the round prop to fully round out the sides. Round variants should only be used when adjacent to another round element, like an IconButton.",
   });
@@ -316,11 +319,11 @@ export default function UserSettingsDesignSystemTextInput() {
     variant: "tertiary",
   });
   obj11.children = items4;
-  obj10.children = React5(Input.Input, obj11);
+  obj10.children = metroImportDefault(Input.Input, obj11);
   items1[14] = timestampProducer(Sample, obj10);
   items1[15] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Error States" });
   items1[16] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children:
       'The status prop communicates the overall state of the input. Setting status to "error" will render a red ring around the input. Note that errorMessage will always be displayed regardless of status.',
   });
@@ -335,10 +338,10 @@ export default function UserSettingsDesignSystemTextInput() {
     }),
   ];
   obj13.children = items5;
-  items1[17] = React5(Sample, obj13);
+  items1[17] = metroImportDefault(Sample, obj13);
   items1[18] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Clearable" });
   items1[19] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children:
       "Inputs can use the clearable prop to let users immediately empty the input value with a button. The button is automatically rendered when the input contains a non-empty value. When pressed, the onClear callback is called, as well as the onChange with the new empty value.",
   });
@@ -354,54 +357,76 @@ export default function UserSettingsDesignSystemTextInput() {
     children: timestampProducer(TextField.TextField, { defaultValue: "Clear this text", clearable: true }),
   });
   items1[21] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children:
       "Certain input types automatically control the clearable prop. For example, SearchInput is always clearable. Most inputs will also replace any trailing attachment with the clear button when it is present.",
   });
-  items1[22] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Disableable" });
+  items1[22] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Revealable" });
   items1[23] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children:
-      "The disabled prop prevents users from interacting with an input in any way. The input container will be visually dimmed.",
+      "Inputs with secureTextEntry can use the revealable prop to add a button that shows or hides the value. The button replaces the trailing attachment and the clear button.",
   });
   const obj14 = {
     children: timestampProducer(TextField.TextField, { defaultValue: "Clear this text", clearable: true }),
   };
   items1[24] = timestampProducer(Sample, {
-    children: timestampProducer(TextInput.TextInput, { defaultValue: "Can't edit this value", disabled: true }),
+    children: timestampProducer(TextInput.TextInput, {
+      label: "Password",
+      secureTextEntry: true,
+      revealable: true,
+      defaultValue: "Hunter2-example!",
+    }),
   });
-  items1[25] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+  items1[25] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Disableable" });
+  items1[26] = timestampProducer(Text_Text.Text, {
+    variant: "body-md/normal",
     children:
       "The disabled prop prevents users from interacting with an input in any way. The input container will be visually dimmed.",
   });
-  items1[26] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Max Length" });
-  items1[27] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+  const obj15 = {
+    children: timestampProducer(TextInput.TextInput, {
+      label: "Password",
+      secureTextEntry: true,
+      revealable: true,
+      defaultValue: "Hunter2-example!",
+    }),
+  };
+  items1[27] = timestampProducer(Sample, {
+    children: timestampProducer(TextInput.TextInput, { defaultValue: "Can't edit this value", disabled: true }),
+  });
+  items1[28] = timestampProducer(Text_Text.Text, {
+    variant: "body-md/normal",
+    children:
+      "The disabled prop prevents users from interacting with an input in any way. The input container will be visually dimmed.",
+  });
+  items1[29] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Max Length" });
+  items1[30] = timestampProducer(Text_Text.Text, {
+    variant: "body-md/normal",
     children:
       "Inputs can specify a maxLength prop to limit how long the user's input value can be. For TextAreas, setting a maxLength will also render an indicator in the bottom corner of how much of that length the current value takes up.",
   });
-  const obj15 = {
+  const obj16 = {
     children: timestampProducer(TextInput.TextInput, { defaultValue: "Can't edit this value", disabled: true }),
   };
-  items1[28] = timestampProducer(Sample, {
+  items1[31] = timestampProducer(Sample, {
     children: timestampProducer(TextArea.TextArea, { label: "Limited length", maxLength: 124 }),
   });
-  items1[29] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+  items1[32] = timestampProducer(Text_Text.Text, {
+    variant: "body-md/normal",
     children:
       "Exceeding the maxLength will prevent the user from inputting any more text for the value until it has been shortened under the maximum length.",
   });
-  items1[30] = timestampProducer(Text_Text.Text, {
+  items1[33] = timestampProducer(Text_Text.Text, {
     variant: "heading-lg/semibold",
     children: "Ghost Inputs (Deprecated)",
   });
-  items1[31] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+  items1[34] = timestampProducer(Text_Text.Text, {
+    variant: "body-md/normal",
     children:
       "GhostInput is deprecated and should not be used in new work; prefer TextInput. It is a minimal version of TextInput with no container shape, intended for cases where a single input is the primary focus of the surrounding area.",
   });
-  const obj17 = {
+  const obj18 = {
     children: timestampProducer(components_Button_Button.Button, {
       onPress() {
         ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_12), "ghost-input-sheet");
@@ -409,12 +434,12 @@ export default function UserSettingsDesignSystemTextInput() {
       text: "Show example",
     }),
   };
-  items1[32] = timestampProducer(Sample, obj17);
-  items1[33] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+  items1[35] = timestampProducer(Sample, obj18);
+  items1[36] = timestampProducer(Text_Text.Text, {
+    variant: "body-md/normal",
     children: "GhostInputs can also appear left-aligned by setting `centered` to false.",
   });
-  const obj19 = {
+  const obj20 = {
     children: timestampProducer(components_Button_Button.Button, {
       onPress() {
         ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_13), "ghost-input-sheet-left");
@@ -422,14 +447,14 @@ export default function UserSettingsDesignSystemTextInput() {
       text: "Show left-aligned example",
     }),
   };
-  items1[34] = timestampProducer(Sample, obj19);
-  items1[35] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Split Text Input" });
-  items1[36] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+  items1[37] = timestampProducer(Sample, obj20);
+  items1[38] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Split Text Input" });
+  items1[39] = timestampProducer(Text_Text.Text, {
+    variant: "body-md/normal",
     children:
       "SplitTextInput is a special TextInput extension that is primarily used for inputs that require selecting a prefix value.",
   });
-  const obj21 = { children: null };
+  const obj22 = { children: null };
   const items6 = [
     timestampProducer(SplitTextInput.SplitTextInput, {
       label: "Small",
@@ -453,15 +478,15 @@ export default function UserSettingsDesignSystemTextInput() {
       leadingPressableProps: { accessibilityLabel: "Here" },
     }),
   ];
-  obj21.children = items6;
-  items1[37] = React5(Sample, obj21);
-  items1[38] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Data Types" });
-  items1[39] = timestampProducer(Text_Text.Text, {
-    variant: "text-md/normal",
+  obj22.children = items6;
+  items1[40] = metroImportDefault(Sample, obj22);
+  items1[41] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Data Types" });
+  items1[42] = timestampProducer(Text_Text.Text, {
+    variant: "body-md/normal",
     children:
       "Many special input types will have their own components. All inputs use a similar interface and support roughly the same set of props for styling and functionality. Examples will be added as these different types get implemented.",
   });
   obj2.children = items1;
-  obj.children = React5(Stack_Stack.Stack, obj2);
+  obj.children = metroImportDefault(Stack_Stack.Stack, obj2);
   return timestampProducer(ScrollView, obj);
 }

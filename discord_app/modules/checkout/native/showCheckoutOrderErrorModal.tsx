@@ -92,11 +92,11 @@ function SyncedLoadingAlertModal(onConfirm) {
   obj4.loading = tmp2;
   items[1] = hasOwnProperty(AlertModal.AlertActionButton, obj4);
   obj2.children = items;
-  obj.actions = React5(timestampProducer, obj2);
+  obj.actions = metroImportDefault(timestampProducer, obj2);
   return hasOwnProperty(AlertModal.AlertModal, obj);
 }
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/showCheckoutOrderErrorModal.tsx");
 
@@ -198,7 +198,7 @@ export function showCheckoutOrderErrorModal(arg0, c6) {
     ({ key, onCloseCallback } = obj);
     const merged = Object.assign(obj, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
     const merged1 = Object.assign(merged);
-    closure_0(6080).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
+    closure_0(6095).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
       dismissable: obj.dismissable,
     });
   });

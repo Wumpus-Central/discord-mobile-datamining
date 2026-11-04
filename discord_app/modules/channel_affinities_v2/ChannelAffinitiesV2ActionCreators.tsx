@@ -6,7 +6,7 @@ import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ Endpoints: hasOwnProperty, Consents: metroRequire } = Constants);
+({ Endpoints: hasOwnProperty, Consents: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2ActionCreators.tsx");
 

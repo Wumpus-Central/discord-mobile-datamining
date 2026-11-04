@@ -12,7 +12,7 @@ import useHasEnhancedRoleColors from "../hooks/useHasEnhancedRoleColors.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import _modDef11324 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef11374 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import GuildSettingsRoleConstants from "../../../guild_settings/roles/GuildSettingsRoleConstants.tsx";
 import GuildSettingsRolesStore from "../../../guild_settings/roles/GuildSettingsRolesStore.tsx";
 import EnhancedRoleColorConstants from "../constants/EnhancedRoleColorConstants.tsx";
@@ -168,11 +168,11 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef11324;
+              message.message.avatarURL = _modDef11374;
             },
           }),
         ];
-        const obj3 = { style: button.text, variant: "text-sm/normal", children: null };
+        const obj3 = { style: button.text, variant: "body-sm/normal", children: null };
         const intl = require("util").intl;
         obj3.children = intl.string(id.labelString);
         items1[1] = closure_1_9(require("Text/Text").Text, obj3);
@@ -184,10 +184,10 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   let tmp8Result = !hasEnhancedRoleColorsForRole;
   if (!hasEnhancedRoleColorsForRole) {
     const obj7 = { style: tmp3.upsellContainer, children: null };
-    const obj8 = { style: tmp3.upsellText, variant: "text-sm/semibold", children: null };
+    const obj8 = { style: tmp3.upsellText, variant: "body-sm/semibold", children: null };
     const intl3 = util.intl;
     const obj9 = { magical: null };
-    const obj10 = { gradientColors: null, variant: "text-sm/semibold", children: null };
+    const obj10 = { gradientColors: null, variant: "body-sm/semibold", children: null };
     let items1 = [, ,];
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj10.gradientColors = items1;
@@ -196,7 +196,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     obj9.magical = closure_9(Text_Text.Text, obj10);
     obj8.children = intl3.format(_modDef2699.VpEDJc, obj9);
     const items2 = [closure_9(Text_Text.Text, obj8)];
-    const obj11 = { style: tmp3.upsellText, variant: "text-sm/normal", children: null };
+    const obj11 = { style: tmp3.upsellText, variant: "body-sm/normal", children: null };
     const intl5 = util.intl;
     obj11.children = intl5.string(_modDef2699.FJZeZF);
     items2[1] = closure_9(Text_Text.Text, obj11);

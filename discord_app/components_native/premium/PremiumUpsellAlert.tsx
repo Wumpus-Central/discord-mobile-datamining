@@ -12,16 +12,16 @@ import UserSettingsActionCreatorsDefault from "../../actions/UserSettingsActionC
 import TableSwitchRow from "../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import usePremiumTrialOffer from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 import useMessageMaxLengthDefault from "../../modules/messages/useMessageMaxLength.tsx";
-import _modDef9918 from "../../../_runtime/metro/09918__.js";
-import _modDef9919 from "../../../_runtime/metro/09919__.js";
-import _modDef10139 from "../../../_runtime/metro/10139__.js";
-import _modDef10140 from "../../../_runtime/metro/10140__.js";
-import _modDef10141 from "../../../_runtime/metro/10141__.js";
-import _modDef10142 from "../../../_runtime/metro/10142__.js";
-import _modDef10143 from "../../../_runtime/metro/10143__.js";
-import _modDef10144 from "../../../_runtime/metro/10144__.js";
-import _modDef10145 from "../../../_runtime/metro/10145__.js";
-import _modDef10146 from "../../../_runtime/metro/10146__.js";
+import _modDef9936 from "../../../_runtime/metro/09936__.js";
+import _modDef9937 from "../../../_runtime/metro/09937__.js";
+import _modDef10187 from "../../../_runtime/metro/10187__.js";
+import _modDef10188 from "../../../_runtime/metro/10188__.js";
+import _modDef10189 from "../../../_runtime/metro/10189__.js";
+import _modDef10190 from "../../../_runtime/metro/10190__.js";
+import _modDef10191 from "../../../_runtime/metro/10191__.js";
+import _modDef10192 from "../../../_runtime/metro/10192__.js";
+import _modDef10193 from "../../../_runtime/metro/10193__.js";
+import _modDef10194 from "../../../_runtime/metro/10194__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import UnsyncedUserSettingsStore from "../../modules/user_settings/UnsyncedUserSettingsStore.tsx";
@@ -57,7 +57,7 @@ class PremiumUpsellItem {
     items2[1] = jsx(closure_0(closure_2[13]).Text, obj7);
     obj8 = {
       style: legacyClassComponentStyles.premiumUpsellDescription,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       children: description,
     };
     items2[2] = jsx(closure_0(closure_2[13]).Text, obj8);
@@ -102,7 +102,7 @@ function GlobalEmojiUpsell(arg0) {
     }
   }
   const obj5 = { alertWidth, upsellItem: null };
-  const obj6 = { image: _modDef9918, title: null, description: null };
+  const obj6 = { image: _modDef9936, title: null, description: null };
   const intl4 = util.intl;
   obj6.title = intl4.string(util.t.UNtcBV);
   obj6.description = formatResult1;
@@ -111,7 +111,7 @@ function GlobalEmojiUpsell(arg0) {
 }
 function AnimatedEmojiUpsell(alertWidth) {
   const obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  const obj2 = { image: _modDef9919, title: null, description: null };
+  const obj2 = { image: _modDef9937, title: null, description: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.F6rmyq);
   const intl2 = util.intl;
@@ -137,9 +137,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef10139;
+    let tmp4Result = _modDef10187;
   } else {
-    tmp4Result = _modDef10140;
+    tmp4Result = _modDef10188;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -155,7 +155,7 @@ function CustomProfilesUpsell(alertWidth) {
     imageStyle: createStyles2.useLegacyClassComponentStyles(closure_16).customProfileUpsellImage,
     upsellItem: null,
   };
-  const obj3 = { image: _modDef10141, title: null, description: null };
+  const obj3 = { image: _modDef10189, title: null, description: null };
   const intl = util.intl;
   obj3.title = intl.string(util.t.rTY76D);
   const intl2 = util.intl;
@@ -197,9 +197,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp5 = useThemeDefault();
   const tmp6 = useMessageMaxLengthDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef10142;
+    let tmp4Result = _modDef10190;
   } else {
-    tmp4Result = _modDef10143;
+    tmp4Result = _modDef10191;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -218,9 +218,9 @@ function GuildCapUpsell(alertWidth) {
   };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef10144;
+    let tmp4Result = _modDef10192;
   } else {
-    tmp4Result = _modDef10145;
+    tmp4Result = _modDef10193;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -327,7 +327,7 @@ class PremiumUpsellAlert {
     obj25.confirmColor = initialUpsellKey(closure_2[41]).ButtonColors.GREEN;
     obj25.confirmText = getNitroText;
     obj25.renderConfirmIcon = function renderConfirmIcon() {
-      const obj = { source: _modDef10146, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
+      const obj = { source: _modDef10194, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
       if (constants2.GLOBAL_EMOJI !== initialUpsellKey) {
         if (constants2.ANIMATED_EMOJI !== initialUpsellKey) {
           if (constants2.CUSTOM_PROFILES !== initialUpsellKey) {
@@ -439,7 +439,7 @@ class PremiumUpsellAlert {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, UpsellTypes: closure_9 } = Constants);
-const getIcons = fn(10111).getIcons;
+const getIcons = fn(10159).getIcons;
 const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_11, PremiumTypes: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -481,7 +481,7 @@ UpsellItem.prototype["render"] = function render() {
   const items1 = [state(FastImageDefault, { style: tmp.upsellImage, source: image, resizeMode: "contain" }), ,];
   const obj3 = {
     style: tmp.upsellTitle,
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -490,7 +490,7 @@ UpsellItem.prototype["render"] = function render() {
   }
   obj3.children = passiveTitle;
   items1[1] = state(Text_Text.Text, obj3);
-  items1[2] = state(Text_Text.Text, { style: tmp.upsellDescription, variant: "text-sm/medium", children: description });
+  items1[2] = state(Text_Text.Text, { style: tmp.upsellDescription, variant: "body-sm/medium", children: description });
   obj.children = items1;
   return gesture(View, obj);
 };

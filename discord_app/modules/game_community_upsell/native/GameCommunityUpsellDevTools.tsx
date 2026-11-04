@@ -162,7 +162,7 @@ function MultiGuildDevTools() {
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
@@ -180,5 +180,5 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GameCommunityUpsellDevTools.tsx");
 
 export default function GameCommunityUpsellDevTools() {
-  return React5(MultiGuildDevTools, {});
+  return metroImportDefault(MultiGuildDevTools, {});
 }

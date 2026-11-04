@@ -158,7 +158,7 @@ export function TwoWayLinkPreConnect(platformType) {
       children: title,
     }),
     closure_8(platformType(onNext[17]).Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-default",
       style: twoWayLinkStyles.body,
       children: body,
@@ -166,7 +166,7 @@ export function TwoWayLinkPreConnect(platformType) {
   ];
   let tmp12Result = null != redirectDestination;
   if (tmp12Result) {
-    const obj7 = { style: tmp.redirect, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj7 = { style: tmp.redirect, variant: "body-sm/medium", color: "text-default", children: null };
     const intl = tmp2(tmp3[18]).intl;
     const obj8 = { redirectUrl: redirectDestination };
     obj7.children = intl.format(tmp2(tmp3[18]).t.XhlYYn, obj8);

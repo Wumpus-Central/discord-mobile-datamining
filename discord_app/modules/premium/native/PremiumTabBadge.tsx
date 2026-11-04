@@ -11,7 +11,7 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import shared from "../../../design/shared.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
@@ -21,7 +21,7 @@ import useIsEligibleSenderForReferralProgram from "../referral_program/hooks/use
 import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePromotionMarketingComponent from "../hooks/usePromotionMarketingComponent.tsx";
-import _modDef17027 from "../../../../_runtime/metro/17027__.js";
+import _modDef17119 from "../../../../_runtime/metro/17119__.js";
 import PremiumTabBadgeCopy from "../promotions/PremiumTabBadgeCopy.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -42,8 +42,8 @@ function ThemedTabBadge(children) {
   const items1 = [,];
   ({ uppercase: arr2[0], text: arr2[1] } = tmp);
   obj3.style = items1;
-  obj2.children = React6(Text_Text.Text, obj3);
-  return React6(View, obj2);
+  obj2.children = React5(Text_Text.Text, obj3);
+  return React5(View, obj2);
 }
 function OfferBadge(componentId) {
   componentId = componentId.componentId;
@@ -63,25 +63,25 @@ function OfferBadge(componentId) {
   tmp4(obj, { disableTrack: null == componentId });
   if (acked) {
     const obj4 = { style: tmp.acked, children: null };
-    const obj5 = { source: _modDef17027, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
-    items = [React6(native.Icon, obj5)];
+    const obj5 = { source: _modDef17119, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+    items = [React5(native.Icon, obj5)];
     const obj6 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
     const items1 = [,];
     ({ uppercase: arr2[0], text: arr2[1] } = tmp);
     obj6.style = items1;
     obj6.children = ackedBadgeCopy;
-    items[1] = React6(Text_Text.Text, obj6);
+    items[1] = React5(Text_Text.Text, obj6);
     obj4.children = items;
-    let tmp9 = React7(View, obj4);
+    let tmp9 = React6(View, obj4);
   } else {
     const obj7 = { label: badgeCopy };
-    tmp9 = React6(ThemedTabBadge, obj7);
+    tmp9 = React5(ThemedTabBadge, obj7);
   }
   return tmp9;
 }
 const View = fn(17).View;
 let closure_6 = fn(1387).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -238,7 +238,7 @@ export default function PremiumTabBadge() {
           };
           ({ badgeCopy: obj25.badgeCopy, acknowledgedBadgeCopy: obj25.ackedBadgeCopy } = premiumTabBadgeCopy);
           ({ id: obj25.componentId, promotionId: obj25.promotionId } = promotionMarketingComponent);
-          return React6(OfferBadge, obj3);
+          return React5(OfferBadge, obj3);
         }
       }
       if (tmp14 === dismissible_content.DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE) {
@@ -256,7 +256,7 @@ export default function PremiumTabBadge() {
           const obj6 = { label: null };
           const intl3 = util.intl;
           obj6.label = intl3.string(util.t.RDE0Sc);
-          return React6(ThemedTabBadge, obj6);
+          return React5(ThemedTabBadge, obj6);
         }
       }
       if (tmp7) {
@@ -278,9 +278,9 @@ export default function PremiumTabBadge() {
         obj8.style = items3;
         const intl8 = util.intl;
         obj8.children = intl8.string(util.t.y2b7CA);
-        tmp = React6(Text_Text.Text, obj8);
+        tmp = React5(Text_Text.Text, obj8);
         obj7.children = tmp;
-        let tmp47Result = React6(tmp52, obj7);
+        let tmp47Result = React5(tmp52, obj7);
         tmp2Result17 = PlatformUtils;
       } else if (null != premiumTrialOffer) {
         let hasAcknowledged;
@@ -292,7 +292,7 @@ export default function PremiumTabBadge() {
         obj9.badgeCopy = intl6.string(util.t.OS9KPu);
         const intl7 = util.intl;
         obj9.ackedBadgeCopy = intl7.string(util.t.OS9KPu);
-        tmp47Result = React6(OfferBadge, obj9);
+        tmp47Result = React5(OfferBadge, obj9);
       } else if (null != premiumDiscountOffer) {
         if (premiumDiscountOffer.hasAcknowledged()) {
           const obj10 = { style: null, children: null };
@@ -300,21 +300,21 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
           obj10.style = items4;
           const obj11 = {
-            source: _modDef17027,
+            source: _modDef17119,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: tmp.icon.color,
             style: tmp.icon,
           };
-          const items5 = [React6(native.Icon, obj11)];
+          const items5 = [React5(native.Icon, obj11)];
           const obj12 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
           const items6 = [,];
           ({ uppercase: arr8[0], text: arr8[1] } = tmp);
           obj12.style = items6;
           const intl5 = util.intl;
           obj12.children = intl5.string(util.t["/DTtr6"]);
-          items5[1] = React6(Text_Text.Text, obj12);
+          items5[1] = React5(Text_Text.Text, obj12);
           obj10.children = items5;
-          let tmp41 = React7(View, obj10);
+          let tmp41 = React6(View, obj10);
         } else {
           const obj13 = {
             style: tmp.premiumDiscountBadge,
@@ -329,8 +329,8 @@ export default function PremiumTabBadge() {
           obj14.style = items7;
           const intl4 = util.intl;
           obj14.children = intl4.string(util.t["/DTtr6"]);
-          obj13.children = React6(Text_Text.Text, obj14);
-          tmp41 = React6(LinearGradientDefault, obj13);
+          obj13.children = React5(Text_Text.Text, obj14);
+          tmp41 = React5(LinearGradientDefault, obj13);
         }
       } else {
         tmp47Result = null;
@@ -352,8 +352,8 @@ export default function PremiumTabBadge() {
           items8[1] = text1;
           obj16.style = items8;
           obj16.children = stringResult;
-          obj15.children = React6(Text_Text.Text, obj16);
-          tmp47Result = React6(tmp34, obj15);
+          obj15.children = React5(Text_Text.Text, obj16);
+          tmp47Result = React5(tmp34, obj15);
           tmp2Result18 = PlatformUtils;
         }
       }

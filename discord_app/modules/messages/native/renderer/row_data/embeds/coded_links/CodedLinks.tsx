@@ -2,7 +2,6 @@
 import GlobalUtils from "../../../../../../../utils/GlobalUtils.tsx";
 import CodedLink from "../../../../../../coded_links/CodedLink.tsx";
 import ApplicationCodedLink from "../../../../../../coded_links/ApplicationCodedLink.tsx";
-import createSocialLayerStorefrontProductDetailsEmbed from "../../../../../../slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx";
 import storefrontCodedLink from "../../../../../../slayer_storefront/storefrontCodedLink.tsx";
 import ExperimentEmbed from "ExperimentEmbed.tsx";
 import createAppMessageEmbed from "../../../../../../applications/message_embed/native/createAppMessageEmbed.tsx";
@@ -13,6 +12,8 @@ import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed.tsx";
 import GuildTemplateEmbed from "GuildTemplateEmbed.tsx";
 import BuildOverrideEmbed from "BuildOverrideEmbed.tsx";
 import VoiceChannelLinkEmbed from "VoiceChannelLinkEmbed.tsx";
+import createSocialLayerStorefrontMultiSkuEmbed from "../../../../../../slayer_storefront/native/createSocialLayerStorefrontMultiSkuEmbed.tsx";
+import createSocialLayerStorefrontProductDetailsEmbed from "../../../../../../slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx";
 import QuestEmbed from "../../../../../../quests/native/QuestEmbed.native.tsx";
 import GameOrganizationInviteEmbed from "GameOrganizationInviteEmbed.tsx";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__.js";
@@ -64,9 +65,9 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
                     return createAppMessageEmbed.createAppMessageEmbed(obj4);
                   }
                 }
-                const tmpResult21 = createAppMessageEmbed;
+                const tmpResult22 = createAppMessageEmbed;
               }
-              const tmpResult20 = ApplicationCodedLink;
+              const tmpResult21 = ApplicationCodedLink;
             } else {
               return null;
             }
@@ -102,7 +103,7 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
           let buildOverrideEmbed = null;
           if (isStaffResult) {
             buildOverrideEmbed = BuildOverrideEmbed.createBuildOverrideEmbed(code, theme);
-            const tmpResult27 = BuildOverrideEmbed;
+            const tmpResult28 = BuildOverrideEmbed;
           }
           return buildOverrideEmbed;
         } else if (CodedLink.CodedLinkType.EVENT === type) {
@@ -114,9 +115,9 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
           return EmbeddedActivityInviteEmbed.createEmbeddedActivityInviteEmbed(obj5);
         } else if (CodedLink.CodedLinkType.EXPERIMENT === type) {
           let experimentEmbed = null;
-          if (tmpResult31.canSeeExperimentEmbeds()) {
+          if (tmpResult32.canSeeExperimentEmbeds()) {
             experimentEmbed = ExperimentEmbed.createExperimentEmbed(url, theme);
-            const tmpResult32 = ExperimentEmbed;
+            const tmpResult33 = ExperimentEmbed;
           }
           return experimentEmbed;
         } else {
@@ -134,14 +135,14 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
                           if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
                             if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                               let gameOrganizationInviteEmbed = null;
-                              if (tmpResult34.getLinkedGameOrgInvitesEnabled("mobile_coded_link_embed")) {
+                              if (tmpResult35.getLinkedGameOrgInvitesEnabled("mobile_coded_link_embed")) {
                                 let id;
                                 if (currentUser != null) {
                                   id = currentUser.id;
                                 }
                                 gameOrganizationInviteEmbed =
                                   GameOrganizationInviteEmbed.createGameOrganizationInviteEmbed(code, theme, id);
-                                const tmpResult35 = GameOrganizationInviteEmbed;
+                                const tmpResult36 = GameOrganizationInviteEmbed;
                               }
                               return gameOrganizationInviteEmbed;
                             } else {
@@ -156,23 +157,33 @@ export function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
                 }
               }
               const result = storefrontCodedLink.parseStorefrontCodedLink(code);
-              if (null != result) {
-                if (result.skuIds.length <= 1) {
-                  const obj7 = { skuId: _slicedToArray(result.skuIds, 1)[0], guildOrApplication: null, theme: null };
-                  if (type === CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
-                    const obj8 = { type: "application", applicationId: result.scopeId };
-                    let obj9 = obj8;
-                  } else {
-                    obj9 = { type: "guild", guildId: result.scopeId };
-                  }
-                  obj7.guildOrApplication = obj9;
-                  obj7.theme = theme;
-                  return createSocialLayerStorefrontProductDetailsEmbed.createSocialLayerStorefrontProductDetailsEmbed(
-                    obj7,
-                  );
+              if (null == result) {
+                return null;
+              } else if (result.skuIds.length > 1) {
+                const obj7 = { skuIds: result.skuIds, guildOrApplication: null };
+                if (type === CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+                  const obj8 = { type: "application", applicationId: result.scopeId };
+                  let obj9 = obj8;
+                } else {
+                  obj9 = { type: "guild", guildId: result.scopeId };
                 }
+                obj7.guildOrApplication = obj9;
+                return createSocialLayerStorefrontMultiSkuEmbed.createSocialLayerStorefrontMultiSkuEmbed(obj7);
+              } else {
+                const obj10 = { skuId: _slicedToArray(result.skuIds, 1)[0], guildOrApplication: null, theme: null };
+                if (type === CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+                  const obj11 = { type: "application", applicationId: result.scopeId };
+                  let obj12 = obj11;
+                } else {
+                  obj12 = { type: "guild", guildId: result.scopeId };
+                }
+                obj10.guildOrApplication = obj12;
+                obj10.theme = theme;
+                return createSocialLayerStorefrontProductDetailsEmbed.createSocialLayerStorefrontProductDetailsEmbed(
+                  obj10,
+                );
               }
-              return null;
+              const tmpResult38 = storefrontCodedLink;
             }
           }
           return null;

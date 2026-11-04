@@ -14,7 +14,7 @@ require = fn;
 function PerkText(children) {
   return jsx(Text_Text.Text, {
     color: "text-overlay-light",
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     children: children.powerup.title,
   });
 }
@@ -55,7 +55,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
     }
     if (0 !== num) {
       let obj = { style: tmp.container, children: null };
-      const obj2 = { style: tmp.text, variant: "text-sm/semibold", children: null };
+      const obj2 = { style: tmp.text, variant: "body-sm/semibold", children: null };
       const intl = guild(1113).intl;
       let str2 = "";
       if (null != arr) {
@@ -80,7 +80,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       }
       const obj7 = { perks: str2 };
       obj2.children = intl.format(_modDef2699["7lwpzR"], obj7);
-      obj.children = jsx(guild(5747).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+      obj.children = jsx(guild(5761).Text, { style: tmp.text, variant: "body-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

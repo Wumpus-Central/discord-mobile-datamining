@@ -44,8 +44,8 @@ export default function _default() {
   _require = tmp;
   const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  analyticsLocations = analyticsLocations(7446)(analyticsLocations(7471).EMPTY_STATE).analyticsLocations;
-  const tmp3 = analyticsLocations(7446);
+  analyticsLocations = analyticsLocations(7462)(analyticsLocations(7487).EMPTY_STATE).analyticsLocations;
+  const tmp3 = analyticsLocations(7462);
   items = [StickersStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
@@ -73,7 +73,7 @@ export default function _default() {
   const intl = require("util").intl;
   obj4.children = intl.string(require("util").t.HEm04J);
   const items2 = [closure_11(require("Text/Text").Text, obj4), , ,];
-  const obj5 = { style: tmp.blurb, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.blurb, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
   obj5.children = intl2.string(require("util").t.FnNud4);
   items2[1] = closure_11(require("Text/Text").Text, obj5);
@@ -94,7 +94,7 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(7106).PressableOpacity, obj, id);
+      return closure_1_11(sticker(7121).PressableOpacity, obj, id);
     }),
   });
   const obj7 = { style: tmp.premiumButton, children: null };
@@ -116,16 +116,16 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(7106).PressableOpacity, obj, id);
+      return closure_1_11(sticker(7121).PressableOpacity, obj, id);
     }),
   };
-  obj9.source = analyticsLocations(10146);
+  obj9.source = analyticsLocations(10194);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(5837), obj9);
+  obj8.icon = closure_11(analyticsLocations(5851), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(10421)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(10469)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

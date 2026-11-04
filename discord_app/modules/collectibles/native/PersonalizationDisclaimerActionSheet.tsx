@@ -14,7 +14,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -31,7 +31,7 @@ export default function PersonalizationDisclaimerActionSheet() {
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
   const obj2 = {
-    variant: "heading-md/medium",
+    variant: "heading-sm/medium",
     color: "mobile-text-heading-primary",
     accessibilityRole: "header",
     style: tmp.header,

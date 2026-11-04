@@ -1,12 +1,13 @@
 // discord_app/modules/checkpoint/hooks/useTraitPickerSelection.tsx
 import CheckpointCharacterTraits from "../CheckpointCharacterTraits.tsx";
 import CheckpointCustomizationUtils from "../CheckpointCustomizationUtils.tsx";
+import Tracking from "../tracking/Tracking.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import CheckpointStore from "../CheckpointStore.tsx";
 
 require = fn;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/checkpoint/hooks/useTraitPickerSelection.tsx");
+let result = size.fileFinishedImporting("modules/checkpoint/hooks/useTraitPickerSelection.tsx");
 
 export function useTraitPickerSelection(customizationOption) {
   customizationOption = customizationOption.customizationOption;
@@ -44,9 +45,10 @@ export function useTraitPickerSelection(customizationOption) {
   });
   selectedOptionId = savedOptionId.selectedOptionId;
   const items1 = [onSelectOption, selectedOptionId];
-  const onSelectOption1 = noop.useCallback((arg0, arg1) => {
-    if (arg1 !== selectedOptionId) {
-      onSelectOption(arg0, arg1);
+  const onSelectOption1 = noop.useCallback((trait_type, option_id) => {
+    if (option_id !== selectedOptionId) {
+      const result = Tracking.trackCheckpoint2026CharacterChoiceSelected(trait_type, option_id);
+      onSelectOption(trait_type, option_id);
     }
   }, items1);
   if (customizationOption(onSelectOption[2]).CheckpointCustomizationOption.OUTFIT === customizationOption) {

@@ -6,7 +6,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticsPages: hasOwnProperty, InstantInviteSources: metroRequire } = Constants);
+({ AnalyticsPages: hasOwnProperty, InstantInviteSources: closure_6 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useInviteMembersCallback.tsx");
 

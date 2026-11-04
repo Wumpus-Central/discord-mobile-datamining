@@ -50,10 +50,10 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
   }
 }
 const GUILD_VOCAL_CHANNELS_KEY = fn(5071).GUILD_VOCAL_CHANNELS_KEY;
-const PermissionsConstants = fn(9147);
+const PermissionsConstants = fn(9164);
 ({
-  CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: metroRequire,
-  CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_7,
+  CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_6,
+  CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: metroImportDefault,
 } = PermissionsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");
@@ -64,7 +64,7 @@ export function useCanCreateEventInStageChannel(isGuildStageVoice) {
   const items1 = [isGuildStageVoice];
   const stateFromStores = require("initialize").useStateFromStores(
     items,
-    () => PermissionStore.can(React5, closure_0),
+    () => PermissionStore.can(metroImportDefault, closure_0),
     items1,
   );
   const obj = require("initialize");

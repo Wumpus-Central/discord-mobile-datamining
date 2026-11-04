@@ -1,7 +1,7 @@
 // discord_app/modules/share/native/ShareAttachments.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import utils_UploadUtils from "../../../utils/native/UploadUtils.tsx";
 import AttachmentPreviewDefault from "../../media/native/AttachmentPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
 let obj = { duration: 300, easing: fn(1187).STANDARD_EASING };
 const createStyles = fn(5141);

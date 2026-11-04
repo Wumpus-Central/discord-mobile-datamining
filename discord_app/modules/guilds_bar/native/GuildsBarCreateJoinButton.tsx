@@ -101,7 +101,7 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({
-  AnalyticsPages: closure_7,
+  AnalyticsPages: metroImportDefault,
   MOBILE_GUILD_UPSELL_LIST: closure_8,
   TooltipNames: closure_9,
   UpsellTypes: closure_10,
@@ -148,8 +148,8 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: "text-xs/normal",
-    expandedChildren: "text-feedback-critical",
+    label: null,
+    expandedChildren: "button",
     children: null,
   };
   const intl = util.intl;
@@ -167,8 +167,8 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: "text-xs/normal",
-    expandedChildren: "text-feedback-critical",
+    label: null,
+    expandedChildren: "button",
     children: null,
   });
   return <View style={tmp.stretch}>{null}</View>;

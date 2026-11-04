@@ -12,10 +12,10 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const QuestDockMode = fn(6901).QuestDockMode;
-let closure_6 = fn(17215).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6916).QuestDockMode;
+let closure_6 = fn(17307).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { dragHandleWrapper: null, dragHandleOverlay: null };
 let obj3 = {};
@@ -154,22 +154,22 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   } else {
     stringResult = string(t.Yplnt6);
   }
-  obj4.children = React5(ActionSheetHeaderBar.ActionSheetHeaderBar, {
+  obj4.children = metroImportDefault(ActionSheetHeaderBar.ActionSheetHeaderBar, {
     variant: "overlay",
     accessibilityLabel: stringResult,
   });
-  const items7 = [React5(_modDef1652.View, obj4)];
+  const items7 = [metroImportDefault(_modDef1652.View, obj4)];
   const obj5 = {
     style: null,
     pointerEvents: "none",
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: React5(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "default" }),
+    children: metroImportDefault(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "default" }),
   };
   const items8 = [tmp.dragHandleOverlay, animatedStyle1];
   obj5.style = items8;
-  items7[1] = React5(_modDef1652.View, obj5);
+  items7[1] = metroImportDefault(_modDef1652.View, obj5);
   obj3.children = items7;
-  obj2.children = React6(_modDef1652.View, obj3);
-  return React5(React4, obj2);
+  obj2.children = React5(_modDef1652.View, obj3);
+  return metroImportDefault(React4, obj2);
 });

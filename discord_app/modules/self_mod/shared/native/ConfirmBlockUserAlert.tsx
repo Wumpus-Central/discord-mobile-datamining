@@ -9,9 +9,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const LOCATION_CONTEXT_MOBILE = fn(11393).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11443).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   header: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" },
@@ -85,7 +85,7 @@ export default function ConfirmBlockUserAlert(userId) {
       const obj = { size: "lg", onPress, text: null, variant: "secondary" };
       const intl = util.intl;
       obj.text = intl.string(util.t["ETE/oC"]);
-      return React5(components_Button_Button.Button, obj);
+      return metroImportDefault(components_Button_Button.Button, obj);
     },
     children: null,
   };
@@ -99,7 +99,7 @@ export default function ConfirmBlockUserAlert(userId) {
   let intl = userId(onCancel[15]).intl;
   obj5.children = intl.format(userId(onCancel[15]).t.x5pOn9, { name });
   const items5 = [callback(userId(onCancel[16]).Text, obj5), ,];
-  const obj6 = { style: tmp.text, variant: "text-md/medium", children: null };
+  const obj6 = { style: tmp.text, variant: "body-md/medium", children: null };
   if (description == null) {
     const intl2 = tmp2(tmp3[15]).intl;
     const obj7 = { name };

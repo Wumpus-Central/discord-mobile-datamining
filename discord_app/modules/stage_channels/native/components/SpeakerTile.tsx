@@ -7,9 +7,9 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ParticipantTypes = fn(5801).ParticipantTypes;
+const ParticipantTypes = fn(5815).ParticipantTypes;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let obj = { FULL: 212, [212]: "FULL", HALF: 112, [112]: "HALF", THIRD: 112, [112]: "THIRD" };
 const result = obj.FULL * 1.7777777777777777;
 const result1 = obj.HALF * 1.7777777777777777;
@@ -186,7 +186,7 @@ export default noop.memo(function SpeakerTile(channel) {
         const obj17 = {
           lineClamp: 1,
           style: tmp.nameplateText,
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           color: "text-overlay-light",
           children: tmp9,
         };

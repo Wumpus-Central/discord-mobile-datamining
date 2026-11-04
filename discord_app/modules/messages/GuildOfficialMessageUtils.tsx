@@ -53,7 +53,12 @@ function useCanManageGuildOfficialMessages(guild_id, channel, location) {
 }
 let closure_5 = fn(5146).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1072);
-({ ChannelTypes: metroRequire, GuildFeatures: closure_7, MessageFlags: closure_8, Permissions: closure_9 } = Constants);
+({
+  ChannelTypes: closure_6,
+  GuildFeatures: metroImportDefault,
+  MessageFlags: closure_8,
+  Permissions: closure_9,
+} = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/GuildOfficialMessageUtils.tsx");
 

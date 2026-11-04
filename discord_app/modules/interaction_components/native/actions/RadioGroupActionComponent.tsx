@@ -6,7 +6,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = {
   code: "(function RadioGroupActionComponentTsx1(){let[withSpring,hasValue,SUBTLE_SPRING]=this.__closure;return{maxHeight:withSpring(hasValue?60:0,SUBTLE_SPRING),marginTop:withSpring(hasValue?8:0,SUBTLE_SPRING),opacity:withSpring(hasValue?1:0,SUBTLE_SPRING)};})",
 };
@@ -143,8 +143,8 @@ export default noop.memo(function RadioGroupActionComponent(type) {
     }
     obj5.importantForAccessibility = str2;
     const obj6 = { icon: null, label: null, onPress: null, start: true, end: true };
-    const obj7 = { IconComponent: tmp3(7180).XSmallIcon };
-    obj6.icon = tmp16(tmp3(7101).TableRow.Icon, obj7);
+    const obj7 = { IconComponent: tmp3(7195).XSmallIcon };
+    obj6.icon = tmp16(tmp3(7116).TableRow.Icon, obj7);
     const intl = tmp3(1113).intl;
     obj6.label = intl.string(tmp3(1113).t["5uAtZN"]);
     obj6.onPress = function onPress() {
@@ -154,7 +154,7 @@ export default noop.memo(function RadioGroupActionComponent(type) {
         current.setValue("");
       }
     };
-    obj5.children = tmp16(tmp3(7101).TableRow, obj6);
+    obj5.children = tmp16(tmp3(7116).TableRow, obj6);
     tmp16Result = tmp16(_modDef1652.View, obj5);
   }
   children[1] = tmp16Result;

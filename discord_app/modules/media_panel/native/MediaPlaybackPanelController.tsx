@@ -7,9 +7,9 @@ import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.ts
 import VoicePanelStore from "../../voice_panel/VoicePanelStore.tsx";
 
 const require = fn;
-const MediaPlaybackPanelModes = fn(16541).MediaPlaybackPanelModes;
-const ActivityPanelModes = fn(5777).ActivityPanelModes;
-const MorphablePanelModes = fn(11361).MorphablePanelModes;
+const MediaPlaybackPanelModes = fn(16633).MediaPlaybackPanelModes;
+const ActivityPanelModes = fn(5791).ActivityPanelModes;
+const MorphablePanelModes = fn(11411).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let closure_12 = {
   code: "(function MediaPlaybackPanelControllerTsx1(){let[mode,MediaPlaybackPanelModes,MorphablePanelModes]=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}})",

@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(11393).getInappropriateConversationsSafetyTips;
+let closure_4 = fn(11443).getInappropriateConversationsSafetyTips;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { safetyTipsContainer: { marginHorizontal: nativeDefault.space.PX_16 } };
@@ -38,7 +38,7 @@ export default function SafetyToolsSafetyTipsActionSheet(arg0) {
   const intl2 = util.intl;
   obj3.description = intl2.string(util.t.DJMZX6);
   obj3.safetyTips = closure_4().map((children, index) =>
-    jsx(Text_Text.Text, { variant: "text-sm/medium", children }, index),
+    jsx(Text_Text.Text, { variant: "body-sm/medium", children }, index),
   );
   obj2.children = <tmp3 description={null} safetyTips={null} />;
   obj.children = <View style={tmp.safetyTipsContainer}>{null}</View>;

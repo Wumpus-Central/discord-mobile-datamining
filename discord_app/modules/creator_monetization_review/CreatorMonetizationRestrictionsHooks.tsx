@@ -51,7 +51,7 @@ export function useShouldHideGuildPurchaseEntryPoints(id2) {
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => {
     let tmp2 = importAll;
     if (importAll == null) {
-      tmp2 = React6;
+      tmp2 = React5;
     }
     let monetizationRestrictions = GuildRoleSubscriptionsStore.getMonetizationRestrictions(tmp2);
     if (monetizationRestrictions == null) {
@@ -64,7 +64,7 @@ export function useShouldHideGuildPurchaseEntryPoints(id2) {
   const stateFromStores = require("initialize").useStateFromStores(items4, () => {
     let tmp2 = importAll;
     if (importAll == null) {
-      tmp2 = React6;
+      tmp2 = React5;
     }
     return GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(tmp2) === FetchState.FETCHING;
   });
@@ -138,7 +138,7 @@ export function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => {
     let tmp2 = importAll;
     if (importAll == null) {
-      tmp2 = React6;
+      tmp2 = React5;
     }
     let monetizationRestrictions = GuildRoleSubscriptionsStore.getMonetizationRestrictions(tmp2);
     if (monetizationRestrictions == null) {
@@ -151,7 +151,7 @@ export function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
   const stateFromStores1 = require("initialize").useStateFromStores(items4, () => {
     let tmp2 = importAll;
     if (importAll == null) {
-      tmp2 = React6;
+      tmp2 = React5;
     }
     return GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(tmp2) === FetchState.FETCHING;
   });
@@ -220,7 +220,7 @@ export function useIsMonetizationReapplicationDisabled(id2) {
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => {
     let tmp2 = importAll;
     if (importAll == null) {
-      tmp2 = React6;
+      tmp2 = React5;
     }
     let monetizationRestrictions = GuildRoleSubscriptionsStore.getMonetizationRestrictions(tmp2);
     if (monetizationRestrictions == null) {
@@ -234,7 +234,7 @@ export function useIsMonetizationReapplicationDisabled(id2) {
   const stateFromStores1 = require("initialize").useStateFromStores(items4, () => {
     let tmp2 = importAll;
     if (importAll == null) {
-      tmp2 = React6;
+      tmp2 = React5;
     }
     return GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(tmp2) === FetchState.FETCHING;
   });

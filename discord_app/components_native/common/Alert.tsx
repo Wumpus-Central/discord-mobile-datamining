@@ -14,9 +14,9 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   alert: {
@@ -141,7 +141,7 @@ prototype["renderHeader"] = function renderHeader() {
         ref: self.titleRef,
         accessible: true,
         accessibilityRole: "header",
-        variant: "heading-md/semibold",
+        variant: "heading-sm/semibold",
         color: "text-default",
         style: tmp.titleText,
         children: null,
@@ -152,11 +152,11 @@ prototype["renderHeader"] = function renderHeader() {
       }
       const obj = { children: null };
       obj2.children = renderContentResult;
-      items = [React5(Text_Text.Text, obj2)];
+      items = [metroImportDefault(Text_Text.Text, obj2)];
       const obj3 = { style: tmp.divider };
-      items[1] = React5(hasOwnProperty, obj3);
+      items[1] = metroImportDefault(hasOwnProperty, obj3);
       obj.children = items;
-      tmp3Result = React6(hasOwnProperty, obj);
+      tmp3Result = React5(hasOwnProperty, obj);
     }
   }
   return tmp3Result;
@@ -170,19 +170,19 @@ prototype["renderBody"] = function renderBody() {
     const obj = { style: null, children: null };
     const obj2 = { maxHeight: self.props.contentHeight };
     obj.style = obj2;
-    const obj3 = { variant: "text-md/normal", style: tmp.body, children: null };
+    const obj3 = { variant: "body-md/normal", style: tmp.body, children: null };
     let renderContentResult = body;
     if (typeof body === "string") {
       renderContentResult = self.renderContent(body);
     }
     obj3.children = renderContentResult;
-    obj.children = React5(Text_Text.Text, obj3);
-    tmp5Result = React5(timestampProducer, obj);
+    obj.children = metroImportDefault(Text_Text.Text, obj3);
+    tmp5Result = metroImportDefault(timestampProducer, obj);
   }
   const obj4 = { children: null };
   items = [tmp5Result, props.children];
   obj4.children = items;
-  return React6(React7, obj4);
+  return React5(React6, obj4);
 };
 prototype["renderButtons"] = function renderButtons() {
   const self = this;
@@ -207,8 +207,8 @@ prototype["renderButtons"] = function renderButtons() {
     if (null != cancelText) {
       const obj = { style: tmp.cancelButton, children: null };
       const obj2 = { variant: "secondary", onPress: self.handleCancel, text: cancelText };
-      obj.children = React5(components_Button_Button.Button, obj2);
-      tmp6 = React5(hasOwnProperty, obj);
+      obj.children = metroImportDefault(components_Button_Button.Button, obj2);
+      tmp6 = metroImportDefault(hasOwnProperty, obj);
     }
     let tmp11;
     if (null != secondaryConfirmText) {
@@ -218,9 +218,9 @@ prototype["renderButtons"] = function renderButtons() {
         onPress: self.handleSecondaryConfirm,
         children: null,
       };
-      const obj4 = { variant: "text-sm/semibold", color: "text-link", children: secondaryConfirmText };
-      obj3.children = React5(Text_Text.Text, obj4);
-      tmp11 = React5(Pressables.PressableOpacity, obj3);
+      const obj4 = { variant: "body-sm/semibold", color: "text-link", children: secondaryConfirmText };
+      obj3.children = metroImportDefault(Text_Text.Text, obj4);
+      tmp11 = metroImportDefault(Pressables.PressableOpacity, obj3);
     }
     const obj5 = { style: tmp.buttons, children: null };
     let renderConfirmButtonResult;
@@ -281,11 +281,11 @@ prototype["renderButtons"] = function renderButtons() {
         str2 = str3;
       }
       obj6.iconPosition = str2;
-      renderConfirmButtonResult = React5(components_Button_Button.Button, obj6);
+      renderConfirmButtonResult = metroImportDefault(components_Button_Button.Button, obj6);
     }
     items = [renderConfirmButtonResult, tmp6, tmp11];
     obj5.children = items;
-    tmp15Result = React6(hasOwnProperty, obj5);
+    tmp15Result = React5(hasOwnProperty, obj5);
   }
   return tmp15Result;
 };
@@ -294,7 +294,7 @@ prototype["renderFooter"] = function renderFooter() {
   let tmp = null;
   if (null != footer) {
     const obj = { children: footer };
-    tmp = React5(hasOwnProperty, obj);
+    tmp = metroImportDefault(hasOwnProperty, obj);
   }
   return tmp;
 };
@@ -304,22 +304,22 @@ prototype["render"] = function render() {
   const width = props.width;
   const obj = { children: null };
   ({ style, isLandscape, onClose } = props);
-  items = [React5(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient })];
+  items = [metroImportDefault(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient })];
   const obj3 = { onAccessibilityEscape: onClose, style: null, children: null };
   const items1 = [tmp.alert, style, { width }];
   obj3.style = items1;
   const items2 = [this.renderHeader(), this.renderBody(), this.renderButtons(), this.renderFooter()];
   obj3.children = items2;
-  items[1] = React6(hasOwnProperty, obj3);
+  items[1] = React5(hasOwnProperty, obj3);
   obj.children = items;
-  const tmp3 = React6(React7, obj);
+  const tmp3 = React5(React6, obj);
   let tmp2Result = tmp3;
   if (isLandscape) {
     const obj4 = { style: null, children: null };
     const obj5 = { maxHeight: width };
     obj4.style = obj5;
     obj4.children = tmp3;
-    tmp2Result = React5(timestampProducer, obj4);
+    tmp2Result = metroImportDefault(timestampProducer, obj4);
   }
   return tmp2Result;
 };
@@ -330,7 +330,7 @@ const memoResult = noop.memo(function AlertConnected(arg0) {
   const size = useWindowDimensionsDefault();
   const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
   const merged = Object.assign(arg0);
-  return React5(Alert, {
+  return metroImportDefault(Alert, {
     width: Math.min(0.9 * Math.min(size.width, size.height), 400),
     contentHeight: 0.7 * size.height,
     isLandscape: isScreenLandscape,

@@ -96,9 +96,9 @@ function canForwardMessage(state) {
 }
 const Constants = fn(1072);
 ({
-  GuildFeatures: metroRequire,
+  GuildFeatures: closure_6,
   MessageFlags,
-  MessageStates: closure_7,
+  MessageStates: metroImportDefault,
   MessageTypesSets: closure_8,
   Permissions: closure_9,
 } = Constants);
@@ -115,8 +115,7 @@ let closure_10 =
   MessageFlags.SUPPRESS_NOTIFICATIONS |
   MessageFlags.URGENT |
   MessageFlags.IS_COMPONENTS_V2 |
-  MessageFlags.IS_GUILD_OFFICIAL |
-  MessageFlags.IS_SCHEDULED;
+  MessageFlags.IS_GUILD_OFFICIAL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
 

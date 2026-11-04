@@ -44,12 +44,12 @@ export default function ChannelBadge(arg0) {
           if (postsWithUnreadsCount > 0) {
             const obj5 = { style: tmp.channelInfoContainer, children: null };
             const obj6 = {
-              variant: "text-xs/semibold",
+              variant: "body-xs/semibold",
               color: "text-muted",
               children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores),
             };
             obj5.children = jsx(Text_Text.Text, {
-              variant: "text-xs/semibold",
+              variant: "body-xs/semibold",
               color: "text-muted",
               children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores),
             });

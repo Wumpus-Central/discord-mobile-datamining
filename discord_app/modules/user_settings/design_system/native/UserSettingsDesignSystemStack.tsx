@@ -36,9 +36,9 @@ export default function UserSettingsDesignSystemStack() {
   const obj4 = { children: null };
   const obj5 = { children: null };
   items = [
-    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Basic Example" }),
+    React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Basic Example" }),
     React4(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "By default, stacks are vertical and have a spacing of 8.",
     }),
@@ -53,9 +53,9 @@ export default function UserSettingsDesignSystemStack() {
   const obj7 = { children: null };
   const obj8 = { children: null };
   const items3 = [
-    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Spacing" }),
+    React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Spacing" }),
     React4(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children:
         "You can control the spacing with the spacing prop. The spacing prop uses our 4px-based spacing scale. By default, stacks are vertical and have a spacing of 8.",
@@ -71,9 +71,9 @@ export default function UserSettingsDesignSystemStack() {
   const obj10 = { children: null };
   const obj11 = { children: null };
   const items5 = [
-    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Horizontal" }),
+    React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Horizontal" }),
     React4(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children:
         "You can control the direction with the direction prop. The direction prop can be either horizontal or vertical.",

@@ -92,8 +92,8 @@ const isGuildNSFW = GuildRecord.isGuildNSFW;
 ({
   ME: closure_4,
   ChannelTypesSets: hasOwnProperty,
-  GuildFeatures: metroRequire,
-  EMPTY_STRING_SNOWFLAKE_ID: closure_7,
+  GuildFeatures: closure_6,
+  EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault,
 } = Constants);
 const ChannelFlags = ChannelConstants.ChannelFlags;
 const result = size.fileFinishedImporting("experiments/ChannelSummariesExperiment.tsx");
@@ -154,7 +154,7 @@ export function useGuildEligibleForSummaries(arg0) {
         id1 = id.id;
       }
       if (id1 == null) {
-        id1 = React5;
+        id1 = metroImportDefault;
       }
       guild = GuildStore.getGuild(id1);
       let tmp4 = null != guild;

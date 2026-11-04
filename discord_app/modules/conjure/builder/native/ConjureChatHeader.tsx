@@ -8,9 +8,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9944).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9962).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = {
@@ -77,5 +77,5 @@ export default function ConjureChatHeader(actions) {
   }
   items1[3] = tmp8Result;
   obj2.children = items1;
-  return React5(React4, obj2);
+  return metroImportDefault(React4, obj2);
 }

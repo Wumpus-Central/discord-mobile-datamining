@@ -12,7 +12,7 @@ require = fn;
 let closure_3 = ["error"];
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 },
@@ -58,7 +58,7 @@ prototype["renderText"] = function renderText() {
   let tmp4 = null;
   if (null != text) {
     const obj = {
-      variant: "heading-md/medium",
+      variant: "heading-sm/medium",
       color: "text-default",
       style: null,
       accessibilityRole: null,
@@ -93,7 +93,7 @@ prototype["renderIcon"] = function renderIcon() {
     }
     items[1] = tmp15Result;
     obj2.children = items;
-    return React5(View, obj2);
+    return metroImportDefault(View, obj2);
   } else {
     if (null == source) {
       if (obj.isThemeLight(this.context.theme)) {
@@ -112,7 +112,7 @@ prototype["render"] = function render() {
   obj.style = items;
   const items1 = [this.renderIcon(), this.props.children, this.renderLabel(), this.renderText()];
   obj.children = items1;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 };
 IconLabelBlock.contextType = fn(5207).ThemeContext;
 const size = fn(2);

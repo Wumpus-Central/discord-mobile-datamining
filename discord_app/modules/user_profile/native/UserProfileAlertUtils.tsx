@@ -6,7 +6,10 @@ import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveG
 import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection.tsx";
 import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported.tsx";
 import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove.tsx";
+import UserProfileConfirmRemoveWidgetDefault from "UserProfileConfirmRemoveWidget.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -45,4 +48,23 @@ export function confirmThreadRemove(arg0) {
   const obj2 = {};
   const merged = Object.assign(arg0);
   obj.openAlert("thread-remove", jsx(UserProfileConfirmThreadRemoveDefault, {}));
+}
+export function confirmRemoveWidget(arg0) {
+  ({ onConfirm: require, onDismissWithoutRemoving: importDefault } = arg0);
+  c2 = false;
+  const merged = Object.assign(arg0, Object.assign({ onConfirm: 0, onDismissWithoutRemoving: 0 }));
+  const obj2 = {};
+  const obj = useAlertStore;
+  const merged1 = Object.assign(merged);
+  obj2.onConfirm = function onConfirm() {
+    c2 = true;
+    require();
+  };
+  obj.openAlert("remove-widget", jsx(UserProfileConfirmRemoveWidgetDefault, {}), () => {
+    if (!c2) {
+      if (importDefault != null) {
+        tmp();
+      }
+    }
+  });
 }

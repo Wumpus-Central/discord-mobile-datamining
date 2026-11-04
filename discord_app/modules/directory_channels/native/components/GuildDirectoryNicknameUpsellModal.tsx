@@ -76,7 +76,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
   }
   obj7.children = intl.format(util.t["d+6kzl"], { guildName: name });
   const items3 = [closure_10(Text_Text.Text, obj7)];
-  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj8 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(util.t.b3L8yx);
   items3[1] = closure_10(Text_Text.Text, obj8);
@@ -145,13 +145,13 @@ function GuildDirectoryNicknameUpsell(arg0) {
   return closure_11(closure_7, obj3);
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(14359).GuildPrompts;
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
+const GuildPrompts = fn(14439).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
-  container: { flex: 1, flexGrow: 2, marginTop: fn(5709).NAV_BAR_HEIGHT },
+  container: { flex: 1, flexGrow: 2, marginTop: fn(5722).NAV_BAR_HEIGHT },
   guildIcon: { alignSelf: "center", marginTop: 16 },
   title: { marginBottom: 8, textAlign: "center" },
   description: { textAlign: "center" },
@@ -161,7 +161,7 @@ let obj2 = {
   redesignGrowSpacing: null,
   redesignButtonContainer: null,
 };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5709).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5722).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };

@@ -11,13 +11,13 @@ const require = fn;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
 
 export default function PasswordlessUpsellPromoSheet() {
   let obj = {
-    source: require("../../../../_runtime/metro/17829__.js"),
+    source: require("../../../../_runtime/metro/17925__.js"),
     style: { height: 190, width: 220, resizeMode: "contain" },
   };
   _require = noop.useRef(false);
@@ -61,7 +61,7 @@ export default function PasswordlessUpsellPromoSheet() {
             const intl = ref(1113).intl;
             obj3.name = intl.string(ref(1113).t["8H5RmH"]);
             obj2.params = obj3;
-            ref(7687).openUserSettings(obj2);
+            ref(7703).openUserSettings(obj2);
           },
         };
         NativeCeremoniesDefault.registerPasskey(obj4).catch(() => {});

@@ -143,7 +143,7 @@ let closure_16 = async function _updateAutomodRule() {
   importDefault = _transformApiRuletoClientRule;
   const HTTP = require("HTTPUtils").HTTP;
   const request = {
-    url: React6.GUILD_AUTOMOD_RULE(_require.guildId, _require.id),
+    url: React5.GUILD_AUTOMOD_RULE(_require.guildId, _require.id),
     body: _transformClientRuleToApiRule(_require),
     rejectWithError: null,
   };
@@ -190,7 +190,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
           closure_129_0 = undefined;
           const HTTP = require("HTTPUtils").HTTP;
           const obj4 = {
-            url: React6.GUILD_AUTOMOD_RULES(closure_0),
+            url: React5.GUILD_AUTOMOD_RULES(closure_0),
             rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
           };
           c3 = 1;
@@ -283,7 +283,7 @@ let closure_19 = async function _executeAlertAction() {
   })();
 };
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, Endpoints: closure_8, Permissions: closure_9 } = Constants);
+({ AnalyticEvents: metroImportDefault, Endpoints: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodActionCreators.tsx");
 
@@ -364,7 +364,7 @@ export function removeMentionRaidRestrictionWithFeedback(arg0, decision_id, arg2
       });
       const HTTP = HTTPUtils.HTTP;
       const obj2 = { feedback_type: AutomodFeedback.Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id };
-      HTTP.post({ url: React6.GUILD_AUTOMOD_CLEAR_MENTION_RAID(closure_0), rejectWithError: true });
+      HTTP.post({ url: React5.GUILD_AUTOMOD_CLEAR_MENTION_RAID(closure_0), rejectWithError: true });
       closure_2();
     });
     let obj = require("GuildAutomodActionActionCreators");

@@ -9,7 +9,7 @@ require = fn;
 function DemoRow(arg0) {
   ({ label, children } = arg0);
   const obj = { style: closure_6().row, children: null };
-  items = [React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: label }), children];
+  items = [React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", children: label }), children];
   obj.children = items;
   return hasOwnProperty(React3, obj);
 }
@@ -38,9 +38,9 @@ export default function UserSettingsDesignSystemAILoader() {
   const obj3 = { children: null };
   const obj4 = { children: null };
   items = [
-    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Sizes" }),
+    React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Sizes" }),
     React4(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "`size` is the glyph size in pixels; the gap between slots scales with it. Default 16.",
     }),
@@ -55,9 +55,9 @@ export default function UserSettingsDesignSystemAILoader() {
   const obj5 = { children: null };
   const obj6 = { children: null };
   const items2 = [
-    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Colors" }),
+    React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Colors" }),
     React4(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "Any semantic text token. Defaults to `text-default`.",
     }),

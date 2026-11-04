@@ -32,7 +32,7 @@ export default function TypingSubtitle(arg0) {
   }
   items = [tmp7];
   const obj4 = {
-    variant: "text-xs/medium",
+    variant: "body-xs/medium",
     color: "text-muted",
     lineClamp: 1,
     style: subtitleStyles.subtitleText,
@@ -40,7 +40,7 @@ export default function TypingSubtitle(arg0) {
   };
   let tmp5Result = null;
   if (null != channelName) {
-    const obj5 = { variant: "text-xs/medium", children: null };
+    const obj5 = { variant: "body-xs/medium", children: null };
     const items1 = [channelName, "  \u00B7  "];
     obj5.children = items1;
     tmp5Result = React4(Text_Text.Text, obj5);

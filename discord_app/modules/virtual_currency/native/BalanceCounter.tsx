@@ -7,7 +7,7 @@ import noop_mod from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let noop = fn(19);
-({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);
+({ useState: closure_4, useEffect: hasOwnProperty, useRef: closure_6, useCallback: metroImportDefault } = noop);
 let noop = noop_mod;
 const jsx = fn(21).jsx;
 let closure_10 = {
@@ -25,7 +25,7 @@ class BalanceCounter {
     str = global.textVariant;
     ({ onValueReached, style } = global);
     if (str === undefined) {
-      str = "text-sm/semibold";
+      str = "body-sm/semibold";
     }
     closure_2 = undefined;
     closure_3 = undefined;

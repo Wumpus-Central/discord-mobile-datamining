@@ -11,7 +11,7 @@ import size from "../../../_runtime/metro/00002__.js";
   DEFAULT_DISCOVERY_CATEGORY_ID: c3,
   OTHER_DISCOVERY_CATEGORY_ID: closure_4,
   DISCOVERY_ALL_CATEGORIES_ID: hasOwnProperty,
-  DISCOVERY_SIDEBAR_CATEGORIES: metroRequire,
+  DISCOVERY_SIDEBAR_CATEGORIES: closure_6,
 } = GlobalDiscoveryServersConstants);
 let c7 = null;
 let closure_8 = [];

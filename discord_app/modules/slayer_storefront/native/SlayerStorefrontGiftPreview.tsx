@@ -71,7 +71,7 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     const obj2 = { sku };
     items = [React4(SlayerStorefrontItemCardDefault, obj2), ,];
     const obj3 = {
-      variant: "heading-md/medium",
+      variant: "heading-sm/medium",
       color: "mobile-text-heading-primary",
       style: tmp.text,
       children: null,

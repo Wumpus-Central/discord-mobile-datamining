@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import design_shared from "../../../../discord_common/js/packages/design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
-import _modDef7164 from "../../../../_runtime/metro/07164__.js";
+import _modDef7179 from "../../../../_runtime/metro/07179__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -51,7 +51,7 @@ function PremiumRewardFillGradient(arg0) {
     children,
   ];
   obj4.children = items3;
-  return React5(hasOwnProperty, obj4);
+  return metroImportDefault(hasOwnProperty, obj4);
 }
 function PremiumRewardGlowGradient(arg0) {
   ({ children, style } = arg0);
@@ -84,14 +84,14 @@ function PremiumRewardGlowGradient(arg0) {
     children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: memo, start, end }),
   };
   items2[1] = glowLight;
-  const items3 = [timestampProducer(_modDef7164, obj5), children];
+  const items3 = [timestampProducer(_modDef7179, obj5), children];
   obj4.children = items3;
-  return React5(hasOwnProperty, obj4);
+  return metroImportDefault(hasOwnProperty, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   wrapper: { position: "relative", overflow: "hidden" },

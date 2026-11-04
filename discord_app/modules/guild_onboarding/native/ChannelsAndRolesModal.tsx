@@ -67,7 +67,7 @@ function ChannelsAndRolesScreen(guildId) {
   obj2 = segmentedControlState;
 }
 const View = fn(17).View;
-const GuildOnboardingTab = fn(7389).GuildOnboardingTab;
+const GuildOnboardingTab = fn(7405).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -95,7 +95,7 @@ export default function ChannelsAndRolesModal(arg0) {
     screenKey: "channelAndRolesModal",
     title: stringResult,
     render() {
-      return React6(ChannelsAndRolesScreen, { guildId, defaultTab });
+      return React5(ChannelsAndRolesScreen, { guildId, defaultTab });
     },
   });
 }

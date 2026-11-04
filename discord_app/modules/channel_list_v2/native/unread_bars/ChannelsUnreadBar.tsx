@@ -9,8 +9,8 @@ import 01652__ from "../../../../../_runtime/metro/01652__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const RedesignChannelListConstants = fn(11186);
-({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: metroRequire } = RedesignChannelListConstants);
+const RedesignChannelListConstants = fn(11236);
+({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: closure_6 } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -42,7 +42,7 @@ let closure_11 = createStyles.createStyles((arg0, arg1) => {
   obj2.text = { textTransform: "uppercase", marginTop: num2, marginLeft: 2, marginRight: 0 };
   return obj2;
 });
-let c12 = "text-xs/semibold";
+let c12 = "body-xs/semibold";
 let closure_13 = { code: "(function ChannelsUnreadBarTsx1(){let[shown,position,scrollPosition,listPaddingTop,searchBarHeight,justReachedEnd,scheduleOnRN,resetReachedEnd,height,MARGIN,guildChannelsListUnreadBarInsetEnd,width,withSpring,springStandard,interpolate,pressed,ON_PRESS_SPRING]=this.__closure;const animatedShown=shown&&(position==='top'?scrollPosition!=null&&listPaddingTop!=null&&scrollPosition.get()>listPaddingTop+searchBarHeight:!justReachedEnd);if(justReachedEnd){scheduleOnRN(resetReachedEnd);}const offsetBase=height.get()-MARGIN;const value=animatedShown?position==='bottom'&&guildChannelsListUnreadBarInsetEnd!=null?-guildChannelsListUnreadBarInsetEnd.get():0:offsetBase*(position==='bottom'?1:-1);const opacity=animatedShown?1:0;const scale=width.get()>0?(width.get()+5)/width.get():1;return{opacity:withSpring(opacity,springStandard,'animate-always'),transform:[{translateY:withSpring(value,springStandard)},{translateX:width.get()/2},{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING)}]};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBar.tsx");
@@ -265,11 +265,11 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   ChannelsUnreadBarTsx1.__initData = tmp25;
   const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ChannelsUnreadBarTsx1);
   if (first) {
-    let ArrowSmallUpIcon = tmp7(8786).AtIcon;
+    let ArrowSmallUpIcon = tmp7(8803).AtIcon;
   } else if ("bottom" === position) {
-    ArrowSmallUpIcon = tmp7(13182).ArrowSmallDownIcon;
+    ArrowSmallUpIcon = tmp7(13265).ArrowSmallDownIcon;
   } else {
-    ArrowSmallUpIcon = tmp7(13180).ArrowSmallUpIcon;
+    ArrowSmallUpIcon = tmp7(13263).ArrowSmallUpIcon;
   }
   const tmp4Result = nativeDefault;
   if (first) {

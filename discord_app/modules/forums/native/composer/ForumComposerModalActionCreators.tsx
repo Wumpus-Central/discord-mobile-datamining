@@ -25,7 +25,7 @@ export function openCreateForumPostModal(guildId) {
     location: guildId.analyticsLocationObject,
   };
   tmp4 = null != guildId.isEdit && guildId.isEdit;
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10333, dependencyMap.paths), guildId, c3);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10381, dependencyMap.paths), guildId, c3);
 }
 export function closeCreateForumPostModal() {
   let flag = arg0;

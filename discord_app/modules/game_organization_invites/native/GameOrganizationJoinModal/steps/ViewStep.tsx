@@ -5,10 +5,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const constants = fn(11501).GameOrganizationCharacterMode;
-let closure_6 = fn(13337).GameOrganizationJoinScenes;
+const constants = fn(11551).GameOrganizationCharacterMode;
+let closure_6 = fn(13420).GameOrganizationJoinScenes;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ text: { textAlign: "center" }, inlineStack: { width: "auto" } });
 const size = fn(2);
@@ -80,7 +80,7 @@ export function ViewStep(code) {
     };
     const obj11 = { iconUrl: application.iconUrl, size: 16, borderRadius: tmp4(tmp3[13]).radii.xs };
     const items2 = [closure_7(tmp4(tmp3[14]), obj11)];
-    const obj12 = { variant: "heading-md/medium", children: application.name };
+    const obj12 = { variant: "heading-sm/medium", children: application.name };
     items2[1] = closure_7(tmp2(tmp3[15]).Text, obj12);
     obj10.children = items2;
     const items3 = [closure_8(tmp2(tmp3[12]).Stack, obj10)];
@@ -95,7 +95,7 @@ export function ViewStep(code) {
       };
       const obj14 = { size: "xs", color: tmp4(tmp3[13]).colors.ICON_MUTED };
       const items4 = [closure_7(tmp2(tmp3[18]).GroupIcon, obj14)];
-      const obj15 = { variant: "heading-md/medium", children: null };
+      const obj15 = { variant: "heading-sm/medium", children: null };
       const intl = tmp2(tmp3[16]).intl;
       const obj16 = { count: memberCount, max: maxMembers };
       obj15.children = intl.formatToPlainString(tmp4(tmp3[17]).VuENGl, obj16);

@@ -13,7 +13,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
 const createStyles = fn(5141);
 let obj2 = {
@@ -229,7 +229,7 @@ export function Tooltip(targetMeasurements) {
     style: null,
     children: timestampProducer(Text_Text.Text, {
       style: tmp.text,
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-overlay-light",
       children: label,
     }),
@@ -261,5 +261,5 @@ export function Tooltip(targetMeasurements) {
   }
   items9[2] = tmp39Result;
   obj4.children = items9;
-  return React5(Pressable, obj4);
+  return metroImportDefault(Pressable, obj4);
 }

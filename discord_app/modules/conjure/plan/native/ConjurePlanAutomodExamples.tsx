@@ -41,14 +41,14 @@ function ExampleRow(showReason) {
   obj4.size = native.AvatarSizes.XSMALL;
   items2[1] = React3(native.Avatar, obj4);
   const obj5 = { style: tmp.rowBody, children: null };
-  const items3 = [React3(Text_Text.Text, { variant: "text-sm/semibold", color: "text-strong", children: username }), ,];
-  const obj6 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const items3 = [React3(Text_Text.Text, { variant: "body-sm/semibold", color: "text-strong", children: username }), ,];
+  const obj6 = { variant: "body-sm/normal", color: "text-default", children: null };
   const tmp2Result5 = AvatarUtils;
   obj6.children = ConjurePlanAutomodOutcomes.renderPlanAutomodExampleContent(example.content);
   items3[1] = React3(Text_Text.Text, obj6);
   let tmp9Result = null;
   if (null != result) {
-    const obj7 = { variant: "text-xs/normal", color: "text-muted", lineClamp: 2, children: result };
+    const obj7 = { variant: "body-xs/normal", color: "text-muted", lineClamp: 2, children: result };
     tmp9Result = React3(Text_Text.Text, obj7);
   }
   items3[2] = tmp9Result;
@@ -73,7 +73,7 @@ function ExampleSection(arg0) {
   const obj3 = { style: tmp.caption, accessibilityRole: "header", children: null };
   items = [
     closure_3(require("Text/Text").Text, {
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: closure_6[obj.tone],
       children: obj.label(),
     }),
@@ -82,14 +82,14 @@ function ExampleSection(arg0) {
   if (null != result) {
     const obj5 = { children: null };
     const obj6 = {
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-muted",
       style: tmp.dot,
       accessible: false,
       children: "\u00B7",
     };
     const items1 = [closure_3(require("Text/Text").Text, obj6)];
-    const obj7 = { variant: "text-xs/semibold", color: "text-muted", children: result };
+    const obj7 = { variant: "body-xs/semibold", color: "text-muted", children: result };
     items1[1] = closure_3(require("Text/Text").Text, obj7);
     obj5.children = items1;
     tmp6Result = closure_4(closure_5, obj5);
@@ -216,7 +216,7 @@ export default function ConjurePlanAutomodExamples(automod) {
   let tmp7 = null;
   if ("" !== trimmed) {
     const obj3 = { style: tmp.rule, children: null };
-    const obj4 = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: trimmed };
+    const obj4 = { variant: "body-sm/normal", color: "text-default", lineClamp: 1, children: trimmed };
     obj3.children = closure_3(require("Text/Text").Text, obj4);
     tmp7 = closure_3(View, obj3);
   }

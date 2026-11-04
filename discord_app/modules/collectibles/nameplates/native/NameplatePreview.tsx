@@ -9,7 +9,7 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
@@ -139,7 +139,7 @@ export function NameplatePreview(aria_hidden) {
       obj3.guildId = guildId;
       obj3.animate = !stateFromStores;
     }
-    return React5(native.Avatar, obj3);
+    return metroImportDefault(native.Avatar, obj3);
   }, items2);
   const items3 = [
     closure_7(guildId(pendingAvatarSrc[15]), {
@@ -157,7 +157,7 @@ export function NameplatePreview(aria_hidden) {
       userId: user.id,
       guildId,
       userName: pendingGlobalName,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       effectDisplayType: user(tmp5[17]).EffectDisplayType.STATIC,
       lineClamp: 1,
       pendingDisplayNameStyles,
@@ -170,7 +170,7 @@ export function NameplatePreview(aria_hidden) {
   if (tmp19Result2) {
     const obj12 = {
       lineClamp: 1,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: pendingGlobalName,
     };

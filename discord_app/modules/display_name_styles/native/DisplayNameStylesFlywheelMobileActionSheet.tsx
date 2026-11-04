@@ -10,7 +10,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ UserSettingsSections: metroRequire, Fonts: closure_7 } = Constants);
+({ UserSettingsSections: closure_6, Fonts: metroImportDefault } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -63,7 +63,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   let enabled2;
   const ref = enabled2.useRef(null);
   const enabled = enabled2.useContext(markAsDismissed(5155).AccessibilityPreferencesContext).reducedMotion.enabled;
-  const isThemeDarkResult = markAsDismissed(5148).isThemeDark(ref(5376)());
+  const isThemeDarkResult = markAsDismissed(5148).isThemeDark(ref(5377)());
   const tmp6 = closure_11();
   let obj2 = markAsDismissed(5148);
   items = [UserStore];
@@ -72,7 +72,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   let result = ref(2176).canUsePremiumProfileCustomization(stateFromStores);
   dependencyMap = result;
   let obj4 = ref(2176);
-  enabled2 = markAsDismissed(16612).useTryItOutMobileRefreshConfig(
+  enabled2 = markAsDismissed(16702).useTryItOutMobileRefreshConfig(
     "DisplayNameStylesFlywheelMobileActionSheet",
   ).enabled;
   const intl = markAsDismissed(1113).intl;
@@ -100,8 +100,8 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     openUserSettings.openUserSettings(
       { screen: c2 ? timestampProducer.PROFILE_CUSTOMIZATION : timestampProducer.PROFILE_CUSTOMIZATION_TRY_IT_OUT },
       () => {
-        markAsDismissed(7328).runAfterInteractions(() => {
-          markAsDismissed(7687).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
+        markAsDismissed(7344).runAfterInteractions(() => {
+          markAsDismissed(7703).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
             closure_1_0(constants.TAKE_ACTION);
             const result = closure_2_0(5171).UNSAFE_markDismissibleContentAsDismissed(
               closure_2_0(4974).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK,
@@ -123,7 +123,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj6 = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: null };
   const obj7 = { style: tmp6.content, children: null };
   const items4 = [
-    closure_9(markAsDismissed(5718).ActionSheetHeaderBar, {
+    closure_9(markAsDismissed(5731).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -139,7 +139,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp14Result = enabled;
   if (enabled) {
-    tmp14Result = closure_9(tmp2(19191).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp14Result = closure_9(tmp2(19294).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp14Result];
   if (enabled) {
@@ -155,48 +155,48 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     obj10.color = str2;
     const intl2 = tmp2(1113).intl;
     obj10.children = intl2.string(tmp4(3059).Uzms61);
-    items4[2] = closure_9(tmp2(5747).Text, obj10);
-    const obj11 = { variant: "text-lg/medium", style: tmp6.subtitle, color: null, children: null };
+    items4[2] = closure_9(tmp2(5761).Text, obj10);
+    const obj11 = { variant: "body-lg/medium", style: tmp6.subtitle, color: null, children: null };
     if (isThemeDarkResult) {
       str = "text-overlay-light";
     }
     const obj12 = { bottom: true, children: null };
     obj11.color = str;
     obj11.children = stringResult;
-    items4[3] = closure_9(tmp2(5747).Text, obj11);
+    items4[3] = closure_9(tmp2(5761).Text, obj11);
     const obj13 = { style: tmp6.actions, children: null };
     const obj14 = { text: null, variant: "primary", size: "lg", onPress: null };
     const intl3 = tmp2(1113).intl;
     obj14.text = intl3.string(tmp2(1113).t["4P5I8V"]);
     obj14.onPress = callback;
-    const items6 = [closure_9(tmp2(5754).Button, obj14)];
+    const items6 = [closure_9(tmp2(5768).Button, obj14)];
     const obj15 = { text: null, variant: "secondary", size: "lg", onPress: null };
     const intl4 = tmp2(1113).intl;
     obj15.text = intl4.string(tmp2(1113).t.TulDPl);
     obj15.onPress = callback1;
-    items6[1] = closure_9(tmp2(5754).Button, obj15);
+    items6[1] = closure_9(tmp2(5768).Button, obj15);
     obj13.children = items6;
     items4[4] = closure_10(View, obj13);
     obj7.children = items4;
     obj12.children = closure_10(View, obj7);
-    obj6.children = closure_9(tmp2(7412).SafeAreaPaddingView, obj12);
-    return closure_9(tmp2(5395).BottomSheet, obj6);
+    obj6.children = closure_9(tmp2(7428).SafeAreaPaddingView, obj12);
+    return closure_9(tmp2(5396).BottomSheet, obj6);
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(19195) };
+      const obj17 = { uri: tmp4(19298) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
-      let tmp14Result2 = closure_9(tmp4(5837), obj16);
-      const tmp4Result = tmp4(5837);
+      let tmp14Result2 = closure_9(tmp4(5851), obj16);
+      const tmp4Result = tmp4(5851);
     } else {
-      const obj18 = { url: tmp4(19195), style: tmp6.image, autoplay: true };
-      tmp14Result2 = closure_9(tmp2(9632).APNGPlayer, obj18);
+      const obj18 = { url: tmp4(19298), style: tmp6.image, autoplay: true };
+      tmp14Result2 = closure_9(tmp2(9651).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1377);
   }
-  const obj5 = markAsDismissed(16612);
+  const obj5 = markAsDismissed(16702);
   const obj8 = {
     onPress() {
       const current = ref.current;

@@ -28,7 +28,7 @@ function BenefitRow(description) {
   if (null != description) {
     const obj4 = {
       style: tmp.benefitDescription,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "interactive-text-default",
       children: description,
     };
@@ -130,7 +130,7 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
     { paddingBottom: nativeDefault.space.PX_32 + nativeDefault.space.PX_16 + useSafeAreaInsetsDefault().bottom },
   ];
   obj6.contentContainerStyle = items1;
-  const obj8 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj8 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = require("util").intl;
   obj8.children = intl.string(require("util").t.CjC5XZ);
   const items2 = [
@@ -145,7 +145,7 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
     ,
     ,
   ];
-  const obj9 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj9 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl2 = require("util").intl;
   obj9.children = intl2.string(require("util").t.bCb3c8);
   items2[2] = closure_4(require("Text/Text").Text, obj9);
@@ -173,14 +173,14 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
         size: "xs",
       }),
       React4(Text_Text.Text, {
-        variant: "text-md/medium",
+        variant: "body-md/medium",
         color: "mobile-text-heading-primary",
         children: children.name,
       }),
     ];
     obj2.children = items;
     const obj3 = { style: closure_0.channelIcon, size: "xs" };
-    const obj4 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name };
+    const obj4 = { variant: "body-md/medium", color: "mobile-text-heading-primary", children: children.name };
     return React4(BenefitRow, { title: hasOwnProperty(View, obj2), description: children.description }, children.id);
   });
   items2[8] = closure_4(BenefitSection, obj11);
@@ -193,7 +193,7 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
       BenefitRow,
       {
         title: closure_1_4(closure_0(dependencyMap[6]).Text, {
-          variant: "text-md/medium",
+          variant: "body-md/medium",
           color: "mobile-text-heading-primary",
           children: children.name,
         }),

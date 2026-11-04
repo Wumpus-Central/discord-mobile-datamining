@@ -49,15 +49,15 @@ function PersonalWidgetShowMoreButton() {
   };
   const intl = util.intl;
   let t = util.t;
-  t = React7(Text_Text.Text, {
-    variant: "text-sm/medium",
+  t = React6(Text_Text.Text, {
+    variant: "body-sm/medium",
     color: "text-subtle",
     children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2),
   });
   obj2.children = t;
-  React7(hasOwnProperty, obj2);
+  React6(hasOwnProperty, obj2);
   const obj3 = {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-subtle",
     children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2),
   };
@@ -129,17 +129,17 @@ function CoverSection(section) {
   let tmp6 = null;
   if ("" !== section.title) {
     const obj2 = { variant: "heading-xl/semibold", color: "text-strong", maxLines: 2, children: section.title };
-    tmp6 = React7(PersonalWidgetText, obj2);
+    tmp6 = React6(PersonalWidgetText, obj2);
   }
   const items1 = [tmp6];
   let tmp9 = null;
   if ("" !== section.subtitle) {
-    const obj3 = { variant: "text-sm/medium", color: "text-default", maxLines: 3, children: section.subtitle };
-    tmp9 = React7(PersonalWidgetText, obj3);
+    const obj3 = { variant: "body-sm/medium", color: "text-default", maxLines: 3, children: section.subtitle };
+    tmp9 = React6(PersonalWidgetText, obj3);
   }
   items1[1] = tmp9;
   obj.children = items1;
-  const tmp3Result = closure_1_10(React5, obj);
+  const tmp3Result = closure_1_10(metroImportDefault, obj);
   let tmp24Result6 = tmp3Result;
   if (null != source) {
     const obj4 = { theme: ThemeTypes.DARK, primaryColor: null, secondaryColor: null, children: null };
@@ -155,8 +155,8 @@ function CoverSection(section) {
       const intl = util.intl;
       obj6.accessibilityLabel = intl.string(util.t.MxXgrL);
       const obj7 = { source, style: timestampProducer.absoluteFill, resizeMode: "cover" };
-      obj6.children = React7(FastImageDefault, obj7);
-      let tmp24Result = React7(hasOwnProperty, obj6);
+      obj6.children = React6(FastImageDefault, obj7);
+      let tmp24Result = React6(hasOwnProperty, obj6);
       let tmp15 = timestampProducer;
       let tmp14 = importDefault;
     } else {
@@ -164,14 +164,14 @@ function CoverSection(section) {
       const obj8 = { source, style: null, resizeMode: "cover" };
       tmp15 = timestampProducer;
       obj8.style = timestampProducer.absoluteFill;
-      tmp24Result = React7(FastImageDefault, obj8);
+      tmp24Result = React6(FastImageDefault, obj8);
     }
     const items2 = [tmp24Result, , ,];
     let tmp24Result4 = null;
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = React7(tmp14(5710), obj9);
+        tmp24Result4 = React6(tmp14(5723), obj9);
       } else {
         tmp24Result4 = null;
       }
@@ -181,12 +181,12 @@ function CoverSection(section) {
     let tmp24Result5 = null;
     if (showGifTag) {
       const obj10 = { style: tmp.gifTag };
-      tmp24Result5 = React7(tmp14(8697), obj10);
+      tmp24Result5 = React6(tmp14(8714), obj10);
     }
     items2[3] = tmp24Result5;
     obj5.children = items2;
-    obj4.children = closure_1_10(React5, obj5);
-    tmp24Result6 = React7(native.ThemeContextProvider, obj4);
+    obj4.children = closure_1_10(metroImportDefault, obj5);
+    tmp24Result6 = React6(native.ThemeContextProvider, obj4);
   }
   return tmp24Result6;
 }
@@ -200,7 +200,7 @@ function FieldRow(field) {
   ({ showGifTag, canToggleAnimation, toggleAnimation } = tmp2);
   if (null != source) {
     const obj = { source, style: tmp.fieldImage, resizeMode: "cover" };
-    tmp3 = React7(FastImageDefault, obj);
+    tmp3 = React6(FastImageDefault, obj);
   }
   const obj2 = { style: tmp.fieldRow, children: null };
   let tmp7Result = tmp3;
@@ -214,7 +214,7 @@ function FieldRow(field) {
       let tmp13 = null;
       if (showGifTag) {
         const obj4 = { style: tmp.gifTagSmall };
-        tmp13 = React7(GifTagDefault, obj4);
+        tmp13 = React6(GifTagDefault, obj4);
       }
       items[1] = tmp13;
       obj3.children = items;
@@ -225,20 +225,20 @@ function FieldRow(field) {
   const obj5 = { style: tmp.fieldContent, children: null };
   let tmp16 = null;
   if ("" !== field.title) {
-    const obj6 = { variant: "text-sm/medium", color: "text-default", maxLines: 2, children: field.title };
-    tmp16 = React7(PersonalWidgetText, obj6);
+    const obj6 = { variant: "body-sm/medium", color: "text-default", maxLines: 2, children: field.title };
+    tmp16 = React6(PersonalWidgetText, obj6);
   }
   const items2 = [tmp16];
   let tmp19 = null;
   if ("" !== field.description) {
-    const obj7 = { variant: "text-xs/medium", color: "text-subtle", maxLines: 4, children: field.description };
-    tmp19 = React7(PersonalWidgetText, obj7);
+    const obj7 = { variant: "body-xs/medium", color: "text-subtle", maxLines: 4, children: field.description };
+    tmp19 = React6(PersonalWidgetText, obj7);
   }
   items2[1] = tmp19;
   obj5.children = items2;
-  items1[1] = closure_1_10(React5, obj5);
+  items1[1] = closure_1_10(metroImportDefault, obj5);
   obj2.children = items1;
-  return closure_1_10(React5, obj2);
+  return closure_1_10(metroImportDefault, obj2);
 }
 function FieldsSection(arg0) {
   ({ userId: require, section, disableInteraction: importDefault } = arg0);
@@ -246,7 +246,7 @@ function FieldsSection(arg0) {
   if (0 !== section.fields.length) {
     const obj = { style: tmp.fieldsContainer, children: null };
     const fields = section.fields;
-    obj.children = fields.map((field) => React7(FieldRow, { userId, field, disableInteraction }, field.key));
+    obj.children = fields.map((field) => React6(FieldRow, { userId, field, disableInteraction }, field.key));
     tmp2 = closure_9(closure_7, obj);
   }
   return tmp2;
@@ -257,6 +257,10 @@ function UserProfilePersonalWidgetCardContent(style) {
   if (disableInteraction === undefined) {
     disableInteraction = false;
   }
+  let flag = style.isEditing;
+  if (flag === undefined) {
+    flag = false;
+  }
   let obj = {
     userId,
     widget,
@@ -264,23 +268,32 @@ function UserProfilePersonalWidgetCardContent(style) {
     titleLeadingIcon: null,
     title: null,
     disableInteraction: null,
+    actionButtons: null,
     children: null,
   };
   const tmp = closure_14();
-  obj.titleLeadingIcon = closure_9(userId(9656).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  const tmp3 = disableInteraction;
+  obj.titleLeadingIcon = closure_9(userId(9675).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj.title = widget.header;
   obj.disableInteraction = disableInteraction;
-  let obj2 = { style: tmp.sectionsContainer, children: null };
+  let tmp6;
+  if (flag) {
+    let obj2 = { widget };
+    items = [closure_9(tmp3(12560), obj2, "edit-options")];
+    tmp6 = items;
+  }
+  obj.actionButtons = tmp6;
+  const obj3 = { style: tmp.sectionsContainer, children: null };
   const sections = widget.sections;
-  items = [
+  const items1 = [
     sections.map(function renderSection(type, index) {
       type = type.type;
       if ("cover" === type) {
         const obj2 = { userId, section: type, disableInteraction };
-        return React7(CoverSection, obj2, index);
+        return React6(CoverSection, obj2, index);
       } else if ("fields" === type) {
         const obj = { userId, section: type, disableInteraction };
-        return React7(FieldsSection, obj, index);
+        return React6(FieldsSection, obj, index);
       } else {
         return null;
       }
@@ -290,13 +303,13 @@ function UserProfilePersonalWidgetCardContent(style) {
   if (!disableInteraction) {
     tmp2Result = closure_9(PersonalWidgetShowMoreButton, {});
   }
-  items[1] = tmp2Result;
-  obj2.children = items;
-  obj.children = closure_10(closure_7, obj2);
-  return closure_9(disableInteraction(15101), obj);
+  items1[1] = tmp2Result;
+  obj3.children = items1;
+  obj.children = closure_10(closure_7, obj3);
+  return closure_9(disableInteraction(15181), obj);
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ Pressable: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -344,6 +357,6 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfilePersonalWidgetCard(arg0) {
   const obj = { children: null };
   const merged = Object.assign(arg0);
-  obj.children = React7(UserProfilePersonalWidgetCardContent, {});
-  return React7(PersonalWidgetExpandCollapseContext.PersonalWidgetExpandCollapseProvider, obj);
+  obj.children = React6(UserProfilePersonalWidgetCardContent, {});
+  return React6(PersonalWidgetExpandCollapseContext.PersonalWidgetExpandCollapseProvider, obj);
 }

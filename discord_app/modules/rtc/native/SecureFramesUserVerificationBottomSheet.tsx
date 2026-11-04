@@ -15,8 +15,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9394);
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const SecureFramesConstants = fn(9411);
 ({
   AnalyticsSecureFramesUserVerification: closure_9,
   SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_10,
@@ -191,7 +191,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     const items9 = [tmp23(tmp25, obj13), , , ,];
     const obj14 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: tmp17 };
     items9[1] = tmp23(tmp2(tmp3[28]).Text, obj14);
-    const obj15 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: tmp18 };
+    const obj15 = { style: tmp.subtitle, variant: "body-md/medium", color: "text-default", children: tmp18 };
     items9[2] = tmp23(tmp2(tmp3[28]).Text, obj15);
     const obj16 = { style: tmp.helpMessage, userId, userKey: fingerprintUserKey };
     items9[3] = tmp23(tmp14(tmp3[29]), obj16);

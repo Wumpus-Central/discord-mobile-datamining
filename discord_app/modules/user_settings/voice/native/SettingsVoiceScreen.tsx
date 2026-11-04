@@ -2,13 +2,13 @@
 import util from "../../../../intl/index.native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import KrispLogo2 from "KrispLogo.tsx";
-import _modDef12098 from "../../../../../_runtime/metro/12098__.js";
-import _modDef12099 from "../../../../../_runtime/metro/12099__.js";
+import _modDef12157 from "../../../../../_runtime/metro/12157__.js";
+import _modDef12158 from "../../../../../_runtime/metro/12158__.js";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -19,32 +19,32 @@ function KrispLogo() {
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef12098;
+    let tmp2Result = _modDef12157;
   } else {
-    tmp2Result = _modDef12099;
+    tmp2Result = _modDef12158;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
   obj = shared;
   const intl = util.intl;
   obj3.accessibilityLabel = intl.string(util.t.vFiCSx);
-  items = [React6(FastImageDefault, obj3)];
+  items = [React5(FastImageDefault, obj3)];
   const obj4 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj4.accessibilityLabel = intl2.string(util.t.hvVgAZ);
   obj4.onPress = KrispLogo2.handleKrispLinkPressed;
-  const obj5 = { variant: "text-sm/medium", color: "text-link", children: null };
+  const obj5 = { variant: "body-sm/medium", color: "text-link", children: null };
   const intl3 = util.intl;
   obj5.children = intl3.string(util.t.hvVgAZ);
-  obj4.children = React6(Text_Text.Text, obj5);
-  items[1] = React6(LegacyBaseButton.LegacyPressable, obj4);
+  obj4.children = React5(Text_Text.Text, obj5);
+  items[1] = React5(LegacyBaseButton.LegacyPressable, obj4);
   obj2.children = items;
-  return React7(View, obj2);
+  return React6(View, obj2);
 }
 function SystemProcessingSubLabel() {
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
-    const obj2 = { variant: "text-sm/medium", children: null };
+    const obj2 = { variant: "body-sm/medium", children: null };
     const intl = util.intl;
     const obj3 = {
       onSettingsClick() {
@@ -53,12 +53,12 @@ function SystemProcessingSubLabel() {
       },
     };
     obj2.children = intl.format(util.t.EUNgko, obj3);
-    tmp3 = React6(Text_Text.Text, obj2);
+    tmp3 = React5(Text_Text.Text, obj2);
   }
   return tmp3;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
@@ -150,5 +150,5 @@ export default function SettingsVoiceScreen() {
     obj2.sections = items1;
     return obj.createList(obj2);
   }, []);
-  return React6(SettingLayoutDefault, { node });
+  return React5(SettingLayoutDefault, { node });
 }

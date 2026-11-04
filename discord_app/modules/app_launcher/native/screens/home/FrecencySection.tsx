@@ -117,7 +117,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12515).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12596).getAppLauncherIconSource(app.section.application);
     let obj = {
       style: disabled ? tmp.appContainerDisabled : tmp.appContainer,
       disabled,
@@ -149,18 +149,18 @@ function FrecentApp(app) {
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_11(onAppSelected(5837), obj2);
+      tmp3 = closure_11(onAppSelected(5851), obj2);
     }
     items = [tmp3];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12524).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(12605).SubmittingOverlay, obj3);
     obj.children = items;
-    return closure_12(app(7106).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(7121).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(12517).FrecencySectionSelection;
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
+let FrecencySectionSelection = fn(12598).FrecencySectionSelection;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -463,9 +463,9 @@ export default function FrecencySection(loading) {
         }
         items = [tmp10];
         const obj4 = { children: null };
-        const obj5 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: displayName };
+        const obj5 = { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: displayName };
         const items1 = [closure_11(context(commands[26]).Text, obj5)];
-        const obj6 = { variant: "text-xs/normal", color: "text-subtle", children: sectionName };
+        const obj6 = { variant: "body-xs/normal", color: "text-subtle", children: sectionName };
         items1[1] = closure_11(context(commands[26]).Text, obj6);
         obj4.children = items1;
         items[1] = closure_12(onAppSelected, obj4);
@@ -522,7 +522,7 @@ export default function FrecencySection(loading) {
           obj.ref = ref.ref;
           const obj2 = {
             accessibilityRole: "header",
-            variant: "text-lg/semibold",
+            variant: "body-lg/semibold",
             color: "mobile-text-heading-primary",
             children: null,
           };
@@ -557,7 +557,7 @@ export default function FrecencySection(loading) {
         accessibilityRole: "button",
         children: null,
       };
-      const obj10 = { variant: "text-sm/medium", color: "text-brand", children: null };
+      const obj10 = { variant: "body-sm/medium", color: "text-brand", children: null };
       const intl3 = tmp2(commands[19]).intl;
       obj10.children = intl3.string(tmp2(commands[19]).t["/qG8v7"]);
       obj9.children = closure_11(tmp2(commands[26]).Text, obj10);

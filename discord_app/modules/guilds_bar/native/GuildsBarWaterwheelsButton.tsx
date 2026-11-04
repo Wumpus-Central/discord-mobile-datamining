@@ -21,11 +21,11 @@ const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 require = fn;
 function GuildsBarWaterwheelsExpandedChildren() {
   const obj = { title: null, subtitle: null };
-  const obj2 = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj2 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(_modDef2537.zFl2A4);
-  obj.title = React6(Text_Text.Text, obj2);
-  return React6(HomeDrawerShared.HomeDrawerSharedItem, obj);
+  obj.title = React5(Text_Text.Text, obj2);
+  return React5(HomeDrawerShared.HomeDrawerSharedItem, obj);
 }
 function handleWaterwheelsPress() {
   if (InterestPickerSessionStore.hasSeenPicker()) {
@@ -65,7 +65,7 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
   const stateFromStores = initialize.useStateFromStores(items, () => isTabFocused.getIsTabFocused());
   const obj3 = { style: tmp.stretch, children: null };
   const memo = noop.useMemo(() => ({ onPress }), []);
-  const items1 = [React6(GuildsBarSeparatorDefault, {})];
+  const items1 = [React5(GuildsBarSeparatorDefault, {})];
   const obj4 = {
     selected: stateFromStores,
     circle: false,
@@ -73,19 +73,19 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: "text-xs/normal",
-    expandedChildren: "text-feedback-critical",
+    label: null,
+    expandedChildren: "button",
     children: null,
   };
   const intl = util.intl;
   obj4.label = intl.string(_modDef2537.zFl2A4);
-  obj4.expandedChildren = React6(GuildsBarWaterwheelsExpandedChildren, {});
+  obj4.expandedChildren = React5(GuildsBarWaterwheelsExpandedChildren, {});
   const colors = nativeDefault.colors;
-  obj4.children = React6(CompassIcon.CompassIcon, {
+  obj4.children = React5(CompassIcon.CompassIcon, {
     size: "md",
     color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
-  items1[1] = React6(GuildsBarAnimatedItemWrapperDefault, obj4);
+  items1[1] = React5(GuildsBarAnimatedItemWrapperDefault, obj4);
   obj3.children = items1;
-  return React7(View, obj3);
+  return React6(View, obj3);
 });

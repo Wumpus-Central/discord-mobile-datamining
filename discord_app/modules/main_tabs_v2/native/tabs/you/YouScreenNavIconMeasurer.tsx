@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const PixelRatio = fn(17).PixelRatio;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-[hasOwnProperty, metroRequire] = ContextUtilsDefault();
+[hasOwnProperty, closure_6] = ContextUtilsDefault();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIconMeasurer.tsx");
 

@@ -12,7 +12,7 @@ function SyncingToGamesItem(channels) {
   dependencyMap = channels(1499).useNavigation();
   let obj = channels(1499);
   const tmp = channels;
-  const getOrFetchApplication = channels(7450).useGetOrFetchApplication(channels.applicationId);
+  const getOrFetchApplication = channels(7466).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
     let name;
@@ -25,15 +25,15 @@ function SyncingToGamesItem(channels) {
       children: channels.map((id) => {
         const channel = id;
         let obj = {
-          label: channels(5772).computeChannelName(id, UserStore, RelationshipStore),
+          label: channels(5786).computeChannelName(id, UserStore, RelationshipStore),
           icon: null,
           arrow: true,
           onPress: null,
         };
         const obj3 = { IconComponent: null };
-        const obj2 = channels(5772);
-        obj3.IconComponent = channels(8727).getChannelIconComponent(id);
-        obj.icon = closure_1_6(channels(7101).TableRow.Icon, obj3);
+        const obj2 = channels(5786);
+        obj3.IconComponent = channels(8744).getChannelIconComponent(id);
+        obj.icon = closure_1_6(channels(7116).TableRow.Icon, obj3);
         obj.onPress = function onPress() {
           const obj = { channel, numScreensToPop: null };
           let num = 1;
@@ -46,16 +46,16 @@ function SyncingToGamesItem(channels) {
           obj.numScreensToPop = num;
           closure_2.push(GuildSettingsSections.EDIT_LINKED_LOBBY, obj);
         };
-        return closure_1_6(channels(7101).TableRow, obj, id.id);
+        return closure_1_6(channels(7116).TableRow, obj, id.id);
       }),
     };
-    tmp5Result = closure_6(tmp(7186).TableRowGroup, obj3);
+    tmp5Result = closure_6(tmp(7201).TableRowGroup, obj3);
   }
   return tmp5Result;
 }
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/apps/native/GuildSettingsModalLobbiesLinked.tsx");
 

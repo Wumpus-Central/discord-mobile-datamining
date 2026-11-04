@@ -47,7 +47,7 @@ export default function FamilyCenterActivityTotal(displayType) {
   obj4.children = num;
   items = [
     React3(Text_Text.Text, obj4),
-    React3(Text_Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult }),
+    React3(Text_Text.Text, { variant: "body-sm/semibold", children: tooltipHeaderResult }),
   ];
   obj3.children = items;
   return React4(View, obj3);

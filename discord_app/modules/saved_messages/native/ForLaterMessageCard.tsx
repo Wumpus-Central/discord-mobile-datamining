@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef5859 from "../../../../_runtime/metro/05859__.js";
+import _modDef5873 from "../../../../_runtime/metro/05873__.js";
 import SavedMessageHelpers from "../SavedMessageHelpers.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -24,7 +24,7 @@ class ForLaterDeletedMessageCard {
     items1 = [, ,];
     items1[0] = jsx(savedMessage(closure_2[9]).CircleErrorIcon, obj1);
     obj6 = {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       style: tmp.deletedText,
       children: null,
@@ -54,7 +54,7 @@ class ForLaterDeletedMessageCard {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
+({ AnalyticEvents: metroImportDefault, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -150,7 +150,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       } else {
                         c1 = 1;
                         c2 = 1;
-                        const obj5 = { value: v3(11300).savedMessageJumpToMessage(tmp4, c1), done: false };
+                        const obj5 = { value: v3(11350).savedMessageJumpToMessage(tmp4, c1), done: false };
                         return obj5;
                       }
                     } else if (arg0 === 1) {
@@ -161,8 +161,8 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       const obj6 = { value, done: true };
                       return obj6;
                     } else {
-                      v1(6864).pop();
-                      const arr = v1(6864);
+                      v1(6879).pop();
+                      const arr = v1(6879);
                       const obj8 = {
                         channel_id: tmp4.saveData.channelId,
                         message_id: tmp4.saveData.messageId,
@@ -177,9 +177,9 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       }
                       obj8.message_author_id = id;
                       if (null != tmp4.saveData.dueAt) {
-                        let BOOKMARK = v3(10322).SavedMessageSortTypes.REMINDER;
+                        let BOOKMARK = v3(10370).SavedMessageSortTypes.REMINDER;
                       } else {
-                        BOOKMARK = v3(10322).SavedMessageSortTypes.BOOKMARK;
+                        BOOKMARK = v3(10370).SavedMessageSortTypes.BOOKMARK;
                       }
                       obj8.type = BOOKMARK;
                       let diffResult;

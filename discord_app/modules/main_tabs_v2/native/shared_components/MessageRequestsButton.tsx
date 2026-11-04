@@ -3,9 +3,9 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9316 from "../../../../../_runtime/metro/09316__.js";
+import _modDef9333 from "../../../../../_runtime/metro/09333__.js";
 import IconActionButton from "IconActionButton.tsx";
-import _mod18231 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod18328 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../../message_request/SpamMessageRequestStore.tsx";
@@ -30,11 +30,11 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod18231.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return metroImportDefault(_mod18328.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 const size = fn(2);
@@ -63,7 +63,7 @@ export default function MessageRequestsButton(alternateVariant) {
     const obj3 = { style: tmp2.buttonContainer, collapsable: false, children: null };
     if (null != str1) {
       const obj4 = {
-        icon: React5(MessageRequestAnimation, {}),
+        icon: metroImportDefault(MessageRequestAnimation, {}),
         variant: "secondary",
         text: str1,
         size: "sm",
@@ -72,27 +72,27 @@ export default function MessageRequestsButton(alternateVariant) {
       const intl3 = util.intl;
       obj4.accessibilityLabel = intl3.string(util.t.e7GWjQ);
       const merged1 = Object.assign(merged);
-      let tmp21 = React5(components_Button_Button.Button, obj4);
-      let tmp16 = React5;
+      let tmp21 = metroImportDefault(components_Button_Button.Button, obj4);
+      let tmp16 = metroImportDefault;
     } else {
-      tmp16 = React5;
+      tmp16 = metroImportDefault;
       const obj5 = {
         variant: "secondary",
         size: "sm",
-        icon: React5(MessageRequestAnimation, {}),
+        icon: metroImportDefault(MessageRequestAnimation, {}),
         accessibilityLabel: null,
       };
       const intl2 = util.intl;
       obj5.accessibilityLabel = intl2.string(util.t.e7GWjQ);
       const merged2 = Object.assign(merged);
-      tmp21 = React5(IconButton.IconButton, obj5);
+      tmp21 = metroImportDefault(IconButton.IconButton, obj5);
     }
     const items2 = [tmp21, str > 0 && tmp16(IconActionButton.ButtonBadge, { badgePosition: "right" })];
     obj3.children = items2;
-    return React6(View, obj3);
+    return React5(View, obj3);
   } else {
     const obj6 = {
-      source: _modDef9316,
+      source: _modDef9333,
       IconComponent: MessageRequestAnimation,
       accessibilityLabel: null,
       buttonText: null,
@@ -108,7 +108,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj6.buttonText = str2;
     obj6.badge = str > 0;
     const merged3 = Object.assign(merged);
-    return React5(IconActionButtonDefault, obj6);
+    return metroImportDefault(IconActionButtonDefault, obj6);
   }
   obj2 = initialize;
 }

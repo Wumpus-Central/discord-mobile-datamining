@@ -55,7 +55,7 @@ export default function GameProfileSection(onPressViewAll) {
   obj2.style = items1;
   const items2 = [
     React4(Text_Text.Heading, {
-      variant: "heading-sm/semibold",
+      variant: "heading-xs/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     }),

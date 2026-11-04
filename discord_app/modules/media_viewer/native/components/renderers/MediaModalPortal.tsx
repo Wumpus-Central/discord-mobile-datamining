@@ -14,7 +14,6 @@ if (PlatformUtils.isAndroid()) {
 } else {
   importDefaultResult = requireNativeComponent("DCDPortalView");
 }
-const metroRequire = importDefaultResult;
 const MediaPlayerManager = NativeModules.MediaPlayerManager;
 const nativeEventEmitter = new NativeEventEmitter(MediaPlayerManager);
 const set = new Set();
@@ -26,7 +25,7 @@ export default noop.memo(function MediaModalPortal(paused) {
   const muted = paused.muted;
   ({ onLoad: dependencyMap, portal } = paused);
   ({ style, pointerEvents } = paused);
-  const tmp2 = muted(7258)(() => {
+  const tmp2 = muted(7278)(() => {
     let tmp;
     if (dependencyMap != null) {
       tmp = dependencyMap();
@@ -55,7 +54,7 @@ export default noop.memo(function MediaModalPortal(paused) {
       MediaPlayerManager.setLoopPlayback(tmp, true);
       return () => {
         loopPlayback.setLoopPlayback(portal, false);
-        muted(8968).unregisterView(portal);
+        muted(8985).unregisterView(portal);
         set.add(portal);
       };
     }

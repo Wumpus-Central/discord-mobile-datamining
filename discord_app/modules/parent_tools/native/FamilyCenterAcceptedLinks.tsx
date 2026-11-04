@@ -10,7 +10,7 @@ import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterEmptyDefault from "FamilyCenterEmpty.tsx";
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow.tsx";
-import _modDef16972 from "../../../../_runtime/metro/16972__.js";
+import _modDef17064 from "../../../../_runtime/metro/17064__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -27,22 +27,22 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     const obj3 = { name: str1 };
     obj.accessibilityLabel = intl.formatToPlainString(_modDef2667.T7DUoU, obj3);
     obj.onPress = function handleDisconnect() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16970, dependencyMap.paths), { otherUser: str });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17062, dependencyMap.paths), { otherUser: str });
     };
     obj.style = tmp.actionButton;
-    const obj4 = { size: str(1187).Icon.Sizes.SMALL, disableColor: true, source: _modDef16972 };
+    const obj4 = { size: str(1187).Icon.Sizes.SMALL, disableColor: true, source: _modDef17064 };
     obj.children = closure_6(str(1187).Icon, obj4);
-    obj2.actions = closure_6(str(7106).PressableOpacity, obj);
+    obj2.actions = closure_6(str(7121).PressableOpacity, obj);
     tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj2);
   }
   return tmp4Result;
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7840);
+const FamilyCenterConstants = fn(7856);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_4, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: hasOwnProperty } =
   FamilyCenterConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5141);
 let obj2 = {
   container: { marginTop: 24 },
@@ -88,7 +88,7 @@ export default function FamilyCenterAcceptedLinks() {
   items = [
     timestampProducer(Text_Text.Text, {
       style: tmp.header,
-      variant: "eyebrow",
+      variant: "body-sm/medium",
       color: "text-default",
       children: ageSpecificText,
     }),
@@ -110,5 +110,5 @@ export default function FamilyCenterAcceptedLinks() {
   obj5.children = mapped;
   items[1] = timestampProducer(View, obj5);
   obj3.children = items;
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 }

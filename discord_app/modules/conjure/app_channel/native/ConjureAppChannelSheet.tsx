@@ -35,7 +35,7 @@ function ConjureAppChannelSheetHeader(channel) {
   let tmp7Result = null;
   if (null != appChannelApplication) {
     const obj4 = {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-muted",
       lineClamp: 1,
       style: tmp.centered,
@@ -194,7 +194,9 @@ function ConjureAppChannelSheetContent(channel) {
   const items13 = [channel.id];
   const callback2 = noop.useCallback(() => {
     const result = openConjureAppChannelSheet.closeConjureAppChannelSheet();
-    ChannelSettingsActionCreatorsDefault.setSection(canManageChannel ? React5.OVERVIEW : React5.NOTIFICATIONS);
+    ChannelSettingsActionCreatorsDefault.setSection(
+      canManageChannel ? metroImportDefault.OVERVIEW : metroImportDefault.NOTIFICATIONS,
+    );
     ChannelSettingsActionCreatorsDefault.open(channel.id);
     const tmp3Result = ChannelSettingsActionCreatorsDefault;
   }, items12);
@@ -346,7 +348,7 @@ function ConjureAppChannelSheetContent(channel) {
   return closure_11(closure_12, { children });
 }
 const Constants = fn(1072);
-({ ChannelSettingsSections: closure_7, InstantInviteSources: closure_8, Permissions: closure_9 } = Constants);
+({ ChannelSettingsSections: metroImportDefault, InstantInviteSources: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5141);
@@ -379,10 +381,10 @@ export default noop.memo(function ConjureAppChannelSheet(channelId) {
     const obj5 = { spacing: stateFromStores(575).space.PX_24, children: null };
     const obj6 = { channel: stateFromStores };
     obj5.children = closure_10(ConjureAppChannelSheetContent, obj6);
-    obj4.children = closure_10(tmp2(6147).Stack, obj5);
-    obj3.children = closure_10(tmp2(7412).SafeAreaPaddingView, obj4);
-    obj2.children = closure_10(tmp2(5398).BottomSheetScrollView, obj3);
-    tmp6 = closure_10(tmp2(5395).BottomSheet, obj2);
+    obj4.children = closure_10(tmp2(6162).Stack, obj5);
+    obj3.children = closure_10(tmp2(7428).SafeAreaPaddingView, obj4);
+    obj2.children = closure_10(tmp2(5400).BottomSheetScrollView, obj3);
+    tmp6 = closure_10(tmp2(5396).BottomSheet, obj2);
   }
   return tmp6;
 });

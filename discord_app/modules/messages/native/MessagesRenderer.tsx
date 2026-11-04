@@ -17,6 +17,7 @@ import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../chat/native/ChatChangesetUpdateTracker.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
 import MessageDataSnowflakeUtils from "snowflake/MessageDataSnowflakeUtils.tsx";
+import useSocialLayerStorefrontEmbedData from "../../slayer_storefront/native/useSocialLayerStorefrontEmbedData.tsx";
 import openMediaModalOverlayAltTextSheetDefault from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
 import MessagesHandlers from "MessagesHandlers.tsx";
 import NavigationSpanTrackerDefault from "../../tti_analytics/native/navigation/NavigationSpanTracker.tsx";
@@ -27,7 +28,6 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
-import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 
 require = fn;
 function handleTapShowAltText(description) {
@@ -52,19 +52,19 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(10026).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(10074).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(5053).getUserCommunicationDisabledVersion;
-const Changeset = fn(8502).Changeset;
+const Changeset = fn(8519).Changeset;
 const Constants = fn(1072);
 ({
-  ActivityActionTypes: closure_12,
-  MAX_MESSAGES_PER_CHANNEL: map1,
-  MessageFlags: closure_14,
-  MessageTypes: closure_15,
-  Permissions: closure_16,
+  ActivityActionTypes: closure_11,
+  MAX_MESSAGES_PER_CHANNEL: closure_12,
+  MessageFlags: map1,
+  MessageTypes: closure_14,
+  Permissions: closure_15,
 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
+({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 class MessagesRenderer {
   constructor(arg0) {
     merged = Object.assign(global, Object.assign({ ref: 0 }));
@@ -99,9 +99,9 @@ class MessagesRenderer {
     updateRows = undefined;
     scrollToMessageId = undefined;
     closure_39 = undefined;
-    handleVisibleMessagesChange = function handleVisibleMessagesChange(arg0) {
-      ({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex } = arg0);
-      ({ firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source } = arg0);
+    handleVisibleMessagesChange = function handleVisibleMessagesChange(ChatTTITracker) {
+      ({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex } = ChatTTITracker);
+      ({ firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source } = ChatTTITracker);
       closure_28(firstVisibleMessageRowIndex, lastVisibleMessageRowIndex);
       const visibleMessages = messages_MessagesUtils.getVisibleMessages({
         firstVisibleMessageRowIndex,
@@ -153,9 +153,9 @@ class MessagesRenderer {
         channelId: merged.channelId,
       };
     };
-    findMessageIndex = function findMessageIndex(ChatTTITracker) {
-      if (null != ChatTTITracker) {
-        return computeScrollData.findMessageRowIndex(first.getPreviousRows(), ChatTTITracker);
+    findMessageIndex = function findMessageIndex(startMessageId) {
+      if (null != startMessageId) {
+        return computeScrollData.findMessageRowIndex(first.getPreviousRows(), startMessageId);
       }
     };
     closure_30 = async function _handleTapNavBar() {
@@ -196,23 +196,23 @@ class MessagesRenderer {
                     obj5.limit = limit;
                     v1 = 1;
                     hasJumpedToOriginalPost = 1;
-                    const obj7 = { value: tmp11(tmp12[26]).fetchMessages(obj5), done: false };
+                    const obj7 = { value: tmp11(tmp12[25]).fetchMessages(obj5), done: false };
                     return obj7;
                   } else {
-                    const tmp26 = findMessageIndex(tmp11(tmp12[20]).castChannelIdAsMessageId(channel.id));
+                    const tmp26 = findMessageIndex(tmp11(tmp12[19]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
                       return { value: "HermesInternal", done: null };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
-                      tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj8);
+                      tmp11(tmp12[16]).scrollTo(ref.current, tmp26, obj8);
                       const _setTimeout2 = setTimeout;
                       const timerId = setTimeout(() => closure_2_25(!closure_1_0), 10 * tmp26);
-                      const tmp11Result4 = tmp11(tmp12[17]);
+                      const tmp11Result4 = tmp11(tmp12[16]);
                     }
-                    const tmp11Result3 = tmp11(tmp12[20]);
+                    const tmp11Result3 = tmp11(tmp12[19]);
                   }
-                  obj2 = v1(hasJumpedToOriginalPost[20]);
+                  obj2 = v1(hasJumpedToOriginalPost[19]);
                 }
               }
               hasJumpedToOriginalPost = 3;
@@ -331,7 +331,7 @@ class MessagesRenderer {
     obj = closure_5;
     tmp2 = closure_4;
     first = closure_4(
-      closure_5.useState(() => new first(hasJumpedToOriginalPost[15])()),
+      closure_5.useState(() => new first(hasJumpedToOriginalPost[14])()),
       1,
     )[0];
     closure_1 = first;
@@ -368,7 +368,7 @@ class MessagesRenderer {
     }, []);
     tmp15 = closure_2;
     tmp14 = closure_0;
-    obj2 = closure_0(closure_2[18]);
+    obj2 = closure_0(closure_2[17]);
     chatUpdatesQueue = obj2.useChatUpdatesQueue(ref5, callback);
     closure_12 = chatUpdatesQueue;
     items = [,];
@@ -415,7 +415,7 @@ class MessagesRenderer {
       oldestUnreadMessageId: merged.oldestUnreadMessageId,
       shouldJumpToOriginalPost: callback3,
     };
-    tmp21 = closure_1(closure_2[21])(obj1);
+    tmp21 = closure_1(closure_2[20])(obj1);
     ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = tmp21);
     obj11 = {
       chatRef: ref5,
@@ -470,7 +470,7 @@ class MessagesRenderer {
       isStaff: merged.isStaff,
       visibleMessagesWindowHandler: merged.visibleMessagesWindowHandler,
     };
-    tmp22 = closure_1(closure_2[25])(obj11);
+    tmp22 = closure_1(closure_2[24])(obj11);
     ({
       hasHandledScrollRef,
       isAtBottomRef,
@@ -483,9 +483,9 @@ class MessagesRenderer {
       updateNativeRows,
     } = tmp22);
     ({ handleScrollCallbacks, loadMoreBefore, loadMoreAfter, scrollToTopMessage, handleScrollPosition } = tmp22);
-    obj5 = closure_0(closure_2[27]);
+    obj5 = closure_0(closure_2[26]);
     isMobileTimestampUpdatingEnabled = obj5.useIsMobileTimestampUpdatingEnabled("MessagesRenderer");
-    tmp24 = closure_1(closure_2[28]);
+    tmp24 = closure_1(closure_2[27]);
     if (isMobileTimestampUpdatingEnabled) {
       isMobileTimestampUpdatingEnabled = false !== merged.isActive;
     }
@@ -529,7 +529,7 @@ class MessagesRenderer {
     obj13 = {
       chatManager: first,
       rowGenerator: closure_4(
-        closure_5.useState(() => new first(hasJumpedToOriginalPost[16])()),
+        closure_5.useState(() => new first(hasJumpedToOriginalPost[15])()),
         1,
       )[0],
       animatingStickerMessageIdRef: ref3,
@@ -563,7 +563,7 @@ class MessagesRenderer {
       animatedRef: ref,
       hasMoreMessagesAfterForLastUpdateRef: ref1,
       updateNativeRows,
-      isLoadingAtTop: deceleratingRef,
+      isLoadingAtTop: isNearTopRef,
       channelLatestMessageLoadingStatsManager,
       channelId: merged.channelId,
       isMessagesCached: merged.isMessagesCached,
@@ -573,7 +573,7 @@ class MessagesRenderer {
       scrollToTopMessage,
       useReducedMotion: merged.useReducedMotion,
     };
-    tmp28 = tmp20(tmp15[30])(obj13);
+    tmp28 = tmp20(tmp15[29])(obj13);
     ({ updateRows, scrollToMessageId } = tmp28);
     effect = obj.useEffect(() => {
       messages = messages.messages;
@@ -587,14 +587,14 @@ class MessagesRenderer {
           hasJumpedToOriginalPost: null,
         };
         ({ jumpTargetId: obj2.scrollToMessageId, jumpTargetId: obj2.jumpTargetId } = messages);
-        obj5.jumpType = merged(hasJumpedToOriginalPost[31]).JumpType.INSTANT;
+        obj5.jumpType = merged(hasJumpedToOriginalPost[30]).JumpType.INSTANT;
         obj5.focusTargetId = messages.focusTargetId;
         obj5.hasJumpedToOriginalPost = hasJumpedToOriginalPost;
         _undefined4(obj5);
         if (null != messages.jumpTargetId) {
           const obj7 = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, hasJumpedToOriginalPost: null };
           ({ jumpTargetId: obj3.scrollToMessageId, jumpTargetId: obj3.jumpTargetId } = messages);
-          obj7.jumpType = merged(hasJumpedToOriginalPost[31]).JumpType.INSTANT;
+          obj7.jumpType = merged(hasJumpedToOriginalPost[30]).JumpType.INSTANT;
           obj7.hasJumpedToOriginalPost = hasJumpedToOriginalPost;
           _undefined5(obj7);
         } else if (null != oldestUnreadMessageId) {
@@ -621,16 +621,16 @@ class MessagesRenderer {
         hasFetched = messages2.ready && !messages2.cached;
         const tmp17 = messages2.ready && !messages2.cached;
       }
-      first(hasJumpedToOriginalPost[11]).recordMessageRender(channelId, mapped, hasFetched, messages2.hasMoreAfter);
+      first(hasJumpedToOriginalPost[10]).recordMessageRender(channelId, mapped, hasFetched, messages2.hasMoreAfter);
       ({ channelId: channelId2, messages: messages3 } = messages);
-      const obj4 = first(hasJumpedToOriginalPost[11]);
+      const obj4 = first(hasJumpedToOriginalPost[10]);
       const mapped1 = messages3.map((id) => id.id);
       let hasFetched2 = messages3.hasFetched;
       if (!hasFetched2) {
         hasFetched2 = messages3.ready && !messages3.cached;
         const tmp20 = messages3.ready && !messages3.cached;
       }
-      first(hasJumpedToOriginalPost[11]).recordMessageRender(channelId2, mapped1, hasFetched2, messages3.hasMoreAfter);
+      first(hasJumpedToOriginalPost[10]).recordMessageRender(channelId2, mapped1, hasFetched2, messages3.hasMoreAfter);
       return () => {
         clearRowsState("unmount");
       };
@@ -654,7 +654,7 @@ class MessagesRenderer {
         if (props.channelId !== tmp2.channelId) {
           _undefined(false);
         }
-        let tmp6 = !tmp106;
+        let tmp6 = !tmp107;
         if (props.channelId === tmp2.channelId) {
           tmp6 = closure_2;
         }
@@ -667,10 +667,10 @@ class MessagesRenderer {
         };
         if (props.channelId !== channelId) {
           obj2.clearRows();
-          const result = first(hasJumpedToOriginalPost[14]).clearChannelDimensions(channelId);
+          const result = first(hasJumpedToOriginalPost[13]).clearChannelDimensions(channelId);
           const result1 = obj2.startOrCancelChannelLatestMessagesLoad(obj2.hasJumpedToOriginalPost);
           obj2.firstIgnoredScrollEventTimestampRef.current = undefined;
-          let obj3 = first(hasJumpedToOriginalPost[14]);
+          let obj3 = first(hasJumpedToOriginalPost[13]);
         }
         const isMessagesAckable = props.isMessagesAckable;
         let isMessagesAckable2 = !isMessagesAckable;
@@ -690,7 +690,7 @@ class MessagesRenderer {
           isAtBottom: _undefined2.current,
           hasPreviousMessages: null != previousMessages.getPreviousMessages(),
         };
-        const tmp24Result = first(hasJumpedToOriginalPost[36])(tmp2, obj4, props);
+        const tmp24Result = first(hasJumpedToOriginalPost[35])(tmp2, obj4, props);
         ({ jumpTargetId, focusTargetId } = tmp24Result);
         let tmp28 = props.theme !== tmp2.theme;
         ({ scrollToMessageId, jumpType, minimizeScrolling, shouldInitialScroll } = tmp24Result);
@@ -730,7 +730,7 @@ class MessagesRenderer {
           tmp29 = props.displayNameStylesEnabled !== tmp2.displayNameStylesEnabled;
         }
         previousMessages = tmp31;
-        const tmp34 = first(hasJumpedToOriginalPost[37])(props.interactionStates, tmp2.interactionStates);
+        const tmp34 = first(hasJumpedToOriginalPost[36])(props.interactionStates, tmp2.interactionStates);
         closure_2 = !tmp34;
         _undefined = tmp35;
         shouldForceRender = tmp36;
@@ -758,14 +758,14 @@ class MessagesRenderer {
         tmp17 = closure_25;
         tmp18 = _undefined;
         const tmp21 = tmp2.isMessagesReady && !tmp2.isMessagesCached && props.isMessagesCached;
-        const tmp24 = first(hasJumpedToOriginalPost[36]);
-        const result2 = merged(hasJumpedToOriginalPost[37]).areArraysShallowEqual(
+        const tmp24 = first(hasJumpedToOriginalPost[35]);
+        const result2 = merged(hasJumpedToOriginalPost[36]).areArraysShallowEqual(
           props.activityInviteMessageIds,
           tmp2.activityInviteMessageIds,
         );
         closure_16 = !result2;
-        let obj5 = merged(hasJumpedToOriginalPost[37]);
-        const result3 = merged(hasJumpedToOriginalPost[37]).areArraysShallowEqual(
+        let obj5 = merged(hasJumpedToOriginalPost[36]);
+        const result3 = merged(hasJumpedToOriginalPost[36]).areArraysShallowEqual(
           props.resolvedReferralTrialOfferIds,
           tmp2.resolvedReferralTrialOfferIds,
         );
@@ -794,14 +794,15 @@ class MessagesRenderer {
           fontId1 = currentUserDisplayNameStyles2.fontId;
         }
         firstIgnoredScrollEventTimestampRef = tmp62;
-        let obj6 = merged(hasJumpedToOriginalPost[37]);
+        closure_25 = tmp63;
+        let obj6 = merged(hasJumpedToOriginalPost[36]);
         const tmp61 = props.voiceStatePrivateChannelId !== tmp2.voiceStatePrivateChannelId;
-        const result4 = merged(hasJumpedToOriginalPost[37]).areArraysShallowEqual(
+        const result4 = merged(hasJumpedToOriginalPost[36]).areArraysShallowEqual(
           props.fetchingSkuIds,
           tmp2.fetchingSkuIds,
         );
-        closure_25 = !result4;
-        closure_26 = tmp65;
+        closure_26 = !result4;
+        closure_27 = tmp66;
         if (!tmp29) {
           if (!tmp31) {
             if (props.uploads === tmp2.uploads) {
@@ -951,46 +952,50 @@ class MessagesRenderer {
                                                                                                                                           !tmp56
                                                                                                                                         ) {
                                                                                                                                           if (
-                                                                                                                                            !tmp65
+                                                                                                                                            !tmp66
                                                                                                                                           ) {
                                                                                                                                             if (
-                                                                                                                                              result4
+                                                                                                                                              !tmp63
                                                                                                                                             ) {
-                                                                                                                                              ({
-                                                                                                                                                channelId:
-                                                                                                                                                  channelId2,
-                                                                                                                                                messages,
-                                                                                                                                              } =
-                                                                                                                                                tmp2);
-                                                                                                                                              let obj8 =
-                                                                                                                                                first(
-                                                                                                                                                  hasJumpedToOriginalPost[11],
-                                                                                                                                                );
-                                                                                                                                              const mapped =
-                                                                                                                                                messages.map(
-                                                                                                                                                  (
-                                                                                                                                                    id,
-                                                                                                                                                  ) =>
-                                                                                                                                                    id.id,
-                                                                                                                                                );
-                                                                                                                                              let hasFetched =
-                                                                                                                                                messages.hasFetched;
                                                                                                                                               if (
-                                                                                                                                                !hasFetched
+                                                                                                                                                result4
                                                                                                                                               ) {
-                                                                                                                                                hasFetched =
-                                                                                                                                                  messages.ready &&
-                                                                                                                                                  !messages.cached;
-                                                                                                                                                const tmp69 =
-                                                                                                                                                  messages.ready &&
-                                                                                                                                                  !messages.cached;
+                                                                                                                                                ({
+                                                                                                                                                  channelId:
+                                                                                                                                                    channelId2,
+                                                                                                                                                  messages,
+                                                                                                                                                } =
+                                                                                                                                                  tmp2);
+                                                                                                                                                const obj8 =
+                                                                                                                                                  first(
+                                                                                                                                                    hasJumpedToOriginalPost[10],
+                                                                                                                                                  );
+                                                                                                                                                const mapped =
+                                                                                                                                                  messages.map(
+                                                                                                                                                    (
+                                                                                                                                                      id,
+                                                                                                                                                    ) =>
+                                                                                                                                                      id.id,
+                                                                                                                                                  );
+                                                                                                                                                let hasFetched =
+                                                                                                                                                  messages.hasFetched;
+                                                                                                                                                if (
+                                                                                                                                                  !hasFetched
+                                                                                                                                                ) {
+                                                                                                                                                  hasFetched =
+                                                                                                                                                    messages.ready &&
+                                                                                                                                                    !messages.cached;
+                                                                                                                                                  const tmp70 =
+                                                                                                                                                    messages.ready &&
+                                                                                                                                                    !messages.cached;
+                                                                                                                                                }
+                                                                                                                                                obj8.recordMessageRender(
+                                                                                                                                                  channelId2,
+                                                                                                                                                  mapped,
+                                                                                                                                                  hasFetched,
+                                                                                                                                                  messages.hasMoreAfter,
+                                                                                                                                                );
                                                                                                                                               }
-                                                                                                                                              obj8.recordMessageRender(
-                                                                                                                                                channelId2,
-                                                                                                                                                mapped,
-                                                                                                                                                hasFetched,
-                                                                                                                                                messages.hasMoreAfter,
-                                                                                                                                              );
                                                                                                                                             }
                                                                                                                                           }
                                                                                                                                         }
@@ -1078,10 +1083,10 @@ class MessagesRenderer {
         }
         if (props.isMessagesReady === tmp2.isMessagesReady) {
           if (props.isCallActive === tmp2.isCallActive) {
-            closure_28 = props.channelThreadsVersion !== tmp2.channelThreadsVersion;
-            closure_29 = props.rsvpVersion !== tmp2.rsvpVersion;
-            closure_30 = props.repliedIds !== tmp2.repliedIds;
-            closure_31 = props.hasLoadedExperiments !== tmp2.hasLoadedExperiments;
+            closure_29 = props.channelThreadsVersion !== tmp2.channelThreadsVersion;
+            closure_30 = props.rsvpVersion !== tmp2.rsvpVersion;
+            closure_31 = props.repliedIds !== tmp2.repliedIds;
+            closure_32 = props.hasLoadedExperiments !== tmp2.hasLoadedExperiments;
             let num = props.communicationDisabledVersion;
             if (num == null) {
               num = -1;
@@ -1101,11 +1106,11 @@ class MessagesRenderer {
               if (prop1 == null) {
                 prop1 = null;
               }
-              voiceChannelIdChangedAuthorIds = merged(hasJumpedToOriginalPost[13]).getVoiceChannelIdChangedAuthorIds(
+              voiceChannelIdChangedAuthorIds = merged(hasJumpedToOriginalPost[12]).getVoiceChannelIdChangedAuthorIds(
                 prop,
                 prop1,
               );
-              const tmp47Result2 = merged(hasJumpedToOriginalPost[13]);
+              const tmp47Result2 = merged(hasJumpedToOriginalPost[12]);
             }
             const messages1 = tmp2.messages;
             const item = messages1.forEach((author) => {
@@ -1120,20 +1125,20 @@ class MessagesRenderer {
               }
               if (closure_20) {
                 const activity = author.activity;
-                let type1;
+                let type;
                 if (activity != null) {
-                  type1 = activity.type;
+                  type = activity.type;
                 }
-                if (type1 === constants.STREAM_REQUEST) {
+                if (type === constants.STREAM_REQUEST) {
                   set.add(author.id);
                 }
               }
-              if (closure_31) {
+              if (closure_32) {
                 if (author.type === constants3.USER_JOIN) {
                   set.add(author.id);
                 }
               }
-              if (closure_30) {
+              if (closure_31) {
                 if (author.type === constants3.REPLY) {
                   const messageReference = author.messageReference;
                   if (null != messageReference) {
@@ -1144,17 +1149,17 @@ class MessagesRenderer {
                   }
                 }
               }
-              if (closure_28) {
+              if (closure_29) {
                 if (author.hasFlag(constants2.HAS_THREAD)) {
                   set.add(author.id);
                 }
               }
-              if (closure_29) {
+              if (closure_30) {
                 if (author.codedLinks.length > 0) {
                   set.add(author.id);
                 }
               }
-              if (closure_26) {
+              if (closure_27) {
                 if (author.codedLinks.length > 0) {
                   const codedLinks = author.codedLinks;
                   const iter = codedLinks[Symbol.iterator]();
@@ -1164,12 +1169,12 @@ class MessagesRenderer {
                     if (nextResult.type === CodedLink.CodedLinkType.INVITE) {
                       let invites = merged.invites;
                       value = invites.get(code);
-                      let tmp194 = value;
+                      let tmp177 = value;
                       if (null != value) {
-                        if (null != tmp194.channel) {
+                        if (null != tmp177.channel) {
                           let obj2 = InviteTypeUtils;
-                          if (obj2.isVoiceChannelInvite(tmp194)) {
-                            let id = tmp194.channel.id;
+                          if (obj2.isVoiceChannelInvite(tmp177)) {
+                            let id = tmp177.channel.id;
                             if (props.voiceInviteDataByChannelId[id] !== merged.voiceInviteDataByChannelId[id]) {
                               let addResult6 = set.add(author.id);
                               iter.return();
@@ -1208,8 +1213,8 @@ class MessagesRenderer {
                 if (closure_5) {
                   const interactionComponentStates = props.interactionComponentStates;
                   const interactionComponentStates2 = merged.interactionComponentStates;
-                  const value3 = interactionComponentStates.get(author.id);
-                  if (value3 !== interactionComponentStates2.get(author.id)) {
+                  value2 = interactionComponentStates.get(author.id);
+                  if (value2 !== interactionComponentStates2.get(author.id)) {
                     set.add(author.id);
                   }
                 }
@@ -1284,113 +1289,98 @@ class MessagesRenderer {
                     set.add(author.id);
                   }
                 }
-                if (closure_25) {
-                  if (author.codedLinks.length > 0) {
-                    const codedLinks2 = author.codedLinks;
-                    const iter2 = codedLinks2[Symbol.iterator]();
-                    while (iter2 !== undefined) {
-                      ({ type, code: code2 } = nextResult1);
-                      if (type === CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
-                        let first = _slicedToArray(code2.split("-"), 1)[0];
-                        let fetchingSkuIds = props.fetchingSkuIds;
-                        let tmp97 = first;
-                        if (fetchingSkuIds.includes(first)) {
-                          let addResult20 = set.add(author.id);
-                          iter2.return();
-                        } else {
-                          let value4 = SKUStore.get(tmp97);
-                          if (null != value4) {
-                            let invalidApplicationIds = props.invalidApplicationIds;
-                            if (invalidApplicationIds.includes(tmp103.applicationId)) {
-                              let addResult21 = set.add(author.id);
-                              iter2.return();
+                if (!closure_25) {
+                  if (null != author.author) {
+                    if (!obj10.messageAuthorActivitiesChanged(author, props, merged)) {
+                      if (!obj7.codedLinksChanged(author, props, merged)) {
+                        if (!closure_1) {
+                          if (!obj9.mediaPostPreviewEmbedsChanged(author, props, merged)) {
+                            let tmp107 = cacheStoreLoaded2;
+                            if (cacheStoreLoaded2) {
+                              tmp107 = author.embeds.length > 0;
                             }
-                          }
-                        }
-                      }
-                      continue;
-                    }
-                    nextResult1 = iter2.next();
-                  }
-                }
-                if (null != author.author) {
-                  if (!obj9.messageAuthorActivitiesChanged(author, props, merged)) {
-                    if (!obj6.codedLinksChanged(author, props, merged)) {
-                      if (!closure_1) {
-                        if (!obj8.mediaPostPreviewEmbedsChanged(author, props, merged)) {
-                          let tmp126 = cacheStoreLoaded2;
-                          if (cacheStoreLoaded2) {
-                            tmp126 = author.embeds.length > 0;
-                          }
-                          if (tmp126) {
-                            set.add(author.id);
-                          }
-                          let tmp130 = author.type === constants3.THREAD_STARTER_MESSAGE;
-                          if (tmp130) {
-                            tmp130 = props.threadStartingReferenceMessage !== merged.threadStartingReferenceMessage;
-                          }
-                          if (tmp130) {
-                            set.add(author.id);
-                          }
-                          let hasItem1 = closure_14;
-                          if (closure_14) {
-                            hasItem1 = null != author.applicationId;
-                          }
-                          if (hasItem1) {
-                            const invalidApplicationIds2 = props.invalidApplicationIds;
-                            hasItem1 = invalidApplicationIds2.includes(author.applicationId);
-                          }
-                          if (hasItem1) {
-                            set.add(author.id);
-                          }
-                          if (closure_17) {
-                            const referralTrialOfferId = author.referralTrialOfferId;
-                            let hasItem2 = null != referralTrialOfferId;
-                            if (hasItem2) {
-                              const resolvedReferralTrialOfferIds = merged.resolvedReferralTrialOfferIds;
-                              hasItem2 = resolvedReferralTrialOfferIds.includes(referralTrialOfferId);
+                            if (tmp107) {
+                              set.add(author.id);
                             }
-                            if (hasItem2) {
+                            let tmp111 = author.type === constants3.THREAD_STARTER_MESSAGE;
+                            if (tmp111) {
+                              tmp111 = props.threadStartingReferenceMessage !== merged.threadStartingReferenceMessage;
+                            }
+                            if (tmp111) {
+                              set.add(author.id);
+                            }
+                            let hasItem1 = closure_14;
+                            if (closure_14) {
+                              hasItem1 = null != author.applicationId;
+                            }
+                            if (hasItem1) {
+                              const invalidApplicationIds = props.invalidApplicationIds;
+                              hasItem1 = invalidApplicationIds.includes(author.applicationId);
+                            }
+                            if (hasItem1) {
+                              set.add(author.id);
+                            }
+                            if (closure_17) {
+                              const referralTrialOfferId = author.referralTrialOfferId;
+                              let hasItem2 = null != referralTrialOfferId;
+                              if (hasItem2) {
+                                const resolvedReferralTrialOfferIds = merged.resolvedReferralTrialOfferIds;
+                                hasItem2 = resolvedReferralTrialOfferIds.includes(referralTrialOfferId);
+                              }
+                              if (hasItem2) {
+                                set.add(author.id);
+                              }
+                            }
+                            let tmp124 = closure_18;
+                            if (closure_18) {
+                              tmp124 = author.codedLinks.length > 0;
+                            }
+                            if (tmp124) {
+                              set.add(author.id);
+                            }
+                            let tmp127 = closure_19;
+                            if (!closure_19) {
+                              tmp127 = closure_22;
+                            }
+                            if (tmp127) {
+                              const activity3 = author.activity;
+                              let party_id1;
+                              if (activity3 != null) {
+                                party_id1 = activity3.party_id;
+                              }
+                              tmp127 = null != party_id1;
+                            }
+                            if (tmp127) {
                               set.add(author.id);
                             }
                           }
-                          let tmp143 = closure_18;
-                          if (closure_18) {
-                            tmp143 = author.codedLinks.length > 0;
-                          }
-                          if (tmp143) {
-                            set.add(author.id);
-                          }
-                          let tmp146 = closure_19;
-                          if (!closure_19) {
-                            tmp146 = closure_22;
-                          }
-                          if (tmp146) {
-                            const activity3 = author.activity;
-                            let party_id1;
-                            if (activity3 != null) {
-                              party_id1 = activity3.party_id;
-                            }
-                            tmp146 = null != party_id1;
-                          }
-                          if (tmp146) {
-                            set.add(author.id);
-                          }
+                          obj9 = MessagesUtilsDefault;
+                        } else {
+                          MessagesUtilsDefault;
                         }
-                        obj8 = MessagesUtilsDefault;
-                      } else {
-                        MessagesUtilsDefault;
                       }
+                      obj7 = MessagesUtilsDefault;
                     }
-                    obj6 = MessagesUtilsDefault;
+                    set.add(author.id);
+                    obj10 = MessagesUtilsDefault;
                   }
+                }
+                const obj6 = useSocialLayerStorefrontEmbedData;
+                if (
+                  obj6.shouldRefreshSocialLayerStorefrontEmbed(
+                    author,
+                    props.socialLayerStorefrontEmbedData,
+                    merged.socialLayerStorefrontEmbedData,
+                    props.fetchingSkuIds,
+                    props.invalidApplicationIds,
+                  )
+                ) {
                   set.add(author.id);
-                  obj9 = MessagesUtilsDefault;
                 }
               }
               set.add(author.id);
             });
-            const obj7 = {
+            let obj7 = {
               forceRender: tmp29,
               forceReload: null,
               updateMessageIds: null,
@@ -1406,7 +1396,7 @@ class MessagesRenderer {
               hasJumpedToOriginalPost: null,
             };
             if (!tmp28) {
-              tmp28 = tmp106;
+              tmp28 = tmp107;
             }
             obj7.forceReload = tmp28;
             obj7.updateMessageIds = set;
@@ -1422,25 +1412,25 @@ class MessagesRenderer {
               props.channelId !== tmp2.channelId ||
               messages5.suppressRowAnimationSequenceId === messages4.suppressRowAnimationSequenceId;
             obj7.hasJumpedToOriginalPost = tmp6;
-            _undefined4(obj7);
+            voiceChannelIdChangedAuthorIds(obj7);
             closure_5(false);
             ({ channelId: channelId3, messages: messages3 } = tmp2);
-            const obj13 = first(hasJumpedToOriginalPost[11]);
+            const obj13 = first(hasJumpedToOriginalPost[10]);
             const mapped1 = messages3.map((id) => id.id);
             let hasFetched2 = messages3.hasFetched;
             if (!hasFetched2) {
               hasFetched2 = messages3.ready && !messages3.cached;
-              const tmp100 = messages3.ready && !messages3.cached;
+              const tmp101 = messages3.ready && !messages3.cached;
             }
             obj13.recordMessageRender(channelId3, mapped1, hasFetched2, messages3.hasMoreAfter);
-            const tmp92 =
+            const tmp93 =
               props.channelId !== tmp2.channelId ||
               messages5.suppressRowAnimationSequenceId === messages4.suppressRowAnimationSequenceId;
           }
         }
-        const tmp47Result = merged(hasJumpedToOriginalPost[37]);
+        const tmp47Result = merged(hasJumpedToOriginalPost[36]);
         const messages2 = tmp2.messages;
-        const arr = first(hasJumpedToOriginalPost[19]);
+        const arr = first(hasJumpedToOriginalPost[18]);
         const found = arr.find(messages2.toArray().reverse(), (type) => type.type === constants.CALL);
         if (null != found) {
           set.add(found.id);
@@ -1551,7 +1541,7 @@ class MessagesRenderer {
       onMediaAttachmentPlaybackEnded: first2.handleMediaAttachmentPlaybackEnded,
       onMediaAttachmentPlaybackStarted: first2.handleMediaAttachmentPlaybackStarted,
       onVoiceMessagePlaybackFailed: first2.handleVoiceMessagePlaybackFailed,
-      onTapShowAltText: isNearBottomRef,
+      onTapShowAltText: isAtBottomRef,
       onTapPostPreviewEmbed: first2.handleTapPostPreviewEmbed,
       onTapDismissMediaPostSharePrompt: first2.handleTapDismissMediaPostSharePrompt,
       onTapObscuredMediaLearnMore: first2.handleTapObscuredMediaLearnMore,
@@ -1597,7 +1587,7 @@ class MessagesRenderer {
           source: QuestTypes.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT,
         });
       },
-      onMediaPlayFinishedAnalytics: isNearTopRef,
+      onMediaPlayFinishedAnalytics: isNearBottomRef,
       onMessageVisibilityChanged: function handleMessageVisibilityChanged(nativeEvent) {
         nativeEvent = nativeEvent.nativeEvent;
         handleVisibleMessagesChange({
@@ -1610,11 +1600,11 @@ class MessagesRenderer {
       },
     };
     items4 = [,];
-    items4[0] = findMessageIndex(tmp20(tmp15[41]), obj15);
+    items4[0] = handleVisibleMessagesChange(tmp20(tmp15[41]), obj15);
     obj16 = { messages: merged.messages };
-    items4[1] = findMessageIndex(tmp14(tmp15[46]).ChatTTITracker, obj16);
+    items4[1] = handleVisibleMessagesChange(tmp14(tmp15[46]).ChatTTITracker, obj16);
     obj14.children = items4;
-    return isAtBottomRef(hasHandledScrollRef, obj14);
+    return hasHandledScrollRef(findMessageIndex, obj14);
   }
 }
 MessagesRenderer.displayName = "Messages";

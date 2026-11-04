@@ -38,13 +38,13 @@ export default function LiveTag(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.tag, style];
   obj.style = items;
-  const obj2 = { variant: "text-xs/semibold", style: null, lineClamp: 1, allowFontScaling, children: null };
+  const obj2 = { variant: "body-xs/semibold", style: null, lineClamp: 1, allowFontScaling, children: null };
   const items1 = [tmp.tagText, textStyle];
   obj2.style = items1;
   const intl = util.intl;
   obj2.children = intl.string(util.t.dI3q4h).toUpperCase();
   obj.children = jsx(Text_Text.Text, {
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     style: null,
     lineClamp: 1,
     allowFontScaling,

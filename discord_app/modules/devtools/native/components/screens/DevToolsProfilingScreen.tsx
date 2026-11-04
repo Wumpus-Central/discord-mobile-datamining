@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: null, monospace: null };
 let obj3 = {};
@@ -61,20 +61,20 @@ export default function DevToolsProfilingScreen() {
         const obj2 = { children: null };
         items = [
           closure_2_5(require("Text/Text").Text, {
-            variant: "text-sm/medium",
+            variant: "body-sm/medium",
             color: "text-subtle",
             style: closure_1_1.monospace,
             children: "Count - " + stat.count,
           }),
         ];
         const obj3 = {
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           color: "text-subtle",
           style: closure_1_1.monospace,
           children: "Count - " + stat.count,
         };
         items[1] = closure_2_5(require("Text/Text").Text, {
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           color: "text-subtle",
           style: closure_1_1.monospace,
           children: "Mean - " + stat.mean,
@@ -91,8 +91,8 @@ export default function DevToolsProfilingScreen() {
   } else {
     const obj6 = { title: "Component Profiler", hasIcons: false, children: null };
     const obj7 = { label: "No components rendered yet.", subLabel: null };
-    const obj8 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-    const obj9 = { variant: "text-xs/semibold", style: tmp3.monospace, children: "<ComponentProfiler />" };
+    const obj8 = { variant: "body-xs/medium", color: "text-subtle", children: null };
+    const obj9 = { variant: "body-xs/semibold", style: tmp3.monospace, children: "<ComponentProfiler />" };
     const items1 = [
       "Make sure you wrap your component in ",
       closure_5(Text_Text.Text, obj9),

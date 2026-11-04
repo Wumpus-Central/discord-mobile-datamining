@@ -13,8 +13,8 @@ const PremiumTypes = fn(1387).PremiumTypes;
 const Constants = fn(1072);
 ({
   AnalyticsSections: hasOwnProperty,
-  AnalyticsObjects: metroRequire,
-  AnalyticsObjectTypes: closure_7,
+  AnalyticsObjects: closure_6,
+  AnalyticsObjectTypes: metroImportDefault,
   UserSettingsSections: closure_8,
 } = Constants);
 const size = fn(2);
@@ -43,7 +43,7 @@ export function getButtonActionHandler(arg0) {
           page,
           section: constants.FOOTER,
           object: constants2.BUTTON_CTA,
-          objectType: React5.TIER_1,
+          objectType: metroImportDefault.TIER_1,
         },
         analyticsLocations,
         premiumType: PremiumTypes.TIER_1,
@@ -62,7 +62,7 @@ export function getButtonActionHandler(arg0) {
                 page,
                 section: constants.FOOTER,
                 object: constants2.BUTTON_CTA,
-                objectType: React5.BUY,
+                objectType: metroImportDefault.BUY,
               },
               analyticsLocations,
               onPaymentSuccess,

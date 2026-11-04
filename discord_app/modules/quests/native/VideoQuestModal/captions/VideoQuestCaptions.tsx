@@ -66,9 +66,9 @@ export function VideoQuestCaptions(currentTime) {
       const items1 = [tmp.container, style];
       obj2.style = items1;
       const obj3 = { style: tmp.captionBox, blurTheme: "dark", blurStyle: "default", blurAmount: 0.2, children: null };
-      const obj4 = { variant: "heading-sm/medium", style: tmp.captionText, children: memo.text };
+      const obj4 = { variant: "heading-xs/medium", style: tmp.captionText, children: memo.text };
       obj3.children = jsx(currentTime(tmp3[9]).Text, {
-        variant: "heading-sm/medium",
+        variant: "heading-xs/medium",
         style: tmp.captionText,
         children: memo.text,
       });

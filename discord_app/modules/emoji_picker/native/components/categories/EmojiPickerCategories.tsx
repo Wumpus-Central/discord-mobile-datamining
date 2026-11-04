@@ -12,11 +12,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const EmojiCategoryTypes = fn(6919).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6934).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
-  AnalyticsPages: metroRequire,
+  AnalyticsPages: closure_6,
   CATEGORY_ICON_SIZE,
   EXPRESSION_FOOTER_HEIGHT,
 } = Constants);
@@ -344,7 +344,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   }, items16);
   const callback6 = obj2.useCallback(
     (arg0, index) =>
-      React7(EmojiPickerCategoriesItemDefault, {
+      React6(EmojiPickerCategoriesItemDefault, {
         category: _undefined2[index],
         categoryIndexActive,
         index,
@@ -392,7 +392,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       onPress: callback4,
       style: tmp.item,
     };
-    tmp37Result = tmp37(tmp34(10218), obj7);
+    tmp37Result = tmp37(tmp34(10266), obj7);
   }
   items18[1] = tmp37Result;
   let tmp37Result2 = null;
@@ -400,7 +400,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const obj8 = { style: null, iconStyle: null, onBackspace: null };
     ({ item: obj10.style, keyboardItem: obj10.iconStyle } = tmp);
     obj8.onBackspace = onBackspace;
-    tmp37Result2 = tmp37(tmp34(10220), obj8);
+    tmp37Result2 = tmp37(tmp34(10268), obj8);
   }
   items18[2] = tmp37Result2;
   obj4.children = callback(ref, { children: items18 });

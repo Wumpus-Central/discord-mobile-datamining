@@ -25,14 +25,14 @@ function RaisedHandIcon(rtsState) {
   }
   const obj = {
     style: items,
-    children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(12041), color: PRIMARY_800 }),
+    children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(12100), color: PRIMARY_800 }),
   };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   touchableContainer: { overflow: "visible" },

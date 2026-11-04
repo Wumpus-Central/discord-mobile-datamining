@@ -12,7 +12,7 @@ import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7749).useNativeCheckoutStore;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
 const PremiumConstants = fn(1387);
@@ -175,7 +175,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     }
   }
   const items2 = [tmp17Result, ,];
-  let obj5 = { variant: "text-xs/normal", style: tmp3.disclaimer, children: null };
+  let obj5 = { variant: "body-xs/normal", style: tmp3.disclaimer, children: null };
   const intl = tmp4(tmp2[28]).intl;
   let obj6 = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
   const intl2 = tmp4(tmp2[28]).intl;

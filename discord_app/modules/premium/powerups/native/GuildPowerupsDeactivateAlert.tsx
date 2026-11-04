@@ -60,11 +60,11 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   if (tmp7Result) {
     const obj7 = {
       style: tmp.warningText,
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-feedback-critical",
       children: error,
     };
-    tmp7Result = closure_4(tmp5(5747).Text, obj7);
+    tmp7Result = closure_4(tmp5(5761).Text, obj7);
   }
   const obj8 = { children: null };
   items = [tmp7Result, ,];
@@ -100,9 +100,9 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     style: tmp.extraContentContainer,
     children: arr.map((critical, index) => {
       const obj = { style: warningText.warningText, variant: null, color: null, children: null };
-      let str = "text-sm/medium";
+      let str = "body-sm/medium";
       if (critical.critical) {
-        str = "text-sm/semibold";
+        str = "body-sm/semibold";
       }
       obj.variant = str;
       let str2;

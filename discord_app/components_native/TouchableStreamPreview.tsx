@@ -114,7 +114,7 @@ function StreamPreviewContainer(disableTransition) {
   const obj5 = disableTransition(stream[15]);
   obj8.children = jsx(disableTransition(stream[24]).Text, {
     style: tmp.ctaText,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "text-overlay-light",
     children: stringResult1,
   });

@@ -6,7 +6,7 @@ import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import MaskedLinkUtils from "../../../../utils/MaskedLinkUtils.tsx";
 import SearchPlatformUtils from "../SearchPlatformUtils.tsx";
-import search_tracking_TrackingDefault from "../tracking/Tracking.tsx";
+import TrackingDefault from "../tracking/Tracking.tsx";
 import SearchPlatformActionCreatorsDefault from "../SearchPlatformActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -91,10 +91,10 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: closure_10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18866).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9957).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(18969).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9975).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
 const StaticChannelRoute = fn(4997).StaticChannelRoute;
@@ -544,11 +544,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(14017).delayUntilNavigationComplete(() => {
+      const result = searchContext(14103).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(14017);
+      let obj2 = searchContext(14103);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {
@@ -561,7 +561,7 @@ export function useOnPressSearchHistoryText(searchContext) {
       const item = tags.forEach((type) => {
         if (type.type === constants2.COMPLETE) {
           const obj2 = { searchContext, searchTokenType: type.searchTokenType, location: constants3.SEARCH_HISTORY };
-          search_tracking_TrackingDefault.trackSearchFilterAdd(obj2);
+          TrackingDefault.trackSearchFilterAdd(obj2);
         }
       });
     }

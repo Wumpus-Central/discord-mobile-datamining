@@ -23,7 +23,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-fn(7722).GPlayBillingResult;
+fn(7738).GPlayBillingResult;
 const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 const PaymentGateways = fn(1083).PaymentGateways;
@@ -280,12 +280,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    let obj6 = {
-      orderId: "a",
-      planId: "dragoste",
-      planSelection: "iubire",
-      giftInfo: "m\u00E2ini care formeaz\u0103 o inim\u0103",
-    };
+    let obj6 = { orderId: "a", planId: "flexDirection", planSelection: "count", giftInfo: 263 };
     let obj7 = { premiumType, planInterval: first1 };
     obj6.planSelection = obj7;
     closure_130_13 = obj.useRef(obj6);

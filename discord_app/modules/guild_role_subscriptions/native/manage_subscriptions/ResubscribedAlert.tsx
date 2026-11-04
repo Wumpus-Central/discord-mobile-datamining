@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef17353 from "../../../../../_runtime/metro/17353__.js";
+import _modDef17444 from "../../../../../_runtime/metro/17444__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -35,11 +35,11 @@ export default function ResubscribedAlert(onClose) {
   const obj2 = { style: tmp.body, children: null };
   const obj3 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj3.source = _modDef17353;
+  obj3.source = _modDef17444;
   obj3.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj3), React4(native.Spacer, { size: 27 }), , ,];
   const obj4 = {
-    variant: "text-lg/semibold",
+    variant: "body-lg/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.centerText,
     children: null,
@@ -49,7 +49,7 @@ export default function ResubscribedAlert(onClose) {
   items[2] = React4(Text_Text.Text, obj4);
   items[3] = React4(native.Spacer, { size: 12 });
   const obj5 = {
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     color: "mobile-text-heading-primary",
     style: tmp.centerText,
     children: null,

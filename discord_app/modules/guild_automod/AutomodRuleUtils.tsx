@@ -8,13 +8,13 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(19822).getRuleCountByTriggerType;
-const Constants = fn(13428);
+const getRuleCountByTriggerType = fn(19938).getRuleCountByTriggerType;
+const Constants = fn(13512);
 ({
   AutomodTriggerType: closure_4,
   MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty,
-  MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: metroRequire,
-  MAX_CHARACTERS_PER_KEYWORD: closure_7,
+  MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: closure_6,
+  MAX_CHARACTERS_PER_KEYWORD: metroImportDefault,
   MIN_CHARACTERS_PER_KEYWORD: closure_8,
   MIN_REGEX_PATTERN_LENGTH: closure_9,
   MAX_REGEX_PATTERN_LENGTH: closure_10,

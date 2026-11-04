@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   image: { width: "100%" },
@@ -26,7 +26,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
   const tmp = closure_7();
-  const bottomSheetRef1 = markAsDismissed(8865).useBottomSheetRef();
+  const bottomSheetRef1 = markAsDismissed(8882).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   const obj2 = {
     ref: bottomSheetRef,
@@ -41,28 +41,28 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   const obj3 = { children: null };
   items = [
     closure_5(FastImageDefault, { source: imageSource, style: tmp.image }),
-    closure_5(markAsDismissed(5718).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose }),
+    closure_5(markAsDismissed(5731).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose }),
   ];
   obj3.children = items;
   obj2.header = closure_6(View, obj3);
   const obj5 = { style: tmp.content, children: null };
   const items1 = [
-    closure_5(markAsDismissed(5747).Text, {
+    closure_5(markAsDismissed(5761).Text, {
       accessibilityRole: "header",
       variant: "heading-xl/medium",
       color: "mobile-text-heading-primary",
       children: header,
     }),
     closure_5(markAsDismissed(1187).Spacer, { size: 12 }),
-    closure_5(markAsDismissed(5747).Text, {
+    closure_5(markAsDismissed(5761).Text, {
       style: tmp.description,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       children: body,
     }),
-    closure_5(markAsDismissed(5754).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta }),
+    closure_5(markAsDismissed(5768).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta }),
   ];
   obj5.children = items1;
   obj2.children = closure_6(View, obj5);
-  return closure_5(markAsDismissed(5395).BottomSheet, obj2);
+  return closure_5(markAsDismissed(5396).BottomSheet, obj2);
 }

@@ -17,7 +17,7 @@ export default function FormLabel(children) {
     color = "mobile-text-heading-primary";
   }
   return jsx(Text_Text.Text, {
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     color,
     lineClamp,
     style,

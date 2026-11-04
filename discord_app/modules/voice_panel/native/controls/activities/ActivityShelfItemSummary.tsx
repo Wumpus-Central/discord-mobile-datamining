@@ -29,7 +29,7 @@ function ParticipantsSummary(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   ongoingActivityContainer: {
@@ -76,7 +76,7 @@ export default function ActivityShelfItemSummary(submitting) {
   let tmp7Result = flag;
   items = [
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       style: flag ? tmp.loadingTextColor : tmp.overlayActivityNameText,
       lineClamp: 2,
       children: applicationName,

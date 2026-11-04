@@ -18,7 +18,7 @@ function ShopThisLookMarketingCoachmarkImage() {
 }
 const View = fn(17).View;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
-const UserProfileThemeTypes = fn(7497).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7513).UserProfileThemeTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });

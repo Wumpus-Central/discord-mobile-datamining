@@ -11,7 +11,7 @@ import NotificationCenterStore from "NotificationCenterStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const ReadStateTypes = fn(6911).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemsLoader.tsx");
 

@@ -20,11 +20,11 @@ export default function HubEmailConnectionDescriptionActionsheet() {
   const intl = util.intl;
   obj2.title = intl.string(util.t["48kg+O"]);
   items = [React2(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ,];
-  const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj3 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.O1k9XX);
   items[1] = React2(Text_Text.Text, obj3);
-  const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj4 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;
   obj4.children = intl3.string(util.t.FV5dvh);
   items[2] = React2(Text_Text.Text, obj4);

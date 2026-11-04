@@ -5,7 +5,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const noop = fn(19);
-({ useEffect: closure_4, useMemo: hasOwnProperty, useState: metroRequire } = noop);
+({ useEffect: closure_4, useMemo: hasOwnProperty, useState: closure_6 } = noop);
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -64,7 +64,7 @@ export default function CheckpointCountUpStatNumber(start) {
         return obj;
       }, items2)}
     >
-      {jsx(num2(13782), { value: tmp4, size: num2 })}
+      {jsx(num2(13868), { value: tmp4, size: num2 })}
     </View>
   );
 }

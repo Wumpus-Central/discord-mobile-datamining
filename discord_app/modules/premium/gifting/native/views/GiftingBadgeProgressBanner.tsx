@@ -67,7 +67,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   }
   obj3.children = tmp10Result;
   const items2 = [React4(View, obj3)];
-  const obj5 = { variant: "text-md/semibold", children: null };
+  const obj5 = { variant: "body-md/semibold", children: null };
   const intl = util.intl;
   obj5.children = intl.formatToPlainString(_modDef2763["0+xfd9"], {
     giftsRemaining: giftsToNextTier,

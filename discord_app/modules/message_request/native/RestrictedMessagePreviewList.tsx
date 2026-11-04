@@ -17,22 +17,22 @@ function HiddenMedia(length) {
   _require = tmp;
   let obj = { children: null };
   items = [
-    Array.from({ length: length.count }, (arg0, arg1) => {
+    Array.from({ length: length.count }, (arg0, id) => {
       const obj = { style: mediaPlaceholderCard.mediaPlaceholderCard, children: null };
       items = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "text-muted" })];
-      const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj2 = { variant: "body-sm/medium", color: "text-muted", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.B2xSxL);
       items[1] = timestampProducer(Text_Text.Text, obj2);
       obj.children = items;
-      return React5(View, obj, arg1);
+      return metroImportDefault(View, obj, id);
     }),
   ];
   let obj2 = { style: tmp.mediaHiddenRow, children: null };
   const items1 = [
     closure_6(require("CircleInformationIcon").CircleInformationIcon, { size: "sm", color: "text-muted" }),
   ];
-  const obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj3 = { variant: "body-sm/normal", color: "text-muted", children: null };
   let intl = require("util").intl;
   obj3.children = intl.string(require("util").t["VGf+K3"]);
   items1[1] = closure_6(require("Text/Text").Text, obj3);
@@ -43,7 +43,7 @@ function HiddenMedia(length) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 let closure_9 = {
   renderEmbeds: false,
   renderReactions: false,
@@ -75,7 +75,7 @@ let closure_9 = {
 const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "column" },
-  hiddenMedia: { marginLeft: fn(19146).RESTRICTED_CONTENT_INSET },
+  hiddenMedia: { marginLeft: fn(19249).RESTRICTED_CONTENT_INSET },
   messageRow: { position: "relative" },
   avatarHitbox: null,
   dateDivider: null,
@@ -87,11 +87,11 @@ let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(19146).RESTRICTED_CONTENT_INSET,
-  height: fn(19146).RESTRICTED_AVATAR_SIZE,
+  width: fn(19249).RESTRICTED_CONTENT_INSET,
+  height: fn(19249).RESTRICTED_AVATAR_SIZE,
 };
 obj2.avatarHitbox = size;
-let obj3 = { marginLeft: fn(19146).RESTRICTED_CONTENT_INSET };
+let obj3 = { marginLeft: fn(19249).RESTRICTED_CONTENT_INSET };
 obj2.dateDivider = {
   flexDirection: "row",
   alignItems: "center",
@@ -246,7 +246,7 @@ export default function RestrictedMessagePreviewList(channelId) {
           const obj3 = { style: closure_1.dividerLine };
           items = [timestampProducer(View, obj3), ,];
           const obj4 = {
-            variant: "text-xs/semibold",
+            variant: "body-xs/semibold",
             color: "text-muted",
             children: DateUtils.dateFormat(message.timestamp, "LL"),
           };
@@ -254,7 +254,7 @@ export default function RestrictedMessagePreviewList(channelId) {
           const obj6 = { style: closure_1.dividerLine };
           items[2] = timestampProducer(View, obj6);
           obj2.children = items;
-          tmp6Result = React5(View, obj2);
+          tmp6Result = metroImportDefault(View, obj2);
         }
         const items1 = [tmp6Result];
         if ("message" === type.type) {
@@ -272,7 +272,7 @@ export default function RestrictedMessagePreviewList(channelId) {
           const _HermesInternal = HermesInternal;
           id = "blocked-" + message.id;
         }
-        return React5(View, obj8, id);
+        return metroImportDefault(View, obj8, id);
       } else if ("message" === tmp.type) {
         let message2 = tmp.message;
       } else {

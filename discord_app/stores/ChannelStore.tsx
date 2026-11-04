@@ -392,7 +392,7 @@ function deleteChannel(guild_id) {
         dependencyMap8[guild_id.guild_id] = num + 1;
       }
     }
-    if (React6(guild_id.type)) {
+    if (React5(guild_id.type)) {
       closure_27 = closure_27 + 1;
     }
   }
@@ -432,7 +432,7 @@ function handleLoadMessages(arg0) {
       hasItem = set3.has(tmp2.thread.type);
     }
     if (hasItem) {
-      let tmp11 = setThread(React5(tmp2.thread));
+      let tmp11 = setThread(metroImportDefault(tmp2.thread));
     }
     continue;
   }
@@ -469,7 +469,7 @@ function addThreadIfMissing(id) {
     hasItem = set3.has(id.type);
   }
   if (hasItem) {
-    const obj = React5(id);
+    const obj = metroImportDefault(id);
     let nsfw;
     ({ id, merge } = obj);
     if (dependencyMap2[obj.parent_id] != null) {
@@ -511,7 +511,7 @@ function guildChannelCount(id) {
 }
 const ChannelRecord = fn(4994);
 ({
-  createChannelRecordFromServer: closure_7,
+  createChannelRecordFromServer: metroImportDefault,
   isPrivate: closure_8,
   GUILD_CHANNEL_TYPES: closure_9,
   THREAD_CHANNEL_TYPES: closure_10,

@@ -24,7 +24,7 @@ function PasswordlessUpsell() {
   const obj5 = { style: { width: 70, height: 70 }, children: null };
   const obj6 = { source: null, resizeMode: "contain", style: null };
   const obj = require("useNavigation");
-  obj6.source = require("../../../../../_runtime/metro/16725__.js");
+  obj6.source = require("../../../../../_runtime/metro/16817__.js");
   obj6.style = tmp.upsellImagePasswordless;
   obj5.children = closure_10(FastImageDefault, obj6);
   items = [closure_10(View, obj5)];
@@ -34,7 +34,7 @@ function PasswordlessUpsell() {
   const intl = require("util").intl;
   obj9.children = intl.string(require("util").t["+Svv46"]);
   const items1 = [closure_10(require("Text/Text").Heading, obj9), ,];
-  const obj10 = { variant: "text-md/normal", color: "text-muted", children: null };
+  const obj10 = { variant: "body-md/normal", color: "text-muted", children: null };
   const intl2 = require("util").intl;
   obj10.children = intl2.string(require("util").t.S0g2K9);
   items1[1] = closure_10(require("Text/Text").Text, obj10);
@@ -68,7 +68,7 @@ function AccountTwoFALabel() {
   first = tmp3[0];
   closure_1 = tmp5;
   let obj = first(504);
-  const isUserVerified = first(16726).useIsUserVerified();
+  const isUserVerified = first(16818).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = noop.useMemo(() => {
     let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
@@ -92,7 +92,7 @@ function AccountTwoFALabel() {
   const obj4 = { title: null };
   const intl = tmp(1113).intl;
   obj4.title = intl.string(first(1113).t.fuTmEJ);
-  items3[1] = closure_10(first(7186).TableRowGroupTitle, obj4);
+  items3[1] = closure_10(first(7201).TableRowGroupTitle, obj4);
   obj3.children = items3;
   return closure_11(closure_12, obj3);
 }
@@ -153,7 +153,7 @@ function AccountSecurityPage() {
   return closure_1_10(SettingLayoutDefault, { node });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);

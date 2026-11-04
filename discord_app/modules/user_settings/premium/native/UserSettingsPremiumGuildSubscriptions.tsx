@@ -34,7 +34,7 @@ const createStyles = fn(5141);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(6898).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(6913).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -85,14 +85,14 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
   let tmp3Result = null;
   if (props.hasSlots) {
     const obj = { style: tmp.subscriptionHeader, children: null };
-    const obj2 = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
+    const obj2 = { style: null, variant: "body-sm/medium", color: "interactive-text-default", children: null };
     items = [,];
     ({ blurb: arr[0], blurbNotLast: arr[1] } = tmp);
     obj2.style = items;
     const intl = util.intl;
     obj2.children = intl.string(util.t.GwnFO5);
     const items1 = [gesture(Text_Text.Text, obj2), ,];
-    const obj3 = { style: tmp.blurb, variant: "text-sm/medium", color: "interactive-text-default", children: null };
+    const obj3 = { style: tmp.blurb, variant: "body-sm/medium", color: "interactive-text-default", children: null };
     const intl2 = util.intl;
     const obj4 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.GUILD_SUBSCRIPTIONS) };
     obj3.children = intl2.format(util.t.A4UTjH, obj4);
@@ -101,7 +101,7 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
     if (tmp6Result) {
       const obj6 = {
         style: tmp.externalManagement,
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-default",
         children: externalManagementMessage,
       };
@@ -176,12 +176,12 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     flag = true;
   }
   let obj = require("useSubscriptionPlansLoaded");
-  ({ fractionalState: c2, endsAt } = flag(7702)({ forceFetch: true }));
-  const tmp3 = flag(7702)({ forceFetch: true });
+  ({ fractionalState: c2, endsAt } = flag(7718)({ forceFetch: true }));
+  const tmp3 = flag(7718)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(15491)(endsAt, tmp(15491).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(15491);
+  fpDurationText = flag(15578)(endsAt, tmp(15578).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(15578);
   items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {

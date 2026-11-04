@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef14523 from "../../../../../_runtime/metro/14523__.js";
+import _modDef14603 from "../../../../../_runtime/metro/14603__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(function GuildRoleSubscriptionsChannelHeader() {
   const obj = { style: closure_6().header, children: null };
-  items = [React4(native.Icon, { source: _modDef14523, size: native.Icon.Sizes.MEDIUM, disableColor: true })];
+  items = [React4(native.Icon, { source: _modDef14603, size: native.Icon.Sizes.MEDIUM, disableColor: true })];
   const obj3 = { variant: "heading-lg/semibold", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["KzCF/6"]);

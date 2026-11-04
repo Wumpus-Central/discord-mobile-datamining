@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const UserFlags = fn(1072).UserFlags;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);

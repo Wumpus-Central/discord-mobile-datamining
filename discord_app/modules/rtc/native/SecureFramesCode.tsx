@@ -29,7 +29,7 @@ function SecureFramesCodeGrid(chunks) {
           children: join.map((children, index) =>
             closure_2_5(
               chunks(columns[6]).Text,
-              { style: codeText.codeText, variant: "text-md/normal", color: "text-default", children },
+              { style: codeText.codeText, variant: "body-md/normal", color: "text-default", children },
               "" + children + "-" + index,
             ),
           ),
@@ -48,7 +48,7 @@ function SecureFramesCodeGrid(chunks) {
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   codeText: { fontFamily: fn(1083).Fonts.CODE_NORMAL },
@@ -99,7 +99,7 @@ export default function SecureFramesCode(chunks) {
   items = [
     hasOwnProperty(Text_Text.Text, {
       color: "mobile-text-heading-primary",
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       children: title,
     }),
     trailing,
@@ -118,5 +118,5 @@ export default function SecureFramesCode(chunks) {
   obj2.children = tmp5Result;
   items1[1] = hasOwnProperty(React4, obj2);
   obj5.children = items1;
-  return timestampProducer(React5, obj5);
+  return timestampProducer(metroImportDefault, obj5);
 }

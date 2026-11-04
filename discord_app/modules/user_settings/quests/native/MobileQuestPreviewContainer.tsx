@@ -23,7 +23,7 @@ export default function MobileQuestPreviewContainer(title) {
   const obj = { style: tmp.container, children: null };
   let tmp4 = null != title;
   if (tmp4) {
-    const obj2 = { variant: "text-lg/semibold", color: "text-default", style: tmp.title, children: title };
+    const obj2 = { variant: "body-lg/semibold", color: "text-default", style: tmp.title, children: title };
     tmp4 = React3(Text_Text.Text, obj2);
   }
   items = [tmp4, title.children];

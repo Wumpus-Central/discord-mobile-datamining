@@ -10,9 +10,9 @@ import getGameOrganizationDisplayNounDefault from "../../../../../../game_organi
 import GameOrganizationInviteStore from "../../../../../../game_organization_invites/GameOrganizationInviteStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(10247).CodedLinkExtendedType;
-const constants = fn(11501).GameOrganizationInviteStates;
-const InviteTypes = fn(8003).InviteTypes;
+const CodedLinkExtendedType = fn(10295).CodedLinkExtendedType;
+const constants = fn(11551).GameOrganizationInviteStates;
+const InviteTypes = fn(8019).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx",

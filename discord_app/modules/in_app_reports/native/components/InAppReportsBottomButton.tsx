@@ -76,7 +76,7 @@ export default function InAppReportsBottomButton(button) {
       const obj3 = { style: tmp.paddingHorizontal, children: null };
       let tmp14Result = null;
       if (null != tmp3) {
-        const obj4 = { style: tmp.descriptionText, variant: "text-xs/medium", color: "text-default", children: tmp3 };
+        const obj4 = { style: tmp.descriptionText, variant: "body-xs/medium", color: "text-default", children: tmp3 };
         tmp14Result = React4(Text_Text.Text, obj4);
       }
       const items1 = [tmp14Result, ,];

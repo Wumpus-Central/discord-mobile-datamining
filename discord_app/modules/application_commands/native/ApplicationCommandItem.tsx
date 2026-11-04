@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10355).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10403).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
@@ -105,13 +105,13 @@ export default function ApplicationCommandItem(highlighted) {
   const items3 = [
     closure_7(section(stateFromStores[13]).Text, {
       lineClamp: 1,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: `/ ${command.displayName}`,
     }),
     closure_7(section(stateFromStores[13]).Text, {
       lineClamp: 1,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-default",
       children: command.displayDescription,
     }),
@@ -120,7 +120,7 @@ export default function ApplicationCommandItem(highlighted) {
   items2[1] = closure_8(View, obj7);
   items2[2] = closure_7(section(stateFromStores[13]).Text, {
     style: tmp3.applicationCommandSectionName,
-    variant: "eyebrow",
+    variant: "body-sm/medium",
     color: "text-muted",
     children: name,
   });

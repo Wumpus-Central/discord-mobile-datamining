@@ -30,7 +30,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     children: null,
   };
   const obj2 = {
-    illustration: jsx(markAsDismissed(15326).ServerChannelsAbstractUI, {}),
+    illustration: jsx(markAsDismissed(15413).ServerChannelsAbstractUI, {}),
     title: null,
     description: null,
     CTALabel: null,
@@ -44,13 +44,13 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
   obj2.CTALabel = intl3.string(markAsDismissed(1113).t.BddRzS);
   obj2.onCTAPress = callback;
   obj.children = jsx(NUFTemplateV2Default, {
-    illustration: jsx(markAsDismissed(15326).ServerChannelsAbstractUI, {}),
+    illustration: jsx(markAsDismissed(15413).ServerChannelsAbstractUI, {}),
     title: null,
     description: null,
     CTALabel: null,
     onCTAPress: null,
   });
-  return jsx(markAsDismissed(5395).BottomSheet, {
+  return jsx(markAsDismissed(5396).BottomSheet, {
     onDismiss() {
       let tmpResult;
       if (markAsDismissed != null) {

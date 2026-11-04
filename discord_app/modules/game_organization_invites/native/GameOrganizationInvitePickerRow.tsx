@@ -6,7 +6,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import _modDef7458 from "../../../../_runtime/metro/07458__.js";
+import _modDef7474 from "../../../../_runtime/metro/07474__.js";
 import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import InviteButtonDefault from "../../instant_invite/native/components/InviteButton.tsx";
 import getGameOrganizationInviteSendStateKey from "../getGameOrganizationInviteSendStateKey.tsx";
@@ -15,10 +15,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
-let closure_4 = fn(9327).useInstantInviteSendStates;
-const InviteSendStates = fn(8003).InviteSendStates;
+let closure_4 = fn(9344).useInstantInviteSendStates;
+const InviteSendStates = fn(8019).InviteSendStates;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj = { icon: null };
 let size = {
@@ -56,7 +56,7 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
     const obj2 = { uri: organization.iconUrl };
     let tmp2Result = obj2;
   } else {
-    tmp2Result = _modDef7458;
+    tmp2Result = _modDef7474;
   }
   const obj3 = {
     icon: timestampProducer(FastImageDefault, { source: tmp2Result, style: tmp.icon }),
@@ -72,13 +72,13 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
       const obj5 = { direction: "horizontal", spacing: nativeDefault.space.PX_4, align: "center", children: null };
       const obj6 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
       const items1 = [timestampProducer(GroupIcon.GroupIcon, obj6)];
-      const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
+      const obj7 = { variant: "body-xs/medium", color: "text-muted", children: null };
       const intl = util.intl;
       const obj8 = { count: memberCount, max: maxMembers };
       obj7.children = intl.formatToPlainString(_modDef2533.VuENGl, obj8);
       items1[1] = timestampProducer(Text_Text.Text, obj7);
       obj5.children = items1;
-      tmp11 = React5(Stack_Stack.Stack, obj5);
+      tmp11 = metroImportDefault(Stack_Stack.Stack, obj5);
     }
   }
   obj3.subLabel = tmp11;

@@ -31,9 +31,9 @@ export default function UserProfilePrivateInfoBanner(username) {
   }
   const obj2 = { style: items, children: null };
   items[1] = tmp3;
-  const obj3 = { variant: "text-sm/normal", children: null };
+  const obj3 = { variant: "body-sm/normal", children: null };
   const intl = util.intl;
   obj3.children = intl.format(util.t.P8ij6Z, { username: username.username });
-  obj2.children = jsx(Text_Text.Text, { variant: "text-sm/normal", children: null });
+  obj2.children = jsx(Text_Text.Text, { variant: "body-sm/normal", children: null });
   return <View style={items}>{null}</View>;
 }

@@ -432,8 +432,8 @@ export function getEpisodeBadgeText(large_text) {
       let formatToPlainStringResult = null;
       if (null != match) {
         const intl = util.intl;
-        const obj = { seasonNum: match[1], episodeNum: match[2] };
-        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj);
+        const obj2 = { seasonNum: match[1], episodeNum: match[2] };
+        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj2);
       }
       return formatToPlainStringResult;
     }

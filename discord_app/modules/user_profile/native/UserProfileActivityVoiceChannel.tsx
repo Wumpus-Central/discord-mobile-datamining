@@ -16,7 +16,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const View = _mod17.View;
 const getGuildIconURL = GuildRecord.getGuildIconURL;
 const Permissions = Constants.Permissions;
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let obj = {
   container: { flexDirection: "row", alignItems: "center", gap: 4, overflow: "hidden" },
   channelButton: { flex: 1, flexDirection: "row", alignItems: "center", gap: 2 },
@@ -111,14 +111,14 @@ export default function UserProfileActivityVoiceChannel(guild) {
       ActionSheetActionCreatorsDefault.hideAllActionSheets();
     };
     const items3 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" })];
-    const obj12 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
+    const obj12 = { style: tmp.channelName, variant: "body-xs/normal", lineClamp: 1, children: tmp6 };
     items3[1] = tmp13(tmp4(tmp3[20]).Text, obj12);
     obj10.children = items3;
     let tmp8Result = closure_8(tmp4(tmp3[17]).PressableOpacity, obj10);
   } else {
     const obj13 = { style: tmp.channelButton, children: null };
     const items4 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" })];
-    const obj14 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
+    const obj14 = { style: tmp.channelName, variant: "body-xs/normal", lineClamp: 1, children: tmp6 };
     items4[1] = tmp13(tmp4(tmp3[20]).Text, obj14);
     obj13.children = items4;
     tmp8Result = closure_8(tmp9, obj13);
@@ -130,7 +130,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15013, dependencyMap.paths),
+      asyncRequireImpl(15093, dependencyMap.paths),
       "UserProfileActivityVoiceChannelUsers",
       {
         users,
@@ -156,7 +156,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
     substr = users.slice(0, 3);
   }
   obj17.children = substr.map((user) =>
-    React5(native.Avatar, { size: native.AvatarSizes.SIZE_16, channel, guildId: guild.id, user }, user.id),
+    metroImportDefault(native.Avatar, { size: native.AvatarSizes.SIZE_16, channel, guildId: guild.id, user }, user.id),
   );
   obj15.children = tmp13(guild(onAction[27]).AvatarPile, obj17);
   items2[3] = tmp13(guild(onAction[17]).PressableOpacity, obj15);

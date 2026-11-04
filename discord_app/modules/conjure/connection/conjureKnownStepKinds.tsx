@@ -38,6 +38,7 @@ let closure_0 = {
   restart_sandbox_result: true,
   reaction: true,
   restore_proposal: true,
+  safety_recheck: true,
   saving: true,
   segment_settled: true,
   spend_limit: true,

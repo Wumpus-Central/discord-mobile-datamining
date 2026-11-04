@@ -40,8 +40,8 @@ export default function PremiumPerksList(perks) {
       ];
       const obj3 = { style: closure_0.perkInfoTextContainer, children: null };
       const items1 = [
-        React3(Text_Text.Text, { variant: "text-md/semibold", color: "text-strong", children: children.label }),
-        React3(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: children.description }),
+        React3(Text_Text.Text, { variant: "body-md/semibold", color: "text-strong", children: children.label }),
+        React3(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: children.description }),
       ];
       obj3.children = items1;
       items[1] = React4(View, obj3);

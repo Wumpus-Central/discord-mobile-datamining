@@ -7,7 +7,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((width) => {
   const obj = {
@@ -92,6 +92,6 @@ export default function ConjureHeaderIconButton(ref) {
     tmp3Result = closure_5(View, obj5);
   }
   obj.children = tmp3Result;
-  return closure_5(badgeSize(7106).PressableOpacity, obj);
+  return closure_5(badgeSize(7121).PressableOpacity, obj);
 }
 export const CONJURE_HEADER_BADGE_SIZE = 8;

@@ -28,22 +28,22 @@ const obj = {
 };
 const obj2 = { borderRadius: nativeDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 } };
 obj.voiceOrStageSummaryRow = { size: 24, avatarSize: native.AvatarSizes.XSMALL };
-obj.channelName = { height: 20, text: { variant: "redesign/channel-title/semibold" } };
+obj.channelName = { height: 20, text: { variant: "heading-sm/semibold" } };
 const obj3 = { size: 24, avatarSize: native.AvatarSizes.XSMALL };
 obj.messagePreview = {
   messageTypeIconSize: native.IconSizes.EXTRA_SMALL,
   messageTypeIconSizeNew: "xxs",
   height: 16,
-  text: { variant: "text-xs/medium" },
+  text: { variant: "body-xs/medium" },
   margin: { marginTop: 0 },
 };
-obj.timestamp = { text: { variant: "text-xs/medium" } };
-obj.inviteRow = { text: { variant: "text-sm/semibold" } };
+obj.timestamp = { text: { variant: "body-xs/medium" } };
+obj.inviteRow = { text: { variant: "body-sm/semibold" } };
 const obj4 = {
   messageTypeIconSize: native.IconSizes.EXTRA_SMALL,
   messageTypeIconSizeNew: "xxs",
   height: 16,
-  text: { variant: "text-xs/medium" },
+  text: { variant: "body-xs/medium" },
   margin: { marginTop: 0 },
 };
 obj.icon = {
@@ -72,9 +72,9 @@ obj.typing = {
   typingIndicator: { position: { top: 20, left: 10 } },
   avatarSize: native.AvatarSizes.REFRESH_MEDIUM_32,
 };
-obj.activeThreadCount = { text: { variant: "text-xs/semibold" } };
+obj.activeThreadCount = { text: { variant: "body-xs/semibold" } };
 const obj7 = {
-  text: { variant: "text-xs/semibold" },
+  text: { variant: "body-xs/semibold" },
   layout: { paddingVertical: 4, paddingRight: 8, paddingLeft: 8, height: 24 },
   icon: null,
 };

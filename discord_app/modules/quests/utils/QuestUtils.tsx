@@ -27,7 +27,7 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(6901);
+const QuestConstants = fn(6916);
 ({
   DISCORD_APPLICATION_ID: closure_8,
   QuestVariants: closure_9,
@@ -39,7 +39,7 @@ let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
 export { isSponsoredPlayQuest };
 export function isPlayAnyActivityQuest(quest) {
-  return QuestTaskUtils.getPlayActivityApplicationId(quest) === React6;
+  return QuestTaskUtils.getPlayActivityApplicationId(quest) === React5;
 }
 export { hasVariant };
 export function canLaunchActivity(quest) {

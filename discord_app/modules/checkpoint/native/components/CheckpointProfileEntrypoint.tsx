@@ -18,7 +18,7 @@ function handlePress() {
 }
 function handleLongPress() {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19040, dependencyMap.paths),
+    asyncRequireImpl(19143, dependencyMap.paths),
     "CheckpointTestingActionSheet",
   );
 }

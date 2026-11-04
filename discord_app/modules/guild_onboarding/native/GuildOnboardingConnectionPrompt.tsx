@@ -16,8 +16,8 @@ import GuildOnboardingPromptsStore from "../GuildOnboardingPromptsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const OnboardingConnectionType = fn(7389).OnboardingConnectionType;
-let closure_12 = fn(7385).GuildOnboardingModalStates;
+const OnboardingConnectionType = fn(7405).OnboardingConnectionType;
+let closure_12 = fn(7401).GuildOnboardingModalStates;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -28,7 +28,7 @@ let obj2 = {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5709).NAV_BAR_HEIGHT,
+    marginTop: fn(5722).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -44,7 +44,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5709).NAV_BAR_HEIGHT,
+  marginTop: fn(5722).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -238,7 +238,7 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
     const obj9 = { style: null, children: null };
     const items10 = [tmp.flex, { justifyContent: "center", alignItems: "center" }];
     obj9.style = items10;
-    const obj10 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj10 = { variant: "body-md/normal", color: "text-muted", children: null };
     const intl4 = tmp2(tmp3[23]).intl;
     obj10.children = intl4.string(tmp2(tmp3[23]).t.ZTNur7);
     obj9.children = closure_14(tmp2(tmp3[22]).Text, obj10);
@@ -262,7 +262,7 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
     const intl = tmp2(tmp3[23]).intl;
     obj15.children = intl.string(tmp2(tmp3[23]).t.eDVMrA);
     const items12 = [closure_14(tmp2(tmp3[22]).Text, obj15)];
-    const obj16 = { style: tmp.description, variant: "text-md/normal", color: "text-muted", children: null };
+    const obj16 = { style: tmp.description, variant: "body-md/normal", color: "text-muted", children: null };
     const intl2 = tmp2(tmp3[23]).intl;
     obj16.children = intl2.string(tmp2(tmp3[23]).t.BozOXu);
     items12[1] = closure_14(tmp2(tmp3[22]).Text, obj16);

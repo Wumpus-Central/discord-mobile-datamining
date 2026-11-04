@@ -174,7 +174,7 @@ function getUsersSubtitle(arg0) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(17430);
+const HappeningNowConstants = fn(17521);
 ({
   HappeningNowCardTrackingType: hasOwnProperty,
   HAPPENING_NOW_CONTENT_HEIGHT,
@@ -183,7 +183,7 @@ const HappeningNowConstants = fn(17430);
 } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
@@ -233,7 +233,7 @@ obj.avatarStackContainer = {
   alignSelf: "center",
   bottom: 0,
 };
-const React7 = createStyles.createStyles(obj);
+const React6 = createStyles.createStyles(obj);
 const constants2 = {
   LISTENING: 0,
   [0]: "LISTENING",
@@ -275,7 +275,7 @@ export default noop.memo(function HappeningNowCardLiveStage(arg0) {
       destination_channel_id: channel_id,
     });
     const obj2 = { order: index, guild_id, type: constants.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id };
-    asyncRequireImpl(13320, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(13403, dependencyMap.paths).then((result) => {
       result.default(channel_id, true);
     });
   }, items);

@@ -5,7 +5,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../_runtime/metro/01705__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05428_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import ExternalPipDefault from "../../external_pip/ExternalPip.android.tsx";
 import ReleaseChannelUtils from "../../../utils/ReleaseChannelUtils.native.tsx";
@@ -620,18 +620,18 @@ function AnimatedWrapper(wrapperOffset) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-({ Pressable: metroRequire, ScrollView } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11360);
+({ Pressable: closure_6, ScrollView } = get_ActivityIndicator);
+const VoicePanelConstants = fn(11410);
 ({ BORDER_RADIUS_PHYSICS: closure_10, DEFAULT_BORDER_RADIUS, DRAWER_SPRING_PHYSICS, IS_IOS: closure_11, MODE_CHANGE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 ({ LAYOUT_PHYSICS, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_14, DEFAULT_BORDER_RADIUS_PIP } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
-const isActivityParticipant = fn(5801).isActivityParticipant;
-const POP_RESISTANCE = fn(11361).POP_RESISTANCE;
+const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
+const isActivityParticipant = fn(5815).isActivityParticipant;
+const POP_RESISTANCE = fn(11411).POP_RESISTANCE;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 log = new LoggerDefault("VoicePanelUI");
-let items = [{ code: "(function layoutTransition_VoicePanelUITsx1(values){let[withSpring,LAYOUT_PHYSICS]=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})" }, fn(5757).withSpring, LAYOUT_PHYSICS];
+let items = [{ code: "(function layoutTransition_VoicePanelUITsx1(values){let[withSpring,LAYOUT_PHYSICS]=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})" }, fn(5771).withSpring, LAYOUT_PHYSICS];
 let closure_129_0;
 let closure_129_1;
 [tmp6, tmp7, tmp8] = items;
@@ -649,7 +649,7 @@ layoutTransition.__initData = tmp6;
 let obj = {};
 let merged = Object.assign(LAYOUT_PHYSICS);
 obj.damping = 0;
-let items2 = [{ code: "(function scrollViewLayoutTransition_VoicePanelUITsx2(values){let[withSpring,LAYOUT_PHYSICS,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS]=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})" }, fn(5757).withSpring, LAYOUT_PHYSICS, obj];
+let items2 = [{ code: "(function scrollViewLayoutTransition_VoicePanelUITsx2(values){let[withSpring,LAYOUT_PHYSICS,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS]=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};})" }, fn(5771).withSpring, LAYOUT_PHYSICS, obj];
 let closure_130_0;
 let closure_130_1;
 let closure_130_2;
@@ -2024,7 +2024,7 @@ export default noop.memo(function VoicePanelUI() {
   let tmp105Result2 = null;
   if (tmp6[0]) {
     const obj18 = { value: tmp4(AnalyticsLocationDefault.VOICE_PANEL).analyticsLocations, children: null };
-    const items36 = [closure_18(tmp2(19441), {}), , ];
+    const items36 = [closure_18(tmp2(19545), {}), , ];
     const obj19 = { opacity: derivedValue, onPress: dismissPanel };
     items36[1] = closure_18(closure_68, obj19);
     const obj20 = { gesture: tmp103, children: null };
@@ -2032,27 +2032,27 @@ export default noop.memo(function VoicePanelUI() {
     let _HermesInternal = HermesInternal;
     obj21.nativeID = "voice-panel-ui-" + channelId;
     obj21.layout = layoutTransition;
-    obj21.onAccessibilityEscape = tmp2(11066);
-    const items37 = [closure_18(tmp2(19443), {}), , , ];
+    obj21.onAccessibilityEscape = tmp2(11115);
+    const items37 = [closure_18(tmp2(19547), {}), , , ];
     const obj22 = { wrapperOffset, children: null };
     let tmp105Result = tmp107;
     if (isDockEnabled) {
       const obj23 = { children: tmp107 };
-      tmp105Result = closure_18(tmp13(19366).VoicePanelContentWithDock, obj23);
+      tmp105Result = closure_18(tmp13(19470).VoicePanelContentWithDock, obj23);
     }
     const obj24 = { children: null };
     obj22.children = tmp105Result;
     items37[1] = closure_18(AnimatedWrapper, obj22);
-    items37[2] = closure_18(tmp2(19445), {});
+    items37[2] = closure_18(tmp2(19549), {});
     const obj25 = { gestureState: sharedValue4 };
-    items37[3] = closure_18(tmp2(19453), obj25);
+    items37[3] = closure_18(tmp2(19557), obj25);
     obj21.children = items37;
-    obj20.children = closure_19(tmp2(19442), obj21);
-    items36[2] = closure_18(tmp13(5426).GestureDetector, obj20);
+    obj20.children = closure_19(tmp2(19546), obj21);
+    items36[2] = closure_18(tmp13(5428).GestureDetector, obj20);
     obj24.children = items36;
-    obj18.children = closure_19(tmp13(5734).LayerScope, obj24);
-    tmp105Result2 = closure_18(tmp13(7446).AnalyticsLocationProvider, obj18);
-    const tmp2Result = tmp2(19442);
+    obj18.children = closure_19(tmp13(5748).LayerScope, obj24);
+    tmp105Result2 = closure_18(tmp13(7462).AnalyticsLocationProvider, obj18);
+    const tmp2Result = tmp2(19546);
   }
   return tmp105Result2;
 });

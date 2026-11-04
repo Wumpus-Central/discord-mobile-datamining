@@ -10,7 +10,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const isGuildEventEnded = fn(6975).isGuildEventEnded;
+const isGuildEventEnded = fn(6990).isGuildEventEnded;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: closure_9 } = Constants);
 const size = fn(2);
@@ -26,7 +26,7 @@ export default function getNotificationCenterItemBody(arg0) {
     id = other_user.id;
   }
   if (id == null) {
-    id = React6;
+    id = React5;
   }
   const other_user2 = item.other_user;
   let id1;

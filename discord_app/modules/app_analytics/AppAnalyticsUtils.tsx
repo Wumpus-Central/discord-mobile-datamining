@@ -37,9 +37,9 @@ function collectGuildAnalyticsMetadata(guildId) {
       const obj = {
         guild_id: guild.id,
         guild_size_total: GuildMemberCountStore.getMemberCount(guildId),
-        guild_num_channels: channels[React5].length + channels[React6].length,
-        guild_num_text_channels: channels[React5].length,
-        guild_num_voice_channels: channels[React6].length,
+        guild_num_channels: channels[metroImportDefault].length + channels[React5].length,
+        guild_num_text_channels: channels[metroImportDefault].length,
+        guild_num_voice_channels: channels[React5].length,
         guild_num_roles: numRoles,
         guild_member_num_roles: null,
         guild_member_perms: null,
@@ -222,7 +222,7 @@ function getVoiceStateMetadata(guildId, channelId, videoEnabled) {
 }
 const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;
 let GuildChannelStore = GuildChannelStore_mod;
-({ GUILD_SELECTABLE_CHANNELS_KEY: closure_7, GUILD_VOCAL_CHANNELS_KEY: closure_8 } = GuildChannelStore);
+({ GUILD_SELECTABLE_CHANNELS_KEY: metroImportDefault, GUILD_VOCAL_CHANNELS_KEY: closure_8 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 ({ GuildFeatures: closure_22, AnalyticsLocations: closure_23, Permissions: closure_24 } = Constants);
 const isStaticChannelRoute = ChannelConstants.isStaticChannelRoute;
@@ -275,7 +275,7 @@ export function collectVoiceAnalyticsMetadata(id) {
       });
       const merged = Object.assign(obj3);
       const tmp9Result = obj3(12)(VoiceStateStore.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(15805).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(15893).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }

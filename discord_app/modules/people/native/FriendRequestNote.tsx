@@ -90,7 +90,7 @@ export default function FriendRequestNote(styles) {
           accessible: tmp7,
           accessibilityElementsHidden: !tmp7,
           accessibilityLabel: str,
-          variant: "redesign/message-preview/medium",
+          variant: "heading-sm/medium",
           children: note,
         };
         obj4.children = closure_8(require("Text/Text").Text, obj5);

@@ -13,7 +13,7 @@ class TableRowGroupTitle {
     tmp = closure_8();
     obj = {
       accessibilityRole: "header",
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-subtle",
       style: null,
       lineClamp,
@@ -28,7 +28,7 @@ class TableRowGroupTitle {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { flexShrink: 0 },
@@ -56,7 +56,7 @@ obj2.hasTrailingText = {
   borderBottomRightRadius: nativeDefault.radii.none,
 };
 obj2.helperText = { marginTop: 8 };
-const React6 = createStyles.createStyles(obj2);
+const React5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
 
@@ -82,7 +82,7 @@ export function TableRowGroup(accessibilityLabel) {
       const obj2 = { adjustSpacingForIcon };
       items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
       obj.children = items;
-      const tmp2 = React5(timestampProducer, obj);
+      const tmp2 = metroImportDefault(timestampProducer, obj);
     } else {
       c1 = true;
     }
@@ -96,7 +96,7 @@ export function TableRowGroup(accessibilityLabel) {
   items = [tmp6Result, , ,];
   let tmp6Result3 = null != description;
   if (tmp6Result3) {
-    const obj4 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.description, children: description };
+    const obj4 = { variant: "body-sm/normal", color: "text-subtle", style: tmp.description, children: description };
     tmp6Result3 = closure_5(Text_Text.Text, obj4);
   }
   items[1] = tmp6Result3;

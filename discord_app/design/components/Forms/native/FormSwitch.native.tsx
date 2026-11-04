@@ -223,14 +223,14 @@ export function FormSwitch(onValueChange) {
   } else {
     const obj7 = { source: null, size: null, style: null };
     if (tmp6) {
-      obj7.source = tmp10(7116);
-      obj7.size = tmp10(5756).Sizes.SMALL_20;
+      obj7.source = tmp10(7131);
+      obj7.size = tmp10(5770).Sizes.SMALL_20;
       const items7 = [tmp9.selectedIcon, iconAnimation];
       obj7.style = items7;
       let tmp38 = obj7;
     } else {
-      obj7.source = tmp10(7491);
-      obj7.size = tmp10(5756).Sizes.SMALL;
+      obj7.source = tmp10(7507);
+      obj7.size = tmp10(5770).Sizes.SMALL;
       const items8 = [tmp9.unselectedIcon, tmp35];
       obj7.style = items8;
       tmp38 = obj7;

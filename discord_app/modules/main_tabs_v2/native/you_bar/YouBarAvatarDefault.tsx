@@ -81,8 +81,8 @@ function AvatarDefaultLarge() {
     position: "absolute",
     width: tmp3,
     height: tmp3,
-    top: -React7 - (native.AVATAR_SIZE_MAP[React4] - React5) / 2,
-    left: -React7,
+    top: -React6 - (native.AVATAR_SIZE_MAP[React4] - metroImportDefault) / 2,
+    left: -React6,
   };
   items[1] = size1;
   obj3.style = items;
@@ -93,7 +93,7 @@ function AvatarDefaultLarge() {
   const items2 = [tmp.placeholderAvatar, { width: tmp3, height: tmp3, backgroundColor: token }];
   obj5.style = items2;
   const obj6 = { style: tmp.placeholderAvatarBackground };
-  const tmp7 = -React7;
+  const tmp7 = -React6;
   const items3 = [application_id(View, obj6)];
   const obj7 = { size: "custom", style: null, color: "background-mod-strong" };
   const size2 = { width: native.AVATAR_SIZE_MAP[hasOwnProperty], height: native.AVATAR_SIZE_MAP[hasOwnProperty] };
@@ -122,12 +122,12 @@ function AvatarDefaultLarge() {
   return application_id(View, obj2);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17218);
+const YouBarConstants = fn(17310);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,
-  YOU_BAR_STATUS_INSET: metroRequire,
-  YOU_BAR_HEIGHT: closure_7,
+  YOU_BAR_STATUS_INSET: closure_6,
+  YOU_BAR_HEIGHT: metroImportDefault,
   YOU_BAR_LARGE_STATUS_SIZE: closure_8,
   YOU_BAR_PADDING: closure_9,
   YOU_BAR_STATUS_OFFSET: closure_10,

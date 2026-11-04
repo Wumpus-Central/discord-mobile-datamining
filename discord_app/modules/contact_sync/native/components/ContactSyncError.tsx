@@ -49,7 +49,7 @@ export default function ContactSyncError(error) {
   const obj2 = {
     style: null,
     children: jsx(Text_Text.Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-feedback-critical",
       style: tmp.error,
       children: error,
@@ -60,7 +60,7 @@ export default function ContactSyncError(error) {
   return jsx(_modDef1652.View, {
     style: null,
     children: jsx(Text_Text.Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-feedback-critical",
       style: tmp.error,
       children: error,

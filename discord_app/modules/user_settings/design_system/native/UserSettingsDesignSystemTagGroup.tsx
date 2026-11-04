@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, narrow: { width: "60%" } };
 let closure_7 = createStyles.createStyles(obj2);
@@ -44,7 +44,7 @@ export default function UserSettingsDesignSystemTagGroup() {
   const obj3 = { spacing: nativeDefault.space.PX_24, children: null };
   items = [
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       color: "text-subtle",
       children: "Tag groups display read-only values. They do not select or remove tags.",
     }),
@@ -55,9 +55,9 @@ export default function UserSettingsDesignSystemTagGroup() {
   const obj4 = { children: null };
   const obj5 = { spacing: nativeDefault.space.PX_12, children: null };
   items1 = [
-    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/semibold", children: "Default layout" }),
+    hasOwnProperty(Text_Text.Heading, { variant: "body-lg/semibold", children: "Default layout" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-subtle",
       children: "Medium tags wrap onto new lines as space runs out.",
     }),
@@ -78,15 +78,15 @@ export default function UserSettingsDesignSystemTagGroup() {
   const obj8 = { children: null };
   const obj9 = { spacing: nativeDefault.space.PX_12, children: null };
   items3 = [
-    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/semibold", children: "Sizes" }),
+    hasOwnProperty(Text_Text.Heading, { variant: "body-lg/semibold", children: "Sizes" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-subtle",
       children: "Compare the extra-small and small densities with the default medium group above.",
     }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", children: "Extra small" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", children: "Extra small" }),
     hasOwnProperty(TagGroup.TagGroup, { label: "Extra-small tags", size: "xs", items }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", children: "Small" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", children: "Small" }),
     hasOwnProperty(TagGroup.TagGroup, { label: "Small tags", size: "sm", items }),
   ];
   obj9.children = items3;
@@ -95,9 +95,9 @@ export default function UserSettingsDesignSystemTagGroup() {
   const obj12 = { children: null };
   const obj13 = { spacing: nativeDefault.space.PX_12, children: null };
   const items4 = [
-    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/semibold", children: "Filter treatment" }),
+    hasOwnProperty(Text_Text.Heading, { variant: "body-lg/semibold", children: "Filter treatment" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-subtle",
       children: "Filter tags have fully rounded corners but remain read-only.",
     }),
@@ -109,17 +109,17 @@ export default function UserSettingsDesignSystemTagGroup() {
   const obj15 = { children: null };
   const obj16 = { spacing: nativeDefault.space.PX_12, children: null };
   const items5 = [
-    hasOwnProperty(Text_Text.Heading, { variant: "text-lg/semibold", children: "Inline layout" }),
+    hasOwnProperty(Text_Text.Heading, { variant: "body-lg/semibold", children: "Inline layout" }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-subtle",
       children:
         "Inline uses small tags by default and stays on one line. In narrow columns, labels truncate and the row can clip. Use default layout for longer collections.",
     }),
     hasOwnProperty(TagGroup.TagGroup, { label: "Inline tags", layout: "inline", items: items2 }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", children: "Medium inline tags (explicit size)" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", children: "Medium inline tags (explicit size)" }),
     hasOwnProperty(TagGroup.TagGroup, { label: "Medium inline tags", layout: "inline", size: "md", items: items2 }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", children: "Narrow column with a long label" }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", children: "Narrow column with a long label" }),
   ];
   const obj19 = {
     style: tmp.narrow,

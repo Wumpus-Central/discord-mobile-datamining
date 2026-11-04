@@ -248,7 +248,7 @@ export function favoriteEmoji(customEmojiFromJoinedGuild) {
           }
         }
         emojis.emojis = tmp;
-        if (obj2.size(emojis.emojis) >= React7) {
+        if (obj2.size(emojis.emojis) >= React6) {
           const obj3 = { title: null, body: null };
           const intl = util.intl;
           obj3.title = intl.string(util.t["+XYXtZ"]);

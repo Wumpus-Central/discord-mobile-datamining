@@ -18,7 +18,7 @@ let obj = {
     borderWidth: 1,
     borderRadius: nativeDefault.radii.lg,
     padding: nativeDefault.space.PX_12,
-    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING,
   },
   text: { flex: 1 },
 };
@@ -32,7 +32,7 @@ export default function GuildPowerupsDisabledWarning(children) {
     React4(WarningIcon.WarningIcon, { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" }),
     React4(Text_Text.Text, {
       style: tmp.text,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "text-feedback-warning",
       children: children.text,
     }),

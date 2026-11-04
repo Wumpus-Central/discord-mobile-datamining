@@ -13,7 +13,7 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9431).getBadgeTooltip;
+const getBadgeTooltip = fn(9449).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -56,6 +56,10 @@ const result = size.fileFinishedImporting("modules/guild_profile/native/componen
 
 export default function GuildProfileHeader(icon) {
   const profile = icon.profile;
+  let flag = icon.disableNameNavigation;
+  if (flag === undefined) {
+    flag = false;
+  }
   let id;
   let stateFromStores1;
   const tmp = styles();
@@ -123,7 +127,9 @@ export default function GuildProfileHeader(icon) {
   const obj9 = { style: tmp.nameRow, children: null };
   let tmp15;
   if (stateFromStores1) {
-    tmp15 = callback1;
+    if (!flag) {
+      tmp15 = callback1;
+    }
   }
   const items6 = [
     closure_9(profile(stateFromStores1[19]).Text, {
@@ -146,7 +152,7 @@ export default function GuildProfileHeader(icon) {
   const obj13 = { style: tmp.members, children: null };
   const obj14 = { style: tmp.memberCount, children: null };
   const items7 = [closure_9(View, { style: tmp.dotOnline })];
-  const obj16 = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj16 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl = tmp2(tmp3[22]).intl;
   obj16.children = intl.format(profile(stateFromStores1[22]).t["LC+S+m"], { membersOnline: profile.onlineCount });
   items7[1] = closure_9(profile(stateFromStores1[19]).Text, obj16);
@@ -154,7 +160,7 @@ export default function GuildProfileHeader(icon) {
   const items8 = [closure_10(View, obj14)];
   const obj18 = { style: tmp.memberCount, children: null };
   const items9 = [closure_9(View, { style: tmp.dot })];
-  const obj20 = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj20 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl2 = tmp2(tmp3[22]).intl;
   obj20.children = intl2.format(profile(stateFromStores1[22]).t.zRl6XR, { count: profile.memberCount });
   items9[1] = closure_9(profile(stateFromStores1[19]).Text, obj20);
@@ -163,7 +169,7 @@ export default function GuildProfileHeader(icon) {
   obj13.children = items8;
   items5[2] = closure_10(View, obj13);
   const obj22 = { style: tmp.established, children: null };
-  const obj23 = { variant: "text-md/medium", color: "text-muted", children: null };
+  const obj23 = { variant: "body-md/medium", color: "text-muted", children: null };
   const intl3 = tmp2(tmp3[22]).intl;
   obj23.children = intl3.format(profile(stateFromStores1[22]).t.zb2Q56, { createdAtDate: establishedDate });
   obj22.children = closure_9(profile(stateFromStores1[19]).Text, obj23);

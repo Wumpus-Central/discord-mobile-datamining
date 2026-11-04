@@ -81,7 +81,7 @@ class SectionContainer {
     items[2] = children;
     tmp4Result = null != footer;
     if (tmp4Result) {
-      obj6 = { style: null, variant: "text-sm/normal", color: "text-default", children: null };
+      obj6 = { style: null, variant: "body-sm/normal", color: "text-default", children: null };
       obj6.style = tmp.sectionFooter;
       obj6.children = footer;
       tmp4Result = tmp4(tmp5(tmp6[12]).Text, obj6);
@@ -110,7 +110,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(20031, dependencyMap.paths),
+      asyncRequireImpl(20147, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -127,7 +127,7 @@ function StartEarningButton(isTermsAccepted) {
     style: tmp.tos,
     leading: closure_11(isTermsAccepted(submitAcceptTermsRequest[19]).FormRow.Checkbox, { selected: isTermsAccepted }),
     label: closure_11(isTermsAccepted(submitAcceptTermsRequest[12]).Text, {
-      variant: "text-xs/normal",
+      variant: "body-xs/normal",
       color: "text-default",
       children: acceptTermsCheckboxText,
     }),
@@ -248,10 +248,10 @@ class MarketingSections {
   }
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const React6 = fn(17339).CREATOR_REVENUE_PORTAL_URL;
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
+const React5 = fn(17430).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const constants = fn(20027).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(20143).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(5141);
@@ -383,7 +383,7 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
         const intl3 = tmp2(tmp3[10]).intl;
         obj13.children = intl3.string(tmp2(tmp3[10]).t.QYqDQ0);
         const items4 = [closure_11(tmp2(tmp3[12]).Text, obj13), , ,];
-        const obj14 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
+        const obj14 = { style: tmp.subtitle, variant: "body-sm/normal", color: "text-default", children: null };
         const intl4 = tmp2(tmp3[10]).intl;
         obj14.children = intl4.string(tmp2(tmp3[10]).t["41wkMc"]);
         items4[1] = closure_11(tmp2(tmp3[12]).Text, obj14);

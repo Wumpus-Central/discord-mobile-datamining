@@ -2,7 +2,6 @@
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +34,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTabPages.tsx");
 
 export default noop.memo(function UserProfileTabPages(arg0) {
-  ({ state, pageHeights, scrollPosition, scrollViewRef, parentPagerGesture } = arg0);
+  ({ state, pageHeights, scrollPosition, scrollViewRef } = arg0);
   _require = scrollPosition;
   c3 = undefined;
   noop = undefined;
@@ -75,9 +74,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
   const obj4 = require("../../../../_runtime/metro/01652__.js");
   const useReducedMotion = state.useReducedMotion;
-  closure_129_0 = scrollViewRef;
-  closure_129_1 = sharedValue1;
-  closure_129_2 = useReducedMotion;
+  _require = scrollViewRef;
   const items1 = [scrollViewRef, sharedValue1, useReducedMotion];
   const sharedValue3 = require("../../../../_runtime/metro/01652__.js").useSharedValue(-1);
   const callback1 = noop.useCallback((arg0, arg1) => {
@@ -204,11 +201,11 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   );
   const obj6 = require("../../../../_runtime/metro/01652__.js");
   const items6 = [closure_9, pageHeights, visiblePageRange, tmp4, scrollPosition, sharedValue1];
-  closure_130_0 = undefined;
-  closure_130_1 = undefined;
-  closure_130_2 = undefined;
-  closure_130_3 = undefined;
-  closure_130_4 = undefined;
+  closure_129_0 = undefined;
+  closure_129_1 = undefined;
+  closure_129_2 = undefined;
+  closure_129_3 = undefined;
+  closure_129_4 = undefined;
   [tmp26, tmp27, tmp28, tmp29, tmp30, tmp31] = items6;
   class UserProfileTabPagesTsx3 {
     constructor() {
@@ -347,17 +344,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   UserProfileTabPagesTsx7.__initData = tmp44;
   const items17 = [sharedValue2];
   const callback2 = obj.useCallback(UserProfileTabPagesTsx6, items14);
-  const items18 = [parentPagerGesture];
   const callback3 = obj.useCallback(UserProfileTabPagesTsx7, items17);
-  const memo = obj.useMemo(() => {
-    let result;
-    if (null != c0) {
-      const Gesture = LegacyBaseButton.Gesture;
-      result = Gesture.Native().blocksExternalGesture(tmp);
-      const NativeResult = Gesture.Native();
-    }
-    return result;
-  }, items18);
   const tmp7Result2 = require("../../../../_runtime/metro/01652__.js");
   return jsx(_modDef1652.View, {
     ref,
@@ -365,7 +352,6 @@ export default noop.memo(function UserProfileTabPages(arg0) {
     style: animatedStyle,
     children: jsx(require("SegmentedControlPages").SegmentedControlPages, {
       state,
-      nativeGesture: memo,
       onBeginDragWorklet: callback2,
       onEndDragWorklet: callback3,
     }),

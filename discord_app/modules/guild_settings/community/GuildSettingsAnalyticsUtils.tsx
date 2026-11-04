@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ AbortCodes: metroRequire, GuildFeatures: closure_7 } = Constants);
+({ AbortCodes: closure_6, GuildFeatures: metroImportDefault } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/community/GuildSettingsAnalyticsUtils.tsx");
 

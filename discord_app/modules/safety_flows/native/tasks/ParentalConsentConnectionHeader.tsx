@@ -12,11 +12,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   row: {
-    height: fn(5709).NAV_BAR_HEIGHT,
+    height: fn(5722).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -25,7 +25,7 @@ let obj2 = {
   logOut: null,
 };
 let obj3 = {
-  height: fn(5709).NAV_BAR_HEIGHT,
+  height: fn(5722).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
@@ -51,7 +51,7 @@ export function ParentalConsentConnectionNavbar() {
   const obj3 = { style: tmp.row, children: null };
   const obj4 = {
     accessibilityRole: "button",
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "text-link",
     style: tmp.logOut,
     onPress() {
@@ -66,7 +66,7 @@ export function ParentalConsentConnectionNavbar() {
   if (tmp5Result) {
     const obj5 = {
       accessibilityRole: "header",
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: stateFromStores,
     };

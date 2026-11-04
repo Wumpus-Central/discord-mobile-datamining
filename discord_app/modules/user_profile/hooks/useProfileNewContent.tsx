@@ -1,5 +1,6 @@
 // discord_app/modules/user_profile/hooks/useProfileNewContent.tsx
 import ProfileReadStateUtils from "../ProfileReadStateUtils.tsx";
+import ProfileReadStateSection from "../../../../discord_common/js/shared/shared-constants/ProfileReadStateSection.tsx";
 import WishlistStore from "../../wishlists/WishlistStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
@@ -7,8 +8,7 @@ import UserProfileStore from "../UserProfileStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ProfileReadStateSection = fn(7908).ProfileReadStateSection;
-let closure_7 = { hasNewWishlistItems: false, newWishlistItemCount: 0, shouldLogExposure: false };
+let closure_6 = { hasNewWishlistItems: false, newWishlistItemCount: 0, shouldLogExposure: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileNewContent.tsx");
 
@@ -21,7 +21,7 @@ export default function useProfileNewContent(id) {
   const isItemShown = obj.isItemShown;
   let profileReadStateConfigPeek;
   profileReadStateConfigPeek = require("ProfileReadStateExperiment").useProfileReadStateConfigPeek();
-  const tmp2 = isItemShown(profileReadStateConfigPeek[5])(id);
+  const tmp2 = isItemShown(profileReadStateConfigPeek[4])(id);
   let wishlist = tmp2;
   let obj2 = require("ProfileReadStateExperiment");
   items = [UserProfileStore, UserStore];
@@ -36,20 +36,20 @@ export default function useProfileNewContent(id) {
           id = currentUser.id;
         }
         if (id.id !== id) {
-          const firstWishlistId = UserProfileStore.getFirstWishlistId(tmp9.id);
+          const firstWishlistId = UserProfileStore.getFirstWishlistId(tmp7.id);
           if (null == firstWishlistId) {
             return null;
           } else {
-            const wishlistSettings = UserProfileStore.getWishlistSettings(tmp9.id, firstWishlistId);
+            const wishlistSettings = UserProfileStore.getWishlistSettings(tmp7.id, firstWishlistId);
             profileReadStateSectionAckedAt = UserProfileStore.getProfileReadStateSectionAckedAt(
-              tmp9.id,
-              ProfileReadStateSection.WISHLIST,
+              tmp7.id,
+              ProfileReadStateSection.ProfileReadStateSection.WISHLIST,
             );
-            let tmp8 = null;
-            if (obj2.hasWishlistBeenUpdatedSinceAcked(wishlistSettings, profileReadStateSectionAckedAt)) {
-              tmp8 = firstWishlistId;
+            let tmp6 = null;
+            if (obj.hasWishlistBeenUpdatedSinceAcked(wishlistSettings, profileReadStateSectionAckedAt)) {
+              tmp6 = firstWishlistId;
             }
-            return tmp8;
+            return tmp6;
           }
         }
       }
@@ -75,10 +75,10 @@ export default function useProfileNewContent(id) {
         if (profileReadStateSectionAckedAt.id !== id) {
           profileReadStateSectionAckedAt = profileReadStateSectionAckedAt.getProfileReadStateSectionAckedAt(
             tmp7.id,
-            constants.WISHLIST,
+            id(profileReadStateConfigPeek[6]).ProfileReadStateSection.WISHLIST,
           );
           if (null == profileReadStateSectionAckedAt) {
-            return closure_1_7;
+            return closure_1_6;
           } else {
             let firstWishlistId = null;
             if (wishlist) {
@@ -120,7 +120,7 @@ export default function useProfileNewContent(id) {
           obj2 = profileReadStateSectionAckedAt;
         }
       }
-      return closure_1_7;
+      return closure_1_6;
     },
     items3,
   );

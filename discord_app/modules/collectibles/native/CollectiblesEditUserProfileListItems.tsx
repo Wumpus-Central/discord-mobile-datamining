@@ -13,7 +13,7 @@ import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCollectiblesDataDefault from "../hooks/useCollectiblesData.tsx";
 import CollectiblesBadges from "CollectiblesBadges.tsx";
-import _modDef15217 from "../../../../_runtime/metro/15217__.js";
+import _modDef15300 from "../../../../_runtime/metro/15300__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -57,7 +57,7 @@ class EditCollectibleListItem {
 const View = fn(17).View;
 let closure_6 = fn(1074).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   pressable: { marginTop: 10, borderRadius: nativeDefault.radii.sm },
@@ -90,7 +90,7 @@ obj2.optionCell = { justifyContent: "center", alignItems: "center" };
 obj2.optionCellText = { marginTop: 4 };
 obj2.newIcon = { position: "absolute", top: -12, right: 5 };
 obj2.lockIcon = { position: "absolute", top: -12, right: -10 };
-const React7 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesEditUserProfileListItems.tsx");
 
@@ -99,9 +99,9 @@ export function EditCollectiblesListItemNone(asDefault) {
   const tmp = closure_9();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  items = [React5(native.Icon, { source: _modDef15217, size: native.IconSizes.LARGE })];
+  items = [metroImportDefault(native.Icon, { source: _modDef15300, size: native.IconSizes.LARGE })];
   const obj3 = {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "mobile-text-heading-primary",
     style: tmp.optionCellText,
     children: null,
@@ -115,16 +115,16 @@ export function EditCollectiblesListItemNone(asDefault) {
     stringResult = string(t.PoWNfe);
   }
   obj3.children = stringResult;
-  items[1] = React5(Text_Text.Text, obj3);
+  items[1] = metroImportDefault(Text_Text.Text, obj3);
   obj.children = items;
-  return React6(EditCollectibleListItem, obj);
+  return React5(EditCollectibleListItem, obj);
 }
 export function EditCollectiblesListItemShop(analyticsSource) {
   analyticsSource = analyticsSource.analyticsSource;
   const merged = Object.assign(analyticsSource, Object.assign({ analyticsSource: 0 }));
   let analyticsLocations;
   const tmp2 = closure_9();
-  analyticsLocations = analyticsLocations(7446)(analyticsSource).analyticsLocations;
+  analyticsLocations = analyticsLocations(7462)(analyticsSource).analyticsLocations;
   items = [analyticsLocations, analyticsSource];
   let obj = {
     style: tmp2.optionCell,
@@ -142,21 +142,21 @@ export function EditCollectiblesListItemShop(analyticsSource) {
   const merged1 = Object.assign(merged);
   const items1 = [
     closure_7(analyticsSource(1187).Icon, {
-      source: analyticsLocations(15218),
+      source: analyticsLocations(15301),
       size: analyticsSource(1187).IconSizes.LARGE,
     }),
     ,
   ];
   const obj3 = {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "mobile-text-heading-primary",
     style: tmp2.optionCellText,
     children: null,
   };
   const intl = analyticsSource(1113).intl;
   obj3.children = intl.string(analyticsSource(1113).t.pWG4ze);
-  items1[1] = closure_7(analyticsSource(5747).Text, obj3);
-  items1[2] = closure_7(analyticsSource(9654).NewBadge, { style: tmp2.newIcon });
+  items1[1] = closure_7(analyticsSource(5761).Text, obj3);
+  items1[2] = closure_7(analyticsSource(9673).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);
 }
@@ -182,11 +182,11 @@ export function EditCollectiblesListItemProduct(skuId) {
   if (null == purchase) {
     if (!result) {
       const obj6 = { style: tmp2.lockIcon, isNew: isProductNewResult };
-      let tmp14 = React5(CollectiblesBadges.LockBadge, obj6);
+      let tmp14 = metroImportDefault(CollectiblesBadges.LockBadge, obj6);
     }
     items1[1] = tmp14;
     obj5.children = items1;
-    return React6(EditCollectibleListItem, obj5);
+    return React5(EditCollectibleListItem, obj5);
   }
   let tmp15 = null;
   if (result) {
@@ -194,7 +194,7 @@ export function EditCollectiblesListItemProduct(skuId) {
     if (!isTryItOut) {
       if (null == purchase) {
         const obj7 = { style: tmp2.lockIcon, isNew: isProductNewResult };
-        tmp15 = React5(CollectiblesBadges.PremiumBadge, obj7);
+        tmp15 = metroImportDefault(CollectiblesBadges.PremiumBadge, obj7);
       } else {
         tmp15 = null;
       }

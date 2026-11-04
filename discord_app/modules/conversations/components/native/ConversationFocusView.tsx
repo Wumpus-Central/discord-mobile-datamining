@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = {
@@ -97,7 +97,7 @@ export default function ConversationFocusView(channelId) {
     closure_7(closure_5, obj3);
   } else {
     const obj5 = { style: container.pendingContent, children: null };
-    const obj6 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj6 = { variant: "body-md/normal", color: "text-muted", children: null };
     let intl = ChatPreview(tmp[8]).intl;
     obj6.children = intl.string(ChatPreview(tmp[8]).t.eylmYW);
     const items3 = [closure_7(ChatPreview(tmp[9]).Text, obj6)];

@@ -15,13 +15,13 @@ require = fn;
 function CharacterSubLabel(text) {
   text = text.text;
   if (text.eligible) {
-    const obj2 = { variant: "text-sm/medium", color: "text-subtle", children: text };
+    const obj2 = { variant: "body-sm/medium", color: "text-subtle", children: text };
     let tmp6 = hasOwnProperty(Text_Text.Text, obj2);
   } else {
     const obj = { direction: "horizontal", spacing: nativeDefault.space.PX_4, align: "center", children: null };
     const obj3 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
     items = [hasOwnProperty(CircleErrorIcon.CircleErrorIcon, obj3)];
-    const obj4 = { variant: "text-sm/medium", color: "text-muted", children: text };
+    const obj4 = { variant: "body-sm/medium", color: "text-muted", children: text };
     items[1] = hasOwnProperty(Text_Text.Text, obj4);
     obj.children = items;
     tmp6 = timestampProducer(Stack_Stack.Stack, obj);
@@ -30,7 +30,7 @@ function CharacterSubLabel(text) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   card: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 },
@@ -136,7 +136,7 @@ export default function GameOrganizationCharacterList(characters) {
   const intl = characters(1113).intl;
   obj2.title = intl.formatToPlainString(_modDef2533["Xm+emB"], { noun });
   const items1 = [
-    closure_5(characters(7186).TableRowGroupTitle, obj2),
+    closure_5(characters(7201).TableRowGroupTitle, obj2),
     closure_5(View, {
       accessibilityRole: "radiogroup",
       style: tmp.cards,
@@ -150,13 +150,13 @@ export default function GameOrganizationCharacterList(characters) {
     }),
   ];
   if (someResult) {
-    const obj4 = { variant: "text-md/medium", color: "text-subtle", children: null };
+    const obj4 = { variant: "body-md/medium", color: "text-subtle", children: null };
     const intl2 = tmp4(1113).intl;
     const obj5 = { noun };
     obj4.children = intl2.formatToPlainString(_modDef2533.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5747).Text, obj4);
+    someResult = closure_5(tmp4(5761).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(6147).Stack, obj);
+  return closure_6(characters(6162).Stack, obj);
 }

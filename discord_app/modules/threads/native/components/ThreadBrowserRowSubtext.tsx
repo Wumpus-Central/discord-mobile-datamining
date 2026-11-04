@@ -24,11 +24,11 @@ function MessageContent(arg0) {
   let roleStyle;
   const tmp = closure_13();
   items = [message.author.id];
-  const subscribeGuildMembers = message(7606).useSubscribeGuildMembers(
+  const subscribeGuildMembers = message(7622).useSubscribeGuildMembers(
     { [thread.guild_id]: items },
     "ThreadBrowserRowSubtext",
   );
-  let obj = message(7606);
+  let obj = message(7622);
   const items1 = [UserStore];
   const stateFromStores = message(504).useStateFromStores(items1, () => {
     let author = UserStore.getUser(message.author.id);
@@ -44,9 +44,9 @@ function MessageContent(arg0) {
   ({ nick: c2, colorString: c3, colorStrings: c4 } = useMessageAuthorDefault(message));
   let tmp4 = useMessageAuthorDefault(message);
   const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
-  const timestampString = message(8471).getTimestampString(extractTimestampResult);
-  const obj5 = message(8471);
-  const timestampAccessibilityLabel = message(8471).getTimestampAccessibilityLabel(extractTimestampResult);
+  const timestampString = message(8487).getTimestampString(extractTimestampResult);
+  const obj5 = message(8487);
+  const timestampAccessibilityLabel = message(8487).getTimestampAccessibilityLabel(extractTimestampResult);
   roleStyle = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
   const obj7 = {
     user: stateFromStores,
@@ -59,7 +59,7 @@ function MessageContent(arg0) {
     ellipsizeMode: "tail",
     lineBreakMode: "tail",
     style: tmp.subtextContent,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     children: null,
   };
@@ -83,17 +83,17 @@ function MessageContent(arg0) {
       }
       obj.roleColors = tmp6;
       obj.shouldShowRoleDot = "dot" === closure_1 && null != roleColor;
-      return React7(Username, obj, arg1);
+      return React6(Username, obj, arg1);
     },
     messageTextHook(arg0, arg1) {
-      return React7(
+      return React6(
         native.LegacyText,
         { children: renderMessageMarkupDefault(message, { formatInline: true, allowGameMentions: true }).content },
         arg1,
       );
     },
   });
-  obj7.children = closure_9(message(5747).Text, obj8);
+  obj7.children = closure_9(message(5761).Text, obj8);
   return closure_9(SubstringRow, obj7);
 }
 function SubstringRow(arg0) {
@@ -105,27 +105,27 @@ function SubstringRow(arg0) {
     const obj2 = {
       style: tmp.timestamp,
       accessibilityLabel,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-muted",
       children: ` ${timestamp}`,
     };
-    obj.children = React7(Text_Text.Text, obj2);
-    let tmp6 = React7(View, obj);
+    obj.children = React6(Text_Text.Text, obj2);
+    let tmp6 = React6(View, obj);
   } else {
     const obj3 = { style: tmp.row, children: null };
     items = [children, ,];
     const obj4 = { style: tmp.dividerDot };
-    items[1] = React7(View, obj4);
+    items[1] = React6(View, obj4);
     const obj5 = {
       style: tmp.timestamp,
       accessibilityLabel,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-muted",
       children: null,
     };
     const _HermesInternal = HermesInternal;
     obj5.children = "" + timestamp;
-    items[2] = React7(Text_Text.Text, obj5);
+    items[2] = React6(Text_Text.Text, obj5);
     obj3.children = items;
     tmp6 = closure_1_10(View, obj3);
   }
@@ -156,7 +156,7 @@ function Username(usernameColor) {
   }
   if (shouldShowRoleDot) {
     const obj2 = { color: roleColor, colors: roleColors, size: "small" };
-    shouldShowRoleDot = React7(native.RoleDot, obj2);
+    shouldShowRoleDot = React6(native.RoleDot, obj2);
   }
   const items1 = [shouldShowRoleDot];
   let tmp10;
@@ -164,8 +164,8 @@ function Username(usernameColor) {
     tmp10 = processColorStringsArray;
   }
   const obj3 = { children: null };
-  items1[1] = React7(Text_Text.Text, {
-    variant: "text-sm/semibold",
+  items1[1] = React6(Text_Text.Text, {
+    variant: "body-sm/semibold",
     color: "mobile-text-heading-primary",
     gradientColors: tmp10,
     style: memo,
@@ -261,7 +261,7 @@ let closure_14 = noop.memo(function CreatedBy(thread) {
     lineBreakMode: "tail",
     style: tmp.subtextContent,
     accessibilityLabel,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     children: null,
   };
@@ -291,7 +291,7 @@ let closure_14 = noop.memo(function CreatedBy(thread) {
       }
       obj2.roleColors = tmp9;
       obj2.shouldShowRoleDot = "dot" === closure_3 && null != colorString;
-      return React7(Username, obj2, arg1);
+      return React6(Username, obj2, arg1);
     },
   });
   obj4.children = closure_9(thread(stateFromStores1[15]).Text, obj5);
@@ -307,7 +307,7 @@ export function ThreadSubtext(thread) {
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => ThreadMessageStore.getMostRecentMessage(id), items1);
   const obj = id(504);
-  const lastMessageTimestamp = id(8471).useLastMessageTimestamp(thread);
+  const lastMessageTimestamp = id(8487).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
@@ -316,13 +316,13 @@ export function ThreadSubtext(thread) {
       }
     }
   }
-  const obj2 = id(8471);
-  const timestampString = id(8471).getTimestampString(lastMessageTimestamp);
-  const tmpResult = id(8471);
-  const tmpResult2 = id(8471);
+  const obj2 = id(8487);
+  const timestampString = id(8487).getTimestampString(lastMessageTimestamp);
+  const tmpResult = id(8487);
+  const tmpResult2 = id(8487);
   return closure_9(closure_14, {
     thread,
     timestamp: timestampString,
-    accessibilityLabel: id(8471).getTimestampAccessibilityLabel(lastMessageTimestamp),
+    accessibilityLabel: id(8487).getTimestampAccessibilityLabel(lastMessageTimestamp),
   });
 }

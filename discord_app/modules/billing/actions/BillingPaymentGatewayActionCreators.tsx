@@ -5,7 +5,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
-import _mod6668 from "../../../../_runtime/metro/06668__.js";
+import _mod6683 from "../../../../_runtime/metro/06683__.js";
 import StripeActionCreators from "StripeActionCreators.tsx";
 import StripeUtilsAll from "../../../utils/StripeUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -73,7 +73,7 @@ let closure_14 = async function _createCardToken(arg0, arg1) {
             let error;
             if (null != closure_0) {
               if (null != element) {
-                element = element.getElement(_mod6668.CardNumberElement);
+                element = element.getElement(_mod6683.CardNumberElement);
                 if (null == element) {
                   throw BillingSharedActionCreators.dispatchConfirmationError(
                     "Unable to load card elements from Stripe",
@@ -592,7 +592,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
                       if (closure_136_11 == null) {
                         setupIntent = undefined;
                       }
-                      const obj8 = { setupIntent, error: "y" };
+                      const obj8 = { setupIntent, error: "a" };
                       closure_136_10 = obj8;
                       if (
                         (function shouldRecreateSetupIntentForPaymentElement(error) {
@@ -623,7 +623,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
                       setupIntent2 = closure_137_17(closure_136_10.setupIntent, closure_136_10.error, (type) => {
                         const intl = dependencyMap(1113).intl;
                         const stringResult = intl.string(dependencyMap(1113).t.khEaRI);
-                        return dependencyMap(6656).dispatchConfirmationError(type, {
+                        return dependencyMap(6671).dispatchConfirmationError(type, {
                           captureException: true,
                           defaultErrorMessage: stringResult,
                           captureExceptionOptions: { tags: { source: "payment_elements" } },
@@ -1395,7 +1395,7 @@ let closure_33 = async function _paymentIntentSucceeded() {
   return true;
 };
 let Constants = fn(1072);
-({ Endpoints: hasOwnProperty, PaymentGateways: metroRequire, VAULTABLE_PAYMENT_SOURCES: closure_7 } = Constants);
+({ Endpoints: hasOwnProperty, PaymentGateways: closure_6, VAULTABLE_PAYMENT_SOURCES: metroImportDefault } = Constants);
 Constants = fn(1083);
 ({ ADYEN_PAYMENT_SOURCES: closure_8, STRIPE_PAYMENT_SOURCES: closure_9, PaymentSourceTypes } = Constants);
 let closure_11 = new LoggerDefault("BillingPaymentGatewayActionCreators.tsx");

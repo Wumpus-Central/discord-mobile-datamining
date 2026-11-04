@@ -7,8 +7,8 @@ const require = fn;
 fn(19).useCallback;
 const Constants = fn(1072);
 ({
-  AnalyticsPages: metroRequire,
-  UPLOAD_MEDIUM_SIZE: closure_7,
+  AnalyticsPages: closure_6,
+  UPLOAD_MEDIUM_SIZE: metroImportDefault,
   Base64GIFPrefix: closure_8,
   AnalyticsSections: closure_9,
   UpsellTypes: closure_10,
@@ -71,12 +71,12 @@ export default function useUploadAvatar(guildId) {
               let originalMd5;
               closure_128_3 = undefined;
               closure_128_4 = undefined;
-              tmp22(5381).hideActionSheet();
-              const obj13 = tmp22(5381);
+              tmp22(5382).hideActionSheet();
+              const obj13 = tmp22(5382);
               const obj6 = { size };
               dependencyMap = 1;
               c3 = 1;
-              const obj8 = { value: tmp22(8344).openImagePicker(obj6), done: false };
+              const obj8 = { value: tmp22(8360).openImagePicker(obj6), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -112,21 +112,21 @@ export default function useUploadAvatar(guildId) {
             }
             const obj10 = { imageUri: base64, description: null, originalMd5: null };
             tmp22 = tmp2;
-            const obj2 = tmp2(16591);
-            obj10.description = tmp2(8864).generateAvatarDescription();
+            const obj2 = tmp2(16682);
+            obj10.description = tmp2(8881).generateAvatarDescription();
             obj10.originalMd5 = originalMd5;
             closure_128_4 = obj2.createPendingImage(obj10);
             if (closure_129_1) {
-              tmp2(8862).setTryItOutAvatar(closure_128_4);
-              const tmp28Result = tmp2(8862);
+              tmp2(8879).setTryItOutAvatar(closure_128_4);
+              const tmp28Result = tmp2(8879);
             } else {
               const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-              tmp2(8859).setPendingChanges(obj11);
-              const tmp28Result2 = tmp2(8859);
-              const result = tmp2(8861).announcePendingAvatarChange("set");
-              const obj7 = tmp2(8861);
+              tmp2(8876).setPendingChanges(obj11);
+              const tmp28Result2 = tmp2(8876);
+              const result = tmp2(8878).announcePendingAvatarChange("set");
+              const obj7 = tmp2(8878);
             }
-            const obj4 = tmp2(8864);
+            const obj4 = tmp2(8881);
           }
         } catch (tmp38) {
           c3 = tmp;

@@ -36,21 +36,21 @@ export function useDisplayNameStylesNewFonts(visibleFontOrder) {
   );
   return obj2;
 }
-export function useDisplayNameStylesNewEffects(visibleEffectOrder) {
-  _require = visibleEffectOrder;
+export function useDisplayNameStylesNewEffects(arg0) {
+  _require = arg0;
   items = [DisplayNameStylesSeenStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => seenEffects.getSeenEffects());
   const obj2 = {
     dotEffectIds: null,
     dismissEffectDot: noop.useCallback((effectId) => {
-      const result = visibleEffectOrder(stateFromStores[4]).markDisplayNameStyleEffectSeen(effectId);
+      const result = closure_0(stateFromStores[4]).markDisplayNameStyleEffectSeen(effectId);
     }, []),
   };
-  const items1 = [visibleEffectOrder, stateFromStores];
+  const items1 = [arg0, stateFromStores];
   obj2.dotEffectIds = noop.useMemo(
     () =>
       new Set(
-        visibleEffectOrder.filter((item) => {
+        closure_0.filter((item) => {
           let hasItem = closure_2_4.includes(item);
           if (hasItem) {
             hasItem = !set.has(item);
@@ -80,21 +80,20 @@ export function useDisplayNameStylesNewFontsBadge(visibleFontOrder) {
     }, []),
   };
 }
-export function useDisplayNameStylesNewEffectsBadge(visibleEffectOrder) {
-  _require = visibleEffectOrder;
+export function useDisplayNameStylesNewEffectsBadge(arg0) {
+  _require = arg0;
   items = [DisplayNameStylesSeenStore];
-  const items1 = [visibleEffectOrder];
+  const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     newEffectsBadgeDismissed.getNewEffectsBadgeDismissed(),
   );
   const obj = require("initialize");
-  const tmp2 =
-    noop.useMemo(() => visibleEffectOrder.some((item) => closure_1_4.includes(item)), items1) && !stateFromStores;
+  const tmp2 = noop.useMemo(() => closure_0.some((item) => closure_1_4.includes(item)), items1) && !stateFromStores;
   return {
     showEffectsBadge:
-      noop.useMemo(() => visibleEffectOrder.some((item) => closure_1_4.includes(item)), items1) && !stateFromStores,
+      noop.useMemo(() => closure_0.some((item) => closure_1_4.includes(item)), items1) && !stateFromStores,
     dismissEffectsBadge: noop.useCallback(() => {
-      const result = visibleEffectOrder(dependencyMap[4]).markDisplayNameStyleNewEffectsBadgeDismissed();
+      const result = closure_0(dependencyMap[4]).markDisplayNameStyleNewEffectsBadgeDismissed();
     }, []),
   };
 }

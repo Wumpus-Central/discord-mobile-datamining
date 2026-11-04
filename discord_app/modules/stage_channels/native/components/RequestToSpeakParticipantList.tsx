@@ -58,7 +58,7 @@ function RequestToSpeakParticipant(participant) {
       children: participant.user.username,
     }),
   ];
-  const obj8 = { variant: "text-xs/medium", color: "text-default", children: null };
+  const obj8 = { variant: "body-xs/medium", color: "text-default", children: null };
   const obj5 = {
     user: participant.user,
     guildId: channel.guild_id,
@@ -163,7 +163,7 @@ export default function RequestToSpeakParticipantList(channel) {
     const intl = tmp2(tmp3[13]).intl;
     obj4.children = intl.string(tmp2(tmp3[13]).t["7R24mX"]);
     items = [closure_4(tmp2(tmp3[11]).Text, obj4)];
-    const obj5 = { style: tmp.emptyBody, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj5 = { style: tmp.emptyBody, variant: "body-sm/medium", color: "text-default", children: null };
     const intl2 = tmp2(tmp3[13]).intl;
     obj5.children = intl2.string(tmp2(tmp3[13]).t.Rpr2s0);
     items[1] = closure_4(tmp2(tmp3[11]).Text, obj5);

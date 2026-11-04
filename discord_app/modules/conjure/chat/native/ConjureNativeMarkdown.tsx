@@ -21,7 +21,7 @@ class ConjureNativeMarkdown {
       children: memo.map((kind, index) => {
         if ("text" === kind.kind) {
           obj2 = {
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "text-default",
             children: conjureMarkup.parseConjureMarkup(kind.text, true, obj),
           };
@@ -36,7 +36,7 @@ class ConjureNativeMarkdown {
             const obj3 = {
               style: list.marker,
               children: closure_2_4(source(dependencyMap[6]).Text, {
-                variant: "text-md/normal",
+                variant: "body-md/normal",
                 color: "text-default",
                 children: children.marker,
               }),
@@ -44,7 +44,7 @@ class ConjureNativeMarkdown {
             const items1 = [closure_2_4(View, obj3)];
             const obj5 = { style: list.itemText, children: null };
             const obj6 = {
-              variant: "text-md/normal",
+              variant: "body-md/normal",
               color: "text-default",
               children: source(dependencyMap[7]).parseConjureMarkup(children.text, true, obj2),
             };
@@ -77,7 +77,7 @@ obj4.item = { flexDirection: "row", alignItems: "flex-start" };
 let obj6 = { gap: nativeDefault.space.PX_4 };
 obj4.marker = { minWidth: nativeDefault.space.PX_20, marginRight: nativeDefault.space.PX_4 };
 obj4.itemText = { flex: 1 };
-const React7 = createStyles.createStyles(obj4);
+const React6 = createStyles.createStyles(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeMarkdown.tsx");
 

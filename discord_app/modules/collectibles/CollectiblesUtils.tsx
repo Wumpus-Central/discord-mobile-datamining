@@ -684,7 +684,7 @@ export function shouldShowLimitedTimeBadge(categoryWillUnpublishAt) {
       Math.floor(
         (Date.UTC(fullYear1, month1, categoryWillUnpublishAt.getDate()) - Date.UTC(fullYear, month, date.getDate())) /
           86400000,
-      ) <= React7;
+      ) <= React6;
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }
   return tmp;

@@ -69,7 +69,7 @@ function GuildPowerupsRecentActivityRow(row) {
     }
     const items2 = [tmp18Result, , ,];
     const obj10 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "interactive-text-active",
       lineClamp: 1,
       style: null,
@@ -86,12 +86,12 @@ function GuildPowerupsRecentActivityRow(row) {
     obj10.children = username;
     items2[1] = hasOwnProperty(Text_Text.Text, obj10);
     items2[2] = hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "interactive-text-active",
       children: " ",
     });
     const obj11 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       lineClamp: 1,
       style: tmp.messageText,
       children: getBoostRowMessageTextDefault(row),
@@ -100,7 +100,7 @@ function GuildPowerupsRecentActivityRow(row) {
     obj8.children = items2;
     items1[1] = timestampProducer(View, obj8);
     const obj12 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-subtle",
       style: tmp.timestamp,
       children: calendarFormatResult,
@@ -111,7 +111,7 @@ function GuildPowerupsRecentActivityRow(row) {
   }
 }
 const View = _mod17.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   sectionContainer: { marginTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
   boostContainer: null,

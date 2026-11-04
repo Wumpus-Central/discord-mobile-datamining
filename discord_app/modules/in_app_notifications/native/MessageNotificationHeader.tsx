@@ -50,7 +50,7 @@ function LocationText(channel) {
   }, items);
   if (tmp5) {
     const obj2 = {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: str,
       maxFontSizeMultiplier: 1.75,
       style: tmp.separator,
@@ -62,7 +62,7 @@ function LocationText(channel) {
     tmp5,
     memo,
     closure_7(channel(parentChannel[8]).Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: str,
       lineClamp: 1,
       style: tmp.secondaryText,
@@ -74,7 +74,7 @@ function LocationText(channel) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
@@ -176,7 +176,7 @@ export default function MessageNotificationHeader(locationTextColor) {
   let tmp17Result = null != author;
   if (tmp17Result) {
     const obj5 = {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       style: null,
@@ -185,18 +185,18 @@ export default function MessageNotificationHeader(locationTextColor) {
     const items1 = [tmp.primaryText, tmp6];
     obj5.style = items1;
     obj5.children = author.nick;
-    tmp17Result = React5(Text_Text.Text, obj5);
+    tmp17Result = metroImportDefault(Text_Text.Text, obj5);
   }
   const items2 = [tmp17Result];
   let tmp17Result2 = null != tmp10;
   if (tmp17Result2) {
     const obj6 = { location: tmp10, channel, parentChannel, author, color: locationTextColor.locationTextColor };
-    tmp17Result2 = React5(LocationText, obj6);
+    tmp17Result2 = metroImportDefault(LocationText, obj6);
   }
   items2[1] = tmp17Result2;
   obj4.children = items2;
-  obj3.children = React6(View, obj4);
-  return React5(View, obj3);
+  obj3.children = React5(View, obj4);
+  return metroImportDefault(View, obj3);
 }
 export function SimpleNotificationHeader(secondaryText) {
   secondaryText = secondaryText.secondaryText;
@@ -204,7 +204,7 @@ export function SimpleNotificationHeader(secondaryText) {
   const tmp = closure_9();
   const obj = { style: tmp.container, children: null };
   const obj2 = {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "mobile-text-heading-primary",
     lineClamp: 1,
     style: null,
@@ -212,30 +212,30 @@ export function SimpleNotificationHeader(secondaryText) {
   };
   items = [tmp.primaryText, labelStyle];
   obj2.style = items;
-  const items1 = [React5(Text_Text.Text, obj2)];
+  const items1 = [metroImportDefault(Text_Text.Text, obj2)];
   let tmp2Result = null != secondaryText;
   if (tmp2Result) {
     const obj3 = { style: tmp.secondaryTextContainer, children: null };
     const obj4 = {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "text-muted",
       maxFontSizeMultiplier: 1.75,
       style: tmp.separator,
       children: "\u00B7",
     };
-    const items2 = [React5(Text_Text.Text, obj4)];
+    const items2 = [metroImportDefault(Text_Text.Text, obj4)];
     const obj5 = {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "text-muted",
       lineClamp: 1,
       style: tmp.secondaryText,
       children: secondaryText,
     };
-    items2[1] = React5(Text_Text.Text, obj5);
+    items2[1] = metroImportDefault(Text_Text.Text, obj5);
     obj3.children = items2;
-    tmp2Result = React6(View, obj3);
+    tmp2Result = React5(View, obj3);
   }
   items1[1] = tmp2Result;
   obj.children = items1;
-  return React6(View, obj);
+  return React5(View, obj);
 }

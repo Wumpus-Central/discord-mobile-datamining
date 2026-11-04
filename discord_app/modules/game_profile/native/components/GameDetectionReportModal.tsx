@@ -115,7 +115,7 @@ function ReportContent(applicationId) {
   let obj4 = { style: tmp.container, keyboardShouldPersistTaps: "handled", children: null };
   if ("issue_selection" === first) {
     let obj5 = { style: tmp.content, children: null };
-    const obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj6 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl4 = tmp2(tmp3[12]).intl;
     obj6.children = intl4.string(tmp2(tmp3[12]).t.IQHicr);
     const items3 = [tmp16(tmp2(tmp3[16]).Text, obj6)];
@@ -132,7 +132,7 @@ function ReportContent(applicationId) {
         }, 100);
       },
       hasIcons: null,
-      children: true,
+      children: "GUILD_MEMBER_UPDATE_LOCAL",
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[12]).intl;
@@ -148,7 +148,7 @@ function ReportContent(applicationId) {
     let tmp18Result = str2(first1, obj5);
   } else if ("game_search" === first) {
     const obj10 = { style: tmp.content, children: null };
-    const obj11 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj11 = { variant: "body-sm/normal", color: "text-muted", children: null };
     let intl = tmp2(tmp3[12]).intl;
     obj11.children = intl.string(tmp2(tmp3[12]).t["79o/iq"]);
     const items5 = [tmp16(tmp2(tmp3[16]).Text, obj11), ,];
@@ -210,7 +210,7 @@ function ReportContent(applicationId) {
   } else if ("other_feedback" === first) {
     const obj17 = { children: null };
     const obj18 = { style: tmp.content, children: null };
-    const obj19 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj19 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl7 = tmp2(tmp3[12]).intl;
     obj19.children = intl7.string(tmp2(tmp3[12]).t.IblYEw);
     const items7 = [tmp16(tmp2(tmp3[16]).Text, obj19)];
@@ -235,9 +235,9 @@ function ReportContent(applicationId) {
   return closure_7(closure_5, obj4);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
 const createStyles = fn(5141);
 let obj2 = {
@@ -269,6 +269,6 @@ export default function GameDetectionReportModal(applicationId) {
   const obj = { screens: memo, initialRouteStack: null };
   items = [{ name: REPORT, params: { applicationId: applicationId.applicationId } }];
   obj.initialRouteStack = items;
-  return React5(Navigator.Navigator, obj);
+  return metroImportDefault(Navigator.Navigator, obj);
 }
 export const MODAL_KEY = "game-detection-report";

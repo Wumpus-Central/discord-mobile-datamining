@@ -74,7 +74,7 @@ function markDismissibleContentAsDismissedPostProcessing(content, groupName) {
     groupName = groupName.groupName;
   }
   obj.groupName = groupName;
-  React7(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
+  React6(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
   const tmp = !DismissibleContentFrameworkStore.hasUserHitDCCap();
 }
 let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(arg0) {

@@ -78,22 +78,22 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   const items2 = [
     React4(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues,
-      variant: "text-lg/medium",
+      variant: "body-lg/medium",
       color: "text-default",
     }),
     React4(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues1,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
     }),
     React4(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues2,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
     }),
     React4(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues3,
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-muted",
     }),
   ];

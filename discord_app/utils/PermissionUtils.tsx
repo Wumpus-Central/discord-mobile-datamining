@@ -104,7 +104,7 @@ function computePermissionsForMember(excludeGuildPermissions) {
     } else {
       unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guild.id);
     }
-    const tmp11 = unsafeMutableRoles[React7(undefined, guild)];
+    const tmp11 = unsafeMutableRoles[React6(undefined, guild)];
     const tmp12 = null != tmp11 ? tmp11.permissions : combineResult;
     let tmp13 = tmp12;
     if (null != member) {
@@ -190,7 +190,7 @@ function computePermissions(excludeGuildPermissions) {
     if (typeof user !== "string") {
       id = user.id;
     }
-    if (context instanceof React6) {
+    if (context instanceof React5) {
       if (context.isScheduledForDeletion()) {
         return deserializeResult;
       } else if (set.has(context.type)) {
@@ -369,7 +369,7 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   return obj;
 }
 const ChannelRecord = fn(4994);
-({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
+({ THREAD_CHANNEL_TYPES: metroImportDefault, ChannelRecordBase: closure_8 } = ChannelRecord);
 const GuildRecord = fn(5008);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: closure_10 } = GuildRecord);
 const hasPermission = fn(5048).hasPermission;
@@ -453,7 +453,7 @@ function computePermissionsForRoles(excludeGuildPermissions) {
     checkElevated = true;
   }
   excludeGuildPermissions = excludeGuildPermissions.excludeGuildPermissions;
-  if (context instanceof React6) {
+  if (context instanceof React5) {
     if (context.isScheduledForDeletion()) {
       return deserializeResult;
     } else if (set.has(context.type)) {
@@ -687,7 +687,7 @@ export const DENY = "DENY";
 export const PASSTHROUGH = "PASSTHROUGH";
 export function canEveryoneRole(VIEW_CHANNEL, channel) {
   let tmp = channel;
-  if (channel instanceof React6) {
+  if (channel instanceof React5) {
     if (channel.type === constants2.PRIVATE_THREAD) {
       return false;
     } else {

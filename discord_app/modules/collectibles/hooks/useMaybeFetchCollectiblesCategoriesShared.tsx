@@ -11,8 +11,10 @@ require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useCallback: closure_4 } = noop);
 const CollectiblesShopConstants = fn(1074);
-({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: closure_7, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_8 } =
-  CollectiblesShopConstants);
+({
+  COLLECTIBLES_SHOP_CACHE_DURATION_MS: metroImportDefault,
+  COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_8,
+} = CollectiblesShopConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx");
 
@@ -68,7 +70,7 @@ export function useMaybeFetchCollectiblesCategoriesShared(arg0, noOp, arg2) {
         if (!CollectiblesCategoryStore.isFetchingCategories) {
           const _Date = Date;
           const _Boolean = Boolean;
-          Date.now() - closure_7 < React6;
+          Date.now() - closure_7 < React5;
           if (!Boolean(closure_6)) {
             const obj = {};
             const merged = Object.assign(closure_0);
@@ -79,7 +81,7 @@ export function useMaybeFetchCollectiblesCategoriesShared(arg0, noOp, arg2) {
             const _Date2 = Date;
             let tmp19 = !!result;
             if (result) {
-              tmp19 = Date.now() - closure_8 < React5;
+              tmp19 = Date.now() - closure_8 < metroImportDefault;
             }
             if (!tmp19) {
               const collectiblesCategories = CollectiblesActionCreators.fetchCollectiblesCategories(

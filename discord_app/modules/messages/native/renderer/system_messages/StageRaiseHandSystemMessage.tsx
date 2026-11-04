@@ -13,8 +13,8 @@ import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({
-  HelpdeskArticles: metroRequire,
-  MessageFlags: closure_7,
+  HelpdeskArticles: closure_6,
+  MessageFlags: metroImportDefault,
   MessageTypes: closure_8,
   Permissions: closure_9,
 } = Constants);

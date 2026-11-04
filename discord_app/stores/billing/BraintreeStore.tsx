@@ -6,7 +6,7 @@ import Constants from "../../Constants.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-({ Endpoints: closure_4, PaymentGateways: hasOwnProperty, PaymentSourceTypes: metroRequire } = Constants);
+({ Endpoints: closure_4, PaymentGateways: hasOwnProperty, PaymentSourceTypes: closure_6 } = Constants);
 let client = null;
 let c8 = null;
 let c9 = null;

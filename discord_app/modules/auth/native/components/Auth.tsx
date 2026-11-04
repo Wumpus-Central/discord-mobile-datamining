@@ -7,12 +7,12 @@ import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
 import WideAuthScrollContext from "WideAuthScrollContext.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import StackNavigator from "../../../../../_runtime/07292_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07308_StackNavigator.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import useShouldShowChooseAccountDefault from "../../../multi_account/useShouldShowChooseAccount.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import _mod18185 from "../../../../../_runtime/metro/18185__.js";
+import _mod18282 from "../../../../../_runtime/metro/18282__.js";
 import AuthManagerDefault from "../AuthManager.tsx";
 import useOrientationLockDefault from "../useOrientationLock.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -62,7 +62,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod18185;
+  obj3.backgroundImageSource = _mod18282;
   const children = [closure_9(BackgroundImageDefault, obj3), ,];
   let tmp18Result = null;
   if (tmp5) {
@@ -70,7 +70,7 @@ function NavigatorWithCaptchaHook() {
     if (tmp9 === AuthStates.WELCOME) {
       tmp18Result = null;
       if (tmp7) {
-        tmp18Result = closure_9(tmp4(7073), {});
+        tmp18Result = closure_9(tmp4(7088), {});
       }
     }
   }
@@ -166,11 +166,11 @@ function NavigatorWithCaptchaHook() {
   return closure_11(closure_10, { children });
 }
 get_ActivityIndicator = fn(17);
-({ Keyboard: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ Keyboard: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(18131);
+let RegistrationStepsUtils = fn(18228);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
@@ -203,7 +203,7 @@ const screens = Object.fromEntries(
               const obj3 = {};
               const merged1 = Object.assign(arg0);
               obj3.backImage = backImage;
-              headerLeftResult = React7(RegistrationUtils.BackButtonWithTracking, obj3);
+              headerLeftResult = React6(RegistrationUtils.BackButtonWithTracking, obj3);
             }
             return headerLeftResult;
           },
@@ -225,7 +225,7 @@ const screens = Object.fromEntries(
   }),
 );
 let num = 540;
-if (fn(7244).hasWebAuthn) {
+if (fn(7264).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
@@ -273,7 +273,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[25]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7778).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7794).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, {

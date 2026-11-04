@@ -38,7 +38,7 @@ function FeedbackForm(result) {
   const obj4 = { style: tmp.bottomContainer, children: null };
   let tmp8Result = !hideHelpdeskLink;
   if (!hideHelpdeskLink) {
-    const obj5 = { style: tmp.helpDeskLabel, variant: "text-xs/medium", color: "text-muted", children: null };
+    const obj5 = { style: tmp.helpDeskLabel, variant: "body-xs/medium", color: "text-muted", children: null };
     const intl3 = tmp6(tmp7[6]).intl;
     const obj6 = { helpdeskURL: require("HelpdeskUtils").getSubmitRequestURL() };
     obj5.children = intl3.format(tmp6(tmp7[6]).t.ybi2tD, obj6);
@@ -70,9 +70,9 @@ function FeedbackForm(result) {
   return closure_8(closure_6, obj9);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   helpDeskLabel: { lineHeight: 16, marginTop: 8 },
@@ -104,7 +104,7 @@ export default function FeedbackModal(result) {
   obj3.headerLeft = require("NavigatorHeader").getHeaderCloseButton(callback);
   obj3.render = function render() {
     const merged = Object.assign(closure_0);
-    return React5(FeedbackForm, {});
+    return metroImportDefault(FeedbackForm, {});
   };
   obj2.Feedback = obj3;
   obj.screens = obj2;

@@ -8,7 +8,7 @@ import useColorThemeBackgroundDefault from "../../../client_themes/native/useCol
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
-import BottomSheetModalDefault from "../../../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModalDefault from "../../../../../_runtime/05400_BottomSheetModal.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import useCustomKeyboardBottomSheetConfigDefault from "../../../action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -30,11 +30,12 @@ function MediaKeyboardBackground(arg0) {
   obj.accessibilityLabel = intl.string(util.t.XONG6A);
   items = [style, closure_13().background];
   obj.style = items;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 const View = fn(17).View;
 const MediaKeyboardConstants = fn(1623);
-({ HEADER_HANDLE_HEIGHT: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
+({ HEADER_HANDLE_HEIGHT: closure_6, MediaPickerActionSheetEngagedActions: metroImportDefault } =
+  MediaKeyboardConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

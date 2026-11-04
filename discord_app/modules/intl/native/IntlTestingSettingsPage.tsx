@@ -6,8 +6,8 @@ import _mod1152 from "../../../../_runtime/metro/01152__.js";
 import _modDef2171 from "../../../../_runtime/metro/02171__.js";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef17767 from "../messages/Test.messages.js";
-import _modDef17799 from "../messages/SecondTest.messages.js";
+import _modDef17863 from "../messages/Test.messages.js";
+import _modDef17895 from "../messages/SecondTest.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -152,7 +152,7 @@ function LocaleInfo() {
   return closure_11(TableRowGroup.TableRowGroup, obj9);
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const setAppLocale = fn(2192).setAppLocale;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -178,37 +178,37 @@ export default function IntlTestingSettingsPage() {
   let obj = { style: tmp.wrap, children: null };
   const obj2 = { spacing: 24, style: tmp.container, children: null };
   items = [closure_10(LocaleInfo, {}), closure_10(TestLocaleSelector, {}), , , , , ,];
-  const obj3 = { variant: "text-md/normal", children: null };
+  const obj3 = { variant: "body-md/normal", children: null };
   const intl = require("util").intl;
-  obj3.children = intl.format(_modDef17767.HMvEC5, {});
+  obj3.children = intl.format(_modDef17863.HMvEC5, {});
   items[2] = closure_10(require("Text/Text").Text, obj3);
-  const obj4 = { variant: "text-md/normal", children: null };
+  const obj4 = { variant: "body-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj4.children = intl2.format(_modDef17799.swfLzV, {});
+  obj4.children = intl2.format(_modDef17895.swfLzV, {});
   items[3] = closure_10(require("Text/Text").Text, obj4);
-  const obj5 = { variant: "text-md/normal", children: null };
+  const obj5 = { variant: "body-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj5.children = intl3.format(_modDef17767.rmps8y, {});
+  obj5.children = intl3.format(_modDef17863.rmps8y, {});
   items[4] = closure_10(require("Text/Text").Text, obj5);
-  const obj6 = { variant: "text-md/normal", children: null };
+  const obj6 = { variant: "body-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj6.children = intl4.format(_modDef17767.uczI4g, {
+  obj6.children = intl4.format(_modDef17863.uczI4g, {
     linkTarget() {},
   });
   items[5] = closure_10(require("Text/Text").Text, obj6);
-  const obj8 = { variant: "text-md/normal", children: null };
+  const obj8 = { variant: "body-md/normal", children: null };
   const intl5 = require("util").intl;
-  obj8.children = intl5.format(_modDef17767.rdfRyh, {});
+  obj8.children = intl5.format(_modDef17863.rdfRyh, {});
   items[6] = closure_10(require("Text/Text").Text, obj8);
-  const obj9 = { variant: "text-md/normal", children: null };
+  const obj9 = { variant: "body-md/normal", children: null };
   const intl6 = require("util").intl;
-  obj9.children = intl6.format(_modDef17767.XOdbAy, {
+  obj9.children = intl6.format(_modDef17863.XOdbAy, {
     username: "some user",
     usernameHook(children) {
       const obj = {
         style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 },
-        children: closure_1_10(closure_0(5747).Text, {
-          variant: "text-sm/normal",
+        children: closure_1_10(closure_0(5761).Text, {
+          variant: "body-sm/normal",
           color: "text-overlay-light",
           children,
         }),

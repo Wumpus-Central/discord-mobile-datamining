@@ -84,7 +84,7 @@ export default function EmptyState(Illustration) {
     let tmp25 = null;
     if (null != body) {
       const obj6 = {
-        variant: "text-md/medium",
+        variant: "body-md/medium",
         color: "text-muted",
         maxFontSizeMultiplier: 2,
         style: null,

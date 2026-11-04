@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalBans.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/07019_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/07034_fuzzysearch.js";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -13,7 +13,7 @@ import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);

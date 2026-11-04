@@ -35,12 +35,7 @@ export default function UserVerification(arg0) {
       platform: MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL,
     };
     items[1] = React3(IdentityVerificationFieldDefault, obj2);
-    const obj3 = {
-      style: tmp.emailPhoneNote,
-      variant: "heading-deprecated-12/medium",
-      color: "text-default",
-      children: null,
-    };
+    const obj3 = { style: tmp.emailPhoneNote, variant: "body-xs/medium", color: "text-default", children: null };
     if (platform === MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE) {
       const intl2 = util.intl;
       let stringResult = intl2.string(util.t["jMh+TY"]);

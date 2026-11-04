@@ -5,17 +5,18 @@ import RedesignChannelList from "../../channel_list_v2/native/RedesignChannelLis
 import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels.tsx";
 import useShouldRenderChannelList from "../../guild_sidebar/native/useShouldRenderChannelList.tsx";
 import FavoritesGuildChannelList from "../FavoritesGuildChannelList.tsx";
+import useFavoritesPruneInactiveThreadsDefault from "../hooks/useFavoritesPruneInactiveThreads.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ChannelListPanelBackdropDefault = tmp2(18252);
-const ChannelListStickyHeaderDefault = tmp2(18337);
-const FavoritesGuildSuggestedChannelsDefault = tmp2(18405);
-const FavoritesGuildSuggestionsLoaderDefault = tmp2(18495);
-const FavoritesGuildSidebarHeaderDefault = tmp2(18500);
+const ChannelListPanelBackdropDefault = tmp2(18349);
+const ChannelListStickyHeaderDefault = tmp2(18434);
+const FavoritesGuildSuggestedChannelsDefault = tmp2(18499);
+const FavoritesGuildSuggestionsLoaderDefault = tmp2(18590);
+const FavoritesGuildSidebarHeaderDefault = tmp2(18595);
 require = fn;
-let closure_3 = fn(18406).useFavoritesGuildSuggestionCount;
+let closure_3 = fn(18500).useFavoritesGuildSuggestionCount;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildChannels.tsx");
 
@@ -29,6 +30,7 @@ export default function FavoritesGuildChannels(arg0) {
     withSuggestionsNotice: tmp > 0,
   });
   ({ guildChannels, shouldShowEmptyState, hasNoChannels } = favoritesGuildChannelList);
+  useFavoritesPruneInactiveThreadsDefault();
   const obj4 = { withSuggestionsNotice: tmp > 0 };
   if (!obj5.useShouldRenderChannelList()) {
     return null;
@@ -42,15 +44,15 @@ export default function FavoritesGuildChannels(arg0) {
       const items1 = [React4(ChannelListStickyHeaderDefault, obj7), ,];
       tmp2Result2 = FavoritesGuildSuggestedChannelsDefault;
       items1[1] = React4(tmp2Result2, {});
-      let tmp10Result = null;
+      let tmp11Result = null;
       if (shouldShowEmptyState) {
         tmp2 = FavoritesGuildSidebarHeaderDefault;
         obj = {};
-        tmp10Result = React4(tmp2, obj);
+        tmp11Result = React4(tmp2, obj);
       }
-      items1[2] = tmp10Result;
+      items1[2] = tmp11Result;
       obj6.children = items1;
-      let tmp10Result1 = hasOwnProperty(ChannelListPanelBackdropDefault, obj6);
+      let tmp11Result1 = hasOwnProperty(ChannelListPanelBackdropDefault, obj6);
       const tmp2Result = ChannelListPanelBackdropDefault;
     } else {
       const obj9 = {};
@@ -62,11 +64,11 @@ export default function FavoritesGuildChannels(arg0) {
         tmp3,
         tmp,
       );
-      tmp10Result1 = React4(RedesignChannelList.ChannelList, obj9);
+      tmp11Result1 = React4(RedesignChannelList.ChannelList, obj9);
       const tmp4Result = FavoritesGuildSuggestedChannels;
     }
     const obj10 = { children: null };
-    items[1] = tmp10Result1;
+    items[1] = tmp11Result1;
     obj10.children = items;
     hasOwnProperty(timestampProducer, obj10);
   }

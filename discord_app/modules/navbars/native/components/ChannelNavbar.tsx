@@ -46,7 +46,7 @@ function ChannelTitleContent(arg0) {
     const obj3 = {
       style: tmp.channelName,
       lineClamp: 1,
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       accessibilityLabel: accessibleTitle,
       maxFontSizeMultiplier: 1,
@@ -75,7 +75,7 @@ function ParentChannelSubTitle(parentChannel) {
     style: closure_18().navbarTitleSecondaryText,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1,
-    variant: "text-xs/medium",
+    variant: "body-xs/medium",
     color: "text-muted",
     children: null,
   };
@@ -519,7 +519,7 @@ export function ChannelButtons(buttons) {
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      const children1 = [closure_16(closure_1(9237), obj)];
+      const children1 = [closure_16(closure_1(9254), obj)];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -542,8 +542,8 @@ export function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10650), obj2);
-        const tmp4Result = closure_1(10650);
+        tmp3Result = closure_16(closure_1(10698), obj2);
+        const tmp4Result = closure_1(10698);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

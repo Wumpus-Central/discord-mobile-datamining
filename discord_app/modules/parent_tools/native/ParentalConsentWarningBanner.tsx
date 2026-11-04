@@ -4,7 +4,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx";
-import tinycolorDefault from "../../../../_runtime/07854_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07870_tinycolor.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(7840).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7856).FamilyCenterSubPages;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: closure_10 } = Constants);
 const jsxProd = fn(21);
@@ -60,7 +60,7 @@ export default function ParentalConsentWarningBanner(children) {
   let isOnMainSurface = require("useIsOnMainSurface").useIsOnMainSurface();
   const obj4 = require("useIsOnMainSurface");
   const obj5 = require("useGlobalStatusIndicatorState");
-  token = require("useToken").useToken(token(daysRemaining[5]).colors.BACKGROUND_FEEDBACK_WARNING);
+  token = require("useToken").useToken(token(daysRemaining[5]).colors.BACKGROUND_FEEDBACK_MOD_WARNING);
   items = [token];
   daysRemaining = undefined;
   const memo = noop.useMemo(() => {
@@ -100,7 +100,7 @@ export default function ParentalConsentWarningBanner(children) {
     (children, arg1) =>
       closure_2_11(
         Text_Text.Text,
-        { variant: "text-sm/medium", color: "text-strong", style: link.link, children },
+        { variant: "body-sm/medium", color: "text-strong", style: link.link, children },
         arg1,
       ),
     items2,
@@ -140,7 +140,7 @@ export default function ParentalConsentWarningBanner(children) {
       const obj13 = { paddingTop: tmp2.top + 8 };
       items7[1] = obj13;
       obj12.style = items7;
-      let obj14 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, style: tmp.label, children: null };
+      let obj14 = { variant: "body-sm/medium", color: "text-strong", lineClamp: 1, style: tmp.label, children: null };
       if (0 === daysRemaining) {
         intl = intl(obj[19]).intl;
         Gfqlpa = Gfqlpa(obj[20]).Gfqlpa;

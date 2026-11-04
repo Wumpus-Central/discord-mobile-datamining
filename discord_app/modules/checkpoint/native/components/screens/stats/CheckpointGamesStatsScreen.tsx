@@ -15,11 +15,11 @@ import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
-const CheckpointApngPlayerDefault = items9(13784);
-const _modDef13785 = items9(13785);
-const _modDef13786 = items9(13786);
-const CheckpointCountUpStatNumberDefault = items9(13792);
-const CheckpointDisplayTextDefault = items9(13798);
+const CheckpointApngPlayerDefault = items9(13870);
+const _modDef13871 = items9(13871);
+const _modDef13872 = items9(13872);
+const CheckpointCountUpStatNumberDefault = items9(13878);
+const CheckpointDisplayTextDefault = items9(13884);
 function GameCard(game) {
   game = game.game;
   const id = game.id;
@@ -52,7 +52,7 @@ function GameCard(game) {
     const items1 = [,];
     ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp);
     obj7.style = items1;
-    obj7.children = closure_8(tmp2(8267).UnknownGameIcon, { size: "lg" });
+    obj7.children = closure_8(tmp2(8283).UnknownGameIcon, { size: "lg" });
     tmp9 = closure_8;
     tmp10 = closure_8(View, obj7);
   }
@@ -67,7 +67,7 @@ function GameCard(game) {
   const items3 = [closure_9(View, obj5)];
   const obj10 = { style: tmp.gameText, children: null };
   const items4 = [
-    tmp9(id(5747).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }),
+    tmp9(id(5761).Text, { variant: "body-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }),
     tmp9(CheckpointTextDefault, { variant: "mono-md/bold", style: tmp.gameLabel, children: label }),
   ];
   obj10.children = items4;
@@ -76,7 +76,7 @@ function GameCard(game) {
   return closure_9(View, obj4);
 }
 const View = _mod17.View;
-({ CHECKPOINT_GLOBAL_GAME_CATEGORIES: metroRequire, CHECKPOINT_PRIMARY } = CheckpointConstants);
+({ CHECKPOINT_GLOBAL_GAME_CATEGORIES: closure_6, CHECKPOINT_PRIMARY } = CheckpointConstants);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {
   container: {
@@ -176,7 +176,7 @@ export default function CheckpointGamesStatsScreen() {
   const items2 = [CheckpointStore];
   let num;
   const stateFromStores2 = stateFromStores1(504).useStateFromStores(items2, () =>
-    stateFromStores1(6557).hasCheckpointGames(CheckpointStore.stats),
+    stateFromStores1(6572).hasCheckpointGames(CheckpointStore.stats),
   );
   if (stateFromStores != null) {
     num = stateFromStores.totalGamesPlayed;
@@ -190,7 +190,7 @@ export default function CheckpointGamesStatsScreen() {
   if (stateFromStores != null) {
     prop = stateFromStores.totalGamesPlayedPercentile;
   }
-  let percentHook = intl(6557).getCheckpointTopPercent(prop);
+  let percentHook = intl(6572).getCheckpointTopPercent(prop);
   let games;
   if (stateFromStores != null) {
     games = stateFromStores.games;
@@ -216,7 +216,7 @@ export default function CheckpointGamesStatsScreen() {
       obj7.style = items3;
       const obj8 = { style: map.header, children: null };
       const obj9 = { style: map.globalHeading, children: null };
-      const obj10 = { animatedUri: _modDef13785, staticUri: _modDef13786, style: map.globe };
+      const obj10 = { animatedUri: _modDef13871, staticUri: _modDef13872, style: map.globe };
       const items4 = [closure_8(CheckpointApngPlayerDefault, obj10)];
       const obj11 = { isStepHeading: true, children: null };
       const items9Result = CheckpointApngPlayerDefault;
@@ -246,7 +246,7 @@ export default function CheckpointGamesStatsScreen() {
             const obj = { game: first, label: stringResult.toLocaleUpperCase(), accessibilityLabel: null };
             const _HermesInternal = HermesInternal;
             obj.accessibilityLabel = "" + first.name + ", " + stringResult;
-            return React6(GameCard, obj, list);
+            return React5(GameCard, obj, list);
           }
         }),
       };
@@ -258,9 +258,9 @@ export default function CheckpointGamesStatsScreen() {
   }
   let obj14 = { style: map.container, children: null };
   const obj15 = { style: map.title, children: null };
-  const items7 = [closure_8(intl(9859).GameControllerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY })];
-  const obj17 = { isStepHeading: true, variant: "heading-md/semibold", style: map.titleText, children: null };
-  const intlResult = intl(6557);
+  const items7 = [closure_8(intl(9877).GameControllerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY })];
+  const obj17 = { isStepHeading: true, variant: "heading-sm/semibold", style: map.titleText, children: null };
+  const intlResult = intl(6572);
   const obj16 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   obj17.children = stringResult.toLocaleUpperCase();
   items7[1] = closure_8(CheckpointTextDefault, obj17);

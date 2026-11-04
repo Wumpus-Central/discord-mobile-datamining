@@ -11,7 +11,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/screens/MfaOptionScreen.tsx");
 
@@ -42,13 +42,13 @@ export default function MFAOptionScreen(arg0) {
   ];
   let tmp10Result = null != subtitle;
   if (tmp10Result) {
-    const obj4 = { variant: "heading-sm/medium", color: "text-default", children: subtitle };
+    const obj4 = { variant: "heading-xs/medium", color: "text-default", children: subtitle };
     tmp10Result = React4(Text_Text.Text, obj4);
   }
   items[2] = tmp10Result;
   let tmp10Result4 = null != error;
   if (tmp10Result4) {
-    const obj5 = { variant: "text-sm/normal", color: "text-feedback-critical", children: error };
+    const obj5 = { variant: "body-sm/normal", color: "text-feedback-critical", children: error };
     tmp10Result4 = React4(Text_Text.Text, obj5);
   }
   let tmp10Result5 = type === mfaMethod;

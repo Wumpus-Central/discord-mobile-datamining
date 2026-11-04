@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   pill: {
@@ -125,13 +125,13 @@ export default function AvailableForumTag(tag) {
       items = [
         tmp9Result,
         timestampProducer(Text_Text.Text, {
-          variant: "text-sm/semibold",
+          variant: "body-sm/semibold",
           color: "mobile-text-heading-primary",
           children,
         }),
       ];
       obj.children = items;
-      return React5(native.PressableScale, obj);
+      return metroImportDefault(native.PressableScale, obj);
     },
   });
 }

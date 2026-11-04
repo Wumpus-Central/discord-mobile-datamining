@@ -11,7 +11,7 @@ let closure_5 = createStyles.createStyles({
   itemsContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: fn(7497).WISHLIST_SUGGESTION_CARD_GAP,
+    gap: fn(7513).WISHLIST_SUGGESTION_CARD_GAP,
     justifyContent: "flex-start",
   },
 });

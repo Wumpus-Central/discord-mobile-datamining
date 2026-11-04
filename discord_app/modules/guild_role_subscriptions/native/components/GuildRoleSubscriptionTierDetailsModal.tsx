@@ -113,10 +113,10 @@ function Content() {
   return closure_1_11(View, obj7);
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(17339);
+const GuildRoleSubscriptionsConstants = fn(17430);
 ({
-  GuildRoleSubscriptionsTierScenes: metroRequire,
-  MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7,
+  GuildRoleSubscriptionsTierScenes: closure_6,
+  MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault,
   MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_8,
 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;

@@ -5,7 +5,7 @@ import SharedCaptchaUtils from "../../modules/captcha/SharedCaptchaUtils.tsx";
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import siteKeyDefault from "../../../_runtime/19535_siteKey.js";
+import siteKeyDefault from "../../../_runtime/19639_siteKey.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import ThemeStore from "../../modules/user_settings/ThemeStore.tsx";
@@ -14,7 +14,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, NativeModules, NativeEventEmitter } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ CaptchaEvent: closure_7, RECAPTCHA_SITE_KEY: closure_8, AnalyticEvents: closure_9 } = Constants);
+({ CaptchaEvent: metroImportDefault, RECAPTCHA_SITE_KEY: closure_8, AnalyticEvents: closure_9 } = Constants);
 const jsx = fn(21).jsx;
 const CaptchaManager = NativeModules.CaptchaManager;
 const nativeEventEmitter = new NativeEventEmitter(CaptchaManager);
@@ -133,7 +133,7 @@ export default {
         captcha_flow_key: v4Result,
       });
       let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
-      const obj5 = { name: self(6665).MetricEvents.CAPTCHA_EVENT, tags: null };
+      const obj5 = { name: self(6680).MetricEvents.CAPTCHA_EVENT, tags: null };
       items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
       obj5.tags = items;
       MonitoringAgentDefault.increment(obj5);

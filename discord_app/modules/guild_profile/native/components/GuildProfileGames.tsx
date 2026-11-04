@@ -38,14 +38,14 @@ function FavoriteGame(activityLevel) {
   const obj = { style: styles().favoriteGame, children: null };
   items = [
     hasOwnProperty(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: game.name }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", children: game.name }),
   ];
   obj.children = items;
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", gap: 8 },
@@ -107,7 +107,7 @@ export default function GuildProfileGames(profile) {
         const obj4 = { style: closure_3.lastItemOverlay };
         items[1] = hasOwnProperty(View, obj4);
         const obj5 = { style: closure_3.lastItemText, children: null };
-        const obj6 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
+        const obj6 = { variant: "body-xs/medium", color: "text-overlay-light", children: null };
         const _HermesInternal = HermesInternal;
         obj6.children = "+" + arr.length;
         obj5.children = hasOwnProperty(Text_Text.Text, obj6);

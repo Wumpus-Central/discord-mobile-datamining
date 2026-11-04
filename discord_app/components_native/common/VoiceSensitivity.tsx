@@ -13,7 +13,7 @@ import AppStateStore from "../../stores/native/AppStateStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
-const NativePermissionTypes = fn(8064).NativePermissionTypes;
+const NativePermissionTypes = fn(8080).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(5141);
@@ -134,7 +134,7 @@ export default function VoiceSensitivity(auto) {
               c1 = 1;
               c2 = 1;
               const obj4 = {
-                value: onThresholdChange(8081).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+                value: onThresholdChange(8097).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
                 done: false,
               };
               return obj4;
@@ -153,7 +153,7 @@ export default function VoiceSensitivity(auto) {
             }
             if (tmp5) {
               mediaEngine = mediaEngine.getMediaEngine();
-              mediaEngine.on(auto(5909).MediaEngineEvent.VoiceActivity, callback);
+              mediaEngine.on(auto(5923).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
             return { value: "HermesInternal", done: null };

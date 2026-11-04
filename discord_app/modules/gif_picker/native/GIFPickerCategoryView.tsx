@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
 fn(1072).GIFPickerResultTypes;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 },
@@ -62,24 +62,24 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   };
   const merged = Object.assign(useAccessibilityPressDefault(callback, formatToPlainStringResult));
   const items1 = [
-    React5(FastImageDefault, { style: tmp.gifImage, source: { uri: item.src } }),
-    React5(React4, { style: tmp.gifOverlay }),
+    metroImportDefault(FastImageDefault, { style: tmp.gifImage, source: { uri: item.src } }),
+    metroImportDefault(React4, { style: tmp.gifOverlay }),
   ];
   const obj5 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
     const obj6 = { size: "sm", style: tmp.categoryNameIcon, color: nativeDefault.colors.WHITE };
-    let tmp10Result = React5(AnalyticsIcon.AnalyticsIcon, obj6);
+    let tmp10Result = metroImportDefault(AnalyticsIcon.AnalyticsIcon, obj6);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
       const obj7 = { size: "sm", style: tmp.categoryNameIcon, color: nativeDefault.colors.WHITE };
-      tmp10Result = React5(StarIcon.StarIcon, obj7);
+      tmp10Result = metroImportDefault(StarIcon.StarIcon, obj7);
     }
   }
   const items2 = [
     tmp10Result,
-    React5(Text_Text.Text, {
-      variant: "text-sm/semibold",
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-sm/semibold",
       color: "text-overlay-light",
       maxFontSizeMultiplier: 2,
       accessible: false,
@@ -87,7 +87,7 @@ export default function GIFPickerCategoryView(onSelectCategory) {
     }),
   ];
   obj5.children = items2;
-  items1[2] = React6(React4, obj5);
+  items1[2] = React5(React4, obj5);
   obj2.children = items1;
-  return React6(hasOwnProperty, obj2);
+  return React5(hasOwnProperty, obj2);
 }

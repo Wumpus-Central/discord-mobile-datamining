@@ -23,7 +23,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9596).HeartIcon, {
+    children: closure_5(toastText(9615).HeartIcon, {
       color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
       size: "md",
     }),
@@ -33,7 +33,7 @@ function SourceIcon(toastText) {
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
 const createStyles = fn(5141);
 let obj = {
@@ -194,7 +194,7 @@ export default function WishlistItemCardBase(arg0) {
     isNew = hasOwnProperty(React4, obj13);
   }
   items3[4] = isNew;
-  const tmp13Result = React5(timestampProducer, { children: items3 });
+  const tmp13Result = metroImportDefault(timestampProducer, { children: items3 });
   if (null == onPress) {
     const obj14 = {
       style: items,

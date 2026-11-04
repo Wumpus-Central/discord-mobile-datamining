@@ -16,7 +16,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = { header: null, closeButton: null, closeIcon: null };
@@ -78,7 +78,7 @@ export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgre
     accessibilityRole: "header",
     "aria-level": "1",
     lineClamp: 1,
-    variant: "redesign/heading-18/semibold",
+    variant: "heading-md/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -87,12 +87,12 @@ export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgre
   items[1] = timestampProducer(Text_Text.Text, obj5);
   obj2.children = items;
   const items1 = [
-    React5(hasOwnProperty, obj2),
+    metroImportDefault(hasOwnProperty, obj2),
     timestampProducer(GiftBadgePostPurchaseDefault, {
       currentProgress: currentProgress.giftBadgeProgress,
       onSendGift: callback1,
     }),
   ];
   obj.children = items1;
-  return React5(ModalScreen.ModalScreen, obj);
+  return metroImportDefault(ModalScreen.ModalScreen, obj);
 }

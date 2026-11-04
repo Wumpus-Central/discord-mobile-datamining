@@ -104,7 +104,7 @@ function TypingIndicatorInner(channel) {
     }
   }, items3);
   const tmpResult = require("initialize");
-  analyticsLocations = useAnalyticsLocationsDefault(tmp5(7471).CHAT_TYPING_INDICATOR).analyticsLocations;
+  analyticsLocations = useAnalyticsLocationsDefault(tmp5(7487).CHAT_TYPING_INDICATOR).analyticsLocations;
   const items4 = [stateFromStoresObject, style_owner_user_id, , ,];
   ({ id: arr5[2], type: arr5[3] } = channel);
   items4[4] = analyticsLocations;
@@ -248,8 +248,8 @@ function TypingIndicatorInner(channel) {
       tmp39 = callback;
     }
     obj7.onPress = tmp39;
-    let tmp33Result = closure_12(tmp5(13876), obj7);
-    const tmp5Result2 = tmp5(13876);
+    let tmp33Result = closure_12(tmp5(13962), obj7);
+    const tmp5Result2 = tmp5(13962);
   } else {
     let tmp32Result3 = null;
     if (null != tmp6Result) {
@@ -261,13 +261,13 @@ function TypingIndicatorInner(channel) {
       style: tmp16.text,
       lineClamp: 1,
       maxFontSizeMultiplier: 2,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       includeFontPadding: true,
       ellipsizeMode: "tail",
       children: tmp6Result,
     };
-    items14[1] = closure_12(tmp(5747).Text, obj9);
+    items14[1] = closure_12(tmp(5761).Text, obj9);
     obj8.children = items14;
     tmp33Result = closure_14(closure_13, obj8);
   }
@@ -276,7 +276,7 @@ function TypingIndicatorInner(channel) {
   let tmp32Result4 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj10 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
-    tmp32Result4 = closure_12(tmp5(13880), obj10);
+    tmp32Result4 = closure_12(tmp5(13966), obj10);
   }
   items15[1] = tmp32Result4;
   obj5.children = items15;
@@ -291,8 +291,8 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return application_id(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(10026).useChatShowingAutoComplete;
-const SlowmodeType = fn(7954).SlowmodeType;
+let closure_5 = fn(10074).useChatShowingAutoComplete;
+const SlowmodeType = fn(7970).SlowmodeType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

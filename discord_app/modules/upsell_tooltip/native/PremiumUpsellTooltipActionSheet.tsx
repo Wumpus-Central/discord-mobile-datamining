@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -105,7 +105,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   ];
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
-  const obj7 = { style: null, variant: "text-md/medium", color: "text-default", children: description };
+  const obj7 = { style: null, variant: "body-md/medium", color: "text-default", children: description };
   const items3 = [tmp.description, descriptionStyle];
   obj7.style = items3;
   items1[2] = closure_5(Text_Text.Text, obj7);

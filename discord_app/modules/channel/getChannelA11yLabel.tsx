@@ -9,7 +9,7 @@ import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ ChannelTypes: hasOwnProperty, StatusTypes: metroRequire } = Constants);
+({ ChannelTypes: hasOwnProperty, StatusTypes: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelA11yLabel.tsx");
 

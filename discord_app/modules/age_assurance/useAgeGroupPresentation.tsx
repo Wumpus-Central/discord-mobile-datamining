@@ -24,7 +24,7 @@ export function useAgeGroupState() {
 }
 export function handleOpenAgeGatedContentArticle() {
   const obj = AgeVerificationActionCreatorsDefault;
-  obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
+  obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_VERIFICATION_LEARN_MORE));
 }
 export function handleShowAgeVerification() {
   const obj = AgeVerificationActionCreatorsDefault;

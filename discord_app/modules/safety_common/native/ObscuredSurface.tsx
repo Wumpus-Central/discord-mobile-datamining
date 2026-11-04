@@ -67,13 +67,13 @@ export default function ObscuredSurface(obscured) {
       const intl = util.intl;
       heading = intl.string(util.t.xC8Saf);
     }
-    const obj7 = { variant: "heading-md/semibold", color: "text-strong", children: heading };
+    const obj7 = { variant: "heading-sm/semibold", color: "text-strong", children: heading };
     items1[1] = React4(Text_Text.Text, obj7);
     if (description == null) {
       const intl2 = util.intl;
       description = intl2.string(util.t["0fc/DG"]);
     }
-    const obj8 = { variant: "text-sm/normal", color: "text-muted", children: description };
+    const obj8 = { variant: "body-sm/normal", color: "text-muted", children: description };
     items1[2] = React4(Text_Text.Text, obj8);
     obj5.children = items1;
     items[2] = hasOwnProperty(View, obj5);

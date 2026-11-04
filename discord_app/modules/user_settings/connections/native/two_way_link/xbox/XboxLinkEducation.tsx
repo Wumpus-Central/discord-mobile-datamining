@@ -6,14 +6,14 @@ import components_Button_Button from "../../../../../../design/components/Button
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef14761 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef14841 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function XboxLinkEducation(onClose) {
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   const obj3 = { style: twoWayLinkStyles.container, children: null };
   const obj4 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef14761 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14841 }), []);
   items = [timestampProducer(FastImageDefault, { source: memo, style: tmp.image }), ,];
   const obj6 = {
     variant: "heading-xl/semibold",
@@ -38,12 +38,12 @@ export default function XboxLinkEducation(onClose) {
   const intl = util.intl;
   obj6.children = intl.string(util.t.jHytat);
   items[1] = timestampProducer(Text_Text.Text, obj6);
-  const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: null };
+  const obj7 = { variant: "body-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: null };
   const intl2 = util.intl;
   obj7.children = intl2.format(util.t.yhozpz, { helpdeskArticleUrl: articleURL });
   items[2] = timestampProducer(Text_Text.Text, obj7);
   obj4.children = items;
-  const items1 = [React5(View, obj4)];
+  const items1 = [metroImportDefault(View, obj4)];
   const obj8 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj9 = { style: twoWayLinkStyles.footerButton, children: null };
   const obj10 = { size: "lg", variant: "primary", text: null, onPress: null };
@@ -54,5 +54,5 @@ export default function XboxLinkEducation(onClose) {
   obj8.children = timestampProducer(View, obj9);
   items1[1] = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj8);
   obj3.children = items1;
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 }

@@ -10,7 +10,7 @@ import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ BITRATE_DEFAULT: closure_4, ChannelTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
+({ BITRATE_DEFAULT: closure_4, ChannelTypes: hasOwnProperty, Endpoints: closure_6 } = Constants);
 let closure_7 = fn(1082).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
@@ -87,7 +87,7 @@ export default {
       trackedActionData: null,
       rejectWithError: null,
     };
-    const tmpResult = permissionOverwrites(6867);
+    const tmpResult = permissionOverwrites(6882);
     request.trackedActionData = {
       event: guildId(1260).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {

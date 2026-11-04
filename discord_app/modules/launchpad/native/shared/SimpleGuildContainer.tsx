@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true };
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
@@ -189,7 +189,7 @@ export function SimpleGuildContainer(selected) {
       obj4.style = size1;
       items[1] = timestampProducer(borderColor, obj4);
       obj.children = items;
-      tmp13Result = React6(React5, obj);
+      tmp13Result = React5(metroImportDefault, obj);
     }
   }, items);
   let obj3 = {
@@ -412,7 +412,7 @@ export function SimpleGuildContainerAnimated(arg0) {
     timestampProducer(closure_11, { backgroundColor, badge, unread }),
   ];
   obj2.children = items10;
-  const tmp38 = React6(React5, obj2);
+  const tmp38 = React5(metroImportDefault, obj2);
   if (null != onPress) {
     const obj3 = {
       ref: guildIconRef,

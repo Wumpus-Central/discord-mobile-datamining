@@ -6,9 +6,9 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef8976 from "../../../../../_runtime/metro/08976__.js";
-import PaginationDefault from "../../../../../_runtime/10759_Pagination.js";
-import _modDef11729 from "../../../../../_runtime/metro/11729__.js";
+import _modDef8993 from "../../../../../_runtime/metro/08993__.js";
+import PaginationDefault from "../../../../../_runtime/10807_Pagination.js";
+import _modDef11784 from "../../../../../_runtime/metro/11784__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -18,8 +18,8 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(19927);
+({ View: hasOwnProperty, Dimensions, ScrollView: closure_6 } = get_ActivityIndicator);
+const GuildSettingsRoleConstants = fn(20043);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: closure_10,
@@ -190,7 +190,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_14(_modDef8976, {
+    children: closure_14(_modDef8993, {
       maximumValue: values.length - 1,
       minimumTrackTintColor: values[value].color,
       minimumValue: constants.COSMETIC,
@@ -235,7 +235,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
             current.scrollTo(obj);
           }
         },
-        children: closure_1_14(_undefined(_undefined2[18]).Text, { variant: "text-sm/medium", children: title() }),
+        children: closure_1_14(_undefined(_undefined2[18]).Text, { variant: "body-sm/medium", children: title() }),
       };
       obj.children = closure_1_14(_undefined(_undefined2[17]).PressableOpacity, obj2);
       return closure_1_14(ref1, obj, title());
@@ -277,7 +277,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
         const tmp6 = !item.index !== first && undefined;
         items[1] = closure_1_14(_undefined(_undefined2[18]).Text, {
           style: _undefined3.templateSubtitle,
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           children: item.description(),
         });
         const obj5 = { style: _undefined3.templateContentWrapper, children: null };
@@ -287,7 +287,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
           if ("" !== contentPrefaceResult) {
             const obj6 = {
               style: _undefined3.templateSubtitle,
-              variant: "text-sm/medium",
+              variant: "body-sm/medium",
               children: item.contentPreface(),
             };
             tmp3Result = closure_1_14(_undefined(_undefined2[18]).Text, obj6);
@@ -296,16 +296,16 @@ export default function GuildSettingsRoleTemplate(arg0) {
         const obj7 = { children: null };
         const items1 = [tmp3Result];
         const obj8 = { accessibilityRole: "list", children: null };
-        const obj4 = { style: _undefined3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
+        const obj4 = { style: _undefined3.templateSubtitle, variant: "body-sm/medium", children: item.description() };
         obj8.children = item.contents().map((children, index) => {
           const obj = { style: c3.templateContent, children: null };
           items = [
             gesture(native.Icon, {
-              source: _modDef11729,
+              source: _modDef11784,
               size: native.IconSizes.MEDIUM,
               color: nativeDefault.unsafe_rawColors.GREEN_360,
             }),
-            gesture(Text_Text.Text, { style: c3.templateContentText, variant: "text-sm/medium", children }),
+            gesture(Text_Text.Text, { style: c3.templateContentText, variant: "body-sm/medium", children }),
           ];
           obj.children = items;
           return closure_3_15(hasOwnProperty, obj, "" + item.key + "_content_" + index);

@@ -206,7 +206,7 @@ export default function PresetAvatarSelect(arg0) {
   ({ onAvatarSelect: require, selectedAvatar: importDefault } = arg0);
   const tmp = closure_7();
   const obj = { style: tmp.container, accessibilityRole: "list", children: null };
-  let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
+  let obj2 = { variant: "body-sm/medium", color: "text-default", children: null };
   let intl = util.intl;
   obj2.children = intl.string(util.t.yP28YL);
   items = [closure_4(Text_Text.Text, obj2), ,];

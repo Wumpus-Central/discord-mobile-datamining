@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ ApplicationFlags: hasOwnProperty, ChannelTypes: metroRequire } = Constants);
+({ ApplicationFlags: hasOwnProperty, ChannelTypes: closure_6 } = Constants);
 const DMAppChannel = "DMAppChannel";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_channel/conjureDMAppChannel.tsx");
@@ -61,7 +61,7 @@ export function useDMAppChannelApplicationId(stateFromStores) {
     if (tmpResult.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
       id = data.id;
     }
-    tmpResult = tmp(7003);
+    tmpResult = tmp(7018);
   }
   return id;
 }

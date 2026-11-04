@@ -25,9 +25,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9956);
-({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9944).ONYX_BORDER_WIDTH;
+const ChannelDetailsStore = fn(9974);
+({ getIsChannelDetailsSearchActive: metroImportDefault, setIsChannelDetailsSearchActive: closure_8 } =
+  ChannelDetailsStore);
+const ONYX_BORDER_WIDTH = fn(9962).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -135,7 +136,7 @@ export default function _default(channelId) {
   }, items1);
   const callback1 = disallowGesture2.useCallback((arg0) => {
     if (!arg0) {
-      React6(_undefined, false, "initial");
+      React5(_undefined, false, "initial");
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
       const obj = { channelId: _undefined, screenIndex };
       ComponentDispatch.dispatch(constants2.CHANNEL_DETAILS_HIDDEN, obj);
@@ -230,7 +231,7 @@ export default function _default(channelId) {
     if (tmp) {
       ChatInputUtils.dismissKeyboard();
       if (true === channelId.search) {
-        React6(channelId.channelId, true, "initial");
+        React5(channelId.channelId, true, "initial");
       }
       movePanel(true, false, 0, true);
     }
@@ -312,9 +313,9 @@ export default function _default(channelId) {
           const obj5 = { routeChannelId: channelId1, expectedChannelId: _undefined };
           closure_15.verbose("handleBackPress", "route channelId mismatch", obj5);
           flag = false;
-        } else if (React5(_undefined)) {
+        } else if (metroImportDefault(_undefined)) {
           closure_15.verbose("handleBackPress", "cancelling search before closing panel");
-          React6(_undefined, false, "initial");
+          React5(_undefined, false, "initial");
           flag = true;
         } else {
           callback4();
@@ -361,12 +362,12 @@ export default function _default(channelId) {
   gesture3 = undefined;
   disallowGesture2 = undefined;
   disallowGesture3 = undefined;
-  const context = obj.useContext(tmp2(11380));
+  const context = obj.useContext(tmp2(11430));
   const gesture2 = context.gesture;
   importDefault = gesture2;
   const disallowGesture = context.disallowGesture;
   dependencyMap = disallowGesture;
-  let context1 = obj.useContext(tmp12(11380).MainTabsChannelScreenStackContext);
+  let context1 = obj.useContext(tmp12(11430).MainTabsChannelScreenStackContext);
   if (context1 == null) {
     context1 = {};
   }
@@ -540,12 +541,12 @@ export default function _default(channelId) {
       position: translateX,
       openAt: 0,
       closedAt: maxWidth,
-      resolveOpenName: tmp12(18206).getBaseScreenName,
-      resolveClosedName: tmp12(18206).getBaseScreenName,
+      resolveOpenName: tmp12(18303).getBaseScreenName,
+      resolveClosedName: tmp12(18303).getBaseScreenName,
       onCoveringChange: callback2,
     };
-    tmp63 = navigation(tmp2(18209), obj4);
-    const tmp2Result = tmp2(18209);
+    tmp63 = navigation(tmp2(18306), obj4);
+    const tmp2Result = tmp2(18306);
   }
   const items30 = [tmp63];
   let obj5 = { gesture: memo2, children: null };

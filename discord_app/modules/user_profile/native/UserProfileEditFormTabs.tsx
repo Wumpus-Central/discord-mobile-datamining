@@ -14,7 +14,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const UserProfileTabPagesDefault = tmp2(15146);
+const UserProfileTabPagesDefault = tmp2(15226);
 require = fn;
 function MainPage() {
   const tmp = closure_9();
@@ -24,9 +24,9 @@ function MainPage() {
   });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7497).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7513).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING },
@@ -61,7 +61,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   noop = undefined;
   first = undefined;
   closure_6 = undefined;
-  ({ hasCustomProfileTheme, scrollPosition, scrollViewRef, isBoardTabOnScreen, parentPagerGesture } = userId);
+  ({ hasCustomProfileTheme, scrollPosition, scrollViewRef, isBoardTabOnScreen } = userId);
   const tmp = closure_9();
   dependencyMap = tmp;
   const tmp4 = UserProfileSharedStylesDefault();
@@ -103,7 +103,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
       obj5.cardStyle = items2;
       items1[1] = timestampProducer(UserProfileWidgetsBoardDefault, obj5);
       obj4.children = items1;
-      let tmp2Result = React6(React5, obj4);
+      let tmp2Result = React5(metroImportDefault, obj4);
     } else {
       tmp2Result = timestampProducer(UserProfileWidgetsEmptyStateDefault, {});
     }
@@ -160,14 +160,8 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   }
   obj6.variant = str;
   const items7 = [
-    closure_6(tmp11(12306).Tabs, obj6),
-    closure_6(UserProfileTabPagesDefault, {
-      state: segmentedControlState,
-      pageHeights,
-      scrollPosition,
-      scrollViewRef,
-      parentPagerGesture,
-    }),
+    closure_6(tmp11(12371).Tabs, obj6),
+    closure_6(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
   obj5.children = items7;
   return closure_8(first, obj5);

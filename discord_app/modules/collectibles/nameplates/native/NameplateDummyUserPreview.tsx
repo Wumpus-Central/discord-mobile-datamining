@@ -10,7 +10,7 @@ import ThemeStore from "../../../user_settings/ThemeStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = {};
 NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1187).AvatarSizes.XSMALL_20] = {
   padding: nativeDefault.space.PX_4,
@@ -113,7 +113,7 @@ export function NameplateDummyUserPreview(hideAvatar) {
   const obj4 = { style: tmp3.avatarContainer, children: null };
   const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
   obj4.children = hasOwnProperty(native.Avatar, {
-    source: importDefault(stateFromStores ? 9644 : 9645),
+    source: importDefault(stateFromStores ? 9663 : 9664),
     size: NORMAL,
     "aria-hidden": true,
     style: tmp3.avatar,

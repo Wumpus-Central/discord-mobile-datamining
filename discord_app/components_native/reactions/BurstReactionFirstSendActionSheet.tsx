@@ -87,7 +87,7 @@ export default function BurstReactionFirstSendActionSheet(arg0) {
     style: tmp.body,
     children: React4(Text_Text.Text, {
       style: tmp.textContainer,
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       children: deviceSpecificString,
     }),
   };

@@ -38,9 +38,9 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   }
   return tmp5;
 }
-const LOCATION_CONTEXT_MOBILE = fn(11393).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11443).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
 
@@ -89,5 +89,5 @@ export default noop.memo(function StickyHeader(channel) {
   items[3] = tmp17;
   items[4] = timestampProducer(ChatBannerDefault, { channel, handleScrollToNewMessages: scrollToNewMessages });
   obj6.children = items;
-  return React6(React5, obj6);
+  return React5(metroImportDefault, obj6);
 });

@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../../../design/components/Button
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef14787 from "../../../../../../../_runtime/metro/14787__.js";
+import _modDef14867 from "../../../../../../../_runtime/metro/14867__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -25,7 +25,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14787;
+  obj4.source = _modDef14867;
   obj4.style = tmp.image;
   items = [React4(FastImageDefault, obj4), ,];
   const obj5 = {
@@ -37,7 +37,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const intl = util.intl;
   obj5.children = intl.string(util.t.Fnvxvk);
   items[1] = React4(Text_Text.Text, obj5);
-  const obj6 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
+  const obj6 = { variant: "body-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
   const intl2 = util.intl;
   obj6.children = intl2.string(util.t.YwXceg);
   items[2] = React4(Text_Text.Text, obj6);

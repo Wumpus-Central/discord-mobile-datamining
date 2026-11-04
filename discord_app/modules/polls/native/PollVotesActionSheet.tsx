@@ -12,8 +12,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12688 from "../../../../_runtime/metro/12688__.js";
-import _modDef12689 from "../../../../_runtime/metro/12689__.js";
+import _modDef12769 from "../../../../_runtime/metro/12769__.js";
+import _modDef12770 from "../../../../_runtime/metro/12770__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -105,7 +105,7 @@ function PollAnswerButton(answer) {
   if (null != answer.poll_media.text) {
     const obj4 = {
       style: tmp.answerText,
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: str,
       lineClamp: 1,
       children: answer.poll_media.text,
@@ -113,7 +113,7 @@ function PollAnswerButton(answer) {
     tmp11 = state(Text_Text.Text, obj4);
   }
   items2[1] = tmp11;
-  const obj5 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
+  const obj5 = { variant: "body-sm/semibold", color: str, lineClamp: 1, children: null };
   const items3 = [" ", "(", num.toLocaleString(), ")"];
   obj5.children = items3;
   items2[2] = gesture(Text_Text.Text, obj5);
@@ -261,13 +261,13 @@ function PollVotesHeader(message) {
     let obj = { children: null };
     let obj2 = {
       style: tmp.headerText,
-      variant: "redesign/heading-18/semibold",
+      variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       children: message.poll.question.text,
     };
     const items2 = [closure_13(tmp5(tmp6[17]).Text, obj2), ,];
-    let obj3 = { style: tmp.subheaderText, variant: "text-md/medium", color: "text-default", children: null };
+    let obj3 = { style: tmp.subheaderText, variant: "body-md/medium", color: "text-default", children: null };
     const intl = tmp5(tmp6[15]).intl;
     let obj4 = { count: memo };
     obj3.children = intl.format(tmp5(tmp6[15]).t.XRkuof, obj4);
@@ -449,22 +449,22 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12688;
+    let tmp2Result = _modDef12769;
   } else {
-    tmp2Result = _modDef12689;
+    tmp2Result = _modDef12770;
   }
   obj2.source = tmp2Result;
   items = [state(tmp8, obj2), ,];
   const obj4 = {
     style: tmp.noResultsTitle,
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = util.intl;
   obj4.children = intl.string(util.t.vhQK3o);
   items[1] = state(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.noResultsSubtitle, variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj5 = { style: tmp.noResultsSubtitle, variant: "body-sm/semibold", color: "text-default", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.bwytdh);
   items[2] = state(Text_Text.Text, obj5);
@@ -472,7 +472,7 @@ function NoResults() {
   return gesture(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(5141);
@@ -579,7 +579,7 @@ export default function PollVotesActionSheet(channelId) {
     const obj4 = { scrollable: true, header: null, children: null };
     const obj5 = { message: stateFromStores, selectedAnswerId, setSelectedAnswerId: tmp4[1] };
     obj4.header = closure_13(PollVotesHeader, obj5);
-    const obj6 = { style: tmp.answerName, variant: "text-sm/semibold", color: "text-default", children: null };
+    const obj6 = { style: tmp.answerName, variant: "body-sm/semibold", color: "text-default", children: null };
     let text;
     if (found != null) {
       text = found.poll_media.text;

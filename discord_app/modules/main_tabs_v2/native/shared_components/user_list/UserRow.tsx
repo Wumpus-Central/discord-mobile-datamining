@@ -48,7 +48,7 @@ function UserRowSubLabel(arg0) {
     }
   }
   if (!isGameRelationship) {
-    const obj3 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: UserUtils.getUserTag(user) };
+    const obj3 = { lineClamp: 1, variant: "body-xs/medium", color: "text-muted", children: UserUtils.getUserTag(user) };
     closure_14(Text_Text.Text, obj3);
     const tmpResult = UserUtils;
   }
@@ -67,21 +67,21 @@ function UserRowSubLabel(arg0) {
     const obj7 = { uri: str };
     obj6.source = obj7;
     const items1 = [closure_14(native.Icon, obj6, stateFromStores.id)];
-    const obj8 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: stateFromStores.name };
+    const obj8 = { lineClamp: 1, variant: "body-xs/medium", color: "text-subtle", children: stateFromStores.name };
     items1[1] = closure_14(Text_Text.Text, obj8);
     obj5.children = items1;
     closure_15(View, obj5);
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const Constants = fn(1072);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PlatformUtils = fn(1357);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "Array" };
+  let obj = { lineHeight: "r" };
 }
 let closure_18 = {
   CALL: "call",
@@ -245,7 +245,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "y" };
+      let obj2 = { accessibilityActions: items, actions: "a" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -306,11 +306,11 @@ export default noop.memo(function UserRow(type) {
             location: isMobileOnline,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(5831).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(5831);
+                const result = type(5845).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(5845);
               } else {
-                const result1 = type(5831).presentFriendRequestAcceptedToast();
-                obj = type(5831);
+                const result1 = type(5845).presentFriendRequestAcceptedToast();
+                obj = type(5845);
               }
             },
           });
@@ -419,14 +419,14 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(10869)(channel, false);
+                const obj2 = user(10917)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
                 const tmp3 = user(38);
                 obj = { recipientIds: current.id };
-                user(7609).openPrivateChannel(obj);
-                const tmpResult = user(7609);
+                user(7625).openPrivateChannel(obj);
+                const tmpResult = user(7625);
               }
             });
         };
@@ -475,14 +475,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10869)(channel, false);
+          const obj2 = user(10917)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
           obj = { recipientIds: current.id };
-          user(7609).openPrivateChannel(obj);
-          const tmpResult = user(7609);
+          user(7625).openPrivateChannel(obj);
+          const tmpResult = user(7625);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -500,11 +500,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
           if (null != closure_0) {
-            const result = type(5831).presentGameFriendRequestAcceptedToast();
-            const obj2 = type(5831);
+            const result = type(5845).presentGameFriendRequestAcceptedToast();
+            const obj2 = type(5845);
           } else {
-            const result1 = type(5831).presentFriendRequestAcceptedToast();
-            obj = type(5831);
+            const result1 = type(5845).presentFriendRequestAcceptedToast();
+            obj = type(5845);
           }
         },
       };
@@ -536,10 +536,10 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8874, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8891, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8874, dependencyMap.paths);
+      const promise = asyncRequireImpl(8891, dependencyMap.paths);
     } else {
       tmp(user);
     }
@@ -677,7 +677,7 @@ export default noop.memo(function UserRow(type) {
       formatToPlainStringResult = intl.formatToPlainString(tmp6(tmp5[29]).t["/6mw10"], obj9);
     }
   }
-  let obj10 = { lineClamp: 1, variant: "text-md/semibold" };
+  let obj10 = { lineClamp: 1, variant: "body-md/semibold" };
   let obj11 = { style: tmp3.usernameLabelContainer, children: null };
   if (flag6) {
     if (null != tmp26) {

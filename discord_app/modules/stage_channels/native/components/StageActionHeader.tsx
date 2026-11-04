@@ -2,22 +2,22 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
-import _modDef8298 from "../../../../../_runtime/metro/08298__.js";
-import _modDef8320 from "../../../../../_runtime/metro/08320__.js";
+import _modDef8314 from "../../../../../_runtime/metro/08314__.js";
+import _modDef8336 from "../../../../../_runtime/metro/08336__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef12150 from "../../../../../_runtime/metro/12150__.js";
-import _modDef12151 from "../../../../../_runtime/metro/12151__.js";
-import _modDef12152 from "../../../../../_runtime/metro/12152__.js";
+import _modDef12209 from "../../../../../_runtime/metro/12209__.js";
+import _modDef12210 from "../../../../../_runtime/metro/12210__.js";
+import _modDef12211 from "../../../../../_runtime/metro/12211__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -118,7 +118,7 @@ class StageChannelCallHeader {
     }
     items3[1] = tmp13(tmp5(tmp3[29]).Text, {
       color: "text-overlay-light",
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       children: topic,
     });
     obj15.children = items3;
@@ -133,7 +133,7 @@ class StageChannelCallHeader {
       obj18.size = tmp5(tmp3[24]).Icon.Sizes.SMALL;
       items5 = [, , , , ,];
       items5[0] = tmp13(tmp5(tmp3[24]).Icon, obj18);
-      obj19 = { variant: "text-xs/normal", style: null, children: null };
+      obj19 = { variant: "body-xs/normal", style: null, children: null };
       obj19.style = tmp.stageInfoTopic;
       obj19.children = tmp4;
       items5[1] = tmp13(tmp5(tmp3[29]).Text, obj19);
@@ -142,7 +142,7 @@ class StageChannelCallHeader {
       obj20.size = tmp5(tmp3[24]).Icon.Sizes.SMALL;
       obj20.style = tmp.icon;
       items5[2] = tmp13(tmp5(tmp3[24]).Icon, obj20);
-      obj21 = { variant: "text-xs/normal", children: null };
+      obj21 = { variant: "body-xs/normal", children: null };
       obj21.children = actualStageSpeakerCount;
       items5[3] = tmp13(tmp5(tmp3[29]).Text, obj21);
       obj22 = { source: null, size: null, style: null };
@@ -150,7 +150,7 @@ class StageChannelCallHeader {
       obj22.size = tmp5(tmp3[24]).Icon.Sizes.SMALL;
       obj22.style = tmp.icon;
       items5[4] = tmp13(tmp5(tmp3[24]).Icon, obj22);
-      obj23 = { variant: "text-xs/normal", children: null };
+      obj23 = { variant: "body-xs/normal", children: null };
       obj23.children = stageParticipantsCount;
       items5[5] = tmp13(tmp5(tmp3[29]).Text, obj23);
       obj17.children = items5;
@@ -306,7 +306,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5141);
 let obj = {
   header: {
-    height: fn(5709).NAV_BAR_HEIGHT,
+    height: fn(5722).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
@@ -332,7 +332,7 @@ obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.
 obj.iconContainer = obj5;
 obj.settingsButton = { marginRight: 4 };
 let obj3 = {
-  height: fn(5709).NAV_BAR_HEIGHT,
+  height: fn(5722).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 12,
@@ -407,7 +407,7 @@ export function HideChannelCallButton(channel) {
     children: null,
   };
   let obj = channel(504);
-  obj2.source = _modDef12150;
+  obj2.source = _modDef12209;
   const intl = channel(1113).intl;
   obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
   obj2.onPress = function handleClose() {

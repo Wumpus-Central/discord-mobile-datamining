@@ -5,13 +5,13 @@ import components_Button_Button from "../../../../../../design/components/Button
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef14761 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef14841 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
@@ -24,7 +24,7 @@ export function PlayStationLinkSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef14761 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14841 }), []);
   items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), ,];
   const obj5 = {
     variant: "heading-xl/semibold",
@@ -35,7 +35,7 @@ export function PlayStationLinkSuccess(onClose) {
   const intl = util.intl;
   obj5.children = intl.string(util.t.e6SOl0);
   items[1] = hasOwnProperty(Text_Text.Text, obj5);
-  const obj6 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
+  const obj6 = { variant: "body-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
   const intl2 = util.intl;
   obj6.children = intl2.string(util.t.QjAZAQ);
   items[2] = hasOwnProperty(Text_Text.Text, obj6);

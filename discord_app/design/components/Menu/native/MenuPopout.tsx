@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Menu/native/MenuPopout.tsx");
 
@@ -58,8 +58,8 @@ export function MenuPopout(onRequestOpen) {
         children: menuItems.map((item, index) => {
           const obj = { children: null };
           const merged = Object.assign(item);
-          obj.children = offset(menuItems(15965).MenuItem, { showIconFirst: true });
-          return offset(menuItems(15964).MenuGroup, obj, "chat-context-menu-group-" + index);
+          obj.children = offset(menuItems(16055).MenuItem, { showIconFirst: true });
+          return offset(menuItems(16054).MenuGroup, obj, "chat-context-menu-group-" + index);
         }),
       }),
     items1,

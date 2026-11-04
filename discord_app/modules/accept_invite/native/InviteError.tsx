@@ -11,7 +11,7 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import InviteErrorUtils from "../../../utils/InviteErrorUtils.tsx";
-import _modDef14466 from "../../../../_runtime/metro/14466__.js";
+import _modDef14546 from "../../../../_runtime/metro/14546__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const GuildIconDefault = GuildIcon;
@@ -20,7 +20,7 @@ require = fn;
 function InviteErrorBase(invite) {
   ({ onPressClose: require, inviteError } = invite);
   const tmp = closure_10();
-  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 14463 : 14464);
+  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 14543 : 14544);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -39,7 +39,7 @@ function InviteErrorBase(invite) {
       stringResult = intl.string(util.t.FWkU6P);
     }
   }
-  items = [React5(FastImageDefault, { style: tmp.expiredImage, source: tmp4Result }), , ,];
+  items = [metroImportDefault(FastImageDefault, { style: tmp.expiredImage, source: tmp4Result }), , ,];
   const obj3 = {
     style: tmp.expiredTitle,
     variant: "heading-xl/semibold",
@@ -59,10 +59,10 @@ function InviteErrorBase(invite) {
   function handlePressClose() {
     require();
   }
-  items[1] = React5(Text_Text.Text, obj3);
-  items[2] = React5(Text_Text.Text, {
+  items[1] = metroImportDefault(Text_Text.Text, obj3);
+  items[2] = metroImportDefault(Text_Text.Text, {
     style: tmp.expiredBody,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     children: stringResult,
   });
@@ -70,9 +70,9 @@ function InviteErrorBase(invite) {
   const intl4 = util.intl;
   obj6.text = intl4.string(util.t.wcqOoF);
   obj6.onPress = handlePressClose;
-  items[3] = React5(components_Button_Button.Button, obj6);
+  items[3] = metroImportDefault(components_Button_Button.Button, obj6);
   obj4.children = items;
-  return React7(React6, obj4);
+  return React6(React5, obj4);
 }
 function InviteDisabledError(onPressClose) {
   onPressClose = onPressClose.onPressClose;
@@ -88,14 +88,14 @@ function InviteDisabledError(onPressClose) {
     const obj4 = { children: null };
     const obj5 = { style: tmp.disabledView, children: null };
     const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64, canAnimate: false });
-    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef14466 };
-    items = [React5(native.Icon, obj6)];
+    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef14546 };
+    items = [metroImportDefault(native.Icon, obj6)];
     const obj7 = { style: tmp.guildIcon, icon: guildIconURL, size: null };
     const obj3 = { id: null, icon: null, size: 64, canAnimate: false };
     obj7.size = GuildIcon.GuildIconSizes.XLARGE;
-    items[1] = React5(GuildIconDefault, obj7);
+    items[1] = metroImportDefault(GuildIconDefault, obj7);
     obj5.children = items;
-    const items1 = [React7(View, obj5), , ,];
+    const items1 = [React6(View, obj5), , ,];
     const obj8 = {
       style: tmp.disabledTitle,
       variant: "heading-xl/semibold",
@@ -104,27 +104,27 @@ function InviteDisabledError(onPressClose) {
     };
     const intl = util.intl;
     obj8.children = intl.string(util.t.jlLX2Z);
-    items1[1] = React5(Text_Text.Text, obj8);
-    const obj9 = { style: tmp.disabledBody, variant: "text-md/normal", color: "text-default", children: null };
+    items1[1] = metroImportDefault(Text_Text.Text, obj8);
+    const obj9 = { style: tmp.disabledBody, variant: "body-md/normal", color: "text-default", children: null };
     const intl2 = util.intl;
     const obj11 = { articleLink: null };
     obj11.articleLink = HelpdeskUtilsDefault.getArticleURL(constants2.INVITE_DISABLED);
     obj9.children = intl2.format(util.t.RXSeLl, obj11);
-    items1[2] = React5(Text_Text.Text, obj9);
+    items1[2] = metroImportDefault(Text_Text.Text, obj9);
     const obj20 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl3 = util.intl;
     obj20.text = intl3.string(util.t["yD/zkn"]);
     obj20.onPress = handlePressClose;
-    items1[3] = React5(components_Button_Button.Button, obj20);
+    items1[3] = metroImportDefault(components_Button_Button.Button, obj20);
     obj4.children = items1;
-    return React7(React6, obj4);
+    return React6(React5, obj4);
   }
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AbortCodes: closure_4, HelpdeskArticles: hasOwnProperty, InviteStates: metroRequire } = Constants);
+({ AbortCodes: closure_4, HelpdeskArticles: hasOwnProperty, InviteStates: closure_6 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   expiredImage: { marginTop: 32, marginBottom: 32 },
@@ -150,15 +150,15 @@ export default function InviteError(inviteError) {
   if (null == inviteError) {
     const obj2 = {};
     const merged = Object.assign(inviteError);
-    let tmp7 = React5(InviteErrorBase, obj2);
+    let tmp7 = metroImportDefault(InviteErrorBase, obj2);
   } else if (inviteError.code === constants.INVITES_DISABLED) {
     const obj3 = {};
     const merged1 = Object.assign(inviteError);
-    tmp7 = React5(InviteDisabledError, obj3);
+    tmp7 = metroImportDefault(InviteDisabledError, obj3);
   } else {
     const obj = {};
     const merged2 = Object.assign(inviteError);
-    tmp7 = React5(InviteErrorBase, obj);
+    tmp7 = metroImportDefault(InviteErrorBase, obj);
   }
   return tmp7;
 }

@@ -49,7 +49,7 @@ class OptInChannelBanner {
     }
     obj = { style: items2, children: null };
     items2[1] = topBorder;
-    obj1 = { lineClamp: 2, style: tmp.optInChannelBannerText, variant: "text-sm/semibold", children: null };
+    obj1 = { lineClamp: 2, style: tmp.optInChannelBannerText, variant: "body-sm/semibold", children: null };
     intl = channel(closure_2[17]).intl;
     obj1.children = intl.string(channel(closure_2[17]).t.iOWmmB);
     items3 = [,];
@@ -79,16 +79,16 @@ function ArchivedLockedThreadChatBanner(channel) {
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let canUnarchiveThread = channel(7567).useCanUnarchiveThread(channel);
+  let canUnarchiveThread = channel(7583).useCanUnarchiveThread(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = {
     lineClamp: 4,
     style: tmp.threadBannerTitle,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     children: null,
   };
-  let obj = channel(7567);
+  let obj = channel(7583);
   const intl = channel(1113).intl;
   const string = intl.string;
   const t = channel(1113).t;
@@ -98,7 +98,7 @@ function ArchivedLockedThreadChatBanner(channel) {
     stringResult = string(t.rEeodK);
   }
   obj3.children = stringResult;
-  const items1 = [closure_12(channel(5747).Text, obj3)];
+  const items1 = [closure_12(channel(5761).Text, obj3)];
   if (canUnarchiveThread) {
     let obj4 = { style: tmp.threadBannerButton, children: null };
     const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
@@ -114,7 +114,7 @@ function ArchivedLockedThreadChatBanner(channel) {
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj2);
       ThreadActionCreatorsDefault.unarchiveThread(channel, false);
     };
-    obj4.children = closure_12(tmp3(5754).Button, obj5);
+    obj4.children = closure_12(tmp3(5768).Button, obj5);
     canUnarchiveThread = closure_12(closure_4, obj4);
   }
   items1[1] = canUnarchiveThread;
@@ -133,16 +133,16 @@ function LockedThreadChatBanner(channel) {
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let isThreadModerator = channel(7567).useIsThreadModerator(channel);
+  let isThreadModerator = channel(7583).useIsThreadModerator(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = {
     lineClamp: 4,
     style: tmp.threadBannerTitle,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     children: null,
   };
-  let obj = channel(7567);
+  let obj = channel(7583);
   const intl = channel(1113).intl;
   const string = intl.string;
   const t = channel(1113).t;
@@ -152,7 +152,7 @@ function LockedThreadChatBanner(channel) {
     stringResult = string(t["V/JF2N"]);
   }
   obj3.children = stringResult;
-  const items1 = [closure_12(channel(5747).Text, obj3)];
+  const items1 = [closure_12(channel(5761).Text, obj3)];
   if (isThreadModerator) {
     let obj4 = { style: tmp.threadBannerButton, children: null };
     const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
@@ -168,7 +168,7 @@ function LockedThreadChatBanner(channel) {
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj2);
       ThreadActionCreatorsDefault.unlockThread(channel);
     };
-    obj4.children = closure_12(tmp3(5754).Button, obj5);
+    obj4.children = closure_12(tmp3(5768).Button, obj5);
     isThreadModerator = closure_12(closure_4, obj4);
   }
   items1[1] = isThreadModerator;
@@ -196,13 +196,13 @@ function NewMessagesChatBar(channel) {
         onPress: handleScrollToNewMessages,
         children: null,
       };
-      const obj3 = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
+      const obj3 = { variant: "body-sm/semibold", color: "text-overlay-light", children: null };
       const intl = XSmallBoldIcon(1113).intl;
       const obj4 = { count: unreadCount, timestamp: channel.oldestUnreadTimestamp };
       obj3.children = intl.format(ReadStateStore.isEstimated(channel.id) ? t.wvtbbG : t["BctFH/"], obj4);
-      obj2.children = closure_12(XSmallBoldIcon(5747).Text, obj3);
-      const items1 = [closure_12(XSmallBoldIcon(7106).PressableOpacity, obj2)];
-      handleScrollToNewMessages = XSmallBoldIcon(7106).PressableOpacity;
+      obj2.children = closure_12(XSmallBoldIcon(5761).Text, obj3);
+      const items1 = [closure_12(XSmallBoldIcon(7121).PressableOpacity, obj2)];
+      handleScrollToNewMessages = XSmallBoldIcon(7121).PressableOpacity;
       const obj5 = {
         style: stringResult.newMessageBarCloseButton,
         accessibilityRole: "button",
@@ -220,7 +220,7 @@ function NewMessagesChatBar(channel) {
           objectType: constants.ACK_MANUAL,
         });
       };
-      XSmallBoldIcon = XSmallBoldIcon(11497).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(11547).XSmallBoldIcon;
       const obj6 = { size: "sm", color: null };
       WHITE = nativeDefault.colors.WHITE;
       obj6.color = WHITE;
@@ -235,7 +235,7 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11494).ChatOverlays;
+const ChatOverlays = fn(11544).ChatOverlays;
 const Constants = fn(1072);
 ({
   AnalyticsObjectTypes: closure_8,

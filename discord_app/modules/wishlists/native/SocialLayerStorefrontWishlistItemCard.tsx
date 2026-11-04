@@ -8,7 +8,7 @@ import SentGiftsStore from "../SentGiftsStore.tsx";
 
 const require = fn;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = {
@@ -98,7 +98,7 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
       tmp3Result = timestampProducer(FastImageDefault, obj2);
     }
     children[1] = tmp3Result;
-    return React6(React5, { children });
+    return React5(metroImportDefault, { children });
   }, items5);
   const obj3 = { accessibilityLabel: sku.name, renderPreview: callback, source: sku.source, size };
   let obj2 = sku(size[6]);

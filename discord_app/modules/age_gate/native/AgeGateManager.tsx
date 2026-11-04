@@ -9,7 +9,11 @@ import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.ts
 
 require = fn;
 const AgeGateConstants = fn(1097);
-({ EXISTING_USER_AGE_GATE_MODAL_KEY: closure_7, AgeGateSource: closure_8, AgeGateType: closure_9 } = AgeGateConstants);
+({
+  EXISTING_USER_AGE_GATE_MODAL_KEY: metroImportDefault,
+  AgeGateSource: closure_8,
+  AgeGateType: closure_9,
+} = AgeGateConstants);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_10, GuildNSFWContentLevel: closure_11 } = Constants);
 class AgeGateManager extends tmp4 {
@@ -48,8 +52,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6854).getAgeGateType(source);
-  let obj = source(6854);
+  importDefault = source(6869).getAgeGateType(source);
+  let obj = source(6869);
   ModalActionCreatorsDefault.pushLazy(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {
@@ -128,7 +132,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId)
   );
 };
 prototype["handleAgeGateModalClose"] = function handleAgeGateModalClose() {
-  ModalActionCreatorsDefault.popWithKey(React5);
+  ModalActionCreatorsDefault.popWithKey(metroImportDefault);
 };
 prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
   guild = guild.guild;

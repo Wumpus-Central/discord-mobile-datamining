@@ -13,7 +13,7 @@ import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, AppStates: metroRequire } = Constants);
+({ AnalyticEvents: hasOwnProperty, AppStates: closure_6 } = Constants);
 let closure_7 = new LoggerDefault("index.native.tsx");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/core/native/handleAppStateChanged.tsx");

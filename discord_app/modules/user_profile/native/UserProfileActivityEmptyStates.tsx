@@ -17,24 +17,24 @@ function EmptyState(arg0) {
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.text, children: null };
   items = [
-    React5(Text_Text.Text, {
-      variant: "redesign/heading-18/semibold",
+    metroImportDefault(Text_Text.Text, {
+      variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       style: tmp.centeredText,
       children: heading,
     }),
-    React5(Text_Text.Text, { variant: "text-sm/normal", style: tmp.centeredText, children: bodyText }),
+    metroImportDefault(Text_Text.Text, { variant: "body-sm/normal", style: tmp.centeredText, children: bodyText }),
   ];
   obj2.children = items;
-  const items1 = [React6(View, obj2), children];
+  const items1 = [React5(View, obj2), children];
   obj.children = items1;
-  return React6(View, obj);
+  return React5(View, obj);
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let items = [
   () => {
     const intl = util.intl;
@@ -120,9 +120,9 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(6161).getName(guildId, channelId, user);
+  name = name(6176).getName(guildId, channelId, user);
   const intl = user(1113).intl;
-  let obj = name(6161);
+  let obj = name(6176);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1113).t.sjSitP, { name }),
@@ -148,7 +148,7 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   const intl2 = user(1113).intl;
   obj4.text = intl2.string(user(1113).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5754).Button, obj4);
+  obj3.children = closure_7(user(5768).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });
@@ -171,7 +171,7 @@ export const UserProfileActivityEmptyCurrentUser = noop.memo(function UserProfil
   const intl3 = util.intl;
   obj3.text = intl3.string(util.t["/Hl24U"]);
   obj3.onPress = callback;
-  obj2.children = React5(components_Button_Button.Button, obj3);
-  obj.children = React5(View, obj2);
-  return React5(EmptyState, obj);
+  obj2.children = metroImportDefault(components_Button_Button.Button, obj3);
+  obj.children = metroImportDefault(View, obj2);
+  return metroImportDefault(EmptyState, obj);
 });

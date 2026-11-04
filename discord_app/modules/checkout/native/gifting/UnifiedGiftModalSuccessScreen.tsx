@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   alertContainer: {
@@ -49,7 +49,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(14578, dependencyMap.paths),
+        asyncRequireImpl(14658, dependencyMap.paths),
         obj2,
         "collectibles_shop_gift_badge_modal",
       );
@@ -68,11 +68,11 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   const intl = tmp2(tmp3[14]).intl;
   obj3.children = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
   items2[1] = closure_5(giftBadgeProgress(enabled[13]).Text, obj3);
-  const obj4 = { variant: "text-md/medium", style: tmp.description, children: null };
+  const obj4 = { variant: "body-md/medium", style: tmp.description, children: null };
   const intl2 = tmp2(tmp3[14]).intl;
   obj4.children = intl2.format(giftBadgeProgress(enabled[14]).t.YS2J4S, { onClick: callback1 });
   items2[2] = closure_5(giftBadgeProgress(enabled[13]).Text, obj4);
-  const obj5 = { onPress: callback, text: null, textVariant: "text-md/semibold", grow: true };
+  const obj5 = { onPress: callback, text: null, textVariant: "body-md/semibold", grow: true };
   if (enabled) {
     if (null != giftBadgeProgress) {
       let cpT0Cq = tmp2(tmp3[14]).t.PDTjLN;

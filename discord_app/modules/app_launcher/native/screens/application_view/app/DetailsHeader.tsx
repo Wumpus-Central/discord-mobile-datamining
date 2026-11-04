@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let colors = ["black", "transparent"];
@@ -129,7 +129,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
   }, items2);
   const tmp6Result5 = first1(noop.useState(false), 2);
   isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
-  const tmp26 = first(6852)(isScreenLandscape);
+  const tmp26 = first(6867)(isScreenLandscape);
   closure_18 = tmp26;
   const items3 = [isScreenLandscape, tmp26];
   const effect = obj2.useEffect(() => {
@@ -173,16 +173,16 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       lineClamp: 1,
       children: sectionName,
     };
-    tmp32Result = tmp32(tmp2(5747).Heading, obj8);
+    tmp32Result = tmp32(tmp2(5761).Heading, obj8);
   }
   const items6 = [tmp32Result];
   let tmp32Result5 = null;
   if (isPartnerApplicationResult) {
     const obj9 = { style: tmp.partnerLabelWrapper, children: null };
-    const obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
+    const obj10 = { variant: "body-xs/medium", color: "text-default", children: null };
     const intl = tmp2(1113).intl;
     obj10.children = intl.string(tmp2(1113).t.LO4f0P);
-    obj9.children = tmp32(tmp2(5747).Text, obj10);
+    obj9.children = tmp32(tmp2(5761).Text, obj10);
     tmp32Result5 = tmp32(tmp33, obj9);
   }
   items6[1] = tmp32Result5;
@@ -252,7 +252,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
         colors,
         style: tmp.maskFade,
       };
-      items10[1] = tmp32(tmp25(5710), obj17);
+      items10[1] = tmp32(tmp25(5723), obj17);
       if (num2 == null) {
         num2 = 0;
       }
@@ -264,16 +264,16 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       items8[1] = tmp30(tmp33, obj14);
       obj13.children = items8;
       let tmp32Result6 = tmp30(tmp33, obj13);
-      const tmp25Result2 = tmp25(5710);
+      const tmp25Result2 = tmp25(5723);
     } else {
       const items11 = [absoluteFill, tmp.maskFill];
       obj12.style = items11;
       tmp32Result6 = tmp32(tmp33, obj12);
     }
     const obj20 = { maskElement: tmp32Result6, children: null };
-    const obj21 = { variant: "text-sm/medium", color: "text-default", lineClamp: num4, children: memo };
-    obj20.children = tmp32(tmp2(5747).Text, obj21);
-    const items12 = [tmp32(tmp25(7164), obj20), ,];
+    const obj21 = { variant: "body-sm/medium", color: "text-default", lineClamp: num4, children: memo };
+    obj20.children = tmp32(tmp2(5761).Text, obj21);
+    const items12 = [tmp32(tmp25(7179), obj20), ,];
     let tmp32Result7 = null;
     if (tmp29) {
       const obj22 = { style: tmp.viewMoreCTA, children: null };
@@ -283,14 +283,14 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
             closure_9(nativeEvent.nativeEvent.layout.width);
           }
         },
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-brand",
         children: null,
       };
       const intl2 = tmp2(1113).intl;
       const items13 = ["\u2026 ", intl2.string(tmp2(1113).t["OBCR+p"])];
       obj23.children = items13;
-      obj22.children = tmp30(tmp2(5747).Text, obj23);
+      obj22.children = tmp30(tmp2(5761).Text, obj23);
       tmp32Result7 = tmp32(tmp33, obj22);
     }
     items12[1] = tmp32Result7;
@@ -299,20 +299,20 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       tmp32Result8 = null;
       if (first1) {
         const obj24 = {
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           color: "text-brand",
           style: tmp.collapseDescriptionCTA,
           children: null,
         };
         const intl3 = tmp2(1113).intl;
         obj24.children = intl3.string(tmp2(1113).t.D5xGUK);
-        tmp32Result8 = tmp32(tmp2(5747).Text, obj24);
+        tmp32Result8 = tmp32(tmp2(5761).Text, obj24);
       }
     }
     items12[2] = tmp32Result8;
     obj11.children = items12;
     tmp30Result4 = tmp30(sharedValue, obj11);
-    const tmp25Result = tmp25(7164);
+    const tmp25Result = tmp25(7179);
   }
   items7[1] = tmp30Result4;
   obj6.children = items7;
@@ -336,7 +336,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
     let tmp32Result9 = !hideName;
     if (!hideName) {
       const obj26 = { variant: "heading-lg/semibold", color: "text-default", children: sectionName };
-      tmp32Result9 = tmp32(tmp2(5747).Heading, obj26);
+      tmp32Result9 = tmp32(tmp2(5761).Heading, obj26);
     }
     const items16 = [tmp32Result9];
     if (tmp30Result5) {
@@ -346,7 +346,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       }
       const obj27 = { style: descriptionContainer2, children: null };
       const obj28 = {
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-default",
         onTextLayout: function handleApplicationDescriptionTextLayout(nativeEvent) {
           const lines = nativeEvent.nativeEvent.lines;
@@ -364,16 +364,16 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
         },
         children: memo,
       };
-      const items17 = [tmp32(tmp2(5747).Text, obj28)];
+      const items17 = [tmp32(tmp2(5761).Text, obj28)];
       const obj29 = {
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-brand",
         style: tmp.collapseDescriptionCTA,
         children: null,
       };
       const intl4 = tmp2(1113).intl;
       obj29.children = intl4.string(tmp2(1113).t.D5xGUK);
-      items17[1] = tmp32(tmp2(5747).Text, obj29);
+      items17[1] = tmp32(tmp2(5761).Text, obj29);
       obj27.children = items17;
       tmp30Result5 = tmp30(tmp33, obj27);
     }

@@ -60,7 +60,7 @@ function PopoutCheck(arg0) {
     const obj5 = { style: tmp.popoutCheck, children: null };
     const obj6 = { size: "sm", style: tmp.popoutCheckIcon };
     items = [value2(CheckmarkLargeIcon.CheckmarkLargeIcon, obj6)];
-    const obj7 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: formatResult };
+    const obj7 = { variant: "body-xs/medium", color: "mobile-text-heading-primary", children: formatResult };
     items[1] = value2(Text_Text.Text, obj7);
     obj5.children = items;
     tmp9 = closure_1_17(timestampProducer, obj5);
@@ -155,7 +155,7 @@ class PopoutChecks {
             }
             name = name1;
           }
-          const obj7 = { variant: "text-sm/medium", color: "interactive-text-active", children: name };
+          const obj7 = { variant: "body-sm/medium", color: "interactive-text-active", children: name };
           items1[2] = value2(Text_Text.Text, obj7);
           items1[3] = tmp12;
           obj5.children = items1;
@@ -190,8 +190,8 @@ class PopoutChecks {
   }
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(7469).OperatorTypes;
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const OperatorTypes = fn(7485).OperatorTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
@@ -338,9 +338,9 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
       if (stateFromStores3 != null) {
         name = stateFromStores3.name;
       }
-      const obj12 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: name };
+      const obj12 = { variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: name };
       const items8 = [closure_16(tmp5(tmp3[17]).Text, obj12)];
-      const obj13 = { variant: "text-xs/normal", color: "text-default", children: formatResult };
+      const obj13 = { variant: "body-xs/normal", color: "text-default", children: formatResult };
       items8[1] = closure_16(tmp5(tmp3[17]).Text, obj13);
       obj11.children = items8;
       items7[1] = closure_17(closure_6, obj11);

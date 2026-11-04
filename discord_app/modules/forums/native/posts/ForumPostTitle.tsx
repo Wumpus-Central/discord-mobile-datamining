@@ -25,7 +25,7 @@ export default function ForumPostTitle(arg0) {
   }
   const tmp = closure_3();
   return jsx(Text_Text.Text, {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: str,
     lineClamp,
     ellipsizeMode,

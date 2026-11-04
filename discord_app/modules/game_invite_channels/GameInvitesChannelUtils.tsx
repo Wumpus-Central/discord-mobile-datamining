@@ -14,9 +14,9 @@ require = fn;
 let closure_3 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1072);
-({ ActivityFlags: closure_7, MAX_CHANNEL_NAME_LENGTH: closure_8 } = Constants);
+({ ActivityFlags: metroImportDefault, MAX_CHANNEL_NAME_LENGTH: closure_8 } = Constants);
 const ChannelFlags = fn(4997).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(7578).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(7594).MAX_FORUM_POST_TAGS;
 let c11 = "No Mic";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/GameInvitesChannelUtils.tsx");
@@ -29,7 +29,7 @@ export function deriveThreadName(parentChannel) {
     str2 = "";
   }
   const str = parentChannel.trim();
-  return sanitizeThreadNameDefault(str2.slice(0, React6), true);
+  return sanitizeThreadNameDefault(str2.slice(0, React5), true);
 }
 export function useIsGameInvitesPost(channel) {
   _require = channel;

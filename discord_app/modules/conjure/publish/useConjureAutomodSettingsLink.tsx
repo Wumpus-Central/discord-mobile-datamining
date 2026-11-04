@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ GuildSettingsSections: closure_7, Permissions: closure_8 } = Constants);
+({ GuildSettingsSections: metroImportDefault, Permissions: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const size = fn(2);

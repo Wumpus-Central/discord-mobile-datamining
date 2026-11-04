@@ -83,7 +83,7 @@ function AccountCreditTier(arg0) {
   const obj11 = { style: tmp.textContainer, children: null };
   const obj12 = {
     style: tmp.headerText,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -92,23 +92,23 @@ function AccountCreditTier(arg0) {
   const items2 = [tmp27(Text_Text.Text, obj12)];
   let tmp27Result = !tmp18;
   if (!tmp18) {
-    const obj13 = { style: tmp.subText, variant: "text-xs/medium", color: "text-default", children: stringResult };
+    const obj13 = { style: tmp.subText, variant: "body-xs/medium", color: "text-default", children: stringResult };
     tmp27Result = tmp27(Text_Text.Text, obj13);
   }
   items2[1] = tmp27Result;
   obj11.children = items2;
-  items1[1] = React5(View, obj11);
-  const obj14 = { style: tmp.timeText, variant: "text-md/medium", color: "text-default", children: null };
+  items1[1] = metroImportDefault(View, obj11);
+  const obj14 = { style: tmp.timeText, variant: "body-md/medium", color: "text-default", children: null };
   const intl5 = util.intl;
   obj14.children = intl5.format(util.t["ess/xl"], { count: months });
   items1[2] = tmp27(Text_Text.Text, obj14);
   obj7.children = items1;
-  return React5(View, obj7);
+  return metroImportDefault(View, obj7);
 }
 const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   title: { marginBottom: 12 },
@@ -123,8 +123,8 @@ let obj2 = {
   creditDescription: null,
 };
 let size = {
-  width: fn(7454).GameIconImageSize[fn(undefined, 7454).GameIconSizes.SMALL],
-  height: fn(7454).GameIconImageSize[fn(undefined, 7454).GameIconSizes.SMALL],
+  width: fn(7470).GameIconImageSize[fn(undefined, 7470).GameIconSizes.SMALL],
+  height: fn(7470).GameIconImageSize[fn(undefined, 7470).GameIconSizes.SMALL],
   alignItems: "center",
   justifyContent: "center",
 };
@@ -171,13 +171,13 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj3 = {
         style: tmp.title,
         accessibilityRole: "header",
-        variant: "eyebrow",
+        variant: "body-sm/medium",
         color: "text-default",
         children: null,
       };
       const intl = tmp2(1113).intl;
       obj3.children = intl.string(tmp2(1113).t.YugZY0);
-      const items1 = [closure_6(tmp2(5747).Text, obj3), , ,];
+      const items1 = [closure_6(tmp2(5761).Text, obj3), , ,];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj4.style = items2;
@@ -199,18 +199,18 @@ export default function PremiumAccountCredit(currentSubscription) {
         );
       });
       items1[1] = closure_6(c3, obj4);
-      const obj5 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
+      const obj5 = { style: tmp.creditDescription, variant: "body-sm/medium", children: null };
       const intl2 = tmp2(1113).intl;
       obj5.children = intl2.string(tmp2(1113).t.Z5b2Gf);
-      items1[2] = closure_6(tmp2(5747).Text, obj5);
+      items1[2] = closure_6(tmp2(5761).Text, obj5);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
         if (currentSubscription.isPurchasedExternally) {
-          const obj6 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
+          const obj6 = { style: tmp.creditDescription, variant: "body-sm/medium", children: null };
           const intl3 = tmp2(1113).intl;
           obj6.children = intl3.string(tmp2(1113).t.azRP0E);
-          tmp9Result = closure_6(tmp2(5747).Text, obj6);
+          tmp9Result = closure_6(tmp2(5761).Text, obj6);
         }
       }
       items1[3] = tmp9Result;

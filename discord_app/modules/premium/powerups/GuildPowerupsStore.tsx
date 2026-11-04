@@ -66,14 +66,14 @@ function calculateAppliedBoosts(guildId) {
   }
   return sum;
 }
-const GuildPowerupsConstants = fn(5353);
+const GuildPowerupsConstants = fn(5354);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: c2, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } =
   GuildPowerupsConstants);
 const Constants = fn(1072);
 ({
   AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4,
   BoostedGuildTiers: hasOwnProperty,
-  GuildFeatures: metroRequire,
+  GuildFeatures: closure_6,
 } = Constants);
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildPowerupsStore extends PersistedStore {}

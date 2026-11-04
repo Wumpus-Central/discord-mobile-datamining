@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(5141);
-let obj2 = { ideaCards: { gap: fn(12770).BLOCK_GAP } };
+let obj2 = { ideaCards: { gap: fn(12851).BLOCK_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureIdeaCards.tsx");
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureId
 export default function ConjureIdeaCards(arg0) {
   ({ ideas, onPick: require } = arg0);
   let obj = { style: closure_6().ideaCards, children: null };
-  const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+  const obj2 = { variant: "body-sm/semibold", color: "text-muted", children: null };
   let intl = util.intl;
   obj2.children = intl.string(_modDef3995["wx/o8Y"]);
   items = [
@@ -42,10 +42,10 @@ export default function ConjureIdeaCards(arg0) {
       const intl = util.intl;
       obj.accessibilityLabel = intl.formatToPlainString(_modDef3995.H8G39M, { title: title.title });
       items = [
-        closure_1_4(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: title.title }),
+        closure_1_4(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", children: title.title }),
       ];
       if ("" !== title.value) {
-        const obj4 = { variant: "text-sm/normal", color: "text-muted", children: title.value };
+        const obj4 = { variant: "body-sm/normal", color: "text-muted", children: title.value };
         tmpResult = closure_1_4(Text_Text.Text, obj4);
       }
       items[1] = tmpResult;

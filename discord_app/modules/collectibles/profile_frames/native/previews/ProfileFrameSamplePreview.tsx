@@ -2,11 +2,11 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef7164 from "../../../../../../_runtime/metro/07164__.js";
+import _modDef7179 from "../../../../../../_runtime/metro/07179__.js";
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 import ProfileFrameDefault from "../ProfileFrame.tsx";
 import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
-import _modDef9647 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef9666 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,9 +15,9 @@ function filterLayer(responsive) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7497).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7513).UserProfileThemeTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   profileFrameContainer: { flex: 1 },
@@ -28,7 +28,7 @@ let obj2 = {
     borderColor: nativeDefault.colors.BORDER_NORMAL,
     borderRadius: nativeDefault.radii.xs,
   },
-  sampleProfile: { width: "100%", aspectRatio: fn(9622).SAMPLE_PROFILE_ASPECT_RATIO },
+  sampleProfile: { width: "100%", aspectRatio: fn(9641).SAMPLE_PROFILE_ASPECT_RATIO },
 };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -143,7 +143,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
     }),
   ];
   obj4.children = items;
-  obj3.maskElement = React5(React4, obj4);
+  obj3.maskElement = metroImportDefault(React4, obj4);
   obj3.children = timestampProducer(React4, {
     style: { marginTop: overflowTop, marginBottom: overflowBottom, marginHorizontal: overflowHorizontal, flex: 1 },
     children: tmp12,
@@ -239,8 +239,8 @@ export default function ProfileFrameSamplePreview(previewWidth) {
       backgroundColor: "black",
     },
   };
-  tmp13 = _modDef7164;
-  obj18.uri = _modDef9647;
+  tmp13 = _modDef7179;
+  obj18.uri = _modDef9666;
   obj17.source = obj18;
   obj17.style = tmp.sampleProfile;
   obj16.children = timestampProducer(FastImageDefault, obj17);
@@ -259,5 +259,5 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   obj19.containerHeight = previewHeight - overflowTop - overflowBottom;
   items2[2] = timestampProducer(ProfileFrameDefault, obj19);
   obj14.children = items2;
-  return React5(React4, obj14);
+  return metroImportDefault(React4, obj14);
 }

@@ -25,8 +25,8 @@ const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");
 
-export function reloadConjureAppFrames(application_id) {
-  ConjurePlatformUtilsDefault.reloadAppFrames(application_id);
+export function reloadConjureAppFrames(applicationId) {
+  ConjurePlatformUtilsDefault.reloadAppFrames(applicationId);
 }
 export function reloadConjureProjectFrames(projectId) {
   const project = ConjureProjectStore.getProject(projectId);

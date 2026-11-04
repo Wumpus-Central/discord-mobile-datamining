@@ -18,7 +18,7 @@ import MessageStore from "../../../../stores/MessageStore.tsx";
 require = fn;
 let closure_7 = fn(5146).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
-let maxLength = fn(14655).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+let maxLength = fn(14735).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
@@ -148,7 +148,7 @@ export default function EditAttachmentActionSheet(arg0) {
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8964)(attachment);
+  const tmp5 = attachment(8981)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);
@@ -165,7 +165,7 @@ export default function EditAttachmentActionSheet(arg0) {
   obj3.header = closure_10(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult });
   let obj4 = { spacing: attachment(575).space.PX_16, children: null };
   items = [
-    closure_10(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", lineClamp: 2, children: tmp5 }),
+    closure_10(Text_Text.Text, { variant: "body-sm/medium", color: "text-subtle", lineClamp: 2, children: tmp5 }),
     ,
     ,
     ,
@@ -193,7 +193,7 @@ export default function EditAttachmentActionSheet(arg0) {
   items[2] = closure_10(TableCheckboxRow.TableCheckboxRow, obj6);
   let tmp19Result = null;
   if (null != tmp17) {
-    const obj7 = { variant: "text-sm/medium", color: "text-feedback-critical", children: tmp17 };
+    const obj7 = { variant: "body-sm/medium", color: "text-feedback-critical", children: tmp17 };
     tmp19Result = closure_10(Text_Text.Text, obj7);
   }
   items[3] = tmp19Result;

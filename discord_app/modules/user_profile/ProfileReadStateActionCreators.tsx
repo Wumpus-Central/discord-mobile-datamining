@@ -1,12 +1,13 @@
 // discord_app/modules/user_profile/ProfileReadStateActionCreators.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ProfileReadStateSection from "../../../discord_common/js/shared/shared-constants/ProfileReadStateSection.tsx";
 import ProfileReadStateEndpoints2 from "ProfileReadStateEndpoints.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-let closure_7 = async function _ackProfileWishlist(arg0) {
+let closure_6 = async function _ackProfileWishlist(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -44,8 +45,8 @@ let closure_7 = async function _ackProfileWishlist(arg0) {
               }
               let tmp3 = arg0 !== id;
               if (tmp3) {
-                tmp3 = null != closure_1_0(dependencyMap[4]).getProfileReadStateConfigPeek();
-                const obj = closure_1_0(dependencyMap[4]);
+                tmp3 = null != closure_1_0(dependencyMap[3]).getProfileReadStateConfigPeek();
+                const obj = closure_1_0(dependencyMap[3]);
               }
               return tmp3;
             })(closure_0)
@@ -56,7 +57,7 @@ let closure_7 = async function _ackProfileWishlist(arg0) {
             const ProfileReadStateEndpoints = ProfileReadStateEndpoints2.ProfileReadStateEndpoints;
             request.url = ProfileReadStateEndpoints.PROFILE_READ_STATE(closure_0);
             const obj4 = { sections: null };
-            items = [constants.WISHLIST];
+            items = [ProfileReadStateSection.ProfileReadStateSection.WISHLIST];
             obj4.sections = items;
             request.body = obj4;
             c6 = 2;
@@ -69,7 +70,7 @@ let closure_7 = async function _ackProfileWishlist(arg0) {
         if (1 === tmp7) {
           c5 = 0;
           closure_130_2 = currentUser;
-          closure_131_6.warn("Failed to ack profile wishlist", closure_130_2);
+          closure_131_5.warn("Failed to ack profile wishlist", closure_130_2);
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -93,25 +94,24 @@ let closure_7 = async function _ackProfileWishlist(arg0) {
         return obj;
       }
       c7 = 3;
-    } catch (tmp22) {
-      currentUser = tmp22;
+    } catch (tmp23) {
+      currentUser = tmp23;
       if (tmp4 === c5) {
         c7 = tmp2;
-        throw tmp22;
+        throw tmp23;
       } else {
         c6 = tmp;
       }
     }
   }
 };
-const ProfileReadStateSection = fn(7908).ProfileReadStateSection;
-let closure_6 = new LoggerDefault("ProfileReadStateActionCreators");
+let closure_5 = new LoggerDefault("ProfileReadStateActionCreators");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/ProfileReadStateActionCreators.tsx");
 
 export function ackProfileWishlist() {
   const self = this;
-  const apply = closure_7.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

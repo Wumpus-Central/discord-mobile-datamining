@@ -4,7 +4,7 @@ import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
-import _modDef9507 from "../../../../_runtime/metro/09507__.js";
+import _modDef9525 from "../../../../_runtime/metro/09525__.js";
 import usePressabilityDefault from "../../core/native/usePressability.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -17,10 +17,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(18503);
-({ GUILD_ITEM_HIT_SLOP: closure_7, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
+const GuildsBarConstants = fn(18598);
+({ GUILD_ITEM_HIT_SLOP: metroImportDefault, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1072).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(11651).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11702).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5141);
@@ -142,7 +142,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
   const obj11 = { style: tmp5.icon, source: null, resizeMode: "contain" };
   const obj7 = require("../../../../_runtime/metro/01652__.js");
   const obj8 = { onPress: handlePress };
-  obj11.source = _modDef9507;
+  obj11.source = _modDef9525;
   items6[1] = closure_11(FastImageDefault, obj11);
   const obj12 = {
     style: tmp5.guildIndicator,
@@ -164,13 +164,13 @@ export default noop.memo(function GuildsBarEmptyNUX() {
     obj15.style = tmp5.expandedChildren;
     obj15.collapsable = false;
     const obj16 = { title: null };
-    const obj17 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
+    const obj17 = { variant: "body-md/medium", color: "text-default", lineClamp: 1, children: null };
     const intl2 = tmp(1113).intl;
     obj17.children = intl2.string(tmp(1113).t["3S2xmm"]);
-    obj16.title = closure_11(tmp(5747).Text, obj17);
-    obj15.children = closure_11(tmp(18527).HomeDrawerSharedItem, obj16);
-    tmp21Result = closure_11(tmp3(7086), obj15);
-    const tmp3Result4 = tmp3(7086);
+    obj16.title = closure_11(tmp(5761).Text, obj17);
+    obj15.children = closure_11(tmp(18622).HomeDrawerSharedItem, obj16);
+    tmp21Result = closure_11(tmp3(7101), obj15);
+    const tmp3Result4 = tmp3(7101);
   }
   items7[1] = tmp21Result;
   obj14.children = items7;

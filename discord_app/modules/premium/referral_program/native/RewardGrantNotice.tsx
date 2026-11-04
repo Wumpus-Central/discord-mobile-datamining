@@ -18,13 +18,13 @@ function OrbsGrantNotice(nRewardsGranted) {
       style: tmp.balancePillOverride,
     }),
   ];
-  const obj3 = { variant: "text-sm/medium", color: "text-strong", children: null };
+  const obj3 = { variant: "body-sm/medium", color: "text-strong", children: null };
   const intl = util.intl;
   const items1 = [" ", intl.string(util.t.UhguER)];
   obj3.children = items1;
-  items[1] = React5(Text_Text.Text, obj3);
+  items[1] = metroImportDefault(Text_Text.Text, obj3);
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 function DiscountGrantNotice(nRewardsGranted) {
   nRewardsGranted = nRewardsGranted.nRewardsGranted;
@@ -37,19 +37,19 @@ function DiscountGrantNotice(nRewardsGranted) {
       size: "xs",
     }),
   ];
-  const obj4 = { variant: "text-sm/medium", color: "text-strong", children: null };
+  const obj4 = { variant: "body-sm/medium", color: "text-strong", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.format(util.t["P//01n"], { discountPercent, duration: nRewardsGranted });
   items[1] = timestampProducer(Text_Text.Text, obj4);
   obj.children = items;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const Constants = fn(15462);
+const Constants = fn(15549);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: closure_4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: hasOwnProperty } =
   Constants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {

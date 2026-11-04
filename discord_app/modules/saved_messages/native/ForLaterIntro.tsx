@@ -10,7 +10,7 @@ import SavedMessagesTypes from "../SavedMessagesTypes.tsx";
 import BookmarkIcon from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";
 import ReminderWatchSpotIllustration from "../../../design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx";
 import BookmarksSpotIllustration2 from "../../../design/components/mana-assets/native/generated/BookmarksSpotIllustration.native.tsx";
-import _modDef11324 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef11374 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -27,24 +27,24 @@ function IntroDemo(isReminder) {
   };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef11324 };
+  const obj4 = { uri: _modDef11374 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
   items = [hasOwnProperty(FastImageDefault, obj3)];
   const obj5 = { style: tmp.messageLines, children: null };
-  const obj6 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const obj6 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t.cqpybK);
   const items1 = [hasOwnProperty(Text_Text.Text, obj6), , ,];
-  const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj7 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   obj7.children = intl2.string(util.t["h+KPxy"]);
   items1[1] = hasOwnProperty(Text_Text.Text, obj7);
-  const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj8 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl3 = util.intl;
   obj8.children = intl3.string(util.t["63EVpI"]);
   items1[2] = hasOwnProperty(Text_Text.Text, obj8);
-  const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj9 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl4 = util.intl;
   obj9.children = intl4.string(util.t["KT/TDX"]);
   items1[3] = hasOwnProperty(Text_Text.Text, obj9);
@@ -86,7 +86,7 @@ function SheetRow(hasArrow) {
   const items1 = [
     hasOwnProperty(icon, { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       style: tmp.sheetRowLabel,
       children: label,
@@ -103,7 +103,7 @@ function SheetRow(hasArrow) {
 }
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const ACTION_SHEET_BORDER_RADIUS = ActionSheetConstants.ACTION_SHEET_BORDER_RADIUS;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   scrollView: { flex: 1 },
   pageContainer: {
@@ -241,7 +241,7 @@ export default function ForLaterIntro(type) {
   obj5.children = intl.string(tmp4 ? t["5Iw19e"] : t["93WOd1"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj5)];
   const obj6 = {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     style: tmp.text,
     includeFontPadding: true,

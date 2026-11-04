@@ -374,7 +374,7 @@ function updateNotifSettingValue(updatedSettingId, arg1) {
   }
 }
 const Constants = fn(1072);
-({ AbortCodes: hasOwnProperty, Endpoints: metroRequire } = Constants);
+({ AbortCodes: hasOwnProperty, Endpoints: closure_6 } = Constants);
 let closure_7 = new LoggerDefault("NotifSettingsActionCreators");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsActionCreators.tsx");

@@ -10,8 +10,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let closure_7 = fn(11992).CALL_ACTION_BAR_HEIGHT + 8;
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+let closure_7 = fn(12051).CALL_ACTION_BAR_HEIGHT + 8;
 const createStyles = fn(5141);
 let obj2 = {
   scrollView: { flex: 1 },
@@ -49,7 +49,7 @@ export default function StageViewWithPrompts(arg0) {
     }),
     hasOwnProperty(Text_Text.Text, {
       style: tmp.body,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-overlay-light",
       children: body,
     }),

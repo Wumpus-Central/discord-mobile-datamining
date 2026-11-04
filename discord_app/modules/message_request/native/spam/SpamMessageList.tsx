@@ -199,7 +199,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   sectionContainer: {
@@ -321,7 +321,7 @@ export default function SpamMessageList(goToMessageRequestPreview) {
       return channel.channel.id;
     };
     const obj7 = { style: tmp.sectionContainer, children: null };
-    const obj8 = { variant: "eyebrow", color: "text-default", children: null };
+    const obj8 = { variant: "body-sm/medium", color: "text-default", children: null };
     const intl = tmp4(tmp3[6]).intl;
     const obj9 = { count: data.length };
     obj8.children = intl.format(tmp4(tmp3[6]).t.aNh5Kf, obj9);

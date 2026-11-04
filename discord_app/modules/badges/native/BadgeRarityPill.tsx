@@ -112,7 +112,7 @@ export default function BadgeRarityPill(rarity) {
       obj7.style = items;
       const obj9 = { size: "xxs", color: text };
       const items1 = [React4(tmp5.Icon, obj9)];
-      const obj11 = { variant: "text-xs/semibold", color: "none", lineClamp: 1, style: null, children: null };
+      const obj11 = { variant: "body-xs/semibold", color: "none", lineClamp: 1, style: null, children: null };
       const items2 = [tmp.label];
       const obj12 = { color: text };
       items2[1] = obj12;

@@ -31,10 +31,10 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "flexDirection";
 };
-const GlobalDiscoveryServersConstants = fn(9204);
+const GlobalDiscoveryServersConstants = fn(9221);
 ({
-  GlobalDiscoveryServerTab: metroRequire,
-  FEATURED_GUILDS_CACHE_DURATION: closure_7,
+  GlobalDiscoveryServerTab: closure_6,
+  FEATURED_GUILDS_CACHE_DURATION: metroImportDefault,
   CategoryId: closure_8,
   DISCOVERY_ALL_CATEGORIES_ID: closure_9,
   getLanguageOptions: closure_10,
@@ -151,17 +151,17 @@ export function getGlobalDiscoveryServersTabSectionTitle(arg0) {
 }
 export function getCategoryIdFromServerTab(type) {
   if (constants.FEATURED === type) {
-    return React7;
+    return React6;
   } else if (constants.GAMING === type) {
-    return React6.Activity;
+    return React5.Activity;
   } else if (constants.MUSIC === type) {
-    return React6.Music;
+    return React5.Music;
   } else if (constants.ENTERTAINMENT === type) {
-    return React6.Television;
+    return React5.Television;
   } else if (constants.TECH === type) {
-    return React6.Science;
+    return React5.Science;
   } else if (constants.EDUCATION === type) {
-    return React6.Education;
+    return React5.Education;
   } else if (constants.HUBS === type) {
     return closure_1_11;
   } else {
@@ -172,7 +172,7 @@ export function isStaleFeaturedGuilds(arg0) {
   let tmp = null == arg0;
   if (!tmp) {
     const _Date = Date;
-    tmp = Date.now() - arg0 > React5;
+    tmp = Date.now() - arg0 > metroImportDefault;
   }
   return tmp;
 }
@@ -217,8 +217,8 @@ export function fromDiscoverableGuildSearchResult(id) {
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "id",
-    discoverySplash: "loadingTextPlaceholderSmall",
-    emojis: "_l",
+    discoverySplash: "<string:3029090563>",
+    emojis: "<string:1381040129>",
   };
   ({
     approximate_presence_count: obj.presenceCount,

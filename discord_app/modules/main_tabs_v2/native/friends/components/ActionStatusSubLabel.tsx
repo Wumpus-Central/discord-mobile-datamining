@@ -20,7 +20,7 @@ let closure_5 = createStyles.createStyles(() => ({
   container: { overflow: "hidden" },
   actionStatus: { position: "absolute" },
 }));
-let closure_7 = module_1652.createAnimatedComponent(fn(5747).Text);
+let closure_7 = module_1652.createAnimatedComponent(fn(5761).Text);
 let closure_8 = {
   code: "(function ActionStatusSubLabelTsx1(){let[hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate]=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};})",
 };
@@ -45,7 +45,7 @@ export function ActionStatusSubLabel(lineHeight) {
   }
   let str = lineHeight.textVariant;
   if (str === undefined) {
-    str = "text-xs/medium";
+    str = "body-xs/medium";
   }
   ({ actioned, secondaryLabel, maxFontSizeMultiplier, animate } = lineHeight);
   let tmp = null != secondaryLabel;

@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import Suspender from "../../../../../_runtime/06109_Suspender.js";
+import Suspender from "../../../../../_runtime/06124_Suspender.js";
 import VoicePanelCardDefault from "VoicePanelCard.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -374,18 +374,18 @@ function CardContentFreezer(children) {
   }, items8);
 }
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11360);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const VoicePanelConstants = fn(11410);
 ({
   LAYOUT_PHYSICS: closure_9,
   VoicePanelModes: closure_10,
   UI_SHOW_HIDE_PHYSICS,
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11358).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19273).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11363).EDGE_GUTTER;
-const isUserParticipant = fn(5801).isUserParticipant;
+const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19377).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11413).EDGE_GUTTER;
+const isUserParticipant = fn(5815).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);

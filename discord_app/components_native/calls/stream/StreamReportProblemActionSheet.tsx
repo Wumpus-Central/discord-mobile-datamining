@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import BottomSheetModal from "../../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05400_BottomSheetModal.js";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import ToastUtils from "../../../modules/toast/native/ToastUtils.tsx";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";

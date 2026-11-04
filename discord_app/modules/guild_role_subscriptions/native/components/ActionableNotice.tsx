@@ -27,7 +27,7 @@ export default function ActionableNotice(arg0) {
   items = [style, tmp.container];
   obj.style = items;
   const items1 = [
-    React3(Text_Text.Text, { style: tmp.message, variant: "text-sm/medium", color: "text-default", children: message }),
+    React3(Text_Text.Text, { style: tmp.message, variant: "body-sm/medium", color: "text-default", children: message }),
   ];
   const obj3 = { style: tmp.actionButton, children: null };
   const obj4 = { size: "sm", onPress: onClick, disabled: null, text: null };

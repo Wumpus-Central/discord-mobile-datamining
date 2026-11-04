@@ -95,7 +95,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
             items[1] = obj2;
             obj3.style = items;
             const obj4 = { style: closure_4.overflowCircle, children: null };
-            const obj5 = { variant: "text-xs/medium", children: null };
+            const obj5 = { variant: "body-xs/medium", children: null };
             const _HermesInternal = HermesInternal;
             obj5.children = "+" + tmp2 + 1;
             obj4.children = React4(Text_Text.Text, obj5);
@@ -131,10 +131,10 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
     let obj6 = {
       size: tmp(tmp2[7]).Icon.Sizes.CUSTOM,
       style: { height: 14, width: 14 },
-      source: require("../../../../../../_runtime/metro/18880__.js"),
+      source: require("../../../../../../_runtime/metro/18983__.js"),
     };
     const items4 = [closure_4(tmp(tmp2[7]).Icon, obj6)];
-    let obj7 = { variant: "text-sm/semibold", style: { marginLeft: 4 }, children: audienceCount };
+    let obj7 = { variant: "body-sm/semibold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(tmp(tmp2[6]).Text, obj7);
     obj5.children = items4;
     obj4.children = closure_5(tmp6, obj5);

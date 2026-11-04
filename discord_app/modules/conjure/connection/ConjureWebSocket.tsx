@@ -163,6 +163,19 @@ prototype["sendQueuedMessageAction"] = function sendQueuedMessageAction(arg0, id
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendSafetyRecheck"] = function sendSafetyRecheck() {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      socket.send(JSON.stringify({ type: "request_safety_recheck" }));
+    }
+  }
+  const error = new Error("Not connected");
+  throw error;
+};
 prototype["sendPublishOptions"] = function sendPublishOptions(combined) {
   const self = this;
   if (null != this.socket) {

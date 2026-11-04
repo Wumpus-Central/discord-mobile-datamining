@@ -131,10 +131,10 @@ const Constants = fn(1072);
 ({
   Endpoints: closure_4,
   Routes: hasOwnProperty,
-  DEVICE_TOKEN: metroRequire,
-  DEVICE_VOIP_TOKEN: closure_7,
+  DEVICE_TOKEN: closure_6,
+  DEVICE_VOIP_TOKEN: metroImportDefault,
 } = Constants);
-const PushNotificationConstants = fn(6863);
+const PushNotificationConstants = fn(6878);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -252,10 +252,10 @@ export function saveProfileAndAccountChanges(avatar) {
   const obj4 = { headers: null };
   const obj = avatarId(572);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(7274).buildHeadersForMd5({
-    [avatar(7278).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+  obj4.headers = avatarId(7290).buildHeadersForMd5({
+    [avatar(7294).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
   });
-  let tmpResult = avatarId(7274);
+  let tmpResult = avatarId(7290);
   return saveProfileAndAccountRequest(user, obj4).then(
     (result) => {
       DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });

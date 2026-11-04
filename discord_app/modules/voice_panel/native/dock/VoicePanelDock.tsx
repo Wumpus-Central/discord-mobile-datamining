@@ -5,7 +5,7 @@ import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
@@ -19,10 +19,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11360).VoicePanelModes;
-const VoicePanelDockConstants = fn(11378);
+const VoicePanelModes = fn(11410).VoicePanelModes;
+const VoicePanelDockConstants = fn(11428);
 ({
-  DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_7,
+  DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: metroImportDefault,
   DOCK_PULL_SNAP_DISTANCE: closure_8,
   DOCK_PULL_SNAP_GIVE: closure_9,
   DOCK_TAP_MAX_MOVEMENT: closure_10,
@@ -33,7 +33,7 @@ const VoicePanelDockConstants = fn(11378);
   DOCK_PADDING_TOP,
   DOCK_ROW_HEIGHT,
 } = VoicePanelDockConstants);
-const GestureConstants = fn(11379);
+const GestureConstants = fn(11429);
 ({
   FLING_MIN_DISTANCE: closure_12,
   FLING_MIN_VELOCITY: map1,
@@ -307,7 +307,7 @@ export default noop.memo(function VoicePanelDock() {
     const obj = { bottom: -c0 };
     const hitSlopResult = Gesture.Pan().hitSlop({ bottom: -c0 });
     const activeOffsetYResult = Gesture.Pan().hitSlop({ bottom: -c0 }).activeOffsetY(-gesture);
-    items = [-React5, React5];
+    items = [-metroImportDefault, metroImportDefault];
     const failOffsetYResult = Gesture.Pan().hitSlop({ bottom: -c0 }).activeOffsetY(-gesture).failOffsetY(gesture);
     const items1 = [closure_25, sharedValue, sharedValue1];
     c0 = undefined;
@@ -414,13 +414,13 @@ export default noop.memo(function VoicePanelDock() {
     const tmp16 = c8;
     const items7 = [
       closure_28,
-      React6,
+      React5,
       sharedValue4,
       c2,
       timing_timing.withTiming,
       VoicePanelSheetMorph.DOCK_CONTENT_SWAP_TIMING,
       sharedValue3,
-      React7,
+      React6,
       value2,
       _mod1705.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,

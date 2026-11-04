@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
@@ -81,7 +81,7 @@ export default function PremiumGiftCustomization() {
   let tmp13Result = null != recipientUser;
   if (tmp13Result) {
     const obj7 = { children: null };
-    const obj8 = { style: tmp4.senderHeaderTitle, variant: "text-md/semibold", children: null };
+    const obj8 = { style: tmp4.senderHeaderTitle, variant: "body-md/semibold", children: null };
     const intl3 = tmp(tmp2[10]).intl;
     obj8.children = intl3.string(tmp(tmp2[10]).t.NlkxGS);
     const items3 = [closure_8(tmp(tmp2[13]).Text, obj8), ,];

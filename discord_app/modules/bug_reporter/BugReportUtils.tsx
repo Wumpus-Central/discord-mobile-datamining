@@ -192,7 +192,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
   })();
 };
 const Constants = fn(1072);
-({ DebugLogCategory: hasOwnProperty, Endpoints: metroRequire } = Constants);
+({ DebugLogCategory: hasOwnProperty, Endpoints: closure_6 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/BugReportUtils.tsx");
 

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import util from "../../../../intl/index.native.tsx";
 import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import ShieldIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
@@ -25,7 +25,7 @@ function ShowcaseVisual(styles) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   list: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
@@ -447,7 +447,7 @@ obj.blockedNotice = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL,
   borderRadius: nativeDefault.radii.sm,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL,
 };
 const obj34 = {
   flexDirection: "row",
@@ -457,7 +457,7 @@ const obj34 = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL,
   borderRadius: nativeDefault.radii.sm,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_CRITICAL,
 };
 obj.blockedText = { flex: 1, gap: nativeDefault.space.PX_6 };
 const obj35 = { flex: 1, gap: nativeDefault.space.PX_6 };
@@ -539,8 +539,8 @@ let closure_14 = {
     obj5.style = items3;
     const obj6 = { left: nativeDefault.space.PX_6 };
     const items4 = [
-      closure_5(styles(9506).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }),
-      closure_5(styles(5747).Text, { variant: "text-xxs/semibold", color: "text-overlay-light", children: 128 }),
+      closure_5(styles(9524).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }),
+      closure_5(styles(5761).Text, { variant: "footnote/semibold", color: "text-overlay-light", children: 128 }),
     ];
     obj5.children = items4;
     items1[4] = closure_6(closure_4, obj5);
@@ -551,13 +551,13 @@ let closure_14 = {
     obj8.style = items5;
     const obj9 = { right: nativeDefault.space.PX_6 };
     const items6 = [
-      closure_5(styles(9596).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }),
+      closure_5(styles(9615).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }),
       ,
     ];
     const obj10 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[1] = closure_5(styles(9596).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
+    items6[1] = closure_5(styles(9615).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
     const obj11 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[2] = closure_5(styles(9596).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
+    items6[2] = closure_5(styles(9615).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
     obj8.children = items6;
     items1[5] = closure_6(closure_4, obj8);
     obj.children = items1;
@@ -583,7 +583,7 @@ let closure_14 = {
     const obj9 = { style: styles.messageHeader, children: null };
     const items4 = [hasOwnProperty(Line, { style: styles.lineName })];
     const obj11 = { style: styles.botTag, children: null };
-    const obj12 = { variant: "text-xxs/semibold", color: "text-overlay-light", children: null };
+    const obj12 = { variant: "footnote/semibold", color: "text-overlay-light", children: null };
     const intl = util.intl;
     obj12.children = intl.string(_modDef3995.VlgiLf);
     obj11.children = hasOwnProperty(Text_Text.Text, obj12);
@@ -604,7 +604,7 @@ let closure_14 = {
   "profile-widgets": function ProfileWidgetsVisual(styles) {
     styles = styles.styles;
     let token;
-    token = styles(5719).useToken(token(575).colors.BACKGROUND_BRAND);
+    token = styles(5732).useToken(token(575).colors.BACKGROUND_BRAND);
     items = [token];
     const obj2 = { style: null, children: null };
     items1 = [,];
@@ -615,7 +615,7 @@ let closure_14 = {
       return items;
     }, items);
     items2 = [
-      closure_5(token(5710), {
+      closure_5(token(5723), {
         style: styles.profileBanner,
         colors: memo,
         start: { x: 0, y: 0.5 },
@@ -638,7 +638,7 @@ let closure_14 = {
       return timestampProducer(React4, obj, item);
     });
     const items6 = [closure_5(closure_4, obj8)];
-    let obj = styles(5719);
+    let obj = styles(5732);
     const obj3 = { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } };
     const obj6 = { style: styles.lineName };
     items6[1] = closure_5(closure_4, {
@@ -693,7 +693,7 @@ let closure_14 = {
     const obj4 = { style: styles.crosshair };
     const tmp = LinearGradientDefault;
     items3 = [
-      closure_5(styles(5860).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }),
+      closure_5(styles(5874).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }),
       closure_5(Line, { style: styles.overlayTimerValue }),
     ];
     obj6.children = items3;
@@ -776,11 +776,11 @@ export default noop.memo(function ConjureHomeFeatureList() {
     ({ title, description } = id);
     items = [hasOwnProperty(React4, obj2)];
     const obj4 = { style: styles.caption, children: null };
-    const obj5 = { variant: "text-md/semibold", color: "text-strong", accessibilityRole: "header", children: null };
+    const obj5 = { variant: "body-md/semibold", color: "text-strong", accessibilityRole: "header", children: null };
     const intl = util.intl;
     obj5.children = intl.string(title);
     items1 = [hasOwnProperty(Text_Text.Text, obj5)];
-    const obj6 = { variant: "text-sm/normal", color: "text-subtle", children: null };
+    const obj6 = { variant: "body-sm/normal", color: "text-subtle", children: null };
     const intl2 = util.intl;
     obj6.children = intl2.string(description);
     items1[1] = hasOwnProperty(Text_Text.Text, obj6);

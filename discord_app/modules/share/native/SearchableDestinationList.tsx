@@ -11,9 +11,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Keyboard: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Keyboard: closure_6 } = get_ActivityIndicator);
 const NOOP = fn(1072).NOOP;
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -304,7 +304,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   closure_22 = tmp27;
   const tmp13 = onSearchTextChange(NONE.useState(false), 2);
   scaledTextLineHeight = disabledDestinations(onSelectedDestinationChange[15]).useScaledTextLineHeight(
-    "text-xs/medium",
+    "body-xs/medium",
   );
   const items9 = [results, getRowIsUnavailable, tmp27, scaledTextLineHeight];
   const callback6 = obj.useCallback((arg0, arg1) => {

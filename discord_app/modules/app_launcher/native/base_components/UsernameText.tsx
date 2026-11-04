@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/base_comp
 export default function UsernameText(color) {
   ({ user, variant } = color);
   if (variant === undefined) {
-    variant = "text-md/medium";
+    variant = "body-md/medium";
   }
   let str = color.color;
   if (str === undefined) {

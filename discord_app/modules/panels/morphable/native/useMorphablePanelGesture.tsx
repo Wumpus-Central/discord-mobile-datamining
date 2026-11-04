@@ -1,17 +1,17 @@
 // discord_app/modules/panels/morphable/native/useMorphablePanelGesture.tsx
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import MorphablePanelUtils from "MorphablePanelUtils.tsx";
 import triggerIOSHapticDefault from "triggerIOSHaptic.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MorphablePanelConstants = fn(11361);
+const MorphablePanelConstants = fn(11411);
 ({ IS_IOS: closure_4, MIN_PAN_GESTURE_MOVE: hasOwnProperty, MorphablePanelModes } = MorphablePanelConstants);
 ({
-  PANEL_TAP_GESTURE_MAX_DISTANCE: closure_7,
+  PANEL_TAP_GESTURE_MAX_DISTANCE: metroImportDefault,
   PIP_POP_HEIGHT: closure_8,
   POP_RESISTANCE: closure_9,
 } = MorphablePanelConstants);
@@ -100,11 +100,11 @@ export default function useMorphablePanelGesture(mode) {
     useMorphablePanelGestureTsx1.__initData = tmp3;
     const maxDistanceResult = Gesture2.Tap()
       .enabled(null != onTapGestureStart)
-      .maxDistance(React5);
+      .maxDistance(metroImportDefault);
     const Gesture3 = LegacyBaseButton.Gesture;
     const onStartResult = Gesture2.Tap()
       .enabled(null != onTapGestureStart)
-      .maxDistance(React5)
+      .maxDistance(metroImportDefault)
       .onStart(useMorphablePanelGestureTsx1);
     const PanResult = Gesture3.Pan();
     const enabledResult1 = Gesture3.Pan().enabled(flag);
@@ -210,8 +210,8 @@ export default function useMorphablePanelGesture(mode) {
       MorphablePanelModes,
       _undefined8,
       sharedValue,
-      React7,
       React6,
+      React5,
       _mod1705.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,

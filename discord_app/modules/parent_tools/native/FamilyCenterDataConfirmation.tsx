@@ -26,7 +26,7 @@ function RowGroup(children) {
   items = [
     React3(Text_Text.Text, {
       accessibilityRole: "header",
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: "text-muted",
       children: children.title,
     }),

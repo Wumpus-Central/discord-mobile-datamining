@@ -13,11 +13,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-let c7 = "heading-md/semibold";
-let c8 = "text-sm/medium";
-let closure_9 = fn(17215).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+let c7 = "heading-sm/semibold";
+let c8 = "body-sm/medium";
+let closure_9 = fn(17307).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({
   wrapper: {

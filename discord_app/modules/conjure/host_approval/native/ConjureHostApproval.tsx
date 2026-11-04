@@ -18,17 +18,17 @@ function ConjureHostApprovalCard(arg0) {
   const obj = { style: closure_6().card, children: null };
   const tmp = closure_6();
   items = [closure_4(ConjureAwaitingUser.ConjureAwaitingPulseRing, {}), , , ,];
-  const obj2 = { variant: "text-xs/semibold", color: "text-brand", children: null };
+  const obj2 = { variant: "body-xs/semibold", color: "text-brand", children: null };
   const intl = util.intl;
   obj2.children = intl.string(_modDef3995.W4DsVo);
   items[1] = closure_4(Text_Text.Text, obj2);
-  const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const obj3 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.format(_modDef3995.E4Gc7e, { host: approval.host });
   items[2] = closure_4(Text_Text.Text, obj3);
   let tmp6Result = null;
   if ("" !== reason) {
-    const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    const obj4 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl3 = util.intl;
     const obj5 = { reason };
     obj4.children = intl3.format(tmp3(3995)["5poqiN"], obj5);
@@ -92,7 +92,7 @@ const result = size.fileFinishedImporting("modules/conjure/host_approval/native/
 export function ConjureHostApprovalCards(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_6();
-  const conjureHostApprovals = projectId(11025).useConjureHostApprovals(projectId);
+  const conjureHostApprovals = projectId(11074).useConjureHostApprovals(projectId);
   let tmp2 = null;
   if (0 !== conjureHostApprovals.length) {
     const obj2 = {
@@ -109,7 +109,7 @@ export function ConjureAllowedHostsSetting(projectId) {
   projectId = projectId.projectId;
   let intl = projectId;
   let stringResult = dependencyMap;
-  const conjureAllowedHosts = projectId(11025).useConjureAllowedHosts(projectId);
+  const conjureAllowedHosts = projectId(11074).useConjureAllowedHosts(projectId);
   if (null == conjureAllowedHosts) {
     return null;
   } else {
@@ -123,7 +123,7 @@ export function ConjureAllowedHostsSetting(projectId) {
       intl = intl(1113).intl;
       stringResult = intl.string(_modDef3995.AweHIi);
       obj3.label = stringResult;
-      let mapped = closure_4(intl(7101).TableRow, obj3);
+      let mapped = closure_4(intl(7116).TableRow, obj3);
     } else {
       mapped = conjureAllowedHosts.map((label) => {
         closure_0 = label;
@@ -136,12 +136,12 @@ export function ConjureAllowedHostsSetting(projectId) {
         obj2.onPress = function onPress() {
           return ConjureHostApproval.removeAllowedHost(projectId, closure_0);
         };
-        obj.trailing = closure_1_4(projectId(5754).Button, obj2);
-        return closure_1_4(projectId(7101).TableRow, obj, label);
+        obj.trailing = closure_1_4(projectId(5768).Button, obj2);
+        return closure_1_4(projectId(7116).TableRow, obj, label);
       });
     }
     obj2.children = mapped;
-    closure_4(intl(7186).TableRowGroup, obj2);
+    closure_4(intl(7201).TableRowGroup, obj2);
   }
-  let obj = projectId(11025);
+  let obj = projectId(11074);
 }

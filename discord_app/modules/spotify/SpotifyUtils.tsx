@@ -107,9 +107,9 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
     }
   }
 };
-const SpotifyConstants = fn(9035);
+const SpotifyConstants = fn(9052);
 ({
-  SPOTIFY_APP_PROTOCOL: closure_7,
+  SPOTIFY_APP_PROTOCOL: metroImportDefault,
   SpotifyResourceTypes: closure_8,
   getSpotifyResourceType: closure_9,
 } = SpotifyConstants);
@@ -134,7 +134,7 @@ export function ensureSpotifyPlayable() {
     if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11814).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11871).setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);
       }

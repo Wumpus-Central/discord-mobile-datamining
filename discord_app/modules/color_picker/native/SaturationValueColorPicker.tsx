@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LegacyBaseButton from "../../../../_runtime/05428_LegacyBaseButton.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import ColorPickerUtils from "ColorPickerUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -72,7 +72,7 @@ function ColorBox(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { justifyContent: "center", alignItems: "center", position: "relative" },
@@ -276,5 +276,5 @@ export default function SaturationValueColorPicker(arg0) {
   obj7.style = items11;
   items10[1] = timestampProducer(_modDef1652.View, obj7);
   obj4.children = items10;
-  return React5(View, obj4);
+  return metroImportDefault(View, obj4);
 }

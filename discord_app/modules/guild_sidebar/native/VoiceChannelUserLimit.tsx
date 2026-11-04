@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef15345 from "../../../../_runtime/metro/15345__.js";
+import _modDef15432 from "../../../../_runtime/metro/15432__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -94,12 +94,12 @@ export default noop.memo(function VoiceChannelUserLimit(videoLimit) {
   const obj2 = { style: rect.left, children: null };
   let tmp3 = null;
   if (videoLimit.videoLimit) {
-    const obj3 = { source: _modDef15345, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj3 = { source: _modDef15432, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp3 = React4(native.Icon, obj3);
   }
   items = [tmp3];
   const obj4 = {
-    variant: "text-xs/medium",
+    variant: "body-xs/medium",
     lineClamp: 1,
     color: "voice-channel-user-limit-text",
     children: users.toString().padStart(2, "0"),
@@ -108,7 +108,7 @@ export default noop.memo(function VoiceChannelUserLimit(videoLimit) {
   obj2.children = items;
   const items1 = [hasOwnProperty(View, obj2), React4(View, { style: rect.mid })];
   const obj6 = { style: rect.right, children: null };
-  const obj7 = { variant: "text-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: null };
+  const obj7 = { variant: "body-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: null };
   const obj5 = { style: rect.mid };
   const str = users.toString();
   obj7.children = total.toString().padStart(2, "0");

@@ -21,8 +21,8 @@ export function isSpendingLimitError(billingError) {
   return tmp3;
 }
 export function showSpendingLimitReachedAlert() {
-  activeLinkUserIds = activeLinkUserIds(8493).getActiveLinkUserIds();
-  const obj = activeLinkUserIds(8493);
+  activeLinkUserIds = activeLinkUserIds(8510).getActiveLinkUserIds();
+  const obj = activeLinkUserIds(8510);
   const obj3 = { title: null, body: null, isDismissable: true };
   let intl = activeLinkUserIds(1113).intl;
   obj3.title = intl.string(activeLinkUserIds(1113).t.QJKKrT);
@@ -35,7 +35,7 @@ export function showSpendingLimitReachedAlert() {
     obj4.onConfirm = function onConfirm() {
       return openLinkedUsersChannelDefault(activeLinkUserIds, LayerActionCreators.popLayer, () => {
         const intl = activeLinkUserIds(1113).intl;
-        return activeLinkUserIds(5831).presentFailedToast(
+        return activeLinkUserIds(5845).presentFailedToast(
           intl.formatToPlainString(_modDef2667.D1BwNC, { count: length.length }),
         );
       });

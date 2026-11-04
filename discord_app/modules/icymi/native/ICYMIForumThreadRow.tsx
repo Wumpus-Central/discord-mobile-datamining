@@ -161,11 +161,11 @@ class ICYMIForumThreadRow {
               tmp17 = View;
               obj17 = { style: null, children: null };
               obj17.style = tmp.container;
-              obj18 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+              obj18 = { variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };
               obj18.children = tmp12;
               items5 = [, ,];
               items5[0] = jsx(tmp2(tmp3[18]).Text, obj18);
-              obj19 = { variant: "text-md/normal", color: "text-subtle", style: null, lineClamp: 5, children: null };
+              obj19 = { variant: "body-md/normal", color: "text-subtle", style: null, lineClamp: 5, children: null };
               obj19.style = tmp.subtitle;
               tmp11Result2 = tmp11(tmp3[19]);
               flag = true;
@@ -210,9 +210,9 @@ class ICYMIForumThreadRow {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createICYMIStyles = fn(18682);
-const React7 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const createICYMIStyles = fn(18783);
+const React6 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     pressable: { flex: 1, paddingLeft: marginHorizontal.inset },
     container: { marginHorizontal: marginHorizontal.margin },
@@ -232,7 +232,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ICYMIForumThreadRow.tsx");
 
 export default function ForumThreadRowWrapper(message) {
-  return React5(ICYMIForumThreadRow, {
+  return metroImportDefault(ICYMIForumThreadRow, {
     message: message.message,
     channel: message.threadChannel,
     visible: message.visible,

@@ -18,7 +18,7 @@ export function LinkButton(textColor) {
   ({ disabled, variant } = textColor);
   ({ onPress, text, containerStyle, textStyle } = textColor);
   if (variant === undefined) {
-    variant = "text-xs/medium";
+    variant = "body-xs/medium";
   }
   let str = textColor.textColor;
   if (str === undefined) {

@@ -268,7 +268,7 @@ class BaseActivityPanelController {
   }
 }
 let closure_11 = fn(2147).ACTIVITY_LOCKED_ASPECT_RATIO;
-const ActivityPanelModes = fn(5777).ActivityPanelModes;
+const ActivityPanelModes = fn(5791).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_14 = { x: 0, y: 0, gestureActive: false };
 const FunctionUtils = fn(2163);
@@ -384,7 +384,7 @@ export default function ActivityPanelController(children) {
   let obj = mode(504);
   return (
     <BaseActivityPanelController
-      context={connectedActivityInTextChannelId(19289)}
+      context={connectedActivityInTextChannelId(19393)}
       orientationLockStateForApp={orientationLockStateForApp}
       mode={mode}
       hasConnectedActivity={hasConnectedActivity}

@@ -73,7 +73,7 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
     const intl = util.intl;
     obj.label = intl.string(util.t.NOOm1Z);
     obj.id = MemberSafetyPageTypes.MemberSafetyPageTab.ALL_MEMBERS;
-    obj.page = React7(GuildSettingsModalMembersDefault, { guildId });
+    obj.page = React6(GuildSettingsModalMembersDefault, { guildId });
     items = [obj, , ,];
     const obj3 = { label: null, id: null, count: null, page: null };
     const intl2 = util.intl;
@@ -85,7 +85,7 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
     }
     obj3.count = tmp6;
     const obj4 = { guildId, applicationStatus: MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED };
-    obj3.page = React7(GuildSettingsModalMemberApplicationsDefault, obj4);
+    obj3.page = React6(GuildSettingsModalMemberApplicationsDefault, obj4);
     items[1] = obj3;
     const obj5 = { label: null, id: null, page: null };
     const intl3 = util.intl;
@@ -95,7 +95,7 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
     const obj2 = { guildId };
     const tmp4Result = GuildSettingsModalMemberApplicationsDefault;
     obj6.applicationStatus = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED;
-    obj5.page = React7(GuildSettingsModalMemberApplicationsDefault, obj6);
+    obj5.page = React6(GuildSettingsModalMemberApplicationsDefault, obj6);
     items[2] = obj5;
     const obj7 = { label: null, id: null, page: null };
     const intl4 = util.intl;
@@ -104,7 +104,7 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
     const obj8 = { guildId, applicationStatus: null };
     const tmp4Result3 = GuildSettingsModalMemberApplicationsDefault;
     obj8.applicationStatus = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED;
-    obj7.page = React7(GuildSettingsModalMemberApplicationsDefault, obj8);
+    obj7.page = React6(GuildSettingsModalMemberApplicationsDefault, obj8);
     items[3] = obj7;
     return items;
   }, items4);
@@ -119,16 +119,16 @@ export default noop.memo(function GuildSettingsModalMembersWithTabs(guildId) {
     } else {
       membersManagementActions = [];
     }
-    return React7(ContextMenu.ContextMenu, {
+    return React6(ContextMenu.ContextMenu, {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9228), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(9245), accessibilityLabel: null, ref: null };
         const intl = guildId(1113).intl;
         obj.accessibilityLabel = intl.string(guildId(1113).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_9(guildId(7682).HeaderActionButton, obj);
+        return closure_1_9(guildId(7698).HeaderActionButton, obj);
       },
     });
   }, items5);

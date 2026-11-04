@@ -340,7 +340,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
   return "flexDirection";
 };
 const Constants = fn(1072);
-({ Endpoints: metroRequire, PlatformTypes } = Constants);
+({ Endpoints: closure_6, PlatformTypes } = Constants);
 let c8 = "https://i.scdn.co/image/";
 const re9 = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/;
 const re10 = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/;

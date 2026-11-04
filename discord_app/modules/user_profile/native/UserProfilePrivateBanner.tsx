@@ -22,7 +22,7 @@ let obj2 = {
     paddingHorizontal: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     position: "relative",
-    zIndex: fn(7497).PROFILE_TOP_LAYER_Z_INDEX,
+    zIndex: fn(7513).PROFILE_TOP_LAYER_Z_INDEX,
   },
 };
 let closure_6 = createStyles.createStyles(obj2);
@@ -40,7 +40,7 @@ export default function UserProfilePrivateBanner(primaryColor) {
   const obj3 = { style: items, children: null };
   items[1] = tmp3;
   const items1 = [React4(LockIcon.LockIcon, { size: "xs", color: nativeDefault.colors.TEXT_DEFAULT })];
-  const obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.KPnd2O);
   items1[1] = React4(Text_Text.Text, obj5);

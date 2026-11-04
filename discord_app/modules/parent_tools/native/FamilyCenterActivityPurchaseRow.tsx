@@ -66,14 +66,14 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     items = [React4(FamilyCenterActivityItemPreviewDefault, obj3)];
     const obj4 = { style: tmp.textContainer, children: null };
     const obj5 = {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "interactive-text-active",
       ellipsizeMode: "tail",
       lineClamp: 1,
       children: combined,
     };
     const items1 = [React4(Text_Text.Text, obj5)];
-    const obj6 = { variant: "text-xs/medium", color: "text-muted", children: formatPriceResult };
+    const obj6 = { variant: "body-xs/medium", color: "text-muted", children: formatPriceResult };
     items1[1] = React4(Text_Text.Text, obj6);
     obj4.children = items1;
     items[1] = hasOwnProperty(View, obj4);

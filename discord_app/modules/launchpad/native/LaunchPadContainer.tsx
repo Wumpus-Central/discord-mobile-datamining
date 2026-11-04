@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/LaunchPadContainer.tsx
 import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import HomeDrawerExperiment from "../../home_drawer/native/HomeDrawerExperiment.tsx";
-import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05428_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import useLaunchPadTypeDefault from "useLaunchPadType.tsx";
 import useWindowDimensionsSharedValueDefault from "../../screen/useWindowDimensionsSharedValue.native.tsx";
@@ -16,10 +16,10 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11673);
+const LaunchPadConstants = fn(11724);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { wrapper: null, container: null };
 let obj3 = {};
@@ -148,7 +148,7 @@ export default function LaunchPadContainer(children) {
   }
   items7[1] = tmp21Result;
   obj4.children = items7;
-  obj3.children = React5(React3, obj4);
+  obj3.children = metroImportDefault(React3, obj4);
   obj2.children = timestampProducer(LegacyBaseButton.GestureDetector, obj3);
   return timestampProducer(LaunchPadGestureRefContextDefault.Provider, obj2);
 }

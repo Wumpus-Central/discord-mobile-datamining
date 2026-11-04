@@ -10,7 +10,7 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import _modDef17958 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
+import _modDef18054 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -36,21 +36,21 @@ function DemoActionSheet() {
   let tmp14Result = first;
   if (first) {
     const obj2 = { onPress: NOOP, label: tmp12 };
-    tmp14Result = React5(tmp15(9138).ActionSheetHeaderPressableText, obj2);
+    tmp14Result = metroImportDefault(tmp15(9155).ActionSheetHeaderPressableText, obj2);
   }
   obj.leading = tmp14Result;
   let tmp14Result2 = tmp2;
   if (tmp2) {
     const obj3 = { onPress: NOOP };
-    tmp14Result2 = React5(tmp15(7487).ActionSheetCloseButton, obj3);
+    tmp14Result2 = metroImportDefault(tmp15(7503).ActionSheetCloseButton, obj3);
   }
-  const obj4 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
+  const obj4 = { header: metroImportDefault(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
   obj.trailing = tmp14Result2;
   const obj5 = { spacing: 24, children: null };
   const obj6 = { children: null };
   items = [
-    React5(TextInput.TextInput, { value: first1, onChange: tmp6[1], label: "Title" }),
-    React5(TextInput.TextInput, {
+    metroImportDefault(TextInput.TextInput, { value: first1, onChange: tmp6[1], label: "Title" }),
+    metroImportDefault(TextInput.TextInput, {
       value: tmp9,
       onChange: tmp10,
       label: "Subtitle",
@@ -62,15 +62,23 @@ function DemoActionSheet() {
     }),
   ];
   obj6.children = items;
-  const items1 = [React6(Stack_Stack.Stack, obj6), ,];
+  const items1 = [React5(Stack_Stack.Stack, obj6), ,];
   const obj8 = { hasIcons: false, children: null };
   const items2 = [
-    React5(ActionSheetRow.ActionSheetSwitchRow, { value: first, onValueChange: tmp4[1], label: "Show Leading" }),
-    React5(ActionSheetRow.ActionSheetSwitchRow, { value: tmp2, onValueChange: tmp3, label: "Show Trailing" }),
+    metroImportDefault(ActionSheetRow.ActionSheetSwitchRow, {
+      value: first,
+      onValueChange: tmp4[1],
+      label: "Show Leading",
+    }),
+    metroImportDefault(ActionSheetRow.ActionSheetSwitchRow, {
+      value: tmp2,
+      onValueChange: tmp3,
+      label: "Show Trailing",
+    }),
   ];
   obj8.children = items2;
-  items1[1] = React6(ActionSheetRow.ActionSheetRow.Group, obj8);
-  items1[2] = React5(TextInput.TextInput, {
+  items1[1] = React5(ActionSheetRow.ActionSheetRow.Group, obj8);
+  items1[2] = metroImportDefault(TextInput.TextInput, {
     value: tmp12,
     onChange: tmp13,
     label: "Leading",
@@ -81,8 +89,8 @@ function DemoActionSheet() {
     },
   });
   obj5.children = items1;
-  obj4.children = React6(Stack_Stack.Stack, obj5);
-  return React5(ActionSheet.ActionSheet, obj4);
+  obj4.children = React5(Stack_Stack.Stack, obj5);
+  return metroImportDefault(ActionSheet.ActionSheet, obj4);
 }
 function showDemoPromoSheet() {
   ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(DemoPromoSheet), "promo-sheet-demo");
@@ -105,16 +113,16 @@ function DemoPromoSheet() {
     actions: null,
   };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
-  const tmp = React5(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef17958 };
+  const tmp = metroImportDefault(components_Button_Button.Button, obj);
+  obj3.src = { uri: _modDef18054 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
-  return React5(PromoSheet.PromoSheet, obj2);
+  return metroImportDefault(PromoSheet.PromoSheet, obj2);
 }
 const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 const size = fn(2);
@@ -128,13 +136,13 @@ export default function UserSettingsDesignSystemSheets() {
   const obj3 = { children: null };
   const obj4 = { children: null };
   items = [
-    React5(Text_Text.Text, { variant: "text-lg/semibold", children: "Action Sheet with Title Header" }),
-    React5(Text_Text.Text, {
-      variant: "text-md/medium",
+    metroImportDefault(Text_Text.Text, { variant: "body-lg/semibold", children: "Action Sheet with Title Header" }),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "An action sheet with a centered title and subtitle, with optional leading and Trailing elements.",
     }),
-    React5(components_Button_Button.Button, {
+    metroImportDefault(components_Button_Button.Button, {
       onPress() {
         ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_10), "demo-sheet");
       },
@@ -142,23 +150,23 @@ export default function UserSettingsDesignSystemSheets() {
     }),
   ];
   obj4.children = items;
-  obj3.children = React6(Stack_Stack.Stack, obj4);
-  const items1 = [React5(Card.Card, obj3)];
+  obj3.children = React5(Stack_Stack.Stack, obj4);
+  const items1 = [metroImportDefault(Card.Card, obj3)];
   const obj6 = { children: null };
   const obj7 = { children: null };
   const items2 = [
-    React5(Text_Text.Text, { variant: "text-lg/semibold", children: "Promo Sheet" }),
-    React5(Text_Text.Text, {
-      variant: "text-md/medium",
+    metroImportDefault(Text_Text.Text, { variant: "body-lg/semibold", children: "Promo Sheet" }),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-md/medium",
       color: "text-subtle",
       children: "A sheet with an illustration, title, description, and actions.",
     }),
-    React5(components_Button_Button.Button, { onPress: showDemoPromoSheet, text: "Show Promo Sheet" }),
+    metroImportDefault(components_Button_Button.Button, { onPress: showDemoPromoSheet, text: "Show Promo Sheet" }),
   ];
   obj7.children = items2;
-  obj6.children = React6(Stack_Stack.Stack, obj7);
-  items1[1] = React5(Card.Card, obj6);
+  obj6.children = React5(Stack_Stack.Stack, obj7);
+  items1[1] = metroImportDefault(Card.Card, obj6);
   obj2.children = items1;
-  obj.children = React6(Stack_Stack.Stack, obj2);
-  return React5(ScrollView, obj);
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return metroImportDefault(ScrollView, obj);
 }

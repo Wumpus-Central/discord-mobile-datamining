@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const BANNER_HEIGHT = fn(1072).BANNER_HEIGHT;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   bannerContainer: { position: "relative" },
@@ -100,7 +100,7 @@ export default function UserProfileBanner(displayProfile) {
     if (displayProfile != null) {
       banner = displayProfile.banner;
     }
-    return React5(BannerDefault, obj, banner);
+    return metroImportDefault(BannerDefault, obj, banner);
   }
   const tmp2Result = displayProfile(bannerSafeArea[7]);
   const obj3 = { style: tmp.bannerContainer, children: null };

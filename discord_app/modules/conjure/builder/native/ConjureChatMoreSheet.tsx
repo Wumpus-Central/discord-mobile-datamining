@@ -10,7 +10,7 @@ function MoreRow(row) {
     const obj2 = { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null };
     ({ label: obj3.label, subLabel: obj3.subLabel } = row);
     const obj4 = { IconComponent: row.IconComponent };
-    obj2.icon = jsx(row(7109).TableRowIcon, { IconComponent: row.IconComponent });
+    obj2.icon = jsx(row(7124).TableRowIcon, { IconComponent: row.IconComponent });
     ({ value: obj3.value, disabled: obj3.disabled } = row);
     obj2.onValueChange = function onValueChange(arg0) {
       let tmp = arg0;
@@ -22,7 +22,7 @@ function MoreRow(row) {
       }
       row.onValueChange(arg0);
     };
-    return jsx(row(7489).TableSwitchRow, {
+    return jsx(row(7505).TableSwitchRow, {
       label: null,
       subLabel: null,
       icon: null,
@@ -37,15 +37,15 @@ function MoreRow(row) {
     }
     let obj = { label: row.label, variant: str, icon: null, onPress: null };
     const obj7 = { IconComponent: row.IconComponent, variant: str };
-    obj.icon = jsx(row(7109).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
+    obj.icon = jsx(row(7124).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
     obj.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet(ConjureChatMoreSheet);
       row.onPress();
     };
-    return jsx(row(7101).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
+    return jsx(row(7116).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 }
-const conjureDesignFeedbackStore = fn(12350);
+const conjureDesignFeedbackStore = fn(12415);
 ({
   enterConjureDesignFeedback: c3,
   exitConjureDesignFeedback: closure_4,
@@ -60,10 +60,10 @@ export default function ConjureChatMoreSheet(canAnnotate) {
   let tmp = null;
   const merged = Object.assign(canAnnotate, Object.assign({ canAnnotate: 0 }));
   const id = merged.project.id;
-  const isConjureProjectMuted = id(11008).useIsConjureProjectMuted(id);
-  const obj = id(11008);
-  const conjureControlActive = id(11053).useConjureControlActive(id);
-  const obj2 = id(11053);
+  const isConjureProjectMuted = id(11057).useIsConjureProjectMuted(id);
+  const obj = id(11057);
+  const conjureControlActive = id(11102).useConjureControlActive(id);
+  const obj2 = id(11102);
   const obj4 = {};
   const merged1 = Object.assign(merged);
   obj4.muted = isConjureProjectMuted;
@@ -83,7 +83,7 @@ export default function ConjureChatMoreSheet(canAnnotate) {
     tmp = obj5;
   }
   obj4.annotate = tmp;
-  const result = id(12352).conjureChatMoreSections(obj4);
+  const result = id(12417).conjureChatMoreSections(obj4);
   const obj6 = { dismissAccessibilityLabel: null, children: null };
   const intl = tmp3(1113).intl;
   obj6.dismissAccessibilityLabel = intl.string(_modDef3995.OsD9T0);
@@ -94,6 +94,6 @@ export default function ConjureChatMoreSheet(canAnnotate) {
       arr[0].key,
     ),
   );
-  return jsx(id(7486).ActionSheet, { dismissAccessibilityLabel: null, children: null });
+  return jsx(id(7502).ActionSheet, { dismissAccessibilityLabel: null, children: null });
 }
 export const CONJURE_CHAT_MORE_SHEET_KEY = "ConjureChatMoreSheet";

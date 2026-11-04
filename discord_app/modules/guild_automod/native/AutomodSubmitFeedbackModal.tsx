@@ -7,7 +7,7 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import AutomodFeedback from "../AutomodFeedback.tsx";
-import _modDef8483 from "../../../../_runtime/metro/08483__.js";
+import _modDef8499 from "../../../../_runtime/metro/08499__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -20,10 +20,10 @@ function Navbar(onClose) {
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj2.onPress = onClose.onClose;
-  obj2.source = _modDef8483;
-  obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
-  rect.children = React5(View, obj);
-  return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
+  obj2.source = _modDef8499;
+  obj.children = metroImportDefault(HeaderActionButton.HeaderActionButton, obj2);
+  rect.children = metroImportDefault(View, obj);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, rect);
 }
 function SubmitFeedbackScreen(onSubmit) {
   ({ feedback: require, onChange: importDefault } = onSubmit);
@@ -44,7 +44,7 @@ function SubmitFeedbackScreen(onSubmit) {
   const intl = util.intl;
   obj4.children = intl.string(util.t["7bdzNo"]);
   const items1 = [closure_7(Text_Text.Text, obj4), , ,];
-  const obj5 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.headerSubtitle, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.Lbpk6m);
   items1[1] = closure_7(Text_Text.Text, obj5);
@@ -64,7 +64,7 @@ function SubmitFeedbackScreen(onSubmit) {
         }),
         label: closure_1_7(require("Text/Text").Text, {
           style: closure_2.formRow,
-          variant: "text-md/semibold",
+          variant: "body-md/semibold",
           color: "interactive-text-active",
           children: children.name,
         }),
@@ -94,7 +94,7 @@ function SubmitFeedbackScreen(onSubmit) {
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
 const createStyles = fn(5141);
 let obj2 = {

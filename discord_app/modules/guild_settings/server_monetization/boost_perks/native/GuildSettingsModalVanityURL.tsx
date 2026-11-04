@@ -8,7 +8,7 @@ import HeaderActionButton from "../../../../../design/components/Navigator/nativ
 import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
 import GuildSettingsVanityURLUtils from "../GuildSettingsVanityURLUtils.tsx";
 import ChangeVanityURLActionCreatorsDefault from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import _modDef19965 from "../../../../../../_runtime/metro/19965__.js";
+import _modDef20081 from "../../../../../../_runtime/metro/20081__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChangeVanityURLModalStore from "../../../../../stores/ChangeVanityURLModalStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -102,8 +102,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      fn = self(7124).getHeaderConditionalBackButton(this.handleCancel);
-      let obj = self(7124);
+      fn = self(7139).getHeaderConditionalBackButton(this.handleCancel);
+      let obj = self(7139);
     }
     let obj2 = { headerLeft: fn, headerRight: null };
     if (submitting) {
@@ -114,13 +114,13 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
             const obj = { onPress: self.handleSave, text: null };
             const intl = util.intl;
             obj.text = intl.string(util.t["R3BPH+"]);
-            return React6(HeaderActionButton.HeaderActionButton, obj);
+            return React5(HeaderActionButton.HeaderActionButton, obj);
           }
         : () => {
             const obj = { onPress: self.handleStartEditing, text: null };
             const intl = util.intl;
             obj.text = intl.string(util.t.bt75uw);
-            return React6(HeaderActionButton.HeaderActionButton, obj);
+            return React5(HeaderActionButton.HeaderActionButton, obj);
           };
     }
     obj2.headerRight = fn2;
@@ -136,12 +136,12 @@ prototype["render"] = function render() {
   ({ isEditing, vanityURLCode } = this.state);
   if (null != vanityURLCode) {
     if ("" !== vanityURLCode) {
-      const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj2 = { variant: "body-sm/medium", color: "text-muted", children: null };
       const intl6 = util.intl;
       const obj3 = { url: getInviteURLDefault(vanityURLCode) };
       obj2.children = intl6.format(util.t.FcGpNU, obj3);
       const tmp24 = getInviteURLDefault(vanityURLCode);
-      const tmp = React6(Text_Text.Text, obj2);
+      const tmp = React5(Text_Text.Text, obj2);
     }
   }
   if (isEditing) {
@@ -174,38 +174,38 @@ prototype["render"] = function render() {
       autoFocus: isEditing,
       errorMessage: errorMessageFromErrorCode,
     };
-    const items1 = [React6(TextInput.TextInput, obj6)];
+    const items1 = [React5(TextInput.TextInput, obj6)];
     const obj7 = { style: styles.hints, children: null };
-    const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    const obj8 = { variant: "body-sm/medium", color: "text-muted", children: null };
     const intl2 = util.intl;
     obj8.children = intl2.string(util.t.IhWDcu);
-    const items2 = [React6(Text_Text.Text, obj8), , , ,];
-    const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    const items2 = [React5(Text_Text.Text, obj8), , , ,];
+    const obj9 = { variant: "body-sm/medium", color: "text-muted", children: null };
     const intl3 = util.intl;
     obj9.children = intl3.string(util.t["1mRkFr"]);
-    items2[1] = React6(Text_Text.Text, obj9);
-    const obj10 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    items2[1] = React5(Text_Text.Text, obj9);
+    const obj10 = { variant: "body-sm/medium", color: "text-muted", children: null };
     const intl4 = util.intl;
     obj10.children = intl4.string(util.t["eH/HMz"]);
-    items2[2] = React6(Text_Text.Text, obj10);
+    items2[2] = React5(Text_Text.Text, obj10);
     if (tmp17Result) {
-      const obj11 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj11 = { variant: "body-sm/medium", color: "text-muted", children: null };
       const intl5 = util.intl;
       obj11.children = intl5.string(util.t.o3kmm3);
-      tmp17Result = React6(Text_Text.Text, obj11);
+      tmp17Result = React5(Text_Text.Text, obj11);
     }
     items2[3] = tmp17Result;
     items2[4] = tmp;
     obj7.children = items2;
-    items1[1] = React7(View, obj7);
+    items1[1] = React6(View, obj7);
     obj5.children = items1;
-    const items3 = [React7(View, obj5)];
+    const items3 = [React6(View, obj5)];
     const obj12 = { style: styles.center, children: null };
-    const obj13 = { source: _modDef19965, style: styles.image, resizeMode: "contain" };
-    obj12.children = React6(FastImageDefault, obj13);
-    items3[1] = React6(View, obj12);
+    const obj13 = { source: _modDef20081, style: styles.image, resizeMode: "contain" };
+    obj12.children = React5(FastImageDefault, obj13);
+    items3[1] = React5(View, obj12);
     obj4.children = items3;
-    return React7(View, obj4);
+    return React6(View, obj4);
   } else if ("" !== vanityURLCode) {
     const _HermesInternal = HermesInternal;
     let combined = "discord.gg/" + vanityURLCode;
@@ -248,7 +248,7 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
       styles: tmp,
       contentContainerStyle: guildId.contentContainerStyle,
     };
-    const items3 = [closure_8(GuildSettingsModalVanityURL, obj6), closure_8(tmp2(5729).NavScrim, {})];
+    const items3 = [closure_8(GuildSettingsModalVanityURL, obj6), closure_8(tmp2(5742).NavScrim, {})];
     obj5.children = items3;
     tmp10 = closure_9(closure_10, obj5);
   }

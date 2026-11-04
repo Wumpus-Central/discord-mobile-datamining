@@ -31,7 +31,7 @@ export function openProductDetailsActionSheet(arg0, stack) {
   CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmpResult = CollectiblesActionCreators;
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(8872, dependencyMap.paths),
+    asyncRequireImpl(8889, dependencyMap.paths),
     c3,
     { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext },
     stack,
@@ -43,7 +43,7 @@ export function openProductDetailsActionSheetForSku(skuId, stack) {
   ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile } = skuId);
   CollectiblesActionCreators.productDetailsOpened(skuId);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(8872, dependencyMap.paths),
+    asyncRequireImpl(8889, dependencyMap.paths),
     c3,
     { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile },
     stack,

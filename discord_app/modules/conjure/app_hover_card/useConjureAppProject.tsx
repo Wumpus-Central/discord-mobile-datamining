@@ -6,7 +6,7 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const canRemixProject = fn(6964).canRemixProject;
+const canRemixProject = fn(6979).canRemixProject;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/app_hover_card/useConjureAppProject.tsx");
 

@@ -26,7 +26,7 @@ export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const intl = util.intl;
   obj3.children = intl.string(util.t.vytvJF);
   items = [React3(Text_Text.Text, obj3), ,];
-  const obj4 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
+  const obj4 = { style: tmp.marginTop, variant: "body-md/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.caJwb5);
   items[1] = React3(Text_Text.Text, obj4);

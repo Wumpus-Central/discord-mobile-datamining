@@ -17,7 +17,7 @@ import RestrictionConfirmationConstants from "../../relationships/native/Restric
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ AnalyticEvents: c3, AVATAR_MAX_SIZE: closure_4, NOOP: hasOwnProperty } = Constants);
-({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: metroRequire, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_7 } =
+({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_6, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: metroImportDefault } =
   RestrictionConfirmationConstants);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverflowMenuItems.tsx");
 
@@ -49,10 +49,10 @@ export function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11426, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11476, dependencyMap.paths);
         obj.openLazy(
           tmp,
-          React5,
+          metroImportDefault,
           {
             userId: user.id,
             channelId,
@@ -99,7 +99,7 @@ export function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(11425, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11475, dependencyMap.paths);
       obj.openLazy(
         tmp,
         timestampProducer,
@@ -134,7 +134,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14961, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(15041, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {

@@ -14,7 +14,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;
 const RPC_SCOPE_CONFIG = Constants2.RPC_SCOPE_CONFIG;
-({ RPCCommands, RPCErrors: closure_7 } = Constants);
+({ RPCCommands, RPCErrors: metroImportDefault } = Constants);
 let obj = {};
 let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
 let obj2 = { scope: null, validateAccess: null, handler: null };

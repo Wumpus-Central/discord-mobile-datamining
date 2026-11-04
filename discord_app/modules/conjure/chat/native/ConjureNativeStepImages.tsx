@@ -22,7 +22,7 @@ function StepImage(image) {
       const obj3 = { style: tmp.placeholder, children: null };
       tmp = React4;
       obj3.children = <React4 size="small" />;
-      let tmp5Result = <React5 style={tmp.placeholder}>{null}</React5>;
+      let tmp5Result = <metroImportDefault style={tmp.placeholder}>{null}</metroImportDefault>;
     } else {
       const obj4 = { source: null, style: null, resizeMode: "cover", onError: null };
       const obj5 = { uri: src };
@@ -41,8 +41,8 @@ get_ActivityIndicator = fn(17);
 ({
   ActivityIndicator: closure_4,
   Pressable: hasOwnProperty,
-  ScrollView: metroRequire,
-  View: closure_7,
+  ScrollView: closure_6,
+  View: metroImportDefault,
 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);

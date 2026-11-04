@@ -189,7 +189,7 @@ class ImagePickerIcon {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   imageSelectionRow: { flexDirection: "row", justifyContent: "space-between" },
@@ -228,7 +228,7 @@ let size = {
 obj2.editImageIcon = size;
 obj2.standaloneIcon = { top: -4, right: -4 };
 obj2.disabled = { opacity: 0.3 };
-const React6 = createStyles.createStyles(obj2);
+const React5 = createStyles.createStyles(obj2);
 let obj7 = { CIRCLE: 0, [0]: "CIRCLE", SQUIRCLE: 1, [1]: "SQUIRCLE" };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormImagePicker.tsx");
@@ -254,13 +254,13 @@ export default function FormImagePicker(children) {
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
   items = [
-    closure_6(tmp6(5747).Text, {
+    closure_6(tmp6(5761).Text, {
       style: tmp2.imageDescription,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       children: children.description,
     }),
-    closure_6(tmp6(5754).Button, {
+    closure_6(tmp6(5768).Button, {
       text: stringResult,
       variant: "secondary",
       onPress: function handleSelectImage() {

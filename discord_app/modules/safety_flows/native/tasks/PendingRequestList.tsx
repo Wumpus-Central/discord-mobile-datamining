@@ -4,7 +4,7 @@ import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import _modDef2667 from "../../../parent_tools/FamilyCenter.messages.js";
 import _modDef2963 from "../../SafetyFlows.messages.js";
 import useRefreshLinkCodeOnExpiryDefault from "../../../parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx";
-import _modDef16972 from "../../../../../_runtime/metro/16972__.js";
+import _modDef17064 from "../../../../../_runtime/metro/17064__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -70,26 +70,26 @@ class PendingRequestRow {
     obj22 = { style: tmp.details, children: null };
     items2 = [, ,];
     items2[0] = jsx(tmp2(tmp3[11]).Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       children: globalName,
     });
     tmp13Result = username1 !== globalName;
     if (tmp13Result) {
-      obj23 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
+      obj23 = { variant: "body-sm/medium", color: "text-default", lineClamp: 1, children: null };
       obj23.children = username1;
       tmp13Result = tmp13(tmp2(tmp3[11]).Text, obj23);
     }
     items2[1] = tmp13Result;
-    items2[2] = tmp13(tmp2(tmp3[11]).Text, { variant: "text-xs/medium", color: "text-muted", children: result });
+    items2[2] = tmp13(tmp2(tmp3[11]).Text, { variant: "body-xs/medium", color: "text-muted", children: result });
     obj22.children = items2;
     items1[1] = tmp11(tmp12, obj22);
     if (isResolved) {
       intl3 = tmp2(tmp3[12]).intl;
       tmp14Result = tmp14(tmp3[13]);
       tmp22 = isConnected ? tmp14Result.YQP5dE : tmp14Result["2HvOvh"];
-      tmp14Result = { variant: "text-sm/normal", color: "text-muted", children: null };
+      tmp14Result = { variant: "body-sm/normal", color: "text-muted", children: null };
       tmp14Result.children = intl3.string(tmp22);
       tmp13Result1 = tmp13(tmp2(tmp3[11]).Text, tmp14Result);
     } else {
@@ -175,7 +175,7 @@ class PendingRequestRow {
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   card: {
@@ -299,7 +299,7 @@ let obj13 = {
 obj2.dividerLine = { flexGrow: 1, flexShrink: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 let obj14 = { flexGrow: 1, flexShrink: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.dividerLabel = { marginHorizontal: nativeDefault.space.PX_12 };
-const React7 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/PendingRequestList.tsx");
 
@@ -344,7 +344,7 @@ export default function PendingRequestList(arg0) {
         let tmp2 = index > 0;
         if (tmp2) {
           const obj = { style: closure_0.divider };
-          tmp2 = React5(hasOwnProperty, obj);
+          tmp2 = metroImportDefault(hasOwnProperty, obj);
         }
         items = [tmp2];
         const obj2 = {
@@ -370,9 +370,9 @@ export default function PendingRequestList(arg0) {
         obj2.actionsDisabled = actionsDisabled;
         obj2.onAccept = onAccept;
         obj2.onDecline = onDecline;
-        items[1] = React5(PendingRequestRow, obj2);
+        items[1] = metroImportDefault(PendingRequestRow, obj2);
         obj3.children = items;
-        return React6(noop.Fragment, obj3, request.parent_id);
+        return React5(noop.Fragment, obj3, request.parent_id);
       }),
     };
     tmp8 = c7(c5, obj4);
@@ -380,7 +380,7 @@ export default function PendingRequestList(arg0) {
   items = [tmp8, ,];
   const obj5 = { style: tmp.dividerRow, children: null };
   const items1 = [c7(c5, { style: tmp.dividerLine }), ,];
-  const obj7 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj7 = { style: tmp.dividerLabel, variant: "body-sm/medium", color: "text-muted", children: null };
   let intl = tmp5(1113).intl;
   obj7.children = intl.string(_modDef2963["/SbB94"]);
   items1[1] = c7(require("Text/Text").Text, obj7);
@@ -409,11 +409,11 @@ export default function PendingRequestList(arg0) {
     ,
   ];
   const obj11 = { style: tmp.details, children: null };
-  const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj12 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp5(1113).intl;
   obj12.children = intl2.string(_modDef2963.z9gkwZ);
   const items4 = [c7(require("Text/Text").Text, obj12)];
-  const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
+  const obj13 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl3 = tmp5(1113).intl;
   obj13.children = intl3.string(_modDef2963["9t4+vC"]);
   items4[1] = c7(require("Text/Text").Text, obj13);

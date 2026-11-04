@@ -135,28 +135,28 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   const obj11 = { style: tmp.textContent, children: null };
   const obj12 = { style: tmp.textLeft, children: null };
   if ("value" === singleStringOrSkeleton.status) {
-    const obj13 = { variant: "heading-sm/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
+    const obj13 = { variant: "heading-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
     let tmp15Result = tmp15(Text_Text.Text, obj13);
   } else {
-    tmp15Result = tmp15(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "heading-sm/medium" });
+    tmp15Result = tmp15(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "heading-xs/medium" });
   }
   const items6 = [tmp15Result];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj14 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-subtle",
       lineClamp: 2,
       children: singleStringOrSkeleton1.text,
     };
     let tmp15Result3 = tmp15(Text_Text.Text, obj14);
   } else {
-    tmp15Result3 = tmp15(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "text-xs/medium" });
+    tmp15Result3 = tmp15(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "body-xs/medium" });
   }
   items6[1] = tmp15Result3;
   obj12.children = items6;
   const items7 = [hasOwnProperty(View, obj12)];
   if (null != iter) {
-    const obj15 = { variant: "text-sm/medium", lineClamp: 1, style: tmp.progressText, children: null };
+    const obj15 = { variant: "body-sm/medium", lineClamp: 1, style: tmp.progressText, children: null };
     if (null != iter2) {
       iter = iter2.value;
       iter2 = str.HermesInternal.concat;
@@ -170,7 +170,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
     obj15.children = iter2Result;
     tmp15(Text_Text.Text, obj15);
   } else {
-    items7[1] = tmp15(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "text-sm/medium", widthChars: 4 });
+    items7[1] = tmp15(UserProfileApplicationWidgetSkeletons.TextSkeleton, { variant: "body-sm/medium", widthChars: 4 });
     obj11.children = items7;
     items5[1] = hasOwnProperty(View, obj11);
     obj7.children = items5;

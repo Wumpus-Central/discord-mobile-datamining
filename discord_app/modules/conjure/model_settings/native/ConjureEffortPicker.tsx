@@ -177,7 +177,7 @@ class ConjureEffortPicker {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/native/ConjureEffortPicker.tsx");
 

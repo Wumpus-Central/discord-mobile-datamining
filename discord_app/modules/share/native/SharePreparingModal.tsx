@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   content: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 },
@@ -47,7 +47,7 @@ export default function SharePreparingModal(onCancel) {
   obj2.children = hasOwnProperty(MediaModalOverlayHeaderWrapper.MediaModalOverlayHeaderWrapper, obj3);
   items1[1] = hasOwnProperty(React4, obj2);
   items1[2] = hasOwnProperty(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
-  const obj5 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
+  const obj5 = { variant: "body-sm/medium", color: "text-overlay-light", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.DwTQE5);
   items1[3] = hasOwnProperty(Text_Text.Text, obj5);

@@ -5,9 +5,9 @@ import native from "../../../../design/void/native.tsx";
 import ICYMIUtils from "../../ICYMIUtils.tsx";
 import SegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import _modDef18692 from "../../../../../_runtime/metro/18692__.js";
-import _modDef18693 from "../../../../../_runtime/metro/18693__.js";
-import _modDef18694 from "../../../../../_runtime/metro/18694__.js";
+import _modDef18791 from "../../../../../_runtime/metro/18791__.js";
+import _modDef18792 from "../../../../../_runtime/metro/18792__.js";
+import _modDef18793 from "../../../../../_runtime/metro/18793__.js";
 import NativeICYMIActionCreatorsDefault from "../NativeICYMIActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ function ContentSettingsControl(initialValue) {
   const obj = { label: null, id: "-1", icon: null, page: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.rdt65I);
-  const obj2 = { source: _modDef18692, style: null };
+  const obj2 = { source: _modDef18791, style: null };
   items = [tmp.icon];
   let iconSelected = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.LESS) {
@@ -36,7 +36,7 @@ function ContentSettingsControl(initialValue) {
   const obj3 = { label: null, id: "0", icon: null, page: null };
   const intl2 = util.intl;
   obj3.label = intl2.string(util.t.SnrG00);
-  const obj4 = { source: _modDef18693, style: null };
+  const obj4 = { source: _modDef18792, style: null };
   const items2 = [tmp.icon];
   let iconSelected1 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.DEFAULT) {
@@ -49,7 +49,7 @@ function ContentSettingsControl(initialValue) {
   const obj5 = { label: null, id: "1", icon: null, page: null };
   const intl3 = util.intl;
   obj5.label = intl3.string(util.t.Rxe3jF);
-  const obj6 = { source: _modDef18694, style: null };
+  const obj6 = { source: _modDef18793, style: null };
   const items3 = [tmp.icon];
   let iconSelected2 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.MORE) {
@@ -129,9 +129,9 @@ export function GuildScoreSettings(guild) {
   items = [ICYMIStore];
   const stateFromStores = id(504).useStateFromStores(items, () => ICYMIStore.getCustomGuildScore(id));
   let obj = id(504);
-  const numberToCustomScoreResult = id(9047).numberToCustomScore(stateFromStores);
+  const numberToCustomScoreResult = id(9064).numberToCustomScore(stateFromStores);
   c1 = numberToCustomScoreResult;
-  const tmp5 = numberToCustomScoreResult === id(9047).ICYMICustomScore.MUTED;
+  const tmp5 = numberToCustomScoreResult === id(9064).ICYMICustomScore.MUTED;
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = noop.useCallback((arg0) => {
@@ -156,14 +156,14 @@ export function GuildScoreSettings(guild) {
     }
   }, items2);
   const tmp8 = closure_10();
-  let obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  let obj3 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = id(1113).intl;
   obj3.children = intl.string(id(1113).t.Clq6km);
-  const items3 = [closure_8(id(5747).Text, obj3), , , ,];
-  const obj4 = { variant: "text-xs/normal", color: "text-default", children: null };
+  const items3 = [closure_8(id(5761).Text, obj3), , , ,];
+  const obj4 = { variant: "body-xs/normal", color: "text-default", children: null };
   const intl2 = id(1113).intl;
   obj4.children = intl2.format(id(1113).t["0DhU2P"], { guildName: guild.name });
-  items3[1] = closure_8(id(5747).Text, obj4);
+  items3[1] = closure_8(id(5761).Text, obj4);
   let tmp11Result = null;
   if (!tmp5) {
     const obj6 = { style: tmp8.customScoreWrapper, children: null };
@@ -181,12 +181,12 @@ export function GuildScoreSettings(guild) {
   const obj10 = { value: !tmp5, onValueChange: callback, label: null, start: true, end: true };
   const intl3 = tmp(1113).intl;
   obj10.label = intl3.string(id(1113).t.oujX73);
-  obj9.children = closure_8(id(7489).TableSwitchRow, obj10);
+  obj9.children = closure_8(id(7505).TableSwitchRow, obj10);
   items3[3] = closure_8(View, obj9);
-  const obj11 = { variant: "text-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
+  const obj11 = { variant: "body-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
   const intl4 = tmp(1113).intl;
   obj11.children = intl4.string(id(1113).t.vRVs07);
-  items3[4] = closure_8(id(5747).Text, obj11);
+  items3[4] = closure_8(id(5761).Text, obj11);
   obj8.children = items3;
   return closure_9(View, obj8);
 }
@@ -244,11 +244,11 @@ export function ChannelScoreSettings(channel) {
     obj.customScoreGuild(obj2);
   }, items3);
   const tmp11 = closure_10();
-  let obj4 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  let obj4 = { variant: "body-sm/semibold", color: "text-default", children: null };
   const intl = id(stateFromStores[9]).intl;
   obj4.children = intl.string(id(stateFromStores[9]).t["0jRosn"]);
   const items4 = [closure_8(id(stateFromStores[18]).Text, obj4), , , ,];
-  const obj5 = { variant: "text-xs/normal", color: "text-default", children: null };
+  const obj5 = { variant: "body-xs/normal", color: "text-default", children: null };
   const intl2 = id(stateFromStores[9]).intl;
   obj5.children = intl2.format(id(stateFromStores[9]).t.KzkF1j, { channelName: tmp4 });
   items4[1] = closure_8(id(stateFromStores[18]).Text, obj5);
@@ -272,7 +272,7 @@ export function ChannelScoreSettings(channel) {
   obj10.disabled = tmp7;
   obj9.children = closure_8(id(stateFromStores[19]).TableSwitchRow, obj10);
   items4[3] = closure_8(View, obj9);
-  const obj11 = { variant: "text-xs/normal", color: "text-muted", style: tmp11.warningText, children: null };
+  const obj11 = { variant: "body-xs/normal", color: "text-muted", style: tmp11.warningText, children: null };
   const intl4 = tmp(tmp2[9]).intl;
   obj11.children = intl4.string(id(stateFromStores[9]).t["5lP6Ax"]);
   items4[4] = closure_8(id(stateFromStores[18]).Text, obj11);

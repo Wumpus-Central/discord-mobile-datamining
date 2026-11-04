@@ -25,7 +25,7 @@ function EarningPreview() {
   const obj3 = { style: null, children: null };
   items1[2] = shared.isThemeDark(tmp2) ? tmp3.earningMetricsDarkMode : tmp3.earningMetricsLightMode;
   obj3.style = items1;
-  const obj4 = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };
+  const obj4 = { variant: "body-sm/normal", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.TXPK7B);
   const items2 = [hasOwnProperty(Text_Text.Text, obj4)];
@@ -48,7 +48,7 @@ function EarningPreview() {
 function ConsistentEarningBenefit() {
   const tmp = closure_7();
   const obj = { style: tmp.benefitCard, children: null };
-  const obj2 = { style: tmp.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
+  const obj2 = { style: tmp.benefitCardTitle, variant: "heading-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["9CdmS8"]);
   items = [hasOwnProperty(Text_Text.Text, obj2), hasOwnProperty(EarningPreview, {})];
@@ -69,7 +69,7 @@ function ConsistentEarningBenefit() {
 function FollowerAwardBenefit() {
   const tmp = closure_7();
   const obj = { style: tmp.benefitCard, children: null };
-  const obj2 = { style: tmp.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
+  const obj2 = { style: tmp.benefitCardTitle, variant: "heading-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.qsKRUQ);
   items = [
@@ -97,7 +97,7 @@ function RevenueShareBenefit() {
   const items2 = [hasOwnProperty(Text_Text.Text, obj3), ,];
   const obj4 = {
     style: tmp3.revenueShareDescription,
-    variant: "heading-md/medium",
+    variant: "heading-sm/medium",
     color: "text-default",
     children: null,
   };
@@ -123,9 +123,9 @@ function BenefitAvatar(Avatar) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(17339).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(17430).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   horizontalContainer: { flex: 1, flexDirection: "row" },

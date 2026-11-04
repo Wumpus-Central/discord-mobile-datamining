@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6186);
+const CheckpointConstants = fn(6201);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -182,7 +182,7 @@ export default function CheckpointEmojiStatsScreen() {
   const obj9 = { style: items5, children: null };
   items5[1] = titleSpacing;
   const items6 = [closure_9(EmojiSlightlySmilingFaceIcon, { size: "xs", color })];
-  const obj11 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
+  const obj11 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj10 = { size: "xs", color };
   const tmp14Result = require("CheckpointScreen");
   obj11.children = stringResult.toLocaleUpperCase();

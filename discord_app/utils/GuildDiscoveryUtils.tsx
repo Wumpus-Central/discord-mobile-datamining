@@ -324,7 +324,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
           closure_129_1 = undefined;
           c3 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: React7.GUILD_WEB_PAGE(closure_0), oldFormErrors: true, rejectWithError: true };
+          const obj4 = { url: React6.GUILD_WEB_PAGE(closure_0), oldFormErrors: true, rejectWithError: true };
           c2 = 2;
           c4 = 1;
           const obj5 = { value: HTTP.get(obj4), done: false };
@@ -364,21 +364,21 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
             const uRL = new URL(body.seo.canonical_url);
             const pathname = uRL.pathname;
             closure_129_1 = pathname.slice(9);
-            const obj7 = { guild: body.data.guild, slug: closure_129_1 };
+            const obj = { guild: body.data.guild, slug: closure_129_1 };
             c3 = 0;
             c4 = 3;
-            const obj = { value: obj7, done: true };
-            return obj;
+            const obj7 = { value: obj, done: true };
+            return obj7;
           }
         }
         c3 = 0;
         c4 = 3;
         return { value: null, done: true };
       }
-    } catch (tmp13) {
+    } catch (tmp21) {
       if (tmp3 === c3) {
         c4 = tmp2;
-        throw tmp13;
+        throw tmp21;
       } else {
         c2 = tmp;
       }
@@ -386,7 +386,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
   }
 };
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, SearchTypes: closure_8, Endpoints: closure_9, Routes: closure_10 } = Constants);
+({ AnalyticEvents: metroImportDefault, SearchTypes: closure_8, Endpoints: closure_9, Routes: closure_10 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/GuildDiscoveryUtils.tsx");
 

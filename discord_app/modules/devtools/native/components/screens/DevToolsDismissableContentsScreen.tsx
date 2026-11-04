@@ -6,7 +6,7 @@ import dismissible_content from "../../../../../../discord_common/js/packages/pr
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import DismissibleContentFrameworkActionCreators from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/07019_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/07034_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -27,13 +27,13 @@ function DismissableContentsEmpty() {
     variant: "heading-lg/semibold",
     children: "No results found",
   };
-  items = [React5(Text_Text.Text, obj2), React5(SearchEmpty.SearchEmpty, {})];
+  items = [metroImportDefault(Text_Text.Text, obj2), metroImportDefault(SearchEmpty.SearchEmpty, {})];
   obj.children = items;
-  return React6(View, obj);
+  return React5(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
@@ -60,7 +60,7 @@ let closure_11 = noop.memo(function DismissibleContentItem(content) {
   ({ isDismissed, handleToggleDismissState } = toggleDismissibleContentDismissStateDefault(
     dismissible_content.DismissibleContent[label],
   ));
-  return React5(TableSwitchRow.TableSwitchRow, { start, end, onValueChange, value, label });
+  return metroImportDefault(TableSwitchRow.TableSwitchRow, { start, end, onValueChange, value, label });
 });
 let closure_12 = noop.memo(function DismissableContentsListHeader(arg0) {
   ({ dailyCapOverridden, newUserMinAgeRequiredOverridden, initialSearchQuery, onSearchChange } = arg0);
@@ -69,7 +69,7 @@ let closure_12 = noop.memo(function DismissableContentsListHeader(arg0) {
   const obj2 = { style: tmp.headerSection, children: null };
   const obj3 = { title: "Global Overrides", hasIcons: false, children: null };
   items = [
-    React5(TableSwitchRow.TableSwitchRow, {
+    metroImportDefault(TableSwitchRow.TableSwitchRow, {
       onValueChange: DismissibleContentFrameworkActionCreators.overrideDismissibleContentFramework,
       value: dailyCapOverridden,
       label: "Daily limit",
@@ -82,15 +82,15 @@ let closure_12 = noop.memo(function DismissableContentsListHeader(arg0) {
     label: "Daily limit",
     subLabel: "When enabled, bypass the daily limit of dismissible content shown",
   };
-  items[1] = React5(TableSwitchRow.TableSwitchRow, {
+  items[1] = metroImportDefault(TableSwitchRow.TableSwitchRow, {
     onValueChange: DismissibleContentFrameworkActionCreators.overrideNewUserMinAgeRequired,
     value: newUserMinAgeRequiredOverridden,
     label: "New user account minimum age",
     subLabel: "When enabled, bypass the minimum age requirement for new user accounts",
   });
   obj3.children = items;
-  obj2.children = React6(TableRowGroup.TableRowGroup, obj3);
-  const items1 = [React5(View, obj2), , ,];
+  obj2.children = React5(TableRowGroup.TableRowGroup, obj3);
+  const items1 = [metroImportDefault(View, obj2), , ,];
   const obj6 = { style: tmp.headerSection, children: null };
   const obj7 = { title: "Bulk actions", hasIcons: true, children: null };
   const obj5 = {
@@ -100,63 +100,63 @@ let closure_12 = noop.memo(function DismissableContentsListHeader(arg0) {
     subLabel: "When enabled, bypass the minimum age requirement for new user accounts",
   };
   const items2 = [
-    React5(TableRow.TableRow, {
+    metroImportDefault(TableRow.TableRow, {
       label: "Clear all dismissed dismissible contents",
       onPress: UserSettingsProtoActionCreators.clearDismissedContents,
-      icon: React5(TrashIcon.TrashIcon, {}),
-      trailing: React5(TableRowArrow.TableRowArrow, {}),
+      icon: metroImportDefault(TrashIcon.TrashIcon, {}),
+      trailing: metroImportDefault(TableRowArrow.TableRowArrow, {}),
     }),
     ,
   ];
   const obj8 = {
     label: "Clear all dismissed dismissible contents",
     onPress: UserSettingsProtoActionCreators.clearDismissedContents,
-    icon: React5(TrashIcon.TrashIcon, {}),
-    trailing: React5(TableRowArrow.TableRowArrow, {}),
+    icon: metroImportDefault(TrashIcon.TrashIcon, {}),
+    trailing: metroImportDefault(TableRowArrow.TableRowArrow, {}),
   };
-  items2[1] = React5(TableRow.TableRow, {
+  items2[1] = metroImportDefault(TableRow.TableRow, {
     label: "Clear all guild dismissed dismissible contents",
     onPress: UserSettingsProtoActionCreators.clearGuildDismissedContents,
-    icon: React5(TrashIcon.TrashIcon, {}),
-    trailing: React5(TableRowArrow.TableRowArrow, {}),
+    icon: metroImportDefault(TrashIcon.TrashIcon, {}),
+    trailing: metroImportDefault(TableRowArrow.TableRowArrow, {}),
   });
   const obj9 = {
     label: "Clear all guild dismissed dismissible contents",
     onPress: UserSettingsProtoActionCreators.clearGuildDismissedContents,
-    icon: React5(TrashIcon.TrashIcon, {}),
-    trailing: React5(TableRowArrow.TableRowArrow, {}),
+    icon: metroImportDefault(TrashIcon.TrashIcon, {}),
+    trailing: metroImportDefault(TableRowArrow.TableRowArrow, {}),
   };
-  items2[2] = React5(TableRow.TableRow, {
+  items2[2] = metroImportDefault(TableRow.TableRow, {
     label: "Dismiss all dismissible contents",
     onPress: UserSettingsProtoActionCreators.checkAllDismissedContents,
-    icon: React5(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
-    trailing: React5(TableRowArrow.TableRowArrow, {}),
+    icon: metroImportDefault(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
+    trailing: metroImportDefault(TableRowArrow.TableRowArrow, {}),
   });
   obj7.children = items2;
-  obj6.children = React6(TableRowGroup.TableRowGroup, obj7);
-  items1[1] = React5(View, obj6);
+  obj6.children = React5(TableRowGroup.TableRowGroup, obj7);
+  items1[1] = metroImportDefault(View, obj6);
   const obj10 = {
     label: "Dismiss all dismissible contents",
     onPress: UserSettingsProtoActionCreators.checkAllDismissedContents,
-    icon: React5(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
-    trailing: React5(TableRowArrow.TableRowArrow, {}),
+    icon: metroImportDefault(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
+    trailing: metroImportDefault(TableRowArrow.TableRowArrow, {}),
   };
-  items1[2] = React5(View, {
+  items1[2] = metroImportDefault(View, {
     style: tmp.search,
-    children: React5(Search_SearchBar.SearchBar, {
+    children: metroImportDefault(Search_SearchBar.SearchBar, {
       size: "md",
       defaultValue: initialSearchQuery,
       onChange: onSearchChange,
     }),
   });
-  items1[3] = React5(Text_Text.Text, {
+  items1[3] = metroImportDefault(Text_Text.Text, {
     style: tmp.sectionHeader,
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     color: "text-default",
     children: "Dismissible Contents",
   });
   obj.children = items1;
-  return React6(React7, obj);
+  return React5(React6, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -168,8 +168,8 @@ export default function DevToolsDismissableContentsScreen() {
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
   const tmp2 = useSafeAreaInsetsDefault();
-  let obj = ref(12039);
-  [dependencyMap, tmp5] = ref(12039).useLocalStorageState("devtools-dc-search", "");
+  let obj = ref(12098);
+  [dependencyMap, tmp5] = ref(12098).useLocalStorageState("devtools-dc-search", "");
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(
     initialSearchQuery.useState(() => {
@@ -210,7 +210,7 @@ export default function DevToolsDismissableContentsScreen() {
     const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     return items;
   });
-  let tmp4 = _slicedToArray(ref(12039).useLocalStorageState("devtools-dc-search", ""), 2);
+  let tmp4 = _slicedToArray(ref(12098).useLocalStorageState("devtools-dc-search", ""), 2);
   items = [closure_6];
   const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
     dailyCapOverridden: closure_6.dailyCapOverridden,
@@ -263,7 +263,7 @@ export default function DevToolsDismissableContentsScreen() {
   const items3 = [first1.length];
   const memo = initialSearchQuery.useMemo(
     () =>
-      React5(closure_12, {
+      metroImportDefault(closure_12, {
         dailyCapOverridden,
         newUserMinAgeRequiredOverridden,
         initialSearchQuery,
@@ -274,7 +274,11 @@ export default function DevToolsDismissableContentsScreen() {
   const obj3 = { style: tmp.container, children: null };
   const callback3 = initialSearchQuery.useCallback((content) => {
     const index = content.index;
-    return React5(closure_11, { content: content.item, start: 0 === index, end: index === first1.length - 1 });
+    return metroImportDefault(closure_11, {
+      content: content.item,
+      start: 0 === index,
+      end: index === first1.length - 1,
+    });
   }, items3);
   const obj4 = {
     ref,
@@ -301,6 +305,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj4.renderItem = callback3;
   obj4.onScroll = callback2;
-  obj3.children = dailyCapOverridden(ref(7414).FlashList, obj4);
+  obj3.children = dailyCapOverridden(ref(7430).FlashList, obj4);
   return dailyCapOverridden(first1, obj3);
 }

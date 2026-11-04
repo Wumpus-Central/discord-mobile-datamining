@@ -49,7 +49,7 @@ export function IconButton(grow) {
     items = [React3(BaseIconButton.BaseIconButton, obj3)];
     const obj4 = {
       style: tmp2.label,
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       maxFontSizeMultiplier,
       children: label,

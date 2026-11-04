@@ -6,7 +6,7 @@ import GuildStore from "../../../../../stores/GuildStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   alert: { marginTop: 120 },
@@ -73,7 +73,7 @@ export default function MemberVerificationAlertSuccess(guildId) {
     const obj6 = { guildName: stateFromStores.name };
     obj5.children = intl2.format(tmp3(tmp4[8]).t["7hhNEn"], obj6);
     items2[1] = closure_6(tmp3(tmp4[11]).Heading, obj5);
-    const obj7 = { style: tmp2.text, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj7 = { style: tmp2.text, variant: "body-sm/medium", color: "text-default", children: null };
     const intl3 = tmp3(tmp4[8]).intl;
     obj7.children = intl3.string(tmp3(tmp4[8]).t.nwpqyc);
     items2[2] = closure_6(tmp3(tmp4[11]).Text, obj7);

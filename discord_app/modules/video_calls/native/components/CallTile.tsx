@@ -8,11 +8,11 @@ import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActio
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import RevealProvider from "RevealProvider.tsx";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef12180 from "../../../../../_runtime/metro/12180__.js";
-import _modDef12181 from "../../../../../_runtime/metro/12181__.js";
-import _modDef12182 from "../../../../../_runtime/metro/12182__.js";
-import _modDef12183 from "../../../../../_runtime/metro/12183__.js";
-import _modDef12184 from "../../../../../_runtime/metro/12184__.js";
+import _modDef12239 from "../../../../../_runtime/metro/12239__.js";
+import _modDef12240 from "../../../../../_runtime/metro/12240__.js";
+import _modDef12241 from "../../../../../_runtime/metro/12241__.js";
+import _modDef12242 from "../../../../../_runtime/metro/12242__.js";
+import _modDef12243 from "../../../../../_runtime/metro/12243__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -30,7 +30,7 @@ class StreamPreviewTile {
     obj1 = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "disabled", borderRadius: false },
+      style: { aspectRatio: "sa", borderRadius: false },
       disableTransition: true,
       onPress() {
         return closure_1_8();
@@ -43,17 +43,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef12180;
+    let tmp3 = _modDef12239;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef12181;
+      tmp3 = _modDef12240;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef12182;
+      tmp3 = _modDef12241;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef12183;
+      tmp3 = _modDef12242;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef12184;
+      tmp3 = _modDef12243;
     }
   }
   let tmp14 = null;
@@ -160,9 +160,9 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(11133);
+const ChannelCallStore = fn(11181);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5801);
+const CallConstants = fn(5815);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
@@ -260,7 +260,7 @@ export default noop.memo(function CallTitle(participant) {
   const activeStream = stateFromStoresObject.activeStream;
   const items1 = [channel.id, participant.id];
   const callback = hasBottomSafeArea.useCallback(() => {
-    React6();
+    React5();
     participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, participant.id);
   }, items1);
   const items2 = [channel.id, analyticsLocations];

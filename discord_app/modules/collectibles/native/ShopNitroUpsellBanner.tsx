@@ -4,7 +4,7 @@ import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -69,7 +69,7 @@ class ShopNitroUpsellBanner {
     obj16 = { size: "md", color: tmp2(tmp3[3]).colors.ICON_DEFAULT };
     obj15.children = jsx(tmp5(tmp3[15]).XSmallIcon, obj16);
     items2[1] = jsx(tmp5(tmp3[14]).PressableOpacity, obj15);
-    obj17 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+    obj17 = { variant: "body-sm/medium", color: "mobile-text-heading-primary", style: tmp.text, children: null };
     intl2 = tmp5(tmp3[10]).intl;
     obj17.children = intl2.string(tmp5(tmp3[10]).t.WjOclf);
     items3 = [,];

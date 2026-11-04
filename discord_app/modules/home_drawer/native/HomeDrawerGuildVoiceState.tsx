@@ -3,7 +3,7 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
@@ -47,7 +47,7 @@ function LiveTag() {
     accessibilityElementsHidden: true,
     children: null,
   };
-  const obj2 = { variant: "text-xxs/semibold", style: tmp.tagText, lineClamp: 1, children: null };
+  const obj2 = { variant: "footnote/semibold", style: tmp.tagText, lineClamp: 1, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.dI3q4h).toUpperCase();
   obj.children = closure_1_11(Text_Text.Text, obj2);

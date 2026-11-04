@@ -42,7 +42,7 @@ export default function MutedUntilText(arg0) {
       } else {
         return null;
       }
-      const obj2 = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj2 = { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: null };
       const intl5 = tmp15(1113).intl;
       const obj3 = { endTime: null, endTimeHook: null };
       const _Date = Date;
@@ -54,12 +54,12 @@ export default function MutedUntilText(arg0) {
         minute: "2-digit",
       });
       obj3.endTimeHook = function endTimeHook(children) {
-        return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "control-brand-foreground", children }, "muted");
+        return jsx(Text_Text.Text, { variant: "body-sm/medium", color: "control-brand-foreground", children }, "muted");
       };
       obj2.children = intl5.format(N2NXMd, obj3);
-      return jsx(tmp15(5747).Text, {
+      return jsx(tmp15(5761).Text, {
         style: tmp.formHintText,
-        variant: "text-sm/medium",
+        variant: "body-sm/medium",
         color: "text-muted",
         children: null,
       });
@@ -84,10 +84,10 @@ export default function MutedUntilText(arg0) {
   } else {
     return null;
   }
-  obj = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult };
-  return jsx(tmp3(5747).Text, {
+  obj = { style: tmp.formHintText, variant: "body-sm/medium", color: "text-muted", children: stringResult };
+  return jsx(tmp3(5761).Text, {
     style: tmp.formHintText,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-muted",
     children: stringResult,
   });

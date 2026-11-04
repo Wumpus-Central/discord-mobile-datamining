@@ -73,7 +73,7 @@ function ExplicitMediaFalsePositivePreview(url) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   content: { padding: nativeDefault.space.PX_16 },
@@ -184,7 +184,7 @@ export function ExplicitMediaFalsePositiveActionSheet(channelId) {
   const intl = channelId(onConfirmPress[11]).intl;
   obj2.children = intl.string(channelId(onConfirmPress[11]).t.TPpVkI);
   const items3 = [closure_6(channelId(onConfirmPress[16]).Text, obj2), , ,];
-  const obj3 = { variant: "text-sm/normal", children: null };
+  const obj3 = { variant: "body-sm/normal", children: null };
   const intl2 = channelId(onConfirmPress[11]).intl;
   obj3.children = intl2.string(channelId(onConfirmPress[11]).t["z4du/I"]);
   items3[1] = closure_6(channelId(onConfirmPress[16]).Text, obj3);

@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
@@ -62,7 +62,7 @@ export default function ChannelAutocompleteEmojiUpsell(results) {
     return hasOwnProperty(View, obj, id.id);
   });
   const result = 24 * substr.length;
-  const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", children: null };
+  const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "body-sm/medium", children: null };
   const intl = require("util").intl;
   obj2.children = intl.format(require("util").t.uEky42, { count: results.length });
   items = [closure_5(require("Text/Text").Text, obj2)];

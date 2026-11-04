@@ -39,7 +39,7 @@ export default function PremiumExpressionPickerSearchUpsell(arg0) {
     icon,
     React3(Text_Text.Text, {
       lineClamp: 2,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "interactive-text-active",
       children: body,
     }),
@@ -47,7 +47,7 @@ export default function PremiumExpressionPickerSearchUpsell(arg0) {
   obj3.children = items;
   const items1 = [
     React4(View, obj3),
-    React3(Text_Text.Text, { variant: "text-sm/medium", color: "text-link", children: ctaText }),
+    React3(Text_Text.Text, { variant: "body-sm/medium", color: "text-link", children: ctaText }),
   ];
   obj2.children = items1;
   obj.children = React4(Pressables.PressableOpacity, obj2);

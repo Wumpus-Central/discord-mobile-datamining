@@ -9,21 +9,21 @@ const CheckpointPressableDefault = CheckpointPressable;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const CheckpointConstants = fn(6186);
-({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY: metroRequire } = CheckpointConstants);
+const CheckpointConstants = fn(6201);
+({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY: closure_6 } = CheckpointConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
     justifyContent: "center",
-    marginRight: -fn(13807).SHADOW_OFFSET,
-    marginBottom: -fn(13807).SHADOW_OFFSET,
+    marginRight: -fn(13893).SHADOW_OFFSET,
+    marginBottom: -fn(13893).SHADOW_OFFSET,
   },
   button: null,
   label: null,
 };
-let obj3 = { justifyContent: "center", marginRight: -fn(13807).SHADOW_OFFSET, marginBottom: -fn(13807).SHADOW_OFFSET };
+let obj3 = { justifyContent: "center", marginRight: -fn(13893).SHADOW_OFFSET, marginBottom: -fn(13893).SHADOW_OFFSET };
 obj2.button = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2 };
 obj2.label = { textTransform: "uppercase" };
 let closure_9 = createStyles.createStyles(obj2);
@@ -70,12 +70,12 @@ export default function CheckpointButton(loading) {
   const memo1 = noop.useMemo(() => ({ color }), items1);
   if (flag) {
     const obj3 = { color };
-    let tmp8 = React5(ActivityIndicator, obj3);
+    let tmp8 = metroImportDefault(ActivityIndicator, obj3);
   } else {
     tmp8 = null;
     if (null != Icon) {
       const obj4 = { color, size: str2 };
-      tmp8 = React5(Icon, obj4);
+      tmp8 = metroImportDefault(Icon, obj4);
     }
   }
   const obj5 = {
@@ -110,11 +110,11 @@ export default function CheckpointButton(loading) {
     const items4 = [tmp.label, memo1];
     obj6.style = items4;
     obj6.children = label;
-    tmp16 = React5(CheckpointTextDefault, obj6);
+    tmp16 = metroImportDefault(CheckpointTextDefault, obj6);
     const tmp13Result = CheckpointTextDefault;
   }
   items3[1] = tmp16;
   items3[2] = "end" === str && tmp8;
   obj5.children = items3;
-  return React6(CheckpointPressableDefault, obj5);
+  return React5(CheckpointPressableDefault, obj5);
 }

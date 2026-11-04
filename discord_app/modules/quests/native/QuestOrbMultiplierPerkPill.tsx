@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 0 };
 const createStyles = fn(5141);
@@ -103,7 +103,7 @@ export function QuestOrbMultiplierPerkPill(questId) {
     }
     const obj13 = { children: null };
     const items2 = [tmp19];
-    const obj14 = { variant: "text-xs/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
+    const obj14 = { variant: "body-xs/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
     items2[1] = closure_6(Text_Text.Text, obj14);
     obj13.children = items2;
     const obj15 = {
@@ -127,7 +127,7 @@ export function QuestOrbMultiplierPerkPill(questId) {
     obj16.style = items3;
     if (!tmp13) {
       const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5710), obj18);
+      tmp21Result = tmp21(orbMultiplierEligibility(5723), obj18);
     }
     const items4 = [tmp21Result];
     const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

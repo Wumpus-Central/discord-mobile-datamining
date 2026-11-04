@@ -101,14 +101,14 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17496, dependencyMap.paths),
+      asyncRequireImpl(17586, dependencyMap.paths),
       "CustomTypingIndicatorTypingSuggestionPickerSheet",
       { initialValue: first2, onChange },
     );
   }, items4);
   const callback2 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17497, dependencyMap.paths),
+      asyncRequireImpl(17587, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );
@@ -272,7 +272,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   obj7.children = tmp38Result;
   const items10 = [memo1(onChange, obj7), , ,];
   let obj9 = { style: tmp.section, children: null };
-  let obj10 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
+  let obj10 = { accessibilityRole: "header", variant: "body-sm/semibold", color: "text-default", children: null };
   let intl = tmp2(tmp3[10]).intl;
   obj10.children = intl.string(nativeStackNavigation(tmp3[11])["l8CZ7+"]);
   const items11 = [
@@ -304,7 +304,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   obj9.children = items11;
   items10[1] = closure_13(onChange, obj9);
   let obj13 = { style: tmp.section, children: null };
-  let obj14 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
+  let obj14 = { accessibilityRole: "header", variant: "body-sm/semibold", color: "text-default", children: null };
   const intl6 = tmp2(tmp3[10]).intl;
   obj14.children = intl6.string(nativeStackNavigation(tmp3[11]).BGCQqw);
   const items12 = [memo1(mode(tmp3[35]).Text, obj14), ,];
@@ -323,7 +323,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   items12[1] = memo1(mode(tmp3[37]).TableRowGroup, obj15);
   const obj18 = {
     style: tmp.description,
-    variant: "text-xs/normal",
+    variant: "body-xs/normal",
     color: "text-muted",
     includeFontPadding: true,
     children: null,
@@ -390,7 +390,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   return closure_13(onChange, obj4);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);

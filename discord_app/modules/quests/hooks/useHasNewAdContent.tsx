@@ -45,7 +45,7 @@ export default function useHasNewAdContent() {
     prop = tmp(4974).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
   const tmp6 = _slicedToArray(
-    stateFromStoresArray(7693).useSelectedTimeRecurringDismissibleContent(
+    stateFromStoresArray(7709).useSelectedTimeRecurringDismissibleContent(
       prop,
       { cooldownDurationMs: DAY },
       undefined,

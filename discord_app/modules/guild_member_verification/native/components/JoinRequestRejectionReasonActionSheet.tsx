@@ -148,9 +148,9 @@ class JoinRequestRejectionReasonActionSheet {
   }
 }
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
-const React6 = createStyles.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
+const React5 = createStyles.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/JoinRequestRejectionReasonActionSheet.tsx",

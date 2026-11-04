@@ -9,9 +9,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11766).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11822).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -54,7 +54,7 @@ export default function GroupDMNitroCapInfoActionSheet() {
   const intl = util.intl;
   obj3.children = intl.string(util.t.u1ilug);
   items = [timestampProducer(Text_Text.Text, obj3), ,];
-  const obj4 = { style: tmp.body, variant: "text-md/medium", color: "text-muted", children: null };
+  const obj4 = { style: tmp.body, variant: "body-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.formatToPlainString(util.t["mr27w/"], { number });
   items[1] = timestampProducer(Text_Text.Text, obj4);
@@ -66,6 +66,6 @@ export default function GroupDMNitroCapInfoActionSheet() {
   obj6.children = timestampProducer(components_Button_Button.Button, obj7);
   items[2] = timestampProducer(View, obj6);
   obj2.children = items;
-  obj.children = React5(View, obj2);
+  obj.children = metroImportDefault(View, obj2);
   return timestampProducer(Sheet_BottomSheet.BottomSheet, obj);
 }

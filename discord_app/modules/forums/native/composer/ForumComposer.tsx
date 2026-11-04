@@ -60,7 +60,7 @@ function Tags(tags) {
       }),
     ];
     obj.children = items;
-    tmp2 = closure_1_30(React7, obj);
+    tmp2 = closure_1_30(React6, obj);
   }
   return tmp2;
 }
@@ -131,7 +131,7 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(9698).TagIcon;
+      obj6.IconComponent = tmp2(9716).TagIcon;
       obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -161,12 +161,12 @@ function ActionBar(channel) {
             closure_1_7 !== channel(1625).KeyboardTypes.SYSTEM &&
             closure_1_7 !== channel(1625).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11276, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11326, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(7682).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(7698).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10351).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10399).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -178,9 +178,9 @@ function ActionBar(channel) {
       const intl3 = tmp2(1113).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1113).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(9580).ReactionIcon;
+      obj7.IconComponent = tmp2(9599).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(7682).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(7698).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
@@ -198,13 +198,13 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(8767).ChatIcon, obj10);
+    obj9.icon = closure_29(tmp2(8784).ChatIcon, obj10);
     obj9.onPress = function handleSubmit() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5754).Button, obj9);
+    obj8.children = closure_29(tmp2(5768).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);
@@ -218,9 +218,9 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(14660).KeyboardIcon;
+      let ImageIcon = tmp2(14740).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(8783).ImageIcon;
+      ImageIcon = tmp2(8800).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
     obj11.onPress = function handlePressMediaButton() {
@@ -232,20 +232,20 @@ function ActionBar(channel) {
       }
       const result1 = Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(7682).HeaderActionButton, obj11);
+    closure_29(tmp2(7698).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
 get_ActivityIndicator = fn(17);
 ({
-  Keyboard: metroRequire,
-  Pressable: closure_7,
+  Keyboard: closure_6,
+  Pressable: metroImportDefault,
   StyleSheet,
   Text: closure_8,
   View: closure_9,
 } = get_ActivityIndicator);
-const DraftType = fn(7825).DraftType;
-const SlowmodeType = fn(7954).SlowmodeType;
+const DraftType = fn(7841).DraftType;
+const SlowmodeType = fn(7970).SlowmodeType;
 let Constants = fn(1072);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(4997).ChannelFlags;
@@ -1261,7 +1261,7 @@ export default function ForumComposer(parentChannel) {
     const items26 = [callback5(tmp5(tmp3[62]).RoleLabel, obj24)];
     const obj25 = {
       color: "text-default",
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       style: tmp.channelName,
       lineClamp: 1,
       children: null,

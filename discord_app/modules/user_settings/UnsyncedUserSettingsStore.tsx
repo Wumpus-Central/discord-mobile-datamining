@@ -11,7 +11,7 @@ let closure_3 = ["allowConjurePictureInPictureOnNavigateAway", "allowVibegration
 const SystemThemeState = fn(1195).SystemThemeState;
 const ListDensityMode = fn(1082).ListDensityMode;
 const Constants = fn(1072);
-({ DEFAULT_CHAT_SIDEBAR_WIDTH: closure_7, CHANNEL_SIDEBAR_WIDTH } = Constants);
+({ DEFAULT_CHAT_SIDEBAR_WIDTH: metroImportDefault, CHANNEL_SIDEBAR_WIDTH } = Constants);
 let closure_9 = Constants.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
 const ExpressionPickerWidths = fn(1228).ExpressionPickerWidths;
 let closure_11 = fn(1229).STAGE_AUDIENCE_SIDEBAR_DEFAULT_WIDTH;
@@ -108,7 +108,7 @@ Object.defineProperty(prototype, "threadSidebarWidth", {
   get: function threadSidebarWidth() {
     let threadSidebarWidth = closure_15.threadSidebarWidth;
     if (threadSidebarWidth == null) {
-      threadSidebarWidth = React5;
+      threadSidebarWidth = metroImportDefault;
     }
     return threadSidebarWidth;
   },
@@ -128,7 +128,7 @@ Object.defineProperty(prototype, "callChatSidebarWidth", {
   get: function callChatSidebarWidth() {
     let callChatSidebarWidth = closure_15.callChatSidebarWidth;
     if (callChatSidebarWidth == null) {
-      callChatSidebarWidth = React5;
+      callChatSidebarWidth = metroImportDefault;
     }
     return callChatSidebarWidth;
   },
@@ -151,7 +151,7 @@ Object.defineProperty(prototype, "homeSidebarWidth", {
       if (null == closure_14) {
         const _Math = Math;
         const _window = window;
-        closure_14 = Math.max(0.4 * (window.innerWidth - CHANNEL_SIDEBAR_WIDTH), React5);
+        closure_14 = Math.max(0.4 * (window.innerWidth - CHANNEL_SIDEBAR_WIDTH), metroImportDefault);
       }
       homeSidebarWidth = closure_14;
     }

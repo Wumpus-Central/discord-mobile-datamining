@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Image: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const obj = {};
-const merged = Object.assign(fn(5758).springSlow);
+const merged = Object.assign(fn(5772).springSlow);
 obj.overshootClamping = true;
 const createStyles = fn(5141);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };

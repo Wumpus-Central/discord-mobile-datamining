@@ -1,6 +1,6 @@
 // discord_app/design/components/Tabs/native/TabsGradient.native.tsx
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -32,7 +32,7 @@ function useGradientAnimatedStyle(tmpResult) {
 }
 const HorizontalGradient = fn(1072).HorizontalGradient;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
 let closure_8 = { mass: 1, damping: 30, stiffness: 250 };
 const createStyles = fn(5141);

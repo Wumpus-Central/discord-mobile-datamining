@@ -21,7 +21,7 @@ class GuildPowerupCardFooterActive {
     items[0] = jsx(closure_0(closure_2[3]).CircleCheckIcon, obj1);
     items[1] = jsx(closure_0(closure_2[5]).Text, {
       color: "status-positive",
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       children: global.text,
     });
     obj.children = items;
@@ -34,7 +34,7 @@ class GuildPowerupCardFooterExpiring {
     obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [,];
     items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj1);
-    obj5 = { color: "text-feedback-warning", variant: "text-sm/semibold", children: null };
+    obj5 = { color: "text-feedback-warning", variant: "body-sm/semibold", children: null };
     intl = closure_0(closure_2[7]).intl;
     obj6 = { dateString: closure_1(closure_2[9])(global.dateString) };
     obj5.children = intl.formatToMarkdownString(closure_1(closure_2[8])["ol/ao/"], obj6);
@@ -49,7 +49,7 @@ class GuildPowerupCardFooterRemoving {
     obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [,];
     items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj1);
-    obj5 = { color: "text-feedback-warning", variant: "text-sm/semibold", children: null };
+    obj5 = { color: "text-feedback-warning", variant: "body-sm/semibold", children: null };
     intl = closure_0(closure_2[7]).intl;
     obj6 = { dateString: closure_1(closure_2[10])(global.removingAt) };
     obj5.children = intl.formatToPlainString(closure_1(closure_2[8])["6e2ry1"], obj6);

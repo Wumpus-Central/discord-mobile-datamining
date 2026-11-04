@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import native from "../../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -16,10 +16,10 @@ import TableRadioRow from "../../../../design/components/TableRow/native/TableRa
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
-import _modDef16136 from "../../../../../_runtime/metro/16136__.js";
-import _modDef16137 from "../../../../../_runtime/metro/16137__.js";
-import _modDef16138 from "../../../../../_runtime/metro/16138__.js";
-import _modDef16139 from "../../../../../_runtime/metro/16139__.js";
+import _modDef16225 from "../../../../../_runtime/metro/16225__.js";
+import _modDef16226 from "../../../../../_runtime/metro/16226__.js";
+import _modDef16227 from "../../../../../_runtime/metro/16227__.js";
+import _modDef16228 from "../../../../../_runtime/metro/16228__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
@@ -37,7 +37,7 @@ function MyTableRow() {
   return closure_1_11(TableRow.TableRow, obj);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ NOOP: closure_9, StatusTypes: closure_10 } = Constants);
 const jsxProd = fn(21);
@@ -105,7 +105,7 @@ export default function UserSettingsDesignSystemTableRow() {
   const obj12 = { IconComponent: SettingsIcon.SettingsIcon };
   obj13.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
   obj13.label = closure_11(Text_Text.Text, {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     lineClamp: 1,
     children: "Custom node for label - A really long label that takes up all of the space and then some",
   });
@@ -119,7 +119,7 @@ export default function UserSettingsDesignSystemTableRow() {
   const items2 = [
     closure_11(tmp9, obj16),
     closure_11(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       lineClamp: 1,
       color: "text-muted",
       style: { flexShrink: 1 },
@@ -297,26 +297,26 @@ export default function UserSettingsDesignSystemTableRow() {
   const obj50 = { label: "First Item", subLabel: "Here is an item", onPress };
   const obj51 = { label: "Second Item", subLabel: "Here is another item", onPress };
   const obj52 = { label: "Third Item", subLabel: "Here is yet another item", onPress };
-  obj55.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef16139 });
+  obj55.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef16228 });
   const items8 = [closure_11(TableRadioRow.TableRadioRow, obj55), , ,];
   const obj57 = { icon: null, label: "Idle", value: "option2" };
-  const obj56 = { variant: "text-status-online", source: _modDef16139 };
-  obj57.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef16136 });
+  const obj56 = { variant: "text-status-online", source: _modDef16228 };
+  obj57.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef16225 });
   items8[1] = closure_11(TableRadioRow.TableRadioRow, obj57);
   const obj59 = { icon: null, label: "Do Not Disturb", value: "option3" };
-  const obj58 = { variant: "text-status-idle", source: _modDef16136 };
-  obj59.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef16137 });
+  const obj58 = { variant: "text-status-idle", source: _modDef16225 };
+  obj59.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef16226 });
   items8[2] = closure_11(TableRadioRow.TableRadioRow, obj59);
   const obj61 = { icon: null, label: "Invisible", value: "option4" };
-  const obj60 = { variant: "text-status-dnd", source: _modDef16137 };
-  obj61.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef16138 });
+  const obj60 = { variant: "text-status-dnd", source: _modDef16226 };
+  obj61.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef16227 });
   items8[3] = closure_11(TableRadioRow.TableRadioRow, obj61);
   obj54.children = items8;
   items3[5] = closure_12(TableRadioGroup.TableRadioGroup, obj54);
   const obj63 = { spacing: 12, children: null };
-  const items9 = [closure_11(Text_Text.Text, { variant: "heading-sm/semibold", children: "Row buttons" }), , ,];
+  const items9 = [closure_11(Text_Text.Text, { variant: "heading-xs/semibold", children: "Row buttons" }), , ,];
   const obj64 = { icon: null, label: "Boost your server", onPress: null };
-  const obj62 = { variant: "text-status-offline", source: _modDef16138 };
+  const obj62 = { variant: "text-status-offline", source: _modDef16227 };
   obj64.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
   obj64.onPress = onPress;
   items9[1] = closure_11(RowButton.RowButton, obj64);

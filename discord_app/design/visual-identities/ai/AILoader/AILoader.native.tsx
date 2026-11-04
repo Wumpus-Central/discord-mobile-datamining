@@ -63,11 +63,11 @@ function Slot(index) {
   return <stagger style={tmp.slot}>{null}</stagger>;
 }
 const View = fn(17).View;
-const AILoaderConstants = fn(12381);
+const AILoaderConstants = fn(12446);
 ({
   AI_LOADER_CYCLE_MS: hasOwnProperty,
-  AI_LOADER_GAP_EM: metroRequire,
-  AI_LOADER_GLYPHS: closure_7,
+  AI_LOADER_GAP_EM: closure_6,
+  AI_LOADER_GLYPHS: metroImportDefault,
   AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8,
   AI_LOADER_SLOT_COUNT: closure_9,
   AI_LOADER_SLOT_STAGGER_MS: closure_10,

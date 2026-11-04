@@ -6,7 +6,7 @@ import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05400_BottomSheetModal.js";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import isChannelFocused from "../../panels/isChannelFocused.native.tsx";
 import native from "../../../design/components/experimental/native.tsx";
@@ -31,9 +31,9 @@ function PortalKeyboardBottomSheetHeader(arg0) {
   obj = useIsScreenReaderEnabled;
   items[1] = prop;
   items[2] = style;
-  return React5(hasOwnProperty, {
+  return metroImportDefault(hasOwnProperty, {
     style: items,
-    children: React5(native.ActionSheetDragHandle, { onPress: handleCollapse }),
+    children: metroImportDefault(native.ActionSheetDragHandle, { onPress: handleCollapse }),
   });
 }
 function PortalKeyboardBackground(arg0) {
@@ -41,12 +41,12 @@ function PortalKeyboardBackground(arg0) {
   const obj = { pointerEvents, style: null };
   items = [style, closure_10().background, roundingStyle];
   obj.style = items;
-  return React5(_modDef1652.View, obj);
+  return metroImportDefault(_modDef1652.View, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PlatformUtils = fn(1377);
 let closure_9 = PlatformUtils.isIOS();
 const createStyles = fn(5141);
@@ -61,8 +61,8 @@ let size = {
   borderTopLeftRadius: nativeDefault.radii.none,
   borderTopRightRadius: nativeDefault.radii.none,
   width: "100%",
-  height: fn(9120).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
-  marginBottom: -fn(9120).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  height: fn(9137).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  marginBottom: -fn(9137).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
 };
 obj3.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
@@ -296,7 +296,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
         },
         isFullyExpanded: derivedValue,
       };
-      tmp = React5(PortalKeyboardBottomSheetHeader, obj);
+      tmp = metroImportDefault(PortalKeyboardBottomSheetHeader, obj);
     }
     return tmp;
   }, items9);
@@ -350,7 +350,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.roundingStyle = animatedStyle;
-    return React5(PortalKeyboardBackground, obj);
+    return metroImportDefault(PortalKeyboardBackground, obj);
   }, items12);
   const tmp6Result10 = require("../../../../_runtime/metro/01652__.js");
   ({ left, right } = useSafeAreaInsetsDefault());
@@ -454,7 +454,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   obj7.activeOffsetY = [-10, 10];
   let num = 0;
   if (rendersHandle) {
-    num = tmp6(9120).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
+    num = tmp6(9137).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
   }
   obj7.handleHeight = num;
   let merged = Object.assign(tmp5);
@@ -484,7 +484,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   }
   if (tmp51Result) {
     const obj9 = { animatedSheetIndex: animatedIndex };
-    tmp51Result = tmp51(tmp3(10097), obj9);
+    tmp51Result = tmp51(tmp3(10145), obj9);
   }
   items19[1] = tmp51Result;
   items19[2] = closure_7(require("NavScrim").NavScrim, {});

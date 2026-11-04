@@ -31,16 +31,16 @@ function Select(children) {
   const tmp = _slicedToArray(noop.useState(false), 2);
   state = ComponentStateContext.useComponentState(obj).state;
   const obj3 = { style: { gap: 8 }, children: null };
-  items = [React5(Text_Text.Text, { variant: "heading-lg/medium", children: children.title }), , ,];
+  items = [metroImportDefault(Text_Text.Text, { variant: "heading-lg/medium", children: children.title }), , ,];
   if (obj.type === Server.ComponentType.STRING_SELECT) {
     const obj4 = {};
     const merged1 = Object.assign(obj);
-    let tmp7Result = React5(StringSelectActionComponentDefault, obj4);
+    let tmp7Result = metroImportDefault(StringSelectActionComponentDefault, obj4);
   } else {
     const obj5 = {};
     const merged2 = Object.assign(obj);
     obj5.type = obj.type;
-    tmp7Result = React5(SearchableSelectActionComponentDefault, obj5);
+    tmp7Result = metroImportDefault(SearchableSelectActionComponentDefault, obj5);
   }
   items[1] = tmp7Result;
   let type1;
@@ -54,12 +54,12 @@ function Select(children) {
       const selectedOptions = state.selectedOptions;
       mapped = selectedOptions.map((label) => label.label);
     }
-    state = { variant: "text-md/normal", children: null };
+    state = { variant: "body-md/normal", children: null };
     const items1 = ["Selected values: ", mapped.join(", ")];
     state.children = items1;
-    React6(Text_Text.Text, state);
+    React5(Text_Text.Text, state);
   } else {
-    items[2] = React5(Text_Text.Text, { variant: "text-md/normal", children: "Nothing selected" });
+    items[2] = metroImportDefault(Text_Text.Text, { variant: "body-md/normal", children: "Nothing selected" });
     let str3 = "off";
     if (tmp2) {
       str3 = "on";
@@ -70,20 +70,20 @@ function Select(children) {
     obj6.onPress = function onPress() {
       return _undefined((arg0) => !arg0);
     };
-    items[3] = React5(components_Button_Button.Button, obj6);
+    items[3] = metroImportDefault(components_Button_Button.Button, obj6);
     obj3.children = items;
-    return React6(Card.Card, obj3);
+    return React5(Card.Card, obj3);
   }
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 let closure_9 = createStyles.createStyles(obj2);
-const InteractionComponentUtils = fn(6185);
+const InteractionComponentUtils = fn(6200);
 let obj6 = {
   type: fn(2121).ComponentType.STRING_SELECT,
   custom_id: "test",
@@ -124,8 +124,8 @@ export default function DevToolsComponentsTestingScreen() {
   const obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
   const obj2 = { spacing: 16, children: null };
   items = [
-    React5(Text_Text.Text, {
-      variant: "text-md/normal",
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-md/normal",
       children: "Test screen for embedding native components in RN",
     }),
     ,
@@ -141,25 +141,28 @@ export default function DevToolsComponentsTestingScreen() {
   };
   const obj5 = {};
   const merged = Object.assign(application_id);
-  const items1 = [React5(TextDisplayComponentDefault, obj5), , , , ,];
-  items1[1] = React5(Select, { title: "String Select", type: Server.ComponentType.STRING_SELECT });
+  const items1 = [metroImportDefault(TextDisplayComponentDefault, obj5), , , , ,];
+  items1[1] = metroImportDefault(Select, { title: "String Select", type: Server.ComponentType.STRING_SELECT });
   const obj6 = { title: "String Select", type: Server.ComponentType.STRING_SELECT };
-  items1[2] = React5(Select, { title: "User Select", type: Server.ComponentType.USER_SELECT });
+  items1[2] = metroImportDefault(Select, { title: "User Select", type: Server.ComponentType.USER_SELECT });
   const obj7 = { title: "User Select", type: Server.ComponentType.USER_SELECT };
-  items1[3] = React5(Select, { title: "Role Select", type: Server.ComponentType.ROLE_SELECT });
+  items1[3] = metroImportDefault(Select, { title: "Role Select", type: Server.ComponentType.ROLE_SELECT });
   const obj8 = { title: "Role Select", type: Server.ComponentType.ROLE_SELECT };
-  items1[4] = React5(Select, { title: "Mentionable Select", type: Server.ComponentType.MENTIONABLE_SELECT });
+  items1[4] = metroImportDefault(Select, {
+    title: "Mentionable Select",
+    type: Server.ComponentType.MENTIONABLE_SELECT,
+  });
   const obj9 = { title: "Mentionable Select", type: Server.ComponentType.MENTIONABLE_SELECT };
-  items1[5] = React5(Select, { title: "Channel Select", type: Server.ComponentType.CHANNEL_SELECT });
+  items1[5] = metroImportDefault(Select, { title: "Channel Select", type: Server.ComponentType.CHANNEL_SELECT });
   obj3.children = items1;
-  items[1] = React6(ComponentStateContext.ComponentStateContextProvider, obj3);
-  items[2] = React5(components_Button_Button.Button, {
+  items[1] = React5(ComponentStateContext.ComponentStateContextProvider, obj3);
+  items[2] = metroImportDefault(components_Button_Button.Button, {
     onPress() {
       return DispatcherDefault.dispatch({ type: "CLEAR_INTERACTION_MODAL_STATE", customId });
     },
     text: "Reset Modal State",
   });
   obj2.children = items;
-  obj.children = React6(Stack_Stack.Stack, obj2);
-  return React5(ScrollView, obj);
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return metroImportDefault(ScrollView, obj);
 }

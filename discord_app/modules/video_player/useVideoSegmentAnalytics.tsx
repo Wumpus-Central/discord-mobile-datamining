@@ -5,7 +5,7 @@ import "module_19";
 
 require = fn;
 const noop = fn(19);
-({ useRef: closure_4, useCallback: hasOwnProperty, useEffect: metroRequire } = noop);
+({ useRef: closure_4, useCallback: hasOwnProperty, useEffect: closure_6 } = noop);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_player/useVideoSegmentAnalytics.tsx");
 

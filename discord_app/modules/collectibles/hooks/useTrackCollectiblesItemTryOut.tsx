@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 _mod19.useCallback;
 const AnalyticEvents = Constants.AnalyticEvents;
-({ AnalyticsPremiumFeatureNames, AnalyticsPremiumFeatureTiers: metroRequire } = PremiumConstants);
+({ AnalyticsPremiumFeatureNames, AnalyticsPremiumFeatureTiers: closure_6 } = PremiumConstants);
 let obj = {
   [CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION]: AnalyticsPremiumFeatureNames.AVATAR_DECORATION,
   [CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT]: AnalyticsPremiumFeatureNames.PROFILE_EFFECT,

@@ -21,11 +21,11 @@ function Row(arg0) {
   const items1 = [
     hasOwnProperty(Text_Text.Text, {
       style: tmp.header,
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: "mobile-text-heading-primary",
       children: header,
     }),
-    hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: description }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-xs/medium", color: "text-default", children: description }),
   ];
   obj4.children = items1;
   items[1] = timestampProducer(View, obj4);
@@ -47,7 +47,7 @@ function FamilyCenterModalDataTooltipScreen() {
   items = [
     closure_5(require("Text/Text").Text, {
       style: tmp.groupHeader,
-      variant: "text-lg/semibold",
+      variant: "body-lg/semibold",
       color: "mobile-text-heading-primary",
       children: ageSpecificText,
     }),
@@ -76,19 +76,19 @@ function FamilyCenterModalDataTooltipScreen() {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
-  [USER_INTERACTION]: fn(8767).ChatIcon,
-  [USER_CALLED]: fn(13499).PhoneIcon,
-  [USER_ADD]: fn(5835).FriendsIcon,
-  [GUILD_ADD]: fn(15618).ServerGridIcon,
-  [GUILD_INTERACTION]: fn(8769).ThreadIcon,
-  [PURCHASES]: fn(8139).CreditCardIcon,
-  [TOTAL_VOICE_MINUTES]: fn(5860).ClockIcon,
-  [GIFTS]: fn(13501).GiftIcon,
+  [USER_INTERACTION]: fn(8784).ChatIcon,
+  [USER_CALLED]: fn(13583).PhoneIcon,
+  [USER_ADD]: fn(5849).FriendsIcon,
+  [GUILD_ADD]: fn(15705).ServerGridIcon,
+  [GUILD_INTERACTION]: fn(8786).ThreadIcon,
+  [PURCHASES]: fn(8155).CreditCardIcon,
+  [TOTAL_VOICE_MINUTES]: fn(5874).ClockIcon,
+  [GIFTS]: fn(13585).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
-  fn(7840).TeenActionDisplayType);
+  fn(7856).TeenActionDisplayType);
 let createStyles = fn(5141);
 let obj3 = {
   row: {

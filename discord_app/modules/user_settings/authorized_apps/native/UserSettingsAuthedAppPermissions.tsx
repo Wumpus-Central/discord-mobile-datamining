@@ -8,7 +8,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { paddingHorizontal: 16, paddingVertical: 24 },
@@ -48,28 +48,28 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       }
       const children = [
         closure_1_5(items(_undefined2[7]).Text, {
-          variant: "heading-sm/semibold",
+          variant: "heading-xs/semibold",
           color: "mobile-text-heading-primary",
           children: _undefined.name,
         }),
         ,
         ,
       ];
-      let obj3 = { variant: "heading-sm/semibold", color: "text-default", children: null };
+      let obj3 = { variant: "heading-xs/semibold", color: "text-default", children: null };
       const intl2 = items(_undefined2[6]).intl;
       obj3.children = intl2.string(items(_undefined2[6]).t.xrmhRX);
       children[1] = closure_1_5(items(_undefined2[7]).Text, obj3);
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [,];
-        items[0] = closure_2_5(items(7460).CircleCheckIcon, {
+        items[0] = closure_2_5(items(7476).CircleCheckIcon, {
           style: items.permissionIcon,
           size: "xs",
           color: c1(575).colors.STATUS_POSITIVE,
         });
-        items[1] = closure_2_5(items(5747).Text, {
+        items[1] = closure_2_5(items(5761).Text, {
           style: items.permissionText,
-          variant: "text-sm/normal",
+          variant: "body-sm/normal",
           color: "text-default",
           children,
         });
@@ -85,7 +85,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
             const obj2 = { style: items.permissionContainer, children: null };
             const obj3 = { style: items.permissionIcon, disclosure };
             items = [hasOwnProperty(UserSettingsAuthedApps.DisclosureIcon, obj3)];
-            const obj4 = { style: items.permissionText, variant: "text-sm/normal", children: textForDisclosure };
+            const obj4 = { style: items.permissionText, variant: "body-sm/normal", children: textForDisclosure };
             items[1] = hasOwnProperty(Text_Text.Text, obj4);
             obj2.children = items;
             tmp4 = timestampProducer(React4, obj2, index + items.length);

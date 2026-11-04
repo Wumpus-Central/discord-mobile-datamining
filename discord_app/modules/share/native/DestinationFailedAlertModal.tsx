@@ -27,7 +27,7 @@ function FailedGroupDMRow(channel) {
     closure_1_10(GroupDMAvatarDefault, obj2),
     closure_1_10(Text_Text.Text, {
       style: tmp.label,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       lineClamp: 1,
       ellipsizeMode: "tail",
       children: tmp2,
@@ -56,11 +56,11 @@ function FailedUserRow(user) {
       user,
       guildId: "Boolean",
       status: true,
-      isMobileOnline: false,
+      isMobileOnline: null,
       isVROnline: null,
-      size: true,
-      avatarDecoration: 148,
-      autoStatusCutout: "zh-Hant-HK",
+      size: 45.053,
+      avatarDecoration: null,
+      autoStatusCutout: "\u{1F469}\u{1F3FB}\u200D\u{1F373}",
     };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
@@ -72,12 +72,12 @@ function FailedUserRow(user) {
     obj4.size = tmp2(1187).AvatarSizes.XSMALL;
     obj4.avatarDecoration = user.avatarDecoration;
     const items2 = [closure_10(tmp2(1187).Avatar, obj4)];
-    const obj5 = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
+    const obj5 = { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     if (stateFromStores == null) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(5747).Text, obj5);
+    items2[1] = closure_10(tmp2(5761).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -98,15 +98,15 @@ function FailedChannelRow(channel) {
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
   const items1 = [
-    closure_10(channel(13559).GuildIconWithChannelType, {
+    closure_10(channel(13643).GuildIconWithChannelType, {
       "aria-label": "",
       guild: stateFromStores,
       channel,
-      size: channel(13559).GuildIconWithChannelTypeSizes.SMALL_32,
+      size: channel(13643).GuildIconWithChannelTypeSizes.SMALL_32,
     }),
-    closure_10(channel(5747).Text, {
+    closure_10(channel(5761).Text, {
       style: tmp.label,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       lineClamp: 1,
       ellipsizeMode: "tail",
       children: tmp3,

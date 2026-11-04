@@ -17,9 +17,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(10026).updateChatInputContainerHeight;
+let closure_6 = fn(10074).updateChatInputContainerHeight;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
@@ -110,18 +110,18 @@ export default function ChatInputGuard(type) {
         const obj4 = { accessibilityLabel: actionLabel, icon: null, size: "sm", onPress: null };
         if (actionIcon == null) {
           const obj5 = { color: nativeDefault.colors.WHITE };
-          actionIcon = React5(ArrowSmallRightIcon.ArrowSmallRightIcon, obj5);
+          actionIcon = metroImportDefault(ArrowSmallRightIcon.ArrowSmallRightIcon, obj5);
         }
         obj4.icon = actionIcon;
         obj4.onPress = actionOnPress;
-        let tmp7Result = React5(IconButton.IconButton, obj4);
+        let tmp7Result = metroImportDefault(IconButton.IconButton, obj4);
       }
       obj3.trailing = tmp7Result;
-      const obj6 = { variant: "text-sm/semibold", children: message };
-      obj3.label = React5(Text_Text.Text, obj6);
+      const obj6 = { variant: "body-sm/semibold", children: message };
+      obj3.label = metroImportDefault(Text_Text.Text, obj6);
       obj3.subLabel = subtext;
-      obj2.children = React5(tmp10, obj3);
-      return React5(hasOwnProperty, obj2);
+      obj2.children = metroImportDefault(tmp10, obj3);
+      return metroImportDefault(hasOwnProperty, obj2);
     }
     tmp7Result = null;
     if (null != countdown) {
@@ -130,7 +130,7 @@ export default function ChatInputGuard(type) {
       ({ text: arr3[0], spacing: arr3[1] } = tmp3);
       obj7.style = items;
       obj7.deadline = countdown;
-      tmp7Result = React5(CountDownDefault, obj7);
+      tmp7Result = metroImportDefault(CountDownDefault, obj7);
     }
   } else {
     ({ subtext: subtext2, buttonSecondaryText, buttonSecondaryOnPress, countdown: countdown2 } = type);
@@ -152,18 +152,18 @@ export default function ChatInputGuard(type) {
       size: "sm",
       variant: buttonPrimaryVariant,
     };
-    const tmp15 = React5(components_Button_Button.Button, obj8);
+    const tmp15 = metroImportDefault(components_Button_Button.Button, obj8);
     const obj9 = { style: tmp3.wrapper, children: null };
-    const obj10 = { style: tmp3.text, variant: "text-sm/semibold", children: message2 };
-    const items1 = [React5(Text_Text.Text, obj10), , ,];
+    const obj10 = { style: tmp3.text, variant: "body-sm/semibold", children: message2 };
+    const items1 = [metroImportDefault(Text_Text.Text, obj10), , ,];
     let tmp13Result = null;
     if (null != subtext2) {
       tmp13Result = null;
       if (typeof subtext2 === "string") {
         tmp13Result = null;
         if (subtext2.length > 0) {
-          const obj = { style: tmp3.subtext, variant: "text-xs/medium", color: "text-muted", children: subtext2 };
-          tmp13Result = React5(Text_Text.Text, obj);
+          const obj = { style: tmp3.subtext, variant: "body-xs/medium", color: "text-muted", children: subtext2 };
+          tmp13Result = metroImportDefault(Text_Text.Text, obj);
         }
       }
     }
@@ -182,13 +182,13 @@ export default function ChatInputGuard(type) {
           variant: "secondary",
           size: "sm",
         };
-        items2[1] = React5(components_Button_Button.Button, obj12);
+        items2[1] = metroImportDefault(components_Button_Button.Button, obj12);
         obj11.children = items2;
-        tmp16Result = React6(native.TwinButtons, obj11);
+        tmp16Result = React5(native.TwinButtons, obj11);
       }
     }
     const obj13 = { children: tmp16Result };
-    items1[2] = React5(ButtonGroup.ButtonGroup, obj13);
+    items1[2] = metroImportDefault(ButtonGroup.ButtonGroup, obj13);
     let tmp13Result2 = null;
     if (null != countdown2) {
       const obj14 = { style: null, deadline: null };
@@ -196,11 +196,11 @@ export default function ChatInputGuard(type) {
       ({ text: arr2[0], spacing: arr2[1] } = tmp3);
       obj14.style = items3;
       obj14.deadline = countdown2;
-      tmp13Result2 = React5(CountDownDefault, obj14);
+      tmp13Result2 = metroImportDefault(CountDownDefault, obj14);
     }
     items1[3] = tmp13Result2;
     obj9.children = items1;
-    return React6(hasOwnProperty, obj9);
+    return React5(hasOwnProperty, obj9);
   }
 }
 export function ChatInputGuardContainer(screenIndex) {
@@ -208,7 +208,7 @@ export function ChatInputGuardContainer(screenIndex) {
   const channelId = screenIndex.channelId;
   ({ onJumpToPresent, children } = screenIndex);
   const tmp3 = useIsUsingClientThemeDefault();
-  const chatInputFloatingOverlayStyle = screenIndex(13950).useChatInputFloatingOverlayStyle();
+  const chatInputFloatingOverlayStyle = screenIndex(14036).useChatInputFloatingOverlayStyle();
   const tmp6 = closure_9(tmp3);
   items = [screenIndex];
   const obj2 = { style: null, onLayout: null, collapsable: false, children: null };
@@ -218,7 +218,7 @@ export function ChatInputGuardContainer(screenIndex) {
   const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
   obj2.style = items1;
   obj2.onLayout = callback;
-  const items2 = [closure_7(screenIndex(13950).ChatInputScrimGradient, {})];
+  const items2 = [closure_7(screenIndex(14036).ChatInputScrimGradient, {})];
   const obj3 = { style: tmp6.container, children: null };
   let tmp10Result = null;
   if (!tmp3) {
@@ -234,7 +234,7 @@ export function ChatInputGuardContainer(screenIndex) {
   const items4 = [tmp10Result3, children];
   obj5.children = items4;
   items3[1] = closure_8(closure_5, obj5);
-  const obj = screenIndex(13950);
+  const obj = screenIndex(14036);
   let tmp10Result4 = null;
   if (tmp4Result.isIOS()) {
     tmp10Result4 = null;

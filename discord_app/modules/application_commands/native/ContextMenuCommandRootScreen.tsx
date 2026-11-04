@@ -9,7 +9,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandConstants = fn(6155);
+const ApplicationCommandConstants = fn(6170);
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: closure_9 } = ApplicationCommandConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
@@ -177,9 +177,9 @@ export default function ContextMenuCommandRootScreen(navigation) {
   const memo2 = obj2.useMemo(() => memo1.map((item) => item.length), items8);
   const tmp18 = onPressCommand();
   closure_18 = tmp18;
-  c19 = "text-sm/semibold";
+  c19 = "body-sm/semibold";
   const tmp16 = channel(onPressAppCommand[13])();
-  scaledTextLineHeight = navigation(onPressAppCommand[14]).useScaledTextLineHeight("text-sm/semibold");
+  scaledTextLineHeight = navigation(onPressAppCommand[14]).useScaledTextLineHeight("body-sm/semibold");
   const items9 = [loading, commands.length, "" !== first, frecencyItems.length, tmp18.sectionHeader];
   const items10 = [memo1, onPressCommand, callback1, sections];
   const callback2 = obj2.useCallback((arg0) => {

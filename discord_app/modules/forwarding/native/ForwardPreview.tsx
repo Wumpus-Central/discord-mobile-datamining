@@ -88,7 +88,7 @@ function MessagePreview(content) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 56;
 const createStyles = fn(5141);
 let obj2 = {
@@ -264,7 +264,7 @@ export function ForwardPreview(message) {
       obj17.cutouts = items2;
       obj17.children = tmp6;
       const items3 = [hasOwnProperty(ClipViewDefault, obj17)];
-      const obj18 = { style: tmp.overflowCount, variant: "text-xs/semibold", color: "text-default", children: null };
+      const obj18 = { style: tmp.overflowCount, variant: "body-xs/semibold", color: "text-default", children: null };
       const items4 = ["+", length - 1];
       obj18.children = items4;
       items3[1] = timestampProducer(Text_Text.Text, obj18);
@@ -278,7 +278,7 @@ export function ForwardPreview(message) {
   let tmp36Result = null != checkpointDataFromMessage;
   if (tmp36Result) {
     const obj23 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       children: checkpoint_CheckpointMessageComponentUtils.getCheckpointLabel(checkpointDataFromMessage),
     };
     tmp36Result = hasOwnProperty(Text_Text.Text, obj23);
@@ -311,9 +311,9 @@ export function ForwardPreview(message) {
     const items7 = [tmp36Result6];
     let tmp36Result7 = null != tmp8;
     if (tmp36Result7) {
-      let str3 = "text-md/medium";
+      let str3 = "body-md/medium";
       if (hasContent) {
-        str3 = "text-sm/medium";
+        str3 = "body-sm/medium";
       }
       const obj27 = { variant: str3, color: "text-muted", children: tmp8 };
       tmp36Result7 = hasOwnProperty(Text_Text.Text, obj27);

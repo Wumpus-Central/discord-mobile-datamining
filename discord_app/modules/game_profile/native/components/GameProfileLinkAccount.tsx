@@ -13,7 +13,7 @@ const GameProfileSkeletonDefault = GameProfileSkeleton;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
 const createStyles = fn(5141);
 let obj = {
@@ -139,37 +139,37 @@ let closure_11 = noop.memo(function GameProfileLinkAccountSkeleton() {
   }
   const obj3 = { style: items, children: null };
   items[1] = skeletonCardImagesContainerSmall;
-  const items1 = [React5(GameProfileSkeletonDefault, { style: tmp.skeletonCardImage }), ,];
+  const items1 = [metroImportDefault(GameProfileSkeletonDefault, { style: tmp.skeletonCardImage }), ,];
   const obj5 = { style: tmp.ellipseGroup, children: null };
   const items2 = [
-    React5(GameProfileSkeletonDefault, { style: tmp.skeletonEllipse }),
-    React5(GameProfileSkeletonDefault, { style: tmp.skeletonEllipse }),
-    React5(GameProfileSkeletonDefault, { style: tmp.skeletonEllipse }),
+    metroImportDefault(GameProfileSkeletonDefault, { style: tmp.skeletonEllipse }),
+    metroImportDefault(GameProfileSkeletonDefault, { style: tmp.skeletonEllipse }),
+    metroImportDefault(GameProfileSkeletonDefault, { style: tmp.skeletonEllipse }),
   ];
   obj5.children = items2;
-  items1[1] = React6(View, obj5);
-  items1[2] = React5(GameProfileSkeletonDefault, { style: tmp.skeletonUserAvatar });
+  items1[1] = React5(View, obj5);
+  items1[2] = metroImportDefault(GameProfileSkeletonDefault, { style: tmp.skeletonUserAvatar });
   obj3.children = items1;
-  const items3 = [React6(View, obj3), ,];
+  const items3 = [React5(View, obj3), ,];
   const obj10 = { style: tmp.skeletonCardContent, children: null };
   const items4 = [
-    React5(GameProfileSkeletonDefault, { style: tmp.skeletonCardContentHeading }),
-    React5(GameProfileSkeletonDefault, { style: tmp.skeletonCardContentBody }),
+    metroImportDefault(GameProfileSkeletonDefault, { style: tmp.skeletonCardContentHeading }),
+    metroImportDefault(GameProfileSkeletonDefault, { style: tmp.skeletonCardContentBody }),
   ];
   let tmp5Result = !tmp4;
   if (!tmp4) {
     const obj13 = { style: tmp.skeletonCardContentBodySecondary };
-    tmp5Result = React5(GameProfileSkeletonDefault, obj13);
+    tmp5Result = metroImportDefault(GameProfileSkeletonDefault, obj13);
   }
   const obj14 = { showViewAllSkeleton: false, skeletonTitleWidth: 90, children: null };
   items4[2] = tmp5Result;
   obj10.children = items4;
-  items3[1] = React6(View, obj10);
-  items3[2] = React5(GameProfileSkeleton.GameProfileSkeletonButton, {});
+  items3[1] = React5(View, obj10);
+  items3[2] = metroImportDefault(GameProfileSkeleton.GameProfileSkeletonButton, {});
   obj2.children = items3;
-  obj.children = React6(GameProfileSkeleton.GameProfileSkeletonContainer, obj2);
-  obj14.children = React5(View, obj);
-  return React5(GameProfileSection.GameProfileSectionSkeleton, obj14);
+  obj.children = React5(GameProfileSkeleton.GameProfileSkeletonContainer, obj2);
+  obj14.children = metroImportDefault(View, obj);
+  return metroImportDefault(GameProfileSection.GameProfileSectionSkeleton, obj14);
 });
 size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileLinkAccount.tsx");
@@ -244,7 +244,7 @@ export default function GameProfileLinkAccount(analyticsLocations) {
                 const items6 = [tmp16Result, ,];
                 const obj12 = { style: tmp.cardContent, children: null };
                 const obj13 = {
-                  variant: "heading-md/semibold",
+                  variant: "heading-sm/semibold",
                   color: "mobile-text-heading-primary",
                   style: tmp.cardText,
                   children: null,
@@ -253,7 +253,7 @@ export default function GameProfileLinkAccount(analyticsLocations) {
                 const obj14 = { gameName: connectionApp.name };
                 obj13.children = intl2.formatToPlainString(trackAction(tmp3[13]).t.hUbQT2, obj14);
                 const items7 = [closure_7(trackAction(tmp3[16]).Text, obj13)];
-                const obj15 = { variant: "text-sm/medium", color: "text-default", style: tmp.cardText, children: null };
+                const obj15 = { variant: "body-sm/medium", color: "text-default", style: tmp.cardText, children: null };
                 const intl3 = trackAction(tmp3[13]).intl;
                 obj15.children = intl3.string(trackAction(tmp3[13]).t["JKqu+4"]);
                 items7[1] = closure_7(trackAction(tmp3[16]).Text, obj15);

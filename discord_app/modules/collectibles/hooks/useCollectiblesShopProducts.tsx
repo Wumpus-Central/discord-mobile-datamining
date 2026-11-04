@@ -108,11 +108,11 @@ function useAbsentIds(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectiblesShopProducts.tsx");
 
-export function useFetchResolvedAbsent(id, arg1) {
+export function useFetchResolvedAbsent(id, fetchState) {
   [tmp2, tmp3] = noop.useState({ id, sawFetch: false });
   let flag = tmp2.sawFetch;
   if (tmp2.id !== id) {
-    const obj2 = { id, sawFetch: null != arg1 };
+    const obj2 = { id, sawFetch: null != fetchState };
     tmp3(obj2);
     flag = tmp8;
   } else {
@@ -121,11 +121,11 @@ export function useFetchResolvedAbsent(id, arg1) {
       tmp3(obj3);
       flag = true;
     }
-    tmp5 = null == arg1 || tmp2.sawFetch;
+    tmp5 = null == fetchState || tmp2.sawFetch;
   }
   let tmp10 = "" !== id;
   if (tmp10) {
-    tmp10 = null == arg1;
+    tmp10 = null == fetchState;
   }
   if (tmp10) {
     tmp10 = flag;

@@ -42,7 +42,7 @@ function DescriptiveBenefitRow(benefit) {
   if (null != benefit.description) {
     const obj = {
       style: tmp.benefitDescription,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "interactive-text-default",
       children: benefit.description,
     };
@@ -66,7 +66,7 @@ function ChannelBenefitRow(benefit) {
     benefit.ref_id,
   );
   if (null == channelWithTemplateFallback) {
-    const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj2 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
     obj2.children = "[" + intl.string(util.t.bz1PZX) + "]";
@@ -76,7 +76,7 @@ function ChannelBenefitRow(benefit) {
     const obj4 = { style: tmp.channelRow, children: null };
     const obj5 = { style: tmp.channelIcon, size: "xs" };
     items = [GuildRoleSubscriptionBenefitUtils.renderChannelIcon(channelWithTemplateFallback, obj5)];
-    const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp5 };
+    const obj6 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: tmp5 };
     items[1] = hasOwnProperty(Text_Text.Text, obj6);
     obj4.children = items;
     obj3.children = timestampProducer(View, obj4);
@@ -92,7 +92,7 @@ function IntangibleBenefitRow(benefit) {
     guildId: benefit.guildId,
     isInteractive: benefit.isInteractive,
     children: hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: benefit.name,
     }),
@@ -107,18 +107,18 @@ function EmojiBenefitRow(benefit) {
   items = [
     hasOwnProperty(Text_Text.Text, {
       style: tmp.emojiColons,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-muted",
       children: ":",
     }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: benefit.name,
     }),
     hasOwnProperty(Text_Text.Text, {
       style: tmp.emojiColons,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-muted",
       children: ":",
     }),
@@ -127,9 +127,9 @@ function EmojiBenefitRow(benefit) {
   return timestampProducer(BaseBenefitRow, obj);
 }
 const View = fn(17).View;
-const constants = fn(17339).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(17430).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", justifyContent: "flex-start" },

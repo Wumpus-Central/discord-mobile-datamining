@@ -8,7 +8,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ActivityIndicator: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj = { loader: null, loaderIndicator: null, loaderText: null };
 let obj3 = {};
@@ -33,7 +33,7 @@ export default noop.memo(function MediaModalLoadingOverlay(progress) {
   items = [tmp.loader, style];
   obj.style = items;
   if ("error" === status) {
-    const obj2 = { style: tmp.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: null };
+    const obj2 = { style: tmp.loaderText, variant: "heading-sm/semibold", color: "text-overlay-light", children: null };
     const intl = util.intl;
     obj2.children = intl.string(util.t["+ITMYX"]);
     let tmp12Result1 = hasOwnProperty(Text_Text.Text, obj2);
@@ -42,7 +42,7 @@ export default noop.memo(function MediaModalLoadingOverlay(progress) {
     if (null != progress) {
       const obj3 = {
         style: tmp.loaderText,
-        variant: "heading-md/semibold",
+        variant: "heading-sm/semibold",
         color: "text-overlay-light",
         children: null,
       };

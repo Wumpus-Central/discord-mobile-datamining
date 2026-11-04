@@ -25,7 +25,7 @@ function ProductNameAndDescription(product) {
       accessibilityRole: "header",
       children: product.name,
     }),
-    React4(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription }),
+    React4(Text_Text.Text, { variant: "body-md/medium", color: "text-default", children: productDescription }),
   ];
   obj2.children = items;
   return hasOwnProperty(View, obj2);
@@ -35,12 +35,12 @@ function ProductPurchaseStatus(product) {
   const result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
   const productPurchaseState = useProductPurchaseState.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
-    const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
+    const obj3 = { variant: "body-md/semibold", color: "interactive-text-active", children: null };
     const intl2 = util.intl;
     obj3.children = intl2.string(util.t["6cfuDj"]);
     let children = React4(Text_Text.Text, obj3);
   } else if (tmp5) {
-    const obj4 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
+    const obj4 = { variant: "body-md/semibold", color: "interactive-text-active", children: null };
     const intl = util.intl;
     obj4.children = intl.string(util.t.BEjTij);
     children = React4(Text_Text.Text, obj4);

@@ -27,7 +27,7 @@ export default function DiscordTag(arg0) {
   const obj = { style: tmp.container, children: null };
   if (null != nick) {
     const obj2 = {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       maxFontSizeMultiplier: 2,
       style: nicknameStyle,
       lineClamp: 1,
@@ -38,7 +38,7 @@ export default function DiscordTag(arg0) {
     tmp2Result2 = null;
     if (null != user) {
       const obj3 = {
-        variant: "text-md/semibold",
+        variant: "body-md/semibold",
         style: usernameStyle,
         lineClamp: 1,
         maxFontSizeMultiplier: 2,
@@ -48,7 +48,7 @@ export default function DiscordTag(arg0) {
       const hasUniqueUsernameResult = user.hasUniqueUsername();
       let tmp2Result = !hasUniqueUsernameResult;
       if (!hasUniqueUsernameResult) {
-        const obj4 = { variant: "text-md/semibold", color: "text-muted", style: discriminatorStyle, children: null };
+        const obj4 = { variant: "body-md/semibold", color: "text-muted", style: discriminatorStyle, children: null };
         const items1 = ["#", user.discriminator];
         obj4.children = items1;
         tmp2Result = hasOwnProperty(Text_Text.Text, obj4);

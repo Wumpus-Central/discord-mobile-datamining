@@ -90,9 +90,9 @@ function MemberActionRow(channelId) {
       const obj13 = { onPress: tmp10, style: tmp.actionContainer, children: null };
       const items4 = [tmp14, ,];
       const obj15 = { style: tmp.channelNameContainer, children: null };
-      const obj16 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title };
+      const obj16 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: title };
       const items5 = [tmp15(tmp2(tmp3[21]).Text, obj16)];
-      const obj17 = { variant: "text-xs/normal", color: "text-muted", children: null };
+      const obj17 = { variant: "body-xs/normal", color: "text-muted", children: null };
       const intl = tmp2(tmp3[25]).intl;
       const obj18 = { channelName: tmp6 };
       obj17.children = intl.format(tmp2(tmp3[25]).t.MkzlDL, obj18);
@@ -251,7 +251,7 @@ export default function GuildOnboardingNewMemberActions(guildId) {
           obj9.children = closure_15(tmp2(tmp3[22]).Icon, obj10);
           const items7 = [closure_15(View, obj9)];
           const obj11 = { style: tmp.channelNameContainer, children: null };
-          const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+          const obj12 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
           const intl = tmp2(tmp3[25]).intl;
           obj12.children = intl.string(tmp2(tmp3[25]).t["K/i3iQ"]);
           obj11.children = closure_15(tmp2(tmp3[21]).Text, obj12);

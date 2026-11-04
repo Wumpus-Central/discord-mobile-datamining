@@ -517,9 +517,9 @@ export const ShopPurchaseType = {
   [5]: "GIFT",
 };
 export const EXTERNAL_PRODUCT_SKU_IDS = obj2;
-export function isFractionalPremiumSku(arg0) {
+export function isFractionalPremiumSku(skuId) {
   const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
-  return ALL.has(arg0);
+  return ALL.has(skuId);
 }
 export function isExternalProduct(arg0) {
   return set.has(arg0);

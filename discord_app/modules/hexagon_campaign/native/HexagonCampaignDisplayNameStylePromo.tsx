@@ -44,7 +44,7 @@ export default function HexagonCampaignDisplayNameStylePromo(showLearnMore) {
         return React4(
           Text_Text.Text,
           {
-            variant: "text-xxs/medium",
+            variant: "footnote/medium",
             color: "text-strong",
             style: link.link,
             accessibilityRole: "link",
@@ -60,7 +60,7 @@ export default function HexagonCampaignDisplayNameStylePromo(showLearnMore) {
     formatResult = intl.string(_modDef4412.WyZOg3);
   }
   items[1] = closure_4(require("Text/Text").Text, {
-    variant: "text-xxs/medium",
+    variant: "footnote/medium",
     color: "text-default",
     lineClamp: 1,
     children: formatResult,

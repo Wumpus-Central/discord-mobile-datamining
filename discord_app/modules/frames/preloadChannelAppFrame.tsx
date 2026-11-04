@@ -11,8 +11,8 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6967);
-({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
+const FramesConstants = fn(6982);
+({ getFrameSurfaceForChannel: closure_6, makeFrameId: metroImportDefault } = FramesConstants);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: closure_10 } = Constants);
 const size = fn(2);
@@ -34,7 +34,7 @@ export function preloadChannelAppFrame(id) {
   }
   let canResult = null != channel && null != application_id && null != tmp4;
   if (canResult) {
-    canResult = null == FramesStore.getFrame(React5(application_id, tmp4));
+    canResult = null == FramesStore.getFrame(metroImportDefault(application_id, tmp4));
   }
   if (canResult) {
     canResult = PermissionStore.can(constants2.VIEW_CHANNEL, channel);
@@ -49,11 +49,11 @@ export function preloadChannelAppFrame(id) {
       if (null != getURLForApplicationDefault(application_id)) {
         createProxyTicket.prefetchProxyTicket(application_id, getChannelIdForEmbeddedSurfaceDefault(tmp4), tmp4.type);
         const tmp11Result2 = createProxyTicket;
-        loadEmbeddedAppCSPForLaunchDefault(application_id).catch(React7);
+        loadEmbeddedAppCSPForLaunchDefault(application_id).catch(React6);
         const useApplication = ApplicationActionCreators.useApplication;
         items = [application_id];
         const many = useApplication.fetchMany(items);
-        many.catch(React7);
+        many.catch(React6);
         const promise = loadEmbeddedAppCSPForLaunchDefault(application_id);
       }
     }

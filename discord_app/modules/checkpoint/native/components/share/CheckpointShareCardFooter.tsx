@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import inlineStyles from "../../../../../../_runtime/08155_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08171_inlineStyles.js";
 import CheckpointShareCardContext from "CheckpointShareCardContext.tsx";
 import ArrowLargeRightIcon from "../../../../../design/components/Icon/native/redesign/generated/ArrowLargeRightIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let size = { width: 145, height: 28 };
 const createStyles = fn(5141);
 let obj = {
@@ -111,5 +111,5 @@ export default function CheckpointShareCardFooter(isCharacterAndStats) {
   });
   items1[2] = timestampProducer(hasOwnProperty, obj7);
   obj2.children = items1;
-  return React5(hasOwnProperty, obj2);
+  return metroImportDefault(hasOwnProperty, obj2);
 }

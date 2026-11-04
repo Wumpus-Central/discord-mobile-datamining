@@ -6,7 +6,6 @@ let closure_0 = { chatOpen: true, debugOpen: false, previewSelection: null, chat
 let c1 = null;
 let c2 = null;
 let c3 = false;
-let c4 = "";
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
@@ -25,9 +24,6 @@ prototype["getShownProjectId"] = function getShownProjectId() {
     tmp = c1;
   }
   return tmp;
-};
-prototype["getHomePrompt"] = function getHomePrompt() {
-  return c4;
 };
 prototype["getScrollTop"] = function getScrollTop(arg0) {
   let num = map.get(arg0);
@@ -68,10 +64,6 @@ const conjurePagesStore = new ConjurePagesStore(DispatcherDefault, {
     }
     return flag;
   },
-  CONJURE_PAGES_HOME_PROMPT_SAVE: function handleHomePromptSave(prompt) {
-    const _prompt = prompt.prompt;
-    return false;
-  },
   CONJURE_PAGES_SCROLL_SAVE: function handleScrollSave(key) {
     const result = map.set(key.key, key.scrollTop);
     return false;
@@ -108,7 +100,6 @@ const conjurePagesStore = new ConjurePagesStore(DispatcherDefault, {
     c1 = null;
     c2 = null;
     c3 = false;
-    c4 = "";
     map.clear();
     map1.clear();
     set.clear();

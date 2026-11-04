@@ -1,7 +1,7 @@
 // discord_app/design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   purple: {
     start: nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_START,

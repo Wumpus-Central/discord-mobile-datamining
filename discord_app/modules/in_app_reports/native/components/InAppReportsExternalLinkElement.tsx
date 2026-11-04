@@ -4,29 +4,60 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
+import InAppReportsOptionRowDefault from "InAppReportsOptionRow.tsx";
+import LinkExternalMediumIcon from "../../../../design/components/Icon/native/redesign/generated/LinkExternalMediumIcon.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 function ExternalLinkItem(data) {
   data = data.data;
-  const url = data.url;
-  let tmp3 = null;
-  if (data.is_localized) {
-    const obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
-    const obj2 = { IconComponent: url(15317).LinkExternalMediumIcon };
-    obj.trailing = closure_4(url(7109).TableRowIcon, obj2);
+  ({ url: require, link_description } = data);
+  ({ link_text, is_localized } = data);
+  const tmp = closure_6();
+  let tmp3Result2 = null;
+  if (is_localized) {
+    const obj = { label: link_text, trailing: null, onPress: null, accessibilityRole: "link", children: null };
+    const obj2 = { style: tmp.linkIcon, children: null };
+    const obj3 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+    obj2.children = closure_4(LinkExternalMediumIcon.LinkExternalMediumIcon, obj3);
+    obj.trailing = closure_4(View, obj2);
     obj.onPress = function onLinkPress() {
-      LinkingDefault.openURL(url);
+      LinkingDefault.openURL(require);
     };
-    tmp3 = closure_4(url(8303).RowButton, obj);
+    let tmp3Result = null != link_description;
+    if (tmp3Result) {
+      const obj4 = {
+        style: tmp.linkDescription,
+        variant: "body-xs/medium",
+        color: "text-subtle",
+        children: link_description,
+      };
+      tmp3Result = closure_4(Text_Text.Text, obj4);
+    }
+    obj.children = tmp3Result;
+    tmp3Result2 = closure_4(InAppReportsOptionRowDefault, obj);
   }
-  return tmp3;
+  return tmp3Result2;
 }
 const View = _mod17.View;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { linksContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16, gap: nativeDefault.space.PX_8 } };
+let obj = {
+  linksContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16, gap: nativeDefault.space.PX_8 },
+  linkIcon: null,
+  linkDescription: null,
+};
+let size = {
+  width: nativeDefault.space.PX_24,
+  height: nativeDefault.space.PX_24,
+  alignItems: "center",
+  justifyContent: "center",
+};
+obj.linkIcon = size;
+let obj2 = { flex: 1, alignSelf: "stretch", paddingHorizontal: 16, gap: nativeDefault.space.PX_8 };
+obj.linkDescription = { marginTop: nativeDefault.space.PX_4 };
 let closure_6 = createStyles.createStyles(obj);
+let size = size_mod;
 const result = size.fileFinishedImporting(
   "modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx",
 );

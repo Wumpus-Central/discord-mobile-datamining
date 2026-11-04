@@ -81,7 +81,7 @@ function TabItemCount(arg0) {
     style: null,
     children: hasOwnProperty(Text_Text.Text, {
       animated: true,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       style: useAnimatedTextStyle({ index, activeIndex, pressed, variant }),
       lineClamp: 1,
       children: count,
@@ -94,7 +94,7 @@ function TabItemCount(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = module_1652.createAnimatedComponent(Pressable);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let closure_9 = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
@@ -201,7 +201,7 @@ export function TabItem(arg0) {
   const items3 = [
     closure_5(require("Text/Text").Text, {
       animated: true,
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       style: tmp9,
       lineClamp: 1,
       children: label,
@@ -216,7 +216,7 @@ export function TabItem(arg0) {
   items3[1] = tmp14Result;
   let tmp14Result2 = null;
   if (null != indicatorDot) {
-    const obj5 = { style: tmp2.indicatorDot, children: closure_5(tmp3(9619).IndicatorDot, {}) };
+    const obj5 = { style: tmp2.indicatorDot, children: closure_5(tmp3(9638).IndicatorDot, {}) };
     tmp14Result2 = closure_5(closure_4, obj5);
   }
   items3[2] = tmp14Result2;

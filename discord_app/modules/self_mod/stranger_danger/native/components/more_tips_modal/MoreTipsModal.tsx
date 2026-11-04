@@ -6,7 +6,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import MonitoringAgentDefault from "../../../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef8483 from "../../../../../../../_runtime/metro/08483__.js";
+import _modDef8499 from "../../../../../../../_runtime/metro/08499__.js";
 import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";
 import SafetyTipsSectionDefault from "../../../../shared/native/SafetyTipsSection.tsx";
 import WasThisHelpfulSectionDefault from "WasThisHelpfulSection.tsx";
@@ -21,26 +21,26 @@ function MoreTipsModalScreen(learnMore) {
   const obj = { keyboardShouldPersistTaps: "handled", style: tmp.scroll, children: null };
   const obj2 = { style: tmp.contentContainer, children: null };
   const obj3 = { style: tmp.tipsContainer, children: null };
-  items = [React6(SafetyTipsSectionDefault, { description, safetyTips, showHeader: true })];
+  items = [React5(SafetyTipsSectionDefault, { description, safetyTips, showHeader: true })];
   let tmp2Result = null;
   if (null != learnMore) {
     const obj4 = { style: tmp.learnMore, children: learnMore };
-    tmp2Result = React6(React4, obj4);
+    tmp2Result = React5(React4, obj4);
   }
   items[1] = tmp2Result;
   obj3.children = items;
-  const items1 = [React7(React4, obj3), ,];
+  const items1 = [React6(React4, obj3), ,];
   const obj5 = { children: null };
-  const obj6 = { variant: "eyebrow", color: "text-default", style: tmp.header, children: null };
+  const obj6 = { variant: "body-sm/medium", color: "text-default", style: tmp.header, children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t.K5FKtc);
-  const items2 = [React6(Text_Text.Text, obj6), actionItems];
+  const items2 = [React5(Text_Text.Text, obj6), actionItems];
   obj5.children = items2;
-  items1[1] = React7(React4, obj5);
-  items1[2] = React6(WasThisHelpfulSectionDefault, { channelId, warningId, senderId });
+  items1[1] = React6(React4, obj5);
+  items1[2] = React5(WasThisHelpfulSectionDefault, { channelId, warningId, senderId });
   obj2.children = items1;
-  obj.children = React7(React4, obj2);
-  return React6(hasOwnProperty, obj);
+  obj.children = React6(React4, obj2);
+  return React5(hasOwnProperty, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
@@ -105,13 +105,13 @@ export default function MoreTipsModal(headerStyle) {
             onPress() {
               return warningId(senderId[12]).popWithKey(channelId);
             },
-            source: _modDef8483,
+            source: _modDef8499,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null,
           };
           const intl = util.intl;
           obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-          return React6(HeaderActionButton.HeaderActionButton, obj);
+          return React5(HeaderActionButton.HeaderActionButton, obj);
         },
         headerTitle() {
           return null;
@@ -121,7 +121,7 @@ export default function MoreTipsModal(headerStyle) {
         },
         headerStyle: headerStyle.headerStyle,
         render() {
-          return React6(MoreTipsModalScreen, {
+          return React5(MoreTipsModalScreen, {
             channelId: warningId,
             warningId: senderId,
             senderId: stateFromStores,

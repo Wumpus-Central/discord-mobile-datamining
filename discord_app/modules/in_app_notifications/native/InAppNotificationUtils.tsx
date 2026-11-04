@@ -7,12 +7,12 @@ import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx"
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(11156).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(11204).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
-  ChannelTypes: metroRequire,
-  InAppNotificationTypes: closure_7,
+  ChannelTypes: closure_6,
+  InAppNotificationTypes: metroImportDefault,
   MessageEmbedTypes: closure_8,
   MessageFlags: closure_9,
 } = Constants);
@@ -50,9 +50,9 @@ export function generateInAppNotificationId() {
   return v1.v4();
 }
 export function getMessagePreviewTextVariant() {
-  let str = "text-md/medium";
+  let str = "body-md/medium";
   if (obj.isIOS()) {
-    str = "text-md/normal";
+    str = "body-md/normal";
   }
   return str;
 }

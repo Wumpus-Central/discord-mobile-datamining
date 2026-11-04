@@ -721,7 +721,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(7751).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(7767).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -734,16 +734,16 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17838, dependencyMap.paths),
+          asyncRequireImpl(17934, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(7101).TableRow, obj2)];
+  items = [closure_17(premiumTrialOffer(7116).TableRow, obj2)];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(7101).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(7116).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -755,7 +755,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17838, dependencyMap.paths),
+          asyncRequireImpl(17934, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -763,7 +763,7 @@ function TrialOfferSheetExample() {
     },
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(7186).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(7201).TableRowGroup, obj3);
 }
 function PremiumToggles() {
   items = [DevSettingsStore];
@@ -783,7 +783,7 @@ function PremiumToggles() {
     children: stateFromStores.map((item) => {
       [tmp, tmp2] = item;
       return closure_17(
-        closure_0(7489).TableSwitchRow,
+        closure_0(7505).TableSwitchRow,
         {
           label: tmp3,
           subLabel: tmp,
@@ -896,7 +896,7 @@ function GuildTagBadges() {
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const DevSettingsCategory = fn(5750).DevSettingsCategory;
+const DevSettingsCategory = fn(5764).DevSettingsCategory;
 const PremiumConstants = fn(1387);
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = PremiumConstants);
 const jsxProd = fn(21);

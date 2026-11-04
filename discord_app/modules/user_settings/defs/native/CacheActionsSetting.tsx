@@ -42,10 +42,10 @@ function CacheActionsActionSheet() {
   let obj3 = { title: null };
   let intl = util.intl;
   obj3.title = intl.string(util.t.ZVZVwR);
-  obj2.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj3);
+  obj2.header = metroImportDefault(BottomSheetTitleHeader.BottomSheetTitleHeader, obj3);
   const intl2 = util.intl;
   obj2.dismissAccessibilityLabel = intl2.string(util.t.AVZpFH);
-  let obj4 = { icon: React5(FileUpIcon.FileUpIcon, {}), label: null, disabled: null, onPress: null };
+  let obj4 = { icon: metroImportDefault(FileUpIcon.FileUpIcon, {}), label: null, disabled: null, onPress: null };
   const intl3 = util.intl;
   obj4.label = intl3.string(util.t["/GUaXh"]);
   obj4.disabled = first;
@@ -99,11 +99,11 @@ function CacheActionsActionSheet() {
       }
     }
   });
-  items = [React5(TableRow.TableRow, obj4), ,];
+  items = [metroImportDefault(TableRow.TableRow, obj4), ,];
   let tmp7Result3 = null != DiskUsageManagerDefault.calculateSize;
   if (tmp7Result3) {
     let obj5 = {
-      icon: React5(FileIcon.FileIcon, {}),
+      icon: metroImportDefault(FileIcon.FileIcon, {}),
       label: null,
       trailing: null,
       disabled: null,
@@ -115,20 +115,23 @@ function CacheActionsActionSheet() {
     obj5.label = intl4.string(isCalculating ? t.Ynmbie : t.iAFGRu);
     let tmp7Result = null;
     if (isCalculating) {
-      tmp7Result = React5(ActivityIndicator_ActivityIndicator.ActivityIndicator, { size: "small", accessible: false });
+      tmp7Result = metroImportDefault(ActivityIndicator_ActivityIndicator.ActivityIndicator, {
+        size: "small",
+        accessible: false,
+      });
     }
     obj5.trailing = tmp7Result;
     obj5.disabled = first;
     let obj6 = { busy: isCalculating, disabled: first };
     obj5.accessibilityState = obj6;
     obj5.onPress = diskUsageMeasurement.handleCalculateSize;
-    tmp7Result3 = React5(TableRow.TableRow, obj5);
+    tmp7Result3 = metroImportDefault(TableRow.TableRow, obj5);
   }
   let obj7 = { hasIcons: true, children: null };
   items[1] = tmp7Result3;
   const obj8 = {
     variant: "danger",
-    icon: React5(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }),
+    icon: metroImportDefault(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }),
     label: null,
     disabled: null,
     onPress: null,
@@ -188,30 +191,30 @@ function CacheActionsActionSheet() {
       }
     }
   });
-  items[2] = React5(TableRow.TableRow, obj8);
+  items[2] = metroImportDefault(TableRow.TableRow, obj8);
   obj7.children = items;
-  const items1 = [React6(TableRowGroup.TableRowGroup, obj7)];
+  const items1 = [React5(TableRowGroup.TableRowGroup, obj7)];
   let tmp7Result4 = null != diskUsageState;
   if (tmp7Result4) {
     const obj9 = { state: diskUsageState, onDiagnosticsBusyChange: tmp4[1] };
-    tmp7Result4 = React5(CacheActionsDiskUsageSectionDefault, obj9);
+    tmp7Result4 = metroImportDefault(CacheActionsDiskUsageSectionDefault, obj9);
   }
   items1[1] = tmp7Result4;
   obj2.children = items1;
-  return React6(ActionSheet.ActionSheet, obj2);
+  return React5(ActionSheet.ActionSheet, obj2);
 }
 const useState = fn(19).useState;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const pressable = SettingBuilders.createPressable({
   useTitle: function useCacheActionsTitle() {
     const intl = util.intl;
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(17715).FileWarningIcon,
+  IconComponent: fn(17811).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(
       Promise.resolve({ default: CacheActionsActionSheet }),

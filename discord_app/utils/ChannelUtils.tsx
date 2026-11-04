@@ -54,7 +54,7 @@ function allowChannelAccess(id, channelType, ROLE) {
 ({
   isGuildSelectableChannelType: closure_4,
   TEXT_CHANNEL_TYPES: hasOwnProperty,
-  THREAD_CHANNEL_TYPES: metroRequire,
+  THREAD_CHANNEL_TYPES: closure_6,
 } = ChannelRecord);
 const ChannelTypes = Constants.ChannelTypes;
 ({

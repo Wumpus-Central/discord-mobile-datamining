@@ -11,8 +11,8 @@ require = fn;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
-  FriendSourceFlags: metroRequire,
-  AllFriendSourceFlags: closure_7,
+  FriendSourceFlags: closure_6,
+  AllFriendSourceFlags: metroImportDefault,
   ComponentActions: closure_8,
 } = Constants);
 const NonSpamRetrainingOptInOptions = {
@@ -63,7 +63,7 @@ export function getSanitizedActivityJoiningRestrictedGuilds() {
   return new Set(found);
 }
 export function computeFlags(setting) {
-  if ((setting & React5) === React5) {
+  if ((setting & metroImportDefault) === metroImportDefault) {
     let obj = { all: true, mutualFriends: true, mutualGuilds: true };
   } else {
     obj = {

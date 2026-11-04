@@ -16,26 +16,26 @@ require = fn;
 function ContentHeader(arg0) {
   ({ count, title } = arg0);
   const obj = { variant: "body-sm/medium", color: "text-muted", children: null };
-  items = [React7(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: count }), " ", title];
+  items = [React6(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: count }), " ", title];
   obj.children = items;
   return closure_1_10(Text_Text.Text, obj);
 }
 function Separator() {
-  return React7(timestampProducer, { style: closure_11().separator });
+  return React6(timestampProducer, { style: closure_11().separator });
 }
 function BenefitShowCase(children) {
   const title = children.title;
   let tmp3 = title;
   if (typeof title === "string") {
-    const obj2 = { variant: "text-md/semibold", color: "text-default", children: title };
-    tmp3 = React7(Text_Text.Text, obj2);
+    const obj2 = { variant: "body-md/semibold", color: "text-default", children: title };
+    tmp3 = React6(Text_Text.Text, obj2);
   }
   const obj = { children: null };
   items = [
     tmp3,
-    React7(native.Spacer, { size: 2 }),
-    React7(Text_Text.Text, {
-      variant: "text-sm/medium",
+    React6(native.Spacer, { size: 2 }),
+    React6(Text_Text.Text, {
+      variant: "body-sm/medium",
       color: "interactive-text-default",
       children: children.description,
     }),
@@ -48,18 +48,18 @@ function ChannelBenefitShowCase(channel) {
   const tmp = closure_11();
   const obj2 = { style: tmp.channelTitle, children: null };
   items = [
-    React7(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(type), { size: "xs" }),
-    React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: name }),
+    React6(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(type), { size: "xs" }),
+    React6(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", children: name }),
   ];
   obj2.children = items;
-  return React7(BenefitShowCase, { title: closure_1_10(timestampProducer, obj2), description });
+  return React6(BenefitShowCase, { title: closure_1_10(timestampProducer, obj2), description });
 }
 function ViewEntireTemplateFooter() {
   const tmp = closure_11();
   const obj = { style: tmp.viewEntireTemplateFooter, children: null };
   const obj2 = { children: null };
   const obj3 = {
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     color: "interactive-text-hover",
     style: tmp.viewEntireTemplateText,
     children: null,
@@ -67,22 +67,22 @@ function ViewEntireTemplateFooter() {
   const intl = util.intl;
   obj3.children = intl.string(util.t.kejaOD);
   items = [
-    React7(Text_Text.Text, obj3),
-    React7(native.Spacer, { size: 3 }),
-    React7(timestampProducer, { style: tmp.viewEntireTemplateFooterUnderline }),
+    React6(Text_Text.Text, obj3),
+    React6(native.Spacer, { size: 3 }),
+    React6(timestampProducer, { style: tmp.viewEntireTemplateFooterUnderline }),
   ];
   obj2.children = items;
   const items1 = [
     closure_1_10(timestampProducer, obj2),
-    React7(timestampProducer, { children: React7(ChevronSmallUpIcon.ChevronSmallUpIcon, { size: "xs" }) }),
+    React6(timestampProducer, { children: React6(ChevronSmallUpIcon.ChevronSmallUpIcon, { size: "xs" }) }),
   ];
   obj.children = items1;
   return closure_1_10(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
-({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ TouchableOpacity: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -225,7 +225,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(20154, dependencyMap.paths),
+        asyncRequireImpl(20270, dependencyMap.paths),
         "TierTemplatePriceReselectionCard",
         obj2,
       );
@@ -247,7 +247,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress: function handleViewEntireTemplate() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20150, dependencyMap.paths), "TierTemplateCard", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20266, dependencyMap.paths), "TierTemplateCard", {
         template,
         guildId,
         handleSelectTemplateInPreview: callback1,

@@ -15,34 +15,34 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "createStyles",
-    borderTopRightRadius: "alignItems",
-    borderBottomLeftRadius: "replace",
+    borderTopLeftRadius: "ty",
+    borderTopRightRadius: "ao",
+    borderBottomLeftRadius: "children",
     borderBottomRightRadius: "HTTP",
     divider: "r",
     dividerColor: "isArray",
     dividerPaddingLeft: "Array",
-    dividerPaddingRight: "alignItems",
-    placeholderShape: "Path",
-    placeholderShapeColor: "order",
-    placeholderShapeCount: "Array",
+    dividerPaddingRight: "ao",
+    placeholderShape: "",
+    placeholderShapeColor: "action",
+    placeholderShapeCount: "r",
     placeholderShapeGap: "isArray",
-    placeholderShapePaddingHorizontal: "alignItems",
-    placeholderShapePaddingVertical: "nm",
-    placeholderFeedBackgroundColor: "p",
+    placeholderShapePaddingHorizontal: "ao",
+    placeholderShapePaddingVertical: "accessibilityRole",
+    placeholderFeedBackgroundColor: "h",
     placeholderFeedColor: "a",
     placeholderFeedLabelPadding: "isArray",
     placeholderFeedLabelPaddingInnerRatio: "Array",
-    placeholderFeedLabelSize: "channel_id",
-    placeholderFeedLabelSecondarySize: "type",
+    placeholderFeedLabelSize: "id",
+    placeholderFeedLabelSecondarySize: "paddingHorizontal",
     placeholderFeedPadding: "x",
-    placeholderFeedShape: "alignItems",
-    placeholderFeedShapeSize: "useState",
+    placeholderFeedShape: "ao",
+    placeholderFeedShapeSize: "category",
     placeholderType: NONE,
     width: null,
     height: null,
-    verticalAlignment: null,
-    horizontalAlignment: null,
+    verticalAlignment: "Classic",
+    horizontalAlignment: 5.857,
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7351).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7367).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

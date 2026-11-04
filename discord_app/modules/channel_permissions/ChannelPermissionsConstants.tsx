@@ -10,7 +10,7 @@ import size from "../../../_runtime/metro/00002__.js";
   ChannelTypes: c3,
   ChannelTypesSets: closure_4,
   HelpdeskArticles: hasOwnProperty,
-  Permissions: metroRequire,
+  Permissions: closure_6,
 } = Constants);
 const result = size.fileFinishedImporting("modules/channel_permissions/ChannelPermissionsConstants.tsx");
 

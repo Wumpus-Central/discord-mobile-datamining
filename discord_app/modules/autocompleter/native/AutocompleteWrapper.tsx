@@ -69,7 +69,7 @@ function getItemKey(type, arg1) {
   }
 }
 get_ActivityIndicator = fn(17);
-({ PixelRatio: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ PixelRatio: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({
   AutoCompleteResultTypes: closure_11,
@@ -77,10 +77,10 @@ const Constants = fn(1072);
   AnalyticEvents: map1,
   UpsellTypes: closure_14,
 } = Constants);
-const BOOLEAN_CHOICES = fn(6155).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(10355);
+const BOOLEAN_CHOICES = fn(6170).BOOLEAN_CHOICES;
+const ApplicationCommandsConstants = fn(10403);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_16, AUTOCOMPLETE_ROW_HEIGHT: closure_17 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(6156);
+const ChannelAutocompleteConstants = fn(6171);
 ({
   MENTION_SENTINEL: closure_18,
   CHANNEL_SENTINEL: closure_19,
@@ -89,15 +89,15 @@ const ChannelAutocompleteConstants = fn(6156);
   GAME_MENTION_INPUT_PREFIX: closure_22,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_23,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10439).AutocompleteTypes;
+const AutocompleteTypes = fn(10487).AutocompleteTypes;
 const EmojiInteractionPoint = fn(1388).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_26, Fragment: closure_27, jsxs: closure_28 } = jsxProd);
-let c29 = "text-sm/semibold";
+let c29 = "body-sm/semibold";
 const hairlineWidth = StyleSheet.hairlineWidth;
 let c31 = 200;
 let closure_32 = { allowSpaces: true, maxQueryLength: 64 };
-let obj = { allowSpaces: true, maxQueryLength: fn(8805).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
+let obj = { allowSpaces: true, maxQueryLength: fn(8822).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
 const createStyles = fn(5141);
 let closure_34 = createStyles.createStyles(
   (borderRadius, borderWidth, borderTopWidth, marginHorizontal, marginBottom) => {
@@ -921,9 +921,9 @@ class ACWrapper {
       () =>
         autocompleteType === AutocompleteTypes.GAME_MENTIONS
           ? () => {
-              const gameSearchSession = analyticsLocations(9271).getGameSearchSession(
-                analyticsLocations(9743).GameSearchSurface.CHAT_MENTION,
-                analyticsLocations(9272).GameSearchFilterGroup.DEFAULT,
+              const gameSearchSession = analyticsLocations(9288).getGameSearchSession(
+                analyticsLocations(9761).GameSearchSurface.CHAT_MENTION,
+                analyticsLocations(9289).GameSearchFilterGroup.DEFAULT,
               );
               return gameSearchSession.end();
             }

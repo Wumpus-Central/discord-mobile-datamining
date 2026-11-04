@@ -30,12 +30,12 @@ function ForLaterPage(type) {
     bookmarkCount: SavedMessagesStore.getBookmarkCount(),
   }));
   ({ overdueReminderCount, bookmarkCount } = stateFromStoresObject);
-  if (type !== throttledNow(10322).SavedMessageSortTypes.BOOKMARK) {
+  if (type !== throttledNow(10370).SavedMessageSortTypes.BOOKMARK) {
     bookmarkCount = savedMessages.length;
   }
-  const tmp6 = fetchState === throttledNow(10322).BookmarksFetchState.LOADING;
+  const tmp6 = fetchState === throttledNow(10370).BookmarksFetchState.LOADING;
   const obj = throttledNow(504);
-  const analyticsLocations = useAnalyticsLocationsDefault(tmp(7471).FOR_LATER_POPOUT).analyticsLocations;
+  const analyticsLocations = useAnalyticsLocationsDefault(tmp(7487).FOR_LATER_POPOUT).analyticsLocations;
   const obj2 = { type: null, name: null, properties: null };
   const tmpResult = useAnalyticsLocationsDefault;
   obj2.type = throttledNow(1260).ImpressionTypes.MODAL;
@@ -54,11 +54,11 @@ function ForLaterPage(type) {
   [][0] = throttledNow;
   if (0 === savedMessages.length) {
     if (!tmp6) {
-      if (fetchState !== tmp4(10322).BookmarksFetchState.LOADED_HAS_MORE) {
+      if (fetchState !== tmp4(10370).BookmarksFetchState.LOADED_HAS_MORE) {
         const obj3 = { value: analyticsLocations, children: null };
         const obj4 = { type };
-        obj3.children = closure_8(tmp(11315), obj4);
-        let tmp18 = closure_8(tmp4(7446).AnalyticsLocationProvider, obj3);
+        obj3.children = closure_8(tmp(11365), obj4);
+        let tmp18 = closure_8(tmp4(7462).AnalyticsLocationProvider, obj3);
       }
     }
     const obj5 = { style: null };
@@ -83,14 +83,14 @@ function ForLaterPage(type) {
       tmp22Result = closure_8(closure_5, obj9);
     }
     obj8.ListFooterComponent = tmp22Result;
-    obj7.children = closure_8(tmp4(7414).FlashList, obj8);
+    obj7.children = closure_8(tmp4(7430).FlashList, obj8);
     obj6.children = closure_8(closure_6, obj7);
-    return closure_8(tmp4(7446).AnalyticsLocationProvider, obj6);
+    return closure_8(tmp4(7462).AnalyticsLocationProvider, obj6);
   }
   const date = new Date();
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);

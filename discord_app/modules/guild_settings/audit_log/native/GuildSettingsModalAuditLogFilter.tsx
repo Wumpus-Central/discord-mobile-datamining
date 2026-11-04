@@ -31,8 +31,8 @@ let closure_13 = noop.memo(function AuditLogFilterUserRow(selected) {
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj2 = { start, end, userId, guildId, onPress, accessibilityRole, accessibilityState, trailing: null };
-  obj2.trailing = React7(FormRadio.FormRadio, { selected });
-  return React7(DetailedGuildIdentityUserRowDefault, obj2);
+  obj2.trailing = React6(FormRadio.FormRadio, { selected });
+  return React6(DetailedGuildIdentityUserRowDefault, obj2);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting(

@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import StoreUtils from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/06913_keysSorter.js";
+import keysSorter from "../../../_runtime/06928_keysSorter.js";
 import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes.tsx";
 import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -81,7 +81,7 @@ function transformRewardRequirementServer(type) {
 }
 function transformSlayerStorefrontPromotionServer(id) {
   str = "default";
-  if (id.id === React7) {
+  if (id.id === React6) {
     str = "nitro";
   }
   const obj = {
@@ -181,8 +181,8 @@ function getSKUShareURL(guildId, applicationId) {
     window.GLOBAL_ENV.WEBAPP_ENDPOINT +
     gesture.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7529).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7531);
+let closure_4 = fn(7545).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7547);
 ({
   BLOONS_TD6_SPLIT_TENDER_PROMOTION_ID: closure_9,
   getChannelsGameShopPrefix: closure_10,
@@ -193,7 +193,7 @@ const Constants = fn(1072);
 ({ GuildFeatures: map1, Routes: closure_14, SKUProductLines: closure_15 } = Constants);
 const CollectibleShopTab = fn(1074).CollectibleShopTab;
 let str = "jpg";
-if (fn(6575).SUPPORTS_WEBP) {
+if (fn(6590).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getRequiredSubscriptionPlanIds(arr) {
@@ -245,6 +245,30 @@ function getStorefrontEmbedShareURL(applicationId, join) {
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/SlayerStorefrontUtils.tsx");
 
+export function getSocialLayerStorefrontBackgroundImageURL(storefront) {
+  const pages = storefront.pages;
+  const found = pages.find((leaderboard) => {
+    leaderboard = leaderboard.leaderboard;
+    let prop;
+    if (leaderboard != null) {
+      prop = leaderboard.backgroundImageAssetId;
+    }
+    return null != prop;
+  });
+  let prop;
+  if (found != null) {
+    let leaderboard = found.leaderboard;
+    if (leaderboard != null) {
+      prop = leaderboard.backgroundImageAssetId;
+    }
+  }
+  let assetURL = null;
+  if (null != prop) {
+    const obj = StoreUtils;
+    assetURL = obj.getAssetURL(storefront.applicationId, prop, 1024, str);
+  }
+  return assetURL;
+}
 export const LARGE_ASSET_FORMAT = str;
 export function getOrderedStorefrontSkuIds(arg0) {
   const set = new Set();
@@ -433,7 +457,7 @@ export function transformSlayerApplicationStorefrontServer(id) {
   obj.promotions = _modDef12.mapValues(promotions, transformSlayerStorefrontPromotionServer);
   return obj;
 }
-export function getPrimaryCarouselItemInfo(tenantMetadata, application_id) {
+export function getPrimaryCarouselItemInfo(tenantMetadata, id) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -443,7 +467,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, application_id) {
   if (undefined !== size) {
     num = size;
   }
-  if (null != application_id) {
+  if (null != id) {
     let carouselItems;
     if (tenantMetadata != null) {
       tenantMetadata = tenantMetadata.tenantMetadata;
@@ -458,24 +482,20 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, application_id) {
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "flexDirection" };
+          let obj4 = { primaryIconAsset: "PX_8", primaryIconLabel: "__closure" };
         } else {
           const obj3 = StoreUtils;
           obj4 = {
-            primaryIconAsset: URLUtilsDefault.toURLSafe(
-              obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp"),
-            ),
+            primaryIconAsset: URLUtilsDefault.toURLSafe(obj3.getAssetURL(id, first.labelIconAssetId, num, "webp")),
             primaryIconLabel: first.label,
           };
-          const toURLSafeResult = URLUtilsDefault.toURLSafe(
-            obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp"),
-          );
+          const toURLSafeResult = URLUtilsDefault.toURLSafe(obj3.getAssetURL(id, first.labelIconAssetId, num, "webp"));
         }
         return obj4;
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "flexDirection" };
+  return { primaryIconAsset: "PX_8", primaryIconLabel: "__closure" };
 }
 export function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

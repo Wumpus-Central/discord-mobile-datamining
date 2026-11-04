@@ -24,7 +24,7 @@ function GiftingSectionTitle(title) {
   return state(TableRowGroup.TableRowGroupTitle, { title: title.title });
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ UserSettingsSections: closure_9, AnalyticsPages: closure_10 } = Constants);
 const PremiumConstants = fn(1387);
@@ -178,7 +178,7 @@ export default function UserSettingsPremiumGifting(ref) {
             const obj19 = { style: tmp2.emptyGiftDescription, accessible: true, children: null };
             const obj20 = {
               style: tmp2.emptyGiftHeader,
-              variant: "text-md/semibold",
+              variant: "body-md/semibold",
               color: "mobile-text-heading-primary",
               children: null,
             };
@@ -187,7 +187,7 @@ export default function UserSettingsPremiumGifting(ref) {
             const items8 = [closure_13(tmp6(tmp4[30]).Text, obj20)];
             const obj21 = {
               style: tmp2.emptyGiftInformation,
-              variant: "text-sm/medium",
+              variant: "body-sm/medium",
               color: "text-default",
               children: null,
             };
@@ -283,7 +283,7 @@ export default function UserSettingsPremiumGifting(ref) {
       obj32.title = intl5.string(tmp6(tmp4[31]).t["55Ccy0"]);
       const items12 = [closure_13(GiftingSectionTitle, obj32), , ,];
       const obj33 = { premiumType: closure_11.TIER_2, style: tmp2.tierCard, children: null };
-      const obj34 = { style: tmp2.cardText, variant: "text-sm/medium", color: "text-default", children: null };
+      const obj34 = { style: tmp2.cardText, variant: "body-sm/medium", color: "text-default", children: null };
       const intl6 = tmp6(tmp4[31]).intl;
       const obj35 = { onClick: handleLearnMorePremiumClick };
       obj34.children = intl6.format(tmp6(tmp4[31]).t.thORji, obj35);
@@ -314,7 +314,7 @@ export default function UserSettingsPremiumGifting(ref) {
       const obj40 = { children: null };
       const obj41 = { premiumType: closure_11.TIER_0, style: tmp2.tierCard, children: null };
       const tmp3Result3 = tmp3(tmp4[34]);
-      const obj42 = { style: tmp2.cardText, variant: "text-sm/medium", color: "text-default", children: null };
+      const obj42 = { style: tmp2.cardText, variant: "body-sm/medium", color: "text-default", children: null };
       const intl7 = tmp6(tmp4[31]).intl;
       const obj43 = { onClick: handleLearnMoreNitroBasicClick };
       obj42.children = intl7.format(tmp6(tmp4[31]).t.NmpnsP, obj43);

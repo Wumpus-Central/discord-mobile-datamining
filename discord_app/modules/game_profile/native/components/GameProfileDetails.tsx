@@ -27,17 +27,17 @@ function GameProfileWebsiteButton(action) {
   });
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(9046).IGDB_ATTRIBUTION_LINK;
+({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
+const IGDB_ATTRIBUTION_LINK = fn(9063).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(9037).PlatformType.DESKTOP] = fn(9719).ScreenIcon;
-obj.mobile = fn(7253).MobilePhoneIcon;
-obj[fn(9037).PlatformType.XBOX] = fn(9490).XboxNeutralIcon;
-obj[fn(9037).PlatformType.PLAYSTATION] = fn(9721).PlaystationNeutralIcon;
-obj[fn(9037).PlatformType.NINTENDO] = fn(9723).NintendoSwitchNeutralIcon;
-obj[fn(9037).PlatformType.ROBLOX] = fn(9480).RobloxNeutralIcon;
+obj[fn(9054).PlatformType.DESKTOP] = fn(9737).ScreenIcon;
+obj.mobile = fn(7273).MobilePhoneIcon;
+obj[fn(9054).PlatformType.XBOX] = fn(9508).XboxNeutralIcon;
+obj[fn(9054).PlatformType.PLAYSTATION] = fn(9739).PlaystationNeutralIcon;
+obj[fn(9054).PlatformType.NINTENDO] = fn(9741).NintendoSwitchNeutralIcon;
+obj[fn(9054).PlatformType.ROBLOX] = fn(9498).RobloxNeutralIcon;
 const createStyles = fn(5141);
 let obj3 = {
   container: { gap: nativeDefault.space.PX_8 },
@@ -161,7 +161,7 @@ export default function GameProfileDetails(game) {
             }
             if (length.length <= 0) {
               const mapped3 = gameProfileLinks.map((item) =>
-                trackAction(9727)(item, trackAction(575).colors.ICON_SUBTLE),
+                trackAction(9745)(item, trackAction(575).colors.ICON_SUBTLE),
               );
               const found = mapped3.filter((item) => null != item);
               if (found.length > 0) {
@@ -179,7 +179,7 @@ export default function GameProfileDetails(game) {
                     );
                   }),
                 };
-                obj3.value = React6(hasOwnProperty, obj4);
+                obj3.value = React5(hasOwnProperty, obj4);
                 items.push(obj3);
               }
               if (items.length > 0) {
@@ -207,12 +207,12 @@ export default function GameProfileDetails(game) {
                   obj = {
                     size: "md",
                     color: trackAction(575).colors.ICON_SUBTLE,
-                    accessibilityLabel: game(9726).getGameProfilePlatformText(item),
+                    accessibilityLabel: game(9744).getGameProfilePlatformText(item),
                   };
                   return closure_1_8(closure_1_10[item], obj, item);
                 }),
               };
-              obj7.value = React6(hasOwnProperty, obj8);
+              obj7.value = React5(hasOwnProperty, obj8);
               items.push(obj7);
             }
           } else {
@@ -254,7 +254,7 @@ export default function GameProfileDetails(game) {
   if (0 !== memo.length) {
     let obj2 = { style: tmp.container, children: null };
     let obj3 = {
-      variant: "heading-sm/semibold",
+      variant: "heading-xs/semibold",
       color: "mobile-text-heading-primary",
       style: tmp.headerText,
       children: null,
@@ -276,8 +276,8 @@ export default function GameProfileDetails(game) {
         obj = { style: items, children: null };
         items[1] = prop;
         const items1 = [
-          React6(Text_Text.Text, {
-            variant: "text-sm/medium",
+          React5(Text_Text.Text, {
+            variant: "body-sm/medium",
             color: "text-subtle",
             lineClamp: 1,
             children: children.label,
@@ -285,19 +285,19 @@ export default function GameProfileDetails(game) {
         ];
         if (typeof children.value === "string") {
           const obj3 = {
-            variant: "text-sm/normal",
+            variant: "body-sm/normal",
             color: "text-subtle",
             lineClamp: 1,
             style: closure_2.detailsRowValue,
             children: children.value,
           };
-          value = React6(Text_Text.Text, obj3);
+          value = React5(Text_Text.Text, obj3);
         } else {
           value = children.value;
         }
         items1[1] = value;
         obj.children = items1;
-        return React7(hasOwnProperty, obj, children.label);
+        return React6(hasOwnProperty, obj, children.label);
       }),
     };
     items1[1] = closure_8(memo, obj4);

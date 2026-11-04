@@ -106,7 +106,7 @@ function handleActivityUpdate() {
   return c0;
 }
 const Constants = fn(1072);
-({ ActivityActionStates: hasOwnProperty, ActivityActionTypes: metroRequire } = Constants);
+({ ActivityActionStates: hasOwnProperty, ActivityActionTypes: closure_6 } = Constants);
 let obj = {};
 const dependencyMap = {};
 let c9 = 120000;

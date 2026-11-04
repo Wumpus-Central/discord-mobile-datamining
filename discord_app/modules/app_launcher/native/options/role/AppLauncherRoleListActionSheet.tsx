@@ -65,7 +65,7 @@ class RoleRow {
     obj1 = { label: null, icon: jsx(RoleIcon, { role: guildRole }), trailing: null };
     obj5 = {
       lineClamp: 1,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: guildRole.name,
     };
@@ -75,7 +75,7 @@ class RoleRow {
       tmp8 = null;
       if (null != stateFromStores) {
         tmp9 = jsxs;
-        obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
+        obj6 = { variant: "body-sm/normal", color: "text-muted", children: null };
         items2 = [, ,];
         items2[0] = tmp7(tmp2(tmp3[13]).GroupIcon, { size: "xxs", color: "text-muted" });
         str = " ";

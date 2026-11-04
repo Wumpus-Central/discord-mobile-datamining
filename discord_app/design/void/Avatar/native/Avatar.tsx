@@ -14,7 +14,7 @@ function getStatusSize(arg0) {
       if (CutoutableAvatarImage.AvatarSizes.XSMALL_20 !== arg0) {
         if (CutoutableAvatarImage.AvatarSizes.SMALL !== arg0) {
           if (CutoutableAvatarImage.AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
-            return React5.REFRESH_MEDIUM_10;
+            return metroImportDefault.REFRESH_MEDIUM_10;
           } else {
             if (CutoutableAvatarImage.AvatarSizes.NORMAL !== arg0) {
               if (CutoutableAvatarImage.AvatarSizes.TABS_22 !== arg0) {
@@ -31,23 +31,23 @@ function getStatusSize(arg0) {
                         }
                       }
                     }
-                    return React5.LARGE;
+                    return metroImportDefault.LARGE;
                   }
                 }
               }
             }
-            return React5.MEDIUM;
+            return metroImportDefault.MEDIUM;
           }
         }
       }
     }
   }
-  return React5.SMALL;
+  return metroImportDefault.SMALL;
 }
 const View = fn(17).View;
 const StatusTypes = fn(1072).StatusTypes;
 const StatusConstants = fn(1188);
-({ STATUS_PADDING: metroRequire, StatusSizes: closure_7 } = StatusConstants);
+({ STATUS_PADDING: closure_6, StatusSizes: metroImportDefault } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -381,5 +381,5 @@ export default noop.memo(function Avatar(isMobileOnline) {
     tmp10(cutout, obj14);
   }
 });
-export const AvatarSizes = fn(15015).AvatarSizes;
+export const AvatarSizes = fn(15095).AvatarSizes;
 export { getStatusSize };

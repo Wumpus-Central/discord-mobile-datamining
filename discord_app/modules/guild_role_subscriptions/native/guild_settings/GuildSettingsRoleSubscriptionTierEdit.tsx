@@ -37,7 +37,7 @@ function ArchiveOrDeleteTierSection() {
   const allowSelfRemoveMonetization = CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).allowSelfRemoveMonetization;
   const obj4 = { style: tmp.actionSection, children: null };
   const obj5 = { children: null };
-  items = [gesture(TableRowGroup.TableRowGroupTitle, { title: buttonText }), gesture(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: descriptionText })];
+  items = [gesture(TableRowGroup.TableRowGroupTitle, { title: buttonText }), gesture(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: descriptionText })];
   obj5.children = items;
   const items1 = [closure_1_15(timestampProducer, obj5), ];
   const obj6 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
@@ -65,12 +65,12 @@ function TabContent(selectedTab) {
     items = [gesture(GuildRoleSubscriptionTierDetailsModal.GuildRoleSubscriptionTierDetailsTab, {}), gesture(ArchiveOrDeleteTierSection, {})];
     obj3.children = items;
     obj2.children = closure_1_15(common_SafeAreaView.SafeAreaPaddingView, obj3);
-    return gesture(React5, obj2);
+    return gesture(metroImportDefault, obj2);
   } else if (GuildRoleSubscriptionsTierScenes.DESIGN === selectedTab) {
     const obj = { style: tmp.tabContent, children: null };
     const obj4 = { bottom: true, children: gesture(GuildRoleSubscriptionTierDesignModal.GuildRoleSubscriptionTierDesignTab, {}) };
     obj.children = gesture(common_SafeAreaView.SafeAreaPaddingView, obj4);
-    return gesture(React5, obj);
+    return gesture(metroImportDefault, obj);
   } else if (GuildRoleSubscriptionsTierScenes.BENEFITS === selectedTab) {
     return gesture(GuildRoleSubscriptionTierBenefitsModal.GuildRoleSubscriptionTierBenefitsTab, {});
   } else {
@@ -133,9 +133,9 @@ function DraftPublishPrompt(ref) {
   return tmp10;
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const FetchState = fn(5066).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(17339).GuildRoleSubscriptionsTierScenes;
+const GuildRoleSubscriptionsTierScenes = fn(17430).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);

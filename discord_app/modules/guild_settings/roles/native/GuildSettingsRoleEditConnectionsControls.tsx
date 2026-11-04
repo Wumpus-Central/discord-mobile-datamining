@@ -29,7 +29,7 @@ function HeaderSection(arg0) {
     const obj = { style: tmp.warningContainer, children: null };
     const obj2 = { color: nativeDefault.colors.STATUS_WARNING, size: "sm" };
     items = [closure_1_10(CircleErrorIcon.CircleErrorIcon, obj2)];
-    const obj3 = { variant: "text-xs/medium", style: tmp.warningText, children: null };
+    const obj3 = { variant: "body-xs/medium", style: tmp.warningText, children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t["2aFeef"]);
     items[1] = closure_1_10(Text_Text.Text, obj3);
@@ -38,14 +38,14 @@ function HeaderSection(arg0) {
   }
   const items1 = [tmp2Result];
   const obj4 = { style: tmp.headerTitleContainer, children: null };
-  const obj5 = { variant: "text-md/semibold", children: null };
+  const obj5 = { variant: "body-md/semibold", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.nMir27);
   const items2 = [closure_1_10(Text_Text.Text, obj5)];
   let tmp13Result;
   if (hasConnections) {
     const obj6 = { hitSlop: 8, onPress: clearConnections, disabled: locked, children: null };
-    const obj7 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
+    const obj7 = { variant: "body-sm/medium", color: "text-feedback-critical", children: null };
     const intl3 = util.intl;
     obj7.children = intl3.string(util.t.ntW1cc);
     obj6.children = closure_1_10(Text_Text.Text, obj7);
@@ -56,7 +56,7 @@ function HeaderSection(arg0) {
   items2[1] = tmp13Result;
   obj4.children = items2;
   const items3 = [closure_1_11(View, obj4)];
-  const obj10 = { variant: "text-sm/medium", children: null };
+  const obj10 = { variant: "body-sm/medium", children: null };
   const intl4 = util.intl;
   const obj11 = { helpdeskArticleUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN) };
   obj10.children = intl4.format(util.t.q5f7tK, obj11);
@@ -245,13 +245,13 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(19958, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(20074, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const Constants = fn(7469);
+const Constants = fn(7485);
 ({
   GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8,
   GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_9,
@@ -266,7 +266,7 @@ let obj2 = {
     flexDirection: "row",
     alignItems: "center",
     padding: 8,
-    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING,
     borderColor: nativeDefault.colors.STATUS_WARNING,
     borderWidth: 1,
     borderRadius: nativeDefault.radii.xs,
@@ -439,7 +439,13 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
       items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "jsx", value: "Array" };
+      const obj = {
+        connectionType,
+        connectionMetadataField: "Array",
+        applicationId,
+        operator: "marginBottom",
+        value: 1047592960,
+      };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {

@@ -15,7 +15,7 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
 const createStyles = fn(5141);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
@@ -439,7 +439,7 @@ export default function ConjureCreateSheet(guildId) {
                 c6 = 1;
                 c7 = 2;
                 c8 = 1;
-                const obj5 = { value: _null(12358).pickConjureArchive(), done: false };
+                const obj5 = { value: _null(12423).pickConjureArchive(), done: false };
                 return obj5;
               }
             }
@@ -464,23 +464,23 @@ export default function ConjureCreateSheet(guildId) {
                 closure_132_0 = value;
                 c6 = 0;
                 if (null != closure_132_0) {
-                  closure_132_1 = _null(12358).describeConjureArchiveRejection(closure_132_0);
+                  closure_132_1 = _null(12423).describeConjureArchiveRejection(closure_132_0);
                   if (null == closure_132_1) {
                     closure_132_2 = closure_132_0;
-                    const tmp41 = _null(13127);
+                    const tmp41 = _null(13210);
                     closure_3 = tmp41;
                     dependencyMap = tmp41.importedConjureInstallScope;
                     c7 = 3;
                     c8 = 1;
                     const obj9 = {
-                      value: _null(13127).readConjureArchiveInstallScope(closure_132_2.bytes),
+                      value: _null(13210).readConjureArchiveInstallScope(closure_132_2.bytes),
                       done: false,
                     };
                     return obj9;
                   } else {
                     closure_133_10(closure_132_1);
                   }
-                  const obj15 = _null(12358);
+                  const obj15 = _null(12423);
                 }
               }
             } else if (3 === tmp7) {
@@ -530,8 +530,8 @@ export default function ConjureCreateSheet(guildId) {
                       },
                     };
                   });
-                  const result = _null(7484).showSimpleActionSheet(obj10);
-                  const obj3 = _null(7484);
+                  const result = _null(7500).showSimpleActionSheet(obj10);
+                  const obj3 = _null(7500);
                 } else {
                   c7 = 4;
                   c8 = 1;
@@ -571,7 +571,7 @@ export default function ConjureCreateSheet(guildId) {
   const callback2 = obj.useCallback(() => {
     const obj2 = { key: ConjureEffortPicker.CONJURE_EFFORT_PICKER_SHEET_KEY, stackingBehavior: "stack", content: null };
     const obj = ActionSheetActionCreators;
-    obj2.content = React5(ConjureEffortPicker.ConjureEffortPickerSheet, {
+    obj2.content = metroImportDefault(ConjureEffortPicker.ConjureEffortPickerSheet, {
       initialSettings: CONJURE_DEFAULT_TIER_SETTINGS,
       tiers: ConjureLandingModelChoices.CONJURE_LANDING_TIER_SEATS,
       choices,
@@ -602,7 +602,7 @@ export default function ConjureCreateSheet(guildId) {
         content: null,
       };
       const obj4 = { template: wizard, guildId, modelSettings: CONJURE_DEFAULT_TIER_SETTINGS, onCreated: callback3 };
-      obj3.content = React5(ConjureTemplateWizardSheetDefault, obj4);
+      obj3.content = metroImportDefault(ConjureTemplateWizardSheetDefault, obj4);
       ActionSheetActionCreators.showActionSheet(obj3);
     }
   }, items6);
@@ -629,7 +629,7 @@ export default function ConjureCreateSheet(guildId) {
   let obj11 = { label: null, trailing: null, arrow: true, disabled: null, onPress: null };
   const intl6 = tmp4(tmp5[17]).intl;
   obj11.label = intl6.string(initialInstallScope(tmp5[18]).aBPQxX);
-  let obj12 = { variant: "text-md/normal", color: "text-muted", children: null };
+  let obj12 = { variant: "body-md/normal", color: "text-muted", children: null };
   const conjureTemplatesResult = require("ConjureTemplates").conjureTemplates();
   obj12.children = require("ConjureEffortTiers").conjureTierDescription(CONJURE_DEFAULT_TIER_SETTINGS.tier);
   obj11.trailing = CONJURE_DEFAULT_TIER_SETTINGS(require("Text/Text").Text, obj12);
@@ -643,18 +643,18 @@ export default function ConjureCreateSheet(guildId) {
     if (0 === tmp15) {
       str3 = "text-feedback-warning";
     }
-    let obj13 = { variant: "text-sm/normal", color: str3, children: tmp4(tmp5[32]).conjureAppSlotsLeftLabel(tmp15) };
+    let obj13 = { variant: "body-sm/normal", color: str3, children: tmp4(tmp5[32]).conjureAppSlotsLeftLabel(tmp15) };
     tmp21Result = tmp21(tmp4(tmp5[30]).Text, obj13);
     const tmp4Result6 = tmp4(tmp5[32]);
   }
   items8[2] = tmp21Result;
   let tmp21Result2 = null;
   if (null != tmp13) {
-    let obj14 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp13 };
+    let obj14 = { variant: "body-xs/normal", color: "text-feedback-critical", children: tmp13 };
     tmp21Result2 = tmp21(tmp4(tmp5[30]).Text, obj14);
   }
   items8[3] = tmp21Result2;
-  let obj15 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  let obj15 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl7 = tmp4(tmp5[17]).intl;
   obj15.children = intl7.string(initialInstallScope(tmp5[18]).NvvCzX);
   items8[4] = CONJURE_DEFAULT_TIER_SETTINGS(require("Text/Text").Text, obj15);
@@ -671,11 +671,11 @@ export default function ConjureCreateSheet(guildId) {
   const items9 = [disabled(c6, obj8), , ,];
   const obj17 = { style: tmp.section, children: null };
   const obj18 = { style: tmp.sectionHeading, children: null };
-  const obj19 = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj19 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl9 = tmp4(tmp5[17]).intl;
   obj19.children = intl9.string(initialInstallScope(tmp5[18]).I7nPgX);
   const items10 = [CONJURE_DEFAULT_TIER_SETTINGS(require("Text/Text").Text, obj19)];
-  const obj20 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj20 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl10 = tmp4(tmp5[17]).intl;
   obj20.children = intl10.string(initialInstallScope(tmp5[18]).FXB8wQ);
   items10[1] = CONJURE_DEFAULT_TIER_SETTINGS(require("Text/Text").Text, obj20);
@@ -695,11 +695,11 @@ export default function ConjureCreateSheet(guildId) {
   items9[1] = disabled(c6, obj17);
   const obj23 = { style: tmp.section, children: null };
   const obj24 = { style: tmp.sectionHeading, children: null };
-  const obj25 = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj25 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl12 = tmp4(tmp5[17]).intl;
   obj25.children = intl12.string(initialInstallScope(tmp5[18]).zzYLlW);
   const items12 = [CONJURE_DEFAULT_TIER_SETTINGS(require("Text/Text").Text, obj25)];
-  const obj26 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj26 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl13 = tmp4(tmp5[17]).intl;
   obj26.children = intl13.string(initialInstallScope(tmp5[18])["N88+Ld"]);
   items12[1] = CONJURE_DEFAULT_TIER_SETTINGS(require("Text/Text").Text, obj26);
@@ -730,11 +730,11 @@ export default function ConjureCreateSheet(guildId) {
   items9[2] = disabled(c6, obj23);
   const obj28 = { style: tmp.section, children: null };
   const obj29 = { style: tmp.sectionHeading, children: null };
-  const obj30 = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj30 = { variant: "body-md/medium", color: "text-default", children: null };
   const intl14 = tmp4(tmp5[17]).intl;
   obj30.children = intl14.string(initialInstallScope(tmp5[18])["2XcV3x"]);
   const items14 = [CONJURE_DEFAULT_TIER_SETTINGS(require("Text/Text").Text, obj30)];
-  const obj31 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj31 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl15 = tmp4(tmp5[17]).intl;
   obj31.children = intl15.string(initialInstallScope(tmp5[18]).JnJOAn);
   items14[1] = CONJURE_DEFAULT_TIER_SETTINGS(require("Text/Text").Text, obj31);

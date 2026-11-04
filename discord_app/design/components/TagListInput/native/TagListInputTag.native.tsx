@@ -107,7 +107,7 @@ export function TagListInputTagComponent(end) {
     tmp10 = React4(View, obj3);
   }
   const items1 = [tmp10];
-  const obj4 = { style: tmp.tagText, lineClamp: 1, variant: "text-sm/medium", color: null, children: null };
+  const obj4 = { style: tmp.tagText, lineClamp: 1, variant: "body-sm/medium", color: null, children: null };
   let str = "text-default";
   if (selected) {
     str = "text-overlay-light";

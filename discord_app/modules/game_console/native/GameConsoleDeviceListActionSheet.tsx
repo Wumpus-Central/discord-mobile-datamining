@@ -6,8 +6,8 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import GameConsoleActionCreators from "../GameConsoleActionCreators.tsx";
-import _modDef12126 from "../../../../_runtime/metro/12126__.js";
-import _modDef12127 from "../../../../_runtime/metro/12127__.js";
+import _modDef12185 from "../../../../_runtime/metro/12185__.js";
+import _modDef12186 from "../../../../_runtime/metro/12186__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -33,42 +33,42 @@ function TransferFooter(arg0) {
 function DeviceOption(children) {
   const tmp = closure_14();
   const obj = { style: tmp.deviceOption, children: null };
-  const obj2 = { style: tmp.deviceIcon, source: _modDef12126 };
+  const obj2 = { style: tmp.deviceIcon, source: _modDef12185 };
   items = [
     closure_1_11(FastImageDefault, obj2),
     closure_1_11(Text_Text.Text, {
       style: tmp.deviceText,
       color: "mobile-text-heading-primary",
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       children: children.name,
     }),
   ];
   obj.children = items;
-  return application_id(React5, obj);
+  return application_id(metroImportDefault, obj);
 }
 function EmptyState() {
   const tmp = closure_14();
   const obj = { style: tmp.emptyContainer, children: null };
-  const obj2 = { source: _modDef12127, style: tmp.emptyArt };
+  const obj2 = { source: _modDef12186, style: tmp.emptyArt };
   items = [closure_1_11(FastImageDefault, obj2), ,];
   const obj3 = {
     style: tmp.emptyHeader,
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = util.intl;
   obj3.children = intl.string(util.t.OkJf1e);
   items[1] = closure_1_11(Text_Text.Text, obj3);
-  const obj4 = { style: tmp.emptyBody, variant: "text-md/normal", color: "text-default", children: null };
+  const obj4 = { style: tmp.emptyBody, variant: "body-md/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t["of/l5Z"]);
   items[2] = closure_1_11(Text_Text.Text, obj4);
   obj.children = items;
-  return application_id(React5, obj);
+  return application_id(metroImportDefault, obj);
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: metroRequire, View: closure_7, ActivityIndicator: closure_8 } = get_ActivityIndicator);
+({ Pressable: closure_6, View: metroImportDefault, ActivityIndicator: closure_8 } = get_ActivityIndicator);
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -142,7 +142,7 @@ export default function GameConsoleListActionSheet(arg0) {
             v1 = 1;
             dependencyMap = 1;
             const obj4 = {
-              value: tmp4(12118).transferToPlaystationWithAlert(
+              value: tmp4(12177).transferToPlaystationWithAlert(
                 require,
                 stateFromStores[_slicedToArray],
                 importDefault,
@@ -159,7 +159,7 @@ export default function GameConsoleListActionSheet(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          v1(5381).hideActionSheet();
+          v1(5382).hideActionSheet();
           const ComponentDispatch = tmp4(1108).ComponentDispatch;
           ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
           dependencyMap = 3;
@@ -270,7 +270,7 @@ export default function GameConsoleListActionSheet(arg0) {
     },
     children: null,
   };
-  const obj11 = { variant: "text-md/semibold", color: "text-brand", children: null };
+  const obj11 = { variant: "body-md/semibold", color: "text-brand", children: null };
   const intl3 = require("util").intl;
   obj11.children = intl3.string(require("util").t.hb12iG);
   obj10.children = tmp12(require("Text/Text").Text, obj11);

@@ -14,8 +14,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(8556).MobileUserSettings;
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
@@ -149,7 +149,7 @@ export function DiscordPermissionsPage() {
     let tmp15;
     if (allServersOptionSelected) {
       if (tmp8) {
-        tmp15 = React7(AgeNoticeSettingsNoticesLazy.MessageRequestsNotice, {});
+        tmp15 = React6(AgeNoticeSettingsNoticesLazy.MessageRequestsNotice, {});
       }
     }
     obj15.subLabel = tmp15;
@@ -229,24 +229,24 @@ export function ConnectedGamesPage() {
   ({ showLoadingIndicator, slayerSdkApplications } = useAuthorizedSlayerApplicationsDefault());
   if (showLoadingIndicator) {
     let obj2 = { style: tmp.loadingIndicator };
-    let tmp7 = React7(hasOwnProperty, obj2);
+    let tmp7 = React6(hasOwnProperty, obj2);
   } else if (0 === slayerSdkApplications.length) {
     let obj3 = { style: tmp.emptyContainer, children: null };
-    let obj4 = { variant: "text-md/semibold", color: "text-strong", children: null };
+    let obj4 = { variant: "body-md/semibold", color: "text-strong", children: null };
     let intl = util.intl;
     obj4.children = intl.string(util.t["+0U77d"]);
-    items = [React7(Text_Text.Text, obj4)];
-    const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
+    items = [React6(Text_Text.Text, obj4)];
+    const obj5 = { variant: "body-sm/normal", color: "text-muted", children: null };
     let intl2 = util.intl;
     let obj6 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
     obj5.children = intl2.format(util.t.V8wClM, obj6);
-    items[1] = React7(Text_Text.Text, obj5);
+    items[1] = React6(Text_Text.Text, obj5);
     obj3.children = items;
     tmp7 = closure_1_11(timestampProducer, obj3);
     const tmp2Result = HelpdeskUtilsDefault;
   } else {
     let obj = { node: tmp5 };
-    tmp7 = React7(SettingLayoutDefault, obj);
+    tmp7 = React6(SettingLayoutDefault, obj);
   }
   return tmp7;
 }

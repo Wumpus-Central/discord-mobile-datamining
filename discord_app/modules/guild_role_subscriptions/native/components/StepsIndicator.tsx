@@ -70,9 +70,9 @@ function StepNode(isCurrent) {
     const items3 = [tmp.node, animatedStyle, filledNode];
     obj2.style = items3;
     if (isCurrent) {
-      let obj3 = { variant: "heading-deprecated-12/semibold", color: "interactive-text-active", children: label };
+      let obj3 = { variant: "body-xs/semibold", color: "interactive-text-active", children: label };
       isCurrent = jsx(Text_Text.Text, {
-        variant: "heading-deprecated-12/semibold",
+        variant: "body-xs/semibold",
         color: "interactive-text-active",
         children: label,
       });

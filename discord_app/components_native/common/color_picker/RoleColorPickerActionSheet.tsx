@@ -8,9 +8,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ DEFAULT_ROLE_COLOR: closure_7, ROLE_COLORS } = Constants);
+({ DEFAULT_ROLE_COLOR: metroImportDefault, ROLE_COLORS } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let items = [
@@ -97,7 +97,7 @@ export default function RoleColorPickerActionSheet(color) {
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.colorWrap, children: null };
   const items3 = [
-    items.map((color) => React6(ColorBlockDefault, { color, style: memo, selected: color === first, onSelect }, color)),
+    items.map((color) => React5(ColorBlockDefault, { color, style: memo, selected: color === first, onSelect }, color)),
   ];
   const obj9 = {
     style: memo,

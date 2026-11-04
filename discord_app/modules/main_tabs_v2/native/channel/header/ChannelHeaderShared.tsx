@@ -13,7 +13,7 @@ import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import BotTagDefault from "../../../../applications/native/BotTag.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef11475 from "../../../../../../_runtime/metro/11475__.js";
+import _modDef11525 from "../../../../../../_runtime/metro/11525__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import ConjureAppIconTileDefault from "../../../../conjure/projects/native/ConjureAppIconTile.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -33,7 +33,7 @@ function TitleWrapper(headerAccessibilityLabel) {
   }, []);
   if (null == onPress) {
     const obj2 = { style: tmp.wrapper, accessibilityRole: "header", children };
-    let tmp6Result = React6(hasOwnProperty, obj2);
+    let tmp6Result = React5(hasOwnProperty, obj2);
   } else {
     let tmp9;
     if (obj.isAndroid()) {
@@ -49,7 +49,7 @@ function TitleWrapper(headerAccessibilityLabel) {
       style: tmp.wrapper,
       children,
     };
-    tmp6Result = React6(Pressables.PressableOpacity, obj3);
+    tmp6Result = React5(Pressables.PressableOpacity, obj3);
     obj = PlatformUtils;
   }
   return tmp6Result;
@@ -73,7 +73,7 @@ function ChannelTitle(guildId) {
       userId,
       guildId: guildId.guildId,
       userName: title,
-      variant: "redesign/heading-18/semibold",
+      variant: "heading-md/semibold",
       defaultColor: "mobile-text-heading-primary",
       lineClamp: 1,
       style: null,
@@ -84,12 +84,12 @@ function ChannelTitle(guildId) {
     };
     ({ channelName: obj4.style, channelNameContainer: obj4.containerStyle } = tmp);
     obj3.accessibilityLabel = accessibleTitle;
-    let tmp8 = React6(UsernameWithEffectsDefault, obj3);
-    let tmp5 = React6;
+    let tmp8 = React5(UsernameWithEffectsDefault, obj3);
+    let tmp5 = React5;
   } else {
-    tmp5 = React6;
+    tmp5 = React5;
     const obj5 = {
-      variant: "redesign/heading-18/semibold",
+      variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       style: tmp.channelName,
@@ -98,17 +98,17 @@ function ChannelTitle(guildId) {
       maxFontSizeMultiplier: 2,
       children: title,
     };
-    tmp8 = React6(Text_Text.Text, obj5);
+    tmp8 = React5(Text_Text.Text, obj5);
   }
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef11475, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef11525, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
   obj2.children = items;
-  const items1 = [React7(hasOwnProperty, obj2)];
+  const items1 = [React6(hasOwnProperty, obj2)];
   let tmp5Result2 = null != subtitle;
   if (tmp5Result2) {
     const obj11 = { style: tmp.subTitleContainer, children: subtitle };
@@ -116,11 +116,11 @@ function ChannelTitle(guildId) {
   }
   items1[1] = tmp5Result2;
   obj.children = items1;
-  return React7(hasOwnProperty, obj);
+  return React6(hasOwnProperty, obj);
 }
 function GroupDMIcon(channel) {
   const obj = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel: channel.channel };
-  return React6(GroupDMAvatarDefault, obj);
+  return React5(GroupDMAvatarDefault, obj);
 }
 function UserAvatar(user) {
   user = user.user;
@@ -144,21 +144,21 @@ function UserAvatar(user) {
   obj.isMobileOnline = isMobileOnline;
   obj.isVROnline = isVROnline;
   obj.style = closure_12().channelIcon;
-  return React6(native.Avatar, obj);
+  return React5(native.Avatar, obj);
 }
 function ChannelIconRaw(IconComponent) {
   IconComponent = IconComponent.IconComponent;
   const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
   if (null != IconComponent) {
     const obj2 = { size: token, color: "icon-strong", style: { marginEnd: 4 } };
-    let tmp6 = React6(IconComponent, obj2);
+    let tmp6 = React5(IconComponent, obj2);
   } else {
     const obj3 = {
       size: native.Icon.Sizes.SMALL_20,
       source: IconComponent.icon,
       color: tmp4.guildChannelIcon.tintColor,
     };
-    tmp6 = React6(native.Icon, obj3);
+    tmp6 = React5(native.Icon, obj3);
   }
   return tmp6;
 }
@@ -172,25 +172,25 @@ function MemberCountText(arg0) {
       str = "total";
     }
   }
-  const obj = { type: str, count: null, color: "text-subtle", dotContainerWidth: null, textVariant: "text-xs/normal" };
+  const obj = { type: str, count: null, color: "text-subtle", dotContainerWidth: null, textVariant: "body-xs/normal" };
   if ("online" === str) {
     memberCount = presenceCount;
   }
   obj.count = memberCount;
   obj.dotContainerWidth = leadingAccessoryWidth;
-  const children = [React6(GuildActionSheetMemberCountDefault, obj)];
+  const children = [React5(GuildActionSheetMemberCountDefault, obj)];
   let tmp4Result = null;
   if (withSeparator) {
-    tmp4Result = React6(Text_Text.Text, { variant: "text-xs/normal", color: "text-subtle", children: "\u2022" });
+    tmp4Result = React5(Text_Text.Text, { variant: "body-xs/normal", color: "text-subtle", children: "\u2022" });
   }
   children[1] = tmp4Result;
-  return React7(closure_1_10, { children });
+  return React6(closure_1_10, { children });
 }
 class SubtitleText {
   constructor(arg0) {
     obj = {};
     merged = Object.assign(global);
-    obj.variant = "text-sm/medium";
+    obj.variant = "body-sm/medium";
     obj.color = "text-subtle";
     obj.maxFontSizeMultiplier = 2;
     return jsx(closure_0(closure_2[11]).Text, obj);
@@ -206,7 +206,7 @@ function ParentChannelSubTitle(channel) {
   obj.accessibilityLabel = intl.formatToPlainString(util.t.BjYvHO, obj2);
   obj.style = tmp.parentChannelName;
   obj.children = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
-  return React6(SubtitleText, obj);
+  return React5(SubtitleText, obj);
 }
 function AppSubTitle(application) {
   application = application.application;
@@ -220,7 +220,7 @@ function AppSubTitle(application) {
     obj4.size = v16;
     obj2.source = AvatarUtilsDefault.getApplicationIconSource(obj4);
     obj2.style = tmp.appIcon;
-    let tmp4 = React6(tmp12, obj2);
+    let tmp4 = React5(tmp12, obj2);
   } else {
     tmp4 = null;
     if (null != application.conjureProjectId) {
@@ -228,47 +228,47 @@ function AppSubTitle(application) {
       const obj8 = { applicationId: null, name: null, size: null };
       ({ id: obj3.applicationId, name: obj3.name } = application);
       obj8.size = v16;
-      obj7.children = React6(ConjureAppIconTileDefault, obj8);
-      tmp4 = React6(hasOwnProperty, obj7);
+      obj7.children = React5(ConjureAppIconTileDefault, obj8);
+      tmp4 = React5(hasOwnProperty, obj7);
     }
   }
   items = [
     tmp4,
-    React6(Text_Text.Text, {
+    React5(Text_Text.Text, {
       lineClamp: 1,
       maxFontSizeMultiplier: 2,
-      variant: "text-xs/normal",
+      variant: "body-xs/normal",
       color: "text-subtle",
       style: tmp.appName,
       children: application.name,
     }),
-    React6(BotTagDefault, { verified: application.isVerified, size: "sm" }),
+    React5(BotTagDefault, { verified: application.isVerified, size: "sm" }),
   ];
   obj.children = items;
-  return React7(hasOwnProperty, obj);
+  return React6(hasOwnProperty, obj);
 }
 function AppSubTitleSkeleton() {
   const tmp = closure_12();
   const obj = { style: tmp.appSubTitle, "aria-hidden": true, children: null };
-  items = [React6(hasOwnProperty, { style: tmp.skeletonIcon }), React6(hasOwnProperty, { style: tmp.skeletonName })];
+  items = [React5(hasOwnProperty, { style: tmp.skeletonIcon }), React5(hasOwnProperty, { style: tmp.skeletonName })];
   obj.children = items;
-  return React7(hasOwnProperty, obj);
+  return React6(hasOwnProperty, obj);
 }
 function NoAppSubTitle() {
   const obj = {
     lineClamp: 1,
     maxFontSizeMultiplier: 2,
-    variant: "text-xs/normal",
+    variant: "body-xs/normal",
     color: "text-subtle",
     style: closure_12().noApp,
     children: null,
   };
   const intl = util.intl;
   obj.children = intl.string(util.t.tU5fiM);
-  return React6(Text_Text.Text, obj);
+  return React5(Text_Text.Text, obj);
 }
 function EmptyIcon() {
-  return React6(hasOwnProperty, { style: closure_12().channelIconWrapper });
+  return React5(hasOwnProperty, { style: closure_12().channelIconWrapper });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Platform } = get_ActivityIndicator);
@@ -338,7 +338,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx");
 
 export function renderTitleWrapper(tmp33Result, callback, joined, titleContentHeight) {
-  return React6(TitleWrapper, {
+  return React5(TitleWrapper, {
     onPress: callback,
     headerAccessibilityLabel: joined,
     titleContentHeight,
@@ -356,7 +356,7 @@ export function renderChannelTitle(channelName, arg1) {
   if (tmp) {
     tmp = disableArrow;
   }
-  return React6(ChannelTitle, {
+  return React5(ChannelTitle, {
     title: channelName,
     accessibleTitle,
     subtitle,
@@ -367,13 +367,13 @@ export function renderChannelTitle(channelName, arg1) {
   });
 }
 export function renderGroupDMIcon(stateFromStores) {
-  return React6(GroupDMIcon, { channel: stateFromStores });
+  return React5(GroupDMIcon, { channel: stateFromStores });
 }
 export function renderUserAvatar(stateFromStores1, status, isMobileOnline, isVROnline) {
-  return React6(UserAvatar, { user: stateFromStores1, status, isMobileOnline, isVROnline });
+  return React5(UserAvatar, { user: stateFromStores1, status, isMobileOnline, isVROnline });
 }
 export function renderChannelIconRaw(icon, IconComponent) {
-  return React6(ChannelIconRaw, { icon, IconComponent });
+  return React5(ChannelIconRaw, { icon, IconComponent });
 }
 export function renderChannelIcon(id, rulesChannelId) {
   const channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(id, rulesChannelId);
@@ -382,7 +382,7 @@ export function renderChannelIcon(id, rulesChannelId) {
     rulesChannelId = rulesChannelId.rulesChannelId;
   }
   const obj3 = { isRulesChannel: rulesChannelId === id.id };
-  return React6(ChannelIconRaw, {
+  return React5(ChannelIconRaw, {
     icon: channelIconWithGuild,
     IconComponent: utils_ChannelUtils.getChannelIconComponent(id, { isRulesChannel: rulesChannelId === id.id }),
   });
@@ -393,7 +393,7 @@ export function renderMemberCountText(online, memberCount) {
   }
   if (null != online) {
     const obj = { presenceCount: online, memberCount, withSeparator: flag, leadingAccessoryWidth };
-    let tmp = React6(MemberCountText, obj);
+    let tmp = React5(MemberCountText, obj);
   } else {
     tmp = null;
   }
@@ -401,17 +401,17 @@ export function renderMemberCountText(online, memberCount) {
 }
 export { SubtitleText };
 export function renderParentChannelSubTitle(stateFromStores2) {
-  return React6(ParentChannelSubTitle, { channel: stateFromStores2 });
+  return React5(ParentChannelSubTitle, { channel: stateFromStores2 });
 }
 export function renderAppSubTitle(appChannelApplication, arg1) {
   if (null != appChannelApplication) {
     const obj = { application: appChannelApplication };
-    let tmp2 = React6(AppSubTitle, obj);
+    let tmp2 = React5(AppSubTitle, obj);
   } else {
-    tmp2 = React6(arg1 ? AppSubTitleSkeleton : NoAppSubTitle, {});
+    tmp2 = React5(arg1 ? AppSubTitleSkeleton : NoAppSubTitle, {});
   }
   return tmp2;
 }
 export function renderEmptyIcon() {
-  return React6(EmptyIcon, {});
+  return React5(EmptyIcon, {});
 }

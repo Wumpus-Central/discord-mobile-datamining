@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import IndicatorDot from "../../../design/components/IndicatorDot/native/IndicatorDot.native.tsx";
-import _modDef9661 from "../../../../_runtime/metro/09661__.js";
+import _modDef9680 from "../../../../_runtime/metro/09680__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

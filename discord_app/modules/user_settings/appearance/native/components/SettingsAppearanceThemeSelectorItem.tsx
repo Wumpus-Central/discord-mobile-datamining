@@ -11,7 +11,7 @@ import MobileThemesUtils from "../../../../client_themes/native/MobileThemesUtil
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ThemedGradient from "../../../../client_themes/native/ThemedGradient.tsx";
-import _modDef17410 from "../../../../../../_runtime/metro/17410__.js";
+import _modDef17501 from "../../../../../../_runtime/metro/17501__.js";
 import SynchronizeIconNativeDefault from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../ThemeStore.tsx";
@@ -39,12 +39,12 @@ function GradientThemeBackground(arg0) {
   obj4.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj4)];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17410, style: tmp4.lock };
+    const obj6 = { source: _modDef17501, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
   obj3.children = items1;
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 }
 function DefaultThemeBackground(item) {
   item = item.item;
@@ -98,17 +98,17 @@ function CustomThemeBackground(arg0) {
   obj4.customTheme = item;
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj4)];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17410, style: tmp4.lock };
+    const obj6 = { source: _modDef17501, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
   obj3.children = items1;
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 }
 const View = fn(17).View;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5141);
 let obj2 = {
   rippleColor: { color: nativeDefault.unsafe_rawColors.TRANSPARENT },
@@ -208,6 +208,6 @@ export default function ThemeSelectorItem(onPress) {
   }
   items[1] = isNew;
   obj6.children = items;
-  obj5.children = React5(View, obj6);
+  obj5.children = metroImportDefault(View, obj6);
   return tmp9(Pressables.PressableOpacity, obj5);
 }

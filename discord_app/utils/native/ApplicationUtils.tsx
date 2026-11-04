@@ -36,7 +36,7 @@ export function installApplication(arg0) {
         LinkingDefault.openURL(customInstallUrl);
       },
     };
-    return customInstallUrl(9068).handleClick(obj2);
+    return customInstallUrl(9085).handleClick(obj2);
   } else {
     if (null != integrationTypesConfig) {
       const _Object = Object;
@@ -84,8 +84,8 @@ export function installApplication(arg0) {
           }
           ModalActionCreatorsDefault.popWithKey(closure_5);
         };
-        obj9.pushLazy(customInstallUrl(2123)(11035, dependencyMap.paths), obj6, closure_5);
-        const tmp22 = customInstallUrl(2123)(11035, dependencyMap.paths);
+        obj9.pushLazy(customInstallUrl(2123)(11084, dependencyMap.paths), obj6, closure_5);
+        const tmp22 = customInstallUrl(2123)(11084, dependencyMap.paths);
       }
     }
     if (null != installParams) {
@@ -138,8 +138,8 @@ export function installApplication(arg0) {
         }
         ModalActionCreatorsDefault.popWithKey(closure_5);
       };
-      tmp32Result2.pushLazy(customInstallUrl(2123)(11035, dependencyMap.paths), obj12, closure_5);
-      const tmp10 = customInstallUrl(2123)(11035, dependencyMap.paths);
+      tmp32Result2.pushLazy(customInstallUrl(2123)(11084, dependencyMap.paths), obj12, closure_5);
+      const tmp10 = customInstallUrl(2123)(11084, dependencyMap.paths);
     }
   }
 }
@@ -156,7 +156,7 @@ export function openOAuth2Modal(arg0) {
     }
     ModalActionCreatorsDefault.popWithKey(closure_5);
   };
-  obj2.pushLazy(require("asyncRequireImpl")(11035, dependencyMap.paths), obj3, closure_5);
+  obj2.pushLazy(require("asyncRequireImpl")(11084, dependencyMap.paths), obj3, closure_5);
 }
 export function installPrivateChannelIntegration(arg0) {
   ({ applicationId, channelId, callback } = arg0);
@@ -176,5 +176,5 @@ export function installPrivateChannelIntegration(arg0) {
     return ModalActionCreatorsDefault.popWithKey(closure_1_5);
   };
   obj2.callback = callback;
-  obj.pushLazy(asyncRequireImpl(11035, dependencyMap.paths), obj2, closure_5);
+  obj.pushLazy(asyncRequireImpl(11084, dependencyMap.paths), obj2, closure_5);
 }

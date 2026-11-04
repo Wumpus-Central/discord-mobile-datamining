@@ -15,7 +15,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 const VideoToggleState = Constants.VideoToggleState;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   container: {
     alignItems: "center",
@@ -38,11 +38,11 @@ export default function UserVideoFailed(arg0) {
   const merged1 = Object.assign(merged);
   items = [tmp2.container, style];
   obj2.style = items;
-  const obj3 = { variant: "text-md/semibold", color: "text-strong", style: tmp2.text, children: null };
+  const obj3 = { variant: "body-md/semibold", color: "text-strong", style: tmp2.text, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["z+mxvo"]);
   const items1 = [closure_5(Text_Text.Text, obj3), ,];
-  const obj4 = { variant: "text-sm/semibold", color: "text-muted", style: tmp2.text, selectable: true, children: null };
+  const obj4 = { variant: "body-sm/semibold", color: "text-muted", style: tmp2.text, selectable: true, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.formatToPlainString(util.t.ejOT95, { errorCode: AVError.getErrorInfo(avError).errorCode });
   items1[1] = closure_5(Text_Text.Text, obj4);

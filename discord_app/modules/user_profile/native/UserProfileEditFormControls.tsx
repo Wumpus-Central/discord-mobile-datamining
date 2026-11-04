@@ -16,7 +16,7 @@ require = fn;
 function FormControlText(children) {
   const tmp = closure_8();
   return timestampProducer(Text_Text.Text, {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     style: closure_8().formControlText,
     children: children.text,
@@ -26,7 +26,7 @@ function FormControlSubtext(text) {
   text = text.text;
   let tmp2 = null;
   if (null != text) {
-    const obj = { variant: "text-xs/medium", color: "text-muted", style: tmp.formControlText, children: text };
+    const obj = { variant: "body-xs/medium", color: "text-muted", style: tmp.formControlText, children: text };
     tmp2 = timestampProducer(Text_Text.Text, obj);
   }
   return tmp2;
@@ -34,7 +34,7 @@ function FormControlSubtext(text) {
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   button: {
@@ -124,7 +124,7 @@ export function UserProfileEditFormLabelBadges(showPremiumIcon) {
     }
     items[1] = tmp9;
     obj.children = items;
-    let tmp3Result = React5(hasOwnProperty, obj);
+    let tmp3Result = metroImportDefault(hasOwnProperty, obj);
   } else {
     tmp3Result = null;
   }
@@ -191,7 +191,7 @@ export function UserProfileEditFormButton(loading) {
     const obj4 = { text: buttonSubtext };
     items2[1] = timestampProducer(FormControlSubtext, obj4);
     obj2.children = items2;
-    content = React5(hasOwnProperty, obj2);
+    content = metroImportDefault(hasOwnProperty, obj2);
   }
   items1[1] = content;
   items1[2] = trailing;
@@ -201,14 +201,14 @@ export function UserProfileEditFormButton(loading) {
   }
   items1[3] = tmp12;
   obj.children = items1;
-  const tmp2Result = React5(Pressables.PressableHighlight, obj);
+  const tmp2Result = metroImportDefault(Pressables.PressableHighlight, obj);
   const obj5 = { label, labelTrailing, children: null };
   let tmp2Result2 = tmp2Result;
   if (null != footer) {
     const obj6 = { style: tmp.buttonGroup, children: null };
     const items3 = [tmp2Result, footer];
     obj6.children = items3;
-    tmp2Result2 = React5(hasOwnProperty, obj6);
+    tmp2Result2 = metroImportDefault(hasOwnProperty, obj6);
   }
   obj5.children = tmp2Result2;
   return timestampProducer(Input.Input, obj5);
@@ -230,7 +230,7 @@ export function UserProfileEditFormSwitch(arg0) {
     closure_2(value);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(7106).PressableHighlight;
+    let PressableHighlight = tmp2(7121).PressableHighlight;
   } else {
     PressableHighlight = React4;
   }
@@ -276,6 +276,6 @@ export function UserProfileEditFormSwitch(arg0) {
     timestampProducer(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled }),
   ];
   obj3.children = items1;
-  obj2.children = React5(PressableHighlight, obj3);
+  obj2.children = metroImportDefault(PressableHighlight, obj3);
   return timestampProducer(Input.Input, obj2);
 }

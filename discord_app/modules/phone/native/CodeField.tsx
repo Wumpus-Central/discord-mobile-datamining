@@ -90,16 +90,16 @@ function CodeFieldInner(loading) {
   const obj2 = { style: tmp2.container, children: null };
   [tmp4, tmp5] = noop.useState("");
   const items1 = [
-    React5(Text_Text.Text, {
+    metroImportDefault(Text_Text.Text, {
       style: tmp2.title,
       accessibilityRole: "header",
       variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       children: title,
     }),
-    React5(Text_Text.Text, {
+    metroImportDefault(Text_Text.Text, {
       style: tmp2.subtitle,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       children: description,
     }),
@@ -112,11 +112,11 @@ function CodeFieldInner(loading) {
     color: "mobile-text-heading-primary",
     children: title,
   };
-  const obj4 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
+  const obj4 = { style: tmp2.subtitle, variant: "body-sm/medium", color: "text-default", children: description };
   const tmp3 = _slicedToArray(noop.useState(""), 2);
-  items1[2] = React5(hasOwnProperty, {
+  items1[2] = metroImportDefault(hasOwnProperty, {
     style: tmp2.inputContainer,
-    children: React5(SingleCodeInput, {
+    children: metroImportDefault(SingleCodeInput, {
       loading: flag,
       error,
       count: num,
@@ -129,14 +129,14 @@ function CodeFieldInner(loading) {
   });
   items1[3] = actions;
   obj2.children = items1;
-  const items2 = [React6(hasOwnProperty, obj2), React5(KeyboardAwareViewDefault, { children: footer })];
+  const items2 = [React5(hasOwnProperty, obj2), metroImportDefault(KeyboardAwareViewDefault, { children: footer })];
   obj.children = items2;
-  return React6(timestampProducer, obj);
+  return React5(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const CodeType = { NUMERIC: "numeric", ALPHANUMERIC: "alphanumeric" };
 const createStyles = fn(5141);
 let obj3 = {
@@ -182,13 +182,13 @@ export default function CodeField(disableKeyboardAvoidingView) {
   if (disableKeyboardAvoidingView.disableKeyboardAvoidingView) {
     const obj2 = {};
     const merged = Object.assign(disableKeyboardAvoidingView);
-    let tmp2Result = React5(CodeFieldInner, obj2);
+    let tmp2Result = metroImportDefault(CodeFieldInner, obj2);
   } else {
     const obj = { style: tmp.viewWrapper, children: null };
     const obj3 = {};
     const merged1 = Object.assign(disableKeyboardAvoidingView);
-    obj.children = React5(CodeFieldInner, obj3);
-    tmp2Result = React5(KeyboardAwareViewDefault, obj);
+    obj.children = metroImportDefault(CodeFieldInner, obj3);
+    tmp2Result = metroImportDefault(KeyboardAwareViewDefault, obj);
   }
   return tmp2Result;
 }
@@ -225,7 +225,7 @@ export function CodeBlocks(onCodeEntered) {
   for (let num2 = 0; num2 < num; num2 = num2 + 1) {
     if (num2 === num / 2) {
       obj = { style: tmp3.spacer };
-      let arr = items1.push(React5(hasOwnProperty, obj, "spacer"));
+      let arr = items1.push(metroImportDefault(hasOwnProperty, obj, "spacer"));
     }
     let items2 = [tmp3.inputWrapper];
     let inputWrapperError = null;
@@ -294,8 +294,8 @@ export function CodeBlocks(onCodeEntered) {
     };
     let obj4 = { start: first[num2].length, end: first[num2].length };
     obj3.selection = obj4;
-    obj2.children = React5(native.TextInput, obj3);
-    let arr2 = items1.push(React5(hasOwnProperty, obj2, num2));
+    obj2.children = metroImportDefault(native.TextInput, obj3);
+    let arr2 = items1.push(metroImportDefault(hasOwnProperty, obj2, num2));
   }
-  return React5(hasOwnProperty, { style: tmp3.codeContainer, children: items1 });
+  return metroImportDefault(hasOwnProperty, { style: tmp3.codeContainer, children: items1 });
 }

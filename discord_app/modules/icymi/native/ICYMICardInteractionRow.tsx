@@ -78,7 +78,7 @@ function AddEmojiButton(channel) {
   obj.disabled = disabled;
   const items2 = [closure_15(channel(handleItemInteracted[22]).ReactionIcon, { size: "sm" })];
   if (showText) {
-    let obj2 = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
+    let obj2 = { variant: "body-sm/semibold", color: "redesign-button-tertiary-text", children: null };
     const intl2 = tmp4(handleItemInteracted[21]).intl;
     obj2.children = intl2.string(tmp4(handleItemInteracted[21]).t.m9O1gd);
     showText = closure_15(tmp4(handleItemInteracted[23]).Text, obj2);
@@ -208,7 +208,7 @@ function EmojiReaction(count) {
   items4[1] = selectedInnerEmojiContainer;
   if (null == emoji.id) {
     const obj6 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "interactive-text-default",
       style: null,
       allowFontScaling: false,
@@ -241,7 +241,7 @@ function EmojiReaction(count) {
   }
   const obj9 = { style: items8, children: null };
   items8[1] = selectedInnerTextContainer;
-  const obj10 = { animate: true, count: count.count, textStyle: null, textVariant: "text-md/semibold" };
+  const obj10 = { animate: true, count: count.count, textStyle: null, textVariant: "body-md/semibold" };
   let tmp21 = null;
   const tmp2Result3 = messageId(reaction[16]);
   if (isBurstReaction) {
@@ -343,7 +343,7 @@ function ThreadAsCommentsButton(parentMessage) {
           const obj3 = { style: tmp.commentCount, children: null };
           const obj4 = { style: tmp.commentsIcon };
           const items3 = [closure_15(tmp2(handleItemInteracted[35]).ChatIcon, obj4)];
-          const obj5 = { variant: "text-md/semibold", color: "text-strong", children: str };
+          const obj5 = { variant: "body-md/semibold", color: "text-strong", children: str };
           items3[1] = closure_15(tmp2(handleItemInteracted[23]).Text, obj5);
           obj3.children = items3;
           obj2.children = closure_16(closure_5, obj3);
@@ -364,7 +364,7 @@ function ThreadAsCommentsButton(parentMessage) {
   return null;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ MessageFlags: closure_11, Permissions: closure_12, HorizontalGradient: map1 } = Constants);
 const EmojiIntention = fn(1388).EmojiIntention;

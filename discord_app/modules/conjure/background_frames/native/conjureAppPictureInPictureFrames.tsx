@@ -93,8 +93,8 @@ function closeToMakeRoom(frameId) {
     const tmp7Result = ToastActionCreatorsDefault;
   }
 }
-const FramesConstants = fn(6967);
-({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
+const FramesConstants = fn(6982);
+({ asLaunched: closure_6, FrameLayoutModes: metroImportDefault } = FramesConstants);
 const items = [
   FramesStore,
   UnsyncedUserSettingsStore,

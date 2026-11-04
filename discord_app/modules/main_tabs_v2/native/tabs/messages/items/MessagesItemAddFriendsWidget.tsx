@@ -6,8 +6,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef15820 from "../../../../../../../_runtime/metro/15820__.js";
-import _modDef18302 from "../../../../../../../_runtime/metro/18302__.js";
+import _modDef15908 from "../../../../../../../_runtime/metro/15908__.js";
+import _modDef18399 from "../../../../../../../_runtime/metro/18399__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -227,8 +227,8 @@ let closure_15 = async function _handleLink() {
 const View = fn(17).View;
 const InstantInviteSources = fn(1072).InstantInviteSources;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(14686).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const sum = fn(14766).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
 const createStyles = fn(5141);
 let obj = {
   container: {
@@ -292,7 +292,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj2.onPress = callback;
   obj2.style = tmp.title;
   const obj3 = {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "text-default",
     lineClamp: 1,
     maxFontSizeMultiplier: 2,
@@ -300,28 +300,28 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.afcl67);
-  obj2.children = React5(Text_Text.Text, obj3);
-  items = [React5(Pressables.PressableHighlight, obj2)];
+  obj2.children = metroImportDefault(Text_Text.Text, obj3);
+  items = [metroImportDefault(Pressables.PressableHighlight, obj2)];
   const obj4 = { style: tmp.actions, children: null };
   const obj5 = {
     style: tmp.actionIcon,
     variant: "filled",
-    source: _modDef15820,
+    source: _modDef15908,
     onPress: handleShare,
     accessibilityLabel: null,
   };
   const intl3 = util.intl;
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
-  const items1 = [React5(IconActionButtonDefault, obj5)];
+  const items1 = [metroImportDefault(IconActionButtonDefault, obj5)];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef18302;
+  obj6.source = _modDef18399;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);
-  items1[1] = React5(IconActionButtonDefault, obj6);
+  items1[1] = metroImportDefault(IconActionButtonDefault, obj6);
   obj4.children = items1;
-  items[1] = React6(View, obj4);
+  items[1] = React5(View, obj4);
   obj.children = items;
-  return React6(View, obj);
+  return React5(View, obj);
 });
 export const MESSAGES_ITEM_ADD_FRIENDS_WIDGET_HEIGHT = sum;

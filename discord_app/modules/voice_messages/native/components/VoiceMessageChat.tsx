@@ -198,14 +198,14 @@ function Duration(animationValue) {
   }
   obj4.color = str;
   obj4.children = memo;
-  items7[1] = closure_13(tmp8(5747).Text, obj4);
+  items7[1] = closure_13(tmp8(5761).Text, obj4);
   obj3.children = items7;
   return closure_14(tmp10(1652).View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13856).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(13857);
+const useVoiceMessagesUIStore = fn(13942).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(13943);
 ({
   VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8,
   VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9,
@@ -339,7 +339,7 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
     if (!timeout) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const obj = c0(5377);
+        const obj = c0(5378);
         const result = _undefined2.set(obj.withTiming(1, { easing: c0(1652).Easing.quad, duration: 200 }));
       }, 1000);
       return () => {

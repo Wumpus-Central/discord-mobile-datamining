@@ -24,8 +24,8 @@ function DeleteButton(onDelete) {
   return state(components_Button_Button.Button, obj);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(17339);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
+const GuildRoleSubscriptionsConstants = fn(17430);
 ({
   GuildRoleSubscriptionBenefitTypes: closure_10,
   MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11,
@@ -208,8 +208,8 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
           closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
         },
       };
-      obj2.children = closure_13(tmp3(20122), obj3);
-      let tmp27 = closure_13(tmp21(7186).TableRowGroup, obj2);
+      obj2.children = closure_13(tmp3(20238), obj3);
+      let tmp27 = closure_13(tmp21(7201).TableRowGroup, obj2);
       let tmp28 = closure_13;
     } else {
       let obj = {
@@ -225,7 +225,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       const intl7 = tmp21(1113).intl;
       obj.placeholder = intl7.string(tmp21(1113).t["kV54/Y"]);
       obj.onChange = tmp7;
-      tmp27 = closure_13(tmp21(7208).TextInput, obj);
+      tmp27 = closure_13(tmp21(7223).TextInput, obj);
       tmp28 = closure_13;
     }
     let obj4 = { style: tmp2.container, children: null };
@@ -245,7 +245,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       },
       listingId: merged.listingId,
     };
-    items = [tmp28(tmp3(20124), obj5)];
+    items = [tmp28(tmp3(20240), obj5)];
     const obj6 = {
       keyboardShouldPersistTaps: "handled",
       showsVerticalScrollIndicator: false,
@@ -271,8 +271,8 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    obj8.children = tmp28(tmp3(20125), obj9);
-    items2[1] = tmp28(tmp21(7186).TableRowGroup, obj8);
+    obj8.children = tmp28(tmp3(20241), obj9);
+    items2[1] = tmp28(tmp21(7201).TableRowGroup, obj8);
     const obj11 = { label: null, maxLength: null, value: null, onChange: null, placeholder: null };
     const intl9 = tmp21(1113).intl;
     obj11.label = intl9.string(tmp21(1113).t["74JctW"]);
@@ -280,7 +280,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     obj11.value = first3;
     obj11.onChange = tmp10[1];
     obj11.placeholder = stringResult2;
-    items2[2] = tmp28(tmp21(7373).TextArea, obj11);
+    items2[2] = tmp28(tmp21(7389).TextArea, obj11);
     let tmp28Result = null;
     if (null != merged.onDelete) {
       const obj12 = {
@@ -314,5 +314,5 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     }
     tmp16 = num3 > 0;
   }
-  tmp5 = value(20100)();
+  tmp5 = value(20216)();
 }

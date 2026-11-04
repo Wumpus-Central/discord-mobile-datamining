@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 },
@@ -74,7 +74,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
       items2 = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "white" })];
       const obj7 = {
         accessibilityRole: "text",
-        variant: "heading-md/medium",
+        variant: "heading-sm/medium",
         color: "text-overlay-light",
         children: null,
       };
@@ -83,12 +83,12 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
       obj7.children = stringResult;
       items2[1] = timestampProducer(Text_Text.Text, obj7);
       obj6.children = items2;
-      let tmp9Result = React5(hasOwnProperty, obj6);
+      let tmp9Result = metroImportDefault(hasOwnProperty, obj6);
     } else {
       obj6.style = items2.spoilerOverlayBackground;
       const obj8 = {
         accessibilityRole: "text",
-        variant: "heading-md/medium",
+        variant: "heading-sm/medium",
         color: "text-overlay-light",
         children: null,
       };
@@ -102,7 +102,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     obj5 = timestampProducer(hasOwnProperty, obj5);
     items1[1] = obj5;
     obj3.children = items1;
-    React5(_modDef1652.View, obj3);
+    metroImportDefault(_modDef1652.View, obj3);
     const tmp3Result = VisualEffectViewDefault;
   }
   tmp5 = _slicedToArray(useMediaItemSpoilerState.useMediaItemSpoilerState(index), 2);

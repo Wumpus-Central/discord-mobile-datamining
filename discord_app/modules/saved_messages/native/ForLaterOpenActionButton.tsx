@@ -37,7 +37,7 @@ function BadgedIcon(arg0) {
     const obj7 = { style: tmp6.dot };
     items2[1] = timestampProducer(View, obj7);
     obj4.children = items2;
-    let tmp8Result = React5(View, obj4);
+    let tmp8Result = metroImportDefault(View, obj4);
     const tmpResult = ClipViewDefault;
   } else {
     const obj8 = { size: "sm", color: token };
@@ -48,11 +48,11 @@ function BadgedIcon(arg0) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const point = {
-  shape: fn(9637).CutoutShape.Circle,
-  x: fn(14845).ICON_SIZE.sm - 7,
-  y: fn(14845).ICON_SIZE.sm - 8,
+  shape: fn(9656).CutoutShape.Circle,
+  x: fn(14925).ICON_SIZE.sm - 7,
+  y: fn(14925).ICON_SIZE.sm - 8,
   size: 10,
 };
 const createStyles = fn(5141);
@@ -61,7 +61,7 @@ let obj = {
   iconAnchor: null,
   dot: null,
 };
-let size = { width: fn(14845).ICON_SIZE.sm, height: fn(14845).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(14925).ICON_SIZE.sm, height: fn(14925).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = {
   position: "absolute",
@@ -98,14 +98,14 @@ export default function ForLaterActionButton(ref) {
     accessibilityLabel: null,
     maxFontSizeMultiplier: 2,
   };
-  obj3.showRedDot = type === type(10322).SavedMessageSortTypes.REMINDER && stateFromStores;
+  obj3.showRedDot = type === type(10370).SavedMessageSortTypes.REMINDER && stateFromStores;
   const intl = tmp(1113).intl;
-  if (type === type(10322).SavedMessageSortTypes.REMINDER) {
+  if (type === type(10370).SavedMessageSortTypes.REMINDER) {
     let aUXxzT = tmp(1113).t.aUXxzT;
   } else {
     aUXxzT = tmp(1113).t["2pAkDA"];
   }
   obj4.accessibilityLabel = intl.string(aUXxzT);
-  obj2.children = closure_6(type(8152).IconButton, obj4);
+  obj2.children = closure_6(type(8168).IconButton, obj4);
   return closure_6(View, obj2);
 }

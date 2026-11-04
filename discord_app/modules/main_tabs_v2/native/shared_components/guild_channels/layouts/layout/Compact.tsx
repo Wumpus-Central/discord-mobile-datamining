@@ -39,28 +39,28 @@ const obj2 = {
   paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 },
 };
 CHANNEL_LIST_STYLES_COMPACT.voiceOrStageSummaryRow = { size: 24, avatarSize: fn(1187).AvatarSizes.XSMALL };
-CHANNEL_LIST_STYLES_COMPACT.channelName = { height: 20, text: { variant: "redesign/channel-title/semibold" } };
+CHANNEL_LIST_STYLES_COMPACT.channelName = { height: 20, text: { variant: "heading-sm/semibold" } };
 const obj3 = { size: 24, avatarSize: fn(1187).AvatarSizes.XSMALL };
 CHANNEL_LIST_STYLES_COMPACT.messagePreview = {
   messageTypeIconSize: fn(1187).IconSizes.EXTRA_SMALL,
   messageTypeIconSizeNew: "xxs",
   height: 16,
-  text: { variant: "text-xs/medium" },
+  text: { variant: "body-xs/medium" },
   margin: { marginTop: 0 },
 };
-CHANNEL_LIST_STYLES_COMPACT.timestamp = { text: { variant: "text-xs/medium" } };
-CHANNEL_LIST_STYLES_COMPACT.inviteRow = { text: { variant: "text-sm/semibold" } };
+CHANNEL_LIST_STYLES_COMPACT.timestamp = { text: { variant: "body-xs/medium" } };
+CHANNEL_LIST_STYLES_COMPACT.inviteRow = { text: { variant: "body-sm/semibold" } };
 const obj4 = {
   messageTypeIconSize: fn(1187).IconSizes.EXTRA_SMALL,
   messageTypeIconSizeNew: "xxs",
   height: 16,
-  text: { variant: "text-xs/medium" },
+  text: { variant: "body-xs/medium" },
   margin: { marginTop: 0 },
 };
 CHANNEL_LIST_STYLES_COMPACT.icon = {
   avatarSize: fn(1187).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(7083).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(7083).GuildIconSizes.XXSMALL_12,
+  guildIconSize: fn(7098).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(7098).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -71,8 +71,8 @@ CHANNEL_LIST_STYLES_COMPACT.mentionBadge = { position: { top: 28 }, positionThre
 CHANNEL_LIST_STYLES_COMPACT.category = { height: 30, margin: { marginTop: 16 }, text: { size: 14 } };
 const obj5 = {
   avatarSize: fn(1187).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(7083).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(7083).GuildIconSizes.XXSMALL_12,
+  guildIconSize: fn(7098).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(7098).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -84,9 +84,9 @@ CHANNEL_LIST_STYLES_COMPACT.typing = {
   typingIndicator: { position: { top: 20, left: 10 } },
   avatarSize: fn(1187).AvatarSizes.REFRESH_MEDIUM_32,
 };
-CHANNEL_LIST_STYLES_COMPACT.activeThreadCount = { text: { variant: "text-xs/semibold" } };
+CHANNEL_LIST_STYLES_COMPACT.activeThreadCount = { text: { variant: "body-xs/semibold" } };
 const obj7 = {
-  text: { variant: "text-xs/semibold" },
+  text: { variant: "body-xs/semibold" },
   layout: { paddingVertical: 4, paddingRight: 8, paddingLeft: 8, height: 24 },
   icon: null,
 };
@@ -96,7 +96,7 @@ const obj6 = {
   typingIndicator: { position: { top: 20, left: 10 } },
   avatarSize: fn(1187).AvatarSizes.REFRESH_MEDIUM_32,
 };
-obj7.icon = { size: fn(1187).IconSizes.EXTRA_SMALL, gameSize: fn(7454).GameIconSizes.SIZE_24 };
+obj7.icon = { size: fn(1187).IconSizes.EXTRA_SMALL, gameSize: fn(7470).GameIconSizes.SIZE_24 };
 CHANNEL_LIST_STYLES_COMPACT.joinVoiceButton = obj7;
 const obj9 = { left: 38, startAndEndHeight: 15, transform: null, topOffset: -2 };
 const items = [{ translateY: 10 }];
@@ -110,7 +110,7 @@ const obj10 = {
   container: { paddingThread: { paddingLeft: 8 } },
   unreadBadge: { positionThread: { left: 4 } },
 };
-const obj8 = { size: fn(1187).IconSizes.EXTRA_SMALL, gameSize: fn(7454).GameIconSizes.SIZE_24 };
+const obj8 = { size: fn(1187).IconSizes.EXTRA_SMALL, gameSize: fn(7470).GameIconSizes.SIZE_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Compact.tsx",
@@ -119,8 +119,8 @@ const result = size.fileFinishedImporting(
 export { CHANNEL_LIST_STYLES_COMPACT };
 export function getCompactStyles() {
   const obj = {
-    messagePreview: { text: { variant: "text-sm/medium", color: "text-muted" } },
-    timestamp: { text: { variant: "text-xs/semibold" } },
+    messagePreview: { text: { variant: "body-sm/medium", color: "text-muted" } },
+    timestamp: { text: { variant: "body-xs/semibold" } },
   };
   return deepmergeDefault(obj, obj);
 }

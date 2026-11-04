@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const ChannelFlags = fn(4997).ChannelFlags;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 },
@@ -47,7 +47,7 @@ export default function ForumPostList(arg0) {
     }
     items[1] = tmp13;
     obj3.children = items;
-    tmp6Result = React5(View, obj3);
+    tmp6Result = metroImportDefault(View, obj3);
   }
   const obj5 = { children: null };
   const items1 = [
@@ -67,9 +67,9 @@ export default function ForumPostList(arg0) {
   ];
   obj2.children = items1;
   const items2 = [
-    React5(View, obj2),
+    metroImportDefault(View, obj2),
     timestampProducer(ForumPostListFooterDefault, { thread, firstMessage, hasUnreads, parentChannel }),
   ];
   obj5.children = items2;
-  return React5(React6, obj5);
+  return metroImportDefault(React5, obj5);
 }

@@ -1,7 +1,7 @@
 // discord_app/design/void/GradientBorder/native/GradientBorder.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
-import _mod6676 from "module_6676" /* 6676 */;
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
+import _mod6691 from "module_6691" /* 6691 */;
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -90,7 +90,7 @@ class GradientBorder {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ HorizontalGradient: hasOwnProperty, VerticalGradient: metroRequire } = Constants);
+({ HorizontalGradient: hasOwnProperty, VerticalGradient: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const Direction = {
   HORIZONTAL: "horizontal",

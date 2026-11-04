@@ -37,7 +37,7 @@ export default function FamilyCenterParentalConsentNotice() {
           return jsx(
             Text_Text.Text,
             {
-              variant: "text-sm/medium",
+              variant: "body-sm/medium",
               color: "text-strong",
               style: link.link,
               accessibilityRole: "link",

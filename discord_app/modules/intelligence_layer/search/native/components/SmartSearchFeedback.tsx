@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 SmartSearchResultsStoreDefault;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   feedbackContainer: {
@@ -56,13 +56,13 @@ export function SmartSearchFeedback(smartSearchQuery) {
     } else {
       stringResult = string(_modDef4250.uij9Dy);
     }
-    const obj4 = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
-    const items3 = [closure_6(tmp2(5747).Text, obj4)];
+    const obj4 = { variant: "body-sm/medium", color: "text-muted", children: stringResult };
+    const items3 = [closure_6(tmp2(5761).Text, obj4)];
     let tmp7Result = null === stateFromStores;
     if (tmp7Result) {
       const obj5 = { style: tmp.buttonContainer, children: null };
       const obj6 = {
-        IconComponent: tmp2(10001).ThumbsUpIcon,
+        IconComponent: tmp2(10049).ThumbsUpIcon,
         onPress() {
           const obj = SmartSearchActionCreators;
           obj.setResultFeedback({
@@ -77,7 +77,7 @@ export function SmartSearchFeedback(smartSearchQuery) {
       obj6.accessibilityLabel = intl2.string(_modDef4250["x/H32X"]);
       const items4 = [closure_6(IconActionButtonDefault, obj6)];
       const obj7 = { IconComponent: null, noMargin: true, onPress: null, accessibilityLabel: null };
-      obj7.IconComponent = tmp2(10003).ThumbsDownIcon;
+      obj7.IconComponent = tmp2(10051).ThumbsDownIcon;
       obj7.onPress = function onPress() {
         const obj = SmartSearchActionCreators;
         obj.setResultFeedback({

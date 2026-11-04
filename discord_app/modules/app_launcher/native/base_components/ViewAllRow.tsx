@@ -22,10 +22,10 @@ export default function ViewAllRow(title) {
   }
   const obj2 = { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true };
   const obj3 = { style: closure_4().expandCTALabelContainer, children: null };
-  const obj4 = { color: "text-brand", variant: "text-md/semibold", children: null };
+  const obj4 = { color: "text-brand", variant: "body-md/semibold", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.format(util.t.gVw57p, {});
-  obj3.children = jsx(Text_Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
+  obj3.children = jsx(Text_Text.Text, { color: "text-brand", variant: "body-md/semibold", children: null });
   obj2.label = <View style={closure_4().expandCTALabelContainer}>{null}</View>;
   obj2.onPress = title.onPress;
   return jsx(TableRow.TableRow, {

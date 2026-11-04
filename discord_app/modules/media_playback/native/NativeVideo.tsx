@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 let closure_3 = ["src"];
 get_ActivityIndicator = fn(17);
-({ View: closure_7, StyleSheet } = get_ActivityIndicator);
+({ View: metroImportDefault, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 0;
@@ -127,7 +127,7 @@ export default function NativeVideo(ref) {
           num = 100;
         }
         if (null != ref.current) {
-          const Commands = merged(9002).Commands;
+          const Commands = merged(9019).Commands;
           Commands.seek(tmp.current, arg0, num);
         }
       },
@@ -149,7 +149,7 @@ export default function NativeVideo(ref) {
           tmp3 = null != ref.current;
         }
         if (tmp3) {
-          const Commands = merged(9002).Commands;
+          const Commands = merged(9019).Commands;
           Commands.reset(ref.current);
         }
         dependencyMap((arg0) => {
@@ -173,7 +173,7 @@ export default function NativeVideo(ref) {
   const items1 = [tmp2.container, obj2.style];
   obj5.style = items1;
   const items2 = [
-    ref(ref(9002), {
+    ref(ref(9019), {
       ref,
       style: tmp2.content,
       sourceId: id,
@@ -357,8 +357,8 @@ export default function NativeVideo(ref) {
       str2 = str4;
     }
     obj7.resizeMode = str2;
-    tmp25Result = ref(ref(5837), obj7);
-    const tmp26Result = ref(5837);
+    tmp25Result = ref(ref(5851), obj7);
+    const tmp26Result = ref(5851);
   }
   items2[1] = tmp25Result;
   obj5.children = items2;

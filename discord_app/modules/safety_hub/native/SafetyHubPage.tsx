@@ -66,7 +66,7 @@ function ManualOrAutomatedReviewBanner() {
         {
           onPress: handleManualReviewClick,
           style: link.link,
-          variant: "text-sm/normal",
+          variant: "body-sm/normal",
           color: "text-default",
           children,
         },
@@ -124,7 +124,7 @@ function AutomatedUnderageAppealStatus() {
     const obj3 = {
       loginHook(children) {
         return closure_1_12(require("Text/Text").Text, {
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           color: "text-link",
           onPress() {
             return closure_1_1(closure_1_3[6]).logout("safety_hub_page_appeal_success", constants.LOGIN);
@@ -170,8 +170,8 @@ function AutomatedUnderageAppealStatus() {
   return tmp9;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8094).AgeCheckStatus;
+({ View: hasOwnProperty, ActivityIndicator: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
+const AgeCheckStatus = fn(8110).AgeCheckStatus;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -217,7 +217,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16788, dependencyMap.paths),
+          asyncRequireImpl(16880, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

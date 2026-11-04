@@ -20,12 +20,12 @@ import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategoryTypes = fn(6919).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(10073).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6934).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(10121).IMAGE_SIZE;
 const Constants = fn(1072);
 ({
-  AnalyticsObjects: metroRequire,
-  AnalyticsPages: closure_7,
+  AnalyticsObjects: closure_6,
+  AnalyticsPages: metroImportDefault,
   AnalyticsSections: closure_8,
   UpsellTypes: closure_9,
 } = Constants);
@@ -145,7 +145,7 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
       const tmp2Result = ChatInputUtils;
     } else if (tmp48.PREMIUM_LOCKED === emojiUnavailableReason) {
       const obj5 = {
-        initialUpsellKey: emoji.animated ? React7.ANIMATED_EMOJI : React7.GLOBAL_EMOJI,
+        initialUpsellKey: emoji.animated ? React6.ANIMATED_EMOJI : React6.GLOBAL_EMOJI,
         analyticsLocation: null,
         analyticsLocations: null,
         analyticsProperties: null,

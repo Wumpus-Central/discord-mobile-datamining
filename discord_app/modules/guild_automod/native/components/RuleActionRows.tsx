@@ -36,15 +36,15 @@ function RuleActionRow(onPress) {
     items = [actionInfo.descriptionText];
     let tmp9Result = null != actionInfo.helperText;
     if (tmp9Result) {
-      const obj5 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+      const obj5 = { variant: "body-xs/medium", color: "text-subtle", children: null };
       const items1 = [" ", actionInfo.helperText];
       obj5.children = items1;
-      tmp9Result = React5(Text_Text.Text, obj5);
+      tmp9Result = metroImportDefault(Text_Text.Text, obj5);
     }
-    const obj6 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+    const obj6 = { variant: "body-xs/medium", color: "text-subtle", children: null };
     items[1] = tmp9Result;
     obj6.children = items;
-    obj4.children = React5(Text_Text.Text, obj6);
+    obj4.children = metroImportDefault(Text_Text.Text, obj6);
     obj2.subLabel = timestampProducer(Stack_Stack.Stack, obj4);
     const obj7 = { checked: null != found };
     obj2.trailing = timestampProducer(FormCheckbox.FormCheckbox, obj7);
@@ -62,9 +62,9 @@ function RuleActionRow(onPress) {
   }
 }
 let closure_4 = fn(5071).GUILD_SELECTABLE_CHANNELS_KEY;
-const AutomodActionType = fn(13428).AutomodActionType;
+const AutomodActionType = fn(13512).AutomodActionType;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { subLabel: { marginTop: nativeDefault.space.PX_4 } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -74,7 +74,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function RuleActionRows(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
-  const availableActionTypes = rule(19826).getAvailableActionTypes(rule.triggerType);
+  const availableActionTypes = rule(19942).getAvailableActionTypes(rule.triggerType);
   let tmp3 = null;
   if (0 !== availableActionTypes.length) {
     let obj2 = { title: null, hasIcons: true, children: null };
@@ -207,7 +207,7 @@ export default function RuleActionRows(rule) {
         actionType,
       );
     });
-    tmp3 = closure_6(tmp(7186).TableRowGroup, obj2);
+    tmp3 = closure_6(tmp(7201).TableRowGroup, obj2);
   }
   return tmp3;
 }

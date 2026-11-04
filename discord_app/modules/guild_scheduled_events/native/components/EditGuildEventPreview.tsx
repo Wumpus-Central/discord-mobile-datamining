@@ -23,7 +23,7 @@ function PreviewBody(event) {
     () => ChannelStore.getChannel(channel_id),
     items1,
   );
-  const tmp6 = channel_id(5772)(stateFromStores);
+  const tmp6 = channel_id(5786)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -48,7 +48,7 @@ function PreviewBody(event) {
   const obj5 = {
     style: tmp.headerSubtitle,
     accessibilityLabel: null,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     children: null,
   };
@@ -57,7 +57,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1113).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(9213)(obj7);
+    obj6.channelName = tmp5(9230)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1113).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;
@@ -87,7 +87,7 @@ function PreviewBody(event) {
         items[1] = timestampProducer(Text_Text.Text, {
           accessibilityElementsHidden: true,
           importantForAccessibility: "no",
-          variant: "text-sm/medium",
+          variant: "body-sm/medium",
           color: "text-default",
           children: tmp11,
         });
@@ -96,7 +96,7 @@ function PreviewBody(event) {
         if (locationFromEvent == null) {
           str = "preview-body";
         }
-        return React5(noop.Fragment, obj3, str);
+        return metroImportDefault(noop.Fragment, obj3, str);
       },
     };
     let formatResult = intl4.format(tmp2(1113).t.f55NX0, obj8);
@@ -111,7 +111,7 @@ function PreviewBody(event) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {

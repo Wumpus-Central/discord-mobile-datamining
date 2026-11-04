@@ -102,7 +102,7 @@ function sortMembers(rowType, rowType2) {
 }
 const isGuildVocalChannelType = ChannelRecord.isGuildVocalChannelType;
 const isGuildOwner = GuildRecord.isGuildOwner;
-({ hasPermission: metroRequire, isEveryoneRole: closure_7 } = GuildRoleRecord);
+({ hasPermission: closure_6, isEveryoneRole: metroImportDefault } = GuildRoleRecord);
 const RowType = ChannelPermissionsConstants.RowType;
 ({ Permissions: closure_11, ChannelTypes: closure_12, DEFAULT_ROLE_COLOR_HEX: map1 } = Constants);
 const result = size.fileFinishedImporting("modules/channel_permissions/ChannelPermissionsUtils.tsx");
@@ -135,7 +135,7 @@ export function getRolesRows(guild, stateFromStores, channel, permission) {
     let tmp2 = !tmp;
     if (tmp) {
       if (tmp2) {
-        tmp2 = !React5(name);
+        tmp2 = !metroImportDefault(name);
       }
       if (tmp2) {
         tmp2 = fn(name.name);
@@ -175,7 +175,7 @@ export function getRolesRowsWithPermissionDisabled(guild, stateFromStores, chann
     let tmp2 = !tmp;
     if (tmp) {
       if (tmp2) {
-        tmp2 = !React5(name);
+        tmp2 = !metroImportDefault(name);
       }
       if (tmp2) {
         tmp2 = fn(name.name);
@@ -232,7 +232,7 @@ export function getExistingRoles(guild, sortedRoles, channel, accessPermissions,
       }
       let tmp13 = !flag;
       if (!flag) {
-        tmp13 = !React5(id);
+        tmp13 = !metroImportDefault(id);
       }
       tmp = tmp13;
     }
@@ -270,7 +270,7 @@ export function getAllExistingRolesWithPermission(arg0, arr, arg2, arg3, arg4) {
       }
       let tmp13 = !flag;
       if (!flag) {
-        tmp13 = !React5(id);
+        tmp13 = !metroImportDefault(id);
       }
       hasItem = tmp13;
     }
@@ -316,7 +316,7 @@ export function getExistingRolesRows(guild, sortedGuildRoles, channel, accessPer
       }
       let tmp13 = !flag;
       if (!flag) {
-        tmp13 = !React5(id);
+        tmp13 = !metroImportDefault(id);
       }
       tmp = tmp13;
     }
@@ -375,7 +375,7 @@ export function getExistingRolesRowWithPermissionDisabled(
       }
       let tmp13 = !flag;
       if (!flag) {
-        tmp13 = !React5(id);
+        tmp13 = !metroImportDefault(id);
       }
       hasItem = tmp13;
     }

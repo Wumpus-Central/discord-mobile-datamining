@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
@@ -42,7 +42,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     obj5.accessibilityLabel = intl.formatToPlainString(util.t["/0p2sz"], obj4);
     obj5.primaryText = result;
     const obj6 = { fillAmounts: appStoreStarFillAmounts };
-    obj5.secondaryContent = React5(AppStoreOverlayStarRatingDefault, obj6);
+    obj5.secondaryContent = metroImportDefault(AppStoreOverlayStarRatingDefault, obj6);
     obj5.ratingCount = result1;
     let tmp6 = obj5;
     const tmp9Result2 = AppStoreOverlayStatCardUtils;
@@ -82,9 +82,9 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
   }
   items1[2] = str9;
   const items2 = [
-    React6(Text_Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: items1 }),
-    React5(Text_Text.Text, {
-      variant: "text-md/semibold",
+    React5(Text_Text.Text, { variant: "body-xs/semibold", color: "text-subtle", children: items1 }),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-md/semibold",
       color: "text-default",
       lineClamp: 1,
       children: tmp6.primaryText,
@@ -94,14 +94,14 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
   if (tmp23Result) {
     const obj8 = { style: tmp.secondaryRow, children: null };
     if (null == secondaryContent) {
-      const obj9 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: secondaryText };
-      secondaryContent = React5(Text_Text.Text, obj9);
+      const obj9 = { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, children: secondaryText };
+      secondaryContent = metroImportDefault(Text_Text.Text, obj9);
     }
     obj8.children = secondaryContent;
-    tmp23Result = React5(timestampProducer, obj8);
+    tmp23Result = metroImportDefault(timestampProducer, obj8);
   }
   items2[2] = tmp23Result;
-  const tmp18Result = React6(React7, { children: items2 });
+  const tmp18Result = React5(React6, { children: items2 });
   if (tmp16) {
     const obj10 = {
       style: items,
@@ -119,7 +119,7 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     }
     obj10.accessibilityHint = stringResult;
     obj10.children = tmp18Result;
-    let tmp23Result2 = React5(React4, obj10);
+    let tmp23Result2 = metroImportDefault(React4, obj10);
     tmp20Result = PlatformUtils;
   } else {
     const obj11 = {
@@ -129,14 +129,14 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
       accessibilityLabel,
       children: tmp18Result,
     };
-    tmp23Result2 = React5(timestampProducer, obj11);
+    tmp23Result2 = metroImportDefault(timestampProducer, obj11);
   }
   return tmp23Result2;
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: closure_4, ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
 const createStyles = fn(5141);
 let obj2 = {
@@ -234,7 +234,7 @@ export default function AppStoreOverlayStatsCarousel(arg0) {
         tmp3 = require;
       }
       obj.onRatingPress = tmp3;
-      return React5(AppStoreOverlayStatCardItem, obj, stat.type);
+      return metroImportDefault(AppStoreOverlayStatCardItem, obj, stat.type);
     });
     obj2.children = closure_7(closure_6, obj4);
     let tmp12Result = closure_7(closure_6, obj2);
@@ -260,7 +260,7 @@ export default function AppStoreOverlayStatsCarousel(arg0) {
         tmp3 = require;
       }
       obj.onRatingPress = tmp3;
-      return React5(AppStoreOverlayStatCardItem, obj, stat.type);
+      return metroImportDefault(AppStoreOverlayStatCardItem, obj, stat.type);
     });
     obj5.children = closure_7(closure_5, obj9);
     tmp12Result = closure_7(LegacyBaseButton.GestureDetector, obj5);

@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx
-import search_tracking_TrackingDefault from "../../../../tracking/Tracking.tsx";
+import TrackingDefault from "../../../../tracking/Tracking.tsx";
 import pages_ErrorScreenDefault from "../ErrorScreen.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
@@ -14,8 +14,8 @@ export default function SearchIndexingScreen(searchContext) {
   searchContext = searchContext.searchContext;
   items = [searchContext];
   const effect = noop.useEffect(() => {
-    search_tracking_TrackingDefault.trackSearchIndexing({ searchContext });
+    TrackingDefault.trackSearchIndexing({ searchContext });
   }, items);
-  const text = searchContext(14024).getIndexingErrorText(searchContext);
+  const text = searchContext(14110).getIndexingErrorText(searchContext);
   return jsx(pages_ErrorScreenDefault, { text });
 }

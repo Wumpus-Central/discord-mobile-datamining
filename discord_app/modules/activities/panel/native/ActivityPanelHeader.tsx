@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
 import useGetOrFetchApplicationsDefault from "../../../applications/useGetOrFetchApplications.tsx";
 import LeaveActivityButtonDefault from "LeaveActivityButton.tsx";
 import useMorphablePanelGestureDefault from "../../../panels/morphable/native/useMorphablePanelGesture.tsx";
@@ -142,7 +142,7 @@ class BaseActivityPanelContent {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(5777);
+const ActivityPanelConstants = fn(5791);
 ({
   ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9,
@@ -274,19 +274,19 @@ export default noop.memo(function ActivityPanelHeader() {
   let wrapperDimensions;
   const tmp2 = closure_14();
   const headerContainer = tmp2;
-  const context = noop.useContext(wrapperDimensions(19289));
+  const context = noop.useContext(wrapperDimensions(19393));
   wrapperDimensions = context.wrapperDimensions;
   items = [tmp2.headerContainer, wrapperDimensions.isWindowLandscape];
   ({ setMode, wrapperOffset, pipState } = context);
   const obj = {
     style: noop.useMemo(() => {
       if (wrapperDimensions.isWindowLandscape) {
-        let str2 = React7;
+        let str2 = React6;
         let tmp = 0;
         let num = null;
         let str = "auto";
       } else {
-        str = React6;
+        str = React5;
         str2 = "auto";
         tmp = null;
         num = 0;
@@ -316,12 +316,12 @@ export function useBaseActivityPanelHeader(context) {
   ({ setMode, wrapperOffset, pipState } = context);
   obj.headerStyles = noop.useMemo(() => {
     if (wrapperDimensions.isWindowLandscape) {
-      let str2 = React7;
+      let str2 = React6;
       let tmp = 0;
       let num = null;
       let str = "auto";
     } else {
-      str = React6;
+      str = React5;
       str2 = "auto";
       tmp = null;
       num = 0;

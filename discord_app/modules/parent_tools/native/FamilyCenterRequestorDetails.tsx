@@ -49,7 +49,7 @@ export default function FamilyCenterRequestorDetails(otherUser) {
   const obj4 = { style: tmp.detailsContainer, children: null };
   const items1 = [
     React4(FamilyCenterUsernameHeaderDefault, { user: otherUser }),
-    React4(Text_Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: linkTimestampText }),
+    React4(Text_Text.Text, { variant: "body-xs/semibold", color: "text-muted", children: linkTimestampText }),
   ];
   obj4.children = items1;
   items[1] = hasOwnProperty(View, obj4);

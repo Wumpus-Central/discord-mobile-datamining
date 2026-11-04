@@ -4,6 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Constants from "../Constants.tsx";
+import getClearAfterDurationDefault from "getClearAfterDuration.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const ClearAfterValues = Constants.ClearAfterValues;
@@ -14,7 +15,8 @@ export default function formatClearAfterOption(type) {
     const intl8 = util.intl;
     const formatToPlainStringResult = intl8.formatToPlainString(util.t.Rea2gR, { hours: 24 });
     const _Date10 = Date;
-    const sum = Date.now() + DurationsDefault.Millis.DAY;
+    const sum = Date.now() + getClearAfterDurationDefault(ClearAfterValues.TODAY);
+    const tmp70 = getClearAfterDurationDefault(ClearAfterValues.TODAY);
     const _Date11 = Date;
     const date = new Date();
     const _Date12 = Date;

@@ -12,8 +12,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostNewTag.tsx");
 
 export default function ForumPostNewTag(containerStyle) {
-  const obj = { containerStyle: null, variant: "text-xs/semibold", color: "badge-primary-text" };
+  const obj = { containerStyle: null, variant: "body-xs/semibold", color: "badge-primary-text" };
   items = [containerStyle.containerStyle, closure_3().container];
   obj.containerStyle = items;
-  return jsx(native.NewTag, { containerStyle: null, variant: "text-xs/semibold", color: "badge-primary-text" });
+  return jsx(native.NewTag, { containerStyle: null, variant: "body-xs/semibold", color: "badge-primary-text" });
 }

@@ -199,7 +199,11 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
   }
 };
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire, SubscriptionStatusTypes: closure_7 } = Constants);
+({
+  AnalyticEvents: hasOwnProperty,
+  AnalyticsSections: closure_6,
+  SubscriptionStatusTypes: metroImportDefault,
+} = Constants);
 const PremiumConstants = fn(1387);
 ({
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8,

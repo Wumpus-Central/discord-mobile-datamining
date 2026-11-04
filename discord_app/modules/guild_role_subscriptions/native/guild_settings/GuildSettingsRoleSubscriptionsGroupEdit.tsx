@@ -217,6 +217,6 @@ const result = size.fileFinishedImporting(
 
 export default function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
   guildId = guildId.guildId;
-  const obj = { guildId, children: React7(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId }) };
-  return React7(GuildSettingsRoleSubscriptionContainerDefault, obj);
+  const obj = { guildId, children: React6(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId }) };
+  return React6(GuildSettingsRoleSubscriptionContainerDefault, obj);
 }

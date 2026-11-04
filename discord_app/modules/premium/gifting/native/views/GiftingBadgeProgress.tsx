@@ -18,9 +18,9 @@ function GiftingBadgeProgressBar(percent) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(8887).getSingleRequirementThreshold;
+let closure_4 = fn(8904).getSingleRequirementThreshold;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 },
@@ -94,14 +94,14 @@ export default function GiftingBadgeProgress(title) {
   const obj5 = { style: tmp.content, children: null };
   let tmp14 = null != title;
   if (tmp14) {
-    const obj6 = { variant: "text-md/semibold", children: title };
+    const obj6 = { variant: "body-md/semibold", children: title };
     tmp14 = hasOwnProperty(Text_Text.Text, obj6);
   }
   const items1 = [tmp14, hasOwnProperty(GiftingBadgeProgressBar, { percent: num2 })];
   const obj7 = { style: tmp.labels, children: null };
   let tmp16Result = null != nextTier;
   if (tmp16Result) {
-    const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
+    const obj8 = { variant: "body-xs/normal", color: "text-muted", children: null };
     const intl = util.intl;
     const obj9 = { count: progress, threshold: tmp6 };
     obj8.children = intl.format(_modDef2763.iIpfQe, obj9);

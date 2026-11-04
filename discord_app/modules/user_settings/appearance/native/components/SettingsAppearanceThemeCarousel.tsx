@@ -5,10 +5,10 @@ import MobileThemesUtils from "../../../../client_themes/native/MobileThemesUtil
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
-import _modDef10146 from "../../../../../../_runtime/metro/10146__.js";
-import PaginationDefault from "../../../../../../_runtime/10759_Pagination.js";
+import _modDef10194 from "../../../../../../_runtime/metro/10194__.js";
+import PaginationDefault from "../../../../../../_runtime/10807_Pagination.js";
 import HexagonCampaignThemeLegalDefault from "../../../../hexagon_campaign/native/HexagonCampaignThemeLegal.tsx";
-import _modDef17412 from "../../../../../../_runtime/metro/17412__.js";
+import _modDef17503 from "../../../../../../_runtime/metro/17503__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import SettingsAppearanceConstants from "../SettingsAppearanceConstants.tsx";
@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
 const HexagonCampaignConstants = fn(5166);
 ({ HexagonCampaignPerk: closure_9, HexagonCampaignPerkAvailability: closure_10 } = HexagonCampaignConstants);
@@ -127,7 +127,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     }
     tmp18 = isThumbstickScrollDevice;
   }
-  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(6904).QuestContent.CLIENT_THEME_SETTINGS, tmp2(16609).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
+  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(6919).QuestContent.CLIENT_THEME_SETTINGS, tmp2(16699).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
   const tmp2Result = require("HexagonCampaignAnalytics");
   const hexagonCampaignPerkAvailability = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
   const tmp20 = constants;
@@ -237,11 +237,11 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   const tmp2Result10 = require("../../../../../../_runtime/metro/01652__.js");
   let tmp36 = null;
   if (tmp2Result11.isNitroGatedMobileTheme(themes[currentThemeIndex])) {
-    const obj7 = { source: _modDef10146, style: animatedStyles.iconHeaderSecondary, size: tmp2(1187).IconSizes.SMALL_20 };
+    const obj7 = { source: _modDef10194, style: animatedStyles.iconHeaderSecondary, size: tmp2(1187).IconSizes.SMALL_20 };
     tmp36 = sharedValue1(rounded, obj7);
   }
   const items11 = [tmp36, ];
-  const obj8 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-sm/semibold", children: themes[currentThemeIndex].getName() };
+  const obj8 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-xs/semibold", children: themes[currentThemeIndex].getName() };
   items11[1] = sharedValue1(require("Text/Text").Text, obj8);
   obj6.children = items11;
   if (!isScreenReaderEnabled) {
@@ -307,7 +307,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       let tmp40Result7 = tmp34(memo1, obj9);
     }
     const obj12 = { children: tmp40Result7 };
-    const obj13 = { animated: true, style: null, variant: "text-sm/medium", children: null };
+    const obj13 = { animated: true, style: null, variant: "body-sm/medium", children: null };
     const items13 = [animatedStyles.headerSecondary, tmp.textCentered];
     obj13.style = items13;
     if (isPreview) {
@@ -358,7 +358,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       }
       if (tmp40Result6) {
         const obj21 = { variant: "overlay", perk: tmp20.CLIENT_THEME };
-        tmp40Result6 = tmp40(tmp53(16631), obj21);
+        tmp40Result6 = tmp40(tmp53(16721), obj21);
       }
       const obj22 = { children: null };
       obj20.children = tmp40Result6;
@@ -372,7 +372,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       obj22.children = items17;
       const obj24 = { style: tmp.container, children: null };
       const obj25 = { style: tmp.floatingNuxContainer, children: null };
-      tmp2Result12 = tmp2(5373);
+      tmp2Result12 = tmp2(5374);
       const obj26 = { style: null, children: null };
       const items19 = [tmp.floatingNux, animatedStyle1, , ];
       ({ bgSurfaceOverlay: arr21[2], borderFaint: arr21[3] } = animatedStyles);
@@ -380,15 +380,15 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       const obj27 = { style: null, source: null, size: null };
       const items20 = [tmp.arrowLeft, animatedStyles.iconInteractive];
       obj27.style = items20;
-      obj27.source = _modDef17412;
+      obj27.source = _modDef17503;
       obj27.size = tmp2(1187).IconSizes.REFRESH_SMALL_16;
       const items21 = [tmp40(rounded, obj27), ];
-      const obj28 = { animated: true, style: null, variant: "eyebrow", maxFontSizeMultiplier: 1.5, children: null };
+      const obj28 = { animated: true, style: null, variant: "body-sm/medium", maxFontSizeMultiplier: 1.5, children: null };
       const items22 = [animatedStyles.textNormal, tmp.uppercase];
       obj28.style = items22;
       const intl3 = tmp2(1113).intl;
       obj28.children = intl3.string(tmp2(1113).t.y2b7CA);
-      items21[1] = tmp40(tmp2(5747).Text, obj28);
+      items21[1] = tmp40(tmp2(5761).Text, obj28);
       obj26.children = items21;
       obj25.children = tmp34(module_1652.View, obj26);
       const items23 = [tmp40(closure_5, obj25), tmp34(memo1, obj22)];

@@ -16,12 +16,12 @@ class HeaderButton {
   }
 }
 const jsx = fn(21).jsx;
-const React3 = "heading-md/semibold";
-const diff = fn(5760).SMALL_BUTTON_HEIGHT - 2 * fn(5760).BUTTON_BORDER_WIDTH;
-const diff1 = diff - fn(5747).TextStyleSheet["heading-md/semibold"].lineHeight;
+const React3 = "heading-sm/semibold";
+const diff = fn(5774).SMALL_BUTTON_HEIGHT - 2 * fn(5774).BUTTON_BORDER_WIDTH;
+const diff1 = diff - fn(5761).TextStyleSheet["heading-sm/semibold"].lineHeight;
 const createStyles = fn(5141);
 const React4 = createStyles.createStyles({ pill: { paddingVertical: diff1 / 2 } });
-HeaderButton.Icon = fn(5755).BaseTextButton.Icon;
+HeaderButton.Icon = fn(5769).BaseTextButton.Icon;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
 

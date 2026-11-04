@@ -8,7 +8,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -109,14 +109,14 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     items1[1] = closure_8(onCancel(tmp5[12]).Heading, obj4);
     const obj5 = {
       style: tmp.bodyText,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       children: outboundPromotion.outboundRedemptionModalBody,
     };
     items1[2] = closure_8(onCancel(tmp5[12]).Text, obj5);
     let obj6 = { style: tmp.copyInputContainer, children: null };
     const obj7 = {
       style: tmp.copyInputLabel,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };
@@ -140,7 +140,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
       },
       children: null,
     };
-    const obj12 = { lineClamp: 1, variant: "text-sm/medium", color: "interactive-text-active", children: code };
+    const obj12 = { lineClamp: 1, variant: "body-sm/medium", color: "interactive-text-active", children: code };
     obj11.children = closure_8(Text(tmp5[12]).Text, obj12);
     obj10.children = closure_8(closure_6, obj11);
     const items3 = [closure_8(analyticsLocations, obj10)];
@@ -169,7 +169,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     items2[1] = closure_9(closure_6, obj9);
     Text = Text(tmp5[12]).Text;
     obj9 = closure_8(Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-muted",
       children: "This code is included in your confirmation email",
     });
@@ -188,14 +188,14 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     const items4 = [closure_8(tmp4(tmp5[10]), obj16), ,];
     const obj17 = {
       style: tmp.errorTitle,
-      variant: "text-lg/semibold",
+      variant: "body-lg/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };
     const intl4 = onCancel(tmp5[13]).intl;
     obj17.children = intl4.string(onCancel(tmp5[13]).t.iufib1);
     items4[1] = closure_8(onCancel(tmp5[12]).Text, obj17);
-    const obj18 = { style: tmp.bodyText, variant: "text-md/medium", children: null };
+    const obj18 = { style: tmp.bodyText, variant: "body-md/medium", children: null };
     const intl5 = onCancel(tmp5[13]).intl;
     obj18.children = intl5.string(onCancel(tmp5[13]).t.eAn6z2);
     items4[2] = closure_8(onCancel(tmp5[12]).Text, obj18);

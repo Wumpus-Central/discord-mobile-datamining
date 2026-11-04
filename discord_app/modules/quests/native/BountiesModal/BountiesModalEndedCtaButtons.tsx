@@ -82,7 +82,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
         });
       },
     };
-    const items3 = [closure_3(tmp2(5754).Button, obj4)];
+    const items3 = [closure_3(tmp2(5768).Button, obj4)];
     let tmp13Result = null;
     if (showCloseButton) {
       const obj5 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
@@ -90,7 +90,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
       obj5.text = intl.string(tmp2(1113).t.cpT0Cq);
       obj5.disabled = flag;
       obj5.onPress = bounty.onClose;
-      tmp13Result = closure_3(tmp2(5754).Button, obj5);
+      tmp13Result = closure_3(tmp2(5768).Button, obj5);
     }
     items3[1] = tmp13Result;
     obj3.children = items3;

@@ -12,7 +12,7 @@ import createStyles from "../../../../design/components/Styles/native/createStyl
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { container: { flexDirection: "column", gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerksSection.tsx");

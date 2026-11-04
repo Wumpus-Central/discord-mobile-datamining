@@ -36,7 +36,7 @@ export default function MultipleChoiceField(hasIcons) {
   const items1 = [
     closure_4(require("Text/Text").Text, {
       style: tmp.formHeader,
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       children: field.label,
     }),

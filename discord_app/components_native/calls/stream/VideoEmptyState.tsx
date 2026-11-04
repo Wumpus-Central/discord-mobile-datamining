@@ -9,7 +9,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const VideoEmptyTypes = { NONE: "NONE", STREAM_ENDED: "STREAM_ENDED", STREAM_FAILED: "STREAM_FAILED" };
 const createStyles = fn(5141);
 let obj3 = {
@@ -72,7 +72,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       let obj2 = {
         style: tmp2.placeholderImage,
-        children: closure_5(stream(11898).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }),
+        children: closure_5(stream(11957).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }),
       };
       tmp10 = closure_5(View, obj2);
     }
@@ -93,13 +93,13 @@ export default function VideoEmptyState(style) {
     tmp8Result = null;
   }
   if (null != avError) {
-    let errorCode = stream(6067).getErrorInfo(avError).errorCode;
-    const obj6 = stream(6067);
+    let errorCode = stream(6082).getErrorInfo(avError).errorCode;
+    const obj6 = stream(6082);
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      errorCode = stream(6067).getErrorInfo(stream(6067).AVError.STREAM_FAILED_TO_START).errorCode;
-      const obj5 = stream(6067);
+      errorCode = stream(6082).getErrorInfo(stream(6082).AVError.STREAM_FAILED_TO_START).errorCode;
+      const obj5 = stream(6082);
     }
   }
   const items1 = [ChannelStore];
@@ -122,11 +122,11 @@ export default function VideoEmptyState(style) {
   const items4 = [tmp8Result, ,];
   let tmp29 = null != errorCode;
   if (tmp29) {
-    const obj9 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: null };
+    const obj9 = { variant: "body-sm/semibold", color: "text-muted", selectable: true, children: null };
     const intl3 = stream(1113).intl;
     const obj10 = { errorCode };
     obj9.children = intl3.formatToPlainString(stream(1113).t.ejOT95, obj10);
-    tmp29 = closure_5(stream(5747).Text, obj9);
+    tmp29 = closure_5(stream(5761).Text, obj9);
   }
   items4[1] = tmp29;
   let tmp31 = !removeCloseButton;
@@ -139,7 +139,7 @@ export default function VideoEmptyState(style) {
       const obj = StreamActionCreators;
       obj.stopStream(StreamKeyUtils.encodeStreamKey(stream));
     };
-    obj11.children = closure_5(stream(5754).Button, obj12);
+    obj11.children = closure_5(stream(5768).Button, obj12);
     tmp31 = closure_5(View, obj11);
   }
   items4[2] = tmp31;

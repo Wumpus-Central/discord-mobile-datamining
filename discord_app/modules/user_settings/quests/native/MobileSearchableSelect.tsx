@@ -213,7 +213,7 @@ class MobileSearchableSelect {
           },
           disabled: flag2,
           children: closure_7(options(value[8]).Text, {
-            variant: "text-sm/medium",
+            variant: "body-sm/medium",
             color: "text-default",
             style: dropdownItem.dropdownItemText,
             children: children.label,
@@ -231,9 +231,9 @@ class MobileSearchableSelect {
   }
 }
 get_ActivityIndicator = fn(17);
-({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
+({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
 const rect = {
@@ -260,7 +260,7 @@ obj2.dropdownItem = {
 };
 obj2.dropdownItemLast = { borderBottomWidth: 0 };
 obj2.dropdownItemText = { fontSize: 14 };
-const React7 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileSearchableSelect.tsx");
 

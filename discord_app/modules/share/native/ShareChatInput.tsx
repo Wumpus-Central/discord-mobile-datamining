@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -149,5 +149,5 @@ export default function ShareChatInput(onFocus) {
   obj3.children = timestampProducer(ReactionIcon.ReactionIcon, { size: "md" });
   items3[1] = timestampProducer(Pressables.PressableOpacity, obj3);
   obj.children = items3;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }

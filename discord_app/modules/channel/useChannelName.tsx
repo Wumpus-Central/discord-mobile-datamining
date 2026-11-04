@@ -149,7 +149,7 @@ function computeChannelName(channel, UserStore, RelationshipStore) {
   }
 }
 const Constants = fn(1072);
-({ ChannelTypes: closure_7, NULL_STRING_CHANNEL_ID: closure_8 } = Constants);
+({ ChannelTypes: metroImportDefault, NULL_STRING_CHANNEL_ID: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useChannelName.tsx");
 

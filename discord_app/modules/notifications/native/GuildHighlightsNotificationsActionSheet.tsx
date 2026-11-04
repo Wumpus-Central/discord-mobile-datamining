@@ -22,7 +22,7 @@ function GuildPill(guild) {
   items = [closure_1_11(GuildIconDefault, obj2)];
   const obj3 = {
     style: tmp.guildName,
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
@@ -38,7 +38,7 @@ function GuildPill(guild) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_8, HighlightSettings: closure_9 } = Constants);
-const FeedbackRating = fn(10288).FeedbackRating;
+const FeedbackRating = fn(10336).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let createStyles = fn(5141);
@@ -204,7 +204,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
     const intl4 = tmp11(tmp12[14]).intl;
     obj7.children = intl4.string(tmp11(tmp12[14]).t.o8Bypv);
     items5[1] = closure_11(tmp11(tmp12[11]).Text, obj7);
-    const obj8 = { style: tmp.centerText, variant: "text-md/medium", color: "text-default", children: null };
+    const obj8 = { style: tmp.centerText, variant: "body-md/medium", color: "text-default", children: null };
     const intl5 = tmp11(tmp12[14]).intl;
     const obj9 = { helpUrl: feedbackSettings(tmp12[19]).getArticleURL(callback.HIGHLIGHTS_NOTIFICATIONS) };
     obj8.children = intl5.format(tmp11(tmp12[14]).t.enfuur, obj9);
@@ -244,7 +244,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
     }
     const obj13 = { children: null };
     items6[2] = tmp27Result2;
-    const obj14 = { style: tmp.centerText, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj14 = { style: tmp.centerText, variant: "body-sm/medium", color: "text-default", children: null };
     const intl7 = tmp11(tmp12[14]).intl;
     const obj15 = {
       notifSettingsHook() {
@@ -264,7 +264,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
       obj16 = {};
     }
     if (tmp17) {
-      const obj17 = { style: null, variant: "heading-md/semibold", color: "text-brand", children: null };
+      const obj17 = { style: null, variant: "heading-sm/semibold", color: "text-brand", children: null };
       const items7 = [,];
       ({ centerText: arr7[0], thanks: arr7[1] } = tmp);
       obj17.style = items7;

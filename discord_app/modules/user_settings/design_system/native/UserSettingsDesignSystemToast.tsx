@@ -19,8 +19,8 @@ function DemoGroup(demos) {
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_8, children: null };
   items = [
-    React4(Text_Text.Text, { variant: "text-lg/semibold", children: title }),
-    React4(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: hint }),
+    React4(Text_Text.Text, { variant: "body-lg/semibold", children: title }),
+    React4(Text_Text.Text, { variant: "body-sm/normal", color: "text-subtle", children: hint }),
     demos.map((label) =>
       closure_1_4(
         components_Button_Button.Button,
@@ -56,12 +56,12 @@ function LiveStores() {
     return num;
   });
   const obj3 = { spacing: nativeDefault.space.PX_8, children: null };
-  items = [React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Live store" })];
+  items = [React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Live store" })];
   let str = "text-subtle";
   if (null != toastStore) {
     str = "text-feedback-positive";
   }
-  const obj4 = { variant: "text-md/medium", color: str, children: null };
+  const obj4 = { variant: "body-md/medium", color: str, children: null };
   let str2;
   if (toastStore != null) {
     str2 = toastStore.text;
@@ -231,7 +231,7 @@ export default function UserSettingsDesignSystemToast() {
   });
   const obj7 = { spacing: nativeDefault.space.PX_12, style: tmp4.previews, children: null };
   items1 = [
-    React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Components" }),
+    React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Components" }),
     React4(Toast.Toast, { text, variant: "default" }),
     ,
     ,
@@ -269,7 +269,7 @@ export default function UserSettingsDesignSystemToast() {
   });
   items1[4] = React4(Toast.Toast, { text, variant: "success" });
   items1[5] = React4(Toast.Toast, { text, variant: "critical" });
-  items1[6] = React4(Text_Text.Text, { variant: "text-lg/semibold", children: "Entities" });
+  items1[6] = React4(Text_Text.Text, { variant: "body-lg/semibold", children: "Entities" });
   if ("" !== emojiUrl) {
     const obj13 = { type: "emoji", src: emojiUrl, alt: "\u{1F525}" };
     let obj14 = obj13;

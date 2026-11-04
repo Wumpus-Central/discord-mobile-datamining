@@ -36,7 +36,7 @@ function getFavoriteThreadIdsForCleanup(categoryId) {
   });
   return found.map((id) => id.id);
 }
-let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
+let closure_13 = async function _loadFavoriteThreadsForCleanup(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -87,14 +87,41 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
   }
 };
 const THREAD_CHANNEL_TYPES = fn(4994).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(5003);
+({ FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_9, FAVORITES_PRUNE_WHEN_ARCHIVED: closure_10 } =
+  FavoritesConstants);
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesCleanup.tsx");
 
 export { getFavoriteThreadIdsForCleanup };
+export function getAutoAddedThreadsCategoryId() {
+  closure_0 = closure_9.toLowerCase();
+  const values = Object.values(FavoriteStore.getFavoriteChannels());
+  const found = values.find((type) => {
+    let tmp = type.type === preloaded_user_settings.FavoriteChannelType.CATEGORY;
+    if (tmp) {
+      let formatted;
+      if (type.nickname != null) {
+        formatted = str.trim().toLowerCase();
+        const str2 = str.trim();
+      }
+      tmp = formatted === closure_0;
+    }
+    return tmp;
+  });
+  let id;
+  if (found != null) {
+    id = found.id;
+  }
+  if (id == null) {
+    id = null;
+  }
+  return id;
+}
 export function loadFavoriteThreadsForCleanup() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -105,13 +132,13 @@ export function loadFavoriteThreadsForCleanup() {
 export function getFavoritesCleanupCandidates(days) {
   days = days.days;
   if (Number.isSafeInteger(days)) {
-    if (days >= 1) {
+    if (days >= 0) {
       const _Date = Date;
       const timestamp = Date.now();
       items = [];
       const diff = timestamp - days * DurationsDefault.Millis.DAY;
-      const tmp28 = getFavoriteThreadIdsForCleanup(days.categoryId);
-      const iter = tmp28[Symbol.iterator]();
+      const tmp29 = getFavoriteThreadIdsForCleanup(days.categoryId);
+      const iter = tmp29[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp4 = nextResult;
@@ -120,22 +147,24 @@ export function getFavoritesCleanupCandidates(days) {
         if (null != channel) {
           if (null != tmp7.threadMetadata) {
             if (PermissionStore.can(Permissions.VIEW_CHANNEL, tmp7)) {
-              if (tmp7.threadMetadata.archived) {
-                let arr = items.push(tmp7);
-              } else if (!ReadStateStore.hasUnreadOrMentions(tmp4)) {
-                let obj = getThreadAutoArchiveTimeOnce;
-                let threadLastActivityTime = obj.getThreadLastActivityTime(tmp7);
-                let tmp15 = threadLastActivityTime;
-                let _Number = Number;
-                let isFiniteResult = Number.isFinite(threadLastActivityTime);
-                if (isFiniteResult) {
-                  isFiniteResult = tmp15 > 0;
-                }
-                if (isFiniteResult) {
-                  isFiniteResult = tmp15 < diff;
-                }
-                if (isFiniteResult) {
-                  let arr2 = items.push(tmp7);
+              if (!ReadStateStore.hasUnreadOrMentions(tmp4)) {
+                if (tmp7.threadMetadata.archived) {
+                  let arr = items.push(tmp7);
+                } else if (days !== closure_1_10) {
+                  let obj = getThreadAutoArchiveTimeOnce;
+                  let threadLastActivityTime = obj.getThreadLastActivityTime(tmp7);
+                  let tmp16 = threadLastActivityTime;
+                  let _Number = Number;
+                  let isFiniteResult = Number.isFinite(threadLastActivityTime);
+                  if (isFiniteResult) {
+                    isFiniteResult = tmp16 > 0;
+                  }
+                  if (isFiniteResult) {
+                    isFiniteResult = tmp16 < diff;
+                  }
+                  if (isFiniteResult) {
+                    let arr2 = items.push(tmp7);
+                  }
                 }
               }
             }

@@ -54,7 +54,7 @@ export default function AgeVerificationOtherWindowScreen(copy) {
       style: tmp.text,
       children: title,
     }),
-    React3(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", style: tmp.text, children: description }),
+    React3(Text_Text.Text, { variant: "body-md/medium", color: "text-muted", style: tmp.text, children: description }),
   ];
   obj5.children = items1;
   items[1] = React4(Stack_Stack.Stack, obj5);

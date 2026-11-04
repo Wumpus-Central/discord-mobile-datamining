@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef7442 from "../../../../../_runtime/metro/07442__.js";
+import _modDef7458 from "../../../../../_runtime/metro/07458__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const _modDef1652 = _mod1652;
@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
+({ jsxs: hasOwnProperty, jsx: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   section: { height: 48, paddingHorizontal: 4 },
@@ -71,7 +71,7 @@ export default function StageSectionHeader(children) {
   const obj3 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
   const animatedStyle = _mod1652.useAnimatedStyle(StageSectionHeaderTsx1);
   const obj4 = {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "text-overlay-light",
     accessibilityRole: "header",
     children: null,
@@ -87,7 +87,7 @@ export default function StageSectionHeader(children) {
   items3[1] = tmp8Result;
   const obj6 = { style: tmp.collapseButton, children: null };
   const obj7 = { style: animatedStyle, children: null };
-  obj7.children = timestampProducer(native.Icon, { source: _modDef7442, style: tmp.collapseIcon });
+  obj7.children = timestampProducer(native.Icon, { source: _modDef7458, style: tmp.collapseIcon });
   obj6.children = timestampProducer(_modDef1652.View, obj7);
   items3[2] = timestampProducer(React4, obj6);
   obj3.children = items3;

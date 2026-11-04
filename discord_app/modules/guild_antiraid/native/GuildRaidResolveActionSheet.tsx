@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SafetyToastType = fn(7614).SafetyToastType;
+const SafetyToastType = fn(7630).SafetyToastType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -202,7 +202,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t["1zmw/H"]);
   const items1 = [handleTextInputChange(Text_Text.Text, obj7), , , ,];
-  let obj8 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
+  let obj8 = { style: tmp.subtitle, variant: "body-sm/normal", color: "text-default", children: null };
   const intl6 = util.intl;
   obj8.children = intl6.string(util.t.nF79oO);
   items1[1] = handleTextInputChange(Text_Text.Text, obj8);

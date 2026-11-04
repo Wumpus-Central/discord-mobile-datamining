@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 require = fn;
 let GuildChannelStore = fn(5071);
-({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
+({ GUILD_SELECTABLE_CHANNELS_KEY: closure_6, GUILD_VOCAL_CHANNELS_KEY: metroImportDefault } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
 ({ Permissions: closure_14, MessageTypes: closure_15 } = Constants);
@@ -78,7 +78,7 @@ export function useGuildChannelCreated(arg0) {
         return tmp2;
       }
       const channels = GuildChannelStore.getChannels(id);
-      return channels[timestampProducer].some(hasNewChannel) || channels[React5].some(hasNewChannel);
+      return channels[timestampProducer].some(hasNewChannel) || channels[metroImportDefault].some(hasNewChannel);
     },
     items1,
   );
@@ -320,7 +320,7 @@ export function useCompletedStates(guild) {
         return tmp2;
       }
       const channels = GuildChannelStore.getChannels(id);
-      return channels[timestampProducer].some(hasNewChannel) || channels[React5].some(hasNewChannel);
+      return channels[timestampProducer].some(hasNewChannel) || channels[metroImportDefault].some(hasNewChannel);
     },
     items11,
   );

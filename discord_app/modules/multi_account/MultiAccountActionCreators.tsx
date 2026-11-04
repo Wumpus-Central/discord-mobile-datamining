@@ -10,7 +10,7 @@ import MultiAccountStore from "MultiAccountStore.tsx";
 
 const require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
 const logger = new LoggerDefault("MultiAccountActionCreators");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/MultiAccountActionCreators.tsx");

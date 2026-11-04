@@ -45,7 +45,7 @@ export default noop.memo(function MessagesItemEmptyState() {
   items = [React4(Text_Text.Heading, obj2), ,];
   const obj3 = {
     color: "text-default",
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     style: tmp.body,
     maxFontSizeMultiplier: 2,
     children: null,

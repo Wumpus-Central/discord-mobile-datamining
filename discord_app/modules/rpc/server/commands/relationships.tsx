@@ -8,13 +8,13 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ ApplicationFlags: closure_7, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
+({ ApplicationFlags: metroImportDefault, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16444);
+const CONTEXT_MENU_ICON_NAMES = fn(16536);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
-let items = [fn(9034).OAuth2Scopes.RELATIONSHIPS_READ];
-obj4[fn(6570).RPC_SCOPE_CONFIG.ANY] = items;
+let items = [fn(9051).OAuth2Scopes.RELATIONSHIPS_READ];
+obj4[fn(6585).RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.handler = function handler(socket) {
   const deserializer = BigFlagUtilsAll;

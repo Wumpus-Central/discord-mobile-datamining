@@ -35,10 +35,10 @@ export function useSettingSearchResults() {
         scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
         const found = scoredSearchResults.filter((setting) => {
           setting = setting.setting;
-          const isBlockedResult = scoredSearchResults(16736).isBlocked(setting, closure_0);
+          const isBlockedResult = scoredSearchResults(16828).isBlocked(setting, closure_0);
           let tmp3 = !isBlockedResult;
           if (!isBlockedResult) {
-            tmp3 = !stateFromStores(16582).SETTING_RENDERER_CONFIG[setting].unsearchable;
+            tmp3 = !stateFromStores(16673).SETTING_RENDERER_CONFIG[setting].unsearchable;
           }
           return tmp3;
         });

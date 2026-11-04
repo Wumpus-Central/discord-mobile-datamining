@@ -34,7 +34,7 @@ function ApplicationStatusIcon(status) {
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   label: { marginHorizontal: 16, marginBottom: 8 },
@@ -73,10 +73,10 @@ export default noop.memo(function JoinRequestOtherApplications(arg0) {
   let tmp4 = null;
   if (0 !== otherGuildJoinRequestsForUser.length) {
     let obj2 = { children: null };
-    let obj3 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
+    let obj3 = { variant: "body-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
     const intl = tmp2(1113).intl;
     obj3.children = intl.string(tmp2(1113).t["hxa+G3"]);
-    items = [closure_6(tmp2(5747).Text, obj3)];
+    items = [closure_6(tmp2(5761).Text, obj3)];
     let obj4 = {
       style: tmp.container,
       children: otherGuildJoinRequestsForUser.map((createdAt, index) => {
@@ -96,7 +96,7 @@ export default noop.memo(function JoinRequestOtherApplications(arg0) {
           },
           children: null,
         };
-        const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
+        const obj4 = { variant: "body-sm/normal", color: "text-default", children: null };
         const obj5 = DateUtils;
         obj4.children = obj5.dateFormat(new Date(createdAt.createdAt), "LL");
         const items1 = [
@@ -104,9 +104,9 @@ export default noop.memo(function JoinRequestOtherApplications(arg0) {
           timestampProducer(ApplicationStatusIcon, { status: createdAt.applicationStatus }),
         ];
         obj3.children = items1;
-        items[1] = React5(React4, obj3);
+        items[1] = metroImportDefault(React4, obj3);
         obj2.children = items;
-        return React5(noop.Fragment, obj2, createdAt.joinRequestId);
+        return metroImportDefault(noop.Fragment, obj2, createdAt.joinRequestId);
       }),
     };
     items[1] = closure_6(closure_5, obj4);

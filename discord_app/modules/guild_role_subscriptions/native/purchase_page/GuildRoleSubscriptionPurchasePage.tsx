@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef12048 from "../../../../../_runtime/metro/12048__.js";
+import _modDef12107 from "../../../../../_runtime/metro/12107__.js";
 import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -19,7 +19,7 @@ function Separator() {
   return gesture(timestampProducer, { style: closure_17().separator });
 }
 function LegalDisclaimer() {
-  const obj = { variant: "text-xs/normal", color: "text-muted", children: null };
+  const obj = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.format(util.t.FSPTDI, { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS });
   return gesture(Text_Text.Text, obj);
@@ -38,10 +38,10 @@ function SocialBadge(onPress) {
   obj.onPress = onPress;
   items = [
     gesture(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }),
-    gesture(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }),
+    gesture(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: text }),
   ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef12048, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef12107, style: tmp.socialBadgeArrow };
     tmp5Result = gesture(native.Icon, obj3);
   }
   items[2] = tmp5Result;
@@ -52,8 +52,8 @@ get_ActivityIndicator = fn(17);
 ({
   ActivityIndicator: closure_4,
   TouchableOpacity: hasOwnProperty,
-  View: metroRequire,
-  ScrollView: closure_7,
+  View: closure_6,
+  ScrollView: metroImportDefault,
 } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
@@ -215,7 +215,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
                   };
                   items = [
                     gesture(native.Icon, obj2),
-                    gesture(Text_Text.Text, { variant: "text-xs/semibold", color: "text-default", children }),
+                    gesture(Text_Text.Text, { variant: "body-xs/semibold", color: "text-default", children }),
                   ];
                   obj.children = items;
                   return closure_2_15(timestampProducer, obj);
@@ -238,7 +238,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
             items4[1] = closure_14(tmp5(tmp3[9]).Text, obj13);
             items4[2] = closure_14(tmp5(tmp3[11]).Spacer, { size: 8 });
             const obj15 = {
-              variant: "text-sm/normal",
+              variant: "body-sm/normal",
               color: "text-default",
               lineClamp: 3,
               children: subscriptionsSettings.description,

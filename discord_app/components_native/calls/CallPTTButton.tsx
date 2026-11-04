@@ -114,7 +114,7 @@ export default noop.memo((look) => {
     }
     ref.current = tmp;
   }, items4);
-  const Gesture = tmp2(5426).Gesture;
+  const Gesture = tmp2(5428).Gesture;
   const tmp2Result = require("VoiceChatModalContext");
   const items5 = [closure_12, require("../../../_runtime/metro/01705__.js").scheduleOnRN, tmp9[1], tmp6[1], prop];
   _require = undefined;
@@ -216,7 +216,7 @@ export default noop.memo((look) => {
         );
         onEndResult = <View style={items11}>{null}</View>;
         obj4.children = onEndResult;
-        jsx(tmp2(5426).GestureDetector, { gesture: onEndResult, children: null });
+        jsx(tmp2(5428).GestureDetector, { gesture: onEndResult, children: null });
       }
     }
   }

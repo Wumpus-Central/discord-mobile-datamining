@@ -133,7 +133,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7489).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7505).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -187,7 +187,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(19957).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(20073).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -195,9 +195,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(19957);
-  const tmpResult = metadataField(19957);
-  str1 = metadataField(19957).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(20073);
+  const tmpResult = metadataField(20073);
+  str1 = metadataField(20073).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -258,7 +258,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
     mapped = map(intl.format(fieldTextHook, obj2), (children, arg1) => {
       let tmp = children;
       if (typeof children === "string") {
-        const obj = { variant: "text-md/semibold", style: map.metadataRowText, children };
+        const obj = { variant: "body-md/semibold", style: map.metadataRowText, children };
         const _HermesInternal = HermesInternal;
         tmp = application_id(Text_Text.Text, obj, "t-" + arg1);
       }
@@ -285,8 +285,8 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj6.onChangeText = onInputValueChange;
       obj5.children = onInputValueChange(metadataField(1187).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer")];
-      const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(5747).Text, obj7);
+      const obj7 = { variant: "body-md/semibold", style: map.appNumericalInputText, children: fieldText };
+      items1[1] = onInputValueChange(metadataField(5761).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -328,9 +328,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
         _slicedToArray(tmp3, num);
       },
     };
-    return onInputValueChange(metadataField(7489).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(7505).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(19957).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(20073).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
@@ -339,8 +339,8 @@ function BlueskyMetadataRules(arg0) {
   items = [
     application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
-      metadataField: React5.CREATED_AT,
-      existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+      metadataField: metroImportDefault.CREATED_AT,
+      existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
       platform: value,
       onConfigurationChange,
       locked,
@@ -349,32 +349,32 @@ function BlueskyMetadataRules(arg0) {
   ];
   const obj3 = {
     fieldTextHook: util.t["REyUZ/"],
-    metadataField: React5.CREATED_AT,
-    existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+    metadataField: metroImportDefault.CREATED_AT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["/w/EYk"],
-    metadataField: React5.BLUESKY_FOLLOWERS_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_FOLLOWERS_COUNT),
+    metadataField: metroImportDefault.BLUESKY_FOLLOWERS_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.BLUESKY_FOLLOWERS_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   });
   const obj4 = {
     fieldTextHook: util.t["/w/EYk"],
-    metadataField: React5.BLUESKY_FOLLOWERS_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_FOLLOWERS_COUNT),
+    metadataField: metroImportDefault.BLUESKY_FOLLOWERS_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.BLUESKY_FOLLOWERS_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["5I4mVS"],
-    metadataField: React5.BLUESKY_STATUSES_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_STATUSES_COUNT),
+    metadataField: metroImportDefault.BLUESKY_STATUSES_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.BLUESKY_STATUSES_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
@@ -389,8 +389,8 @@ function LetterboxdMetadataRules(arg0) {
   items = [
     application_id(NumericalConfigRule, {
       fieldTextHook: util.t["4hoFk3"],
-      metadataField: React5.LETTERBOXD_WATCHES,
-      existingPendingConfiguration: configMetadataMap.get(React5.LETTERBOXD_WATCHES),
+      metadataField: metroImportDefault.LETTERBOXD_WATCHES,
+      existingPendingConfiguration: configMetadataMap.get(metroImportDefault.LETTERBOXD_WATCHES),
       platform: value,
       onConfigurationChange,
       locked,
@@ -398,16 +398,16 @@ function LetterboxdMetadataRules(arg0) {
   ];
   const obj3 = {
     fieldTextHook: util.t["4hoFk3"],
-    metadataField: React5.LETTERBOXD_WATCHES,
-    existingPendingConfiguration: configMetadataMap.get(React5.LETTERBOXD_WATCHES),
+    metadataField: metroImportDefault.LETTERBOXD_WATCHES,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.LETTERBOXD_WATCHES),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["6wOYUY"],
-    metadataField: React5.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR,
-    existingPendingConfiguration: configMetadataMap.get(React5.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR),
+    metadataField: metroImportDefault.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR),
     platform: value,
     onConfigurationChange,
     locked,
@@ -422,8 +422,8 @@ function SteamMetadataRules(arg0) {
   items = [
     application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
-      metadataField: React5.CREATED_AT,
-      existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+      metadataField: metroImportDefault.CREATED_AT,
+      existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
       platform: value,
       onConfigurationChange,
       locked,
@@ -433,48 +433,48 @@ function SteamMetadataRules(arg0) {
   ];
   const obj3 = {
     fieldTextHook: util.t["REyUZ/"],
-    metadataField: React5.CREATED_AT,
-    existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+    metadataField: metroImportDefault.CREATED_AT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.zVJxqj,
-    metadataField: React5.STEAM_GAME_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.STEAM_GAME_COUNT),
+    metadataField: metroImportDefault.STEAM_GAME_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.STEAM_GAME_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   });
   const obj4 = {
     fieldTextHook: util.t.zVJxqj,
-    metadataField: React5.STEAM_GAME_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.STEAM_GAME_COUNT),
+    metadataField: metroImportDefault.STEAM_GAME_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.STEAM_GAME_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["ZCNdD/"],
-    metadataField: React5.STEAM_ITEM_COUNT_DOTA2,
-    existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_DOTA2),
+    metadataField: metroImportDefault.STEAM_ITEM_COUNT_DOTA2,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.STEAM_ITEM_COUNT_DOTA2),
     platform: value,
     onConfigurationChange,
     locked,
   });
   const obj5 = {
     fieldTextHook: util.t["ZCNdD/"],
-    metadataField: React5.STEAM_ITEM_COUNT_DOTA2,
-    existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_DOTA2),
+    metadataField: metroImportDefault.STEAM_ITEM_COUNT_DOTA2,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.STEAM_ITEM_COUNT_DOTA2),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[3] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["MCHnK+"],
-    metadataField: React5.STEAM_ITEM_COUNT_TF2,
-    existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_TF2),
+    metadataField: metroImportDefault.STEAM_ITEM_COUNT_TF2,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.STEAM_ITEM_COUNT_TF2),
     platform: value,
     onConfigurationChange,
     locked,
@@ -489,8 +489,8 @@ function TwitterMetadataRules(arg0) {
   items = [
     application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
-      metadataField: React5.CREATED_AT,
-      existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+      metadataField: metroImportDefault.CREATED_AT,
+      existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
       platform: value,
       onConfigurationChange,
       locked,
@@ -500,32 +500,32 @@ function TwitterMetadataRules(arg0) {
   ];
   const obj3 = {
     fieldTextHook: util.t["REyUZ/"],
-    metadataField: React5.CREATED_AT,
-    existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+    metadataField: metroImportDefault.CREATED_AT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["/w/EYk"],
-    metadataField: React5.TWITTER_FOLLOWERS_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.TWITTER_FOLLOWERS_COUNT),
+    metadataField: metroImportDefault.TWITTER_FOLLOWERS_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.TWITTER_FOLLOWERS_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   });
   const obj4 = {
     fieldTextHook: util.t["/w/EYk"],
-    metadataField: React5.TWITTER_FOLLOWERS_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.TWITTER_FOLLOWERS_COUNT),
+    metadataField: metroImportDefault.TWITTER_FOLLOWERS_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.TWITTER_FOLLOWERS_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["+NFH7k"],
-    metadataField: React5.TWITTER_STATUSES_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.TWITTER_STATUSES_COUNT),
+    metadataField: metroImportDefault.TWITTER_STATUSES_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.TWITTER_STATUSES_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
@@ -540,8 +540,8 @@ function TwitterMetadataRules(arg0) {
   };
   const intl = util.intl;
   obj6.fieldText = intl.string(util.t.E2iT8K);
-  obj6.metadataField = React5.TWITTER_VERIFIED;
-  obj6.existingPendingConfiguration = configMetadataMap.get(React5.TWITTER_VERIFIED);
+  obj6.metadataField = metroImportDefault.TWITTER_VERIFIED;
+  obj6.existingPendingConfiguration = configMetadataMap.get(metroImportDefault.TWITTER_VERIFIED);
   obj6.platform = value;
   obj6.onConfigurationChange = onConfigurationChange;
   obj6.locked = locked;
@@ -556,8 +556,8 @@ function RedditMetadataRules(arg0) {
   items = [
     application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
-      metadataField: React5.CREATED_AT,
-      existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+      metadataField: metroImportDefault.CREATED_AT,
+      existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
       platform: value,
       onConfigurationChange,
       locked,
@@ -567,16 +567,16 @@ function RedditMetadataRules(arg0) {
   ];
   const obj3 = {
     fieldTextHook: util.t["REyUZ/"],
-    metadataField: React5.CREATED_AT,
-    existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+    metadataField: metroImportDefault.CREATED_AT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.TLgZhv,
-    metadataField: React5.REDDIT_TOTAL_KARMA,
-    existingPendingConfiguration: configMetadataMap.get(React5.REDDIT_TOTAL_KARMA),
+    metadataField: metroImportDefault.REDDIT_TOTAL_KARMA,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.REDDIT_TOTAL_KARMA),
     platform: value,
     onConfigurationChange,
     locked,
@@ -591,8 +591,8 @@ function RedditMetadataRules(arg0) {
   };
   const intl = util.intl;
   obj5.fieldText = intl.string(util.t["0cKdka"]);
-  obj5.metadataField = React5.REDDIT_MOD;
-  obj5.existingPendingConfiguration = configMetadataMap.get(React5.REDDIT_MOD);
+  obj5.metadataField = metroImportDefault.REDDIT_MOD;
+  obj5.existingPendingConfiguration = configMetadataMap.get(metroImportDefault.REDDIT_MOD);
   obj5.platform = value;
   obj5.onConfigurationChange = onConfigurationChange;
   obj5.locked = locked;
@@ -607,8 +607,8 @@ function RedditMetadataRules(arg0) {
   };
   const intl2 = util.intl;
   obj6.fieldText = intl2.string(util.t.kCAN58);
-  obj6.metadataField = React5.REDDIT_GOLD;
-  obj6.existingPendingConfiguration = configMetadataMap.get(React5.REDDIT_GOLD);
+  obj6.metadataField = metroImportDefault.REDDIT_GOLD;
+  obj6.existingPendingConfiguration = configMetadataMap.get(metroImportDefault.REDDIT_GOLD);
   obj6.platform = value;
   obj6.onConfigurationChange = onConfigurationChange;
   obj6.locked = locked;
@@ -623,8 +623,8 @@ function PaypalMetadataRules(arg0) {
   items = [
     application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
-      metadataField: React5.CREATED_AT,
-      existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+      metadataField: metroImportDefault.CREATED_AT,
+      existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
       platform: value,
       onConfigurationChange,
       locked,
@@ -640,8 +640,8 @@ function PaypalMetadataRules(arg0) {
   };
   const intl = util.intl;
   obj4.fieldText = intl.string(util.t["0JyE8I"]);
-  obj4.metadataField = React5.PAYPAL_VERIFIED;
-  obj4.existingPendingConfiguration = configMetadataMap.get(React5.PAYPAL_VERIFIED);
+  obj4.metadataField = metroImportDefault.PAYPAL_VERIFIED;
+  obj4.existingPendingConfiguration = configMetadataMap.get(metroImportDefault.PAYPAL_VERIFIED);
   obj4.platform = value;
   obj4.onConfigurationChange = onConfigurationChange;
   obj4.locked = locked;
@@ -656,8 +656,8 @@ function EbayMetadataRules(arg0) {
   items = [
     application_id(NumericalConfigRule, {
       fieldTextHook: util.t["REyUZ/"],
-      metadataField: React5.CREATED_AT,
-      existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+      metadataField: metroImportDefault.CREATED_AT,
+      existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
       platform: value,
       onConfigurationChange,
       locked,
@@ -668,48 +668,48 @@ function EbayMetadataRules(arg0) {
   ];
   const obj3 = {
     fieldTextHook: util.t["REyUZ/"],
-    metadataField: React5.CREATED_AT,
-    existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT),
+    metadataField: metroImportDefault.CREATED_AT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.CREATED_AT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.oTFOe5,
-    metadataField: React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
-    existingPendingConfiguration: configMetadataMap.get(React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE),
+    metadataField: metroImportDefault.EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.EBAY_POSITIVE_FEEDBACK_PERCENTAGE),
     platform: value,
     onConfigurationChange,
     locked,
   });
   const obj4 = {
     fieldTextHook: util.t.oTFOe5,
-    metadataField: React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
-    existingPendingConfiguration: configMetadataMap.get(React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE),
+    metadataField: metroImportDefault.EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.EBAY_POSITIVE_FEEDBACK_PERCENTAGE),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["v5a2+Q"],
-    metadataField: React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT),
+    metadataField: metroImportDefault.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   });
   const obj5 = {
     fieldTextHook: util.t["v5a2+Q"],
-    metadataField: React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT),
+    metadataField: metroImportDefault.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[3] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.yYbR2r,
-    metadataField: React5.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT),
+    metadataField: metroImportDefault.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
@@ -725,8 +725,8 @@ function EbayMetadataRules(arg0) {
   };
   const intl = util.intl;
   obj7.fieldText = intl.string(util.t["39wASN"]);
-  obj7.metadataField = React5.EBAY_TOP_RATED_SELLER;
-  obj7.existingPendingConfiguration = configMetadataMap.get(React5.EBAY_TOP_RATED_SELLER);
+  obj7.metadataField = metroImportDefault.EBAY_TOP_RATED_SELLER;
+  obj7.existingPendingConfiguration = configMetadataMap.get(metroImportDefault.EBAY_TOP_RATED_SELLER);
   obj7.platform = value;
   obj7.onConfigurationChange = onConfigurationChange;
   obj7.locked = locked;
@@ -748,48 +748,48 @@ function TikTokMetadataRules(arg0) {
   };
   const intl = util.intl;
   obj3.fieldText = intl.string(util.t.E2iT8K);
-  obj3.metadataField = React5.TIKTOK_VERIFIED;
-  obj3.existingPendingConfiguration = configMetadataMap.get(React5.TIKTOK_VERIFIED);
+  obj3.metadataField = metroImportDefault.TIKTOK_VERIFIED;
+  obj3.existingPendingConfiguration = configMetadataMap.get(metroImportDefault.TIKTOK_VERIFIED);
   obj3.platform = value;
   obj3.onConfigurationChange = onConfigurationChange;
   obj3.locked = locked;
   items = [application_id(BooleanConfigRule, obj3), , ,];
   items[1] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t["/w/EYk"],
-    metadataField: React5.TIKTOK_FOLLOWER_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWER_COUNT),
+    metadataField: metroImportDefault.TIKTOK_FOLLOWER_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.TIKTOK_FOLLOWER_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   });
   const obj4 = {
     fieldTextHook: util.t["/w/EYk"],
-    metadataField: React5.TIKTOK_FOLLOWER_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWER_COUNT),
+    metadataField: metroImportDefault.TIKTOK_FOLLOWER_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.TIKTOK_FOLLOWER_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[2] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.JHEsYw,
-    metadataField: React5.TIKTOK_FOLLOWING_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWING_COUNT),
+    metadataField: metroImportDefault.TIKTOK_FOLLOWING_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.TIKTOK_FOLLOWING_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   });
   const obj5 = {
     fieldTextHook: util.t.JHEsYw,
-    metadataField: React5.TIKTOK_FOLLOWING_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWING_COUNT),
+    metadataField: metroImportDefault.TIKTOK_FOLLOWING_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.TIKTOK_FOLLOWING_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
   };
   items[3] = application_id(NumericalConfigRule, {
     fieldTextHook: util.t.tEFCYA,
-    metadataField: React5.TIKTOK_LIKES_COUNT,
-    existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_LIKES_COUNT),
+    metadataField: metroImportDefault.TIKTOK_LIKES_COUNT,
+    existingPendingConfiguration: configMetadataMap.get(metroImportDefault.TIKTOK_LIKES_COUNT),
     platform: value,
     onConfigurationChange,
     locked,
@@ -891,9 +891,9 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1072).PlatformTypes;
-const Constants = fn(7469);
+const Constants = fn(7485);
 ({
-  MetadataFields: closure_7,
+  MetadataFields: metroImportDefault,
   OperatorTypes: closure_8,
   MetadataItemTypes: closure_9,
   GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_10,

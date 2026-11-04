@@ -23,14 +23,14 @@ function Header(arg0) {
     }),
     timestampProducer(Text_Text.Text, {
       style: tmp.subtitle,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       children: description,
     }),
     timestampProducer(FormSeparatorDefault, { style: tmp.separator }),
   ];
   obj.children = items;
-  return React5(common_SafeAreaView.SafeAreaPaddingView, obj);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, obj);
 }
 function Footer(arg0) {
   ({ canProceedToNextStep, nextStep, onProceed, submitting } = arg0);
@@ -48,7 +48,7 @@ function Footer(arg0) {
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5754).Button, {
+  obj.children = timestampProducer(tmp5(5768).Button, {
     loading: submitting,
     disabled: !canProceedToNextStep,
     text: stringResult,
@@ -59,7 +59,7 @@ function Footer(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" },
@@ -142,5 +142,5 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
     items2[2] = timestampProducer(Footer, obj8);
     obj6.children = items2;
   }
-  return React5(React4, obj6);
+  return metroImportDefault(React4, obj6);
 }

@@ -10,10 +10,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6848).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(8080);
+let closure_6 = fn(6863).AGE_VERIFICATION_MODAL_KEY;
+const AgeVerificationIncodeWebViewConstants = fn(8096);
 ({
-  AgeVerificationIncodeResultStatus: closure_7,
+  AgeVerificationIncodeResultStatus: metroImportDefault,
   buildIncodeFallbackSessionInjection: closure_8,
   parseIncodeWebViewMessage: closure_9,
 } = AgeVerificationIncodeWebViewConstants);
@@ -93,14 +93,14 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
   const callback3 = noop.useCallback((arg0) => {
     const current = ref.current;
     if (current != null) {
-      current.injectJavaScript(React6(arg0));
+      current.injectJavaScript(React5(arg0));
     }
   }, []);
   const items3 = [callback1, callback3, onClose];
   const items4 = [webviewUrl];
   const callback4 = noop.useCallback((nativeEvent) => {
     try {
-      const tmp3 = React7(nativeEvent.nativeEvent.data);
+      const tmp3 = React6(nativeEvent.nativeEvent.data);
       if (null != tmp3) {
         if ("capture_complete" === tmp4.kind) {
           const result = AgeVerificationURLActionCreators.registerIncodeInterview(tmp3.interviewId);

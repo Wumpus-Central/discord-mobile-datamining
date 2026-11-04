@@ -5,10 +5,10 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _mod6676 from "module_6676" /* 6676 */;
+import _mod6691 from "module_6691" /* 6691 */;
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import _modDef12636 from "../../../../../../_runtime/metro/12636__.js";
+import _modDef12717 from "../../../../../../_runtime/metro/12717__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
@@ -22,7 +22,7 @@ function Item(arg0) {
   noop = undefined;
   function ListItem(arg0) {
     ({ label, onPress } = arg0);
-    return React7(TableRow.TableRow, {
+    return React6(TableRow.TableRow, {
       label,
       onPress,
       start: 0 === closure_1_0,
@@ -39,7 +39,7 @@ function Item(arg0) {
   _modDef38(tmp4, "Invalid autocomplete result type");
   closure_3 = closure_12();
   noop = noop.useMemo(() => 100 * Math.random() + 50, []);
-  const match = _mod6676.match(item);
+  const match = _mod6691.match(item);
   let obj = { type: AutoCompleteResultTypes.CHOICE };
   let obj2 = { type: AutoCompleteResultTypes.LABEL };
   const withResult = match.with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
@@ -47,7 +47,7 @@ function Item(arg0) {
     let obj = {
       label: closure_1_9(Text_Text.Text, {
         lineClamp: 1,
-        variant: "text-md/normal",
+        variant: "body-md/normal",
         color: "mobile-text-heading-primary",
         children: children.choice.displayName,
       }),
@@ -67,7 +67,7 @@ function Item(arg0) {
       let obj = {
         label: closure_1_9(Text_Text.Text, {
           lineClamp: 1,
-          variant: "text-md/normal",
+          variant: "body-md/normal",
           color: "mobile-text-heading-primary",
           children: children.choice.displayName,
         }),
@@ -93,7 +93,7 @@ function Item(arg0) {
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };
-      let obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+      let obj2 = { lineClamp: 1, variant: "body-md/normal", color: "mobile-text-heading-primary", children: null };
       items = ['"', label.label, '"'];
       obj2.children = items;
       obj.label = closure_1_10(Text_Text.Text, obj2);
@@ -105,7 +105,7 @@ function Item(arg0) {
       let obj = {
         label: closure_1_9(Text_Text.Text, {
           lineClamp: 1,
-          variant: "text-md/normal",
+          variant: "body-md/normal",
           color: "mobile-text-heading-primary",
           children: children.choice.displayName,
         }),
@@ -131,7 +131,7 @@ function Item(arg0) {
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };
-      let obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+      let obj2 = { lineClamp: 1, variant: "body-md/normal", color: "mobile-text-heading-primary", children: null };
       items = ['"', label.label, '"'];
       obj2.children = items;
       obj.label = closure_1_10(Text_Text.Text, obj2);
@@ -143,23 +143,23 @@ function Item(arg0) {
       const obj3 = { style: null };
       items = [closure_3.commandChoiceLoadingItem, { width }];
       obj3.style = items;
-      obj2.children = React7(View, obj3);
-      obj.label = React7(View, obj2);
-      return React7(ListItem, obj);
+      obj2.children = React6(View, obj3);
+      obj.label = React6(View, obj2);
+      return React6(ListItem, obj);
     })
     .exhaustive();
 }
 function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef12636, darkSource: _modDef12636, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef12717, darkSource: _modDef12717, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
-  return React7(native.EmptyState, obj);
+  return React6(native.EmptyState, obj);
 }
 const View = fn(17).View;
 fn(1072).AutoCompleteResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const executeCommand = apply.debounce(executeCommandDefault, fn(6155).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+const executeCommand = apply.debounce(executeCommandDefault, fn(6170).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
   leading: true,
   trailing: true,
 });
@@ -257,7 +257,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   const items4 = [onChoiceSelect, memo];
   const items5 = [onChoiceSelect, query];
   const callback = obj.useCallback(
-    (item) => React7(Item, { item: item.item, index: item.index, onChoiceSelect, choices: memo }),
+    (item) => React6(Item, { item: item.item, index: item.index, onChoiceSelect, choices: memo }),
     items4,
   );
   const callback1 = obj.useCallback(() => {

@@ -11,9 +11,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 }, image: null, gifTag: null };
 let obj3 = { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 };
@@ -132,7 +132,7 @@ export default function ChangelogInlineImage(title) {
       obj.onError = function onError() {
         return _undefined(true);
       };
-      const tmp19Result = React5(FastImageDefault, obj);
+      const tmp19Result = metroImportDefault(FastImageDefault, obj);
       if (null != changelogImageStillUrl) {
         const obj3 = {
           style: tmp.container,
@@ -152,14 +152,14 @@ export default function ChangelogInlineImage(title) {
         let tmp19Result2 = null;
         if (tmp18) {
           const obj4 = { style: tmp.gifTag };
-          tmp19Result2 = React5(GifTagDefault, obj4);
+          tmp19Result2 = metroImportDefault(GifTagDefault, obj4);
         }
         items1[1] = tmp19Result2;
         obj3.children = items1;
-        let tmp19Result3 = React6(hasOwnProperty, obj3);
+        let tmp19Result3 = React5(hasOwnProperty, obj3);
       } else {
         const obj5 = { style: tmp.container, children: tmp19Result };
-        tmp19Result3 = React5(timestampProducer, obj5);
+        tmp19Result3 = metroImportDefault(timestampProducer, obj5);
       }
       return tmp19Result3;
     }

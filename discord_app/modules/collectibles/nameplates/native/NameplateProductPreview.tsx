@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
@@ -39,7 +39,7 @@ function NameplateUser(arg0) {
       userName: name,
       effectDisplayType: tmp(tmp2[18]).EffectDisplayType.STATIC,
       lineClamp: 1,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
     };
     label = closure_6(tmp4(tmp2[17]), obj5);
     const tmp4Result2 = tmp4(tmp2[17]);
@@ -53,7 +53,7 @@ function NameplateUser(arg0) {
       avatarDecoration,
       animate: !stateFromStores,
       autoStatusCutout: null,
-      "aria-hidden": "\u{1FAC6}",
+      "aria-hidden": "\u26F9\uFE0F\u200D\u2642\uFE0F",
     };
     return timestampProducer(native.Avatar, obj);
   }, items1);
@@ -82,7 +82,7 @@ function PlaceholderUser(end) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" },
@@ -129,7 +129,7 @@ export default function NameplateProductPreview(arg0) {
     items = [timestampProducer(PlaceholderUser, obj7), , , , , ,];
     const obj8 = {
       maxFontSizeMultiplier: 2,
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       accessibilityRole: "header",
       color: "interactive-text-default",
       style: tmp.memberListTitle,
@@ -138,7 +138,7 @@ export default function NameplateProductPreview(arg0) {
     const intl2 = util.intl;
     const items1 = [intl2.string(util.t["yzW/fZ"]), " \u2014 3"];
     obj8.children = items1;
-    items[1] = React5(Text_Text.Text, obj8);
+    items[1] = metroImportDefault(Text_Text.Text, obj8);
     const obj9 = { user: nameplateSampleUsers.phibi, start: true };
     items[2] = timestampProducer(PlaceholderUser, obj9);
     const obj10 = { previewNameplate: nameplateData, previewAvatarDecoration: avatarDecorationOverride };
@@ -147,7 +147,7 @@ export default function NameplateProductPreview(arg0) {
     items[4] = timestampProducer(PlaceholderUser, obj11);
     const obj12 = {
       maxFontSizeMultiplier: 2,
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       accessibilityRole: "header",
       color: "interactive-text-default",
       style: tmp.memberListTitle,
@@ -156,11 +156,11 @@ export default function NameplateProductPreview(arg0) {
     const intl3 = util.intl;
     const items2 = [intl3.string(util.t["NG43/6"]), " \u2014 12"];
     obj12.children = items2;
-    items[5] = React5(Text_Text.Text, obj12);
+    items[5] = metroImportDefault(Text_Text.Text, obj12);
     const obj13 = { user: nameplateSampleUsers.boom, start: true };
     items[6] = timestampProducer(PlaceholderUser, obj13);
     obj6.children = items;
-    const items3 = [React5(View, obj6), ,];
+    const items3 = [metroImportDefault(View, obj6), ,];
     const obj14 = { style: tmp.memberListGradient, start: { x: 0, y: 0 }, end: { x: 0, y: 0.4 }, colors: null };
     const items4 = [tmp.memberListGradient.color];
     const _HermesInternal = HermesInternal;
@@ -173,7 +173,7 @@ export default function NameplateProductPreview(arg0) {
     obj15.colors = items5;
     items3[2] = timestampProducer(LinearGradientDefault, obj15);
     obj4.children = items3;
-    tmp6 = React5(View, obj4);
+    tmp6 = metroImportDefault(View, obj4);
   }
   return tmp6;
 }

@@ -14,7 +14,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   image: { marginBottom: 32 },
@@ -49,7 +49,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   }
   items1[1] = imgStyle;
   obj5.style = items1;
-  const items2 = [closure_6(valueProps(5837), obj5), , ,];
+  const items2 = [closure_6(valueProps(5851), obj5), , ,];
   const obj6 = {
     variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
@@ -67,13 +67,13 @@ export function TwoWayLinkLanding(learnMoreLink) {
   obj6.children = tmp11;
   items2[1] = closure_6(Text_Text.Text, obj6);
   items2[2] = closure_6(Text_Text.Text, {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "text-default",
     style: twoWayLinkStyles.body,
     children: body,
   });
-  const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-  const tmp10 = valueProps(5837);
+  const obj7 = { variant: "body-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
+  const tmp10 = valueProps(5851);
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label, index) => {
@@ -86,7 +86,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
           end: index === valueProps.length - 1,
           subLabel,
           label: timestampProducer(Text_Text.Text, {
-            variant: "text-sm/normal",
+            variant: "body-sm/normal",
             color: "mobile-text-heading-primary",
             children: label,
           }),
@@ -100,7 +100,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   const items3 = [closure_7(closure_3, obj4)];
   let tmp9Result = null;
   if (null != learnMoreLink) {
-    const obj9 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
+    const obj9 = { variant: "body-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
     const intl = util.intl;
     const obj10 = { helpCenterLink: learnMoreLink };
     obj9.children = intl.format(util.t["/l3n+1"], obj10);

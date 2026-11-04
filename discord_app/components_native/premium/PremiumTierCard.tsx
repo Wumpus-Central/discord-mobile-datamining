@@ -2,23 +2,23 @@
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../ConstantsIOS.tsx";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05723_LinearGradient.js";
 import FastImageDefault from "../common/FastImage.tsx";
 import Card from "../../design/components/Card/native/Card.native.tsx";
-import _modDef8659 from "../../../_runtime/metro/08659__.js";
-import _modDef10061 from "../../../_runtime/metro/10061__.js";
-import _modDef10715 from "../../../_runtime/metro/10715__.js";
-import _modDef10716 from "../../../_runtime/metro/10716__.js";
-import _modDef15597 from "../../../_runtime/metro/15597__.js";
-import _modDef15598 from "../../../_runtime/metro/15598__.js";
+import _modDef8676 from "../../../_runtime/metro/08676__.js";
+import _modDef10109 from "../../../_runtime/metro/10109__.js";
+import _modDef10763 from "../../../_runtime/metro/10763__.js";
+import _modDef10764 from "../../../_runtime/metro/10764__.js";
+import _modDef15684 from "../../../_runtime/metro/15684__.js";
+import _modDef15685 from "../../../_runtime/metro/15685__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const getPremiumGradientColor = fn(7741).getPremiumGradientColor;
+const getPremiumGradientColor = fn(7757).getPremiumGradientColor;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   header: { marginTop: 24, padding: 16 },
@@ -63,11 +63,11 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef15597;
+    let tmp5Result = _modDef15684;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef15598;
+    tmp5Result = _modDef15685;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result = _modDef8659;
+    tmp5Result = _modDef8676;
   }
   obj2.source = tmp5Result;
   obj.children = timestampProducer(tmp9, obj2);
@@ -83,17 +83,17 @@ export default function _default(premiumType) {
   const obj4 = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result4 = _modDef10061;
+    let tmp5Result4 = _modDef10109;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result4 = _modDef10715;
+    tmp5Result4 = _modDef10763;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result4 = _modDef10716;
+    tmp5Result4 = _modDef10764;
   }
   const obj5 = { children: null };
   obj4.source = tmp5Result4;
   items[1] = timestampProducer(FastImageDefault, obj4);
   items[2] = timestampProducer(View, { style: tmp.body, children });
   obj5.children = items;
-  const children1 = React6(React5, obj5);
+  const children1 = React5(metroImportDefault, obj5);
   return timestampProducer(Card.Card, { variant: "surface-high", style, children: children1 });
 }

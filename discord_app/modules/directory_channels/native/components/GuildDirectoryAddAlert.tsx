@@ -38,14 +38,14 @@ export default function GuildDirectoryAddAlert(arg0) {
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "text-lg/semibold",
+    variant: "body-lg/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.CueiPY);
   items[1] = React4(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj5 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;
   obj5.children = intl3.format(util.t.R7Pqn5, { guildName: directoryGuildName });
   items[2] = React4(Text_Text.Text, obj5);

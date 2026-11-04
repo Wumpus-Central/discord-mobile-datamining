@@ -6,10 +6,10 @@ import UserRecord from "../../records/UserRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7890).ReferencedMessageState;
+const ReferencedMessageState = fn(7906).ReferencedMessageState;
 const Constants = fn(1072);
 ({
-  MessageStates: closure_7,
+  MessageStates: metroImportDefault,
   MessageTypes: closure_8,
   LOCAL_BOT_ID: closure_9,
   NON_USER_BOT_DISCRIMINATOR: closure_10,

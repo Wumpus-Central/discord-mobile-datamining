@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx
 import LayerScope from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef17943 from "../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
+import _modDef18039 from "../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -51,7 +51,7 @@ function Content() {
       buttonVariant: null,
       gradientColor: null,
     };
-    const obj2 = { type: "image", src: { uri: _modDef17943 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef18039 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;
@@ -157,9 +157,9 @@ function Content() {
   return closure_8(closure_9, obj8);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({
   container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" },
@@ -174,7 +174,7 @@ export default function UserSettingsDesignSystemCoachmark() {
   const obj = { style: closure_10().flex, bottom: true, children: null };
   const obj2 = { children: null };
   const tmp = closure_10();
-  obj2.children = React5(LayerScope.LayerScope, { children: React5(Content, {}) });
-  obj.children = React5(timestampProducer, obj2);
-  return React5(common_SafeAreaView.SafeAreaPaddingView, obj);
+  obj2.children = metroImportDefault(LayerScope.LayerScope, { children: metroImportDefault(Content, {}) });
+  obj.children = metroImportDefault(timestampProducer, obj2);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, obj);
 }

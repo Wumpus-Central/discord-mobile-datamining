@@ -40,7 +40,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   topUserActivities = topUserActivities.topUserActivities;
   const obj = { children: null };
-  const obj2 = { variant: "text-md/semibold", style: closure_6().header, children: null };
+  const obj2 = { variant: "body-md/semibold", style: closure_6().header, children: null };
   const intl = util.intl;
   obj2.children = intl.string(_modDef2667.BxbvS7);
   items = [React4(Text_Text.Text, obj2)];

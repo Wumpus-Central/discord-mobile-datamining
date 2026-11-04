@@ -6,7 +6,7 @@ import ApplicationStore from "../modules/applications/ApplicationStore.tsx";
 import EntitlementRecord from "EntitlementRecord.tsx";
 
 const Constants = fn(1072);
-({ LibraryApplicationFlags: hasOwnProperty, Distributors: metroRequire, SKUTypes: closure_7 } = Constants);
+({ LibraryApplicationFlags: hasOwnProperty, Distributors: closure_6, SKUTypes: metroImportDefault } = Constants);
 let LibraryApplicationRecord;
 class LibraryApplicationRecord extends tmp2 {
   constructor(arg0) {

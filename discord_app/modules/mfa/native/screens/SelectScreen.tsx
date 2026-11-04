@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SELECT_NAMES = fn(17812).SELECT_NAMES;
+const SELECT_NAMES = fn(17908).SELECT_NAMES;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { container: { marginLeft: 16, marginRight: 16 }, selectContainer: null };
@@ -37,7 +37,7 @@ export default function SelectScreen(mfaChallenge) {
   const intl = require("util").intl;
   obj4.children = intl.string(require("util").t.S9b9bX);
   items = [closure_5(require("Text/Text").Heading, obj4)];
-  const obj5 = { variant: "text-sm/medium", children: null };
+  const obj5 = { variant: "body-sm/medium", children: null };
   const intl2 = require("util").intl;
   obj5.children = intl2.string(require("util").t.Jz1lXO);
   items[1] = closure_5(require("Text/Text").Text, obj5);

@@ -23,7 +23,7 @@ export function ActionSheetHeaderPressableText(onPress) {
     tmp5 = accessibilityLabel;
   }
   obj.accessibilityLabel = tmp5;
-  obj.children = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-brand", children: label });
+  obj.children = jsx(Text_Text.Text, { variant: "body-md/medium", color: "text-brand", children: label });
   return jsx(Pressables.PressableOpacity, {
     style: closure_3().container,
     accessibilityRole: "button",

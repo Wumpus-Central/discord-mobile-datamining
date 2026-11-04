@@ -8,7 +8,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
-import _modDef8730 from "../../../../_runtime/metro/08730__.js";
+import _modDef8747 from "../../../../_runtime/metro/08747__.js";
 import ListUtils from "../../../utils/ListUtils.tsx";
 import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems.tsx";
 import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper.tsx";
@@ -202,7 +202,7 @@ function GuildFolderIcon(item) {
   item = item.item;
   let tmp = null;
   if ("icon" === item.type) {
-    const obj = { source: _modDef8730, style: item.tintStyle };
+    const obj = { source: _modDef8747, style: item.tintStyle };
     tmp = closure_1_17(FastImageDefault, obj);
   }
   return tmp;
@@ -241,16 +241,16 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
     return closure_17(TransitionWrapper, obj, arg0);
   }
 }
-const GuildsNodeType = fn(6892).GuildsNodeType;
-const GuildsBarDnDStore = fn(18506);
+const GuildsNodeType = fn(6907).GuildsNodeType;
+const GuildsBarDnDStore = fn(18601);
 ({ useItemDragState: closure_10, useFolderBGHeightOffset: closure_11 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(18511);
+let GuildsBarConstants = fn(18606);
 ({
   DEFAULT_FOLDER_COLOR: closure_12,
   isDefaultFolderColor: map1,
   normalizeFolderColor: closure_14,
 } = GuildsBarConstants);
-GuildsBarConstants = fn(18503);
+GuildsBarConstants = fn(18598);
 ({ TRANSITION_PHYSICS: closure_15, FOLDER_SPRING_PHYSICS: closure_16 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
@@ -348,7 +348,7 @@ const memoResult = noop.memo(function FolderBGInner(color) {
   GuildsBarGuildFolderTsx1.__initData = tmp8;
   const callback = noop.useCallback(GuildsBarGuildFolderTsx1, []);
   const tmp7 = closure_11(folderId);
-  token2 = tmp(5719).useToken(tmp3(575).modules.mobile.GUILD_FOLDER_COLOR_OPACITY);
+  token2 = tmp(5732).useToken(tmp3(575).modules.mobile.GUILD_FOLDER_COLOR_OPACITY);
   const items2 = [color, token2];
   const memo = noop.useMemo(() => {
     const tmp = gesture(c0);
@@ -544,10 +544,10 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
             const result = closure_1_5.set(set);
           }
         }
-        const result1 = c0(5383).triggerHapticFeedback(c0(5383).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj4 = c0(5383);
-        const result2 = c1(7022).toggleGuildFolderExpand(_undefined);
-        const obj5 = c1(7022);
+        const result1 = c0(5384).triggerHapticFeedback(c0(5384).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj4 = c0(5384);
+        const result2 = c1(7037).toggleGuildFolderExpand(_undefined);
+        const obj5 = c1(7037);
       },
     }),
     items6,
@@ -769,7 +769,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
   let tmp27Result2;
   if (!flag2) {
     const obj11 = { folderId: id, expanded };
-    tmp27Result2 = closure_17(tmp3(18526), obj11);
+    tmp27Result2 = closure_17(tmp3(18621), obj11);
   }
   obj9.expandedChildren = tmp27Result2;
   obj9.children = closure_17(tmp(5207).TransitionGroup, {

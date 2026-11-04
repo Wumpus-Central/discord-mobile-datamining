@@ -28,7 +28,7 @@ function IgnoredUsersList(userIds) {
     const obj2 = { value: tmp4, children: null };
     const obj3 = { bottom: true, style: tmp.list, children: null };
     const obj4 = { children: null };
-    const obj5 = { style: tmp.sectionLabelStyle, variant: "text-sm/semibold", color: "text-default", children: null };
+    const obj5 = { style: tmp.sectionLabelStyle, variant: "body-sm/semibold", color: "text-default", children: null };
     const intl2 = util.intl;
     const obj6 = { numberOfIgnoredUsers: userIds.length };
     obj5.children = intl2.formatToPlainString(util.t.iNKUhU, obj6);
@@ -48,7 +48,7 @@ function IgnoredUsersList(userIds) {
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   list: { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 },

@@ -25,7 +25,7 @@ class GiftingFlowSection {
       tmp8 = c0;
       tmp9 = closure_2;
       return jsx(c0(closure_2[14]).Text, {
-        variant: "text-xs/normal",
+        variant: "body-xs/normal",
         color: "text-muted",
         children: "Enter a valid product SKU ID above to preview the gift screens.",
       });
@@ -85,17 +85,17 @@ function FramePreviewOverrideSection() {
   if ("loading" === tmp3) {
     const obj = { style: tmp.section, children: null };
     const obj2 = { style: tmp.sectionHeader, children: null };
-    const obj3 = { variant: "heading-md/semibold", style: tmp.sectionTitle, children: "Frame Preview Override" };
+    const obj3 = { variant: "heading-sm/semibold", style: tmp.sectionTitle, children: "Frame Preview Override" };
     obj2.children = gesture(Text_Text.Text, obj3);
     items = [gesture(timestampProducer, obj2), , , ,];
     const obj4 = {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       style: tmp.description,
       children:
         "Overrides every profile-frame preview with a frame pushed to this device. Tap Load after Cap (or pushFrameOverride.mjs) pushes one.",
     };
     items[1] = gesture(Text_Text.Text, obj4);
-    const obj5 = { variant: "text-xs/normal", style: null, children: null };
+    const obj5 = { variant: "body-xs/normal", style: null, children: null };
     const items1 = [tmp.statusText, statusError];
     obj5.style = items1;
     obj5.children = "Loading\u2026";
@@ -135,8 +135,8 @@ function FramePreviewOverrideSection() {
   tmp4 = closure_11((clear) => clear.clear);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_11 = fn(8900).useFramePreviewOverrideStore;
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+let closure_11 = fn(8917).useFramePreviewOverrideStore;
 const application_id = fn(1072).COLLECTIBLES_APPLICATION_ID;
 const PremiumGiftStyles = fn(1387).PremiumGiftStyles;
 const jsxProd = fn(21);
@@ -359,7 +359,7 @@ export default function _default() {
   const obj7 = {
     style: tmp.sectionHeader,
     children: closure_14(require("Text/Text").Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       style: tmp.sectionTitle,
       children: "Shop Settings",
     }),
@@ -374,7 +374,7 @@ export default function _default() {
   const obj10 = {
     style: tmp.sectionHeader,
     children: closure_14(require("Text/Text").Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       style: tmp.sectionTitle,
       children: "Product Configuration",
     }),
@@ -383,7 +383,7 @@ export default function _default() {
   const obj12 = { style: tmp.inputContainer, children: null };
   const items7 = [
     closure_14(require("Text/Text").Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       style: tmp.inputLabel,
       children: "Primary Product SKU ID",
     }),
@@ -399,9 +399,9 @@ export default function _default() {
     returnKeyType: "done",
     style: null,
   };
-  const obj11 = { variant: "heading-md/semibold", style: tmp.sectionTitle, children: "Product Configuration" };
-  const obj13 = { variant: "text-md/semibold", style: tmp.inputLabel, children: "Primary Product SKU ID" };
-  const obj8 = { variant: "heading-md/semibold", style: tmp.sectionTitle, children: "Shop Settings" };
+  const obj11 = { variant: "heading-sm/semibold", style: tmp.sectionTitle, children: "Product Configuration" };
+  const obj13 = { variant: "body-md/semibold", style: tmp.inputLabel, children: "Primary Product SKU ID" };
+  const obj8 = { variant: "heading-sm/semibold", style: tmp.sectionTitle, children: "Shop Settings" };
   const tmp10 = str(product[18])({ logPerf: false, stalePurchasesOK: true, noOp: tmp7 });
   obj15.style = { fontSize: 14, padding: tmp9(product[12]).space.PX_12 };
   obj14.children = closure_14(require("native").TextInput, obj15);
@@ -411,7 +411,7 @@ export default function _default() {
     tmp18Result = "" !== str.trim();
   }
   if (tmp18Result) {
-    const obj17 = { variant: "text-xs/normal", style: null, children: "Loading products..." };
+    const obj17 = { variant: "body-xs/normal", style: null, children: "Loading products..." };
     const items8 = [,];
     ({ statusText: arr9[0], statusLoading: arr9[1] } = tmp);
     obj17.style = items8;
@@ -425,7 +425,7 @@ export default function _default() {
     tmp18Result2 = null == product;
   }
   if (tmp18Result2) {
-    const obj18 = { variant: "text-xs/normal", style: null, children: "Product not found" };
+    const obj18 = { variant: "body-xs/normal", style: null, children: "Product not found" };
     const items9 = [,];
     ({ statusText: arr10[0], statusError: arr10[1] } = tmp);
     obj18.style = items9;
@@ -434,7 +434,7 @@ export default function _default() {
   items7[3] = tmp18Result2;
   let tmp20Result = null != product;
   if (tmp20Result) {
-    const obj19 = { variant: "text-xs/normal", style: null, children: null };
+    const obj19 = { variant: "body-xs/normal", style: null, children: null };
     const items10 = [,];
     ({ statusText: arr11[0], statusSuccess: arr11[1] } = tmp);
     obj19.style = items10;
@@ -451,7 +451,7 @@ export default function _default() {
   const obj21 = {
     style: tmp.sectionHeader,
     children: closure_14(require("Text/Text").Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       style: tmp.sectionTitle,
       children: "Product Preview",
     }),
@@ -491,16 +491,16 @@ export default function _default() {
   const obj28 = {
     style: tmp.placeholder,
     children: closure_15(require("Text/Text").Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       style: tmp.placeholderText,
       children: ["Enter a valid product SKU ID above", "\n", "to see the product preview"],
     }),
   };
   tmp20Result2 = closure_14(closure_6, obj28);
   const obj16 = { fontSize: 14, padding: tmp9(product[12]).space.PX_12 };
-  const obj22 = { variant: "heading-md/semibold", style: tmp.sectionTitle, children: "Product Preview" };
+  const obj22 = { variant: "heading-sm/semibold", style: tmp.sectionTitle, children: "Product Preview" };
   const obj29 = {
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     style: tmp.placeholderText,
     children: ["Enter a valid product SKU ID above", "\n", "to see the product preview"],
   };

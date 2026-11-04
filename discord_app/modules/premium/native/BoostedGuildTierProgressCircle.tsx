@@ -6,9 +6,9 @@ import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
 import useGuildPowerupsBoostCountDefault from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import ProgressCircleDefault from "components/ProgressCircle.tsx";
 import Tier048Px from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
-import _modDef15540 from "../../../../_runtime/metro/15540__.js";
-import _modDef15541 from "../../../../_runtime/metro/15541__.js";
-import _modDef15542 from "../../../../_runtime/metro/15542__.js";
+import _modDef15627 from "../../../../_runtime/metro/15627__.js";
+import _modDef15628 from "../../../../_runtime/metro/15628__.js";
+import _modDef15629 from "../../../../_runtime/metro/15629__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4, BoostedGuildTiers: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   guildTierProgressCircle: { position: "relative", width: 70, height: 70 },
@@ -75,11 +75,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tmp2Result4 = _modDef15540;
+          let tmp2Result4 = _modDef15627;
         } else if (constants.TIER_2 === premiumTier) {
-          tmp2Result4 = _modDef15541;
+          tmp2Result4 = _modDef15628;
         } else if (constants.TIER_3 === premiumTier) {
-          tmp2Result4 = _modDef15542;
+          tmp2Result4 = _modDef15629;
         }
       }
       const obj5 = {
@@ -91,13 +91,13 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       items = [timestampProducer(tmp12, obj5)];
       const obj6 = {
         style: tmp.guildTierName,
-        variant: "text-xs/semibold",
+        variant: "body-xs/semibold",
         color: "interactive-text-active",
         children: GuildBoostingUtils.getTierName(guild.premiumTier),
       };
       items[1] = timestampProducer(Text_Text.Text, obj6);
       obj4.children = items;
-      obj.children = React5(View, obj4);
+      obj.children = metroImportDefault(View, obj4);
       return timestampProducer(tmp2Result3, obj);
     }
     tmp2Result3 = ProgressCircleDefault;

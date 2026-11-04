@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
@@ -141,7 +141,7 @@ export function UserNameplateRow(onPressOut) {
       const obj4 = { adjustSpacingForIcon: null != icon };
       items3[1] = hasOwnProperty(TableRowDivider.TableRowDivider, obj4);
       obj3.children = items3;
-      tmp12Result2 = timestampProducer(React5, obj3);
+      tmp12Result2 = timestampProducer(metroImportDefault, obj3);
     }
   }
   return tmp12Result2;

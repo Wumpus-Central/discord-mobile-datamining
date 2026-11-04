@@ -602,15 +602,15 @@ export default function DevToolsInAppNotificationTestingScreen() {
       obj2.children = options.map((label) => {
         closure_0 = label;
         return closure_1_14(
-          closure_1_0(7101).TableRow,
+          closure_1_0(7116).TableRow,
           {
             label: label.label,
             subLabel: label.subLabel,
-            icon: closure_1_14(closure_1_0(17727).BeakerIcon, {}),
+            icon: closure_1_14(closure_1_0(17823).BeakerIcon, {}),
             onPress() {
               return closure_2_0(closure_0);
             },
-            trailing: closure_1_14(closure_1_0(7110).TableRowArrow, {}),
+            trailing: closure_1_14(closure_1_0(7125).TableRowArrow, {}),
           },
           label.label,
         );
@@ -626,15 +626,15 @@ export default function DevToolsInAppNotificationTestingScreen() {
     hasIcons: true,
     children: items3.map((label) =>
       closure_1_14(
-        label(7101).TableRow,
+        label(7116).TableRow,
         {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(label(17727).BeakerIcon, {}),
+          icon: closure_1_14(label(17823).BeakerIcon, {}),
           onPress() {
             return label(label);
           },
-          trailing: closure_1_14(label(7110).TableRowArrow, {}),
+          trailing: closure_1_14(label(7125).TableRowArrow, {}),
         },
         label.label,
       ),

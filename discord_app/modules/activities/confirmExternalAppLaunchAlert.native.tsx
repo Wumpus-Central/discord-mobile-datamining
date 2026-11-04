@@ -5,16 +5,16 @@ import components_Button_Button from "../../design/components/Button/native/Butt
 import LinkingDefault from "../../lib/native/Linking.tsx";
 import FastImageDefault from "../../components_native/common/FastImage.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
-import _modDef11884 from "../../../_runtime/metro/11884__.js";
+import _modDef11943 from "../../../_runtime/metro/11943__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef11884, style: tmp.announcementBirb };
+  const obj2 = { source: _modDef11943, style: tmp.announcementBirb };
   items = [hasOwnProperty(FastImageDefault, obj2), , ,];
-  const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
+  const obj3 = { style: tmp.alertEyebrowText, variant: "body-sm/medium", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["06YebE"]);
   items[1] = hasOwnProperty(Text_Text.Text, obj3);
@@ -22,7 +22,7 @@ function ConfirmActivityGateContent(activityName) {
   const intl2 = util.intl;
   obj4.children = intl2.format(util.t["Z/eMDT"], { activityName: activityName.application.name });
   items[2] = hasOwnProperty(Text_Text.Text, obj4);
-  const obj6 = { style: tmp.alertSubtitleText, variant: "text-sm/normal", children: null };
+  const obj6 = { style: tmp.alertSubtitleText, variant: "body-sm/normal", children: null };
   const intl3 = util.intl;
   obj6.children = intl3.string(util.t.z81WwD);
   items[3] = hasOwnProperty(Text_Text.Text, obj6);
@@ -47,7 +47,7 @@ function LinkButton() {
 const View = fn(17).View;
 const PRIVATE_APPS_HELP_ARTICLE = fn(2147).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },

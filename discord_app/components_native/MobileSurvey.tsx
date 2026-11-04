@@ -2,7 +2,7 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import native from "../design/void/native.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
-import _modDef12131 from "../../_runtime/metro/12131__.js";
+import _modDef12190 from "../../_runtime/metro/12190__.js";
 import SurveyActionCreators from "../actions/SurveyActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../_runtime/metro/00019__.js";
@@ -111,10 +111,10 @@ export default function MobileSurvey() {
         style: confirmIcon.confirmIcon,
         color: nativeDefault.unsafe_rawColors.WHITE,
         size: native.Icon.Sizes.SMALL,
-        source: _modDef12131,
+        source: _modDef12190,
       });
     };
-    tmp5 = jsx(stateFromStores(6150), {
+    tmp5 = jsx(stateFromStores(6165), {
       body: null,
       confirmText: null,
       cancelText: null,
@@ -122,7 +122,7 @@ export default function MobileSurvey() {
       onCancel: null,
       renderConfirmRightIcon: null,
     });
-    const tmp8 = stateFromStores(6150);
+    const tmp8 = stateFromStores(6165);
   }
   return tmp5;
 }

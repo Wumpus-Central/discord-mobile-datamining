@@ -8,7 +8,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ MessageFlags: closure_4, MessageStates: hasOwnProperty, MessageTypes: metroRequire } = Constants);
+({ MessageFlags: closure_4, MessageStates: hasOwnProperty, MessageTypes: closure_6 } = Constants);
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/tryInjectMessage.tsx");

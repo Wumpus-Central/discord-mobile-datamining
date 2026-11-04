@@ -18,7 +18,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 const TextWritingAnimationDefault = TextWritingAnimation;
 
 const View = _mod17.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   container: { width: "100%", flexGrow: 1 },
   title: { transformOrigin: "left", width: 340 },

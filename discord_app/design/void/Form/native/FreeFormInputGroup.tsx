@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({
   label: { marginBottom: 8 },
@@ -112,7 +112,7 @@ export default (accessibilityLabel) => {
     items[2] = tmp17Result;
     let tmp17Result2 = null;
     if (null != hint) {
-      const obj8 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
+      const obj8 = { style: tmp2.hint, variant: "body-xs/medium", color: "text-muted", children: hint };
       tmp17Result2 = hasOwnProperty(Text_Text.Text, obj8);
     }
     items[3] = tmp17Result2;

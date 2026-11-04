@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 let closure_3 = ["impressionName", "impressionProperties"];
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -29,7 +29,7 @@ export default function Modal(route) {
   ({ impressionName, impressionProperties } = props);
   const tmp = closure_11();
   const callback = noop.useCallback(() => {
-    closure_1(6864).pop();
+    closure_1(6879).pop();
   }, []);
   const obj = { type: null, name: null, properties: null };
   const tmp2 = _objectWithoutProperties(props, closure_3);
@@ -62,9 +62,9 @@ export default function Modal(route) {
     },
     [],
   );
-  const layoutEffect = noop.useLayoutEffect(() => modal(7778).trackAppUIViewed("ModalScreen"), []);
+  const layoutEffect = noop.useLayoutEffect(() => modal(7794).trackAppUIViewed("ModalScreen"), []);
   ({ left, right } = useSafeAreaInsetsDefault());
-  let isIpadOSResult = tmp4(7238)();
+  let isIpadOSResult = tmp4(7258)();
   if (isIpadOSResult) {
     isIpadOSResult = tmp7(5098).isIpadOS();
     const tmp7Result = tmp7(5098);
@@ -73,8 +73,8 @@ export default function Modal(route) {
     isIpadOSResult = "modal" === params.presentation;
   }
   if (!isIpadOSResult) {
-    isIpadOSResult = tmp7(19119).shouldExcludeSafeAreaForModalKey(modal.key);
-    const tmp7Result3 = tmp7(19119);
+    isIpadOSResult = tmp7(19222).shouldExcludeSafeAreaForModalKey(modal.key);
+    const tmp7Result3 = tmp7(19222);
   }
   items = [absoluteFillObject.absoluteFillObject];
   let tmp17;
@@ -87,7 +87,7 @@ export default function Modal(route) {
   const obj4 = { style: items, onAccessibilityEscape: null, children: null };
   items[1] = tmp17;
   if (modal.closable) {
-    let pop = tmp4(6864).pop;
+    let pop = tmp4(6879).pop;
   } else {
     pop = NOOP;
   }
@@ -100,7 +100,7 @@ export default function Modal(route) {
   const items2 = [<modal.modal />];
   const tmp13 = useSafeAreaInsetsDefault();
   const tmp7Result4 = modal(1377);
-  items2[1] = modal(1377).isIOS() && closure_9(modal(12497).PortalKeyboardRenderer, { portal: false });
-  obj4.children = closure_10(modal(16577).SafeAreaProvider, { children: items2 });
+  items2[1] = modal(1377).isIOS() && closure_9(modal(12578).PortalKeyboardRenderer, { portal: false });
+  obj4.children = closure_10(modal(16668).SafeAreaProvider, { children: items2 });
   return closure_9(closure_6, obj4);
 }

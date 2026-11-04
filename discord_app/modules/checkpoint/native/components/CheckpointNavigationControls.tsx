@@ -14,7 +14,7 @@ const require = globalThis.__r;
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_PRIMARY: hasOwnProperty } = CheckpointConstants);
 const HelpdeskArticles = Constants.HelpdeskArticles;
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let obj = {
   container: null,
   homeContainer: null,
@@ -116,24 +116,24 @@ export default function CheckpointNavigationControls(nextDisabled) {
     const obj5 = { disabled: flag2 };
     obj4.accessibilityState = obj5;
     const items2 = [closure_7(tmp5(tmp6[12]), obj4)];
-    const obj6 = { variant: "text-sm/medium", children: null };
+    const obj6 = { variant: "body-sm/medium", children: null };
     const tmp5Result = tmp5(tmp6[12]);
     const intl7 = require("util").intl;
     const obj7 = {
-      learnMoreHook(children, arg1) {
-        return React5(
+      learnMoreHook(children, id) {
+        return metroImportDefault(
           CheckpointTextDefault,
           {
-            variant: "text-sm/medium",
+            variant: "body-sm/medium",
             style: link.link,
             onPress() {
-              const obj = flag(5829);
+              const obj = flag(5843);
               return obj.openURL(flag(2190).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
             children,
           },
-          arg1,
+          id,
         );
       },
     };

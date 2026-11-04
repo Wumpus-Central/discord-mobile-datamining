@@ -25,7 +25,7 @@ class Separator {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { section: { gap: 14 }, separator: null };
 let size = {
@@ -35,7 +35,7 @@ let size = {
   marginVertical: nativeDefault.space.PX_24,
 };
 obj2.separator = size;
-const React7 = createStyles.createStyles(obj2);
+const React6 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionCard.tsx",
@@ -58,7 +58,7 @@ export function Content(arg0) {
   items = [
     closure_6(SectionTitle, obj7),
     closure_6(guildId(1187).Spacer, { size: 8 }),
-    closure_6(guildId(17371).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+    closure_6(guildId(17462).GuildRoleSubscriptionMemberPreview, { guildId, role }),
   ];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , ,];
@@ -115,5 +115,5 @@ export function Content(arg0) {
   }
   items1[3] = tmp5Result4;
   obj5.children = items1;
-  return closure_8(guildId(17370).SeparatedList, obj5);
+  return closure_8(guildId(17461).SeparatedList, obj5);
 }

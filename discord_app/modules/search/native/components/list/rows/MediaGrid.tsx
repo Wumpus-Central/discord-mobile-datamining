@@ -5,11 +5,11 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9958);
+const SearchConstants = fn(9976);
 ({
   SEARCH_LIST_HORIZONTAL_PADDING,
   MEDIA_NUM_COLUMNS: hasOwnProperty,
-  MEDIA_ITEM_GAP_WIDTH: metroRequire,
+  MEDIA_ITEM_GAP_WIDTH: closure_6,
 } = SearchConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);

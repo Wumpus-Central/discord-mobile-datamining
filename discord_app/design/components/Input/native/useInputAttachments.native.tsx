@@ -69,8 +69,8 @@ export function renderInputAttachment(BaseIconImage, leadingText, text) {
   } else {
     tmp2 = null;
     if (null != leadingText) {
-      const obj = { variant: "text-md/normal", style: text, children: leadingText };
-      tmp2 = jsx(Text_Text.Text, { variant: "text-md/normal", style: text, children: leadingText });
+      const obj = { variant: "body-md/normal", style: text, children: leadingText };
+      tmp2 = jsx(Text_Text.Text, { variant: "body-md/normal", style: text, children: leadingText });
     }
   }
   return tmp2;
@@ -178,14 +178,14 @@ export function useInputAttachments(merged, leading) {
     } else if (null != trailingIcon) {
       let tmp12 = <trailingIcon size="xs" color="input-icon-default" />;
     } else if (null != trailingText) {
-      const obj7 = { variant: "text-md/normal", style: tmp11, children: trailingText };
-      tmp12 = jsx(tmp(tmp2[5]).Text, { variant: "text-md/normal", style: tmp11, children: trailingText });
+      const obj7 = { variant: "body-md/normal", style: tmp11, children: trailingText };
+      tmp12 = jsx(tmp(tmp2[5]).Text, { variant: "body-md/normal", style: tmp11, children: trailingText });
     }
   } else if (null != leadingIcon) {
     let tmp6 = <leadingIcon size="xs" color="input-icon-default" />;
   } else if (null != leadingText) {
-    const obj8 = { variant: "text-md/normal", style: tmp5, children: leadingText };
-    tmp6 = jsx(tmp(tmp2[5]).Text, { variant: "text-md/normal", style: tmp5, children: leadingText });
+    const obj8 = { variant: "body-md/normal", style: tmp5, children: leadingText };
+    tmp6 = jsx(tmp(tmp2[5]).Text, { variant: "body-md/normal", style: tmp5, children: leadingText });
   }
   const obj = inputStyles(leadingIcon[6]);
   const obj2 = { size: merged.size, hasLeadingIcon: null != merged.leadingIcon };

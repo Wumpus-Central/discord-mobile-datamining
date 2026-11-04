@@ -49,7 +49,7 @@ export default function ConjureScopeCardView(onInputFocusChange) {
   let tmp3Result = null;
   if (null != card.failure) {
     const obj7 = {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-feedback-critical",
       accessibilityRole: "alert",
       children: card.failure,

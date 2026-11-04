@@ -12,7 +12,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 
 require = fn;
-const OrbsArcadeNativeConstants = fn(17169);
+const OrbsArcadeNativeConstants = fn(17261);
 ({ ORBS_ARCADE_GAME_TILE_MAX_WIDTH, ORBS_ARCADE_GAME_TILE_MIN_HEIGHT } = OrbsArcadeNativeConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -57,13 +57,13 @@ export default function OrbsArcadeQuestHomeSection(location) {
   const obj4 = { style: tmp.sectionHeader, children: null };
   const obj5 = { direction: "horizontal", spacing: nativeDefault.space.PX_8, children: null };
   const items2 = [React4(GameControllerIcon.GameControllerIcon, { size: "custom", style: tmp.sectionIcon })];
-  const obj7 = { variant: "text-lg/semibold", color: "text-strong", children: null };
+  const obj7 = { variant: "body-lg/semibold", color: "text-strong", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t["2L068F"]);
   items2[1] = React4(Text_Text.Heading, obj7);
   obj5.children = items2;
   const items3 = [hasOwnProperty(Stack_Stack.Stack, obj5)];
-  const obj8 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
+  const obj8 = { variant: "heading-xs/medium", color: "text-subtle", children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(util.t.kMY21I);
   items3[1] = React4(Text_Text.Text, obj8);

@@ -13,7 +13,7 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
@@ -64,7 +64,7 @@ export default function FamilyCenterTopActivity() {
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16944, dependencyMap.paths), "FamilyCenterTopUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17036, dependencyMap.paths), "FamilyCenterTopUsers", {
       topUserActivities: stateFromStores,
     });
   }, items2);
@@ -82,7 +82,7 @@ export default function FamilyCenterTopActivity() {
       };
       const intl = tmp2(tmp3[13]).intl;
       obj5.accessibilityLabel = intl.string(stateFromStores(tmp3[14]).BxbvS7);
-      const obj6 = { variant: "text-sm/semibold", children: null };
+      const obj6 = { variant: "body-sm/semibold", children: null };
       const intl2 = tmp2(tmp3[13]).intl;
       obj6.children = intl2.string(stateFromStores(tmp3[14]).BxbvS7);
       const items3 = [closure_7(tmp2(tmp3[15]).Text, obj6)];
@@ -117,7 +117,7 @@ export default function FamilyCenterTopActivity() {
       };
       const intl3 = tmp2(tmp3[13]).intl;
       obj9.accessibilityLabel = intl3.string(stateFromStores(tmp3[14]).Lq9Set);
-      const obj10 = { variant: "text-sm/semibold", children: null };
+      const obj10 = { variant: "body-sm/semibold", children: null };
       const intl4 = tmp2(tmp3[13]).intl;
       obj10.children = intl4.string(stateFromStores(tmp3[14]).Lq9Set);
       const items5 = [closure_7(tmp2(tmp3[15]).Text, obj10)];
@@ -131,7 +131,7 @@ export default function FamilyCenterTopActivity() {
             ({ guildAvatar: obj.style, guildAvatarText: obj.textStyle } = closure_0);
             obj.guild = guild;
             obj.size = GuildIcon.GuildIconSizes.SMALL;
-            tmp2 = React5(GuildIconDefault, obj, guild.id);
+            tmp2 = metroImportDefault(GuildIconDefault, obj, guild.id);
           }
           return tmp2;
         }),

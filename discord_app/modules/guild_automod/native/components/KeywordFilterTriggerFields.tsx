@@ -6,11 +6,11 @@ import KeywordsRowDefault from "KeywordsRow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(13428);
+const Constants = fn(13512);
 ({ MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE: c3, MAX_KEYWORDS_PER_KEYWORD_FILTER: closure_4 } = Constants);
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/KeywordFilterTriggerFields.tsx");
 
@@ -84,5 +84,5 @@ export default function KeywordFilterTriggerFields(rule) {
   };
   items[2] = timestampProducer(KeywordsRowDefault, obj6);
   obj.children = items;
-  return React5(TableRowGroup.TableRowGroup, obj);
+  return metroImportDefault(TableRowGroup.TableRowGroup, obj);
 }

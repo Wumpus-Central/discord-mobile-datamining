@@ -397,7 +397,7 @@ function clearPresences(id) {
   tmp2 = keys[Symbol.iterator]();
 }
 const Constants = fn(1072);
-({ StatusTypes: hasOwnProperty, ClientTypes: metroRequire, ME: closure_7, UserFlags: closure_8 } = Constants);
+({ StatusTypes: hasOwnProperty, ClientTypes: closure_6, ME: metroImportDefault, UserFlags: closure_8 } = Constants);
 let closure_9 = Object.freeze([]);
 const presencesForGuilds = {};
 const statuses = {};

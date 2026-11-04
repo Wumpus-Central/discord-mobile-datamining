@@ -17,7 +17,7 @@ const obj2 = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: fn(6898).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+    backgroundColor: fn(6913).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
   },
   icon: { marginRight: 10 },
   text: { flexShrink: 1 },
@@ -32,7 +32,7 @@ export default function PaymentFlowWarningMessage(children) {
   const size = { style: tmp.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
   items = [
     React4(native.WarningCircle, size),
-    React4(Text_Text.Text, { variant: "text-sm/medium", style: tmp.text, children: children.message }),
+    React4(Text_Text.Text, { variant: "body-sm/medium", style: tmp.text, children: children.message }),
   ];
   obj.children = items;
   return hasOwnProperty(View, obj);

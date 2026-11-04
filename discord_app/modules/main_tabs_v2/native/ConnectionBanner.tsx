@@ -5,11 +5,11 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../_runtime/metro/01705__.js";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef7164 from "../../../../_runtime/metro/07164__.js";
+import _modDef7179 from "../../../../_runtime/metro/07179__.js";
 import ConnectionUnknownIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionUnknownIcon.tsx";
 import ConnectionFineIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -46,7 +46,7 @@ function ConnectionBannerContent(state) {
   if (state === constants.BACK_ONLINE) {
     str = "text-feedback-positive";
   }
-  const obj2 = { variant: "text-sm/medium", color: str, maxFontSizeMultiplier: 1.5, children: null };
+  const obj2 = { variant: "body-sm/medium", color: str, maxFontSizeMultiplier: 1.5, children: null };
   if (constants.WAITING_FOR_NETWORK === state) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.XKk1gp);
@@ -65,7 +65,7 @@ function ConnectionBannerContent(state) {
 function BackOnlineGlow(opacity) {
   let token;
   const tmp = closure_21();
-  token = token(5719).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
+  token = token(5732).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
   items = [token];
   const memo = noop.useMemo(() => {
     const obj = _modDef671(token);
@@ -82,7 +82,7 @@ function BackOnlineGlow(opacity) {
   const items1 = [tmp.glow, { opacity: opacity.progress }];
   obj2.style = items1;
   const obj3 = { style: tmp.glow, maskElement: null, children: null };
-  let obj = token(5719);
+  let obj = token(5732);
   obj3.maskElement = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors, locations, start, end });
   obj3.children = closure_12(LinearGradientDefault, {
     style: tmp.glowMaskGradient,
@@ -91,7 +91,7 @@ function BackOnlineGlow(opacity) {
     start: start2,
     end: end2,
   });
-  obj2.children = closure_12(_modDef7164, obj3);
+  obj2.children = closure_12(_modDef7179, obj3);
   return closure_12(_modDef1652.View, obj2);
 }
 function ConnectionBannerInner() {
@@ -196,9 +196,9 @@ function ConnectionBannerInner() {
   return closure_13(require("../../../../_runtime/metro/01652__.js").View, obj3);
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const constants = fn(15719).ConnectivityIndicatorState;
-const YouBarConstants = fn(17218);
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const constants = fn(15807).ConnectivityIndicatorState;
+const YouBarConstants = fn(17310);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -249,10 +249,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(15720).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(15808).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
-  let obj = stateFromStores(15720);
+  let obj = stateFromStores(15808);
   items = [ConnectivityIndicatorStateStore];
   stateFromStores = hidden(504).useStateFromStores(items, () => state.getState());
   dependencyMap = noop.useRef(null);

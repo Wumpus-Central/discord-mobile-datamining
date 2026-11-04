@@ -36,8 +36,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(7052).addPostConnectionCallback;
-let closure_9 = fn(7730).handleMobileWebCheckoutStatus;
+fn(7067).addPostConnectionCallback;
+let closure_9 = fn(7746).handleMobileWebCheckoutStatus;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_12,
@@ -48,13 +48,13 @@ const Constants = fn(1072);
   ME: closure_17,
 } = Constants);
 const StaticChannelRoute = fn(4997).StaticChannelRoute;
-const StreamTypes = fn(6835).StreamTypes;
-const NativePermissionTypes = fn(8064).NativePermissionTypes;
-let closure_21 = fn(11040).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_22 = fn(7840).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_23 = fn(5867).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15817).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8556).MobileUserSettings;
+const StreamTypes = fn(6850).StreamTypes;
+const NativePermissionTypes = fn(8080).NativePermissionTypes;
+let closure_21 = fn(11089).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(7856).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_23 = fn(5881).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(15905).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8573).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -83,10 +83,10 @@ export default function handleSupportedURL(payload) {
   if (constants2.CONTACT_SYNC === type) {
     let result = payload(inviteCode[16]).openContactSyncModalDeeplink();
     let flag = true;
-    const obj50 = payload(inviteCode[16]);
+    const obj51 = payload(inviteCode[16]);
   } else if (constants2.COMPOSE_MESSAGE === type) {
     rootNavigationRef1(inviteCode[17]).popAll();
-    const obj46 = rootNavigationRef1(inviteCode[17]);
+    const obj47 = rootNavigationRef1(inviteCode[17]);
     const rootNavigationRef = payload(inviteCode[18]).getRootNavigationRef();
     flag = true;
     if (null != rootNavigationRef) {
@@ -94,20 +94,20 @@ export default function handleSupportedURL(payload) {
       rootNavigationRef.navigate("friends", obj3);
       flag = true;
     }
-    const obj47 = payload(inviteCode[18]);
+    const obj48 = payload(inviteCode[18]);
   } else if (constants2.ADD_FRIENDS === type) {
     rootNavigationRef1(inviteCode[17]).popAll();
-    const obj41 = rootNavigationRef1(inviteCode[17]);
-    const tmp166 = rootNavigationRef1;
-    const tmp167 = inviteCode;
+    const obj42 = rootNavigationRef1(inviteCode[17]);
+    const tmp167 = rootNavigationRef1;
+    const tmp168 = inviteCode;
     rootNavigationRef1 = payload(inviteCode[18]).getRootNavigationRef();
     if (null == rootNavigationRef1) {
-      const result1 = tmp166(tmp167[19]).openAddFriendModalDeeplink();
+      const result1 = tmp167(tmp168[19]).openAddFriendModalDeeplink();
       flag = true;
-      const tmp166Result = tmp166(tmp167[19]);
+      const tmp167Result = tmp167(tmp168[19]);
     } else if (rootNavigationRef1.isReady()) {
-      let obj11 = { screen: "add-friends", params: { sourcePage: "Deeplink" } };
-      rootNavigationRef1.navigate("friends", obj11);
+      let obj12 = { screen: "add-friends", params: { sourcePage: "Deeplink" } };
+      rootNavigationRef1.navigate("friends", obj12);
       flag = true;
     } else {
       pathname(() =>
@@ -115,12 +115,12 @@ export default function handleSupportedURL(payload) {
       );
       flag = true;
     }
-    const obj42 = payload(inviteCode[18]);
+    const obj43 = payload(inviteCode[18]);
   } else if (constants2.FRIENDS === type) {
     rootNavigationRef1(inviteCode[17]).popAll();
-    const obj36 = rootNavigationRef1(inviteCode[17]);
-    const tmp158 = inviteCode;
-    const tmp160 = payload;
+    const obj37 = rootNavigationRef1(inviteCode[17]);
+    const tmp159 = inviteCode;
+    const tmp161 = payload;
     rootNavigationRef2 = payload(inviteCode[18]).getRootNavigationRef();
     if (null != rootNavigationRef2) {
       if (rootNavigationRef2.isReady()) {
@@ -133,12 +133,12 @@ export default function handleSupportedURL(payload) {
     }
     flag = true;
     if (null != payload.userId) {
-      const obj16 = { userId: payload.userId, navigationReplace: userProfileNavigationReplace };
-      const result2 = tmp160(tmp158[20]).showUserProfileActionSheetPostConnection(obj16);
+      const obj17 = { userId: payload.userId, navigationReplace: userProfileNavigationReplace };
+      const result2 = tmp161(tmp159[20]).showUserProfileActionSheetPostConnection(obj17);
       flag = true;
-      const tmp160Result = tmp160(tmp158[20]);
+      const tmp161Result = tmp161(tmp159[20]);
     }
-    const obj37 = payload(inviteCode[18]);
+    const obj38 = payload(inviteCode[18]);
   } else if (constants2.EDIT_PROFILE === type) {
     pathname(() => {
       rootNavigationRef1(inviteCode[17]).popAll();
@@ -159,10 +159,10 @@ export default function handleSupportedURL(payload) {
     deeplinkAttemptId = payload.deeplinkAttemptId;
     if (!rootNavigationRef3.isAuthenticated()) {
       if (null != inviteCode) {
-        const obj19 = { deeplinkAttemptId, location: "Deep Link" };
-        payload(inviteCode[23]).showInvite(inviteCode, username, obj19);
+        const obj20 = { deeplinkAttemptId, location: "Deep Link" };
+        payload(inviteCode[23]).showInvite(inviteCode, username, obj20);
         flag = true;
-        const obj34 = payload(inviteCode[23]);
+        const obj35 = payload(inviteCode[23]);
       }
     }
     pathname(() => {
@@ -190,7 +190,7 @@ export default function handleSupportedURL(payload) {
     let flag3 = null != giftCode;
     if (flag3) {
       const giftCode1 = payload(inviteCode[26]).resolveGiftCode(giftCode);
-      const obj33 = payload(inviteCode[26]);
+      const obj34 = payload(inviteCode[26]);
       giftCode1
         .then((giftCode) => {
           rootNavigationRef1(inviteCode[27]).track(constants.OPEN_MODAL, { type: "gift_accept", location: null });
@@ -215,17 +215,12 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj21 = {
-        guildId: guildId2,
-        channelId: channelId2,
-        messageId: "Array",
-        navigationSettings: "alrededor de 1 mes",
-      };
-      const obj26 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
-      obj21.navigationSettings = obj26;
-      rootNavigationRef1(inviteCode[30])(obj21);
+      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
+      const obj27 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
+      obj22.navigationSettings = obj27;
+      rootNavigationRef1(inviteCode[30])(obj22);
       flag2 = true;
-      const obj30 = payload(inviteCode[29]);
+      const obj31 = payload(inviteCode[29]);
     }
     flag = flag2;
   } else if (constants2.SOCIAL_LAYER_STOREFRONT === type) {
@@ -258,19 +253,19 @@ export default function handleSupportedURL(payload) {
                 closure_128_0 = undefined;
                 closure_128_1 = undefined;
                 closure_128_2 = undefined;
-                tmp2(6864).popAll();
-                const tmp42 = tmp3(10799);
+                tmp2(6879).popAll();
+                const tmp42 = tmp3(10847);
                 const openSocialLayerStorefrontUnsupportedOnMobileAlert =
                   tmp42.openSocialLayerStorefrontUnsupportedOnMobileAlert;
                 closure_128_0 = openSocialLayerStorefrontUnsupportedOnMobileAlert;
                 closure_128_1 = tmp42.openSocialLayerStorefrontProductDetailsModal;
                 if (null != payload.skuId) {
-                  closure_128_2 = tmp3(7016).default;
+                  closure_128_2 = tmp3(7031).default;
                   ({ guildId, skuId } = payload);
                   c2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp3(10800).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15824).default()),
+                    value: tmp3(10848).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15912).default()),
                     done: false,
                   };
                   return obj4;
@@ -278,7 +273,7 @@ export default function handleSupportedURL(payload) {
                   const result = openSocialLayerStorefrontUnsupportedOnMobileAlert();
                   dependencyMap = 3;
                 }
-                const obj7 = tmp2(6864);
+                const obj7 = tmp2(6879);
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -290,7 +285,7 @@ export default function handleSupportedURL(payload) {
             } else if (null != closure_128_2.get(closure_129_0.skuId)) {
               if (!closure_128_2.didFetchingSkuFail(closure_129_0.skuId)) {
                 const obj = { skuId: closure_129_0.skuId, analyticsLocations: null };
-                items = [tmp2(7471).URI_SCHEME];
+                items = [tmp2(7487).URI_SCHEME];
                 obj.analyticsLocations = items;
                 closure_128_1(obj);
               }
@@ -299,9 +294,9 @@ export default function handleSupportedURL(payload) {
             dependencyMap = 3;
             const obj6 = { value: undefined, done: true };
             return obj6;
-          } catch (tmp23) {
+          } catch (tmp27) {
             dependencyMap = tmp;
-            throw tmp23;
+            throw tmp27;
           }
         }
       }),
@@ -318,16 +313,16 @@ export default function handleSupportedURL(payload) {
           });
           flag = true;
         } else if (constants2.FAMILY_CENTER === type) {
-          let obj27 = payload;
+          let obj28 = payload;
           if (payload == null) {
-            obj27 = {};
+            obj28 = {};
           }
-          pathname = obj27.pathname;
-          let tmp121 = null;
+          pathname = obj28.pathname;
+          let tmp122 = null;
           if (undefined !== pathname) {
-            tmp121 = pathname;
+            tmp122 = pathname;
           }
-          pathname = tmp121;
+          pathname = tmp122;
           pathname(() => {
             ModalActionCreatorsDefault.popAll();
             openUserSettings.openUserSettings({ screen: constants3.FAMILY_CENTER });
@@ -375,22 +370,22 @@ export default function handleSupportedURL(payload) {
           flag = true;
         } else if (constants2.ONE_TIME_LOGIN === type) {
           rootNavigationRef1(inviteCode[17]).popAll();
-          const obj24 = rootNavigationRef1(inviteCode[17]);
-          const obj28 = { token: payload.token };
+          const obj25 = rootNavigationRef1(inviteCode[17]);
+          const obj29 = { token: payload.token };
           rootNavigationRef1(inviteCode[17]).pushLazy(
             payload(inviteCode[40])(inviteCode[43], inviteCode.paths),
-            obj28,
+            obj29,
             "ONE_TIME_LOGIN_MODAL",
           );
           flag = true;
-          const obj25 = rootNavigationRef1(inviteCode[17]);
+          const obj26 = rootNavigationRef1(inviteCode[17]);
         } else if (constants2.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           pathname(
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15830, dependencyMap.paths),
+                    asyncRequireImpl(15918, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -426,26 +421,26 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.PROMOTIONS === type) {
           rootNavigationRef1(inviteCode[48]).performURLNavigation(payload.url);
           flag = true;
-          const obj23 = rootNavigationRef1(inviteCode[48]);
+          const obj24 = rootNavigationRef1(inviteCode[48]);
         } else if (constants2.FEATURE_PROMO_URL === type) {
           rootNavigationRef1(inviteCode[48]).openURLExternally(payload.promoUrl);
           flag = true;
-          const obj22 = rootNavigationRef1(inviteCode[48]);
+          const obj23 = rootNavigationRef1(inviteCode[48]);
         } else if (constants2.USER_PROFILE === type) {
           flag = true;
           if (null != payload.userId) {
-            const obj29 = { userId: payload.userId, navigationReplace: userProfileNavigationReplace };
-            const result3 = payload(inviteCode[20]).showUserProfileActionSheetPostConnection(obj29);
+            const obj30 = { userId: payload.userId, navigationReplace: userProfileNavigationReplace };
+            const result3 = payload(inviteCode[20]).showUserProfileActionSheetPostConnection(obj30);
             flag = true;
-            const obj20 = payload(inviteCode[20]);
+            const obj21 = payload(inviteCode[20]);
           }
         } else if (constants2.BUILD_OVERRIDE === type) {
           rootNavigationRef1(inviteCode[17]).popAll();
-          const obj17 = rootNavigationRef1(inviteCode[17]);
-          const obj31 = { overrideUrl: payload.overrideUrl };
-          rootNavigationRef1(inviteCode[17]).pushLazy(payload(inviteCode[40])(inviteCode[49], inviteCode.paths), obj31);
-          flag = true;
           const obj18 = rootNavigationRef1(inviteCode[17]);
+          const obj32 = { overrideUrl: payload.overrideUrl };
+          rootNavigationRef1(inviteCode[17]).pushLazy(payload(inviteCode[40])(inviteCode[49], inviteCode.paths), obj32);
+          flag = true;
+          const obj19 = rootNavigationRef1(inviteCode[17]);
         } else if (constants2.GUILD_EVENT_DETAILS === type) {
           pathname(
             guildTemplateCode(function* () {
@@ -542,13 +537,13 @@ export default function handleSupportedURL(payload) {
           const redirectUrl = payload.redirectUrl;
           ({ nonce, fingerprint } = payload);
           const _HermesInternal = HermesInternal;
-          const obj32 = { nonce, fingerprint, skipLoginRedirect: true };
+          const obj33 = { nonce, fingerprint, skipLoginRedirect: true };
           const result4 = rootNavigationRef1(inviteCode[54]).redirectWithHandoffToken(
             "" + redirectUrl.pathname + redirectUrl.search,
-            obj32,
+            obj33,
           );
           flag = true;
-          const obj15 = rootNavigationRef1(inviteCode[54]);
+          const obj16 = rootNavigationRef1(inviteCode[54]);
         } else if (constants2.VOICE_CHANNEL === type) {
           pathname(
             guildTemplateCode(function* () {
@@ -638,27 +633,27 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.GUILD_HOME === type) {
           flag = true;
           if (null != payload.guildId) {
-            let tmp76;
+            let tmp77;
             if (null != payload.highlightChannelId) {
               if (null != payload.highlightMessageId) {
-                const obj35 = { search: null };
-                ({ highlightChannelId: obj13.highlight_channel_id, highlightMessageId: obj13.highlight_message_id } =
+                const obj36 = { search: null };
+                ({ highlightChannelId: obj14.highlight_channel_id, highlightMessageId: obj14.highlight_message_id } =
                   payload);
-                obj35.search = payload(inviteCode[58]).stringify({
+                obj36.search = payload(inviteCode[58]).stringify({
                   highlight_channel_id: null,
                   highlight_message_id: null,
                 });
-                tmp76 = obj35;
-                let obj12 = payload(inviteCode[58]);
-                const obj38 = { highlight_channel_id: null, highlight_message_id: null };
+                tmp77 = obj36;
+                let obj13 = payload(inviteCode[58]);
+                const obj39 = { highlight_channel_id: null, highlight_message_id: null };
               }
             }
             payload(inviteCode[59]).transitionTo(
               closure_14.CHANNEL(payload.guildId, StaticChannelRoute.GUILD_HOME),
-              tmp76,
+              tmp77,
             );
             flag = true;
-            const obj14 = payload(inviteCode[59]);
+            const obj15 = payload(inviteCode[59]);
           }
         } else if (constants2.USER_CONNECTIONS_LINK_CALLBACK === type) {
           pathname(() => {
@@ -761,15 +756,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(6864).popAll();
-                        const obj5 = closure_1(6864);
+                        closure_1(6879).popAll();
+                        const obj5 = closure_1(6879);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7687).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7687);
+                        dependencyMap(7703).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7703);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(7467).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(7483).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -787,8 +782,8 @@ export default function handleSupportedURL(payload) {
                     }
                     closure_133_1 = closure_1(1378).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(5829).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(5829);
+                      closure_1(5843).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(5843);
                     }
                     const obj12 = closure_1(1378);
                   }
@@ -821,7 +816,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.ACTIVATE_DEVICE === type) {
           rootNavigationRef1(inviteCode[64]).showModal(payload.userCode);
           flag = true;
-          let obj10 = rootNavigationRef1(inviteCode[64]);
+          let obj11 = rootNavigationRef1(inviteCode[64]);
         } else if (constants2.GUILD_SETTINGS_PICKER === type) {
           pathname(() => {
             const result = GuildSettingsPickerActionCreators.openGuildSettingsPickerModal({
@@ -835,19 +830,21 @@ export default function handleSupportedURL(payload) {
           flag = true;
           if (obj6.isIOS()) {
             rootNavigationRef1(tmp54[17]).popAll();
-            let obj8 = rootNavigationRef1(tmp54[17]);
-            const obj39 = { text: null, channelId: null, shareId: null, attachmentManifest: null };
+            let obj7 = rootNavigationRef1(tmp54[17]);
+            rootNavigationRef1(tmp54[67]).closeAll();
+            let obj9 = rootNavigationRef1(tmp54[17]);
+            const obj40 = { text: null, channelId: null, shareId: null, attachmentManifest: null };
             ({
-              text: obj9.text,
-              channelId: obj9.channelId,
-              shareId: obj9.shareId,
-              attachmentManifest: obj9.attachmentManifest,
+              text: obj10.text,
+              channelId: obj10.channelId,
+              shareId: obj10.shareId,
+              attachmentManifest: obj10.attachmentManifest,
             } = payload);
-            obj8.pushLazy(tmp53(tmp54[40])(tmp54[67], tmp54.paths), obj39, SHARE_SCREEN_MODAL_KEY, {
+            obj9.pushLazy(tmp53(tmp54[40])(tmp54[68], tmp54.paths), obj40, SHARE_SCREEN_MODAL_KEY, {
               presentation: "modal",
             });
             flag = true;
-            let obj7 = rootNavigationRef1(tmp54[17]);
+            let obj8 = rootNavigationRef1(tmp54[67]);
           }
           obj6 = payload(inviteCode[66]);
           tmp53 = payload;
@@ -858,13 +855,13 @@ export default function handleSupportedURL(payload) {
                 pathname(() => {
                   rootNavigationRef1(inviteCode[17]).popAll();
                   const obj = rootNavigationRef1(inviteCode[17]);
-                  payload(inviteCode[69]).openAccountStanding();
+                  payload(inviteCode[70]).openAccountStanding();
                 });
                 flag = true;
               } else if (constants2.MOBILE_NATIVE_UPDATE === type) {
-                const result5 = rootNavigationRef2(inviteCode[70]).openBuildInstallerUrl(payload.url);
+                const result5 = rootNavigationRef2(inviteCode[71]).openBuildInstallerUrl(payload.url);
                 flag = true;
-                let obj5 = rootNavigationRef2(inviteCode[70]);
+                let obj5 = rootNavigationRef2(inviteCode[71]);
               } else if (constants2.MOBILE_WEB_REDIRECT_CHECKOUT === type) {
                 deepLinkAction = payload.deepLinkAction;
                 pathname(
@@ -898,8 +895,8 @@ export default function handleSupportedURL(payload) {
                             if (deepLinkAction === constants.PREMIUM_CHECKOUT_SUCCESS) {
                               deepLinkAction("succeeded");
                             } else if (deepLinkAction === constants.PREMIUM_SUBSCRIPTION_UPDATE) {
-                              const subscriptions = tmp3(paths[71]).fetchSubscriptions();
-                              const obj3 = tmp3(paths[71]);
+                              const subscriptions = tmp3(paths[72]).fetchSubscriptions();
+                              const obj3 = tmp3(paths[72]);
                             } else if (deepLinkAction === constants.GUILD_BOOST_CHECKOUT_SUCCESS) {
                               tmp2(paths[17]).popAll();
                               guildId = payload.guildId;
@@ -917,7 +914,7 @@ export default function handleSupportedURL(payload) {
                           guild = value.default.getGuild(guildId);
                           if (null != guild) {
                             tmp3(paths[51]).transitionToGuild(guildId);
-                            tmp2(paths[72])(guild);
+                            tmp2(paths[73])(guild);
                             const obj6 = tmp3(paths[51]);
                           }
                           const _default = value.default;
@@ -1036,7 +1033,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { analyticsLocations: null };
                   items = [rootNavigationRef1(inviteCode[35]).DEEPLINK];
                   obj2.analyticsLocations = items;
-                  payload(inviteCode[81]).openGiftModal(obj2);
+                  payload(inviteCode[82]).openGiftModal(obj2);
                 });
                 flag = true;
               } else if (constants2.NITRO_HOME === type) {
@@ -1056,7 +1053,7 @@ export default function handleSupportedURL(payload) {
                   channelId: obj4.channelId,
                   isDeepLink: obj4.isDeepLink,
                 } = payload);
-                rootNavigationRef1(inviteCode[82])({
+                rootNavigationRef1(inviteCode[83])({
                   applicationId: null,
                   referrerId: null,
                   customId: null,
@@ -1065,7 +1062,7 @@ export default function handleSupportedURL(payload) {
                   isDeepLink: null,
                 });
                 flag = true;
-                const obj40 = {
+                const obj41 = {
                   applicationId: null,
                   referrerId: null,
                   customId: null,
@@ -1107,7 +1104,7 @@ export default function handleSupportedURL(payload) {
                 pathname(() => {
                   rootNavigationRef1(inviteCode[17]).popAll();
                   const obj = rootNavigationRef1(inviteCode[17]);
-                  const result = payload(inviteCode[85]).openSubscriptionSettingsFromDeepLink();
+                  const result = payload(inviteCode[86]).openSubscriptionSettingsFromDeepLink();
                 });
                 flag = true;
               } else if (constants2.GAME_PROFILE === type) {
@@ -1143,10 +1140,10 @@ export default function handleSupportedURL(payload) {
                 flag = false;
                 if (constants2.CONJURE === type) {
                   rootNavigationRef1(inviteCode[17]).popAll();
-                  const obj52 = rootNavigationRef1(inviteCode[17]);
-                  const result6 = payload(inviteCode[88]).openConjureHomeScreenWhenReady(payload.projectId);
+                  const obj53 = rootNavigationRef1(inviteCode[17]);
+                  const result6 = payload(inviteCode[89]).openConjureHomeScreenWhenReady(payload.projectId);
                   flag = true;
-                  const obj53 = payload(inviteCode[88]);
+                  const obj54 = payload(inviteCode[89]);
                 }
               }
             }
@@ -1164,20 +1161,20 @@ export default function handleSupportedURL(payload) {
       ({ messageId, summaryId, conversationId } = payload);
     }
     flag = true;
-    if (tmp127) {
-      const obj43 = { guildId, channelId, messageId, navigationSettings: null, summaryId: null, conversationId: null };
-      const obj44 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
-      obj43.navigationSettings = obj44;
-      obj43.summaryId = summaryId;
-      obj43.conversationId = conversationId;
-      rootNavigationRef1(inviteCode[30])(obj43);
+    if (tmp128) {
+      const obj44 = { guildId, channelId, messageId, navigationSettings: null, summaryId: null, conversationId: null };
+      const obj45 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
+      obj44.navigationSettings = obj45;
+      obj44.summaryId = summaryId;
+      obj44.conversationId = conversationId;
+      rootNavigationRef1(inviteCode[30])(obj44);
       flag = true;
     }
-    tmp127 = null != guildId && null != channelId;
+    tmp128 = null != guildId && null != channelId;
   }
   if (flag) {
-    const result7 = payload(inviteCode[89]).browserManagerCloseBrowser();
-    const obj51 = payload(inviteCode[89]);
+    const result7 = payload(inviteCode[90]).browserManagerCloseBrowser();
+    const obj52 = payload(inviteCode[90]);
   }
   return flag;
 }

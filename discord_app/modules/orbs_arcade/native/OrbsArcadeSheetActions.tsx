@@ -75,7 +75,7 @@ export default function OrbsArcadeSheetActions(game) {
       let tmp19 = null;
       if (null != tmp7) {
         ({ text: obj6.text, onPress: obj6.onPress } = tmp7);
-        tmp19 = closure_4(tmp10(5754).Button, {
+        tmp19 = closure_4(tmp10(5768).Button, {
           grow: true,
           size: "lg",
           variant: "secondary",

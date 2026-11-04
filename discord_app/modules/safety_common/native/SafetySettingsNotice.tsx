@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7614).SafetySettingsNoticeAction;
+let closure_4 = fn(7630).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   blockedIgnoredRedirect: {
@@ -20,7 +20,7 @@ let obj2 = {
     borderRadius: nativeDefault.radii.xs,
     borderColor: nativeDefault.colors.TEXT_LINK,
     borderWidth: 1,
-    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
   },
 };
 let closure_7 = createStyles.createStyles(obj2);
@@ -43,14 +43,14 @@ export default function SafetySettingsNotice(noticeType) {
   }, items1);
   const obj = { style: closure_7().blockedIgnoredRedirect, children: null };
   const items2 = [closure_5(labelHook(noticeType[7]).CircleInformationIcon, { color: "text-link" })];
-  const obj2 = { style: { flexShrink: 1 }, variant: "heading-sm/medium", children: null };
+  const obj2 = { style: { flexShrink: 1 }, variant: "heading-xs/medium", children: null };
   if (null != count) {
     const intl2 = labelHook(tmp7[9]).intl;
     const obj3 = {
       hook(children) {
         return hasOwnProperty(Text_Text.Text, {
           role: "link",
-          variant: "heading-sm/medium",
+          variant: "heading-xs/medium",
           color: "text-link",
           onPress,
           children,
@@ -65,7 +65,7 @@ export default function SafetySettingsNotice(noticeType) {
       hook(children) {
         return hasOwnProperty(Text_Text.Text, {
           role: "link",
-          variant: "heading-sm/medium",
+          variant: "heading-xs/medium",
           color: "text-link",
           onPress,
           children,

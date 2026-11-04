@@ -49,7 +49,7 @@ function FamilyCenterLoadError() {
   const items1 = [
     closure_14(CircleErrorIcon.CircleErrorIcon, { size: "lg", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }),
     closure_14(Text_Text.Text, {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-strong",
       style: tmp.loadErrorText,
       children: stringResult,
@@ -226,10 +226,10 @@ function FamilyCenter() {
   const tmp2Result = navigation(isLoading[27]);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const AgeGateSource = fn(1097).AgeGateSource;
-const FamilyCenterConstants = fn(7840);
+const FamilyCenterConstants = fn(7856);
 ({
   FamilyCenterPageLocationAnalyticsIds: closure_11,
   FamilyCenterSubPageAnalyticsIds: closure_12,

@@ -15,7 +15,7 @@ export default function useNativeForumPostContent(arg0) {
   ({ messageLoaded, isMessageDeleted } = arg0);
   const tmp = closure_4();
   if (isMessageDeleted) {
-    const obj2 = { content: null, style: null, variant: "text-sm/normal" };
+    const obj2 = { content: null, style: null, variant: "body-sm/normal" };
     const intl9 = util.intl;
     obj2.content = intl9.string(util.t.U8Rr2l);
     obj2.style = tmp.italics;
@@ -23,7 +23,7 @@ export default function useNativeForumPostContent(arg0) {
   } else {
     if (null != message) {
       if (isSystemMessageDefault(message)) {
-        const obj3 = { content: messageContent, style: tmp.italics, variant: "text-sm/normal" };
+        const obj3 = { content: messageContent, style: tmp.italics, variant: "body-sm/normal" };
         return obj3;
       }
     }
@@ -62,7 +62,7 @@ export default function useNativeForumPostContent(arg0) {
               if (tmp9) {
                 tmp20 = null;
               }
-              const obj = { content: tmp20, style: null, variant: "text-sm/medium" };
+              const obj = { content: tmp20, style: null, variant: "body-sm/medium" };
               return obj;
             } else if (null == message) {
               const intl6 = util.intl;
@@ -104,7 +104,7 @@ export default function useNativeForumPostContent(arg0) {
         const intl7 = util.intl;
         let stringResult1 = intl7.string(util.t.yWK7ZM);
       }
-      const obj4 = { content: stringResult1, style: tmp.italics, variant: "text-sm/normal" };
+      const obj4 = { content: stringResult1, style: tmp.italics, variant: "body-sm/normal" };
       return obj4;
     }
     const intl8 = util.intl;

@@ -94,7 +94,7 @@ export default function NitroOrbsDeliveredModal(arg0) {
     children: null,
   };
   const callback2 = noop.useCallback(() => _undefined(true), []);
-  obj3.children = closure_10(onClose(14837).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
+  obj3.children = closure_10(onClose(14917).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
   const items2 = [closure_10(View, obj3), ,];
   let tmp14Result = !tmp12Result;
   if (!tmp12Result) {
@@ -106,22 +106,22 @@ export default function NitroOrbsDeliveredModal(arg0) {
     const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
     const obj6 = { style: tmp.header, children: null };
     const obj7 = { onPress: onClose, variant: "overlay" };
-    obj6.children = closure_10(onClose(7487).ActionSheetCloseButton, obj7);
+    obj6.children = closure_10(onClose(7503).ActionSheetCloseButton, obj7);
     const items3 = [closure_10(View, obj6), ,];
     const obj8 = { style: tmp.body, children: null };
-    const obj9 = { source: tmp2(15371), style: tmp.orbGraphic, resizeMode: "contain" };
-    const items4 = [closure_10(tmp2(5837), obj9)];
+    const obj9 = { source: tmp2(15458), style: tmp.orbGraphic, resizeMode: "contain" };
+    const items4 = [closure_10(tmp2(5851), obj9)];
     const obj10 = { children: null };
     const obj11 = { variant: "heading-lg/semibold", color: "text-overlay-light", style: tmp.title, children: null };
     const intl = onClose(1113).intl;
     const obj12 = { orbAmount: orbsAmount };
     obj11.children = intl.formatToPlainString(onClose(1113).t["O2/Bj8"], obj12);
-    const items5 = [closure_10(onClose(5747).Text, obj11)];
-    const obj13 = { variant: "text-md/normal", color: "text-overlay-light", style: tmp.description, children: null };
+    const items5 = [closure_10(onClose(5761).Text, obj11)];
+    const obj13 = { variant: "body-md/normal", color: "text-overlay-light", style: tmp.description, children: null };
     const intl2 = onClose(1113).intl;
     const obj14 = { orbAmount: orbsAmount };
     obj13.children = intl2.format(onClose(1113).t.qiZPb6, obj14);
-    items5[1] = closure_10(onClose(5747).Text, obj13);
+    items5[1] = closure_10(onClose(5761).Text, obj13);
     obj10.children = items5;
     items4[1] = closure_11(View, obj10);
     obj8.children = items4;
@@ -131,17 +131,17 @@ export default function NitroOrbsDeliveredModal(arg0) {
     const intl3 = onClose(1113).intl;
     obj16.text = intl3.string(onClose(1113).t.OhOWfI);
     obj16.onPress = callback;
-    const items6 = [closure_10(onClose(5754).Button, obj16)];
+    const items6 = [closure_10(onClose(5768).Button, obj16)];
     const obj17 = { text: null, variant: "secondary-overlay", size: "lg", onPress: null };
     const intl4 = onClose(1113).intl;
     obj17.text = intl4.string(onClose(1113).t.CvXwDY);
     obj17.onPress = callback1;
-    items6[1] = closure_10(onClose(5754).Button, obj17);
+    items6[1] = closure_10(onClose(5768).Button, obj17);
     obj15.children = items6;
     items3[2] = closure_11(View, obj15);
     rect.children = items3;
-    tmp12Result = closure_11(onClose(7412).SafeAreaPaddingView, rect);
-    const tmp2Result = tmp2(5837);
+    tmp12Result = closure_11(onClose(7428).SafeAreaPaddingView, rect);
+    const tmp2Result = tmp2(5851);
   }
   items2[2] = tmp12Result;
   obj2.children = items2;

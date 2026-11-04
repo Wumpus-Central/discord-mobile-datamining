@@ -14,11 +14,11 @@ require = fn;
 function ReportAppProfile(arg0) {
   ({ user: require, contextualGuildId: importDefault, onSubmit: dependencyMap, appContext: ApplicationStore } = arg0);
   let obj = { label: null, subLabel: null, onPress: null, arrow: true };
-  const obj2 = { variant: "heading-md/semibold", children: null };
+  const obj2 = { variant: "heading-sm/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.eyEkG1);
   obj.label = closure_4(Text_Text.Text, obj2);
-  const obj3 = { variant: "text-xs/medium", children: null };
+  const obj3 = { variant: "body-xs/medium", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.ptItsj);
   obj.subLabel = closure_4(Text_Text.Text, obj3);
@@ -41,11 +41,11 @@ function ReportAppBehavior(arg0) {
   const stateFromStores = initialize.useStateFromStores(items, () => ApplicationStore.getAppIdForBotUserId(id.id));
   const data = ApplicationActionCreators.useApplication(stateFromStores).data;
   let obj3 = { label: null, subLabel: null, onPress: null, arrow: true, disabled: null };
-  const obj4 = { variant: "heading-md/semibold", children: null };
+  const obj4 = { variant: "heading-sm/semibold", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.atP0yX);
   obj3.label = onSubmit(Text_Text.Text, obj4);
-  const obj5 = { variant: "text-xs/medium", children: null };
+  const obj5 = { variant: "body-xs/medium", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.UGg603);
   obj3.subLabel = onSubmit(Text_Text.Text, obj5);
@@ -67,7 +67,7 @@ let result = size.fileFinishedImporting("modules/in_app_reports/native/BotReport
 
 export default function BotReportChooser(arg0) {
   const obj = { header: null, children: null };
-  const obj2 = { style: { textAlign: "center" }, variant: "redesign/heading-18/semibold", children: null };
+  const obj2 = { style: { textAlign: "center" }, variant: "heading-md/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.Bd10bR);
   obj.header = React4(Text_Text.Text, obj2);

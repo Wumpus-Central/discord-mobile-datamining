@@ -37,14 +37,14 @@ export function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   const obj4 = { style: tmp.headerText, children: null };
   const items1 = [
     React4(Text_Text.Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       style: { flexWrap: "wrap" },
       children: name,
     }),
   ];
   const obj5 = {
-    variant: "heading-md/medium",
+    variant: "heading-sm/medium",
     style: subscriptionPlanTextStyle,
     children: GuildRoleSubscriptionTypeUtils.formatMonthlyPriceLabel(price_tier),
   };
@@ -53,7 +53,7 @@ export function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   items[1] = hasOwnProperty(View, obj4);
   obj2.children = items;
   const items2 = [hasOwnProperty(View, obj2), ,];
-  const obj7 = { variant: "text-sm/normal", style: descriptionTextStyle };
+  const obj7 = { variant: "body-sm/normal", style: descriptionTextStyle };
   const merged = Object.assign(descriptionTextProps);
   obj7.children = description;
   items2[1] = React4(Text_Text.Text, obj7);

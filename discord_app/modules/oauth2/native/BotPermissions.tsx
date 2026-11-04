@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { disabledPermissionIcon: null };
 let size = {
@@ -75,13 +75,13 @@ export default function BotPermissions(guild) {
         style: closure_4.disabledPermissionIcon,
         children: timestampProducer(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }),
       }),
-      timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: permissionName }),
+      timestampProducer(Text_Text.Text, { variant: "body-md/medium", children: permissionName }),
     ];
     obj2.children = items;
-    return React5(Stack_Stack.Stack, obj2, String(item));
+    return metroImportDefault(Stack_Stack.Stack, obj2, String(item));
   });
   let obj = { children: null };
-  let obj2 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+  let obj2 = { variant: "body-sm/medium", color: "text-subtle", children: null };
   const intl = permissions(onPermissionsChange[13]).intl;
   obj2.children = intl.format(permissions(onPermissionsChange[13]).t.sOaT2j, {
     applicationName: application.name,
@@ -96,7 +96,7 @@ export default function BotPermissions(guild) {
   let tmp6Result = null;
   if (mapped1.length > 0) {
     const obj4 = { children: null };
-    const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+    const obj5 = { variant: "body-sm/medium", color: "text-subtle", children: null };
     const intl2 = permissions(onPermissionsChange[13]).intl;
     const obj6 = { applicationName: application.name };
     obj5.children = intl2.format(permissions(onPermissionsChange[13]).t.fsOkF4, obj6);

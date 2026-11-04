@@ -52,13 +52,13 @@ export default function UserProfileActivityTimebar(arg0) {
   const items1 = [React4(View, obj2)];
   const obj5 = { style: tmp.textRow, children: null };
   const obj6 = {
-    variant: "text-xs/normal",
+    variant: "body-xs/normal",
     tabularNumbers: true,
     color: "text-subtle",
     children: useActivityTimer.formatTime(elapsed),
   };
   const items2 = [React4(Text_Text.Text, obj6)];
-  const obj8 = { variant: "text-xs/normal", tabularNumbers: true, color: "text-subtle", children: null };
+  const obj8 = { variant: "body-xs/normal", tabularNumbers: true, color: "text-subtle", children: null };
   const obj4 = { width: `${100 * tmp2.percentage}%` };
   obj8.children = useActivityTimer.formatTime(duration);
   items2[1] = React4(Text_Text.Text, obj8);

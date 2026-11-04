@@ -18,7 +18,7 @@ const obj2 = {
     borderWidth: 1,
     borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING,
     borderRadius: nativeDefault.radii.lg,
-    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING,
   },
   text: null,
 };
@@ -30,7 +30,7 @@ const obj3 = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING,
   borderRadius: nativeDefault.radii.lg,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING,
 };
 obj2.text = { flex: 1, paddingRight: nativeDefault.space.PX_8 };
 let closure_6 = createStyles.createStyles(obj2);
@@ -45,7 +45,7 @@ export default function FamilyCenterInlineWarningNotice(arg0) {
   obj.style = items;
   const items1 = [
     React4(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }),
-    React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: tmp.text, children: text }),
+    React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-strong", style: tmp.text, children: text }),
   ];
   obj.children = items1;
   return hasOwnProperty(View, obj);

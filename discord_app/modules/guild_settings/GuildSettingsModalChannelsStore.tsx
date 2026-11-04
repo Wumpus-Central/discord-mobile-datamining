@@ -15,7 +15,7 @@ function sortCategoryList(channel, channel2) {
   const type2 = channel2.type;
   if (type !== type2) {
     if (!timestampProducer(type)) {
-      if (React5(type)) {
+      if (metroImportDefault(type)) {
         return num;
       }
       num = 1;
@@ -125,8 +125,8 @@ let closure_3 = ["lock_permissions", "id"];
 const ChannelRecord = fn(4994);
 ({
   castChannelRecord: hasOwnProperty,
-  isGuildSelectableChannelType: metroRequire,
-  isGuildVocalChannelType: closure_7,
+  isGuildSelectableChannelType: closure_6,
+  isGuildVocalChannelType: metroImportDefault,
 } = ChannelRecord);
 let GuildChannelStore = fn(5071);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_8, GUILD_VOCAL_CHANNELS_KEY: closure_9 } = GuildChannelStore);

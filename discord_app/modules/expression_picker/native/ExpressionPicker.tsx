@@ -12,7 +12,7 @@ const View = fn(17).View;
 const ExpressionPickerConstants = fn(1228);
 ({
   ExpressionPickerViewType: hasOwnProperty,
-  ExpressionPickerOrder: metroRequire,
+  ExpressionPickerOrder: closure_6,
   PADDING_HORIZONTAL,
 } = ExpressionPickerConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;

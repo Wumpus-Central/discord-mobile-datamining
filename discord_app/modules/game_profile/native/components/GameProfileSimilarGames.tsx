@@ -19,7 +19,7 @@ function ListPadding() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(9498).MOBILE_GAME_PROFILE_MAX_WIDTH;
+let closure_6 = fn(9516).MOBILE_GAME_PROFILE_MAX_WIDTH;
 const jsx = fn(21).jsx;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
@@ -182,7 +182,7 @@ let closure_16 = noop.memo(function GameProfileSimilarGamesSkeleton(cardWidth) {
       />
     )),
   });
-  return jsx(cardWidth(9565).GameProfileSectionSkeleton, {
+  return jsx(cardWidth(9584).GameProfileSectionSkeleton, {
     style: tmp.container,
     headerStyle: tmp.header,
     showViewAllSkeleton: false,
@@ -211,7 +211,7 @@ export default function GameProfileSimilarGames(trackAction) {
       obj3.title = intl.string(trackAction(1113).t["6rLyQB"]);
       const obj5 = {
         horizontal: true,
-        renderScrollComponent: tmp2(9514),
+        renderScrollComponent: tmp2(9533),
         data: similarGames,
         renderItem(game) {
           return <closure_14 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -223,9 +223,9 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: result + tmp5,
       };
-      obj3.children = jsx(trackAction(7414).FlashList, {
+      obj3.children = jsx(trackAction(7430).FlashList, {
         horizontal: true,
-        renderScrollComponent: tmp2(9514),
+        renderScrollComponent: tmp2(9533),
         data: similarGames,
         renderItem(game) {
           return <closure_14 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -237,8 +237,8 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: result + tmp5,
       });
-      tmp7 = jsx(tmp2(9565), { style: null, headerStyle: null, title: null, children: null });
-      const tmp2Result = tmp2(9565);
+      tmp7 = jsx(tmp2(9584), { style: null, headerStyle: null, title: null, children: null });
+      const tmp2Result = tmp2(9584);
     }
   }
   return tmp7;

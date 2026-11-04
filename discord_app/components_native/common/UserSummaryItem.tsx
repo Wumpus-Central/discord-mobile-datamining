@@ -195,9 +195,9 @@ export default function UserSummaryItem(users) {
         const size = { borderRadius: tmp37, width: tmp37, height: tmp37, padding: tmp37 / 8 };
         items5[1] = size;
         obj10.style = items5;
-        const obj11 = { variant: "text-xs/normal", color: "mobile-text-heading-primary", children: text };
+        const obj11 = { variant: "body-xs/normal", color: "mobile-text-heading-primary", children: text };
         obj10.children = jsx(require("Text/Text").Text, {
-          variant: "text-xs/normal",
+          variant: "body-xs/normal",
           color: "mobile-text-heading-primary",
           children: text,
         });

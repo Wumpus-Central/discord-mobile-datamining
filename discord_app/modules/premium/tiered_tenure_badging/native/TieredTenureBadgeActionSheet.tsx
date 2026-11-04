@@ -41,7 +41,7 @@ function TieredTenureBadgeItem(arg0) {
     const items1 = [closure_1_10(FastImageDefault, obj3), , ,];
     const obj4 = {
       style: tmp.badgeName,
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };
@@ -50,7 +50,7 @@ function TieredTenureBadgeItem(arg0) {
     items1[1] = closure_1_10(Text_Text.Text, obj4);
     const obj5 = {
       style: tmp.badgeRequirement,
-      variant: "text-xs/normal",
+      variant: "body-xs/normal",
       color: "mobile-text-heading-primary",
       children: tmp7,
     };
@@ -59,7 +59,7 @@ function TieredTenureBadgeItem(arg0) {
       isUsersBadge = null != premiumSince;
     }
     if (isUsersBadge) {
-      const obj6 = { style: tmp.badgePremiumSince, variant: "text-xs/normal", color: "text-muted", children: null };
+      const obj6 = { style: tmp.badgePremiumSince, variant: "body-xs/normal", color: "text-muted", children: null };
       const intl2 = util.intl;
       const obj7 = { date: null };
       const _Date = Date;
@@ -76,7 +76,7 @@ function TieredTenureBadgeItem(arg0) {
 }
 const View = fn(17).View;
 const PremiumConstants = fn(1387);
-({ PremiumTypes: metroRequire, TieredTenureBadge: closure_7 } = PremiumConstants);
+({ PremiumTypes: closure_6, TieredTenureBadge: metroImportDefault } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -210,7 +210,7 @@ export default function TieredTenureBadgeActionSheet(userId) {
   }
   obj9.children = stringResult;
   const items3 = [closure_10(userId(tieredTenureBadgeDataForUser[12]).Text, obj9)];
-  const obj10 = { variant: "text-md/medium", color: "text-default", style: tmp.subtitle, children: null };
+  const obj10 = { variant: "body-md/medium", color: "text-default", style: tmp.subtitle, children: null };
   const intl2 = tmp2(tmp3[13]).intl;
   if (isPremiumResult) {
     let stringResult1 = intl2.string(tmp2(tmp3[13]).t.IdAP91);

@@ -122,7 +122,7 @@ export default function ForumPostTypingUsers(hasUnreads) {
       obj6.children = closure_4(tmp2(tmp3[9]).Ellipsis, {});
       items2[1] = closure_4(tmp4(tmp3[8]).View, obj6);
       const obj7 = {
-        variant: "text-sm/semibold",
+        variant: "body-sm/semibold",
         color: str,
         style: tmp.typingText,
         lineClamp: 1,

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsLevelCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
@@ -21,7 +21,7 @@ function GuildLevelPowerupHeader(arg0) {
     }
     const obj = { style: tmp.progressContainer, children: null };
     const obj3 = { start: null, end: null, colors: null, style: null };
-    ({ START: obj2.start, END: obj2.end } = React6);
+    ({ START: obj2.start, END: obj2.end } = React5);
     obj3.colors = items6;
     const items1 = [tmp.progress, ,];
     let progressStart = position === constants.START;
@@ -121,11 +121,11 @@ class GuildPowerupLevelBody {
   }
 }
 const View = fn(17).View;
-const GuildPowerupsConstants = fn(5353);
-({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
+const GuildPowerupsConstants = fn(5354);
+({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: closure_6 } = GuildPowerupsConstants);
 const Constants = fn(1072);
-({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(14271).TIER_CARDS;
+({ BoostedGuildTiers: metroImportDefault, HorizontalGradient: closure_8 } = Constants);
+const TIER_CARDS = fn(14357).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -241,11 +241,7 @@ export default function GuildPowerupsLevelCard(arg0) {
   const items1 = [closure_1_10(GuildLevelPowerupHeader, obj3)];
   const obj4 = { style: tmp.contentContainer, children: null };
   const items2 = [
-    closure_1_10(Text_Text.Text, {
-      color: "text-strong",
-      variant: "experimental/heading-md/semibold",
-      children: powerup.title,
-    }),
+    closure_1_10(Text_Text.Text, { color: "text-strong", variant: "heading-md/semibold", children: powerup.title }),
     closure_1_10(GuildPowerupLevelBody, { isActive: tmp4.type !== constants2.INACTIVE, index }),
   ];
   const obj6 = {

@@ -38,7 +38,7 @@ export function ExclusiveBadge() {
   const obj = { style: tmp.exclusiveBadge, children: null };
   items = [React4(ClydeIcon.ClydeIcon, { size: "xs", color: nativeDefault.colors.WHITE })];
   const obj3 = {
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     color: "text-overlay-light",
     style: tmp.exclusiveBadgeText,
     children: null,

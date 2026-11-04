@@ -39,6 +39,10 @@ export default {
     }
     DispatcherDefault.dispatch({ type: "ALERT_CLOSE" });
   },
+  closeAll() {
+    this.close();
+    useAlertStore.dismissAlerts();
+  },
   show(hideActionSheet) {
     let flag = hideActionSheet.hideActionSheet;
     if (flag === undefined) {
@@ -126,12 +130,12 @@ export default {
     }
     if (!tmp7) {
       if (flag) {
-        merged(5381).hideActionSheet();
-        const obj4 = merged(5381);
+        merged(5382).hideActionSheet();
+        const obj4 = merged(5382);
       }
       if (null != c6) {
-        confirmText(6080).dismissAlert(c6);
-        const obj5 = confirmText(6080);
+        confirmText(6095).dismissAlert(c6);
+        const obj5 = confirmText(6095);
       }
       merged(572).dispatch({ type: "ALERT_CLOSE" });
       closure_7 = tmp27 + 1;
@@ -141,14 +145,14 @@ export default {
       ({ cancelText, onConfirm: c3, onCancel: c4 } = merged);
       c5 = false;
       ({ title, body: body2, children, confirmColor } = merged);
-      const obj7 = confirmText(6080);
+      const obj7 = confirmText(6095);
       const obj3 = { title, content: body2, extraContent: children, actions: null };
       const obj8 = { variant: null, text: null, onPress: null };
       const obj6 = merged(572);
       const tmp29 = confirmText;
       const tmp31 = c5;
       const tmp32 = c4;
-      obj8.variant = confirmText(6150).getAlertButtonVariant(confirmColor);
+      obj8.variant = confirmText(6165).getAlertButtonVariant(confirmColor);
       obj8.text = confirmText;
       obj8.onPress = function handleConfirm() {
         c5 = true;
@@ -156,7 +160,7 @@ export default {
           tmp();
         }
       };
-      items = [c3(confirmText(6084).AlertActionButton, obj8)];
+      items = [c3(confirmText(6099).AlertActionButton, obj8)];
       let tmp30Result = null;
       if (null != cancelText) {
         const obj9 = {
@@ -169,7 +173,7 @@ export default {
             }
           },
         };
-        tmp30Result = tmp30(tmp29(6084).AlertActionButton, obj9);
+        tmp30Result = tmp30(tmp29(6099).AlertActionButton, obj9);
       }
       const obj11 = { children: null };
       items[1] = tmp30Result;
@@ -178,7 +182,7 @@ export default {
       const obj12 = { dismissable: flag2 };
       obj7.openAlert(
         text,
-        c3(confirmText(6084).AlertModal, obj3),
+        c3(confirmText(6099).AlertModal, obj3),
         () => {
           if (!c5) {
             if (c4 != null) {
@@ -191,17 +195,17 @@ export default {
         },
         obj12,
       );
-      const obj10 = confirmText(6150);
+      const obj10 = confirmText(6165);
     } else {
       if (null != c6) {
-        confirmText(6080).dismissAlert(c6);
+        confirmText(6095).dismissAlert(c6);
         c6 = null;
-        const obj2 = confirmText(6080);
+        const obj2 = confirmText(6095);
       }
       const self = this;
       const obj13 = {
         importer() {
-          return asyncRequireImpl(6150, dependencyMap.paths).then((result) => {
+          return asyncRequireImpl(6165, dependencyMap.paths).then((result) => {
             closure_0 = result.default;
             return (arg0) => {
               const obj = {};

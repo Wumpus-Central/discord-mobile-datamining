@@ -32,7 +32,7 @@ export function ForYouRecentActivitySectionHeader() {
   const obj2 = {
     style: tmp.textHeader,
     color: "text-muted",
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     accessibilityRole: "header",
     children: null,
   };
@@ -41,7 +41,7 @@ export function ForYouRecentActivitySectionHeader() {
   obj.children = jsx(Text_Text.Text, {
     style: tmp.textHeader,
     color: "text-muted",
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     accessibilityRole: "header",
     children: null,
   });

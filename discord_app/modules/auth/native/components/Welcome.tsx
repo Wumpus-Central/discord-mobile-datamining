@@ -12,8 +12,8 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import _modDef15265 from "../../../../../_runtime/metro/15265__.js";
-import _mod15829 from "../../../../../_runtime/metro/15829__.js";
+import _modDef15348 from "../../../../../_runtime/metro/15348__.js";
+import _mod15917 from "../../../../../_runtime/metro/15917__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -43,7 +43,7 @@ function InviteCard(invite) {
       let tmp18 = expandedHeight;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      const obj = { user: null, guildId: "y" };
+      const obj = { user: null, guildId: "a" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
       tmp14 = expandedHeight(native.Avatar, obj);
@@ -55,7 +55,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      const obj4 = { user: null, guildId: "y" };
+      const obj4 = { user: null, guildId: "a" };
       const tmp33 = new UserRecord(inviter);
       obj4.user = tmp33;
       const intl3 = util.intl;
@@ -71,10 +71,10 @@ function InviteCard(invite) {
     obj5.style = items;
     const items1 = [tmp14];
     const obj6 = { style: tmp.text, children: null };
-    const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: stringResult };
-    const items2 = [tmp18(tmp17(5747).Text, obj7)];
-    const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-    items2[1] = tmp18(tmp17(5747).Text, obj8);
+    const obj7 = { variant: "body-sm/medium", color: "text-subtle", children: stringResult };
+    const items2 = [tmp18(tmp17(5761).Text, obj7)];
+    const obj8 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: name };
+    items2[1] = tmp18(tmp17(5761).Text, obj8);
     obj6.children = items2;
     items1[1] = dependencyMap(React4, obj6);
     obj5.children = items1;
@@ -87,16 +87,16 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef15265 };
+  const obj2 = { source: _modDef15348 };
   const items1 = [expandedHeight(FastImageDefault, obj2)];
   const obj3 = { style: tmp.text, children: null };
-  const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+  const obj4 = { variant: "body-sm/medium", color: "text-subtle", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.QzUORX);
   const items2 = [
     expandedHeight(Text_Text.Text, obj4),
     expandedHeight(Text_Text.Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: guildTemplate.name,
     }),
@@ -116,7 +116,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [expandedHeight(FastImageDefault, { style: tmp4.logo, source: _mod15829 }), ,];
+  items = [expandedHeight(FastImageDefault, { style: tmp4.logo, source: _mod15917 }), ,];
   const obj4 = {
     style: tmp4.header,
     lineClamp: null,
@@ -140,7 +140,7 @@ function Centerpiece(inlineButtons) {
     subHeaderWithInvite = null;
   }
   const obj5 = {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "text-overlay-light",
     style: items2,
     maxFontSizeMultiplier: 3,
@@ -178,8 +178,8 @@ const Constants = fn(1072);
   InviteStates: closure_15,
   ThemeTypes: closure_16,
 } = Constants);
-const GuildTemplateStates = fn(7625).GuildTemplateStates;
-const InviteTypes = fn(8003).InviteTypes;
+const GuildTemplateStates = fn(7641).GuildTemplateStates;
+const InviteTypes = fn(8019).InviteTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
 let createStyles = fn(5141);

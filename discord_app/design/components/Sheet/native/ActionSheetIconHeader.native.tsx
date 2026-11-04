@@ -23,7 +23,7 @@ export function ActionSheetIconHeader(subtitle) {
   const obj2 = { style: tmp.titles, children: null };
   const items1 = [
     React3(Text_Text.Text, {
-      variant: "redesign/heading-18/semibold",
+      variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       lineClamp: 2,
@@ -32,7 +32,7 @@ export function ActionSheetIconHeader(subtitle) {
   ];
   let tmp4Result = null;
   if (null != subtitle) {
-    const obj3 = { variant: "text-xs/medium", color: "text-default", children: subtitle };
+    const obj3 = { variant: "body-xs/medium", color: "text-default", children: subtitle };
     tmp4Result = React3(Text_Text.Text, obj3);
   }
   items1[1] = tmp4Result;

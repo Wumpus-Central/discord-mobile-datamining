@@ -499,7 +499,7 @@ let closure_12 = async function _fetchScheduledMessages() {
   return value;
 };
 const Constants = fn(1072);
-({ Endpoints: hasOwnProperty, MessageFlags: metroRequire } = Constants);
+({ Endpoints: hasOwnProperty, MessageFlags: closure_6 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
 

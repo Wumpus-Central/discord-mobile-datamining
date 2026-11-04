@@ -10,7 +10,7 @@ import createStyles from "../../../design/components/Styles/native/createStyles.
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ NativeModules: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   container: { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 },
   buttonContainer: null,
@@ -27,7 +27,7 @@ export default function UpdateAppScreen() {
   const intl = util.intl;
   obj2.children = intl.string(_modDef2963.yxqMCD);
   items = [hasOwnProperty(Text_Text.Text, obj2), ,];
-  const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
+  const obj3 = { variant: "body-md/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(_modDef2963.VBZJJg);
   items[1] = hasOwnProperty(Text_Text.Text, obj3);

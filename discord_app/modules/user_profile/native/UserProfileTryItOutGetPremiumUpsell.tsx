@@ -7,14 +7,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
+({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTryItOutGetPremiumUpsell.tsx");
 
 export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7750).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7766).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   items = [analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -36,7 +36,7 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
     onButtonPress: null,
     onLayout: null,
   };
-  let obj = analyticsLocations(7750);
+  let obj = analyticsLocations(7766);
   const intl = analyticsLocations(1113).intl;
   obj2.text = intl.format(analyticsLocations(1113).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {

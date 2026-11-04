@@ -7,11 +7,11 @@ import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 const _modDef12 = _mod12;
 
 require = fn;
-const HappeningNowConstants = fn(17430);
+const HappeningNowConstants = fn(17521);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty,
-  HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: metroRequire,
-  HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_7,
+  HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6,
+  HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: metroImportDefault,
 } = HappeningNowConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -37,7 +37,7 @@ export function cardSize(kind) {
     case "unified-vc":
       return hasOwnProperty;
     case "user":
-      return React5;
+      return metroImportDefault;
     case "invite":
       return timestampProducer;
     case "create-channel":

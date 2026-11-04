@@ -39,7 +39,7 @@ export function RestrictedUserRowLabel(userRecord) {
   items = [React4(Text_Text.Text, obj4)];
   if (tmp8Result) {
     const obj5 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-subtle",
       lineClamp: 1,
       includeFontPadding: true,

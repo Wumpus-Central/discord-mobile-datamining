@@ -101,11 +101,11 @@ function sampleValues(surfaces, sample_data, arg2) {
     let tmp7 = first;
     if ("image" === obj.get(first)) {
       let _String = String;
-      let tmp13 = arg2[String(undefined, tmp8)];
-      if (null != tmp13) {
+      let tmp15 = arg2[String(undefined, tmp8)];
+      if (null != tmp15) {
         let obj3 = { type: resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA, media: null };
         let size = { url: null, width: null, height: null };
-        size.url = tmp14;
+        size.url = tmp16;
         size.width = v256;
         size.height = v256;
         obj3.media = size;

@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -170,7 +170,7 @@ export default function MediaSlider(controls) {
     tabularNumbers: true,
     lineClamp: 1,
     color: "text-overlay-light",
-    variant: "text-xs/medium",
+    variant: "body-xs/medium",
     children: timeFormat,
   };
   const items7 = [tmp.centerText, { width: tmp8[0] }];
@@ -242,7 +242,7 @@ export default function MediaSlider(controls) {
   items6[2] = c7(c5, obj6);
   const obj13 = {
     style: tmp.centerText,
-    variant: "text-xs/medium",
+    variant: "body-xs/medium",
     color: "text-overlay-light",
     tabularNumbers: true,
     lineClamp: 1,

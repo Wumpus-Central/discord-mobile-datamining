@@ -204,18 +204,18 @@ class CommandRow {
   }
 }
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9894);
-({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
+const ApplicationCommandIndexStore = fn(9912);
+({ useContextIndexState: metroImportDefault, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1498);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_12 = fn(6155).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(6170).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
-  headerSpacer: { height: fn(12596).EXPANDED_HEADER_HEIGHT - fn(12596).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(12677).EXPANDED_HEADER_HEIGHT - fn(12677).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -233,7 +233,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(12596).EXPANDED_HEADER_HEIGHT - fn(12596).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(12677).EXPANDED_HEADER_HEIGHT - fn(12677).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {
@@ -463,7 +463,7 @@ export default function AppDetailContent(context) {
       items = [state(BillIcon.BillIcon, { size: "sm", color: "icon-muted" })];
       const obj3 = {
         style: closure_7.monetizationDisclosureTextStyle,
-        variant: "text-xs/normal",
+        variant: "body-xs/normal",
         color: "text-subtle",
         lineClamp: 1,
         children: null,
@@ -480,7 +480,7 @@ export default function AppDetailContent(context) {
       const items1 = [state(ShopIcon.ShopIcon, { size: "sm", color: "icon-muted" })];
       const obj5 = {
         style: closure_7.monetizationDisclosureTextStyle,
-        variant: "text-xs/normal",
+        variant: "body-xs/normal",
         color: "text-subtle",
         lineClamp: 1,
         children: null,
@@ -570,7 +570,7 @@ export default function AppDetailContent(context) {
     tmp26Result4 = null;
     if (!tmp4Result6.isActivityApp(application)) {
       const obj12 = { style: tmp.noCommandsTextContainer, children: null };
-      const obj13 = { variant: "text-sm/normal", color: "text-default", children: null };
+      const obj13 = { variant: "body-sm/normal", color: "text-default", children: null };
       let intl = tmp4(tmp3[17]).intl;
       obj13.children = intl.string(tmp4(tmp3[17]).t["w8+YDM"]);
       obj12.children = tmp26(tmp4(tmp3[27]).Text, obj13);
@@ -585,7 +585,7 @@ export default function AppDetailContent(context) {
     if ("channel" === context.type) {
       const obj14 = { style: tmp.commandsHeaderContainer, children: null };
       const obj15 = { style: tmp.commandsHeaderTextContainer, children: null };
-      const obj16 = { variant: "text-md/medium", color: "text-default", children: null };
+      const obj16 = { variant: "body-md/medium", color: "text-default", children: null };
       let intl2 = tmp4(tmp3[17]).intl;
       obj16.children = intl2.string(tmp4(tmp3[17]).t.GOXqks);
       obj15.children = tmp26(tmp4(tmp3[27]).Heading, obj16);

@@ -28,11 +28,11 @@ export default noop.memo(function SettingsSearchEmptyState() {
   const obj = { style: tmp.container, children: null };
   items = [React4(NoResultsAlt.NoResultsAlt, { resizeMode: "contain" })];
   const obj2 = { style: tmp.textContainer, align: "center", justify: "center", children: null };
-  const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj3 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj3.children = intl.string(util.t.zihbmv);
   const items1 = [React4(Text_Text.Text, obj3)];
-  const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj4 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.XclvsB);
   items1[1] = React4(Text_Text.Text, obj4);

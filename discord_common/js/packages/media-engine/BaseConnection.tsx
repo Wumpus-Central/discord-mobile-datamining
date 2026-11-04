@@ -2,18 +2,18 @@
 import VideoQualityManager from "VideoQualityManager.tsx";
 import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer.tsx";
 import discord_common_BaseConnectionEvent from "BaseConnectionEvent.tsx";
-import _modDef5927 from "../../../../_runtime/metro/05927__.js";
-import flatRestDefault from "../../../../_runtime/05956_flatRest.js";
+import _modDef5941 from "../../../../_runtime/metro/05941__.js";
+import flatRestDefault from "../../../../_runtime/05970_flatRest.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import TypedEventEmitter from "../../shared/utils/TypedEventEmitter.tsx";
 
 require = fn;
-const Constants = fn(5888);
+const Constants = fn(5902);
 ({
   ConnectionStates: closure_4,
   DEFAULT_VOICE_BITRATE: hasOwnProperty,
-  MediaTypes: metroRequire,
-  ResolutionTypes: closure_7,
+  MediaTypes: closure_6,
+  ResolutionTypes: metroImportDefault,
   MediaEngineContextTypes: closure_8,
   VIDEO_QUALITY_FRAMERATE: closure_9,
   SIMULCAST_HQ_QUALITY: closure_10,
@@ -133,7 +133,7 @@ prototype["setRemoteAudioHistory"] = function setRemoteAudioHistory(arg0) {};
 prototype["setQualityDecoupling"] = function setQualityDecoupling(arg0) {};
 prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(arg0) {};
 prototype["getStreamParameters"] = function getStreamParameters() {
-  return _modDef5927(this.videoStreamParameters);
+  return _modDef5941(this.videoStreamParameters);
 };
 prototype["setExperimentFlag"] = function setExperimentFlag(arg0, arg1) {
   const experimentFlags = this.experimentFlags;
@@ -149,7 +149,7 @@ prototype["setConnectionState"] = function setConnectionState(DISCONNECTED) {
   this.connectionState = DISCONNECTED;
   this.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.ConnectionStateChange, this.connectionState);
 };
-prototype["updateVideoQuality"] = function updateVideoQuality(React7) {
+prototype["updateVideoQuality"] = function updateVideoQuality(React6) {
   const self = this;
   const videoStreamParameters = this.videoStreamParameters;
   let num = videoStreamParameters.findIndex((quality) => 100 === quality.quality);
@@ -158,7 +158,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(React7) {
   }
   const result = self.applyQualityConstraints({}, self.videoStreamParameters[num].ssrc);
   ({ quality, constraints } = result);
-  const tmp2 = _modDef5927(self.videoStreamParameters);
+  const tmp2 = _modDef5941(self.videoStreamParameters);
   if (null != quality) {
     ({ bitrateMax: tmp2[num].maxBitrate, bitrateMin: tmp2[num].minBitrate, bitrateTarget } = quality);
     if (bitrateTarget == null) {
@@ -212,7 +212,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(React7) {
       tmp6 = tmp11;
     } while (num2 < self.videoStreamParameters.length);
   }
-  tmp5.streamParameters = _modDef5927(self.videoStreamParameters);
+  tmp5.streamParameters = _modDef5941(self.videoStreamParameters);
   const prop = self.videoStreamParameters;
   items = [
     ...prop.map((maxPixelCount) => {
@@ -224,8 +224,8 @@ prototype["updateVideoQuality"] = function updateVideoQuality(React7) {
     }),
   ];
   tmp5.remoteSinkWantsPixelCount = Math.max.apply(items);
-  if (null != React7) {
-    let obj = flatRestDefault(tmp5, React7);
+  if (null != React6) {
+    let obj = flatRestDefault(tmp5, React6);
   } else {
     obj = {};
     const merged = Object.assign(tmp5);
@@ -401,4 +401,4 @@ let size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
 
 export default BaseConnection;
-export const BaseConnectionEvent = fn(5926).BaseConnectionEvent;
+export const BaseConnectionEvent = fn(5940).BaseConnectionEvent;

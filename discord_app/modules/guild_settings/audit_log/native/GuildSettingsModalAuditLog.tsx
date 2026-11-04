@@ -207,17 +207,17 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
     if (!isInitialLoading) {
       const obj6 = { style: tmp.filtersWrapper, children: null };
       const obj7 = { start: true, end: true, icon: null, label: null, onPress: null, trailing: null };
-      const obj8 = { variant: "text-md/semibold", children: null };
+      const obj8 = { variant: "body-md/semibold", children: null };
       let intl = tmp2(tmp3[16]).intl;
       obj8.children = intl.string(tmp2(tmp3[16]).t.kP6oFy);
       obj7.icon = closure_14(tmp2(tmp3[24]).Text, obj8);
       const obj9 = { style: tmp.filterTrailing, children: null };
       const obj10 = { style: tmp.filterTextWrapper, children: null };
-      const obj11 = { variant: "text-sm/semibold", children: userIdFilterLabel };
+      const obj11 = { variant: "body-sm/semibold", children: userIdFilterLabel };
       obj10.children = closure_14(tmp2(tmp3[24]).Text, obj11);
       const items8 = [closure_14(_logs, obj10)];
       const obj12 = { style: tmp.filterTextWrapper, children: null };
-      const obj13 = { variant: "text-sm/semibold", children: actionFilterLabel };
+      const obj13 = { variant: "body-sm/semibold", children: actionFilterLabel };
       obj12.children = closure_14(tmp2(tmp3[24]).Text, obj13);
       items8[1] = closure_14(_logs, obj12);
       obj9.children = items8;

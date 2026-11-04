@@ -138,13 +138,13 @@ export default noop.memo(function VoicePanelCTACardCallerDisconnected() {
   const items4 = [closure_9(first(id[11]), obj3)];
   const obj10 = { style: tmp3.textContainer, children: null };
   const tmpResult7 = first(id[11]);
-  const obj11 = { style: tmp3.text, variant: "heading-sm/semibold", color: "text-overlay-light", children: null };
+  const obj11 = { style: tmp3.text, variant: "heading-xs/semibold", color: "text-overlay-light", children: null };
   const intl = tmp7(tmp2[14]).intl;
   obj11.children = intl.string(channelId(id[14]).t.WkAgPU);
   const items5 = [closure_8(channelId(id[13]).Text, obj11)];
   let tmp26Result = null != tmp11;
   if (tmp26Result) {
-    const obj12 = { style: tmp3.text, variant: "text-xs/medium", color: "text-overlay-light", children: null };
+    const obj12 = { style: tmp3.text, variant: "body-xs/medium", color: "text-overlay-light", children: null };
     const intl2 = tmp7(tmp2[14]).intl;
     const obj13 = { username: tmp11 };
     obj12.children = intl2.format(tmp7(tmp2[14]).t.kXrAqz, obj13);

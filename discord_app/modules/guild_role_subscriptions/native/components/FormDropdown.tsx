@@ -23,8 +23,8 @@ export default function FormDropdown(arg0) {
     onPress: null,
   };
   if (label == null) {
-    const obj2 = { variant: "text-md/medium", color: "text-muted", children: placeholder };
-    label = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", children: placeholder });
+    const obj2 = { variant: "body-md/medium", color: "text-muted", children: placeholder };
+    label = jsx(Text_Text.Text, { variant: "body-md/medium", color: "text-muted", children: placeholder });
   }
   obj.label = label;
   let tmpResult;

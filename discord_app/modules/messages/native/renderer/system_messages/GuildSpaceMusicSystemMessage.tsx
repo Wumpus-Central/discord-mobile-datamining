@@ -8,7 +8,7 @@ import PopularMusicSystemMessageCopy from "../../../../guild_space/popular_music
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import _modDef8682 from "../../../../../../_runtime/metro/08682__.js";
+import _modDef8699 from "../../../../../../_runtime/metro/08699__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildMemberRequesterStore from "../../../../../stores/GuildMemberRequesterStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -65,7 +65,7 @@ export function createGuildSpaceMusicSystemMessage(message) {
             const obj5 = { content: null, iconUrl: null, iconTintColor: null };
             obj2.usernameOnClick = obj6;
             obj5.content = intl.formatToParts(mobileMusicSystemMessage.message, obj2);
-            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8682);
+            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8699);
             obj5.iconTintColor = tmp15.iconTintColor;
             const merged1 = Object.assign(createCommonMessageDefault(message));
             return obj5;

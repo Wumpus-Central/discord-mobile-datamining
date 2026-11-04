@@ -6,7 +6,7 @@ import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import shared from "../../../../design/shared.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7422 from "../../../../../_runtime/metro/07422__.js";
+import _modDef7438 from "../../../../../_runtime/metro/07438__.js";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import getEmojiItemUrlDefault from "../../../emojis/utils/getEmojiItemUrl.tsx";
 import EmojiPickerListRowViewDefault from "EmojiPickerListRowView.tsx";
@@ -16,8 +16,8 @@ import ThemeStore from "../../../user_settings/ThemeStore.tsx";
 require = fn;
 function EmojiItemLockedOverlay() {
   const tmp = closure_9();
-  const obj = { style: tmp.lockContainer, children: React5(LockIcon.LockIcon, { style: tmp.lock }) };
-  return React5(React3, obj);
+  const obj = { style: tmp.lockContainer, children: metroImportDefault(LockIcon.LockIcon, { style: tmp.lock }) };
+  return metroImportDefault(React3, obj);
 }
 class EmojiItem {
   constructor(arg0) {
@@ -97,11 +97,11 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(10073);
+const EmojiPickerListConstants = fn(10121);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1228).PADDING_VERTICAL;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   image: { height: IMAGE_SIZE, width: IMAGE_SIZE },
@@ -132,7 +132,7 @@ obj6.backgroundColor = _modDef671("#000000").alpha(0.2).hex();
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.lockContainer = obj6;
 obj.lock = { width: 16, height: 16, tintColor: "white" };
-const React7 = createStyles.createStyles(obj);
+const React6 = createStyles.createStyles(obj);
 let closure_12 = noop.memo(function EmojiPickerListRow(emojis) {
   emojis = emojis.emojis;
   ({
@@ -196,7 +196,7 @@ let closure_12 = noop.memo(function EmojiPickerListRow(emojis) {
       }
     },
   };
-  return React5(EmojiPickerListRowViewDefault, obj2);
+  return metroImportDefault(EmojiPickerListRowViewDefault, obj2);
 });
 let closure_13 = noop.memo(function EmojiPickerListRow(arg0) {
   ({ emojisDisabled, rowSize } = arg0);
@@ -210,7 +210,7 @@ let closure_13 = noop.memo(function EmojiPickerListRow(arg0) {
       let tmp4 = emojis[sum];
       if (undefined === tmp4) {
         let obj2 = { style: tmp.image };
-        let arr = items.push(React5(React3, obj2, sum));
+        let arr = items.push(metroImportDefault(React3, obj2, sum));
       } else {
         let obj = {
           emoji: tmp4,
@@ -229,12 +229,12 @@ let closure_13 = noop.memo(function EmojiPickerListRow(arg0) {
         obj.onPressEmoji = onPressEmoji;
         obj.onLongPressEmoji = onLongPressEmoji;
         obj.isSectionNitroLocked = isSectionNitroLocked;
-        let arr3 = items.push(React5(EmojiItem, obj, sum));
+        let arr3 = items.push(metroImportDefault(EmojiItem, obj, sum));
       }
       sum = sum + 1;
     } while (sum < result + rowSize);
   }
-  return React5(React3, { style: tmp.row, children: items });
+  return metroImportDefault(React3, { style: tmp.row, children: items });
 });
 const alphaResult = _modDef671("#000000").alpha(0.2);
 const size = fn(2);
@@ -248,5 +248,5 @@ export const EmojiPickerListRow = noop.memo(function EmojiPickerListRow(nativeRo
   }
   const merged = Object.assign(nativeRow, Object.assign({ nativeRow: 0 }));
   const merged1 = Object.assign(merged);
-  return React5(nativeRow ? closure_12 : closure_13, {});
+  return metroImportDefault(nativeRow ? closure_12 : closure_13, {});
 });

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/settings/conjureSettingsRequired.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-const set = new Set(["select", "checkbox", "channel", "role", "user"]);
+const set = new Set(["select", "checkbox", "channel", "role", "user", "game"]);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsRequired.tsx");
 
 export function isConjureSettingRequired(required) {

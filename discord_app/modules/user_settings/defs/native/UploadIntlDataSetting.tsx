@@ -296,17 +296,17 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
 };
 const ActivityIndicator = fn(17).ActivityIndicator;
 const Constants = fn(1072);
-({ DebugLogCategory: metroRequire, Endpoints: closure_7 } = Constants);
+({ DebugLogCategory: closure_6, Endpoints: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_9 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11677);
+const SettingBuilders = fn(11728);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(12361).FileUpIcon,
+  IconComponent: fn(12426).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_11.apply;
@@ -317,7 +317,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16889).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16981).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useUploadIntlDataTrailing() {
     let tmp = null;
     if (closure_9().isUploading) {

@@ -20,11 +20,15 @@ function BalanceWidgetMenuSection() {
   const tmp = closure_10();
   const obj = { spacing: 16, style: tmp.container, children: null };
   items = [
-    React5(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }),
-    React5(BalanceWidgetMenuDefault, {}),
+    metroImportDefault(Text_Text.Text, {
+      variant: "body-lg/semibold",
+      style: tmp.title,
+      children: "Balance Widget Menu",
+    }),
+    metroImportDefault(BalanceWidgetMenuDefault, {}),
   ];
   obj.children = items;
-  return React6(Stack_Stack.Stack, obj);
+  return React5(Stack_Stack.Stack, obj);
 }
 function BalanceWidgetPillSection() {
   const tmp = closure_10();
@@ -71,7 +75,7 @@ function BalanceWidgetPillSection() {
   const obj = { spacing: 16, style: tmp.container, children: null };
   const items2 = [
     closure_7(balance(first1[11]).Text, {
-      variant: "text-lg/semibold",
+      variant: "body-lg/semibold",
       style: tmp.title,
       children: "Balance Widget Pill",
     }),
@@ -107,19 +111,19 @@ function OrbsFlowTest() {
     children: null,
   };
   items = [
-    React5(BalanceWidgetMenuSection, {}),
-    React5(BalanceWidgetPillSection, {}),
-    React5(OrbCheckoutMenuDefault, {}),
+    metroImportDefault(BalanceWidgetMenuSection, {}),
+    metroImportDefault(BalanceWidgetPillSection, {}),
+    metroImportDefault(OrbCheckoutMenuDefault, {}),
   ];
   obj2.children = items;
-  obj.children = React6(hasOwnProperty, obj2);
-  return React5(LayerScope.LayerScope, obj);
+  obj.children = React5(hasOwnProperty, obj2);
+  return metroImportDefault(LayerScope.LayerScope, obj);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(9987);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const NativeStackNavigator = fn(10035);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5141);
 let obj = {

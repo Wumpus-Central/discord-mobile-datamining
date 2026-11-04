@@ -122,14 +122,14 @@ function GroupMemberCount(count) {
   const tmp = closure_12();
   const obj = { style: tmp.avatarWrapper, children: null };
   const obj2 = { style: tmp.overflowCount, children: null };
-  let str = "text-sm/semibold";
+  let str = "body-sm/semibold";
   if (count < 100) {
     str = "body-md/semibold";
   }
   const obj3 = { variant: str, children: null };
   items = ["+", count];
   obj3.children = items;
-  obj2.children = React5(Text_Text.Text, obj3);
+  obj2.children = metroImportDefault(Text_Text.Text, obj3);
   obj.children = timestampProducer(View, obj2);
   return timestampProducer(View, obj);
 }
@@ -156,7 +156,7 @@ function GroupMemberAvatar(guildId) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createElement = fn(19).createElement;
 let c9 = 38;
 let closure_10 = { damping: 30, stiffness: 400 };

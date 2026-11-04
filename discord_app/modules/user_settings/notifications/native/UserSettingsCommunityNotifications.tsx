@@ -63,8 +63,8 @@ export default function UserSettingsCommunityNotifications() {
         return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
       }),
     };
-    obj3.children = closure_4(tmp2(6147).Stack, obj4);
-    tmp5 = closure_4(tmp2(8301).Form, obj3);
+    obj3.children = closure_4(tmp2(6162).Stack, obj4);
+    tmp5 = closure_4(tmp2(8317).Form, obj3);
   }
   return tmp5;
 }

@@ -53,7 +53,7 @@ function AddAvatarScreen() {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8344).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8360).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (noop === 1) {
@@ -69,23 +69,23 @@ function AddAvatarScreen() {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16591);
-              obj11.description = tmp2(8864).generateAvatarDescription();
+              const obj = tmp2(16682);
+              obj11.description = tmp2(8881).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(8864);
+              const obj3 = tmp2(8881);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(8859).setPendingChanges(obj12);
-            const obj4 = tmp2(8859);
+            tmp2(8876).setPendingChanges(obj12);
+            const obj4 = tmp2(8876);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8861).announcePendingAvatarChange(str);
+            const result = tmp2(8878).announcePendingAvatarChange(str);
             closure_129_2(undefined);
             c3 = 3;
-            const obj6 = tmp2(8861);
+            const obj6 = tmp2(8878);
           }
           closure_129_0(true);
         }
@@ -139,14 +139,14 @@ function AddAvatarScreen() {
   const intl = util.intl;
   obj6.children = intl.string(util.t.XQRWvR);
   const items2 = [closure_9(Text_Text.Text, obj6)];
-  let obj7 = { style: tmp.subtitle, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
+  let obj7 = { style: tmp.subtitle, variant: "body-xs/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj7.children = intl2.string(util.t.fH9TLT);
   items2[1] = closure_9(Text_Text.Text, obj7);
   obj5.children = items2;
   const items3 = [closure_10(View, obj5), ,];
   const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
-  items3[1] = closure_9(selectedAvatar(19713), {
+  items3[1] = closure_9(selectedAvatar(19818), {
     avatarSource: VideoBackground.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -172,7 +172,7 @@ function AddAvatarScreen() {
   obj4.children = items3;
   const items4 = [
     closure_10(View, obj4),
-    closure_9(selectedAvatar(19704), { onAvatarSelect: tmp4[1], selectedAvatar }),
+    closure_9(selectedAvatar(19809), { onAvatarSelect: tmp4[1], selectedAvatar }),
   ];
   let obj11 = { style: tmp.buttonContainer, children: null };
   let obj12 = { text: null, grow: true, onPress: null, disabled: null };
@@ -200,7 +200,7 @@ class AddAvatarModal {
           obj.onPress = function onPress() {
             return closure_1_0(dependencyMap[25]).showSkipAvatarModal();
           };
-          return closure_1_9(closure_1_0(7682).HeaderActionButton, obj);
+          return closure_1_9(closure_1_0(7698).HeaderActionButton, obj);
         },
         headerLeft() {
           return null;
@@ -229,7 +229,7 @@ let obj2 = {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
-    paddingTop: fn(5709).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5722).NAV_BAR_HEIGHT + 32,
     alignItems: "center",
   },
   headerContainer: { display: "flex", alignItems: "center" },

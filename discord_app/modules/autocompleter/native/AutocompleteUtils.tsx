@@ -16,10 +16,10 @@ function AutocompleteFormDivider() {
 }
 let closure_3 = fn(4994).isGuildSelectableChannelType;
 const Constants = fn(1072);
-({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10355);
+({ AutoCompleteResultTypes: metroImportDefault, WHITESPACE_RE: closure_8 } = Constants);
+const ApplicationCommandsConstants = fn(10403);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: closure_10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(6156);
+const ChannelAutocompleteConstants = fn(6171);
 ({
   CHANNEL_SENTINEL: closure_11,
   EMOJI_SENTINEL: closure_12,
@@ -42,7 +42,7 @@ export function getItemLayout(arg0, index) {
       type = tmp2.type;
     }
   }
-  const tmp3 = type === constants.EMOJI ? React7 : closure_1_10;
+  const tmp3 = type === constants.EMOJI ? React6 : closure_1_10;
   const obj = { length: tmp3, offset: null, index };
   const result = index * tmp3;
   obj.offset = result + Math.max(0, (index - 1) * hairlineWidth);

@@ -10,7 +10,7 @@ const Constants = fn(1072);
 ({
   AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4,
   BoostedGuildTiers: hasOwnProperty,
-  GuildFeatures: metroRequire,
+  GuildFeatures: closure_6,
 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");

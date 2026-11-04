@@ -7,7 +7,7 @@ import _mod1652 from "../../../_runtime/metro/01652__.js";
 import timing_timing from "../../design/animation/reanimated/timing/timing.tsx";
 import spring_spring from "../../design/animation/reanimated/spring/spring.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7232 from "../../../_runtime/metro/07232__.js";
+import _modDef7252 from "../../../_runtime/metro/07252__.js";
 import Upload from "../../lib/uploader/Upload.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../modules/media_uploads/native/showUploadPreviewActionSheet.tsx";
@@ -165,7 +165,7 @@ function Tile(onEdit) {
     tmp19 = null;
     if (length > 0) {
       const obj7 = {
-        variant: "text-xs/medium",
+        variant: "body-xs/medium",
         color: "text-overlay-light",
         allowFontScaling: false,
         style: tmp.altTagText,
@@ -384,8 +384,8 @@ class ImageCarouselRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7825).DraftType;
-const ImageCarouselConstants = fn(10657);
+const DraftType = fn(7841).DraftType;
+const ImageCarouselConstants = fn(10705);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;

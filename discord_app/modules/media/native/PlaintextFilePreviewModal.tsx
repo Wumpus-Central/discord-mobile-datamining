@@ -22,10 +22,10 @@ function PlaintextFilePreviewContent(arg0) {
   const fileContents = downloadedFile.fileContents;
   if (downloadedFile.hadError) {
     const obj2 = { style: tmp.errorContainer, children: null };
-    const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj3 = { variant: "body-md/normal", color: "text-muted", children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t.fEptJP);
-    obj2.children = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: null });
+    obj2.children = jsx(Text_Text.Text, { variant: "body-md/normal", color: "text-muted", children: null });
     return <timestampProducer style={tmp.errorContainer}>{null}</timestampProducer>;
   } else if (null == fileContents) {
     const obj4 = {
@@ -45,14 +45,14 @@ function PlaintextFilePreviewContent(arg0) {
       combined = "" + fileContents + "\n" + bytesLeftNotice;
     }
     const obj6 = {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-default",
       style: tmp.code,
       selectable: true,
       children: combined,
     };
     const tmp10 = jsx(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       color: "text-default",
       style: tmp.code,
       selectable: true,
@@ -76,7 +76,7 @@ function PlaintextFilePreviewContent(arg0) {
   }
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const constants = { PREVIEW: "PREVIEW" };
 const createStyles = fn(5141);
@@ -148,12 +148,12 @@ export default function PlaintextFilePreviewModal(url) {
           items,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { IconComponent: url(9888).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+            const obj = { IconComponent: url(9906).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
             const intl = url(1113).intl;
             obj.accessibilityLabel = intl.string(url(1113).t.PdRCRg);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_7(url(7682).HeaderActionButton, obj);
+            return closure_1_7(url(7698).HeaderActionButton, obj);
           },
         });
       },
@@ -172,5 +172,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[constants.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return jsx(url(11619).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+  return jsx(url(11670).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
 }

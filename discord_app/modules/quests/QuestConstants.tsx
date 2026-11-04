@@ -168,7 +168,6 @@ export const QuestsExperimentLocations = {
 export const DismissibleQuestContentFlags = DismissibleQuestContentFlags.DismissibleQuestContentFlags;
 export const QuestVariants = QuestVariants.QuestVariants;
 export const NitroQuestVariants = set;
-export const QUESTS_SETTINGS_SECTION = "inventory";
 export const CONSECUTIVE_HEARTBEAT_PERIOD_MS = result;
 export const QUEST_BAR_SPRING_CONFIG_QUEST_ACCEPTED = { tension: 900, friction: 45, clamp: true };
 export const QUEST_BAR_SPRING_CONFIG_QUEST_UNACCEPTED = { tension: 360, friction: 30, clamp: true };

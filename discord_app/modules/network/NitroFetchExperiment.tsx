@@ -1,49 +1,77 @@
 // discord_app/modules/network/NitroFetchExperiment.tsx
-import _mod20279 from "../../../_runtime/metro/20279__.js";
-import ApexExperiment from "../experiments/apex/index.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import ApexExperiment2 from "../experiments/apex/index.tsx";
+import _mod9982 from "../../../_runtime/metro/09982__.js";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
+require = fn;
 function synchronizeNetworkLayer() {
-  const tmp = "nitro_fetch" === closure_3.getConfig({ location: "android_network_layer" }).networkLayer;
-  if (tmp !== closure_6) {
+  const tmp = "nitro_fetch" === closure_4.getConfig({ location: "android_network_layer" }).networkLayer;
+  if (tmp !== closure_7) {
     if (tmp) {
-      global.XMLHttpRequest = _mod20279.XMLHttpRequest;
+      if (null == closure_8) {
+        closure_8 = _mod9982;
+      }
+      global.XMLHttpRequest = closure_8.XMLHttpRequest;
     } else {
       global.XMLHttpRequest = XMLHttpRequest;
     }
-    closure_6 = tmp;
+    closure_7 = tmp;
   }
 }
 const obj = { networkLayer: "react_native", messagePrefetchEnabled: false };
-let closure_3 = ApexExperiment.createApexExperiment({
+const ApexExperiment = fn(1449);
+let closure_4 = ApexExperiment.createApexExperiment({
   name: "2026-10-android-nitro-fetch",
   kind: "user",
   defaultConfig: obj,
-  variations: { 0: obj, 1: { networkLayer: "nitro_fetch", messagePrefetchEnabled: false } },
+  variations: {
+    0: obj,
+    1: { networkLayer: "nitro_fetch", messagePrefetchEnabled: false },
+    2: { networkLayer: "nitro_fetch", messagePrefetchEnabled: true },
+  },
 });
 const XMLHttpRequest = global.XMLHttpRequest;
-let c5 = false;
-let closure_6 = null;
+let c6 = false;
+let closure_7 = null;
+let closure_8 = null;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/network/NitroFetchExperiment.tsx");
 
 export function initializeNitroFetchExperiment() {
-  if (!c5) {
-    c5 = true;
+  if (!c6) {
+    c6 = true;
     let tmp = require;
     let _XMLHttpRequest = dependencyMap;
-    const ApexExperimentStore = ApexExperiment.ApexExperimentStore;
+    const ApexExperimentStore = ApexExperiment2.ApexExperimentStore;
     ApexExperimentStore.addChangeListener(synchronizeNetworkLayer);
-    const tmp5 = "nitro_fetch" === closure_3.getConfig({ location: "android_network_layer" }).networkLayer;
-    if (tmp5 !== closure_6) {
+    const tmp5 = "nitro_fetch" === closure_4.getConfig({ location: "android_network_layer" }).networkLayer;
+    if (tmp5 !== closure_7) {
       if (tmp5) {
+        if (null == closure_8) {
+          closure_8 = tmp(9982);
+        }
         tmp = global;
-        _XMLHttpRequest = tmp(20279).XMLHttpRequest;
+        _XMLHttpRequest = closure_8.XMLHttpRequest;
         global.XMLHttpRequest = _XMLHttpRequest;
-        const tmpResult = tmp(20279);
       } else {
         global.XMLHttpRequest = XMLHttpRequest;
       }
-      closure_6 = tmp5;
+      closure_7 = tmp5;
+    }
+  }
+}
+export function getMessagePrefetchKey(channelId) {
+  const config = closure_4.getConfig({ location: "android_message_prefetch_join" });
+  if ("nitro_fetch" === config.networkLayer) {
+    if (config.messagePrefetchEnabled) {
+      let id = null;
+      if (AuthenticationStore.isAuthenticated()) {
+        id = AuthenticationStore.getId();
+      }
+      if (null != id) {
+        const _HermesInternal = HermesInternal;
+        return "NativeAppStartup:" + id + ":" + channelId;
+      }
     }
   }
 }

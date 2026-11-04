@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = {
@@ -88,7 +88,7 @@ export default function AuthFormView(arg0) {
     items1[1] = tmp18;
     items1[2] = children;
     obj2.children = items1;
-    let tmp5Result = React5(hasOwnProperty, obj2);
+    let tmp5Result = metroImportDefault(hasOwnProperty, obj2);
   } else {
     const obj = { style: null, children: null };
     const items2 = [,];
@@ -126,9 +126,9 @@ export default function AuthFormView(arg0) {
     items5[1] = tmp9Result2;
     items5[2] = children;
     obj6.children = items5;
-    items3[2] = React5(hasOwnProperty, obj6);
+    items3[2] = metroImportDefault(hasOwnProperty, obj6);
     obj.children = items3;
-    tmp5Result = React5(React4, obj);
+    tmp5Result = metroImportDefault(React4, obj);
   }
   return tmp5Result;
 }

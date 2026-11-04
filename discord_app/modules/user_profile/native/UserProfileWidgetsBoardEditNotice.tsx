@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -53,7 +53,7 @@ export default function UserProfileWidgetsBoardEditNotice() {
       const obj3 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
       obj2.children = hasOwnProperty(CircleInformationIcon.CircleInformationIcon, obj3);
       const items1 = [hasOwnProperty(View, obj2), ,];
-      const obj4 = { style: closure_0.text, variant: "text-sm/medium", color: "text-strong", children: null };
+      const obj4 = { style: closure_0.text, variant: "body-sm/medium", color: "text-strong", children: null };
       const intl = util.intl;
       obj4.children = intl.string(util.t.kv8ULD);
       items1[1] = hasOwnProperty(Text_Text.Text, obj4);

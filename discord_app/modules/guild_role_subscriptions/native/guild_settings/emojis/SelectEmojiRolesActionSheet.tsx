@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   list: { flex: 1 },
@@ -81,7 +81,7 @@ export default function SelectEmojiRolesActionSheet(guildId) {
     stringResult = intl.string(tmp8(emoji[13]).t["R3BPH+"]);
   }
   obj3.children = dependencyMap(guildId(emoji[12]).Text, {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "text-brand",
     children: stringResult,
   });
@@ -131,7 +131,7 @@ export default function SelectEmojiRolesActionSheet(guildId) {
         const obj6 = {
           style: closure_3.roleName,
           lineClamp: 1,
-          variant: "text-md/medium",
+          variant: "body-md/medium",
           color: "interactive-text-active",
           children: tmp.name,
         };

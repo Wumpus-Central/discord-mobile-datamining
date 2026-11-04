@@ -11,35 +11,41 @@ import GuildStore from "GuildStore.tsx";
 
 require = fn;
 function handleConnectionOpen() {
-  let tmp = null != c8;
+  let tmp = null != c9;
   if (tmp) {
-    tmp = null == GuildStore.getGuild(c8);
-  }
-  if (tmp) {
-    tmp = null == UserGuildJoinRequestStore.getRequest(c8);
+    tmp = c9 !== metroImportDefault;
   }
   if (tmp) {
-    c8 = null;
+    tmp = null == GuildStore.getGuild(c9);
   }
-  let tmp6 = null != c9;
-  if (tmp6) {
-    tmp6 = null == GuildStore.getGuild(c9);
+  if (tmp) {
+    tmp = null == UserGuildJoinRequestStore.getRequest(c9);
   }
-  if (tmp6) {
-    tmp6 = null == UserGuildJoinRequestStore.getRequest(c9);
-  }
-  if (tmp6) {
+  if (tmp) {
     c9 = null;
   }
-  if (null != c8) {
+  let tmp8 = null != c10;
+  if (tmp8) {
+    tmp8 = c10 !== metroImportDefault;
+  }
+  if (tmp8) {
+    tmp8 = null == GuildStore.getGuild(c10);
+  }
+  if (tmp8) {
+    tmp8 = null == UserGuildJoinRequestStore.getRequest(c10);
+  }
+  if (tmp8) {
+    c10 = null;
+  }
+  if (null != c9) {
     const _Date = Date;
-    prop[tmp11] = Date.now();
+    prop[tmp15] = Date.now();
   }
 }
 const Constants = fn(1072);
-({ ME: metroRequire, Routes: closure_7 } = Constants);
-let c8 = null;
+({ ME: closure_6, MOBILE_GUILD_UPSELL_LIST: metroImportDefault, Routes: closure_8 } = Constants);
 let c9 = null;
+let c10 = null;
 let prop = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class SelectedGuildStore extends PersistedStore {}
@@ -61,7 +67,7 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
   if (selectedGuildId == null) {
     selectedGuildId = null;
   }
-  c8 = selectedGuildId;
+  c9 = selectedGuildId;
   lastSelectedGuildId = undefined;
   if (selectedGuildTimestampMillis != null) {
     lastSelectedGuildId = selectedGuildTimestampMillis.lastSelectedGuildId;
@@ -69,7 +75,7 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
   if (lastSelectedGuildId == null) {
     lastSelectedGuildId = null;
   }
-  c9 = lastSelectedGuildId;
+  c10 = lastSelectedGuildId;
   const obj = { path: null };
   const RouteParam = RouteUtils.RouteParam;
   obj.path = React5.CHANNEL(RouteParam.guildId());
@@ -90,24 +96,24 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
   }
   let tmp9 = null != tmp8;
   if (tmp9) {
-    tmp9 = tmp8 !== c8;
+    tmp9 = tmp8 !== c9;
   }
   if (tmp9) {
-    c8 = tmp8;
+    c9 = tmp8;
   }
 };
 prototype["getState"] = function getState() {
   return { selectedGuildTimestampMillis: prop, selectedGuildId, lastSelectedGuildId };
 };
 prototype["getGuildId"] = function getGuildId() {
-  return c8;
+  return c9;
 };
 prototype["getLastSelectedGuildId"] = function getLastSelectedGuildId() {
-  return c9;
+  return c10;
 };
 prototype["getLastSelectedTimestamp"] = function getLastSelectedTimestamp(arg0) {
   let num = -1;
-  if (c8 !== arg0) {
+  if (c9 !== arg0) {
     num = prop[arg0];
   }
   return num;
@@ -118,12 +124,12 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: function handleOverlayInitialize(selectedGuildId) {
     selectedGuildId = selectedGuildId.selectedGuildId;
-    c9 = undefined;
+    c10 = undefined;
     handleConnectionOpen();
   },
   CHANNEL_SELECT: function handleChannelSelect(guildId) {
     guildId = guildId.guildId;
-    if (c8 === guildId) {
+    if (c9 === guildId) {
       return false;
     } else {
       if (null != tmp) {
@@ -135,9 +141,9 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
         prop[guildId] = Date.now();
       }
       if (null != guildId) {
-        c9 = guildId;
+        c10 = guildId;
       }
-      c8 = guildId;
+      c9 = guildId;
     }
   },
   GUILD_MEMBER_REMOVE: function handleGuildMemberRemove(guildId) {
@@ -149,11 +155,11 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
     } else {
       delete tmp[tmp2];
       let flag = false;
-      if (c9 === guildId) {
-        c9 = null;
+      if (c10 === guildId) {
+        c10 = null;
         flag = true;
       }
-      if (c8 === guildId) {
+      if (c9 === guildId) {
         tmp3 = (function pickFallbackGuildId(guildId) {
           closure_0 = guildId;
           if (null != lastSelectedGuildId) {
@@ -194,12 +200,12 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
           }
         })(guildId);
         if (null == tmp3) {
-          c8 = null;
+          c9 = null;
           router_utils.replaceWith(React5.ME);
           flag = true;
         }
       }
-      c8 = tmp3;
+      c9 = tmp3;
       router_utils.replaceWith(React5.CHANNEL(tmp3));
       flag = true;
     }
@@ -212,11 +218,11 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
     } else {
       delete tmp[tmp2];
       let flag = false;
-      if (c9 === id) {
-        c9 = null;
+      if (c10 === id) {
+        c10 = null;
         flag = true;
       }
-      if (c8 === id) {
+      if (c9 === id) {
         let tmp8 = (function pickFallbackGuildId(guildId) {
           closure_0 = guildId;
           if (null != lastSelectedGuildId) {
@@ -257,19 +263,19 @@ const selectedGuildStore = new SelectedGuildStore(DispatcherDefault, {
           }
         })(id);
         if (null == tmp8) {
-          c8 = null;
+          c9 = null;
           router_utils.replaceWith(React5.ME);
           flag = true;
         }
       }
-      c8 = tmp8;
+      c9 = tmp8;
       router_utils.replaceWith(React5.CHANNEL(tmp8));
       flag = true;
     }
   },
   LOGOUT: function handleLogout() {
-    c8 = null;
     c9 = null;
+    c10 = null;
   },
 });
 const size = fn(2);

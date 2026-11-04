@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PlatformUtils = fn(1357);
 let num = 325;
@@ -47,8 +47,8 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj2.title = intl.string(listings(2699)["TXY/b0"]);
   const intl2 = util.intl;
   obj2.description = intl2.string(listings(2699).aJv4PB);
-  const items1 = [closure_5(listings(14257), obj2)];
-  const tmp3 = listings(14257);
+  const items1 = [closure_5(listings(14343), obj2)];
+  const tmp3 = listings(14343);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

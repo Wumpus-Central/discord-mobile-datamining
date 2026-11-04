@@ -6,7 +6,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import _modDef18404 from "../../../../_runtime/metro/18404__.js";
+import _modDef18498 from "../../../../_runtime/metro/18498__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -76,7 +76,7 @@ let closure_9 = async function _handlePress() {
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_4, Fonts } = Constants);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   MFAWarning: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" },
@@ -92,9 +92,9 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFA
 export default function GuildMFAWarning() {
   const tmp = closure_7();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef18404 };
+  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef18498 };
   items = [hasOwnProperty(FastImageDefault, obj2)];
-  const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
+  const obj3 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl = util.intl;
   const items1 = [intl.string(util.t.ZIf8Ag)];
   const obj4 = { style: tmp.MFAWarningLink, children: null };
@@ -108,5 +108,5 @@ export default function GuildMFAWarning() {
   return timestampProducer(Pressables.PressableOpacity, obj);
 }
 export function getScaledGuildMFAWarningHeight(fontScale) {
-  return 83 + 5 * useScaledTextLineHeight.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
+  return 83 + 5 * useScaledTextLineHeight.scaleTextLineHeight("body-xs/medium", fontScale) + 10 + 10;
 }

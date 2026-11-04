@@ -34,7 +34,7 @@ function GuildDirectoryEditDescription(entry) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj3 = tmp4(13995);
+            const obj3 = tmp4(14081);
             dependencyMap = 1;
             c4 = 1;
             const obj5 = {
@@ -51,7 +51,7 @@ function GuildDirectoryEditDescription(entry) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          closure_1(13993).close();
+          closure_1(14079).close();
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -74,7 +74,7 @@ function GuildDirectoryEditDescription(entry) {
   };
   const intl = entry(1113).intl;
   obj4.children = intl.format(entry(1113).t.w9tsNk, { guildName: entry.name });
-  obj3.children = closure_7(entry(5747).Text, obj4);
+  obj3.children = closure_7(entry(5761).Text, obj4);
   items = [closure_7(closure_5, obj3)];
   let obj6 = {
     onSubmit(arg0, arg1) {
@@ -98,15 +98,15 @@ function GuildDirectoryEditDescription(entry) {
   items[1] = closure_7(GuildDirectoryEditDescriptionTemplateDefault, obj6);
   obj2.children = items;
   obj.children = closure_8(closure_6, obj2);
-  return closure_7(entry(7412).SafeAreaPaddingView, obj);
+  return closure_7(entry(7428).SafeAreaPaddingView, obj);
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
-  safeArea: { marginTop: fn(5709).NAV_BAR_HEIGHT, flex: 1 },
+  safeArea: { marginTop: fn(5722).NAV_BAR_HEIGHT, flex: 1 },
   container: { flex: 1 },
   title: { marginBottom: 8, textAlign: "center" },
   header: { alignItems: "center", justifyContent: "center", padding: 16 },
@@ -132,7 +132,7 @@ export default function GuildDirectoryEditDescriptionModal(arg0) {
     },
     render() {
       const merged = Object.assign(closure_0);
-      return React5(GuildDirectoryEditDescription, {});
+      return metroImportDefault(GuildDirectoryEditDescription, {});
     },
   };
   obj2[EDIT_DESCRIPTION] = obj3;

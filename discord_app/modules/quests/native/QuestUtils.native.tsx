@@ -26,7 +26,7 @@ import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14825, dependencyMap.paths), timestampProducer, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14905, dependencyMap.paths), timestampProducer, {
     questId,
     questContent,
     questContentPosition,
@@ -38,7 +38,7 @@ function viewReward(quest) {
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14825, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14905, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };
@@ -271,11 +271,11 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
     }
   }
 };
-const QuestConstants = fn(6901);
+const QuestConstants = fn(6916);
 ({
   QuestsExperimentLocations: hasOwnProperty,
-  QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: metroRequire,
-  QUEST_REWARD_DETAILS_BOTTOM_SHEET_KEY: closure_7,
+  QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_6,
+  QUEST_REWARD_DETAILS_BOTTOM_SHEET_KEY: metroImportDefault,
   QuestVariants: closure_8,
 } = QuestConstants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
@@ -285,7 +285,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export function openRewardDetailsBottomSheet(questId) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9812, dependencyMap.paths), React5, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9830, dependencyMap.paths), metroImportDefault, {
     questId: questId.questId,
   });
 }

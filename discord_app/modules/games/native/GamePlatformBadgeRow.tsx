@@ -6,10 +6,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(14080).GamePlatformAvailability.DESKTOP] = fn(9719).ScreenIcon;
-obj[fn(14080).GamePlatformAvailability.MOBILE] = fn(7253).MobilePhoneIcon;
-obj[fn(14080).GamePlatformAvailability.CONSOLE] = fn(9859).GameControllerIcon;
-obj[fn(14080).GamePlatformAvailability.ROBLOX] = fn(9480).RobloxNeutralIcon;
+obj[fn(14166).GamePlatformAvailability.DESKTOP] = fn(9737).ScreenIcon;
+obj[fn(14166).GamePlatformAvailability.MOBILE] = fn(7273).MobilePhoneIcon;
+obj[fn(14166).GamePlatformAvailability.CONSOLE] = fn(9877).GameControllerIcon;
+obj[fn(14166).GamePlatformAvailability.ROBLOX] = fn(9498).RobloxNeutralIcon;
 const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const size = fn(2);
@@ -20,7 +20,7 @@ export default noop.memo(function GamePlatformBadgeRow(platforms) {
   items = [platforms];
   const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
   const tmp = closure_6();
-  return jsx(platforms(6147).Stack, {
+  return jsx(platforms(6162).Stack, {
     direction: "horizontal",
     align: "center",
     spacing: nativeDefault.space.PX_4,

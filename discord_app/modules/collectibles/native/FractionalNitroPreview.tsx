@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/FractionalNitroPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import _modDef15178 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import _modDef15258 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -91,7 +91,7 @@ export function FractionalNitroPreview() {
     end: VerticalGradient.END,
     style: tmp.gradient,
   };
-  obj8.uri = _modDef15178;
+  obj8.uri = _modDef15258;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);
@@ -103,10 +103,10 @@ export function FractionalNitroPreview() {
       const obj = { style: benefitRow.benefitRow, children: null };
       items = [
         timestampProducer(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: nativeDefault.colors.WHITE }),
-        timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children }),
+        timestampProducer(Text_Text.Text, { variant: "body-sm/medium", color: "text-overlay-light", children }),
       ];
       obj.children = items;
-      return React5(View, obj, index);
+      return metroImportDefault(View, obj, index);
     }),
   });
   obj5.children = items1;

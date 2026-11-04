@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   modal: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
@@ -89,8 +89,8 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
     obj3.maximumDate = toDateResult;
     obj3.mode = date;
     obj3.onSubmit = handleSubmitDueDate;
-    obj2.openLazy(asyncRequireImpl(9137, dependencyMap.paths), "DatePicker", obj3);
-    const tmp3 = asyncRequireImpl(9137, dependencyMap.paths);
+    obj2.openLazy(asyncRequireImpl(9154, dependencyMap.paths), "DatePicker", obj3);
+    const tmp3 = asyncRequireImpl(9154, dependencyMap.paths);
   }
   const tmp = handleSubmitDueDate();
   [first, closure_7] = getError.useState(onClose.defaultValue);
@@ -112,7 +112,7 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
   let obj3 = {
     title,
     headerTitle() {
-      return React5(HeaderShared.GenericHeaderTitle, { title });
+      return metroImportDefault(HeaderShared.GenericHeaderTitle, { title });
     },
     headerTitleAlign: "center",
     headerStatusBarHeight: null,
@@ -127,7 +127,7 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
   }
   obj3.headerStatusBarHeight = num + createReminder(575).space.PX_8;
   obj5 = onClose(1377);
-  obj3.headerLeft = onClose(7124).getHeaderCloseButton(onClose);
+  obj3.headerLeft = onClose(7139).getHeaderCloseButton(onClose);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
   obj3.headerRight = function headerRight() {
     const obj = { text: null, onPress: null, disabled: null };
@@ -135,9 +135,9 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
     obj.text = intl.string(util.t["R3BPH+"]);
     obj.onPress = onPress;
     obj.disabled = null != error;
-    return React5(HeaderActionButton.HeaderActionButton, obj);
+    return metroImportDefault(HeaderActionButton.HeaderActionButton, obj);
   };
-  const items1 = [closure_7(onClose(7131).Header, obj3)];
+  const items1 = [closure_7(onClose(7146).Header, obj3)];
   const obj6 = { style: tmp.container, children: null };
   const obj7 = { title: null, hasIcons: false, children: null };
   let intl = tmp11(1113).intl;
@@ -149,8 +149,8 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
   obj8.onPress = function onPress() {
     handleOpenDatePicker("date");
   };
-  obj7.children = closure_7(onClose(7101).TableRow, obj8);
-  const items2 = [closure_7(onClose(7186).TableRowGroup, obj7)];
+  obj7.children = closure_7(onClose(7116).TableRow, obj8);
+  const items2 = [closure_7(onClose(7201).TableRowGroup, obj7)];
   const obj9 = { title: null, hasIcons: false, children: null };
   const intl3 = tmp11(1113).intl;
   obj9.title = intl3.string(onClose(1113).t.GOmEb8);
@@ -161,18 +161,18 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
   obj10.onPress = function onPress() {
     handleOpenDatePicker("time");
   };
-  obj9.children = closure_7(onClose(7101).TableRow, obj10);
-  const items3 = [closure_7(onClose(7186).TableRowGroup, obj9)];
+  obj9.children = closure_7(onClose(7116).TableRow, obj10);
+  const items3 = [closure_7(onClose(7201).TableRowGroup, obj9)];
   let tmp10Result = null != error;
   if (tmp10Result) {
     const obj11 = {
       style: tmp.error,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-feedback-critical",
       accessibilityRole: "alert",
       children: error,
     };
-    tmp10Result = tmp10(tmp11(5747).Text, obj11);
+    tmp10Result = tmp10(tmp11(5761).Text, obj11);
   }
   items3[1] = tmp10Result;
   items2[1] = error(first, { children: items3 });

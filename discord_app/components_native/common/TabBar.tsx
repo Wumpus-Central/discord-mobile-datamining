@@ -1,7 +1,7 @@
 // discord_app/components_native/common/TabBar.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import LegacyBaseButton from "../../../_runtime/05426_LegacyBaseButton.js";
-import _mod7414 from "../../../discord_common/js/packages/flash-list/index.js";
+import LegacyBaseButton from "../../../_runtime/05428_LegacyBaseButton.js";
+import _mod7430 from "../../../discord_common/js/packages/flash-list/index.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ function Tab(index) {
   ({ children, tabKey, tabStyle, tabStyleActive, tabStyleSelected } = index);
   const tmp = closure_8();
   items = [tabKey];
-  [tmp3, tmp4] = _mod7414.useRecyclingState(false, items);
+  [tmp3, tmp4] = _mod7430.useRecyclingState(false, items);
   c2 = tmp4;
   const items1 = [tmp4];
   const items2 = [tmp4];
@@ -70,7 +70,7 @@ function TabBarScrollView(ref) {
   return jsx(LegacyBaseButton.GestureDetector, { gesture: nativeGesture, children: null });
 }
 get_ActivityIndicator = fn(17);
-({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = {

@@ -41,7 +41,7 @@ function ReactionNotificationBody(arg0) {
   ];
   let tmp8Result = null;
   if (null != secondaryText) {
-    const obj3 = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp, children: secondaryText };
+    const obj3 = { variant: "heading-sm/medium", color: "text-link", lineClamp, children: secondaryText };
     tmp8Result = closure_1_10(Text_Text.Text, obj3);
   }
   children[1] = tmp8Result;
@@ -82,7 +82,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   noop = tmp4;
   const AnimateEmoji = message(4966).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  const previewableMedia = message(11196).usePreviewableMedia(message);
+  const previewableMedia = message(11246).usePreviewableMedia(message);
   items = [setting, reaction, , ,];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
   const emojiHook = noop.useCallback(() => {
@@ -103,7 +103,7 @@ function ReactionNotificationBodyWrapper(arg0) {
           id = reaction.emoji.id;
         }
         if (null == id) {
-          const obj2 = { style: italic.italic, variant: "text-sm/normal", children: reaction.emoji.name };
+          const obj2 = { style: italic.italic, variant: "body-sm/normal", children: reaction.emoji.name };
           return closure_2_10(Text_Text.Text, obj2, reaction.emoji.name);
         }
       }
@@ -223,9 +223,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  let obj = message(11196);
-  const hasPreviewableMedia = message(11155).useHasPreviewableMedia(message);
-  let obj2 = message(11155);
+  let obj = message(11246);
+  const hasPreviewableMedia = message(11203).useHasPreviewableMedia(message);
+  let obj2 = message(11203);
   if (hasPreviewableMedia) {
     message = obj3.useGetInitialMessagePreview({ message });
   }
@@ -252,7 +252,7 @@ function ReactionNotificationBodyWrapper(arg0) {
     let obj9 = { text, secondaryText, hasMessageContent: tmp3, messagePreview: message };
     return closure_10(ReactionNotificationBody, obj9);
   }
-  obj3 = message(11202);
+  obj3 = message(11252);
 }
 function ReactorNotificationIcon(notification) {
   ({ user, guild, channel } = notification.notification);
@@ -279,8 +279,8 @@ function ReactorNotificationIcon(notification) {
   tmp = closure_13();
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11156);
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
+const InAppNotificationConstants = fn(11204);
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportDefault } =
   InAppNotificationConstants);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_8, MessageEmbedTypes: closure_9 } = Constants);
@@ -434,7 +434,7 @@ export default function ReactionNotification(notification) {
   const callback1 = obj2.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(11204, dependencyMap.paths),
+        asyncRequireImpl(11254, dependencyMap.paths),
         { channelId: id },
         "in-app-notification-settings-modal",
       ),

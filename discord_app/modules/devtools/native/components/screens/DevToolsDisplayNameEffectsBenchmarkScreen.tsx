@@ -1,13 +1,14 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
+import DisplayNameEffect from "../../../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import _modDef3059 from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import types from "../../../../display_name_styles/types.tsx";
 import useDisplayNameStylesEffectConfigs from "../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
-import _mod10909 from "../../../../../utils/native/StringUtils.tsx";
+import _mod10957 from "../../../../../utils/native/StringUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -27,7 +28,7 @@ function OptionButtons(children) {
   ({ options, value: require, onChange: importDefault } = children);
   let obj = { spacing: 8, children: null };
   items = [
-    closure_8(Text_Text.Text, { variant: "text-sm/semibold", color: "text-subtle", children: children.caption }),
+    closure_8(Text_Text.Text, { variant: "body-sm/semibold", color: "text-subtle", children: children.caption }),
   ];
   const tmp = closure_15();
   items[1] = closure_8(Stack_Stack.Stack, {
@@ -59,21 +60,22 @@ function BenchmarkRow(arg0) {
     userName,
     effectDisplayType: null,
     pendingDisplayNameStyles: null,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
   };
   obj3.effectDisplayType = types.EffectDisplayType.STATIC;
   obj3.pendingDisplayNameStyles = displayNameStylesEffectConfig.previewStyles;
-  obj2.children = React6(UsernameWithEffectsDefault, obj3);
-  return React6(timestampProducer, obj2);
+  obj2.children = React5(UsernameWithEffectsDefault, obj3);
+  return React5(timestampProducer, obj2);
 }
 get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const EFFECT_ORDER = fn(1403).EFFECT_ORDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(1403).EFFECT_ORDER, fn(1404).DisplayNameEffect.GUMMY];
+let closure_10 = EFFECT_ORDER.filter((item) => item !== DisplayNameEffect.DisplayNameEffect.PRISM);
 let closure_12 = [10, 50, 100, 200];
 let closure_13 = { overrideSettings: true };
-let items1 = [
+let items = [
   { key: "short", label: "Short", name: "Pixel7" },
   { key: "medium", label: "Medium", name: "NebulaWanderer" },
   { key: "long", label: "Long", name: "GalacticOverlord2049" },
@@ -125,20 +127,20 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   const run = mountTimer.run;
   const begin = mountTimer.begin;
   const measure = mountTimer.measure;
-  items1 = [addScroll];
+  const items1 = [addScroll];
   const items2 = [first2];
   const callback = first1.useCallback((arg0) => {
     addScroll(arg0);
   }, items1);
-  const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
+  const memo = first1.useMemo(() => items.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10909.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod10957.splitGraphemes(memo).length, items3);
   const items4 = [first];
-  const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
+  const memo2 = first1.useMemo(() => measure.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
   const memo3 = first1.useMemo(() => {
     let str = "All (rotation)";
-    if (memo2.length !== items.length) {
+    if (memo2.length !== measure.length) {
       const mapped = memo2.map(effectName);
       str = mapped.join(" + ");
     }
@@ -191,7 +193,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   const obj7 = { spacing: 8, children: null };
   const items8 = [
     run(require("Text/Text").Text, {
-      variant: "text-sm/semibold",
+      variant: "body-sm/semibold",
       color: "text-subtle",
       children: "Effects (checked render in rotation)",
     }),
@@ -312,7 +314,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod10909.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod10957.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);
@@ -320,7 +322,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         }
         obj.userName = sum;
         obj.style = closure_0.batchRow;
-        return React6(BenchmarkRow, obj, arg1);
+        return React5(BenchmarkRow, obj, arg1);
       });
       obj15.children = tmp19(tmp2(tmp3[19]).MountMeasure, obj16, run.batchKey);
       tmp19Result = tmp19(tmp2(tmp3[23]).DisplayNameStylesContext.Provider, obj15);

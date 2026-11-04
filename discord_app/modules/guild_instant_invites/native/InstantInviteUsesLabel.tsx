@@ -14,11 +14,11 @@ export default function InstantInviteUsesLabel(style) {
     const _HermesInternal = HermesInternal;
     combined = "" + uses + "/" + maxUses;
   }
-  const obj = { variant: "text-md/semibold", color: "text-default", style: style.style, children: null };
+  const obj = { variant: "body-md/semibold", color: "text-default", style: style.style, children: null };
   items = ["Uses: ", combined];
   obj.children = items;
   return jsxs(Text_Text.Text, {
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "text-default",
     style: style.style,
     children: null,

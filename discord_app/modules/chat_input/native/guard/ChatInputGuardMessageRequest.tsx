@@ -113,12 +113,12 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   };
   importDefault = channel(1499).useNavigation();
   let obj = channel(1499);
-  const isMessageRequestRestrictedViewer = channel(14145).useIsMessageRequestRestrictedViewer();
-  let obj2 = channel(14145);
+  const isMessageRequestRestrictedViewer = channel(14231).useIsMessageRequestRestrictedViewer();
+  let obj2 = channel(14231);
   items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(14146).useMessageRequestActions({
+  const messageRequestActions = channel(14232).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
@@ -165,7 +165,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     buttonSecondaryDisabled: null,
     buttonSecondaryLoading: null,
   };
-  let obj4 = channel(14146);
+  let obj4 = channel(14232);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {

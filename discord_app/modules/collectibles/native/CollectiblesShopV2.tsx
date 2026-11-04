@@ -10,7 +10,7 @@ import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import ImprovedMobileShopLoadingExperiment from "../experiments/ImprovedMobileShopLoadingExperiment.tsx";
 import CollectiblesShopManager2 from "../CollectiblesShopManager.tsx";
 import NativePaymentHooksDefault from "../../payments/native/hooks/NativePaymentHooks.android.tsx";
-import takeWhileDefault from "../../../../_runtime/17979_takeWhile.js";
+import takeWhileDefault from "../../../../_runtime/18075_takeWhile.js";
 import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment.tsx";
 import ShopCategory from "ShopCategory.tsx";
 import ShopNitroUpsellBanner from "ShopNitroUpsellBanner.tsx";
@@ -125,8 +125,8 @@ class CollectiblesShopV2 {
   }
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FeedBlockRecord = fn(7876).FeedBlockRecord;
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const FeedBlockRecord = fn(7892).FeedBlockRecord;
 const CollectiblesShopConstants = fn(1074);
 ({
   COLLECTIBLES_SHOP_CACHE_DURATION_MS: map1,

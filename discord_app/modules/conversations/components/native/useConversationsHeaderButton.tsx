@@ -9,11 +9,11 @@ import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(5775);
+const ConversationConstants = fn(5789);
 ({
   CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty,
-  MOBILE_FETCH_LIMIT: metroRequire,
-  MOBILE_PREVIEW_MESSAGE_COUNT: closure_7,
+  MOBILE_FETCH_LIMIT: closure_6,
+  MOBILE_PREVIEW_MESSAGE_COUNT: metroImportDefault,
 } = ConversationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");

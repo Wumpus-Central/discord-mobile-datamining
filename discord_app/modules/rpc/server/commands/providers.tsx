@@ -21,10 +21,10 @@ let closure_10 = async function _refreshProviderAccessToken() {
   }
   return { access_token: closure_130_0 };
 };
-let Constants = fn(6570);
+let Constants = fn(6585);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
-({ AnalyticsLocations: hasOwnProperty, ComponentActions: metroRequire, PlatformTypes: closure_7 } = Constants);
+({ AnalyticsLocations: hasOwnProperty, ComponentActions: closure_6, PlatformTypes: metroImportDefault } = Constants);
 Constants = fn(2147);
 ({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
 Constants = fn(1083);
@@ -96,13 +96,13 @@ obj2 = {
             }
           }
           function handleConnectionsCallbackError() {
-            const obj = { errorCode: React6.OAUTH2_ERROR };
+            const obj = { errorCode: React5.OAUTH2_ERROR };
             closure_1(
-              new RPCErrorDefault({ errorCode: React6.OAUTH2_ERROR }, 'OAuth2 setup for "' + provider + '" failed'),
+              new RPCErrorDefault({ errorCode: React5.OAUTH2_ERROR }, 'OAuth2 setup for "' + provider + '" failed'),
             );
             const removed = _require.removeEventListener("abort", handleSocketDisconnected);
             const tmp2 = new RPCErrorDefault(
-              { errorCode: React6.OAUTH2_ERROR },
+              { errorCode: React5.OAUTH2_ERROR },
               'OAuth2 setup for "' + provider + '" failed',
             );
             DispatcherDefault.unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
@@ -110,16 +110,16 @@ obj2 = {
             ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
           }
           function handleSocketDisconnected() {
-            const obj = { errorCode: React6.OAUTH2_ERROR };
+            const obj = { errorCode: React5.OAUTH2_ERROR };
             closure_1(
               new RPCErrorDefault(
-                { errorCode: React6.OAUTH2_ERROR },
+                { errorCode: React5.OAUTH2_ERROR },
                 'OAuth2 setup for "' + provider + '" was abandoned',
               ),
             );
             const removed = _require.removeEventListener("abort", handleSocketDisconnected);
             const tmp2 = new RPCErrorDefault(
-              { errorCode: React6.OAUTH2_ERROR },
+              { errorCode: React5.OAUTH2_ERROR },
               'OAuth2 setup for "' + provider + '" was abandoned',
             );
             DispatcherDefault.unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);

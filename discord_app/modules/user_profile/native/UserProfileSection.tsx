@@ -56,7 +56,7 @@ export default function UserProfileSection(title) {
     if (null != title) {
       const obj5 = { style: tmp2.titleContainer, children: null };
       const obj6 = { style: tmp2.title, children: null };
-      const obj7 = { variant: "eyebrow", accessibilityRole: "header", children: title };
+      const obj7 = { variant: "body-sm/medium", accessibilityRole: "header", children: title };
       const items1 = [React3(Text_Text.Text, obj7), headerIcon];
       obj6.children = items1;
       const items2 = [React4(View, obj6), trailingIcon];

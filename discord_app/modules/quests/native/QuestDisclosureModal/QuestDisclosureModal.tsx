@@ -3,14 +3,14 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import util from "../../../../intl/index.native.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef8483 from "../../../../../_runtime/metro/08483__.js";
+import _modDef8499 from "../../../../../_runtime/metro/08499__.js";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators.tsx";
 import QuestDisclosureModalInnerDefault from "QuestDisclosureModalInner.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 function CloseButton() {
   const obj = {
-    source: _modDef8483,
+    source: _modDef8499,
     onPress: function onClose() {
       return QuestDisclosureModalActionCreatorsDefault.hideModal();
     },
@@ -19,7 +19,7 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef8483,
+    source: _modDef8499,
     onPress: function onClose() {
       return QuestDisclosureModalActionCreatorsDefault.hideModal();
     },

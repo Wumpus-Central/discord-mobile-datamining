@@ -15,10 +15,10 @@ function RoleDot(color) {
   color = color.color;
   const style = [closure_12().roleDot];
   if (color == null) {
-    color = React5;
+    color = metroImportDefault;
   }
   style[1] = { backgroundColor: color };
-  return React7(View, { style });
+  return React6(View, { style });
 }
 class RoleItem {
   constructor(arg0) {
@@ -64,14 +64,14 @@ class RoleItem {
           colorString = role.colorString;
         }
         obj2.roleColor = colorString;
-        let tmp3Result = React7(VerifiedRoleIconDefault, obj2);
-        let tmp8 = React7;
+        let tmp3Result = React6(VerifiedRoleIconDefault, obj2);
+        let tmp8 = React6;
       } else {
         const obj = { color: colorString };
-        tmp3Result = React7(RoleDot, obj);
-        tmp8 = React7;
+        tmp3Result = React6(RoleDot, obj);
+        tmp8 = React6;
       }
-      const children = [tmp3Result, tmp8(Text_Text.Text, { variant: "text-xs/medium", children: name })];
+      const children = [tmp3Result, tmp8(Text_Text.Text, { variant: "body-xs/medium", children: name })];
       let tmp8Result = null;
       if (null != roleIconProps) {
         const obj4 = {};
@@ -151,7 +151,7 @@ function RolesList(guildMemberRoleIds) {
   if (0 !== stateFromStoresArray.length) {
     const obj2 = {
       style: tmp.roleContainer,
-      children: stateFromStoresArray.map((role) => React7(RoleItem, { role, guildId }, role.id)),
+      children: stateFromStoresArray.map((role) => React6(RoleItem, { role, guildId }, role.id)),
     };
     tmp2 = closure_9(View, obj2);
   }
@@ -159,7 +159,7 @@ function RolesList(guildMemberRoleIds) {
 }
 const View = fn(17).View;
 const Constants = fn(1072);
-({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
+({ DEFAULT_ROLE_COLOR_HEX: metroImportDefault, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -206,8 +206,8 @@ export default function UserProfileRolesCard(userId) {
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(7496), obj2);
-    const tmp7 = guildId(7496);
+    tmp4 = closure_9(guildId(7512), obj2);
+    const tmp7 = guildId(7512);
   }
   return tmp4;
 }

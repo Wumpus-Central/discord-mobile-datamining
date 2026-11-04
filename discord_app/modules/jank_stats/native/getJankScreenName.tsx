@@ -89,7 +89,7 @@ function resolveScreenName(items) {
   CREATE_THREAD_SCREEN: c3,
   EMPTY_CHAT_SCREEN: closure_4,
   SURFACE_SEPARATOR: hasOwnProperty,
-  UNKNOWN_SCREEN: metroRequire,
+  UNKNOWN_SCREEN: closure_6,
 } = JankScreenConstants);
 const set = new Set(["root"]);
 const channel = "channel";
@@ -216,7 +216,13 @@ export default function getJankScreenName() {
         obj7.chatScreens = mapped.join(",");
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "h:mm:ssa" };
+          let obj9 = {
+            screen,
+            expectedScreenIds: "",
+            focusedRoute: "Array",
+            chatScreens:
+              "(function pnpm_useGestureHandlerTs1(event){let[state,State,gestureSource,source,onStart]=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;})",
+          };
           let obj10 = obj9;
         } else {
           obj10 = {

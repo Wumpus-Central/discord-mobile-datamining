@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import _modDef7686 from "../../../../../_runtime/metro/07686__.js";
+import _modDef7702 from "../../../../../_runtime/metro/07702__.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/design_system/native/UserSettingsDesignSystemRowButton.tsx",
@@ -23,11 +23,11 @@ export default function UserSettingsDesignSystemRowButton() {
   const obj3 = { style: { padding: nativeDefault.space.PX_16 }, children: null };
   items = [
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       children: "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page.",
     }),
     hasOwnProperty(Text_Text.Text, {
-      variant: "text-sm/normal",
+      variant: "body-sm/normal",
       children: "Only stack up to 2 Row Buttons in a row to to prevent decision fatigue.",
     }),
   ];
@@ -41,7 +41,7 @@ export default function UserSettingsDesignSystemRowButton() {
   const items2 = [
     hasOwnProperty(RowButton.RowButton, {
       variant: "primary",
-      icon: _modDef7686,
+      icon: _modDef7702,
       label: "Primary Row Button",
       onPress() {},
     }),
@@ -53,50 +53,50 @@ export default function UserSettingsDesignSystemRowButton() {
   ];
   const obj7 = {
     variant: "primary",
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Primary Row Button",
     onPress() {},
   };
   items2[1] = hasOwnProperty(RowButton.RowButton, {
     variant: "primary",
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Primary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   });
   const obj8 = {
     variant: "primary",
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Primary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   };
   items2[2] = hasOwnProperty(RowButton.RowButton, {
     variant: "secondary",
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Secondary Row Button",
     onPress() {},
   });
   const obj9 = {
     variant: "secondary",
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Secondary Row Button",
     onPress() {},
   };
   items2[3] = hasOwnProperty(RowButton.RowButton, {
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Secondary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   });
   const obj10 = {
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Secondary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   };
   items2[4] = hasOwnProperty(RowButton.RowButton, {
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Secondary Row Button",
     subLabel:
       "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
@@ -104,18 +104,18 @@ export default function UserSettingsDesignSystemRowButton() {
   });
   const obj12 = { icon: null, label: "Row Button", subLabel: "With a custom RowButton.Icon", onPress: null };
   const obj11 = {
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Secondary Row Button",
     subLabel:
       "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
     onPress() {},
   };
-  obj12.icon = hasOwnProperty(RowButton.RowButton.Icon, { source: _modDef7686 });
+  obj12.icon = hasOwnProperty(RowButton.RowButton.Icon, { source: _modDef7702 });
   obj12.onPress = function onPress() {};
   items2[5] = hasOwnProperty(RowButton.RowButton, obj12);
-  const obj13 = { source: _modDef7686 };
+  const obj13 = { source: _modDef7702 };
   items2[6] = hasOwnProperty(RowButton.RowButton, {
-    icon: _modDef7686,
+    icon: _modDef7702,
     label: "Row Button",
     subLabel: "I am disabled",
     onPress() {},

@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 const require = fn;
-const isLaunched = fn(6967).isLaunched;
+const isLaunched = fn(6982).isLaunched;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelContainer.tsx");
 
@@ -21,7 +21,7 @@ export default noop.memo(function FramePanelContainer() {
     const obj3 = { children: hasOwnProperty(FramePanelUIDefault, {}) };
     items1[1] = hasOwnProperty(FramePanelControllerDefault, obj3);
     obj2.children = items1;
-    tmp2 = React5(timestampProducer, obj2);
+    tmp2 = metroImportDefault(timestampProducer, obj2);
   }
   return tmp2;
 });

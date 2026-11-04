@@ -35,10 +35,10 @@ function _getKeyForFileId(id) {
 }
 function removeCachedMessage(arg0) {
   closure_0 = arg0;
-  return closure_10(() => _writeMessage(c0, null));
+  return closure_11(() => _writeMessage(c0, null));
 }
 function getAllCachedMessages() {
-  return closure_10(_getMessages);
+  return closure_11(_getMessages);
 }
 function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
@@ -49,22 +49,41 @@ function messageTimestampIsInInterval(arg0, arg1) {
     return false;
   }
 }
-function createFailedMessage(channel_id) {
-  channel_id = channel_id.channel_id;
-  ({ content, tts, state } = channel_id);
-  const tmp3 = createMessageDefault({ channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED });
-  ({ timestamp: tmp3.timestamp, file } = channel_id);
-  MessageActionCreatorsDefault.receiveMessage(channel_id, tmp3, true, { isHydratingExpiredPendingMessage: state === MessageStates.SENDING });
-  if (null != file) {
-    UploadActionCreatorsDefault.restoreFailedUpload(tmp3.id, file);
-    const tmpResult = UploadActionCreatorsDefault;
+function createFailedMessage(arg0) {
+  ({ channel_id, sendMessageOptions } = arg0);
+  let messageReference;
+  ({ content, tts, flags, state } = arg0);
+  if (sendMessageOptions != null) {
+    messageReference = sendMessageOptions.messageReference;
   }
-  const obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const obj3 = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
+  let allowedMentions;
+  if (sendMessageOptions != null) {
+    allowedMentions = sendMessageOptions.allowedMentions;
+  }
+  const obj = { channelId: channel_id, content, tts, type: null, messageReference: null, allowedMentions: null, flags: null, state: null };
+  if (null != messageReference) {
+    let DEFAULT = constants2.REPLY;
+  } else {
+    DEFAULT = constants2.DEFAULT;
+  }
+  obj.type = DEFAULT;
+  obj.messageReference = messageReference;
+  obj.allowedMentions = allowedMentions;
+  obj.flags = flags;
+  obj.state = constants.SEND_FAILED;
+  const tmp5Result = createMessageDefault(obj);
+  ({ timestamp: tmp8.timestamp, file } = arg0);
+  MessageActionCreatorsDefault.receiveMessage(channel_id, tmp5Result, true, { isHydratingExpiredPendingMessage: state === constants.SENDING, messageReference, allowedMentions });
+  if (null != file) {
+    UploadActionCreatorsDefault.restoreFailedUpload(tmp5Result.id, file);
+    const tmp3Result2 = UploadActionCreatorsDefault;
+  }
+  const obj2 = { isHydratingExpiredPendingMessage: state === constants.SENDING, messageReference, allowedMentions };
+  const tmp3Result = MessageActionCreatorsDefault;
 }
 function resumeSendingMessage() {
   const self = this;
-  const apply = closure_24.apply;
+  const apply = closure_25.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -72,7 +91,7 @@ function resumeSendingMessage() {
   }
   return applyArgumentsResult;
 }
-let closure_24 = async function _resumeSendingMessage(arg0) {
+let closure_25 = async function _resumeSendingMessage(arg0) {
   let channel_id = arg0;
   c4 = 0;
   c5 = 0;
@@ -94,13 +113,13 @@ let closure_24 = async function _resumeSendingMessage(arg0) {
       c1 = undefined;
     }
     closure_130_3 = c1;
-    await require("asyncRequireImpl")(paths[16], paths.paths);
+    await require("asyncRequireImpl")(paths[17], paths.paths);
     const merged = Object.assign(closure_130_0);
     value.default(closure_130_2, new closure_131_5({}), closure_130_3, closure_130_1);
     return true;
   })();
 };
-let closure_25 = async function _rehydrateFailedMessages(arg0) {
+let closure_26 = async function _rehydrateFailedMessages(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -152,7 +171,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
             closure_134_1 = value;
             const _Object = Object;
             const _HermesInternal4 = HermesInternal;
-            closure_135_11.verbose("rehydrateFailedMessages with " + Object.keys(closure_134_1).length + " messagess");
+            closure_135_12.verbose("rehydrateFailedMessages with " + Object.keys(closure_134_1).length + " messagess");
             closure_2 = closure_134_1;
             keys = Object.keys();
             if (keys === undefined) {
@@ -188,23 +207,23 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
           if (closure_134_3.channel_id !== closure_134_0) {
             continue;
           } else {
-            let tmp17 = closure_135_19(closure_134_2);
+            let tmp17 = closure_135_20(closure_134_2);
             if (null != closure_135_8.getMessage(closure_134_0, closure_134_3.id)) {
               continue;
             } else {
               timestamp = closure_134_3.timestamp;
               state = closure_134_3.state;
-              if (closure_135_21(timestamp, closure_135_14)) {
+              if (closure_135_22(timestamp, closure_135_15)) {
                 if (state === closure_135_9.SENDING) {
-                  if (closure_135_21(timestamp, closure_135_13)) {
+                  if (closure_135_22(timestamp, closure_135_14)) {
                     let tmp45 = globalThis;
                     let _JSON2 = JSON;
                     let _HermesInternal3 = HermesInternal;
                     let str3 = "sending message with data ";
-                    let verboseResult1 = closure_135_11.verbose("sending message with data " + JSON.stringify(closure_134_3));
+                    let verboseResult1 = closure_135_12.verbose("sending message with data " + JSON.stringify(closure_134_3));
                     c8 = 2;
                     c9 = 1;
-                    let obj6 = { value: closure_135_23(closure_134_3), done: false };
+                    let obj6 = { value: closure_135_24(closure_134_3), done: false };
                     return obj6;
                   }
                 }
@@ -212,14 +231,14 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
                 let _JSON = JSON;
                 let _HermesInternal2 = HermesInternal;
                 let str2 = "failed message with data ";
-                let infoResult = closure_135_11.info("failed message with data " + JSON.stringify(closure_134_3));
-                let tmp41 = closure_135_22(closure_134_3);
+                let infoResult = closure_135_12.info("failed message with data " + JSON.stringify(closure_134_3));
+                let tmp41 = closure_135_23(closure_134_3);
                 continue;
               } else {
                 let tmp24 = globalThis;
                 let _HermesInternal = HermesInternal;
                 let str = "dropping stale message, timestamp ";
-                let verboseResult2 = closure_135_11.verbose("dropping stale message, timestamp " + timestamp);
+                let verboseResult2 = closure_135_12.verbose("dropping stale message, timestamp " + timestamp);
                 continue;
               }
               continue;
@@ -240,13 +259,15 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
     }
   }
 };
-const MessageStates = fn(1072).MessageStates;
-const MutexUtils = fn(16556);
-let closure_10 = MutexUtils.createLock();
-let closure_11 = new LoggerDefault("LocalMessageCacheManager");
+const SendMessageOptionsStore = fn(10378);
+const Constants = fn(1072);
+({ MessageStates: closure_9, MessageTypes: closure_10 } = Constants);
+const MutexUtils = fn(16648);
+let closure_11 = MutexUtils.createLock();
+let closure_12 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
-let closure_13 = 5 * DurationsDefault.Millis.MINUTE;
-let closure_14 = 14 * DurationsDefault.Millis.DAY;
+let closure_14 = 5 * DurationsDefault.Millis.MINUTE;
+let closure_15 = 14 * DurationsDefault.Millis.DAY;
 function _getMessages() {
   const Storage = Storage3.Storage;
   let obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
@@ -267,7 +288,7 @@ function _writeMessage(c0, id) {
   if (id != null) {
     channel_id = id.channel_id;
   }
-  closure_11.verbose("_writeMessage", id, channel_id);
+  closure_12.verbose("_writeMessage", id, channel_id);
   if (typeof _getMessages === "function") {
     const Storage = Storage3.Storage;
     let obj2 = Storage.get(LocalMessageCacheManagerMessageCacheKey);
@@ -283,7 +304,7 @@ function _writeMessage(c0, id) {
       }
       obj3.content = str;
       obj2[c0] = obj3;
-      closure_11.verbose("_writeMessage after write", obj2[c0].id, obj2[c0].channel_id);
+      closure_12.verbose("_writeMessage after write", obj2[c0].id, obj2[c0].channel_id);
     } else {
       delete tmp[tmp2];
     }
@@ -294,7 +315,7 @@ function _writeMessage(c0, id) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-class LocalMessageCacheManager extends tmp3 {
+class LocalMessageCacheManager extends tmp5 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
@@ -381,7 +402,7 @@ class LocalMessageCacheManager extends tmp3 {
                           if (next === constants.SENDING) {
                             const _setTimeout = setTimeout;
                             const timerId = setTimeout(() => {
-                              const messages = c1(closure_2_2[21]).fetchMessages({ channelId });
+                              const messages = c1(closure_2_2[22]).fetchMessages({ channelId });
                             }, 0);
                           }
                           c1 = 3;
@@ -501,9 +522,9 @@ class LocalMessageCacheManager extends tmp3 {
       });
       applyArgumentsResult.handleMessageDelete = function handleMessageDelete(id) {
         id = id.id;
-        closure_10(() => {
+        closure_11(() => {
           const tmp = (function _getKeyForMessageId(id) {
-            const entries = Object.entries(closure_1_15());
+            const entries = Object.entries(closure_1_16());
             const obj = entries[Symbol.iterator]();
             while (obj !== undefined) {
               let tmp4 = closure_1_4(tmp2, 2);
@@ -519,9 +540,9 @@ class LocalMessageCacheManager extends tmp3 {
         });
       };
       applyArgumentsResult.handleLogout = function handleLogout() {
-        !closure_1_10(() => {
-          const Storage = closure_1_0(closure_1_2[10]).Storage;
-          return Storage.remove(closure_1_12);
+        !closure_1_11(() => {
+          const Storage = closure_1_0(closure_1_2[11]).Storage;
+          return Storage.remove(closure_1_13);
         });
       };
       applyArgumentsResult.handleMessageCreate = function handleMessageCreate(message) {
@@ -536,10 +557,10 @@ class LocalMessageCacheManager extends tmp3 {
           if (id == null) {
             id = message.id;
           }
-          if (message.state !== MessageStates.SENDING) {
+          if (message.state !== constants.SENDING) {
             if (message.state !== tmp2.SEND_FAILED) {
               c0 = id;
-              closure_10(() => _writeMessage(c0, null));
+              closure_11(() => _writeMessage(c0, null));
             }
           }
           applyArgumentsResult.#e.add(message.channel_id);
@@ -558,10 +579,10 @@ class LocalMessageCacheManager extends tmp3 {
           c10 = undefined;
           c11 = undefined;
           ({ content: c3, id: c4, channel_id: c5, tts: c6, nonce: c7, timestamp: c8, type: c9, flags: c10, state: c11 } = message2);
-          closure_10(() => {
+          closure_11(() => {
             if (typeof _getMessage === "function") {
               if (typeof _getMessages === "function") {
-                const Storage = applyArgumentsResult(dependencyMap[10]).Storage;
+                const Storage = applyArgumentsResult(dependencyMap[11]).Storage;
                 let obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
                 if (null == obj) {
                   obj = {};
@@ -653,14 +674,14 @@ class LocalMessageCacheManager extends tmp3 {
                 c1 = 3;
                 const obj4 = { value, done: true };
                 return obj4;
-              } else if (!importDefault[closure_1_26].has(closure_0)) {
+              } else if (!importDefault[closure_1_27].has(closure_0)) {
                 obj2.add(closure_0);
                 c2 = 1;
                 c1 = 1;
                 const obj5 = {
                   value: (function rehydrateFailedMessages() {
                             const self = this;
-                            const apply = closure_1_25.apply;
+                            const apply = closure_1_26.apply;
                             if (typeof apply === "unknown") {
                               applyArgumentsResult = HermesBuiltin.applyArguments(self);
                             } else {
@@ -717,10 +738,10 @@ class LocalMessageCacheManager extends tmp3 {
           c10 = undefined;
           c11 = undefined;
           ({ content: c3, id: c4, channel_id: c5, tts: c6, nonce: c7, timestamp: c8, type: c9, flags: c10, state: c11 } = message2);
-          c10(() => {
+          c11(() => {
             if (typeof _getMessage === "function") {
               if (typeof _getMessages === "function") {
-                const Storage = applyArgumentsResult(dependencyMap[10]).Storage;
+                const Storage = applyArgumentsResult(dependencyMap[11]).Storage;
                 let obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
                 if (null == obj) {
                   obj = {};
@@ -774,16 +795,16 @@ class LocalMessageCacheManager extends tmp3 {
       };
       applyArgumentsResult.handleUploadProgress = function handleUploadProgress(file) {
         file = file.file;
-        closure_10(() => {
+        closure_11(() => {
           const tmp2 = _getKeyForFileId(file.id);
           if (null != tmp2) {
             { file: null }.file = file;
             closure_0 = tmp2;
-            closure_2_10(() => {
-              if (typeof closure_2_16 === "function") {
-                if (typeof closure_2_15 === "function") {
-                  const Storage = file(closure_2_2[10]).Storage;
-                  obj = Storage.get(closure_2_12);
+            closure_2_11(() => {
+              if (typeof closure_2_17 === "function") {
+                if (typeof closure_2_16 === "function") {
+                  const Storage = file(closure_2_2[11]).Storage;
+                  obj = Storage.get(closure_2_13);
                   if (null == obj) {
                     obj = {};
                   }
@@ -791,7 +812,7 @@ class LocalMessageCacheManager extends tmp3 {
                     const obj2 = {};
                     const merged = Object.assign(tmp7);
                     const merged1 = Object.assign(obj);
-                    closure_2_17(closure_0, obj2);
+                    closure_2_18(closure_0, obj2);
                   }
                 } else {
                   throw new TypeError("Trying to call a non-function");
@@ -807,7 +828,7 @@ class LocalMessageCacheManager extends tmp3 {
       applyArgumentsResult.handleUploadComplete = function handleUploadComplete(aborted) {
         if (aborted.aborted) {
           const file = aborted.file;
-          closure_10(() => {
+          closure_11(() => {
             const tmp = _getKeyForFileId(file.id);
             if (null != tmp) {
               _writeMessage(tmp, null);
@@ -818,11 +839,11 @@ class LocalMessageCacheManager extends tmp3 {
       applyArgumentsResult.handleRestoreFailedUpload = function handleRestoreFailedUpload(file) {
         const obj = { file: file.file };
         const messageId = file.messageId;
-        closure_10(() => {
-          if (typeof closure_2_16 === "function") {
-            if (typeof closure_2_15 === "function") {
-              const Storage = file(closure_2_2[10]).Storage;
-              obj = Storage.get(closure_2_12);
+        closure_11(() => {
+          if (typeof closure_2_17 === "function") {
+            if (typeof closure_2_16 === "function") {
+              const Storage = file(closure_2_2[11]).Storage;
+              obj = Storage.get(closure_2_13);
               if (null == obj) {
                 obj = {};
               }
@@ -830,7 +851,7 @@ class LocalMessageCacheManager extends tmp3 {
                 const obj2 = {};
                 const merged = Object.assign(tmp7);
                 const merged1 = Object.assign(obj);
-                closure_2_17(closure_0, obj2);
+                closure_2_18(closure_0, obj2);
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -843,11 +864,11 @@ class LocalMessageCacheManager extends tmp3 {
       applyArgumentsResult.handleTextMessageFailed = function handleTextMessageFailed(messageId) {
         const obj = { state: constants.SEND_FAILED };
         messageId = messageId.messageId;
-        closure_10(() => {
-          if (typeof closure_2_16 === "function") {
-            if (typeof closure_2_15 === "function") {
-              const Storage = file(closure_2_2[10]).Storage;
-              obj = Storage.get(closure_2_12);
+        closure_11(() => {
+          if (typeof closure_2_17 === "function") {
+            if (typeof closure_2_16 === "function") {
+              const Storage = file(closure_2_2[11]).Storage;
+              obj = Storage.get(closure_2_13);
               if (null == obj) {
                 obj = {};
               }
@@ -855,7 +876,7 @@ class LocalMessageCacheManager extends tmp3 {
                 const obj2 = {};
                 const merged = Object.assign(tmp7);
                 const merged1 = Object.assign(obj);
-                closure_2_17(closure_0, obj2);
+                closure_2_18(closure_0, obj2);
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -885,7 +906,7 @@ prototype["_terminate"] = function _terminate() {
 };
 prototype["_initialize"] = function _initialize() {
   const self = this;
-  closure_11.verbose("cache manager initialize");
+  closure_12.verbose("cache manager initialize");
   let subscription = DispatcherDefault.subscribe("LOGOUT", this.handleLogout);
   let subscription1 = DispatcherDefault.subscribe("MESSAGE_CREATE", this.handleMessageCreate);
   const subscription2 = DispatcherDefault.subscribe("MESSAGE_SEND_FAILED", this.handleTextMessageFailed);
@@ -947,7 +968,7 @@ prototype["_initialize"] = function _initialize() {
               closure_131_0 = value;
               let _Object = Object;
               let _HermesInternal2 = HermesInternal;
-              let verboseResult = closure_1_11.verbose("initialized with " + Object.keys(closure_131_0).length + " messages in local cache");
+              let verboseResult = closure_1_12.verbose("initialized with " + Object.keys(closure_131_0).length + " messages in local cache");
               let _Object2 = Object;
               let values = Object.values(closure_131_0);
               _self = values[Symbol.iterator]();
@@ -962,7 +983,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6683);
+                let obj9 = values(6698);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {
@@ -976,9 +997,9 @@ prototype["_initialize"] = function _initialize() {
                 let str2 = " {ready: ";
                 let str3 = ", cached: ";
                 let str4 = "}";
-                let verboseResult1 = closure_1_11.verbose("rehydrating cached messages " + channel_id + " {ready: " + ready + ", cached: " + cached + "}");
+                let verboseResult1 = closure_1_12.verbose("rehydrating cached messages " + channel_id + " {ready: " + ready + ", cached: " + cached + "}");
                 if (ready) {
-                  let verboseResult2 = closure_1_11.verbose("manually invoking handleChannelLoaded");
+                  let verboseResult2 = closure_1_12.verbose("manually invoking handleChannelLoaded");
                   c7 = 3;
                   c8 = 1;
                   let obj8 = { value: closure_132_0.handleChannelLoaded(channel_id), done: false };

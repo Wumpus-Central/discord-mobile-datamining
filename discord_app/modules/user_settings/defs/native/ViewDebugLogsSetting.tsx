@@ -23,7 +23,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return closure_5(title(7488).ActionSheetRow, {
+  return closure_5(title(7504).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {
@@ -79,7 +79,7 @@ function ViewDebugLogsActionSheet() {
 }
 const Suspense = _mod19.Suspense;
 const Keyboard = _mod17.Keyboard;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 ViewDebugLogsActionSheet = "ViewDebugLogsActionSheet";
 const pressable = SettingBuilders.createPressable({
   useTitle() {

@@ -146,7 +146,7 @@ export default function IconActionButton(variant) {
   obj.style = items;
   const items1 = [React4(closure_7, { IconComponent, color, source }), , ,];
   if (tmp10Result) {
-    const obj2 = { variant: "text-sm/semibold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
+    const obj2 = { variant: "body-sm/semibold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
     tmp10Result = React4(Text_Text.Text, obj2);
   }
   items1[1] = tmp10Result;

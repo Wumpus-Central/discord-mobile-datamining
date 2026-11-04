@@ -28,7 +28,7 @@ function SampleMessage(record) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
 const createStyles = fn(5141);
 let obj2 = { chat: null, menu: null };
@@ -51,8 +51,8 @@ const obj3 = {
 };
 obj2.menu = {
   paddingTop: nativeDefault.space.PX_4,
-  paddingLeft: fn(12761).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(12761).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(12842).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(12842).MESSAGE_EDGE_INSET,
 };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

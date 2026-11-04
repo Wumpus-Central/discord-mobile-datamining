@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -38,7 +38,7 @@ export default function FavoritesEmptyState() {
   items = [hasOwnProperty(FavoritesSpotIllustration.FavoritesSpotIllustration, { width: 192, height: 108 }), ,];
   const obj2 = { spacing: nativeDefault.space.PX_8, align: "center", children: null };
   const obj3 = {
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.text,
     children: null,
@@ -46,7 +46,7 @@ export default function FavoritesEmptyState() {
   const intl = util.intl;
   obj3.children = intl.string(_modDef3577["wh+Rz1"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj3)];
-  const obj4 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
+  const obj4 = { variant: "body-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(_modDef3577["+SuGKb"]);
   items1[1] = hasOwnProperty(Text_Text.Text, obj4);

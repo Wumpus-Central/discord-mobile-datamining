@@ -9,5 +9,5 @@ const result = size.fileFinishedImporting("design/void/Form/native/FreeFormLabel
 
 export default function FreeFormLabel(arg0) {
   ({ children, style, nativeID } = arg0);
-  return jsx(Text_Text.Text, { style, variant: "text-sm/semibold", color: "text-muted", nativeID, children });
+  return jsx(Text_Text.Text, { style, variant: "body-sm/semibold", color: "text-muted", nativeID, children });
 }

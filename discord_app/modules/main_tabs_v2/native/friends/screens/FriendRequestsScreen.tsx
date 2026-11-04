@@ -21,10 +21,10 @@ function compareUserItems(user, user2) {
   return compareResult;
 }
 const View = fn(17).View;
-const UserRowModes = fn(10857).UserRowModes;
+const UserRowModes = fn(10905).UserRowModes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, AnalyticsSections: closure_11, RelationshipTypes: closure_12 } = Constants);
-let closure_13 = fn(10873).MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+let closure_13 = fn(10921).MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let Outgoing = { Incoming: 0, [0]: "Incoming", Outgoing: 1, [1]: "Outgoing" };
@@ -84,8 +84,8 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/scr
 export default function FriendRequestsScreen() {
   let tmp = onPress();
   let WumpusCouchSpotIllustration = dependencyMap;
-  const analyticsLocations = first(7446)(first(7471).FRIEND_REQUESTS).analyticsLocations;
-  let tmp3 = first(7446);
+  const analyticsLocations = first(7462)(first(7487).FRIEND_REQUESTS).analyticsLocations;
+  let tmp3 = first(7462);
   items = [pendingOutgoingIds];
   const stateFromStoresArray = analyticsLocations(563).useStateFromStoresArray(items, () => {
     const localItems = pendingOutgoingIds.localItems;
@@ -131,9 +131,9 @@ export default function FriendRequestsScreen() {
   first = tmp9[0];
   dependencyMap = tmp11;
   let obj2 = analyticsLocations(563);
-  gameRelationshipsByType = analyticsLocations(15049).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = analyticsLocations(15049);
-  gameRelationshipsByType1 = analyticsLocations(15049).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
+  gameRelationshipsByType = analyticsLocations(15129).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
+  let obj3 = analyticsLocations(15129);
+  gameRelationshipsByType1 = analyticsLocations(15129).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
     const set = new Set();
@@ -145,7 +145,7 @@ export default function FriendRequestsScreen() {
     });
     return Array.from(set);
   }, items3);
-  first(7450)(memo);
+  first(7466)(memo);
   const items4 = [first, tmp9[1]];
   const memo1 = gameRelationshipsByType1.useMemo(
     () => getPendingRelationshipIds.getPendingRelationshipIds(first, closure_2),
@@ -155,7 +155,7 @@ export default function FriendRequestsScreen() {
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
   const ignoredUserIds = memo1.ignoredUserIds;
-  let obj4 = analyticsLocations(15049);
+  let obj4 = analyticsLocations(15129);
   const items5 = [ignoredUserIds];
   const items6 = [
     ignoredUserIds,
@@ -274,7 +274,7 @@ export default function FriendRequestsScreen() {
             };
             const intl = analyticsLocations(dependencyMap[29]).intl;
             obj.label = intl.string(analyticsLocations(dependencyMap[29]).t.fUQoqD);
-            const obj2 = { variant: "text-sm/medium", color: "text-muted", children: arr.length };
+            const obj2 = { variant: "body-sm/medium", color: "text-muted", children: arr.length };
             obj.trailing = outgoingData(analyticsLocations(dependencyMap[33]).Text, obj2);
             tmp4 = outgoingData(analyticsLocations(dependencyMap[32]).TableRow, obj);
           }
@@ -291,7 +291,7 @@ export default function FriendRequestsScreen() {
             };
             const intl2 = analyticsLocations(dependencyMap[29]).intl;
             obj3.label = intl2.string(analyticsLocations(dependencyMap[29]).t.en1Gkz);
-            const obj4 = { variant: "text-sm/medium", color: "text-muted", children: arr3.length };
+            const obj4 = { variant: "body-sm/medium", color: "text-muted", children: arr3.length };
             obj3.trailing = outgoingData(analyticsLocations(dependencyMap[33]).Text, obj4);
             tmp6 = outgoingData(analyticsLocations(dependencyMap[32]).TableRow, obj3);
           }
@@ -363,15 +363,15 @@ export default function FriendRequestsScreen() {
   obj9.label = intl2.string(analyticsLocations(1113).t.tWqcIF);
   items10[1] = obj9;
   obj7.items = items10;
-  const segmentedControlState = analyticsLocations(9108).useSegmentedControlState(obj7);
+  const segmentedControlState = analyticsLocations(9125).useSegmentedControlState(obj7);
   const obj10 = { value: analyticsLocations, children: null };
-  const items11 = [outgoingData(first(10866), { absolute: true })];
+  const items11 = [outgoingData(first(10914), { absolute: true })];
   const obj11 = { style: tmp.container, children: null };
-  const tmp4Result = analyticsLocations(9108);
+  const tmp4Result = analyticsLocations(9125);
   const items12 = [
     outgoingData(pendingIncomingIds, {
       style: tmp.tabs,
-      children: outgoingData(analyticsLocations(9342).SegmentedControl, { state: segmentedControlState }),
+      children: outgoingData(analyticsLocations(9359).SegmentedControl, { state: segmentedControlState }),
     }),
     ,
   ];
@@ -389,11 +389,11 @@ export default function FriendRequestsScreen() {
       },
       children: null,
     };
-    const obj15 = { variant: "text-sm/semibold", color: "text-brand", children: null };
+    const obj15 = { variant: "body-sm/semibold", color: "text-brand", children: null };
     const intl3 = tmp4(1113).intl;
     obj15.children = intl3.string(tmp4(1113).t.O8k7O4);
-    obj14.children = tmp32(tmp4(5747).Text, obj15);
-    obj13.children = tmp32(tmp4(7106).PressableOpacity, obj14);
+    obj14.children = tmp32(tmp4(5761).Text, obj15);
+    obj13.children = tmp32(tmp4(7121).PressableOpacity, obj14);
     tmp32Result = tmp32(tmp33, obj13);
   }
   items12[1] = tmp32Result;
@@ -407,20 +407,20 @@ export default function FriendRequestsScreen() {
       stringResult = intl4.string(tmp4(1113).t["yvzX/Z"]);
     }
     const obj17 = { title: stringResult, illustration: null, disableBackgroundOverlay: true };
-    WumpusCouchSpotIllustration = tmp4(17234).WumpusCouchSpotIllustration;
+    WumpusCouchSpotIllustration = tmp4(17326).WumpusCouchSpotIllustration;
     obj17.illustration = WumpusCouchSpotIllustration;
-    obj16.children = tmp32(tmp2(13539), obj17);
+    obj16.children = tmp32(tmp2(13623), obj17);
     tmp32(tmp33, obj16);
-    const tmp2Result = tmp2(13539);
+    const tmp2Result = tmp2(13623);
   } else {
     if (first1 === tmp25.Incoming) {
       outgoingSection = incomingSection;
     }
     const obj18 = { sections: outgoingSection, getItemProps: callback2, getSectionProps: callback1 };
-    items12[2] = tmp32(tmp4(10863).UsersFastList, obj18);
+    items12[2] = tmp32(tmp4(10911).UsersFastList, obj18);
     obj11.children = items12;
     items11[1] = tmp31(tmp33, obj11);
     obj10.children = items11;
-    return tmp31(tmp4(7446).AnalyticsLocationProvider, obj10);
+    return tmp31(tmp4(7462).AnalyticsLocationProvider, obj10);
   }
 }

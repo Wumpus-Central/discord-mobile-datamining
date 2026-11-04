@@ -37,7 +37,7 @@ export default function DisplayNameStylesSheetHeader(children) {
   const obj3 = {
     style: tmp.title,
     children: React3(Text_Text.Heading, {
-      variant: "redesign/heading-18/semibold",
+      variant: "heading-md/semibold",
       color: "text-default",
       style: tmp.titleText,
       children: children.title,

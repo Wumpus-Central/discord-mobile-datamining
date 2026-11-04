@@ -365,12 +365,18 @@ function ShimmerTextSlot(arg0) {
   obj2.style = items;
   const obj3 = {
     style: null,
-    children: React5(Text_Text.Text, { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: text }),
+    children: metroImportDefault(Text_Text.Text, {
+      variant,
+      color,
+      lineClamp: 1,
+      ellipsizeMode: "clip",
+      children: text,
+    }),
   };
   const items1 = [styles.layer, { width: animationWidth }, animatedStyles.plainText];
   obj3.style = items1;
-  obj2.children = React5(_modDef1652.View, obj3);
-  const items2 = [React5(_modDef1652.View, obj2)];
+  obj2.children = metroImportDefault(_modDef1652.View, obj3);
+  const items2 = [metroImportDefault(_modDef1652.View, obj2)];
   const obj4 = { style: null, children: null };
   const items3 = [styles.window, { width: clippingWindowWidth }, animatedStyles.shiftedOuterWindow];
   obj4.style = items3;
@@ -379,15 +385,21 @@ function ShimmerTextSlot(arg0) {
   obj5.style = items4;
   const obj6 = {
     style: null,
-    children: React5(Text_Text.Text, { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: shiftedText }),
+    children: metroImportDefault(Text_Text.Text, {
+      variant,
+      color,
+      lineClamp: 1,
+      ellipsizeMode: "clip",
+      children: shiftedText,
+    }),
   };
   const items5 = [styles.layer, { width: animationWidth }, animatedStyles.shiftedText];
   obj6.style = items5;
-  obj5.children = React5(_modDef1652.View, obj6);
-  obj4.children = React5(_modDef1652.View, obj5);
-  items2[1] = React5(_modDef1652.View, obj4);
+  obj5.children = metroImportDefault(_modDef1652.View, obj6);
+  obj4.children = metroImportDefault(_modDef1652.View, obj5);
+  items2[1] = metroImportDefault(_modDef1652.View, obj4);
   obj.children = items2;
-  return React6(React7, obj);
+  return React5(React6, obj);
 }
 function useAnimatedSlotStyles(clippingWindowWidth) {
   clippingWindowWidth = clippingWindowWidth.clippingWindowWidth;
@@ -557,9 +569,9 @@ function useAnimatedSlotStyles(clippingWindowWidth) {
   };
 }
 get_ActivityIndicator = fn(17);
-({ PixelRatio: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ PixelRatio: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles((height, height2) => {
   const obj = {
@@ -626,7 +638,7 @@ let closure_16 = noop.memo(function GlyphBand(glyphChoices) {
   AIShimmerNativeTsx2.__workletHash = 3832507172693;
   AIShimmerNativeTsx2.__initData = tmp13;
   const animatedReaction = _mod1652.useAnimatedReaction(AIShimmerNativeTsx1, AIShimmerNativeTsx2);
-  return React5(AIGlyphText.AIGlyphText, {
+  return metroImportDefault(AIGlyphText.AIGlyphText, {
     size,
     color,
     allowFontScaling: false,
@@ -675,7 +687,7 @@ let result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/A
 export const AIShimmer = noop.memo(function AIShimmer(variant) {
   let str = variant.variant;
   if (str === undefined) {
-    str = "text-md/normal";
+    str = "body-md/normal";
   }
   let AI_TEXT_EFFECT_DEFAULT_DELAY = variant.delay;
   if (AI_TEXT_EFFECT_DEFAULT_DELAY === undefined) {
@@ -692,7 +704,7 @@ export const AIShimmer = noop.memo(function AIShimmer(variant) {
   const merged = Object.assign(
     Object.assign(variant, Object.assign({ variant: 0, delay: 0, initialDelay: 0, duration: 0 })),
   );
-  return React5(
+  return metroImportDefault(
     AIShimmerInner,
     { variant: str, delay: AI_TEXT_EFFECT_DEFAULT_DELAY, initialDelay: num, duration: AI_TEXT_EFFECT_DEFAULT_DURATION },
     str,

@@ -6,11 +6,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17430);
+const HappeningNowConstants = fn(17521);
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD_MARGIN_RIGHT;
 ({
   HAPPENING_NOW_CARD_PADDING: hasOwnProperty,
-  HAPPENING_NOW_CARD_HEIGHT: metroRequire,
+  HAPPENING_NOW_CARD_HEIGHT: closure_6,
   HAPPENING_NOW_BADGE_SIZE,
 } = HappeningNowConstants);
 ({
@@ -155,7 +155,7 @@ export function HappeningNowCardHeader(displayNameFont) {
     tmp5 = obj;
   }
   const obj2 = {
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "mobile-text-heading-primary",
     lineClamp: 1,
     maxFontSizeMultiplier: 2,
@@ -170,7 +170,7 @@ export function HappeningNowCardSubtitle(variant) {
   let str = variant.variant;
   const merged = Object.assign(variant, Object.assign({ children: 0, variant: 0 }));
   if (str == null) {
-    str = "text-sm/normal";
+    str = "body-sm/normal";
   }
   const obj = { variant: str, color: "text-subtle", lineClamp: 1, maxFontSizeMultiplier: 2 };
   const merged1 = Object.assign(merged);

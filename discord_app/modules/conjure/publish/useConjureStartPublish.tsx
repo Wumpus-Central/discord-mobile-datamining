@@ -26,15 +26,21 @@ export default function useConjureStartPublish(arg0, arg1, arg2, arg3) {
             if (status != null) {
               const publishState = status.publishState;
             }
-            if (closure_1.awaitingApproval) {
-              closure_1.run(entryPoint);
-            } else {
-              if (null != publishState) {
-                ConjurePublishTypes;
+            if (!closure_1.awaitingApproval) {
+              const status2 = closure_1.status;
+              let safetyHold;
+              if (status2 != null) {
+                safetyHold = status2.safetyHold;
               }
-              const obj2 = { projectId: tmp, publishOptions: tmp8, entryPoint };
-              closure_2(obj2);
+              if (true !== safetyHold) {
+                if (null != publishState) {
+                  ConjurePublishTypes;
+                }
+                const obj2 = { projectId: tmp, publishOptions: tmp9, entryPoint };
+                closure_2(obj2);
+              }
             }
+            closure_1.run(entryPoint);
           }
         }
       }

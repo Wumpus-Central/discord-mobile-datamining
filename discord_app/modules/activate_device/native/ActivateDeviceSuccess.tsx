@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles({ image: { width: 300, height: 200, alignSelf: "center" } });
 const size = fn(2);
@@ -52,7 +52,7 @@ export function ActivateDeviceSuccess(onComplete) {
   let tmp18Result = null;
   if (null != stringResult) {
     const obj5 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-default",
       style: ActivateDeviceSharedStylesDefault.centerText,
       children: stringResult,

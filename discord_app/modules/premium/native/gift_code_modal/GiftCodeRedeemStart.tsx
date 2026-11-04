@@ -22,7 +22,7 @@ import SKUStore from "../../../../stores/game_store/SKUStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, GiftCodeModalStates: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -293,7 +293,7 @@ export default function GiftCodeRedeemStart(giftCode) {
         items9[2] = tmp30Result;
         if (tmp27Result2) {
           const obj15 = { style: tmp.message, children: null };
-          const obj16 = { variant: "eyebrow", color: "text-default", style: tmp.text, children: null };
+          const obj16 = { variant: "body-sm/medium", color: "text-default", style: tmp.text, children: null };
           const intl2 = tmp2(tmp3[10]).intl;
           const obj17 = { sender: str };
           obj16.children = intl2.format(tmp2(tmp3[10]).t["6yrIzU"], obj17);

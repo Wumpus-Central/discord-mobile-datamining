@@ -2,8 +2,8 @@
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
-import _modDef7164 from "../../../../../_runtime/metro/07164__.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
+import _modDef7179 from "../../../../../_runtime/metro/07179__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -13,7 +13,7 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const locations = [0, 0.4, 0.5, 0.6, 1];
@@ -140,7 +140,7 @@ export default function ConjureShimmer(epoch) {
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
     obj8.children = closure_8(LinearGradientDefault, obj10);
     obj6.children = closure_8(_modDef1652.View, obj8);
-    obj5.children = closure_8(_modDef7164, obj6);
+    obj5.children = closure_8(_modDef7179, obj6);
     tmp18 = closure_8(closure_6, obj5);
   }
   items5[1] = tmp18;

@@ -7,7 +7,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1 },
@@ -120,11 +120,11 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   };
   const intl = directoryChannelId(1113).intl;
   obj4.children = intl.string(directoryChannelId(1113).t["5bQcoa"]);
-  items = [closure_6(directoryChannelId(5747).Text, obj4)];
-  let obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  items = [closure_6(directoryChannelId(5761).Text, obj4)];
+  let obj5 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = directoryChannelId(1113).intl;
   obj5.children = intl2.string(directoryChannelId(1113).t.Ie60Wc);
-  items[1] = closure_6(directoryChannelId(5747).Text, obj5);
+  items[1] = closure_6(directoryChannelId(5761).Text, obj5);
   obj3.children = items;
   const items1 = [closure_7(closure_4, obj3)];
   let obj6 = {
@@ -147,5 +147,5 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   items1[1] = closure_6(GuildDirectoryEditDescriptionTemplateDefault, obj6);
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(directoryChannelId(13988).GuildDirectoryAddModalScreen, obj);
+  return closure_6(directoryChannelId(14074).GuildDirectoryAddModalScreen, obj);
 }

@@ -16,7 +16,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const GuildDisableCommunicationConstants = fn(5055);
 ({
   DisableCommunicationDuration,
@@ -122,7 +122,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(13406);
+            const obj4 = tmp4(13490);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = {
@@ -145,8 +145,8 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           return obj6;
         } else {
           const intl = user(1113).intl;
-          const obj8 = tmp4(5832);
-          const name = tmp4(6161).getName(closure_129_1, null, closure_129_0);
+          const obj8 = tmp4(5846);
+          const name = tmp4(6176).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
@@ -182,7 +182,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   obj2.contentContainerStyle = { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: insets.bottom };
   let obj4 = { children: null };
-  let obj5 = { style: null, variant: "heading-md/semibold", children: null };
+  let obj5 = { style: null, variant: "heading-sm/semibold", children: null };
   let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: insets.bottom };
   obj5.style = { marginVertical: nativeDefault.space.PX_16 };
   let intl = util.intl;

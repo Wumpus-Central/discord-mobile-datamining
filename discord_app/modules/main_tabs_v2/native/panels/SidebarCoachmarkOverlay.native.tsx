@@ -33,7 +33,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const context = noop.createContext(null);
 let obj = { overlay: null };
 let obj2 = {};
@@ -60,9 +60,9 @@ export function SidebarCoachmarkOverlay(enabled) {
   let tmp4 = null;
   if (enabled) {
     const obj2 = { manager: tmp };
-    tmp4 = React5(SidebarCoachmarkOverlayLayer, obj2);
+    tmp4 = metroImportDefault(SidebarCoachmarkOverlayLayer, obj2);
   }
   items[1] = tmp4;
   obj.children = items;
-  return React6(context.Provider, obj);
+  return React5(context.Provider, obj);
 }

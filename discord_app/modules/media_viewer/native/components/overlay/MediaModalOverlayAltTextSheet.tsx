@@ -33,7 +33,7 @@ export default function MediaViewerAltTextSheet(children) {
   obj3.contentStyles = items;
   obj3.children = jsx(Text_Text.Text, {
     accessibilityRole: "text",
-    variant: "text-md/normal",
+    variant: "body-md/normal",
     children: children.description,
   });
   return jsx(Sheet_BottomSheet.BottomSheet, { header: null, contentStyles: null, children: null });

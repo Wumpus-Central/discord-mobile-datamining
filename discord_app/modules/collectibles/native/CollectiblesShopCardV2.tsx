@@ -216,7 +216,7 @@ function CollectiblesShopCardInternalV2(product) {
       str2 = "text-overlay-dark";
     }
     const obj14 = {
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: str2,
       allowFontScaling: false,
       style: tmp.badgeOverrideText,
@@ -368,7 +368,7 @@ function CollectiblesShopCardV2Inner(product) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
 const CollectiblesShopConstants = fn(1074);
-({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
+({ EXTERNAL_PRODUCT_SKU_IDS: metroImportDefault, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let num = 170;
@@ -445,8 +445,8 @@ export default noop.memo(function CollectiblesShopCardV2(arg0) {
     let obj = { newValue: memo, children: null };
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    obj.children = React7(CollectiblesShopCardV2Inner, obj2);
-    return React7(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+    obj.children = React6(CollectiblesShopCardV2Inner, obj2);
+    return React6(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
   }
 });
 export const COLLECTIBLES_SHOP_CARD_HEIGHT = num;

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
@@ -42,7 +42,7 @@ export default function RestrictedGuildProfileView() {
   const intl = util.intl;
   obj10.children = intl.string(util.t.wZmueu);
   const items1 = [React4(Text_Text.Text, obj10)];
-  const obj11 = { variant: "text-md/medium", color: "text-subtle", children: null };
+  const obj11 = { variant: "body-md/medium", color: "text-subtle", children: null };
   const intl2 = util.intl;
   obj11.children = intl2.string(util.t["8mfCqY"]);
   items1[1] = React4(Text_Text.Text, obj11);

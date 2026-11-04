@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/voice_channel_apps/native/Voi
 
 export default function VoiceChannelAppActionSheet(guildId) {
   ({ selectedApplicationId, onChange } = guildId);
-  const voiceChannelAppSettingOptions = onChange(19057).useVoiceChannelAppSettingOptions(
+  const voiceChannelAppSettingOptions = onChange(19160).useVoiceChannelAppSettingOptions(
     guildId.guildId,
     selectedApplicationId,
   );
@@ -29,7 +29,7 @@ export default function VoiceChannelAppActionSheet(guildId) {
   }, items);
   const intl = onChange(1113).intl;
   const stringResult = intl.string(_modDef4093.AdT7SZ);
-  const obj2 = { header: closure_4(onChange(7441).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  const obj2 = { header: closure_4(onChange(7457).BottomSheetTitleHeader, { title: stringResult }), children: null };
   const obj3 = {
     accessibilityLabel: stringResult,
     value: null,
@@ -58,7 +58,7 @@ export default function VoiceChannelAppActionSheet(guildId) {
     options.map((iconApplication) => {
       ({ applicationId, name } = iconApplication);
       return closure_1_4(
-        onChange(7187).TableRadioRow,
+        onChange(7202).TableRadioRow,
         {
           value: applicationId,
           label: name,
@@ -75,9 +75,9 @@ export default function VoiceChannelAppActionSheet(guildId) {
   const obj4 = { value: none, label: null };
   const intl5 = onChange(1113).intl;
   obj4.label = intl5.string(_modDef4093.KEB4Rm);
-  items1[1] = closure_4(onChange(7187).TableRadioRow, obj4);
+  items1[1] = closure_4(onChange(7202).TableRadioRow, obj4);
   obj3.children = items1;
-  obj2.children = closure_5(onChange(7184).TableRadioGroup, obj3);
-  return closure_4(onChange(7486).ActionSheet, obj2);
+  obj2.children = closure_5(onChange(7199).TableRadioGroup, obj3);
+  return closure_4(onChange(7502).ActionSheet, obj2);
 }
 export const VOICE_CHANNEL_APP_ACTION_SHEET_KEY = "VoiceChannelAppActionSheet";

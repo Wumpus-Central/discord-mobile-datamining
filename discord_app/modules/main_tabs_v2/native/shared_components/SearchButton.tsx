@@ -45,7 +45,7 @@ export function SearchButtonContent(panelVariant) {
   obj.style = items;
   const items1 = [React3(MagnifyingGlassIcon.MagnifyingGlassIcon, { size: "xs" })];
   const obj2 = {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-muted",
     style: tmp2.text,
     maxFontSizeMultiplier: 2,

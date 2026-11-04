@@ -36,9 +36,9 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
     merged.onPress,
   );
   const obj2 = { start: true, end: true, style: tmp2.formRow, label: null, subLabel: null, trailing: null };
-  let str = "text-md/medium";
+  let str = "body-md/medium";
   if (selected) {
-    str = "text-sm/medium";
+    str = "body-sm/medium";
   }
   const obj3 = { variant: str, color: null, lineClamp: 1, children: null };
   let str2 = "text-default";
@@ -49,13 +49,13 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   obj3.children = option.displayName;
   obj2.label = jsx(require("Text/Text").Text, { variant: str, color: null, lineClamp: 1, children: null });
   if (selected) {
-    let fn = () => jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children });
+    let fn = () => jsx(Text_Text.Text, { variant: "body-md/medium", color: "text-default", lineClamp: 1, children });
   } else {
     fn = null;
     if (null != unselectedSubLabel) {
       fn = () =>
         jsx(Text_Text.Text, {
-          variant: "text-sm/normal",
+          variant: "body-sm/normal",
           color: "text-muted",
           lineClamp: 1,
           children: unselectedSubLabel,

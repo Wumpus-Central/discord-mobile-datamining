@@ -78,9 +78,9 @@ function rebuildGuildChannels(guildId) {
     channel = channel.channel;
     obj.count = obj.count + 1;
     let type = channel.type;
-    if (React5(type)) {
+    if (metroImportDefault(type)) {
       type = SELECTABLE;
-    } else if (React7(type)) {
+    } else if (React6(type)) {
       type = VOCAL;
     }
     if (channel.type === ChannelTypes.GUILD_DIRECTORY) {
@@ -195,7 +195,7 @@ function handleFavoritesUpdate() {
 let closure_6 = fn(5072).createFavoritesGuildChannelRecord;
 const ChannelRecord = fn(4994);
 ({
-  isGuildSelectableChannelType: closure_7,
+  isGuildSelectableChannelType: metroImportDefault,
   GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8,
   isGuildVocalChannelType: closure_9,
   createChannelRecord,

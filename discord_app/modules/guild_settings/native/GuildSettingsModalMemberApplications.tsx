@@ -14,7 +14,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 },
@@ -32,14 +32,14 @@ const memoResult = noop.memo(function MemberApplicationUser(user) {
   if (globalName == null) {
     username = user.username;
   }
-  const children = [React5(Text_Text.Text, { variant: "text-md/semibold", children: username })];
+  const children = [metroImportDefault(Text_Text.Text, { variant: "body-md/semibold", children: username })];
   let tmp5Result = null != globalName;
   if (tmp5Result) {
-    const obj2 = { variant: "text-xs/medium", children: user.username };
-    tmp5Result = React5(Text_Text.Text, obj2);
+    const obj2 = { variant: "body-xs/medium", children: user.username };
+    tmp5Result = metroImportDefault(Text_Text.Text, obj2);
   }
   children[1] = tmp5Result;
-  return React6(hasOwnProperty, { children });
+  return React5(hasOwnProperty, { children });
 });
 let closure_12 = noop.memo(function GuildSettingsModalMemberApplication(joinRequest) {
   joinRequest = joinRequest.joinRequest;
@@ -64,7 +64,7 @@ let closure_12 = noop.memo(function GuildSettingsModalMemberApplication(joinRequ
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(7101).TableRow, obj2);
+      return closure_7(joinRequest(7116).TableRow, obj2);
     }
   }
 });
@@ -111,7 +111,7 @@ export default noop.memo(function GuildSettingsModalMemberApplications(arg0) {
   const items3 = [guildJoinRequests.length];
   const callback1 = fetchNextPage.useCallback((joinRequest) => {
     const index = joinRequest.index;
-    return React5(closure_12, {
+    return metroImportDefault(closure_12, {
       joinRequest: joinRequest.item,
       start: 0 === index,
       end: index === guildJoinRequests.length - 1,
@@ -154,8 +154,8 @@ export default noop.memo(function GuildSettingsModalMemberApplications(arg0) {
       if (stateFromStores) {
         const obj = { style: closure_1.footerSpinner, children: null };
         const obj2 = { size: "small", color: closure_1.spinner.color };
-        obj.children = React5(React4, obj2);
-        tmp = React5(hasOwnProperty, obj);
+        obj.children = metroImportDefault(React4, obj2);
+        tmp = metroImportDefault(hasOwnProperty, obj);
       }
       return tmp;
     };

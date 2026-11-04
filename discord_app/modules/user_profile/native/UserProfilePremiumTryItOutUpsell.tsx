@@ -10,7 +10,7 @@ const _modDef1652 = _mod1652;
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7497).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7513).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let closure_5 = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
 const createStyles = fn(5141);

@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/modal/openFa
 
 export default function openFavoritesGuildChannelSortModal() {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(18348, dependencyMap.paths),
+    asyncRequireImpl(18442, dependencyMap.paths),
     undefined,
     FavoritesGuildChannelSortModal,
   );

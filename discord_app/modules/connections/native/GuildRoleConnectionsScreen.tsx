@@ -19,7 +19,7 @@ import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);
@@ -99,7 +99,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
   closure_7 = undefined;
   let tmp = closure_16();
   dependencyMap = tmp;
-  _slicedToArray = onCloseModal(5376)();
+  _slicedToArray = onCloseModal(5377)();
   items = [GuildRoleStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId));
   let obj = guildId(504);
@@ -135,14 +135,14 @@ export default function GuildRoleConnectionsScreen(guildId) {
     let obj5 = { contentContainerStyle: tmp.content, children: null };
     let obj6 = {
       style: tmp.infoText,
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };
     const intl = tmp4(1113).intl;
     obj7 = { helpdeskArticleUrl: tmp2(2190).getArticleURL(constants2.CONNECTION_DETAILS) };
     obj6.children = intl.format(tmp4(1113).t["Y+TsEV"], obj7);
-    const items5 = [closure_14(tmp4(5747).Text, obj6)];
+    const items5 = [closure_14(tmp4(5761).Text, obj6)];
     const obj8 = {
       style: tmp.verifiedRoles,
       children: found.map((children) => {
@@ -241,14 +241,14 @@ export default function GuildRoleConnectionsScreen(guildId) {
                 },
               };
               obj4.openLazy(
-                asyncRequireImpl(11738, dependencyMap.paths),
+                asyncRequireImpl(11793, dependencyMap.paths),
                 "LeaveConnectionRoleActionSheet-" + tmp.id,
                 obj3,
               );
-              const tmp20 = asyncRequireImpl(11738, dependencyMap.paths);
+              const tmp20 = asyncRequireImpl(11793, dependencyMap.paths);
             } else {
               let obj = ActionSheetActionCreatorsDefault;
-              const tmp9 = asyncRequireImpl(11727, dependencyMap.paths);
+              const tmp9 = asyncRequireImpl(11782, dependencyMap.paths);
               const obj5 = { role: tmp, guildId, onCloseModal };
               obj.openLazy(
                 tmp9,
@@ -279,7 +279,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
             size: 24,
           }),
           closure_1_14(guildId(closure_2[25]).Text, {
-            variant: "text-md/medium",
+            variant: "body-md/medium",
             color: "mobile-text-heading-primary",
             lineClamp: 1,
             style: closure_2.verifiedRoleName,

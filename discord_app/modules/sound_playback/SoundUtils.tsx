@@ -6,7 +6,7 @@ import SoundpackStore from "../soundpacks/SoundpackStore.tsx";
 import StreamerModeStore from "../../stores/StreamerModeStore.tsx";
 
 require = fn;
-const SoundOutputChannel = fn(6040).SoundOutputChannel;
+const SoundOutputChannel = fn(6055).SoundOutputChannel;
 const logger = new LoggerDefault("SoundUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
@@ -52,7 +52,7 @@ export function createSound(stage_waiting, vibing_wumpus) {
   );
   return mobileAudioSound;
 }
-export function playSound(name) {
+export function playSound(call_calling) {
   let num = _volume;
   if (_volume === undefined) {
     num = 1;
@@ -67,9 +67,9 @@ export function playSound(name) {
       const _HermesInternal = HermesInternal;
       logger.log("Unable to find sound for pack name: " + soundpack);
     }
-    let tmp13 = tmp4Result[name];
+    let tmp13 = tmp4Result[call_calling];
     if (tmp13 == null) {
-      tmp13 = name;
+      tmp13 = call_calling;
     }
     let outputChannel;
     if (outputChannel != null) {
@@ -94,7 +94,13 @@ export function playSound(name) {
     if (flag === undefined) {
       flag = false;
     }
-    const mobileAudioSound = new sound_playback_SoundUtils.MobileAudioSound(tmp13, name, num, outputChannel, flag);
+    const mobileAudioSound = new sound_playback_SoundUtils.MobileAudioSound(
+      tmp13,
+      call_calling,
+      num,
+      outputChannel,
+      flag,
+    );
     if (null != arg2) {
       mobileAudioSound.playWithListener().then((result) => {
         if (result) {

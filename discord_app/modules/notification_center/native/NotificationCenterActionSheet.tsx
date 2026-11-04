@@ -7,7 +7,7 @@ import RecentMentionsStore from "../../inbox/RecentMentionsStore.tsx";
 require = fn;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/native/NotificationCenterActionSheet.tsx");
 
@@ -25,27 +25,27 @@ export default function NotificationCenterActionSheet() {
     MentionActionCreatorsDefault.setGuildFilter({ roleFilter, everyoneFilter });
   }, items1);
   noop = noop.useCallback((BOOKMARK) => {
-    everyoneFilter(5381).hideActionSheet();
-    const obj = everyoneFilter(5381);
-    roleFilter(11287).showForLaterModal(BOOKMARK);
+    everyoneFilter(5382).hideActionSheet();
+    const obj = everyoneFilter(5382);
+    roleFilter(11337).showForLaterModal(BOOKMARK);
   }, []);
   let obj = roleFilter(504);
-  const canUseScheduledMessages = roleFilter(9939).useCanUseScheduledMessages();
+  const canUseScheduledMessages = roleFilter(9957).useCanUseScheduledMessages();
   const callback = noop.useCallback(() => {
-    everyoneFilter(5381).hideActionSheet();
-    const obj = everyoneFilter(5381);
-    const result = roleFilter(9938).showScheduledMessagesModal();
+    everyoneFilter(5382).hideActionSheet();
+    const obj = everyoneFilter(5382);
+    const result = roleFilter(9956).showScheduledMessagesModal();
   }, []);
   const callback1 = noop.useCallback(() => {
-    everyoneFilter(5381).hideActionSheet();
-    const obj = everyoneFilter(5381);
-    roleFilter(7687).openUserSettings({ screen: constants.NOTIFICATIONS });
+    everyoneFilter(5382).hideActionSheet();
+    const obj = everyoneFilter(5382);
+    roleFilter(7703).openUserSettings({ screen: constants.NOTIFICATIONS });
   }, []);
   const obj3 = { showGradient: true, header: null, children: null };
   const obj4 = { title: null };
   const intl = roleFilter(1113).intl;
   obj4.title = intl.string(roleFilter(1113).t.HcoRu0);
-  obj3.header = closure_6(roleFilter(7441).BottomSheetTitleHeader, obj4);
+  obj3.header = closure_6(roleFilter(7457).BottomSheetTitleHeader, obj4);
   const obj5 = { hasIcons: true, children: null };
   const obj6 = {
     onValueChange() {
@@ -57,12 +57,12 @@ export default function NotificationCenterActionSheet() {
   };
   const intl2 = roleFilter(1113).intl;
   obj6.label = intl2.string(roleFilter(1113).t.asInft);
-  const obj2 = roleFilter(9939);
-  obj6.icon = closure_6(roleFilter(7488).ActionSheetRow.Icon, {
-    IconComponent: roleFilter(8786).AtIcon,
-    source: everyoneFilter(14117),
+  const obj2 = roleFilter(9957);
+  obj6.icon = closure_6(roleFilter(7504).ActionSheetRow.Icon, {
+    IconComponent: roleFilter(8803).AtIcon,
+    source: everyoneFilter(14203),
   });
-  const items2 = [closure_6(roleFilter(7488).ActionSheetSwitchRow, obj6)];
+  const items2 = [closure_6(roleFilter(7504).ActionSheetSwitchRow, obj6)];
   const obj8 = {
     onValueChange() {
       return dependencyMap({ everyoneFilter: !everyoneFilter });
@@ -76,53 +76,53 @@ export default function NotificationCenterActionSheet() {
   obj8.label = intl3.string(roleFilter(1113).t.S9GLtt);
   const intl4 = roleFilter(1113).intl;
   obj8.subLabel = intl4.string(roleFilter(1113).t.jYgZa4);
-  const obj7 = { IconComponent: roleFilter(8786).AtIcon, source: everyoneFilter(14117) };
-  obj8.icon = closure_6(roleFilter(7488).ActionSheetRow.Icon, {
-    IconComponent: roleFilter(9336).BellIcon,
-    source: everyoneFilter(18637),
+  const obj7 = { IconComponent: roleFilter(8803).AtIcon, source: everyoneFilter(14203) };
+  obj8.icon = closure_6(roleFilter(7504).ActionSheetRow.Icon, {
+    IconComponent: roleFilter(9353).BellIcon,
+    source: everyoneFilter(18738),
   });
-  items2[1] = closure_6(roleFilter(7488).ActionSheetSwitchRow, obj8);
+  items2[1] = closure_6(roleFilter(7504).ActionSheetSwitchRow, obj8);
   obj5.children = items2;
-  const items3 = [closure_7(roleFilter(7488).ActionSheetRow.Group, obj5)];
+  const items3 = [closure_7(roleFilter(7504).ActionSheetRow.Group, obj5)];
   const obj10 = { icon: null, label: null, onPress: null, arrow: true };
-  const obj9 = { IconComponent: roleFilter(9336).BellIcon, source: everyoneFilter(18637) };
-  obj10.icon = closure_6(roleFilter(7488).ActionSheetRow.Icon, { IconComponent: roleFilter(11298).BookmarkIcon });
+  const obj9 = { IconComponent: roleFilter(9353).BellIcon, source: everyoneFilter(18738) };
+  obj10.icon = closure_6(roleFilter(7504).ActionSheetRow.Icon, { IconComponent: roleFilter(11348).BookmarkIcon });
   const intl5 = roleFilter(1113).intl;
   obj10.label = intl5.string(roleFilter(1113).t["2pAkDA"]);
   obj10.onPress = function onPress() {
     return closure_3(SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK);
   };
-  const items4 = [closure_6(roleFilter(7488).ActionSheetRow, obj10, "bookmarks"), , ,];
+  const items4 = [closure_6(roleFilter(7504).ActionSheetRow, obj10, "bookmarks"), , ,];
   const obj12 = { icon: null, label: null, onPress: null, arrow: true };
-  const obj11 = { IconComponent: roleFilter(11298).BookmarkIcon };
-  obj12.icon = closure_6(roleFilter(7488).ActionSheetRow.Icon, { IconComponent: roleFilter(5860).ClockIcon });
+  const obj11 = { IconComponent: roleFilter(11348).BookmarkIcon };
+  obj12.icon = closure_6(roleFilter(7504).ActionSheetRow.Icon, { IconComponent: roleFilter(5874).ClockIcon });
   const intl6 = roleFilter(1113).intl;
   obj12.label = intl6.string(roleFilter(1113).t.aUXxzT);
   obj12.onPress = function onPress() {
     return closure_3(SavedMessagesTypes.SavedMessageSortTypes.REMINDER);
   };
-  items4[1] = closure_6(roleFilter(7488).ActionSheetRow, obj12, "reminders");
+  items4[1] = closure_6(roleFilter(7504).ActionSheetRow, obj12, "reminders");
   let tmp8Result = null;
   if (canUseScheduledMessages) {
     const obj14 = { icon: null, label: null, onPress: null, arrow: true };
-    const obj15 = { IconComponent: tmp(12696).CalendarPlusIcon };
-    obj14.icon = closure_6(tmp(7488).ActionSheetRow.Icon, obj15);
+    const obj15 = { IconComponent: tmp(12777).CalendarPlusIcon };
+    obj14.icon = closure_6(tmp(7504).ActionSheetRow.Icon, obj15);
     const intl7 = tmp(1113).intl;
     obj14.label = intl7.string(tmp(1113).t.SZVs3K);
     obj14.onPress = callback;
-    tmp8Result = closure_6(tmp(7488).ActionSheetRow, obj14, "scheduled-messages");
+    tmp8Result = closure_6(tmp(7504).ActionSheetRow, obj14, "scheduled-messages");
   }
   const obj16 = { hasIcons: true, children: null };
   items4[2] = tmp8Result;
   const obj17 = { icon: null, label: null, onPress: null, arrow: true };
-  const obj13 = { IconComponent: roleFilter(5860).ClockIcon };
-  obj17.icon = closure_6(roleFilter(7488).ActionSheetRow.Icon, { IconComponent: roleFilter(7685).SettingsIcon });
+  const obj13 = { IconComponent: roleFilter(5874).ClockIcon };
+  obj17.icon = closure_6(roleFilter(7504).ActionSheetRow.Icon, { IconComponent: roleFilter(7701).SettingsIcon });
   const intl8 = tmp(1113).intl;
   obj17.label = intl8.string(roleFilter(1113).t.h850Ss);
   obj17.onPress = callback1;
-  items4[3] = closure_6(roleFilter(7488).ActionSheetRow, obj17, "settings");
+  items4[3] = closure_6(roleFilter(7504).ActionSheetRow, obj17, "settings");
   obj16.children = items4;
-  items3[1] = closure_7(roleFilter(7488).ActionSheetRow.Group, obj16);
+  items3[1] = closure_7(roleFilter(7504).ActionSheetRow.Group, obj16);
   obj3.children = items3;
-  return closure_7(roleFilter(7486).ActionSheet, obj3);
+  return closure_7(roleFilter(7502).ActionSheet, obj3);
 }

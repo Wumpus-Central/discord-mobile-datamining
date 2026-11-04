@@ -85,7 +85,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   obj.features = SetUtils.toSetInplace(properties.features);
   let preferredLocale = properties.preferred_locale;
   if (preferredLocale == null) {
-    preferredLocale = React5.preferredLocale;
+    preferredLocale = metroImportDefault.preferredLocale;
   }
   obj.preferredLocale = preferredLocale;
   ({ owner_id: obj.ownerId, application_id } = properties);
@@ -100,7 +100,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   obj.afkChannelId = afk_channel_id;
   let afkTimeout = properties.afk_timeout;
   if (afkTimeout == null) {
-    afkTimeout = React5.afkTimeout;
+    afkTimeout = metroImportDefault.afkTimeout;
   }
   obj.afkTimeout = afkTimeout;
   let system_channel_id = properties.system_channel_id;
@@ -110,17 +110,17 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   obj.systemChannelId = system_channel_id;
   let verificationLevel = properties.verification_level;
   if (verificationLevel == null) {
-    verificationLevel = React5.verificationLevel;
+    verificationLevel = metroImportDefault.verificationLevel;
   }
   obj.verificationLevel = verificationLevel;
   let explicitContentFilter = properties.explicit_content_filter;
   if (explicitContentFilter == null) {
-    explicitContentFilter = React5.explicitContentFilter;
+    explicitContentFilter = metroImportDefault.explicitContentFilter;
   }
   obj.explicitContentFilter = explicitContentFilter;
   ({ default_message_notifications: obj.defaultMessageNotifications, mfa_level } = properties);
   if (mfa_level == null) {
-    mfa_level = React5.mfaLevel;
+    mfa_level = metroImportDefault.mfaLevel;
   }
   obj.mfaLevel = mfa_level;
   let vanity_url_code = properties.vanity_url_code;
@@ -130,12 +130,12 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   obj.vanityURLCode = vanity_url_code;
   let premiumTier = properties.premium_tier;
   if (premiumTier == null) {
-    premiumTier = React5.premiumTier;
+    premiumTier = metroImportDefault.premiumTier;
   }
   obj.premiumTier = premiumTier;
   let premiumProgressBarEnabled = properties.premium_progress_bar_enabled;
   if (!premiumProgressBarEnabled) {
-    premiumProgressBarEnabled = React5.premiumProgressBarEnabled;
+    premiumProgressBarEnabled = metroImportDefault.premiumProgressBarEnabled;
   }
   obj.premiumProgressBarEnabled = premiumProgressBarEnabled;
   let date = null;
@@ -166,22 +166,22 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   obj.publicUpdatesChannelId = prop1;
   let maxStageVideoChannelUsers = properties.max_stage_video_channel_users;
   if (maxStageVideoChannelUsers == null) {
-    maxStageVideoChannelUsers = React5.maxStageVideoChannelUsers;
+    maxStageVideoChannelUsers = metroImportDefault.maxStageVideoChannelUsers;
   }
   obj.maxStageVideoChannelUsers = maxStageVideoChannelUsers;
   let maxVideoChannelUsers = properties.max_video_channel_users;
   if (maxVideoChannelUsers == null) {
-    maxVideoChannelUsers = React5.maxVideoChannelUsers;
+    maxVideoChannelUsers = metroImportDefault.maxVideoChannelUsers;
   }
   obj.maxVideoChannelUsers = maxVideoChannelUsers;
   let maxMembers = properties.max_members;
   if (maxMembers == null) {
-    maxMembers = React5.maxMembers;
+    maxMembers = metroImportDefault.maxMembers;
   }
   obj.maxMembers = maxMembers;
   let nsfwLevel = properties.nsfw_level;
   if (nsfwLevel == null) {
-    nsfwLevel = React5.nsfwLevel;
+    nsfwLevel = metroImportDefault.nsfwLevel;
   }
   obj.nsfwLevel = nsfwLevel;
   let prop2 = properties.owner_configured_content_level;
@@ -282,20 +282,20 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
     const obj7 = { applicationId: null, gameOrganizationId: null };
   }
   obj.linkedGameOrganization = tmp43;
-  return timestampProducer(React6, guildTheme, obj);
+  return timestampProducer(React5, guildTheme, obj);
 }
 ({
   constructInPlace: c3,
   merge: closure_4,
   objectIsPlainRecordOfType: hasOwnProperty,
-  tryReuseExistingInPlacePlainRecord: metroRequire,
+  tryReuseExistingInPlacePlainRecord: closure_6,
 } = PlainRecord);
-({ GUILD_DEFAULT_PROPERTY_VALUES: closure_7, GuildRecordTypeTag: closure_8 } = GuildRecord);
+({ GUILD_DEFAULT_PROPERTY_VALUES: metroImportDefault, GuildRecordTypeTag: closure_8 } = GuildRecord);
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
 const result = size.fileFinishedImporting("utils/GuildRecordUtils.tsx");
 
 export function isGuildRecord(has) {
-  return hasOwnProperty(React6, has);
+  return hasOwnProperty(React5, has);
 }
 export { fromGuildPropertiesWithAdditionalFields };
 export function fromServer(joined_at, joinedAt) {
@@ -403,9 +403,9 @@ export function fromInviteGuild(guild) {
     premium_tier: obj.premiumTier,
     home_header: obj.homeHeader,
   } = guild);
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(obj);
-  return React3(React6, {});
+  return React3(React5, {});
 }
 export function fromGuildProfile(profile) {
   const obj = {
@@ -419,18 +419,18 @@ export function fromGuildProfile(profile) {
   };
   let premiumSubscriberCount = profile.premiumSubscriberCount;
   if (premiumSubscriberCount == null) {
-    premiumSubscriberCount = React5.premiumSubscriberCount;
+    premiumSubscriberCount = metroImportDefault.premiumSubscriberCount;
   }
   obj.premiumSubscriberCount = premiumSubscriberCount;
   let premiumTier = profile.premiumTier;
   if (premiumTier == null) {
-    premiumTier = React5.premiumTier;
+    premiumTier = metroImportDefault.premiumTier;
   }
   obj.premiumTier = premiumTier;
   obj.features = SetUtils.toSetInplace(profile.features);
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(obj);
-  return React3(React6, {});
+  return React3(React5, {});
 }
 export function fromStoreListingGuild(id) {
   const obj = { id: id.id, name: id.name, icon: null };
@@ -439,9 +439,9 @@ export function fromStoreListingGuild(id) {
     icon = null;
   }
   obj.icon = icon;
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(obj);
-  return React3(React6, {});
+  return React3(React5, {});
 }
 export function fromDirectoryGuild(id) {
   const obj = { id: id.id, name: id.name, icon: null, description: null, splash: null, features: null };
@@ -461,9 +461,9 @@ export function fromDirectoryGuild(id) {
   }
   obj.splash = splash;
   obj.features = SetUtils.toSetInplace(id.features);
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(obj);
-  return React3(React6, {});
+  return React3(React5, {});
 }
 export function fromGuildDirectoryEntry(entry) {
   const obj = { id: entry.guildId, name: null, icon: null, description: null, splash: null, features: null };
@@ -488,9 +488,9 @@ export function fromGuildDirectoryEntry(entry) {
   }
   obj.splash = splash;
   obj.features = SetUtils.toSetInplace(entry.features);
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(obj);
-  return React3(React6, {});
+  return React3(React5, {});
 }
 export function fromVerificationGateGuild(stateFromStores1) {
   const obj = {
@@ -520,12 +520,12 @@ export function fromVerificationGateGuild(stateFromStores1) {
   obj.features = SetUtils.toSetInplace(stateFromStores1.features);
   let verificationLevel = stateFromStores1.verification_level;
   if (verificationLevel == null) {
-    verificationLevel = React5.verificationLevel;
+    verificationLevel = metroImportDefault.verificationLevel;
   }
   obj.verificationLevel = verificationLevel;
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(obj);
-  return React3(React6, {});
+  return React3(React5, {});
 }
 export function fromClientDiscoverableGuild(guild) {
   const obj = {
@@ -557,7 +557,7 @@ export function fromClientDiscoverableGuild(guild) {
   obj.banner = banner;
   let preferredLocale = guild.preferredLocale;
   if (preferredLocale == null) {
-    preferredLocale = React5.preferredLocale;
+    preferredLocale = metroImportDefault.preferredLocale;
   }
   obj.preferredLocale = preferredLocale;
   let icon = guild.icon;
@@ -568,7 +568,7 @@ export function fromClientDiscoverableGuild(guild) {
   obj.features = SetUtils.toSetInplace(guild.features);
   let premiumSubscriberCount = guild.premiumSubscriptionCount;
   if (premiumSubscriberCount == null) {
-    premiumSubscriberCount = React5.premiumSubscriberCount;
+    premiumSubscriberCount = metroImportDefault.premiumSubscriberCount;
   }
   obj.premiumSubscriberCount = premiumSubscriberCount;
   let discoverySplash = guild.discoverySplash;
@@ -576,9 +576,9 @@ export function fromClientDiscoverableGuild(guild) {
     discoverySplash = null;
   }
   obj.discoverySplash = discoverySplash;
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(obj);
-  return React3(React6, {});
+  return React3(React5, {});
 }
 export function fromGuildBasic(guild) {
   const obj = {
@@ -611,9 +611,9 @@ export function fromGuildBasic(guild) {
   }
   obj.discoverySplash = discovery_splash;
   obj.features = SetUtils.toSetInplace(guild.features);
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(obj);
-  return React3(React6, {});
+  return React3(React5, {});
 }
 export function dangerouslyConstructGuildRecordFromUntypedObject(id) {
   const obj = {
@@ -666,7 +666,7 @@ export function dangerouslyConstructGuildRecordFromUntypedObject(id) {
   };
   let preferredLocale = id.preferredLocale;
   if (!preferredLocale) {
-    preferredLocale = React5.preferredLocale;
+    preferredLocale = metroImportDefault.preferredLocale;
   }
   obj.preferredLocale = preferredLocale;
   obj.afkChannelId = id.afkChannelId || null;
@@ -674,7 +674,7 @@ export function dangerouslyConstructGuildRecordFromUntypedObject(id) {
   obj.systemChannelId = id.systemChannelId || null;
   let verificationLevel = id.verificationLevel;
   if (!verificationLevel) {
-    verificationLevel = React5.verificationLevel;
+    verificationLevel = metroImportDefault.verificationLevel;
   }
   obj.verificationLevel = verificationLevel;
   const joinedAt = id.joinedAt;
@@ -689,34 +689,34 @@ export function dangerouslyConstructGuildRecordFromUntypedObject(id) {
   obj.joinedAt = joinedAt2;
   let defaultMessageNotifications = id.defaultMessageNotifications;
   if (!defaultMessageNotifications) {
-    defaultMessageNotifications = React5.defaultMessageNotifications;
+    defaultMessageNotifications = metroImportDefault.defaultMessageNotifications;
   }
   obj.defaultMessageNotifications = defaultMessageNotifications;
   let mfaLevel = id.mfaLevel;
   if (!mfaLevel) {
-    mfaLevel = React5.mfaLevel;
+    mfaLevel = metroImportDefault.mfaLevel;
   }
   obj.mfaLevel = mfaLevel;
   obj.application_id = id.application_id || null;
   let explicitContentFilter = id.explicitContentFilter;
   if (!explicitContentFilter) {
-    explicitContentFilter = React5.explicitContentFilter;
+    explicitContentFilter = metroImportDefault.explicitContentFilter;
   }
   obj.explicitContentFilter = explicitContentFilter;
   obj.vanityURLCode = id.vanityURLCode || null;
   let premiumTier = id.premiumTier;
   if (!premiumTier) {
-    premiumTier = React5.premiumTier;
+    premiumTier = metroImportDefault.premiumTier;
   }
   obj.premiumTier = premiumTier;
   let premiumSubscriberCount = id.premiumSubscriberCount;
   if (!premiumSubscriberCount) {
-    premiumSubscriberCount = React5.premiumSubscriberCount;
+    premiumSubscriberCount = metroImportDefault.premiumSubscriberCount;
   }
   obj.premiumSubscriberCount = premiumSubscriberCount;
   let premiumProgressBarEnabled = id.premiumProgressBarEnabled;
   if (!premiumProgressBarEnabled) {
-    premiumProgressBarEnabled = React5.premiumProgressBarEnabled;
+    premiumProgressBarEnabled = metroImportDefault.premiumProgressBarEnabled;
   }
   obj.premiumProgressBarEnabled = premiumProgressBarEnabled;
   const premiumProgressBarEnabledUserUpdatedAt = id.premiumProgressBarEnabledUserUpdatedAt;
@@ -737,22 +737,22 @@ export function dangerouslyConstructGuildRecordFromUntypedObject(id) {
   obj.publicUpdatesChannelId = id.publicUpdatesChannelId || null;
   let maxStageVideoChannelUsers = id.maxStageVideoChannelUsers;
   if (!maxStageVideoChannelUsers) {
-    maxStageVideoChannelUsers = React5.maxStageVideoChannelUsers;
+    maxStageVideoChannelUsers = metroImportDefault.maxStageVideoChannelUsers;
   }
   obj.maxStageVideoChannelUsers = maxStageVideoChannelUsers;
   let maxVideoChannelUsers = id.maxVideoChannelUsers;
   if (!maxVideoChannelUsers) {
-    maxVideoChannelUsers = React5.maxVideoChannelUsers;
+    maxVideoChannelUsers = metroImportDefault.maxVideoChannelUsers;
   }
   obj.maxVideoChannelUsers = maxVideoChannelUsers;
   let maxMembers = id.maxMembers;
   if (!maxMembers) {
-    maxMembers = React5.maxMembers;
+    maxMembers = metroImportDefault.maxMembers;
   }
   obj.maxMembers = maxMembers;
   let nsfwLevel = id.nsfwLevel;
   if (nsfwLevel == null) {
-    nsfwLevel = React5.nsfwLevel;
+    nsfwLevel = metroImportDefault.nsfwLevel;
   }
   obj.nsfwLevel = nsfwLevel;
   let prop = id.ownerConfiguredContentLevel;
@@ -815,7 +815,7 @@ export function dangerouslyConstructGuildRecordFromUntypedObject(id) {
     prop1 = null;
   }
   obj.linkedGameOrganization = prop1;
-  return React3(React6, obj);
+  return React3(React5, obj);
 }
 export function toGuildProperties(id) {
   const obj = {
@@ -957,7 +957,7 @@ export function toGuildProperties(id) {
 }
 export function fromSerializedGuildRecord(item10009) {
   const obj = {};
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(item10009);
   obj.features = SetUtils.toSetInplace(item10009.features);
   let date = null;
@@ -974,10 +974,10 @@ export function fromSerializedGuildRecord(item10009) {
   obj.premiumProgressBarEnabledUserUpdatedAt = date1;
   delete tmp2[tmp];
   delete tmp2[tmp];
-  return React3(React6, obj);
+  return React3(React5, obj);
 }
 export function constructFromPartialGuildRecord(arg0) {
-  const merged = Object.assign(React5);
+  const merged = Object.assign(metroImportDefault);
   const merged1 = Object.assign(arg0);
-  return React3(React6, {});
+  return React3(React5, {});
 }

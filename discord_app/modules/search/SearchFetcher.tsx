@@ -6,7 +6,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
-({ SearchTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
+({ SearchTypes: hasOwnProperty, Endpoints: closure_6 } = Constants);
 class SearchFetcher {
   constructor(arg0, arg1, arg2) {
     merged = Object.assign({ isCanceled: false });

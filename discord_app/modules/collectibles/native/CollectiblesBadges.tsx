@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   badgeTextUppercase: { textTransform: "uppercase" },
@@ -109,7 +109,7 @@ export function NewBadge(style) {
   items = [tmp.newIconBadge, style.style];
   obj.style = items;
   const obj2 = {
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     color: "text-overlay-light",
     style: tmp.badgeTextUppercase,
     children: null,
@@ -133,7 +133,7 @@ export function LockBadge(isNew) {
     const obj3 = { size: "xxs", color: nativeDefault.colors.WHITE };
     const items1 = [hasOwnProperty(LockIcon.LockIcon, obj3)];
     const obj4 = {
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-overlay-light",
       style: tmp.badgeTextUppercase,
       children: null,
@@ -167,7 +167,7 @@ export function PremiumBadge(isNew) {
     const obj3 = { size: "xxs", color: nativeDefault.colors.WHITE };
     const items1 = [hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj3)];
     const obj4 = {
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-overlay-light",
       style: tmp.badgeTextUppercase,
       children: null,
@@ -193,7 +193,7 @@ export function LimitedTimeBadge(style) {
   items = [tmp.limitedTimeBadge, style.style];
   obj.style = items;
   const obj2 = {
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     color: "text-overlay-dark",
     style: tmp.badgeTextUppercase,
     children: null,
@@ -234,7 +234,7 @@ export function IconTextBadge(isDark) {
     str2 = "text-overlay-dark";
   }
   items1[1] = hasOwnProperty(Text_Text.Text, {
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     color: str2,
     style: tmp.badgeTextUppercase,
     children: label,

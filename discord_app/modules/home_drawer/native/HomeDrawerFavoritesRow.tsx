@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawer
 
 export function HomeDrawerFavoritesRowExpandedChildren() {
   const obj = { title: null, subtitle: null };
-  const obj2 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
+  const obj2 = { variant: "body-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.wMWyci);
-  obj.title = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
+  obj.title = jsx(Text_Text.Text, { variant: "body-md/medium", color: "text-default", lineClamp: 1, children: null });
   return jsx(HomeDrawerShared.HomeDrawerSharedItem, { title: null, subtitle: null });
 }

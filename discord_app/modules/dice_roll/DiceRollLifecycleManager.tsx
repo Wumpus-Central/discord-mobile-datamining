@@ -8,10 +8,10 @@ import DiceRollStore from "DiceRollStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const INITIAL_STATE = fn(13855).INITIAL_STATE;
-const DiceRollConstants = fn(9903);
+const INITIAL_STATE = fn(13941).INITIAL_STATE;
+const DiceRollConstants = fn(9921);
 ({
-  AFTER_ROLL_DELAY_MS: closure_7,
+  AFTER_ROLL_DELAY_MS: metroImportDefault,
   ALLOWED_DICE_SIDES_SET: closure_8,
   DEFAULT_DICE_SIDES: closure_9,
   DISMISS_DELAY_MS: closure_10,
@@ -94,7 +94,7 @@ prototype["finishRoll"] = function finishRoll(channelId, arg1, arg2, items) {
   this.postRollDismissTimer = setTimeout(() => {
     self.postRollDismissTimer = null;
     self.dismiss();
-  }, React5);
+  }, metroImportDefault);
   this.sendMessage(channelId, arg1, arg2, items);
 };
 prototype["sendMessage"] = function sendMessage(arg0, count, sides, arr) {

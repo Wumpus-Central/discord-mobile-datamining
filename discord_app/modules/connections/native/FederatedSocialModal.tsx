@@ -121,7 +121,7 @@ function FederatedSocialModalScreen(onClose) {
   let obj2 = require("FederatedSocialUtils");
   let obj3 = require("FederatedSocialUtils");
   let obj4 = { bottom: true, style: tmp.container, children: null };
-  let obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
+  let obj5 = { variant: "body-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl2 = require("util").intl;
   obj5.children = intl2.formatToPlainString(require("util").t["7TByKh"], { serviceName: name });
   items = [closure_7(require("Text/Text").Text, obj5), ,];
@@ -158,7 +158,7 @@ function FederatedSocialModalScreen(onClose) {
 }
 const WebBrowserType = fn(1072).WebBrowserType;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles({
   container: { padding: 16 },
@@ -186,7 +186,7 @@ export default function FederatedSocialModal(platformType) {
   obj3.headerLeft = require("NavigatorHeader").getHeaderBackButton(platformType.onClose);
   obj3.render = function render() {
     const merged = Object.assign(closure_0);
-    return React5(FederatedSocialModalScreen, {});
+    return metroImportDefault(FederatedSocialModalScreen, {});
   };
   obj2.root = obj3;
   return closure_7(require("Navigator").Navigator, { initialRouteName: "root", screens: obj2 });

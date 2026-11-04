@@ -43,7 +43,7 @@ function GameFriendApplicationRow(application) {
   const items1 = [
     closure_10(application(userDisplayName[12]).Icon, obj3, application.id),
     closure_10(application(userDisplayName[13]).Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: application.name,
     }),
@@ -54,7 +54,7 @@ function GameFriendApplicationRow(application) {
   return closure_10(application(userDisplayName[10]).ActionSheetRow, obj, application.id);
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
+({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

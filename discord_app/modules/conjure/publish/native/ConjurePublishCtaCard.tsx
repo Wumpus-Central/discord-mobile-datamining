@@ -41,7 +41,7 @@ export default function ConjurePublishCtaCard(arg0) {
       let tmp6Result = null;
       if (null != tmp3.failure) {
         const obj3 = {
-          variant: "text-sm/normal",
+          variant: "body-sm/normal",
           color: "text-feedback-critical",
           accessibilityRole: "alert",
           children: tmp3.failure,
@@ -51,7 +51,7 @@ export default function ConjurePublishCtaCard(arg0) {
       items[1] = tmp6Result;
       let tmp6Result3 = null;
       if (null != turnId) {
-        const obj4 = { projectId, turnId, cta, status: tmp3.status };
+        const obj4 = { projectId, turnId, cta, status: tmp3.status, placement: "publish_card" };
         tmp6Result3 = React3(ConjurePublishRatingDefault, obj4, turnId);
       }
       const obj5 = { children: null };

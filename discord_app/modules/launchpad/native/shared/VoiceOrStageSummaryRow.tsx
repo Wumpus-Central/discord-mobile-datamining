@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef18880 from "../../../../../_runtime/metro/18880__.js";
+import _modDef18983 from "../../../../../_runtime/metro/18983__.js";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -93,7 +93,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
             items[1] = obj2;
             obj3.style = items;
             const obj4 = { style: closure_4.overflowCircle, children: null };
-            const obj5 = { variant: "text-xs/medium", children: null };
+            const obj5 = { variant: "body-xs/medium", children: null };
             const _HermesInternal = HermesInternal;
             obj5.children = "+" + tmp2 + 1;
             obj4.children = React4(Text_Text.Text, obj5);
@@ -126,10 +126,10 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
     const items3 = [,];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj4.style = items3;
-    let obj5 = { size: max(1187).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef18880 };
+    let obj5 = { size: max(1187).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef18983 };
     const items4 = [closure_4(max(1187).Icon, obj5)];
-    let obj6 = { variant: "text-sm/semibold", style: { marginLeft: 4 }, children: audienceCount };
-    items4[1] = closure_4(max(5747).Text, obj6);
+    let obj6 = { variant: "body-sm/semibold", style: { marginLeft: 4 }, children: audienceCount };
+    items4[1] = closure_4(max(5761).Text, obj6);
     obj4.children = items4;
     obj3.children = closure_5(tmp6, obj4);
     tmp8Result = tmp8(tmp6, obj3);

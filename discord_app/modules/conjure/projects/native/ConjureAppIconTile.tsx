@@ -41,14 +41,14 @@ export default function ConjureAppIconTile(size) {
   };
   if (null != character) {
     const obj3 = {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "none",
       style: tmp4.character,
       allowFontScaling: false,
       children: character,
     };
     let tmp5Result = jsx(Text_Text.Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "none",
       style: tmp4.character,
       allowFontScaling: false,

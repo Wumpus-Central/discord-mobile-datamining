@@ -140,14 +140,14 @@ function ConjureModeTab(index) {
   }
   let tmp19Result = null;
   if (null != prefix) {
-    const obj6 = { variant: "text-sm/medium", color: "text-muted", style: prefixStyle, children: extras.prefix };
-    tmp19Result = React5(Text_Text.Text, obj6);
+    const obj6 = { variant: "body-sm/medium", color: "text-muted", style: prefixStyle, children: extras.prefix };
+    tmp19Result = metroImportDefault(Text_Text.Text, obj6);
   }
   const items4 = [tmp19Result, ,];
-  const obj7 = { animated: true, variant: "text-sm/semibold", style: null, lineClamp: 1, children: label };
+  const obj7 = { animated: true, variant: "body-sm/semibold", style: null, lineClamp: 1, children: label };
   const items5 = [labelTextStyle, animatedStyle];
   obj7.style = items5;
-  items4[1] = React5(Text_Text.Text, obj7);
+  items4[1] = metroImportDefault(Text_Text.Text, obj7);
   let renderTrailingIconResult;
   if (extras != null) {
     const renderTrailingIcon = extras.renderTrailingIcon;
@@ -157,13 +157,13 @@ function ConjureModeTab(index) {
   }
   items4[2] = renderTrailingIconResult;
   obj5.children = items4;
-  obj3.children = React6(timestampProducer, obj5);
-  return React5(React4, obj3);
+  obj3.children = React5(timestampProducer, obj5);
+  return metroImportDefault(React4, obj3);
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: closure_4, ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let createStyles = fn(5141);
@@ -420,7 +420,7 @@ export default function ConjureModeTabBar(arg0) {
     const obj = { onLayout: tmp3, style: null };
     items = [_undefined2.indicator, tmp ? closure_9 : _undefined2.indicatorHidden];
     obj.style = items;
-    return React5(_modDef1652.View, obj, id.id);
+    return metroImportDefault(_modDef1652.View, obj, id.id);
   });
   const mapped1 = items.map((id, index) => {
     id = id.id;
@@ -451,7 +451,7 @@ export default function ConjureModeTabBar(arg0) {
     items = [_undefined2.item, itemLast];
     obj.itemStyle = items;
     ({ label: obj.labelStyle, labelText: obj.labelTextStyle, prefix: obj.prefixStyle } = _undefined2);
-    return React5(ConjureModeTab, obj, id);
+    return metroImportDefault(ConjureModeTab, obj, id);
   });
   const tmp30 = c5;
   const tmpResult6 = require("../../../../../_runtime/metro/01652__.js");

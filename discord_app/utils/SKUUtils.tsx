@@ -9,7 +9,7 @@ import _slicedToArray from "../../_runtime/metro/00032__.js";
 require = fn;
 const Constants = fn(1072);
 const GameGenres = Constants.GameGenres;
-({ SKUTypes: hasOwnProperty, Routes: metroRequire, SKUProductLines: closure_7 } = Constants);
+({ SKUTypes: hasOwnProperty, Routes: closure_6, SKUProductLines: metroImportDefault } = Constants);
 const merged = Object.assign(GameGenres);
 let closure_8 = {};
 let closure_9 = {};

@@ -6,7 +6,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const DOT_UNICODE = fn(10876).DOT_UNICODE;
+const DOT_UNICODE = fn(10924).DOT_UNICODE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -40,7 +40,7 @@ export default function ActivityStatus(guildId) {
   const items1 = [PresenceStore];
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => PresenceStore.getActivities(userId));
   const obj2 = userId(504);
-  const voiceChannel = stateFromStores1(10878)({ userId, guildId: guildId.guildId }).voiceChannel;
+  const voiceChannel = stateFromStores1(10926)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
   const memo = noop.useMemo(() => {
     let found;
@@ -69,13 +69,13 @@ export default function ActivityStatus(guildId) {
       return tmp4;
     }
   }, items2);
-  const tmp6 = stateFromStores1(10877)(userId);
+  const tmp6 = stateFromStores1(10925)(userId);
   state = undefined;
   if (memo != null) {
     state = memo.state;
   }
-  const gameMentionsAsPlainText = userId(10879).useGameMentionsAsPlainText(state);
-  const obj3 = userId(10879);
+  const gameMentionsAsPlainText = userId(10927).useGameMentionsAsPlainText(state);
+  const obj3 = userId(10927);
   const items3 = [RelationshipStore];
   if (tmp2Result.useStateFromStores(items3, () => RelationshipStore.isBlockedOrIgnored(userId))) {
     return null;
@@ -91,7 +91,7 @@ export default function ActivityStatus(guildId) {
     if (null != tmp6) {
       let found;
       if (stateFromStores1 != null) {
-        found = stateFromStores1.find(tmp5(10885));
+        found = stateFromStores1.find(tmp5(10933));
       }
       const obj4 = {
         game: found,
@@ -107,8 +107,8 @@ export default function ActivityStatus(guildId) {
       obj4.maxFontSizeMultiplier = maxFontSizeMultiplier;
       obj4.hideIcon = tmp12;
       obj4.hideText = tmp13;
-      let tmp18Result = closure_9(tmp5(10880), obj4);
-      const tmp5Result = tmp5(10880);
+      let tmp18Result = closure_9(tmp5(10928), obj4);
+      const tmp5Result = tmp5(10928);
     } else {
       let found1;
       if (stateFromStores1 != null) {
@@ -135,7 +135,7 @@ export default function ActivityStatus(guildId) {
         obj5.maxFontSizeMultiplier = maxFontSizeMultiplier;
         obj5.hideIcon = tmp12;
         obj5.hideText = tmp13;
-        tmp18Result = closure_9(tmp5(10886), obj5);
+        tmp18Result = closure_9(tmp5(10934), obj5);
       } else {
         tmp18Result = null;
         if (null != voiceChannel) {
@@ -153,7 +153,7 @@ export default function ActivityStatus(guildId) {
           obj6.maxFontSizeMultiplier = maxFontSizeMultiplier;
           obj6.hideIcon = tmp12;
           obj6.hideText = tmp13;
-          tmp18Result = closure_9(tmp5(10894), obj6);
+          tmp18Result = closure_9(tmp5(10942), obj6);
         }
       }
     }
@@ -167,18 +167,18 @@ export default function ActivityStatus(guildId) {
         }
         if (tmp25) {
           const obj7 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
-          tmp25 = closure_9(tmp5(10896), obj7);
+          tmp25 = closure_9(tmp5(10944), obj7);
         }
         const items7 = [tmp25];
         let tmp27 = null != memo.state;
         if (tmp27) {
           const obj8 = {
-            variant: "text-xs/normal",
+            variant: "body-xs/normal",
             style: textStyle,
             maxFontSizeMultiplier,
             children: gameMentionsAsPlainText,
           };
-          tmp27 = closure_9(tmp5(10884), obj8);
+          tmp27 = closure_9(tmp5(10932), obj8);
         }
         const obj9 = { children: null };
         items7[1] = tmp27;
@@ -195,14 +195,14 @@ export default function ActivityStatus(guildId) {
     }
     if (tmp31) {
       const obj11 = {
-        variant: "text-xs/normal",
+        variant: "body-xs/normal",
         style: textStyle,
         maxFontSizeMultiplier,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
         children: DOT_UNICODE,
       };
-      tmp31 = closure_9(tmp5(10884), obj11);
+      tmp31 = closure_9(tmp5(10932), obj11);
     }
     items8[1] = tmp31;
     items8[2] = tmp21;

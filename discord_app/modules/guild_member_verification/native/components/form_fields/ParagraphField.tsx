@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const maxLength = fn(7066).MAX_PARAGRAPH_RESPONSE_LENGTH;
+const maxLength = fn(7081).MAX_PARAGRAPH_RESPONSE_LENGTH;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_5 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
@@ -21,7 +21,7 @@ export default function ParagraphField(field) {
   const obj = { style: closure_5().container, children: null };
   const obj2 = {
     label: jsx(Text_Text.Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       children: field.label,
     }),
@@ -39,7 +39,7 @@ export default function ParagraphField(field) {
   obj2.onChange = field.onChange;
   obj.children = jsx(TextArea.TextArea, {
     label: jsx(Text_Text.Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       children: field.label,
     }),

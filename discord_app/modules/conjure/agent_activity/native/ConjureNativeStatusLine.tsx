@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let items = [
   nativeDefault.colors.TEXT_BRAND,
   nativeDefault.colors.TEXT_FEEDBACK_POSITIVE,
@@ -115,9 +115,9 @@ export default function ConjureNativeStatusLine(live) {
     }
     items = [tmp6Result2, , ,];
     const obj4 = { style: row.label, children: null };
-    let str = "text-sm/normal";
+    let str = "body-sm/normal";
     if (inGutter) {
-      str = "text-md/normal";
+      str = "body-md/normal";
     }
     obj4.children = hasOwnProperty(Text_Text.Text, { variant: str, color: str2, children: line });
     items[1] = hasOwnProperty(View, obj4);

@@ -2,6 +2,7 @@
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet.tsx";
+import ConjureSafetyHoldSheetDefault from "ConjureSafetyHoldSheet.tsx";
 import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet.tsx";
 import useConjurePublishButtonDefault from "../useConjurePublishButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -12,6 +13,7 @@ const require = globalThis.__r;
 require = fn;
 let obj = {
   showPublishBlocked: ConjurePublishBlockedSheetDefault,
+  showSafetyHold: ConjureSafetyHoldSheetDefault,
   promptPublishDestination: ConjurePublishDestinationSheetDefault,
   showError(text) {
     return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_FAILED", { text, variant: "critical" });

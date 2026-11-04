@@ -15,7 +15,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, DebugLogCategory: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, body: null, buttonSpacer: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
@@ -35,7 +35,7 @@ export default function UploadLogsActionSheet(arg0) {
   obj2.title = intl.string(util.t.KTjjrG);
   obj.header = closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.container, children: null };
-  const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
+  const obj4 = { variant: "body-sm/normal", color: "text-muted", style: tmp.body, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t["ZvRR/t"]);
   items = [closure_6(Text_Text.Text, obj4), , ,];

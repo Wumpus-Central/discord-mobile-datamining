@@ -15,7 +15,7 @@ import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ GuildSettingsSections: closure_7, GuildSettingsSubsections: closure_8 } = Constants);
+({ GuildSettingsSections: metroImportDefault, GuildSettingsSubsections: closure_8 } = Constants);
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -82,7 +82,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
     paused: stateFromStores,
     ariaHidden: true,
   };
-  obj5.children = closure_10(markAsDismissed(8997), size);
+  obj5.children = closure_10(markAsDismissed(9014), size);
   const items2 = [closure_10(View, obj5), ,];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = {
@@ -94,7 +94,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const intl2 = util.intl;
   obj7.children = intl2.string(util.t.gCgirr);
   const items3 = [closure_10(Text_Text.Text, obj7)];
-  const obj8 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
+  const obj8 = { variant: "body-md/normal", color: "text-default", style: tmp.subtitle, children: null };
   const intl3 = util.intl;
   obj8.children = intl3.string(util.t.fLMZFw);
   items3[1] = closure_10(Text_Text.Text, obj8);

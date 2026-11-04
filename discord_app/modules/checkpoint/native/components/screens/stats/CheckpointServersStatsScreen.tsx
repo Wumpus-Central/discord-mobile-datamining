@@ -7,8 +7,8 @@ import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
-import _modDef13785 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef13786 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
+import _modDef13871 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef13872 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
 import CheckpointDisplayTextDefault from "../../CheckpointDisplayText.tsx";
 import CheckpointGuildStatsDefault from "../../CheckpointGuildStats.tsx";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
@@ -43,9 +43,9 @@ function GuildCard(guild) {
     children,
   ];
   obj4.children = items1;
-  items[1] = React5(View, obj4);
+  items[1] = metroImportDefault(View, obj4);
   obj2.children = items;
-  const items2 = [React5(View, obj2)];
+  const items2 = [metroImportDefault(View, obj2)];
   const obj6 = { guild, size: null, style: null };
   const obj3 = {
     style: tmp.guildRankRow,
@@ -62,14 +62,14 @@ function GuildCard(guild) {
   obj6.style = iconStyle;
   items2[1] = timestampProducer(GuildIconDefault, obj6);
   obj.children = items2;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(6186);
+const CheckpointConstants = fn(6201);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -192,8 +192,8 @@ export default function CheckpointServersStatsScreen() {
       const obj5 = { style: tmp.heading, children: null };
       const obj6 = { style: tmp.title, children: null };
       const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-      const items1 = [closure_6(tmp2(9890).ServerIcon, obj7)];
-      const obj8 = { isStepHeading: true, variant: "heading-md/semibold", style: tmp.titleText, children: null };
+      const items1 = [closure_6(tmp2(9908).ServerIcon, obj7)];
+      const obj8 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
       const tmp16 = CheckpointScreenDefault;
       const intl3 = tmp2(1113).intl;
       const tmp20 = CheckpointTextDefault;
@@ -258,8 +258,8 @@ export default function CheckpointServersStatsScreen() {
   let obj = require("initialize");
   const obj15 = { animatedUri: null, staticUri: null, style: null };
   const tmp6 = CheckpointScreenDefault;
-  obj15.animatedUri = _modDef13785;
-  obj15.staticUri = _modDef13786;
+  obj15.animatedUri = _modDef13871;
+  obj15.staticUri = _modDef13872;
   obj15.style = tmp.globe;
   const items6 = [closure_6(CheckpointApngPlayerDefault, obj15)];
   const obj16 = { isStepHeading: true, children: null };

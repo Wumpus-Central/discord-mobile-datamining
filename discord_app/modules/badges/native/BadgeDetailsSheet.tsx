@@ -42,7 +42,7 @@ function InfoNotice(children) {
       style: tmp.noticeIcon,
     }),
     closure_1_10(Text_Text.Text, {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "text-default",
       style: tmp.noticeText,
       children: children.children,
@@ -113,12 +113,12 @@ function BadgeDetailsSheetContent(badge) {
   const tmp2Result11 = badge(isViewingOtherUser[17]);
   if (!tmp2Result12.isNullOrEmpty(badge.info_label)) {
     const obj5 = { key: "info", node: null };
-    const obj6 = { variant: "text-md/medium", color: "text-subtle", children: badge.info_label };
+    const obj6 = { variant: "body-md/medium", color: "text-subtle", children: badge.info_label };
     obj5.node = closure_10(tmp2(tmp3[11]).Text, obj6);
     items2.push(obj5);
   }
   const obj7 = { key: "status", node: null };
-  const obj8 = { variant: "text-md/medium", color: "text-subtle", children: null };
+  const obj8 = { variant: "body-md/medium", color: "text-subtle", children: null };
   tmp2Result12 = badge(isViewingOtherUser[18]);
   obj8.children = badge(isViewingOtherUser[17]).getBadgeStatusText(badge, tmp7);
   obj7.node = closure_10(badge(isViewingOtherUser[11]).Text, obj8);
@@ -197,7 +197,7 @@ function BadgeDetailsSheetContent(badge) {
   let isBetaBadgeIdResult = badge(isViewingOtherUser[16]).isBetaBadgeId(badge.badge_id);
   if (isBetaBadgeIdResult) {
     const obj15 = { style: tmp.betaPill, children: null };
-    const obj16 = { variant: "text-xs/semibold", color: "text-default", style: tmp.uppercase, children: null };
+    const obj16 = { variant: "body-xs/semibold", color: "text-default", style: tmp.uppercase, children: null };
     const intl2 = tmp2(tmp3[27]).intl;
     obj16.children = intl2.string(tmp2(tmp3[27]).t.oW0eUd);
     obj15.children = closure_10(tmp2(tmp3[11]).Text, obj16);
@@ -222,7 +222,7 @@ function BadgeDetailsSheetContent(badge) {
   const obj18 = { style: tmp.identity, children: null };
   let tmp18Result8 = null != eyebrow;
   if (tmp18Result8) {
-    const obj19 = { variant: "text-md/medium", color: "text-subtle", style: null, children: null };
+    const obj19 = { variant: "body-md/medium", color: "text-subtle", style: null, children: null };
     const items6 = [,];
     ({ centeredText: arr8[0], eyebrow: arr8[1] } = tmp);
     obj19.style = items6;
@@ -283,13 +283,13 @@ function BadgeDetailsSheetContent(badge) {
     const obj28 = { style: tmp.descriptionGroup, children: null };
     let tmp18Result10 = isLegacyDisplayBadgeResult;
     if (isLegacyDisplayBadgeResult) {
-      const obj29 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+      const obj29 = { variant: "body-sm/medium", color: "text-subtle", children: null };
       const intl4 = tmp2(tmp3[27]).intl;
       obj29.children = intl4.string(tmp2(tmp3[27]).t["/Gmn3f"]);
       tmp18Result10 = closure_10(tmp2(tmp3[11]).Text, obj29);
     }
     const items12 = [tmp18Result10];
-    const obj30 = { variant: "text-md/medium", color: "text-default", children: badgeDescriptionText };
+    const obj30 = { variant: "body-md/medium", color: "text-default", children: badgeDescriptionText };
     items12[1] = closure_10(tmp2(tmp3[11]).Text, obj30);
     obj28.children = items12;
     tmp34Result4 = closure_11(closure_4, obj28);
@@ -375,7 +375,7 @@ function BadgeDetailsPage(badgeId) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-let closure_9 = fn(5396).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_9 = fn(5397).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5141);
@@ -467,7 +467,7 @@ obj2.notice = {
   borderRadius: nativeDefault.radii.md,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_FEEDBACK_INFO,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
 };
 obj2.noticeIcon = { marginTop: 2 };
 obj2.noticeText = { flex: 1 };
@@ -601,7 +601,7 @@ export default function BadgeDetailsSheet(badgeId) {
     const intl = tmp4(tmp2[27]).intl;
     const t = tmp4(tmp2[27]).t;
     const obj12 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "text-default",
       children: intl.string(tmp17Result ? t.eAn6z2 : t.ZTNur7),
     };

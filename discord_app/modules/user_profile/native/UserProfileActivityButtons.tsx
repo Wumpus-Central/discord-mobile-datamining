@@ -38,7 +38,7 @@ const getActivityJoinabilityDefault = getActivityJoinability;
 require = fn;
 const Constants = fn(1072);
 ({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = Constants);
-const SpotifyConstants = fn(9035);
+const SpotifyConstants = fn(9052);
 ({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
@@ -258,17 +258,17 @@ export function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(10892)(activity)) {
+  if (sync_id(10940)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
       const intl = util.intl;
       let obj2 = { platform: activity.name };
       obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8848), disableColor: true, style: tmp.icon };
+      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8865), disableColor: true, style: tmp.icon };
       obj.icon = jsx(native.Icon, {
         size: native.Icon.Sizes.SMALL,
-        source: sync_id(8848),
+        source: sync_id(8865),
         disableColor: true,
         style: tmp.icon,
       });

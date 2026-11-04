@@ -16,7 +16,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let closure_7 = createStyles.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = ButtonConstants.LARGE_BUTTON_PADDING;
@@ -157,7 +157,7 @@ export function ImageButton(size) {
     obj8.maxFontSizeMultiplier = maxFontSizeMultiplier;
     const items6 = [hasOwnProperty(BaseIconButton.BaseIconButton, obj8)];
     const obj9 = {
-      variant: "text-xs/medium",
+      variant: "body-xs/medium",
       color: "interactive-text-default",
       maxFontSizeMultiplier,
       children: label,

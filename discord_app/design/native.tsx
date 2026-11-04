@@ -7,7 +7,6 @@ import AccessibilityPreferencesContext from "../../discord_common/js/packages/de
 import AccessibilityPreferencesContext_AccessibilityConstants from "../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityConstants.tsx";
 import themes from "utils/shared/themes.tsx";
 import native from "../../discord_common/js/packages/design/native.tsx";
-import useBadgeTextVariant from "../../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx";
 import useA11yRolesNative from "../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import useFieldLabelA11yNative from "../../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx";
 import ManaContext from "../../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx";
@@ -180,7 +179,6 @@ export const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnoun
 export const AccessibilityAnnouncerLiveRegion = AccessibilityAnnouncerLiveRegion.AccessibilityAnnouncerLiveRegion;
 export const useCheckboxA11yNative = useA11yRolesNative.useCheckboxA11yNative;
 export const useRadioA11yNative = useA11yRolesNative.useRadioA11yNative;
-export const useBadgeTextVariant = useBadgeTextVariant.useBadgeTextVariant;
 export const useFieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative;
 export const AccessibilityPreferencesContext = AccessibilityPreferencesContext.AccessibilityPreferencesContext;
 export const AccessibilityPreferences = AccessibilityPreferencesContext.AccessibilityPreferences;

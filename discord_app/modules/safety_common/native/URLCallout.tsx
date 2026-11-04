@@ -38,14 +38,14 @@ export function URLCallout(url) {
   const urlParts = SharedStateUtils.useUrlParts(url.url);
   const obj2 = { style: tmp.linkCalloutContainer, children: null };
   ({ protocol, hostname, theRestOfTheUrl } = urlParts);
-  const obj3 = { style: tmp.linkCalloutContainerText, variant: "text-md/normal", children: null };
-  const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
+  const obj3 = { style: tmp.linkCalloutContainerText, variant: "body-md/normal", children: null };
+  const obj4 = { variant: "body-md/normal", color: "text-muted", children: null };
   items = [protocol, "//"];
   obj4.children = items;
   const items1 = [
     React3(Text_Text.Text, obj4),
-    React4(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: hostname }),
-    React4(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl }),
+    React4(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", children: hostname }),
+    React4(Text_Text.Text, { variant: "body-md/normal", color: "text-muted", children: theRestOfTheUrl }),
   ];
   obj3.children = items1;
   obj2.children = React3(Text_Text.Text, obj3);

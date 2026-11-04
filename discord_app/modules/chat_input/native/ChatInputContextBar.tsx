@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7232 from "../../../../_runtime/metro/07232__.js";
+import _modDef7252 from "../../../../_runtime/metro/07252__.js";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
 import ScheduledMessagesUtils from "../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
 import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageTypes.tsx";
@@ -25,7 +25,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
   const obj3 = { style: tmp.contextBarRow, children: null };
   const obj4 = {
     lineClamp: 1,
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     color: "text-strong",
     style: tmp.floatingReplyTextWrapper,
     children: null,
@@ -51,7 +51,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
   obj6.hitSlop = tmp10;
   obj6.onPress = onCancelReplying.onCancelReplying;
   obj6.children = application_id(native.Icon, {
-    source: _modDef7232,
+    source: _modDef7252,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
@@ -127,7 +127,7 @@ class ChatInputReplyBar {
     );
     if (null == onTapContextBarReply) {
       tmp11 = jsx;
-      obj26 = { lineClamp: 1, variant: "text-sm/normal", color: "text-strong", children: null };
+      obj26 = { lineClamp: 1, variant: "body-sm/normal", color: "text-strong", children: null };
       intl = tmp2(tmp3[12]).intl;
       obj27 = { userHook: null };
       obj27.userHook = function userHook(arg0, arg1) {
@@ -135,7 +135,7 @@ class ChatInputReplyBar {
           if (null != colorString) {
             const obj2 = { color: tmp, colors: colorStrings, guildId, size: "small" };
             items = [application_id(native.RoleDot, obj2)];
-            const obj3 = { variant: "text-sm/semibold", style: null, children: null };
+            const obj3 = { variant: "body-sm/semibold", style: null, children: null };
             let tmp19;
             if (null != closure_7) {
               const obj4 = { fontFamily: tmp18 };
@@ -150,7 +150,7 @@ class ChatInputReplyBar {
           }
           return tmp3Result;
         }
-        obj = { variant: "text-sm/semibold", style: null, gradientColors: null, children: null };
+        obj = { variant: "body-sm/semibold", style: null, gradientColors: null, children: null };
         const items1 = [closure_6];
         let tmp5 = null != closure_7;
         if (tmp5) {
@@ -189,7 +189,7 @@ class ChatInputReplyBar {
       intl7 = tmp2(tmp3[12]).intl;
       obj28.accessibilityHint = intl7.string(tmp2(tmp3[12]).t["0CfCVW"]);
       obj28.onPress = onTapContextBarReply;
-      obj30 = { lineClamp: 1, variant: "text-sm/normal", color: "text-strong", children: null };
+      obj30 = { lineClamp: 1, variant: "body-sm/normal", color: "text-strong", children: null };
       intl8 = tmp2(tmp3[12]).intl;
       obj31 = { userHook: null };
       obj31.userHook = function userHook(arg0, arg1) {
@@ -197,7 +197,7 @@ class ChatInputReplyBar {
           if (null != colorString) {
             const obj2 = { color: tmp, colors: colorStrings, guildId, size: "small" };
             items = [application_id(native.RoleDot, obj2)];
-            const obj3 = { variant: "text-sm/semibold", style: null, children: null };
+            const obj3 = { variant: "body-sm/semibold", style: null, children: null };
             let tmp19;
             if (null != closure_7) {
               const obj4 = { fontFamily: tmp18 };
@@ -212,7 +212,7 @@ class ChatInputReplyBar {
           }
           return tmp3Result;
         }
-        obj = { variant: "text-sm/semibold", style: null, gradientColors: null, children: null };
+        obj = { variant: "body-sm/semibold", style: null, gradientColors: null, children: null };
         const items1 = [closure_6];
         let tmp5 = null != closure_7;
         if (tmp5) {
@@ -344,7 +344,7 @@ class ChatInputReplyBar {
       if (pendingReply.shouldMention) {
         prop = tmp.replyMentionButtonActive;
       }
-      obj40 = { variant: "text-sm/semibold", color: "text-muted", style: null, children: null };
+      obj40 = { variant: "body-sm/semibold", color: "text-muted", style: null, children: null };
       obj40.style = prop;
       intl5 = tmp2(tmp3[12]).intl;
       string2 = intl5.string;
@@ -373,7 +373,7 @@ function ChatInputEditBar(onCancelEditing) {
   );
   const obj3 = {
     lineClamp: 1,
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     color: "text-strong",
     style: tmp.floatingReplyTextWrapper,
     children: null,
@@ -398,14 +398,14 @@ function ChatInputEditBar(onCancelEditing) {
   obj4.onPress = onCancelEditing.onCancelEditing;
   const tmp8 = application_id(Text_Text.Text, obj3);
   obj4.children = application_id(native.Icon, {
-    source: _modDef7232,
+    source: _modDef7252,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj6 = { style: tmp.contextBarRow, children: null };
   const obj7 = { children: null };
   items = [tmp8];
-  const obj5 = { source: _modDef7232, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj5 = { source: _modDef7252, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = application_id(component, {
     style: tmp.floatingRightActions,
     children: application_id(Pressables.PressableOpacity, obj4),
@@ -440,7 +440,7 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj4.onPress = onEditSchedule;
   obj4.children = application_id(Text_Text.Text, {
     lineClamp: 1,
-    variant: "text-sm/normal",
+    variant: "body-sm/normal",
     color: "text-strong",
     children: formatToPlainStringResult,
   });
@@ -463,14 +463,14 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj5.onPress = onCancelScheduling;
   const tmp9 = application_id(Pressables.PressableOpacity, obj4);
   obj5.children = application_id(native.Icon, {
-    source: _modDef7232,
+    source: _modDef7252,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj7 = { style: tmp.contextBarRow, children: null };
   const obj8 = { children: null };
   items = [tmp9];
-  const obj6 = { source: _modDef7232, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj6 = { source: _modDef7252, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = application_id(component, {
     style: tmp.floatingRightActions,
     children: application_id(Pressables.PressableOpacity, obj5),
@@ -518,10 +518,10 @@ function ContextBarItem(arg0) {
   }, items2);
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     componentDidAppear() {
-      const result = backgroundColor.set(c0(5377).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5378).withTiming(60, obj));
     },
     componentDidEnter() {
-      const result = backgroundColor.set(c0(5377).withTiming(60, obj));
+      const result = backgroundColor.set(c0(5378).withTiming(60, obj));
     },
     componentWillLeave(current) {
       ref1.current = current;
@@ -544,9 +544,9 @@ function ContextBarItem(arg0) {
       ChatInputContextBarTsx2.__workletHash = 5373252367218;
       ChatInputContextBarTsx2.__initData = tmp3;
       const result = backgroundColor.set(
-        c0(5377).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2),
+        c0(5378).withTiming(0, obj, "respect-motion-settings", ChatInputContextBarTsx2),
       );
-      obj = c0(5377);
+      obj = c0(5378);
     },
   }));
   const obj4 = { style: null, children };
@@ -556,7 +556,7 @@ function ContextBarItem(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7825).DraftType;
+const DraftType = fn(7841).DraftType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);

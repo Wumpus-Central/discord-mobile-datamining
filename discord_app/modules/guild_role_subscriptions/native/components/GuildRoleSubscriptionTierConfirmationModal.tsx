@@ -133,36 +133,36 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
       const obj5 = { title: null };
       const intl3 = util.intl;
       obj5.title = intl3.string(util.t["3S8gA7"]);
-      const items1 = [React6(TableRowGroup.TableRowGroupTitle, obj5)];
+      const items1 = [React5(TableRowGroup.TableRowGroupTitle, obj5)];
       const obj6 = { style: tmp2.coverPhoto, resizeMode: "cover", source: first };
-      items1[1] = React6(FastImageDefault, obj6);
+      items1[1] = React5(FastImageDefault, obj6);
       obj4.children = items1;
-      tmp13Result = React7(View, obj4);
+      tmp13Result = React6(View, obj4);
     }
     const items2 = [tmp13Result];
     const obj7 = { children: null };
     const obj8 = { title: null };
     const intl4 = util.intl;
     obj8.title = intl4.string(util.t["74JctW"]);
-    const items3 = [React6(TableRowGroup.TableRowGroupTitle, obj8)];
+    const items3 = [React5(TableRowGroup.TableRowGroupTitle, obj8)];
     const obj9 = {
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "interactive-text-active",
       children: _slicedToArray(RoleTierEditStore.useGroupDescriptionState(), 1)[0],
     };
-    items3[1] = React6(Text_Text.Text, obj9);
+    items3[1] = React5(Text_Text.Text, obj9);
     obj7.children = items3;
-    items2[1] = React7(View, obj7);
+    items2[1] = React6(View, obj7);
     obj3.children = items2;
-    flag = React7(View, obj3);
+    flag = React6(View, obj3);
   }
   const items4 = [
     flag,
-    React6(GuildRoleSubscriptionListingPreview.GuildRoleSubscriptionListingPreview, {
+    React5(GuildRoleSubscriptionListingPreview.GuildRoleSubscriptionListingPreview, {
       guildId,
       listingId: editStateId,
     }),
   ];
   obj2.children = items4;
-  return React7(GuildRoleSubscriptionTierEditStepDefault, obj2);
+  return React6(GuildRoleSubscriptionTierEditStepDefault, obj2);
 }

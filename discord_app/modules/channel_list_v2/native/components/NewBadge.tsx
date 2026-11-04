@@ -46,7 +46,7 @@ export default function NewBadge() {
   const tmp3 = useThemeDefault();
   const tmp4 = closure_5(useIsUsingClientThemeDefault(), tmp3);
   const obj = { style: tmp4.base, children: null };
-  const obj2 = { variant: "text-xxs/semibold", style: tmp4.text, color: null, children: null };
+  const obj2 = { variant: "footnote/semibold", style: tmp4.text, color: null, children: null };
   const tmp2 = useIsUsingClientThemeDefault();
   if (obj3.isThemeLight(tmp3)) {
     let str = "text-overlay-light";
@@ -56,6 +56,6 @@ export default function NewBadge() {
   obj2.color = str;
   const intl = util.intl;
   obj2.children = intl.string(util.t.y2b7CA);
-  obj.children = jsx(Text_Text.Text, { variant: "text-xxs/semibold", style: tmp4.text, color: null, children: null });
+  obj.children = jsx(Text_Text.Text, { variant: "footnote/semibold", style: tmp4.text, color: null, children: null });
   return <View style={tmp4.base}>{null}</View>;
 }

@@ -14,10 +14,10 @@ function handlePress() {
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
   obj2.aboutText = intl.string(util.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(15546, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
+  obj.openLazy(asyncRequireImpl(15633, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   fractionalPremiumBanner: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -74,7 +74,7 @@ export default function BoostingCountDownPill(style) {
   let tmp2Result = !isInReverseTrial;
   if (!isInReverseTrial) {
     const obj3 = { style: tmp.fpDurationPill, children: null };
-    const obj4 = { variant: "text-sm/semibold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
+    const obj4 = { variant: "body-sm/semibold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
     obj3.children = hasOwnProperty(Text_Text.Text, obj4);
     tmp2Result = hasOwnProperty(React4, obj3);
   }
@@ -84,7 +84,7 @@ export default function BoostingCountDownPill(style) {
   if (isInReverseTrial) {
     prop = tmp.fpUnavailableTextNoCountdown;
   }
-  const obj6 = { variant: "text-md/normal", color: "interactive-text-active", style: prop, children: null };
+  const obj6 = { variant: "body-md/normal", color: "interactive-text-active", style: prop, children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["5nrJDO"]);
   obj5.children = hasOwnProperty(Text_Text.Text, obj6);

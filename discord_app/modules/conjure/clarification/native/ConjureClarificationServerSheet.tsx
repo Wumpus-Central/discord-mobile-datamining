@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { list: { paddingBottom: nativeDefault.space.PX_64 }, empty: null };
 let obj3 = { paddingBottom: nativeDefault.space.PX_64 };
@@ -54,7 +54,7 @@ export default function ConjureClarificationServerSheet(title) {
   const obj3 = { style: tmp.list, children: null };
   if (0 === memo.length) {
     const obj4 = { style: tmp.empty, children: null };
-    const obj5 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj5 = { variant: "body-md/normal", color: "text-muted", children: null };
     const intl3 = require("util").intl;
     obj5.children = intl3.string(require("util").t.V6nAfF);
     obj4.children = closure_6(require("Text/Text").Text, obj5);

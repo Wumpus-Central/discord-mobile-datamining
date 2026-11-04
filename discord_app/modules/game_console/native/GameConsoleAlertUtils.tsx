@@ -8,9 +8,9 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9869).GAME_CONSOLE_ALERT_MODAL_LOCATION;
+let closure_4 = fn(9887).GAME_CONSOLE_ALERT_MODAL_LOCATION;
 const Constants = fn(1072);
-({ InputModes: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
+({ InputModes: hasOwnProperty, PlatformTypes: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_console/native/GameConsoleAlertUtils.tsx");
@@ -59,7 +59,7 @@ export default {
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
     const obj2 = { title, body: null, onConfirm: null, isDismissable: false };
     let obj = actions_AlertActionCreatorsDefault;
-    obj2.body = jsx(reconnectPlatformType(12122).SelfDismissibleAlertBody, {
+    obj2.body = jsx(reconnectPlatformType(12181).SelfDismissibleAlertBody, {
       body,
       errorCodeMessage,
       dismissCallback: actions_AlertActionCreatorsDefault.close,

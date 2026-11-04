@@ -30,8 +30,8 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ StyleSheet, View: metroRequire } = get_ActivityIndicator);
-let QuestsExperimentLocations = fn(6901).QuestsExperimentLocations;
+({ StyleSheet, View: closure_6 } = get_ActivityIndicator);
+let QuestsExperimentLocations = fn(6916).QuestsExperimentLocations;
 const Constants = fn(1083);
 ({ NOOP: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
@@ -224,7 +224,7 @@ let result3 = size.fileFinishedImporting("modules/quests/native/QuestCard.tsx");
 export const ESTIMATED_CARD_HEIGHT = 348;
 export const QuestCard = noop.memo(function QuestCard(questContent) {
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17241, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17333, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       questContentPosition,
       sourceQuestContent,
@@ -562,7 +562,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         const tmp3Result71 = tmp3(tmp4[26]);
         const fontScale = tmp3(tmp4[53]).useFontScale();
         const tmp3Result72 = tmp3(tmp4[53]);
-        const scaledTextLineHeight = tmp3(tmp4[54]).useScaledTextLineHeight("text-md/semibold");
+        const scaledTextLineHeight = tmp3(tmp4[54]).useScaledTextLineHeight("body-md/semibold");
         const tmp3Result74 = tmp3(tmp4[43]);
         const _Math = Math;
         const questDescription = tmp3Result74.useQuestDescription(
@@ -593,7 +593,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           }
           result = result3 / 8;
           const obj2 = {
-            variant: "text-md/semibold",
+            variant: "body-md/semibold",
             color: "mobile-text-heading-primary",
             style: authStore.shrinkableText,
           };
@@ -812,7 +812,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         if (isThemeDarkResult) {
           str3 = "text-muted";
         }
-        const obj28 = { variant: "text-xs/medium", color: str3, style: tmp9.shrinkableText, children: null };
+        const obj28 = { variant: "body-xs/medium", color: str3, style: tmp9.shrinkableText, children: null };
         const intl8 = tmp3(tmp4[46]).intl;
         obj28.children = intl8.string(tmp3(tmp4[46]).t.VAbKhK);
         const items18 = [closure_11(tmp3(tmp4[58]).Text, obj28), ,];
@@ -830,7 +830,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         obj29.accessibilityLabel = intl9.string(tmp3(tmp4[46]).t.OfMjx9);
         items18[1] = closure_11(quest(tmp4[62]), obj29);
         const obj30 = {
-          variant: "text-xs/medium",
+          variant: "body-xs/medium",
           color: "text-overlay-light",
           style: tmp9.shrinkableText,
           children: quest.config.messages.gamePublisher,
@@ -848,7 +848,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           if (isThemeDarkResult) {
             str2 = "text-default";
           }
-          const obj31 = { variant: "text-xs/medium", color: str2, style: tmp9.shrinkableText, children: null };
+          const obj31 = { variant: "body-xs/medium", color: str2, style: tmp9.shrinkableText, children: null };
           const intl10 = tmp3(tmp4[46]).intl;
           const obj32 = { expiryDate: questFormattedDate1 };
           obj31.children = intl10.format(tmp3(tmp4[46]).t["7D8r4F"], obj32);
@@ -878,7 +878,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         const items21 = [closure_11(closure_6, obj35)];
         const obj37 = { style: tmp9.detailsTextContainer, children: null };
         const obj38 = {
-          variant: "eyebrow",
+          variant: "body-sm/medium",
           color: "text-brand",
           style: tmp9.questName,
           accessibilityRole: "header",
@@ -897,7 +897,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         const items24 = [defaultRewardNameWithArticle(closure_6, obj40)];
         let tmp100Result7 = null != formatToPlainStringResult1;
         if (tmp100Result7) {
-          const obj42 = { variant: "text-sm/medium", color: "text-muted", children: formatToPlainStringResult1 };
+          const obj42 = { variant: "body-sm/medium", color: "text-muted", children: formatToPlainStringResult1 };
           tmp100Result7 = tmp100(tmp3(tmp4[58]).Text, obj42);
         }
         items24[1] = tmp100Result7;
@@ -924,7 +924,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           const obj46 = {
             onPress: function showQuestEnrollmentBlockedBottomSheet() {
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(17286, dependencyMap.paths),
+                asyncRequireImpl(17378, dependencyMap.paths),
                 "QuestEnrollmentBlockedBottomSheet",
                 { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent },
               );
@@ -1099,7 +1099,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             } else {
               const obj5 = { questId: quest.id, questContentPosition, sourceQuestContent };
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(17241, dependencyMap.paths),
+                asyncRequireImpl(17333, dependencyMap.paths),
                 "QuestBottomSheet",
                 obj5,
               );
@@ -1180,7 +1180,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                 impressionId: getQuestImpressionId(),
               };
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(17241, dependencyMap.paths),
+                asyncRequireImpl(17333, dependencyMap.paths),
                 "QuestBottomSheet",
                 { questId: quest.id, questContentPosition, sourceQuestContent },
               );

@@ -53,8 +53,8 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
 }
 const Constants = fn(1072);
 ({
-  GuildFeatures: metroRequire,
-  HelpdeskArticles: closure_7,
+  GuildFeatures: closure_6,
+  HelpdeskArticles: metroImportDefault,
   Permissions: closure_8,
   GuildNSFWContentLevel: closure_9,
 } = Constants);
@@ -122,14 +122,14 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(16884).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(16976).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
     const obj = { value, label: null, subLabel: null, disabled: null };
     let tmpResult = name;
     if (null != color) {
-      const obj2 = { variant: "text-md/semibold", style: null, children: null };
+      const obj2 = { variant: "body-md/semibold", style: null, children: null };
       const obj3 = { color };
       obj2.style = obj3;
       obj2.children = name;
@@ -145,7 +145,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj.disabled = tmp5;
     return closure_2_10(TableRadioRow.TableRadioRow, obj, "level-" + value);
   });
-  return closure_10(self(7184).TableRadioGroup, obj, "level-section");
+  return closure_10(self(7199).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -161,7 +161,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(16884).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(16976).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -174,7 +174,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj.disabled = tmp2;
     return closure_2_10(TableRadioRow.TableRadioRow, obj, "filter-" + value);
   });
-  return closure_10(self(7184).TableRadioGroup, obj, "filter-section");
+  return closure_10(self(7199).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   const props = this.props;

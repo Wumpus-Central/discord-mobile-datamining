@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import useBaseAppContainerDimensionsDefault from "../../../screen/native/useBaseAppContainerDimensions.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import Suspender from "../../../../../_runtime/06109_Suspender.js";
+import Suspender from "../../../../../_runtime/06124_Suspender.js";
 import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext.tsx";
 import ChatViewWidthContextDefault from "../../../chat/native/ChatViewWidthContext.tsx";
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation.tsx";
@@ -229,9 +229,9 @@ function getKey(index) {
   return String(index.index);
 }
 get_ActivityIndicator = fn(17);
-({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const setVisibleChannelScreen = fn(18762).setVisibleChannelScreen;
-const ONYX_BORDER_WIDTH = fn(9944).ONYX_BORDER_WIDTH;
+({ NativeModules: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
+const setVisibleChannelScreen = fn(18863).setVisibleChannelScreen;
+const ONYX_BORDER_WIDTH = fn(9962).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: closure_10, AnalyticsSections: closure_11 } = Constants);
 const ThemeTypes = fn(1083).ThemeTypes;

@@ -12,14 +12,14 @@ function ToastEntityContent(arg0) {
   if ("emoji" === type) {
     if ("unicode" in entity) {
       const obj2 = {
-        variant: "text-lg/normal",
+        variant: "body-lg/normal",
         color: "text-default",
         style: styles.glyph,
         lineClamp: 1,
         children: entity.unicode,
       };
       let tmp14Result = jsx(Text_Text.Text, {
-        variant: "text-lg/normal",
+        variant: "body-lg/normal",
         color: "text-default",
         style: styles.glyph,
         lineClamp: 1,
@@ -42,11 +42,11 @@ function ToastEntityContent(arg0) {
   } else if ("guild" === type) {
     if (null == entity.src) {
       const acronym = utils_StringUtils.getAcronym(entity.name);
-      let str2 = "text-md/semibold";
+      let str2 = "body-md/semibold";
       if (acronym.length > 2) {
-        let str3 = "text-xs/semibold";
+        let str3 = "body-xs/semibold";
         if (acronym.length <= 4) {
-          str3 = "text-sm/semibold";
+          str3 = "body-sm/semibold";
         }
         str2 = str3;
       }

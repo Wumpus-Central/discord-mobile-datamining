@@ -2,7 +2,7 @@
 import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { stiffness: 70, damping: 10 };
 const createStyles = fn(5141);
 let obj2 = {
@@ -138,13 +138,13 @@ export default function GuildBoostingMarketingPersistentCta(guild) {
     timestampProducer(GuildIconDefault, obj7),
     timestampProducer(Text_Text.Text, {
       style: tmp.guildName,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       lineClamp: 1,
       children: guild.name,
     }),
   ];
   obj6.children = items5;
-  const items6 = [React5(View, obj6)];
+  const items6 = [metroImportDefault(View, obj6)];
   const obj9 = {
     style: tmp.buttonContainer,
     children: timestampProducer(GuildBoostingSubscribeButtonDefault, {
@@ -159,7 +159,7 @@ export default function GuildBoostingMarketingPersistentCta(guild) {
   };
   items6[1] = timestampProducer(View, obj9);
   obj5.children = items6;
-  obj4.children = React5(View, obj5);
+  obj4.children = metroImportDefault(View, obj5);
   obj3.children = timestampProducer(tmp12, obj4);
   return timestampProducer(_modDef1652.View, obj3);
 }

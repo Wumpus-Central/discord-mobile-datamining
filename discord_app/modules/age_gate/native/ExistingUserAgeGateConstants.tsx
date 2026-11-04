@@ -10,5 +10,5 @@ export const ExistingUserAgeGateScreens = {
   NSFWBlocked: "NSFWBlocked",
   NSFWGateGuild: "NSFWGateGuild",
   NSFWVoiceChannel: "NSFWVoiceChannel",
-  Pawtect: "Pawtect",
+  AgeVerify: "AgeVerify",
 };

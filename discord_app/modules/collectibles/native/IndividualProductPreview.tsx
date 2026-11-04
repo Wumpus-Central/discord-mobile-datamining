@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FractionalPremiumSKUs from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import ProfileEffectUserPreviewDefault from "../profile_effects/native/previews/ProfileEffectUserPreview.tsx";
 import ProfileFrameUserPreviewDefault from "../profile_frames/native/previews/ProfileFrameUserPreview.tsx";
@@ -43,7 +43,7 @@ function ProfileEffectPreview(arg0) {
   const tmp = closure_9();
   const obj2 = { handlePreviewPress, onTrackPress, children: null };
   const currentUser = useCurrentUser.useCurrentUser();
-  obj2.children = React5(ProfileEffectUserPreviewDefault, {
+  obj2.children = metroImportDefault(ProfileEffectUserPreviewDefault, {
     user: currentUser,
     profileEffect,
     avatarDecorationOverride,
@@ -51,14 +51,14 @@ function ProfileEffectPreview(arg0) {
     maxWidth: width,
     style: tmp.profilePreview,
   });
-  return React5(ProfilePreviewWrapper, obj2);
+  return metroImportDefault(ProfilePreviewWrapper, obj2);
 }
 function ProfileFramePreview(arg0) {
   ({ profileFrame, width, avatarDecorationOverride, profileEffectOverride, handlePreviewPress, onTrackPress } = arg0);
   const tmp = closure_9();
   const obj2 = { handlePreviewPress, onTrackPress, children: null };
   const currentUser = useCurrentUser.useCurrentUser();
-  obj2.children = React5(ProfileFrameUserPreviewDefault, {
+  obj2.children = metroImportDefault(ProfileFrameUserPreviewDefault, {
     profileFrame,
     user: currentUser,
     avatarDecorationOverride,
@@ -66,7 +66,7 @@ function ProfileFramePreview(arg0) {
     maxWidth: width,
     style: tmp.profilePreview,
   });
-  return React5(ProfilePreviewWrapper, obj2);
+  return metroImportDefault(ProfilePreviewWrapper, obj2);
 }
 function AvatarDecorationPreview(product) {
   ({ handlePreviewPress: require, onTrackPress: importDefault } = product);
@@ -85,17 +85,17 @@ function AvatarDecorationPreview(product) {
 }
 function NameplatePreview(arg0) {
   ({ product, avatarDecorationOverride } = arg0);
-  return React5(React4, {
+  return metroImportDefault(React4, {
     style: closure_9().collectiblePreview,
-    children: React5(NameplateProductPreviewDefault, { product, avatarDecorationOverride }),
+    children: metroImportDefault(NameplateProductPreviewDefault, { product, avatarDecorationOverride }),
   });
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
 const CollectiblesShopConstants = fn(1074);
-({ EXTERNAL_PRODUCT_SKU_IDS: hasOwnProperty, ShopCtaEnum: metroRequire } = CollectiblesShopConstants);
+({ EXTERNAL_PRODUCT_SKU_IDS: hasOwnProperty, ShopCtaEnum: closure_6 } = CollectiblesShopConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   collectiblePreview: { marginTop: nativeDefault.space.PX_12, position: "relative", height: 280 },
@@ -119,7 +119,7 @@ export function IndividualProductPreview(arg0) {
   ({ profileFrameOverride, profileEffectOverride } = arg0);
   if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
     const obj2 = { product, avatarDecorationOverride };
-    return React5(NameplatePreview, obj2);
+    return metroImportDefault(NameplatePreview, obj2);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
     const obj3 = {
       profileEffect: product.items[0],
@@ -129,7 +129,7 @@ export function IndividualProductPreview(arg0) {
       handlePreviewPress,
       onTrackPress,
     };
-    return React5(ProfileEffectPreview, obj3);
+    return metroImportDefault(ProfileEffectPreview, obj3);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
     const obj4 = {
       profileFrame: product.items[0],
@@ -139,18 +139,18 @@ export function IndividualProductPreview(arg0) {
       handlePreviewPress,
       onTrackPress,
     };
-    return React5(ProfileFramePreview, obj4);
+    return metroImportDefault(ProfileFramePreview, obj4);
   } else if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const obj = { product, handlePreviewPress, onTrackPress };
-    return React5(AvatarDecorationPreview, obj);
+    return metroImportDefault(AvatarDecorationPreview, obj);
   } else if (CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU === type) {
     const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let tmp5 = React5(FractionalNitroPreview.FractionalNitroPreview, {});
+      let tmp5 = metroImportDefault(FractionalNitroPreview.FractionalNitroPreview, {});
     } else {
       tmp5 = null;
       if (product.skuId === constants.ORB_PROFILE_BADGE) {
-        tmp5 = React5(OrbBadgePreview.OrbBadgePreview, {});
+        tmp5 = metroImportDefault(OrbBadgePreview.OrbBadgePreview, {});
       }
     }
     return tmp5;

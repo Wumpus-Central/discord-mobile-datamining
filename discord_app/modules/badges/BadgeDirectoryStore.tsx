@@ -89,6 +89,30 @@ prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(c1) {
   }
   return tmp5;
 };
+prototype["getUnreadBadges"] = function getUnreadBadges(id) {
+  const badges = this.getBadges(id);
+  return badges.filter((has_updates) => true === has_updates.has_updates);
+};
+prototype["getUnreadBadgeCount"] = function getUnreadBadgeCount(id) {
+  let tmp = id;
+  if (id == null) {
+    const currentUser = UserStore.getCurrentUser();
+    id = undefined;
+    if (currentUser != null) {
+      id = currentUser.id;
+    }
+    tmp = id;
+  }
+  let num = 0;
+  if (null != tmp) {
+    const self = this;
+    num = 0;
+    if (this.hasCatalogFor(tmp)) {
+      num = self.getUnreadBadges(tmp).length;
+    }
+  }
+  return num;
+};
 prototype["getBadgeById"] = function getBadgeById(GIFTING, displayedUserId) {
   let tmp = displayedUserId;
   if (displayedUserId == null) {
@@ -303,6 +327,29 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
     obj3.info_label = info_label;
     const result = badges2.set(badge.badge_id, obj3);
     const result1 = closure_5.set(userId, peekResult);
+  },
+  BADGE_ACK_SUCCESS: function handleBadgeAckSuccess(badgeId) {
+    badgeId = badgeId.badgeId;
+    const peekResult = closure_5.peek(badgeId.userId);
+    if (peekResult != null) {
+      const badges = peekResult.badges;
+      value = badges.get(badgeId);
+    }
+    if (null != peekResult) {
+      let has_updates;
+      if (value != null) {
+        has_updates = value.has_updates;
+      }
+      if (true === has_updates) {
+        const badges2 = peekResult.badges;
+        const obj = {};
+        const merged = Object.assign(value);
+        obj.has_updates = false;
+        obj.previous_acked_tier = null;
+        const result = badges2.set(badgeId, obj);
+      }
+    }
+    return false;
   },
   USER_PROFILE_FETCH_SUCCESS: function handleUserProfileFetchSuccess(userProfile) {
     userProfile = userProfile.userProfile;

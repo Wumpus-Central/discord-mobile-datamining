@@ -26,12 +26,12 @@ function CutoutGuildIcon(guild) {
   const tmp2 = ClipViewDefault;
   obj3.size = GuildIcon.GuildIconSizes.XSMALL;
   obj3.style = tmp.guildIconBG;
-  obj2.children = React7(GuildIconDefault, obj3);
-  obj.children = React7(tmp2, obj2);
-  return React7(timestampProducer, obj);
+  obj2.children = React6(GuildIconDefault, obj3);
+  obj.children = React6(tmp2, obj2);
+  return React6(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -215,18 +215,18 @@ export default function NewContentPill(onPress) {
     obj5.style = items11;
     obj5.animatedProps = animatedProps;
     const obj6 = { onPress: callback, style: tmp.container, children: null };
-    const items12 = [first2(tmp2(13180).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" })];
+    const items12 = [first2(tmp2(13263).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" })];
     const obj7 = {
       style: { marginLeft: 4 },
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "interactive-text-active",
       children: null,
     };
     const intl = tmp2(1113).intl;
     obj7.children = intl.string(tmp2(1113).t["4Nl0Rl"]);
-    items12[1] = first2(tmp2(5747).Text, obj7);
+    items12[1] = first2(tmp2(5761).Text, obj7);
     obj6.children = items12;
-    obj5.children = closure_10(tmp2(7106).PressableOpacity, obj6);
+    obj5.children = closure_10(tmp2(7121).PressableOpacity, obj6);
     let tmp36Result2 = first2(tmp9(1652).View, obj5);
   } else {
     const obj8 = { style: null, animatedProps: null, children: null };
@@ -244,7 +244,7 @@ export default function NewContentPill(onPress) {
       tmp36(tmp27, unsafe_rawColors);
       const tmp29 = tmp2(5148).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
     } else {
-      const items14 = [tmp36(tmp2(13180).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ,];
+      const items14 = [tmp36(tmp2(13263).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ,];
       const substr = stateFromStoresArray1.slice(0, stateFromStoresArray1.length - 1);
       items14[1] = substr.map((guild, index) => {
         let num = 4;
@@ -263,15 +263,15 @@ export default function NewContentPill(onPress) {
       obj10.style = obj11;
       const obj12 = {
         guild: stateFromStoresArray1[stateFromStoresArray1.length - 1],
-        size: tmp2(7083).GuildIconSizes.XSMALL,
+        size: tmp2(7098).GuildIconSizes.XSMALL,
         style: tmp.guildIconBG,
       };
-      obj10.children = tmp36(tmp9(7083), obj12);
+      obj10.children = tmp36(tmp9(7098), obj12);
       items14[2] = tmp36(closure_6, obj10);
       obj9.children = items14;
       obj8.children = tmp37(tmp38, obj9);
       tmp36Result2 = tmp36(tmp9(1652).View, obj8);
-      const tmp9Result = tmp9(7083);
+      const tmp9Result = tmp9(7098);
     }
     tmp37 = closure_10;
   }

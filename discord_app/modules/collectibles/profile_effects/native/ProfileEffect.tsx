@@ -78,7 +78,7 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj3.children = jsx(tmp4(5837), {
+    obj3.children = jsx(tmp4(5851), {
       resizeMode: "cover",
       resizeMethod: "resize",
       enableAnimation: true,
@@ -88,12 +88,12 @@ function StaticEffect(useThumbnail) {
       width: null,
       style: null,
     });
-    const tmp4Result = tmp4(5837);
+    const tmp4Result = tmp4(5851);
   }
   return <closure_5 {...obj3} />;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Image: closure_6 } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles({
@@ -146,7 +146,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = noop.useRef(-memo(9627).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = noop.useRef(-memo(9646).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(noop.useState([]), 2);
   noop.useRef([]);
   noop.useRef(false);
@@ -162,7 +162,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(noop.useState([]), 2);
-  const tmp9Result = memo1(9630)(
+  const tmp9Result = memo1(9649)(
     noop.useCallback((arg0) => {
       if (ref.current) {
         if (!ref3.current) {
@@ -190,7 +190,7 @@ function ProfileEffect(profileEffect) {
   );
   const stop = tmp9Result.stop;
   const reset = tmp9Result.reset;
-  const tmp9 = memo1(9630);
+  const tmp9 = memo1(9649);
   const items5 = [onLoad];
   const stateFromStores = memo(504).useStateFromStores(items5, () => onLoad.getState());
   noop.useRef(null);

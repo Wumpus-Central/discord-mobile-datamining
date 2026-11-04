@@ -13,7 +13,7 @@ export default function ActivityStatusText(variant) {
   let str = variant.variant;
   ({ children, style } = variant);
   if (str === undefined) {
-    str = "text-xs/medium";
+    str = "body-xs/medium";
   }
   const merged = Object.assign(variant, Object.assign({ children: 0, style: 0, variant: 0 }));
   const obj = { variant: str, color: "text-muted", style: null, lineClamp: 1 };

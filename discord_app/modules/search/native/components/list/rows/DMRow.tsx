@@ -3,10 +3,10 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import native from "../../../../../../design/void/native.tsx";
 import UserUtils from "../../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
-import _modDef9188 from "../../../../../../../_runtime/metro/09188__.js";
+import _modDef9205 from "../../../../../../../_runtime/metro/09205__.js";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef15530 from "../../../../../../../_runtime/metro/15530__.js";
+import _modDef15617 from "../../../../../../../_runtime/metro/15617__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ function FriendPresence(user) {
   if (type === constants2.PENDING_INCOMING) {
     const obj2 = {
       lineClamp: 1,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       children: UserUtils.getUserTag(user),
     };
@@ -37,7 +37,7 @@ function FriendPresence(user) {
   return tmp5;
 }
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, ActivityIndicator: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -174,7 +174,7 @@ export default noop.memo(function DMRow(user) {
     items = [
       state(Text_Text.Text, {
         lineClamp: 1,
-        variant: "text-md/semibold",
+        variant: "body-md/semibold",
         color: "mobile-text-heading-primary",
         children: name,
       }),
@@ -187,7 +187,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9188, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9205, disableColor: true };
         obj4.children = state(native.Icon, obj5);
         tmp4Result = state(timestampProducer, obj4);
       }
@@ -195,7 +195,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef15530, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef15617, disableColor: true };
         obj6.children = state(native.Icon, obj7);
         tmp4Result3 = state(timestampProducer, obj6);
       }
@@ -210,7 +210,7 @@ export default noop.memo(function DMRow(user) {
       state(tmp8, obj8);
       const isSystemUserResult = user.isSystemUser();
     }
-    const obj2 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
+    const obj2 = { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: name };
   }, items4);
   const items6 = [user, guildId, type, stateFromStores];
   const memo1 = obj.useMemo(() => {
@@ -239,7 +239,7 @@ export default noop.memo(function DMRow(user) {
     const userTag = UserUtilsDefault.getUserTag(user);
     if (null != userTag) {
       if (!user.isProvisional) {
-        const obj2 = { variant: "text-sm/medium", color: "text-muted", children: userTag };
+        const obj2 = { variant: "body-sm/medium", color: "text-muted", children: userTag };
         let tmp6 = state(Text_Text.Text, obj2);
       }
       return tmp6;

@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const VEVOOStore = fn(5724);
-({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: metroRequire } = VEVOOStore);
+const VEVOOStore = fn(5737);
+({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: closure_6 } = VEVOOStore);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
@@ -67,7 +67,7 @@ export default noop.memo(function VEVOOPropBlurAmount() {
     },
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(18122), {
+  obj.subLabel = jsx(first(18219), {
     disabled: !tmp3,
     disabledOpacity: !tmp3,
     initialValue: noop.useRef(first),

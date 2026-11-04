@@ -37,9 +37,9 @@ export function UnlockWithNitroButton(shouldShrink) {
   }
   let tmp4Result;
   if (flag) {
-    const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
+    const obj2 = { variant: "body-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
     tmp4Result = jsx(Text_Text.Text, {
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-overlay-light",
       allowFontScaling: false,
       children: text,

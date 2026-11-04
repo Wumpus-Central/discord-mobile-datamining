@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   headerContainer: {
@@ -44,7 +44,7 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   ({ headerButtonContainer: arr[0], headerButtonStart: arr[1] } = tmp);
   obj3.style = items;
   const obj = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const obj4 = { variant: "text-md/medium", color: "interactive-text-active", children: null };
+  const obj4 = { variant: "body-md/medium", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["ETE/oC"]);
   obj3.children = timestampProducer(Text_Text.Text, obj4);
@@ -71,11 +71,11 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   if (canSave) {
     str = "interactive-text-active";
   }
-  const obj7 = { variant: "text-md/medium", color: str, children: null };
+  const obj7 = { variant: "body-md/medium", color: str, children: null };
   const intl2 = util.intl;
   obj7.children = intl2.string(util.t["R3BPH+"]);
   obj6.children = timestampProducer(Text_Text.Text, obj7);
   items1[2] = timestampProducer(TouchableHitBoxDefault, obj6);
   obj2.children = items1;
-  return React5(common_SafeAreaView.SafeAreaPaddingView, obj2);
+  return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, obj2);
 }

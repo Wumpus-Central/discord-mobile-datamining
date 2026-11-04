@@ -31,7 +31,7 @@ export default function QuarantineModeInfoAlert(onClose) {
   const intl = util.intl;
   obj2.children = intl.string(util.t.EouHwv);
   items = [React3(native.LegacyText, obj2)];
-  const obj3 = { style: tmp.text, variant: "text-md/medium", children: null };
+  const obj3 = { style: tmp.text, variant: "body-md/medium", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.zNPBMA);
   items[1] = React3(Text_Text.Text, obj3);

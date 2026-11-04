@@ -32,7 +32,7 @@ function byteSize(data) {
   }
 }
 const Constants = fn(1072);
-({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
+({ AnalyticEvents: metroImportDefault, Endpoints: closure_8 } = Constants);
 let closure_9 = new LoggerDefault("GatewaySocket");
 let tmp3 = new LoggerDefault("GatewaySocket");
 let name = new GatewayEncodingDefault();
@@ -192,7 +192,7 @@ prototype["_connect"] = function _connect() {
     if (obj.getIsPaused()) {
       logger.info("Skipping _connect because socket is paused");
     } else {
-      self.connectionState = identify(15680).CONNECTING;
+      self.connectionState = identify(15768).CONNECTING;
       self.nextReconnectIsImmediate = false;
       const algorithm = self.compressionHandler.getAlgorithm();
       name = name.getName();
@@ -412,7 +412,7 @@ prototype["_connect"] = function _connect() {
         }
       }
       if (null == tmp32) {
-        const tmp48 = tmp5(15671)(str1);
+        const tmp48 = tmp5(15759)(str1);
         tmp48.binaryType = "arraybuffer";
         tmp32 = tmp48;
       }
@@ -853,31 +853,31 @@ prototype["_doIdentify"] = function _doIdentify() {
             const handleIdentifyResult = self.handleIdentify();
             closure_128_0 = handleIdentifyResult;
             if (null !== handleIdentifyResult) {
-              self.connectionState = tmp2(15680).IDENTIFYING;
+              self.connectionState = tmp2(15768).IDENTIFYING;
               const _Date = Date;
               const timestamp = Date.now();
               closure_128_1 = timestamp;
               self.identifyStartTime = timestamp;
               if (obj10.isCacheEnabled()) {
-                let committedVersions = tmp2(7919).getCommittedVersions();
-                const obj12 = tmp2(7919);
+                let committedVersions = tmp2(7935).getCommittedVersions();
+                const obj12 = tmp2(7935);
               } else {
                 committedVersions = {};
               }
               items = [committedVersions, ,];
-              obj10 = tmp3(7915);
+              obj10 = tmp3(7931);
               if (obj13.isCacheEnabled()) {
-                let committedVersions1 = tmp2(7922).getCommittedVersions();
-                const obj15 = tmp2(7922);
+                let committedVersions1 = tmp2(7938).getCommittedVersions();
+                const obj15 = tmp2(7938);
               } else {
                 committedVersions1 = {};
               }
               items[1] = committedVersions1;
-              obj13 = tmp3(7915);
-              let canUseGuildVersionsResult = tmp3(7915).isCacheEnabled();
+              obj13 = tmp3(7931);
+              let canUseGuildVersionsResult = tmp3(7931).isCacheEnabled();
               if (canUseGuildVersionsResult) {
-                canUseGuildVersionsResult = tmp2(7920).canUseGuildVersions();
-                const obj17 = tmp2(7920);
+                canUseGuildVersionsResult = tmp2(7936).canUseGuildVersions();
+                const obj17 = tmp2(7936);
               }
               items[2] = canUseGuildVersionsResult;
               v1 = 1;
@@ -921,7 +921,7 @@ prototype["_doIdentify"] = function _doIdentify() {
               obj = { guild_versions: {} };
             }
             closure_128_8 = obj;
-            if (closure_129_0.connectionState !== tmp2(15680).IDENTIFYING) {
+            if (closure_129_0.connectionState !== tmp2(15768).IDENTIFYING) {
               closure_1_9.warn("Skipping identify because connectionState or identifyStartTime has changed");
             }
             token = closure_128_0.token;
@@ -946,8 +946,8 @@ prototype["_doIdentify"] = function _doIdentify() {
             };
             const obj21 = tmp3(500);
             const obj18 = { useChannelObfuscation: null };
-            const obj5 = tmp3(15702);
-            obj18.useChannelObfuscation = tmp3(15703).isChannelMetadataObfuscationEnabled("GatewaySocket");
+            const obj5 = tmp3(15790);
+            obj18.useChannelObfuscation = tmp3(15791).isChannelMetadataObfuscationEnabled("GatewaySocket");
             obj14.capabilities = obj5.getClientCapabilities(obj18);
             obj14.properties = closure_128_11;
             obj14.presence = presence;
@@ -959,14 +959,14 @@ prototype["_doIdentify"] = function _doIdentify() {
             closure_128_14 = JSON.stringify(closure_128_13);
             closure_129_0.identifyUncompressedByteSize = closure_128_14.length;
             const compressionHandler = closure_129_0.compressionHandler;
-            const obj7 = tmp3(15703);
-            closure_129_0.identifyCompressedByteSize = v1(15685).deflate(closure_128_14).length;
+            const obj7 = tmp3(15791);
+            closure_129_0.identifyCompressedByteSize = v1(15773).deflate(closure_128_14).length;
             closure_129_0.identifyCount = closure_129_0.identifyCount + num3;
             num3 = closure_129_0;
-            closure_129_0.send(tmp3(15672).Opcode.IDENTIFY, closure_128_13, false);
+            closure_129_0.send(tmp3(15760).Opcode.IDENTIFY, closure_128_13, false);
             tmp65 = tmp2(1252);
             tmp65.track(constants.SESSION_START_CLIENT, {});
-            const obj8 = v1(15685);
+            const obj8 = v1(15773);
           }
         }
         dependencyMap = 3;

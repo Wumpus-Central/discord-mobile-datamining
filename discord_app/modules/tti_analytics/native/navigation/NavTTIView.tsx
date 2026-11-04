@@ -29,7 +29,7 @@ function NavTTIMeasuredView(onLayout) {
   }
   obj.onLayout = onLayout;
   obj.children = children;
-  return React7(View, obj);
+  return React6(View, obj);
 }
 function IncludedNavTTIView(name) {
   const merged = Object.assign(name, Object.assign({ name: 0 }));
@@ -37,7 +37,7 @@ function IncludedNavTTIView(name) {
   const navigationTTIRegionMeasurement = useComponentRenderSpan.useNavigationTTIRegionMeasurement("include", name.name);
   const merged1 = Object.assign(merged);
   obj2.measurementProps = navigationTTIRegionMeasurement;
-  return React7(NavTTIMeasuredView, obj2);
+  return React6(NavTTIMeasuredView, obj2);
 }
 function VisualizedNavTTIViewContent(measurementProps) {
   ({ props, hierarchy } = measurementProps);
@@ -50,11 +50,11 @@ function VisualizedNavTTIViewContent(measurementProps) {
   const merged = Object.assign(_objectWithoutProperties(props, closure_2));
   obj.measurementProps = measurementProps.measurementProps;
   items = [
-    React7(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, {
+    React6(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, {
       value: hierarchy.contextValue,
       children: props.children,
     }),
-    React7(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, {
+    React6(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, {
       name: str,
       regionId: hierarchy.regionId,
       tracking,
@@ -73,7 +73,7 @@ function VisualizedIncludedNavTTIView(name) {
   const Children = noop.Children;
   obj2.hasChildren = Children.count(name.children) > 0;
   const navigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy(obj2);
-  return React7(VisualizedNavTTIViewContent, {
+  return React6(VisualizedNavTTIViewContent, {
     props: name,
     measurementProps: useComponentRenderSpan.useNavigationTTIRegionMeasurement("include", name.name),
     hierarchy: navigationTTIRegionHierarchy,
@@ -88,7 +88,7 @@ function VisualizedExcludedNavTTIView(name) {
   const Children = noop.Children;
   obj2.hasChildren = Children.count(name.children) > 0;
   const navigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy(obj2);
-  return React7(VisualizedNavTTIViewContent, {
+  return React6(VisualizedNavTTIViewContent, {
     props: name,
     measurementProps: useComponentRenderSpan.useNavigationTTIRegionMeasurement(
       "exclude",
@@ -101,11 +101,11 @@ function VisualizedNavTTIView(tracking) {
   if ("include" === tracking.tracking) {
     const obj2 = {};
     const merged = Object.assign(tracking);
-    let tmp6 = React7(VisualizedIncludedNavTTIView, obj2);
+    let tmp6 = React6(VisualizedIncludedNavTTIView, obj2);
   } else {
     const obj = {};
     const merged1 = Object.assign(tracking);
-    tmp6 = React7(VisualizedExcludedNavTTIView, obj);
+    tmp6 = React6(VisualizedExcludedNavTTIView, obj);
   }
   return tmp6;
 }
@@ -123,12 +123,12 @@ export function NavTTIView(tracking) {
   if (obj.useStateFromStores(items, () => DevSettingsStore.get("navigation_tti_visualizer"))) {
     const obj2 = {};
     const merged = Object.assign(tracking);
-    return React7(VisualizedNavTTIView, obj2);
+    return React6(VisualizedNavTTIView, obj2);
   } else if ("exclude" === tracking.tracking) {
     ({ tracking: tracking2, name, descendantTracking } = tracking);
     const obj3 = {};
     const merged1 = Object.assign(_objectWithoutProperties(tracking, closure_3));
-    return React7(View, obj3);
+    return React6(View, obj3);
   } else {
     tracking = tracking.tracking;
     const tmp5 = _objectWithoutProperties(tracking, closure_4);
@@ -136,11 +136,11 @@ export function NavTTIView(tracking) {
       const obj4 = {};
       const merged2 = Object.assign(tmp5);
       obj4.name = tracking.name;
-      let tmp6Result = React7(IncludedNavTTIView, obj4);
+      let tmp6Result = React6(IncludedNavTTIView, obj4);
     } else {
       const obj5 = {};
       const merged3 = Object.assign(tmp5);
-      tmp6Result = React7(View, obj5);
+      tmp6Result = React6(View, obj5);
     }
     return tmp6Result;
   }

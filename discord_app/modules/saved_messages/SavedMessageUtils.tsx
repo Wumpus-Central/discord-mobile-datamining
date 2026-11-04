@@ -125,7 +125,7 @@ let closure_12 = async function _savedMessageJumpToMessage(arg0, arg1) {
   })();
 };
 const ChannelRecord = fn(4994);
-({ PrivateChannelRecord: hasOwnProperty, UnknownChannelRecord: metroRequire } = ChannelRecord);
+({ PrivateChannelRecord: hasOwnProperty, UnknownChannelRecord: closure_6 } = ChannelRecord);
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, Routes: closure_10 } = Constants);
 const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };

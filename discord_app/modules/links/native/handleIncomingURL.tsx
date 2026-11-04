@@ -345,7 +345,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
   })();
 };
 const Constants = fn(1072);
-({ AppStates: closure_7, AnalyticEvents: closure_8, LinkingTypes: closure_9 } = Constants);
+({ AppStates: metroImportDefault, AnalyticEvents: closure_8, LinkingTypes: closure_9 } = Constants);
 let closure_10 = new LoggerDefault("index.native.tsx");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleIncomingURL.tsx");

@@ -35,13 +35,13 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export default function EmptyState() {
   const tmp = closure_6();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12580 : 12581);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12661 : 12662);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
     AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
   );
   const obj2 = { style: tmp.container, children: null };
   items = [React4(FastImageDefault, { style: tmp.image, resizeMode: "contain", source: tmp4Result })];
-  const obj4 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj4 = { style: tmp.textContainer, variant: "body-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.uDnXXj);
   items[1] = React4(Text_Text.Text, obj4);

@@ -20,9 +20,9 @@ function ReportModal(onSubmit) {
     (arg0) =>
       closure_2_10(Text_Text.Text, {
         style: formRow.formRow,
-        variant: "text-md/semibold",
+        variant: "body-md/semibold",
         color: "interactive-text-active",
-        children: React6(arg0),
+        children: React5(arg0),
       }),
     items,
   );
@@ -30,7 +30,7 @@ function ReportModal(onSubmit) {
   const callback = noop.useCallback(() => {
     require("Linking").openURL(closure_1_7());
   }, []);
-  const obj2 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj2 = { style: tmp.headerSubtitle, variant: "body-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
   obj2.children = intl.format(util.t.Hg8Ee7, { onClick: callback });
   const items1 = [closure_10(Text_Text.Text, obj2), ,];
@@ -90,9 +90,9 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15939);
+const GuildReportRaidModalConstants = fn(16029);
 ({
-  getReportRaidHelpArticleURL: closure_7,
+  getReportRaidHelpArticleURL: metroImportDefault,
   getReportRaidTypeLabel: closure_8,
   REPORT_RAID_OPTIONS: closure_9,
 } = GuildReportRaidModalConstants);
@@ -167,9 +167,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
               dependencyMap = 3;
             } else {
               tmp21.current = true;
-              const result = tmp2(13393).trackReportRaidViewed(guildId, first);
-              const obj2 = tmp2(13393);
-              tmp2(13393).handleReportRaid(guildId);
+              const result = tmp2(13477).trackReportRaidViewed(guildId, first);
+              const obj2 = tmp2(13477);
+              tmp2(13477).handleReportRaid(guildId);
               const intl = tmp2(1113).intl;
               c1 = 1;
               dependencyMap = 1;

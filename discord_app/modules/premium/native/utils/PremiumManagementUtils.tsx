@@ -110,12 +110,12 @@ export function getExternalManagementMessage(subscription, arg1) {
                     }
                   },
                   text: null,
-                  variant: "text-sm/semibold",
+                  variant: "body-sm/semibold",
                 };
                 const intl3 = tmp13(1113).intl;
                 const t = tmp13(1113).t;
                 obj2.text = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(7715).LinkButton, {
+                jsx(tmp13(7731).LinkButton, {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
                     if (null != _null) {
@@ -138,7 +138,7 @@ export function getExternalManagementMessage(subscription, arg1) {
                     }
                   },
                   text: null,
-                  variant: "text-sm/semibold",
+                  variant: "body-sm/semibold",
                 });
               } else {
                 function manageExternalNitroSubscription() {

@@ -85,7 +85,7 @@ export default function Breadcrumbs(element) {
       } else {
         let obj2 = { style: tmp2.container, children: null };
         let map = require("Text/Text").Text;
-        let obj4 = { style: tmp2.title, accessibilityRole: "header", variant: "text-xs/semibold", children: null };
+        let obj4 = { style: tmp2.title, accessibilityRole: "header", variant: "body-xs/semibold", children: null };
         const REPORT_TO_MOD = require("ReportMenuType").ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(element.menuName);
         const intl = require("util").intl;
@@ -114,7 +114,7 @@ export default function Breadcrumbs(element) {
               lineClamp: 2,
               ellipsizeMode: "tail",
               style: closure_0.breadCrumbText,
-              variant: "text-md/medium",
+              variant: "body-md/medium",
               children,
             }),
           ];

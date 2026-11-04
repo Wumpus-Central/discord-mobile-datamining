@@ -13,7 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(5762).useFontScale();
+  fontScale = fontScale(5776).useFontScale();
   top = top(1627)().top;
   items = [fontScale, top];
   return noop.useMemo(() => {

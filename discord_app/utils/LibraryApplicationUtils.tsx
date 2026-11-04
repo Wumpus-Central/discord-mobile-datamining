@@ -8,8 +8,8 @@ require = fn;
 const Constants = fn(1072);
 ({
   LibraryApplicationFlags: hasOwnProperty,
-  LocalDispatchApplicationStates: metroRequire,
-  StatusTypes: closure_7,
+  LocalDispatchApplicationStates: closure_6,
+  StatusTypes: metroImportDefault,
 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/LibraryApplicationUtils.tsx");

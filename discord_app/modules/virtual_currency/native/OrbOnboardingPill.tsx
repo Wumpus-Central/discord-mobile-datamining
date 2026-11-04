@@ -11,7 +11,7 @@ class OrbOnboardingPill {
     obj = { style: closure_5().container, children: null };
     items = [,];
     items[0] = jsx(closure_0(closure_1[3]).OrbsIcon, { size: "sm" });
-    obj1 = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
+    obj1 = { variant: "body-sm/semibold", color: "redesign-button-tertiary-text", children: null };
     intl = closure_0(closure_1[5]).intl;
     obj1.children = intl.string(closure_0(closure_1[5]).t["9JpRfC"]);
     items[1] = jsx(closure_0(closure_1[4]).Text, obj1);

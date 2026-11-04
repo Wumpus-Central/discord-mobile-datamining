@@ -7,7 +7,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   footerText: { textAlign: "center" },
@@ -60,7 +60,7 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
   obj5.value = value;
   items1[2] = closure_6(onSave(value[14]).TextArea, obj5);
   items1[3] = closure_6(View, { style: tmp.separator });
-  const obj7 = { variant: "text-xs/medium", color: "text-default", style: tmp.footerText, children: null };
+  const obj7 = { variant: "body-xs/medium", color: "text-default", style: tmp.footerText, children: null };
   const intl5 = tmp2(tmp3[8]).intl;
   obj7.children = intl5.string(onSave(value[8]).t.xfNY3L);
   items1[4] = closure_6(onSave(value[15]).Text, obj7);

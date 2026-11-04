@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ColorConstants from "../../../colors/native/ColorConstants.tsx";
 import PremiumGroupWordmarkDefault from "PremiumGroupWordmark.tsx";
@@ -17,7 +17,7 @@ class BetaPill {
   constructor() {
     tmp = closure_7();
     obj = { style: tmp.betaPill, children: null };
-    obj1 = { variant: "text-xs/semibold", style: tmp.betaText, children: null };
+    obj1 = { variant: "body-xs/semibold", style: tmp.betaText, children: null };
     intl = closure_0(closure_2[6]).intl;
     obj1.children = intl.string(closure_0(closure_2[6]).t.oW0eUd);
     obj.children = jsx(closure_0(closure_2[5]).Text, obj1);
@@ -26,7 +26,7 @@ class BetaPill {
 }
 const View = _mod17.View;
 const Gradients = ColorConstants.Gradients;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   premiumGroupCard: {
     padding: 16,
@@ -69,7 +69,7 @@ let obj4 = { color: nativeDefault.colors.BLACK, textAlign: "center", textTransfo
 obj.title = { color: nativeDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
 const obj5 = { color: nativeDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
 obj.description = { color: nativeDefault.colors.TEXT_DEFAULT };
-const React5 = createStyles.createStyles(obj);
+const metroImportDefault = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
 
 export default function PremiumGroupFeaturesTableCard(arg0) {
@@ -110,9 +110,9 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     ];
     obj6.children = items1;
     const items2 = [timestampProducer(View, obj6), ,];
-    const obj7 = { variant: "text-sm/normal", style: tmp.title, children: subheaderString };
+    const obj7 = { variant: "body-sm/normal", style: tmp.title, children: subheaderString };
     items2[1] = hasOwnProperty(Text_Text.Text, obj7);
-    const obj8 = { variant: "text-sm/normal", style: tmp.description, children: bodyString };
+    const obj8 = { variant: "body-sm/normal", style: tmp.description, children: bodyString };
     items2[2] = hasOwnProperty(Text_Text.Text, obj8);
     obj2.children = items2;
     obj.children = timestampProducer(tmp2Result, obj2);

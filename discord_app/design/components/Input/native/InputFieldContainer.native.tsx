@@ -60,7 +60,7 @@ function useInputStyles(size) {
 get_ActivityIndicator = fn(17);
 ({ Platform, StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
 let createStyles = fn(5141);
 let closure_9 = createStyles.createStyles(() => {
@@ -82,7 +82,7 @@ let closure_9 = createStyles.createStyles(() => {
   }
   let str2 = arg4;
   if (arg4 === undefined) {
-    str2 = "text-md/medium";
+    str2 = "body-md/medium";
   }
   const obj = { sm: InputTypes.InputHeights.SM, md: InputTypes.InputHeights.MD, lg: InputTypes.InputHeights.LG };
   const tmp4 = { sm: nativeDefault.space.PX_8, md: nativeDefault.space.PX_12, lg: nativeDefault.space.PX_16 }[str];

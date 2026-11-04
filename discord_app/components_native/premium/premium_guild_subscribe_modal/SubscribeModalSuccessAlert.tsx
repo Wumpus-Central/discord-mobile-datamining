@@ -4,13 +4,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
 import common_AlertDefault from "../../common/Alert.tsx";
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../common/SequencedLottieAnimationView.tsx";
-import _mod15656 from "../../../../_runtime/metro/15656__.js";
+import _mod15743 from "../../../../_runtime/metro/15743__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -27,7 +27,7 @@ class PremiumPaymentGuildAnimation {
   }
 }
 const View = fn(17).View;
-const Gradients = fn(7741).Gradients;
+const Gradients = fn(7757).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);
@@ -87,8 +87,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(6079).close();
-    const obj = closure_1(6079);
+    closure_1(6094).close();
+    const obj = closure_1(6094);
     BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [
@@ -125,16 +125,16 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = FastImageDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(15657);
+    let tmp8Result = tmp8(15744);
   } else {
-    tmp8Result = tmp8(15658);
+    tmp8Result = tmp8(15745);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_8(tmp15, obj6);
   obj4.children = closure_8(View, obj5);
   const items2 = [closure_8(tmp14, obj4)];
   const obj7 = { style: tmp.successInfo, children: null };
-  const obj8 = { style: tmp.text, variant: "text-sm/medium", children: null };
+  const obj8 = { style: tmp.text, variant: "body-sm/medium", children: null };
   const intl2 = util.intl;
   const string = intl2.string;
   const t = util.t;
@@ -146,7 +146,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const obj9 = { children: null };
   obj8.children = stringResult;
   const items3 = [closure_8(Text_Text.Text, obj8)];
-  const obj10 = { style: tmp.text, variant: "text-sm/medium", children: null };
+  const obj10 = { style: tmp.text, variant: "body-sm/medium", children: null };
   const intl3 = util.intl;
   obj10.children = intl3.format(util.t.r0IGsP, { guildName: stateFromStores.name, guildSubscriptionQuantity: num });
   items3[1] = closure_8(Text_Text.Text, obj10);

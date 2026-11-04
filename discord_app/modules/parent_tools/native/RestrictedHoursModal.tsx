@@ -22,9 +22,9 @@ function RestrictedHoursLogoutBlockingLayer(visible) {
       style: tmp.logoutBlockingLayer,
       pointerEvents: "auto",
       accessibilityLiveRegion: "polite",
-      children: React5(ActivityIndicator_ActivityIndicator.ActivityIndicator, { size: "large" }),
+      children: metroImportDefault(ActivityIndicator_ActivityIndicator.ActivityIndicator, { size: "large" }),
     };
-    tmp2 = React5(hasOwnProperty, obj);
+    tmp2 = metroImportDefault(hasOwnProperty, obj);
   }
   return tmp2;
 }
@@ -148,7 +148,7 @@ function RestrictedHoursScreen(visible) {
   const obj12 = { source: null, resizeMode: "cover", style: null };
   const obj10 = { style: tmp.backgroundFill, pointerEvents: "none" };
   const tmp6Result2 = require("../../../../_runtime/metro/01652__.js");
-  obj12.source = require("../../../../_runtime/metro/19541__.js");
+  obj12.source = require("../../../../_runtime/metro/19645__.js");
   obj12.style = tmp.sunbeamGradient;
   obj11.children = closure_7(require("FastImage"), obj12);
   items9[1] = closure_7(require("../../../../_runtime/metro/01652__.js").View, obj11);
@@ -165,7 +165,7 @@ function RestrictedHoursScreen(visible) {
       }),
     }),
     closure_7(require("Text/Text").Text, {
-      variant: "text-lg/medium",
+      variant: "body-lg/medium",
       color: "text-overlay-light",
       style: tmp.description,
       children: formatResult,
@@ -174,12 +174,16 @@ function RestrictedHoursScreen(visible) {
   obj13.children = items12;
   items9[2] = closure_8(require("../../../../_runtime/metro/01652__.js").View, obj13);
   const obj16 = { style: tmp.footer, children: null };
-  const obj17 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.description, children: null };
+  const obj17 = { variant: "body-sm/medium", color: "text-subtle", style: tmp.description, children: null };
   const intl3 = tmp6(tmp3[13]).intl;
   obj17.children = intl3.format(require("../FamilyCenter.messages.js").iqeKDz, {
     username: stateFromStores,
-    loginHook(children, arg1) {
-      return React5(Text_Text.Text, { variant: "text-sm/normal", color: "text-link", onPress, children }, arg1);
+    loginHook(children, id) {
+      return metroImportDefault(
+        Text_Text.Text,
+        { variant: "body-sm/normal", color: "text-link", onPress, children },
+        id,
+      );
     },
   });
   obj16.children = closure_7(require("Text/Text").Text, obj17);
@@ -195,7 +199,7 @@ function RestrictedHoursScreen(visible) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = "rgb(0, 3, 40)";
 const createStyles = fn(5141);
 let obj2 = {

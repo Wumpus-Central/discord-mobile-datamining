@@ -171,8 +171,8 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
   CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS: c3,
   CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS: closure_4,
   CHECKPOINT_2026_POWER_BAR_UNITS: hasOwnProperty,
-  NATIVE_CHARACTER_LAYER_SIZE: metroRequire,
-  CheckpointVersions: closure_7,
+  NATIVE_CHARACTER_LAYER_SIZE: closure_6,
+  CheckpointVersions: metroImportDefault,
 } = CheckpointConstants);
 let items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
 const items1 = [
@@ -275,7 +275,7 @@ export function transformCheckpoint2026CardComponent(checkpoint_data) {
   return tmp3;
 }
 export function toCheckpointMessageComponentData(STATS_ONLY, stateFromStores, stats) {
-  const obj = { version: React5.V2026, character: null, stats: null, cardColorPalette: null };
+  const obj = { version: metroImportDefault.V2026, character: null, stats: null, cardColorPalette: null };
   let tmp;
   if (set.has(STATS_ONLY)) {
     tmp = stateFromStores;
@@ -503,7 +503,7 @@ export function getCheckpointDataFromMessage(contentMessage) {
   return checkpointData;
 }
 export function getCheckpointLabel(checkpointDataFromMessage) {
-  if (React5.V2025 === checkpointDataFromMessage.version) {
+  if (metroImportDefault.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
     return intl.string(_modDef3187.goiR2u);
   } else {

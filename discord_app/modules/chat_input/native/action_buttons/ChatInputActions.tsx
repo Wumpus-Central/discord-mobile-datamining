@@ -261,7 +261,7 @@ class ChatInputActions {
                 obj.onPress = function onPress(arg0) {
                   return closure_1_3(arg0, constants.PHOTOS);
                 };
-                return React6(tmp, obj);
+                return React5(tmp, obj);
               },
             };
             let tmp44Result = onAttachPress(canStartThreads(isAppLauncherEnabled[29]).ContextMenu, obj2, index);
@@ -371,8 +371,8 @@ class ChatInputActions {
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(12945);
-({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
+const ChatInputConstants = fn(13027);
+({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: closure_6 } = ChatInputConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
@@ -384,8 +384,8 @@ let obj = {
   activeBrand: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-obj.buttonWrapper = { maxHeight: fn(5760).SMALL_BUTTON_HEIGHT + fn(5760).SMALL_BUTTON_PADDING };
-let obj4 = { maxHeight: fn(5760).SMALL_BUTTON_HEIGHT + fn(5760).SMALL_BUTTON_PADDING };
+obj.buttonWrapper = { maxHeight: fn(5774).SMALL_BUTTON_HEIGHT + fn(5774).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5774).SMALL_BUTTON_HEIGHT + fn(5774).SMALL_BUTTON_PADDING };
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
 let closure_11 = { code: "(function ChatInputActionsTsx1(){return{opacity:1};})" };

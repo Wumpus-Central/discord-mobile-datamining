@@ -3,8 +3,8 @@ import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15497 from "../../../../../_runtime/metro/15497__.js";
-import _modDef15498 from "../../../../../_runtime/metro/15498__.js";
+import _modDef15584 from "../../../../../_runtime/metro/15584__.js";
+import _modDef15585 from "../../../../../_runtime/metro/15585__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -30,15 +30,15 @@ export default function Header(style) {
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef15497;
+    let tmp2Result = _modDef15584;
   } else {
-    tmp2Result = _modDef15498;
+    tmp2Result = _modDef15585;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2)];
   const obj4 = {
     style: tmp.headerText,
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "mobile-text-heading-primary",
     children: null,
   };

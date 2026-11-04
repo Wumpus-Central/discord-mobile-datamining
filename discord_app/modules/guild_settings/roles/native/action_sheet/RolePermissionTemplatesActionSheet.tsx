@@ -13,7 +13,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
-({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
+({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = {
@@ -65,12 +65,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
           obj4.confirmText = intl4.string(util.t.p89ACt);
           obj4.onConfirm = function onConfirm() {
             importDefault(closure_0);
-            closure_1_1(5381).hideActionSheet();
-            const obj = closure_1_1(5381);
-            const result = closure_0(5831).roleTemplateAppliedToast();
+            closure_1_1(5382).hideActionSheet();
+            const obj = closure_1_1(5382);
+            const result = closure_0(5845).roleTemplateAppliedToast();
           };
           obj4.onCancel = function onCancel() {
-            closure_1_1(5381).hideActionSheet();
+            closure_1_1(5382).hideActionSheet();
           };
           AlertActionCreatorsDefault.show(obj4);
         } else {
@@ -109,12 +109,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
             obj4.confirmText = intl4.string(util.t.p89ACt);
             obj4.onConfirm = function onConfirm() {
               importDefault(closure_0);
-              closure_1_1(5381).hideActionSheet();
-              const obj = closure_1_1(5381);
-              const result = closure_0(5831).roleTemplateAppliedToast();
+              closure_1_1(5382).hideActionSheet();
+              const obj = closure_1_1(5382);
+              const result = closure_0(5845).roleTemplateAppliedToast();
             };
             obj4.onCancel = function onCancel() {
-              closure_1_1(5381).hideActionSheet();
+              closure_1_1(5382).hideActionSheet();
             };
             AlertActionCreatorsDefault.show(obj4);
           } else {

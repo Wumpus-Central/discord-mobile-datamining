@@ -3,16 +3,16 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef8848 from "../../../../_runtime/metro/08848__.js";
+import _modDef8865 from "../../../../_runtime/metro/08865__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(9035);
+const SpotifyConstants = fn(9052);
 ({
-  SPOTIFY_APP_PROTOCOL: metroRequire,
-  SpotifyEndpoints: closure_7,
+  SPOTIFY_APP_PROTOCOL: closure_6,
+  SpotifyEndpoints: metroImportDefault,
   SpotifyResourceTypes: closure_8,
 } = SpotifyConstants);
 const jsxProd = fn(21);
@@ -47,7 +47,7 @@ SpotifyTrack.prototype["render"] = function render() {
   const self = this;
   const props = this.props;
   const onPress = props.onPress;
-  return React7(native.LegacyText, {
+  return React6(native.LegacyText, {
     onPress() {
       if (onPress != null) {
         tmp();
@@ -98,7 +98,7 @@ prototype["renderLink"] = function renderLink(children, index, arg2) {
   closure_1 = index;
   const onPress = this.props.onPress;
   children = [,];
-  children[0] = React7(native.LegacyText, {
+  children[0] = React6(native.LegacyText, {
     onPress() {
       if (onPress != null) {
         tmp();
@@ -119,7 +119,7 @@ prototype["render"] = function render() {
   const self = this;
   const parts = this.props.artists.split("; ");
   closure_0 = parts.length - 1;
-  return React7(native.LegacyText, {
+  return React6(native.LegacyText, {
     children: parts.map((item, index) => self.renderLink(item, index, index === closure_0)),
   });
 };
@@ -159,7 +159,7 @@ class SpotifyAlbum extends PureComponent3 {
   }
 }
 SpotifyAlbum.prototype["render"] = function render() {
-  return React7(native.LegacyText, {
+  return React6(native.LegacyText, {
     onPress: this.handleOpenSpotifyAlbum,
     suppressHighlighting: true,
     children: this.props.text,
@@ -174,16 +174,16 @@ export function canOpenSpotifyUrl() {
 export function attributeInstall() {
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({
-    url: React5.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier),
+    url: metroImportDefault.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier),
     rejectWithError: true,
   });
 }
 export function openUrl(arg0, ALBUM, album_id) {
   if (arg0) {
-    let catchPromise = React4.openURL(React5.PLAYER_OPEN(ALBUM, album_id, true, "mobile")).catch(() => {});
-    const openURLResult = React4.openURL(React5.PLAYER_OPEN(ALBUM, album_id, true, "mobile"));
+    let catchPromise = React4.openURL(metroImportDefault.PLAYER_OPEN(ALBUM, album_id, true, "mobile")).catch(() => {});
+    const openURLResult = React4.openURL(metroImportDefault.PLAYER_OPEN(ALBUM, album_id, true, "mobile"));
   } else {
-    catchPromise = LinkingDefault.openURL(React5.WEB_OPEN(ALBUM, album_id, "mobile"));
+    catchPromise = LinkingDefault.openURL(metroImportDefault.WEB_OPEN(ALBUM, album_id, "mobile"));
   }
   return catchPromise;
 }
@@ -263,7 +263,7 @@ export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
   let obj2 = {
-    icon: closure_9(activity(5754).Button.Icon, { source: _modDef8848 }),
+    icon: closure_9(activity(5768).Button.Icon, { source: _modDef8865 }),
     text: null,
     size: "sm",
     onPress: null,
@@ -292,7 +292,7 @@ export function SpotifyPlayButton(activity) {
       })
       .catch(() => {});
   };
-  obj.children = closure_9(activity(5754).Button, obj2);
+  obj.children = closure_9(activity(5768).Button, obj2);
   return closure_9(closure_5, obj);
 }
 export { SpotifyTrack };

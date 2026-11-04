@@ -11,10 +11,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 function Separator() {
-  return React7(hasOwnProperty, { style: closure_15().separator });
+  return React6(hasOwnProperty, { style: closure_15().separator });
 }
 function ListPadding() {
-  return React7(hasOwnProperty, { style: closure_15().listPadding });
+  return React6(hasOwnProperty, { style: closure_15().listPadding });
 }
 function keyExtractor(originalUrl, arg1) {
   return "" + originalUrl.originalUrl + "-" + arg1;
@@ -29,13 +29,13 @@ function getItemType(type) {
   return type;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: closure_6, StyleSheet } = get_ActivityIndicator);
 const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_14 = 2 * (fn(9509).MEDIA_ITEM_MAX_WIDTH + PX_12);
+let closure_14 = 2 * (fn(9527).MEDIA_ITEM_MAX_WIDTH + PX_12);
 const createStyles = fn(5141);
 let obj = {
   container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 },
@@ -53,8 +53,8 @@ let obj = {
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj.mediaItem = {
-  maxWidth: fn(9509).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(9509).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(9527).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(9527).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };
@@ -247,73 +247,82 @@ export default function GameProfileMedia(game) {
   game = game.game;
   const trackAction = game.trackAction;
   let stateFromStores;
-  let first;
   noop = undefined;
+  let first;
   let setMediaModalOpen;
+  let ref1;
+  let memo;
+  let memo1;
+  let dimensions;
+  let recordDimensions;
+  let memo2;
+  let memo3;
   let memo4;
-  const tmp = memo4();
+  let memo5;
+  let callback1;
+  let num2;
+  const tmp = memo5();
   let obj = game(stateFromStores[15]);
-  let tmp2 = game;
-  items = [setMediaModalOpen];
-  stateFromStores = game(stateFromStores[16]).useStateFromStores(items, () => setMediaModalOpen.useReducedMotion);
-  const tmp5 = first(noop.useState(0), 2);
-  first = tmp5[0];
-  noop = tmp5[1];
-  const tmp7 = first(noop.useState(0), 2);
-  closure_5 = tmp7[1];
-  const tmp8 = first(noop.useState(false), 2);
-  const first1 = tmp8[0];
+  items = [ref1];
+  stateFromStores = game(stateFromStores[16]).useStateFromStores(items, () => ref1.useReducedMotion);
+  const tmp6 = trackAction(stateFromStores[17])();
+  const width = tmp6.width;
+  let num = 0;
+  ({ ref, onLayout } = tmp6);
+  if (undefined !== width) {
+    num = width;
+  }
+  const tmp7 = num(noop.useState(0), 2);
+  noop = tmp7[1];
+  const tmp8 = num(noop.useState(false), 2);
+  first = tmp8[0];
   setMediaModalOpen = tmp8[1];
-  const ref = noop.useRef(null);
-  const memo = noop.useMemo(() => game(stateFromStores[7]).getCarouselPreviewPixelSize(), []);
+  ref1 = noop.useRef(null);
+  memo = noop.useMemo(() => game(stateFromStores[7]).getCarouselPreviewPixelSize(), []);
   const items1 = [game];
-  const callback = noop.useCallback((nativeEvent) => {
-    closure_4(nativeEvent.nativeEvent.layout.width);
-  }, []);
-  const memo1 = noop.useMemo(() => GameProfileMediaSources.buildMediaEntries(game), items1);
+  memo1 = noop.useMemo(() => GameProfileMediaSources.buildMediaEntries(game), items1);
   const obj2 = game(stateFromStores[16]);
   const obj3 = noop;
-  const gameProfileMediaDimensions = game(stateFromStores[17]).useGameProfileMediaDimensions(
-    game(stateFromStores[7]).MEDIA_VIEWER_ITEM_SIZE.width,
+  const tmp5 = trackAction;
+  const gameProfileMediaDimensions = game(stateFromStores[18]).useGameProfileMediaDimensions(
+    tmp2(tmp3[7]).MEDIA_VIEWER_ITEM_SIZE.width,
   );
-  const dimensions = gameProfileMediaDimensions.dimensions;
-  const recordDimensions = gameProfileMediaDimensions.recordDimensions;
-  const items2 = [first];
-  const memo2 = noop.useMemo(
-    () => Math.max(0, Math.min(GameProfileMediaSources.MEDIA_ITEM_MAX_WIDTH, first - PX_12 - 2 * PX_16)),
+  dimensions = gameProfileMediaDimensions.dimensions;
+  recordDimensions = gameProfileMediaDimensions.recordDimensions;
+  const items2 = [num];
+  memo2 = noop.useMemo(
+    () => Math.max(0, Math.min(GameProfileMediaSources.MEDIA_ITEM_MAX_WIDTH, num - PX_12 - 2 * PX_16)),
     items2,
   );
   const items3 = [memo2];
-  const memo3 = noop.useMemo(
+  memo3 = noop.useMemo(
     () =>
       Math.min(GameProfileMediaSources.MEDIA_ITEM_MAX_HEIGHT, memo2 / GameProfileMediaSources.MEDIA_ITEM_ASPECT_RATIO),
     items3,
   );
   const items4 = [memo1, memo, dimensions];
   memo4 = noop.useMemo(() => GameProfileMediaSources.buildMediaViewerSources(memo1, memo, dimensions), items4);
-  const items5 = [memo4, first1];
+  const items5 = [memo4, first];
   const effect = noop.useEffect(() => {
-    if (first1) {
+    if (first) {
       const result = useMediaViewerSources.updateMediaViewerSources(memo4);
     }
   }, items5);
-  const items6 = [memo1, first, memo2];
-  const memo5 = noop.useMemo(
+  const items6 = [memo1, num, memo2];
+  memo5 = noop.useMemo(
     () =>
-      memo1.map((item, index) =>
-        Math.max(0, index * (closure_1_13 + recordDimensions) - (first - closure_1_13 - 2 * memo2) / 2),
-      ),
+      memo1.map((item, index) => Math.max(0, index * (closure_1_12 + memo2) - (num - closure_1_12 - 2 * memo3) / 2)),
     items6,
   );
   const items7 = [memo5];
   const items8 = [memo5];
-  const callback1 = noop.useCallback((nativeEvent) => {
+  const callback = noop.useCallback((nativeEvent) => {
     if (0 !== memo5.length) {
       const x = nativeEvent.nativeEvent.contentOffset.x;
       const _Math2 = Math;
       num = 1;
       let absolute = Math.abs(memo5[0] - x);
-      let num2 = 0;
+      num2 = 0;
       let num3 = 0;
       if (1 < memo5.length) {
         do {
@@ -331,37 +340,37 @@ export default function GameProfileMedia(game) {
           num3 = tmp4;
         } while (num < memo5.length);
       }
-      closure_5(num3);
+      closure_4(num3);
     }
   }, items7);
-  const callback2 = noop.useCallback((arg0) => {
+  callback1 = noop.useCallback((arg0) => {
     if (null != memo5[arg0]) {
-      const current = ref.current;
+      const current = ref1.current;
       if (current != null) {
         const obj = { offset: tmp, animated: false };
         current.scrollToOffset(obj);
       }
     }
-    closure_5(arg0);
+    closure_4(arg0);
   }, items8);
-  let num = -1;
+  num2 = -1;
   if (!obj.useObscuredSurface().obscured) {
-    num = -1;
-    if (!first1) {
-      num = -1;
+    num2 = -1;
+    if (!first) {
+      num2 = -1;
       if (!stateFromStores) {
-        num = tmp7[0];
+        num2 = tmp7[0];
       }
     }
   }
-  const items9 = [num, memo4, trackAction, memo2, memo3, callback2, stateFromStores, recordDimensions];
+  const items9 = [num2, memo4, trackAction, memo2, memo3, callback1, stateFromStores, recordDimensions];
   let name;
   if (game != null) {
     name = game.name;
   }
   items9[8] = name;
-  const items10 = [num, memo2, memo3, memo4, stateFromStores];
-  const callback3 = obj3.useCallback((arg0) => {
+  const items10 = [num2, memo2, memo3, memo4, stateFromStores];
+  const callback2 = obj3.useCallback((arg0) => {
     ({ item, index } = arg0);
     if ("trailer" === item.type) {
       const size = {
@@ -378,16 +387,16 @@ export default function GameProfileMedia(game) {
         setMediaModalOpen: null,
       };
       ({ originalUrl: obj2.url, previewUrl: obj2.posterUrl } = item);
-      size.active = index === num;
+      size.active = index === num2;
       size.reducedMotion = stateFromStores;
       size.index = index;
       size.sources = memo4;
       size.trackAction = trackAction;
       size.width = memo2;
       size.height = memo3;
-      size.onScrollToIndex = callback2;
+      size.onScrollToIndex = callback1;
       size.setMediaModalOpen = setMediaModalOpen;
-      let tmp20Result = React7(closure_21, size);
+      let tmp20Result = React6(closure_21, size);
     } else {
       const size1 = {
         url: item.previewUrl,
@@ -414,21 +423,21 @@ export default function GameProfileMedia(game) {
       size1.trackAction = trackAction;
       size1.width = memo2;
       size1.height = memo3;
-      size1.onScrollToIndex = callback2;
+      size1.onScrollToIndex = callback1;
       size1.setMediaModalOpen = setMediaModalOpen;
-      tmp20Result = React7(closure_20, size1);
+      tmp20Result = React6(closure_20, size1);
     }
     return tmp20Result;
   }, items9);
-  let tmp32Result2 = null;
+  let tmp30Result2 = null;
   if (0 !== memo1.length) {
-    const obj5 = { style: tmp.container, onLayout: callback, children: null };
-    let tmp32Result = memo2 > 0;
-    if (tmp32Result) {
-      const obj6 = {
-        ref,
+    const obj4 = { style: tmp.container, ref, onLayout, children: null };
+    let tmp30Result = memo2 > 0;
+    if (tmp30Result) {
+      const obj5 = {
+        ref: ref1,
         horizontal: true,
-        renderScrollComponent: trackAction(tmp3[20]),
+        renderScrollComponent: tmp5(tmp3[21]),
         style: tmp.list,
         overrideProps: null,
         data: null,
@@ -447,23 +456,23 @@ export default function GameProfileMedia(game) {
         snapToEnd: false,
         onMomentumScrollEnd: null,
       };
-      const obj7 = { style: tmp.list };
-      obj6.overrideProps = obj7;
-      obj6.data = memo1;
-      obj6.extraData = tmp23;
-      obj6.renderItem = callback3;
-      obj6.keyExtractor = num;
-      obj6.getItemType = getItemType;
-      obj6.drawDistance = memo3;
-      obj6.ItemSeparatorComponent = memo5;
-      obj6.ListHeaderComponent = callback2;
-      obj6.ListFooterComponent = callback2;
-      obj6.snapToOffsets = memo5;
-      obj6.onMomentumScrollEnd = callback1;
-      tmp32Result = tmp32(tmp2(tmp3[19]).FlashList, obj6);
+      const obj6 = { style: tmp.list };
+      obj5.overrideProps = obj6;
+      obj5.data = memo1;
+      obj5.extraData = tmp22;
+      obj5.renderItem = callback2;
+      obj5.keyExtractor = keyExtractor;
+      obj5.getItemType = getItemType;
+      obj5.drawDistance = memo4;
+      obj5.ItemSeparatorComponent = callback1;
+      obj5.ListHeaderComponent = num2;
+      obj5.ListFooterComponent = num2;
+      obj5.snapToOffsets = memo5;
+      obj5.onMomentumScrollEnd = callback;
+      tmp30Result = tmp30(tmp2(tmp3[20]).FlashList, obj5);
     }
-    obj5.children = tmp32Result;
-    tmp32Result2 = tmp32(closure_5, obj5);
+    obj4.children = tmp30Result;
+    tmp30Result2 = tmp30(first, obj4);
   }
-  return tmp32Result2;
+  return tmp30Result2;
 }

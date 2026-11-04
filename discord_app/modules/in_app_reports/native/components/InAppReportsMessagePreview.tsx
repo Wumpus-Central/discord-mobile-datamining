@@ -39,7 +39,7 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 export default function MessagePreview(message) {
   const tmp = closure_6();
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/semibold", children: null };
+  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "body-xs/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.iouM3a);
   items = [React4(Text_Text.Text, obj3)];

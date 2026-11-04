@@ -5,7 +5,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef18451 from "../../../../../_runtime/metro/18451__.js";
+import _modDef18545 from "../../../../../_runtime/metro/18545__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   title: { marginTop: 24, textAlign: "center" },
@@ -35,7 +35,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     children: null,
   };
-  const obj2 = { source: _modDef18451 };
+  const obj2 = { source: _modDef18545 };
   items = [closure_6(FastImageDefault, obj2), , , ,];
   const obj3 = {
     style: tmp.title,
@@ -47,7 +47,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
   const intl = util.intl;
   obj3.children = intl.string(util.t.C0m4rQ);
   items[1] = closure_6(Text_Text.Text, obj3);
-  const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj4 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.zOHfEX);
   items[2] = closure_6(Text_Text.Text, obj4);

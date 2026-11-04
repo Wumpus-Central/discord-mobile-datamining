@@ -81,7 +81,7 @@ class Coachmark {
         const size = { height: closure_15[str], width: "auto" };
         obj3.style = size;
         obj2.children = closure_2_10(Graphic.Graphic, obj3);
-        return closure_2_10(React5, obj2);
+        return closure_2_10(metroImportDefault, obj2);
       } else {
         let tmp2 = null;
         if (null != renderImgComponent) {
@@ -94,7 +94,7 @@ class Coachmark {
         let tmp8 = null;
         if (null != tmp2) {
           const obj4 = { style: closure_3.bottomMargin, children: tmp2 };
-          tmp8 = closure_2_10(React5, obj4);
+          tmp8 = closure_2_10(metroImportDefault, obj4);
         }
         return tmp8;
       }
@@ -109,8 +109,8 @@ class Coachmark {
     }
     items4[1] = textOnlyPadding;
     items5 = [, ];
-    items5[0] = tmp17(graphic(renderImgComponent[14]).Text, { style: items4, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title });
-    obj23 = { style: tmp.text, variant: "text-sm/medium", color: "text-subtle", children: description };
+    items5[0] = tmp17(graphic(renderImgComponent[14]).Text, { style: items4, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: title });
+    obj23 = { style: tmp.text, variant: "body-sm/medium", color: "text-subtle", children: description };
     items5[1] = tmp17(tmp8(tmp6[14]).Text, obj23);
     obj22.children = items5;
     items3[1] = tmp14(tmp16, obj22);
@@ -262,13 +262,13 @@ function Cursor(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.cursorContainer, "top" === position ? { marginTop: -6 } : { marginBottom: -6 }, { flexDirection: str, left: -adjustmentX }];
   obj.style = items;
-  const items1 = [closure_1_10(React5, { style: tmp.cursorHead }), closure_1_10(React5, { style: tmp.cursorSpine })];
+  const items1 = [closure_1_10(metroImportDefault, { style: tmp.cursorHead }), closure_1_10(metroImportDefault, { style: tmp.cursorSpine })];
   obj.children = items1;
-  return closure_1_11(React5, obj);
+  return closure_1_11(metroImportDefault, obj);
 }
 let closure_3 = ["style"];
 get_ActivityIndicator = fn(17);
-({ View: closure_7, Pressable } = get_ActivityIndicator);
+({ View: metroImportDefault, Pressable } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);

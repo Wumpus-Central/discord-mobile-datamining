@@ -41,8 +41,8 @@ let closure_22 = async function _startAudioRecording(arg0) {
           closure_129_0 = closure_0;
           closure_129_1 = undefined;
           c19 = null;
-          React7(constants.REQUESTED);
-          React6(closure_0);
+          React6(constants.REQUESTED);
+          React5(closure_0);
           const mediaEngine = MediaEngineStore.getMediaEngine();
           mediaEngine.on(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, guild);
           c4 = 1;
@@ -267,18 +267,18 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(13856);
+const VoiceMessagesUIStore = fn(13942);
 ({
   addVoiceMessageWave: hasOwnProperty,
-  resetVoiceMessageState: metroRequire,
-  setSavedVoiceMessageUploadData: closure_7,
+  resetVoiceMessageState: closure_6,
+  setSavedVoiceMessageUploadData: metroImportDefault,
   setVoiceMessageRecordingId: closure_8,
   setVoiceMessageRecordingState: closure_9,
   setVoiceMessageStartTimeMillis: closure_10,
   useVoiceMessagesUIStore: closure_11,
   VoiceMessageRecordingStatus: closure_12,
 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(13857);
+const VoiceMessageConstants = fn(13943);
 ({
   WAVEFORM_WAVE_MAX_VALUE: map1,
   VOICE_RECORDING_MIN_DB: closure_14,

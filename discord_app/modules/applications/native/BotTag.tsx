@@ -118,9 +118,9 @@ class BotTag {
     tmp24 = jsxs;
     tmp25 = View;
     tmp26 = jsx;
-    str3 = "text-xs/semibold";
+    str3 = "body-xs/semibold";
     if ("sm" === size) {
-      str3 = "text-xxs/semibold";
+      str3 = "footnote/semibold";
     }
     items1[1] = tmp26(tmp17(tmp15[8]).Text, {
       variant: str3,
@@ -136,7 +136,7 @@ class BotTag {
 const View = fn(17).View;
 const BotTagTypes = fn(1362).BotTagTypes;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   tag: {
@@ -172,7 +172,7 @@ const obj5 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.tagTextNormal = { color: nativeDefault.colors.WHITE };
 const obj6 = { color: nativeDefault.colors.WHITE };
 obj2.tagTextInverted = { color: nativeDefault.colors.BACKGROUND_BRAND };
-const React5 = createStyles.createStyles(obj2);
+const metroImportDefault = createStyles.createStyles(obj2);
 BotTag.Types = BotTagTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/native/BotTag.tsx");

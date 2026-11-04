@@ -142,7 +142,7 @@ function PricingSubheadingCopy() {
           const tmp2Result16 = tmp2(tmp3[20]);
         }
         if (result !== result1) {
-          const obj9 = { style: tmp.cardText, accessibilityLabel: null, variant: "text-md/medium", children: null };
+          const obj9 = { style: tmp.cardText, accessibilityLabel: null, variant: "body-md/medium", children: null };
           const intl2 = tmp2(tmp3[21]).intl;
           const obj10 = { price: str3, originalPrice: str2 };
           obj9.accessibilityLabel = intl2.formatToPlainString(tmp2(tmp3[21]).t.lEIwDw, obj10);
@@ -155,7 +155,7 @@ function PricingSubheadingCopy() {
               if (str3 !== str2) {
                 const obj = {
                   style: closure_0.originalPrice,
-                  variant: "text-sm/medium",
+                  variant: "body-sm/medium",
                   color: "text-muted",
                   children,
                 };
@@ -167,7 +167,7 @@ function PricingSubheadingCopy() {
           obj9.children = intl3.format(tmp2(tmp3[21]).t.eRSsbf, obj11);
           let obj12 = obj9;
         } else {
-          obj12 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+          obj12 = { style: tmp.cardText, variant: "body-md/medium", children: null };
           const intl = tmp2(tmp3[21]).intl;
           const obj13 = { price: str3 };
           obj12.children = intl.format(tmp2(tmp3[21]).t.Mmf63F, obj13);
@@ -178,7 +178,7 @@ function PricingSubheadingCopy() {
           if (hasBoostDiscountResult) {
             if (tmp5Result3.isPremium(stateFromStores, closure_14.TIER_2)) {
               const obj14 = { children: null };
-              const obj15 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+              const obj15 = { style: tmp.cardText, variant: "body-md/medium", children: null };
               const intl5 = tmp2(tmp3[21]).intl;
               const obj16 = {
                 freeSubscriptionCount,
@@ -198,7 +198,7 @@ function PricingSubheadingCopy() {
           tmp34 = tmp31Result;
           if (tmp5Result4.isPremium(stateFromStores, closure_14.TIER_1)) {
             const obj17 = { children: null };
-            const obj18 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+            const obj18 = { style: tmp.cardText, variant: "body-md/medium", children: null };
             const intl4 = tmp2(tmp3[21]).intl;
             const obj19 = { discountPercent: tmp2(tmp3[22]).formatPercent(stateFromStores1, closure_17 / 100) };
             obj18.children = intl4.format(tmp2(tmp3[21]).t.XVMAKU, obj19);
@@ -213,7 +213,7 @@ function PricingSubheadingCopy() {
       }
     }
   }
-  return closure_18(require("Text/Text").Text, { style: tmp.cardText, variant: "text-md/medium", children: "..." });
+  return closure_18(require("Text/Text").Text, { style: tmp.cardText, variant: "body-md/medium", children: "..." });
 }
 const View = fn(17).View;
 const CurrencyCodes = fn(1072).CurrencyCodes;

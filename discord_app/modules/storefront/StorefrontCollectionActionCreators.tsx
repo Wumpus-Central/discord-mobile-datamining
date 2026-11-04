@@ -9,8 +9,8 @@ import StorefrontCollectionRecord from "records/StorefrontCollectionRecord.tsx";
 
 require = fn;
 let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
+  if (c7 === 2) {
+    c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp6 === 3) {
     if (arg0 === 1) {
@@ -23,152 +23,171 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
     }
   } else {
     try {
-      c6 = 2;
-      if (0 === c5) {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          c6 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
+          c7 = 3;
+          let obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          ({ collectionIds: closure_129_0, includeUnpublishedProducts } = _require);
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          ({ collectionIds: closure_130_0, includeUnpublishedProducts } = _require);
           if (includeUnpublishedProducts === undefined) {
             includeUnpublishedProducts = false;
           }
-          closure_129_1 = includeUnpublishedProducts;
+          closure_130_1 = includeUnpublishedProducts;
           let flag = _require.includeUnpublishedCollections;
           if (flag === undefined) {
             flag = false;
           }
-          closure_129_2 = flag;
+          closure_130_2 = flag;
           let flag2 = _require.ignoreCache;
           if (flag2 === undefined) {
             flag2 = false;
           }
-          closure_129_3 = flag2;
+          closure_130_3 = flag2;
           let flag3 = _require.includePricing;
           if (flag3 === undefined) {
             flag3 = false;
           }
-          closure_129_4 = flag3;
-          closure_129_5 = undefined;
-          closure_129_6 = undefined;
-          c5 = 1;
+          closure_130_4 = flag3;
+          let obj5 = closure_1;
+          if (closure_1 === undefined) {
+            obj5 = {};
+          }
+          let flag4 = obj5.retryAfterError;
+          if (flag4 === undefined) {
+            flag4 = false;
+          }
+          closure_130_5 = flag4;
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
           c6 = 1;
+          c7 = 1;
           return { value: "flexDirection", done: true };
         }
       } else {
         if (1 === tmp7) {
           if (arg0 === 1) {
-            c6 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            c7 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
-            closure_129_5 = closure_129_0.filter((item) => {
-              let shouldRefetchEntryResult = Boolean(item);
-              if (shouldRefetchEntryResult) {
-                const obj2 = {
-                  fetchState: c5.getFetchState(item),
-                  fetchedAt: c5.getFetchedAt(item),
-                  needsPricing,
-                  hasPricingCoverage: c5.hasPricingCoverage(item),
-                };
-                shouldRefetchEntryResult = closure_0(dependencyMap[5]).shouldRefetchEntry(obj2);
-                const obj = closure_0(dependencyMap[5]);
+            closure_130_6 = closure_130_0.filter((item) => {
+              if (Boolean(item)) {
+                fetchState = fetchState.getFetchState(item);
+                let tmp3 = !closure_1_5;
+                if (closure_1_5) {
+                  tmp3 = "error" !== fetchState;
+                }
+                let shouldRefetchEntryResult = !tmp3;
+                if (tmp3) {
+                  const obj3 = {
+                    fetchState,
+                    fetchedAt: obj.getFetchedAt(item),
+                    needsPricing,
+                    hasPricingCoverage: obj.hasPricingCoverage(item),
+                  };
+                  shouldRefetchEntryResult = closure_0(dependencyMap[5]).shouldRefetchEntry(obj3);
+                  const obj2 = closure_0(dependencyMap[5]);
+                }
+                return shouldRefetchEntryResult;
+              } else {
+                return false;
               }
-              return shouldRefetchEntryResult;
             });
-            if (0 !== closure_129_5.length) {
-              c4 = 1;
-              const obj7 = {
+            if (0 !== closure_130_6.length) {
+              c5 = 1;
+              const obj9 = {
                 type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH",
-                collectionIds: closure_129_5,
-                includePricing: closure_129_4,
+                collectionIds: closure_130_6,
+                includePricing: closure_130_4,
               };
-              closure_130_1(closure_130_2[6]).dispatch(obj7);
-              const obj6 = closure_130_1(closure_130_2[6]);
+              closure_131_1(closure_131_2[6]).dispatch(obj9);
+              const obj6 = closure_131_1(closure_131_2[6]);
               const request = {
-                url: closure_130_7.STOREFRONT_COLLECTIONS_WITH_PRODUCTS,
+                url: closure_131_7.STOREFRONT_COLLECTIONS_WITH_PRODUCTS,
                 query: null,
                 rejectWithError: true,
               };
-              const obj9 = {
-                collection_ids: closure_129_5,
-                locale: closure_130_4.locale,
-                with_bundled_skus: true,
-                include_pricing: closure_129_4,
-                include_google_sku_ids: true,
-                include_unpublished_products: closure_129_1,
-                include_unpublished_collections: closure_129_2,
-                ignore_cache: closure_129_3,
-              };
-              request.query = obj9;
-              c5 = 3;
-              c6 = 1;
               const obj10 = {
-                value: closure_130_0(closure_130_2[7]).httpGetWithCountryCodeQuery(request),
+                collection_ids: closure_130_6,
+                locale: closure_131_4.locale,
+                with_bundled_skus: true,
+                include_pricing: closure_130_4,
+                include_google_sku_ids: true,
+                include_unpublished_products: closure_130_1,
+                include_unpublished_collections: closure_130_2,
+                ignore_cache: closure_130_3,
+              };
+              request.query = obj10;
+              c6 = 3;
+              c7 = 1;
+              const obj11 = {
+                value: closure_131_0(closure_131_2[7]).httpGetWithCountryCodeQuery(request),
                 done: false,
               };
-              return obj10;
+              return obj11;
             }
           }
         } else {
           if (2 === tmp7) {
-            c4 = 0;
-            closure_129_7 = closure_3;
-            const obj11 = {
+            c5 = 0;
+            closure_130_8 = needsPricing;
+            const obj12 = {
               type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE",
-              collectionIds: closure_129_5,
+              collectionIds: closure_130_6,
               apiError: null,
             };
-            const tmp29 = new closure_130_1(closure_130_2[8])(closure_129_7);
-            obj11.apiError = tmp29;
-            closure_130_1(closure_130_2[6]).dispatch(obj11);
-            const obj4 = closure_130_1(closure_130_2[6]);
+            const tmp29 = new closure_131_1(closure_131_2[8])(closure_130_8);
+            obj12.apiError = tmp29;
+            closure_131_1(closure_131_2[6]).dispatch(obj12);
+            const obj4 = closure_131_1(closure_131_2[6]);
           } else if (arg0 === 1) {
-            c6 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 !== 2) {
-            closure_129_6 = value;
-            const obj12 = {
+            closure_130_7 = value;
+            const obj13 = {
               type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS",
-              collectionIds: closure_129_5,
+              collectionIds: closure_130_6,
               collections: null,
               includePricing: null,
             };
-            const collections = closure_129_6.body.collections;
-            obj12.collections = collections.map(closure_130_6.fromServer);
-            obj12.includePricing = closure_129_4;
-            closure_130_1(closure_130_2[6]).dispatch(obj12);
-            c4 = 0;
-            let obj = closure_130_1(closure_130_2[6]);
+            const collections = closure_130_7.body.collections;
+            obj13.collections = collections.map(closure_131_6.fromServer);
+            obj13.includePricing = closure_130_4;
+            closure_131_1(closure_131_2[6]).dispatch(obj13);
+            c5 = 0;
+            const obj = closure_131_1(closure_131_2[6]);
           }
-          c4 = 0;
-          c6 = 3;
-          const obj13 = { value, done: true };
-          return obj13;
+          c5 = 0;
+          c7 = 3;
+          const obj14 = { value, done: true };
+          return obj14;
         }
-        c6 = 3;
+        c7 = 3;
       }
     } catch (tmp48) {
-      closure_3 = tmp48;
-      if (tmp4 === c4) {
-        c6 = tmp2;
+      needsPricing = tmp48;
+      if (tmp4 === c5) {
+        c7 = tmp2;
         throw tmp48;
       } else {
-        c5 = tmp;
+        c6 = tmp;
       }
     }
   }

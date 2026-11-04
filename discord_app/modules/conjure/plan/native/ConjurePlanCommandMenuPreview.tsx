@@ -86,7 +86,7 @@ export default function ConjurePlanCommandMenuPreview(appIconSrc) {
   const intl = util.intl;
   const t = util.t;
   items1[1] = React4(Text_Text.Text, {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-default",
     children: intl.string("message" === target ? t["5IEsGx"] : t.LYju5J),
   });
@@ -108,7 +108,7 @@ export default function ConjurePlanCommandMenuPreview(appIconSrc) {
   const items4 = [
     tmp10Result,
     React4(Text_Text.Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-strong",
       style: tmp.label,
       children: commandName,

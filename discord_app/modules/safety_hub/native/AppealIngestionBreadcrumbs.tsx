@@ -54,7 +54,7 @@ export default function AppealIngestionBreadcrumbs(reasons) {
   let tmp2 = null;
   if (0 !== reasons.length) {
     let obj = { style: tmp.container, children: null };
-    const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/semibold", children: null };
+    const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "body-xs/semibold", children: null };
     const intl = require("util").intl;
     obj2.children = intl.string(require("util").t.eQg0Ck);
     items = [
@@ -68,7 +68,7 @@ export default function AppealIngestionBreadcrumbs(reasons) {
             lineClamp: 2,
             ellipsizeMode: "tail",
             style: closure_0.breadCrumbText,
-            variant: "text-md/medium",
+            variant: "body-md/medium",
             children,
           }),
         ];

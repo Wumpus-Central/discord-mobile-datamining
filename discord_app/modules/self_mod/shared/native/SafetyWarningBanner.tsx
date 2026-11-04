@@ -62,10 +62,10 @@ class SafetyWarningBanner {
     items2 = [,];
     items2[0] = jsx(View, obj13);
     obj15 = { style: tmp.textContainer, children: null };
-    obj16 = { style: tmp.text, variant: "heading-md/semibold", children: header };
+    obj16 = { style: tmp.text, variant: "heading-sm/semibold", children: header };
     items3 = [,];
     items3[0] = jsx(channelId(senderId[13]).Text, obj16);
-    obj17 = { style: tmp.text, variant: "heading-sm/medium", children: description };
+    obj17 = { style: tmp.text, variant: "heading-xs/medium", children: description };
     items3[1] = jsx(channelId(senderId[13]).Text, obj17);
     obj15.children = items3;
     items2[1] = jsxs(View, obj15);
@@ -100,7 +100,7 @@ class SafetyWarningBanner {
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: null,
@@ -136,7 +136,7 @@ let obj5 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.closeButtonIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj6 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.buttonsContainer = { flexDirection: "row", marginTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
-const React6 = createStyles.createStyles(obj2);
+const React5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyWarningBanner.tsx");
 

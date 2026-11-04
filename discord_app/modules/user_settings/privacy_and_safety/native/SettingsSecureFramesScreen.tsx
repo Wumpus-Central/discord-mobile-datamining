@@ -65,7 +65,7 @@ function renderItem(item) {
   if (item.type === constants.USER) {
     const obj = {};
     const merged = Object.assign(item);
-    return React5(UserListItem, obj);
+    return metroImportDefault(UserListItem, obj);
   }
 }
 function getItemType(type) {
@@ -91,7 +91,7 @@ function SettingsSecureFramesFooter() {
   let tmp8 = null;
   if (0 !== secureFramesVerifiedUserIds.length) {
     const obj4 = { style: tmp.list, children: null };
-    const obj5 = { variant: "text-sm/semibold", color: "text-default", children: null };
+    const obj5 = { variant: "body-sm/semibold", color: "text-default", children: null };
     const intl = tmp2(tmp3[15]).intl;
     obj5.children = intl.string(tmp2(tmp3[15]).t["5b3FNI"]);
     const items2 = [closure_7(tmp2(tmp3[20]).Text, obj5), ,];
@@ -101,7 +101,7 @@ function SettingsSecureFramesFooter() {
     const obj8 = { keyExtractor, getItemType, renderItem, data: tmp7 };
     obj6.children = closure_7(tmp2(tmp3[21]).FlashList, obj8);
     items2[1] = closure_7(View, obj6);
-    const obj9 = { variant: "text-xs/normal", color: "text-default", children: null };
+    const obj9 = { variant: "body-xs/normal", color: "text-default", children: null };
     const intl2 = tmp2(tmp3[15]).intl;
     const obj10 = { helpArticle: tmp2(tmp3[22]).getSecureFramesVerifiedDevicesHelpdeskArticle() };
     obj9.children = intl2.format(tmp2(tmp3[15]).t["7w9ymD"], obj10);
@@ -115,7 +115,7 @@ function SettingsSecureFramesFooter() {
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 },
@@ -137,17 +137,17 @@ export default function SettingsSecureFramesScreen() {
   const tmp = closure_9();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.header, children: null };
-  const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj3 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["9Q/PQv"]);
-  items = [React5(Text_Text.Text, obj3)];
-  const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
+  items = [metroImportDefault(Text_Text.Text, obj3)];
+  const obj4 = { variant: "body-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
   const obj5 = { helpArticle: SecureFramesUtils.getSecureFramesHelpdeskArticle() };
   obj4.children = intl2.format(util.t["8IwQfG"], obj5);
-  items[1] = React5(Text_Text.Text, obj4);
+  items[1] = metroImportDefault(Text_Text.Text, obj4);
   obj2.children = items;
-  const items1 = [React6(View, obj2), React5(SettingsSecureFramesFooter, {})];
+  const items1 = [React5(View, obj2), metroImportDefault(SettingsSecureFramesFooter, {})];
   obj.children = items1;
-  return React6(View, obj);
+  return React5(View, obj);
 }

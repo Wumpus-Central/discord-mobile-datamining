@@ -16,10 +16,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(12078).isMobileOverlaySupported;
-const guideURL = fn(12079).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(12137).isMobileOverlaySupported;
+const guideURL = fn(12138).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16 }, tableRow: { marginTop: 12 } });
 const size = fn(2);
@@ -37,7 +37,7 @@ export default function UserSettingsVoice() {
     nonContextualStreamOutputPresent = timestampProducer(UserSettingsVoiceOutputOptionsDefault, {});
   }
   items[1] = nonContextualStreamOutputPresent;
-  const obj3 = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
+  const obj3 = { style: tmp.tableRow, variant: "body-sm/medium", children: null };
   const intl = util.intl;
   obj3.children = intl.format(util.t["V+B3FH"], { guideURL });
   items[2] = timestampProducer(Text_Text.Text, obj3);
@@ -57,7 +57,7 @@ export default function UserSettingsVoice() {
   items[6] = tmp5Result;
   items[7] = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, { bottom: true });
   obj6.children = items;
-  obj2.children = React5(Stack_Stack.Stack, obj6);
+  obj2.children = metroImportDefault(Stack_Stack.Stack, obj6);
   return timestampProducer(View, obj2);
 }
 export function UserSettingsTableRowGroup(arg0) {

@@ -23,7 +23,7 @@ function ApplicationEducationEntry(children) {
   }
   items = [
     iconComponentResult,
-    hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", style: tmp.entryText, children: children.text }),
+    hasOwnProperty(Text_Text.Text, { variant: "body-md/normal", style: tmp.entryText, children: children.text }),
   ];
   obj.children = items;
   return timestampProducer(View, obj);
@@ -31,7 +31,7 @@ function ApplicationEducationEntry(children) {
 const View = fn(17).View;
 const MAX_FRIENDS = fn(1072).MAX_FRIENDS;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   applicationEducation: { flexDirection: "column", gap: 16 },
@@ -151,7 +151,7 @@ export default function ApplicationEducation(arg0) {
       if (null != arr2) {
         tmp27 = null;
         if (arr2.length > 0) {
-          const obj15 = { variant: "text-sm/normal", color: "text-default", children: arr2 };
+          const obj15 = { variant: "body-sm/normal", color: "text-default", children: arr2 };
           tmp27 = hasOwnProperty(Text_Text.Text, obj15);
         }
       }
@@ -172,7 +172,7 @@ export default function ApplicationEducation(arg0) {
         hasOwnProperty(AuthorizeFormSeparator.AuthorizeFormSeparator, {}),
       ];
       obj16.children = items2;
-      tmp30Result = timestampProducer(React5, obj16);
+      tmp30Result = timestampProducer(metroImportDefault, obj16);
     }
     return tmp30Result;
   }

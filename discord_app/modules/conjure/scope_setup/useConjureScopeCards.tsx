@@ -13,7 +13,7 @@ require = fn;
 function errorStatus(status) {
   return status.status;
 }
-let isProjectOwner = fn(6964).isProjectOwner;
+let isProjectOwner = fn(6979).isProjectOwner;
 let c8 = "scope-setup:q0";
 let closure_9 = "" + "scope-setup:q0" + ":0";
 let closure_10 = "" + "scope-setup:q0" + ":1";
@@ -221,7 +221,7 @@ export function useConjureScopeSetupCard(projectId) {
       }
     }
     let obj5 = {
-      clarification: tmp(12719).ownerOnlyClarification(memo),
+      clarification: tmp(12800).ownerOnlyClarification(memo),
       readOnly: true,
       hideSubmit: true,
       failure: null,
@@ -278,8 +278,8 @@ export function useConjureScopeSwitchCard(merged) {
     items1,
   );
   let obj = projectId(504);
-  const conjureEligibleGuilds = projectId(12735).useConjureEligibleGuilds("ConjureScopeSwitchCard");
-  let obj2 = projectId(12735);
+  const conjureEligibleGuilds = projectId(12816).useConjureEligibleGuilds("ConjureScopeSwitchCard");
+  let obj2 = projectId(12816);
   let obj3 = conjureEligibleGuilds;
   [tmp6, c6] = feature(conjureEligibleGuilds.useState(false), 2);
   const tmp5 = feature(conjureEligibleGuilds.useState(false), 2);
@@ -398,6 +398,6 @@ export function useConjureScopeSwitchCard(merged) {
   }
   const obj5 = { clarification: null, readOnly: true, hideSubmit: true, failure: null };
   let tmp7 = feature(conjureEligibleGuilds.useState(null), 2);
-  obj5.clarification = projectId(12719).ownerOnlyClarification(memo);
+  obj5.clarification = projectId(12800).ownerOnlyClarification(memo);
   return obj5;
 }

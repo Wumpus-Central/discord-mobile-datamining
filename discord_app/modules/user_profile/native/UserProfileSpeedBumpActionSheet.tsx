@@ -6,7 +6,7 @@ import UserSettings from "../../user_settings/UserSettings.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import _modDef8880 from "../../../../_runtime/metro/08880__.js";
+import _modDef8897 from "../../../../_runtime/metro/08897__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -16,11 +16,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function InformationTable(speedBumpType) {
   items = undefined;
-  let obj = { icon: _modDef8880, text: null };
+  let obj = { icon: _modDef8897, text: null };
   const intl = items(1113).intl;
   obj.text = intl.string(items(1113).t.kcuWva);
   items = [obj];
-  const obj2 = { icon: _modDef8880, text: null };
+  const obj2 = { icon: _modDef8897, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1113).intl;
     let stringResult = intl3.string(tmp2(1113).t.QxrDY1);
@@ -30,7 +30,7 @@ function InformationTable(speedBumpType) {
   }
   obj2.text = stringResult;
   items[1] = obj2;
-  return closure_12(items(7186).TableRowGroup, {
+  return closure_12(items(7201).TableRowGroup, {
     hasIcons: true,
     children: items.map((icon, index) => {
       const obj = {
@@ -44,7 +44,7 @@ function InformationTable(speedBumpType) {
   });
 }
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8878).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8895).UserProfileAnalyticsTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -285,7 +285,7 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
     items9[1] = analyticsLocations(tmp2(onClose[31]).Text, obj10);
     const obj11 = {
       style: tmp.bodyText,
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       color: "mobile-text-heading-primary",
       children: null,
     };
@@ -339,7 +339,7 @@ export default noop.memo(function UserProfileSpeedBumpActionSheet(userId) {
         },
         children: null,
       };
-      const obj18 = { variant: "text-sm/normal", color: "text-link", children: null };
+      const obj18 = { variant: "body-sm/normal", color: "text-link", children: null };
       const intl4 = tmp2(onClose[12]).intl;
       obj18.children = intl4.string(tmp2(onClose[12]).t.QbcRCJ);
       obj17.children = tmp35(tmp2(onClose[31]).Text, obj18);

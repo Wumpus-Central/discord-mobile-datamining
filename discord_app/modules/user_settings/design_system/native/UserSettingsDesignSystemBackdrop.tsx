@@ -19,7 +19,7 @@ function BackdropCard(arg0) {
   const obj2 = { spacing: 12, children: null };
   items = [
     timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: title }),
-    timestampProducer(Text_Text.Text, { variant: "text-md/normal", color: "text-subtle", children: description }),
+    timestampProducer(Text_Text.Text, { variant: "body-md/normal", color: "text-subtle", children: description }),
     timestampProducer(components_Button_Button.Button, {
       text: buttonLabel,
       onPress() {
@@ -29,13 +29,13 @@ function BackdropCard(arg0) {
     }),
   ];
   obj2.children = items;
-  obj.children = React5(Stack_Stack.Stack, obj2);
+  obj.children = metroImportDefault(Stack_Stack.Stack, obj2);
   return timestampProducer(Card.Card, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
@@ -112,7 +112,7 @@ export default function UserSettingsDesignSystemBackdrop() {
     }),
   ];
   obj3.children = items2;
-  const items3 = [React5(Stack_Stack.Stack, obj3)];
+  const items3 = [metroImportDefault(Stack_Stack.Stack, obj3)];
   if (tmp15Result) {
     function handleClose() {
       _undefined(false);
@@ -122,16 +122,16 @@ export default function UserSettingsDesignSystemBackdrop() {
     const items4 = [timestampProducer(Backdrop.Backdrop, obj5)];
     const obj6 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
     const obj7 = { children: null };
-    const obj8 = { variant: "text-md/normal", children: null };
+    const obj8 = { variant: "body-md/normal", children: null };
     const items5 = ["blur style: ", tmp6];
     obj8.children = items5;
-    obj7.children = React5(Text_Text.Text, obj8);
+    obj7.children = metroImportDefault(Text_Text.Text, obj8);
     obj6.children = timestampProducer(Card.Card, obj7);
     items4[1] = timestampProducer(hasOwnProperty, obj6);
     obj4.children = items4;
-    tmp15Result = React5(Dialog.Dialog, obj4);
+    tmp15Result = metroImportDefault(Dialog.Dialog, obj4);
   }
   items3[1] = tmp15Result;
   obj2.children = items3;
-  return React5(React4, obj2);
+  return metroImportDefault(React4, obj2);
 }

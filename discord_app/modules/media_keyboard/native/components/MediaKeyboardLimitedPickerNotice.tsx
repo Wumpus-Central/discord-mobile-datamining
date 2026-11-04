@@ -36,7 +36,7 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   }
   const obj = { style: items1, onLayout: callback, children: null };
   items1[1] = absoluteContainer;
-  const obj2 = { style: tmp.text, variant: "text-sm/normal", children: null };
+  const obj2 = { style: tmp.text, variant: "body-sm/normal", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["5g7NcN"]);
   const items2 = [React4(Text_Text.Text, obj2)];

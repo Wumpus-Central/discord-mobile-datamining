@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05398_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05400_BottomSheetModal.js";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -88,7 +88,7 @@ function DropdownOptionRow(option) {
   }
   const obj7 = { style: tmp.labelRow, children: null };
   const items2 = [
-    closure_8(option(selected[11]).Text, { variant: "text-md/normal", children: option.title }),
+    closure_8(option(selected[11]).Text, { variant: "body-md/normal", children: option.title }),
     trailing,
   ];
   obj7.children = items2;
@@ -139,7 +139,7 @@ export default function DropdownOptionsActionSheet(arg0) {
     obj7.accessibilityLabel = intl2.string(util.t.E2ICbC);
     const options = stateFromStores.options;
     obj7.children = options.map((option) =>
-      React6(DropdownOptionRow, { option, responses, onSelect, canBeNew: Boolean(dependencyMap) }, option.id),
+      React5(DropdownOptionRow, { option, responses, onSelect, canBeNew: Boolean(dependencyMap) }, option.id),
     );
     const items2 = [closure_8(native.CardSection, obj7)];
     const obj8 = { style: tmp.closeButtonWrapper, children: null };

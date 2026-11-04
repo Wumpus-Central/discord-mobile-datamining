@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
+({ AnalyticEvents: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6 } = Constants);
 const PremiumConstants = fn(1387);
-({ PremiumSubscriptionSKUs: closure_7, PremiumUpsellTypes: closure_8 } = PremiumConstants);
+({ PremiumSubscriptionSKUs: metroImportDefault, PremiumUpsellTypes: closure_8 } = PremiumConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj2 = { nitroIcon: { marginRight: nativeDefault.space.PX_8, alignSelf: "center" } };
@@ -58,7 +58,9 @@ export default function StickerPickerPremiumSearchUpsell(guildId) {
       obj2.location = obj3;
       obj2.location_stack = analyticsLocations;
       const obj = AnalyticsUtilsDefault;
-      obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(useTier0UpsellContent ? React5.TIER_0 : React5.TIER_2);
+      obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(
+        useTier0UpsellContent ? metroImportDefault.TIER_0 : metroImportDefault.TIER_2,
+      );
       obj2 = obj.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
     }
   }, items);

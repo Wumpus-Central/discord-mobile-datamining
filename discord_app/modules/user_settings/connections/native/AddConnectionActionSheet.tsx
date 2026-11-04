@@ -17,10 +17,10 @@ function AddApplicationIdentityTableRow(application) {
   _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7447)(application));
-  const tmp2 = analyticsLocations(7447)(application);
-  analyticsLocations = analyticsLocations(7446)(analyticsLocations(7471).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7446);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7463)(application));
+  const tmp2 = analyticsLocations(7463)(application);
+  analyticsLocations = analyticsLocations(7462)(analyticsLocations(7487).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7462);
   const tmp4 = closure_7();
   const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
   const obj2 = {
@@ -47,7 +47,7 @@ function AddApplicationIdentityTableRow(application) {
 }
 const AnalyticsLocations = Constants.AnalyticsLocations;
 let closure_4 = UserApplicationIdentityConstants.getMigratedApplicationIdentityConnectionsScreenApplications;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { list: { paddingHorizontal: 16 }, icon: null };
 let obj2 = { borderRadius: null };
 obj2.borderRadius = native.getIconSize(native.Icon.Sizes.LARGE);

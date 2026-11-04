@@ -9,9 +9,9 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5396).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5397).ACTION_SHEET_MAX_WIDTH;
 const EmojiConstants = fn(1388);
-({ EMOJI_URL_BASE_SIZE: closure_7, EmojiIntention: closure_8 } = EmojiConstants);
+({ EMOJI_URL_BASE_SIZE: metroImportDefault, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -129,7 +129,7 @@ let closure_13 = noop.memo(function EmojiButton(emoji) {
   obj4.src = url;
   obj3.children = closure_9(EmojiDefault, obj4);
   obj2.children = closure_9(View, obj3);
-  return closure_9(emoji(7106).PressableOpacity, obj2);
+  return closure_9(emoji(7121).PressableOpacity, obj2);
 });
 const obj11 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 size = fn(2);
@@ -149,10 +149,14 @@ export default noop.memo(function SelectDoubleTapEmojiRow(selectedEmoji) {
   let obj = selectedEmoji(substr[13]);
   items = [onPressEmoji];
   const stateFromStores = selectedEmoji(substr[9]).useStateFromStores(items, () => onPressEmoji.useReducedMotion);
-  const found = frequentlyUsedReactionEmojis.filter((emoji) => {
-    const obj2 = { emoji, channel: "Array", intention: constants.DEFAULT_REACT_EMOJI };
-    return !onPressEmoji(substr[15]).isEmojiFilteredOrLocked(obj2);
-  });
+  const found = frequentlyUsedReactionEmojis.filter(
+    (emoji) =>
+      !onPressEmoji(substr[15]).isEmojiFilteredOrLocked({
+        emoji,
+        channel: "Array",
+        intention: constants.DEFAULT_REACT_EMOJI,
+      }),
+  );
   substr = found.slice(0, rounded - 1);
   const items1 = [substr, selectedEmoji];
   memo = memo.useMemo(
@@ -175,7 +179,7 @@ export default noop.memo(function SelectDoubleTapEmojiRow(selectedEmoji) {
       let tmp = null;
       if (null != emoji) {
         const obj = { emoji, selected: index === memo, onPress };
-        tmp = React7(closure_13, obj, index);
+        tmp = React6(closure_13, obj, index);
       }
       return tmp;
     }),

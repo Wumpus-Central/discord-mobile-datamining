@@ -72,7 +72,7 @@ export default noop.memo(function GenericTextRow(text) {
   );
   obj.children = jsx(Text_Text.Text, {
     lineClamp: 1,
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     color: "mobile-text-heading-primary",
     style: tmp.container,
     children: text,

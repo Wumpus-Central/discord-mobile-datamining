@@ -53,7 +53,7 @@ let closure_8 = async function _guildRoomConnect(arg0) {
           c11 = 1;
           closure_4 = closure_2;
           if (closure_2 == null) {
-            closure_4 = React5;
+            closure_4 = metroImportDefault;
           }
           closure_136_4 = closure_4;
           let UNSET = closure_3;

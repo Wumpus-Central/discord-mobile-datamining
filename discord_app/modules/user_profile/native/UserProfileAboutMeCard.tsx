@@ -131,13 +131,13 @@ function MemberJoinDates(userId) {
     return member;
   });
   const obj3 = userId(504);
-  const obj4 = userId(7468);
+  const obj4 = userId(7484);
   const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
-  const createdAtDate1 = userId(7468).getCreatedAtDate(joinedAt, stateFromStores);
+  const createdAtDate1 = userId(7484).getCreatedAtDate(joinedAt, stateFromStores);
   const obj7 = { themeType, children: null };
   const intl = tmp4(1113).intl;
   obj7.children = intl.string(userId(1113).t.a6XYD9);
@@ -147,7 +147,7 @@ function MemberJoinDates(userId) {
   obj8.style = items4;
   const obj9 = {
     themeType,
-    icon: closure_11(userId(10815).ClydeIcon, { size: "xs" }),
+    icon: closure_11(userId(10863).ClydeIcon, { size: "xs" }),
     accessibilityLabel: null,
     children: null,
   };
@@ -165,9 +165,9 @@ function MemberJoinDates(userId) {
       importantForAccessibility: "no-hide-descendants",
       children,
     };
-    const items6 = [closure_11(tmp4(5747).Text, obj11)];
+    const items6 = [closure_11(tmp4(5761).Text, obj11)];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    const obj13 = { guild: stateFromStores1, size: tmp4(7083).GuildIconSizes.XXSMALL };
+    const obj13 = { guild: stateFromStores1, size: tmp4(7098).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);
     const intl3 = tmp4(1113).intl;
     const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };
@@ -309,23 +309,23 @@ function BotSlashCommands(channel) {
   return tmp8Result;
 }
 const View = fn(17).View;
-const Constants = fn(7497);
+const Constants = fn(7513);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1072).Routes;
 const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = {
-  headingVariant: "text-sm/semibold",
-  textVariant: "text-md/normal",
+  headingVariant: "body-sm/semibold",
+  textVariant: "body-md/normal",
   headingSpacing: 8,
   rowGap: 24,
   columnGap: 6,
 };
 const dependencyMap = {
   [UserProfileThemeTypes.PREVIEW]: {
-    headingVariant: "text-xs/semibold",
-    textVariant: "text-sm/normal",
+    headingVariant: "body-xs/semibold",
+    textVariant: "body-sm/normal",
     headingSpacing: 4,
     rowGap: 12,
     columnGap: 3,

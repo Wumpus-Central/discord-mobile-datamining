@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, paddingHorizontal: 16 },
@@ -77,12 +77,12 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     const obj7 = { classification: safetyHubClassification.classification };
     items5[3] = timestampProducer(AppealIngestionPolicySummaryDefault, obj7);
     obj3.children = items5;
-    items3[1] = React5(View, obj3);
+    items3[1] = metroImportDefault(View, obj3);
     obj6.children = items3;
-    return React5(AppealIngestionModal.AppealIngestionModalScreen, obj6);
+    return metroImportDefault(AppealIngestionModal.AppealIngestionModalScreen, obj6);
   } else {
     const obj8 = {
-      variant: "heading-md/medium",
+      variant: "heading-sm/medium",
       color: "text-link",
       style: tmp.detailsAction,
       onPress() {
@@ -94,10 +94,10 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
               closure_1_1(572).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
               const obj = closure_1_1(572);
               const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-              closure_1_1(5381).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              closure_1_1(5382).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
             onClose() {
-              return closure_1_1(5381).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              return closure_1_1(5382).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
           },
         );

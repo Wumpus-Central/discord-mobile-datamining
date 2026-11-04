@@ -41,7 +41,7 @@ function FriendsEmptyComponent() {
   const intl3 = util.intl;
   obj4.accessibilityLabel = intl3.string(util.t.a7FVbE);
   obj4.hitSlop = { top: 8, left: 8, bottom: 8, right: 8 };
-  const obj7 = { style: tmp.goToFriendsLink, variant: "text-sm/semibold", color: "text-link", children: null };
+  const obj7 = { style: tmp.goToFriendsLink, variant: "body-sm/semibold", color: "text-link", children: null };
   const intl4 = util.intl;
   obj7.children = intl4.string(util.t.a7FVbE);
   obj4.children = React4(Text_Text.Text, obj7);
@@ -51,7 +51,7 @@ function FriendsEmptyComponent() {
 }
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};

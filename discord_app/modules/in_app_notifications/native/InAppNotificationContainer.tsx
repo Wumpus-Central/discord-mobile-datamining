@@ -61,9 +61,9 @@ function NotificationWrapper(notification) {
   }
 }
 let StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(11156);
+const InAppNotificationConstants = fn(11204);
 ({
-  DEFAULT_ANIMATION_TIMING: closure_7,
+  DEFAULT_ANIMATION_TIMING: metroImportDefault,
   extrapolateConfig: closure_8,
   MIN_SWIPE_DISTANCE: closure_9,
   MIN_SWIPE_VELOCITY: closure_10,

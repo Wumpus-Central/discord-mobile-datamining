@@ -33,7 +33,7 @@ export function ForYouEmptyState(height) {
   const obj3 = {
     accessibilityRole: "header",
     color: "mobile-text-heading-primary",
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     style: null,
     children: null,
   };
@@ -43,7 +43,7 @@ export function ForYouEmptyState(height) {
   const intl = util.intl;
   obj3.children = intl.string(util.t.MwjTvn);
   items1[1] = React3(Text_Text.Text, obj3);
-  const obj4 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
+  const obj4 = { color: "text-default", variant: "body-md/medium", style: tmp.text, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.AKBgPy);
   items1[2] = React3(Text_Text.Text, obj4);

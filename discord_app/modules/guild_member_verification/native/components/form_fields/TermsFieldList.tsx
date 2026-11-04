@@ -14,7 +14,7 @@ function TermsFieldListItem(rowNumber) {
   const obj = { style: tmp.termsRow, children: null };
   const obj2 = {
     style: tmp.termsRowNumber,
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "text-muted",
     accessibilityLabel: null,
     children: null,
@@ -25,7 +25,7 @@ function TermsFieldListItem(rowNumber) {
   items = [hasOwnProperty(Text_Text.Text, obj2)];
   const obj3 = {
     style: tmp.termsRowContent,
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     children: MarkupUtilsDefault.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId }),
   };
   items[1] = hasOwnProperty(Text_Text.Text, obj3);
@@ -34,7 +34,7 @@ function TermsFieldListItem(rowNumber) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   termsContainer: {
@@ -82,14 +82,14 @@ export default function TermsFieldList(rules) {
   const obj2 = {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "heading-md/semibold",
+    variant: "heading-sm/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = rules(1113).intl;
   obj2.children = intl.string(rules(1113).t.prJqwT);
   items = [
-    closure_5(rules(5747).Text, obj2),
+    closure_5(rules(5761).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

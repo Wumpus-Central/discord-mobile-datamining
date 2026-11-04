@@ -12,7 +12,7 @@ function renderMention(arg0, arg1, arg2) {
   closure_0 = arg0;
   const obj = {
     label: "@" + arg1,
-    variant: "text-md/medium",
+    variant: "body-md/medium",
     onPress() {
       return ConjureMessageActionSheet.openMessageAuthorProfile(closure_0);
     },
@@ -31,7 +31,7 @@ export default function ConjureProjectEventLine(arg0) {
     const obj2 = { projectId };
     let tmp8Result = React3(ConjureVoiceChannelPinCardDefault, obj2);
   } else {
-    const obj3 = { variant: "text-md/normal", color: "text-default", children: tmp3 };
+    const obj3 = { variant: "body-md/normal", color: "text-default", children: tmp3 };
     items = [React3(Text_Text.Text, obj3)];
     let tmp10Result = null;
     if (null != tmp4) {

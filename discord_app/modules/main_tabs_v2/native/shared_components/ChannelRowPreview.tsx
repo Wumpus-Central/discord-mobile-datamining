@@ -160,7 +160,7 @@ class ChannelRowPreview {
       };
       obj10.lineClamp = num;
       if (variant == null) {
-        variant = "text-sm/normal";
+        variant = "body-sm/normal";
       }
       obj10.variant = variant;
       obj10.color = color;
@@ -290,7 +290,7 @@ class NativeChannelRowPreview {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
 

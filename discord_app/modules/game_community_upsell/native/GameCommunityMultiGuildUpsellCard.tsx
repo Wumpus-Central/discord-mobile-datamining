@@ -339,7 +339,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   const items10 = [
     closure_12(gameId(onDismiss[22]), obj13),
     closure_12(guild(onDismiss[24]).Text, {
-      variant: "heading-md/semibold",
+      variant: "heading-sm/semibold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       style: tmp.guildName,
@@ -354,7 +354,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
     tmp16Result3 = description.length > 0;
   }
   if (tmp16Result3) {
-    const obj15 = { variant: "text-sm/medium", style: tmp.description, lineClamp: 3, children: description };
+    const obj15 = { variant: "body-sm/medium", style: tmp.description, lineClamp: 3, children: description };
     tmp16Result3 = closure_12(tmp4(tmp5[24]).Text, obj15);
   }
   items11[1] = tmp16Result3;
@@ -365,7 +365,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
     const obj17 = { style: tmp.memberCount, children: null };
     const obj18 = { style: tmp.dotOnline };
     const items13 = [closure_12(tmp15, obj18)];
-    const obj19 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+    const obj19 = { variant: "body-xs/medium", color: "text-subtle", children: null };
     let intl = tmp4(tmp5[19]).intl;
     const obj20 = { membersOnline: num };
     obj19.children = intl.format(tmp4(tmp5[19]).t["LC+S+m"], obj20);
@@ -379,7 +379,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
     const obj21 = { style: tmp.memberCount, children: null };
     const obj22 = { style: tmp.dot };
     const items15 = [closure_12(tmp15, obj22)];
-    const obj23 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+    const obj23 = { variant: "body-xs/medium", color: "text-subtle", children: null };
     const intl2 = tmp4(tmp5[19]).intl;
     const obj24 = { count: num2 };
     obj23.children = intl2.format(tmp4(tmp5[19]).t.zRl6XR, obj24);

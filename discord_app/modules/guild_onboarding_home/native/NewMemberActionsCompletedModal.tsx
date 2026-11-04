@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   screen: {
@@ -80,7 +80,7 @@ export default function NewMemberActionsCompleted(arg0) {
   );
   const effect1 = noop.useEffect(() => {
     const timerId = setTimeout(
-      () => _undefined2(6864).popWithKey(_undefined(7523).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => _undefined2(6879).popWithKey(_undefined(7539).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);

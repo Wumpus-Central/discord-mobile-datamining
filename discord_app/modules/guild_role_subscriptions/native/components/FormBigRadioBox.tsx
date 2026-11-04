@@ -101,12 +101,12 @@ export default function FormBigRadioBox(arg0) {
   items1[2] = React4(Text_Text.Text, {
     style: tmp.title,
     accessibilityRole: "header",
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "interactive-text-default",
     children: title,
   });
   items1[3] = React4(Text_Text.Text, {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "interactive-text-default",
     children: description,
   });

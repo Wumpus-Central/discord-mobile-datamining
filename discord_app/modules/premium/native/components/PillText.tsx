@@ -2,7 +2,7 @@
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../Constants.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import usePremiumPrimaryGradientColorsDefault from "../usePremiumPrimaryGradientColors.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -31,7 +31,7 @@ export default function PillText(arg0) {
   obj.style = items;
   const tmp2 = usePremiumPrimaryGradientColorsDefault();
   obj.children = jsx(Text_Text.Text, {
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     color: "text-overlay-light",
     style: tmp.pillText,
     children: pillText,

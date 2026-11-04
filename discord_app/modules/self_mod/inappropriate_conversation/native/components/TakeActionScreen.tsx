@@ -13,7 +13,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(11393);
+const Constants = fn(11443);
 ({
   MODAL_LOCATION_CONTEXT_MOBILE: closure_10,
   NOFILTR_URL: closure_11,
@@ -108,18 +108,18 @@ export default function TakeActionButtons(senderId) {
               v1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: tmp4(8476).submitReportForInappropriateConversationSafetyAlert(
+                value: tmp4(8492).submitReportForInappropriateConversationSafetyAlert(
                   lastChannelMessage,
                   () => {
                     dependencyMap(true);
                     const obj2 = { text: null, variant: "success" };
                     const intl = closure_0(1113).intl;
                     obj2.text = intl.string(closure_0(1113).t.gn2c6X);
-                    c1(5832).open(closure_2_13, obj2);
+                    c1(5846).open(closure_2_13, obj2);
                   },
                   () => {
                     const intl = closure_1_0(1113).intl;
-                    closure_1_0(5831).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
+                    closure_1_0(5845).presentFailedToast(intl.string(closure_1_0(1113).t["0YV04/"]));
                   },
                 ),
                 done: false,
@@ -133,9 +133,9 @@ export default function TakeActionButtons(senderId) {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_5(false);
-            const result = v1(7620).showReportSuccessToast(closure_128_0, closure_128_1);
-            closure_128_3(tmp4(11406).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-            const obj = v1(7620);
+            const result = v1(7636).showReportSuccessToast(closure_128_0, closure_128_1);
+            closure_128_3(tmp4(11456).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+            const obj = v1(7636);
           }
           dependencyMap = 3;
           const obj6 = { value, done: true };
@@ -231,7 +231,7 @@ export default function TakeActionButtons(senderId) {
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_THROUGHLINE);
       };
       const items6 = [closure_14(Button, obj11)];
-      const obj12 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
+      const obj12 = { variant: "body-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
       const intl5 = tmp2(setReported[19]).intl;
       obj12.children = intl5.string(tmp2(setReported[19]).t["PMeb/r"]);
       items6[1] = closure_14(tmp2(setReported[27]).Text, obj12);
@@ -244,7 +244,7 @@ export default function TakeActionButtons(senderId) {
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR);
       };
       const items7 = [closure_14(Button, obj11)];
-      const obj13 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
+      const obj13 = { variant: "body-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
       const intl4 = tmp2(setReported[19]).intl;
       obj13.children = intl4.string(tmp2(setReported[19]).t.XNwhxC);
       items7[1] = closure_14(tmp2(setReported[27]).Text, obj13);

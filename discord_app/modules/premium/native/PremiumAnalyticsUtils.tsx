@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
   SubscriptionTypes: c3,
   PurchaseTypeToAnalyticsPaymentType: closure_4,
   PurchaseTypes: hasOwnProperty,
-  AnalyticEvents: metroRequire,
+  AnalyticEvents: closure_6,
 } = Constants);
 let obj = {
   WHAT_YOU_LOSE: 1,

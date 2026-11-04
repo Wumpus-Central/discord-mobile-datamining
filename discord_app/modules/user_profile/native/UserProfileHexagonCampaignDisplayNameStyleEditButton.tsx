@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
+({ View: closure_6, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({
   AnalyticsObjects: closure_8,
@@ -288,7 +288,7 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
     return applyArgumentsResult;
   }, []);
   const tmp3Result2 = require("useMountEffect");
-  analyticsLocations = useAnalyticsLocationsDefault(tmp6(7471).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
+  analyticsLocations = useAnalyticsLocationsDefault(tmp6(7487).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
   items = [analyticsLocations];
   callback3 = obj6.useCallback(() => {
     const obj = {
@@ -315,7 +315,7 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
   if (availability.availability !== constants5.LOCKED) {
     let obj8 = { style: tmp.labelBadge, children: null };
     const obj9 = { perk: constants4.DISPLAY_NAME_STYLE };
-    obj8.children = closure_15(tmp6(16631), obj9);
+    obj8.children = closure_15(tmp6(16721), obj9);
     tmp17Result = closure_15(closure_6, obj8);
   }
   obj7.labelTrailing = tmp17Result;
@@ -349,16 +349,16 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
       let obj14 = { maskElement: null, children: null };
       const obj15 = { style: tmp.nameMask, children: null };
       const obj16 = { colors, style: tmp.nameMaskOpaque };
-      const items2 = [closure_15(tmp6(5710), obj16)];
+      const items2 = [closure_15(tmp6(5723), obj16)];
       const obj17 = { colors: colors2, start: null, end: null, style: null };
       ({ START: obj23.start, END: obj23.end } = closure_11);
       obj17.style = tmp.nameMaskFade;
-      items2[1] = closure_15(tmp6(5710), obj17);
+      items2[1] = closure_15(tmp6(5723), obj17);
       obj15.children = items2;
       obj14.maskElement = closure_16(tmp31, obj15);
       obj14.children = tmp19;
-      tmp17Result3 = closure_15(tmp6(7164), obj14);
-      const tmp6Result2 = tmp6(7164);
+      tmp17Result3 = closure_15(tmp6(7179), obj14);
+      const tmp6Result2 = tmp6(7179);
     }
   }
   const items3 = [tmp17Result3];
@@ -386,10 +386,10 @@ export default function UserProfileHexagonCampaignDisplayNameStyleEditButton(ava
   obj13.children = items3;
   const items4 = [closure_16(closure_6, obj13)];
   if (availability.availability === constants5.LOCKED) {
-    let tmp17Result4 = closure_15(tmp3(7110).TableRowArrow, {});
+    let tmp17Result4 = closure_15(tmp3(7125).TableRowArrow, {});
   } else {
     const obj21 = { "aria-hidden": true, value: result, onValueChange: callback2, disabled };
-    tmp17Result4 = closure_15(tmp3(7490).FormSwitch, obj21);
+    tmp17Result4 = closure_15(tmp3(7506).FormSwitch, obj21);
   }
   items4[1] = tmp17Result4;
   obj11.children = items4;

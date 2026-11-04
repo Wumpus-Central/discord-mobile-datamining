@@ -4,7 +4,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Link from "../../../../_runtime/01500_Link.js";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7131 from "../../../../_runtime/metro/07131__.js";
+import _mod7146 from "../../../../_runtime/metro/07146__.js";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -52,7 +52,7 @@ export default function SearchableDestinationListHeader(arg0) {
         title: children.children,
         subtitle,
         subtitleColor,
-        variant: "redesign/heading-18/semibold",
+        variant: "heading-md/semibold",
       });
     },
     headerTitleAlign: "center",
@@ -78,7 +78,7 @@ export default function SearchableDestinationListHeader(arg0) {
     headerStatusBarHeight = num + nativeDefault.space.PX_8;
   }
   obj3.headerStatusBarHeight = headerStatusBarHeight;
-  return jsx(_mod7131.Header, {
+  return jsx(_mod7146.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {
@@ -86,7 +86,7 @@ export default function SearchableDestinationListHeader(arg0) {
         title: children.children,
         subtitle,
         subtitleColor,
-        variant: "redesign/heading-18/semibold",
+        variant: "heading-md/semibold",
       });
     },
     headerTitleAlign: "center",

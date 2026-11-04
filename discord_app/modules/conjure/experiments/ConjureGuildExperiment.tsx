@@ -51,7 +51,7 @@ function isConjureGuildEnabledWithoutExposure(id, location) {
   }
   return enabled;
 }
-function hasConjureGuildWithoutExposure(conjure_resume) {
+function hasConjureGuildWithoutExposure(ConjureProjectReconnectManager) {
   const values = Object.values(GuildStore.getGuilds());
   for (const item10012 of values) {
     if (isConjureGuildEnabledWithoutExposure(item10012.id, arg0)) {

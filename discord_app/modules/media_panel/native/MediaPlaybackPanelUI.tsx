@@ -5,7 +5,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05428_LegacyBaseButton.js";
 import LayerScope from "../../../design/components/Layers/native/LayerScope.native.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import cheapWorkletShallowEqual from "../../reanimated/native/cheapWorkletShallowEqual.tsx";
@@ -23,10 +23,11 @@ const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(16541);
-({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(11361).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(11360).BORDER_RADIUS_PHYSICS;
+const MediaPlaybackPanelConstants = fn(16633);
+({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: metroImportDefault, MediaPlaybackPanelModes: closure_8 } =
+  MediaPlaybackPanelConstants);
+const IS_IOS = fn(11411).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(11410).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 const obj2 = {
@@ -138,7 +139,7 @@ export default function MediaPlaybackPanelUI() {
   const items4 = [
     closure_14,
     cheapWorkletShallowEqual.cheapWorkletShallowEqual,
-    React6,
+    React5,
     updateSharedValueIfChangedDefault,
     wrapperDimensions,
     wrapperOffset,
@@ -218,7 +219,7 @@ export default function MediaPlaybackPanelUI() {
   const items8 = [
     closure_16,
     cheapWorkletShallowEqual.cheapWorkletShallowEqual,
-    React6,
+    React5,
     MorphablePanelUtils.getClampedPIPPosition,
     tmp12,
     tmp31,
@@ -323,11 +324,11 @@ export default function MediaPlaybackPanelUI() {
   MediaPlaybackPanelUITsx4.__workletHash = 13851512553920;
   MediaPlaybackPanelUITsx4.__initData = tmp40;
   const animatedReaction1 = _mod1652.useAnimatedReaction(MediaPlaybackPanelUITsx3, MediaPlaybackPanelUITsx4);
-  if (mode.get() === React6.PIP) {
+  if (mode.get() === React5.PIP) {
     if (IS_IOS) {
       let maskEmptyElevation = tmpResult.maskElevation;
     }
-    if (mode.get() === React6.PIP) {
+    if (mode.get() === React5.PIP) {
       if (!IS_IOS) {
         let maskEmptyElevation2 = tmpResult.maskElevation;
       }
@@ -339,7 +340,7 @@ export default function MediaPlaybackPanelUI() {
         sharedValue3,
         spring_spring.withSpring,
         sharedValue,
-        React5,
+        metroImportDefault,
         sharedValue1,
         wrapperDimensions,
         maskEmptyElevation,

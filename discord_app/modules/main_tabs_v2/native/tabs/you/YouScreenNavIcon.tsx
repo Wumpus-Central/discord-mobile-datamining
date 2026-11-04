@@ -12,10 +12,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(14845).ICON_SIZE.md;
+const md = fn(14925).ICON_SIZE.md;
 const padding = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
-const point = { shape: fn(9637).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
+const point = { shape: fn(9656).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [point];
 const createStyles = fn(5141);
 let closure_9 = createStyles.createStyles((width) => {
@@ -104,7 +104,7 @@ export default noop.memo(function YouScreenNavIcon(arg0) {
   const items2 = [tmp7];
   const obj8 = {
     style: tmp4.label,
-    variant: "text-xs/semibold",
+    variant: "body-xs/semibold",
     color: "text-default",
     maxFontSizeMultiplier: 2,
     lineClamp: 1,

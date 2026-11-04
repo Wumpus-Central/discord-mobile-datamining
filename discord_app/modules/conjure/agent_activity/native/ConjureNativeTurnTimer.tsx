@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/conjure/agent_activity/native
 export default function ConjureNativeTurnTimer(variant) {
   let str = variant.variant;
   if (str === undefined) {
-    str = "text-sm/normal";
+    str = "body-sm/normal";
   }
   const tmp = closure_3();
   const conjureElapsedMs = useConjureElapsedMs.useConjureElapsedMs(variant.startedAt);

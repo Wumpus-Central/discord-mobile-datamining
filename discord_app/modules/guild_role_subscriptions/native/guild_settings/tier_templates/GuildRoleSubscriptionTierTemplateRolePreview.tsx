@@ -14,7 +14,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
@@ -63,7 +63,7 @@ export function GuildRoleSubscriptionRolePreview(content) {
   const items2 = [timestampProducer(FastImageDefault, { style: tmp3.avatar, source: { uri: roleImage } })];
   const obj5 = { style: tmp3.content, children: null };
   const obj6 = { style: tmp3.contextRow, children: null };
-  const obj7 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
+  const obj7 = { variant: "body-md/semibold", color: "interactive-text-active", style: null, children: null };
   const obj8 = { color: null };
   const obj4 = { style: tmp3.avatar, source: { uri: roleImage } };
   obj8.color = utils_ColorUtilsAll.int2hex(roleColor);
@@ -74,20 +74,20 @@ export function GuildRoleSubscriptionRolePreview(content) {
     timestampProducer(native.Spacer, { size: 4 }),
     timestampProducer(RoleIconDefault, { name: roleName, src: roleImage, size: 16 }),
     timestampProducer(native.Spacer, { size: 8 }),
-    timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" }),
+    timestampProducer(Text_Text.Text, { variant: "body-xs/medium", color: "text-muted", children: "4:20 PM" }),
   ];
   obj6.children = items3;
   const items4 = [
-    React5(View, obj6),
+    metroImportDefault(View, obj6),
     timestampProducer(Text_Text.Text, {
-      variant: "text-md/normal",
+      variant: "body-md/normal",
       color: "text-default",
       style: textStyle,
       children: content,
     }),
   ];
   obj5.children = items4;
-  items2[1] = React5(View, obj5);
+  items2[1] = metroImportDefault(View, obj5);
   obj3.children = items2;
-  return React5(View, obj3);
+  return metroImportDefault(View, obj3);
 }

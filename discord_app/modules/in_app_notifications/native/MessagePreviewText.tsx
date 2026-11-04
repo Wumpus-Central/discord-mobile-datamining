@@ -22,8 +22,8 @@ function NativeMessagePreviewContent(arg0) {
   ({ message, lineClamp, maxHeight } = arg0);
   const tmp = useTruncatedGradientColorsDefault();
   ({ gradientColors, gradientStyles } = tmp);
-  return React6(View, {
-    children: React6(ChannelRowPreview.NativeChannelRowPreview, {
+  return React5(View, {
+    children: React5(ChannelRowPreview.NativeChannelRowPreview, {
       message,
       lineClamp,
       maxHeight,
@@ -64,11 +64,11 @@ function EmbedMediaThumbnail(media) {
   }
   const obj = {
     style: null,
-    children: React6(FastImageDefault, { source: { uri: url }, style: tmp.embedMedia, resizeMode: "contain" }),
+    children: React5(FastImageDefault, { source: { uri: url }, style: tmp.embedMedia, resizeMode: "contain" }),
   };
   items = [tmp.embedMediaContainer, { aspectRatio: num }];
   obj.style = items;
-  return React6(View, obj);
+  return React5(View, obj);
 }
 function EmbedCard(embed) {
   embed = embed.embed;
@@ -101,20 +101,20 @@ function EmbedCard(embed) {
     const obj4 = { backgroundColor: int2hslResult };
     items[1] = obj4;
     obj3.style = items;
-    tmp9 = React6(View, obj3);
+    tmp9 = React5(View, obj3);
   }
   const items1 = [tmp9, ,];
   const obj5 = { style: tmp.embedTextContainer, children: null };
   let tmp11 = null != name;
   if (tmp11) {
-    const obj6 = { variant: "text-xxs/normal", color: "text-subtle", lineClamp: 1, children: name };
-    tmp11 = React6(Text_Text.Text, obj6);
+    const obj6 = { variant: "footnote/normal", color: "text-subtle", lineClamp: 1, children: name };
+    tmp11 = React5(Text_Text.Text, obj6);
   }
   const items2 = [tmp11, , ,];
   let tmp15 = null != name1;
   if (tmp15) {
-    const obj7 = { variant: "text-xs/medium", color: "text-default", lineClamp: 1, children: name1 };
-    tmp15 = React6(Text_Text.Text, obj7);
+    const obj7 = { variant: "body-xs/medium", color: "text-default", lineClamp: 1, children: name1 };
+    tmp15 = React5(Text_Text.Text, obj7);
   }
   items2[1] = tmp15;
   let tmp20Result = null != rawTitle;
@@ -126,30 +126,30 @@ function EmbedCard(embed) {
         num3 = 3;
       }
     }
-    const obj8 = { variant: "text-xs/medium", color: "text-link", lineClamp: num3, children: rawTitle };
-    tmp20Result = React6(Text_Text.Text, obj8);
+    const obj8 = { variant: "body-xs/medium", color: "text-link", lineClamp: num3, children: rawTitle };
+    tmp20Result = React5(Text_Text.Text, obj8);
   }
   items2[2] = tmp20Result;
   let tmp23 = null != embed.rawDescription;
   if (tmp23) {
-    const obj9 = { variant: "text-xs/medium", color: "text-default", lineClamp: 3, children: embed.rawDescription };
-    tmp23 = React6(Text_Text.Text, obj9);
+    const obj9 = { variant: "body-xs/medium", color: "text-default", lineClamp: 3, children: embed.rawDescription };
+    tmp23 = React5(Text_Text.Text, obj9);
   }
   items2[3] = tmp23;
   obj5.children = items2;
-  items1[1] = React7(View, obj5);
+  items1[1] = React6(View, obj5);
   let tmp27 = null != thumbnail;
   if (tmp27) {
     const obj10 = { media: thumbnail };
-    tmp27 = React6(EmbedMediaThumbnail, obj10);
+    tmp27 = React5(EmbedMediaThumbnail, obj10);
   }
   items1[2] = tmp27;
   obj2.children = items1;
-  return React7(View, obj2);
+  return React6(View, obj2);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11156);
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
+const InAppNotificationConstants = fn(11204);
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportDefault } =
   InAppNotificationConstants);
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
@@ -247,17 +247,17 @@ export default function MessagePreviewText(message) {
     if (first.type === MessageEmbedTypes.MessageEmbedTypes.GIFV) {
       if (null != text) {
         const obj3 = { text };
-        let tmp43 = React6(SystemMessageText, obj3);
+        let tmp43 = React5(SystemMessageText, obj3);
       }
       return tmp43;
     }
     const obj4 = { children: null };
     const obj5 = { message: getInitialMessagePreview, lineClamp, maxHeight };
-    const items1 = [React6(NativeMessagePreviewContent, obj5)];
+    const items1 = [React5(NativeMessagePreviewContent, obj5)];
     const obj6 = { embed: first };
-    items1[1] = React6(EmbedCard, obj6);
+    items1[1] = React5(EmbedCard, obj6);
     obj4.children = items1;
-    tmp43 = React7(View, obj4);
+    tmp43 = React6(View, obj4);
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
@@ -273,10 +273,10 @@ export default function MessagePreviewText(message) {
         formatResult = intl3.string(util.t["9ddYKt"]);
       }
       const obj8 = { text: formatResult };
-      return React6(SystemMessageText, obj8);
+      return React5(SystemMessageText, obj8);
     }
     const obj9 = { message: getInitialMessagePreview, lineClamp, maxHeight };
-    return React6(NativeMessagePreviewContent, obj9);
+    return React5(NativeMessagePreviewContent, obj9);
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       const channel = ChannelStore.getChannel(message.channel_id);
@@ -291,30 +291,25 @@ export default function MessagePreviewText(message) {
           muted: false,
           lineClamp,
         };
-        return React6(ChannelRowPreview.ChannelRowPreview, obj10);
+        return React5(ChannelRowPreview.ChannelRowPreview, obj10);
       }
     }
     const obj11 = { message: getInitialMessagePreview, lineClamp, maxHeight };
-    return React6(NativeMessagePreviewContent, obj11);
+    return React5(NativeMessagePreviewContent, obj11);
   } else {
     if (previewableMedia.length > 0) {
       if (null !== text) {
         const obj12 = { text };
-        const items2 = [React6(SystemMessageText, obj12)];
+        const items2 = [React5(SystemMessageText, obj12)];
         let tmp17Result = null !== secondaryText;
         if (tmp17Result) {
-          const obj13 = {
-            variant: "redesign/message-preview/medium",
-            color: "text-link",
-            lineClamp,
-            children: secondaryText,
-          };
-          tmp17Result = React6(Text_Text.Text, obj13);
+          const obj13 = { variant: "heading-sm/medium", color: "text-link", lineClamp, children: secondaryText };
+          tmp17Result = React5(Text_Text.Text, obj13);
         }
         const obj14 = { children: null };
         items2[1] = tmp17Result;
         obj14.children = items2;
-        return React7(View, obj14);
+        return React6(View, obj14);
       }
     }
     if (null != message.poll) {
@@ -328,19 +323,19 @@ export default function MessagePreviewText(message) {
       }
       const obj16 = { children: null };
       const obj17 = { text: formatResult1 };
-      const items3 = [React6(SystemMessageText, obj17)];
+      const items3 = [React5(SystemMessageText, obj17)];
       const obj18 = {
-        variant: "redesign/message-preview/medium",
+        variant: "heading-sm/medium",
         color: "text-default",
         lineClamp,
         children: message.poll.question.text,
       };
-      items3[1] = React6(Text_Text.Text, obj18);
+      items3[1] = React5(Text_Text.Text, obj18);
       obj16.children = items3;
-      return React7(View, obj16);
+      return React6(View, obj16);
     } else {
       const obj19 = { message, lineClamp, maxHeight };
-      return React6(NativeMessagePreviewContent, obj19);
+      return React5(NativeMessagePreviewContent, obj19);
     }
   }
   const tmpResult3 = useGetInitialMessagePreview;

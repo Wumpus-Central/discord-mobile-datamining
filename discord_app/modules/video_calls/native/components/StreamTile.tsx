@@ -1,14 +1,14 @@
 // discord_app/modules/video_calls/native/components/StreamTile.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05426_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
 import useVideoStreamErrorDefault from "../../../errors/hooks/useVideoStreamError.tsx";
 import VideoRenderer from "VideoRenderer.tsx";
 import StreamQualityLiveIndicatorDefault from "../../../go_live/native/StreamQualityLiveIndicator.tsx";
-import _modDef11914 from "../../../../../_runtime/metro/11914__.js";
+import _modDef11973 from "../../../../../_runtime/metro/11973__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
@@ -26,7 +26,7 @@ class StreamTextOverlay {
     tmp6 = closure_2;
     obj1 = {
       style: tmp.screenMessageText,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "text-overlay-light",
       children: global.title,
     };
@@ -47,7 +47,7 @@ class StreamTextOverlay {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(5888).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5902).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5141);
@@ -124,19 +124,19 @@ let closure_15 = noop.memo(function StreamContent(participant) {
         stream: stateFromStores,
         removeCloseButton: removeEmptyStateButton,
         removeSplashImage: removeEmptyStateImage,
-        type: tmp(11897).VideoEmptyTypes.STREAM_FAILED,
+        type: tmp(11956).VideoEmptyTypes.STREAM_FAILED,
         style: StyleSheet.absoluteFill,
       };
-      return closure_10(tmp4(11897), obj2);
+      return closure_10(tmp4(11956), obj2);
     } else if (ApplicationStreamStates.ENDED === state) {
       const obj3 = {
         stream: stateFromStores,
         removeCloseButton: removeEmptyStateButton,
         removeSplashImage: removeEmptyStateImage,
-        type: tmp(11897).VideoEmptyTypes.STREAM_ENDED,
+        type: tmp(11956).VideoEmptyTypes.STREAM_ENDED,
         style: StyleSheet.absoluteFill,
       };
-      return closure_10(tmp4(11897), obj3);
+      return closure_10(tmp4(11956), obj3);
     } else {
       if (ApplicationStreamStates.RECONNECTING === state) {
         const obj4 = { title: null };
@@ -150,10 +150,10 @@ let closure_15 = noop.memo(function StreamContent(participant) {
           const intl2 = tmp(1113).intl;
           obj5.title = intl2.string(tmp(1113).t["5q17w5"]);
           const intl3 = tmp(1113).intl;
-          const obj6 = { username: tmp4(6161).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
+          const obj6 = { username: tmp4(6176).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
           obj5.subtext = intl3.formatToPlainString(tmp(1113).t.meVVlb, obj6);
           tmp9 = closure_10(StreamTextOverlay, obj5);
-          const tmp4Result6 = tmp4(6161);
+          const tmp4Result6 = tmp4(6176);
         }
       }
       if (null != tmp5) {
@@ -161,11 +161,11 @@ let closure_15 = noop.memo(function StreamContent(participant) {
           stream: stateFromStores,
           removeCloseButton: removeEmptyStateButton,
           removeSplashImage: removeEmptyStateImage,
-          type: tmp(11897).VideoEmptyTypes.STREAM_FAILED,
+          type: tmp(11956).VideoEmptyTypes.STREAM_FAILED,
           style: StyleSheet.absoluteFill,
           avError: tmp5,
         };
-        return closure_10(tmp4(11897), obj7);
+        return closure_10(tmp4(11956), obj7);
       } else {
         const id = AuthenticationStore.getId();
         const obj8 = {
@@ -180,15 +180,15 @@ let closure_15 = noop.memo(function StreamContent(participant) {
           paused: null,
         };
         if (stateFromStores.ownerId === id) {
-          let REMOTE_STREAM = tmp(11904).VideoSpinnerContext.SELF_STREAM;
+          let REMOTE_STREAM = tmp(11963).VideoSpinnerContext.SELF_STREAM;
         } else {
-          REMOTE_STREAM = tmp(11904).VideoSpinnerContext.REMOTE_STREAM;
+          REMOTE_STREAM = tmp(11963).VideoSpinnerContext.REMOTE_STREAM;
         }
         const obj9 = { children: null };
         obj8.videoSpinnerContext = REMOTE_STREAM;
         obj8.userId = user.id;
         obj8.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
-        const items1 = [closure_10(tmp4(11902), obj8), tmp9];
+        const items1 = [closure_10(tmp4(11961), obj8), tmp9];
         obj9.children = items1;
         return closure_11(closure_12, obj9);
       }
@@ -211,7 +211,7 @@ let closure_16 = noop.memo(function Fullscreen(arg0) {
   obj.style = items;
   const tmp = closure_13();
   obj.children = closure_1_10(native.Icon, {
-    source: _modDef11914,
+    source: _modDef11973,
     size: native.Icon.Sizes.SMALL,
     color: nativeDefault.unsafe_rawColors.WHITE,
   });

@@ -9,7 +9,7 @@ import size from "../../../_runtime/metro/00002__.js";
   MAX_DISPATCHER_FLUSH_DEADLINE_TRIES: c3,
   DISPATCHER_STANDARD_TIMEOUT_MS: closure_4,
   DISPATCHER_IDEAL_TIME_LIMIT_MS: hasOwnProperty,
-  DISPATCHER_LONG_TIMEOUT_MS: metroRequire,
+  DISPATCHER_LONG_TIMEOUT_MS: closure_6,
 } = DispatcherWorkConstants);
 const logger = new LoggerDefault("DispatcherWorkScheduler");
 const result = size.fileFinishedImporting("modules/gateway/BasicWorkScheduler.tsx");
@@ -163,10 +163,10 @@ prototype["requestWorkTimeout"] = function requestWorkTimeout(flush, arg1) {
   self._workCallbackFn = flush;
   if (!self.hasWorkScheduled) {
     let telemetry = self.telemetry;
-    telemetry.time(self(15677).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
+    telemetry.time(self(15765).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
     if (self._nextDispatchTimeout === closure_6) {
       const telemetry2 = self.telemetry;
-      telemetry2.track(tmp(15677).WorkSchedulerTelemetryEvent.LONGER_DISPATCH);
+      telemetry2.track(tmp(15765).WorkSchedulerTelemetryEvent.LONGER_DISPATCH);
     }
     if (flag) {
       self._queueIdleCallback();

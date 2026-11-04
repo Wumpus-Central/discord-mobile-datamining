@@ -12,7 +12,7 @@ class GuildTemplatesItem {
     onGuildTemplatePress = global.onGuildTemplatePress;
     obj = {
       Icon() {
-        return React7(native.Icon, {
+        return React6(native.Icon, {
           source: GuildDirectoryTemplatesIcons.GUILD_TEMPLATE_ICONS[guildTemplate.id],
           disableColor: true,
           style: { width: 48, height: 48 },
@@ -28,9 +28,9 @@ class GuildTemplatesItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(13984);
-({ getHubGuildTemplatesMap: metroRequire, HubGuildTemplateId: closure_7 } = GuildDirectoryConstants);
-const GuildDirectoryCreate = fn(13989).GuildDirectoryCreate;
+const GuildDirectoryConstants = fn(14070);
+({ getHubGuildTemplatesMap: closure_6, HubGuildTemplateId: metroImportDefault } = GuildDirectoryConstants);
+const GuildDirectoryCreate = fn(14075).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -72,7 +72,7 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
   const intl = require("util").intl;
   obj6.children = intl.format(require("util").t.T7aLYT, { guildName: directoryGuildName.directoryGuildName });
   const items1 = [closure_9(require("Text/Text").Text, obj6)];
-  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj8 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
   obj8.children = intl2.string(require("util").t["RA+St6"]);
   items1[1] = closure_9(require("Text/Text").Text, obj8);

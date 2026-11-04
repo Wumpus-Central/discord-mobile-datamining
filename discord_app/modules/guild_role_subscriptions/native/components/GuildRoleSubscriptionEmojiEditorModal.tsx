@@ -10,7 +10,7 @@ import SubscriptionRoleStore from "../../SubscriptionRoleStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
+({ View: closure_6, SectionList: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5141);
@@ -177,11 +177,11 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
       let tmp7;
       if (hasItem1) {
         const obj7 = { children: null };
-        const obj8 = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
+        const obj8 = { variant: "body-sm/normal", color: "interactive-text-active", children: null };
         const intl = guildId(onClose[13]).intl;
         obj8.children = intl.string(guildId(onClose[13]).t["1GlN06"]);
         items = [set(guildId(onClose[18]).Text, obj8)];
-        const obj9 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
+        const obj9 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
         const intl2 = guildId(onClose[13]).intl;
         obj9.children = intl2.string(guildId(onClose[13]).t.J0XdJ4);
         items[1] = set(guildId(onClose[18]).Text, obj9);

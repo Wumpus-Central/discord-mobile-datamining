@@ -14,7 +14,7 @@ import TableRowIcon from "../../../../design/components/TableRow/native/TableRow
 import TableRowArrow from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
-import _modDef8474 from "../../../../../_runtime/metro/08474__.js";
+import _modDef8490 from "../../../../../_runtime/metro/08490__.js";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
 import FormComponents from "../shared/FormComponents.tsx";
@@ -93,7 +93,7 @@ class VoicePanelSettingsOverviewHeader {
     items4[0] = tmp10(tmp12, obj12);
     obj15 = {
       style: tmp.channelSubtitle,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       accessibilityRole: "summary",
       children: stateFromStores,
     };
@@ -104,7 +104,7 @@ class VoicePanelSettingsOverviewHeader {
       tmp6Result = tmp6(tmp3[21]);
       items5 = [,];
       items5[0] = tmp13(tmp2(tmp3[25]).LockIcon, { size: "xxs", color: "status-positive" });
-      obj17 = { variant: "text-xs/medium", color: "status-positive", children: null };
+      obj17 = { variant: "body-xs/medium", color: "status-positive", children: null };
       intl2 = tmp2(tmp3[24]).intl;
       obj17.children = intl2.string(tmp2(tmp3[24]).t["3BogKe"]);
       items5[1] = tmp13(tmp2(tmp3[22]).Text, obj17);
@@ -135,7 +135,7 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = {
     onPress: callback,
-    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8474 }),
+    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8490 }),
     label: null,
     trailing: null,
   };
@@ -155,7 +155,7 @@ function ActivityDebugToggle() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: WrenchIcon.WrenchIcon,
-    source: _modDef8474,
+    source: _modDef8490,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
@@ -167,8 +167,8 @@ function ActivityDebugToggle() {
 }
 const Constants = fn(1072);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
-const isStreamParticipant = fn(5801).isStreamParticipant;
-let closure_17 = fn(9394).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+const isStreamParticipant = fn(5815).isStreamParticipant;
+let closure_17 = fn(9411).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 const createStyles = fn(5141);
@@ -289,7 +289,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19385, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19489, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

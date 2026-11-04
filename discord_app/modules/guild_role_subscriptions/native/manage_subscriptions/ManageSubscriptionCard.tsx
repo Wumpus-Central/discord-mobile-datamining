@@ -48,7 +48,7 @@ function HeaderStatus(arg0) {
     if (flag) {
       str2 = "text-overlay-light";
     }
-    const obj2 = { variant: "text-xs/semibold", color: str2, children: str };
+    const obj2 = { variant: "body-xs/semibold", color: str2, children: str };
     obj.children = closure_1_11(Text_Text.Text, obj2);
     tmp9Result = closure_1_11(View, obj);
   }
@@ -67,7 +67,7 @@ function Header(guild) {
     closure_1_11(Text_Text.Text, {
       ellipsizeMode: "tail",
       lineClamp: 2,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "interactive-text-active",
       children: listing.name,
     }),
@@ -81,7 +81,7 @@ function Header(guild) {
     name = intl.string(util.t["He+cmd"]);
   }
   items2[1] = closure_1_11(Text_Text.Text, {
-    variant: "text-sm/medium",
+    variant: "body-sm/medium",
     color: "interactive-text-default",
     children: name,
   });
@@ -139,9 +139,9 @@ function CardBody(isTrial) {
               obj5.body = intl.string(tmp5(1113).t.NL7DFi);
               const intl2 = tmp5(1113).intl;
               obj5.confirmText = intl2.string(tmp5(1113).t["NX+WJN"]);
-              tmp3(6079).show(obj5);
+              tmp3(6094).show(obj5);
               c5 = 3;
-              const obj6 = tmp3(6079);
+              const obj6 = tmp3(6094);
             } else {
               dependencyMap = 1;
               _slicedToArray(true);
@@ -154,7 +154,7 @@ function CardBody(isTrial) {
               } else {
                 c4 = 2;
                 c5 = 1;
-                const obj8 = { value: tmp38(6655).resubscribeToSubscription(tmp45, analyticsLocations), done: false };
+                const obj8 = { value: tmp38(6670).resubscribeToSubscription(tmp45, analyticsLocations), done: false };
                 return obj8;
               }
             }
@@ -240,7 +240,7 @@ function CardBody(isTrial) {
     let obj4 = { style: tmp.paymentOverDueWarning, children: null };
     let obj5 = { size: "xs", color: tmp2(tmp3[8]).unsafe_rawColors.YELLOW_300 };
     items = [closure_11(isTrial(tmp3[21]).CircleErrorIcon, obj5)];
-    let obj6 = { variant: "text-sm/medium", color: "interactive-text-active", children: null };
+    let obj6 = { variant: "body-sm/medium", color: "interactive-text-active", children: null };
     let intl = isTrial(tmp3[9]).intl;
     obj6.children = intl.string(isTrial(tmp3[9]).t.eaqlau);
     items[1] = closure_11(isTrial(tmp3[10]).Text, obj6);
@@ -309,7 +309,7 @@ function CardBody(isTrial) {
   const intl6 = tmp15(tmp3[9]).intl;
   obj12.label = intl6.string(isTrial(resubscribeSubscription[9]).t.FRbWR8);
   obj12.onPress = function handleChangeTier() {
-    router_utils.transitionTo(React6.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+    router_utils.transitionTo(React5.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   };
   items4[1] = closure_11(isTrial(resubscribeSubscription[27]).TableRow, obj12);
   if (isCancelled) {
@@ -445,7 +445,7 @@ export default function ManageSubscriptionCard(subscription) {
         }
         items[1] = expanded;
         obj2.children = items;
-        tmp6Result = closure_12(tmp4(7103).Card, obj2);
+        tmp6Result = closure_12(tmp4(7118).Card, obj2);
       }
     }
   }

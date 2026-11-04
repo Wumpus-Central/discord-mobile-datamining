@@ -10,8 +10,8 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 require = fn;
 const ThemeConstants = fn(1195);
 ({
-  PROTO_THEME_MAP_MOBILE_REFRESH: metroRequire,
-  SystemTheme: closure_7,
+  PROTO_THEME_MAP_MOBILE_REFRESH: closure_6,
+  SystemTheme: metroImportDefault,
   SystemThemeState: closure_8,
 } = ThemeConstants);
 const size = fn(2);

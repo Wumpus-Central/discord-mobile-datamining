@@ -11,7 +11,7 @@ const HexagonCampaignConstants = fn(5166);
 ({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_4, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: hasOwnProperty } =
   HexagonCampaignConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 const obj2 = {
   legal: { textAlign: "center" },
@@ -35,7 +35,7 @@ export default function HexagonCampaignThemeLegal(animatedStyles) {
   dependencyMap = tmp2;
   let obj = {
     animated: null != animatedStyles,
-    variant: "text-xs/medium",
+    variant: "body-xs/medium",
     color: "text-muted",
     style: null,
     children: null,
@@ -53,7 +53,7 @@ export default function HexagonCampaignThemeLegal(animatedStyles) {
     learnMoreHook(children, arg1) {
       const obj = {
         animated,
-        variant: "text-xs/medium",
+        variant: "body-xs/medium",
         color: "text-link",
         style: null,
         accessibilityRole: "link",
@@ -75,15 +75,15 @@ export default function HexagonCampaignThemeLegal(animatedStyles) {
       return timestampProducer(Text_Text.Text, obj, arg1);
     },
   });
-  const tmp3Result = closure_6(animatedStyles(5747).Text, obj);
+  const tmp3Result = closure_6(animatedStyles(5761).Text, obj);
   let tmp9 = tmp3Result;
   if (flag) {
     const obj3 = { style: tmp.legalWithLogo, children: null };
-    const obj4 = { source: tmp7(17158), style: tmp.logo, resizeMode: "contain", accessible: false };
-    const items1 = [closure_6(tmp7(5837), obj4), tmp3Result];
+    const obj4 = { source: tmp7(17250), style: tmp.logo, resizeMode: "contain", accessible: false };
+    const items1 = [closure_6(tmp7(5851), obj4), tmp3Result];
     obj3.children = items1;
     tmp9 = closure_7(View, obj3);
-    const tmp7Result = tmp7(5837);
+    const tmp7Result = tmp7(5851);
   }
   return tmp9;
 }

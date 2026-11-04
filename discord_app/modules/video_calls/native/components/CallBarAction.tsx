@@ -125,9 +125,9 @@ class ActionButton {
   }
 }
 const View = fn(17).View;
-const resetFocusTimer = fn(11133).resetFocusTimer;
+const resetFocusTimer = fn(11181).resetFocusTimer;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const ColorUtils = fn(5138);
 let closure_8 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let closure_9 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
@@ -243,7 +243,7 @@ export function NotifiedActionButton(isMentioned) {
     obj3.style = items;
     const obj4 = {
       style: tmp2.notificationText,
-      variant: "text-xs/semibold",
+      variant: "body-xs/semibold",
       color: "text-overlay-light",
       children: isMentioned.notifications,
     };

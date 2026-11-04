@@ -73,7 +73,7 @@ const UserSettingsConstants = fn(1082);
 const DMSafetyConstants = fn(4968);
 ({ DmSpamFilterTypes: c3, ExplicitContentFilterTypes: closure_4 } = DMSafetyConstants);
 const Constants = fn(1072);
-({ AllFriendSourceFlags: hasOwnProperty, SpoilerRenderSetting: metroRequire, StatusTypes } = Constants);
+({ AllFriendSourceFlags: hasOwnProperty, SpoilerRenderSetting: closure_6, StatusTypes } = Constants);
 const StickerAnimationSettings = fn(4969).StickerAnimationSettings;
 fn(4970);
 let UserSettingDefinitions = fn(4970);
@@ -1529,8 +1529,8 @@ const result4 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
 fn(4970);
 let items = [ListDensityMode.AUTO, ,];
 const obj86 = { comparator: discord_common_shallowEqualDefault };
-items[1] = fn(5812).ChannelListLayoutTypes.COZY;
-items[2] = fn(5812).ChannelListLayoutTypes.COMPACT;
+items[1] = fn(5826).ChannelListLayoutTypes.COZY;
+items[2] = fn(5826).ChannelListLayoutTypes.COMPACT;
 const set1 = new Set(items);
 UserSettingDefinitions = fn(4970);
 const defineProtoSettingResult75 = UserSettingDefinitions.defineProtoSetting(
@@ -1556,9 +1556,9 @@ const defineProtoSettingResult75 = UserSettingDefinitions.defineProtoSetting(
   },
 );
 const items1 = [
-  fn(5812).MessagePreviewTypes.ALL,
-  fn(5812).MessagePreviewTypes.UNREADS,
-  fn(5812).MessagePreviewTypes.NONE,
+  fn(5826).MessagePreviewTypes.ALL,
+  fn(5826).MessagePreviewTypes.UNREADS,
+  fn(5826).MessagePreviewTypes.NONE,
 ];
 const set2 = new Set(items1);
 UserSettingDefinitions = fn(4970);

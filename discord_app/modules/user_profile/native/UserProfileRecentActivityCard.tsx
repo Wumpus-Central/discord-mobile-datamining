@@ -47,7 +47,7 @@ function GamingEntryBadges(entry) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let items = [
   {
     Badge: BadgesAll.GameTimestampBadge,
@@ -66,8 +66,8 @@ let obj = {
     return true;
   },
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8842).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8842).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8859).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8859).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -231,7 +231,7 @@ let closure_11 = noop.memo(function EntryImage(poster) {
     }
     items2[1] = tmp5Result;
     obj4.children = items2;
-    return React5(View, obj4);
+    return metroImportDefault(View, obj4);
   }
   obj = native;
 });
@@ -247,14 +247,14 @@ let closure_12 = noop.memo(function EntryCardBody(arg0) {
   const isNullOrEmptyResult = StringUtils.isNullOrEmpty(title);
   let tmp2Result = !isNullOrEmptyResult;
   if (!isNullOrEmptyResult) {
-    const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: title };
+    const obj7 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: title };
     tmp2Result = timestampProducer(Text_Text.Text, obj7);
   }
   const items1 = [tmp2Result, ,];
   const isNullOrEmptyResult1 = StringUtils.isNullOrEmpty(subtitle);
   let tmp2Result2 = !isNullOrEmptyResult1;
   if (!isNullOrEmptyResult1) {
-    const obj8 = { variant: "text-xs/medium", lineClamp: 1, children: subtitle };
+    const obj8 = { variant: "body-xs/medium", lineClamp: 1, children: subtitle };
     tmp2Result2 = timestampProducer(Text_Text.Text, obj8);
   }
   items1[1] = tmp2Result2;
@@ -266,9 +266,9 @@ let closure_12 = noop.memo(function EntryCardBody(arg0) {
   }
   items1[2] = isGamingLikeEntryResult;
   obj5.children = items1;
-  items[1] = React5(View, obj5);
+  items[1] = metroImportDefault(View, obj5);
   obj2.children = items;
-  obj.children = React5(View, obj2);
+  obj.children = metroImportDefault(View, obj2);
   return timestampProducer(View, obj);
 });
 size = fn(2);
@@ -346,7 +346,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj7 = { title: entry.extra.activity_name };
           obj8 = obj7;
         } else {
-          obj8 = { title: "Array" };
+          obj8 = { title: "r" };
         }
         tmpResult6 = ContentInventoryTypes;
       }

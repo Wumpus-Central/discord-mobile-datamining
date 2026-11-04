@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({
   View: closure_4,
   StyleSheet: hasOwnProperty,
-  TouchableWithoutFeedback: metroRequire,
+  TouchableWithoutFeedback: closure_6,
   NativeEventEmitter,
   NativeModules,
 } = get_ActivityIndicator);

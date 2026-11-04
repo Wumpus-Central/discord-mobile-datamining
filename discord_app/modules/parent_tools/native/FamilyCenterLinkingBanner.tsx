@@ -47,7 +47,7 @@ function FamilyCenterLinkingInstructionsRow(arg0) {
   items = [
     React4(View, {
       style: tmp.circle,
-      children: React4(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index }),
+      children: React4(Text_Text.Text, { variant: "heading-sm/semibold", color: "text-brand", children: index }),
     }),
   ];
   const items1 = [tmp.rowContent];
@@ -58,8 +58,8 @@ function FamilyCenterLinkingInstructionsRow(arg0) {
   const obj3 = { style: items1, children: null };
   items1[1] = gap;
   const items2 = [
-    React4(Text_Text.Text, { variant: "heading-sm/semibold", children: header }),
-    React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
+    React4(Text_Text.Text, { variant: "heading-xs/semibold", children: header }),
+    React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", children: description }),
   ];
   obj3.children = items2;
   items[1] = hasOwnProperty(View, obj3);
@@ -157,7 +157,7 @@ export default function FamilyCenterLinkingBanner() {
   const obj5 = { style: tmp.content, children: null };
   const items1 = [
     React4(Text_Text.Text, { style: tmp.header, variant: "heading-lg/semibold", children: ageSpecificText }),
-    React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 }),
+    React4(Text_Text.Text, { variant: "body-sm/medium", color: "text-muted", children: ageSpecificText1 }),
   ];
   obj5.children = items1;
   items[1] = hasOwnProperty(View, obj5);

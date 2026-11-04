@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles((arg0) => {
@@ -104,7 +104,7 @@ export function SegmentedControlItem(index) {
   const items3 = [icon];
   const obj6 = {
     animated: true,
-    variant: "text-sm/semibold",
+    variant: "body-sm/semibold",
     style: animatedStyle,
     lineClamp: 1,
     maxFontSizeMultiplier: null,

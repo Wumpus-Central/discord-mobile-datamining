@@ -80,7 +80,7 @@ function ActivityCardBody(user) {
     items = [tmp8];
     const obj3 = { style: tmp.content, children: null };
     if (activity(tmp2[24])(activity)) {
-      const obj4 = { variant: "text-md/semibold", children: null };
+      const obj4 = { variant: "body-md/semibold", children: null };
       const obj5 = {
         text: activity.details,
         activity,
@@ -102,7 +102,7 @@ function ActivityCardBody(user) {
           name = activity.name;
         }
       }
-      const obj7 = { variant: "text-md/semibold", children: name };
+      const obj7 = { variant: "body-md/semibold", children: name };
       obj6.children = closure_22(ActivityCardText, obj7);
       tmp24Result = closure_22(MaybeLink, obj6);
       tmp29 = ActivityCardText;
@@ -118,7 +118,7 @@ function ActivityCardBody(user) {
       if (null != trimmed) {
         tmp30Result = null;
         if ("" !== trimmed) {
-          const obj8 = { variant: "text-xs/medium", lineClamp: 1, children: null };
+          const obj8 = { variant: "body-xs/medium", lineClamp: 1, children: null };
           const obj9 = {
             artists: trimmed,
             activity,
@@ -142,7 +142,7 @@ function ActivityCardBody(user) {
         state = activity.state;
       }
       const obj10 = { href: activity.state_url, children: null };
-      const obj11 = { variant: "text-xs/medium", lineClamp: 1, children: state };
+      const obj11 = { variant: "body-xs/medium", lineClamp: 1, children: state };
       obj10.children = tmp30(tmp29, obj11);
       tmp30Result4 = tmp30(MaybeLink, obj10);
     }
@@ -167,7 +167,7 @@ function ActivityCardBody(user) {
             tmp45 = activity.party.size.length >= 2;
           }
           if (!tmp45) {
-            const obj12 = { variant: "text-xs/medium", lineClamp: 1, children: null };
+            const obj12 = { variant: "body-xs/medium", lineClamp: 1, children: null };
             const items2 = [activity.state, ""];
             obj12.children = items2.join(" ");
             tmp30Result5 = tmp30(tmp29, obj12);
@@ -193,7 +193,7 @@ function ActivityCardBody(user) {
           if (assets4 != null) {
             large_text = assets4.large_text;
           }
-          const obj16 = { variant: "text-xs/medium", lineClamp: 1, children: large_text };
+          const obj16 = { variant: "body-xs/medium", lineClamp: 1, children: large_text };
           obj15.children = tmp30(tmp29, obj16);
           tmp30Result5 = tmp30(MaybeLink, obj15);
         }
@@ -801,8 +801,8 @@ function VoiceCallActivityCard(arg0) {
   dependencyMap = undefined;
   ({ isInChannel, style } = arg0);
   const tmp = closure_25();
-  const tmp5 = stateFromStores(5772)(channel);
-  const tmp4 = stateFromStores(15012)(channel);
+  const tmp5 = stateFromStores(5786)(channel);
+  const tmp4 = stateFromStores(15092)(channel);
   items = [GuildStore];
   stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   let obj = channel(504);
@@ -815,11 +815,11 @@ function VoiceCallActivityCard(arg0) {
     return isPrivateResult;
   });
   let obj2 = channel(504);
-  const tmp9 = stateFromStores(7446);
-  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7446)(
-    stateFromStores(7471).USER_PROFILE_VOICE_ACTIVITY_CARD,
+  const tmp9 = stateFromStores(7462);
+  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7462)(
+    stateFromStores(7487).USER_PROFILE_VOICE_ACTIVITY_CARD,
   ));
-  const tmp11 = stateFromStores(15001)({
+  const tmp11 = stateFromStores(15081)({
     display: "voice",
     activity: { type: "VOICE" },
     voiceChannelId: channel.id,
@@ -827,13 +827,13 @@ function VoiceCallActivityCard(arg0) {
     analyticsLocations,
   });
   closure_3 = tmp11;
-  stateFromStores(15002)({ userId: user.id, onAction: tmp11 });
+  stateFromStores(15082)({ userId: user.id, onAction: tmp11 });
   const obj5 = { style: null, title: null, titleStyle: null, children: null };
   const items2 = [tmp.card, style];
   obj5.style = items2;
   const obj3 = { display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations };
   const obj4 = { userId: user.id, onAction: tmp11 };
-  const tmp9Result = stateFromStores(7446)(stateFromStores(7471).USER_PROFILE_VOICE_ACTIVITY_CARD);
+  const tmp9Result = stateFromStores(7462)(stateFromStores(7487).USER_PROFILE_VOICE_ACTIVITY_CARD);
   if (!channel.isDM()) {
     if (!channel.isGroupDM()) {
       const intl = channel(1113).intl;
@@ -855,7 +855,7 @@ function VoiceCallActivityCard(arg0) {
       id = stateFromStores.id;
     }
     obj7.guildId = id;
-    const items3 = [closure_22(tmp2(15026), obj7)];
+    const items3 = [closure_22(tmp2(15106), obj7)];
     const obj8 = { style: tmp.voiceCallContent, children: null };
     if (stateFromStores1) {
       const obj9 = {
@@ -866,7 +866,7 @@ function VoiceCallActivityCard(arg0) {
         children: null,
       };
       const obj10 = { channel };
-      obj9.accessibilityLabel = tmp2(9213)(obj10);
+      obj9.accessibilityLabel = tmp2(9230)(obj10);
       const intl3 = channel(1113).intl;
       obj9.accessibilityHint = intl3.string(channel(1113).t["9C444m"]);
       obj9.onPress = function onPress() {
@@ -875,22 +875,22 @@ function VoiceCallActivityCard(arg0) {
         ModalActionCreatorsDefault.popAll();
         PrivateChannelCallUtils.openGuildVoiceModal(channel, c2);
       };
-      const obj11 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+      const obj11 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj12 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj13 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj12.children = closure_22(tmp2(10895), obj13);
+      obj12.children = closure_22(tmp2(10943), obj13);
       const items4 = [closure_22(closure_7, obj12), tmp5];
       obj11.children = items4;
-      obj9.children = closure_23(channel(5747).Text, obj11);
-      let tmp13Result = closure_22(channel(7106).PressableOpacity, obj9);
+      obj9.children = closure_23(channel(5761).Text, obj11);
+      let tmp13Result = closure_22(channel(7121).PressableOpacity, obj9);
     } else {
-      const obj14 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+      const obj14 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj15 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj16 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj15.children = closure_22(tmp2(10895), obj16);
+      obj15.children = closure_22(tmp2(10943), obj16);
       const items5 = [closure_22(closure_7, obj15), tmp5];
       obj14.children = items5;
-      tmp13Result = closure_23(channel(5747).Text, obj14);
+      tmp13Result = closure_23(channel(5761).Text, obj14);
     }
     const items6 = [tmp13Result];
     let tmp18Result2 = null;
@@ -913,12 +913,12 @@ function VoiceCallActivityCard(arg0) {
         closeVoicePanelsDefault();
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
       };
-      const obj19 = { variant: "text-xs/medium", children: null };
+      const obj19 = { variant: "body-xs/medium", children: null };
       const intl6 = channel(1113).intl;
       const obj20 = { guildName: stateFromStores.name };
       obj19.children = intl6.format(channel(1113).t["hq/Qze"], obj20);
-      obj17.children = closure_22(channel(5747).Text, obj19);
-      tmp18Result2 = closure_22(channel(7106).PressableOpacity, obj17);
+      obj17.children = closure_22(channel(5761).Text, obj19);
+      tmp18Result2 = closure_22(channel(7121).PressableOpacity, obj17);
     }
     items6[1] = tmp18Result2;
     obj8.children = items6;
@@ -926,17 +926,21 @@ function VoiceCallActivityCard(arg0) {
     obj6.children = items3;
     const items7 = [closure_23(closure_7, obj6)];
     const obj21 = { channel, isInChannel, onAction: tmp11 };
-    items7[1] = closure_22(channel(15019).VoiceChannelButtons, obj21);
+    items7[1] = closure_22(channel(15099).VoiceChannelButtons, obj21);
     obj5.children = items7;
     return closure_23(tmp14, obj5);
   }
   const intl2 = channel(1113).intl;
   stringResult = intl2.string(channel(1113).t["9FaEzi"]);
-  tmp14 = stateFromStores(7496);
+  tmp14 = stateFromStores(7512);
 }
 get_ActivityIndicator = fn(17);
-({ TouchableOpacity: hasOwnProperty, TouchableWithoutFeedback: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CARD_PADDING = fn(7497).CARD_PADDING;
+({
+  TouchableOpacity: hasOwnProperty,
+  TouchableWithoutFeedback: closure_6,
+  View: metroImportDefault,
+} = get_ActivityIndicator);
+const CARD_PADDING = fn(7513).CARD_PADDING;
 const Constants = fn(1072);
 ({ Permissions: closure_19, PlatformTypes: closure_20, StatusTypes: closure_21 } = Constants);
 const jsxProd = fn(21);

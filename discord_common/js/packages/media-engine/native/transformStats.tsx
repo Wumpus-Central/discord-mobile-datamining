@@ -800,13 +800,13 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           });
         } else if (null != video) {
           let num7 = closure_2;
-          const tmp16 = transformInboundVideoStats(video, id, playout, playout);
+          const tmp17 = transformInboundVideoStats(video, id, playout, playout);
           if (closure_2 == null) {
             num7 = 0;
           }
           closure_2 = num7 + closure_3(video.rtpStats);
-          obj7[id].push(tmp16);
-          const tmp18 = closure_3(video.rtpStats);
+          obj7[id].push(tmp17);
+          const tmp19 = closure_3(video.rtpStats);
         }
       } else {
         let num = closure_2;
@@ -817,7 +817,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         let obj5 = {
           type: "audio",
           ssrc: audio.ssrc,
-          sinkWant: id(5973).formatSinkWantStat(id, audio.ssrc, false),
+          sinkWant: id(5987).formatSinkWantStat(id, audio.ssrc, false),
           sinkWantAsInt: null,
           codec: null,
           bytesReceived: null,
@@ -860,10 +860,12 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           decryptInvalidNonceCount: null,
           audioReceiverDelayMs: null,
           audioReceiverPacketCount: null,
+          voiceQuality: null,
+          voiceQualityMos: null,
         };
         const arr = obj7[id];
-        const obj2 = id(5973);
-        obj5.sinkWantAsInt = id(5973).formatSinkWantAsInt(id, audio.ssrc);
+        const obj2 = id(5987);
+        obj5.sinkWantAsInt = id(5987).formatSinkWantAsInt(id, audio.ssrc);
         ({ codecPayloadType: obj4.id, codecName: obj4.name } = audio);
         obj5.codec = { id: null, name: null };
         ({
@@ -919,6 +921,12 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           prop = playout.audioReceiverPacketCount;
         }
         obj5.audioReceiverPacketCount = prop;
+        ({ voiceQuality: obj.voiceQuality, voiceQuality } = audio);
+        let mosMean;
+        if (voiceQuality != null) {
+          mosMean = voiceQuality.mosMean;
+        }
+        obj5.voiceQualityMos = mosMean;
         if (null != playout) {
           ({
             audioJitterBuffer: obj6.audioJitterBuffer,
@@ -958,7 +966,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         }
         const merged = Object.assign(obj11);
         obj5 = arr.push(obj5);
-        const obj3 = id(5973);
+        const obj3 = id(5987);
         const obj9 = { id: null, name: null };
       }
     });

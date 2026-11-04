@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const ReadStateTypes = fn(6911).ReadStateTypes;
 const logger = new LoggerDefault("ReadStates");
 class ReadStates {
   constructor() {

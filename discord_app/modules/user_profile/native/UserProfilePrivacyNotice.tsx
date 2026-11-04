@@ -20,11 +20,11 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   container: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_INFO,
     borderWidth: 1,
     borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
     borderRadius: nativeDefault.radii.sm,
@@ -65,7 +65,7 @@ export default function UserProfilePrivacyNotice() {
       closure_1_7(
         Text_Text.Text,
         {
-          variant: "text-sm/normal",
+          variant: "body-sm/normal",
           color: "text-link",
           onPress() {
             return closure_1_0(closure_1_1[15]).openUserSettings({ screen: constants.DATA_AND_PRIVACY });
@@ -93,7 +93,7 @@ export default function UserProfilePrivacyNotice() {
       children: closure_7(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }),
     };
     const items1 = [closure_7(View, obj4), ,];
-    const obj5 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
+    const obj5 = { style: tmp.text, variant: "body-sm/normal", color: "text-default", children: null };
     const intl = util.intl;
     const obj6 = { privacySettingsLink: callback };
     obj5.children = intl.format(dqQ7AN, obj6);

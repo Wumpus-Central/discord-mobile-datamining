@@ -13,8 +13,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VEVOOStore = fn(5724);
-({ getVisualEffectViewOverrides: metroRequire, setVisualEffectViewOverides: closure_7 } = VEVOOStore);
+const VEVOOStore = fn(5737);
+({ getVisualEffectViewOverrides: closure_6, setVisualEffectViewOverides: metroImportDefault } = VEVOOStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -67,13 +67,13 @@ export default noop.memo(function VEVOOPropTintColor() {
       const obj3 = {};
       const merged1 = Object.assign(obj2);
       obj3.tintColorOverride = "rgba(0, 0, 0, 0)";
-      React5(obj3);
+      metroImportDefault(obj3);
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
         closure_2_7(obj2);
       });
     } else {
-      React5(obj2);
+      metroImportDefault(obj2);
     }
   }, []);
   let obj3 = {
@@ -128,7 +128,7 @@ export default noop.memo(function VEVOOPropTintColor() {
     },
   };
   const ref = noop.useRef(first1);
-  obj7.subLabel = closure_8(backgroundColor(18122), {
+  obj7.subLabel = closure_8(backgroundColor(18219), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {

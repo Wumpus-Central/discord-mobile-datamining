@@ -111,7 +111,7 @@ function PressableBase(androidRippleConfig) {
   );
 }
 const Pressable = fn(17).Pressable;
-const IOS_POINTER_STYLE = fn(5764).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5778).IOS_POINTER_STYLE;
 const getThemedRippleConfig = fn(1191).getThemedRippleConfig;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);

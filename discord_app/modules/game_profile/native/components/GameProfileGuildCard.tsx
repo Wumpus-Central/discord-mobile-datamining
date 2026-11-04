@@ -138,7 +138,7 @@ export default function GameProfileGuildCard(arg0) {
   const items1 = [
     React4(Text_Text.Text, {
       style: tmp.guildName,
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       children: guild.name,
@@ -147,7 +147,7 @@ export default function GameProfileGuildCard(arg0) {
   const obj11 = { guild, size: null };
   const obj10 = {
     style: tmp.guildName,
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     color: "mobile-text-heading-primary",
     lineClamp: 1,
     children: guild.name,
@@ -158,7 +158,7 @@ export default function GameProfileGuildCard(arg0) {
   const items2 = [
     hasOwnProperty(View, obj9),
     React4(Text_Text.Text, {
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-default",
       lineClamp: 2,
       children: guild.description,
@@ -172,7 +172,7 @@ export default function GameProfileGuildCard(arg0) {
     const obj14 = { style: tmp.memberCountContainer, children: null };
     const obj15 = { style: tmp.onlineEllipse };
     const items4 = [React4(View, obj15)];
-    const obj16 = { variant: "text-xs/normal", color: "text-default", children: null };
+    const obj16 = { variant: "body-xs/normal", color: "text-default", children: null };
     const intl = util.intl;
     const obj17 = { membersOnline: presenceCount };
     obj16.children = intl.formatToPlainString(util.t["LC+S+m"], obj17);
@@ -186,7 +186,7 @@ export default function GameProfileGuildCard(arg0) {
     const obj18 = { style: tmp.memberCountContainer, children: null };
     const obj19 = { style: tmp.membersEllipse };
     const items6 = [React4(View, obj19)];
-    const obj20 = { variant: "text-xs/normal", color: "text-default", children: null };
+    const obj20 = { variant: "body-xs/normal", color: "text-default", children: null };
     const intl2 = util.intl;
     const obj39 = { count: memberCount };
     obj20.children = intl2.formatToPlainString(util.t.zRl6XR, obj39);

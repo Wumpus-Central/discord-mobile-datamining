@@ -60,19 +60,19 @@ function VisualEffectViewOverrideOverlay_(arg0) {
     timestampProducer(VEVOOPropBlurEffectNameDefault, {}),
   ];
   obj4.children = items3;
-  obj3.children = React5(Form.FormSection, obj4);
+  obj3.children = metroImportDefault(Form.FormSection, obj4);
   const items4 = [timestampProducer(ScrollView, obj3)];
   const obj5 = { styles: tmp.close, type: "neutral", IconComponent: null, onPress: null, accessibilityLabel: "Close" };
   obj5.IconComponent = XSmallIcon.XSmallIcon;
   obj5.onPress = onClose;
   items4[1] = timestampProducer(ActionButtonDefault, obj5);
   obj2.children = items4;
-  return React5(_modDef1652.View, obj2);
+  return metroImportDefault(_modDef1652.View, obj2);
 }
 const ScrollView = fn(17).ScrollView;
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5141);
 const styles = createStyles.createStyles({
   zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 },

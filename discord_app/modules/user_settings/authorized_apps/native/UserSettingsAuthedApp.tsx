@@ -32,7 +32,7 @@ function WarningLabel(children) {
       color: nativeDefault.colors.TEXT_MUTED,
       style: tmp.warningIcon,
     }),
-    closure_1_17(Text_Text.Text, { color: "text-default", variant: "text-sm/medium", children: children.text }),
+    closure_1_17(Text_Text.Text, { color: "text-default", variant: "body-sm/medium", children: children.text }),
   ];
   obj.children = items;
   return collapsedCategories(hasOwnProperty, obj);
@@ -63,8 +63,8 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10267).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11424).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10315).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(11474).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(5141);
@@ -212,7 +212,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
   ).toLocaleDateString(stateFromStores1, { year: "numeric", month: "short", day: "numeric" });
   obj13.iconBorderRadius = application(stateFromStores[13]).radii.md;
   const items9 = [closure_17(application(stateFromStores[40]), obj13), ,];
-  const obj14 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const obj14 = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl = id(stateFromStores[18]).intl;
   obj14.children = intl.format(id(stateFromStores[18]).t.yOApCK, { date: toLocaleDateStringResult });
   items9[1] = closure_17(id(stateFromStores[15]).Text, obj14);
@@ -222,7 +222,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
     if ("" !== description) {
       const obj15 = {
         style: tmp.appAboutDescription,
-        variant: "text-sm/normal",
+        variant: "body-sm/normal",
         color: "text-default",
         children: tmp5(stringResult[41]).parseBioReactWithCachedAST(description),
       };

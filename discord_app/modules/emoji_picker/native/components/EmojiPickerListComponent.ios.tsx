@@ -4,12 +4,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(10073);
+const EmojiPickerListConstants = fn(10121);
 ({
   ROW_HEIGHT: closure_4,
   LABEL_HEIGHT: hasOwnProperty,
-  LABEL_TOP_PADDING: metroRequire,
-  LABEL_BOTTOM_PADDING: closure_7,
+  LABEL_TOP_PADDING: closure_6,
+  LABEL_BOTTOM_PADDING: metroImportDefault,
 } = EmojiPickerListConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);

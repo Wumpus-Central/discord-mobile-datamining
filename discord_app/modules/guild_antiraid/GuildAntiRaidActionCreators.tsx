@@ -110,7 +110,7 @@ let closure_10 = async function _setGuildIncidentActions() {
   obj5.lockdown_duration_hours = tmp14;
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: React5.GUILD_INCIDENT_ACTIONS(closure_0),
+    url: metroImportDefault.GUILD_INCIDENT_ACTIONS(closure_0),
     body: obj5,
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
@@ -166,7 +166,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
           if (null != tmp8) {
             const HTTP = HTTPUtils.HTTP;
             const obj5 = {
-              url: React5.GUILD_INCIDENT_REPORT_RAID(closure_0),
+              url: metroImportDefault.GUILD_INCIDENT_REPORT_RAID(closure_0),
               rejectWithError: HTTPUtils.rejectWithMigratedError(),
             };
             c2 = 1;
@@ -195,9 +195,9 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8607).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8624).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1072);
-({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
+({ AnalyticEvents: closure_6, Endpoints: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
 

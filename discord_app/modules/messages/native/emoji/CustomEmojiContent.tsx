@@ -20,8 +20,8 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(7084).EmojiSourceDataTypes;
+({ Pressable: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
+const EmojiSourceDataTypes = fn(7099).EmojiSourceDataTypes;
 const Constants = fn(1072);
 ({
   UserSettingsSections: closure_11,
@@ -260,14 +260,14 @@ export default function CustomEmojiContent(emojiNode) {
   const tmp24 = items3.includes(type) ? obj.ctaButton : obj.bottomCtaButton;
   const items5 = [
     closure_15(emojiNode(nonce[37]).Text, {
-      variant: "text-md/semibold",
+      variant: "body-md/semibold",
       color: "mobile-text-heading-primary",
       children: ":" + emojiNode.alt + ":",
     }),
   ];
   let tmp30Result = null != emojiDescription;
   if (tmp30Result) {
-    const obj16 = { variant: "text-sm/medium", children: emojiDescription };
+    const obj16 = { variant: "body-sm/medium", children: emojiDescription };
     tmp30Result = closure_15(tmp2(nonce[37]).Text, obj16);
   }
   function handleAddRemoveFavorite() {
@@ -344,7 +344,7 @@ export default function CustomEmojiContent(emojiNode) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(10195, dependencyMap.paths),
+            asyncRequireImpl(10243, dependencyMap.paths),
             "EmojiOptionsActionSheet",
             { emojiSrc: emojiNode.src },
             "stack",

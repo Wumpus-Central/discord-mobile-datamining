@@ -14,7 +14,7 @@ import showThreadBrowserModalDefault from "../../../threads/native/showThreadBro
 import SwipeToMemberListUtils from "../sidebar/member_list/SwipeToMemberListUtils.tsx";
 import useSearchContext from "../../../search/native/hooks/useSearchContext.tsx";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
-import search_tracking_TrackingDefault from "../../../search/native/tracking/Tracking.tsx";
+import TrackingDefault from "../../../search/native/tracking/Tracking.tsx";
 import IconActionButtonDefault from "../shared_components/IconActionButton.tsx";
 import ConversationCoachmark from "../../../conversations/components/native/ConversationCoachmark.tsx";
 import PrivateChannelButtonsDefault from "header/PrivateChannelButtons.tsx";
@@ -219,7 +219,7 @@ function ChannelActionButtons(channel) {
                 isThreadResult,
               );
               const tmp2Result4 = useSearchContext;
-              search_tracking_TrackingDefault.trackSearchOpened({
+              TrackingDefault.trackSearchOpened({
                 searchContext: channelDetailsSearchContext,
                 searchLocation: constants.CHANNEL_HEADER,
               });
@@ -353,7 +353,7 @@ function WrappedChannelNavButtons(channelId) {
   ({ screenIndex, showCreateThread } = channelId);
   items = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  channelId(6854);
+  channelId(6869);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;
@@ -369,11 +369,11 @@ function WrappedChannelNavButtons(channelId) {
 }
 const View = fn(17).View;
 const ChannelRecord = fn(4994);
-({ THREADED_CHANNEL_TYPES: hasOwnProperty, isChannelChatInSidebar: metroRequire } = ChannelRecord);
-let closure_9 = fn(9956).setIsChannelDetailsSearchActive;
+({ THREADED_CHANNEL_TYPES: hasOwnProperty, isChannelChatInSidebar: closure_6 } = ChannelRecord);
+let closure_9 = fn(9974).setIsChannelDetailsSearchActive;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_10, ChannelTypesSets: closure_11, ComponentActions: closure_12 } = Constants);
-let closure_13 = fn(9957).SearchEntrypointAnalyticsLocations;
+let closure_13 = fn(9975).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createElement = fn(19).createElement;
@@ -416,7 +416,7 @@ export default function ChannelActions(channelId) {
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = closure_14(tmp(14697).ForumChannelCloseSearchButton, obj4);
+    let tmp4Result = closure_14(tmp(14777).ForumChannelCloseSearchButton, obj4);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

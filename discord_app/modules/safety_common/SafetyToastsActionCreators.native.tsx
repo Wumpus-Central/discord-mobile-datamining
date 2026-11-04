@@ -61,10 +61,10 @@ export default {
     const obj = ToastUtils;
     obj.showSafetySuccess(REPORT_TO_MOD_SUCCESS, SafetyToastsUtils.getSafetyToastTypeContent(REPORT_TO_MOD_SUCCESS));
   },
-  showFailedToast(TIGGER_PAWTECT_ERROR) {
-    let GENERIC_ERROR = TIGGER_PAWTECT_ERROR;
+  showFailedToast(AGE_VERIFICATION_ERROR) {
+    let GENERIC_ERROR = AGE_VERIFICATION_ERROR;
     const obj = ToastUtils;
-    if (TIGGER_PAWTECT_ERROR == null) {
+    if (AGE_VERIFICATION_ERROR == null) {
       GENERIC_ERROR = SafetyToastType.GENERIC_ERROR;
     }
     obj.presentFailedToast(SafetyToastsUtils.getSafetyToastTypeContent(GENERIC_ERROR));

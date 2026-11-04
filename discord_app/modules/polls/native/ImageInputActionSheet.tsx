@@ -7,9 +7,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(8530).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
+let closure_5 = fn(8547).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
   emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 },
@@ -54,7 +54,7 @@ export default function ImageInputAnswerActionSheet(channelId) {
         name = emoji.name;
       }
     }
-    const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj3 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
     const _HermesInternal = HermesInternal;
     obj3.children = ":" + name + ":";
     items[1] = closure_6(tmp7(answer[10]).Text, obj3);

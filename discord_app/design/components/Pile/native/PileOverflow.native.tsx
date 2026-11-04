@@ -21,12 +21,12 @@ let obj2 = {
 };
 let closure_6 = createStyles.createStyles(obj2);
 let items = [
-  [64, "text-lg/semibold"],
-  [48, "text-md/semibold"],
-  [40, "text-md/semibold"],
-  [30, "text-sm/semibold"],
-  [24, "text-xs/semibold"],
-  [16, "text-xxs/semibold"],
+  [64, "body-lg/semibold"],
+  [48, "body-md/semibold"],
+  [40, "body-md/semibold"],
+  [30, "body-sm/semibold"],
+  [24, "body-xs/semibold"],
+  [16, "footnote/semibold"],
 ];
 const map = new Map(items);
 let size = fn(2);
@@ -48,7 +48,7 @@ export function PileOverflow(size) {
   items1[1] = obj2;
   let str = map.get(size);
   if (str == null) {
-    str = "text-md/semibold";
+    str = "body-md/semibold";
   }
   const obj4 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: str, children: null };
   const items2 = ["+", NumberUtils.humanizeValue(value, stateFromStores)];

@@ -20,7 +20,7 @@ let obj2 = {
 };
 const obj3 = { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 };
 obj2.containerYellow = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_MOD_WARNING,
   borderColor: nativeDefault.colors.STATUS_WARNING,
 };
 obj2.alertIcon = { alignSelf: "flex-start", width: 20, height: 20 };
@@ -46,7 +46,7 @@ export default function WarningNotice(arg0) {
     }),
     React4(Text_Text.Text, {
       style: tmp.message,
-      variant: "text-sm/medium",
+      variant: "body-sm/medium",
       color: "text-feedback-warning",
       children: notice,
     }),

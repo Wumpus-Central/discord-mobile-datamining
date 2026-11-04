@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef10679 from "../../../../_runtime/metro/10679__.js";
+import _modDef10727 from "../../../../_runtime/metro/10727__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,19 +39,19 @@ export function ForYouUnreadClearedState() {
   const obj = { style: tmp.container, children: null };
   items = [
     React4(View, { style: tmp.imageContainer }),
-    React4(native.Icon, { source: _modDef10679, style: tmp.icon, color: tmp.icon.color }),
+    React4(native.Icon, { source: _modDef10727, style: tmp.icon, color: tmp.icon.color }),
   ];
   const obj4 = { children: null };
   const obj5 = {
     color: "mobile-text-heading-primary",
-    variant: "text-md/semibold",
+    variant: "body-md/semibold",
     style: tmp.headerText,
     children: null,
   };
   const intl = util.intl;
   obj5.children = intl.string(util.t.DonStq);
   const items1 = [React4(Text_Text.Text, obj5)];
-  const obj6 = { color: "text-default", variant: "text-md/medium", children: null };
+  const obj6 = { color: "text-default", variant: "body-md/medium", children: null };
   const intl2 = util.intl;
   obj6.children = intl2.string(util.t.jXFsai);
   items1[1] = React4(Text_Text.Text, obj6);

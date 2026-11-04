@@ -11,7 +11,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(7733).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7749).useNativeCheckoutStore;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const GiftingOrigin = fn(1387).GiftingOrigin;
 const jsxProd = fn(21);
@@ -150,7 +150,7 @@ export default function SocialLayerStorefrontGiftPurchaseSection(skuId) {
     { shouldAppendDisclaimer: true },
   );
   obj4.children = mobileFinePrintMessageForApplication.map((children, index) =>
-    awaitSync(skuId(giftOptions[22]).Text, { variant: "text-xs/normal", color: "text-muted", children }, index),
+    awaitSync(skuId(giftOptions[22]).Text, { variant: "body-xs/normal", color: "text-muted", children }, index),
   );
   const items3 = [awaitSync(closure_6, obj4)];
   if (!isPurchaseDisabled) {

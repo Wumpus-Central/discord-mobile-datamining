@@ -8,8 +8,8 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const GameConsoleConstants = fn(9869);
-({ XBOX_HANDOFF_SEARCH_PARAMS: metroRequire, XBOX_URL_BASE: closure_7 } = GameConsoleConstants);
+const GameConsoleConstants = fn(9887);
+({ XBOX_HANDOFF_SEARCH_PARAMS: closure_6, XBOX_URL_BASE: metroImportDefault } = GameConsoleConstants);
 const Constants = fn(1072);
 ({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: closure_9 } = Constants);
 const size = fn(2);
@@ -21,7 +21,7 @@ export default function getXboxURIForChannel(channelId, arg1) {
   guild = GuildStore.getGuild(guildId);
   let tmp4 = guildId;
   if (guildId == null) {
-    tmp4 = React7;
+    tmp4 = React6;
   }
   const obj = {
     guildId: tmp4,
@@ -52,7 +52,7 @@ export default function getXboxURIForChannel(channelId, arg1) {
     const tmp5Result = HTTPUtils;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "" + React5 + "?" + str.toString();
+    combined = "" + metroImportDefault + "?" + str.toString();
   }
   return combined;
 }

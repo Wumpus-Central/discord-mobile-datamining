@@ -82,7 +82,7 @@ export default function GatedContent(onAgree) {
     subtitle,
     channelId(onAgree(onDisagree[7]).Text, {
       color: "text-muted",
-      variant: "text-md/medium",
+      variant: "body-md/medium",
       style: tmp.description,
       maxFontSizeMultiplier: 2,
       children: description,

@@ -28,7 +28,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ DeviceEventEmitter: closure_4, NativeEventEmitter } = get_ActivityIndicator);
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(5888).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5902).MediaEngineContextTypes;
 let c18 = "telecom-end-call-requested";
 let c19 = "telecom-set-foreground-requested";
 let c20 = "telecom-mic-mute-requested";
@@ -367,9 +367,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
       const obj3 = { guildId };
       tmp19 = obj3;
     }
-    const obj4 = self(19779);
-    const reportIncomingCallResult = self(19779).reportIncomingCall(channelId, channelName, tmp19);
-    self(19779)
+    const obj4 = self(19895);
+    const reportIncomingCallResult = self(19895).reportIncomingCall(channelId, channelName, tmp19);
+    self(19895)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((result) => {
         if (!result) {
@@ -381,7 +381,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
         obj.warn("Failed to report incoming call:", error);
         self.clearCall(closure_0);
       });
-    const nextPromise = self(19779)
+    const nextPromise = self(19895)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((result) => {
         if (!result) {
@@ -397,7 +397,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(19779);
+  obj = self(19895);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj
     .cancelIncomingCall(channelId)
@@ -738,8 +738,8 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
   }
   obj = self(1624);
 };
-prototype["startCall"] = function startCall(channelId) {
-  closure_0 = channelId;
+prototype["startCall"] = function startCall(arg0) {
+  closure_0 = arg0;
   const self = this;
   return (async () => {
     if (c5 === 2) {
@@ -768,7 +768,7 @@ prototype["startCall"] = function startCall(channelId) {
           } else {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
-            channelId = tmp5.channelId;
+            const channelId = tmp5.channelId;
             closure_128_0 = channelId;
             const guildId = tmp5.guildId;
             currentCall = self.currentCall;
@@ -832,20 +832,20 @@ prototype["startCall"] = function startCall(channelId) {
     }
   })();
 };
-prototype["endCall"] = function endCall(currentCall) {
+prototype["endCall"] = function endCall(channelId) {
   const self = this;
-  obj.info("Ending call:", currentCall.channelId);
-  obj = self(19779);
-  const endCallResult = obj.endCall(currentCall.channelId);
+  obj.info("Ending call:", channelId.channelId);
+  obj = self(19895);
+  const endCallResult = obj.endCall(channelId.channelId);
   return obj
-    .endCall(currentCall.channelId)
+    .endCall(channelId.channelId)
     .then((result) => {
-      self.clearCall(currentCall.channelId);
+      self.clearCall(channelId.channelId);
       return result;
     })
     .catch((error) => {
       obj.warn("Failed to end call:", error);
-      self.clearCall(currentCall.channelId);
+      self.clearCall(channelId.channelId);
       return false;
     });
 };
@@ -991,7 +991,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(19779);
+            obj = self(19895);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

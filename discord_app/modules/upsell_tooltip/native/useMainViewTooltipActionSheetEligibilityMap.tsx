@@ -15,6 +15,7 @@ import RobloxConnectionCoachmark from "../../local_app_detection/native/RobloxCo
 import MainViewTooltipActionSheetsDisabledExperimentDefault from "../experiments/MainViewTooltipActionSheetsDisabledExperiment.tsx";
 import RecurringReferralReminderExperiment2 from "../../premium/experiments/RecurringReferralReminderExperiment.tsx";
 import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "../../premium/experiments/PremiumTrialOfferActionSheetKillSwitchExperiment.tsx";
+import MobileBottomSheetCopy from "../../premium/promotions/MobileBottomSheetCopy.tsx";
 import useGiftingPromotionAssetsReadyDefault from "../../premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx";
 import useNitroFileUploadMarketingEligible from "../../premium/file_upload/useNitroFileUploadMarketingEligible.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -67,7 +68,7 @@ export function useMainViewTooltipActionSheetMap() {
     const tmpResult = MetaQuestUtils;
   }
   const items2 = [GooglePlayPriceChangeStore];
-  const tmpResult18 = initialize;
+  const tmpResult19 = initialize;
   [tmp8, tmp9] = initialize.useStateFromStoresArray(items2, () => {
     items = [,];
     ({ shouldShowGooglePlayPriceChange: arr[0], priceChangeRecord: arr[1] } = GooglePlayPriceChangeStore);
@@ -82,7 +83,7 @@ export function useMainViewTooltipActionSheetMap() {
     2,
   );
   const premiumDiscountOffer = usePremiumDiscountOffer.usePremiumDiscountOffer();
-  const tmpResult19 = usePremiumDiscountOffer;
+  const tmpResult20 = usePremiumDiscountOffer;
   const items3 = [ApexExperimentStore];
   let stateFromStores2 = initialize.useStateFromStores(items3, () => {
     const RecurringReferralReminderExperiment =
@@ -90,12 +91,12 @@ export function useMainViewTooltipActionSheetMap() {
     return RecurringReferralReminderExperiment.getConfig({ location: _location }, { autoTrackExposure: false })
       .bottomSheetEnabled;
   });
-  const tmpResult20 = initialize;
+  const tmpResult21 = initialize;
   const isEligibleSenderForReferralProgram =
     useIsEligibleSenderForReferralProgram.useIsEligibleSenderForReferralProgram(!stateFromStores2);
-  const tmpResult21 = useIsEligibleSenderForReferralProgram;
+  const tmpResult22 = useIsEligibleSenderForReferralProgram;
   const items4 = [ReferralTrialStore];
-  const tmpResult22 = initialize;
+  const tmpResult23 = initialize;
   [tmp14, tmp15] = initialize.useStateFromStoresArray(items4, () => {
     items = [
       ReferralTrialStore.getReferralsRemaining({ bypassFetch: true }),
@@ -116,7 +117,7 @@ export function useMainViewTooltipActionSheetMap() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   const PremiumTrialOfferActionSheetKillSwitchExperiment =
     PremiumTrialOfferActionSheetKillSwitchExperiment2.PremiumTrialOfferActionSheetKillSwitchExperiment;
-  const tmpResult23 = usePremiumTrialOffer;
+  const tmpResult24 = usePremiumTrialOffer;
   const promotionMarketingComponent = usePromotionMarketingComponent.usePromotionMarketingComponent(
     MarketingComponentType.MarketingComponentType.MOBILE_BOTTOM_SHEET,
   );
@@ -128,7 +129,12 @@ export function useMainViewTooltipActionSheetMap() {
   if ("mobileBottomSheet" === oneofKind) {
     mobileBottomSheet = promotionMarketingComponent.properties.properties.mobileBottomSheet;
   }
-  const tmpResult24 = usePromotionMarketingComponent;
+  let mobileBottomSheetCopy = null;
+  if (null != promotionMarketingComponent) {
+    mobileBottomSheetCopy = MobileBottomSheetCopy.getMobileBottomSheetCopy(promotionMarketingComponent);
+    const tmpResult26 = MobileBottomSheetCopy;
+  }
+  const tmpResult25 = usePromotionMarketingComponent;
   const items5 = [PromotionsStore];
   const stateFromStores3 = initialize.useStateFromStores(items5, () => {
     const giftPromotion = PromotionsStore.getGiftPromotion();
@@ -138,7 +144,7 @@ export function useMainViewTooltipActionSheetMap() {
     }
     return id;
   });
-  const tmpResult25 = initialize;
+  const tmpResult27 = initialize;
   const items6 = [PromotionsStore];
   const stateFromStores4 = initialize.useStateFromStores(items6, () => {
     const marketingComponentByType = PromotionsStore.getMarketingComponentByType(
@@ -153,7 +159,7 @@ export function useMainViewTooltipActionSheetMap() {
     }
     return giftIconCoachmark;
   });
-  const tmpResult26 = initialize;
+  const tmpResult28 = initialize;
   const items7 = [PromotionsStore];
   const stateFromStores5 = initialize.useStateFromStores(items7, () => {
     const marketingComponentByType = PromotionsStore.getMarketingComponentByType(
@@ -170,7 +176,7 @@ export function useMainViewTooltipActionSheetMap() {
   });
   const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
   let enabled = GiftPromotionReminderExperiment.useConfig({ location: MainViewTooltipActionSheets }).enabled;
-  const tmpResult27 = initialize;
+  const tmpResult29 = initialize;
   const giftingBadgeCoachmarkVariant = GiftingBadgesUtils.useGiftingBadgeCoachmarkVariant({
     platform: "native",
     location: MainViewTooltipActionSheets,
@@ -181,7 +187,7 @@ export function useMainViewTooltipActionSheetMap() {
       dismissible_content.DismissibleContent.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET,
       stateFromStores3,
     ).isDismissed;
-    const tmpResult29 = DismissibleContentUnsafeUtils;
+    const tmpResult31 = DismissibleContentUnsafeUtils;
   }
   let isDismissed2 = null != stateFromStores3;
   if (isDismissed2) {
@@ -189,26 +195,26 @@ export function useMainViewTooltipActionSheetMap() {
       dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER,
       stateFromStores3,
     ).isDismissed;
-    const tmpResult30 = DismissibleContentUnsafeUtils;
-  }
-  let tmp25 = null;
-  const tmpResult28 = GiftingBadgesUtils;
-  if (!isDismissed) {
-    tmp25 = stateFromStores4;
+    const tmpResult32 = DismissibleContentUnsafeUtils;
   }
   let tmp26 = null;
+  const tmpResult30 = GiftingBadgesUtils;
+  if (!isDismissed) {
+    tmp26 = stateFromStores4;
+  }
+  let tmp27 = null;
   if (!isDismissed2) {
-    tmp26 = stateFromStores5;
+    tmp27 = stateFromStores5;
   }
   const tmp4Result = useGiftingPromotionAssetsReadyDefault;
-  ({ isGiftCoachmarkAssetReady, isGiftReminderAssetReady } = useGiftingPromotionAssetsReadyDefault(tmp25, tmp26));
-  const tmp4ResultResult = useGiftingPromotionAssetsReadyDefault(tmp25, tmp26);
+  ({ isGiftCoachmarkAssetReady, isGiftReminderAssetReady } = useGiftingPromotionAssetsReadyDefault(tmp26, tmp27));
+  const tmp4ResultResult = useGiftingPromotionAssetsReadyDefault(tmp26, tmp27);
   const nitroFileUploadAnnouncementEligible =
     useNitroFileUploadMarketingEligible.useNitroFileUploadAnnouncementEligible(MainViewTooltipActionSheets);
-  const tmpResult31 = useNitroFileUploadMarketingEligible;
+  const tmpResult33 = useNitroFileUploadMarketingEligible;
   const nitroFileUploadUpsellEligible =
     useNitroFileUploadMarketingEligible.useNitroFileUploadUpsellEligible(MainViewTooltipActionSheets);
-  const tmpResult32 = useNitroFileUploadMarketingEligible;
+  const tmpResult34 = useNitroFileUploadMarketingEligible;
   const shouldShowRobloxConnectionCoachmark = RobloxConnectionCoachmark.useShouldShowRobloxConnectionCoachmark();
   CustomTypingIndicatorExperiment;
   const obj5 = {};
@@ -221,11 +227,11 @@ export function useMainViewTooltipActionSheetMap() {
     obj6.newSnowflakeId = priceChangeId;
     obj6.actionSheetProperties = {};
     obj5[dismissible_content.DismissibleContent.GOOGLE_PLAY_PRICE_CHANGE_ACTION_SHEET] = obj6;
-    let tmp36 = null != premiumDiscountOffer;
-    if (tmp36) {
-      tmp36 = null == premiumDiscountOffer.expiresAt;
+    let tmp37 = null != premiumDiscountOffer;
+    if (tmp37) {
+      tmp37 = null == premiumDiscountOffer.expiresAt;
     }
-    const obj7 = { isEligible: tmp36, newSnowflakeId: null, actionSheetProperties: null };
+    const obj7 = { isEligible: tmp37, newSnowflakeId: null, actionSheetProperties: null };
     let id;
     if (premiumDiscountOffer != null) {
       id = premiumDiscountOffer.id;
@@ -264,22 +270,27 @@ export function useMainViewTooltipActionSheetMap() {
     }
     obj10.actionSheetProperties = obj12;
     obj5[dismissible_content.DismissibleContent.MOBILE_PREMIUM_TRIAL_OFFER_ACTION_SHEET] = obj10;
-    let dismissibleContent;
-    if (mobileBottomSheet != null) {
-      dismissibleContent = mobileBottomSheet.dismissibleContent;
+    let tmp42 = null != mobileBottomSheetCopy;
+    if (tmp42) {
+      let dismissibleContent;
+      if (mobileBottomSheet != null) {
+        dismissibleContent = mobileBottomSheet.dismissibleContent;
+      }
+      tmp42 =
+        dismissibleContent === dismissible_content.DismissibleContent.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL;
     }
-    const obj13 = {
-      isEligible:
-        dismissibleContent === dismissible_content.DismissibleContent.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL,
-      newSnowflakeId: null,
-      actionSheetProperties: null,
-    };
+    const obj13 = { isEligible: tmp42, newSnowflakeId: null, actionSheetProperties: null };
     let promotionId;
     if (promotionMarketingComponent != null) {
       promotionId = promotionMarketingComponent.promotionId;
     }
     obj13.newSnowflakeId = promotionId;
-    const obj14 = { bottomSheetData: mobileBottomSheet, componentId: null, promotionId: null };
+    const obj14 = {
+      bottomSheetData: mobileBottomSheet,
+      copy: mobileBottomSheetCopy,
+      componentId: null,
+      promotionId: null,
+    };
     let id2;
     if (promotionMarketingComponent != null) {
       id2 = promotionMarketingComponent.id;
@@ -292,22 +303,26 @@ export function useMainViewTooltipActionSheetMap() {
     obj14.promotionId = promotionId1;
     obj13.actionSheetProperties = obj14;
     obj5[dismissible_content.DismissibleContent.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL] = obj13;
-    let dismissibleContent1;
-    if (mobileBottomSheet != null) {
-      dismissibleContent1 = mobileBottomSheet.dismissibleContent;
+    let tmp47 = null != mobileBottomSheetCopy;
+    if (tmp47) {
+      let dismissibleContent1;
+      if (mobileBottomSheet != null) {
+        dismissibleContent1 = mobileBottomSheet.dismissibleContent;
+      }
+      tmp47 = dismissibleContent1 === dismissible_content.DismissibleContent.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL;
     }
-    const obj15 = {
-      isEligible:
-        dismissibleContent1 === dismissible_content.DismissibleContent.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
-      newSnowflakeId: null,
-      actionSheetProperties: null,
-    };
+    const obj15 = { isEligible: tmp47, newSnowflakeId: null, actionSheetProperties: null };
     let promotionId2;
     if (promotionMarketingComponent != null) {
       promotionId2 = promotionMarketingComponent.promotionId;
     }
     obj15.newSnowflakeId = promotionId2;
-    const obj16 = { bottomSheetData: mobileBottomSheet, componentId: null, promotionId: null };
+    const obj16 = {
+      bottomSheetData: mobileBottomSheet,
+      copy: mobileBottomSheetCopy,
+      componentId: null,
+      promotionId: null,
+    };
     let id3;
     if (promotionMarketingComponent != null) {
       id3 = promotionMarketingComponent.id;
@@ -320,37 +335,37 @@ export function useMainViewTooltipActionSheetMap() {
     obj16.promotionId = promotionId3;
     obj15.actionSheetProperties = obj16;
     obj5[dismissible_content.DismissibleContent.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL] = obj15;
-    let tmp49 = tmp33;
-    if (tmp33) {
-      tmp49 = isGiftCoachmarkAssetReady;
+    let tmp52 = tmp34;
+    if (tmp34) {
+      tmp52 = isGiftCoachmarkAssetReady;
     }
-    const obj17 = { isEligible: tmp49, newSnowflakeId: stateFromStores3, actionSheetProperties: null };
+    const obj17 = { isEligible: tmp52, newSnowflakeId: stateFromStores3, actionSheetProperties: null };
     const obj18 = { coachmarkComponent: stateFromStores4 };
     obj17.actionSheetProperties = obj18;
     obj5[dismissible_content.DismissibleContent.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET] = obj17;
-    let tmp50 = !tmp33;
-    if (tmp33) {
-      tmp50 = null == stateFromStores5;
+    let tmp53 = !tmp34;
+    if (tmp34) {
+      tmp53 = null == stateFromStores5;
     }
-    let tmp51 = !tmp50;
-    if (!tmp50) {
-      let tmp52 = null != stateFromStores3;
-      if (tmp52) {
-        let tmp53 = isDismissed;
-        if (tmp53) {
+    let tmp54 = !tmp53;
+    if (!tmp53) {
+      let tmp55 = null != stateFromStores3;
+      if (tmp55) {
+        let tmp56 = isDismissed;
+        if (tmp56) {
           if (enabled) {
             enabled = null != stateFromStores5;
           }
           if (enabled) {
             enabled = isGiftReminderAssetReady;
           }
-          tmp53 = enabled;
+          tmp56 = enabled;
         }
-        tmp52 = tmp53;
+        tmp55 = tmp56;
       }
-      tmp51 = tmp52;
+      tmp54 = tmp55;
     }
-    const obj19 = { isEligible: tmp51, newSnowflakeId: stateFromStores3, actionSheetProperties: null };
+    const obj19 = { isEligible: tmp54, newSnowflakeId: stateFromStores3, actionSheetProperties: null };
     const obj20 = { coachmarkComponent: stateFromStores5 };
     obj19.actionSheetProperties = obj20;
     obj5[dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER] = obj19;
@@ -370,7 +385,7 @@ export function useMainViewTooltipActionSheetMap() {
     obj5[dismissible_content.DismissibleContent.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT] = obj27;
     const obj28 = { isEligible: nitroFileUploadUpsellEligible, actionSheetProperties: {} };
     obj5[dismissible_content.DismissibleContent.NITRO_FILE_UPLOAD_1GB_UPSELL] = obj28;
-    const obj29 = { isEligible: tmp32, actionSheetProperties: {} };
+    const obj29 = { isEligible: tmp33, actionSheetProperties: {} };
     obj5[dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_COACHMARK] = obj29;
     if (stateFromStores2) {
       stateFromStores2 = isEligibleSenderForReferralProgram;
@@ -386,9 +401,9 @@ export function useMainViewTooltipActionSheetMap() {
     }
     const obj30 = { isEligible: stateFromStores2, newSnowflakeId: tmp15, actionSheetProperties: {} };
     obj5[dismissible_content.DismissibleContent.MOBILE_REFERRAL_PROGRAM_BOTTOM_SHEET_ENTRYPOINT] = obj30;
-    let tmp34 = obj5;
+    let tmp35 = obj5;
   } else {
-    tmp34 = obj5;
+    tmp35 = obj5;
   }
-  return tmp34;
+  return tmp35;
 }

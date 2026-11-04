@@ -51,18 +51,18 @@ export function Checkbox(onToggle) {
   const obj4 = { style: tmp.labelContainer, children: null };
   const items1 = [label];
   if (required) {
-    const obj5 = { variant: "text-md/semibold", color: "text-feedback-critical", "aria-label": null, children: null };
+    const obj5 = { variant: "body-md/semibold", color: "text-feedback-critical", "aria-label": null, children: null };
     const intl2 = util.intl;
     obj5["aria-label"] = intl2.string(util.t.EkokLy);
     obj5.children = [" ", "*"];
     required = hasOwnProperty(Text_Text.Text, obj5);
   }
   items1[1] = required;
-  obj4.children = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", children: items1 });
+  obj4.children = hasOwnProperty(Text_Text.Text, { variant: "body-md/medium", children: items1 });
   const items2 = [React4(React3, obj4)];
   let tmp5Result = null != description;
   if (tmp5Result) {
-    const obj6 = { variant: "text-sm/normal", color: "text-subtle", children: description };
+    const obj6 = { variant: "body-sm/normal", color: "text-subtle", children: description };
     tmp5Result = React4(Text_Text.Text, obj6);
   }
   const obj7 = { direction: "horizontal", children: null };

@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorOverlay.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05710_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
 import BountiesScrollIndicatorAnimationDefault from "BountiesScrollIndicatorAnimation.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -11,9 +11,9 @@ const require = globalThis.__r;
 const require = fn;
 let StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
-let closure_9 = 5000 + fn(5380).timingSlowDuration;
+let closure_9 = 5000 + fn(5381).timingSlowDuration;
 const createStyles = fn(5141);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
@@ -71,7 +71,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
             if (closure_1_0) {
               num = closure_2_9;
             }
-            let timeout = setTimeout(/* F140896 */ function() { ... }, num);
+            let timeout = setTimeout(/* F141670 */ function() { ... }, num);
           }, num);
         }, num);
       }, closure_1_9);
@@ -216,7 +216,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
   items10[1] = items11;
   obj6.style = items10;
   const items12 = [c6(BountiesScrollIndicatorAnimationDefault, { visible: first, isFadingInContent: tmp2Result[0] }), ];
-  const obj7 = { variant: "text-sm/semibold", color: "text-default", style: tmp.scrollIndicatorText, children: null };
+  const obj7 = { variant: "body-sm/semibold", color: "text-default", style: tmp.scrollIndicatorText, children: null };
   const intl = tmp16(1113).intl;
   obj7.children = intl.string(require("util").t.eafsh4);
   items12[1] = c6(require("Text/Text").Text, obj7);

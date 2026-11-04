@@ -19,15 +19,15 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5141);
 let obj = {
   row: {
     position: "relative",
-    paddingLeft: fn(12761).MESSAGE_CONTENT_INSET,
-    paddingRight: fn(12761).MESSAGE_EDGE_INSET,
-    paddingVertical: fn(12770).ROW_PAD,
-    gap: fn(12770).BLOCK_GAP,
+    paddingLeft: fn(12842).MESSAGE_CONTENT_INSET,
+    paddingRight: fn(12842).MESSAGE_EDGE_INSET,
+    paddingVertical: fn(12851).ROW_PAD,
+    gap: fn(12851).BLOCK_GAP,
   },
   rowGroupStart: null,
   boundaryRow: null,
@@ -40,28 +40,28 @@ let obj = {
 };
 let obj3 = {
   position: "relative",
-  paddingLeft: fn(12761).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(12761).MESSAGE_EDGE_INSET,
-  paddingVertical: fn(12770).ROW_PAD,
-  gap: fn(12770).BLOCK_GAP,
+  paddingLeft: fn(12842).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(12842).MESSAGE_EDGE_INSET,
+  paddingVertical: fn(12851).ROW_PAD,
+  gap: fn(12851).BLOCK_GAP,
 };
-obj.rowGroupStart = { marginTop: fn(12770).GROUP_GAP };
-let obj4 = { marginTop: fn(12770).GROUP_GAP };
-obj.boundaryRow = { paddingHorizontal: fn(12761).MESSAGE_EDGE_INSET, paddingVertical: fn(12770).ROW_PAD };
-const rect = { position: "absolute", left: fn(12761).MESSAGE_EDGE_INSET, top: fn(12770).ROW_PAD };
+obj.rowGroupStart = { marginTop: fn(12851).GROUP_GAP };
+let obj4 = { marginTop: fn(12851).GROUP_GAP };
+obj.boundaryRow = { paddingHorizontal: fn(12842).MESSAGE_EDGE_INSET, paddingVertical: fn(12851).ROW_PAD };
+const rect = { position: "absolute", left: fn(12842).MESSAGE_EDGE_INSET, top: fn(12851).ROW_PAD };
 obj.avatar = rect;
-let obj5 = { paddingHorizontal: fn(12761).MESSAGE_EDGE_INSET, paddingVertical: fn(12770).ROW_PAD };
-obj.spoken = { position: "relative", gap: fn(12770).BLOCK_GAP };
-const rect1 = { left: fn(12761).MESSAGE_EDGE_INSET - fn(12761).MESSAGE_CONTENT_INSET, top: 0 };
+let obj5 = { paddingHorizontal: fn(12842).MESSAGE_EDGE_INSET, paddingVertical: fn(12851).ROW_PAD };
+obj.spoken = { position: "relative", gap: fn(12851).BLOCK_GAP };
+const rect1 = { left: fn(12842).MESSAGE_EDGE_INSET - fn(12842).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
-let obj6 = { position: "relative", gap: fn(12770).BLOCK_GAP };
-obj.avatarSpokenReplying = { top: fn(12771).REPLY_PREVIEW_HEIGHT + fn(12770).BLOCK_GAP };
-let obj7 = { top: fn(12771).REPLY_PREVIEW_HEIGHT + fn(12770).BLOCK_GAP };
+let obj6 = { position: "relative", gap: fn(12851).BLOCK_GAP };
+obj.avatarSpokenReplying = { top: fn(12852).REPLY_PREVIEW_HEIGHT + fn(12851).BLOCK_GAP };
+let obj7 = { top: fn(12852).REPLY_PREVIEW_HEIGHT + fn(12851).BLOCK_GAP };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj8 = { marginBottom: -nativeDefault.space.PX_4 };
-obj.activityBox = { marginLeft: -fn(12770).RAIL_INDENT };
+obj.activityBox = { marginLeft: -fn(12851).RAIL_INDENT };
 let closure_10 = createStyles.createStyles(obj);
-let obj9 = { marginLeft: -fn(12770).RAIL_INDENT };
+let obj9 = { marginLeft: -fn(12851).RAIL_INDENT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMessageRow.tsx");
 
@@ -262,14 +262,14 @@ export default noop.memo(function ConjureMessageRow(projectId) {
             combined = "" + intl3.string(tmp11(tmp12[24]).t.KD6OJJ) + ": " + conjureMentionNames;
           }
           const obj8 = {
-            variant: "text-md/normal",
+            variant: "body-md/normal",
             color: "text-default",
             accessibilityLabel: combined,
             children: null,
           };
           let tmp101 = null;
           if (null != memo4) {
-            const obj9 = { label: memo4.label, variant: "text-md/medium" };
+            const obj9 = { label: memo4.label, variant: "body-md/medium" };
             tmp101 = replied(tmp18(tmp12[25]), obj9);
           }
           const items13 = [tmp101, ,];
@@ -281,7 +281,7 @@ export default noop.memo(function ConjureMessageRow(projectId) {
             }
           }
           items13[1] = str5;
-          const obj10 = { text: trimmed, variant: "text-md/normal" };
+          const obj10 = { text: trimmed, variant: "body-md/normal" };
           items13[2] = replied(tmp18(tmp12[26]), obj10);
           obj8.children = items13;
           let tmp90Result = tmp90(tmp11(tmp12[23]).Text, obj8);
@@ -555,8 +555,8 @@ export default noop.memo(function ConjureMessageRow(projectId) {
                     tmp5 = !prose.hasWork;
                   }
                   obj4.streaming = tmp5;
-                  obj3.children = React5(ConjureNativeMarkdown.ConjureRevealedMarkdown, obj4);
-                  tmp19Result = React5(hasOwnProperty, obj3);
+                  obj3.children = metroImportDefault(ConjureNativeMarkdown.ConjureRevealedMarkdown, obj4);
+                  tmp19Result = metroImportDefault(hasOwnProperty, obj3);
                 }
               }
               const children = [tmp19Result];
@@ -581,10 +581,10 @@ export default noop.memo(function ConjureMessageRow(projectId) {
                   tmp16 = tmp17;
                 }
                 obj.besideAvatar = tmp16;
-                tmp7Result = React5(tmp10, obj);
+                tmp7Result = metroImportDefault(tmp10, obj);
               }
               children[1] = tmp7Result;
-              return React6(noop.Fragment, { children }, prose.key);
+              return React5(noop.Fragment, { children }, prose.key);
             }),
             ,
           ];
@@ -606,7 +606,7 @@ export default noop.memo(function ConjureMessageRow(projectId) {
                                 let tmp52Result15 = null;
                                 if (null != tmp30) {
                                   const obj32 = { style: tmp.spoken, children: null };
-                                  const obj33 = { variant: "text-xs/normal", color: "text-muted", children: null };
+                                  const obj33 = { variant: "body-xs/normal", color: "text-muted", children: null };
                                   const intl = tmp11(tmp12[24]).intl;
                                   obj33.children = intl.string(tmp18(tmp12[32]).YR8A2v);
                                   obj32.children = tmp52(tmp11(tmp12[23]).Text, obj33);
@@ -644,7 +644,7 @@ export default noop.memo(function ConjureMessageRow(projectId) {
           let tmp52Result17 = null;
           if ("side_reply" === message.kind) {
             const obj36 = {
-              variant: "text-xs/normal",
+              variant: "body-xs/normal",
               color: "text-muted",
               children: tmp11(tmp12[38]).midTurnCaption(message.acknowledges),
             };
