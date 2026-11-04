@@ -18,7 +18,7 @@ import ModalContent from "../../../design/components/Modal/native/ModalContent.n
 import _modDef8499 from "../../../../_runtime/metro/08499__.js";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
-import _modDef11784 from "../../../../_runtime/metro/11784__.js";
+import _modDef11785 from "../../../../_runtime/metro/11785__.js";
 import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
 import FamilyCenterModalRequestRouting from "../FamilyCenterModalRequestRouting.tsx";
 import EnvelopeSpotIllustration from "../../../design/components/mana-assets/native/generated/EnvelopeSpotIllustration.native.tsx";
@@ -521,7 +521,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   const obj3 = { style: tmp.content, children: null };
   const obj2 = navigation(563);
   const items2 = [
-    closure_11(View, { style: tmp.art, children: closure_11(navigation(13592).FamilyShieldSpotIllustration, {}) }),
+    closure_11(View, { style: tmp.art, children: closure_11(navigation(13593).FamilyShieldSpotIllustration, {}) }),
     ,
   ];
   const obj5 = {
@@ -572,7 +572,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   items4[1] = closure_11(navigation(5768).Button, obj11);
   obj9.children = items4;
   obj8.children = closure_12(navigation(6902).ButtonGroup, obj9);
-  items3[1] = closure_11(navigation(13427).ModalFooter, obj8);
+  items3[1] = closure_11(navigation(13428).ModalFooter, obj8);
   obj6.children = items3;
   return closure_12(navigation(8112).ModalScreen, obj6);
 }
@@ -925,13 +925,13 @@ export default function FamilyCenterRequestModal(userId) {
     return obj;
   }, items);
   let obj = {
-    initialRouteName: userId(13578).FamilyCenterModalRequestSections.PREREQ_LOADING,
+    initialRouteName: userId(13579).FamilyCenterModalRequestSections.PREREQ_LOADING,
     screens: memo,
     headerBackTitle: null,
   };
   const intl = userId(1113).intl;
   obj.headerBackTitle = intl.string(userId(1113).t["13/7kX"]);
-  return closure_11(userId(11670).Modal, obj);
+  return closure_11(userId(11671).Modal, obj);
 }
 export { FamilyCenterModalRequestConfirm };
 export { FamilyCenterModalRequestSuccess };

@@ -894,7 +894,7 @@ function ThemePicker(defaultIndex) {
       hasOnyxNux,
       onThemeSelected: callback5,
     };
-    let tmp64 = activeIndex(tmp6(17498), obj5);
+    let tmp64 = activeIndex(tmp6(17510), obj5);
     let tmp65 = activeIndex;
   } else {
     let tmp60;
@@ -938,7 +938,7 @@ function ThemePicker(defaultIndex) {
     }
     _undefined(str);
   }, items17);
-  const memo3 = obj2.useMemo(tmp6(17504), []);
+  const memo3 = obj2.useMemo(tmp6(17516), []);
   const obj10 = {
     themes: mobileThemes,
     themeIndex,
@@ -968,7 +968,7 @@ function ThemePicker(defaultIndex) {
   let tmp65Result2 = null;
   if ("nitro" === themeSelector) {
     const obj12 = { themes: mobileThemes, themeIndex, isDimmed: true };
-    tmp65Result2 = tmp65(tmp6(17525), obj12);
+    tmp65Result2 = tmp65(tmp6(17537), obj12);
   }
   const items19 = [tmp65Result2];
   const items20 = [tmp.container, ,];

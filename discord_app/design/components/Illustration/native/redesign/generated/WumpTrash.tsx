@@ -14,10 +14,10 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getWumpTrashSource(theme) {
   return _mod8947.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/18263__.js");
+      return require("../../../../../../../_runtime/metro/18277__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/18264__.js");
+      return require("../../../../../../../_runtime/metro/18278__.js");
     },
   });
 }
@@ -25,10 +25,10 @@ export function useWumpTrashSource() {
   const obj = shared;
   return _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/18263__.js");
+      return require("../../../../../../../_runtime/metro/18277__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/18264__.js");
+      return require("../../../../../../../_runtime/metro/18278__.js");
     },
   });
 }
@@ -36,19 +36,19 @@ export function WumpTrash(arg0) {
   const obj = shared;
   const illustrationSource = _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/18263__.js");
+      return require("../../../../../../../_runtime/metro/18277__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/18264__.js");
+      return require("../../../../../../../_runtime/metro/18278__.js");
     },
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("../../../../../../../_runtime/metro/18263__.js");
+      return require("../../../../../../../_runtime/metro/18277__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/18264__.js");
+      return require("../../../../../../../_runtime/metro/18278__.js");
     },
   };
   const merged = Object.assign(arg0);

@@ -20,7 +20,7 @@ const rect = {
   left: -PX_4,
   borderWidth: PX_4,
   borderColor: nativeDefault.colors.BACKGROUND_BRAND,
-  borderRadius: fn(12333).CONJURE_NATIVE_CARD_RADIUS + PX_4,
+  borderRadius: fn(12334).CONJURE_NATIVE_CARD_RADIUS + PX_4,
 };
 obj2.ring = rect;
 let closure_6 = createStyles.createStyles(obj2);

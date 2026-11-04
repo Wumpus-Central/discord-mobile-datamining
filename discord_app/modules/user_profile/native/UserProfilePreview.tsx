@@ -136,9 +136,9 @@ export default function UserProfilePreview(compact) {
     pendingThemeColors,
     isPreview: isPremiumTryItOut,
   });
-  const customStatusActivity = guildId(11582).useCustomStatusActivity();
+  const customStatusActivity = guildId(11583).useCustomStatusActivity();
   let tmp28Result5 = null != customStatusActivity && !flag;
-  const obj2 = guildId(11582);
+  const obj2 = guildId(11583);
   const userProfileColors = guildId(8952).useUserProfileColors({ theme, primaryColor, secondaryColor });
   ({ containerBackground, gradientFallbackBackground, avatarBackground } = userProfileColors);
   if (undefined !== avatarDecorationOverride) {
@@ -347,7 +347,7 @@ export default function UserProfilePreview(compact) {
       emojiOnlyStyle: null,
     };
     ({ customStatusBubble: obj20.style, emojiOnlyCustomStatusBubble: obj20.emojiOnlyStyle } = tmp9);
-    tmp28Result5 = closure_9(tmp4(11584), obj16);
+    tmp28Result5 = closure_9(tmp4(11585), obj16);
   }
   const items8 = [tmp28Result5, ,];
   const obj17 = {
@@ -363,7 +363,7 @@ export default function UserProfilePreview(compact) {
     guildId: null,
     hideBadges: null,
   };
-  const tmp4Result9 = isPremiumTryItOut(11583);
+  const tmp4Result9 = isPremiumTryItOut(11584);
   if (displayName == null) {
     displayName = pendingGlobalName;
   }
@@ -390,7 +390,7 @@ export default function UserProfilePreview(compact) {
   obj17.primaryGuildOverride = tmp46;
   obj17.guildId = guildId;
   obj17.hideBadges = flag3;
-  items8[1] = closure_9(isPremiumTryItOut(11601), obj17);
+  items8[1] = closure_9(isPremiumTryItOut(11602), obj17);
   let tmp28Result6 = !flag;
   if (!flag) {
     const obj18 = { userId: user.id, displayProfile: tmp5, themeType: constants.PREVIEW, style: null, bioLineClamp: 1 };
@@ -398,7 +398,7 @@ export default function UserProfilePreview(compact) {
     const obj19 = { backgroundColor: containerBackground };
     items9[2] = obj19;
     obj18.style = items9;
-    tmp28Result6 = closure_9(tmp4(11680), obj18);
+    tmp28Result6 = closure_9(tmp4(11681), obj18);
   }
   items8[2] = tmp28Result6;
   obj13.children = items8;
@@ -440,5 +440,5 @@ export default function UserProfilePreview(compact) {
     closure_9(tmp4(9644), obj22, skuId);
     const tmp4Result12 = tmp4(9644);
   }
-  const tmp4Result10 = isPremiumTryItOut(11601);
+  const tmp4Result10 = isPremiumTryItOut(11602);
 }

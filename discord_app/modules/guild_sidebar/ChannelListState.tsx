@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "GUILD_SEARCH_RECENT_MEMBERS",
+      version: 0.36,
     });
     merged.id = global;
     obj = closure_25;

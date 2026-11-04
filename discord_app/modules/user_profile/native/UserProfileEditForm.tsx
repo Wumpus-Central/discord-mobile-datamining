@@ -6,7 +6,7 @@ import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx"
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef16679 from "../../../../_runtime/metro/16679__.js";
+import _modDef16691 from "../../../../_runtime/metro/16691__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
@@ -754,13 +754,13 @@ const Constants = fn(1072);
 const HexagonCampaignConstants = fn(5166);
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-const constants3 = fn(16678).UserProfileEditAutoFocusElement;
+const constants3 = fn(16690).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let obj = {
   assetOrigin: fn(7297).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef16679,
-  staticImageUri: _modDef16679,
+  imageUri: _modDef16691,
+  staticImageUri: _modDef16691,
   description: "",
   originalAsset: "children",
 };

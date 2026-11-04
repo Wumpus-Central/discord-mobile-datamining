@@ -5,7 +5,7 @@ const require = globalThis.__r;
 
 const require = fn;
 let useChannelCallStore = fn(11181).useChannelCallStore;
-const Constants = fn(11896);
+const Constants = fn(11897);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, damping: 20 };
 let closure_7 = {

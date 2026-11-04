@@ -70,7 +70,7 @@ function appendFailedUserMessage(projectId, nonce, message) {
     userId: null,
     timestamp: null,
     attachments: null,
-    held: "sa",
+    held: "dispatch",
   };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;

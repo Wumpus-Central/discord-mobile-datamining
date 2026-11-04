@@ -35,11 +35,11 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     children: null,
   };
   const tmp = closure_6();
-  const customTypingIndicatorSuggestionPresets = onChange(13950).getCustomTypingIndicatorSuggestionPresets();
+  const customTypingIndicatorSuggestionPresets = onChange(13951).getCustomTypingIndicatorSuggestionPresets();
   obj3.children = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1113).intl;
-    obj.label = intl.string(onChange(13950).getCustomTypingIndicatorSuggestionMessage(value));
+    obj.label = intl.string(onChange(13951).getCustomTypingIndicatorSuggestionMessage(value));
     return jsx(onChange(7202).TableRadioRow, { value, label: null }, value);
   });
   obj.children = jsx(onChange(7199).TableRadioGroup, {

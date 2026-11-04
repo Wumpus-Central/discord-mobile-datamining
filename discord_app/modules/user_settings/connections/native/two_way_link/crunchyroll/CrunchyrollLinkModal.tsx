@@ -26,7 +26,7 @@ function CloseButton() {
     accessibilityLabel: null,
   });
 }
-const constants = fn(14860).CrunchyrollLinkModalScenes;
+const constants = fn(14861).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -40,7 +40,7 @@ export default function CrunchyrollLinkModal(locationStack) {
   items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => {
     function onClose() {
-      return closure_1_1(14858).hideModal();
+      return closure_1_1(14859).hideModal();
     }
     function blank() {
       return null;
@@ -52,7 +52,7 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(14861), {});
+          return closure_1_6(closure_1_1(14862), {});
         },
       },
       [closure_2_4.PRE_CONNECT]: {
@@ -63,7 +63,7 @@ export default function CrunchyrollLinkModal(locationStack) {
           return closure_1_6(onClose(9881).TwoWayLinkStepHeader, { idx: 1, total: 2 });
         },
         render() {
-          return closure_1_6(closure_1_1(14863), {});
+          return closure_1_6(closure_1_1(14864), {});
         },
       },
       [closure_2_4.DISCORD_CONSENT]: {
@@ -75,7 +75,7 @@ export default function CrunchyrollLinkModal(locationStack) {
         },
         render(arg0) {
           ({ callbackCode, callbackState } = arg0);
-          return closure_1_6(closure_1_1(14865), { callbackCode, callbackState });
+          return closure_1_6(closure_1_1(14866), { callbackCode, callbackState });
         },
       },
       [closure_2_4.SUCCESS]: {
@@ -99,7 +99,7 @@ export default function CrunchyrollLinkModal(locationStack) {
     };
   }, items);
   const obj = twoWayLinkStyles(9880);
-  const accountLinkStepTracking = twoWayLinkStyles(14846).useAccountLinkStepTracking(
+  const accountLinkStepTracking = twoWayLinkStyles(14847).useAccountLinkStepTracking(
     PlatformTypes.CRUNCHYROLL,
     locationStack.locationStack,
   );

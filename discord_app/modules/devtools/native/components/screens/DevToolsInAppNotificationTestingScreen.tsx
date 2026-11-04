@@ -606,7 +606,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
           {
             label: label.label,
             subLabel: label.subLabel,
-            icon: closure_1_14(closure_1_0(17823).BeakerIcon, {}),
+            icon: closure_1_14(closure_1_0(17835).BeakerIcon, {}),
             onPress() {
               return closure_2_0(closure_0);
             },
@@ -630,7 +630,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
         {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(label(17823).BeakerIcon, {}),
+          icon: closure_1_14(label(17835).BeakerIcon, {}),
           onPress() {
             return label(label);
           },

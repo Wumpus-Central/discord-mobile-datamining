@@ -10,7 +10,7 @@ require = fn;
 function closeModal() {
   TransferOwnershipModalActionCreatorsDefault.close();
 }
-const TransferOwnershipConstants = fn(13494);
+const TransferOwnershipConstants = fn(13495);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: closure_6 } =
   TransferOwnershipConstants);
 const jsx = fn(21).jsx;
@@ -62,8 +62,8 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        toUser(13492).close();
-        const obj = toUser(13492);
+        toUser(13493).close();
+        const obj = toUser(13493);
         toUser(9219).close();
         const obj2 = toUser(9219);
         const result = closure_0(5845).showTransferOwnershipSuccess();

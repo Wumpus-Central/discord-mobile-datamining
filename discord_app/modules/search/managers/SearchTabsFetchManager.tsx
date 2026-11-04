@@ -11,7 +11,7 @@ const SearchConstants = fn(9976);
   SEARCH_QUERY_DEFAULT_FILTERS: closure_6,
 } = SearchConstants);
 const SearchTypes = fn(1072).SearchTypes;
-const AbstractSearchFetchManager = fn(14139).AbstractSearchFetchManager;
+const AbstractSearchFetchManager = fn(14140).AbstractSearchFetchManager;
 class SearchTabsFetchManager extends AbstractSearchFetchManager {}
 const prototype = SearchTabsFetchManager.prototype;
 prototype["createRequestPayload"] = function createRequestPayload(trackExactTotalHits) {

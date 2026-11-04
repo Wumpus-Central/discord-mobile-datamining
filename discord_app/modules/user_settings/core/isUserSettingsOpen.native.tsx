@@ -63,7 +63,7 @@ function isUserSettingsOpen() {
                             let someResult = null != routes1;
                             if (someResult) {
                               const routes = state.routes;
-                              someResult = routes.some(/* F109447 */ function() { ... });
+                              someResult = routes.some(/* F109889 */ function() { ... });
                             }
                             tmp = someResult;
                           }
@@ -128,7 +128,7 @@ export function useIsUserSettingsOpen() {
                     let someResult = null != routes1;
                     if (someResult) {
                       const routes = state.routes;
-                      someResult = routes.some(/* F109447 */ function() { ... });
+                      someResult = routes.some(/* F109889 */ function() { ... });
                     }
                     tmp = someResult;
                   }

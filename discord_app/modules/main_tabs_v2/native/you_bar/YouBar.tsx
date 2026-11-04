@@ -28,7 +28,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(17310);
+const YouBarConstants = fn(17322);
 ({
   YOU_BAR_HEIGHT: closure_10,
   YOU_BAR_PADDING: closure_11,
@@ -89,7 +89,7 @@ let closure_25 = noop.memo(function YouBar() {
     str = str2;
   }
   if (isMobileRTCV2Enabled) {
-    let DOCK_SPACE_SPRING_CONFIG = tmp2(11436).DOCK_SPACE_SPRING_CONFIG;
+    let DOCK_SPACE_SPRING_CONFIG = tmp2(11437).DOCK_SPACE_SPRING_CONFIG;
   } else {
     DOCK_SPACE_SPRING_CONFIG = closure_12;
   }
@@ -356,7 +356,7 @@ let closure_25 = noop.memo(function YouBar() {
       callback3();
     }
   }, items9);
-  const context = obj8.useContext(tmp7(11430));
+  const context = obj8.useContext(tmp7(11431));
   gesture = context.gesture;
   const translateX = context.translateX;
   const tmp2Result23 = require("useYouBarAccessibilityLabel");
@@ -450,7 +450,7 @@ let closure_25 = noop.memo(function YouBar() {
   let tmp50Result = tmp33;
   if (null != nameplate) {
     const obj5 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp47 };
-    tmp50Result = closure_18(tmp7(18713), obj5);
+    tmp50Result = closure_18(tmp7(18727), obj5);
   }
   items12[1] = tmp50Result;
   const obj6 = { gesture: memo3, children: null };
@@ -489,12 +489,12 @@ let closure_25 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj10 = { hasNameplate: tmp33, canUnpin: tmp27.canPin };
-    let tmp50Result2 = closure_18(tmp7(18719), obj10);
+    let tmp50Result2 = closure_18(tmp7(18733), obj10);
   } else {
     tmp50Result2 = null;
     if (iCYMIEnabled) {
       const obj11 = { hasNameplate: tmp33 };
-      tmp50Result2 = closure_18(tmp7(18721), obj11);
+      tmp50Result2 = closure_18(tmp7(18735), obj11);
     }
   }
   const items13 = [tmp50Result2, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];

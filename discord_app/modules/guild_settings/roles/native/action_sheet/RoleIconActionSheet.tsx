@@ -180,18 +180,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(20058).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(20058);
+                  closure_0(20072).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(20072);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(20058);
+                const tmp22 = closure_0(20072);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(20062).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(20076).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }

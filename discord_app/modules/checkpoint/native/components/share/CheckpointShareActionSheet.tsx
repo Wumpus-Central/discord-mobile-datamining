@@ -81,8 +81,8 @@ export default function CheckpointShareActionSheet(character) {
   if (null != character) {
     if (tmp11) {
       const items1 = [
-        tmp6(tmp3[5]).CheckpointCardTypes.CHARACTER_ONLY,
         tmp6(tmp3[5]).CheckpointCardTypes.DEFAULT,
+        tmp6(tmp3[5]).CheckpointCardTypes.CHARACTER_ONLY,
         tmp6(tmp3[5]).CheckpointCardTypes.STATS_ONLY,
       ];
       items7 = items1;

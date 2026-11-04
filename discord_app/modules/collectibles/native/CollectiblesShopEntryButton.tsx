@@ -24,7 +24,7 @@ function CoachmarkVariant(shopButtonRef) {
   const obj2 = { children: null };
   const obj3 = { ref: shopButtonRef, IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
   const obj = navigateToShop(7709);
-  obj3.IconComponent = navigateToShop(12685).ShopIcon;
+  obj3.IconComponent = navigateToShop(12686).ShopIcon;
   const intl = navigateToShop(1113).intl;
   obj3.accessibilityLabel = intl.string(navigateToShop(1113).t.pWG4ze);
   obj3.onPress = function onPress() {
@@ -80,7 +80,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
       const markAsDismissed = openReplyActionSheet.markAsDismissed;
       const obj = {
         ref: markAsDismissed,
-        IconComponent: navigateToShop(12685).ShopIcon,
+        IconComponent: navigateToShop(12686).ShopIcon,
         accessibilityLabel: null,
         onPress: null,
         showRedDot: null,
@@ -94,7 +94,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         }
       };
       obj.showRedDot = null != visibleContent;
-      return closure_1_6(shopButtonRef(14924), obj);
+      return closure_1_6(shopButtonRef(14925), obj);
     }
     if (tmp4) {
       let type1;

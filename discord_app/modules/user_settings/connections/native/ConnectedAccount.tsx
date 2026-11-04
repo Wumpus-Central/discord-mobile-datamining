@@ -575,36 +575,36 @@ prototype["renderMetadata"] = function renderMetadata() {
   const createdAtDate = account(7484).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let redditMetadataItems = tmp2(11797).generateRedditMetadataItems(metadata);
-    const tmp2Result = tmp2(11797);
+    let redditMetadataItems = tmp2(11798).generateRedditMetadataItems(metadata);
+    const tmp2Result = tmp2(11798);
   } else if (constants.STEAM === type) {
-    redditMetadataItems = tmp2(11797).generateSteamMetadataItems(metadata);
-    const tmp2Result7 = tmp2(11797);
+    redditMetadataItems = tmp2(11798).generateSteamMetadataItems(metadata);
+    const tmp2Result7 = tmp2(11798);
   } else if (constants.LETTERBOXD === type) {
-    redditMetadataItems = tmp2(11797).generateLetterboxdMetadataItems(metadata);
-    const tmp2Result8 = tmp2(11797);
+    redditMetadataItems = tmp2(11798).generateLetterboxdMetadataItems(metadata);
+    const tmp2Result8 = tmp2(11798);
   } else {
     if (constants.BLUESKY !== type) {
       if (constants.TWITTER !== type) {
         if (constants.MASTODON !== type) {
           if (constants.EBAY === type) {
-            redditMetadataItems = tmp2(11797).generateEbayMetadataItems(metadata);
-            const tmp2Result9 = tmp2(11797);
+            redditMetadataItems = tmp2(11798).generateEbayMetadataItems(metadata);
+            const tmp2Result9 = tmp2(11798);
           } else if (constants.PAYPAL === type) {
-            redditMetadataItems = tmp2(11797).generatePaypalMetadataItems(metadata);
-            const tmp2Result10 = tmp2(11797);
+            redditMetadataItems = tmp2(11798).generatePaypalMetadataItems(metadata);
+            const tmp2Result10 = tmp2(11798);
           } else {
             redditMetadataItems = [];
             if (constants.TIKTOK === type) {
-              redditMetadataItems = tmp2(11797).generateTikTokMetadataItems(metadata);
-              const tmp2Result11 = tmp2(11797);
+              redditMetadataItems = tmp2(11798).generateTikTokMetadataItems(metadata);
+              const tmp2Result11 = tmp2(11798);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11797).generateTwitterMetadataItems(metadata);
-    const tmp2Result12 = tmp2(11797);
+    redditMetadataItems = tmp2(11798).generateTwitterMetadataItems(metadata);
+    const tmp2Result12 = tmp2(11798);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "body-xs/normal", color: "interactive-text-default", children: null };
@@ -682,7 +682,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     if (self.state.metadataAlreadyRefreshed) {
       let tmp19Result = closure_14(tmp2(9430).CheckmarkLargeBoldIcon, { size: "sm" });
     } else {
-      tmp19Result = closure_14(tmp2(12420).RefreshIcon, { size: "sm" });
+      tmp19Result = closure_14(tmp2(12421).RefreshIcon, { size: "sm" });
     }
     const obj12 = {
       size: "sm",

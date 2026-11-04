@@ -169,7 +169,7 @@ export default function HexagonCampaignSheet() {
                 };
                 c3 = 2;
                 c4 = 1;
-                const obj9 = { value: stateFromStores(17242).applyHexagonCampaignPerks(obj7), done: false };
+                const obj9 = { value: stateFromStores(17254).applyHexagonCampaignPerks(obj7), done: false };
                 return obj9;
               }
             }
@@ -207,9 +207,9 @@ export default function HexagonCampaignSheet() {
         obj12.perks = values.filter((item) => closure_1_5[item]);
         obj12.content = stateFromStores(6919).QuestContent.AD_PERK_MODAL;
         obj12.sourceQuestContent = stateFromStores(6919).QuestContent.QUEST_HOME_MOBILE;
-        const result = stateFromStores(16699).trackHexagonCampaignPerkAction(obj12);
-        obj4 = stateFromStores(16699);
-        tmp3(5382).hideActionSheet(stateFromStores(17240).HEXAGON_CAMPAIGN_SHEET_KEY);
+        const result = stateFromStores(16711).trackHexagonCampaignPerkAction(obj12);
+        obj4 = stateFromStores(16711);
+        tmp3(5382).hideActionSheet(stateFromStores(17252).HEXAGON_CAMPAIGN_SHEET_KEY);
         const _Object2 = Object;
         const values2 = Object.values(closure_129_5);
         const _Boolean = Boolean;

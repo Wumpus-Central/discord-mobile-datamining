@@ -145,7 +145,7 @@ let result = size.fileFinishedImporting("modules/markup/native/MarkupReactComman
 export default function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(11689).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(11690).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,

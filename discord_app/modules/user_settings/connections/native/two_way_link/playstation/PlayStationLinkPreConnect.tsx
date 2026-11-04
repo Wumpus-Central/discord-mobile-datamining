@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import _modDef14853 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef14854 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(14849).PlayStationLinkModalScenes;
+let closure_4 = fn(14850).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
@@ -24,7 +24,7 @@ export function PlayStationLinkPreConnect(platformType) {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef14853 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14854 }), []);
   const obj2 = {
     platformType: platformType.platformType,
     onError: callback1,

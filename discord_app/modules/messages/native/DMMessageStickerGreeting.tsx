@@ -86,8 +86,8 @@ export default function DMMessageStickerGreeting(channel) {
   }
   const intl2 = Text(1113).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(Text(1113).t.m0zYbV, { username: name });
-  const showConvoStarterInDM = Text(14040).useShowConvoStarterInDM(channel);
-  const TextResult = Text(14040);
+  const showConvoStarterInDM = Text(14041).useShowConvoStarterInDM(channel);
+  const TextResult = Text(14041);
   const items2 = [c7];
   const items3 = [showConvoStarterInDM];
   const stateFromStores2 = Text(504).useStateFromStores(
@@ -128,8 +128,8 @@ export default function DMMessageStickerGreeting(channel) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -143,8 +143,8 @@ export default function DMMessageStickerGreeting(channel) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               _undefined = tmp7;
               function showErrorToast(text) {
@@ -166,27 +166,27 @@ export default function DMMessageStickerGreeting(channel) {
                   return { value: "HermesInternal", done: null };
                 } else {
                   c3 = 1;
-                  const obj4 = { channelId: _undefined.id, source: "In-channel greet" };
-                  _undefined(tmp30[14]).trackWaveCtaClicked(obj4);
-                  const obj5 = _undefined(tmp30[14]);
+                  const obj6 = { channelId: _undefined.id, source: "In-channel greet" };
+                  _undefined(tmp37[14]).trackWaveCtaClicked(obj6);
+                  let obj2 = _undefined(tmp37[14]);
                   v2 = 2;
                   c5 = 1;
-                  const obj6 = { value: tmp3(tmp30[15]).sendGreetMessage(_undefined.id, closure_1_14), done: false };
-                  return obj6;
+                  const obj7 = { value: tmp3(tmp37[15]).sendGreetMessage(_undefined.id, closure_1_14), done: false };
+                  return obj7;
                 }
               }
             }
           } else {
             if (1 === tmp7) {
               c3 = 0;
-              closure_128_1 = tmp30;
+              closure_128_1 = tmp37;
               let ok = closure_128_1.ok;
               if (!ok) {
                 ok = 429 !== closure_128_1.status;
               }
               if (!ok) {
-                const intl = _undefined(tmp30[16]).intl;
-                closure_128_0(intl.string(_undefined(tmp30[16]).t.Whhv4w));
+                const intl = _undefined(tmp37[16]).intl;
+                closure_128_0(intl.string(_undefined(tmp37[16]).t.Whhv4w));
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -202,10 +202,10 @@ export default function DMMessageStickerGreeting(channel) {
             tmp7 = closure_129_4(false);
           }
           c5 = 3;
-        } catch (tmp30) {
+        } catch (tmp37) {
           if (tmp4 === c3) {
             c5 = tmp2;
-            throw tmp30;
+            throw tmp37;
           } else {
             v2 = tmp;
           }

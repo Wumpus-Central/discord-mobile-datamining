@@ -8,7 +8,7 @@ import AppStateStore from "../../../../../stores/native/AppStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const TwoFAModalSetupSections = fn(16893).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(16905).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5141);

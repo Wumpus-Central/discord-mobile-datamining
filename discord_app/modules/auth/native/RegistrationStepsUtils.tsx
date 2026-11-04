@@ -103,21 +103,21 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   closure_131_2 = closure_2;
   const result = UniqueUsernamesStore.registrationUsernameSuggestion();
   const registrationOptions = state2.getState().registrationOptions;
-  let tmp37 = null;
+  let tmp49 = null;
   if (!obj10.isNullOrEmpty(result)) {
-    tmp37 = registrationOptions.username === result;
+    tmp49 = registrationOptions.username === result;
   }
-  const obj6 = {};
+  const obj5 = {};
   const merged = Object.assign(registrationOptions);
-  obj6.usedUsernameSuggestion = tmp37;
-  closure_131_3 = obj6;
+  obj5.usedUsernameSuggestion = tmp49;
+  closure_131_3 = obj5;
   state = state.getState();
   if (state.required) {
-    obj6.promoEmailConsent = state;
+    obj5.promoEmailConsent = state;
   }
   metroImportDefault(true);
   timestampProducer({});
-  await auth_register.registerFull(obj6);
+  await auth_register.registerFull(obj5);
   if (1 === tmp7) {
     c6 = 0;
     closure_131_6 = closure_5;
@@ -147,9 +147,9 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   return value;
 };
 const usePromoEmailConsentStore = fn(6876).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(18229);
+const RegistrationUIStore = fn(18243);
 ({ setRegistrationErrors: closure_6, setSubmitting: metroImportDefault, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(18230);
+const RegistrationConstants = fn(18244);
 ({ authStateToRegisterTransitionStep: closure_10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsx = fn(21).jsx;

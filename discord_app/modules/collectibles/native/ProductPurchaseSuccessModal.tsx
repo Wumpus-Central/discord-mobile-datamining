@@ -437,7 +437,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj8 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
       const obj9 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp40(tmp2(14712).BalanceWidgetPill, obj9);
+      showOrbBalancePill = tmp40(tmp2(14713).BalanceWidgetPill, obj9);
     }
     obj8.children = showOrbBalancePill;
     const items11 = [tmp40(closure_7, obj8)];
@@ -492,15 +492,15 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       tmp39Result2 = tmp39(tmp4(9653), obj15);
     } else if (tmp2(2116).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj16 = { user: currentUser, profileEffect: product.items[0] };
-      tmp39Result2 = tmp39(tmp4(11580), obj16);
+      tmp39Result2 = tmp39(tmp4(11581), obj16);
     } else if (tmp2(2116).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj17 = { user: currentUser, profileFrame: product.items[0] };
-      tmp39Result2 = tmp39(tmp4(11694), obj17);
+      tmp39Result2 = tmp39(tmp4(11695), obj17);
     } else {
       tmp39Result2 = null;
       if (tmp2(2116).CollectiblesItemType.NAMEPLATE === type) {
         const obj18 = { user: currentUser, nameplate: product.items[0], animate: true };
-        tmp39Result2 = tmp39(tmp2(11695).NameplatePreview, obj18);
+        tmp39Result2 = tmp39(tmp2(11696).NameplatePreview, obj18);
       }
     }
     obj12.children = tmp39Result2;

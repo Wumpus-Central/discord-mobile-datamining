@@ -6,7 +6,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useMeasuredLayoutDefault from "../../../screen/native/useMeasuredLayout.tsx";
 import conjureHomeCarouselFan from "../conjureHomeCarouselFan.tsx";
-import SvgCss from "../../../../../_runtime/13042_SvgCss.js";
+import SvgCss from "../../../../../_runtime/13043_SvgCss.js";
 import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt.tsx";
 import conjureHomeInspirationEntries from "../conjureHomeInspirationEntries.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -29,10 +29,10 @@ const PX_24 = nativeDefault.space.PX_24;
 let obj = {
   games: fn(9877).GameControllerIcon,
   apps: fn(8819).AppsIcon,
-  profile_widget: fn(13039).WidgetsIcon,
+  profile_widget: fn(13040).WidgetsIcon,
   overlay_widget: fn(9737).ScreenIcon,
-  automod: fn(11468).ShieldIcon,
-  chat_bot: fn(12302).RobotIcon,
+  automod: fn(11469).ShieldIcon,
+  chat_bot: fn(12303).RobotIcon,
 };
 const createStyles = fn(5141);
 let obj2 = {

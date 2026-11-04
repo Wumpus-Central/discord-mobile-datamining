@@ -201,7 +201,7 @@ export default function CheckpointCardFrame(character) {
     const _HermesInternal4 = HermesInternal;
     obj13.origin = "" + x + width / 2 + ", " + c14 + c16 / 2;
     const size5 = {
-      href: tmp28(13664),
+      href: tmp28(13665),
       x,
       y: c14 - 0.4348 * c16,
       width,
@@ -249,7 +249,7 @@ export default function CheckpointCardFrame(character) {
         return { opacity };
       }
     }
-    obj19.href = tmp28(13664);
+    obj19.href = tmp28(13665);
     const merged = Object.assign(styles);
     obj19.opacity = 0.5;
     obj19.preserveAspectRatio = "xMidYMid slice";

@@ -19,7 +19,7 @@ import NativeMenuStore from "../../native_menu/native/NativeMenuStore.tsx";
 
 const require = globalThis.__r;
 
-const _modDef1652 = tmp16(1652);
+const _modDef1652 = tmp17(1652);
 require = fn;
 function NotificationWrapper(notification) {
   notification = notification.notification;
@@ -108,7 +108,7 @@ let closure_23 = {
   code: "(function InAppNotificationContainerTsx6(){let[scheduleOnRN,setPanning]=this.__closure;scheduleOnRN(setPanning,false);})",
 };
 let closure_24 = {
-  code: "(function InAppNotificationContainerTsx7(){let[notificationGestureY,scale,initialized,interpolate,PAN_INPUT_RANGE,extrapolateConfig]=this.__closure;const gestureY=notificationGestureY.get();const scaleValue=scale.get();const scaleTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0.3,1,0.3],extrapolateConfig):scaleValue;const opacityTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0,1,0],extrapolateConfig):scaleValue;return{transform:[{translateY:gestureY},{scale:scaleTransform}],opacity:opacityTransform};})",
+  code: "(function InAppNotificationContainerTsx7(){let[notificationGestureY,scale,initialized,interpolate,PAN_INPUT_RANGE,extrapolateConfig,usesFullScaleEntrance]=this.__closure;const gestureY=notificationGestureY.get();const scaleValue=scale.get();const scaleTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0.3,1,0.3],extrapolateConfig):usesFullScaleEntrance?1:scaleValue;const opacityTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0,1,0],extrapolateConfig):scaleValue;return{transform:[{translateY:gestureY},{scale:scaleTransform}],opacity:opacityTransform};})",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationContainer.tsx");
@@ -116,8 +116,23 @@ let result = size.fileFinishedImporting("modules/in_app_notifications/native/InA
 export default function InAppNotificationContainer(notification) {
   notification = notification.notification;
   _require = notification;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  c3 = undefined;
   noop = undefined;
+  StyleSheet = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  c10 = undefined;
+  c11 = undefined;
   const tmp = closure_16();
+  let isIOSResult = require("utils/PlatformUtils").isIOS();
+  if (isIOSResult) {
+    isIOSResult = tmp2(11379).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
+    const tmp2Result = tmp2(11379);
+  }
   items = [notification];
   const memo = noop.useMemo(() => InAppNotificationUtils.extractMetadataFromNotification(c0), items);
   const guildId = memo.guildId;
@@ -127,25 +142,26 @@ export default function InAppNotificationContainer(notification) {
   c3 = messageId;
   const channelType = memo.channelType;
   noop = channelType;
+  obj = require("utils/PlatformUtils");
+  const obj3 = noop;
   const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
   StyleSheet = sharedValue;
-  obj = noop;
-  let obj2 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result7 = require("../../../../_runtime/metro/01652__.js");
   const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
   c6 = sharedValue1;
-  const obj3 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result8 = require("../../../../_runtime/metro/01652__.js");
   const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result9 = require("../../../../_runtime/metro/01652__.js");
   const sharedValue3 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
   c7 = sharedValue3;
-  const tmp9 = c3(noop.useState(false), 2);
-  let first = tmp9[0];
+  const tmp10 = c3(noop.useState(false), 2);
+  let first = tmp10[0];
   c8 = first;
-  c9 = tmp9[1];
-  const tmp11 = c3(noop.useState(false), 2);
-  const first1 = tmp11[0];
+  c9 = tmp10[1];
+  const tmp12 = c3(noop.useState(false), 2);
+  const first1 = tmp12[0];
   c10 = first1;
-  const obj5 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result10 = require("../../../../_runtime/metro/01652__.js");
   let items1 = [c6];
   const items2 = [notification, guildId, channelId, messageId];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => velocityY.isOpen());
@@ -207,22 +223,22 @@ export default function InAppNotificationContainer(notification) {
       AnalyticsUtilsDefault.track(constants2.IN_APP_NOTIFICATION_SHOWN, obj2);
     }
   }, items3);
-  const Gesture = require("LegacyBaseButton").Gesture;
-  const obj6 = require("initialize");
+  const Gesture = tmp2(5428).Gesture;
+  const tmp2Result11 = require("initialize");
   const items4 = [
     closure_19,
     sharedValue2,
     sharedValue,
     sharedValue1,
     require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
-    tmp11[1],
+    tmp12[1],
   ];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
   c3 = undefined;
   noop = undefined;
-  [tmp19, tmp20, tmp21, tmp22, tmp23, tmp24] = items4;
+  [tmp20, tmp21, tmp22, tmp23, tmp24, tmp25] = items4;
   class InAppNotificationContainerTsx2 {
     constructor() {
       result = closure_0.set(closure_1.get());
@@ -231,16 +247,16 @@ export default function InAppNotificationContainer(notification) {
       return;
     }
   }
-  const items5 = [tmp20, tmp21, tmp22, tmp23, tmp24];
+  const items5 = [tmp21, tmp22, tmp23, tmp24, tmp25];
   InAppNotificationContainerTsx2.__closure = items5;
   InAppNotificationContainerTsx2.__workletHash = 9958676486255;
-  InAppNotificationContainerTsx2.__initData = tmp19;
+  InAppNotificationContainerTsx2.__initData = tmp20;
   const PanResult = Gesture.Pan();
   const items6 = [closure_20, sharedValue2, sharedValue, sharedValue1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
-  [tmp25, tmp26, tmp27, tmp28] = items6;
+  [tmp26, tmp27, tmp28, tmp29] = items6;
   class InAppNotificationContainerTsx3 {
     constructor(arg0) {
       sum = closure_0.get() + notification.translationY;
@@ -249,10 +265,10 @@ export default function InAppNotificationContainer(notification) {
       return;
     }
   }
-  const items7 = [tmp26, tmp27, tmp28];
+  const items7 = [tmp27, tmp28, tmp29];
   InAppNotificationContainerTsx3.__closure = items7;
   InAppNotificationContainerTsx3.__workletHash = 8301292753596;
-  InAppNotificationContainerTsx3.__initData = tmp25;
+  InAppNotificationContainerTsx3.__initData = tmp26;
   const onBeginResult = Gesture.Pan().onBegin(InAppNotificationContainerTsx2);
   const items8 = [
     closure_22,
@@ -266,7 +282,7 @@ export default function InAppNotificationContainer(notification) {
     closure_21,
     require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
     callback,
-    tmp11[1],
+    tmp12[1],
     require("spring/spring").withSpring,
   ];
   _require = undefined;
@@ -281,7 +297,7 @@ export default function InAppNotificationContainer(notification) {
   c9 = undefined;
   c10 = undefined;
   c11 = undefined;
-  [tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42] = items8;
+  [tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43] = items8;
   class InAppNotificationContainerTsx5 {
     constructor(arg0) {
       obj = closure_0;
@@ -342,26 +358,26 @@ export default function InAppNotificationContainer(notification) {
       return;
     }
   }
-  const items9 = [tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42];
+  const items9 = [tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43];
   InAppNotificationContainerTsx5.__closure = items9;
   InAppNotificationContainerTsx5.__workletHash = 3427472707207;
-  InAppNotificationContainerTsx5.__initData = tmp30;
+  InAppNotificationContainerTsx5.__initData = tmp31;
   const onUpdateResult = Gesture.Pan().onBegin(InAppNotificationContainerTsx2).onUpdate(InAppNotificationContainerTsx3);
-  const tmp29 = c11;
-  const items10 = [closure_23, require("../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp11[1]];
+  const tmp30 = c11;
+  const items10 = [closure_23, require("../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp12[1]];
   _require = undefined;
   importDefault = undefined;
-  [tmp43, tmp44, tmp45] = items10;
+  [tmp44, tmp45, tmp46] = items10;
   class InAppNotificationContainerTsx6 {
     constructor() {
       tmp = closure_0(closure_1, false);
       return;
     }
   }
-  const items11 = [tmp44, tmp45];
+  const items11 = [tmp45, tmp46];
   InAppNotificationContainerTsx6.__closure = items11;
   InAppNotificationContainerTsx6.__workletHash = 1825489770853;
-  InAppNotificationContainerTsx6.__initData = tmp43;
+  InAppNotificationContainerTsx6.__initData = tmp44;
   const onEndResult = Gesture.Pan()
     .onBegin(InAppNotificationContainerTsx2)
     .onUpdate(InAppNotificationContainerTsx3)
@@ -377,8 +393,9 @@ export default function InAppNotificationContainer(notification) {
     sharedValue3,
     first,
     require("../../../../_runtime/metro/01652__.js").interpolate,
-    tmp29,
+    tmp30,
     c8,
+    isIOSResult,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -386,24 +403,30 @@ export default function InAppNotificationContainer(notification) {
   c3 = undefined;
   noop = undefined;
   StyleSheet = undefined;
-  [tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53] = items12;
+  c6 = undefined;
+  [tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55] = items12;
   class InAppNotificationContainerTsx7 {
     constructor() {
       value = closure_0.get();
       value1 = closure_1.get();
       items = [,];
       items[0] = { translateY: value };
-      tmp4 = value1;
       tmp3 = closure_2;
       if (closure_2) {
         tmp5 = closure_3;
         tmp6 = closure_4;
         tmp7 = closure_5;
         tmp8 = value;
-        tmp4 = closure_3(value, closure_4, [0.3, 1, 0.3], closure_5);
+        num = closure_3(value, closure_4, [0.3, 1, 0.3], closure_5);
+      } else {
+        tmp4 = closure_6;
+        num = 1;
+        if (!closure_6) {
+          num = value1;
+        }
       }
       obj = { transform: items, opacity: null };
-      items[1] = { scale: tmp4 };
+      items[1] = { scale: num };
       if (tmp3) {
         tmp9 = closure_3;
         tmp10 = closure_4;
@@ -415,19 +438,19 @@ export default function InAppNotificationContainer(notification) {
       return obj;
     }
   }
-  const items13 = [tmp48, tmp49, tmp50, tmp51, tmp52, tmp53];
+  const items13 = [tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55];
   InAppNotificationContainerTsx7.__closure = items13;
-  InAppNotificationContainerTsx7.__workletHash = 11938375459665;
-  InAppNotificationContainerTsx7.__initData = tmp47;
+  InAppNotificationContainerTsx7.__workletHash = 9732012167849;
+  InAppNotificationContainerTsx7.__initData = tmp48;
   const items14 = [callback, first, sharedValue, sharedValue1, first1];
   const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
     InAppNotificationContainerTsx7,
   );
-  const memo1 = obj.useMemo(
+  const memo1 = obj3.useMemo(
     () => ({ notificationGestureY, velocityY, initialized, handleDismissNotification, panning }),
     items14,
   );
-  const obj7 = { style: StyleSheet.absoluteFill, pointerEvents: "box-none", children: null };
+  let obj2 = { style: StyleSheet.absoluteFill, pointerEvents: "box-none", children: null };
   const rect = {
     top: true,
     bottom: true,
@@ -443,26 +466,26 @@ export default function InAppNotificationContainer(notification) {
     str = "no-hide-descendants";
   }
   rect.importantForAccessibility = str;
-  const obj8 = { value: memo1, children: null };
-  const obj9 = { gesture: onFinalizeResult, children: null };
-  const obj10 = {
+  const obj4 = { value: memo1, children: null };
+  const obj5 = { gesture: onFinalizeResult, children: null };
+  const obj6 = {
     style: null,
     pointerEvents: "box-none",
     children: <NotificationWrapper notification={notification} />,
   };
   const items15 = [tmp.animatedContainer, animatedStyle];
-  obj10.style = items15;
-  obj9.children = jsx(_modDef1652.View, {
+  obj6.style = items15;
+  obj5.children = jsx(_modDef1652.View, {
     style: null,
     pointerEvents: "box-none",
     children: <NotificationWrapper notification={notification} />,
   });
-  obj8.children = jsx(require("LegacyBaseButton").GestureDetector, { gesture: onFinalizeResult, children: null });
+  obj4.children = jsx(require("LegacyBaseButton").GestureDetector, { gesture: onFinalizeResult, children: null });
   rect.children = jsx(require("InAppNotificationContext").InAppNotificationContext.Provider, {
     value: memo1,
     children: null,
   });
-  obj7.children = jsx(require("common/SafeAreaView").SafeAreaPaddingView, {
+  obj2.children = jsx(require("common/SafeAreaView").SafeAreaPaddingView, {
     top: true,
     bottom: true,
     left: true,

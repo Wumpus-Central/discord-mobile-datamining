@@ -45,10 +45,10 @@ export function PinotMemberNoticeHeaderArrow(channelId) {
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj = channelId(504);
-  const isForumChannelSearchActive = channelId(11534).useIsForumChannelSearchActive(channelId);
-  const obj2 = channelId(11534);
-  const obj3 = channelId(11509);
-  const pinotChannelLabelCenter = channelId(11518).usePinotChannelLabelCenter(channelId, ref);
+  const isForumChannelSearchActive = channelId(11535).useIsForumChannelSearchActive(channelId);
+  const obj2 = channelId(11535);
+  const obj3 = channelId(11510);
+  const pinotChannelLabelCenter = channelId(11519).usePinotChannelLabelCenter(channelId, ref);
   const center = pinotChannelLabelCenter.center;
   let tmp9Result2 = null;
   if (obj3.usePinotMemberNotice(stateFromStores, "mobile_channel_header").visible) {

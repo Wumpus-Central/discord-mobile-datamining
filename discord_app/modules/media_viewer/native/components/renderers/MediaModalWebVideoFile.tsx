@@ -39,15 +39,15 @@ export default noop.memo(function MediaModalWebVideoFile(visible) {
     props1 = controls.props;
   }
   items = [props1];
-  const callback = obj.useCallback((value) => {
-    const iter = (function safeParse(value) {
+  const callback = obj.useCallback((arg0) => {
+    const iter = (function safeParse(arg0) {
       try {
         const _JSON = JSON;
-        return JSON.parse(value);
+        return JSON.parse(arg0);
       } catch (err) {
         return {};
       }
-    })(value);
+    })(arg0);
     value = iter.value;
     switch (iter.type) {
       case "loaded":

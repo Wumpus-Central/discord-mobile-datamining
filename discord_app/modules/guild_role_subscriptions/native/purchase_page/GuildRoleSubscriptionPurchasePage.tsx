@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef12107 from "../../../../../_runtime/metro/12107__.js";
+import _modDef12108 from "../../../../../_runtime/metro/12108__.js";
 import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -41,7 +41,7 @@ function SocialBadge(onPress) {
     gesture(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: text }),
   ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef12107, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef12108, style: tmp.socialBadgeArrow };
     tmp5Result = gesture(native.Icon, obj3);
   }
   items[2] = tmp5Result;

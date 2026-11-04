@@ -275,11 +275,11 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = {
   frame: fn(9877).GameControllerIcon,
-  overlay_widget: fn(12956).WindowTopIcon,
+  overlay_widget: fn(12957).WindowTopIcon,
   user_widget: fn(10983).UserCircleIcon,
-  bot: fn(12302).RobotIcon,
-  commands: fn(12302).RobotIcon,
-  automod: fn(11468).ShieldIcon,
+  bot: fn(12303).RobotIcon,
+  commands: fn(12303).RobotIcon,
+  automod: fn(11469).ShieldIcon,
 };
 const createStyles = fn(5141);
 let obj3 = {

@@ -34,7 +34,7 @@ export default function SingleScreenshare(channel) {
     stageStreamContainer = tmp.stageStreamContainer;
   }
   obj.containerStyle = stageStreamContainer;
-  return jsx(channel(12205), {
+  return jsx(channel(12206), {
     participant: channel.participant,
     onSingleTap() {
       closure_1_3();

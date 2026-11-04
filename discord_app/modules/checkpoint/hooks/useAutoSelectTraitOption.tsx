@@ -4,16 +4,19 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useAutoSelectTraitOption.tsx");
 
-export function useAutoSelectTraitOption(paused) {
-  ({ availableTraitOptions, selectedOptionId: noop, onSelectOption } = paused);
-  paused = paused.paused;
+export function useAutoSelectTraitOption(isPaused) {
+  ({ availableTraitOptions, selectedOptionId: noop, onSelectOption } = isPaused);
+  let flag = isPaused.isPaused;
+  if (flag === undefined) {
+    flag = false;
+  }
   const first = availableTraitOptions[0];
   const someResult = availableTraitOptions.some((optionId) => optionId.optionId === noop);
   c4 = someResult;
-  items = [first, someResult, onSelectOption, paused];
+  items = [first, someResult, onSelectOption, flag];
   const effect = noop.useEffect(() => {
-    let tmp = paused;
-    if (!paused) {
+    let tmp = flag;
+    if (!flag) {
       tmp = null == first;
     }
     if (!tmp) {

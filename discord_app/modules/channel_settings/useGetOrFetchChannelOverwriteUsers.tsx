@@ -1,7 +1,7 @@
 // discord_app/modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
-import _modDef19176 from "../../../_runtime/metro/19176__.js";
+import _modDef19190 from "../../../_runtime/metro/19190__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
@@ -36,7 +36,7 @@ export default function useGetOrFetchChannelOverwriteUsers(arg0, arg1) {
         );
         items = found.map((id) => id.id);
       }
-      return _modDef19176(items, (arg0) => stateFromStoresArray.includes(arg0));
+      return _modDef19190(items, (arg0) => stateFromStoresArray.includes(arg0));
     }, items2),
     2,
   );

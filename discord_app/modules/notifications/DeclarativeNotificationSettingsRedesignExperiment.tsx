@@ -12,9 +12,9 @@ const result = size.fileFinishedImporting(
   "modules/notifications/DeclarativeNotificationSettingsRedesignExperiment.tsx",
 );
 
-export function isDeclarativeNotificationSettingsRedesignEnabled(getAssignedNotifSettingsAndMappings) {
-  return closure_0.getConfig({ location: getAssignedNotifSettingsAndMappings }).enabled;
+export function isDeclarativeNotificationSettingsRedesignEnabled(refreshEffectiveNotifSettings) {
+  return closure_0.getConfig({ location: refreshEffectiveNotifSettings }).enabled;
 }
-export function useIsDeclarativeNotificationSettingsRedesignEnabled(location) {
-  return closure_0.useConfig({ location }).enabled;
+export function useIsDeclarativeNotificationSettingsRedesignEnabled(EffectiveNotifSettingsLayout) {
+  return closure_0.useConfig({ location: EffectiveNotifSettingsLayout }).enabled;
 }

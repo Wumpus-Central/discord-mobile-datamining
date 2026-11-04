@@ -665,7 +665,7 @@ let closure_30 = async function _createSubscription(arg0) {
           closure_135_14 = undefined;
           c10 = 1;
           c11 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else {
         if (1 === tmp6) {
@@ -1455,7 +1455,7 @@ let closure_38 = async function _fetchIpCountryCode() {
           let country_code;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -1559,7 +1559,7 @@ let closure_39 = async function _fetchIpLocation() {
           let subdivision_code;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

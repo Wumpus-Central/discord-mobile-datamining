@@ -66,7 +66,7 @@ export function useAutoDismissGuildPowerupsNewBadge(guildId) {
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
   let obj = require("initialize");
-  const tmp2Result = num(14296)(guildId, stateFromStores);
+  const tmp2Result = num(14297)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

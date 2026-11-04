@@ -6,7 +6,6 @@ import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
 import GuildIcon from "../../../modules/guild/native/GuildIcon.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
-import _modDef15729 from "../../../../_runtime/metro/15729__.js";
 import _modDef15730 from "../../../../_runtime/metro/15730__.js";
 import _modDef15731 from "../../../../_runtime/metro/15731__.js";
 import _modDef15732 from "../../../../_runtime/metro/15732__.js";
@@ -14,6 +13,7 @@ import _modDef15733 from "../../../../_runtime/metro/15733__.js";
 import _modDef15734 from "../../../../_runtime/metro/15734__.js";
 import _modDef15735 from "../../../../_runtime/metro/15735__.js";
 import _modDef15736 from "../../../../_runtime/metro/15736__.js";
+import _modDef15737 from "../../../../_runtime/metro/15737__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
@@ -26,32 +26,32 @@ function PremiumGuildTierPill(arg0) {
   const obj = { style: tmp.tierPill, children: null };
   const obj2 = { style: tmp.tierPillImage, source: null };
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp5Result8 = _modDef15730;
-    const tmp5Result = _modDef15729;
+    let tmp5Result8 = _modDef15731;
+    const tmp5Result = _modDef15730;
     if (obj5.isThemeDark(theme)) {
       tmp5Result8 = tmp5Result;
     }
     let tmp9 = tmp5Result8;
     obj5 = shared;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp5Result10 = _modDef15732;
-    const tmp5Result9 = _modDef15731;
+    let tmp5Result10 = _modDef15733;
+    const tmp5Result9 = _modDef15732;
     if (obj4.isThemeDark(theme)) {
       tmp5Result10 = tmp5Result9;
     }
     tmp9 = tmp5Result10;
     obj4 = shared;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp5Result12 = _modDef15734;
-    const tmp5Result11 = _modDef15733;
+    let tmp5Result12 = _modDef15735;
+    const tmp5Result11 = _modDef15734;
     if (obj3.isThemeDark(theme)) {
       tmp5Result12 = tmp5Result11;
     }
     tmp9 = tmp5Result12;
     obj3 = shared;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5Result14 = _modDef15736;
-    const tmp5Result13 = _modDef15735;
+    let tmp5Result14 = _modDef15737;
+    const tmp5Result13 = _modDef15736;
     if (obj8.isThemeDark(theme)) {
       tmp5Result14 = tmp5Result13;
     }

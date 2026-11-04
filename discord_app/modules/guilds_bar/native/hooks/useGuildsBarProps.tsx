@@ -74,7 +74,7 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   return tmp;
 }
 const GuildsNodeType = fn(6907).GuildsNodeType;
-const GuildsBarConstants = fn(18598);
+const GuildsBarConstants = fn(18612);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = {
@@ -521,26 +521,26 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(18662), {}, item);
+              return closure_1_19(closure_1_1(18676), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(18663), {}, item);
+              return closure_1_19(closure_1_1(18677), {}, item);
             } else if ("waterwheels" === item) {
-              return closure_1_19(closure_1_1(18664), {}, item);
+              return closure_1_19(closure_1_1(18678), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(18679), {}, item);
+              return closure_1_19(closure_1_1(18693), {}, item);
             }
           }),
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(18662), {}, item);
+              return closure_1_19(closure_1_1(18676), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(18663), {}, item);
+              return closure_1_19(closure_1_1(18677), {}, item);
             } else if ("waterwheels" === item) {
-              return closure_1_19(closure_1_1(18664), {}, item);
+              return closure_1_19(closure_1_1(18678), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(18679), {}, item);
+              return closure_1_19(closure_1_1(18693), {}, item);
             }
           }),
         });

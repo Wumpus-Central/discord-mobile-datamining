@@ -468,21 +468,21 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj6.activityName = name;
       obj6.isActivityFocused = first1;
       const obj7 = { channel: stateFromStores, layoutMode: tmp75 };
-      obj6.children = closure_14(tmp4(11990), obj7, tmp3[0]);
-      const items27 = [closure_14(tmp4(19523), obj6)];
+      obj6.children = closure_14(tmp4(11991), obj7, tmp3[0]);
+      const items27 = [closure_14(tmp4(19537), obj6)];
       let tmp79Result = null;
       if (stateFromStores2) {
-        tmp79Result = closure_14(tmp4(19524), {});
+        tmp79Result = closure_14(tmp4(19538), {});
       }
       items27[1] = tmp79Result;
       obj5.children = items27;
       obj4.children = closure_15(tmp4(1652).View, obj5);
       let tmp79Result2 = closure_14(tmp8(5428).GestureDetector, obj4);
       let tmp76 = closure_14;
-      const tmp4Result2 = tmp4(19523);
+      const tmp4Result2 = tmp4(19537);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: stateFromStores1, application: first };
-      tmp79Result2 = closure_14(tmp4(19525), obj8);
+      tmp79Result2 = closure_14(tmp4(19539), obj8);
       tmp76 = closure_14;
     } else {
       tmp76 = closure_14;
@@ -495,7 +495,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
         itemDimensions: tmp2Result2[0],
         disableBadges: true,
       };
-      obj10.children = closure_14(tmp4(19529), obj11);
+      obj10.children = closure_14(tmp4(19543), obj11);
       tmp79Result2 = closure_14(tmp8(5428).GestureDetector, obj10);
     }
     const obj12 = { value: tmp4Result(tmp4(7487).ACTIVITY_TILE).analyticsLocations, children: tmp79Result2 };
@@ -503,12 +503,12 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   }
   const tmp8Result18 = require("initialize");
 }
-const VoicePanelConstants = fn(11410);
+const VoicePanelConstants = fn(11411);
 ({ IS_IOS: closure_8, VoicePanelModes: closure_9 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11409).VoicePanelControlsModes;
 const ThemeTypes = fn(1072).ThemeTypes;
 let closure_12 = fn(2147).ACTIVITY_LOCKED_ASPECT_RATIO;
-const ActivityLayoutMode = fn(11888).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11889).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(5141);

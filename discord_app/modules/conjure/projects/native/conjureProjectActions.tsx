@@ -86,7 +86,7 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1113).intl;
-          await tmp3(12423).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3995).Owerd3));
+          await tmp3(12424).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3995).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1113).intl;

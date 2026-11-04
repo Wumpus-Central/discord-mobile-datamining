@@ -195,8 +195,8 @@ export default noop.memo(function ConnectedGuildSearchAndInviteInner(guild) {
       constants2.GUILD_HEADER,
     );
   });
-  const shouldShowInvitesDisabledNotif = guild(14146).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(14146);
+  const shouldShowInvitesDisabledNotif = guild(14147).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(14147);
   const tmp5 = useEventsButtonPropsDefault(guild);
   const obj3 = {
     guildId: guild.id,

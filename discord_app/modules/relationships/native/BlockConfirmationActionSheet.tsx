@@ -40,7 +40,7 @@ function BlockedInformationTable() {
 }
 const View = fn(17).View;
 const UserRemediationAction = fn(7629).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11474);
+const RestrictionConfirmationConstants = fn(11475);
 ({
   BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_11,
   IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_12,
@@ -311,7 +311,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
         });
         const obj2 = { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" };
         const obj3 = ActionSheetActionCreatorsDefault;
-        const tmp2 = asyncRequireImpl(11476, dependencyMap.paths);
+        const tmp2 = asyncRequireImpl(11477, dependencyMap.paths);
         obj3.openLazy(
           tmp2,
           application_id,

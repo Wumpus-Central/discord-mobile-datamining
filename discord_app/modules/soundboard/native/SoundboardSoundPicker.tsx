@@ -8,7 +8,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(19435);
+const ExpressionPickerStore = fn(19449);
 ({ setSearchQuery: closure_6, useExpressionPickerStore: metroImportDefault } = ExpressionPickerStore);
 const SoundboardPickerType = fn(6195).SoundboardPickerType;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
@@ -19,7 +19,7 @@ let obj = {
   title: { marginBottom: 8 },
   container: { flex: 1, alignItems: "center" },
   header: {
-    paddingHorizontal: fn(19436).SOUND_ROW_HORIZONTAL_PADDING,
+    paddingHorizontal: fn(19450).SOUND_ROW_HORIZONTAL_PADDING,
     padding: nativeDefault.space.PX_8,
     width: "100%",
   },
@@ -27,7 +27,7 @@ let obj = {
 };
 let closure_14 = createStyles.createStyles(obj);
 let obj3 = {
-  paddingHorizontal: fn(19436).SOUND_ROW_HORIZONTAL_PADDING,
+  paddingHorizontal: fn(19450).SOUND_ROW_HORIZONTAL_PADDING,
   padding: nativeDefault.space.PX_8,
   width: "100%",
 };

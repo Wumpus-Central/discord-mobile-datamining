@@ -158,7 +158,7 @@ export default function UserProfileMutualsActionSheet(user) {
     let tmp10 = closure_9(closure_5, obj5);
     let tmp9 = closure_9;
   } else if (0 === mutualFriends.length) {
-    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(14406).NoMutualFriends, {}) };
+    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(14407).NoMutualFriends, {}) };
     tmp10 = closure_9(closure_5, obj6);
     tmp9 = closure_9;
   } else {
@@ -181,7 +181,7 @@ export default function UserProfileMutualsActionSheet(user) {
         });
       },
     };
-    tmp10 = closure_9(tmp6(11600).UserProfileStackedActionSheetList, obj7);
+    tmp10 = closure_9(tmp6(11601).UserProfileStackedActionSheetList, obj7);
   }
   obj4.page = tmp10;
   items = [obj4];
@@ -195,7 +195,7 @@ export default function UserProfileMutualsActionSheet(user) {
     const obj9 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
     let tmp9Result = tmp9(closure_5, obj9);
   } else if (0 === mutualGuilds.length) {
-    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(14400).NoMutualServers, {}) };
+    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(14401).NoMutualServers, {}) };
     tmp9Result = tmp9(closure_5, obj10);
   } else {
     const obj11 = {
@@ -216,7 +216,7 @@ export default function UserProfileMutualsActionSheet(user) {
         });
       },
     };
-    tmp9Result = tmp9(tmp6(11600).UserProfileStackedActionSheetList, obj11);
+    tmp9Result = tmp9(tmp6(11601).UserProfileStackedActionSheetList, obj11);
   }
   obj8.page = tmp9Result;
   items[1] = obj8;
@@ -232,8 +232,8 @@ export default function UserProfileMutualsActionSheet(user) {
   const obj13 = { style: tmp.container, onLayout: callback, children: null };
   const tmp3Result4 = UserProfileStackedActionSheetDefault;
   const items1 = [
-    tmp9(closure_5, { children: tmp9(user(12371).Tabs, { state: segmentedControlState }) }),
-    tmp9(user(14410).SegmentedControlPages, { state: segmentedControlState }),
+    tmp9(closure_5, { children: tmp9(user(12372).Tabs, { state: segmentedControlState }) }),
+    tmp9(user(14411).SegmentedControlPages, { state: segmentedControlState }),
   ];
   obj13.children = items1;
   obj12.children = closure_10(closure_5, obj13);

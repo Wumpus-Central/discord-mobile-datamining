@@ -218,7 +218,7 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(14740).KeyboardIcon;
+      let ImageIcon = tmp2(14741).KeyboardIcon;
     } else {
       ImageIcon = tmp2(8800).ImageIcon;
     }
@@ -791,7 +791,7 @@ export default function ForumComposer(parentChannel) {
             let content;
             c5 = 1;
             c6 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "flexDirection", done: null };
           }
         } else {
           if (1 === tmp8) {

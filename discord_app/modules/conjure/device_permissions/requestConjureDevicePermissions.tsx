@@ -132,7 +132,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
           };
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

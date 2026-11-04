@@ -55,9 +55,9 @@ export default function BuildOverrideModal(overrideUrl) {
   const tmp = closure_8();
   const tmp4 = stateFromStores(5377)();
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(15930);
+    let tmp2Result = tmp2(15943);
   } else {
-    tmp2Result = tmp2(15931);
+    tmp2Result = tmp2(15944);
   }
   obj = str(5148);
   items = [BuildOverrideStore];
@@ -68,7 +68,7 @@ export default function BuildOverrideModal(overrideUrl) {
   if (override != null) {
     const targetBuildOverride = override.targetBuildOverride;
     if (targetBuildOverride != null) {
-      const tmp9 = targetBuildOverride[tmp5(undefined, 13411).DEVICE_FIELD];
+      const tmp9 = targetBuildOverride[tmp5(undefined, 13412).DEVICE_FIELD];
       if (tmp9 != null) {
         id = tmp9.id;
       }

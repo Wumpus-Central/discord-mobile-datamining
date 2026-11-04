@@ -138,7 +138,7 @@ const ApplicationCommandIndexStore = fn(9912);
   useContextIndexState: closure_9,
   useUserIndexState: closure_10,
 } = ApplicationCommandIndexStore);
-const FetchState = fn(12612).FetchState;
+const FetchState = fn(12613).FetchState;
 const BuiltInSectionId = fn(6170).BuiltInSectionId;
 const COMMAND_SENTINEL = fn(6171).COMMAND_SENTINEL;
 const size = fn(2);
@@ -1300,7 +1300,7 @@ export function useGlobalSearchResults(fetches) {
     substr = query.substring(1);
     tmp = substr;
   }
-  const tmp5 = fetches.entrypoint === substr(11690).AppLauncherEntrypoint.VOICE;
+  const tmp5 = fetches.entrypoint === substr(11691).AppLauncherEntrypoint.VOICE;
   dependencyMap = tmp5;
   guild_id = undefined;
   if ("channel" === context.type) {

@@ -70,7 +70,7 @@ function DockChannelIcon() {
   return tmp12;
 }
 const View = fn(17).View;
-const VoicePanelDockConstants = fn(11428);
+const VoicePanelDockConstants = fn(11429);
 ({ DOCK_TILE_RADIUS, DOCK_TILE_SIZE, DOCK_GAP, DOCK_GLYPH_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

@@ -11,8 +11,8 @@ import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import _modDef15507 from "../../../../_runtime/metro/15507__.js";
-import _modDef17029 from "../../../../_runtime/metro/17029__.js";
+import _modDef15508 from "../../../../_runtime/metro/15508__.js";
+import _modDef17041 from "../../../../_runtime/metro/17041__.js";
 import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader.tsx";
 import useSelectedTeenUser from "../hooks/useSelectedTeenUser.tsx";
 import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal.tsx";
@@ -48,7 +48,7 @@ function FamilyCenterActivityCardPrefaceText() {
   let tmp14 = null;
   const ageSpecificText1 = obj6.useAgeSpecificText(intl3.string(_modDef2667.n6LOrh), intl4.string(_modDef2667.JNLpDZ));
   if (!tmp4) {
-    const obj8 = { color: tmp.icon.color, source: _modDef17029, style: tmp.icon };
+    const obj8 = { color: tmp.icon.color, source: _modDef17041, style: tmp.icon };
     tmp14 = React5(native.Icon, obj8);
   }
   items = [tmp14, ,];
@@ -74,7 +74,7 @@ function FamilyCenterActivityCardPrefaceText() {
   const tmp2Result = TouchableHitBoxDefault;
   obj10.children = React5(native.Icon, {
     color: tmp.icon.color,
-    source: _modDef15507,
+    source: _modDef15508,
     size: native.Icon.Sizes.EXTRA_SMALL,
     style: tmp.icon,
   });

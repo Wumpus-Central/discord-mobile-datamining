@@ -178,7 +178,6 @@ export function useMainViewTooltipActionSheetMap() {
   let enabled = GiftPromotionReminderExperiment.useConfig({ location: MainViewTooltipActionSheets }).enabled;
   const tmpResult29 = initialize;
   const giftingBadgeCoachmarkVariant = GiftingBadgesUtils.useGiftingBadgeCoachmarkVariant({
-    platform: "native",
     location: MainViewTooltipActionSheets,
   });
   let isDismissed = null != stateFromStores3;

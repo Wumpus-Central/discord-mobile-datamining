@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/components/renderers/MediaModalWebEmbed.tsx
 import URLUtilsDefault from "../../../../../utils/URLUtils.tsx";
 import MediaModalWebViewBase from "MediaModalWebViewBase.tsx";
-import escapeDefault from "../../../../../../_runtime/15001_escape.js";
+import escapeDefault from "../../../../../../_runtime/15002_escape.js";
 import EmbedIFrameConfig from "../../../../chat/EmbedIFrameConfig.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -36,7 +36,7 @@ function WebEmbed(onLoad) {
     '\n<html>\n  <head>\n    <meta name="viewport" content="initial-scale=1">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src="' +
     escapeDefault(src) +
     '" allow="autoplay" sandbox="' +
-    onLoad(15004).EMBED_IFRAME_SANDBOX +
+    onLoad(15005).EMBED_IFRAME_SANDBOX +
     '" scrolling="no"></iframe>\n  </body>\n</html>\n';
   obj2.baseUrl = baseURL;
   obj.source = obj2;

@@ -29,9 +29,9 @@ function ProgressGraphic(badgeIconUrls) {
   if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
     const obj2 = { style: tmp.graphicRow, children: null };
     items = [
-      closure_6(tmp2(15147).GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
-      closure_6(tmp2(15151).GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
-      closure_6(tmp2(15143).GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
+      closure_6(tmp2(15148).GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
+      closure_6(tmp2(15152).GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
+      closure_6(tmp2(15144).GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
     ];
     obj2.children = items;
     return closure_7(View, obj2);

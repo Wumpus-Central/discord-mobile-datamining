@@ -10,16 +10,16 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/usePinotMemberCoachmark.tsx");
 
 export function usePinotMemberCoachmark(channel, mobile_member_coachmark) {
-  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(11513).useIsPinotMemberCoachmarkEligible(
+  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(11514).useIsPinotMemberCoachmarkEligible(
     channel,
     mobile_member_coachmark,
   );
-  let obj = pinotPromotableChannelId(11513);
-  pinotPromotableChannelId = pinotPromotableChannelId(11508).usePinotPromotableChannelId(
+  let obj = pinotPromotableChannelId(11514);
+  pinotPromotableChannelId = pinotPromotableChannelId(11509).usePinotPromotableChannelId(
     channel,
     mobile_member_coachmark,
   );
-  const obj2 = pinotPromotableChannelId(11508);
+  const obj2 = pinotPromotableChannelId(11509);
   if (isPinotMemberCoachmarkEligible) {
     items = [tmp(4974).DismissibleContent.PINOT_MEMBER_COACHMARK];
     let items1 = items;

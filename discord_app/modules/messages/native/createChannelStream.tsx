@@ -438,9 +438,9 @@ export default function createChannelStream(forceRender) {
       if (tmp19) {
         const obj21 = { rowType: roleStyle.UNREAD, changeType: determineChangeType(message), roleStyle, text: null };
         const intl5 = require("util").intl;
-        obj21.text = intl5.string(require("util").t.q7hm3m).toUpperCase();
+        obj21.text = intl5.string(require("util").t.q7hm3m).toLocaleUpperCase(require("util").intl.currentLocale);
         items.push(obj21);
-        const str2 = intl5.string(require("util").t.q7hm3m);
+        const stringResult = intl5.string(require("util").t.q7hm3m);
       }
       if (tmp17) {
         tmp17 = !renderContentOnly;

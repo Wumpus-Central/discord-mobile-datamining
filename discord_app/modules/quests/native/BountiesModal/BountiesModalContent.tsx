@@ -196,7 +196,7 @@ function BountiesModalContentInner(bounty) {
                     let _Math = Math;
                     let result = arr[num3] / tmp4;
                     let rounded = Math.round(
-                      result * (closure_1_0(14721).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
+                      result * (closure_1_0(14722).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100),
                     );
                     let obj2 = {
                       time: num4,
@@ -603,7 +603,7 @@ function BountiesModalContentWithAppStore(arg0) {
 const View = fn(17).View;
 const QuestConstants = fn(6916);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(17160);
+const BountiesModalConstants = fn(17172);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } =
   BountiesModalConstants);
 const Constants = fn(1072);

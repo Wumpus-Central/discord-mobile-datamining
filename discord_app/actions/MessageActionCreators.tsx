@@ -1091,7 +1091,7 @@ let obj17 = {
               } else {
                 dependencyMap = 1;
                 c4 = 1;
-                const obj6 = { value: tmp2(15444)(closure_0), done: false };
+                const obj6 = { value: tmp2(15445)(closure_0), done: false };
                 return obj6;
               }
             }
@@ -1738,13 +1738,13 @@ let obj17 = {
               logger.info("Queueing message to be sent LogId:" + rounded);
               emojiUsed(inviteAnalyticsMetadata[72]).enqueue(channel, (ok) => {
                 if (ok.ok) {
-                  id(15445).donateSentMessage(content, channelId);
+                  id(15446).donateSentMessage(content, channelId);
                   let obj4 = { sendAnalytics: null, poll: null };
                   let obj5 = { duration: tmp, queueSize: length };
                   obj4.sendAnalytics = obj5;
                   obj4.poll = poll;
                   closure_4_55.receiveMessage(channelId, ok.body, true, obj4);
-                  const obj15 = id(15445);
+                  const obj15 = id(15446);
                   request = request.getRequest(id(11).cast(channelId));
                   if (null != request) {
                     ({ guildId, userId, applicationStatus } = request);
@@ -1996,7 +1996,7 @@ let obj17 = {
                           let someResult = overrideProperties.state === constants.LOADED;
                           if (someResult) {
                             attachments = overrideProperties.message.attachments;
-                            someResult = attachments.some(/* F142568 */ function() { ... });
+                            someResult = attachments.some(/* F143131 */ function() { ... });
                           }
                           const obj5 = {};
                           const obj = id(length[37]);

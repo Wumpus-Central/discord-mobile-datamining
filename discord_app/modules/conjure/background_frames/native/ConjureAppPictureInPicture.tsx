@@ -68,7 +68,7 @@ const View = fn(17).View;
 let ThemeTypes = fn(1072).ThemeTypes;
 const FramesConstants = fn(6982);
 ({ asLaunched: closure_8, FrameLayoutModes } = FramesConstants);
-const MIN_PAN_GESTURE_MOVE = fn(11411).MIN_PAN_GESTURE_MOVE;
+const MIN_PAN_GESTURE_MOVE = fn(11412).MIN_PAN_GESTURE_MOVE;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let DeviceUtils = fn(5098);
@@ -81,7 +81,7 @@ let closure_13 = { mass: 0.25, damping: 40, stiffness: 300, overshootClamping: t
 const duration = { mass: 0.4, damping: 22, stiffness: 220 };
 let presentation = {
   layoutMode: FrameLayoutModes.PIP,
-  portraitSafeAreasConfig: fn(19261).DEFAULT_PORTRAIT_LETTERBOX_CONFIG,
+  portraitSafeAreasConfig: fn(19275).DEFAULT_PORTRAIT_LETTERBOX_CONFIG,
 };
 const createStyles = fn(5141);
 let obj = {
@@ -109,7 +109,7 @@ let obj4 = { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.lg }
 obj.interactiveMask = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none };
 let obj5 = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none };
 obj.handle = {
-  height: fn(19382).INTERACTIVE_HANDLE_HEIGHT,
+  height: fn(19396).INTERACTIVE_HANDLE_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
   borderTopLeftRadius: nativeDefault.radii.lg,
@@ -168,7 +168,7 @@ let closure_25 = {
   code: "(function ConjureAppPictureInPictureTsx7(){let[dragging,overCloseTarget,closing,position,clampToBounds,getBounds,avoidance,DRAGGING_SCALE,closeTargetCenter,windowSize,OVER_CLOSE_TARGET_SCALE,FOLLOW_SPRING,SETTLE_SPRING,withTiming,CLOSE_ANIMATION_MS,withSpring]=this.__closure;const isDragging=dragging.get();const onCloseTarget=overCloseTarget.get()||closing.get();let{x:x,y:y}=isDragging?position.get():clampToBounds(position.get(),getBounds(avoidance.get()));let scale=isDragging?DRAGGING_SCALE:1;if(onCloseTarget){x=closeTargetCenter.x-windowSize.width/2;y=closeTargetCenter.y-windowSize.height/2;scale=closing.get()?0:OVER_CLOSE_TARGET_SCALE;}const spring=isDragging&&!onCloseTarget?FOLLOW_SPRING:SETTLE_SPRING;return{width:windowSize.width,height:windowSize.height,opacity:closing.get()?withTiming(0,{duration:CLOSE_ANIMATION_MS}):1,transform:[{translateX:withSpring(x,spring)},{translateY:withSpring(y,spring)},{scale:withSpring(scale,spring)}]};})",
 };
 let obj6 = {
-  height: fn(19382).INTERACTIVE_HANDLE_HEIGHT,
+  height: fn(19396).INTERACTIVE_HANDLE_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
   borderTopLeftRadius: nativeDefault.radii.lg,
@@ -777,7 +777,7 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
       str2 = "auto";
     }
     obj14.pointerEvents = str2;
-    const obj15 = { frameId, level: tmp2(12455).FrameStackLevel.AboveAppContent, presentation };
+    const obj15 = { frameId, level: tmp2(12456).FrameStackLevel.AboveAppContent, presentation };
     const items17 = [c10(FrameRenderTargetDefault, obj15)];
     let tmp63Result2 = null;
     if (tmp8) {

@@ -61,7 +61,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(13490).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(13491).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {

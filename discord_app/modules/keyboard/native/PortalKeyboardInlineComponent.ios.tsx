@@ -58,11 +58,11 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                 const result1 = DCDChatManager3.customKeyboardWillShow(
                   tmp38,
-                  messagesRef(11434).getKeyboardActionSheetHeight().minimum,
+                  messagesRef(11435).getKeyboardActionSheetHeight().minimum,
                   0.25,
                   7,
                 );
-                const obj3 = messagesRef(11434);
+                const obj3 = messagesRef(11435);
               }
             }
           }

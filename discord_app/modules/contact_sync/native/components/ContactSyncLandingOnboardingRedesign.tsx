@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
-import _modDef14476 from "../../../../../_runtime/metro/14476__.js";
+import _modDef14477 from "../../../../../_runtime/metro/14477__.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -103,7 +103,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
     }),
     items,
   );
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef14476 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef14477 };
   const items1 = [closure_7(FastImageDefault, obj3), , , ,];
   let obj4 = { style: tmp.title, variant: "heading-xl/semibold", children: null };
   const intl = onNext(1113).intl;

@@ -10,6 +10,8 @@ import CheckpointNavigation from "CheckpointNavigation.tsx";
 import CheckpointConstants from "CheckpointConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 function getPlaintextAssetDescription(asset) {
   ({ trait, rarity } = asset);
   if (null == rarity) {
@@ -209,22 +211,19 @@ export function getNitroLockedMessage(nextBlockedTrait) {
   }
   return stringResult;
 }
-export function isCheckpointRouteBlocked(activeRoute, arr) {
-  if (activeRoute === CheckpointNavigation.CheckpointRoute.FINALIZE_CHARACTER) {
-    return arr.length > 0;
+export function getCheckpointRouteBlockedTrait(activeRoute, arr) {
+  if (activeRoute === require("CheckpointNavigation").CheckpointRoute.FINALIZE_CHARACTER) {
+    return arr[0];
   } else {
     if (tmpResult.isCheckpointCustomizationRoute(activeRoute)) {
-      const tmpResult2 = CheckpointNavigation;
+      const tmpResult2 = tmp(6570);
       const tmp4 = obj4[tmpResult2.getCheckpointRoutePresentation(tmpResult2, activeRoute).characterStage];
-      let hasItem = null != tmp4;
-      if (hasItem) {
-        hasItem = arr.includes(obj3[tmp4]);
+      _require = tmp4;
+      if (null != tmp4) {
+        return arr.find((item) => item === obj3[closure_0]);
       }
-      return hasItem;
-    } else {
-      return false;
     }
-    tmpResult = CheckpointNavigation;
+    tmpResult = tmp(6570);
   }
 }
 export function getChamferedRectPoints(width, height, arg2) {

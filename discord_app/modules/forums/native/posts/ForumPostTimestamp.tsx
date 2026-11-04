@@ -4,7 +4,7 @@ import ForumHooks from "../../ForumHooks.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useForumChannelStore = fn(13980).useForumChannelStore;
+const useForumChannelStore = fn(13981).useForumChannelStore;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });

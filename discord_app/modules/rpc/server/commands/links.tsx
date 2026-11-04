@@ -252,7 +252,7 @@ const items = [,];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16536);
+let CONTEXT_MENU_ICON_NAMES = fn(16548);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -384,16 +384,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(16536);
+CONTEXT_MENU_ICON_NAMES = fn(16548);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(12009).validatePostMessageTransport(socket.transport);
-    let obj = socket(12009);
+    let result = socket(12010).validatePostMessageTransport(socket.transport);
+    let obj = socket(12010);
     let tmp = socket;
-    const validateApplicationResult = socket(12009).validateApplication(socket.application);
+    const validateApplicationResult = socket(12010).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -426,7 +426,7 @@ let obj6 = {
       }
       tmpResult = tmp(2153);
     }
-    let obj2 = socket(12009);
+    let obj2 = socket(12010);
   },
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

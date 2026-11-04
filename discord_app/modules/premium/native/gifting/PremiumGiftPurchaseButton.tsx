@@ -65,8 +65,8 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   const setSelectedGiftingPromotionReward = nativeGiftContext.setSelectedGiftingPromotionReward;
   ({ setCurrentAnalyticsStep: c7, productId } = nativeGiftContext);
   let obj2 = defaultSelection(10740);
-  const canPurchaseIAP = defaultSelection(14676).useCanPurchaseIAP(productId);
-  const obj3 = defaultSelection(14676);
+  const canPurchaseIAP = defaultSelection(14677).useCanPurchaseIAP(productId);
+  const obj3 = defaultSelection(14677);
   items = [c7];
   const stateFromStores = defaultSelection(504).useStateFromStores(items, () => {
     const marketingComponentByType = _undefined2.getMarketingComponentByType(
@@ -97,7 +97,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
     tmp11 = null == selectedGiftingPromotionReward;
   }
   closure_10 = tmp11;
-  const GiftingBadgeExperiment = tmp4(10788).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = tmp4(10789).GiftingBadgeExperiment;
   const obj4 = defaultSelection(504);
   let items1 = [setSelectedGiftingPromotionReward];
   const stateFromStoresObject = defaultSelection(504).useStateFromStoresObject(items1, () => ({
@@ -114,7 +114,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
     }
   }, items2);
   const tmp4Result = defaultSelection(504);
-  const product = defaultSelection(11574).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
+  const product = defaultSelection(11575).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
   let tmp14 = null != product;
   if (tmp14) {
     tmp14 = product.items.length > 0;
@@ -289,10 +289,10 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
       obj13.nextTierName = str2;
       const tmp21 = closure_9;
       const tmpResult4 = tmp(10806);
-      obj13.nextTierIcon = tmp4(10794).getGiftingBadgeTierIconUrl(nextTier);
+      obj13.nextTierIcon = tmp4(10795).getGiftingBadgeTierIconUrl(nextTier);
       obj13.analyticsLocation = tmp(7487).PREMIUM_GIFT_CUSTOMIZATION;
       tmp21Result = tmp21(tmpResult4, obj13);
-      const tmp4Result6 = tmp4(10794);
+      const tmp4Result6 = tmp4(10795);
     }
   }
 }

@@ -27,10 +27,10 @@ export default noop.memo(function DMChannel(navigationReplace) {
     flag = false;
   }
   const tmp = closure_6();
-  const tmp4 = flag(18988)();
-  const baseChannelUnreadBadgeState = channel(18656).useBaseChannelUnreadBadgeState(channel, muted);
+  const tmp4 = flag(19002)();
+  const baseChannelUnreadBadgeState = channel(18670).useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(17544)(channel, { unread });
+  const tmp7 = flag(17556)(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
     extractTimestampResult = tmp2(11).extractTimestamp(tmp7.id);
@@ -43,7 +43,7 @@ export default noop.memo(function DMChannel(navigationReplace) {
       str = "text-default";
     }
   }
-  const obj = channel(18656);
+  const obj = channel(18670);
   const fontScale = channel(5776).useFontScale();
   const tmp5Result = channel(5776);
   const obj2 = { style: null, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
@@ -72,8 +72,8 @@ export default noop.memo(function DMChannel(navigationReplace) {
     channelName: null,
     fontScale: null,
   };
-  const tmp2Result3 = flag(19343);
-  obj4.unreadBadge = jsx(flag(19344), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
+  const tmp2Result3 = flag(19357);
+  obj4.unreadBadge = jsx(flag(19358), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
     const obj6 = { channel, message: tmp7, color: str, muted, layout: channel(5826).ChannelListLayoutTypes.COMPACT };
@@ -89,7 +89,7 @@ export default noop.memo(function DMChannel(navigationReplace) {
   obj4.latestMessageTimestamp = extractTimestampResult;
   obj4.channelName = flag(5786)(channel);
   obj4.fontScale = fontScale;
-  obj2.children = flag(18987)(obj4);
+  obj2.children = flag(19001)(obj4);
   return tmp2Result3(
     jsx(channel(7121).PressableHighlight, { style: null, underlayColor: tmp.pressableUnderlayColor.backgroundColor }),
   );

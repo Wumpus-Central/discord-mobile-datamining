@@ -9,7 +9,7 @@ import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17521);
+const HappeningNowConstants = fn(17533);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 const STATUS_CUTOUT_SMALL = HappeningNowConstants.STATUS_CUTOUT_SMALL;
 const StatusTypes = fn(1083).StatusTypes;
@@ -161,7 +161,7 @@ export function CustomStatusActivityCard(user) {
               if (null != c1.emoji) {
                 c2 = 1;
                 v3 = 1;
-                const obj5 = { value: user(18378).getEmojiSource(c1.emoji), done: false };
+                const obj5 = { value: user(18392).getEmojiSource(c1.emoji), done: false };
                 return obj5;
               } else {
                 v3 = 3;
@@ -180,7 +180,7 @@ export function CustomStatusActivityCard(user) {
               const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
               c2 = 2;
               v3 = 1;
-              const obj9 = { value: user(18379).getEmojiDominantColors(obj8), done: false };
+              const obj9 = { value: user(18393).getEmojiDominantColors(obj8), done: false };
               return obj9;
             }
           } else if (arg0 === 1) {
@@ -290,7 +290,7 @@ export function CustomStatusActivityCard(user) {
     };
     const items6 = [closure_11(tmp6(1187).Avatar, obj11), ,];
     const obj12 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    items6[1] = closure_11(tmp6(17522).HappeningNowCardHeader, obj12);
+    items6[1] = closure_11(tmp6(17534).HappeningNowCardHeader, obj12);
     state = activity.state;
     let num2;
     if (state != null) {
@@ -333,7 +333,7 @@ export function CustomStatusActivityCard(user) {
     const items7 = [closure_11(tmp6(1187).Avatar, obj16)];
     const obj17 = { style: tmp.customStatusContextContainer, children: null };
     const obj18 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    const items8 = [closure_11(tmp6(17522).HappeningNowCardHeader, obj18)];
+    const items8 = [closure_11(tmp6(17534).HappeningNowCardHeader, obj18)];
     const obj19 = {
       ellipsizeMode: "tail",
       variant: "body-xs/medium",
@@ -350,5 +350,5 @@ export function CustomStatusActivityCard(user) {
   }
   obj5.children = tmp18Result;
   obj4.children = closure_11(View, obj5);
-  return closure_11(activity(17522), obj4);
+  return closure_11(activity(17534), obj4);
 }

@@ -86,7 +86,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else {
         if (1 === tmp5) {
@@ -198,7 +198,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               } else {
                                 call(tmp9, false, true);
                               }
-                              v3(13403)(closure_128_3);
+                              v3(13404)(closure_128_3);
                               dependencyMap = 3;
                               tmp9 = closure_128_3;
                             }

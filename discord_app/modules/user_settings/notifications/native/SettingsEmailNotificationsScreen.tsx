@@ -42,11 +42,11 @@ const result = size.fileFinishedImporting(
 );
 
 export default noop.memo(function SettingsEmailNotificationsScreen() {
-  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16515).useIsDeclarativeSettingsUIAvailable(
+  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16528).useIsDeclarativeSettingsUIAvailable(
     "SettingsEmailNotificationsScreen",
   );
-  obj = isDeclarativeSettingsUIAvailable(16515);
-  enabled = enabled(17725).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
+  obj = isDeclarativeSettingsUIAvailable(16528);
+  enabled = enabled(17737).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
   items = [isDeclarativeSettingsUIAvailable, enabled];
   const node = noop.useMemo(() => {
     const tmp = isDeclarativeSettingsUIAvailable ? obj2 : obj;
@@ -68,5 +68,5 @@ export default noop.memo(function SettingsEmailNotificationsScreen() {
     return obj.createList(obj3);
   }, items);
   enabled(5729)(initializeEmailSettings);
-  return jsx(enabled(16823), { node });
+  return jsx(enabled(16835), { node });
 });

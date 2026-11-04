@@ -479,9 +479,9 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
   const obj = skuId(9730);
-  const getOrFetchPurchases = skuId(10782).useGetOrFetchPurchases();
+  const getOrFetchPurchases = skuId(10783).useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-  const obj2 = skuId(10782);
+  const obj2 = skuId(10783);
   const ref1 = noop.useRef(null);
   items = [product, skuId, initialVariantIndex];
   if ("ready" === state) {
@@ -531,7 +531,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     obj5.children = closure_14(tmp(5768).Button, obj6);
     closure_14(tmp(1187).EmptyState, obj5);
   } else {
-    closure_14(initialVariantIndex(15290), {});
+    closure_14(initialVariantIndex(15291), {});
   }
   ref = noop.useRef(null);
 }

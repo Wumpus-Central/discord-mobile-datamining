@@ -69,7 +69,7 @@ let closure_13 = async function _launchFrame(arg0) {
             closure_130_12 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "flexDirection", done: null };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {

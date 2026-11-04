@@ -347,7 +347,7 @@ let obj = {
 const PlatformUtils = fn(1377);
 let obj3 = null;
 if (!PlatformUtils.isAndroid()) {
-  obj3 = { lineHeight: "r" };
+  obj3 = { lineHeight: "Array" };
 }
 let merged = Object.assign(obj3);
 obj.topicText = { paddingVertical: 5 };

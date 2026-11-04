@@ -245,7 +245,7 @@ export default function OneTimeLoginModal(token) {
   let obj4 = { style: tmp.container, children: null };
   let obj5 = { style: tmp.centerContent, children: null };
   const obj6 = { source: null, style: null };
-  obj6.source = token(15917);
+  obj6.source = token(15930);
   obj6.style = tmp.logo;
   const items7 = [closure_12(FastImageDefault, obj6)];
   const obj7 = { style: tmp.loadingContainer, children: null };

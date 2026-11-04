@@ -1,5 +1,5 @@
 // discord_app/polyfills.android.tsx
-import 16260__ from "../_runtime/metro/16260__.js";
+import 16273__ from "../_runtime/metro/16273__.js";
 import polyfillsNative from "polyfillsNative.tsx";
 import size from "../_runtime/metro/00002__.js";
 

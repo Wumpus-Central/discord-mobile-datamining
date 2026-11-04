@@ -3,7 +3,7 @@ import NavigatorHeader from "../../../../design/components/Navigator/native/Navi
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const GameOrganizationJoinModalConstants = fn(13420);
+const GameOrganizationJoinModalConstants = fn(13421);
 const GameOrganizationJoinScenes = GameOrganizationJoinModalConstants.GameOrganizationJoinScenes;
 let closure_3 = GameOrganizationJoinModalConstants.closeGameOrganizationJoinModal;
 const jsx = fn(21).jsx;
@@ -25,7 +25,7 @@ export default function GameOrganizationJoinModal(code) {
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(closure_3),
       render() {
-        return jsx(code(13421).ViewStep, { code });
+        return jsx(code(13422).ViewStep, { code });
       },
     };
     obj[GameOrganizationJoinScenes.VIEW] = obj2;
@@ -46,7 +46,7 @@ export default function GameOrganizationJoinModal(code) {
         character = character.character;
       }
       obj.character = character;
-      return jsx(code(13428).AcceptStep, { code, character: null });
+      return jsx(code(13429).AcceptStep, { code, character: null });
     };
     obj[GameOrganizationJoinScenes.ACCEPT] = obj4;
     const obj7 = {
@@ -60,7 +60,7 @@ export default function GameOrganizationJoinModal(code) {
     obj7.headerLeft = NavigatorHeader.getHeaderCloseButton(closure_3);
     obj7.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return jsx(code(13431).OutcomeStep, { code });
+      return jsx(code(13432).OutcomeStep, { code });
     };
     obj[GameOrganizationJoinScenes.OUTCOME] = obj7;
     return obj;
@@ -73,7 +73,7 @@ export default function GameOrganizationJoinModal(code) {
   };
   const intl = code(1113).intl;
   obj2.headerBackTitle = intl.string(code(1113).t["13/7kX"]);
-  return jsx(code(13432).StepModal, {
+  return jsx(code(13433).StepModal, {
     screens: navigatorScreens,
     initialRouteName: GameOrganizationJoinScenes.VIEW,
     steps: items,

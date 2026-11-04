@@ -72,13 +72,13 @@ export default function ConjureCustomWidgetSheet() {
                     const obj6 = { guild_id: tmp50, install_scope: "user" };
                     c4 = 3;
                     c5 = 1;
-                    const obj7 = { value: value(tmp59[11]).createProject(obj6), done: false };
+                    const obj7 = { value: value(tmp58[11]).createProject(obj6), done: false };
                     return obj7;
                   }
                 }
               } else {
-                const intl = value(tmp59[9]).intl;
-                dependencyMap(intl.string(tmp4(tmp59[10]).AuyDIq));
+                const intl = value(tmp58[9]).intl;
+                dependencyMap(intl.string(tmp4(tmp58[10]).AuyDIq));
               }
               c5 = 3;
             }
@@ -86,14 +86,14 @@ export default function ConjureCustomWidgetSheet() {
             c3 = 0;
             closure_129_4.current = false;
             closure_129_3(false);
-            throw tmp59;
+            throw tmp58;
           } else {
             if (2 === tmp8) {
               c3 = 1;
-              closure_128_2 = tmp59;
+              closure_128_2 = tmp58;
               if (null == closure_128_1) {
-                closure_129_2(value(tmp59[14]).getConjureCreateErrorMessage(closure_128_2));
-                const obj2 = value(tmp59[14]);
+                closure_129_2(value(tmp58[14]).getConjureCreateErrorMessage(closure_128_2));
+                const obj2 = value(tmp58[14]);
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -108,27 +108,27 @@ export default function ConjureCustomWidgetSheet() {
             } else {
               closure_128_1 = value;
               closure_1_7(closure_128_1);
-              closure_1_8(closure_128_1, value(tmp59[12]).composeConjureCustomWidgetPrompt(closure_128_0));
-              tmp4(tmp59[13])(closure_128_1, { entryPoint: "create" });
+              closure_1_8(closure_128_1, value(tmp58[12]).composeConjureCustomWidgetPrompt(closure_128_0));
+              tmp4(tmp58[13])(closure_128_1, { entryPoint: "create" });
               c3 = 1;
-              const obj9 = value(tmp59[12]);
+              const obj9 = value(tmp58[12]);
             }
             c3 = 0;
             closure_129_4.current = false;
             closure_129_3(false);
           }
-          tmp4(tmp59[13])(closure_128_1, { entryPoint: "create" });
+          tmp4(tmp58[13])(closure_128_1, { entryPoint: "create" });
           c3 = 0;
           closure_129_4.current = false;
           closure_129_3(false);
           c5 = 3;
           const obj8 = { value: undefined, done: true };
           return obj8;
-        } catch (tmp59) {
+        } catch (tmp58) {
           if (tmp5 === c3) {
             c5 = tmp3;
-            throw tmp59;
-          } else if (tmp2 === tmp61) {
+            throw tmp58;
+          } else if (tmp2 === tmp60) {
             c4 = tmp2;
           } else {
             c4 = tmp;
@@ -163,7 +163,7 @@ export default function ConjureCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(15157).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(15158).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
   const items1 = [closure_9(value(7389).TextArea, obj4)];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };

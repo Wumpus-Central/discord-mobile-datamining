@@ -154,7 +154,7 @@ export default function CheckpointNavigationControls(nextDisabled) {
     obj9.style = items4;
     obj9.onPress = onBack;
     const intl4 = require("util").intl;
-    obj9.accessibilityLabel = intl4.string(require("util").t.bt75uw);
+    obj9.accessibilityLabel = intl4.string(tmp5(tmp6[15]).Iyyy9s);
     const obj11 = { size: "custom", color, style: tmp.editIcon };
     obj9.children = closure_7(require("PencilIcon").PencilIcon, obj11);
     const items5 = [closure_7(nextBlockedTrait, obj9)];

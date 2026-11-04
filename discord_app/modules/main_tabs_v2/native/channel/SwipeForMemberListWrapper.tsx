@@ -362,12 +362,12 @@ export default function _default(channelId) {
   gesture3 = undefined;
   disallowGesture2 = undefined;
   disallowGesture3 = undefined;
-  const context = obj.useContext(tmp2(11430));
+  const context = obj.useContext(tmp2(11431));
   const gesture2 = context.gesture;
   importDefault = gesture2;
   const disallowGesture = context.disallowGesture;
   dependencyMap = disallowGesture;
-  let context1 = obj.useContext(tmp12(11430).MainTabsChannelScreenStackContext);
+  let context1 = obj.useContext(tmp12(11431).MainTabsChannelScreenStackContext);
   if (context1 == null) {
     context1 = {};
   }
@@ -541,12 +541,12 @@ export default function _default(channelId) {
       position: translateX,
       openAt: 0,
       closedAt: maxWidth,
-      resolveOpenName: tmp12(18303).getBaseScreenName,
-      resolveClosedName: tmp12(18303).getBaseScreenName,
+      resolveOpenName: tmp12(18317).getBaseScreenName,
+      resolveClosedName: tmp12(18317).getBaseScreenName,
       onCoveringChange: callback2,
     };
-    tmp63 = navigation(tmp2(18306), obj4);
-    const tmp2Result = tmp2(18306);
+    tmp63 = navigation(tmp2(18320), obj4);
+    const tmp2Result = tmp2(18320);
   }
   const items30 = [tmp63];
   let obj5 = { gesture: memo2, children: null };

@@ -45,7 +45,7 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const obj = { daysRemaining };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(19855, dependencyMap.paths),
+      asyncRequireImpl(19869, dependencyMap.paths),
       "ParentalConsentWarningModal",
       obj,
     );

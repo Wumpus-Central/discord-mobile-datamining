@@ -297,7 +297,7 @@ export function generateRowsForQuery(arg0) {
       importDefault = undefined;
       ({ rows: c0, counts: c1, query: query4, inviteTargetType: inviteTargetType2 } = obj10);
       if (inviteTargetType2 === tmp39(8020).InviteTargetTypes.EMBEDDED_APPLICATION) {
-        const obj12 = { query: query4, limit: 3, guildId: "id" };
+        const obj12 = { query: query4, limit: 3, guildId: "children" };
         let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
           _undefined.push(obj);

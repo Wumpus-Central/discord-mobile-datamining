@@ -53,7 +53,7 @@ export default function OrbsArcadeGameContextMenu(game) {
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      return game(17276).openOrbsArcadeInfoSheet(id.id);
+      return game(17288).openOrbsArcadeInfoSheet(id.id);
     };
     items = [obj];
     return items;

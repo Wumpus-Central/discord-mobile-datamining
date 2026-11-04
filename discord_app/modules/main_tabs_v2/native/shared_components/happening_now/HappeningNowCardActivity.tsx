@@ -7,8 +7,8 @@ import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import ActivityTypes from "../../../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef18375 from "../../../../../../_runtime/metro/18375__.js";
-import _modDef18376 from "../../../../../../_runtime/metro/18376__.js";
+import _modDef18389 from "../../../../../../_runtime/metro/18389__.js";
+import _modDef18390 from "../../../../../../_runtime/metro/18390__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
@@ -132,7 +132,7 @@ function IconOrPreview(arg0) {
       obj8.style = tmp.cardImageStreamPreview;
       const intl5 = tmp28(1113).intl;
       obj8.ctaText = intl5.string(tmp28(1113).t["7Xq/nV"]);
-      obj3.children = closure_10(tmp2(12235), obj8);
+      obj3.children = closure_10(tmp2(12236), obj8);
       return closure_10(closure_4, obj3);
     } else {
       if (tmp2(10940)(activity)) {
@@ -146,7 +146,7 @@ function IconOrPreview(arg0) {
         if (type === tmp28(5896).ActivityTypes.LISTENING) {
           const intl3 = tmp28(1113).intl;
           stringResult = intl3.string(tmp28(1113).t.kUEnxN);
-        } else if (tmp2(15063)(activity)) {
+        } else if (tmp2(15064)(activity)) {
           const intl2 = tmp28(1113).intl;
           stringResult = intl2.string(tmp28(1113).t.T0uYK9);
         } else {
@@ -178,7 +178,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result4 = items[userId % items.length];
     } else {
-      tmp2Result4 = tmp2(18385);
+      tmp2Result4 = tmp2(18399);
     }
   }
 }
@@ -200,7 +200,7 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(17521);
+const HappeningNowConstants = fn(17533);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: metroImportDefault,
@@ -211,7 +211,7 @@ const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef18375, _modDef18376];
+let items = [_modDef18389, _modDef18390];
 const createStyles = fn(5141);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
@@ -372,8 +372,8 @@ export default noop.memo(function ActivityCard(userId) {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(13403, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(13403, dependencyMap.paths);
+      asyncRequireImpl(13404, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(13404, dependencyMap.paths);
     } else {
       asyncRequireImpl(8891, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),

@@ -52,7 +52,7 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
   const obj4 = channel(504);
   const stageHasMedia = channel(6847).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(12195).StreamVolumeItem, {}));
+  items5.push(jsx(channel(12196).StreamVolumeItem, {}));
   if (tmp11) {
     const obj5 = { channel, disabled: null };
     let tmp12 = stateFromStoresArray.length > 0;
@@ -67,10 +67,10 @@ export default noop.memo(function StageChannelExpandedControls(channel) {
       tmp12 = reachedLimit;
     }
     obj5.disabled = tmp12;
-    items5.push(jsx(tmp5(12195).ScreenshareButton, { channel, disabled: null }));
+    items5.push(jsx(tmp5(12196).ScreenshareButton, { channel, disabled: null }));
   }
-  items5.push(jsx(channel(12195).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(12195).DeafenButton, { channel }));
+  items5.push(jsx(channel(12196).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(12196).DeafenButton, { channel }));
   const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
   tmp11 = num > 0 && tmp4;
   const tmp5Result = channel(6847);

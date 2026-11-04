@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/NotificationSettingsUtils.tsx
-import NotificationSettingsExperiments from "NotificationSettingsExperiments.tsx";
 import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment.tsx";
+import NotificationSettingsExperiments from "NotificationSettingsExperiments.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -18,7 +18,7 @@ function getNamedExperiment(experiment) {
     return tmp;
   }
 }
-const NotificationSettingsConstants = fn(16511);
+const NotificationSettingsConstants = fn(16524);
 ({
   NOTIF_CATEGORIES: closure_4,
   NOTIF_SETTING_MAPPING: hasOwnProperty,

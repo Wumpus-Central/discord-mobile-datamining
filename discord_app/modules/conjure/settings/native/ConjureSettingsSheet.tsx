@@ -52,7 +52,7 @@ function SettingsTabStrip(tabs) {
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(12371).Tabs, obj4);
+    let tmp10Result = closure_12(tmp5(12372).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
     tmp10Result = closure_12(tmp5(9359).SegmentedControl, obj5);

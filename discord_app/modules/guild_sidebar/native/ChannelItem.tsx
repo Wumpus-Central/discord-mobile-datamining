@@ -6,7 +6,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
-import _modDef18416 from "../../../../_runtime/metro/18416__.js";
+import _modDef18430 from "../../../../_runtime/metro/18430__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -63,7 +63,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef18416;
+      let tmp12 = _modDef18430;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -87,7 +87,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return state(tmp9(14154).BaseChannelIcon, obj10);
+    return state(tmp9(14155).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -118,7 +118,7 @@ function DMChannelIcon(userId) {
     status,
     isMobileOnline,
     isVROnline,
-    statusStyle: 117.3,
+    statusStyle: "teapot",
   };
   const items4 = [tmp.avatarStatus];
   if (avatarStatusSelected) {

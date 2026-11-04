@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/dock/useExternalPIPModeRestore.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const VoicePanelModes = fn(11410).VoicePanelModes;
+const VoicePanelModes = fn(11411).VoicePanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useExternalPIPModeRestore.tsx");
 

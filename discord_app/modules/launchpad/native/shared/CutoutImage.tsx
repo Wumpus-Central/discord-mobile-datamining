@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const FastImageDefault = tmp13(5851);
-const getReactNativeSVGImageSourceDefault = tmp13(15098);
+const getReactNativeSVGImageSourceDefault = tmp13(15099);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);

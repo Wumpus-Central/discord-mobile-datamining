@@ -2012,7 +2012,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "r" };
+        return { v: "Array" };
       } else {
         items = [];
         if (!_modDef5988(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {

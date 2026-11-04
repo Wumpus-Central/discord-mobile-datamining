@@ -5,7 +5,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
 import useResourceChannelsDefault from "../useResourceChannels.tsx";
-import _modDef18907 from "../../../../_runtime/metro/18907__.js";
+import _modDef18921 from "../../../../_runtime/metro/18921__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -42,8 +42,8 @@ function ResourceChannelRow(channelId) {
     first = forumPostMediaProperties[0];
   }
   const obj6 = channelId(9071);
-  let flag = channelId(13989).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(18906)(firstResult);
+  let flag = channelId(13990).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  const tmp11 = stateFromStores(18920)(firstResult);
   const tmp12 =
     null != stateFromStores &&
     null == stateFromStores2.first() &&
@@ -148,7 +148,7 @@ function ResourceChannelRow(channelId) {
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = closure_11(tmp2(13989).ForumPostMediaThumbnail, obj17);
+              tmp19Result6 = closure_11(tmp2(13990).ForumPostMediaThumbnail, obj17);
               const tmp2Result2 = tmp2(9071);
             }
           }
@@ -199,7 +199,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1113).intl;
     obj3.children = intl.string(guildId(1113).t.owvC9U);
     items = [closure_11(guildId(5761).Text, obj3), ,];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef18907 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef18921 };
     items[1] = closure_11(FastImageDefault, obj4);
     const obj5 = {
       onPress() {

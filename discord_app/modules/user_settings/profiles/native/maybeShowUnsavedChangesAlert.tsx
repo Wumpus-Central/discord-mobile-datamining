@@ -169,7 +169,7 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       tmp7(6094).show(obj4);
       const tmp7Result4 = tmp7(6094);
     }
-    obj2 = onReset(11596);
+    obj2 = onReset(11597);
   } else {
     onContinue();
   }

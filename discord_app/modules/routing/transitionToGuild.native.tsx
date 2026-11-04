@@ -15,7 +15,7 @@ export function transitionToGuild(id, arg1) {
     duration: 0,
     create: "r",
     update: "__d",
-    delete: "action",
+    delete: "defineProperty",
   });
   const obj3 = router_utils;
   const obj4 = { navigationReplace: true };

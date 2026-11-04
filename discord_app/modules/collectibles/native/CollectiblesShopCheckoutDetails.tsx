@@ -18,7 +18,7 @@ import _modDef9687 from "../../../../discord_assets/assets/orbs/orb_profile_badg
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import getProductName from "../utils/getProductName.tsx";
-import _modDef14642 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
+import _modDef14643 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,7 +29,7 @@ function ProfileEffectAssetPreview(item) {
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: null };
     const obj2 = { source: null, accessibilityLabel: null, style: null, resizeMode: "cover" };
-    const obj3 = { uri: _modDef14642 };
+    const obj3 = { uri: _modDef14643 };
     obj2.source = obj3;
     obj2.accessibilityLabel = tmp4.accessibilityLabel;
     obj2.style = tmp.profileEffect;
@@ -370,7 +370,7 @@ let closure_10 = createStyles.createStyles((arg0) => {
       borderWidth: 2,
       borderColor: BORDER_FEEDBACK_CRITICAL,
       marginHorizontal: tmp4(575).space.PX_16,
-      backgroundColor: "children",
+      backgroundColor: "dispatch",
     },
   };
   return obj;

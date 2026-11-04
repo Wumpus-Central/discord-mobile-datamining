@@ -1219,7 +1219,7 @@ function AnimatedWrapper(arg0) {
       }
     };
   } else if (isSelf) {
-    const tmp6Result21 = tmp6(19480);
+    const tmp6Result21 = tmp6(19494);
   }
   obj4.onDoubleTap = fn;
   let fn2;
@@ -1344,7 +1344,7 @@ function AnimatedWrapper(arg0) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const Pressable = get_ActivityIndicator.Pressable;
-const VoicePanelConstants = fn(11410);
+const VoicePanelConstants = fn(11411);
 ({
   VoicePanelCTACard: closure_11,
   VoicePanelModes: closure_12,
@@ -1352,12 +1352,12 @@ const VoicePanelConstants = fn(11410);
   SPEAKING_PHYSICS: closure_14,
   VoicePanelCardItemType: closure_15,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19377).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11413).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11409).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19391).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11414).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
 const ParticipantTypes = fn(5815).ParticipantTypes;
-const SCALE_PHYSICS = fn(11411).SCALE_PHYSICS;
+const SCALE_PHYSICS = fn(11412).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, Fragment: closure_23, jsxs: closure_24 } = jsxProd);
 let module_1652 = module_1652_mod;
@@ -1808,7 +1808,7 @@ let closure_48 = {
 let closure_49 = {
   code: "(function VoicePanelCardTsx13(props,previous){let[cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,scheduleOnRN,cleanUp,id]=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{scheduleOnRN(cleanUp);}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}})",
 };
-let closure_50 = { isSelf: false, hasVideo: false, user: { id: "r" } };
+let closure_50 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
 let items = [
   {
     code: "(function layoutTransitionFunction_VoicePanelCardTsx14(values,physics,scale,lastScale,disableAnimation=false){let[withSpring]=this.__closure;const scaleAdjustment=scale.get()/lastScale.get();const shouldAnimate=!disableAnimation?'respect-motion-settings':'animate-never';return{animations:{originX:withSpring(values.targetOriginX,physics,shouldAnimate),originY:withSpring(values.targetOriginY,physics,shouldAnimate),width:withSpring(values.targetWidth,physics,shouldAnimate),height:withSpring(values.targetHeight,physics,shouldAnimate)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth*scaleAdjustment,height:values.currentHeight*scaleAdjustment},callback:function(){lastScale.set(scale.get());}};})",
@@ -2047,10 +2047,10 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   if (item.type === closure_15.CTA) {
     const id3 = item.id;
     if (closure_11.NO_VIDEO_PARTICIPANTS === id3) {
-      let tmp43Result = closure_22(tmp(19518), {});
+      let tmp43Result = closure_22(tmp(19532), {});
       let tmp41 = closure_22;
     } else if (tmp52.CALLER_DISCONNECTED === id3) {
-      tmp43Result = closure_22(tmp(19519), {});
+      tmp43Result = closure_22(tmp(19533), {});
       tmp41 = closure_22;
     }
     const obj3 = {
@@ -2068,7 +2068,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
     let tmp41Result = null != tmp4;
     if (tmp41Result) {
       const obj4 = { isRinging: tmp8, participant: tmp4, label: null, layout: null };
-      const tmpResult3 = tmp(19531);
+      const tmpResult3 = tmp(19545);
       let userNick;
       if (tmp5Result17.isStableParticipantWithUser(tmp4)) {
         userNick = tmp4.userNick;
@@ -2076,10 +2076,10 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj4.label = userNick;
       obj4.layout = callback;
       tmp41Result = tmp41(tmpResult3, obj4);
-      tmp5Result17 = tmp5(19480);
+      tmp5Result17 = tmp5(19494);
     }
     items7[1] = tmp41Result;
-    let result = tmp5(19480).isStableParticipantWithUser(tmp4);
+    let result = tmp5(19494).isStableParticipantWithUser(tmp4);
     if (result) {
       const obj5 = { speakingOrPlayingSoundboard: sharedValue1, id, userId: tmp4.user.id, isSelf, layout: callback };
       result = tmp41(closure_45, obj5);
@@ -2113,7 +2113,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj6.streamId = streamId;
               obj6.isScrollVisible = derivedValue;
-              const VideoSpinnerContext = tmp5(11963).VideoSpinnerContext;
+              const VideoSpinnerContext = tmp5(11964).VideoSpinnerContext;
               obj6.videoSpinnerContext = isSelf ? VideoSpinnerContext.SELF_VIDEO : VideoSpinnerContext.REMOTE_VIDEO;
               obj6.sharedCoords = cardLayoutCoordsSubscription;
               if (isCall) {
@@ -2121,13 +2121,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj6.focusOnReady = isCall;
               obj6.layout = callback;
-              let tmp45Result = tmp45(tmp(19510), obj6);
-              const tmpResult4 = tmp(19510);
+              let tmp45Result = tmp45(tmp(19524), obj6);
+              const tmpResult4 = tmp(19524);
             }
             const obj7 = { avError: tmpResultResult, userId: user.id, style: null };
             user = StyleSheet.absoluteFill;
             obj7.style = user;
-            tmp45Result = closure_22(tmp(19520), obj7);
+            tmp45Result = closure_22(tmp(19534), obj7);
             tmp45 = closure_22;
           }
         }
@@ -2172,7 +2172,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp41 = closure_22;
     } else if (ParticipantTypes.ACTIVITY === type2) {
       const obj10 = { sharedVisible: sharedValue, applicationId: tmp4.applicationId, layout: callback };
-      tmp43Result = closure_22(tmp(19521), obj10, tmp4.id);
+      tmp43Result = closure_22(tmp(19535), obj10, tmp4.id);
       tmp41 = closure_22;
     }
   }

@@ -102,20 +102,20 @@ export default function CheckpointVoiceStatsScreen() {
   const obj5 = { style: tmp.imageContainer, children: null };
   const tmp2Result = stateFromStores1(6572);
   const obj6 = { animatedUri: null, staticUri: null, style: null };
-  const tmp13Result = tmp13(13863);
-  obj6.animatedUri = tmp13(13875);
-  obj6.staticUri = tmp13(13876);
+  const tmp13Result = tmp13(13864);
+  obj6.animatedUri = tmp13(13876);
+  obj6.staticUri = tmp13(13877);
   obj6.style = tmp.image;
-  obj5.children = closure_7(tmp13(13870), obj6);
+  obj5.children = closure_7(tmp13(13871), obj6);
   const items3 = [closure_7(View, obj5)];
   const obj7 = { style: tmp.copy, children: null };
   const obj8 = { style: tmp.title, children: null };
-  const items4 = [closure_7(stateFromStores1(12168).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
+  const items4 = [closure_7(stateFromStores1(12169).MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
   const obj10 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-  const tmp13Result4 = tmp13(13870);
+  const tmp13Result4 = tmp13(13871);
   obj10.children = stringResult.toLocaleUpperCase();
-  items4[1] = closure_7(tmp13(13865), obj10);
+  items4[1] = closure_7(tmp13(13866), obj10);
   obj8.children = items4;
   const items5 = [closure_8(View, obj8), , ,];
   let tmp15Result = tmp7;
@@ -124,7 +124,7 @@ export default function CheckpointVoiceStatsScreen() {
   }
   if (tmp15Result) {
     ({ value: obj13.value, label: obj13.accessibilityLabel } = memo);
-    tmp15Result = closure_7(tmp13(13877), { value: null, accessibilityLabel: null });
+    tmp15Result = closure_7(tmp13(13878), { value: null, accessibilityLabel: null });
     const obj11 = { value: null, accessibilityLabel: null };
   }
   items5[1] = tmp15Result;
@@ -135,12 +135,12 @@ export default function CheckpointVoiceStatsScreen() {
     obj12.accessibilityLabel = "" + rounded + " " + stringResult.toLocaleLowerCase();
     obj12.style = tmp.number;
     const obj14 = { end: rounded };
-    obj12.children = closure_7(tmp13(13878), obj14);
+    obj12.children = closure_7(tmp13(13879), obj14);
     tmp15Result2 = closure_7(View, obj12);
   }
   items5[2] = tmp15Result2;
   const obj15 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-  const tmp13Result5 = tmp13(13865);
+  const tmp13Result5 = tmp13(13866);
   if (rounded <= 0) {
     const intl5 = tmp2(1113).intl;
     let stringResult1 = intl5.string(tmp13(3219).huiTne);
@@ -161,7 +161,7 @@ export default function CheckpointVoiceStatsScreen() {
   }
   const obj18 = { children: null };
   obj15.children = stringResult1;
-  items5[3] = closure_7(tmp13(13865), obj15);
+  items5[3] = closure_7(tmp13(13866), obj15);
   obj7.children = items5;
   items3[1] = closure_8(View, obj7);
   obj4.children = items3;

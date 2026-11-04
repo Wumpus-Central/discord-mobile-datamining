@@ -553,7 +553,7 @@ function User(participantId) {
       tmp46Result2 = null;
       if (consumedRequestToRespondToSeriousThermalState) {
         const obj10 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj11 = { style: tmp.thermalAlertIcon, source: tmp6(11976), color: tmp.thermalAlertIcon.color };
+        const obj11 = { style: tmp.thermalAlertIcon, source: tmp6(11977), color: tmp.thermalAlertIcon.color };
         obj10.children = closure_21(tmp3(1187).Icon, obj11);
         tmp46Result2 = closure_21(tmp6(7101), obj10);
         const tmp6Result6 = tmp6(7101);
@@ -608,7 +608,7 @@ function Stream(participantId) {
   c5 = undefined;
   let callback2;
   let tmp = closure_23();
-  const mode = participantId(19466).usePIPState().mode;
+  const mode = participantId(19480).usePIPState().mode;
   closure_129_0 = transitionState;
   closure_129_1 = transitionCleanUp;
   items = [transitionState, transitionCleanUp];
@@ -642,9 +642,9 @@ function Stream(participantId) {
     }
   }, items);
   let tmp5 = transitionState === participantId(5207).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
-  const context = obj2.useContext(mode(11409));
+  const context = obj2.useContext(mode(11410));
   ({ channelId: c2, layoutManager } = context);
-  let obj = participantId(19466);
+  let obj = participantId(19480);
   const items1 = [callback2];
   const stateFromStoresObject = participantId(563).useStateFromStoresObject(items1, () => {
     const participant = ChannelRTCStore.getParticipant(c2, participantId);
@@ -745,7 +745,7 @@ function Stream(participantId) {
   }, items7);
   if (stateFromStores === constants.ENDED) {
     const obj3 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    let tmp24 = closure_21(tmp2(19551).StreamEnded, obj3);
+    let tmp24 = closure_21(tmp2(19565).StreamEnded, obj3);
   } else {
     tmp24 = null;
     if (stateFromStores !== tmp17.FAILED) {
@@ -805,13 +805,13 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelModes = fn(11410).VoicePanelModes;
-const VoicePanelPIPModes = fn(19377).VoicePanelPIPModes;
+const VoicePanelModes = fn(11411).VoicePanelModes;
+const VoicePanelPIPModes = fn(19391).VoicePanelPIPModes;
 const Constants = fn(1072);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 const CallConstants = fn(5815);
 ({ ParticipantTypes: closure_18, isActivityParticipant: closure_19 } = CallConstants);
-const ActivityLayoutMode = fn(11888).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11889).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const createStyles = fn(5141);

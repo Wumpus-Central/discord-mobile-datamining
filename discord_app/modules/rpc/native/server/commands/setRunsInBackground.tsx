@@ -9,7 +9,7 @@ const RPCCommands = fn(1072).RPCCommands;
 const ActivityPanelModes = fn(5791).ActivityPanelModes;
 const FrameIntent = fn(6982).FrameIntent;
 const obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16536);
+const CONTEXT_MENU_ICON_NAMES = fn(16548);
 const obj3 = {
   scope: null,
   handler(args) {

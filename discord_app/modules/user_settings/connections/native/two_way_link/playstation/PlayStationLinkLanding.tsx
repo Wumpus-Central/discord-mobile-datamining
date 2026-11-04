@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef14851 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
+import _modDef14852 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(14849).PlayStationLinkModalScenes;
+let closure_4 = fn(14850).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
@@ -40,7 +40,7 @@ export function PlayStationLinkLanding(platformType) {
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef14851 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef14852 }), []);
   const obj3 = {
     platformType: platformType.platformType,
     img: memo1,

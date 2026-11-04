@@ -127,7 +127,7 @@ const ChannelRecord = fn(4994);
   GUILD_WEBHOOK_CHANNEL_TYPES: closure_14,
 } = ChannelRecord);
 const isGuildNSFW = fn(5008).isGuildNSFW;
-let closure_25 = fn(19151).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(19165).ChannelSettingsAutoFocusElement;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_26,
@@ -532,7 +532,7 @@ class ChannelSettingsOverview extends PureComponent {
                 closure_128_6 = tmp2(7559).conjureChannelAppId(closure_128_1);
                 if (tmp65 != guild2) {
                   if (tmp65 != closure_128_6) {
-                    const conjureServerApp = tmp2(13498).loadConjureServerApp(guild2.id, closure_128_6);
+                    const conjureServerApp = tmp2(13499).loadConjureServerApp(guild2.id, closure_128_6);
                     tmp65 = closure_128_5;
                     conjureServerApp.then((app) => {
                       if (null == app) {
@@ -545,7 +545,7 @@ class ChannelSettingsOverview extends PureComponent {
                       }
                       return tmp6;
                     }, closure_128_5);
-                    const obj9 = tmp2(13498);
+                    const obj9 = tmp2(13499);
                   }
                 }
                 closure_128_5();
@@ -900,7 +900,7 @@ prototype["renderSlowmode"] = function renderSlowmode() {
       obj2.maxValue = length.length - 1;
       obj2.onChange = self.handleSlowmodeChange;
       obj2.formatValue = formatSlowmodeCooldown;
-      obj.children = closure_1_47(tmp8(16089).TableSliderRow, obj2);
+      obj.children = closure_1_47(tmp8(16102).TableSliderRow, obj2);
       items.push(closure_1_47(tmp8(7201).TableRowGroup, obj, "slowmode-section"));
       return items;
     } else {
@@ -941,7 +941,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(19156).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(19170).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1203,7 +1203,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
   const channel = props.channel;
   if (this.showVoiceSettings()) {
     if (props.canManageChannels) {
-      const tmp = channel.isGuildStageVoice() ? constants : closure_1_36;
+      const tmp = channel.isGuildStageVoice() ? closure_1_37 : closure_1_36;
       items = [];
       const intl = util.intl;
       const format = intl.format;
@@ -1405,7 +1405,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(7116).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(5000).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(19164).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(19178).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1768,7 +1768,7 @@ prototype["renderCategory"] = function renderCategory() {
         const obj = self(5786);
       }
       const obj2 = {
-        icon: closure_47(tmp7(18452).FolderPlusIcon, {}),
+        icon: closure_47(tmp7(18466).FolderPlusIcon, {}),
         label: null,
         trailing: null,
         arrow: null,

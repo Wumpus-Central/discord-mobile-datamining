@@ -8,10 +8,10 @@ require = fn;
 function formatFontScale(arg0) {
   return 100 * FontScales[Math.round(Math, arg0)] + "%";
 }
-const useFontScaleStore = fn(17490).useFontScaleStore;
+const useFontScaleStore = fn(17502).useFontScaleStore;
 const FontScales = fn(1082).FontScales;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11728);
+const SettingBuilders = fn(11729);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;

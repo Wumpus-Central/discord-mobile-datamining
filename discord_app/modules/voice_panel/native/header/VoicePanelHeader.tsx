@@ -57,7 +57,7 @@ function MusicMuteButton(channelId) {
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 12077 : 8699),
+        icon: importDefault(stateFromStores ? 12078 : 8699),
         onPress() {
           return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
         },
@@ -70,16 +70,16 @@ function MusicMuteButton(channelId) {
 }
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11410);
+const VoicePanelConstants = fn(11411);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(11413).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
-const DOCK_PULL_SNAP_DISTANCE = fn(11428).DOCK_PULL_SNAP_DISTANCE;
+const EDGE_GUTTER = fn(11414).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11409).VoicePanelControlsModes;
+const DOCK_PULL_SNAP_DISTANCE = fn(11429).DOCK_PULL_SNAP_DISTANCE;
 const ParticipantTypes = fn(5815).ParticipantTypes;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
@@ -992,7 +992,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
     let tmp110Result = null;
     if (tmp13 === ParticipantTypes.USER) {
       const obj11 = { isHeaderHidden: derivedValue2 };
-      tmp110Result = closure_24(tmp2(19481), obj11);
+      tmp110Result = closure_24(tmp2(19495), obj11);
     }
     const items31 = [tmp110Result];
     const obj12 = { style: null, animatedProps: null, children: null };
@@ -1002,20 +1002,20 @@ export default noop.memo(function VoicePanelHeader(layout) {
     const obj13 = { style: tmp.leftWrapper, pointerEvents: "box-none", children: null };
     const obj14 = { icon: null, accessibilityLabel: null, onPress: null, style: null };
     const tmp2Result7 = tmp2(7101);
-    obj14.icon = tmp2(11603);
+    obj14.icon = tmp2(11604);
     obj14.accessibilityLabel = stringResult;
     obj14.onPress = tmp95;
     obj14.style = memo;
-    const items33 = [closure_24(tmp2(19412), obj14)];
+    const items33 = [closure_24(tmp2(19426), obj14)];
     const obj15 = { style: tmp.headerInner, children: null };
-    const tmp2Result8 = tmp2(19412);
-    const items34 = [closure_24(tmp2(19483), {})];
+    const tmp2Result8 = tmp2(19426);
+    const items34 = [closure_24(tmp2(19497), {})];
     let tmp110Result7 = null;
     if (isSecureFramesUIEnabled) {
       tmp110Result7 = null;
       if (flag) {
         const obj16 = { size: "xs", color: tmp2(575).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
-        tmp110Result7 = closure_24(tmp5(14950).ShieldLockIcon, obj16);
+        tmp110Result7 = closure_24(tmp5(14951).ShieldLockIcon, obj16);
       }
     }
     items34[1] = tmp110Result7;
@@ -1032,11 +1032,11 @@ export default noop.memo(function VoicePanelHeader(layout) {
     }
     items36[1] = tmp110Result8;
     const obj19 = { isConnectedToVoiceChannel: tmp110Result11, channelId };
-    items36[2] = closure_24(tmp2(19494), obj19);
+    items36[2] = closure_24(tmp2(19508), obj19);
     let tmp110Result9 = null;
     if (null != stateFromStores) {
       const obj20 = { channel: stateFromStores, inCall: tmp110Result11 };
-      tmp110Result9 = closure_24(tmp2(19503), obj20);
+      tmp110Result9 = closure_24(tmp2(19517), obj20);
     }
     items36[3] = tmp110Result9;
     if (canInviteMembers) {
@@ -1045,25 +1045,25 @@ export default noop.memo(function VoicePanelHeader(layout) {
       const obj22 = { channelName: stateFromStores1 };
       obj21.accessibilityLabel = intl3.formatToPlainString(tmp5(1113).t["dHHb/2"], obj22);
       obj21.onPress = inviteMembersCallback;
-      canInviteMembers = closure_24(tmp2(19412), obj21);
-      const tmp2Result10 = tmp2(19412);
+      canInviteMembers = closure_24(tmp2(19426), obj21);
+      const tmp2Result10 = tmp2(19426);
     }
     items36[4] = canInviteMembers;
     let tmp110Result10 = null;
     if (null != stateFromStores2) {
-      const obj23 = { icon: tmp2(19505), onPress: callback1, accessibilityLabel: stateFromStores2 };
-      tmp110Result10 = closure_24(tmp2(19412), obj23);
-      const tmp2Result11 = tmp2(19412);
+      const obj23 = { icon: tmp2(19519), onPress: callback1, accessibilityLabel: stateFromStores2 };
+      tmp110Result10 = closure_24(tmp2(19426), obj23);
+      const tmp2Result11 = tmp2(19426);
     }
     items36[5] = tmp110Result10;
     if (tmp110Result11) {
       tmp110Result11 =
         obj4.useConfig({ location: "VoicePanelHeader" }).treatment ===
-        tmp5(19477).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
+        tmp5(19491).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
     }
     if (tmp110Result11) {
       const obj24 = { channelId };
-      tmp110Result11 = closure_24(tmp2(19506), obj24);
+      tmp110Result11 = closure_24(tmp2(19520), obj24);
     }
     items36[6] = tmp110Result11;
     obj17.children = items36;
@@ -1080,14 +1080,14 @@ export default noop.memo(function VoicePanelHeader(layout) {
     const obj25 = { style: null, pointerEvents: "none", children: null };
     const items37 = [StyleSheet.absoluteFill, animatedStyle2];
     obj25.style = items37;
-    animatedStyle2 = tmp2(18861);
+    animatedStyle2 = tmp2(18875);
     const obj26 = { baseColor: tmp2(575).colors.BLACK, minHeight: 0 };
     obj25.children = closure_24(animatedStyle2, obj26);
     let tmp110Result12 = closure_24(tmp2(1652).View, obj25);
   } else {
     const obj27 = { baseColor: tmp2(575).colors.BLACK, minHeight: 0 };
-    tmp110Result12 = closure_24(tmp2(18861), obj27);
-    const tmp2Result12 = tmp2(18861);
+    tmp110Result12 = closure_24(tmp2(18875), obj27);
+    const tmp2Result12 = tmp2(18875);
   }
   const tmp5Result30 = require("useIsSecureFramesVerified");
 });

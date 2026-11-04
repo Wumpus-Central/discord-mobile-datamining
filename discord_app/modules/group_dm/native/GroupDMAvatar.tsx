@@ -87,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "Show left-aligned example",
+      animate: "body-sm/medium",
     };
     obj12.animate = animate;
     if (null == users) {

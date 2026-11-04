@@ -141,7 +141,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1113).t.AwGSWl, obj);
   items = [
-    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(15560).FistBumpSpotIllustration, {}) }),
+    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(15561).FistBumpSpotIllustration, {}) }),
     closure_5(tmp5(5761).Text, {
       variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
@@ -156,7 +156,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     }),
   ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(15560).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(15561).FistBumpSpotIllustration, {}) };
   const obj6 = {
     variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",

@@ -266,13 +266,13 @@ function MainCallScreen(channel) {
       }
     };
   }, []);
-  isConnectedToVoiceChannel(12105);
+  isConnectedToVoiceChannel(12106);
   if (isChannelContentGated) {
     let obj3 = { onReturnToSafety: id(6879).pop, guildId: null, channelId: null };
     ({ guild_id: obj6.guildId, id: obj6.channelId } = channel);
-    let tmp14Result2 = closure_12(id(11405), obj3);
+    let tmp14Result2 = closure_12(id(11406), obj3);
     let tmp11 = closure_12;
-    const tmp20 = id(11405);
+    const tmp20 = id(11406);
   } else {
     if (!tmp10) {
       if (!channel.isVocalThread()) {
@@ -285,7 +285,7 @@ function MainCallScreen(channel) {
     let tmp14Result = null;
     if (channel.isGuildStageVoice()) {
       let obj7 = { channel };
-      tmp14Result = closure_12(id(12045), obj7);
+      tmp14Result = closure_12(id(12046), obj7);
     }
     obj5.children = tmp14Result;
     tmp14Result2 = closure_12(closure_6, obj5);
@@ -293,7 +293,7 @@ function MainCallScreen(channel) {
   }
   let obj2 = isConnectedToVoiceChannel(6869);
   const tmp21 = id(5318)();
-  const tmp22 = id(12059);
+  const tmp22 = id(12060);
   const tmp2Result = isConnectedToVoiceChannel(1377);
   const tmp23 = isConnectedToVoiceChannel(1377).isAndroid() || !isConnectedToVoiceChannel;
   return tmp11(tmp22, {

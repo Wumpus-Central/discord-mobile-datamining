@@ -259,17 +259,17 @@ export default function MessageRequestList(goToMessageRequestPreview) {
   let data;
   const tmp = closure_9();
   const bottom = data(1627)().bottom;
-  data = data(19231)();
-  dependencyMap = goToMessageRequestPreview(19233).useListHasSingleMessageRequest();
-  let obj = goToMessageRequestPreview(19233);
+  data = data(19245)();
+  dependencyMap = goToMessageRequestPreview(19247).useListHasSingleMessageRequest();
+  let obj = goToMessageRequestPreview(19247);
   const tmp2 = data;
-  const isRestricted = goToMessageRequestPreview(14231).useIsMessageRequestRestrictedViewer();
+  const isRestricted = goToMessageRequestPreview(14232).useIsMessageRequestRestrictedViewer();
   if (0 === data.length) {
     const obj3 = { bodyText: null };
     const intl2 = tmp4(1113).intl;
     obj3.bodyText = intl2.string(tmp4(1113).t.SXrqTf);
-    let tmp9Result = closure_7(tmp2(19236), obj3);
-    const tmp2Result = tmp2(19236);
+    let tmp9Result = closure_7(tmp2(19250), obj3);
+    const tmp2Result = tmp2(19250);
   } else {
     items = [tmp.list];
     let num = 0;

@@ -59,28 +59,28 @@ export default function InterestPickedGames(gameIds) {
         iconURL = getIconURL.getCoverURL(closure_1);
       }
       if (null != iconURL) {
-        const obj = { accessible: false, source: null, style: null, resizeMode: "cover" };
-        const obj2 = { uri: iconURL };
-        obj.source = obj2;
-        obj.style = closure_0.icon;
-        let tmp7 = jsx(
+        const obj2 = { accessible: false, source: null, style: null, resizeMode: "cover" };
+        const obj3 = { uri: iconURL };
+        obj2.source = obj3;
+        obj2.style = closure_0.icon;
+        let tmp9 = jsx(
           FastImageDefault,
           { accessible: false, source: null, style: null, resizeMode: "cover" },
           getIconURL.id,
         );
       } else {
-        const obj3 = { accessible: false, style: closure_0.fallback, children: null };
+        const obj = { accessible: false, style: closure_0.fallback, children: null };
         const obj4 = { variant: "body-xs/semibold", lineClamp: 1, children: null };
         const name = getIconURL.name;
         obj4.children = name.slice(0, 1);
-        obj3.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", lineClamp: 1, children: null });
-        tmp7 = (
+        obj.children = jsx(Text_Text.Text, { variant: "body-xs/semibold", lineClamp: 1, children: null });
+        tmp9 = (
           <React4 key={getIconURL.id} accessible={false} style={closure_0.fallback}>
             {null}
           </React4>
         );
       }
-      return tmp7;
+      return tmp9;
     });
     obj.children = jsx(require("Pile").Pile, {
       "aria-label": null,

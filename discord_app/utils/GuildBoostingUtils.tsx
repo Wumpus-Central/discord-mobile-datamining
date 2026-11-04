@@ -632,7 +632,7 @@ export function getGracePeriodEndingDate(arr, arg1) {
     const found = sorted.filter((endsAt) => null != endsAt.endsAt);
     const diff = found.length - num;
     if (diff < 0) {
-      const obj2 = { subscriptionLength: arr.length, subscriptionsNeededForPremiumTier: null, endingSubscriptionLength: null };
+      obj3 = { subscriptionLength: arr.length, subscriptionsNeededForPremiumTier: null, endingSubscriptionLength: null };
       const guild2 = GuildStore.getGuild(arg1);
       let premiumTier1;
       if (guild2 != null) {
@@ -642,16 +642,16 @@ export function getGracePeriodEndingDate(arr, arg1) {
         premiumTier1 = BoostedGuildTiers.NONE;
       }
       const obj4 = { category: "premium", message: "Negative index while checking grace period ending date.", data: null };
-      obj2.subscriptionsNeededForPremiumTier = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier1];
-      obj2.endingSubscriptionLength = found.length;
-      obj4.data = obj2;
+      obj3.subscriptionsNeededForPremiumTier = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier1];
+      obj3.endingSubscriptionLength = found.length;
+      obj4.data = obj3;
       SentryUtilsDefault.addBreadcrumb(obj4);
     }
     const _Math = Math;
-    const tmp13 = found[Math.max(Math, diff, 0)];
+    const tmp17 = found[Math.max(Math, diff, 0)];
     let endsAt;
-    if (tmp13 != null) {
-      endsAt = tmp13.endsAt;
+    if (tmp17 != null) {
+      endsAt = tmp17.endsAt;
     }
     return endsAt;
   } else {

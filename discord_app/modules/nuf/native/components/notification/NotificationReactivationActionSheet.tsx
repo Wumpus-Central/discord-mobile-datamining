@@ -4,12 +4,12 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
-import _modDef19851 from "../../../../../../_runtime/metro/19851__.js";
+import _modDef19865 from "../../../../../../_runtime/metro/19865__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const EventActionType = fn(14191).EventActionType;
+const EventActionType = fn(14192).EventActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -59,7 +59,7 @@ export default function NotificationReactivationActionSheet(location) {
   }, items1);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.image, source: _modDef19851, resizeMode: "contain" };
+  const obj3 = { style: tmp.image, source: _modDef19865, resizeMode: "contain" };
   const items2 = [closure_7(FastImageDefault, obj3), , ,];
   const obj4 = { style: tmp.title, variant: "heading-xl/semibold", accessibilityRole: "header", children: null };
   const intl = _location(1113).intl;

@@ -156,12 +156,12 @@ class GuildSettingsModalOverview extends PureComponent {
         }
         GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelId: id });
         if (((null != systemChannel) !== null) != id) {
-          const result = applyArgumentsResult(19929).trackServerHubToggleSetting(
+          const result = applyArgumentsResult(19943).trackServerHubToggleSetting(
             guild.id,
-            applyArgumentsResult(19929).ServerHubSettingType.ALL_SYSTEM_MESSAGES,
+            applyArgumentsResult(19943).ServerHubSettingType.ALL_SYSTEM_MESSAGES,
             tmp,
           );
-          const obj2 = applyArgumentsResult(19929);
+          const obj2 = applyArgumentsResult(19943);
         }
       };
       if (systemChannel == null) {
@@ -465,12 +465,12 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const tmpResult14 = tmp(1398);
   }
   const tmpResult = tmp(8590);
-  let result1 = tmp(19689).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  let result1 = tmp(19703).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1398).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult16 = tmp(1398);
   }
-  const tmpResult15 = tmp(19689);
+  const tmpResult15 = tmp(19703);
   let guildSpaceExperimentEnabled = tmp(7543).getGuildSpaceExperimentEnabled(guild.id, "GuildSettingsModalOverview");
   const obj2 = { title: null, description: null, hasIcons: false, children: null };
   const intl2 = tmp(1113).intl;

@@ -695,7 +695,17 @@ obj.NotificationsManager = {
   neverLoadBeforeConnectionOpen: true,
 };
 obj.NotifSettingsProtoManager = {
-  actions: ["POST_CONNECTION_OPEN", "CONNECTION_RESUMED", "APP_STATE_UPDATE"],
+  actions: [
+    "POST_CONNECTION_OPEN",
+    "CONNECTION_RESUMED",
+    "APP_STATE_UPDATE",
+    "USER_SETTINGS_PROTO_UPDATE",
+    "NOTIFICATION_SETTINGS_UPDATE",
+    "EFFECTIVE_NOTIFICATION_SETTINGS_SCREEN_OPEN",
+    "EFFECTIVE_NOTIFICATION_SETTINGS_ARM_CHANGE",
+    "DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE",
+    "LOGOUT",
+  ],
   inlineRequire() {
     return require("NotifSettingsProtoManager").default;
   },

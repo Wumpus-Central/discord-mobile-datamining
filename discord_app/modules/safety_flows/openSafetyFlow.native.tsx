@@ -41,7 +41,7 @@ let closure_6 = async function _openSafetyFlow() {
           closure_130_3 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else {
         if (1 === tmp10) {

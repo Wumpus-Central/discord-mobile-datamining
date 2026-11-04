@@ -552,7 +552,7 @@ export default function ConjureImageOptions(projectId) {
               closure_128_1 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(12981).pickConjurePhotos("photo", 1), done: false };
+              const obj5 = { value: tmp2(12982).pickConjurePhotos("photo", 1), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -566,8 +566,8 @@ export default function ConjureImageOptions(projectId) {
             closure_128_0 = value;
             closure_128_1 = own(closure_128_0, 1)[0];
             if (null != closure_128_1) {
-              closure_129_4.onUpload(tmp2(12981).uploadConjurePickedFile(closure_129_0, closure_128_1));
-              const obj = tmp2(12981);
+              closure_129_4.onUpload(tmp2(12982).uploadConjurePickedFile(closure_129_0, closure_128_1));
+              const obj = tmp2(12982);
             }
             c3 = 3;
             return { value: "HermesInternal", done: null };

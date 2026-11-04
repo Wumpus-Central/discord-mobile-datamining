@@ -35,7 +35,7 @@ export function useICYMIReloadHandler(showDot) {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              const ICYMIAnalytics = tmp2(16464).ICYMIAnalytics;
+              const ICYMIAnalytics = tmp2(16477).ICYMIAnalytics;
               let str = "NoDotShown";
               if (tmp2) {
                 str = "DotShown";

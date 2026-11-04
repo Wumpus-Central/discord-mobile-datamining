@@ -351,7 +351,7 @@ let closure_14 = noop.memo(function InterestGuildRow(guild) {
   const items7 = [closure_9(guild(7121).PressableHighlight, obj5)];
   const obj24 = {
     style: tmp.joinTarget,
-    children: closure_8(joins(19839), { guildId: guild.id, guildName: guild.name, joins }),
+    children: closure_8(joins(19853), { guildId: guild.id, guildName: guild.name, joins }),
   };
   items7[1] = closure_8(closure_6, obj24);
   obj23.children = items7;

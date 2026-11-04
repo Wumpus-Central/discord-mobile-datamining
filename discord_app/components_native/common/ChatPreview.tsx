@@ -362,9 +362,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "GUILD_SEARCH_RECENT_MEMBERS",
-        selectedChannelId: null,
-        tapLinkData: null,
+        messageChannel: 0.36,
+        selectedChannelId: 0.044,
+        tapLinkData: 141.628,
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

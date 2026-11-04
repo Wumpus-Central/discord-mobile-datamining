@@ -15,7 +15,7 @@ function closeCleanup() {
 }
 function CleanupScreen() {
   const tmp3 = closure_13(loading(1627)().bottom);
-  const tmp4 = loading(18440)(closeCleanup);
+  const tmp4 = loading(18454)(closeCleanup);
   _require = tmp4;
   loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };

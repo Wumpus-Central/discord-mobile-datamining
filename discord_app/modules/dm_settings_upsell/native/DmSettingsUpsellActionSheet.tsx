@@ -63,7 +63,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
   if (null != stateFromStores) {
     let obj2 = { startExpanded: true, children: null };
     let obj3 = { style: tmp.container, children: null };
-    const obj4 = { source: stateFromStores(11460), style: tmp.headerImage };
+    const obj4 = { source: stateFromStores(11461), style: tmp.headerImage };
     const items2 = [closure_6(stateFromStores(5851), obj4), , , , , ,];
     const obj5 = {
       variant: "heading-lg/semibold",

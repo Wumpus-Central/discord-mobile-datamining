@@ -93,13 +93,13 @@ function RoleCreateScene() {
               if (null != guild) {
                 closure_0(5845).roleCreatedToast();
                 const obj5 = closure_0(5845);
-                closure_0(20040).setRoleJustCreated(true);
+                closure_0(20054).setRoleJustCreated(true);
                 let STEP_MEMBERS = constants4.STEP_PERMISSIONS;
                 const guild2 = closure_2_12.getProps().guild;
                 closure_1(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
                 currentUser = currentUser.getCurrentUser();
                 const tmp23 = closure_2_9(guild2, currentUser);
-                const obj6 = closure_0(20040);
+                const obj6 = closure_0(20054);
                 const obj2 = { permission: constants3.ADMINISTRATOR, user: currentUser, context: guild2 };
                 let tmp4 = !tmp23;
                 if (!tmp23) {
@@ -134,7 +134,7 @@ function RoleCreateScene() {
   let obj3 = { title: null, subtitle: null, children: null };
   const callback2 = onSelect.useCallback(() => {
     React5.dismiss();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18607, dependencyMap.paths), "RoleColorPicker", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18621, dependencyMap.paths), "RoleColorPicker", {
       color,
       onSelect,
     });
@@ -460,7 +460,7 @@ function ModalScene(hasSkipButton) {
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, Keyboard: closure_8 } = get_ActivityIndicator);
 const isGuildOwner = fn(5008).isGuildOwner;
-const GuildSettingsRoleConstants = fn(20043);
+const GuildSettingsRoleConstants = fn(20057);
 ({
   PermissionTemplates: map1,
   DEFAULT_TEMPLATE_TYPE: closure_14,

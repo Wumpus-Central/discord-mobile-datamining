@@ -15,11 +15,11 @@ import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
-const CheckpointApngPlayerDefault = items9(13870);
-const _modDef13871 = items9(13871);
+const CheckpointApngPlayerDefault = items9(13871);
 const _modDef13872 = items9(13872);
-const CheckpointCountUpStatNumberDefault = items9(13878);
-const CheckpointDisplayTextDefault = items9(13884);
+const _modDef13873 = items9(13873);
+const CheckpointCountUpStatNumberDefault = items9(13879);
+const CheckpointDisplayTextDefault = items9(13885);
 function GameCard(game) {
   game = game.game;
   const id = game.id;
@@ -216,7 +216,7 @@ export default function CheckpointGamesStatsScreen() {
       obj7.style = items3;
       const obj8 = { style: map.header, children: null };
       const obj9 = { style: map.globalHeading, children: null };
-      const obj10 = { animatedUri: _modDef13871, staticUri: _modDef13872, style: map.globe };
+      const obj10 = { animatedUri: _modDef13872, staticUri: _modDef13873, style: map.globe };
       const items4 = [closure_8(CheckpointApngPlayerDefault, obj10)];
       const obj11 = { isStepHeading: true, children: null };
       const items9Result = CheckpointApngPlayerDefault;

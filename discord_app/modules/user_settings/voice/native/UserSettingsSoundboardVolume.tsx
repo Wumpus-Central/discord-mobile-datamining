@@ -49,5 +49,5 @@ export default function SoundboardVolume() {
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
   obj2.children = closure_5(analyticsLocations(7116).TableRow, obj3);
-  return closure_5(analyticsLocations(12136).UserSettingsTableRowGroup, obj2);
+  return closure_5(analyticsLocations(12137).UserSettingsTableRowGroup, obj2);
 }

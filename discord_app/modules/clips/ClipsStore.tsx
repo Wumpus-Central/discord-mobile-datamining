@@ -296,7 +296,7 @@ obj = {
   hardwareClassification: null,
   hardwareClassificationForDecoupled: null,
   hardwareClassificationVersion: 0,
-  clipsDefaultSettingsState: fn(16111).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  clipsDefaultSettingsState: fn(16124).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
   newClipIds: [],
   hasClips: false,
   hasTakenDecoupledClip: false,

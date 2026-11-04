@@ -48,7 +48,7 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
         return {
           headerTitle() {
             const obj = { style: { flexDirection: "row" }, children: null };
-            items = [closure_1_4(closure_1_0(13216).HammerIcon, { size: "sm" })];
+            items = [closure_1_4(closure_1_0(13217).HammerIcon, { size: "sm" })];
             const obj2 = {
               style: { marginLeft: closure_1_1(575).space.PX_8 },
               variant: "heading-sm/semibold",
@@ -65,8 +65,8 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(17818).DevToolsScreens);
-  let merged1 = Object.assign(tmp(17818).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(17830).DevToolsScreens);
+  let merged1 = Object.assign(tmp(17830).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp] = item;
@@ -89,7 +89,7 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
       return {
         headerTitle() {
           const obj = { style: { flexDirection: "row" }, children: null };
-          items = [closure_1_4(closure_1_0(13216).HammerIcon, { size: "sm" })];
+          items = [closure_1_4(closure_1_0(13217).HammerIcon, { size: "sm" })];
           const obj2 = {
             style: { marginLeft: closure_1_1(575).space.PX_8 },
             variant: "heading-sm/semibold",

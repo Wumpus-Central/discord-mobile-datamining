@@ -24,5 +24,5 @@ export function TTIFirstContentfulPaint(checkFocusedScreen) {
     firstContentfulPaint.record(nativeEvent.nativeEvent.timestamp);
     PostTTIScheduler.notifyAboutTTI();
   }, items);
-  return jsx(checkFocusedScreen(13556).TTIMeasurementView, { onMeasurement });
+  return jsx(checkFocusedScreen(13557).TTIMeasurementView, { onMeasurement });
 }

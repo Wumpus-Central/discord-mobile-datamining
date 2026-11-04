@@ -7,10 +7,10 @@ import FastImageDefault from "../common/FastImage.tsx";
 import Card from "../../design/components/Card/native/Card.native.tsx";
 import _modDef8676 from "../../../_runtime/metro/08676__.js";
 import _modDef10109 from "../../../_runtime/metro/10109__.js";
-import _modDef10763 from "../../../_runtime/metro/10763__.js";
 import _modDef10764 from "../../../_runtime/metro/10764__.js";
-import _modDef15684 from "../../../_runtime/metro/15684__.js";
+import _modDef10765 from "../../../_runtime/metro/10765__.js";
 import _modDef15685 from "../../../_runtime/metro/15685__.js";
+import _modDef15686 from "../../../_runtime/metro/15686__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -63,9 +63,9 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef15684;
+    let tmp5Result = _modDef15685;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef15685;
+    tmp5Result = _modDef15686;
   } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result = _modDef8676;
   }
@@ -85,9 +85,9 @@ export default function _default(premiumType) {
   if (PremiumTypes.TIER_0 === premiumType) {
     let tmp5Result4 = _modDef10109;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result4 = _modDef10763;
-  } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result4 = _modDef10764;
+  } else if (PremiumTypes.TIER_2 === premiumType) {
+    tmp5Result4 = _modDef10765;
   }
   const obj5 = { children: null };
   obj4.source = tmp5Result4;

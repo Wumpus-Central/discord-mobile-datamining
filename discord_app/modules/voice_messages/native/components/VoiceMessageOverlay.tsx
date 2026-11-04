@@ -11,7 +11,7 @@ import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.an
 import LegacyTokens from "../../../../design/migrations/native/LegacyTokens.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import inlineStyles from "../../../../../_runtime/08171_inlineStyles.js";
-import _modDef14434 from "../../../../../_runtime/metro/14434__.js";
+import _modDef14435 from "../../../../../_runtime/metro/14435__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -359,7 +359,7 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result })];
-  const obj4 = { style: null, source: _modDef14434 };
+  const obj4 = { style: null, source: _modDef14435 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
@@ -369,10 +369,10 @@ function LockPill(voiceMessageAnimationState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(13942).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(13943).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(13943).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(13944).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1072).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(13027).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(13028).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let module_1652 = module_1652_mod;
@@ -794,7 +794,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
     onPress: null,
   };
   let tmp36 = tmp15 === VoiceMessageAnimationState.SENDING;
-  const tmp3Result = ref(14435);
+  const tmp3Result = ref(14436);
   if (!tmp36) {
     tmp36 = tmp15 === VoiceMessageAnimationState.LOCKED;
   }
@@ -806,7 +806,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   } = tmp5);
   if (!tmp7) {
     if (!exiting) {
-      let SendMessageIcon = tmp(12168).MicrophoneIcon;
+      let SendMessageIcon = tmp(12169).MicrophoneIcon;
     }
     const obj13 = { children: null };
     obj12.IconComponent = SendMessageIcon;
@@ -828,7 +828,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
     return closure_14(closure_15, obj13);
   }
   SendMessageIcon = tmp(5863).SendMessageIcon;
-  tmp3Result2 = ref(13023);
+  tmp3Result2 = ref(13024);
 });
 const memoResult = noop.memo(function VoiceMessageEllipse(arg0) {
   ({ radius, voiceMessageAnimationState } = arg0);

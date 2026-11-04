@@ -49,11 +49,11 @@ export function GuildRolesAndChannelsRow(guild) {
     () => NewChannelsStore.getNewChannelIds(guild.id).size > ChannelListState.MAX_NEW_CHANNELS_TO_SHOW,
   );
   const callback = noop.useCallback(() => {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11769, dependencyMap.paths), { guildId: id }, closure_7);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11770, dependencyMap.paths), { guildId: id }, closure_7);
   }, items2);
-  let SELECTED = guild(14154).ChannelModes.DEFAULT;
+  let SELECTED = guild(14155).ChannelModes.DEFAULT;
   if (selected) {
-    SELECTED = tmp5(14154).ChannelModes.SELECTED;
+    SELECTED = tmp5(14155).ChannelModes.SELECTED;
   }
   let tmp10 = !result;
   if (result) {
@@ -64,8 +64,8 @@ export function GuildRolesAndChannelsRow(guild) {
   }
   let tmp11 = null;
   if (tmp10) {
-    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(14056).NewBadge, {}) };
-    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(14056).NewBadge, {})}</View>;
+    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(14057).NewBadge, {}) };
+    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(14057).NewBadge, {})}</View>;
   }
   const obj5 = {
     onPress: callback,
@@ -98,11 +98,11 @@ export function GuildRolesAndChannelsRow(guild) {
   } else {
     string2Result = string2(t2.et6wav);
   }
-  obj5.name = jsx(guild(14154).BaseChannelName, { name: string2Result, mode: SELECTED });
-  const tmp2Result = tmp2(14154);
-  obj5.icon = jsx(guild(14154).BaseChannelIcon, {
+  obj5.name = jsx(guild(14155).BaseChannelName, { name: string2Result, mode: SELECTED });
+  const tmp2Result = tmp2(14155);
+  obj5.icon = jsx(guild(14155).BaseChannelIcon, {
     mode: SELECTED,
-    IconComponent: guild(15896).ChannelListMagnifyingGlassIcon,
+    IconComponent: guild(15909).ChannelListMagnifyingGlassIcon,
   });
   obj5.channelInfo = tmp11;
   return (

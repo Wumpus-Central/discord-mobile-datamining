@@ -13,7 +13,7 @@ const Text_Text = EUNgko(5761);
 const TableRadioGroup = EUNgko(7199);
 const TableRadioRow = EUNgko(7202);
 const TableSwitchRow = EUNgko(7505);
-const UserSettingsVoice = EUNgko(12136);
+const UserSettingsVoice = EUNgko(12137);
 require = fn;
 class VoiceProcessingOptions {
   constructor() {

@@ -8,7 +8,7 @@ import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture
 import useVideoStreamErrorDefault from "../../../errors/hooks/useVideoStreamError.tsx";
 import VideoRenderer from "VideoRenderer.tsx";
 import StreamQualityLiveIndicatorDefault from "../../../go_live/native/StreamQualityLiveIndicator.tsx";
-import _modDef11973 from "../../../../../_runtime/metro/11973__.js";
+import _modDef11974 from "../../../../../_runtime/metro/11974__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
@@ -124,19 +124,19 @@ let closure_15 = noop.memo(function StreamContent(participant) {
         stream: stateFromStores,
         removeCloseButton: removeEmptyStateButton,
         removeSplashImage: removeEmptyStateImage,
-        type: tmp(11956).VideoEmptyTypes.STREAM_FAILED,
+        type: tmp(11957).VideoEmptyTypes.STREAM_FAILED,
         style: StyleSheet.absoluteFill,
       };
-      return closure_10(tmp4(11956), obj2);
+      return closure_10(tmp4(11957), obj2);
     } else if (ApplicationStreamStates.ENDED === state) {
       const obj3 = {
         stream: stateFromStores,
         removeCloseButton: removeEmptyStateButton,
         removeSplashImage: removeEmptyStateImage,
-        type: tmp(11956).VideoEmptyTypes.STREAM_ENDED,
+        type: tmp(11957).VideoEmptyTypes.STREAM_ENDED,
         style: StyleSheet.absoluteFill,
       };
-      return closure_10(tmp4(11956), obj3);
+      return closure_10(tmp4(11957), obj3);
     } else {
       if (ApplicationStreamStates.RECONNECTING === state) {
         const obj4 = { title: null };
@@ -161,11 +161,11 @@ let closure_15 = noop.memo(function StreamContent(participant) {
           stream: stateFromStores,
           removeCloseButton: removeEmptyStateButton,
           removeSplashImage: removeEmptyStateImage,
-          type: tmp(11956).VideoEmptyTypes.STREAM_FAILED,
+          type: tmp(11957).VideoEmptyTypes.STREAM_FAILED,
           style: StyleSheet.absoluteFill,
           avError: tmp5,
         };
-        return closure_10(tmp4(11956), obj7);
+        return closure_10(tmp4(11957), obj7);
       } else {
         const id = AuthenticationStore.getId();
         const obj8 = {
@@ -180,15 +180,15 @@ let closure_15 = noop.memo(function StreamContent(participant) {
           paused: null,
         };
         if (stateFromStores.ownerId === id) {
-          let REMOTE_STREAM = tmp(11963).VideoSpinnerContext.SELF_STREAM;
+          let REMOTE_STREAM = tmp(11964).VideoSpinnerContext.SELF_STREAM;
         } else {
-          REMOTE_STREAM = tmp(11963).VideoSpinnerContext.REMOTE_STREAM;
+          REMOTE_STREAM = tmp(11964).VideoSpinnerContext.REMOTE_STREAM;
         }
         const obj9 = { children: null };
         obj8.videoSpinnerContext = REMOTE_STREAM;
         obj8.userId = user.id;
         obj8.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
-        const items1 = [closure_10(tmp4(11961), obj8), tmp9];
+        const items1 = [closure_10(tmp4(11962), obj8), tmp9];
         obj9.children = items1;
         return closure_11(closure_12, obj9);
       }
@@ -211,7 +211,7 @@ let closure_16 = noop.memo(function Fullscreen(arg0) {
   obj.style = items;
   const tmp = closure_13();
   obj.children = closure_1_10(native.Icon, {
-    source: _modDef11973,
+    source: _modDef11974,
     size: native.Icon.Sizes.SMALL,
     color: nativeDefault.unsafe_rawColors.WHITE,
   });

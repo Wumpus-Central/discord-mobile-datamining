@@ -119,7 +119,7 @@ export default function ConjureFloatingActivity(agents) {
     if (null != todos) {
       const obj5 = { style: tmp.panel, children: null };
       const obj6 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj5.children = closure_6(tmp13(12937), obj6);
+      obj5.children = closure_6(tmp13(12938), obj6);
       tmp14 = closure_6(View, obj5);
     }
   }
@@ -166,7 +166,7 @@ export default function ConjureFloatingActivity(agents) {
     const intl2 = tmp2(1113).intl;
     obj12.accessibilityLabel = intl2.string(tmp13(3995).Qp2isI);
     obj12.onPress = callback;
-    obj11.children = closure_6(tmp2(13000).ToggleIconButton, obj12);
+    obj11.children = closure_6(tmp2(13001).ToggleIconButton, obj12);
     tmp18Result = closure_6(View, obj11);
   }
   items6[1] = tmp18Result;

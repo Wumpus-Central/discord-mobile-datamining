@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const QuestDockMode = fn(6916).QuestDockMode;
-const QuestDockConstants = fn(17307);
+const QuestDockConstants = fn(17319);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({
   QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
@@ -459,7 +459,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj5.children = intl2.string(tmp(1113).t.o6FLcF);
     const items17 = [closure_12(tmp(5761).Text, obj5)];
     const obj6 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp67.actionDisclosuresIcon };
-    items17[1] = closure_12(tmp(14727).CircleQuestionIcon, obj6);
+    items17[1] = closure_12(tmp(14728).CircleQuestionIcon, obj6);
     obj4.children = items17;
     obj3.children = closure_14(closure_13, obj4);
     let tmp68Result = closure_12(tmp(7121).PressableOpacity, obj3);
@@ -488,7 +488,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
         opacityAnimatedStyle: animatedStyle6,
         layoutAnimation: questDockHeaderLayoutAnimation,
       };
-      let tmp71Result = tmp71(tmp7(17400), obj10);
+      let tmp71Result = tmp71(tmp7(17412), obj10);
     }
     const items20 = [tmp71Result, ,];
     let tmp71Result2 = children;
@@ -530,7 +530,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     let tmp74Result = !flag;
     if (!flag) {
       const obj18 = { children: null };
-      const items27 = [tmp68Result, tmp71(tmp7(17402), {})];
+      const items27 = [tmp68Result, tmp71(tmp7(17414), {})];
       obj18.children = items27;
       tmp74Result = closure_14(closure_13, obj18);
     }
@@ -609,7 +609,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj9.children = items20;
     return closure_14(tmp7(1652).View, obj9);
   }
-  tmp71Result = tmp71(tmp7(17371), {
+  tmp71Result = tmp71(tmp7(17383), {
     layoutAnimatedStyle: animatedStyle5,
     opacityAnimatedStyle: animatedStyle6,
     layoutAnimation: questDockHeaderLayoutAnimation,

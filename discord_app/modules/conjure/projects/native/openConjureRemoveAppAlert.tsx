@@ -82,9 +82,9 @@ function ConjureRemoveAppAlert(action) {
             if (!closure_129_4) {
               const obj7 = { text: null, variant: "success" };
               const obj = tmp2(5846);
-              obj7.text = tmp3(12413).conjureRemoveAppSuccess(closure_129_1);
+              obj7.text = tmp3(12414).conjureRemoveAppSuccess(closure_129_1);
               obj.open("CONJURE_APP_REMOVED", obj7);
-              const obj3 = tmp3(12413);
+              const obj3 = tmp3(12414);
             }
             c3 = 3;
             return { value: "HermesInternal", done: null };

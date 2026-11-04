@@ -306,7 +306,7 @@ let closure_25 = async function _setupTTITest(arg0) {
             closure_130_13 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "flexDirection", done: null };
           }
         break;
         case 1:
@@ -864,13 +864,13 @@ let closure_27 = async function _apiLogin(arg0) {
         items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(572);
-          const f142412 = () => {
+          const f142974 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f142412(arg0);
+            return f142974(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -898,11 +898,11 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f142412(arg0);
+    return f142974(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(19621).applicationReady;
+const applicationReady = fn(19635).applicationReady;
 fn(7067).addPostConnectionCallback;
 const Constants = fn(1072);
 ({ ME: closure_11, Routes: closure_12 } = Constants);

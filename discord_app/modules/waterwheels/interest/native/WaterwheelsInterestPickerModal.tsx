@@ -10,10 +10,10 @@ class WaterwheelsInterestPickerModal {
     tmp4 = closure_1(closure_2[6])("WaterwheelsInterestPickerModal");
     closure_0 = tmp4;
     callback = closure_3.useCallback((gameIds) => {
-      const result = closure_0(18669).setInterestPickerPicks(gameIds);
-      const obj = closure_0(18669);
-      const result1 = closure_0(18669).markInterestPickerSeen();
-      const obj2 = closure_0(18669);
+      const result = closure_0(18683).setInterestPickerPicks(gameIds);
+      const obj = closure_0(18683);
+      const result1 = closure_0(18683).markInterestPickerSeen();
+      const obj2 = closure_0(18683);
       callback(6879).popWithKey(closure_1_6);
       const obj3 = callback(6879);
       const rootNavigationRef = closure_0(5323).getRootNavigationRef();

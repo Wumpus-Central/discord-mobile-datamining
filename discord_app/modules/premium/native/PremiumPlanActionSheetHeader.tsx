@@ -11,7 +11,7 @@ import _modDef7762 from "../../../../_runtime/metro/07762__.js";
 import PremiumPill from "../../user_settings/premium/native/PremiumPill.tsx";
 import _modDef10109 from "../../../../_runtime/metro/10109__.js";
 import _modDef10114 from "../../../../_runtime/metro/10114__.js";
-import _modDef10763 from "../../../../_runtime/metro/10763__.js";
+import _modDef10764 from "../../../../_runtime/metro/10764__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -127,7 +127,7 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     if (TIER_0.TIER_0 === premiumType) {
       let tmp13Result10 = _modDef10109;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result10 = _modDef10763;
+      tmp13Result10 = _modDef10764;
     } else if (TIER_0.TIER_2 === premiumType) {
       tmp13Result10 = _modDef10114;
     }

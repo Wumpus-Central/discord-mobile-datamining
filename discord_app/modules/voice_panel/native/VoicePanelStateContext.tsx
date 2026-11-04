@@ -3,12 +3,12 @@ import VoicePanelCardLayoutManagerDefault from "card/VoicePanelCardLayoutManager
 import VoicePanelPIPHandoffDefault from "pip/VoicePanelPIPHandoff.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const VoicePanelModes = fn(11410).VoicePanelModes;
-const VoicePanelControlsConstants = fn(11408);
+const VoicePanelModes = fn(11411).VoicePanelModes;
+const VoicePanelControlsConstants = fn(11409);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
 const obj = {
   channelId: "context-not-initialized",
-  channelType: "filter",
+  channelType: "find",
   connected: "r",
   contentDimensions: false,
   controlsSpecs: null,
@@ -50,9 +50,9 @@ const obj = {
   sheetExitProgress: null,
   showControls: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
   showFloatingCTA: null,
-  streamOutputSinkStack: "\u{1F426}",
+  streamOutputSinkStack: "\u{1F428}",
   windowDimensions: 6,
-  wrapperDimensions: 270,
+  wrapperDimensions: 256,
   useReducedMotion: "/developers",
   wrapperOffset: null,
   pipHandoff: "/developers/teams",
@@ -88,7 +88,7 @@ ReanimatedHelperTypes = fn(7378);
 obj.dockPressProgress = ReanimatedHelperTypes.createFakeSharedValue(0);
 ReanimatedHelperTypes = fn(7378);
 obj.dockPressed = ReanimatedHelperTypes.createFakeSharedValue(false);
-obj.dismissToPIPGestureRef = { current: "r" };
+obj.dismissToPIPGestureRef = { current: "Array" };
 ReanimatedHelperTypes = fn(7378);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(7378);
@@ -115,7 +115,7 @@ obj.layoutManager = new VoicePanelCardLayoutManagerDefault("invalid");
 ReanimatedHelperTypes = fn(7378);
 obj.mode = ReanimatedHelperTypes.createFakeSharedValue(VoicePanelModes.PANEL);
 ReanimatedHelperTypes = fn(7378);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11411).MorphablePanelModes.PANEL);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11412).MorphablePanelModes.PANEL);
 const obj2 = {
   mode: VoicePanelControlsModes.FLOATING_DEFAULT,
   locked: false,

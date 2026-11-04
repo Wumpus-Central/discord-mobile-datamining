@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardA
 export function openSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource, initialScrollLocation } = arg0);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19434, dependencyMap.paths),
+    asyncRequireImpl(19448, dependencyMap.paths),
     "SoundboardSoundPickerActionSheet",
     { channel, analyticsSource, initialScrollLocation },
   );
@@ -22,7 +22,7 @@ export function showSoundboardSoundPickerActionSheet(arg0) {
   ComponentDispatch.dispatch(ComponentActions.TOGGLE_CALL_CONTROL_DRAWER);
   ({ channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation } = { channel, analyticsSource });
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19434, dependencyMap.paths),
+    asyncRequireImpl(19448, dependencyMap.paths),
     "SoundboardSoundPickerActionSheet",
     { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation },
   );

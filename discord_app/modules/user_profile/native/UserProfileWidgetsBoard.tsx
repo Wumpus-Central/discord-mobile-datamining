@@ -487,10 +487,10 @@ export default function UserProfileWidgetsBoard(userId) {
   }
   ({ cardStyle: importDefault, isEditing: dependencyMap } = userId);
   const tmp = closure_12();
-  const displayableBoardWidgets = userId(15188).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(15189).useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(15188);
+  let obj = userId(15189);
   const trackUserProfileAction = userId(8902).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);

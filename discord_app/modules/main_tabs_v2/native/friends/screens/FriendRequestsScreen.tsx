@@ -131,9 +131,9 @@ export default function FriendRequestsScreen() {
   first = tmp9[0];
   dependencyMap = tmp11;
   let obj2 = analyticsLocations(563);
-  gameRelationshipsByType = analyticsLocations(15129).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = analyticsLocations(15129);
-  gameRelationshipsByType1 = analyticsLocations(15129).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
+  gameRelationshipsByType = analyticsLocations(15130).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
+  let obj3 = analyticsLocations(15130);
+  gameRelationshipsByType1 = analyticsLocations(15130).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
     const set = new Set();
@@ -155,7 +155,7 @@ export default function FriendRequestsScreen() {
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
   const ignoredUserIds = memo1.ignoredUserIds;
-  let obj4 = analyticsLocations(15129);
+  let obj4 = analyticsLocations(15130);
   const items5 = [ignoredUserIds];
   const items6 = [
     ignoredUserIds,
@@ -407,11 +407,11 @@ export default function FriendRequestsScreen() {
       stringResult = intl4.string(tmp4(1113).t["yvzX/Z"]);
     }
     const obj17 = { title: stringResult, illustration: null, disableBackgroundOverlay: true };
-    WumpusCouchSpotIllustration = tmp4(17326).WumpusCouchSpotIllustration;
+    WumpusCouchSpotIllustration = tmp4(17338).WumpusCouchSpotIllustration;
     obj17.illustration = WumpusCouchSpotIllustration;
-    obj16.children = tmp32(tmp2(13623), obj17);
+    obj16.children = tmp32(tmp2(13624), obj17);
     tmp32(tmp33, obj16);
-    const tmp2Result = tmp2(13623);
+    const tmp2Result = tmp2(13624);
   } else {
     if (first1 === tmp25.Incoming) {
       outgoingSection = incomingSection;

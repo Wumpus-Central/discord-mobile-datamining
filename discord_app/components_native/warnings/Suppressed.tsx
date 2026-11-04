@@ -1,8 +1,8 @@
 // discord_app/components_native/warnings/Suppressed.tsx
 import util from "../../intl/index.native.tsx";
 import PermissionActionCreatorsDefault from "../../actions/PermissionActionCreators.tsx";
-import _modDef19275 from "../../../_runtime/metro/19275__.js";
-import _modDef19276 from "../../../_runtime/metro/19276__.js";
+import _modDef19289 from "../../../_runtime/metro/19289__.js";
+import _modDef19290 from "../../../_runtime/metro/19290__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import PermissionSpeakStore from "../../stores/PermissionSpeakStore.tsx";
 
@@ -26,14 +26,14 @@ Suppressed.prototype["render"] = function render() {
     let stringResult = string(t.KuYcnU);
     const intl3 = util.intl;
     let stringResult1 = intl3.string(util.t["RaFZ3+"]);
-    let tmp7 = _modDef19275;
+    let tmp7 = _modDef19289;
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
     const intl2 = util.intl;
     stringResult1 = intl2.string(util.t.etJjgW);
     tmp6 = importDefault;
-    tmp7 = _modDef19276;
+    tmp7 = _modDef19290;
   }
   return jsx(tmp6(6165), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };

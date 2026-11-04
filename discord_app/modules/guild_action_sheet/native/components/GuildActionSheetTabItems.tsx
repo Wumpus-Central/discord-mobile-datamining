@@ -27,9 +27,9 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let canAccessSettings = guild(16020).useGuildActionSheetPermissions(guild).canAccessSettings;
+  let canAccessSettings = guild(16033).useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = stateFromStores(8609)(guild.id).total;
-  let obj = guild(16020);
+  let obj = guild(16033);
   items = [GuildChannelStore];
   stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);

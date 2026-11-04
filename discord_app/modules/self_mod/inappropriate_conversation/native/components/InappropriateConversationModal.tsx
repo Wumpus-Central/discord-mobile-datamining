@@ -109,7 +109,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = closure_15();
   const obj = { style: tmp.container, children: null };
-  items = [closure_13(trackAnalyticsEvent(17975).SafetyChatSpotIllustration, {}), ,];
+  items = [closure_13(trackAnalyticsEvent(17987).SafetyChatSpotIllustration, {}), ,];
   const obj2 = { style: tmp.warningText, children: null };
   const obj3 = {
     variant: "heading-xl/semibold",
@@ -151,7 +151,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
 const useState = fn(19).useState;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const Constants = fn(11443);
+const Constants = fn(11444);
 ({
   CRISIS_TEXT_LINE_SMS_URI: closure_9,
   CRISIS_TEXT_LINE_URL: closure_10,

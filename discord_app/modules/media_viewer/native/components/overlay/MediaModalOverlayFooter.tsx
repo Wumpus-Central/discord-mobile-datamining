@@ -20,9 +20,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5141);
 let obj2 = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "e" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "__closure" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
-  drawerHeader: { backgroundColor: "r" },
+  drawerHeader: { backgroundColor: "Array" },
   messagePreviewContainer: { marginLeft: 6 },
   thumbnailsContainer: { paddingTop: 8 },
 };
@@ -854,7 +854,7 @@ export function MediaModalOverlayFooter(channelId) {
     const items28 = [animatedStyle1, tmp.thumbnailsContainer];
     obj13.style = items28;
     const obj14 = { syncer };
-    obj13.children = tmp81(tmp53(14984), obj14);
+    obj13.children = tmp81(tmp53(14985), obj14);
     tmp81Result = tmp81(tmp53(1652).View, obj13);
   }
   const rect = { bottom: true, left: true, right: true, children: null };

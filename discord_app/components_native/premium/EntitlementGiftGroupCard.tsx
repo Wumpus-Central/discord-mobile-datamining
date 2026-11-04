@@ -11,8 +11,7 @@ import SlayerStorefrontItemCardDefault from "../../modules/slayer_storefront/nat
 import GiftCodeActionCreatorsDefault from "../../actions/GiftCodeActionCreators.tsx";
 import SubscriptionUtils from "../../utils/SubscriptionUtils.tsx";
 import ChevronSmallDownIcon from "../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import _modDef14653 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import _modDef15321 from "../../../_runtime/metro/15321__.js";
+import _modDef14654 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import _modDef15322 from "../../../_runtime/metro/15322__.js";
 import _modDef15323 from "../../../_runtime/metro/15323__.js";
 import _modDef15324 from "../../../_runtime/metro/15324__.js";
@@ -21,8 +20,9 @@ import _modDef15326 from "../../../_runtime/metro/15326__.js";
 import _modDef15327 from "../../../_runtime/metro/15327__.js";
 import _modDef15328 from "../../../_runtime/metro/15328__.js";
 import _modDef15329 from "../../../_runtime/metro/15329__.js";
-import _modDef15332 from "../../../_runtime/metro/15332__.js";
+import _modDef15330 from "../../../_runtime/metro/15330__.js";
 import _modDef15333 from "../../../_runtime/metro/15333__.js";
+import _modDef15334 from "../../../_runtime/metro/15334__.js";
 import GiftCodeRowDefault from "GiftCodeRow.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../modules/applications/ApplicationStore.tsx";
@@ -257,35 +257,35 @@ prototype["renderHeader"] = function renderHeader(source, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return _modDef15321;
-  } else if (constants2.CAKE === giftStyle) {
-    return _modDef15323;
-  } else if (constants2.CHEST === giftStyle) {
-    return _modDef15324;
-  } else if (constants2.COFFEE === giftStyle) {
     return _modDef15322;
-  } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
+  } else if (constants2.CAKE === giftStyle) {
+    return _modDef15324;
+  } else if (constants2.CHEST === giftStyle) {
     return _modDef15325;
-  } else if (constants2.SEASONAL_CAKE === giftStyle) {
+  } else if (constants2.COFFEE === giftStyle) {
+    return _modDef15323;
+  } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
     return _modDef15326;
-  } else if (constants2.SEASONAL_CHEST === giftStyle) {
+  } else if (constants2.SEASONAL_CAKE === giftStyle) {
     return _modDef15327;
-  } else if (constants2.SEASONAL_COFFEE === giftStyle) {
+  } else if (constants2.SEASONAL_CHEST === giftStyle) {
     return _modDef15328;
+  } else if (constants2.SEASONAL_COFFEE === giftStyle) {
+    return _modDef15329;
   } else if (constants2.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef14653 };
+    const obj = { uri: _modDef14654 };
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return _modDef15329;
+    return _modDef15330;
   } else if (TIER_0.TIER_1 === id) {
-    return _modDef15332;
+    return _modDef15333;
   } else {
     if (TIER_0.TIER_2 !== id) {
       if (TIER_0.LEGACY !== id) {
         return null;
       }
     }
-    return _modDef15333;
+    return _modDef15334;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {

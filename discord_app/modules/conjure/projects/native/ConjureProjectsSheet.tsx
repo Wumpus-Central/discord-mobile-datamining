@@ -106,7 +106,7 @@ function ProjectList(arg0) {
   let conjureSharedWithMeProjects;
   let tmp = closure_11(0);
   let projects = useConjureOwnProjectListStateDefault(query);
-  conjureSharedWithMeProjects = conjureSharedWithMeProjects(13204).useConjureSharedWithMeProjects();
+  conjureSharedWithMeProjects = conjureSharedWithMeProjects(13205).useConjureSharedWithMeProjects();
   const trimmed = query.trim();
   const toLocaleLowerCaseResult = trimmed.toLocaleLowerCase();
   importDefault = toLocaleLowerCaseResult;
@@ -187,7 +187,7 @@ function ProjectList(arg0) {
       tmp7Result2 = closure_8(View, obj12);
     }
   }
-  const obj = conjureSharedWithMeProjects(13204);
+  const obj = conjureSharedWithMeProjects(13205);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -237,8 +237,8 @@ let closure_11 = createStyles.createStyles((arg0) => {
 let closure_13 = noop.memo(function ProjectRow(project) {
   project = project.project;
   let unreadDot = closure_11(0);
-  const conjureHomeProjectState = project(13226).useConjureHomeProjectState(project.id);
-  const obj = project(13226);
+  const conjureHomeProjectState = project(13227).useConjureHomeProjectState(project.id);
+  const obj = project(13227);
   items = [ConjurePublishStatusStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(
@@ -257,11 +257,11 @@ let closure_13 = noop.memo(function ProjectRow(project) {
     items1,
   );
   const obj2 = project(504);
-  const result = project(13226).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
-  const obj3 = project(13226);
-  const result1 = project(13226).conjureProjectLastActivityTime(project);
-  const obj4 = project(13226);
-  const conjureProjectShareTargetDetails = project(13227).useConjureProjectShareTargetDetails(project);
+  const result = project(13227).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
+  const obj3 = project(13227);
+  const result1 = project(13227).conjureProjectLastActivityTime(project);
+  const obj4 = project(13227);
+  const conjureProjectShareTargetDetails = project(13228).useConjureProjectShareTargetDetails(project);
   let tmp10Result = null;
   if (null != result1) {
     const obj6 = { since: result1, getFormatter: tmp(6211).getAbbreviatedFormatter, includeWeeks: true };
@@ -291,7 +291,7 @@ let closure_13 = noop.memo(function ProjectRow(project) {
         stringResult2 = intl2.string(_modDef3995.poYQxw);
       }
       label = stringResult2;
-      tmpResult = tmp(13227);
+      tmpResult = tmp(13228);
     }
     items2[1] = label;
     items2[2] = stringResult;
@@ -345,7 +345,7 @@ let closure_13 = noop.memo(function ProjectRow(project) {
         } else {
           const obj11 = { style: unreadDot.userIconWrapper, children: null };
           const obj12 = { size: "xxs", color: nativeDefault.colors.TEXT_SUBTLE };
-          obj11.children = closure_8(tmp(12322).UserIcon, obj12);
+          obj11.children = closure_8(tmp(12323).UserIcon, obj12);
           tmp24Result5 = closure_8(View, obj11);
         }
         items4[1] = tmp24Result5;
@@ -396,7 +396,7 @@ let closure_13 = noop.memo(function ProjectRow(project) {
     tmp37 = stringResult1;
   }
   tmp42Result = tmp37;
-  const obj5 = project(13227);
+  const obj5 = project(13228);
 });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectsSheet.tsx");

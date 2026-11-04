@@ -86,7 +86,7 @@ function UserSummaryRow(arg0) {
       ({ badge: arr3[0], audienceBadge: arr3[1] } = tmp);
       obj3.style = items2;
       let obj4 = { size: "custom", style: max(11227).makeSizeStyle(14) };
-      const items3 = [closure_13(max(14321).HeadphonesIcon, obj4)];
+      const items3 = [closure_13(max(14322).HeadphonesIcon, obj4)];
       let obj6 = {
         variant: "body-xs/semibold",
         style: { marginLeft: 4 },
@@ -522,10 +522,10 @@ export default noop.memo(function GuildLiveChannelNotice(guild) {
   let activeEventOrStageInstanceChannel;
   const tmp = closure_29();
   const tmp2 = activeEventOrStageInstanceChannel;
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(18485).useActiveEventOrStageInstanceChannel(
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(18499).useActiveEventOrStageInstanceChannel(
     guild.id,
   );
-  let obj = activeEventOrStageInstanceChannel(18485);
+  let obj = activeEventOrStageInstanceChannel(18499);
   const guildActiveEvent = activeEventOrStageInstanceChannel(9235).useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(9235);
   items = [StageInstanceStore];

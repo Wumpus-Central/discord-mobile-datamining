@@ -135,7 +135,7 @@ if (obj.test("https:")) {
   str = "wss:";
 }
 let closure_34 = null;
-const constants = {
+const constants11 = {
   CONNECTION_CREATE: 0,
   [0]: "CONNECTION_CREATE",
   CONNECTION_DESTROY: 1,

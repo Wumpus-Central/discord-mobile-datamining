@@ -36,7 +36,7 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(13585).GiftIcon, {
+  obj2.icon = closure_10(onSendGift(13586).GiftIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
   });
@@ -149,7 +149,7 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj2);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(14660);
+const GiftingBadgeConstants = fn(14661);
 ({
   getRemainingGiftsToNextTier: closure_6,
   getTierForProgress: metroImportDefault,

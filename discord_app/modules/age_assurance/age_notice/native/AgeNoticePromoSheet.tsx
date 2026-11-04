@@ -30,7 +30,7 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   const tmp = closure_10();
   const isVerifiedTeen = dismissOnce(6861).useIsVerifiedTeen();
   let obj = dismissOnce(6861);
-  dismissOnce = dismissOnce(16856).useDismissOnce(markAsDismissed.markAsDismissed);
+  dismissOnce = dismissOnce(16868).useDismissOnce(markAsDismissed.markAsDismissed);
   items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -82,8 +82,8 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   const obj5 = { source: null, style: null, resizeMode: "contain" };
-  let obj2 = dismissOnce(16856);
-  obj5.source = tmp14(16857);
+  let obj2 = dismissOnce(16868);
+  obj5.source = tmp14(16869);
   obj5.style = tmp.illustration;
   obj4.illustration = closure_8(tmp14(5851), obj5);
   const intl2 = tmp2(1113).intl;

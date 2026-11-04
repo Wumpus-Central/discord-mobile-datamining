@@ -10,9 +10,9 @@ const result = size.fileFinishedImporting("modules/waterwheels/interest/native/I
 export default function InterestPickerStep(navigation) {
   navigation = navigation.navigation;
   let onComplete = navigation.route.params.onComplete;
-  const tmp3 = onComplete(18666)("InterestPickerStep");
+  const tmp3 = onComplete(18680)("InterestPickerStep");
   dependencyMap = tmp3;
-  const setPicks = navigation(19827).useInterestPickerPicks().setPicks;
+  const setPicks = navigation(19841).useInterestPickerPicks().setPicks;
   jsx = setPicks.useRef(false);
   items = [navigation, onComplete, setPicks];
   onComplete = setPicks.useCallback((arg0, arg1) => {
@@ -37,7 +37,7 @@ export default function InterestPickerStep(navigation) {
   let tmp6 = null;
   if (null != tmp3) {
     let obj2 = { catalog: tmp3, onComplete };
-    tmp6 = jsx(onComplete(19830), { catalog: tmp3, onComplete });
+    tmp6 = jsx(onComplete(19844), { catalog: tmp3, onComplete });
   }
   return tmp6;
 }

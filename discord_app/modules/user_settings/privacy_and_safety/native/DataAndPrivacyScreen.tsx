@@ -18,13 +18,13 @@ export default function DataAndPrivacySettings() {
   stackNavigation = stackNavigation(1499).useStackNavigation();
   closure_129_0 = stackNavigation;
   let obj = stackNavigation(1499);
-  const pinotDataPrivacySections = stackNavigation(18139).usePinotDataPrivacySections();
+  const pinotDataPrivacySections = stackNavigation(18151).usePinotDataPrivacySections();
   let obj3 = { settings: null, subLabel: null };
   items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   obj3.settings = items;
   let intl = stackNavigation(1113).intl;
   let obj4 = { helpdeskArticle: null };
-  let obj2 = stackNavigation(18139);
+  let obj2 = stackNavigation(18151);
   obj4.helpdeskArticle = items1(2190).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj3.subLabel = intl.format(stackNavigation(1113).t["igTSG/"], obj4);
   items1 = [obj3, , ,];
@@ -83,11 +83,11 @@ export default function DataAndPrivacySettings() {
   items1.push(obj20);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(16994).fetchConsents();
-      const obj = stackNavigation(16994);
+      const consents = stackNavigation(17006).fetchConsents();
+      const obj = stackNavigation(17006);
     }
-    const harvestStatus = stackNavigation(16997).fetchHarvestStatus();
-    const obj2 = stackNavigation(16997);
+    const harvestStatus = stackNavigation(17009).fetchHarvestStatus();
+    const obj2 = stackNavigation(17009);
   }, []);
   const items8 = [stackNavigation, items1];
   const obj21 = { children: null };
@@ -132,8 +132,8 @@ export default function DataAndPrivacySettings() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     },
   };
-  obj22.screen = stackNavigation(16952).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(16952), obj22), closure_8(items1(16823), { node: memo })];
+  obj22.screen = stackNavigation(16964).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(16964), obj22), closure_8(items1(16835), { node: memo })];
   obj21.children = items9;
   return closure_10(closure_9, obj21);
 }

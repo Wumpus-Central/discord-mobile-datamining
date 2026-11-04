@@ -41,7 +41,7 @@ export default function ConjureConnectToolSheet(projectId) {
   let connection;
   mint = undefined;
   const tmp = closure_7();
-  const mcpConnectionPanel = connection(12375).useMcpConnectionPanel(projectId.projectId);
+  const mcpConnectionPanel = connection(12376).useMcpConnectionPanel(projectId.projectId);
   connection = mcpConnectionPanel.connection;
   ({ loading, mint } = mcpConnectionPanel);
   items = [connection];
@@ -111,12 +111,12 @@ export default function ConjureConnectToolSheet(projectId) {
     items3[2] = closure_6(View, obj10);
     const obj15 = { variant: "body-xs/normal", color: "text-muted", children: null };
     const intl7 = tmp2(1113).intl;
-    const obj16 = { time: tmp2(12376).formatMcpConnectionExpiry(connection) };
+    const obj16 = { time: tmp2(12377).formatMcpConnectionExpiry(connection) };
     obj15.children = intl7.format(tmp8(3995).EQ8k1i, obj16);
     items3[3] = closure_5(tmp2(5761).Text, obj15);
     obj6.children = items3;
     let tmp7Result = closure_6(View, obj6);
-    const tmp2Result = tmp2(12376);
+    const tmp2Result = tmp2(12377);
   } else {
     tmp7Result = null;
     if (loading) {

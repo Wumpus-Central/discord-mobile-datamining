@@ -21,7 +21,7 @@ import useIsEligibleSenderForReferralProgram from "../referral_program/hooks/use
 import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePromotionMarketingComponent from "../hooks/usePromotionMarketingComponent.tsx";
-import _modDef17119 from "../../../../_runtime/metro/17119__.js";
+import _modDef17131 from "../../../../_runtime/metro/17131__.js";
 import PremiumTabBadgeCopy from "../promotions/PremiumTabBadgeCopy.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -63,7 +63,7 @@ function OfferBadge(componentId) {
   tmp4(obj, { disableTrack: null == componentId });
   if (acked) {
     const obj4 = { style: tmp.acked, children: null };
-    const obj5 = { source: _modDef17119, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+    const obj5 = { source: _modDef17131, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
     items = [React5(native.Icon, obj5)];
     const obj6 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
     const items1 = [,];
@@ -300,7 +300,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
           obj10.style = items4;
           const obj11 = {
-            source: _modDef17119,
+            source: _modDef17131,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: tmp.icon.color,
             style: tmp.icon,

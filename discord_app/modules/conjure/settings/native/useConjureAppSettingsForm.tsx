@@ -23,8 +23,8 @@ function ConjureChannelSettingRow(def) {
   c4 = undefined;
   let found;
   ({ projectId, isPreview, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(12351).useConjureSettingsGuildId(projectId, isPreview);
-  let obj = def(12351);
+  const conjureSettingsGuildId = def(12352).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(12352);
   items = [GuildChannelStore];
   const items1 = [conjureSettingsGuildId];
   const stateFromStores = def(504).useStateFromStores(items, () => {
@@ -45,9 +45,9 @@ function ConjureChannelSettingRow(def) {
       let obj3 = { label: def.label, subLabel: null, arrow: true, disabled: null, trailing: null, onPress: null };
       let tmp6Result;
       if (null != hint) {
-        let obj4 = { variant: "body-xs/medium", color: "text-subtle", children: tmp(12338).conjureLinkedNodes(hint, "body-xs/medium") };
+        let obj4 = { variant: "body-xs/medium", color: "text-subtle", children: tmp(12339).conjureLinkedNodes(hint, "body-xs/medium") };
         tmp6Result = closure_12(tmp(5761).Text, obj4);
-        const tmpResult3 = tmp(12338);
+        const tmpResult3 = tmp(12339);
       }
       obj3.subLabel = tmp6Result;
       obj3.disabled = disabled;
@@ -304,7 +304,7 @@ export default function useConjureAppSettingsForm(projectId) {
                   items[HermesBuiltin.arraySpread(arr, 0)] = value.value;
                   found = items;
                 } else {
-                  found = arr.filter(/* F142263 */ function() { ... });
+                  found = arr.filter(/* F142825 */ function() { ... });
                 }
                 obj[value.key] = found;
                 return obj;

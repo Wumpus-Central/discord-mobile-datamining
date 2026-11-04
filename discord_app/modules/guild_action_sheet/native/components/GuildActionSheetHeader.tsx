@@ -20,7 +20,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(11520).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(11521).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,

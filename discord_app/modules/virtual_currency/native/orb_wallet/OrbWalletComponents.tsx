@@ -17,12 +17,12 @@ import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/g
 import _mod9704 from "../../hooks/index.tsx";
 import QuestUtils from "../../../quests/native/QuestUtils.native.tsx";
 import useIsPremiumSubscriber from "../../../premium/useIsPremiumSubscriber.tsx";
-import _modDef12686 from "../../../../../_runtime/metro/12686__.js";
-import _modDef14930 from "../../../../../_runtime/metro/14930__.js";
+import _modDef12687 from "../../../../../_runtime/metro/12687__.js";
+import _modDef14931 from "../../../../../_runtime/metro/14931__.js";
 import OrbWalletUtils from "OrbWalletUtils.native.tsx";
 import useNitroProgramReward from "../../../rewards/hooks/useNitroProgramReward.tsx";
 import ProgramRewardsActionCreatorsDefault from "../../../rewards/ProgramRewardsActionCreators.tsx";
-import _modDef17147 from "../../../../../discord_assets/assets/orbs/balance_widget_card_asset.png.js";
+import _modDef17159 from "../../../../../discord_assets/assets/orbs/balance_widget_card_asset.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -174,7 +174,7 @@ export function OrbBalanceHeader(orbBalance) {
   const obj = { style: tmp.header, children: null };
   const obj2 = { style: tmp.headerAssetSlot, importantForAccessibility: "no-hide-descendants", children: null };
   const obj3 = { source: null, style: null, resizeMode: "contain" };
-  const obj4 = { uri: _modDef17147 };
+  const obj4 = { uri: _modDef17159 };
   obj3.source = obj4;
   obj3.style = tmp.headerAsset;
   obj2.children = closure_1_10(FastImageDefault, obj3);
@@ -193,7 +193,7 @@ export function OrbBalanceHeader(orbBalance) {
     accessible: true,
     accessibilityLabel: stringResult,
     accessibilityState: { busy: null == orbBalance },
-    children: closure_1_10(tmp10(14720).BalanceCounter, {
+    children: closure_1_10(tmp10(14721).BalanceCounter, {
       value: orbBalance,
       onValueChange: onValueReached,
       onValueReached,
@@ -296,7 +296,7 @@ export function OrbWalletFooter() {
   const obj4 = { text: null, variant: "secondary", size: "md", icon: null, onPress: null };
   const intl = util.intl;
   obj4.text = intl.string(util.t.JALI2K);
-  obj4.icon = _modDef14930;
+  obj4.icon = _modDef14931;
   obj4.onPress = openQuestHomeFromWallet;
   obj3.children = closure_1_10(components_Button_Button.Button, obj4);
   items = [closure_1_10(hasOwnProperty, obj3)];
@@ -304,7 +304,7 @@ export function OrbWalletFooter() {
   const obj6 = { text: null, variant: "secondary", size: "md", icon: null, onPress: null };
   const intl2 = util.intl;
   obj6.text = intl2.string(util.t.pWG4ze);
-  obj6.icon = _modDef12686;
+  obj6.icon = _modDef12687;
   obj6.onPress = openOrbsShopFromWallet;
   obj5.children = closure_1_10(components_Button_Button.Button, obj6);
   items[1] = closure_1_10(hasOwnProperty, obj5);

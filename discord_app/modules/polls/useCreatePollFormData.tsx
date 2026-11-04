@@ -12,7 +12,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 function createPollCreationImageForMedia(mediaURL, status) {
-  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "Array", stickerId: "ao" };
+  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "Array", stickerId: "useEffect" };
   return obj;
 }
 const PollsConstants = fn(8547);
@@ -236,7 +236,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
     const obj = {
       mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL },
       emoji: "Array",
-      stickerId: "ao",
+      stickerId: "useEffect",
     };
     callback2(obj, arg1);
     const obj2 = { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL };
@@ -245,7 +245,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
       first[arg1].localCreationAnswerId,
       arg2,
     );
-    const obj4 = { mediaAttachmentState: null, emoji: "Array", stickerId: "ao" };
+    const obj4 = { mediaAttachmentState: null, emoji: "Array", stickerId: "useEffect" };
     obj4.mediaAttachmentState = {
       status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD,
       mediaURL: objectURL,
@@ -254,7 +254,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
   }, items2);
   const callback6 = obj.useCallback((emoji, arg1) => {
     callback3(id, arg1);
-    callback2({ emoji, stickerId: "Array", mediaAttachmentState: "ao" }, arg1);
+    callback2({ emoji, stickerId: "Array", mediaAttachmentState: "useEffect" }, arg1);
   }, items3);
   const items4 = [answers.length < first1];
   const callback7 = obj.useCallback((arg0) => {

@@ -154,18 +154,18 @@ const jsxProd = fn(21);
 const PX_12 = nativeDefault.space.PX_12;
 const createStyles = fn(5141);
 let obj2 = {
-  container: { gap: fn(13909).TRAIT_OPTION_SPACING },
+  container: { gap: fn(13910).TRAIT_OPTION_SPACING },
   earnedRow: null,
   landscapeGap: null,
   details: null,
   landscapeScrollContent: null,
 };
-let obj3 = { gap: fn(13909).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(13909).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(13909).CONTENT_INSET };
+let obj3 = { gap: fn(13910).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13910).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13910).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(13909).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(13910).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 let closure_13 = createStyles.createStyles(obj2);
 let closure_15 = {
@@ -195,7 +195,7 @@ export default function TraitPicker(customizationOption) {
   const obj2 = customizationOption(504);
   _slicedToArray = customizationOption(5398).useIsScreenReaderEnabled();
   const obj3 = customizationOption(5398);
-  const traitPickerOptions = customizationOption(13913).useTraitPickerOptions({
+  const traitPickerOptions = customizationOption(13914).useTraitPickerOptions({
     customizationOption,
     optionIds,
     savedOptionId,
@@ -222,7 +222,7 @@ export default function TraitPicker(customizationOption) {
     }
     return num;
   });
-  const obj4 = customizationOption(13913);
+  const obj4 = customizationOption(13914);
   const obj5 = { customizationOption, optionIds, savedOptionId, rarityOrder };
   const obj6 = availableTraitOptions;
   [tmp9, tmp10] = availableTraitOptions.useState(tmp7);
@@ -230,8 +230,8 @@ export default function TraitPicker(customizationOption) {
   const obj8 = {
     availableTraitOptions,
     selectedOptionId,
-    onSelectOption: customizationOption(13658).selectCharacterTrait,
-    paused: null,
+    onSelectOption: customizationOption(13659).selectCharacterTrait,
+    isPaused: null,
   };
   let tmp11 = flag;
   if (!flag) {
@@ -241,8 +241,8 @@ export default function TraitPicker(customizationOption) {
     }
     tmp11 = tmp12;
   }
-  obj8.paused = tmp11;
-  const autoSelectTraitOption = customizationOption(13914).useAutoSelectTraitOption(obj8);
+  obj8.isPaused = tmp11;
+  const autoSelectTraitOption = customizationOption(13915).useAutoSelectTraitOption(obj8);
   let diff = earnedCount;
   if (!tmp6) {
     diff = earnedCount - tmp9;
@@ -269,7 +269,7 @@ export default function TraitPicker(customizationOption) {
       disableSwitching: isCurrentTraitBlocked,
       disabled: flag,
     };
-    let tmp16Result = closure_9(tmp3(13915).FinalizeTraitTabs, obj9);
+    let tmp16Result = closure_9(tmp3(13916).FinalizeTraitTabs, obj9);
     let tmp19 = closure_9;
   } else {
     const obj10 = { customizationOption, earnedCount: diff, totalCount: traitPickerOptions.totalCount };
@@ -295,14 +295,14 @@ export default function TraitPicker(customizationOption) {
     onSelectOption: null,
   };
   let num2 = 0;
-  const obj7 = customizationOption(13914);
+  const obj7 = customizationOption(13915);
   if (!tmp6) {
     num2 = tmp7;
   }
   obj12.introStartIndex = num2;
   obj12.onIntroStep = tmp10;
   obj12.onSelectOption = onSelectOption;
-  obj11.optionList = tmp19(tmp(13909), obj12, customizationOption);
+  obj11.optionList = tmp19(tmp(13910), obj12, customizationOption);
   obj11.selectedAsset = memo;
   if (!tmp6) {
     tmp6 = 0 === tmp7;

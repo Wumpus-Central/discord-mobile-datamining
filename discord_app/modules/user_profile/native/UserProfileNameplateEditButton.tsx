@@ -62,7 +62,7 @@ export default function UserProfileNameplateEditButton(user) {
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchNameplate = user(16742).useFetchNameplate(skuId);
+  const fetchNameplate = user(16754).useFetchNameplate(skuId);
   ({ nameplateProduct, nameplateData, nameplateRecord, isFetching } = fetchNameplate);
   if (null != guildId) {
     let nameplate3;
@@ -99,7 +99,7 @@ export default function UserProfileNameplateEditButton(user) {
     obj4.buttonText = intl5.string(tmp3(1113).t.MKDeyL);
     obj4.onPress = NOOP;
     obj4.leading = <closure_4 animating size="large" />;
-    return jsx(tmp3(16713).UserProfileEditFormButton, {
+    return jsx(tmp3(16725).UserProfileEditFormButton, {
       label: null,
       buttonText: null,
       onPress: null,
@@ -142,11 +142,11 @@ export default function UserProfileNameplateEditButton(user) {
           let tmp15Result = <closure_5 style={tmp.previewContainer}>{null}</closure_5>;
         }
         obj6.leading = tmp15Result;
-        return jsx(tmp3(16713).UserProfileEditFormButton, obj6);
+        return jsx(tmp3(16725).UserProfileEditFormButton, obj6);
       }
     }
-    const obj10 = { source: guildId(15300), style: tmp.noneIcon };
-    tmp15Result = jsx(tmp3(1187).Icon, { source: guildId(15300), style: tmp.noneIcon });
+    const obj10 = { source: guildId(15301), style: tmp.noneIcon };
+    tmp15Result = jsx(tmp3(1187).Icon, { source: guildId(15301), style: tmp.noneIcon });
   }
-  const tmp3Result = user(16742);
+  const tmp3Result = user(16754);
 }

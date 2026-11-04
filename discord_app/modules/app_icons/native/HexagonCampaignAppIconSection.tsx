@@ -86,13 +86,13 @@ export default function HexagonCampaignAppIconSection(isPending) {
     "HexagonCampaignAppIconSection",
   );
   const obj = onSelect(5169);
-  const trackHexagonCampaignContentViewed = onSelect(16699).useTrackHexagonCampaignContentViewed(
+  const trackHexagonCampaignContentViewed = onSelect(16711).useTrackHexagonCampaignContentViewed(
     onSelect(6919).QuestContent.APP_ICON_SETTINGS,
-    onSelect(16699).HexagonCampaignContentSurface.APP_ICON_PICKER,
+    onSelect(16711).HexagonCampaignContentSurface.APP_ICON_PICKER,
     true,
   );
   const tmp7 = isPending.currentAppIcon === onSelect(10160).LimitedTimeAppIconIds.HEXAGON;
-  const obj2 = onSelect(16699);
+  const obj2 = onSelect(16711);
   const radioA11yNative = onSelect(5208).useRadioA11yNative({ selected: tmp7, busy: flag });
   const intl = onSelect(1113).intl;
   const stringResult = intl.string(_modDef4412.JC4Pii);
@@ -112,7 +112,7 @@ export default function HexagonCampaignAppIconSection(isPending) {
   items[1] = tmp14Result;
   obj6.children = items;
   const items1 = [closure_10(closure_4, obj6)];
-  const obj9 = { theme: onSelect(16715).ThemeTypes.DARK, children: null };
+  const obj9 = { theme: onSelect(16727).ThemeTypes.DARK, children: null };
   const obj10 = {
     onPress() {
       return onSelect(AppIconTypes.LimitedTimeAppIconIds.HEXAGON);
@@ -158,7 +158,7 @@ export default function HexagonCampaignAppIconSection(isPending) {
           variant: "body-xs/medium",
           color: "text-link",
           accessibilityRole: "link",
-          onPress: onSelect(16718).openHexagonCampaignLearnMore,
+          onPress: onSelect(16730).openHexagonCampaignLearnMore,
           children,
         },
         arg1,

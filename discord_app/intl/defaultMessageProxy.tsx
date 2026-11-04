@@ -1,5 +1,5 @@
 // discord_app/intl/defaultMessageProxy.tsx
-import _modDef16248 from "messages/untranslated.messages.js";
+import _modDef16261 from "messages/untranslated.messages.js";
 import "module_1152";
 import "module_1116";
 import 01152__ from "../../_runtime/metro/01152__.js";
@@ -8,4 +8,4 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("intl/defaultMessageProxy.tsx");
 
-export const _defaultMessages = module_1152.chainMessagesObjects(messagesProxy, module_1152.chainMessagesObjects(messagesProxy, _modDef16248));
+export const _defaultMessages = module_1152.chainMessagesObjects(messagesProxy, module_1152.chainMessagesObjects(messagesProxy, _modDef16261));

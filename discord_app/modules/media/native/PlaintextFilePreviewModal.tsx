@@ -172,5 +172,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[constants.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return jsx(url(11670).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+  return jsx(url(11671).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
 }

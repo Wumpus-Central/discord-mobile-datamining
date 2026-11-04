@@ -65,23 +65,23 @@ function AccountSectionHeading(children) {
 function YouStatusRadioGroup() {
   const memo = noop.useMemo(() => {
     const obj = {
-      icon: closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16228), variant: "text-status-online" }),
+      icon: closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16241), variant: "text-status-online" }),
       value: constants.ONLINE,
     };
     items = [obj, , ,];
     const obj3 = { icon: null, value: null };
-    const obj2 = { source: closure_1(16228), variant: "text-status-online" };
-    obj3.icon = closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16225), variant: "text-status-idle" });
+    const obj2 = { source: closure_1(16241), variant: "text-status-online" };
+    obj3.icon = closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16238), variant: "text-status-idle" });
     obj3.value = constants.IDLE;
     items[1] = obj3;
     const obj5 = { icon: null, value: null };
-    const obj4 = { source: closure_1(16225), variant: "text-status-idle" };
-    obj5.icon = closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16226), variant: "text-status-dnd" });
+    const obj4 = { source: closure_1(16238), variant: "text-status-idle" };
+    obj5.icon = closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16239), variant: "text-status-dnd" });
     obj5.value = constants.DND;
     items[2] = obj5;
     const obj7 = { icon: null, value: null };
-    const obj6 = { source: closure_1(16226), variant: "text-status-dnd" };
-    obj7.icon = closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16227), variant: "text-status-offline" });
+    const obj6 = { source: closure_1(16239), variant: "text-status-dnd" };
+    obj7.icon = closure_1_19(setting(7124).TableRowIcon, { source: closure_1(16240), variant: "text-status-offline" });
     obj7.value = constants.INVISIBLE;
     items[3] = obj7;
     return items;
@@ -213,9 +213,9 @@ function YouAccountRadioGroup() {
   items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(18235).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(18249).useMultiAccountUsers().multiAccountUsers;
   closure_129_0 = multiAccountUsers;
-  let obj2 = stateFromStores(18235);
+  let obj2 = stateFromStores(18249);
   const items1 = [StreamerModeStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(
     items1,
@@ -245,12 +245,8 @@ function YouAccountRadioGroup() {
           subLabel: combined,
           icon: null,
         };
-        const obj2 = multiAccountUsers(5195);
-        obj3.icon = closure_2_19(stateFromStores(1187).Avatar, {
-          user: obj,
-          guildId: "Array",
-          size: stateFromStores(1187).AvatarSizes.REFRESH_MEDIUM_32,
-        });
+        const obj4 = { user: obj, guildId: "Array", size: stateFromStores(1187).AvatarSizes.REFRESH_MEDIUM_32 };
+        obj3.icon = closure_2_19(stateFromStores(1187).Avatar, obj4);
         return obj3;
       }),
     items2,
@@ -270,7 +266,7 @@ function YouAccountRadioGroup() {
     let obj5 = { style: tmp.manage, children: null };
     const obj6 = {
       onPress() {
-        return multiAccountUsers(18703)();
+        return multiAccountUsers(18717)();
       },
       children: null,
     };
@@ -331,7 +327,7 @@ function FocusModeSetting() {
             const obj = closure_1_0(11199);
             closure_1_1(5382).hideActionSheet();
             const obj2 = closure_1_1(5382);
-            const result = closure_1_0(18698).showYouAccountActionSheet();
+            const result = closure_1_0(18712).showYouAccountActionSheet();
           },
         };
         require("ActionSheetActionCreators").openLazy(
@@ -513,11 +509,11 @@ function CustomStatus() {
   return expandedHeight(TableRowGroup.TableRowGroup, { hasIcons: false, children: dependencyMap(Card.Card, obj4) });
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(14194).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(14195).MultiAccountTokenStatus;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AuthStates: closure_14, StatusTypes: closure_15, ThemeTypes: closure_16 } = Constants);
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
-let closure_18 = fn(14195).MultiAccountSwitchLocation;
+let closure_18 = fn(14196).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
 const createStyles = fn(5141);

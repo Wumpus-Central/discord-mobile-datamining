@@ -248,8 +248,8 @@ function TypingIndicatorInner(channel) {
       tmp39 = callback;
     }
     obj7.onPress = tmp39;
-    let tmp33Result = closure_12(tmp5(13962), obj7);
-    const tmp5Result2 = tmp5(13962);
+    let tmp33Result = closure_12(tmp5(13963), obj7);
+    const tmp5Result2 = tmp5(13963);
   } else {
     let tmp32Result3 = null;
     if (null != tmp6Result) {
@@ -276,7 +276,7 @@ function TypingIndicatorInner(channel) {
   let tmp32Result4 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj10 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
-    tmp32Result4 = closure_12(tmp5(13966), obj10);
+    tmp32Result4 = closure_12(tmp5(13967), obj10);
   }
   items15[1] = tmp32Result4;
   obj5.children = items15;

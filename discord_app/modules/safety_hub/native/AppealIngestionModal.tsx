@@ -83,7 +83,7 @@ export default function AppealIngestionModal(classificationId) {
         headerTitle() {
           return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
             variant: "body-md/normal",
-            children: "ao",
+            children: "ti",
           });
         },
         render() {
@@ -104,7 +104,7 @@ export default function AppealIngestionModal(classificationId) {
       obj4.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "body-md/normal",
-          children: "ao",
+          children: "ti",
         });
       };
       obj4.render = function render() {
@@ -124,7 +124,7 @@ export default function AppealIngestionModal(classificationId) {
       obj6.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "body-md/normal",
-          children: "ao",
+          children: "ti",
         });
       };
       obj6.render = function render() {
@@ -144,7 +144,7 @@ export default function AppealIngestionModal(classificationId) {
       obj8.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "body-md/normal",
-          children: "ao",
+          children: "ti",
         });
       };
       obj8.render = function render() {
@@ -164,7 +164,7 @@ export default function AppealIngestionModal(classificationId) {
       obj10.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "body-md/normal",
-          children: "ao",
+          children: "ti",
         });
       };
       obj10.render = function render() {
@@ -184,7 +184,7 @@ export default function AppealIngestionModal(classificationId) {
       obj12.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "body-md/normal",
-          children: "ao",
+          children: "ti",
         });
       };
       obj12.render = function render() {
@@ -352,7 +352,7 @@ export function AppealIngestionModalScreen(children) {
                 v2 = 2;
                 c5 = 1;
                 const obj6 = {
-                  value: tmp27(13534).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                  value: tmp27(13535).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                   done: false,
                 };
                 return obj6;

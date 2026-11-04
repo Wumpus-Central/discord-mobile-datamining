@@ -197,14 +197,14 @@ function ReplyMessageContent(message) {
   return tmp9;
 }
 const View = fn(17).View;
-const ITEM_PADDING = fn(18823).ITEM_PADDING;
+const ITEM_PADDING = fn(18837).ITEM_PADDING;
 const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_8 = nativeDefault.space.PX_8;
-const createICYMIStyles = fn(18783);
+const createICYMIStyles = fn(18797);
 const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = {
     pressable: { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 },
@@ -447,8 +447,8 @@ let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.ts
 export default function MessageRowWrapper(arg0) {
   let gravityMessage;
   ({ message, messageContext, visible } = arg0);
-  gravityMessage = gravityMessage(18814).useGravityMessage(message);
-  const obj = gravityMessage(18814);
+  gravityMessage = gravityMessage(18828).useGravityMessage(message);
+  const obj = gravityMessage(18828);
   items = [ChannelStore];
   const stateFromStores = gravityMessage(504).useStateFromStores(items, () =>
     ChannelStore.getChannel(gravityMessage.getChannelId()),

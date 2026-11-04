@@ -16,7 +16,7 @@ import VoicePanelStore from "../../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11410).VoicePanelModes;
+const VoicePanelModes = fn(11411).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
 const createStyles = fn(5141);
@@ -152,9 +152,9 @@ export default function DisconnectCancelButton(props) {
     }
   }, items4);
   if (first === constants.ACTIVITY) {
-    PhoneHangUpIcon = tmp8(12080).DoorExitIcon;
+    PhoneHangUpIcon = tmp8(12081).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(19583).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(19597).ScreenXIcon;
   } else {
     PhoneHangUpIcon = tmp8(10014).PhoneHangUpIcon;
   }

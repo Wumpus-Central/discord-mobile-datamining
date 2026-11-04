@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(18598).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(18612).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
@@ -38,7 +38,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(18610);
+  let obj = restrictedGuild(18624);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -75,7 +75,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18610).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18624).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -85,10 +85,10 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     cutouts: items,
     overState: "a",
     externalChildren: "flexDirection",
-    expandedChildren: "count",
+    expandedChildren: "create",
     children: 263,
   };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(18610).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(18624).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
@@ -121,7 +121,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18610).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18624).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -131,7 +131,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     cutouts: items,
     overState: "a",
     externalChildren: "flexDirection",
-    expandedChildren: "count",
+    expandedChildren: "create",
     children: 263,
   });
 });

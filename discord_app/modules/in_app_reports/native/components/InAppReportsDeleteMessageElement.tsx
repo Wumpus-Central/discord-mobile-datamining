@@ -58,7 +58,7 @@ export default function DeleteMessageElement(message) {
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
   obj2.icon = jsx(message(5872).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(15395), {
+  return jsx(reportId(15396), {
     title: null,
     disabledTitle: null,
     description: null,

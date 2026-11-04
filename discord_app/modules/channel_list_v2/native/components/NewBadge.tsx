@@ -17,7 +17,7 @@ let closure_5 = createStyles.createStyles((arg0, arg1) => {
   if (obj.isIOS()) {
     num = 1;
   }
-  const obj2 = { text: { textAlign: "center", textTransform: "uppercase", marginTop: num }, base: null };
+  const obj2 = { text: { textAlign: "center", marginTop: num }, base: null };
   const obj3 = {
     flexDirection: "row",
     alignItems: "center",
@@ -55,7 +55,8 @@ export default function NewBadge() {
   }
   obj2.color = str;
   const intl = util.intl;
-  obj2.children = intl.string(util.t.y2b7CA);
+  obj3 = shared;
+  obj2.children = intl.string(util.t.y2b7CA).toLocaleUpperCase(util.intl.currentLocale);
   obj.children = jsx(Text_Text.Text, { variant: "footnote/semibold", style: tmp4.text, color: null, children: null });
   return <View style={tmp4.base}>{null}</View>;
 }

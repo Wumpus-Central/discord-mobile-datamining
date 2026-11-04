@@ -5,16 +5,16 @@ import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
-import _modDef10772 from "../../../../_runtime/metro/10772__.js";
 import _modDef10773 from "../../../../_runtime/metro/10773__.js";
-import _modDef15283 from "../../../../_runtime/metro/15283__.js";
+import _modDef10774 from "../../../../_runtime/metro/10774__.js";
+import _modDef15284 from "../../../../_runtime/metro/15284__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef15283 };
+  const obj2 = { source: _modDef15284 };
   items = [React6(FastImageDefault, obj2)];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = {
@@ -100,9 +100,9 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
       const tmp10 = FastImageDefault;
       let obj3 = dependencyMap;
       if (obj2.isThemeDark(closure_3)) {
-        let tmp8Result = _modDef10772;
+        let tmp8Result = _modDef10773;
       } else {
-        tmp8Result = _modDef10773;
+        tmp8Result = _modDef10774;
       }
       obj3 = { source: tmp8Result };
       React6(tmp10, obj3);
@@ -161,7 +161,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   const items2 = [tmp12Result];
   const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
   let obj = skuId(7901);
-  obj5.children = tmp15(skuId(14727).CircleQuestionIcon, {
+  obj5.children = tmp15(skuId(14728).CircleQuestionIcon, {
     style: tmp.questionIcon,
     color: consumed(575).colors.WHITE,
   });

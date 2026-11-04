@@ -863,7 +863,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     originChannelId: null,
     ownerId: null,
     parent_id: null,
-    parentChannelThreadType: "filter",
+    parentChannelThreadType: "find",
     permissionOverwrites_: true,
     position_: true,
     rateLimitPerUser_: true,

@@ -53,7 +53,7 @@ function NameplateUser(arg0) {
       avatarDecoration,
       animate: !stateFromStores,
       autoStatusCutout: null,
-      "aria-hidden": "\u26F9\uFE0F\u200D\u2642\uFE0F",
+      "aria-hidden": "\u{1F9D1}\u200D\u{1F527}",
     };
     return timestampProducer(native.Avatar, obj);
   }, items1);

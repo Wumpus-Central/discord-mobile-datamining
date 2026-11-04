@@ -84,7 +84,7 @@ let closure_26 = async function _joinGuild(arg0) {
           closure_131_11 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

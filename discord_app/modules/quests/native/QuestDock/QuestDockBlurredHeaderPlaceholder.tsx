@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import thumbHashToRGBA from "../../../../../_runtime/17401_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/17413_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestDockMode = fn(6916).QuestDockMode;
-const QuestDockConstants = fn(17307);
+const QuestDockConstants = fn(17319);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);

@@ -61,8 +61,8 @@ function HistoryDayGroups(renderItem) {
   renderItem = renderItem.renderItem;
   ({ items, getMs, nowMs } = renderItem);
   let obj = { spacing: 16, children: null };
-  const obj2 = renderItem(12382);
-  obj.children = renderItem(12382).groupHistoryByDay(items, getMs, nowMs).map((label) => {
+  const obj2 = renderItem(12383);
+  obj.children = renderItem(12383).groupHistoryByDay(items, getMs, nowMs).map((label) => {
     label = label.label;
     const obj = { title: label, hasIcons: false, children: null };
     items = label.items;
@@ -395,14 +395,14 @@ export default function ConjureHistorySheet(projectId) {
   let onSaveBackup;
   const tmp3 = onSaveBackup(onRestoreVersion(1627)().bottom + onRestoreVersion(575).space.PX_16);
   [tmp5, tmp6] = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
-  const tmp7 = onRestoreVersion(12392)(projectId, projectId.installScope);
+  const tmp7 = onRestoreVersion(12393)(projectId, projectId.installScope);
   ({ sharedDatabase: c2, versions, databases, refreshAllBackups } = tmp7);
   versionTitles = tmp7.versionTitles;
   ({ previewBackups, previewBackupsLoading } = tmp7);
   const tmp4 = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
   conjureDatabaseBusy = require("conjureDatabaseLock").useConjureDatabaseBusy(projectId);
   let obj = require("conjureDatabaseLock");
-  const tmp10 = onRestoreVersion(12328)(projectId);
+  const tmp10 = onRestoreVersion(12329)(projectId);
   [tmp12, c6] = versionTitles(conjureDatabaseBusy.useState(false), 2);
   const refresh = versions.refresh;
   _require = refreshAllBackups(function*(arg0, arg1) {
@@ -523,7 +523,7 @@ export default function ConjureHistorySheet(projectId) {
               closure_128_0 = undefined;
               c2 = 1;
               v3 = 1;
-              const obj6 = { value: tmp2(12383).runConjureDataRewind(tmp2, tmp2), done: false };
+              const obj6 = { value: tmp2(12384).runConjureDataRewind(tmp2, tmp2), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -609,7 +609,7 @@ export default function ConjureHistorySheet(projectId) {
         [obj2.minimumDate, obj2.maximumDate] = items;
         obj3.onSubmit = (arg0) => {
           const bound = Math.min(closure_1_1, Math.max(closure_1_0, arg0.valueOf()));
-          closure_1_8(bound, bound, /* F138382 */ function() { ... });
+          closure_1_8(bound, bound, /* F138920 */ function() { ... });
         };
         obj.openLazy(closure_0(paths[26])(paths[25], paths.paths), "ConjureHistoryRewindTime", obj3, "stack");
       }, 0);
@@ -619,7 +619,7 @@ export default function ConjureHistorySheet(projectId) {
   const items4 = [projectId, refreshAllBackups];
   onSaveBackup = conjureDatabaseBusy.useCallback((environment) => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(12394, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
+    return obj.openLazy(asyncRequireImpl(12395, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
   }, items4);
   let obj2 = { scrollable: true, startExpanded: true, header: null, children: null };
   let obj3 = { children: null };
@@ -645,12 +645,12 @@ export default function ConjureHistorySheet(projectId) {
     let tmp16Result = tmp15(VersionsPanel, obj6);
   } else if ("publishes" === tmp5) {
     let obj7 = { projectId };
-    tmp16Result = tmp15(tmp(12395), obj7, projectId);
+    tmp16Result = tmp15(tmp(12396), obj7, projectId);
   } else {
     let obj8 = { children: null };
     const obj9 = { variant: "body-sm/normal", color: "text-muted", children: null };
     let intl2 = tmp8(1113).intl;
-    const obj10 = { days: tmp8(12393).RESTORE_WINDOW_DAYS };
+    const obj10 = { days: tmp8(12394).RESTORE_WINDOW_DAYS };
     obj9.children = intl2.formatToPlainString(tmp(3995).ptsHZu, obj10);
     const items6 = [tmp15(tmp8(5761).Text, obj9), databases.map((database) => metroImportDefault(DatabaseSection, { database, sharedDatabase, versionTitles, busy: conjureDatabaseBusy, onRestoreBackup, onRewindToTime, onSaveBackup }, database.environment))];
     obj8.children = items6;

@@ -9,7 +9,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11822).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let closure_6 = fn(11823).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const createStyles = fn(5141);
@@ -26,15 +26,15 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   const tmp = closure_9();
   dependencyMap = tmp;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(11820).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(11821).useGroupDMNitroAudience();
   noop = tmp6;
   const obj3 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
   let obj = noop;
-  const obj2 = channelId(11820);
-  obj3.acquisitionStrategy = channelId(11820).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = _location(11827)(obj3);
+  const obj2 = channelId(11821);
+  obj3.acquisitionStrategy = channelId(11821).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp7Result = _location(11828)(obj3);
   closure_5 = tmp7Result;
-  let tmp7 = _location(11827);
+  let tmp7 = _location(11828);
   channelId(7709);
   if (obj4.useConfig({ location: _location }).enabled) {
     if ("staff" !== groupDMNitroAudience) {
@@ -96,7 +96,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       obj.buttonShiny = !closure_4;
       obj.onButtonPress = function onButtonPress() {
         if (closure_1_4) {
-          _location(11819)(channelId, closure_1_1);
+          _location(11820)(channelId, closure_1_1);
         } else {
           closure_1_5();
         }
@@ -112,5 +112,5 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       </closure_5>
     );
   }
-  obj4 = _location(11823);
+  obj4 = _location(11824);
 }

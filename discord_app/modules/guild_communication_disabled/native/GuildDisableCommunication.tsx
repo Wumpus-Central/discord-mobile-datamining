@@ -122,7 +122,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(13490);
+            const obj4 = tmp4(13491);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = {

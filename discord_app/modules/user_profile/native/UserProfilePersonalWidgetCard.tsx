@@ -279,7 +279,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   let tmp6;
   if (flag) {
     let obj2 = { widget };
-    items = [closure_9(tmp3(12560), obj2, "edit-options")];
+    items = [closure_9(tmp3(12561), obj2, "edit-options")];
     tmp6 = items;
   }
   obj.actionButtons = tmp6;
@@ -306,7 +306,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp2Result;
   obj3.children = items1;
   obj.children = closure_10(closure_7, obj3);
-  return closure_9(disableInteraction(15181), obj);
+  return closure_9(disableInteraction(15182), obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);

@@ -135,7 +135,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
   orderRequired = orderRequired.orderRequired;
   _require = orderRequired;
   ({ skuIds, paymentGateway } = orderRequired);
-  const isGift = orderRequired.isGift;
+  let isGift = orderRequired.isGift;
   const onOrderCreated = orderRequired.onOrderCreated;
   const activeSubscription = orderRequired.activeSubscription;
   const defaultPlans = orderRequired.defaultPlans;
@@ -182,29 +182,89 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     };
   }, []);
   onOrderCreated(function* (arg0) {
-    const obj5 = {
-      orderLineItems: closure_129_0,
-      paymentGateway,
-      isGift,
-      subscriptionFacet: closure_129_1,
-      externalGatewayFacet,
-      countryCode: null,
-    };
-    if (country != null) {
-      country = country.country;
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === v2) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            isGift = tmp5;
+            paymentGateway = tmp2;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            ({ orderLineItems: closure_129_0, subscriptionFacet: closure_129_1 } = closure_0);
+            closure_129_2 = undefined;
+            v2 = 1;
+            c4 = 1;
+            return { value: "flexDirection", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            let country;
+            const obj5 = {
+              orderLineItems: closure_129_0,
+              paymentGateway,
+              isGift,
+              subscriptionFacet: closure_129_1,
+              externalGatewayFacet,
+              countryCode: null,
+            };
+            if (country != null) {
+              country = country.country;
+            }
+            obj5.countryCode = country;
+            v2 = 2;
+            c4 = 1;
+            const obj7 = { value: closure_0(isGift[13]).createOrder(obj5), done: false };
+            return obj7;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_129_2 = value;
+          _undefined(closure_129_2);
+          if (null != v2) {
+            v2(closure_129_2);
+          }
+          closure_1_10(false);
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp23) {
+        c4 = tmp;
+        throw tmp23;
+      }
     }
-    obj5.countryCode = country;
-    yield closure_0(isGift[13]).createOrder(obj5);
-    closure_129_2 = value;
-    _undefined(closure_129_2);
-    if (null != v2) {
-      v2(closure_129_2);
-    }
-    closure_1_10(false);
-    yield "HermesInternal";
-    paymentGateway = tmp2;
-    ({ orderLineItems: closure_129_0, subscriptionFacet: closure_129_1 } = closure_0);
-    return "flexDirection";
   });
   items = [paymentGateway, onOrderCreated, isGift, mobileStoreFront, initialExternalGatewayFacet];
   callback = obj.useCallback(function () {
@@ -335,7 +395,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
       analyticsInitialStep: null,
       children: null,
     };
-    const obj4 = { skuIds, isGift, activeSubscription, referralTrialOfferId: null };
+    let obj4 = { skuIds, isGift, activeSubscription, referralTrialOfferId: null };
     obj3.checkoutInitParameters = obj4;
     obj3.order = tmp3;
     obj3.paymentGateway = paymentGateway;

@@ -49,7 +49,7 @@ export default function ConjurePublishScheduleSection(projectId) {
         obj5.children = intl3.string(tmp(3995).ubcNP7);
         const items1 = [closure_3(tmp7(5761).Text, obj5)];
         const obj6 = { spacing: tmp(575).space.PX_8, children: null };
-        const result = tmp7(12362).publishScheduleDetails(tmp3.saved);
+        const result = tmp7(12363).publishScheduleDetails(tmp3.saved);
         const items2 = [
           result.map((children, index) =>
             closure_1_3(projectId(dependencyMap[5]).Text, { variant: "body-sm/normal", children }, index),
@@ -82,7 +82,7 @@ export default function ConjurePublishScheduleSection(projectId) {
         items1[1] = closure_4(tmp7(6162).Stack, obj6);
         obj4.children = items1;
         tmp6Result = closure_4(closure_5, obj4);
-        const tmp7Result = tmp7(12362);
+        const tmp7Result = tmp7(12363);
       }
     }
     items[2] = tmp6Result;

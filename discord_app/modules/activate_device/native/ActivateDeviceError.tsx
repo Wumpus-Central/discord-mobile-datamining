@@ -3,7 +3,7 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef14845 from "../../../../_runtime/metro/14845__.js";
+import _modDef14846 from "../../../../_runtime/metro/14846__.js";
 import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -20,7 +20,7 @@ export function ActivateDeviceError(onRetry) {
   const obj = { children: null };
   const obj2 = { source: null, style: null };
   const tmp = closure_7();
-  obj2.source = _modDef14845;
+  obj2.source = _modDef14846;
   obj2.style = tmp.image;
   items = [React4(FastImageDefault, obj2), ,];
   const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };

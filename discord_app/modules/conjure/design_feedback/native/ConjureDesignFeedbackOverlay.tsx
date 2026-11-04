@@ -90,7 +90,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(5382).hideActionSheet(projectId(12458).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        size(5382).hideActionSheet(projectId(12459).CONJURE_DESIGN_REMARK_SHEET_KEY);
         const obj = size(5382);
       }
     };

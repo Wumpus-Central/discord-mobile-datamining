@@ -28,23 +28,23 @@ let obj2 = {};
 let size = {
   x: "Array",
   y: "Path",
-  width: "dispatch",
-  height: "t",
+  width: "children",
+  height: "guildId",
   screenOrientation: fn(9044).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: true,
-  isInitialized: true,
-  isVisible: true,
+  hasUserInteractedSinceOrientationChange: "<string:3264175145>",
+  isInitialized: "<string:1070344437>",
+  isVisible: "2QmKZ2",
 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
   y: "Path",
-  width: "dispatch",
-  height: "t",
+  width: "children",
+  height: "guildId",
   screenOrientation: fn(9044).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: true,
-  isInitialized: true,
-  isVisible: true,
+  hasUserInteractedSinceOrientationChange: "<string:3264175145>",
+  isInitialized: "<string:1070344437>",
+  isVisible: "2QmKZ2",
 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;

@@ -184,9 +184,9 @@ function PreviewItem(overState) {
           id: -1,
           parentId: "flexDirection",
           name: "Array",
-          color: "ao",
-          expanded: "Boolean",
-          children: "isArray",
+          color: "ti",
+          expanded: false,
+          children: false,
         };
         items = [tmp2];
         element.children = items;
@@ -398,7 +398,7 @@ function AnimatedItemPreview(cleanUp) {
     };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(18609), obj5);
+    let tmp22Result = tmp22(tmp4(18623), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
@@ -406,14 +406,14 @@ function AnimatedItemPreview(cleanUp) {
       tmp25 = transitionState === tmp2(5207).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(18630), obj6);
-    const tmp4Result = tmp4(18630);
+    tmp22Result = tmp22(tmp4(18644), obj6);
+    const tmp4Result = tmp4(18644);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1652.View, obj4);
 }
 let GuildsNodeType = fn(6907).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(18598).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(18612).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
 let createStyles = fn(5141);
 let closure_8 = createStyles.createStyles({
@@ -505,10 +505,10 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "safety-tools-button",
-            scrollPosition: "heading-md/semibold",
-            dragRegion: "mobile-text-heading-primary",
-            windowSize: 1,
+            gestureState: "CONJURE_CHAT_PUBLISH_NOTICE",
+            scrollPosition: null,
+            dragRegion: null,
+            windowSize: null,
             dropComplete: null,
             listInsets: null,
           };

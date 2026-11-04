@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsCategoryServersScreen.tsx
 import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
-import SettingLayoutDefault from "../../../../settings/native/renderer/SettingLayout.tsx";
 import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilders.tsx";
+import EffectiveNotifSettingsLayoutDefault from "../EffectiveNotifSettingsLayout.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -19,5 +19,5 @@ export default noop.memo(function RedesignSettingsCategoryServersScreen() {
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);
-  return jsx(SettingLayoutDefault, { node });
+  return jsx(EffectiveNotifSettingsLayoutDefault, { node });
 });

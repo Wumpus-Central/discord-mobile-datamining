@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const ContentDismissActionType = fn(4987).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12581).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12582).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5141);
@@ -198,11 +198,11 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(11689).AppLauncherBottomSheetExpandReason.KEYBOARD;
+          let current = trackWithMetadata(11690).AppLauncherBottomSheetExpandReason.KEYBOARD;
         } else if (arg2 === trackWithMetadata(5400).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(11689).AppLauncherBottomSheetExpandReason.GESTURE;
+          current = trackWithMetadata(11690).AppLauncherBottomSheetExpandReason.GESTURE;
         } else if (arg2 !== trackWithMetadata(5400).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(11689).AppLauncherBottomSheetExpandReason.OTHER;
+          current = trackWithMetadata(11690).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
@@ -282,7 +282,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   obj8.backdropComponent = callback2;
   let tmp29 = onboardingNavigatorContent;
   if (!onboardingNavigatorContent) {
-    tmp29 = entrypoint === tmp(11690).AppLauncherEntrypoint.VOICE;
+    tmp29 = entrypoint === tmp(11691).AppLauncherEntrypoint.VOICE;
   }
   obj8.disableHeaderRoundingAnimation = tmp29;
   let onboardingRoundingView = onboardingNavigatorContent;

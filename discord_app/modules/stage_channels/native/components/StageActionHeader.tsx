@@ -15,9 +15,9 @@ import instant_invite_InstantInviteUtils from "../../../instant_invite/native/In
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef12209 from "../../../../../_runtime/metro/12209__.js";
 import _modDef12210 from "../../../../../_runtime/metro/12210__.js";
 import _modDef12211 from "../../../../../_runtime/metro/12211__.js";
+import _modDef12212 from "../../../../../_runtime/metro/12212__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -407,7 +407,7 @@ export function HideChannelCallButton(channel) {
     children: null,
   };
   let obj = channel(504);
-  obj2.source = _modDef12209;
+  obj2.source = _modDef12210;
   const intl = channel(1113).intl;
   obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
   obj2.onPress = function handleClose() {

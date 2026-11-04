@@ -62,7 +62,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
           let product;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "flexDirection", done: null };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -227,7 +227,7 @@ let closure_6 = fn(7868).isUnknownCollectiblesItemRecord;
 const Constants = fn(1072);
 ({ COLLECTIBLES_APPLICATION_ID: metroImportDefault, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1387).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11561).default);
+const merged = Object.assign(fn(11562).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

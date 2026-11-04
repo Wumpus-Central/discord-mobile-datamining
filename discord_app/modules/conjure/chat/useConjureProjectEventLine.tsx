@@ -108,17 +108,17 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
     }
     return formatResult2;
   } else if ("app_channel_deleted" === type) {
-    let str2 = actor_user_id.channel_name;
-    if (str2 == null) {
-      str2 = "";
+    let str3 = actor_user_id.channel_name;
+    if (str3 == null) {
+      str3 = "";
     }
     if (null == tmp9) {
       const intl5 = tmp2(tmp3[7]).intl;
-      const obj11 = { channel: str2, server: stateFromStores1 };
+      const obj11 = { channel: str3, server: stateFromStores1 };
       let formatResult3 = intl5.format(tmp6(tmp3[8])["4VQfid"], obj11);
     } else {
       const intl4 = tmp2(tmp3[7]).intl;
-      const obj12 = { channel: str2, server: stateFromStores1 };
+      const obj12 = { channel: str3, server: stateFromStores1 };
       const merged3 = Object.assign(tmp9);
       formatResult3 = intl4.format(tmp6(tmp3[8]).RlMIJN, obj12);
     }
@@ -130,6 +130,8 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
   } else if ("voice_channel_pin" === type) {
     const intl2 = tmp2(tmp3[7]).intl;
     return intl2.string(tmp6(tmp3[8]).UGAfl9);
+  } else {
+    return "staff_notice" === type ? actor_user_id.message : undefined;
   }
   const obj3 = require("initialize");
 }

@@ -6,7 +6,7 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14540).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14541).HubEmailConnectionSteps;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
@@ -46,7 +46,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   const obj = onClose(1499);
   const obj6 = { source: null };
   const tmp2 = invite(7445);
-  obj6.source = invite(14550);
+  obj6.source = invite(14551);
   obj5.leading = closure_6(invite(5851), obj6);
   obj5.trailing = invite(7445).Arrow;
   const intl2 = onClose(1113).intl;
@@ -62,7 +62,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   const tmp3 = invite(5851);
   const obj8 = { source: null };
   const tmp4 = invite(7445);
-  obj8.source = invite(14551);
+  obj8.source = invite(14552);
   obj7.leading = closure_6(invite(5851), obj8);
   obj7.trailing = invite(7445).Arrow;
   const intl4 = onClose(1113).intl;
@@ -71,5 +71,5 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   items[2] = closure_6(tmp4, obj7);
   obj3.children = items;
   obj2.children = closure_7(View, obj3);
-  return closure_6(onClose(14548).HubEmailConnectionScreen, obj2);
+  return closure_6(onClose(14549).HubEmailConnectionScreen, obj2);
 }

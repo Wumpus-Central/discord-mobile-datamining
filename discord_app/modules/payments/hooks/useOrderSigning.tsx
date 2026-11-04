@@ -103,7 +103,7 @@ export function useOrderSigning(order) {
               let orderSigningError;
               c5 = 1;
               c6 = 1;
-              return { value: "flexDirection", done: true };
+              return { value: "flexDirection", done: null };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {

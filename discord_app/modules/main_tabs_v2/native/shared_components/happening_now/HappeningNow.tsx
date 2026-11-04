@@ -174,7 +174,7 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(17521);
+const HappeningNowConstants = fn(17533);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: metroImportDefault,
   HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8,
@@ -212,27 +212,25 @@ export default noop.memo(function HappeningNow(listRef) {
   let callback2;
   let tmp = closure_13();
   const isFocused1 = listRef(children[14]).useIsFocused();
-  const tmp7 = _slicedToArray(
-    isFocused1(children[15])(listRef.cards, {
-      withoutUserCards: "HermesInternal",
-      guildId: "Array",
-      showMultipleActivitiesPerChannel: "comp_3",
-      isFocused: isFocused1,
-    }),
-    2,
-  );
+  const obj2 = {
+    withoutUserCards: "HermesInternal",
+    guildId: "Array",
+    showMultipleActivitiesPerChannel: "fairy_tone3",
+    isFocused: isFocused1,
+  };
+  const tmp7 = _slicedToArray(isFocused1(children[15])(listRef.cards, obj2), 2);
   children = tmp7[0];
   _slicedToArray = tmp8;
   let obj = listRef(children[14]);
   const tmp5 = isFocused1;
   const tmp6 = _slicedToArray;
   ref = ref.useRef(0);
-  const obj3 = { data: children, isFocused: isFocused1, loading: tmp7[1] };
-  closure_129_0 = obj3;
+  const obj4 = { data: children, isFocused: isFocused1, loading: tmp7[1] };
+  closure_129_0 = obj4;
   closure_129_1 = ref;
-  const isFocused = obj3.isFocused;
+  const isFocused = obj4.isFocused;
   closure_129_2 = isFocused;
-  closure_129_3 = ref.useRef(obj3);
+  closure_129_3 = ref.useRef(obj4);
   const tmp11 = isFocused1(children[10])(() => {
     const obj = {
       context: "messages",
@@ -294,7 +292,7 @@ export default noop.memo(function HappeningNow(listRef) {
     num = sharedValue * findIndexResult;
   }
   const items2 = [findIndexResult, num];
-  const callback = obj2.useCallback((arg0, arg1) => {
+  const callback = obj3.useCallback((arg0, arg1) => {
     const sum = arg1 + arg0;
     if (sum < num) {
       let sum1 = (sum / metroImportDefault) | 0;
@@ -310,21 +308,21 @@ export default noop.memo(function HappeningNow(listRef) {
     const tmp20 = sharedValue;
   }
   const items3 = [children];
-  const memo = obj2.useMemo(() => {
+  const memo = obj3.useMemo(() => {
     const result = happeningNowRankingUtils.filterHappeningNowCards(first);
     return happeningNowRankingUtils.sortHappeningNowCards(result);
   }, items3);
   const tmp9 = isFocused1(children[16]);
   const items4 = [tmp7[1]];
   const happeningNowScrollSnapping = listRef(children[19]).useHappeningNowScrollSnapping(listRef);
-  const callback1 = obj2.useCallback(
+  const callback1 = obj3.useCallback(
     (index) => renderCard(index.item, { index: index.index, loading, panelVariant: true }),
     items4,
   );
   const tmp2Result = listRef(children[19]);
   sharedValue = listRef(children[20]).useSharedValue([]);
   const items5 = [sharedValue];
-  callback2 = obj2.useCallback((viewableItems) => {
+  callback2 = obj3.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     const result = updateSharedValueIfChanged.updateSharedValueArrayIfChanged(
       sharedValue,
@@ -332,16 +330,16 @@ export default noop.memo(function HappeningNow(listRef) {
     );
   }, items5);
   const items6 = [callback2];
-  const memo1 = obj2.useMemo(() => _mod12.debounce(callback2, 130), items6);
+  const memo1 = obj3.useMemo(() => _mod12.debounce(callback2, 130), items6);
   if (0 === children.length) {
     if (!tmp8) {
       return <num />;
     }
   }
   if (!tmp7[1]) {
-    const obj4 = { value: sharedValue, children: null };
-    const obj5 = { value: tmp9(isFocused1(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
-    const obj6 = {
+    const obj5 = { value: sharedValue, children: null };
+    const obj6 = { value: tmp9(isFocused1(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
+    const obj7 = {
       ref: listRef,
       horizontal: true,
       renderScrollComponent: HappeningNowScrollView,
@@ -360,14 +358,14 @@ export default noop.memo(function HappeningNow(listRef) {
       getItemType: null,
     };
     const intl = tmp2(tmp3[24]).intl;
-    obj6.accessibilityLabel = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
-    obj6.contentContainerStyle = tmp.containerInner;
-    obj6.data = memo;
-    obj6.renderItem = callback1;
-    obj6.onViewableItemsChanged = memo1;
-    obj6.keyExtractor = keyExtractor;
-    obj6.getItemType = getItemType;
-    obj5.children = jsx(tmp2(tmp3[23]).FlashList, {
+    obj7.accessibilityLabel = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
+    obj7.contentContainerStyle = tmp.containerInner;
+    obj7.data = memo;
+    obj7.renderItem = callback1;
+    obj7.onViewableItemsChanged = memo1;
+    obj7.keyExtractor = keyExtractor;
+    obj7.getItemType = getItemType;
+    obj6.children = jsx(tmp2(tmp3[23]).FlashList, {
       ref: listRef,
       horizontal: true,
       renderScrollComponent: HappeningNowScrollView,
@@ -385,20 +383,20 @@ export default noop.memo(function HappeningNow(listRef) {
       keyExtractor: null,
       getItemType: null,
     });
-    obj4.children = jsx(tmp2(tmp3[16]).AnalyticsLocationProvider, {
+    obj5.children = jsx(tmp2(tmp3[16]).AnalyticsLocationProvider, {
       value: tmp9(isFocused1(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations,
       children: null,
     });
     <context.Provider value={sharedValue}>{null}</context.Provider>;
   }
-  const obj7 = { style: tmp.loading, children: null };
+  const obj8 = { style: tmp.loading, children: null };
   children = renderCard(children.length > 0 ? children[0] : { kind: "placeholder", index: 0 }, {
     index: 0,
     loading: tmp8,
     fullwidth: true,
     panelVariant: true,
   });
-  obj7.children = children;
+  obj8.children = children;
   <num style={tmp.loading}>{null}</num>;
   const tmp2Result2 = listRef(children[20]);
 });

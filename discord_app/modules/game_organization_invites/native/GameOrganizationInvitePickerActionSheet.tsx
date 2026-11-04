@@ -44,7 +44,7 @@ function GameSection(arg0) {
   return closure_6(Stack_Stack.Stack, obj);
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const days = fn(11551).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
+const days = fn(11552).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5141);

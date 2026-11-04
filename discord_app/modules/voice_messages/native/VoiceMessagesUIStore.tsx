@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 ({ VoiceMessageAnimationState: c2, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageConstants);
 let obj = module_560.create(() => {
-  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "flexDirection", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_8", showVoiceMessagesTooltip: "showGuildEventModeratorActionSheet", savedVoiceMessageUploadData: "body-md/medium", isVoiceMessageButtonMounted: "text-feedback-critical", isUsingHoldGesture: null };
+  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "flexDirection", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_8", showVoiceMessagesTooltip: "usePremiumPlanPrice", savedVoiceMessageUploadData: "gplay-billing-error", isVoiceMessageButtonMounted: "GPLAY_UPDATE_PENDING_DOWNGRADE", isUsingHoldGesture: null };
   items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
   obj.voiceMessageAnimationState = _mod1652.makeMutable(items);
@@ -88,7 +88,7 @@ export function hideVoiceMessagesTooltip() {
 export function resetVoiceMessageState() {
   obj = ReactBatchUpdates;
   obj.batchUpdates(() => {
-    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "sa", savedVoiceMessageUploadData: "isArray" });
+    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "dispatch", savedVoiceMessageUploadData: "isArray" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {

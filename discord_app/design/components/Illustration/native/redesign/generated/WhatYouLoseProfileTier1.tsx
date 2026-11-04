@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting(
 export function getWhatYouLoseProfileTier1Source(theme) {
   return _mod8947.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/15494__.js");
-    },
-    darker() {
       return require("../../../../../../../_runtime/metro/15495__.js");
     },
-    light() {
+    darker() {
       return require("../../../../../../../_runtime/metro/15496__.js");
+    },
+    light() {
+      return require("../../../../../../../_runtime/metro/15497__.js");
     },
   });
 }
@@ -30,13 +30,13 @@ export function useWhatYouLoseProfileTier1Source() {
   const obj = shared;
   return _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/15494__.js");
-    },
-    darker() {
       return require("../../../../../../../_runtime/metro/15495__.js");
     },
-    light() {
+    darker() {
       return require("../../../../../../../_runtime/metro/15496__.js");
+    },
+    light() {
+      return require("../../../../../../../_runtime/metro/15497__.js");
     },
   });
 }
@@ -44,25 +44,25 @@ export function WhatYouLoseProfileTier1(arg0) {
   const obj = shared;
   const illustrationSource = _mod8947.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/15494__.js");
-    },
-    darker() {
       return require("../../../../../../../_runtime/metro/15495__.js");
     },
-    light() {
+    darker() {
       return require("../../../../../../../_runtime/metro/15496__.js");
+    },
+    light() {
+      return require("../../../../../../../_runtime/metro/15497__.js");
     },
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("../../../../../../../_runtime/metro/15494__.js");
-    },
-    darker() {
       return require("../../../../../../../_runtime/metro/15495__.js");
     },
-    light() {
+    darker() {
       return require("../../../../../../../_runtime/metro/15496__.js");
+    },
+    light() {
+      return require("../../../../../../../_runtime/metro/15497__.js");
     },
   };
   const merged = Object.assign(arg0);

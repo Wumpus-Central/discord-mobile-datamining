@@ -14,7 +14,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const UserProfileTabPagesDefault = tmp2(15226);
+const UserProfileTabPagesDefault = tmp2(15227);
 require = fn;
 function MainPage() {
   const tmp = closure_9();
@@ -160,7 +160,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   }
   obj6.variant = str;
   const items7 = [
-    closure_6(tmp11(12371).Tabs, obj6),
+    closure_6(tmp11(12372).Tabs, obj6),
     closure_6(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
   obj5.children = items7;

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef11404 from "../../../../../_runtime/metro/11404__.js";
+import _modDef11405 from "../../../../../_runtime/metro/11405__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,7 +39,7 @@ export default function NsfwGateChat() {
   const obj = { children: null };
   items = [React4(React3, { style: tmp.border })];
   const obj3 = { style: tmp.container, children: null };
-  const obj4 = { source: _modDef11404 };
+  const obj4 = { source: _modDef11405 };
   const items1 = [React4(FastImageDefault, obj4)];
   const obj5 = { style: tmp.description, variant: "body-md/medium", color: "text-muted", children: null };
   const intl = util.intl;

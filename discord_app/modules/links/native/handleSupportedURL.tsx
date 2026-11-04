@@ -53,7 +53,7 @@ const NativePermissionTypes = fn(8080).NativePermissionTypes;
 let closure_21 = fn(11089).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_22 = fn(7856).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_23 = fn(5881).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15905).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15918).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8573).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -265,7 +265,7 @@ export default function handleSupportedURL(payload) {
                   c2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp3(10848).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15912).default()),
+                    value: tmp3(10848).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(15925).default()),
                     done: false,
                   };
                   return obj4;
@@ -385,7 +385,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15918, dependencyMap.paths),
+                    asyncRequireImpl(15931, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );

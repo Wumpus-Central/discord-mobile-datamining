@@ -106,10 +106,10 @@ function getVisibleTraitRarities(item, c4) {
   );
 }
 let closure_129_0 = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
-let f89535 = (arg0) => require.has(arg0);
+let f89665 = (arg0) => require.has(arg0);
 const set = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
 let closure_130_0 = new Set(Object.values(CheckpointTrait.CheckpointTrait));
-f89535 = (arg0) => require.has(arg0);
+f89665 = (arg0) => require.has(arg0);
 let obj = {};
 obj[CheckpointTrait.CheckpointTrait.FACE] = CheckpointTraitConfig.CHECKPOINT_FACE_OPTION_TO_RARITY;
 obj[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointTraitConfig.CHECKPOINT_OUTFIT_OPTION_TO_RARITY;
@@ -329,7 +329,7 @@ export function getCharacterLayerOrdering(wearable) {
   const tmp2 = CheckpointTraitConfig;
   return hasItem
     ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING
-    : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f89535);
+    : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f89665);
 }
 export const CHECKPOINT_TRAIT_TO_OPTION_ASSETS = obj2;
 export const CHECKPOINT_TRAIT_TO_OPTION_IDS = obj3;
@@ -345,7 +345,7 @@ export function getOutfitDefaultOptionId(character) {
 export function getTraitOptionRarity(item10034, item10034) {
   let tmp2;
   if (null != obj[item10034][item10034]) {
-    if (typeof f89535 === "function") {
+    if (typeof f89665 === "function") {
       if (closure_131_0.has(tmp)) {
         tmp2 = tmp;
       }
@@ -367,7 +367,7 @@ export function isTraitSelectionLocked(item, arg1, savedCharacter) {
   } else {
     let tmp4;
     if (null != obj[item][arg1]) {
-      if (typeof f89535 === "function") {
+      if (typeof f89665 === "function") {
         if (closure_131_0.has(tmp11)) {
           tmp4 = tmp11;
         }

@@ -215,7 +215,7 @@ export default function NewContentPill(onPress) {
     obj5.style = items11;
     obj5.animatedProps = animatedProps;
     const obj6 = { onPress: callback, style: tmp.container, children: null };
-    const items12 = [first2(tmp2(13263).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" })];
+    const items12 = [first2(tmp2(13264).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" })];
     const obj7 = {
       style: { marginLeft: 4 },
       variant: "heading-sm/semibold",
@@ -244,7 +244,7 @@ export default function NewContentPill(onPress) {
       tmp36(tmp27, unsafe_rawColors);
       const tmp29 = tmp2(5148).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
     } else {
-      const items14 = [tmp36(tmp2(13263).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ,];
+      const items14 = [tmp36(tmp2(13264).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ,];
       const substr = stateFromStoresArray1.slice(0, stateFromStoresArray1.length - 1);
       items14[1] = substr.map((guild, index) => {
         let num = 4;

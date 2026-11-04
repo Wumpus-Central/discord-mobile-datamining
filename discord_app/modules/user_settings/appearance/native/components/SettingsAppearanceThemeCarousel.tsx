@@ -8,7 +8,7 @@ import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import _modDef10194 from "../../../../../../_runtime/metro/10194__.js";
 import PaginationDefault from "../../../../../../_runtime/10807_Pagination.js";
 import HexagonCampaignThemeLegalDefault from "../../../../hexagon_campaign/native/HexagonCampaignThemeLegal.tsx";
-import _modDef17503 from "../../../../../../_runtime/metro/17503__.js";
+import _modDef17515 from "../../../../../../_runtime/metro/17515__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import SettingsAppearanceConstants from "../SettingsAppearanceConstants.tsx";
@@ -127,7 +127,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     }
     tmp18 = isThumbstickScrollDevice;
   }
-  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(6919).QuestContent.CLIENT_THEME_SETTINGS, tmp2(16699).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
+  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp2(6919).QuestContent.CLIENT_THEME_SETTINGS, tmp2(16711).HexagonCampaignContentSurface.THEME_PICKER, tmp18);
   const tmp2Result = require("HexagonCampaignAnalytics");
   const hexagonCampaignPerkAvailability = require("HexagonCampaignPerkAvailability").useHexagonCampaignPerkAvailability(constants.CLIENT_THEME, "SettingsAppearanceThemeCarousel");
   const tmp20 = constants;
@@ -358,7 +358,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       }
       if (tmp40Result6) {
         const obj21 = { variant: "overlay", perk: tmp20.CLIENT_THEME };
-        tmp40Result6 = tmp40(tmp53(16721), obj21);
+        tmp40Result6 = tmp40(tmp53(16733), obj21);
       }
       const obj22 = { children: null };
       obj20.children = tmp40Result6;
@@ -380,7 +380,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       const obj27 = { style: null, source: null, size: null };
       const items20 = [tmp.arrowLeft, animatedStyles.iconInteractive];
       obj27.style = items20;
-      obj27.source = _modDef17503;
+      obj27.source = _modDef17515;
       obj27.size = tmp2(1187).IconSizes.REFRESH_SMALL_16;
       const items21 = [tmp40(rounded, obj27), ];
       const obj28 = { animated: true, style: null, variant: "body-sm/medium", maxFontSizeMultiplier: 1.5, children: null };

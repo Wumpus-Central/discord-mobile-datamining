@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_9 = fn(18570).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_9 = fn(18584).MAX_DISPLAYED_UPSELL_GUILDS;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -81,7 +81,7 @@ let items = [
     id: "hangout",
     title: fn(1113).t.ScXySs,
     description: fn(1113).t.DSCqxM,
-    Icon: fn(15044).BumpingFistsSpotIllustration,
+    Icon: fn(15045).BumpingFistsSpotIllustration,
   },
   ,
 ];
@@ -89,25 +89,25 @@ const obj15 = {
   id: "hangout",
   title: fn(1113).t.ScXySs,
   description: fn(1113).t.DSCqxM,
-  Icon: fn(15044).BumpingFistsSpotIllustration,
+  Icon: fn(15045).BumpingFistsSpotIllustration,
 };
 items[1] = {
   id: "gaming",
   title: fn(1113).t["F+MTAZ"],
   description: fn(1113).t.srNlJw,
-  Icon: fn(18571).ChatControllersSpotIllustration,
+  Icon: fn(18585).ChatControllersSpotIllustration,
 };
 const obj16 = {
   id: "gaming",
   title: fn(1113).t["F+MTAZ"],
   description: fn(1113).t.srNlJw,
-  Icon: fn(18571).ChatControllersSpotIllustration,
+  Icon: fn(18585).ChatControllersSpotIllustration,
 };
 items[2] = {
   id: "hobbies",
   title: fn(1113).t["0Ka6B5"],
   description: fn(1113).t["5oGAp/"],
-  Icon: fn(18575).MiniaturesSpotIllustration,
+  Icon: fn(18589).MiniaturesSpotIllustration,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");

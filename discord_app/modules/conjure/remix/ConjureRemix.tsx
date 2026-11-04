@@ -62,7 +62,7 @@ export function createConjureRemix(project, arg1) {
             closure_130_4 = undefined;
             v3 = 1;
             c7 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "flexDirection", done: null };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {
@@ -187,7 +187,7 @@ export function createConjureRemix(project, arg1) {
                             const obj3 = v0(dependencyMap[9]);
                             dependencyMap = 3;
                             c3 = 1;
-                            const obj13 = { value: v0(dependencyMap[9]).deleteProject(closure_128_0.id).catch(/* F142607 */ function() { ... }), done: false };
+                            const obj13 = { value: v0(dependencyMap[9]).deleteProject(closure_128_0.id).catch(/* F143170 */ function() { ... }), done: false };
                             return obj13;
                           }
                         } else if (arg0 === 1) {

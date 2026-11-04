@@ -259,7 +259,7 @@ function ChatPreview(channelId) {
     secondaryTextFieldRef: channelId.tagListInputRef,
   };
   obj4.portal = channelId(1377).isAndroid();
-  items2[1] = closure_17(channelId(12578).PortalKeyboardRenderer, obj4);
+  items2[1] = closure_17(channelId(12579).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
@@ -508,7 +508,7 @@ export default function NewMessageScreen(navigation) {
           obj2.channel = {
             id: navigation(7536).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
             guild_id: "Array",
-            parent_id: "ao",
+            parent_id: "useEffect",
           };
           obj.dispatch(obj2);
         };
@@ -548,8 +548,8 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp13(11820).isGroupDMNitroUpsellAudience(tmp23);
-    const tmp13Result = tmp13(11820);
+    enabled = tmp13(11821).isGroupDMNitroUpsellAudience(tmp23);
+    const tmp13Result = tmp13(11821);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
   const layoutEffect = obj.useLayoutEffect(() => {

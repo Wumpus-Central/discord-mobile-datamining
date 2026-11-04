@@ -13,8 +13,8 @@ import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBack
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(17310).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(18598).GUILD_LIST_WIDTH;
+let closure_5 = fn(17322).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(18612).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5141);

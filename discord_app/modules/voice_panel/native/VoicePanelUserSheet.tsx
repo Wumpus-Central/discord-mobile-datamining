@@ -187,7 +187,7 @@ export default function VoicePanelUserSheet(userId) {
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const obj4 = channelId(504);
   const name = channelId(6176).useName(guildId, channelId, stateFromStores);
-  const live = userId(15107)(userId).live;
+  const live = userId(15108)(userId).live;
   closure_5 = tmp8;
   const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
   const effect = stateFromStores.useEffect(() => {
@@ -244,7 +244,7 @@ export default function VoicePanelUserSheet(userId) {
           currentUser: stateFromStores2,
           style: tmp.card,
         };
-        items6[2] = closure_10(tmp7(15110), obj12);
+        items6[2] = closure_10(tmp7(15111), obj12);
         obj2.children = items6;
         obj9.children = closure_11(stateFromStores2, obj2);
         return closure_10(channelId(5396).BottomSheet, obj9);

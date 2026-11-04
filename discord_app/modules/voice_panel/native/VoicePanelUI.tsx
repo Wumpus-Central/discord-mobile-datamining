@@ -621,13 +621,13 @@ function AnimatedWrapper(wrapperOffset) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ Pressable: closure_6, ScrollView } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11410);
+const VoicePanelConstants = fn(11411);
 ({ BORDER_RADIUS_PHYSICS: closure_10, DEFAULT_BORDER_RADIUS, DRAWER_SPRING_PHYSICS, IS_IOS: closure_11, MODE_CHANGE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 ({ LAYOUT_PHYSICS, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_14, DEFAULT_BORDER_RADIUS_PIP } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11408).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11409).VoicePanelControlsModes;
 const isActivityParticipant = fn(5815).isActivityParticipant;
-const POP_RESISTANCE = fn(11411).POP_RESISTANCE;
+const POP_RESISTANCE = fn(11412).POP_RESISTANCE;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 log = new LoggerDefault("VoicePanelUI");
@@ -2024,7 +2024,7 @@ export default noop.memo(function VoicePanelUI() {
   let tmp105Result2 = null;
   if (tmp6[0]) {
     const obj18 = { value: tmp4(AnalyticsLocationDefault.VOICE_PANEL).analyticsLocations, children: null };
-    const items36 = [closure_18(tmp2(19545), {}), , ];
+    const items36 = [closure_18(tmp2(19559), {}), , ];
     const obj19 = { opacity: derivedValue, onPress: dismissPanel };
     items36[1] = closure_18(closure_68, obj19);
     const obj20 = { gesture: tmp103, children: null };
@@ -2033,26 +2033,26 @@ export default noop.memo(function VoicePanelUI() {
     obj21.nativeID = "voice-panel-ui-" + channelId;
     obj21.layout = layoutTransition;
     obj21.onAccessibilityEscape = tmp2(11115);
-    const items37 = [closure_18(tmp2(19547), {}), , , ];
+    const items37 = [closure_18(tmp2(19561), {}), , , ];
     const obj22 = { wrapperOffset, children: null };
     let tmp105Result = tmp107;
     if (isDockEnabled) {
       const obj23 = { children: tmp107 };
-      tmp105Result = closure_18(tmp13(19470).VoicePanelContentWithDock, obj23);
+      tmp105Result = closure_18(tmp13(19484).VoicePanelContentWithDock, obj23);
     }
     const obj24 = { children: null };
     obj22.children = tmp105Result;
     items37[1] = closure_18(AnimatedWrapper, obj22);
-    items37[2] = closure_18(tmp2(19549), {});
+    items37[2] = closure_18(tmp2(19563), {});
     const obj25 = { gestureState: sharedValue4 };
-    items37[3] = closure_18(tmp2(19557), obj25);
+    items37[3] = closure_18(tmp2(19571), obj25);
     obj21.children = items37;
-    obj20.children = closure_19(tmp2(19546), obj21);
+    obj20.children = closure_19(tmp2(19560), obj21);
     items36[2] = closure_18(tmp13(5428).GestureDetector, obj20);
     obj24.children = items36;
     obj18.children = closure_19(tmp13(5748).LayerScope, obj24);
     tmp105Result2 = closure_18(tmp13(7462).AnalyticsLocationProvider, obj18);
-    const tmp2Result = tmp2(19546);
+    const tmp2Result = tmp2(19560);
   }
   return tmp105Result2;
 });

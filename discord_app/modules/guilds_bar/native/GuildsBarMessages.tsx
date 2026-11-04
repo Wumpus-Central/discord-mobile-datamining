@@ -48,9 +48,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "CONJURE_DEBUG_GIT_INFO_RESULT",
-    externalChildren: null,
-    expandedChildren: "Not connected",
+    label: "CONVERSATIONS_TOGGLE_HIGHLIGHTING",
+    externalChildren: "SET_SELECTED_CONVERSATION",
+    expandedChildren: null,
     children: null,
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
@@ -68,9 +68,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "CONJURE_DEBUG_GIT_INFO_RESULT",
-    externalChildren: null,
-    expandedChildren: "Not connected",
+    label: "CONVERSATIONS_TOGGLE_HIGHLIGHTING",
+    externalChildren: "SET_SELECTED_CONVERSATION",
+    expandedChildren: null,
     children: null,
   });
 });

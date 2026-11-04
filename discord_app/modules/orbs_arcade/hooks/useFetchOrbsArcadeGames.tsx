@@ -7,7 +7,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/hooks/useFetchOrbsArcadeGames.tsx");
 
 export default function useFetchOrbsArcadeGames(location) {
-  const OrbsArcadeExperiment = enabled(17263).OrbsArcadeExperiment;
+  const OrbsArcadeExperiment = enabled(17275).OrbsArcadeExperiment;
   enabled = OrbsArcadeExperiment.useConfig({ location }).enabled;
   items = [enabled];
   const effect = noop.useEffect(() => {

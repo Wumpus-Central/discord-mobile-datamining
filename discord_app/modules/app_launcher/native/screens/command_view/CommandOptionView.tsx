@@ -64,7 +64,7 @@ export default function CommandOptionView(option) {
   const ReduceMotion = option(1652).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
   const obj = option(504);
-  const optionEnteringAnimation = option(12710).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(12711).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -94,8 +94,8 @@ export default function CommandOptionView(option) {
     const obj5 = {
       collapsable: false,
       entering: optionEnteringAnimation.EnteringAnimation,
-      exiting: tmp2(12710).ExitingAnimation,
-      layout: tmp2(12710).LayoutAnimation,
+      exiting: tmp2(12711).ExitingAnimation,
+      layout: tmp2(12711).LayoutAnimation,
       onLayout(arg0) {
         importDefault(arg0, option);
       },
@@ -163,10 +163,10 @@ export default function CommandOptionView(option) {
     obj6.children = items2;
     obj5.children = closure_6(View, obj6);
     obj4.children = closure_5(_modDef1652.View, obj5);
-    obj3.children = closure_5(tmp2(12711).AwaitAnimationContext, obj4);
+    obj3.children = closure_5(tmp2(12712).AwaitAnimationContext, obj4);
     return closure_5(tmp2(1652).LayoutAnimationConfig, obj3);
   } else {
     return null;
   }
-  const tmp2Result = option(12710);
+  const tmp2Result = option(12711);
 }

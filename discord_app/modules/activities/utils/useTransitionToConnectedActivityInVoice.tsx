@@ -62,7 +62,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                 closure_129_3 = undefined;
                 c3 = 1;
                 c4 = 1;
-                return { value: "flexDirection", done: true };
+                return { value: "flexDirection", done: null };
               }
             } else {
               if (1 === tmp5) {
@@ -81,7 +81,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(11946)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(11947)(obj5), done: false };
                         return obj6;
                       }
                     }
@@ -105,7 +105,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(11894)(closure_1_3, _location);
+                closure_3_1(11895)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }
