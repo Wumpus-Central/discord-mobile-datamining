@@ -2,33 +2,53 @@
 
 // Module 6607
 import callBoundIntrinsic from "callBoundIntrinsic" /* 1326 */;
-import _mod1460 from "module_1460" /* 1460 */;
+import ToObject from "ToObject" /* 6608 */;
+import _mod6610 from "module_6610" /* 6610 */;
+import ToUint32 from "ToUint32" /* 6611 */;
+import ToString from "ToString" /* 6623 */;
+import _mod6635 from "module_6635" /* 6635 */;
+import ArraySpeciesCreate from "ArraySpeciesCreate" /* 6636 */;
+import Get from "Get" /* 6646 */;
+import HasProperty from "HasProperty" /* 6659 */;
+import Call from "Call" /* 6660 */;
+import CreateDataPropertyOrThrow from "CreateDataPropertyOrThrow" /* 6661 */;
 
-let closure_0 = callBoundIntrinsic("String.prototype.valueOf");
-let closure_1 = callBoundIntrinsic("Object.prototype.toString");
-let closure_2 = _mod1460();
+const ObjectResult = Object("a");
+let tmp2 = "a" !== ObjectResult[0];
+if (!tmp2) {
+  tmp2 = !(0 in ObjectResult);
+}
+let closure_2 = tmp2;
+let closure_3 = callBoundIntrinsic("String.prototype.split");
 
-export default function isString(str) {
-  let tmp = typeof str === "string";
-  if (typeof str !== "string") {
-    let tmp2 = !str;
-    if (str) {
-      tmp2 = typeof str !== "object";
-    }
-    if (tmp2) {
-      tmp = !tmp2;
-    } else if (closure_2) {
-      let tmp5 = (function tryStringObject(arg0) {
-        try {
-          closure_1_0(arg0);
-          return true;
-        } catch (err) {
-          return false;
-        }
-      })(str);
-    } else {
-      tmp5 = "[object String]" === closure_1(str);
+export default function map(arg0) {
+  const tmp3 = ToObject(this);
+  let arr = tmp3;
+  if (closure_2) {
+    arr = tmp3;
+    if (_mod6610(tmp3)) {
+      arr = closure_3(tmp3, "");
     }
   }
-  return tmp;
+  const tmp5 = ToUint32(arr.length);
+  if (_mod6635(arg0)) {
+    if (arguments.length > 1) {
+      const tmp11 = arguments[1];
+    }
+    const tmp12 = ArraySpeciesCreate(tmp3, tmp5);
+    for (let num2 = 0; num2 < tmp5; num2 = num2 + 1) {
+      let tmp15 = ToString(num2);
+      if (HasProperty(tmp3, tmp15)) {
+        let tmp17 = Get(tmp3, tmp15);
+        items = [tmp17, num2, tmp3];
+        let tmp18 = Call(arg0, tmp11, items);
+        let tmp19 = CreateDataPropertyOrThrow(tmp12, tmp15, tmp18);
+      }
+    }
+    return tmp12;
+  } else {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Array.prototype.map callback must be a function");
+    throw typeError;
+  }
 };

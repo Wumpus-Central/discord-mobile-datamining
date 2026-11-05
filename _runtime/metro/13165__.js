@@ -1,7 +1,7 @@
 // === Module 13165: ? ===
 
 // Module 13165
-import _mod13096 from "module_13096" /* 13096 */;
+import _mod13166 from "module_13166" /* 13166 */;
 
 
-export default { node: _mod13096 };
+export default _mod13166;

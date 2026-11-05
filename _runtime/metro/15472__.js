@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "a7a629f03005b09b581ccdee10e4a92d", name: "img_boost_subheader_resub_mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/virtual_currency/images/native", width: 576, height: 324, scales: [1], hash: "83d6f52e41f68a6a0f493020b6be93e9", name: "hero-orbs", type: "png" });

@@ -1,32 +1,24 @@
 // === Module 13122: ? ===
 
 // Module 13122
-import _mod13055 from "module_13055" /* 13055 */;
+import _mod13062 from "module_13062" /* 13062 */;
 
-const LeftParenthesis = _mod13055.TYPE.LeftParenthesis;
-const RightParenthesis = _mod13055.TYPE.RightParenthesis;
-const obj = {
-  name: "Parentheses",
-  structure: null,
-  parse(call, arg1) {
-    const self = this;
-    this.eat(LeftParenthesis);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightParenthesis);
-    }
-    const element = { type: "Parentheses", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
-    return element;
+const Hash = _mod13062.TYPE.Hash;
+let obj = {
+  name: "IdSelector",
+  structure: { name: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Hash);
+    const obj = { type: "IdSelector", loc: this.getLocation(tokenStart, this.scanner.tokenStart), name: null };
+    const scanner = this.scanner;
+    obj.name = scanner.substrToCursor(tokenStart + 1);
+    return obj;
   },
-  generate(arg0) {
-    this.chunk("(");
-    this.children(arg0);
-    this.chunk(")");
+  generate(name) {
+    this.chunk("#");
+    this.chunk(name.name);
   }
 };
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

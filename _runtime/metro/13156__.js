@@ -1,9 +1,15 @@
 // === Module 13156: ? ===
 
 // Module 13156
-
-export default {
-  parse: function selectorList() {
-    return this.createSingleNodeList(this.SelectorList());
+const obj = {
+  parse: {
+    prelude() {
+      return this.createSingleNodeList(this.SelectorList());
+    },
+    block() {
+      return this.Block(true);
+    }
   }
 };
+
+export default obj;

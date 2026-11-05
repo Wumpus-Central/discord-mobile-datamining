@@ -1,37 +1,28 @@
 // === Module 4787: ? ===
 
 // Module 4787
-import module_4569_mod from "module_4569" /* 4569 */;
-import module_4602_mod from "module_4602" /* 4602 */;
-import requiredArgs_mod from "requiredArgs" /* 4422 */;
+import _typeof_mod from "module_4423" /* 4423 */;
+import requiredArgs_mod from "requiredArgs" /* 4424 */;
 
-let module_4569 = module_4569_mod;
-if (!module_4569) {
-  const obj = { default: module_4569 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4569;
+  tmp3 = _typeof;
 }
-module_4569 = tmp3;
-let module_4602 = module_4602_mod;
-if (!module_4602) {
-  const obj2 = { default: module_4602 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4602;
-}
-module_4602 = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isTomorrow(arg0) {
+export default function isThursday(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4602.default(arg0, module_4569.default(Date.now(), 1));
+  return 4 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

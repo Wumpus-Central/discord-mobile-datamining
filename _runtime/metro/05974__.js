@@ -1,17 +1,12 @@
 // === Module 5974: ? ===
 
 // Module 5974
-import identity from "identity" /* 549 */;
-import _mod668 from "module_668" /* 668 */;
-import constant from "constant" /* 5975 */;
+import shortOut from "shortOut" /* 5975 */;
+import overRest from "overRest" /* 5979 */;
+import flatten from "flatten" /* 5981 */;
 
-if (_mod668) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod668(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
-}
 
-export default fn;
+export default function flatRest(arg0) {
+  const tmp = shortOut;
+  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
+};

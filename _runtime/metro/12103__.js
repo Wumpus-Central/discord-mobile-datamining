@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9bcd40cb62b748b314b1aa933da9be99", name: "HandRequestDenyIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 24, height: 24, scales: [1, 2, 3], hash: "a9e66a93023e2550ab4df6fac50c261a", name: "ic_move_to_speaker", type: "png" });

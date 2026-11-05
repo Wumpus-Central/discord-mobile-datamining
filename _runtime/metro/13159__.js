@@ -3,7 +3,7 @@
 // Module 13159
 
 export default {
-  parse: function nthWithOfClause() {
-    return this.createSingleNodeList(this.Nth(true));
+  parse() {
+    return this.createSingleNodeList(this.Identifier());
   }
 };

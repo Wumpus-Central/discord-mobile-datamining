@@ -1,18 +1,18 @@
 // === Module 5255: ? ===
 
 // Module 5255
-import c from "c" /* 5238 */;
-import _mod5251 from "module_5251" /* 5251 */;
+import c from "c" /* 5240 */;
+import _mod5253 from "module_5253" /* 5253 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getEnumProperty(enumProperty, arg1) {
-  return enumProperty.enumProperty(arg1);
+function getStringProperty(stringProperty, arg1) {
+  return stringProperty.stringProperty(arg1);
 }
 
-export function useRiveEnum(device, instance) {
+export function useRiveString(LVL, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod5251.useRiveProperty(instance, device, getEnumProperty);
+  [tmp3, tmp4, tmp5] = _mod5253.useRiveProperty(instance, LVL, getStringProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

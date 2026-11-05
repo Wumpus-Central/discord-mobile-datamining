@@ -1,23 +1,24 @@
 // === Module 13113: ? ===
 
 // Module 13113
-import _mod13055 from "module_13055" /* 13055 */;
+import _mod13062 from "module_13062" /* 13062 */;
 
-const Hash = _mod13055.TYPE.Hash;
-let obj = {
-  name: "Hash",
-  structure: { value: String },
+const Ident = _mod13062.TYPE.Ident;
+const obj = {
+  name: "ClassSelector",
+  structure: { name: String },
   parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Hash);
-    const obj = { type: "Hash", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
+    const self = this;
     const scanner = this.scanner;
-    obj.value = scanner.substrToCursor(tokenStart + 1);
-    return obj;
+    if (!scanner.isDelim(46)) {
+      self.error("Full stop is expected");
+    }
+    self.scanner.next();
+    return { type: "ClassSelector", loc: self.getLocation(self.scanner.tokenStart - 1, self.scanner.tokenEnd), name: self.consume(Ident) };
   },
-  generate(value) {
-    this.chunk("#");
-    this.chunk(value.value);
+  generate(name) {
+    this.chunk(".");
+    this.chunk(name.name);
   }
 };
 

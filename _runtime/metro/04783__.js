@@ -1,17 +1,17 @@
 // === Module 4783: ? ===
 
 // Module 4783
-import module_4769_mod from "module_4769" /* 4769 */;
-import requiredArgs_mod from "requiredArgs" /* 4422 */;
+import module_4775_mod from "module_4775" /* 4775 */;
+import requiredArgs_mod from "requiredArgs" /* 4424 */;
 
-let module_4769 = module_4769_mod;
-if (!module_4769) {
-  const obj = { default: module_4769 };
+let module_4775 = module_4775_mod;
+if (!module_4775) {
+  const obj = { default: module_4775 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4769;
+  tmp3 = module_4775;
 }
-module_4769 = tmp3;
+module_4775 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisWeek(arg0, arg1) {
+export default function isThisQuarter(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4769.default(arg0, Date.now(), arg1);
+  return module_4775.default(Date.now(), arg0);
 };
 export default exports.default;

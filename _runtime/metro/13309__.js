@@ -1,40 +1,9 @@
 // === Module 13309: ? ===
 
 // Module 13309
-import _mod13281 from "module_13281" /* 13281 */;
-
-require = arg1;
-const dependencyMap = arg6;
-
-export function handleCallbackErrors(fn, arg1) {
-  fn = arg2;
-  if (arg2 === undefined) {
-    fn = function t() {
-
-    };
-  }
-  try {
-    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
-      closure_0 = arg1;
-      closure_1 = fn;
-      if (obj.isThenable(promise)) {
-        return promise.then((result) => {
-          closure_1();
-          return result;
-        }, (arg0) => {
-          closure_0(arg0);
-          closure_1();
-          throw arg0;
-        });
-      } else {
-        fn();
-        return promise;
-      }
-      obj = _mod13281;
-    })(fn(), arg1, fn);
-  } catch (tmp5) {
-    tmp3(tmp5);
-    tmp2();
-    throw tmp5;
-  }
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
 }
+
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

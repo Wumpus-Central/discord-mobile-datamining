@@ -54,11 +54,11 @@ class PerformanceEventTiming {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp7 = closure_9;
-    definePropertyResult = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "Boolean" });
     tmp9 = closure_10;
-    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_10, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_10, { writable: true, value: "Boolean" });
     tmp11 = closure_11;
-    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "a" });
+    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "Boolean" });
     tmp13 = hasOwnProperty;
     num = global.processingStart;
     tmp14 = hasOwnProperty(tmp3Result, closure_9);

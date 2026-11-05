@@ -1,40 +1,16 @@
 // === Module 8452: ? ===
 
 // Module 8452
-import _modDef8453 from "module_8453" /* 8453 */;
+import _mod8449 from "module_8449" /* 8449 */;
 
-importDefault = arg2;
+require = arg1;
 const dependencyMap = arg6;
-
-export default {
-  decode(arg0, buffer) {
-    value = _modDef8453.get();
-    if (undefined !== value) {
-      if (undefined !== arg0) {
-        try {
-          const decoder = new value(arg0);
-          const _DataView = DataView;
-          if (buffer instanceof DataView) {
-            buffer = buffer.buffer;
-          } else {
-            const _Uint8Array = Uint8Array;
-            buffer = Uint8Array.from(buffer);
-          }
-          decoder.decode(buffer);
-        } catch (err) {
-        }
-      }
-    }
-    const mapped = buffer.map((item) => String.fromCharCode(item));
-    return (function decodeAsciiValue(arg0) {
-      try {
-        const _decodeURIComponent = decodeURIComponent;
-        const _escape = escape;
-        return decodeURIComponent(escape(arg0));
-      } catch (err) {
-        return tmp;
-      }
-    })(mapped.join(""));
-  },
-  TAG_HEADER_SIZE: 5
+const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };
+obj[45056] = {
+  name: "MPFVersion",
+  description(value) {
+    return _mod8449.getStringValue(value);
+  }
 };
+
+export default obj;

@@ -1,8 +1,5 @@
 // === Module 9028: ? ===
 
 // Module 9028
-import emptyFunction from "module_5180" /* 5180 */;
 
-const rect = { top: emptyFunction.number, left: emptyFunction.number, bottom: emptyFunction.number, right: emptyFunction.number };
-
-export default emptyFunction.shape(rect);
+export default { NONE: "", INVERT: "CIColorInvert", MONOCHROME: "CIColorMonochrome", POSTERIZE: "CIColorPosterize", FALSE: "CIFalseColor", MAXIMUMCOMPONENT: "CIMaximumComponent", MINIMUMCOMPONENT: "CIMinimumComponent", CHROME: "CIPhotoEffectChrome", FADE: "CIPhotoEffectFade", INSTANT: "CIPhotoEffectInstant", MONO: "CIPhotoEffectMono", NOIR: "CIPhotoEffectNoir", PROCESS: "CIPhotoEffectProcess", TONAL: "CIPhotoEffectTonal", TRANSFER: "CIPhotoEffectTransfer", SEPIA: "CISepiaTone" };

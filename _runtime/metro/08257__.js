@@ -1,15 +1,17 @@
 // === Module 8257: ? ===
 
 // Module 8257
-import _modDef8195 from "module_8195" /* 8195 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8200 from "module_8200" /* 8200 */;
+import unitsDefault from "units" /* 8254 */;
+import _modDef8259 from "module_8259" /* 8259 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Pattern = importDefault;
+const Mask = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +31,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Pattern {
+class Mask {
   constructor() {
     self = this;
-    tmp = c2(this, Pattern);
-    tmp2 = closure_4;
-    obj = closure_4(Pattern);
-    tmp3 = closure_3;
-    if (closure_6()) {
+    tmp = closure_3(this, Mask);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Mask);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,54 +53,55 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Pattern, _modDef8195);
+_inherits(Mask, _modDef8200);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ patternTransform, patternUnits, patternContentUnits } = props);
-    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-    if (!patternTransform) {
-      patternTransform = transform;
+    ({ maskUnits, maskContentUnits, style } = props);
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
+    let num = 0;
+    if (undefined !== maskUnits) {
+      num = unitsDefault[maskUnits];
     }
-    if (!patternTransform) {
-      patternTransform = props;
-    }
-    const tmp3Result = Pattern(8179)(patternTransform);
-    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
-    let num = patternUnits;
-    if (patternUnits) {
-      num = Pattern(8249)[patternUnits];
-    }
-    if (!num) {
-      num = 0;
-    }
-    size.patternUnits = num;
+    size.maskUnits = num;
     let num2 = 1;
-    if (patternContentUnits) {
-      num2 = Pattern(8249)[patternContentUnits];
+    if (undefined !== maskContentUnits) {
+      num2 = unitsDefault[maskContentUnits];
     }
-    size.patternContentUnits = num2;
+    size.maskContentUnits = num2;
+    let str;
+    if (props != null) {
+      str = props.maskType;
+    }
+    if (!str) {
+      let maskType;
+      if (style != null) {
+        maskType = style.maskType;
+      }
+      str = maskType;
+    }
+    if (!str) {
+      str = "luminance";
+    }
+    size.maskType = Mask(8258).maskType[str];
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const tmp3 = Pattern(8179);
-    const merged = Object.assign(size);
-    const merged1 = Object.assign(Pattern(8184)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
-    return jsx(Pattern(8258), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged = Object.assign(Mask(8191).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return <tmp8 ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
+const importDefaultResultResult = _createClass(Mask, items);
+importDefaultResultResult.displayName = "Mask";
 importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

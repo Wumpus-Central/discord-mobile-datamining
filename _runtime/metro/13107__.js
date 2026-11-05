@@ -1,55 +1,56 @@
 // === Module 13107: ? ===
 
 // Module 13107
-import _mod13055 from "module_13055" /* 13055 */;
+import _mod13062 from "module_13062" /* 13062 */;
 
-const Ident = _mod13055.TYPE.Ident;
-let obj = {
-  name: "Combinator",
-  structure: { name: String },
-  parse() {
+const Semicolon = _mod13062.TYPE.Semicolon;
+const LeftCurlyBracket = _mod13062.TYPE.LeftCurlyBracket;
+const obj = {
+  name: "AtrulePrelude",
+  structure: null,
+  parse(key10009) {
+    let formatted = key10009;
+    if (null !== key10009) {
+      formatted = key10009.toLowerCase();
+    }
     const self = this;
-    const tokenStart = this.scanner.tokenStart;
-    const source = this.scanner.source;
-    const charCodeAtResult = source.charCodeAt(this.scanner.tokenStart);
-    if (62 !== charCodeAtResult) {
-      if (43 !== charCodeAtResult) {
-        if (126 !== charCodeAtResult) {
-          if (47 === charCodeAtResult) {
-            self.scanner.next();
-            let tmp5 = self.scanner.tokenType === Ident;
-            if (tmp5) {
-              const scanner = self.scanner;
-              tmp5 = false !== scanner.lookupValue(0, "deep");
-            }
-            if (!tmp5) {
-              self.error("Identifier `deep` is expected");
-            }
-            self.scanner.next();
-            const scanner2 = self.scanner;
-            if (!scanner2.isDelim(47)) {
-              self.error("Solidus is expected");
-            }
-            self.scanner.next();
-            const iter = self.scanner;
-            const iter2 = self.scanner;
-            const iter3 = self.scanner;
-          } else {
-            self.error("Combinator is expected");
-          }
-        }
-        const obj = { type: "Combinator", loc: self.getLocation(tokenStart, self.scanner.tokenStart), name: null };
-        const scanner3 = self.scanner;
-        obj.name = scanner3.substrToCursor(tokenStart);
-        return obj;
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const atrule = this.atrule;
+    if (atrule.hasOwnProperty(formatted)) {
+      if (typeof self.atrule[formatted].prelude === "function") {
+        const prelude = self.atrule[formatted].prelude;
+        const call = prelude.call;
+        typeof call === "unknown" ? prelude() : call(self);
       }
     }
-    self.scanner.next();
-    const iter4 = self.scanner;
+    let sequence = self.readSequence(self.scope.AtrulePrelude);
+    const scanner2 = self.scanner;
+    scanner2.skipSC();
+    let tmp6 = true !== self.scanner.eof;
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== LeftCurlyBracket;
+    }
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== Semicolon;
+    }
+    if (tmp6) {
+      self.error("Semicolon or block is expected");
+    }
+    if (null === sequence) {
+      sequence = self.createList();
+    }
+    const element = { type: "AtrulePrelude", loc: self.getLocationFromList(sequence), children: sequence };
+    return element;
   },
-  generate(name) {
-    this.chunk(name.name);
-  }
+  generate(arg0) {
+    this.children(arg0);
+  },
+  walkContext: "atrulePrelude"
 };
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

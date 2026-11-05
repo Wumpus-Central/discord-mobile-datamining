@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zdGFnZV9jaGFubmVscw==", scales: [1], hash: "e917bbc0ce83e446d747ae7376398628", name: "bg.messages.e917bbc0ce83e446d747ae7376398628.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_panel/native/dock", scales: [1], hash: "65095ba6d955d6a7f6be6c1848cc2ff9", name: "VoicePanelDock.compiled.messages", type: "jsona" });

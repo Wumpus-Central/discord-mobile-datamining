@@ -1,49 +1,40 @@
 // === Module 16430: ? ===
 
 // Module 16430
-import _mod16374 from "module_16374" /* 16374 */;
-import _mod16399 from "module_16399" /* 16399 */;
-import _mod16427 from "module_16427" /* 16427 */;
+import _mod16391 from "module_16391" /* 16391 */;
+import _mod16393 from "module_16393" /* 16393 */;
+import _mod16409 from "module_16409" /* 16409 */;
 import _mod16431 from "module_16431" /* 16431 */;
+import _mod16432 from "module_16432" /* 16432 */;
 
+let closure_2 = _mod16393([].push);
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod16399(value)) {
-    _mod16431(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
+export default (arg0, arg1) => {
+  const tmp = _mod16391(arg0);
+  items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod16409;
+    let tmp14Result = tmp14(_mod16431, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod16409(tmp, key10010);
+    }
+    if (!tmp2) {
+      continue;
     } else {
-      _mod16374(arg1, value);
+      let tmp4 = closure_2(items, key10010);
+      continue;
     }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
+    continue;
+  }
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod16409(tmp, tmp7)) {
+      let tmp5Result = _mod16432;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
       }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod16427.f(arg0, arg1, obj2);
-        const tmp3Result = _mod16427;
-      }
-    } catch (err) {
     }
   }
-  return arg0;
+  return items;
 };

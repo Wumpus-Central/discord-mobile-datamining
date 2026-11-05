@@ -1,52 +1,40 @@
 // === Module 13316: ? ===
 
 // Module 13316
-import _mod13274 from "module_13274" /* 13274 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 13279 */;
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 13289 */;
-import _mod13302 from "module_13302" /* 13302 */;
+import _mod13288 from "module_13288" /* 13288 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function setMeasurement(arg0, arg1, arg2) {
-  if (activeSpan === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
+export function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
+  if (arg2 === undefined) {
+    fn = function t() {
+
+    };
   }
-  let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-  }
-  if (rootSpan) {
-    if (_mod13302.DEBUG_BUILD) {
-      const logger = _mod13274.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
-    }
-    const obj2 = {};
-    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj2);
-  }
-}
-export function timedEventsToMeasurements(arr) {
-  if (arr) {
-    if (0 !== arr.length) {
-      let obj = {};
-      const item = arr.forEach((attributes) => {
-        const tmp = attributes.attributes || {};
-        const tmp2 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "string";
-        if (typeof tmp2 === "string") {
-          tmp4 = typeof tmp3 === "number";
-        }
-        if (tmp4) {
-          obj = { value: tmp3, unit: tmp2 };
-          obj[attributes.name] = obj;
-        }
-      });
-      return obj;
-    }
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then((result) => {
+          closure_1();
+          return result;
+        }, (arg0) => {
+          closure_0(arg0);
+          closure_1();
+          throw arg0;
+        });
+      } else {
+        fn();
+        return promise;
+      }
+      obj = _mod13288;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
   }
 }

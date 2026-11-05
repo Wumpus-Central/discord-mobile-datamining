@@ -1,20 +1,23 @@
 // === Module 16414: ? ===
 
 // Module 16414
-import _mod16380 from "module_16380" /* 16380 */;
-import _mod16401 from "module_16401" /* 16401 */;
-import f2 from "f" /* 16415 */;
-import _mod16425 from "module_16425" /* 16425 */;
-import _mod16426 from "module_16426" /* 16426 */;
+import _mod16386 from "module_16386" /* 16386 */;
+import _mod16412 from "module_16412" /* 16412 */;
 
-let closure_2 = _mod16380([].concat);
 
-export default _mod16401("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f2.f(_mod16425(arg0));
-  const f = _mod16426.f;
-  let tmp2 = fResult;
-  if (f) {
-    tmp2 = closure_2(fResult, f(arg0));
+export default (arg0, arg1) => {
+  if (arguments.length < 2) {
+    const tmp7 = _mod16386[arg0];
+    let tmp8;
+    if (_mod16412(tmp7)) {
+      tmp8 = tmp7;
+    }
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod16386[arg0];
+    if (tmp3) {
+      tmp3 = _mod16386[arg0][arg1];
+    }
   }
-  return tmp2;
-});
+  return tmp3;
+};

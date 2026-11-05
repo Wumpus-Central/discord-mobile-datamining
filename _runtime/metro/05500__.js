@@ -1,135 +1,102 @@
 // === Module 5500: ? ===
 
 // Module 5500
-import tagMessage from "tagMessage" /* 5432 */;
-import validateHitSlop from "validateHitSlop" /* 5460 */;
-import reanimatedWrapper from "reanimatedWrapper" /* 5472 */;
-import reanimatedUtils from "reanimatedUtils" /* 5488 */;
-import allowedNativeProps2 from "allowedNativeProps" /* 5489 */;
-import eventUtils from "eventUtils" /* 5501 */;
-import _slicedToArray from "module_32" /* 32 */;
 
-require = fn;
-function resolveInternalConfigProps(disableReanimated) {
-  if (tmp3) {
-    disableReanimated.disableReanimated = true;
-  }
-  let useAnimated = disableReanimated.useAnimated;
-  if (!useAnimated) {
-    useAnimated = eventUtils.isNativeAnimatedEvent(disableReanimated.onUpdate);
-    const tmpResult = eventUtils;
-  }
-  disableReanimated.dispatchesAnimatedEvents = useAnimated;
-  if (disableReanimated.dispatchesAnimatedEvents) {
-    disableReanimated.disableReanimated = true;
-  }
-  disableReanimated = disableReanimated.disableReanimated;
-  let result = !disableReanimated;
-  if (!disableReanimated) {
-    result = undefined !== reanimatedWrapper.Reanimated;
-  }
-  if (result) {
-    result = reanimatedUtils.hasWorkletEventHandlers(disableReanimated);
-    const tmpResult3 = reanimatedUtils;
-  }
-  if (result) {
-    result = !disableReanimated.dispatchesAnimatedEvents;
-  }
-  disableReanimated.shouldUseReanimatedDetector = result;
-  tmp3 = tagMessage.isTestEnv() && undefined === disableReanimated.disableReanimated;
-  disableReanimated.needsPointerData = eventUtils.shouldHandleTouchEvents(disableReanimated);
-  const tmpResult4 = eventUtils;
+export function isComposedGesture(gesture) {
+  return "handlerTags" in gesture;
 }
-const useMemo = fn(19).useMemo;
-const map = new Map();
-function DEFAULT_PROPS_TRANSFORMER(arg0) {
-  return arg0;
-}
-function isGestureEnabled(gestures) {
-  if (obj.isComposedGesture(gestures)) {
-    gestures = gestures.gestures;
-    let someResult = gestures.some(isGestureEnabled);
-  } else {
-    someResult = false !== reanimatedUtils.maybeUnpackValue(gestures.config.enabled);
-    const tmpResult = reanimatedUtils;
-  }
-  return someResult;
-}
-
-export { isGestureEnabled };
-export { resolveInternalConfigProps };
-export function prepareConfigForNativeSide(c0, shouldUseReanimatedDetector) {
-  const result = allowedNativeProps2.applyProductionTestIDFilter();
-  shouldUseReanimatedDetector = shouldUseReanimatedDetector.shouldUseReanimatedDetector;
-  if (shouldUseReanimatedDetector) {
-    shouldUseReanimatedDetector = !reanimatedUtils.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
-    const tmp2Result = reanimatedUtils;
-  }
-  const obj2 = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
-  const PropsWhiteLists = allowedNativeProps2.PropsWhiteLists;
-  let EMPTY_WHITE_LIST = PropsWhiteLists.get(c0);
-  if (EMPTY_WHITE_LIST == null) {
-    EMPTY_WHITE_LIST = allowedNativeProps2.EMPTY_WHITE_LIST;
-  }
-  const entries = Object.entries(shouldUseReanimatedDetector);
-  while (tmp11 !== undefined) {
-    [first, tmp17] = tmp12;
-    let tmp16 = first;
-    let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
-    if (!allowedNativeProps.has(first)) {
-      if (!EMPTY_WHITE_LIST.has(tmp16)) {
-        let PropsToFilter = allowedNativeProps2.PropsToFilter;
-        if (PropsToFilter.has(tmp16)) {
-          continue;
+export function prepareRelations(config, handlerTag) {
+  const simultaneousWith1 = config.simultaneousWith;
+  closure_0 = handlerTag;
+  if (simultaneousWith1) {
+    const _Array = Array;
+    if (Array.isArray(simultaneousWith1)) {
+      const item = simultaneousWith1.forEach(function processSingleGesture(externalSimultaneousHandlers) {
+        if ("handlerTags" in externalSimultaneousHandlers) {
+          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
         } else {
-          let _console = console;
-          let tmp19Result = tagMessage;
-          let _HermesInternal = HermesInternal;
-          let str = "";
-          let str2 = " is not a valid property for ";
-          let str3 = " and will be ignored.";
-          let warnResult = console.warn(tmp19Result.tagMessage("" + tmp16 + " is not a valid property for " + c0 + " and will be ignored."));
-          continue;
+          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
         }
-        continue;
-      }
-    }
-    let tmp19Result3 = reanimatedUtils;
-    let maybeUnpackValueResult = tmp19Result3.maybeUnpackValue(tmp17);
-    if ("hitSlop" === tmp16) {
-      let tmp19Result4 = validateHitSlop;
-      let normalizeHitSlopResult = tmp19Result4.normalizeHitSlop(maybeUnpackValueResult);
+        if (!prop.includes(closure_0)) {
+          prop.push(closure_0);
+        }
+      });
     } else {
-      normalizeHitSlopResult = maybeUnpackValueResult;
-    }
-    obj2[tmp16] = normalizeHitSlopResult;
-  }
-  return obj2;
-}
-export function useClonedAndRemappedConfig(gestureHandlerProps) {
-  closure_0 = gestureHandlerProps;
-  let tmp = map;
-  if (map === undefined) {
-    tmp = map;
-  }
-  closure_1 = tmp;
-  let tmp2 = transformHoverProps;
-  if (transformHoverProps === undefined) {
-    tmp2 = DEFAULT_PROPS_TRANSFORMER;
-  }
-  closure_2 = tmp2;
-  items = [gestureHandlerProps, tmp, tmp2];
-  return useMemo(() => {
-    const obj = {};
-    const merged = Object.assign(closure_0);
-    const item = closure_1.forEach((item, index) => {
-      if (index in obj) {
-        obj[item] = obj[index];
-        delete tmp[tmp2];
+      if ("handlerTags" in simultaneousWith1) {
+        let prop = simultaneousWith1.externalSimultaneousHandlers;
+      } else {
+        prop = simultaneousWith1.gestureRelations.simultaneousHandlers;
       }
-    });
-    const tmp3 = closure_2(obj);
-    resolveInternalConfigProps(tmp3);
-    return tmp3;
-  }, items);
+      if (!prop.includes(handlerTag)) {
+        prop.push(handlerTag);
+      }
+    }
+  }
+  const simultaneousWith = config.simultaneousWith;
+  if (simultaneousWith) {
+    const _Array2 = Array;
+    if (Array.isArray(simultaneousWith)) {
+      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
+        if ("handlerTags" in handlerTags) {
+          handlerTags = handlerTags.handlerTags;
+        } else {
+          handlerTags = [];
+          handlerTags[0] = handlerTags.handlerTag;
+        }
+        return handlerTags;
+      });
+    } else if ("handlerTags" in simultaneousWith) {
+      flatMapResult = simultaneousWith.handlerTags;
+    } else {
+      flatMapResult = [simultaneousWith.handlerTag];
+    }
+  } else {
+    const obj = { simultaneousHandlers: [], waitFor: null, blocksHandlers: null };
+    const requireToFail = config.requireToFail;
+    if (requireToFail) {
+      const _Array3 = Array;
+      if (Array.isArray(requireToFail)) {
+        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
+          if ("handlerTags" in handlerTags) {
+            handlerTags = handlerTags.handlerTags;
+          } else {
+            handlerTags = [];
+            handlerTags[0] = handlerTags.handlerTag;
+          }
+          return handlerTags;
+        });
+      } else if ("handlerTags" in requireToFail) {
+        flatMapResult1 = requireToFail.handlerTags;
+      } else {
+        flatMapResult1 = [requireToFail.handlerTag];
+      }
+    } else {
+      obj.waitFor = [];
+      const block = config.block;
+      if (block) {
+        const _Array4 = Array;
+        if (Array.isArray(block)) {
+          let flatMapResult2 = block.flatMap((handlerTags) => {
+            if ("handlerTags" in handlerTags) {
+              handlerTags = handlerTags.handlerTags;
+            } else {
+              handlerTags = [];
+              handlerTags[0] = handlerTags.handlerTag;
+            }
+            return handlerTags;
+          });
+        } else if ("handlerTags" in block) {
+          flatMapResult2 = block.handlerTags;
+        } else {
+          flatMapResult2 = [block.handlerTag];
+        }
+      } else {
+        obj.blocksHandlers = [];
+        return obj;
+      }
+    }
+  }
+}
+export function containsDuplicates(flatMapResult1) {
+  return new Set(flatMapResult1).size !== flatMapResult1.length;
 }

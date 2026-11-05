@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/virtual_currency/native/orb_wallet/svgs", width: 50, height: 37, scales: [1], hash: "2e363b0731271ecec5e35c52d433340f", name: "claim_in_shop_graphic", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "648b6791176add4ac6a2018a27641a15", name: "SubscriptionIcon", type: "png" });

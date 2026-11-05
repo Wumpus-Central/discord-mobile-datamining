@@ -1,7 +1,7 @@
 // === Module 12495: ? ===
 
 // Module 12495
-import _mod12476 from "module_12476" /* 12476 */;
+import _mod12483 from "module_12483" /* 12483 */;
 
 const self = this;
 let self2 = this;
@@ -57,9 +57,9 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         const obj = { localeError: null };
-        const obj2 = { string: { unit: "merkki\u00E4", subject: "merkkijonon" }, file: { unit: "tavua", subject: "tiedoston" }, array: { unit: "alkiota", subject: "listan" }, set: { unit: "alkiota", subject: "joukon" }, number: { unit: "", subject: "luvun" }, bigint: { unit: "", subject: "suuren kokonaisluvun" }, int: { unit: "", subject: "kokonaisluvun" }, date: { unit: "", subject: "p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4n" } };
-        closure_1 = { regex: "s\u00E4\u00E4nn\u00F6llinen lauseke", email: "s\u00E4hk\u00F6postiosoite", url: "URL-osoite", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-aikaleima", date: "ISO-p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4", time: "ISO-aika", duration: "ISO-kesto", ipv4: "IPv4-osoite", ipv6: "IPv6-osoite", cidrv4: "IPv4-alue", cidrv6: "IPv6-alue", base64: "base64-koodattu merkkijono", base64url: "base64url-koodattu merkkijono", json_string: "JSON-merkkijono", e164: "E.164-luku", jwt: "JWT", template_literal: "templaattimerkkijono" };
-        closure_2 = { nan: "NaN" };
+        const obj2 = { string: { unit: "znak\u016F", verb: "m\u00EDt" }, file: { unit: "bajt\u016F", verb: "m\u00EDt" }, array: { unit: "prvk\u016F", verb: "m\u00EDt" }, set: { unit: "prvk\u016F", verb: "m\u00EDt" } };
+        closure_1 = { regex: "regul\u00E1rn\u00ED v\u00FDraz", email: "e-mailov\u00E1 adresa", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "datum a \u010Das ve form\u00E1tu ISO", date: "datum ve form\u00E1tu ISO", time: "\u010Das ve form\u00E1tu ISO", duration: "doba trv\u00E1n\u00ED ISO", ipv4: "IPv4 adresa", ipv6: "IPv6 adresa", cidrv4: "rozsah IPv4", cidrv6: "rozsah IPv6", base64: "\u0159et\u011Bzec zak\u00F3dovan\u00FD ve form\u00E1tu base64", base64url: "\u0159et\u011Bzec zak\u00F3dovan\u00FD ve form\u00E1tu base64url", json_string: "\u0159et\u011Bzec ve form\u00E1tu JSON", e164: "\u010D\u00EDslo E.164", jwt: "JWT", template_literal: "vstup" };
+        closure_2 = { nan: "NaN", number: "\u010D\u00EDslo", string: "\u0159et\u011Bzec", function: "funkce", array: "pole" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -68,103 +68,125 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp35 = closure_2[parsedTypeResult];
-              if (tmp35 == null) {
-                tmp35 = parsedTypeResult;
+              let tmp49 = closure_2[parsedTypeResult];
+              if (tmp49 == null) {
+                tmp49 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
-                const _HermesInternal15 = HermesInternal;
-                let combined = "Virheellinen tyyppi: odotettiin instanceof " + code.expected + ", oli " + tmp35;
+                const _HermesInternal17 = HermesInternal;
+                let combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no instanceof " + code.expected + ", obdr\u017Eeno " + tmp49;
               } else {
-                const _HermesInternal14 = HermesInternal;
-                combined = "Virheellinen tyyppi: odotettiin " + expected + ", oli " + tmp35;
+                const _HermesInternal16 = HermesInternal;
+                combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no " + expected + ", obdr\u017Eeno " + tmp49;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
-                const _HermesInternal13 = HermesInternal;
-                let combined1 = "Virheellinen sy\u00F6te: t\u00E4ytyy olla " + closure_2.stringifyPrimitive(code.values[0]);
+                const _HermesInternal15 = HermesInternal;
+                let combined1 = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
-                const _HermesInternal12 = HermesInternal;
-                combined1 = "Virheellinen valinta: t\u00E4ytyy olla yksi seuraavista: " + closure_2.joinValues(code.values, "|");
+                const _HermesInternal14 = HermesInternal;
+                combined1 = "Neplatn\u00E1 mo\u017Enost: o\u010Dek\u00E1v\u00E1na jedna z hodnot " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str28 = "<";
+              let str27 = "<";
               if (code.inclusive) {
-                str28 = "<=";
+                str27 = "<=";
               }
-              let tmp20 = obj2[code.origin];
-              if (tmp20 == null) {
-                tmp20 = null;
+              let tmp28 = obj2[code.origin];
+              if (tmp28 == null) {
+                tmp28 = null;
               }
-              if (tmp20) {
-                const _HermesInternal11 = HermesInternal;
-                let trimmed = "Liian suuri: " + tmp20.subject + " t\u00E4ytyy olla " + str28 + code.maximum.toString() + " " + tmp20.unit.trim();
-                const str35 = "Liian suuri: " + tmp20.subject + " t\u00E4ytyy olla " + str28 + code.maximum.toString() + " " + tmp20.unit;
+              let str28 = code.origin;
+              if (tmp28) {
+                if (str28 == null) {
+                  str28 = "hodnota";
+                }
+                const str1 = code.maximum.toString();
+                let str34 = tmp28.unit;
+                if (str34 == null) {
+                  str34 = "prvk\u016F";
+                }
+                const _HermesInternal13 = HermesInternal;
+                let combined2 = "Hodnota je p\u0159\u00EDli\u0161 velk\u00E1: " + str28 + " mus\u00ED m\u00EDt " + str27 + str1 + " " + str34;
               } else {
-                const _HermesInternal10 = HermesInternal;
-                trimmed = "Liian suuri: arvon t\u00E4ytyy olla " + str28 + code.maximum.toString();
+                let str29 = str28;
+                if (str28 == null) {
+                  str29 = "hodnota";
+                }
+                const _HermesInternal12 = HermesInternal;
+                combined2 = "Hodnota je p\u0159\u00EDli\u0161 velk\u00E1: " + str29 + " mus\u00ED b\u00FDt " + str27 + code.maximum.toString();
               }
-              return trimmed;
+              return combined2;
             case "too_small":
-              let str20 = ">";
+              let str16 = ">";
               if (code.inclusive) {
-                str20 = ">=";
+                str16 = ">=";
               }
-              let tmp13 = obj2[code.origin];
-              if (tmp13 == null) {
-                tmp13 = null;
+              let tmp15 = obj2[code.origin];
+              if (tmp15 == null) {
+                tmp15 = null;
               }
-              if (tmp13) {
-                const _HermesInternal9 = HermesInternal;
-                let trimmed1 = "Liian pieni: " + tmp13.subject + " t\u00E4ytyy olla " + str20 + code.minimum.toString() + " " + tmp13.unit.trim();
-                const str27 = "Liian pieni: " + tmp13.subject + " t\u00E4ytyy olla " + str20 + code.minimum.toString() + " " + tmp13.unit;
+              let str17 = code.origin;
+              if (tmp15) {
+                if (str17 == null) {
+                  str17 = "hodnota";
+                }
+                const str48 = code.minimum.toString();
+                let str23 = tmp15.unit;
+                if (str23 == null) {
+                  str23 = "prvk\u016F";
+                }
+                const _HermesInternal11 = HermesInternal;
+                let combined3 = "Hodnota je p\u0159\u00EDli\u0161 mal\u00E1: " + str17 + " mus\u00ED m\u00EDt " + str16 + str48 + " " + str23;
               } else {
-                const _HermesInternal8 = HermesInternal;
-                trimmed1 = "Liian pieni: arvon t\u00E4ytyy olla " + str20 + code.minimum.toString();
+                let str18 = str17;
+                if (str17 == null) {
+                  str18 = "hodnota";
+                }
+                const _HermesInternal10 = HermesInternal;
+                combined3 = "Hodnota je p\u0159\u00EDli\u0161 mal\u00E1: " + str18 + " mus\u00ED b\u00FDt " + str16 + code.minimum.toString();
               }
-              return trimmed1;
+              return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                let combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy alkaa \"" + code.prefix + "\"";
+                const _HermesInternal9 = HermesInternal;
+                let combined4 = "Neplatn\u00FD \u0159et\u011Bzec: mus\u00ED za\u010D\u00EDnat na \"" + code.prefix + "\"";
               } else if ("ends_with" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy loppua \"" + code.suffix + "\"";
+                const _HermesInternal8 = HermesInternal;
+                combined4 = "Neplatn\u00FD \u0159et\u011Bzec: mus\u00ED kon\u010Dit na \"" + code.suffix + "\"";
               } else if ("includes" === code.format) {
-                const _HermesInternal5 = HermesInternal;
-                combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
+                const _HermesInternal7 = HermesInternal;
+                combined4 = "Neplatn\u00FD \u0159et\u011Bzec: mus\u00ED obsahovat \"" + code.includes + "\"";
               } else if ("regex" === code.format) {
-                const _HermesInternal4 = HermesInternal;
-                combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
+                const _HermesInternal6 = HermesInternal;
+                combined4 = "Neplatn\u00FD \u0159et\u011Bzec: mus\u00ED odpov\u00EDdat vzoru " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
-                const _HermesInternal3 = HermesInternal;
-                combined2 = "Virheellinen " + format;
+                const _HermesInternal5 = HermesInternal;
+                combined4 = "Neplatn\u00FD form\u00E1t " + format;
               }
-              return combined2;
+              return combined4;
             case "not_multiple_of":
-              const _HermesInternal2 = HermesInternal;
-              return "Virheellinen luku: t\u00E4ytyy olla luvun " + code.divisor + " monikerta";
+              const _HermesInternal4 = HermesInternal;
+              return "Neplatn\u00E9 \u010D\u00EDslo: mus\u00ED b\u00FDt n\u00E1sobkem " + code.divisor;
             case "unrecognized_keys":
-              let str4 = "Tuntematon avain";
-              if (code.keys.length > 1) {
-                str4 = "Tuntemattomat avaimet";
-              }
-              const _HermesInternal = HermesInternal;
-              return "" + str4 + ": " + closure_2.joinValues(code.keys, ", ");
+              const _HermesInternal3 = HermesInternal;
+              return "Nezn\u00E1m\u00E9 kl\u00ED\u010De: " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
-              return "Virheellinen avain tietueessa";
+              const _HermesInternal2 = HermesInternal;
+              return "Neplatn\u00FD kl\u00ED\u010D v " + code.origin;
             case "invalid_union":
-              return "Virheellinen unioni";
+              return "Neplatn\u00FD vstup";
             case "invalid_element":
-              return "Virheellinen arvo joukossa";
+              const _HermesInternal = HermesInternal;
+              return "Neplatn\u00E1 hodnota v " + code.origin;
             default:
-              return "Virheellinen sy\u00F6te";
+              return "Neplatn\u00FD vstup";
           }
         };
         return obj;
@@ -172,7 +194,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod12476);
+    let closure_2 = fn(_mod12483);
     function error() {
 
     }

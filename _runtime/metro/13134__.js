@@ -1,86 +1,51 @@
 // === Module 13134: ? ===
 
 // Module 13134
-import _mod13055 from "module_13055" /* 13055 */;
+import _mod13062 from "module_13062" /* 13062 */;
+import _mod13106 from "module_13106" /* 13106 */;
 
-const Function = _mod13055.TYPE.Function;
-const Url = _mod13055.TYPE.Url;
-const RightParenthesis = _mod13055.TYPE.RightParenthesis;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod13106.mode.leftCurlyBracket, true);
+}
+function consumePrelude() {
+  const self = this;
+  const SelectorListResult = this.SelectorList();
+  let tmp2 = "Raw" !== SelectorListResult.type;
+  if (tmp2) {
+    tmp2 = false === self.scanner.eof;
+  }
+  if (tmp2) {
+    tmp2 = self.scanner.tokenType !== LeftCurlyBracket;
+  }
+  if (tmp2) {
+    self.error();
+  }
+  return SelectorListResult;
+}
+const LeftCurlyBracket = _mod13062.TYPE.LeftCurlyBracket;
 
 export default {
-  name: "Url",
-  structure: { value: ["String", "Raw"] },
+  name: "Rule",
+  structure: { prelude: ["SelectorList", "Raw"], block: ["Block"] },
   parse() {
     const self = this;
-    const tokenStart = this.scanner.tokenStart;
-    const tokenType = this.scanner.tokenType;
-    if (Url === tokenType) {
-      const sum = tokenStart + 4;
-      const diff = self.scanner.tokenEnd - 1;
-      let tmp14 = sum;
-      if (sum < diff) {
-        const source3 = self.scanner.source;
-        let tmp18 = sum;
-        tmp14 = sum;
-        if (obj6.isWhiteSpace(source3.charCodeAt(sum))) {
-          const sum1 = tmp18 + 1;
-          tmp14 = sum1;
-          while (sum1 < diff) {
-            let obj2 = _mod13055;
-            let source = self.scanner.source;
-            tmp18 = sum1;
-            tmp14 = sum1;
-            if (!obj2.isWhiteSpace(source.charCodeAt(sum1))) {
-              break;
-            }
-          }
-        }
-        obj6 = _mod13055;
-      }
-      let tmp19 = diff;
-      if (tmp14 < diff) {
-        const source4 = self.scanner.source;
-        let tmp23 = diff;
-        tmp19 = diff;
-        if (obj7.isWhiteSpace(source4.charCodeAt(diff - 1))) {
-          const diff1 = tmp23 - 1;
-          tmp19 = diff1;
-          while (tmp14 < diff1) {
-            let obj3 = _mod13055;
-            let source2 = self.scanner.source;
-            tmp23 = diff1;
-            tmp19 = diff1;
-            if (!obj3.isWhiteSpace(source2.charCodeAt(diff1 - 1))) {
-              break;
-            }
-          }
-        }
-        obj7 = _mod13055;
-      }
-      const obj4 = { type: "Raw", loc: self.getLocation(tmp14, tmp19), value: self.scanner.source.substring(tmp14, tmp19) };
-      self.eat(Url);
-      let StringResult = obj4;
-    } else if (Function === tokenType) {
-      const obj = _mod13055;
-      if (!obj.cmpStr(self.scanner.source, self.scanner.tokenStart, self.scanner.tokenEnd, "url(")) {
-        self.error("Function name must be `url`");
-      }
-      self.eat(tmp26);
-      const scanner = self.scanner;
-      scanner.skipSC();
-      StringResult = self.String();
-      const scanner2 = self.scanner;
-      scanner2.skipSC();
-      self.eat(RightParenthesis);
+    const tokenIndex = this.scanner.tokenIndex;
+    if (this.parseRulePrelude) {
+      let parseWithFallbackResult = self.parseWithFallback(consumePrelude, consumeRaw);
     } else {
-      self.error("Url or Function is expected");
+      const call = consumeRaw.call;
+      if (typeof call === "unknown") {
+        parseWithFallbackResult = self.Raw(tokenIndex, _mod13106.mode.leftCurlyBracket, true);
+      } else {
+        parseWithFallbackResult = call(self, tokenIndex);
+      }
     }
-    return { type: "Url", loc: self.getLocation(tokenStart, self.scanner.tokenStart), value: StringResult };
+    const obj = { type: "Rule", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), prelude: parseWithFallbackResult, block: self.Block(true) };
+    return obj;
   },
-  generate(value) {
-    this.chunk("url");
-    this.chunk("(");
-    this.node(value.value);
-    this.chunk(")");
-  }
+  generate(prelude) {
+    this.node(prelude.prelude);
+    this.node(prelude.block);
+  },
+  walkContext: "rule"
 };

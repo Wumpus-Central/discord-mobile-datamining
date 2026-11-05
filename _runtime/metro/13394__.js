@@ -1,26 +1,26 @@
 // === Module 13394: ? ===
 
 // Module 13394
-import _mod13275 from "module_13275" /* 13275 */;
+import _mod13282 from "module_13282" /* 13282 */;
+import _mod13395 from "module_13395" /* 13395 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function vercelWaitUntil(arg0) {
-  const obj = _mod13275.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
-  if (obj) {
-    if (obj.get) {
-      if (obj.get()) {
-        let obj1 = obj.get();
+export function isBrowser() {
+  let tmp = typeof window !== "undefined";
+  if (typeof window !== "undefined") {
+    const isNodeEnvResult = _mod13395.isNodeEnv();
+    let tmp3 = !isNodeEnvResult;
+    if (isNodeEnvResult) {
+      const _process = _mod13282.GLOBAL_OBJ.process;
+      let tmp2 = _process;
+      if (tmp2) {
+        tmp2 = "renderer" === _process.type;
       }
-      let waitUntil = obj1;
-      if (obj1) {
-        waitUntil = obj1.waitUntil;
-      }
-      if (waitUntil) {
-        obj1.waitUntil(arg0);
-      }
+      tmp3 = tmp2;
     }
+    tmp = tmp3;
   }
-  obj1 = {};
+  return tmp;
 }

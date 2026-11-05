@@ -1,7 +1,7 @@
 // === Module 12503: ? ===
 
 // Module 12503
-import _mod12476 from "module_12476" /* 12476 */;
+import _mod12483 from "module_12483" /* 12483 */;
 
 const self = this;
 let self2 = this;
@@ -57,9 +57,9 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         const obj = { localeError: null };
-        const obj2 = { string: { unit: "caratteri", verb: "avere" }, file: { unit: "byte", verb: "avere" }, array: { unit: "elementi", verb: "avere" }, set: { unit: "elementi", verb: "avere" } };
-        closure_1 = { regex: "input", email: "indirizzo email", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "data e ora ISO", date: "data ISO", time: "ora ISO", duration: "durata ISO", ipv4: "indirizzo IPv4", ipv6: "indirizzo IPv6", cidrv4: "intervallo IPv4", cidrv6: "intervallo IPv6", base64: "stringa codificata in base64", base64url: "URL codificata in base64", json_string: "stringa JSON", e164: "numero E.164", jwt: "JWT", template_literal: "input" };
-        closure_2 = { nan: "NaN", number: "numero", array: "vettore" };
+        const obj2 = { string: { unit: "caract\u00E8res", verb: "avoir" }, file: { unit: "octets", verb: "avoir" }, array: { unit: "\u00E9l\u00E9ments", verb: "avoir" }, set: { unit: "\u00E9l\u00E9ments", verb: "avoir" } };
+        closure_1 = { regex: "entr\u00E9e", email: "adresse e-mail", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "date et heure ISO", date: "date ISO", time: "heure ISO", duration: "dur\u00E9e ISO", ipv4: "adresse IPv4", ipv6: "adresse IPv6", cidrv4: "plage IPv4", cidrv6: "plage IPv6", base64: "cha\u00EEne encod\u00E9e en base64", base64url: "cha\u00EEne encod\u00E9e en base64url", json_string: "cha\u00EEne JSON", e164: "num\u00E9ro E.164", jwt: "JWT", template_literal: "entr\u00E9e" };
+        closure_2 = { nan: "NaN", number: "nombre", array: "tableau" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -68,55 +68,56 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp50 = closure_2[parsedTypeResult];
-              if (tmp50 == null) {
-                tmp50 = parsedTypeResult;
+              let tmp49 = closure_2[parsedTypeResult];
+              if (tmp49 == null) {
+                tmp49 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Input non valido: atteso instanceof " + code.expected + ", ricevuto " + tmp50;
+                let combined = "Entr\u00E9e invalide : instanceof " + code.expected + " attendu, " + tmp49 + " re\u00E7u";
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Input non valido: atteso " + expected + ", ricevuto " + tmp50;
+                combined = "Entr\u00E9e invalide : " + expected + " attendu, " + tmp49 + " re\u00E7u";
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Input non valido: atteso " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Entr\u00E9e invalide : " + closure_2.stringifyPrimitive(code.values[0]) + " attendu";
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "Opzione non valida: atteso uno tra " + closure_2.joinValues(code.values, "|");
+                combined1 = "Option invalide : une valeur parmi " + closure_2.joinValues(code.values, "|") + " attendue";
               }
               return combined1;
             case "too_big":
-              let str27 = "<";
+              let str31 = "<";
               if (code.inclusive) {
-                str27 = "<=";
+                str31 = "<=";
               }
-              let tmp29 = obj2[code.origin];
-              if (tmp29 == null) {
-                tmp29 = null;
+              let tmp27 = obj2[code.origin];
+              if (tmp27 == null) {
+                tmp27 = null;
               }
-              let str28 = code.origin;
-              if (tmp29) {
-                if (str28 == null) {
-                  str28 = "valore";
+              let str32 = code.origin;
+              if (tmp27) {
+                if (str32 == null) {
+                  str32 = "valeur";
                 }
+                const verb = tmp27.verb;
                 const str1 = code.maximum.toString();
-                let str34 = tmp29.unit;
-                if (str34 == null) {
-                  str34 = "elementi";
+                let str38 = tmp27.unit;
+                if (str38 == null) {
+                  str38 = "\u00E9l\u00E9ment(s)";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Troppo grande: " + str28 + " deve avere " + str27 + str1 + " " + str34;
+                let combined2 = "Trop grand : " + str32 + " doit " + verb + " " + str31 + str1 + " " + str38;
               } else {
-                let str29 = str28;
-                if (str28 == null) {
-                  str29 = "valore";
+                let str33 = str32;
+                if (str32 == null) {
+                  str33 = "valeur";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Troppo grande: " + str29 + " deve essere " + str27 + code.maximum.toString();
+                combined2 = "Trop grand : " + str33 + " doit \u00EAtre " + str31 + code.maximum.toString();
               }
               return combined2;
             case "too_small":
@@ -128,62 +129,61 @@ if (self2) {
               if (tmp17 == null) {
                 tmp17 = null;
               }
-              ({ origin, minimum } = code);
-              const str48 = minimum.toString();
+              const origin = code.origin;
               if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Troppo piccolo: " + origin + " deve avere " + str21 + str48 + " " + tmp17.unit;
+                let combined3 = "Trop petit : " + origin + " doit " + tmp17.verb + " " + str21 + code.minimum.toString() + " " + tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Troppo piccolo: " + origin + " deve essere " + str21 + str48;
+                combined3 = "Trop petit : " + origin + " doit \u00EAtre " + str21 + code.minimum.toString();
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = "Stringa non valida: deve iniziare con \"" + code.prefix + "\"";
+                let combined4 = "Cha\u00EEne invalide : doit commencer par \"" + code.prefix + "\"";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = "Stringa non valida: deve terminare con \"" + code.suffix + "\"";
+                combined4 = "Cha\u00EEne invalide : doit se terminer par \"" + code.suffix + "\"";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = "Stringa non valida: deve includere \"" + code.includes + "\"";
+                combined4 = "Cha\u00EEne invalide : doit inclure \"" + code.includes + "\"";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Stringa non valida: deve corrispondere al pattern " + code.pattern;
+                combined4 = "Cha\u00EEne invalide : doit correspondre au mod\u00E8le " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Invalid " + format;
+                combined4 = "" + format + " invalide";
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Numero non valido: deve essere un multiplo di " + code.divisor;
+              return "Nombre invalide : doit \u00EAtre un multiple de " + code.divisor;
             case "unrecognized_keys":
-              let str4 = "e";
+              let str3 = "";
+              let str4 = "";
               if (code.keys.length > 1) {
-                str4 = "i";
+                str4 = "s";
               }
-              let str5 = "a";
               if (code.keys.length > 1) {
-                str5 = "e";
+                str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Chiav" + str4 + " non riconosciut" + str5 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "Cl\u00E9" + str4 + " non reconnue" + str3 + " : " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Chiave non valida in " + code.origin;
+              return "Cl\u00E9 invalide dans " + code.origin;
             case "invalid_union":
-              return "Input non valido";
+              return "Entr\u00E9e invalide";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Valore non valido in " + code.origin;
+              return "Valeur invalide dans " + code.origin;
             default:
-              return "Input non valido";
+              return "Entr\u00E9e invalide";
           }
         };
         return obj;
@@ -191,7 +191,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod12476);
+    let closure_2 = fn(_mod12483);
     function error() {
 
     }

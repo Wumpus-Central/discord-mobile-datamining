@@ -1,31 +1,34 @@
 // === Module 13342: ? ===
 
 // Module 13342
+import _mod13287 from "module_13287" /* 13287 */;
+import _mod13325 from "module_13325" /* 13325 */;
+import _mod13328 from "module_13328" /* 13328 */;
 
-export function isSentryRequestUrl(arr, getDsn) {
-  let dsn = getDsn;
-  if (getDsn) {
-    dsn = getDsn.getDsn();
+require = arg1;
+const dependencyMap = arg6;
+
+export function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
   }
-  let tunnel = getDsn;
-  if (getDsn) {
-    tunnel = getDsn.getOptions().tunnel;
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
   }
-  let tmp2 = dsn && arr.includes(dsn.host);
-  if (!tmp2) {
-    let flag = false;
-    if (tunnel) {
-      let substr = arr;
-      if ("/" === arr[arr.length - 1]) {
-        substr = arr.slice(0, -1);
-      }
-      let substr1 = tunnel;
-      if ("/" === tunnel[tunnel.length - 1]) {
-        substr1 = tunnel.slice(0, -1);
-      }
-      flag = substr === substr1;
-    }
-    tmp2 = flag;
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
   }
-  return tmp2;
+  if (tmp) {
+    obj.dsn = _mod13328.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod13287.dropUndefinedKeys(contexts);
+  }
+  items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod13325.createEnvelope(obj, items1);
 }

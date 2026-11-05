@@ -1,23 +1,19 @@
 // === Module 16401: ? ===
 
 // Module 16401
-import _mod16373 from "module_16373" /* 16373 */;
-import _mod16399 from "module_16399" /* 16399 */;
+import _mod16402 from "module_16402" /* 16402 */;
 
 
 export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod16373[arg0];
-    let tmp8;
-    if (_mod16399(tmp7)) {
-      tmp8 = tmp7;
+  let tmp3 = _mod16402[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
     }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = _mod16373[arg0];
-    if (tmp3) {
-      tmp3 = _mod16373[arg0][arg1];
-    }
+    _mod16402[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod16402;
   }
   return tmp3;
 };

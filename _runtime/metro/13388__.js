@@ -1,47 +1,36 @@
 // === Module 13388: ? ===
 
 // Module 13388
-import _mod13389 from "module_13389" /* 13389 */;
+import _mod13287 from "module_13287" /* 13287 */;
+import _mod13308 from "module_13308" /* 13308 */;
 
 require = arg1;
-const module = arg4;
 const dependencyMap = arg6;
-function dynamicRequire(require, arg1) {
-  return require.require(arg1);
-}
 
-export { dynamicRequire };
-export function isNodeEnv() {
-  const isBrowserBundleResult = _mod13389.isBrowserBundle();
-  if (isBrowserBundleResult) {
-    return !isBrowserBundleResult;
-  } else {
-    const _Object = Object;
-    const call = toString.call;
-    const _process = process;
-    let str = 0;
-    if (typeof process !== "undefined") {
-      str = process;
-    }
-    str = "[object process]";
-    const tmp3 = typeof call === "unknown" ? toString() : call(str);
-  }
-}
-export function loadModule(arg0) {
-  let tmp = arg1;
+export function captureFeedback(arg0) {
+  let obj = arg1;
   if (arg1 === undefined) {
-    tmp = module;
+    obj = {};
   }
-  try {
-    let tmp3 = dynamicRequire(tmp, arg0);
-    if (!tmp3) {
-      try {
-        const _HermesInternal = HermesInternal;
-        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
-      } catch (err) {
-      }
-    }
-    return tmp3;
-  } catch (err) {
+  let currentScope = arg2;
+  if (arg2 === undefined) {
+    currentScope = _mod13308.getCurrentScope();
   }
+  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
+  const obj4 = { feedback: _mod13287.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId }) };
+  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
+  obj2.contexts = obj4;
+  obj2.tags = tags;
+  let client = currentScope;
+  if (currentScope) {
+    client = currentScope.getClient();
+  }
+  if (!client) {
+    client = _mod13308.getClient();
+    const tmp3Result = _mod13308;
+  }
+  if (client) {
+    client.emit("beforeSendFeedback", obj2, obj);
+  }
+  return currentScope.captureEvent(obj2, obj);
 }

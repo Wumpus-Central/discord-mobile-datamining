@@ -1,133 +1,130 @@
 // === Module 13337: ? ===
 
 // Module 13337
-import _mod13274 from "module_13274" /* 13274 */;
-import _mod13298 from "module_13298" /* 13298 */;
-import _mod13302 from "module_13302" /* 13302 */;
-import _mod13318 from "module_13318" /* 13318 */;
-import _mod13331 from "module_13331" /* 13331 */;
-import _mod13339 from "module_13339" /* 13339 */;
+import _mod13281 from "module_13281" /* 13281 */;
+import _mod13308 from "module_13308" /* 13308 */;
+import _mod13309 from "module_13309" /* 13309 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const require = globalThis.__r;
-
-require = arg1;
-let dependencyMap = arg6;
-
-export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export function createTransport(bufferSize, arg1) {
-  _require = bufferSize;
-  dependencyMap = arg1;
-  let promiseBuffer = arg2;
-  if (arg2 === undefined) {
-    let num = bufferSize.bufferSize;
-    if (!num) {
-      num = 64;
+function setupIntegration(on, name, arg2) {
+  closure_0 = on;
+  if (arg2[name.name]) {
+    if (_mod13309.DEBUG_BUILD) {
+      const logger2 = _mod13281.logger;
+      const _HermesInternal2 = HermesInternal;
+      logger2.log("Integration skipped because it was already installed: " + name.name);
     }
-    promiseBuffer = require("module_13338").makePromiseBuffer(num);
-    let obj = require("module_13338");
+  } else {
+    arg2[name.name] = name;
+    if (tmp) {
+      name.setupOnce();
+      items.push(name.name);
+    }
+    if (tmp4) {
+      name.setup(on);
+    }
+    if (typeof name.preprocessEvent === "function") {
+      const preprocessEvent = name.preprocessEvent;
+      closure_1 = preprocessEvent.bind(name);
+      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
+    }
+    if (typeof name.processEvent === "function") {
+      const processEvent = name.processEvent;
+      closure_2 = processEvent.bind(name);
+      const _Object = Object;
+      const obj = { id: name.name };
+      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
+    }
+    if (_mod13309.DEBUG_BUILD) {
+      const logger = _mod13281.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Integration installed: " + name.name);
+    }
+    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
+    tmp4 = name.setup && typeof name.setup === "function";
   }
-  closure_3 = {};
-  return {
-    send(arg0) {
-      items = [];
-      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        const result = _mod13318.envelopeItemTypeToDataCategory(arg1);
-        if (obj2.isRateLimited(closure_3, result)) {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp6;
-            if (Array.isArray(arg0)) {
-              tmp6 = arg0[1];
-            }
-            const tmp4 = tmp6;
-          }
-          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
-        } else {
-          items.push(arg0);
-        }
-        obj2 = _mod13339;
-      });
-      if (0 === items.length) {
-        return bufferSize(tmp2[3]).resolvedSyncPromise({});
-      } else {
-        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
-        function recordEnvelopeLoss(arg0) {
+}
+let items = [];
 
-        }
-        const tmpResult2 = bufferSize(tmp2[1]);
-        return recordEnvelopeLoss.add(() => {
-          const obj = { body: _mod13318.serializeEnvelope(dependencyMap) };
-          return dependencyMap(obj).then((statusCode) => {
-            let DEBUG_BUILD = undefined !== statusCode.statusCode;
-            if (DEBUG_BUILD) {
-              let tmp = statusCode.statusCode < 200;
-              if (!tmp) {
-                tmp = statusCode.statusCode >= 300;
-              }
-              DEBUG_BUILD = tmp;
-            }
-            if (DEBUG_BUILD) {
-              DEBUG_BUILD = items(13302).DEBUG_BUILD;
-            }
-            if (DEBUG_BUILD) {
-              const logger = items(13274).logger;
-              const _HermesInternal = HermesInternal;
-              logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
-            }
-            closure_3 = items(13339).updateRateLimits(closure_3, statusCode);
-            return statusCode;
-          }, (arg0) => {
-            if (typeof recordEnvelopeLoss === "function") {
-              const network_error = "network_error";
-              closure_0(13318).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              throw arg0;
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
-        }).then((result) => result, (arg0) => {
-          if (arg0 instanceof _mod13331.SentryError) {
-            if (_mod13302.DEBUG_BUILD) {
-              const logger = _mod13274.logger;
-              logger.error("Skipped sending event because buffer is full.");
-            }
-            if (typeof recordEnvelopeLoss === "function") {
-              const queue_overflow = "queue_overflow";
-              _mod13318.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              const tmpResult = _mod13318;
-              return _mod13298.resolvedSyncPromise({});
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          } else {
-            throw arg0;
-          }
-        });
-      }
-      let obj = bufferSize(dependencyMap[1]);
-    },
-    flush(arg0) {
-      return promiseBuffer.drain(arg0);
+export function addIntegration(name) {
+  const client = _mod13308.getClient();
+  if (client) {
+    client.addIntegration(name);
+  } else if (_mod13309.DEBUG_BUILD) {
+    const logger = _mod13281.logger;
+    const _HermesInternal = HermesInternal;
+    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
+  }
+}
+export function afterSetupIntegrations(arg0, arg1) {
+  const iter = arg1[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let obj = nextResult;
+    if (nextResult) {
+      let afterAllSetup = obj.afterAllSetup;
     }
-  };
+    if (nextResult) {
+      let afterAllSetupResult = obj.afterAllSetup(arg0);
+    }
+    continue;
+  }
+}
+export function defineIntegration(arg0) {
+  return arg0;
+}
+export function getIntegrationsToSetup(defaultIntegrations) {
+  const arr = defaultIntegrations.defaultIntegrations || [];
+  const integrations = defaultIntegrations.integrations;
+  const item = arr.forEach((item) => {
+    item.isDefaultInstance = true;
+  });
+  if (Array.isArray(integrations)) {
+    items = [];
+    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
+    let arr2 = items;
+  } else {
+    arr2 = arr;
+    if (typeof integrations === "function") {
+      const integrationsResult = integrations(arr);
+      const _Array = Array;
+      let tmp2 = integrationsResult;
+      if (!Array.isArray(integrationsResult)) {
+        const items1 = [integrationsResult];
+        tmp2 = items1;
+      }
+      arr2 = tmp2;
+    }
+  }
+  const item1 = arr2.forEach((name) => {
+    name = name.name;
+    let isDefaultInstance = tmp2;
+    if (obj[name]) {
+      isDefaultInstance = !tmp2.isDefaultInstance;
+    }
+    if (isDefaultInstance) {
+      isDefaultInstance = name.isDefaultInstance;
+    }
+    if (!isDefaultInstance) {
+      obj[name] = name;
+    }
+  });
+  const values = Object.values({});
+  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
+  if (findIndexResult > -1) {
+    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+  }
+  return values;
+}
+export const installedIntegrations = items;
+export { setupIntegration };
+export function setupIntegrations(arg0, arr) {
+  closure_0 = arg0;
+  const obj = {};
+  const item = arr.forEach((item) => {
+    if (item) {
+      setupIntegration(closure_0, item, obj);
+    }
+  });
+  return obj;
 }

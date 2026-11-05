@@ -1,98 +1,138 @@
 // === Module 10590: ? ===
 
 // Module 10590
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10505 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10512 */;
-import _mod10586 from "module_10586" /* 10586 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod10540 from "module_10540" /* 10540 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10547 */;
+import _mod10591 from "module_10591" /* 10591 */;
+import _mod10593 from "module_10593" /* 10593 */;
+import _mod10594 from "module_10594" /* 10594 */;
+import _mod10595 from "module_10595" /* 10595 */;
+import _mod10596 from "module_10596" /* 10596 */;
+import _mod10597 from "module_10597" /* 10597 */;
+import _mod10598 from "module_10598" /* 10598 */;
 
-const PTMonthNameLittleEndianParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+const require = globalThis.__r;
+
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
   }
-}
-const regExp = new RegExp("([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?(?:\\s*(?:desde|de|\\-|\\\u2013|ao?|\\s)\\s*([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(" + repeatedTimeunitPattern.matchAnyPattern(_mod10586.MONTH_DICTIONARY) + ")(?:\\s*(?:de|,)?\\s*(" + _mod10586.YEAR_PATTERN + "))?(?=\\W|$)", "i");
-class PTMonthNameLittleEndianParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, PTMonthNameLittleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(PTMonthNameLittleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = true;
   }
+  const obj = { parsers: null, refiners: null };
+  items = [new regExp.default(flag2), , , ];
+  const _default = new regExp.default(flag2);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default3 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), ];
+  const _default4 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-_inherits(PTMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.push(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.push(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+const regExp = fn(_mod10540);
+fn(_mod10591);
+fn(_mod10593);
+fn(_mod10594);
+fn(_mod10595);
+fn(_mod10596);
+fn(_mod10597);
+const _isNativeReflectConstruct = fn(_mod10598);
+const configuration = createConfiguration(false, true);
+let parsers = configuration.parsers;
+parsers.push(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+let obj = {
+  enumerable: true,
+  get() {
+    return require("module_10507").Chrono;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = PTMonthNameLittleEndianParser(10586).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const parsed = parseInt(index[1]);
-      if (parsed > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", parsed);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", PTMonthNameLittleEndianParser(10586).parseYear(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply("year", PTMonthNameLittleEndianParser(10506).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
-        }
-        if (index[2]) {
-          const _parseInt = parseInt;
-          const start3 = parsingResult.start;
-          const parsed1 = parseInt(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", parsed1);
-        }
-        return parsingResult;
-      }
-    }
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingResult;
   }
-];
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingComponents;
+  }
+};
+const obj4 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  }
+};
+const obj5 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  }
+};
+const obj6 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  }
+};
+parsers1.push(new _isNativeReflectConstruct.default());
+const chrono = new require("module_10507").Chrono(configuration);
+const chrono1 = new require("module_10507").Chrono(createConfiguration(true));
 
-export default _createClass(PTMonthNameLittleEndianParser, items);
+export function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+}
+export function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+}
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("module_10507").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

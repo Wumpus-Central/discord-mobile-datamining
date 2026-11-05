@@ -1,126 +1,159 @@
 // === Module 13328: ? ===
 
 // Module 13328
-import _mod13321 from "module_13321" /* 13321 */;
+import _mod13281 from "module_13281" /* 13281 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function getEnvelopeEndpointWithUrlEncodedAuth(protocol, tunnel, name) {
-  let combined1 = tunnel;
-  if (!tunnel) {
-    let str2 = "";
-    if (protocol.protocol) {
-      const _HermesInternal = HermesInternal;
-      str2 = "" + protocol.protocol + ":";
+function dsnFromString(arg0) {
+  closure_0 = arg0;
+  const match = re3.exec(arg0);
+  if (match) {
+    const tmp5 = _slicedToArray(match.slice(1), 6);
+    let str = tmp5[1];
+    let str3 = "";
+    if (undefined !== tmp5[2]) {
+      str3 = tmp6;
     }
     let str4 = "";
-    if (protocol.port) {
-      const _HermesInternal2 = HermesInternal;
-      str4 = ":" + protocol.port;
+    if (undefined !== tmp5[3]) {
+      str4 = tmp7;
     }
-    const host = protocol.host;
-    let str6 = "";
-    if (protocol.path) {
-      const _HermesInternal3 = HermesInternal;
-      str6 = "/" + protocol.path;
-    }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const obj = { sentry_version: "7" };
-    const combined = "" + "" + str2 + "//" + host + str4 + str6 + "/api/" + protocol.projectId + "/envelope/";
-    if (protocol.publicKey) {
-      obj.sentry_key = protocol.publicKey;
-    }
-    if (name) {
-      const _HermesInternal6 = HermesInternal;
-      obj.sentry_client = "" + name.name + "/" + name.version;
-    }
-    const _URLSearchParams = URLSearchParams;
-    const str13 = new URLSearchParams(obj);
-    const _HermesInternal7 = HermesInternal;
-    combined1 = "" + combined + "?" + str13.toString();
-  }
-  return combined1;
-}
-export function getReportDialogEndpoint(protocol, user) {
-  const url = _mod13321.makeDsn(protocol);
-  if (url) {
-    let str = "";
-    if (url.protocol) {
-      const _HermesInternal = HermesInternal;
-      str = "" + url.protocol + ":";
-    }
-    let str3 = "";
-    if (url.port) {
-      const _HermesInternal2 = HermesInternal;
-      str3 = ":" + url.port;
-    }
-    const host = url.host;
     let str5 = "";
-    if (url.path) {
-      const _HermesInternal3 = HermesInternal;
-      str5 = "/" + url.path;
+    if (undefined !== tmp5[4]) {
+      str5 = tmp8;
     }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
-    const _HermesInternal6 = HermesInternal;
-    let combined1 = "dsn=" + _mod13321.dsnToString(url);
-    let tmp16 = combined1;
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      tmp16 = combined1;
-      while (keys[tmp] !== undefined) {
-        if ("dsn" === tmp19) {
-          continue;
-        } else {
-          combined1 = tmp18;
-          if ("onClose" === tmp19) {
-            continue;
-          } else {
-            if ("user" === tmp19) {
-              user = user.user;
-              combined1 = tmp18;
-              if (!user) {
-                continue;
-              } else {
-                let sum = tmp18;
-                if (user.name) {
-                  let _encodeURIComponent3 = encodeURIComponent;
-                  let _HermesInternal8 = HermesInternal;
-                  sum = tmp18 + "&name=" + encodeURIComponent(user.name);
-                }
-                combined1 = sum;
-                if (!user.email) {
-                  continue;
-                } else {
-                  let _encodeURIComponent4 = encodeURIComponent;
-                  let _HermesInternal9 = HermesInternal;
-                  combined1 = sum + "&email=" + encodeURIComponent(user.email);
-                  continue;
-                }
-                continue;
-              }
-              continue;
-            } else {
-              let _encodeURIComponent = encodeURIComponent;
-              let _encodeURIComponent2 = encodeURIComponent;
-              let encodeURIComponentResult = encodeURIComponent(tmp19);
-              let _HermesInternal7 = HermesInternal;
-              combined1 = tmp18 + "&" + encodeURIComponentResult + "=" + encodeURIComponent(user[tmp19]);
-              continue;
-            }
-            continue;
-          }
-          continue;
-        }
-        continue;
+    let str6 = "";
+    if (undefined !== tmp5[5]) {
+      str6 = tmp9;
+    }
+    const parts = str6.split("/");
+    let str8 = str6;
+    let str9 = "";
+    if (parts.length > 1) {
+      const substr = parts.slice(0, -1);
+      str9 = substr.join("/");
+      str8 = parts.pop();
+    }
+    let first = str8;
+    if (str8) {
+      const match1 = str8.match(/^\d+/);
+      first = str8;
+      if (match1) {
+        first = match1[0];
       }
     }
-    const _HermesInternal10 = HermesInternal;
-    return "" + combined + "?" + tmp16;
+    const url = { protocol: tmp5[0], publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
+    if (!str) {
+      str = "";
+    }
+    url.publicKey = str;
+    if (!str3) {
+      str3 = "";
+    }
+    url.pass = str3;
+    url.host = str4;
+    if (!str5) {
+      str5 = "";
+    }
+    url.port = str5;
+    if (!str9) {
+      str9 = "";
+    }
+    url.path = str9;
+    url.projectId = first;
+    return url;
   } else {
-    return "";
+    _mod13281.consoleSandbox(() => {
+      console.error("Invalid Sentry Dsn: " + closure_0);
+    });
+  }
+}
+const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
+
+export { dsnFromString };
+export function dsnToString(url) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
+  let str = "";
+  if (flag) {
+    str = "";
+    if (pass) {
+      const _HermesInternal = HermesInternal;
+      str = ":" + pass;
+    }
+  }
+  let str3 = "";
+  if (port) {
+    const _HermesInternal2 = HermesInternal;
+    str3 = ":" + port;
+  }
+  let combined = path;
+  if (path) {
+    const _HermesInternal3 = HermesInternal;
+    combined = "" + path + "/";
+  }
+  return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
+}
+export function makeDsn(protocol) {
+  if (typeof protocol === "string") {
+    let url = dsnFromString(protocol);
+  } else {
+    url = { protocol: protocol.protocol, publicKey: protocol.publicKey || "", pass: protocol.pass || "", host: protocol.host, port: protocol.port || "", path: protocol.path || "", projectId: protocol.projectId };
+  }
+  if (url) {
+    let error = url;
+    let flag = true;
+    if (url(13280).DEBUG_BUILD) {
+      ({ port, projectId, protocol } = url);
+      items = ["protocol", "publicKey", "host", "projectId"];
+      const found = items.find((item) => {
+        let flag = !tmp;
+        if (!url[item]) {
+          const logger = _mod13281.logger;
+          const _HermesInternal = HermesInternal;
+          logger.error("Invalid Sentry Dsn: " + item + " missing");
+          flag = true;
+        }
+        return flag;
+      });
+      if (found) {
+        flag = !found;
+      } else {
+        if (!projectId.match(/^\d+$/)) {
+          let logger = error(13281).logger;
+          let _HermesInternal = HermesInternal;
+          logger.error("Invalid Sentry Dsn: Invalid projectId " + projectId);
+        }
+        let tmp6 = "http" === protocol;
+        if (!tmp6) {
+          tmp6 = "https" === protocol;
+        }
+        if (tmp6) {
+          let num3 = port;
+          if (port) {
+            const _isNaN = isNaN;
+            const _parseInt = parseInt;
+            num3 = isNaN(parseInt(port, 10));
+          }
+          if (num3) {
+            const logger3 = error(13281).logger;
+            error = logger3.error;
+            const _HermesInternal3 = HermesInternal;
+            error("Invalid Sentry Dsn: Invalid port " + port);
+            num3 = 1;
+          }
+        } else {
+          const logger2 = error(13281).logger;
+          const _HermesInternal2 = HermesInternal;
+          logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
+        }
+      }
+    }
+    if (flag) {
+      return url;
+    }
   }
 }

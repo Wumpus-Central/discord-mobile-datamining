@@ -1,38 +1,77 @@
 // === Module 13360: ? ===
 
 // Module 13360
-import _mod13272 from "module_13272" /* 13272 */;
-import _mod13274 from "module_13274" /* 13274 */;
-import _mod13275 from "module_13275" /* 13275 */;
+import _mod13282 from "module_13282" /* 13282 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function instrumentConsole() {
-  if ("console" in _mod13275.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = _mod13274.CONSOLE_LEVELS;
-    const item = CONSOLE_LEVELS.forEach((item) => {
-      closure_0 = item;
-      if (item in closure_0(13275).GLOBAL_OBJ.console) {
-        tmp(13280).fill(tmp(13275).GLOBAL_OBJ.console, item, (arg0) => {
-          _mod13274.originalConsoleMethods[level] = arg0;
-          return () => {
-            items = [...arguments];
-            level(13272).triggerHandlers("console", { args: items, level });
-            const obj3 = level(13274).originalConsoleMethods[level];
-            if (obj3) {
-              obj3.apply(level(13275).GLOBAL_OBJ.console, items);
+function getMetadataForUrl(fn, arg1) {
+  (function ensureMetadataStacksAreParsed(fn) {
+    if (_mod13282.GLOBAL_OBJ._sentryModuleMetadata) {
+      const _Object = Object;
+      const keys = Object.keys(_mod13282.GLOBAL_OBJ._sentryModuleMetadata);
+      for (const item10026 of keys) {
+        let tmp16 = _mod13282.GLOBAL_OBJ._sentryModuleMetadata[item10026];
+        if (!set.has(item10026)) {
+          let addResult = set.add(item10026);
+          let obj2 = arg0(item10026);
+          let reversed = obj2.reverse();
+          for (const item10050 of reversed) {
+            if (item10050.filename) {
+              let result = map.set(tmp22.filename, tmp16);
+              obj3.return();
+              break;
             }
-            const obj = { args: items, level };
-            const obj2 = level(13272);
-          };
-        });
-        const tmpResult = tmp(13280);
+            continue;
+          }
+        }
+        continue;
+      }
+    }
+  })(fn);
+  return map.get(arg1);
+}
+const map = new Map();
+const set = new Set();
+
+export function addMetadataToStackFrames(arg0, exception) {
+  closure_0 = arg0;
+  try {
+    const values = exception.exception.values;
+    const item = values.forEach((stacktrace) => {
+      if (stacktrace.stacktrace) {
+        const tmp = stacktrace.stacktrace.frames || [];
+        for (const item10010 of tmp) {
+          if (item10010.filename) {
+            if (!item10010.module_metadata) {
+              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
+              if (tmp9) {
+                item10010.module_metadata = tmp10;
+              }
+            }
+          }
+          continue;
+        }
       }
     });
+  } catch (err) {
   }
 }
-
-export function addConsoleInstrumentationHandler(errorCallback) {
-  _mod13272.addHandler("console", errorCallback);
-  _mod13272.maybeInstrument("console", instrumentConsole);
+export { getMetadataForUrl };
+export function stripMetadataFromStackFrames(exception) {
+  try {
+    const values = exception.exception.values;
+    const item = values.forEach((stacktrace) => {
+      if (stacktrace.stacktrace) {
+        const tmp3 = stacktrace.stacktrace.frames || [];
+        const iter = tmp3[Symbol.iterator]();
+        iter.next();
+        while (iter !== undefined) {
+          delete tmp2[tmp];
+          continue;
+        }
+      }
+    });
+  } catch (err) {
+  }
 }

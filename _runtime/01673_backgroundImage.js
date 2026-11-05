@@ -237,54 +237,54 @@ function pnpm_backgroundImageTs14(arg0, arg1) {
           let obj = { color: null, position: positions[0] };
           let arr = items.push(obj);
         } else {
-          let tmp6 = globalThis;
+          let tmp4 = globalThis;
           let _Error = Error;
           let _HermesInternal = HermesInternal;
           let str = "[Reanimated] ";
-          let tmp9 = new.target;
-          let tmp10 = new.target;
+          let tmp7 = new.target;
+          let tmp8 = new.target;
           let error = new Error("[Reanimated] " + _undefined.invalidPosition(positions[0]));
           throw error;
         }
       }
       continue;
     }
-    let tmp17 = _undefined2(color, arg1);
+    let tmp15 = _undefined2(color, arg1);
     let length1;
     if (positions != null) {
       length1 = positions.length;
     }
     if (length1) {
-      for (const item10056 of positions) {
-        if (_slicedToArray(item10056)) {
+      for (const item10052 of positions) {
+        if (_slicedToArray(item10052)) {
           let obj2 = { color: null, position: null };
-          obj2.color = tmp17;
-          obj2.position = item10056;
+          obj2.color = tmp15;
+          obj2.position = item10052;
           let arr4 = items.push(obj2);
           continue;
         } else {
-          let tmp26 = globalThis;
+          let tmp24 = globalThis;
           let _Error2 = Error;
           let _HermesInternal2 = HermesInternal;
           let str2 = "[Reanimated] ";
-          let tmp29 = new.target;
-          let tmp30 = new.target;
-          let error1 = new Error("[Reanimated] " + _undefined.invalidPosition(item10056));
+          let tmp27 = new.target;
+          let tmp28 = new.target;
+          let error1 = new Error("[Reanimated] " + _undefined.invalidPosition(item10052));
           throw error1;
         }
       }
     } else {
       let obj3 = { color: null, position: null };
-      obj3.color = tmp17;
+      obj3.color = tmp15;
       let arr5 = items.push(obj3);
     }
   }
   let num = 0;
   if (0 < items.length) {
     while (true) {
-      let tmp36 = items[num];
-      position = tmp36.position;
-      if (null === tmp36.color) {
+      let tmp34 = items[num];
+      position = tmp34.position;
+      if (null === tmp34.color) {
         if (0 === num) {
           break;
         } else if (num === items.length - 1) {
@@ -433,15 +433,15 @@ function pnpm_backgroundImageTs20(join, arg1) {
     const match = arr[num].trim().match(c1);
     while (null !== match) {
       if (3 === match.length) {
-        let tmp16 = _undefined2(match[0], arg1);
-        let tmp18 = _undefined3(match[1]);
-        let tmp19 = _undefined3(match[2]);
-        if (null !== tmp16) {
-          if (null !== tmp18) {
-            if (null !== tmp19) {
-              let obj2 = { color: tmp16, position: tmp18 };
+        let tmp14 = _undefined2(match[0], arg1);
+        let tmp16 = _undefined3(match[1]);
+        let tmp17 = _undefined3(match[2]);
+        if (null !== tmp14) {
+          if (null !== tmp16) {
+            if (null !== tmp17) {
+              let obj2 = { color: tmp14, position: tmp16 };
               let arr2 = items.push(obj2);
-              let obj3 = { color: tmp16, position: tmp19 };
+              let obj3 = { color: tmp14, position: tmp17 };
               let arr3 = items.push(obj3);
               let flag2 = false;
             }
@@ -449,11 +449,11 @@ function pnpm_backgroundImageTs20(join, arg1) {
         }
         return null;
       } else if (2 === match.length) {
-        let tmp11 = _undefined2(match[0], arg1);
-        let tmp13 = _undefined3(match[1]);
-        if (null !== tmp11) {
-          if (null !== tmp13) {
-            let obj4 = { color: tmp11, position: tmp13 };
+        let tmp9 = _undefined2(match[0], arg1);
+        let tmp11 = _undefined3(match[1]);
+        if (null !== tmp9) {
+          if (null !== tmp11) {
+            let obj4 = { color: tmp9, position: tmp11 };
             let arr8 = items.push(obj4);
             flag2 = false;
           }
@@ -462,12 +462,12 @@ function pnpm_backgroundImageTs20(join, arg1) {
       } else if (1 !== match.length) {
         return null;
       } else {
-        let tmp5 = _undefined3(match[0]);
-        if (null !== tmp5) {
+        let tmp22 = _undefined3(match[0]);
+        if (null !== tmp22) {
           if (!flag) {
             if (0 !== num) {
               if (num !== arr.length - 1) {
-                let obj5 = { color: null, position: tmp5 };
+                let obj5 = { color: null, position: tmp22 };
                 let arr9 = items.push(obj5);
                 flag2 = true;
               }
@@ -475,11 +475,11 @@ function pnpm_backgroundImageTs20(join, arg1) {
           }
           return null;
         } else {
-          let tmp7 = _undefined2(match[0], arg1);
-          if (null === tmp7) {
+          let tmp5 = _undefined2(match[0], arg1);
+          if (null === tmp5) {
             return null;
           } else {
-            let obj = { color: tmp7, position: null };
+            let obj = { color: tmp5, position: null };
             let arr10 = items.push(obj);
             flag2 = false;
           }
@@ -490,11 +490,11 @@ function pnpm_backgroundImageTs20(join, arg1) {
     }
     return null;
   }
-  let tmp22 = null;
+  let tmp20 = null;
   if (items.length >= c4) {
-    tmp22 = items;
+    tmp20 = items;
   }
-  return tmp22;
+  return tmp20;
 }
 const items32 = [tmp48, tmp49, tmp50, tmp51, tmp52];
 pnpm_backgroundImageTs20.__closure = items32;

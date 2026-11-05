@@ -1,8 +1,25 @@
 // === Module 16378: ? ===
 
 // Module 16378
-import _mod16379 from "module_16379" /* 16379 */;
-import _mod16383 from "module_16383" /* 16383 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0) => _mod16379(_mod16383(arg0));
+export function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("module_16379").units;
+  return units.filter((item) => (function isSupported(unit, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const obj = { style: "unit", unit };
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+      return memoizedNumberFormat.resolvedOptions().unit === unit;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
+}

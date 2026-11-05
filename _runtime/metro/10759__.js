@@ -1,7 +1,21 @@
 // === Module 10759: ? ===
 
 // Module 10759
-import registerAsset from "module_1119" /* 1119 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef10760 from "module_10760" /* 10760 */;
 
+const useRef = _mod19.useRef;
+let closure_3 = [];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "d8c3e4c6e3c94e3724597aef8c906754", name: "img_tier_0_subheader_mobile", type: "png" });
+export default function useStableMemo(fn, items) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = fn();
+    tmp2.current = items;
+  } else if (!_modDef10760(items, tmp2.current)) {
+    tmp.current = fn();
+    tmp2.current = items;
+  }
+  return tmp.current;
+};

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 108, scales: [2, 3], hash: "ff9dd208f5a022cb1483def98770bc0b", name: "img_what_you_lose_profile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 155, height: 16, scales: [2, 3], hash: "f1a4755bd0ec77fe9aa6ee1c38735df7", name: "img_logo_nitro_classic_horizontal_light", type: "png" });

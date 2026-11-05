@@ -1,7 +1,7 @@
 // === Module 8262: ? ===
 
 // Module 8262
-import _modDef8195 from "module_8195" /* 8195 */;
+import _modDef8200 from "module_8200" /* 8200 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -9,7 +9,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const RadialGradient = importDefault;
+const Pattern = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
   }
 }
 const jsx = fn(21).jsx;
-class RadialGradient {
+class Pattern {
   constructor() {
     self = this;
-    tmp = c2(this, RadialGradient);
+    tmp = c2(this, Pattern);
     tmp2 = closure_4;
-    obj = closure_4(RadialGradient);
+    obj = closure_4(Pattern);
     tmp3 = closure_3;
     if (closure_6()) {
       tmp7 = globalThis;
@@ -50,35 +50,45 @@ class RadialGradient {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RadialGradient, _modDef8195);
+_inherits(Pattern, _modDef8200);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ rx, ry, r, cx, cy, fx } = props);
-    if (undefined === fx) {
-      fx = cx;
+    ({ patternTransform, patternUnits, patternContentUnits } = props);
+    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
+    if (!patternTransform) {
+      patternTransform = transform;
     }
-    let fy = props.fy;
-    const obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
-    if (undefined === fy) {
-      fy = cy;
+    if (!patternTransform) {
+      patternTransform = props;
     }
-    obj.fy = fy;
-    if (!rx) {
-      rx = r;
+    const tmp3Result = Pattern(8184)(patternTransform);
+    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
+    let num = patternUnits;
+    if (patternUnits) {
+      num = Pattern(8254)[patternUnits];
     }
-    obj.rx = rx;
-    if (!ry) {
-      ry = r;
+    if (!num) {
+      num = 0;
     }
-    obj.ry = ry;
-    obj.cx = cx;
-    obj.cy = cy;
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(RadialGradient(8248)(props, this));
-    return jsx(RadialGradient(8263), {
+    size.patternUnits = num;
+    let num2 = 1;
+    if (patternContentUnits) {
+      num2 = Pattern(8254)[patternContentUnits];
+    }
+    size.patternContentUnits = num2;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp3 = Pattern(8184);
+    const merged = Object.assign(size);
+    const merged1 = Object.assign(Pattern(8189)({ viewBox, preserveAspectRatio }));
+    obj.children = children;
+    return jsx(Pattern(8263), {
       ref(arg0) {
         return self.refMethod(arg0);
       }
@@ -86,8 +96,8 @@ const entry = {
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(RadialGradient, items);
-importDefaultResultResult.displayName = "RadialGradient";
-importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
+const importDefaultResultResult = _createClass(Pattern, items);
+importDefaultResultResult.displayName = "Pattern";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

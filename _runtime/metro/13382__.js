@@ -1,73 +1,102 @@
 // === Module 13382: ? ===
 
 // Module 13382
-import _mod13301 from "module_13301" /* 13301 */;
-import _flush from "_flush" /* 13322 */;
-import _mod13347 from "module_13347" /* 13347 */;
+import _mod13287 from "module_13287" /* 13287 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getCurrentHubShim() {
-  return {
-    bindClient(arg0) {
-      const currentScope = _mod13301.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod13301.withScope,
-    getClient() {
-      return _mod13301.getClient();
-    },
-    getScope: _mod13301.getCurrentScope,
-    getIsolationScope: _mod13301.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod13301.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod13301.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod13347.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod13301.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
-      } else {
-        const currentScope = _mod13301.getCurrentScope();
-        const tmpResult3 = _mod13301;
-        const client = _mod13301.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
-        }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod13301;
-      }
-    }
-  };
+let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
+
+export function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
+  const entries = Object.entries(_mod13287.dropUndefinedKeys(sanitizeTagsResult));
+  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
+    const first = arg0[0];
+    return first.localeCompare(arg1[0]);
+  });
 }
-
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+export function sanitizeMetricKey(str) {
+  return str.replace(/[^\w\-.]+/gi, "_");
+}
+export function sanitizeTags(tags) {
+  let obj = {};
+  for (const key10007 in arg0) {
+    let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty(key10007);
+    } else {
+      hasOwnPropertyResult = call(arg0, key10007);
+    }
+    if (!hasOwnPropertyResult) {
+      continue;
+    } else {
+      let _String = String;
+      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
+      items = [];
+      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
+      obj[replaced] = items.reduce((acc, item) => acc + (function getCharOrReplacement(item) {
+        const obj = dependencyMap[Symbol.iterator]();
+        while (obj !== undefined) {
+          let tmp4 = closure_1_2(tmp2, 2);
+          if (item === tmp4[0]) {
+            obj.return();
+            return tmp5;
+          }
+        }
+        return item;
+      })(item), "");
+      continue;
+    }
+    continue;
+  }
+  return obj;
+}
+export function sanitizeUnit(none) {
+  return none.replace(/[^\w]+/gi, "_");
+}
+export function serializeMetricBuckets(arg0) {
+  let str = "";
+  const iter = arg0[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let _Object = Object;
+    let entries = Object.entries(nextResult.tags);
+    let arr2 = entries;
+    let str2 = "";
+    if (entries.length > 0) {
+      let mapped = arr2.map((item) => {
+        [tmp, tmp2] = item;
+        return "" + tmp + ":" + tmp2;
+      });
+      let _HermesInternal = HermesInternal;
+      str2 = "|#" + mapped.join(",");
+    }
+    let _HermesInternal2 = HermesInternal;
+    let str3 = "";
+    let str4 = "@";
+    let str5 = ":";
+    let str6 = "|";
+    let str7 = "|T";
+    let str8 = "\n";
+    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
+    continue;
+  }
+  return str;
+}
+export function simpleHash(item) {
+  let length;
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < item.length) {
+    do {
+      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
+      num2 = sum & sum;
+      num = num + 1;
+      num3 = num2;
+      length = item.length;
+    } while (num < length);
+  }
+  return num3 >>> 0;
+}

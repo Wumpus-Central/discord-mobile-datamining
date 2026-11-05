@@ -1,21 +1,23 @@
 // === Module 13300: ? ===
 
 // Module 13300
-import _mod13275 from "module_13275" /* 13275 */;
-import ScopeClass from "ScopeClass" /* 13295 */;
+import _mod13299 from "module_13299" /* 13299 */;
+import _mod13301 from "module_13301" /* 13301 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function getDefaultCurrentScope() {
-  return _mod13275.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
+export function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod13299.getSentryCarrier(mainCarrier);
+  if (sentryCarrier.acs) {
+    let acs = sentryCarrier.acs;
+  } else {
+    acs = _mod13301.getStackAsyncContextStrategy();
+    const tmpResult = _mod13301;
+  }
+  return acs;
 }
-export function getDefaultIsolationScope() {
-  return _mod13275.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
+export function setAsyncContextStrategy(acs) {
+  const mainCarrier = _mod13299.getMainCarrier();
+  _mod13299.getSentryCarrier(mainCarrier).acs = acs;
 }

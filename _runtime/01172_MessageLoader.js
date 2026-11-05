@@ -373,7 +373,7 @@ let items = [
                   throw value;
                 } else if (arg0 !== 2) {
                   messages[closure_1] = value.default;
-                  closure_3._localeLoadingPromises[closure_132_0] = { initialized: true, current: "a" };
+                  closure_3._localeLoadingPromises[closure_132_0] = { initialized: true, current: "Boolean" };
                   closure_3.emitChange();
                 }
               } else if (arg0 === 1) {
@@ -463,88 +463,47 @@ let items = [
         c5 = 0;
         c6 = 0;
         const iter = (function*(arg0) {
-          if (c6 === 2) {
-            c6 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
+          if (1 === tmp5) {
             if (arg0 === 1) {
+              c6 = 3;
               throw value;
             } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
+              c6 = 3;
+              return { value, done: true };
             } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c6 = 2;
-              if (0 === c5) {
-                if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_4 = self;
-                  closure_3 = tmp2;
-                  closure_131_1 = undefined;
-                  closure_131_0 = closure_1;
-                  let flag = closure_2;
-                  if (closure_2 === undefined) {
-                    flag = false;
-                  }
-                  closure_131_1 = flag;
-                  closure_131_2 = undefined;
-                  c5 = 1;
-                  c6 = 1;
-                  return { value: "flexDirection", done: null };
-                }
-              } else {
-                if (1 === tmp5) {
-                  if (arg0 === 1) {
-                    c6 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c6 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  } else {
-                    closure_131_2 = closure_4._localeLoadingPromises[closure_131_0];
-                    if (null == closure_131_2) {
-                      c6 = 3;
-                      const obj5 = { value: closure_4._loadLocale(closure_131_0), done: true };
-                      return obj5;
-                    } else {
-                      let initialized = closure_131_2.initialized;
-                      if (initialized) {
-                        initialized = !closure_131_1;
-                      }
-                      if (!initialized) {
-                        c5 = 2;
-                        c6 = 1;
-                        const obj6 = { value: closure_131_2.current, done: false };
-                        return obj6;
-                      }
-                    }
-                  }
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                }
+              closure_131_2 = closure_4._localeLoadingPromises[closure_131_0];
+              if (null == closure_131_2) {
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: closure_4._loadLocale(closure_131_0), done: true };
+              } else {
+                let initialized = closure_131_2.initialized;
+                if (initialized) {
+                  initialized = !closure_131_1;
+                }
+                if (!initialized) {
+                  c5 = 2;
+                  c6 = 1;
+                  return { value: closure_131_2.current, done: false };
+                }
               }
-            } catch (tmp17) {
-              c6 = tmp;
-              throw tmp17;
             }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            return { value, done: true };
           }
+          yield "HermesInternal";
+          closure_4 = self;
+          closure_3 = tmp2;
+          closure_131_0 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = false;
+          }
+          closure_131_1 = flag;
+          return "flexDirection";
         })();
         iter.next();
         return iter;
@@ -559,16 +518,60 @@ let items = [
         closure_1 = arg0;
         c4 = 0;
         c5 = 0;
-        const iter = (function*() {
-          closure_3 = self;
-          closure_2 = tmp2;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = false;
+        const iter = (function*(arg0) {
+          if (c5 === 2) {
+            c5 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c5 = 2;
+              if (0 === c4) {
+                if (arg0 === 1) {
+                  c5 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c5 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  closure_3 = self;
+                  closure_2 = tmp2;
+                  closure_130_0 = undefined;
+                  let flag = closure_1;
+                  if (closure_1 === undefined) {
+                    flag = false;
+                  }
+                  closure_130_0 = flag;
+                  c4 = 1;
+                  c5 = 1;
+                  return { value: "flexDirection", done: true };
+                }
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj4 = { value, done: true };
+                return obj4;
+              } else {
+                c5 = 3;
+                const obj = { value: closure_3.waitForLocaleLoaded(closure_3.defaultLocale, closure_130_0), done: true };
+                return obj;
+              }
+            } catch (tmp10) {
+              c5 = tmp;
+              throw tmp10;
+            }
           }
-          closure_130_0 = flag;
-          yield "flexDirection";
-          return closure_3.waitForLocaleLoaded(closure_3.defaultLocale, closure_130_0);
         })();
         iter.next();
         return iter;

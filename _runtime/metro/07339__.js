@@ -1,18 +1,15 @@
 // === Module 7339: ? ===
 
 // Module 7339
-import CardAnimationContext from "CardAnimationContext" /* 7333 */;
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
 
-require = arg1;
+const Platform = _mod17.Platform;
 
-export function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export function getShadowStyle(color) {
+  let shadowColor = color.color;
+  ({ offset, radius, opacity } = color);
+  if (shadowColor === undefined) {
+    shadowColor = "#000";
   }
+  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
 }

@@ -1,7 +1,43 @@
 // === Module 10050: ? ===
 
 // Module 10050
-import registerAsset from "module_1119" /* 1119 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8d9a4a6e9caf6cfaa5505c9d5954c20b", name: "ThumbsUpIcon", type: "png" });
+export (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.reduce((arr, key) => {
+    let options;
+    if (closure_0[key.key] != null) {
+      options = tmp.options;
+    }
+    if (options == null) {
+      options = {};
+    }
+    const presentation = options.presentation;
+    let tmp2 = arr.length && !presentation;
+    if (!tmp2) {
+      tmp2 = "modal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "transparentModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "containedModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "containedTransparentModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "fullScreenModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "formSheet" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "pageSheet" === presentation;
+    }
+    if (tmp2) {
+      arr = arr.push(key.key);
+    }
+    return arr;
+  }, []);
+}

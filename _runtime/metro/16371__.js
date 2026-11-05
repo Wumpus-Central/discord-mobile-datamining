@@ -1,9 +1,5 @@
 // === Module 16371: ? ===
 
 // Module 16371
-import _mod16437 from "module_16437" /* 16437 */;
-import module_16372 from "module_16372" /* 16372 */;
 
-const obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod16437;
-module_16372(obj, { assign: _mod16437 });
+export const collations = ["big5han", "compat", "dict", "direct", "ducet", "emoji", "eor", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "search", "searchjl", "standard", "stroke", "trad", "unihan", "zhuyin"];

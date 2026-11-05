@@ -1,15 +1,12 @@
 // === Module 5660: ? ===
 
 // Module 5660
-import noop from "module_19" /* 19 */;
+import PlatformConfig2 from "PlatformConfig" /* 5658 */;
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
+require = arg1;
+const dependencyMap = arg6;
 
-export const RecyclerViewContextProvider = context.Provider;
-export function useRecyclerViewContext() {
-  return useContext(context);
-}
-export function useFlashListContext() {
-  return useContext(context);
+export function getInvertedTransformStyle(horizontal) {
+  const PlatformConfig = PlatformConfig2.PlatformConfig;
+  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
 }

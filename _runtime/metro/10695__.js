@@ -1,15 +1,15 @@
 // === Module 10695: ? ===
 
 // Module 10695
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10512 */;
-import _mod10693 from "module_10693" /* 10693 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10518 */;
+import _mod10680 from "module_10680" /* 10680 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const SVTimeUnitCasualRelativeFormatParser = require;
+const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,36 +29,32 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" + _mod10693.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-const regExp1 = new RegExp("(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" + _mod10693.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)", "i");
-class SVTimeUnitCasualRelativeFormatParser {
+const regExp = new RegExp("(questo|ultimo|passato|prossimo|dopo|questa|ultima|passata|prossima|\\+|-)\\s*(" + _mod10680.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+class ENTimeUnitCasualRelativeFormatParser {
   constructor() {
-    flag = global;
-    if (global === undefined) {
-      flag = true;
-    }
     self = this;
-    tmp = c2(this, SVTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(SVTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.allowAbbreviations = flag;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(SVTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return this.allowAbbreviations ? regExp : regExp1;
+    return regExp;
   }
 };
 const items = [
@@ -67,21 +63,17 @@ const items = [
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
       const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = SVTimeUnitCasualRelativeFormatParser(10693).parseDuration(arg1[2]);
-      if (parseDurationResult) {
-        if ("f\u00F6rra" !== formatted) {
-          if ("passerade" !== formatted) {
-            let reverseDurationResult = parseDurationResult;
-          }
-          const ParsingComponents = SVTimeUnitCasualRelativeFormatParser(10508).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10680).parseDuration(arg1[2]);
+      if ("last" !== formatted) {
+        if ("past" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
         }
-        reverseDurationResult = SVTimeUnitCasualRelativeFormatParser(10507).reverseDuration(parseDurationResult);
-      } else {
-        return null;
+        const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(10514).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
+      reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(10513).reverseDuration(parseDurationResult);
     }
   }
 ];
 
-export default _createClass(SVTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);

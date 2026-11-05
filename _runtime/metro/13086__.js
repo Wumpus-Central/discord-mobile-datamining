@@ -1,179 +1,190 @@
 // === Module 13086: ? ===
 
 // Module 13086
-function noop() {
+import _mod13066 from "module_13066" /* 13066 */;
+import _mod13082 from "module_13082" /* 13082 */;
 
+function fromLoc(loc, start) {
+  if (loc) {
+    loc = loc.loc;
+  }
+  if (loc) {
+    loc = loc.loc[start];
+  }
+  let tmp2 = null;
+  if (loc) {
+    let tmp3 = loc;
+    if ("line" in loc) {
+      const obj = { offset: null, line: null, column: null };
+      ({ offset: obj.offset, line: obj.line, column: obj.column } = loc);
+      tmp3 = obj;
+    }
+    tmp2 = tmp3;
+  }
+  return tmp2;
 }
+let closure_2 = { offset: 0, line: 1, column: 1 };
 
-export default (type, enter, arg2) => {
-  closure_0 = arg2;
-  enter = noop;
-  let leave = noop;
-  if (typeof enter === "function") {
-    let tmp4 = noop;
-    let tmp5 = enter;
-    let tmp6 = noop;
-    let tmp7 = enter;
-    let tmp8 = noop;
-    let tmp9 = enter;
-  } else {
-    tmp4 = noop;
-    tmp5 = noop;
-    tmp6 = noop;
-    tmp7 = noop;
-    tmp8 = noop;
-    tmp9 = noop;
-    if (enter) {
-      enter = enter.enter;
-      let tmp2 = noop;
-      if (typeof enter === "function") {
-        tmp2 = enter;
-      }
-      enter = tmp2;
-      leave = enter.leave;
-      let tmp3 = noop;
-      if (typeof leave === "function") {
-        tmp3 = leave;
-      }
-      leave = tmp3;
-      tmp4 = tmp3;
-      tmp5 = tmp2;
-      tmp6 = tmp3;
-      tmp7 = tmp2;
-      tmp8 = tmp3;
-      tmp9 = tmp2;
+export default {
+  SyntaxReferenceError(arg0, reference) {
+    let str = "";
+    if (reference) {
+      str = `${" `" + reference}\``;
     }
-  }
-  if (tmp9 === noop) {
-    if (tmp8 === noop) {
-      const _Error3 = Error;
-      let error = new Error("Neither `enter` nor `leave` walker handler is set or both aren't a function");
-      throw error;
+    const tmpResult = _mod13066("SyntaxReferenceError", arg0 + str);
+    tmpResult.reference = reference;
+    return tmpResult;
+  },
+  SyntaxMatchError(reason, syntax, loc, arg3) {
+    const tmp3 = _mod13066("SyntaxMatchError", reason);
+    ({ tokens, longestMatch } = arg3);
+    let tmp5 = null;
+    if ((longestMatch < tokens.length && tokens[longestMatch].node || null) !== loc) {
+      tmp5 = tmp4;
     }
-  }
-  function walk(term) {
-    const call = enter.call;
-    if (typeof call === "unknown") {
-      enter(term);
-    } else {
-      call(closure_0, term);
-    }
-    switch (term.type) {
-      case "Group":
-        const terms = term.terms;
-        const item = terms.forEach(walk);
-        const call2 = leave.call;
-        if (typeof call2 === "unknown") {
-          leave(term);
-        } else {
-          call2(closure_0, term);
+    let str = "";
+    let num = 0;
+    let num2 = 0;
+    let num3 = 0;
+    let num4 = 0;
+    let str2 = "";
+    let num5 = 0;
+    let num6 = 0;
+    let num7 = 0;
+    if (0 < tokens.length) {
+      do {
+        value = tokens[num].value;
+        let length = num3;
+        let length2 = num4;
+        if (num === longestMatch) {
+          length = value.length;
+          length2 = ``.length;
         }
-      break;
-      case "Multiplier":
-        walk(term.term);
-      break;
-      case "Type":
-      break;
-      case "Property":
-      break;
-      case "Keyword":
-      break;
-      case "AtKeyword":
-      break;
-      case "Function":
-      break;
-      case "String":
-      break;
-      case "Token":
-      break;
-      case "Comma":
-      break;
-      default:
-        const _Error = Error;
-        const error = new Error("Unknown type: " + term.type);
-        throw error;
-    }
-  }
-  let call = tmp7.call;
-  if (typeof call === "unknown") {
-    tmp7(type);
-  } else {
-    call(arg2, type);
-  }
-  switch (type.type) {
-    case "Group":
-      let terms = type.terms;
-      let item = terms.forEach(walk);
-      const call4 = tmp6.call;
-      if (typeof call4 === "unknown") {
-        tmp6(type);
-      } else {
-        call4(arg2, type);
-      }
-    break;
-    case "Multiplier":
-      const term = type.term;
-      let call2 = tmp5.call;
-      if (typeof call2 === "unknown") {
-        tmp5(term);
-      } else {
-        call2(arg2, term);
-      }
-      switch (term.type) {
-        case "Group":
-          const terms1 = term.terms;
-          const item1 = terms1.forEach(walk);
-          const call3 = tmp4.call;
-          if (typeof call3 === "unknown") {
-            tmp4(term);
-          } else {
-            call3(arg2, term);
+        let tmp10 = tmp6;
+        if (tmp6) {
+          tmp10 = tokens[num].node === tmp5;
+        }
+        let tmp11 = num2;
+        if (tmp10) {
+          let num8 = 0;
+          if (num <= longestMatch) {
+            num8 = num2 + 1;
           }
-        break;
-        case "Multiplier":
-          walk(term.term);
-        break;
-        case "Type":
-        break;
-        case "Property":
-        break;
-        case "Keyword":
-        break;
-        case "AtKeyword":
-        break;
-        case "Function":
-        break;
-        case "String":
-        break;
-        case "Token":
-        break;
-        case "Comma":
-        break;
-        default:
-          let _Error = Error;
-          const error1 = new Error("Unknown type: " + term.type);
-          throw error1;
+          tmp11 = num8;
+        }
+        str = str + value;
+        num = num + 1;
+        num2 = tmp11;
+        num3 = length;
+        num4 = length2;
+        str2 = str;
+        num5 = tmp11;
+        num6 = length;
+        num7 = length2;
+      } while (num < tokens.length);
+    }
+    if (longestMatch !== tokens.length) {
+      if (1 >= num5) {
+        let tmp13 = fromLoc(tmp5, "start");
+        if (!tmp13) {
+          let str3 = str2.slice(0, num7);
+          const obj = { offset: null, line: null, column: null };
+          ({ offset: obj.offset, line: obj.line, column: obj.column } = fromLoc(loc, "start") || closure_2);
+          tmp13 = obj;
+          if (str3) {
+            const parts = str3.split(/\n|\r\n?|\f/);
+            obj.offset = obj.offset + str3.length;
+            obj.line = obj.line + (parts.length - 1);
+            if (1 === parts.length) {
+              str3 = str3.length;
+              let sum = obj.column + str3;
+            } else {
+              sum = parts.pop().length + 1;
+            }
+            obj.column = sum;
+          }
+          const tmp12 = fromLoc(loc, "start") || closure_2;
+        }
+        let tmp33Result = fromLoc(tmp5, "end");
+        if (!tmp33Result) {
+          let str5 = str2.substr(num7, num6);
+          const obj4 = { offset: null, line: null, column: null };
+          ({ offset: obj2.offset, line: obj2.line, column: obj2.column } = tmp13);
+          tmp33Result = obj4;
+          if (str5) {
+            const parts1 = str5.split(/\n|\r\n?|\f/);
+            obj4.offset = obj4.offset + str5.length;
+            obj4.line = obj4.line + (parts1.length - 1);
+            if (1 === parts1.length) {
+              str5 = str5.length;
+              let sum1 = obj4.column + str5;
+            } else {
+              sum1 = parts1.pop().length + 1;
+            }
+            obj4.column = sum1;
+          }
+        }
       }
-    break;
-    case "Type":
-    break;
-    case "Property":
-    break;
-    case "Keyword":
-    break;
-    case "AtKeyword":
-    break;
-    case "Function":
-    break;
-    case "String":
-    break;
-    case "Token":
-    break;
-    case "Comma":
-    break;
-    default:
-      const _Error2 = Error;
-      const error2 = new Error("Unknown type: " + type.type);
-      throw error2;
+      tmp3.rawMessage = reason;
+      let str6 = "<generic>";
+      if (syntax) {
+        str6 = _mod13082(syntax);
+      }
+      tmp3.syntax = str6;
+      tmp3.css = str2;
+      tmp3.mismatchOffset = num7;
+      tmp3.mismatchLength = num6;
+      let str8 = str2;
+      const text = `${reason}
+      syntax: ${tmp3.syntax}`;
+      if (!str2) {
+        str8 = "<empty string>";
+      }
+      const _HermesInternal = HermesInternal;
+      const _Array = Array;
+      const combined = `${tmp26}
+       value: ` + str8 + "\n  --------";
+      const array = new Array(tmp3.mismatchOffset + 1);
+      tmp3.message = `${tmp28}${obj5.join("-")}^`;
+      const _Object = Object;
+      const merged = Object.assign(tmp3, tmp13);
+      let str13 = loc;
+      if (loc) {
+        str13 = loc.loc;
+      }
+      if (str13) {
+        str13 = loc.loc.source;
+      }
+      if (!str13) {
+        str13 = "<unknown>";
+      }
+      const obj6 = { source: str13, start: tmp13, end: tmp33Result };
+      tmp3.loc = obj6;
+      return tmp3;
+    }
+    let tmp20 = tmp5;
+    if (!tmp5) {
+      tmp20 = loc;
+    }
+    let tmp19Result = fromLoc(tmp20, "end");
+    if (!tmp19Result) {
+      const obj10 = { offset: null, line: null, column: null };
+      ({ offset: obj3.offset, line: obj3.line, column: obj3.column } = closure_2);
+      tmp19Result = obj10;
+      if (str2) {
+        const parts2 = str2.split(/\n|\r\n?|\f/);
+        obj10.offset = obj10.offset + str2.length;
+        obj10.line = obj10.line + (parts2.length - 1);
+        if (1 === parts2.length) {
+          let sum2 = obj10.column + str2.length;
+        } else {
+          sum2 = parts2.pop().length + 1;
+        }
+        obj10.column = sum2;
+      }
+    }
+    tmp13 = tmp19Result;
+    tmp33Result = { offset: tmp19Result.offset, line: tmp19Result.line, column: tmp19Result.column };
+    const obj11 = { offset: tmp19Result.offset, line: tmp19Result.line, column: tmp19Result.column };
   }
 };

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [2, 3], hash: "f6824e7bd3f8a83813ab333cc29423f8", name: "yellow-alert", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 23, height: 45, scales: [2, 3], hash: "05cd5f5720d5fb81034c2d2412372f33", name: "sparkle_star_elongated", type: "png" });

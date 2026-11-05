@@ -1,7 +1,15 @@
 // === Module 10761: ? ===
 
 // Module 10761
-import registerAsset from "module_1119" /* 1119 */;
+import _mod19 from "module_19" /* 19 */;
 
+const useRef = _mod19.useRef;
+let closure_1 = {};
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "44a779cd60ac7d5dac850e6fc886896f", name: "img_nitro_subheader_mobile", type: "png" });
+export default function useLazyValue(fn) {
+  const tmp = useRef(closure_1);
+  if (tmp.current === closure_1) {
+    tmp.current = fn();
+  }
+  return tmp.current;
+};

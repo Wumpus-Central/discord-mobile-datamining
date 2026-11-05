@@ -1,54 +1,39 @@
 // === Module 13119: ? ===
 
 // Module 13119
+import _mod13062 from "module_13062" /* 13062 */;
 
-export default {
-  name: "Nth",
-  structure: { nth: ["AnPlusB", "Identifier"], selector: ["SelectorList", null] },
-  parse(arg0) {
+const RightParenthesis = _mod13062.TYPE.RightParenthesis;
+const obj = {
+  name: "Function",
+  structure: null,
+  parse(call, arg1) {
     const self = this;
-    const scanner = this.scanner;
-    scanner.skipSC();
-    const tokenStart = this.scanner.tokenStart;
-    const scanner2 = this.scanner;
-    if (!scanner2.lookupValue(0, "odd")) {
-      const scanner3 = self.scanner;
-      if (!scanner3.lookupValue(0, "even")) {
-        let AnPlusBResult = self.AnPlusB();
+    const str = this.consumeFunctionName();
+    const formatted = str.toLowerCase();
+    if (arg1.hasOwnProperty(formatted)) {
+      const call2 = tmp4.call;
+      typeof call2 === "unknown" ? arg1[formatted](arg1) : call2(self, arg1);
+    } else {
+      call = call.call;
+      if (!self.scanner.eof) {
+        self.eat(RightParenthesis);
       }
-      const scanner4 = self.scanner;
-      scanner4.skipSC();
-      if (arg0) {
-        const scanner5 = self.scanner;
-        if (scanner5.lookupValue(0, "of")) {
-          self.scanner.next();
-          const SelectorListResult = self.SelectorList();
-          let tmp5 = SelectorListResult;
-          let offset = tokenStart;
-          if (self.needPositions) {
-            offset = self.getLastListNode(SelectorListResult.children).loc.end.offset;
-            tmp5 = SelectorListResult;
-          }
-          const iter = self.scanner;
-        }
-        const obj = { type: "Nth", loc: self.getLocation(tokenStart, offset), nth: AnPlusBResult, selector: tmp5 };
-        return obj;
-      }
-      tmp5 = null;
-      offset = tokenStart;
-      if (self.needPositions) {
-        offset = AnPlusBResult.loc.end.offset;
-        tmp5 = null;
-      }
+      const element = { type: "Function", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: str, children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
+      return element;
     }
-    AnPlusBResult = self.Identifier();
   },
-  generate(nth) {
-    const self = this;
-    this.node(nth.nth);
-    if (null !== nth.selector) {
-      self.chunk(" of ");
-      self.node(nth.selector);
-    }
-  }
+  generate(name) {
+    this.chunk(name.name);
+    this.chunk("(");
+    this.children(name);
+    this.chunk(")");
+  },
+  walkContext: "function"
 };
+const obj2 = { name: String, children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

@@ -1,7 +1,15 @@
 // === Module 13155: ? ===
 
 // Module 13155
-import _mod13156 from "module_13156" /* 13156 */;
+const obj = {
+  parse: {
+    prelude() {
+      return this.createSingleNodeList(this.MediaQueryList());
+    },
+    block() {
+      return this.Block(false);
+    }
+  }
+};
 
-
-export default _mod13156;
+export default obj;

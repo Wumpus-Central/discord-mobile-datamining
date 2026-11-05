@@ -1,44 +1,30 @@
 // === Module 4563: ? ===
 
 // Module 4563
-import module_4564 from "module_4564" /* 4564 */;
-import module_4565 from "module_4565" /* 4565 */;
-import module_4566 from "module_4566" /* 4566 */;
-import date_mod from "module_4865" /* 4865 */;
-import date_mod from "module_4866" /* 4866 */;
+import module_2199 from "module_2199" /* 2199 */;
 
-if (!module_4564) {
-  const obj = { default: module_4564 };
-  let tmp3 = obj;
+if (!module_2199) {
+  const obj2 = { default: module_2199 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4564;
+  obj = module_2199;
 }
-if (!module_4565) {
-  const obj2 = { default: module_4565 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4565;
-}
-if (!module_4566) {
-  const obj3 = { default: module_4566 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4566;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + ".";
+  },
+  era: obj.default({ values: { narrow: ["M\u00D6", "MS"], abbreviated: ["M\u00D6", "MS"], wide: ["Milattan \u00D6nce", "Milattan Sonra"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["1\u00C7", "2\u00C7", "3\u00C7", "4\u00C7"], wide: ["\u0130lk \u00E7eyrek", "\u0130kinci \u00C7eyrek", "\u00DC\u00E7\u00FCnc\u00FC \u00E7eyrek", "Son \u00E7eyrek"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return Number(arg0) - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["O", "\u015E", "M", "N", "M", "H", "T", "A", "E", "E", "K", "A"], abbreviated: ["Oca", "\u015Eub", "Mar", "Nis", "May", "Haz", "Tem", "A\u011Fu", "Eyl", "Eki", "Kas", "Ara"], wide: ["Ocak", "\u015Eubat", "Mart", "Nisan", "May\u0131s", "Haziran", "Temmuz", "A\u011Fustos", "Eyl\u00FCl", "Ekim", "Kas\u0131m", "Aral\u0131k"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["P", "P", "S", "\u00C7", "P", "C", "C"], short: ["Pz", "Pt", "Sa", "\u00C7a", "Pe", "Cu", "Ct"], abbreviated: ["Paz", "Pzt", "Sal", "\u00C7ar", "Per", "Cum", "Cts"], wide: ["Pazar", "Pazartesi", "Sal\u0131", "\u00C7ar\u015Famba", "Per\u015Fembe", "Cuma", "Cumartesi"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "\u00F6\u00F6", pm: "\u00F6s", midnight: "gy", noon: "\u00F6", morning: "sa", afternoon: "\u00F6s", evening: "ak", night: "ge" }, abbreviated: { am: "\u00D6\u00D6", pm: "\u00D6S", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Fle", morning: "sabah", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Fam", night: "gece" }, wide: { am: "\u00D6.\u00D6.", pm: "\u00D6.S.", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Fle", morning: "sabah", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Fam", night: "gece" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u00F6\u00F6", pm: "\u00F6s", midnight: "gy", noon: "\u00F6", morning: "sa", afternoon: "\u00F6s", evening: "ak", night: "ge" }, abbreviated: { am: "\u00D6\u00D6", pm: "\u00D6S", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Flen", morning: "sabahleyin", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Famleyin", night: "geceleyin" }, wide: { am: "\u00F6.\u00F6.", pm: "\u00F6.s.", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Flen", morning: "sabahleyin", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Famleyin", night: "geceleyin" } }, defaultFormattingWidth: "wide" })
+};
 
-export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default date;
 export default exports.default;

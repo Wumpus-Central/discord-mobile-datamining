@@ -1,13 +1,34 @@
 // === Module 13343: ? ===
 
 // Module 13343
+import _mod13281 from "module_13281" /* 13281 */;
+import _mod13308 from "module_13308" /* 13308 */;
+import _mod13309 from "module_13309" /* 13309 */;
 
-export function parameterize(join) {
-  const substr = [...arguments].slice();
-  items = [join, ...substr];
-  const string = new String(String.raw.apply(items));
-  const str = join.join("\0");
-  string.__sentry_template_string__ = join.join("\0").replace(/%/g, "%%").replace(/\0/g, "%s");
-  string.__sentry_template_values__ = substr;
-  return string;
+require = arg1;
+const dependencyMap = arg6;
+
+export function initAndBind(arg0, debug) {
+  if (true === debug.debug) {
+    const obj = _mod13281;
+    if (_mod13309.DEBUG_BUILD) {
+      const logger = obj.logger;
+      logger.enable();
+    } else {
+      obj.consoleSandbox(() => {
+        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
+      });
+    }
+  }
+  const currentScope = _mod13308.getCurrentScope();
+  currentScope.update(debug.initialScope);
+  const obj4 = new arg0(debug);
+  const currentScope1 = _mod13308.getCurrentScope();
+  currentScope1.setClient(obj4);
+  obj4.init();
+  return obj4;
+}
+export function setCurrentClient(arg0) {
+  const currentScope = _mod13308.getCurrentScope();
+  currentScope.setClient(arg0);
 }

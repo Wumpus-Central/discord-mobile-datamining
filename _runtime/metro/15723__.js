@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 424, height: 254, scales: [1], hash: "16c887e8a2a3597bff0b1e42c0c69934", name: "top_perk_vanity_url", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b0762f0f9ef3f22f62e92b1be981b656", name: "ChevronLargeUpIcon", type: "png" });

@@ -1,34 +1,21 @@
 // === Module 16392: ? ===
 
 // Module 16392
-import _mod16373 from "module_16373" /* 16373 */;
-import _mod16377 from "module_16377" /* 16377 */;
+import _mod16390 from "module_16390" /* 16390 */;
 import _mod16393 from "module_16393" /* 16393 */;
+import _mod16395 from "module_16395" /* 16395 */;
 
-let prop = Object.getOwnPropertySymbols;
-if (prop) {
-  prop = !_mod16377(() => {
-    const SymbolResult = Symbol("symbol detection");
-    const StringResult = _mod16373.String(SymbolResult);
-    let tmp5 = !StringResult;
-    if (StringResult) {
-      const _Object = Object;
-      const _Symbol = Symbol;
-      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+let fn = Object;
+let closure_3 = _mod16393("".split);
+if (_mod16390(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === _mod16395(arg0)) {
+      let tmp2 = closure_3(arg0, "");
+    } else {
+      tmp2 = Object(arg0);
     }
-    if (!tmp5) {
-      const _Symbol2 = Symbol;
-      let tmp2Result = !sham;
-      if (!sham) {
-        tmp2Result = _mod16393;
-      }
-      if (tmp2Result) {
-        tmp2Result = _mod16393 < 41;
-      }
-      tmp5 = tmp2Result;
-    }
-    return tmp5;
-  });
+    return tmp2;
+  };
 }
 
-export default prop;
+export default fn;

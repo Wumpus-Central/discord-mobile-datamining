@@ -4,4 +4,4 @@
 import _mod5181 from "module_5181" /* 5181 */;
 
 
-export default _mod5181();
+export default _mod5181;

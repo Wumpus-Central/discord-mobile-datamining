@@ -1,16 +1,24 @@
 // === Module 5946: ? ===
 
 // Module 5946
-import _mod545 from "module_545" /* 545 */;
-import object from "object" /* 5947 */;
-import _mod5948 from "module_5948" /* 5948 */;
 
-
-export default function initCloneObject(arg0) {
-  if (typeof arg0.constructor === "function") {
-    if (!_mod545(arg0)) {
-      object(_mod5948(arg0));
+export default function initCloneArray(arg0) {
+  let length = arg0.length;
+  const constructor = new arg0.constructor(length);
+  if (length) {
+    length = typeof arg0[0] === "string";
+  }
+  if (!length) {
+    if (length) {
+      ({ index: tmp.index, input: tmp.input } = arg0);
     }
-    return {};
+    return constructor;
+  } else {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let callResult = hasOwnProperty("index");
+    } else {
+      callResult = call(arg0, "index");
+    }
   }
 };

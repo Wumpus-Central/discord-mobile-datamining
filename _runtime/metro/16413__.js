@@ -1,24 +1,18 @@
 // === Module 16413: ? ===
 
 // Module 16413
-import _mod16396 from "module_16396" /* 16396 */;
+import _mod16404 from "module_16404" /* 16404 */;
+import _mod16412 from "module_16412" /* 16412 */;
 import _mod16414 from "module_16414" /* 16414 */;
+import _mod16415 from "module_16415" /* 16415 */;
 
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod16414(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod16396(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod16396(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
+export default _mod16404 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
+  const tmp3 = _mod16414("Symbol");
+  let tmpResultResult = _mod16412(tmp3);
+  if (tmpResultResult) {
+    tmpResultResult = _mod16415(tmp3.prototype, Object(arg0));
+    const tmpResult = _mod16415;
   }
-};
+  return tmpResultResult;
+});

@@ -1,9 +1,23 @@
 // === Module 13142: ? ===
 
 // Module 13142
-import _mod13140 from "module_13140" /* 13140 */;
-import _mod13143 from "module_13143" /* 13143 */;
-import _mod13144 from "module_13144" /* 13144 */;
+const obj = {
+  name: "Value",
+  structure: null,
+  parse() {
+    const element = { type: "Value", loc: null, children: null };
+    const sequence = this.readSequence(this.scope.Value);
+    element.loc = this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart);
+    element.children = sequence;
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0);
+  }
+};
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
-
-export default { getNode: _mod13140, expression: _mod13143, var: _mod13144 };
+export default obj;

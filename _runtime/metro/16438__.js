@@ -1,10 +1,14 @@
 // === Module 16438: ? ===
 
 // Module 16438
-import _mod16416 from "module_16416" /* 16416 */;
-import _mod16417 from "module_16417" /* 16417 */;
+import _mod16411 from "module_16411" /* 16411 */;
 
 
-export default Object.keys || (function keys(arg0) {
-  return _mod16417(arg0, _mod16416);
-});
+export default (arg0) => {
+  if (_mod16411(arg0)) {
+    return arg0;
+  } else {
+    const tmp5 = new TypeError(String(arg0) + " is not an object");
+    throw tmp5;
+  }
+};

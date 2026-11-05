@@ -2,18 +2,15 @@
 
 // Module 8269
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 8179 */;
-import extractPropsDefault from "extractProps" /* 8186 */;
-import extractFontDefault from "extractFont" /* 8193 */;
-import _modDef8195 from "module_8195" /* 8195 */;
-import _modDef8272 from "module_8272" /* 8272 */;
+import _modDef8200 from "module_8200" /* 8200 */;
+import _modDef8270 from "module_8270" /* 8270 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Text = fn;
+const Rect = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,70 +31,49 @@ function _isNativeReflectConstruct() {
   }
 }
 _possibleConstructorReturnDefault;
-_isNativeReflectConstruct = fn(8270);
 const jsx = fn(21).jsx;
-class Text {
+class Rect {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, Text);
-    items1 = [...items];
+    tmp = closure_3(this, Rect);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Text);
+    obj = hasOwnProperty(Rect);
     tmp3 = closure_4;
     if (metroImportDefault()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = Text(8186).propsAndStyles(matrix);
-      const obj = Text(8186);
-      const merged = Object.assign(propsAndStylesResult, Text(8187).pickNotNil(extractFontDefault(propsAndStylesResult, true)));
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-      const obj2 = Text(8187);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(Text, _modDef8195);
+_inherits(Rect, _modDef8200);
 const entry = {
   key: "render",
   value: function render() {
-    const propsAndStylesResult = Text(8186).propsAndStyles(this.props);
-    const obj2 = {};
-    const obj = Text(8186);
-    const merged = Object.assign(propsAndStylesResult);
-    obj2.x = null;
-    obj2.y = null;
-    const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
-    tmp2Result.ref = this.refMethod;
-    const obj3 = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef8272, {});
+    const self = this;
+    const props = this.props;
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(Rect(8191).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(Text, items);
-importDefaultResultResult.displayName = "Text";
+const items = [entry];
+const importDefaultResultResult = _createClass(Rect, items);
+importDefaultResultResult.displayName = "Rect";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
 
 export default importDefaultResultResult;

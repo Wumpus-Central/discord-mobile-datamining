@@ -1,173 +1,194 @@
 // === Module 13370: ? ===
 
 // Module 13370
-import errorCallback from "errorCallback" /* 13270 */;
-import _mod13274 from "module_13274" /* 13274 */;
-import _mod13275 from "module_13275" /* 13275 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 13279 */;
-import _mod13288 from "module_13288" /* 13288 */;
-import _mod13301 from "module_13301" /* 13301 */;
-import _mod13302 from "module_13302" /* 13302 */;
-import COUNTER_METRIC_TYPE from "COUNTER_METRIC_TYPE" /* 13371 */;
-import __SENTRY_DEBUG__ from "module_13273" /* 13273 */;
+import _mod13281 from "module_13281" /* 13281 */;
+import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 13284 */;
+import _mod13309 from "module_13309" /* 13309 */;
+import setupIntegration from "module_13337" /* 13337 */;
 
-const require = globalThis.__r;
-
-function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
-  let obj = arg4;
-  if (arg4 === undefined) {
-    obj = {};
-  }
-  let client = obj.client;
-  if (!client) {
-    client = _mod13301.getClient();
-  }
-  if (client) {
-    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
-    let rootSpan;
-    if (activeSpan) {
-      rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-      const tmp3Result = spanTimeInputToSeconds;
-    }
-    let description = rootSpan;
-    if (rootSpan) {
-      description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
-      const tmp3Result3 = spanTimeInputToSeconds;
-    }
-    ({ unit, tags, timestamp } = obj);
-    const options = client.getOptions();
-    ({ release, environment } = options);
-    const obj4 = {};
-    if (release) {
-      obj4.release = release;
-    }
-    if (environment) {
-      obj4.environment = environment;
-    }
-    if (description) {
-      obj4.transaction = description;
-    }
-    if (_mod13302.DEBUG_BUILD) {
-      const logger = _mod13274.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
-    }
-    const globalSingleton = _mod13275.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(client);
-    if (!value) {
-      const tmp20 = new arg0(client);
-      closure_0 = tmp20;
-      client.on("flush", () => closure_0.flush());
-      client.on("close", () => closure_0.close());
-      const result = globalSingleton.set(client, tmp20);
-      value = tmp20;
-    }
-    const obj5 = {};
-    const merged = Object.assign(obj4);
-    const merged1 = Object.assign(tags);
-    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj5, timestamp);
-    const tmp3Result4 = _mod13275;
-  }
-}
-errorCallback;
-
-export const metrics = {
-  increment(arg0, arg1) {
-    let num = match;
-    if (match === undefined) {
-      num = 1;
-    }
-    let parsed = num;
-    if (typeof num === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(num);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  distribution(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  set(arg0, arg1, parsed, arg3) {
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  gauge(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  timing(arg0, name, fn) {
-    _require = arg0;
-    dependencyMap = name;
-    addToMetricsAggregator = fn;
-    let str = arg3;
-    if (arg3 === undefined) {
-      str = "second";
-    }
-    closure_3 = arg4;
-    c4 = undefined;
-    if (typeof fn === "function") {
-      let timestampInSecondsResult = require("module_13288").timestampInSeconds();
-      c4 = timestampInSecondsResult;
-      let obj = require("module_13288");
-      const obj3 = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
-      return require("module_13308").startSpanManual(obj3, (arg0) => {
-        closure_0 = arg0;
-        return closure_0(name[10]).handleCallbackErrors(() => fn(), () => {
-
-        }, () => {
-          const timestampInSecondsResult = _mod13288.timestampInSeconds();
-          const diff = timestampInSecondsResult - c4;
-          const obj2 = {};
-          const merged = Object.assign(closure_3);
-          obj2.unit = "second";
-          let parsed = diff;
-          if (typeof diff === "string") {
-            const _parseInt = parseInt;
-            parsed = parseInt(diff);
+function _shouldDropEvent(message, message2) {
+  let tmp = message2;
+  if (tmp) {
+    message = message.message;
+    message2 = message2.message;
+    if (message) {
+      if (!message) {
+        if (message) {
+          let flag = false;
+          if (message === message2) {
+            flag = false;
+            if (_isSameFingerprint(message, message2)) {
+              const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(message);
+              const framesFromEvent1 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
+              if (framesFromEvent) {
+                if (!framesFromEvent) {
+                  if (framesFromEvent) {
+                    let flag2 = false;
+                    if (framesFromEvent1.length === framesFromEvent.length) {
+                      let num = 0;
+                      flag2 = true;
+                      if (0 < framesFromEvent1.length) {
+                        flag2 = false;
+                        while (framesFromEvent1[num].filename === framesFromEvent[num].filename) {
+                          flag2 = false;
+                          if (tmp5.lineno !== tmp6.lineno) {
+                            break;
+                          } else {
+                            flag2 = false;
+                            if (tmp5.colno !== tmp6.colno) {
+                              break;
+                            } else {
+                              flag2 = false;
+                              if (tmp5.function !== tmp6.function) {
+                                break;
+                              } else {
+                                let sum = num + 1;
+                                num = sum;
+                                flag2 = true;
+                                if (sum >= framesFromEvent1.length) {
+                                  break;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    flag2 = false;
+                  }
+                } else {
+                  flag2 = false;
+                }
+              } else {
+                flag2 = true;
+              }
+              flag = false;
+              if (flag2) {
+                flag = true;
+              }
+            }
           }
-          addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj2);
-          closure_0.end(timestampInSecondsResult);
-        });
-      });
-    } else {
-      const obj4 = {};
-      let merged = Object.assign(arg4);
-      obj4.unit = str;
-      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
-      let parsed = fn;
-      if (typeof fn === "string") {
-        let _parseInt = parseInt;
-        parsed = parseInt(fn);
+        } else {
+          flag = false;
+        }
+      } else {
+        flag = false;
       }
-      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj4);
-    }
-  },
-  getMetricsAggregatorForClient(on, arg1) {
-    const globalSingleton = _mod13275.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(on);
-    if (value) {
-      return value;
     } else {
-      const tmp6 = new arg1(on);
-      closure_0 = tmp6;
-      on.on("flush", () => closure_0.flush());
-      on.on("close", () => closure_0.close());
-      const result = globalSingleton.set(on, tmp6);
-      return tmp6;
+      flag = false;
+    }
+    let tmp9 = flag;
+    if (!tmp9) {
+      let flag3 = false;
+      if (message2.exception && message2.exception.values && message2.exception.values[0]) {
+        flag3 = false;
+        if (iter2) {
+          flag3 = false;
+          if (iter.type === iter2.type) {
+            flag3 = false;
+            if (iter.value === iter2.value) {
+              flag3 = false;
+              if (_isSameFingerprint(message, message2)) {
+                const framesFromEvent2 = stackParserFromStackParserOptions.getFramesFromEvent(message);
+                const framesFromEvent3 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
+                if (framesFromEvent2) {
+                  if (!framesFromEvent2) {
+                    if (framesFromEvent2) {
+                      let flag4 = false;
+                      if (framesFromEvent3.length === framesFromEvent2.length) {
+                        let num2 = 0;
+                        flag4 = true;
+                        if (0 < framesFromEvent3.length) {
+                          flag4 = false;
+                          while (framesFromEvent3[num2].filename === framesFromEvent2[num2].filename) {
+                            flag4 = false;
+                            if (tmp12.lineno !== tmp13.lineno) {
+                              break;
+                            } else {
+                              flag4 = false;
+                              if (tmp12.colno !== tmp13.colno) {
+                                break;
+                              } else {
+                                flag4 = false;
+                                if (tmp12.function !== tmp13.function) {
+                                  break;
+                                } else {
+                                  let sum1 = num2 + 1;
+                                  num2 = sum1;
+                                  flag4 = true;
+                                  if (sum1 >= framesFromEvent3.length) {
+                                    break;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      flag4 = false;
+                    }
+                  } else {
+                    flag4 = false;
+                  }
+                } else {
+                  flag4 = true;
+                }
+                flag3 = false;
+                if (flag4) {
+                  flag3 = true;
+                }
+              }
+            }
+          }
+        }
+      }
+      tmp9 = flag3;
+    }
+    tmp = tmp9;
+  }
+  return tmp;
+}
+function _isSameFingerprint(fingerprint, fingerprint2) {
+  fingerprint = fingerprint.fingerprint;
+  fingerprint2 = fingerprint2.fingerprint;
+  if (!fingerprint) {
+    if (!fingerprint2) {
+      return true;
     }
   }
-};
+  if (!fingerprint) {
+    try {
+      const joined = fingerprint.join("");
+      return joined === fingerprint2.join("");
+    } catch (err) {
+      return false;
+    }
+  }
+  return false;
+}
+
+export { _shouldDropEvent };
+export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
+  name: "Dedupe",
+  processEvent(type) {
+    if (type.type) {
+      return type;
+    } else {
+      try {
+        if (_shouldDropEvent(type, closure_0)) {
+          if (_mod13309.DEBUG_BUILD) {
+            const logger = _mod13281.logger;
+            logger.warn("Event dropped due to being a duplicate of previously captured event.");
+          }
+          return null;
+        } else {
+          closure_0 = type;
+          return type;
+        }
+      } catch (err) {
+      }
+    }
+  }
+}));

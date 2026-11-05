@@ -864,7 +864,7 @@ let fn = function t() {
       requiredFirstCharacters: ["h"],
       match: inlineRegex(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/),
       parse(content, arg1, arg2) {
-          obj = { type: "link", content: null, target: content[1], title: "children" };
+          obj = { type: "link", content: null, target: content[1], title: "id" };
           items = [{ type: "text", content: content[1] }];
           obj.content = items;
           return obj;
@@ -1722,7 +1722,7 @@ let fn = function t() {
                       obj = {};
                     }
                     if (Array.isArray(arr)) {
-                      let mapped = arr.map(/* F136607 */ function() { ... });
+                      let mapped = arr.map(/* F136867 */ function() { ... });
                       let joined = mapped.join("");
                     } else {
                       joined = closure_2_0(arr, closure_2_1, obj);

@@ -1,14 +1,17 @@
 // === Module 16421: ? ===
 
 // Module 16421
-import _mod16422 from "module_16422" /* 16422 */;
+import _mod16390 from "module_16390" /* 16390 */;
+import element from "element" /* 16422 */;
+import getOwnPropertyDescriptor from "module_16389" /* 16389 */;
 
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod16390(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
+    }
+  }).a);
+}
 
-export default (arg0) => {
-  const tmp = _mod16422(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
-  }
-  return num;
-};
+export default tmp2;

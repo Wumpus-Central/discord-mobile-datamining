@@ -1,16 +1,22 @@
 // === Module 13120: ? ===
 
 // Module 13120
-import _mod13055 from "module_13055" /* 13055 */;
+import _mod13062 from "module_13062" /* 13062 */;
 
-const Number = _mod13055.TYPE.Number;
-const obj = {
-  name: "Number",
+const Hash = _mod13062.TYPE.Hash;
+let obj = {
+  name: "Hash",
   structure: { value: String },
   parse() {
-    return { type: "Number", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd), value: this.consume(Number) };
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Hash);
+    const obj = { type: "Hash", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
+    const scanner = this.scanner;
+    obj.value = scanner.substrToCursor(tokenStart + 1);
+    return obj;
   },
   generate(value) {
+    this.chunk("#");
     this.chunk(value.value);
   }
 };

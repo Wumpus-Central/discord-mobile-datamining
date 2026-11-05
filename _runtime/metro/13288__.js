@@ -1,61 +1,142 @@
 // === Module 13288: ? ===
 
 // Module 13288
-import _mod13275 from "module_13275" /* 13275 */;
-
-function dateTimestampInSeconds() {
-  return Date.now() / 1000;
-}
-let timeOrigin;
-const _performance = _mod13275.GLOBAL_OBJ.performance;
-let fn = dateTimestampInSeconds;
-if (_performance) {
-  fn = dateTimestampInSeconds;
-  if (_performance.now) {
-    const _Date = Date;
-    const timestamp = Date.now();
-    timeOrigin = timestamp - _performance.now();
-    if (null != _performance.timeOrigin) {
-      timeOrigin = _performance.timeOrigin;
-    }
-    fn = () => (timeOrigin + _performance.now()) / 1000;
+function isInstanceOf(arg0, arg1) {
+  try {
+    return arg0 instanceof arg1;
+  } catch (err) {
+    return false;
   }
 }
-const _performance2 = _mod13275.GLOBAL_OBJ.performance;
-if (_performance2) {
-  if (_performance2.now) {
-    const nowResult = _performance2.now();
-    const _Date2 = Date;
-    const timestamp1 = Date.now();
-    let num2 = 3600000;
-    if (_performance2.timeOrigin) {
-      const _Math = Math;
-      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
-    }
-    let timeOrigin2 = _performance2.timing;
-    if (timeOrigin2) {
-      timeOrigin2 = _performance2.timing.navigationStart;
-    }
-    let num3 = 3600000;
-    if (typeof timeOrigin2 === "number") {
-      const _Math2 = Math;
-      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
-    }
-    if (!tmp6) {
-      if (num3 >= 3600000) {
-        exports._browserPerformanceTimeOriginMode = "dateNow";
+
+export function isDOMError(arg0) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMError" + "]";
+}
+export function isDOMException(arg0) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMException" + "]";
+}
+export function isElement(arg0) {
+  let tmp = typeof globalThis.Element !== "undefined";
+  if (typeof globalThis.Element !== "undefined") {
+    tmp = isInstanceOf(arg0, globalThis.Element);
+  }
+  return tmp;
+}
+export function isError(originalException) {
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(originalException);
+  if ("[object Error]" !== tmp2) {
+    if ("[object Exception]" !== tmp2) {
+      if ("[object DOMException]" !== tmp2) {
+        if ("[object WebAssembly.Exception]" !== tmp2) {
+          const _Error = Error;
+          return isInstanceOf(originalException, Error);
+        }
       }
     }
-    if (num2 <= num3) {
-      exports._browserPerformanceTimeOriginMode = "timeOrigin";
-      timeOrigin2 = _performance2.timeOrigin;
-    } else {
-      exports._browserPerformanceTimeOriginMode = "navigationStart";
-    }
-    tmp6 = num2 < 3600000;
   }
+  return true;
 }
-
-export const _browserPerformanceTimeOriginMode = "none";
-export { dateTimestampInSeconds };
-export const timestampInSeconds = fn;
+export function isErrorEvent(name) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(name)) === "[object " + "ErrorEvent" + "]";
+}
+export function isEvent(type) {
+  let tmp = typeof Event !== "undefined";
+  if (typeof Event !== "undefined") {
+    const _Event = Event;
+    tmp = isInstanceOf(type, Event);
+  }
+  return tmp;
+}
+export { isInstanceOf };
+export function isParameterizedString(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
+  }
+  if (tmp) {
+    tmp = "__sentry_template_string__" in obj;
+  }
+  if (tmp) {
+    tmp = "__sentry_template_values__" in obj;
+  }
+  return tmp;
+}
+export function isPlainObject(user) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(user)) === "[object " + "Object" + "]";
+}
+export function isPrimitive(obj) {
+  let tmp = null === obj;
+  if (!tmp) {
+    let tmp2 = typeof obj === "object";
+    if (typeof obj === "object") {
+      tmp2 = null !== obj;
+    }
+    if (tmp2) {
+      tmp2 = "__sentry_template_string__" in obj;
+    }
+    if (tmp2) {
+      tmp2 = "__sentry_template_values__" in obj;
+    }
+    tmp = tmp2;
+  }
+  if (!tmp) {
+    let tmp3 = typeof obj !== "object";
+    if (typeof obj !== "object") {
+      tmp3 = typeof obj !== "function";
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+}
+export function isRegExp(test) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(test)) === "[object " + "RegExp" + "]";
+}
+export function isString(body) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(body)) === "[object " + "String" + "]";
+}
+export function isSyntheticEvent(arg0) {
+  const call = toString.call;
+  let tmp3 = (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "Object" + "]";
+  if (tmp3) {
+    tmp3 = "nativeEvent" in arg0;
+  }
+  if (tmp3) {
+    tmp3 = "preventDefault" in arg0;
+  }
+  if (tmp3) {
+    tmp3 = "stopPropagation" in arg0;
+  }
+  return tmp3;
+}
+export function isThenable(arg0) {
+  let then = arg0;
+  if (arg0) {
+    then = arg0.then;
+  }
+  if (then) {
+    then = typeof arg0.then === "function";
+  }
+  return Boolean(then);
+}
+export function isVueViewModel(__isVue) {
+  let tmp = typeof __isVue !== "object";
+  if (typeof __isVue === "object") {
+    tmp = null === __isVue;
+  }
+  if (!tmp) {
+    __isVue = __isVue.__isVue;
+    let tmp2 = !__isVue;
+    if (!__isVue) {
+      tmp2 = !__isVue._isVue;
+    }
+    tmp = tmp2;
+  }
+  return !tmp;
+}

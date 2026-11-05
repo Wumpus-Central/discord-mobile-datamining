@@ -1,49 +1,21 @@
 // === Module 16340: ? ===
 
 // Module 16340
-import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 16341 */;
-import compareKV from "compareKV" /* 16342 */;
-import likelySubtags from "likelySubtags" /* 16345 */;
-import _mod16346 from "module_16346" /* 16346 */;
-import e_mod from "e" /* 1159 */;
+import _mod16330 from "module_16330" /* 16330 */;
+import BestAvailableLocale from "BestAvailableLocale" /* 16333 */;
 
-const require = globalThis.__r;
+require = arg1;
+const dependencyMap = arg6;
 
-let e = e_mod;
-e.__exportStar(emitUnicodeLanguageId, exports);
-let e = e_mod;
-e.__exportStar(_mod16346, exports);
-let e = e_mod;
-e.__exportStar(likelySubtags, exports);
-
-export function getCanonicalLocales(items) {
-  if (undefined === items) {
-    items = [];
-  } else {
-    let arr3 = items;
-    if (typeof items === "string") {
-      const items1 = [items];
-      arr3 = items1;
-    }
-    const items2 = [];
-    let num3 = 0;
-    items = items2;
-    if (0 < arr3.length) {
-      do {
-        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_16344").parseUnicodeLocaleId(arr3[num3])));
-        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
-          let arr = items2.push(emitUnicodeLocaleIdResult);
-        }
-        num3 = num3 + 1;
-        items = items2;
-      } while (num3 < arr3.length);
+export function LookupSupportedLocales(arg0, arg1) {
+  items = [];
+  for (let num = 0; num < arg1.length; num = num + 1) {
+    let str = arg1[num];
+    let replaced = str.replace(_mod16330.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
+    if (BestAvailableLocaleResult) {
+      let arr = items.push(BestAvailableLocaleResult);
     }
   }
   return items;
 }
-export const isStructurallyValidLanguageTag = require("module_16344").isStructurallyValidLanguageTag;
-export const isUnicodeLanguageSubtag = require("module_16344").isUnicodeLanguageSubtag;
-export const isUnicodeRegionSubtag = require("module_16344").isUnicodeRegionSubtag;
-export const isUnicodeScriptSubtag = require("module_16344").isUnicodeScriptSubtag;
-export const parseUnicodeLanguageId = require("module_16344").parseUnicodeLanguageId;
-export const parseUnicodeLocaleId = require("module_16344").parseUnicodeLocaleId;
