@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/tabs/guilds/empty_states/images",
-  width: 32,
-  height: 32,
-  scales: [2, 3, 4],
-  hash: "c33937cb1ecf8da1cf6ed34f37467be9",
-  name: "ic-customize",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f1866c542e48fd1fe13979e0f76a481a",
+  name: "WaveformSlashIcon",
   type: "png",
 });

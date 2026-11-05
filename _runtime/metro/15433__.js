@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
+  width: 275.5,
+  height: 78,
   scales: [2, 3],
-  hash: "cc65a5f47aada2d48ca57f930a5ac833",
-  name: "camera",
+  hash: "b55be157bc31f9c933d8fe113de3e547",
+  name: "voice_channels",
   type: "png",
 });

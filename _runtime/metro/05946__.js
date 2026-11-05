@@ -1,13 +1,22 @@
 // _runtime/metro/05946__.js
-import _mod545 from "00545__.js";
-import object from "../05947_object.js";
-import _mod5948 from "05948__.js";
 
-export default function initCloneObject(arg0) {
-  if (typeof arg0.constructor === "function") {
-    if (!_mod545(arg0)) {
-      object(_mod5948(arg0));
+export default function initCloneArray(arg0) {
+  let length = arg0.length;
+  const constructor = new arg0.constructor(length);
+  if (length) {
+    length = typeof arg0[0] === "string";
+  }
+  if (!length) {
+    if (length) {
+      ({ index: tmp.index, input: tmp.input } = arg0);
     }
-    return {};
+    return constructor;
+  } else {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let callResult = hasOwnProperty("index");
+    } else {
+      callResult = call(arg0, "index");
+    }
   }
 }

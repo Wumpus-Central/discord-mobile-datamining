@@ -1,10 +1,13 @@
 // _runtime/metro/08266__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _modDef8200 from "08200__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
+const Polyline = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -23,19 +26,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class Stop {
+const jsx = fn(21).jsx;
+class Polyline {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_0(this, Stop);
+    tmp = c2(this, Polyline);
     items1 = [...items];
-    tmp2 = c2;
-    obj = c2(Stop);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp2 = closure_4;
+    obj = closure_4(Polyline);
+    tmp3 = closure_3;
+    if (closure_6()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -44,25 +46,40 @@ class Stop {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polyline(8265)(points);
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
       }
     };
     return tmp3Result;
   }
 }
-_classCallCheck = Stop;
-_inherits(Stop, fn(19).Component);
+_inherits(Polyline, _modDef8200);
 const entry = {
   key: "render",
   value: function render() {
-    return null;
+    const props = this.props;
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polyline(8265)(points);
+    }
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polyline(8260), { ref: this.refMethod, d: null });
   },
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(Stop, items);
-importDefaultResultResult.displayName = "Stop";
+const importDefaultResultResult = _createClass(Polyline, items);
+importDefaultResultResult.displayName = "Polyline";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

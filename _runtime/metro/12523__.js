@@ -1,5 +1,5 @@
 // _runtime/metro/12523__.js
-import _mod12476 from "12476__.js";
+import _mod12483 from "12483__.js";
 
 const self = this;
 let self2 = this;
@@ -56,14 +56,14 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "karakter", verb: "olmal\u0131" },
-          file: { unit: "bayt", verb: "olmal\u0131" },
-          array: { unit: "\u00F6\u011Fe", verb: "olmal\u0131" },
-          set: { unit: "\u00F6\u011Fe", verb: "olmal\u0131" },
+          string: { unit: "znak\u00F3w", verb: "mie\u0107" },
+          file: { unit: "bajt\u00F3w", verb: "mie\u0107" },
+          array: { unit: "element\u00F3w", verb: "mie\u0107" },
+          set: { unit: "element\u00F3w", verb: "mie\u0107" },
         };
         closure_1 = {
-          regex: "girdi",
-          email: "e-posta adresi",
+          regex: "wyra\u017Cenie",
+          email: "adres email",
           url: "URL",
           emoji: "emoji",
           uuid: "UUID",
@@ -76,22 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "ISO tarih ve saat",
-          date: "ISO tarih",
-          time: "ISO saat",
-          duration: "ISO s\u00FCre",
-          ipv4: "IPv4 adresi",
-          ipv6: "IPv6 adresi",
-          cidrv4: "IPv4 aral\u0131\u011F\u0131",
-          cidrv6: "IPv6 aral\u0131\u011F\u0131",
-          base64: "base64 ile \u015Fifrelenmi\u015F metin",
-          base64url: "base64url ile \u015Fifrelenmi\u015F metin",
-          json_string: "JSON dizesi",
-          e164: "E.164 say\u0131s\u0131",
+          datetime: "data i godzina w formacie ISO",
+          date: "data w formacie ISO",
+          time: "godzina w formacie ISO",
+          duration: "czas trwania ISO",
+          ipv4: "adres IPv4",
+          ipv6: "adres IPv6",
+          cidrv4: "zakres IPv4",
+          cidrv6: "zakres IPv6",
+          base64: "ci\u0105g znak\u00F3w zakodowany w formacie base64",
+          base64url: "ci\u0105g znak\u00F3w zakodowany w formacie base64url",
+          json_string: "ci\u0105g znak\u00F3w w formacie JSON",
+          e164: "liczba E.164",
           jwt: "JWT",
-          template_literal: "\u015Eablon dizesi",
+          template_literal: "wej\u015Bcie",
         };
-        closure_2 = { nan: "NaN" };
+        closure_2 = { nan: "NaN", number: "liczba", array: "tablica" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -100,27 +100,31 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp48 = closure_2[parsedTypeResult];
-              if (tmp48 == null) {
-                tmp48 = parsedTypeResult;
+              let tmp49 = closure_2[parsedTypeResult];
+              if (tmp49 == null) {
+                tmp49 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
-                  "Ge\u00E7ersiz de\u011Fer: beklenen instanceof " + code.expected + ", al\u0131nan " + tmp48;
+                  "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano instanceof " +
+                  code.expected +
+                  ", otrzymano " +
+                  tmp49;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Ge\u00E7ersiz de\u011Fer: beklenen " + expected + ", al\u0131nan " + tmp48;
+                combined = "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano " + expected + ", otrzymano " + tmp49;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Ge\u00E7ersiz de\u011Fer: beklenen " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 =
+                  "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
                 combined1 =
-                  "Ge\u00E7ersiz se\u00E7enek: a\u015Fa\u011F\u0131dakilerden biri olmal\u0131: " +
+                  "Nieprawid\u0142owa opcja: oczekiwano jednej z warto\u015Bci " +
                   closure_2.joinValues(code.values, "|");
               }
               return combined1;
@@ -129,93 +133,129 @@ if (self2) {
               if (code.inclusive) {
                 str29 = "<=";
               }
-              let tmp27 = obj2[code.origin];
-              if (tmp27 == null) {
-                tmp27 = null;
+              let tmp28 = obj2[code.origin];
+              if (tmp28 == null) {
+                tmp28 = null;
               }
               let str30 = code.origin;
-              if (tmp27) {
+              if (tmp28) {
                 if (str30 == null) {
-                  str30 = "de\u011Fer";
+                  str30 = "warto\u015B\u0107";
                 }
                 const str1 = code.maximum.toString();
-                let str36 = tmp27.unit;
+                let str36 = tmp28.unit;
                 if (str36 == null) {
-                  str36 = "\u00F6\u011Fe";
+                  str36 = "element\u00F3w";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "\u00C7ok b\u00FCy\u00FCk: beklenen " + str30 + " " + str29 + str1 + " " + str36;
+                let combined2 =
+                  "Za du\u017Ca warto\u015B\u0107: oczekiwano, \u017Ce " +
+                  str30 +
+                  " b\u0119dzie mie\u0107 " +
+                  str29 +
+                  str1 +
+                  " " +
+                  str36;
               } else {
                 let str31 = str30;
                 if (str30 == null) {
-                  str31 = "de\u011Fer";
+                  str31 = "warto\u015B\u0107";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "\u00C7ok b\u00FCy\u00FCk: beklenen " + str31 + " " + str29 + code.maximum.toString();
+                combined2 =
+                  "Zbyt du\u017C(y/a/e): oczekiwano, \u017Ce " +
+                  str31 +
+                  " b\u0119dzie wynosi\u0107 " +
+                  str29 +
+                  code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str22 = ">";
+              let str18 = ">";
               if (code.inclusive) {
-                str22 = ">=";
+                str18 = ">=";
               }
               let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
-              ({ origin, minimum } = code);
-              const str51 = minimum.toString();
+              let str19 = code.origin;
               if (tmp15) {
+                if (str19 == null) {
+                  str19 = "warto\u015B\u0107";
+                }
+                const str50 = code.minimum.toString();
+                let str25 = tmp15.unit;
+                if (str25 == null) {
+                  str25 = "element\u00F3w";
+                }
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "\u00C7ok k\u00FC\u00E7\u00FCk: beklenen " + origin + " " + str22 + str51 + " " + tmp15.unit;
+                  "Za ma\u0142a warto\u015B\u0107: oczekiwano, \u017Ce " +
+                  str19 +
+                  " b\u0119dzie mie\u0107 " +
+                  str18 +
+                  str50 +
+                  " " +
+                  str25;
               } else {
+                let str20 = str19;
+                if (str19 == null) {
+                  str20 = "warto\u015B\u0107";
+                }
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "\u00C7ok k\u00FC\u00E7\u00FCk: beklenen " + origin + " " + str22 + str51;
+                combined3 =
+                  "Zbyt ma\u0142(y/a/e): oczekiwano, \u017Ce " +
+                  str20 +
+                  " b\u0119dzie wynosi\u0107 " +
+                  str18 +
+                  code.minimum.toString();
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = 'Ge\u00E7ersiz metin: "' + code.prefix + '" ile ba\u015Flamal\u0131';
+                let combined4 =
+                  'Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi zaczyna\u0107 si\u0119 od "' + code.prefix + '"';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = 'Ge\u00E7ersiz metin: "' + code.suffix + '" ile bitmeli';
+                combined4 =
+                  'Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi ko\u0144czy\u0107 si\u0119 na "' + code.suffix + '"';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = 'Ge\u00E7ersiz metin: "' + code.includes + '" i\u00E7ermeli';
+                combined4 = 'Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi zawiera\u0107 "' + code.includes + '"';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Ge\u00E7ersiz metin: " + code.pattern + " desenine uymal\u0131";
+                combined4 = "Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi odpowiada\u0107 wzorcowi " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Ge\u00E7ersiz " + format;
+                combined4 = "Nieprawid\u0142ow(y/a/e) " + format;
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Ge\u00E7ersiz say\u0131: " + code.divisor + " ile tam b\u00F6l\u00FCnebilmeli";
+              return "Nieprawid\u0142owa liczba: musi by\u0107 wielokrotno\u015Bci\u0105 " + code.divisor;
             case "unrecognized_keys":
-              let str5 = "";
+              let str3 = "";
               if (code.keys.length > 1) {
-                str5 = "lar";
+                str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Tan\u0131nmayan anahtar" + str5 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "Nierozpoznane klucze" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "" + code.origin + " i\u00E7inde ge\u00E7ersiz anahtar";
+              return "Nieprawid\u0142owy klucz w " + code.origin;
             case "invalid_union":
-              return "Ge\u00E7ersiz de\u011Fer";
+              return "Nieprawid\u0142owe dane wej\u015Bciowe";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "" + code.origin + " i\u00E7inde ge\u00E7ersiz de\u011Fer";
+              return "Nieprawid\u0142owa warto\u015B\u0107 w " + code.origin;
             default:
-              return "Ge\u00E7ersiz de\u011Fer";
+              return "Nieprawid\u0142owe dane wej\u015Bciowe";
           }
         };
         return obj;
@@ -223,7 +263,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod12476);
+    let closure_2 = fn(_mod12483);
     function error() {}
     module.exports = exports.default;
   } else {

@@ -1,15 +1,15 @@
 // _runtime/metro/04701__.js
-import module_4700_mod from "04700__.js";
-import requiredArgs_mod from "../04422_requiredArgs.js";
+import _typeof_mod from "04423__.js";
+import requiredArgs_mod from "../04424_requiredArgs.js";
 
-let module_4700 = module_4700_mod;
-if (!module_4700) {
-  const obj = { default: module_4700 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4700;
+  tmp3 = _typeof;
 }
-module_4700 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getUnixTime(arg0) {
+export default function getSeconds(arg0) {
   requiredArgs.default(1, arguments);
-  return Math.floor(module_4700.default(arg0) / 1000);
+  return _typeof.default(arg0).getSeconds();
 };
 export default exports.default;

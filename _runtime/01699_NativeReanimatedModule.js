@@ -12,7 +12,7 @@ class NativeReanimatedModule {
   constructor() {
     tmp3 = closure_3(this, NativeReanimatedModule);
     tmp4 = hasOwnProperty;
-    definePropertyResult = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "Boolean" });
     tmp6 = closure_0;
     tmp7 = closure_1;
     tmp8 = c2;

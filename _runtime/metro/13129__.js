@@ -1,38 +1,33 @@
 // _runtime/metro/13129__.js
-import _mod13055 from "13055__.js";
+import _mod13062 from "13062__.js";
 
-const Comma = _mod13055.TYPE.Comma;
+const LeftParenthesis = _mod13062.TYPE.LeftParenthesis;
+const RightParenthesis = _mod13062.TYPE.RightParenthesis;
 const obj = {
-  name: "SelectorList",
+  name: "Parentheses",
   structure: null,
-  parse() {
+  parse(call, arg1) {
     const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      list.push(self.Selector());
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.Selector());
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
+    this.eat(LeftParenthesis);
+    call = call.call;
+    if (!self.scanner.eof) {
+      self.eat(RightParenthesis);
     }
-    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
+    const element = {
+      type: "Parentheses",
+      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+      children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
+    };
     return element;
   },
   generate(arg0) {
-    this.children(arg0, function () {
-      this.chunk(",");
-    });
+    this.chunk("(");
+    this.children(arg0);
+    this.chunk(")");
   },
-  walkContext: "selector",
 };
 const obj2 = { children: null };
-const items = [["Selector", "Raw"]];
+const items = [[]];
 obj2.children = items;
 obj.structure = obj2;
 

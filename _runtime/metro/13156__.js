@@ -1,7 +1,13 @@
 // _runtime/metro/13156__.js
-
-export default {
-  parse: function selectorList() {
-    return this.createSingleNodeList(this.SelectorList());
+const obj = {
+  parse: {
+    prelude() {
+      return this.createSingleNodeList(this.SelectorList());
+    },
+    block() {
+      return this.Block(true);
+    },
   },
 };
+
+export default obj;

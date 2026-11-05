@@ -1,13 +1,20 @@
 // _runtime/metro/09002__.js
-import registerAsset from "01119__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_viewer/native/images",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "4d6296c901620eb3ce6d9e0093bbc96e",
-  name: "scrubber",
-  type: "png",
-});
+const obj = {
+  SLIDER_DEFAULT_INITIAL_VALUE: 0,
+  MARGIN_HORIZONTAL_PADDING: 0.05,
+  THUMB_SIZE: 20,
+  STEP_NUMBER_TEXT_FONT_SMALL: 8,
+  STEP_NUMBER_TEXT_FONT_BIG: 12,
+  LIMIT_MIN_VALUE: Number.MIN_SAFE_INTEGER,
+  LIMIT_MAX_VALUE: Number.MAX_SAFE_INTEGER,
+  DEFAULT_STEP_RESOLUTION: null,
+};
+let num = 1000;
+if ("android" === _mod17.Platform.OS) {
+  num = 128;
+}
+obj.DEFAULT_STEP_RESOLUTION = num;
+
+export const constants = obj;

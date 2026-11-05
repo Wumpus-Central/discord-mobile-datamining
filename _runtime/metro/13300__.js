@@ -1,19 +1,21 @@
 // _runtime/metro/13300__.js
-import _mod13275 from "13275__.js";
-import ScopeClass from "../13295_ScopeClass.js";
+import _mod13299 from "13299__.js";
+import _mod13301 from "13301__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function getDefaultCurrentScope() {
-  return _mod13275.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
+export function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod13299.getSentryCarrier(mainCarrier);
+  if (sentryCarrier.acs) {
+    let acs = sentryCarrier.acs;
+  } else {
+    acs = _mod13301.getStackAsyncContextStrategy();
+    const tmpResult = _mod13301;
+  }
+  return acs;
 }
-export function getDefaultIsolationScope() {
-  return _mod13275.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
+export function setAsyncContextStrategy(acs) {
+  const mainCarrier = _mod13299.getMainCarrier();
+  _mod13299.getSentryCarrier(mainCarrier).acs = acs;
 }

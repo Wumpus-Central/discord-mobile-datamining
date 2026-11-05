@@ -1,56 +1,74 @@
 // _runtime/metro/13124__.js
-import _mod13055 from "13055__.js";
+import _mod13062 from "13062__.js";
 
-const Ident = _mod13055.TYPE.Ident;
-const Function = _mod13055.TYPE.Function;
-const Colon = _mod13055.TYPE.Colon;
-const RightParenthesis = _mod13055.TYPE.RightParenthesis;
+const WhiteSpace = _mod13062.TYPE.WhiteSpace;
+const Comment = _mod13062.TYPE.Comment;
+const Ident = _mod13062.TYPE.Ident;
+const LeftParenthesis = _mod13062.TYPE.LeftParenthesis;
 const obj = {
-  name: "PseudoClassSelector",
+  name: "MediaQuery",
   structure: null,
   parse() {
     const self = this;
-    this.eat(Colon);
-    if (this.scanner.tokenType === Function) {
-      const str = self.consumeFunctionName();
-      const formatted = str.toLowerCase();
-      const pseudo = self.pseudo;
-      if (!pseudo.hasOwnProperty(formatted)) {
-        const list = self.createList();
-        list.push(self.Raw(self.scanner.tokenIndex, null, false));
-        self.eat(RightParenthesis);
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const list = this.createList();
+    let tmp2 = null;
+    let tmp3 = null;
+    let tmp4 = null;
+    if (!this.scanner.eof) {
+      while (true) {
+        let tokenType = self.scanner.tokenType;
+        if (Comment === tokenType) {
+          let iter = self.scanner;
+          let nextResult = iter.next();
+          let WhiteSpaceResult = tmp2;
+          let IdentifierResult = tmp3;
+        } else {
+          if (WhiteSpace === tokenType) {
+            WhiteSpaceResult = self.WhiteSpace();
+            IdentifierResult = tmp3;
+          } else {
+            if (Ident === tokenType) {
+              IdentifierResult = self.Identifier();
+              WhiteSpaceResult = tmp2;
+              if (null !== tmp2) {
+                let arr = list.push(tmp2);
+                WhiteSpaceResult = null;
+              }
+              let arr3 = list.push(IdentifierResult);
+            } else {
+              tmp4 = tmp3;
+              if (LeftParenthesis !== tokenType) {
+                break;
+              } else {
+                IdentifierResult = self.MediaFeature();
+              }
+            }
+            break;
+          }
+          break;
+        }
+        tmp2 = WhiteSpaceResult;
+        tmp3 = IdentifierResult;
+        tmp4 = IdentifierResult;
+        if (self.scanner.eof) {
+          break;
+        }
       }
-      const scanner = self.scanner;
-      scanner.skipSC();
-      let skipSCResult1 = self.pseudo[formatted];
-      const call = skipSCResult1.call;
-      const scanner2 = self.scanner;
-      skipSCResult1 = scanner2.skipSC();
-      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
-    } else {
-      const element = {
-        type: "PseudoClassSelector",
-        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-        name: self.consume(Ident),
-        children: null,
-      };
-      return element;
     }
-  },
-  generate(name) {
-    const self = this;
-    this.chunk(":");
-    this.chunk(name.name);
-    if (null !== name.children) {
-      self.chunk("(");
-      self.children(name);
-      self.chunk(")");
+    if (null === tmp4) {
+      self.error("Identifier or parenthesis is expected");
     }
+    const element = { type: "MediaQuery", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  walkContext: "function",
+  generate(arg0) {
+    this.children(arg0);
+  },
 };
-const obj2 = { name: String, children: null };
-const items = [["Raw"], null];
+const obj2 = { children: null };
+const items = [["Identifier", "MediaFeature", "WhiteSpace"]];
 obj2.children = items;
 obj.structure = obj2;
 

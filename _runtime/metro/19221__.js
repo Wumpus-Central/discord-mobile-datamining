@@ -1,13 +1,16 @@
 // _runtime/metro/19221__.js
-import registerAsset from "01119__.js";
+import _mod8141 from "08141__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/forum_channels",
-  width: 343,
-  height: 236,
-  scales: [1],
-  hash: "6e9bbbae1088530d5ab3c52a383f127c",
-  name: "channel_settings_list_view_example_post",
-  type: "png",
-});
+export default _mod8141(
+  (arg0, arg1, arg2) => {
+    let num = 1;
+    if (arg2) {
+      num = 0;
+    }
+    arg0[num].push(arg1);
+  },
+  () => {
+    items = [[], []];
+    return items;
+  },
+);

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 292,
-  height: 182,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "580ec4f595fa69a80ec70eff21ac3c71",
-  name: "webhook_empty_darker",
+  hash: "d596d6fe17dcf89145bacf83df3826b6",
+  name: "PuzzlePieceIcon",
   type: "png",
 });

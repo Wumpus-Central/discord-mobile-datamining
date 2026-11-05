@@ -1,4 +1,20 @@
 // _runtime/metro/16161__.js
-import _mod16159 from "16159__.js";
-
-export default (arg0, arg1) => _mod16159(arg0, arg1, true);
+if (typeof process === "object") {
+  const _process3 = process;
+  if (process.env) {
+    const _process = process;
+    if (process.env.NODE_DEBUG) {
+      const _process2 = process;
+      if (obj.test(process.env.NODE_DEBUG)) {
+        let fn = () => {
+          items = ["SEMVER"];
+          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
+          return console.error.apply(items);
+        };
+      }
+      module.exports = fn;
+      obj = /\bsemver\b/i;
+    }
+  }
+}
+fn = () => {};

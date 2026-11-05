@@ -1,50 +1,33 @@
 // _runtime/metro/13110__.js
-import _mod13055 from "13055__.js";
-import _mod13099 from "13099__.js";
+import _mod13062 from "13062__.js";
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, _mod13099.mode.semicolonIncluded, true);
-}
-const WhiteSpace = _mod13055.TYPE.WhiteSpace;
-const Comment = _mod13055.TYPE.Comment;
-const Semicolon = _mod13055.TYPE.Semicolon;
+const LeftSquareBracket = _mod13062.TYPE.LeftSquareBracket;
+const RightSquareBracket = _mod13062.TYPE.RightSquareBracket;
 const obj = {
-  name: "DeclarationList",
+  name: "Brackets",
   structure: null,
-  parse() {
+  parse(call, arg1) {
     const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      while (true) {
-        let tokenType = self.scanner.tokenType;
-        if (WhiteSpace !== tokenType) {
-          if (Comment !== tokenType) {
-            if (Semicolon !== tokenType) {
-              let arr = list.push(self.parseWithFallback(self.Declaration, consumeRaw));
-            }
-            if (self.scanner.eof) {
-              break;
-            }
-          }
-        }
-        let iter = self.scanner;
-        let nextResult = iter.next();
-      }
+    this.eat(LeftSquareBracket);
+    call = call.call;
+    if (!self.scanner.eof) {
+      self.eat(RightSquareBracket);
     }
-    const element = { type: "DeclarationList", loc: self.getLocationFromList(list), children: list };
+    const element = {
+      type: "Brackets",
+      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+      children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
+    };
     return element;
   },
   generate(arg0) {
-    this.children(arg0, function (type) {
-      if ("Declaration" === type.type) {
-        const self = this;
-        this.chunk(";");
-      }
-    });
+    this.chunk("[");
+    this.children(arg0);
+    this.chunk("]");
   },
 };
 const obj2 = { children: null };
-const items = [["Declaration"]];
+const items = [[]];
 obj2.children = items;
 obj.structure = obj2;
 

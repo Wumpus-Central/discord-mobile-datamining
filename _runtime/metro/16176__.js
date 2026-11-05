@@ -1,11 +1,7 @@
 // _runtime/metro/16176__.js
-import _mod16174 from "16174__.js";
+import _mod16175 from "16175__.js";
 
-export default (arg0, arg1, arg2) => {
-  try {
-    const tmp7 = new _mod16174(arg1, arg2);
-    return tmp7.test(arg0);
-  } catch (err) {
-    return false;
-  }
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod16175(arg0, arg1, closure_0));
 };

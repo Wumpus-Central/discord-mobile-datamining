@@ -1,11 +1,12 @@
 // _runtime/metro/16394__.js
-import _mod16373 from "16373__.js";
+import _mod16390 from "16390__.js";
 
-const tmp = _mod16373.navigator && _mod16373.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
-
-export default str;
+export default !_mod16390(() => {
+  const fn = () => {};
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});

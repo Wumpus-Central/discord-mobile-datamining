@@ -1,68 +1,31 @@
 // _runtime/metro/13359__.js
-import _mod13301 from "13301__.js";
-import _mod13361 from "13361__.js";
-import setupIntegration from "13330__.js";
+import _mod13360 from "13360__.js";
+import setupIntegration from "13337__.js";
 
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
-  }
-  handled = obj.handled;
-  return {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let hasItem = _mod13301.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
+export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
+  name: "ModuleMetadata",
+  setup(on) {
+    const options = on;
+    on.on("beforeEnvelope", (arg0) => {
+      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        if ("event" === arg1) {
+          const _Array = Array;
+          let tmp3;
+          if (Array.isArray(arg0)) {
+            tmp3 = arg0[1];
           }
-          if (hasItem) {
-            closure_2 = handled;
-            let obj2 = { level: _mod13361.severityLevelFromString(level), extra: null };
-            const obj3 = { arguments: args };
-            obj2.extra = obj3;
-            const tmpResult = _mod13361;
-            _mod13301.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  args(13322).captureException(found, obj2);
-                  const tmp14Result = args(13322);
-                } else {
-                  const tmp14Result2 = args(13283);
-                  const safeJoinResult = args(13283).safeJoin(args, " ");
-                  args(13322).captureMessage(safeJoinResult, obj2);
-                  const obj4 = args(13322);
-                }
-              } else if (!args[0]) {
-                const obj = args(13283);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + args(13283).safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = args(13322);
-                obj2.captureMessage(combined, obj2);
-                const tmp4 = args(13283).safeJoin(args.slice(1), " ") || "console.assert";
-              }
-            });
-            const tmpResult2 = _mod13301;
+          if (tmp3) {
+            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+            arg0[1] = tmp3;
+            const obj = options(dependencyMap[2]);
           }
-        });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
+        }
+      });
+    });
+    on.on("applyFrameMetadata", (type) => {
+      if (!type.type) {
+        const result = _mod13360.addMetadataToStackFrames(options.getOptions().stackParser, type);
       }
-    },
-  };
-});
+    });
+  },
+}));

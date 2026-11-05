@@ -1,167 +1,170 @@
 // _runtime/metro/13091__.js
-import _mod13093 from "13093__.js";
-import 13092__ from "13092__.js";
-import size_mod from "13094__.js";
-import size_mod from "13095__.js";
+const dependencyMap = Object.create(null);
+const dependencyMap2 = Object.create(null);
 
-function patchDictionary(descriptors, descriptors1) {
-  const obj = {};
-  for (const key10004 in arg0) {
-    let syntax = arg0[key10004].syntax;
-    if (!syntax) {
-      syntax = arg0[key10004];
-    }
-    obj[key10004] = syntax;
-    continue;
-  }
-  for (const key10011 in arg1) {
-    let syntax3 = arg1[key10011].syntax;
-    if (key10011 in arg0) {
-      if (syntax3) {
-        if (re0.test(arg1[key10011].syntax)) {
-          let str2 = arg1[key10011].syntax;
-          let text = `${obj[key10011]} `;
-          let syntax2 = `${obj[key10011]} ${str2.trim()}`;
-        } else {
-          syntax2 = arg1[key10011].syntax;
-        }
-        obj[key10011] = syntax2;
-        continue;
-      } else {
-        delete tmp[tmp2];
-        continue;
-      }
-      continue;
+export default {
+  keyword: function getKeywordDescriptor(str) {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown" ? hasOwnProperty(str) : call(dependencyMap, str)) {
+      return dependencyMap[str];
     } else {
-      if (!syntax3) {
-        continue;
+      const formatted = str.toLowerCase();
+      const call2 = hasOwnProperty.call;
+      if (typeof call2 === "unknown" ? hasOwnProperty(formatted) : call2(dependencyMap, formatted)) {
+        dependencyMap[str] = dependencyMap[formatted];
+        return dependencyMap[formatted];
       } else {
-        let str = arg1[key10011].syntax;
-        obj[key10011] = str.replace(re0, "");
-        continue;
-      }
-      continue;
-    }
-    continue;
-  }
-  return obj;
-}
-const re0 = /^\s*\|\s*/;
-let obj = { types: null, atrules: null, properties: null };
-obj.types = patchDictionary(module_13092, _mod13093.syntaxes);
-let size = size_mod;
-const obj2 = Object.create(null);
-for (const key10022 in _module1) {
-  let tmp24 = size[key10022];
-  let tmp7 = null;
-  if (tmp24.descriptors) {
-    let _Object = Object;
-    let obj3 = Object.create(null);
-    tmp7 = obj3;
-    let keys = Object.keys();
-    if (keys !== undefined) {
-      tmp7 = obj3;
-      let tmp9 = keys[tmp2];
-      while (tmp9 !== undefined) {
-        obj3[tmp9] = tmp24.descriptors[tmp9].syntax;
-        continue;
-      }
-    }
-  }
-  let str = tmp24.syntax;
-  let substr = key10022.substr(1);
-  let str2 = str.trim();
-  let str3 = str2.match(/^@\S+\s+([^;\{]*)/)[1];
-  let trimmed = str3.trim();
-  if (!trimmed) {
-    trimmed = null;
-  }
-  let obj4 = { prelude: trimmed, descriptors: tmp7 };
-  obj2[substr] = obj4;
-  continue;
-}
-const atrules = _mod13093.atrules;
-const obj5 = {};
-for (const key10049 in obj2) {
-  let descriptors1 = atrules[key10049];
-  if (descriptors1) {
-    descriptors1 = atrules[key10049].descriptors;
-  }
-  if (!descriptors1) {
-    descriptors1 = null;
-  }
-  if (key10049 in atrules) {
-    if ("prelude" in atrules[key10049]) {
-      let obj6 = { prelude: atrules[key10049].prelude, descriptors: null };
-      if (obj2[key10049].descriptors) {
-        if (!descriptors1) {
-          descriptors1 = {};
+        let tmp3 = length >= 2;
+        if (2 <= formatted.length) {
+          tmp3 = 45 === formatted.charCodeAt(0);
         }
-        let patchDictionaryResult = patchDictionary(obj2[key10049].descriptors, descriptors1);
+        if (tmp3) {
+          tmp3 = 45 === formatted.charCodeAt(1);
+        }
+        let str2 = "";
+        if (!tmp3) {
+          let str3 = "";
+          if (3 <= formatted.length) {
+            str3 = "";
+            if (45 === formatted.charCodeAt(0)) {
+              str3 = "";
+              if (45 !== formatted.charCodeAt(1)) {
+                const index = formatted.indexOf("-", 2);
+                str3 = "";
+                if (-1 !== index) {
+                  str3 = formatted.substring(0, index + 1);
+                }
+              }
+            }
+          }
+          str2 = str3;
+        }
+        const _Object = Object;
+        const obj = {
+          basename: formatted.substr(str2.length),
+          name: formatted,
+          vendor: str2,
+          prefix: str2,
+          custom: tmp3,
+        };
+        const frozen = Object.freeze(obj);
+        dependencyMap[""] = frozen;
+        return frozen;
+      }
+    }
+  },
+  property: function getPropertyDescriptor(str) {
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown" ? hasOwnProperty(str) : call(dependencyMap2, str)) {
+      return dependencyMap2[str];
+    } else {
+      str = str[0];
+      let str2 = "/";
+      if ("/" === str) {
+        if (`/` === str[1]) {
+          str2 = "//";
+        }
+        str = str2;
       } else {
-        patchDictionaryResult = descriptors1;
-        if (descriptors1) {
-          let obj7 = {};
-          patchDictionaryResult = obj7;
-          let keys1 = Object.keys();
-          if (keys1 !== undefined) {
-            patchDictionaryResult = obj7;
-            let tmp16 = keys1[tmp];
-            while (tmp16 !== undefined) {
-              obj7[tmp16] = descriptors1[tmp16].syntax;
-              continue;
+        let tmp3 = "_" !== str;
+        if (tmp3) {
+          tmp3 = "*" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "$" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "#" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "+" !== str;
+        }
+        if (tmp3) {
+          tmp3 = "&" !== str;
+        }
+        if (tmp3) {
+          str = "";
+        }
+      }
+      let tmp5 = str.length - tmp4 >= 2;
+      if (tmp5) {
+        tmp5 = 45 === str.charCodeAt(tmp4);
+      }
+      if (tmp5) {
+        tmp5 = 45 === str.charCodeAt(tmp4 + 1);
+      }
+      let arr = str;
+      if (!tmp5) {
+        const formatted = str.toLowerCase();
+        const call2 = hasOwnProperty.call;
+        arr = formatted;
+        if (typeof call2 === "unknown" ? hasOwnProperty(formatted) : call2(dependencyMap2, formatted)) {
+          dependencyMap2[str] = dependencyMap2[formatted];
+          return dependencyMap2[formatted];
+        }
+      }
+      let str10 = "";
+      if (!tmp5) {
+        let str11 = "";
+        if (arr.length - (str.length || 0) >= 3) {
+          str11 = "";
+          if (45 === arr.charCodeAt(tmp8)) {
+            str11 = "";
+            if (45 !== arr.charCodeAt(tmp8 + 1)) {
+              const index = arr.indexOf("-", tmp8 + 2);
+              str11 = "";
+              if (-1 !== index) {
+                str11 = arr.substring(tmp8, index + 1);
+              }
             }
           }
         }
+        str10 = str11;
       }
-      obj6.descriptors = patchDictionaryResult;
-      obj5[key10049] = obj6;
-      continue;
+      const substr = arr.substr(0, str.length + str10.length);
+      const _Object = Object;
+      const obj = {
+        basename: arr.substr(substr.length),
+        name: arr.substr(str.length),
+        hack: str,
+        vendor: str10,
+        prefix: substr,
+        custom: tmp5,
+      };
+      const frozen = Object.freeze(obj);
+      dependencyMap2[str] = frozen;
+      return frozen;
     }
-  }
-  let prelude = obj2[key10049].prelude;
-  if (!prelude) {
-    prelude = null;
-  }
-}
-for (const key10070 in atrules) {
-  let call = globalThis.hasOwnProperty.call;
-  if (typeof call === "unknown") {
-    let hasOwnPropertyResult = hasOwnProperty(key10070);
-  } else {
-    hasOwnPropertyResult = call(obj2, key10070);
-  }
-  if (hasOwnPropertyResult) {
-    continue;
-  } else {
-    let prelude1 = atrules[key10070].prelude;
-    if (!prelude1) {
-      prelude1 = null;
+  },
+  isCustomProperty(callResult, sum) {
+    let num = sum;
+    if (!sum) {
+      num = 0;
     }
-    let obj8 = { prelude: prelude1, descriptors: null };
-    let descriptors = atrules[key10070].descriptors;
-    if (descriptors) {
-      let descriptors2 = atrules[key10070].descriptors;
-      let obj16 = {};
-      descriptors = obj16;
-      let keys2 = Object.keys();
-      if (keys2 !== undefined) {
-        descriptors = obj16;
-        let tmp21 = keys2[tmp];
-        while (tmp21 !== undefined) {
-          obj16[tmp21] = descriptors2[tmp21].syntax;
-          continue;
+    let tmp = callResult.length - num >= 2;
+    if (tmp) {
+      tmp = 45 === callResult.charCodeAt(num);
+    }
+    if (tmp) {
+      tmp = 45 === callResult.charCodeAt(num + 1);
+    }
+    return tmp;
+  },
+  vendorPrefix: function getVendorPrefix(str, sum) {
+    let num = sum;
+    if (!sum) {
+      num = 0;
+    }
+    if (str.length - num >= 3) {
+      if (45 === str.charCodeAt(num)) {
+        if (45 !== str.charCodeAt(num + 1)) {
+          const index = str.indexOf("-", num + 2);
+          if (-1 !== index) {
+            return str.substring(num, index + 1);
+          }
         }
       }
     }
-    obj8.descriptors = descriptors;
-    obj5[key10070] = obj8;
-    continue;
-  }
-  continue;
-}
-obj.atrules = obj5;
-let size = size_mod;
-obj.properties = patchDictionary(size, _mod13093.properties);
-
-export default obj;
+    return "";
+  },
+};

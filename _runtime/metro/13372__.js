@@ -1,62 +1,151 @@
 // _runtime/metro/13372__.js
-import _mod13274 from "13274__.js";
-import _mod13301 from "13301__.js";
-import _mod13302 from "13302__.js";
+import _mod13373 from "13373__.js";
+import setupIntegration from "13337__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const profiler = {
-  startProfiler() {
-    const client = _mod13301.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.start();
-        } else if (_mod13302.DEBUG_BUILD) {
-          const logger3 = _mod13274.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
+export function generateIteratee(arg0) {
+  ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
+  return (root) => {
+    if (root.filename) {
+      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
+      if (!isMatch) {
+        const filename = root.filename;
+        let hasItem = filename.includes("\\");
+        if (hasItem) {
+          const filename2 = root.filename;
+          hasItem = !filename2.includes("/");
         }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod13302.DEBUG_BUILD) {
-        const logger2 = _mod13274.logger;
-        logger2.warn("ProfilingIntegration is not available");
+        isMatch = hasItem;
       }
-    } else if (_mod13302.DEBUG_BUILD) {
-      const logger = _mod13274.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-  stopProfiler() {
-    const client = _mod13301.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.stop();
-        } else if (_mod13302.DEBUG_BUILD) {
-          const logger3 = _mod13274.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
+      if (fn) {
+        if (root) {
+          const filename1 = root.filename;
+          if (0 === filename1.indexOf(root)) {
+            root.filename = filename1.replace(root, prefix);
+          }
         }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod13302.DEBUG_BUILD) {
-        const logger2 = _mod13274.logger;
-        logger2.warn("ProfilingIntegration is not available");
+      } else if (isMatch) {
+        if (isMatch) {
+          let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
+          const str5 = str3.replace(/^[a-zA-Z]:/, "");
+        } else {
+          replaced = str3;
+        }
+        const obj2 = _mod13373;
+        if (root) {
+          let relativeResult = obj2.relative(root, replaced);
+        } else {
+          relativeResult = obj2.basename(replaced);
+        }
+        const _HermesInternal = HermesInternal;
+        root.filename = "" + prefix + relativeResult;
       }
-    } else if (_mod13302.DEBUG_BUILD) {
-      const logger = _mod13274.logger;
-      logger.warn("No Sentry client available, profiling is not started");
+      return root;
+    } else {
+      return root;
     }
-  },
-};
+  };
+}
+export const rewriteFramesIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let fn;
+  ({ prefix, root } = obj);
+  if (!prefix) {
+    prefix = "app:///";
+  }
+  fn = obj.iteratee;
+  if (!fn) {
+    fn = (root) => {
+      if (root.filename) {
+        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
+        if (!isMatch) {
+          const filename = root.filename;
+          let hasItem = filename.includes("\\");
+          if (hasItem) {
+            const filename2 = root.filename;
+            hasItem = !filename2.includes("/");
+          }
+          isMatch = hasItem;
+        }
+        if (fn) {
+          if (root) {
+            const filename1 = root.filename;
+            if (0 === filename1.indexOf(root)) {
+              root.filename = filename1.replace(root, prefix);
+            }
+          }
+        } else if (isMatch) {
+          if (isMatch) {
+            let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
+            const str5 = str3.replace(/^[a-zA-Z]:/, "");
+          } else {
+            replaced = str3;
+          }
+          const obj2 = _mod13373;
+          if (root) {
+            let relativeResult = obj2.relative(root, replaced);
+          } else {
+            relativeResult = obj2.basename(replaced);
+          }
+          const _HermesInternal = HermesInternal;
+          root.filename = "" + prefix + relativeResult;
+        }
+        return root;
+      } else {
+        return root;
+      }
+    };
+  }
+  return {
+    name: "RewriteFrames",
+    processEvent(exception) {
+      exception = exception.exception;
+      if (exception) {
+        const _Array = Array;
+        exception = Array.isArray(exception.exception.values);
+      }
+      let tmp2 = exception;
+      if (exception) {
+        tmp2 = (function _processExceptionsEvent(exception) {
+          try {
+            const obj = {};
+            let merged = Object.assign(exception);
+            let obj2 = {};
+            let merged1 = Object.assign(exception.exception);
+            const values = exception.exception.values;
+            obj2.values = values.map((stacktrace) => {
+              const merged = Object.assign(stacktrace);
+              stacktrace = stacktrace.stacktrace;
+              if (stacktrace) {
+                const stacktrace2 = stacktrace.stacktrace;
+                const obj2 = {};
+                const merged1 = Object.assign(stacktrace2);
+                let frames = stacktrace2;
+                if (stacktrace2) {
+                  frames = stacktrace2.frames;
+                }
+                if (frames) {
+                  const frames1 = stacktrace2.frames;
+                  frames = frames1.map((item) => closure_1_0(item));
+                }
+                const obj3 = { stacktrace: null };
+                obj2.frames = frames;
+                obj3.stacktrace = obj2;
+                stacktrace = obj3;
+              }
+              const merged2 = Object.assign(stacktrace);
+              return {};
+            });
+            obj.exception = obj2;
+            return obj;
+          } catch (err) {
+            return tmp;
+          }
+        })(exception);
+      }
+      return tmp2;
+    },
+  };
+});

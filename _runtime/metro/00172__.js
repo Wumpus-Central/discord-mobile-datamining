@@ -55,16 +55,16 @@ class PerformanceResourceTiming {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    definePropertyResult = Object.defineProperty(tmp3Result, closure_6, { writable: true, value: "a" });
-    definePropertyResult1 = Object.defineProperty(tmp3Result, metroImportDefault, { writable: true, value: "a" });
-    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_8, { writable: true, value: "a" });
-    definePropertyResult3 = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "a" });
-    definePropertyResult4 = Object.defineProperty(tmp3Result, closure_10, { writable: true, value: "a" });
-    definePropertyResult5 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "a" });
-    definePropertyResult6 = Object.defineProperty(tmp3Result, closure_12, { writable: true, value: "a" });
-    definePropertyResult7 = Object.defineProperty(tmp3Result, closure_13, { writable: true, value: "a" });
-    definePropertyResult8 = Object.defineProperty(tmp3Result, closure_2_14, { writable: true, value: "a" });
-    definePropertyResult9 = Object.defineProperty(tmp3Result, closure_2_15, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(tmp3Result, closure_6, { writable: true, value: "Boolean" });
+    definePropertyResult1 = Object.defineProperty(tmp3Result, metroImportDefault, { writable: true, value: "Boolean" });
+    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_8, { writable: true, value: "Boolean" });
+    definePropertyResult3 = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "Boolean" });
+    definePropertyResult4 = Object.defineProperty(tmp3Result, closure_10, { writable: true, value: "Boolean" });
+    definePropertyResult5 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "Boolean" });
+    definePropertyResult6 = Object.defineProperty(tmp3Result, closure_12, { writable: true, value: "Boolean" });
+    definePropertyResult7 = Object.defineProperty(tmp3Result, closure_13, { writable: true, value: "Boolean" });
+    definePropertyResult8 = Object.defineProperty(tmp3Result, closure_2_14, { writable: true, value: "Boolean" });
+    definePropertyResult9 = Object.defineProperty(tmp3Result, closure_2_15, { writable: true, value: "Boolean" });
     ({
       fetchStart: closure_4(undefined, tmp6, closure_6)[closure_6],
       requestStart: closure_4(undefined, tmp6, metroImportDefault)[metroImportDefault],

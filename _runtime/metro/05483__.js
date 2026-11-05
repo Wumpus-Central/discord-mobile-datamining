@@ -1,24 +1,23 @@
 // _runtime/metro/05483__.js
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
+import _modDef5466 from "05466__.js";
+import _mod5478 from "05478__.js";
 
-let tmp3 = typeof window === "undefined";
-if (typeof window !== "undefined") {
-  const _window2 = window;
-  tmp3 = undefined === window.document;
+_mod19.useCallback;
+
+export function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        const tmp4 = _modDef5466;
+        previousViewTag.previousViewTag = tmp4(_mod5478.resolveHostInstance(previousViewTag.viewRef));
+      }
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
+      }
+    }
+  }, items);
 }
-if (!tmp3) {
-  const _window = window;
-  tmp3 = undefined === window.document.createElement;
-}
-let tmp4 = typeof navigator !== "undefined";
-if (typeof navigator !== "undefined") {
-  const _navigator = navigator;
-  tmp4 = "ReactNative" === navigator.product;
-}
-if (tmp3) {
-  if (!tmp4) {
-    let useLayoutEffect = noop.useEffect;
-  }
-  exports.useIsomorphicLayoutEffect = useLayoutEffect;
-}
-useLayoutEffect = noop.useLayoutEffect;

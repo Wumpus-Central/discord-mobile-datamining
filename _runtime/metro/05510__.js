@@ -1,18 +1,12 @@
 // _runtime/metro/05510__.js
-import noop from "00019__.js";
+import RNGestureHandlerModuleDefault from "../05459_RNGestureHandlerModule.js";
 
-const use = noop.use;
-const context = noop.createContext(null);
+importDefault = arg2;
+const dependencyMap = arg6;
 
-export const InterceptingDetectorMode = {
-  DEFAULT: 0,
-  [0]: "DEFAULT",
-  ANIMATED: 1,
-  [1]: "ANIMATED",
-  REANIMATED: 2,
-  [2]: "REANIMATED",
-};
-export const InterceptingDetectorContext = context;
-export function useInterceptingDetectorContext() {
-  return use(context);
+export function getModuleId() {
+  if (moduleId == null) {
+    moduleId = RNGestureHandlerModuleDefault.getModuleId();
+  }
+  return moduleId;
 }

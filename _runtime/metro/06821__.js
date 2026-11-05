@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 500,
+  height: 500,
   scales: [1],
-  hash: "97cdba3c0b32d79e6f8d3cdafd7b4530",
-  name: "img_account_sync_mastodon_white",
-  type: "png",
+  hash: "92530bd573dd795df92f429bb50bdfa5",
+  name: "img_account_sync_letterboxd_dark",
+  type: "svg",
 });

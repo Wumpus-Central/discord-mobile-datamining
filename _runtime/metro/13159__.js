@@ -1,7 +1,7 @@
 // _runtime/metro/13159__.js
 
 export default {
-  parse: function nthWithOfClause() {
-    return this.createSingleNodeList(this.Nth(true));
+  parse() {
+    return this.createSingleNodeList(this.Identifier());
   },
 };

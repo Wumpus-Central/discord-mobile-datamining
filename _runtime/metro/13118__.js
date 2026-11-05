@@ -1,40 +1,27 @@
 // _runtime/metro/13118__.js
-import _mod13055 from "13055__.js";
+import _mod13058 from "13058__.js";
+import _mod13062 from "13062__.js";
 
-const Comma = _mod13055.TYPE.Comma;
+const Dimension = _mod13062.TYPE.Dimension;
 const obj = {
-  name: "MediaQueryList",
-  structure: null,
-  parse(arg0) {
-    const self = this;
-    const list = this.createList();
-    const scanner = this.scanner;
-    scanner.skipSC();
-    if (!this.scanner.eof) {
-      list.push(self.MediaQuery(arg0));
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.MediaQuery(arg0));
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
-    }
-    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
-    return element;
+  name: "Dimension",
+  structure: { value: String, unit: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    const consumeNumberResult = _mod13058.consumeNumber(this.scanner.source, tokenStart);
+    this.eat(Dimension);
+    const obj2 = {
+      type: "Dimension",
+      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
+      value: this.scanner.source.substring(tokenStart, consumeNumberResult),
+      unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart),
+    };
+    return obj2;
   },
-  generate(arg0) {
-    this.children(arg0, function () {
-      this.chunk(",");
-    });
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk(value.unit);
   },
 };
-const obj2 = { children: null };
-const items = [["MediaQuery"]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

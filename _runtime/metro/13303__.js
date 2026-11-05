@@ -1,17 +1,17 @@
 // _runtime/metro/13303__.js
-import _mod13280 from "13280__.js";
+import _mod13287 from "13287__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const _sentryScope = "_sentryScope";
-const _sentryIsolationScope = "_sentryIsolationScope";
+const _sentrySpan = "_sentrySpan";
 
-export function getCapturedScopesOnSpan(scope) {
-  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
+export function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
 }
-export function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
-  if (sentrySpan) {
-    const result = _mod13280.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
-    const result1 = _mod13280.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
+export function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod13287.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
+  } else {
+    delete tmp2[tmp];
   }
 }

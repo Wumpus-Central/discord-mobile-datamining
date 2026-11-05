@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4f2842b39c98933e8b7bea806132028f",
-  name: "ForumLockIcon",
+  hash: "7dca654a69aa65c531edd1e710ff1525",
+  name: "ExperimentalLfgIcon",
   type: "png",
 });

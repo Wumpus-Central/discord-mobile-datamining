@@ -1,543 +1,352 @@
 // _runtime/metro/13055__.js
+import _mod13056 from "13056__.js";
+import _mod13058 from "13058__.js";
+
 const require = globalThis.__r;
 
-function tokenize(arg0, arg1) {
-  let str = arg0;
-  _require = arg0;
-  let iter = arg1;
-  function consumeNumericToken() {
-    closure_2 = _mod13051.consumeNumber(closure_0, closure_2);
-    let num = 0;
-    if (closure_2 < length) {
-      num = closure_0.charCodeAt(tmp3);
-    }
-    const sum = closure_2 + 1;
-    let num2 = 0;
-    if (sum < length) {
-      num2 = closure_0.charCodeAt(sum);
-    }
-    const sum1 = closure_2 + 2;
-    let num3 = 0;
-    if (sum1 < length) {
-      num3 = closure_0.charCodeAt(sum1);
-    }
-    if (obj3.isIdentifierStart(num, num2, num3)) {
-      BadString = _mod13049.TYPE.Dimension;
-      closure_2 = _mod13051.consumeName(closure_0, closure_2);
-      const tmpResult = _mod13051;
-    } else {
-      let num4 = 0;
-      if (closure_2 < length) {
-        num4 = closure_0.charCodeAt(tmp7);
-      }
-      if (37 === num4) {
-        BadString = _mod13049.TYPE.Percentage;
-        closure_2 = +closure_2 + 1;
-      } else {
-        BadString = _mod13049.TYPE.Number;
-      }
-    }
-    return tmp8;
-  }
-  function consumeIdentLikeToken() {
-    let sum2 = closure_2;
-    let _Function = dependencyMap;
-    closure_2 = _mod13051.consumeName(closure_0, closure_2);
-    if (obj2.cmpStr(closure_0, closure_2, closure_2, "url")) {
-      let num = 0;
-      if (closure_2 < length) {
-        num = closure_0.charCodeAt(tmp3);
-      }
-      if (40 === num) {
-        const findWhiteSpaceEndResult = _mod13051.findWhiteSpaceEnd(closure_0, closure_2 + 1);
-        closure_2 = findWhiteSpaceEndResult;
-        let num5 = 0;
-        if (findWhiteSpaceEndResult < length) {
-          num5 = closure_0.charCodeAt(findWhiteSpaceEndResult);
-        }
-        if (34 !== num5) {
-          let num7 = 0;
-          if (closure_2 < length) {
-            num7 = closure_0.charCodeAt(tmp35);
-          }
-          if (39 !== num7) {
-            BadString = _mod13049.TYPE.Url;
-            const findWhiteSpaceEndResult1 = _mod13051.findWhiteSpaceEnd(closure_0, closure_2);
-            closure_2 = findWhiteSpaceEndResult1;
-            if (findWhiteSpaceEndResult1 < closure_0.length) {
-              const charCodeAtResult = closure_0.charCodeAt(closure_2);
-              const charCodeCategoryResult = _mod13052.charCodeCategory(charCodeAtResult);
-              while (41 !== charCodeCategoryResult) {
-                if (_mod13052.charCodeCategory.Eof !== charCodeCategoryResult) {
-                  if (_mod13052.charCodeCategory.WhiteSpace === charCodeCategoryResult) {
-                    let tmp12Result = _mod13051;
-                    let findWhiteSpaceEndResult2 = tmp12Result.findWhiteSpaceEnd(closure_0, closure_2);
-                    closure_2 = findWhiteSpaceEndResult2;
-                    let num10 = 0;
-                    if (findWhiteSpaceEndResult2 < length) {
-                      num10 = closure_0.charCodeAt(findWhiteSpaceEndResult2);
-                    }
-                    if (41 !== num10) {
-                      if (closure_2 < closure_0.length) {
-                        let tmp12Result5 = _mod13051;
-                        closure_2 = tmp12Result5.consumeBadUrlRemnants(closure_0, closure_2);
-                        BadString = _mod13049.TYPE.BadUrl;
-                      }
-                    }
-                    if (closure_2 < closure_0.length) {
-                      let tmp29 = +closure_2;
-                      closure_2 = tmp29 + 1;
-                    }
-                  } else {
-                    if (34 !== charCodeCategoryResult) {
-                      if (39 !== charCodeCategoryResult) {
-                        if (40 !== charCodeCategoryResult) {
-                          if (_mod13052.charCodeCategory.NonPrintable !== charCodeCategoryResult) {
-                            if (92 === charCodeCategoryResult) {
-                              let tmp12Result6 = _mod13052;
-                              let sum = closure_2 + 1;
-                              let num9 = 0;
-                              if (sum < length) {
-                                num9 = closure_0.charCodeAt(sum);
-                              }
-                              let isValidEscapeResult = tmp12Result6.isValidEscape(charCodeAtResult, num9);
-                              let tmp12Result7 = _mod13051;
-                              if (isValidEscapeResult) {
-                                closure_2 = tmp12Result7.consumeEscaped(closure_0, closure_2) - 1;
-                              } else {
-                                closure_2 = tmp12Result7.consumeBadUrlRemnants(closure_0, closure_2);
-                                BadString = _mod13049.TYPE.BadUrl;
-                              }
-                            }
-                            let sum1 = closure_2 + 1;
-                            closure_2 = sum1;
-                          }
-                        }
-                      }
-                    }
-                    let tmp12Result8 = _mod13051;
-                    closure_2 = tmp12Result8.consumeBadUrlRemnants(closure_0, closure_2);
-                    BadString = _mod13049.TYPE.BadUrl;
-                  }
-                }
-              }
-              closure_2 = +closure_2 + 1;
-            }
-            const tmp2Result2 = _mod13051;
-          }
-        }
-        _Function = _mod13049.TYPE.Function;
-        BadString = _Function;
-        sum2 = sum2 + 4;
-        closure_2 = sum2;
-        const tmp2Result = _mod13051;
-      }
-    }
-    let num3 = 0;
-    if (closure_2 < length) {
-      num3 = closure_0.charCodeAt(tmp5);
-    }
-    if (40 === num3) {
-      BadString = _mod13049.TYPE.Function;
-      closure_2 = +closure_2 + 1;
-    } else {
-      BadString = _mod13049.TYPE.Ident;
-    }
-    return tmp6;
-  }
-  function consumeStringToken(arg0) {
-    let tmp = arg0;
-    if (!arg0) {
-      closure_2 = tmp3 + 1;
-      let num = 0;
-      if (+closure_2 < length) {
-        num = closure_0.charCodeAt(tmp3);
-      }
-      tmp = num;
-    }
-    BadString = _mod13049.TYPE.String;
-    if (closure_2 < closure_0.length) {
-      const charCodeAtResult = closure_0.charCodeAt(closure_2);
-      const charCodeCategoryResult = _mod13052.charCodeCategory(charCodeAtResult);
-      while (tmp !== charCodeCategoryResult) {
-        if (_mod13052.charCodeCategory.Eof !== charCodeCategoryResult) {
-          if (_mod13052.charCodeCategory.WhiteSpace === charCodeCategoryResult) {
-            let tmp8Result = _mod13052;
-            if (tmp8Result.isNewline(charCodeAtResult)) {
-              let tmp8Result6 = _mod13051;
-              closure_2 = closure_2 + tmp8Result6.getNewlineLength(closure_0, closure_2, charCodeAtResult);
-              BadString = _mod13049.TYPE.BadString;
-            }
-          } else if (92 === charCodeCategoryResult) {
-            if (closure_2 !== closure_0.length - 1) {
-              let sum = closure_2 + 1;
-              let num2 = 0;
-              if (sum < length) {
-                num2 = closure_0.charCodeAt(sum);
-              }
-              let tmp8Result7 = _mod13052;
-              if (tmp8Result7.isNewline(num2)) {
-                let tmp8Result8 = _mod13051;
-                closure_2 = closure_2 + tmp8Result8.getNewlineLength(closure_0, closure_2 + 1, num2);
-              } else {
-                let tmp8Result9 = _mod13052;
-                if (tmp8Result9.isValidEscape(charCodeAtResult, num2)) {
-                  let tmp8Result10 = _mod13051;
-                  closure_2 = tmp8Result10.consumeEscaped(closure_0, closure_2) - 1;
-                }
-              }
-            }
-          }
-          let sum1 = closure_2 + 1;
-          closure_2 = sum1;
-        }
-      }
-      closure_2 = +closure_2 + 1;
-    }
-  }
-  if (!arg1) {
-    iter = new require("TokenStream")();
-  }
-  if (!str) {
-    str = "";
-  }
-  const StringResult = String(str);
-  _require = StringResult;
-  length = StringResult.length;
-  const tmp5 = require("adoptBuffer")(iter.offsetAndType, length + 1);
-  const tmp6 = require("adoptBuffer")(iter.balance, length + 1);
-  let num = 0;
-  if (0 < length) {
-    num = StringResult.charCodeAt(0);
-  }
-  const isBOMResult = require("13052__.js").isBOM(num);
-  closure_2 = isBOMResult;
-  let num2 = 0;
-  let num3 = 0;
-  let num4 = 0;
-  let num5 = 0;
-  let num6 = 0;
-  if (isBOMResult < length) {
-    do {
-      let charCodeAtResult = StringResult.charCodeAt(closure_2);
-      let BadString = 0;
-      tmp6[num4] = length;
-      let tmp10 = _require;
-      let tmp11 = length;
-      let obj2 = require("13052__.js");
-      let charCodeCategoryResult = obj2.charCodeCategory(charCodeAtResult);
-      let tmp14 = num3;
-      let tmp15 = num4;
-      if (require("13052__.js").charCodeCategory.WhiteSpace === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.WhiteSpace;
-        let tmp10Result = tmp10(tmp11[0]);
-        closure_2 = tmp10Result.findWhiteSpaceEnd(StringResult, closure_2 + 1);
-      } else if (34 === charCodeCategoryResult) {
-        let consumeStringTokenResult = consumeStringToken();
-      } else if (35 === charCodeCategoryResult) {
-        let tmp10Result11 = tmp10(tmp11[1]);
-        let sum = closure_2 + 1;
-        let num25 = 0;
-        if (sum < length) {
-          num25 = StringResult.charCodeAt(sum);
-        }
-        if (!tmp10Result11.isName(num25)) {
-          let tmp10Result12 = tmp10(tmp11[1]);
-          let sum1 = closure_2 + 1;
-          let num26 = 0;
-          if (sum1 < length) {
-            num26 = StringResult.charCodeAt(sum1);
-          }
-          let sum2 = closure_2 + 2;
-          let num27 = 0;
-          if (sum2 < length) {
-            num27 = StringResult.charCodeAt(sum2);
-          }
-          if (!tmp10Result12.isValidEscape(num26, num27)) {
-            BadString = tmp10(tmp11[2]).TYPE.Delim;
-            closure_2 = closure_2 + 1;
-          }
-        }
-        BadString = tmp10(tmp11[2]).TYPE.Hash;
-        let tmp10Result13 = tmp10(tmp11[0]);
-        closure_2 = tmp10Result13.consumeName(StringResult, closure_2 + 1);
-      } else if (39 === charCodeCategoryResult) {
-        let consumeStringTokenResult1 = consumeStringToken();
-      } else if (40 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.LeftParenthesis;
-        closure_2 = closure_2 + 1;
-      } else if (41 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.RightParenthesis;
-        closure_2 = closure_2 + 1;
-      } else if (43 === charCodeCategoryResult) {
-        let tmp10Result14 = tmp10(tmp11[1]);
-        let sum3 = closure_2 + 1;
-        let num23 = 0;
-        if (sum3 < length) {
-          num23 = StringResult.charCodeAt(sum3);
-        }
-        let sum4 = closure_2 + 2;
-        let num24 = 0;
-        if (sum4 < length) {
-          num24 = StringResult.charCodeAt(sum4);
-        }
-        if (tmp10Result14.isNumberStart(charCodeAtResult, num23, num24)) {
-          let consumeNumericTokenResult = consumeNumericToken();
-        } else {
-          BadString = tmp10(tmp11[2]).TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (44 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.Comma;
-        closure_2 = closure_2 + 1;
-      } else if (45 === charCodeCategoryResult) {
-        let tmp10Result15 = tmp10(tmp11[1]);
-        let sum5 = closure_2 + 1;
-        let num17 = 0;
-        if (sum5 < length) {
-          num17 = StringResult.charCodeAt(sum5);
-        }
-        let sum6 = closure_2 + 2;
-        let num18 = 0;
-        if (sum6 < length) {
-          num18 = StringResult.charCodeAt(sum6);
-        }
-        if (tmp10Result15.isNumberStart(charCodeAtResult, num17, num18)) {
-          let consumeNumericTokenResult1 = consumeNumericToken();
-        } else {
-          let sum7 = closure_2 + 1;
-          let num19 = 0;
-          if (sum7 < length) {
-            num19 = StringResult.charCodeAt(sum7);
-          }
-          if (45 === num19) {
-            let sum8 = closure_2 + 2;
-            let num20 = 0;
-            if (sum8 < length) {
-              num20 = StringResult.charCodeAt(sum8);
-            }
-            if (62 === num20) {
-              BadString = tmp10(tmp11[2]).TYPE.CDC;
-              closure_2 = closure_2 + 3;
-            }
-          }
-          let tmp10Result16 = tmp10(tmp11[1]);
-          let sum9 = closure_2 + 1;
-          let num21 = 0;
-          if (sum9 < length) {
-            num21 = StringResult.charCodeAt(sum9);
-          }
-          let sum10 = closure_2 + 2;
-          let num22 = 0;
-          if (sum10 < length) {
-            num22 = StringResult.charCodeAt(sum10);
-          }
-          if (tmp10Result16.isIdentifierStart(charCodeAtResult, num21, num22)) {
-            let result = consumeIdentLikeToken();
-          } else {
-            BadString = tmp10(tmp11[2]).TYPE.Delim;
-            closure_2 = closure_2 + 1;
-          }
-        }
-      } else if (46 === charCodeCategoryResult) {
-        let tmp10Result17 = tmp10(tmp11[1]);
-        let sum11 = closure_2 + 1;
-        let num15 = 0;
-        if (sum11 < length) {
-          num15 = StringResult.charCodeAt(sum11);
-        }
-        let sum12 = closure_2 + 2;
-        let num16 = 0;
-        if (sum12 < length) {
-          num16 = StringResult.charCodeAt(sum12);
-        }
-        if (tmp10Result17.isNumberStart(charCodeAtResult, num15, num16)) {
-          let consumeNumericTokenResult2 = consumeNumericToken();
-        } else {
-          BadString = tmp10(tmp11[2]).TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (47 === charCodeCategoryResult) {
-        let sum13 = closure_2 + 1;
-        let num14 = 0;
-        if (sum13 < length) {
-          num14 = StringResult.charCodeAt(sum13);
-        }
-        if (42 === num14) {
-          BadString = tmp10(tmp11[2]).TYPE.Comment;
-          let sum14 = StringResult.indexOf("*/", closure_2 + 2) + 2;
-          closure_2 = sum14;
-          if (1 === sum14) {
-            closure_2 = StringResult.length;
-          }
-        } else {
-          BadString = tmp10(tmp11[2]).TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (58 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.Colon;
-        closure_2 = closure_2 + 1;
-      } else if (59 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.Semicolon;
-        closure_2 = closure_2 + 1;
-      } else if (60 === charCodeCategoryResult) {
-        let sum15 = closure_2 + 1;
-        let num11 = 0;
-        if (sum15 < length) {
-          num11 = StringResult.charCodeAt(sum15);
-        }
-        if (33 === num11) {
-          let sum16 = closure_2 + 2;
-          let num12 = 0;
-          if (sum16 < length) {
-            num12 = StringResult.charCodeAt(sum16);
-          }
-          if (45 === num12) {
-            let sum17 = closure_2 + 3;
-            let num13 = 0;
-            if (sum17 < length) {
-              num13 = StringResult.charCodeAt(sum17);
-            }
-            if (45 === num13) {
-              BadString = tmp10(tmp11[2]).TYPE.CDO;
-              closure_2 = closure_2 + 4;
-            }
-          }
-        }
-        BadString = tmp10(tmp11[2]).TYPE.Delim;
-        closure_2 = closure_2 + 1;
-      } else if (64 === charCodeCategoryResult) {
-        let tmp10Result18 = tmp10(tmp11[1]);
-        let sum18 = closure_2 + 1;
-        let num8 = 0;
-        if (sum18 < length) {
-          num8 = StringResult.charCodeAt(sum18);
-        }
-        let sum19 = closure_2 + 2;
-        let num9 = 0;
-        if (sum19 < length) {
-          num9 = StringResult.charCodeAt(sum19);
-        }
-        let sum20 = closure_2 + 3;
-        let num10 = 0;
-        if (sum20 < length) {
-          num10 = StringResult.charCodeAt(sum20);
-        }
-        let isIdentifierStartResult = tmp10Result18.isIdentifierStart(num8, num9, num10);
-        let TYPE = tmp10(tmp11[2]).TYPE;
-        if (isIdentifierStartResult) {
-          BadString = TYPE.AtKeyword;
-          let tmp10Result19 = tmp10(tmp11[0]);
-          closure_2 = tmp10Result19.consumeName(StringResult, closure_2 + 1);
-        } else {
-          BadString = TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (91 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.LeftSquareBracket;
-        closure_2 = closure_2 + 1;
-      } else if (92 === charCodeCategoryResult) {
-        let tmp10Result20 = tmp10(tmp11[1]);
-        let sum21 = closure_2 + 1;
-        let num7 = 0;
-        if (sum21 < length) {
-          num7 = StringResult.charCodeAt(sum21);
-        }
-        if (tmp10Result20.isValidEscape(charCodeAtResult, num7)) {
-          let result1 = consumeIdentLikeToken();
-        } else {
-          BadString = tmp10(tmp11[2]).TYPE.Delim;
-          closure_2 = closure_2 + 1;
-        }
-      } else if (93 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.RightSquareBracket;
-        closure_2 = closure_2 + 1;
-      } else if (123 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.LeftCurlyBracket;
-        closure_2 = closure_2 + 1;
-      } else if (125 === charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.RightCurlyBracket;
-        closure_2 = closure_2 + 1;
-      } else if (tmp10(tmp11[1]).charCodeCategory.Digit === charCodeCategoryResult) {
-        let consumeNumericTokenResult3 = consumeNumericToken();
-      } else if (tmp10(tmp11[1]).charCodeCategory.NameStart === charCodeCategoryResult) {
-        let result2 = consumeIdentLikeToken();
-      } else if (tmp10(tmp11[1]).charCodeCategory.Eof !== charCodeCategoryResult) {
-        BadString = tmp10(tmp11[2]).TYPE.Delim;
-        closure_2 = closure_2 + 1;
-      }
-      let tmp92 = BadString;
-      if (tmp14 === BadString) {
-        let tmp94 = num2 & 16777215;
-        let tmp95 = tmp6[tmp94];
-        let tmp96 = tmp95 >> 24;
-        tmp6[num4] = tmp94;
-        let sum22 = tmp94 + 1;
-        tmp6[tmp94] = num4;
-        let tmp93 = tmp95;
-        tmp14 = tmp96;
-        if (sum22 < num4) {
-          do {
-            if (tmp6[sum22] === length) {
-              tmp6[sum22] = num4;
-            }
-            sum22 = sum22 + 1;
-            tmp93 = tmp95;
-            tmp14 = tmp96;
-          } while (sum22 < num4);
-        }
-      } else {
-        if (tmp10(tmp11[2]).TYPE.LeftParenthesis !== tmp92) {
-          if (tmp10(tmp11[2]).TYPE.Function !== tmp92) {
-            if (tmp10(tmp11[2]).TYPE.LeftSquareBracket === tmp92) {
-              tmp6[num4] = num2;
-              let RightSquareBracket = tmp10(tmp11[2]).TYPE.RightSquareBracket;
-              tmp93 = (RightSquareBracket << 24) | num4;
-              tmp14 = RightSquareBracket;
-            } else {
-              tmp93 = num2;
-              if (tmp10(tmp11[2]).TYPE.LeftCurlyBracket === tmp92) {
-                tmp6[num4] = num2;
-                let RightCurlyBracket = tmp10(tmp11[2]).TYPE.RightCurlyBracket;
-                tmp93 = (RightCurlyBracket << 24) | num4;
-                tmp14 = RightCurlyBracket;
-              }
-            }
-          }
-        }
-        tmp6[num4] = num2;
-        let RightParenthesis = tmp10(tmp11[2]).TYPE.RightParenthesis;
-        tmp93 = (RightParenthesis << 24) | num4;
-        tmp14 = RightParenthesis;
-      }
-      num4 = num4 + 1;
-      tmp5[tmp15] = (BadString << 24) | closure_2;
-      num2 = tmp93;
-      num3 = tmp14;
-      num5 = tmp93;
-      num6 = num4;
-    } while (closure_2 < length);
-  }
-  tmp5[num6] = (require("13049__.js").TYPE.EOF << 24) | closure_2;
-  tmp6[num6] = length;
-  tmp6[length] = length;
-  if (0 !== num5) {
-    do {
-      tmp102 = tmp6[tmp102] & 16777215;
-      tmp6[tmp102] = length;
-    } while (0 !== num5);
-  }
-  iter.source = StringResult;
-  iter.firstCharOffset = isBOMResult;
-  iter.offsetAndType = tmp5;
-  iter.tokenCount = num6;
-  iter.balance = tmp6;
-  iter.reset();
-  iter.next();
-  return iter;
-}
+function noop() {}
+const WhiteSpace = _mod13056.TYPE.WhiteSpace;
+const Comment = _mod13056.TYPE.Comment;
+const Ident = _mod13056.TYPE.Ident;
+const Function = _mod13056.TYPE.Function;
+const Url = _mod13056.TYPE.Url;
+const Hash = _mod13056.TYPE.Hash;
+const Percentage = _mod13056.TYPE.Percentage;
+const Number = _mod13056.TYPE.Number;
 
-export * from "module_13049";
-export * from "module_13052";
-export * from "module_13051";
-export default tokenize;
+export default function createParser(arg0) {
+  let obj = arg0;
+  const obj2 = {
+    scanner: new require("TokenStream")(),
+    locationMap: null,
+    filename: "<unknown>",
+    needPositions: false,
+    onParseError: null,
+    onParseErrorThrow: false,
+    parseAtrulePrelude: true,
+    parseRulePrelude: true,
+    parseValue: true,
+    parseCustomProperty: false,
+    readSequence: null,
+    createList: null,
+    createSingleNodeList: null,
+    getFirstListNode: null,
+    getLastListNode: null,
+    parseWithFallback: null,
+    lookupNonWSType: null,
+    eat: null,
+    consume: null,
+    consumeFunctionName: null,
+    getLocation: null,
+    getLocationFromList: null,
+    error: null,
+  };
+  const tmp = new require("TokenStream")();
+  obj2.locationMap = new require("OffsetToLocation")();
+  obj2.onParseError = noop;
+  obj2.readSequence = require("13063__.js");
+  obj2.createList = function createList() {
+    return new closure_0(13064)();
+  };
+  obj2.createSingleNodeList = function createSingleNodeList(self) {
+    return new closure_0(13064)().appendData(self);
+  };
+  obj2.getFirstListNode = function getFirstListNode(sequence) {
+    let firstResult = sequence;
+    if (sequence) {
+      firstResult = sequence.first();
+    }
+    return firstResult;
+  };
+  obj2.getLastListNode = function getLastListNode(children) {
+    return children.last();
+  };
+  obj2.parseWithFallback = function parseWithFallback(Atrule, consumeRaw) {
+    const self = this;
+    try {
+      const call = Atrule.call;
+      if (typeof call === "unknown") {
+        let callResult = Atrule();
+      } else {
+        callResult = call(self);
+      }
+      return callResult;
+    } catch (tmp4) {
+      if (obj.onParseErrorThrow) {
+        throw tmp4;
+      } else {
+        const call2 = consumeRaw.call;
+        if (typeof call2 === "unknown") {
+          let call2Result = consumeRaw(tmp);
+        } else {
+          call2Result = call2(obj, tmp);
+        }
+        obj.onParseErrorThrow = true;
+        obj.onParseError(tmp4, call2Result);
+        obj.onParseErrorThrow = false;
+        return call2Result;
+      }
+    }
+  };
+  obj2.lookupNonWSType = function lookupNonWSType(arg0) {
+    let sum = arg0;
+    const scanner = this.scanner;
+    const lookupTypeResult = scanner.lookupType(+sum);
+    while (lookupTypeResult === WhiteSpace) {
+      sum = tmp2 + 1;
+      if (0 !== lookupTypeResult) {
+        continue;
+      } else {
+        return 0;
+      }
+    }
+    return lookupTypeResult;
+  };
+  obj2.eat = function eat(arg0) {
+    const self = this;
+    if (this.scanner.tokenType === arg0) {
+      self.scanner.next();
+      const iter2 = self.scanner;
+    } else {
+      const tokenStart = self.scanner.tokenStart;
+      let iter = `${closure_0(closure_1_1[0]).NAME[arg0]} is expected`;
+      if (Ident === arg0) {
+        if (self.scanner.tokenType === Function) {
+          let tokenEnd = self.scanner.tokenEnd - 1;
+          let str = "Identifier is expected but function found";
+        } else {
+          str = "Identifier is expected";
+          tokenEnd = tokenStart;
+        }
+      } else {
+        if (Hash === arg0) {
+          const scanner = self.scanner;
+          str = iter;
+          tokenEnd = tokenStart;
+          if (scanner.isDelim(35)) {
+            iter = self.scanner;
+            iter.next();
+            tokenEnd = tokenStart + 1;
+            str = "Name is expected";
+          }
+        } else if (Percentage !== arg0) {
+          const source = self.scanner.source;
+          str = iter;
+          tokenEnd = tokenStart;
+          if (source.charCodeAt(self.scanner.tokenStart) === arg0) {
+            tokenEnd = tokenStart + 1;
+            str = iter;
+          }
+        }
+        str = iter;
+        tokenEnd = tokenStart;
+        if (self.scanner.tokenType === Number) {
+          tokenEnd = self.scanner.tokenEnd;
+          str = "Percent sign is expected";
+        }
+      }
+      self.error(str, tokenEnd);
+    }
+  };
+  obj2.consume = function consume(Number) {
+    const scanner = this.scanner;
+    const tokenValue = scanner.getTokenValue();
+    this.eat(Number);
+    return tokenValue;
+  };
+  obj2.consumeFunctionName = function consumeFunctionName() {
+    const substr = this.scanner.source.substring(this.scanner.tokenStart, this.scanner.tokenEnd - 1);
+    this.eat(Function);
+    return substr;
+  };
+  obj2.getLocation = function getLocation(tokenStart, tokenStart2) {
+    const self = this;
+    let locationRange = null;
+    if (this.needPositions) {
+      const locationMap = self.locationMap;
+      locationRange = locationMap.getLocationRange(tokenStart, tokenStart2, self.filename);
+    }
+    return locationRange;
+  };
+  obj2.getLocationFromList = function getLocationFromList(list) {
+    const self = this;
+    if (this.needPositions) {
+      const firstListNode = self.getFirstListNode(list);
+      const lastListNode = self.getLastListNode(list);
+      const locationMap = self.locationMap;
+      if (null !== firstListNode) {
+        let tokenStart = firstListNode.loc.start.offset - self.locationMap.startOffset;
+      } else {
+        tokenStart = self.scanner.tokenStart;
+      }
+      if (null !== lastListNode) {
+        let tokenStart2 = lastListNode.loc.end.offset - self.locationMap.startOffset;
+      } else {
+        tokenStart2 = self.scanner.tokenStart;
+      }
+      return locationMap.getLocationRange(tokenStart, tokenStart2, self.filename);
+    } else {
+      return null;
+    }
+  };
+  obj2.error = function error(arg0, arg1) {
+    const self = this;
+    if (undefined !== arg1) {
+      if (arg1 < self.scanner.source.length) {
+        const locationMap2 = self.locationMap;
+        let _location = locationMap2.getLocation(arg1);
+      }
+      let str = arg0;
+      if (!arg0) {
+        str = "Unexpected input";
+      }
+      const tmp62 = new closure_0(13065)(str, self.scanner.source, _location.offset, _location.line, _location.column);
+      throw tmp62;
+    }
+    const locationMap = self.locationMap;
+    const getLocation = locationMap.getLocation;
+    if (self.scanner.eof) {
+      _location = getLocation(
+        closure_0(13058).findWhiteSpaceStart(self.scanner.source, self.scanner.source.length - 1),
+      );
+      const obj = closure_0(13058);
+    } else {
+      _location = getLocation(self.scanner.tokenStart);
+    }
+  };
+  _require = obj2;
+  if (!arg0) {
+    obj = {};
+  }
+  const obj3 = { context: {}, scope: {}, atrule: {}, pseudo: {} };
+  if (obj.parseContext) {
+    for (const key10042 in obj.parseContext) {
+      let tmp4 = typeof obj.parseContext[key10042];
+      if ("function" === tmp4) {
+        obj3.context[key10042] = obj.parseContext[key10042];
+        continue;
+      } else {
+        if ("string" !== tmp4) {
+          continue;
+        } else {
+          _require = obj.parseContext[key10042];
+          obj3.context[key10042] = function () {
+            return this[closure_0]();
+          };
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+  }
+  if (obj.scope) {
+    for (const key10053 in obj.scope) {
+      obj3.scope[key10053] = obj.scope[key10053];
+      continue;
+    }
+  }
+  if (obj.atrule) {
+    for (const key10057 in obj.atrule) {
+      let tmp7 = obj.atrule[key10057];
+      if (!tmp7.parse) {
+        continue;
+      } else {
+        obj3.atrule[key10057] = tmp7.parse;
+        continue;
+      }
+      continue;
+    }
+  }
+  if (obj.pseudo) {
+    for (const key10063 in obj.pseudo) {
+      let tmp9 = obj.pseudo[key10063];
+      if (!tmp9.parse) {
+        continue;
+      } else {
+        obj3.pseudo[key10063] = tmp9.parse;
+        continue;
+      }
+      continue;
+    }
+  }
+  if (obj.node) {
+    for (const key10069 in obj.node) {
+      obj3[key10069] = obj.node[key10069].parse;
+      continue;
+    }
+  }
+  for (const key10072 in obj3) {
+    obj2[key10072] = obj3[key10072];
+    continue;
+  }
+  return (source, arg1) => {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    const onComment = obj.onComment;
+    source(13062)(source, source.scanner);
+    const locationMap = source.locationMap;
+    locationMap.setSource(source, obj.offset, obj.line, obj.column);
+    source.filename = obj.filename || "<unknown>";
+    source.needPositions = Boolean(obj.positions);
+    source.onParseError = typeof obj.onParseError === "function" ? obj.onParseError : noop;
+    source.onParseErrorThrow = false;
+    let BooleanResult = !("parseAtrulePrelude" in obj);
+    if (!BooleanResult) {
+      const _Boolean = Boolean;
+      BooleanResult = Boolean(obj.parseAtrulePrelude);
+    }
+    source.parseAtrulePrelude = BooleanResult;
+    let BooleanResult1 = !("parseRulePrelude" in obj);
+    if (!BooleanResult1) {
+      const _Boolean2 = Boolean;
+      BooleanResult1 = Boolean(obj.parseRulePrelude);
+    }
+    source.parseRulePrelude = BooleanResult1;
+    let BooleanResult2 = !("parseValue" in obj);
+    if (!BooleanResult2) {
+      const _Boolean3 = Boolean;
+      BooleanResult2 = Boolean(obj.parseValue);
+    }
+    source.parseValue = BooleanResult2;
+    let BooleanResult3 = "parseCustomProperty" in obj;
+    if (BooleanResult3) {
+      const _Boolean4 = Boolean;
+      BooleanResult3 = Boolean(obj.parseCustomProperty);
+    }
+    source.parseCustomProperty = BooleanResult3;
+    const context = obj2.context;
+    if (context.hasOwnProperty(obj.context || "default")) {
+      if (typeof onComment === "function") {
+        const scanner = obj2.scanner;
+        scanner.forEachToken((arg0, arg1, length) => {
+          if (arg0 === Comment) {
+            const _location = source.getLocation(arg1, length);
+            const obj = _mod13058;
+            let num = 2;
+            const slice = source.slice;
+            const sum = arg1 + 2;
+            if (obj.cmpStr(source, length - 2, length, "*/")) {
+              num = length - num;
+              let substr = slice(sum, num);
+            } else {
+              substr = slice(sum, length);
+            }
+            onComment(substr, _location);
+          }
+        });
+      }
+      const call = tmp12.call;
+      if (!obj2.scanner.eof) {
+        obj2.error();
+      }
+      return typeof call === "unknown" ? obj2.context[tmp](obj) : call(obj2, obj);
+    } else {
+      const _Error = Error;
+      const error = new Error("Unknown context `" + tmp + "`");
+      throw error;
+    }
+  };
+}

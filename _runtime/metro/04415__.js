@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/user_settings/connected_apps",
+  httpServerLocation: "/assets/modules/hexagon_campaign",
   scales: [1],
-  hash: "b50ef845a3f41f3a92290f7873930c0e",
-  name: "ConnectedApps.compiled.messages",
+  hash: "799213af087ff609366f4dfb3513af09",
+  name: "HexagonCampaign.compiled.messages",
   type: "jsona",
 });

@@ -1,5 +1,5 @@
 // _runtime/00078_pointsDiffer.js
-let closure_0 = { x: "Object", y: "Array" };
+let closure_0 = { x: "Path", y: "count" };
 
 export default function pointsDiffer(arg0, arg1) {
   let point = arg0;

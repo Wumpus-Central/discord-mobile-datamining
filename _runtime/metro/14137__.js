@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3ee579776b13459d07461b433997e652",
-  name: "ChevronLargeRightIcon",
+  hash: "ae39bece93fb2e7db2a552f53a1d8fa1",
+  name: "TwitterNeutralIcon",
   type: "png",
 });

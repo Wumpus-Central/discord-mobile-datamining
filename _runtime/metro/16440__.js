@@ -1,7 +1,74 @@
 // _runtime/metro/16440__.js
-import _mod17 from "00017__.js";
-import setupURLPolyfill_mod from "../16441_setupURLPolyfill.js";
+import _mod16389 from "16389__.js";
+import text from "../16398_text.js";
+import _mod16421 from "16421__.js";
+import _mod16438 from "16438__.js";
+import _mod16441 from "16441__.js";
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+const enumerable = "enumerable";
+const configurable = "configurable";
+const writable = "writable";
+if (_mod16389) {
+  if (_mod16441) {
+    defineProperty = function defineProperty(fn, arg1, value) {
+      _mod16438(fn);
+      const tmp2 = text(arg1);
+      _mod16438(value);
+      let tmp4 = value;
+      if (typeof fn === "function") {
+        tmp4 = value;
+        if ("prototype" === tmp2) {
+          tmp4 = value;
+          if ("value" in value) {
+            tmp4 = value;
+            if (writable in value) {
+              tmp4 = value;
+              if (!value[writable]) {
+                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
+                let tmp8 = tmp7;
+                if (tmp7) {
+                  tmp8 = tmp7[writable];
+                }
+                tmp4 = value;
+                if (tmp8) {
+                  fn[tmp2] = value.value;
+                  const obj = {
+                    configurable: configurable in value ? value[configurable] : tmp7[configurable],
+                    enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable],
+                    writable: false,
+                  };
+                }
+              }
+            }
+          }
+        }
+      }
+      return defineProperty(fn, tmp2, tmp4);
+    };
+  }
+  let defineProperty2 = defineProperty;
+} else {
+  defineProperty2 = function defineProperty(arg0, arg1, value) {
+    _mod16438(arg0);
+    const tmp2 = text(arg1);
+    _mod16438(value);
+    if (!_mod16421) {
+      if (!("get" in value)) {
+        if (!("set" in value)) {
+          if ("value" in value) {
+            arg0[tmp2] = value.value;
+          }
+          return arg0;
+        }
+      }
+      const tmp8 = new TypeError("Accessors not supported");
+      throw tmp8;
+    } else {
+      try {
+        return defineProperty(arg0, tmp2, value);
+      } catch (err) {}
+    }
+  };
+}
+
+export const f = defineProperty2;

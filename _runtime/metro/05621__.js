@@ -1,3 +1,4 @@
 // _runtime/metro/05621__.js
+import _modDef5622 from "05622__.js";
 
-export (arg0) => arg0
+export default _modDef5622;

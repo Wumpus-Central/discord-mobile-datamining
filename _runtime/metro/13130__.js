@@ -1,19 +1,24 @@
 // _runtime/metro/13130__.js
-import _mod13055 from "13055__.js";
+import _mod13058 from "13058__.js";
+import _mod13062 from "13062__.js";
 
-const String = _mod13055.TYPE.String;
-const obj = {
-  name: "String",
+const Percentage = _mod13062.TYPE.Percentage;
+let obj = {
+  name: "Percentage",
   structure: { value: String },
   parse() {
-    return {
-      type: "String",
-      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
-      value: this.consume(String),
+    const tokenStart = this.scanner.tokenStart;
+    this.eat(Percentage);
+    const obj2 = {
+      type: "Percentage",
+      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
+      value: this.scanner.source.substring(tokenStart, _mod13058.consumeNumber(this.scanner.source, tokenStart)),
     };
+    return obj2;
   },
   generate(value) {
     this.chunk(value.value);
+    this.chunk("%");
   },
 };
 

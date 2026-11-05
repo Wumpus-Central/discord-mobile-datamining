@@ -1,21 +1,40 @@
 // _runtime/metro/13115__.js
-import _mod13055 from "13055__.js";
+import _mod13062 from "13062__.js";
 
-const Hash = _mod13055.TYPE.Hash;
+const Comment = _mod13062.TYPE.Comment;
 let obj = {
-  name: "IdSelector",
-  structure: { name: String },
+  name: "Comment",
+  structure: { value: String },
   parse() {
+    const self = this;
     const tokenStart = this.scanner.tokenStart;
-    this.eat(Hash);
-    const obj = { type: "IdSelector", loc: this.getLocation(tokenStart, this.scanner.tokenStart), name: null };
-    const scanner = this.scanner;
-    obj.name = scanner.substrToCursor(tokenStart + 1);
+    const tokenEnd = this.scanner.tokenEnd;
+    this.eat(Comment);
+    const sum = tokenEnd - tokenStart + 2;
+    let tmp3 = sum >= 2;
+    if (2 <= sum) {
+      const source = self.scanner.source;
+      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
+    }
+    if (tmp3) {
+      const source2 = self.scanner.source;
+      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
+    }
+    let diff = tokenEnd;
+    if (tmp3) {
+      diff = tokenEnd - 2;
+    }
+    const obj = {
+      type: "Comment",
+      loc: self.getLocation(tokenStart, self.scanner.tokenStart),
+      value: self.scanner.source.substring(tokenStart + 2, diff),
+    };
     return obj;
   },
-  generate(name) {
-    this.chunk("#");
-    this.chunk(name.name);
+  generate(value) {
+    this.chunk("/*");
+    this.chunk(value.value);
+    this.chunk("*/");
   },
 };
 

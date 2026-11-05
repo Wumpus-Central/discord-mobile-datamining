@@ -9,7 +9,7 @@ export function useHandler(ChannelListLegendListTsx1, items26) {
   _require = ChannelListLegendListTsx1;
   const tmp = closure_3(null);
   if (null === tmp.current) {
-    tmp.current = { context: "Object", prevHandlers: "Array" };
+    tmp.current = { context: "Path", prevHandlers: "count" };
   }
   const current = tmp.current;
   let obj = require("areDependenciesEqual");

@@ -3007,7 +3007,7 @@ function initInputObserver(sampling) {
               ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
               const _Object2 = window.Object;
               _Object2.defineProperty(closure_0, closure_1, obj);
-              return /* F80323 */ function() { ... };
+              return /* F80493 */ function() { ... };
             };
           };
         };
@@ -3189,7 +3189,7 @@ function initObservers(doc) {
       ({ mousemoveCb: drag, sampling, doc, mirror: fn3 } = doc);
       closure_2 = undefined;
       closure_3 = undefined;
-      let f80321;
+      let f80491;
       items = undefined;
       if (false === sampling.mousemove) {
         return () => {
@@ -3240,7 +3240,7 @@ function initObservers(doc) {
           closure_130_2 = {};
           closure_130_3 = null;
           closure_130_4 = 0;
-          f80321 = function() {
+          f80491 = function() {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
@@ -4538,7 +4538,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F121548 */ function() { ... };
+                            return /* F121767 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4604,7 +4604,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F121548 */ function() { ... };
+                            return /* F121767 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -5441,7 +5441,7 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
       }
       obj.timestamp = 1000 * num;
       const obj2 = { tag: "breadcrumb", payload: null };
-      const normalizer = f121590(map[8]);
+      const normalizer = f121809(map[8]);
       obj2.payload = normalizer.normalize(_null, 10, 1000);
       obj.data = obj2;
       obj.throttledAddEvent(obj);
@@ -5605,7 +5605,7 @@ function getLargestContentfulPaint(arg0) {
   ({ value, rating } = arg0);
   const result = ((_mod681.browserPerformanceTimeOrigin() || _mod681.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   const obj2 = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
-  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "find" };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "filter" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {
@@ -5663,7 +5663,7 @@ function getInteractionToNextPaint(arg0) {
   ({ value, rating } = arg0);
   const result = ((_mod681.browserPerformanceTimeOrigin() || _mod681.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   const obj2 = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
-  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "find" };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "filter" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {
@@ -6718,7 +6718,7 @@ let closure_160 = async function _getResponseInfo2(arg0) {
           closure_132_10 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -7748,61 +7748,134 @@ function getHandleRecordingEmit(arg0) {
     }
   };
 }
-let closure_170 = async function _prepareReplayEvent() {
-  closure_1 = tmp2;
-  ({ client: closure_129_0, scope: closure_129_1, replayId: closure_129_2, event: closure_129_3 } = closure_0);
-  await "flexDirection";
-  const obj4 = { event_id: closure_129_2, integrations: null };
-  if (typeof closure_129_0._integrations === "object") {
-    if (null !== closure_129_0._integrations) {
-      const _Array = Array;
-      if (!Array.isArray(closure_129_0._integrations)) {
-        const _Object = Object;
-        const keys = Object.keys(closure_129_0._integrations);
+let closure_170 = async function _prepareReplayEvent(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({ client: closure_129_0, scope: closure_129_1, replayId: closure_129_2, event: closure_129_3 } = closure_0);
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          let sdkMetadata;
+          closure_129_7 = undefined;
+          let name;
+          let version;
+          let settings;
+          c3 = 1;
+          c4 = 1;
+          return { value: "flexDirection", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          const obj4 = { event_id: closure_129_2, integrations: null };
+          let keys;
+          if (typeof closure_129_0._integrations === "object") {
+            if (null !== closure_129_0._integrations) {
+              const _Array = Array;
+              if (!Array.isArray(closure_129_0._integrations)) {
+                const _Object = Object;
+                keys = Object.keys(closure_129_0._integrations);
+              }
+            }
+          }
+          obj4.integrations = keys;
+          closure_129_4 = obj4;
+          closure_129_0.emit("preprocessEvent", closure_129_3, closure_129_4);
+          obj5 = closure_130_0(closure_130_1[8]);
+          const options = closure_129_0.getOptions();
+          c3 = 2;
+          c4 = 1;
+          obj7 = { value: obj5.prepareEvent(options, closure_129_3, closure_129_4, closure_129_1, closure_129_0, closure_130_0(closure_130_1[8]).getIsolationScope()), done: false };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_129_5 = value;
+        if (closure_129_5) {
+          closure_129_0.emit("postprocessEvent", closure_129_5, closure_129_4);
+          let str2 = closure_129_5.platform;
+          if (!str2) {
+            str2 = "javascript";
+          }
+          closure_129_5.platform = str2;
+          sdkMetadata = closure_129_0.getSdkMetadata();
+          let sdk;
+          if (sdkMetadata != null) {
+            sdk = sdkMetadata.sdk;
+          }
+          if (!sdk) {
+            sdk = {};
+          }
+          closure_129_7 = sdk;
+          name = closure_129_7.name;
+          version = closure_129_7.version;
+          settings = closure_129_7.settings;
+          obj9 = {};
+          const merged = Object.assign(closure_129_5.sdk);
+          let str3 = name;
+          if (!name) {
+            str3 = "sentry.javascript.unknown";
+          }
+          obj9.name = str3;
+          let str4 = version;
+          if (!version) {
+            str4 = "0.0.0";
+          }
+          obj9.version = str4;
+          obj9.settings = settings;
+          closure_129_5.sdk = obj9;
+          c4 = 3;
+          const obj10 = { value: closure_129_5, done: true };
+          return obj10;
+        } else {
+          c4 = 3;
+          return { value: null, done: true };
+        }
       }
+    } catch (tmp48) {
+      c4 = tmp;
+      throw tmp48;
     }
   }
-  obj4.integrations = keys;
-  closure_129_4 = obj4;
-  closure_129_0.emit("preprocessEvent", closure_129_3, closure_129_4);
-  const options = closure_129_0.getOptions();
-  await closure_130_0(closure_130_1[8]).prepareEvent(options, closure_129_3, closure_129_4, closure_129_1, closure_129_0, closure_130_0(closure_130_1[8]).getIsolationScope());
-  closure_129_5 = value;
-  if (closure_129_5) {
-    closure_129_0.emit("postprocessEvent", closure_129_5, closure_129_4);
-    let str2 = closure_129_5.platform;
-    if (!str2) {
-      str2 = "javascript";
-    }
-    closure_129_5.platform = str2;
-    const sdkMetadata = closure_129_0.getSdkMetadata();
-    if (sdkMetadata != null) {
-      let sdk = sdkMetadata.sdk;
-    }
-    if (!sdk) {
-      sdk = {};
-    }
-    closure_129_7 = sdk;
-    const name = closure_129_7.name;
-    const version = closure_129_7.version;
-    const settings = closure_129_7.settings;
-    obj9 = {};
-    const merged = Object.assign(closure_129_5.sdk);
-    let str3 = name;
-    if (!name) {
-      str3 = "sentry.javascript.unknown";
-    }
-    obj9.name = str3;
-    let str4 = version;
-    if (!version) {
-      str4 = "0.0.0";
-    }
-    obj9.version = str4;
-    obj9.settings = settings;
-    closure_129_5.sdk = obj9;
-    return closure_129_5;
-  }
-  return null;
 };
 let closure_171 = async function _sendReplayRequest(arg0) {
   if (c6 === 2) {
@@ -7855,7 +7928,7 @@ let closure_171 = async function _sendReplayRequest(arg0) {
           closure_129_20 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp10) {
         if (arg0 === 1) {
@@ -8082,7 +8155,7 @@ let closure_176 = async function _sendReplay(arg0) {
           closure_130_4 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -9201,7 +9274,7 @@ let closure_82 = (() => {
                     addedSet2.delete(childNodes);
                     childNodes = childNodes.childNodes;
                     if (childNodes != null) {
-                      let item = childNodes.forEach(/* F80327 */ function() { ... });
+                      let item = childNodes.forEach(/* F80497 */ function() { ... });
                     }
                     const droppedSet = arr2.droppedSet;
                     droppedSet.add(childNodes);
@@ -9314,7 +9387,7 @@ let closure_82 = (() => {
                     movedSet2.delete(childNodes);
                     const childNodes1 = childNodes.childNodes;
                     if (childNodes1 != null) {
-                      const item1 = childNodes1.forEach(/* F80327 */ function() { ... });
+                      const item1 = childNodes1.forEach(/* F80497 */ function() { ... });
                     }
                   }
                   const mapRemoves = arr2.mapRemoves;

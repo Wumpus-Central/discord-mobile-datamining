@@ -1,4 +1,4 @@
 // _runtime/metro/05716__.js
-import BottomSheetBackdrop from "../05717_BottomSheetBackdrop.js";
+import _modDef5717 from "05717__.js";
 
-export const BottomSheetBackdrop = BottomSheetBackdrop.BottomSheetBackdrop;
+export default _modDef5717;

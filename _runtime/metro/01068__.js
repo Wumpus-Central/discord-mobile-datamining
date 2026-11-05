@@ -232,7 +232,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "children", attachmentUri: "i" });
+                  debug.setState({ filename: "Array", attachment: "id", attachmentUri: "concat" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;
@@ -462,7 +462,7 @@ class FeedbackWidget {
       FeedbackWidget._savedState = Object.assign({}, state.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "dispatch", attachment: "isArray", attachmentUri: "isArray" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "sa", attachment: "isArray", attachmentUri: "isArray" };
     };
     tmp4Result._hasScreenshot = () => undefined !== state.state.filename && undefined !== state.state.attachment && undefined !== state.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -805,12 +805,12 @@ let items = [
 const entry1 = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "dispatch", attachment: "isArray", attachmentUri: "isArray" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "sa", attachment: "isArray", attachmentUri: "isArray" };
   }
 };
 const items1 = [entry1];
 const importDefaultResultResult = _createClass(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = fn(1064).defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "dispatch", attachment: "isArray", attachmentUri: "isArray" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "sa", attachment: "isArray", attachmentUri: "isArray" };
 
 export const FeedbackWidget = importDefaultResultResult;

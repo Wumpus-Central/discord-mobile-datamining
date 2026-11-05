@@ -1,4 +1,19 @@
 // _runtime/metro/16157__.js
-import _mod16145 from "16145__.js";
+import _mod16158 from "16158__.js";
 
-export default (arg0, arg1) => new _mod16145(arg0, arg1).patch;
+export default (arg0, arg1) => {
+  if (arg0 instanceof _mod16158) {
+    return arg0;
+  } else {
+    try {
+      const tmp8 = new _mod16158(arg0, arg1);
+      return tmp8;
+    } catch (tmp10) {
+      if (tmp) {
+        throw tmp10;
+      } else {
+        return null;
+      }
+    }
+  }
+};

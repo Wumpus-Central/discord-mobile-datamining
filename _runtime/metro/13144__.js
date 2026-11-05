@@ -1,41 +1,38 @@
 // _runtime/metro/13144__.js
-import _mod13055 from "13055__.js";
-import _mod13099 from "13099__.js";
+import _mod13103 from "13103__.js";
+import _mod13145 from "13145__.js";
+import _mod13152 from "13152__.js";
+import _mod13158 from "13158__.js";
 
-const Comma = _mod13055.TYPE.Comma;
-const WhiteSpace = _mod13055.TYPE.WhiteSpace;
-
-export default function () {
-  const self = this;
-  const list = this.createList();
-  const scanner = this.scanner;
-  scanner.skipSC();
-  list.push(this.Identifier());
-  const scanner2 = this.scanner;
-  scanner2.skipSC();
-  if (this.scanner.tokenType !== Comma) {
-    return list;
-  } else {
-    list.push(self.Operator());
-    if (self.parseCustomProperty) {
-      let element = self.Value(null);
-    } else {
-      element = self.Raw(self.scanner.tokenIndex, _mod13099.mode.exclamationMarkOrSemicolon, false);
-    }
-    if ("Value" === element.type) {
-      const children = element.children;
-      if (children.isEmpty()) {
-        let diff = self.scanner.tokenIndex - self.scanner.tokenIndex;
-        if (diff <= 0) {
-          const scanner3 = self.scanner;
-          while (scanner3.lookupType(diff) !== WhiteSpace) {
-            diff = diff + 1;
-          }
-        }
-        const children2 = element.children;
-        children2.appendData({ type: "WhiteSpace", loc: null, value: " " });
+const obj = {
+  parseContext: {
+    default: "StyleSheet",
+    stylesheet: "StyleSheet",
+    atrule: "Atrule",
+    atrulePrelude(atrule) {
+      let StringResult = null;
+      if (atrule.atrule) {
+        const _String = String;
+        StringResult = String(atrule.atrule);
       }
-    }
-    list.push(element);
-  }
-}
+      return this.AtrulePrelude(StringResult);
+    },
+    mediaQueryList: "MediaQueryList",
+    mediaQuery: "MediaQuery",
+    rule: "Rule",
+    selectorList: "SelectorList",
+    selector: "Selector",
+    block() {
+      return this.Block(true);
+    },
+    declarationList: "DeclarationList",
+    declaration: "Declaration",
+    value: "Value",
+  },
+  scope: _mod13145,
+  atrule: _mod13152,
+  pseudo: _mod13158,
+  node: _mod13103,
+};
+
+export default obj;

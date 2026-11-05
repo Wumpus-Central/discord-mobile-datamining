@@ -1,62 +1,56 @@
 // _runtime/metro/13131__.js
-import _mod13055 from "13055__.js";
+import _mod13062 from "13062__.js";
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, null, false);
-}
-const WhiteSpace = _mod13055.TYPE.WhiteSpace;
-const Comment = _mod13055.TYPE.Comment;
-const AtKeyword = _mod13055.TYPE.AtKeyword;
-const CDO = _mod13055.TYPE.CDO;
-const CDC = _mod13055.TYPE.CDC;
+const Ident = _mod13062.TYPE.Ident;
+const Function = _mod13062.TYPE.Function;
+const Colon = _mod13062.TYPE.Colon;
+const RightParenthesis = _mod13062.TYPE.RightParenthesis;
 const obj = {
-  name: "StyleSheet",
+  name: "PseudoClassSelector",
   structure: null,
   parse() {
     const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      do {
-        let tokenType = self.scanner.tokenType;
-        if (WhiteSpace === tokenType) {
-          let iter2 = self.scanner;
-          let nextResult = iter2.next();
-        } else {
-          if (Comment === tokenType) {
-            let source = self.scanner.source;
-            if (33 !== source.charCodeAt(self.scanner.tokenStart + 2)) {
-              let iter = self.scanner;
-              let nextResult1 = iter.next();
-            } else {
-              let CommentResult = self.Comment();
-            }
-          } else if (CDO === tokenType) {
-            CommentResult = self.CDO();
-          } else if (CDC === tokenType) {
-            CommentResult = self.CDC();
-          } else if (AtKeyword === tokenType) {
-            CommentResult = self.parseWithFallback(self.Atrule, consumeRaw);
-          } else {
-            CommentResult = self.parseWithFallback(self.Rule, consumeRaw);
-          }
-          let arr = list.push(CommentResult);
-        }
-      } while (!self.scanner.eof);
+    this.eat(Colon);
+    if (this.scanner.tokenType === Function) {
+      const str = self.consumeFunctionName();
+      const formatted = str.toLowerCase();
+      const pseudo = self.pseudo;
+      if (!pseudo.hasOwnProperty(formatted)) {
+        const list = self.createList();
+        list.push(self.Raw(self.scanner.tokenIndex, null, false));
+        self.eat(RightParenthesis);
+      }
+      const scanner = self.scanner;
+      scanner.skipSC();
+      let skipSCResult1 = self.pseudo[formatted];
+      const call = skipSCResult1.call;
+      const scanner2 = self.scanner;
+      skipSCResult1 = scanner2.skipSC();
+      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
+    } else {
+      const element = {
+        type: "PseudoClassSelector",
+        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+        name: self.consume(Ident),
+        children: null,
+      };
+      return element;
     }
-    const element = {
-      type: "StyleSheet",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      children: list,
-    };
-    return element;
   },
-  generate(arg0) {
-    this.children(arg0);
+  generate(name) {
+    const self = this;
+    this.chunk(":");
+    this.chunk(name.name);
+    if (null !== name.children) {
+      self.chunk("(");
+      self.children(name);
+      self.chunk(")");
+    }
   },
-  walkContext: "stylesheet",
+  walkContext: "function",
 };
-const obj2 = { children: null };
-const items = [["Comment", "CDO", "CDC", "Atrule", "Rule", "Raw"]];
+const obj2 = { name: String, children: null };
+const items = [["Raw"], null];
 obj2.children = items;
 obj.structure = obj2;
 

@@ -1,8 +1,11 @@
 // _runtime/metro/16438__.js
-import _mod16416 from "16416__.js";
-import _mod16417 from "16417__.js";
+import _mod16411 from "16411__.js";
 
-export default Object.keys ||
-  function keys(arg0) {
-    return _mod16417(arg0, _mod16416);
-  };
+export default (arg0) => {
+  if (_mod16411(arg0)) {
+    return arg0;
+  } else {
+    const tmp5 = new TypeError(String(arg0) + " is not an object");
+    throw tmp5;
+  }
+};

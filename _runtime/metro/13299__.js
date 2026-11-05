@@ -1,44 +1,28 @@
 // _runtime/metro/13299__.js
-function merge(arg0, obj) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = 2;
-  }
-  if (obj) {
-    if (typeof obj === "object") {
-      if (num > 0) {
-        if (arg0) {
-          if (obj) {
-            const _Object = Object;
-            if (0 === Object.keys(obj).length) {
-              return arg0;
-            }
-          }
-        }
-        obj = {};
-        const merged = Object.assign(arg0);
-        for (const key10016 in arg1) {
-          let _Object2 = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10016);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10016);
-          }
-          if (!hasOwnPropertyResult) {
-            continue;
-          } else {
-            obj[key10016] = merge(obj[key10016], arg1[key10016], num - 1);
-            continue;
-          }
-          continue;
-        }
-        return obj;
-      }
-    }
-  }
-  return obj;
-}
+import _mod13282 from "13282__.js";
+import _mod13283 from "13283__.js";
 
-export { merge };
+require = arg1;
+const dependencyMap = arg6;
+
+export function getMainCarrier() {
+  const GLOBAL_OBJ = _mod13282.GLOBAL_OBJ;
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  tmp3.version = tmp3.version || _mod13283.SDK_VERSION;
+  const tmp4 = tmp3.version || _mod13283.SDK_VERSION;
+  tmp3[_mod13283.SDK_VERSION] = tmp3[_mod13283.SDK_VERSION] || {};
+  return _mod13282.GLOBAL_OBJ;
+}
+export function getSentryCarrier(__SENTRY__) {
+  const tmp = __SENTRY__.__SENTRY__ || {};
+  __SENTRY__.__SENTRY__ = tmp;
+  let SDK_VERSION = tmp.version;
+  if (!SDK_VERSION) {
+    SDK_VERSION = _mod13283.SDK_VERSION;
+  }
+  tmp.version = SDK_VERSION;
+  const tmp4 = tmp[_mod13283.SDK_VERSION] || {};
+  tmp[_mod13283.SDK_VERSION] = tmp4;
+  return tmp4;
+}

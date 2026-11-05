@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 130,
-  height: 82,
-  scales: [2, 3],
-  hash: "3c9f06960d8f7bccd426e0e87c7d7947",
-  name: "screenshare_splash",
+  httpServerLocation: "/assets/modules/activities/images",
+  width: 445,
+  height: 482,
+  scales: [1],
+  hash: "578f09ddbff611181344fe43546bae68",
+  name: "announcement_birb",
   type: "png",
 });

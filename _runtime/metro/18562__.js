@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 375,
-  height: 120,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "5ac140c0ecf6d86d0e8c0b66480112aa",
-  name: "IAP_feature_education",
+  hash: "01ba5b6e261b3f78c312695fe4f7b0d7",
+  name: "BoostTier2Icon",
   type: "png",
 });

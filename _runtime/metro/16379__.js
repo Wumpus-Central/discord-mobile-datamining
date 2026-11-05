@@ -1,19 +1,47 @@
 // _runtime/metro/16379__.js
-import _mod16377 from "16377__.js";
-import _mod16380 from "16380__.js";
-import _mod16382 from "16382__.js";
 
-let fn = Object;
-let closure_3 = _mod16380("".split);
-if (_mod16377(() => !Object("z").propertyIsEnumerable(0))) {
-  fn = (arg0) => {
-    if ("String" === _mod16382(arg0)) {
-      let tmp2 = closure_3(arg0, "");
-    } else {
-      tmp2 = Object(arg0);
-    }
-    return tmp2;
-  };
-}
-
-export default fn;
+export const units = [
+  "degree",
+  "acre",
+  "hectare",
+  "percent",
+  "bit",
+  "byte",
+  "gigabit",
+  "gigabyte",
+  "kilobit",
+  "kilobyte",
+  "megabit",
+  "megabyte",
+  "petabyte",
+  "terabit",
+  "terabyte",
+  "day",
+  "hour",
+  "millisecond",
+  "minute",
+  "month",
+  "second",
+  "week",
+  "year",
+  "centimeter",
+  "foot",
+  "inch",
+  "kilometer",
+  "meter",
+  "mile-scandinavian",
+  "mile",
+  "millimeter",
+  "yard",
+  "gram",
+  "kilogram",
+  "ounce",
+  "pound",
+  "stone",
+  "celsius",
+  "fahrenheit",
+  "fluid-ounce",
+  "gallon",
+  "liter",
+  "milliliter",
+];

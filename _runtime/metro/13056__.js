@@ -1,55 +1,38 @@
 // _runtime/metro/13056__.js
-import _mod13055 from "13055__.js";
+const TYPE = {
+  EOF: 0,
+  Ident: 1,
+  Function: 2,
+  AtKeyword: 3,
+  Hash: 4,
+  String: 5,
+  BadString: 6,
+  Url: 7,
+  BadUrl: 8,
+  Delim: 9,
+  Number: 10,
+  Percentage: 11,
+  Dimension: 12,
+  WhiteSpace: 13,
+  CDO: 14,
+  CDC: 15,
+  Colon: 16,
+  Semicolon: 17,
+  Comma: 18,
+  LeftSquareBracket: 19,
+  RightSquareBracket: 20,
+  LeftParenthesis: 21,
+  RightParenthesis: 22,
+  LeftCurlyBracket: 23,
+  RightCurlyBracket: 24,
+  Comment: 25,
+};
+const keys = Object.keys(TYPE);
 
-const WhiteSpace = _mod13055.TYPE.WhiteSpace;
-const Comment = _mod13055.TYPE.Comment;
-
-export default function readSequence(recognizer) {
-  const self = this;
-  const list = this.createList();
-  const obj = { recognizer, space: null, ignoreWS: false, ignoreWSAfter: false };
-  const scanner = this.scanner;
-  scanner.skipSC();
-  if (!this.scanner.eof) {
-    while (true) {
-      let tokenType = self.scanner.tokenType;
-      if (Comment === tokenType) {
-        let iter2 = self.scanner;
-        let nextResult = iter2.next();
-      } else {
-        if (WhiteSpace === tokenType) {
-          if (obj.ignoreWS) {
-            let iter = self.scanner;
-            let nextResult1 = iter.next();
-          } else {
-            obj.space = self.WhiteSpace();
-          }
-        } else {
-          let getNode = recognizer.getNode;
-          let call = getNode.call;
-          let tmp3 = typeof call === "unknown" ? getNode(obj) : call(self, obj);
-          if (undefined === tmp3) {
-            break;
-          } else {
-            if (null !== obj.space) {
-              let arr = list.push(obj.space);
-              obj.space = null;
-            }
-            let arr3 = list.push(tmp3);
-            if (obj.ignoreWSAfter) {
-              obj.ignoreWSAfter = false;
-              obj.ignoreWS = true;
-            } else {
-              obj.ignoreWS = false;
-            }
-          }
-        }
-        break;
-      }
-      if (self.scanner.eof) {
-        break;
-      }
-    }
-  }
-  return list;
-}
+export default {
+  TYPE,
+  NAME: keys.reduce((acc, item) => {
+    acc[obj[item]] = item;
+    return acc;
+  }, {}),
+};

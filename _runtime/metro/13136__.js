@@ -1,18 +1,39 @@
 // _runtime/metro/13136__.js
-import _mod13055 from "13055__.js";
+import _mod13062 from "13062__.js";
 
-const WhiteSpace = _mod13055.TYPE.WhiteSpace;
-let closure_1 = Object.freeze({ type: "WhiteSpace", loc: null, value: " " });
+const Comma = _mod13062.TYPE.Comma;
 const obj = {
-  name: "WhiteSpace",
-  structure: { value: String },
+  name: "SelectorList",
+  structure: null,
   parse() {
-    this.eat(WhiteSpace);
-    return closure_1;
+    const self = this;
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      list.push(self.Selector());
+      if (self.scanner.tokenType === Comma) {
+        self.scanner.next();
+        while (!self.scanner.eof) {
+          let arr3 = list.push(self.Selector());
+          if (self.scanner.tokenType !== Comma) {
+            break;
+          }
+        }
+        const iter = self.scanner;
+      }
+    }
+    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(value) {
-    this.chunk(value.value);
+  generate(arg0) {
+    this.children(arg0, function () {
+      this.chunk(",");
+    });
   },
+  walkContext: "selector",
 };
+const obj2 = { children: null };
+const items = [["Selector", "Raw"]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

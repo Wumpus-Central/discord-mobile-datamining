@@ -1,82 +1,47 @@
 // _runtime/metro/08397__.js
-import _mod8391 from "08391__.js";
-import _mod8392 from "08392__.js";
+import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "../08398_FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.js";
+import _mod8410 from "08410__.js";
+import _mod8418 from "08418__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function isAVIF(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod8391.isAvifStringIncluded(fileChunk);
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-export function isBMP(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "bmp");
-}
-export function isBPG(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "bpg");
-}
-export function isCR2(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "cr2");
-}
-export function isEXR(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "exr");
-}
-export function isGIF(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "gif");
-}
-export function isHEIC(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod8391.isHeicSignatureIncluded(fileChunk);
-}
-export function isICO(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ico");
-}
-export function isJPEG(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "jpeg");
-}
-export function isPBM(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pbm");
-}
-export function isPGM(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pgm");
-}
-export function isPNG(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "png");
-}
-export function isPPM(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ppm");
-}
-export function isPSD(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "psd");
-}
-export function isWEBP(fileChunk) {
-  fileChunk = _mod8391.getFileChunk(fileChunk);
-  const FileTypes = _mod8392.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webp");
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
+  }
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
+      }
+    };
+  }
+  const _Object2 = Object;
+  fn(FILE_TYPES_REQUIRED_ADDITIONAL_CHECK, exports);
+  fn(_mod8410, exports);
+  fn(_mod8418, exports);
+} else {
+  let _Object = Object;
 }

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/HexagonIcon",
-  width: 102,
-  height: 102,
+  httpServerLocation: "/assets/images/native/custom_app_icons/GamingIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "6fc713ff4969740a35633ad9d71eaf93",
-  name: "HexagonIcon",
+  hash: "27dc2bbcf6aa3b0cbef53a5212edf486",
+  name: "GamingIcon",
   type: "png",
 });

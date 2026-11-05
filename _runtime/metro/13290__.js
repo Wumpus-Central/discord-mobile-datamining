@@ -1,68 +1,138 @@
 // _runtime/metro/13290__.js
-import _mod13280 from "13280__.js";
-import _slicedToArray from "00032__.js";
+import _mod13288 from "13288__.js";
 
-const _sentryMetrics = "_sentryMetrics";
+require = arg1;
+const dependencyMap = arg6;
 
-export function getMetricSummaryJsonForSpan(self) {
-  if (self[_sentryMetrics]) {
-    const obj = {};
-    const tmp3 = tmp[Symbol.iterator]();
-    while (tmp3 !== undefined) {
-      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
-      [tmp9, tmp11] = tmp8;
-      let arr = obj[tmp9];
-      if (!arr) {
-        items = [];
-        obj[tmp10] = items;
-        arr = items;
+export function isMatchingPattern(arr, test) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  const isStringResult = _mod13288.isString(arr);
+  if (!isStringResult) {
+    return isStringResult;
+  } else {
+    if (tmpResult.isRegExp(test)) {
+      let isMatch = test.test(arr);
+    } else {
+      isMatch = _mod13288.isString(test);
+      if (isMatch) {
+        if (flag) {
+          let hasItem = arr === test;
+        } else {
+          hasItem = arr.includes(test);
+        }
       }
-      let obj2 = _mod13280;
-      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
-      continue;
+      const tmpResult2 = _mod13288;
     }
-    return obj;
+    tmpResult = _mod13288;
   }
 }
-export function updateMetricSummaryOnSpan(
-  activeSpan,
-  metricType,
-  sanitizeMetricKeyResult,
-  min,
-  sanitizeUnitResult,
-  tags,
-  bucketKey,
-) {
-  let obj = activeSpan[_sentryMetrics];
-  if (!obj) {
-    const _Map = Map;
-    const map = new Map();
-    activeSpan[tmp] = map;
-    obj = map;
-  }
-  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
-  value = obj.get(bucketKey);
-  if (value) {
-    const range = _slicedToArray(value, 2)[1];
-    items = [combined];
-    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
-    const _Math = Math;
-    range1.min = Math.min(range.min, min);
-    const _Math2 = Math;
-    range1.max = Math.max(range.max, min);
-    const sum = range.count + 1;
-    range.count = sum;
-    range1.count = sum;
-    const sum1 = range.sum + min;
-    range.sum = sum1;
-    range1.sum = sum1;
-    range1.tags = range.tags;
-    items[1] = range1;
-    const result = obj.set(bucketKey, items);
+export function safeJoin(arg0, arg1) {
+  if (Array.isArray(arg0)) {
+    items = [];
+    let num = 0;
+    if (0 < arg0.length) {
+      try {
+        const push = items.push;
+        if (obj.isVueViewModel(tmp2)) {
+          push("[VueViewModel]");
+        } else {
+          const _String = String;
+          push(String(tmp2));
+        }
+        num = num + 1;
+        obj = _mod13288;
+      } catch (err) {
+        arr.push(tmp);
+      }
+    }
+    return items.join(arg1);
   } else {
-    const items1 = [combined];
-    const range2 = { min, max: min, count: 1, sum: min, tags };
-    items1[1] = range2;
-    const result1 = obj.set(bucketKey, items1);
+    return "";
   }
+}
+export function snipLine(arr, lineno) {
+  if (arr.length <= 150) {
+    return arr;
+  } else {
+    let tmp = lineno;
+    if (lineno > length) {
+      tmp = length;
+    }
+    const _Math = Math;
+    let num3 = Math.max(tmp - 60, 0);
+    if (num3 < 5) {
+      num3 = 0;
+    }
+    const _Math2 = Math;
+    let bound = Math.min(num3 + 140, length);
+    if (bound > length - 5) {
+      bound = length;
+    }
+    if (bound === length) {
+      const _Math3 = Math;
+      num3 = Math.max(bound - 140, 0);
+    }
+    const substr = arr.slice(num3, bound);
+    let combined = substr;
+    if (num3 > 0) {
+      const _HermesInternal = HermesInternal;
+      combined = "'{snip} " + substr;
+    }
+    let text = combined;
+    if (bound < length) {
+      text = `${tmp6} {snip}`;
+    }
+    return text;
+  }
+}
+export function stringMatchesSomePattern(transaction) {
+  if (items === undefined) {
+    items = [];
+  }
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  return items.some((test) => {
+    const isStringResult = _mod13288.isString(transaction);
+    if (!isStringResult) {
+      return isStringResult;
+    } else {
+      if (tmpResult.isRegExp(test)) {
+        let isMatch = test.test(transaction);
+      } else {
+        isMatch = _mod13288.isString(test);
+        if (isMatch) {
+          if (flag) {
+            let hasItem = transaction === test;
+          } else {
+            hasItem = transaction.includes(test);
+          }
+        }
+        const tmpResult2 = _mod13288;
+      }
+      tmpResult = _mod13288;
+    }
+  });
+}
+export function truncate(str) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 0;
+  }
+  let combined = str;
+  if (typeof str === "string") {
+    combined = str;
+    if (0 !== num) {
+      combined = str;
+      if (str.length > num) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + str.slice(0, num) + "...";
+      }
+    }
+  }
+  return combined;
 }

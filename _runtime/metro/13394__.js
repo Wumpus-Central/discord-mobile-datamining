@@ -1,24 +1,24 @@
 // _runtime/metro/13394__.js
-import _mod13275 from "13275__.js";
+import _mod13282 from "13282__.js";
+import _mod13395 from "13395__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function vercelWaitUntil(arg0) {
-  const obj = _mod13275.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
-  if (obj) {
-    if (obj.get) {
-      if (obj.get()) {
-        let obj1 = obj.get();
+export function isBrowser() {
+  let tmp = typeof window !== "undefined";
+  if (typeof window !== "undefined") {
+    const isNodeEnvResult = _mod13395.isNodeEnv();
+    let tmp3 = !isNodeEnvResult;
+    if (isNodeEnvResult) {
+      const _process = _mod13282.GLOBAL_OBJ.process;
+      let tmp2 = _process;
+      if (tmp2) {
+        tmp2 = "renderer" === _process.type;
       }
-      let waitUntil = obj1;
-      if (obj1) {
-        waitUntil = obj1.waitUntil;
-      }
-      if (waitUntil) {
-        obj1.waitUntil(arg0);
-      }
+      tmp3 = tmp2;
     }
+    tmp = tmp3;
   }
-  obj1 = {};
+  return tmp;
 }

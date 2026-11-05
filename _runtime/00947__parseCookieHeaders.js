@@ -255,7 +255,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                             const str = getAllResponseHeaders.getAllResponseHeaders();
                             if (str) {
                               const parts = str.split("\r\n");
-                              return parts.reduce(/* F142992 */ function() { ... }, {});
+                              return parts.reduce(/* F143285 */ function() { ... }, {});
                             } else {
                               return {};
                             }
