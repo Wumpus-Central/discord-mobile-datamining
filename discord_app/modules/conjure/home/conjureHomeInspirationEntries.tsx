@@ -1,6 +1,6 @@
-// === Module 13194: conjureHomeInspirationEntries ===
+// === Module 13201: conjureHomeInspirationEntries ===
 
-// Module 13194 (conjureHomeInspirationEntries)
+// Module 13201 (conjureHomeInspirationEntries)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
 import size from "module_2" /* 2 */;

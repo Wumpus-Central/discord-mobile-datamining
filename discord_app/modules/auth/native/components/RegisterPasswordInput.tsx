@@ -1,16 +1,14 @@
-// === Module 18271: RegisterPasswordInput ===
+// === Module 18299: RegisterPasswordInput ===
 
-// Module 18271 (RegisterPasswordInput)
+// Module 18299 (RegisterPasswordInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import usePasswordScore from "usePasswordScore" /* 18268 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import usePasswordScore from "usePasswordScore" /* 18296 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7255 */;
-
-const require = globalThis.__r;
+import PhoneStore from "PhoneStore" /* 7258 */;
 
 require = fn;
 function PasswordStrength(passwordScore) {
@@ -55,11 +53,11 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-const RegistrationUIStore = fn(18243);
+const RegistrationUIStore = fn(18271);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { weak: { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL }, medium: null, strong: null, passwordStrength: null, inputHint: null };
 let obj3 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj2.medium = { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
@@ -84,9 +82,8 @@ const result = size.fileFinishedImporting("modules/auth/native/components/Regist
 export function RegisterPasswordInput(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   onPasswordChange = undefined;
-  importDefault = undefined;
   let isPasswordFocused;
-  closure_3 = undefined;
+  dependencyMap = undefined;
   let user;
   let stateFromStores;
   ({ password, onPasswordChange } = merged);
@@ -95,33 +92,31 @@ export function RegisterPasswordInput(ref) {
   ref = noop.useRef(null);
   const obj2 = { inputRef: ref, enabled: null };
   const tmp2 = closure_13();
-  const tmp4 = importDefault;
+  const tmp4 = isPasswordFocused;
   if (autoFocus == null) {
     autoFocus = false;
   }
   obj2.enabled = autoFocus;
-  require("useFocusRefOnNavigation")(obj2);
-  const tmp6 = require("useFocusRefOnNavigation");
-  [tmp9, tmp10] = stateFromStores(noop.useState(false), 2);
-  importDefault = tmp10;
-  const tmp11 = stateFromStores(noop.useState(false), 2);
-  isPasswordFocused = tmp11[0];
-  closure_3 = tmp13;
-  const tmp14 = closure_9((errors) => errors.errors);
-  user = tmp14;
-  const tmp15 = tmp4(isPasswordFocused[13])("password", tmp14);
-  items = [onPasswordChange, tmp14];
+  isPasswordFocused(16131)(obj2);
+  const tmp8 = _slicedToArray(noop.useState(false), 2);
+  isPasswordFocused = tmp8[0];
+  dependencyMap = tmp10;
+  const tmp11 = closure_9((errors) => errors.errors);
+  user = tmp11;
+  const tmp12 = tmp4(7273)("password", tmp11);
+  items = [onPasswordChange, tmp11];
   const callback = noop.useCallback((arg0) => {
     if (null != user.password) {
       const password = user.password;
-      React5(_objectWithoutProperties(user, closure_3));
+      React5(_objectWithoutProperties(user, user));
     }
     onPasswordChange(arg0);
   }, items);
-  const tmp8 = stateFromStores(noop.useState(false), 2);
+  const tmp14 = onPasswordChange;
+  const tmp6 = isPasswordFocused(16131);
   const items1 = [PhoneStore];
-  stateFromStores = onPasswordChange(isPasswordFocused[14]).useStateFromStores(items1, () => {
-    const FRANCE_AND_FRENCH_REGION = onPasswordChange(first[15]).CountryCodesSets.FRANCE_AND_FRENCH_REGION;
+  stateFromStores = onPasswordChange(504).useStateFromStores(items1, () => {
+    const FRANCE_AND_FRENCH_REGION = onPasswordChange(5833).CountryCodesSets.FRANCE_AND_FRENCH_REGION;
     let num = 8;
     if (FRANCE_AND_FRENCH_REGION.has(countryCode.getCountryCode().alpha2)) {
       num = 12;
@@ -136,28 +131,23 @@ export function RegisterPasswordInput(ref) {
       return intl.format(util.t.VUUJ6V, obj);
     }
   }, items2);
-  const items3 = [tmp11[1]];
-  const items4 = [tmp11[1]];
+  const items3 = [tmp8[1]];
+  const items4 = [tmp8[1]];
   const callback1 = noop.useCallback(() => {
-    closure_3(true);
+    dependencyMap(true);
   }, items3);
-  const items5 = [tmp10];
   const callback2 = noop.useCallback(() => {
-    closure_3(false);
+    dependencyMap(false);
   }, items4);
-  const callback3 = noop.useCallback(() => {
-    _undefined((arg0) => !arg0);
-  }, items5);
-  const obj4 = { ref: null, textContentType: "newPassword", autoComplete: "new-password", onChange: null, value: null, label: null, accessibilityHint: null, secureTextEntry: null, returnKeyType: null, autoCapitalize: "none", onSubmitEditing: null, onFocus: null, onBlur: null, trailingIcon: null, trailingPressableProps: null, errorMessage: null, status: null };
-  const obj3 = onPasswordChange(isPasswordFocused[14]);
-  obj4.ref = onPasswordChange(isPasswordFocused[17]).mergeRefs(ref.ref, ref);
+  const obj4 = { ref: null, textContentType: "newPassword", autoComplete: "new-password", onChange: null, value: null, label: null, accessibilityHint: null, secureTextEntry: true, revealable: true, returnKeyType: null, autoCapitalize: "none", onSubmitEditing: null, onFocus: null, onBlur: null, errorMessage: null, status: null };
+  const obj3 = onPasswordChange(504);
+  obj4.ref = onPasswordChange(5315).mergeRefs(ref.ref, ref);
   obj4.onChange = callback;
   obj4.value = password;
-  let intl = onPasswordChange(tmp5[10]).intl;
-  obj4.label = intl.string(onPasswordChange(isPasswordFocused[10]).t["CIGa+7"]);
-  const intl2 = onPasswordChange(tmp5[10]).intl;
-  obj4.accessibilityHint = intl2.string(onPasswordChange(isPasswordFocused[10]).t.cUVsEG);
-  obj4.secureTextEntry = !tmp9;
+  let intl = onPasswordChange(1113).intl;
+  obj4.label = intl.string(onPasswordChange(1113).t["CIGa+7"]);
+  const intl2 = onPasswordChange(1113).intl;
+  obj4.accessibilityHint = intl2.string(onPasswordChange(1113).t.cUVsEG);
   if (returnKeyType == null) {
     returnKeyType = "next";
   }
@@ -165,32 +155,17 @@ export function RegisterPasswordInput(ref) {
   obj4.onSubmitEditing = onSubmitEditing;
   obj4.onFocus = callback1;
   obj4.onBlur = callback2;
-  if (tmp9) {
-    let EyeIcon = tmp17(tmp5[18]).EyeSlashIcon;
-  } else {
-    EyeIcon = tmp17(tmp5[19]).EyeIcon;
-  }
-  obj4.trailingIcon = EyeIcon;
-  const intl3 = tmp17(tmp5[10]).intl;
-  const string = intl3.string;
-  const t = tmp17(tmp5[10]).t;
-  if (tmp9) {
-    let stringResult = string(t.Nusip4);
-  } else {
-    stringResult = string(t.nFzpM5);
-  }
-  obj4.trailingPressableProps = { accessibilityLabel: stringResult, onPress: callback3, hitSlop: { top: 8, bottom: 8 } };
-  obj4.errorMessage = tmp15;
+  obj4.errorMessage = tmp12;
   let str;
-  if (null != tmp15) {
+  if (null != tmp12) {
     str = "error";
   }
   obj4.status = str;
-  const children = [closure_11(onPasswordChange(isPasswordFocused[16]).TextInput, obj4), closure_11(PasswordStrength, { password, isPasswordFocused, passwordError: tmp15, passwordScore }), ];
-  let tmp25Result = null;
+  const children = [closure_11(onPasswordChange(7226).TextInput, obj4), closure_11(PasswordStrength, { password, isPasswordFocused, passwordError: tmp12, passwordScore }), ];
+  let tmp21Result = null;
   if (null != memo) {
-    tmp25Result = null;
-    if (null == tmp15) {
+    tmp21Result = null;
+    if (null == tmp12) {
       obj6 = {};
       const merged1 = Object.assign(obj6);
       const merged2 = Object.assign(obj7);
@@ -199,9 +174,9 @@ export function RegisterPasswordInput(ref) {
       obj6.color = "text-muted";
       obj6.animated = true;
       obj6.children = memo;
-      tmp25Result = closure_11(tmp17(tmp5[11]).Text, obj6);
+      tmp21Result = closure_11(tmp14(5763).Text, obj6);
     }
   }
-  children[2] = tmp25Result;
+  children[2] = tmp21Result;
   return closure_10(closure_12, { children });
 }

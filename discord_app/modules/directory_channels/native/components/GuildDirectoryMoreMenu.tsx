@@ -1,14 +1,14 @@
-// === Module 14079: GuildDirectoryMoreMenu ===
+// === Module 14092: GuildDirectoryMoreMenu ===
 
-// Module 14079 (GuildDirectoryMoreMenu)
+// Module 14092 (GuildDirectoryMoreMenu)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
-import ReportModals from "ReportModals" /* 8492 */;
-import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 14073 */;
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 14080 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 14082 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6097 */;
+import ReportModals from "ReportModals" /* 8497 */;
+import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 14086 */;
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 14093 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 14095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1113).intl;
     obj.label = intl.string(entry(1113).t.XnuOvN);
-    obj.IconComponent = entry(10410).PencilIcon;
+    obj.IconComponent = entry(10416).PencilIcon;
     obj.action = function handleEdit() {
       GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
     };
@@ -35,7 +35,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj2 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl2 = entry(1113).intl;
     obj2.label = intl2.string(entry(1113).t.KUxYWH);
-    obj2.IconComponent = entry(5872).TrashIcon;
+    obj2.IconComponent = entry(5875).TrashIcon;
     obj2.action = function handleRemove() {
       const obj2 = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
       const intl = util.intl;
@@ -61,7 +61,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     const obj3 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1113).intl;
     obj3.label = intl3.string(entry(1113).t.Aen9eh);
-    obj3.IconComponent = entry(10262).FlagIcon;
+    obj3.IconComponent = entry(10270).FlagIcon;
     obj3.action = function handleReport() {
       const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     };
@@ -79,11 +79,11 @@ export default function GuildDirectoryMoreMenu(entry) {
           obj.variant = "secondary";
           const intl = entry(1113).intl;
           obj.accessibilityLabel = intl.string(entry(1113).t.PdRCRg);
-          obj.icon = jsx(entry(9906).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-          return jsx(entry(8168).IconButton, { ref: ref.ref });
+          obj.icon = jsx(entry(9912).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8173).IconButton, { ref: ref.ref });
         }
     };
-    tmp9 = jsx(entry(10053).ContextMenu, {
+    tmp9 = jsx(entry(10061).ContextMenu, {
       items,
       children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -93,8 +93,8 @@ export default function GuildDirectoryMoreMenu(entry) {
           obj.variant = "secondary";
           const intl = entry(1113).intl;
           obj.accessibilityLabel = intl.string(entry(1113).t.PdRCRg);
-          obj.icon = jsx(entry(9906).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-          return jsx(entry(8168).IconButton, { ref: ref.ref });
+          obj.icon = jsx(entry(9912).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8173).IconButton, { ref: ref.ref });
         }
     });
   }

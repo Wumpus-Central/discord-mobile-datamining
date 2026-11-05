@@ -1,25 +1,25 @@
-// === Module 19188: ChannelSettingsPermissionsOverview ===
+// === Module 19219: ChannelSettingsPermissionsOverview ===
 
-// Module 19188 (ChannelSettingsPermissionsOverview)
+// Module 19219 (ChannelSettingsPermissionsOverview)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Server from "Server" /* 2121 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
-import TableRow from "TableRow" /* 7116 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
-import RoleLabel from "RoleLabel" /* 10411 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10997 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17551 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19189 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5747 */;
+import TableRow from "TableRow" /* 7119 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7627 */;
+import RoleLabel from "RoleLabel" /* 10417 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11003 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17577 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19220 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildRoleStore from "GuildRoleStore" /* 5047 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import RelationshipStore from "RelationshipStore" /* 5083 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildRoleStore from "GuildRoleStore" /* 5049 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import RelationshipStore from "RelationshipStore" /* 5085 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -33,10 +33,10 @@ function ChannelPermissionSyncModule(channel) {
     obj2.title = intl.string(channel(1113).t.YWMtRe);
     const intl2 = channel(1113).intl;
     let obj3 = { channelName: null, categoryName: null };
-    let obj = category(6093);
-    obj3.channelName = channel(5786).computeChannelName(closure_0, UserStore, RelationshipStore, true);
-    let obj4 = channel(5786);
-    obj3.categoryName = channel(5786).computeChannelName(category, UserStore, RelationshipStore);
+    let obj = category(6096);
+    obj3.channelName = channel(5788).computeChannelName(closure_0, UserStore, RelationshipStore, true);
+    let obj4 = channel(5788);
+    obj3.categoryName = channel(5788).computeChannelName(category, UserStore, RelationshipStore);
     obj2.body = intl2.format(channel(1113).t["iKW+jY"], obj3);
     const intl3 = channel(1113).intl;
     obj2.confirmText = intl3.string(channel(1113).t.eW8Gy4);
@@ -70,12 +70,12 @@ function ChannelPermissionSyncModule(channel) {
               closure_128_0 = undefined;
               const guild_id = tmp5.guild_id;
               const obj8 = PermissionUtilsAll;
-              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(11840).getAppChannelBotUserId(tmp2));
+              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(11848).getAppChannelBotUserId(tmp2));
               closure_128_0 = syncedPermissionOverwrites;
-              const obj9 = tmp2(11840);
+              const obj9 = tmp2(11848);
               c2 = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(9178).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
+              const obj5 = { value: tmp2(9185).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -88,7 +88,7 @@ function ChannelPermissionSyncModule(channel) {
           } else {
             if (value) {
               const obj7 = { permissionOverwrites: null };
-              const obj = tmp2(8339);
+              const obj = tmp2(8344);
               obj7.permissionOverwrites = category(12).values(closure_128_0);
               obj.saveChannel(tmp2.id, obj7);
               const obj3 = category(12);
@@ -115,7 +115,7 @@ function ChannelPermissionSyncModule(channel) {
     obj.show(obj2);
   }, items);
   const tmp = closure_18();
-  const channelName = channel(5786).computeChannelName(category, UserStore, RelationshipStore);
+  const channelName = channel(5788).computeChannelName(category, UserStore, RelationshipStore);
   let obj2 = { style: tmp.tableRowGroupContainer, children: null };
   let intl = channel(1113).intl;
   const formatToPlainString = intl.formatToPlainString;
@@ -128,12 +128,12 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(12421).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(12428).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1113).intl;
   obj6.label = intl2.string(channel(1113).t.NVwuHq);
   obj6.onPress = callback;
-  obj5.children = closure_16(channel(7116).TableRow, obj6);
-  obj2.children = closure_16(channel(7201).TableRowGroup, obj5);
+  obj5.children = closure_16(channel(7119).TableRow, obj6);
+  obj2.children = closure_16(channel(7204).TableRowGroup, obj5);
   return closure_16(View, obj2);
 }
 function CategorySync(category) {
@@ -159,22 +159,22 @@ function AddPermission(isEditing) {
     const obj3 = { title: null, hasIcons: true, children: null };
     const intl = tmp2(1113).intl;
     obj3.title = intl.string(tmp2(1113).t.vPHdP5);
-    const obj4 = { icon: closure_16(tmp2(11673).PlusMediumIcon, {}), label: null, onPress: null };
+    const obj4 = { icon: closure_16(tmp2(11681).PlusMediumIcon, {}), label: null, onPress: null };
     const intl2 = tmp2(1113).intl;
     obj4.label = intl2.string(tmp2(1113).t.fVWxvT);
     obj4.onPress = function onPress() {
       closure_0.push(constants2.NEW_PERMISSION, { type: constants.ROLE });
     };
-    items = [closure_16(tmp2(7116).TableRow, obj4), ];
-    const obj5 = { icon: closure_16(tmp2(11673).PlusMediumIcon, {}), label: null, onPress: null };
+    items = [closure_16(tmp2(7119).TableRow, obj4), ];
+    const obj5 = { icon: closure_16(tmp2(11681).PlusMediumIcon, {}), label: null, onPress: null };
     const intl3 = tmp2(1113).intl;
     obj5.label = intl3.string(tmp2(1113).t.riesLt);
     obj5.onPress = function onPress() {
       closure_0.push(constants2.NEW_PERMISSION, { type: constants.MEMBER });
     };
-    items[1] = closure_16(tmp2(7116).TableRow, obj5);
+    items[1] = closure_16(tmp2(7119).TableRow, obj5);
     obj3.children = items;
-    obj2.children = closure_17(tmp2(7201).TableRowGroup, obj3);
+    obj2.children = closure_17(tmp2(7204).TableRowGroup, obj3);
     return closure_16(View, obj2);
   }
   const obj = require("useNavigation");
@@ -240,7 +240,7 @@ function RoleOverwrites(guild) {
       }
     }, role.id);
   });
-  obj4.children = closure_16(guild(7201).TableRowGroup, obj5);
+  obj4.children = closure_16(guild(7204).TableRowGroup, obj5);
   return closure_16(View, obj4);
 }
 function MemberRow(arg0) {
@@ -290,18 +290,18 @@ function MemberOverwrites(channel) {
         }
       }, user.id);
     });
-    obj2.children = closure_16(guild_id(7201).TableRowGroup, obj3);
+    obj2.children = closure_16(guild_id(7204).TableRowGroup, obj3);
     tmp4 = closure_16(View, obj2);
   }
   return tmp4;
 }
 const View = fn(17).View;
-const isEveryoneRole = fn(5048).isEveryoneRole;
+const isEveryoneRole = fn(5050).isEveryoneRole;
 const Constants = fn(1072);
 ({ PermissionOverrideType: closure_14, ChannelSettingsSections: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { tableRowGroupContainer: { marginBottom: nativeDefault.space.PX_16 }, tableContainer: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.tableContainer = { marginHorizontal: nativeDefault.space.PX_12 };

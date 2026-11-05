@@ -1,33 +1,33 @@
-// === Module 15054: UserProfileActivity ===
+// === Module 15067: UserProfileActivity ===
 
-// Module 15054 (UserProfileActivity)
+// Module 15067 (UserProfileActivity)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
-import transitionToGuild from "transitionToGuild" /* 7662 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8023 */;
-import StreamActionCreators from "StreamActionCreators" /* 8041 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8079 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8903 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 9085 */;
-import closeVoicePanelsDefault from "closeVoicePanels" /* 11115 */;
-import UserActivitySpotify from "UserActivitySpotify" /* 11869 */;
-import UserProfileActivityButtons from "UserProfileActivityButtons" /* 15100 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6844 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+import transitionToGuild from "transitionToGuild" /* 7664 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8028 */;
+import StreamActionCreators from "StreamActionCreators" /* 8046 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8084 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8908 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 9091 */;
+import closeVoicePanelsDefault from "closeVoicePanels" /* 11124 */;
+import UserActivitySpotify from "UserActivitySpotify" /* 11878 */;
+import UserProfileActivityButtons from "UserProfileActivityButtons" /* 15113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
-import RequestToStreamStore from "RequestToStreamStore" /* 15055 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import PermissionStore from "PermissionStore" /* 5073 */;
-import PresenceStore from "PresenceStore" /* 5895 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6705 */;
-import VoiceStateStore from "VoiceStateStore" /* 5813 */;
-import UserProfileStore from "UserProfileStore" /* 7912 */;
+import RequestToStreamStore from "RequestToStreamStore" /* 15068 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6852 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import PermissionStore from "PermissionStore" /* 5075 */;
+import PresenceStore from "PresenceStore" /* 5898 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6708 */;
+import VoiceStateStore from "VoiceStateStore" /* 5815 */;
+import UserProfileStore from "UserProfileStore" /* 7917 */;
 
 require = fn;
 function ActivityCardText(children) {
@@ -747,8 +747,8 @@ function VoiceCallActivityCard(arg0) {
   dependencyMap = undefined;
   ({ isInChannel, style } = arg0);
   const tmp = closure_25();
-  const tmp5 = stateFromStores(5786)(channel);
-  const tmp4 = stateFromStores(15093)(channel);
+  const tmp5 = stateFromStores(5788)(channel);
+  const tmp4 = stateFromStores(15106)(channel);
   items = [GuildStore];
   stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   let obj = channel(504);
@@ -761,17 +761,17 @@ function VoiceCallActivityCard(arg0) {
     return isPrivateResult;
   });
   let obj2 = channel(504);
-  const tmp9 = stateFromStores(7462);
-  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7462)(stateFromStores(7487).USER_PROFILE_VOICE_ACTIVITY_CARD));
-  const tmp11 = stateFromStores(15082)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
+  const tmp9 = stateFromStores(7465);
+  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7465)(stateFromStores(7490).USER_PROFILE_VOICE_ACTIVITY_CARD));
+  const tmp11 = stateFromStores(15095)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
   closure_3 = tmp11;
-  stateFromStores(15083)({ userId: user.id, onAction: tmp11 });
+  stateFromStores(15096)({ userId: user.id, onAction: tmp11 });
   const obj5 = { style: null, title: null, titleStyle: null, children: null };
   const items2 = [tmp.card, style];
   obj5.style = items2;
   const obj3 = { display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations };
   const obj4 = { userId: user.id, onAction: tmp11 };
-  const tmp9Result = stateFromStores(7462)(stateFromStores(7487).USER_PROFILE_VOICE_ACTIVITY_CARD);
+  const tmp9Result = stateFromStores(7465)(stateFromStores(7490).USER_PROFILE_VOICE_ACTIVITY_CARD);
   if (!channel.isDM()) {
     if (!channel.isGroupDM()) {
       const intl = channel(1113).intl;
@@ -793,12 +793,12 @@ function VoiceCallActivityCard(arg0) {
       id = stateFromStores.id;
     }
     obj7.guildId = id;
-    const items3 = [closure_22(tmp2(15107), obj7), ];
+    const items3 = [closure_22(tmp2(15120), obj7), ];
     const obj8 = { style: tmp.voiceCallContent, children: null };
     if (stateFromStores1) {
       const obj9 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
       const obj10 = { channel };
-      obj9.accessibilityLabel = tmp2(9230)(obj10);
+      obj9.accessibilityLabel = tmp2(9237)(obj10);
       const intl3 = channel(1113).intl;
       obj9.accessibilityHint = intl3.string(channel(1113).t["9C444m"]);
       obj9.onPress = function onPress() {
@@ -810,19 +810,19 @@ function VoiceCallActivityCard(arg0) {
       const obj11 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj12 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj13 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj12.children = closure_22(tmp2(10943), obj13);
+      obj12.children = closure_22(tmp2(10949), obj13);
       const items4 = [closure_22(closure_7, obj12), tmp5];
       obj11.children = items4;
-      obj9.children = closure_23(channel(5761).Text, obj11);
-      let tmp13Result = closure_22(channel(7121).PressableOpacity, obj9);
+      obj9.children = closure_23(channel(5763).Text, obj11);
+      let tmp13Result = closure_22(channel(7124).PressableOpacity, obj9);
     } else {
       const obj14 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj15 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj16 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj15.children = closure_22(tmp2(10943), obj16);
+      obj15.children = closure_22(tmp2(10949), obj16);
       const items5 = [closure_22(closure_7, obj15), tmp5];
       obj14.children = items5;
-      tmp13Result = closure_23(channel(5761).Text, obj14);
+      tmp13Result = closure_23(channel(5763).Text, obj14);
     }
     const items6 = [tmp13Result, ];
     let tmp18Result2 = null;
@@ -843,8 +843,8 @@ function VoiceCallActivityCard(arg0) {
       const intl6 = channel(1113).intl;
       const obj20 = { guildName: stateFromStores.name };
       obj19.children = intl6.format(channel(1113).t["hq/Qze"], obj20);
-      obj17.children = closure_22(channel(5761).Text, obj19);
-      tmp18Result2 = closure_22(channel(7121).PressableOpacity, obj17);
+      obj17.children = closure_22(channel(5763).Text, obj19);
+      tmp18Result2 = closure_22(channel(7124).PressableOpacity, obj17);
     }
     items6[1] = tmp18Result2;
     obj8.children = items6;
@@ -852,22 +852,22 @@ function VoiceCallActivityCard(arg0) {
     obj6.children = items3;
     const items7 = [closure_23(closure_7, obj6), ];
     const obj21 = { channel, isInChannel, onAction: tmp11 };
-    items7[1] = closure_22(channel(15100).VoiceChannelButtons, obj21);
+    items7[1] = closure_22(channel(15113).VoiceChannelButtons, obj21);
     obj5.children = items7;
     return closure_23(tmp14, obj5);
   }
   const intl2 = channel(1113).intl;
   stringResult = intl2.string(channel(1113).t["9FaEzi"]);
-  tmp14 = stateFromStores(7512);
+  tmp14 = stateFromStores(7514);
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, TouchableWithoutFeedback: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const CARD_PADDING = fn(7513).CARD_PADDING;
+const CARD_PADDING = fn(7515).CARD_PADDING;
 const Constants = fn(1072);
 ({ Permissions: closure_19, PlatformTypes: closure_20, StatusTypes: closure_21 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { card: { gap: 12 }, cardTitle: { marginBottom: 0 }, cardTitleIcon: { tintColor: nativeDefault.colors.TEXT_SUBTLE }, body: { flexDirection: "row", alignItems: "center", gap: 16 }, content: { flex: 1 }, imageContainer: { position: "relative" }, imageAspectRatio: { width: 60, maxHeight: 60, aspectRatio: "1 / 1" }, crunchyrollImageAspectRatio: { width: 60, maxHeight: 100, aspectRatio: "2 / 3" }, largeImage: null, smallImageBackground: null, smallImage: null, badges: null, voiceChannelDivider: null, customButtons: null, streamPreview: null, voiceActivityCard: null, voiceSettings: null, voiceSettingsDivider: null, voiceCallContent: null, voiceCallNameIconWrapper: null };
 let size = { borderRadius: nativeDefault.radii.xs, width: "100%", height: "100%" };
 obj2.largeImage = size;

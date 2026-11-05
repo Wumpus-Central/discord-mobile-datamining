@@ -1,10 +1,10 @@
-// === Module 12351: conjureGamePickerOptions ===
+// === Module 12358: conjureGamePickerOptions ===
 
-// Module 12351 (conjureGamePickerOptions)
+// Module 12358 (conjureGamePickerOptions)
 import initialize from "initialize" /* 504 */;
-import _mod7651 from "module_7651" /* 7651 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11888 */;
-import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 12352 */;
+import _mod7653 from "module_7653" /* 7653 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11897 */;
+import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 12359 */;
 import noop from "module_19" /* 19 */;
 import RunningGameStore from "RunningGameStore" /* 2142 */;
 import DetectableGameStore from "DetectableGameStore" /* 2161 */;
@@ -76,8 +76,8 @@ export function conjureGamePickerOptions(allOptions, query, runningIds, first1) 
     items = [];
     HermesBuiltin.arraySpread(allOptions, 0);
     const obj2 = { keys };
-    found = _mod7651.matchSorter(items, query, obj2).slice(0, 50);
-    const matchSorterResult = _mod7651.matchSorter(items, query, obj2);
+    found = _mod7653.matchSorter(items, query, obj2).slice(0, 50);
+    const matchSorterResult = _mod7653.matchSorter(items, query, obj2);
   }
   new Set(found.map((value) => value.value));
   const found1 = first1.filter((item) => !set1.has(item));

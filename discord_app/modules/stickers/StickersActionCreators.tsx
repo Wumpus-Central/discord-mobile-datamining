@@ -1,16 +1,16 @@
-// === Module 10445: StickersActionCreators ===
+// === Module 10451: StickersActionCreators ===
 
-// Module 10445 (StickersActionCreators)
+// Module 10451 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
-import InlineUploaderDefault from "InlineUploader" /* 7290 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6096 */;
+import InlineUploaderDefault from "InlineUploader" /* 7293 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6706 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6909 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6912 */;
 import UserStore from "UserStore" /* 1385 */;
-import StickersStore from "StickersStore" /* 6972 */;
+import StickersStore from "StickersStore" /* 6975 */;
 
 const require = globalThis.__r;
 
@@ -26,50 +26,92 @@ let closure_12 = async function _fetchStickerPack() {
   return body;
 };
 let closure_13 = async function _fetchStickerPacks() {
-  closure_2 = tmp3;
-  closure_1 = tmp2;
-  let obj5 = closure_0;
-  if (closure_0 === undefined) {
-    obj5 = {};
-  }
-  let locale = obj5.locale;
-  if (locale === undefined) {
-    locale = locale.locale;
-  }
-  closure_129_0 = locale;
-  await "flexDirection";
-  if (1 === tmp6) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
     if (arg0 === 1) {
-      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      if (!closure_130_8.isFetchingStickerPacks) {
-        if (!closure_130_8.hasLoadedStickerPacks) {
-          closure_130_1(closure_130_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
-          const HTTP = closure_130_0(closure_130_2[9]).HTTP;
-          const request = { url: closure_130_9.STICKER_PACKS, query: null, rejectWithError: null };
-          request.query = { locale: closure_129_0 };
-          closure_130_1(closure_130_2[10]);
-          request.rejectWithError = closure_130_0(closure_130_2[9]).rejectWithMigratedError();
-          c3 = 2;
-          c4 = 1;
-          return { value: HTTP.get(request), done: false };
-        }
-      }
-      c4 = 3;
+      return { value: "HermesInternal", done: null };
     }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    const sticker_packs = value.body.sticker_packs;
-    closure_130_1(closure_130_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_SUCCESS", packs: sticker_packs });
-    closure_130_1(closure_130_2[10]);
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let obj5 = closure_0;
+          if (closure_0 === undefined) {
+            obj5 = {};
+          }
+          let locale = obj5.locale;
+          if (locale === undefined) {
+            locale = locale.locale;
+          }
+          closure_129_0 = locale;
+          let sticker_packs;
+          c3 = 1;
+          c4 = 1;
+          return { value: "flexDirection", done: true };
+        }
+      } else {
+        if (1 === tmp6) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            if (!closure_130_8.isFetchingStickerPacks) {
+              if (!closure_130_8.hasLoadedStickerPacks) {
+                closure_130_1(closure_130_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
+                const HTTP = closure_130_0(closure_130_2[9]).HTTP;
+                const request = { url: closure_130_9.STICKER_PACKS, query: null, rejectWithError: null };
+                const obj8 = { locale: closure_129_0 };
+                request.query = obj8;
+                const obj4 = closure_130_1(closure_130_2[10]);
+                request.rejectWithError = closure_130_0(closure_130_2[9]).rejectWithMigratedError();
+                c3 = 2;
+                c4 = 1;
+                const obj9 = { value: HTTP.get(request), done: false };
+                return obj9;
+              }
+            }
+            c4 = 3;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          sticker_packs = value.body.sticker_packs;
+          const obj10 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: sticker_packs };
+          closure_130_1(closure_130_2[10]).dispatch(obj10);
+          const obj = closure_130_1(closure_130_2[10]);
+        }
+        c4 = 3;
+        const obj11 = { value, done: true };
+        return obj11;
+      }
+    } catch (tmp26) {
+      c4 = tmp;
+      throw tmp26;
+    }
   }
-  return value;
 };
 let closure_14 = async function _fetchSticker(arg0) {
   if (c4 === 2) {

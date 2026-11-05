@@ -1,12 +1,14 @@
-// === Module 11552: GameOrganizationInviteConstants ===
+// === Module 11560: GameOrganizationInviteConstants ===
 
-// Module 11552 (GameOrganizationInviteConstants)
+// Module 11560 (GameOrganizationInviteConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/GameOrganizationInviteConstants.tsx");
 
 export const GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY = "GameOrganizationJoinActionSheet";
 export const GAME_ORGANIZATION_INVITE_PICKER_ACTION_SHEET_KEY = "GameOrganizationInvitePickerActionSheet";
+export const GAME_ORGANIZATION_CANT_JOIN_ACTION_SHEET_KEY = "GameOrganizationCantJoinActionSheet";
+export const GameOrganizationCantJoinReasons = { NO_CHARACTERS: "NO_CHARACTERS", ERROR: "ERROR" };
 export const GAME_ORGANIZATION_INVITE_EXPIRY_DAYS = 7;
 export const GameOrganizationInviteStates = { RESOLVING: "RESOLVING", RESOLVED: "RESOLVED", ERROR: "ERROR" };
 export const GameOrganizationDisplayNouns = { GUILD: "GUILD" };

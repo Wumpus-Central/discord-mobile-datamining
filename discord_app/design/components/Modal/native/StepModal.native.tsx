@@ -1,10 +1,10 @@
-// === Module 13433: StepModal ===
+// === Module 13458: StepModal ===
 
-// Module 13433 (StepModal)
+// Module 13458 (StepModal)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import NavigatorConstants from "NavigatorConstants" /* 5722 */;
-import Modal from "Modal" /* 11671 */;
-import ModalStepIndicator from "ModalStepIndicator" /* 13434 */;
+import NavigatorConstants from "NavigatorConstants" /* 5724 */;
+import Modal from "Modal" /* 11679 */;
+import ModalStepIndicator from "ModalStepIndicator" /* 13459 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { height: "100%" }, stepContainer: null };
-const rect = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: fn(5722).NAV_BAR_HEIGHT, zIndex: 1 };
+const rect = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: fn(5724).NAV_BAR_HEIGHT, zIndex: 1 };
 obj2.stepContainer = rect;
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

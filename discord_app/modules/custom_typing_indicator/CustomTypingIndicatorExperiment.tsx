@@ -1,6 +1,6 @@
-// === Module 13949: CustomTypingIndicatorExperiment ===
+// === Module 13962: CustomTypingIndicatorExperiment ===
 
-// Module 13949 (CustomTypingIndicatorExperiment)
+// Module 13962 (CustomTypingIndicatorExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

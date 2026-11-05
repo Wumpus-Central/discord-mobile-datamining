@@ -1,6 +1,6 @@
-// === Module 5145: GameModeExperiment ===
+// === Module 5147: GameModeExperiment ===
 
-// Module 5145 (GameModeExperiment)
+// Module 5147 (GameModeExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

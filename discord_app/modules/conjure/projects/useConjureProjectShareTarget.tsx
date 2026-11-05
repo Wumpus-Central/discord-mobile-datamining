@@ -1,8 +1,8 @@
-// === Module 13228: useConjureProjectShareTarget ===
+// === Module 13235: useConjureProjectShareTarget ===
 
-// Module 13228 (useConjureProjectShareTarget)
+// Module 13235 (useConjureProjectShareTarget)
 import _modDef3995 from "module_3995" /* 3995 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import GuildStore from "GuildStore" /* 5014 */;
 
 const require = fn;
 function useConjureProjectShareTargetDetails(project) {

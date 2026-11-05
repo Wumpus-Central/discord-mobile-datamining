@@ -1,6 +1,6 @@
-// === Module 13197: createConjureProject ===
+// === Module 13204: createConjureProject ===
 
-// Module 13197 (createConjureProject)
+// Module 13204 (createConjureProject)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -40,7 +40,7 @@ let closure_5 = async function _createConjureProject(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -93,7 +93,7 @@ let closure_5 = async function _createConjureProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(11028);
+const ConjureConnectionStore = fn(11034);
 ({ ensureConnection: c3, stageModelSettings: closure_4 } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/create/createConjureProject.tsx");

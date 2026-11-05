@@ -1,19 +1,19 @@
-// === Module 7628: RelationshipActionCreators ===
+// === Module 7630: RelationshipActionCreators ===
 
-// Module 7628 (RelationshipActionCreators)
+// Module 7630 (RelationshipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import shared from "shared" /* 5148 */;
-import UserUtilsDefault from "UserUtils" /* 5195 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 7039 */;
-import ContextMenuActionCreators from "ContextMenuActionCreators" /* 7063 */;
-import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7631 */;
-import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7632 */;
-import FriendsUtils from "FriendsUtils" /* 7633 */;
-import SafetyToastsUtils from "SafetyToastsUtils" /* 7635 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7636 */;
+import shared from "shared" /* 5150 */;
+import UserUtilsDefault from "UserUtils" /* 5197 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6096 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 7042 */;
+import ContextMenuActionCreators from "ContextMenuActionCreators" /* 7066 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7633 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7634 */;
+import FriendsUtils from "FriendsUtils" /* 7635 */;
+import SafetyToastsUtils from "SafetyToastsUtils" /* 7637 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7638 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -89,8 +89,8 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
 }
 const Constants = fn(1072);
 ({ Endpoints: closure_6, AbortCodes: metroImportDefault, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(7629).ClearFriendRequestFilters;
-const SafetyToastType = fn(7630).SafetyToastType;
+const ClearFriendRequestFilters = fn(7631).ClearFriendRequestFilters;
+const SafetyToastType = fn(7632).SafetyToastType;
 const RelationshipErrorUXConfig = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 let obj2 = {
   sendRequest(discordTag) {
@@ -188,7 +188,7 @@ let obj2 = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = closure_0(5148).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_0(5150).AccessibilityAnnouncer;
       const intl = closure_0(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1113).t.n6Jo3E));
     });
@@ -253,8 +253,8 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.IGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(7636).showFailedToast();
-      const AccessibilityAnnouncer = userId(5148).AccessibilityAnnouncer;
+      channelId(7638).showFailedToast();
+      const AccessibilityAnnouncer = userId(5150).AccessibilityAnnouncer;
       const intl = userId(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
     });
@@ -273,8 +273,8 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(7636).showFailedToast();
-      const AccessibilityAnnouncer = userId(5148).AccessibilityAnnouncer;
+      channelId(7638).showFailedToast();
+      const AccessibilityAnnouncer = userId(5150).AccessibilityAnnouncer;
       const intl = userId(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
     });

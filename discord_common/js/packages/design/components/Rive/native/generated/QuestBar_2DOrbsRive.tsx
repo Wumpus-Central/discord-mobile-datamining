@@ -1,8 +1,8 @@
-// === Module 5303: QuestBar_2DOrbsRive ===
+// === Module 5305: QuestBar_2DOrbsRive ===
 
-// Module 5303 (QuestBar_2DOrbsRive)
-import BaseRive from "BaseRive" /* 5215 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5268 */;
+// Module 5305 (QuestBar_2DOrbsRive)
+import BaseRive from "BaseRive" /* 5217 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5270 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

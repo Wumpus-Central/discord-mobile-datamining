@@ -1,11 +1,11 @@
-// === Module 17570: RoleColorsSetting ===
+// === Module 17596: RoleColorsSetting ===
 
-// Module 17570 (RoleColorsSetting)
+// Module 17596 (RoleColorsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16515 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16528 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 function useRoleColorSettingValue() {
@@ -32,13 +32,13 @@ function useRoleColorSettingOptions() {
     return items;
   }, []);
 }
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSOPWm);
   },
-  parent: fn(8573).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8578).MobileUserSettings.ACCESSIBILITY,
   useValue: useRoleColorSettingValue,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: useRoleColorSettingOptions

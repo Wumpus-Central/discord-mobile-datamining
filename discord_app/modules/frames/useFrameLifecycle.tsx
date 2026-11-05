@@ -1,12 +1,12 @@
-// === Module 18946: useFrameLifecycle ===
+// === Module 18977: useFrameLifecycle ===
 
-// Module 18946 (useFrameLifecycle)
+// Module 18977 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const FramesConstants = fn(6982);
+const FramesConstants = fn(6985);
 ({ isLaunched: closure_6, makeFrameId: metroImportDefault } = FramesConstants);
 const FrameLifecycleState = { Loading: "loading", AwaitingLaunch: "awaiting-launch", Launched: "launched", RenderingElsewhere: "rendering-elsewhere", NoApplication: "no-application", DoesNotSupportSurface: "does-not-support-surface", Error: "error" };
 const size = fn(2);

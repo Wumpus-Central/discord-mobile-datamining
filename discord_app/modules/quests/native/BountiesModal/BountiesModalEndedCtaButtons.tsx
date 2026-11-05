@@ -1,14 +1,14 @@
-// === Module 17216: BountiesModalEndedCtaButtons ===
+// === Module 17240: BountiesModalEndedCtaButtons ===
 
-// Module 17216 (BountiesModalEndedCtaButtons)
+// Module 17240 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import QuestContent from "QuestContent" /* 6921 */;
-import AdCreativeType from "AdCreativeType" /* 6923 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9869 */;
+import QuestContent from "QuestContent" /* 6924 */;
+import AdCreativeType from "AdCreativeType" /* 6926 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8016 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9875 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5141 */;
+import createStyles from "createStyles" /* 5143 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -71,7 +71,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
           const result = obj.openAdGameLinkDirectly(obj2, { content: QuestContent.QuestContent.VIDEO_MODAL_END_CARD, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: _undefined2(), sourceQuestContent });
         }
     };
-    const items3 = [closure_3(tmp2(5768).Button, obj4), ];
+    const items3 = [closure_3(tmp2(5770).Button, obj4), ];
     let tmp13Result = null;
     if (showCloseButton) {
       const obj5 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
@@ -79,7 +79,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
       obj5.text = intl.string(tmp2(1113).t.cpT0Cq);
       obj5.disabled = flag;
       obj5.onPress = bounty.onClose;
-      tmp13Result = closure_3(tmp2(5768).Button, obj5);
+      tmp13Result = closure_3(tmp2(5770).Button, obj5);
     }
     items3[1] = tmp13Result;
     obj3.children = items3;

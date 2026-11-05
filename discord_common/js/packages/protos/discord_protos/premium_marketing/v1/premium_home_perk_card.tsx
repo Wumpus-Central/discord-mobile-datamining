@@ -1,8 +1,8 @@
-// === Module 9809: premium_home_perk_card ===
+// === Module 9815: premium_home_perk_card ===
 
-// Module 9809 (premium_home_perk_card)
+// Module 9815 (premium_home_perk_card)
 import _mod1197 from "module_1197" /* 1197 */;
-import theme_aware_asset from "theme_aware_asset" /* 9791 */;
+import theme_aware_asset from "theme_aware_asset" /* 9797 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

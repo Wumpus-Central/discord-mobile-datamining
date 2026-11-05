@@ -1,13 +1,13 @@
-// === Module 5850: BaseIconImage ===
+// === Module 5853: BaseIconImage ===
 
-// Module 5850 (BaseIconImage)
-import useToken from "useToken" /* 5732 */;
-import FastImageDefault from "FastImage" /* 5851 */;
+// Module 5853 (BaseIconImage)
+import useToken from "useToken" /* 5734 */;
+import FastImageDefault from "FastImage" /* 5854 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Object", height: "Array" }, refresh_sm: { width: 18, height: 18 } };
+let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Path", height: "count" }, refresh_sm: { width: 18, height: 18 } };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 

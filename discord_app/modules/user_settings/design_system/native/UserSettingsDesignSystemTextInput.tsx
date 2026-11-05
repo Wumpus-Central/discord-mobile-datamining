@@ -1,25 +1,25 @@
-// === Module 18046: UserSettingsDesignSystemTextInput ===
+// === Module 18074: UserSettingsDesignSystemTextInput ===
 
-// Module 18046 (UserSettingsDesignSystemTextInput)
+// Module 18074 (UserSettingsDesignSystemTextInput)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import Stack_Stack from "Stack/Stack" /* 6162 */;
-import Card from "Card" /* 7118 */;
-import TextInput from "TextInput" /* 7223 */;
-import Input from "Input" /* 7224 */;
-import TextField from "TextField" /* 7230 */;
-import SplitTextInput from "SplitTextInput" /* 7279 */;
-import Search_SearchBar from "Search/SearchBar" /* 7355 */;
-import TextArea from "TextArea" /* 7389 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
-import SettingsIcon from "SettingsIcon" /* 7701 */;
-import IconButton from "IconButton" /* 8168 */;
-import TextIcon from "TextIcon" /* 8793 */;
-import AtIcon from "AtIcon" /* 8803 */;
-import GhostInput from "GhostInput" /* 16114 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5398 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import Stack_Stack from "Stack/Stack" /* 6165 */;
+import Card from "Card" /* 7121 */;
+import TextInput from "TextInput" /* 7226 */;
+import Input from "Input" /* 7227 */;
+import TextField from "TextField" /* 7233 */;
+import SplitTextInput from "SplitTextInput" /* 7282 */;
+import Search_SearchBar from "Search/SearchBar" /* 7358 */;
+import TextArea from "TextArea" /* 7392 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7460 */;
+import SettingsIcon from "SettingsIcon" /* 7703 */;
+import IconButton from "IconButton" /* 8173 */;
+import TextIcon from "TextIcon" /* 8798 */;
+import AtIcon from "AtIcon" /* 8808 */;
+import GhostInput from "GhostInput" /* 16127 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -133,7 +133,7 @@ function CustomAttachmentExample() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { padding: 16 }, sample: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.xl } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 9970: ClientThemesOverrides ===
+// === Module 9976: ClientThemesOverrides ===
 
-// Module 9970 (ClientThemesOverrides)
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5316 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9971 */;
+// Module 9976 (ClientThemesOverrides)
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5318 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9977 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_4 = createStyles.createStyles({ none: { backgroundColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");

@@ -1,15 +1,15 @@
-// === Module 11079: ConjurePreviewActionCreators ===
+// === Module 11088: ConjurePreviewActionCreators ===
 
-// Module 11079 (ConjurePreviewActionCreators)
+// Module 11088 (ConjurePreviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6980 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11081 */;
-import leaveFrame from "leaveFrame" /* 11125 */;
-import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 11126 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6983 */;
+import leaveFrame from "leaveFrame" /* 11078 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11090 */;
+import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 11134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
-import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 11080 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
+import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 11089 */;
 
 require = fn;
 let closure_8 = async function _loadConjurePreviewDm() {
@@ -22,7 +22,7 @@ let closure_8 = async function _loadConjurePreviewDm() {
   closure_130_1(closure_130_2[7]).dispatch({ type: "CHANNEL_CREATE", channel: closure_129_1 });
   return closure_129_1.id;
 };
-let closure_4 = fn(4994).createChannelRecordFromServer;
+let closure_4 = fn(4996).createChannelRecordFromServer;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");
@@ -34,7 +34,7 @@ export function reloadConjureProjectFrames(projectId) {
   const project = ConjureProjectStore.getProject(projectId);
   if (null != project) {
     ConjurePlatformUtilsDefault.reloadAppFrames(project.application_id);
-    if (!obj2.isPreviewlessProject(project)) {
+    if (obj2.usesPreviewApp(project)) {
       let prop = project.preview_application_id;
       if (prop == null) {
         prop = null;

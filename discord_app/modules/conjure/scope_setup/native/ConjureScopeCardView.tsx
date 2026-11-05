@@ -1,17 +1,17 @@
-// === Module 12970: ConjureScopeCardView ===
+// === Module 12977: ConjureScopeCardView ===
 
-// Module 12970 (ConjureScopeCardView)
+// Module 12977 (ConjureScopeCardView)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import ConjureScopeServerCardDefault from "ConjureScopeServerCard" /* 12971 */;
-import ConjureClarificationCardDefault from "ConjureClarificationCard" /* 12976 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import ConjureScopeServerCardDefault from "ConjureScopeServerCard" /* 12978 */;
+import ConjureClarificationCardDefault from "ConjureClarificationCard" /* 12983 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 const obj2 = { container: { gap: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

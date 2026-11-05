@@ -1,19 +1,19 @@
-// === Module 12302: ConjurePublishSheet ===
+// === Module 12309: ConjurePublishSheet ===
 
-// Module 12302 (ConjurePublishSheet)
+// Module 12309 (ConjurePublishSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5382 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import useChannelNameDefault from "useChannelName" /* 5786 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
-import TableSwitchRow from "TableSwitchRow" /* 7505 */;
-import AppsIcon2 from "AppsIcon" /* 8819 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 12295 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5384 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import useChannelNameDefault from "useChannelName" /* 5788 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5849 */;
+import TableSwitchRow from "TableSwitchRow" /* 7507 */;
+import AppsIcon2 from "AppsIcon" /* 8824 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 12302 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -139,11 +139,11 @@ function PublishSheetBody(entryPoint) {
     }
   };
   const tmp = closure_13();
-  const tmp4 = entryPoint(12309)(project, publish);
+  const tmp4 = entryPoint(12316)(project, publish);
   dependencyMap = tmp4;
-  entryPoint(6157)(() => true, tmp4.saving);
+  entryPoint(6160)(() => true, tmp4.saving);
   closure_3 = noop.useRef(false);
-  const context = noop.useContext(entryPoint(5727));
+  const context = noop.useContext(entryPoint(5729));
   let transitionState;
   if (context != null) {
     transitionState = context.transitionState;
@@ -167,10 +167,10 @@ function PublishSheetBody(entryPoint) {
     isPrivate = appChannelsPrivate.isPrivate;
   }
   if (true === isPrivate) {
-    AppsIcon = publish(8818).AppsLockIcon;
+    AppsIcon = publish(8823).AppsLockIcon;
     let tmp12 = publish;
   } else {
-    AppsIcon = publish(8819).AppsIcon;
+    AppsIcon = publish(8824).AppsIcon;
     tmp12 = publish;
   }
   if (tmp4.initial) {
@@ -202,15 +202,15 @@ function PublishSheetBody(entryPoint) {
       onError(text) {
           if (null != text) {
             obj2 = { text, variant: "critical" };
-            entryPoint(5846).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
-            obj = entryPoint(5846);
+            entryPoint(5849).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
+            obj = entryPoint(5849);
           }
         }
     };
-    let tmp15Result = tmp15(tmp12(12315).ConjureAppIconTile, obj4);
+    let tmp15Result = tmp15(tmp12(12322).ConjureAppIconTile, obj4);
   } else {
     const obj5 = { project, size: "dialog" };
-    tmp15Result = tmp15(tmp2(12320), obj5);
+    tmp15Result = tmp15(tmp2(12327), obj5);
   }
   const items2 = [tmp15Result, , , , , , ];
   if (editable) {
@@ -218,30 +218,30 @@ function PublishSheetBody(entryPoint) {
     const intl2 = tmp12(1113).intl;
     obj6.label = intl2.string(tmp2(3995).knevPu);
     ({ name: obj9.value, setName: obj9.onChange } = tmp4);
-    obj6.maxLength = tmp12(6980).MAX_PROJECT_NAME_LENGTH;
+    obj6.maxLength = tmp12(6983).MAX_PROJECT_NAME_LENGTH;
     ({ saving: obj9.disabled, nameError } = tmp4);
     const obj7 = { children: null };
     obj6.errorMessage = nameError;
-    const items3 = [tmp15(tmp12(7223).TextInput, obj6), ];
+    const items3 = [tmp15(tmp12(7226).TextInput, obj6), ];
     const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
     const intl3 = tmp12(1113).intl;
     obj8.label = intl3.string(tmp2(3995).ynaGa1);
     const intl4 = tmp12(1113).intl;
     obj8.placeholder = intl4.string(tmp2(3995)["I+3UTL"]);
     ({ description: obj11.value, setDescription: obj11.onChange } = identity);
-    obj8.maxLength = tmp12(6980).MAX_APP_DESCRIPTION_LENGTH;
+    obj8.maxLength = tmp12(6983).MAX_APP_DESCRIPTION_LENGTH;
     obj8.disabled = tmp4.saving;
-    items3[1] = tmp15(tmp12(7389).TextArea, obj8);
+    items3[1] = tmp15(tmp12(7392).TextArea, obj8);
     obj7.children = items3;
     let tmp16Result = closure_9(closure_8, obj7);
   } else {
     const obj10 = { style: tmp.nameGroup, children: null };
     const obj12 = { variant: "heading-lg/semibold", color: "text-strong", lineClamp: 1, children: tmp4.displayName };
-    const items4 = [tmp15(tmp12(5761).Text, obj12), ];
+    const items4 = [tmp15(tmp12(5763).Text, obj12), ];
     let tmp15Result6 = null;
     if ("" !== tmp4.description) {
       const obj13 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 2, children: tmp4.description };
-      tmp15Result6 = tmp15(tmp12(5761).Text, obj13);
+      tmp15Result6 = tmp15(tmp12(5763).Text, obj13);
     }
     items4[1] = tmp15Result6;
     obj10.children = items4;
@@ -267,7 +267,7 @@ function PublishSheetBody(entryPoint) {
   obj16.rows = devicePermissions.map((item) => {
     obj = { icon: closure_1_11[item], label: null };
     const intl = publish(1113).intl;
-    obj.label = intl.string(publish(12309).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
+    obj.label = intl.string(publish(12316).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
     return closure_7(ContentRow, obj, item);
   });
   items2[4] = closure_7(RowSection, obj16);
@@ -279,13 +279,13 @@ function PublishSheetBody(entryPoint) {
     const items5 = [tmp15(SectionTitle, obj17), ];
     const obj18 = { style: tmp.sharingRow, children: null };
     if (null != sharing.guild) {
-      const obj19 = { guild: sharing.guild, size: tmp12(7098).GuildIconSizes.SMALL_36 };
-      let tmp15Result8 = tmp15(tmp2(7098), obj19);
-      const tmp2Result = tmp2(7098);
+      const obj19 = { guild: sharing.guild, size: tmp12(7101).GuildIconSizes.SMALL_36 };
+      let tmp15Result8 = tmp15(tmp2(7101), obj19);
+      const tmp2Result = tmp2(7101);
     } else {
       const obj20 = { style: tmp.onlyMeIcon, children: null };
       const obj21 = { size: "xs", color: tmp2(575).colors.ICON_DEFAULT };
-      obj20.children = tmp15(tmp12(12323).UserIcon, obj21);
+      obj20.children = tmp15(tmp12(12330).UserIcon, obj21);
       tmp15Result8 = tmp15(tmp17, obj20);
     }
     const items6 = [tmp15Result8, ];
@@ -300,11 +300,11 @@ function PublishSheetBody(entryPoint) {
       name = intl8.string(tmp2(3995)["37xgkF"]);
     }
     const obj23 = { variant: "body-sm/medium", color: "text-strong", lineClamp: 1, children: name };
-    const items7 = [tmp15(tmp12(5761).Text, obj23), ];
+    const items7 = [tmp15(tmp12(5763).Text, obj23), ];
     let tmp15Result9 = null;
     if (null != sharing.caption) {
       const obj24 = { variant: "body-xs/normal", color: "text-subtle", children: sharing.caption };
-      tmp15Result9 = tmp15(tmp12(5761).Text, obj24);
+      tmp15Result9 = tmp15(tmp12(5763).Text, obj24);
     }
     const obj25 = { children: null };
     items7[1] = tmp15Result9;
@@ -320,7 +320,7 @@ function PublishSheetBody(entryPoint) {
   let tmp15Result10 = null;
   if (null != tmp4.note) {
     const obj27 = { variant: "body-sm/normal", color: "text-subtle", children: tmp4.note };
-    tmp15Result10 = tmp15(tmp12(5761).Text, obj27);
+    tmp15Result10 = tmp15(tmp12(5763).Text, obj27);
   }
   const items8 = [tmp15Result10, ];
   const obj28 = { style: tmp.actions, children: null };
@@ -329,7 +329,7 @@ function PublishSheetBody(entryPoint) {
   obj55.text = intl9.string(tmp12(1113).t["ETE/oC"]);
   obj55.disabled = tmp4.saving;
   obj55.onPress = hidePublishSheet;
-  const items9 = [closure_7(tmp12(5768).Button, obj55), ];
+  const items9 = [closure_7(tmp12(5770).Button, obj55), ];
   const obj56 = { variant: "primary", size: "md", grow: true, text: publish.label, disabled: null, loading: null, onPress: null };
   let disabled = publish.disabled;
   if (!disabled) {
@@ -347,14 +347,14 @@ function PublishSheetBody(entryPoint) {
     }
     return applyArgumentsResult;
   };
-  items9[1] = closure_7(tmp12(5768).Button, obj56);
+  items9[1] = closure_7(tmp12(5770).Button, obj56);
   obj28.children = items9;
   items8[1] = closure_9(closure_5, obj28);
   obj26.children = items8;
   items2[6] = closure_9(closure_5, obj26);
   obj3.children = items2;
   obj2.children = closure_9(closure_5, obj3);
-  return closure_7(tmp12(7502).ActionSheet, obj2);
+  return closure_7(tmp12(7504).ActionSheet, obj2);
 }
 function SectionTitle(children) {
   const tmp = closure_13();
@@ -416,14 +416,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 ConjurePublishSheet = "ConjurePublishSheet";
-let obj = { screen_capture: fn(9737).ScreenIcon, connect_user_to_voice: fn(8814).VoiceNormalIcon };
+let obj = { screen_capture: fn(9743).ScreenIcon, connect_user_to_voice: fn(8819).VoiceNormalIcon };
 let obj2 = {};
-obj2[fn(6980).ConjureSupportedSurface.BOT] = fn(12303).RobotIcon;
-obj2[fn(6980).ConjureSupportedSurface.ACTIVITY] = fn(12305).ActivitiesIcon;
-obj2[fn(6980).ConjureSupportedSurface.VOICE_CHANNEL] = fn(8814).VoiceNormalIcon;
-obj2[fn(6980).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12307).BadgeIcon;
-obj2[fn(6980).ConjureSupportedSurface.AUTOMOD] = fn(11469).ShieldIcon;
-const createStyles = fn(5141);
+obj2[fn(6983).ConjureSupportedSurface.BOT] = fn(12310).RobotIcon;
+obj2[fn(6983).ConjureSupportedSurface.ACTIVITY] = fn(12312).ActivitiesIcon;
+obj2[fn(6983).ConjureSupportedSurface.VOICE_CHANNEL] = fn(8819).VoiceNormalIcon;
+obj2[fn(6983).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12314).BadgeIcon;
+obj2[fn(6983).ConjureSupportedSurface.AUTOMOD] = fn(11477).ShieldIcon;
+const createStyles = fn(5143);
 let obj4 = { content: { gap: nativeDefault.space.PX_16 }, nameGroup: null, sectionTitle: null, followingSection: null, row: null, sharingRow: null, onlyMeIcon: null, rowText: null, footer: null, actions: null };
 let obj5 = { gap: nativeDefault.space.PX_16 };
 obj4.nameGroup = { gap: nativeDefault.space.PX_8 };

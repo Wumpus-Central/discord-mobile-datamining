@@ -1,11 +1,11 @@
-// === Module 13965: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 13978: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 13965 (CustomTypingIndicatorAnimatedEmoji)
+// Module 13978 (CustomTypingIndicatorAnimatedEmoji)
 import user from "user" /* 1393 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5378 */;
-import EmojiDefault from "Emoji" /* 7436 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13966 */;
+import timing_timing from "timing/timing" /* 5380 */;
+import EmojiDefault from "Emoji" /* 7439 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13979 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
@@ -17,7 +17,7 @@ require = fn;
 const AppStates = fn(1072).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_9 = createStyles.createStyles((fontSize) => ({ textEmoji: { fontSize }, imageEmoji: { width: fontSize, height: fontSize } }));
 let closure_10 = { code: "(function CustomTypingIndicatorAnimatedEmojiTsx1(){let[angle,scale,ringRadius,translateY]=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};})" };
 const size = fn(2);

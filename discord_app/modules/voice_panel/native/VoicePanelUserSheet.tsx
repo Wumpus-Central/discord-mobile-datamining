@@ -1,14 +1,14 @@
-// === Module 19526: VoicePanelUserSheet ===
+// === Module 19561: VoicePanelUserSheet ===
 
-// Module 19526 (VoicePanelUserSheet)
+// Module 19561 (VoicePanelUserSheet)
 import nativeDefault from "native" /* 575 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
-import UserProfileActivity from "UserProfileActivity" /* 15054 */;
-import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19525 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7627 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8896 */;
+import UserProfileActivity from "UserProfileActivity" /* 15067 */;
+import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19560 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import RelationshipStore from "RelationshipStore" /* 5083 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import RelationshipStore from "RelationshipStore" /* 5085 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -38,7 +38,8 @@ function OverflowMenu(userId) {
   const DeveloperMode = userId(analyticsLocations[15]).DeveloperMode;
   const setting = DeveloperMode.useSetting();
   const tmp11 = channelId(analyticsLocations[14])(userId, guildId);
-  const obj4 = channelId(analyticsLocations[16]);
+  const isTidaMediaTakedownRegion = userId(analyticsLocations[16]).useIsTidaMediaTakedownRegion();
+  const obj4 = userId(analyticsLocations[16]);
   const items2 = [userId, channelId, context, analyticsLocations];
   const result = userId(analyticsLocations[17]).isIarUserReportingEnabled("VoicePanelUserSheet - Mobile");
   const showUserProfile = context.useCallback((showGuildProfile) => {
@@ -85,7 +86,7 @@ function OverflowMenu(userId) {
       const tmp7Result4 = tmp7(tmp2[20]);
     }
     if (setting) {
-      const obj11 = { tidaWebformEnabled: obj4.useExperiment({ location: "VoicePanelUserSheetOverflowMenu" }, { autoTrackExposure: false }).tidaWebformEnabled, avatarGuildId: guildId };
+      const obj11 = { isTidaRegion: isTidaMediaTakedownRegion, avatarGuildId: guildId };
       items3.push(tmp7(tmp2[20]).getDeveloperCopyMenuItem(obj6, obj11));
       const tmp7Result6 = tmp7(tmp2[20]);
     }
@@ -129,7 +130,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { wrapper: { gap: 12, padding: 16 }, card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg }, header: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 16 }, user: { display: "flex", gap: 8, flexDirection: "row", alignItems: "center", flex: 1, minWidth: 0 }, avatar: null, username: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: 16, borderRadius: nativeDefault.radii.lg };
 obj2.avatar = { maxWidth: 48, maxHeight: 48, borderRadius: nativeDefault.radii.round };
@@ -152,8 +153,8 @@ export default function VoicePanelUserSheet(userId) {
   const items2 = [UserStore];
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const obj4 = channelId(504);
-  const name = channelId(6176).useName(guildId, channelId, stateFromStores);
-  const live = userId(15108)(userId).live;
+  const name = channelId(6179).useName(guildId, channelId, stateFromStores);
+  const live = userId(15121)(userId).live;
   closure_5 = tmp8;
   const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
   const effect = stateFromStores.useEffect(() => {
@@ -166,8 +167,8 @@ export default function VoicePanelUserSheet(userId) {
       if (null != stateFromStores2) {
         const avatarURL = stateFromStores.getAvatarURL(guildId, 48, false);
         if (null != avatarURL) {
-          const cachedSourceFromURI = channelId(9669).getCachedSourceFromURI(avatarURL);
-          const tmp2Result = channelId(9669);
+          const cachedSourceFromURI = channelId(9675).getCachedSourceFromURI(avatarURL);
+          const tmp2Result = channelId(9675);
         }
         const avatarDecoration = stateFromStores.avatarDecoration;
         const obj2 = { style: tmp.wrapper, children: null };
@@ -178,13 +179,13 @@ export default function VoicePanelUserSheet(userId) {
           let tmp11Result = closure_10(channelId(1187).Avatar, obj8);
         } else {
           const size = { source: cachedSourceFromURI, resizeMode: "stretch", width: 48, height: 48, style: tmp.avatar };
-          tmp11Result = closure_10(tmp7(5851), size);
-          const tmp7Result = tmp7(5851);
+          tmp11Result = closure_10(tmp7(5854), size);
+          const tmp7Result = tmp7(5854);
         }
         const obj9 = { children: null };
         const items4 = [tmp11Result, ];
         const obj10 = { variant: "body-md/semibold", style: tmp.username, lineClamp: 1, children: name };
-        items4[1] = closure_10(channelId(5761).Text, obj10);
+        items4[1] = closure_10(channelId(5763).Text, obj10);
         obj7.children = items4;
         const items5 = [closure_11(stateFromStores2, obj7), ];
         const obj11 = { userId: stateFromStores.id, currentUserId: stateFromStores2.id, channelId, guildId };
@@ -202,10 +203,10 @@ export default function VoicePanelUserSheet(userId) {
 
         ];
         const obj12 = { user: stateFromStores, channel: stateFromStores1, currentUser: stateFromStores2, style: tmp.card };
-        items6[2] = closure_10(tmp7(15111), obj12);
+        items6[2] = closure_10(tmp7(15124), obj12);
         obj2.children = items6;
         obj9.children = closure_11(stateFromStores2, obj2);
-        return closure_10(channelId(5396).BottomSheet, obj9);
+        return closure_10(channelId(5398).BottomSheet, obj9);
       }
     }
   }

@@ -1,19 +1,19 @@
-// === Module 12358: MentionableSelectOptionParts ===
+// === Module 12365: MentionableSelectOptionParts ===
 
-// Module 12358 (MentionableSelectOptionParts)
+// Module 12365 (MentionableSelectOptionParts)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6208 */;
-import RoleIconUtils from "RoleIconUtils" /* 7492 */;
-import RoleIconDefault from "RoleIcon" /* 7510 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9204 */;
-import DiscordTagDefault from "DiscordTag" /* 9346 */;
-import UserIcon from "UserIcon" /* 12323 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6211 */;
+import RoleIconUtils from "RoleIconUtils" /* 7495 */;
+import RoleIconDefault from "RoleIcon" /* 7512 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9211 */;
+import DiscordTagDefault from "DiscordTag" /* 9353 */;
+import UserIcon from "UserIcon" /* 12330 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 5047 */;
-import PresenceStore from "PresenceStore" /* 5895 */;
+import GuildRoleStore from "GuildRoleStore" /* 5049 */;
+import PresenceStore from "PresenceStore" /* 5898 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -33,7 +33,7 @@ const Constants = fn(1072);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { name: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 }, discriminator: null, roleCountContainer: null, roleCountText: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
 obj2.discriminator = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };

@@ -1,9 +1,9 @@
-// === Module 12795: useConjureSpendLimitNotice ===
+// === Module 12802: useConjureSpendLimitNotice ===
 
-// Module 12795 (useConjureSpendLimitNotice)
+// Module 12802 (useConjureSpendLimitNotice)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 11048 */;
+import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 11054 */;
 
 const require = globalThis.__r;
 

@@ -1,17 +1,17 @@
-// === Module 17436: QuestDockPlayableBody ===
+// === Module 17462: QuestDockPlayableBody ===
 
-// Module 17436 (QuestDockPlayableBody)
-import QuestTypes from "QuestTypes" /* 6919 */;
-import AdCreativeType from "AdCreativeType" /* 6923 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8011 */;
-import captureAdUserAction from "captureAdUserAction" /* 9834 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9837 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9869 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11888 */;
+// Module 17462 (QuestDockPlayableBody)
+import QuestTypes from "QuestTypes" /* 6922 */;
+import AdCreativeType from "AdCreativeType" /* 6926 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8016 */;
+import captureAdUserAction from "captureAdUserAction" /* 9840 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9843 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9875 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11897 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(6916).QuestDockMode;
+const QuestDockMode = fn(6919).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockPlayableBody.tsx");

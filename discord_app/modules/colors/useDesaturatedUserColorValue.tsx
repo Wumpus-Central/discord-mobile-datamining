@@ -1,10 +1,10 @@
-// === Module 16803: useDesaturatedUserColorValue ===
+// === Module 16816: useDesaturatedUserColorValue ===
 
-// Module 16803 (useDesaturatedUserColorValue)
+// Module 16816 (useDesaturatedUserColorValue)
 import _mod19 from "module_19" /* 19 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import tinycolorDefault from "tinycolor" /* 7870 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import tinycolorDefault from "tinycolor" /* 7875 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,22 +1,22 @@
-// === Module 12979: clarification/ConjureImageOptions ===
+// === Module 12986: clarification/ConjureImageOptions ===
 
-// Module 12979 (clarification/ConjureImageOptions)
+// Module 12986 (clarification/ConjureImageOptions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5208 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import FastImageDefault from "FastImage" /* 5851 */;
-import TrashIcon from "TrashIcon" /* 5872 */;
-import Card from "Card" /* 7118 */;
-import FormCheckbox from "FormCheckbox" /* 7130 */;
-import FormRadio from "FormRadio" /* 7203 */;
-import IconButton from "IconButton" /* 8168 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8794 */;
-import openMediaModal from "openMediaModal" /* 8974 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12347 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 12977 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 12980 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5210 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import FastImageDefault from "FastImage" /* 5854 */;
+import TrashIcon from "TrashIcon" /* 5875 */;
+import Card from "Card" /* 7121 */;
+import FormCheckbox from "FormCheckbox" /* 7133 */;
+import FormRadio from "FormRadio" /* 7206 */;
+import IconButton from "IconButton" /* 8173 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8799 */;
+import openMediaModal from "openMediaModal" /* 8979 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12354 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 12984 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 12987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -206,7 +206,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, own: null, galleryContent: null, rowTile: null, card: null, ring: null, ringSelected: null, frame: null, frameInert: null, image: null, broken: null, brokenText: null, indicator: null, caption: null, view: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.own = { marginTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
@@ -420,7 +420,7 @@ export default function ConjureImageOptions(projectId) {
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(12982).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(12989).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -434,8 +434,8 @@ export default function ConjureImageOptions(projectId) {
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(12982).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(12982);
+            closure_129_4.onUpload(tmp2(12989).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(12989);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };

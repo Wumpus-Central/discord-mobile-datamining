@@ -1,10 +1,10 @@
-// === Module 6080: getReportedPresetResolution ===
+// === Module 6083: getReportedPresetResolution ===
 
-// Module 6080 (getReportedPresetResolution)
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 6044 */;
+// Module 6083 (getReportedPresetResolution)
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 6047 */;
 import UserStore from "UserStore" /* 1385 */;
 
-const StreamSettingsConstants = fn(5998);
+const StreamSettingsConstants = fn(6001);
 ({ ApplicationStreamFPS: c3, ApplicationStreamResolutions: closure_4 } = StreamSettingsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/getReportedPresetResolution.tsx");

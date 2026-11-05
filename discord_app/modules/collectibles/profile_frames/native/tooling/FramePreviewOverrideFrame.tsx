@@ -1,7 +1,7 @@
-// === Module 8939: FramePreviewOverrideFrame ===
+// === Module 8944: FramePreviewOverrideFrame ===
 
-// Module 8939 (FramePreviewOverrideFrame)
-import FastImageDefault from "FastImage" /* 5851 */;
+// Module 8944 (FramePreviewOverrideFrame)
+import FastImageDefault from "FastImage" /* 5854 */;
 import noop from "module_19" /* 19 */;
 
 function OverrideProfileFrameLayer(layer) {
@@ -107,11 +107,11 @@ function OverrideProfileFrameLayer(layer) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const ProfileFrameConstants = fn(8935);
+const ProfileFrameConstants = fn(8940);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: closure_4, PROFILE_FRAME_Z_INDEX: hasOwnProperty } = ProfileFrameConstants);
-const UserProfileThemeTypes = fn(7513).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7515).UserProfileThemeTypes;
 let jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: null, layer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

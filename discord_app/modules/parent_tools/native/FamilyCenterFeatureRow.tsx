@@ -1,27 +1,27 @@
-// === Module 17036: FamilyCenterFeatureRow ===
+// === Module 17060: FamilyCenterFeatureRow ===
 
-// Module 17036 (FamilyCenterFeatureRow)
+// Module 17060 (FamilyCenterFeatureRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import Stack_Stack from "Stack/Stack" /* 6162 */;
-import TableRow from "TableRow" /* 7116 */;
-import TableRowGroup from "TableRowGroup" /* 7201 */;
-import EyeIcon from "EyeIcon" /* 7239 */;
-import _modDef9311 from "module_9311" /* 9311 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 13583 */;
-import _modDef14152 from "module_14152" /* 14152 */;
-import QrCodeIcon from "QrCodeIcon" /* 17033 */;
-import _modDef17037 from "module_17037" /* 17037 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 17038 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import Stack_Stack from "Stack/Stack" /* 6165 */;
+import TableRow from "TableRow" /* 7119 */;
+import TableRowGroup from "TableRowGroup" /* 7204 */;
+import EyeIcon from "EyeIcon" /* 7242 */;
+import _modDef9318 from "module_9318" /* 9318 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 13594 */;
+import _modDef14165 from "module_14165" /* 14165 */;
+import QrCodeIcon from "QrCodeIcon" /* 17057 */;
+import _modDef17061 from "module_17061" /* 17061 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 17062 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { tableGroup: { marginTop: 20, marginBottom: nativeDefault.space.PX_24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -44,18 +44,18 @@ export default function FamilyCenterFeatureRows() {
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
   const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2667["+pi4Yt"]), intl6.string(_modDef2667["1xPTwE"]));
-  obj4.icon = _modDef17037;
+  obj4.icon = _modDef17061;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2667["001l3m"]);
   obj4.description = ageSpecificText;
   items = [obj4, , ];
-  const obj5 = { icon: _modDef14152, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const obj5 = { icon: _modDef14165, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
   obj5.header = intl8.string(_modDef2667.yipAeP);
   obj5.description = ageSpecificText1;
   items[1] = obj5;
-  const obj6 = { icon: _modDef9311, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  const obj6 = { icon: _modDef9318, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
   const intl9 = util.intl;
   obj6.header = intl9.string(_modDef2667.hhOuMe);
   obj6.description = ageSpecificText2;

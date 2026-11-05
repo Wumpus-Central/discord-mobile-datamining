@@ -1,22 +1,22 @@
-// === Module 15057: ContentInventoryActivityImageUtils ===
+// === Module 15070: ContentInventoryActivityImageUtils ===
 
-// Module 15057 (ContentInventoryActivityImageUtils)
+// Module 15070 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import Constants2 from "Constants" /* 2147 */;
-import PlatformsDefault from "Platforms" /* 6709 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7466 */;
-import useGame from "useGame" /* 7620 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8862 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 9053 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9056 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10935 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10941 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 15058 */;
-import isOnXboxDefault from "isOnXbox" /* 15064 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 15065 */;
+import PlatformsDefault from "Platforms" /* 6712 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7469 */;
+import useGame from "useGame" /* 7622 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8867 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9058 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9061 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10941 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10947 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 15071 */;
+import isOnXboxDefault from "isOnXbox" /* 15077 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 15078 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -214,7 +214,7 @@ function useRichImageForActivity(activity, activityApplication) {
   }
   const data = useGame.useGame(canonicalGameId).data;
   if (null == activity) {
-    return { largeImage: "Object", smallImage: "Array" };
+    return { largeImage: "Path", smallImage: "count" };
   } else {
     let large_image;
     if (activity != null) {

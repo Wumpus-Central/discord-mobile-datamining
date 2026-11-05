@@ -1,7 +1,7 @@
-// === Module 9471: waitForFrameSubscription ===
+// === Module 9478: waitForFrameSubscription ===
 
-// Module 9471 (waitForFrameSubscription)
-import getSocketFrameDefault from "getSocketFrame" /* 9472 */;
+// Module 9478 (waitForFrameSubscription)
+import getSocketFrameDefault from "getSocketFrame" /* 9479 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/waitForFrameSubscription.tsx");

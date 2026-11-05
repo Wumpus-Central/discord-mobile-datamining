@@ -1,6 +1,6 @@
-// === Module 14260: GuildProgressConstants ===
+// === Module 14273: GuildProgressConstants ===
 
-// Module 14260 (GuildProgressConstants)
+// Module 14273 (GuildProgressConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_progress/GuildProgressConstants.tsx");

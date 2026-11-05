@@ -1,12 +1,12 @@
-// === Module 11520: useAttachPinotMemberCoachmark ===
+// === Module 11528: useAttachPinotMemberCoachmark ===
 
-// Module 11520 (useAttachPinotMemberCoachmark)
+// Module 11528 (useAttachPinotMemberCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3287 from "module_3287" /* 3287 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import ExperimentalWebIcon from "ExperimentalWebIcon" /* 11521 */;
-import PinotAnalytics from "PinotAnalytics" /* 11523 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import ExperimentalWebIcon from "ExperimentalWebIcon" /* 11529 */;
+import PinotAnalytics from "PinotAnalytics" /* 11531 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ function renderWebIcon() {
 }
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -50,7 +50,6 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
       accessibilityRole: "link",
       onPress() {
         const result = closure_0(markAsDismissed[7]).trackPinotNoticeAction({ noticeType: "member_coachmark", guildId }, "open_settings");
-        closure_1_2(constants3.TAKE_ACTION);
         const obj = closure_0(markAsDismissed[7]);
         const obj2 = { noticeType: "member_coachmark", guildId };
         closure_0(markAsDismissed[11]).openUserSettings({ screen: constants2.DATA_AND_PRIVACY });
@@ -73,7 +72,6 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
     obj.buttonLabel = intl4.string(util.t.hvVgAZ);
     obj.onButtonPress = function onButtonPress() {
       const result = closure_0(markAsDismissed[7]).trackPinotNoticeAction({ noticeType: "member_coachmark", guildId }, "learn_more");
-      closure_1_2(constants3.TAKE_ACTION);
       const obj = closure_0(markAsDismissed[7]);
       const obj2 = { noticeType: "member_coachmark", guildId };
       const obj3 = visible(markAsDismissed[12]);

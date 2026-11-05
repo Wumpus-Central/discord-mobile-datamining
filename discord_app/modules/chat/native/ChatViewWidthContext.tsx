@@ -1,6 +1,6 @@
-// === Module 11745: ChatViewWidthContext ===
+// === Module 11753: ChatViewWidthContext ===
 
-// Module 11745 (ChatViewWidthContext)
+// Module 11753 (ChatViewWidthContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(null);

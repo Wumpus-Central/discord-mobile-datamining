@@ -1,6 +1,6 @@
-// === Module 9055: ContentInventoryListenedMediaProvider ===
+// === Module 9060: ContentInventoryListenedMediaProvider ===
 
-// Module 9055 (ContentInventoryListenedMediaProvider)
+// Module 9060 (ContentInventoryListenedMediaProvider)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryListenedMediaProvider.tsx");

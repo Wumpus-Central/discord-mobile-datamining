@@ -1,6 +1,6 @@
-// === Module 9073: WaterwheelsCardTypes ===
+// === Module 9079: WaterwheelsCardTypes ===
 
-// Module 9073 (WaterwheelsCardTypes)
+// Module 9079 (WaterwheelsCardTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/waterwheels/cards/WaterwheelsCardTypes.tsx");

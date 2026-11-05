@@ -1,6 +1,6 @@
-// === Module 6851: Notifications ===
+// === Module 6854: Notifications ===
 
-// Module 6851 (Notifications)
+// Module 6854 (Notifications)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/Notifications.tsx");

@@ -1,21 +1,21 @@
-// === Module 7583: ThreadHooks ===
+// === Module 7585: ThreadHooks ===
 
-// Module 7583 (ThreadHooks)
+// Module 7585 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7023 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7589 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7591 */;
-import useIsRemoteDefault from "useIsRemote" /* 7592 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7026 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7591 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7593 */;
+import useIsRemoteDefault from "useIsRemote" /* 7594 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import createExperiment from "createExperiment" /* 5361 */;
+import createExperiment from "createExperiment" /* 5363 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import PermissionStore from "PermissionStore" /* 5073 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6976 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7584 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import PermissionStore from "PermissionStore" /* 5075 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6979 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7586 */;
 
 const require = globalThis.__r;
 
@@ -138,7 +138,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(4994).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(4996).THREADED_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ Permissions: closure_12, MessageFlags: map1, ChannelTypes: closure_14 } = Constants);
 let obj = { id: "2022-07_voice_in_threads", label: "Voice in Threads", kind: "guild", defaultConfig: { enabled: false }, treatments: null };
@@ -566,8 +566,8 @@ export function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("shouldAgeVerifyForAgeGate").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(6869).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(6869);
+    shouldAgeVerifyForAgeGate = tmp3(6872).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(6872);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

@@ -1,6 +1,6 @@
-// === Module 5010: guildIncidentsSerialization ===
+// === Module 5012: guildIncidentsSerialization ===
 
-// Module 5010 (guildIncidentsSerialization)
+// Module 5012 (guildIncidentsSerialization)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_antiraid/guildIncidentsSerialization.tsx");

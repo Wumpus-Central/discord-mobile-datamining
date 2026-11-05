@@ -1,14 +1,14 @@
-// === Module 9249: StartEventPlatformUtils ===
+// === Module 9256: StartEventPlatformUtils ===
 
-// Module 9249 (StartEventPlatformUtils)
+// Module 9256 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1099 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
-import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8090 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6844 */;
+import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8095 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5901 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
 
 require = fn;
 let closure_10 = async function _navigateToEvent(arg0) {
@@ -120,7 +120,7 @@ let closure_10 = async function _navigateToEvent(arg0) {
     }
   }
 };
-let closure_8 = fn(4996).GuildScheduledEventEntityTypes;
+let closure_8 = fn(4998).GuildScheduledEventEntityTypes;
 const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");

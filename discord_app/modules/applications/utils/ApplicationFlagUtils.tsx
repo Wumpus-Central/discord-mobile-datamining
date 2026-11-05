@@ -1,6 +1,6 @@
-// === Module 7018: ApplicationFlagUtils ===
+// === Module 7021: ApplicationFlagUtils ===
 
-// Module 7018 (ApplicationFlagUtils)
+// Module 7021 (ApplicationFlagUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import ApplicationRecord from "ApplicationRecord" /* 2145 */;
 

@@ -1,6 +1,6 @@
-// === Module 8937: ProfileFrameLayerPreloadMobileExperiment ===
+// === Module 8942: ProfileFrameLayerPreloadMobileExperiment ===
 
-// Module 8937 (ProfileFrameLayerPreloadMobileExperiment)
+// Module 8942 (ProfileFrameLayerPreloadMobileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

@@ -1,19 +1,19 @@
-// === Module 16865: useShowAgeNoticePromoSheet ===
+// === Module 16888: useShowAgeNoticePromoSheet ===
 
-// Module 16865 (useShowAgeNoticePromoSheet)
-import dismissible_content from "dismissible_content" /* 4974 */;
-import AgeNoticeVisibility from "AgeNoticeVisibility" /* 16864 */;
-import openAgeNoticePromoSheetDefault from "openAgeNoticePromoSheet" /* 16866 */;
+// Module 16888 (useShowAgeNoticePromoSheet)
+import dismissible_content from "dismissible_content" /* 4976 */;
+import AgeNoticeVisibility from "AgeNoticeVisibility" /* 16887 */;
+import openAgeNoticePromoSheetDefault from "openAgeNoticePromoSheet" /* 16889 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/useShowAgeNoticePromoSheet.tsx");
 
-export function useIsTinyBroncoEligible() {
+export function useIsAgeNoticeEligible() {
   return AgeNoticeVisibility.useShouldShowAgeNoticePromo();
 }
-export function useShowTinyBroncoPromoSheet(visibleContent) {
+export function useShowAgeNoticePromoSheet(visibleContent) {
   visibleContent = visibleContent.visibleContent;
   const markAsDismissed = visibleContent.markAsDismissed;
   noop.useRef(false);

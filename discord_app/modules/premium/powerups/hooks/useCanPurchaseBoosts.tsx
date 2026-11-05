@@ -1,8 +1,8 @@
-// === Module 14299: useCanPurchaseBoosts ===
+// === Module 14312: useCanPurchaseBoosts ===
 
-// Module 14299 (useCanPurchaseBoosts)
+// Module 14312 (useCanPurchaseBoosts)
 import initialize from "initialize" /* 504 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7718 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7723 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;

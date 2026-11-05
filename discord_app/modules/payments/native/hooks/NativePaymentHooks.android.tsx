@@ -1,12 +1,12 @@
-// === Module 10089: NativePaymentHooks ===
+// === Module 10097: NativePaymentHooks ===
 
-// Module 10089 (NativePaymentHooks)
+// Module 10097 (NativePaymentHooks)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IAPStore from "IAPStore" /* 7737 */;
+import IAPStore from "IAPStore" /* 7742 */;
 
 const require = fn;
 function notSupported() {
@@ -82,7 +82,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
                       c3 = 1;
                       ref = 2;
                       v3 = 1;
-                      const obj7 = { value: memo2(10090).loadInAppSkus(differenceResult), done: false };
+                      const obj7 = { value: memo2(10098).loadInAppSkus(differenceResult), done: false };
                       return obj7;
                     }
                   }
@@ -98,8 +98,8 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v3("Unable to fetch");
-              const result = memo2(4954).captureBillingException(closure_128_1);
-              const obj3 = memo2(4954);
+              const result = memo2(4956).captureBillingException(closure_128_1);
+              const obj3 = memo2(4956);
             } else if (arg0 === 1) {
               v3 = 3;
               throw value;
@@ -156,8 +156,8 @@ function useLoadedGoogleSkuIds(memo1) {
   ];
   const effect = noop.useEffect(() => {
     c0 = true;
-    const obj = memo1(10090);
-    ({ settled, release: first } = memo1(10090).retainInAppSkus(c0));
+    const obj = memo1(10098);
+    ({ settled, release: first } = memo1(10098).retainInAppSkus(c0));
     settled.then(() => {
       if (c0) {
         closure_2((arg0) => {

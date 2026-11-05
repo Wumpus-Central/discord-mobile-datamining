@@ -1,6 +1,6 @@
-// === Module 6036: NetworkStore ===
+// === Module 6039: NetworkStore ===
 
-// Module 6036 (NetworkStore)
+// Module 6039 (NetworkStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1477 */;

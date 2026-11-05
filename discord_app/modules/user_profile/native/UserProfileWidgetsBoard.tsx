@@ -1,36 +1,36 @@
-// === Module 15160: UserProfileWidgetsBoard ===
+// === Module 15173: UserProfileWidgetsBoard ===
 
-// Module 15160 (UserProfileWidgetsBoard)
+// Module 15173 (UserProfileWidgetsBoard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import StringUtils from "StringUtils" /* 2155 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7917 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7918 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9462 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9486 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12460 */;
-import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 15165 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15168 */;
-import GameCoverImageDefault from "GameCoverImage" /* 15169 */;
-import QuoteIcon from "QuoteIcon" /* 15170 */;
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15172 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15185 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7922 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7923 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9469 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9493 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12467 */;
+import openUserProfileAddTagActionSheetDefault from "openUserProfileAddTagActionSheet" /* 15178 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 15181 */;
+import GameCoverImageDefault from "GameCoverImage" /* 15182 */;
+import QuoteIcon from "QuoteIcon" /* 15183 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15185 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 15198 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function AddGameButton(widgetType) {
   widgetType = widgetType.widgetType;
   const ref = noop.useRef(null);
-  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(widgetType(9722).PlusSmallIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
+  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(widgetType(9728).PlusSmallIcon, { size: "sm", color: ref(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
   const intl = widgetType(1113).intl;
   obj.accessibilityLabel = intl.string(widgetType(1113).t.E3l3Zx);
   obj.disabled = widgetType.disabled;
   obj.onPress = function onPress() {
     return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });
   };
-  return closure_8(widgetType(8168).IconButton, obj);
+  return closure_8(widgetType(8173).IconButton, obj);
 }
 function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle, isEditing } = arg0);
@@ -48,12 +48,12 @@ function WidgetRenderer(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const UserProfileSections = fn(8895).UserProfileSections;
-const widgetSupportsTags = fn(7915).widgetSupportsTags;
+const UserProfileSections = fn(8900).UserProfileSections;
+const widgetSupportsTags = fn(7920).widgetSupportsTags;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const hitSlop = { top: 10, bottom: 10 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { board: { gap: nativeDefault.space.PX_16 }, favoriteRow: null, favoriteDetails: null, list: null, listRow: null, listDetails: null, comment: null, commentText: null, tags: null, tag: null, addTag: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj.favoriteRow = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
@@ -398,11 +398,11 @@ export default function UserProfileWidgetsBoard(userId) {
   }
   ({ cardStyle: importDefault, isEditing: dependencyMap } = userId);
   const tmp = closure_12();
-  const displayableBoardWidgets = userId(15189).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(15202).useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(15189);
-  const trackUserProfileAction = userId(8902).useUserProfileAnalyticsContext().trackUserProfileAction;
+  let obj = userId(15202);
+  const trackUserProfileAction = userId(8907).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);
   items = [flag, displayableBoardWidgets.length > 0, trackUserProfileAction];

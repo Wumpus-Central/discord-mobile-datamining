@@ -1,19 +1,19 @@
-// === Module 18585: ChatControllersSpotIllustration ===
+// === Module 18615: ChatControllersSpotIllustration ===
 
-// Module 18585 (ChatControllersSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7210 */;
-import _modDef18586 from "module_18586" /* 18586 */;
-import _modDef18587 from "module_18587" /* 18587 */;
-import _modDef18588 from "module_18588" /* 18588 */;
+// Module 18615 (ChatControllersSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7213 */;
+import _modDef18616 from "module_18616" /* 18616 */;
+import _modDef18617 from "module_18617" /* 18617 */;
+import _modDef18618 from "module_18618" /* 18618 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18586 }, 3: null };
-let obj2 = { uri: _modDef18586 };
-obj[2] = { uri: _modDef18587 };
-const obj3 = { uri: _modDef18587 };
-obj[3] = { uri: _modDef18588 };
+let obj = { 1: null, 2: { uri: _modDef18616 }, 3: null };
+let obj2 = { uri: _modDef18616 };
+obj[2] = { uri: _modDef18617 };
+const obj3 = { uri: _modDef18617 };
+obj[3] = { uri: _modDef18618 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ChatControllersSpotIllustration.native.tsx");
 

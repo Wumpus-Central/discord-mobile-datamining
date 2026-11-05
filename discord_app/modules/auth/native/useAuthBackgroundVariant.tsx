@@ -1,6 +1,6 @@
-// === Module 7089: useAuthBackgroundVariant ===
+// === Module 7092: useAuthBackgroundVariant ===
 
-// Module 7089 (useAuthBackgroundVariant)
+// Module 7092 (useAuthBackgroundVariant)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

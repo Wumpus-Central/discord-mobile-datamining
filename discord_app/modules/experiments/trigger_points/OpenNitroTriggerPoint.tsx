@@ -1,8 +1,8 @@
-// === Module 15576: OpenNitroTriggerPoint ===
+// === Module 15589: OpenNitroTriggerPoint ===
 
-// Module 15576 (OpenNitroTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 5363 */;
-import Helpers from "Helpers" /* 10856 */;
+// Module 15589 (OpenNitroTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 5365 */;
+import Helpers from "Helpers" /* 10862 */;
 import size from "module_2" /* 2 */;
 
 const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.OPEN_NITRO, { location: "open nitro tab/settings" });

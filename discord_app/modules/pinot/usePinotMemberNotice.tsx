@@ -1,9 +1,9 @@
-// === Module 11510: usePinotMemberNotice ===
+// === Module 11518: usePinotMemberNotice ===
 
-// Module 11510 (usePinotMemberNotice)
-import PinotMemberNoticeActionCreators from "PinotMemberNoticeActionCreators" /* 11517 */;
+// Module 11518 (usePinotMemberNotice)
+import PinotMemberNoticeActionCreators from "PinotMemberNoticeActionCreators" /* 11525 */;
 import noop from "module_19" /* 19 */;
-import PinotMemberNoticeAckStore from "PinotMemberNoticeAckStore" /* 11511 */;
+import PinotMemberNoticeAckStore from "PinotMemberNoticeAckStore" /* 11519 */;
 
 require = fn;
 let closure_4 = { visible: false };

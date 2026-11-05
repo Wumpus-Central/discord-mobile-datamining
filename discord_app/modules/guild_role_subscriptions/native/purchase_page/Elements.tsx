@@ -1,15 +1,15 @@
-// === Module 18896: Elements ===
+// === Module 18927: Elements ===
 
-// Module 18896 (Elements)
+// Module 18927 (Elements)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import Pressables from "Pressables" /* 7121 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 10089 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 10092 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17462 */;
-import _modDef18897 from "module_18897" /* 18897 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import Pressables from "Pressables" /* 7124 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 10097 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 10100 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17488 */;
+import _modDef18928 from "module_18928" /* 18928 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2180 */;
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { toggleTruncateButton: { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 }, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
 let obj3 = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 };
 obj2.arrowButton = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -102,7 +102,7 @@ export function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = closure_11();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  items = [React6(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18897, style: tmp.arrowButtonIcon })];
+  items = [React6(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18928, style: tmp.arrowButtonIcon })];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
 }
@@ -116,8 +116,8 @@ export function useFormattedSubscriptionPlan(listingId) {
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(7553).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(7553);
+    str = "" + tmp3(7555).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(7555);
   }
   return str;
 }

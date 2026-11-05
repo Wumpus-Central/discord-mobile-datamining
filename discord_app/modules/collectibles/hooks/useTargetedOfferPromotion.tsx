@@ -1,10 +1,10 @@
-// === Module 9700: useTargetedOfferPromotion ===
+// === Module 9706: useTargetedOfferPromotion ===
 
-// Module 9700 (useTargetedOfferPromotion)
+// Module 9706 (useTargetedOfferPromotion)
 import Constants from "Constants" /* 1072 */;
-import StorefrontTypes from "StorefrontTypes" /* 7551 */;
-import usePromotionForApplicationDefault from "usePromotionForApplication" /* 9701 */;
-import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 9702 */;
+import StorefrontTypes from "StorefrontTypes" /* 7553 */;
+import usePromotionForApplicationDefault from "usePromotionForApplication" /* 9707 */;
+import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 9708 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = Constants.COLLECTIBLES_APPLICATION_ID;

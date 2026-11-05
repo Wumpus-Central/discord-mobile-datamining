@@ -1,6 +1,6 @@
-// === Module 12567: WidgetActionCreators ===
+// === Module 12574: WidgetActionCreators ===
 
-// Module 12567 (WidgetActionCreators)
+// Module 12574 (WidgetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -215,7 +215,7 @@ export default {
       const request1 = {
         url: upload_url,
         body: closure_129_0,
-        headers: { "Content-Type": closure_0(7920).WIDGET_CLIP_CONTENT_TYPE },
+        headers: { "Content-Type": closure_0(7925).WIDGET_CLIP_CONTENT_TYPE },
         onRequestProgress(direction) {
           let tmp = "upload" === direction.direction;
           if (tmp) {

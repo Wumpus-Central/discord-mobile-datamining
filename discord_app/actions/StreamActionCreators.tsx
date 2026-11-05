@@ -1,29 +1,29 @@
-// === Module 8041: StreamActionCreators ===
+// === Module 8046: StreamActionCreators ===
 
-// Module 8041 (StreamActionCreators)
+// Module 8046 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 6077 */;
-import ChannelUtils from "ChannelUtils" /* 6181 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6852 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6882 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7627 */;
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 8044 */;
-import transitionToStreamDefault from "transitionToStream" /* 8078 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5896 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 6080 */;
+import ChannelUtils from "ChannelUtils" /* 6184 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6844 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6855 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6885 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7627 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7629 */;
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 8049 */;
+import transitionToStreamDefault from "transitionToStream" /* 8083 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameConsoleStore from "GameConsoleStore" /* 5899 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 8042 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 8043 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
+import GameConsoleStore from "GameConsoleStore" /* 5902 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 8047 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 8048 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6852 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import VoiceStateStore from "VoiceStateStore" /* 5813 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
+import VoiceStateStore from "VoiceStateStore" /* 5815 */;
 
 const require = globalThis.__r;
 
@@ -195,7 +195,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1072);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(6850).StreamTypes;
+const StreamTypes = fn(6853).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -342,15 +342,15 @@ export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(8078)(closure_1_1);
+          closure_1(8083)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(6181).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(6181);
+          closure_0(6184).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(6184);
         }
       }
     };

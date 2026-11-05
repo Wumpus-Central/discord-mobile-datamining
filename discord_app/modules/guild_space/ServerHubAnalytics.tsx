@@ -1,6 +1,6 @@
-// === Module 19943: ServerHubAnalytics ===
+// === Module 19979: ServerHubAnalytics ===
 
-// Module 19943 (ServerHubAnalytics)
+// Module 19979 (ServerHubAnalytics)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import size from "module_2" /* 2 */;
@@ -9,7 +9,7 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/guild_space/ServerHubAnalytics.tsx");
 
 export const ServerHubSettingType = { ALL_SYSTEM_MESSAGES: "all_system_messages", LEADERBOARD_SYSTEM_MESSAGES: "leaderboard_system_messages", WHITEBOARD_SYSTEM_MESSAGES: "whiteboard_system_messages", MUSIC_SYSTEM_MESSAGES: "music_system_messages" };
-export const ServerHubVisitSource = { WINNER_BADGE: "winner_badge", LEADER_BADGE: "leader_badge", LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message", MUSIC_SYSTEM_MESSAGE: "music_system_message" };
+export const ServerHubVisitSource = { CHANNEL_LIST: "channel_list", COACHMARK: "coachmark", WINNER_BADGE: "winner_badge", LEADER_BADGE: "leader_badge", LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message", MUSIC_SYSTEM_MESSAGE: "music_system_message" };
 export const ServerHubEditCancelReason = { USER: "user", PERMISSION_LOST: "permission_lost" };
 export function trackServerHubToggleSetting(id, ALL_SYSTEM_MESSAGES, value) {
   AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_TOGGLE_SETTING, { guild_id: id, type: ALL_SYSTEM_MESSAGES, value });

@@ -1,9 +1,9 @@
-// === Module 7532: conjureServerProject ===
+// === Module 7534: conjureServerProject ===
 
-// Module 7532 (conjureServerProject)
-import ConjureActivity from "ConjureActivity" /* 7533 */;
-import conjurePageRoutes from "conjurePageRoutes" /* 7534 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+// Module 7534 (conjureServerProject)
+import ConjureActivity from "ConjureActivity" /* 7535 */;
+import conjurePageRoutes from "conjurePageRoutes" /* 7536 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 require = fn;
 const size = fn(2);

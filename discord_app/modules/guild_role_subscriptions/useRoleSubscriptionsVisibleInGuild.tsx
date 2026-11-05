@@ -1,10 +1,10 @@
-// === Module 7564: useRoleSubscriptionsVisibleInGuild ===
+// === Module 7566: useRoleSubscriptionsVisibleInGuild ===
 
-// Module 7564 (useRoleSubscriptionsVisibleInGuild)
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7565 */;
-import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7566 */;
-import ImpersonateStore from "ImpersonateStore" /* 5046 */;
-import GuildStore from "GuildStore" /* 5012 */;
+// Module 7566 (useRoleSubscriptionsVisibleInGuild)
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7567 */;
+import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7568 */;
+import ImpersonateStore from "ImpersonateStore" /* 5048 */;
+import GuildStore from "GuildStore" /* 5014 */;
 
 const require = globalThis.__r;
 const useHasRoleSubscriptionInGuildDefault = useHasRoleSubscriptionInGuild;
@@ -85,7 +85,7 @@ export function useShowRoleSubscriptionsInChannelList(id) {
     tmp5 = stateFromStores;
   }
   const obj2 = require("CreatorMonetizationRestrictionsHooks");
-  const guildEligibleForGuildProducts = tmp3(7572).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp3(7574).useGuildEligibleForGuildProducts(id);
   if (tmp5) {
     let flag = !guildEligibleForGuildProducts;
     if (guildEligibleForGuildProducts) {

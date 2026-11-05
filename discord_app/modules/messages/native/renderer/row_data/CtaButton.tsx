@@ -1,12 +1,12 @@
-// === Module 15384: CtaButton ===
+// === Module 15397: CtaButton ===
 
-// Module 15384 (CtaButton)
+// Module 15397 (CtaButton)
 import util from "util" /* 1113 */;
 import _modDef3319 from "module_3319" /* 3319 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6861 */;
-import CtaButtonUtils from "CtaButtonUtils" /* 13571 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 13573 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7604 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6864 */;
+import CtaButtonUtils from "CtaButtonUtils" /* 13582 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 13584 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7606 */;
 
 require = fn;
 const size = fn(2);
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/messages/native/renderer/row_da
 
 export function createCtaButtons(id, channel_id, arg2) {
   const ctaButtonType = CtaButtonUtils.getCtaButtonType(id, channel_id);
-  const result = AgeVerificationUtils.shouldShowTiggerPawtect();
+  const needsAgeVerificationResult = AgeVerificationUtils.needsAgeVerification();
   if (CtaButtonUtils.CtaButtonType.MARK_AS_FALSE_POSITIVE === ctaButtonType) {
     const obj3 = { text: null, textColor: null, backgroundColor: null, callback: null };
     const intl4 = util.intl;
@@ -30,12 +30,12 @@ export function createCtaButtons(id, channel_id, arg2) {
     return obj5;
   } else if (CtaButtonUtils.CtaButtonType.AGE_VERIFICATION_RETRY === ctaButtonType) {
     const intl2 = util.intl;
-    const result1 = AgeVerificationSystemNotificationUtils.isAgeVerificationMessageWithConfirmAgeCta(channel_id, id);
+    const result = AgeVerificationSystemNotificationUtils.isAgeVerificationMessageWithConfirmAgeCta(channel_id, id);
     const t = util.t;
-    const obj7 = { text: intl2.string(result1 ? t.DVywUB : t["/nicWo"]), textColor: null, backgroundColor: null, callback: null };
+    const obj7 = { text: intl2.string(result ? t.DVywUB : t["/nicWo"]), textColor: null, backgroundColor: null, callback: null };
     ({ retryTextColor: obj6.textColor, retryBackgroundColor: obj6.backgroundColor } = arg2);
     let prop1;
-    if (result) {
+    if (needsAgeVerificationResult) {
       prop1 = CtaButtonUtils.CtaButtonType.AGE_VERIFICATION_RETRY;
     }
     const obj8 = { ctaButton: null, secondaryCtaButton: null };
@@ -49,7 +49,7 @@ export function createCtaButtons(id, channel_id, arg2) {
       obj11.text = intl3.string(_modDef3319.Z61nkt);
       ({ reportFpTextColor: obj9.textColor, reportFpBackgroundColor: obj9.backgroundColor } = arg2);
       let prop2;
-      if (result) {
+      if (needsAgeVerificationResult) {
         prop2 = CtaButtonUtils.CtaButtonType.AGE_VERIFICATION_MANUAL_REVIEW;
       }
       obj11.callback = prop2;

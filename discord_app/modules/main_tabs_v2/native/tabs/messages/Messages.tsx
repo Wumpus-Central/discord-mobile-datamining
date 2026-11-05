@@ -1,24 +1,24 @@
-// === Module 18334: messages/Messages ===
+// === Module 18364: messages/Messages ===
 
-// Module 18334 (messages/Messages)
+// Module 18364 (messages/Messages)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
-import RootNavigationRef from "RootNavigationRef" /* 5323 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7462 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7794 */;
-import useMessagesSpecsDefault from "useMessagesSpecs" /* 18339 */;
-import MessagesHeaderDefault from "MessagesHeader" /* 18340 */;
-import useMessagesDataDefault from "useMessagesData" /* 18357 */;
-import useMessagesScrollToTopDefault from "useMessagesScrollToTop" /* 18360 */;
-import useMessagesReconnectToCallsEffectDefault from "useMessagesReconnectToCallsEffect" /* 18361 */;
-import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 18363 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5324 */;
+import RootNavigationRef from "RootNavigationRef" /* 5325 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5747 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7465 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7799 */;
+import useMessagesSpecsDefault from "useMessagesSpecs" /* 18369 */;
+import MessagesHeaderDefault from "MessagesHeader" /* 18370 */;
+import useMessagesDataDefault from "useMessagesData" /* 18387 */;
+import useMessagesScrollToTopDefault from "useMessagesScrollToTop" /* 18390 */;
+import useMessagesReconnectToCallsEffectDefault from "useMessagesReconnectToCallsEffect" /* 18391 */;
+import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 18393 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6706 */;
 
 const require = globalThis.__r;
 
@@ -58,7 +58,7 @@ export default noop.memo(function Messages(style) {
   useMessagesScrollToTopDefault({ listRef: ref, listRefHappeningNow: ref1 });
   useMessagesReconnectToCallsEffectDefault();
   obj6 = require("PlatformUtils");
-  const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(tmp4(18362).DmGdmListRenderTriggerPoint);
+  const commonTriggerPoint = require("useCommonTriggerPoint").useCommonTriggerPoint(tmp4(18392).DmGdmListRenderTriggerPoint);
   items = [dataKey];
   const effect = noop.useEffect(() => {
     if (null != c0) {
@@ -131,12 +131,12 @@ export default noop.memo(function Messages(style) {
   const obj10 = { backgroundColor: nativeDefault.colors.PANEL_BG, children: null };
   const items3 = [closure_6(MessagesHeaderDefault, { height: headerSize, scrollPosition: sharedValue }), , ];
   if (tmp10.showFullscreenEmptyState) {
-    let tmp25Result = closure_6(tmp(18365), {});
+    let tmp25Result = closure_6(tmp(18395), {});
   } else {
     if ("legend" === list) {
-      let tmp28 = 18370;
+      let tmp28 = 18400;
     } else {
-      tmp28 = "flash" === list ? 18414 : 18415;
+      tmp28 = "flash" === list ? 18444 : 18445;
     }
     const obj11 = { ref };
     const merged = Object.assign(obj7);
@@ -146,7 +146,7 @@ export default noop.memo(function Messages(style) {
   items3[1] = tmp25Result;
   let tmp25Result2 = null;
   if (!doesLandOnHomeDrawer) {
-    tmp25Result2 = closure_6(tmp4(13556).TTIFirstContentfulPaint, { label: "messages_tabs" });
+    tmp25Result2 = closure_6(tmp4(13567).TTIFirstContentfulPaint, { label: "messages_tabs" });
   }
   items3[2] = tmp25Result2;
   obj10.children = items3;

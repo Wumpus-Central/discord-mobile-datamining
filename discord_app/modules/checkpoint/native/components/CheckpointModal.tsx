@@ -1,24 +1,24 @@
-// === Module 13661: CheckpointModal ===
+// === Module 13672: CheckpointModal ===
 
-// Module 13661 (CheckpointModal)
+// Module 13672 (CheckpointModal)
 import nativeDefault from "native" /* 575 */;
 import Server from "Server" /* 2121 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import HapticUtils from "HapticUtils" /* 5384 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6208 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6222 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6570 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 13600 */;
-import CheckpointFlows from "CheckpointFlows" /* 13676 */;
-import useCheckpointStepAnalytics from "useCheckpointStepAnalytics" /* 13680 */;
-import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 13921 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import HapticUtils from "HapticUtils" /* 5386 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6211 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6225 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6572 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 13611 */;
+import CheckpointFlows from "CheckpointFlows" /* 13687 */;
+import useCheckpointStepAnalytics from "useCheckpointStepAnalytics" /* 13691 */;
+import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 13934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageRecord from "MessageRecord" /* 5084 */;
-import CheckpointStore from "CheckpointStore" /* 13657 */;
+import MessageRecord from "MessageRecord" /* 5086 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 require = fn;
 function CheckpointModal(didPlayerShareDataWithDiscord) {
@@ -72,13 +72,13 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
     closure_0 = STATS_ONLY;
     let result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
     const obj2 = { content: "", components: null };
-    const obj3 = { type: Server.ComponentType.CHECKPOINT_CARD, id: null, checkpointData: null };
+    let obj3 = { type: Server.ComponentType.CHECKPOINT_CARD, id: null, checkpointData: null };
     obj3.id = InteractionComponentTypes.asComponentId("0");
     obj3.checkpointData = checkpoint_CheckpointMessageComponentUtils.toCheckpointMessageComponentData(STATS_ONLY, stateFromStores, closure_1);
     items = [obj3];
     obj2.components = items;
     const tmp2 = new MessageRecord(obj2);
-    const obj7 = { message: tmp2, source: "checkpoint", customSendHandler: null };
+    let obj7 = { message: tmp2, source: "checkpoint", customSendHandler: null };
     closure_1 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
       closure_0 = arg0;
       const withMessage = arg1;
@@ -87,24 +87,95 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
       c8 = 0;
       c6 = 0;
       const iter = (async (arg0, value, arg2) => {
-        closure_5 = tmp3;
-        closure_4 = tmp44;
-        closure_132_0 = closure_0;
-        const withMessage2 = withMessage.withMessage;
-        closure_132_2 = dependencyMap;
-        await "flexDirection";
-        closure_132_2(true);
-        c3 = withMessage2;
-        if (withMessage2 == null) {
-          c3 = "";
+        if (c8 === 2) {
+          c8 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c8 = 2;
+            if (0 === c7) {
+              if (arg0 === 1) {
+                c8 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c8 = 3;
+                const obj5 = { value, done: true };
+                return obj5;
+              } else {
+                closure_5 = tmp3;
+                closure_4 = tmp44;
+                let withMessage2;
+                closure_132_2 = undefined;
+                closure_132_0 = closure_0;
+                withMessage2 = withMessage.withMessage;
+                closure_132_2 = dependencyMap;
+                c7 = 1;
+                c8 = 1;
+                return { value: "flexDirection", done: true };
+              }
+            } else if (1 === tmp7) {
+              if (arg0 === 1) {
+                c8 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c8 = 3;
+                const obj7 = { value, done: true };
+                return obj7;
+              } else {
+                closure_132_2(true);
+                c6 = 1;
+                c3 = withMessage2;
+                if (withMessage2 == null) {
+                  c3 = "";
+                }
+                c7 = 3;
+                c8 = 1;
+                const obj8 = { value: closure_0(13670).sendCheckpointCard(closure_132_0, c3, closure_133_0), done: false };
+                return obj8;
+              }
+            } else if (2 === tmp7) {
+              c6 = 0;
+              closure_132_2(false);
+              const intl = closure_0(1113).intl;
+              closure_0(5848).presentError(intl.string(closure_0(1113).t.fEptJP));
+              c8 = 3;
+              const obj9 = { value: undefined, done: true };
+              return obj9;
+            } else if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 0;
+              c8 = 3;
+              const obj10 = { value, done: true };
+              return obj10;
+            } else {
+              const result = closure_0(13666).trackCheckpoint2026CardShared(closure_133_0);
+              c6 = 0;
+              const obj = closure_0(13666);
+              closure_0(13611).closeForwardModal();
+              c8 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } catch (tmp43) {
+            if (tmp4 === c6) {
+              c8 = tmp2;
+              throw tmp43;
+            } else {
+              c7 = tmp;
+            }
+            tmp44 = c6;
+          }
         }
-        await closure_0(13659).sendCheckpointCard(closure_132_0, c3, closure_133_0);
-        const result = closure_0(13655).trackCheckpoint2026CardShared(closure_133_0);
-        closure_0(13600).closeForwardModal();
-        await "HermesInternal";
-        closure_132_2(false);
-        const intl = closure_0(1113).intl;
-        closure_0(5845).presentError(intl.string(closure_0(1113).t.fEptJP));
       })();
       iter.next();
       return iter;
@@ -313,7 +384,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
     if (tmp18) {
       prop = cardColors.backgroundGradientStartColor;
     }
-    const obj10 = { gradientStartColor: prop };
+    let obj10 = { gradientStartColor: prop };
     tmp44Result = tmp44(tmp2(tmp3[44]), obj10);
     const tmp2Result9 = tmp2(tmp3[44]);
   }
@@ -336,7 +407,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
   const obj14 = { style: null, children: null };
   const items6 = [tmp.nav, { marginTop: rect.top, marginLeft: rect.left, marginRight: rect.right }];
   obj14.style = items6;
-  const obj9 = { stage: characterStage, layout: str, isActive: !tmp44Result4, isHidden: tmp44Result, characterBottomInset: sum };
+  let obj9 = { stage: characterStage, layout: str, isActive: !tmp44Result4, isHidden: tmp44Result, characterBottomInset: sum };
   const tmp8Result2 = _slicedToArray(noop.useState(false), 2);
   if (tmp18) {
     let clydeLogoImage = cardColors.clydeLogoImage;
@@ -453,7 +524,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
       return applyArgumentsResult;
     },
     onShare: function handleShare() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13662, dependencyMap.paths), "CheckpointShare", { character: stateFromStores, stats, onForward: handleForward });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13673, dependencyMap.paths), "CheckpointShare", { character: stateFromStores, stats, onForward: handleForward });
     },
     color: tmp22,
     shadowColor: null,
@@ -480,14 +551,14 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const CheckpointConstants = fn(6201);
+const CheckpointConstants = fn(6204);
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT, CHECKPOINT_PRIMARY: closure_10 } = CheckpointConstants);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let sum = CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
 const sum1 = sum + nativeDefault.space.PX_24;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { loader: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BLACK }, container: null, layer: null, coveredCharacterLayer: null, nav: null, logo: null, headerActions: null, customizationSection: null, landscapeCustomizationSection: null, landscapeStat: null };
 let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BLACK };
 obj2.container = { height: "100%", backgroundColor: nativeDefault.colors.BLACK };
@@ -500,7 +571,7 @@ obj2.logo = size;
 let obj4 = { height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 obj2.headerActions = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
 obj2.customizationSection = { position: "absolute", left: 0, right: 0, bottom: sum1 };
-const rect1 = { top: (CHECKPOINT_NAV_HEIGHT + fn(13675).CHECKPOINT_HEADER_BUTTON_SIZE) / 2, bottom: CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16, left: "59%", marginLeft: 0 };
+const rect1 = { top: (CHECKPOINT_NAV_HEIGHT + fn(13686).CHECKPOINT_HEADER_BUTTON_SIZE) / 2, bottom: CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16, left: "59%", marginLeft: 0 };
 obj2.landscapeCustomizationSection = rect1;
 const rect2 = { position: "absolute", top: null, left: nativeDefault.space.PX_16 };
 let result = (CHECKPOINT_NAV_HEIGHT + CHECKPOINT_LOGO_SIZE) / 2;

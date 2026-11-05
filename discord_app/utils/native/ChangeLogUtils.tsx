@@ -1,12 +1,12 @@
-// === Module 8710: utils/ChangeLogUtils ===
+// === Module 8715: utils/ChangeLogUtils ===
 
-// Module 8710 (utils/ChangeLogUtils)
+// Module 8715 (utils/ChangeLogUtils)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 8712 */;
-import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 8713 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8717 */;
+import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 8718 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 6166 */;
+import CustomMarkup from "CustomMarkup" /* 6169 */;
 
 require = fn;
 function ChangeLogLink(arg0) {
@@ -78,9 +78,9 @@ function ChangeLogParagraph(state) {
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = output(5761).Text;
+    Paragraph = output(5763).Text;
   }
-  const result = output(8711).splitParagraphAtImages(node.content);
+  const result = output(8716).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -118,7 +118,7 @@ function ChangeLogParagraph(state) {
     }
     return tmp7;
   }
-  let obj = output(8711);
+  let obj = output(8716);
   tmp7 = <Paragraph key={state.key} variant="body-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "body-sm/normal", style: tmp.text, children: output(node.content, state) };
 }
@@ -150,11 +150,11 @@ function ChangeLogBlockQuote(state) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, container: null, text: null };
 let obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6913).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6913).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6916).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6916).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});

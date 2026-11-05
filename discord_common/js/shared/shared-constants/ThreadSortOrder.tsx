@@ -1,6 +1,6 @@
-// === Module 4999: ThreadSortOrder ===
+// === Module 5001: ThreadSortOrder ===
 
-// Module 4999 (ThreadSortOrder)
+// Module 5001 (ThreadSortOrder)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set([0, 1]) };

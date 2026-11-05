@@ -1,36 +1,36 @@
-// === Module 18761: ForYouItems ===
+// === Module 18791: ForYouItems ===
 
-// Module 18761 (ForYouItems)
+// Module 18791 (ForYouItems)
 import nativeDefault from "native" /* 575 */;
 import _mod674 from "module_674" /* 674 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import Link from "Link" /* 1500 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import parseURLDefault from "parseURL" /* 5879 */;
-import CustomMarkupAll from "CustomMarkup" /* 6166 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6994 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14415 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15917 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18759 */;
-import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 18760 */;
-import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 18776 */;
-import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 18777 */;
-import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 18778 */;
-import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 18779 */;
-import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 18780 */;
-import ForYouShowAllRow from "ForYouShowAllRow" /* 18786 */;
-import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 18787 */;
-import ForYouLoadMore from "ForYouLoadMore" /* 18788 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import parseURLDefault from "parseURL" /* 5882 */;
+import CustomMarkupAll from "CustomMarkup" /* 6169 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6997 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14428 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15929 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18789 */;
+import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 18790 */;
+import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 18806 */;
+import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 18807 */;
+import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 18808 */;
+import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 18809 */;
+import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 18810 */;
+import ForYouShowAllRow from "ForYouShowAllRow" /* 18816 */;
+import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 18817 */;
+import ForYouLoadMore from "ForYouLoadMore" /* 18818 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildStore from "GuildStore" /* 5014 */;
 import UserStore from "UserStore" /* 1385 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18755 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18785 */;
 
 require = fn;
 function ForYouFooter(loading) {
@@ -65,10 +65,10 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_29();
   let SMALL = dependencyMap;
-  const notifCenterV2MessagePreviewParser = message_channel_id(6166).getNotifCenterV2MessagePreviewParser(closure_27(), closure_28, roleStyle);
+  const notifCenterV2MessagePreviewParser = message_channel_id(6169).getNotifCenterV2MessagePreviewParser(closure_27(), closure_28, roleStyle);
   const intl = item(1113).intl;
   const stringResult = intl.string(item(1113).t.BOi07B);
-  const obj = message_channel_id(6166);
+  const obj = message_channel_id(6169);
   let message = item.message;
   let num;
   if (message != null) {
@@ -120,11 +120,11 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(8651)(first);
+    const tmp15 = guild_id(8656)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(8544).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(8544);
+      result = tmp2(8549).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(8549);
     }
   } else if (stickers.length > 0) {
     const intl6 = tmp2(1113).intl;
@@ -230,17 +230,17 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(8723).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 }), ];
+  const items5 = [item(8728).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 }), ];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj5.children = items5;
-    items3[1] = closure_22(tmp2(5761).Text, obj5);
+    items3[1] = closure_22(tmp2(5763).Text, obj5);
     obj3.children = items3;
     return closure_22(closure_7, obj3);
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(13989);
+      let tmp29 = guild_id(14002);
       const obj8 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1187).IconSizes.SMALL;
       obj8.size = SMALL;
@@ -251,12 +251,12 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8314);
+        tmp29 = guild_id(8319);
       }
     }
-    tmp29 = guild_id(10483);
+    tmp29 = guild_id(10489);
   }
-  const tmp2Result10 = item(8723);
+  const tmp2Result10 = item(8728);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
@@ -302,34 +302,34 @@ get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, RefreshControl: closure_8, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_15, MessageFlags: closure_16, AnalyticsLocations: closure_17, MessageTypes: closure_18, EMPTY_STRING_SNOWFLAKE_ID: closure_19 } = Constants);
-const NotificationTypes = fn(6878).NotificationTypes;
+const NotificationTypes = fn(6881).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(5761).TextStyleSheet["body-md/medium"]);
+const merged = Object.assign(fn(5763).TextStyleSheet["body-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(5761).TextStyleSheet["body-md/medium"]);
+const merged1 = Object.assign(fn(5763).TextStyleSheet["body-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj7 = { mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND } };
 let closure_26 = createStyles.createStyles(obj7);
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj10 = { mention: null };
 let obj9 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj10.mention = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
 let closure_27 = createStyles.createStyles(obj10);
 let closure_28 = { channelMentionText: "heading-sm/medium" };
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj13 = { container: { flex: 1 }, row: null, rowCompact: null, rowActive: null, col: null, unreadIndicatorV2: null, unreadIndicatorCompactV2: null, rowText: null, rowTextV2: null, rowBody: null, rowBodyV2: null, rowBodyAcked: null, rowTime: null, rowTimeV2: null, itemV2: null, calloutContainer: null, calloutTextAcked: null, calloutTextNotAcked: null, messagePreviewContainerV2: null, messagePreviewBarV2: null, messagePreviewIconV2Container: null, messagePreviewIconV2: null, messagePreviewTextV2Acked: null, messagePreviewTextV2NotAcked: null, messagePreviewSystemTextV2: null, refreshSpinner: null, forYouDivider: null, friendRequestNoteContainer: null };
 let obj12 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
 obj13.row = { marginHorizontal: 4, paddingHorizontal: 12, paddingVertical: 8, marginBottom: 4, borderRadius: nativeDefault.radii.lg, flexDirection: "row", justifyContent: "space-between" };
@@ -481,15 +481,15 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function*() {
-        yield tmp3(18757).deleteNotificationCenterItem(tmp3);
+        yield tmp3(18787).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };
           const intl = tmp3(1113).intl;
           obj7.text = intl.string(tmp3(1113).t.WDxhvB);
-          rowIndex(5846).open("REMOVE_NOTIFICATION_ERROR", obj7);
+          rowIndex(5849).open("REMOVE_NOTIFICATION_ERROR", obj7);
           c4 = 3;
-          rowIndex(5846);
+          rowIndex(5849);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -737,11 +737,11 @@ export const ForYouItems = noop.memo(function ForYouItemsWrapped(loadMore) {
         GlobalUtils.assertNever(item);
     }
   }, items4);
-  const ref = suggestedFriendAdded.useRef(null);
+  const ref1 = suggestedFriendAdded.useRef(null);
   const items5 = [shouldScrollToTop];
   const effect = suggestedFriendAdded.useEffect(() => {
     if (shouldScrollToTop) {
-      const current = ref.current;
+      const current = ref1.current;
       if (current != null) {
         current.scrollToOffset({ animated: false, offset: 0 });
       }
@@ -753,23 +753,22 @@ export const ForYouItems = noop.memo(function ForYouItemsWrapped(loadMore) {
       NotificationCenterStoreActions.refreshNotifications();
     }
   }, items6);
-  const tmp14 = isForceHoisted(suggestedFriendAdded.useState(0), 2);
-  closure_16 = tmp14[1];
-  let obj3 = {
-    style: tmp.container,
-    onLayout(nativeEvent) {
-      return closure_16(nativeEvent.nativeEvent.layout.height);
-    },
-    children: null
-  };
+  const tmp14 = shouldScrollToTop(onSoftAckItem[67])();
+  const height = tmp14.height;
+  let num = 0;
+  ({ ref, onLayout } = tmp14);
+  if (undefined !== height) {
+    num = height;
+  }
+  let obj3 = { style: tmp.container, ref, onLayout, children: null };
   let tmp17 = !nestedInLaunchPad;
   if (!nestedInLaunchPad) {
-    let obj4 = { scrollRef: ref };
+    let obj4 = { scrollRef: ref1 };
     tmp17 = closure_21(ScrollToTopRef, obj4);
   }
   const items7 = [tmp17, ];
-  let obj5 = { ref, data: items, ListEmptyComponent: closure_21(loadMore(onSoftAckItem[68]).ForYouEmptyState, { height: tmp14[0] }), onScroll, refreshControl: closure_21(flag, { onRefresh: callback2, refreshing: stateFromStores1, tintColor: tmp.refreshSpinner.color }), keyExtractor: extractKey, renderItem: callback1, extraData: setting, onEndReached: loadMore, onEndReachedThreshold: 0.8, ListFooterComponent: closure_21(ForYouFooter, { loading: loadingMore }), viewabilityConfig };
-  items7[1] = closure_21(loadMore(onSoftAckItem[67]).FlashList, obj5);
+  let obj5 = { ref: ref1, data: items, ListEmptyComponent: closure_21(loadMore(onSoftAckItem[69]).ForYouEmptyState, { height: num }), onScroll, refreshControl: closure_21(flag, { onRefresh: callback2, refreshing: stateFromStores1, tintColor: tmp.refreshSpinner.color }), keyExtractor: extractKey, renderItem: callback1, extraData: setting, onEndReached: loadMore, onEndReachedThreshold: 0.8, ListFooterComponent: closure_21(ForYouFooter, { loading: loadingMore }), viewabilityConfig };
+  items7[1] = closure_21(loadMore(onSoftAckItem[68]).FlashList, obj5);
   obj3.children = items7;
   return closure_22(onAddSuggestionAnimationFinish, obj3);
 });

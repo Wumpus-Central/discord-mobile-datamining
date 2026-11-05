@@ -1,20 +1,20 @@
-// === Module 8340: ChannelSettingsStore ===
+// === Module 8345: ChannelSettingsStore ===
 
-// Module 8340 (ChannelSettingsStore)
+// Module 8345 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ThreadConstants from "ThreadConstants" /* 1112 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import ChannelRecord from "ChannelRecord" /* 4994 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 4999 */;
-import ForumLayout from "ForumLayout" /* 5000 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
-import ReactionUtils from "ReactionUtils" /* 5085 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
-import InviteRecord from "InviteRecord" /* 8341 */;
+import ChannelRecord from "ChannelRecord" /* 4996 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 5001 */;
+import ForumLayout from "ForumLayout" /* 5002 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5006 */;
+import ReactionUtils from "ReactionUtils" /* 5087 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5089 */;
+import InviteRecord from "InviteRecord" /* 8346 */;
 import UserRecord from "UserRecord" /* 1399 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
 import Constants from "Constants" /* 1072 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;

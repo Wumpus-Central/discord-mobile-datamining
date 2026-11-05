@@ -1,8 +1,8 @@
-// === Module 6065: LastUsedVideoBackgroundOption ===
+// === Module 6068: LastUsedVideoBackgroundOption ===
 
-// Module 6065 (LastUsedVideoBackgroundOption)
+// Module 6068 (LastUsedVideoBackgroundOption)
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 6066 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 6069 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;

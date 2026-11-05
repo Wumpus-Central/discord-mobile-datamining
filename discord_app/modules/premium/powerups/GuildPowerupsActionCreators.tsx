@@ -1,12 +1,12 @@
-// === Module 14282: GuildPowerupsActionCreators ===
+// === Module 14295: GuildPowerupsActionCreators ===
 
-// Module 14282 (GuildPowerupsActionCreators)
+// Module 14295 (GuildPowerupsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import storeListingToGuildPowerupDefault from "storeListingToGuildPowerup" /* 14284 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5354 */;
+import storeListingToGuildPowerupDefault from "storeListingToGuildPowerup" /* 14297 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5356 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -26,10 +26,10 @@ export function fetchPowerupCatalogForGuild(guildId, arg1) {
   if (true === arg1) {
     const MOCK_LEVELS = require("GuildPowerupMocks").MOCK_LEVELS;
     const combined = MOCK_LEVELS.concat(require("GuildPowerupMocks").MOCK_PERKS);
-    const obj2 = {};
-    obj2[constants.LEVEL] = require("GuildPowerupMocks").MOCK_LEVELS;
-    obj2[constants.PERK] = require("GuildPowerupMocks").MOCK_PERKS;
-    const obj3 = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId, allPowerups: null, powerupCatalog: null };
+    const obj = {};
+    obj[constants.LEVEL] = require("GuildPowerupMocks").MOCK_LEVELS;
+    obj[constants.PERK] = require("GuildPowerupMocks").MOCK_PERKS;
+    const obj2 = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId, allPowerups: null, powerupCatalog: null };
     let sorted = combined.sort((skuId, skuId2) => {
       let num = -1;
       if (skuId.skuId >= skuId2.skuId) {
@@ -37,19 +37,19 @@ export function fetchPowerupCatalogForGuild(guildId, arg1) {
       }
       return num;
     });
-    obj3.allPowerups = sorted.reduce((acc, skuId) => {
+    obj2.allPowerups = sorted.reduce((acc, skuId) => {
       acc[skuId.skuId] = skuId;
       return acc;
     }, {});
-    obj3.powerupCatalog = obj2;
-    DispatcherDefault.dispatch(obj3);
+    obj2.powerupCatalog = obj;
+    DispatcherDefault.dispatch(obj2);
   } else {
     const request = { url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS, query: null, oldFormErrors: true, rejectWithError: null };
-    const obj5 = { application_id, guild_id: guildId };
-    request.query = obj5;
-    const obj = require("StoreUtils");
+    const obj4 = { application_id, guild_id: guildId };
+    request.query = obj4;
+    const obj5 = require("StoreUtils");
     request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
-    const result = obj.httpGetWithCountryCodeQuery(request);
+    const result = obj5.httpGetWithCountryCodeQuery(request);
     return result.then((body) => {
       guildId = body;
       body = body.body;

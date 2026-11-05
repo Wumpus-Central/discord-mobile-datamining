@@ -1,24 +1,23 @@
-// === Module 14583: GuildDirectoryCategorySelector ===
+// === Module 14596: GuildDirectoryCategorySelector ===
 
-// Module 14583 (GuildDirectoryCategorySelector)
+// Module 14596 (GuildDirectoryCategorySelector)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 14082 */;
-import _slicedToArray from "module_32" /* 32 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 14095 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 14078 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 14091 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildDirectoryConstants = fn(14071);
-({ DirectoryEntryCategories: closure_8, getHubCategories: closure_9 } = GuildDirectoryConstants);
+const GuildDirectoryConstants = fn(14084);
+({ DirectoryEntryCategories: metroImportDefault, getHubCategories: closure_8 } = GuildDirectoryConstants);
 const jsxProd = fn(21);
-({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
+const createStyles = fn(5143);
 let obj2 = { categoriesListWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 12 } };
-let closure_12 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCategorySelector.tsx");
 
@@ -26,22 +25,24 @@ export default function GuildDirectoryCategorySelector(channel) {
   channel = channel.channel;
   ({ onCategorySelected: importDefault, categoryCounts } = channel);
   const allEntriesCount = channel.allEntriesCount;
-  _slicedToArray = undefined;
   let stateFromStores;
-  const tmp = closure_12();
-  [tmp3, c4] = stateFromStores.useState(0);
-  const callback = stateFromStores.useCallback((nativeEvent) => {
-    _undefined(nativeEvent.nativeEvent.layout.width);
-  }, []);
-  const tmp2 = _slicedToArray(stateFromStores.useState(0), 2);
+  let memo;
+  const tmp4 = require("useMeasuredLayout")();
+  const width = tmp4.width;
+  let num = 0;
+  ({ ref, onLayout } = tmp4);
+  if (undefined !== width) {
+    num = width;
+  }
+  const tmp = closure_11();
   items = [GuildDirectoryStore];
   stateFromStores = channel(allEntriesCount[11]).useStateFromStores(items, () => GuildDirectoryStore.getCurrentCategoryId(channel.id));
   const items1 = [channel.id];
-  const memo = stateFromStores.useMemo(() => {
+  memo = stateFromStores.useMemo(() => {
     const obj = { value: constants.ALL, label: null, idealSize: 70 };
     const intl = util.intl;
     obj.label = intl.string(util.t.hEAa2a);
-    items = [obj, ...closure_2_9(channel.id)];
+    items = [obj, ...closure_2_8(channel.id)];
     return items;
   }, items1);
   const items2 = [memo, categoryCounts, allEntriesCount];
@@ -78,7 +79,7 @@ export default function GuildDirectoryCategorySelector(channel) {
         importDefault();
       }
     },
-    pageWidth: tmp3
+    pageWidth: num
   });
   const obj2 = channel(allEntriesCount[12]);
   const obj3 = {
@@ -94,15 +95,15 @@ export default function GuildDirectoryCategorySelector(channel) {
         importDefault();
       }
     },
-    pageWidth: tmp3
+    pageWidth: num
   };
-  const token = channel(allEntriesCount[9]).useToken(require("native").colors.BACKGROUND_BASE_LOW);
+  const token = channel(allEntriesCount[8]).useToken(require("native").colors.BACKGROUND_BASE_LOW);
   const items4 = [token, ];
-  const obj4 = channel(allEntriesCount[9]);
+  const obj4 = channel(allEntriesCount[8]);
   const obj5 = require("module_671")(token);
   items4[1] = require("module_671")(token).alpha(0).hex();
-  const obj6 = { style: tmp.categoriesListWrapper, onLayout: callback, children: null };
-  const items5 = [closure_10(channel(allEntriesCount[14]).Tabs, { state: segmentedControlState }), closure_10(require("TabsGradient"), { state: segmentedControlState, colors: items4 })];
+  const obj6 = { style: tmp.categoriesListWrapper, ref, onLayout, children: null };
+  const items5 = [closure_9(channel(allEntriesCount[14]).Tabs, { state: segmentedControlState }), closure_9(require("TabsGradient"), { state: segmentedControlState, colors: items4 })];
   obj6.children = items5;
-  return closure_11(memo, obj6);
+  return closure_10(memo, obj6);
 };

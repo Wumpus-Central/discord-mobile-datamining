@@ -1,16 +1,16 @@
-// === Module 14478: ContactSyncError ===
+// === Module 14491: ContactSyncError ===
 
-// Module 14478 (ContactSyncError)
+// Module 14491 (ContactSyncError)
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5378 */;
-import Text_Text from "Text/Text" /* 5761 */;
+import timing_timing from "timing/timing" /* 5380 */;
+import Text_Text from "Text/Text" /* 5763 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_4 = createStyles.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });
 let closure_5 = { code: "(function ContactSyncErrorTsx1(){let[withTiming,hasError,ERROR_HEIGHT]=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};})" };
 const size = fn(2);

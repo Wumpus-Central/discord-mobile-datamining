@@ -1,24 +1,24 @@
-// === Module 16761: UserPrimaryGuildListBottomSheet ===
+// === Module 16774: UserPrimaryGuildListBottomSheet ===
 
-// Module 16761 (UserPrimaryGuildListBottomSheet)
+// Module 16774 (UserPrimaryGuildListBottomSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import GuildIconDefault from "GuildIcon" /* 7098 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
-import Form from "Form" /* 8317 */;
-import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14947 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5152 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import GuildIconDefault from "GuildIcon" /* 7101 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
+import Form from "Form" /* 8322 */;
+import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14960 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8534).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8539).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" }, guildIcon: { marginLeft: 4 }, tag: { padding: 2 }, tagStyles: null, divider: null, itemTrailingStyle: null, searchContainer: null, searchRow: null, searchField: null, emptyState: null, noResults: null };
 const PlatformUtils = fn(1377);
 let num = 18;
@@ -48,10 +48,10 @@ let closure_11 = noop.memo(function Item(item) {
     if (profile != null) {
       badge = profile.badge;
     }
-    guildTagBadgeUrl = item(8877).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-    let obj = item(8877);
+    guildTagBadgeUrl = item(8882).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+    let obj = item(8882);
   }
-  const radioA11yNative = item(5208).useRadioA11yNative({ selected });
+  const radioA11yNative = item(5210).useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj3 = {
     start,
@@ -82,7 +82,7 @@ let closure_11 = noop.memo(function Item(item) {
   obj3.label = name;
   let tmp10Result = null;
   if (null != item) {
-    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(7098).GuildIconSizes.SMALL_32 };
+    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(7101).GuildIconSizes.SMALL_32 };
     tmp10Result = closure_7(GuildIconDefault, obj4);
   }
   obj3.icon = tmp10Result;
@@ -100,12 +100,12 @@ let closure_11 = noop.memo(function Item(item) {
     obj10.guildTag = tag;
     obj10.guildBadge = guildTagBadgeUrl;
     obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_7(tmp7(9440).BaseGuildTagChiplet, obj10);
+    tmp10Result2 = closure_7(tmp7(9447).BaseGuildTagChiplet, obj10);
   }
-  items = [tmp10Result2, closure_7(item(7203).FormRadio, { selected })];
+  items = [tmp10Result2, closure_7(item(7206).FormRadio, { selected })];
   obj5.children = items;
   obj3.trailing = closure_8(View, obj5);
-  return closure_7(item(7116).TableRow, obj3);
+  return closure_7(item(7119).TableRow, obj3);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");

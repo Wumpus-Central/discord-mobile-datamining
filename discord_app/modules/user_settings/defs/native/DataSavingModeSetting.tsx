@@ -1,20 +1,20 @@
-// === Module 17703: DataSavingModeSetting ===
+// === Module 17730: DataSavingModeSetting ===
 
-// Module 17703 (DataSavingModeSetting)
+// Module 17730 (DataSavingModeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 4966 */;
-import UserSettingsText from "UserSettingsText" /* 17701 */;
+import UserSettings from "UserSettings" /* 4968 */;
+import UserSettingsText from "UserSettingsText" /* 17728 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.ix8XIj);
   },
-  parent: fn(8573).MobileUserSettings.CHAT,
+  parent: fn(8578).MobileUserSettings.CHAT,
   useValue: function useDataSavingModeSettingValue() {
     items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);

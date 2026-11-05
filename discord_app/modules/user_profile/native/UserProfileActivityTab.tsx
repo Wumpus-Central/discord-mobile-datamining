@@ -1,9 +1,9 @@
-// === Module 15190: UserProfileActivityTab ===
+// === Module 15203: UserProfileActivityTab ===
 
-// Module 15190 (UserProfileActivityTab)
+// Module 15203 (UserProfileActivityTab)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 15195 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 15208 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ function RecentActivityIntroText() {
         accessibilityRole: "link",
         onPress() {
           const obj2 = { href: null };
-          const obj = learnMore(9085);
+          const obj = learnMore(9091);
           obj2.href = closure_1_1(2190).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
           return obj.handleClick(obj2);
         },
@@ -61,7 +61,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, sectionHeading: null, introText: null, learnMore: null, loading: null, loadingRow: null, loadingThumbnail: null, loadingLine: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.sectionHeading = { marginBottom: -nativeDefault.space.PX_8 };
@@ -84,13 +84,13 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(15191)({ userId: user.id, currentUserId: currentUser.id, guildId }));
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(15204)({ userId: user.id, currentUserId: currentUser.id, guildId }));
   if (!hasCurrentActivity) {
     if (!hasRecentActivity) {
       if (tmp4) {
         let tmp10Result = closure_5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(15194);
+        const tmp7 = user(15207);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -106,7 +106,7 @@ export default function UserProfileActivityTab(user) {
     const intl = user(1113).intl;
     obj3.heading = intl.string(user(1113).t.J6STd9);
     const obj4 = { user, currentUser, guildId, style: cardStyle };
-    obj3.children = closure_5(cardStyle(15054), obj4);
+    obj3.children = closure_5(cardStyle(15067), obj4);
     hasCurrentActivity = closure_5(Section, obj3);
   }
   items = [hasCurrentActivity, ];
@@ -125,5 +125,5 @@ export default function UserProfileActivityTab(user) {
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
   const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  const tmp3 = cardStyle(15191)({ userId: user.id, currentUserId: currentUser.id, guildId });
+  const tmp3 = cardStyle(15204)({ userId: user.id, currentUserId: currentUser.id, guildId });
 };

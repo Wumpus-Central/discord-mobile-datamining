@@ -1,18 +1,18 @@
-// === Module 13039: ConjureHomeCarousel ===
+// === Module 13046: ConjureHomeCarousel ===
 
-// Module 13039 (ConjureHomeCarousel)
+// Module 13046 (ConjureHomeCarousel)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import FastImageDefault from "FastImage" /* 5851 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9531 */;
-import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 13042 */;
-import SvgCss from "SvgCss" /* 13043 */;
-import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt" /* 13186 */;
-import conjureHomeInspirationEntries from "conjureHomeInspirationEntries" /* 13194 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import FastImageDefault from "FastImage" /* 5854 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9141 */;
+import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 13049 */;
+import SvgCss from "SvgCss" /* 13050 */;
+import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt" /* 13193 */;
+import conjureHomeInspirationEntries from "conjureHomeInspirationEntries" /* 13201 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 import AppStateStore from "AppStateStore" /* 2122 */;
 
 const require = globalThis.__r;
@@ -28,8 +28,8 @@ let closure_10 = 240 + nativeDefault.space.PX_24;
 const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
-let obj = { games: fn(9877).GameControllerIcon, apps: fn(8819).AppsIcon, profile_widget: fn(13040).WidgetsIcon, overlay_widget: fn(9737).ScreenIcon, automod: fn(11469).ShieldIcon, chat_bot: fn(12303).RobotIcon };
-const createStyles = fn(5141);
+let obj = { games: fn(9883).GameControllerIcon, apps: fn(8824).AppsIcon, profile_widget: fn(13047).WidgetsIcon, overlay_widget: fn(9743).ScreenIcon, automod: fn(11477).ShieldIcon, chat_bot: fn(12310).RobotIcon };
+const createStyles = fn(5143);
 let obj2 = { carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" }, item: null, promptRow: null, avatar: null, bubble: null, card: null, thumbnail: null, footer: null, categoryIcon: null, footerText: null };
 const rect = { position: "absolute", top: 0, left: 0, width: 240, gap: nativeDefault.space.PX_12 };
 obj2.item = rect;

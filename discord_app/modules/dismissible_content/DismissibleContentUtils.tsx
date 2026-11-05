@@ -1,21 +1,21 @@
-// === Module 4975: DismissibleContentUtils ===
+// === Module 4977: DismissibleContentUtils ===
 
-// Module 4975 (DismissibleContentUtils)
+// Module 4977 (DismissibleContentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4971 */;
-import dismissible_content from "dismissible_content" /* 4974 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4978 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 4981 */;
-import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4988 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5193 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5824 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5825 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4973 */;
+import dismissible_content from "dismissible_content" /* 4976 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4980 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 4983 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4990 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5195 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5826 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5827 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4977 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4979 */;
 
 const require = globalThis.__r;
 
@@ -439,13 +439,13 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4976).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4982);
+const DCFEventTypes = fn(4978).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4984);
 ({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: closure_10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(4974).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS];
+let items = [fn(4976).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
@@ -588,7 +588,7 @@ export function isTimeRecurringDismissibleContentDismissed(id, cooldownConfig) {
   }
   obj = NewUserDismissibleContentRegistry;
 }
-export function isTimeRecurringSnowflakeBoundDismissibleContentDismissed(THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, cooldownDurationMs) {
+export function isTimeRecurringSnowflakeBoundDismissibleContentDismissed(THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, timeRecurringConfig) {
   if (obj.disableNewUserDismissibleContent(THIRD_PARTY_OUTBOUND_PROMO_NAGBAR)) {
     return true;
   } else {
@@ -618,16 +618,16 @@ export function isTimeRecurringSnowflakeBoundDismissibleContentDismissed(THIRD_P
       }
     }
     let flag = false;
-    if (null != cooldownDurationMs) {
+    if (null != timeRecurringConfig) {
       flag = false;
       if (null != tmp8) {
         const _Date = Date;
-        const sum = tmp8 + cooldownDurationMs.cooldownDurationMs;
+        const sum = tmp8 + timeRecurringConfig.cooldownDurationMs;
         const timestamp = Date.now();
-        let tmp15 = null == cooldownDurationMs.showAfterTimestamp;
+        let tmp15 = null == timeRecurringConfig.showAfterTimestamp;
         if (!tmp15) {
-          tmp15 = timestamp >= cooldownDurationMs.showAfterTimestamp && tmp8 <= cooldownDurationMs.showAfterTimestamp;
-          const tmp16 = timestamp >= cooldownDurationMs.showAfterTimestamp && tmp8 <= cooldownDurationMs.showAfterTimestamp;
+          tmp15 = timestamp >= timeRecurringConfig.showAfterTimestamp && tmp8 <= timeRecurringConfig.showAfterTimestamp;
+          const tmp16 = timestamp >= timeRecurringConfig.showAfterTimestamp && tmp8 <= timeRecurringConfig.showAfterTimestamp;
         }
         flag = timestamp < sum || !tmp15;
         const tmp17 = timestamp < sum || !tmp15;
@@ -702,18 +702,18 @@ export function UNSAFE_isSnowflakeBoundGuildDismissibleContentDismissed(GDM_INVI
   }
   obj = NewUserDismissibleContentRegistry;
 }
-export function isDismissibleContentBlockedByOverlay(found1, arg1, arg2) {
+export function isDismissibleContentBlockedByOverlay(content, arg1, arg2) {
   let tmp = arg1;
   if (arg1) {
     let hasItem = null == arg2;
     if (hasItem) {
-      hasItem = set.has(found1);
+      hasItem = set.has(content);
     }
     tmp = !hasItem;
   }
   return tmp;
 }
-export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildId, arg2, arg3) {
+export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildId, arg2, guildId) {
   closure_0 = PASSWORDLESS_UPSELL;
   importDefault = guildId;
   let hasUserHitDCCapResult = closure_10(PASSWORDLESS_UPSELL);
@@ -729,8 +729,8 @@ export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildI
     if (arg2 == null) {
       flag = false;
     }
-    let tmp6 = arg3;
-    if (arg3 == null) {
+    let tmp6 = guildId;
+    if (guildId == null) {
       tmp6 = null;
     }
     if (flag) {

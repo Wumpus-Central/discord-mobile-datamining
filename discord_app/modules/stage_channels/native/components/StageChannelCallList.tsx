@@ -1,22 +1,22 @@
-// === Module 12222: StageChannelCallList ===
+// === Module 12231: StageChannelCallList ===
 
-// Module 12222 (StageChannelCallList)
+// Module 12231 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6894 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 11795 */;
-import SpeakerTile from "SpeakerTile" /* 12224 */;
-import StageSectionHeaderDefault from "StageSectionHeader" /* 12231 */;
-import StageGridRowDefault from "StageGridRow" /* 12232 */;
-import AudienceGridRowDefault from "AudienceGridRow" /* 12246 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6897 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11803 */;
+import SpeakerTile from "SpeakerTile" /* 12233 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 12240 */;
+import StageGridRowDefault from "StageGridRow" /* 12241 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 12255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StageChannelListStore = fn(12223);
+const StageChannelListStore = fn(12232);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: closure_6 } = StageChannelListStore);
-const MAX_AUDIENCE_ROW_LIMIT = fn(6844).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(6847).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let cutout = { direction: fn(1187).CutoutDirection.RIGHT, radius: 13, inset: -6 };
@@ -285,10 +285,10 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  const throttleDurationForChannel = width(12250).useThrottleDurationForChannel(channel.id);
+  const throttleDurationForChannel = width(12259).useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1493)().width;
-  let obj = width(12250);
-  isScreenLandscape = width(8914).useIsScreenLandscape();
+  let obj = width(12259);
+  isScreenLandscape = width(8919).useIsScreenLandscape();
   items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
     let num = 3;
@@ -302,7 +302,7 @@ export default function StageChannelCallList(channel) {
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj2 = width(8914);
-  const tmp4 = _slicedToArray(width(12250).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const obj2 = width(8919);
+  const tmp4 = _slicedToArray(width(12259).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
 };

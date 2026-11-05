@@ -1,10 +1,10 @@
-// === Module 17058: ChangeSpendingLimitModal ===
+// === Module 17082: ChangeSpendingLimitModal ===
 
-// Module 17058 (ChangeSpendingLimitModal)
+// Module 17082 (ChangeSpendingLimitModal)
 import nativeDefault from "native" /* 575 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
-import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+import NavigatorHeader from "NavigatorHeader" /* 7142 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,9 +16,9 @@ function ChangeSpendingLimitScreen(teenId) {
     if (1 === tmp7) {
       dependencyMap = 0;
       const intl = tmp3(1113).intl;
-      tmp3(5845).presentFailedToast(intl.string(v2(2667).Wu8BK2));
+      tmp3(5848).presentFailedToast(intl.string(v2(2667).Wu8BK2));
       c3 = 3;
-      tmp3(5845);
+      tmp3(5848);
     } else if (dependencyMap === 1) {
       c3 = 3;
       throw value;
@@ -26,11 +26,11 @@ function ChangeSpendingLimitScreen(teenId) {
       const obj7 = { text: null, variant: "success" };
       const intl2 = tmp3(1113).intl;
       obj7.text = intl2.string(v2(2667)["2WKfG1"]);
-      v2(5846).open("SPENDING_CONTROLS_CHANGED", obj7);
-      v2(5846);
-      v2(6879).pop();
+      v2(5849).open("SPENDING_CONTROLS_CHANGED", obj7);
+      v2(5849);
+      v2(6882).pop();
       dependencyMap = 0;
-      v2(6879);
+      v2(6882);
     }
     return value;
   };
@@ -42,8 +42,8 @@ function ChangeSpendingLimitScreen(teenId) {
   if (null != monthlySpend) {
     formatPriceResult = null;
     if (monthlySpend > 0) {
-      formatPriceResult = tmp2(7553).formatPrice(monthlySpend, tmp5);
-      const tmp2Result = tmp2(7553);
+      formatPriceResult = tmp2(7555).formatPrice(monthlySpend, tmp5);
+      const tmp2Result = tmp2(7555);
     }
   }
   const obj2 = { spacing: nativeDefault.space.PX_16, children: null };
@@ -95,10 +95,10 @@ function ChangeSpendingLimitScreen(teenId) {
     const obj8 = { children: null };
     items1[2] = null;
     obj4.children = items1;
-    items[1] = closure_7(tmp2(6162).Stack, obj4);
+    items[1] = closure_7(tmp2(6165).Stack, obj4);
     obj2.children = items;
-    obj8.children = closure_7(tmp2(6162).Stack, obj2);
-    const items3 = [closure_6(tmp2(8113).ModalContent, obj8), ];
+    obj8.children = closure_7(tmp2(6165).Stack, obj2);
+    const items3 = [closure_6(tmp2(8118).ModalContent, obj8), ];
     if (isClearingCap) {
       const obj9 = { variant: "destructive", text: null, onPress: null, disabled: null, loading: null };
       const intl8 = tmp2(1113).intl;
@@ -122,27 +122,27 @@ function ChangeSpendingLimitScreen(teenId) {
     const obj11 = { children: null };
     const obj12 = { children: null };
     const obj13 = { children: null };
-    const items4 = [closure_6(tmp2(5768).Button, obj10), ];
+    const items4 = [closure_6(tmp2(5770).Button, obj10), ];
     const obj14 = { variant: "tertiary", text: null, onPress: null };
     const intl9 = tmp2(1113).intl;
     obj14.text = intl9.string(tmp2(1113).t["ETE/oC"]);
-    obj14.onPress = tmp10(6879).pop;
-    items4[1] = closure_6(tmp2(5768).Button, obj14);
+    obj14.onPress = tmp10(6882).pop;
+    items4[1] = closure_6(tmp2(5770).Button, obj14);
     obj13.children = items4;
-    obj12.children = closure_7(tmp2(6902).ButtonGroup, obj13);
-    items3[1] = closure_6(tmp2(13428).ModalFooter, obj12);
+    obj12.children = closure_7(tmp2(6905).ButtonGroup, obj13);
+    items3[1] = closure_6(tmp2(13453).ModalFooter, obj12);
     obj11.children = items3;
-    return closure_7(tmp2(8112).ModalScreen, obj11);
+    return closure_7(tmp2(8117).ModalScreen, obj11);
   } else if (isOverspending) {
     const obj15 = { style: formatToPlainStringResult.warningRow, children: null };
     const obj16 = { size: "xs", color: tmp10(575).colors.ICON_FEEDBACK_WARNING };
-    const items5 = [closure_6(tmp2(8166).WarningIcon, obj16), ];
+    const items5 = [closure_6(tmp2(8171).WarningIcon, obj16), ];
     const obj17 = { variant: "body-sm/normal", style: formatToPlainStringResult.warningText, children: null };
     const intl6 = tmp2(1113).intl;
     const obj18 = { amount: formatPriceResult, date: renewalDate };
     formatToPlainStringResult = intl6.formatToPlainString(tmp10(2667).Tk6x4X, obj18);
     obj17.children = formatToPlainStringResult;
-    items5[1] = closure_6(tmp2(5761).Text, obj17);
+    items5[1] = closure_6(tmp2(5763).Text, obj17);
     obj15.children = items5;
     let tmp9Result1 = closure_7(closure_5, obj15);
   } else {
@@ -150,7 +150,7 @@ function ChangeSpendingLimitScreen(teenId) {
     const intl5 = tmp2(1113).intl;
     const obj20 = { amount: formatPriceResult };
     obj19.children = intl5.formatToPlainString(tmp10(2667).pfAlRY, obj20);
-    tmp9Result1 = closure_6(tmp2(5761).Text, obj19);
+    tmp9Result1 = closure_6(tmp2(5763).Text, obj19);
   }
   const obj = require("ChangeSpendingLimitFormState");
   tmp7 = amountInput.length > 0;
@@ -159,7 +159,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { warningOverlay: null, warningRow: null, warningText: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -187,7 +187,7 @@ export default function ChangeSpendingLimitModal(teenId) {
         const obj = { variant: "body-md/semibold", children: null };
         const intl = teenId(1113).intl;
         obj.children = intl.string(closure_1_1(2667).xMRO6A);
-        return closure_1_6(teenId(5761).Text, obj);
+        return closure_1_6(teenId(5763).Text, obj);
       },
       render() {
         return closure_2_6(ChangeSpendingLimitScreen, { teenId });
@@ -199,5 +199,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1113).intl;
   obj.headerBackTitle = intl.string(teenId(1113).t["13/7kX"]);
-  return closure_6(teenId(11671).Modal, obj);
+  return closure_6(teenId(11679).Modal, obj);
 };

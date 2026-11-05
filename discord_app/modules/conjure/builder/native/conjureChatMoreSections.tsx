@@ -1,11 +1,11 @@
-// === Module 12418: conjureChatMoreSections ===
+// === Module 12425: conjureChatMoreSections ===
 
-// Module 12418 (conjureChatMoreSections)
-import conjureProjectMute from "conjureProjectMute" /* 11057 */;
-import conjureProjectActions from "conjureProjectActions" /* 12423 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 12425 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 12429 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+// Module 12425 (conjureChatMoreSections)
+import conjureProjectMute from "conjureProjectMute" /* 11063 */;
+import conjureProjectActions from "conjureProjectActions" /* 12430 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 12432 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 12436 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

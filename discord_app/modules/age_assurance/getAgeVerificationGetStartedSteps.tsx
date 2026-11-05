@@ -1,10 +1,10 @@
-// === Module 8299: getAgeVerificationGetStartedSteps ===
+// === Module 8304: getAgeVerificationGetStartedSteps ===
 
-// Module 8299 (getAgeVerificationGetStartedSteps)
+// Module 8304 (getAgeVerificationGetStartedSteps)
 import Constants from "Constants" /* 1072 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6867 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8100 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -33,7 +33,7 @@ export function getAgeVerificationGetStartedSteps(modalSessionId) {
   obj3.description = intl6.format(require("util").t.n5vd1E, {
     handleOnHelpUrlHook() {
       const obj = AgeVerificationActionCreatorsDefault;
-      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_VERIFICATION_SYSTEM_DMS));
+      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SYSTEM_DMS));
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(closure_0, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.SYSTEM_DMS_LEARN_MORE);
     }
   });

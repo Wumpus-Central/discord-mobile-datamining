@@ -1,13 +1,13 @@
-// === Module 7862: CollectiblesProductRecord ===
+// === Module 7867: CollectiblesProductRecord ===
 
-// Module 7862 (CollectiblesProductRecord)
+// Module 7867 (CollectiblesProductRecord)
 import getPricesFromServerDefault from "getPricesFromServer" /* 2172 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7863 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7869 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7868 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7874 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7864);
+const CollectiblesItemRecord = fn(7869);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } = CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1072);
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "ix", items: "<string:587742472>", categorySkuId: "<string:1502171498>", categoryWillUnpublishAt: "<string:138217539>", isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: true, bundledProducts: true, isFirstParty: true };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "ao", items: -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001615083636959319, categorySkuId: 0.0000000000000000000000000000000000000000000001972286534921061, categoryWillUnpublishAt: 994652482892173300000000000000000000000000000000000000000000000000000000000000000000000, isCategoryReward: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000042336525053709615, prices: false, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: null, isFirstParty: null };
               let str;
               if (first != null) {
                 str = first.optionValue;

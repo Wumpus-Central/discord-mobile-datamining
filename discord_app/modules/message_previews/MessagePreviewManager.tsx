@@ -1,19 +1,19 @@
-// === Module 17558: MessagePreviewManager ===
+// === Module 17584: MessagePreviewManager ===
 
-// Module 17558 (MessagePreviewManager)
+// Module 17584 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 17559 */;
+import RemoteFetchData from "RemoteFetchData" /* 17585 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6703 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6706 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15850 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15863 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
 
 require = fn;
-const isThread = fn(4994).isThread;
+const isThread = fn(4996).isThread;
 const Endpoints = fn(1072).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {
@@ -103,7 +103,7 @@ class MessagePreviewManager extends tmp3 {
               closure_131_4 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "flexDirection", done: null };
+              return { value: "flexDirection", done: true };
             }
           } else {
             if (1 === tmp4) {

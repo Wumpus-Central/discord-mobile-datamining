@@ -1,37 +1,33 @@
-// === Module 19846: InterestGuildsResource ===
+// === Module 19881: InterestGuildsResource ===
 
-// Module 19846 (InterestGuildsResource)
+// Module 19881 (InterestGuildsResource)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-function availableInterestGuilds(degraded) {
-  if (degraded.degraded) {
-    return [];
-  } else {
-    const _Set = Set;
-    const set = new Set();
-    const guilds = degraded.guilds;
-    const found = guilds.filter((joined) => {
-      joined = joined.joined;
-      let flag = !joined;
-      if (!joined) {
-        flag = !set.has(joined.id);
-      }
-      if (flag) {
-        set.add(joined.id);
-        flag = true;
-      }
-      return flag;
-    });
-    return found.slice(0, 15);
-  }
+function availableInterestGuilds(guilds) {
+  const set = new Set();
+  guilds = guilds.guilds;
+  const found = guilds.filter((joined) => {
+    joined = joined.joined;
+    let flag = !joined;
+    if (!joined) {
+      flag = !set.has(joined.id);
+    }
+    if (flag) {
+      set.add(joined.id);
+      flag = true;
+    }
+    return flag;
+  });
+  return found.slice(0, 15);
 }
+const MAX_SELECTIONS = fn(18715).MAX_SELECTIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildsResource.tsx");
 class InterestGuildsResource {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
-    obj.snapshot = { key: "", status: "idle", guilds: [] };
+    obj.snapshot = { key: "", status: "idle", guilds: [], failed: false };
     set = new Set();
     obj.listeners = set;
     obj.disposed = false;
@@ -58,30 +54,30 @@ class InterestGuildsResource {
         const _Array = Array;
         const _Set = Set;
         const set = new Set(items);
-        const substr = Array.from(set).slice(0, 5);
+        const substr = Array.from(set).slice(0, MAX_SELECTIONS);
         const sorted = substr.sort();
         const joined = sorted.join(",");
-        if (tmp9) {
+        if (tmp10) {
           const _Array2 = Array;
           const _Set2 = Set;
           const set1 = new Set(items);
-          obj.gameIds = Array.from(set1).slice(0, 5);
+          obj.gameIds = Array.from(set1).slice(0, MAX_SELECTIONS);
           obj.requestId = obj.requestId + 1;
           if ("" !== joined) {
-            const obj2 = { key: joined, status: "loading", guilds: [] };
+            const obj2 = { key: joined, status: "loading", guilds: [], failed: false };
             obj.publish(obj2);
             items = [];
             ({ load, requestId } = obj);
             HermesBuiltin.arraySpread(obj.gameIds, 0);
             load(requestId, joined, items);
           } else {
-            const obj3 = { key: joined, status: "idle", guilds: [] };
+            const obj3 = { key: joined, status: "idle", guilds: [], failed: false };
             obj.publish(obj3);
           }
           const arr2 = Array.from(set1);
         }
         const arr = Array.from(set);
-        tmp9 = joined !== obj.snapshot.key || flag;
+        tmp10 = joined !== obj.snapshot.key || flag;
       }
     };
     obj.retry = function retry() {
@@ -108,8 +104,8 @@ prototype["load"] = function load(arg0, arg1, arg2) {
   closure_2 = arg2;
   const self = this;
   return (async () => {
-    if (c5 === 2) {
-      c5 = 3;
+    if (c4 === 2) {
+      c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
@@ -122,67 +118,69 @@ prototype["load"] = function load(arg0, arg1, arg2) {
       }
     } else {
       try {
-        c5 = 2;
-        if (0 === c4) {
+        c4 = 2;
+        if (0 === c3) {
           if (arg0 === 1) {
-            c5 = 3;
+            c4 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c5 = 3;
+            c4 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_2 = tmp3;
-            closure_1 = tmp7;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            c3 = 1;
-            closure_0 = closure_1;
-            c4 = 2;
-            c5 = 1;
+            closure_1 = tmp3;
+            closure_0 = tmp7;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
+            let v0 = 1;
+            c3 = 2;
+            c4 = 1;
             const obj4 = { value: self.fetchGuilds(closure_2), done: false };
             return obj4;
           }
         } else {
           if (1 === tmp7) {
-            c3 = 0;
-            const obj5 = { key: closure_130_1, guilds: [], status: "unavailable" };
-            closure_129_0 = obj5;
+            v0 = 0;
+            const obj5 = { key: closure_129_1, guilds: [], status: "unavailable", failed: true };
+            closure_128_0 = obj5;
           } else if (arg0 === 1) {
-            c5 = 3;
+            c4 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c3 = 0;
-            c5 = 3;
+            v0 = 0;
+            c4 = 3;
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            closure_129_1 = closure_0(value);
-            const obj = { key: closure_130_1, guilds: closure_129_1, status: null };
+            closure_128_1 = value;
+            closure_128_2 = v0(closure_128_1);
+            const obj = { key: closure_129_1, guilds: closure_128_2, status: null, failed: null };
             let str = "unavailable";
-            if (closure_129_1.length > 0) {
+            if (closure_128_2.length > 0) {
               str = "ready";
             }
             obj.status = str;
-            closure_129_0 = obj;
-            c3 = 0;
+            obj.failed = closure_128_1.degraded;
+            closure_128_0 = obj;
+            v0 = 0;
           }
-          let disposed = closure_130_3.disposed;
+          let disposed = closure_129_3.disposed;
           if (!disposed) {
-            disposed = closure_130_0 !== closure_130_3.requestId;
+            disposed = closure_129_0 !== closure_129_3.requestId;
           }
           if (!disposed) {
-            closure_130_3.publish(closure_129_0);
+            closure_129_3.publish(closure_128_0);
           }
-          c5 = 3;
+          c4 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } catch (tmp31) {
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp31;
+      } catch (tmp32) {
+        if (tmp4 === v0) {
+          c4 = tmp2;
+          throw tmp32;
         } else {
-          c4 = tmp;
+          c3 = tmp;
         }
       }
     }
@@ -191,7 +189,7 @@ prototype["load"] = function load(arg0, arg1, arg2) {
 
 export function interestGuildsKey(items) {
   const set = new Set(items);
-  const substr = Array.from(new Set(items)).slice(0, 5);
+  const substr = Array.from(new Set(items)).slice(0, MAX_SELECTIONS);
   const sorted = substr.sort();
   return sorted.join(",");
 }

@@ -1,6 +1,6 @@
-// === Module 15533: ? ===
+// === Module 15546: ? ===
 
-// Module 15533
+// Module 15546
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/images/perks/xbox_game_pass.jpg.js");

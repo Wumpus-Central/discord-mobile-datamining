@@ -1,19 +1,19 @@
-// === Module 15140: StreamingTier10LargeBadge ===
+// === Module 15153: StreamingTier10LargeBadge ===
 
-// Module 15140 (StreamingTier10LargeBadge)
-import assetHelpers from "assetHelpers" /* 7210 */;
-import _modDef15141 from "module_15141" /* 15141 */;
-import _modDef15142 from "module_15142" /* 15142 */;
-import _modDef15143 from "module_15143" /* 15143 */;
+// Module 15153 (StreamingTier10LargeBadge)
+import assetHelpers from "assetHelpers" /* 7213 */;
+import _modDef15154 from "module_15154" /* 15154 */;
+import _modDef15155 from "module_15155" /* 15155 */;
+import _modDef15156 from "module_15156" /* 15156 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15141 }, 3: null };
-let obj2 = { uri: _modDef15141 };
-obj[2] = { uri: _modDef15142 };
-const obj3 = { uri: _modDef15142 };
-obj[3] = { uri: _modDef15143 };
+let obj = { 1: null, 2: { uri: _modDef15154 }, 3: null };
+let obj2 = { uri: _modDef15154 };
+obj[2] = { uri: _modDef15155 };
+const obj3 = { uri: _modDef15155 };
+obj[3] = { uri: _modDef15156 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StreamingTier10LargeBadge.native.tsx");
 

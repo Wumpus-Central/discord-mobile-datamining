@@ -1,9 +1,9 @@
-// === Module 17968: DevToolsGuildTagBadgesScreen ===
+// === Module 17996: DevToolsGuildTagBadgesScreen ===
 
-// Module 17968 (DevToolsGuildTagBadgesScreen)
+// Module 17996 (DevToolsGuildTagBadgesScreen)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import badges_GuildBadge from "badges/GuildBadge" /* 15987 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import badges_GuildBadge from "badges/GuildBadge" /* 15999 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(8534);
+const GuildTagConstants = fn(8539);
 ({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6, GUILD_TAG_BADGE_PALETTE_PRESETS, GuildTagBadgeKind } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8 } = jsxProd);
@@ -25,9 +25,9 @@ let closure_9 = found.map((item) => {
   [tmp, tmp2] = item;
   return { name, value };
 });
-let items = [{ label: "Untinted", primary: "diversity", secondary: "d" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({ label: "P" + index + 1, primary: primary.primary, secondary: primary.secondary }))];
+let items = [{ label: "Untinted", primary: "displayName", secondary: "d" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({ label: "P" + index + 1, primary: primary.primary, secondary: primary.secondary }))];
 const dependencyMap = [24, 48, 72];
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, controlRow: null, grid: null, tile: null, badgeBox: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };

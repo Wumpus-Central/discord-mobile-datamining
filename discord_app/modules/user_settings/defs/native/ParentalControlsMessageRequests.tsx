@@ -1,18 +1,19 @@
-// === Module 18189: ParentalControlsMessageRequests ===
+// === Module 18217: ParentalControlsMessageRequests ===
 
-// Module 18189 (ParentalControlsMessageRequests)
+// Module 18217 (ParentalControlsMessageRequests)
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
-import useSelectedTeen from "useSelectedTeen" /* 8512 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16968 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16969 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 18175 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6867 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8100 */;
+import useSelectedTeen from "useSelectedTeen" /* 8517 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16991 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16992 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16996 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 18203 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7860 */;
 
 require = fn;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -22,7 +23,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(_modDef2667["7aYkh1"]);
   },
-  parent: fn(8573).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8578).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();
@@ -47,7 +48,7 @@ const toggle = SettingBuilders.createToggle({
         obj = DefaultDMSettingsExperiment;
       }
       const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
-      const result1 = ParentalControlledDefaultMessageRequestRestricted.updateControlledSetting(selectedTeenId, !arg0);
+      FamilyCenterSaveErrorUtils.showToastIfSaveFails(ParentalControlledDefaultMessageRequestRestricted.updateControlledSetting(selectedTeenId, !arg0));
     }
   },
   unsearchable: true

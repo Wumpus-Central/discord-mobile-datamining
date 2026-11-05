@@ -1,20 +1,20 @@
-// === Module 12801: conjureScopeSetup ===
+// === Module 12808: conjureScopeSetup ===
 
-// Module 12801 (conjureScopeSetup)
+// Module 12808 (conjureScopeSetup)
 import Storage6 from "Storage" /* 510 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import createNonce from "createNonce" /* 10493 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11053 */;
-import ConjureChatActionCreators from "ConjureChatActionCreators" /* 12803 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12804 */;
+import createNonce from "createNonce" /* 10499 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11059 */;
+import ConjureChatActionCreators from "ConjureChatActionCreators" /* 12810 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12811 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureChatStore from "ConjureChatStore" /* 11029 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12802 */;
-import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 11028 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureChatStore from "ConjureChatStore" /* 11035 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12809 */;
+import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 11034 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 require = fn;
 function _toPropertyKey(obj) {
@@ -151,7 +151,7 @@ let closure_20 = async function _putInstallScope(arg0) {
     }
   })();
 };
-let ConjureConnectionStore = fn(11028);
+let ConjureConnectionStore = fn(11034);
 ({ optimisticMessageId: metroImportDefault, sendUserMessage: closure_8, showUserMessage: closure_9, withdrawUserMessage: closure_10 } = ConjureConnectionStore);
 let ConjureConnectionStore = ConjureConnectionStore_mod;
 const Endpoints = fn(1072).Endpoints;

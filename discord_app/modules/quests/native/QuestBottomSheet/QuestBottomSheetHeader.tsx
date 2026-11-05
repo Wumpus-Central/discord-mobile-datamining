@@ -1,12 +1,12 @@
-// === Module 17346: QuestBottomSheetHeader ===
+// === Module 17372: QuestBottomSheetHeader ===
 
-// Module 17346 (QuestBottomSheetHeader)
+// Module 17372 (QuestBottomSheetHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6156 */;
-import QuestTypes from "QuestTypes" /* 6919 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8008 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 17345 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6159 */;
+import QuestTypes from "QuestTypes" /* 6922 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8013 */;
+import QuestBottomSheet from "QuestBottomSheet" /* 17371 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { display: "flex", gap: 6, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 }, containerWithActionSheet: null, title: null, titleWithActionSheet: null, actionSheetButton: null };
 let obj3 = { display: "flex", gap: 6, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 };
 obj2.containerWithActionSheet = { alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_8 };
@@ -34,8 +34,8 @@ export default function QuestBottomSheetHeader(arg0) {
   let isScreenReaderEnabled;
   let ref;
   let tmp = closure_9();
-  const questCreative = isScreenReaderEnabled(17347).useQuestCreative(quest);
-  let obj = isScreenReaderEnabled(17347);
+  const questCreative = isScreenReaderEnabled(17373).useQuestCreative(quest);
+  let obj = isScreenReaderEnabled(17373);
   closure_129_0 = quest;
   closure_129_1 = step;
   closure_129_2 = undefined;
@@ -50,40 +50,40 @@ export default function QuestBottomSheetHeader(arg0) {
   closure_129_11 = undefined;
   const userStatus = quest.userStatus;
   let completedAt;
-  let obj2 = isScreenReaderEnabled(17316);
+  let obj2 = isScreenReaderEnabled(17342);
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
   closure_129_2 = tmp7;
   const gameTitle = quest.config.messages.gameTitle;
   closure_129_3 = gameTitle;
-  const actionSheetPressHandler = isScreenReaderEnabled(17316).useActionSheetPressHandler(questCreative);
-  const questTaskDetails = isScreenReaderEnabled(9831).useQuestTaskDetails(quest);
-  const tmp2Result = isScreenReaderEnabled(9831);
-  const hasWatchVideoTasksResult = isScreenReaderEnabled(8008).hasWatchVideoTasks(quest);
+  const actionSheetPressHandler = isScreenReaderEnabled(17342).useActionSheetPressHandler(questCreative);
+  const questTaskDetails = isScreenReaderEnabled(9837).useQuestTaskDetails(quest);
+  const tmp2Result = isScreenReaderEnabled(9837);
+  const hasWatchVideoTasksResult = isScreenReaderEnabled(8013).hasWatchVideoTasks(quest);
   closure_129_4 = hasWatchVideoTasksResult;
-  const tmp2Result9 = isScreenReaderEnabled(8008);
-  const isInGameQuestResult = isScreenReaderEnabled(8008).isInGameQuest(quest);
+  const tmp2Result9 = isScreenReaderEnabled(8013);
+  const isInGameQuestResult = isScreenReaderEnabled(8013).isInGameQuest(quest);
   closure_129_5 = isInGameQuestResult;
-  const tmp2Result10 = isScreenReaderEnabled(8008);
-  const first = _slicedToArray(isScreenReaderEnabled(9831).useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
+  const tmp2Result10 = isScreenReaderEnabled(8013);
+  const first = _slicedToArray(isScreenReaderEnabled(9837).useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
   closure_129_6 = first;
   const targetMinutes = questTaskDetails.targetMinutes;
   closure_129_7 = targetMinutes;
   items = [quest];
   const memo = noop.useMemo(() => QuestTaskUtils.hasStreamOnDesktopTask({ quest: isScreenReaderEnabled }), items);
   closure_129_8 = memo;
-  const tmp2Result11 = isScreenReaderEnabled(9831);
-  const hasWatchVideoOnMobileTasks = isScreenReaderEnabled(17315).useHasWatchVideoOnMobileTasks(quest.config);
+  const tmp2Result11 = isScreenReaderEnabled(9837);
+  const hasWatchVideoOnMobileTasks = isScreenReaderEnabled(17341).useHasWatchVideoOnMobileTasks(quest.config);
   closure_129_9 = hasWatchVideoOnMobileTasks;
-  const tmp2Result12 = isScreenReaderEnabled(17315);
+  const tmp2Result12 = isScreenReaderEnabled(17341);
   const items1 = [UserStore];
   const stateFromStores = isScreenReaderEnabled(504).useStateFromStores(items1, () => currentUser.getCurrentUser());
   const tmp2Result13 = isScreenReaderEnabled(504);
-  const defaultRewardNameWithArticle = isScreenReaderEnabled(9850).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
+  const defaultRewardNameWithArticle = isScreenReaderEnabled(9856).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
   closure_129_10 = defaultRewardNameWithArticle;
-  const tmp2Result14 = isScreenReaderEnabled(9850);
-  const isSponsoredPlayQuestResult = isScreenReaderEnabled(8006).isSponsoredPlayQuest(quest);
+  const tmp2Result14 = isScreenReaderEnabled(9856);
+  const isSponsoredPlayQuestResult = isScreenReaderEnabled(8011).isSponsoredPlayQuest(quest);
   closure_129_11 = isSponsoredPlayQuestResult;
   const items2 = [null != completedAt, hasWatchVideoTasksResult, step, first, memo, gameTitle, defaultRewardNameWithArticle, targetMinutes, hasWatchVideoOnMobileTasks, isInGameQuestResult, isSponsoredPlayQuestResult, quest.config];
   const memo1 = noop.useMemo(() => {
@@ -134,8 +134,8 @@ export default function QuestBottomSheetHeader(arg0) {
       return stringResult;
     }
   }, items2);
-  const tmp2Result15 = isScreenReaderEnabled(8006);
-  isScreenReaderEnabled = isScreenReaderEnabled(5398).useIsScreenReaderEnabled();
+  const tmp2Result15 = isScreenReaderEnabled(8011);
+  isScreenReaderEnabled = isScreenReaderEnabled(5400).useIsScreenReaderEnabled();
   ref = noop.useRef(null);
   const items3 = [isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
@@ -166,7 +166,7 @@ export default function QuestBottomSheetHeader(arg0) {
     items5[1] = titleWithActionSheet;
     obj4.style = items5;
     obj4.children = memo1;
-    tmp24Result = closure_7(tmp2(5761).Text, obj4);
+    tmp24Result = closure_7(tmp2(5763).Text, obj4);
   }
   const items6 = [tmp24Result, ];
   if (withActionSheet) {
@@ -176,8 +176,8 @@ export default function QuestBottomSheetHeader(arg0) {
     obj5.onPress = actionSheetPressHandler;
     obj5.style = tmp.actionSheetButton;
     let obj6 = { color: ref(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    obj5.children = closure_7(tmp2(9906).MoreHorizontalIcon, obj6);
-    withActionSheet = closure_7(tmp2(7121).PressableOpacity, obj5);
+    obj5.children = closure_7(tmp2(9912).MoreHorizontalIcon, obj6);
+    withActionSheet = closure_7(tmp2(7124).PressableOpacity, obj5);
   }
   items6[1] = withActionSheet;
   obj3.children = items6;

@@ -1,9 +1,9 @@
-// === Module 9906: MoreHorizontalIcon ===
+// === Module 9912: MoreHorizontalIcon ===
 
-// Module 9906 (MoreHorizontalIcon)
+// Module 9912 (MoreHorizontalIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod9352 from "module_9352" /* 9352 */;
+import BaseIconImage from "BaseIconImage" /* 5853 */;
+import _mod9359 from "module_9359" /* 9359 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MoreHorizontalIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9352, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9359, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

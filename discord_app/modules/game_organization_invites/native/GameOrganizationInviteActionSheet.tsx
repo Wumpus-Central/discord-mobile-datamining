@@ -1,17 +1,18 @@
-// === Module 16034: GameOrganizationInviteActionSheet ===
+// === Module 16046: GameOrganizationInviteActionSheet ===
 
-// Module 16034 (GameOrganizationInviteActionSheet)
+// Module 16046 (GameOrganizationInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2533 from "module_2533" /* 2533 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import Stack_Stack from "Stack/Stack" /* 6162 */;
-import Search_SearchBar from "Search/SearchBar" /* 7355 */;
-import ActionSheet from "ActionSheet" /* 7502 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9273 */;
-import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 16035 */;
-import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 16036 */;
-import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 16037 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import Stack_Stack from "Stack/Stack" /* 6165 */;
+import Search_SearchBar from "Search/SearchBar" /* 7358 */;
+import ActionSheet from "ActionSheet" /* 7504 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9280 */;
+import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 16047 */;
+import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 16048 */;
+import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 16049 */;
+import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 16050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +29,7 @@ function Loading() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -36,7 +37,7 @@ const result = size.fileFinishedImporting("modules/game_organization_invites/nat
 
 export default function GameOrganizationInviteActionSheet(guildId) {
   const tmp = closure_6();
-  ({ users, isLoading, search } = useGameOrganizationInviteSuggestionsDefault());
+  ({ users, isLoading, hasNoFriends, search } = useGameOrganizationInviteSuggestionsDefault());
   const tmp4 = useGameOrganizationInviteSuggestionsDefault();
   ({ getSendState, handleInvite } = useLinkedGameOrganizationInviteSenderDefault(guildId.guildId));
   const intl = util.intl;
@@ -64,6 +65,8 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   obj.header = hasOwnProperty(Stack_Stack.Stack, obj2);
   if (isLoading) {
     let tmp7Result = React4(Loading, {});
+  } else if (hasNoFriends) {
+    tmp7Result = React4(GameOrganizationInviteNoFriendsDefault, {});
   } else {
     const obj7 = { users, getSendState, onInvite: handleInvite };
     tmp7Result = React4(GameOrganizationInviteListDefault, obj7);

@@ -1,21 +1,21 @@
-// === Module 12972: ConjureClarificationEntityPicker ===
+// === Module 12979: ConjureClarificationEntityPicker ===
 
-// Module 12972 (ConjureClarificationEntityPicker)
+// Module 12979 (ConjureClarificationEntityPicker)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5382 */;
-import TableRow from "TableRow" /* 7116 */;
-import TableRowGroup from "TableRowGroup" /* 7201 */;
-import ConjureUtils from "ConjureUtils" /* 7559 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11388 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 12357 */;
-import ConjureClarification from "ConjureClarification" /* 12805 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12816 */;
-import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12973 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12974 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5384 */;
+import TableRow from "TableRow" /* 7119 */;
+import TableRowGroup from "TableRowGroup" /* 7204 */;
+import ConjureUtils from "ConjureUtils" /* 7561 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11396 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 12364 */;
+import ConjureClarification from "ConjureClarification" /* 12812 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12823 */;
+import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12980 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12981 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 5071 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import GuildChannelStore from "GuildChannelStore" /* 5073 */;
+import GuildStore from "GuildStore" /* 5014 */;
 
 require = fn;
 function ServerPicker(onChange) {

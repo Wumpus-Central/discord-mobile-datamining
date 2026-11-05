@@ -1,17 +1,17 @@
-// === Module 17046: FamilyCenterActivityTotal ===
+// === Module 17070: FamilyCenterActivityTotal ===
 
-// Module 17046 (FamilyCenterActivityTotal)
+// Module 17070 (FamilyCenterActivityTotal)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8513 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 17045 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8518 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 17069 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LEDGE);
 obj2.container = { display: "flex", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, padding: 12, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };

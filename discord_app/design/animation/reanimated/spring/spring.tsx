@@ -1,9 +1,9 @@
-// === Module 5771: spring/spring ===
+// === Module 5773: spring/spring ===
 
-// Module 5771 (spring/spring)
+// Module 5773 (spring/spring)
 import _mod1652 from "module_1652" /* 1652 */;
-import ReanimatedConstants from "ReanimatedConstants" /* 5379 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5380 */;
+import ReanimatedConstants from "ReanimatedConstants" /* 5381 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5382 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function withSpring_springTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){let[accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE,ReduceMotion,REAwithSpring]=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithSpring(toValue,configForRea,callback);})" }, reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, ReanimatedConstants.CONFIG_NEVER_ANIMATE, _mod1652.ReduceMotion, _mod1652.withSpring];
@@ -12,7 +12,7 @@ let c1;
 let c2;
 let c3;
 [tmp2, tmp3, tmp4, tmp5, tmp6] = items;
-function withSpring(PX_16, Reanimated3DefaultSpringConfig, arg2) {
+function withSpring(_undefined2, Reanimated3DefaultSpringConfig, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "respect-motion-settings";
@@ -33,7 +33,7 @@ function withSpring(PX_16, Reanimated3DefaultSpringConfig, arg2) {
   } else {
     tmp3 = c1;
   }
-  return _undefined2(PX_16, tmp3, BalanceCounterTsx1);
+  return _undefined2(_undefined2, tmp3, BalanceCounterTsx1);
 }
 const items1 = [tmp3, tmp4, tmp5, tmp6];
 withSpring.__closure = items1;

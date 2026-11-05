@@ -1,10 +1,10 @@
-// === Module 13225: openConjureProjectsSheet ===
+// === Module 13232: openConjureProjectsSheet ===
 
-// Module 13225 (openConjureProjectsSheet)
+// Module 13232 (openConjureProjectsSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11157 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 11165 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 require = fn;
 const size = fn(2);
@@ -18,8 +18,8 @@ export default function openConjureProjectsSheet() {
       }
     }
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13226, dependencyMap.paths), "ConjureProjectsSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13233, dependencyMap.paths), "ConjureProjectsSheet");
 };
 export function openConjureProjectsSheetForGuild(guildId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13226, dependencyMap.paths), "ConjureProjectsSheet", { guildId });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13233, dependencyMap.paths), "ConjureProjectsSheet", { guildId });
 }

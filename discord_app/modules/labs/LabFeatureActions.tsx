@@ -1,8 +1,8 @@
-// === Module 17782: LabFeatureActions ===
+// === Module 17810: LabFeatureActions ===
 
-// Module 17782 (LabFeatureActions)
+// Module 17810 (LabFeatureActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LabFeatureStore from "LabFeatureStore" /* 8703 */;
+import LabFeatureStore from "LabFeatureStore" /* 8708 */;
 
 let closure_3 = {};
 const size = fn(2);

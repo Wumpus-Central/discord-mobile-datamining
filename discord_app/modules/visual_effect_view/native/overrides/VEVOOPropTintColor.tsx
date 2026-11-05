@@ -1,13 +1,13 @@
-// === Module 18234: VEVOOPropTintColor ===
+// === Module 18262: VEVOOPropTintColor ===
 
-// Module 18234 (VEVOOPropTintColor)
+// Module 18262 (VEVOOPropTintColor)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import ColorUtils from "ColorUtils" /* 5138 */;
-import FormSwitch from "FormSwitch" /* 7506 */;
-import Form from "Form" /* 8317 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16696 */;
-import VEVOO from "VEVOO" /* 18231 */;
+import ColorUtils from "ColorUtils" /* 5140 */;
+import FormSwitch from "FormSwitch" /* 7508 */;
+import Form from "Form" /* 8322 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 16709 */;
+import VEVOO from "VEVOO" /* 18259 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,11 +15,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VEVOOStore = fn(5737);
+const VEVOOStore = fn(5739);
 ({ getVisualEffectViewOverrides: closure_6, setVisualEffectViewOverides: metroImportDefault } = VEVOOStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { tintColor: null };
 let size = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, borderRadius: nativeDefault.radii.sm };
 obj.tintColor = size;
@@ -120,7 +120,7 @@ export default noop.memo(function VEVOOPropTintColor() {
     }
   };
   const ref = noop.useRef(first1);
-  obj7.subLabel = closure_8(backgroundColor(18233), {
+  obj7.subLabel = closure_8(backgroundColor(18261), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {

@@ -1,17 +1,17 @@
-// === Module 15877: ActivityInviteModalStore ===
+// === Module 15889: ActivityInviteModalStore ===
 
-// Module 15877 (ActivityInviteModalStore)
+// Module 15889 (ActivityInviteModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import sortByMatchScore from "sortByMatchScore" /* 9280 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import LocalActivityStore from "LocalActivityStore" /* 11714 */;
-import PresenceStore from "PresenceStore" /* 5895 */;
-import RelationshipStore from "RelationshipStore" /* 5083 */;
+import sortByMatchScore from "sortByMatchScore" /* 9287 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import LocalActivityStore from "LocalActivityStore" /* 11722 */;
+import PresenceStore from "PresenceStore" /* 5898 */;
+import RelationshipStore from "RelationshipStore" /* 5085 */;
 import UserStore from "UserStore" /* 1385 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7535 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7537 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
@@ -138,7 +138,7 @@ function handleLocalActivityUpdate() {
 }
 const Constants = fn(1072);
 ({ ChannelTypes: closure_11, ActivityActionTypes: closure_12 } = Constants);
-let items = [fn(9280).AutocompleterResultTypes.TEXT_CHANNEL, fn(9280).AutocompleterResultTypes.GROUP_DM, fn(9280).AutocompleterResultTypes.USER];
+let items = [fn(9287).AutocompleterResultTypes.TEXT_CHANNEL, fn(9287).AutocompleterResultTypes.GROUP_DM, fn(9287).AutocompleterResultTypes.USER];
 let c14 = null;
 let c15 = null;
 items = [];
@@ -269,8 +269,8 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
       const userId = channelId.userId;
       if (null != channelId) {
         const obj2 = { channelId, type: constants.JOIN, activity, location: "Channel Text Area - Invite to Join Modal" };
-        let obj = userId(11733);
-        userId(11733).sendActivityInvite(obj2).then(() => {
+        let obj = userId(11741);
+        userId(11741).sendActivityInvite(obj2).then(() => {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = channelId;
           mapped = mapped.map((type) => {
@@ -286,10 +286,10 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           closure_18 = withSameGameSection(mapped);
           activityInviteModalStoreClass.emitChange();
         });
-        const sendActivityInviteResult = userId(11733).sendActivityInvite(obj2);
+        const sendActivityInviteResult = userId(11741).sendActivityInvite(obj2);
       } else if (null != userId) {
         const obj4 = { userId, type: constants.JOIN, activity, location: "Channel Text Area - Invite to Join Modal" };
-        const result = userId(11733).sendActivityInviteUser(obj4);
+        const result = userId(11741).sendActivityInviteUser(obj4);
         result.then(() => {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = userId;
@@ -306,7 +306,7 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           closure_18 = withSameGameSection(mapped);
           activityInviteModalStoreClass.emitChange();
         });
-        const obj3 = userId(11733);
+        const obj3 = userId(11741);
       }
       return false;
     }

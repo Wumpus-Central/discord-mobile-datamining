@@ -1,8 +1,8 @@
-// === Module 11084: OAuth2AuthorizeModal ===
+// === Module 11093: OAuth2AuthorizeModal ===
 
-// Module 11084 (OAuth2AuthorizeModal)
+// Module 11093 (OAuth2AuthorizeModal)
 import nativeDefault from "native" /* 575 */;
-import spring_spring from "spring/spring" /* 5771 */;
+import spring_spring from "spring/spring" /* 5773 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, contentContainer: { flex: 1 }, titleContainer: { padding: 16, flexDirection: "row", gap: 16 }, titleContainerBorder: null, title: null };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.titleContainerBorder = rect;
@@ -25,7 +25,7 @@ let result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeMo
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = closure_8();
-  const tmp4 = sharedValue(9890)(arg0);
+  const tmp4 = sharedValue(9896)(arg0);
   _require = tmp4;
   sharedValue = require("module_1652").useSharedValue(0);
   let obj = require("module_1652");
@@ -82,10 +82,10 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj7 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp13Result = closure_5(tmp5(11085).ArrowSmallLeftIcon, obj7);
+    let tmp13Result = closure_5(tmp5(11094).ArrowSmallLeftIcon, obj7);
   } else {
     const obj8 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    tmp13Result = closure_5(tmp5(7195).XSmallIcon, obj8);
+    tmp13Result = closure_5(tmp5(7198).XSmallIcon, obj8);
   }
   obj6.children = tmp13Result;
   const items4 = [closure_5(require("Pressables").PressableOpacity, obj6), , ];
@@ -107,7 +107,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj13.onScroll = callback;
   obj13.centerContent = true;
-  obj12.children = closure_5(sharedValue(11087), obj13);
+  obj12.children = closure_5(sharedValue(11096), obj13);
   items6[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
   obj3.children = items6;
   return closure_6(View, obj3);

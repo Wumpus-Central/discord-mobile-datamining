@@ -1,21 +1,21 @@
-// === Module 16659: LocalMessageCacheManager ===
+// === Module 16672: LocalMessageCacheManager ===
 
-// Module 16659 (LocalMessageCacheManager)
+// Module 16672 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import DateUtils from "DateUtils" /* 4963 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7776 */;
-import createMessageDefault from "createMessage" /* 10497 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 11868 */;
+import DateUtils from "DateUtils" /* 4965 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7781 */;
+import createMessageDefault from "createMessage" /* 10503 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 11877 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 5084 */;
+import MessageRecord from "MessageRecord" /* 5086 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import MessageStore from "MessageStore" /* 6196 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import MessageStore from "MessageStore" /* 6199 */;
 import LifecycleManager from "LifecycleManager" /* 2125 */;
 
 require = fn;
@@ -261,10 +261,10 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
     }
   }
 };
-const SendMessageOptionsStore = fn(10378);
+const SendMessageOptionsStore = fn(10384);
 const Constants = fn(1072);
 ({ MessageStates: closure_9, MessageTypes: closure_10 } = Constants);
-const MutexUtils = fn(16660);
+const MutexUtils = fn(16673);
 let closure_11 = MutexUtils.createLock();
 let closure_12 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -985,7 +985,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6698);
+                let obj9 = values(6701);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

@@ -1,10 +1,10 @@
-// === Module 17289: OrbsArcadeHowToPlaySheet ===
+// === Module 17306: OrbsArcadeHowToPlaySheet ===
 
-// Module 17289 (OrbsArcadeHowToPlaySheet)
-import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 17290 */;
-import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17291 */;
+// Module 17306 (OrbsArcadeHowToPlaySheet)
+import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 17307 */;
+import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 17308 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17270 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17294 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -31,9 +31,9 @@ export default function OrbsArcadeHowToPlaySheet(gameId) {
       str = "";
     }
     obj3.description = str;
-    const obj4 = { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", secondaryAction: tmp(17291).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
-    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", secondaryAction: tmp(17291).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
-    tmp5Result2 = jsx(tmp(11015).PromoSheet, { illustration: tmp5Result, title: null, description: null, gradientColor: "blue", actions: null });
+    const obj4 = { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", location: tmp(17304).OrbsArcadeCtaLocation.HOW_TO_PLAY_SHEET, surface: gameId.surface, secondaryAction: tmp(17308).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" };
+    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: "OrbsArcadeHowToPlaySheet", location: tmp(17304).OrbsArcadeCtaLocation.HOW_TO_PLAY_SHEET, surface: gameId.surface, secondaryAction: tmp(17308).OrbsArcadeSheetSecondaryAction.CLOSE, direction: "vertical" });
+    tmp5Result2 = jsx(tmp(11021).PromoSheet, { illustration: tmp5Result, title: null, description: null, gradientColor: "blue", actions: null });
   }
   return tmp5Result2;
 };

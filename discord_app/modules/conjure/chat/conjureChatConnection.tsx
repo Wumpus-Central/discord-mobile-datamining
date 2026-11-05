@@ -1,13 +1,13 @@
-// === Module 11050: conjureChatConnection ===
+// === Module 11056: conjureChatConnection ===
 
-// Module 11050 (conjureChatConnection)
+// Module 11056 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 11033 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11051 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11053 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11054 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 11039 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 11057 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11059 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11060 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {

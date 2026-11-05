@@ -1,13 +1,14 @@
-// === Module 13420: GameOrganizationJoinModal ===
+// === Module 13446: GameOrganizationJoinModal ===
 
-// Module 13420 (GameOrganizationJoinModal)
-import NavigatorHeader from "NavigatorHeader" /* 7139 */;
+// Module 13446 (GameOrganizationJoinModal)
+import NavigatorConstants from "NavigatorConstants" /* 5724 */;
+import NavigatorHeader from "NavigatorHeader" /* 7142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const GameOrganizationJoinModalConstants = fn(13421);
+const GameOrganizationJoinModalConstants = fn(13447);
 const GameOrganizationJoinScenes = GameOrganizationJoinModalConstants.GameOrganizationJoinScenes;
-let closure_3 = GameOrganizationJoinModalConstants.closeGameOrganizationJoinModal;
+let closure_4 = GameOrganizationJoinModalConstants.closeGameOrganizationJoinModal;
 const jsx = fn(21).jsx;
 let items = [, , ];
 ({ VIEW: arr[0], ACCEPT: arr[1], OUTCOME: arr[2] } = GameOrganizationJoinScenes);
@@ -16,57 +17,56 @@ const result = size.fileFinishedImporting("modules/game_organization_invites/nat
 
 export default function GameOrganizationJoinModal(code) {
   code = code.code;
-  items = [code];
-  const navigatorScreens = code(7306).useNavigatorScreens(() => {
-    let obj = {};
-    const obj2 = {
-      headerTitle() {
-        return null;
-      },
-      headerLeft: NavigatorHeader.getHeaderCloseButton(closure_3),
-      render() {
-        return jsx(code(13422).ViewStep, { code });
-      }
+  let top;
+  top = top(1627)().top;
+  items = [code, top];
+  const navigatorScreens = code(7309).useNavigatorScreens(() => {
+    let obj = { fullscreen: true, headerStyle: { height: NavigatorConstants.NAV_BAR_HEIGHT + top } };
+    const obj3 = {};
+    const obj4 = {};
+    let merged = Object.assign(obj);
+    obj4.headerTitle = function headerTitle() {
+      return null;
     };
-    obj[GameOrganizationJoinScenes.VIEW] = obj2;
-    const obj4 = {
-      headerTitle() {
-        return null;
-      },
-      headerLeft: null,
-      headerRight: null,
-      render: null
+    const obj2 = { height: NavigatorConstants.NAV_BAR_HEIGHT + top };
+    obj4.headerLeft = NavigatorHeader.getHeaderCloseButton(closure_4);
+    obj4.render = function render() {
+      return jsx(code(13448).ViewStep, { code });
     };
-    obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
-    obj4.headerRight = NavigatorHeader.getHeaderCloseButton(closure_3);
-    obj4.render = function render(character) {
+    obj3[GameOrganizationJoinScenes.VIEW] = obj4;
+    const obj6 = {};
+    const merged1 = Object.assign(obj);
+    obj6.headerTitle = function headerTitle() {
+      return null;
+    };
+    obj6.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj6.headerRight = NavigatorHeader.getHeaderCloseButton(closure_4);
+    obj6.render = function render(character) {
       const obj = { code, character: null };
       character = undefined;
       if (character != null) {
         character = character.character;
       }
       obj.character = character;
-      return jsx(code(13429).AcceptStep, { code, character: null });
+      return jsx(code(13454).AcceptStep, { code, character: null });
     };
-    obj[GameOrganizationJoinScenes.ACCEPT] = obj4;
-    const obj7 = {
-      headerTitle() {
-        return null;
-      },
-      headerLeft: null,
-      gestureEnabled: false,
-      render: null
+    obj3[GameOrganizationJoinScenes.ACCEPT] = obj6;
+    const obj9 = {};
+    const merged2 = Object.assign(obj);
+    obj9.headerTitle = function headerTitle() {
+      return null;
     };
-    obj7.headerLeft = NavigatorHeader.getHeaderCloseButton(closure_3);
-    obj7.render = function render(arg0) {
+    obj9.headerLeft = NavigatorHeader.getHeaderCloseButton(closure_4);
+    obj9.gestureEnabled = false;
+    obj9.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return jsx(code(13432).OutcomeStep, { code });
+      return jsx(code(13457).OutcomeStep, { code });
     };
-    obj[GameOrganizationJoinScenes.OUTCOME] = obj7;
-    return obj;
+    obj3[GameOrganizationJoinScenes.OUTCOME] = obj9;
+    return obj3;
   }, items);
   let obj2 = { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.VIEW, steps: items, headerBackTitle: null };
   const intl = code(1113).intl;
   obj2.headerBackTitle = intl.string(code(1113).t["13/7kX"]);
-  return jsx(code(13433).StepModal, { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.VIEW, steps: items, headerBackTitle: null });
+  return jsx(code(13458).StepModal, { screens: navigatorScreens, initialRouteName: GameOrganizationJoinScenes.VIEW, steps: items, headerBackTitle: null });
 };

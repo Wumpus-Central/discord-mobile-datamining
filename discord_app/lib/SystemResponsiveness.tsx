@@ -1,8 +1,8 @@
-// === Module 6041: SystemResponsiveness ===
+// === Module 6044: SystemResponsiveness ===
 
-// Module 6041 (SystemResponsiveness)
+// Module 6044 (SystemResponsiveness)
 import _modDef12 from "module_12" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5923 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5926 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/SystemResponsiveness.tsx");

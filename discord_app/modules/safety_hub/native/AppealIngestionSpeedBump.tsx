@@ -1,22 +1,22 @@
-// === Module 13541: AppealIngestionSpeedBump ===
+// === Module 13552: AppealIngestionSpeedBump ===
 
-// Module 13541 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 13543 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 13559 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13560 */;
+// Module 13552 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 13554 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 13570 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 13571 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8134 */;
+import SafetyHubStore from "SafetyHubStore" /* 8139 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8110);
+const SafetyHubConstants = fn(8115);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: closure_6 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpeedBump.tsx");
@@ -119,7 +119,7 @@ export default function AppealIngestionSpeedBump(arg0) {
     const obj10 = { variant: "body-xs/normal", children: null };
     const intl7 = tmp2(1113).intl;
     obj10.children = intl7.format(tmp2(1113).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(5761).Text, obj10);
+    isDsaEligible = closure_8(tmp2(5763).Text, obj10);
   }
   const obj11 = { children: null };
   items2[6] = isDsaEligible;

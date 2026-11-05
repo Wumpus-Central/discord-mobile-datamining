@@ -1,11 +1,11 @@
-// === Module 16884: useAccountStandingStatusLabel ===
+// === Module 16907: useAccountStandingStatusLabel ===
 
-// Module 16884 (useAccountStandingStatusLabel)
+// Module 16907 (useAccountStandingStatusLabel)
 import util from "util" /* 1113 */;
-import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 13536 */;
-import useSafetyHubInitialized from "useSafetyHubInitialized" /* 13570 */;
-import useSafetyHubFetchError from "useSafetyHubFetchError" /* 16885 */;
-import SafetyHubAccountStandingLabels from "SafetyHubAccountStandingLabels" /* 16886 */;
+import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 13547 */;
+import useSafetyHubInitialized from "useSafetyHubInitialized" /* 13581 */;
+import useSafetyHubFetchError from "useSafetyHubFetchError" /* 16908 */;
+import SafetyHubAccountStandingLabels from "SafetyHubAccountStandingLabels" /* 16909 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");

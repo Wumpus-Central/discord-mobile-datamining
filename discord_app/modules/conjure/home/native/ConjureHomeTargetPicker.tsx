@@ -1,11 +1,11 @@
-// === Module 13202: ConjureHomeTargetPicker ===
+// === Module 13209: ConjureHomeTargetPicker ===
 
-// Module 13202 (ConjureHomeTargetPicker)
+// Module 13209 (ConjureHomeTargetPicker)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11603 */;
-import UserIcon from "UserIcon" /* 12323 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11611 */;
+import UserIcon from "UserIcon" /* 12330 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function ConjureHomeTargetPicker(target) {
       },
       ...guilds.map((label) => ({
         label: label.name,
-        IconComponent: target(9908).ServerIcon,
+        IconComponent: target(9914).ServerIcon,
         action() {
           return dependencyMap(label.id);
         }

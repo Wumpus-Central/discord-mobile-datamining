@@ -1,6 +1,6 @@
-// === Module 14914: ? ===
+// === Module 14927: ? ===
 
-// Module 14914
+// Module 14927
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/static_idle_orb.png.js");

@@ -1,19 +1,19 @@
-// === Module 17306: GameTrophySpotIllustration ===
+// === Module 17327: GameTrophySpotIllustration ===
 
-// Module 17306 (GameTrophySpotIllustration)
-import assetHelpers from "assetHelpers" /* 7210 */;
-import _modDef17307 from "module_17307" /* 17307 */;
-import _modDef17308 from "module_17308" /* 17308 */;
-import _modDef17309 from "module_17309" /* 17309 */;
+// Module 17327 (GameTrophySpotIllustration)
+import assetHelpers from "assetHelpers" /* 7213 */;
+import _modDef17328 from "module_17328" /* 17328 */;
+import _modDef17329 from "module_17329" /* 17329 */;
+import _modDef17330 from "module_17330" /* 17330 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17307 }, 3: null };
-let obj2 = { uri: _modDef17307 };
-obj[2] = { uri: _modDef17308 };
-const obj3 = { uri: _modDef17308 };
-obj[3] = { uri: _modDef17309 };
+let obj = { 1: null, 2: { uri: _modDef17328 }, 3: null };
+let obj2 = { uri: _modDef17328 };
+obj[2] = { uri: _modDef17329 };
+const obj3 = { uri: _modDef17329 };
+obj[3] = { uri: _modDef17330 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameTrophySpotIllustration.native.tsx");
 

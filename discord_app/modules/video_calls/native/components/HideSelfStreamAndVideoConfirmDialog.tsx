@@ -1,16 +1,16 @@
-// === Module 19616: HideSelfStreamAndVideoConfirmDialog ===
+// === Module 19651: HideSelfStreamAndVideoConfirmDialog ===
 
-// Module 19616 (HideSelfStreamAndVideoConfirmDialog)
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6067 */;
-import common_AlertDefault from "common/Alert" /* 6165 */;
+// Module 19651 (HideSelfStreamAndVideoConfirmDialog)
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6070 */;
+import common_AlertDefault from "common/Alert" /* 6168 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const constants = fn(19615).SelfStreamAndVideoAlertType;
+const constants = fn(19650).SelfStreamAndVideoAlertType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_7 = createStyles.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, ctaLink: { paddingTop: 8, textAlign: "center", textDecorationLine: "underline" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx");
@@ -50,7 +50,7 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   obj.confirmText = intl6.string(tmp6(1113).t["cY+Oob"]);
   obj.onConfirm = onConfirm;
   const obj2 = { style: tmp2.body, children: null };
-  items = [closure_5(tmp6(5761).Text, { style: tmp2.description, variant: "body-sm/medium", children: stringResult1 }), ];
+  items = [closure_5(tmp6(5763).Text, { style: tmp2.description, variant: "body-sm/medium", children: stringResult1 }), ];
   const obj4 = {
     accessibilityRole: "link",
     style: null,
@@ -66,7 +66,7 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   obj4.style = items1;
   const intl7 = tmp6(1113).intl;
   obj4.children = intl7.string(tmp6(1113).t["JdIQ/Y"]);
-  items[1] = closure_5(tmp6(5761).Text, obj4);
+  items[1] = closure_5(tmp6(5763).Text, obj4);
   obj2.children = items;
   obj.children = closure_6(View, obj2);
   return closure_5(common_AlertDefault, obj);

@@ -1,9 +1,9 @@
-// === Module 12809: ConjureSecretRequestState ===
+// === Module 12816: ConjureSecretRequestState ===
 
-// Module 12809 (ConjureSecretRequestState)
+// Module 12816 (ConjureSecretRequestState)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import conjureChatTurns from "conjureChatTurns" /* 11030 */;
+import conjureChatTurns from "conjureChatTurns" /* 11036 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -139,6 +139,27 @@ export function secretRequestStatuses(memo, secrets) {
     }
   }
   return map;
+}
+export function newestOpenSecretRequest(arg0, get) {
+  let tmp2;
+  let diff = arg0.length - 1;
+  if (0 <= diff) {
+    while (true) {
+      tmp2 = arg0[diff];
+      let secretRequest;
+      if (tmp2 != null) {
+        secretRequest = tmp2.secretRequest;
+      }
+      if (null != secretRequest) {
+        if ("open" === get.get(tmp2.render_id)) {
+          break;
+        }
+      }
+      diff = diff - 1;
+    }
+    return tmp2;
+  }
+  return null;
 }
 export function useSecretRequestStatusChanged(cardId, status) {
   closure_1 = status;

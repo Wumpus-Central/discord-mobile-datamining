@@ -1,6 +1,6 @@
-// === Module 11080: ConjurePreviewPauseStore ===
+// === Module 11089: ConjurePreviewPauseStore ===
 
-// Module 11080 (ConjurePreviewPauseStore)
+// Module 11089 (ConjurePreviewPauseStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

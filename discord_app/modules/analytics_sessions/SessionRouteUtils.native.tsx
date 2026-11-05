@@ -1,6 +1,6 @@
-// === Module 7783: SessionRouteUtils ===
+// === Module 7788: SessionRouteUtils ===
 
-// Module 7783 (SessionRouteUtils)
+// Module 7788 (SessionRouteUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/analytics_sessions/SessionRouteUtils.native.tsx");

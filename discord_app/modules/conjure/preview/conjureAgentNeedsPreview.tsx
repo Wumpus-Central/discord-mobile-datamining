@@ -1,8 +1,8 @@
-// === Module 12285: conjureAgentNeedsPreview ===
+// === Module 12294: conjureAgentNeedsPreview ===
 
-// Module 12285 (conjureAgentNeedsPreview)
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 11102 */;
-import ConjureChatStore from "ConjureChatStore" /* 11029 */;
+// Module 12294 (conjureAgentNeedsPreview)
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 11111 */;
+import ConjureChatStore from "ConjureChatStore" /* 11035 */;
 
 const require = globalThis.__r;
 

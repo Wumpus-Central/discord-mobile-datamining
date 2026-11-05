@@ -1,8 +1,8 @@
-// === Module 16653: GameRelationshipManager ===
+// === Module 16666: GameRelationshipManager ===
 
-// Module 16653 (GameRelationshipManager)
+// Module 16666 (GameRelationshipManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7940 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7945 */;
 import LifecycleManager from "LifecycleManager" /* 2125 */;
 
 const RelationshipTypes = fn(1072).RelationshipTypes;

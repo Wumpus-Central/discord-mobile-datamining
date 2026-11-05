@@ -1,19 +1,19 @@
-// === Module 18786: ForYouShowAllRow ===
+// === Module 18816: ForYouShowAllRow ===
 
-// Module 18786 (ForYouShowAllRow)
+// Module 18816 (ForYouShowAllRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import useFontScale from "useFontScale" /* 5776 */;
-import Pressables from "Pressables" /* 7121 */;
-import _modDef7450 from "module_7450" /* 7450 */;
-import ChannelListLayout from "ChannelListLayout" /* 11227 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 16120 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 18781 */;
-import ChannelWrapper from "ChannelWrapper" /* 18782 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import useFontScale from "useFontScale" /* 5778 */;
+import Pressables from "Pressables" /* 7124 */;
+import _modDef7453 from "module_7453" /* 7453 */;
+import ChannelListLayout from "ChannelListLayout" /* 11235 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 16133 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 18811 */;
+import ChannelWrapper from "ChannelWrapper" /* 18812 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,17 +45,17 @@ function ForYouShowAllRow(panelVariant) {
   obj11.children = metroImportDefault(Text_Text.Text, obj12);
   items1[1] = metroImportDefault(View, obj11);
   const obj10 = { size: ChannelListLayout.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children };
-  items1[2] = metroImportDefault(native.Icon, { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7450, size: native.IconSizes.CUSTOM });
+  items1[2] = metroImportDefault(native.Icon, { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7453, size: native.IconSizes.CUSTOM });
   obj9.children = items1;
   obj5.children = obj6.renderChannelWrapper(React6(React5, obj9), { layout, fontScale, panelVariant });
   return obj4.renderChannelPressableWrapper(metroImportDefault(Pressables.PressableHighlight, obj5), { layout, panelVariant });
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Sections = fn(14483).Sections;
+const Sections = fn(14496).Sections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_10 = createStyles.createStyles((layout) => {
   const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
   const sizeStyle = ChannelListLayout.makeSizeStyle(layoutStyles.icon.wrapper.size);

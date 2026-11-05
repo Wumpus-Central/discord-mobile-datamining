@@ -1,9 +1,9 @@
-// === Module 15297: useShouldPinCollectiblesEditPreview ===
+// === Module 15310: useShouldPinCollectiblesEditPreview ===
 
-// Module 15297 (useShouldPinCollectiblesEditPreview)
+// Module 15310 (useShouldPinCollectiblesEditPreview)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import NavigatorConstants from "NavigatorConstants" /* 5722 */;
+import NavigatorConstants from "NavigatorConstants" /* 5724 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useShouldPinCollectiblesEditPreview.tsx");

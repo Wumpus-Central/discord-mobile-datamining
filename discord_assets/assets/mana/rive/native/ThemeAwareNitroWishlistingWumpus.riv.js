@@ -1,6 +1,6 @@
-// === Module 5308: ? ===
+// === Module 5310: ? ===
 
-// Module 5308
+// Module 5310
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/ThemeAwareNitroWishlistingWumpus.riv.js");

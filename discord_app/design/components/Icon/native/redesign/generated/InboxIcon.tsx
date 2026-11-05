@@ -1,9 +1,9 @@
-// === Module 11164: InboxIcon ===
+// === Module 11172: InboxIcon ===
 
-// Module 11164 (InboxIcon)
+// Module 11172 (InboxIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod11165 from "module_11165" /* 11165 */;
+import BaseIconImage from "BaseIconImage" /* 5853 */;
+import _mod11173 from "module_11173" /* 11173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function InboxIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11165, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11173, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

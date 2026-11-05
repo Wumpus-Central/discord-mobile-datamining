@@ -1,15 +1,15 @@
-// === Module 15970: ShareScreen ===
+// === Module 15982: ShareScreen ===
 
-// Module 15970 (ShareScreen)
+// Module 15982 (ShareScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 15974 */;
-import ShareEmbedDefault from "ShareEmbed" /* 15975 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 15986 */;
+import ShareEmbedDefault from "ShareEmbed" /* 15987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import PermissionStore from "PermissionStore" /* 5073 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import PermissionStore from "PermissionStore" /* 5075 */;
 
 require = fn;
 function getAttachmentsRestriction(type) {
@@ -27,15 +27,15 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(4994);
+const ChannelRecord = fn(4996);
 ({ ChannelRecordBase: metroImportDefault, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(13604).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10905).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(13615).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10911).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -227,7 +227,7 @@ export default function ShareScreen(appEntryKey) {
                                       let channel2;
                                       c5 = 1;
                                       c6 = 1;
-                                      return { value: "flexDirection", done: null };
+                                      return { value: "flexDirection", done: true };
                                     }
                                   } else if (1 === tmp7) {
                                     if (arg0 === 1) {

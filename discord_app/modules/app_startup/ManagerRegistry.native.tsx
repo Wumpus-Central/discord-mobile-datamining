@@ -1,8 +1,8 @@
-// === Module 19662: ManagerRegistry ===
+// === Module 19697: ManagerRegistry ===
 
-// Module 19662 (ManagerRegistry)
+// Module 19697 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20396 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20431 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -603,6 +603,7 @@ obj.NotifSettingsProtoManager = {
   inlineRequire() {
     return require("NotifSettingsProtoManager").default;
   },
+  hasStoreChangeListeners: true,
   neverLoadBeforeConnectionOpen: true
 };
 obj.NUFChannelsManager = {
@@ -613,7 +614,7 @@ obj.NUFChannelsManager = {
   loadAfterConnectionOpen: true
 };
 obj.ParentalConsentManager = {
-  actions: ["CONNECTION_OPEN_SUPPLEMENTAL", "APP_STATE_UPDATE"],
+  actions: ["CONNECTION_OPEN_SUPPLEMENTAL", "POST_CONNECTION_OPEN", "APP_STATE_UPDATE", "LOGOUT"],
   inlineRequire() {
     return require("ParentalConsentManager").default;
   },

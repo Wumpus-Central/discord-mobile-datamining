@@ -1,10 +1,10 @@
-// === Module 15068: useTimestampTickedNow ===
+// === Module 15081: useTimestampTickedNow ===
 
-// Module 15068 (useTimestampTickedNow)
+// Module 15081 (useTimestampTickedNow)
 import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 const require = globalThis.__r;
 
@@ -46,7 +46,7 @@ export function useTimestampTickedNow() {
   importDefault = result;
   const items1 = [result];
   const effect = noop.useEffect(() => {
-    const interval = new closure_0(4985).Interval();
+    const interval = new closure_0(4987).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
       const rounded = Math.floor(timestamp / c1(1089).Millis.SECOND);

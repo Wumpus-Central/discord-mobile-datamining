@@ -1,26 +1,26 @@
-// === Module 14749: EditAttachmentActionSheet ===
+// === Module 14762: EditAttachmentActionSheet ===
 
-// Module 14749 (EditAttachmentActionSheet)
+// Module 14762 (EditAttachmentActionSheet)
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import Stack_Stack from "Stack/Stack" /* 6162 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7115 */;
-import TextArea from "TextArea" /* 7389 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
-import ActionSheet from "ActionSheet" /* 7502 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8882 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5152 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import Stack_Stack from "Stack/Stack" /* 6165 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7118 */;
+import TextArea from "TextArea" /* 7392 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7460 */;
+import ActionSheet from "ActionSheet" /* 7504 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8887 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 6196 */;
+import MessageStore from "MessageStore" /* 6199 */;
 
 require = fn;
-let closure_7 = fn(5146).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(5148).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
-let maxLength = fn(14736).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+let maxLength = fn(14749).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
@@ -147,7 +147,7 @@ export default function EditAttachmentActionSheet(arg0) {
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8981)(attachment);
+  const tmp5 = attachment(8986)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

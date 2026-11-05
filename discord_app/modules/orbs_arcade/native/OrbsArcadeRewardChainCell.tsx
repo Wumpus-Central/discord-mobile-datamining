@@ -1,13 +1,13 @@
-// === Module 17301: OrbsArcadeRewardChainCell ===
+// === Module 17320: OrbsArcadeRewardChainCell ===
 
-// Module 17301 (OrbsArcadeRewardChainCell)
+// Module 17320 (OrbsArcadeRewardChainCell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 let c11 = 1.6666666666666667;
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { cell: { width: 50, height: 50, alignItems: "center", justifyContent: "center" }, circle: null, ring: null, confetti: null, stem: null, grantedStem: null, checkBadge: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -285,7 +285,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     let tmp59Result = null;
     if (!isStemTargetGranted) {
       const obj7 = { style: StyleSheet.absoluteFill, start, end, colors: memo1 };
-      tmp59Result = closure_8(tmp4(5723), obj7);
+      tmp59Result = closure_8(tmp4(5725), obj7);
     }
     obj6.children = tmp59Result;
     tmp59Result2 = closure_8(tmp4(1652).View, obj6);
@@ -299,7 +299,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   items19[1] = closure_8(View, obj8);
   if (isFocused) {
     const obj9 = { color: token, progress: derivedValue1, rewardSize: 50, strokeWidth };
-    let tmp66Result = closure_8(tmp4(17302), obj9);
+    let tmp66Result = closure_8(tmp4(17321), obj9);
   } else {
     tmp66Result = null;
   }
@@ -316,17 +316,17 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     const obj11 = { children: null };
     const items22 = [tmp66Result5, ];
     const obj12 = { color: token1, progress: derivedValue, rewardSize: 50, strokeWidth };
-    items22[1] = closure_8(tmp4(17302), obj12);
+    items22[1] = closure_8(tmp4(17321), obj12);
     obj11.children = items22;
     tmp56Result = closure_10(closure_9, obj11);
-    tmp2Result14 = tmp2(5148);
+    tmp2Result14 = tmp2(5150);
   }
   items19[3] = tmp56Result;
   if (reward.type === require("OrbsArcadeTypes").OrbsArcadeRewardType.FRACTIONAL_PREMIUM) {
-    let tmp66Result6 = closure_8(tmp2(9689).NitroCoinSpotIllustration, { height: 30 });
+    let tmp66Result6 = closure_8(tmp2(9695).NitroCoinSpotIllustration, { height: 30 });
   } else {
     const obj13 = { reward, size: 38 };
-    tmp66Result6 = closure_8(tmp4(17280), obj13);
+    tmp66Result6 = closure_8(tmp4(17312), obj13);
   }
   items19[4] = tmp66Result6;
   let tmp66Result7 = null;
@@ -335,7 +335,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     const items23 = [tmp.checkBadge, animatedStyle1];
     obj14.style = items23;
     const obj15 = { size: "xs", color: tmp4(575).colors.STATUS_POSITIVE, secondaryColor: tmp4(575).colors.WHITE };
-    obj14.children = closure_8(tmp2(7476).CircleCheckIcon, obj15);
+    obj14.children = closure_8(tmp2(7479).CircleCheckIcon, obj15);
     tmp66Result7 = closure_8(tmp4(1652).View, obj14);
   }
   items19[5] = tmp66Result7;
@@ -344,10 +344,10 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     tmp66Result8 = null;
     if (null != grantAtMs) {
       const obj16 = { pointerEvents: "none", style: tmp.confetti, children: null };
-      const obj17 = { ref, source: tmp2(17303), autoPlay: false, loop: false };
-      obj16.children = closure_8(tmp4(5755), obj17);
+      const obj17 = { ref, source: tmp2(17322), autoPlay: false, loop: false };
+      obj16.children = closure_8(tmp4(5757), obj17);
       tmp66Result8 = closure_8(View, obj16);
-      const tmp4Result = tmp4(5755);
+      const tmp4Result = tmp4(5757);
     }
   }
   items19[6] = tmp66Result8;

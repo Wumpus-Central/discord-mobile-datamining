@@ -1,6 +1,6 @@
-// === Module 8604: GuildBoostingUtils ===
+// === Module 8609: GuildBoostingUtils ===
 
-// Module 8604 (GuildBoostingUtils)
+// Module 8609 (GuildBoostingUtils)
 import util from "util" /* 1113 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -8,14 +8,14 @@ import _modDef2171 from "module_2171" /* 2171 */;
 import PremiumUtilsAll from "PremiumUtils" /* 2176 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import _modDef3415 from "module_3415" /* 3415 */;
-import FileSizeUtils from "FileSizeUtils" /* 6586 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8605 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8606 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8609 */;
+import FileSizeUtils from "FileSizeUtils" /* 6589 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8610 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8611 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8614 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import GuildStore from "GuildStore" /* 5014 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7725 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7730 */;
 import SubscriptionStore from "SubscriptionStore" /* 2181 */;
 import apply from "module_12" /* 12 */;
 
@@ -634,7 +634,7 @@ export function getGracePeriodEndingDate(arr, arg1) {
     const found = sorted.filter((endsAt) => null != endsAt.endsAt);
     const diff = found.length - num;
     if (diff < 0) {
-      obj3 = { subscriptionLength: arr.length, subscriptionsNeededForPremiumTier: null, endingSubscriptionLength: null };
+      const obj2 = { subscriptionLength: arr.length, subscriptionsNeededForPremiumTier: null, endingSubscriptionLength: null };
       const guild2 = GuildStore.getGuild(arg1);
       let premiumTier1;
       if (guild2 != null) {
@@ -644,16 +644,16 @@ export function getGracePeriodEndingDate(arr, arg1) {
         premiumTier1 = BoostedGuildTiers.NONE;
       }
       const obj4 = { category: "premium", message: "Negative index while checking grace period ending date.", data: null };
-      obj3.subscriptionsNeededForPremiumTier = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier1];
-      obj3.endingSubscriptionLength = found.length;
-      obj4.data = obj3;
+      obj2.subscriptionsNeededForPremiumTier = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier1];
+      obj2.endingSubscriptionLength = found.length;
+      obj4.data = obj2;
       SentryUtilsDefault.addBreadcrumb(obj4);
     }
     const _Math = Math;
-    const tmp17 = found[Math.max(Math, diff, 0)];
+    const tmp13 = found[Math.max(Math, diff, 0)];
     let endsAt;
-    if (tmp17 != null) {
-      endsAt = tmp17.endsAt;
+    if (tmp13 != null) {
+      endsAt = tmp13.endsAt;
     }
     return endsAt;
   } else {
@@ -758,7 +758,7 @@ export function getNextPremiumTierForSubscriberCount(arg0) {
 }
 export const TierMarkerPositions = obj3;
 export function getGuildBoostingProgressBarFillFactor(c0) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8613).getGuildPowerupBoostLevelProgress(_require.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8618).getGuildPowerupBoostLevelProgress(_require.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

@@ -1,20 +1,20 @@
-// === Module 7130: FormCheckbox ===
+// === Module 7133: FormCheckbox ===
 
-// Module 7130 (FormCheckbox)
+// Module 7133 (FormCheckbox)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5155 */;
-import IconDefault from "Icon" /* 5770 */;
-import spring_spring from "spring/spring" /* 5771 */;
-import springPresets from "springPresets" /* 5772 */;
-import _modDef7131 from "module_7131" /* 7131 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5157 */;
+import IconDefault from "Icon" /* 5772 */;
+import spring_spring from "spring/spring" /* 5773 */;
+import springPresets from "springPresets" /* 5774 */;
+import _modDef7134 from "module_7134" /* 7134 */;
 import noop from "module_19" /* 19 */;
 
 const module_1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT };
 obj2.checkbox = size;
@@ -110,9 +110,9 @@ export function FormCheckbox(checked) {
   const obj2 = { style: null, children: null };
   const items4 = [tmp.checkbox, animatedStyle];
   obj2.style = items4;
-  const obj3 = { source: _modDef7131, size: IconDefault.Sizes.SMALL_20, style: null };
+  const obj3 = { source: _modDef7134, size: IconDefault.Sizes.SMALL_20, style: null };
   const items5 = [tmp.checkmark, animatedStyle1];
   obj3.style = items5;
-  obj2.children = <Icon source={_modDef7131} size={IconDefault.Sizes.SMALL_20} style={null} />;
+  obj2.children = <Icon source={_modDef7134} size={IconDefault.Sizes.SMALL_20} style={null} />;
   return jsx(module_1652.View, { style: null, children: null });
 }

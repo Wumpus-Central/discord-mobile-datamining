@@ -1,10 +1,10 @@
-// === Module 12796: useConjureRemixNotice ===
+// === Module 12803: useConjureRemixNotice ===
 
-// Module 12796 (useConjureRemixNotice)
+// Module 12803 (useConjureRemixNotice)
 import _modDef3995 from "module_3995" /* 3995 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 11144 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 11152 */;
 import noop from "module_19" /* 19 */;
-import ConjureRemixStore from "ConjureRemixStore" /* 11046 */;
+import ConjureRemixStore from "ConjureRemixStore" /* 11052 */;
 
 const require = globalThis.__r;
 

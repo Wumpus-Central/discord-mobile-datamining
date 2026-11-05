@@ -1,9 +1,9 @@
-// === Module 14721: BalanceCounter ===
+// === Module 14734: BalanceCounter ===
 
-// Module 14721 (BalanceCounter)
+// Module 14734 (BalanceCounter)
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import spring_spring from "spring/spring" /* 5771 */;
+import spring_spring from "spring/spring" /* 5773 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop_mod from "module_19" /* 19 */;
 
@@ -55,7 +55,7 @@ class BalanceCounter {
     [tmp7, tmp8] = tmp6;
     tmp9 = closure_3(closure_4(false), 2);
     closure_7 = tmp9[1];
-    tmp10 = closure_7((set, PX_16, duration) => {
+    tmp10 = closure_7((set, _undefined2, duration) => {
       closure_7(true);
       items = [closure_10, _mod1705.scheduleOnRN, closure_7];
       c0 = undefined;
@@ -71,7 +71,7 @@ class BalanceCounter {
       BalanceCounterTsx1.__closure = items1;
       BalanceCounterTsx1.__workletHash = 2321092596604;
       BalanceCounterTsx1.__initData = tmp2;
-      const result = set.set(spring_spring.withSpring(PX_16, { duration, damping: 15, stiffness: 150, mass: 1 }, "respect-motion-settings", BalanceCounterTsx1));
+      const result = set.set(spring_spring.withSpring(_undefined2, { duration, damping: 15, stiffness: 150, mass: 1 }, "respect-motion-settings", BalanceCounterTsx1));
     }, []);
     closure_8 = tmp10;
     items = [, , , , , ];

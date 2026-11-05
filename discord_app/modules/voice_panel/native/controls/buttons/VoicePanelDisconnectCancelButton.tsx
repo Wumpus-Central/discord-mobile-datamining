@@ -1,27 +1,27 @@
-// === Module 19596: VoicePanelDisconnectCancelButton ===
+// === Module 19631: VoicePanelDisconnectCancelButton ===
 
-// Module 19596 (VoicePanelDisconnectCancelButton)
+// Module 19631 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 575 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6986 */;
-import StreamActionCreators from "StreamActionCreators" /* 8041 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11118 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19587 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5896 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6844 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6989 */;
+import StreamActionCreators from "StreamActionCreators" /* 8046 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11127 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11418 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19622 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6849 */;
-import VoicePanelStore from "VoicePanelStore" /* 7010 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6852 */;
+import VoicePanelStore from "VoicePanelStore" /* 7013 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11411).VoicePanelModes;
+const VoicePanelModes = fn(11419).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT }, icon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 obj2.icon = { tintColor: nativeDefault.colors.WHITE };
@@ -142,11 +142,11 @@ export default function DisconnectCancelButton(props) {
     }
   }, items4);
   if (first === constants.ACTIVITY) {
-    PhoneHangUpIcon = tmp8(12081).DoorExitIcon;
+    PhoneHangUpIcon = tmp8(12090).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(19597).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(19632).ScreenXIcon;
   } else {
-    PhoneHangUpIcon = tmp8(10014).PhoneHangUpIcon;
+    PhoneHangUpIcon = tmp8(10020).PhoneHangUpIcon;
   }
   const element = { onPress: callback1, props: props.props, style: tmp.disconnectCancelBG, accessibilityLabel: null, children: null };
   let obj2 = require("module_1652");

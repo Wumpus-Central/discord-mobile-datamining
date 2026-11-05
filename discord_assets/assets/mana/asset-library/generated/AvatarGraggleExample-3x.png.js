@@ -1,6 +1,6 @@
-// === Module 20192: ? ===
+// === Module 20228: ? ===
 
-// Module 20192
+// Module 20228
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarGraggleExample-3x.png.js");

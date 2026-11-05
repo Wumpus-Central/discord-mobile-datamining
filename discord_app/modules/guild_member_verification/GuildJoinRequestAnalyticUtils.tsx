@@ -1,9 +1,9 @@
-// === Module 7053: GuildJoinRequestAnalyticUtils ===
+// === Module 7056: GuildJoinRequestAnalyticUtils ===
 
-// Module 7053 (GuildJoinRequestAnalyticUtils)
+// Module 7056 (GuildJoinRequestAnalyticUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5053 */;
+import GuildMemberStore from "GuildMemberStore" /* 5055 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

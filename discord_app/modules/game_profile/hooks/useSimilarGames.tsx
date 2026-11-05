@@ -1,14 +1,14 @@
-// === Module 9735: useSimilarGames ===
+// === Module 9741: useSimilarGames ===
 
-// Module 9735 (useSimilarGames)
-import useGameProfileObscured from "useGameProfileObscured" /* 8823 */;
-import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 9463 */;
-import useGameArtwork from "useGameArtwork" /* 9522 */;
+// Module 9741 (useSimilarGames)
+import useGameProfileObscured from "useGameProfileObscured" /* 8828 */;
+import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 9470 */;
+import useGameArtwork from "useGameArtwork" /* 9529 */;
 import GameStore from "GameStore" /* 2143 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-fn(9603).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+fn(9609).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 let closure_5 = [];
 const similarGames = [];
 const size = fn(2);
@@ -19,7 +19,7 @@ export default function useSimilarGames(arg0) {
   if (tmp) {
     tmp = !set.has(arg0);
   }
-  const similarGameIds = data(9602).useSimilarGameIds(arg0, tmp);
+  const similarGameIds = data(9608).useSimilarGameIds(arg0, tmp);
   ({ data, isLoading, error } = similarGameIds);
   if (!tmp) {
     let tmp6 = closure_5;
@@ -27,9 +27,9 @@ export default function useSimilarGames(arg0) {
     tmp6 = data;
   }
   data = tmp6;
-  const obj = data(9602);
-  const games = data(7620).useGames(tmp6);
-  const tmp3Result = data(7620);
+  const obj = data(9608);
+  const games = data(7622).useGames(tmp6);
+  const tmp3Result = data(7622);
   items = [GameStore];
   const items1 = [tmp6];
   const stateFromStores = data(504).useStateFromStores(items, () => data.some((item) => null == game.getGame(item) && !game.hasNoData(item) && !game.didFetchingFail(item)), items1);

@@ -1,13 +1,13 @@
-// === Module 5004: GuildRecordUtils ===
+// === Module 5006: GuildRecordUtils ===
 
-// Module 5004 (GuildRecordUtils)
+// Module 5006 (GuildRecordUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1072 */;
-import SetUtils from "SetUtils" /* 5007 */;
-import guildIncidentsSerialization from "guildIncidentsSerialization" /* 5010 */;
-import guildThemeSerialization from "guildThemeSerialization" /* 5011 */;
-import PlainRecord from "PlainRecord" /* 5005 */;
-import GuildRecord from "GuildRecord" /* 5008 */;
+import SetUtils from "SetUtils" /* 5009 */;
+import guildIncidentsSerialization from "guildIncidentsSerialization" /* 5012 */;
+import guildThemeSerialization from "guildThemeSerialization" /* 5013 */;
+import PlainRecord from "PlainRecord" /* 5007 */;
+import GuildRecord from "GuildRecord" /* 5010 */;
 import size from "module_2" /* 2 */;
 
 function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildTheme) {

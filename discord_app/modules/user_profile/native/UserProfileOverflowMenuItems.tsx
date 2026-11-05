@@ -1,21 +1,21 @@
-// === Module 15041: UserProfileOverflowMenuItems ===
+// === Module 15054: UserProfileOverflowMenuItems ===
 
-// Module 15041 (UserProfileOverflowMenuItems)
+// Module 15054 (UserProfileOverflowMenuItems)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import ToastUtils from "ToastUtils" /* 5845 */;
-import ClipboardUtils from "ClipboardUtils" /* 7494 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7500 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7628 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7636 */;
-import ReportModals from "ReportModals" /* 8492 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12569 */;
-import BotReportChooser from "BotReportChooser" /* 15042 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import ToastUtils from "ToastUtils" /* 5848 */;
+import ClipboardUtils from "ClipboardUtils" /* 7496 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7502 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7630 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7638 */;
+import ReportModals from "ReportModals" /* 8497 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12576 */;
+import BotReportChooser from "BotReportChooser" /* 15055 */;
 import Constants from "Constants" /* 1072 */;
-import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11475 */;
+import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11483 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticEvents: c3, AVATAR_MAX_SIZE: closure_4, NOOP: hasOwnProperty } = Constants);
@@ -43,7 +43,7 @@ export function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11477, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11485, dependencyMap.paths);
         obj.openLazy(tmp, metroImportDefault, {
           userId: user.id,
           channelId,
@@ -81,7 +81,7 @@ export function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(11476, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11484, dependencyMap.paths);
       obj.openLazy(tmp, timestampProducer, {
         userId: user.id,
         channelId,
@@ -111,7 +111,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(15042, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(15055, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {
@@ -138,14 +138,14 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
     return tmp3;
   }
 }
-export function getDeveloperCopyMenuItem(arg0, tidaWebformEnabled) {
+export function getDeveloperCopyMenuItem(arg0, isTidaRegion) {
   ({ user: require, analyticsLocations: importDefault, trackUserProfileAction: dependencyMap } = arg0);
-  ({ avatarGuildId: closure_3, bannerUrl: closure_4 } = tidaWebformEnabled);
+  ({ avatarGuildId: closure_3, bannerUrl: closure_4 } = isTidaRegion);
   let obj = { label: null, action: null };
   let intl = util.intl;
   const string = intl.string;
   const t = util.t;
-  if (tidaWebformEnabled.tidaWebformEnabled) {
+  if (isTidaRegion.isTidaRegion) {
     obj.label = string(t.QvQeLv);
     obj.action = function action() {
       items = [];
@@ -156,8 +156,8 @@ export function getDeveloperCopyMenuItem(arg0, tidaWebformEnabled) {
         dependencyMap({ action: "COPY_USERNAME", analyticsLocations });
         const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = ClipboardUtils;
-        obj2.copy(analyticsLocations(5195).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
-        const obj3 = analyticsLocations(5195);
+        obj2.copy(analyticsLocations(5197).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
+        const obj3 = analyticsLocations(5197);
         const result = ToastUtils.presentUsernameCopied();
       };
       items.push(obj);

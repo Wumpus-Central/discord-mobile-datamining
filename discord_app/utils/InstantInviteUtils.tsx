@@ -1,16 +1,16 @@
-// === Module 9265: InstantInviteUtils ===
+// === Module 9272: InstantInviteUtils ===
 
-// Module 9265 (InstantInviteUtils)
+// Module 9272 (InstantInviteUtils)
 import util from "util" /* 1113 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6914 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 8020 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import ReadStateStore from "ReadStateStore" /* 6977 */;
-import RelationshipStore from "RelationshipStore" /* 5083 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6917 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 8025 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+import ReadStateStore from "ReadStateStore" /* 6980 */;
+import RelationshipStore from "RelationshipStore" /* 5085 */;
 import UserStore from "UserStore" /* 1385 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7535 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7537 */;
 
 const require = globalThis.__r;
 
@@ -98,8 +98,8 @@ const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
-const dependencyMap = { [fn(9266).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [fn(9266).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [fn(9266).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [fn(9266).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [fn(9266).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [fn(9266).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [fn(9266).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [fn(9266).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [fn(9266).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [fn(9266).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
-let items = [fn(9266).INVITE_OPTIONS_14_DAYS, fn(9266).INVITE_OPTIONS_30_DAYS, fn(9266).INVITE_OPTIONS_60_DAYS];
+const dependencyMap = { [fn(9273).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [fn(9273).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [fn(9273).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [fn(9273).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [fn(9273).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [fn(9273).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [fn(9273).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [fn(9273).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [fn(9273).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [fn(9273).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
+let items = [fn(9273).INVITE_OPTIONS_14_DAYS, fn(9273).INVITE_OPTIONS_30_DAYS, fn(9273).INVITE_OPTIONS_60_DAYS];
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
 
@@ -135,25 +135,25 @@ export default {
       return tmp2;
     });
   },
-  getMaxUsesOptions: fn(9266).MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: fn(9266).INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: fn(9266).INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: fn(9266).INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_14_DAYS: fn(9266).INVITE_OPTIONS_14_DAYS,
-  INVITE_OPTIONS_30_DAYS: fn(9266).INVITE_OPTIONS_30_DAYS,
-  INVITE_OPTIONS_60_DAYS: fn(9266).INVITE_OPTIONS_60_DAYS,
-  INVITE_OPTIONS_12_HOURS: fn(9266).INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: fn(9266).INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_8_HOURS: fn(9266).INVITE_OPTIONS_8_HOURS,
-  INVITE_OPTIONS_1_HOUR: fn(9266).INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: fn(9266).INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: fn(9266).INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: fn(9266).INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: fn(9266).INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: fn(9266).INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: fn(9266).INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: fn(9266).INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: fn(9266).INVITE_OPTIONS_100_TIMES
+  getMaxUsesOptions: fn(9273).MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: fn(9273).INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: fn(9273).INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: fn(9273).INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_14_DAYS: fn(9273).INVITE_OPTIONS_14_DAYS,
+  INVITE_OPTIONS_30_DAYS: fn(9273).INVITE_OPTIONS_30_DAYS,
+  INVITE_OPTIONS_60_DAYS: fn(9273).INVITE_OPTIONS_60_DAYS,
+  INVITE_OPTIONS_12_HOURS: fn(9273).INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: fn(9273).INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_8_HOURS: fn(9273).INVITE_OPTIONS_8_HOURS,
+  INVITE_OPTIONS_1_HOUR: fn(9273).INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: fn(9273).INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: fn(9273).INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: fn(9273).INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: fn(9273).INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: fn(9273).INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: fn(9273).INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: fn(9273).INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: fn(9273).INVITE_OPTIONS_100_TIMES
 };
 export { RowTypes };
 export function generateRowsForQuery(arg0) {
@@ -287,8 +287,8 @@ export function generateRowsForQuery(arg0) {
       _require = undefined;
       importDefault = undefined;
       ({ rows: c0, counts: c1, query: query4, inviteTargetType: inviteTargetType2 } = obj10);
-      if (inviteTargetType2 === tmp39(8020).InviteTargetTypes.EMBEDDED_APPLICATION) {
-        const obj12 = { query: query4, limit: 3, guildId: "children" };
+      if (inviteTargetType2 === tmp39(8025).InviteTargetTypes.EMBEDDED_APPLICATION) {
+        const obj12 = { query: query4, limit: 3, guildId: "id" };
         let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
           _undefined.push(obj);

@@ -1,19 +1,19 @@
-// === Module 11755: useFetchSocialLayerStorefrontEmbedWishlist ===
+// === Module 11763: useFetchSocialLayerStorefrontEmbedWishlist ===
 
-// Module 11755 (useFetchSocialLayerStorefrontEmbedWishlist)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8899 */;
-import WishlistFetchSource from "WishlistFetchSource" /* 9624 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9625 */;
+// Module 11763 (useFetchSocialLayerStorefrontEmbedWishlist)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8904 */;
+import WishlistFetchSource from "WishlistFetchSource" /* 9630 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9631 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7912 */;
-import WishlistStore from "WishlistStore" /* 9618 */;
+import UserProfileStore from "UserProfileStore" /* 7917 */;
+import WishlistStore from "WishlistStore" /* 9624 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = { user: "a", profile: "flexDirection", wishlistId: "create", wishlist: 263, updatedAt: null, storedUpdatedAt: 1, fetching: "not_implemented", error: null };
+let closure_8 = { user: "a", profile: "flexDirection", wishlistId: "count", wishlist: "CHANNEL_RTC_UPDATE_CHAT_OPEN", updatedAt: null, storedUpdatedAt: null, fetching: -45, error: null };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/useFetchSocialLayerStorefrontEmbedWishlist.tsx");
 

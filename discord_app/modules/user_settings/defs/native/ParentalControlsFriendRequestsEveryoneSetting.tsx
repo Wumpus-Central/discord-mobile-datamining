@@ -1,25 +1,26 @@
-// === Module 18190: ParentalControlsFriendRequestsEveryoneSetting ===
+// === Module 18218: ParentalControlsFriendRequestsEveryoneSetting ===
 
-// Module 18190 (ParentalControlsFriendRequestsEveryoneSetting)
+// Module 18218 (ParentalControlsFriendRequestsEveryoneSetting)
 import util from "util" /* 1113 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16969 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7305 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16992 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 16996 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7855 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7860 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8573).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8578).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const selectedTeenId = controlledSetting(8512).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(16969).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8517).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(16992).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
@@ -33,12 +34,12 @@ const toggle = SettingBuilders.createToggle({
       } else {
         tmp7 = React4 & ~constants.NO_RELATION;
       }
-      const result = ParentalControlledFriendSourceFlags.updateControlledSetting(selectedTeenId, tmp7);
+      FamilyCenterSaveErrorUtils.showToastIfSaveFails(ParentalControlledFriendSourceFlags.updateControlledSetting(selectedTeenId, tmp7));
     }
   },
   unsearchable: true
 });
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx");
 
 export default toggle;

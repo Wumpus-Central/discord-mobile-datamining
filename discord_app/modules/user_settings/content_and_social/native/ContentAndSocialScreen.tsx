@@ -1,27 +1,27 @@
-// === Module 18161: ContentAndSocialScreen ===
+// === Module 18189: ContentAndSocialScreen ===
 
-// Module 18161 (ContentAndSocialScreen)
+// Module 18189 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import SettingBuilders from "SettingBuilders" /* 11729 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14463 */;
-import SettingLayoutDefault from "SettingLayout" /* 16835 */;
-import AgeNoticeSettingsNoticesLazy from "AgeNoticeSettingsNoticesLazy" /* 16966 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 18162 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 18168 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import SettingBuilders from "SettingBuilders" /* 11737 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14476 */;
+import SettingLayoutDefault from "SettingLayout" /* 16858 */;
+import AgeNoticeSettingsNoticesLazy from "AgeNoticeSettingsNoticesLazy" /* 16989 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 18190 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 18196 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MobileUserSettings = fn(8573).MobileUserSettings;
+const MobileUserSettings = fn(8578).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = { flex: 1, gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -55,12 +55,12 @@ export default function ContentAndSocialSettings(route) {
   return closure_9(memo(defaultIndex[17]), { node });
 };
 export function DiscordPermissionsPage() {
-  allServersOptionSelected = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[13]).useAllServersOptionSelected();
-  let obj = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[13]);
-  const sensitiveContentFilterHelpArticle = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[14]).useSensitiveContentFilterHelpArticle();
-  let obj2 = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[14]);
-  tinyBroncoMessageRequestsNoticeVariant = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[11]).useTinyBroncoMessageRequestsNoticeVariant();
-  items = [allServersOptionSelected, sensitiveContentFilterHelpArticle, tinyBroncoMessageRequestsNoticeVariant];
+  allServersOptionSelected = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[13]).useAllServersOptionSelected();
+  let obj = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[13]);
+  const sensitiveContentFilterHelpArticle = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[14]).useSensitiveContentFilterHelpArticle();
+  let obj2 = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[14]);
+  ageNoticeMessageRequestsNoticeVariant = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[11]).useAgeNoticeMessageRequestsNoticeVariant();
+  items = [allServersOptionSelected, sensitiveContentFilterHelpArticle, ageNoticeMessageRequestsNoticeVariant];
   const memo = noop.useMemo(() => {
     const obj = { settings: null, subLabel: null };
     items = [MobileUserSettings.SENSITIVE_CONTENT_FILTERS];
@@ -154,7 +154,7 @@ export function DiscordPermissionsPage() {
     obj18.settings = items15;
     const intl11 = util.intl;
     const obj19 = { helpArticle: null };
-    tmp8 = null != tinyBroncoMessageRequestsNoticeVariant;
+    tmp8 = null != ageNoticeMessageRequestsNoticeVariant;
     obj19.helpArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STEALTH_REMEDIATION_FEATURE_GUIDE);
     obj18.subLabel = intl11.format(util.t["0aNQo9"], obj19);
     items8[7] = obj18;
@@ -188,9 +188,9 @@ export function DiscordPermissionsPage() {
   let obj4 = { children: null };
   const memo1 = noop.useMemo(() => SettingBuilders.createList({ sections: memo }), items1);
   let obj5 = { screen: null };
-  let obj3 = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[11]);
-  obj5.screen = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[16]).SettingsScreen.CONTENT_AND_SOCIAL;
-  let items2 = [closure_9(sensitiveContentFilterHelpArticle(tinyBroncoMessageRequestsNoticeVariant[16]), obj5), closure_9(sensitiveContentFilterHelpArticle(tinyBroncoMessageRequestsNoticeVariant[17]), { node: memo1 })];
+  let obj3 = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[11]);
+  obj5.screen = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[16]).SettingsScreen.CONTENT_AND_SOCIAL;
+  let items2 = [closure_9(sensitiveContentFilterHelpArticle(ageNoticeMessageRequestsNoticeVariant[16]), obj5), closure_9(sensitiveContentFilterHelpArticle(ageNoticeMessageRequestsNoticeVariant[17]), { node: memo1 })];
   obj4.children = items2;
   return closure_11(closure_10, obj4);
 }

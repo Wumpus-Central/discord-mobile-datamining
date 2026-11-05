@@ -1,6 +1,6 @@
-// === Module 7639: GuildTemplateActionCreators ===
+// === Module 7641: GuildTemplateActionCreators ===
 
-// Module 7639 (GuildTemplateActionCreators)
+// Module 7641 (GuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import Constants from "Constants" /* 1072 */;
@@ -33,7 +33,7 @@ export default {
                     closure_0 = closure_1_0;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(/* F91697 */ function() { ... });
+                      let nextPromise = resolved.then(/* F91868 */ function() { ... });
                     } else {
                       nextPromise = closure_2_5.get(closure_1_0);
                       if (null == nextPromise) {
@@ -43,10 +43,10 @@ export default {
                         let obj4 = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
                         let value = HTTP.get(obj4);
                         let tmp2Result = closure_2_1(closure_2_2[1]);
-                        let cleanupPromise = value.then(/* F91698 */ function() { ... }, /* F91699 */ function() { ... }).finally(/* F91700 */ function() { ... });
+                        let cleanupPromise = value.then(/* F91869 */ function() { ... }, /* F91870 */ function() { ... }).finally(/* F91871 */ function() { ... });
                         let result = closure_2_5.set(closure_1_0, cleanupPromise);
                         nextPromise = cleanupPromise;
-                        let nextPromise1 = value.then(/* F91698 */ function() { ... }, /* F91699 */ function() { ... });
+                        let nextPromise1 = value.then(/* F91869 */ function() { ... }, /* F91870 */ function() { ... });
                       }
                     }
                     return nextPromise;

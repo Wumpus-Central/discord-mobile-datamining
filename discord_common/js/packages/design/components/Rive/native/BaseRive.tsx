@@ -1,11 +1,11 @@
-// === Module 5215: BaseRive ===
+// === Module 5217: BaseRive ===
 
-// Module 5215 (BaseRive)
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5155 */;
-import DataBindByName from "DataBindByName" /* 5216 */;
-import ManaContext from "ManaContext" /* 5263 */;
-import useRivePlayback from "useRivePlayback" /* 5264 */;
-import RiveTypes from "RiveTypes" /* 5265 */;
+// Module 5217 (BaseRive)
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5157 */;
+import DataBindByName from "DataBindByName" /* 5218 */;
+import ManaContext from "ManaContext" /* 5265 */;
+import useRivePlayback from "useRivePlayback" /* 5266 */;
+import RiveTypes from "RiveTypes" /* 5267 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -367,7 +367,7 @@ export function useTriggerBinding(faceStateChange, instance, faceStateChange2, f
 }
 export function useImageBinding(auraImage, instance, auraImage2, auraImage1, playIfNeeded) {
   noop = auraImage1;
-  const current2 = playIfNeeded;
+  let current2 = playIfNeeded;
   closure_5 = noop.useRef(null);
   const effect = noop.useEffect(() => () => {
     if (null != ref.current) {
@@ -383,101 +383,98 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
     closure_6.current = current2;
   }, items);
   closure_7 = noop.useRef(null);
-  const items1 = [auraImage, instance, auraImage2];
+  closure_8 = noop.useRef(auraImage1);
+  const items1 = [auraImage1];
   const effect2 = noop.useEffect(() => {
+    closure_8.current = current;
+  }, items1);
+  const items2 = [auraImage, instance, auraImage2];
+  const effect3 = noop.useEffect(() => {
     if (null != isCancelled) {
       if (null != auraImage2) {
         isCancelled = function isCancelled() {
           return c0;
         };
         c0 = auraImage2(function*() {
-          if (c3 === 2) {
-            c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
+          yield closure_0(tmp3[9]).ignoreErrors(ref3.current);
+          if (1 === tmp7) {
             if (arg0 === 1) {
+              c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              const obj = { value, done: true };
-              return obj;
+              c5 = 3;
+              return { value, done: true };
+            } else if (tmp3()) {
+              c5 = 3;
             } else {
-              return { value: "HermesInternal", done: null };
+              closure_128_0 = (function ensureImageUri(source) {
+                if (typeof source === "number") {
+                  return closure_1_5.resolveAssetSource(source).uri;
+                } else {
+                  return source;
+                }
+              })(auraImage2);
+              const RiveImages = _true(tmp3[4]).RiveImages;
+              closure_128_1 = RiveImages.loadFromURLAsync(closure_128_0);
+              ref3.current = closure_128_1;
+              closure_128_2 = "failed";
+              c3 = 1;
+              c4 = 3;
+              c5 = 1;
+              return { value: closure_128_1, done: false };
             }
-          } else {
-            try {
-              c3 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj2 = { value, done: true };
-                  return obj2;
-                } else {
-                  dependencyMap = tmp5;
-                  closure_128_0 = undefined;
-                  closure_128_1 = undefined;
-                  c2 = 1;
-                  c3 = 1;
-                  const obj3 = { value: tmp2(5266).ignoreErrors(ref3.current), done: false };
-                  return obj3;
-                }
-              } else {
-                if (1 === tmp5) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  } else if (dependencyMap()) {
-                    c3 = 3;
-                  } else {
-                    const RiveImages = tmp2(5216).RiveImages;
-                    closure_128_0 = RiveImages.loadFromURLAsync((function ensureImageUri(source) {
-                      if (typeof source === "number") {
-                        return closure_1_5.resolveAssetSource(source).uri;
-                      } else {
-                        return source;
-                      }
-                    })(auraImage2));
-                    ref3.current = closure_128_0;
-                    c2 = 2;
-                    c3 = 1;
-                    const obj6 = { value: closure_128_0, done: false };
-                    return obj6;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj7 = { value, done: true };
-                  return obj7;
-                } else {
-                  closure_128_1 = value;
-                  if (!dependencyMap()) {
-                    const imagePropertyResult = isCancelled.imageProperty(c0);
-                    if (imagePropertyResult != null) {
-                      const result = imagePropertyResult.set(closure_128_1);
-                    }
-                    if (null != ref.current) {
-                      disposeRiveImageLater(ref.current);
-                    }
-                    ref.current = closure_128_1;
-                    current = ref2.current;
-                    if (current != null) {
-                      current();
-                    }
-                  }
-                }
-                closure_128_1.dispose();
+          } else if (2 === tmp7) {
+            c3 = 0;
+            if (!tmp3()) {
+              const current5 = closure_2_8.current;
+              if (current5 != null) {
+                current5(closure_128_0, closure_128_2);
               }
-            } catch (tmp36) {
-              c3 = tmp;
-              throw tmp36;
+            }
+            throw closure_2;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            if (!tmp3()) {
+              const current4 = closure_2_8.current;
+              if (current4 != null) {
+                current4(closure_128_0, closure_128_2);
+              }
+            }
+            c5 = 3;
+            return { value, done: true };
+          } else {
+            closure_128_3 = value;
+            if (!tmp3()) {
+              const imagePropertyResult = isCancelled.imageProperty(c0);
+              if (imagePropertyResult != null) {
+                const result = imagePropertyResult.set(closure_128_3);
+              }
+              if (null != ref.current) {
+                disposeRiveImageLater(ref.current);
+              }
+              ref.current = closure_128_3;
+              current = ref2.current;
+              if (current != null) {
+                current();
+              }
+              closure_128_2 = "loaded";
+              c3 = 0;
+              if (!tmp3()) {
+                current2 = closure_2_8.current;
+                if (current2 != null) {
+                  current2(closure_128_0, closure_128_2);
+                }
+              }
+            }
+          }
+          closure_128_3.dispose();
+          if (!tmp3()) {
+            const current3 = closure_2_8.current;
+            if (current3 != null) {
+              current3(closure_128_0, closure_128_2);
             }
           }
         });
@@ -496,28 +493,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
         };
       }
     }
-  }, items1);
-  closure_8 = noop.useRef(auraImage1);
-  const items2 = [auraImage1];
-  const effect3 = noop.useEffect(() => {
-    closure_8.current = current;
   }, items2);
-  const items3 = [auraImage, instance];
-  const effect4 = noop.useEffect(() => {
-    if (null != instance) {
-      const imagePropertyResult = instance.imageProperty(closure_0);
-      if (null != imagePropertyResult) {
-        return imagePropertyResult.addListener(() => {
-          current = ref.current;
-          let currentResult;
-          if (current != null) {
-            currentResult = current();
-          }
-          return currentResult;
-        });
-      }
-    }
-  }, items3);
 }
 export function useArtboardBinding(Icon, instance, file, Icon2, playIfNeeded) {
   closure_0 = Icon;

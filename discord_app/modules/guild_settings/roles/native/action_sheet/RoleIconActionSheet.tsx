@@ -1,18 +1,18 @@
-// === Module 20075: RoleIconActionSheet ===
+// === Module 20111: RoleIconActionSheet ===
 
-// Module 20075 (RoleIconActionSheet)
+// Module 20111 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import TableRow from "TableRow" /* 7116 */;
-import TableRowGroup from "TableRowGroup" /* 7201 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
-import ActionSheet from "ActionSheet" /* 7502 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20072 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import TableRow from "TableRow" /* 7119 */;
+import TableRowGroup from "TableRowGroup" /* 7204 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7460 */;
+import ActionSheet from "ActionSheet" /* 7504 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20058 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20094 */;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
@@ -178,18 +178,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(20072).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(20072);
+                  closure_0(20108).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(20108);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(20072);
+                const tmp22 = closure_0(20108);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(20076).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(20112).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
@@ -197,8 +197,8 @@ export default function RoleIconActionSheet(arg0) {
             if (1 === tmp7) {
               c6 = 0;
               const intl = closure_0(1113).intl;
-              closure_0(5845).presentError(intl.string(closure_0(1113).t.R0RpRX));
-              const obj2 = closure_0(5845);
+              closure_0(5848).presentError(intl.string(closure_0(1113).t.R0RpRX));
+              const obj2 = closure_0(5848);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -232,7 +232,7 @@ export default function RoleIconActionSheet(arg0) {
       }
       return applyArgumentsResult;
     };
-    const result = guildId(10118).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(10126).openEmojiPickerActionSheet(obj2, "stack");
   };
   items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;

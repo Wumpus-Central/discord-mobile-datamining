@@ -1,16 +1,16 @@
-// === Module 9346: DiscordTag ===
+// === Module 9353: DiscordTag ===
 
-// Module 9346 (DiscordTag)
+// Module 9353 (DiscordTag)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import BotTagDefault from "BotTag" /* 9347 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import BotTagDefault from "BotTag" /* 9354 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { flexGrow: 1, alignItems: "center", flexDirection: "row" }, botTag: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

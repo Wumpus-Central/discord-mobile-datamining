@@ -1,8 +1,8 @@
-// === Module 11600: useCustomStatusActivityForUser ===
+// === Module 11608: useCustomStatusActivityForUser ===
 
-// Module 11600 (useCustomStatusActivityForUser)
+// Module 11608 (useCustomStatusActivityForUser)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5895 */;
+import PresenceStore from "PresenceStore" /* 5898 */;
 
 const require = globalThis.__r;
 

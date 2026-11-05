@@ -1,6 +1,6 @@
-// === Module 8042: PopoutWindowStore ===
+// === Module 8047: PopoutWindowStore ===
 
-// Module 8042 (PopoutWindowStore)
+// Module 8047 (PopoutWindowStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

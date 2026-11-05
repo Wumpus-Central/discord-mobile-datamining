@@ -1,6 +1,6 @@
-// === Module 6047: AV1BitrateTuningExperiment ===
+// === Module 6050: AV1BitrateTuningExperiment ===
 
-// Module 6047 (AV1BitrateTuningExperiment)
+// Module 6050 (AV1BitrateTuningExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

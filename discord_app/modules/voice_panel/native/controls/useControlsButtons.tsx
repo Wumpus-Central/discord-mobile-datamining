@@ -1,25 +1,25 @@
-// === Module 19584: useControlsButtons ===
+// === Module 19619: useControlsButtons ===
 
-// Module 19584 (useControlsButtons)
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
-import MobileGoLiveEntrypointExperimentDefault from "MobileGoLiveEntrypointExperiment" /* 19491 */;
-import VoicePanelMicButton from "VoicePanelMicButton" /* 19585 */;
-import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 19588 */;
-import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 19594 */;
-import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 19596 */;
-import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 19598 */;
-import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 19600 */;
-import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 19602 */;
-import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 19607 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19608 */;
+// Module 19619 (useControlsButtons)
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11418 */;
+import MobileGoLiveEntrypointExperimentDefault from "MobileGoLiveEntrypointExperiment" /* 19526 */;
+import VoicePanelMicButton from "VoicePanelMicButton" /* 19620 */;
+import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 19623 */;
+import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 19629 */;
+import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 19631 */;
+import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 19633 */;
+import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 19635 */;
+import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 19637 */;
+import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 19642 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19643 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 const require = globalThis.__r;
 
-const useStateFromSharedValueDefault = tmp(8982);
+const useStateFromSharedValueDefault = tmp(8987);
 require = fn;
-const VoicePanelControlsConstants = fn(11409);
+const VoicePanelControlsConstants = fn(11417);
 ({ CONTROLS_BUTTON_SIZE_LARGE: hasOwnProperty, CONTROLS_BUTTON_SIZE_NORMAL: closure_6 } = VoicePanelControlsConstants);
 const InputModes = fn(1072).InputModes;
 const jsx = fn(21).jsx;
@@ -109,7 +109,7 @@ export default function useControlsButtons() {
           const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (c1 === _true(19491).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (c1 === _true(19526).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
@@ -120,7 +120,7 @@ export default function useControlsButtons() {
           const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj6);
         }
-        if (c1 === _true(19491).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (c1 === _true(19526).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj7);
         } else {

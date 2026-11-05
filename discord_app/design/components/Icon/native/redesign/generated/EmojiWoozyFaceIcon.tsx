@@ -1,9 +1,9 @@
-// === Module 17637: EmojiWoozyFaceIcon ===
+// === Module 17664: EmojiWoozyFaceIcon ===
 
-// Module 17637 (EmojiWoozyFaceIcon)
+// Module 17664 (EmojiWoozyFaceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod17638 from "module_17638" /* 17638 */;
+import BaseIconImage from "BaseIconImage" /* 5853 */;
+import _mod17665 from "module_17665" /* 17665 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiWoozyFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17638, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17665, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

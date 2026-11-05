@@ -1,13 +1,13 @@
-// === Module 8859: utils ===
+// === Module 8864: utils ===
 
-// Module 8859 (utils)
+// Module 8864 (utils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import _modDef2171 from "module_2171" /* 2171 */;
-import _mod4567 from "module_4567" /* 4567 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8855 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8860 */;
+import _mod4569 from "module_4569" /* 4569 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8860 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8865 */;
 import size from "module_2" /* 2 */;
 
 function calculateTimestampDurations(end, now) {
@@ -392,7 +392,7 @@ export function getResurrectedEntryLastPlayTime(entry) {
 }
 export function getFullResurrectedBadgeText(start) {
   const obj2 = { start, end: null };
-  const obj = _mod4567;
+  const obj = _mod4569;
   obj2.end = new Date();
   const intervalToDurationResult = obj.intervalToDuration(obj2);
   const months = intervalToDurationResult.months;
@@ -434,8 +434,8 @@ export function getEpisodeBadgeText(large_text) {
       let formatToPlainStringResult = null;
       if (null != match) {
         const intl = util.intl;
-        const obj2 = { seasonNum: match[1], episodeNum: match[2] };
-        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj2);
+        const obj = { seasonNum: match[1], episodeNum: match[2] };
+        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj);
       }
       return formatToPlainStringResult;
     }

@@ -1,16 +1,16 @@
-// === Module 18864: useWaterwheelsActions ===
+// === Module 18895: useWaterwheelsActions ===
 
-// Module 18864 (useWaterwheelsActions)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 8104 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9073 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9870 */;
-import NotificationUtilsDefault from "NotificationUtils" /* 14200 */;
+// Module 18895 (useWaterwheelsActions)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5849 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7040 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 8109 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 9079 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9876 */;
+import NotificationUtilsDefault from "NotificationUtils" /* 14213 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14191 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14204 */;
 
 require = fn;
 function openErrorToast(text) {
@@ -204,7 +204,7 @@ let closure_16 = async function _runGuarded(arg0) {
 };
 const Constants = fn(1072);
 ({ AbortCodes, PlatformTypes } = Constants);
-let closure_7 = fn(8080).NotificationAuthorizationStatus;
+let closure_7 = fn(8085).NotificationAuthorizationStatus;
 const items = [, , ];
 ({ USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED: arr[0], TOO_MANY_USER_GUILDS: arr[1], GUILD_AT_CAPACITY: arr[2] } = AbortCodes);
 const set = new Set(items);
@@ -229,7 +229,7 @@ export function useWaterwheelsActions() {
         return applyArgumentsResult;
       })(ref.current, type.value.guild_id);
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD === type) {
-      return runGuarded(() => type(7661).startLurking(type.value.guild_id, {}), () => {
+      return runGuarded(() => type(7663).startLurking(type.value.guild_id, {}), () => {
         const intl = type(1113).intl;
         return intl.string(closure_1_1(2537).d6U01J);
       });
@@ -245,7 +245,7 @@ export function useWaterwheelsActions() {
         return intl.string(closure_1_1(2537)["rdTp+3"]);
       });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_URI === type) {
-      return runGuarded(() => type(9085).handleClick({ href: type.value.url }), () => {
+      return runGuarded(() => type(9091).handleClick({ href: type.value.url }), () => {
         const intl = type(1113).intl;
         return intl.string(closure_1_1(2537)["4a9Wgk"]);
       });

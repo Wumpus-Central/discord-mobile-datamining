@@ -1,14 +1,14 @@
-// === Module 20244: EmojiAlias ===
+// === Module 20280: EmojiAlias ===
 
-// Module 20244 (EmojiAlias)
-import Text_Text from "Text/Text" /* 5761 */;
+// Module 20280 (EmojiAlias)
+import Text_Text from "Text/Text" /* 5763 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_5 = createStyles.createStyles({ emojiAlias: { alignItems: "center", flexDirection: "row" }, emojiColon: { width: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiAlias.tsx");

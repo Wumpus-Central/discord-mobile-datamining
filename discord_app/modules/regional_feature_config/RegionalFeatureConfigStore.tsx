@@ -1,10 +1,10 @@
-// === Module 5828: RegionalFeatureConfigStore ===
+// === Module 5830: RegionalFeatureConfigStore ===
 
-// Module 5828 (RegionalFeatureConfigStore)
+// Module 5830 (RegionalFeatureConfigStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RegionalFeatureConfigModels from "RegionalFeatureConfigModels" /* 5833 */;
-import CountryCodeUtils from "CountryCodeUtils" /* 5829 */;
+import RegionalFeatureConfigModels from "RegionalFeatureConfigModels" /* 5835 */;
+import CountryCodeUtils from "CountryCodeUtils" /* 5831 */;
 import size from "module_2" /* 2 */;
 
 ({ getDefaultCountryCode: c2, getCountryCodeByAlpha2: c3 } = CountryCodeUtils);
@@ -61,6 +61,26 @@ prototype["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal(
   let flag;
   if (_null != null) {
     flag = _null.shouldCollectAppStoreSignal();
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["isMediaTakedownRegulation"] = function isMediaTakedownRegulation(arg0) {
+  let flag;
+  if (_null != null) {
+    flag = _null.isMediaTakedownRegulation(arg0);
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["isAppStoreConsentRevoked"] = function isAppStoreConsentRevoked(arg0) {
+  let flag;
+  if (_null != null) {
+    flag = _null.isAppStoreConsentRevoked(arg0);
   }
   if (flag == null) {
     flag = false;

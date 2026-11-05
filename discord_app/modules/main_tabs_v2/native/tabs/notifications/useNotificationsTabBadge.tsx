@@ -1,8 +1,8 @@
-// === Module 18738: useNotificationsTabBadge ===
+// === Module 18768: useNotificationsTabBadge ===
 
-// Module 18738 (useNotificationsTabBadge)
+// Module 18768 (useNotificationsTabBadge)
 import noop from "module_19" /* 19 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6993 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6996 */;
 
 const require = fn;
 const size = fn(2);

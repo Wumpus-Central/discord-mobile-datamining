@@ -1,18 +1,18 @@
-// === Module 19375: FrameView ===
+// === Module 19406: FrameView ===
 
-// Module 19375 (FrameView)
+// Module 19406 (FrameView)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6094 */;
-import leaveFrame from "leaveFrame" /* 11125 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 12454 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 19376 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6097 */;
+import leaveFrame from "leaveFrame" /* 11078 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 12461 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 19407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 require = fn;
-const FrameLayoutModes = fn(6982).FrameLayoutModes;
+const FrameLayoutModes = fn(6985).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FrameView.tsx");

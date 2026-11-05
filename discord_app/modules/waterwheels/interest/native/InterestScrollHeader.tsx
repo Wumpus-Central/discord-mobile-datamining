@@ -1,8 +1,8 @@
-// === Module 18690: InterestScrollHeader ===
+// === Module 18720: InterestScrollHeader ===
 
-// Module 18690 (InterestScrollHeader)
+// Module 18720 (InterestScrollHeader)
 import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5761 */;
+import Text_Text from "Text/Text" /* 5763 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -10,7 +10,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_6 = createStyles.createStyles({ title: { flex: 1, alignItems: "center", justifyContent: "center", minWidth: 0 }, normal: { maxWidth: "100%" } });
 let closure_7 = { code: "(function InterestScrollHeaderTsx1(){let[scrollY,collapseOffset]=this.__closure;return{opacity:Math.max(0,Math.min(1,(scrollY.get()-Math.max(0,collapseOffset-64))/64))};})" };
 const size = fn(2);

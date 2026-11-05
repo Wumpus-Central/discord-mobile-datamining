@@ -1,11 +1,11 @@
-// === Module 13208: ConjureCreateSheet ===
+// === Module 13215: ConjureCreateSheet ===
 
-// Module 13208 (ConjureCreateSheet)
+// Module 13215 (ConjureCreateSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5382 */;
-import ConjureEffortPicker from "ConjureEffortPicker" /* 12368 */;
-import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 13198 */;
-import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 13214 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5384 */;
+import ConjureEffortPicker from "ConjureEffortPicker" /* 12375 */;
+import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 13205 */;
+import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 13221 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -427,7 +427,7 @@ export default function ConjureCreateSheet(guildId) {
               c6 = 1;
               c7 = 2;
               c8 = 1;
-              const obj5 = { value: _null(12424).pickConjureArchive(), done: false };
+              const obj5 = { value: _null(12431).pickConjureArchive(), done: false };
               return obj5;
             }
           }
@@ -452,20 +452,20 @@ export default function ConjureCreateSheet(guildId) {
               closure_132_0 = value;
               c6 = 0;
               if (null != closure_132_0) {
-                closure_132_1 = _null(12424).describeConjureArchiveRejection(closure_132_0);
+                closure_132_1 = _null(12431).describeConjureArchiveRejection(closure_132_0);
                 if (null == closure_132_1) {
                   closure_132_2 = closure_132_0;
-                  const tmp41 = _null(13211);
+                  const tmp41 = _null(13218);
                   closure_3 = tmp41;
                   dependencyMap = tmp41.importedConjureInstallScope;
                   c7 = 3;
                   c8 = 1;
-                  const obj9 = { value: _null(13211).readConjureArchiveInstallScope(closure_132_2.bytes), done: false };
+                  const obj9 = { value: _null(13218).readConjureArchiveInstallScope(closure_132_2.bytes), done: false };
                   return obj9;
                 } else {
                   closure_133_10(closure_132_1);
                 }
-                const obj15 = _null(12424);
+                const obj15 = _null(12431);
               }
             }
           } else if (3 === tmp7) {
@@ -509,8 +509,8 @@ export default function ConjureCreateSheet(guildId) {
                     }
                   };
                 });
-                const result = _null(7500).showSimpleActionSheet(obj10);
-                const obj3 = _null(7500);
+                const result = _null(7502).showSimpleActionSheet(obj10);
+                const obj3 = _null(7502);
               } else {
                 c7 = 4;
                 c8 = 1;

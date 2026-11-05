@@ -1,10 +1,10 @@
-// === Module 7083: MemberVerificationFormStore ===
+// === Module 7086: MemberVerificationFormStore ===
 
-// Module 7083 (MemberVerificationFormStore)
+// Module 7086 (MemberVerificationFormStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5175 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5177 */;
 
 require = fn;
 const NO_MEMBER_VERIFICATION_FORM = { version: "", description: "", formFields: [] };

@@ -1,21 +1,21 @@
-// === Module 16234: Status ===
+// === Module 16247: Status ===
 
-// Module 16234 (Status)
+// Module 16247 (Status)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5771 */;
-import FastImageDefault from "FastImage" /* 5851 */;
-import EllipsisDefault from "Ellipsis" /* 16220 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 16232 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16233 */;
-import _modDef16235 from "module_16235" /* 16235 */;
-import _modDef16236 from "module_16236" /* 16236 */;
-import _modDef16237 from "module_16237" /* 16237 */;
-import _modDef16238 from "module_16238" /* 16238 */;
-import _modDef16239 from "module_16239" /* 16239 */;
-import _modDef16240 from "module_16240" /* 16240 */;
-import _modDef16241 from "module_16241" /* 16241 */;
-import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 16242 */;
+import spring_spring from "spring/spring" /* 5773 */;
+import FastImageDefault from "FastImage" /* 5854 */;
+import EllipsisDefault from "Ellipsis" /* 16233 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 16245 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16246 */;
+import _modDef16248 from "module_16248" /* 16248 */;
+import _modDef16249 from "module_16249" /* 16249 */;
+import _modDef16250 from "module_16250" /* 16250 */;
+import _modDef16251 from "module_16251" /* 16251 */;
+import _modDef16252 from "module_16252" /* 16252 */;
+import _modDef16253 from "module_16253" /* 16253 */;
+import _modDef16254 from "module_16254" /* 16254 */;
+import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 16255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,13 +25,13 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1188).STATUS_PADDING;
 const StatusTypes = fn(1072).StatusTypes;
-const ChannelAnimationConstants = fn(15097);
+const ChannelAnimationConstants = fn(15110);
 ({ TYPING_ENTERING: metroImportDefault, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let closure_12 = createStyles.createStyles({ statusIcon: { width: "100%", height: "100%" } });
-createStyles = fn(5141);
+createStyles = fn(5143);
 let closure_13 = createStyles.createStyles((items, arg1) => {
   const statusTypingDimensions = Status_StatusUtils.getStatusTypingDimensions(items);
   ({ height, dotSize } = statusTypingDimensions);
@@ -85,23 +85,23 @@ export default function Status(isMobileOnline) {
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef16235;
+    let tmp4Result = _modDef16248;
   } else if (flag2) {
-    tmp4Result = _modDef16236;
+    tmp4Result = _modDef16249;
   } else if (flag) {
-    tmp4Result = _modDef16237;
+    tmp4Result = _modDef16250;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef16238;
+    tmp4Result = _modDef16251;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef16239;
+    tmp4Result = _modDef16252;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef16241;
+        tmp4Result = _modDef16254;
       }
     }
-    tmp4Result = _modDef16240;
+    tmp4Result = _modDef16253;
   }
   obj2.source = tmp4Result;
   obj.children = closure_1_10(FastImageDefault, obj2);
@@ -212,23 +212,23 @@ export function StatusWithTyping(status) {
   const obj6 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
   const tmp5Result4 = _mod1652;
   if (streaming) {
-    let tmp3Result2 = _modDef16235;
+    let tmp3Result2 = _modDef16248;
   } else if (flag2) {
-    tmp3Result2 = _modDef16236;
+    tmp3Result2 = _modDef16249;
   } else if (flag) {
-    tmp3Result2 = _modDef16237;
+    tmp3Result2 = _modDef16250;
   } else if (StatusTypes.IDLE === status) {
-    tmp3Result2 = _modDef16238;
+    tmp3Result2 = _modDef16251;
   } else if (StatusTypes.DND === status) {
-    tmp3Result2 = _modDef16239;
+    tmp3Result2 = _modDef16252;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp3Result2 = _modDef16241;
+        tmp3Result2 = _modDef16254;
       }
     }
-    tmp3Result2 = _modDef16240;
+    tmp3Result2 = _modDef16253;
   }
   obj6.source = tmp3Result2;
   obj5.children = closure_1_10(FastImageDefault, obj6);

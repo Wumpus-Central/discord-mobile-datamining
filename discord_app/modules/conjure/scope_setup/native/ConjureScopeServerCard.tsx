@@ -1,13 +1,13 @@
-// === Module 12971: ConjureScopeServerCard ===
+// === Module 12978: ConjureScopeServerCard ===
 
-// Module 12971 (ConjureScopeServerCard)
+// Module 12978 (ConjureScopeServerCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12334 */;
-import ConjureClarificationEntityPickerDefault from "ConjureClarificationEntityPicker" /* 12972 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12341 */;
+import ConjureClarificationEntityPickerDefault from "ConjureClarificationEntityPicker" /* 12979 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = [];
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { surface: { marginTop: nativeDefault.space.PX_8, padding: 0, overflow: "hidden" }, header: null, content: null, footer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, padding: 0, overflow: "hidden" };
 obj2.header = { gap: nativeDefault.space.PX_4, padding: nativeDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };

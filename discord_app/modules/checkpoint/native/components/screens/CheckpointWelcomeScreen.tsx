@@ -1,6 +1,6 @@
-// === Module 13863: CheckpointWelcomeScreen ===
+// === Module 13875: CheckpointWelcomeScreen ===
 
-// Module 13863 (CheckpointWelcomeScreen)
+// Module 13875 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -8,13 +8,13 @@ import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _modDef3187 from "module_3187" /* 3187 */;
 import _modDef3219 from "module_3219" /* 3219 */;
-import UserUtils from "UserUtils" /* 5195 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13864 */;
-import TextWritingAnimation from "TextWritingAnimation" /* 13865 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 13867 */;
+import UserUtils from "UserUtils" /* 5197 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13876 */;
+import TextWritingAnimation from "TextWritingAnimation" /* 13877 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 13879 */;
 import UserStore from "UserStore" /* 1385 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5141 */;
+import createStyles from "createStyles" /* 5143 */;
 import size from "module_2" /* 2 */;
 
 const TextWritingAnimationDefault = TextWritingAnimation;

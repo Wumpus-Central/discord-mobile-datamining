@@ -1,9 +1,9 @@
-// === Module 15227: UserProfileTabPages ===
+// === Module 15240: UserProfileTabPages ===
 
-// Module 15227 (UserProfileTabPages)
+// Module 15240 (UserProfileTabPages)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5398 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5400 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

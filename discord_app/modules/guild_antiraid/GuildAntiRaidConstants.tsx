@@ -1,6 +1,6 @@
-// === Module 8624: GuildAntiRaidConstants ===
+// === Module 8629: GuildAntiRaidConstants ===
 
-// Module 8624 (GuildAntiRaidConstants)
+// Module 8629 (GuildAntiRaidConstants)
 import Constants from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
 import BigFlagUtils from "BigFlagUtils" /* 1084 */;

@@ -1,6 +1,6 @@
-// === Module 8162: ? ===
+// === Module 8167: ? ===
 
-// Module 8162
+// Module 8167
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AgeVerificationSpotIllustration-1x.png.js");

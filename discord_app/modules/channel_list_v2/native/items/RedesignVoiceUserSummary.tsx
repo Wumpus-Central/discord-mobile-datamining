@@ -1,10 +1,10 @@
-// === Module 18444: RedesignVoiceUserSummary ===
+// === Module 18474: RedesignVoiceUserSummary ===
 
-// Module 18444 (RedesignVoiceUserSummary)
-import ChannelUtils from "ChannelUtils" /* 6181 */;
+// Module 18474 (RedesignVoiceUserSummary)
+import ChannelUtils from "ChannelUtils" /* 6184 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5901 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5904 */;
 
 require = fn;
 const jsx = fn(21).jsx;

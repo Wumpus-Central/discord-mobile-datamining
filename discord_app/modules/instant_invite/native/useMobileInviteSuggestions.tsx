@@ -1,13 +1,13 @@
-// === Module 9277: useMobileInviteSuggestions ===
+// === Module 9284: useMobileInviteSuggestions ===
 
-// Module 9277 (useMobileInviteSuggestions)
+// Module 9284 (useMobileInviteSuggestions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9278 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5901 */;
+import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9285 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5904 */;
 
 const require = globalThis.__r;
 

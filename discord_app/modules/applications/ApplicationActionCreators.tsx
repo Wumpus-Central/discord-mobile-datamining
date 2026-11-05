@@ -1,8 +1,8 @@
-// === Module 7016: ApplicationActionCreators ===
+// === Module 7019: ApplicationActionCreators ===
 
-// Module 7016 (ApplicationActionCreators)
+// Module 7019 (ApplicationActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7017 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7020 */;
 import ApplicationRecord from "ApplicationRecord" /* 2145 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 
@@ -58,7 +58,7 @@ let closure_10 = async function _fetchApplication(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

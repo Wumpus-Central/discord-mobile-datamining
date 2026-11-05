@@ -1,16 +1,16 @@
-// === Module 15442: ProvisionalAccountNoCallAllowed ===
+// === Module 15455: ProvisionalAccountNoCallAllowed ===
 
-// Module 15442 (ProvisionalAccountNoCallAllowed)
+// Module 15455 (ProvisionalAccountNoCallAllowed)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
-import AlertModal from "AlertModal" /* 6099 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7227 */;
+import AlertModal from "AlertModal" /* 6102 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7230 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_5 = createStyles.createStyles({ header: { alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");

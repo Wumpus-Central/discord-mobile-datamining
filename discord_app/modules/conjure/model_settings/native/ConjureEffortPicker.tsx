@@ -1,13 +1,13 @@
-// === Module 12368: ConjureEffortPicker ===
+// === Module 12375: ConjureEffortPicker ===
 
-// Module 12368 (ConjureEffortPicker)
+// Module 12375 (ConjureEffortPicker)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import TableRadioRow from "TableRadioRow" /* 7202 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7457 */;
-import ActionSheet from "ActionSheet" /* 7502 */;
-import ConjureEffortTiers from "ConjureEffortTiers" /* 12369 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 12370 */;
+import TableRadioRow from "TableRadioRow" /* 7205 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7460 */;
+import ActionSheet from "ActionSheet" /* 7504 */;
+import ConjureEffortTiers from "ConjureEffortTiers" /* 12376 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 12377 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,16 +34,22 @@ class ConjureEffortPicker {
     intl3 = settings(onChange[4]).intl;
     stringResult2 = intl3.string(disabled(onChange[5]).fpdVCO);
     obj = settings(onChange[6]);
-    conjureTierModelResult = obj.conjureTierModel(settings, tiers, settings.tier);
-    tmp11 = jsxs;
+    conjureCanPickModelResult = obj.conjureCanPickModel(choices);
+    obj2 = settings(onChange[6]);
+    conjureTierModelResult = obj2.conjureTierModel(settings, tiers, settings.tier);
+    tmp12 = jsxs;
     obj1 = { direction: "vertical", spacing: disabled(onChange[8]).space.PX_16, children: null };
-    tmp12 = jsx;
+    tmp13 = jsx;
     obj14 = {
       hasIcons: false,
       value: settings.tier,
-      onChange(tier2) {
-            if (tier2 !== settings.tier) {
-              const conjureWithTierResult = ConjureEffortTiers.conjureWithTier(tmp, tier2);
+      onChange(value) {
+            let conjureTierAvailableResult = value !== settings.tier;
+            if (conjureTierAvailableResult) {
+              conjureTierAvailableResult = ConjureEffortTiers.conjureTierAvailable(value);
+            }
+            if (conjureTierAvailableResult) {
+              const conjureWithTierResult = ConjureEffortTiers.conjureWithTier(settings, value);
               dependencyMap(ConjureEffortTiers.conjureNormalizeFast(conjureWithTierResult));
             }
           },
@@ -51,124 +57,140 @@ class ConjureEffortPicker {
       accessibilityLabel: null,
       children: null
     };
-    tmp13 = undefined;
+    tmp14 = undefined;
     if (!hideTitle) {
-      tmp13 = stringResult;
+      tmp14 = stringResult;
     }
-    obj14.title = tmp13;
+    obj14.title = tmp14;
     obj14.accessibilityLabel = stringResult;
     CONJURE_MODEL_TIERS = tmp4(tmp5[10]).CONJURE_MODEL_TIERS;
     obj14.children = CONJURE_MODEL_TIERS.map((value) => {
       const obj = { label: ConjureEffortTiers.conjureTierLabel(value), subLabel: null, value: null, disabled: null };
-      obj.subLabel = ConjureEffortTiers.conjureTierDescription(value);
+      if (obj3.conjureTierAvailable(value)) {
+        let result = ConjureEffortTiers.conjureTierDescription(value);
+        const tmp2Result = ConjureEffortTiers;
+      } else {
+        const intl = util.intl;
+        result = intl.string(_modDef3995["17yEQw"]);
+      }
+      obj.subLabel = result;
       obj.value = value;
-      obj.disabled = disabled;
+      let tmp6 = disabled;
+      if (!disabled) {
+        tmp6 = !ConjureEffortTiers.conjureTierAvailable(value);
+        const tmp2Result2 = ConjureEffortTiers;
+      }
+      obj.disabled = tmp6;
       return timestampProducer(TableRadioRow.TableRadioRow, obj, value);
     });
     items = [, , ];
-    items[0] = tmp12(settings(onChange[9]).TableRadioGroup, obj14);
-    obj15 = { hasIcons: false, children: null };
-    obj16 = { label: null, arrow: null, accessibilityState: null, onPress: null };
-    intl4 = tmp4(tmp5[4]).intl;
-    tmp4Result = tmp4(tmp5[6]);
-    obj16.label = intl4.string(tmp4Result.conjureCustomizeMessage(choices));
-    obj16.arrow = !tmp2;
-    obj16.accessibilityState = { expanded: tmp2 };
-    obj16.onPress = callback;
-    obj15.children = tmp12(tmp4(tmp5[13]).TableRow, obj16);
-    items[1] = tmp12(tmp4(tmp5[12]).TableRowGroup, obj15);
-    tmp11Result = null;
-    if (tmp2) {
-      tmp15 = Fragment;
-      tmp4Result1 = tmp4(tmp5[6]);
+    items[0] = tmp13(settings(onChange[9]).TableRadioGroup, obj14);
+    tmp13Result = null;
+    if (conjureCanPickModelResult) {
+      obj15 = { hasIcons: false, children: null };
+      obj16 = { label: null, arrow: null, accessibilityState: null, onPress: null };
+      intl4 = tmp4(tmp5[4]).intl;
+      obj16.label = intl4.string(tmp6(tmp5[5]).YLHRzA);
+      obj16.arrow = !tmp2;
+      obj17 = { expanded: null };
+      obj17.expanded = tmp2;
+      obj16.accessibilityState = obj17;
+      obj16.onPress = callback;
+      obj15.children = tmp13(tmp4(tmp5[13]).TableRow, obj16);
+      tmp13Result = tmp13(tmp4(tmp5[12]).TableRowGroup, obj15);
+    }
+    items[1] = tmp13Result;
+    tmp12Result = null;
+    if (conjureCanPickModelResult) {
       tmp12Result = null;
-      if (tmp4Result1.conjureCanPickModel(choices)) {
-        tmp12Result = null;
+      if (tmp2) {
+        tmp13Result1 = null;
+        tmp17 = Fragment;
         if (null != conjureTierModelResult) {
-          obj17 = { hasIcons: false, value: null, onChange: null, title: null, accessibilityLabel: null, children: null };
-          obj17.value = conjureTierModelResult;
-          obj17.onChange = function onChange(arg0) {
+          obj18 = { hasIcons: false, value: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+          obj18.value = conjureTierModelResult;
+          obj18.onChange = function onChange(arg0) {
             const conjurePickTierModelResult = ConjureEffortTiers.conjurePickTierModel(settings, settings.tier, arg0);
             dependencyMap(ConjureEffortTiers.conjureNormalizeFast(conjurePickTierModelResult));
           };
-          obj17.title = stringResult1;
-          obj17.accessibilityLabel = stringResult1;
+          obj18.title = stringResult1;
+          obj18.accessibilityLabel = stringResult1;
           main = choices.main;
-          obj17.children = main.map((label) => timestampProducer(TableRadioRow.TableRadioRow, { label: label.label, subLabel: label.provider_label, value: label.id, disabled }, label.id));
-          tmp12Result = tmp12(tmp4(tmp5[9]).TableRadioGroup, obj17);
+          obj18.children = main.map((label) => timestampProducer(TableRadioRow.TableRadioRow, { label: label.label, subLabel: label.provider_label, value: label.id, disabled }, label.id));
+          tmp13Result1 = tmp13(tmp4(tmp5[9]).TableRadioGroup, obj18);
         }
-      }
-      items1 = [, , ];
-      items1[0] = tmp12Result;
-      str = settings.thinking;
-      if (str == null) {
-        thinking = undefined;
-        if (tiers != null) {
-          tmp18 = tiers[settings.tier];
-          if (tmp18 != null) {
-            thinking = tmp18.thinking;
+        items1 = [, , ];
+        items1[0] = tmp13Result1;
+        str = settings.thinking;
+        if (str == null) {
+          thinking = undefined;
+          if (tiers != null) {
+            tmp20 = tiers[settings.tier];
+            if (tmp20 != null) {
+              thinking = tmp20.thinking;
+            }
           }
+          str = thinking;
         }
-        str = thinking;
-      }
-      if (str == null) {
-        str = "";
-      }
-      obj18 = { hasIcons: false, value: null, onChange: null, title: null, accessibilityLabel: null, children: null };
-      obj18.value = str;
-      obj18.onChange = function onChange(thinking) {
-        const obj = {};
-        const merged = Object.assign(settings);
-        obj.thinking = thinking;
-        dependencyMap(ConjureEffortTiers.conjureNormalizeFast(obj));
-      };
-      obj18.title = stringResult2;
-      obj18.accessibilityLabel = stringResult2;
-      thinking1 = choices.thinking;
-      obj18.children = thinking1.map((value) => {
-        let tmp2 = ConjureModelLabels.THINKING_LABELS[value];
-        if (tmp2 == null) {
-          tmp2 = value;
+        if (str == null) {
+          str = "";
         }
-        return timestampProducer(TableRadioRow.TableRadioRow, { label: tmp2, value, disabled }, value);
-      });
-      items1[1] = tmp12(tmp4(tmp5[9]).TableRadioGroup, obj18);
-      tmp4Result2 = tmp4(tmp5[6]);
-      tmp12Result1 = null;
-      if (tmp4Result2.conjureCeilingSupportsFast(settings, tiers, choices.main)) {
-        obj19 = { hasIcons: false, children: null };
-        obj20 = { label: null, subLabel: null, value: null, disabled: null, onValueChange: null };
-        intl5 = tmp4(tmp5[4]).intl;
-        obj20.label = intl5.string(tmp6(tmp5[5])["5AblQX"]);
-        intl6 = tmp4(tmp5[4]).intl;
-        obj20.subLabel = intl6.string(tmp6(tmp5[5]).QnUV8M);
-        flag = true;
-        obj20.value = true === settings.fast;
-        obj20.disabled = disabled;
-        obj20.onValueChange = function onValueChange(fast) {
+        obj19 = { hasIcons: false, value: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+        obj19.value = str;
+        obj19.onChange = function onChange(thinking) {
           const obj = {};
           const merged = Object.assign(settings);
-          obj.fast = fast;
+          obj.thinking = thinking;
           dependencyMap(ConjureEffortTiers.conjureNormalizeFast(obj));
         };
-        obj19.children = tmp12(tmp4(tmp5[15]).TableSwitchRow, obj20);
-        tmp12Result1 = tmp12(tmp4(tmp5[12]).TableRowGroup, obj19);
+        obj19.title = stringResult2;
+        obj19.accessibilityLabel = stringResult2;
+        thinking1 = choices.thinking;
+        obj19.children = thinking1.map((value) => {
+          let tmp2 = ConjureModelLabels.THINKING_LABELS[value];
+          if (tmp2 == null) {
+            tmp2 = value;
+          }
+          return timestampProducer(TableRadioRow.TableRadioRow, { label: tmp2, value, disabled }, value);
+        });
+        items1[1] = tmp13(tmp4(tmp5[9]).TableRadioGroup, obj19);
+        tmp4Result = tmp4(tmp5[6]);
+        tmp13Result2 = null;
+        if (tmp4Result.conjureCeilingSupportsFast(settings, tiers, choices.main)) {
+          obj20 = { hasIcons: false, children: null };
+          obj21 = { label: null, subLabel: null, value: null, disabled: null, onValueChange: null };
+          intl5 = tmp4(tmp5[4]).intl;
+          obj21.label = intl5.string(tmp6(tmp5[5])["5AblQX"]);
+          intl6 = tmp4(tmp5[4]).intl;
+          obj21.subLabel = intl6.string(tmp6(tmp5[5]).QnUV8M);
+          flag = true;
+          obj21.value = true === settings.fast;
+          obj21.disabled = disabled;
+          obj21.onValueChange = function onValueChange(fast) {
+            const obj = {};
+            const merged = Object.assign(settings);
+            obj.fast = fast;
+            dependencyMap(ConjureEffortTiers.conjureNormalizeFast(obj));
+          };
+          obj20.children = tmp13(tmp4(tmp5[15]).TableSwitchRow, obj21);
+          tmp13Result2 = tmp13(tmp4(tmp5[12]).TableRowGroup, obj20);
+        }
+        obj22 = { children: null };
+        items1[2] = tmp13Result2;
+        obj22.children = items1;
+        tmp12Result = tmp12(tmp17, obj22);
       }
-      obj21 = { children: null };
-      items1[2] = tmp12Result1;
-      obj21.children = items1;
-      tmp11Result = tmp11(tmp15, obj21);
     }
-    items[2] = tmp11Result;
+    items[2] = tmp12Result;
     obj1.children = items;
-    return tmp11(settings(onChange[7]).Stack, obj1);
+    return tmp12(settings(onChange[7]).Stack, obj1);
   }
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/model_settings/native/ConjureEffortPicker.tsx");
+let result = size.fileFinishedImporting("modules/conjure/model_settings/native/ConjureEffortPicker.tsx");
 
 export default ConjureEffortPicker;
 export const CONJURE_EFFORT_PICKER_SHEET_KEY = "ConjureEffortPickerSheet";

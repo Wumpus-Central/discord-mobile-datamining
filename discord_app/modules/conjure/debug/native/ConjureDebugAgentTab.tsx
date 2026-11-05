@@ -1,25 +1,25 @@
-// === Module 13253: ConjureDebugAgentTab ===
+// === Module 13260: ConjureDebugAgentTab ===
 
-// Module 13253 (ConjureDebugAgentTab)
+// Module 13260 (ConjureDebugAgentTab)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import ConjureUsageTypes from "ConjureUsageTypes" /* 11037 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 13247 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 13248 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13250 */;
-import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 13252 */;
-import useConjureDebugAgentStateDefault from "useConjureDebugAgentState" /* 13254 */;
-import ConjureDebugGitSection from "ConjureDebugGitSection" /* 13255 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import ConjureUsageTypes from "ConjureUsageTypes" /* 11043 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 13254 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 13255 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 13257 */;
+import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 13259 */;
+import useConjureDebugAgentStateDefault from "useConjureDebugAgentState" /* 13261 */;
+import ConjureDebugGitSection from "ConjureDebugGitSection" /* 13262 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { tab: { gap: nativeDefault.space.PX_24 }, forceCompaction: null };
 let obj3 = { gap: nativeDefault.space.PX_24 };
 obj2.forceCompaction = { gap: nativeDefault.space.PX_8 };

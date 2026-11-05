@@ -1,6 +1,6 @@
-// === Module 15871: EmailSettingsStore ===
+// === Module 15884: EmailSettingsStore ===
 
-// Module 15871 (EmailSettingsStore)
+// Module 15884 (EmailSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -30,6 +30,11 @@ categories = {
     const obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(updates.updates);
+  },
+  EMAIL_SETTINGS_UPDATE_FAILURE: function handleUpdateFailure(previous) {
+    const obj = {};
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(previous.previous);
   }
 };
 const emailSettingsStore = new EmailSettingsStore(DispatcherDefault, categories);

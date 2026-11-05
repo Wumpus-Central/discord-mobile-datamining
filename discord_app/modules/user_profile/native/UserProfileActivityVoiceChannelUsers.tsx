@@ -1,11 +1,11 @@
-// === Module 15094: UserProfileActivityVoiceChannelUsers ===
+// === Module 15107: UserProfileActivityVoiceChannelUsers ===
 
-// Module 15094 (UserProfileActivityVoiceChannelUsers)
+// Module 15107 (UserProfileActivityVoiceChannelUsers)
 import util from "util" /* 1113 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11601 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6179 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11609 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5895 */;
+import PresenceStore from "PresenceStore" /* 5898 */;
 
 const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
 
@@ -14,8 +14,8 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  const avatarDecoration = user(6988).useAvatarDecoration(user, channel.guild_id);
-  const obj = user(6988);
+  const avatarDecoration = user(6991).useAvatarDecoration(user, channel.guild_id);
+  const obj = user(6991);
   items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ status: PresenceStore.getStatus(user.id), isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id) }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
@@ -25,7 +25,7 @@ function UserRow(user) {
   obj3.icon = jsx(user(1187).Avatar, { user, avatarDecoration, size: user(1187).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
   obj3.start = start;
   obj3.end = end;
-  return jsx(user(7116).TableRow, { onPress, label: null, icon: null, start: null, end: null });
+  return jsx(user(7119).TableRow, { onPress, label: null, icon: null, start: null, end: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

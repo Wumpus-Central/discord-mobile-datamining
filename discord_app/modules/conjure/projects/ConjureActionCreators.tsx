@@ -1,25 +1,25 @@
-// === Module 11054: ConjureActionCreators ===
+// === Module 11060: ConjureActionCreators ===
 
-// Module 11054 (ConjureActionCreators)
+// Module 11060 (ConjureActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6980 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7016 */;
-import UserActionCreators from "UserActionCreators" /* 8893 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11053 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11059 */;
-import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 11061 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 11062 */;
-import createProxyTicket from "createProxyTicket" /* 11064 */;
-import conjureAppInServer from "conjureAppInServer" /* 11070 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5811 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6983 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7019 */;
+import UserActionCreators from "UserActionCreators" /* 8898 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11059 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11065 */;
+import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 11067 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 11068 */;
+import createProxyTicket from "createProxyTicket" /* 11070 */;
+import conjureAppInServer from "conjureAppInServer" /* 11079 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 6977 */;
+import ReadStateStore from "ReadStateStore" /* 6980 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 11055 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 11061 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 require = fn;
 function updateIntegrationStatus(projectId, integrationStatus) {
@@ -1101,30 +1101,45 @@ let closure_51 = async function _updateProjectSettings() {
   closure_3 = tmp5;
   closure_2 = tmp2;
   closure_130_0 = closure_1;
-  await patchProject(closure_0, closure_1);
-  closure_130_1 = value;
-  closure_130_2 = closure_130_1.body.preview_application_id;
-  let tmp15 = null == closure_130_2;
-  if (!tmp15) {
-    let tmp8 = null == closure_130_0.name;
-    if (tmp8) {
-      tmp8 = null == closure_130_0.icon;
-    }
-    if (tmp8) {
-      tmp8 = null == closure_130_0.description;
-    }
-    if (tmp8) {
-      tmp8 = !("cover_image" in closure_130_0);
-    }
-    tmp15 = tmp8;
+  project = project.getProject(closure_0);
+  if (project != null) {
+    const prop = project.preview_application_id;
   }
-  if (!tmp15) {
-    closure_131_48(closure_130_2).catch(() => {
+  closure_130_1 = prop;
+  await patchProject(closure_0, closure_1);
+  closure_130_2 = value;
+  closure_130_3 = closure_130_2.body.preview_application_id;
+  let tmp9 = null != closure_130_1;
+  if (tmp9) {
+    tmp9 = closure_130_1 !== closure_130_3;
+  }
+  if (tmp9) {
+    closure_131_1(closure_131_2[22])(closure_130_1);
+  }
+  let tmp18 = null == closure_130_3;
+  if (!tmp18) {
+    let tmp21 = null == closure_130_0.name;
+    if (tmp21) {
+      tmp21 = null == closure_130_0.icon;
+    }
+    if (tmp21) {
+      tmp21 = null == closure_130_0.description;
+    }
+    if (tmp21) {
+      tmp21 = !("cover_image" in closure_130_0);
+    }
+    if (tmp21) {
+      tmp21 = null == closure_130_0.uses_preview_app;
+    }
+    tmp18 = tmp21;
+  }
+  if (!tmp18) {
+    closure_131_48(closure_130_3).catch(() => {
 
     });
-    closure_131_48(closure_130_2);
+    closure_131_48(closure_130_3);
   }
-  return closure_130_1;
+  return closure_130_2;
 };
 let closure_52 = async function _fetchApplicationChannels(arg0) {
   if (c1 === 2) {
@@ -1279,7 +1294,7 @@ let closure_54 = async function _deleteProject() {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1072).Endpoints;
-const ReadStateTypes = fn(6911).ReadStateTypes;
+const ReadStateTypes = fn(6914).ReadStateTypes;
 let c14 = null;
 let c15 = null;
 let c16 = false;

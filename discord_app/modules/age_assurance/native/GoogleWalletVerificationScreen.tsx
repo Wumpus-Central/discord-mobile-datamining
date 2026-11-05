@@ -1,7 +1,7 @@
-// === Module 8285: GoogleWalletVerificationScreen ===
+// === Module 8290: GoogleWalletVerificationScreen ===
 
-// Module 8285 (GoogleWalletVerificationScreen)
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
+// Module 8290 (GoogleWalletVerificationScreen)
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6867 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -191,7 +191,7 @@ export default function GoogleWalletVerificationScreen(onClose) {
     let intl2 = tmp(tmp2[11]).intl;
     obj12.text = intl2.string(onComplete(tmp2[12]).fEUKEv);
     obj12.onPress = function onPress() {
-      const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.METHOD_SELECT);
+      const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_V2, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.METHOD_SELECT);
       callback1();
     };
     obj11.children = callback2(tmp(tmp2[18]).Button, obj12);

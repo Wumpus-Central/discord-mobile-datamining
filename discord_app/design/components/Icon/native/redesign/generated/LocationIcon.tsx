@@ -1,9 +1,9 @@
-// === Module 9152: LocationIcon ===
+// === Module 9159: LocationIcon ===
 
-// Module 9152 (LocationIcon)
+// Module 9159 (LocationIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod9153 from "module_9153" /* 9153 */;
+import BaseIconImage from "BaseIconImage" /* 5853 */;
+import _mod9160 from "module_9160" /* 9160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function LocationIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9153, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9160, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

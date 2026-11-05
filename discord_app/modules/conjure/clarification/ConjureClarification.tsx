@@ -1,11 +1,11 @@
-// === Module 12805: ConjureClarification ===
+// === Module 12812: ConjureClarification ===
 
-// Module 12805 (ConjureClarification)
+// Module 12812 (ConjureClarification)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import useChannelName from "useChannelName" /* 5786 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import RelationshipStore from "RelationshipStore" /* 5083 */;
+import useChannelName from "useChannelName" /* 5788 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import RelationshipStore from "RelationshipStore" /* 5085 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;

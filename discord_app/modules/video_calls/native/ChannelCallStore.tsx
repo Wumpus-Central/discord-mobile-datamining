@@ -1,29 +1,29 @@
-// === Module 11181: ChannelCallStore ===
+// === Module 11189: ChannelCallStore ===
 
-// Module 11181 (ChannelCallStore)
+// Module 11189 (ChannelCallStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2148 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
-import DeviceOrientation from "DeviceOrientation" /* 9044 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 11183 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 11184 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 11186 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5896 */;
+import DeviceOrientation from "DeviceOrientation" /* 9049 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 11191 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 11192 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 11194 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4989 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4991 */;
 import apply from "module_12" /* 12 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(11182);
+const ChannelCallConstants = fn(11190);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5815).ParticipantTypes;
-const timeout = new fn(4985).Timeout();
+const ParticipantTypes = fn(5817).ParticipantTypes;
+const timeout = new fn(4987).Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
 let obj2 = {};
-let size = { x: "Array", y: "Path", width: "children", height: "guildId", screenOrientation: fn(9044).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "<string:3264175145>", isInitialized: "<string:1070344437>", isVisible: "2QmKZ2" };
+let size = { x: "Array", y: "Path", width: "apply", height: "sr", screenOrientation: fn(9049).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: null, isInitialized: null, isVisible: null };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
-const size1 = { x: "Array", y: "Path", width: "children", height: "guildId", screenOrientation: fn(9044).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "<string:3264175145>", isInitialized: "<string:1070344437>", isVisible: "2QmKZ2" };
+const size1 = { x: "Array", y: "Path", width: "apply", height: "sr", screenOrientation: fn(9049).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: null, isInitialized: null, isVisible: null };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;
 let closure_8 = Object.freeze(obj);

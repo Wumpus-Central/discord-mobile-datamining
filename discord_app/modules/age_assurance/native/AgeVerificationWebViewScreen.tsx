@@ -1,24 +1,24 @@
-// === Module 8118: AgeVerificationWebViewScreen ===
+// === Module 8123: AgeVerificationWebViewScreen ===
 
-// Module 8118 (AgeVerificationWebViewScreen)
+// Module 8123 (AgeVerificationWebViewScreen)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5322 */;
-import LinkingDefault from "Linking" /* 5843 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6861 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8108 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5324 */;
+import LinkingDefault from "Linking" /* 5846 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6864 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6863).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(8096);
+let closure_6 = fn(6866).AGE_VERIFICATION_MODAL_KEY;
+const AgeVerificationIncodeWebViewConstants = fn(8101);
 ({ AgeVerificationIncodeResultStatus: metroImportDefault, buildIncodeFallbackSessionInjection: closure_8, parseIncodeWebViewMessage: closure_9 } = AgeVerificationIncodeWebViewConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: null, loadingOverlay: null, webView: null };
 const tmp4 = new LoggerDefault("AgeVerificationWebViewScreen");
 obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -195,8 +195,11 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
   }, items5);
   const tmp15 = closure_13();
   let obj2 = { style: tmp15.container, children: null };
-  const obj5 = { ref, allowsInlineMediaPlayback: true, mediaCapturePermissionGrantType: "grant", javaScriptEnabled: true, source: { uri: webviewUrl }, onShouldStartLoadWithRequest: null, onMessage: null, onError: null, onLoadEnd: null, injectedJavaScriptBeforeContentLoaded: null, style: null, containerStyle: null };
+  const obj5 = { ref, accessibilityLabel: null, allowsInlineMediaPlayback: true, mediaCapturePermissionGrantType: "grant", javaScriptEnabled: true, source: null, onShouldStartLoadWithRequest: null, onMessage: null, onError: null, onLoadEnd: null, injectedJavaScriptBeforeContentLoaded: null, style: null, containerStyle: null };
   let obj = webviewUrl(onClose[10]);
+  const intl = webviewUrl(onClose[14]).intl;
+  obj5.accessibilityLabel = intl.string(onComplete(onClose[15]).eKo6mw);
+  obj5.source = { uri: webviewUrl };
   const tmp19 = onComplete(onClose[13]);
   let tmp20;
   if (obj4.isIOS()) {
@@ -215,7 +218,7 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
   ({ webView: obj3.style, webView: obj3.containerStyle } = tmp15);
   const items6 = [memo(tmp19, obj5), ];
   if (tmp18Result) {
-    const obj8 = { style: tmp15.loadingOverlay, children: tmp18(tmp8(tmp9[15]).ActivityIndicator, {}) };
+    const obj8 = { style: tmp15.loadingOverlay, children: tmp18(tmp8(tmp9[17]).ActivityIndicator, {}) };
     tmp18Result = tmp18(tmp17, obj8);
   }
   items6[1] = tmp18Result;

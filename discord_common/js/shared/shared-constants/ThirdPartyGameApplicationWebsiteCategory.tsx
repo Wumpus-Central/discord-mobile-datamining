@@ -1,6 +1,6 @@
-// === Module 9489: ThirdPartyGameApplicationWebsiteCategory ===
+// === Module 9496: ThirdPartyGameApplicationWebsiteCategory ===
 
-// Module 9489 (ThirdPartyGameApplicationWebsiteCategory)
+// Module 9496 (ThirdPartyGameApplicationWebsiteCategory)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx");

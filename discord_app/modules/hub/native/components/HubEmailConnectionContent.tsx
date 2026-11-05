@@ -1,30 +1,30 @@
-// === Module 14553: HubEmailConnectionContent ===
+// === Module 14566: HubEmailConnectionContent ===
 
-// Module 14553 (HubEmailConnectionContent)
+// Module 14566 (HubEmailConnectionContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useNavigation from "useNavigation" /* 1499 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14549 */;
-import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 14555 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14562 */;
+import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 14568 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const HubConstants = fn(14541);
+const HubConstants = fn(14554);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: closure_10 } = HubConstants);
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { paddingHorizontal: 16 }, header: { marginTop: 16, marginBottom: 16, alignSelf: "center" }, scrollViewContainer: { flexGrow: 2 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 24 }, input: { marginBottom: 32 }, textInput: { borderRadius: nativeDefault.radii.lg }, growSpacing: null, buttonContainer: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg };
 obj2.growSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -212,11 +212,11 @@ export default function HubEmailConnectionContent(arg0) {
   const obj4 = { ref, contentContainerStyle: null, children: null };
   items = [tmp.scrollViewContainer, ];
   const tmp7 = _slicedToArray(noop.useState(null), 2);
-  items[1] = { paddingBottom: invite(5743)().insets.bottom + invite(575).space.PX_16 };
+  items[1] = { paddingBottom: invite(5745)().insets.bottom + invite(575).space.PX_16 };
   obj4.contentContainerStyle = items;
   let obj6 = { style: tmp.container, children: null };
-  let obj5 = { paddingBottom: invite(5743)().insets.bottom + invite(575).space.PX_16 };
-  const tmp17 = closure_7;
+  let obj5 = { paddingBottom: invite(5745)().insets.bottom + invite(575).space.PX_16 };
+  const tmp16 = closure_7;
   const items1 = [closure_12(ref, { style: tmp.header, children: closure_12(InkQuillSpotIllustration.InkQuillSpotIllustration, { scale: 0.75 }) }), closure_12(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult }), , ];
   let obj9 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;
@@ -266,7 +266,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = closure_12(invite(7222), obj11);
+  items1[3] = closure_12(invite(7225), obj11);
   obj6.children = items1;
   const items2 = [closure_13(ref, obj6), closure_12(ref, { style: tmp.growSpacing }), ];
   const obj15 = { style: tmp.buttonContainer, children: null };
@@ -287,6 +287,6 @@ export default function HubEmailConnectionContent(arg0) {
   obj15.children = closure_12(components_Button_Button.Button, obj16);
   items2[2] = closure_12(ref, obj15);
   obj4.children = items2;
-  obj13.children = closure_13(tmp17, obj4);
+  obj13.children = closure_13(tmp16, obj4);
   return closure_12(HubEmailConnectionModal.HubEmailConnectionScreen, obj13);
 };

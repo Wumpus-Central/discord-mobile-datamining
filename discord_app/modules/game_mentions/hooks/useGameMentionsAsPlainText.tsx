@@ -1,6 +1,6 @@
-// === Module 10927: useGameMentionsAsPlainText ===
+// === Module 10933: useGameMentionsAsPlainText ===
 
-// Module 10927 (useGameMentionsAsPlainText)
+// Module 10933 (useGameMentionsAsPlainText)
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2143 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -8,7 +8,7 @@ import UserStore from "UserStore" /* 1385 */;
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelAutocompleteConstants = fn(6171);
+const ChannelAutocompleteConstants = fn(6174);
 ({ extractGameMentionIds: hasOwnProperty, GAME_MENTION_RAW_RE_GLOBAL: closure_6 } = ChannelAutocompleteConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx");

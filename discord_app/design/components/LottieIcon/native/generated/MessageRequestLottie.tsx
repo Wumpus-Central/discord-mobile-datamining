@@ -1,8 +1,8 @@
-// === Module 16099: MessageRequestLottie ===
+// === Module 16112: MessageRequestLottie ===
 
-// Module 16099 (MessageRequestLottie)
-import LottieIcon from "LottieIcon" /* 12114 */;
-import _mod16100 from "module_16100" /* 16100 */;
+// Module 16112 (MessageRequestLottie)
+import LottieIcon from "LottieIcon" /* 12123 */;
+import _mod16113 from "module_16113" /* 16113 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,5 +15,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 export function MessageRequestLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod16100, animation: "all", ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod16113, animation: "all", ref: ref.ref, layers, markers: items });
 }

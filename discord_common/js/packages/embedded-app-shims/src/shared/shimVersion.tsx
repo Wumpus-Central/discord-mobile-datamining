@@ -1,6 +1,6 @@
-// === Module 12023: shimVersion ===
+// === Module 12032: shimVersion ===
 
-// Module 12023 (shimVersion)
+// Module 12032 (shimVersion)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/embedded-app-shims/src/shared/shimVersion.tsx");

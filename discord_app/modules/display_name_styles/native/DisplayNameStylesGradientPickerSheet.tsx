@@ -1,10 +1,10 @@
-// === Module 17591: DisplayNameStylesGradientPickerSheet ===
+// === Module 17617: DisplayNameStylesGradientPickerSheet ===
 
-// Module 17591 (DisplayNameStylesGradientPickerSheet)
+// Module 17617 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import HapticUtils from "HapticUtils" /* 5384 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import HapticUtils from "HapticUtils" /* 5386 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,11 +13,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
-const SHEET_CONTENT_MAX_WIDTH = fn(17582).SHEET_CONTENT_MAX_WIDTH;
+const SHEET_CONTENT_MAX_WIDTH = fn(17608).SHEET_CONTENT_MAX_WIDTH;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { sheetBackground: { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg }, body: null, gradientContainer: null, colorStopRow: null, colorStop: null, gradient: null, optionContainer: null, pressable: null, selectedRing: null, option: null, resetButtonContainer: null };
   const obj2 = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
@@ -26,7 +26,7 @@ let closure_12 = createStyles.createStyles((arg0) => {
   obj.gradientContainer = { marginBottom: nativeDefault.space.PX_24, flexDirection: "row", justifyContent: "center", alignItems: "center", width: "100%", maxWidth: SHEET_CONTENT_MAX_WIDTH };
   const rect = { left: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8, position: "absolute", flexDirection: "row", justifyContent: "space-between" };
   obj.colorStopRow = rect;
-  const size = { borderColor: "white", width: 28, height: 28, borderRadius: nativeDefault.radii.sm, borderWidth: 1 };
+  const size = { borderColor: "white", width: 28, height: 28, borderRadius: nativeDefault.radii.sm, borderWidth: nativeDefault.space.PX_4 };
   obj.colorStop = size;
   const size1 = { height: 50, width: "100%", borderRadius: nativeDefault.radii.sm };
   obj.gradient = size1;

@@ -1,6 +1,6 @@
-// === Module 20309: ContentInventoryFeature ===
+// === Module 20345: ContentInventoryFeature ===
 
-// Module 20309 (ContentInventoryFeature)
+// Module 20345 (ContentInventoryFeature)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx");

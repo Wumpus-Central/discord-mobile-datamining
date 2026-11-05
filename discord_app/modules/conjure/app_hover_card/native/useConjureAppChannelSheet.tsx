@@ -1,15 +1,15 @@
-// === Module 14627: useConjureAppChannelSheet ===
+// === Module 14640: useConjureAppChannelSheet ===
 
-// Module 14627 (useConjureAppChannelSheet)
+// Module 14640 (useConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import UserUtils from "UserUtils" /* 5195 */;
-import FastImageDefault from "FastImage" /* 5851 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11528 */;
+import UserUtils from "UserUtils" /* 5197 */;
+import FastImageDefault from "FastImage" /* 5854 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11536 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 require = fn;
 function ConjureAppSheetIcon(application) {
@@ -33,7 +33,7 @@ function ConjureAppSheetIcon(application) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { icon: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;

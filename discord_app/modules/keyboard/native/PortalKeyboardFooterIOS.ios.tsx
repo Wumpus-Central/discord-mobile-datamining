@@ -1,6 +1,6 @@
-// === Module 10145: PortalKeyboardFooterIOS ===
+// === Module 10153: PortalKeyboardFooterIOS ===
 
-// Module 10145 (PortalKeyboardFooterIOS)
+// Module 10153 (PortalKeyboardFooterIOS)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -8,16 +8,16 @@ import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1641 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import useKeyboardType from "useKeyboardType" /* 5333 */;
-import Portal from "Portal" /* 5338 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+import useKeyboardType from "useKeyboardType" /* 5335 */;
+import Portal from "Portal" /* 5340 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5398 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { keyboardStickyFooter: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1, flex: 1, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj2.keyboardStickyFooter = rect;

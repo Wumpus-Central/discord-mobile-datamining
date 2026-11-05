@@ -1,8 +1,8 @@
-// === Module 9540: GameProfileMobileStoreLinkUtils ===
+// === Module 9546: GameProfileMobileStoreLinkUtils ===
 
-// Module 9540 (GameProfileMobileStoreLinkUtils)
+// Module 9546 (GameProfileMobileStoreLinkUtils)
 import ApplicationDistributors from "ApplicationDistributors" /* 1091 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9489 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9496 */;
 import size from "module_2" /* 2 */;
 
 let obj = { appStore: null, googlePlay: null };

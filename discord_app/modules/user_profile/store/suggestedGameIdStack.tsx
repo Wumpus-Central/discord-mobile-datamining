@@ -1,8 +1,8 @@
-// === Module 15178: suggestedGameIdStack ===
+// === Module 15191: suggestedGameIdStack ===
 
-// Module 15178 (suggestedGameIdStack)
-import WidgetType from "WidgetType" /* 7913 */;
-import GuildProfileConstants from "GuildProfileConstants" /* 9443 */;
+// Module 15191 (suggestedGameIdStack)
+import WidgetType from "WidgetType" /* 7918 */;
+import GuildProfileConstants from "GuildProfileConstants" /* 9450 */;
 import apply from "module_12" /* 12 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

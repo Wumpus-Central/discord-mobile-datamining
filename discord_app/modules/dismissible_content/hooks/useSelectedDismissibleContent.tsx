@@ -1,14 +1,39 @@
-// === Module 7709: useSelectedDismissibleContent ===
+// === Module 7711: useSelectedDismissibleContent ===
 
-// Module 7709 (useSelectedDismissibleContent)
-import useGetDismissibleContent from "useGetDismissibleContent" /* 7710 */;
-import useSelectedDismissibleContentShared from "useSelectedDismissibleContentShared" /* 7712 */;
+// Module 7711 (useSelectedDismissibleContent)
+import useGetDismissibleContent from "useGetDismissibleContent" /* 7712 */;
+import DismissibleContentScope from "DismissibleContentScope" /* 7714 */;
+import useSelectedDismissibleContentShared from "useSelectedDismissibleContentShared" /* 7717 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx");
+let result = size.fileFinishedImporting("modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx");
 
+export function useSelectedScopedDismissibleContent(items1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  ({ bypassAutoDismiss, groupName } = obj);
+  if (bypassAutoDismiss === undefined) {
+    bypassAutoDismiss = false;
+  }
+  const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(items1, groupName);
+  ({ visibleContent, markAsDismissed } = scopedDismissibleContentSelection);
+  let candidate = null;
+  if (null != visibleContent) {
+    candidate = scopedDismissibleContentSelection.candidate;
+  }
+  let guildId;
+  if (null != candidate) {
+    guildId = DismissibleContentScope.getDismissibleContentShowing(candidate).guildId;
+    const tmpResult2 = DismissibleContentScope;
+  }
+  const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(visibleContent, markAsDismissed, bypassAutoDismiss, guildId);
+  items = [visibleContent, markAsDismissed];
+  return items;
+}
 export function useSelectedDismissibleContent(items, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
@@ -18,11 +43,30 @@ export function useSelectedDismissibleContent(items, arg1) {
   if (bypassAutoDismiss === undefined) {
     bypassAutoDismiss = false;
   }
-  [tmp2, tmp3] = useGetDismissibleContent.useGetDismissibleContent(items, groupName);
-  const tmp = _slicedToArray(useGetDismissibleContent.useGetDismissibleContent(items, groupName), 2);
-  const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, bypassAutoDismiss);
-  items = [tmp2, tmp3];
-  return items;
+  const flatMapResult = items.flatMap((item) => {
+    let result = DismissibleContentScope.scopeDismissibleContentEntry(item);
+    if (result == null) {
+      result = [];
+    }
+    return result;
+  });
+  const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(flatMapResult, groupName);
+  ({ visibleContent, markAsDismissed } = scopedDismissibleContentSelection);
+  let candidate = null;
+  if (null != visibleContent) {
+    candidate = scopedDismissibleContentSelection.candidate;
+  }
+  let guildId;
+  if (null != candidate) {
+    guildId = DismissibleContentScope.getDismissibleContentShowing(candidate).guildId;
+    const tmp2Result2 = DismissibleContentScope;
+  }
+  const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(visibleContent, markAsDismissed, bypassAutoDismiss, guildId);
+  items = [visibleContent, markAsDismissed];
+  const tmp2Result = useSelectedDismissibleContentShared;
+  const items1 = [, ];
+  [arr2[0], arr2[1]] = items;
+  return items1;
 }
 export function useSelectedSingleUseGuildDismissibleContent(items4, id, CHANNEL_NOTICES) {
   if (flag === undefined) {
@@ -67,13 +111,13 @@ export function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId
   items = [tmp2, tmp3];
   return items;
 }
-export function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSnowflakeId, GUILD_HEADER_TOOLTIPS) {
+export function useSelectedSnowflakeBoundGuildDismissibleContent(content, guildId, snowflakeId, groupName) {
   if (flag === undefined) {
     flag = false;
   }
-  [tmp2, tmp3] = useGetDismissibleContent.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, newSnowflakeId, id, GUILD_HEADER_TOOLTIPS);
-  const tmp = _slicedToArray(useGetDismissibleContent.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, newSnowflakeId, id, GUILD_HEADER_TOOLTIPS), 2);
-  const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, flag, id);
+  [tmp2, tmp3] = useGetDismissibleContent.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(content, snowflakeId, guildId, groupName);
+  const tmp = _slicedToArray(useGetDismissibleContent.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(content, snowflakeId, guildId, groupName), 2);
+  const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, flag, guildId);
   items = [tmp2, tmp3];
   return items;
 }
@@ -88,9 +132,9 @@ export function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(content
   items = [tmp2, tmp3];
   return items;
 }
-export function useSelectedTimeRecurringGuildDismissibleContent(prop, id, cooldownDurationMs, GUILD_HEADER_TOOLTIPS) {
-  [tmp2, tmp3] = useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, cooldownDurationMs, GUILD_HEADER_TOOLTIPS);
-  const tmp = _slicedToArray(useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, cooldownDurationMs, GUILD_HEADER_TOOLTIPS), 2);
+export function useSelectedTimeRecurringGuildDismissibleContent(prop, id, timeRecurringConfig, GUILD_HEADER_TOOLTIPS) {
+  [tmp2, tmp3] = useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, timeRecurringConfig, GUILD_HEADER_TOOLTIPS);
+  const tmp = _slicedToArray(useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, timeRecurringConfig, GUILD_HEADER_TOOLTIPS), 2);
   const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(tmp2, tmp3, false, id);
   items = [tmp2, tmp3];
   return items;

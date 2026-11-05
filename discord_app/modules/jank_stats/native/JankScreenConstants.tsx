@@ -1,6 +1,6 @@
-// === Module 18318: JankScreenConstants ===
+// === Module 18348: JankScreenConstants ===
 
-// Module 18318 (JankScreenConstants)
+// Module 18348 (JankScreenConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/jank_stats/native/JankScreenConstants.tsx");

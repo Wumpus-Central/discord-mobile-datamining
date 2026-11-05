@@ -1,6 +1,6 @@
-// === Module 15914: findCodedLinkUrlsUsingRegex ===
+// === Module 15926: findCodedLinkUrlsUsingRegex ===
 
-// Module 15914 (findCodedLinkUrlsUsingRegex)
+// Module 15926 (findCodedLinkUrlsUsingRegex)
 import ip from "ip" /* 1379 */;
 
 function trimTrailingPunctuation(str) {

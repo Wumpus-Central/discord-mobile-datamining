@@ -1,9 +1,9 @@
-// === Module 15033: useShopThisLookMarketing ===
+// === Module 15046: useShopThisLookMarketing ===
 
-// Module 15033 (useShopThisLookMarketing)
-import dismissible_content from "dismissible_content" /* 4974 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7709 */;
-import useMaybeFetchEquippedCollectibleProducts from "useMaybeFetchEquippedCollectibleProducts" /* 8929 */;
+// Module 15046 (useShopThisLookMarketing)
+import dismissible_content from "dismissible_content" /* 4976 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7711 */;
+import useMaybeFetchEquippedCollectibleProducts from "useMaybeFetchEquippedCollectibleProducts" /* 8934 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

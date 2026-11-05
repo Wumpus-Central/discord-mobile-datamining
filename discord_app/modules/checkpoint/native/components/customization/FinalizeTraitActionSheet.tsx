@@ -1,10 +1,10 @@
-// === Module 13917: FinalizeTraitActionSheet ===
+// === Module 13929: FinalizeTraitActionSheet ===
 
-// Module 13917 (FinalizeTraitActionSheet)
+// Module 13929 (FinalizeTraitActionSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import _modDef3219 from "module_3219" /* 3219 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6569 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6571 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -27,7 +27,7 @@ export default function FinalizeTraitActionSheet(onSelectOption) {
   const obj2 = { title: null };
   let intl = onSelectOption(1113).intl;
   obj2.title = intl.string(_modDef3219.Zl5vPW);
-  obj.header = jsx(onSelectOption(7457).BottomSheetTitleHeader, { title: null });
+  obj.header = jsx(onSelectOption(7460).BottomSheetTitleHeader, { title: null });
   const obj3 = { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null };
   const intl2 = onSelectOption(1113).intl;
   obj3.accessibilityLabel = intl2.string(_modDef3219.Zl5vPW);
@@ -38,11 +38,11 @@ export default function FinalizeTraitActionSheet(onSelectOption) {
   };
   obj3.children = items.map((option) => {
     option = option.option;
-    const obj = { value: option, label: onSelectOption(6569).getCustomizationOptionName(option), subLabel: null };
+    const obj = { value: option, label: onSelectOption(6571).getCustomizationOptionName(option), subLabel: null };
     const intl = onSelectOption(1113).intl;
     obj.subLabel = intl.string(option.subtitle);
-    return jsx(onSelectOption(7202).TableRadioRow, { value: option, label: onSelectOption(6569).getCustomizationOptionName(option), subLabel: null }, option);
+    return jsx(onSelectOption(7205).TableRadioRow, { value: option, label: onSelectOption(6571).getCustomizationOptionName(option), subLabel: null }, option);
   });
-  obj.children = jsx(onSelectOption(7199).TableRadioGroup, { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null });
-  return jsx(onSelectOption(7502).ActionSheet, { startExpanded: true, header: null, children: null });
+  obj.children = jsx(onSelectOption(7202).TableRadioGroup, { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null });
+  return jsx(onSelectOption(7504).ActionSheet, { startExpanded: true, header: null, children: null });
 };

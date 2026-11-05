@@ -1,25 +1,25 @@
-// === Module 19754: GuildOnboardingHomeManager ===
+// === Module 19789: GuildOnboardingHomeManager ===
 
-// Module 19754 (GuildOnboardingHomeManager)
+// Module 19789 (GuildOnboardingHomeManager)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
-import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7539 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7541 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 5046 */;
+import ImpersonateStore from "ImpersonateStore" /* 5048 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7538 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8480 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7540 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8485 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
 
 require = fn;
-const GuildMemberFlags = fn(5059).GuildMemberFlags;
+const GuildMemberFlags = fn(5061).GuildMemberFlags;
 const prototype = function GuildOnboardingHomeManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -91,7 +91,7 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = asyncRequireImpl(19755, dependencyMap.paths);
+            const tmp9 = asyncRequireImpl(19790, dependencyMap.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: ConstantsIOS.ModalAnimation.FADE };
             obj2.pushLazy(tmp9, obj3, GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
@@ -107,56 +107,101 @@ const prototype = function GuildOnboardingHomeManager() {
   };
   closure_129_1 = applyArgumentsResult;
   closure_129_0 = asyncGeneratorStep(async (arg0) => {
-    closure_1 = tmp2;
-    ({ guildId: closure_129_0, channelId: closure_129_1 } = applyArgumentsResult);
-    await "flexDirection";
-    if (1 === tmp5) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c4 = 3;
-        return { value, done: true };
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        if (null != closure_129_0) {
-          if (null != closure_129_1) {
-            c3 = 2;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            dependencyMap = tmp5;
+            closure_1 = tmp2;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            ({ guildId: closure_129_0, channelId: closure_129_1 } = applyArgumentsResult);
+            closure_129_2 = undefined;
+            let memberActions;
+            let completedActions;
+            closure_129_5 = undefined;
+            c3 = 1;
             c4 = 1;
-            return { value: closure_130_1._getOrLoadOnboardingMemberActions(closure_129_0), done: false };
+            return { value: "flexDirection", done: true };
           }
+        } else {
+          if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              if (null != closure_129_0) {
+                if (null != closure_129_1) {
+                  c3 = 2;
+                  c4 = 1;
+                  const obj5 = { value: closure_130_1._getOrLoadOnboardingMemberActions(closure_129_0), done: false };
+                  return obj5;
+                }
+              }
+              c4 = 3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_2 = value;
+            memberActions = closure_129_2.memberActions;
+            completedActions = closure_129_2.completedActions;
+            let found;
+            if (memberActions != null) {
+              found = arr.find((channelId) => channelId.channelId === closure_1_1);
+            }
+            closure_129_5 = found;
+            let tmp10;
+            if (completedActions != null) {
+              tmp10 = tmp9[closure_129_1];
+            }
+            let tmp13 = true !== tmp10;
+            if (tmp13) {
+              tmp13 = null != closure_129_5;
+            }
+            if (tmp13) {
+              tmp13 = closure_129_5.actionType === applyArgumentsResult(7541).NewMemberActionTypes.VIEW;
+            }
+            if (tmp13) {
+              const result = applyArgumentsResult(14064).completeNewMemberAction(closure_129_0, closure_129_1);
+              const obj = applyArgumentsResult(14064);
+            }
+            arr = memberActions;
+          }
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
         }
-        c4 = 3;
+      } catch (tmp38) {
+        c4 = tmp;
+        throw tmp38;
       }
-    } else if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      closure_129_2 = value;
-      const memberActions = closure_129_2.memberActions;
-      const completedActions = closure_129_2.completedActions;
-      let found;
-      if (memberActions != null) {
-        found = arr.find((channelId) => channelId.channelId === closure_1_1);
-      }
-      closure_129_5 = found;
-      let tmp10;
-      if (completedActions != null) {
-        tmp10 = tmp9[closure_129_1];
-      }
-      let tmp13 = true !== tmp10;
-      if (tmp13) {
-        tmp13 = null != closure_129_5;
-      }
-      if (tmp13) {
-        tmp13 = closure_129_5.actionType === applyArgumentsResult(7539).NewMemberActionTypes.VIEW;
-      }
-      if (tmp13) {
-        const result = applyArgumentsResult(14051).completeNewMemberAction(closure_129_0, closure_129_1);
-        applyArgumentsResult(14051);
-      }
-      arr = memberActions;
     }
-    return value;
   });
   applyArgumentsResult.handleChannelSelect = function() {
     const self = this;

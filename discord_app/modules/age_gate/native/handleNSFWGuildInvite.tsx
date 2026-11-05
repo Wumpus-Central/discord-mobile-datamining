@@ -1,22 +1,22 @@
-// === Module 10306: handleNSFWGuildInvite ===
+// === Module 10314: handleNSFWGuildInvite ===
 
-// Module 10306 (handleNSFWGuildInvite)
+// Module 10314 (handleNSFWGuildInvite)
 import Constants from "Constants" /* 1072 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import GuildRecord from "GuildRecord" /* 5008 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5827 */;
-import AgeNoticeConstants from "AgeNoticeConstants" /* 6872 */;
-import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6873 */;
-import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10307 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10308 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import GuildRecord from "GuildRecord" /* 5010 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5829 */;
+import AgeNoticeConstants from "AgeNoticeConstants" /* 6875 */;
+import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6876 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10315 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10316 */;
+import GuildStore from "GuildStore" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 const isGuildLurker = GuildRecord.isGuildLurker;
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
-let closure_5 = AgeNoticeConstants.TINY_BRONCO_NSFW_SERVER_LOCATION;
+let closure_5 = AgeNoticeConstants.AGE_NOTICE_NSFW_SERVER_LOCATION;
 const items = [, ];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -76,7 +76,7 @@ export function handleNSFWGuildInvite(invite, arg1) {
       return false;
     } else {
       if (tmp6Result4.hasAgeGatedFeatures()) {
-        if (tmp6Result5.isTinyBroncoEnabled(closure_5)) {
+        if (tmp6Result5.isAgeNoticeEnabled(closure_5)) {
           c2 = false;
           const obj2 = {
             onConfirm() {

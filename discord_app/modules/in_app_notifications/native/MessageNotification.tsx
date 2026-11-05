@@ -1,21 +1,21 @@
-// === Module 11219: MessageNotification ===
+// === Module 11227: MessageNotification ===
 
-// Module 11219 (MessageNotification)
+// Module 11227 (MessageNotification)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import transitionToChannel from "transitionToChannel" /* 5890 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
-import MessageParserDefault from "MessageParser" /* 7964 */;
-import MessagePreviewTextDefault from "MessagePreviewText" /* 11220 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5152 */;
+import transitionToChannel from "transitionToChannel" /* 5893 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+import MessageParserDefault from "MessageParser" /* 7969 */;
+import MessagePreviewTextDefault from "MessagePreviewText" /* 11228 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
-const InAppNotificationConstants = fn(11204);
+const InAppNotificationConstants = fn(11212);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_6 } = InAppNotificationConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_8 = createStyles.createStyles({ newContainerRoleDot: { paddingRight: 4, paddingTop: 0 } });
 let closure_9 = noop.memo(function MessagePreview(message) {
   return jsx(MessagePreviewTextDefault, { message: message.message, lineClamp, maxHeight });
@@ -93,7 +93,7 @@ export default noop.memo(function MessageNotification(notification) {
     transitionToChannel.transitionToMessage(channel.id, message.id, { navigationReplace: true });
   }, items2);
   const items4 = [channel, parentChannel, guild, nullableMessageAuthor, handleDismissNotification];
-  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11254, dependencyMap.paths), { channelId: channel.id }, "in-app-notification-settings-modal"), items3);
+  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11262, dependencyMap.paths), { channelId: channel.id }, "in-app-notification-settings-modal"), items3);
   const memo = guild.useMemo(() => ({ type: "message", channel, parentChannel, guild, author: nullableMessageAuthor, onDismiss: handleDismissNotification }), items4);
   const obj6 = { user: message.author, guildId: null, size: null };
   const guild2 = notification.guild;

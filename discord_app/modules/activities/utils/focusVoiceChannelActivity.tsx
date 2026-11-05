@@ -1,8 +1,8 @@
-// === Module 13409: focusVoiceChannelActivity ===
+// === Module 13416: focusVoiceChannelActivity ===
 
-// Module 13409 (focusVoiceChannelActivity)
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5893 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
+// Module 13416 (focusVoiceChannelActivity)
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5896 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6981 */;
 
 const ChannelLayouts = fn(1072).ChannelLayouts;
 const size = fn(2);

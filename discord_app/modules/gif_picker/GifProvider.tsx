@@ -1,6 +1,6 @@
-// === Module 10423: GifProvider ===
+// === Module 10429: GifProvider ===
 
-// Module 10423 (GifProvider)
+// Module 10429 (GifProvider)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

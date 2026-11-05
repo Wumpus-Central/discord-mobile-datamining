@@ -1,16 +1,16 @@
-// === Module 13010: ConjureQueuedSheet ===
+// === Module 13017: ConjureQueuedSheet ===
 
-// Module 13010 (ConjureQueuedSheet)
+// Module 13017 (ConjureQueuedSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import conjureQueuedMessage from "conjureQueuedMessage" /* 12798 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import conjureQueuedMessage from "conjureQueuedMessage" /* 12805 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 11029 */;
+import ConjureChatStore from "ConjureChatStore" /* 11035 */;
 
 require = fn;
 function ConjureQueuedRow(content) {
@@ -67,7 +67,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureQueuedSheet = "ConjureQueuedSheet";
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { scroller: { maxHeight: 360 }, item: { alignItems: "flex-start", gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_8 }, divider: null, content: null, measure: null };
 let obj3 = { alignItems: "flex-start", gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_8 };
 obj2.divider = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -98,10 +98,10 @@ export default function ConjureQueuedSheet(projectId) {
     const obj3 = { title: null };
     const intl = tmp2(1113).intl;
     obj3.title = intl.string(stateFromStores(3995).hzgPbZ);
-    obj2.header = closure_8(tmp2(7457).BottomSheetTitleHeader, obj3);
+    obj2.header = closure_8(tmp2(7460).BottomSheetTitleHeader, obj3);
     const obj4 = { style: tmp.scroller, nestedScrollEnabled: true, children: memo.map((content, index) => closure_1_8(ConjureQueuedRow, { content: content.content, divided: index > 0 }, content.render_id)) };
     obj2.children = closure_8(closure_5, obj4);
-    tmp7 = closure_8(tmp2(7502).ActionSheet, obj2);
+    tmp7 = closure_8(tmp2(7504).ActionSheet, obj2);
   }
   return tmp7;
 };

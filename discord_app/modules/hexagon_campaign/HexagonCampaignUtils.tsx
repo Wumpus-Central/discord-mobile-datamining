@@ -1,12 +1,12 @@
-// === Module 5168: HexagonCampaignUtils ===
+// === Module 5170: HexagonCampaignUtils ===
 
-// Module 5168 (HexagonCampaignUtils)
+// Module 5170 (HexagonCampaignUtils)
 import PerksStateUtils from "PerksStateUtils" /* 1391 */;
 import user from "user" /* 1393 */;
 import DisplayNameFont from "DisplayNameFont" /* 1404 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1405 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2112 */;
-import HexagonCampaignConstants from "HexagonCampaignConstants" /* 5166 */;
+import HexagonCampaignConstants from "HexagonCampaignConstants" /* 5168 */;
 import size from "module_2" /* 2 */;
 
 ({ HEXAGON_CAMPAIGN_CLIENT_THEME_PRESET_IDS: c2, HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: c3, HEXAGON_CAMPAIGN_END_AT_MS: closure_4, HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: hasOwnProperty, HEXAGON_CAMPAIGN_PERK_MINIMUM_PREMIUM_TYPE: closure_6, HEXAGON_CAMPAIGN_PERK_TO_PERK: metroImportDefault, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: closure_8, HexagonCampaignPerkAvailability: closure_9 } = HexagonCampaignConstants);

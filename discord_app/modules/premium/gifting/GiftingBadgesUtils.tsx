@@ -1,17 +1,17 @@
-// === Module 10795: GiftingBadgesUtils ===
+// === Module 10801: GiftingBadgesUtils ===
 
-// Module 10795 (GiftingBadgesUtils)
+// Module 10801 (GiftingBadgesUtils)
 import util from "util" /* 1113 */;
 import _modDef2763 from "module_2763" /* 2763 */;
-import BadgeId from "BadgeId" /* 8896 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8909 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10789 */;
+import BadgeId from "BadgeId" /* 8901 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8914 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10796 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8904 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8909 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-let closure_5 = fn(8904).getSingleRequirementThreshold;
+let closure_5 = fn(8909).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -74,9 +74,9 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(10789).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(10796).GiftingBadgeExperiment;
   let enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(10796).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(10802).GiftingBadgeCoachmarkAudienceExperiment;
   let str = "-DISABLED";
   if (enabled2) {
     str = "";
@@ -96,8 +96,8 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
     return flag;
   });
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(5171).useIsDismissibleContentDismissed_UNSAFE(tmp(4974).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
-  const tmpResult3 = stateFromStores(5171);
+  const result = stateFromStores(5173).useIsDismissibleContentDismissed_UNSAFE(tmp(4976).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const tmpResult3 = stateFromStores(5173);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => badgeById.getBadgeById(stateFromStores(dependencyMap[10]).BadgeId.GIFTING));
   if (enabled2) {

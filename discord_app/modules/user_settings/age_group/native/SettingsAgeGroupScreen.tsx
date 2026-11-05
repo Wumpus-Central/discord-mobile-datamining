@@ -1,15 +1,15 @@
-// === Module 16872: SettingsAgeGroupScreen ===
+// === Module 16895: SettingsAgeGroupScreen ===
 
-// Module 16872 (SettingsAgeGroupScreen)
+// Module 16895 (SettingsAgeGroupScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2190 */;
 import _modDef3223 from "module_3223" /* 3223 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
-import SettingBuilders from "SettingBuilders" /* 11729 */;
-import SettingLayoutDefault from "SettingLayout" /* 16835 */;
-import AgeNoticeAgeGroupHeader from "AgeNoticeAgeGroupHeader" /* 16873 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8100 */;
+import SettingBuilders from "SettingBuilders" /* 11737 */;
+import SettingLayoutDefault from "SettingLayout" /* 16858 */;
+import AgeNoticeAgeGroupHeader2 from "AgeNoticeAgeGroupHeader" /* 16896 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,19 +31,19 @@ function SettingsAgeGroupHeader() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8573).MobileUserSettings;
+const MobileUserSettings = fn(8578).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { headerContainer: { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(16831).useIsTinyBroncoSettingsEnabled();
-  items = [isTinyBroncoSettingsEnabled];
+  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(16854).useIsAgeNoticeSettingsEnabled();
+  items = [isAgeNoticeSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null };
@@ -54,12 +54,12 @@ export default function SettingsAgeGroupScreen() {
     obj3.settings = items;
     const items1 = [obj3];
     obj2.sections = items1;
-    if (isTinyBroncoSettingsEnabled) {
-      let TinyBroncoAgeGroupHeader = AgeNoticeAgeGroupHeader.TinyBroncoAgeGroupHeader;
+    if (isAgeNoticeSettingsEnabled) {
+      let AgeNoticeAgeGroupHeader = AgeNoticeAgeGroupHeader2.AgeNoticeAgeGroupHeader;
     } else {
-      TinyBroncoAgeGroupHeader = SettingsAgeGroupHeader;
+      AgeNoticeAgeGroupHeader = SettingsAgeGroupHeader;
     }
-    obj2.ListHeaderComponent = TinyBroncoAgeGroupHeader;
+    obj2.ListHeaderComponent = AgeNoticeAgeGroupHeader;
     return SettingBuilders.createList(obj2);
   }, items);
   return closure_7(SettingLayoutDefault, { node });

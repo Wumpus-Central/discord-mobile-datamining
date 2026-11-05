@@ -1,16 +1,16 @@
-// === Module 20159: useCreatorMonetizationAcceptTerms ===
+// === Module 20195: useCreatorMonetizationAcceptTerms ===
 
-// Module 20159 (useCreatorMonetizationAcceptTerms)
+// Module 20195 (useCreatorMonetizationAcceptTerms)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import GuildStore from "GuildStore" /* 5014 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(5008).isGuildOwner;
+const isGuildOwner = fn(5010).isGuildOwner;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
 
@@ -72,12 +72,12 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
               if (null != tmp4) {
                 c4 = 4;
                 c5 = 1;
-                const obj6 = { value: tmp47(20160).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                const obj6 = { value: tmp47(20196).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
                 return obj6;
               } else {
                 c4 = 3;
                 c5 = 1;
-                const obj7 = { value: tmp47(20160).acceptCreatorMonetizationTermsV2(tmp55), done: false };
+                const obj7 = { value: tmp47(20196).acceptCreatorMonetizationTermsV2(tmp55), done: false };
                 return obj7;
               }
             }
@@ -87,7 +87,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
           if (2 === tmp8) {
             dependencyMap = 1;
             closure_128_0 = tmp47;
-            const tmp25 = new tmp4(6582)(closure_128_0);
+            const tmp25 = new tmp4(6585)(closure_128_0);
             closure_129_3(tmp25);
           } else {
             if (3 === tmp8) {

@@ -1,9 +1,9 @@
-// === Module 8783: ExperimentalLfgIcon ===
+// === Module 8788: ExperimentalLfgIcon ===
 
-// Module 8783 (ExperimentalLfgIcon)
+// Module 8788 (ExperimentalLfgIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod8774 from "module_8774" /* 8774 */;
+import BaseIconImage from "BaseIconImage" /* 5853 */;
+import _mod8779 from "module_8779" /* 8779 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ExperimentalLfgIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8774, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8779, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

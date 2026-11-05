@@ -1,6 +1,6 @@
-// === Module 6510: CheckpointCharacterWearable ===
+// === Module 6512: CheckpointCharacterWearable ===
 
-// Module 6510 (CheckpointCharacterWearable)
+// Module 6512 (CheckpointCharacterWearable)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointCharacterWearable.tsx");

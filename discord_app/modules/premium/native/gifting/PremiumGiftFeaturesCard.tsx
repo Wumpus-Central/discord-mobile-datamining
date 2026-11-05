@@ -1,31 +1,31 @@
-// === Module 10798: PremiumGiftFeaturesCard ===
+// === Module 10804: PremiumGiftFeaturesCard ===
 
-// Module 10798 (PremiumGiftFeaturesCard)
+// Module 10804 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import StringUtils from "StringUtils" /* 2155 */;
-import native from "native" /* 5207 */;
-import LinearGradientDefault from "LinearGradient" /* 5723 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import ClockIcon from "ClockIcon" /* 5874 */;
-import TextStylesDefault from "TextStyles" /* 6858 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9674 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 10094 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 10106 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 10108 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 10115 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10787 */;
-import MarketingComponentType from "MarketingComponentType" /* 10788 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10799 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10800 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10801 */;
-import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10802 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10803 */;
-import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10805 */;
+import native from "native" /* 5209 */;
+import LinearGradientDefault from "LinearGradient" /* 5725 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import ClockIcon from "ClockIcon" /* 5877 */;
+import TextStylesDefault from "TextStyles" /* 6861 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9680 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 10102 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 10114 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 10116 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 10123 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10794 */;
+import MarketingComponentType from "MarketingComponentType" /* 10795 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10805 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10806 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10807 */;
+import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10808 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10809 */;
+import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10811 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9776 */;
+import PromotionsStore from "PromotionsStore" /* 9782 */;
 
 require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {
@@ -115,7 +115,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_15 = createStyles.createStyles(() => {
   obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null, countdownBadge: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);

@@ -1,10 +1,10 @@
-// === Module 6909: GuildAvailabilityStore ===
+// === Module 6912: GuildAvailabilityStore ===
 
-// Module 6909 (GuildAvailabilityStore)
+// Module 6912 (GuildAvailabilityStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import GuildStore from "GuildStore" /* 5014 */;
 
 function handleConnectionOpen(unavailableGuilds) {
   new Set(unavailableGuilds.unavailableGuilds);

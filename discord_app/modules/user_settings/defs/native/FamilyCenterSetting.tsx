@@ -1,24 +1,24 @@
-// === Module 17015: FamilyCenterSetting ===
+// === Module 17039: FamilyCenterSetting ===
 
-// Module 17015 (FamilyCenterSetting)
+// Module 17039 (FamilyCenterSetting)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2667 from "module_2667" /* 2667 */;
-import WarningIcon from "WarningIcon" /* 8166 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 17016 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 17017 */;
+import WarningIcon from "WarningIcon" /* 8171 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 17040 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 17041 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef2667.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(8802).GroupIcon,
+  IconComponent: fn(8807).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     const isParentalConsentBannerActive = useIsParentalConsentBannerActive.useIsParentalConsentBannerActive();
     const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();

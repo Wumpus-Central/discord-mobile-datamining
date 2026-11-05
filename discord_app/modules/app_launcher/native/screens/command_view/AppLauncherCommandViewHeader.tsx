@@ -1,12 +1,12 @@
-// === Module 12703: AppLauncherCommandViewHeader ===
+// === Module 12710: AppLauncherCommandViewHeader ===
 
-// Module 12703 (AppLauncherCommandViewHeader)
+// Module 12710 (AppLauncherCommandViewHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8856 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12597 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12679 */;
-import CommandDetailsOverflowMenuDefault from "CommandDetailsOverflowMenu" /* 12704 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8861 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12604 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12686 */;
+import CommandDetailsOverflowMenuDefault from "CommandDetailsOverflowMenu" /* 12711 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,11 +17,11 @@ const AppLauncherNativeConstants = fn(1498);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = fn(12679).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(12686).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 let closure_8 = sum - 56;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { headerContainer: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", position: "absolute", top: -16, left: 0, right: 0, padding: DEFAULT_CONTENT_PADDING, zIndex: 1 }, loadingHeaderContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, overflowMenuContainer: null, appIconMask: null, appIcon: null, loadingIcon: null, appSmallName: null, icon: null, headerBannerOverlay: null };
-let size = { width: fn(12679).BACK_BUTTON_SIZE, height: fn(12679).BACK_BUTTON_SIZE };
+let size = { width: fn(12686).BACK_BUTTON_SIZE, height: fn(12686).BACK_BUTTON_SIZE };
 obj2.overflowMenuContainer = size;
 const rect = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: AppLauncherNativeConstants.SCREEN_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xl + 4 };
 obj2.appIconMask = rect;
@@ -158,7 +158,7 @@ export function AppLauncherCommandViewHeader(onPress) {
   }
   if (null != memo) {
     let obj2 = { style: tmp.appIcon, source: memo };
-    let tmp31 = closure_6(tmp24(5851), obj2);
+    let tmp31 = closure_6(tmp24(5854), obj2);
     let tmp32 = closure_6;
   } else {
     let obj3 = { style: null };

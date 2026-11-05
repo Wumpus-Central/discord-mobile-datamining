@@ -1,19 +1,19 @@
-// === Module 18057: UserSettingsDesignSystemModal ===
+// === Module 18085: UserSettingsDesignSystemModal ===
 
-// Module 18057 (UserSettingsDesignSystemModal)
+// Module 18085 (UserSettingsDesignSystemModal)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
-import NavigatorHeader from "NavigatorHeader" /* 7139 */;
-import Navigator from "Navigator" /* 7306 */;
-import ModalScreen from "ModalScreen" /* 8112 */;
-import ModalContent from "ModalContent" /* 8113 */;
-import Modal from "Modal" /* 11671 */;
-import ModalFooter from "ModalFooter" /* 13428 */;
-import StepModal from "StepModal" /* 13433 */;
-import ModalActionButton from "ModalActionButton" /* 13641 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 16119 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+import NavigatorHeader from "NavigatorHeader" /* 7142 */;
+import Navigator from "Navigator" /* 7309 */;
+import ModalScreen from "ModalScreen" /* 8117 */;
+import ModalContent from "ModalContent" /* 8118 */;
+import Modal from "Modal" /* 11679 */;
+import ModalFooter from "ModalFooter" /* 13453 */;
+import StepModal from "StepModal" /* 13458 */;
+import ModalActionButton from "ModalActionButton" /* 13652 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 16132 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,11 +27,11 @@ function DemoModal() {
         const obj = { text: null, onPress: null };
         const intl = closure_1_0(1113).intl;
         obj.text = intl.string(closure_1_0(1113).t["5Wxrcd"]);
-        obj.onPress = closure_1_1(6879).pop;
-        return closure_1_7(closure_1_0(7698).HeaderActionButton, obj);
+        obj.onPress = closure_1_1(6882).pop;
+        return closure_1_7(closure_1_0(7700).HeaderActionButton, obj);
       },
       headerTitle() {
-        return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
+        return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
       },
       render(arg0, arg1) {
         closure_0 = arg1;
@@ -43,7 +43,7 @@ function DemoModal() {
             return closure_0.push(constants.WHO_DAT);
           },
           secondaryAction: "Maybe later",
-          onSecondaryAction: closure_1(6879).pop,
+          onSecondaryAction: closure_1(6882).pop,
           disclaimer: "I said come on fhqwhgads."
         });
       }
@@ -53,7 +53,7 @@ function DemoModal() {
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj4.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.WHO_DAT });
+      return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.WHO_DAT });
     };
     obj4.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -64,7 +64,7 @@ function DemoModal() {
         onAction() {
           return closure_0.push(constants.EVERYBODY);
         },
-        children: closure_7(closure_0(7223).TextInput, { placeholder: "My friend Jake" })
+        children: closure_7(closure_0(7226).TextInput, { placeholder: "My friend Jake" })
       });
     };
     obj[constants.WHO_DAT] = obj4;
@@ -72,7 +72,7 @@ function DemoModal() {
     obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj7.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.EVERYBODY });
+      return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.EVERYBODY });
     };
     obj7.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -87,7 +87,7 @@ function DemoModal() {
     obj10.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj10.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj10.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
+      return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
     };
     obj10.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -105,17 +105,17 @@ function DemoModal() {
     const obj13 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     obj13.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj13.headerRight = function headerRight() {
-      return closure_1_7(closure_1_0(7139).HeaderSubmittingIndicator, {});
+      return closure_1_7(closure_1_0(7142).HeaderSubmittingIndicator, {});
     };
     obj13.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.LIMIT });
+      return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.LIMIT });
     };
     obj13.render = function render() {
       return closure_1_7(closure_1_13, {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: closure_1_1(6879).pop,
+        onAction: closure_1_1(6882).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return closure_1_1(dependencyMap[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -137,11 +137,11 @@ function DemoStepModal() {
         const obj = { text: null, onPress: null };
         const intl = closure_1_0(1113).intl;
         obj.text = intl.string(closure_1_0(1113).t["5Wxrcd"]);
-        obj.onPress = closure_1_1(6879).pop;
-        return closure_1_7(closure_1_0(7698).HeaderActionButton, obj);
+        obj.onPress = closure_1_1(6882).pop;
+        return closure_1_7(closure_1_0(7700).HeaderActionButton, obj);
       },
       headerTitle() {
-        return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
+        return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
       },
       render(arg0, arg1) {
         closure_0 = arg1;
@@ -153,7 +153,7 @@ function DemoStepModal() {
             return closure_0.push(constants.WHO_DAT);
           },
           secondaryAction: "Maybe later",
-          onSecondaryAction: closure_1(6879).pop,
+          onSecondaryAction: closure_1(6882).pop,
           disclaimer: "I said come on fhqwhgads."
         });
       }
@@ -163,7 +163,7 @@ function DemoStepModal() {
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj4.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.WHO_DAT });
+      return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.WHO_DAT });
     };
     obj4.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -174,7 +174,7 @@ function DemoStepModal() {
         onAction() {
           return closure_0.push(constants.EVERYBODY);
         },
-        children: closure_7(closure_0(7223).TextInput, { placeholder: "My friend Jake" })
+        children: closure_7(closure_0(7226).TextInput, { placeholder: "My friend Jake" })
       });
     };
     obj[constants.WHO_DAT] = obj4;
@@ -182,7 +182,7 @@ function DemoStepModal() {
     obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj7.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.EVERYBODY });
+      return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.EVERYBODY });
     };
     obj7.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -197,7 +197,7 @@ function DemoStepModal() {
     obj10.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj10.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj10.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
+      return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
     };
     obj10.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -215,17 +215,17 @@ function DemoStepModal() {
     const obj13 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     obj13.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj13.headerRight = function headerRight() {
-      return closure_1_7(closure_1_0(7139).HeaderSubmittingIndicator, {});
+      return closure_1_7(closure_1_0(7142).HeaderSubmittingIndicator, {});
     };
     obj13.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7139).NavigatorHeader, { title: constants.LIMIT });
+      return closure_1_7(closure_1_0(7142).NavigatorHeader, { title: constants.LIMIT });
     };
     obj13.render = function render() {
       return closure_1_7(closure_1_13, {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: closure_1_1(6879).pop,
+        onAction: closure_1_1(6882).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return closure_1_1(dependencyMap[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -291,10 +291,10 @@ function SwitchesScreen(onAction) {
   [arr2, c1] = noop.useState(parts.map(() => false));
   const obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
   const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
-  obj.footer = closure_7(parts(13640).ModalFloatingAction, { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction });
+  obj.footer = closure_7(parts(13651).ModalFloatingAction, { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction });
   const obj3 = { style: tmp.tableRows, children: null };
   const obj2 = { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction };
-  obj3.children = closure_7(parts(7201).TableRowGroup, {
+  obj3.children = closure_7(parts(7204).TableRowGroup, {
     hasIcons: false,
     children: arr2.map((value, index) => {
       parts = index;
@@ -314,7 +314,7 @@ function SwitchesScreen(onAction) {
       }, index);
     })
   });
-  items = [closure_7(closure_5, obj3), closure_7(parts(13640).ModalFloatingActionSpacer, {})];
+  items = [closure_7(closure_5, obj3), closure_7(parts(13651).ModalFloatingActionSpacer, {})];
   obj.children = items;
   return closure_8(DemoScreen, obj);
 }
@@ -328,7 +328,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { flex: 1, alignItems: "center", padding: 16, gap: 16 }, screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, emojiContainer: null, emoji: null, title: null, tableRows: null };
 let size = { alignItems: "center", justifyContent: "center", width: 80, height: 80, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 16 };
 obj2.emojiContainer = size;

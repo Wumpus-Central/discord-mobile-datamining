@@ -1,30 +1,30 @@
-// === Module 18990: SearchList ===
+// === Module 19021: SearchList ===
 
-// Module 18990 (SearchList)
+// Module 19021 (SearchList)
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _mod7430 from "module_7430" /* 7430 */;
-import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 18976 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 18978 */;
-import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 18987 */;
-import DMRowDefault from "DMRow" /* 18991 */;
-import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 18992 */;
-import SearchHistoryRowDefault from "SearchHistoryRow" /* 18993 */;
-import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 18994 */;
-import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 19007 */;
-import MediaGridItemDefault from "MediaGridItem" /* 19008 */;
-import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 19010 */;
-import MediaGridDefault from "MediaGrid" /* 19012 */;
-import MessageRowDefault from "MessageRow" /* 19013 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 19017 */;
-import LinkGridItemDefault from "LinkGridItem" /* 19018 */;
-import FileGridItemDefault from "FileGridItem" /* 19021 */;
-import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 19022 */;
-import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 19023 */;
-import GenericTextRowDefault from "GenericTextRow" /* 19024 */;
-import SearchListSectionDefault from "SearchListSection" /* 19025 */;
-import SmartSearchRowDefault from "SmartSearchRow" /* 19026 */;
-import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 19043 */;
+import _mod7433 from "module_7433" /* 7433 */;
+import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 19007 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 19009 */;
+import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 19018 */;
+import DMRowDefault from "DMRow" /* 19022 */;
+import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 19023 */;
+import SearchHistoryRowDefault from "SearchHistoryRow" /* 19024 */;
+import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 19025 */;
+import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 19038 */;
+import MediaGridItemDefault from "MediaGridItem" /* 19039 */;
+import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 19041 */;
+import MediaGridDefault from "MediaGrid" /* 19043 */;
+import MessageRowDefault from "MessageRow" /* 19044 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 19048 */;
+import LinkGridItemDefault from "LinkGridItem" /* 19049 */;
+import FileGridItemDefault from "FileGridItem" /* 19052 */;
+import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 19053 */;
+import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 19054 */;
+import GenericTextRowDefault from "GenericTextRow" /* 19055 */;
+import SearchListSectionDefault from "SearchListSection" /* 19056 */;
+import SmartSearchRowDefault from "SmartSearchRow" /* 19057 */;
+import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 19074 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -202,11 +202,11 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9976);
+const SearchConstants = fn(9982);
 ({ SearchHistoryItemTypes: closure_6, SearchListItemTypes: metroImportDefault } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
@@ -271,7 +271,7 @@ export default noop.memo(function SearchList(arg0) {
   obj4.ItemSeparatorComponent = ItemSeparatorComponent;
   obj4.numColumns = numColumns;
   obj4.viewabilityConfigCallbackPairs = viewabilityConfigCallbackPairs;
-  items1[1] = React5(_mod7430.AnimatedFlashList, obj4);
+  items1[1] = React5(_mod7433.AnimatedFlashList, obj4);
   obj.children = items1;
   return React6(React4, obj);
 });

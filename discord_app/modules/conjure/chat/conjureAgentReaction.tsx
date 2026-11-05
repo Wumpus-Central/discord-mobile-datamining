@@ -1,9 +1,9 @@
-// === Module 11033: conjureAgentReaction ===
+// === Module 11039: conjureAgentReaction ===
 
-// Module 11033 (conjureAgentReaction)
+// Module 11039 (conjureAgentReaction)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5087 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5089 */;
 import size from "module_2" /* 2 */;
 
 const re3 = /^\d{17,20}$/;

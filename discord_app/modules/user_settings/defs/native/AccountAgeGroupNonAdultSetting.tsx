@@ -1,14 +1,14 @@
-// === Module 16878: AccountAgeGroupNonAdultSetting ===
+// === Module 16901: AccountAgeGroupNonAdultSetting ===
 
-// Module 16878 (AccountAgeGroupNonAdultSetting)
+// Module 16901 (AccountAgeGroupNonAdultSetting)
 import util from "util" /* 1113 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5827 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6861 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6864 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8095 */;
-import SettingsConstants from "SettingsConstants" /* 8573 */;
-import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 16831 */;
-import SettingBuilders from "SettingBuilders" /* 11729 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5829 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6864 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6867 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8100 */;
+import SettingsConstants from "SettingsConstants" /* 8578 */;
+import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 16854 */;
+import SettingBuilders from "SettingBuilders" /* 11737 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({
@@ -36,7 +36,7 @@ const pressable = SettingBuilders.createPressable({
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
-    const isTinyBroncoSettingsEnabled = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    const isAgeNoticeSettingsEnabled = AgeNoticeSettingsPredicate.useIsAgeNoticeSettingsEnabled();
     if (hasTeenDefaults) {
       let tmp5 = !isAgeVerified;
       if (isAgeVerified) {
@@ -45,7 +45,7 @@ const pressable = SettingBuilders.createPressable({
       hasTeenDefaults = tmp5;
     }
     if (hasTeenDefaults) {
-      hasTeenDefaults = !isTinyBroncoSettingsEnabled;
+      hasTeenDefaults = !isAgeNoticeSettingsEnabled;
     }
     return hasTeenDefaults;
   }

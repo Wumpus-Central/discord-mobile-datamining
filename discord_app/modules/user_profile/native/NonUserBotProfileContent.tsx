@@ -1,22 +1,22 @@
-// === Module 8954: NonUserBotProfileContent ===
+// === Module 8959: NonUserBotProfileContent ===
 
-// Module 8954 (NonUserBotProfileContent)
-import UserUtilsDefault from "UserUtils" /* 5195 */;
-import ToastUtils from "ToastUtils" /* 5845 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6176 */;
-import ClipboardUtils from "ClipboardUtils" /* 7494 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8941 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8944 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8955 */;
-import useBadgesDefault from "useBadges" /* 8956 */;
-import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8957 */;
+// Module 8959 (NonUserBotProfileContent)
+import UserUtilsDefault from "UserUtils" /* 5197 */;
+import ToastUtils from "ToastUtils" /* 5848 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6179 */;
+import ClipboardUtils from "ClipboardUtils" /* 7496 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8946 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8949 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8960 */;
+import useBadgesDefault from "useBadges" /* 8961 */;
+import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8962 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7513);
+const Constants = fn(7515);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5397).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5399).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const size = fn(2);
@@ -27,8 +27,8 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
   let trackUserProfileAction;
   importDefault = undefined;
   const tmp3 = UserProfileSharedStylesDefault();
-  trackUserProfileAction = trackUserProfileAction(8902).useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj = trackUserProfileAction(8902);
+  trackUserProfileAction = trackUserProfileAction(8907).useUserProfileAnalyticsContext().trackUserProfileAction;
+  let obj = trackUserProfileAction(8907);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -46,13 +46,13 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
   const tmp10 = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
   ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
   const tmp11 = useProfileThemeDefault({ user, displayProfile });
-  const userProfileColors = trackUserProfileAction(8952).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const userProfileColors = trackUserProfileAction(8957).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {
     return null;
   } else {
     const obj3 = { user, displayProfile, bannerHeight: tmp9, bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur };
-    items = [closure_7(tmp(8958), obj3), ];
+    items = [closure_7(tmp(8963), obj3), ];
     const obj4 = { style: contentAnimatedStyle, children: null };
     const obj5 = { user, guildId: null, backgroundColor: null, disableStatus: true };
     let guildId;
@@ -61,7 +61,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
     }
     obj5.guildId = guildId;
     obj5.backgroundColor = tmp13;
-    const items1 = [closure_7(tmp4(8969).OpenableUserProfileAvatar, obj5), ];
+    const items1 = [closure_7(tmp4(8974).OpenableUserProfileAvatar, obj5), ];
     const obj6 = { style: null, children: null };
     const items2 = [, , ];
     ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
@@ -97,7 +97,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
       trackUserProfileAction({ action: "PRESS_PRONOUNS" });
       ToastUtils.presentUserPronouns();
     };
-    obj8.children = closure_7(tmp(11602), obj9);
+    obj8.children = closure_7(tmp(11610), obj9);
     const items3 = [closure_7(View, obj8), ];
     const obj11 = { style: tmp3.cards, children: null };
     const obj12 = { userId: user.id, displayProfile, channel, style: null };
@@ -105,7 +105,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
     const obj13 = { backgroundColor: containerBackground };
     items4[1] = obj13;
     obj12.style = items4;
-    obj11.children = closure_7(tmp(11681), obj12);
+    obj11.children = closure_7(tmp(11689), obj12);
     items3[1] = closure_7(View, obj11);
     obj6.children = items3;
     items1[1] = closure_8(View, obj6);
@@ -114,5 +114,5 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
     obj10.children = items;
     return closure_8(closure_9, obj10);
   }
-  const tmp4Result = trackUserProfileAction(8952);
+  const tmp4Result = trackUserProfileAction(8957);
 });

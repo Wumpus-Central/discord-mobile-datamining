@@ -1,9 +1,9 @@
-// === Module 18686: InterestGameCover ===
+// === Module 18716: InterestGameCover ===
 
-// Module 18686 (InterestGameCover)
+// Module 18716 (InterestGameCover)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5851 */;
-import useInterestCoverColor from "useInterestCoverColor" /* 18687 */;
+import FastImageDefault from "FastImage" /* 5854 */;
+import useInterestCoverColor from "useInterestCoverColor" /* 18717 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ function NoCover(arg0) {
   if (tmp13) {
     tmp13 = iconURL !== tmp9;
   }
-  const tmp14 = tmp4(18687)(game.id, iconURL);
+  const tmp14 = tmp4(18717)(game.id, iconURL);
   let tmp15 = !compact;
   if (!compact) {
     tmp15 = tmp13;
@@ -60,7 +60,7 @@ function NoCover(arg0) {
     const obj3 = { uri: iconURL };
     obj2.source = obj3;
     obj2.style = tmp6.texture;
-    tmp21 = React5(tmp4(5851), obj2);
+    tmp21 = React5(tmp4(5854), obj2);
   }
   const items1 = [tmp21, , , ];
   let tmp23 = tmp15;
@@ -75,7 +75,7 @@ function NoCover(arg0) {
     obj5.onError = function onError() {
       return _undefined(iconURL);
     };
-    obj4.children = React5(tmp4(5851), obj5);
+    obj4.children = React5(tmp4(5854), obj5);
     tmp23 = React5(timestampProducer, obj4);
   }
   items1[1] = tmp23;
@@ -91,7 +91,7 @@ function NoCover(arg0) {
     obj7.onError = function onError() {
       return _undefined(iconURL);
     };
-    tmp13 = React5(tmp4(5851), obj7);
+    tmp13 = React5(tmp4(5854), obj7);
   }
   items1[2] = tmp13;
   let tmp27Result = !compact;
@@ -115,9 +115,9 @@ function NoCover(arg0) {
       tmp30 = tmp12;
     }
     obj10.onHeightChange = tmp30;
-    obj9.children = React5(tmp4(18688), obj10);
+    obj9.children = React5(tmp4(18718), obj10);
     tmp27Result = React5(timestampProducer, obj9);
-    const tmp4Result = tmp4(18688);
+    const tmp4Result = tmp4(18718);
   }
   items1[3] = tmp27Result;
   obj.children = items1;
@@ -125,13 +125,13 @@ function NoCover(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const TILE_ASPECT_RATIO = fn(18685).TILE_ASPECT_RATIO;
+const TILE_ASPECT_RATIO = fn(18715).TILE_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 const PX_8 = nativeDefault.space.PX_8;
 let closure_12 = nativeDefault.space.PX_4 / 2;
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let obj2 = { cover: null, image: null, fallback: null, titleOnly: null, icon: null, texture: null, art: null, banner: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -145,14 +145,14 @@ let obj4 = { flex: 1, justifyContent: "center", alignItems: "center", gap: nativ
 obj2.icon = { borderRadius: nativeDefault.radii.xs };
 let obj6 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.opacity = fn(18687).COVER_TEXTURE_OPACITY;
+obj6.opacity = fn(18717).COVER_TEXTURE_OPACITY;
 obj2.texture = obj6;
 const rect = { position: "absolute", top: 0, left: 0, right: 0, overflow: "hidden", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.art = rect;
 const rect1 = { position: "absolute", left: 0, right: 0, bottom: 0, justifyContent: "flex-end", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, paddingTop: PX_6, paddingBottom: PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_ACCENT };
 obj2.banner = rect1;
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5141);
+createStyles = fn(5143);
 let closure_14 = createStyles.createStyles((height, width, height2, backgroundColor) => {
   if (null == backgroundColor) {
     let obj = {};

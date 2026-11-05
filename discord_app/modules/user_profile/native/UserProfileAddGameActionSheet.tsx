@@ -1,27 +1,27 @@
-// === Module 15173: UserProfileAddGameActionSheet ===
+// === Module 15186: UserProfileAddGameActionSheet ===
 
-// Module 15173 (UserProfileAddGameActionSheet)
+// Module 15186 (UserProfileAddGameActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5150 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import TableRow from "TableRow" /* 7116 */;
-import _mod7651 from "module_7651" /* 7651 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7914 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8903 */;
-import WidgetUtils from "WidgetUtils" /* 12564 */;
-import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 15172 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5152 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import TableRow from "TableRow" /* 7119 */;
+import _mod7653 from "module_7653" /* 7653 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7919 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8908 */;
+import WidgetUtils from "WidgetUtils" /* 12571 */;
+import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 15185 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import WidgetStore from "WidgetStore" /* 12565 */;
+import WidgetStore from "WidgetStore" /* 12572 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(8895).TrackUserProfileEditActions;
+let closure_8 = fn(8900).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 }, list: null, loading: null, emptyState: null, emptyStateText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 };
 obj.list = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -203,7 +203,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     if (!closure_4) {
       if ("" !== query.trim()) {
         const obj2 = { keys: ["label"] };
-        let length = _mod7651.matchSorter(memo1, query, obj2).length;
+        let length = _mod7653.matchSorter(memo1, query, obj2).length;
       }
       return length;
     }

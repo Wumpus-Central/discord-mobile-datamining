@@ -1,10 +1,10 @@
-// === Module 11682: BioText ===
+// === Module 11690: BioText ===
 
-// Module 11682 (BioText)
+// Module 11690 (BioText)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import LinkingDefault from "Linking" /* 5843 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 11683 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import LinkingDefault from "Linking" /* 5846 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 11691 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,10 +27,10 @@ function LinkButton(arg0) {
 }
 const Pressable = fn(17).Pressable;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const CHANGELOG_URL = fn(5043).CHANGELOG_URL;
+const CHANGELOG_URL = fn(5045).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_10 = createStyles.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
@@ -46,7 +46,7 @@ export default function BioText(lineClamp) {
   const tmp = closure_10();
   items = [bio, guildId, str];
   let memo = str.useMemo(() => {
-    const obj2 = { guildId, linkVariant: str, textVariant: str, customEmojiOffsetY: null };
+    const obj2 = { guildId, linkVariant: str, textVariant: str, enableEmojiInteraction: true, customEmojiOffsetY: null };
     const obj = BioMarkupUtils;
     let num;
     if (tmpResult.isAndroid()) {

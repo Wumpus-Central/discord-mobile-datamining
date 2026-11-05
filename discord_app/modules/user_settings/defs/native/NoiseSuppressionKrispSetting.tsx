@@ -1,20 +1,20 @@
-// === Module 17492: NoiseSuppressionKrispSetting ===
+// === Module 17518: NoiseSuppressionKrispSetting ===
 
-// Module 17492 (NoiseSuppressionKrispSetting)
+// Module 17518 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 12153 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 12154 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 12162 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 12163 */;
 import MediaEngineStore from "MediaEngineStore" /* 2135 */;
 
 require = fn;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(8573).MobileUserSettings.VOICE,
+  parent: fn(8578).MobileUserSettings.VOICE,
   useValue() {
     return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },

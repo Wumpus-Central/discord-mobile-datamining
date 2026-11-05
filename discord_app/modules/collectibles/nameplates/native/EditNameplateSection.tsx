@@ -1,11 +1,11 @@
-// === Module 16757: EditNameplateSection ===
+// === Module 16770: EditNameplateSection ===
 
-// Module 16757 (EditNameplateSection)
+// Module 16770 (EditNameplateSection)
 import utils from "utils" /* 2113 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 15299 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15300 */;
-import useNameplateSections from "useNameplateSections" /* 16756 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 15312 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15313 */;
+import useNameplateSections from "useNameplateSections" /* 16769 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,10 +13,10 @@ const View = fn(17).View;
 const isNameplateRecord = fn(2114).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15299).GUTTER_SIZE }, rowSpacer: null, nameplate: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15299).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(15299).GUTTER_SIZE };
+const createStyles = fn(5143);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15312).GUTTER_SIZE }, rowSpacer: null, nameplate: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15312).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(15312).GUTTER_SIZE };
 obj.nameplate = { overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {
@@ -67,8 +67,8 @@ const memoResult1 = noop.memo((nameplate) => {
   const obj2 = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: null };
   const items2 = [closure_9().nameplate, { borderRadius: 6 }];
   obj2.style = items2;
-  obj.children = closure_6(setSelectedNameplate(9661), obj2);
-  return closure_6(nameplate(15300).EditCollectiblesListItemProduct, obj);
+  obj.children = closure_6(setSelectedNameplate(9667), obj2);
+  return closure_6(nameplate(15313).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditNameplateItem";
 let size = fn(2);

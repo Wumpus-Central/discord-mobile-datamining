@@ -1,9 +1,9 @@
-// === Module 19761: MessageSessionMetadataManager ===
+// === Module 19796: MessageSessionMetadataManager ===
 
-// Module 19761 (MessageSessionMetadataManager)
+// Module 19796 (MessageSessionMetadataManager)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

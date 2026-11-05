@@ -1,14 +1,14 @@
-// === Module 18695: GuildsBarUnreadBars ===
+// === Module 18725: GuildsBarUnreadBars ===
 
-// Module 18695 (GuildsBarUnreadBars)
+// Module 18725 (GuildsBarUnreadBars)
 import initialize from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
-import FastList from "FastList" /* 7377 */;
+import FastList from "FastList" /* 7380 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7021 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
-import SortedGuildStore from "SortedGuildStore" /* 6907 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7024 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import SortedGuildStore from "SortedGuildStore" /* 6910 */;
 
 const require = globalThis.__r;
 
@@ -216,15 +216,15 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6907).GuildsNodeType;
-const GuildsBarConstants = fn(18612);
+const GuildsNodeType = fn(6910).GuildsNodeType;
+const GuildsBarConstants = fn(18642);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(17322);
+const YouBarConstants = fn(17348);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_15 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
-let closure_17 = { beforeItem: "Object", afterItem: "Array" };
+let closure_17 = { beforeItem: "Path", afterItem: "count" };
 let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "a" };
 let closure_20 = { code: "(function GuildsBarUnreadBarsTsx1(){let[scrollPosValue]=this.__closure;return scrollPosValue.get();})" };
 let closure_21 = { code: "(function GuildsBarUnreadBarsTsx2(position,lastPosition){let[scheduleOnRN,debouncedUpdate]=this.__closure;if(position!==lastPosition){scheduleOnRN(debouncedUpdate);}})" };

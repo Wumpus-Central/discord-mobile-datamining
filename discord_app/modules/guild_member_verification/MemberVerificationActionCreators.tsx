@@ -1,14 +1,14 @@
-// === Module 7057: MemberVerificationActionCreators ===
+// === Module 7060: MemberVerificationActionCreators ===
 
-// Module 7057 (MemberVerificationActionCreators)
+// Module 7060 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5884 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5887 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 5046 */;
-import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import InviteStore from "InviteStore" /* 5883 */;
+import ImpersonateStore from "ImpersonateStore" /* 5048 */;
+import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+import InviteStore from "InviteStore" /* 5886 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -282,7 +282,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           let body;
           c8 = 1;
           c9 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

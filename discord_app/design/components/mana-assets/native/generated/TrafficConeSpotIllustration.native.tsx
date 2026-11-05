@@ -1,19 +1,19 @@
-// === Module 7206: TrafficConeSpotIllustration ===
+// === Module 7209: TrafficConeSpotIllustration ===
 
-// Module 7206 (TrafficConeSpotIllustration)
-import _modDef7207 from "module_7207" /* 7207 */;
-import _modDef7208 from "module_7208" /* 7208 */;
-import _modDef7209 from "module_7209" /* 7209 */;
-import assetHelpers from "assetHelpers" /* 7210 */;
+// Module 7209 (TrafficConeSpotIllustration)
+import _modDef7210 from "module_7210" /* 7210 */;
+import _modDef7211 from "module_7211" /* 7211 */;
+import _modDef7212 from "module_7212" /* 7212 */;
+import assetHelpers from "assetHelpers" /* 7213 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7207 }, 3: null };
-let obj2 = { uri: _modDef7207 };
-obj[2] = { uri: _modDef7208 };
-const obj3 = { uri: _modDef7208 };
-obj[3] = { uri: _modDef7209 };
+let obj = { 1: null, 2: { uri: _modDef7210 }, 3: null };
+let obj2 = { uri: _modDef7210 };
+obj[2] = { uri: _modDef7211 };
+const obj3 = { uri: _modDef7211 };
+obj[3] = { uri: _modDef7212 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx");
 

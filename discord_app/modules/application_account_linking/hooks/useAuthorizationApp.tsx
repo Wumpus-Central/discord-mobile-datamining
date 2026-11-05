@@ -1,6 +1,6 @@
-// === Module 7465: useAuthorizationApp ===
+// === Module 7468: useAuthorizationApp ===
 
-// Module 7465 (useAuthorizationApp)
+// Module 7468 (useAuthorizationApp)
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import ApplicationRecord from "ApplicationRecord" /* 2145 */;

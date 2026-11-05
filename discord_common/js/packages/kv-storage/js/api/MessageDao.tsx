@@ -1,8 +1,8 @@
-// === Module 5034: MessageDao ===
+// === Module 5036: MessageDao ===
 
-// Module 5034 (MessageDao)
-import Table from "Table" /* 5024 */;
-import TableId from "TableId" /* 5026 */;
+// Module 5036 (MessageDao)
+import Table from "Table" /* 5026 */;
+import TableId from "TableId" /* 5028 */;
 import size from "module_2" /* 2 */;
 
 let MessageDao;

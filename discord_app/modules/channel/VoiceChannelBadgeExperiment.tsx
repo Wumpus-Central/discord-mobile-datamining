@@ -1,8 +1,8 @@
-// === Module 15312: VoiceChannelBadgeExperiment ===
+// === Module 15325: VoiceChannelBadgeExperiment ===
 
-// Module 15312 (VoiceChannelBadgeExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 5363 */;
-import createExperiment from "module_5360" /* 5360 */;
+// Module 15325 (VoiceChannelBadgeExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 5365 */;
+import createExperiment from "module_5362" /* 5362 */;
 import size from "module_2" /* 2 */;
 
 const obj = { id: "2026-03_voice_badge", kind: "guild", commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, label: "Display Voice Channel Badge", defaultConfig: { enabled: false }, treatments: null };

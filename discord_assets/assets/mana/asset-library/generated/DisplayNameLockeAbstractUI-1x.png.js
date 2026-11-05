@@ -1,6 +1,6 @@
-// === Module 19148: ? ===
+// === Module 19179: ? ===
 
-// Module 19148
+// Module 19179
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-1x.png.js");

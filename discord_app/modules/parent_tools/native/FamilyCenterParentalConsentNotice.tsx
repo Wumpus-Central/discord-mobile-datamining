@@ -1,16 +1,16 @@
-// === Module 17024: FamilyCenterParentalConsentNotice ===
+// === Module 17048: FamilyCenterParentalConsentNotice ===
 
-// Module 17024 (FamilyCenterParentalConsentNotice)
+// Module 17048 (FamilyCenterParentalConsentNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 17025 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 17049 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 const obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, link: { textDecorationLine: "underline" } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

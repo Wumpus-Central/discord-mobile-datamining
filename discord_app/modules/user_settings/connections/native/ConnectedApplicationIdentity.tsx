@@ -1,14 +1,14 @@
-// === Module 17093: ConnectedApplicationIdentity ===
+// === Module 17117: ConnectedApplicationIdentity ===
 
-// Module 17093 (ConnectedApplicationIdentity)
+// Module 17117 (ConnectedApplicationIdentity)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import Icon from "Icon" /* 5770 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
-import common_AlertDefault from "common/Alert" /* 6165 */;
-import InfoBoxDefault from "InfoBox" /* 11580 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import Icon from "Icon" /* 5772 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6096 */;
+import common_AlertDefault from "common/Alert" /* 6168 */;
+import InfoBoxDefault from "InfoBox" /* 11588 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,21 +1,21 @@
-// === Module 19538: ActivitiesDebugOverlay ===
+// === Module 19573: ActivitiesDebugOverlay ===
 
-// Module 19538 (ActivitiesDebugOverlay)
+// Module 19573 (ActivitiesDebugOverlay)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import useThermalStateDefault from "useThermalState" /* 16545 */;
-import ThermalStates from "ThermalStates" /* 16546 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import useThermalStateDefault from "useThermalState" /* 16558 */;
+import ThermalStates from "ThermalStates" /* 16559 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 const obj2 = { container: null, row: null };
 let rect = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
-const ColorUtils = fn(5138);
+const ColorUtils = fn(5140);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj2.container = rect;
 obj2.row = { flexDirection: "row" };

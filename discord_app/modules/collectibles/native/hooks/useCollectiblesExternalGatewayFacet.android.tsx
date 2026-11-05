@@ -1,8 +1,8 @@
-// === Module 14641: useCollectiblesExternalGatewayFacet ===
+// === Module 14654: useCollectiblesExternalGatewayFacet ===
 
-// Module 14641 (useCollectiblesExternalGatewayFacet)
+// Module 14654 (useCollectiblesExternalGatewayFacet)
 import _mod19 from "module_19" /* 19 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9698 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9704 */;
 import UserStore from "UserStore" /* 1385 */;
 import size from "module_2" /* 2 */;
 

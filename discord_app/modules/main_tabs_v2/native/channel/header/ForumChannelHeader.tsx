@@ -1,16 +1,16 @@
-// === Module 14792: ForumChannelHeader ===
+// === Module 14805: ForumChannelHeader ===
 
-// Module 14792 (ForumChannelHeader)
-import ForumChannelSearch from "ForumChannelSearch" /* 14778 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14793 */;
+// Module 14805 (ForumChannelHeader)
+import ForumChannelSearch from "ForumChannelSearch" /* 14791 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14806 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
-let closure_5 = createStyles.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9962).MIN_HEADER_HEIGHT } });
-const obj = { search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9962).MIN_HEADER_HEIGHT } };
+const createStyles = fn(5143);
+let closure_5 = createStyles.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9968).MIN_HEADER_HEIGHT } });
+const obj = { search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9968).MIN_HEADER_HEIGHT } };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx");
 

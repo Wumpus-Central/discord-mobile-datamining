@@ -1,10 +1,10 @@
-// === Module 19400: useFloatConjureAppsOffScreen ===
+// === Module 19431: useFloatConjureAppsOffScreen ===
 
-// Module 19400 (useFloatConjureAppsOffScreen)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6984 */;
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16618 */;
+// Module 19431 (useFloatConjureAppsOffScreen)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6987 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 16631 */;
 import noop from "module_19" /* 19 */;
-import VisibleChannelScreenStore from "VisibleChannelScreenStore" /* 18877 */;
+import VisibleChannelScreenStore from "VisibleChannelScreenStore" /* 18908 */;
 
 const require = globalThis.__r;
 

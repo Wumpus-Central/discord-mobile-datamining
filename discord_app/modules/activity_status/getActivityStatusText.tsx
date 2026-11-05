@@ -1,15 +1,15 @@
-// === Module 10937: getActivityStatusText ===
+// === Module 10943: getActivityStatusText ===
 
-// Module 10937 (getActivityStatusText)
+// Module 10943 (getActivityStatusText)
 import util from "util" /* 1113 */;
-import ActivityTypes from "ActivityTypes" /* 5896 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8023 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9056 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10935 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10938 */;
-import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 10939 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10940 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10941 */;
+import ActivityTypes from "ActivityTypes" /* 5899 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8028 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9061 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10941 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10944 */;
+import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 10945 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10946 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10947 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");

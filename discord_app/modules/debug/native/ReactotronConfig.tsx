@@ -1,7 +1,7 @@
-// === Module 16479: ReactotronConfig ===
+// === Module 16492: ReactotronConfig ===
 
-// Module 16479 (ReactotronConfig)
-import reactNativeCorePlugins from "reactNativeCorePlugins" /* 16480 */;
+// Module 16492 (ReactotronConfig)
+import reactNativeCorePlugins from "reactNativeCorePlugins" /* 16493 */;
 
 const reactNative = reactNativeCorePlugins.configure({}).useReactNative();
 reactNative.connect();

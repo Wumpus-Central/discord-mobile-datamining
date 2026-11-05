@@ -1,22 +1,22 @@
-// === Module 18297: AuthManager ===
+// === Module 18325: AuthManager ===
 
-// Module 18297 (AuthManager)
+// Module 18325 (AuthManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import transitionToGuild from "transitionToGuild" /* 7662 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14194 */;
-import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 15446 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18304 */;
+import transitionToGuild from "transitionToGuild" /* 7664 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14207 */;
+import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 15459 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18332 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LifecycleManager from "LifecycleManager" /* 2125 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(14191).PermissionStateType;
+const PermissionStateType = fn(14204).PermissionStateType;
 const ME = fn(1072).ME;
-let closure_8 = fn(8080).NotificationAuthorizationStatus;
-const NewUserTypes = fn(14489).NewUserTypes;
+let closure_8 = fn(8085).NotificationAuthorizationStatus;
+const NewUserTypes = fn(14502).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -58,13 +58,13 @@ class AuthManager extends tmp3 {
               dependencyMap = 0;
               closure_129_0 = applyArgumentsResult;
               closure_1_5.dismiss();
-              if (tmp2(4986)()) {
+              if (tmp2(4988)()) {
                 applyArgumentsResult();
                 c4 = 3;
               } else {
                 c3 = 1;
                 c4 = 1;
-                const obj4 = { value: tmp2(8103).getNotificationAuthorizationStatus(), done: false };
+                const obj4 = { value: tmp2(8108).getNotificationAuthorizationStatus(), done: false };
                 return obj4;
               }
             }
@@ -79,8 +79,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(18298).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(18298);
+          const result = applyArgumentsResult(18326).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(18326);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;
@@ -107,18 +107,18 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(14572).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(14572);
+        applyArgumentsResult(14585).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(14585);
       }
-      obj = applyArgumentsResult(9263);
+      obj = applyArgumentsResult(9270);
       const result = MobileOnboardingFrictionExperimentDefault.trackMobileOnboardingFrictionExposure("AuthManager");
-      applyArgumentsResult(14488).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(14488);
+      applyArgumentsResult(14501).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(14501);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {
-        closure_1_0(7662).transitionToGuild(closure_1_7);
-        const obj = closure_1_0(7662);
+        closure_1_0(7664).transitionToGuild(closure_1_7);
+        const obj = closure_1_0(7664);
         closure_1_1(572).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };

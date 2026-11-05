@@ -1,12 +1,12 @@
-// === Module 15875: PIPSpeakerStore ===
+// === Module 15888: PIPSpeakerStore ===
 
-// Module 15875 (PIPSpeakerStore)
+// Module 15888 (PIPSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
 import throttleDefault from "throttle" /* 550 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6978 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5898 */;
-import SpeakingStore from "SpeakingStore" /* 6891 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6981 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5901 */;
+import SpeakingStore from "SpeakingStore" /* 6894 */;
 
 function resetSpeaker() {
   closure_5.cancel();

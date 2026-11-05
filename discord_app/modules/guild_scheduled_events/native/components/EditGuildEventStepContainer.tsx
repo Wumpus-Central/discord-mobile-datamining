@@ -1,41 +1,43 @@
-// === Module 9134: EditGuildEventStepContainer ===
+// === Module 9140: EditGuildEventStepContainer ===
 
-// Module 9134 (EditGuildEventStepContainer)
+// Module 9140 (EditGuildEventStepContainer)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5743 */;
-import _slicedToArray from "module_32" /* 32 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5745 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9141 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
-({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5143);
 let obj2 = { container: { flex: 1, paddingHorizontal: 0, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%" }, flex: { flex: 1 }, scroller: { paddingHorizontal: 16 }, buttonContainer: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.buttonContainer = rect;
-let closure_8 = createStyles.createStyles(obj2);
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventStepContainer.tsx");
 
 export default function EditGuildEventsStepContainer(arg0) {
   ({ children, action, ref } = arg0);
-  const tmp = closure_8();
-  const tmp2 = _slicedToArray(noop.useState(32), 2);
-  closure_0 = tmp2[1];
+  const tmp = closure_6();
+  const tmp4 = useMeasuredLayoutDefault();
+  const height = tmp4.height;
+  let num = 32;
+  ({ ref: ref2, onLayout } = tmp4);
+  if (undefined !== height) {
+    num = height;
+  }
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
   const obj = { style: tmp.container, children: null };
   const obj2 = { ref, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", style: null, contentContainerStyle: tmp.scroller, children };
-  items = [tmp.flex, { marginBottom: tmp2[0] + insets.bottom }];
+  items = [tmp.flex, { marginBottom: num + insets.bottom }];
   obj2.style = items;
-  const callback = noop.useCallback((nativeEvent) => {
-    closure_0(nativeEvent.nativeEvent.layout.height);
-  }, []);
-  const items1 = [timestampProducer(hasOwnProperty, obj2), ];
-  const obj3 = { style: null, onLayout: callback, children: action };
+  const items1 = [React4(React3, obj2), ];
+  const obj3 = { style: null, ref: ref2, onLayout, children: action };
   const items2 = [tmp.buttonContainer, { paddingBottom: insets.bottom }];
   obj3.style = items2;
-  items1[1] = timestampProducer(React4, obj3);
+  items1[1] = React4(React2, obj3);
   obj.children = items1;
-  return metroImportDefault(React4, obj);
+  return hasOwnProperty(React2, obj);
 };

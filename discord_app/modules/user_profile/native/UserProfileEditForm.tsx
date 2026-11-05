@@ -1,20 +1,20 @@
-// === Module 16689: UserProfileEditForm ===
+// === Module 16702: UserProfileEditForm ===
 
-// Module 16689 (UserProfileEditForm)
+// Module 16702 (UserProfileEditForm)
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7462 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7487 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8878 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8909 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 15202 */;
-import _modDef16691 from "module_16691" /* 16691 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 16692 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16705 */;
-import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 16707 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7465 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7490 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8883 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8914 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 15215 */;
+import _modDef16704 from "module_16704" /* 16704 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 16705 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16718 */;
+import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 16720 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8904 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11648 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8909 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11656 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -579,16 +579,16 @@ function UserProfileEditFormContent(currentUser) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7513).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7515).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1072);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: closure_10 } = Constants);
-const HexagonCampaignConstants = fn(5166);
+const HexagonCampaignConstants = fn(5168);
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-const constants3 = fn(16690).UserProfileEditAutoFocusElement;
+const constants3 = fn(16703).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let obj = { assetOrigin: fn(7297).AssetOriginTypes.NEW_ASSET, imageUri: _modDef16691, staticImageUri: _modDef16691, description: "", originalAsset: "children" };
+let obj = { assetOrigin: fn(7300).AssetOriginTypes.NEW_ASSET, imageUri: _modDef16704, staticImageUri: _modDef16704, description: "", originalAsset: "applicationId" };
 let closure_21 = { code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");

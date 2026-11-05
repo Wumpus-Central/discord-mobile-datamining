@@ -1,6 +1,6 @@
-// === Module 19843: InterestPickerStep ===
+// === Module 19878: InterestPickerStep ===
 
-// Module 19843 (InterestPickerStep)
+// Module 19878 (InterestPickerStep)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,12 @@ const result = size.fileFinishedImporting("modules/waterwheels/interest/native/I
 export default function InterestPickerStep(navigation) {
   navigation = navigation.navigation;
   let onComplete = navigation.route.params.onComplete;
-  const tmp3 = onComplete(18680)("InterestPickerStep");
-  dependencyMap = tmp3;
-  const setPicks = navigation(19841).useInterestPickerPicks().setPicks;
+  const interestPickerGameList = navigation(18711).useInterestPickerGameList("InterestPickerStep");
+  const tmp4 = onComplete(18710)("InterestPickerStep");
+  dependencyMap = tmp4;
+  let obj = navigation(18711);
+  const tmp3 = onComplete;
+  const setPicks = navigation(19876).useInterestPickerPicks().setPicks;
   jsx = setPicks.useRef(false);
   items = [navigation, onComplete, setPicks];
   onComplete = setPicks.useCallback((arg0, arg1) => {
@@ -30,16 +33,19 @@ export default function InterestPickerStep(navigation) {
       }
     }
   }, items);
-  const items1 = [tmp3, onComplete];
+  const items1 = [tmp4, onComplete];
   const effect = setPicks.useEffect(() => {
     if (null == closure_2) {
       callback([], true);
     }
   }, items1);
-  let tmp6 = null;
-  if (null != tmp3) {
-    let obj2 = { catalog: tmp3, onComplete };
-    tmp6 = jsx(onComplete(19844), { catalog: tmp3, onComplete });
+  let tmp7 = null;
+  if (null != tmp4) {
+    tmp7 = null;
+    if (null != interestPickerGameList) {
+      const obj3 = { arm: interestPickerGameList, catalog: tmp4, onComplete };
+      tmp7 = jsx(tmp3(19879), { arm: interestPickerGameList, catalog: tmp4, onComplete });
+    }
   }
-  return tmp6;
+  return tmp7;
 };

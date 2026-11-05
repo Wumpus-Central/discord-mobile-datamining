@@ -1,16 +1,16 @@
-// === Module 14539: AcceptInvite ===
+// === Module 14552: AcceptInvite ===
 
-// Module 14539 (AcceptInvite)
+// Module 14552 (AcceptInvite)
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useToken from "useToken" /* 5732 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
-import FastImageDefault from "FastImage" /* 5851 */;
-import Card from "Card" /* 7118 */;
-import _modDef14548 from "module_14548" /* 14548 */;
+import useToken from "useToken" /* 5734 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5747 */;
+import FastImageDefault from "FastImage" /* 5854 */;
+import Card from "Card" /* 7121 */;
+import _modDef14561 from "module_14561" /* 14561 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -84,12 +84,12 @@ function AcceptInviteCardComponent(invite) {
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_8(first(14540), obj2);
+    return closure_8(first(14553), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_8(first(14543), obj);
+    return closure_8(first(14556), obj);
   } else {
     return closure_8(InviteResolving, {});
   }
@@ -99,7 +99,7 @@ get_ActivityIndicator = fn(17);
 const InviteStates = fn(1072).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { parentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, imageStyle: null, cardContainer: null, cardContent: null, resolvingContainer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -130,7 +130,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef14548;
+    let guildSplashSource = _modDef14561;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

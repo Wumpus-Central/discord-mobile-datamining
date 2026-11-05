@@ -1,8 +1,8 @@
-// === Module 5099: burst_reactions/BurstReactionEffectUtils ===
+// === Module 5101: burst_reactions/BurstReactionEffectUtils ===
 
-// Module 5099 (burst_reactions/BurstReactionEffectUtils)
-import EmojiUtils from "EmojiUtils" /* 5091 */;
-import getBurstAnimation from "getBurstAnimation" /* 5100 */;
+// Module 5101 (burst_reactions/BurstReactionEffectUtils)
+import EmojiUtils from "EmojiUtils" /* 5093 */;
+import getBurstAnimation from "getBurstAnimation" /* 5102 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -224,7 +224,7 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

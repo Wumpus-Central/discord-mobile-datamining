@@ -1,7 +1,7 @@
-// === Module 7250: FreeFormLabel ===
+// === Module 7253: FreeFormLabel ===
 
-// Module 7250 (FreeFormLabel)
-import Text_Text from "Text/Text" /* 5761 */;
+// Module 7253 (FreeFormLabel)
+import Text_Text from "Text/Text" /* 5763 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

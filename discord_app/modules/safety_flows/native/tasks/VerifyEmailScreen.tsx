@@ -1,6 +1,6 @@
-// === Module 20371: VerifyEmailScreen ===
+// === Module 20406: VerifyEmailScreen ===
 
-// Module 20371 (VerifyEmailScreen)
+// Module 20406 (VerifyEmailScreen)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,9 +1,9 @@
-// === Module 7914: UserProfileGameWidgetTypes ===
+// === Module 7919: UserProfileGameWidgetTypes ===
 
-// Module 7914 (UserProfileGameWidgetTypes)
-import WidgetType from "WidgetType" /* 7913 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 7916 */;
-import UserProfileWidgetConstants from "UserProfileWidgetConstants" /* 7915 */;
+// Module 7919 (UserProfileGameWidgetTypes)
+import WidgetType from "WidgetType" /* 7918 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 7921 */;
+import UserProfileWidgetConstants from "UserProfileWidgetConstants" /* 7920 */;
 import size from "module_2" /* 2 */;
 
 ({ widgetSupportsComment: c2, widgetSupportsTags: c3 } = UserProfileWidgetConstants);
@@ -208,8 +208,8 @@ prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOp
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTypes.tsx");
 
 export const GAME_WIDGET_TYPES = items;
-export function isGameWidgetType(arg0) {
-  return items.includes(arg0);
+export function isGameWidgetType(type) {
+  return items.includes(type);
 }
 export function isGameWidget(widget) {
   return widget instanceof BaseGameWidget;

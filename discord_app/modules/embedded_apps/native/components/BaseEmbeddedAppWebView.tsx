@@ -1,17 +1,17 @@
-// === Module 12018: BaseEmbeddedAppWebView ===
+// === Module 12027: BaseEmbeddedAppWebView ===
 
-// Module 12018 (BaseEmbeddedAppWebView)
+// Module 12027 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6093 */;
-import WebView from "WebView" /* 8119 */;
-import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 12019 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6096 */;
+import WebView from "WebView" /* 8124 */;
+import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 12028 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5808 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5810 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -466,7 +466,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
 }
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_10 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_11 = new LoggerDefault("BaseEmbeddedAppWebView");
 const size = fn(2);

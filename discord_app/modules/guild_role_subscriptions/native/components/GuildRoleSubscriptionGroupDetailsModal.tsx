@@ -1,19 +1,19 @@
-// === Module 20228: GuildRoleSubscriptionGroupDetailsModal ===
+// === Module 20264: GuildRoleSubscriptionGroupDetailsModal ===
 
-// Module 20228 (GuildRoleSubscriptionGroupDetailsModal)
+// Module 20264 (GuildRoleSubscriptionGroupDetailsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import TableRowGroup from "TableRowGroup" /* 7201 */;
-import TextArea from "TextArea" /* 7389 */;
-import FormSeparatorDefault from "FormSeparator" /* 17454 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20225 */;
-import FormStylesDefault from "FormStyles" /* 20230 */;
-import FormImagePicker from "FormImagePicker" /* 20231 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20232 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import TableRowGroup from "TableRowGroup" /* 7204 */;
+import TextArea from "TextArea" /* 7392 */;
+import FormSeparatorDefault from "FormSeparator" /* 17480 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 20261 */;
+import FormStylesDefault from "FormStyles" /* 20266 */;
+import FormImagePicker from "FormImagePicker" /* 20267 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20268 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 20229 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 20265 */;
 
 require = fn;
 class Content {
@@ -55,12 +55,12 @@ class Content {
   }
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(17442);
+const GuildRoleSubscriptionsConstants = fn(17468);
 ({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault } = GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1072).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: nativeDefault.space.PX_16 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);

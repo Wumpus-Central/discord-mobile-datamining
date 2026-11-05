@@ -1,14 +1,14 @@
-// === Module 17600: CustomTypingIndicatorEmojiSlots ===
+// === Module 17627: CustomTypingIndicatorEmojiSlots ===
 
-// Module 17600 (CustomTypingIndicatorEmojiSlots)
+// Module 17627 (CustomTypingIndicatorEmojiSlots)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5771 */;
-import springPresets from "springPresets" /* 5772 */;
-import EmojiDefault from "Emoji" /* 7436 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13966 */;
+import spring_spring from "spring/spring" /* 5773 */;
+import springPresets from "springPresets" /* 5774 */;
+import EmojiDefault from "Emoji" /* 7439 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10126 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13979 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -133,8 +133,8 @@ function CustomTypingIndicatorEmojiSlot(index) {
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
-let items = [fn(17601).EmojiAngryFaceWithHornsIcon, fn(17603).EmojiColdFaceIcon, fn(17605).EmojiCowboyHatFaceIcon, fn(17607).EmojiCryingFaceIcon, fn(17609).EmojiDisguisedFaceIcon, fn(17611).EmojiFaceVomitingIcon, fn(17613).EmojiFaceWithMonocleIcon, fn(17615).EmojiFaceWithSpiralEyesIcon, fn(17617).EmojiMeltingFaceIcon, fn(17619).EmojiMoneyMouthFaceIcon, fn(17621).EmojiNerdFaceIcon, fn(17623).EmojiPartyingFaceIcon, fn(17625).EmojiSalutingFaceIcon, fn(17627).EmojiSkullIcon, fn(17629).EmojiSmilingFaceWithHornsIcon, fn(17631).EmojiSmilingFaceWithSunglassesIcon, fn(17633).EmojiSquintingFaceWithTongueIcon, fn(17635).EmojiUpsideDownFaceIcon, fn(17637).EmojiWoozyFaceIcon, fn(17639).EmojiZanyFaceIcon, fn(17641).EmojiRollingOnTheFloorLaughingIcon, fn(17643).EmojiSmilingFaceWithHeartsIcon];
-const createStyles = fn(5141);
+let items = [fn(17628).EmojiAngryFaceWithHornsIcon, fn(17630).EmojiColdFaceIcon, fn(17632).EmojiCowboyHatFaceIcon, fn(17634).EmojiCryingFaceIcon, fn(17636).EmojiDisguisedFaceIcon, fn(17638).EmojiFaceVomitingIcon, fn(17640).EmojiFaceWithMonocleIcon, fn(17642).EmojiFaceWithSpiralEyesIcon, fn(17644).EmojiMeltingFaceIcon, fn(17646).EmojiMoneyMouthFaceIcon, fn(17648).EmojiNerdFaceIcon, fn(17650).EmojiPartyingFaceIcon, fn(17652).EmojiSalutingFaceIcon, fn(17654).EmojiSkullIcon, fn(17656).EmojiSmilingFaceWithHornsIcon, fn(17658).EmojiSmilingFaceWithSunglassesIcon, fn(17660).EmojiSquintingFaceWithTongueIcon, fn(17662).EmojiUpsideDownFaceIcon, fn(17664).EmojiWoozyFaceIcon, fn(17666).EmojiZanyFaceIcon, fn(17668).EmojiRollingOnTheFloorLaughingIcon, fn(17670).EmojiSmilingFaceWithHeartsIcon];
+const createStyles = fn(5143);
 let closure_9 = createStyles.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 let closure_11 = { code: "(function CustomTypingIndicatorEmojiSlotsTsx1(){let[withSpring,interpolate,pressed,PLACEHOLDER_EMOJI_ACTIVE_SCALE,ON_PRESS_SPRING]=this.__closure;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,PLACEHOLDER_EMOJI_ACTIVE_SCALE]),ON_PRESS_SPRING)}]};})" };
 let size = fn(2);
@@ -160,5 +160,5 @@ export default function CustomTypingIndicatorEmojiSlots(emojis) {
     obj.onChange = onChange;
     return <CustomTypingIndicatorEmojiSlot key={index} index={index} emoji={null} emojisKey={null} placeholderIcon={null} onChange={null} />;
   });
-  return jsx(emojis(6162).Stack, { direction: "horizontal", spacing: 8, children: null });
+  return jsx(emojis(6165).Stack, { direction: "horizontal", spacing: 8, children: null });
 };

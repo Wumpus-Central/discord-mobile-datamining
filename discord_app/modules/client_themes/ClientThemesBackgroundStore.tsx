@@ -1,20 +1,20 @@
-// === Module 5165: ClientThemesBackgroundStore ===
+// === Module 5167: ClientThemesBackgroundStore ===
 
-// Module 5165 (ClientThemesBackgroundStore)
+// Module 5167 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2176 */;
-import dismissible_content from "dismissible_content" /* 4974 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
-import UserUtils from "UserUtils" /* 5195 */;
-import ProductCatalog from "ProductCatalog" /* 5198 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5206 */;
+import dismissible_content from "dismissible_content" /* 4976 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5173 */;
+import UserUtils from "UserUtils" /* 5197 */;
+import ProductCatalog from "ProductCatalog" /* 5200 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5208 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -181,9 +181,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4994).isGuildTextChannelType;
+const isGuildTextChannelType = fn(4996).isGuildTextChannelType;
 const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5166).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5168).HexagonCampaignPerk;
 const SystemThemeState = fn(1195).SystemThemeState;
 let closure_15 = true;
 let c16 = false;

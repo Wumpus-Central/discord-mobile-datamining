@@ -1,20 +1,20 @@
-// === Module 18314: ChannelScreenAnimatedFrame ===
+// === Module 18344: ChannelScreenAnimatedFrame ===
 
-// Module 18314 (ChannelScreenAnimatedFrame)
+// Module 18344 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5378 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9970 */;
-import PanelsConfig from "PanelsConfig" /* 18312 */;
+import timing_timing from "timing/timing" /* 5380 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7431 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9976 */;
+import PanelsConfig from "PanelsConfig" /* 18342 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, splitDivider: null };
 const obj3 = { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.splitDivider = { borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderLeftWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };

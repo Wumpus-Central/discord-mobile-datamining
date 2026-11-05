@@ -1,8 +1,8 @@
-// === Module 12609: AppsBanner ===
+// === Module 12616: AppsBanner ===
 
-// Module 12609 (AppsBanner)
+// Module 12616 (AppsBanner)
 import util from "util" /* 1113 */;
-import BannerBaseDefault from "BannerBase" /* 12607 */;
+import BannerBaseDefault from "BannerBase" /* 12614 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

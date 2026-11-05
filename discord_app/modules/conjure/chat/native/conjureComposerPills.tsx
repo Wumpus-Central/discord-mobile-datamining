@@ -1,14 +1,14 @@
-// === Module 13015: conjureComposerPills ===
+// === Module 13022: conjureComposerPills ===
 
-// Module 13015 (conjureComposerPills)
+// Module 13022 (conjureComposerPills)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import UserUtils from "UserUtils" /* 5195 */;
-import _modDef11250 from "module_11250" /* 11250 */;
-import ChatInputParser from "ChatInputParser" /* 13016 */;
+import UserUtils from "UserUtils" /* 5197 */;
+import _modDef11258 from "module_11258" /* 11258 */;
+import ChatInputParser from "ChatInputParser" /* 13023 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12344 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12351 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
 export function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef11250).uri;
+  return Image.resolveAssetSource(_modDef11258).uri;
 }
 export function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
@@ -60,7 +60,7 @@ export function conjureUserPillLabel(id) {
 export function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12855).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(12862).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -111,7 +111,7 @@ export function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef11250).uri;
+        uri = Image.resolveAssetSource(_modDef11258).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);

@@ -1,23 +1,23 @@
-// === Module 18851: useReplyActions ===
+// === Module 18882: useReplyActions ===
 
-// Module 18851 (useReplyActions)
+// Module 18882 (useReplyActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5752 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8855 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9065 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5754 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8860 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9070 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7841).DraftType;
+const DraftType = fn(7846).DraftType;
 const EmojiIntention = fn(1388).EmojiIntention;
-const MessageSendLocation = fn(5146).MessageSendLocation;
+const MessageSendLocation = fn(5148).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -229,7 +229,7 @@ export function useReplyActions(content) {
         const obj3 = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18852, dependencyMap.paths), "ReactActionSheet", obj5);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18883, dependencyMap.paths), "ReactActionSheet", obj5);
       }
     }, items6);
     obj2.openEmojiPicker = callback2;

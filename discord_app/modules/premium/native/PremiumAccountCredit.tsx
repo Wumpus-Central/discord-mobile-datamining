@@ -1,16 +1,16 @@
-// === Module 15511: PremiumAccountCredit ===
+// === Module 15524: PremiumAccountCredit ===
 
-// Module 15511 (PremiumAccountCredit)
+// Module 15524 (PremiumAccountCredit)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PremiumUtils from "PremiumUtils" /* 2176 */;
 import _modDef3415 from "module_3415" /* 3415 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import GameIcon from "GameIcon" /* 7470 */;
-import BoostGemIcon from "BoostGemIcon" /* 10099 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import GameIcon from "GameIcon" /* 7473 */;
+import BoostGemIcon from "BoostGemIcon" /* 10107 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 7719 */;
+import EntitlementStore from "EntitlementStore" /* 7724 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 const GameIconDefault = GameIcon;
@@ -106,9 +106,9 @@ const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { title: { marginBottom: 12 }, creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, creditItem: { flexDirection: "row", alignItems: "center", padding: 16 }, boostIcon: null, textContainer: null, headerText: null, subText: null, timeText: null, divider: null, creditDescription: null };
-let size = { width: fn(7470).GameIconImageSize[fn(undefined, 7470).GameIconSizes.SMALL], height: fn(7470).GameIconImageSize[fn(undefined, 7470).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
+let size = { width: fn(7473).GameIconImageSize[fn(undefined, 7473).GameIconSizes.SMALL], height: fn(7473).GameIconImageSize[fn(undefined, 7473).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
 obj2.boostIcon = size;
 obj2.textContainer = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
 obj2.headerText = { lineHeight: 20 };
@@ -150,7 +150,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "body-sm/medium", color: "text-default", children: null };
       const intl = tmp2(1113).intl;
       obj3.children = intl.string(tmp2(1113).t.YugZY0);
-      const items1 = [closure_6(tmp2(5761).Text, obj3), , , ];
+      const items1 = [closure_6(tmp2(5763).Text, obj3), , , ];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj4.style = items2;
@@ -164,7 +164,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj5 = { style: tmp.creditDescription, variant: "body-sm/medium", children: null };
       const intl2 = tmp2(1113).intl;
       obj5.children = intl2.string(tmp2(1113).t.Z5b2Gf);
-      items1[2] = closure_6(tmp2(5761).Text, obj5);
+      items1[2] = closure_6(tmp2(5763).Text, obj5);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -172,7 +172,7 @@ export default function PremiumAccountCredit(currentSubscription) {
           const obj6 = { style: tmp.creditDescription, variant: "body-sm/medium", children: null };
           const intl3 = tmp2(1113).intl;
           obj6.children = intl3.string(tmp2(1113).t.azRP0E);
-          tmp9Result = closure_6(tmp2(5761).Text, obj6);
+          tmp9Result = closure_6(tmp2(5763).Text, obj6);
         }
       }
       items1[3] = tmp9Result;

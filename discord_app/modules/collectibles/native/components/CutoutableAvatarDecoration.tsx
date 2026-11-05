@@ -1,9 +1,9 @@
-// === Module 9655: CutoutableAvatarDecoration ===
+// === Module 9661: CutoutableAvatarDecoration ===
 
-// Module 9655 (CutoutableAvatarDecoration)
+// Module 9661 (CutoutableAvatarDecoration)
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 const View = fn(17).View;

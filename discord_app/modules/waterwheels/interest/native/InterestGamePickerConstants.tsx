@@ -1,6 +1,6 @@
-// === Module 18685: InterestGamePickerConstants ===
+// === Module 18715: InterestGamePickerConstants ===
 
-// Module 18685 (InterestGamePickerConstants)
+// Module 18715 (InterestGamePickerConstants)
 import nativeDefault from "native" /* 575 */;
 
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8, left: 0, right: 0 };
@@ -19,7 +19,7 @@ export const THUMBNAIL_HIT_SLOP = rect;
 export const FOOTER_BORDER_WIDTH = 1;
 export const SELECTED_BORDER_WIDTH = 2;
 export const SELECTED_GAP_WIDTH = result;
-export const MAX_SELECTIONS = 5;
+export const MAX_SELECTIONS = 10;
 export const GRID_COVER_HAIRLINE_WIDTH = 1;
 export const MIN_SELECTIONS = 1;
 export const TRAY_ENTER_MS = 300;

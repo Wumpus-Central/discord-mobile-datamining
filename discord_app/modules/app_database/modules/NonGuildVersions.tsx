@@ -1,12 +1,12 @@
-// === Module 7938: NonGuildVersions ===
+// === Module 7943: NonGuildVersions ===
 
-// Module 7938 (NonGuildVersions)
+// Module 7943 (NonGuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5019 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5021 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
 
 const require = fn;
 let closure_5 = new LoggerDefault("NonGuildVersions");
@@ -38,15 +38,15 @@ class NonGuildVersions {
               const _isNaN = isNaN;
               const _Number = Number;
               if (!isNaN(Number(guildId))) {
-                const result = closure_1_1(5019).nonGuildVersionsTransaction(database);
+                const result = closure_1_1(5021).nonGuildVersionsTransaction(database);
                 const obj2 = { id: "initial_guild_id", versionString: guildId };
                 result.put(obj2);
-                const obj = closure_1_1(5019);
+                const obj = closure_1_1(5021);
               }
             }
-            const result1 = closure_1_1(5019).nonGuildVersionsTransaction(database);
+            const result1 = closure_1_1(5021).nonGuildVersionsTransaction(database);
             result1.delete("initial_guild_id");
-            const obj4 = closure_1_1(5019);
+            const obj4 = closure_1_1(5021);
           });
         }
       }, 10 * closure_1(tmp2[6]).Millis.SECOND));
@@ -159,7 +159,7 @@ obj.actions = {
     return obj3.handleConnectionOpen(arg0, arg1);
   }
 };
-const isCacheEnabled = fn(7931);
+const isCacheEnabled = fn(7936);
 if (isCacheEnabled.isCacheEnabled()) {
   SelectedGuildStore.addChangeListener(_modDef12.throttle(() => {
     const databaseResult = DatabaseDaosDefault.database();
@@ -170,15 +170,15 @@ if (isCacheEnabled.isCacheEnabled()) {
           const _isNaN = isNaN;
           const _Number = Number;
           if (!isNaN(Number(guildId))) {
-            const result = closure_1_1(5019).nonGuildVersionsTransaction(database);
+            const result = closure_1_1(5021).nonGuildVersionsTransaction(database);
             const obj2 = { id: "initial_guild_id", versionString: guildId };
             result.put(obj2);
-            const obj = closure_1_1(5019);
+            const obj = closure_1_1(5021);
           }
         }
-        const result1 = closure_1_1(5019).nonGuildVersionsTransaction(database);
+        const result1 = closure_1_1(5021).nonGuildVersionsTransaction(database);
         result1.delete("initial_guild_id");
-        const obj4 = closure_1_1(5019);
+        const obj4 = closure_1_1(5021);
       });
     }
   }, 10 * DurationsDefault.Millis.SECOND));

@@ -1,11 +1,11 @@
-// === Module 7112: TermsFieldList ===
+// === Module 7115: TermsFieldList ===
 
-// Module 7112 (TermsFieldList)
+// Module 7115 (TermsFieldList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5888 */;
-import TableRowDivider from "TableRowDivider" /* 7113 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5891 */;
+import TableRowDivider from "TableRowDivider" /* 7116 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function TermsFieldListItem(rowNumber) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { termsContainer: { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, termsRow: null, termsRowContent: null, termsRowNumber: null, title: null };
 let obj3 = { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -51,7 +51,7 @@ export default function TermsFieldList(rules) {
   const intl = rules(1113).intl;
   obj2.children = intl.string(rules(1113).t.prJqwT);
   items = [
-    closure_5(rules(5761).Text, obj2),
+    closure_5(rules(5763).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

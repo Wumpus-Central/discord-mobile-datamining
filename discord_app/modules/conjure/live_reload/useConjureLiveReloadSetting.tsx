@@ -1,10 +1,10 @@
-// === Module 12328: useConjureLiveReloadSetting ===
+// === Module 12335: useConjureLiveReloadSetting ===
 
-// Module 12328 (useConjureLiveReloadSetting)
-import conjureLiveReloadConnection from "conjureLiveReloadConnection" /* 11076 */;
+// Module 12335 (useConjureLiveReloadSetting)
+import conjureLiveReloadConnection from "conjureLiveReloadConnection" /* 11085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureLiveReloadStore from "ConjureLiveReloadStore" /* 11042 */;
+import ConjureLiveReloadStore from "ConjureLiveReloadStore" /* 11048 */;
 
 const require = globalThis.__r;
 
@@ -58,7 +58,7 @@ export function useConjureLiveReloadSetting(arg0) {
       return tmp;
     }, items2);
     if (tmp16) {
-      tmp16 = !tmp4;
+      tmp16 = tmp4;
     }
     const obj3 = { available: tmp16, checked: null, description: null, changed: null, setChecked: null, save: null };
     if (flag == null) {

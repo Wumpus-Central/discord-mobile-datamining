@@ -1,13 +1,13 @@
-// === Module 11056: conjureUnread ===
+// === Module 11062: conjureUnread ===
 
-// Module 11056 (conjureUnread)
+// Module 11062 (conjureUnread)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectMute from "conjureProjectMute" /* 11057 */;
+import conjureProjectMute from "conjureProjectMute" /* 11063 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReadStateStore from "ReadStateStore" /* 6977 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ReadStateStore from "ReadStateStore" /* 6980 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(6911).ReadStateTypes;
+const ReadStateTypes = fn(6914).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
 

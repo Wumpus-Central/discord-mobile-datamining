@@ -1,8 +1,8 @@
-// === Module 8723: renderMessageMarkup ===
+// === Module 8728: renderMessageMarkup ===
 
-// Module 8723 (renderMessageMarkup)
-import MarkupUtilsDefault from "MarkupUtils" /* 5888 */;
-import MarkupPostProcessors from "MarkupPostProcessors" /* 8724 */;
+// Module 8728 (renderMessageMarkup)
+import MarkupUtilsDefault from "MarkupUtils" /* 5891 */;
+import MarkupPostProcessors from "MarkupPostProcessors" /* 8729 */;
 import size from "module_2" /* 2 */;
 
 function getInitialParserState(channelId) {

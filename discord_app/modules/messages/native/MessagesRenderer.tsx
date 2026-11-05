@@ -1,35 +1,35 @@
-// === Module 11757: MessagesRenderer ===
+// === Module 11765: MessagesRenderer ===
 
-// Module 11757 (MessagesRenderer)
+// Module 11765 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
-import Client from "Client" /* 5373 */;
-import CodedLink from "CodedLink" /* 5886 */;
-import QuestTypes from "QuestTypes" /* 6919 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7776 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8018 */;
-import QuestActionCreators from "QuestActionCreators" /* 9832 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 10073 */;
-import computeScrollData from "computeScrollData" /* 10285 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 10286 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 10288 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 10290 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10365 */;
-import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11749 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11758 */;
-import MessagesHandlers from "MessagesHandlers" /* 11766 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13551 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13938 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 13939 */;
+import Client from "Client" /* 5375 */;
+import CodedLink from "CodedLink" /* 5889 */;
+import QuestTypes from "QuestTypes" /* 6922 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7781 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 8023 */;
+import QuestActionCreators from "QuestActionCreators" /* 9838 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10081 */;
+import computeScrollData from "computeScrollData" /* 10293 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 10294 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 10296 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 10298 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10371 */;
+import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 11757 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11766 */;
+import MessagesHandlers from "MessagesHandlers" /* 11774 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 13562 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 13951 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 13952 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 5073 */;
-import ReadStateStore from "ReadStateStore" /* 6977 */;
+import PermissionStore from "PermissionStore" /* 5075 */;
+import ReadStateStore from "ReadStateStore" /* 6980 */;
 
 require = fn;
 function handleTapShowAltText(description) {
@@ -54,9 +54,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(10074).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(5053).getUserCommunicationDisabledVersion;
-const Changeset = fn(8519).Changeset;
+let closure_6 = fn(10082).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(5055).getUserCommunicationDisabledVersion;
+const Changeset = fn(8524).Changeset;
 const Constants = fn(1072);
 ({ ActivityActionTypes: closure_11, MAX_MESSAGES_PER_CHANNEL: closure_12, MessageFlags: map1, MessageTypes: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);
@@ -612,66 +612,68 @@ class MessagesRenderer {
                                     if (props.guildTemplates === tmp2.guildTemplates) {
                                       if (props.gameOrganizationInvites === tmp2.gameOrganizationInvites) {
                                         if (props.joinedGameOrganizationGuildIds === tmp2.joinedGameOrganizationGuildIds) {
-                                          if (props.buildOverrides === tmp2.buildOverrides) {
-                                            if (props.experimentEmbeds === tmp2.experimentEmbeds) {
-                                              if (props.quests === tmp2.quests) {
-                                                if (props.isFetchingCurrentQuests === tmp2.isFetchingCurrentQuests) {
-                                                  if (props.participantsLength === tmp2.participantsLength) {
-                                                    if (props.isMessagesReady === tmp2.isMessagesReady) {
-                                                      if (props.channelThreadsVersion === tmp2.channelThreadsVersion) {
-                                                        if (props.rsvpVersion === tmp2.rsvpVersion) {
-                                                          if (props.repliedIds === tmp2.repliedIds) {
-                                                            if (props.hasLoadedExperiments === tmp2.hasLoadedExperiments) {
-                                                              if (props.isMessageRequest === tmp2.isMessageRequest) {
-                                                                if (props.isSpamMessageRequest === tmp2.isSpamMessageRequest) {
-                                                                  if (props.currentUserCommunicationDisabled === tmp2.currentUserCommunicationDisabled) {
-                                                                    if (props.userSettingsLocale === tmp2.userSettingsLocale) {
-                                                                      if (props.selectedSummary === tmp2.selectedSummary) {
-                                                                        if (props.selectedConversation === tmp2.selectedConversation) {
-                                                                          if (props.showPushFeedback === tmp2.showPushFeedback) {
-                                                                            if (props.cacheStoreLoaded === tmp2.cacheStoreLoaded) {
-                                                                              if (!tmp55) {
-                                                                                if (!tmp38) {
-                                                                                  if (!tmp39) {
-                                                                                    if (!tmp40) {
-                                                                                      if (props.forwardGuildsVersion === tmp2.forwardGuildsVersion) {
-                                                                                        if (!tmp41) {
-                                                                                          if (tmp34) {
-                                                                                            if (!tmp37) {
-                                                                                              if (!tmp42) {
-                                                                                                if (null == jumpTargetId) {
-                                                                                                  if (null == focusTargetId) {
-                                                                                                    if (props.androidKeyboardHeight === tmp2.androidKeyboardHeight) {
-                                                                                                      if (props.mediaPostPreviewEmbeds === tmp2.mediaPostPreviewEmbeds) {
-                                                                                                        if (props.shouldObscureSpoiler === tmp2.shouldObscureSpoiler) {
-                                                                                                          if (props.shouldDisableInteractiveComponents === tmp2.shouldDisableInteractiveComponents) {
-                                                                                                            if (!tmp35) {
-                                                                                                              if (!tmp36) {
-                                                                                                                if (!tmp43) {
-                                                                                                                  if (props.threadStartingReferenceMessage === tmp2.threadStartingReferenceMessage) {
-                                                                                                                    if (!tmp44) {
-                                                                                                                      if (result2) {
-                                                                                                                        if (!tmp52) {
-                                                                                                                          if (!tmp53) {
-                                                                                                                            if (props.guildEmojis === tmp2.guildEmojis) {
-                                                                                                                              if (!tmp54) {
-                                                                                                                                if (!tmp57) {
-                                                                                                                                  if (!tmp58) {
-                                                                                                                                    if (props.displayNameStylesEnabled === tmp2.displayNameStylesEnabled) {
-                                                                                                                                      if (!tmp62) {
-                                                                                                                                        if (!tmp56) {
-                                                                                                                                          if (!tmp66) {
-                                                                                                                                            if (!tmp63) {
-                                                                                                                                              if (result4) {
-                                                                                                                                                ({ channelId: channelId2, messages } = tmp2);
-                                                                                                                                                const obj8 = first(hasJumpedToOriginalPost[10]);
-                                                                                                                                                const mapped = messages.map((id) => id.id);
-                                                                                                                                                let hasFetched = messages.hasFetched;
-                                                                                                                                                if (!hasFetched) {
-                                                                                                                                                  hasFetched = messages.ready && !messages.cached;
-                                                                                                                                                  const tmp70 = messages.ready && !messages.cached;
+                                          if (props.pendingGameOrganizationJoinFlowCodes === tmp2.pendingGameOrganizationJoinFlowCodes) {
+                                            if (props.buildOverrides === tmp2.buildOverrides) {
+                                              if (props.experimentEmbeds === tmp2.experimentEmbeds) {
+                                                if (props.quests === tmp2.quests) {
+                                                  if (props.isFetchingCurrentQuests === tmp2.isFetchingCurrentQuests) {
+                                                    if (props.participantsLength === tmp2.participantsLength) {
+                                                      if (props.isMessagesReady === tmp2.isMessagesReady) {
+                                                        if (props.channelThreadsVersion === tmp2.channelThreadsVersion) {
+                                                          if (props.rsvpVersion === tmp2.rsvpVersion) {
+                                                            if (props.repliedIds === tmp2.repliedIds) {
+                                                              if (props.hasLoadedExperiments === tmp2.hasLoadedExperiments) {
+                                                                if (props.isMessageRequest === tmp2.isMessageRequest) {
+                                                                  if (props.isSpamMessageRequest === tmp2.isSpamMessageRequest) {
+                                                                    if (props.currentUserCommunicationDisabled === tmp2.currentUserCommunicationDisabled) {
+                                                                      if (props.userSettingsLocale === tmp2.userSettingsLocale) {
+                                                                        if (props.selectedSummary === tmp2.selectedSummary) {
+                                                                          if (props.selectedConversation === tmp2.selectedConversation) {
+                                                                            if (props.showPushFeedback === tmp2.showPushFeedback) {
+                                                                              if (props.cacheStoreLoaded === tmp2.cacheStoreLoaded) {
+                                                                                if (!tmp55) {
+                                                                                  if (!tmp38) {
+                                                                                    if (!tmp39) {
+                                                                                      if (!tmp40) {
+                                                                                        if (props.forwardGuildsVersion === tmp2.forwardGuildsVersion) {
+                                                                                          if (!tmp41) {
+                                                                                            if (tmp34) {
+                                                                                              if (!tmp37) {
+                                                                                                if (!tmp42) {
+                                                                                                  if (null == jumpTargetId) {
+                                                                                                    if (null == focusTargetId) {
+                                                                                                      if (props.androidKeyboardHeight === tmp2.androidKeyboardHeight) {
+                                                                                                        if (props.mediaPostPreviewEmbeds === tmp2.mediaPostPreviewEmbeds) {
+                                                                                                          if (props.shouldObscureSpoiler === tmp2.shouldObscureSpoiler) {
+                                                                                                            if (props.shouldDisableInteractiveComponents === tmp2.shouldDisableInteractiveComponents) {
+                                                                                                              if (!tmp35) {
+                                                                                                                if (!tmp36) {
+                                                                                                                  if (!tmp43) {
+                                                                                                                    if (props.threadStartingReferenceMessage === tmp2.threadStartingReferenceMessage) {
+                                                                                                                      if (!tmp44) {
+                                                                                                                        if (result2) {
+                                                                                                                          if (!tmp52) {
+                                                                                                                            if (!tmp53) {
+                                                                                                                              if (props.guildEmojis === tmp2.guildEmojis) {
+                                                                                                                                if (!tmp54) {
+                                                                                                                                  if (!tmp57) {
+                                                                                                                                    if (!tmp58) {
+                                                                                                                                      if (props.displayNameStylesEnabled === tmp2.displayNameStylesEnabled) {
+                                                                                                                                        if (!tmp62) {
+                                                                                                                                          if (!tmp56) {
+                                                                                                                                            if (!tmp66) {
+                                                                                                                                              if (!tmp63) {
+                                                                                                                                                if (result4) {
+                                                                                                                                                  ({ channelId: channelId2, messages } = tmp2);
+                                                                                                                                                  const obj8 = first(hasJumpedToOriginalPost[10]);
+                                                                                                                                                  const mapped = messages.map((id) => id.id);
+                                                                                                                                                  let hasFetched = messages.hasFetched;
+                                                                                                                                                  if (!hasFetched) {
+                                                                                                                                                    hasFetched = messages.ready && !messages.cached;
+                                                                                                                                                    const tmp70 = messages.ready && !messages.cached;
+                                                                                                                                                  }
+                                                                                                                                                  obj8.recordMessageRender(channelId2, mapped, hasFetched, messages.hasMoreAfter);
                                                                                                                                                 }
-                                                                                                                                                obj8.recordMessageRender(channelId2, mapped, hasFetched, messages.hasMoreAfter);
                                                                                                                                               }
                                                                                                                                             }
                                                                                                                                           }

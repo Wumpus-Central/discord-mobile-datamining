@@ -1,15 +1,15 @@
-// === Module 12333: host_approval/ConjureHostApproval ===
+// === Module 12340: host_approval/ConjureHostApproval ===
 
-// Module 12333 (host_approval/ConjureHostApproval)
+// Module 12340 (host_approval/ConjureHostApproval)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import Stack_Stack from "Stack/Stack" /* 6162 */;
-import ConjureHostApproval from "ConjureHostApproval" /* 11074 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12334 */;
-import ConjureAwaitingUser from "ConjureAwaitingUser" /* 12335 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import Stack_Stack from "Stack/Stack" /* 6165 */;
+import ConjureHostApproval from "ConjureHostApproval" /* 11083 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12341 */;
+import ConjureAwaitingUser from "ConjureAwaitingUser" /* 12342 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -79,7 +79,7 @@ function ConjureHostApprovalCard(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { cards: { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, card: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.card = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -90,7 +90,7 @@ const result = size.fileFinishedImporting("modules/conjure/host_approval/native/
 export function ConjureHostApprovalCards(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_6();
-  const conjureHostApprovals = projectId(11074).useConjureHostApprovals(projectId);
+  const conjureHostApprovals = projectId(11083).useConjureHostApprovals(projectId);
   let tmp2 = null;
   if (0 !== conjureHostApprovals.length) {
     const obj2 = { style: tmp.cards, children: conjureHostApprovals.map((approval) => React4(ConjureHostApprovalCard, { projectId, approval }, approval.id)) };
@@ -102,7 +102,7 @@ export function ConjureAllowedHostsSetting(projectId) {
   projectId = projectId.projectId;
   let intl = projectId;
   let stringResult = dependencyMap;
-  const conjureAllowedHosts = projectId(11074).useConjureAllowedHosts(projectId);
+  const conjureAllowedHosts = projectId(11083).useConjureAllowedHosts(projectId);
   if (null == conjureAllowedHosts) {
     return null;
   } else {
@@ -116,7 +116,7 @@ export function ConjureAllowedHostsSetting(projectId) {
       intl = intl(1113).intl;
       stringResult = intl.string(_modDef3995.AweHIi);
       obj3.label = stringResult;
-      let mapped = closure_4(intl(7116).TableRow, obj3);
+      let mapped = closure_4(intl(7119).TableRow, obj3);
     } else {
       mapped = conjureAllowedHosts.map((label) => {
         closure_0 = label;
@@ -129,12 +129,12 @@ export function ConjureAllowedHostsSetting(projectId) {
         obj2.onPress = function onPress() {
           return ConjureHostApproval.removeAllowedHost(projectId, closure_0);
         };
-        obj.trailing = closure_1_4(projectId(5768).Button, obj2);
-        return closure_1_4(projectId(7116).TableRow, obj, label);
+        obj.trailing = closure_1_4(projectId(5770).Button, obj2);
+        return closure_1_4(projectId(7119).TableRow, obj, label);
       });
     }
     obj2.children = mapped;
-    closure_4(intl(7201).TableRowGroup, obj2);
+    closure_4(intl(7204).TableRowGroup, obj2);
   }
-  let obj = projectId(11074);
+  let obj = projectId(11083);
 }

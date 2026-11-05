@@ -1,12 +1,12 @@
-// === Module 17404: QuestDockGestureDetector ===
+// === Module 17430: QuestDockGestureDetector ===
 
-// Module 17404 (QuestDockGestureDetector)
+// Module 17430 (QuestDockGestureDetector)
 import _mod1705 from "module_1705" /* 1705 */;
-import HapticUtils from "HapticUtils" /* 5384 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5428 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11432 */;
-import QuestDockUtils from "QuestDockUtils" /* 17318 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17401 */;
+import HapticUtils from "HapticUtils" /* 5386 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5430 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11440 */;
+import QuestDockUtils from "QuestDockUtils" /* 17344 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17427 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -525,8 +525,8 @@ function useQuestDockSwipeGesture() {
   const animatedReaction = require("module_1652").useAnimatedReaction(QuestDockGestureDetectorTsx5, QuestDockGestureDetectorTsx6);
   return memo;
 }
-const QuestDockMode = fn(6916).QuestDockMode;
-const QuestDockConstants = fn(17319);
+const QuestDockMode = fn(6919).QuestDockMode;
+const QuestDockConstants = fn(17345);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty, QUEST_DOCK_CLOSED_HEIGHT: closure_6, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: metroImportDefault, QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: closure_8, QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: closure_9, QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: closure_10, QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT: closure_11, QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY: closure_12, QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: map1, QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: closure_14, QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: closure_15, QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: closure_16 } = QuestDockConstants);
 const jsx = fn(21).jsx;
 let closure_18 = { code: "(function QuestDockGestureDetectorTsx1(event){let[touchMoveCount,initialGestureOffset,questDockWrapperSpecs,restingQuestDockMode,QuestDockMode]=this.__closure;touchMoveCount.set(0);initialGestureOffset.set({absoluteX:event.changedTouches[0].absoluteX,absoluteY:event.changedTouches[0].absoluteY,x:questDockWrapperSpecs.get().x,y:questDockWrapperSpecs.get().y,height:questDockWrapperSpecs.get().height,isDrawer:restingQuestDockMode.get()===QuestDockMode.EXPANDED,active:false});})" };

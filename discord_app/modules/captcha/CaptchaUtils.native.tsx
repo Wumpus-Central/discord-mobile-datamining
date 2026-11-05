@@ -1,15 +1,15 @@
-// === Module 19645: captcha/CaptchaUtils ===
+// === Module 19680: captcha/CaptchaUtils ===
 
-// Module 19645 (captcha/CaptchaUtils)
+// Module 19680 (captcha/CaptchaUtils)
 import initialize from "initialize" /* 504 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6673 */;
-import ActionSheetStore from "ActionSheetStore" /* 5383 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6676 */;
+import ActionSheetStore from "ActionSheetStore" /* 5385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const CAPTCHA_MODAL_KEY = fn(6681).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(6684).CAPTCHA_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
 
@@ -34,7 +34,7 @@ export default {
     };
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(require("asyncRequireImpl")(19646, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
+    obj2.openLazy(require("asyncRequireImpl")(19681, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
   },
   showCaptchaAsync(nextResult1) {
     if (arg1 === undefined) {

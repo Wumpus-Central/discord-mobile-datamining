@@ -1,17 +1,17 @@
-// === Module 9614: WishlistItemCardBase ===
+// === Module 9620: WishlistItemCardBase ===
 
-// Module 9614 (WishlistItemCardBase)
+// Module 9620 (WishlistItemCardBase)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import native from "native" /* 5207 */;
-import useToken from "useToken" /* 5732 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5846 */;
-import LockIcon from "LockIcon" /* 8808 */;
-import useUserProfileColors from "useUserProfileColors" /* 8952 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9430 */;
-import useWishlistHooks from "useWishlistHooks" /* 9617 */;
-import IndicatorDot from "IndicatorDot" /* 9638 */;
+import native from "native" /* 5209 */;
+import useToken from "useToken" /* 5734 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5849 */;
+import LockIcon from "LockIcon" /* 8813 */;
+import useUserProfileColors from "useUserProfileColors" /* 8957 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9437 */;
+import useWishlistHooks from "useWishlistHooks" /* 9623 */;
+import IndicatorDot from "IndicatorDot" /* 9644 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9615).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
+    children: closure_5(toastText(9621).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
   };
   return closure_5(closure_3, obj);
 }
@@ -34,7 +34,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { card: { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" }, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, newContentDot: null, lockBadge: null };
 const obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

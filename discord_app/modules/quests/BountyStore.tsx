@@ -1,9 +1,9 @@
-// === Module 7985: BountyStore ===
+// === Module 7990: BountyStore ===
 
-// Module 7985 (BountyStore)
+// Module 7990 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AdCreativeType from "AdCreativeType" /* 6923 */;
+import AdCreativeType from "AdCreativeType" /* 6926 */;
 
 require = fn;
 function resetStateForDeliveredBounties(items) {

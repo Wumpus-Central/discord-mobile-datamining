@@ -1,8 +1,8 @@
-// === Module 15123: UserProfileEditNoteModal ===
+// === Module 15136: UserProfileEditNoteModal ===
 
-// Module 15123 (UserProfileEditNoteModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
-import UserProfileEditNote from "UserProfileEditNote" /* 15124 */;
+// Module 15136 (UserProfileEditNoteModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 15137 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,14 +46,14 @@ export default function UserProfileEditNoteModal(arg0) {
     const obj = { variant: "heading-md/semibold", accessibilityRole: "header", children: null };
     const intl = navigation(1113).intl;
     obj.children = intl.string(navigation(1113).t.sHHsOM);
-    return jsx(navigation(5761).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
+    return jsx(navigation(5763).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
   };
   tmpResult = navigation(1357);
-  obj6.headerLeft = navigation(7139).getHeaderCloseButton(handleClose);
+  obj6.headerLeft = navigation(7142).getHeaderCloseButton(handleClose);
   obj6.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
   obj5.root = obj6;
   obj3.screens = obj5;
-  return jsx(navigation(7306).Navigator, { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null });
+  return jsx(navigation(7309).Navigator, { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null });
 };

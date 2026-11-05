@@ -1,9 +1,9 @@
-// === Module 6900: StageChannelParticipantStoreHooks ===
+// === Module 6903: StageChannelParticipantStoreHooks ===
 
-// Module 6900 (StageChannelParticipantStoreHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 6894 */;
+// Module 6903 (StageChannelParticipantStoreHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 6897 */;
 import _slicedToArray from "module_32" /* 32 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6848 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6851 */;
 
 const require = globalThis.__r;
 

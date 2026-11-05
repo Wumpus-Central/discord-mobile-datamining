@@ -1,13 +1,13 @@
-// === Module 20208: useOnboardingMonetizationEnableFlow ===
+// === Module 20244: useOnboardingMonetizationEnableFlow ===
 
-// Module 20208 (useOnboardingMonetizationEnableFlow)
+// Module 20244 (useOnboardingMonetizationEnableFlow)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(5008).isGuildOwner;
+const isGuildOwner = fn(5010).isGuildOwner;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_6, HelpdeskArticles: metroImportDefault, MarketingURLs: closure_8 } = Constants);
 const size = fn(2);
@@ -38,18 +38,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(20209);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(20209)(id));
+  const tmp10 = refresh(20245);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(20245)(id));
   let id1;
-  const tmp10Result = refresh(20209)(id);
+  const tmp10Result = refresh(20245)(id);
   if (features != null) {
     id1 = features.id;
   }
-  const tmp9ResultResult = refresh(20210)(id1);
+  const tmp9ResultResult = refresh(20246)(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp9Result = refresh(20210);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(20211)(eligibility));
+  const tmp9Result = refresh(20246);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(20247)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -64,7 +64,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  const tmp16 = refresh(20211)(eligibility);
+  const tmp16 = refresh(20247)(eligibility);
   let id2;
   if (features != null) {
     id2 = features.id;

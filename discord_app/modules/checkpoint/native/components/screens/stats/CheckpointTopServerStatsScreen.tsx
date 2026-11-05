@@ -1,25 +1,25 @@
-// === Module 13889: CheckpointTopServerStatsScreen ===
+// === Module 13901: CheckpointTopServerStatsScreen ===
 
-// Module 13889 (CheckpointTopServerStatsScreen)
+// Module 13901 (CheckpointTopServerStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3219 from "module_3219" /* 3219 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6572 */;
-import GuildIcon from "GuildIcon" /* 7098 */;
-import ServerIcon from "ServerIcon" /* 9908 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13864 */;
-import CheckpointTextDefault from "CheckpointText" /* 13866 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13879 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13880 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13886 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 13887 */;
-import CheckpointStore from "CheckpointStore" /* 13657 */;
-import CheckpointConstants from "CheckpointConstants" /* 6201 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6574 */;
+import GuildIcon from "GuildIcon" /* 7101 */;
+import ServerIcon from "ServerIcon" /* 9914 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13876 */;
+import CheckpointTextDefault from "CheckpointText" /* 13878 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13891 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13892 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13898 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 13899 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
+import CheckpointConstants from "CheckpointConstants" /* 6204 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5141 */;
+import createStyles from "createStyles" /* 5143 */;
 import size_mod from "module_2" /* 2 */;
 
 const GuildIconDefault = GuildIcon;

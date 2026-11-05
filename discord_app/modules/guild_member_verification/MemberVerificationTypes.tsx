@@ -1,6 +1,6 @@
-// === Module 5175: MemberVerificationTypes ===
+// === Module 5177: MemberVerificationTypes ===
 
-// Module 5175 (MemberVerificationTypes)
+// Module 5177 (MemberVerificationTypes)
 import size from "module_2" /* 2 */;
 
 const VerificationFormFieldTypes = { TERMS: "TERMS", TEXT_INPUT: "TEXT_INPUT", PARAGRAPH: "PARAGRAPH", MULTIPLE_CHOICE: "MULTIPLE_CHOICE", VERIFICATION: "VERIFICATION" };

@@ -1,31 +1,31 @@
-// === Module 13905: CheckpointCustomizationStat ===
+// === Module 13917: CheckpointCustomizationStat ===
 
-// Module 13905 (CheckpointCustomizationStat)
+// Module 13917 (CheckpointCustomizationStat)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3187 from "module_3187" /* 3187 */;
 import _modDef3219 from "module_3219" /* 3219 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6569 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6572 */;
-import ChatIcon from "ChatIcon" /* 8784 */;
-import CalendarIcon from "CalendarIcon" /* 9260 */;
-import GameControllerIcon from "GameControllerIcon" /* 9877 */;
-import ServerIcon from "ServerIcon" /* 9908 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12169 */;
-import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 13666 */;
-import CheckpointTextDefault from "CheckpointText" /* 13866 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13869 */;
-import CheckpointTagDefault from "CheckpointTag" /* 13888 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6571 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6574 */;
+import ChatIcon from "ChatIcon" /* 8789 */;
+import CalendarIcon from "CalendarIcon" /* 9267 */;
+import GameControllerIcon from "GameControllerIcon" /* 9883 */;
+import ServerIcon from "ServerIcon" /* 9914 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12178 */;
+import EmojiSlightlySmilingFaceIcon from "EmojiSlightlySmilingFaceIcon" /* 13677 */;
+import CheckpointTextDefault from "CheckpointText" /* 13878 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13881 */;
+import CheckpointTagDefault from "CheckpointTag" /* 13900 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13657 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6204).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { stat: { maxWidth: 144, alignItems: "flex-start" }, label: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, labelText: { flexShrink: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

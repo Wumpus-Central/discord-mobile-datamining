@@ -1,22 +1,22 @@
-// === Module 14159: SelectDoubleTapEmojiRow ===
+// === Module 14172: SelectDoubleTapEmojiRow ===
 
-// Module 14159 (SelectDoubleTapEmojiRow)
+// Module 14172 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5752 */;
-import EmojiDefault from "Emoji" /* 7436 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10118 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5754 */;
+import EmojiDefault from "Emoji" /* 7439 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10126 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5397).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5399).ACTION_SHEET_MAX_WIDTH;
 const EmojiConstants = fn(1388);
 ({ EMOJI_URL_BASE_SIZE: metroImportDefault, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { emoji: { width: 24, height: 24 }, customEmoji: { width: 24, height: 24 }, textEmoji: null, emojiRow: null, emojiPressable: null, selectedEmojiPressable: null, emojiWrapper: null, selectedEmojiWrapper: null, chooseEmojiButton: null, customReactionOverlay: null, selectedCustomReactionIcon: null };
 let PlatformUtils = fn(1377);
 let num = 20;
@@ -100,7 +100,7 @@ let closure_13 = noop.memo(function EmojiButton(emoji) {
   obj4.src = url;
   obj3.children = closure_9(EmojiDefault, obj4);
   obj2.children = closure_9(View, obj3);
-  return closure_9(emoji(7121).PressableOpacity, obj2);
+  return closure_9(emoji(7124).PressableOpacity, obj2);
 });
 const obj11 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 size = fn(2);

@@ -1,16 +1,16 @@
-// === Module 14768: useAppChannelOverflowMenuItems ===
+// === Module 14781: useAppChannelOverflowMenuItems ===
 
-// Module 14768 (useAppChannelOverflowMenuItems)
+// Module 14781 (useAppChannelOverflowMenuItems)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5809 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5869 */;
-import FlagIcon from "FlagIcon" /* 10262 */;
-import restartFrames from "restartFrames" /* 11113 */;
-import ShieldIcon from "ShieldIcon" /* 11469 */;
-import DoorExitIcon from "DoorExitIcon" /* 12081 */;
-import RefreshIcon from "RefreshIcon" /* 12421 */;
-import closeFrameDefault from "closeFrame" /* 14609 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5811 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5872 */;
+import FlagIcon from "FlagIcon" /* 10270 */;
+import restartFrames from "restartFrames" /* 11122 */;
+import ShieldIcon from "ShieldIcon" /* 11477 */;
+import DoorExitIcon from "DoorExitIcon" /* 12090 */;
+import RefreshIcon from "RefreshIcon" /* 12428 */;
+import closeFrameDefault from "closeFrame" /* 14622 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,16 +23,16 @@ function useAppChannelAppActions(channel) {
   items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const memo = bot.useMemo(() => ({ type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: channel.id, guildId: channel.guild_id }), items);
-  const tmp5 = application_id(12406)(application_id, memo);
+  const tmp5 = application_id(12413)(application_id, memo);
   dependencyMap = tmp5;
   const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(channel);
   bot = undefined;
   if (appChannelApplication != null) {
     bot = appChannelApplication.bot;
   }
-  const tmp8 = application_id(14769)(application_id);
+  const tmp8 = application_id(14782)(application_id);
   closure_4 = tmp8;
-  const tmp9 = application_id(14770)(application_id).length > 0;
+  const tmp9 = application_id(14783)(application_id).length > 0;
   closure_5 = tmp9;
   const items1 = [application_id, bot, channel, tmp8, tmp5, tmp9];
   return bot.useMemo(() => {
@@ -60,7 +60,7 @@ function useAppChannelAppActions(channel) {
       if (null != appName) {
         fn3 = null;
         if (closure_5) {
-          fn3 = () => application_id(14771)({ applicationId, appName });
+          fn3 = () => application_id(14784)({ applicationId, appName });
         }
       }
     }
@@ -69,19 +69,19 @@ function useAppChannelAppActions(channel) {
     if (null != application_id) {
       fn4 = null;
       if (null != bot) {
-        fn4 = () => application_id(8891)({ userId: localUser.id, channelId: user.id, localUser });
+        fn4 = () => application_id(8896)({ userId: localUser.id, channelId: user.id, localUser });
       }
     }
     obj.appInfo = fn4;
     let fn5 = null;
     if (null != application_id) {
-      fn5 = () => application_id(14774)(applicationId, closure_0, "app_channel_header_mobile");
+      fn5 = () => application_id(14787)(applicationId, closure_0, "app_channel_header_mobile");
     }
     obj.report = fn5;
     return obj;
   }, items1);
 }
-const isLaunched = fn(6982).isLaunched;
+const isLaunched = fn(6985).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/native/useAppChannelOverflowMenuItems.tsx");
 
@@ -99,41 +99,41 @@ export default function useAppChannelOverflowMenuItems(channel) {
     } else {
       items = [];
       if (null != reload) {
-        const obj = { label: null, IconComponent: null, action: null };
-        const intl = util.intl;
-        obj.label = intl.string(util.t.kHie4V);
-        obj.IconComponent = RefreshIcon.RefreshIcon;
-        obj.action = tmp40;
-        items.push(obj);
+        const obj2 = { label: null, IconComponent: null, action: null };
+        const intl4 = util.intl;
+        obj2.label = intl4.string(util.t.kHie4V);
+        obj2.IconComponent = RefreshIcon.RefreshIcon;
+        obj2.action = tmp26;
+        items.push(obj2);
       }
       if (null != close) {
-        const obj2 = { label: null, IconComponent: null, action: null };
-        const intl2 = util.intl;
-        obj2.label = intl2.string(util.t.VkMnR2);
-        obj2.IconComponent = DoorExitIcon.DoorExitIcon;
-        obj2.action = tmp9;
-        items.push(obj2);
+        const obj = { label: null, IconComponent: null, action: null };
+        const intl = util.intl;
+        obj.label = intl.string(util.t.VkMnR2);
+        obj.IconComponent = DoorExitIcon.DoorExitIcon;
+        obj.action = tmp2;
+        items.push(obj);
       }
       const items1 = [];
       if (null != devicePermissions) {
         const obj3 = { label: null, IconComponent: null, action: null };
-        const intl3 = util.intl;
-        obj3.label = intl3.string(_modDef3995.wum6n2);
+        const intl2 = util.intl;
+        obj3.label = intl2.string(_modDef3995.wum6n2);
         obj3.IconComponent = ShieldIcon.ShieldIcon;
-        obj3.action = tmp17;
+        obj3.action = tmp10;
         items1.push(obj3);
       }
       if (null != appInfo) {
         const obj4 = { label: null, IconComponent: null, action: null };
-        const intl4 = util.intl;
-        obj4.label = intl4.string(util.t.Sh2z9g);
+        const intl5 = util.intl;
+        obj4.label = intl5.string(util.t.Sh2z9g);
         obj4.IconComponent = CircleInformationIcon.CircleInformationIcon;
-        obj4.action = tmp25;
+        obj4.action = tmp18;
         items1.push(obj4);
       }
       const obj5 = { label: null, IconComponent: null, variant: "destructive", action: null };
-      const intl5 = util.intl;
-      obj5.label = intl5.string(util.t.NgA5vp);
+      const intl3 = util.intl;
+      obj5.label = intl3.string(util.t.NgA5vp);
       obj5.IconComponent = FlagIcon.FlagIcon;
       obj5.action = tmp;
       items1.push(obj5);

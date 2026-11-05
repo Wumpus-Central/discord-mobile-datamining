@@ -1,8 +1,8 @@
-// === Module 12735: UsernameText ===
+// === Module 12742: UsernameText ===
 
-// Module 12735 (UsernameText)
-import Text_Text from "Text/Text" /* 5761 */;
-import NicknameUtils from "NicknameUtils" /* 6176 */;
+// Module 12742 (UsernameText)
+import Text_Text from "Text/Text" /* 5763 */;
+import NicknameUtils from "NicknameUtils" /* 6179 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

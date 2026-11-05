@@ -1,12 +1,12 @@
-// === Module 14992: MediaModalOverlayFooterAction ===
+// === Module 15005: MediaModalOverlayFooterAction ===
 
-// Module 14992 (MediaModalOverlayFooterAction)
+// Module 15005 (MediaModalOverlayFooterAction)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5736 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7428 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 14985 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5738 */;
+import components_Button_Button from "components/Button/Button" /* 5770 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7431 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 14998 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };

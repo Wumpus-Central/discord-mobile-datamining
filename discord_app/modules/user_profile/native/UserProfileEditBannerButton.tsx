@@ -1,16 +1,16 @@
-// === Module 16705: UserProfileEditBannerButton ===
+// === Module 16718: UserProfileEditBannerButton ===
 
-// Module 16705 (UserProfileEditBannerButton)
+// Module 16718 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 575 */;
-import Pressables from "Pressables" /* 7121 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8944 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8960 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9531 */;
-import PencilIcon from "PencilIcon" /* 10410 */;
+import Pressables from "Pressables" /* 7124 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8896 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8949 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8965 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9141 */;
+import PencilIcon from "PencilIcon" /* 10416 */;
 import noop from "module_19" /* 19 */;
 
-const EditButtonDefault = tmp(16706);
+const EditButtonDefault = tmp(16719);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -47,7 +47,7 @@ function EditButton(disabled) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { position: "relative" }, editButton: null, previewButton: null, refreshEditButtonContainer: null };
 let size = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round };
 obj2.editButton = size;

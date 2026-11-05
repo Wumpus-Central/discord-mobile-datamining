@@ -1,19 +1,19 @@
-// === Module 19751: FrecencyUserSettingsManager ===
+// === Module 19786: FrecencyUserSettingsManager ===
 
-// Module 19751 (FrecencyUserSettingsManager)
+// Module 19786 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4971 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4973 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9914 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9913 */;
-import EmojiStore from "EmojiStore" /* 6931 */;
-import SoundboardStore from "SoundboardStore" /* 6193 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6971 */;
-import FrecencyStore from "FrecencyStore" /* 7030 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9920 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9919 */;
+import EmojiStore from "EmojiStore" /* 6934 */;
+import SoundboardStore from "SoundboardStore" /* 6196 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6974 */;
+import FrecencyStore from "FrecencyStore" /* 7033 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -141,7 +141,7 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(7030).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(7033).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 const FREQUENCY_ITEM_LIMIT = fn(1362).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();

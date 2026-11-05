@@ -1,20 +1,20 @@
-// === Module 19088: ChannelNameHeader ===
+// === Module 19119: ChannelNameHeader ===
 
-// Module 19088 (ChannelNameHeader)
+// Module 19119 (ChannelNameHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef3931 from "module_3931" /* 3931 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import transitionToChannel from "transitionToChannel" /* 5890 */;
-import ChannelUtils from "ChannelUtils" /* 6181 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8744 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10977 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import transitionToChannel from "transitionToChannel" /* 5893 */;
+import ChannelUtils from "ChannelUtils" /* 6184 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8749 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8896 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10983 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import PermissionStore from "PermissionStore" /* 5073 */;
-import PresenceStore from "PresenceStore" /* 5895 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import PermissionStore from "PermissionStore" /* 5075 */;
+import PresenceStore from "PresenceStore" /* 5898 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -105,7 +105,7 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(5761).Text, obj2);
+        tmp8 = closure_12(tmp(5763).Text, obj2);
       }
     }
     return tmp8;
@@ -113,8 +113,8 @@ function ChannelSubtitle(channel) {
     const intl = tmp(1113).intl;
     let stringResult = intl.string(_modDef3931["D+2/QP"]);
   } else {
-    stringResult = tmp(6181).channelTypeString(channel);
-    const tmpResult = tmp(6181);
+    stringResult = tmp(6184).channelTypeString(channel);
+    const tmpResult = tmp(6184);
   }
   let obj = channel(504);
 }
@@ -218,7 +218,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7462)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7465)().analyticsLocations;
   items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -230,7 +230,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(7121).PressableOpacity, obj);
+  return closure_12(channel(7124).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -245,7 +245,7 @@ const Constants = fn(1072);
 ({ Permissions: closure_10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" }, channelTypeBox: null, channelData: null, statusStyle: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj.channelTypeBox = { borderRadius: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_ICON_RADIUS, borderWidth: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };

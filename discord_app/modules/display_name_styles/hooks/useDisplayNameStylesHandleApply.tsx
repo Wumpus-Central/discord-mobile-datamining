@@ -1,6 +1,6 @@
-// === Module 17574: useDisplayNameStylesHandleApply ===
+// === Module 17600: useDisplayNameStylesHandleApply ===
 
-// Module 17574 (useDisplayNameStylesHandleApply)
+// Module 17600 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const HexagonCampaignConstants = fn(5166);
+const HexagonCampaignConstants = fn(5168);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: closure_8, HexagonCampaignPerk: closure_9 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
@@ -106,8 +106,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           closure_0 = tmp8;
                           closure_128_0 = undefined;
                           if (closure_2_1) {
-                            const result = displayNameStyles(16710).saveHexagonCampaignPreviousDisplayNameStyles();
-                            const obj4 = displayNameStyles(16710);
+                            const result = displayNameStyles(16723).saveHexagonCampaignPreviousDisplayNameStyles();
+                            const obj4 = displayNameStyles(16723);
                           }
                           if (closure_1_10) {
                             closure_1_12.current = true;
@@ -115,15 +115,15 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                             const obj5 = { displayNameStyles };
                             colors = 3;
                             c5 = 1;
-                            const obj6 = { value: displayNameStyles(7289).saveProfileAndAccountChanges(obj5), done: false };
+                            const obj6 = { value: displayNameStyles(7292).saveProfileAndAccountChanges(obj5), done: false };
                             return obj6;
                           } else if (closure_1_7) {
-                            const result1 = displayNameStyles(8879).setTryItOutDisplayNameStyles(displayNameStyles);
-                            const tmp31Result = displayNameStyles(8879);
+                            const result1 = displayNameStyles(8884).setTryItOutDisplayNameStyles(displayNameStyles);
+                            const tmp31Result = displayNameStyles(8884);
                           } else {
                             const obj7 = { guildId, displayNameStyles };
-                            displayNameStyles(8876).setPendingChanges(obj7);
-                            const tmp31Result2 = displayNameStyles(8876);
+                            displayNameStyles(8881).setPendingChanges(obj7);
+                            const tmp31Result2 = displayNameStyles(8881);
                           }
                         }
                       } else if (1 === tmp8) {
@@ -172,8 +172,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                       const obj13 = { font_name: displayNameStyles(1404).DisplayNameFont[closure_2], effect_name: displayNameStyles(1405).DisplayNameEffect[c3], colors, entry_point };
                       closure_2_1(1252).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                       if (closure_129_1) {
-                        const result2 = displayNameStyles(16710).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
-                        const obj10 = displayNameStyles(16710);
+                        const result2 = displayNameStyles(16723).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
+                        const obj10 = displayNameStyles(16723);
                       }
                       if (closure_1_8 != null) {
                         closure_1_8();

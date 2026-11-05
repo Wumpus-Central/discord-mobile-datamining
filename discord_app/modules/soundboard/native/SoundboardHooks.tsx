@@ -1,14 +1,14 @@
-// === Module 19457: SoundboardHooks ===
+// === Module 19488: SoundboardHooks ===
 
-// Module 19457 (SoundboardHooks)
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
+// Module 19488 (SoundboardHooks)
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5398 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
-const SoundboardStyleConstants = fn(19450);
+const SoundboardStyleConstants = fn(19481);
 ({ SOUNDS_PER_ROW: closure_6, SOUND_ROW_PADDING: metroImportDefault } = SoundboardStyleConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
@@ -50,11 +50,11 @@ export function useMaybeFetchSoundboardSounds(shouldFetch) {
               const obj4 = { value, done: true };
               return obj4;
             } else if (c0) {
-              const FrecencyUserSettingsActionCreators = shouldFetch(4971).FrecencyUserSettingsActionCreators;
+              const FrecencyUserSettingsActionCreators = shouldFetch(4973).FrecencyUserSettingsActionCreators;
               const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
               c1 = 1;
               c0 = 1;
-              const obj5 = { value: shouldFetch(7657).maybeFetchSoundboardSounds(), done: false };
+              const obj5 = { value: shouldFetch(7659).maybeFetchSoundboardSounds(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {

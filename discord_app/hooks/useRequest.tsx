@@ -1,6 +1,6 @@
-// === Module 12759: useRequest ===
+// === Module 12766: useRequest ===
 
-// Module 12759 (useRequest)
+// Module 12766 (useRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -50,7 +50,7 @@ export default function useRequest(archiveSubscriptionListing) {
                 closure_129_0 = closure_0;
                 c5 = 1;
                 c6 = 1;
-                return { value: "flexDirection", done: null };
+                return { value: "flexDirection", done: true };
               }
             } else if (1 === tmp9) {
               if (arg0 === 1) {

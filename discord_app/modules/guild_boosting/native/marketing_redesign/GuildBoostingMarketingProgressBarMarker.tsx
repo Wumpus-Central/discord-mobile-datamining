@@ -1,12 +1,12 @@
-// === Module 15701: GuildBoostingMarketingProgressBarMarker ===
+// === Module 15714: GuildBoostingMarketingProgressBarMarker ===
 
-// Module 15701 (GuildBoostingMarketingProgressBarMarker)
+// Module 15714 (GuildBoostingMarketingProgressBarMarker)
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5377 */;
-import spring_spring from "spring/spring" /* 5771 */;
-import _modDef15702 from "module_15702" /* 15702 */;
-import _modDef15703 from "module_15703" /* 15703 */;
-import _modDef15704 from "module_15704" /* 15704 */;
+import useThemeDefault from "useTheme" /* 5379 */;
+import spring_spring from "spring/spring" /* 5773 */;
+import _modDef15715 from "module_15715" /* 15715 */;
+import _modDef15716 from "module_15716" /* 15716 */;
+import _modDef15717 from "module_15717" /* 15717 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -30,12 +30,12 @@ function ProgressBarMarkerInnerContent(arg0) {
   if (isTierUnlocked) {
     let PREMIUM_PERK_PINK = tmp2(575).unsafe_rawColors.PREMIUM_PERK_PINK;
   } else {
-    const BoostGemSlashIconResult = BoostGemSlashIcon(5138);
+    const BoostGemSlashIconResult = BoostGemSlashIcon(5140);
     if (BoostGemSlashIconResult1.isThemeDark(tmp4)) {
       num = 0.5;
     }
     PREMIUM_PERK_PINK = BoostGemSlashIconResult.hexWithOpacity(tmp2(575).unsafe_rawColors.WHITE, num);
-    BoostGemSlashIconResult1 = BoostGemSlashIcon(5148);
+    BoostGemSlashIconResult1 = BoostGemSlashIcon(5150);
   }
   items = [isTierUnlocked, sharedValue];
   const effect = noop.useEffect(() => {
@@ -87,7 +87,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     }
     return tmp18;
   } else if (isDisabled) {
-    BoostGemSlashIcon = BoostGemSlashIcon(14376).BoostGemSlashIcon;
+    BoostGemSlashIcon = BoostGemSlashIcon(14389).BoostGemSlashIcon;
     let tmp22Result = closure_6(BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
   } else {
     const obj4 = { source: obj2[tier], style: null };
@@ -96,8 +96,8 @@ function ProgressBarMarkerInnerContent(arg0) {
     const obj5 = { tintColor: isTierUnlocked ? unsafe_rawColors.WHITE : unsafe_rawColors.PREMIUM_PERK_PINK };
     items5[1] = obj5;
     obj4.style = items5;
-    tmp22Result = closure_6(tmp2(5851), obj4);
-    const tmp2Result = tmp2(5851);
+    tmp22Result = closure_6(tmp2(5854), obj4);
+    const tmp2Result = tmp2(5854);
   }
   let obj = require("module_1652");
 }
@@ -106,16 +106,16 @@ const BoostedGuildTiers = fn(1072).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const TierMarkerPositions = { [BoostedGuildTiers.NONE]: 0, [BoostedGuildTiers.TIER_1]: 0.3333333333333333, [BoostedGuildTiers.TIER_2]: 0.6666666666666666, [BoostedGuildTiers.TIER_3]: 1 };
-let obj2 = { [TIER_1]: _modDef15702, [TIER_2]: _modDef15703, [TIER_3]: _modDef15704 };
+let obj2 = { [TIER_1]: _modDef15715, [TIER_2]: _modDef15716, [TIER_3]: _modDef15717 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let obj4 = { progressBarMarkerInnerCircle: { width: 17.5, height: 17.5, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }, progressBarMarkerInnerCircleBackground: { width: "100%", height: "100%", borderRadius: 17.5, position: "absolute" }, progressBarMarkerInnerCircleIcon: { width: 16, height: 16 }, progressBarMarkerInnerCircleIconUnlocked: null };
 let size = { width: "95%", height: "95%", tintColor: nativeDefault.colors.WHITE };
 obj4.progressBarMarkerInnerCircleIconUnlocked = size;
 let closure_10 = createStyles.createStyles(obj4);
 let closure_11 = { stiffness: 50, damping: 5 };
 let closure_12 = { code: "(function GuildBoostingMarketingProgressBarMarkerTsx1(){let[backgroundColor,useReducedMotion,shouldAnimate,scale]=this.__closure;return{backgroundColor:backgroundColor,transform:[{scale:useReducedMotion||!shouldAnimate?1:scale.get()}]};})" };
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj5 = { progressBarMarker: null, progressBarMarkerBackground: { width: "100%", height: "100%", position: "absolute", borderRadius: 28 }, progressBarMarkerLabel: { width: 75, position: "absolute", top: "100%", paddingTop: 8, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "center", textAlign: "center" }, progressBarMarkerLabelWithIcon: null, progressBarMarkerLabelLocked: { opacity: 0.4 }, progressBarMarkerUnlockedIcon: null };
 const size1 = { height: 28, width: 28, position: "absolute", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", transform: null, zIndex: 1 };
 let items = [{ translateX: -14 }];
@@ -217,15 +217,15 @@ export default function ProgressBarMarker(arg0) {
       tmp25Result = tier !== BoostedGuildTiers.NONE;
     }
     if (tmp25Result) {
-      const obj7 = { source: tmp2(11785), style: tmp.progressBarMarkerUnlockedIcon };
-      tmp25Result = closure_6(tmp2(5851), obj7);
-      const tmp2Result = tmp2(5851);
+      const obj7 = { source: tmp2(11793), style: tmp.progressBarMarkerUnlockedIcon };
+      tmp25Result = closure_6(tmp2(5854), obj7);
+      const tmp2Result = tmp2(5854);
     }
     const items7 = [tmp25Result, ];
     const obj8 = { variant: "body-xs/medium", children: null };
     const tmp5Result = tmp5(1652);
-    obj8.children = tmp5(8604).getTierName(tier, { useLevels: false });
-    items7[1] = closure_6(tmp5(5761).Text, obj8);
+    obj8.children = tmp5(8609).getTierName(tier, { useLevels: false });
+    items7[1] = closure_6(tmp5(5763).Text, obj8);
     obj6.children = items7;
     items5[2] = closure_7(View, obj6);
     obj2.children = items5;

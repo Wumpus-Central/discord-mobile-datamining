@@ -1,13 +1,13 @@
-// === Module 19666: AgeGateManager ===
+// === Module 19701: AgeGateManager ===
 
-// Module 19666 (AgeGateManager)
-import AgeGateUtils from "AgeGateUtils" /* 6869 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
+// Module 19701 (AgeGateManager)
+import AgeGateUtils from "AgeGateUtils" /* 6872 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5172 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7423 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5174 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7426 */;
 
 require = fn;
 const AgeGateConstants = fn(1097);
@@ -44,8 +44,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6869).getAgeGateType(source);
-  let obj = source(6869);
+  importDefault = source(6872).getAgeGateType(source);
+  let obj = source(6872);
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;

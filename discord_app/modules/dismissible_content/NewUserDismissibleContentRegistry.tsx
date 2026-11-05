@@ -1,15 +1,15 @@
-// === Module 5193: NewUserDismissibleContentRegistry ===
+// === Module 5195: NewUserDismissibleContentRegistry ===
 
-// Module 5193 (NewUserDismissibleContentRegistry)
+// Module 5195 (NewUserDismissibleContentRegistry)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 5194 */;
+import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 5196 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4977 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4979 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const dependencyMap = { [fn(4974).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0, [fn(4974).DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0, [fn(4974).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0, [fn(4974).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0, [fn(4974).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0, [fn(4974).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0, [fn(4974).DismissibleContent.WHATS_NEW_SERVER_PROFILE_FLIP]: 0, [fn(4974).DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE]: 0, [fn(4974).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD]: 0, [fn(4974).DismissibleContent.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0, [fn(4974).DismissibleContent.TRIAL_NUX_EMOJI_BUTTON]: 0, [fn(4974).DismissibleContent.TRIAL_NUX_EMOJI_PICKER]: 0, [fn(4974).DismissibleContent.TRIAL_NUX_STREAM_COACH_MARK]: 0, [fn(4974).DismissibleContent.OVERLAY_OOP_SETTINGS_NUX]: 0, [fn(4974).DismissibleContent.OVERLAY_OOP_WELCOME_NUX]: 0, [fn(4974).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0, [fn(4974).DismissibleContent.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0, [fn(4974).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0, [fn(4974).DismissibleContent.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0, [fn(4974).DismissibleContent.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0, [fn(4974).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0, [fn(4974).DismissibleContent.NITRO_DROP_REWARD]: 0 };
+const dependencyMap = { [fn(4976).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0, [fn(4976).DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0, [fn(4976).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0, [fn(4976).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0, [fn(4976).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0, [fn(4976).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0, [fn(4976).DismissibleContent.WHATS_NEW_SERVER_PROFILE_FLIP]: 0, [fn(4976).DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE]: 0, [fn(4976).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD]: 0, [fn(4976).DismissibleContent.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0, [fn(4976).DismissibleContent.TRIAL_NUX_EMOJI_BUTTON]: 0, [fn(4976).DismissibleContent.TRIAL_NUX_EMOJI_PICKER]: 0, [fn(4976).DismissibleContent.TRIAL_NUX_STREAM_COACH_MARK]: 0, [fn(4976).DismissibleContent.OVERLAY_OOP_SETTINGS_NUX]: 0, [fn(4976).DismissibleContent.OVERLAY_OOP_WELCOME_NUX]: 0, [fn(4976).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0, [fn(4976).DismissibleContent.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0, [fn(4976).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0, [fn(4976).DismissibleContent.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0, [fn(4976).DismissibleContent.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0, [fn(4976).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0, [fn(4976).DismissibleContent.NITRO_DROP_REWARD]: 0 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/NewUserDismissibleContentRegistry.tsx");
 
@@ -39,7 +39,7 @@ export function useNewUserDismissibleContent(arr) {
   }
   return found;
 }
-export function disableNewUserDismissibleContent(prop) {
+export function disableNewUserDismissibleContent(content) {
   const newUserMinAgeRequiredOverridden = DismissibleContentFrameworkStore.newUserMinAgeRequiredOverridden;
   let tmp = !newUserMinAgeRequiredOverridden;
   if (!newUserMinAgeRequiredOverridden) {
@@ -47,7 +47,7 @@ export function disableNewUserDismissibleContent(prop) {
     DcfNewUserCooldownExperiment;
     let tmp9 = null != id;
     if (tmp9) {
-      let tmp14 = dependencyMap[prop];
+      let tmp14 = dependencyMap[content];
       if (tmp14 == null) {
         tmp14 = tmp7;
       }

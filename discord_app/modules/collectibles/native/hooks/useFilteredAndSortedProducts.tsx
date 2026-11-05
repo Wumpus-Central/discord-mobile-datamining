@@ -1,6 +1,6 @@
-// === Module 17238: useFilteredAndSortedProducts ===
+// === Module 17262: useFilteredAndSortedProducts ===
 
-// Module 17238 (useFilteredAndSortedProducts)
+// Module 17262 (useFilteredAndSortedProducts)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 

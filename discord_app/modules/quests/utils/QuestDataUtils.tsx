@@ -1,15 +1,15 @@
-// === Module 7982: QuestDataUtils ===
+// === Module 7987: QuestDataUtils ===
 
-// Module 7982 (QuestDataUtils)
+// Module 7987 (QuestDataUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import FlagUtils from "FlagUtils" /* 1398 */;
-import QuestTypes from "QuestTypes" /* 6919 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7984 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7992 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7983 */;
+import QuestTypes from "QuestTypes" /* 6922 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7989 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7997 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7988 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
-import BountyStore from "BountyStore" /* 7985 */;
-import QuestStore from "QuestStore" /* 7986 */;
+import BountyStore from "BountyStore" /* 7990 */;
+import QuestStore from "QuestStore" /* 7991 */;
 
 require = fn;
 function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) {
@@ -55,18 +55,18 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) 
     }
   }
 }
-const QuestConstants = fn(6916);
+const QuestConstants = fn(6919);
 ({ DismissibleQuestContentFlags: metroImportDefault, BILLABLE_PLACEMENTS: closure_8, NON_BILLABLE_CREATIVE_TYPES: closure_9, EMPTY_AD_DECISION_DATA: closure_10 } = QuestConstants);
 let c11 = 2592000000;
 let obj = {};
-obj[fn(6919).QuestContent.QUEST_BAR] = fn(6919).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6919).QuestContent.QUEST_BAR_V2] = fn(6919).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6919).QuestContent.QUEST_BAR_MOBILE] = fn(6919).AdPlacement.MOBILE_HOME_DOCK_AREA;
-obj[fn(6919).QuestContent.QUEST_HOME_HERO] = fn(6919).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6919).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6919).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6919).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6919).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6919).QuestContent.VIDEO_MODAL_MOBILE] = fn(6919).AdPlacement.VIDEO_MODAL_MOBILE;
-let items = [fn(6919).AdPlacement.VIDEO_MODAL_MOBILE];
+obj[fn(6922).QuestContent.QUEST_BAR] = fn(6922).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6922).QuestContent.QUEST_BAR_V2] = fn(6922).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6922).QuestContent.QUEST_BAR_MOBILE] = fn(6922).AdPlacement.MOBILE_HOME_DOCK_AREA;
+obj[fn(6922).QuestContent.QUEST_HOME_HERO] = fn(6922).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6922).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6922).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6922).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6922).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6922).QuestContent.VIDEO_MODAL_MOBILE] = fn(6922).AdPlacement.VIDEO_MODAL_MOBILE;
+let items = [fn(6922).AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");

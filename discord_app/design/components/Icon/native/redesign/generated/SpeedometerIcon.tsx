@@ -1,9 +1,9 @@
-// === Module 12124: SpeedometerIcon ===
+// === Module 12133: SpeedometerIcon ===
 
-// Module 12124 (SpeedometerIcon)
+// Module 12133 (SpeedometerIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod12125 from "module_12125" /* 12125 */;
+import BaseIconImage from "BaseIconImage" /* 5853 */;
+import _mod12134 from "module_12134" /* 12134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function SpeedometerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12125, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12134, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

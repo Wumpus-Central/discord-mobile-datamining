@@ -1,6 +1,6 @@
-// === Module 6087: shared/PlatformUtils ===
+// === Module 6090: shared/PlatformUtils ===
 
-// Module 6087 (shared/PlatformUtils)
+// Module 6090 (shared/PlatformUtils)
 import format_mod from "format" /* 1353 */;
 
 const set1 = new Set(["Android", "iOS", "Windows Phone"]);

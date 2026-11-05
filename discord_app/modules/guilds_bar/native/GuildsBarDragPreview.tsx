@@ -1,12 +1,12 @@
-// === Module 18701: GuildsBarDragPreview ===
+// === Module 18731: GuildsBarDragPreview ===
 
-// Module 18701 (GuildsBarDragPreview)
+// Module 18731 (GuildsBarDragPreview)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import _mod5056 from "module_5056" /* 5056 */;
-import native from "native" /* 5207 */;
+import _mod5058 from "module_5058" /* 5058 */;
+import native from "native" /* 5209 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18615 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 18645 */;
 
 require = fn;
 function PreviewItem(overState) {
@@ -167,7 +167,7 @@ function PreviewItem(overState) {
   const memo = noop.useMemo(() => {
     if ("convert-after" === c1) {
       if (null != c0) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flexDirection", name: "Array", color: "ti", expanded: false, children: false };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flexDirection", name: "Array", color: "applicationId", expanded: "<string:2785018821>", children: "<string:1107297207>" };
         items = [tmp2];
         element.children = items;
         return element;
@@ -359,26 +359,26 @@ function AnimatedItemPreview(cleanUp) {
     let obj5 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(18623), obj5);
+    let tmp22Result = tmp22(tmp4(18653), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
     if (isHomeDrawerEnabled) {
-      tmp25 = transitionState === tmp2(5207).TransitionStates.YEETED;
+      tmp25 = transitionState === tmp2(5209).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(18644), obj6);
-    const tmp4Result = tmp4(18644);
+    tmp22Result = tmp22(tmp4(18674), obj6);
+    const tmp4Result = tmp4(18674);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1652.View, obj4);
 }
-let GuildsNodeType = fn(6907).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(18612).GUILD_ITEM_INSET_LEFT;
+let GuildsNodeType = fn(6910).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(18642).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-createStyles = fn(5141);
+createStyles = fn(5143);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -422,7 +422,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "CONJURE_CHAT_PUBLISH_NOTICE", scrollPosition: null, dragRegion: null, windowSize: null, dropComplete: null, listInsets: null };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "handshake_tone1_tone2", scrollPosition: "handshake_light_skin_tone_medium_light_skin_tone", dragRegion: "1f3fb", windowSize: "1f3fc", dropComplete: "handshake_tone1_tone3", listInsets: "handshake_light_skin_tone_medium_skin_tone" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;
@@ -441,7 +441,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod5056.shallow);
+  }, _mod5058.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

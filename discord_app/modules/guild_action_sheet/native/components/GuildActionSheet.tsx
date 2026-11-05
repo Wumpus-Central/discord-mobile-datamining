@@ -1,24 +1,24 @@
-// === Module 16049: GuildActionSheet ===
+// === Module 16062: GuildActionSheet ===
 
-// Module 16049 (GuildActionSheet)
+// Module 16062 (GuildActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5396 */;
-import BottomSheetModal from "BottomSheetModal" /* 5400 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5731 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8882 */;
-import GuildActionSheetActions from "GuildActionSheetActions" /* 15981 */;
-import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 16044 */;
-import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 16050 */;
-import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 16051 */;
-import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 16054 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5398 */;
+import BottomSheetModal from "BottomSheetModal" /* 5402 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5733 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8887 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 15993 */;
+import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 16057 */;
+import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 16063 */;
+import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 16064 */;
+import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 16067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, actions: { paddingHorizontal: 16, gap: 24 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

@@ -1,6 +1,6 @@
-// === Module 4993: FavoriteStore ===
+// === Module 4995: FavoriteStore ===
 
-// Module 4993 (FavoriteStore)
+// Module 4995 (FavoriteStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -120,8 +120,8 @@ function initializeFromUserSettings() {
   }
   return flag4;
 }
-const createChannelRecord = fn(4994).createChannelRecord;
-const FavoritesConstants = fn(5003);
+const createChannelRecord = fn(4996).createChannelRecord;
+const FavoritesConstants = fn(5005);
 ({ FAVORITES_PRUNE_SCOPE_ALL: closure_4, FAVORITES_PRUNE_SCOPE_AUTO_ADDED } = FavoritesConstants);
 const FAVORITES_PRUNE_WHEN_ARCHIVED = FavoritesConstants.FAVORITES_PRUNE_WHEN_ARCHIVED;
 let closure_7 = FavoritesConstants.FAVORITES_UNCATEGORIZED_PARENT_ID;

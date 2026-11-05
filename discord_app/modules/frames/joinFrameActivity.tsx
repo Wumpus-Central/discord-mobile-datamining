@@ -1,12 +1,12 @@
-// === Module 13406: joinFrameActivity ===
+// === Module 13413: joinFrameActivity ===
 
-// Module 13406 (joinFrameActivity)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11873 */;
+// Module 13413 (joinFrameActivity)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7627 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11882 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import VoiceStateStore from "VoiceStateStore" /* 5813 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import VoiceStateStore from "VoiceStateStore" /* 5815 */;
 
 require = fn;
 let closure_12 = async function _joinFrameActivity(arg0) {
@@ -67,7 +67,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
             };
             c9 = 1;
             c10 = 1;
-            return { value: "flexDirection", done: null };
+            return { value: "flexDirection", done: true };
           }
         break;
         case 1:
@@ -192,9 +192,9 @@ let closure_12 = async function _joinFrameActivity(arg0) {
                   secret = null;
                   if (null != closure_133_3) {
                     c8 = 1;
-                    const obj26 = closure_134_1(closure_134_2[16]);
+                    const obj25 = closure_134_1(closure_134_2[16]);
                     if (null != closure_133_5) {
-                      let tmp175 = closure_133_4;
+                      let tmp167 = closure_133_4;
                     } else {
                       let channelId = closure_133_13;
                       if (closure_133_13 == null) {
@@ -207,38 +207,38 @@ let closure_12 = async function _joinFrameActivity(arg0) {
                       if (channelId == null) {
                         closure_3 = closure_133_4;
                       }
-                      tmp175 = closure_3;
+                      tmp167 = closure_3;
                     }
-                    const joinSecret = obj26.getJoinSecret(tmp164, tmp165, tmp166, tmp175, closure_133_5);
+                    const joinSecret = obj25.getJoinSecret(tmp156, tmp157, tmp158, tmp167, closure_133_5);
                     c9 = 9;
                     c10 = 1;
                   } else {
                     if (null != closure_133_13) {
                       const obj18 = { frameId: closure_134_7(id, closure_134_0(closure_134_2[19]).voiceChannelAppSurface(closure_133_13)), launched: Promise.resolve() };
-                      let tmp131Result = obj18;
-                      const obj22 = closure_134_0(closure_134_2[19]);
+                      let tmp239Result = obj18;
+                      const obj21 = closure_134_0(closure_134_2[19]);
                     } else {
                       const obj19 = { applicationId: id, channel: closure_133_12, invite: null };
-                      let tmp135;
+                      let tmp129;
                       if (null != closure_133_4) {
                         if (null != closure_133_5) {
                           const obj20 = { channelId: closure_133_4, messageId: closure_133_5 };
-                          tmp135 = obj20;
+                          tmp129 = obj20;
                         }
                       }
-                      obj19.invite = tmp135;
-                      tmp131Result = closure_134_1(closure_134_2[8])(obj19);
-                      const tmp131 = closure_134_1(closure_134_2[8]);
+                      obj19.invite = tmp129;
+                      tmp239Result = closure_134_1(closure_134_2[8])(obj19);
+                      const tmp239 = closure_134_1(closure_134_2[8]);
                     }
-                    closure_133_17 = tmp131Result;
+                    closure_133_17 = tmp239Result;
                     frameId = closure_133_17.frameId;
                     launched = closure_133_17.launched;
                     if (null == secret) {
                       c10 = 3;
                       return { value: true, done: true };
                     } else {
-                      const obj21 = { type: "ACTIVITY_JOIN_NAVIGATION_COMPLETE", applicationId: id };
-                      closure_134_1(closure_134_2[7]).dispatch(obj21);
+                      const obj23 = { type: "ACTIVITY_JOIN_NAVIGATION_COMPLETE", applicationId: id };
+                      closure_134_1(closure_134_2[7]).dispatch(obj23);
                       c8 = 2;
                       c9 = 11;
                       c10 = 1;
@@ -260,8 +260,8 @@ let closure_12 = async function _joinFrameActivity(arg0) {
             tmp57 = value;
             if (arg0 === 2) {
               c10 = 3;
-              const obj25 = { value, done: true };
-              return obj25;
+              const obj26 = { value, done: true };
+              return obj26;
             }
           }
         break;
@@ -346,7 +346,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
             closure_134_1(closure_134_2[12])(message);
             closure_133_14();
             c10 = 3;
-            const tmp230 = closure_134_1(closure_134_2[12]);
+            const tmp222 = closure_134_1(closure_134_2[12]);
           }
         break;
         case 9:
@@ -375,8 +375,8 @@ let closure_12 = async function _joinFrameActivity(arg0) {
           } else if (arg0 === 2) {
             c8 = 0;
             c10 = 3;
-            const obj34 = { value, done: true };
-            return obj34;
+            const obj35 = { value, done: true };
+            return obj35;
           } else {
             c9 = 12;
             c10 = 1;
@@ -401,12 +401,12 @@ let closure_12 = async function _joinFrameActivity(arg0) {
             return { value: true, done: true };
           }
       }
-    } catch (tmp217) {
-      applicationId = tmp217;
+    } catch (tmp209) {
+      applicationId = tmp209;
       if (tmp4 === c8) {
         c10 = tmp2;
-        throw tmp217;
-      } else if (tmp === tmp219) {
+        throw tmp209;
+      } else if (tmp === tmp211) {
         c9 = tmp6;
       } else {
         c9 = tmp5;
@@ -510,10 +510,10 @@ let closure_14 = async function _getActivityChannelId() {
   }
   return channel_id1;
 };
-const makeFrameId = fn(6982).makeFrameId;
+const makeFrameId = fn(6985).makeFrameId;
 const Constants = fn(1072);
 ({ AbortCodes: closure_8, ChannelTypes: closure_9, RPCEvents: closure_10 } = Constants);
-const ActivityIntent = fn(11889).ActivityIntent;
+const ActivityIntent = fn(11898).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/joinFrameActivity.tsx");
 

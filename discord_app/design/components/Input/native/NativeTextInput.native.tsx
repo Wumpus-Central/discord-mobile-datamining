@@ -1,6 +1,6 @@
-// === Module 7246: NativeTextInput ===
+// === Module 7249: NativeTextInput ===
 
-// Module 7246 (NativeTextInput)
+// Module 7249 (NativeTextInput)
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1495 */;
 
@@ -99,8 +99,8 @@ export const NativeTextInput = function TextInput(ref) {
   ref(defaultValue[9]);
   if (null != iter.keyboardAppearance) {
     const obj3 = {};
-    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "Object", defaultValue: "Array" }));
-    const obj4 = { value: "Object", defaultValue: "Array" };
+    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(iter, tmp4, { value: "Path", defaultValue: "count" }));
+    const obj4 = { value: "Path", defaultValue: "count" };
     const tmp6Result = tmp6(tmp3[10]);
     obj3.ref = tmp6(tmp3[10]).mergeRefs(ref, ref.ref);
     const tmp18 = closure_10(closure_5, obj3);

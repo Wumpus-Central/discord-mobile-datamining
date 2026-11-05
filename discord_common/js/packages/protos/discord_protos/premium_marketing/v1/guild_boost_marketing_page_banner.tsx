@@ -1,10 +1,10 @@
-// === Module 9806: guild_boost_marketing_page_banner ===
+// === Module 9812: guild_boost_marketing_page_banner ===
 
-// Module 9806 (guild_boost_marketing_page_banner)
+// Module 9812 (guild_boost_marketing_page_banner)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9781 */;
-import help_article from "help_article" /* 9782 */;
-import theme_aware_asset from "theme_aware_asset" /* 9791 */;
+import localized_string from "localized_string" /* 9787 */;
+import help_article from "help_article" /* 9788 */;
+import theme_aware_asset from "theme_aware_asset" /* 9797 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

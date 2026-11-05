@@ -1,10 +1,10 @@
-// === Module 12359: useConjureLinkedApps ===
+// === Module 12366: useConjureLinkedApps ===
 
-// Module 12359 (useConjureLinkedApps)
+// Module 12366 (useConjureLinkedApps)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 const require = globalThis.__r;
 

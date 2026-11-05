@@ -1,13 +1,13 @@
-// === Module 12352: useConjureSettingPickerOptions ===
+// === Module 12359: useConjureSettingPickerOptions ===
 
-// Module 12352 (useConjureSettingPickerOptions)
-import ConjureUtils from "ConjureUtils" /* 7559 */;
+// Module 12359 (useConjureSettingPickerOptions)
+import ConjureUtils from "ConjureUtils" /* 7561 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 5071 */;
-import RelationshipStore from "RelationshipStore" /* 5083 */;
-import StreamerModeStore from "StreamerModeStore" /* 5196 */;
+import GuildChannelStore from "GuildChannelStore" /* 5073 */;
+import RelationshipStore from "RelationshipStore" /* 5085 */;
+import StreamerModeStore from "StreamerModeStore" /* 5198 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 const require = globalThis.__r;
 
@@ -58,7 +58,7 @@ export default function useConjureSettingPickerOptions(arg0, type) {
       if (null != stateFromStores) {
         let result = ConjureUtils.conjureSettingChannels(tmp4, tmp.channel_filter);
         mapped = result.map((id) => {
-          const obj = { id: id.id, label: closure_1_0(5786).computeChannelName(id, closure_1_6, conjureGuildMemberUsers) };
+          const obj = { id: id.id, label: closure_1_0(5788).computeChannelName(id, closure_1_6, conjureGuildMemberUsers) };
           return obj;
         });
       }
@@ -67,10 +67,10 @@ export default function useConjureSettingPickerOptions(arg0, type) {
       return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
     } else if ("user" === type) {
       return conjureGuildMemberUsers.map((id) => {
-        const result = closure_0(12353).conjureMemberUsername(id, stateFromStores1);
+        const result = closure_0(12360).conjureMemberUsername(id, stateFromStores1);
         const obj2 = { id: id.id, label: null };
-        const obj = closure_0(12353);
-        obj2.label = closure_0(6176).getName(closure_1_0, null, id);
+        const obj = closure_0(12360);
+        obj2.label = closure_0(6179).getName(closure_1_0, null, id);
         if ("" === result) {
           let obj4 = {};
         } else {

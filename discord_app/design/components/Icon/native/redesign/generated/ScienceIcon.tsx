@@ -1,9 +1,9 @@
-// === Module 18823: ScienceIcon ===
+// === Module 18853: ScienceIcon ===
 
-// Module 18823 (ScienceIcon)
+// Module 18853 (ScienceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod13458 from "module_13458" /* 13458 */;
+import BaseIconImage from "BaseIconImage" /* 5853 */;
+import _mod13469 from "module_13469" /* 13469 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ScienceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13458, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13469, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

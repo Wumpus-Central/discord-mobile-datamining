@@ -1,14 +1,14 @@
-// === Module 13011: ConjureNativeTurnTimer ===
+// === Module 13018: ConjureNativeTurnTimer ===
 
-// Module 13011 (ConjureNativeTurnTimer)
-import Text_Text from "Text/Text" /* 5761 */;
-import ConjureDuration from "ConjureDuration" /* 12299 */;
-import useConjureElapsedMs from "useConjureElapsedMs" /* 13012 */;
+// Module 13018 (ConjureNativeTurnTimer)
+import Text_Text from "Text/Text" /* 5763 */;
+import ConjureDuration from "ConjureDuration" /* 12306 */;
+import useConjureElapsedMs from "useConjureElapsedMs" /* 13019 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_3 = createStyles.createStyles({ timer: { fontVariant: ["tabular-nums"] } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/native/ConjureNativeTurnTimer.tsx");

@@ -1,11 +1,11 @@
-// === Module 5812: isVoiceEmbeddedActivity ===
+// === Module 5814: isVoiceEmbeddedActivity ===
 
-// Module 5812 (isVoiceEmbeddedActivity)
+// Module 5814 (isVoiceEmbeddedActivity)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import VoiceStateStore from "VoiceStateStore" /* 5813 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
+import VoiceStateStore from "VoiceStateStore" /* 5815 */;
 
 require = fn;
 const size = fn(2);

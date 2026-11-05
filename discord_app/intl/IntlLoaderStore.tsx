@@ -3,9 +3,9 @@
 // Module 2192 (IntlLoaderStore)
 import util from "util" /* 1113 */;
 import _modDef2193 from "module_2193" /* 2193 */;
-import bg from "bg" /* 4416 */;
-import formatjs from "formatjs" /* 4891 */;
-import moment from "moment" /* 4922 */;
+import bg from "bg" /* 4418 */;
+import formatjs from "formatjs" /* 4893 */;
+import moment from "moment" /* 4924 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import module_2025 from "module_2025" /* 2025 */;
 
@@ -349,14 +349,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "dispatch",
+    error: "id",
     localeData: _modDef2193,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "dispatch" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "id" });
       }
     },
     setLoadingFailed(error, arg1) {

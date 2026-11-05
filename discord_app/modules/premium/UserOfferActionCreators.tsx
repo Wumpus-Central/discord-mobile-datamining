@@ -1,13 +1,13 @@
-// === Module 8671: UserOfferActionCreators ===
+// === Module 8676: UserOfferActionCreators ===
 
-// Module 8671 (UserOfferActionCreators)
+// Module 8676 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8672 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7774 */;
-import UserOfferStore from "UserOfferStore" /* 7770 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8677 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7779 */;
+import UserOfferStore from "UserOfferStore" /* 7775 */;
 
 const require = globalThis.__r;
 
@@ -63,7 +63,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj8 = closure_2;
           if (closure_2 === undefined) {
-            obj8 = { offerId: "Object", paymentGatewayOverride: "Array" };
+            obj8 = { offerId: "Path", paymentGatewayOverride: "count" };
           }
           closure_136_2 = obj8;
           closure_136_3 = closure_3;
@@ -79,7 +79,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_13 = undefined;
           c12 = 1;
           c13 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

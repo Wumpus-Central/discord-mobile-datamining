@@ -1,20 +1,20 @@
-// === Module 13982: ForumPostGridHeader ===
+// === Module 13995: ForumPostGridHeader ===
 
-// Module 13982 (ForumPostGridHeader)
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 13983 */;
-import ForumPostUsername from "ForumPostUsername" /* 13985 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 13995 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 13996 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 13997 */;
+// Module 13995 (ForumPostGridHeader)
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 13996 */;
+import ForumPostUsername from "ForumPostUsername" /* 13998 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 14008 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 14009 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 14010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(7594).ForumTimestampFormats;
-const ChannelFlags = fn(4997).ChannelFlags;
+const ForumTimestampFormats = fn(7596).ForumTimestampFormats;
+const ChannelFlags = fn(4999).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_8 = createStyles.createStyles({ pinIcon: { marginEnd: 8 }, container: { display: "flex", flexDirection: "column", marginBottom: 4 }, details: { flexDirection: "row", alignItems: "center", marginBottom: 4 }, timestampText: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridHeader.tsx");

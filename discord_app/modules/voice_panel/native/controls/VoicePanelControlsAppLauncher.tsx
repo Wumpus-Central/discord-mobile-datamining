@@ -1,25 +1,25 @@
-// === Module 19624: VoicePanelControlsAppLauncher ===
+// === Module 19659: VoicePanelControlsAppLauncher ===
 
-// Module 19624 (VoicePanelControlsAppLauncher)
+// Module 19659 (VoicePanelControlsAppLauncher)
 import _modDef38 from "module_38" /* 38 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8982 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12627 */;
-import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 14047 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8987 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11418 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 12634 */;
+import VoicePanelControlsDrawerTitleDefault from "VoicePanelControlsDrawerTitle" /* 14060 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsConstants = fn(11409);
+const VoicePanelControlsConstants = fn(11417);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_10 = createStyles.createStyles({ container: { width: "100%", paddingTop: CONTROLS_DRAWER_HEADER_SIZE } });
 let closure_11 = { code: "(function VoicePanelControlsAppLauncherTsx1(){let[gestureSpecs]=this.__closure;return gestureSpecs.get().active;})" };
 let closure_12 = { code: "(function VoicePanelControlsAppLauncherTsx2(){let[gestureSpecs]=this.__closure;return gestureSpecs.get().isDrawer;})" };

@@ -1,7 +1,7 @@
-// === Module 12780: ErrorBlock ===
+// === Module 12787: ErrorBlock ===
 
-// Module 12780 (ErrorBlock)
-import MessageBlock from "MessageBlock" /* 12781 */;
+// Module 12787 (ErrorBlock)
+import MessageBlock from "MessageBlock" /* 12788 */;
 import noop from "module_19" /* 19 */;
 
 const MessageBlockDefault = MessageBlock;

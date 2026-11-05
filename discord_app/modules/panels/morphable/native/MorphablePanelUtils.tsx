@@ -1,7 +1,7 @@
-// === Module 19410: MorphablePanelUtils ===
+// === Module 19441: MorphablePanelUtils ===
 
-// Module 19410 (MorphablePanelUtils)
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11412 */;
+// Module 19441 (MorphablePanelUtils)
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11420 */;
 import size from "module_2" /* 2 */;
 
 let items = [{ code: "(function clamp_MorphablePanelUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);})" }];

@@ -1,10 +1,10 @@
-// === Module 7558: OrderActionCreators ===
+// === Module 7560: OrderActionCreators ===
 
-// Module 7558 (OrderActionCreators)
+// Module 7560 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingError_mod from "BillingError" /* 4961 */;
+import BillingError_mod from "BillingError" /* 4963 */;
 
 require = fn;
 let closure_6 = async function _signOrder(arg0) {
@@ -44,7 +44,7 @@ let closure_6 = async function _signOrder(arg0) {
           closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

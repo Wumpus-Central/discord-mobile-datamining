@@ -1,7 +1,7 @@
-// === Module 15946: ActivateDeviceModal ===
+// === Module 15958: ActivateDeviceModal ===
 
-// Module 15946 (ActivateDeviceModal)
-import _modDef8499 from "module_8499" /* 8499 */;
+// Module 15958 (ActivateDeviceModal)
+import _modDef8504 from "module_8504" /* 8504 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -25,16 +25,16 @@ export default function ActivateDeviceModal(userCode) {
           return null;
         },
         headerLeft() {
-          const obj = { source: _modDef8499, onPress: onClose, accessibilityLabel: null };
+          const obj = { source: _modDef8504, onPress: onClose, accessibilityLabel: null };
           const intl = userCode(1113).intl;
           obj.accessibilityLabel = intl.string(userCode(1113).t.cpT0Cq);
-          return jsx(userCode(7698).HeaderActionButton, { source: _modDef8499, onPress: onClose, accessibilityLabel: null });
+          return jsx(userCode(7700).HeaderActionButton, { source: _modDef8504, onPress: onClose, accessibilityLabel: null });
         },
         headerRight() {
           return null;
         },
         render() {
-          return jsx(userCode(15947).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(15959).ActivateDevice, { onClose, prefilledUserCode });
         }
       }
     };
@@ -42,5 +42,5 @@ export default function ActivateDeviceModal(userCode) {
   let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
   let intl = userCode(1113).intl;
   obj.headerBackTitle = intl.string(userCode(1113).t["13/7kX"]);
-  return jsx(userCode(7306).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
+  return jsx(userCode(7309).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
 };

@@ -1,8 +1,8 @@
-// === Module 9255: LiveStageNotificationsUtils ===
+// === Module 9262: LiveStageNotificationsUtils ===
 
-// Module 9255 (LiveStageNotificationsUtils)
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5366 */;
-import PermissionStore from "PermissionStore" /* 5073 */;
+// Module 9262 (LiveStageNotificationsUtils)
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5368 */;
+import PermissionStore from "PermissionStore" /* 5075 */;
 
 const require = globalThis.__r;
 

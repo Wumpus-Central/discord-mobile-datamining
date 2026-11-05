@@ -1,6 +1,6 @@
-// === Module 12218: RTCConnectionUtils ===
+// === Module 12227: RTCConnectionUtils ===
 
-// Module 12218 (RTCConnectionUtils)
+// Module 12227 (RTCConnectionUtils)
 import util from "util" /* 1113 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

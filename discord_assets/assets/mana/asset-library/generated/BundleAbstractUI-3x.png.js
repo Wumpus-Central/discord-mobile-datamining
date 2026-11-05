@@ -1,6 +1,6 @@
-// === Module 17268: ? ===
+// === Module 17292: ? ===
 
-// Module 17268
+// Module 17292
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BundleAbstractUI-3x.png.js");

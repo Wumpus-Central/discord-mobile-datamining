@@ -1,8 +1,8 @@
-// === Module 10031: ConversationsAnalytics ===
+// === Module 10037: ConversationsAnalytics ===
 
-// Module 10031 (ConversationsAnalytics)
+// Module 10037 (ConversationsAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

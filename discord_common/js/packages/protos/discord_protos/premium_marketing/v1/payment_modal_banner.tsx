@@ -1,8 +1,8 @@
-// === Module 9786: payment_modal_banner ===
+// === Module 9792: payment_modal_banner ===
 
-// Module 9786 (payment_modal_banner)
+// Module 9792 (payment_modal_banner)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9781 */;
+import localized_string from "localized_string" /* 9787 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

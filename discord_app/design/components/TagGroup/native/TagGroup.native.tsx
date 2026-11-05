@@ -1,14 +1,14 @@
-// === Module 12387: TagGroup ===
+// === Module 12394: TagGroup ===
 
-// Module 12387 (TagGroup)
+// Module 12394 (TagGroup)
 import nativeDefault from "native" /* 575 */;
-import Tag from "Tag" /* 12390 */;
+import Tag from "Tag" /* 12397 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 const obj2 = { group: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: nativeDefault.space.PX_8 }, inline: { flexWrap: "nowrap", flexShrink: 1, overflow: "hidden" } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

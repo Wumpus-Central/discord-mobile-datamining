@@ -1,18 +1,18 @@
-// === Module 12868: ConjureContextBoundaryRow ===
+// === Module 12875: ConjureContextBoundaryRow ===
 
-// Module 12868 (ConjureContextBoundaryRow)
+// Module 12875 (ConjureContextBoundaryRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import useAlertStore from "useAlertStore" /* 6095 */;
-import AlertModal from "AlertModal" /* 6099 */;
+import useAlertStore from "useAlertStore" /* 6098 */;
+import AlertModal from "AlertModal" /* 6102 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { contextBoundary: { gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8 }, contextRule: null, contextLine: null, contextLabel: null, contextText: null, contextCentered: null };
 let obj3 = { gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8 };
 obj2.contextRule = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -31,7 +31,7 @@ export default function ConjureContextBoundaryRow(arg0) {
   let action;
   ({ projectId, contextSwitch } = arg0);
   const tmp = closure_7();
-  const conjureContextSwitchRow = action(12331).useConjureContextSwitchRow(projectId, contextSwitch);
+  const conjureContextSwitchRow = action(12338).useConjureContextSwitchRow(projectId, contextSwitch);
   if (null == conjureContextSwitchRow) {
     return null;
   } else {
@@ -42,9 +42,9 @@ export default function ConjureContextBoundaryRow(arg0) {
     items = [closure_4(View, obj4), , ];
     let obj5 = { style: tmp.contextLabel, accessible: true, accessibilityRole: "header", children: null };
     const obj6 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-    const items1 = [closure_4(tmp2(11830).ChatPlusIcon, obj6), ];
+    const items1 = [closure_4(tmp2(11838).ChatPlusIcon, obj6), ];
     const obj7 = { variant: "body-xs/semibold", color: "text-default", children: conjureContextSwitchRow.label };
-    items1[1] = closure_4(tmp2(5761).Text, obj7);
+    items1[1] = closure_4(tmp2(5763).Text, obj7);
     obj5.children = items1;
     items[1] = closure_5(View, obj5);
     const obj8 = { style: tmp.contextLine };
@@ -92,17 +92,17 @@ export default function ConjureContextBoundaryRow(arg0) {
         return onPressResult;
       };
       obj12.children = action.text;
-      const items4 = [" ", closure_4(tmp2(5761).Text, obj12)];
+      const items4 = [" ", closure_4(tmp2(5763).Text, obj12)];
       obj11.children = items4;
       tmp8Result = closure_5(closure_6, obj11);
     }
     items3[1] = tmp8Result;
     obj10.children = items3;
-    const items5 = [closure_5(tmp2(5761).Text, obj10), ];
+    const items5 = [closure_5(tmp2(5763).Text, obj10), ];
     let tmp10Result = null;
     if (null != conjureContextSwitchRow.note) {
       const obj14 = { variant: "body-xs/normal", color: "text-muted", style: tmp.contextCentered, children: conjureContextSwitchRow.note };
-      tmp10Result = closure_4(tmp2(5761).Text, obj14);
+      tmp10Result = closure_4(tmp2(5763).Text, obj14);
     }
     items5[1] = tmp10Result;
     obj9.children = items5;
@@ -110,5 +110,5 @@ export default function ConjureContextBoundaryRow(arg0) {
     obj2.children = items2;
     return closure_5(View, obj2);
   }
-  let obj = action(12331);
+  let obj = action(12338);
 };

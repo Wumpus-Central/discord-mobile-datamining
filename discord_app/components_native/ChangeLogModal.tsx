@@ -1,18 +1,18 @@
-// === Module 17790: ChangeLogModal ===
+// === Module 17818: ChangeLogModal ===
 
-// Module 17790 (ChangeLogModal)
+// Module 17818 (ChangeLogModal)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import FastImageDefault from "FastImage" /* 5851 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6879 */;
-import NavigatorHeader from "NavigatorHeader" /* 7139 */;
-import Navigator from "Navigator" /* 7306 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8706 */;
-import openMediaModal from "openMediaModal" /* 8974 */;
-import common_VideoDefault from "common/Video" /* 9014 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9254 */;
-import _modDef10455 from "module_10455" /* 10455 */;
-import _modDef17791 from "module_17791" /* 17791 */;
+import FastImageDefault from "FastImage" /* 5854 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6882 */;
+import NavigatorHeader from "NavigatorHeader" /* 7142 */;
+import Navigator from "Navigator" /* 7309 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8711 */;
+import openMediaModal from "openMediaModal" /* 8979 */;
+import common_VideoDefault from "common/Video" /* 9019 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9261 */;
+import _modDef10461 from "module_10461" /* 10461 */;
+import _modDef17819 from "module_17819" /* 17819 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -133,18 +133,18 @@ function hideChangeLog() {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const CHANGELOG_MODAL_KEY = fn(5043).CHANGELOG_MODAL_KEY;
+const CHANGELOG_MODAL_KEY = fn(5045).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let obj2 = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: { borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, videoOverlay: { position: "absolute", width: "100%", height: "100%" }, playButton: null, playIcon: null, empty: null };
 let size = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
 obj2.playButton = size;
 obj2.playIcon = { width: 21, height: 21 };
 obj2.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj4 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
 let size1 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj4.bulletPoint = size1;
@@ -172,7 +172,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return React5(View, obj);
 };
-ListItem.contextType = fn(5207).ThemeContext;
+ListItem.contextType = fn(5209).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -233,11 +233,11 @@ prototype["track"] = function track(arg0) {
   const self = this;
   const changeLog = this.props.changeLog;
   if (null != changeLog) {
-    const obj2 = { change_log_id: null };
+    const obj3 = { change_log_id: null };
     const _HermesInternal = HermesInternal;
-    obj2.change_log_id = "" + changeLog.date + ":" + changeLog.revision;
+    obj3.change_log_id = "" + changeLog.date + ":" + changeLog.revision;
     const merged = Object.assign(obj);
-    let tmp4 = obj2;
+    let tmp10 = obj3;
     if (arg0 === AnalyticEvents.CHANGE_LOG_CLOSED) {
       const obj4 = { seconds_open: null, max_scrolled_percentage: null };
       const _Math = Math;
@@ -246,10 +246,10 @@ prototype["track"] = function track(arg0) {
       const _parseInt = parseInt;
       const maxScrolledPercentage = self.maxScrolledPercentage;
       obj4.max_scrolled_percentage = 100 * parseInt(maxScrolledPercentage.toPrecision(4), 10);
-      const merged1 = Object.assign(obj2);
-      tmp4 = obj4;
+      const merged1 = Object.assign(obj3);
+      tmp10 = obj4;
     }
-    AnalyticsUtilsDefault.track(arg0, tmp4);
+    AnalyticsUtilsDefault.track(arg0, tmp10);
   }
 };
 prototype["renderVideo"] = function renderVideo() {
@@ -274,7 +274,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      items = [closure_7(_modDef17791, obj4), ];
+      items = [closure_7(_modDef17819, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -305,9 +305,9 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10455, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1187).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10461, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1187).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(7121).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(7124).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
@@ -322,7 +322,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return metroImportDefault(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(5207).ThemeContext;
+ChangeLog.contextType = fn(5209).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 

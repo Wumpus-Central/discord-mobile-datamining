@@ -1,28 +1,28 @@
-// === Module 7427: GuildOnboardingPrompts ===
+// === Module 7430: GuildOnboardingPrompts ===
 
-// Module 7427 (GuildOnboardingPrompts)
+// Module 7430 (GuildOnboardingPrompts)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import ColorUtils from "ColorUtils" /* 5138 */;
-import LinearGradientDefault from "LinearGradient" /* 5723 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5755 */;
-import FastImageDefault from "FastImage" /* 5851 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5894 */;
-import NavigatorHeader from "NavigatorHeader" /* 7139 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7409 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7410 */;
+import ColorUtils from "ColorUtils" /* 5140 */;
+import LinearGradientDefault from "LinearGradient" /* 5725 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5757 */;
+import FastImageDefault from "FastImage" /* 5854 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5897 */;
+import NavigatorHeader from "NavigatorHeader" /* 7142 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7412 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7083 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7404 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7086 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7407 */;
 
 const require = globalThis.__r;
 
@@ -54,15 +54,15 @@ function BackgroundImageGradient(uri) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const OnboardingPromptType = fn(7405).OnboardingPromptType;
-let closure_15 = fn(7401).GuildOnboardingModalStates;
+const OnboardingPromptType = fn(7408).OnboardingPromptType;
+let closure_15 = fn(7404).GuildOnboardingModalStates;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5141);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5722).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5722).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(5143);
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5724).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5724).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.subtitle = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };
 obj2.onboardingTitle = { textAlign: "center" };
 let obj4 = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };
@@ -161,8 +161,8 @@ export default function GuildOnboardingPrompt(guildId) {
   required1 = tmp15;
   let tmp18 = currentPromptIdx + 1 >= prompts.length;
   if (tmp18) {
-    tmp18 = !tmp2(7410).showRulesInOnboarding(stateFromStores2, stateFromStores);
-    const tmp2Result16 = tmp2(7410);
+    tmp18 = !tmp2(7413).showRulesInOnboarding(stateFromStores2, stateFromStores);
+    const tmp2Result16 = tmp2(7413);
   }
   closure_16 = tmp18;
   const tmp19 = _slicedToArray(stateFromStores.useState(nativeDefault.unsafe_rawColors.PRIMARY_800), 2);
@@ -458,7 +458,7 @@ export default function GuildOnboardingPrompt(guildId) {
                 const obj2 = {};
                 let tmp = c0;
                 const obj = step(1252);
-                const merged = Object.assign(c0(5894).collectGuildAnalyticsMetadata(_undefined));
+                const merged = Object.assign(c0(5897).collectGuildAnalyticsMetadata(_undefined));
                 obj2.step = 0;
                 obj2.skipped = true;
                 obj2.back = false;
@@ -480,7 +480,7 @@ export default function GuildOnboardingPrompt(guildId) {
                 } else {
                   tmp5();
                 }
-                const obj3 = c0(5894);
+                const obj3 = c0(5897);
               })
         };
         navigation.setOptions(obj4);
@@ -490,7 +490,7 @@ export default function GuildOnboardingPrompt(guildId) {
       let headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
         const obj2 = {};
         const obj = step(1252);
-        const merged = Object.assign(c0(5894).collectGuildAnalyticsMetadata(_undefined));
+        const merged = Object.assign(c0(5897).collectGuildAnalyticsMetadata(_undefined));
         obj2.step = step;
         obj2.skipped = false;
         obj2.back = true;
@@ -498,10 +498,10 @@ export default function GuildOnboardingPrompt(guildId) {
         obj2.in_onboarding = true;
         obj2.is_final_step = false;
         obj.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
-        const obj3 = c0(5894);
+        const obj3 = c0(5897);
         const obj5 = {};
         const obj4 = step(1252);
-        const merged1 = Object.assign(c0(5894).collectGuildAnalyticsMetadata(_undefined));
+        const merged1 = Object.assign(c0(5897).collectGuildAnalyticsMetadata(_undefined));
         obj5.step = step - 1;
         obj5.required = dependencyMap[step - 1].required;
         obj4.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj5);
@@ -511,7 +511,7 @@ export default function GuildOnboardingPrompt(guildId) {
     headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
       const obj2 = {};
       const obj = step(1252);
-      const merged = Object.assign(c0(5894).collectGuildAnalyticsMetadata(_undefined));
+      const merged = Object.assign(c0(5897).collectGuildAnalyticsMetadata(_undefined));
       obj2.step = 0;
       obj2.skipped = false;
       obj2.back = true;
@@ -573,10 +573,10 @@ export default function GuildOnboardingPrompt(guildId) {
       const type = tmp11.type;
       if (stateFromStoresArray.MULTIPLE_CHOICE === type) {
         const obj8 = { guildId, currentPrompt: tmp11, lastPrompt: tmp18, currentPromptIndex: currentPromptIdx, numberOfPrompts: prompts.length, selectOption, handleOnPress };
-        tmp64Result = tmp64(tmp2(7429).MultipleChoicePrompt, obj8);
+        tmp64Result = tmp64(tmp2(7432).MultipleChoicePrompt, obj8);
       } else if (tmp66.DROPDOWN === type) {
         const obj9 = { guildId, currentPrompt: tmp11, lastPrompt: tmp18, currentPromptIndex: currentPromptIdx, numberOfPrompts: prompts.length, selectOption, handleOnPress };
-        tmp64Result = tmp64(tmp2(7429).DropdownPrompt, obj9);
+        tmp64Result = tmp64(tmp2(7432).DropdownPrompt, obj9);
       } else {
         tmp2(1380).assertNever(tmp11.type);
         const tmp2Result23 = tmp2(1380);

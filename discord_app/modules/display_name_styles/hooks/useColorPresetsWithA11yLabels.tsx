@@ -1,6 +1,6 @@
-// === Module 17583: useColorPresetsWithA11yLabels ===
+// === Module 17609: useColorPresetsWithA11yLabels ===
 
-// Module 17583 (useColorPresetsWithA11yLabels)
+// Module 17609 (useColorPresetsWithA11yLabels)
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1402 */;
 import noop from "module_19" /* 19 */;
 

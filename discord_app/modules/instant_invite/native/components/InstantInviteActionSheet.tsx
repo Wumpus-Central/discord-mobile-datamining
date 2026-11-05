@@ -1,20 +1,20 @@
-// === Module 9272: InstantInviteActionSheet ===
+// === Module 9279: InstantInviteActionSheet ===
 
-// Module 9272 (InstantInviteActionSheet)
+// Module 9279 (InstantInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5884 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8891 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9263 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9273 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9275 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5887 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8896 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9270 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9280 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9282 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 4995 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9264 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import PermissionStore from "PermissionStore" /* 5073 */;
+import StageInstanceStore from "StageInstanceStore" /* 4997 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9271 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import PermissionStore from "PermissionStore" /* 5075 */;
 
 require = fn;
 function Loading() {
@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;

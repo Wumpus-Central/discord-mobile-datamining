@@ -1,22 +1,22 @@
-// === Module 19081: AutocompleteScreen ===
+// === Module 19112: AutocompleteScreen ===
 
-// Module 19081 (AutocompleteScreen)
-import UserUtilsDefault from "UserUtils" /* 5195 */;
-import useChannelName from "useChannelName" /* 5786 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14104 */;
-import TrackingDefault from "Tracking" /* 14125 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14129 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 19083 */;
+// Module 19112 (AutocompleteScreen)
+import UserUtilsDefault from "UserUtils" /* 5197 */;
+import useChannelName from "useChannelName" /* 5788 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14117 */;
+import TrackingDefault from "Tracking" /* 14138 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14142 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 19114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import RelationshipStore from "RelationshipStore" /* 5083 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import RelationshipStore from "RelationshipStore" /* 5085 */;
 import UserStore from "UserStore" /* 1385 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 19082 */;
-import SearchQueryStore from "SearchQueryStore" /* 14118 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 19113 */;
+import SearchQueryStore from "SearchQueryStore" /* 14131 */;
 
 require = fn;
-const SearchConstants = fn(9976);
+const SearchConstants = fn(9982);
 ({ SearchListItemTypes: closure_10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
 const Constants = fn(1072);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);

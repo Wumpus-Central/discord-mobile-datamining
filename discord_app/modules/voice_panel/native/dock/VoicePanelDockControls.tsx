@@ -1,16 +1,16 @@
-// === Module 19488: VoicePanelDockControls ===
+// === Module 19523: VoicePanelDockControls ===
 
-// Module 19488 (VoicePanelDockControls)
+// Module 19523 (VoicePanelDockControls)
 import native from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5384 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6841 */;
-import _modDef10015 from "module_10015" /* 10015 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11410 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 12167 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19487 */;
+import HapticUtils from "HapticUtils" /* 5386 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6844 */;
+import _modDef10021 from "module_10021" /* 10021 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11418 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 12176 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19521 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import VoicePanelStore from "VoicePanelStore" /* 7010 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import VoicePanelStore from "VoicePanelStore" /* 7013 */;
 
 const nativeDefault = native;
 
@@ -71,15 +71,15 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1113).intl;
   obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef10015;
+  obj.icon = _modDef10021;
   obj.onPress = callback;
-  return closure_7(channelId(8168).IconButton, obj);
+  return closure_7(channelId(8173).IconButton, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
-let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11429).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
+const createStyles = fn(5143);
+let obj = { actions: { flexDirection: "row", alignItems: "center", gap: fn(11437).DOCK_GAP }, buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
 const size = fn(2);

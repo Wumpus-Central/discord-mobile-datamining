@@ -1,6 +1,6 @@
-// === Module 8663: ? ===
+// === Module 8668: ? ===
 
-// Module 8663
+// Module 8668
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/referral_program/trialExchange.png.js");

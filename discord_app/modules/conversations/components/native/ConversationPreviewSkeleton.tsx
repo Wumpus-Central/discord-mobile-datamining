@@ -1,19 +1,19 @@
-// === Module 10060: ConversationPreviewSkeleton ===
+// === Module 10068: ConversationPreviewSkeleton ===
 
-// Module 10060 (ConversationPreviewSkeleton)
+// Module 10068 (ConversationPreviewSkeleton)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5378 */;
+import timing_timing from "timing/timing" /* 5380 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(5789).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_5 = fn(5791).MOBILE_PREVIEW_MESSAGE_COUNT;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 const obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4 }, rowSpacing: null, avatar: null, lines: null, lineName: null, lineText: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_4 };
 obj2.rowSpacing = { marginTop: nativeDefault.space.PX_26 };

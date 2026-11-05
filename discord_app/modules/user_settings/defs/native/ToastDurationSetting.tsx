@@ -1,11 +1,11 @@
-// === Module 17653: ToastDurationSetting ===
+// === Module 17680: ToastDurationSetting ===
 
-// Module 17653 (ToastDurationSetting)
+// Module 17680 (ToastDurationSetting)
 import util from "util" /* 1113 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11678 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17551 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11686 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17577 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5142 */;
+import AccessibilityStore from "AccessibilityStore" /* 5144 */;
 
 require = fn;
 function formatToastDuration(seconds) {
@@ -14,13 +14,13 @@ function formatToastDuration(seconds) {
 }
 const Accessibility = fn(1072).Accessibility;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3oxlia"]);
   },
-  parent: fn(8573).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8578).MobileUserSettings.ACCESSIBILITY,
   useProps: function useToastDurationSettingProps() {
     items = [AccessibilityStore];
     stateFromStores = stateFromStores(onChange[6]).useStateFromStores(items, () => minToastDurationMs.minToastDurationMs / 1000);

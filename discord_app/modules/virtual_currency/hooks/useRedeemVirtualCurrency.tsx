@@ -1,6 +1,6 @@
-// === Module 9710: useRedeemVirtualCurrency ===
+// === Module 9716: useRedeemVirtualCurrency ===
 
-// Module 9710 (useRedeemVirtualCurrency)
+// Module 9716 (useRedeemVirtualCurrency)
 import util from "util" /* 1113 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -146,12 +146,12 @@ export function useRedeemVirtualCurrency(onSignFailure) {
             closure_1_10(false);
             throw closure_5;
           }
-        } catch (tmp64) {
-          closure_5 = tmp64;
+        } catch (tmp58) {
+          closure_5 = tmp58;
           if (tmp5 === v0) {
             c8 = tmp3;
-            throw tmp64;
-          } else if (tmp2 === tmp66) {
+            throw tmp58;
+          } else if (tmp2 === tmp60) {
             v4 = tmp;
           } else {
             v4 = tmp3;

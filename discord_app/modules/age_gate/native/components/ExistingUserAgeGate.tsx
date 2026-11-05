@@ -1,11 +1,11 @@
-// === Module 19672: ExistingUserAgeGate ===
+// === Module 19707: ExistingUserAgeGate ===
 
-// Module 19672 (ExistingUserAgeGate)
+// Module 19707 (ExistingUserAgeGate)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4984 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4986 */;
 
 const require = globalThis.__r;
 
@@ -13,12 +13,12 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1097);
 ({ AgeGateAnalyticAction: closure_8, AgeGateSource: closure_9 } = AgeGateConstants);
-let closure_10 = fn(19668).ExistingUserAgeGateScreens;
+let closure_10 = fn(19703).ExistingUserAgeGateScreens;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HelpdeskArticles: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_15 = createStyles.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 8, textAlign: "center" }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, inputGroup: { marginBottom: 16, width: "100%" }, buttonWrapper: { width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGate.tsx");

@@ -1,6 +1,6 @@
-// === Module 8027: HookErrorStore ===
+// === Module 8032: HookErrorStore ===
 
-// Module 8027 (HookErrorStore)
+// Module 8032 (HookErrorStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;

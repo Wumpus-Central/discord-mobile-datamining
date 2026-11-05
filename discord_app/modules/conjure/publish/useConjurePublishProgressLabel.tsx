@@ -1,10 +1,10 @@
-// === Module 12298: useConjurePublishProgressLabel ===
+// === Module 12305: useConjurePublishProgressLabel ===
 
-// Module 12298 (useConjurePublishProgressLabel)
+// Module 12305 (useConjurePublishProgressLabel)
 import _modDef3995 from "module_3995" /* 3995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11045 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11051 */;
 
 const require = globalThis.__r;
 
@@ -42,9 +42,9 @@ export default function useConjurePublishProgressLabel(arg0) {
     const obj2 = { action: null, detail: null };
     const intl2 = tmp(1113).intl;
     obj2.action = intl2.string(obj[stateFromStores.stage]);
-    obj2.detail = tmp(12299).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+    obj2.detail = tmp(12306).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
     formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3995)["ndkR+x"], obj2);
-    const tmpResult = tmp(12299);
+    const tmpResult = tmp(12306);
   }
   return formatToPlainStringResult;
 };

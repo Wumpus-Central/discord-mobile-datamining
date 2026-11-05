@@ -11,12 +11,12 @@ import _modDef2171 from "module_2171" /* 2171 */;
 import PremiumSubscription from "PremiumSubscription" /* 2187 */;
 import _modDef2731 from "module_2731" /* 2731 */;
 import _modDef3415 from "module_3415" /* 3415 */;
-import BillingUtils from "BillingUtils" /* 4954 */;
-import DateUtils from "DateUtils" /* 4963 */;
-import openURLDefault from "openURL" /* 5839 */;
-import PriceUtils from "PriceUtils" /* 7553 */;
-import CheckoutError from "CheckoutError" /* 11572 */;
-import useFPDurationLeft from "useFPDurationLeft" /* 15579 */;
+import BillingUtils from "BillingUtils" /* 4956 */;
+import DateUtils from "DateUtils" /* 4965 */;
+import openURLDefault from "openURL" /* 5842 */;
+import PriceUtils from "PriceUtils" /* 7555 */;
+import CheckoutError from "CheckoutError" /* 11580 */;
+import useFPDurationLeft from "useFPDurationLeft" /* 15592 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -78,13 +78,13 @@ function getPrice(planId) {
     tmp2 = null != currency && null != contextPlanPrices[planId] && contextPlanPrices[planId].currency !== currency;
   }
   if (null != SubscriptionPlanStore.get(planId)) {
-    let str3 = constants3.DEFAULT;
+    let str2 = constants3.DEFAULT;
     if (flag2) {
-      str3 = constants3.GIFT;
+      str2 = constants3.GIFT;
     } else if (flag) {
-      str3 = constants3.PREMIUM_TIER_1;
+      str2 = constants3.PREMIUM_TIER_1;
     }
-    const obj5 = { paymentSourceId, purchaseType: str3, currency };
+    const obj5 = { paymentSourceId, purchaseType: str2, currency };
     ({ paymentSourceId: paymentSourceId2, purchaseType, currency: currency2 } = obj5);
     const obj6 = { paymentSourceId: paymentSourceId2, purchaseType };
     const arr = experimentalGetPrices(planId, obj6);
@@ -99,7 +99,7 @@ function getPrice(planId) {
         if (null != paymentSourceId2) {
           const obj7 = { purchaseType };
           found1 = experimentalGetPrices(planId, obj7).find((currency) => currency.currency === currency.toLowerCase());
-          const tmp15Result = experimentalGetPrices(planId, obj7);
+          const tmp10Result = experimentalGetPrices(planId, obj7);
         }
         found = found1;
       }
@@ -108,13 +108,13 @@ function getPrice(planId) {
       first = arr[0];
     }
     if (null == first) {
-      const _Error2 = Error;
+      const _Error = Error;
       const error = new Error("Couldn't find price");
       if (flag3) {
         const obj8 = { extra: null, tags: null };
         const obj9 = { paymentSourceId };
         obj8.extra = obj9;
-        const obj11 = { purchaseType: str3.toString(), planId, currency: null };
+        const obj11 = { purchaseType: str2.toString(), planId, currency: null };
         if (currency == null) {
           currency = "unknown";
         }
@@ -127,16 +127,16 @@ function getPrice(planId) {
       return first;
     }
   } else {
-    const _Error = Error;
+    const _Error2 = Error;
     const error1 = new Error("Plan not found");
     if (flag3) {
       const obj12 = { planId, currency: null };
-      let str2 = currency;
+      let str = currency;
       if (currency == null) {
-        str2 = "unknown";
+        str = "unknown";
       }
       const obj13 = { tags: null, extra: null };
-      obj12.currency = str2;
+      obj12.currency = str;
       obj13.tags = obj12;
       const obj23 = {};
       const merged = Object.assign(obj);
@@ -2181,7 +2181,7 @@ const frozen = Object.freeze({
     return skuId === regex.TIER_0 || skuId === regex.TIER_1 || skuId === regex.TIER_2;
   },
   getIntervalMonths,
-  getUserMaxFileSize: fn(5201).getUserMaxFileSize,
+  getUserMaxFileSize: fn(5203).getUserMaxFileSize,
   getSkuIdForPlan(planId) {
     if (null == dependencyMap2[planId]) {
       const _Error = Error;
@@ -2296,35 +2296,35 @@ const frozen = Object.freeze({
   calculateYearlyPlanMonthlyRateAmount,
   getDaysSincePremium,
   getDaysRemainingUntilSubscriptionCurrentPeriodEnds,
-  canUseAnimatedEmojis: fn(16121).canUseAnimatedEmojis,
-  canUseEmojisEverywhere: fn(16121).canUseEmojisEverywhere,
-  canUseSoundboardEverywhere: fn(16121).canUseSoundboardEverywhere,
-  canUseCustomCallSounds: fn(16121).canUseCustomCallSounds,
-  canUploadLargeFiles: fn(16121).canUploadLargeFiles,
-  canUseBadges: fn(16121).canUseBadges,
-  canUseHighVideoUploadQuality: fn(16121).canUseHighVideoUploadQuality,
-  canEditDiscriminator: fn(16121).canEditDiscriminator,
-  hasBoostDiscount: fn(16121).hasBoostDiscount,
-  canUseAnimatedAvatar: fn(16121).canUseAnimatedAvatar,
-  canInstallPremiumApplications: fn(16121).canInstallPremiumApplications,
-  canUseIncreasedMessageLength: fn(16121).canUseIncreasedMessageLength,
-  canUseIncreasedGuildCap: fn(16121).canUseIncreasedGuildCap,
-  canRedeemPremiumPerks: fn(16121).canRedeemPremiumPerks,
-  canUsePremiumProfileCustomization: fn(16121).canUsePremiumProfileCustomization,
-  canUsePremiumAppIcons: fn(16121).canUsePremiumAppIcons,
-  canUsePremiumGuildMemberProfile: fn(16121).canUsePremiumGuildMemberProfile,
-  canUseClientThemes: fn(16121).canUseClientThemes,
-  canStreamQuality: fn(16121).canStreamQuality,
-  canUseQuestOrbMultiplier: fn(16121).canUseQuestOrbMultiplier,
-  hasFreeBoosts: fn(16121).hasFreeBoosts,
-  canUseCustomStickersEverywhere: fn(16121).canUseCustomStickersEverywhere,
-  canUseCustomBackgrounds: fn(16121).canUseCustomBackgrounds,
-  canUseCollectibles: fn(16121).canUseCollectibles,
-  canUseMonthlyOrbs: fn(16121).canUseMonthlyOrbs,
-  canUseShopDiscounts: fn(16121).canUseShopDiscounts,
-  canUseMoreQuestOrbs: fn(16121).canUseMoreQuestOrbs,
+  canUseAnimatedEmojis: fn(16134).canUseAnimatedEmojis,
+  canUseEmojisEverywhere: fn(16134).canUseEmojisEverywhere,
+  canUseSoundboardEverywhere: fn(16134).canUseSoundboardEverywhere,
+  canUseCustomCallSounds: fn(16134).canUseCustomCallSounds,
+  canUploadLargeFiles: fn(16134).canUploadLargeFiles,
+  canUseBadges: fn(16134).canUseBadges,
+  canUseHighVideoUploadQuality: fn(16134).canUseHighVideoUploadQuality,
+  canEditDiscriminator: fn(16134).canEditDiscriminator,
+  hasBoostDiscount: fn(16134).hasBoostDiscount,
+  canUseAnimatedAvatar: fn(16134).canUseAnimatedAvatar,
+  canInstallPremiumApplications: fn(16134).canInstallPremiumApplications,
+  canUseIncreasedMessageLength: fn(16134).canUseIncreasedMessageLength,
+  canUseIncreasedGuildCap: fn(16134).canUseIncreasedGuildCap,
+  canRedeemPremiumPerks: fn(16134).canRedeemPremiumPerks,
+  canUsePremiumProfileCustomization: fn(16134).canUsePremiumProfileCustomization,
+  canUsePremiumAppIcons: fn(16134).canUsePremiumAppIcons,
+  canUsePremiumGuildMemberProfile: fn(16134).canUsePremiumGuildMemberProfile,
+  canUseClientThemes: fn(16134).canUseClientThemes,
+  canStreamQuality: fn(16134).canStreamQuality,
+  canUseQuestOrbMultiplier: fn(16134).canUseQuestOrbMultiplier,
+  hasFreeBoosts: fn(16134).hasFreeBoosts,
+  canUseCustomStickersEverywhere: fn(16134).canUseCustomStickersEverywhere,
+  canUseCustomBackgrounds: fn(16134).canUseCustomBackgrounds,
+  canUseCollectibles: fn(16134).canUseCollectibles,
+  canUseMonthlyOrbs: fn(16134).canUseMonthlyOrbs,
+  canUseShopDiscounts: fn(16134).canUseShopDiscounts,
+  canUseMoreQuestOrbs: fn(16134).canUseMoreQuestOrbs,
   formatPriceString,
-  StreamQuality: fn(16121).StreamQuality
+  StreamQuality: fn(16134).StreamQuality
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/PremiumUtils.tsx");
@@ -3290,8 +3290,8 @@ export const isPremiumAtLeast = fn(2112).isPremiumAtLeast;
 export const isPremiumAtMost = fn(2112).isPremiumAtMost;
 export const isPremium = fn(2112).isPremium;
 export const isPremiumExactly = fn(2112).isPremiumExactly;
-export const getMaxFileSizeForPremiumType = fn(16121).getMaxFileSizeForPremiumType;
-export const StreamQuality = fn(16121).StreamQuality;
+export const getMaxFileSizeForPremiumType = fn(16134).getMaxFileSizeForPremiumType;
+export const StreamQuality = fn(16134).StreamQuality;
 export function useHasTier2Premium() {
   items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());

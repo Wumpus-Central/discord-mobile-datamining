@@ -1,10 +1,10 @@
-// === Module 7518: hotspot/HotspotStore ===
+// === Module 7520: hotspot/HotspotStore ===
 
-// Module 7518 (hotspot/HotspotStore)
+// Module 7520 (hotspot/HotspotStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ConferenceModeConstants from "ConferenceModeConstants" /* 1079 */;
-import ProcessArgs2 from "ProcessArgs" /* 7519 */;
+import ProcessArgs2 from "ProcessArgs" /* 7521 */;
 import size from "module_2" /* 2 */;
 
 const CONFERENCE_MODE_ENABLED = ConferenceModeConstants.CONFERENCE_MODE_ENABLED;

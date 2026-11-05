@@ -1,17 +1,17 @@
-// === Module 13686: CheckpointCharacterStage ===
+// === Module 13697: CheckpointCharacterStage ===
 
-// Module 13686 (CheckpointCharacterStage)
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13688 */;
-import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 13854 */;
+// Module 13697 (CheckpointCharacterStage)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13699 */;
+import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 13865 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13657 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { flexGrow: 1 }, rive: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.rive = {};
@@ -61,8 +61,17 @@ export default function CheckpointCharacterStage(stage) {
   const tmp14 = characterBottomInset(noop.useState(null), 2);
   const checkpointCharacterTextureManager = stage(isHidden[13]).useCheckpointCharacterTextureManager(tmp15);
   const obj4 = stage(isHidden[13]);
+  let isOutfitPreloaded = stage(isHidden[14]).useCheckpointCharacterTextureSwaps({ textureManager: checkpointCharacterTextureManager, referencedAssets: checkpointCharacterReferencedAssets, initialReferencedAssets: tmp13 });
   const obj5 = stage(isHidden[14]);
-  if (tmp18) {
+  const checkpointCharacterOutfitPreload = stage(isHidden[15]).useCheckpointCharacterOutfitPreload({ visibleDataBinding: tmp10, requestedDataBinding: memo });
+  ({ dataBinding, onDataBindingChange } = checkpointCharacterOutfitPreload);
+  if (isOutfitPreloaded) {
+    isOutfitPreloaded = checkpointCharacterOutfitPreload.isOutfitPreloaded;
+  }
+  if (isOutfitPreloaded) {
+    isOutfitPreloaded = tmp10 !== memo;
+  }
+  if (isOutfitPreloaded) {
     tmp11(memo);
   }
   ref = obj.useRef(null);
@@ -81,10 +90,10 @@ export default function CheckpointCharacterStage(stage) {
   if (stage.isActive) {
     tmp24 = context;
   }
-  const obj6 = { ref: tmp24, style: tmp.container, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
-  tmp18 = stage(isHidden[14]).useCheckpointCharacterTextureSwaps({ textureManager: checkpointCharacterTextureManager, referencedAssets: checkpointCharacterReferencedAssets, initialReferencedAssets: tmp13 }) && tmp10 !== memo;
+  const obj7 = { ref: tmp24, style: tmp.container, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
+  const obj6 = stage(isHidden[15]);
   const tmp23 = height;
-  obj6.accessibilityLabel = stage(isHidden[15]).getCheckpointCharacterAccessibilityLabel(stateFromStores);
-  obj6.children = stateFromStores(stage(isHidden[16]).CheckpointCharacterRive, { ref, artboard: "AB_Master", stateMachine: "SM_Master", fit: "layout", alignment: "center", referencedAssets: tmp13, onRiveFileChange: tmp16, dataBinding: tmp10, style: tmp.rive });
-  return stateFromStores(tmp23, obj6);
+  obj7.accessibilityLabel = stage(isHidden[16]).getCheckpointCharacterAccessibilityLabel(stateFromStores);
+  obj7.children = stateFromStores(stage(isHidden[17]).CheckpointCharacterRive, { ref, artboard: "AB_Master", stateMachine: "SM_Master", fit: "layout", alignment: "center", referencedAssets: tmp13, onRiveFileChange: tmp16, dataBinding, onDataBindingChange, style: tmp.rive });
+  return stateFromStores(tmp23, obj7);
 };

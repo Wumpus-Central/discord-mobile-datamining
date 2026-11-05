@@ -1,13 +1,13 @@
-// === Module 19196: guild_automod/PermissionUtils ===
+// === Module 19227: guild_automod/PermissionUtils ===
 
-// Module 19196 (guild_automod/PermissionUtils)
-import GuildStore from "GuildStore" /* 5012 */;
-import PermissionStore from "PermissionStore" /* 5073 */;
+// Module 19227 (guild_automod/PermissionUtils)
+import GuildStore from "GuildStore" /* 5014 */;
+import PermissionStore from "PermissionStore" /* 5075 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AutomodTriggerType = fn(13513).AutomodTriggerType;
+const AutomodTriggerType = fn(13524).AutomodTriggerType;
 const Constants = fn(1072);
 ({ GuildFeatures: hasOwnProperty, Permissions: closure_6 } = Constants);
 const size = fn(2);

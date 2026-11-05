@@ -1,8 +1,8 @@
-// === Module 18720: SortableListView ===
+// === Module 18750: SortableListView ===
 
-// Module 18720 (SortableListView)
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5745 */;
-import _mod7430 from "module_7430" /* 7430 */;
+// Module 18750 (SortableListView)
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5747 */;
+import _mod7433 from "module_7433" /* 7433 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -534,7 +534,7 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [timestampProducer(_mod7430.FlashList, obj3), self.renderActive()];
+  const items1 = [timestampProducer(_mod7433.FlashList, obj3), self.renderActive()];
   obj.children = items1;
   return metroImportDefault(React3, obj);
 };

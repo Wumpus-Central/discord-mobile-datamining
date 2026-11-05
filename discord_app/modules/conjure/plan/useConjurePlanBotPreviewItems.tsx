@@ -1,15 +1,15 @@
-// === Module 12954: useConjurePlanBotPreviewItems ===
+// === Module 12961: useConjurePlanBotPreviewItems ===
 
-// Module 12954 (useConjurePlanBotPreviewItems)
+// Module 12961 (useConjurePlanBotPreviewItems)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import UserActionCreators from "UserActionCreators" /* 8893 */;
-import conjurePlanBot from "conjurePlanBot" /* 12955 */;
+import UserActionCreators from "UserActionCreators" /* 8898 */;
+import conjurePlanBot from "conjurePlanBot" /* 12962 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2167 */;
 import UserRecord from "UserRecord" /* 1399 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6979 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6982 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ function mentionMember(str, username) {
 }
 const Constants = fn(1072);
 ({ MessageStates: closure_8, MessageTypes: closure_9 } = Constants);
-const guildTextChannelRecord = new fn(4994).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
+const guildTextChannelRecord = new fn(4996).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
 const re12 = /^@\S+/;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/useConjurePlanBotPreviewItems.tsx");
@@ -201,26 +201,26 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                 ({ interactionName, messageType } = obj);
                 const StringResult = String(items.length + 1);
                 const obj3 = { channelId: id.id, content: bot, author: bot2, type: null };
-                const obj2 = projectId(6198);
+                const obj2 = projectId(6201);
                 if (messageType == null) {
                   messageType = constants2.DEFAULT;
                 }
                 const obj4 = {};
                 obj3.type = messageType;
-                const merged = Object.assign(exchanges(10497)(obj3));
+                const merged = Object.assign(exchanges(10503)(obj3));
                 obj4.id = StringResult;
                 obj4.state = constants.SENT;
                 if (null != interactionName) {
                   const obj5 = { interaction: null };
-                  obj6 = { id: StringResult, name: interactionName, type: projectId(6205).InteractionTypes.APPLICATION_COMMAND, user: projectId(10497).userRecordToServer(currentUser) };
+                  obj6 = { id: StringResult, name: interactionName, type: projectId(6208).InteractionTypes.APPLICATION_COMMAND, user: projectId(10503).userRecordToServer(currentUser) };
                   obj5.interaction = obj6;
                   let obj7 = obj5;
-                  const tmp2Result = projectId(10497);
+                  const tmp2Result = projectId(10503);
                 } else {
                   obj7 = {};
                 }
                 const merged1 = Object.assign(obj7);
-                const tmp4 = exchanges(10497);
+                const tmp4 = exchanges(10503);
                 items.push({ key: StringResult, record: obj2.createMessageRecord(obj4), isCommandReply: null != interactionName, menu: obj.menu });
                 const obj8 = { key: StringResult, record: obj2.createMessageRecord(obj4), isCommandReply: null != interactionName, menu: obj.menu };
               }

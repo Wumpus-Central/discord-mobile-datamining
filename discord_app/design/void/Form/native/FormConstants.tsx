@@ -3,7 +3,7 @@
 // Module 1191 (FormConstants)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
-import shared from "shared" /* 5148 */;
+import shared from "shared" /* 5150 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const internal = nativeDefault.internal;
 const semanticColor = internal.resolveSemanticColor(nativeDefault.themes.DARK, nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
 const internal2 = nativeDefault.internal;
 const semanticColor1 = internal2.resolveSemanticColor(nativeDefault.themes.LIGHT, nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
-const DeviceUtils = fn(5098);
+const DeviceUtils = fn(5100);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 let frozen = Object.freeze({ foreground: true });
 let closure_6 = Object.freeze({});

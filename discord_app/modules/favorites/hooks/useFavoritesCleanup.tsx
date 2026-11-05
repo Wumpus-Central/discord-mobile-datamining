@@ -1,10 +1,10 @@
-// === Module 18454: useFavoritesCleanup ===
+// === Module 18484: useFavoritesCleanup ===
 
-// Module 18454 (useFavoritesCleanup)
+// Module 18484 (useFavoritesCleanup)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 4993 */;
+import FavoriteStore from "FavoriteStore" /* 4995 */;
 
 const require = globalThis.__r;
 
@@ -45,11 +45,11 @@ export default function useFavoritesCleanup(arg0) {
                 FavoriteStore(true);
                 timestampProducer(false);
                 c3 = 2;
-                const result = tmp4(11009).setFavoritesAutoAddJoinedThreads(autoAdd);
-                const obj2 = tmp4(11009);
+                const result = tmp4(11015).setFavoritesAutoAddJoinedThreads(autoAdd);
+                const obj2 = tmp4(11015);
                 dependencyMap = 3;
                 c4 = 1;
-                const obj6 = { value: tmp4(11009).setFavoritesPruneInactiveThreads(first1, first2, first3), done: false };
+                const obj6 = { value: tmp4(11015).setFavoritesPruneInactiveThreads(first1, first2, first3), done: false };
                 return obj6;
               }
             }

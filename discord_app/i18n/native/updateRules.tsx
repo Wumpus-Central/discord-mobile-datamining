@@ -1,9 +1,9 @@
-// === Module 19637: updateRules ===
+// === Module 19672: updateRules ===
 
-// Module 19637 (updateRules)
+// Module 19672 (updateRules)
 import native from "native" /* 1187 */;
 import _modDef2072 from "module_2072" /* 2072 */;
-import LinkingDefault from "Linking" /* 5843 */;
+import LinkingDefault from "Linking" /* 5846 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 13000: ConjureFloatingActivity ===
+// === Module 13007: ConjureFloatingActivity ===
 
-// Module 13000 (ConjureFloatingActivity)
+// Module 13007 (ConjureFloatingActivity)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import timing_timing from "timing/timing" /* 5378 */;
+import timing_timing from "timing/timing" /* 5380 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 const obj2 = { root: null, pill: null, pillMain: null, checklistButton: null, panel: null, label: null };
 const rect = { position: "absolute", left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.root = rect;
@@ -76,7 +76,7 @@ export default function ConjureFloatingActivity(agents) {
     if (null != todos) {
       const obj5 = { style: tmp.panel, children: null };
       const obj6 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj5.children = closure_6(tmp13(12938), obj6);
+      obj5.children = closure_6(tmp13(12945), obj6);
       tmp14 = closure_6(View, obj5);
     }
   }
@@ -95,11 +95,11 @@ export default function ConjureFloatingActivity(agents) {
   let tmp18Result = null;
   if (null != todos) {
     const obj11 = { style: tmp.checklistButton, children: null };
-    const obj12 = { variant: "default", size: "sm", icon: tmp13(7049), pressed: tmp10, accessibilityLabel: null, onPress: null };
+    const obj12 = { variant: "default", size: "sm", icon: tmp13(7052), pressed: tmp10, accessibilityLabel: null, onPress: null };
     const intl2 = tmp2(1113).intl;
     obj12.accessibilityLabel = intl2.string(tmp13(3995).Qp2isI);
     obj12.onPress = callback;
-    obj11.children = closure_6(tmp2(13001).ToggleIconButton, obj12);
+    obj11.children = closure_6(tmp2(13008).ToggleIconButton, obj12);
     tmp18Result = closure_6(View, obj11);
   }
   items6[1] = tmp18Result;

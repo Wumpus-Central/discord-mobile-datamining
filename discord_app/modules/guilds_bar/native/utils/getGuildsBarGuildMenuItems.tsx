@@ -1,10 +1,10 @@
-// === Module 18616: getGuildsBarGuildMenuItems ===
+// === Module 18646: getGuildsBarGuildMenuItems ===
 
-// Module 18616 (getGuildsBarGuildMenuItems)
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7424 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 15978 */;
+// Module 18646 (getGuildsBarGuildMenuItems)
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7427 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 15990 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import GuildStore from "GuildStore" /* 5014 */;
 
 const require = globalThis.__r;
 

@@ -1,9 +1,9 @@
-// === Module 19177: VoiceChannelAppActionSheet ===
+// === Module 19208: VoiceChannelAppActionSheet ===
 
-// Module 19177 (VoiceChannelAppActionSheet)
+// Module 19208 (VoiceChannelAppActionSheet)
 import _modDef4093 from "module_4093" /* 4093 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5382 */;
-import VoiceChannelAppIconDefault from "VoiceChannelAppIcon" /* 19176 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import VoiceChannelAppIconDefault from "VoiceChannelAppIcon" /* 19207 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/voice_channel_apps/native/Voi
 
 export default function VoiceChannelAppActionSheet(guildId) {
   ({ selectedApplicationId, onChange } = guildId);
-  const voiceChannelAppSettingOptions = onChange(19174).useVoiceChannelAppSettingOptions(guildId.guildId, selectedApplicationId);
+  const voiceChannelAppSettingOptions = onChange(19205).useVoiceChannelAppSettingOptions(guildId.guildId, selectedApplicationId);
   ({ options, listState } = voiceChannelAppSettingOptions);
   items = [onChange];
   const callback = noop.useCallback((arg0) => {
@@ -28,7 +28,7 @@ export default function VoiceChannelAppActionSheet(guildId) {
   }, items);
   const intl = onChange(1113).intl;
   const stringResult = intl.string(_modDef4093.AdT7SZ);
-  const obj2 = { header: closure_4(onChange(7457).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  const obj2 = { header: closure_4(onChange(7460).BottomSheetTitleHeader, { title: stringResult }), children: null };
   const obj3 = { accessibilityLabel: stringResult, value: null, onChange: null, helperText: null, hasIcons: true, children: null };
   if (selectedApplicationId == null) {
     selectedApplicationId = none;
@@ -49,16 +49,16 @@ export default function VoiceChannelAppActionSheet(guildId) {
   const items1 = [
     options.map((iconApplication) => {
       ({ applicationId, name } = iconApplication);
-      return closure_1_4(onChange(7202).TableRadioRow, { value: applicationId, label: name, icon: closure_1_4(VoiceChannelAppIconDefault, { applicationId, name, iconApplication: iconApplication.iconApplication }) }, applicationId);
+      return closure_1_4(onChange(7205).TableRadioRow, { value: applicationId, label: name, icon: closure_1_4(VoiceChannelAppIconDefault, { applicationId, name, iconApplication: iconApplication.iconApplication }) }, applicationId);
     }),
 
   ];
   const obj4 = { value: none, label: null };
   const intl5 = onChange(1113).intl;
   obj4.label = intl5.string(_modDef4093.KEB4Rm);
-  items1[1] = closure_4(onChange(7202).TableRadioRow, obj4);
+  items1[1] = closure_4(onChange(7205).TableRadioRow, obj4);
   obj3.children = items1;
-  obj2.children = closure_5(onChange(7199).TableRadioGroup, obj3);
-  return closure_4(onChange(7502).ActionSheet, obj2);
+  obj2.children = closure_5(onChange(7202).TableRadioGroup, obj3);
+  return closure_4(onChange(7504).ActionSheet, obj2);
 };
 export const VOICE_CHANNEL_APP_ACTION_SHEET_KEY = "VoiceChannelAppActionSheet";

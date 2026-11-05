@@ -1,19 +1,19 @@
-// === Module 15266: DiscountsMegaphoneSpotIllustration ===
+// === Module 15279: DiscountsMegaphoneSpotIllustration ===
 
-// Module 15266 (DiscountsMegaphoneSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7210 */;
-import _modDef15267 from "module_15267" /* 15267 */;
-import _modDef15268 from "module_15268" /* 15268 */;
-import _modDef15269 from "module_15269" /* 15269 */;
+// Module 15279 (DiscountsMegaphoneSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7213 */;
+import _modDef15280 from "module_15280" /* 15280 */;
+import _modDef15281 from "module_15281" /* 15281 */;
+import _modDef15282 from "module_15282" /* 15282 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15267 }, 3: null };
-let obj2 = { uri: _modDef15267 };
-obj[2] = { uri: _modDef15268 };
-const obj3 = { uri: _modDef15268 };
-obj[3] = { uri: _modDef15269 };
+let obj = { 1: null, 2: { uri: _modDef15280 }, 3: null };
+let obj2 = { uri: _modDef15280 };
+obj[2] = { uri: _modDef15281 };
+const obj3 = { uri: _modDef15281 };
+obj[3] = { uri: _modDef15282 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 12065: TooltipStore ===
+// === Module 12074: TooltipStore ===
 
-// Module 12065 (TooltipStore)
+// Module 12074 (TooltipStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

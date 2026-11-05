@@ -1,16 +1,16 @@
-// === Module 10861: SKUActionCreators ===
+// === Module 10867: SKUActionCreators ===
 
-// Module 10861 (SKUActionCreators)
+// Module 10867 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import BillingUtils from "BillingUtils" /* 4954 */;
-import StoreUtils from "StoreUtils" /* 6590 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 6688 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7902 */;
-import TestModeUtils from "TestModeUtils" /* 9708 */;
+import BillingUtils from "BillingUtils" /* 4956 */;
+import StoreUtils from "StoreUtils" /* 6593 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 6691 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7907 */;
+import TestModeUtils from "TestModeUtils" /* 9714 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9628 */;
-import SKUStore from "SKUStore" /* 7031 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9634 */;
+import SKUStore from "SKUStore" /* 7034 */;
 
 require = fn;
 let closure_8 = async function _fetchSKU() {
@@ -291,27 +291,90 @@ let closure_10 = async function _fetchPublishedSKU(arg0) {
     }
   })();
 };
-let closure_11 = async function _fetchTestSKUsForApplication() {
-  closure_2 = tmp2;
-  closure_130_0 = closure_0;
-  let flag = closure_1;
-  if (closure_1 === undefined) {
-    flag = true;
-  }
-  closure_130_1 = flag;
-  await "flexDirection";
-  if (!obj12.isTestModeForApplication(closure_130_0)) {
-    if (closure_130_1) {
-      const _Error = Error;
-      const error = new Error("this should only be used in test mode");
-      throw error;
+let closure_11 = async function _fetchTestSKUsForApplication(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = true;
+          }
+          closure_130_1 = flag;
+          let body;
+          c4 = 1;
+          c5 = 1;
+          return { value: "flexDirection", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          if (!obj12.isTestModeForApplication(closure_130_0)) {
+            if (closure_130_1) {
+              const _Error = Error;
+              const error = new Error("this should only be used in test mode");
+              throw error;
+            }
+          }
+          obj12 = closure_131_0(closure_131_2[8]);
+          const obj6 = { url: closure_131_7.APPLICATION_SKUS(closure_130_0), rejectWithError: null };
+          const obj5 = closure_131_0(closure_131_2[5]);
+          obj6.rejectWithError = closure_131_0(closure_131_2[6]).rejectWithMigratedError();
+          c4 = 2;
+          c5 = 1;
+          const obj8 = { value: obj5.httpGetWithCountryCodeQuery(obj6), done: false };
+          return obj8;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj9 = { value, done: true };
+        return obj9;
+      } else {
+        body = value.body;
+        const obj10 = { type: "SKUS_FETCH_SUCCESS", skus: body };
+        closure_131_1(closure_131_2[4]).dispatch(obj10);
+        c5 = 3;
+        const obj11 = { value: body, done: true };
+        return obj11;
+      }
+    } catch (tmp28) {
+      c5 = tmp;
+      throw tmp28;
     }
   }
-  const obj6 = { url: closure_131_7.APPLICATION_SKUS(closure_130_0), rejectWithError: closure_131_0(closure_131_2[6]).rejectWithMigratedError() };
-  await closure_131_0(closure_131_2[5]).httpGetWithCountryCodeQuery(obj6);
-  const body = value.body;
-  closure_131_1(closure_131_2[4]).dispatch({ type: "SKUS_FETCH_SUCCESS", skus: body });
-  return body;
 };
 let closure_12 = async function _previewPurchaseSku(arg0) {
   if (c6 === 2) {
@@ -353,7 +416,7 @@ let closure_12 = async function _previewPurchaseSku(arg0) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -658,10 +721,11 @@ let closure_16 = async function _purchaseSKU() {
             closure_135_11 = undefined;
             closure_135_12 = undefined;
             closure_135_13 = undefined;
+            closure_135_14 = undefined;
             let promotionIdOverride;
-            closure_135_15 = undefined;
             closure_135_16 = undefined;
             closure_135_17 = undefined;
+            closure_135_18 = undefined;
             const obj5 = {};
             const merged = Object.assign(closure_2_14);
             const merged1 = Object.assign(closure_2);
@@ -671,10 +735,10 @@ let closure_16 = async function _purchaseSKU() {
             closure_135_6 = isGift;
             ({ giftInfoOptions: closure_135_7, loadId } = obj5);
             closure_135_8 = loadId;
-            ({ countryCode: closure_135_9, quantity: closure_135_10, applyWalletBalance: closure_135_11 } = obj5);
+            ({ countryCode: closure_135_9, quantity: closure_135_10, applyWalletBalance: closure_135_11, expectedPaymentLegs: closure_135_12 } = obj5);
             const obj7 = { type: "SKU_PURCHASE_START", applicationId, skuId, isGift, loadId };
             DispatcherDefault.dispatch(obj7);
-            closure_135_12 = TestModeUtils.isTestModeForApplication(applicationId);
+            closure_135_13 = TestModeUtils.isTestModeForApplication(applicationId);
             c9 = 1;
             obj9 = { gift: isGift, sku_subscription_plan_id: obj5.subscriptionPlanId };
             c11 = 2;
@@ -684,29 +748,29 @@ let closure_16 = async function _purchaseSKU() {
           }
         } else if (1 === tmp8) {
           c9 = 0;
-          closure_135_18 = closure_10;
-          if (closure_135_18 instanceof closure_136_0(closure_136_2[10]).BillingError) {
-            let billingError = closure_135_18;
+          closure_135_19 = closure_10;
+          if (closure_135_19 instanceof closure_136_0(closure_136_2[10]).BillingError) {
+            let billingError = closure_135_19;
           } else {
-            billingError = new closure_136_0(closure_136_2[10]).BillingError(closure_135_18);
+            billingError = new closure_136_0(closure_136_2[10]).BillingError(closure_135_19);
           }
-          closure_135_17 = billingError;
-          let tmp112 = closure_135_17.code !== closure_136_0(closure_136_2[11]).ErrorCodes.CONFIRMATION_REQUIRED;
-          if (tmp112) {
-            tmp112 = closure_135_17.code !== closure_136_0(closure_136_2[11]).ErrorCodes.AUTHENTICATION_REQUIRED;
+          closure_135_18 = billingError;
+          let tmp117 = closure_135_18.code !== closure_136_0(closure_136_2[11]).ErrorCodes.CONFIRMATION_REQUIRED;
+          if (tmp117) {
+            tmp117 = closure_135_18.code !== closure_136_0(closure_136_2[11]).ErrorCodes.AUTHENTICATION_REQUIRED;
           }
-          if (!tmp112) {
+          if (!tmp117) {
             const obj12 = { type: "SKU_PURCHASE_AWAIT_CONFIRMATION", skuId: closure_135_1, isGift: closure_135_6 };
             closure_136_1(closure_136_2[4]).dispatch(obj12);
             const obj16 = closure_136_1(closure_136_2[4]);
           }
-          const obj14 = { type: "SKU_PURCHASE_FAIL", applicationId: closure_135_0, skuId: closure_135_1, error: closure_135_17 };
+          const obj14 = { type: "SKU_PURCHASE_FAIL", applicationId: closure_135_0, skuId: closure_135_1, error: closure_135_18 };
           closure_136_1(closure_136_2[4]).dispatch(obj14);
-          if (closure_135_17.code !== closure_136_0(closure_136_2[11]).ErrorCodes.CONFIRMATION_REQUIRED) {
-            throw closure_135_17;
-          } else if (closure_135_18.body.payment_id) {
+          if (closure_135_18.code !== closure_136_0(closure_136_2[11]).ErrorCodes.CONFIRMATION_REQUIRED) {
+            throw closure_135_18;
+          } else if (closure_135_19.body.payment_id) {
             c12 = 3;
-            const obj15 = { value: closure_136_0(closure_136_2[13]).handlePaymentConfirmation(closure_135_18.body, closure_135_2), done: true };
+            const obj15 = { value: closure_136_0(closure_136_2[13]).handlePaymentConfirmation(closure_135_19.body, closure_135_2), done: true };
             return obj15;
           } else {
             throw closure_136_0(closure_136_2[13]).dispatchConfirmationError("payment id cannot be null on redirected confirmations.");
@@ -726,38 +790,41 @@ let closure_16 = async function _purchaseSKU() {
               obj9.gateway_checkout_context = value;
               obj9.load_id = closure_135_8;
               obj9.gift_info_options = closure_135_7;
-              closure_135_13 = obj9;
+              closure_135_14 = obj9;
               promotionIdOverride = closure_136_4.getPromotionIdOverride();
               if (null != promotionIdOverride) {
-                closure_135_13.promotion_id_override = promotionIdOverride;
+                closure_135_14.promotion_id_override = promotionIdOverride;
               }
-              if (closure_135_12) {
-                closure_135_13.test_mode = true;
+              if (closure_135_13) {
+                closure_135_14.test_mode = true;
               } else if (null != closure_135_2) {
-                closure_135_13.payment_source_id = closure_135_2.id;
-                closure_5 = closure_135_13;
+                closure_135_14.payment_source_id = closure_135_2.id;
+                closure_5 = closure_135_14;
                 c11 = 4;
                 c12 = 1;
                 const obj19 = { value: closure_136_0(closure_136_2[13]).createPaymentSourceToken(closure_135_2), done: false };
                 return obj19;
               }
               if (null != closure_135_3) {
-                closure_135_13.expected_amount = closure_135_3;
+                closure_135_14.expected_amount = closure_135_3;
               }
               if (null != closure_135_4) {
-                closure_135_13.expected_currency = closure_135_4;
+                closure_135_14.expected_currency = closure_135_4;
               }
-              closure_135_13.purchase_token = closure_136_0(closure_136_2[14]).getPurchaseToken();
+              closure_135_14.purchase_token = closure_136_0(closure_136_2[14]).getPurchaseToken();
               if (null != closure_135_10) {
-                closure_135_13.quantity = closure_135_10;
+                closure_135_14.quantity = closure_135_10;
               }
               apply_wallet_balance = closure_135_11;
               if (closure_135_11 == null) {
                 apply_wallet_balance = false;
               }
-              closure_135_13.apply_wallet_balance = apply_wallet_balance;
+              closure_135_14.apply_wallet_balance = apply_wallet_balance;
+              if (null != closure_135_12) {
+                closure_135_14.expected_payment_legs = closure_135_12.map((payment_gateway) => ({ payment_gateway: payment_gateway.payment_gateway, amount: payment_gateway.amount }));
+              }
               const HTTP = closure_136_0(closure_136_2[6]).HTTP;
-              const request = { url: closure_136_7.STORE_SKU_PURCHASE(closure_135_1), body: closure_135_13, context: null, oldFormErrors: true, rejectWithError: null };
+              const request = { url: closure_136_7.STORE_SKU_PURCHASE(closure_135_1), body: closure_135_14, context: null, oldFormErrors: true, rejectWithError: null };
               const obj22 = { load_id: closure_135_5 };
               request.context = obj22;
               const obj10 = closure_136_0(closure_136_2[14]);
@@ -777,13 +844,13 @@ let closure_16 = async function _purchaseSKU() {
               const obj24 = { value, done: true };
               return obj24;
             } else {
-              closure_135_15 = value;
-              c3 = closure_135_15;
+              closure_135_16 = value;
+              c3 = closure_135_16;
               const aPIBaseURL = closure_136_0(closure_136_2[6]).getAPIBaseURL();
-              if (closure_135_15 == null) {
+              if (closure_135_16 == null) {
                 c3 = "";
               }
-              closure_135_13.return_url = aPIBaseURL + closure_136_7.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(closure_135_2.type, c3, "success");
+              closure_135_14.return_url = aPIBaseURL + closure_136_7.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(closure_135_2.type, c3, "success");
               const obj6 = closure_136_0(closure_136_2[6]);
             }
           } else if (4 === tmp8) {
@@ -813,37 +880,37 @@ let closure_16 = async function _purchaseSKU() {
             const obj28 = { value, done: true };
             return obj28;
           } else {
-            closure_135_16 = value;
+            closure_135_17 = value;
             let dispatch = closure_136_1(closure_136_2[4]).dispatch;
             let obj = { type: "SKU_PURCHASE_SUCCESS", skuId: closure_135_1, libraryApplications: null, entitlements: null, giftCode: null, loadId: null };
-            if (null != closure_135_16.body.library_applications) {
-              const library_applications = closure_135_16.body.library_applications;
+            if (null != closure_135_17.body.library_applications) {
+              const library_applications = closure_135_17.body.library_applications;
               let found = library_applications.filter(closure_136_0(closure_136_2[15]).isNotNullish);
             } else {
               found = [];
             }
             obj.libraryApplications = found;
-            obj.entitlements = closure_135_16.body.entitlements;
-            obj.giftCode = closure_135_16.body.gift_code;
+            obj.entitlements = closure_135_17.body.entitlements;
+            obj.giftCode = closure_135_17.body.gift_code;
             obj.loadId = closure_135_8;
             dispatch(obj);
             obj = {};
-            dispatch = Object.assign(closure_135_16.body);
-            obj.appliedUserDiscounts = closure_135_16.body.applied_user_discounts;
+            dispatch = Object.assign(closure_135_17.body);
+            obj.appliedUserDiscounts = closure_135_17.body.applied_user_discounts;
             obj.redirectConfirmation = false;
             c9 = 0;
             c12 = 3;
-            const tmp159 = closure_136_1(closure_136_2[4]);
+            const tmp164 = closure_136_1(closure_136_2[4]);
           }
           if (null != closure_135_9) {
-            closure_135_13.country_code = closure_135_9;
+            closure_135_14.country_code = closure_135_9;
           }
         }
-      } catch (tmp147) {
-        closure_10 = tmp147;
+      } catch (tmp152) {
+        closure_10 = tmp152;
         if (tmp4 === c9) {
           c12 = tmp2;
-          throw tmp147;
+          throw tmp152;
         } else {
           c11 = tmp;
         }

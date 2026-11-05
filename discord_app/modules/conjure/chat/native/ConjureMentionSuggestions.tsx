@@ -1,10 +1,10 @@
-// === Module 13036: ConjureMentionSuggestions ===
+// === Module 13043: ConjureMentionSuggestions ===
 
-// Module 13036 (ConjureMentionSuggestions)
+// Module 13043 (ConjureMentionSuggestions)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import TableRowGroup from "TableRowGroup" /* 7201 */;
+import TableRowGroup from "TableRowGroup" /* 7204 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { fileThumbnail: null };
 let size = { width: nativeDefault.space.PX_24, height: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xs };
 obj2.fileThumbnail = size;

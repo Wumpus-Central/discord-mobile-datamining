@@ -1,11 +1,11 @@
-// === Module 16104: ContextMenuItem ===
+// === Module 16117: ContextMenuItem ===
 
-// Module 16104 (ContextMenuItem)
+// Module 16117 (ContextMenuItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import IconDefault from "Icon" /* 5770 */;
-import ContextMenuState from "ContextMenuState" /* 10054 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 10055 */;
+import IconDefault from "Icon" /* 5772 */;
+import ContextMenuState from "ContextMenuState" /* 10062 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 10063 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = module_1652.createAnimatedComponent(Pressable);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { container: { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 }, containerRefresh: { justifyContent: "flex-start" }, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
   const obj2 = { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };

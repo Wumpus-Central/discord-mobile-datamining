@@ -1,10 +1,10 @@
-// === Module 14365: useMultiPerkStatusValues ===
+// === Module 14378: useMultiPerkStatusValues ===
 
-// Module 14365 (useMultiPerkStatusValues)
+// Module 14378 (useMultiPerkStatusValues)
 import util from "util" /* 1113 */;
 import _modDef2699 from "module_2699" /* 2699 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5354 */;
-import usePowerupActiveStatus from "usePowerupActiveStatus" /* 14294 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5356 */;
+import usePowerupActiveStatus from "usePowerupActiveStatus" /* 14307 */;
 import size from "module_2" /* 2 */;
 
 const PowerupActiveStatusType = GuildPowerupsConstants.PowerupActiveStatusType;

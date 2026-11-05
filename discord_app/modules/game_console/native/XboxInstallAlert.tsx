@@ -1,20 +1,20 @@
-// === Module 12190: XboxInstallAlert ===
+// === Module 12199: XboxInstallAlert ===
 
-// Module 12190 (XboxInstallAlert)
+// Module 12199 (XboxInstallAlert)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import LinkingDefault from "Linking" /* 5843 */;
-import common_AlertDefault from "common/Alert" /* 6165 */;
-import _modDef12191 from "module_12191" /* 12191 */;
+import LinkingDefault from "Linking" /* 5846 */;
+import common_AlertDefault from "common/Alert" /* 6168 */;
+import _modDef12200 from "module_12200" /* 12200 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GameConsoleConstants = fn(9887);
+const GameConsoleConstants = fn(9893);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 const obj2 = { externalLinkIcon: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
 obj2.externalLinkIcon = size;
@@ -36,7 +36,7 @@ export default function XboxInstallAlert(arg0) {
   obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(native.Icon, { source: _modDef12191, style: closure_0.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef12200, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
     const obj = closure_0(1377);

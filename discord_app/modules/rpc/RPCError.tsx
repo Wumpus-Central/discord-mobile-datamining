@@ -1,7 +1,7 @@
-// === Module 9479: RPCError ===
+// === Module 9486: RPCError ===
 
-// Module 9479 (RPCError)
-import shared_RPCError from "shared/RPCError" /* 9480 */;
+// Module 9486 (RPCError)
+import shared_RPCError from "shared/RPCError" /* 9487 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/RPCError.tsx");

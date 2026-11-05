@@ -1,22 +1,22 @@
-// === Module 5073: PermissionStore ===
+// === Module 5075: PermissionStore ===
 
-// Module 5073 (PermissionStore)
+// Module 5075 (PermissionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5004 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5078 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 5081 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5082 */;
-import ImpersonateStore from "ImpersonateStore" /* 5046 */;
-import LurkingStore from "LurkingStore" /* 5074 */;
-import StageInstanceStore from "StageInstanceStore" /* 4995 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5006 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5080 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 5083 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5084 */;
+import ImpersonateStore from "ImpersonateStore" /* 5048 */;
+import LurkingStore from "LurkingStore" /* 5076 */;
+import StageInstanceStore from "StageInstanceStore" /* 4997 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
 import UserRecord from "UserRecord" /* 1399 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+import GuildStore from "GuildStore" /* 5014 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -195,20 +195,20 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
         let NONE4 = PermissionUtilsAll.NONE;
       } else {
         const tmpResult = PermissionUtilsAll;
-        const tmp26 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
-        NONE4 = tmpResult.applyThreadPermissions(context, tmp26, JoinedThreadsStore.hasJoined(context.id), GuildMemberStore.isCurrentUserGuest(context.guild_id));
+        const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
+        NONE4 = tmpResult.applyThreadPermissions(context, tmp24, JoinedThreadsStore.hasJoined(context.id), GuildMemberStore.isCurrentUserGuest(context.guild_id));
         const hasJoinedResult = JoinedThreadsStore.hasJoined(context.id);
       }
       return NONE4;
     } else {
       const id2 = context.id;
-      let tmp13 = dependencyMap2[id2];
-      if (null == tmp13) {
-        const tmp17 = getUncachedChannelPermissions(id2, true);
-        dependencyMap2[id2] = tmp17;
-        tmp13 = tmp17;
+      let tmp11 = dependencyMap2[id2];
+      if (null == tmp11) {
+        const tmp15 = getUncachedChannelPermissions(id2, true);
+        dependencyMap2[id2] = tmp15;
+        tmp11 = tmp15;
       }
-      NONE = tmp13;
+      NONE = tmp11;
     }
   } else {
     if (obj.isGuildRecord(context)) {
@@ -242,12 +242,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
   NONE = tmpResult4.computePermissions({ user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions });
   const obj3 = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
 }
-const ChannelRecord = fn(4994);
+const ChannelRecord = fn(4996);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(5008);
+const GuildRecord = fn(5010);
 ({ isGuildOwner: closure_10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1072).Permissions;
-let closure_18 = fn(5077).MemberSafetyPagePermissions;
+let closure_18 = fn(5079).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

@@ -1,15 +1,15 @@
-// === Module 12956: ConjurePlanExperiences ===
+// === Module 12963: ConjurePlanExperiences ===
 
-// Module 12956 (ConjurePlanExperiences)
+// Module 12963 (ConjurePlanExperiences)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import AppsIcon2 from "AppsIcon" /* 8819 */;
-import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12942 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 12950 */;
-import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12959 */;
-import ConjurePlanCommandText from "ConjurePlanCommandText" /* 12960 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import AppsIcon2 from "AppsIcon" /* 8824 */;
+import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12949 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 12957 */;
+import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12966 */;
+import ConjurePlanCommandText from "ConjurePlanCommandText" /* 12967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -89,24 +89,24 @@ function ExperienceBlocks(showsRequirements) {
       const items1 = [];
       if (result.channels.length > 0) {
         const obj2 = { channels: true, caption: null, children: null };
-        const intl3 = util.intl;
-        const obj3 = { count: result.channels.length };
-        obj2.caption = intl3.formatToPlainString(_modDef3995.w8F5sy, obj3);
-        const obj4 = { style: tmp.infoRows, children: null };
+        const intl2 = util.intl;
+        const obj4 = { count: result.channels.length };
+        obj2.caption = intl2.formatToPlainString(_modDef3995.w8F5sy, obj4);
+        const obj5 = { style: tmp.infoRows, children: null };
         const channels = result.channels;
-        obj4.children = channels.map((description) => {
+        obj5.children = channels.map((description) => {
           const name = description.name;
           return closure_1_5(ChannelRow, { name, description: description.description }, name);
         });
-        obj2.children = hasOwnProperty(View, obj4);
+        obj2.children = hasOwnProperty(View, obj5);
         items1.push(hasOwnProperty(InfoBlock, obj2, "channels"));
       }
       const result1 = conjurePlanExperienceSections.conjurePlanFrameFeatures(result);
       items = items1;
       if (result1.length > 0) {
         const obj6 = { caption: null, children: null };
-        const intl = util.intl;
-        obj6.caption = intl.string(_modDef3995.MY6UGJ);
+        const intl3 = util.intl;
+        obj6.caption = intl3.string(_modDef3995.MY6UGJ);
         const obj7 = { labels: result1 };
         obj6.children = hasOwnProperty(Chips, obj7);
         items1.push(hasOwnProperty(InfoBlock, obj6, "features"));
@@ -125,8 +125,8 @@ function ExperienceBlocks(showsRequirements) {
         let items3 = [];
       } else {
         const obj8 = { caption: null, children: null };
-        const intl2 = util.intl;
-        obj8.caption = intl2.string(util.t["0hKkS+"]);
+        const intl = util.intl;
+        obj8.caption = intl.string(util.t["0hKkS+"]);
         const obj9 = { commands: proposal.commands };
         obj8.children = hasOwnProperty(CommandList, obj9);
         items3 = [hasOwnProperty(InfoBlock, obj8, "commands")];
@@ -144,12 +144,12 @@ function ExperienceBlocks(showsRequirements) {
       }), arraySpreadResult);
       arr5 = items4;
     }
-    let tmp20 = null;
+    let tmp15 = null;
     if (arr5.length > 0) {
       const obj10 = { style: tmp.infoBlocks, children: arr5 };
-      tmp20 = hasOwnProperty(View, obj10);
+      tmp15 = hasOwnProperty(View, obj10);
     }
-    return tmp20;
+    return tmp15;
   }
 }
 function Bullets(arg0) {
@@ -220,8 +220,8 @@ function ComponentSection(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { frame: fn(9877).GameControllerIcon, overlay_widget: fn(12957).WindowTopIcon, user_widget: fn(10983).UserCircleIcon, bot: fn(12303).RobotIcon, commands: fn(12303).RobotIcon, automod: fn(11469).ShieldIcon };
-const createStyles = fn(5141);
+let obj = { frame: fn(9883).GameControllerIcon, overlay_widget: fn(12964).WindowTopIcon, user_widget: fn(10989).UserCircleIcon, bot: fn(12310).RobotIcon, commands: fn(12310).RobotIcon, automod: fn(11477).ShieldIcon };
+const createStyles = fn(5143);
 let obj3 = { intro: { gap: nativeDefault.space.PX_8 }, divider: null, component: null, componentHeader: null, iconBox: null, preview: null, listItem: null, bullet: null, listText: null, infoBlocks: null, infoBlock: null, channelsBlock: null, infoRows: null, infoRow: null, infoText: null, chips: null, chip: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };
 obj3.divider = { marginVertical: nativeDefault.space.PX_24, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };

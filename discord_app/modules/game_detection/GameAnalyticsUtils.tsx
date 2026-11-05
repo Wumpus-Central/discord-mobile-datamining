@@ -1,8 +1,8 @@
-// === Module 8031: GameAnalyticsUtils ===
+// === Module 8036: GameAnalyticsUtils ===
 
-// Module 8031 (GameAnalyticsUtils)
+// Module 8036 (GameAnalyticsUtils)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 8032 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 8037 */;
 import DetectableGameStore from "DetectableGameStore" /* 2161 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export function removeExecutablePathPrefix(exePath) {
 }
 export function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
-    return { gameName: "children", gameId: "substring_i", exe: "Promise", distributor: "dispatch", sku: "LengthDelimited", gameMetadata: "isArray", rawExePath: "isArray" };
+    return { gameName: "ind", gameId: "cix", exe: "applicationId", distributor: "start", sku: "label", gameMetadata: "icon", rawExePath: "useMemo" };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     const id = streamApplication.id;

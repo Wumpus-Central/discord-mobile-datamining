@@ -1,19 +1,9 @@
-// === Module 5100: getBurstAnimation ===
+// === Module 5102: getBurstAnimation ===
 
-// Module 5100 (getBurstAnimation)
+// Module 5102 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
-  {
-    load() {
-      return closure_0(5101);
-    }
-  },
-  {
-    load() {
-      return closure_0(5102);
-    }
-  },
   {
     load() {
       return closure_0(5103);
@@ -93,9 +83,7 @@ const items = [
     load() {
       return closure_0(5118);
     }
-  }
-];
-const items1 = [
+  },
   {
     load() {
       return closure_0(5119);
@@ -105,7 +93,9 @@ const items1 = [
     load() {
       return closure_0(5120);
     }
-  },
+  }
+];
+const items1 = [
   {
     load() {
       return closure_0(5121);
@@ -185,6 +175,16 @@ const items1 = [
     load() {
       return closure_0(5136);
     }
+  },
+  {
+    load() {
+      return closure_0(5137);
+    }
+  },
+  {
+    load() {
+      return closure_0(5138);
+    }
   }
 ];
 let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1, arg2) {
@@ -226,7 +226,7 @@ let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1, arg2) {
           let burstAnimationHash;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (arg0 === 1) {
         c7 = 3;

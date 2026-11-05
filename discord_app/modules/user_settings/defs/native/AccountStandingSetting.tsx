@@ -1,11 +1,11 @@
-// === Module 16883: AccountStandingSetting ===
+// === Module 16906: AccountStandingSetting ===
 
-// Module 16883 (AccountStandingSetting)
+// Module 16906 (AccountStandingSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import SettingsConstants from "SettingsConstants" /* 8573 */;
-import useAccountStandingStatusLabel from "useAccountStandingStatusLabel" /* 16884 */;
-import SettingBuilders from "SettingBuilders" /* 11729 */;
+import SettingsConstants from "SettingsConstants" /* 8578 */;
+import useAccountStandingStatusLabel from "useAccountStandingStatusLabel" /* 16907 */;
+import SettingBuilders from "SettingBuilders" /* 11737 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,21 +1,21 @@
-// === Module 16862: AccountAgeGroupSetting ===
+// === Module 16885: AccountAgeGroupSetting ===
 
-// Module 16862 (AccountAgeGroupSetting)
+// Module 16885 (AccountAgeGroupSetting)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4974 */;
-import TableRow from "TableRow" /* 7116 */;
-import SettingsConstants from "SettingsConstants" /* 8573 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10310 */;
-import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 16831 */;
-import AgeNoticeLazy from "AgeNoticeLazy" /* 16863 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 16870 */;
+import dismissible_content from "dismissible_content" /* 4976 */;
+import TableRow from "TableRow" /* 7119 */;
+import SettingsConstants from "SettingsConstants" /* 8578 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10318 */;
+import AgeNoticeSettingsPredicate from "AgeNoticeSettingsPredicate" /* 16854 */;
+import AgeNoticeLazy from "AgeNoticeLazy" /* 16886 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 16893 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5141 */;
-import SettingBuilders from "SettingBuilders" /* 11729 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 16871 */;
+import createStyles from "createStyles" /* 5143 */;
+import SettingBuilders from "SettingBuilders" /* 11737 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 16894 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -49,7 +49,7 @@ let obj3 = {
   screen: null
 };
 obj3.usePreNavigationAction = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS, AgeNoticeLazy.useShouldShowAgeNotice);
-obj3.usePredicate = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled;
+obj3.usePredicate = AgeNoticeSettingsPredicate.useIsAgeNoticeSettingsEnabled;
 obj3.screen = {
   route: Constants.UserSettingsSections.AGE_GROUP,
   getComponent() {

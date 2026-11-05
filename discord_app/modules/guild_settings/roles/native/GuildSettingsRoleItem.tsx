@@ -1,8 +1,8 @@
-// === Module 20070: GuildSettingsRoleItem ===
+// === Module 20106: GuildSettingsRoleItem ===
 
-// Module 20070 (GuildSettingsRoleItem)
+// Module 20106 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 7037 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 7040 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,9 +15,9 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = "body-md/semibold";
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { row: { flexDirection: "row", gap: 4, alignItems: "center" }, everyone: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, padding: 8 }, label: null, sparkleIcon: null, dragHandlePressable: null, container: null, gradient: null, image: null };
-let prop = fn(5761).TextStyleSheet["body-md/semibold"];
+let prop = fn(5763).TextStyleSheet["body-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;
@@ -136,7 +136,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    const obj6 = { value: tmp2(11796).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    const obj6 = { value: tmp2(11804).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj6;
                   }
                 } else if (arg0 === 1) {
@@ -260,7 +260,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
     }
     let tmp24Result = null;
     if (null != prop) {
-      const obj23 = { size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_10157"), "aria-label": null, style: null };
+      const obj23 = { size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_10165"), "aria-label": null, style: null };
       const intl6 = tmp5(onMoveUp[11]).intl;
       obj23["aria-label"] = intl6.string(tmp5(onMoveUp[11]).t.a2Ak8b);
       obj23.style = tmp4.sparkleIcon;

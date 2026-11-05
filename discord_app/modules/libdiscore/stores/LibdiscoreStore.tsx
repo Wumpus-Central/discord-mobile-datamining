@@ -1,6 +1,6 @@
-// === Module 5013: LibdiscoreStore ===
+// === Module 5015: LibdiscoreStore ===
 
-// Module 5013 (LibdiscoreStore)
+// Module 5015 (LibdiscoreStore)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

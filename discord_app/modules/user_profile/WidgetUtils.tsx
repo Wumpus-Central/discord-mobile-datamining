@@ -1,22 +1,22 @@
-// === Module 12564: WidgetUtils ===
+// === Module 12571: WidgetUtils ===
 
-// Module 12564 (WidgetUtils)
+// Module 12571 (WidgetUtils)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 4974 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5171 */;
-import utils from "utils" /* 5794 */;
-import useGame2 from "useGame" /* 7620 */;
-import WidgetType from "WidgetType" /* 7913 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7914 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 7916 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7918 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7920 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12567 */;
-import WidgetGameTag from "WidgetGameTag" /* 12568 */;
+import dismissible_content from "dismissible_content" /* 4976 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5173 */;
+import utils from "utils" /* 5796 */;
+import useGame2 from "useGame" /* 7622 */;
+import WidgetType from "WidgetType" /* 7918 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7919 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 7921 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7923 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7925 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12574 */;
+import WidgetGameTag from "WidgetGameTag" /* 12575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
-import UserProfileStore from "UserProfileStore" /* 7912 */;
-import WidgetStore from "WidgetStore" /* 12565 */;
+import UserProfileStore from "UserProfileStore" /* 7917 */;
+import WidgetStore from "WidgetStore" /* 12572 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -85,9 +85,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7915).WIDGET_TITLES_BY_TYPE;
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
-let closure_9 = fn(12566).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(7920).WIDGET_TITLES_BY_TYPE;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
+let closure_9 = fn(12573).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

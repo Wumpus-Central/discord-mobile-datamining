@@ -1,25 +1,25 @@
-// === Module 18240: Auth ===
+// === Module 18268: Auth ===
 
-// Module 18240 (Auth)
+// Module 18268 (Auth)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1641 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7090 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7257 */;
-import WideAuthScrollContext from "WideAuthScrollContext" /* 7282 */;
-import Navigator from "Navigator" /* 7306 */;
-import StackNavigator from "StackNavigator" /* 7308 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 18241 */;
-import useShouldShowChooseAccountDefault from "useShouldShowChooseAccount" /* 18247 */;
-import RegistrationUtils from "RegistrationUtils" /* 18252 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 18295 */;
-import _mod18296 from "module_18296" /* 18296 */;
-import AuthManagerDefault from "AuthManager" /* 18297 */;
-import useOrientationLockDefault from "useOrientationLock" /* 18306 */;
+import BackgroundImageDefault from "BackgroundImage" /* 7093 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7260 */;
+import WideAuthScrollContext from "WideAuthScrollContext" /* 7285 */;
+import Navigator from "Navigator" /* 7309 */;
+import StackNavigator from "StackNavigator" /* 7311 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 18269 */;
+import useShouldShowChooseAccountDefault from "useShouldShowChooseAccount" /* 18275 */;
+import RegistrationUtils from "RegistrationUtils" /* 18280 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 18323 */;
+import _mod18324 from "module_18324" /* 18324 */;
+import AuthManagerDefault from "AuthManager" /* 18325 */;
+import useOrientationLockDefault from "useOrientationLock" /* 18334 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 14195 */;
+import MultiAccountStore from "MultiAccountStore" /* 14208 */;
 
 require = fn;
 function getInitialAuthRouteStack() {
@@ -64,7 +64,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod18296;
+  obj3.backgroundImageSource = _mod18324;
   const children = [closure_9(BackgroundImageDefault, obj3), , ];
   let tmp18Result = null;
   if (tmp5) {
@@ -72,7 +72,7 @@ function NavigatorWithCaptchaHook() {
     if (tmp9 === AuthStates.WELCOME) {
       tmp18Result = null;
       if (tmp7) {
-        tmp18Result = closure_9(tmp4(7088), {});
+        tmp18Result = closure_9(tmp4(7091), {});
       }
     }
   }
@@ -145,7 +145,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(18242);
+let RegistrationStepsUtils = fn(18270);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {
@@ -198,13 +198,13 @@ const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {
   return items;
 }));
 let num = 540;
-if (fn(7264).hasWebAuthn) {
+if (fn(7267).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
 obj[AuthStates.LOGIN] = num;
 obj[AuthStates.MFA] = 600;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj3 = { transparent: { backgroundColor: "transparent" }, cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" }, wideOuterContainer: { flex: 1, justifyContent: "center" }, wideCard: null, wideHeaderFlat: null, wideHeader: null };
 let size = { backgroundColor: "transparent", borderRadius: nativeDefault.radii.lg, maxWidth: 600, alignSelf: "center", width: "100%", maxHeight: "90%", overflow: "hidden", height: 520 };
 obj3.wideCard = size;
@@ -224,7 +224,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[25]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7794).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7799).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, { value: noop.useMemo(() => RegistrationUtils.getTrackRegTransition(closure_0), []), children: closure_9(NavigatorWithCaptchaHook, {}) });

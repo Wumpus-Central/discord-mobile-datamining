@@ -1,9 +1,9 @@
-// === Module 8955: UserProfileSharedStyles ===
+// === Module 8960: UserProfileSharedStyles ===
 
-// Module 8955 (UserProfileSharedStyles)
+// Module 8960 (UserProfileSharedStyles)
 import nativeDefault from "native" /* 575 */;
-import Constants from "Constants" /* 7513 */;
-import createStyles from "createStyles" /* 5141 */;
+import Constants from "Constants" /* 7515 */;
+import createStyles from "createStyles" /* 5143 */;
 import size from "module_2" /* 2 */;
 
 ({ AVATAR_CONTAINER_SIZE: c2, AVATAR_CUSTOM_STATUS_GAP: c3, AVATAR_PADDING: closure_4, CARD_PADDING: hasOwnProperty, PROFILE_CONTENT_BOTTOM_PADDING: closure_6, PROFILE_SIDE_PADDING: metroImportDefault, PROFILE_TOP_LAYER_Z_INDEX: closure_8 } = Constants);

@@ -1,6 +1,6 @@
-// === Module 18681: InterestPickerExperiment ===
+// === Module 18711: InterestPickerExperiment ===
 
-// Module 18681 (InterestPickerExperiment)
+// Module 18711 (InterestPickerExperiment)
 import noop from "module_19" /* 19 */;
 
 const ApexExperiment = fn(1449);
@@ -17,9 +17,9 @@ export function isInterestPickerExperimentEnabled(nuf_interest_picker_step) {
     return false;
   }
 }
-export function useInterestPickerGameList(_location) {
-  noop = _location;
-  items = [_location];
+export function useInterestPickerGameList(InterestPickerStep) {
+  noop = InterestPickerStep;
+  items = [InterestPickerStep];
   return noop.useMemo(() => {
     try {
       const obj = { location: _location };

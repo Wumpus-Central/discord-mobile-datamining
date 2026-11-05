@@ -1,19 +1,19 @@
-// === Module 19267: SettingsNavigator ===
+// === Module 19298: SettingsNavigator ===
 
-// Module 19267 (SettingsNavigator)
+// Module 19298 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import Pressables from "Pressables" /* 7121 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7302 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16839 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 18747 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 19268 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import Pressables from "Pressables" /* 7124 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7305 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16862 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 18777 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 19299 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2191 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16837 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16860 */;
 
 const require = globalThis.__r;
 
@@ -48,9 +48,9 @@ const Constants = fn(1072);
 ({ AnalyticsPages: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const NativeStackNavigator = fn(10035);
+const NativeStackNavigator = fn(10041);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.headerContainer = { width: "100%", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };

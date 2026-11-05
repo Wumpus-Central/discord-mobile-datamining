@@ -1,15 +1,15 @@
-// === Module 13437: useGuildProfileCTA ===
+// === Module 13462: useGuildProfileCTA ===
 
-// Module 13437 (useGuildProfileCTA)
+// Module 13462 (useGuildProfileCTA)
 import FlagUtils from "FlagUtils" /* 1398 */;
-import GuildTagUtils from "GuildTagUtils" /* 8877 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 9104 */;
-import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 13438 */;
+import GuildTagUtils from "GuildTagUtils" /* 8882 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 9110 */;
+import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 13463 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5053 */;
-import GuildStore from "GuildStore" /* 5012 */;
-import InviteStore from "InviteStore" /* 5883 */;
+import GuildMemberStore from "GuildMemberStore" /* 5055 */;
+import GuildStore from "GuildStore" /* 5014 */;
+import InviteStore from "InviteStore" /* 5886 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;

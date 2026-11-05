@@ -1,10 +1,10 @@
-// === Module 15354: getSocialLayerStorefrontSkuEmbedDetails ===
+// === Module 15367: getSocialLayerStorefrontSkuEmbedDetails ===
 
-// Module 15354 (getSocialLayerStorefrontSkuEmbedDetails)
+// Module 15367 (getSocialLayerStorefrontSkuEmbedDetails)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7544 */;
-import _modDef10864 from "module_10864" /* 10864 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7546 */;
+import _modDef10870 from "module_10870" /* 10870 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -45,7 +45,7 @@ export function getSocialLayerStorefrontSkuEmbedDetails(value, application) {
   obj.badgeText = formatted;
   let uri;
   if (value.exclusive) {
-    uri = Image.resolveAssetSource(_modDef10864).uri;
+    uri = Image.resolveAssetSource(_modDef10870).uri;
   }
   obj.badgeIconUrl = uri;
   return obj;

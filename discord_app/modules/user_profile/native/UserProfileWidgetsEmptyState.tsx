@@ -1,46 +1,54 @@
-// === Module 16809: UserProfileWidgetsEmptyState ===
+// === Module 16832: UserProfileWidgetsEmptyState ===
 
-// Module 16809 (UserProfileWidgetsEmptyState)
+// Module 16832 (UserProfileWidgetsEmptyState)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import components_Button_Button from "components/Button/Button" /* 5768 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5384 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8908 */;
 import noop from "module_19" /* 19 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
+let closure_5 = fn(8900).TrackUserProfileEditActions;
 const jsxProd = fn(21);
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5141);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
+const createStyles = fn(5143);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" }, textContainer: null, centeredText: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.textContainer = { alignSelf: "stretch", gap: nativeDefault.space.PX_8 };
 obj2.centeredText = { textAlign: "center" };
-let closure_5 = createStyles.createStyles(obj2);
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsEmptyState.tsx");
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsEmptyState.tsx");
 
 export default function UserProfileWidgetsEmptyState() {
-  const tmp = closure_5();
-  const obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.textContainer, children: null };
-  const obj3 = { variant: "heading-sm/semibold", color: "text-strong", style: tmp.centeredText, children: null };
-  const intl = util.intl;
-  obj3.children = intl.string(util.t["oqalC+"]);
-  items = [React3(Text_Text.Heading, obj3), ];
-  const obj4 = { variant: "body-sm/normal", color: "text-default", style: tmp.centeredText, children: null };
-  const intl2 = util.intl;
-  obj4.children = intl2.string(util.t.O9SQ1c);
-  items[1] = React3(Text_Text.Text, obj4);
-  obj2.children = items;
-  const items1 = [React4(View, obj2), ];
-  const obj5 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = util.intl;
-  obj5.text = intl3.string(util.t["/NKLK5"]);
-  obj5.onPress = function onPress() {
-
+  const tmp = closure_8();
+  items = [AuthenticationStore];
+  _require = require("initialize").useStateFromStores(items, () => id.getId());
+  let obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.textContainer, children: null };
+  const obj4 = { variant: "heading-sm/semibold", color: "text-strong", style: tmp.centeredText, children: null };
+  const intl = require("util").intl;
+  obj4.children = intl.string(require("util").t["oqalC+"]);
+  const items1 = [closure_6(require("Text/Text").Heading, obj4), ];
+  const obj5 = { variant: "body-sm/normal", color: "text-default", style: tmp.centeredText, children: null };
+  const intl2 = require("util").intl;
+  obj5.children = intl2.string(require("util").t.O9SQ1c);
+  items1[1] = closure_6(require("Text/Text").Text, obj5);
+  obj3.children = items1;
+  const items2 = [closure_7(View, obj3), ];
+  const obj6 = { variant: "secondary", text: null, onPress: null };
+  const intl3 = require("util").intl;
+  obj6.text = intl3.string(require("util").t["/NKLK5"]);
+  obj6.onPress = function onPress() {
+    const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
+    const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16822, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
   };
-  items1[1] = React3(components_Button_Button.Button, obj5);
-  obj.children = items1;
-  return React4(View, obj);
+  items2[1] = closure_6(require("components/Button/Button").Button, obj6);
+  obj2.children = items2;
+  return closure_7(View, obj2);
 };

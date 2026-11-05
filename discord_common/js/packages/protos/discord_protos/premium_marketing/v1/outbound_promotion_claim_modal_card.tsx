@@ -1,8 +1,8 @@
-// === Module 9812: outbound_promotion_claim_modal_card ===
+// === Module 9818: outbound_promotion_claim_modal_card ===
 
-// Module 9812 (outbound_promotion_claim_modal_card)
+// Module 9818 (outbound_promotion_claim_modal_card)
 import _mod1197 from "module_1197" /* 1197 */;
-import theme_aware_asset from "theme_aware_asset" /* 9791 */;
+import theme_aware_asset from "theme_aware_asset" /* 9797 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

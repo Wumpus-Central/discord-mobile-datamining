@@ -1,9 +1,9 @@
-// === Module 11640: BadgeArtImage ===
+// === Module 11648: BadgeArtImage ===
 
-// Module 11640 (BadgeArtImage)
+// Module 11648 (BadgeArtImage)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import FastImageDefault from "FastImage" /* 5851 */;
-import APNGPlayer2 from "APNGPlayer" /* 9651 */;
+import FastImageDefault from "FastImage" /* 5854 */;
+import APNGPlayer2 from "APNGPlayer" /* 9657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,7 +46,7 @@ export default function BadgeArtImage(style) {
       } else {
         APNGPlayer(1377);
       }
-      APNGPlayer = APNGPlayer(9651).APNGPlayer;
+      APNGPlayer = APNGPlayer(9657).APNGPlayer;
       const obj5 = { url: fallbackUrl, style: size, autoplay: true };
       tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
     }

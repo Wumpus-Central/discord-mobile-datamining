@@ -1,6 +1,6 @@
-// === Module 9727: FractionalNitroPricingExperiment ===
+// === Module 9733: FractionalNitroPricingExperiment ===
 
-// Module 9727 (FractionalNitroPricingExperiment)
+// Module 9733 (FractionalNitroPricingExperiment)
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;

@@ -1,13 +1,13 @@
-// === Module 13659: CheckpointActionCreators ===
+// === Module 13670: CheckpointActionCreators ===
 
-// Module 13659 (CheckpointActionCreators)
+// Module 13670 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7625 */;
-import Tracking from "Tracking" /* 13655 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7627 */;
+import Tracking from "Tracking" /* 13666 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import CheckpointStore from "CheckpointStore" /* 13657 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import CheckpointStore from "CheckpointStore" /* 13668 */;
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
@@ -319,10 +319,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             value: Promise.allSettled(closure_133_2.map((item) => {
                       channel = channel.getChannel(item);
                       if (null != channel) {
-                        const obj = checkpointCardType(7776);
+                        const obj = checkpointCardType(7781);
                         const id = channel.id;
                         const obj3 = { location: "checkpoint", checkpointCardType };
-                        return obj.sendMessage(id, checkpointCardType(7964).parse(channel, closure_1_0), false, obj3);
+                        return obj.sendMessage(id, checkpointCardType(7969).parse(channel, closure_1_0), false, obj3);
                       }
                     })),
             done: false
@@ -362,7 +362,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(13657).CheckpointFetchStates;
+const CheckpointFetchStates = fn(13668).CheckpointFetchStates;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

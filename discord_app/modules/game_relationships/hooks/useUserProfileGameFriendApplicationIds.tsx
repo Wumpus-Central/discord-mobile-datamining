@@ -1,8 +1,8 @@
-// === Module 15201: useUserProfileGameFriendApplicationIds ===
+// === Module 15214: useUserProfileGameFriendApplicationIds ===
 
-// Module 15201 (useUserProfileGameFriendApplicationIds)
+// Module 15214 (useUserProfileGameFriendApplicationIds)
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 5083 */;
+import RelationshipStore from "RelationshipStore" /* 5085 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;

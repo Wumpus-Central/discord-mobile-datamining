@@ -1,11 +1,11 @@
-// === Module 13657: CheckpointStore ===
+// === Module 13668: CheckpointStore ===
 
-// Module 13657 (CheckpointStore)
+// Module 13668 (CheckpointStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2112 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6246 */;
-import CheckpointTrait from "CheckpointTrait" /* 6247 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6248 */;
+import CheckpointTrait from "CheckpointTrait" /* 6249 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;

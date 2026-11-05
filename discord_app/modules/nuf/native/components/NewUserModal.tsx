@@ -1,9 +1,9 @@
-// === Module 19839: NewUserModal ===
+// === Module 19874: NewUserModal ===
 
-// Module 19839 (NewUserModal)
+// Module 19874 (NewUserModal)
 import nativeDefault from "native" /* 575 */;
-import NewUserUtils from "NewUserUtils" /* 19838 */;
-import InterestPickerPicksContextDefault from "InterestPickerPicksContext" /* 19841 */;
+import NewUserUtils from "NewUserUtils" /* 19873 */;
+import InterestPickerPicksContextDefault from "InterestPickerPicksContext" /* 19876 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,9 +12,9 @@ require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const NativeStackNavigator = fn(10035);
+const NativeStackNavigator = fn(10041);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj3 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_8 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -91,14 +91,14 @@ export default function NewUserModal(arg0) {
     closure_5(Navigator.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(18299).RedesignNotificationScreen;
+        return closure_0(18327).RedesignNotificationScreen;
       },
       initialParams: { onComplete }
     }),
     closure_5(Navigator.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(19842).default;
+        return closure_0(19877).default;
       },
       options() {
         return {
@@ -108,13 +108,13 @@ export default function NewUserModal(arg0) {
             obj.onPress = function onPress() {
               closure_0 = closure_1_4;
               const lazyResult = React.lazy(() => closure_0(paths[7])(paths[6], paths.paths));
-              closure_2_0(6095).openAlert("skip-avatar-upload", closure_2_5(lazyResult, {
+              closure_2_0(6098).openAlert("skip-avatar-upload", closure_2_5(lazyResult, {
                 onConfirm() {
                   return closure_0(true);
                 }
               }));
             };
-            return closure_2_5(closure_1(14480), obj);
+            return closure_2_5(closure_1(14493), obj);
           }
         };
       },
@@ -124,7 +124,7 @@ export default function NewUserModal(arg0) {
       name: "contact-sync",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(14468).ContactSyncOnboardingModal;
+        return closure_0(14481).ContactSyncOnboardingModal;
       },
       initialParams: { onComplete }
     }),
@@ -132,7 +132,7 @@ export default function NewUserModal(arg0) {
       name: "interest-picker",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(19843).default;
+        return closure_0(19878).default;
       },
       initialParams: { onComplete }
     }),
@@ -140,14 +140,14 @@ export default function NewUserModal(arg0) {
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(19855).default;
+        return closure_0(19889).default;
       },
       initialParams: { onComplete }
     }),
     closure_5(Navigator.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(19861).default;
+        return closure_0(19895).default;
       },
       initialParams: { onComplete }
     })

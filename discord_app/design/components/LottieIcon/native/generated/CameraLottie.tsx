@@ -1,8 +1,8 @@
-// === Module 12113: CameraLottie ===
+// === Module 12122: CameraLottie ===
 
-// Module 12113 (CameraLottie)
-import LottieIcon from "LottieIcon" /* 12114 */;
-import _mod12115 from "module_12115" /* 12115 */;
+// Module 12122 (CameraLottie)
+import LottieIcon from "LottieIcon" /* 12123 */;
+import _mod12124 from "module_12124" /* 12124 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,5 +15,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 export function CameraLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod12115, ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod12124, ref: ref.ref, layers, markers: items });
 }

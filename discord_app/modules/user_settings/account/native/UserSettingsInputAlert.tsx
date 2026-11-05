@@ -1,18 +1,18 @@
-// === Module 16921: UserSettingsInputAlert ===
+// === Module 16944: UserSettingsInputAlert ===
 
-// Module 16921 (UserSettingsInputAlert)
+// Module 16944 (UserSettingsInputAlert)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import Text_Text from "Text/Text" /* 5761 */;
-import Stack_Stack from "Stack/Stack" /* 6162 */;
-import common_AlertDefault from "common/Alert" /* 6165 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7096 */;
-import TextInput from "TextInput" /* 7223 */;
+import Text_Text from "Text/Text" /* 5763 */;
+import Stack_Stack from "Stack/Stack" /* 6165 */;
+import common_AlertDefault from "common/Alert" /* 6168 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7099 */;
+import TextInput from "TextInput" /* 7226 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "children" };
+const hasOwnProperty = { input: "", error: "applicationId" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -69,24 +69,34 @@ class UserSettingsInputAlert extends PureComponent {
 const prototype = UserSettingsInputAlert.prototype;
 prototype["renderContent"] = function renderContent() {
   const self = this;
-  const helpText = this.props.helpText;
+  ({ secureTextEntry, helpText } = this.props);
   if (null != this.props.error) {
     if ("" !== self.props.error) {
       let error = self.props.error;
     }
-    let tmp7 = null != helpText;
-    if (tmp7) {
+    let tmp6 = null != helpText;
+    if (tmp6) {
       const obj = { variant: "body-md/normal", children: helpText };
-      tmp7 = React3(Text_Text.Text, obj);
+      tmp6 = React3(Text_Text.Text, obj);
     }
-    items = [tmp7, ];
-    const obj2 = { label: tmp3, placeholder: tmp, secureTextEntry: tmp2, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
-    let str2 = "default";
+    items = [tmp6, ];
+    const obj2 = { label: tmp2, placeholder: tmp, secureTextEntry, revealable: true, autoCapitalize: "none", autoComplete: null, textContentType: null, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
+    let str2;
+    if (secureTextEntry) {
+      str2 = "current-password";
+    }
+    obj2.autoComplete = str2;
+    let str3;
+    if (secureTextEntry) {
+      str3 = "password";
+    }
+    obj2.textContentType = str3;
+    let str4 = "default";
     if (null != error) {
-      str2 = "error";
+      str4 = "error";
     }
     const obj3 = { spacing: 16, children: null };
-    obj2.status = str2;
+    obj2.status = str4;
     obj2.errorMessage = error;
     obj2.onSubmitEditing = self.handleSubmit;
     obj2.onChange = function onChange(input) {

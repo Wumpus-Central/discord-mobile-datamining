@@ -1,9 +1,9 @@
-// === Module 8819: AppsIcon ===
+// === Module 8824: AppsIcon ===
 
-// Module 8819 (AppsIcon)
+// Module 8824 (AppsIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5850 */;
-import _mod8749 from "module_8749" /* 8749 */;
+import BaseIconImage from "BaseIconImage" /* 5853 */;
+import _mod8754 from "module_8754" /* 8754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function AppsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8749, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8754, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

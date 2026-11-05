@@ -1,7 +1,7 @@
-// === Module 14872: FederatedSocialModal ===
+// === Module 14885: FederatedSocialModal ===
 
-// Module 14872 (FederatedSocialModal)
-import PlatformsDefault from "Platforms" /* 6709 */;
+// Module 14885 (FederatedSocialModal)
+import PlatformsDefault from "Platforms" /* 6712 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -148,7 +148,7 @@ function FederatedSocialModalScreen(onClose) {
 const WebBrowserType = fn(1072).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_9 = createStyles.createStyles({ container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/FederatedSocialModal.tsx");

@@ -1,15 +1,16 @@
-// === Module 12369: ConjureEffortTiers ===
+// === Module 12376: ConjureEffortTiers ===
 
-// Module 12369 (ConjureEffortTiers)
+// Module 12376 (ConjureEffortTiers)
 import util from "util" /* 1113 */;
 import _modDef3995 from "module_3995" /* 3995 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 12370 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 12377 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 let closure_3 = ["thinking"];
 let closure_4 = ["fast"];
 let obj = { simple: _modDef3995.Mqb8mc, balanced: _modDef3995.zCZfA6, complex: _modDef3995["8l2atm"] };
+const CONJURE_MODEL_TIERS = fn(12378).CONJURE_MODEL_TIERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 
@@ -46,12 +47,12 @@ export function conjureTierModel(settings, tiers, tier) {
   }
   return tmp;
 }
-export function conjureWithTier(tier, tier2) {
-  let tmp = tier;
-  if (tier2 !== tier.tier) {
-    const thinking = tier.thinking;
+export function conjureWithTier(settings, tier2) {
+  let tmp = settings;
+  if (tier2 !== settings.tier) {
+    const thinking = settings.thinking;
     obj = {};
-    const merged = Object.assign(_objectWithoutProperties(tier, closure_3));
+    const merged = Object.assign(_objectWithoutProperties(settings, closure_3));
     obj.tier = tier2;
     tmp = obj;
   }
@@ -110,11 +111,29 @@ export function conjureNormalizeFast(conjurePickTierModelResult) {
 export function conjureCanPickModel(choices) {
   return choices.main.length > 0;
 }
-export function conjureCustomizeMessage(choices) {
-  if (choices.main.length > 0) {
-    let qSViP4 = _modDef3995.eGqPbV;
+export function conjureTierAvailable(value) {
+  return "complex" !== value;
+}
+export const CONJURE_UNAVAILABLE_TIER_STOPS = CONJURE_MODEL_TIERS.flatMap((item, index) => {
+  if ("complex" !== item) {
+    items = [];
   } else {
-    qSViP4 = _modDef3995.qSViP4;
+    items = [index];
   }
-  return qSViP4;
+  return items;
+});
+export function conjureTierStopLabel(value) {
+  const modelTierMessageResult = ConjureModelLabels.modelTierMessage(value);
+  let stringResult = value;
+  if (null != modelTierMessageResult) {
+    const intl = util.intl;
+    stringResult = intl.string(modelTierMessageResult);
+  }
+  let combined = stringResult;
+  if ("complex" === value) {
+    const intl2 = util.intl;
+    const _HermesInternal = HermesInternal;
+    combined = "" + stringResult + ", " + intl2.string(_modDef3995["17yEQw"]);
+  }
+  return combined;
 }

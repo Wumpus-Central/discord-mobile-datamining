@@ -1,24 +1,24 @@
-// === Module 7021: GuildReadStateStore ===
+// === Module 7024: GuildReadStateStore ===
 
-// Module 7021 (GuildReadStateStore)
+// Module 7024 (GuildReadStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import FavoritesUtils from "FavoritesUtils" /* 5015 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 5081 */;
-import NSFWContentGate from "NSFWContentGate" /* 6887 */;
-import isOptInEnabled from "isOptInEnabled" /* 7020 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 7022 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6993 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6976 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5075 */;
+import FavoritesUtils from "FavoritesUtils" /* 5017 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 5083 */;
+import NSFWContentGate from "NSFWContentGate" /* 6890 */;
+import isOptInEnabled from "isOptInEnabled" /* 7023 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 7025 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6996 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6979 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5077 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4990 */;
-import GuildStore from "GuildStore" /* 5012 */;
+import ChannelStore from "ChannelStore" /* 4992 */;
+import GuildStore from "GuildStore" /* 5014 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
-import PermissionStore from "PermissionStore" /* 5073 */;
-import ReadStateStore from "ReadStateStore" /* 6977 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5044 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6910 */;
+import PermissionStore from "PermissionStore" /* 5075 */;
+import ReadStateStore from "ReadStateStore" /* 6980 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5046 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6913 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -959,11 +959,11 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(4994);
+const ChannelRecord = fn(4996);
 ({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: closure_10 } = ChannelRecord);
-const isGuildNSFW = fn(5008).isGuildNSFW;
-const ChannelFlags = fn(4997).ChannelFlags;
-const ReadStateConstants = fn(6911);
+const isGuildNSFW = fn(5010).isGuildNSFW;
+const ChannelFlags = fn(4999).ChannelFlags;
+const ReadStateConstants = fn(6914);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
 let guilds = {};

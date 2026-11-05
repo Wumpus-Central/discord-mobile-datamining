@@ -1,12 +1,12 @@
-// === Module 17394: QuestCardPreview ===
+// === Module 17420: QuestCardPreview ===
 
-// Module 17394 (QuestCardPreview)
+// Module 17420 (QuestCardPreview)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import QuestTypes from "QuestTypes" /* 6919 */;
-import QuestCard from "QuestCard" /* 17314 */;
-import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 17395 */;
+import QuestTypes from "QuestTypes" /* 6922 */;
+import QuestCard from "QuestCard" /* 17340 */;
+import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 17421 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -14,10 +14,10 @@ const result = size.fileFinishedImporting("modules/user_settings/quests/native/Q
 
 export function QuestCardPreview(quest) {
   quest = quest.quest;
-  return jsx(quest(14911).QuestContentImpressionTrackerNative, {
+  return jsx(quest(14924).QuestContentImpressionTrackerNative, {
     questOrQuests: quest,
-    questContent: quest(6919).QuestContent.INTERNAL_PREVIEW_TOOL,
-    sourceQuestContent: quest(6919).QuestContent.INTERNAL_PREVIEW_TOOL,
+    questContent: quest(6922).QuestContent.INTERNAL_PREVIEW_TOOL,
+    sourceQuestContent: quest(6922).QuestContent.INTERNAL_PREVIEW_TOOL,
     trackGuildAndChannelMetadata: false,
     children() {
       const obj = { title: null, children: null };

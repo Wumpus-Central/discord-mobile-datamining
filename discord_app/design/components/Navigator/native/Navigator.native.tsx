@@ -1,17 +1,17 @@
-// === Module 7306: Navigator ===
+// === Module 7309: Navigator ===
 
-// Module 7306 (Navigator)
+// Module 7309 (Navigator)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import SentryInitUtils from "SentryInitUtils" /* 1243 */;
 import Link from "Link" /* 1500 */;
-import BackPressTracking from "BackPressTracking" /* 6160 */;
-import NavigatorHeader from "NavigatorHeader" /* 7139 */;
-import _mod7146 from "module_7146" /* 7146 */;
-import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7307 */;
-import StackNavigator from "StackNavigator" /* 7308 */;
-import NavigatorScreen from "NavigatorScreen" /* 7341 */;
-import useNavigationTheme from "useNavigationTheme" /* 7346 */;
+import BackPressTracking from "BackPressTracking" /* 6163 */;
+import NavigatorHeader from "NavigatorHeader" /* 7142 */;
+import _mod7149 from "module_7149" /* 7149 */;
+import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7310 */;
+import StackNavigator from "StackNavigator" /* 7311 */;
+import NavigatorScreen from "NavigatorScreen" /* 7344 */;
+import useNavigationTheme from "useNavigationTheme" /* 7349 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -220,7 +220,7 @@ function WrappedNavigationStack(arg0) {
     }
     return tmp2;
   }), 1)[0];
-  const tmp5 = navigationContainerRef(5377)();
+  const tmp5 = navigationContainerRef(5379)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null != navigationTheme) {
@@ -245,13 +245,13 @@ function WrappedNavigationStack(arg0) {
   const merged1 = Object.assign(merged);
   obj4.children = <NavigationStack initialRouteName={initialRouteName} />;
   obj6.children = jsx(Link.NavigationContainer, { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null });
-  obj5.children = jsx(_mod7146.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj5.children = jsx(_mod7149.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
