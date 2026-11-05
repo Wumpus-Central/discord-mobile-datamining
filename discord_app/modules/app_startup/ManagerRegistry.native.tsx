@@ -709,6 +709,7 @@ obj.NotifSettingsProtoManager = {
   inlineRequire() {
     return require("NotifSettingsProtoManager").default;
   },
+  hasStoreChangeListeners: true,
   neverLoadBeforeConnectionOpen: true,
 };
 obj.NUFChannelsManager = {
@@ -719,7 +720,7 @@ obj.NUFChannelsManager = {
   loadAfterConnectionOpen: true,
 };
 obj.ParentalConsentManager = {
-  actions: ["CONNECTION_OPEN_SUPPLEMENTAL", "APP_STATE_UPDATE"],
+  actions: ["CONNECTION_OPEN_SUPPLEMENTAL", "POST_CONNECTION_OPEN", "APP_STATE_UPDATE", "LOGOUT"],
   inlineRequire() {
     return require("ParentalConsentManager").default;
   },

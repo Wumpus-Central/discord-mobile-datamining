@@ -4,8 +4,9 @@ import util from "../../../intl/index.native.tsx";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
 import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard.tsx";
-import useUserProfileWidgetsDefault from "../hooks/useUserProfileWidgets.tsx";
+import UserProfileTabPagesDefault from "UserProfileTabPages.tsx";
 import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext.tsx";
 import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader.tsx";
 import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState.tsx";
@@ -14,7 +15,6 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const UserProfileTabPagesDefault = tmp2(15227);
 require = fn;
 function MainPage() {
   const tmp = closure_9();
@@ -24,10 +24,10 @@ function MainPage() {
   });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7513).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7515).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING },
   page: null,
@@ -58,32 +58,34 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   _require = userId;
   const containerBackground = userId.containerBackground;
   importDefault = containerBackground;
-  noop = undefined;
   first = undefined;
-  closure_6 = undefined;
+  closure_5 = undefined;
+  let arr;
+  closure_7 = undefined;
   ({ hasCustomProfileTheme, scrollPosition, scrollViewRef, isBoardTabOnScreen } = userId);
   const tmp = closure_9();
   dependencyMap = tmp;
   const tmp4 = UserProfileSharedStylesDefault();
   _slicedToArray = tmp4;
-  [tmp6, c4] = noop.useState(0);
-  [first, closure_6] = noop.useState(0);
-  const arr = useUserProfileWidgetsDefault(userId);
-  closure_8 = tmp9;
+  const tmp5 = useMeasuredLayoutDefault();
+  const width = tmp5.width;
+  let num = 0;
+  ({ ref, onLayout } = tmp5);
+  if (undefined !== width) {
+    num = width;
+  }
+  [first, closure_5] = first.useState(0);
+  arr = tmp2(15180)(userId);
+  closure_7 = tmp8;
   let items1 = [arr];
-  const memo = noop.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
-  const tmp11 = _require;
-  const tmp5 = _slicedToArray(noop.useState(0), 2);
+  const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
   const fetchSuggestedGames = require("SuggestedGameHooks").useFetchSuggestedGames(true, memo);
-  const callback = noop.useCallback((nativeEvent) => {
-    _undefined(nativeEvent.nativeEvent.layout.width);
-  }, []);
   let items2 = [userId, first, arr.length > 0, containerBackground, tmp.page, tmp4.card];
-  const callback1 = noop.useCallback((arg0) => {
+  const callback = first.useCallback((arg0) => {
     ChatInputUtils.dismissKeyboard();
-    closure_6(arg0);
+    closure_5(arg0);
   }, []);
-  const memo1 = noop.useMemo(() => {
+  const memo1 = first.useMemo(() => {
     const obj = { id: "main", label: null, page: null };
     const intl = util.intl;
     obj.label = intl.string(util.t.LXw470);
@@ -93,7 +95,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     const intl2 = util.intl;
     obj2.label = intl2.string(util.t.laViwx);
     const obj3 = { style: page.page, children: null };
-    if (closure_8) {
+    if (closure_7) {
       const obj4 = { children: null };
       const items1 = [timestampProducer(UserProfileWidgetEditingHeaderDefault, {})];
       const obj5 = { userId, isVisible: 1 === first, isEditing: true, cardStyle: null };
@@ -113,46 +115,47 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     return items;
   }, items2);
   let obj = require("SuggestedGameHooks");
+  const tmp10 = _require;
   const measuredTabItems = require("UserProfileTabPages").useMeasuredTabItems(memo1);
   ({ items, pageHeights } = measuredTabItems);
   let obj2 = require("UserProfileTabPages");
   const segmentedControlState = require("SegmentedControlState").useSegmentedControlState({
-    pageWidth: tmp6,
+    pageWidth: num,
     items,
-    onPageChange: callback1,
+    onPageChange: callback,
   });
   let obj3 = require("SegmentedControlState");
   const items3 = [closure_11, segmentedControlState, 1];
   _require = undefined;
   importDefault = undefined;
-  [tmp18, tmp19, tmp20] = items3;
+  [tmp16, tmp17, tmp18] = items3;
   class UserProfileEditFormTabsTsx1 {
     constructor() {
       visiblePageRange = closure_0.visiblePageRange;
       return visiblePageRange.get()[1] >= closure_1;
     }
   }
-  const items4 = [tmp19, tmp20];
+  const items4 = [tmp17, tmp18];
   UserProfileEditFormTabsTsx1.__closure = items4;
   UserProfileEditFormTabsTsx1.__workletHash = 15064395793601;
-  UserProfileEditFormTabsTsx1.__initData = tmp18;
+  UserProfileEditFormTabsTsx1.__initData = tmp16;
   const items5 = [closure_12, isBoardTabOnScreen];
   _require = undefined;
-  [tmp21, tmp22] = items5;
+  [tmp19, tmp20] = items5;
   class UserProfileEditFormTabsTsx2 {
     constructor(arg0) {
       return closure_0.set(userId);
     }
   }
-  const items6 = [tmp22];
+  const items6 = [tmp20];
   UserProfileEditFormTabsTsx2.__closure = items6;
   UserProfileEditFormTabsTsx2.__workletHash = 6535287831650;
-  UserProfileEditFormTabsTsx2.__initData = tmp21;
+  UserProfileEditFormTabsTsx2.__initData = tmp19;
   const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
     UserProfileEditFormTabsTsx1,
     UserProfileEditFormTabsTsx2,
   );
-  let obj5 = { style: tmp.tabbedContainer, onLayout: callback, children: null };
+  let obj5 = { style: tmp.tabbedContainer, ref, onLayout, children: null };
   let obj6 = { state: segmentedControlState, variant: null };
   let str;
   if (hasCustomProfileTheme) {
@@ -160,9 +163,9 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   }
   obj6.variant = str;
   const items7 = [
-    closure_6(tmp11(12372).Tabs, obj6),
-    closure_6(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
+    arr(tmp10(12379).Tabs, obj6),
+    arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
   obj5.children = items7;
-  return closure_8(first, obj5);
+  return closure_8(closure_5, obj5);
 });

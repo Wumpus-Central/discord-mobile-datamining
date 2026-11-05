@@ -64,6 +64,26 @@ prototype["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal(
   }
   return flag;
 };
+prototype["isMediaTakedownRegulation"] = function isMediaTakedownRegulation(arg0) {
+  let flag;
+  if (_null != null) {
+    flag = _null.isMediaTakedownRegulation(arg0);
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+prototype["isAppStoreConsentRevoked"] = function isAppStoreConsentRevoked(arg0) {
+  let flag;
+  if (_null != null) {
+    flag = _null.isAppStoreConsentRevoked(arg0);
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
 prototype["getUserCountryCode"] = function getUserCountryCode() {
   return closure_5;
 };

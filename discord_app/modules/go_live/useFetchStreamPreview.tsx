@@ -86,5 +86,5 @@ export default function useFetchStreamPreview(guildId, channelId, ownerId) {
     }
     return obj5;
   }
-  obj5 = { previewUrl: "flexDirection", isLoading: null };
+  obj5 = { previewUrl: "flexDirection", isLoading: true };
 }

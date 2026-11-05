@@ -13,7 +13,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef16900 from "../../../../../_runtime/metro/16900__.js";
+import _modDef16923 from "../../../../../_runtime/metro/16923__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -28,8 +28,8 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, LoginRequiredActions: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const state = { newPassword: "children", password: 17082945 };
-const createStyles = fn(5141);
+const state = { newPassword: "id", password: 17084481 };
+const createStyles = fn(5143);
 let obj2 = {
   onePass: { width: 20, height: 20 },
   unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 },
@@ -159,7 +159,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef16900, style: tmp.image };
+    const obj4 = { source: _modDef16923, style: tmp.image };
     const items1 = [closure_1_11(FastImageDefault, obj4), ,];
     const obj5 = {
       style: tmp.requiredActionsTitle,
@@ -212,12 +212,15 @@ prototype["render"] = function render() {
     closure_1_11(TextInput.TextInput, {
       label: passwordLabel,
       secureTextEntry: true,
+      revealable: true,
       errorMessage: self.getError("password"),
       onChange: self.handlePasswordChange,
       value: password,
       onSubmitEditing: self.canSubmit() ? self.handleSubmit : self.handleFocusNewPassword,
       returnKeyType: "next",
+      autoCapitalize: "none",
       autoComplete: "current-password",
+      textContentType: "password",
       required: true,
     }),
     ,
@@ -226,11 +229,14 @@ prototype["render"] = function render() {
     label: newPasswordLabel,
     ref: self.handleSetNewPasswordRef,
     secureTextEntry: true,
+    revealable: true,
     errorMessage: self.getError("new_password"),
     onChange: self.handleNewPasswordChange,
     value: newPassword,
     returnKeyType: "done",
+    autoCapitalize: "none",
     autoComplete: "new-password",
+    textContentType: "newPassword",
     onSubmitEditing: null,
     required: true,
   };
@@ -251,7 +257,7 @@ prototype["render"] = function render() {
   if (!submitting) {
     submitting = null == newPassword;
   }
-  const obj13 = { children: null };
+  const obj13 = { keyboardShouldPersistTaps: "handled", children: null };
   const obj14 = { spacing: 24, children: null };
   obj12.disabled = submitting;
   items3[2] = closure_1_11(components_Button_Button.Button, obj12);
@@ -261,12 +267,12 @@ prototype["render"] = function render() {
   obj13.children = application_id(React4, obj);
   return closure_1_11(hasOwnProperty, obj13);
 };
-EditPassword.contextType = fn(5207).ThemeContext;
+EditPassword.contextType = fn(5209).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 
 export default function EditPasswordWrapper() {
-  const params = flag(7301).useSettingNavigationRoute().params;
+  const params = flag(7304).useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {
     flag = params.isLoginRequiredAction;
@@ -274,7 +280,7 @@ export default function EditPasswordWrapper() {
   if (flag == null) {
     flag = false;
   }
-  let obj = flag(7301);
+  let obj = flag(7304);
   items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
     const currentUser = UserStore.getCurrentUser();

@@ -12,6 +12,6 @@ const result = size.fileFinishedImporting(
   "modules/safety_flows/experiments/AppStoreConsentReinstateEndpointExperiment.tsx",
 );
 
-export function getIsAppStoreConsentReinstateEndpointEnabled(openSafetyFlow) {
-  return config.getConfig({ location: openSafetyFlow }).enabled;
+export function getIsAppStoreConsentReinstateEndpointEnabled(parentalConsentManager) {
+  return config.getConfig({ location: parentalConsentManager }).enabled;
 }

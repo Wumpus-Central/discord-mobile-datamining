@@ -5,8 +5,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const top = "top";
-const module_5152 = fn(5152);
-let closure_5 = module_5152.create(() => {
+const module_5154 = fn(5154);
+let closure_5 = module_5154.create(() => {
   const obj = { containerIdsBySurface: new Map() };
   return obj;
 });

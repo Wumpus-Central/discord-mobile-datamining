@@ -74,7 +74,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
           closure_130_7 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -293,7 +293,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
           closure_130_18 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -663,7 +663,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else {
         if (1 === tmp7) {

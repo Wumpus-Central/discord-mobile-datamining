@@ -21,7 +21,7 @@ let obj = {
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-    const isTinyBroncoSettingsEnabled = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    const isAgeNoticeSettingsEnabled = AgeNoticeSettingsPredicate.useIsAgeNoticeSettingsEnabled();
     if (hasAgeGatedFeatures) {
       hasAgeGatedFeatures = isAgeVerified;
     }
@@ -29,7 +29,7 @@ let obj = {
       hasAgeGatedFeatures = !isVerifiedTeen;
     }
     if (hasAgeGatedFeatures) {
-      hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
+      hasAgeGatedFeatures = !isAgeNoticeSettingsEnabled;
     }
     return hasAgeGatedFeatures;
   },
@@ -50,7 +50,7 @@ export default SettingBuilders.createStatic({
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-    const isTinyBroncoSettingsEnabled = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    const isAgeNoticeSettingsEnabled = AgeNoticeSettingsPredicate.useIsAgeNoticeSettingsEnabled();
     if (hasAgeGatedFeatures) {
       hasAgeGatedFeatures = isAgeVerified;
     }
@@ -58,7 +58,7 @@ export default SettingBuilders.createStatic({
       hasAgeGatedFeatures = !isVerifiedTeen;
     }
     if (hasAgeGatedFeatures) {
-      hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
+      hasAgeGatedFeatures = !isAgeNoticeSettingsEnabled;
     }
     return hasAgeGatedFeatures;
   },

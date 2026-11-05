@@ -21,7 +21,7 @@ export default function KeywordsRow(label) {
     const intl = tmp2(1113).intl;
     StringResult = intl.string(tmp2(1113).t.PoWNfe);
   }
-  obj.trailing = keywords(label(5761).Text, {
+  obj.trailing = keywords(label(5763).Text, {
     variant: "body-sm/medium",
     color: "text-muted",
     lineClamp: 1,
@@ -37,8 +37,8 @@ export default function KeywordsRow(label) {
       obj4 = { type, maxWordCount };
     }
     const merged = Object.assign(obj4);
-    obj.openLazy(asyncRequireImpl(19976, dependencyMap.paths), "AutomodKeywords", obj2);
-    const tmp = asyncRequireImpl(19976, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(20012, dependencyMap.paths), "AutomodKeywords", obj2);
+    const tmp = asyncRequireImpl(20012, dependencyMap.paths);
   };
-  return keywords(label(7116).TableRow, obj);
+  return keywords(label(7119).TableRow, obj);
 }

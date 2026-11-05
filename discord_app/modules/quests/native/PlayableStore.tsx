@@ -68,8 +68,8 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5791).ActivityPanelModes;
-const asLaunched = fn(6982).asLaunched;
+const ActivityPanelModes = fn(5793).ActivityPanelModes;
+const asLaunched = fn(6985).asLaunched;
 let c3 = null;
 const Store = initializeDefault.Store;
 class PlayableStore extends Store {}

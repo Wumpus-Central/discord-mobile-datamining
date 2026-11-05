@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import _mod1705 from "../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../_runtime/05428_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05430_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -14,11 +14,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_12 = createStyles.createStyles((height, marginVertical) => {
   const obj = {
     swipeArea: { marginVertical: -marginVertical, paddingVertical: marginVertical },

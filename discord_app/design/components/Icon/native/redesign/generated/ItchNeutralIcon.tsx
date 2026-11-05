@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ItchNeutralIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9755 from "../../../../../../../_runtime/metro/09755__.js";
+import _mod9761 from "../../../../../../../_runtime/metro/09761__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function ItchNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9755, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9761, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

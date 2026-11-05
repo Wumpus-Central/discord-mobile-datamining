@@ -74,11 +74,11 @@ function BountiesModalAdvertiserCtaContent(bounty) {
 let closure_3 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_6, View: metroImportDefault, Pressable } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6916).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6919).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let closure_12 = module_1652.createAnimatedComponent(Pressable);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_13 = createStyles.createStyles(() => {
   const obj = { outerContainer: null, ctaPressable: null, cta: null, ctaLogoContainer: null, ctaLogo: null, ctaInfo: null };
   const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, alignItems: "center" };
@@ -96,7 +96,7 @@ let closure_13 = createStyles.createStyles(() => {
   obj.ctaInfo = { flex: 1, justifyContent: "center" };
   return obj;
 });
-let items = [{ code: "(function BountiesModalAdvertiserCtaTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5378).withTiming, fn(5381).timingStandard];
+let items = [{ code: "(function BountiesModalAdvertiserCtaTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})" }, fn(5380).withTiming, fn(5383).timingStandard];
 let closure_129_0;
 let closure_129_1;
 [tmp4, tmp5, tmp6] = items;
@@ -110,7 +110,7 @@ let items1 = [tmp5, tmp6];
 BountiesModalAdvertiserCtaTsx1.__closure = items1;
 BountiesModalAdvertiserCtaTsx1.__workletHash = 17397968298384;
 BountiesModalAdvertiserCtaTsx1.__initData = tmp4;
-let items2 = [{ code: "(function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){let[withTiming,timingFast]=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};})" }, fn(5378).withTiming, fn(5381).timingFast];
+let items2 = [{ code: "(function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){let[withTiming,timingFast]=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};})" }, fn(5380).withTiming, fn(5383).timingFast];
 let closure_130_0;
 let closure_130_1;
 [tmp7, tmp8, tmp9] = items2;
@@ -132,8 +132,8 @@ export default function BountiesModalAdvertiserCta(visible) {
   visible = visible.visible;
   let merged = Object.assign(visible, Object.assign({ visible: 0 }));
   let animatedStyle;
-  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(17174).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
-  let obj = animatedStyle(17174);
+  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(17198).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
+  let obj = animatedStyle(17198);
   items = [AccessibilityStore];
   let num = 0;
   const stateFromStores = animatedStyle(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -141,7 +141,7 @@ export default function BountiesModalAdvertiserCta(visible) {
     num = 1;
   }
   const obj2 = animatedStyle(504);
-  const items1 = [closure_17, animatedStyle(5378).withTiming, animatedStyle(1652).interpolate, num, visible, animatedStyle(5381).timingStandard, animatedStyle(5381).timingFast];
+  const items1 = [closure_17, animatedStyle(5380).withTiming, animatedStyle(1652).interpolate, num, visible, animatedStyle(5383).timingStandard, animatedStyle(5383).timingFast];
   animatedStyle = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -174,8 +174,8 @@ export default function BountiesModalAdvertiserCta(visible) {
     return closure_2_10(BountiesModalAdvertiserCtaContent, obj);
   }, items3);
   const tmp2Result = animatedStyle(1652);
-  const tmp2Result2 = animatedStyle(17175);
-  const visibilityTransition = tmp2Result2.useVisibilityTransition({ visible, entranceTiming: animatedStyle(5381).timingStandard, exitTiming: animatedStyle(5381).timingFast });
+  const tmp2Result2 = animatedStyle(17199);
+  const visibilityTransition = tmp2Result2.useVisibilityTransition({ visible, entranceTiming: animatedStyle(5383).timingStandard, exitTiming: animatedStyle(5383).timingFast });
   let shouldRender = visibilityTransition.shouldRender;
   if (isBountiesModalTransitionsRefactorEnabled) {
     const obj4 = { useReducedMotion: stateFromStores, item: null, entering: null, exiting: null, renderItem: null };

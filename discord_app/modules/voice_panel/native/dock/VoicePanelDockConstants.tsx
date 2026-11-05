@@ -25,7 +25,7 @@ const items2 = [
   {
     code: "(function getVoicePanelDockPaddingBottom_VoicePanelDockConstantsTsx2(safeAreaBottom){let[IS_IOS,DOCK_PADDING_BOTTOM_MIN]=this.__closure;return IS_IOS?DOCK_PADDING_BOTTOM_MIN:Math.max(DOCK_PADDING_BOTTOM_MIN,safeAreaBottom);})",
   },
-  fn(11411).IS_IOS,
+  fn(11419).IS_IOS,
   nativeDefault.space.PX_24,
 ];
 let closure_130_0;
@@ -64,7 +64,7 @@ const items5 = [tmp11, tmp12, tmp13];
 getVoicePanelDockHeight.__closure = items5;
 getVoicePanelDockHeight.__workletHash = 8239861783104;
 getVoicePanelDockHeight.__initData = tmp10;
-const result = 1 / fn(11430).PULL_GESTURE_RESISTANCE;
+const result = 1 / fn(11438).PULL_GESTURE_RESISTANCE;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockConstants.tsx");
 
@@ -80,6 +80,7 @@ export function getVoicePanelDockButtonsTop(arg0) {
   return arg0 - c0 - 4;
 }
 export const DOCK_GAP = nativeDefault.space.PX_12;
+export const DOCK_FADE_TIMING = { duration: 200 };
 export const DOCK_DRAG_HANDLE_WIDTH = 48;
 export const DOCK_DRAG_HANDLE_TOP = nativeDefault.space.PX_8;
 export const DOCK_PULL_SNAP_DISTANCE = 160;

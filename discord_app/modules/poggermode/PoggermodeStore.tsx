@@ -43,7 +43,7 @@ function updateCombo(userId) {
     decayInterval1 = iter.decayInterval;
   }
   if (decayInterval1 == null) {
-    decayInterval1 = new obj2(4985).Interval();
+    decayInterval1 = new obj2(4987).Interval();
   }
   obj2.decayInterval = decayInterval1;
   const result = secondaryIndexMap.set("" + userId.userId + "-" + userId.channelId, obj2);
@@ -80,11 +80,11 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(7961);
+const PoggermodeConstants = fn(7966);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: closure_6 } = PoggermodeConstants);
 const ComponentActions = fn(1072).ComponentActions;
 const set = new Set();
-const secondaryIndexMap = new fn(5068).SecondaryIndexMap(
+const secondaryIndexMap = new fn(5070).SecondaryIndexMap(
   function indexedBy(arg0) {
     items = [,];
     ({ userId: arr[0], channelId: arr[1] } = arg0);
@@ -94,7 +94,7 @@ const secondaryIndexMap = new fn(5068).SecondaryIndexMap(
     return "" + channelId.channelId + "-" + channelId.userId;
   },
 );
-const secondaryIndexMap1 = new fn(5068).SecondaryIndexMap(
+const secondaryIndexMap1 = new fn(5070).SecondaryIndexMap(
   function indexedBy(combo) {
     items = [, ,];
     ({ messageId: arr[0], channelId: arr[1] } = combo);

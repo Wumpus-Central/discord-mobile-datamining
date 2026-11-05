@@ -190,7 +190,7 @@ let closure_20 = async function _captureNavigationTTI(arg0) {
   }
 };
 function resetNavigationToDMs() {
-  return closure_0(5322).navigateToRootTab({ screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: false });
+  return closure_0(5324).navigateToRootTab({ screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: false });
 }
 let closure_22 = async function _navigateToDMs() {
   await new Promise((arg0) => closure_1_6(arg0));
@@ -306,7 +306,7 @@ let closure_25 = async function _setupTTITest(arg0) {
             closure_130_13 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "flexDirection", done: null };
+            return { value: "flexDirection", done: true };
           }
         break;
         case 1:
@@ -864,13 +864,13 @@ let closure_27 = async function _apiLogin(arg0) {
         items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(572);
-          const f142974 = () => {
+          const f143267 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f142974(arg0);
+            return f143267(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -880,7 +880,7 @@ let closure_27 = async function _apiLogin(arg0) {
           continue;
         }
         closure_1_28(password(572), "LOGIN_SUCCESS", (token) => closure_0(token.token));
-        password(6875).login({ login, password });
+        password(6878).login({ login, password });
       });
       c6 = 1;
       c7 = 1;
@@ -898,12 +898,12 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f142974(arg0);
+    return f143267(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(19635).applicationReady;
-fn(7067).addPostConnectionCallback;
+const applicationReady = fn(19670).applicationReady;
+fn(7070).addPostConnectionCallback;
 const Constants = fn(1072);
 ({ ME: closure_11, Routes: closure_12 } = Constants);
 const logger = new LoggerDefault("TTITestAction");
@@ -965,34 +965,34 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(11283).resetComponentProfiler();
+    const result = closure_0(11291).resetComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "reset-component-profiler" });
-    obj = closure_0(11283);
+    obj = closure_0(11291);
     const obj2 = { type: "response", status: "success", message: "reset-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(11283).pauseComponentProfiler();
+    const result = closure_0(11291).pauseComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "pause-component-profiler" });
-    obj = closure_0(11283);
+    obj = closure_0(11291);
     const obj2 = { type: "response", status: "success", message: "pause-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(11283).resumeComponentProfiler();
+    const result = closure_0(11291).resumeComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "resume-component-profiler" });
-    obj = closure_0(11283);
+    obj = closure_0(11291);
     const obj2 = { type: "response", status: "success", message: "resume-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = { stats: closure_0(11283).dumpStats() };
+    obj = { stats: closure_0(11291).dumpStats() };
     const merged = Object.assign(obj);
     const json = JSON.stringify({ type: "response", status: "success", message: "dump-component-profiler-stats" });
-    const obj2 = closure_0(11283);
+    const obj2 = closure_0(11291);
     const obj3 = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
@@ -1075,7 +1075,7 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
           const obj4 = { ClientInfoUtils: null, ComponentProfiler: null, Dispatcher: null, ExperimentStore: null, NativeJankStats: null, ProcessUtils: null, AnalyticsUtils: null, TTITestAction: null };
           const obj5 = { getConstants: closure_0(1376).getConstants };
           obj4.ClientInfoUtils = obj5;
-          const obj6 = { resetComponentProfiler: closure_0(11283).resetComponentProfiler, resumeComponentProfiler: closure_0(11283).resumeComponentProfiler, pauseComponentProfiler: closure_0(11283).pauseComponentProfiler, dumpStats: closure_0(11283).dumpStats };
+          const obj6 = { resetComponentProfiler: closure_0(11291).resetComponentProfiler, resumeComponentProfiler: closure_0(11291).resumeComponentProfiler, pauseComponentProfiler: closure_0(11291).pauseComponentProfiler, dumpStats: closure_0(11291).dumpStats };
           obj4.ComponentProfiler = obj6;
           obj4.Dispatcher = Dispatcher;
           obj4.ExperimentStore = ExperimentStore;

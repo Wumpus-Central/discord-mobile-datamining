@@ -8,7 +8,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = Object.freeze({ direction: fn(1187).CutoutDirection.RIGHT, inset: -2 });
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 },
   containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 },
@@ -37,11 +37,11 @@ export default noop.memo(function UserSummaryItem(guildId) {
     transparentBorder = tmp.transparentBorder;
   }
   const obj2 = { style: null, children: null };
-  items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(9970).useClientThemesOverride()];
+  items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(9976).useClientThemesOverride()];
   obj2.style = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(8810).StageIcon;
+      let VoiceNormalIcon = tmp4(8815).StageIcon;
     }
     const obj3 = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
     const items1 = [closure_4(VoiceNormalIcon, obj3)];
@@ -72,7 +72,7 @@ export default noop.memo(function UserSummaryItem(guildId) {
     obj2.children = items1;
     return tmp5(tmp6, obj2);
   }
-  VoiceNormalIcon = tmp4(8814).VoiceNormalIcon;
-  let obj = guildId(9970);
+  VoiceNormalIcon = tmp4(8819).VoiceNormalIcon;
+  let obj = guildId(9976);
 });
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

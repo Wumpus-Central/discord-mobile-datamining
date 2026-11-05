@@ -33,8 +33,8 @@ class UserProfileAvatar {
   }
 }
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8895).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(7513).AVATAR_SIZE_VARIANT;
+const TrackUserProfileActions = fn(8900).TrackUserProfileActions;
+const AVATAR_SIZE_VARIANT = fn(7515).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let size = fn(2);

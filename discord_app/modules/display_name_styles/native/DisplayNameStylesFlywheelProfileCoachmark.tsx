@@ -12,9 +12,9 @@ function CoachmarkImage() {
   );
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_8 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
 });
@@ -71,6 +71,6 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     items2,
   );
   const obj2 = markAsDismissed(2176);
-  const coachmark = visible(10133).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(10141).useCoachmark(visible.targetRef, memo);
   return null;
 }

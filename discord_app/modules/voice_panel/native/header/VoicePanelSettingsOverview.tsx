@@ -14,7 +14,7 @@ import TableRowIcon from "../../../../design/components/TableRow/native/TableRow
 import TableRowArrow from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
-import _modDef8490 from "../../../../../_runtime/metro/08490__.js";
+import _modDef8495 from "../../../../../_runtime/metro/08495__.js";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
 import FormComponents from "../shared/FormComponents.tsx";
@@ -135,7 +135,7 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = {
     onPress: callback,
-    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8490 }),
+    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8495 }),
     label: null,
     trailing: null,
   };
@@ -155,7 +155,7 @@ function ActivityDebugToggle() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: WrenchIcon.WrenchIcon,
-    source: _modDef8490,
+    source: _modDef8495,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
@@ -167,29 +167,46 @@ function ActivityDebugToggle() {
 }
 const Constants = fn(1072);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
-const isStreamParticipant = fn(5815).isStreamParticipant;
-let closure_17 = fn(9411).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+const isStreamParticipant = fn(5817).isStreamParticipant;
+let closure_17 = fn(9418).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   headerContainer: { alignItems: "center" },
-  channelTitleWrapper: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 8 },
-  channelTitle: { textAlign: "center" },
-  channelSubtitle: { marginTop: 4, marginHorizontal: 16, textAlign: "center" },
-  secureFrames: {
+  channelTitleWrapper: {
+    maxWidth: "100%",
+    paddingHorizontal: nativeDefault.space.PX_16,
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-    borderRadius: nativeDefault.radii.sm,
+    justifyContent: "center",
     marginTop: 8,
-    padding: 4,
-    gap: 4,
   },
-  secureFramesIcon: { marginStart: 4 },
+  channelTitle: { flexShrink: 1, textAlign: "center" },
+  channelSubtitle: { marginTop: 4, marginHorizontal: 16, textAlign: "center" },
+  secureFrames: null,
+  secureFramesIcon: null,
 };
-const guild = createStyles.createStyles(obj);
 let obj3 = {
+  maxWidth: "100%",
+  paddingHorizontal: nativeDefault.space.PX_16,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  marginTop: 8,
+};
+obj.secureFrames = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: nativeDefault.radii.sm,
+  marginTop: 8,
+  padding: 4,
+  gap: 4,
+};
+obj.secureFramesIcon = { marginStart: 4 };
+const guild = createStyles.createStyles(obj);
+let obj4 = {
   flexDirection: "row",
   alignItems: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -289,7 +306,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19503, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19538, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

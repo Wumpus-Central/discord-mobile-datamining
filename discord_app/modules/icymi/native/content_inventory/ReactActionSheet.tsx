@@ -103,8 +103,8 @@ function ReactActionSheetBase(content) {
                 return obj3;
               } else {
                 closure_5(true);
-                v1(9065).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-                const obj5 = v1(9065);
+                v1(9070).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+                const obj5 = v1(9070);
                 const obj4 = {
                   itemId: tmp4.id,
                   itemType: hotwheels_gaming_activity,
@@ -115,7 +115,7 @@ function ReactActionSheetBase(content) {
                     actionDestinationType: null,
                   },
                 };
-                v1(9065).feedItemActioned(obj4);
+                v1(9070).feedItemActioned(obj4);
                 v1 = 1;
                 dependencyMap = 1;
                 const obj7 = { value: sendMessage(first1), done: false };
@@ -381,11 +381,11 @@ function ReactActionSheetBase(content) {
   tmp2 = loading;
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5397).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5399).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   header: { width: "100%", display: "flex", alignItems: "center", padding: 8 },
   container: { gap: 12 },

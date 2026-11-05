@@ -883,18 +883,18 @@ export function extractMediaFromMessageComponents(getContentMessage, contentMess
       let type = nextResult.type;
       if (Server.ComponentType.MEDIA_GALLERY === type) {
         items = tmp4.items;
-        for (const item10035 of items) {
-          let tmp18 = toMediaSourceFromUnfurledMedia(
+        for (const item10029 of items) {
+          let tmp16 = toMediaSourceFromUnfurledMedia(
             arg0,
             arg2,
-            item10035.media,
-            item10035.description,
-            item10035.spoiler,
+            item10029.media,
+            item10029.description,
+            item10029.spoiler,
           );
-          if (null != tmp18) {
+          if (null != tmp16) {
             let obj = { sources: null, unfurledMediaItem: null };
-            obj.sources = tmp19;
-            obj.unfurledMediaItem = item10035.media;
+            obj.sources = tmp17;
+            obj.unfurledMediaItem = item10029.media;
             let arr = items1.push(obj);
           }
           continue;

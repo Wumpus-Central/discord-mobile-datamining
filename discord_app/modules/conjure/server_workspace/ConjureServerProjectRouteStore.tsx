@@ -5,7 +5,7 @@ import conjureServerProject from "conjureServerProject.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const StaticChannelRoute = fn(4997).StaticChannelRoute;
+const StaticChannelRoute = fn(4999).StaticChannelRoute;
 let map = new Map();
 const Store = initializeDefault.Store;
 class ConjureServerProjectRouteStore extends Store {}

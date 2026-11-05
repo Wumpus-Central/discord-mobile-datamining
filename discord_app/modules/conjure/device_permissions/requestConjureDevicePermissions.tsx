@@ -132,7 +132,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
           };
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -248,7 +248,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
     }
   }
 };
-const FrameLayoutModes = fn(6982).FrameLayoutModes;
+const FrameLayoutModes = fn(6985).FrameLayoutModes;
 const set = new Set();
 const SECOND = DurationsDefault.Millis.SECOND;
 const size = fn(2);

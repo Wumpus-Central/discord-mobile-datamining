@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7864);
+const CollectiblesItemRecord = fn(7869);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } =
   CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -260,18 +260,19 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "t",
                 type: "Array",
-                premiumType: "ix",
-                items: "<string:587742472>",
-                categorySkuId: "<string:1502171498>",
-                categoryWillUnpublishAt: "<string:138217539>",
-                isCategoryReward: false,
+                premiumType: "ao",
+                items:
+                  -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001615083636959319,
+                categorySkuId: 0.0000000000000000000000000000000000000000000001972286534921061,
+                categoryWillUnpublishAt: 994652482892173300000000000000000000000000000000000000000000000000000000000000000000000,
+                isCategoryReward: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000042336525053709615,
                 prices: false,
-                previewAssets: false,
-                googleSkuIds: false,
-                eligibleOffers: false,
-                variants: true,
-                bundledProducts: true,
-                isFirstParty: true,
+                previewAssets: null,
+                googleSkuIds: null,
+                eligibleOffers: null,
+                variants: null,
+                bundledProducts: null,
+                isFirstParty: null,
               };
               let str;
               if (first != null) {

@@ -64,9 +64,9 @@ function Star(rating) {
   ConjurePublishRatingTsx1.__initData = tmp7;
   const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjurePublishRatingTsx1);
   if (tmp2) {
-    let StarOutlineIcon = tmp3(10241).StarIcon;
+    let StarOutlineIcon = tmp3(10249).StarIcon;
   } else {
-    StarOutlineIcon = tmp3(10239).StarOutlineIcon;
+    StarOutlineIcon = tmp3(10247).StarOutlineIcon;
   }
   let obj3 = {
     style: tmp.star,
@@ -91,7 +91,7 @@ function Star(rating) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
   stars: { flexDirection: "row" },
@@ -182,11 +182,11 @@ export default function ConjurePublishRating(arg0) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
         obj.openLazy(
-          asyncRequireImpl(12993, dependencyMap.paths),
+          asyncRequireImpl(13000, dependencyMap.paths),
           ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY,
           obj2,
         );
-        const tmp6 = asyncRequireImpl(12993, dependencyMap.paths);
+        const tmp6 = asyncRequireImpl(13000, dependencyMap.paths);
       }
     };
     return closure_1_7(Star, obj, rating);

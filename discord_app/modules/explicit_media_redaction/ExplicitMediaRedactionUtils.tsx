@@ -14,7 +14,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7606);
+const ExplicitMediaRedactionConstants = fn(7608);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: closure_6,
   EXPLICIT_MEDIA_MIN_WIDTH: metroImportDefault,
@@ -325,7 +325,7 @@ export function shouldAgeVerifyForExplicitMedia() {
     AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
   );
   if (isFeatureAgeGatedResult) {
-    isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
+    isFeatureAgeGatedResult = obj2.needsAgeVerification();
   }
   return isFeatureAgeGatedResult;
 }
@@ -334,7 +334,7 @@ export function useShouldAgeVerifyForExplicitMedia() {
     AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
   );
   if (isFeatureAgeGated) {
-    isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
+    isFeatureAgeGated = obj2.useNeedsAgeVerification();
   }
   return isFeatureAgeGated;
 }
@@ -343,7 +343,7 @@ export function useShouldAgeVerifyForReason(obscureReason) {
     AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
   );
   if (isFeatureAgeGated) {
-    isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
+    isFeatureAgeGated = obj2.useNeedsAgeVerification();
   }
   let tmp4 = !isFeatureAgeGated;
   if (isFeatureAgeGated) {

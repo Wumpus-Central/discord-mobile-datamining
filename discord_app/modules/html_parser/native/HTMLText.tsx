@@ -109,7 +109,7 @@ function RunGroup(arg0) {
   return tmp3;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_4 = createStyles.createStyles({
   italic: { fontStyle: "italic" },
   underline: { textDecorationLine: "underline" },
@@ -121,23 +121,23 @@ export function HTMLText(onLinkPress) {
   const runs = onLinkPress.runs;
   let DEFAULT_TEXT_VARIANT = onLinkPress.textVariant;
   if (DEFAULT_TEXT_VARIANT === undefined) {
-    DEFAULT_TEXT_VARIANT = runs(9581).DEFAULT_TEXT_VARIANT;
+    DEFAULT_TEXT_VARIANT = runs(9587).DEFAULT_TEXT_VARIANT;
   }
   let DEFAULT_BOLD_TEXT_VARIANT = onLinkPress.boldTextVariant;
   if (DEFAULT_BOLD_TEXT_VARIANT === undefined) {
-    DEFAULT_BOLD_TEXT_VARIANT = runs(9581).DEFAULT_BOLD_TEXT_VARIANT;
+    DEFAULT_BOLD_TEXT_VARIANT = runs(9587).DEFAULT_BOLD_TEXT_VARIANT;
   }
   let DEFAULT_HEADING_VARIANTS = onLinkPress.headingVariants;
   if (DEFAULT_HEADING_VARIANTS === undefined) {
-    DEFAULT_HEADING_VARIANTS = runs(9581).DEFAULT_HEADING_VARIANTS;
+    DEFAULT_HEADING_VARIANTS = runs(9587).DEFAULT_HEADING_VARIANTS;
   }
   let native = onLinkPress.headingColor;
   if (native === undefined) {
-    native = runs(9581).DEFAULT_HEADING_COLORS.native;
+    native = runs(9587).DEFAULT_HEADING_COLORS.native;
   }
   let DEFAULT_LINK_COLOR = onLinkPress.linkColor;
   if (DEFAULT_LINK_COLOR === undefined) {
-    DEFAULT_LINK_COLOR = runs(9581).DEFAULT_LINK_COLOR;
+    DEFAULT_LINK_COLOR = runs(9587).DEFAULT_LINK_COLOR;
   }
   noop = undefined;
   dependencyMap = closure_4();

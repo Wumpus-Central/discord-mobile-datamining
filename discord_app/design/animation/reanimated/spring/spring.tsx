@@ -18,7 +18,7 @@ let c1;
 let c2;
 let c3;
 [tmp2, tmp3, tmp4, tmp5, tmp6] = items;
-function withSpring(PX_16, Reanimated3DefaultSpringConfig, arg2) {
+function withSpring(_undefined2, Reanimated3DefaultSpringConfig, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "respect-motion-settings";
@@ -39,7 +39,7 @@ function withSpring(PX_16, Reanimated3DefaultSpringConfig, arg2) {
   } else {
     tmp3 = c1;
   }
-  return _undefined2(PX_16, tmp3, BalanceCounterTsx1);
+  return _undefined2(_undefined2, tmp3, BalanceCounterTsx1);
 }
 const items1 = [tmp3, tmp4, tmp5, tmp6];
 withSpring.__closure = items1;

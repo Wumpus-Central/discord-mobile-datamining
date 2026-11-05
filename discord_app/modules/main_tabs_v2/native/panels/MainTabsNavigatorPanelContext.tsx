@@ -2,13 +2,13 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const obj = { gesture: null, disallowGesture: null, edgeSwipeOnly: null, translateX: null, isInMainTabs: false };
-const Gesture = fn(5428).Gesture;
+const Gesture = fn(5430).Gesture;
 obj.gesture = Gesture.Pan();
-let ReanimatedHelperTypes = fn(7378);
+let ReanimatedHelperTypes = fn(7381);
 obj.disallowGesture = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7378);
+ReanimatedHelperTypes = fn(7381);
 obj.edgeSwipeOnly = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7378);
+ReanimatedHelperTypes = fn(7381);
 obj.translateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext(obj);
 const context1 = noop.createContext(undefined);

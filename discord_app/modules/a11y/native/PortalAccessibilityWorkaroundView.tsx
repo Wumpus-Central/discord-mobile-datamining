@@ -6,7 +6,7 @@ let _default = fn(17).View;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1377);
 if (PlatformUtils.isIOS()) {
-  _default = fn(14424).default;
+  _default = fn(14437).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");

@@ -9,7 +9,7 @@ import ConjureConnectionStore from "../connection/ConjureConnectionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ensureConnection = fn(11028).ensureConnection;
+const ensureConnection = fn(11034).ensureConnection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishSchedule.tsx");
 

@@ -8,7 +8,7 @@ const require = fn;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7462)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7465)().analyticsLocations;
   const intl = userRecord(1113).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -40,7 +40,7 @@ function BlockedUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16955).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16978).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -61,14 +61,14 @@ function BlockedUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5768).Button, {
+  obj.trailing = jsx(userRecord(5770).Button, {
     size: "sm",
     variant: "secondary",
     text: null,
     accessibilityLabel: null,
     onPress: null,
   });
-  return jsx(userRecord(7116).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
+  return jsx(userRecord(7119).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

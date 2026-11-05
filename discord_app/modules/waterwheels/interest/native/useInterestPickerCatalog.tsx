@@ -6,8 +6,8 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestPickerCatalog.tsx");
 
-export default function useInterestPickerCatalog(arg0) {
-  interestPickerGameList = interestPickerGameList(18681).useInterestPickerGameList(arg0);
+export default function useInterestPickerCatalog(InterestPickerStep) {
+  interestPickerGameList = interestPickerGameList(18711).useInterestPickerGameList(InterestPickerStep);
   items = [interestPickerGameList];
   return noop.useMemo(() => {
     let interestPickerCatalog = null;

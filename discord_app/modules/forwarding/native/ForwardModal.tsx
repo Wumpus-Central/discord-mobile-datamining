@@ -26,11 +26,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(13604).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10905).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(13615).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10911).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -261,9 +261,9 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(6095).openAlert(
+                    closure_1_0(6098).openAlert(
                       "staff-to-non-staff-forward",
-                      closure_1_15(forwardOptions(13610), {
+                      closure_1_15(forwardOptions(13621), {
                         onConfirm() {
                           return closure_0(true);
                         },

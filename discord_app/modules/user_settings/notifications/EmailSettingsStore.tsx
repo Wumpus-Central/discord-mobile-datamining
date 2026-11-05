@@ -26,6 +26,11 @@ categories = {
     const merged = Object.assign(obj);
     const merged1 = Object.assign(updates.updates);
   },
+  EMAIL_SETTINGS_UPDATE_FAILURE: function handleUpdateFailure(previous) {
+    const obj = {};
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(previous.previous);
+  },
 };
 const emailSettingsStore = new EmailSettingsStore(DispatcherDefault, categories);
 const size = fn(2);

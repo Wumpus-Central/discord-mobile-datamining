@@ -46,8 +46,8 @@ function getNotificationSettings() {
   items[3] = obj4;
   return items;
 }
-let closure_4 = fn(17721).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8573).MobileUserSettings;
+let closure_4 = fn(17748).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8578).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(

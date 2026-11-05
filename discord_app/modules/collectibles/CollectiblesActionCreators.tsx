@@ -646,41 +646,102 @@ let closure_28 = async function _fetchCollectiblesMarketings(arg0) {
   c6 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    closure_2 = tmp3;
-    let PROD = release.release;
-    if (PROD === undefined) {
-      PROD = CollectiblesMarketingReleaseType.CollectiblesMarketingReleaseType.PROD;
-    }
-    closure_129_0 = PROD;
-    await "flexDirection";
-    closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
-    closure_129_1 = { platform: closure_130_0(closure_130_2[27]).CollectiblesMarketingPlatform.MOBILE };
-    if (closure_129_0 !== closure_130_0(closure_130_2[26]).CollectiblesMarketingReleaseType.PROD) {
-      closure_129_1.release = closure_129_0;
-    }
-    const HTTP = closure_130_0(closure_130_2[21]).HTTP;
-    const request = { url: closure_130_17.COLLECTIBLES_MARKETING, query: closure_129_1, rejectWithError: true };
-    await HTTP.get(request);
-    if (2 === tmp7) {
-      c4 = 0;
-      closure_129_3 = closure_3;
-      const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_3);
-      const result = closure_130_0(closure_130_2[23]).captureOrIgnoreApiError(aPIError);
-      closure_130_0(closure_130_2[23]);
-      closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+    if (c6 === 2) {
       c6 = 3;
-      closure_130_1(closure_130_2[17]);
-    } else if (arg0 === 1) {
-      c6 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      closure_129_2 = value;
-      closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: closure_130_11.fromServer(closure_129_2.body) });
-      c4 = 0;
-      closure_130_1(closure_130_2[17]);
-      { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: closure_130_11.fromServer(closure_129_2.body) };
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = undefined;
+            let PROD = release.release;
+            if (PROD === undefined) {
+              PROD = CollectiblesMarketingReleaseType.CollectiblesMarketingReleaseType.PROD;
+            }
+            closure_129_0 = PROD;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            c5 = 1;
+            c6 = 1;
+            return { value: "flexDirection", done: true };
+          }
+        } else if (1 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
+            const obj7 = { platform: closure_130_0(closure_130_2[27]).CollectiblesMarketingPlatform.MOBILE };
+            closure_129_1 = obj7;
+            if (closure_129_0 !== closure_130_0(closure_130_2[26]).CollectiblesMarketingReleaseType.PROD) {
+              closure_129_1.release = closure_129_0;
+            }
+            c4 = 1;
+            const HTTP = closure_130_0(closure_130_2[21]).HTTP;
+            const request = { url: closure_130_17.COLLECTIBLES_MARKETING, query: closure_129_1, rejectWithError: true };
+            c5 = 3;
+            c6 = 1;
+            const obj8 = { value: HTTP.get(request), done: false };
+            return obj8;
+          }
+        } else {
+          if (2 === tmp7) {
+            c4 = 0;
+            closure_129_3 = closure_3;
+            const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_3);
+            const result = closure_130_0(closure_130_2[23]).captureOrIgnoreApiError(aPIError);
+            const obj4 = closure_130_0(closure_130_2[23]);
+            closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+            c6 = 3;
+            const obj5 = closure_130_1(closure_130_2[17]);
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_2 = value;
+            const obj9 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: closure_130_11.fromServer(closure_129_2.body) };
+            closure_130_1(closure_130_2[17]).dispatch(obj9);
+            c4 = 0;
+            const obj = closure_130_1(closure_130_2[17]);
+          }
+          c4 = 0;
+          c6 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        }
+      } catch (tmp44) {
+        closure_3 = tmp44;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp44;
+        } else {
+          c5 = tmp;
+        }
+      }
     }
-    return value;
   })();
   iter.next();
   return iter;
@@ -785,16 +846,16 @@ let closure_29 = async function _fetchCollectiblesShopHome() {
     return value;
   })();
 };
-const addDebugLog = fn(7874).addDebugLog;
-let closure_10 = fn(7876).CollectiblesCategoriesRecord;
-const CollectiblesMarketingRecord = fn(7880);
+const addDebugLog = fn(7879).addDebugLog;
+let closure_10 = fn(7881).CollectiblesCategoriesRecord;
+const CollectiblesMarketingRecord = fn(7885);
 ({ CollectiblesMarketingsRecord: closure_11, rehydratePersistedMarketings: closure_12 } = CollectiblesMarketingRecord);
-let closure_15 = fn(7887).CollectiblesShopHomeRecord;
+let closure_15 = fn(7892).CollectiblesShopHomeRecord;
 const constants = fn(1074).CollectiblesMobileShopScreen;
 const Constants = fn(1072);
 ({ Endpoints: closure_17, Routes, UserSettingsSections: closure_18 } = Constants);
-const CollectiblesShopHomeStore = fn(5822);
-const CollectiblesShopStore = fn(7899);
+const CollectiblesShopHomeStore = fn(5824);
+const CollectiblesShopStore = fn(7904);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
@@ -802,7 +863,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(5323).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(5325).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

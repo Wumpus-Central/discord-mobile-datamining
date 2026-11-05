@@ -5,14 +5,14 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
 import TwoFASetupStyles from "TwoFASetupStyles.tsx";
-import _modDef16909 from "../../../../../../_runtime/metro/16909__.js";
+import _modDef16932 from "../../../../../../_runtime/metro/16932__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_6 = createStyles.createStyles({
   container: { flex: 1, alignItems: "center", justifyContent: "center" },
   authIcon: { width: 120, height: 120, marginBottom: 32 },
@@ -27,7 +27,7 @@ export default function TwoFASetupLanding() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
   const obj5 = { source: null, style: null };
-  obj5.source = _modDef16909;
+  obj5.source = _modDef16932;
   obj5.style = tmp.authIcon;
   items = [React4(FastImageDefault, obj5), ,];
   const obj6 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };

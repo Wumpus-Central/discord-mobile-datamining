@@ -143,14 +143,14 @@ export function isRecurringDismissibleContent(item10020) {
   return hasItem;
 }
 export { isSingleUseDismissibleContent };
-export function isSingleUseGuildDismissibleContent(GDM_INVITE_REMINDER) {
-  return items4.includes(GDM_INVITE_REMINDER);
+export function isSingleUseGuildDismissibleContent(content) {
+  return items4.includes(content);
 }
-export function isTimeRecurringGuildDismissibleContent(GDM_INVITE_REMINDER) {
-  return items5.includes(GDM_INVITE_REMINDER);
+export function isTimeRecurringGuildDismissibleContent(content) {
+  return items5.includes(content);
 }
-export function isSnowflakeBoundGuildDismissibleContent(GDM_INVITE_REMINDER) {
-  return items3.includes(GDM_INVITE_REMINDER);
+export function isSnowflakeBoundGuildDismissibleContent(content) {
+  return items3.includes(content);
 }
 export function isGuildDismissibleContent(dismissibleContent) {
   let hasItem = items4.includes(dismissibleContent);

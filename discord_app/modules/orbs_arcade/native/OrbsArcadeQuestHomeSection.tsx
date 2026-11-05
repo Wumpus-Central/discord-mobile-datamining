@@ -8,15 +8,16 @@ import SkeletonCardDefault from "../../collectibles/native/SkeletonCard.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import useFetchOrbsArcadeGamesDefault from "../hooks/useFetchOrbsArcadeGames.tsx";
 import OrbsArcadeGameTileDefault from "OrbsArcadeGameTile.tsx";
+import OrbsArcadeAnalytics from "../OrbsArcadeAnalytics.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 
 require = fn;
-const OrbsArcadeNativeConstants = fn(17273);
+const OrbsArcadeNativeConstants = fn(17297);
 ({ ORBS_ARCADE_GAME_TILE_MAX_WIDTH, ORBS_ARCADE_GAME_TILE_MIN_HEIGHT } = OrbsArcadeNativeConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   section: { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 },
   sectionHeader: null,
@@ -70,7 +71,10 @@ export default function OrbsArcadeQuestHomeSection(location) {
   obj4.children = items3;
   const items4 = [hasOwnProperty(Stack_Stack.Stack, obj4)];
   if (stateFromStores1) {
-    let mapped = stateFromStores.map((game) => closure_1_4(OrbsArcadeGameTileDefault, { game }, game.id));
+    let mapped = stateFromStores.map((game) => {
+      const obj = { game, surface: OrbsArcadeAnalytics.OrbsArcadeSurface.QUEST_HOME };
+      return closure_1_4(OrbsArcadeGameTileDefault, obj, game.id);
+    });
   } else {
     const obj9 = { style: tmp.skeletonTile };
     mapped = React4(SkeletonCardDefault, obj9);

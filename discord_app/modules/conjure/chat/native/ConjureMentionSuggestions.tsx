@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { fileThumbnail: null };
 let size = {
   width: nativeDefault.space.PX_24,

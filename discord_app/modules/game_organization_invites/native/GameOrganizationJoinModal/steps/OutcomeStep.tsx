@@ -5,16 +5,16 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const GameOrganizationInviteConstants = fn(11552);
+const GameOrganizationInviteConstants = fn(11560);
 ({
   GameOrganizationInviteAcceptFailureReason: closure_6,
   GameOrganizationInviteAcceptStatus: metroImportDefault,
   GameOrganizationLinkedGuildJoinStatus: closure_8,
 } = GameOrganizationInviteConstants);
-const onPress = fn(13421).closeGameOrganizationJoinModal;
+const onPress = fn(13447).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_12 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -27,7 +27,7 @@ export function OutcomeStep(code) {
   dependencyMap = undefined;
   let flag;
   const tmp = closure_12();
-  const tmp4 = stateFromStores(13423)(code.code);
+  const tmp4 = stateFromStores(13444)(code.code);
   let guildId;
   if (tmp4 != null) {
     guildId = tmp4.guildId;
@@ -86,7 +86,7 @@ export function OutcomeStep(code) {
   if (displayNoun == null) {
     displayNoun = null;
   }
-  const tmp2ResultResult = stateFromStores(13424)({ displayNoun, lowercase: true });
+  const tmp2ResultResult = stateFromStores(13445)({ displayNoun, lowercase: true });
   let str;
   if (tmp4 != null) {
     str = tmp4.organization.name;
@@ -195,26 +195,26 @@ export function OutcomeStep(code) {
       accessibilityRole: "header",
       children: obj22.title,
     };
-    const items3 = [closure_10(tmp6(5761).Text, obj24)];
-    let tmp26Result = null != subtitle;
-    if (tmp26Result) {
+    const items3 = [closure_10(tmp6(5763).Text, obj24)];
+    let tmp27Result = null != subtitle;
+    if (tmp27Result) {
       const obj25 = { variant: "body-md/normal", color: "text-muted", style: tmp.text, children: subtitle };
-      tmp26Result = closure_10(tmp6(5761).Text, obj25);
+      tmp27Result = closure_10(tmp6(5763).Text, obj25);
     }
     const obj26 = { children: null };
     const obj27 = { children: null };
-    items3[1] = tmp26Result;
+    items3[1] = tmp27Result;
     obj23.children = items3;
-    obj27.children = closure_11(tmp6(6162).Stack, obj23);
-    const items4 = [closure_10(tmp6(8113).ModalContent, obj27)];
+    obj27.children = closure_11(tmp6(6165).Stack, obj23);
+    const items4 = [closure_10(tmp6(8118).ModalContent, obj27)];
     const obj28 = { children: null };
     const obj56 = { text: null, size: "lg", onPress: null, disabled: null };
     ({ text: obj29.text, onPress: obj29.onPress } = cta);
     obj56.disabled = tmp9;
-    obj28.children = closure_10(tmp6(5768).Button, obj56);
-    items4[1] = closure_10(tmp6(13428).ModalFooter, obj28);
+    obj28.children = closure_10(tmp6(5770).Button, obj56);
+    items4[1] = closure_10(tmp6(13453).ModalFooter, obj28);
     obj26.children = items4;
-    return closure_11(tmp6(8112).ModalScreen, obj26);
+    return closure_11(tmp2(13449), obj26);
   }
-  const tmp2Result = stateFromStores(13424);
+  const tmp2Result = stateFromStores(13445);
 }

@@ -1,5 +1,5 @@
 // discord_app/modules/quests/utils/QuestServerUtils.tsx
-import _mod6691 from "module_6691" /* 6691 */;
+import _mod6694 from "module_6694" /* 6694 */;
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import Quest from "../types/v2/Quest.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -128,14 +128,14 @@ const result = size.fileFinishedImporting("modules/quests/utils/QuestServerUtils
 
 export function isQuestWithKnownConfigVersion(config) {
   try {
-    const match = _mod6691.match(config.config);
+    const match = _mod6694.match(config.config);
     return match.with({ config_version: 2 }, () => true).exhaustive();
   } catch (err) {
     return false;
   }
 }
 export function questConfigFromServer(body) {
-  const match = _mod6691.match(body);
+  const match = _mod6694.match(body);
   return match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
 }
 export function questUserStatusFromServer(body) {
@@ -179,7 +179,7 @@ export function questWithUserStatusFromServer(body) {
     targetedContent: null,
     trafficMetadataSealed: null,
   };
-  const match = _mod6691.match(body.config);
+  const match = _mod6694.match(body.config);
   obj.config = match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
   let tmp = null;
   if (null != body.user_status) {

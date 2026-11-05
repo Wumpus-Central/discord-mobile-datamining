@@ -15,11 +15,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MobileUserSettings = fn(8573).MobileUserSettings;
+const MobileUserSettings = fn(8578).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = {
@@ -62,17 +62,17 @@ export default function ContentAndSocialSettings(route) {
 }
 export function DiscordPermissionsPage() {
   allServersOptionSelected = allServersOptionSelected(
-    tinyBroncoMessageRequestsNoticeVariant[13],
+    ageNoticeMessageRequestsNoticeVariant[13],
   ).useAllServersOptionSelected();
-  let obj = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[13]);
+  let obj = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[13]);
   const sensitiveContentFilterHelpArticle = allServersOptionSelected(
-    tinyBroncoMessageRequestsNoticeVariant[14],
+    ageNoticeMessageRequestsNoticeVariant[14],
   ).useSensitiveContentFilterHelpArticle();
-  let obj2 = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[14]);
-  tinyBroncoMessageRequestsNoticeVariant = allServersOptionSelected(
-    tinyBroncoMessageRequestsNoticeVariant[11],
-  ).useTinyBroncoMessageRequestsNoticeVariant();
-  items = [allServersOptionSelected, sensitiveContentFilterHelpArticle, tinyBroncoMessageRequestsNoticeVariant];
+  let obj2 = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[14]);
+  ageNoticeMessageRequestsNoticeVariant = allServersOptionSelected(
+    ageNoticeMessageRequestsNoticeVariant[11],
+  ).useAgeNoticeMessageRequestsNoticeVariant();
+  items = [allServersOptionSelected, sensitiveContentFilterHelpArticle, ageNoticeMessageRequestsNoticeVariant];
   const memo = noop.useMemo(() => {
     const obj = { settings: null, subLabel: null };
     items = [MobileUserSettings.SENSITIVE_CONTENT_FILTERS];
@@ -177,7 +177,7 @@ export function DiscordPermissionsPage() {
     obj18.settings = items15;
     const intl11 = util.intl;
     const obj19 = { helpArticle: null };
-    tmp8 = null != tinyBroncoMessageRequestsNoticeVariant;
+    tmp8 = null != ageNoticeMessageRequestsNoticeVariant;
     obj19.helpArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STEALTH_REMEDIATION_FEATURE_GUIDE);
     obj18.subLabel = intl11.format(util.t["0aNQo9"], obj19);
     items8[7] = obj18;
@@ -215,11 +215,11 @@ export function DiscordPermissionsPage() {
   let obj4 = { children: null };
   const memo1 = noop.useMemo(() => SettingBuilders.createList({ sections: memo }), items1);
   let obj5 = { screen: null };
-  let obj3 = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[11]);
-  obj5.screen = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[16]).SettingsScreen.CONTENT_AND_SOCIAL;
+  let obj3 = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[11]);
+  obj5.screen = allServersOptionSelected(ageNoticeMessageRequestsNoticeVariant[16]).SettingsScreen.CONTENT_AND_SOCIAL;
   let items2 = [
-    closure_9(sensitiveContentFilterHelpArticle(tinyBroncoMessageRequestsNoticeVariant[16]), obj5),
-    closure_9(sensitiveContentFilterHelpArticle(tinyBroncoMessageRequestsNoticeVariant[17]), { node: memo1 }),
+    closure_9(sensitiveContentFilterHelpArticle(ageNoticeMessageRequestsNoticeVariant[16]), obj5),
+    closure_9(sensitiveContentFilterHelpArticle(ageNoticeMessageRequestsNoticeVariant[17]), { node: memo1 }),
   ];
   obj4.children = items2;
   return closure_11(closure_10, obj4);

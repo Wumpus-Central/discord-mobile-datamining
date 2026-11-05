@@ -5,7 +5,7 @@ import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import useInitialValueDefault from "../../../../../hooks/useInitialValue.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
-import inlineStyles from "../../../../../../_runtime/08171_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08176_inlineStyles.js";
 import TraitOptionItem from "TraitOptionItem.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -31,12 +31,12 @@ function SelectedWindow(size) {
   return React5(tmp2, size1);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6204).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_12 = createStyles.createStyles({
   assetList: { paddingHorizontal: PX_16 },
   radioGroup: { flexDirection: "row", gap: PX_12 },
@@ -91,7 +91,7 @@ export default function TraitOptionList(size) {
   }
   const tmp8Result = useInitialValueDefault(bound);
   [tmp11, c13] = disabled(noop.useState(useWindowDimensionsDefault().width), 2);
-  const width = tmp2(13911).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const width = tmp2(13923).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + animatedRef;
   c14 = sum;
   const bound1 = Math.max(ref, tmp11 - ref - width);
@@ -172,7 +172,7 @@ export default function TraitOptionList(size) {
           TraitOptionListTsx3.__closure = items1;
           TraitOptionListTsx3.__workletHash = 14744162111459;
           TraitOptionListTsx3.__initData = tmp2;
-          return obj.withDelay(250, c0(5378).withTiming(diff, obj3, "respect-motion-settings", TraitOptionListTsx3));
+          return obj.withDelay(250, c0(5380).withTiming(diff, obj3, "respect-motion-settings", TraitOptionListTsx3));
         }),
         0,
       );
@@ -233,8 +233,8 @@ export default function TraitOptionList(size) {
           if (null != tmp6) {
             if (tmp6.optionId !== c2) {
               onSelectOption(tmp6.trait, tmp6.optionId);
-              const result = x(5384).triggerHapticFeedback(x(5384).HapticFeedbackTypes.IMPACT_LIGHT);
-              const obj = x(5384);
+              const result = x(5386).triggerHapticFeedback(x(5386).HapticFeedbackTypes.IMPACT_LIGHT);
+              const obj = x(5386);
             }
           }
         }
@@ -311,8 +311,8 @@ export default function TraitOptionList(size) {
       closure_11.current = false;
       if (traitOption.optionId !== c2) {
         onSelectOption(traitOption.trait, traitOption.optionId);
-        const result = traitOption(5384).triggerHapticFeedback(traitOption(5384).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj2 = traitOption(5384);
+        const result = traitOption(5386).triggerHapticFeedback(traitOption(5386).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj2 = traitOption(5386);
       }
       if (!isScreenReaderEnabled) {
         const current = animatedRef.current;

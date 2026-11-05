@@ -10,12 +10,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const diff = fn(12843).MESSAGE_EDGE_INSET + fn(12843).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(12843).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(5141);
+const diff = fn(12850).MESSAGE_EDGE_INSET + fn(12850).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(12850).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(5143);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(12843).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(12850).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -49,15 +49,15 @@ export default function ConjureRepliedMessage(replied) {
   replied = replied.replied;
   const onJump = replied.onJump;
   const tmp = closure_8();
-  const messageAuthorUser = replied(12854).useMessageAuthorUser(replied.userId);
-  const obj = replied(12854);
-  let str = replied(5195).useName(messageAuthorUser);
+  const messageAuthorUser = replied(12861).useMessageAuthorUser(replied.userId);
+  const obj = replied(12861);
+  let str = replied(5197).useName(messageAuthorUser);
   if (str == null) {
     str = "";
   }
   items = [replied.content];
   const memo = noop.useMemo(() => ConjureDesignFeedback.parseConjureDesignRemark(replied.content), items);
-  const obj2 = replied(5195);
+  const obj2 = replied(5197);
   let body;
   if (memo != null) {
     body = memo.body;
@@ -65,7 +65,7 @@ export default function ConjureRepliedMessage(replied) {
   if (body == null) {
     body = replied.content;
   }
-  const tmp2Result = replied(12855);
+  const tmp2Result = replied(12862);
   const conjureMentionNames = tmp2Result.useConjureMentionNames(body.replace(/\s+/g, " ").trim());
   const obj3 = {
     style: tmp.root,
@@ -82,11 +82,11 @@ export default function ConjureRepliedMessage(replied) {
   if (null != messageAuthorUser) {
     const obj5 = { style: tmp.avatar, children: null };
     const obj6 = { userId: replied.userId, size: tmp2(1187).AvatarSizes.SIZE_16 };
-    obj5.children = closure_6(tmp2(12856).ConjureUserAvatar, obj6);
+    obj5.children = closure_6(tmp2(12863).ConjureUserAvatar, obj6);
     tmp11Result = closure_6(closure_5, obj5);
   }
   items1[1] = tmp11Result;
-  items1[2] = closure_6(replied(5761).Text, {
+  items1[2] = closure_6(replied(5763).Text, {
     variant: "body-xs/semibold",
     color: "text-default",
     style: tmp.name,
@@ -116,7 +116,7 @@ export default function ConjureRepliedMessage(replied) {
   items2[1] = str3;
   items2[2] = conjureMentionNames;
   obj8.children = items2;
-  items1[3] = closure_7(replied(5761).Text, obj8);
+  items1[3] = closure_7(replied(5763).Text, obj8);
   obj3.children = items1;
   return closure_7(closure_4, obj3);
 }

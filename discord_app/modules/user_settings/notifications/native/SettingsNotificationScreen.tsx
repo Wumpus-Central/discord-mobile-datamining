@@ -49,11 +49,11 @@ function SystemNotificationsSubLabel() {
   return React5(React6, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(17721).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8573).MobileUserSettings;
+let closure_5 = fn(17748).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8578).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   card: {
     marginBottom: 8,

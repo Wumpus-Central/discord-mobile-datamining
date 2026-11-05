@@ -48,8 +48,8 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "CONVERSATIONS_TOGGLE_HIGHLIGHTING",
-    externalChildren: "SET_SELECTED_CONVERSATION",
+    label: "ACTION_SHEET",
+    externalChildren: null,
     expandedChildren: null,
     children: null,
   };
@@ -68,8 +68,8 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "CONVERSATIONS_TOGGLE_HIGHLIGHTING",
-    externalChildren: "SET_SELECTED_CONVERSATION",
+    label: "ACTION_SHEET",
+    externalChildren: null,
     expandedChildren: null,
     children: null,
   });

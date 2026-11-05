@@ -6,11 +6,12 @@ import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVeri
 import useSelectedTeen from "../../../parent_tools/hooks/useSelectedTeen.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
+import FamilyCenterSaveErrorUtils from "../../../parent_tools/FamilyCenterSaveErrorUtils.tsx";
 import DefaultDMSettingsExperiment from "../../content_and_social/DefaultDMSettingsExperiment.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -20,7 +21,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(_modDef2667["7aYkh1"]);
   },
-  parent: fn(8573).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8578).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();
@@ -49,7 +50,9 @@ const toggle = SettingBuilders.createToggle({
       }
       const ParentalControlledDefaultMessageRequestRestricted =
         ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
-      const result1 = ParentalControlledDefaultMessageRequestRestricted.updateControlledSetting(selectedTeenId, !arg0);
+      FamilyCenterSaveErrorUtils.showToastIfSaveFails(
+        ParentalControlledDefaultMessageRequestRestricted.updateControlledSetting(selectedTeenId, !arg0),
+      );
     }
   },
   unsearchable: true,

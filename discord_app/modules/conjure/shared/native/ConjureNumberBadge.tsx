@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/shared/native/ConjureNumberBadge.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05725_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ let items = [
 ];
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 1 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   root: { borderRadius: nativeDefault.space.PX_8, overflow: "hidden" },
   badge: { backgroundColor: "transparent" },

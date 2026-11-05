@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/ScheduleMessageSpotIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef14221 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ScheduleMessageSpotIllustration-1x.png.js";
-import _modDef14222 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ScheduleMessageSpotIllustration-2x.png.js";
-import _modDef14223 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ScheduleMessageSpotIllustration-3x.png.js";
+import _modDef14234 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ScheduleMessageSpotIllustration-1x.png.js";
+import _modDef14235 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ScheduleMessageSpotIllustration-2x.png.js";
+import _modDef14236 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ScheduleMessageSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14221 }, 3: null };
-let obj2 = { uri: _modDef14221 };
-obj[2] = { uri: _modDef14222 };
-const obj3 = { uri: _modDef14222 };
-obj[3] = { uri: _modDef14223 };
+let obj = { 1: null, 2: { uri: _modDef14234 }, 3: null };
+let obj2 = { uri: _modDef14234 };
+obj[2] = { uri: _modDef14235 };
+const obj3 = { uri: _modDef14235 };
+obj[3] = { uri: _modDef14236 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/ScheduleMessageSpotIllustration.native.tsx",

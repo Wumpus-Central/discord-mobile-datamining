@@ -53,7 +53,7 @@ function handleWaterwheelsPress() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_10 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarWaterwheelsButton.tsx");
@@ -73,9 +73,9 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: null,
+    label: "md",
     expandedChildren: null,
-    children: "heading-lg/semibold",
+    children: null,
   };
   const intl = util.intl;
   obj4.label = intl.string(_modDef2537.zFl2A4);

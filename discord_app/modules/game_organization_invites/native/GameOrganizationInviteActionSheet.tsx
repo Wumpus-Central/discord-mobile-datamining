@@ -9,6 +9,7 @@ import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.nat
 import UserPlaceholderRowDefault from "../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 import useGameOrganizationInviteSuggestionsDefault from "../useGameOrganizationInviteSuggestions.tsx";
 import useLinkedGameOrganizationInviteSenderDefault from "../useLinkedGameOrganizationInviteSender.tsx";
+import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends.tsx";
 import GameOrganizationInviteListDefault from "GameOrganizationInviteList.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -26,7 +27,7 @@ function Loading() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -36,7 +37,7 @@ const result = size.fileFinishedImporting(
 
 export default function GameOrganizationInviteActionSheet(guildId) {
   const tmp = closure_6();
-  ({ users, isLoading, search } = useGameOrganizationInviteSuggestionsDefault());
+  ({ users, isLoading, hasNoFriends, search } = useGameOrganizationInviteSuggestionsDefault());
   const tmp4 = useGameOrganizationInviteSuggestionsDefault();
   ({ getSendState, handleInvite } = useLinkedGameOrganizationInviteSenderDefault(guildId.guildId));
   const intl = util.intl;
@@ -69,6 +70,8 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   obj.header = hasOwnProperty(Stack_Stack.Stack, obj2);
   if (isLoading) {
     let tmp7Result = React4(Loading, {});
+  } else if (hasNoFriends) {
+    tmp7Result = React4(GameOrganizationInviteNoFriendsDefault, {});
   } else {
     const obj7 = { users, getSendState, onInvite: handleInvite };
     tmp7Result = React4(GameOrganizationInviteListDefault, obj7);

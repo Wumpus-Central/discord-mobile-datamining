@@ -57,17 +57,37 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
     }
   }
 }
-function resolveBackgroundScreen(state) {
-  const obj = NavigationRouteUtils;
-  const coerceTabsRouteResult = obj.coerceTabsRoute(state.routes[0]);
+function resolveBackgroundScreen(state, arg1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  let flag = obj.includeCoveredGuilds;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const coerceTabsRouteResult = NavigationRouteUtils.coerceTabsRoute(state.routes[0]);
   if (null == coerceTabsRouteResult) {
     return [];
   } else {
-    const tmp11 = getActiveTabsRoute(coerceTabsRouteResult);
-    if (null == tmp11) {
+    if (flag) {
+      state = coerceTabsRouteResult.state;
+      let found;
+      if (state != null) {
+        const routes = state.routes;
+        found = routes.find((item) => null != NavigationRouteUtils.coerceGuildsRoute(item));
+      }
+      if (found == null) {
+        found = getActiveTabsRoute(coerceTabsRouteResult);
+      }
+      let tmp5 = found;
+    } else {
+      tmp5 = getActiveTabsRoute(coerceTabsRouteResult);
+    }
+    if (null == tmp5) {
       return [];
     } else {
-      const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(tmp11);
+      const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(tmp5);
       if (null == coerceGuildsRouteResult) {
         return [];
       } else {
@@ -97,8 +117,8 @@ function resolveBackgroundScreen(state) {
             if (search) {
               let BACKGROUND_SAVED = obj.FALLBACK_RENDERED;
             }
-            const obj2 = { index: 0, type: BACKGROUND_SAVED, guildId, channelId, showCreateThread: false };
-            items = [obj2];
+            const obj3 = { index: 0, type: BACKGROUND_SAVED, guildId, channelId, showCreateThread: false };
+            items = [obj3];
             return items;
           }
           BACKGROUND_SAVED = obj.BACKGROUND_SAVED;
@@ -123,7 +143,7 @@ function resolveChannelScreens(state, isChatLockedOpen) {
     }
   }
   if (isChatLockedOpen.isChatLockedOpen) {
-    const arr2 = resolveBackgroundScreen(state);
+    const arr2 = resolveBackgroundScreen(state, { includeCoveredGuilds: true });
     if (arr2.length > 0) {
       const items1 = [];
       HermesBuiltin.arraySpread(
@@ -145,7 +165,7 @@ function resolveChannelScreens(state, isChatLockedOpen) {
   return tmp8;
 }
 const ME = fn(1072).ME;
-const isStaticChannelRoute = fn(4997).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4999).isStaticChannelRoute;
 const ChannelScreenType = {
   DEFAULT: 0,
   [0]: "DEFAULT",
@@ -235,7 +255,7 @@ export default function useChannelScreensFromNavigation(arg0) {
   let items1 = [arg0, callback];
   const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(resolveChannelScreens(data.data.state, handleStateChange(5325).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(5327).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {

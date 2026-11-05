@@ -121,8 +121,8 @@ export default function useICYMIItems() {
   }
   const isWaterwheelsCardEligible = obj.isWaterwheelsCardEligible;
   let stateFromStores1;
-  const waterwheelsDiscoverEnabled = stateFromStores1(9068).useWaterwheelsDiscoverEnabled("icymi_items");
-  const obj2 = stateFromStores1(9068);
+  const waterwheelsDiscoverEnabled = stateFromStores1(9072).useWaterwheelsDiscoverEnabled("icymi_items");
+  const obj2 = stateFromStores1(9072);
   items = [ICYMIStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => ICYMIStore.getUnreadDisplayItems());
   const obj3 = stateFromStores1(504);
@@ -164,7 +164,7 @@ export default function useICYMIItems() {
           let tmp10 = stateFromStoresObject[tmp7.id];
           let tmp11 = null == tmp10;
           if (tmp11) {
-            tmp11 = tmp7.type === stateFromStores1(9060).ICYMIItemTypes.MESSAGE;
+            tmp11 = tmp7.type === stateFromStores1(9065).ICYMIItemTypes.MESSAGE;
           }
           if (tmp11) {
             let message_context = tmp7.data.message_context;
@@ -211,7 +211,7 @@ export default function useICYMIItems() {
           let tmp27 = stateFromStoresObject[tmp24.id];
           let tmp28 = null == tmp27;
           if (tmp28) {
-            tmp28 = tmp24.type === stateFromStores1(9060).ICYMIItemTypes.MESSAGE;
+            tmp28 = tmp24.type === stateFromStores1(9065).ICYMIItemTypes.MESSAGE;
           }
           if (tmp28) {
             let message_context2 = tmp24.data.message_context;
@@ -245,5 +245,11 @@ export default function useICYMIItems() {
       }
     }
   }
-  return { unreadItems: items6, readItems: items7, allUnreadItemsHydrated: stateFromStores2 >= stateFromStores.length };
+  return {
+    unreadItems: items6,
+    readItems: items7,
+    allUnreadItemsHydrated: stateFromStores2 >= stateFromStores.length,
+    allItemsHydrated: stateFromStores2 >= stateFromStores.length + stateFromStores1.length,
+    discoverEnabled: waterwheelsDiscoverEnabled,
+  };
 }

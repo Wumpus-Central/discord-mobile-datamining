@@ -56,7 +56,7 @@ const View = fn(17).View;
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     password: { marginTop: 24 },
@@ -85,61 +85,58 @@ export default function Login(isMultiAccount) {
   let navigation;
   asyncGeneratorStep = undefined;
   _slicedToArray = undefined;
-  noop = undefined;
   first = undefined;
-  countryCode = undefined;
-  c8 = undefined;
+  closure_6 = undefined;
+  c7 = undefined;
   first1 = undefined;
-  closure_10 = undefined;
+  closure_9 = undefined;
   let ref;
-  let callback;
-  const tmp3 = callback(navigation(ref[15])());
+  closure_12 = undefined;
+  const tmp3 = closure_12(navigation(ref[15])());
   navigation = require("useNavigation").useNavigation();
   let obj = require("useNavigation");
-  items = [countryCode];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => countryCode.getCountryCode());
-  ref = noop.useRef(null);
+  items = [c7];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => _undefined3.getCountryCode());
+  ref = first.useRef(null);
   let obj2 = require("initialize");
   const str = stateFromStores.code;
-  [tmp9, c3] = noop.useState(false);
-  const tmp8 = _slicedToArray(noop.useState(false), 2);
-  [tmp11, c4] = noop.useState(false);
-  const tmp10 = _slicedToArray(noop.useState(false), 2);
-  [tmp13, c5] = noop.useState({});
-  [first, countryCode] = noop.useState("");
-  const tmp12 = _slicedToArray(noop.useState({}), 2);
-  [c8, tmp17] = noop.useState("");
-  [first1, closure_10] = noop.useState(false);
-  ref = noop.useRef(undefined);
-  const effect = noop.useEffect(
+  [tmp9, c3] = first.useState(false);
+  const tmp8 = _slicedToArray(first.useState(false), 2);
+  [tmp11, c4] = first.useState({});
+  [first, closure_6] = first.useState("");
+  const tmp10 = _slicedToArray(first.useState({}), 2);
+  [c7, tmp15] = first.useState("");
+  [first1, closure_9] = first.useState(false);
+  ref = first.useRef(undefined);
+  const effect = first.useEffect(
     () => () => {
       clearTimeout(ref.current);
     },
     [],
   );
-  callback = noop.useCallback((retry_after) => {
-    _undefined3(retry_after);
+  const callback = first.useCallback((retry_after) => {
+    _undefined2(retry_after);
     if (null != retry_after.retry_after) {
       const _clearTimeout = clearTimeout;
       clearTimeout(ref.current);
-      closure_10(true);
+      closure_9(true);
       const _setTimeout = setTimeout;
       ref.current = setTimeout(() => {
-        closure_1_10(false);
+        closure_1_9(false);
       }, 1000 * retry_after.retry_after);
     }
   }, []);
-  const tmp16 = _slicedToArray(noop.useState(""), 2);
+  const tmp14 = _slicedToArray(first.useState(""), 2);
   const focusEffect = require("BaseNavigationContainer").useFocusEffect(
-    noop.useCallback(() => {
-      _undefined2(false);
+    first.useCallback(() => {
+      _undefined(false);
     }, []),
   );
   const items1 = [callback, first];
-  closure_13 = noop.useCallback(
+  closure_12 = first.useCallback(
     asyncGeneratorStep(async () => {
-      if (v32 === 2) {
-        v32 = 3;
+      if (c5 === 2) {
+        c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
@@ -152,82 +149,79 @@ export default function Login(isMultiAccount) {
         }
       } else {
         try {
-          v32 = 2;
+          c5 = 2;
           if (0 === v3) {
             if (arg0 === 1) {
-              v32 = 3;
+              c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              v32 = 3;
+              c5 = 3;
               const obj5 = { value, done: true };
               return obj5;
             } else {
               closure_0 = tmp8;
               closure_128_0 = undefined;
               let authenticationErrorsFromV6OrEarlierAPIError;
-              v3(true);
-              v32({});
-              c3 = 2;
+              v0(true);
+              v3({});
+              v0 = 2;
               v3 = 3;
-              v32 = 1;
+              c5 = 1;
               const obj6 = { value: tmp4(tmp47[19]).forgotPassword(first), done: false };
               return obj6;
             }
           } else if (1 === tmp8) {
-            c3 = 0;
-            closure_129_4(false);
+            v0 = 0;
+            closure_129_3(false);
             throw tmp47;
           } else {
             if (2 === tmp8) {
-              c3 = 1;
+              v0 = 1;
               closure_128_2 = tmp47;
               authenticationErrorsFromV6OrEarlierAPIError = closure_0(
                 tmp47[23],
               ).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_128_2);
-              closure_129_12(authenticationErrorsFromV6OrEarlierAPIError);
-              c3 = 0;
-              closure_129_4(false);
-              v32 = 3;
+              closure_129_11(authenticationErrorsFromV6OrEarlierAPIError);
+              v0 = 0;
+              closure_129_3(false);
+              c5 = 3;
               const obj3 = closure_0(tmp47[23]);
             } else if (arg0 === 1) {
-              v32 = 3;
+              c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c3 = 0;
-              closure_129_4(false);
-              v32 = 3;
+              v0 = 0;
+              closure_129_3(false);
+              c5 = 3;
               const obj7 = { value, done: true };
               return obj7;
             } else {
               closure_128_0 = value;
               if (false !== closure_128_0) {
                 if (closure_128_0 === closure_0(tmp47[20]).PasswordResetMethods.ONE_TIME_LOGIN) {
-                  closure_0(tmp47[21]).openAlert(
-                    "one-time-login-forgot-password-confirm",
-                    closure_1_10(tmp4(tmp47[22]), {}),
-                  );
+                  closure_0(tmp47[21]).openAlert("one-time-login-forgot-password-confirm", ref(tmp4(tmp47[22]), {}));
                   const obj = closure_0(tmp47[21]);
                 } else {
                   const obj9 = { title: null, body: null };
                   const intl = closure_0(tmp47[12]).intl;
                   obj9.title = intl.string(closure_0(tmp47[12]).t.f5Pi7A);
                   const intl2 = closure_0(tmp47[12]).intl;
-                  const obj10 = { email: closure_129_6 };
+                  const obj10 = { email: closure_129_5 };
                   obj9.body = intl2.format(closure_0(tmp47[12]).t["6u5hQ9"], obj10);
                   tmp4(tmp47[11]).show(obj9);
                   const obj8 = tmp4(tmp47[11]);
                 }
-                c3 = 1;
+                v0 = 1;
               }
             }
-            c3 = 0;
-            closure_129_4(false);
-            v32 = 3;
+            v0 = 0;
+            closure_129_3(false);
+            c5 = 3;
             return { value: "HermesInternal", done: null };
           }
         } catch (tmp47) {
-          if (tmp5 === c3) {
-            v32 = tmp3;
+          if (tmp5 === v0) {
+            c5 = tmp3;
             throw tmp47;
           } else if (tmp2 === tmp49) {
             v3 = tmp2;
@@ -240,42 +234,97 @@ export default function Login(isMultiAccount) {
     items1,
   );
   _require = asyncGeneratorStep(async (isMultiAccount, arg1) => {
-    closure_131_0 = isMultiAccount;
-    closure_131_1 = closure_1;
-    let flag = closure_2;
-    if (closure_2 === undefined) {
-      flag = false;
-    }
-    closure_131_2 = flag;
-    await "flexDirection";
-    tmp3(true);
-    tmp22({});
-    await navigation(ref[19]).login({
-      login: closure_131_0,
-      password: closure_131_1,
-      undelete: closure_131_2,
-      isMultiAccount,
-    });
-    if (2 === tmp7) {
-      c6 = 0;
-      closure_131_4 = tmp22;
-      tmp3(false);
-      const authenticationErrorsFromV6OrEarlierAPIError = isMultiAccount(
-        ref[23],
-      ).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
-      callback(authenticationErrorsFromV6OrEarlierAPIError);
+    if (c8 === 2) {
       c8 = 3;
-      isMultiAccount(ref[23]);
-    } else if (isMultiAccount === 1) {
-      c8 = 3;
-      throw value;
-    } else if (isMultiAccount !== 2) {
-      c6 = 0;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (isMultiAccount === 1) {
+        throw value;
+      } else if (isMultiAccount === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount === 2) {
+            c8 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            _undefined = tmp7;
+            closure_131_2 = undefined;
+            closure_131_0 = isMultiAccount;
+            closure_131_1 = closure_1;
+            let flag = closure_2;
+            if (closure_2 === undefined) {
+              flag = false;
+            }
+            closure_131_2 = flag;
+            let authenticationErrorsFromV6OrEarlierAPIError;
+            c7 = 1;
+            c8 = 1;
+            return { value: "flexDirection", done: true };
+          }
+        } else if (1 === tmp7) {
+          if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount === 2) {
+            c8 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            _undefined(true);
+            tmp3({});
+            c6 = 1;
+            const obj6 = { login: closure_131_0, password: closure_131_1, undelete: closure_131_2, isMultiAccount };
+            c7 = 3;
+            c8 = 1;
+            const obj8 = { value: navigation(ref[19]).login(obj6), done: false };
+            return obj8;
+          }
+        } else {
+          if (2 === tmp7) {
+            c6 = 0;
+            closure_131_4 = closure_5;
+            _undefined(false);
+            authenticationErrorsFromV6OrEarlierAPIError = isMultiAccount(
+              ref[23],
+            ).getAuthenticationErrorsFromV6OrEarlierAPIError(closure_131_4);
+            callback(authenticationErrorsFromV6OrEarlierAPIError);
+            c8 = 3;
+            const obj2 = isMultiAccount(ref[23]);
+          } else if (isMultiAccount === 1) {
+            c8 = 3;
+            throw value;
+          } else if (isMultiAccount !== 2) {
+            c6 = 0;
+          }
+          c6 = 0;
+          c8 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp22) {
+        closure_5 = tmp22;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp22;
+        } else {
+          c7 = tmp;
+        }
+      }
     }
-    return value;
   });
   const items2 = [callback, flag];
-  const callback1 = noop.useCallback(function () {
+  const callback1 = first.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -286,10 +335,10 @@ export default function Login(isMultiAccount) {
     return applyArgumentsResult;
   }, items2);
   const items3 = [callback, first1];
-  const callback2 = noop.useCallback(
+  const callback2 = first.useCallback(
     asyncGeneratorStep(async () => {
-      if (v32 === 2) {
-        v32 = 3;
+      if (c5 === 2) {
+        c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
@@ -302,13 +351,13 @@ export default function Login(isMultiAccount) {
         }
       } else {
         try {
-          v32 = 2;
+          c5 = 2;
           if (0 === v3) {
             if (arg0 === 1) {
-              v32 = 3;
+              c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              v32 = 3;
+              c5 = 3;
               const obj6 = { value, done: true };
               return obj6;
             } else {
@@ -317,54 +366,54 @@ export default function Login(isMultiAccount) {
               if (!first1) {
                 if (!isPasswordlessActive.getIsPasswordlessActive()) {
                   const passkeyAuthenticator = tmp4(tmp52[24]).getPasskeyAuthenticator();
-                  v3(true);
-                  v32({});
-                  c3 = 2;
+                  v0(true);
+                  v3({});
+                  v0 = 2;
                   const obj4 = tmp4(tmp52[24]);
                   const obj7 = { authenticateFunc: passkeyAuthenticator };
                   v3 = 3;
-                  v32 = 1;
+                  c5 = 1;
                   const obj8 = { value: tmp4(tmp52[19]).authenticatePasswordless(obj7), done: false };
                   return obj8;
                 }
               }
-              v32 = 3;
+              c5 = 3;
             }
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
-              c3 = 1;
+              v0 = 1;
               closure_128_1 = tmp52;
               if (closure_128_1 instanceof closure_0(tmp52[25]).APIError) {
                 authenticationErrorsFromAPIError = closure_0(tmp52[23]).getAuthenticationErrorsFromAPIError(
                   closure_128_1,
                 );
-                closure_129_12(authenticationErrorsFromAPIError);
+                closure_129_11(authenticationErrorsFromAPIError);
                 const obj3 = closure_0(tmp52[23]);
               } else if (!(closure_128_1 instanceof closure_0(tmp52[26]).IgnorableWebAuthnError)) {
                 const obj9 = { message: closure_128_1.message };
-                closure_129_5(obj9);
+                closure_129_4(obj9);
               }
             } else if (arg0 === 1) {
-              v32 = 3;
+              c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c3 = 0;
-              closure_129_4(false);
-              v32 = 3;
+              v0 = 0;
+              closure_129_3(false);
+              c5 = 3;
               const obj = { value, done: true };
               return obj;
             } else {
-              c3 = 1;
+              v0 = 1;
             }
-            c3 = 0;
-            closure_129_4(false);
+            v0 = 0;
+            closure_129_3(false);
           }
-          c3 = 0;
-          closure_129_4(false);
+          v0 = 0;
+          closure_129_3(false);
           throw tmp52;
         } catch (tmp52) {
-          if (tmp5 === c3) {
-            v32 = tmp3;
+          if (tmp5 === v0) {
+            c5 = tmp3;
             throw tmp52;
           } else if (tmp2 === tmp54) {
             v3 = tmp2;
@@ -378,38 +427,38 @@ export default function Login(isMultiAccount) {
   );
   navigation(ref[27])();
   navigation(ref[28])(navigation, callback1);
-  let tmp27 = navigation(ref[29])("login", tmp13);
-  if (tmp27 == null) {
-    tmp27 = tmp(tmp2[29])("email", tmp13);
+  let tmp25 = navigation(ref[29])("login", tmp11);
+  if (tmp25 == null) {
+    tmp25 = tmp(tmp2[29])("email", tmp11);
   }
   let obj3 = require("BaseNavigationContainer");
-  let tmp30Result = null;
+  let tmp28Result = null;
   if (require("MFAUtils").hasWebAuthn) {
     let obj4 = {
-      icon: closure_10(tmp4(tmp2[32]).KeyIcon, {}),
+      icon: ref(tmp4(tmp2[32]).KeyIcon, {}),
       size: "lg",
       variant: "tertiary",
       disabled: null,
       text: null,
       onPress: null,
     };
-    let tmp31 = tmp11;
-    if (!tmp11) {
-      tmp31 = first1;
+    let tmp29 = tmp9;
+    if (!tmp9) {
+      tmp29 = first1;
     }
-    obj4.disabled = tmp31;
+    obj4.disabled = tmp29;
     let intl = tmp4(tmp2[12]).intl;
     obj4.text = intl.string(tmp4(tmp2[12]).t.EiwJkN);
     obj4.onPress = callback2;
-    tmp30Result = closure_10(tmp4(tmp2[31]).Button, obj4);
+    tmp28Result = ref(tmp4(tmp2[31]).Button, obj4);
   }
-  const tmp28 = navigation(ref[29])("password", tmp13);
+  const tmp26 = navigation(ref[29])("password", tmp11);
   if (tmp4Result.isMetaQuest()) {
     let obj5 = {
-      icon: closure_10(tmp4(tmp2[34]).MobilePhoneIcon, { color: "control-primary-text-default" }),
+      icon: ref(tmp4(tmp2[34]).MobilePhoneIcon, { color: "control-primary-text-default" }),
       size: "lg",
       variant: "primary",
-      disabled: tmp11,
+      disabled: tmp9,
       text: null,
       onPress: null,
     };
@@ -418,7 +467,7 @@ export default function Login(isMultiAccount) {
     obj5.onPress = function onPress() {
       return navigation.push(AuthStates.COMPANION_REMOTE_AUTH);
     };
-    tmp30Result = closure_10(tmp4(tmp2[31]).Button, obj5);
+    tmp28Result = ref(tmp4(tmp2[31]).Button, obj5);
   }
   let obj6 = {
     autoFocus: true,
@@ -427,7 +476,7 @@ export default function Login(isMultiAccount) {
     alpha2: stateFromStores.alpha2,
     countryCode: _slicedToArray(str.split(" "), 1)[0],
     onChange: function handleLoginUpdated(arg0, arg1) {
-      countryCode(arg1 + arg0);
+      closure_6(arg1 + arg0);
     },
     onSubmitEditing() {
       const current = ref.current;
@@ -449,24 +498,23 @@ export default function Login(isMultiAccount) {
   tmp4Result = require("MetaQuestUtils");
   const intl3 = tmp4(tmp2[12]).intl;
   obj6.label = intl3.string(require("util").t.tUjnxr);
-  obj6.errorMessage = tmp27;
+  obj6.errorMessage = tmp25;
   obj6.onPressCountrySelector = function onPressCountrySelector() {
     return navigation.push(AuthStates.COUNTRY_SELECT);
   };
-  const items4 = [closure_10(navigation(ref[35]), obj6), , , ,];
+  const items4 = [ref(navigation(ref[35]), obj6), , , ,];
   let obj7 = {
     containerStyle: tmp3.password,
     ref,
     textContentType: "password",
-    secureTextEntry: !tmp9,
-    onChange: tmp17,
+    secureTextEntry: true,
+    revealable: true,
+    onChange: tmp15,
     autoCapitalize: "none",
     onSubmitEditing() {
-      return callback1(first, c8);
+      return callback1(first, c7);
     },
     label: null,
-    trailingIcon: null,
-    trailingPressableProps: null,
     returnKeyType: "done",
     errorMessage: null,
     testID: "login_password_input",
@@ -474,53 +522,37 @@ export default function Login(isMultiAccount) {
   };
   const intl4 = tmp4(tmp2[12]).intl;
   obj7.label = intl4.string(require("util").t["CIGa+7"]);
-  if (tmp9) {
-    let EyeIcon = tmp4(tmp2[37]).EyeSlashIcon;
-  } else {
-    EyeIcon = tmp4(tmp2[38]).EyeIcon;
-  }
-  obj7.trailingIcon = EyeIcon;
-  const intl5 = tmp4(tmp2[12]).intl;
-  const string = intl5.string;
-  const t = tmp4(tmp2[12]).t;
-  if (tmp9) {
-    let stringResult = string(t.Nusip4);
-  } else {
-    stringResult = string(t.nFzpM5);
-  }
-  obj7.trailingPressableProps = {
-    accessibilityLabel: stringResult,
-    onPress() {
-      return _undefined((arg0) => !arg0);
-    },
-    hitSlop: { top: 8, bottom: 8 },
-  };
-  obj7.errorMessage = tmp28;
-  items4[1] = closure_10(require("TextInput").TextInput, obj7);
+  obj7.errorMessage = tmp26;
+  items4[1] = ref(require("TextInput").TextInput, obj7);
   let obj8 = {
     containerStyle: tmp3.link,
     onPress() {
-      return closure_13();
+      return closure_12();
     },
     text: null,
   };
-  const intl6 = tmp4(tmp2[12]).intl;
-  obj8.text = intl6.string(require("util").t.wWIufs);
-  items4[2] = closure_10(closure_13, obj8);
-  const tmp38 = closure_13;
+  const intl5 = tmp4(tmp2[12]).intl;
+  obj8.text = intl5.string(require("util").t.wWIufs);
+  items4[2] = ref(callback1, obj8);
+  const tmp35 = callback1;
   const tmpResult = navigation(ref[35]);
-  let tmp35Result = null;
+  let tmp33Result = null;
   if (tmp4Result6.isAndroid()) {
-    tmp35Result = null;
+    tmp33Result = null;
     if (!tmp4Result7.isMetaQuest()) {
-      let obj9 = { containerStyle: tmp3.link, onPress: callback1, text: null, textColor: "text-link" };
-      const intl7 = tmp4(tmp2[12]).intl;
-      obj9.text = intl7.string(tmp4(tmp2[12]).t.RL5Fy2);
-      tmp35Result = tmp35(tmp38, obj9);
+      let obj9 = {
+        containerStyle: tmp3.link,
+        onPress: handlePressPasswordManagerHint,
+        text: null,
+        textColor: "text-link",
+      };
+      const intl6 = tmp4(tmp2[12]).intl;
+      obj9.text = intl6.string(tmp4(tmp2[12]).t.RL5Fy2);
+      tmp33Result = tmp33(tmp35, obj9);
     }
     tmp4Result7 = tmp4(tmp2[33]);
   }
-  items4[3] = tmp35Result;
+  items4[3] = tmp33Result;
   let obj10 = { style: tmp3.button, children: null };
   tmp4Result6 = require("PlatformUtils");
   let str3 = "primary";
@@ -528,52 +560,52 @@ export default function Login(isMultiAccount) {
     str3 = "tertiary";
   }
   const obj11 = { children: null };
-  const obj12 = { size: "lg", variant: str3, disabled: first1, loading: tmp11, text: null, onPress: null };
-  const intl8 = tmp4(tmp2[12]).intl;
-  obj12.text = intl8.string(require("util").t.dKhVQN);
+  const obj12 = { size: "lg", variant: str3, disabled: first1, loading: tmp9, text: null, onPress: null };
+  const intl7 = tmp4(tmp2[12]).intl;
+  obj12.text = intl7.string(require("util").t.dKhVQN);
   obj12.onPress = function onPress() {
-    return callback1(first, c8);
+    return callback1(first, c7);
   };
-  obj10.children = closure_10(require("components/Button/Button").Button, obj12);
-  items4[4] = closure_10(first, obj10);
+  obj10.children = ref(require("components/Button/Button").Button, obj12);
+  items4[4] = ref(closure_6, obj10);
   obj11.children = items4;
-  const tmp33Result = ref(first, obj11);
+  const tmp31Result = callback(closure_6, obj11);
   const obj13 = { headerText: null, subHeader: null, children: null };
   tmp4Result8 = require("MetaQuestUtils");
-  const intl9 = tmp4(tmp2[12]).intl;
-  obj13.headerText = intl9.string(require("util").t["7fNJgA"]);
+  const intl8 = tmp4(tmp2[12]).intl;
+  obj13.headerText = intl8.string(require("util").t["7fNJgA"]);
   const obj14 = { variant: "body-sm/medium", color: "text-default", children: null };
-  const intl10 = tmp4(tmp2[12]).intl;
-  obj14.children = intl10.string(require("util").t.euS7r4);
-  obj13.subHeader = closure_10(require("Text/Text").Text, obj14);
+  const intl9 = tmp4(tmp2[12]).intl;
+  obj14.children = intl9.string(require("util").t.euS7r4);
+  obj13.subHeader = ref(require("Text/Text").Text, obj14);
   const obj15 = { style: tmp3.content, children: null };
-  const tmpResult2 = navigation(ref[39]);
-  let tmp43 = tmp33Result;
+  const tmpResult2 = navigation(ref[37]);
+  let tmp40 = tmp31Result;
   if (tmp4Result9.isMetaQuest()) {
-    tmp43 = tmp30Result;
+    tmp40 = tmp28Result;
   }
-  const items5 = [tmp43, , ,];
+  const items5 = [tmp40, , ,];
   tmp4Result9 = require("MetaQuestUtils");
-  items5[1] = closure_10(require("Stack/Stack").Stack, {
+  items5[1] = ref(require("Stack/Stack").Stack, {
     style: tmp3.separator,
-    children: closure_10(require("JoinServer").OrSeparator, {}),
+    children: ref(require("JoinServer").OrSeparator, {}),
   });
-  const obj16 = { style: tmp3.separator, children: closure_10(require("JoinServer").OrSeparator, {}) };
+  const obj16 = { style: tmp3.separator, children: ref(require("JoinServer").OrSeparator, {}) };
   if (tmp4Result10.isMetaQuest()) {
-    tmp30Result = tmp33Result;
+    tmp28Result = tmp31Result;
   }
-  items5[2] = tmp30Result;
-  let tmp35Result2 = null;
-  if (null != tmp13.message) {
-    tmp35Result2 = null;
-    if ("" !== tmp13.message) {
-      const obj17 = { style: tmp3.hint, children: tmp13.message };
-      tmp35Result2 = tmp35(tmp(tmp2[42]), obj17);
+  items5[2] = tmp28Result;
+  let tmp33Result2 = null;
+  if (null != tmp11.message) {
+    tmp33Result2 = null;
+    if ("" !== tmp11.message) {
+      const obj17 = { style: tmp3.hint, children: tmp11.message };
+      tmp33Result2 = tmp33(tmp(tmp2[40]), obj17);
     }
   }
-  items5[3] = tmp35Result2;
+  items5[3] = tmp33Result2;
   obj15.children = items5;
-  obj13.children = ref(first, obj15);
-  return closure_10(tmpResult2, obj13);
+  obj13.children = callback(closure_6, obj15);
+  return ref(tmpResult2, obj13);
 }
 export { LinkButton };

@@ -10,7 +10,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import GatewayConnectionStore from "../../../../gateway/GatewayConnectionStore.tsx";
 
 require = fn;
-const YouBarNavigatorScreens = fn(11703).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11711).YouBarNavigatorScreens;
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -20,11 +20,11 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guil
 
 export default noop.memo(
   function GuildsOnly() {
-    const trackTabPerformance = enabled(18326).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
-    let obj = enabled(18326);
-    const tmp5 = isChatBesideChannelList(5318)();
-    let isEligibleForQuests = enabled(9823).getIsEligibleForQuests();
-    const GuildsRenderExperiment = enabled(18327).GuildsRenderExperiment;
+    const trackTabPerformance = enabled(18356).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
+    let obj = enabled(18356);
+    const tmp5 = isChatBesideChannelList(5320)();
+    let isEligibleForQuests = enabled(9829).getIsEligibleForQuests();
+    const GuildsRenderExperiment = enabled(18357).GuildsRenderExperiment;
     enabled = GuildsRenderExperiment.useConfig({ location: "GuildsOnly" }).enabled;
     isChatBesideChannelList = undefined;
     dependencyMap = undefined;
@@ -82,7 +82,7 @@ export default noop.memo(
         let ComponentDispatch = enabled(1108).ComponentDispatch;
         const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
         let obj = isChatBesideChannelList(572);
-        let rootNavigationRef = enabled(5323).getRootNavigationRef();
+        let rootNavigationRef = enabled(5325).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.addListener("state", handleNavigationChange);
         }
@@ -100,19 +100,23 @@ export default noop.memo(
       }
     }, items);
     if (!isChatBesideChannelList) {
-      isChatBesideChannelList = isChatBesideChannelList(5325)().isChatBesideChannelList;
+      isChatBesideChannelList = isChatBesideChannelList(5327)().isChatBesideChannelList;
     }
     if (!enabled) {
       const obj3 = { gradient: tmp5, children: null };
-      const items1 = [closure_8(tmp4(18328), {}), closure_8(tmp4(18704), {})];
+      const items1 = [
+        closure_8(tmp4(18358), {}),
+        closure_8(tmp(18340).BackgroundChatHost, {}),
+        closure_8(tmp4(18734), {}),
+      ];
       if (isEligibleForQuests) {
-        isEligibleForQuests = closure_8(tmp4(17402), {});
+        isEligibleForQuests = closure_8(tmp4(17428), {});
       }
       const obj4 = { children: null };
-      items1[2] = isEligibleForQuests;
+      items1[3] = isEligibleForQuests;
       obj4.children = items1;
-      obj3.children = closure_9(tmp(17323).QuestDockExternalCoordinationContextProvider, obj4);
-      let tmp10Result = closure_8(tmp(5207).ThemeContextProvider, obj3);
+      obj3.children = closure_9(tmp(17349).QuestDockExternalCoordinationContextProvider, obj4);
+      let tmp10Result = closure_8(tmp(5209).ThemeContextProvider, obj3);
     } else {
       tmp10Result = null;
     }

@@ -8,7 +8,7 @@ import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx"
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EditButtonDefault = tmp(16706);
+const EditButtonDefault = tmp(16719);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -58,7 +58,7 @@ function EditButton(disabled) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,

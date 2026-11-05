@@ -103,21 +103,21 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   closure_131_2 = closure_2;
   const result = UniqueUsernamesStore.registrationUsernameSuggestion();
   const registrationOptions = state2.getState().registrationOptions;
-  let tmp49 = null;
+  let tmp37 = null;
   if (!obj10.isNullOrEmpty(result)) {
-    tmp49 = registrationOptions.username === result;
+    tmp37 = registrationOptions.username === result;
   }
-  const obj5 = {};
+  const obj6 = {};
   const merged = Object.assign(registrationOptions);
-  obj5.usedUsernameSuggestion = tmp49;
-  closure_131_3 = obj5;
+  obj6.usedUsernameSuggestion = tmp37;
+  closure_131_3 = obj6;
   state = state.getState();
   if (state.required) {
-    obj5.promoEmailConsent = state;
+    obj6.promoEmailConsent = state;
   }
   metroImportDefault(true);
   timestampProducer({});
-  await auth_register.registerFull(obj5);
+  await auth_register.registerFull(obj6);
   if (1 === tmp7) {
     c6 = 0;
     closure_131_6 = closure_5;
@@ -146,10 +146,10 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6876).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(18243);
+const usePromoEmailConsentStore = fn(6879).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(18271);
 ({ setRegistrationErrors: closure_6, setSubmitting: metroImportDefault, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(18244);
+const RegistrationConstants = fn(18272);
 ({ authStateToRegisterTransitionStep: closure_10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsx = fn(21).jsx;
@@ -303,7 +303,7 @@ export function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(7353), {
+      return closure_15(closure_1(7356), {
         onClose() {
           return closure_0.pop();
         },

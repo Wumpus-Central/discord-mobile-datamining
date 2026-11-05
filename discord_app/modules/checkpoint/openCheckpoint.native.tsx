@@ -41,7 +41,7 @@ let closure_5 = async function _openCheckpoint(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -93,7 +93,7 @@ let closure_5 = async function _openCheckpoint(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(13657).CheckpointFetchStates;
+const CheckpointFetchStates = fn(13668).CheckpointFetchStates;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/openCheckpoint.native.tsx");
 

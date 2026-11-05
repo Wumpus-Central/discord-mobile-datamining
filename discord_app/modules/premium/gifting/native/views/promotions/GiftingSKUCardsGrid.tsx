@@ -5,7 +5,7 @@ import util from "../../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../../screen/useWindowDimensions.native.tsx";
 import ColorUtils from "../../../../../../utils/ColorUtils.tsx";
 import useA11yRolesNative from "../../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import LinearGradientDefault from "../../../../../../../_runtime/05723_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../../_runtime/05725_LinearGradient.js";
 import useToken from "../../../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -17,7 +17,7 @@ require = fn;
 function GiftingSKUCardItemPreview(arg0) {
   ({ item, isSelected } = arg0);
   const tmp = closure_18();
-  const currentUser = isSelected(8890).useCurrentUser();
+  const currentUser = isSelected(8895).useCurrentUser();
   items = [isSelected, currentUser];
   const memo = noop.useMemo(() => {
     let avatarSource;
@@ -28,22 +28,22 @@ function GiftingSKUCardItemPreview(arg0) {
   }, items);
   if (isNameplateRecord(item)) {
     const obj2 = { item, animate: isSelected };
-    let tmp8 = closure_10(currentUser(9667), obj2);
+    let tmp8 = closure_10(currentUser(9673), obj2);
   } else if (isAvatarDecorationRecord(item)) {
     const obj3 = { item, size, animate: isSelected, avatarSource: memo };
-    tmp8 = closure_10(currentUser(9653), obj3);
+    tmp8 = closure_10(currentUser(9659), obj3);
   } else if (isProfileEffectRecord(item)) {
     const obj4 = { style: tmp.profileEffect, children: null };
     const obj5 = { source: null, style: null, resizeMode: "cover" };
-    const obj6 = { uri: currentUser(9666) };
+    const obj6 = { uri: currentUser(9672) };
     obj5.source = obj6;
     obj5.style = tmp.sampleProfile;
-    const items1 = [closure_10(currentUser(5851), obj5)];
+    const items1 = [closure_10(currentUser(5854), obj5)];
     const obj7 = { skuId: item.skuId, useThumbnail: !isSelected };
-    items1[1] = closure_10(currentUser(9644), obj7);
+    items1[1] = closure_10(currentUser(9650), obj7);
     obj4.children = items1;
     tmp8 = closure_11(closure_4, obj4);
-    const tmp19 = currentUser(5851);
+    const tmp19 = currentUser(5854);
   } else {
     tmp8 = null;
     if (isProfileFrameRecord(item)) {
@@ -54,9 +54,9 @@ function GiftingSKUCardItemPreview(arg0) {
         previewHeight,
         profileBackgroundColor: currentUser(575).colors.BACKGROUND_BASE_LOW,
       };
-      obj8.children = closure_10(currentUser(9665), obj9);
+      obj8.children = closure_10(currentUser(9671), obj9);
       tmp8 = closure_10(closure_4, obj8);
-      const tmp12 = currentUser(9665);
+      const tmp12 = currentUser(9671);
     }
   }
   return tmp8;
@@ -123,10 +123,10 @@ function GiftingSKUCardPreview(isSelected) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7865).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7870).isAvatarDecorationRecord;
 const isNameplateRecord = fn(2114).isNameplateRecord;
-const isProfileEffectRecord = fn(7866).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7867).isProfileFrameRecord;
+const isProfileEffectRecord = fn(7871).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7872).isProfileFrameRecord;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -136,7 +136,7 @@ const previewWidth = 150 - nativeDefault.space.PX_32;
 const sum = 100 + nativeDefault.space.PX_40;
 const PX_122 = nativeDefault.space.PX_12;
 let closure_17 = 2 * nativeDefault.space.PX_24;
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let obj = {
   card: {
     width: 150,
@@ -202,7 +202,7 @@ const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
 obj.profileEffect = rect;
-obj.sampleProfile = { aspectRatio: fn(9641).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9647).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.profileFrame = { position: "absolute", top: 0, left: 0, right: 0, height: sum, alignItems: "center" };
 const rect1 = {
   position: "absolute",
@@ -286,7 +286,7 @@ let closure_22 = noop.memo(function GiftingSKUCard(rewardSkuId) {
     return closure_1_11(Pressables.PressableOpacity, obj3);
   }
 });
-createStyles = fn(5141);
+createStyles = fn(5143);
 let closure_23 = createStyles.createStyles({
   grid: { flexDirection: "column", alignSelf: "center", gap: PX_122 },
   row: { flexDirection: "row", gap: PX_122 },

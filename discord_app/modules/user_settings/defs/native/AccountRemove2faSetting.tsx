@@ -170,13 +170,13 @@ const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let obj3 = module_560.create(() => ({ isCheckingLastFactor: false }));
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["D+aE7g"]);
   },
-  parent: fn(8573).MobileUserSettings.ACCOUNT,
+  parent: fn(8578).MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
     const self = this;
     const apply = closure_7.apply;
@@ -198,8 +198,8 @@ const pressable = SettingBuilders.createPressable({
     }
     return tmp;
   },
-  useDescription: fn(16917).use2FARemoveDisableReason,
-  usePredicate: fn(16830).useIsTOTPEnabled,
+  useDescription: fn(16940).use2FARemoveDisableReason,
+  usePredicate: fn(16853).useIsTOTPEnabled,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");

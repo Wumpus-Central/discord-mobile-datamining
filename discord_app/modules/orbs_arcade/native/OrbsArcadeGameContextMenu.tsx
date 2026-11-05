@@ -1,6 +1,5 @@
 // discord_app/modules/orbs_arcade/native/OrbsArcadeGameContextMenu.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef9352 from "../../../../_runtime/metro/09352__.js";
 import RefreshIcon from "../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
 import CircleQuestionIcon from "../../../design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx";
 import OrbsArcadeActionCreators from "../OrbsArcadeActionCreators.tsx";
@@ -30,12 +29,13 @@ let closure_7 = async function _handleResetGame(arg0) {
 };
 const jsx = fn(21).jsx;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeGameContextMenu.tsx");
+let result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeGameContextMenu.tsx");
 
 export default function OrbsArcadeGameContextMenu(game) {
   game = game.game;
+  const surface = game.surface;
   items = [UserStore];
-  const items1 = [game.id];
+  const items1 = [game, surface];
   const stateFromStores = game(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -48,12 +48,19 @@ export default function OrbsArcadeGameContextMenu(game) {
     return flag;
   });
   const memo = noop.useMemo(() => {
-    const obj = { label: null, IconComponent: null, action: null };
+    let obj = { label: null, IconComponent: null, action: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      return game(17288).openOrbsArcadeInfoSheet(id.id);
+      const result = game(17304).trackOrbsArcadeCtaClicked(
+        id,
+        game(17304).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE,
+        game(17304).OrbsArcadeCtaLocation.GAME_TILE,
+        surface,
+      );
+      const obj = game(17304);
+      const result1 = game(17305).openOrbsArcadeInfoSheet(id.id, surface);
     };
     items = [obj];
     return items;
@@ -85,7 +92,7 @@ export default function OrbsArcadeGameContextMenu(game) {
   } else {
     items4 = [memo];
   }
-  return jsx(game(10053).ContextMenu, {
+  return jsx(game(10061).ContextMenu, {
     items: items4,
     triggerOnTap: true,
     children(ref) {
@@ -94,12 +101,12 @@ export default function OrbsArcadeGameContextMenu(game) {
       const merged1 = Object.assign(merged);
       obj.variant = "secondary-overlay";
       obj.size = "sm";
-      obj.icon = _modDef9352;
+      obj.icon = surface(9359);
       const intl = game(1113).intl;
       obj.accessibilityLabel = intl.string(game(1113).t.reWgFH);
       const intl2 = game(1113).intl;
       obj.accessibilityHint = intl2.string(game(1113).t.hd0b7t);
-      return jsx(game(8168).IconButton, { ref: ref.ref });
+      return jsx(game(8173).IconButton, { ref: ref.ref });
     },
   });
 }

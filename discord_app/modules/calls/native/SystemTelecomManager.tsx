@@ -55,7 +55,7 @@ function toHandle(getGuildId) {
   return combined;
 }
 const AppState = fn(17).AppState;
-const isMultiUserDM = fn(4994).isMultiUserDM;
+const isMultiUserDM = fn(4996).isMultiUserDM;
 let Constants = fn(1072);
 ({
   AnalyticEvents: closure_18,
@@ -64,7 +64,7 @@ let Constants = fn(1072);
   ME: closure_21,
   RTCConnectionStates: closure_22,
 } = Constants);
-Constants = fn(5902);
+Constants = fn(5905);
 ({ Features: closure_23, MediaEngineContextTypes: closure_24 } = Constants);
 let obj = new LoggerDefault("SystemTelecomManager");
 obj.enableNativeLogger(true);
@@ -163,96 +163,142 @@ class SystemTelecomManager {
     closure_129_0 = undefined;
     closure_129_1 = obj;
     closure_129_0 = closure_4(async (arg0) => {
-      const v0 = 0;
-      ({ handle: closure_129_0, video: closure_129_1 } = closure_0);
-      closure_129_7 = function selectChannel() {
-        channel = channel.getChannel(closure_1_6);
-        if (null != channel) {
-          const privateChannel = c1(dependencyMap[23]).selectPrivateChannel(channel.id);
-          obj = c1(dependencyMap[23]);
-        }
-      };
-      await "flexDirection";
-      if (1 === tmp4) {
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 3;
-          return { value, done: true };
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          let supportsResult = closure_129_1;
-          if (closure_129_1) {
-            supportsResult = selfMute.supports(constants2.VIDEO);
-          }
-          closure_129_2 = supportsResult;
-          closure_129_3 = (function fromHandle(str) {
-            if (str.startsWith(closure_1_27)) {
-              str = str.slice(8);
-            }
-            const tmp = closure_1_5(str.split(/\.|:/), 3);
-            obj = { type: +tmp[1], recipientId: null, guildId: null, channelId: null };
-            let tmp5 = null;
-            if (+tmp[1] === constants.DM) {
-              tmp5 = tmp2;
-            }
-            obj.recipientId = tmp5;
-            let tmp6 = null;
-            if (+tmp[1] === constants.GUILD_VOICE) {
-              tmp6 = tmp2;
-            }
-            obj.guildId = tmp6;
-            obj.channelId = tmp[0];
-            return obj;
-          })(closure_129_0);
-          const type = closure_129_3.type;
-          const recipientId = closure_129_3.recipientId;
-          const channelId = closure_129_3.channelId;
-          if (null == closure_130_1.calls[channelId]) {
-            if (type === constants.DM) {
-              if (null != recipientId) {
-                dependencyMap = 2;
-                c4 = 1;
-                return { value: v0(7625).ensurePrivateChannel(recipientId), done: false };
-              }
-            }
-            let hasChannelResult = isMultiUserDM(type);
-            if (hasChannelResult) {
-              hasChannelResult = ChannelStore.hasChannel(channelId);
-            }
-            if (hasChannelResult) {
-              const tmp55 = v0(7627);
-              const call2 = tmp55.call;
-              if (typeof call2 === "unknown") {
-                tmp55(tmp57, true);
-              } else {
-                call2(tmp56, tmp57, true);
-              }
-              closure_129_7();
-              tmp56 = channelId;
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else {
+              closure_2 = tmp4;
+              const v0 = 0;
+              closure_129_0 = undefined;
+              closure_129_1 = undefined;
+              ({ handle: closure_129_0, video: closure_129_1 } = closure_0);
+              closure_129_2 = undefined;
+              closure_129_3 = undefined;
+              let type;
+              let recipientId;
+              let channelId;
+              closure_129_7 = function selectChannel() {
+                channel = channel.getChannel(closure_1_6);
+                if (null != channel) {
+                  const privateChannel = c1(dependencyMap[23]).selectPrivateChannel(channel.id);
+                  obj = c1(dependencyMap[23]);
+                }
+              };
+              dependencyMap = 1;
+              c4 = 1;
+              return { value: "flexDirection", done: true };
             }
           } else {
-            v0(6050).setVideoEnabled(closure_129_2);
-            closure_129_7();
-            v0(6050);
+            if (1 === tmp4) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj6 = { value, done: true };
+                return obj6;
+              } else {
+                let supportsResult = closure_129_1;
+                if (closure_129_1) {
+                  supportsResult = selfMute.supports(constants2.VIDEO);
+                }
+                closure_129_2 = supportsResult;
+                closure_129_3 = (function fromHandle(str) {
+                  if (str.startsWith(closure_1_27)) {
+                    str = str.slice(8);
+                  }
+                  const tmp = closure_1_5(str.split(/\.|:/), 3);
+                  obj = { type: +tmp[1], recipientId: null, guildId: null, channelId: null };
+                  let tmp5 = null;
+                  if (+tmp[1] === constants.DM) {
+                    tmp5 = tmp2;
+                  }
+                  obj.recipientId = tmp5;
+                  let tmp6 = null;
+                  if (+tmp[1] === constants.GUILD_VOICE) {
+                    tmp6 = tmp2;
+                  }
+                  obj.guildId = tmp6;
+                  obj.channelId = tmp[0];
+                  return obj;
+                })(closure_129_0);
+                type = closure_129_3.type;
+                recipientId = closure_129_3.recipientId;
+                channelId = closure_129_3.channelId;
+                if (null == closure_130_1.calls[channelId]) {
+                  if (type === constants.DM) {
+                    if (null != recipientId) {
+                      dependencyMap = 2;
+                      c4 = 1;
+                      const obj7 = { value: v0(7627).ensurePrivateChannel(recipientId), done: false };
+                      return obj7;
+                    }
+                  }
+                  let hasChannelResult = isMultiUserDM(type);
+                  if (hasChannelResult) {
+                    hasChannelResult = ChannelStore.hasChannel(channelId);
+                  }
+                  if (hasChannelResult) {
+                    const tmp55 = v0(7629);
+                    const call2 = tmp55.call;
+                    if (typeof call2 === "unknown") {
+                      tmp55(tmp57, true);
+                    } else {
+                      call2(tmp56, tmp57, true);
+                    }
+                    closure_129_7();
+                    tmp56 = channelId;
+                  }
+                } else {
+                  v0(6053).setVideoEnabled(closure_129_2);
+                  closure_129_7();
+                  const obj2 = v0(6053);
+                }
+                c4 = 3;
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              const tmp9 = v0(7629);
+              const call = tmp9.call;
+              if (typeof call === "unknown") {
+                tmp9(tmp11, true);
+              } else {
+                call(tmp10, tmp11, true);
+              }
+              closure_129_7();
+              tmp10 = channelId;
+            }
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
           }
-          c4 = 3;
+        } catch (tmp67) {
+          c4 = tmp;
+          throw tmp67;
         }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        const tmp9 = v0(7627);
-        const call = tmp9.call;
-        if (typeof call === "unknown") {
-          tmp9(tmp11, true);
-        } else {
-          call(tmp10, tmp11, true);
-        }
-        closure_129_7();
-        tmp10 = channelId;
       }
-      return value;
     });
     obj.handleSystemStartCall = function () {
       const self = this;
@@ -275,7 +321,7 @@ class SystemTelecomManager {
       }
     };
     obj.handleSessionStart = function handleSessionStart() {
-      obj = obj(16520);
+      obj = obj(16533);
       obj.flushCallPushToken();
     };
     obj.handleConnectionOpen = function handleConnectionOpen(user) {
@@ -364,7 +410,7 @@ class SystemTelecomManager {
       const item = voiceStates.forEach((channelId) => {
         channelId = channelId.channelId;
         ({ guildId, userId, sessionId, selfVideo } = channelId);
-        obj = obj(16521);
+        obj = obj(16534);
         if (obj.isSystemTelecomEnabledForChannel(guildId, channelId)) {
           if (null != channelId) {
             if (userId === currentUserId.currentUserId) {
@@ -540,26 +586,26 @@ prototype["startCall"] = function startCall(arg0) {
                 const result = self.updateActiveCallStatus();
                 const obj9 = tmp5(1266);
                 const _HermesInternal = HermesInternal;
-                tmp29(10390).setRequestedBy("call:" + obj6.uuid);
-                const obj10 = tmp29(10390);
+                tmp29(10396).setRequestedBy("call:" + obj6.uuid);
+                const obj10 = tmp29(10396);
                 if (obj11.isSystemTelecomEnabled()) {
-                  const obj2 = tmp3(16519);
+                  const obj2 = tmp3(16532);
                   ({ uuid, handle } = obj6);
-                  const tmp42Result = tmp5(5786);
+                  const tmp42Result = tmp5(5788);
                   const startOutgoingCallResult = obj2.startOutgoingCall(
                     uuid,
                     handle,
-                    tmp5(5786).computeChannelName(obj6.channel, UserStore, RelationshipStore),
+                    tmp5(5788).computeChannelName(obj6.channel, UserStore, RelationshipStore),
                     obj6.video,
                   );
-                  tmp3(16519).setCallMuted(obj6.uuid, obj6.muted);
+                  tmp3(16532).setCallMuted(obj6.uuid, obj6.muted);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
                   const obj7 = { value: startOutgoingCallResult, done: false };
                   return obj7;
                 }
-                obj11 = tmp5(16521);
+                obj11 = tmp5(16534);
               }
             }
           }

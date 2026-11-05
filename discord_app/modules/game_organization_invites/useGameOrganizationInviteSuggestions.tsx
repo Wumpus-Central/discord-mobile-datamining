@@ -24,27 +24,30 @@ let result = size.fileFinishedImporting("modules/game_organization_invites/useGa
 export default function useGameOrganizationInviteSuggestions() {
   items = [InviteSuggestionsStore, RelationshipStore, UserStore];
   const users = require("initialize").useStateFromStoresArray(items, () => {
+    inviteSuggestionRows = inviteSuggestionRows.getInviteSuggestionRows();
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
     }
-    inviteSuggestionRows = inviteSuggestionRows.getInviteSuggestionRows();
+    closure_1 = closure_7;
     const found = inviteSuggestionRows.filter(closure_9);
     const mapped = found.map((item) => item.item);
-    return mapped.filter((item) => closure_1(dependencyMap[8])(item, id, RelationshipStore));
+    return mapped.filter((item) => closure_2_1(closure_2_2[7])(item, id, closure_1));
   });
   const isLoading = _slicedToArray(noop.useState(true), 2);
   _require = isLoading[1];
-  closure_1 = noop.useRef("");
+  const hasNoFriends = _slicedToArray(noop.useState(false), 2);
+  closure_1 = hasNoFriends[1];
+  dependencyMap = noop.useRef("");
   const search = noop.useCallback((current) => {
-    closure_1.current = current;
+    closure_2.current = current;
     const result = InviteSuggestionsActionCreators.searchInviteSuggestions(current);
   }, []);
   const effect = noop.useEffect(() => {
     closure_0 = async function _load() {
-      if (c4 === 2) {
-        c4 = 3;
+      if (c5 === 2) {
+        c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
@@ -57,63 +60,78 @@ export default function useGameOrganizationInviteSuggestions() {
         }
       } else {
         try {
-          c4 = 2;
-          if (0 === ref) {
+          c5 = 2;
+          if (0 === c4) {
             if (arg0 === 1) {
-              c4 = 3;
+              c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c4 = 3;
+              c5 = 3;
               const obj4 = { value, done: true };
               return obj4;
             } else {
+              let tmp42 = tmp4;
               c3 = 2;
               const obj5 = { omitUserIds: null };
               const _Set = Set;
               const set = new Set();
               obj5.omitUserIds = set;
-              ref = 3;
-              c4 = 1;
-              const obj6 = { value: closure_2_0(9295).loadInviteSuggestions(obj5), done: false };
+              c4 = 3;
+              c5 = 1;
+              const obj6 = { value: closure_2_0(9302).loadInviteSuggestions(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp8) {
             c3 = 0;
             tmp4(false);
-            throw closure_2;
+            throw tmp31;
           } else if (2 === tmp8) {
             c3 = 0;
             tmp4(false);
-            c4 = 3;
+            c5 = 3;
             return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
-            c4 = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             tmp4(false);
-            c4 = 3;
+            c5 = 3;
             const obj7 = { value, done: true };
             return obj7;
           } else {
+            tmp42 = tmp42(
+              0 ===
+                (function getCurrentInviteRecipients() {
+                  inviteSuggestionRows = inviteSuggestionRows.getInviteSuggestionRows();
+                  currentUser = currentUser.getCurrentUser();
+                  let id;
+                  if (currentUser != null) {
+                    id = currentUser.id;
+                  }
+                  closure_1 = closure_7;
+                  const found = inviteSuggestionRows.filter(closure_9);
+                  const mapped = found.map((item) => item.item);
+                  return mapped.filter((item) => closure_2_1(closure_2_2[7])(item, id, closure_1));
+                })().length,
+            );
             c3 = 0;
             tmp4(false);
-            if ("" !== ref.current) {
-              const result = closure_2_0(9295).searchInviteSuggestions(ref.current);
-              const obj = closure_2_0(9295);
+            if ("" !== tmp31.current) {
+              const result = closure_2_0(9302).searchInviteSuggestions(tmp31.current);
+              const obj = closure_2_0(9302);
             }
-            c4 = 3;
+            c5 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp36) {
-          closure_2 = tmp36;
+        } catch (tmp31) {
           if (tmp5 === c3) {
-            c4 = tmp3;
-            throw tmp36;
-          } else if (tmp2 === tmp38) {
-            ref = tmp2;
+            c5 = tmp3;
+            throw tmp31;
+          } else if (tmp2 === tmp33) {
+            c4 = tmp2;
           } else {
-            ref = tmp;
+            c4 = tmp;
           }
         }
       }
@@ -129,5 +147,5 @@ export default function useGameOrganizationInviteSuggestions() {
       return applyArgumentsResult;
     })();
   }, []);
-  return { users, isLoading: isLoading[0], search };
+  return { users, isLoading: isLoading[0], hasNoFriends: hasNoFriends[0], search };
 }

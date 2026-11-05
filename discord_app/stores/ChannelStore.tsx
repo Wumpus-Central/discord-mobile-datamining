@@ -45,7 +45,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               );
             } else {
               [arr, tmp41] = result;
-              tmp4(5041)(arr);
+              tmp4(5043)(arr);
               if (Full !== tmp2.Basic) {
                 closure_35 = closure_35 + 1;
               }
@@ -509,7 +509,7 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(4994);
+const ChannelRecord = fn(4996);
 ({
   createChannelRecordFromServer: metroImportDefault,
   isPrivate: closure_8,
@@ -519,7 +519,7 @@ const ChannelRecord = fn(4994);
   castChannelRecord: closure_12,
 } = ChannelRecord);
 const ChannelTypes = fn(1072).ChannelTypes;
-const ChannelFlags = fn(4997).ChannelFlags;
+const ChannelFlags = fn(4999).ChannelFlags;
 let closure_18 = new LoggerDefault("ChannelStore");
 let closure_19 = {};
 let dependencyMap2 = {};
@@ -569,7 +569,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_32;
-      return tmp(5039).tryLoadOrResetCacheGatewayAsync(
+      return tmp(5041).tryLoadOrResetCacheGatewayAsync(
         "loadChannels",
         asyncGeneratorStep(async () => {
           if (c7 === 2) {

@@ -27,11 +27,11 @@ function parseDecoder(decoderImplementationName) {
   } else {
     const _Object = Object;
     const keys = Object.keys(closure_14);
-    for (const item10012 of keys) {
-      let formatted = arg0.toLowerCase();
-      if (formatted.includes(item10012)) {
-        obj.return();
-        return closure_14[item10012];
+    for (const item10005 of keys) {
+      let formatted = str2.toLowerCase();
+      if (formatted.includes(item10005)) {
+        obj2.return();
+        return closure_14[item10005];
       }
     }
     return obj3.UNCATEGORIZED;

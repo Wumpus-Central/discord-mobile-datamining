@@ -27,7 +27,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, GiftCodeModalStates: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 },

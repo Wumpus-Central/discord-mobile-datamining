@@ -19,7 +19,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/WaterwheelsDiscoverExperiment.tsx");
 
 export const WaterwheelsDiscoverExperiment = apexExperiment;
-export function getWaterwheelsDiscoverEnabled(icymi_store) {
+export function getWaterwheelsDiscoverEnabled(fetchDehydrated) {
   const currentUser = UserStore.getCurrentUser();
   let flag;
   if (currentUser != null) {
@@ -34,7 +34,7 @@ export function getWaterwheelsDiscoverEnabled(icymi_store) {
   }
   let enabled = !value;
   if (!value) {
-    const obj = { location: icymi_store };
+    const obj = { location: fetchDehydrated };
     enabled = apexExperiment.getConfig(obj).enabled;
   }
   return enabled;

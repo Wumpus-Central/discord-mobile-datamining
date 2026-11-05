@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05400_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05402_BottomSheetModal.js";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -99,7 +99,7 @@ const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_10 = createStyles.createStyles({
   optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 },
   optionImageEmoji: { height: 24, width: 24 },

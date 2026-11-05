@@ -200,7 +200,7 @@ export default function GoogleWalletVerificationScreen(onClose) {
     obj12.onPress = function onPress() {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(
         modalSessionId,
-        AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+        AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_V2,
         AgeVerificationAnalyticsUtils.AgeVerificationModalCta.METHOD_SELECT,
       );
       callback1();

@@ -107,7 +107,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let obj2 = {
   pill: {
     backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
@@ -116,7 +116,7 @@ let obj2 = {
   },
 };
 let closure_15 = createStyles.createStyles(obj2);
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj5 = {
   container: null,
   containerFlushTop: null,
@@ -214,7 +214,7 @@ let obj11 = {
 obj5.input = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 let obj12 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 obj5.inputStacked = { paddingHorizontal: nativeDefault.space.PX_4 };
-obj5.draftCarousel = { marginTop: -fn(10705).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
+obj5.draftCarousel = { marginTop: -fn(10711).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
 let obj14 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj14.alignItems = "center";
@@ -707,9 +707,9 @@ export default function ConjureNativeComposer(projectId) {
               c1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: projectId(12982).pickConjurePhotos(
+                value: projectId(12989).pickConjurePhotos(
                   "mixed",
-                  projectId(12316).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                  projectId(12323).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                 ),
                 done: false,
               };

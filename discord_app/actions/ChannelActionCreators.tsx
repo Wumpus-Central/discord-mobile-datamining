@@ -18,7 +18,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4994).createChannelRecordFromServer;
+let closure_6 = fn(4996).createChannelRecordFromServer;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_9,
@@ -454,7 +454,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "useEffect" },
+      channel: { id, guild_id: "Array", parent_id: "ao" },
       silent: flag2,
     });
     if (flag) {
@@ -468,7 +468,7 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "useEffect" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "ao" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1282).rejectWithMigratedError();
     const obj8 = flag3(1282);
@@ -615,8 +615,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7638).checkGuildTemplateDirty(closure_128_2);
-        name(7638);
+        const result = name(7640).checkGuildTemplateDirty(closure_128_2);
+        name(7640);
       }
       return closure_128_1;
     })();

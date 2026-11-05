@@ -35,7 +35,7 @@ function useShouldCallReactiveCheck() {
   _require = tmp5;
   const obj = require("initialize");
   const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-    tmp(6866).AgeGatedFeature.REACTIVE_CHECK,
+    tmp(6869).AgeGatedFeature.REACTIVE_CHECK,
   );
   const tmpResult = require("RegionalFeatureConfigUtils");
   const items1 = [AgeVerificationStore];
@@ -135,13 +135,13 @@ let closure_15 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(6863).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(6866).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const AgeGateConstants = fn(1097);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: closure_10 } = AgeGateConstants);
 let items = [
-  fn(6864).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(6864).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(6864).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(6867).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(6867).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(6867).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];
@@ -160,7 +160,7 @@ let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationUt
 export function ageGateSourceHasLightboxBackdrop(arg0) {
   return set1.has(arg0);
 }
-export function shouldShowTiggerPawtect() {
+export function needsAgeVerification() {
   const currentUser = UserStore.getCurrentUser();
   let prop;
   if (currentUser != null) {
@@ -171,7 +171,7 @@ export function shouldShowTiggerPawtect() {
     prop === Server.AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT
   );
 }
-export function useShouldShowTiggerPawtect() {
+export function useNeedsAgeVerification() {
   items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;

@@ -34,9 +34,9 @@ function FamilyCenterActivityBannerButton() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let closure_6 = createStyles.createStyles({ container: { width: "100%" } });
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj3 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -87,7 +87,7 @@ export default function FamilyCenterActivityBanner() {
   const formatResult = intl3.format(_modDef2667.MXjDSv, {
     articleLink: "https://support.discord.com/hc/articles/14155060633623",
   });
-  obj5.source = importDefault(tmp3 ? 17034 : 17035);
+  obj5.source = importDefault(tmp3 ? 17058 : 17059);
   obj5.style = tmp4.art;
   items = [
     React4(FastImageDefault, obj5),

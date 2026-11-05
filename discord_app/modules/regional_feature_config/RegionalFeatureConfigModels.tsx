@@ -1,4 +1,5 @@
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigModels.tsx
+import MediaTakedownRegulation from "../in_app_reports/MediaTakedownRegulation.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 class SettingsConfig {
@@ -39,18 +40,39 @@ prototype2["hasAgeGatedFeatures"] = function hasAgeGatedFeatures() {
 };
 class AppStoreConfig {
   constructor(arg0) {
+    flag = require;
+    if (require === undefined) {
+      flag = false;
+    }
+    flag2 = importDefault;
+    if (importDefault === undefined) {
+      flag2 = false;
+    }
     obj = Object.create(new.target.prototype);
     obj.shouldCollectSignal = global;
+    obj.consentRevokedIOS = flag;
+    obj.consentRevokedAndroid = flag2;
     return obj;
   }
 }
+class MediaTakedownConfig {
+  constructor(arg0) {
+    obj = Object.create(new.target.prototype);
+    obj.regulation = global;
+    return obj;
+  }
+}
+MediaTakedownConfig.prototype["isRegulation"] = function isRegulation(arg0) {
+  return this.regulation === arg0;
+};
 let RegionalFeatureConfig;
 class RegionalFeatureConfig {
-  constructor(arg0, arg1, arg2) {
+  constructor(arg0, arg1, arg2, arg3) {
     obj = Object.create(new.target.prototype);
     obj.settings = global;
     obj.ageVerification = require;
     obj.appStore = importDefault;
+    obj.mediaTakedown = importAll;
     return obj;
   }
 }
@@ -74,26 +96,56 @@ prototype3["hasTeenDefaults"] = function hasTeenDefaults() {
 prototype3["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal() {
   return this.appStore.shouldCollectSignal;
 };
+prototype3["isMediaTakedownRegulation"] = function isMediaTakedownRegulation(arg0) {
+  const mediaTakedown = this.mediaTakedown;
+  return mediaTakedown.isRegulation(arg0);
+};
+prototype3["isAppStoreConsentRevoked"] = function isAppStoreConsentRevoked(arg0) {
+  const self = this;
+  if ("ios" === arg0) {
+    let consentRevokedAndroid = self.appStore.consentRevokedIOS;
+  } else {
+    consentRevokedAndroid = self.appStore.consentRevokedAndroid;
+  }
+  return consentRevokedAndroid;
+};
 RegionalFeatureConfig["fromConnectionOpen"] = function fromConnectionOpen(regionalFeatureConfig) {
+  const media_takedown_regulation = regionalFeatureConfig.media_takedown_regulation;
   if (typeof SettingsConfig === "function") {
-    const obj = Object.create(SettingsConfig.prototype);
-    obj.teenByDefault = tmp2;
+    const obj6 = Object.create(SettingsConfig.prototype);
+    obj6.teenByDefault = tmp2;
     if (typeof AgeVerificationConfig === "function") {
-      const obj4 = Object.create(AgeVerificationConfig.prototype);
-      obj4.gatedFeatures = tmp4;
+      const obj7 = Object.create(AgeVerificationConfig.prototype);
+      obj7.gatedFeatures = tmp4;
       if (typeof AppStoreConfig === "function") {
-        const obj5 = Object.create(tmp7.prototype);
-        obj5.shouldCollectSignal = true === tmp8;
-        if (typeof RegionalFeatureConfig === "function") {
-          const obj6 = Object.create(RegionalFeatureConfig.prototype);
-          obj6.settings = obj;
-          obj6.ageVerification = obj4;
-          obj6.appStore = obj5;
-          return obj6;
+        const obj8 = Object.create(tmp7.prototype);
+        obj8.shouldCollectSignal = true === tmp8;
+        obj8.consentRevokedIOS = true === tmp9;
+        obj8.consentRevokedAndroid = true === tmp10;
+        let tmp19 = null;
+        if (obj.isMediaTakedownRegulation(media_takedown_regulation)) {
+          tmp19 = media_takedown_regulation;
+        }
+        if (typeof MediaTakedownConfig === "function") {
+          const obj9 = Object.create(MediaTakedownConfig.prototype);
+          obj9.regulation = tmp19;
+          if (typeof RegionalFeatureConfig === "function") {
+            const obj10 = Object.create(RegionalFeatureConfig.prototype);
+            obj10.settings = obj6;
+            obj10.ageVerification = obj7;
+            obj10.appStore = obj8;
+            obj10.mediaTakedown = obj9;
+            return obj10;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        const tmp10 = true === tmp8;
+        obj = MediaTakedownRegulation;
+        const tmp12 = true === tmp8;
+        const tmp13 = true === tmp9;
+        const tmp14 = true === tmp10;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -109,4 +161,5 @@ const result = size.fileFinishedImporting("modules/regional_feature_config/Regio
 export { SettingsConfig };
 export { AgeVerificationConfig };
 export { AppStoreConfig };
+export { MediaTakedownConfig };
 export { RegionalFeatureConfig };

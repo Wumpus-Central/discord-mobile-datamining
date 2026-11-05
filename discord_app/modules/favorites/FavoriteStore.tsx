@@ -118,8 +118,8 @@ function initializeFromUserSettings() {
   }
   return flag4;
 }
-const createChannelRecord = fn(4994).createChannelRecord;
-const FavoritesConstants = fn(5003);
+const createChannelRecord = fn(4996).createChannelRecord;
+const FavoritesConstants = fn(5005);
 ({ FAVORITES_PRUNE_SCOPE_ALL: closure_4, FAVORITES_PRUNE_SCOPE_AUTO_ADDED } = FavoritesConstants);
 const FAVORITES_PRUNE_WHEN_ARCHIVED = FavoritesConstants.FAVORITES_PRUNE_WHEN_ARCHIVED;
 let closure_7 = FavoritesConstants.FAVORITES_UNCATEGORIZED_PARENT_ID;

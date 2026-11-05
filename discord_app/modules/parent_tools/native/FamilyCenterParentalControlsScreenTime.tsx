@@ -15,12 +15,12 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(11194).getScheduleRuleDateRange(rule);
-  let obj = rule(11194);
-  const obj2 = rule(11194);
+  const scheduleRuleDateRange = rule(11202).getScheduleRuleDateRange(rule);
+  let obj = rule(11202);
+  const obj2 = rule(11202);
   const obj3 = {
     label: scheduleRuleDateRange,
-    subLabel: rule(11194).formatDays(rule.days),
+    subLabel: rule(11202).formatDays(rule.days),
     trailing: null,
     arrow: null,
     onPress: null,
@@ -33,7 +33,7 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj3.trailing = closure_5(rule(5761).Text, {
+  obj3.trailing = closure_5(rule(5763).Text, {
     variant: "body-sm/medium",
     color: "text-subtle",
     children: stringResult,
@@ -49,7 +49,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(7116).TableRow, obj3);
+  return closure_5(rule(7119).TableRow, obj3);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;

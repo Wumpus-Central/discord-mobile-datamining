@@ -8,7 +8,7 @@ import ManualReviewInconclusiveCopyExperiment from "../ManualReviewInconclusiveC
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6863).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6866).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -22,7 +22,7 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
         variant: "body-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(8095);
+          const obj = closure_1_1(8100);
           const intl = closure_1_0(1113).intl;
           return obj.openUrl(closure_1_1(2190).getArticleURL(intl.string(closure_1_1(3319).agiNYw)));
         },

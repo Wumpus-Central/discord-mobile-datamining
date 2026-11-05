@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/hooks/useTapGestures.tsx
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useT
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11410)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(11418)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   closure_4 = tmp2;

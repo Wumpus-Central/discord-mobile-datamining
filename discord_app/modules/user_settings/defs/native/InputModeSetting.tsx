@@ -3,14 +3,14 @@ import util from "../../../../intl/index.native.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const InputModes = fn(5902).InputModes;
-const SettingBuilders = fn(11729);
+const InputModes = fn(5905).InputModes;
+const SettingBuilders = fn(11737);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["pS+K2L"]);
   },
-  parent: fn(8573).MobileUserSettings.VOICE,
+  parent: fn(8578).MobileUserSettings.VOICE,
   useTrailing: function useInputModeSettingTrailing() {
     items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
@@ -22,7 +22,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return stringResult;
   },
-  onPress: fn(12143).handleInputModePress,
+  onPress: fn(12152).handleInputModePress,
   useSearchTerms() {
     const intl = util.intl;
     items = [intl.string(util.t.nuFtHH)];

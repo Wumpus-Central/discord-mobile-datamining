@@ -24,8 +24,8 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(5917).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8354);
+const getSystemAnalyticsInfo = fn(5920).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8359);
 ({
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_14,
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_15,
@@ -36,8 +36,8 @@ const ClipsConstants = fn(8354);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6850).StreamTypes;
-const Features = fn(5902).Features;
+const StreamTypes = fn(6853).StreamTypes;
+const Features = fn(5905).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -271,7 +271,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(4966).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(4968).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -351,7 +351,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(4966).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(4968).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };

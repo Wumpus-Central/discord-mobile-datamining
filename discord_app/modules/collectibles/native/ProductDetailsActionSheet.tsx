@@ -7,6 +7,7 @@ import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import ShopStandalonePdpMobileExperiment from "../experiments/ShopStandalonePdpMobileExperiment.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import CollectiblesAnalyticsContext from "../CollectiblesAnalyticsContext.tsx";
+import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import "module_19";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
@@ -15,11 +16,11 @@ require = fn;
 function PreviewProfileTrigger(handlePreviewPress) {
   handlePreviewPress = handlePreviewPress.handlePreviewPress;
   const onTrackPress = handlePreviewPress.onTrackPress;
-  const tmp = closure_18();
+  const tmp = closure_19();
   dependencyMap = tmp;
-  const theme = handlePreviewPress(5207).useThemeContext().theme;
-  const obj = handlePreviewPress(5207);
-  const isThemeLightResult = handlePreviewPress(5148).isThemeLight(theme);
+  const theme = handlePreviewPress(5209).useThemeContext().theme;
+  const obj = handlePreviewPress(5209);
+  const isThemeLightResult = handlePreviewPress(5150).isThemeLight(theme);
   closure_3 = theme === ThemeTypes.ONYX;
   noop = isThemeLightResult ? tmp.previewProfileButtonLight : tmp.previewProfileButtonDark;
   closure_5 = isThemeLightResult ? tmp.previewProfileButtonLightPressed : tmp.previewProfileButtonDarkPressed;
@@ -49,8 +50,8 @@ function PreviewProfileTrigger(handlePreviewPress) {
   };
   const intl = tmp2(1113).intl;
   obj3.accessibilityLabel = intl.string(handlePreviewPress(1113).t["3Qcx6K"]);
-  const obj2 = handlePreviewPress(5148);
-  obj3.children = closure_14(handlePreviewPress(7239).EyeIcon, {
+  const obj2 = handlePreviewPress(5150);
+  obj3.children = closure_14(handlePreviewPress(7242).EyeIcon, {
     size: "md",
     color: onTrackPress(575).colors.INTERACTIVE_ICON_DEFAULT,
   });
@@ -79,7 +80,7 @@ function ProductDetailsActionSheetContent(product) {
   closure_10 = undefined;
   const OTPACOMOrderExperiment = require("ACOMExperiments").OTPACOMOrderExperiment;
   const config = OTPACOMOrderExperiment.useConfig({ location: "ProductDetailsActionSheetInner" });
-  const tmp4 = closure_18();
+  const tmp4 = closure_19();
   const collectiblesPromotionEndpointReferenceMobile =
     require("CollectiblesPromotionsEndpointMobileExperiment").useCollectiblesPromotionEndpointReferenceMobile(
       "ProductDetailsActionSheet",
@@ -470,31 +471,50 @@ function ProductDetailsActionSheetInner(arg0) {
 function ManagedProductDetailsActionSheetInner(skuId) {
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
+  let ref1;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  const collectiblesShopProduct = skuId(9730).useCollectiblesShopProduct(skuId, {
+  const collectiblesShopProduct = skuId(9736).useCollectiblesShopProduct(skuId, {
     needsCategory: false,
     seedCategoryStore: true,
   });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  const obj = skuId(9730);
-  const getOrFetchPurchases = skuId(10783).useGetOrFetchPurchases();
+  let obj = skuId(9736);
+  const getOrFetchPurchases = skuId(10790).useGetOrFetchPurchases();
+  items = [product];
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-  const obj2 = skuId(10783);
-  const ref1 = noop.useRef(null);
-  items = [product, skuId, initialVariantIndex];
+  const obj3 = closure_6(() => {
+    if (null != c2) {
+      items = [tmp];
+      let googleSkuIds = collectibles_CollectiblesUtils.getGoogleSkuIds(items);
+    } else {
+      googleSkuIds = closure_18;
+    }
+    return googleSkuIds;
+  }, items);
+  const obj2 = skuId(10790);
+  const tmp5 = initialVariantIndex;
+  initialVariantIndex(10097).useLoadedGoogleSkuIds(obj3);
+  const obj4 = initialVariantIndex(10097);
+  const everyResult = obj3.every((item) => set.has(item));
+  ref1 = ref1.useRef(null);
+  const items1 = [product, skuId, initialVariantIndex];
   if ("ready" === state) {
     if (hasPreviouslyFetched) {
-      if (null != product) {
-        const obj3 = {
-          ref: ref1,
-          product,
-          initialVariantIndex: tmp7,
-          analyticsLocations,
-          stageCollectibleChangeForEditProfile,
-        };
-        const obj4 = {
+      if (everyResult) {
+        if (null != product) {
+          const obj5 = {
+            ref: ref1,
+            product,
+            initialVariantIndex: tmp9,
+            analyticsLocations,
+            stageCollectibleChangeForEditProfile,
+          };
+          let tmp11 = closure_14(ProductDetailsActionSheetContent, obj5);
+          let tmp10 = closure_14;
+        }
+        const obj6 = {
           scrollable: true,
           startExpanded: true,
           onExpand() {
@@ -514,26 +534,28 @@ function ManagedProductDetailsActionSheetInner(skuId) {
             return notifyDismissedResult;
           },
           ref,
-          children: closure_14(ProductDetailsActionSheetContent, obj3),
+          children: tmp11,
         };
-        return closure_14(tmp(5396).BottomSheet, obj4);
+        return tmp10(tmp(5398).BottomSheet, obj6);
       }
     }
   }
   if ("error" === state) {
-    const obj5 = { Illustration: tmp(8946).NoResults, body: null, children: null };
+    const obj7 = { Illustration: tmp(8951).NoResults, body: null, children: null };
     const intl = tmp(1113).intl;
-    obj5.body = intl.string(tmp(1113).t.eAn6z2);
-    const obj6 = { text: null, onPress: null };
+    obj7.body = intl.string(tmp(1113).t.eAn6z2);
+    const obj8 = { text: null, onPress: null };
     const intl2 = tmp(1113).intl;
-    obj6.text = intl2.string(tmp(1113).t["+hivLW"]);
-    obj6.onPress = retry;
-    obj5.children = closure_14(tmp(5768).Button, obj6);
-    closure_14(tmp(1187).EmptyState, obj5);
+    obj8.text = intl2.string(tmp(1113).t["+hivLW"]);
+    obj8.onPress = retry;
+    obj7.children = closure_14(tmp(5770).Button, obj8);
+    tmp11 = closure_14(tmp(1187).EmptyState, obj7);
+    tmp10 = closure_14;
   } else {
-    closure_14(initialVariantIndex(15291), {});
+    tmp10 = closure_14;
+    tmp11 = closure_14(tmp5(15304), {});
   }
-  ref = noop.useRef(null);
+  ref = ref1.useRef(null);
 }
 function ProductDetailsActionSheetWithOrderCTX(arg0) {
   stageCollectibleChangeForEditProfile = arg0;
@@ -581,7 +603,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = {};
 const logger = new LoggerDefault("ProductDetailsActionSheet");
-const createStyles = fn(5141);
+let closure_18 = [];
+const createStyles = fn(5143);
 let obj2 = {
   container: { position: "relative", flex: 1 },
   actionButtons: null,
@@ -603,8 +626,8 @@ const rect = {
 };
 obj2.actionButtons = rect;
 let size = {
-  width: fn(5774).MEDIUM_BUTTON_HEIGHT,
-  height: fn(5774).MEDIUM_BUTTON_HEIGHT,
+  width: fn(5776).MEDIUM_BUTTON_HEIGHT,
+  height: fn(5776).MEDIUM_BUTTON_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
   borderRadius: nativeDefault.radii.round,
@@ -613,11 +636,11 @@ let size = {
 };
 obj2.previewProfileButton = size;
 let obj3 = { backgroundColor: null };
-let native = fn(5207);
+let native = fn(5209);
 obj3.backgroundColor = native.setColorOpacity("white", 0.72);
 obj2.previewProfileButtonLight = obj3;
 let obj4 = { backgroundColor: null };
-native = fn(5207);
+native = fn(5209);
 obj4.backgroundColor = native.setColorOpacity("white", 0.62);
 obj2.previewProfileButtonLightPressed = obj4;
 const tmp6 = new LoggerDefault("ProductDetailsActionSheet");
@@ -637,7 +660,7 @@ const rect1 = {
   gap: nativeDefault.space.PX_8,
 };
 obj2.badgeWrapper = rect1;
-let closure_18 = createStyles.createStyles(obj2);
+let closure_19 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheet.tsx");
 

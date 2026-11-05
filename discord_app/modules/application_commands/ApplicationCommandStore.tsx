@@ -169,8 +169,8 @@ function handleUpdateOptionStates(channelId) {
           isActive: false,
           lastValidationResult: null,
           optionValue: null,
-          location: "ix",
-          length: "s",
+          location: "r",
+          length: "HermesInternal",
         };
         if (tmp.activeOptionName === tmp9) {
           tmp.activeOptionName = null;

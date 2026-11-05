@@ -1,38 +1,58 @@
 // discord_app/modules/conversations/components/native/ConversationNavigatorMoreMenu.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import MoreHorizontalIcon from "../../../../design/components/Icon/native/redesign/generated/MoreHorizontalIcon.tsx";
 import ThumbsUpIcon from "../../../../design/components/Icon/native/redesign/generated/ThumbsUpIcon.tsx";
 import ThumbsDownIcon from "../../../../design/components/Icon/native/redesign/generated/ThumbsDownIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+import SelectedConversationStore from "../../SelectedConversationStore.tsx";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12 } };
-let closure_5 = createStyles.createStyles(obj2);
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorMoreMenu.tsx");
 
 export default function ConversationNavigatorMoreMenu(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
-  noop = closure_5();
-  items = [channelId, conversationId];
+  noop = closure_6();
+  items = [SelectedConversationStore];
+  let items1 = [channelId, conversationId];
+  const stateFromStores = channelId(conversationId[6]).useStateFromStores(
+    items,
+    () => {
+      const conversation = SelectedConversationStore.getConversation(channelId);
+      let id;
+      if (conversation != null) {
+        id = conversation.id;
+      }
+      let tmp3 = null;
+      if (id === conversationId) {
+        tmp3 = conversation;
+      }
+      return tmp3;
+    },
+    items1,
+  );
+  const items2 = [channelId, conversationId, stateFromStores];
   const memo = noop.useMemo(() => {
     let obj = { label: null, IconComponent: null, action: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["7iRs51"]);
     obj.IconComponent = ThumbsUpIcon.ThumbsUpIcon;
     obj.action = function action() {
-      const result = channelId(conversationId[7]).setConversationFeedbackRating(channelId, conversationId, "up");
-      const ConversationsAnalytics = channelId(conversationId[8]).ConversationsAnalytics;
+      const result = channelId(conversationId[9]).setConversationFeedbackRating(channelId, conversationId, "up");
+      const ConversationsAnalytics = channelId(conversationId[10]).ConversationsAnalytics;
       ConversationsAnalytics.trackThumbsClicked({ channelId, conversationId, isThumbsUp: true, isFocusMode: true });
-      const obj = channelId(conversationId[7]);
+      const obj = channelId(conversationId[9]);
       const obj2 = { channelId, conversationId, isThumbsUp: true, isFocusMode: true };
-      channelId(conversationId[9]).presentFeedbackSent();
+      channelId(conversationId[11]).presentFeedbackSent();
     };
     items = [obj];
     let obj2 = { label: null, IconComponent: null, action: null };
@@ -40,17 +60,34 @@ export default function ConversationNavigatorMoreMenu(channelId) {
     obj2.label = intl2.string(util.t.uNGhdg);
     obj2.IconComponent = ThumbsDownIcon.ThumbsDownIcon;
     obj2.action = function action() {
-      const result = channelId(conversationId[7]).setConversationFeedbackRating(channelId, conversationId, "down");
-      const ConversationsAnalytics = channelId(conversationId[8]).ConversationsAnalytics;
+      const result = channelId(conversationId[9]).setConversationFeedbackRating(channelId, conversationId, "down");
+      const ConversationsAnalytics = channelId(conversationId[10]).ConversationsAnalytics;
       ConversationsAnalytics.trackThumbsClicked({ channelId, conversationId, isThumbsUp: false, isFocusMode: true });
-      const obj = channelId(conversationId[7]);
+      const obj = channelId(conversationId[9]);
       const obj2 = { channelId, conversationId, isThumbsUp: false, isFocusMode: true };
-      channelId(conversationId[9]).presentFeedbackSent();
+      channelId(conversationId[11]).presentFeedbackSent();
     };
     items[1] = obj2;
-    return items;
-  }, items);
-  return jsx(channelId(conversationId[11]).ContextMenu, {
+    let tmp3 = items;
+    if (null != stateFromStores) {
+      const items1 = [];
+      const obj3 = { label: null, IconComponent: null, action: null };
+      const intl3 = util.intl;
+      obj3.label = intl3.string(util.t.WqhZss);
+      obj3.IconComponent = LinkIcon.LinkIcon;
+      obj3.action = function action() {
+        const obj = channelId(conversationId[14]);
+        obj.copy(channelId(conversationId[15]).getConversationPermalink(stateFromStores));
+        const obj2 = channelId(conversationId[15]);
+        channelId(conversationId[11]).presentLinkCopied();
+      };
+      items1[HermesBuiltin.arraySpread(items, 0)] = obj3;
+      tmp3 = items1;
+      const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
+    }
+    return tmp3;
+  }, items2);
+  return jsx(channelId(conversationId[16]).ContextMenu, {
     items: memo,
     children(ref) {
       const obj = { style: container.container, ref: ref.ref, children: null };

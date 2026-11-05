@@ -148,30 +148,30 @@ const EmojiIntention = fn(1388).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
 let items = [
-  fn(17601).EmojiAngryFaceWithHornsIcon,
-  fn(17603).EmojiColdFaceIcon,
-  fn(17605).EmojiCowboyHatFaceIcon,
-  fn(17607).EmojiCryingFaceIcon,
-  fn(17609).EmojiDisguisedFaceIcon,
-  fn(17611).EmojiFaceVomitingIcon,
-  fn(17613).EmojiFaceWithMonocleIcon,
-  fn(17615).EmojiFaceWithSpiralEyesIcon,
-  fn(17617).EmojiMeltingFaceIcon,
-  fn(17619).EmojiMoneyMouthFaceIcon,
-  fn(17621).EmojiNerdFaceIcon,
-  fn(17623).EmojiPartyingFaceIcon,
-  fn(17625).EmojiSalutingFaceIcon,
-  fn(17627).EmojiSkullIcon,
-  fn(17629).EmojiSmilingFaceWithHornsIcon,
-  fn(17631).EmojiSmilingFaceWithSunglassesIcon,
-  fn(17633).EmojiSquintingFaceWithTongueIcon,
-  fn(17635).EmojiUpsideDownFaceIcon,
-  fn(17637).EmojiWoozyFaceIcon,
-  fn(17639).EmojiZanyFaceIcon,
-  fn(17641).EmojiRollingOnTheFloorLaughingIcon,
-  fn(17643).EmojiSmilingFaceWithHeartsIcon,
+  fn(17628).EmojiAngryFaceWithHornsIcon,
+  fn(17630).EmojiColdFaceIcon,
+  fn(17632).EmojiCowboyHatFaceIcon,
+  fn(17634).EmojiCryingFaceIcon,
+  fn(17636).EmojiDisguisedFaceIcon,
+  fn(17638).EmojiFaceVomitingIcon,
+  fn(17640).EmojiFaceWithMonocleIcon,
+  fn(17642).EmojiFaceWithSpiralEyesIcon,
+  fn(17644).EmojiMeltingFaceIcon,
+  fn(17646).EmojiMoneyMouthFaceIcon,
+  fn(17648).EmojiNerdFaceIcon,
+  fn(17650).EmojiPartyingFaceIcon,
+  fn(17652).EmojiSalutingFaceIcon,
+  fn(17654).EmojiSkullIcon,
+  fn(17656).EmojiSmilingFaceWithHornsIcon,
+  fn(17658).EmojiSmilingFaceWithSunglassesIcon,
+  fn(17660).EmojiSquintingFaceWithTongueIcon,
+  fn(17662).EmojiUpsideDownFaceIcon,
+  fn(17664).EmojiWoozyFaceIcon,
+  fn(17666).EmojiZanyFaceIcon,
+  fn(17668).EmojiRollingOnTheFloorLaughingIcon,
+  fn(17670).EmojiSmilingFaceWithHeartsIcon,
 ];
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_9 = createStyles.createStyles({
   slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" },
 });
@@ -213,5 +213,5 @@ export default function CustomTypingIndicatorEmojiSlots(emojis) {
       />
     );
   });
-  return jsx(emojis(6162).Stack, { direction: "horizontal", spacing: 8, children: null });
+  return jsx(emojis(6165).Stack, { direction: "horizontal", spacing: 8, children: null });
 }

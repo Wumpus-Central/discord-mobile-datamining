@@ -18,7 +18,7 @@ function renderWebIcon() {
 }
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -68,7 +68,6 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
           { noticeType: "member_coachmark", guildId },
           "open_settings",
         );
-        closure_1_2(constants3.TAKE_ACTION);
         const obj = closure_0(markAsDismissed[7]);
         const obj2 = { noticeType: "member_coachmark", guildId };
         closure_0(markAsDismissed[11]).openUserSettings({ screen: constants2.DATA_AND_PRIVACY });
@@ -97,7 +96,6 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
         { noticeType: "member_coachmark", guildId },
         "learn_more",
       );
-      closure_1_2(constants3.TAKE_ACTION);
       const obj = closure_0(markAsDismissed[7]);
       const obj2 = { noticeType: "member_coachmark", guildId };
       const obj3 = visible(markAsDismissed[12]);

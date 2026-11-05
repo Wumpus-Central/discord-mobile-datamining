@@ -1,5 +1,5 @@
 // discord_app/modules/rewards/invariants/nitroProgramRewardInvariants.tsx
-import differenceInCalendarDaysDefault from "../../../../_runtime/04583_differenceInCalendarDays.js";
+import differenceInCalendarDaysDefault from "../../../../_runtime/04585_differenceInCalendarDays.js";
 import ProgramRewardsTypes from "../ProgramRewardsTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

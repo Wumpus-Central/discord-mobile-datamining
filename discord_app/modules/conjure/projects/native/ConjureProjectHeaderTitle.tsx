@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   row: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   titles: { flex: 1, justifyContent: "center" },

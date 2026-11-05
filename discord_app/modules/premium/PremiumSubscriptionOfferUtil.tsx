@@ -178,11 +178,11 @@ export function useFetchChurnUserDiscountOffer(arg0) {
     const obj3 = { churnUserDiscountOffer: tmp13, isFetchingChurnDiscountOffer: tmp10 };
     return obj3;
   } else {
-    let tmp15 = tmp10;
+    let tmp14 = tmp10;
     if (!tmp10) {
-      tmp15 = tmp8;
+      tmp14 = tmp8;
     }
-    if (!tmp15) {
+    if (!tmp14) {
       tmp11(true);
       const churnDiscountOffer = UserOfferActionCreators.fetchChurnDiscountOffer();
       churnDiscountOffer

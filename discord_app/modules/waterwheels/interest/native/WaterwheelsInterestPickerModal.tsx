@@ -1,7 +1,11 @@
 // discord_app/modules/waterwheels/interest/native/WaterwheelsInterestPickerModal.tsx
+import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import ICYMIActionCreatorsDefault from "../../../icymi/ICYMIActionCreators.tsx";
+import InterestPickerActionCreators from "../InterestPickerActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = fn;
+require = fn;
 class WaterwheelsInterestPickerModal {
   constructor() {
     tmp2 = closure_1;
@@ -9,20 +13,22 @@ class WaterwheelsInterestPickerModal {
     tmp = closure_7();
     tmp4 = closure_1(closure_2[6])("WaterwheelsInterestPickerModal");
     closure_0 = tmp4;
+    closure_1 = closure_3.useRef(false);
     callback = closure_3.useCallback((gameIds) => {
-      const result = closure_0(18683).setInterestPickerPicks(gameIds);
-      const obj = closure_0(18683);
-      const result1 = closure_0(18683).markInterestPickerSeen();
-      const obj2 = closure_0(18683);
-      callback(6879).popWithKey(closure_1_6);
-      const obj3 = callback(6879);
-      const rootNavigationRef = closure_0(5323).getRootNavigationRef();
-      if (null != rootNavigationRef) {
-        const obj5 = { screen: "icymi-screen", params: { inNestedNavigator: true } };
-        rootNavigationRef.navigate("icymi", obj5);
+      if (!ref.current) {
+        tmp.current = true;
+        const result = InterestPickerActionCreators.setInterestPickerPicks(gameIds);
+        const result1 = InterestPickerActionCreators.markInterestPickerSeen();
+        const dehydrated = ICYMIActionCreatorsDefault.fetchDehydrated({ isDiscoverPickerCommit: true });
+        ModalActionCreatorsDefault.popWithKey(c6);
+        const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+        if (null != rootNavigationRef) {
+          const obj6 = { screen: "icymi-screen", params: { inNestedNavigator: true } };
+          rootNavigationRef.navigate("icymi", obj6);
+        }
       }
     }, []);
-    closure_1 = callback;
+    closure_2 = callback;
     items = [,];
     items[0] = tmp4;
     items[1] = callback;
@@ -40,11 +46,11 @@ class WaterwheelsInterestPickerModal {
       obj1 = { catalog: null, title: null, subtitle: null, minSelection: 1, onContinue: null, onSkip: null };
       obj1.catalog = tmp4;
       tmp11 = closure_0;
-      tmp2Result = tmp2(tmp3[9]);
-      intl = closure_0(tmp3[10]).intl;
-      obj1.title = intl.string(tmp2(tmp3[11])["5MUKTF"]);
-      intl2 = closure_0(tmp3[10]).intl;
-      obj1.subtitle = intl2.string(tmp2(tmp3[11])["z/57xV"]);
+      tmp2Result = tmp2(tmp3[10]);
+      intl = closure_0(tmp3[11]).intl;
+      obj1.title = intl.string(tmp2(tmp3[12])["5MUKTF"]);
+      intl2 = closure_0(tmp3[11]).intl;
+      obj1.subtitle = intl2.string(tmp2(tmp3[12])["z/57xV"]);
       obj1.onContinue = callback;
       obj1.onSkip = callback;
       obj.children = jsx(tmp2Result, obj1);
@@ -56,7 +62,7 @@ class WaterwheelsInterestPickerModal {
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let c6 = "waterwheels-interest-picker-modal";
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 const metroImportDefault = createStyles.createStyles({ screen: { flex: 1 } });
 WaterwheelsInterestPickerModal.modalConfig = { animation: fn(1072).ModalAnimation.SLIDE_IN_OUT };
 const size = fn(2);

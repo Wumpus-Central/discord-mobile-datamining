@@ -5,26 +5,26 @@ import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
 
-export function useSelectedDismissibleContentShared(arg0, arg1) {
-  _require = arg0;
-  dependencyMap = arg1;
+export function useSelectedDismissibleContentShared(visibleContent, markAsDismissed) {
+  _require = visibleContent;
+  dependencyMap = markAsDismissed;
   if (flag === undefined) {
     flag = false;
   }
-  noop = id;
+  noop = guildId;
   closure_3 = undefined;
-  let tmp = null != arg0 && !flag;
+  let tmp = null != visibleContent && !flag;
   if (tmp) {
     const CONTENT_TYPES_WITH_BYPASS_FATIGUE =
       require("DismissibleContentFatigueConfig").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
-    tmp = !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
+    tmp = !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(visibleContent);
   }
   closure_3 = tmp;
-  items = [tmp, arg1, arg0, id];
+  items = [tmp, markAsDismissed, visibleContent, guildId];
   const effect = noop.useEffect(
     () => () => {
       let tmp = closure_1_3;
@@ -34,19 +34,19 @@ export function useSelectedDismissibleContentShared(arg0, arg1) {
         if (lastDismissed != null) {
           content = lastDismissed.content;
         }
-        let tmp6 = content !== closure_1_0;
+        let tmp6 = content !== visibleContent;
         if (!tmp6) {
-          let result = closure_0(4981).isGuildDismissibleContent(tmp5);
+          let result = closure_0(4983).isGuildDismissibleContent(tmp5);
           if (result) {
             const lastDismissed2 = tmp2.lastDismissed;
-            let guildId;
+            guildId = undefined;
             if (lastDismissed2 != null) {
               guildId = lastDismissed2.guildId;
             }
-            result = guildId !== id;
+            result = guildId !== closure_1_2;
           }
           tmp6 = result;
-          const obj = closure_0(4981);
+          const obj = closure_0(4983);
         }
         tmp = tmp6;
         tmp2 = lastDismissed;

@@ -6,54 +6,106 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_NAV_HEIGHT = fn(6201).CHECKPOINT_NAV_HEIGHT;
+const CheckpointConstants = fn(6204);
+({
+  CHECKPOINT_CONTENT_MAX_HEIGHT: hasOwnProperty,
+  CHECKPOINT_CONTENT_MAX_WIDTH: closure_6,
+  CHECKPOINT_NAV_HEIGHT: metroImportDefault,
+} = CheckpointConstants);
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(5141);
-let closure_9 = createStyles.createStyles({
+const createStyles = fn(5143);
+let closure_11 = createStyles.createStyles({
   container: { height: "100%", width: "100%" },
   scroll: { width: "100%" },
   scrollContent: { flexGrow: 1 },
+  centered: { justifyContent: "center" },
 });
-const size = fn(2);
+let size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointScreen.tsx");
 
-export default function CheckpointScreen(children) {
+export default function CheckpointScreen(centered) {
+  let flag = centered.centered;
+  if (flag === undefined) {
+    flag = false;
+  }
   let insets;
-  const tmp = closure_9();
-  insets = insets(5743)().insets;
-  items = [, , ,];
-  ({ bottom: arr[0], left: arr[1], right: arr[2], top: arr[3] } = insets);
-  const obj = { style: tmp.container, children: null };
+  const tmp = closure_11();
+  insets = flag(insets[7])().insets;
+  const size = flag(insets[6])({ ignoreKeyboard: true });
+  const width = size.width;
+  const height = size.height;
+  items = [insets, flag, width, height];
+  let obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.scroll, contentContainerStyle: null, showsVerticalScrollIndicator: false, children: null };
-  const items1 = [
-    tmp.scrollContent,
-    noop.useMemo(
-      () => ({
-        paddingLeft: insets.left + PX_24,
-        paddingRight: insets.right + PX_24,
-        paddingBottom: insets.bottom + PX_24,
-        paddingTop: insets.top + CHECKPOINT_NAV_HEIGHT,
-      }),
-      items,
-    ),
-  ];
+  const items1 = [tmp.scrollContent, ,];
+  const memo = width.useMemo(() => {
+    let num = 0;
+    if (!flag) {
+      const _Math = Math;
+      num = Math.max(0, (width - insets.left - insets.right - 2 * PX_24 - timestampProducer) / 2);
+    }
+    let num3 = 0;
+    if (!flag) {
+      const _Math2 = Math;
+      num3 = Math.max(0, (height - insets.top - metroImportDefault - insets.bottom - PX_24 - hasOwnProperty) / 2);
+    }
+    const obj = {
+      paddingLeft: insets.left + PX_24 + num,
+      paddingRight: insets.right + PX_24 + num,
+      paddingBottom: null,
+      paddingTop: null,
+    };
+    let num5 = 0;
+    if (!flag) {
+      num5 = PX_24;
+    }
+    obj.paddingBottom = insets.bottom + num5 + num3;
+    let num6 = 0;
+    if (!flag) {
+      num6 = metroImportDefault;
+    }
+    obj.paddingTop = insets.top + num6 + num3;
+    return obj;
+  }, items);
+  if (flag) {
+    flag = tmp.centered;
+  }
+  items1[1] = flag;
+  items1[2] = memo;
   obj2.contentContainerStyle = items1;
-  obj2.children = children.children;
+  obj2.children = centered.children;
   obj.children = (
-    <closure_3 style={tmp.scroll} contentContainerStyle={null} showsVerticalScrollIndicator={false}>
+    <height style={tmp.scroll} contentContainerStyle={null} showsVerticalScrollIndicator={false}>
       {null}
-    </closure_3>
+    </height>
   );
   return <closure_4 style={tmp.container}>{null}</closure_4>;
 }
 export function useCheckpointScreenContentHeight() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
+  }
+  const height = useWindowDimensionsDefault({ ignoreKeyboard: true }).height;
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
-  return (
-    useWindowDimensionsDefault({ ignoreKeyboard: true }).height -
-    insets.top -
-    CHECKPOINT_NAV_HEIGHT -
-    insets.bottom -
-    PX_24
-  );
+  if (flag) {
+    let diff = height - insets.top - insets.bottom;
+  } else {
+    const _Math = Math;
+    diff = Math.min(height - insets.top - metroImportDefault - insets.bottom - PX_24, hasOwnProperty);
+  }
+  return diff;
+}
+export function useCheckpointScreenFrame() {
+  ({ height, width } = useWindowDimensionsDefault({ ignoreKeyboard: true }));
+  const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
+  const size = {
+    width: Math.min(width, timestampProducer + 2 * PX_24),
+    height: Math.min(
+      height,
+      height - (height - insets.top - metroImportDefault - insets.bottom - PX_24) + hasOwnProperty,
+    ),
+  };
+  return size;
 }

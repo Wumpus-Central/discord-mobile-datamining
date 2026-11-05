@@ -154,6 +154,10 @@ if (null != DiscordNative) {
     obj.distro = metadata.distro;
     obj.runtime_environment = metadata.runtime_environment;
     obj.display_server = metadata.display_server;
+  } else if ("win32" === platform) {
+    if (null != DiscordNative.os.buildRevision) {
+      obj.os_build_revision = str8.toString();
+    }
   }
 }
 let closure_15 = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
@@ -248,7 +252,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("35420300000000", 10) };
+    obj = { client_build_number: parseInt("35420400000000", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;

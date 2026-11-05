@@ -31,7 +31,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
       const project_id = build.project_id;
       const name = tmp;
       let obj2 = {
-        content: closure_1_3(closure_1_1(12365), {
+        content: closure_1_3(closure_1_1(12372), {
           sheetKey,
           title: build[project_id],
           value: build.build,
@@ -57,13 +57,13 @@ export default function ConjureLinkedAppsTab(linkedApps) {
             obj2.onConfirm = function onConfirm() {
               return dependencyMap(closure_0);
             };
-            project_id(6099).showConfirmModal(obj2);
+            project_id(6102).showConfirmModal(obj2);
           },
         }),
         key: sheetKey,
         stackingBehavior: "stack",
       };
-      build(5382).showActionSheet(obj2);
+      build(5384).showActionSheet(obj2);
     };
     return closure_1_3(_undefined(_undefined2[10]).TableRow, obj, build.project_id);
   });
@@ -79,7 +79,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
     };
     let intl2 = tmp2(1113).intl;
     obj3.children = intl2.string(_modDef3995.dIEOrl);
-    tmp5Result = closure_3(tmp2(5761).Text, obj3);
+    tmp5Result = closure_3(tmp2(5763).Text, obj3);
   }
   items[1] = tmp5Result;
   obj.children = items;

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
 import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../../_runtime/05723_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05725_LinearGradient.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 let closure_9 = { mass: 1, stiffness: 100, damping: 15 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   banner: null,
   bannerGradientColor: null,
@@ -35,7 +35,7 @@ const rect = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: PX_12,
   flexDirection: "row",
-  minHeight: fn(12596).APP_ICON_SIZE + 2 * PX_12 + 4,
+  minHeight: fn(12603).APP_ICON_SIZE + 2 * PX_12 + 4,
   bottom: nativeDefault.space.PX_16,
   left: nativeDefault.space.PX_16,
 };
@@ -155,11 +155,11 @@ export default function BannerBase(children) {
   let tmp16Result = null != image;
   if (tmp16Result) {
     const obj8 = { style: tmp.imageContainer, children: null };
-    const obj9 = { style: tmp.trinketsLottie, source: tmp4(12608), autoPlay: !stateFromStores };
-    const items7 = [closure_7(tmp7(5755), obj9), image];
+    const obj9 = { style: tmp.trinketsLottie, source: tmp4(12615), autoPlay: !stateFromStores };
+    const items7 = [closure_7(tmp7(5757), obj9), image];
     obj8.children = items7;
     tmp16Result = closure_8(View, obj8);
-    const tmp7Result = tmp7(5755);
+    const tmp7Result = tmp7(5757);
   }
   items6[1] = tmp16Result;
   const items8 = [tmp.bannerTextContainer];

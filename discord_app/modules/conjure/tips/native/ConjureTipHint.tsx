@@ -12,14 +12,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = "body-sm/normal";
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   line: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 },
   text: { flexShrink: 1 },
   dismiss: null,
 };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
-obj2.dismiss = { height: fn(5761).TextStyleSheet["body-sm/normal"].lineHeight, justifyContent: "center" };
+obj2.dismiss = { height: fn(5763).TextStyleSheet["body-sm/normal"].lineHeight, justifyContent: "center" };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/tips/native/ConjureTipHint.tsx");

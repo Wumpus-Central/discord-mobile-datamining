@@ -7,7 +7,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef18897 from "../../../../../_runtime/metro/18897__.js";
+import _modDef18928 from "../../../../../_runtime/metro/18928__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SubscriptionPlanStore from "../../../../stores/billing/SubscriptionPlanStore.tsx";
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   toggleTruncateButton: {
     alignSelf: "flex-start",
@@ -136,7 +136,7 @@ export function ArrowButton(arg0) {
       style: tmp.arrowButtonText,
       children: text,
     }),
-    React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18897, style: tmp.arrowButtonIcon }),
+    React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef18928, style: tmp.arrowButtonIcon }),
   ];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
@@ -153,8 +153,8 @@ export function useFormattedSubscriptionPlan(listingId) {
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(7553).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(7553);
+    str = "" + tmp3(7555).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(7555);
   }
   return str;
 }

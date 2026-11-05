@@ -10,13 +10,13 @@ import openAgeNoticePromoSheet from "openAgeNoticePromoSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const AGE_NOTICE_BLOG_URL = fn(6872).AGE_NOTICE_BLOG_URL;
+const AGE_NOTICE_BLOG_URL = fn(6875).AGE_NOTICE_BLOG_URL;
 const Constants = fn(1072);
 ({ HelpdeskArticles: hasOwnProperty, UserSettingsSections: closure_6 } = Constants);
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { illustration: null, actions: null };
 let size = { width: 198, height: 132, marginTop: nativeDefault.space.PX_16 };
 obj2.illustration = size;
@@ -28,9 +28,9 @@ let result = size.fileFinishedImporting("modules/age_assurance/age_notice/native
 export default function AgeNoticePromoSheet(markAsDismissed) {
   let dismissOnce;
   const tmp = closure_10();
-  const isVerifiedTeen = dismissOnce(6861).useIsVerifiedTeen();
-  let obj = dismissOnce(6861);
-  dismissOnce = dismissOnce(16868).useDismissOnce(markAsDismissed.markAsDismissed);
+  const isVerifiedTeen = dismissOnce(6864).useIsVerifiedTeen();
+  let obj = dismissOnce(6864);
+  dismissOnce = dismissOnce(16891).useDismissOnce(markAsDismissed.markAsDismissed);
   items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -47,7 +47,7 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
     ActionSheetActionCreatorsDefault.hideActionSheet(openAgeNoticePromoSheet.AGE_NOTICE_PROMO_SHEET_KEY);
     const obj2 = AgeVerificationActionCreatorsDefault;
     const result = obj2.showAgeVerificationGetStartedModal({
-      entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.TINY_BRONCO_POPOVER,
+      entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AGE_NOTICE_POPOVER,
     });
   }, items2);
   const callback3 = noop.useCallback(() => {
@@ -82,10 +82,10 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   const obj5 = { source: null, style: null, resizeMode: "contain" };
-  let obj2 = dismissOnce(16868);
-  obj5.source = tmp14(16869);
+  let obj2 = dismissOnce(16891);
+  obj5.source = tmp14(16892);
   obj5.style = tmp.illustration;
-  obj4.illustration = closure_8(tmp14(5851), obj5);
+  obj4.illustration = closure_8(tmp14(5854), obj5);
   const intl2 = tmp2(1113).intl;
   obj4.title = intl2.string(tmp14(3255).GdTVPF);
   const intl3 = tmp2(1113).intl;
@@ -101,13 +101,13 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   obj4.description = formatResult;
   obj4.onDismiss = callback;
   const obj8 = { size: "lg", style: tmp.actions, children: null };
-  const items5 = [closure_8(dismissOnce(5768).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
+  const items5 = [closure_8(dismissOnce(5770).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
   const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1113).intl;
   obj10.text = intl4.string(dismissOnce(1113).t["NX+WJN"]);
   obj10.onPress = callback1;
-  items5[1] = closure_8(dismissOnce(5768).Button, obj10);
+  items5[1] = closure_8(dismissOnce(5770).Button, obj10);
   obj8.children = items5;
-  obj4.actions = closure_9(dismissOnce(6902).ButtonGroup, obj8);
-  return closure_8(dismissOnce(11015).PromoSheet, obj4);
+  obj4.actions = closure_9(dismissOnce(6905).ButtonGroup, obj8);
+  return closure_8(dismissOnce(11021).PromoSheet, obj4);
 }

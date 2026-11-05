@@ -146,7 +146,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               closure_145_14 = undefined;
               c20 = 1;
               c21 = 1;
-              return { value: "flexDirection", done: null };
+              return { value: "flexDirection", done: true };
             }
             break;
           case 1:

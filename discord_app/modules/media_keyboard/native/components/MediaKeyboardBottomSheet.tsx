@@ -8,7 +8,7 @@ import useColorThemeBackgroundDefault from "../../../client_themes/native/useCol
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
-import BottomSheetModalDefault from "../../../../../_runtime/05400_BottomSheetModal.js";
+import BottomSheetModalDefault from "../../../../../_runtime/05402_BottomSheetModal.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import useCustomKeyboardBottomSheetConfigDefault from "../../../action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -43,7 +43,7 @@ const MetaQuestUtils = fn(1624);
 let closure_11 = MetaQuestUtils.isMetaQuest();
 const PlatformUtils = fn(1377);
 let closure_12 = PlatformUtils.isIOS();
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   background: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,

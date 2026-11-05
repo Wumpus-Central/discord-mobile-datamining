@@ -2,10 +2,10 @@
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 let items = [
-  fn(8896).BadgeId.STREAMING,
-  fn(8896).BadgeId.GAME_VARIETY,
-  fn(8896).BadgeId.GAME_TIME,
-  fn(8896).BadgeId.ACCOUNT_AGE,
+  fn(8901).BadgeId.STREAMING,
+  fn(8901).BadgeId.GAME_VARIETY,
+  fn(8901).BadgeId.GAME_TIME,
+  fn(8901).BadgeId.ACCOUNT_AGE,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeDirectoryNuxGraphicUtils.tsx");
@@ -31,21 +31,14 @@ export function getBadgeDirectoryNuxGraphicIconUrls(badges) {
         if (-1 === findIndexResult) {
           return 0;
         } else {
-          let prop;
+          let simple_icon_url;
           if (value.tiers[findIndexResult] != null) {
-            prop = tmp3.complex_icon_static_url;
+            simple_icon_url = tmp4.simple_icon_url;
           }
-          if (prop == null) {
-            let simple_icon_url;
-            if (tmp3 != null) {
-              simple_icon_url = tmp3.simple_icon_url;
-            }
-            prop = simple_icon_url;
-          }
-          if (null == prop) {
+          if (null == simple_icon_url) {
             return 0;
           } else {
-            const obj = { iconUrl: prop, tierIndex: findIndexResult };
+            const obj = { iconUrl: simple_icon_url, tierIndex: findIndexResult };
             items.push(obj);
           }
         }

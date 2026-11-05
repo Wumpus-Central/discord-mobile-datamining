@@ -27,7 +27,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(18738)().value;
+    num2 = memo(18768)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -78,7 +78,7 @@ function IconWithBadge(includeNotificationsCount) {
       color: "interactive-text-default",
     }),
   };
-  const items5 = [closure_6(tmp5(9656), obj4)];
+  const items5 = [closure_6(tmp5(9662), obj4)];
   let tmp9Result = null;
   if (sum > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };
@@ -94,7 +94,7 @@ function IconWithBadge(includeNotificationsCount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   badgeWrapper: { position: "absolute", top: 16, left: 12 },
   backIcon: { height: 24, width: 24 },

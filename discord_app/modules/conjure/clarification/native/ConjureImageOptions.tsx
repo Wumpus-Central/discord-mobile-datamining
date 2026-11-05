@@ -241,7 +241,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   row: { flexDirection: "row", gap: nativeDefault.space.PX_8 },
   own: null,
@@ -552,7 +552,7 @@ export default function ConjureImageOptions(projectId) {
               closure_128_1 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(12982).pickConjurePhotos("photo", 1), done: false };
+              const obj5 = { value: tmp2(12989).pickConjurePhotos("photo", 1), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -566,8 +566,8 @@ export default function ConjureImageOptions(projectId) {
             closure_128_0 = value;
             closure_128_1 = own(closure_128_0, 1)[0];
             if (null != closure_128_1) {
-              closure_129_4.onUpload(tmp2(12982).uploadConjurePickedFile(closure_129_0, closure_128_1));
-              const obj = tmp2(12982);
+              closure_129_4.onUpload(tmp2(12989).uploadConjurePickedFile(closure_129_0, closure_128_1));
+              const obj = tmp2(12989);
             }
             c3 = 3;
             return { value: "HermesInternal", done: null };

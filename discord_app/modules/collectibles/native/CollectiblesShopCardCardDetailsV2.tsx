@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05725_LinearGradient.js";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ const Constants = fn(1072);
 ({ CurrencyCodes: closure_6, VerticalGradient: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   regularMetadataContainer: null,
   assetName: null,
@@ -58,20 +58,20 @@ const memoResult = noop.memo((arg0) => {
   ({ product, hasShopDiscount } = arg0);
   ({ styles, collectibleProductState } = arg0);
   ({ discountSource, isFetchingGoogleSkus, preferVCPrice, isDisabled } = arg0);
-  const defaultVariantIndex = hasShopDiscount(9607).useDefaultVariantIndex(product);
-  const obj = hasShopDiscount(9607);
-  const selectedProduct = hasShopDiscount(7871).getSelectedProduct(product, defaultVariantIndex);
-  const obj2 = hasShopDiscount(7871);
-  const formattedPriceForCollectiblesProduct = hasShopDiscount(9698).getFormattedPriceForCollectiblesProduct(
+  const defaultVariantIndex = hasShopDiscount(9613).useDefaultVariantIndex(product);
+  const obj = hasShopDiscount(9613);
+  const selectedProduct = hasShopDiscount(7876).getSelectedProduct(product, defaultVariantIndex);
+  const obj2 = hasShopDiscount(7876);
+  const formattedPriceForCollectiblesProduct = hasShopDiscount(9704).getFormattedPriceForCollectiblesProduct(
     selectedProduct,
     hasShopDiscount,
     true,
   );
-  const obj3 = hasShopDiscount(9698);
+  const obj3 = hasShopDiscount(9704);
   const isFiatExclusiveTargetedOfferPromotion =
-    hasShopDiscount(9700).useIsFiatExclusiveTargetedOfferPromotion(selectedProduct);
-  const obj4 = hasShopDiscount(9700);
-  const virtualCurrencyData = hasShopDiscount(9703).useVirtualCurrencyData(selectedProduct, hasShopDiscount);
+    hasShopDiscount(9706).useIsFiatExclusiveTargetedOfferPromotion(selectedProduct);
+  const obj4 = hasShopDiscount(9706);
+  const virtualCurrencyData = hasShopDiscount(9709).useVirtualCurrencyData(selectedProduct, hasShopDiscount);
   ({ price, canAfford } = virtualCurrencyData);
   items = [selectedProduct, hasShopDiscount];
   const memo = noop.useMemo(
@@ -86,7 +86,7 @@ const memoResult = noop.memo((arg0) => {
   );
   if (isFetchingGoogleSkus) {
     if (null == formattedPriceForCollectiblesProduct) {
-      return closure_8(hasShopDiscount(9715).CollectiblesShopPricePlaceholder, {});
+      return closure_8(hasShopDiscount(9721).CollectiblesShopPricePlaceholder, {});
     }
   }
   if ("partiallyOwnedBundle" === collectibleProductState) {
@@ -100,7 +100,7 @@ const memoResult = noop.memo((arg0) => {
     };
     const intl6 = hasShopDiscount(1113).intl;
     obj7.children = intl6.string(hasShopDiscount(1113).t.BEjTij);
-    obj6.children = closure_8(hasShopDiscount(5761).Text, obj7);
+    obj6.children = closure_8(hasShopDiscount(5763).Text, obj7);
     return closure_8(View, obj6);
   } else if ("purchased" === collectibleProductState) {
     const obj8 = { style: styles.priceDescription, children: null };
@@ -113,7 +113,7 @@ const memoResult = noop.memo((arg0) => {
     };
     const intl5 = hasShopDiscount(1113).intl;
     obj9.children = intl5.string(hasShopDiscount(1113).t["6cfuDj"]);
-    obj8.children = closure_8(hasShopDiscount(5761).Text, obj9);
+    obj8.children = closure_8(hasShopDiscount(5763).Text, obj9);
     return closure_8(View, obj8);
   } else if ("nitroUpsell" === collectibleProductState) {
     const obj10 = { style: styles.priceDescription, children: null };
@@ -126,7 +126,7 @@ const memoResult = noop.memo((arg0) => {
     };
     const intl4 = hasShopDiscount(1113).intl;
     obj11.children = intl4.string(hasShopDiscount(1113).t.sEAnVH);
-    obj10.children = closure_8(hasShopDiscount(5761).Text, obj11);
+    obj10.children = closure_8(hasShopDiscount(5763).Text, obj11);
     return closure_8(View, obj10);
   } else if ("nitroClaim" === collectibleProductState) {
     const obj12 = { style: styles.priceDescription, children: null };
@@ -139,7 +139,7 @@ const memoResult = noop.memo((arg0) => {
     };
     const intl3 = hasShopDiscount(1113).intl;
     obj13.children = intl3.string(hasShopDiscount(1113).t.rt69oo);
-    obj12.children = closure_8(hasShopDiscount(5761).Text, obj13);
+    obj12.children = closure_8(hasShopDiscount(5763).Text, obj13);
     return closure_8(View, obj12);
   } else {
     if (isDisabled) {
@@ -153,7 +153,7 @@ const memoResult = noop.memo((arg0) => {
       };
       const intl2 = hasShopDiscount(1113).intl;
       obj15.children = intl2.string(hasShopDiscount(1113).t.wu4gyV);
-      obj14.children = closure_8(hasShopDiscount(5761).Text, obj15);
+      obj14.children = closure_8(hasShopDiscount(5763).Text, obj15);
       let tmp11Result = closure_8(View, obj14);
     } else {
       if (null != price) {
@@ -173,7 +173,7 @@ const memoResult = noop.memo((arg0) => {
           items2[1] = obj17;
           obj16.style = items2;
           const obj18 = { size: "xxs", color: "mobile-text-heading-primary", style: styles.wheelIcon };
-          const items3 = [closure_8(hasShopDiscount(9679).OrbsIcon, obj18), ,];
+          const items3 = [closure_8(hasShopDiscount(9685).OrbsIcon, obj18), ,];
           const obj19 = {
             variant: "body-xs/semibold",
             color: "mobile-text-heading-primary",
@@ -190,8 +190,8 @@ const memoResult = noop.memo((arg0) => {
           items4[1] = hasShopDiscount(1377).isAndroid() && styles.androidTextPadding;
           obj19.style = items4;
           obj19.children = price.amount;
-          items3[1] = closure_8(hasShopDiscount(5761).Text, obj19);
-          let tmp14Result = memo1 >= hasShopDiscount(7872).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
+          items3[1] = closure_8(hasShopDiscount(5763).Text, obj19);
+          let tmp14Result = memo1 >= hasShopDiscount(7877).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
           if (tmp14Result) {
             const items5 = [, ,];
             ({ discountPercentage: arr6[0], text: arr6[1] } = styles);
@@ -210,7 +210,7 @@ const memoResult = noop.memo((arg0) => {
             obj21.style = items5;
             const _HermesInternal = HermesInternal;
             obj21.children = "-" + memo1 + "%";
-            tmp14Result = closure_8(hasShopDiscount(5761).Text, obj21);
+            tmp14Result = closure_8(hasShopDiscount(5763).Text, obj21);
             tmpResult4 = hasShopDiscount(1377);
           }
           items3[2] = tmp14Result;
@@ -233,8 +233,8 @@ const memoResult = noop.memo((arg0) => {
         items7[1] = hasShopDiscount(1377).isAndroid() && styles.androidTextPadding;
         obj23.style = items7;
         obj23.children = formattedPriceForCollectiblesProduct;
-        items6[1] = closure_8(hasShopDiscount(5761).Text, obj23);
-        let tmp24Result = memo >= hasShopDiscount(7872).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
+        items6[1] = closure_8(hasShopDiscount(5763).Text, obj23);
+        let tmp24Result = memo >= hasShopDiscount(7877).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
         if (tmp24Result) {
           const items8 = [, ,];
           ({ discountPercentage: arr9[0], text: arr9[1] } = styles);
@@ -253,24 +253,24 @@ const memoResult = noop.memo((arg0) => {
           obj24.style = items8;
           const _HermesInternal2 = HermesInternal;
           obj24.children = "-" + memo + "%";
-          tmp24Result = closure_8(hasShopDiscount(5761).Text, obj24);
+          tmp24Result = closure_8(hasShopDiscount(5763).Text, obj24);
           tmpResult6 = hasShopDiscount(1377);
         }
         items6[2] = tmp24Result;
         obj22.children = items6;
         obj16 = obj22;
         const tmp25 = hasShopDiscount(1377).isAndroid() && styles.androidTextPadding;
-      } else if (discountSource === hasShopDiscount(7872).ShopDiscountSource.THIRDPARTY) {
+      } else if (discountSource === hasShopDiscount(7877).ShopDiscountSource.THIRDPARTY) {
         const obj25 = { size: "xs", color: "mobile-text-heading-primary", style: styles.wheelIcon };
-        let tmp21 = closure_8(hasShopDiscount(9716).TagIcon, obj25);
+        let tmp21 = closure_8(hasShopDiscount(9722).TagIcon, obj25);
       } else {
         const obj26 = { size: "xs", color: "mobile-text-heading-primary", style: styles.wheelIcon };
-        tmp21 = closure_8(hasShopDiscount(9675).NitroWheelIcon, obj26);
+        tmp21 = closure_8(hasShopDiscount(9681).NitroWheelIcon, obj26);
       }
     }
     return tmp11Result;
   }
-  const obj5 = hasShopDiscount(9703);
+  const obj5 = hasShopDiscount(9709);
 });
 memoResult.displayName = "PriceDescription";
 let obj3 = {
@@ -289,23 +289,23 @@ export default noop.memo(function CardDetailsV2(arg0) {
   let isInImprovedMobileShopLoading;
   ({ collectibleProductState, preferVCPrice, isDisabled } = arg0);
   const tmp = closure_10();
-  const currentUser = isInImprovedMobileShopLoading(8890).useCurrentUser();
-  const obj = isInImprovedMobileShopLoading(8890);
+  const currentUser = isInImprovedMobileShopLoading(8895).useCurrentUser();
+  const obj = isInImprovedMobileShopLoading(8895);
   const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
-  const shopDiscountSource = isInImprovedMobileShopLoading(7872).getShopDiscountSource(currentUser);
-  const obj3 = isInImprovedMobileShopLoading(7872);
-  const token = isInImprovedMobileShopLoading(5732).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-  const obj4 = isInImprovedMobileShopLoading(5732);
-  const obj5 = isInImprovedMobileShopLoading(5138);
-  const obj6 = isInImprovedMobileShopLoading(5138);
-  const hexToRgbaStringResult = obj5.hexToRgbaString(isInImprovedMobileShopLoading(5138).hexWithOpacity(token, 0.9));
-  const obj7 = isInImprovedMobileShopLoading(5138);
-  const obj8 = isInImprovedMobileShopLoading(5138);
-  const hexToRgbaStringResult1 = obj7.hexToRgbaString(isInImprovedMobileShopLoading(5138).hexWithOpacity(token, 0));
-  const cardProductName = isInImprovedMobileShopLoading(9718).getCardProductName(product);
-  const obj9 = isInImprovedMobileShopLoading(9718);
-  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9719).useIsInImprovedMobileShopLoading();
-  const obj10 = isInImprovedMobileShopLoading(9719);
+  const shopDiscountSource = isInImprovedMobileShopLoading(7877).getShopDiscountSource(currentUser);
+  const obj3 = isInImprovedMobileShopLoading(7877);
+  const token = isInImprovedMobileShopLoading(5734).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  const obj4 = isInImprovedMobileShopLoading(5734);
+  const obj5 = isInImprovedMobileShopLoading(5140);
+  const obj6 = isInImprovedMobileShopLoading(5140);
+  const hexToRgbaStringResult = obj5.hexToRgbaString(isInImprovedMobileShopLoading(5140).hexWithOpacity(token, 0.9));
+  const obj7 = isInImprovedMobileShopLoading(5140);
+  const obj8 = isInImprovedMobileShopLoading(5140);
+  const hexToRgbaStringResult1 = obj7.hexToRgbaString(isInImprovedMobileShopLoading(5140).hexWithOpacity(token, 0));
+  const cardProductName = isInImprovedMobileShopLoading(9724).getCardProductName(product);
+  const obj9 = isInImprovedMobileShopLoading(9724);
+  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9725).useIsInImprovedMobileShopLoading();
+  const obj10 = isInImprovedMobileShopLoading(9725);
   items = [IAPStore];
   const items1 = [isInImprovedMobileShopLoading];
   const stateFromStores = isInImprovedMobileShopLoading(504).useStateFromStores(
@@ -331,7 +331,7 @@ export default noop.memo(function CardDetailsV2(arg0) {
   obj12.colors = items2;
   const obj11 = isInImprovedMobileShopLoading(504);
   const items3 = [
-    closure_8(isInImprovedMobileShopLoading(5761).Text, {
+    closure_8(isInImprovedMobileShopLoading(5763).Text, {
       style: tmp.assetName,
       variant: "heading-xs/semibold",
       color: "mobile-text-heading-primary",

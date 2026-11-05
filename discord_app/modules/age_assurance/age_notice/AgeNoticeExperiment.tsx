@@ -10,9 +10,9 @@ let closure_0 = ApexExperiment.createApexExperiment({
 });
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/AgeNoticeExperiment.tsx");
 
-export function useIsTinyBroncoEnabled(location) {
+export function useIsAgeNoticeEnabled(location) {
   return closure_0.useConfig({ location }).enabled;
 }
-export function isTinyBroncoEnabled(location) {
+export function isAgeNoticeEnabled(location) {
   return closure_0.getConfig({ location }).enabled;
 }

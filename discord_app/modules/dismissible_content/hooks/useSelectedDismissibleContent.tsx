@@ -1,12 +1,45 @@
 // discord_app/modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx
 import useGetDismissibleContent from "../useGetDismissibleContent.tsx";
+import DismissibleContentScope from "../DismissibleContentScope.tsx";
 import useSelectedDismissibleContentShared from "../useSelectedDismissibleContentShared.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx");
+let result = size.fileFinishedImporting("modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx");
 
+export function useSelectedScopedDismissibleContent(items1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  ({ bypassAutoDismiss, groupName } = obj);
+  if (bypassAutoDismiss === undefined) {
+    bypassAutoDismiss = false;
+  }
+  const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(
+    items1,
+    groupName,
+  );
+  ({ visibleContent, markAsDismissed } = scopedDismissibleContentSelection);
+  let candidate = null;
+  if (null != visibleContent) {
+    candidate = scopedDismissibleContentSelection.candidate;
+  }
+  let guildId;
+  if (null != candidate) {
+    guildId = DismissibleContentScope.getDismissibleContentShowing(candidate).guildId;
+    const tmpResult2 = DismissibleContentScope;
+  }
+  const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(
+    visibleContent,
+    markAsDismissed,
+    bypassAutoDismiss,
+    guildId,
+  );
+  items = [visibleContent, markAsDismissed];
+  return items;
+}
 export function useSelectedDismissibleContent(items, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
@@ -16,15 +49,38 @@ export function useSelectedDismissibleContent(items, arg1) {
   if (bypassAutoDismiss === undefined) {
     bypassAutoDismiss = false;
   }
-  [tmp2, tmp3] = useGetDismissibleContent.useGetDismissibleContent(items, groupName);
-  const tmp = _slicedToArray(useGetDismissibleContent.useGetDismissibleContent(items, groupName), 2);
-  const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(
-    tmp2,
-    tmp3,
-    bypassAutoDismiss,
+  const flatMapResult = items.flatMap((item) => {
+    let result = DismissibleContentScope.scopeDismissibleContentEntry(item);
+    if (result == null) {
+      result = [];
+    }
+    return result;
+  });
+  const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(
+    flatMapResult,
+    groupName,
   );
-  items = [tmp2, tmp3];
-  return items;
+  ({ visibleContent, markAsDismissed } = scopedDismissibleContentSelection);
+  let candidate = null;
+  if (null != visibleContent) {
+    candidate = scopedDismissibleContentSelection.candidate;
+  }
+  let guildId;
+  if (null != candidate) {
+    guildId = DismissibleContentScope.getDismissibleContentShowing(candidate).guildId;
+    const tmp2Result2 = DismissibleContentScope;
+  }
+  const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(
+    visibleContent,
+    markAsDismissed,
+    bypassAutoDismiss,
+    guildId,
+  );
+  items = [visibleContent, markAsDismissed];
+  const tmp2Result = useSelectedDismissibleContentShared;
+  const items1 = [,];
+  [arr2[0], arr2[1]] = items;
+  return items1;
 }
 export function useSelectedSingleUseGuildDismissibleContent(items4, id, CHANNEL_NOTICES) {
   if (flag === undefined) {
@@ -106,22 +162,22 @@ export function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId
   items = [tmp2, tmp3];
   return items;
 }
-export function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSnowflakeId, GUILD_HEADER_TOOLTIPS) {
+export function useSelectedSnowflakeBoundGuildDismissibleContent(content, guildId, snowflakeId, groupName) {
   if (flag === undefined) {
     flag = false;
   }
   [tmp2, tmp3] = useGetDismissibleContent.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(
-    prop,
-    newSnowflakeId,
-    id,
-    GUILD_HEADER_TOOLTIPS,
+    content,
+    snowflakeId,
+    guildId,
+    groupName,
   );
   const tmp = _slicedToArray(
     useGetDismissibleContent.useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(
-      prop,
-      newSnowflakeId,
-      id,
-      GUILD_HEADER_TOOLTIPS,
+      content,
+      snowflakeId,
+      guildId,
+      groupName,
     ),
     2,
   );
@@ -129,7 +185,7 @@ export function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSn
     tmp2,
     tmp3,
     flag,
-    id,
+    guildId,
   );
   items = [tmp2, tmp3];
   return items;
@@ -167,18 +223,18 @@ export function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(
   items = [tmp2, tmp3];
   return items;
 }
-export function useSelectedTimeRecurringGuildDismissibleContent(prop, id, cooldownDurationMs, GUILD_HEADER_TOOLTIPS) {
+export function useSelectedTimeRecurringGuildDismissibleContent(prop, id, timeRecurringConfig, GUILD_HEADER_TOOLTIPS) {
   [tmp2, tmp3] = useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(
     prop,
     id,
-    cooldownDurationMs,
+    timeRecurringConfig,
     GUILD_HEADER_TOOLTIPS,
   );
   const tmp = _slicedToArray(
     useGetDismissibleContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(
       prop,
       id,
-      cooldownDurationMs,
+      timeRecurringConfig,
       GUILD_HEADER_TOOLTIPS,
     ),
     2,

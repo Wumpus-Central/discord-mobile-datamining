@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/preview/releaseConjurePreviewFrame.tsx
 import conjurePreviewSurface from "conjurePreviewSurface.tsx";
-import leaveFrame from "../../frames/leaveFrame.tsx";
 import frameRunsInBackgroundDefault from "../../frames/frameRunsInBackground.tsx";
+import leaveFrame from "../../frames/leaveFrame.tsx";
 import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsStore.tsx";
 
 require = fn;

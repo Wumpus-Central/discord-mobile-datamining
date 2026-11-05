@@ -31,7 +31,7 @@ export function getAgeVerificationGetStartedSteps(modalSessionId) {
   obj3.description = intl6.format(require("util").t.n5vd1E, {
     handleOnHelpUrlHook() {
       const obj = AgeVerificationActionCreatorsDefault;
-      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_VERIFICATION_SYSTEM_DMS));
+      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SYSTEM_DMS));
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(
         closure_0,
         AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY,

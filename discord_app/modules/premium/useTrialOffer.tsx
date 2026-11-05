@@ -100,7 +100,7 @@ export function useTrialOffer(React3) {
                             num = time - Date.now();
                           }
                           if (closure_1_0 != null) {
-                            closure_1_0.start(num, /* F137494 */ function() { ... });
+                            closure_1_0.start(num, /* F137756 */ function() { ... });
                           }
                         }
                       });

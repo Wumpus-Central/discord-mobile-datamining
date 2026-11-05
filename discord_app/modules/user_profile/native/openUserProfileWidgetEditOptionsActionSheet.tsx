@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 
 export default function openUserProfileWidgetEditOptionsActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(12563, dependencyMap.paths),
+    asyncRequireImpl(12570, dependencyMap.paths),
     UserProfileWidgetEditOptionsActionSheet,
     arg0,
   );

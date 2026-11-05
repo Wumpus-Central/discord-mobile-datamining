@@ -11,7 +11,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 const FormStates = fn(1072).FormStates;
-const HexagonCampaignPerk = fn(5166).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5168).HexagonCampaignPerk;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
 
@@ -96,7 +96,7 @@ export default function useUserProfileEditForm() {
                 if (!stateFromStores) {
                   if (!first) {
                     const pendingHexagonCampaignEnrollment =
-                      pendingChanges(16710).getPendingHexagonCampaignEnrollment();
+                      pendingChanges(16723).getPendingHexagonCampaignEnrollment();
                     if (null != pendingHexagonCampaignEnrollment) {
                       closure_3(true);
                       c7 = 1;
@@ -106,15 +106,15 @@ export default function useUserProfileEditForm() {
                     } else {
                       pendingChanges2 = pendingChanges.getPendingChanges();
                       accountUpdateForUpdateRequest =
-                        pendingChanges(11705).getAccountUpdateForUpdateRequest(pendingChanges2);
-                      const obj27 = pendingChanges(11705);
+                        pendingChanges(11713).getAccountUpdateForUpdateRequest(pendingChanges2);
+                      const obj27 = pendingChanges(11713);
                       profileChangesForUpdateRequest =
-                        pendingChanges(11705).getProfileChangesForUpdateRequest(pendingChanges2);
-                      const obj28 = pendingChanges(11705);
+                        pendingChanges(11713).getProfileChangesForUpdateRequest(pendingChanges2);
+                      const obj28 = pendingChanges(11713);
                       primaryGuildChangesForUpdateRequest =
-                        pendingChanges(11705).getPrimaryGuildChangesForUpdateRequest(pendingChanges2);
-                      const obj29 = pendingChanges(11705);
-                      let result = pendingChanges(5168).hasHexagonCampaignDisplayNameFont(
+                        pendingChanges(11713).getPrimaryGuildChangesForUpdateRequest(pendingChanges2);
+                      const obj29 = pendingChanges(11713);
+                      let result = pendingChanges(5170).hasHexagonCampaignDisplayNameFont(
                         accountUpdateForUpdateRequest.displayNameStyles,
                       );
                       if (result) {
@@ -123,8 +123,8 @@ export default function useUserProfileEditForm() {
                         if (currentUser != null) {
                           displayNameStyles = currentUser.displayNameStyles;
                         }
-                        result = !pendingChanges(5168).hasHexagonCampaignDisplayNameFont(displayNameStyles);
-                        const obj31 = pendingChanges(5168);
+                        result = !pendingChanges(5170).hasHexagonCampaignDisplayNameFont(displayNameStyles);
+                        const obj31 = pendingChanges(5170);
                       }
                       closure_132_5 = result;
                       closure_132_6 = true;
@@ -134,7 +134,7 @@ export default function useUserProfileEditForm() {
                         c7 = 2;
                         pendingChanges = 1;
                         const obj8 = {
-                          value: pendingChanges(7289).saveProfileAndAccountChanges(accountUpdateForUpdateRequest),
+                          value: pendingChanges(7292).saveProfileAndAccountChanges(accountUpdateForUpdateRequest),
                           done: false,
                         };
                         return obj8;
@@ -146,7 +146,7 @@ export default function useUserProfileEditForm() {
                           c7 = 3;
                           pendingChanges = 1;
                           const obj10 = {
-                            value: pendingChanges(8879).saveProfileChanges(
+                            value: pendingChanges(8884).saveProfileChanges(
                               closure_132_11,
                               undefined,
                               bannerOriginalMd5,
@@ -159,7 +159,7 @@ export default function useUserProfileEditForm() {
                             if (undefined === pendingChanges2.pendingBadgeHiddenBadges) {
                               if (undefined !== pendingChanges2.pendingLegacyUsernameDisabled) {
                                 c6 = 1;
-                                const LegacyUsernameDisabled = pendingChanges(4966).LegacyUsernameDisabled;
+                                const LegacyUsernameDisabled = pendingChanges(4968).LegacyUsernameDisabled;
                                 c7 = 8;
                                 pendingChanges = 1;
                                 const obj12 = {
@@ -178,7 +178,7 @@ export default function useUserProfileEditForm() {
                                       c7 = 10;
                                       pendingChanges = 1;
                                       const obj13 = {
-                                        value: stateFromStores(12567).savePendingWidgets(saveablePendingWidgets),
+                                        value: stateFromStores(12574).savePendingWidgets(saveablePendingWidgets),
                                         done: false,
                                       };
                                       return obj13;
@@ -193,7 +193,7 @@ export default function useUserProfileEditForm() {
                                     c7 = 11;
                                     pendingChanges = 1;
                                     const obj14 = {
-                                      value: pendingChanges(15985).adoptGuildIdentity(
+                                      value: pendingChanges(15997).adoptGuildIdentity(
                                         primaryGuildId,
                                         null !== primaryGuildId,
                                       ),
@@ -208,10 +208,10 @@ export default function useUserProfileEditForm() {
                                 }
                                 if (!tmp237) {
                                   const intl2 = pendingChanges(1113).intl;
-                                  const result1 = pendingChanges(16712).showGenericProfileUpdateFailureToast(
+                                  const result1 = pendingChanges(16725).showGenericProfileUpdateFailureToast(
                                     intl2.string(pendingChanges(1113).t["84MExs"]),
                                   );
-                                  const obj49 = pendingChanges(16712);
+                                  const obj49 = pendingChanges(16725);
                                 }
                                 pendingChanges = 3;
                                 const obj17 = { value: closure_132_6, done: true };
@@ -243,13 +243,13 @@ export default function useUserProfileEditForm() {
                           };
                           c7 = 4;
                           pendingChanges = 1;
-                          const obj22 = { value: pendingChanges(16713).updateBadgeSettings(obj20), done: false };
+                          const obj22 = { value: pendingChanges(16726).updateBadgeSettings(obj20), done: false };
                           return obj22;
                         }
                       }
-                      const obj30 = pendingChanges(5168);
+                      const obj30 = pendingChanges(5170);
                     }
-                    const obj26 = pendingChanges(16710);
+                    const obj26 = pendingChanges(16723);
                   }
                 }
                 pendingChanges = 3;
@@ -301,20 +301,20 @@ export default function useUserProfileEditForm() {
                       assetOrigin = pendingAvatar.assetOrigin;
                     }
                     obj32.avatarAssetOrigin = assetOrigin;
-                    const result2 = pendingChanges(7296).trackUserAvatarUpdated(obj32);
-                    const obj19 = pendingChanges(7296);
+                    const result2 = pendingChanges(7299).trackUserAvatarUpdated(obj32);
+                    const obj19 = pendingChanges(7299);
                   }
                   if (closure_132_5) {
                     const obj34 = { perks: null, content: null, contentSurface: null };
                     items = [constants.DISPLAY_NAME_STYLE];
                     obj34.perks = items;
-                    obj34.content = pendingChanges(6919).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                    obj34.contentSurface = pendingChanges(16711).HexagonCampaignContentSurface.USER_PROFILE;
-                    const result3 = pendingChanges(16711).trackHexagonCampaignPerkAction(obj34);
-                    const obj21 = pendingChanges(16711);
+                    obj34.content = pendingChanges(6922).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
+                    obj34.contentSurface = pendingChanges(16724).HexagonCampaignContentSurface.USER_PROFILE;
+                    const result3 = pendingChanges(16724).trackHexagonCampaignPerkAction(obj34);
+                    const obj21 = pendingChanges(16724);
                   }
-                  const result4 = pendingChanges(7289).resetPendingAccountChanges();
-                  const obj23 = pendingChanges(7289);
+                  const result4 = pendingChanges(7292).resetPendingAccountChanges();
+                  const obj23 = pendingChanges(7292);
                 } else {
                   let username;
                   if (tmp69 != null) {
@@ -324,9 +324,9 @@ export default function useUserProfileEditForm() {
                     }
                   }
                   if (null != username) {
-                    const result5 = pendingChanges(7299).showInvalidUsernameToast();
+                    const result5 = pendingChanges(7302).showInvalidUsernameToast();
                     closure_132_7 = true;
-                    const obj18 = pendingChanges(7299);
+                    const obj18 = pendingChanges(7302);
                   } else {
                     let avatar;
                     if (closure_132_8 != null) {
@@ -336,16 +336,16 @@ export default function useUserProfileEditForm() {
                       }
                     }
                     if (null != avatar) {
-                      const aPIError = new pendingChanges(6581).APIError(closure_132_8);
+                      const aPIError = new pendingChanges(6584).APIError(closure_132_8);
                       const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("avatar");
                       pendingChanges = firstFieldErrorMessage;
                       if (firstFieldErrorMessage == null) {
                         const intl = pendingChanges(1113).intl;
                         pendingChanges = intl.string(pendingChanges(1113).t["84MExs"]);
                       }
-                      const result6 = pendingChanges(16712).showGenericProfileUpdateFailureToast(pendingChanges);
+                      const result6 = pendingChanges(16725).showGenericProfileUpdateFailureToast(pendingChanges);
                       closure_132_7 = true;
-                      const obj53 = pendingChanges(16712);
+                      const obj53 = pendingChanges(16725);
                     }
                   }
                 }
@@ -379,15 +379,15 @@ export default function useUserProfileEditForm() {
                   ok2 = closure_132_12.ok;
                 }
                 if (ok2) {
-                  const result7 = pendingChanges(8879).resetPendingProfileChanges();
-                  const obj16 = pendingChanges(8879);
+                  const result7 = pendingChanges(8884).resetPendingProfileChanges();
+                  const obj16 = pendingChanges(8884);
                 } else {
-                  const aPIError1 = new pendingChanges(6581).APIError(closure_132_12);
+                  const aPIError1 = new pendingChanges(6584).APIError(closure_132_12);
                   firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
                   if (null != firstFieldErrorMessage2) {
-                    const result8 = pendingChanges(16712).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
+                    const result8 = pendingChanges(16725).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
                     closure_132_7 = true;
-                    const obj15 = pendingChanges(16712);
+                    const obj15 = pendingChanges(16725);
                   }
                 }
                 let tmp64 = closure_132_6;
@@ -423,7 +423,7 @@ export default function useUserProfileEditForm() {
                   }
                   closure_132_16 = id;
                   if (null != closure_132_16) {
-                    const profile = pendingChanges(8893).fetchProfile(closure_132_16);
+                    const profile = pendingChanges(8898).fetchProfile(closure_132_16);
                     c7 = 5;
                     pendingChanges = 1;
                     const obj39 = {
@@ -434,7 +434,7 @@ export default function useUserProfileEditForm() {
                   } else {
                     c7 = 6;
                     pendingChanges = 1;
-                    const obj41 = { value: pendingChanges(8909).fetchBadgeDirectory(), done: false };
+                    const obj41 = { value: pendingChanges(8914).fetchBadgeDirectory(), done: false };
                     return obj41;
                   }
                 } else if (!closure_132_14) {
@@ -473,8 +473,8 @@ export default function useUserProfileEditForm() {
                 const obj45 = { value, done: true };
                 return obj45;
               } else {
-                const result9 = pendingChanges(15202).resetPendingBadgeSettings();
-                const obj4 = pendingChanges(15202);
+                const result9 = pendingChanges(15215).resetPendingBadgeSettings();
+                const obj4 = pendingChanges(15215);
               }
               break;
             case 7:
@@ -491,9 +491,9 @@ export default function useUserProfileEditForm() {
                 const obj46 = { value, done: true };
                 return obj46;
               } else {
-                const result10 = pendingChanges(7289).resetPendingLegacyUsernameDisabled();
+                const result10 = pendingChanges(7292).resetPendingLegacyUsernameDisabled();
                 c6 = 0;
-                const obj2 = pendingChanges(7289);
+                const obj2 = pendingChanges(7292);
               }
               break;
             case 9:
@@ -528,16 +528,16 @@ export default function useUserProfileEditForm() {
                   ok4 = closure_132_19.ok;
                 }
                 if (ok4) {
-                  const result11 = pendingChanges(7289).resetPendingPrimaryGuildChanges();
-                  const obj48 = pendingChanges(7289);
+                  const result11 = pendingChanges(7292).resetPendingPrimaryGuildChanges();
+                  const obj48 = pendingChanges(7292);
                 } else {
-                  const aPIError2 = new pendingChanges(6581).APIError(closure_132_19);
+                  const aPIError2 = new pendingChanges(6584).APIError(closure_132_19);
                   firstFieldErrorMessage3 = aPIError2.getFirstFieldErrorMessage("banner");
                   if (null != firstFieldErrorMessage3) {
                     const result12 =
-                      pendingChanges(16712).showGenericProfileUpdateFailureToast(firstFieldErrorMessage3);
+                      pendingChanges(16725).showGenericProfileUpdateFailureToast(firstFieldErrorMessage3);
                     closure_132_7 = true;
-                    const obj47 = pendingChanges(16712);
+                    const obj47 = pendingChanges(16725);
                   }
                 }
                 let tmp233 = closure_132_6;
@@ -613,7 +613,7 @@ export default function useUserProfileEditForm() {
                 const obj5 = { avatarDecoration: pendingChanges.pendingAvatarDecoration };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj6 = { value: tmp5(7289).saveProfileAndAccountChanges(obj5), done: false };
+                const obj6 = { value: tmp5(7292).saveProfileAndAccountChanges(obj5), done: false };
                 return obj6;
               }
             }
@@ -627,8 +627,8 @@ export default function useUserProfileEditForm() {
               ok = closure_128_0.ok;
             }
             if (ok) {
-              const result = tmp5(7289).resetPendingAccountChanges();
-              const obj = tmp5(7289);
+              const result = tmp5(7292).resetPendingAccountChanges();
+              const obj = tmp5(7292);
             }
           }
           c3 = 3;

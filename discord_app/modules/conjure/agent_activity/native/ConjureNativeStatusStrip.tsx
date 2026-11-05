@@ -119,10 +119,10 @@ function ThinkingIndicator(line) {
   return closure_9(ref2, obj3);
 }
 const View = fn(17).View;
-const AI_LOADER_CYCLE_MS = fn(12447).AI_LOADER_CYCLE_MS;
+const AI_LOADER_CYCLE_MS = fn(12454).AI_LOADER_CYCLE_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   row: {
     flexDirection: "row",
@@ -239,13 +239,13 @@ export default function ConjureNativeStatusStrip(projectId) {
   }
   obj2.publishPending = tmp8;
   obj2.publishing = stateFromStores;
-  const thinkingLabelResult = projectId(12824).thinkingLabel(obj2);
+  const thinkingLabelResult = projectId(12831).thinkingLabel(obj2);
   const intl = tmp2(1113).intl;
   const stringResult = intl.string(thinkingLabelResult);
   let runesUsedLabelsResult = null;
   if (null != projectUsage) {
-    runesUsedLabelsResult = tmp2(12824).runesUsedLabels(projectUsage);
-    const tmp2Result2 = tmp2(12824);
+    runesUsedLabelsResult = tmp2(12831).runesUsedLabels(projectUsage);
+    const tmp2Result2 = tmp2(12831);
   }
   let tmp12 = null != activity;
   if (tmp12) {
@@ -291,7 +291,7 @@ export default function ConjureNativeStatusStrip(projectId) {
           str3 = "text-feedback-critical";
         }
         const obj7 = { variant: "body-xs/medium", color: str3, children: connLabel };
-        tmp17Result4 = closure_8(tmp2(5761).Text, obj7);
+        tmp17Result4 = closure_8(tmp2(5763).Text, obj7);
       }
       items4[1] = tmp17Result4;
       let tmp17Result5 = null;
@@ -301,8 +301,8 @@ export default function ConjureNativeStatusStrip(projectId) {
         const intl3 = tmp2(1113).intl;
         const obj10 = { count: queuedCount };
         obj9.children = intl3.formatToPlainString(_modDef3995.REnNUn, obj10);
-        obj8.children = closure_8(tmp2(5761).Text, obj9);
-        tmp17Result5 = closure_8(tmp2(7121).PressableOpacity, obj8);
+        obj8.children = closure_8(tmp2(5763).Text, obj9);
+        tmp17Result5 = closure_8(tmp2(7124).PressableOpacity, obj8);
       }
       items4[2] = tmp17Result5;
       let tmp15Result = null;
@@ -316,18 +316,18 @@ export default function ConjureNativeStatusStrip(projectId) {
           children: null,
         };
         const obj12 = { variant: "body-xs/medium", color: "text-muted", children: runesUsedLabelsResult.text };
-        const items5 = [closure_8(tmp2(5761).Text, obj12)];
+        const items5 = [closure_8(tmp2(5763).Text, obj12)];
         const obj13 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-        items5[1] = closure_8(tmp2(5869).CircleInformationIcon, obj13);
+        items5[1] = closure_8(tmp2(5872).CircleInformationIcon, obj13);
         obj11.children = items5;
-        tmp15Result = closure_9(tmp2(7121).PressableOpacity, obj11);
+        tmp15Result = closure_9(tmp2(7124).PressableOpacity, obj11);
       }
       items4[3] = tmp15Result;
       obj3.children = items4;
       return closure_9(View, obj3);
     }
   }
-  const tmp19 = thinkingLabelResult === projectId(12824).RECALLING_LINES[0];
+  const tmp19 = thinkingLabelResult === projectId(12831).RECALLING_LINES[0];
   let tmp20 = thinking;
   if (!thinking) {
     tmp20 = tmp19;
@@ -367,6 +367,6 @@ export default function ConjureNativeStatusStrip(projectId) {
   obj14.disabled = !thinking;
   obj14.onPress = onToggleThinking;
   obj14.children = closure_8(ThinkingIndicator, { line: stringResult, rotating: tmp19, immediate: saving });
-  tmp17Result6 = closure_8(tmp2(7121).PressableOpacity, obj14);
-  const tmp2Result = projectId(12824);
+  tmp17Result6 = closure_8(tmp2(7124).PressableOpacity, obj14);
+  const tmp2Result = projectId(12831);
 }

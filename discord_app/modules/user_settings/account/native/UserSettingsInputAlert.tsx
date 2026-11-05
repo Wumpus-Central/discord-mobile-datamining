@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "children" };
+const hasOwnProperty = { input: "", error: "applicationId" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -76,21 +76,25 @@ class UserSettingsInputAlert extends PureComponent {
 const prototype = UserSettingsInputAlert.prototype;
 prototype["renderContent"] = function renderContent() {
   const self = this;
-  const helpText = this.props.helpText;
+  ({ secureTextEntry, helpText } = this.props);
   if (null != this.props.error) {
     if ("" !== self.props.error) {
       let error = self.props.error;
     }
-    let tmp7 = null != helpText;
-    if (tmp7) {
+    let tmp6 = null != helpText;
+    if (tmp6) {
       const obj = { variant: "body-md/normal", children: helpText };
-      tmp7 = React3(Text_Text.Text, obj);
+      tmp6 = React3(Text_Text.Text, obj);
     }
-    items = [tmp7];
+    items = [tmp6];
     const obj2 = {
-      label: tmp3,
+      label: tmp2,
       placeholder: tmp,
-      secureTextEntry: tmp2,
+      secureTextEntry,
+      revealable: true,
+      autoCapitalize: "none",
+      autoComplete: null,
+      textContentType: null,
       returnKeyType: "done",
       autoFocus: true,
       status: null,
@@ -98,12 +102,22 @@ prototype["renderContent"] = function renderContent() {
       onSubmitEditing: null,
       onChange: null,
     };
-    let str2 = "default";
+    let str2;
+    if (secureTextEntry) {
+      str2 = "current-password";
+    }
+    obj2.autoComplete = str2;
+    let str3;
+    if (secureTextEntry) {
+      str3 = "password";
+    }
+    obj2.textContentType = str3;
+    let str4 = "default";
     if (null != error) {
-      str2 = "error";
+      str4 = "error";
     }
     const obj3 = { spacing: 16, children: null };
-    obj2.status = str2;
+    obj2.status = str4;
     obj2.errorMessage = error;
     obj2.onSubmitEditing = self.handleSubmit;
     obj2.onChange = function onChange(input) {

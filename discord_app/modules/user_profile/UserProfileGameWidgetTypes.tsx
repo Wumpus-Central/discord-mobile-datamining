@@ -215,8 +215,8 @@ prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOp
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTypes.tsx");
 
 export const GAME_WIDGET_TYPES = items;
-export function isGameWidgetType(arg0) {
-  return items.includes(arg0);
+export function isGameWidgetType(type) {
+  return items.includes(type);
 }
 export function isGameWidget(widget) {
   return widget instanceof BaseGameWidget;

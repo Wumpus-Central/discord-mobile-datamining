@@ -62,7 +62,7 @@ obj3.usePreNavigationAction = DismissibleBadgeUtils.createDismissibleBadgePreNav
   dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS,
   AgeNoticeLazy.useShouldShowAgeNotice,
 );
-obj3.usePredicate = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled;
+obj3.usePredicate = AgeNoticeSettingsPredicate.useIsAgeNoticeSettingsEnabled;
 obj3.screen = {
   route: Constants.UserSettingsSections.AGE_GROUP,
   getComponent() {

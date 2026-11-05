@@ -13,13 +13,13 @@ import _modDef1437 from "../../../../_runtime/metro/01437__.js";
 import _modDef1438 from "../../../../_runtime/metro/01438__.js";
 import _modDef1439 from "../../../../_runtime/metro/01439__.js";
 import _modDef1440 from "../../../../_runtime/metro/01440__.js";
-import _modDef20419 from "../../../../_runtime/metro/20419__.js";
-import _modDef20420 from "../../../../_runtime/metro/20420__.js";
-import _modDef20421 from "../../../../_runtime/metro/20421__.js";
-import _modDef20422 from "../../../../_runtime/metro/20422__.js";
-import _modDef20423 from "../../../../_runtime/metro/20423__.js";
-import _modDef20424 from "../../../../_runtime/metro/20424__.js";
-import _modDef20425 from "../../../../_runtime/metro/20425__.js";
+import _modDef20454 from "../../../../_runtime/metro/20454__.js";
+import _modDef20455 from "../../../../_runtime/metro/20455__.js";
+import _modDef20456 from "../../../../_runtime/metro/20456__.js";
+import _modDef20457 from "../../../../_runtime/metro/20457__.js";
+import _modDef20458 from "../../../../_runtime/metro/20458__.js";
+import _modDef20459 from "../../../../_runtime/metro/20459__.js";
+import _modDef20460 from "../../../../_runtime/metro/20460__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_misc.tsx");
@@ -39,11 +39,11 @@ export const NATIVE_REQUIRED_ASSETS_MISC = {
   DefaultGroup5: _modDef1438,
   DefaultGroup6: _modDef1439,
   DefaultGroup7: _modDef1440,
-  PoopDark: _modDef20419,
-  PoopLight: _modDef20420,
-  RoleSubscriptionBadge: _modDef20421,
-  RoleSubscriptionLanyard: _modDef20422,
-  RoleSubscriptionPurchaseCard: _modDef20423,
-  SummaryIndicatorEnd: _modDef20424,
-  SummaryIndicatorStart: _modDef20425,
+  PoopDark: _modDef20454,
+  PoopLight: _modDef20455,
+  RoleSubscriptionBadge: _modDef20456,
+  RoleSubscriptionLanyard: _modDef20457,
+  RoleSubscriptionPurchaseCard: _modDef20458,
+  SummaryIndicatorEnd: _modDef20459,
+  SummaryIndicatorStart: _modDef20460,
 };

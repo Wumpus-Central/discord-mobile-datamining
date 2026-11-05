@@ -1,12 +1,12 @@
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
-import _modDef11604 from "../../../../../_runtime/metro/11604__.js";
+import _modDef11612 from "../../../../../_runtime/metro/11612__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ActivityPanelModes = fn(5791).ActivityPanelModes;
+const ActivityPanelModes = fn(5793).ActivityPanelModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_7 = createStyles.createStyles({ buttonParent: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
@@ -21,7 +21,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
     if ("" !== activityName) {
       const obj2 = { style: tmp2.buttonParent, children: null };
       const obj3 = {
-        icon: _modDef11604,
+        icon: _modDef11612,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -34,8 +34,8 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
       obj3.accessibilityLabel = intl2.string(setMode(1113).t.brPQ5U);
       obj3.onPress = callback;
       obj3.text = activityName;
-      obj2.children = jsx(setMode(5768).Button, {
-        icon: _modDef11604,
+      obj2.children = jsx(setMode(5770).Button, {
+        icon: _modDef11612,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -49,7 +49,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
     return tmp3;
   }
   const obj = {
-    icon: _modDef11604,
+    icon: _modDef11612,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",
@@ -59,8 +59,8 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
   const intl = setMode(1113).intl;
   obj.accessibilityLabel = intl.string(setMode(1113).t.brPQ5U);
   obj.onPress = callback;
-  tmp3 = jsx(setMode(8168).IconButton, {
-    icon: _modDef11604,
+  tmp3 = jsx(setMode(8173).IconButton, {
+    icon: _modDef11612,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",

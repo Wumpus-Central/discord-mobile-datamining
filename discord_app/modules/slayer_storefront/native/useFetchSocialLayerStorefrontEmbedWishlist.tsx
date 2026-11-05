@@ -14,11 +14,11 @@ require = fn;
 let closure_8 = {
   user: "a",
   profile: "flexDirection",
-  wishlistId: "create",
-  wishlist: 263,
+  wishlistId: "count",
+  wishlist: "CHANNEL_RTC_UPDATE_CHAT_OPEN",
   updatedAt: null,
-  storedUpdatedAt: 1,
-  fetching: "not_implemented",
+  storedUpdatedAt: null,
+  fetching: -45,
   error: null,
 };
 const size = fn(2);

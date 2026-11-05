@@ -27,7 +27,7 @@ function PollDurationRadioGroup(onChange) {
     [tmp, tmp2] = item;
     return jsx(onChange(dependencyMap[7]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
   });
-  return jsx(onChange(7199).TableRadioGroup, {
+  return jsx(onChange(7202).TableRadioGroup, {
     title: null,
     hasIcons: false,
     onChange: null,

@@ -57,7 +57,7 @@ class BalanceCounter {
     [tmp7, tmp8] = tmp6;
     tmp9 = closure_3(closure_4(false), 2);
     closure_7 = tmp9[1];
-    tmp10 = closure_7((set, PX_16, duration) => {
+    tmp10 = closure_7((set, _undefined2, duration) => {
       closure_7(true);
       items = [closure_10, _mod1705.scheduleOnRN, closure_7];
       c0 = undefined;
@@ -75,7 +75,7 @@ class BalanceCounter {
       BalanceCounterTsx1.__initData = tmp2;
       const result = set.set(
         spring_spring.withSpring(
-          PX_16,
+          _undefined2,
           { duration, damping: 15, stiffness: 150, mass: 1 },
           "respect-motion-settings",
           BalanceCounterTsx1,

@@ -15,11 +15,11 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiSourceDataTypes = fn(7099).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(7102).EmojiSourceDataTypes;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 },
   reactionPill: null,
@@ -86,11 +86,12 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     isEmojiPack = tmp7 === EmojiSourceDataTypes.PACK;
   }
   const DeveloperMode = tmp3(tmp4[11]).DeveloperMode;
-  let tidaWebformEnabled = DeveloperMode.useSetting();
-  let obj = messageId(stateFromStores1[12]);
+  let setting = DeveloperMode.useSetting();
+  const isTidaMediaTakedownRegion = channelId(stateFromStores1[12]).useIsTidaMediaTakedownRegion();
+  const tmp3Result = channelId(stateFromStores1[12]);
   items = [SelectedGuildStore];
   const stateFromStores = channelId(stateFromStores1[13]).useStateFromStores(items, () => guildId.getGuildId());
-  const tmp3Result = channelId(stateFromStores1[13]);
+  const tmp3Result5 = channelId(stateFromStores1[13]);
   const items1 = [EmojiStore];
   const items2 = [emoji.id];
   stateFromStores1 = channelId(stateFromStores1[13]).useStateFromStores(
@@ -104,15 +105,15 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     },
     items2,
   );
-  const tmp3Result4 = channelId(stateFromStores1[13]);
+  const tmp3Result6 = channelId(stateFromStores1[13]);
   isFavoriteEmoji = channelId(stateFromStores1[14]).useIsFavoriteEmoji(stateFromStores, stateFromStores1);
-  const tmp3Result5 = channelId(stateFromStores1[14]);
+  const tmp3Result7 = channelId(stateFromStores1[14]);
   const items3 = [callback];
   const stateFromStores2 = channelId(stateFromStores1[13]).useStateFromStores(items3, () => callback.useReducedMotion);
   const AnimateEmoji = tmp3(tmp4[11]).AnimateEmoji;
   emojiURL = undefined;
   if (null != emoji.id) {
-    let obj2 = { id: null, animated: null, size: 96 };
+    let obj = { id: null, animated: null, size: 96 };
     ({ id: obj7.id, animated } = emoji);
     if (animated == null) {
       animated = false;
@@ -121,11 +122,11 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       animated = !stateFromStores2;
     }
     if (animated) {
-      animated = tmp14;
+      animated = tmp15;
     }
-    obj2.animated = animated;
-    emojiURL = tmp9(tmp4[15]).getEmojiURL(obj2);
-    const tmp9Result = tmp9(tmp4[15]);
+    obj.animated = animated;
+    emojiURL = messageId(tmp4[15]).getEmojiURL(obj);
+    const obj6 = messageId(tmp4[15]);
   }
   callback = isFavoriteEmoji.useCallback(() => {
     messageId(stateFromStores1[16]).hideActionSheet();
@@ -178,9 +179,9 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   if (str == null) {
     str = "";
   }
-  let obj3 = { children: null };
-  let obj4 = { style: tmp.header, children: null };
-  let obj5 = { style: tmp.reactionPill, children: null };
+  let obj2 = { children: null };
+  let obj3 = { style: tmp.header, children: null };
+  let obj4 = { style: tmp.reactionPill, children: null };
   const items8 = [
     closure_11(messageId(stateFromStores1[26]), {
       src: emojiURL,
@@ -195,8 +196,8 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count,
     }),
   ];
-  obj5.children = items8;
-  const items9 = [closure_12(emojiURL, obj5)];
+  obj4.children = items8;
+  const items9 = [closure_12(emojiURL, obj4)];
   const Text = tmp3(tmp4[27]).Text;
   const obj9 = { variant: "body-lg/semibold", color: "text-default", children: null };
   if (isEmojiPack) {
@@ -207,12 +208,12 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     }
     obj9.children = combined;
     items9[1] = closure_11(Text, obj9);
-    obj4.children = items9;
-    const items10 = [closure_12(tmp23, obj4), ,];
+    obj3.children = items9;
+    const items10 = [closure_12(tmp25, obj3), ,];
     const obj10 = { variant: "body-md/normal", color: "text-subtle", style: tmp.packDescription, children: null };
     const intl5 = tmp3(tmp4[19]).intl;
-    const obj11 = { helpdeskArticle: tmp9(tmp4[29]).getArticleURL(HelpdeskArticles.NITRO_EMOJI_PACKS) };
-    obj10.children = intl5.format(tmp9(tmp4[28])["/jdd/7"], obj11);
+    const obj11 = { helpdeskArticle: tmp27(tmp4[29]).getArticleURL(HelpdeskArticles.NITRO_EMOJI_PACKS) };
+    obj10.children = intl5.format(tmp27(tmp4[28])["/jdd/7"], obj11);
     items10[1] = closure_11(tmp3(tmp4[27]).Text, obj10);
     if (canRemoveReactions) {
       const obj12 = { hasIcons: false, children: null };
@@ -226,9 +227,9 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       canRemoveReactions = closure_11(tmp3(tmp4[30]).TableRowGroup, obj12);
     }
     items10[2] = canRemoveReactions;
-    obj3.children = items10;
-    let tmp32 = obj3;
-    const tmp9Result2 = tmp9(tmp4[29]);
+    obj2.children = items10;
+    let tmp35 = obj2;
+    const tmp27Result = tmp27(tmp4[29]);
   } else {
     let combined1 = str;
     if (tmp2) {
@@ -237,47 +238,44 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     }
     obj9.children = combined1;
     items9[1] = closure_11(Text, obj9);
-    obj4.children = items9;
-    const items11 = [closure_12(tmp23, obj4)];
-    let tmp27 = tmp2;
+    obj3.children = items9;
+    const items11 = [closure_12(tmp25, obj3)];
+    let tmp30 = tmp2;
     if (tmp2) {
-      tmp27 = null != stateFromStores1;
+      tmp30 = null != stateFromStores1;
     }
-    if (!tmp27) {
-      const items12 = [tmp27, , ,];
-      let tmp24Result = tidaWebformEnabled;
-      if (tidaWebformEnabled) {
-        tmp24Result = tmp2;
+    if (!tmp30) {
+      const items12 = [tmp30, , ,];
+      let tmp26Result = setting;
+      if (setting) {
+        tmp26Result = tmp2;
       }
-      if (tmp24Result) {
+      if (tmp26Result) {
         const obj15 = { label: null, onPress: null };
         let intl2 = tmp3(tmp4[19]).intl;
         obj15.label = intl2.string(tmp3(tmp4[19]).t.Ap2oVy);
         obj15.onPress = callback2;
-        tmp24Result = closure_11(tmp3(tmp4[31]).TableRow, obj15);
+        tmp26Result = closure_11(tmp3(tmp4[31]).TableRow, obj15);
       }
-      items12[1] = tmp24Result;
-      if (tidaWebformEnabled) {
-        tidaWebformEnabled = obj.useExperiment(
-          { location: "ReactionEmojiOptionsActionSheet" },
-          { autoTrackExposure: false },
-        ).tidaWebformEnabled;
+      items12[1] = tmp26Result;
+      if (setting) {
+        setting = isTidaMediaTakedownRegion;
       }
-      if (tidaWebformEnabled) {
-        tidaWebformEnabled = tmp2;
+      if (setting) {
+        setting = tmp2;
       }
-      if (tidaWebformEnabled) {
-        tidaWebformEnabled = null != emojiURL;
+      if (setting) {
+        setting = null != emojiURL;
       }
-      if (tidaWebformEnabled) {
+      if (setting) {
         const obj16 = { label: null, onPress: null };
         const intl3 = tmp3(tmp4[19]).intl;
         obj16.label = intl3.string(tmp3(tmp4[19]).t.cIoudn);
         obj16.onPress = callback3;
-        tidaWebformEnabled = closure_11(tmp3(tmp4[31]).TableRow, obj16);
+        setting = closure_11(tmp3(tmp4[31]).TableRow, obj16);
       }
-      items12[2] = tidaWebformEnabled;
-      let tmp24Result3 = canRemoveReactions;
+      items12[2] = setting;
+      let tmp26Result3 = canRemoveReactions;
       if (canRemoveReactions) {
         const obj17 = { label: null, onPress: null };
         const obj18 = { variant: "body-md/semibold", color: "text-feedback-critical", children: null };
@@ -285,14 +283,14 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
         obj18.children = intl4.string(tmp3(tmp4[19]).t["zx/e4P"]);
         obj17.label = closure_11(tmp3(tmp4[27]).Text, obj18);
         obj17.onPress = callback4;
-        tmp24Result3 = closure_11(tmp3(tmp4[31]).TableRow, obj17);
+        tmp26Result3 = closure_11(tmp3(tmp4[31]).TableRow, obj17);
       }
       const obj19 = { hasIcons: false, children: null };
-      items12[3] = tmp24Result3;
+      items12[3] = tmp26Result3;
       obj19.children = items12;
       items11[1] = closure_12(tmp3(tmp4[30]).TableRowGroup, obj19);
-      obj3.children = items11;
-      tmp32 = obj3;
+      obj2.children = items11;
+      tmp35 = obj2;
     } else {
       let intl = tmp3(tmp4[19]).intl;
       const string = intl.string;
@@ -306,5 +304,5 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
       closure_11(tmp3(tmp4[31]).TableRow, t);
     }
   }
-  return closure_12(channelId(stateFromStores1[25]).ActionSheet, tmp32);
+  return closure_12(channelId(stateFromStores1[25]).ActionSheet, tmp35);
 }

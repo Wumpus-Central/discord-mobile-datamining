@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import design_shared from "../../../../discord_common/js/packages/design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05725_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
-import _modDef7179 from "../../../../_runtime/metro/07179__.js";
+import _modDef7182 from "../../../../_runtime/metro/07182__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -84,7 +84,7 @@ function PremiumRewardGlowGradient(arg0) {
     children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: memo, start, end }),
   };
   items2[1] = glowLight;
-  const items3 = [timestampProducer(_modDef7179, obj5), children];
+  const items3 = [timestampProducer(_modDef7182, obj5), children];
   obj4.children = items3;
   return metroImportDefault(hasOwnProperty, obj4);
 }
@@ -92,7 +92,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let closure_8 = createStyles.createStyles({
   wrapper: { position: "relative", overflow: "hidden" },
   fill: { position: "absolute", left: 0, right: 0, bottom: 0, height: "100%" },
@@ -103,10 +103,10 @@ const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const start2 = { x: 0.5, y: 0 };
 const end2 = { x: 0.5, y: 1 };
-fn(5138);
-const ColorUtils = fn(5138);
+fn(5140);
+const ColorUtils = fn(5140);
 const hexOpacityToRgbaResult = ColorUtils.hexOpacityToRgba("#000000", 0);
-createStyles = fn(5141);
+createStyles = fn(5143);
 let closure_13 = createStyles.createStyleProperties({
   transparentBlack: hexOpacityToRgbaResult,
   opaqueBlack: nativeDefault.colors.BLACK,

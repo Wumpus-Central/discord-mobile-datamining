@@ -33,11 +33,11 @@ const result = size.fileFinishedImporting("modules/external_pip/ExternalPipView.
 
 export default function ExternalPipView() {
   let obj = { disabled: null };
-  const tmp = callback(19383);
-  obj.disabled = !callback(6008).isSupported();
+  const tmp = callback(19414);
+  obj.disabled = !callback(6011).isSupported();
   const externalPipEnabled = tmp(obj).externalPipEnabled;
   closure_129_0 = undefined;
-  let obj2 = callback(6008);
+  let obj2 = callback(6011);
   [tmp3, closure_129_0] = noop.useState(false);
   callback = noop.useCallback((arg0) => {
     externalPipEnabled(arg0);
@@ -63,7 +63,7 @@ export default function ExternalPipView() {
   }, items);
   const items1 = [callback];
   const effect2 = noop.useEffect(() => {
-    closure_0 = callback(6008).addOnPipModeChangedListener((arg0) => {
+    closure_0 = callback(6011).addOnPipModeChangedListener((arg0) => {
       callback(arg0);
     });
     return () => {
@@ -76,7 +76,7 @@ export default function ExternalPipView() {
   }, items1);
   const items2 = [callback];
   const effect3 = noop.useEffect(() => {
-    closure_0 = callback(6008).addOnPipModeWillChangeListener(() => {
+    closure_0 = callback(6011).addOnPipModeWillChangeListener(() => {
       callback(true);
     });
     return () => {

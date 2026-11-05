@@ -16,10 +16,10 @@ import ConjureDebugStore from "../ConjureDebugStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const subscribeDebugBacklog = fn(11028).subscribeDebugBacklog;
+const subscribeDebugBacklog = fn(11034).subscribeDebugBacklog;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   tabs: null,

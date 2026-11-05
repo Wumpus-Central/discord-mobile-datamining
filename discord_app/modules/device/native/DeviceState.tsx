@@ -38,7 +38,7 @@ let closure_5 = async function _getDeviceState() {
           fallback = obj5.fallback;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

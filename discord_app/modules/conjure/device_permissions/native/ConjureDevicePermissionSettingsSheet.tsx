@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_16 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,7 +37,7 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
       permission = permission.permission;
       const decision = permission.decision;
       const obj = {
-        label: _undefined(11108).getConjureDevicePermissionLabel(permission),
+        label: _undefined(11117).getConjureDevicePermissionLabel(permission),
         subLabel: null,
         value: null,
         onValueChange: null,
@@ -53,9 +53,9 @@ export default function ConjureDevicePermissionSettingsSheet(arg0) {
         return permission(permission, arg0);
       };
       return jsx(
-        _undefined(7505).TableSwitchRow,
+        _undefined(7507).TableSwitchRow,
         {
-          label: _undefined(11108).getConjureDevicePermissionLabel(permission),
+          label: _undefined(11117).getConjureDevicePermissionLabel(permission),
           subLabel: null,
           value: null,
           onValueChange: null,

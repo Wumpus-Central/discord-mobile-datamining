@@ -193,10 +193,10 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
         let NONE4 = PermissionUtilsAll.NONE;
       } else {
         const tmpResult = PermissionUtilsAll;
-        const tmp26 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
+        const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
         NONE4 = tmpResult.applyThreadPermissions(
           context,
-          tmp26,
+          tmp24,
           JoinedThreadsStore.hasJoined(context.id),
           GuildMemberStore.isCurrentUserGuest(context.guild_id),
         );
@@ -205,13 +205,13 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       return NONE4;
     } else {
       const id2 = context.id;
-      let tmp13 = dependencyMap2[id2];
-      if (null == tmp13) {
-        const tmp17 = getUncachedChannelPermissions(id2, true);
-        dependencyMap2[id2] = tmp17;
-        tmp13 = tmp17;
+      let tmp11 = dependencyMap2[id2];
+      if (null == tmp11) {
+        const tmp15 = getUncachedChannelPermissions(id2, true);
+        dependencyMap2[id2] = tmp15;
+        tmp11 = tmp15;
       }
-      NONE = tmp13;
+      NONE = tmp11;
     }
   } else {
     if (obj.isGuildRecord(context)) {
@@ -259,12 +259,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     excludeGuildPermissions,
   };
 }
-const ChannelRecord = fn(4994);
+const ChannelRecord = fn(4996);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(5008);
+const GuildRecord = fn(5010);
 ({ isGuildOwner: closure_10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1072).Permissions;
-let closure_18 = fn(5077).MemberSafetyPagePermissions;
+let closure_18 = fn(5079).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

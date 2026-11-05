@@ -84,3 +84,4 @@ export function getColorPresetsForEffect(arg0) {
     return mapped.map((colors) => colors.colors);
   }
 }
+export const DisplayNameStylesNitroCtas = { BUTTON: "button", LINK: "link" };

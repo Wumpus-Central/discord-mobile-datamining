@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
 import _modDef2171 from "../../../_runtime/metro/02171__.js";
-import _mod4567 from "../../../_runtime/metro/04567__.js";
+import _mod4569 from "../../../_runtime/metro/04569__.js";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import ContentInventoryTraitType from "../../../discord_common/js/shared/shared-constants/ContentInventoryTraitType.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -390,7 +390,7 @@ export function getResurrectedEntryLastPlayTime(entry) {
 }
 export function getFullResurrectedBadgeText(start) {
   const obj2 = { start, end: null };
-  const obj = _mod4567;
+  const obj = _mod4569;
   obj2.end = new Date();
   const intervalToDurationResult = obj.intervalToDuration(obj2);
   const months = intervalToDurationResult.months;
@@ -432,8 +432,8 @@ export function getEpisodeBadgeText(large_text) {
       let formatToPlainStringResult = null;
       if (null != match) {
         const intl = util.intl;
-        const obj2 = { seasonNum: match[1], episodeNum: match[2] };
-        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj2);
+        const obj = { seasonNum: match[1], episodeNum: match[2] };
+        formatToPlainStringResult = intl.formatToPlainString(util.t.ijVm6y, obj);
       }
       return formatToPlainStringResult;
     }

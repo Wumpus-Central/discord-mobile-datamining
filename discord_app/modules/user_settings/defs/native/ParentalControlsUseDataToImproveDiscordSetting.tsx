@@ -2,17 +2,18 @@
 import util from "../../../../intl/index.native.tsx";
 import FamilyCenterActionCreatorsDefault from "../../../parent_tools/FamilyCenterActionCreators.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import FamilyCenterSaveErrorUtils from "../../../parent_tools/FamilyCenterSaveErrorUtils.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
 const Consents = fn(1072).Consents;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.XuADY2);
   },
-  parent: fn(8573).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8578).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToImproveDiscordSettingValue() {
     return useParentalControlSettings.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
   },
@@ -30,7 +31,8 @@ const toggle = SettingBuilders.createToggle({
       } else {
         items2 = [Consents.USAGE_STATISTICS];
       }
-      FamilyCenterActionCreatorsDefault.updateTeenConsents(selectedTeenId, items1, items2);
+      const obj = FamilyCenterSaveErrorUtils;
+      obj.showToastIfSaveFails(FamilyCenterActionCreatorsDefault.updateTeenConsents(selectedTeenId, items1, items2));
     }
   },
   unsearchable: true,

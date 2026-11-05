@@ -6,7 +6,7 @@ import UserSettings from "../../user_settings/UserSettings.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import _modDef8897 from "../../../../_runtime/metro/08897__.js";
+import _modDef8902 from "../../../../_runtime/metro/08902__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -16,11 +16,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function InformationTable(speedBumpType) {
   items = undefined;
-  let obj = { icon: _modDef8897, text: null };
+  let obj = { icon: _modDef8902, text: null };
   const intl = items(1113).intl;
   obj.text = intl.string(items(1113).t.kcuWva);
   items = [obj];
-  const obj2 = { icon: _modDef8897, text: null };
+  const obj2 = { icon: _modDef8902, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1113).intl;
     let stringResult = intl3.string(tmp2(1113).t.QxrDY1);
@@ -30,7 +30,7 @@ function InformationTable(speedBumpType) {
   }
   obj2.text = stringResult;
   items[1] = obj2;
-  return closure_12(items(7201).TableRowGroup, {
+  return closure_12(items(7204).TableRowGroup, {
     hasIcons: true,
     children: items.map((icon, index) => {
       const obj = {
@@ -44,12 +44,12 @@ function InformationTable(speedBumpType) {
   });
 }
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8895).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8900).UserProfileAnalyticsTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   button: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 },
   tableContainer: null,

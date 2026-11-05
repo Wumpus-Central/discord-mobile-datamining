@@ -13,10 +13,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   row: {
-    height: fn(5722).NAV_BAR_HEIGHT,
+    height: fn(5724).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -25,7 +25,7 @@ let obj2 = {
   logOut: null,
 };
 let obj3 = {
-  height: fn(5722).NAV_BAR_HEIGHT,
+  height: fn(5724).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",

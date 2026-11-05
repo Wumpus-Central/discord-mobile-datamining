@@ -5,14 +5,14 @@ import components_Button_Button from "../../design/components/Button/native/Butt
 import LinkingDefault from "../../lib/native/Linking.tsx";
 import FastImageDefault from "../../components_native/common/FastImage.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
-import _modDef11944 from "../../../_runtime/metro/11944__.js";
+import _modDef11953 from "../../../_runtime/metro/11953__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef11944, style: tmp.announcementBirb };
+  const obj2 = { source: _modDef11953, style: tmp.announcementBirb };
   items = [hasOwnProperty(FastImageDefault, obj2), , ,];
   const obj3 = { style: tmp.alertEyebrowText, variant: "body-sm/medium", children: null };
   const intl = util.intl;
@@ -48,7 +48,7 @@ const View = fn(17).View;
 const PRIVATE_APPS_HELP_ARTICLE = fn(2147).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_7 = createStyles.createStyles({
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertEyebrowText: { marginTop: 40, textAlign: "center" },

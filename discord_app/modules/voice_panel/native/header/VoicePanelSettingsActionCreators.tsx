@@ -12,7 +12,7 @@ export function closeVoicePanelSettingsActionSheet() {
 }
 export function openVoicePanelSettingsActionSheet(guildId, channelId) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19500, dependencyMap.paths),
+    asyncRequireImpl(19535, dependencyMap.paths),
     VoicePanelSettingsActionSheet,
     { guildId, channelId },
   );

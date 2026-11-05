@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = "#2ECC71";
-let result = (fn(5774).SMALL_BUTTON_HEIGHT - 4) / 2;
+let result = (fn(5776).SMALL_BUTTON_HEIGHT - 4) / 2;
 const strokeDasharray = 2 * Math.PI * result;
 const Easing = fn(1652).Easing;
 let closure_10 = Easing.bezier(0.15, 0.21, 0.58, 1);
@@ -20,8 +20,8 @@ const Easing2 = fn(1652).Easing;
 let closure_11 = Easing2.bezier(0.61, 0, 0.58, 1);
 const Easing3 = fn(1652).Easing;
 let closure_12 = Easing3.bezier(0.42, 0, 0.58, 1);
-let closure_13 = module_1652.createAnimatedComponent(fn(8171).Circle);
-const createStyles = fn(5141);
+let closure_13 = module_1652.createAnimatedComponent(fn(8176).Circle);
+const createStyles = fn(5143);
 let obj = {
   progress: null,
   ring: null,
@@ -36,8 +36,8 @@ let size = {
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
   borderRadius: nativeDefault.radii.round,
-  width: fn(5774).SMALL_BUTTON_HEIGHT,
-  height: fn(5774).SMALL_BUTTON_HEIGHT,
+  width: fn(5776).SMALL_BUTTON_HEIGHT,
+  height: fn(5776).SMALL_BUTTON_HEIGHT,
 };
 obj.progress = size;
 let obj3 = { position: "absolute", transform: null };

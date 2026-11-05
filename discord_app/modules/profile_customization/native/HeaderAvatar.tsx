@@ -8,7 +8,7 @@ import PresenceStore from "../../../stores/PresenceStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -76,7 +76,7 @@ export default function HeaderAvatar(animate) {
   });
   const obj4 = guildId(504);
   const tmp9 = id;
-  const tmp10 = id(8971);
+  const tmp10 = id(8976);
   const obj6 = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
@@ -100,25 +100,25 @@ export default function HeaderAvatar(animate) {
     avatarDecoration: null,
   };
   let tmp14 = null;
-  const obj5 = guildId(8878);
+  const obj5 = guildId(8883);
   if (!disableStatus) {
     tmp14 = status;
   }
   obj7.status = tmp14;
   const items4 = [tmp4.avatarStatusStyle, statusStyle];
   obj7.statusStyle = items4;
-  obj7.streaming = tmp9(8972)(activities);
+  obj7.streaming = tmp9(8977)(activities);
   if (flag) {
     flag = !stateFromStores;
   }
   obj7.animate = flag;
-  obj7.avatarDecoration = tmp10(guildId(8878).getProfilePreviewValue(obj6));
+  obj7.avatarDecoration = tmp10(guildId(8883).getProfilePreviewValue(obj6));
   if (null != onPress) {
     const obj8 = { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" };
     const merged1 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj9 = { source: null };
-      obj = obj(8961);
+      obj = obj(8966);
       avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       obj9.source = avatarSource;
       obj7 = Object.assign(obj7);
@@ -128,7 +128,7 @@ export default function HeaderAvatar(animate) {
       const merged2 = Object.assign(obj7);
     }
     obj8.children = jsx(obj(1187).Avatar, obj10);
-    jsx(obj(7121).PressableOpacity, {
+    jsx(obj(7124).PressableOpacity, {
       ref,
       onPress,
       onLongPress: onPress,
@@ -141,7 +141,7 @@ export default function HeaderAvatar(animate) {
     const merged3 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj12 = { source: null };
-      const objResult = obj(8961);
+      const objResult = obj(8966);
       obj12.source = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       const merged4 = Object.assign(obj7);
       let obj13 = obj12;
@@ -152,5 +152,5 @@ export default function HeaderAvatar(animate) {
     obj11.children = jsx(obj(1187).Avatar, obj13);
     return <View ref={ref} style={style} accessibilityRole="image" accessible />;
   }
-  const tmp10Result = tmp10(guildId(8878).getProfilePreviewValue(obj6));
+  const tmp10Result = tmp10(guildId(8883).getProfilePreviewValue(obj6));
 }

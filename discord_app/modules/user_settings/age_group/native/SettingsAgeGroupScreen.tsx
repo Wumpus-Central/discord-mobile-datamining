@@ -7,7 +7,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
-import AgeNoticeAgeGroupHeader from "../../../age_assurance/age_notice/native/AgeNoticeAgeGroupHeader.tsx";
+import AgeNoticeAgeGroupHeader2 from "../../../age_assurance/age_notice/native/AgeNoticeAgeGroupHeader.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,11 +29,11 @@ function SettingsAgeGroupHeader() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8573).MobileUserSettings;
+const MobileUserSettings = fn(8578).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   headerContainer: {
     gap: nativeDefault.space.PX_4,
@@ -46,8 +46,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(16831).useIsTinyBroncoSettingsEnabled();
-  items = [isTinyBroncoSettingsEnabled];
+  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(16854).useIsAgeNoticeSettingsEnabled();
+  items = [isAgeNoticeSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null };
@@ -62,12 +62,12 @@ export default function SettingsAgeGroupScreen() {
     obj3.settings = items;
     const items1 = [obj3];
     obj2.sections = items1;
-    if (isTinyBroncoSettingsEnabled) {
-      let TinyBroncoAgeGroupHeader = AgeNoticeAgeGroupHeader.TinyBroncoAgeGroupHeader;
+    if (isAgeNoticeSettingsEnabled) {
+      let AgeNoticeAgeGroupHeader = AgeNoticeAgeGroupHeader2.AgeNoticeAgeGroupHeader;
     } else {
-      TinyBroncoAgeGroupHeader = SettingsAgeGroupHeader;
+      AgeNoticeAgeGroupHeader = SettingsAgeGroupHeader;
     }
-    obj2.ListHeaderComponent = TinyBroncoAgeGroupHeader;
+    obj2.ListHeaderComponent = AgeNoticeAgeGroupHeader;
     return SettingBuilders.createList(obj2);
   }, items);
   return closure_7(SettingLayoutDefault, { node });

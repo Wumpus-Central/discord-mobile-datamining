@@ -303,7 +303,7 @@ function PurchaseSuccessModalBase(sku) {
   };
   const intl2 = tmp4(tmp3[21]).intl;
   obj16.accessibilityLabel = intl2.string(require("util").t.cpT0Cq);
-  obj15.children = closure_14(require("../../../../_runtime/metro/07146__.js").HeaderBackButton, obj16);
+  obj15.children = closure_14(require("../../../../_runtime/metro/07149__.js").HeaderBackButton, obj16);
   const items23 = [closure_14(closure_7, obj15), ,];
   const obj17 = {
     style: tmp.scroll,
@@ -361,12 +361,12 @@ function PurchaseSuccessModalBase(sku) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-let numDays = fn(7547).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(7549).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let obj2 = {
   root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK },
   backdropImage: { position: "absolute", inset: 0, opacity: 0.45 },
@@ -451,7 +451,7 @@ obj2.finePrint = {
   marginBottom: nativeDefault.space.PX_12,
 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj17 = { linkAccountIcon: null };
 let obj15 = {
   textAlign: "center",

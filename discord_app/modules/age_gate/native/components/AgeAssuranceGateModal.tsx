@@ -8,7 +8,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
 const AgeGateSource = fn(1097).AgeGateSource;
-let closure_6 = fn(19668).ExistingUserAgeGateScreens;
+let closure_6 = fn(19703).ExistingUserAgeGateScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/AgeAssuranceGateModal.tsx");

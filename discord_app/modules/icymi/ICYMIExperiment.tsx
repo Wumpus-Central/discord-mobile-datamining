@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/ICYMIExperiment.tsx
-import ICYMILabFeature from "ICYMILabFeature.tsx";
 import WaterwheelsDiscoverExperiment from "../waterwheels/WaterwheelsDiscoverExperiment.tsx";
+import ICYMILabFeature from "ICYMILabFeature.tsx";
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import LabFeatureStore from "../labs/LabFeatureStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -12,7 +12,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/ICYMIExperiment.tsx");
 
-export const ICYMI_LAB_FEATURE = fn(9067).ICYMI_LAB_FEATURE;
+export const ICYMI_LAB_FEATURE = fn(9073).ICYMI_LAB_FEATURE;
 export function useICYMIEnabled(TabsNavigator) {
   _require = TabsNavigator;
   items = [ApexExperimentStore, AuthenticationStore, LabFeatureStore, UserStore];

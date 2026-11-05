@@ -36,7 +36,7 @@ const pressable = SettingBuilders.createPressable({
     const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
     const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
     let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
-    const isTinyBroncoSettingsEnabled = AgeNoticeSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    const isAgeNoticeSettingsEnabled = AgeNoticeSettingsPredicate.useIsAgeNoticeSettingsEnabled();
     if (hasTeenDefaults) {
       let tmp5 = !isAgeVerified;
       if (isAgeVerified) {
@@ -45,7 +45,7 @@ const pressable = SettingBuilders.createPressable({
       hasTeenDefaults = tmp5;
     }
     if (hasTeenDefaults) {
-      hasTeenDefaults = !isTinyBroncoSettingsEnabled;
+      hasTeenDefaults = !isAgeNoticeSettingsEnabled;
     }
     return hasTeenDefaults;
   },

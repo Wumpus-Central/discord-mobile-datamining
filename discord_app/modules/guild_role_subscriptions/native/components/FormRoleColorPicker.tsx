@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const DEFAULT_ROLE_COLOR = fn(1072).DEFAULT_ROLE_COLOR;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_6 = createStyles.createStyles({
   rowColorBlock: { marginHorizontal: 0, marginVertical: 0, minWidth: 24, height: 24, borderRadius: 3 },
 });
@@ -25,16 +25,16 @@ export default function FormRoleColorPicker(color) {
   const onChange = color.onChange;
   items = [color, onChange];
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18621, dependencyMap.paths), "RoleColorPicker", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18651, dependencyMap.paths), "RoleColorPicker", {
       color,
       onSelect: onChange,
     });
   }, items);
   const obj = { leading: null, label: null, disabled: null, onPress: null };
   const tmp = closure_6();
-  obj.leading = jsx(onChange(16698), { color, style: tmp.rowColorBlock, onSelect: callback });
+  obj.leading = jsx(onChange(16711), { color, style: tmp.rowColorBlock, onSelect: callback });
   const obj2 = { color, style: tmp.rowColorBlock, onSelect: callback };
-  const tmp3 = onChange(15968);
+  const tmp3 = onChange(15980);
   obj.label = color(1090).int2hex(color);
   obj.disabled = flag;
   obj.onPress = callback;

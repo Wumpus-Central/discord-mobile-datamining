@@ -80,9 +80,9 @@ function ReactionNotificationBodyWrapper(arg0) {
   dependencyMap = tmp3;
   const tmp4 = closure_13();
   noop = tmp4;
-  const AnimateEmoji = message(4966).AnimateEmoji;
+  const AnimateEmoji = message(4968).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  const previewableMedia = message(11246).usePreviewableMedia(message);
+  const previewableMedia = message(11254).usePreviewableMedia(message);
   items = [setting, reaction, , ,];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
   const emojiHook = noop.useCallback(() => {
@@ -223,9 +223,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  let obj = message(11246);
-  const hasPreviewableMedia = message(11203).useHasPreviewableMedia(message);
-  let obj2 = message(11203);
+  let obj = message(11254);
+  const hasPreviewableMedia = message(11211).useHasPreviewableMedia(message);
+  let obj2 = message(11211);
   if (hasPreviewableMedia) {
     message = obj3.useGetInitialMessagePreview({ message });
   }
@@ -252,7 +252,7 @@ function ReactionNotificationBodyWrapper(arg0) {
     let obj9 = { text, secondaryText, hasMessageContent: tmp3, messagePreview: message };
     return closure_10(ReactionNotificationBody, obj9);
   }
-  obj3 = message(11252);
+  obj3 = message(11260);
 }
 function ReactorNotificationIcon(notification) {
   ({ user, guild, channel } = notification.notification);
@@ -279,7 +279,7 @@ function ReactorNotificationIcon(notification) {
   tmp = closure_13();
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11204);
+const InAppNotificationConstants = fn(11212);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportDefault } =
   InAppNotificationConstants);
 const Constants = fn(1072);
@@ -287,7 +287,7 @@ const Constants = fn(1072);
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   newContainerRoleDot: { paddingRight: 4, paddingTop: 0 },
   container: { flexDirection: "column" },
@@ -434,7 +434,7 @@ export default function ReactionNotification(notification) {
   const callback1 = obj2.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(11254, dependencyMap.paths),
+        asyncRequireImpl(11262, dependencyMap.paths),
         { channelId: id },
         "in-app-notification-settings-modal",
       ),

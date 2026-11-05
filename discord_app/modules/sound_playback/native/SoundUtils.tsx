@@ -2,8 +2,8 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import BackoffDefault from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import _modDef11216 from "../../../../discord_assets/assets/sounds/stage_waiting.mp3.js";
-import _modDef11217 from "../../../../discord_assets/assets/sounds/vibing_wumpus.mp3.js";
+import _modDef11224 from "../../../../discord_assets/assets/sounds/stage_waiting.mp3.js";
+import _modDef11225 from "../../../../discord_assets/assets/sounds/vibing_wumpus.mp3.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -189,7 +189,7 @@ obj5.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RIN
   NOTIFICATION_NO_VIBRATION: obj2.activity_user_join,
   NOTIFICATION_NO_VIBRATION: obj2.activity_user_left,
 } = obj);
-const obj8 = { stage_waiting: _modDef11216, vibing_wumpus: _modDef11217 };
+const obj8 = { stage_waiting: _modDef11224, vibing_wumpus: _modDef11225 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
 fn = (call_calling, call_calling, _volume, DEFAULT) => {

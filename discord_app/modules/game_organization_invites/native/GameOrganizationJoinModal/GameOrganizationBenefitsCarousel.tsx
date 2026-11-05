@@ -50,7 +50,7 @@ const PX_12 = nativeDefault.space.PX_12;
 let items = [{ message: _modDef2533.WUVzdk }];
 let obj = { message: _modDef2533.WUVzdk };
 items[1] = { message: _modDef2533.MEQJ1m };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj4 = {
   carouselContainer: { marginHorizontal: -PX_16 },
   carousel: { alignItems: "stretch" },

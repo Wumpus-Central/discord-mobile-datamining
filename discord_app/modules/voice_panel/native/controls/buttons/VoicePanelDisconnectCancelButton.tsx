@@ -16,10 +16,10 @@ import VoicePanelStore from "../../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11411).VoicePanelModes;
+const VoicePanelModes = fn(11419).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT },
   icon: null,
@@ -152,11 +152,11 @@ export default function DisconnectCancelButton(props) {
     }
   }, items4);
   if (first === constants.ACTIVITY) {
-    PhoneHangUpIcon = tmp8(12081).DoorExitIcon;
+    PhoneHangUpIcon = tmp8(12090).DoorExitIcon;
   } else if (first === constants.STREAM) {
-    PhoneHangUpIcon = tmp8(19597).ScreenXIcon;
+    PhoneHangUpIcon = tmp8(19632).ScreenXIcon;
   } else {
-    PhoneHangUpIcon = tmp8(10014).PhoneHangUpIcon;
+    PhoneHangUpIcon = tmp8(10020).PhoneHangUpIcon;
   }
   const element = {
     onPress: callback1,

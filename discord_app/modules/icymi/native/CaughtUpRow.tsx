@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/CaughtUpRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../_runtime/metro/00671__.js";
-import LinearGradientDefault from "../../../../_runtime/05723_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05725_LinearGradient.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,8 +13,8 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let closure_9 = module_1652.createAnimatedComponent(fn(5761).Text);
-const createICYMIStyles = fn(18797);
+let closure_9 = module_1652.createAnimatedComponent(fn(5763).Text);
+const createICYMIStyles = fn(18827);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -83,14 +83,14 @@ export default function ExploreServersRow(visible) {
             return obj3;
           } else {
             dependencyMap(true);
-            v1(9065).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v1(9065);
+            v1(9070).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(9070);
             const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-            v1(9065).feedItemActioned(obj4);
-            const obj6 = v1(9065);
+            v1(9070).feedItemActioned(obj4);
+            const obj6 = v1(9070);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(18814).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(18844).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {

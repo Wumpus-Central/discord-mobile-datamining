@@ -10,7 +10,7 @@ const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/age_gate/NsfwServerInviteWarningVariant.tsx");
 
 export function getNsfwServerInviteWarningVariant(arg0) {
-  const tmp3 = getAgeNoticeWarningDescriptions.getTinyBroncoServerDescriptions()[arg0];
+  const tmp3 = getAgeNoticeWarningDescriptions.getAgeNoticeServerDescriptions()[arg0];
   const obj2 = { text: null, joins: false };
   const intl = util.intl;
   obj2.text = intl.string(util.t.FDSSia);

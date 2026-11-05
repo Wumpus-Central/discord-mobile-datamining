@@ -60,7 +60,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
           closure_131_8 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else {
         if (1 === tmp7) {

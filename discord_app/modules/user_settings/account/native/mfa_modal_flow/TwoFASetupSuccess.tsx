@@ -6,7 +6,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod16915 from "../../../../../../_runtime/metro/16915__.js";
+import _mod16938 from "../../../../../../_runtime/metro/16938__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   container: {
     alignSelf: "stretch",
@@ -81,28 +81,88 @@ export default function TwoFASetupSuccess() {
   [tmp5, importDefault] = noop.useState("");
   const callback = noop.useCallback(() => {
     setRegistering = async function _onRegisterSuccess(arg0) {
-      closure_2 = tmp3;
-      ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
-      await "flexDirection";
-      const intl = setRegistering(1113).intl;
-      await closure_2_0(6883).finishRegisterWebAuthnCredential(
-        intl.string(closure_2_0(1113).t["8H5RmH"]),
-        closure_129_0,
-        closure_129_1,
-      );
-      if (2 === tmp8) {
-        c4 = 0;
-        tmp5(tmp19.body.message);
+      if (c6 === 2) {
         c6 = 3;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        setError(16903).close();
-        c4 = 0;
-        setError(16903);
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_2 = tmp3;
+              closure_129_0 = undefined;
+              closure_129_1 = undefined;
+              ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
+              c5 = 1;
+              c6 = 1;
+              return { value: "flexDirection", done: true };
+            }
+          } else if (1 === tmp8) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              c4 = 1;
+              const intl = setRegistering(1113).intl;
+              c5 = 3;
+              c6 = 1;
+              const obj5 = {
+                value: setRegistering(6886).finishRegisterWebAuthnCredential(
+                  intl.string(setRegistering(1113).t["8H5RmH"]),
+                  closure_129_0,
+                  closure_129_1,
+                ),
+                done: false,
+              };
+              return obj5;
+            }
+          } else {
+            if (2 === tmp8) {
+              c4 = 0;
+              tmp5(tmp19.body.message);
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              setError(16926).close();
+              c4 = 0;
+              const obj = setError(16926);
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          }
+        } catch (tmp19) {
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp19;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      return value;
     };
     setError("");
     setError(dependencyMap[10]).registerPasskey({
@@ -120,24 +180,19 @@ export default function TwoFASetupSuccess() {
       },
     });
   }, []);
-  const obj = { style: tmp.container, children: null };
+  let obj = { style: tmp.container, children: null };
   items = [closure_7(View, { style: tmp.flex }), , , , , , ,];
-  const obj3 = { source: null, style: null };
-  const obj2 = { style: tmp.flex };
+  let obj3 = { source: null, style: null };
+  let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  obj3.source = _mod16915;
+  obj3.source = _mod16938;
   obj3.style = tmp.image;
   items[1] = closure_7(FastImageDefault, obj3);
-  const obj4 = {
-    style: tmp.success,
-    variant: "body-lg/semibold",
-    color: "mobile-text-heading-primary",
-    children: null,
-  };
+  let obj4 = { style: tmp.success, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);
   items[2] = closure_7(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.successBody, children: null };
+  let obj5 = { style: tmp.successBody, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t["0d1bXM"]);
   items[3] = closure_7(native.LegacyText, obj5);

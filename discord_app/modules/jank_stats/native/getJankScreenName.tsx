@@ -216,13 +216,7 @@ export default function getJankScreenName() {
         obj7.chatScreens = mapped.join(",");
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = {
-            screen,
-            expectedScreenIds: "",
-            focusedRoute: "Array",
-            chatScreens:
-              "(function pnpm_useGestureHandlerTs1(event){let[state,State,gestureSource,source,onStart]=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;})",
-          };
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "Array", chatScreens: "onButtonPressIn" };
           let obj10 = obj9;
         } else {
           obj10 = {

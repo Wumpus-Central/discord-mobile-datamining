@@ -9,9 +9,9 @@ import ReadStateActionCreators from "../../../../actions/ReadStateActionCreators
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import UserProfileApplicationWidgetTypes from "../../../user_profile/UserProfileApplicationWidgetTypes.tsx";
 import conjurePreviewSurface from "../conjurePreviewSurface.tsx";
+import leaveFrame from "../../../frames/leaveFrame.tsx";
 import ConjurePlatformUtils from "../../shared/ConjurePlatformUtils.native.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
-import leaveFrame from "../../../frames/leaveFrame.tsx";
 import useEdgeOnlySwipeExitDefault from "../../../main_tabs_v2/native/panels/useEdgeOnlySwipeExit.tsx";
 import getInlineFramePresentationDefault from "../../../frames/native/getInlineFramePresentation.tsx";
 import UserProfileApplicationWidgetCardDefault from "../../../user_profile/native/UserProfileApplicationWidgetCard.tsx";
@@ -414,7 +414,7 @@ function PreviewBot(projectId) {
     const intl3 = tmp7(1113).intl;
     obj4.text = intl3.string(tmp7(1113).t["5911Lb"]);
     obj4.onPress = callback;
-    obj3.children = closure_22(tmp7(5768).Button, obj4);
+    obj3.children = closure_22(tmp7(5770).Button, obj4);
     let tmp28Result = closure_22(StatusCard, obj3);
   } else if (null == stateFromStores) {
     const obj5 = { style: tmp.centered, children: closure_22(closure_5, {}) };
@@ -429,10 +429,10 @@ function PreviewBot(projectId) {
       alwaysRespectKeyboard: true,
       disableGradient: true,
     };
-    const items8 = [closure_22(previewApplicationId(11402), obj7, stateFromStores.id)];
+    const items8 = [closure_22(previewApplicationId(11410), obj7, stateFromStores.id)];
     let tmp30Result = null;
     if (tmp7Result4.isAndroid()) {
-      tmp30Result = closure_22(tmp7(12579).PortalKeyboardRenderer, { portal: true });
+      tmp30Result = closure_22(tmp7(12586).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp30Result;
     obj6.children = items8;
@@ -443,7 +443,7 @@ function PreviewBot(projectId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(12416);
+const conjureDesignFeedbackStore = fn(12423);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1072);
 ({
@@ -453,10 +453,10 @@ const Constants = fn(1072);
   AppStates: closure_19,
   ME: closure_20,
 } = Constants);
-const isLaunched = fn(6982).isLaunched;
+const isLaunched = fn(6985).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   frame: { flex: 1 },
   centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 },

@@ -16,4 +16,4 @@ export const AGE_NOTICE_AGE_GROUP_SUPPORT_ARTICLE_IDS_BY_COUNTRY = {
 export const AGE_NOTICE_SETTINGS_LOCATION = "AccountStatusSettings";
 export const AGE_NOTICE_CHANNEL_LOCATION = "ChannelWarning";
 export const AGE_NOTICE_SERVER_LOCATION = "ServerWarning";
-export const TINY_BRONCO_NSFW_SERVER_LOCATION = "NsfwServerWarning";
+export const AGE_NOTICE_NSFW_SERVER_LOCATION = "NsfwServerWarning";

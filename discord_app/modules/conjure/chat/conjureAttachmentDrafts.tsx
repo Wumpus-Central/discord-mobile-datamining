@@ -125,10 +125,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(11028).sendUserMessage;
+const sendUserMessage = fn(11034).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5335).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5337).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);

@@ -27,8 +27,8 @@ export function isProjectGuildCollaborationEnabled(stateFromStores) {
   }
   return num & frozen1.GUILD_COLLABORATION;
 }
-export function isPreviewlessProject(project) {
-  return null != project.preview_application_id && project.preview_application_id === project.application_id;
+export function usesPreviewApp(project) {
+  return null == project.preview_application_id || project.preview_application_id !== project.application_id;
 }
 export function isProjectPublic(flags) {
   let num = flags.flags;

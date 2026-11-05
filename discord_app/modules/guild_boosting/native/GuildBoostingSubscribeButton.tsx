@@ -79,7 +79,7 @@ const Constants = fn(1072);
   AnalyticsPages: closure_9,
   NOOP: closure_10,
 } = Constants);
-let closure_11 = fn(6905).PremiumGuildSubscribeModalScenes;
+let closure_11 = fn(6908).PremiumGuildSubscribeModalScenes;
 const FractionalPremiumStates = fn(1387).FractionalPremiumStates;
 let jsx = fn(21).jsx;
 const size = fn(2);

@@ -41,10 +41,10 @@ function QuestActivityButtonInner(quest) {
     }
     if (null == enrolledAt) {
       const obj2 = { questId: _undefined.id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19424, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19455, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     } else {
       const obj4 = { questId: _undefined.id };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19425, dependencyMap.paths), "QuestProgressBottomSheet", obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19456, dependencyMap.paths), "QuestProgressBottomSheet", obj4);
     }
   }, items1);
   let result = 2 * Math.PI;
@@ -166,13 +166,13 @@ function QuestActivityButtonInner(quest) {
   const obj5 = { style: memo, pointerEvents: "none", children: null };
   const obj6 = { ref, source: null, autoPlay: false, loop: false };
   const tmpResult6 = require("../../../../../_runtime/metro/01652__.js");
-  obj6.source = require("../../../../../_runtime/metro/17303__.js");
+  obj6.source = require("../../../../../_runtime/metro/17322__.js");
   obj5.children = closure_9(require("LottieAnimationView"), obj6);
   const items10 = [closure_9(sharedValue, obj5), , , ];
   const obj7 = { style: tmp14.buttonWrapper, children: null };
   const obj8 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp26 = require("LottieAnimationView");
-  obj8.icon = require("../../../../../_runtime/metro/14931__.js");
+  obj8.icon = require("../../../../../_runtime/metro/14944__.js");
   obj8.onPress = callback;
   const intl = tmp(tmp2[23]).intl;
   obj8.accessibilityLabel = intl.string(require("util").t.JALI2K);
@@ -192,12 +192,12 @@ function QuestActivityButtonInner(quest) {
   return closure_10(require("../../../../../_runtime/metro/01652__.js").View, obj4);
 }
 const View = fn(17).View;
-const QuestVariants = fn(6916).QuestVariants;
+const QuestVariants = fn(6919).QuestVariants;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let c11 = 32;
-let closure_12 = module_1652.createAnimatedComponent(fn(8171).Circle);
-const createStyles = fn(5141);
+let closure_12 = module_1652.createAnimatedComponent(fn(8176).Circle);
+const createStyles = fn(5143);
 let obj = { container: { position: "relative", width: 32, height: 32, justifyContent: "center", alignItems: "center" }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 12, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: null, progressPath: { color: nativeDefault.colors.STATUS_POSITIVE }, buttonWrapper: { position: "absolute", borderRadius: 16, overflow: "hidden" }, confetti: { position: "absolute" } };
 let obj2 = { position: "absolute", transform: null };
 let items = [{ rotate: "-90deg" }];
@@ -256,7 +256,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
     }
     if (!tmp2) {
       const obj2 = { questId: memo.id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19424, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19455, dependencyMap.paths), obj2, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     }
   }, items4);
   let tmp6 = null;

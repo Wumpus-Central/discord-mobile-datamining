@@ -8,5 +8,5 @@ const result = size.fileFinishedImporting("modules/conjure/builder/native/openCo
 export default function openConjureModal(guildId) {
   const obj = ModalActionCreatorsDefault;
   const obj2 = { guildId };
-  obj.pushLazy(asyncRequireImpl(12268, dependencyMap.paths), obj2, "conjure_modal_" + guildId);
+  obj.pushLazy(asyncRequireImpl(12277, dependencyMap.paths), obj2, "conjure_modal_" + guildId);
 }

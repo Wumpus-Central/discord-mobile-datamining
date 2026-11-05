@@ -2,22 +2,23 @@
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
 import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
+import FamilyCenterSaveErrorUtils from "../../../parent_tools/FamilyCenterSaveErrorUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11737);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8573).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8578).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const selectedTeenId = controlledSetting(8512).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(16969).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8517).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(16992).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
@@ -31,13 +32,15 @@ const toggle = SettingBuilders.createToggle({
       } else {
         tmp7 = React4 & ~constants.NO_RELATION;
       }
-      const result = ParentalControlledFriendSourceFlags.updateControlledSetting(selectedTeenId, tmp7);
+      FamilyCenterSaveErrorUtils.showToastIfSaveFails(
+        ParentalControlledFriendSourceFlags.updateControlledSetting(selectedTeenId, tmp7),
+      );
     }
   },
   unsearchable: true,
 });
 const size = fn(2);
-let result = size.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx",
 );
 

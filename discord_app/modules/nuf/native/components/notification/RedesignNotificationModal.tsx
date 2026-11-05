@@ -58,17 +58,17 @@ class RedesignNotificationModal {
   }
 }
 const View = fn(17).View;
-const PermissionStateType = fn(14191).PermissionStateType;
-const NotificationPermissionConstants = fn(14192);
+const PermissionStateType = fn(14204).PermissionStateType;
+const NotificationPermissionConstants = fn(14205);
 ({ EventActionLocation: closure_6, EventActionType: metroImportDefault } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   container: {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-    marginTop: nativeDefault.space.PX_48,
+    paddingTop: nativeDefault.space.PX_48,
   },
 };
 let closure_10 = createStyles.createStyles(obj2);

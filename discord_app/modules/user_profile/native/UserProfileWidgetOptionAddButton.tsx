@@ -1,0 +1,189 @@
+// discord_app/modules/user_profile/native/UserProfileWidgetOptionAddButton.tsx
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import CirclePlusIcon from "../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
+import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
+import AddWidgetButtonConfig from "../AddWidgetButtonConfig.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+
+require = fn;
+function PlaceholderCover(arg0) {
+  ({ gameId, style } = arg0);
+  const tmp = closure_8();
+  const coverImageUrl = useGameNameAndCoverImageDefault(gameId).coverImageUrl;
+  const obj = {
+    style: null,
+    importantForAccessibility: "no-hide-descendants",
+    accessibilityElementsHidden: true,
+    children: null,
+  };
+  items = [tmp.cover, style];
+  obj.style = items;
+  let tmp4Result = null != coverImageUrl;
+  if (tmp4Result) {
+    const obj2 = { source: null, style: null };
+    const obj3 = { uri: coverImageUrl };
+    obj2.source = obj3;
+    obj2.style = tmp.coverImage;
+    tmp4Result = hasOwnProperty(FastImageDefault, obj2);
+  }
+  obj.children = tmp4Result;
+  return hasOwnProperty(React4, obj);
+}
+function PlaceholderCoverGrid(gameIds) {
+  gameIds = gameIds.gameIds;
+  closure_0 = tmp;
+  let obj = { style: closure_8().coverRow, children: null };
+  const substr = gameIds.slice(0, tmp);
+  obj.children = substr.map((gameId, index) => {
+    const obj = { gameId, style: { width: `${100 / (closure_0 + 0.1 * (closure_0 - 1))}%` } };
+    return hasOwnProperty(PlaceholderCover, obj, index);
+  });
+  return closure_5(closure_4, obj);
+}
+function PlaceholderDetailsCard(gameId) {
+  const variant = gameId.variant;
+  const tmp = closure_8();
+  const sum = tmp2 + 0.1 * (tmp2 - 1);
+  let str = "50%";
+  if ("compact" === variant) {
+    str = "30%";
+  }
+  const obj = { style: tmp.detailsCard, children: null };
+  const obj2 = { gameId: gameId.gameId, style: { width: `${100 / tmp3}%` } };
+  items = [hasOwnProperty(PlaceholderCover, obj2), ,];
+  const obj4 = { style: { width: `${15.000000000000002 / tmp3}%` } };
+  items[1] = hasOwnProperty(React4, obj4);
+  const obj6 = { style: tmp.textColumn, children: null };
+  const obj7 = { style: null };
+  const items1 = [tmp.textBar, { width: str }];
+  obj7.style = items1;
+  const items2 = [
+    hasOwnProperty(React4, obj7),
+    hasOwnProperty(React4, { style: tmp.textBar }),
+    hasOwnProperty(React4, { style: tmp.textBar }),
+  ];
+  obj6.children = items2;
+  items[2] = timestampProducer(React4, obj6);
+  obj.children = items;
+  return timestampProducer(React4, obj);
+}
+get_ActivityIndicator = fn(17);
+({ Pressable: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+const dependencyMap = { default: 4, compact: 3 };
+const createStyles = fn(5143);
+let obj2 = {
+  button: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.BORDER_MUTED,
+    borderRadius: nativeDefault.radii.md,
+    overflow: "hidden",
+    alignSelf: "stretch",
+  },
+  coverRow: { flexDirection: "row", justifyContent: "space-between" },
+  cover: null,
+  coverImage: null,
+  detailsCard: null,
+  textColumn: null,
+  textBar: null,
+  overlay: null,
+};
+let obj3 = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  borderWidth: 1,
+  borderColor: nativeDefault.colors.BORDER_MUTED,
+  borderRadius: nativeDefault.radii.md,
+  overflow: "hidden",
+  alignSelf: "stretch",
+};
+obj2.cover = {
+  aspectRatio: 0.75,
+  borderRadius: nativeDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  overflow: "hidden",
+};
+let obj5 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj5.opacity = 0.2;
+obj2.coverImage = obj5;
+obj2.detailsCard = { flexDirection: "row", alignItems: "center" };
+obj2.textColumn = { flex: 1, flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 };
+let obj4 = {
+  aspectRatio: 0.75,
+  borderRadius: nativeDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  overflow: "hidden",
+};
+obj2.textBar = { height: 12, borderRadius: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let obj7 = {};
+const merged1 = Object.assign(StyleSheet.absoluteFillObject);
+obj7.alignItems = "center";
+obj7.justifyContent = "center";
+obj7.gap = nativeDefault.space.PX_8;
+obj2.overlay = obj7;
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetOptionAddButton.tsx");
+
+export default function UserProfileWidgetOptionAddButton(onPress) {
+  ({ widget, variant } = onPress);
+  if (variant === undefined) {
+    variant = "default";
+  }
+  ({ width: require, padding } = onPress);
+  if (padding === undefined) {
+    padding = nativeDefault.space.PX_12;
+  }
+  const tmp3 = closure_8();
+  const button = tmp3;
+  const obj = {
+    onPress: onPress.onPress,
+    accessibilityRole: "button",
+    accessibilityLabel: AddWidgetButtonConfig.getAddWidgetAriaLabel(widget),
+    style(pressed) {
+      pressed = pressed.pressed;
+      items = [button.button, { padding }, ,];
+      let tmp2 = null != require;
+      if (tmp2) {
+        const obj2 = { width: tmp };
+        tmp2 = obj2;
+      }
+      items[2] = tmp2;
+      if (pressed) {
+        pressed = { opacity: 0.8 };
+      }
+      items[3] = pressed;
+      return items;
+    },
+    children: null,
+  };
+  const addWidgetPlaceholder = AddWidgetButtonConfig.getAddWidgetPlaceholder(widget);
+  const variant2 = addWidgetPlaceholder.variant;
+  if ("grid" === variant2) {
+    const obj4 = { gameIds: addWidgetPlaceholder.applicationIds, variant };
+    let tmp9 = hasOwnProperty(PlaceholderCoverGrid, obj4);
+  } else {
+    tmp9 = null;
+    if ("details" === variant2) {
+      const obj5 = { gameId: addWidgetPlaceholder.applicationId, variant };
+      tmp9 = hasOwnProperty(PlaceholderDetailsCard, obj5);
+    }
+  }
+  items = [tmp9];
+  const obj6 = { style: tmp3.overlay, children: null };
+  const items1 = [
+    hasOwnProperty(CirclePlusIcon.CirclePlusIcon, { size: "md", color: nativeDefault.colors.TEXT_DEFAULT }),
+  ];
+  const obj8 = { variant: "body-md/medium", color: "text-strong", children: null };
+  const obj7 = { size: "md", color: nativeDefault.colors.TEXT_DEFAULT };
+  obj8.children = AddWidgetButtonConfig.getAddWidgetTitle(widget);
+  items1[1] = hasOwnProperty(Text_Text.Text, obj8);
+  obj6.children = items1;
+  items[1] = timestampProducer(React4, obj6);
+  obj.children = items;
+  return timestampProducer(React3, obj);
+}

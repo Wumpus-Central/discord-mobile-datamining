@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../../../../actions/native/CreateChannelModalActionCreators.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef18570 from "../../../../../../../_runtime/metro/18570__.js";
-import _modDef18571 from "../../../../../../../_runtime/metro/18571__.js";
+import _modDef18600 from "../../../../../../../_runtime/metro/18600__.js";
+import _modDef18601 from "../../../../../../../_runtime/metro/18601__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../../../../stores/PermissionStore.tsx";
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   wrapper: { flex: 1, paddingTop: 12 },
   content: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 48 },
@@ -24,7 +24,7 @@ let obj = {
   personalizeButtonWrapper: null,
 };
 let obj3 = {};
-const merged = Object.assign(fn(5761).TextStyleSheet["heading-sm/semibold"]);
+const merged = Object.assign(fn(5763).TextStyleSheet["heading-sm/semibold"]);
 obj3.fontSize = 18;
 obj3.marginTop = 16;
 obj3.marginBottom = 8;
@@ -63,25 +63,25 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const obj = guild(563);
   const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper];
-  const obj2 = guild(17324);
-  items4[1] = { paddingBottom: guild(17324).useYouBarTotalHeight(16) };
+  const obj2 = guild(17350);
+  items4[1] = { paddingBottom: guild(17350).useYouBarTotalHeight(16) };
   obj3.style = items4;
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef18570, disableColor: true };
+    const obj7 = { source: _modDef18600, disableColor: true };
     obj6.icon = closure_7(tmp2(1187).Icon, obj7);
     const intl = tmp2(1113).intl;
     obj6.label = intl.string(tmp2(1113).t["Yhi9/N"]);
     obj6.onPress = callback;
-    obj5.children = closure_7(tmp2(8319).RowButton, obj6);
+    obj5.children = closure_7(tmp2(8324).RowButton, obj6);
     canCustomizeGuild = closure_7(View, obj5);
   }
   const items5 = [canCustomizeGuild];
   const obj8 = { style: tmp.content, children: null };
   const obj9 = { source: null };
-  const obj4 = { paddingBottom: guild(17324).useYouBarTotalHeight(16) };
-  obj9.source = _modDef18571;
+  const obj4 = { paddingBottom: guild(17350).useYouBarTotalHeight(16) };
+  obj9.source = _modDef18601;
   const items6 = [closure_7(FastImageDefault, obj9), , ,];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-sm/semibold", style: null, children: null };
   const items7 = [,];
@@ -89,18 +89,18 @@ export default noop.memo(function ChannelsEmpty(guild) {
   obj10.style = items7;
   const intl2 = tmp2(1113).intl;
   obj10.children = intl2.string(guild(1113).t.o4s29v);
-  items6[1] = closure_7(guild(5761).Text, obj10);
+  items6[1] = closure_7(guild(5763).Text, obj10);
   const obj11 = { color: "text-default", variant: "body-md/medium", style: tmp.text, children: null };
   const intl3 = tmp2(1113).intl;
   obj11.children = intl3.string(guild(1113).t.iypvFu);
-  items6[2] = closure_7(guild(5761).Text, obj11);
+  items6[2] = closure_7(guild(5763).Text, obj11);
   if (canCreateChannel) {
     const obj12 = { style: tmp.buttonWrapper, children: null };
     const obj13 = { shrink: true, size: "md", pillStyle: tmp.buttonPill, text: null, onPress: null };
     const intl4 = tmp2(1113).intl;
     obj13.text = intl4.string(tmp2(1113).t["63PyJQ"]);
     obj13.onPress = callback1;
-    obj12.children = closure_7(tmp2(5769).BaseTextButton, obj13);
+    obj12.children = closure_7(tmp2(5771).BaseTextButton, obj13);
     canCreateChannel = closure_7(View, obj12);
   }
   items6[3] = canCreateChannel;

@@ -2,9 +2,9 @@
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const VoicePanelPIPModes = fn(19391).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19422).VoicePanelPIPModes;
 const jsx = fn(21).jsx;
-let closure_4 = noop.memo(fn(6153).AccessibilityViewAnimated);
+let closure_4 = noop.memo(fn(6156).AccessibilityViewAnimated);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
 

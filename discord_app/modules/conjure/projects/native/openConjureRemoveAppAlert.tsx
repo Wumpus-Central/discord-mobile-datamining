@@ -40,13 +40,13 @@ function ConjureRemoveAppAlert(action) {
             let tmp37 = tmp3;
             let deleteProject = dependencyMap;
             if (_slicedToArray) {
-              tmp37 = tmp37(11054);
+              tmp37 = tmp37(11060);
               deleteProject = tmp37.deleteProject;
               let deleteProjectResult = deleteProject(user.id);
             } else {
               const obj5 = { alsoRemovePreviewBot };
-              deleteProjectResult = tmp37(11128).unpublishProject(user.id, obj5);
-              const tmp37Result = tmp37(11128);
+              deleteProjectResult = tmp37(11136).unpublishProject(user.id, obj5);
+              const tmp37Result = tmp37(11136);
             }
             deleteProjectResult.catch(() => null);
             dependencyMap = 1;
@@ -81,10 +81,10 @@ function ConjureRemoveAppAlert(action) {
           } else {
             if (!closure_129_4) {
               const obj7 = { text: null, variant: "success" };
-              const obj = tmp2(5846);
-              obj7.text = tmp3(12414).conjureRemoveAppSuccess(closure_129_1);
+              const obj = tmp2(5849);
+              obj7.text = tmp3(12421).conjureRemoveAppSuccess(closure_129_1);
               obj.open("CONJURE_APP_REMOVED", obj7);
-              const obj3 = tmp3(12414);
+              const obj3 = tmp3(12421);
             }
             c3 = 3;
             return { value: "HermesInternal", done: null };
@@ -204,7 +204,7 @@ function ConjureRemoveAppAlert(action) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_9 = createStyles.createStyles({ title: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/openConjureRemoveAppAlert.tsx");

@@ -6,14 +6,14 @@ import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
 import GuildIcon from "../../../modules/guild/native/GuildIcon.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
-import _modDef15730 from "../../../../_runtime/metro/15730__.js";
-import _modDef15731 from "../../../../_runtime/metro/15731__.js";
-import _modDef15732 from "../../../../_runtime/metro/15732__.js";
-import _modDef15733 from "../../../../_runtime/metro/15733__.js";
-import _modDef15734 from "../../../../_runtime/metro/15734__.js";
-import _modDef15735 from "../../../../_runtime/metro/15735__.js";
-import _modDef15736 from "../../../../_runtime/metro/15736__.js";
-import _modDef15737 from "../../../../_runtime/metro/15737__.js";
+import _modDef15743 from "../../../../_runtime/metro/15743__.js";
+import _modDef15744 from "../../../../_runtime/metro/15744__.js";
+import _modDef15745 from "../../../../_runtime/metro/15745__.js";
+import _modDef15746 from "../../../../_runtime/metro/15746__.js";
+import _modDef15747 from "../../../../_runtime/metro/15747__.js";
+import _modDef15748 from "../../../../_runtime/metro/15748__.js";
+import _modDef15749 from "../../../../_runtime/metro/15749__.js";
+import _modDef15750 from "../../../../_runtime/metro/15750__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
@@ -26,32 +26,32 @@ function PremiumGuildTierPill(arg0) {
   const obj = { style: tmp.tierPill, children: null };
   const obj2 = { style: tmp.tierPillImage, source: null };
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp5Result8 = _modDef15731;
-    const tmp5Result = _modDef15730;
+    let tmp5Result8 = _modDef15744;
+    const tmp5Result = _modDef15743;
     if (obj5.isThemeDark(theme)) {
       tmp5Result8 = tmp5Result;
     }
     let tmp9 = tmp5Result8;
     obj5 = shared;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp5Result10 = _modDef15733;
-    const tmp5Result9 = _modDef15732;
+    let tmp5Result10 = _modDef15746;
+    const tmp5Result9 = _modDef15745;
     if (obj4.isThemeDark(theme)) {
       tmp5Result10 = tmp5Result9;
     }
     tmp9 = tmp5Result10;
     obj4 = shared;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp5Result12 = _modDef15735;
-    const tmp5Result11 = _modDef15734;
+    let tmp5Result12 = _modDef15748;
+    const tmp5Result11 = _modDef15747;
     if (obj3.isThemeDark(theme)) {
       tmp5Result12 = tmp5Result11;
     }
     tmp9 = tmp5Result12;
     obj3 = shared;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5Result14 = _modDef15737;
-    const tmp5Result13 = _modDef15736;
+    let tmp5Result14 = _modDef15750;
+    const tmp5Result13 = _modDef15749;
     if (obj8.isThemeDark(theme)) {
       tmp5Result14 = tmp5Result13;
     }
@@ -70,7 +70,7 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1072).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   guild: {
     padding: 16,
@@ -90,8 +90,8 @@ let obj3 = {
   flexDirection: "row",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(6913).DARK_WHITE_500_LIGHT_BLACK_500 };
-let obj4 = { fontSize: 16, lineHeight: 20, color: fn(6913).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(6916).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { fontSize: 16, lineHeight: 20, color: fn(6916).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.tierPill = {
   marginTop: 8,
   padding: 4,
@@ -111,7 +111,7 @@ let obj5 = {
   borderRadius: 11,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6913).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6916).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(

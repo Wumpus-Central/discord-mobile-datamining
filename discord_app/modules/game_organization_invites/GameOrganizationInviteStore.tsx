@@ -8,6 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 ({ GameOrganizationCharacterMode: c2, GameOrganizationInviteStates: c3 } = GameOrganizationInviteConstants);
 let map = new Map();
+let set = new Set();
 const Store = initializeDefault.Store;
 class GameOrganizationInviteStore extends Store {}
 const prototype = GameOrganizationInviteStore.prototype;
@@ -20,6 +21,12 @@ prototype["getInvite"] = function getInvite(arg0) {
 };
 prototype["getInvites"] = function getInvites() {
   return map;
+};
+prototype["isJoinFlowPending"] = function isJoinFlowPending(code) {
+  return set.has(code);
+};
+prototype["getPendingJoinFlowCodes"] = function getPendingJoinFlowCodes() {
+  return set;
 };
 GameOrganizationInviteStore.displayName = "GameOrganizationInviteStore";
 const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDefault, {
@@ -109,6 +116,20 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
       const merged = Object.assign(value);
       obj.accepted = true;
       const result = map.set(code, obj);
+    }
+  },
+  GAME_ORGANIZATION_JOIN_FLOW_PENDING: function handleJoinFlowPending(arg0) {
+    ({ code, pending } = arg0);
+    if (set.has(code) === pending) {
+      return false;
+    } else {
+      const _Set = Set;
+      set = new Set(set);
+      if (pending) {
+        set.add(code);
+      } else {
+        set.delete(code);
+      }
     }
   },
 });

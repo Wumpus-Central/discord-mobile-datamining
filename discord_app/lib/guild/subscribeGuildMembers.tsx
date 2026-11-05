@@ -27,8 +27,8 @@ export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7591).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7591);
+      closure_0(7593).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7593);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) =>
@@ -71,8 +71,8 @@ export function useEnsureHydratedGuildUsers(guild_id, items1) {
         reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1242);
       }
-      closure_0(7591).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7591);
+      closure_0(7593).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7593);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) =>

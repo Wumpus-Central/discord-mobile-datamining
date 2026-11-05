@@ -871,17 +871,17 @@ function GuildTag(primaryGuildOverride) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8895).getBadgeName;
-const Constants = fn(7513);
+const getBadgeName = fn(8900).getBadgeName;
+const Constants = fn(7515);
 ({ DIVIDER_DOT: closure_9, PROFILE_SIDE_PADDING: closure_10, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const GuildTagBadgeSize = fn(8534).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8906).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8539).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8911).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 const collapsedCategories = PX_6 + 4;
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let obj2 = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
@@ -946,7 +946,7 @@ const guild = {
     guildTagHorizontalPadding: 6,
   },
 };
-createStyles = fn(5141);
+createStyles = fn(5143);
 let closure_22 = createStyles.createStyles((arg0) => {
   let sum = arg0;
   if (obj.isIOS()) {

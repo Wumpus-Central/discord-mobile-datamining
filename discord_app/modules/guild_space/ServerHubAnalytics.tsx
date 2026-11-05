@@ -13,6 +13,8 @@ export const ServerHubSettingType = {
   MUSIC_SYSTEM_MESSAGES: "music_system_messages",
 };
 export const ServerHubVisitSource = {
+  CHANNEL_LIST: "channel_list",
+  COACHMARK: "coachmark",
   WINNER_BADGE: "winner_badge",
   LEADER_BADGE: "leader_badge",
   LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message",

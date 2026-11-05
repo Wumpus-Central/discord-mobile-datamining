@@ -4,7 +4,7 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import inlineStyles from "../../../../../_runtime/08171_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08176_inlineStyles.js";
 import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -94,7 +94,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_9 = createStyles.createStyles({
   backgroundGradient: { position: "absolute", left: 0, right: 0, top: 0, height: 130 },
   headerContainer: { position: "relative", height: 54 },
@@ -136,7 +136,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
     require("GlobalStatusIndicator").useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
   let obj2 = require("GlobalStatusIndicator");
   let reveal = noop.useContext(require("RevealProvider").RevealContext).reveal;
-  const tmp6 = analyticsLocations(12054)();
+  const tmp6 = analyticsLocations(12063)();
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   if (!reveal) {
     reveal = forceReveal;
@@ -201,8 +201,8 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   FocusedControlsTsx5.__initData = tmp15;
   const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(FocusedControlsTsx5);
   const tmpResult4 = require("../../../../../_runtime/metro/01652__.js");
-  analyticsLocations = analyticsLocations(7462)(tmp5(7487).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  dependencyMap = tmp5(11986)();
+  analyticsLocations = analyticsLocations(7465)(tmp5(7490).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+  dependencyMap = tmp5(11995)();
   if (containerStyle == null) {
     containerStyle = absoluteFill.absoluteFill;
   }
@@ -253,7 +253,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
         reveal,
         children,
       };
-      tmp27Result = closure_7(tmp5(12063), obj5);
+      tmp27Result = closure_7(tmp5(12072), obj5);
     }
   }
   items7[2] = tmp27Result;

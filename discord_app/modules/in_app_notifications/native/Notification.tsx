@@ -13,7 +13,7 @@ const require = globalThis.__r;
 const _modDef1652 = _mod1652;
 
 require = fn;
-const InAppNotificationConstants = fn(11204);
+const InAppNotificationConstants = fn(11212);
 ({
   MIN_SWIPE_VELOCITY: closure_4,
   STARTED_SWIPE_THRESHOLD: hasOwnProperty,
@@ -22,7 +22,7 @@ const InAppNotificationConstants = fn(11204);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { shadow: null, container: null };
 let obj3 = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);

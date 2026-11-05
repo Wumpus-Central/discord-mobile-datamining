@@ -35,7 +35,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
           closure_129_2 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

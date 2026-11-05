@@ -34,8 +34,8 @@ export function getIsCheckpointEnabled(getCheckpointClickable) {
 export function useIsCheckpointCardEnabled(Checkpoint2026ForwardPreview) {
   return closure_1.useConfig({ location: Checkpoint2026ForwardPreview }).enabled;
 }
-export function getIsCheckpointCardEnabled(transformCheckpoint2026CardComponent) {
-  return closure_1.getConfig({ location: transformCheckpoint2026CardComponent }).enabled;
+export function getIsCheckpointCardEnabled(transformCheckpointCardToRowGeneratedComponent) {
+  return closure_1.getConfig({ location: transformCheckpointCardToRowGeneratedComponent }).enabled;
 }
 export function useIsCheckpointQAEnabled(CheckpointProfileEntrypoint) {
   return closure_2.useConfig({ location: CheckpointProfileEntrypoint }).enabled;

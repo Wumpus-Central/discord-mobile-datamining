@@ -1,11 +1,9 @@
 // discord_app/modules/markup/MarkupReactRules.native.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import asyncRequireImpl from "../../../_runtime/02123_asyncRequireImpl.js";
-import UserSettings from "../user_settings/UserSettings.tsx";
 import RootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
@@ -24,6 +22,7 @@ import SpoilerDefault from "native/Spoiler.tsx";
 import TimestampDefault from "Timestamp.native.tsx";
 import MarkupReactCommandRuleDefault from "native/MarkupReactCommandRule.tsx";
 import openStaticChannelRouteDefault from "../channel/native/openStaticChannelRoute.tsx";
+import showEmojiActionSheetDefault from "../messages/native/emoji/showEmojiActionSheet.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -44,7 +43,7 @@ class MarkupText {
     obj = { variant: str2, color: str };
     merged1 = Object.assign(merged);
     obj.children = global.children;
-    return jsx(closure_0(closure_2[9]).Text, obj);
+    return jsx(closure_0(closure_2[10]).Text, obj);
   }
 }
 function MarkupLink(arg0) {
@@ -87,11 +86,11 @@ function MarkupLink(arg0) {
           return LinkingDefault.openURL(formatResult);
         },
         trusted() {
-          return node(10304).isLinkTrusted(formatResult);
+          return node(10312).isLinkTrusted(formatResult);
         },
       };
-      node(9085).handleClick(obj);
-      const obj2 = node(9085);
+      node(9091).handleClick(obj);
+      const obj2 = node(9091);
     }
   };
   obj.onLongPress = function onLongPress(stopPropagation) {
@@ -121,8 +120,8 @@ function MarkupLink(arg0) {
   let obj2 = {};
   const merged = Object.assign(state);
   obj2.inLink = true;
-  obj.children = node(8712).smartOutput(node, output, obj2);
-  return closure_12(node(5761).Text, obj, state.key);
+  obj.children = node(8717).smartOutput(node, output, obj2);
+  return closure_12(node(5763).Text, obj, state.key);
 }
 function MarkupMention(styles) {
   ({ roleStyle, state, node } = styles);
@@ -210,13 +209,13 @@ function MarkupMention(styles) {
           const obj5 = ActionSheetActionCreatorsDefault;
           const obj3 = { guildId: null, roleId: null, channelId: null };
           ({ guildId: obj6.guildId, roleId: obj6.roleId, channelId: obj6.channelId } = node);
-          obj5.openLazy(asyncRequireImpl(11813, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
+          obj5.openLazy(asyncRequireImpl(11821, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
         }
       }
       if ("@everyone" === node.roleName) {
         if (null != node.guildId) {
           const obj2 = ActionSheetActionCreatorsDefault;
-          const tmp12 = asyncRequireImpl(11813, dependencyMap.paths);
+          const tmp12 = asyncRequireImpl(11821, dependencyMap.paths);
           const obj8 = {
             guildId: node.guildId,
             roleId: SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(node.guildId),
@@ -330,7 +329,7 @@ function MarkupInlineCode(arg0) {
   }
   obj2.onPress = fn;
   tmp3 = closure_16();
-  obj2.children = node(8712).smartOutput(node, output, state);
+  obj2.children = node(8717).smartOutput(node, output, state);
   return closure_12(MarkupText, obj2, state.key);
 }
 function MarkupCodeBlock(state) {
@@ -352,9 +351,9 @@ function MarkupCodeBlock(state) {
 }
 function MarkupCustomEmoji(styles) {
   ({ state, node } = styles);
-  const AnimateEmoji = UserSettings.AnimateEmoji;
+  const AnimateEmoji = node(4968).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  const obj = initialize;
+  const obj = node(504);
   items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (typeof node.src === "string") {
@@ -364,34 +363,58 @@ function MarkupCustomEmoji(styles) {
         emoji = obj.emoji;
       }
       const items1 = [emoji];
-      let tmp5 = null;
+      let tmp6 = null;
       if (typeof state.customEmojiOffsetY === "number") {
         const obj2 = { transform: null };
         const obj3 = { translateY: state.customEmojiOffsetY };
         const items2 = [obj3];
         obj2.transform = items2;
-        tmp5 = obj2;
+        tmp6 = obj2;
       }
       const obj4 = { style: null, source: null, enableAnimation: null };
-      items1[1] = tmp5;
+      items1[1] = tmp6;
       obj4.style = items1;
       const obj5 = { uri: node.src };
       obj4.source = obj5;
-      let tmp6 = !stateFromStores;
+      let tmp7 = !stateFromStores;
       if (!stateFromStores) {
-        tmp6 = setting;
+        tmp7 = setting;
       }
-      obj4.enableAnimation = tmp6;
-      let tmp8Result = application_id(FastImageDefault, obj4, state.key);
+      obj4.enableAnimation = tmp7;
+      const tmp13Result = closure_12(FastImageDefault, obj4, state.key);
+      let tmp13Result2 = tmp13Result;
+      if (state.enableEmojiInteraction) {
+        tmp13Result2 = tmp13Result;
+        if (!state.noStyleAndInteraction) {
+          tmp13Result2 = tmp13Result;
+          if (!state.inLink) {
+            let str = state.textVariant;
+            if (str == null) {
+              str = "text-sm/medium";
+            }
+            const obj6 = {
+              variant: str,
+              color: "none",
+              accessibilityRole: "button",
+              accessibilityLabel: node.alt,
+              onPress(stopPropagation) {
+                stopPropagation.stopPropagation();
+                showEmojiActionSheetDefault({ id: node.id, alt: node.alt, src: node.src });
+              },
+              children: tmp13Result,
+            };
+            tmp13Result2 = closure_12(node(5763).Text, obj6);
+          }
+        }
+      }
+      return tmp13Result2;
     }
-    return tmp8Result;
   }
   let textColor;
   if (state != null) {
     textColor = state.textColor;
   }
-  tmp8Result = application_id(MarkupText, { color: textColor, children: node.alt }, state.key);
-  const obj6 = { color: textColor, children: node.alt };
+  return closure_12(MarkupText, { color: textColor, children: node.alt }, state.key);
 }
 function MarkupChannelMention(state) {
   state = state.state;
@@ -418,9 +441,9 @@ function MarkupChannelMention(state) {
   items = [outputResult, ,];
   if (null == node.inContent) {
     items[1] = null;
-    items[2] = tmp4(8712).smartOutput(node, output, obj);
+    items[2] = tmp4(8717).smartOutput(node, output, obj);
     obj2.children = items;
-    const tmp3Result = closure_13(state(5761).Text, obj2, state.key);
+    const tmp3Result = closure_13(state(5763).Text, obj2, state.key);
     let tmp14Result = tmp3Result;
     if (!state.disablePressableChannelMention) {
       const obj3 = { accessibilityRole: str, style: null, pointerEvents: null, onPress: null, children: null };
@@ -489,7 +512,7 @@ function MarkupChannelMention(state) {
       size = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
     }
     obj6.style = size;
-    obj6.source = node(11786);
+    obj6.source = node(11794);
     obj6.size = tmp4(1187).Icon.Sizes.CUSTOM;
     closure_12(tmp4(1187).ThemedIcon, obj6);
   }
@@ -499,18 +522,18 @@ function MarkupStaticRouteLink(state) {
   const node = state.node;
   ({ output, styles, variants } = state);
   let tmp = closure_16();
-  let SignPostIcon = state(15907).SignPostIcon;
+  let SignPostIcon = state(15919).SignPostIcon;
   const channelId = node.channelId;
   if (StaticChannelId.GUILD_HOME !== channelId) {
     if (StaticChannelId.SERVER_GUIDE !== channelId) {
       if (StaticChannelId.CHANNEL_BROWSER !== channelId) {
         if (StaticChannelId.CUSTOMIZE_COMMUNITY !== channelId) {
           if (StaticChannelId.LINKED_ROLES === channelId) {
-            SignPostIcon = tmp2(5861).LinkIcon;
+            SignPostIcon = tmp2(5864).LinkIcon;
           }
         }
       }
-      SignPostIcon = tmp2(15909).ChannelListMagnifyingGlassIcon;
+      SignPostIcon = tmp2(15921).ChannelListMagnifyingGlassIcon;
     }
     let str = "button";
     if (state.noStyleAndInteraction) {
@@ -534,9 +557,9 @@ function MarkupStaticRouteLink(state) {
     }
     obj3.size = str3;
     obj2.children = closure_12(SignPostIcon, obj3);
-    items = [closure_12(closure_6, obj2), tmp2(8712).smartOutput(node, output, state)];
+    items = [closure_12(closure_6, obj2), tmp2(8717).smartOutput(node, output, state)];
     obj.children = items;
-    const tmp5Result = closure_13(tmp2(5761).Text, obj, state.key);
+    const tmp5Result = closure_13(tmp2(5763).Text, obj, state.key);
     if (state.disablePressableChannelMention) {
       return tmp5Result;
     } else {
@@ -578,9 +601,9 @@ function MarkupStaticRouteLink(state) {
       }
       return tmp7Result;
     }
-    const tmp2Result = tmp2(8712);
+    const tmp2Result = tmp2(8717);
   }
-  SignPostIcon = tmp2(15907).SignPostIcon;
+  SignPostIcon = tmp2(15919).SignPostIcon;
 }
 function MarkupAttachmentLink(state) {
   state = state.state;
@@ -596,7 +619,7 @@ function MarkupAttachmentLink(state) {
     str2 = "body-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15911), size: null };
+  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(15923), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1187).Icon.Sizes.EXTRA_SMALL_10;
@@ -606,9 +629,9 @@ function MarkupAttachmentLink(state) {
     SMALL = tmp3(1187).Icon.Sizes.SMALL;
   }
   obj2.size = SMALL;
-  items = [closure_12(state(1187).ThemedIcon, obj2), state(8712).smartOutput(node, output, state)];
+  items = [closure_12(state(1187).ThemedIcon, obj2), state(8717).smartOutput(node, output, state)];
   obj.children = items;
-  const tmp2Result = closure_13(state(5761).Text, obj, state.key);
+  const tmp2Result = closure_13(state(5763).Text, obj, state.key);
   let tmp5Result = tmp2Result;
   if (!state.disablePressableChannelMention) {
     const obj3 = { accessibilityRole: str, style: null, pointerEvents: null, onPress: null, children: null };
@@ -663,22 +686,34 @@ get_ActivityIndicator = fn(17);
   Text: metroImportDefault,
 } = get_ActivityIndicator);
 const EMOJI_CHAT_SIZE = fn(1072).EMOJI_CHAT_SIZE;
-const StaticChannelId = fn(4997).StaticChannelId;
+const StaticChannelId = fn(4999).StaticChannelId;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let style = {
-  emoji: { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, resizeMode: "contain" },
-  guildIcon: { paddingEnd: 2, paddingBottom: 1 },
-  staticRouteLinkIcon: { paddingEnd: 2, top: 1 },
-  list: { paddingTop: 16 },
-  listItem: { paddingTop: 4 },
-  bullet: { fontFamily: Fonts.CODE_BOLD },
-  strong: { fontFamily: Fonts.PRIMARY_BOLD },
+  unicodeEmoji: null,
+  emoji: null,
+  guildIcon: null,
+  staticRouteLinkIcon: null,
+  list: null,
+  listItem: null,
+  bullet: null,
+  strong: null,
 };
-const createStyles = fn(5141);
-let obj3 = {
-  link: { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.colors.TEXT_LINK },
+let obj2 = { transform: null };
+let items = [{ translateY: nativeDefault.space.PX_4 }];
+obj2.transform = items;
+style.unicodeEmoji = obj2;
+style.emoji = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, resizeMode: "contain" };
+style.guildIcon = { paddingEnd: 2, paddingBottom: 1 };
+style.staticRouteLinkIcon = { paddingEnd: 2, top: 1 };
+style.list = { paddingTop: 16 };
+style.listItem = { paddingTop: 4 };
+style.bullet = { fontFamily: Fonts.CODE_BOLD };
+style.strong = { fontFamily: Fonts.PRIMARY_BOLD };
+const createStyles = fn(5143);
+let obj5 = {
+  link: null,
   channelMention: null,
   channelMentionText: null,
   mention: null,
@@ -686,48 +721,53 @@ let obj3 = {
   codeBlock: null,
   blockQuote: null,
 };
-let obj4 = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.colors.TEXT_LINK };
-obj3.channelMention = {
+let obj3 = { translateY: nativeDefault.space.PX_4 };
+obj5.link = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.colors.TEXT_LINK };
+let obj6 = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.colors.TEXT_LINK };
+obj5.channelMention = {
   backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
   borderRadius: 3,
   paddingHorizontal: 2,
   alignItems: "center",
 };
-let obj5 = {
+let obj7 = {
   backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
   borderRadius: 3,
   paddingHorizontal: 2,
   alignItems: "center",
 };
-obj3.channelMentionText = { color: nativeDefault.colors.MENTION_FOREGROUND };
-let obj6 = { color: nativeDefault.colors.MENTION_FOREGROUND };
-obj3.mention = {
+obj5.channelMentionText = { color: nativeDefault.colors.MENTION_FOREGROUND };
+let obj8 = { color: nativeDefault.colors.MENTION_FOREGROUND };
+obj5.mention = {
   color: nativeDefault.colors.MENTION_FOREGROUND,
   backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
 };
-let obj7 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
-obj3.inlineCode = {
-  fontFamily: Fonts.CODE_BOLD,
-  color: nativeDefault.colors.TEXT_DEFAULT,
-  backgroundColor: nativeDefault.colors.BACKGROUND_CODE,
-};
-let obj8 = {
-  fontFamily: Fonts.CODE_BOLD,
-  color: nativeDefault.colors.TEXT_DEFAULT,
-  backgroundColor: nativeDefault.colors.BACKGROUND_CODE,
-};
-obj3.codeBlock = {
-  fontFamily: Fonts.CODE_BOLD,
-  color: nativeDefault.colors.TEXT_DEFAULT,
-  backgroundColor: nativeDefault.colors.BACKGROUND_CODE,
-};
 const obj9 = {
+  color: nativeDefault.colors.MENTION_FOREGROUND,
+  backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
+};
+obj5.inlineCode = {
   fontFamily: Fonts.CODE_BOLD,
   color: nativeDefault.colors.TEXT_DEFAULT,
   backgroundColor: nativeDefault.colors.BACKGROUND_CODE,
 };
-obj3.blockQuote = { borderLeftWidth: 4, borderLeftColor: nativeDefault.colors.SPINE_DEFAULT, paddingLeft: 8 };
-let closure_16 = createStyles.createStyles(obj3);
+const obj10 = {
+  fontFamily: Fonts.CODE_BOLD,
+  color: nativeDefault.colors.TEXT_DEFAULT,
+  backgroundColor: nativeDefault.colors.BACKGROUND_CODE,
+};
+obj5.codeBlock = {
+  fontFamily: Fonts.CODE_BOLD,
+  color: nativeDefault.colors.TEXT_DEFAULT,
+  backgroundColor: nativeDefault.colors.BACKGROUND_CODE,
+};
+let obj11 = {
+  fontFamily: Fonts.CODE_BOLD,
+  color: nativeDefault.colors.TEXT_DEFAULT,
+  backgroundColor: nativeDefault.colors.BACKGROUND_CODE,
+};
+obj5.blockQuote = { borderLeftWidth: 4, borderLeftColor: nativeDefault.colors.SPINE_DEFAULT, paddingLeft: 8 };
+let closure_16 = createStyles.createStyles(obj5);
 let c17 = "  ";
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/MarkupReactRules.native.tsx");
@@ -772,7 +812,7 @@ export default function createRules() {
   };
   closure_130_1 = str;
   return {
-    [closure_0(closure_2[45]).AST_KEY.TEXT]: {
+    [closure_0(closure_2[46]).AST_KEY.TEXT]: {
       react(content, output, textColor) {
         if (typeof content.content === "string") {
           content = content.content;
@@ -782,14 +822,14 @@ export default function createRules() {
             textColor = textColor.textColor;
           }
           const obj = { color: textColor, children: null };
-          obj.children = obj(8712).smartOutput(content, output, textColor);
+          obj.children = obj(8717).smartOutput(content, output, textColor);
           content = closure_1_12(MarkupText, obj, textColor.key);
-          obj2 = obj(8712);
+          obj2 = obj(8717);
         }
         return content;
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.STRIKETHROUGH]: {
+    [closure_0(closure_2[46]).AST_KEY.STRIKETHROUGH]: {
       react(node, output, textColor) {
         const obj = { style: { textDecorationLine: "line-through" }, color: null, variant: null, children: null };
         textColor = undefined;
@@ -798,11 +838,11 @@ export default function createRules() {
         }
         obj.color = textColor;
         obj.variant = textColor.textVariant;
-        obj.children = obj(8712).smartOutput(node, output, textColor);
+        obj.children = obj(8717).smartOutput(node, output, textColor);
         return closure_1_12(MarkupText, obj, textColor.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.UNDERLINE]: {
+    [closure_0(closure_2[46]).AST_KEY.UNDERLINE]: {
       react(node, output, textColor) {
         const obj = { style: { textDecorationLine: "underline" }, color: null, variant: null, children: null };
         textColor = undefined;
@@ -811,11 +851,11 @@ export default function createRules() {
         }
         obj.color = textColor;
         obj.variant = textColor.textVariant;
-        obj.children = obj(8712).smartOutput(node, output, textColor);
+        obj.children = obj(8717).smartOutput(node, output, textColor);
         return closure_1_12(MarkupText, obj, textColor.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.ITALICS]: {
+    [closure_0(closure_2[46]).AST_KEY.ITALICS]: {
       react(node, output, textColor) {
         const em = obj.em;
         let str;
@@ -836,7 +876,7 @@ export default function createRules() {
         return application_id(MarkupText, obj, textColor.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.STRONG]: {
+    [closure_0(closure_2[46]).AST_KEY.STRONG]: {
       react(node, output, textColor) {
         let strong = obj.strong;
         if (strong == null) {
@@ -853,10 +893,10 @@ export default function createRules() {
         return application_id(MarkupText, obj, textColor.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.LINK]: { react },
-    [closure_0(closure_2[45]).AST_KEY.URL]: { react },
-    [closure_0(closure_2[45]).AST_KEY.AUTOLINK]: { react },
-    [closure_0(closure_2[45]).AST_KEY.LINE_BREAK]: {
+    [closure_0(closure_2[46]).AST_KEY.LINK]: { react },
+    [closure_0(closure_2[46]).AST_KEY.URL]: { react },
+    [closure_0(closure_2[46]).AST_KEY.AUTOLINK]: { react },
+    [closure_0(closure_2[46]).AST_KEY.LINE_BREAK]: {
       react(arg0, arg1, textColor) {
         let color;
         if (textColor != null) {
@@ -865,49 +905,74 @@ export default function createRules() {
         return closure_1_12(MarkupText, { color, children: "\n" }, textColor.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.HIGHLIGHT]: {
+    [closure_0(closure_2[46]).AST_KEY.HIGHLIGHT]: {
       react(node, output, textColor) {
         textColor = undefined;
         if (textColor != null) {
           textColor = textColor.textColor;
         }
-        obj = { color: textColor, children: obj(8712).smartOutput(node, output, textColor) };
+        obj = { color: textColor, children: obj(8717).smartOutput(node, output, textColor) };
         return closure_1_12(MarkupText, obj, textColor.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.BLOCK_QUOTE]: {
+    [closure_0(closure_2[46]).AST_KEY.BLOCK_QUOTE]: {
       react(node, output, state) {
         styles = { styles, state, node, output };
         return application_id(MarkupBlockQuote, styles, state.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.PARAGRAPH]: {
+    [closure_0(closure_2[46]).AST_KEY.PARAGRAPH]: {
       order: 600,
       react(node, output, textColor) {
         textColor = undefined;
         if (textColor != null) {
           textColor = textColor.textColor;
         }
-        obj = { color: textColor, children: obj(8712).smartOutput(node, output, textColor) };
+        obj = { color: textColor, children: obj(8717).smartOutput(node, output, textColor) };
         return closure_1_12(MarkupText, obj, textColor.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.EMOJI]: {
-      react(surrogate, arg1, key) {
-        let children = surrogate.surrogate;
-        if (!children) {
-          children = surrogate.content;
+    [closure_0(closure_2[46]).AST_KEY.EMOJI]: {
+      react(surrogate, arg1, enableEmojiInteraction) {
+        const children = surrogate.surrogate || surrogate.content;
+        if (enableEmojiInteraction.enableEmojiInteraction) {
+          if (!enableEmojiInteraction.noStyleAndInteraction) {
+            if (!enableEmojiInteraction.inLink) {
+              let str = enableEmojiInteraction.textVariant;
+              if (str == null) {
+                str = "text-sm/medium";
+              }
+              const obj = {
+                variant: str,
+                color: "none",
+                accessibilityRole: "button",
+                accessibilityLabel: surrogate.content,
+                onPress(stopPropagation) {
+                  stopPropagation.stopPropagation();
+                  obj2(11865)({ surrogate: children, content: surrogate.content });
+                },
+                children,
+              };
+              const tmp2Result = closure_12(surrogate(5763).Text, obj, enableEmojiInteraction.key);
+              let tmp2Result2 = tmp2Result;
+              if (tmp3Result.isAndroid()) {
+                obj2 = { style: closure_14.unicodeEmoji, children: tmp2Result };
+                tmp2Result2 = closure_12(closure_6, obj2, enableEmojiInteraction.key);
+              }
+              return tmp2Result2;
+            }
+          }
         }
-        return closure_1_12(closure_1_7, { children }, key.key);
+        return closure_12(closure_7, { children }, enableEmojiInteraction.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.CUSTOM_EMOJI]: {
+    [closure_0(closure_2[46]).AST_KEY.CUSTOM_EMOJI]: {
       react(node, arg1, state) {
         styles = { state, node, styles };
         return application_id(MarkupCustomEmoji, styles, state.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.SPOILER]: {
+    [closure_0(closure_2[46]).AST_KEY.SPOILER]: {
       react(id, output, key) {
         obj = { id: id.id, spoilerStyle: obj.spoiler, spoilerRevealedStyle: obj.spoilerRevealed, children: null };
         const tmp = SpoilerDefault;
@@ -915,7 +980,7 @@ export default function createRules() {
         return application_id(tmp, obj, key.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.STATIC_ROUTE_LINK]: {
+    [closure_0(closure_2[46]).AST_KEY.STATIC_ROUTE_LINK]: {
       react(channelId, output, state) {
         styles = MarkupRulesUtils;
         let tmp = null;
@@ -930,19 +995,19 @@ export default function createRules() {
         return tmp;
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.INLINE_CODE]: {
+    [closure_0(closure_2[46]).AST_KEY.INLINE_CODE]: {
       react(node, output, state) {
         styles = { styles, state, node, output };
         return application_id(MarkupInlineCode, styles, state.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.CODE_BLOCK]: {
+    [closure_0(closure_2[46]).AST_KEY.CODE_BLOCK]: {
       parse(arg0, arg1, arg2) {
-        obj = obj2(6169).RULES[obj(undefined, 6167).AST_KEY.CODE_BLOCK];
+        obj = obj2(6172).RULES[obj(undefined, 6170).AST_KEY.CODE_BLOCK];
         const parsed = obj.parse(arg0, arg1, arg2);
         if ("ansi" === str.toLowerCase()) {
           const content = parsed.content;
-          parsed.content = content.replaceAll(obj(8712).ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
+          parsed.content = content.replaceAll(obj(8717).ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
         }
         return parsed;
       },
@@ -951,33 +1016,33 @@ export default function createRules() {
         return application_id(MarkupCodeBlock, styles, state.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.MENTION]: {
+    [closure_0(closure_2[46]).AST_KEY.MENTION]: {
       react: (node, output, state) => {
         styles = { roleStyle: obj2, state, node, output, styles };
         return application_id(MarkupMention, styles, state.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.CHANNEL_MENTION]: {
+    [closure_0(closure_2[46]).AST_KEY.CHANNEL_MENTION]: {
       react(node, output, state) {
         styles = { styles, state, node, output, variants: obj2 };
         return application_id(MarkupChannelMention, styles, state.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.ATTACHMENT_LINK]: {
+    [closure_0(closure_2[46]).AST_KEY.ATTACHMENT_LINK]: {
       react(node, output, state) {
         styles = { styles, state, node, output, variants: obj2 };
         return application_id(MarkupAttachmentLink, styles, state.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.SOUNDBOARD]: {
+    [closure_0(closure_2[46]).AST_KEY.SOUNDBOARD]: {
       react(node, output, key) {
         const obj = { variant: "body-md/semibold", children: null };
-        items = ["<sound:", obj(8712).smartOutput(node, output, key), ">"];
+        items = ["<sound:", obj(8717).smartOutput(node, output, key), ">"];
         obj.children = items;
-        return closure_1_13(obj(5761).Text, obj, key.key);
+        return closure_1_13(obj(5763).Text, obj, key.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.GUILD]: {
+    [closure_0(closure_2[46]).AST_KEY.GUILD]: {
       react(icon, output, textColor) {
         obj = obj(1377);
         let num = 2;
@@ -1000,7 +1065,7 @@ export default function createRules() {
           if (textColor != null) {
             textColor1 = textColor.textColor;
           }
-          const obj4 = { color: textColor1, children: tmp(8712).smartOutput(icon, output, textColor) };
+          const obj4 = { color: textColor1, children: tmp(8717).smartOutput(icon, output, textColor) };
           items[1] = closure_1_12(MarkupText, obj4);
           obj2.children = items;
           return closure_1_13(MarkupText, obj2, textColor.key);
@@ -1011,19 +1076,19 @@ export default function createRules() {
           obj5.icon = icon.icon;
           const fontScale = closure_1_4.getFontScale();
           if (fontScale < 1) {
-            let XXSMALL = tmp(7098).GuildIconSizes.XXXSMALL;
+            let XXSMALL = tmp(7101).GuildIconSizes.XXXSMALL;
           } else if (fontScale < 1.25) {
-            XXSMALL = tmp(7098).GuildIconSizes.XXSMALL_12;
+            XXSMALL = tmp(7101).GuildIconSizes.XXSMALL_12;
           } else {
-            XXSMALL = tmp(7098).GuildIconSizes.XXSMALL;
+            XXSMALL = tmp(7101).GuildIconSizes.XXSMALL;
           }
           obj5.size = XXSMALL;
-          closure_1_12(obj2(7098), obj5);
-          const tmp6 = obj2(7098);
+          closure_1_12(obj2(7101), obj5);
+          const tmp6 = obj2(7101);
         }
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.CHANNEL]: {
+    [closure_0(closure_2[46]).AST_KEY.CHANNEL]: {
       react(iconType, output, textColor) {
         let str = iconType.iconType;
         if (str == null) {
@@ -1034,7 +1099,7 @@ export default function createRules() {
           num = 0;
         }
         const obj = { themedColor: obj2(575).colors.MENTION_FOREGROUND, source: null, size: null, style: null };
-        obj2 = obj(8744);
+        obj2 = obj(8749);
         obj.source = obj2.getChannelMentionIcon(str);
         const fontScale = closure_1_4.getFontScale();
         if (fontScale < 1) {
@@ -1056,29 +1121,29 @@ export default function createRules() {
           closure_1_12(closure_1_6, { style: { paddingEnd: num }, children: closure_1_12(obj(1187).ThemedIcon, obj) }),
         ];
         const obj4 = { style: { paddingEnd: num }, children: closure_1_12(obj(1187).ThemedIcon, obj) };
-        items[1] = obj(8712).smartOutput(iconType, output, textColor);
+        items[1] = obj(8717).smartOutput(iconType, output, textColor);
         obj3.children = items;
         return closure_1_13(MarkupText, obj3, textColor.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.COMMAND_MENTION]: {
+    [closure_0(closure_2[46]).AST_KEY.COMMAND_MENTION]: {
       react(node, output, state) {
         styles = { styles, state, node, output };
         return application_id(MarkupCommandMention, styles, state.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.GAME_MENTION]: {
+    [closure_0(closure_2[46]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
-        return closure_1_12(obj2(11237), { node, state }, state.key);
+        return closure_1_12(obj2(11245), { node, state }, state.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.TIMESTAMP]: {
+    [closure_0(closure_2[46]).AST_KEY.TIMESTAMP]: {
       react(node, arg1, key) {
         obj = { node, style: obj.timestamp };
         return application_id(TimestampDefault, obj, key.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.LIST]: {
+    [closure_0(closure_2[46]).AST_KEY.LIST]: {
       react(start, arg1, level) {
         closure_1 = arg1;
         dependencyMap = level;
@@ -1130,8 +1195,8 @@ export default function createRules() {
                 sum = closure_5 + 1;
               }
               obj2.start = sum;
-              const obj3 = { style: list.listItem, variant: "body-sm/medium", children: null };
-              const obj4 = { style: list.bullet, color: null, children: null };
+              const obj3 = { style: closure_1_14.listItem, variant: "body-sm/medium", children: null };
+              const obj4 = { style: closure_1_14.bullet, color: null, children: null };
               let textColor;
               if (level != null) {
                 textColor = level.textColor;
@@ -1174,7 +1239,7 @@ export default function createRules() {
               items1[2] = str5;
               obj3.children = items1;
               const _HermesInternal4 = HermesInternal;
-              return closure_1_13(start(level[9]).Text, obj3, "list-" + level.key + "-item-" + index);
+              return closure_1_13(start(level[10]).Text, obj3, "list-" + level.key + "-item-" + index);
             } else {
               let str = start2.ordered;
               if (typeof str === "boolean") {
@@ -1190,16 +1255,16 @@ export default function createRules() {
               if (obj.isAndroid()) {
                 str2 = "\u2022 ";
               }
-              obj = start(level[48]);
+              obj = start(level[47]);
             }
           });
-          let obj = { style: list.list, variant: "body-sm/medium", children: mapped };
+          let obj = { style: closure_14.list, variant: "body-sm/medium", children: mapped };
           let _HermesInternal = HermesInternal;
-          return closure_12(start(5761).Text, obj, "list-" + level.key);
+          return closure_12(start(5763).Text, obj, "list-" + level.key);
         }
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.HEADING]: {
+    [closure_0(closure_2[46]).AST_KEY.HEADING]: {
       react(level, output, formatInline) {
         if (formatInline.formatInline) {
           let textColor;
@@ -1210,7 +1275,7 @@ export default function createRules() {
           const obj3 = {};
           const merged = Object.assign(formatInline);
           obj3.textVariant = "body-sm/semibold";
-          items = [obj(8712).smartOutput(level, output, obj3), " "];
+          items = [obj(8717).smartOutput(level, output, obj3), " "];
           obj2.children = items;
           return closure_1_13(MarkupText, obj2, formatInline.key);
         } else {
@@ -1231,21 +1296,21 @@ export default function createRules() {
           const obj4 = {};
           const merged1 = Object.assign(formatInline);
           obj4.textVariant = str;
-          const items1 = [obj(8712).smartOutput(level, output, obj4), "\n"];
+          const items1 = [obj(8717).smartOutput(level, output, obj4), "\n"];
           obj.children = items1;
-          return closure_1_13(obj(5761).Text, obj, formatInline.key);
+          return closure_1_13(obj(5763).Text, obj, formatInline.key);
         }
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.SUBTEXT]: {
+    [closure_0(closure_2[46]).AST_KEY.SUBTEXT]: {
       react(node, output, key) {
         const obj = { variant: "body-sm/normal", color: "text-muted", children: null };
-        items = [obj(8712).smartOutput(node, output, key), "\n"];
+        items = [obj(8717).smartOutput(node, output, key), "\n"];
         obj.children = items;
-        return closure_1_13(obj(5761).Text, obj, key.key);
+        return closure_1_13(obj(5763).Text, obj, key.key);
       },
     },
-    [closure_0(closure_2[45]).AST_KEY.SILENT_PREFIX]: {
+    [closure_0(closure_2[46]).AST_KEY.SILENT_PREFIX]: {
       react(content, output, textColor) {
         if (typeof content.content === "string") {
           content = content.content;
@@ -1255,9 +1320,9 @@ export default function createRules() {
             textColor = textColor.textColor;
           }
           const obj = { color: textColor, children: null };
-          obj.children = obj(8712).smartOutput(content, output, textColor);
+          obj.children = obj(8717).smartOutput(content, output, textColor);
           content = closure_1_12(MarkupText, obj, textColor.key);
-          obj2 = obj(8712);
+          obj2 = obj(8717);
         }
         return content;
       },
@@ -1280,4 +1345,4 @@ export function plainSpoilerRenderer(content) {
   }
   return str;
 }
-export const createFetchingGameMentionRule = fn(11237).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(11245).createFetchingGameMentionRule;

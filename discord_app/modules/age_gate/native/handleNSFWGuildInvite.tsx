@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 const isGuildLurker = GuildRecord.isGuildLurker;
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
-let closure_5 = AgeNoticeConstants.TINY_BRONCO_NSFW_SERVER_LOCATION;
+let closure_5 = AgeNoticeConstants.AGE_NOTICE_NSFW_SERVER_LOCATION;
 const items = [,];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -74,7 +74,7 @@ export function handleNSFWGuildInvite(invite, arg1) {
       return false;
     } else {
       if (tmp6Result4.hasAgeGatedFeatures()) {
-        if (tmp6Result5.isTinyBroncoEnabled(closure_5)) {
+        if (tmp6Result5.isAgeNoticeEnabled(closure_5)) {
           c2 = false;
           const obj2 = {
             onConfirm() {

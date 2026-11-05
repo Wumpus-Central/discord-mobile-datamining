@@ -11,11 +11,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
-const SHEET_CONTENT_MAX_WIDTH = fn(17582).SHEET_CONTENT_MAX_WIDTH;
+const SHEET_CONTENT_MAX_WIDTH = fn(17608).SHEET_CONTENT_MAX_WIDTH;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     sheetBackground: { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg },
@@ -63,7 +63,13 @@ let closure_12 = createStyles.createStyles((arg0) => {
     justifyContent: "space-between",
   };
   obj.colorStopRow = rect;
-  const size = { borderColor: "white", width: 28, height: 28, borderRadius: nativeDefault.radii.sm, borderWidth: 1 };
+  const size = {
+    borderColor: "white",
+    width: 28,
+    height: 28,
+    borderRadius: nativeDefault.radii.sm,
+    borderWidth: nativeDefault.space.PX_4,
+  };
   obj.colorStop = size;
   const size1 = { height: 50, width: "100%", borderRadius: nativeDefault.radii.sm };
   obj.gradient = size1;

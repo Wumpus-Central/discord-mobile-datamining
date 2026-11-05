@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15721 from "../../../../../_runtime/metro/15721__.js";
-import _mod15722 from "../../../../../_runtime/metro/15722__.js";
-import _modDef15723 from "../../../../../_runtime/metro/15723__.js";
+import _modDef15734 from "../../../../../_runtime/metro/15734__.js";
+import _mod15735 from "../../../../../_runtime/metro/15735__.js";
+import _modDef15736 from "../../../../../_runtime/metro/15736__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   wrapper: { marginTop: 50 },
   heading: { marginBottom: 20, textAlign: "center" },
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15721 };
+      const obj = { style, source: _modDef15734 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -76,7 +76,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod15722, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod15735, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     },
   },
@@ -90,7 +90,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15723 };
+      const obj = { style, source: _modDef15736 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },

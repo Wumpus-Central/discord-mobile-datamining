@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(8534);
+const GuildTagConstants = fn(8539);
 ({
   GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6,
   GUILD_TAG_BADGE_PALETTE_PRESETS,
@@ -28,7 +28,7 @@ let closure_9 = found.map((item) => {
   return { name, value };
 });
 let items = [
-  { label: "Untinted", primary: "diversity", secondary: "d" },
+  { label: "Untinted", primary: "displayName", secondary: "d" },
   ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({
     label: "P" + index + 1,
     primary: primary.primary,
@@ -36,7 +36,7 @@ let items = [
   })),
 ];
 const dependencyMap = [24, 48, 72];
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,

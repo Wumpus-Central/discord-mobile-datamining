@@ -25,18 +25,18 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj5 = {
+          const obj4 = {
             url: Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(closure_0),
             rejectWithError: HTTPUtils.rejectWithMigratedError(),
           };
           c2 = 1;
           c1 = 1;
-          const obj6 = { value: HTTP.post(obj5), done: false };
-          return obj6;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c1 = 3;
@@ -49,9 +49,9 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
         c1 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } catch (tmp9) {
+    } catch (tmp5) {
       c1 = tmp;
-      throw tmp9;
+      throw tmp5;
     }
   }
 };
@@ -137,18 +137,18 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj5 = {
+          const obj4 = {
             url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(closure_0),
             rejectWithError: HTTPUtils.rejectWithMigratedError(),
           };
           c2 = 1;
           c1 = 1;
-          const obj6 = { value: HTTP.post(obj5), done: false };
-          return obj6;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c1 = 3;
@@ -161,9 +161,9 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
         c1 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } catch (tmp9) {
+    } catch (tmp5) {
       c1 = tmp;
-      throw tmp9;
+      throw tmp5;
     }
   }
 };

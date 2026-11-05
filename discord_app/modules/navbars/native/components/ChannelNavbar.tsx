@@ -142,15 +142,15 @@ function ConnectedStatus(style) {
   });
 }
 const View = fn(17).View;
-const THREAD_CHANNEL_TYPES = fn(4994).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4996).THREAD_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_12, Fonts } = Constants);
-const StaticChannelRoute = fn(4997).StaticChannelRoute;
-const DismissibleContentConstants = fn(4987);
+const StaticChannelRoute = fn(4999).StaticChannelRoute;
+const DismissibleContentConstants = fn(4989);
 ({ ContentDismissActionType: closure_14, DismissibleContentGroupName: closure_15 } = DismissibleContentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   navbarTitleContainer: { height: "100%", flex: 1, flexDirection: "row", alignItems: "center" },
   navbarTitlePrimaryText: null,
@@ -519,11 +519,11 @@ export function ChannelButtons(buttons) {
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      const children1 = [closure_16(closure_1(9254), obj)];
+      const children1 = [closure_16(closure_1(9261), obj)];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         const obj2 = { contentTypes: null, groupName: null, children: null };
-        const items1 = [onPress(4974).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP];
+        const items1 = [onPress(4976).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP];
         obj2.contentTypes = items1;
         obj2.groupName = constants2.CHANNEL_HEADER_CALL_BUTTON_TOOLTIPS;
         obj2.children = function children(markAsDismissed) {
@@ -542,8 +542,8 @@ export function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10698), obj2);
-        const tmp4Result = closure_1(10698);
+        tmp3Result = closure_16(closure_1(10704), obj2);
+        const tmp4Result = closure_1(10704);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

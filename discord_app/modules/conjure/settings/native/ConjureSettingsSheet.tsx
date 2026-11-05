@@ -12,28 +12,30 @@ const require = fn;
 function SettingsTabStrip(tabs) {
   tabs = tabs.tabs;
   ({ selected, onSelect: importDefault } = tabs);
-  dependencyMap = undefined;
+  let index;
   let setActiveIndex;
-  [tmp2, c2] = setActiveIndex(noop.useState(0), 2);
+  const tmp2 = require("useMeasuredLayout")();
+  const width = tmp2.width;
+  let num = 0;
+  ({ ref, onLayout } = tmp2);
+  if (undefined !== width) {
+    num = width;
+  }
   items = [tabs];
-  const callback = noop.useCallback((nativeEvent) => {
-    _undefined(nativeEvent.nativeEvent.layout.width);
-  }, []);
   const memo = noop.useMemo(
     () =>
       tabs.map((id) => {
         obj = { id, label: null, page: null };
-        const intl = tabs(_undefined[16]).intl;
+        const intl = tabs(index[16]).intl;
         obj.label = intl.string(closure_1_14[id]);
         return obj;
       }),
     items,
   );
-  const tmp = setActiveIndex(noop.useState(0), 2);
-  obj = tabs(9125);
+  obj = tabs(index[27]);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
-    pageWidth: tmp2,
+    pageWidth: num,
     defaultIndex: Math.max(0, tabs.indexOf(selected)),
     onSetActiveIndex(arg0) {
       if (null != tabs[arg0]) {
@@ -41,7 +43,7 @@ function SettingsTabStrip(tabs) {
       }
     },
   });
-  const index = tabs.indexOf(selected);
+  index = tabs.indexOf(selected);
   setActiveIndex = segmentedControlState.setActiveIndex;
   const items1 = [index, setActiveIndex];
   const effect = noop.useEffect(() => {
@@ -49,19 +51,19 @@ function SettingsTabStrip(tabs) {
       setActiveIndex(tmp, false);
     }
   }, items1);
-  const obj3 = { onLayout: callback, children: null };
+  const obj3 = { ref, onLayout, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(12372).Tabs, obj4);
+    let tmp8Result = closure_12(tmp4(tmp[28]).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp10Result = closure_12(tmp5(9359).SegmentedControl, obj5);
+    tmp8Result = closure_12(tmp4(tmp[29]).SegmentedControl, obj5);
   }
-  obj3.children = tmp10Result;
+  obj3.children = tmp8Result;
   return closure_12(View, obj3);
 }
 const View = fn(17).View;
-let ConjureProjectStore = fn(6979);
+let ConjureProjectStore = fn(6982);
 ({ canPublishProject: closure_9, isProjectOwner: closure_10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
@@ -74,7 +76,7 @@ let obj = {
   linked: _modDef3995.fBEHdq,
   experimental: _modDef3995["0Pe9uw"],
 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj3 = { container: { gap: nativeDefault.space.PX_16 } };
 let closure_15 = createStyles.createStyles(obj3);
 const size = fn(2);

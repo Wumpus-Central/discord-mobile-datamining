@@ -27,7 +27,7 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(6916);
+const QuestConstants = fn(6919);
 ({
   DISCORD_APPLICATION_ID: closure_8,
   QuestVariants: closure_9,

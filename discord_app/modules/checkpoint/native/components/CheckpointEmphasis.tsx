@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
-import inlineStyles from "../../../../../_runtime/08171_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08176_inlineStyles.js";
 import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -11,13 +11,13 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6204).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PlatformUtils = fn(1357);
-const CheckpointCustomizationUtils = fn(6569);
+const CheckpointCustomizationUtils = fn(6571);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj4 = {
   container: { paddingHorizontal: nativeDefault.space.PX_6 },
   emphasis: { flexDirection: "row", alignItems: "center" },

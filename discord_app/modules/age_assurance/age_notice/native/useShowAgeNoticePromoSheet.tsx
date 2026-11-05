@@ -8,10 +8,10 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/useShowAgeNoticePromoSheet.tsx");
 
-export function useIsTinyBroncoEligible() {
+export function useIsAgeNoticeEligible() {
   return AgeNoticeVisibility.useShouldShowAgeNoticePromo();
 }
-export function useShowTinyBroncoPromoSheet(visibleContent) {
+export function useShowAgeNoticePromoSheet(visibleContent) {
   visibleContent = visibleContent.visibleContent;
   const markAsDismissed = visibleContent.markAsDismissed;
   noop.useRef(false);

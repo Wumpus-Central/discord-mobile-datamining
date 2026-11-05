@@ -225,8 +225,8 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = closure_13();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(8902).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(8902);
+  const trackUserProfileAction = channel(8907).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(8907);
   items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -259,9 +259,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9387).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9394).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(12169).MicrophoneIcon;
+      MicrophoneIcon = tmp2(12178).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -269,11 +269,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_11(tmp2(7512).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_11(tmp2(7512).UserProfileCardRows, obj6);
+    obj6.children = closure_11(tmp2(7514).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_11(tmp2(7514).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_11(trackUserProfileAction(7512), obj4);
-    const tmp6Result = trackUserProfileAction(7512);
+    closure_11(trackUserProfileAction(7514), obj4);
+    const tmp6Result = trackUserProfileAction(7514);
   }
   return tmp8;
 }
@@ -283,7 +283,7 @@ const Constants = fn(1072);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_13 = createStyles.createStyles({
   card: { paddingBottom: 0 },
   cardTitle: { marginBottom: 0 },

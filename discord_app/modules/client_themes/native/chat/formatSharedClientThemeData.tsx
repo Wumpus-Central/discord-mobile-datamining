@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import util from "../../../../intl/index.native.tsx";
 import _modDef2899 from "../../intl/ClientThemes.messages.js";
-import _modDef8660 from "../../../../../_runtime/metro/08660__.js";
+import _modDef8665 from "../../../../../_runtime/metro/08665__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -28,7 +28,7 @@ export function formatSharedClientThemeData(message, ensureAvatarSourceResult, n
       str2 = ensureAvatarSourceResult.uri;
     }
     obj.createdByAvatarUrl = str2;
-    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8660).uri;
+    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8665).uri;
     const intl = util.intl;
     obj.previewLabel = intl.string(util.t.SKNnqq);
     const intl2 = util.intl;

@@ -39,7 +39,7 @@ function TodoAgents(agents) {
       obj3.accessibilityLabel = intl.formatToPlainString(items(3995).SPGdDc, obj4);
       const _HermesInternal = HermesInternal;
       obj3.children = "+" + overflow;
-      tmp9 = closure_6(tmp2(5761).Text, obj3);
+      tmp9 = closure_6(tmp2(5763).Text, obj3);
     }
     items1[1] = tmp9;
     obj2.children = items1;
@@ -102,13 +102,13 @@ function TodoMarker(status) {
     stringResult1 = intl6.string(_modDef3995.lRpwhD);
     tmp21 = require;
   }
-  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(7130).FormCheckbox, { checked: "completed" === status }) };
+  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(7133).FormCheckbox, { checked: "completed" === status }) };
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { list: { gap: nativeDefault.space.PX_8 }, row: null, marker: null, markerUnfinished: null, markerInProgress: null, markerSpinner: null, text: null, agents: null, agentMark: null, agentMarkTint0: null, agentMarkTint1: null, agentMarkTint2: null, agentMarkTint3: null, textCompleted: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -158,8 +158,8 @@ export default function ConjureTodoList(announceProgress) {
   noop = undefined;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = agents(12807);
-  ({ completed, total } = agents(12807).todoProgress(todos));
+  let obj = agents(12814);
+  ({ completed, total } = agents(12814).todoProgress(todos));
   items = [agents];
   noop = noop.useMemo(() => {
     items = agents;
@@ -172,7 +172,7 @@ export default function ConjureTodoList(announceProgress) {
     return null;
   }
   const intl = agents(1113).intl;
-  const todoProgressResult = agents(12807).todoProgress(todos);
+  const todoProgressResult = agents(12814).todoProgress(todos);
   const intl2 = agents(1113).intl;
   const formatToPlainStringResult = intl.formatToPlainString(flag2(3995)["P/I+JW"], { completed, total });
   let obj2 = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
@@ -186,7 +186,7 @@ export default function ConjureTodoList(announceProgress) {
       str = "polite";
     }
   }
-  obj2.meta = closure_6(agents(12939).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj2.meta = closure_6(agents(12946).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj2.showHeader = total > 0;
   obj2.superseded = flag3;
   obj2.expanded = flag4;
@@ -233,7 +233,7 @@ export default function ConjureTodoList(announceProgress) {
       let obj4 = { style: tmp.row, children: null };
       let items2 = [closure_6(TodoMarker, { status: "pending" }), ];
       const obj5 = { variant: "body-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
-      items2[1] = closure_6(agents(5761).Text, obj5);
+      items2[1] = closure_6(agents(5763).Text, obj5);
       obj4.children = items2;
       tmp11Result = closure_7(closure_5, obj4);
     }
@@ -241,5 +241,5 @@ export default function ConjureTodoList(announceProgress) {
   items1[1] = tmp11Result;
   obj3.children = items1;
   obj2.children = closure_7(closure_5, obj3);
-  return closure_6(flag2(12939), obj2);
+  return closure_6(flag2(12946), obj2);
 };

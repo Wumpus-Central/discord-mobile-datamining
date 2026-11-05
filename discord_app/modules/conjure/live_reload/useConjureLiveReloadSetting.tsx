@@ -60,7 +60,7 @@ export function useConjureLiveReloadSetting(arg0) {
       return tmp;
     }, items2);
     if (tmp16) {
-      tmp16 = !tmp4;
+      tmp16 = tmp4;
     }
     const obj3 = { available: tmp16, checked: null, description: null, changed: null, setChecked: null, save: null };
     if (flag == null) {

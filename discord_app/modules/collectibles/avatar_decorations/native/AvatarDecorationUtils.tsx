@@ -46,7 +46,7 @@ export function getDecorationCutoutForAvatarCutout(cutout, arg1) {
 export function openAvatarDecorationActionSheet(arg0) {
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8870, dependencyMap.paths), "Edit Avatar Decoration", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8875, dependencyMap.paths), "Edit Avatar Decoration", {
     user,
     guildId,
     currentAvatarDecoration,

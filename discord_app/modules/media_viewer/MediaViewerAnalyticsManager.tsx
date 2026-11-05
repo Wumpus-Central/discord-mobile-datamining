@@ -21,13 +21,13 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "dispatch",
+  guildId: "sa",
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "children",
-  source: "<string:175178001>",
-  incrementableActions: "<string:1912602624>",
+  hasMediaOptions: "id",
+  source: "on",
+  incrementableActions: "MESSAGE_REQUEST",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

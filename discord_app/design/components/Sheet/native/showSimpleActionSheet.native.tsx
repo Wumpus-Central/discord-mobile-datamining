@@ -13,5 +13,5 @@ export function showSimpleActionSheet(key) {
   obj2.hideActionSheet = function hideActionSheet() {
     ActionSheetActionCreatorsDefault.hideActionSheet(key);
   };
-  obj.openLazy(key(2123)(7501, dependencyMap.paths), key, obj2, key.stackingBehavior);
+  obj.openLazy(key(2123)(7503, dependencyMap.paths), key, obj2, key.stackingBehavior);
 }

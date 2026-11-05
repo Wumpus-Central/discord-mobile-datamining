@@ -9,7 +9,7 @@ import dismissible_content from "../../../../../discord_common/js/packages/proto
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
 import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import useConjureEntryPointPlacementDefault from "../../../conjure/title_bar/native/useConjureEntryPointPlacement.tsx";
@@ -28,7 +28,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(17322);
+const YouBarConstants = fn(17348);
 ({
   YOU_BAR_HEIGHT: closure_10,
   YOU_BAR_PADDING: closure_11,
@@ -38,10 +38,10 @@ const YouBarConstants = fn(17322);
   YOU_BAR_BUTTON_HIT_SLOP: closure_15,
 } = YouBarConstants);
 const ME = fn(1072).ME;
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { youRow: null, youRowRight: null, youPressable: null };
 const rect = {
   position: "absolute",
@@ -89,7 +89,7 @@ let closure_25 = noop.memo(function YouBar() {
     str = str2;
   }
   if (isMobileRTCV2Enabled) {
-    let DOCK_SPACE_SPRING_CONFIG = tmp2(11437).DOCK_SPACE_SPRING_CONFIG;
+    let DOCK_SPACE_SPRING_CONFIG = tmp2(11445).DOCK_SPACE_SPRING_CONFIG;
   } else {
     DOCK_SPACE_SPRING_CONFIG = closure_12;
   }
@@ -161,7 +161,7 @@ let closure_25 = noop.memo(function YouBar() {
   visibleContent = youBarCoachmark.visibleContent;
   markAsDismissed = youBarCoachmark.markAsDismissed;
   const tmp2Result19 = require("useYouBarCoachmark");
-  const showTinyBroncoPromoSheet = require("AgeNoticeLazy").useShowTinyBroncoPromoSheet({
+  const showAgeNoticePromoSheet = require("AgeNoticeLazy").useShowAgeNoticePromoSheet({
     visibleContent,
     markAsDismissed,
   });
@@ -356,7 +356,7 @@ let closure_25 = noop.memo(function YouBar() {
       callback3();
     }
   }, items9);
-  const context = obj8.useContext(tmp7(11431));
+  const context = obj8.useContext(tmp7(11439));
   gesture = context.gesture;
   const translateX = context.translateX;
   const tmp2Result23 = require("useYouBarAccessibilityLabel");
@@ -450,7 +450,7 @@ let closure_25 = noop.memo(function YouBar() {
   let tmp50Result = tmp33;
   if (null != nameplate) {
     const obj5 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp47 };
-    tmp50Result = closure_18(tmp7(18727), obj5);
+    tmp50Result = closure_18(tmp7(18757), obj5);
   }
   items12[1] = tmp50Result;
   const obj6 = { gesture: memo3, children: null };
@@ -489,12 +489,12 @@ let closure_25 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj10 = { hasNameplate: tmp33, canUnpin: tmp27.canPin };
-    let tmp50Result2 = closure_18(tmp7(18733), obj10);
+    let tmp50Result2 = closure_18(tmp7(18763), obj10);
   } else {
     tmp50Result2 = null;
     if (iCYMIEnabled) {
       const obj11 = { hasNameplate: tmp33 };
-      tmp50Result2 = closure_18(tmp7(18735), obj11);
+      tmp50Result2 = closure_18(tmp7(18765), obj11);
     }
   }
   const items13 = [tmp50Result2, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];

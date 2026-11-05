@@ -24,6 +24,10 @@ obj[fn(1393).TypingSuggestion.BARKING] = _modDef3997.M282uk;
 obj[fn(1393).TypingSuggestion.BABBLING] = _modDef3997.myNZDT;
 obj[fn(1393).TypingSuggestion.DAYDREAMING] = _modDef3997.F7RLTP;
 obj[fn(1393).TypingSuggestion.MEOWING] = _modDef3997.EfxyQI;
+obj[fn(1393).TypingSuggestion.PURRING] = _modDef3997.PXYYXj;
+obj[fn(1393).TypingSuggestion.CHIRPING] = _modDef3997.mnCAqf;
+obj[fn(1393).TypingSuggestion.KEYSMASHING] = _modDef3997["123+VB"];
+obj[fn(1393).TypingSuggestion.THINKING] = _modDef3997["/wXIQV"];
 let obj2 = {};
 obj2[fn(1393).TypingSuggestion.UNSPECIFIED] = _modDef3997.kh4K4F;
 obj2[fn(1393).TypingSuggestion.YAPPING] = _modDef3997.m9AeqG;
@@ -33,6 +37,10 @@ obj2[fn(1393).TypingSuggestion.BARKING] = _modDef3997.L5aWEN;
 obj2[fn(1393).TypingSuggestion.BABBLING] = _modDef3997.AoBaEw;
 obj2[fn(1393).TypingSuggestion.DAYDREAMING] = _modDef3997["3hOLod"];
 obj2[fn(1393).TypingSuggestion.MEOWING] = _modDef3997["0Z9/o9"];
+obj2[fn(1393).TypingSuggestion.PURRING] = _modDef3997.oK1MLW;
+obj2[fn(1393).TypingSuggestion.CHIRPING] = _modDef3997.JPVvqj;
+obj2[fn(1393).TypingSuggestion.KEYSMASHING] = _modDef3997.JfieQ4;
+obj2[fn(1393).TypingSuggestion.THINKING] = _modDef3997.kz3mf0;
 let items = [
   fn(1393).TypingSuggestion.UNSPECIFIED,
   fn(1393).TypingSuggestion.YAPPING,
@@ -44,6 +52,13 @@ let items = [
   fn(1393).TypingSuggestion.MEOWING,
 ];
 let items1 = [
+  fn(1393).TypingSuggestion.PURRING,
+  fn(1393).TypingSuggestion.CHIRPING,
+  fn(1393).TypingSuggestion.KEYSMASHING,
+  fn(1393).TypingSuggestion.THINKING,
+];
+const items2 = [...items1];
+const items3 = [
   fn(1393).TypingIndicatorAnimation.PULSE,
   fn(1393).TypingIndicatorAnimation.RING,
   fn(1393).TypingIndicatorAnimation.WAVE,
@@ -51,6 +66,7 @@ let items1 = [
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx");
 
+export const NEW_TYPING_SUGGESTION_PRESETS = items1;
 export function getSurpriseMeEmojiPool() {
   const categories = UnicodeEmojisDefault.getCategories();
   items = [
@@ -103,10 +119,10 @@ export function pickRandomCustomTypingIndicatorEmojis(current) {
   return items.map((item) => closure_0[item]);
 }
 export function getRandomCustomTypingIndicatorAnimation() {
-  return items1[Math.floor(Math, Math.random(Math) * items1.length)];
+  return items3[Math.floor(Math, Math.random(Math) * items3.length)];
 }
-export function getCustomTypingIndicatorSuggestionPresets() {
-  return items;
+export function getCustomTypingIndicatorSuggestionPresets(enabled) {
+  return enabled ? items2 : items;
 }
 export function getCustomTypingIndicatorSuggestionMessage(typingSuggestion) {
   let tmp2 = obj[typingSuggestion];
@@ -122,8 +138,9 @@ export function getCustomTypingIndicatorSuggestionWithNameMessage(suggestion) {
   }
   return tmp2;
 }
-export function getRandomCustomTypingIndicatorSuggestion() {
-  return items[Math.floor(Math, Math.random(Math) * items.length)];
+export function getRandomCustomTypingIndicatorSuggestion(enabled) {
+  const arr = enabled ? items2 : items;
+  return arr[Math.floor(Math, Math.random(Math) * arr.length)];
 }
 export function getViewableCustomTypingIndicatorConfig(customTypingIndicatorConfig, c0, user, guildEmojis) {
   closure_0 = guildEmojis;
@@ -174,7 +191,7 @@ export function getViewableCustomTypingIndicatorConfig(customTypingIndicatorConf
 export function useCurrentCustomTypingIndicatorConfig(isTryItOut) {
   _require = isTryItOut;
   items = [UserProfileSettingsStore, UserStore];
-  items1 = [isTryItOut];
+  const items1 = [isTryItOut];
   return require("initialize").useStateFromStores(
     items,
     () => {

@@ -31,7 +31,7 @@ function CharacterSubLabel(text) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   card: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 },
   selectedCard: null,
@@ -136,7 +136,7 @@ export default function GameOrganizationCharacterList(characters) {
   const intl = characters(1113).intl;
   obj2.title = intl.formatToPlainString(_modDef2533["Xm+emB"], { noun });
   const items1 = [
-    closure_5(characters(7201).TableRowGroupTitle, obj2),
+    closure_5(characters(7204).TableRowGroupTitle, obj2),
     closure_5(View, {
       accessibilityRole: "radiogroup",
       style: tmp.cards,
@@ -154,9 +154,9 @@ export default function GameOrganizationCharacterList(characters) {
     const intl2 = tmp4(1113).intl;
     const obj5 = { noun };
     obj4.children = intl2.formatToPlainString(_modDef2533.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5761).Text, obj4);
+    someResult = closure_5(tmp4(5763).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(6162).Stack, obj);
+  return closure_6(characters(6165).Stack, obj);
 }

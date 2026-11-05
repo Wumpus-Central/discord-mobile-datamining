@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   root: { flex: 1 },
   content: { flex: 1 },
@@ -226,10 +226,10 @@ export default function ConjureNativeControlOverlay(arg0) {
           return sharedValue.set(nativeEvent.nativeEvent.layout.height);
         };
         if (tmp8) {
-          let tmp46Result = closure_6(tmp2(12446).AILoader, { size: 12, color: "text-overlay-light" });
+          let tmp46Result = closure_6(tmp2(12453).AILoader, { size: 12, color: "text-overlay-light" });
         } else {
           const obj8 = { size: "sm", color: tmp25(575).colors.TEXT_OVERLAY_LIGHT };
-          tmp46Result = closure_6(tmp2(12450).SparklesIcon, obj8);
+          tmp46Result = closure_6(tmp2(12457).SparklesIcon, obj8);
         }
         const items11 = [tmp46Result, ,];
         const obj9 = {
@@ -248,7 +248,7 @@ export default function ConjureNativeControlOverlay(arg0) {
         }
         obj9.accessibilityLabel = combined;
         obj9.children = stringResult;
-        items11[1] = closure_6(tmp2(5761).Text, obj9);
+        items11[1] = closure_6(tmp2(5763).Text, obj9);
         let tmp46Result3 = null;
         if (tmp8) {
           tmp46Result3 = null;
@@ -259,7 +259,7 @@ export default function ConjureNativeControlOverlay(arg0) {
             obj11.text = intl3.string(tmp25(3995).oU59sU);
             obj11.loading = stopping;
             obj11.onPress = stop;
-            obj10.children = closure_6(tmp2(5768).Button, obj11);
+            obj10.children = closure_6(tmp2(5770).Button, obj11);
             tmp46Result3 = closure_6(tmp34, obj10);
           }
         }

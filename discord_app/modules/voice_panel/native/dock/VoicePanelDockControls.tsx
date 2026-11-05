@@ -2,7 +2,7 @@
 import native from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
-import _modDef10015 from "../../../../../_runtime/metro/10015__.js";
+import _modDef10021 from "../../../../../_runtime/metro/10021__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
@@ -81,16 +81,16 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1113).intl;
   obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef10015;
+  obj.icon = _modDef10021;
   obj.onPress = callback;
-  return closure_7(channelId(8168).IconButton, obj);
+  return closure_7(channelId(8173).IconButton, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(11429).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(11437).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_9 = createStyles.createStyles(obj);

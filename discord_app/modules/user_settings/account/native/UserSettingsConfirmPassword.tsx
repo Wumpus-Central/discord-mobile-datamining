@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import FreeFormInputGroupDefault from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import FreeFormErrorLabelDefault from "../../../../design/void/Form/native/FreeFormErrorLabel.tsx";
 import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
@@ -20,21 +20,17 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { paddingVertical: 12, paddingHorizontal: 16 },
   title: { textAlign: "center" },
   prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" },
   input: { marginTop: 24 },
-  redesignInput: null,
-  button: null,
+  button: { marginTop: 16 },
   hint: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
-obj2.button = { marginTop: 16 };
-let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };
 const application_id = createStyles.createStyles(obj2);
 class UserSettingsConfirmPasswordInner {
@@ -43,14 +39,16 @@ class UserSettingsConfirmPasswordInner {
     if (parentLoading === undefined) {
       parentLoading = false;
     }
+    c3 = parentLoading;
     ({ hideUnverifiedBanner, style } = global);
     if (hideUnverifiedBanner === undefined) {
       hideUnverifiedBanner = false;
     }
-    closure_3 = undefined;
     closure_4 = undefined;
     closure_5 = undefined;
-    closure_6 = async function _handleSubmit() {
+    closure_6 = undefined;
+    closure_7 = undefined;
+    closure_8 = async function _handleSubmit() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -77,37 +75,40 @@ class UserSettingsConfirmPasswordInner {
             } else {
               closure_0 = tmp8;
               closure_128_0 = undefined;
-              asyncGeneratorStep(true);
-              c3 = 2;
-              c4 = 3;
-              c5 = 1;
-              const obj5 = { value: _require(_slicedToArray), done: false };
-              return obj5;
+              if (!ref.current) {
+                if (!parentLoading) {
+                  ref.current = true;
+                  _slicedToArray(true);
+                  c3 = 2;
+                  c4 = 3;
+                  c5 = 1;
+                  const obj5 = { value: _require(noop), done: false };
+                  return obj5;
+                }
+              }
+              c5 = 3;
             }
-          } else if (1 === tmp8) {
-            c3 = 0;
-            closure_129_3(false);
-            throw tmp75;
-          } else {
+          } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c3 = 1;
-              closure_128_1 = tmp75;
-              tmp4(tmp75[13]).captureException(closure_128_1);
-              const intl = closure_0(tmp75[14]).intl;
-              if (closure_128_1.message !== intl.string(closure_0(tmp75[14]).t.N2yb9a)) {
-                const v6OrEarlierAPIError = new closure_0(tmp75[12]).V6OrEarlierAPIError(closure_128_1);
-                closure_129_5(v6OrEarlierAPIError);
+              closure_128_1 = tmp83;
+              tmp4(tmp83[13]).captureException(closure_128_1);
+              const intl = closure_0(tmp83[14]).intl;
+              if (closure_128_1.message !== intl.string(closure_0(tmp83[14]).t.N2yb9a)) {
+                const v6OrEarlierAPIError = new closure_0(tmp83[12]).V6OrEarlierAPIError(closure_128_1);
+                closure_129_6(v6OrEarlierAPIError);
               }
               if (closure_129_2 != null) {
                 closure_129_2();
               }
-              const obj4 = tmp4(tmp75[13]);
+              const obj4 = tmp4(tmp83[13]);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 0;
-              closure_129_3(false);
+              closure_129_7.current = false;
+              closure_129_4(false);
               c5 = 3;
               const obj6 = { value, done: true };
               return obj6;
@@ -118,36 +119,44 @@ class UserSettingsConfirmPasswordInner {
                   closure_129_2();
                 }
                 c3 = 0;
-                closure_129_3(false);
+                closure_129_7.current = false;
+                closure_129_4(false);
                 c5 = 3;
                 const obj7 = { value: undefined, done: true };
                 return obj7;
               } else {
-                if (closure_128_0.status < 400) {
-                  closure_129_1();
-                  c3 = 1;
+                if (closure_128_0.status >= 400) {
+                  if (closure_128_0.status <= 599) {
+                    const v6OrEarlierAPIError1 = new closure_0(tmp83[12]).V6OrEarlierAPIError(closure_128_0);
+                    closure_129_6(v6OrEarlierAPIError1);
+                    if (closure_129_2 != null) {
+                      closure_129_2();
+                    }
+                    c3 = 0;
+                    closure_129_7.current = false;
+                    closure_129_4(false);
+                    c5 = 3;
+                    const obj = { value: undefined, done: true };
+                    return obj;
+                  }
                 }
-                const v6OrEarlierAPIError1 = new closure_0(tmp75[12]).V6OrEarlierAPIError(closure_128_0);
-                closure_129_5(v6OrEarlierAPIError1);
-                if (closure_129_2 != null) {
-                  closure_129_2();
-                }
-                c3 = 0;
-                closure_129_3(false);
-                c5 = 3;
-                const obj = { value: undefined, done: true };
-                return obj;
+                closure_129_1();
+                c3 = 1;
               }
             }
             c3 = 0;
-            closure_129_3(false);
-            c5 = 3;
+            closure_129_7.current = false;
+            closure_129_4(false);
           }
-        } catch (tmp75) {
+          c3 = 0;
+          closure_129_7.current = false;
+          closure_129_4(false);
+          throw tmp83;
+        } catch (tmp83) {
           if (tmp5 === c3) {
             c5 = tmp3;
-            throw tmp75;
-          } else if (tmp2 === tmp77) {
+            throw tmp83;
+          } else if (tmp2 === tmp85) {
             c4 = tmp2;
           } else {
             c4 = tmp;
@@ -164,12 +173,13 @@ class UserSettingsConfirmPasswordInner {
     items[0] = closure_8;
     stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
     tmp6 = closure_4(closure_5.useState(false), 2);
-    [tmp7, closure_3] = tmp6;
+    [tmp7, closure_4] = tmp6;
     tmp8 = closure_4(closure_5.useState(""), 2);
     first = tmp8[0];
-    closure_4 = first;
+    closure_5 = first;
     tmp10 = closure_4(closure_5.useState(null), 2);
-    [obj2, closure_5] = tmp10;
+    [obj2, closure_6] = tmp10;
+    closure_7 = closure_5.useRef(false);
     effect = closure_5.useEffect(() => {
       const result = UserSettingsUtils.trackUserSettingsPaneViewed({
         destinationPane: constants.ACCOUNT_CONFIRM_PASSWORD,
@@ -184,22 +194,12 @@ class UserSettingsConfirmPasswordInner {
       items1[1] = style;
       obj1.style = items1;
       tmp15 = null;
-      tmp14 = ScrollView;
+      tmp14 = closure_7;
       if (!hideUnverifiedBanner) {
         tmp16 = jsx;
         tmp17 = onSuccess;
         tmp15 = jsx(onSuccess(tmp4[15]), {});
       }
-      handleSubmit = function handleSubmit() {
-        const self = this;
-        const apply = closure_6.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      };
       items2 = [,];
       items2[0] = tmp15;
       tmp18 = closure_6;
@@ -223,45 +223,60 @@ class UserSettingsConfirmPasswordInner {
       intl2 = tmp3(tmp4[14]).intl;
       obj13.children = intl2.string(tmp3(tmp4[14]).t.vaZmAx);
       items3[1] = jsx(tmp3(tmp4[16]).Text, obj13);
-      tmp20 = onSuccess;
       obj14 = {
-        style: null,
-        textStyle: null,
+        containerStyle: null,
         label: null,
         textContentType: "password",
-        keyboardType: "default",
+        autoComplete: "current-password",
         secureTextEntry: true,
+        revealable: true,
+        disabled: null,
         value: null,
-        onChangeText: null,
+        onChange: null,
         onSubmitEditing: null,
-        error: null,
+        errorMessage: null,
         returnKeyType: "done",
         autoCapitalize: "none",
         autoFocus: true,
       };
-      ({ input: obj7.style, redesignInput: obj7.textStyle } = tmp);
-      tmp21 = onSuccess(tmp4[17]);
+      obj14.containerStyle = tmp.input;
       intl3 = tmp3(tmp4[14]).intl;
       obj14.label = intl3.string(tmp3(tmp4[14]).t["CIGa+7"]);
+      tmp20 = tmp7;
+      if (!tmp7) {
+        tmp20 = parentLoading;
+      }
+      handleSubmit = function handleSubmit() {
+        const self = this;
+        const apply = closure_8.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      obj14.disabled = tmp20;
       obj14.value = first;
-      obj14.onChangeText = tmp8[1];
+      obj14.onChange = tmp8[1];
       obj14.onSubmitEditing = handleSubmit;
       fieldMessage = undefined;
       if (obj2 != null) {
         str = "password";
         fieldMessage = obj2.getFieldMessage("password");
       }
-      obj14.error = fieldMessage;
-      items3[2] = tmp19(tmp21, obj14);
+      obj14.errorMessage = fieldMessage;
+      items3[2] = tmp19(tmp3(tmp4[17]).TextInput, obj14);
       tmp19Result = null;
       if (null != obj2) {
         str2 = "password";
         tmp19Result = null;
         if (null == obj2.getFieldMessage("password")) {
+          tmp23 = onSuccess;
           obj15 = { style: null, children: null };
           obj15.style = tmp.hint;
           obj15.children = obj2.message;
-          tmp19Result = tmp19(tmp20(tmp4[18]), obj15);
+          tmp19Result = tmp19(onSuccess(tmp4[18]), obj15);
         }
       }
       items3[3] = tmp19Result;

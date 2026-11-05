@@ -93,15 +93,16 @@ let closure_12 = async function _ensureEnrollment(arg0) {
     }
   }
 };
-let closure_13 = async function _launchGame(arg0, arg1) {
+let closure_13 = async function _launchGame(arg0, arg1, arg2) {
   let applicationId = arg0;
   closure_1 = arg1;
-  c5 = 0;
+  closure_2 = arg2;
+  c7 = 0;
+  c8 = 0;
   c6 = 0;
-  c4 = 0;
-  return (async (arg0, value) => {
-    if (c6 === 2) {
-      c6 = 3;
+  return (async (arg0, value, arg2) => {
+    if (c8 === 2) {
+      c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
@@ -114,146 +115,164 @@ let closure_13 = async function _launchGame(arg0, arg1) {
       }
     } else {
       try {
-        c6 = 2;
-        if (0 === c5) {
+        c8 = 2;
+        if (0 === c7) {
           if (arg0 === 1) {
-            c6 = 3;
+            c8 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
+            c8 = 3;
             const obj7 = { value, done: true };
             return obj7;
           } else {
-            closure_3 = tmp3;
-            closure_2 = tmp8;
-            closure_130_0 = applicationId;
-            closure_130_1 = closure_1;
-            closure_130_2 = undefined;
-            closure_130_3 = undefined;
-            closure_130_4 = undefined;
+            closure_5 = tmp3;
+            closure_4 = tmp8;
+            closure_132_0 = applicationId;
+            closure_132_1 = closure_1;
+            closure_132_2 = closure_2;
+            closure_132_3 = undefined;
+            closure_132_4 = undefined;
+            let gameStateForGame;
+            closure_132_6 = undefined;
+            closure_132_7 = undefined;
             let frame;
-            closure_130_6 = undefined;
-            closure_130_7 = undefined;
+            closure_132_9 = undefined;
+            closure_132_10 = undefined;
             let rootNavigationRef;
             applicationId = applicationId.applicationId;
-            closure_130_2 = applicationId;
+            closure_132_3 = applicationId;
             if (null != applicationId) {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              c4 = 1;
+              c6 = 1;
               if (null == application.getApplication(applicationId)) {
                 items = [applicationId];
-                c5 = 2;
-                c6 = 1;
+                c7 = 2;
+                c8 = 1;
                 const obj8 = { value: ApplicationActionCreatorsDefault.fetchApplications(items, false), done: false };
                 return obj8;
               }
             }
-            c6 = 3;
-            closure_131_0(closure_131_2[14]).leaveFrame(closure_130_6);
-            closure_131_11();
-            c6 = 3;
+            c8 = 3;
+            closure_133_0(closure_133_2[14]).leaveFrame(closure_132_9);
+            closure_133_11();
+            c8 = 3;
             return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp8) {
-          c4 = 0;
-          closure_131_11();
-          c6 = 3;
+          c6 = 0;
+          closure_133_11();
+          c8 = 3;
           return { value: "HermesInternal", done: null };
         } else if (2 === tmp8) {
           if (arg0 === 1) {
-            c6 = 3;
+            c8 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
+            c6 = 0;
+            c8 = 3;
             const obj9 = { value, done: true };
             return obj9;
           }
         } else if (3 === tmp8) {
           if (arg0 === 1) {
-            c6 = 3;
+            c8 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
+            c8 = 3;
             const obj11 = { value, done: true };
             return obj11;
           } else {
-            closure_130_3 = value;
-            if (closure_130_3) {
-              const orbsArcadeClaimableRewards = closure_131_0(closure_131_2[13]).getOrbsArcadeClaimableRewards(
-                closure_130_0.rewards,
-                closure_131_6.getGameStateForGame(closure_130_0.id),
+            closure_132_4 = value;
+            if (closure_132_4) {
+              gameStateForGame = closure_133_6.getGameStateForGame(closure_132_0.id);
+              const orbsArcadeClaimableRewards = closure_133_0(closure_133_2[13]).getOrbsArcadeClaimableRewards(
+                closure_132_0.rewards,
+                gameStateForGame,
               );
-              closure_130_4 = orbsArcadeClaimableRewards.map((id) => id.id);
-              frame = closure_131_5.getFrame(closure_131_10(closure_130_2, closure_131_9));
-              let tmp36 = null != frame;
-              if (tmp36) {
-                const tmp41 = closure_131_8(frame);
-                let customId;
-                if (tmp41 != null) {
-                  customId = tmp41.customId;
+              closure_132_6 = orbsArcadeClaimableRewards.map((id) => id.id);
+              let id;
+              if (gameStateForGame != null) {
+                const currentRun = gameStateForGame.currentRun;
+                if (currentRun != null) {
+                  id = currentRun.id;
                 }
-                tmp36 = customId !== closure_130_0.id;
               }
-              if (tmp36) {
-                closure_131_0(closure_131_2[14]).leaveFrame(frame.id);
-                const obj5 = closure_131_0(closure_131_2[14]);
+              c3 = id;
+              if (id == null) {
+                c3 = null;
               }
-              const obj4 = closure_131_0(closure_131_2[13]);
+              closure_132_7 = c3;
+              frame = closure_133_5.getFrame(closure_133_10(closure_132_3, closure_133_9));
+              let tmp43 = null != frame;
+              if (tmp43) {
+                const tmp48 = closure_133_8(frame);
+                let customId;
+                if (tmp48 != null) {
+                  customId = tmp48.customId;
+                }
+                tmp43 = customId !== closure_132_0.id;
+              }
+              if (tmp43) {
+                closure_133_0(closure_133_2[14]).leaveFrame(frame.id);
+                const obj5 = closure_133_0(closure_133_2[14]);
+              }
+              const obj4 = closure_133_0(closure_133_2[13]);
               const obj12 = {
-                applicationId: closure_130_2,
-                surface: closure_131_9,
+                applicationId: closure_132_3,
+                surface: closure_133_9,
                 launch: null,
                 analyticsContext: null,
               };
-              const obj13 = { customId: closure_130_0.id, path: null };
+              const obj13 = { customId: closure_132_0.id, path: null };
               const _HermesInternal = HermesInternal;
-              obj13.path = "/" + closure_130_0.id + "/";
+              obj13.path = "/" + closure_132_0.id + "/";
               obj12.launch = obj13;
-              const obj15 = { isStart: true, analyticsLocations: closure_130_1 };
+              const obj15 = { isStart: true, analyticsLocations: closure_132_1 };
               obj12.analyticsContext = obj15;
-              closure_130_7 = closure_131_1(closure_131_2[15]).launchFrame(obj12);
-              const obj6 = closure_131_1(closure_131_2[15]);
-              closure_131_1(closure_131_2[15]).demoteMainFrame(closure_131_10(closure_130_2, closure_131_9));
-              c4 = 2;
-              c5 = 5;
-              c6 = 1;
-              const obj17 = { value: closure_130_7, done: false };
+              closure_132_10 = closure_133_1(closure_133_2[15]).launchFrame(obj12);
+              const obj6 = closure_133_1(closure_133_2[15]);
+              closure_133_1(closure_133_2[15]).demoteMainFrame(closure_133_10(closure_132_3, closure_133_9));
+              c6 = 2;
+              c7 = 5;
+              c8 = 1;
+              const obj17 = { value: closure_132_10, done: false };
               return obj17;
             }
           }
         } else if (4 === tmp8) {
-          c4 = 0;
-          c6 = 3;
+          c6 = 0;
+          c8 = 3;
           return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
-          c6 = 3;
+          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
+          c6 = 0;
+          c8 = 3;
           const obj18 = { value, done: true };
           return obj18;
         } else {
-          closure_130_6 = value;
-          c4 = 0;
-          rootNavigationRef = closure_131_0(closure_131_2[16]).getRootNavigationRef();
+          closure_132_9 = value;
+          c6 = 0;
+          rootNavigationRef = closure_133_0(closure_133_2[16]).getRootNavigationRef();
           if (null != rootNavigationRef) {
             if (rootNavigationRef.isReady()) {
               const obj = {
-                frameId: closure_130_6,
-                gameId: closure_130_0.id,
-                claimableRewardIdsAtLaunch: closure_130_4,
+                frameId: closure_132_9,
+                gameId: closure_132_0.id,
+                claimableRewardIdsAtLaunch: closure_132_6,
+                runIdAtLaunch: closure_132_7,
+                surface: closure_132_2,
               };
               rootNavigationRef.navigate("orbs-arcade-game", obj);
             }
           }
-          const obj20 = closure_131_0(closure_131_2[16]);
+          const obj20 = closure_133_0(closure_133_2[16]);
         }
-        c4 = 0;
-        if (obj14.canLaunchContextlessFrame(closure_131_4.getApplication(closure_130_2))) {
-          c5 = 3;
-          c6 = 1;
+        c6 = 0;
+        if (obj14.canLaunchContextlessFrame(closure_133_4.getApplication(closure_132_3))) {
+          c7 = 3;
+          c8 = 1;
           const obj19 = {
             value: (function ensureEnrollment() {
               const self = this;
@@ -264,36 +283,37 @@ let closure_13 = async function _launchGame(arg0, arg1) {
                 applyArgumentsResult = apply(self, arguments);
               }
               return applyArgumentsResult;
-            })(closure_130_0),
+            })(closure_132_0),
             done: false,
           };
           return obj19;
         } else {
-          closure_131_11();
+          closure_133_11();
         }
-        obj14 = closure_131_0(closure_131_2[12]);
-      } catch (tmp83) {
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp83;
-        } else if (tmp === tmp84) {
-          c5 = tmp;
+        obj14 = closure_133_0(closure_133_2[12]);
+      } catch (tmp90) {
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp90;
+        } else if (tmp === tmp91) {
+          c7 = tmp;
         } else {
-          c5 = tmp5;
+          c7 = tmp5;
         }
       }
     }
   })();
 };
-let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1) {
+let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1, arg2) {
   let id = arg0;
   closure_1 = arg1;
-  c6 = 0;
+  closure_2 = arg2;
   c7 = 0;
-  c5 = 0;
-  return (async (arg0, value) => {
-    if (c7 === 2) {
-      c7 = 3;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c8 === 2) {
+      c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
@@ -306,27 +326,27 @@ let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1) {
       }
     } else {
       try {
-        c7 = 2;
-        if (0 === c6) {
+        c8 = 2;
+        if (0 === c7) {
           if (arg0 === 1) {
-            c7 = 3;
+            c8 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
+            c8 = 3;
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_3 = tmp3;
-            closure_2 = tmp7;
-            closure_130_0 = id;
+            closure_4 = tmp3;
+            closure_3 = tmp7;
+            closure_131_0 = id;
             if (isLaunchingAnyGame.isLaunchingAnyGame) {
-              c7 = 3;
+              c8 = 3;
             } else {
               const obj5 = { type: "ORBS_ARCADE_LAUNCH_GAME_BEGIN", gameId: id.id };
               DispatcherDefault.dispatch(obj5);
-              c5 = 1;
-              c6 = 2;
-              c7 = 1;
+              c6 = 1;
+              c7 = 2;
+              c8 = 1;
               const obj7 = {
                 value: (function launchGame() {
                   const self = this;
@@ -337,46 +357,46 @@ let closure_14 = async function _launchOrbsArcadeGame(arg0, arg1) {
                     applyArgumentsResult = apply(self, arguments);
                   }
                   return applyArgumentsResult;
-                })(id, tmp39),
+                })(id, tmp39, tmp40),
                 done: false,
               };
               return obj7;
             }
           }
         } else if (1 === tmp7) {
-          c5 = 0;
-          const obj9 = { type: "ORBS_ARCADE_LAUNCH_GAME_END", gameId: closure_130_0.id };
-          closure_131_1(closure_131_2[17]).dispatch(obj9);
-          throw closure_4;
+          c6 = 0;
+          const obj9 = { type: "ORBS_ARCADE_LAUNCH_GAME_END", gameId: closure_131_0.id };
+          closure_132_1(closure_132_2[17]).dispatch(obj9);
+          throw closure_5;
         } else if (arg0 === 1) {
-          c7 = 3;
+          c8 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          c5 = 0;
-          const obj10 = { type: "ORBS_ARCADE_LAUNCH_GAME_END", gameId: closure_130_0.id };
-          closure_131_1(closure_131_2[17]).dispatch(obj10);
-          const obj = closure_131_1(closure_131_2[17]);
+          c6 = 0;
+          const obj10 = { type: "ORBS_ARCADE_LAUNCH_GAME_END", gameId: closure_131_0.id };
+          closure_132_1(closure_132_2[17]).dispatch(obj10);
+          const obj = closure_132_1(closure_132_2[17]);
         }
-        c5 = 0;
-        const obj11 = { type: "ORBS_ARCADE_LAUNCH_GAME_END", gameId: closure_130_0.id };
-        closure_131_1(closure_131_2[17]).dispatch(obj11);
-        c7 = 3;
+        c6 = 0;
+        const obj11 = { type: "ORBS_ARCADE_LAUNCH_GAME_END", gameId: closure_131_0.id };
+        closure_132_1(closure_132_2[17]).dispatch(obj11);
+        c8 = 3;
         const obj12 = { value, done: true };
         return obj12;
       } catch (tmp31) {
-        closure_4 = tmp31;
-        if (tmp4 === c5) {
-          c7 = tmp2;
+        closure_5 = tmp31;
+        if (tmp4 === c6) {
+          c8 = tmp2;
           throw tmp31;
         } else {
-          c6 = tmp;
+          c7 = tmp;
         }
       }
     }
   })();
 };
 const AbortCodes = fn(1072).AbortCodes;
-const FramesConstants = fn(6982);
+const FramesConstants = fn(6985);
 ({ getFrameLaunchParams: closure_8, MAIN_SURFACE: closure_9, makeFrameId: closure_10 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/launchOrbsArcadeGame.tsx");

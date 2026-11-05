@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 ({ AGE_NOTICE_CHANNEL_LOCATION: c3, AGE_NOTICE_SERVER_LOCATION: closure_4 } = AgeNoticeConstants);
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/getAgeNoticeWarningDescriptions.tsx");
 
-export function getTinyBroncoServerDescriptions() {
+export function getAgeNoticeServerDescriptions() {
   const obj = { adult: null, teen: null, unverified: null };
   const intl = util.intl;
   obj.adult = intl.string(util.t.fp3xf5);
@@ -18,9 +18,9 @@ export function getTinyBroncoServerDescriptions() {
   obj.unverified = intl3.string(util.t.qiLic6);
   return obj;
 }
-export function getTinyBroncoWarningDescriptions(tmp3Result, guildName) {
+export function getAgeNoticeWarningDescriptions(tmp3Result, guildName) {
   let stringResult = dependencyMap;
-  if (!obj.isTinyBroncoEnabled(tmp)) {
+  if (!obj.isAgeNoticeEnabled(tmp)) {
     return null;
   } else {
     const obj2 = { adult: null, teen: null, unverified: null };

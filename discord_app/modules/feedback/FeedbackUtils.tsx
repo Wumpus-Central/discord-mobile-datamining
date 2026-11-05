@@ -37,7 +37,7 @@ export function processOptOut(feedbackType) {
     feedback_type: closure_9[feedbackType],
     opted_out_until,
   });
-  const InAppFeedbackStates = feedbackType(4966).InAppFeedbackStates;
+  const InAppFeedbackStates = feedbackType(4968).InAppFeedbackStates;
   InAppFeedbackStates.updateSetting((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);

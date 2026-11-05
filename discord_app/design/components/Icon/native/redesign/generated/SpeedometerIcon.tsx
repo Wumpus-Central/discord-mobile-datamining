@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod12125 from "../../../../../../../_runtime/metro/12125__.js";
+import _mod12134 from "../../../../../../../_runtime/metro/12134__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function SpeedometerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12125, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12134, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

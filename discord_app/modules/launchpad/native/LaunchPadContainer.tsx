@@ -1,8 +1,9 @@
 // discord_app/modules/launchpad/native/LaunchPadContainer.tsx
 import _mod1652 from "../../../../_runtime/metro/01652__.js";
 import HomeDrawerExperiment from "../../home_drawer/native/HomeDrawerExperiment.tsx";
-import LegacyBaseButton from "../../../../_runtime/05428_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05430_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import useStateFromSharedValueDefault from "../../reanimated/native/useStateFromSharedValue.tsx";
 import useLaunchPadTypeDefault from "useLaunchPadType.tsx";
 import useWindowDimensionsSharedValueDefault from "../../screen/useWindowDimensionsSharedValue.native.tsx";
 import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext.tsx";
@@ -16,11 +17,11 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11725);
+const LaunchPadConstants = fn(11733);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { wrapper: null, container: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -48,6 +49,7 @@ export default function LaunchPadContainer(children) {
   const tmp4 = useLaunchPadTypeDefault();
   ({ launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters } =
     useLaunchPadStateDefault());
+  const tmp6 = useStateFromSharedValueDefault(launchPadShown);
   const tmp5 = useLaunchPadStateDefault();
   ({ gesture, gestureRef } = useLaunchPadGestureDefault({
     launchPadType: tmp4,
@@ -57,8 +59,8 @@ export default function LaunchPadContainer(children) {
     gestureState,
     updaters,
   }));
-  const tmp7 = useWindowDimensionsSharedValueDefault();
-  const tmp6 = useLaunchPadGestureDefault({
+  const tmp8 = useWindowDimensionsSharedValueDefault();
+  const tmp7 = useLaunchPadGestureDefault({
     launchPadType: tmp4,
     launchPadSharedState,
     launchPadPullTabState,
@@ -66,21 +68,21 @@ export default function LaunchPadContainer(children) {
     gestureState,
     updaters,
   });
-  items = [closure_9, tmp7];
+  items = [closure_9, tmp8];
   c0 = undefined;
-  [tmp9, tmp10] = items;
+  [tmp10, tmp11] = items;
   class LaunchPadContainerTsx1 {
     constructor() {
       return closure_0.get().height;
     }
   }
-  let items1 = [tmp10];
+  let items1 = [tmp11];
   LaunchPadContainerTsx1.__closure = items1;
   LaunchPadContainerTsx1.__workletHash = 5429128433055;
-  LaunchPadContainerTsx1.__initData = tmp9;
+  LaunchPadContainerTsx1.__initData = tmp10;
   const items2 = [closure_10, updaters];
   c0 = undefined;
-  [tmp11, tmp12] = items2;
+  [tmp12, tmp13] = items2;
   class LaunchPadContainerTsx2 {
     constructor(arg0, arg1) {
       if (null != arg1) {
@@ -93,18 +95,18 @@ export default function LaunchPadContainer(children) {
       return;
     }
   }
-  const items3 = [tmp12];
+  const items3 = [tmp13];
   LaunchPadContainerTsx2.__closure = items3;
   LaunchPadContainerTsx2.__workletHash = 8587684116006;
-  LaunchPadContainerTsx2.__initData = tmp11;
+  LaunchPadContainerTsx2.__initData = tmp12;
   const animatedReaction = _mod1652.useAnimatedReaction(LaunchPadContainerTsx1, LaunchPadContainerTsx2);
-  const items4 = [closure_11, _mod1652.interpolate, launchPadSharedState, spring_spring.withSpring, tmp7, React4];
+  const items4 = [closure_11, _mod1652.interpolate, launchPadSharedState, spring_spring.withSpring, tmp8, React4];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
   c3 = undefined;
   c4 = undefined;
-  [tmp14, tmp15, tmp16, tmp17, tmp18, tmp19] = items4;
+  [tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items4;
   class LaunchPadContainerTsx3 {
     constructor() {
       obj = { borderRadius: closure_0(closure_1.get(), [0, 1], [0, 16]), transform: null };
@@ -122,18 +124,36 @@ export default function LaunchPadContainer(children) {
       return obj;
     }
   }
-  const items5 = [tmp15, tmp16, tmp17, tmp18, tmp19];
+  const items5 = [tmp16, tmp17, tmp18, tmp19, tmp20];
   LaunchPadContainerTsx3.__closure = items5;
   LaunchPadContainerTsx3.__workletHash = 13015105508497;
-  LaunchPadContainerTsx3.__initData = tmp14;
+  LaunchPadContainerTsx3.__initData = tmp15;
   const animatedStyle = _mod1652.useAnimatedStyle(LaunchPadContainerTsx3);
   const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
   let obj2 = { value: gestureRef, children: null };
   const obj3 = { gesture, children: null };
   const obj4 = { style: tmp.wrapper, children: null };
-  const obj5 = { style: null, children: children.children };
+  const obj5 = {
+    style: null,
+    pointerEvents: null,
+    accessibilityElementsHidden: null,
+    importantForAccessibility: null,
+    children: null,
+  };
   const items6 = [tmp.container, animatedStyle];
   obj5.style = items6;
+  let str = "auto";
+  let str2 = "auto";
+  if (tmp6) {
+    str2 = "none";
+  }
+  obj5.pointerEvents = str2;
+  obj5.accessibilityElementsHidden = tmp6;
+  if (tmp6) {
+    str = "no-hide-descendants";
+  }
+  obj5.importantForAccessibility = str;
+  obj5.children = children.children;
   const items7 = [timestampProducer(_modDef1652.View, obj5)];
   if (tmp4 !== constants.DISABLED) {
     const obj6 = {
@@ -144,9 +164,9 @@ export default function LaunchPadContainer(children) {
       launchPadPullTabState,
       updaters,
     };
-    const tmp21Result = timestampProducer(LaunchPadWrapperDefault, obj6);
+    const tmp22Result = timestampProducer(LaunchPadWrapperDefault, obj6);
   }
-  items7[1] = tmp21Result;
+  items7[1] = tmp22Result;
   obj4.children = items7;
   obj3.children = metroImportDefault(React3, obj4);
   obj2.children = timestampProducer(LegacyBaseButton.GestureDetector, obj3);

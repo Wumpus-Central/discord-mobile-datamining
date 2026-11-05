@@ -29,26 +29,26 @@ function PostPurchaseFooter(onSendGift) {
   const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = noop.useCallback(() => {
     ModalActionCreatorsDefault.pop();
-    const rootNavigationRef = onSendGift(5323).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(5325).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(13586).GiftIcon, {
+  obj2.icon = closure_10(onSendGift(13597).GiftIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
   });
   const intl = onSendGift(1113).intl;
   obj2.text = intl.string(_modDef2763.g86YiI);
   obj2.onPress = callback;
-  const items1 = [closure_10(onSendGift(5768).Button, obj2)];
+  const items1 = [closure_10(onSendGift(5770).Button, obj2)];
   const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1113).intl;
   obj4.text = intl2.string(_modDef2763["sa/cfM"]);
   obj4.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5768).Button, obj4);
+  items1[1] = closure_10(onSendGift(5770).Button, obj4);
   obj.children = items1;
   return closure_11(View, obj);
 }
@@ -149,16 +149,16 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj2);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(14661);
+const GiftingBadgeConstants = fn(14674);
 ({
   getRemainingGiftsToNextTier: closure_6,
   getTierForProgress: metroImportDefault,
   getNextTierForProgress: closure_8,
 } = GiftingBadgeConstants);
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     screenContainer: { flex: 1 },

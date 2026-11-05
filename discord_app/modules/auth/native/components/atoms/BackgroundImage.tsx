@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/components/atoms/BackgroundImage.tsx
 import shared from "../../../../../design/shared.tsx";
-import _modDef7092 from "../../../../../../_runtime/metro/07092__.js";
+import _modDef7095 from "../../../../../../_runtime/metro/07095__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ export default function BackgroundImage(backgroundImageSource) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = flag(5377)();
+  const tmp = flag(5379)();
   dependencyMap = tmp;
   items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };
@@ -30,15 +30,15 @@ export default function BackgroundImage(backgroundImageSource) {
     } else {
       let tmp2 = dependencyMap;
       if (obj2.isThemeDark(closure_2)) {
-        tmp2 = 7091;
+        tmp2 = 7094;
         let tmp4Result = importDefault(tmp2);
       } else {
-        tmp4Result = _modDef7092;
+        tmp4Result = _modDef7095;
       }
       obj2 = shared;
     }
   }, items);
   const merged = Object.assign(memo);
-  obj.children = jsx(flag(5851), {});
+  obj.children = jsx(flag(5854), {});
   return <closure_4 style={absoluteFill.absoluteFill}>{null}</closure_4>;
 }

@@ -11,7 +11,7 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isLaunched = fn(6982).isLaunched;
+const isLaunched = fn(6985).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/useConjureAppChannelSoundButton.tsx");
 

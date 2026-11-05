@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_4 = createStyles.createStyles({
   text: { fontFamily: fn(1072).Fonts.PRIMARY_MEDIUM, includeFontPadding: false },
 });

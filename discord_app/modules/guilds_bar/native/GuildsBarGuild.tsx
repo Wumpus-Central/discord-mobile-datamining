@@ -18,14 +18,14 @@ import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildRecord = fn(5008);
+const GuildRecord = fn(5010);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(18615).useItemDragState;
-const TRANSITION_PHYSICS = fn(18612).TRANSITION_PHYSICS;
+const useItemDragState = fn(18645).useItemDragState;
+const TRANSITION_PHYSICS = fn(18642).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -141,7 +141,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
                 const obj2 = c1(1252);
               }
             }
-            c1(18639)(_undefined);
+            c1(18669)(_undefined);
           }
         }
         const obj3 = { title: null, body: null };
@@ -149,7 +149,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
         obj3.title = intl.string(c0(1113).t.R0RpRX);
         const intl2 = c0(1113).intl;
         obj3.body = intl2.string(c0(1113).t.m9gRVN);
-        return c1(6093).show(obj3);
+        return c1(6096).show(obj3);
       },
     }),
     items4,
@@ -350,21 +350,21 @@ export default noop.memo(function GuildsBarGuild(guildId) {
   if (enableHome) {
     if (!flag2) {
       const obj10 = { guildId, onActiveHookChange: callback };
-      tmp28Result = closure_16(tmp4(18645), obj10);
+      tmp28Result = closure_16(tmp4(18675), obj10);
     }
   }
   obj8.expandedChildren = tmp28Result;
   if (isUnavailable) {
-    const obj11 = { source: tmp4(18667), style: tmp.guildIcon };
-    let tmp28Result2 = closure_16(tmp4(5851), obj11);
-    const tmp4Result3 = tmp4(5851);
+    const obj11 = { source: tmp4(18697), style: tmp.guildIcon };
+    let tmp28Result2 = closure_16(tmp4(5854), obj11);
+    const tmp4Result3 = tmp4(5854);
   } else if (null != tmp15) {
     const obj12 = { source: tmp15, style: tmp.guildIcon };
-    tmp28Result2 = closure_16(tmp4(5851), obj12);
+    tmp28Result2 = closure_16(tmp4(5854), obj12);
   } else {
-    const obj13 = { value: guildName, selected, animate: selected, size: tmp2(7098).GuildIconSizes.LARGE };
-    tmp28Result2 = closure_16(tmp4(7098), obj13);
-    const tmp4Result4 = tmp4(7098);
+    const obj13 = { value: guildName, selected, animate: selected, size: tmp2(7101).GuildIconSizes.LARGE };
+    tmp28Result2 = closure_16(tmp4(7101), obj13);
+    const tmp4Result4 = tmp4(7101);
   }
   obj8.children = tmp28Result2;
   return closure_16(GuildsBarAnimatedItemWrapperDefault, obj8);

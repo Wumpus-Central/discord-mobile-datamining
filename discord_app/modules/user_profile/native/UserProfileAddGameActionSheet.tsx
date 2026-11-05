@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import _mod7651 from "../../../../_runtime/metro/07651__.js";
+import _mod7653 from "../../../../_runtime/metro/07653__.js";
 import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
 import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import WidgetUtils from "../WidgetUtils.tsx";
@@ -16,10 +16,10 @@ import WidgetStore from "../WidgetStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(8895).TrackUserProfileEditActions;
+let closure_8 = fn(8900).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   searchBar: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 },
   list: null,
@@ -217,7 +217,7 @@ export default function UserProfileAddGameActionSheet(widgetType) {
     if (!closure_4) {
       if ("" !== query.trim()) {
         const obj2 = { keys: ["label"] };
-        let length = _mod7651.matchSorter(memo1, query, obj2).length;
+        let length = _mod7653.matchSorter(memo1, query, obj2).length;
       }
       return length;
     }

@@ -170,7 +170,7 @@ function GuildRowWrapper(guild) {
       const tmp = unreadChannel.getMutableGuildStates()[guild.id];
       guild = tmp;
       if (null == tmp) {
-        return { mentionChannel: "dispatch", mentionChannelName: "isArray", mentionChannelCount: null };
+        return { mentionChannel: "sa", mentionChannelName: "isArray", mentionChannelCount: null };
       } else {
         const keys = disableSubtitle(onActiveHookChange[25]).keys(tmp.mentionCounts);
         const found = keys.filter((item) => {
@@ -361,10 +361,10 @@ function GuildRowWrapper(guild) {
   return typingChannelName(guild(onActiveHookChange[34]).HomeDrawerSharedItem, obj12);
 }
 const View = fn(17).View;
-const isThread = fn(4994).isThread;
+const isThread = fn(4996).isThread;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(6911).UnreadSetting;
+const UnreadSetting = fn(6914).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = {
@@ -375,7 +375,7 @@ const HomeDrawerActiveHook = {
   UNREAD: "unread",
   NONE: "none",
 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_21 = createStyles.createStyles({
   guildName: { flexDirection: "row", alignItems: "center", gap: 4 },
   guildNameText: { flexShrink: 1 },
@@ -388,7 +388,7 @@ export default function HomeDrawerGuildRow(guildId) {
   ({ disableSubtitle, onActiveHookChange } = guildId);
   items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(5328).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(5330).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

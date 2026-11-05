@@ -2,8 +2,8 @@
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import getChannelIdForEmbeddedSurfaceDefault from "../../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
 import conjurePreviewSurface from "../preview/conjurePreviewSurface.tsx";
-import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
 import leaveFrame from "../../frames/leaveFrame.tsx";
+import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
 import validateConjureAppFrame from "../../rpc/helpers/validateConjureAppFrame.tsx";
 import conjureBackgroundFrameRules from "conjureBackgroundFrameRules.tsx";
 import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform.native.tsx";
@@ -66,7 +66,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6982);
+const FramesConstants = fn(6985);
 ({ FrameIntent: closure_6, makeFrameId: metroImportDefault } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrames.tsx");

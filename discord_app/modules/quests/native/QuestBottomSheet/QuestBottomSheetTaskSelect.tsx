@@ -2,7 +2,7 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const QuestTaskPlatform = fn(6916).QuestTaskPlatform;
+const QuestTaskPlatform = fn(6919).QuestTaskPlatform;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const size = fn(2);
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestBottomShee
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   const obj = { hasIcons: true, children: null };
-  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(9737).ScreenIcon, {}), label: null, onPress: null };
+  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(9743).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1113).intl;
   obj2.label = intl.string(onTaskSelect(1113).t["QXc01+"]);
   obj2.onPress = function onPress() {
@@ -21,8 +21,8 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  items = [closure_3(onTaskSelect(7116).TableRow, obj2)];
-  const obj3 = { arrow: true, icon: closure_3(onTaskSelect(9877).GameControllerIcon, {}), label: null, onPress: null };
+  items = [closure_3(onTaskSelect(7119).TableRow, obj2)];
+  const obj3 = { arrow: true, icon: closure_3(onTaskSelect(9883).GameControllerIcon, {}), label: null, onPress: null };
   const intl2 = onTaskSelect(1113).intl;
   obj3.label = intl2.string(onTaskSelect(1113).t["8lAfuB"]);
   obj3.onPress = function onPress() {
@@ -32,7 +32,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  items[1] = closure_3(onTaskSelect(7116).TableRow, obj3);
+  items[1] = closure_3(onTaskSelect(7119).TableRow, obj3);
   obj.children = items;
-  return closure_4(onTaskSelect(7201).TableRowGroup, obj);
+  return closure_4(onTaskSelect(7204).TableRowGroup, obj);
 }

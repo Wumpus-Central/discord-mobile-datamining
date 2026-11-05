@@ -10,10 +10,10 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(13942).useDiceRollState;
+const useDiceRollState = fn(13955).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   animatedContainer: { overflow: "hidden" },
   container: {
@@ -157,15 +157,15 @@ export default function DiceRollBar(channelId) {
   if (null == tmp2) {
     return null;
   } else {
-    const barText = tmp3(14161).getBarText(flag, tmp2.results);
+    const barText = tmp3(14174).getBarText(flag, tmp2.results);
     const obj5 = { style: null, children: null };
     const items7 = [animatedStyle, tmp.animatedContainer];
     obj5.style = items7;
     const obj6 = { style: tmp.container, children: null };
-    const obj7 = { style: tmp23, children: closure_7(tmp3(9676).DiceIcon, { size: "md" }) };
+    const obj7 = { style: tmp23, children: closure_7(tmp3(9682).DiceIcon, { size: "md" }) };
     const items8 = [closure_7(_modDef1652.View, obj7)];
     const obj8 = { variant: "body-sm/normal", color: "text-default", children: barText };
-    items8[1] = closure_7(tmp3(5761).Text, obj8);
+    items8[1] = closure_7(tmp3(5763).Text, obj8);
     obj6.children = items8;
     obj5.children = closure_8(c4, obj6);
     return closure_7(_modDef1652.View, obj5);

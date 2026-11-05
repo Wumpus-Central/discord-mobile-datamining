@@ -77,7 +77,7 @@ function ConjureHostApprovalCard(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { cards: { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, card: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.card = {
@@ -92,7 +92,7 @@ const result = size.fileFinishedImporting("modules/conjure/host_approval/native/
 export function ConjureHostApprovalCards(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_6();
-  const conjureHostApprovals = projectId(11074).useConjureHostApprovals(projectId);
+  const conjureHostApprovals = projectId(11083).useConjureHostApprovals(projectId);
   let tmp2 = null;
   if (0 !== conjureHostApprovals.length) {
     const obj2 = {
@@ -109,7 +109,7 @@ export function ConjureAllowedHostsSetting(projectId) {
   projectId = projectId.projectId;
   let intl = projectId;
   let stringResult = dependencyMap;
-  const conjureAllowedHosts = projectId(11074).useConjureAllowedHosts(projectId);
+  const conjureAllowedHosts = projectId(11083).useConjureAllowedHosts(projectId);
   if (null == conjureAllowedHosts) {
     return null;
   } else {
@@ -123,7 +123,7 @@ export function ConjureAllowedHostsSetting(projectId) {
       intl = intl(1113).intl;
       stringResult = intl.string(_modDef3995.AweHIi);
       obj3.label = stringResult;
-      let mapped = closure_4(intl(7116).TableRow, obj3);
+      let mapped = closure_4(intl(7119).TableRow, obj3);
     } else {
       mapped = conjureAllowedHosts.map((label) => {
         closure_0 = label;
@@ -136,12 +136,12 @@ export function ConjureAllowedHostsSetting(projectId) {
         obj2.onPress = function onPress() {
           return ConjureHostApproval.removeAllowedHost(projectId, closure_0);
         };
-        obj.trailing = closure_1_4(projectId(5768).Button, obj2);
-        return closure_1_4(projectId(7116).TableRow, obj, label);
+        obj.trailing = closure_1_4(projectId(5770).Button, obj2);
+        return closure_1_4(projectId(7119).TableRow, obj, label);
       });
     }
     obj2.children = mapped;
-    closure_4(intl(7201).TableRowGroup, obj2);
+    closure_4(intl(7204).TableRowGroup, obj2);
   }
-  let obj = projectId(11074);
+  let obj = projectId(11083);
 }

@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import conjurePreviewSurface from "../../preview/conjurePreviewSurface.tsx";
-import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import frameRunsInBackgroundDefault from "../../../frames/frameRunsInBackground.tsx";
+import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import closeFrameDefault from "../../../frames/closeFrame.tsx";
 import conjureBackgroundFrameRules from "../conjureBackgroundFrameRules.tsx";
 import isConjureAppChannelFrameDefault from "../isConjureAppChannelFrame.tsx";
@@ -93,7 +93,7 @@ function closeToMakeRoom(frameId) {
     const tmp7Result = ToastActionCreatorsDefault;
   }
 }
-const FramesConstants = fn(6982);
+const FramesConstants = fn(6985);
 ({ asLaunched: closure_6, FrameLayoutModes: metroImportDefault } = FramesConstants);
 const items = [
   FramesStore,

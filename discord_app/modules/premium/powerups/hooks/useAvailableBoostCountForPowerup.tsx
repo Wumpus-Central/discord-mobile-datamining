@@ -6,7 +6,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5354);
+const GuildPowerupsConstants = fn(5356);
 ({
   GuildPowerupType: closure_6,
   POWERUPS_INCLUDED_IN_LEVEL: metroImportDefault,

@@ -43,10 +43,10 @@ export function queryMentionables(type, query, channelId) {
       checkRecentlyTalkedOnEmptyQuery: false,
       limit: 15,
     };
-    const obj = channel(6914);
-    ({ users, roles } = channel(6914).queryMentionResults(obj2));
+    const obj = channel(6917);
+    ({ users, roles } = channel(6917).queryMentionResults(obj2));
     items = [];
-    const queryMentionResultsResult = channel(6914).queryMentionResults(obj2);
+    const queryMentionResultsResult = channel(6917).queryMentionResults(obj2);
     HermesBuiltin.arraySpread(
       roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })),
       HermesBuiltin.arraySpread(

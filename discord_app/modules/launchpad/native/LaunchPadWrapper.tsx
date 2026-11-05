@@ -15,12 +15,12 @@ get_ActivityIndicator = fn(17);
   TouchableOpacity: metroImportDefault,
   StyleSheet: closure_8,
 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(11725).LaunchPadTypes;
+const LaunchPadTypes = fn(11733).LaunchPadTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { modalWrapper: null, a11yDismiss: null };
 let size = { height: "100%", width: "100%", paddingTop: nativeDefault.space.PX_8 };
 obj2.modalWrapper = size;
@@ -116,65 +116,75 @@ export default function LaunchPadWrapper(launchPadType) {
   }, items5);
   const obj2 = { style: absoluteFill.absoluteFill, pointerEvents: "box-none", children: null };
   const tmp6 = updaters(isModalOpen[11])({ launchPadSharedState, launchPadShown, gestureState });
-  const items6 = [
-    closure_12(updaters(isModalOpen[18]).View, { style: launchPadCoverStyles, pointerEvents: "none" }),
-    ,
-  ];
+  let obj3 = { style: launchPadCoverStyles, pointerEvents: null, children: null };
+  let str2 = "none";
+  if (tmp7) {
+    str2 = "auto";
+  }
+  obj3.pointerEvents = str2;
+  obj3.children = closure_12(closure_7, {
+    accessible: false,
+    "aria-hidden": true,
+    onPress,
+    style: absoluteFill.absoluteFillObject,
+  });
+  const items6 = [closure_12(updaters(isModalOpen[18]).View, obj3), ,];
   let tmp20Result = null;
   if (launchPadType === LaunchPadTypes.PULL_TAB) {
     tmp20Result = null;
     if (!isModalOpen) {
-      let obj3 = {
+      const obj5 = {
         gestureState,
         launchPadSharedState,
         launchPadPullTabState: launchPadType.launchPadPullTabState,
         updaters,
       };
-      tmp20Result = closure_12(updaters(tmp3[19]), obj3);
+      tmp20Result = closure_12(updaters(tmp3[19]), obj5);
     }
   }
   items6[1] = tmp20Result;
-  const obj4 = { style: launchPadStyles, pointerEvents: "none", children: null };
-  const obj5 = {
+  const obj6 = { style: launchPadStyles, pointerEvents: "none", children: null };
+  const obj7 = {
     nativeID: "launch-pad",
     style: tmp.modalWrapper,
     onAccessibilityEscape: onPress,
     accessibilityViewIsModal: tmp7,
     children: null,
   };
-  let str2 = "no";
+  let str3 = "no";
   if (tmp7) {
-    str2 = "yes";
+    str3 = "yes";
   }
-  const obj6 = {
-    importantForAccessibility: str2,
+  const obj8 = {
+    importantForAccessibility: str3,
     accessibilityRole: "button",
     accessibilityLabel: null,
     onPress: null,
     style: null,
   };
   const intl = tmp2(tmp3[21]).intl;
-  obj6.accessibilityLabel = intl.string(launchPadType(isModalOpen[21]).t.WAI6xu);
-  obj6.onPress = onPress;
-  obj6.style = tmp.a11yDismiss;
+  obj8.accessibilityLabel = intl.string(launchPadType(isModalOpen[21]).t.WAI6xu);
+  obj8.onPress = onPress;
+  obj8.style = tmp.a11yDismiss;
   const items7 = [
-    closure_12(onPress, obj6),
+    closure_12(onPress, obj8),
     closure_12(closure_7, { accessible: false, "aria-hidden": true, onPress, style: absoluteFill.absoluteFillObject }),
   ];
-  let tmp23 = !tmp7;
+  let tmp24 = !tmp7;
   if (!tmp7) {
-    tmp23 = tmp16;
+    tmp24 = tmp16;
   }
-  const obj7 = { accessible: false, "aria-hidden": true, onPress, style: absoluteFill.absoluteFillObject };
+  const obj4 = { accessible: false, "aria-hidden": true, onPress, style: absoluteFill.absoluteFillObject };
+  const obj9 = { accessible: false, "aria-hidden": true, onPress, style: absoluteFill.absoluteFillObject };
   tmp16 = updaters(isModalOpen[17])(ref);
   const tmp18 = closure_5;
   items7[2] = closure_12(launchPadType(isModalOpen[22]).Freeze, {
-    freeze: tmp23,
+    freeze: tmp24,
     children: closure_12(updaters(isModalOpen[23]), { visible: tmp7, sharedState: launchPadSharedState }),
   });
-  obj5.children = items7;
-  obj4.children = closure_13(launchPadType(isModalOpen[20]).AccessibilityView, obj5);
-  items6[2] = closure_12(updaters(isModalOpen[18]).View, obj4);
+  obj7.children = items7;
+  obj6.children = closure_13(launchPadType(isModalOpen[20]).AccessibilityView, obj7);
+  items6[2] = closure_12(updaters(isModalOpen[18]).View, obj6);
   obj2.children = items6;
   return closure_13(tmp18, obj2);
 }

@@ -83,9 +83,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7915).WIDGET_TITLES_BY_TYPE;
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
-let closure_9 = fn(12566).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(7920).WIDGET_TITLES_BY_TYPE;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
+let closure_9 = fn(12573).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

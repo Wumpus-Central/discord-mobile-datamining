@@ -34,11 +34,11 @@ function AppealSignalRadioRow(signal) {
   return timestampProducer(Form.FormRow, obj2);
 }
 const View = fn(17).View;
-const SafetyHubConstants = fn(8110);
+const SafetyHubConstants = fn(8115);
 ({ AppealIngestionSignal: closure_4, AppealIngestionSignalOrder: hasOwnProperty } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   container: { flex: 1, paddingHorizontal: 16 },
   form: { marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -68,14 +68,14 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
           formRow(572).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
           const obj = formRow(572);
           const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-          formRow(5382).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+          formRow(5384).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
         },
         onClose() {
-          return formRow(5382).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+          return formRow(5384).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13562, dependencyMap.paths),
+        asyncRequireImpl(13573, dependencyMap.paths),
         "AppealIngestionFreeTextAppealReasonActionSheet",
         obj3,
       );
@@ -85,14 +85,14 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   }
   const tmp = closure_8();
   const formRow = tmp;
-  dependencyMap = isDsaEligible(13534).useSafetyHubAppealSignal();
+  dependencyMap = isDsaEligible(13545).useSafetyHubAppealSignal();
   const intl = isDsaEligible(1113).intl;
-  let obj = isDsaEligible(13534);
+  let obj = isDsaEligible(13545);
   const intl2 = isDsaEligible(1113).intl;
   const stringResult = intl.string(isDsaEligible(1113).t["C5q+pW"]);
   let obj2 = { children: null };
   items = [
-    closure_6(isDsaEligible(13540).AppealIngestionModalHeader, {
+    closure_6(isDsaEligible(13551).AppealIngestionModalHeader, {
       headerText: stringResult,
       subHeaderText: intl2.string(isDsaEligible(1113).t.VEcRhw),
     }),
@@ -101,7 +101,7 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   const obj4 = { style: tmp.form, children: null };
   const stringResult1 = intl2.string(isDsaEligible(1113).t.VEcRhw);
   const items1 = [
-    closure_6(isDsaEligible(8317).FormSection, {
+    closure_6(isDsaEligible(8322).FormSection, {
       sectionBodyStyle: tmp.formSection,
       accessibilityRole: "radiogroup",
       children: closure_5.map((signal, index) =>
@@ -117,11 +117,11 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   const obj7 = { variant: "body-sm/normal", children: null };
   const intl3 = isDsaEligible(1113).intl;
   obj7.children = intl3.format(isDsaEligible(1113).t["8k9GCW"], {});
-  obj6.children = closure_6(isDsaEligible(5761).Text, obj7);
+  obj6.children = closure_6(isDsaEligible(5763).Text, obj7);
   items1[1] = closure_6(handleAppealSignalSelect, obj6);
   obj4.children = items1;
-  obj3.children = closure_7(isDsaEligible(8317).Form, obj4);
+  obj3.children = closure_7(isDsaEligible(8322).Form, obj4);
   items[1] = closure_6(handleAppealSignalSelect, obj3);
   obj2.children = items;
-  return closure_7(isDsaEligible(13540).AppealIngestionModalScreen, obj2);
+  return closure_7(isDsaEligible(13551).AppealIngestionModalScreen, obj2);
 }

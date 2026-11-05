@@ -25,10 +25,10 @@ function LinkButton(arg0) {
 }
 const Pressable = fn(17).Pressable;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const CHANGELOG_URL = fn(5043).CHANGELOG_URL;
+const CHANGELOG_URL = fn(5045).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: metroImportDefault, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_10 = createStyles.createStyles({
   text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 },
   span: {
@@ -62,7 +62,13 @@ export default function BioText(lineClamp) {
   const tmp = closure_10();
   items = [bio, guildId, str];
   let memo = str.useMemo(() => {
-    const obj2 = { guildId, linkVariant: str, textVariant: str, customEmojiOffsetY: null };
+    const obj2 = {
+      guildId,
+      linkVariant: str,
+      textVariant: str,
+      enableEmojiInteraction: true,
+      customEmojiOffsetY: null,
+    };
     const obj = BioMarkupUtils;
     let num;
     if (tmpResult.isAndroid()) {

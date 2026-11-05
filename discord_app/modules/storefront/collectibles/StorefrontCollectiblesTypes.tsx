@@ -12,3 +12,8 @@ export const StorefrontPromotionCollectiblesType = {
 };
 export const StorefrontPromotionCollectAndClaimSubtype = { TAKEOVER: "TAKEOVER", BASIC: "BASIC" };
 export const StorefrontPromotionCollectiblesContentTheme = { LIGHT: "light", DARK: "dark" };
+export const StorefrontPromotionCollectionSaleCountdownStyle = {
+  LIGHT: "LIGHT",
+  DARK: "DARK",
+  GRADIENT_V1: "GRADIENT_V1",
+};

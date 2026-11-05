@@ -98,7 +98,7 @@ const jsxProd = fn(21);
 let closure_7 = module_1652.createAnimatedComponent(Pressable);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let closure_9 = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(5141);
+let createStyles = fn(5143);
 let obj = {
   item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" },
   count: { marginLeft: nativeDefault.space.PX_8 },
@@ -107,14 +107,14 @@ let obj = {
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj.indicatorDot = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_10 = createStyles.createStyles(obj);
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj4 = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_11 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
   pressed: nativeDefault.colors.TEXT_BRAND,
 });
-createStyles = fn(5141);
+createStyles = fn(5143);
 let obj5 = {
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
@@ -216,7 +216,7 @@ export function TabItem(arg0) {
   items3[1] = tmp14Result;
   let tmp14Result2 = null;
   if (null != indicatorDot) {
-    const obj5 = { style: tmp2.indicatorDot, children: closure_5(tmp3(9638).IndicatorDot, {}) };
+    const obj5 = { style: tmp2.indicatorDot, children: closure_5(tmp3(9644).IndicatorDot, {}) };
     tmp14Result2 = closure_5(closure_4, obj5);
   }
   items3[2] = tmp14Result2;

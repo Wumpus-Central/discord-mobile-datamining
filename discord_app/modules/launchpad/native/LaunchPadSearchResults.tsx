@@ -60,11 +60,11 @@ function renderSearchResultsSection() {
   return React6(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6911).UnreadSetting;
+const UnreadSetting = fn(6914).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   listContainer: { minHeight: 16 },
   list: { flex: -1, marginTop: 8 },
@@ -95,8 +95,8 @@ let closure_14 = noop.memo(function Guild(guild) {
   }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
   const obj = guild(504);
-  const fontScale = guild(5776).useFontScale();
-  const obj2 = guild(5776);
+  const fontScale = guild(5778).useFontScale();
+  const obj2 = guild(5778);
   const items2 = [LocaleStore];
   const stateFromStores = guild(504).useStateFromStores(items2, () => locale.locale);
   const obj3 = guild(504);
@@ -126,7 +126,7 @@ let closure_14 = noop.memo(function Guild(guild) {
   items4[2] = renderChannelContentDefault(obj8);
   obj5.children = items4;
   obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-  return tmp7(closure_9(guild(7121).PressableHighlight, obj4));
+  return tmp7(closure_9(guild(7124).PressableHighlight, obj4));
 });
 let closure_16 = noop.memo(function CategoryItemInner(arg0) {
   ({ name, onPress, note } = arg0);

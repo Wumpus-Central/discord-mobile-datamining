@@ -31,7 +31,7 @@ function ConjureAppSheetIcon(application) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { icon: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;

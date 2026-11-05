@@ -10,7 +10,7 @@ import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_6 = createStyles.createStyles({ buttonGroup: { paddingVertical: 0 } });
 let obj2 = { PLAY: "PLAY", CLAIM: "CLAIM" };
 let obj3 = { CLOSE: "CLOSE", HOW_TO_PLAY: "HOW_TO_PLAY" };
@@ -23,10 +23,11 @@ export default function OrbsArcadeSheetActions(game) {
   if (PLAY === undefined) {
     PLAY = obj2.PLAY;
   }
-  const secondaryAction = game.secondaryAction;
-  ({ direction, style } = game);
+  ({ secondaryAction, surface } = game);
+  ({ location: _location, direction, style } = game);
   closure_129_0 = game;
   const sheetKey = game.sheetKey;
+  closure_129_2 = surface;
   if (obj3.CLOSE === secondaryAction) {
     obj2 = { text: null, onPress: null };
     const intl2 = game(1113).intl;
@@ -44,7 +45,7 @@ export default function OrbsArcadeSheetActions(game) {
         const intl = game(1113).intl;
         obj.text = intl.string(game(1113).t["uz4M/z"]);
         obj.onPress = function onPress() {
-          return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id);
+          return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id, dependencyMap);
         };
         tmp4 = obj;
       }
@@ -75,7 +76,7 @@ export default function OrbsArcadeSheetActions(game) {
       let tmp19 = null;
       if (null != tmp7) {
         ({ text: obj6.text, onPress: obj6.onPress } = tmp7);
-        tmp19 = closure_4(tmp10(5768).Button, {
+        tmp19 = closure_4(tmp10(5770).Button, {
           grow: true,
           size: "lg",
           variant: "secondary",
@@ -90,7 +91,7 @@ export default function OrbsArcadeSheetActions(game) {
     }
     tmp16 = null;
     if (PLAY === tmp15.PLAY) {
-      const obj10 = { game, size: "lg" };
+      const obj10 = { game, size: "lg", location: _location, surface };
       tmp16 = closure_4(OrbsArcadePlayButtonDefault, obj10);
     }
   }

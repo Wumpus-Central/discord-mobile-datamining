@@ -497,18 +497,18 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4976).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4982);
+const DCFEventTypes = fn(4978).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4984);
 ({
   addCandidateContent: closure_8,
   removeCandidateContent: closure_9,
   isContentShown: closure_10,
   getCurrentlyShownCounts: closure_11,
 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(4974).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS];
+let items = [fn(4976).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
@@ -704,7 +704,7 @@ export function isTimeRecurringDismissibleContentDismissed(id, cooldownConfig) {
 export function isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
   THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
   id,
-  cooldownDurationMs,
+  timeRecurringConfig,
 ) {
   if (obj.disableNewUserDismissibleContent(THIRD_PARTY_OUTBOUND_PROMO_NAGBAR)) {
     return true;
@@ -735,17 +735,17 @@ export function isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
       }
     }
     let flag = false;
-    if (null != cooldownDurationMs) {
+    if (null != timeRecurringConfig) {
       flag = false;
       if (null != tmp8) {
         const _Date = Date;
-        const sum = tmp8 + cooldownDurationMs.cooldownDurationMs;
+        const sum = tmp8 + timeRecurringConfig.cooldownDurationMs;
         const timestamp = Date.now();
-        let tmp15 = null == cooldownDurationMs.showAfterTimestamp;
+        let tmp15 = null == timeRecurringConfig.showAfterTimestamp;
         if (!tmp15) {
-          tmp15 = timestamp >= cooldownDurationMs.showAfterTimestamp && tmp8 <= cooldownDurationMs.showAfterTimestamp;
+          tmp15 = timestamp >= timeRecurringConfig.showAfterTimestamp && tmp8 <= timeRecurringConfig.showAfterTimestamp;
           const tmp16 =
-            timestamp >= cooldownDurationMs.showAfterTimestamp && tmp8 <= cooldownDurationMs.showAfterTimestamp;
+            timestamp >= timeRecurringConfig.showAfterTimestamp && tmp8 <= timeRecurringConfig.showAfterTimestamp;
         }
         flag = timestamp < sum || !tmp15;
         const tmp17 = timestamp < sum || !tmp15;
@@ -832,18 +832,18 @@ export function UNSAFE_isSnowflakeBoundGuildDismissibleContentDismissed(GDM_INVI
   }
   obj = NewUserDismissibleContentRegistry;
 }
-export function isDismissibleContentBlockedByOverlay(found1, arg1, arg2) {
+export function isDismissibleContentBlockedByOverlay(content, arg1, arg2) {
   let tmp = arg1;
   if (arg1) {
     let hasItem = null == arg2;
     if (hasItem) {
-      hasItem = set.has(found1);
+      hasItem = set.has(content);
     }
     tmp = !hasItem;
   }
   return tmp;
 }
-export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildId, arg2, arg3) {
+export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildId, arg2, guildId) {
   closure_0 = PASSWORDLESS_UPSELL;
   importDefault = guildId;
   let hasUserHitDCCapResult = closure_10(PASSWORDLESS_UPSELL);
@@ -859,8 +859,8 @@ export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildI
     if (arg2 == null) {
       flag = false;
     }
-    let tmp6 = arg3;
-    if (arg3 == null) {
+    let tmp6 = guildId;
+    if (guildId == null) {
       tmp6 = null;
     }
     if (flag) {

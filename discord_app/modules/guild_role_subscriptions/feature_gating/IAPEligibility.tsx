@@ -73,7 +73,7 @@ export function canUseRoleSubscriptionIAP(guildId) {
 export function useCanUseRoleSubscriptionIAP(guildId) {
   _require = guildId;
   const memo = noop.useMemo(() => {
-    const str = guildId(6970).getSystemVersion();
+    const str = guildId(6973).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");

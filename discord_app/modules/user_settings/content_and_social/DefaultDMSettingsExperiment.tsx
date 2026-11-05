@@ -10,5 +10,5 @@ export function shouldAgeVerifyForDMDefaultOff() {
   const isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(
     AgeGatedFeature.AgeGatedFeature.DM_PRIVACY_SETTINGS,
   );
-  return AgeVerificationUtils.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
+  return AgeVerificationUtils.needsAgeVerification() && isFeatureAgeGatedResult;
 }

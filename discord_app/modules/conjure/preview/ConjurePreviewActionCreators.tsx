@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
-import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import leaveFrame from "../../frames/leaveFrame.tsx";
+import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import conjurePausedPreviewViews from "conjurePausedPreviewViews.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
@@ -20,7 +20,7 @@ let closure_8 = async function _loadConjurePreviewDm() {
   closure_130_1(closure_130_2[7]).dispatch({ type: "CHANNEL_CREATE", channel: closure_129_1 });
   return closure_129_1.id;
 };
-let closure_4 = fn(4994).createChannelRecordFromServer;
+let closure_4 = fn(4996).createChannelRecordFromServer;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");
@@ -32,7 +32,7 @@ export function reloadConjureProjectFrames(projectId) {
   const project = ConjureProjectStore.getProject(projectId);
   if (null != project) {
     ConjurePlatformUtilsDefault.reloadAppFrames(project.application_id);
-    if (!obj2.isPreviewlessProject(project)) {
+    if (obj2.usesPreviewApp(project)) {
       let prop = project.preview_application_id;
       if (prop == null) {
         prop = null;

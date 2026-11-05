@@ -1,5 +1,6 @@
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import MediaTakedownRegulation from "../in_app_reports/MediaTakedownRegulation.tsx";
 import RegionalFeatureConfigStore from "RegionalFeatureConfigStore.tsx";
 
 const require = globalThis.__r;
@@ -42,4 +43,13 @@ export function useHasTeenDefaults() {
 }
 export function shouldCollectAppStoreSignal() {
   return RegionalFeatureConfigStore.shouldCollectAppStoreSignal();
+}
+export function isTidaMediaTakedownRegion() {
+  return RegionalFeatureConfigStore.isMediaTakedownRegulation(MediaTakedownRegulation.MediaTakedownRegulation.TIDA);
+}
+export function useIsTidaMediaTakedownRegion() {
+  items = [RegionalFeatureConfigStore];
+  return initialize.useStateFromStores(items, () =>
+    mediaTakedownRegulation.isMediaTakedownRegulation(require("MediaTakedownRegulation").MediaTakedownRegulation.TIDA),
+  );
 }

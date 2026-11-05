@@ -15,29 +15,29 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "current",
-    borderTopRightRadius: "ti",
-    borderBottomLeftRadius: "done",
+    borderTopLeftRadius: "ty",
+    borderTopRightRadius: "ao",
+    borderBottomLeftRadius: "add",
     borderBottomRightRadius: "T",
     divider: "r",
     dividerColor: "isArray",
     dividerPaddingLeft: "Array",
-    dividerPaddingRight: "ti",
-    placeholderShape: "color",
-    placeholderShapeColor: "messageId",
-    placeholderShapeCount: "Array",
+    dividerPaddingRight: "ao",
+    placeholderShape: "useMemo",
+    placeholderShapeColor: "y",
+    placeholderShapeCount: "r",
     placeholderShapeGap: "isArray",
-    placeholderShapePaddingHorizontal: "ti",
-    placeholderShapePaddingVertical: "justifyContent",
-    placeholderFeedBackgroundColor: "h",
+    placeholderShapePaddingHorizontal: "ao",
+    placeholderShapePaddingVertical: "round",
+    placeholderFeedBackgroundColor: "Number",
     placeholderFeedColor: "a",
     placeholderFeedLabelPadding: "isArray",
     placeholderFeedLabelPaddingInnerRatio: "Array",
-    placeholderFeedLabelSize: "children",
-    placeholderFeedLabelSecondarySize: "keys",
+    placeholderFeedLabelSize: "id",
+    placeholderFeedLabelSecondarySize: "__packager_asset",
     placeholderFeedPadding: "x",
-    placeholderFeedShape: "ti",
-    placeholderFeedShapeSize: "add",
+    placeholderFeedShape: "ao",
+    placeholderFeedShapeSize: "to",
     placeholderType: NONE,
     width: true,
     height: true,
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7367).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7370).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

@@ -43,7 +43,7 @@ export function openUserProfile(arg0) {
             if (null == authStore.getUser(require)) {
               v2 = 3;
               c3 = 1;
-              const obj4 = { value: tmp3(8893).getUser(require), done: false };
+              const obj4 = { value: tmp3(8898).getUser(require), done: false };
               return obj4;
             }
           }
@@ -84,7 +84,7 @@ export function openUserProfile(arg0) {
           const obj8 = { userId: closure_128_0, onClose: closure_128_2 };
           v2 = 2;
           c3 = 1;
-          const obj9 = { value: v2(8891)(obj8), done: false };
+          const obj9 = { value: v2(8896)(obj8), done: false };
           return obj9;
         }
       } catch (tmp28) {

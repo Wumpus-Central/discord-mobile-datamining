@@ -9,7 +9,7 @@ import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_5 = fn(8904).getSingleRequirementThreshold;
+let closure_5 = fn(8909).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -72,9 +72,9 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(10789).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(10796).GiftingBadgeExperiment;
   let enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(10796).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(10802).GiftingBadgeCoachmarkAudienceExperiment;
   let str = "-DISABLED";
   if (enabled2) {
     str = "";
@@ -94,10 +94,10 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
     return flag;
   });
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(5171).useIsDismissibleContentDismissed_UNSAFE(
-    tmp(4974).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+  const result = stateFromStores(5173).useIsDismissibleContentDismissed_UNSAFE(
+    tmp(4976).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
   );
-  const tmpResult3 = stateFromStores(5171);
+  const tmpResult3 = stateFromStores(5173);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () =>
     badgeById.getBadgeById(stateFromStores(dependencyMap[10]).BadgeId.GIFTING),

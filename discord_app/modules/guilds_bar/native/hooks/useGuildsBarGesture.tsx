@@ -7,7 +7,7 @@ import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import shared from "../../../../design/shared.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
 import FastList from "../../../../lib/native/FastList.tsx";
 import ContextMenuState from "../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -242,7 +242,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "dispatch", positionPercentage: false };
+    sectionItemFromPosition = { item: "sa", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -274,8 +274,8 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6907).GuildsNodeType;
-const GuildsBarConstants = fn(18612);
+const GuildsNodeType = fn(6910).GuildsNodeType;
+const GuildsBarConstants = fn(18642);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
@@ -285,7 +285,7 @@ module_1652 = fn(1652);
 obj.itemMeasurements = module_1652.makeMutable([]);
 module_1652 = fn(1652);
 obj.activeIndex = module_1652.makeMutable(-1);
-let closure_15 = debounce(fn(5384).triggerHapticFeedback, 16);
+let closure_15 = debounce(fn(5386).triggerHapticFeedback, 16);
 let closure_16 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -356,7 +356,7 @@ export default function useGuildsBarGesture() {
       listInsets: gestureState.listInsets,
       dragDropInProgress: gestureState.dragDropInProgress,
     }),
-    require("../../../../../_runtime/metro/05056__.js").shallow,
+    require("../../../../../_runtime/metro/05058__.js").shallow,
   );
   let gestureState = tmp9.gestureState;
   let scrollPosition = tmp9.scrollPosition;
@@ -379,7 +379,7 @@ export default function useGuildsBarGesture() {
       arr = Array.from(set);
     }
     return arr;
-  }, require("../../../../../_runtime/metro/05056__.js").shallow);
+  }, require("../../../../../_runtime/metro/05058__.js").shallow);
   const effect = noop.useEffect(() => {
     const current = _undefined5.current;
     scrollPosition = undefined;
@@ -644,7 +644,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Object", overSpecs: "Array" });
+    state1.setStateShallow({ dragSpecs: "Path", overSpecs: "count" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -843,10 +843,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(10054).ContextMenuStore;
+        const ContextMenuStore = tmp66(10062).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(10054).hideContextMenu();
-          const tmp66Result = tmp66(10054);
+          tmp66(10062).hideContextMenu();
+          const tmp66Result = tmp66(10062);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -887,9 +887,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(7377).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(7380).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(7377).FastListItemTypes.SECTION === type) {
+                    if (tmp66(7380).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";
@@ -1065,7 +1065,7 @@ export default function useGuildsBarGesture() {
   }, items4);
   let obj7 = require("../../../../../_runtime/metro/01652__.js");
   let items5 = [callback4];
-  const onFastListScrollWorklet = tmp(17323).useExternalScrollEventHandler({ id: "guilds" });
+  const onFastListScrollWorklet = tmp(17349).useExternalScrollEventHandler({ id: "guilds" });
   let items6 = [
     dragDropInProgress,
     dragRegion,

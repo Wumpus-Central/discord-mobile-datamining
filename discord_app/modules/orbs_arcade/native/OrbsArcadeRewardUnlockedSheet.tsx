@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { chain: { marginHorizontal: nativeDefault.space.PX_8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -16,6 +16,7 @@ const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcade
 export default function OrbsArcadeRewardUnlockedSheet(gameId) {
   gameId = gameId.gameId;
   let stateFromStores1;
+  ({ surface, unlockedRewardIds } = gameId);
   const tmp = closure_8();
   items = [OrbsArcadeStore];
   const items1 = [gameId];
@@ -94,18 +95,22 @@ export default function OrbsArcadeRewardUnlockedSheet(gameId) {
     const obj8 = {
       game: stateFromStores,
       gameState: stateFromStores1,
-      grantAnimatedOnOpenRewardIds: gameId.unlockedRewardIds,
+      grantAnimatedOnOpenRewardIds: unlockedRewardIds,
     };
     obj7.children = closure_6(stateFromStores(tmp3[13]), obj8);
     const items6 = [closure_6(View, obj7)];
     const obj9 = {
       game: stateFromStores,
       sheetKey: "OrbsArcadeRewardUnlockedSheet",
+      location: null,
+      surface: null,
       primaryAction: null,
       secondaryAction: null,
     };
-    let CLAIM = null;
     const tmp2Result = tmp2(tmp3[7]);
+    obj9.location = tmp2(tmp3[15]).OrbsArcadeCtaLocation.REWARD_UNLOCKED_SHEET;
+    obj9.surface = surface;
+    let CLAIM = null;
     if (length > 0) {
       CLAIM = tmp2(tmp3[14]).OrbsArcadeSheetPrimaryAction.CLAIM;
     }

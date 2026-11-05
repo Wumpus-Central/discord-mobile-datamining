@@ -32,7 +32,7 @@ export const AgeVerificationModalEntryPoint = {
   AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS: "age_restricted_servers_access_settings",
   FAMILY_CENTER_CONNECTION: "family_center_connection",
   PARENTAL_CONSENT_LOCKOUT: "parental_consent_lockout",
-  TINY_BRONCO_POPOVER: "tiny_bronco_popover",
+  AGE_NOTICE_POPOVER: "tiny_bronco_popover",
 };
 export const AgeVerificationModalVersion = {
   PRIMARY: 1,
@@ -59,7 +59,7 @@ export const AgeVerificationDmCta = {
   CONNECT_TO_TEEN: "connect_to_teen",
   MANUAL_REVIEW: "manual_review",
 };
-export const NsfwSpaceWarningModalType = fn(6865).NsfwSpaceWarningModalType;
+export const NsfwSpaceWarningModalType = fn(6868).NsfwSpaceWarningModalType;
 export const NsfwSpaceWarningModalCta = {
   NSFW_CHANNEL_AGREE_CTA: "nsfw_channel_agree_cta",
   NSFW_CHANNEL_DISAGREE_CTA: "nsfw_channel_disagree_cta",

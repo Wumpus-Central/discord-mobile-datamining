@@ -130,7 +130,7 @@ let closure_16 = async function _setAppIcon(arg0) {
           closure_131_2 = flag;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -194,7 +194,7 @@ let closure_16 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(10159);
+const AppIconConstants = fn(10167);
 ({
   getDefaultIcon: closure_6,
   getIconById: metroImportDefault,

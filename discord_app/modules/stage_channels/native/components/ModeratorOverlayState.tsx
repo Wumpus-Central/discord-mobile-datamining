@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/native/components/ModeratorOverlayState.tsx
-import _mod5056 from "../../../../../_runtime/metro/05056__.js";
+import _mod5058 from "../../../../../_runtime/metro/05058__.js";
 import identity from "../../../../../_runtime/metro/01254__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -20,11 +20,11 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export function useModeratorOverlayChannelState(id) {
   closure_0 = id;
-  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod5056.shallow);
+  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod5058.shallow);
   items = [
     !closure_2(
       (overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds,
-      _mod5056.shallow,
+      _mod5058.shallow,
     ).has(id),
     () => closure_1(closure_0),
   ];

@@ -217,6 +217,7 @@ export const ImpressionNames = {
   ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_TIER_STEP: "impression_role_subscription_initial_setup_modal_tier_step",
   ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR: "impression_role_subscription_listing_template_selector",
   ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE: "impression_role_subscription_listing_upsell_error_page",
+  SERVER_HUB: "impression_server_hub",
   SHELF_ACTIVITY_DETAILS: "impression_shelf_activity_details",
   SHOP_CARD: "impression_shop_card",
   SHOP_PRODUCT_DETAIL: "impression_shop_product_detail",

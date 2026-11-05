@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/age_notice/native/useDismissOnce.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ContentDismissActionType = fn(4987).ContentDismissActionType;
+const ContentDismissActionType = fn(4989).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/useDismissOnce.tsx");
 

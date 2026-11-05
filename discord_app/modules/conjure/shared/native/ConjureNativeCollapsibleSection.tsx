@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = { root: { gap: nativeDefault.space.PX_8 }, header: null, headerTrailing: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.header = {
@@ -59,7 +59,7 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
   if (flag) {
     const obj2 = { style: tmp.header, children: null };
     const obj3 = { variant: "body-sm/medium", color: "text-subtle", children: title };
-    items = [React4(tmp4(5761).Text, obj3)];
+    items = [React4(tmp4(5763).Text, obj3)];
     const obj4 = { style: tmp.headerTrailing, children: null };
     const items1 = [meta];
     let tmp9Result = null;
@@ -83,7 +83,7 @@ export default function ConjureNativeCollapsibleSection(showHeader) {
         obj5.onPress = onToggleExpanded;
         const obj7 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
         obj5.children = React4(ChevronSmallRightIcon, obj7);
-        tmp9Result = React4(tmp4(9137).PressableScale, obj5);
+        tmp9Result = React4(tmp4(9144).PressableScale, obj5);
       }
     }
     items1[1] = tmp9Result;

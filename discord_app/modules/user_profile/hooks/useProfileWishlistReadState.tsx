@@ -40,27 +40,34 @@ export default function useProfileWishlistReadState(ownerId) {
     },
     items1,
   );
-  const tmp6 = flag(stateFromStores1.useState(undefined), 2);
-  const first = tmp6[0];
-  let tmp8 = flag;
-  if (flag) {
-    tmp8 = null != ownerId;
-  }
-  if (tmp8) {
-    tmp8 = null != profileReadStateConfigPeek;
-  }
-  if (tmp8) {
-    tmp8 = undefined === first;
-  }
-  if (tmp8) {
-    let tmp11 = null;
-    if (profileReadStateConfigPeek.enabled) {
-      tmp11 = stateFromStores;
-    }
-    tmp6[1](tmp11);
-  }
   let obj2 = ownerId(wishlistId[5]);
   const obj3 = stateFromStores1;
+  [tmp7, tmp8] = flag(stateFromStores1.useState(undefined), 2);
+  let tmp9 = flag;
+  if (!flag) {
+    tmp9 = undefined === tmp7;
+  }
+  if (!tmp9) {
+    tmp8(undefined);
+  }
+  let tmp11 = flag;
+  if (flag) {
+    tmp11 = null != ownerId;
+  }
+  if (tmp11) {
+    tmp11 = null != profileReadStateConfigPeek;
+  }
+  if (tmp11) {
+    tmp11 = undefined === tmp7;
+  }
+  if (tmp11) {
+    let tmp14 = null;
+    if (profileReadStateConfigPeek.enabled) {
+      tmp14 = stateFromStores;
+    }
+    tmp8(tmp14);
+  }
+  const tmp6 = flag(stateFromStores1.useState(undefined), 2);
   const items2 = [closure_4, UserProfileStore];
   const items3 = [ownerId, wishlistId];
   stateFromStores1 = tmp(tmp2[5]).useStateFromStores(
@@ -94,8 +101,8 @@ export default function useProfileWishlistReadState(ownerId) {
     },
     items3,
   );
-  closure_4 = tmp14;
-  const items4 = [flag, undefined !== first, stateFromStores1, ownerId];
+  closure_4 = tmp17;
+  const items4 = [flag, undefined !== tmp7, stateFromStores1, ownerId];
   const effect = obj3.useEffect(() => {
     let tmp = flag;
     if (flag) {
@@ -111,5 +118,5 @@ export default function useProfileWishlistReadState(ownerId) {
       ProfileReadStateActionCreators.ackProfileWishlist(ownerId);
     }
   }, items4);
-  return first;
+  return tmp7;
 }

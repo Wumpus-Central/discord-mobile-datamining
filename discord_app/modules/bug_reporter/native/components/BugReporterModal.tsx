@@ -464,14 +464,14 @@ class BugCreateScreen {
                                 const intl2 = closure_2_0(1113).intl;
                                 obj5.text = intl2.string(closure_2_0(1113).t.jB8yOL);
                                 obj5.duration = duration;
-                                closure_2_1(5846).open("BUG_REPORT_BUG_SUBMITTED", obj5);
-                                const obj6 = closure_2_1(5846);
+                                closure_2_1(5849).open("BUG_REPORT_BUG_SUBMITTED", obj5);
+                                const obj6 = closure_2_1(5849);
                               } else {
                                 const obj7 = { text: null, variant: "critical" };
                                 const intl = closure_2_0(1113).intl;
                                 obj7.text = intl.string(closure_2_0(1113).t["4t1o0u"]);
-                                closure_2_1(5846).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
-                                const obj4 = closure_2_1(5846);
+                                closure_2_1(5849).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                                const obj4 = closure_2_1(5849);
                               }
                               c6 = 3;
                             }
@@ -517,7 +517,7 @@ class BugCreateScreen {
                         c5 = 1;
                         c6 = 1;
                         const obj11 = {
-                          value: closure_2_0(11277).submitReport(closure_131_0, closure_131_1, closure_131_2),
+                          value: closure_2_0(11285).submitReport(closure_131_0, closure_131_1, closure_131_2),
                           done: false,
                         };
                         return obj11;
@@ -542,10 +542,10 @@ class BugCreateScreen {
                     let intl2 = handleSubmit(1113).intl;
                     obj5.text = intl2.string(handleSubmit(1113).t.Uuqbcm);
                     obj5.duration = duration;
-                    screenshot(5846).open("BUG_REPORT_SUBMITTING_BUG", obj5);
+                    screenshot(5849).open("BUG_REPORT_SUBMITTING_BUG", obj5);
                     closure_1_16(true);
                     first8();
-                    let obj9 = screenshot(5846);
+                    let obj9 = screenshot(5849);
                   }
                   priority = 3;
                 } else {
@@ -554,7 +554,7 @@ class BugCreateScreen {
                     let obj7 = { text: null, variant: "critical" };
                     let intl = handleSubmit(1113).intl;
                     obj7.text = intl.string(handleSubmit(1113).t["4t1o0u"]);
-                    screenshot(5846).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                    screenshot(5849).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
                     callback(false);
                     priority = 3;
                     const obj8 = { value: undefined, done: true };
@@ -562,7 +562,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(11276).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(11284).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -916,7 +916,7 @@ class BugCreateScreen {
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
         return ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(11313, dependencyMap.paths),
+          asyncRequireImpl(11321, dependencyMap.paths),
           "BugReporterFeatureActionSheet",
           { features: null != first7 ? first7.features : [], feature: first8, setFeature },
         );
@@ -940,7 +940,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   container: { padding: 16 },
   attachmentCarousel: { justifyContent: "center", minWidth: "100%" },
@@ -1004,6 +1004,6 @@ export default function BugReportModal(screenshotUri) {
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(7306).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(7309).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 }
 export { BugCreateScreen };

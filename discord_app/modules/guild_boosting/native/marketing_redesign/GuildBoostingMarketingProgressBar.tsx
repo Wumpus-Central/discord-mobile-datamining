@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05725_LinearGradient.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
 import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker.tsx";
@@ -18,14 +18,14 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1072).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj2 = {
   progressBarContainer: {
     display: "flex",
     alignItems: "center",
     width: "100%",
     marginTop: 40,
-    paddingHorizontal: fn(15701).MARKER_DIMENSIONS / 2 + 34,
+    paddingHorizontal: fn(15714).MARKER_DIMENSIONS / 2 + 34,
   },
   progressBar: { height: 54, maxWidth: 660, width: "100%" },
   progressBarScrubber: null,
@@ -38,12 +38,12 @@ const obj3 = {
   alignItems: "center",
   width: "100%",
   marginTop: 40,
-  paddingHorizontal: fn(15701).MARKER_DIMENSIONS / 2 + 34,
+  paddingHorizontal: fn(15714).MARKER_DIMENSIONS / 2 + 34,
 };
 obj2.progressBarScrubber = {
   height: 8,
-  top: fn(15701).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(15701).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(15714).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(15714).MARKER_DIMENSIONS / 2 + 2,
 };
 let size = {
   borderRadius: 8,

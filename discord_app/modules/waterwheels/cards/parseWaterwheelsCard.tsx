@@ -1,4 +1,5 @@
 // discord_app/modules/waterwheels/cards/parseWaterwheelsCard.tsx
+import LoggerDefault from "../../debug/Logger.tsx";
 import _mod12 from "../../../../_runtime/metro/00012__.js";
 import WaterwheelsCardTypes from "WaterwheelsCardTypes.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -6,6 +7,30 @@ import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWi
 require = fn;
 function isRecord(arg0) {
   return _mod12.isPlainObject(arg0);
+}
+function isActionValid(value) {
+  if (obj.isPlainObject(value.value)) {
+    const type = value.type;
+    if (WaterwheelsCardTypes.WaterwheelsActionType.JOIN_GUILD !== type) {
+      if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD !== type) {
+        if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GAME === type) {
+          return typeof value.value.game_id === "string";
+        } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_CONNECTION === type) {
+          return typeof value.value.provider === "string";
+        } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_URI === type) {
+          return typeof value.value.url === "string";
+        } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_NUDGE === type) {
+          return "enable_notifications" === value.value.nudge;
+        } else {
+          return false;
+        }
+      }
+    }
+    return typeof value.value.guild_id === "string";
+  } else {
+    return false;
+  }
+  obj = _mod12;
 }
 function mapLayout(layout) {
   const type = layout.type;
@@ -64,19 +89,21 @@ function mapLayout(layout) {
   }
 }
 function reject(reason) {
+  logger.warn("Rejected Waterwheels card: " + reason);
   return { ok: false, reason };
 }
 let closure_2 = ["image_url", "action_label"];
 let closure_3 = ["header", "items"];
 let closure_5 = ["post", "carousel", "server_row"];
+const logger = new LoggerDefault("WaterwheelsCardParser");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/cards/parseWaterwheelsCard.tsx");
 
 export function parseWaterwheelsCard(id) {
   try {
     if (isRecord(id)) {
-      if (null != id.id) {
-        if (null != id.type) {
+      if (typeof id.id === "string") {
+        if (typeof id.type === "string") {
           if (isRecord(id.layout)) {
             const _Array = Array;
             if (Array.isArray(id.actions)) {
@@ -98,17 +125,22 @@ export function parseWaterwheelsCard(id) {
                       return reject("unknown_eligibility");
                     }
                   }
-                  const obj = { id: null, type: null, layout: null, actions: null, clientEligibility: null };
-                  ({ id: obj.id, type: obj.type } = id);
-                  obj.layout = mapLayout(id.layout);
-                  ({ actions: obj.actions, client_eligibility } = id);
-                  if (client_eligibility == null) {
-                    client_eligibility = null;
+                  const actions2 = id.actions;
+                  if (actions2.every(isActionValid)) {
+                    const obj = { id: null, type: null, layout: null, actions: null, clientEligibility: null };
+                    ({ id: obj.id, type: obj.type } = id);
+                    obj.layout = mapLayout(id.layout);
+                    ({ actions: obj.actions, client_eligibility } = id);
+                    if (client_eligibility == null) {
+                      client_eligibility = null;
+                    }
+                    const obj2 = { ok: true, card: null };
+                    obj.clientEligibility = client_eligibility;
+                    obj2.card = obj;
+                    return obj2;
+                  } else {
+                    return reject("invalid_card");
                   }
-                  const obj2 = { ok: true, card: null };
-                  obj.clientEligibility = client_eligibility;
-                  obj2.card = obj;
-                  return obj2;
                 } else {
                   return reject("unknown_action");
                 }

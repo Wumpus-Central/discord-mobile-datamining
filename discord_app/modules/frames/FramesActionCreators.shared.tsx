@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import getChannelIdForEmbeddedSurfaceDefault from "../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
 import createProxyTicket from "../activities/createProxyTicket.tsx";
-import leaveCurrentEmbeddedActivity from "../activities/utils/leaveCurrentEmbeddedActivity.tsx";
 import leaveFrame from "leaveFrame.tsx";
+import leaveCurrentEmbeddedActivity from "../activities/utils/leaveCurrentEmbeddedActivity.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import FramesStore from "FramesStore.tsx";
@@ -69,7 +69,7 @@ let closure_13 = async function _launchFrame(arg0) {
             closure_130_12 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "flexDirection", done: null };
+            return { value: "flexDirection", done: true };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {
@@ -269,7 +269,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(11125);
+    obj2 = obj2(11078);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -445,7 +445,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(6982);
+const FramesConstants = fn(6985);
 ({
   FrameIntent: closure_6,
   FrameLayoutModes: metroImportDefault,
@@ -453,7 +453,7 @@ const FramesConstants = fn(6982);
   isLaunched: closure_9,
   makeFrameId: closure_10,
 } = FramesConstants);
-const ActivityPanelModes = fn(5791).ActivityPanelModes;
+const ActivityPanelModes = fn(5793).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");

@@ -15,7 +15,7 @@ function closeCleanup() {
 }
 function CleanupScreen() {
   const tmp3 = closure_13(loading(1627)().bottom);
-  const tmp4 = loading(18454)(closeCleanup);
+  const tmp4 = loading(18484)(closeCleanup);
   _require = tmp4;
   loading = tmp4.loading;
   let obj = { style: tmp3.container, spacing: 0, children: null };
@@ -65,7 +65,7 @@ function CleanupScreen() {
       }
       return closure_2_10(TableRadioRow.TableRadioRow, { label: stringResult, value: days, disabled: loading }, days);
     });
-    const items2 = [closure_10(tmp6(7199).TableRadioGroup, obj9)];
+    const items2 = [closure_10(tmp6(7202).TableRadioGroup, obj9)];
     const obj10 = { title: null, hasIcons: false, value: null, onChange: null, children: null };
     const intl6 = tmp6(1113).intl;
     obj10.title = intl6.string(tmp(3577).KIzpqi);
@@ -74,15 +74,15 @@ function CleanupScreen() {
       return scope.setScope(arg0);
     };
     const obj11 = { label, value: value2, disabled: loading };
-    const items3 = [closure_10(tmp6(7202).TableRadioRow, obj11)];
+    const items3 = [closure_10(tmp6(7205).TableRadioRow, obj11)];
     const obj12 = { label: null, value: null, disabled: null };
     const intl7 = tmp6(1113).intl;
     obj12.label = intl7.string(tmp(3577)["gOUr+P"]);
     obj12.value = value;
     obj12.disabled = loading;
-    items3[1] = closure_10(tmp6(7202).TableRadioRow, obj12);
+    items3[1] = closure_10(tmp6(7205).TableRadioRow, obj12);
     obj10.children = items3;
-    items2[1] = closure_11(tmp6(7199).TableRadioGroup, obj10);
+    items2[1] = closure_11(tmp6(7202).TableRadioGroup, obj10);
     obj7.children = items2;
     tmp5Result = closure_11(closure_12, obj7);
   }
@@ -97,7 +97,7 @@ function CleanupScreen() {
     };
     const intl8 = tmp6(1113).intl;
     obj13.children = intl8.string(tmp(3577).toOYQw);
-    tmp7Result = closure_10(tmp6(5761).Text, obj13);
+    tmp7Result = closure_10(tmp6(5763).Text, obj13);
   }
   items1[2] = tmp7Result;
   obj3.children = items1;
@@ -120,7 +120,7 @@ function CleanupScreen() {
   return closure_11(require("Stack/Stack").Stack, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const FavoritesConstants = fn(5003);
+const FavoritesConstants = fn(5005);
 ({
   FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: hasOwnProperty,
   FAVORITES_PRUNE_INACTIVE_THREADS_DAY_OPTIONS: closure_6,
@@ -130,7 +130,7 @@ const FavoritesConstants = fn(5003);
 } = FavoritesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },

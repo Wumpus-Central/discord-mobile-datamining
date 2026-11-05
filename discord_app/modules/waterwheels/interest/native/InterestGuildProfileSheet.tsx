@@ -5,8 +5,8 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05400_BottomSheetModal.js";
-import LinearGradientDefault from "../../../../../_runtime/05723_LinearGradient.js";
+import BottomSheetModal from "../../../../../_runtime/05402_BottomSheetModal.js";
+import LinearGradientDefault from "../../../../../_runtime/05725_LinearGradient.js";
 import ActionSheetHeaderBar from "../../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
 import GuildProfileSheetBodyDefault from "../../../guild_profile/native/components/GuildProfileSheetBody.tsx";
 import InterestGuildJoinButtonDefault from "InterestGuildJoinButton.tsx";
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_9 = createStyles.createStyles((paddingBottom, paddingBottom2) => {
   const obj = {
     body: { paddingBottom: nativeDefault.space.PX_8 },
@@ -43,28 +43,28 @@ const result = size.fileFinishedImporting("modules/waterwheels/interest/native/I
 
 export default function InterestGuildProfileSheet(guildId) {
   guildId = guildId.guildId;
-  ({ guildName: importDefault, joins: dependencyMap } = guildId);
-  c7 = undefined;
+  ({ guildName: importDefault, onJoinTapped: dependencyMap, onJoinResult: _slicedToArray } = guildId);
   c8 = undefined;
+  c9 = undefined;
   let interestGuildProfileSheetLayout;
-  closure_10 = undefined;
+  closure_11 = undefined;
   let onLayout;
   let onLayout2;
   let colors;
   const tmp3 = useThemeDefault();
-  _slicedToArray = guildId(5732).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp3);
-  let obj = guildId(5732);
-  const token = guildId(5732).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-  let obj2 = guildId(5732);
-  const bottomSheetRef1 = guildId(8882).useBottomSheetRef();
+  noop = guildId(5734).useToken(nativeDefault.colors.INTERACTIVE_TEXT_HOVER, tmp3);
+  let obj = guildId(5734);
+  const token = guildId(5734).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  let obj2 = guildId(5734);
+  const bottomSheetRef1 = guildId(8887).useBottomSheetRef();
   const bottomSheetRef = bottomSheetRef1.bottomSheetRef;
   const bottomSheetClose = bottomSheetRef1.bottomSheetClose;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  const obj3 = guildId(8882);
-  [tmp7, c7] = token.useState(0);
-  const tmp6 = _slicedToArray(token.useState(0), 2);
-  [tmp9, c8] = token.useState(0);
-  const tmp8 = _slicedToArray(token.useState(0), 2);
+  const obj3 = guildId(8887);
+  [tmp7, c8] = noop.useState(0);
+  const tmp6 = _slicedToArray(noop.useState(0), 2);
+  [tmp9, c9] = noop.useState(0);
+  const tmp8 = _slicedToArray(noop.useState(0), 2);
   let obj6 = {
     windowHeight: useWindowDimensionsDefault({ ignoreKeyboard: true }).height,
     contentHeight: tmp7,
@@ -76,8 +76,8 @@ export default function InterestGuildProfileSheet(guildId) {
   }
   obj6.footerHeight = sum;
   obj6.safeAreaBottom = bottom;
-  interestGuildProfileSheetLayout = guildId(19851).getInterestGuildProfileSheetLayout(obj6);
-  closure_10 = interestGuildProfileSheetLayout(bottom, interestGuildProfileSheetLayout.reservedBottom);
+  interestGuildProfileSheetLayout = guildId(19884).getInterestGuildProfileSheetLayout(obj6);
+  closure_11 = c9(bottom, interestGuildProfileSheetLayout.reservedBottom);
   onLayout = obj4.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.height);
   }, []);
@@ -102,17 +102,23 @@ export default function InterestGuildProfileSheet(guildId) {
     items = [_modDef671(token).alpha(0).hex(), token];
     return items;
   }, items1);
-  return c7(GuildProfileSheetBodyDefault, {
+  return bottomSheetClose(GuildProfileSheetBodyDefault, {
     guildId,
     onClose: bottomSheetClose,
     banner(guildProfile) {
-      return _undefined(guildName(joins[15]), { profile: guildProfile });
+      return bottomSheetClose(guildName(onJoinTapped[15]), { profile: guildProfile });
     },
     disableNameNavigation: true,
     footer() {
       const obj = {
-        style: closure_10.footerStack,
-        children: metroImportDefault(InterestGuildJoinButtonDefault, { guildId, guildName, joins, fullWidth: true }),
+        style: closure_11.footerStack,
+        children: metroImportDefault(InterestGuildJoinButtonDefault, {
+          guildId,
+          guildName,
+          fullWidth: true,
+          onJoinTapped,
+          onJoinResult,
+        }),
       };
       return metroImportDefault(View, obj);
     },
@@ -130,11 +136,11 @@ export default function InterestGuildProfileSheet(guildId) {
       const obj2 = {
         start: VerticalGradient.START,
         end: { x: 0, y: 0.5 },
-        style: closure_10.footer,
+        style: closure_11.footer,
         colors,
         children: metroImportDefault(View, {
           onLayout: onLayout2,
-          style: closure_10.footerContent,
+          style: closure_11.footerContent,
           children: children2,
         }),
       };
@@ -142,9 +148,9 @@ export default function InterestGuildProfileSheet(guildId) {
       const obj4 = {
         enableFooterMarginAdjustment: false,
         scrollEnabled: interestGuildProfileSheetLayout.scrollable,
-        contentContainerStyle: closure_10.scrollContent,
-        style: closure_10.scrollView,
-        children: metroImportDefault(View, { onLayout, style: closure_10.body, children }),
+        contentContainerStyle: closure_11.scrollContent,
+        style: closure_11.scrollView,
+        children: metroImportDefault(View, { onLayout, style: closure_11.body, children }),
       };
       items = [metroImportDefault(BottomSheetModal.BottomSheetScrollView, obj4)];
       const obj6 = { variant: "floating", tabStyle: { backgroundColor }, onPress: bottomSheetClose };

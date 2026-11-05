@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
 import _mod1705 from "../../../../../_runtime/metro/01705__.js";
 import _modDef3995 from "../../intl/ConjureUntranslated.messages.js";
-import LegacyBaseButton from "../../../../../_runtime/05428_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05430_LegacyBaseButton.js";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import VoiceNormalIcon2 from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import getGuildIdForEmbeddedSurfaceDefault from "../../../embedded_apps/utils/getGuildIdForEmbeddedSurface.tsx";
@@ -30,7 +30,7 @@ function StaticCard(arg0) {
   const obj2 = { style: tmp.card, children: null };
   let tmp9 = null;
   if (null != stateFromStores) {
-    const obj3 = { guild: stateFromStores, size: tmp5(7098).GuildIconSizes.NORMAL };
+    const obj3 = { guild: stateFromStores, size: tmp5(7101).GuildIconSizes.NORMAL };
     tmp9 = closure_10(GuildIconDefault, obj3);
     const tmp2Result = GuildIconDefault;
   }
@@ -66,12 +66,12 @@ function SoundBadge(frame) {
 }
 const View = fn(17).View;
 let ThemeTypes = fn(1072).ThemeTypes;
-const FramesConstants = fn(6982);
+const FramesConstants = fn(6985);
 ({ asLaunched: closure_8, FrameLayoutModes } = FramesConstants);
-const MIN_PAN_GESTURE_MOVE = fn(11412).MIN_PAN_GESTURE_MOVE;
+const MIN_PAN_GESTURE_MOVE = fn(11420).MIN_PAN_GESTURE_MOVE;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-let DeviceUtils = fn(5098);
+let DeviceUtils = fn(5100);
 DeviceUtils = DeviceUtils.getRamSize();
 if (DeviceUtils == null) {
   DeviceUtils = Infinity;
@@ -81,9 +81,9 @@ let closure_13 = { mass: 0.25, damping: 40, stiffness: 300, overshootClamping: t
 const duration = { mass: 0.4, damping: 22, stiffness: 220 };
 let presentation = {
   layoutMode: FrameLayoutModes.PIP,
-  portraitSafeAreasConfig: fn(19275).DEFAULT_PORTRAIT_LETTERBOX_CONFIG,
+  portraitSafeAreasConfig: fn(19306).DEFAULT_PORTRAIT_LETTERBOX_CONFIG,
 };
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let obj = {
   window: null,
   content: null,
@@ -109,7 +109,7 @@ let obj4 = { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.lg }
 obj.interactiveMask = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none };
 let obj5 = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none };
 obj.handle = {
-  height: fn(19396).INTERACTIVE_HANDLE_HEIGHT,
+  height: fn(19427).INTERACTIVE_HANDLE_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
   borderTopLeftRadius: nativeDefault.radii.lg,
@@ -168,7 +168,7 @@ let closure_25 = {
   code: "(function ConjureAppPictureInPictureTsx7(){let[dragging,overCloseTarget,closing,position,clampToBounds,getBounds,avoidance,DRAGGING_SCALE,closeTargetCenter,windowSize,OVER_CLOSE_TARGET_SCALE,FOLLOW_SPRING,SETTLE_SPRING,withTiming,CLOSE_ANIMATION_MS,withSpring]=this.__closure;const isDragging=dragging.get();const onCloseTarget=overCloseTarget.get()||closing.get();let{x:x,y:y}=isDragging?position.get():clampToBounds(position.get(),getBounds(avoidance.get()));let scale=isDragging?DRAGGING_SCALE:1;if(onCloseTarget){x=closeTargetCenter.x-windowSize.width/2;y=closeTargetCenter.y-windowSize.height/2;scale=closing.get()?0:OVER_CLOSE_TARGET_SCALE;}const spring=isDragging&&!onCloseTarget?FOLLOW_SPRING:SETTLE_SPRING;return{width:windowSize.width,height:windowSize.height,opacity:closing.get()?withTiming(0,{duration:CLOSE_ANIMATION_MS}):1,transform:[{translateX:withSpring(x,spring)},{translateY:withSpring(y,spring)},{scale:withSpring(scale,spring)}]};})",
 };
 let obj6 = {
-  height: fn(19396).INTERACTIVE_HANDLE_HEIGHT,
+  height: fn(19427).INTERACTIVE_HANDLE_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
   borderTopLeftRadius: nativeDefault.radii.lg,
@@ -760,7 +760,7 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
       const obj12 = { style: tmp.grip };
       obj11.children = tmp63(c4, obj12);
       obj10.children = tmp63(c4, obj11);
-      tmp63Result = tmp63(tmp2(5428).GestureDetector, obj10);
+      tmp63Result = tmp63(tmp2(5430).GestureDetector, obj10);
     }
     const items15 = [tmp63Result];
     const obj13 = { style: tmp.content, children: null };
@@ -777,7 +777,7 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
       str2 = "auto";
     }
     obj14.pointerEvents = str2;
-    const obj15 = { frameId, level: tmp2(12456).FrameStackLevel.AboveAppContent, presentation };
+    const obj15 = { frameId, level: tmp2(12463).FrameStackLevel.AboveAppContent, presentation };
     const items17 = [c10(FrameRenderTargetDefault, obj15)];
     let tmp63Result2 = null;
     if (tmp8) {
@@ -793,8 +793,8 @@ export default noop.memo(function ConjureAppPictureInPicture(frameId) {
     items15[1] = c11(c4, obj13);
     obj8.children = items15;
     obj7.children = c11(_modDef1652.View, obj8);
-    obj6.children = c10(tmp2(5428).GestureDetector, obj7);
-    return c10(tmp2(5207).ThemeContextProvider, obj6);
+    obj6.children = c10(tmp2(5430).GestureDetector, obj7);
+    return c10(tmp2(5209).ThemeContextProvider, obj6);
   }
   const tmp2Result18 = require("../../../../../_runtime/metro/01652__.js");
 });

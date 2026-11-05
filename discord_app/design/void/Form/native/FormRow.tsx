@@ -373,7 +373,7 @@ get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { container: null, label: null, leading: null, trailing: null, disabled: null, error: null };
   const merged = Object.assign({ paddingHorizontal: 16, paddingVertical: 16 });

@@ -65,14 +65,14 @@ function answerFor(cmd) {
       if (obj2.hasConjurePreviewGameCapture(applicationId)) {
         if (cmd.cmd === RPCCommands.CAPTURE_SCREEN) {
           const obj3 = { result: null, answered: "returned the selected game capture" };
-          obj = obj(11104);
+          obj = obj(11113);
           conjurePreviewGameCapture = obj.readConjurePreviewGameCapture(applicationId);
           obj3.result = conjurePreviewGameCapture;
           let obj4 = obj3;
         } else {
           obj4 = { result: null, answered: "screen capture allowed for the selected game capture" };
           const obj5 = { permissions: null };
-          const prop = obj(11108).CONJURE_DEVICE_PERMISSION_NAMES;
+          const prop = obj(11117).CONJURE_DEVICE_PERMISSION_NAMES;
           obj5.permissions = prop.map((permission) => {
             if ("screen_capture" === permission) {
               const obj2 = { permission, state: "granted" };
@@ -253,12 +253,12 @@ let obj = {
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
   [RPCCommands.OPEN_INVITE_DIALOG]: () => ({
-    result: "children",
-    answered: 66330913196960510000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    result: "id",
+    answered: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000406775211,
   }),
   [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({
-    result: "children",
-    answered: 66330913196960510000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    result: "id",
+    answered: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000406775211,
   }),
 };
 let closure_7 = {
@@ -296,7 +296,7 @@ export function beginNativeSurfaceSessionForFrame(iframeId, beneathBatches) {
     } else {
       tmp9 = null;
     }
-    let result = obj2(9484).setRpcCommandInterceptor(tmp9);
+    let result = obj2(9491).setRpcCommandInterceptor(tmp9);
     const obj3 = {
       iframeId,
       drain() {

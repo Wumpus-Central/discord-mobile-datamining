@@ -248,8 +248,8 @@ export function excludeNitroOnlyPlansForActiveTrial(premiumTier) {
 }
 export { getSubscriptionItemsForProduct };
 export function getModifySubscriptionItemsForProduct(productId, subscription) {
-  if (productId in found(7733).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(7733).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(7738).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(7738).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
         const itemsWithUpsertedPremiumPlanId = tmp(2176).getItemsWithUpsertedPremiumPlanId(

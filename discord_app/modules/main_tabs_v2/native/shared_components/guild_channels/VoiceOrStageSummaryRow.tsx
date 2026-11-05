@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5141);
+const createStyles = fn(5143);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", marginLeft: -2 },
@@ -131,7 +131,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
     let obj6 = {
       size: tmp(tmp2[7]).Icon.Sizes.CUSTOM,
       style: { height: 14, width: 14 },
-      source: require("../../../../../../_runtime/metro/18997__.js"),
+      source: require("../../../../../../_runtime/metro/19028__.js"),
     };
     const items4 = [closure_4(tmp(tmp2[7]).Icon, obj6)];
     let obj7 = { variant: "body-sm/semibold", style: { marginLeft: 4 }, children: audienceCount };

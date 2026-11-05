@@ -24,10 +24,10 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(7513).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7515).UserProfileThemeTypes;
 const Constants = fn(1072);
 ({ AVATAR_MAX_SIZE: closure_11, ChannelTypesSets: closure_12, RelationshipTypes: map1 } = Constants);
-const ParticipantTypes = fn(5815).ParticipantTypes;
+const ParticipantTypes = fn(5817).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const size = fn(2);
@@ -85,7 +85,7 @@ export default function UserProfileOverflowMenu(user) {
   const userProfileAnalyticsContext = user(application[17]).useUserProfileAnalyticsContext();
   context = userProfileAnalyticsContext.context;
   trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
-  const tmpResult13 = user(application[17]);
+  const tmpResult14 = user(application[17]);
   const tmp7ResultResult = currentUser(application[18])(currentUser(application[19]).USER_PROFILE_OVERFLOW_MENU);
   analyticsLocations = tmp7ResultResult.analyticsLocations;
   newestAnalyticsLocation = tmp7ResultResult.newestAnalyticsLocation;
@@ -99,12 +99,12 @@ export default function UserProfileOverflowMenu(user) {
   if (displayProfile != null) {
     guildId = displayProfile.guildId;
   }
-  const tmp7Result3 = currentUser(application[20]);
+  const tmp7Result2 = currentUser(application[20]);
   const isShopThisLookMobileEnabled = user(application[21]).useIsShopThisLookMobileEnabled("UserProfileOverflowMenu");
-  const tmpResult14 = user(application[21]);
+  const tmpResult15 = user(application[21]);
   const equippedCollectibleSkuIds = user(application[22]).useEquippedCollectibleSkuIds(user.id, guildId);
   const ref = selectedChannel.useRef(null);
-  const tmpResult15 = user(application[22]);
+  const tmpResult16 = user(application[22]);
   const tmp22 = currentUser(application[23])();
   const shopThisLookMarketing = user(application[24]).useShopThisLookMarketing(
     user.id,
@@ -116,14 +116,11 @@ export default function UserProfileOverflowMenu(user) {
   const callback = selectedChannel.useCallback(() => {
     const result = openShopThisLookActionSheet.openShopThisLookActionSheet({ userId: user.id, guildId });
   }, items2);
-  const tmpResult16 = user(application[24]);
+  const tmpResult17 = user(application[24]);
   canRing = user(application[26]).useCanRing(user, selectedVoiceChannelId);
-  const tmpResult17 = user(application[26]);
-  const tidaWebformEnabled = currentUser(application[27]).useExperiment(
-    { location: "UserProfileOverflowMenu" },
-    { autoTrackExposure: false },
-  ).tidaWebformEnabled;
-  const tmp7Result4 = currentUser(application[27]);
+  const tmpResult18 = user(application[26]);
+  const isTidaMediaTakedownRegion = user(application[27]).useIsTidaMediaTakedownRegion();
+  const tmpResult19 = user(application[27]);
   const items3 = [context];
   const stateFromStoresObject2 = user(application[11]).useStateFromStoresObject(items3, () => {
     let tmp = canRing;
@@ -189,11 +186,11 @@ export default function UserProfileOverflowMenu(user) {
   obj4.analyticsLocations = analyticsLocations;
   obj4.trackUserProfileAction = trackUserProfileAction;
   obj4.showUserProfile = callback1;
-  let tmp32 = isShopThisLookMobileEnabled;
+  let tmp33 = isShopThisLookMobileEnabled;
   if (isShopThisLookMobileEnabled) {
-    tmp32 = equippedCollectibleSkuIds.length > 0;
+    tmp33 = equippedCollectibleSkuIds.length > 0;
   }
-  closure_15 = tmp32;
+  closure_15 = tmp33;
   let guildId2;
   if (displayProfile != null) {
     guildId2 = displayProfile.guildId;
@@ -213,15 +210,15 @@ export default function UserProfileOverflowMenu(user) {
   if (tmp7Result1Result != null) {
     guildId3 = tmp7Result1Result.guildId;
   }
-  let tmp36 = null != guildId3;
-  if (tmp36) {
+  let tmp37 = null != guildId3;
+  if (tmp37) {
     let guildId4;
     if (displayProfile != null) {
       guildId4 = displayProfile.guildId;
     }
-    tmp36 = null == guildId4;
+    tmp37 = null == guildId4;
   }
-  if (tmp36) {
+  if (tmp37) {
     let obj6 = { label: null, action: null };
     const intl2 = tmp(tmp2[29]).intl;
     obj6.label = intl2.string(tmp(tmp2[29]).t.DisZzB);
@@ -233,16 +230,16 @@ export default function UserProfileOverflowMenu(user) {
   }
   const items6 = [];
   if (currentUser.id !== id) {
-    let tmp39 = null != channel && !channel.isThread() && channel.isOwner(currentUser.id);
-    if (tmp39) {
+    let tmp40 = null != channel && !channel.isThread() && channel.isOwner(currentUser.id);
+    if (tmp40) {
       const recipients = channel.recipients;
       let hasItem;
       if (recipients != null) {
         hasItem = recipients.includes(id);
       }
-      tmp39 = hasItem;
+      tmp40 = hasItem;
     }
-    if (tmp39) {
+    if (tmp40) {
       const obj7 = { label: null, variant: "destructive", action: null };
       const intl3 = tmp(tmp2[29]).intl;
       obj7.label = intl3.string(tmp(tmp2[29]).t["n5zMI+"]);
@@ -253,7 +250,7 @@ export default function UserProfileOverflowMenu(user) {
       items6.push(obj7);
     }
     if (relationshipType !== callback1.FRIEND) {
-      if (tmp32) {
+      if (tmp33) {
         const obj8 = { label: null, action: null };
         const intl5 = tmp(tmp2[29]).intl;
         obj8.label = intl5.string(tmp(tmp2[29]).t.xNdRDO);
@@ -267,7 +264,7 @@ export default function UserProfileOverflowMenu(user) {
       if (null != ignoreMenuItem) {
         items6.push(ignoreMenuItem);
       }
-      const tmpResult19 = tmp(tmp2[35]);
+      const tmpResult21 = tmp(tmp2[35]);
       const obj10 = { isBlocked: relationshipType === callback1.BLOCKED };
       items6.push(tmp(tmp2[35]).getBlockMenuItem(obj4, obj10));
       if (relationshipType !== callback1.BLOCKED) {
@@ -281,11 +278,11 @@ export default function UserProfileOverflowMenu(user) {
           items6.push(reportMenuItem);
         }
         const bot = user.bot;
-        let tmp50 = !bot;
+        let tmp51 = !bot;
         if (!bot) {
-          tmp50 = tmp9;
+          tmp51 = tmp9;
         }
-        if (tmp50) {
+        if (tmp51) {
           const obj12 = { label: null, action: null };
           const intl6 = tmp(tmp2[29]).intl;
           obj12.label = intl6.string(tmp(tmp2[29]).t.Sd8Ixw);
@@ -310,9 +307,9 @@ export default function UserProfileOverflowMenu(user) {
           };
           items5.push(obj13);
         }
-        const tmpResult21 = tmp(tmp2[35]);
+        const tmpResult23 = tmp(tmp2[35]);
       }
-      const tmpResult20 = tmp(tmp2[35]);
+      const tmpResult22 = tmp(tmp2[35]);
     } else {
       const intl4 = tmp(tmp2[29]).intl;
       const string = intl4.string;
@@ -326,7 +323,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
           trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15040, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15053, dependencyMap.paths), {
             userId: id,
             showUserProfile: callback1,
           });
@@ -338,25 +335,25 @@ export default function UserProfileOverflowMenu(user) {
       t = items5.push(obj14);
     }
   }
-  let tmp53 = !canRing;
+  let tmp54 = !canRing;
   if (canRing) {
-    tmp53 = null == selectedVoiceChannelId;
+    tmp54 = null == selectedVoiceChannelId;
   }
-  if (!tmp53) {
-    let tmp54 = userIsInCall;
+  if (!tmp54) {
+    let tmp55 = userIsInCall;
     if (userIsInCall) {
-      tmp54 = !stateFromStoresObject2.isUserRinging;
+      tmp55 = !stateFromStoresObject2.isUserRinging;
     }
-    tmp53 = tmp54;
+    tmp54 = tmp55;
   }
-  if (tmp53) {
+  if (tmp54) {
     const DeveloperMode = tmp(tmp2[39]).DeveloperMode;
     const setting = DeveloperMode.getSetting();
-    let tmp57 = setting;
+    let tmp58 = setting;
     if (setting) {
-      tmp57 = tidaWebformEnabled;
+      tmp58 = isTidaMediaTakedownRegion;
     }
-    if (!tmp57) {
+    if (!tmp58) {
       const obj15 = { label: null, action: null };
       const intl9 = tmp(tmp2[29]).intl;
       obj15.label = intl9.string(tmp(tmp2[29]).t.y5MwJy);
@@ -372,7 +369,7 @@ export default function UserProfileOverflowMenu(user) {
     if (user.bot) {
       if (null != application) {
         closure_16 = tmp(tmp2[43]).supportsEmbeddedSurface(application, tmp(tmp2[44]).EmbeddedSurfaceType.MAIN);
-        const tmpResult22 = tmp(tmp2[43]);
+        const tmpResult24 = tmp(tmp2[43]);
         installAppPropsFromProfileApplication = tmp(tmp2[45]).getInstallAppPropsFromProfileApplication(application);
         const obj16 = { label: null, action: null };
         const intl11 = tmp(tmp2[29]).intl;
@@ -393,11 +390,11 @@ export default function UserProfileOverflowMenu(user) {
           ToastUtils.presentLinkCopied();
         };
         items5.push(obj16);
-        const tmpResult23 = tmp(tmp2[45]);
+        const tmpResult25 = tmp(tmp2[45]);
       }
     }
     if (setting) {
-      const obj17 = { tidaWebformEnabled, avatarGuildId: null, bannerUrl: null };
+      const obj17 = { isTidaRegion: isTidaMediaTakedownRegion, avatarGuildId: null, bannerUrl: null };
       let guildId5;
       if (displayProfile != null) {
         guildId5 = displayProfile.guildId;
@@ -410,7 +407,7 @@ export default function UserProfileOverflowMenu(user) {
       }
       obj17.bannerUrl = bannerURL;
       items5.push(tmp(tmp2[35]).getDeveloperCopyMenuItem(obj4, obj17));
-      const tmpResult24 = tmp(tmp2[35]);
+      const tmpResult26 = tmp(tmp2[35]);
     }
     let hasItem1 = null != channel && null != selectedChannel;
     if (hasItem1) {
@@ -466,11 +463,11 @@ export default function UserProfileOverflowMenu(user) {
       const obj24 = { targetRef: ref, visible: isVisible, onDismiss: markAsDismissed, onPress: callback };
       items8[1] = closure_15(tmp7(tmp2[54]), obj24);
       obj20.children = items8;
-      let tmp66 = closure_16(tmp(tmp2[18]).AnalyticsLocationProvider, obj20);
+      let tmp67 = closure_16(tmp(tmp2[18]).AnalyticsLocationProvider, obj20);
     } else {
-      tmp66 = null;
+      tmp67 = null;
     }
-    return tmp66;
+    return tmp67;
   } else {
     const intl8 = tmp(tmp2[29]).intl;
     const string2 = intl8.string;

@@ -8,7 +8,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ViolationType = fn(8110).ViolationType;
+const ViolationType = fn(8115).ViolationType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
 
@@ -45,7 +45,7 @@ export function useSafetyHubClassification(classificationId) {
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(8111).MemberType.OWNER) {
+    if (member_type === tmp(8116).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;
