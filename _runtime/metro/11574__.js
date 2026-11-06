@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/billing/native/images",
-  width: 223,
-  height: 128.5,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "f5aa8d22ffc464d3c9704d96fbbd1afa",
-  name: "blocked-purchases-dark",
+  hash: "5b035d589db27733a20b85bf911f23f4",
+  name: "ChevronSmallDownIcon",
   type: "png",
 });

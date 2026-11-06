@@ -1,6 +1,28 @@
 // _runtime/metro/05608__.js
-import BottomSheetFooter from "../05609_BottomSheetFooter.js";
-import BottomSheetFooterContainer from "../05611_BottomSheetFooterContainer.js";
+import noop from "00019__.js";
 
-export const BottomSheetFooter = BottomSheetFooter.BottomSheetFooter;
-export const BottomSheetFooterContainer = BottomSheetFooterContainer.BottomSheetFooterContainer;
+({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
+
+export function useStableCallback(current) {
+  React3(undefined);
+  React2(() => {
+    closure_1.current = current;
+  });
+  duration(
+    () => () => {
+      ref.current = undefined;
+    },
+    [],
+  );
+  return React(() => {
+    items = [...arguments];
+    current = ref.current;
+    let applyResult;
+    if (current != null) {
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, 0);
+      applyResult = HermesBuiltin.apply(items1, ref);
+    }
+    return applyResult;
+  }, []);
+}

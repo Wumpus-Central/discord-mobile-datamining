@@ -1,20 +1,4 @@
 // _runtime/metro/13127__.js
-import _mod13062 from "13062__.js";
+import _mod13128 from "13128__.js";
 
-const Number = _mod13062.TYPE.Number;
-const obj = {
-  name: "Number",
-  structure: { value: String },
-  parse() {
-    return {
-      type: "Number",
-      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
-      value: this.consume(Number),
-    };
-  },
-  generate(value) {
-    this.chunk(value.value);
-  },
-};
-
-export default obj;
+export default _mod13128;

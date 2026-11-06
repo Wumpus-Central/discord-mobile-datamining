@@ -1,28 +1,17 @@
 // _runtime/metro/04719__.js
-import _typeof_mod from "04423__.js";
-import requiredArgs_mod from "../04424_requiredArgs.js";
+import _mod4455 from "04455__.js";
+import assign_mod from "../04700_assign.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = assign;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function isEqual(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === _typeof.default(arg1).getTime();
+export default function getDefaultOptions() {
+  return assign.default({}, _mod4455.getDefaultOptions());
 };
 export default exports.default;

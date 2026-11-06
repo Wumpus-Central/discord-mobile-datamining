@@ -1,14 +1,11 @@
 // _runtime/metro/05469__.js
-import _modDef5457 from "05457__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
-import PlatformConstants from "05470__.js";
 
-const ForceTouchFallback = fn;
+let ExclusiveGesture = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +24,112 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ForceTouchFallback {
+class ComposedGesture {
   constructor() {
     self = this;
-    tmp = c2(this, ForceTouchFallback);
+    items = [...arguments];
+    tmp = c2(this, ExclusiveGesture);
     tmp2 = closure_4;
-    obj = closure_4(ForceTouchFallback);
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.gestures = [];
+    tmp3Result.simultaneousGestures = [];
+    tmp3Result.requireGesturesToFail = [];
+    tmp3Result.gestures = items;
+    return tmp3Result;
+  }
+}
+ExclusiveGesture = ComposedGesture;
+_inherits(ComposedGesture, fn(5470).Gesture);
+const entry = {
+  key: "prepareSingleGesture",
+  value: function prepareSingleGesture(item10006, simultaneousGestures, requireGesturesToFail) {
+    if (item10006 instanceof ExclusiveGesture(5470).BaseGesture) {
+      if (item10006.relationsSnapshot == null) {
+        const obj = {
+          simultaneousWith: item10006.config.simultaneousWith,
+          requireToFail: item10006.config.requireToFail,
+        };
+        item10006.relationsSnapshot = obj;
+      }
+      const obj2 = {};
+      const merged = Object.assign(item10006.config);
+      const simultaneousWith = item10006.relationsSnapshot.simultaneousWith;
+      if (undefined === simultaneousWith) {
+        items = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, 0);
+        let items1 = items;
+      } else {
+        items1 = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, HermesBuiltin.arraySpread(simultaneousWith, 0));
+      }
+      obj2.simultaneousWith = items1;
+      const requireToFail = item10006.relationsSnapshot.requireToFail;
+      if (undefined === requireToFail) {
+        const items2 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, 0);
+        let items3 = items2;
+      } else {
+        items3 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, HermesBuiltin.arraySpread(requireToFail, 0));
+      }
+      obj2.requireToFail = items3;
+      item10006.config = obj2;
+    } else if (item10006 instanceof ExclusiveGesture) {
+      item10006.simultaneousGestures = simultaneousGestures;
+      item10006.requireGesturesToFail = requireGesturesToFail;
+      item10006.prepare();
+    }
+  },
+};
+let items = [
+  entry,
+  {
+    key: "prepare",
+    value: function prepare() {
+      const self = this;
+      for (const item10006 of tmp) {
+        let prepareSingleGestureResult = self.prepareSingleGesture(
+          item10006,
+          self.simultaneousGestures,
+          self.requireGesturesToFail,
+        );
+        continue;
+      }
+    },
+  },
+  {
+    key: "initialize",
+    value: function initialize() {
+      for (const item10006 of tmp) {
+        let initializeResult = item10006.initialize();
+        continue;
+      }
+    },
+  },
+  {
+    key: "toGestureArray",
+    value: function toGestureArray() {
+      const gestures = this.gestures;
+      return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
+    },
+  },
+];
+const importDefaultResultResult = _createClass(ComposedGesture, items);
+class SimultaneousGesture {
+  constructor() {
+    self = this;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -47,51 +144,73 @@ class ForceTouchFallback {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ForceTouchFallback, noop.Component);
-const entry = {
-  key: "componentDidMount",
-  value: function componentDidMount() {
-    console.warn(
-      ForceTouchFallback(5434).tagMessage(
-        "ForceTouchGestureHandler is not available on this platform. Please use ForceTouchGestureHandler.forceTouchAvailable to conditionally render other components that would provide a fallback behavior specific to your usecase",
-      ),
-    );
+ExclusiveGesture = SimultaneousGesture;
+_inherits(SimultaneousGesture, importDefaultResultResult);
+const entry1 = {
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    const self = this;
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let prepareSingleGestureResult = self.prepareSingleGesture(
+          self.gestures[num],
+          tmp[num],
+          self.requireGesturesToFail,
+        );
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
   },
 };
-const items = [
-  entry,
-  {
-    key: "render",
-    value: function render() {
-      return this.props.children;
-    },
+let items1 = [entry1];
+class ExclusiveGesture {
+  constructor() {
+    self = this;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ExclusiveGesture, importDefaultResultResult);
+const entry2 = {
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    const self = this;
+    items = [];
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let requireGesturesToFail = self.requireGesturesToFail;
+        let prepareSingleGestureResult = self.prepareSingleGesture(
+          self.gestures[num],
+          self.simultaneousGestures,
+          requireGesturesToFail.concat(items),
+        );
+        items = items.concat(tmp[num]);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
   },
-];
-let importDefaultResultResult = _createClass(ForceTouchFallback, items);
-importDefaultResultResult.forceTouchAvailable = false;
-let forceTouchAvailable;
-if (PlatformConstants != null) {
-  forceTouchAvailable = PlatformConstants.forceTouchAvailable;
-}
-const items1 = ["minForce", "maxForce", "feedbackOnActivation"];
-if (forceTouchAvailable) {
-  let obj = { name: "ForceTouchGestureHandler", allowedProps: null, config: null };
-  const items2 = [];
-  HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(fn(5455).baseGestureHandlerProps, 0));
-  obj.allowedProps = items2;
-  obj.config = {};
-  importDefaultResultResult = _modDef5457(obj);
-  const importDefaultResult4 = _modDef5457;
-}
-let flag;
-if (PlatformConstants != null) {
-  flag = PlatformConstants.forceTouchAvailable;
-}
-if (!flag) {
-  flag = false;
-}
-importDefaultResultResult.forceTouchAvailable = flag;
+};
+let items2 = [entry2];
 
-export const forceTouchGestureHandlerProps = items1;
-export const forceTouchHandlerName = "ForceTouchGestureHandler";
-export const ForceTouchGestureHandler = importDefaultResultResult;
+export const ComposedGesture = importDefaultResultResult;
+export const SimultaneousGesture = _createClass(SimultaneousGesture, items1);
+export const ExclusiveGesture = _createClass(ExclusiveGesture, items2);

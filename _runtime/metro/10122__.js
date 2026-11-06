@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 134,
-  height: 100,
+  httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "216dd506f9a84ac881f2bef990d5a382",
-  name: "img_wumpus_nitro",
+  hash: "44efb56cf36c8202533bcbc557ebf8e5",
+  name: "MidnightPrismIcon",
   type: "png",
 });

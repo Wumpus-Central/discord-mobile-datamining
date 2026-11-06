@@ -1,16 +1,50 @@
 // _runtime/metro/05615__.js
-import _mod17 from "00017__.js";
-import value2 from "../05403_value2.js";
+import _mod1652 from "01652__.js";
+import value2 from "../05423_value2.js";
+import _mod5427 from "05427__.js";
+import BottomSheetContext from "../05433_BottomSheetContext.js";
+import noop from "00019__.js";
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
-const size = {
-  alignSelf: "center",
-  width: (7.5 * value2.WINDOW_WIDTH) / 100,
-  height: 4,
-  borderRadius: 4,
-  backgroundColor: "rgba(0, 0, 0, 0.75)",
-};
-obj.indicator = size;
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
 
-export const styles = StyleSheet.create(obj);
+export default function _default(children) {
+  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
+  if (useGestureEventsHandlersDefault === undefined) {
+    useGestureEventsHandlersDefault = _mod5427.useGestureEventsHandlersDefault;
+  }
+  const sharedValue = _mod1652.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
+  const bottomSheetInternal = _mod5427.useBottomSheetInternal();
+  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
+  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
+  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
+  const gestureHandler = _mod5427.useGestureHandler(
+    value2.GESTURE_SOURCE.CONTENT,
+    animatedContentGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
+  );
+  const gestureHandler1 = _mod5427.useGestureHandler(
+    value2.GESTURE_SOURCE.HANDLE,
+    animatedHandleGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
+  );
+  items = [gestureHandler, gestureHandler1, sharedValue];
+  value = useMemo(
+    () => ({
+      contentPanGestureHandler: gestureHandler,
+      handlePanGestureHandler: gestureHandler1,
+      animatedGestureSource: sharedValue,
+    }),
+    items,
+  );
+  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+}

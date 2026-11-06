@@ -1,6 +1,6 @@
 // _runtime/metro/04717__.js
-import _typeof_mod from "04423__.js";
-import requiredArgs_mod from "../04424_requiredArgs.js";
+import _typeof_mod from "04450__.js";
+import requiredArgs_mod from "../04451_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,10 +19,19 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isAfter(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time > _typeof.default(arg1).getTime();
+export default function isLeapYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const fullYear = _typeof.default(arg0).getFullYear();
+  const result = fullYear % 400;
+  let tmp4 = result === 0;
+  if (result !== 0) {
+    const result1 = fullYear % 4;
+    let tmp6 = result1 === 0;
+    if (result1 === 0) {
+      tmp6 = fullYear % 100 !== 0;
+    }
+    tmp4 = tmp6;
+  }
+  return tmp4;
 };
 export default exports.default;

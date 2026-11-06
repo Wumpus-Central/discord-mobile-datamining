@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9d92aa1c45b82a477ca0857bf43b0863",
-  name: "PencilSparkleIcon",
+  hash: "59c1068002b82917b518f48d03d4151e",
+  name: "BookmarkOutlineIcon",
   type: "png",
 });

@@ -1,7 +1,37 @@
 // _runtime/metro/04872__.js
-let closure_0 = { lastWeek: "eeee 'tu\u1EA7n tr\u01B0\u1EDBc v\u00E0o l\u00FAc' p", yesterday: "'h\u00F4m qua v\u00E0o l\u00FAc' p", today: "'h\u00F4m nay v\u00E0o l\u00FAc' p", tomorrow: "'ng\u00E0y mai v\u00E0o l\u00FAc' p", nextWeek: "eeee 't\u1EDBi v\u00E0o l\u00FAc' p", other: "P" };
+import module_4454_mod from "04454__.js";
+import _typeof_mod from "04450__.js";
+import requiredArgs_mod from "../04451_requiredArgs.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj = { default: module_4454 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4454;
+}
+module_4454 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+
+export default function setMinutes(module_4454, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(module_4454);
+  defaultResult1.setMinutes(module_4454.default(arg1));
+  return defaultResult1;
 };
 export default exports.default;

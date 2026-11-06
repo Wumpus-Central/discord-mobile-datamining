@@ -1,13 +1,7 @@
 // _runtime/metro/08159__.js
-import registerAsset from "01119__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b04e363869889767a126da0fcdcaf9c8",
-  name: "AppleNeutralIcon",
-  type: "png",
-});
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeBlend", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, mode: true } };
+
+export default module_65.get("RNSVGFeBlend", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

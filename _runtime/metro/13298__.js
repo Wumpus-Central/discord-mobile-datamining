@@ -1,85 +1,131 @@
 // _runtime/metro/13298__.js
+import spanTimeInputToSeconds from "../13260_spanTimeInputToSeconds.js";
+import _mod13299 from "13299__.js";
+import _mod13302 from "13302__.js";
+import __SENTRY_DEBUG__ from "13254__.js";
+import consoleSandbox from "13255__.js";
 
-export const SPAN_STATUS_ERROR = 2;
-export const SPAN_STATUS_OK = 1;
-export const SPAN_STATUS_UNSET = 0;
-export function getSpanStatusFromHttpCode(arg0) {
-  if (arg0 < 400) {
-    if (arg0 >= 100) {
-      return { code: 1 };
+export function createEventEnvelope(type, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod13299.getSdkMetadataForEnvelopeHeader(sdk);
+  let str = "event";
+  if (type.type) {
+    str = "event";
+    if ("replay_event" !== type.type) {
+      str = type.type;
     }
   }
-  if (arg0 >= 400) {
-    if (arg0 < 500) {
-      if (401 === arg0) {
-        return { code: 2, message: "unauthenticated" };
-      } else if (403 === arg0) {
-        return { code: 2, message: "permission_denied" };
-      } else if (404 === arg0) {
-        return { code: 2, message: "not_found" };
-      } else if (409 === arg0) {
-        return { code: 2, message: "already_exists" };
-      } else if (413 === arg0) {
-        return { code: 2, message: "failed_precondition" };
-      } else if (429 === arg0) {
-        return { code: 2, message: "resource_exhausted" };
-      } else {
-        return 499 === arg0 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
-      }
-    }
+  if (sdk) {
+    sdk = sdk.sdk;
   }
-  if (arg0 >= 500) {
-    if (arg0 < 600) {
-      if (501 === arg0) {
-        return { code: 2, message: "unimplemented" };
-      } else if (503 === arg0) {
-        return { code: 2, message: "unavailable" };
-      } else {
-        return 504 === arg0 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
-      }
+  if (sdk) {
+    type.sdk = type.sdk || {};
+    let name = type.sdk.name;
+    if (!name) {
+      name = sdk.name;
     }
+    type.sdk.name = name;
+    let version = type.sdk.version;
+    if (!version) {
+      version = sdk.version;
+    }
+    type.sdk.version = version;
+    let integrations = type.sdk.integrations;
+    if (!integrations) {
+      integrations = [];
+    }
+    items = [];
+    const arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
+    const tmp9 = sdk.integrations || [];
+    HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
+    type.sdk.integrations = items;
+    let packages = type.sdk.packages;
+    if (!packages) {
+      packages = [];
+    }
+    const items1 = [];
+    const arraySpreadResult5 = HermesBuiltin.arraySpread(packages, 0);
+    const tmp17 = sdk.packages || [];
+    HermesBuiltin.arraySpread(tmp17, arraySpreadResult5);
+    type.sdk.packages = items1;
   }
-  return { code: 2, message: "unknown_error" };
+  const eventEnvelopeHeaders = _mod13299.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
+  delete tmp[tmp2];
+  const items2 = [{ type: str }, type];
+  const tmp3Result = _mod13299;
+  const items3 = [items2];
+  return _mod13299.createEnvelope(eventEnvelopeHeaders, items3);
 }
-export function setHttpStatus(setAttribute, arg1) {
-  const attr = setAttribute.setAttribute("http.response.status_code", arg1);
-  if (arg1 < 400) {
-    if (arg1 >= 100) {
-      let obj = { code: 1 };
-    }
-    if ("unknown_error" !== obj.message) {
-      setAttribute.setStatus(obj);
-    }
+export function createSessionEnvelope(toJSON, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod13299.getSdkMetadataForEnvelopeHeader(sdk);
+  const obj2 = { sent_at: null };
+  obj2.sent_at = new Date().toISOString();
+  let tmp4 = sdkMetadataForEnvelopeHeader;
+  if (sdkMetadataForEnvelopeHeader) {
+    const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
+    tmp4 = obj3;
   }
-  if (arg1 >= 400) {
-    if (arg1 < 500) {
-      if (401 === arg1) {
-        obj = { code: 2, message: "unauthenticated" };
-      } else if (403 === arg1) {
-        obj = { code: 2, message: "permission_denied" };
-      } else if (404 === arg1) {
-        obj = { code: 2, message: "not_found" };
-      } else if (409 === arg1) {
-        obj = { code: 2, message: "already_exists" };
-      } else if (413 === arg1) {
-        obj = { code: 2, message: "failed_precondition" };
-      } else if (429 === arg1) {
-        obj = { code: 2, message: "resource_exhausted" };
-      } else {
-        obj = 499 === arg1 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
+  const merged = Object.assign(tmp4);
+  let tmp6 = arg3 && url;
+  if (tmp6) {
+    const obj4 = { dsn: _mod13302.dsnToString(url) };
+    tmp6 = obj4;
+    const tmpResult = _mod13302;
+  }
+  const merged1 = Object.assign(tmp6);
+  if ("aggregates" in toJSON) {
+    items = [{ type: "sessions" }, toJSON];
+    let items1 = items;
+  } else {
+    items1 = [{ type: "session" }, toJSON.toJSON()];
+  }
+  const date = new Date();
+  const items2 = [items1];
+  return _mod13299.createEnvelope(obj2, items2);
+}
+export function createSpanEnvelope(arg0, getDsn) {
+  const dynamicSamplingContextFromSpan = beforeSendSpan(13291).getDynamicSamplingContextFromSpan(arg0[0]);
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
+  }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  const obj = beforeSendSpan(13291);
+  const obj2 = { sent_at: new Date().toISOString() };
+  const tmp2 = beforeSendSpan;
+  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
+    return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
+  })(dynamicSamplingContextFromSpan);
+  if (tmp7) {
+    const obj3 = { trace: dynamicSamplingContextFromSpan };
+    tmp7 = obj3;
+  }
+  const merged = Object.assign(tmp7);
+  let tmp9 = tunnel && dsn;
+  if (tmp9) {
+    const obj4 = { dsn: tmp2(13302).dsnToString(dsn) };
+    tmp9 = obj4;
+    const tmp2Result = tmp2(13302);
+  }
+  const merged1 = Object.assign(tmp9);
+  beforeSendSpan = getDsn;
+  if (getDsn) {
+    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
+  }
+  if (beforeSendSpan) {
+    const fn2 = (arg0) => {
+      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
+      if (!tmp3) {
+        spanTimeInputToSeconds.showSpanDropWarning();
+        const tmpResult = spanTimeInputToSeconds;
       }
-    }
+      return tmp3;
+    };
+  } else {
+    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
   }
-  if (arg1 >= 500) {
-    if (arg1 < 600) {
-      if (501 === arg1) {
-        obj = { code: 2, message: "unimplemented" };
-      } else if (503 === arg1) {
-        obj = { code: 2, message: "unavailable" };
-      } else {
-        obj = 504 === arg1 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
-      }
-    }
-  }
-  obj = { code: 2, message: "unknown_error" };
+  arg0[Symbol.iterator]();
+  const date = new Date();
 }

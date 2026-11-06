@@ -1,6 +1,6 @@
 // _runtime/metro/08226__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8215 from "08215__.js";
+import _modDef8146 from "08146__.js";
 import _modDef8227 from "08227__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeGaussianBlur = fn;
+const Use = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeGaussianBlur {
+class Use {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeGaussianBlur);
+    tmp = closure_3(this, Use);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeGaussianBlur);
+    obj = hasOwnProperty(Use);
     tmp3 = closure_4;
     if (metroImportDefault()) {
       tmp7 = globalThis;
@@ -49,23 +49,40 @@ class FeGaussianBlur {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeGaussianBlur, _modDef8215);
+_inherits(Use, _modDef8146);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
+    const props = this.props;
+    let str = props.href;
+    ({ children, x, y, width, height } = props);
+    if (undefined === str) {
+      str = props.xlinkHref;
+    }
+    let match = str;
+    if (str) {
+      match = str.match(Use(8138).idPattern);
+    }
+    let tmp4 = match;
+    if (match) {
+      tmp4 = match[1];
+    }
+    if (!tmp4) {
+      const _console = console;
+      console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
+    }
+    const size = { href: tmp4, x, y, width, height };
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(FeGaussianBlur(8214).extractFilter(this.props));
-    const obj2 = FeGaussianBlur(8214);
-    const merged1 = Object.assign(FeGaussianBlur(8214).extractIn(this.props));
-    const obj3 = FeGaussianBlur(8214);
-    const merged2 = Object.assign(FeGaussianBlur(8214).extractFeGaussianBlur(this.props));
+    const merged = Object.assign(Use(8137).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = children;
     return (
-      <tmp
+      <tmp7
         ref={function ref(arg0) {
           return self.refMethod(arg0);
         }}
@@ -74,12 +91,8 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeGaussianBlur, items);
-importDefaultResultResult.displayName = "FeGaussianBlur";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.stdDeviation = 0;
-obj.edgeMode = "none";
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(Use, items);
+importDefaultResultResult.displayName = "Use";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
 
 export default importDefaultResultResult;

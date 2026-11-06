@@ -1,13 +1,13 @@
 // _runtime/metro/05968__.js
-import _process from "../00539__process.js";
-import baseUnary from "../00540_baseUnary.js";
-import baseIsSet from "../05969_baseIsSet.js";
+import _mod545 from "00545__.js";
+import object from "../05969_object.js";
+import _mod5970 from "05970__.js";
 
-const tmp = _process && _process.isSet;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsSet;
+export default function initCloneObject(arg0) {
+  if (typeof arg0.constructor === "function") {
+    if (!_mod545(arg0)) {
+      object(_mod5970(arg0));
+    }
+    return {};
+  }
 }
-
-export default _module;

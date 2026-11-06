@@ -1,7 +1,12 @@
 // _runtime/metro/16384__.js
-import _mod16450 from "16450__.js";
-import 16385__ from "16385__.js";
+import _mod16383 from "16383__.js";
 
-const obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod16450;
-module_16385(obj, { assign: _mod16450 });
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod16383, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod16383[tmp2] = tmp;
+  }
+};

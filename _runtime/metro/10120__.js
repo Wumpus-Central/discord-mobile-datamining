@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 271,
-  height: 163,
+  httpServerLocation: "/assets/images/native/custom_app_icons/AppIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "37b687db1cd86ac8059d1a0342f2319c",
-  name: "img_tier_2_clouds_bigger",
+  hash: "2a589a040df4c6bcca56de9fa304d36a",
+  name: "AppIcon",
   type: "png",
 });

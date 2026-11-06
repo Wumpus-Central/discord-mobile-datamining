@@ -1,28 +1,36 @@
 // _runtime/metro/04604__.js
-import startOfDay_mod from "../04587_startOfDay.js";
-import requiredArgs_mod from "../04424_requiredArgs.js";
+import module_4454_mod from "04454__.js";
+import module_4605_mod from "04605__.js";
+import requiredArgs_mod from "../04451_requiredArgs.js";
 
-let startOfDay = startOfDay_mod;
-if (!startOfDay) {
-  const obj = { default: startOfDay };
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj = { default: module_4454 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfDay;
+  tmp3 = module_4454;
 }
-startOfDay = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4454 = tmp3;
+let module_4605 = module_4605_mod;
+if (!module_4605) {
+  const obj2 = { default: module_4605 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4605;
 }
-requiredArgs = tmp5;
+module_4605 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let c3 = 3600000;
 
-export default function isSameDay(arg0, arg1) {
+export default function addHours(interval, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfDay.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfDay.default(arg1).getTime();
+  return module_4605.default(interval, module_4454.default(arg1) * c3);
 };
 export default exports.default;

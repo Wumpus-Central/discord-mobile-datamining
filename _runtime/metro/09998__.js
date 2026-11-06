@@ -1,39 +1,16 @@
 // _runtime/metro/09998__.js
+import noop from "00019__.js";
 
-export function isHttpUrl(url) {
-  if (!url.startsWith("http://")) {
-    if (!url.startsWith("https://")) {
-      const charCodeAtResult = url.charCodeAt(0);
-      let isMatch = 104 === charCodeAtResult;
-      if (!isMatch) {
-        isMatch = 72 === charCodeAtResult;
-      }
-      if (isMatch) {
-        isMatch = /^https?:/i.test(url);
-        const obj = /^https?:/i;
-      }
-      return isMatch;
-    }
-  }
-  return true;
-}
-export function getUrlString(url) {
-  if (typeof url === "string") {
-    return url;
+let context = noop.createContext(undefined);
+
+export const AnimatedHeaderHeightContext = context;
+export function useAnimatedHeaderHeight() {
+  context = noop.useContext(context);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
+    throw error;
   } else {
-    const _URL = URL;
-    if (url instanceof URL) {
-      return url.toString();
-    } else {
-      url = undefined;
-      if (url != null) {
-        url = url.url;
-      }
-      if (typeof url !== "string") {
-        const _String = String;
-        url = String(url);
-      }
-      return url;
-    }
+    return context;
   }
 }

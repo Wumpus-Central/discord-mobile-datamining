@@ -1,34 +1,12 @@
 // _runtime/metro/04594__.js
-import _typeof_mod from "04595__.js";
-import _typeof_mod from "04596__.js";
-import requiredArgs_mod from "../04424_requiredArgs.js";
+import 02191__ from "02191__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+if (!module_2191) {
+  const obj2 = { default: module_2191 };
+  let obj = obj2;
 } else {
-  tmp5 = _typeof;
+  obj = module_2191;
 }
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
 
-export default function clamp(arg0, arg1) {
-  ({ start, end } = arg1);
-  requiredArgs.default(2, arguments);
-  items = [arg0, start];
-  const items1 = [_typeof.default(items), end];
-  return _typeof.default(items1);
-};
+export default { date: obj.default({ formats: { full: "EEEE, do MMMM y '\u0440.'", long: "do MMMM y '\u0440.'", medium: "d MMM y '\u0440.'", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u043E' {{time}}", long: "{{date}} '\u043E' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

@@ -1,104 +1,49 @@
 // _runtime/metro/05561__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _slicedToArray from "00032__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
+const noop = fn(19);
+({ useEffect: c2, useState: c3 } = noop);
+const AccessibilityInfo = fn(17).AccessibilityInfo;
+
+export function useIsScreenReaderEnabled() {
+  const tmp = _slicedToArray(closure_3(false), 2);
+  closure_0 = tmp[1];
+  closure_2(() => {
+    closure_129_0 = closure_0(function* () {
+      closure_1 = tmp3;
+      yield screenReaderEnabled.isScreenReaderEnabled();
+      if (1 === tmp7) {
+        c3 = 0;
+        const _console = console;
+        console.warn("Could not read accessibility info: defaulting to false");
+        c5 = 3;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_128_0 = value;
+        closure_0(closure_128_0);
+        c3 = 0;
+      }
+      return value;
+    });
+    (function checkStatus() {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })();
+    closure_0 = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
+      closure_0(event);
+    });
+    return () => {
+      closure_0.remove();
     };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
+  }, []);
+  return tmp[0];
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class TapGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, TapGesture);
-    tmp2 = c2;
-    obj = c2(TapGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "TapGestureHandler";
-    result = tmp3Result.shouldCancelWhenOutside(true);
-    return tmp3Result;
-  }
-}
-_classCallCheck = TapGesture;
-_inherits(TapGesture, fn(5450).BaseGesture);
-const entry = {
-  key: "minPointers",
-  value: function minPointers(minPointers) {
-    this.config.minPointers = minPointers;
-    return this;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "numberOfTaps",
-    value: function numberOfTaps(numberOfTaps) {
-      this.config.numberOfTaps = numberOfTaps;
-      return this;
-    },
-  },
-  {
-    key: "maxDistance",
-    value: function maxDistance(maxDist) {
-      this.config.maxDist = maxDist;
-      return this;
-    },
-  },
-  {
-    key: "maxDuration",
-    value: function maxDuration(maxDurationMs) {
-      this.config.maxDurationMs = maxDurationMs;
-      return this;
-    },
-  },
-  {
-    key: "maxDelay",
-    value: function maxDelay(maxDelayMs) {
-      this.config.maxDelayMs = maxDelayMs;
-      return this;
-    },
-  },
-  {
-    key: "maxDeltaX",
-    value: function maxDeltaX(maxDeltaX) {
-      this.config.maxDeltaX = maxDeltaX;
-      return this;
-    },
-  },
-  {
-    key: "maxDeltaY",
-    value: function maxDeltaY(maxDeltaY) {
-      this.config.maxDeltaY = maxDeltaY;
-      return this;
-    },
-  },
-];
-
-export const TapGesture = _createClass(TapGesture, items);

@@ -1,8 +1,17 @@
 // _runtime/metro/05544__.js
-import _mod5545 from "05545__.js";
-import _mod5547 from "05547__.js";
-import _mod5548 from "05548__.js";
+import ComposedGestureName from "../05512_ComposedGestureName.js";
+import resolveInternalConfigProps from "../05521_resolveInternalConfigProps.js";
+import _mod5538 from "05538__.js";
 
-export const useCompetingGestures = _mod5545.useCompetingGestures;
-export const useExclusiveGestures = _mod5547.useExclusiveGestures;
-export const useSimultaneousGestures = _mod5548.useSimultaneousGestures;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
+
+export function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5538.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
+}

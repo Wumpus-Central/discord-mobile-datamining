@@ -1,28 +1,6 @@
 // _runtime/metro/20180__.js
-import _mod625 from "00625__.js";
-import _mod20181 from "20181__.js";
-import stringToArray from "../20182_stringToArray.js";
-import castSlice from "../20185_castSlice.js";
+const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
-export default function createCaseFirst(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const str = _mod625(arg0);
-    let tmp3;
-    if (_mod20181(str)) {
-      tmp3 = stringToArray(str);
-    }
-    if (tmp3) {
-      let first = tmp3[0];
-    } else {
-      first = str.charAt(0);
-    }
-    if (tmp3) {
-      let joined = castSlice(tmp3, 1).join("");
-      const obj = castSlice(tmp3, 1);
-    } else {
-      joined = str.slice(1);
-    }
-    return first[closure_0]() + joined;
-  };
+export default function hasUnicodeWord(arg0) {
+  return re0.test(arg0);
 }

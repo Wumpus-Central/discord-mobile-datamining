@@ -11,19 +11,19 @@ if (Number.isSafeInteger) {
   const _Number = Number;
   let fn = Number.isSafeInteger;
 } else {
-  fn = (num) => {
-    let isFiniteResult = typeof num === "number";
-    if (typeof num === "number") {
+  fn = (result1) => {
+    let isFiniteResult = typeof result1 === "number";
+    if (typeof result1 === "number") {
       const _isFinite = isFinite;
-      isFiniteResult = isFinite(num);
+      isFiniteResult = isFinite(result1);
     }
     if (isFiniteResult) {
       const _Math = Math;
-      isFiniteResult = Math.floor(num) === num;
+      isFiniteResult = Math.floor(result1) === result1;
     }
     if (isFiniteResult) {
       const _Math2 = Math;
-      isFiniteResult = Math.abs(num) <= 9007199254740991;
+      isFiniteResult = Math.abs(result1) <= 9007199254740991;
     }
     return isFiniteResult;
   };

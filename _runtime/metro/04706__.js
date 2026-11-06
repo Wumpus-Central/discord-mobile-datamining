@@ -1,120 +1,125 @@
 // _runtime/metro/04706__.js
-import _mod4428 from "04428__.js";
-import startOfWeek_mod from "../04582_startOfWeek.js";
-import _typeof_mod from "04423__.js";
-import module_4427_mod from "04427__.js";
-import requiredArgs_mod from "../04424_requiredArgs.js";
+import _typeof_mod from "04450__.js";
+import module_4632_mod from "04632__.js";
+import module_4693_mod from "04693__.js";
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
-  let tmp3 = obj;
-} else {
-  tmp3 = startOfWeek;
-}
-startOfWeek = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
+  const obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+let module_4632 = module_4632_mod;
+if (!module_4632) {
+  const obj2 = { default: module_4632 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4632;
 }
-_typeof = tmp5;
-let module_4427 = module_4427_mod;
-if (!module_4427) {
-  const obj3 = { default: module_4427 };
+module_4632 = tmp5;
+let module_4693 = module_4693_mod;
+if (!module_4693) {
+  const obj3 = { default: module_4693 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4427;
+  tmp7 = module_4693;
 }
-module_4427 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
+module_4693 = tmp7;
 
-export default function getWeekYear(arg0, firstWeekContainsDate) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const defaultOptions = _mod4428.getDefaultOptions();
-  let prop;
-  if (null != firstWeekContainsDate) {
-    prop = firstWeekContainsDate.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    let prop1;
-    if (null != firstWeekContainsDate) {
-      const locale = firstWeekContainsDate.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              prop1 = options.firstWeekContainsDate;
-            }
+export default function formatISO9075(arg0, format) {
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat2 = "1 argument required, but only ".concat;
+    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
+    throw typeError;
+  } else {
+    const defaultResult = _typeof.default(arg0);
+    if (module_4632.default(defaultResult)) {
+      format = undefined;
+      if (null != format) {
+        format = format.format;
+      }
+      let str3 = "extended";
+      if (null !== format) {
+        str3 = "extended";
+        if (undefined !== format) {
+          str3 = format;
+        }
+      }
+      const StringResult = String(str3);
+      let representation;
+      if (null != format) {
+        representation = format.representation;
+      }
+      let str5 = "complete";
+      if (null !== representation) {
+        str5 = "complete";
+        if (undefined !== representation) {
+          str5 = representation;
+        }
+      }
+      const StringResult1 = String(str5);
+      if ("extended" !== StringResult) {
+        if ("basic" !== StringResult) {
+          const _RangeError3 = RangeError;
+          const rangeError = new RangeError("format must be 'extended' or 'basic'");
+          throw rangeError;
+        }
+      }
+      if ("date" !== StringResult1) {
+        if ("time" !== StringResult1) {
+          if ("complete" !== StringResult1) {
+            const _RangeError2 = RangeError;
+            const rangeError1 = new RangeError("representation must be 'date', 'time', or 'complete'");
+            throw rangeError1;
           }
         }
       }
-    }
-    prop = prop1;
-  }
-  if (null === prop) {
-    prop = defaultOptions.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    const locale2 = defaultOptions.locale;
-    let prop2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            prop2 = options2.firstWeekContainsDate;
-          }
-        }
+      let str10 = "";
+      if ("extended" === StringResult) {
+        str10 = "-";
       }
-    }
-    prop = prop2;
-  }
-  let num = 1;
-  if (null !== prop) {
-    num = 1;
-    if (undefined !== prop) {
-      num = prop;
-    }
-  }
-  const defaultResult2 = module_4427.default(num);
-  if (defaultResult2 >= 1) {
-    if (defaultResult2 <= 7) {
-      const _Date = Date;
-      const date = new Date(0);
-      date.setFullYear(fullYear + 1, 0, defaultResult2);
-      date.setHours(0, 0, 0, 0);
-      const _Date2 = Date;
-      const date1 = new Date(0);
-      date1.setFullYear(fullYear, 0, defaultResult2);
-      date1.setHours(0, 0, 0, 0);
-      const defaultResult3 = startOfWeek.default(date, firstWeekContainsDate);
-      const time = defaultResult1.getTime();
-      if (time >= defaultResult3.getTime()) {
-        let sum = fullYear + 1;
-      } else {
-        const time1 = defaultResult1.getTime();
-        sum = fullYear;
-        if (time1 < defaultResult4.getTime()) {
-          sum = fullYear - 1;
-        }
+      let str11 = "";
+      if ("extended" === StringResult) {
+        str11 = ":";
       }
-      return sum;
+      let str13 = "";
+      if ("time" !== StringResult1) {
+        const defaultResult1 = module_4693.default(defaultResult.getDate(), 2);
+        const concat3 = "".concat;
+        const combined = "".concat(module_4693.default(defaultResult.getFullYear(), 4));
+        const combined1 = combined.concat(str10);
+        const combined2 = combined1.concat(module_4693.default(defaultResult.getMonth() + 1, 2));
+        const combined3 = combined2.concat(str10);
+        str13 = combined3.concat(defaultResult1);
+        const defaultResult2 = module_4693.default(defaultResult.getMonth() + 1, 2);
+      }
+      let combined10 = str13;
+      if ("date" !== StringResult1) {
+        const defaultResult3 = module_4693.default(defaultResult.getHours(), 2);
+        let str14 = " ";
+        const defaultResult4 = module_4693.default(defaultResult.getMinutes(), 2);
+        if ("" === str13) {
+          str14 = "";
+        }
+        const concat = "".concat;
+        const combined4 = "".concat(str13);
+        const combined5 = combined4.concat(str14);
+        const combined6 = combined5.concat(defaultResult3);
+        const combined7 = combined6.concat(str11);
+        const combined8 = combined7.concat(defaultResult4);
+        const combined9 = combined8.concat(str11);
+        combined10 = combined9.concat(module_4693.default(defaultResult.getSeconds(), 2));
+        const defaultResult5 = module_4693.default(defaultResult.getSeconds(), 2);
+      }
+      return combined10;
+    } else {
+      const _RangeError = RangeError;
+      const rangeError2 = new RangeError("Invalid time value");
+      throw rangeError2;
     }
   }
-  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  throw rangeError;
 };
 export default exports.default;

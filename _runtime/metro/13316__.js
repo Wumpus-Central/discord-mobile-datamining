@@ -1,39 +1,32 @@
 // _runtime/metro/13316__.js
-import _mod13288 from "13288__.js";
+import _mod13261 from "13261__.js";
+import _mod13299 from "13299__.js";
+import _mod13302 from "13302__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function handleCallbackErrors(fn, arg1) {
-  fn = arg2;
-  if (arg2 === undefined) {
-    fn = function t() {};
+export function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
   }
-  try {
-    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
-      closure_0 = arg1;
-      closure_1 = fn;
-      if (obj.isThenable(promise)) {
-        return promise.then(
-          (result) => {
-            closure_1();
-            return result;
-          },
-          (arg0) => {
-            closure_0(arg0);
-            closure_1();
-            throw arg0;
-          },
-        );
-      } else {
-        fn();
-        return promise;
-      }
-      obj = _mod13288;
-    })(fn(), arg1, fn);
-  } catch (tmp5) {
-    tmp3(tmp5);
-    tmp2();
-    throw tmp5;
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
   }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod13302.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod13261.dropUndefinedKeys(contexts);
+  }
+  items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod13299.createEnvelope(obj, items1);
 }

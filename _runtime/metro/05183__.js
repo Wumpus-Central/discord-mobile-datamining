@@ -1,45 +1,61 @@
 // _runtime/metro/05183__.js
-function emptyFunction() {}
-function emptyFunctionWithReset() {}
-emptyFunctionWithReset.resetWarningCache = emptyFunction;
+import noop from "00019__.js";
 
-export default () => {
-  function shim(arg0, arg1, arg2, arg3, arg4, arg5) {
-    if (arg5 !== shim(dependencyMap[0])) {
-      const _Error = Error;
-      const error = new Error(
-        "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
-      );
-      error.name = "Invariant Violation";
-      throw error;
+function identity(arg0) {
+  return arg0;
+}
+function createImpl(arg0) {
+  store = store(5182).createStore(arg0);
+  function useBoundStore(arg0) {
+    let tmp = arg0;
+    closure_0 = store;
+    if (arg0 === undefined) {
+      tmp = identity;
     }
+    closure_1 = tmp;
+    const syncExternalStore = noop.useSyncExternalStore(store.subscribe, () => closure_1(closure_0.getState()), () => closure_1(closure_0.getInitialState()));
+    const debugValue = noop.useDebugValue(syncExternalStore);
+    return syncExternalStore;
   }
-  function getShim() {
-    return shim;
+  const merged = Object.assign(useBoundStore, store);
+  return useBoundStore;
+}
+
+export (arg0) => {
+  if (arg0) {
+    if (typeof createImpl === "function") {
+      store = store(5182).createStore(arg0);
+      function useBoundStore(arg0) {
+        let tmp = arg0;
+        closure_0 = store;
+        if (arg0 === undefined) {
+          tmp = identity;
+        }
+        closure_1 = tmp;
+        const syncExternalStore = noop.useSyncExternalStore(store.subscribe, () => closure_1(closure_0.getState()), () => closure_1(closure_0.getInitialState()));
+        const debugValue = noop.useDebugValue(syncExternalStore);
+        return syncExternalStore;
+      }
+      const _Object = Object;
+      const merged = Object.assign(useBoundStore, store);
+      let tmp2 = useBoundStore;
+      const obj = store(5182);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    tmp2 = createImpl;
   }
-  shim.isRequired = shim;
-  const obj = {
-    array: shim,
-    bool: shim,
-    func: shim,
-    number: shim,
-    object: shim,
-    string: shim,
-    symbol: shim,
-    any: shim,
-    arrayOf: getShim,
-    element: shim,
-    elementType: shim,
-    instanceOf: getShim,
-    node: shim,
-    objectOf: getShim,
-    oneOf: getShim,
-    oneOfType: getShim,
-    shape: getShim,
-    exact: getShim,
-    checkPropTypes: emptyFunctionWithReset,
-    resetWarningCache: emptyFunction,
-  };
-  obj.PropTypes = obj;
-  return obj;
-};
+  return tmp2;
+}
+export function useStore(subscribe) {
+  closure_0 = subscribe;
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    tmp = identity;
+  }
+  closure_1 = tmp;
+  const syncExternalStore = noop.useSyncExternalStore(subscribe.subscribe, () => closure_1(closure_0.getState()), () => closure_1(closure_0.getInitialState()));
+  const debugValue = noop.useDebugValue(syncExternalStore);
+  return syncExternalStore;
+}

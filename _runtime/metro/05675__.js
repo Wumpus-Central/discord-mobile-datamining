@@ -1,29 +1,29 @@
 // _runtime/metro/05675__.js
-import _mod5673 from "05673__.js";
+import _mod5676 from "05676__.js";
 
-export default function _superPropBase(arg0, key10009) {
-  hasOwnProperty = {}.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  let tmp = arg0;
-  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
-    let tmp4 = _mod5673(arg0);
-    tmp = tmp4;
-    if (null !== tmp4) {
-      while (true) {
-        let hasOwnProperty2 = {}.hasOwnProperty;
-        let call2 = hasOwnProperty2.call;
-        tmp = tmp4;
-        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
-          break;
-        } else {
-          tmp4 = _mod5673(tmp4);
-          tmp = tmp4;
-          if (null === tmp4) {
-            break;
-          }
+export default function toPrimitive(arg0, arg1) {
+  if ("object" == obj.default(arg0)) {
+    if (arg0) {
+      let str = arg1;
+      const _Symbol = Symbol;
+      if (undefined !== arg0[Symbol.toPrimitive]) {
+        const call = tmp4.call;
+        if (!str) {
+          str = "default";
         }
+        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
+        if ("object" != tmpResult.default(tmp5)) {
+          return tmp5;
+        } else {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
+          throw typeError;
+        }
+        tmpResult = _mod5676;
+      } else {
+        return "string" === str ? String : Number(arg0);
       }
     }
   }
-  return tmp;
+  return arg0;
 }

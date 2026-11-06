@@ -1,11 +1,12 @@
 // _runtime/metro/10593__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractTimeExpressionParser from "../10525_AbstractTimeExpressionParser.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod10594 from "10594__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const RUMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,16 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class PTTimeExpressionParser {
+class RUMonthNameLittleEndianParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, PTTimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(PTTimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, RUMonthNameLittleEndianParser);
+    tmp2 = closure_4;
+    obj = closure_4(RUMonthNameLittleEndianParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -46,22 +45,60 @@ class PTTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = PTTimeExpressionParser;
-_inherits(PTTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(RUMonthNameLittleEndianParser, _mod10594.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:ao?|\u00E0s?|das|da|de|do)\\s*)?";
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return (
+      "(?:\u0441)?\\s*(" +
+      RUMonthNameLittleEndianParser(10592).ORDINAL_NUMBER_PATTERN +
+      ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" +
+      RUMonthNameLittleEndianParser(10592).ORDINAL_NUMBER_PATTERN +
+      "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" +
+      RUMonthNameLittleEndianParser(10463).matchAnyPattern(RUMonthNameLittleEndianParser(10592).MONTH_DICTIONARY) +
+      ")(?:(?:-|\\/|,?\\s{0,3})(" +
+      RUMonthNameLittleEndianParser(10592).YEAR_PATTERN +
+      "(?![^\\s]\\d)))?"
+    );
   },
 };
 const items = [
   entry,
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = RUMonthNameLittleEndianParser(10592).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = RUMonthNameLittleEndianParser(10592).parseOrdinalNumberPattern(index[1]);
+      if (result > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", result);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", RUMonthNameLittleEndianParser(10592).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply(
+            "year",
+            RUMonthNameLittleEndianParser(10464).findYearClosestToRef(createParsingResult.refDate, result, tmp4),
+          );
+        }
+        if (index[2]) {
+          const start3 = parsingResult.start;
+          const result1 = RUMonthNameLittleEndianParser(10592).parseOrdinalNumberPattern(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
+        }
+        return parsingResult;
+      }
     },
   },
 ];
 
-export default _createClass(PTTimeExpressionParser, items);
+export default _createClass(RUMonthNameLittleEndianParser, items);

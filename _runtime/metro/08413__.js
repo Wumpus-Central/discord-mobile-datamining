@@ -1,49 +1,45 @@
 // _runtime/metro/08413__.js
-import _mod8414 from "08414__.js";
-import _mod8415 from "08415__.js";
-import _mod8416 from "08416__.js";
-import _mod8417 from "08417__.js";
+import _mod8370 from "08370__.js";
+import get0thIfdOffset from "../08390_get0thIfdOffset.js";
+import IFD_TYPE_0TH from "../08391_IFD_TYPE_0TH.js";
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
+require = arg1;
+const dependencyMap = arg6;
+
+export default {
+  read(byteLength, sum, arg2, byteOrder, arg4) {
+    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+    let tmp6 = ifd;
+    if (ifd.ShotInfo) {
+      value = ifd.ShotInfo.value;
+      const obj2 = {};
+      if (undefined !== value[27]) {
+        const obj3 = { value: value[27], description: null };
+        let str = "None";
+        if (0 !== value[27]) {
+          let str2 = "Rotate 90 CW";
+          if (1 !== tmp7) {
+            let str3 = "Rotate 180";
+            if (2 !== tmp7) {
+              let str4 = "Unknown";
+              if (3 === tmp7) {
+                str4 = "Rotate 270 CW";
+              }
+              str3 = str4;
+            }
+            str2 = str3;
           }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
+          str = str2;
         }
+        obj3.description = str;
+        obj2.AutoRotate = obj3;
       }
-    };
-  }
-  const _Object2 = Object;
-  fn(_mod8414, exports);
-  fn(_mod8415, exports);
-  fn(_mod8416, exports);
-  fn(_mod8417, exports);
-} else {
-  let _Object = Object;
-}
+      const tmp3Result = _mod8370;
+      delete tmp[tmp2];
+      tmp6 = _mod8370.objectAssign({}, ifd, obj2);
+      const objectAssignResult = _mod8370.objectAssign({}, ifd, obj2);
+    }
+    return tmp6;
+  },
+  SHOT_INFO_AUTO_ROTATE: 27,
+};

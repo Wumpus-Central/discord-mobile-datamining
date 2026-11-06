@@ -1,11 +1,12 @@
 // _runtime/metro/16445__.js
-import _mod16393 from "16393__.js";
-import _mod16402 from "16402__.js";
-import all from "16412__.js";
+import _mod16383 from "16383__.js";
+import all from "16409__.js";
 
-let closure_0 = _mod16393(Function.toString);
-if (!all(_mod16402.inspectSource)) {
-  _mod16402.inspectSource = (arg0) => closure_0(arg0);
+let _moduleResult = all(_mod16383.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod16383.WeakMap));
+  const obj = /native code/;
 }
 
-export default _mod16402.inspectSource;
+export default _moduleResult;

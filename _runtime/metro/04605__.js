@@ -1,12 +1,16 @@
 // _runtime/metro/04605__.js
-import _typeof_mod from "04606__.js";
-import _typeof_mod from "04423__.js";
-import requiredArgs_mod from "../04424_requiredArgs.js";
+import module_4454_mod from "04454__.js";
+import _typeof_mod from "04450__.js";
+import requiredArgs_mod from "../04451_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj = { default: module_4454 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4454;
 }
+module_4454 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -24,13 +28,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function isValid(num) {
-  requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
+export default function addMilliseconds(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const time = _typeof.default(arg0).getTime();
+  const defaultResult1 = _typeof.default(arg0);
+  return new Date(time + module_4454.default(arg1));
 };
 export default exports.default;

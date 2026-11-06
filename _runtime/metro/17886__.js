@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c6597e29df99a6319981970d49c96987",
-  name: "MagicDoorIcon",
+  hash: "4aac4b9e524273cde97c71cf7da9357a",
+  name: "DoubleCheckmarkIcon",
   type: "png",
 });

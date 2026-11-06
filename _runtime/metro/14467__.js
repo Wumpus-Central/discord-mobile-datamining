@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/directory_channels/native/images",
-  width: 375,
-  height: 300,
-  scales: [2],
-  hash: "ce796d5b5dedd403e327ddf7cc5530fc",
-  name: "hub_header",
+  httpServerLocation: "/assets/modules/contact_sync/native/images",
+  width: 215.5,
+  height: 135,
+  scales: [2, 3],
+  hash: "fad7ba73a3f13e1d6de72f833c30efc1",
+  name: "header-art-onboarding",
   type: "png",
 });

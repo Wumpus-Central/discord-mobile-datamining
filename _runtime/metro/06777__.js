@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 628,
-  height: 167,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "87dcaca9679ceb1e78d3b15aba4c2917",
-  name: "img_account_sync_samsung_white",
+  hash: "85e85e0480cc3ad94f292bfe35b1a958",
+  name: "img_amazon_music",
   type: "svg",
 });

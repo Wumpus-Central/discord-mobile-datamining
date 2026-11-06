@@ -1,17 +1,10 @@
 // _runtime/metro/05443__.js
-import animatedComponentDefault from "../05444_animatedComponent.js";
-import get_ActivityIndicator from "00017__.js";
+function print() {
 
-({ Animated, StyleSheet } = get_ActivityIndicator);
-const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
+}
+const frozen = Object.freeze(print);
 
-export const GestureDetectorType = {
-  Native: 0,
-  [0]: "Native",
-  Virtual: 1,
-  [1]: "Virtual",
-  Intercepting: 2,
-  [2]: "Intercepting",
-};
-export const AnimatedNativeDetector = animatedComponent;
-export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });
+export { print };
+export (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
+}

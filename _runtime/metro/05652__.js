@@ -1,9 +1,6 @@
 // _runtime/metro/05652__.js
+import _mod17 from "00017__.js";
 
-export default function _classCallCheck(arg0, arg1) {
-  if (!(arg0 instanceof arg1)) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Cannot call a class as a function");
-    throw typeError;
-  }
-}
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });

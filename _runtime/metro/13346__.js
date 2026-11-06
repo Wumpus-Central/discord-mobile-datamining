@@ -1,100 +1,151 @@
 // _runtime/metro/13346__.js
-import _slicedToArray from "00032__.js";
+import _mod13347 from "13347__.js";
+import setupIntegration from "13311__.js";
 
-function parseRetryAfterHeader(arg0) {
-  let timestamp = arg1;
-  if (arg1 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  const parsed = parseInt("" + arg0, 10);
-  if (isNaN(parsed)) {
-    const _Date2 = Date;
-    const _HermesInternal = HermesInternal;
-    const parsed1 = Date.parse("" + arg0);
-    const _isNaN = isNaN;
-    let num2 = 60000;
-    if (!isNaN(parsed1)) {
-      num2 = parsed1 - timestamp;
-    }
-    return num2;
-  } else {
-    return 1000 * parsed;
-  }
-}
-
-export const DEFAULT_RETRY_AFTER = 60000;
-export function disabledUntil(all, arg1) {
-  return all[arg1] || all.all || 0;
-}
-export function isRateLimited(all, result) {
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  return (all[result] || all.all || 0) > timestamp;
-}
-export { parseRetryAfterHeader };
-export function updateRateLimits(arg0, headers) {
-  headers = headers.headers;
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  const obj = {};
-  const merged = Object.assign(arg0);
-  let str = headers;
-  if (headers) {
-    str = headers["x-sentry-rate-limits"];
-  }
-  let prop = headers;
-  if (headers) {
-    prop = headers["retry-after"];
-  }
-  if (str) {
-    const parts = str.trim().split(",");
-    const iter = parts[Symbol.iterator]();
-    const str2 = str.trim();
-    while (iter !== undefined) {
-      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
-      let str9 = tmp12[1];
-      let str10 = tmp12[4];
-      let _parseInt = parseInt;
-      let parsed = parseInt(tmp12[0], 10);
-      let _isNaN = isNaN;
-      let num6 = 60;
-      if (!isNaN(parsed)) {
-        num6 = parsed;
-      }
-      let result = 1000 * num6;
-      if (str9) {
-        let parts1 = str9.split(";");
-        for (const item10065 of parts1) {
-          let tmp23 = "metric_bucket" === item10065;
-          if (tmp23) {
-            tmp23 = str10;
-          }
-          if (tmp23) {
-            let parts2 = str10.split(";");
-            tmp23 = !parts2.includes("custom");
-          }
-          if (!tmp23) {
-            obj[item10065] = timestamp + result;
-          }
-          continue;
+export function generateIteratee(arg0) {
+  ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
+  return (root) => {
+    if (root.filename) {
+      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
+      if (!isMatch) {
+        const filename = root.filename;
+        let hasItem = filename.includes("\\");
+        if (hasItem) {
+          const filename2 = root.filename;
+          hasItem = !filename2.includes("/");
         }
-      } else {
-        obj.all = timestamp + result;
+        isMatch = hasItem;
       }
-      continue;
+      if (fn) {
+        if (root) {
+          const filename1 = root.filename;
+          if (0 === filename1.indexOf(root)) {
+            root.filename = filename1.replace(root, prefix);
+          }
+        }
+      } else if (isMatch) {
+        if (isMatch) {
+          let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
+          const str5 = str3.replace(/^[a-zA-Z]:/, "");
+        } else {
+          replaced = str3;
+        }
+        const obj2 = _mod13347;
+        if (root) {
+          let relativeResult = obj2.relative(root, replaced);
+        } else {
+          relativeResult = obj2.basename(replaced);
+        }
+        const _HermesInternal = HermesInternal;
+        root.filename = "" + prefix + relativeResult;
+      }
+      return root;
+    } else {
+      return root;
     }
-    str8 = iter.next();
-  } else if (prop) {
-    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
-  } else if (429 === headers.statusCode) {
-    obj.all = timestamp + 60000;
-  }
-  return obj;
+  };
 }
+export const rewriteFramesIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let fn;
+  ({ prefix, root } = obj);
+  if (!prefix) {
+    prefix = "app:///";
+  }
+  fn = obj.iteratee;
+  if (!fn) {
+    fn = (root) => {
+      if (root.filename) {
+        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
+        if (!isMatch) {
+          const filename = root.filename;
+          let hasItem = filename.includes("\\");
+          if (hasItem) {
+            const filename2 = root.filename;
+            hasItem = !filename2.includes("/");
+          }
+          isMatch = hasItem;
+        }
+        if (fn) {
+          if (root) {
+            const filename1 = root.filename;
+            if (0 === filename1.indexOf(root)) {
+              root.filename = filename1.replace(root, prefix);
+            }
+          }
+        } else if (isMatch) {
+          if (isMatch) {
+            let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
+            const str5 = str3.replace(/^[a-zA-Z]:/, "");
+          } else {
+            replaced = str3;
+          }
+          const obj2 = _mod13347;
+          if (root) {
+            let relativeResult = obj2.relative(root, replaced);
+          } else {
+            relativeResult = obj2.basename(replaced);
+          }
+          const _HermesInternal = HermesInternal;
+          root.filename = "" + prefix + relativeResult;
+        }
+        return root;
+      } else {
+        return root;
+      }
+    };
+  }
+  return {
+    name: "RewriteFrames",
+    processEvent(exception) {
+      exception = exception.exception;
+      if (exception) {
+        const _Array = Array;
+        exception = Array.isArray(exception.exception.values);
+      }
+      let tmp2 = exception;
+      if (exception) {
+        tmp2 = (function _processExceptionsEvent(exception) {
+          try {
+            const obj = {};
+            let merged = Object.assign(exception);
+            let obj2 = {};
+            let merged1 = Object.assign(exception.exception);
+            const values = exception.exception.values;
+            obj2.values = values.map((stacktrace) => {
+              const merged = Object.assign(stacktrace);
+              stacktrace = stacktrace.stacktrace;
+              if (stacktrace) {
+                const stacktrace2 = stacktrace.stacktrace;
+                const obj2 = {};
+                const merged1 = Object.assign(stacktrace2);
+                let frames = stacktrace2;
+                if (stacktrace2) {
+                  frames = stacktrace2.frames;
+                }
+                if (frames) {
+                  const frames1 = stacktrace2.frames;
+                  frames = frames1.map((item) => closure_1_0(item));
+                }
+                const obj3 = { stacktrace: null };
+                obj2.frames = frames;
+                obj3.stacktrace = obj2;
+                stacktrace = obj3;
+              }
+              const merged2 = Object.assign(stacktrace);
+              return {};
+            });
+            obj.exception = obj2;
+            return obj;
+          } catch (err) {
+            return tmp;
+          }
+        })(exception);
+      }
+      return tmp2;
+    },
+  };
+});

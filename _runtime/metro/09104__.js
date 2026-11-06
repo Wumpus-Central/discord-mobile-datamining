@@ -1,26 +1,13 @@
 // _runtime/metro/09104__.js
-import _mod518 from "00518__.js";
-import _mod521 from "00521__.js";
-import _mod543 from "00543__.js";
-import eq from "../00615_eq.js";
+import registerAsset from "01119__.js";
 
-export default function isIterateeCall(arg0, num, arg2) {
-  if (_mod521(arg2)) {
-    if (typeof num === "number") {
-      let tmp5 = _mod518(arg2) && _mod543(num, arg2.length);
-      const tmp4 = _mod518(arg2) && _mod543(num, arg2.length);
-    } else {
-      tmp5 = typeof num === "string";
-      if (typeof num === "string") {
-        tmp5 = num in arg2;
-      }
-    }
-    let tmp6 = tmp5;
-    if (tmp6) {
-      tmp6 = eq(arg2[num], arg0);
-    }
-    return tmp6;
-  } else {
-    return false;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "60c832d89b9f9ddf8ba9ba1f90955760",
+  name: "ic-location",
+  type: "png",
+});

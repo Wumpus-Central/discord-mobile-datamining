@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BeanieIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "5ed4f057d69445a6e4a7fd8ca936d32a",
-  name: "BeanieIcon",
+  hash: "15492a52206e63f9d08f70b19c6b74cb",
+  name: "ic_nitro_basic_wheel_gradient",
   type: "png",
 });

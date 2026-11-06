@@ -1,145 +1,86 @@
 // _runtime/metro/05572__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef5573 from "05573__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import tagMessage from "../05454_tagMessage.js";
+import _mod5455 from "05455__.js";
 
-const TouchableHighlight = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let closure_3 = ["style"];
-_possibleConstructorReturnDefault;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-class TouchableHighlight {
-  constructor(arg0) {
-    self = this;
-    tmp = hasOwnProperty(this, TouchableHighlight);
-    items = [];
-    items[0] = global;
-    tmp2 = metroImportDefault;
-    obj = metroImportDefault(TouchableHighlight);
-    tmp3 = closure_6;
-    if (closure_11()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.showUnderlay = () => {
-      if (closure_0.hasPressHandler()) {
-        const obj2 = { extraChildStyle: null, extraUnderlayStyle: null };
-        const obj3 = { opacity: closure_0.props.activeOpacity };
-        obj2.extraChildStyle = obj3;
-        const obj4 = { backgroundColor: closure_0.props.underlayColor };
-        obj2.extraUnderlayStyle = obj4;
-        closure_0.setState(obj2);
-        const props = closure_0.props;
-        const onShowUnderlay = props.onShowUnderlay;
-        if (onShowUnderlay != null) {
-          onShowUnderlay();
-        }
-      }
-    };
-    tmp3Result.hasPressHandler = () =>
-      closure_0.props.onPress || closure_0.props.onPressIn || closure_0.props.onPressOut || closure_0.props.onLongPress;
-    tmp3Result.hideUnderlay = () => {
-      closure_0.setState({ extraChildStyle: null, extraUnderlayStyle: null });
-      const props = closure_0.props;
-      const onHideUnderlay = props.onHideUnderlay;
-      if (onHideUnderlay != null) {
-        onHideUnderlay();
-      }
-    };
-    tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === TouchableHighlight(5573).TOUCHABLE_STATE.BEGAN) {
-        closure_0.showUnderlay();
-      } else {
-        if (!tmp3) {
-          closure_0.hideUnderlay();
-        }
-        tmp3 =
-          arg1 !== TouchableHighlight(5573).TOUCHABLE_STATE.UNDETERMINED &&
-          arg1 !== TouchableHighlight(5573).TOUCHABLE_STATE.MOVED_OUTSIDE;
-      }
-    };
-    tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };
-    return tmp3Result;
+const items = [
+  {
+    code: "(function pnpm_gestureStateManagerTs1(handlerTag,state){let[tagMessage]=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}})",
+  },
+  tagMessage.tagMessage,
+];
+let c0;
+[tmp2, tmp3] = items;
+function pnpm_gestureStateManagerTs1(arg0, arg1) {
+  const _globalThis = globalThis;
+  if (globalThis._setGestureStateSync) {
+    _globalThis._setGestureStateSync(arg0, arg1);
+  } else if (_globalThis._setGestureStateAsync) {
+    const _globalThis2 = globalThis;
+    const result = globalThis._setGestureStateAsync(arg0, arg1);
+  } else {
+    const _Error = Error;
+    const error = new Error(_undefined("Failed to set gesture state"));
+    throw error;
   }
 }
-_inherits(TouchableHighlight, fn(19).Component);
-const entry = {
-  key: "renderChildren",
-  value: function renderChildren() {
-    const self = this;
-    if (this.props.children) {
-      const Children = noop.Children;
-      const onlyResult = Children.only(self.props.children);
-      const style = onlyResult.props.style;
-      if (self.state.extraChildStyle) {
-        items = [style, self.state.extraChildStyle];
-        let tmp5 = items;
-      } else {
-        tmp5 = style;
-      }
-      const obj = { style: tmp5 };
-      return noop.cloneElement(onlyResult, obj);
-    } else {
-      return <View />;
-    }
-  },
-};
-let items = [
-  entry,
+const items1 = [tmp3];
+pnpm_gestureStateManagerTs1.__closure = items1;
+pnpm_gestureStateManagerTs1.__workletHash = 7329582373210;
+pnpm_gestureStateManagerTs1.__initData = tmp2;
+const items2 = [
   {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let style = props.style;
-      if (undefined === style) {
-        style = {};
-      }
-      const obj = {};
-      const tmp = _objectWithoutProperties(props, closure_3);
-      const merged = Object.assign(tmp);
-      items = [style, self.state.extraUnderlayStyle];
-      obj.style = items;
-      obj.onStateChange = self.onStateChange;
-      obj.children = self.renderChildren();
-      return jsx(_modDef5573, {});
-    },
+    code: "(function activate_Pnpm_gestureStateManagerTs2(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.ACTIVE);})",
   },
+  pnpm_gestureStateManagerTs1,
+  _mod5455.State,
 ];
-const importDefaultResultResult = _createClass(TouchableHighlight, items);
-let obj = {};
-let merged = Object.assign(_modDef5573.defaultProps);
-obj.activeOpacity = 0.85;
-obj.delayPressOut = 100;
-obj.underlayColor = "black";
-importDefaultResultResult.defaultProps = obj;
+let closure_129_0;
+let closure_129_1;
+[tmp4, tmp5, tmp6] = items2;
+const obj = { activate: null, fail: null, deactivate: null };
+function activate(arg0) {
+  _undefined(arg0, constants.ACTIVE);
+}
+const items3 = [tmp5, tmp6];
+activate.__closure = items3;
+activate.__workletHash = 1857335023251;
+activate.__initData = tmp4;
+obj.activate = activate;
+const items4 = [
+  {
+    code: "(function fail_Pnpm_gestureStateManagerTs3(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.FAILED);})",
+  },
+  pnpm_gestureStateManagerTs1,
+  _mod5455.State,
+];
+let closure_130_0;
+let closure_130_1;
+[tmp7, tmp8, tmp9] = items4;
+function fail(arg0) {
+  _undefined(arg0, constants.FAILED);
+}
+const items5 = [tmp8, tmp9];
+fail.__closure = items5;
+fail.__workletHash = 2377190791686;
+fail.__initData = tmp7;
+obj.fail = fail;
+const items6 = [
+  {
+    code: "(function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.END);})",
+  },
+  pnpm_gestureStateManagerTs1,
+  _mod5455.State,
+];
+let closure_131_0;
+let closure_131_1;
+[tmp10, tmp11, tmp12] = items6;
+function deactivate(arg0) {
+  _undefined(arg0, constants.END);
+}
+const items7 = [tmp11, tmp12];
+deactivate.__closure = items7;
+deactivate.__workletHash = 3880091307703;
+deactivate.__initData = tmp10;
+obj.deactivate = deactivate;
 
-export default importDefaultResultResult;
+export const GestureStateManager = obj;

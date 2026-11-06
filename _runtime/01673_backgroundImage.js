@@ -214,10 +214,10 @@ const items13 = [
 ];
 let closure_132_0;
 [tmp19, tmp20] = items13;
-function pnpm_backgroundImageTs11(arg0) {
-  let isFiniteResult = Number.isFinite(arg0);
+function pnpm_backgroundImageTs11(scrollLength) {
+  let isFiniteResult = Number.isFinite(scrollLength);
   if (!isFiniteResult) {
-    isFiniteResult = _slicedToArray(arg0);
+    isFiniteResult = _slicedToArray(scrollLength);
   }
   return isFiniteResult;
 }

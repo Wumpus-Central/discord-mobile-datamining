@@ -1,7 +1,7 @@
 // _runtime/metro/04689__.js
-import _typeof_mod from "04423__.js";
-import module_4690_mod from "04690__.js";
-import requiredArgs_mod from "../04424_requiredArgs.js";
+import _typeof_mod from "04450__.js";
+import requiredArgs_mod from "../04451_requiredArgs.js";
+import startOfUTCISOWeek_mod from "../04687_startOfUTCISOWeek.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -11,35 +11,44 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_4690 = module_4690_mod;
-if (!module_4690) {
-  const obj2 = { default: module_4690 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4690;
-}
-module_4690 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
+if (!startOfUTCISOWeek) {
+  const obj3 = { default: startOfUTCISOWeek };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = startOfUTCISOWeek;
 }
-requiredArgs = tmp7;
+startOfUTCISOWeek = tmp7;
 
-export default function getDaysInYear(arg0) {
+export default function getUTCISOWeekYear(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
+  const uTCFullYear = defaultResult1.getUTCFullYear();
+  const date = new Date(0);
+  date.setUTCFullYear(uTCFullYear + 1, 0, 4);
+  date.setUTCHours(0, 0, 0, 0);
+  const date1 = new Date(0);
+  date1.setUTCFullYear(uTCFullYear, 0, 4);
+  date1.setUTCHours(0, 0, 0, 0);
+  const defaultResult2 = startOfUTCISOWeek.default(date);
+  const time = defaultResult1.getTime();
+  if (time >= defaultResult2.getTime()) {
+    let sum = uTCFullYear + 1;
   } else {
-    let num = 365;
-    if (module_4690.default(defaultResult1)) {
-      num = 366;
+    const time1 = defaultResult1.getTime();
+    sum = uTCFullYear;
+    if (time1 < defaultResult3.getTime()) {
+      sum = uTCFullYear - 1;
     }
-    return num;
   }
-  date = new Date(defaultResult1);
+  return sum;
 };
 export default exports.default;

@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZ2VfYXNzdXJhbmNlL2FnZV9ub3RpY2U=",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "8c3c06683a089ceb6316938dd439a66d",
-  name: "da.messages.8c3c06683a089ceb6316938dd439a66d.compiled.messages",
+  hash: "452e54484c9c86e09e78373620a7296a",
+  name: "en-GB.messages.452e54484c9c86e09e78373620a7296a.compiled.messages",
   type: "jsona",
 });

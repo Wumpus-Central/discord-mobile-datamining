@@ -210,7 +210,7 @@ export (enabled) => {
     }
   }, items13);
   const obj10 = { value: tmp11, children: null };
-  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "image/png", onKeyboardMoveInteractive: "mobile", onKeyboardMoveEnd: null, onFocusedInputLayoutChangedReanimated: "nl-BQ", children: "nl" };
+  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "", onKeyboardMoveInteractive: null, onKeyboardMoveEnd: null, onFocusedInputLayoutChangedReanimated: null, children: "nl-BE" };
   let tmp34 = closure_12;
   let tmp35 = closure_12;
   if (!closure_12) {

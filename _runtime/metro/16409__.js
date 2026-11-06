@@ -1,10 +1,19 @@
 // _runtime/metro/16409__.js
-import _mod16393 from "16393__.js";
-import _mod16410 from "16410__.js";
-
-let closure_2 = _mod16393({}.hasOwnProperty);
-
-export default Object.hasOwn ||
-  function hasOwn(arg0, arg1) {
-    return closure_2(_mod16410(arg0), arg1);
-  };
+let all = typeof document === "object";
+if (typeof document === "object") {
+  const _document = document;
+  all = document.all;
+}
+if (undefined === all) {
+  if (undefined !== all) {
+    let fn = (fn) => {
+      let tmp = typeof fn === "function";
+      if (typeof fn !== "function") {
+        tmp = fn === all;
+      }
+      return tmp;
+    };
+  }
+  module.exports = fn;
+}
+fn = (fn) => typeof fn === "function";

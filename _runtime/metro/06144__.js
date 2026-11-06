@@ -1,6 +1,13 @@
 // _runtime/metro/06144__.js
-import _mod17 from "00017__.js";
+import noop from "00019__.js";
 
-const Platform = _mod17.Platform;
+({ useEffect: closure_0, useRef: closure_1 } = noop);
 
-export const isIOS26OrHigher = false;
+export function usePrevious(current) {
+  const tmp = duration(undefined);
+  closure_1 = tmp;
+  React(() => {
+    closure_1.current = current;
+  });
+  return tmp.current;
+}

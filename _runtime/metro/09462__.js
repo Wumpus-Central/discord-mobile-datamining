@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d24fd30a4be11fedb417c4afcd1e21a5",
-  name: "ExperimentalWebBadgeIcon-secondary",
+  hash: "8490caddc6d6fe2d04f984b90b4d2807",
+  name: "XboxNeutralIcon",
   type: "png",
 });

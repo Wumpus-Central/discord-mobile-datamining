@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==",
+  httpServerLocation: "/assets/modules/game_organization_invites",
   scales: [1],
-  hash: "71f29c3731eacb513a7467d1865bcb4f",
-  name: "zh-TW.messages.71f29c3731eacb513a7467d1865bcb4f.compiled.messages",
+  hash: "fdf21b37e69272eeb68fe77672ae1f1c",
+  name: "GameOrganizationInvitesUntranslated.compiled.messages",
   type: "jsona",
 });

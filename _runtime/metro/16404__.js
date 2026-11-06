@@ -1,14 +1,11 @@
 // _runtime/metro/16404__.js
-import prop_mod from "16405__.js";
+import _mod16383 from "16383__.js";
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
+const tmp = _mod16383.navigator && _mod16383.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
 }
 
-export default prop;
+export default str;

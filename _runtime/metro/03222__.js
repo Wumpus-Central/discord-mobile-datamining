@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/checkpoint/testing",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jaGVja3BvaW50",
   scales: [1],
-  hash: "9a1d74df3e4a0f5d1a2c1ec69074b587",
-  name: "CheckpointTesting.compiled.messages",
+  hash: "d209634d21ea442ceaf24a7ba1f7ed73",
+  name: "en-GB.messages.d209634d21ea442ceaf24a7ba1f7ed73.compiled.messages",
   type: "jsona",
 });

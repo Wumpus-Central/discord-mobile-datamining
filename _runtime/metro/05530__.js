@@ -1,17 +1,12 @@
 // _runtime/metro/05530__.js
-import ComposedGestureName from "../05492_ComposedGestureName.js";
-import resolveInternalConfigProps from "../05501_resolveInternalConfigProps.js";
-import _mod5518 from "05518__.js";
+import RNGestureHandlerModuleDefault from "../05479_RNGestureHandlerModule.js";
 
-require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
-let closure_2 = {};
 
-export function useNativeGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
+export function getModuleId() {
+  if (moduleId == null) {
+    moduleId = RNGestureHandlerModuleDefault.getModuleId();
   }
-  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
-  return _mod5518.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
+  return moduleId;
 }

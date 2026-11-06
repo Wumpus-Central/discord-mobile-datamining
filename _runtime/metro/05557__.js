@@ -1,9 +1,18 @@
 // _runtime/metro/05557__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import noop from "00019__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { pointerEvents: true, moduleId: true, unstable_forceActive: true } };
+const jsx = fn(21).jsx;
 
-export default module_65.get("RNGestureHandlerRootView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default function _default(simultaneousWith) {
+  const merged = Object.assign(simultaneousWith);
+  return jsx(
+    importDefault(
+      null != simultaneousWith.simultaneousWith ||
+        null != simultaneousWith.requireToFail ||
+        null != simultaneousWith.block
+        ? 5558
+        : 5569,
+    ),
+    {},
+  );
+}

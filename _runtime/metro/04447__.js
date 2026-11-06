@@ -1,29 +1,24 @@
 // _runtime/metro/04447__.js
-import 02199__ from "02199__.js";
+let closure_0 = { lessThanXSeconds: { one: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 \u0441\u0435\u043A\u0443\u043D\u0434\u0430", other: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438" }, xSeconds: { one: "1 \u0441\u0435\u043A\u0443\u043D\u0434\u0430", other: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438" }, halfAMinute: "\u043F\u043E\u043B\u043E\u0432\u0438\u043D \u043C\u0438\u043D\u0443\u0442\u0430", lessThanXMinutes: { one: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 \u043C\u0438\u043D\u0443\u0442\u0430", other: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 {{count}} \u043C\u0438\u043D\u0443\u0442\u0438" }, xMinutes: { one: "1 \u043C\u0438\u043D\u0443\u0442\u0430", other: "{{count}} \u043C\u0438\u043D\u0443\u0442\u0438" }, aboutXHours: { one: "\u043E\u043A\u043E\u043B\u043E \u0447\u0430\u0441", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0447\u0430\u0441\u0430" }, xHours: { one: "1 \u0447\u0430\u0441", other: "{{count}} \u0447\u0430\u0441\u0430" }, xDays: { one: "1 \u0434\u0435\u043D", other: "{{count}} \u0434\u043D\u0438" }, aboutXWeeks: { one: "\u043E\u043A\u043E\u043B\u043E \u0441\u0435\u0434\u043C\u0438\u0446\u0430", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0441\u0435\u0434\u043C\u0438\u0446\u0438" }, xWeeks: { one: "1 \u0441\u0435\u0434\u043C\u0438\u0446\u0430", other: "{{count}} \u0441\u0435\u0434\u043C\u0438\u0446\u0438" }, aboutXMonths: { one: "\u043E\u043A\u043E\u043B\u043E \u043C\u0435\u0441\u0435\u0446", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u043C\u0435\u0441\u0435\u0446\u0430" }, xMonths: { one: "1 \u043C\u0435\u0441\u0435\u0446", other: "{{count}} \u043C\u0435\u0441\u0435\u0446\u0430" }, aboutXYears: { one: "\u043E\u043A\u043E\u043B\u043E \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, xYears: { one: "1 \u0433\u043E\u0434\u0438\u043D\u0430", other: "{{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, overXYears: { one: "\u043D\u0430\u0434 \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043D\u0430\u0434 {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, almostXYears: { one: "\u043F\u043E\u0447\u0442\u0438 \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043F\u043E\u0447\u0442\u0438 {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" } };
 
-if (!module_2199) {
-  const obj2 = { default: module_2199 };
-  let obj = obj2;
-} else {
-  obj = module_2199;
-}
-const obj3 = { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["Jan", "Feb", "M\u00E4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"], wide: ["Januar", "Februar", "M\u00E4rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"] };
-const date = {
-  ordinalNumber(arg0) {
-    return Number(arg0) + ".";
-  },
-  era: obj.default({ values: { narrow: ["v.Chr.", "n.Chr."], abbreviated: ["v.Chr.", "n.Chr."], wide: ["vor Christus", "nach Christus"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1. Quartal", "2. Quartal", "3. Quartal", "4. Quartal"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `преди ${tmp}`;
+        }
+        text = `след ${tmp}`;
+      }
     }
-  }),
-  month: obj.default({ values: obj3, formattingValues: { narrow: obj3.narrow, abbreviated: ["Jan.", "Feb.", "M\u00E4rz", "Apr.", "Mai", "Juni", "Juli", "Aug.", "Sep.", "Okt.", "Nov.", "Dez."], wide: obj3.wide }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["S", "M", "D", "M", "D", "F", "S"], short: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"], abbreviated: ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."], wide: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "vm.", pm: "nm.", midnight: "Mitternacht", noon: "Mittag", morning: "Morgen", afternoon: "Nachm.", evening: "Abend", night: "Nacht" }, abbreviated: { am: "vorm.", pm: "nachm.", midnight: "Mitternacht", noon: "Mittag", morning: "Morgen", afternoon: "Nachmittag", evening: "Abend", night: "Nacht" }, wide: { am: "vormittags", pm: "nachmittags", midnight: "Mitternacht", noon: "Mittag", morning: "Morgen", afternoon: "Nachmittag", evening: "Abend", night: "Nacht" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "vm.", pm: "nm.", midnight: "Mitternacht", noon: "Mittag", morning: "morgens", afternoon: "nachm.", evening: "abends", night: "nachts" }, abbreviated: { am: "vorm.", pm: "nachm.", midnight: "Mitternacht", noon: "Mittag", morning: "morgens", afternoon: "nachmittags", evening: "abends", night: "nachts" }, wide: { am: "vormittags", pm: "nachmittags", midnight: "Mitternacht", noon: "Mittag", morning: "morgens", afternoon: "nachmittags", evening: "abends", night: "nachts" } }, defaultFormattingWidth: "wide" })
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
+  }
 };
-
-export default date;
 export default exports.default;

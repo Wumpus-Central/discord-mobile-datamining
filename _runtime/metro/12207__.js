@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 12,
-  height: 12,
-  scales: [2, 3],
-  hash: "b28329d7d2ebd0b330f6112973e5d746",
-  name: "ic_sparkle",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "98e013109b389eb9fdfad5277cb35b88",
+  name: "ic_moderator",
   type: "png",
 });

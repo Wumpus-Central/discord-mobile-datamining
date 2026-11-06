@@ -1,119 +1,232 @@
 // _runtime/metro/13361__.js
-import extractRequestData from "../13362_extractRequestData.js";
-import _slicedToArray from "00032__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import setupIntegration from "13337__.js";
+import errorCallback from "../13251_errorCallback.js";
+import _mod13279 from "13279__.js";
+import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import "module_13254";
+import consoleSandbox from "13255__.js";
+import __SENTRY_DEBUG__ from "13283__.js";
+import dateTimestampInSeconds from "13269__.js";
 
-let closure_4 = ["ip", "user"];
-let obj = {
-  include: {
-    cookies: true,
-    data: true,
-    headers: true,
-    ip: false,
-    query_string: true,
-    url: true,
-    user: { id: true, username: true, email: true },
-  },
-  transactionNamingScheme: "methodPath",
-};
+errorCallback;
+_mod13279;
+let obj = { mechanism: { handled: false, data: { function: "trpcMiddleware" } } };
 
-export const requestDataIntegration = setupIntegration.defineIntegration(() => {
-  obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let obj2 = {};
-  const merged = Object.assign(obj);
-  const merged1 = Object.assign(obj);
-  let obj3 = {};
-  const merged2 = Object.assign(obj.include);
-  const merged3 = Object.assign(obj.include);
-  if (obj.include) {
-    if (typeof obj.include.user === "boolean") {
-      let user = obj.include.user;
-    }
-    obj3.user = user;
-    obj2.include = obj3;
-    const obj4 = {
-      name: "RequestData",
-      processEvent(sdkProcessingMetadata) {
-        let prop = sdkProcessingMetadata.sdkProcessingMetadata;
-        if (undefined === prop) {
-          prop = {};
-        }
-        ({ request, normalizedRequest } = prop);
-        const tmp = (function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
-          include = include.include;
-          const user = include.user;
-          items = ["method"];
-          const entries = Object.entries(closure_1_3(include, closure_1_4));
-          while (tmp2 !== undefined) {
-            let tmp5 = closure_1_2(tmp3, 2);
-            let first = tmp5[0];
-            if (tmp5[1]) {
-              let arr = items.push(first);
+export function trpcMiddleware() {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            let obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp5;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            closure_129_3 = undefined;
+            const path = closure_0.path;
+            closure_129_0 = path;
+            ({ next: closure_129_1, rawInput, getRawInput } = closure_0);
+            const client = closure_0(13282).getClient();
+            let options = client;
+            if (client) {
+              options = client.getOptions();
             }
-            continue;
-          }
-          let flag = true;
-          if (undefined !== user) {
-            flag = user;
-            if (typeof user !== "boolean") {
-              const items1 = [];
-              const _Object = Object;
-              const entries1 = Object.entries(user);
-              flag = items1;
-              for (const item10032 of entries1) {
-                let tmp11 = closure_1_2(item10032, 2);
-                let first1 = tmp11[0];
-                if (tmp11[1]) {
-                  let arr2 = items1.push(first1);
-                }
-                continue;
+            let obj5 = { procedure_path: path, procedure_type: closure_0.type };
+            closure_129_2 = obj5;
+            if (undefined !== closure_0.attachRpcInput) {
+              let sendDefaultPii = closure_0.attachRpcInput;
+            } else {
+              sendDefaultPii = options;
+              if (options) {
+                sendDefaultPii = options.sendDefaultPii;
               }
             }
-          }
-          const include2 = { ip: include.ip, user: flag, request: null, transaction: null };
-          let tmp15;
-          if (0 !== items.length) {
-            tmp15 = items;
-          }
-          include2.request = tmp15;
-          include2.transaction = include.transactionNamingScheme;
-          return { include: include2 };
-        })(obj2);
-        if (normalizedRequest) {
-          let tmp5;
-          if (request) {
-            let ip = request.ip;
-            if (!ip) {
-              ip = request.socket && request.socket.remoteAddress;
-              const tmp6 = request.socket && request.socket.remoteAddress;
+            if (sendDefaultPii) {
+              if (undefined !== rawInput) {
+                const normalizer2 = closure_0(13300);
+                obj5.input = normalizer2.normalize(rawInput);
+              }
+              if (undefined !== getRawInput) {
+                if (typeof getRawInput === "function") {
+                  c4 = 1;
+                  c5 = 2;
+                  c6 = 1;
+                  let obj6 = { value: getRawInput(), done: false };
+                  return obj6;
+                }
+              }
             }
-            tmp5 = ip;
+            const obj7 = closure_0(13282);
           }
-          let user;
-          if (request) {
-            user = request.user;
-          }
-          const obj3 = extractRequestData;
-          obj = { ipAddress: tmp5, user };
-          const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
-          return sdkProcessingMetadata;
         } else {
-          let result1 = sdkProcessingMetadata;
-          if (request) {
-            obj2 = extractRequestData;
-            result1 = obj2.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
+          if (1 === tmp8) {
+            c4 = 0;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_3 = value;
+            const normalizer = closure_0(13300);
+            closure_129_2.input = normalizer.normalize(closure_129_3);
+            c4 = 0;
           }
-          return result1;
+          c4 = 0;
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
         }
-      },
-    };
-    return obj4;
-  }
-  user = {};
-  const merged4 = Object.assign(obj.include.user);
-  const merged5 = Object.assign(obj.include || {}.user);
-});
+        closure_0(13282).withScope((setContext) => {
+          setContext.setContext("trpc", closure_2);
+          obj = closure_1_0(dependencyMap[10]);
+          closure_0 = closure_1_2(function* (arg0) {
+            if (c6 === 2) {
+              c6 = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp6 === 3) {
+              if (arg0 === 1) {
+                throw value;
+              } else if (arg0 === 2) {
+                const obj2 = { value, done: true };
+                return obj2;
+              } else {
+                return { value: "HermesInternal", done: null };
+              }
+            } else {
+              try {
+                c6 = 2;
+                if (0 === c5) {
+                  if (arg0 === 1) {
+                    c6 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c6 = 3;
+                    const obj4 = { value, done: true };
+                    return obj4;
+                  } else {
+                    closure_2 = tmp3;
+                    closure_1 = tmp7;
+                    closure_129_0 = closure_0;
+                    closure_129_1 = undefined;
+                    c4 = 1;
+                    c5 = 2;
+                    c6 = 1;
+                    const obj5 = { value: closure_1(), done: false };
+                    return obj5;
+                  }
+                } else if (1 === tmp7) {
+                  c4 = 0;
+                  closure_129_2 = closure_3;
+                  closure_0(dependencyMap[7]).captureException(closure_129_2, closure_2_3);
+                  closure_129_0.end();
+                  throw closure_129_2;
+                } else if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 0;
+                  c6 = 3;
+                  const obj6 = { value, done: true };
+                  return obj6;
+                } else {
+                  closure_129_1 = value;
+                  (function captureIfError(ok) {
+                    let tmp = typeof ok === "object";
+                    if (typeof ok === "object") {
+                      tmp = null !== ok;
+                    }
+                    if (tmp) {
+                      tmp = "ok" in ok;
+                    }
+                    if (tmp) {
+                      tmp = !ok.ok;
+                    }
+                    if (tmp) {
+                      tmp = "error" in ok;
+                    }
+                    if (tmp) {
+                      closure_1_0(dependencyMap[7]).captureException(ok.error, closure_1_3);
+                      obj = closure_1_0(dependencyMap[7]);
+                    }
+                  })(closure_129_1);
+                  closure_129_0.end();
+                  c4 = 0;
+                  c6 = 3;
+                  obj = { value: closure_129_1, done: true };
+                  return obj;
+                }
+              } catch (tmp27) {
+                closure_3 = tmp27;
+                if (tmp4 === c4) {
+                  c6 = tmp2;
+                  throw tmp27;
+                } else {
+                  c5 = tmp;
+                }
+              }
+            }
+          });
+          return obj.startSpanManual(
+            {
+              name: "trpc/" + closure_0,
+              op: "rpc.server",
+              attributes: {
+                [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route",
+                [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc",
+              },
+            },
+            function (arg0) {
+              const self = this;
+              const apply = closure_0.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            },
+          );
+        });
+        c6 = 3;
+        const obj3 = closure_0(13282);
+      } catch (tmp24) {
+        closure_3 = tmp24;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp24;
+        } else {
+          c5 = tmp;
+        }
+      }
+    }
+  });
+  return function (arg0) {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+}

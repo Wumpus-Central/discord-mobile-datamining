@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=",
+  httpServerLocation: "/assets/modules/premium/gifting",
   scales: [1],
-  hash: "b55f0e5581cae5d2a16416aec507aa57",
-  name: "vi.messages.b55f0e5581cae5d2a16416aec507aa57.compiled.messages",
+  hash: "19e20427793238642f3fa626c699f595",
+  name: "PremiumGifting.compiled.messages",
   type: "jsona",
 });

@@ -1,10 +1,13 @@
 // _runtime/metro/07169__.js
+import registerAsset from "01119__.js";
 
-export (width) => {
-  width = width.width;
-  let num = 360;
-  if (width - 56 <= 360) {
-    num = width - 56;
-  }
-  return num;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 189,
+  height: 225,
+  scales: [2, 3],
+  hash: "a6de2d9a12ce42b0ce36333de4aed4c3",
+  name: "img_verify_email_sent",
+  type: "png",
+});

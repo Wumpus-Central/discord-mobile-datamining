@@ -1,0 +1,33 @@
+// _runtime/metro/09939__.js
+import nitroFetch from "../09940_nitroFetch.js";
+import NitroRequest from "../09943_NitroRequest.js";
+import normalizeName from "../09944_normalizeName.js";
+import decodeFormComponent from "../09948_decodeFormComponent.js";
+import NetworkInspectorImpl from "../09954_NetworkInspectorImpl.js";
+import shellEscape from "../09955_shellEscape.js";
+import hybridObject from "../09956_hybridObject.js";
+import _mod9963 from "09963__.js";
+import _mod9965 from "09965__.js";
+import _profileFetch from "../09966__profileFetch.js";
+
+export const fetch = nitroFetch.nitroFetch;
+export const nitroFetchOnWorklet = nitroFetch.nitroFetchOnWorklet;
+export const prefetch = nitroFetch.prefetch;
+export const prefetchOnAppStart = nitroFetch.prefetchOnAppStart;
+export const removeFromAutoPrefetch = nitroFetch.removeFromAutoPrefetch;
+export const removeAllFromAutoprefetch = nitroFetch.removeAllFromAutoprefetch;
+export const __readAutoPrefetchQueue = nitroFetch.__readAutoPrefetchQueue;
+export const Headers = normalizeName.NitroHeaders;
+export const Response = decodeFormComponent.NitroResponse;
+export const Request = NitroRequest.NitroRequest;
+export const XMLHttpRequest = _mod9963.NitroXMLHttpRequest;
+export const NitroFetch = hybridObject.NitroFetch;
+export const registerTokenRefresh = _mod9965.registerTokenRefresh;
+export const clearTokenRefresh = _mod9965.clearTokenRefresh;
+export const callRefreshEndpoint = _mod9965.callRefreshEndpoint;
+export const getStoredTokenRefreshConfig = _mod9965.getStoredTokenRefreshConfig;
+export const getNestedField = _mod9965.getNestedField;
+export const applyTemplate = _mod9965.applyTemplate;
+export const NetworkInspector = NetworkInspectorImpl.NetworkInspector;
+export const generateCurl = shellEscape.generateCurl;
+export const profileFetch = _profileFetch.profileFetch;

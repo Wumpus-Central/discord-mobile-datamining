@@ -1,4 +1,13 @@
 // _runtime/metro/06689__.js
-import _mod6690 from "06690__.js";
+import registerAsset from "01119__.js";
 
-export default _mod6690;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "6d22344f328170a77fc1da6d56f802d8",
+  name: "img_account_sync_reddit_light_and_dark",
+  type: "png",
+});

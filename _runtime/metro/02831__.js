@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9vdmVybGF5L3dlYi92Mw==",
+  httpServerLocation: "/assets/modules/overlay/web/v3",
   scales: [1],
-  hash: "2b5ca70d46f3f5500272326686829ab6",
-  name: "vi.messages.2b5ca70d46f3f5500272326686829ab6.compiled.messages",
+  hash: "d8a1993a856b77ad8633e20ce493ef2b",
+  name: "OverlayWidgets.compiled.messages",
   type: "jsona",
 });

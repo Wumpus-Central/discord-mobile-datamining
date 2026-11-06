@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0a9a387fb9d47e12759ef9517ca0c2ad",
-  name: "WalletIcon",
+  hash: "b4bc35e77125dd7a659435efd876e4cc",
+  name: "ChannelListIcon",
   type: "png",
 });

@@ -1,15 +1,24 @@
 // _runtime/metro/13368__.js
+import _mod13256 from "13256__.js";
+import _mod13369 from "13369__.js";
 
-export function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
+require = arg1;
+const dependencyMap = arg6;
+
+export function isBrowser() {
+  let tmp = typeof window !== "undefined";
+  if (typeof window !== "undefined") {
+    const isNodeEnvResult = _mod13369.isNodeEnv();
+    let tmp3 = !isNodeEnvResult;
+    if (isNodeEnvResult) {
+      const _process = _mod13256.GLOBAL_OBJ.process;
+      let tmp2 = _process;
+      if (tmp2) {
+        tmp2 = "renderer" === _process.type;
+      }
+      tmp3 = tmp2;
     }
-    str = str2;
+    tmp = tmp3;
   }
-  return str;
+  return tmp;
 }
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];

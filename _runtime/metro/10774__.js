@@ -1,13 +1,34 @@
 // _runtime/metro/10774__.js
-import registerAsset from "01119__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 449.5,
-  height: 245,
-  scales: [2, 3],
-  hash: "c5de68623f46517bfe4474ddbdb02f66",
-  name: "img_logo_nitro_tier_0",
-  type: "png",
-});
+export function usePropsErrorBoundary(arg0) {
+  closure_0 = arg0;
+  items = [arg0];
+  const effect = noop.useEffect(() => {
+    const size = closure_0;
+    ({ defaultIndex, dataLength } = closure_0);
+    if (typeof defaultIndex === "number") {
+      if (dataLength > 0) {
+        const _Error3 = Error;
+        const error = new Error("DefaultIndex must be in the range of data length.");
+        throw error;
+      }
+    }
+    if (!size.mode) {
+      if (!size.vertical) {
+        if (!size.width) {
+          const _Error = Error;
+          const error1 = new Error("`width` must be specified for horizontal carousels.");
+          throw error1;
+        }
+      }
+      if (size.vertical) {
+        if (!size.height) {
+          const _Error2 = Error;
+          const error2 = new Error("`height` must be specified for vertical carousels.");
+          throw error2;
+        }
+      }
+    }
+  }, items);
+}

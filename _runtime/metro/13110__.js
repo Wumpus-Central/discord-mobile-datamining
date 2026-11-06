@@ -1,34 +1,6 @@
 // _runtime/metro/13110__.js
-import _mod13062 from "13062__.js";
+import defaultRecognizer from "../13111_defaultRecognizer.js";
+import _mod13113 from "13113__.js";
+import _mod13114 from "13114__.js";
 
-const LeftSquareBracket = _mod13062.TYPE.LeftSquareBracket;
-const RightSquareBracket = _mod13062.TYPE.RightSquareBracket;
-const obj = {
-  name: "Brackets",
-  structure: null,
-  parse(call, arg1) {
-    const self = this;
-    this.eat(LeftSquareBracket);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightSquareBracket);
-    }
-    const element = {
-      type: "Brackets",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
-    };
-    return element;
-  },
-  generate(arg0) {
-    this.chunk("[");
-    this.children(arg0);
-    this.chunk("]");
-  },
-};
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;
+export default { AtrulePrelude: defaultRecognizer, Selector: _mod13113, Value: _mod13114 };

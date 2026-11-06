@@ -1,39 +1,7 @@
 // _runtime/metro/13136__.js
-import _mod13062 from "13062__.js";
 
-const Comma = _mod13062.TYPE.Comma;
-const obj = {
-  name: "SelectorList",
-  structure: null,
-  parse() {
-    const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      list.push(self.Selector());
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.Selector());
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
-    }
-    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
-    return element;
+export default {
+  parse: function compoundSelector() {
+    return this.createSingleNodeList(this.Selector());
   },
-  generate(arg0) {
-    this.children(arg0, function () {
-      this.chunk(",");
-    });
-  },
-  walkContext: "selector",
 };
-const obj2 = { children: null };
-const items = [["Selector", "Raw"]];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;

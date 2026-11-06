@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 128,
+  height: 128,
   scales: [1],
-  hash: "be629a43a1506b7ff0f25b34b78ebb11",
-  name: "img_account_sync_github_light",
+  hash: "43cb25124fca194b4a6cf3676f39faf2",
+  name: "img_meta_quest_light",
   type: "png",
 });

@@ -1,18 +1,21 @@
 // _runtime/metro/06148__.js
-import _modDef6149 from "06149__.js";
-import noop from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
 
-const StyleSheet = fn(17).StyleSheet;
-const jsx = fn(21).jsx;
-const styles = StyleSheet.create({ flex: { flex: 1 } });
+({ BackHandler: closure_0, Platform } = get_ActivityIndicator);
+const items = ["ios", "android"];
 
-export function SafeAreaView(style) {
-  const obj = {};
-  const merged = Object.assign(style);
-  items = [styles.flex, style.style];
-  obj.style = items;
-  const rect = { top: false, bottom: false, left: false, right: false };
-  const merged1 = Object.assign(style.edges);
-  obj.edges = rect;
-  return jsx(_modDef6149, {});
+export const isSearchBarAvailableForCurrentPlatform = items.includes("android");
+export const isHeaderBarButtonsAvailableForCurrentPlatform = false;
+export function executeNativeBackPress() {
+  React.exitApp();
+  return true;
+}
+export function parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled) {
+  if (undefined === fullScreenSwipeEnabled) {
+    return "undefined";
+  } else if (true === fullScreenSwipeEnabled) {
+    return "true";
+  } else if (false === fullScreenSwipeEnabled) {
+    return "false";
+  }
 }

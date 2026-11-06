@@ -1,12 +1,17 @@
 // _runtime/metro/08221__.js
-import _modDef8215 from "08215__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import appendTransformPropsDefault from "../08130_appendTransformProps.js";
+import extractPropsDefault from "../08137_extractProps.js";
+import extractFontDefault from "../08144_extractFont.js";
+import _modDef8146 from "08146__.js";
+import _modDef8222 from "08222__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeConvolveMatrix = arg1;
+const TSpan = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,38 +30,73 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeConvolveMatrix {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class TSpan {
   constructor() {
     self = this;
-    tmp = c2(this, FeConvolveMatrix);
-    tmp2 = closure_4;
-    obj = closure_4(FeConvolveMatrix);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, TSpan);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(TSpan);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      const propsAndStylesResult = TSpan(8137).propsAndStyles(matrix);
+      const obj = TSpan(8137);
+      const merged = Object.assign(
+        propsAndStylesResult,
+        TSpan(8138).pickNotNil(extractFontDefault(propsAndStylesResult, false)),
+      );
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(propsAndStylesResult);
+      }
+      const obj2 = TSpan(8138);
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeConvolveMatrix, _modDef8215);
+_inherits(TSpan, _modDef8146);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeConvolveMatrix(8192).warnUnimplementedFilter();
-    return null;
+    const propsAndStylesResult = TSpan(8137).propsAndStyles(this.props);
+    const obj2 = {};
+    const obj = TSpan(8137);
+    const merged = Object.assign(propsAndStylesResult);
+    obj2.x = null;
+    obj2.y = null;
+    const tmp2Result = extractPropsDefault(obj2, this);
+    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
+    tmp2Result.ref = this.refMethod;
+    const obj3 = {};
+    const merged2 = Object.assign(tmp2Result);
+    return jsx(_modDef8222, {});
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
-importDefaultResultResult.displayName = "FeConvolveMatrix";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+let items = [entry];
+const importDefaultResultResult = _createClass(TSpan, items);
+importDefaultResultResult.displayName = "TSpan";
+const extractFont = fn(8144);
+extractFont.setTSpan(importDefaultResultResult);
 
 export default importDefaultResultResult;

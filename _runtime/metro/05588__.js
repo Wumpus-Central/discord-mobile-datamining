@@ -1,28 +1,68 @@
 // _runtime/metro/05588__.js
-import noop from "00019__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
-
-export function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  duration(
-    () => () => {
-      ref.current = undefined;
-    },
-    [],
-  );
-  return React(() => {
-    items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, ref);
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return applyResult;
-  }, []);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class NativeGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, NativeGesture);
+    tmp2 = c2;
+    obj = c2(NativeGesture);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "NativeViewGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = NativeGesture;
+_inherits(NativeGesture, fn(5470).BaseGesture);
+const entry = {
+  key: "shouldActivateOnStart",
+  value: function shouldActivateOnStart(shouldActivateOnStart) {
+    this.config.shouldActivateOnStart = shouldActivateOnStart;
+    return this;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "disallowInterruption",
+    value: function disallowInterruption(disallowInterruption) {
+      this.config.disallowInterruption = disallowInterruption;
+      return this;
+    },
+  },
+];
+
+export const NativeGesture = _createClass(NativeGesture, items);

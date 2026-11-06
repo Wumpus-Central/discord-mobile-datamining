@@ -1,117 +1,245 @@
 // _runtime/metro/10538__.js
-import ReferenceWithTimezone from "../10514_ReferenceWithTimezone.js";
-import Meridiem from "../10516_Meridiem.js";
+import AbstractParserWithWordBoundaryChecking from "../10470_AbstractParserWithWordBoundaryChecking.js";
+import alphaNum from "../10533_alphaNum.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
-  const day = dateWithAdjustedTimezone.getDay();
-  if ("this" === next) {
-    const diff = sum - dateWithAdjustedTimezone.getDay();
-    sum = diff;
-    if (diff < 0) {
-      sum = diff + 7;
-    }
-    return sum;
-  } else if ("last" === next) {
-    const diff1 = sum - dateWithAdjustedTimezone.getDay();
-    let diff2 = diff1;
-    if (diff1 >= 0) {
-      diff2 = diff1 - 7;
-    }
-    return diff2;
-  } else if ("next" === next) {
-    if (day == Meridiem.Weekday.SUNDAY) {
-      let num12 = 7;
-      if (sum != Meridiem.Weekday.SUNDAY) {
-        num12 = sum;
-      }
-      let sum3 = num12;
-    } else if (day == Meridiem.Weekday.SATURDAY) {
-      let num9 = 7;
-      if (sum != Meridiem.Weekday.SATURDAY) {
-        let num10 = 8;
-        if (sum != Meridiem.Weekday.SUNDAY) {
-          num10 = 1 + sum;
-        }
-        num9 = num10;
-      }
-      sum3 = num9;
+const JPTimeExpressionParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      if (sum < day) {
-        if (sum != Meridiem.Weekday.SUNDAY) {
-          const diff3 = sum - dateWithAdjustedTimezone.getDay();
-          let sum1 = diff3;
-          if (diff3 < 0) {
-            sum1 = diff3 + 7;
-          }
-          sum3 = sum1;
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+function createTimeComponents(createParsingComponents, match, match2, match3, match4) {
+  const parsingComponents = createParsingComponents.createParsingComponents();
+  let parsed = parseInt(JPTimeExpressionParser(10533).toHankaku(match));
+  if (isNaN(parsed)) {
+    parsed = JPTimeExpressionParser(10533).jaStringToNumber(match);
+  }
+  if (parsed > 24) {
+    return null;
+  } else {
+    if (match2) {
+      let num = 30;
+      if ("\u534A" !== match2) {
+        const _parseInt = parseInt;
+        const parsed1 = parseInt(JPTimeExpressionParser(10533).toHankaku(match2));
+        const _isNaN = isNaN;
+        num = parsed1;
+        if (isNaN(parsed1)) {
+          num = JPTimeExpressionParser(10533).jaStringToNumber(match2);
         }
       }
-      const diff4 = sum - dateWithAdjustedTimezone.getDay();
-      let sum2 = diff4;
-      if (diff4 < 0) {
-        sum2 = diff4 + 7;
+      if (num >= 60) {
+        return null;
+      } else {
+        parsingComponents.assign("minute", num);
       }
-      sum3 = sum2 + 7;
     }
-    return sum3;
-  } else {
-    const diff5 = sum - dateWithAdjustedTimezone.getDay();
-    let diff6 = diff5;
-    if (diff5 >= 0) {
-      diff6 = diff5 - 7;
+    if (match3) {
+      const _parseInt2 = parseInt;
+      let parsed2 = parseInt(JPTimeExpressionParser(10533).toHankaku(match3));
+      const _isNaN2 = isNaN;
+      if (isNaN(parsed2)) {
+        parsed2 = JPTimeExpressionParser(10533).jaStringToNumber(match3);
+      }
+      if (parsed2 >= 60) {
+        return null;
+      } else {
+        parsingComponents.assign("second", parsed2);
+      }
     }
-    const diff7 = sum - dateWithAdjustedTimezone.getDay();
-    let sum4 = diff7;
-    if (diff7 < 0) {
-      sum4 = diff7 + 7;
+    let num5 = -1;
+    let num6 = parsed;
+    if (match4) {
+      if (parsed > 12) {
+        return null;
+      } else {
+        if ("\u5348\u524D" !== match4) {
+          if ("a" !== str2.toLowerCase()) {
+            let tmp8 = "\u5348\u5F8C" !== match4;
+            if (tmp8) {
+              tmp8 = "p" !== match4[0].toLowerCase();
+            }
+            num5 = -1;
+            num6 = parsed;
+            if (!tmp8) {
+              let sum = parsed;
+              if (12 != parsed) {
+                sum = parsed + 12;
+              }
+              num6 = sum;
+              num5 = JPTimeExpressionParser(10468).Meridiem.PM;
+            }
+          }
+          str2 = match4[0];
+        }
+        const AM = JPTimeExpressionParser(10468).Meridiem.AM;
+        num5 = AM;
+        num6 = parsed;
+        if (12 === parsed) {
+          num6 = 0;
+          num5 = AM;
+        }
+      }
     }
-    if (sum4 < -diff6) {
-      diff6 = sum4;
+    parsingComponents.assign("hour", num6);
+    if (num5 >= 0) {
+      parsingComponents.assign("meridiem", num5);
+    } else if (num6 < 12) {
+      parsingComponents.imply("meridiem", JPTimeExpressionParser(10468).Meridiem.AM);
+    } else {
+      parsingComponents.imply("meridiem", JPTimeExpressionParser(10468).Meridiem.PM);
     }
-    return diff6;
+    return parsingComponents;
   }
 }
+const keys = Object.keys(alphaNum.NUMBER);
+const text = `(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj.join("")}`;
+const keys1 = Object.keys(alphaNum.NUMBER);
+const text1 = `${`(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj.join("")}`}]+)(?:\\s*)(?:時(?!間)|:|：)(?:\\s*)([0-9０-９]+|半|[${obj2.join("")}`;
+const keys2 = Object.keys(alphaNum.NUMBER);
+const regExp = new RegExp(
+  text1 +
+    "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)([0-9\uFF10-\uFF19]+|[" +
+    keys2.join("") +
+    "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
+  "i",
+);
+const keys3 = Object.keys(alphaNum.NUMBER);
+const text2 = `(?:^\\s*(?:から|\\-|\\–|\\－|\\~|\\〜)\\s*)(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj4.join("")}`;
+const keys4 = Object.keys(alphaNum.NUMBER);
+const text3 = `${`(?:^\\s*(?:から|\\-|\\–|\\－|\\~|\\〜)\\s*)(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj4.join("")}`}]+)(?:\\s*)(?:時|:|：)(?:\\s*)([0-9０-９]+|半|[${obj5.join("")}`;
+const keys5 = Object.keys(alphaNum.NUMBER);
+const regExp1 = new RegExp(
+  text3 +
+    "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)([0-9\uFF10-\uFF19]+|[" +
+    keys5.join("") +
+    "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
+  "i",
+);
+class JPTimeExpressionParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, JPTimeExpressionParser);
+    tmp2 = closure_4;
+    obj = closure_4(JPTimeExpressionParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(JPTimeExpressionParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      if (index.index > 0) {
+        if (str.match(/\w/)) {
+          return null;
+        }
+        str = createParsingResult.text[index.index - 1];
+      }
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      let tmp3 = index[1];
+      if (null === tmp3) {
+        tmp3 = index[5];
+      }
+      parsingResult.start = createTimeComponents(createParsingResult, index[2], index[3], index[4], tmp3);
+      if (parsingResult.start) {
+        const match = regExp1.exec(createParsingResult.text.substring(parsingResult.index + parsingResult.text.length));
+        let tmp7 = parsingResult;
+        if (match) {
+          parsingResult.text = parsingResult.text + match[0];
+          let tmp11 = match[1];
+          if (null === tmp11) {
+            tmp11 = match[5];
+          }
+          parsingResult.end = createTimeComponents(createParsingResult, match[2], match[3], match[4], tmp11);
+          let tmp17 = null;
+          if (parsingResult.end) {
+            const end = parsingResult.end;
+            const isCertainResult = end.isCertain("meridiem");
+            let isCertainResult1 = !isCertainResult;
+            if (!isCertainResult) {
+              const start = parsingResult.start;
+              isCertainResult1 = start.isCertain("meridiem");
+            }
+            if (isCertainResult1) {
+              ({ end: end2, start: start2 } = parsingResult);
+              end2.imply("meridiem", start2.get("meridiem"));
+              const start3 = parsingResult.start;
+              value = start3.get("meridiem");
+              if (value === JPTimeExpressionParser(10468).Meridiem.PM) {
+                const start5 = parsingResult.start;
+                const end10 = parsingResult.end;
+                const diff = start5.get("hour") - 12;
+                if (diff > end10.get("hour")) {
+                  const end6 = parsingResult.end;
+                  end6.imply("meridiem", JPTimeExpressionParser(10468).Meridiem.AM);
+                } else {
+                  const end3 = parsingResult.end;
+                  if (end3.get("hour") < 12) {
+                    ({ end: end4, end: end5 } = parsingResult);
+                    end4.assign("hour", end5.get("hour") + 12);
+                  }
+                }
+              }
+            }
+            const end7 = parsingResult.end;
+            const start4 = parsingResult.start;
+            const time = end7.date().getTime();
+            const dateResult = end7.date();
+            tmp17 = parsingResult;
+            if (time < dateResult1.getTime()) {
+              ({ end: end8, end: end9 } = parsingResult);
+              end8.imply("day", end9.get("day") + 1);
+              tmp17 = parsingResult;
+            }
+            dateResult1 = start4.date();
+          }
+          tmp7 = tmp17;
+        }
+        let tmp4 = tmp7;
+      } else {
+        index.index = index.index + index[0].length;
+        tmp4 = null;
+      }
+      return tmp4;
+    },
+  },
+];
 
-export function createParsingComponentsAtWeekday(reference, sum, next) {
-  const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
-  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({
-    day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next),
-  });
-  addDurationAsImpliedResult.assign("weekday", sum);
-  return addDurationAsImpliedResult;
-}
-export { getDaysToWeekday };
-export function getDaysToWeekdayClosest(getDay, arg1) {
-  const diff = arg1 - getDay.getDay();
-  let diff1 = diff;
-  if (diff >= 0) {
-    diff1 = diff - 7;
-  }
-  const diff2 = arg1 - getDay.getDay();
-  let sum = diff2;
-  if (diff2 < 0) {
-    sum = diff2 + 7;
-  }
-  if (sum < -diff1) {
-    diff1 = sum;
-  }
-  return diff1;
-}
-export function getDaysForwardToWeekday(getDay, arg1) {
-  const diff = arg1 - getDay.getDay();
-  let sum = diff;
-  if (diff < 0) {
-    sum = diff + 7;
-  }
-  return sum;
-}
-export function getBackwardDaysToWeekday(getDay, arg1) {
-  const diff = arg1 - getDay.getDay();
-  let diff1 = diff;
-  if (diff >= 0) {
-    diff1 = diff - 7;
-  }
-  return diff1;
-}
+export default _createClass(JPTimeExpressionParser, items);

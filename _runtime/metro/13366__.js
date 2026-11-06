@@ -1,68 +1,324 @@
 // _runtime/metro/13366__.js
-import _mod13308 from "13308__.js";
-import _mod13368 from "13368__.js";
-import setupIntegration from "13337__.js";
+import _mod13253 from "13253__.js";
+import _mod13256 from "13256__.js";
+import _mod13261 from "13261__.js";
+import _mod13269 from "13269__.js";
+import supportsFetch from "../13367_supportsFetch.js";
+import _slicedToArray from "00032__.js";
+import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
 
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
-  }
-  handled = obj.handled;
-  return {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let hasItem = _mod13308.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
-          }
-          if (hasItem) {
-            closure_2 = handled;
-            let obj2 = { level: _mod13368.severityLevelFromString(level), extra: null };
-            const obj3 = { arguments: args };
-            obj2.extra = obj3;
-            const tmpResult = _mod13368;
-            _mod13308.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  args(13329).captureException(found, obj2);
-                  const tmp14Result = args(13329);
-                } else {
-                  const tmp14Result2 = args(13290);
-                  const safeJoinResult = args(13290).safeJoin(args, " ");
-                  args(13329).captureMessage(safeJoinResult, obj2);
-                  const obj4 = args(13329);
-                }
-              } else if (!args[0]) {
-                const obj = args(13290);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + args(13290).safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = args(13329);
-                obj2.captureMessage(combined, obj2);
-                const tmp4 = args(13290).safeJoin(args.slice(1), " ") || "console.assert";
+const require = globalThis.__r;
+
+let closure_4 = async function _resolveResponse(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp7;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          let reader;
+          let timeout;
+          closure_130_4 = undefined;
+          let timeout2;
+          let done;
+          if (_require) {
+            if (_require.body) {
+              const body = _require.body;
+              closure_130_1 = body;
+              reader = body.getReader();
+              const _setTimeout = setTimeout;
+              timeout = setTimeout(() => {
+                closure_1_1.cancel().then(null, () => {
+
+                });
+              }, 90000);
+              closure_130_4 = true;
+              if (closure_130_4) {
+                timeout2 = undefined;
+                c5 = 2;
+                const _setTimeout2 = setTimeout;
+                timeout2 = setTimeout(() => {
+                  closure_1_1.cancel().then(null, () => {
+
+                  });
+                }, 5000);
+                c3 = 3;
+                c6 = 1;
+                const obj4 = { value: reader.read(), done: false };
+                return obj4;
+              } else {
+                const _clearTimeout5 = clearTimeout;
+                clearTimeout(timeout);
+                reader.releaseLock();
+                closure_130_1.cancel().then(null, () => {
+
+                });
+                const cancelResult = closure_130_1.cancel();
               }
-            });
-            const tmpResult2 = _mod13308;
+            }
           }
-        });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
+          c6 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } else if (1 !== tmp7) {
+        if (2 === tmp7) {
+          c5 = 1;
+          closure_130_4 = false;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          const _clearTimeout2 = clearTimeout;
+          clearTimeout(timeout2);
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          done = value.done;
+          const _clearTimeout = clearTimeout;
+          clearTimeout(timeout2);
+          if (done) {
+            closure_130_0();
+            closure_130_4 = false;
+          }
+          c5 = 1;
+        }
+        c5 = 0;
+        const _clearTimeout3 = clearTimeout;
+        clearTimeout(timeout2);
       }
-    },
-  };
-});
+      c5 = 0;
+      const _clearTimeout4 = clearTimeout;
+      clearTimeout(timeout2);
+      throw closure_4;
+    } catch (tmp40) {
+      closure_4 = tmp40;
+      if (tmp4 === c5) {
+        c6 = tmp3;
+        throw tmp40;
+      } else if (tmp2 === tmp42) {
+        c3 = tmp2;
+      } else {
+        c3 = tmp;
+      }
+    }
+  }
+};
+function streamHandler(clone) {
+  const response = clone;
+  try {
+    !(function resolveResponse(clone, arg1) {
+      const self = this;
+      const apply = closure_1_4.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })(clone.clone(), () => {
+      const obj2 = { endTimestamp: null, response: null };
+      const obj = _mod13253;
+      obj2.endTimestamp = 1000 * _mod13269.timestampInSeconds();
+      obj2.response = response;
+      obj.triggerHandlers("fetch-body-resolved", obj2);
+    });
+  } catch (err) {
+    return tmp;
+  }
+}
+function parseFetchArgs(arg0) {
+  if (0 === arg0.length) {
+    return { method: "GET", url: "" };
+  } else if (2 === arg0.length) {
+    [str4, tmp8] = arg0;
+    let tmp9 = str4;
+    if (typeof str4 !== "string") {
+      let str5 = "";
+      if (!str4) {
+        tmp9 = str5;
+      } else {
+        if (tmp10) {
+          str5 = str4.url;
+        } else if (str4.toString) {
+          str5 = str4.toString();
+        }
+        tmp10 = str4 && typeof str4 === "object" && str4.url;
+      }
+    }
+    const request = { url: tmp9, method: null };
+    let str6 = "GET";
+    if (tmp12) {
+      const _String2 = String;
+      str6 = String(tmp8.method).toUpperCase();
+      const str7 = String(tmp8.method);
+    }
+    request.method = str6;
+    return request;
+  } else {
+    let tmp3 = str8;
+    if (typeof arg0[0] !== "string") {
+      let str = "";
+      if (!str8) {
+        tmp3 = str;
+      } else {
+        if (tmp) {
+          str = str8.url;
+        } else if (str8.toString) {
+          str = str8.toString();
+        }
+        tmp = str8 && typeof str8 === "object" && str8.url;
+      }
+    }
+    const request1 = { url: tmp3, method: null };
+    let str2 = "GET";
+    if (tmp4) {
+      const _String = String;
+      str2 = String(str8.method).toUpperCase();
+      const str3 = String(str8.method);
+    }
+    request1.method = str2;
+    return request1;
+  }
+}
+
+export function addFetchEndInstrumentationHandler(errorCallback) {
+  _mod13253.addHandler("fetch-body-resolved", errorCallback);
+  _mod13253.maybeInstrument("fetch-body-resolved", () => {
+    closure_0 = closure_5;
+    {
+      closure_0(13261).fill(closure_0(13256).GLOBAL_OBJ, "fetch", (arg0) => {
+        closure_0 = arg0;
+        return () => {
+          items = [...arguments];
+          const error = new Error();
+          let stack = error;
+          const request = parseFetchArgs(items);
+          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
+          if (!closure_2_0) {
+            let obj3 = {};
+            let merged = Object.assign(obj);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
+            const tmp2Result = tmp2(dependencyMap[2]);
+          }
+          let obj2 = stack(dependencyMap[6]);
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F142678 */ function*() { ... })();
+          });
+          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }, (error) => {
+            obj = closure_3_0(13253);
+            const obj2 = {};
+            const merged = Object.assign(obj);
+            obj2.endTimestamp = 1000 * closure_3_0(13269).timestampInSeconds();
+            obj2.error = error;
+            obj.triggerHandlers("fetch", obj2);
+            const obj3 = closure_3_0(13269);
+            const obj4 = closure_3_0(13262);
+            if (tmp5) {
+              error.stack = stack.stack;
+              const result = closure_3_0(13261).addNonEnumerableProperty(error, "framesToPop", 1);
+              const tmpResult = closure_3_0(13261);
+            }
+            throw error;
+          });
+        };
+      });
+      const obj = closure_0(13261);
+    }
+  });
+}
+export function addFetchInstrumentationHandler(errorCallback, arg1) {
+  _require = arg1;
+  require("13253__.js").addHandler("fetch", errorCallback);
+  let obj = require("13253__.js");
+  require("13253__.js").maybeInstrument("fetch", () => {
+    let flag = closure_0;
+    if (closure_0 === undefined) {
+      flag = false;
+    }
+    if (flag) {
+      flag = !supportsFetch.supportsNativeFetch();
+    }
+    if (!flag) {
+      _mod13261.fill(_mod13256.GLOBAL_OBJ, "fetch", (arg0) => {
+        closure_0 = arg0;
+        return () => {
+          items = [...arguments];
+          const error = new Error();
+          let stack = error;
+          const request = parseFetchArgs(items);
+          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
+          if (!closure_2_0) {
+            let obj3 = {};
+            let merged = Object.assign(obj);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
+            const tmp2Result = tmp2(dependencyMap[2]);
+          }
+          let obj2 = stack(dependencyMap[6]);
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F142678 */ function*() { ... })();
+          });
+          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }, (error) => {
+            obj = closure_3_0(13253);
+            const obj2 = {};
+            const merged = Object.assign(obj);
+            obj2.endTimestamp = 1000 * closure_3_0(13269).timestampInSeconds();
+            obj2.error = error;
+            obj.triggerHandlers("fetch", obj2);
+            const obj3 = closure_3_0(13269);
+            const obj4 = closure_3_0(13262);
+            if (tmp5) {
+              error.stack = stack.stack;
+              const result = closure_3_0(13261).addNonEnumerableProperty(error, "framesToPop", 1);
+              const tmpResult = closure_3_0(13261);
+            }
+            throw error;
+          });
+        };
+      });
+    }
+  });
+}
+export { parseFetchArgs };

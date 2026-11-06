@@ -1,11 +1,23 @@
 // _runtime/metro/05543__.js
-const require = globalThis.__r;
+import reanimatedWrapper from "../05494_reanimatedWrapper.js";
 
-for (const key10013 in require("05544__.js")) {
-  arg5[key10013] = require("05544__.js")[key10013];
-  continue;
-}
-for (const key10017 in require("transformTapProps")) {
-  arg5[key10017] = require("transformTapProps")[key10017];
-  continue;
+require = arg1;
+const dependencyMap = arg6;
+
+export function createLastUpdateEventMap() {
+  const Worklets = reanimatedWrapper.Worklets;
+  let createShareable;
+  if (Worklets != null) {
+    createShareable = Worklets.createShareable;
+  }
+  if (undefined !== createShareable) {
+    if (undefined !== reanimatedWrapper.Worklets.UIRuntimeId) {
+      if (undefined !== reanimatedWrapper.Reanimated) {
+        const Worklets2 = reanimatedWrapper.Worklets;
+        const _Map = Map;
+        const map = new Map();
+        return Worklets2.createShareable(reanimatedWrapper.Worklets.UIRuntimeId, map);
+      }
+    }
+  }
 }

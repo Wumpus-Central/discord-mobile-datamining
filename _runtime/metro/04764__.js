@@ -1,5 +1,5 @@
 // _runtime/metro/04764__.js
-import _mod4729 from "04729__.js";
+import _mod4756 from "04756__.js";
 
 let closure_1 = dependencyMap;
 function _typeof(arg0) {
@@ -27,15 +27,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(TimestampSecondsParser, Parser) {
+function _setPrototypeOf(StandAloneQuarterParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(TimestampSecondsParser, Parser) {
-      TimestampSecondsParser.__proto__ = Parser;
-      return TimestampSecondsParser;
+    _setPrototypeOf = function _setPrototypeOf(StandAloneQuarterParser, Parser) {
+      StandAloneQuarterParser.__proto__ = Parser;
+      return StandAloneQuarterParser;
     };
   }
-  return _setPrototypeOf(TimestampSecondsParser, Parser);
+  return _setPrototypeOf(StandAloneQuarterParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -53,9 +53,9 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4729.Parser;
+const Parser = _mod4756.Parser;
 let _createSuperInternal;
-class TimestampSecondsParser {
+class StandAloneQuarterParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -82,7 +82,7 @@ class TimestampSecondsParser {
       if (tmp13) {
         _ReferenceError2 = ReferenceError;
         tmp20 = new.target;
-        str6 = "this hasn't been initialised - super() hasn't been called";
+        str5 = "this hasn't been initialised - super() hasn't been called";
         tmp21 = new.target;
         referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
         tmp23 = referenceError;
@@ -92,36 +92,33 @@ class TimestampSecondsParser {
         if ("priority" in applyResult) {
           _Object = Object;
           definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 40,
+            value: 120,
             enumerable: true,
             configurable: true,
             writable: true,
           });
         } else {
-          num3 = 40;
-          applyResult.priority = 40;
+          num3 = 120;
+          applyResult.priority = 120;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
           tmp16 = new.target;
-          str5 = "this hasn't been initialised - super() hasn't been called";
+          str4 = "this hasn't been initialised - super() hasn't been called";
           tmp17 = new.target;
           referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
+          items1 = ["Y", "R", "Q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", {
-              value: "*",
-              enumerable: true,
-              configurable: true,
-              writable: true,
-            });
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
           } else {
-            str4 = "*";
-            applyResult.incompatibleTokens = "*";
+            applyResult.incompatibleTokens = items1;
           }
           return applyResult;
         }
@@ -137,7 +134,7 @@ class TimestampSecondsParser {
     }
   }
 }
-closure_1 = TimestampSecondsParser;
+closure_1 = StandAloneQuarterParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -149,11 +146,11 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-TimestampSecondsParser.prototype = Object.create(prototype, {
-  constructor: { value: TimestampSecondsParser, writable: true, configurable: true },
+StandAloneQuarterParser.prototype = Object.create(prototype, {
+  constructor: { value: StandAloneQuarterParser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(TimestampSecondsParser, Parser);
+  _setPrototypeOf(StandAloneQuarterParser, Parser);
 }
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
@@ -214,17 +211,48 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0) {
-    return _createSuperInternal(closure_1[0]).parseAnyDigitsSigned(arg0);
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("q" !== arg1) {
+      if ("qq" !== arg1) {
+        if ("qo" === arg1) {
+          return ordinalNumber.ordinalNumber(arg0, { unit: "quarter" });
+        } else if ("qqq" === arg1) {
+          return (
+            ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) ||
+            ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" })
+          );
+        } else if ("qqqqq" === arg1) {
+          return ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" });
+        } else {
+          return (
+            ordinalNumber.quarter(arg0, { width: "wide", context: "standalone" }) ||
+            ordinalNumber.quarter(arg0, { width: "abbreviated", context: "standalone" }) ||
+            ordinalNumber.quarter(arg0, { width: "narrow", context: "standalone" })
+          );
+        }
+      }
+    }
+    return _createSuperInternal(closure_1[0]).parseNDigits(arg1.length, arg0);
   },
 };
 let items = [
   entry,
   {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 1;
+      if (tmp) {
+        tmp = arg1 <= 4;
+      }
+      return tmp;
+    },
+  },
+  {
     key: "set",
-    value: function set(arg0, arg1, arg2) {
-      items = [new Date(1000 * arg2), { timestampIsSet: true }];
-      return items;
+    value: function set(setUTCMonth, arg1, arg2) {
+      setUTCMonth.setUTCMonth(3 * (arg2 - 1), 1);
+      setUTCMonth.setUTCHours(0, 0, 0, 0);
+      return setUTCMonth;
     },
   },
 ];
@@ -246,4 +274,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { TimestampSecondsParser };
+export { StandAloneQuarterParser };

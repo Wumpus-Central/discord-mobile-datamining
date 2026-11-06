@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "032ba055130436392254ce3ba39e9456",
-  name: "gmail",
+  httpServerLocation: "/assets/modules/voice_panel/native/images",
+  width: 13,
+  height: 12,
+  scales: [1, 2, 3, 4],
+  hash: "815e22c11ceae8ad126964a943379a27",
+  name: "badconnection",
   type: "png",
 });

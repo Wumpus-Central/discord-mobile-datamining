@@ -1,42 +1,34 @@
 // _runtime/metro/04511__.js
-import 04512__ from "04512__.js";
-import 04513__ from "04513__.js";
-import 04514__ from "04514__.js";
-import date_mod from "04515__.js";
-import date_mod from "04516__.js";
+let c0 = ["vas\u00E1rnap", "h\u00E9tf\u0151n", "kedden", "szerd\u00E1n", "cs\u00FCt\u00F6rt\u00F6k\u00F6n", "p\u00E9nteken", "szombaton"];
+const obj = {
+  lastWeek: (arg0) => {
+    let str = "'m\u00FAlt' ";
+    if (c0) {
+      str = "";
+    }
+    const combined = "".concat(str, "'");
+    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
+  },
+  yesterday: "'tegnap' p'-kor'",
+  today: "'ma' p'-kor'",
+  tomorrow: "'holnap' p'-kor'",
+  nextWeek: (arg0) => {
+    let str = "'m\u00FAlt' ";
+    if (c0) {
+      str = "";
+    }
+    const combined = "".concat(str, "'");
+    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
+  },
+  other: "P"
+};
+c0 = true;
 
-if (!module_4512) {
-  const obj = { default: module_4512 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4512;
-}
-if (!module_4513) {
-  const obj2 = { default: module_4513 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4513;
-}
-if (!module_4514) {
-  const obj3 = { default: module_4514 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4514;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "nl", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function formatRelative(arg0, arg1) {
+  let tmpResult = tmp;
+  if (typeof obj[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
+};
 export default exports.default;

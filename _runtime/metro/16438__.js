@@ -1,11 +1,6 @@
 // _runtime/metro/16438__.js
-import _mod16411 from "16411__.js";
+import _mod16386 from "16386__.js";
+import _mod16387 from "16387__.js";
 
-export default (arg0) => {
-  if (_mod16411(arg0)) {
-    return arg0;
-  } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
-  }
-};
+export default _mod16386 &&
+  _mod16387(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);

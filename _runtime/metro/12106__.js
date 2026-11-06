@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2b05b694fba9643d8f0981005b85363f",
-  name: "HandRequestSpeakListIcon",
+  hash: "4e9d569d897ff379f07644deddf6baf5",
+  name: "ScreenXIcon",
   type: "png",
 });

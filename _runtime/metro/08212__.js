@@ -1,14 +1,13 @@
 // _runtime/metro/08212__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8213 from "08213__.js";
-import _modDef8215 from "08215__.js";
+import _modDef8146 from "08146__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeBlend = fn;
+const Polyline = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,58 +26,60 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeBlend {
+class Polyline {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeBlend);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeBlend);
-    tmp3 = closure_4;
-    if (metroImportDefault()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, Polyline);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(Polyline);
+    tmp3 = closure_3;
+    if (closure_6()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polyline(8211)(points);
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeBlend, _modDef8215);
+_inherits(Polyline, _modDef8146);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged = Object.assign(FeBlend(8214).extractFilter(this.props));
-    const obj2 = FeBlend(8214);
-    const merged1 = Object.assign(FeBlend(8214).extractIn(this.props));
-    const obj3 = FeBlend(8214);
-    const merged2 = Object.assign(FeBlend(8214).extractFeBlend(this.props));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const props = this.props;
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polyline(8211)(points);
+    }
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polyline(8206), { ref: this.refMethod, d: null });
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeBlend, items);
-importDefaultResultResult.displayName = "FeBlend";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.mode = "normal";
-importDefaultResultResult.defaultProps = obj;
+let items = [entry];
+const importDefaultResultResult = _createClass(Polyline, items);
+importDefaultResultResult.displayName = "Polyline";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

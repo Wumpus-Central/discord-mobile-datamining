@@ -3,20 +3,20 @@ let closure_0 = { 0.75: "ldpi", 1: "mdpi", 1.5: "hdpi", 2: "xhdpi", 3: "xxhdpi",
 const set = new Set(["gif", "heic", "heif", "jpeg", "jpg", "ktx", "png", "webp", "xml"]);
 
 export default {
-  getAndroidResourceFolderName(asset, arg1) {
+  getAndroidResourceFolderName(asset, scrollLength) {
     if (set.has(asset.type)) {
-      if (arg1.toString() in closure_0) {
-        let text = closure_0[arg1.toString(arg1)];
+      if (scrollLength.toString() in closure_0) {
+        let text = closure_0[scrollLength.toString(scrollLength)];
       } else {
         const _Number = Number;
-        if (Number.isFinite(arg1)) {
-          if (arg1 > 0) {
+        if (Number.isFinite(scrollLength)) {
+          if (scrollLength > 0) {
             const _Math = Math;
-            text = `${Math.round(160 * arg1)}dpi`;
+            text = `${Math.round(160 * scrollLength)}dpi`;
           }
         }
         const _Error = Error;
-        const error = new Error("no such scale " + arg1.toString());
+        const error = new Error("no such scale " + scrollLength.toString());
         throw error;
       }
       if (text) {
@@ -24,9 +24,9 @@ export default {
       } else {
         const _Error2 = Error;
         const _JSON = JSON;
-        const text1 = `Don't know which android drawable suffix to use for scale: ${arg1}`;
+        const text1 = `Don't know which android drawable suffix to use for scale: ${scrollLength}`;
         const _JSON2 = JSON;
-        const text2 = `${`Don't know which android drawable suffix to use for scale: ${arg1}`}
+        const text2 = `${`Don't know which android drawable suffix to use for scale: ${scrollLength}`}
     Asset: ${JSON.stringify(asset, null, "\t")}`;
         const error1 = new Error(text2 + "\nPossible scales are:" + JSON.stringify(closure_0, null, "\t"));
         throw error1;

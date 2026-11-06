@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "141e24b0bc4cfc4d58d1cb3b5e32f1dc",
-  name: "img_bungie_dark",
-  type: "png",
+  hash: "8e2bbfe1d3e4356ba435a2b178386105",
+  name: "img_account_sync_epic_light",
+  type: "svg",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c7e2eadc5cd55417a6c70f428f65fac7",
-  name: "SlashIcon",
+  hash: "b83c9486cfaf14d2dd0ad9edbe75c34d",
+  name: "WebhookPlusIcon",
   type: "png",
 });

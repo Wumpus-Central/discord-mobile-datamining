@@ -1,12 +1,15 @@
 // _runtime/metro/05573__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import ButtonComponentDefault from "../05552_ButtonComponent.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
+import 05574__ from "05574__.js";
 
-const GenericTouchable = fn;
+let InnerBorderlessButton = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -23,76 +26,113 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {}
+  } catch (err) {
+  }
 }
-const Animated = fn(17).Animated;
-const jsx = fn(21).jsx;
-const TOUCHABLE_STATE = { UNDETERMINED: 0, BEGAN: 1, MOVED_OUTSIDE: 2 };
-class GenericTouchable {
-  constructor() {
+let closure_3 = ["rippleColor"];
+let closure_4 = ["children", "style", "activeOpacity"];
+let closure_5 = ["children", "style", "innerRef", "activeOpacity"];
+_possibleConstructorReturnDefault;
+get_ActivityIndicator = fn(17);
+const Animated = get_ActivityIndicator.Animated;
+({ Platform, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const ButtonComponent = module_5574(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
+class LegacyRawButton {
+  constructor(arg0) {
+    obj = {};
+    merged = Object.assign(global);
+    obj.needsOffscreenAlphaCompositing = true;
+    return jsx(closure_15, obj);
+  }
+}
+class InnerBaseButton {
+  constructor(arg0) {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, GenericTouchable);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(GenericTouchable);
-    tmp3 = closure_3;
-    if (metroImportDefault()) {
+    tmp = metroImportDefault(this, InnerBorderlessButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_9;
+    obj = closure_9(InnerBorderlessButton);
+    tmp3 = closure_8;
+    if (closure_2_14()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.longPressDetected = false;
-    tmp3Result.pointerInside = true;
-    tmp3Result.STATE = closure_8.UNDETERMINED;
-    tmp3Result.onGestureEvent = (nativeEvent) => {
-      const pointerInside = nativeEvent.nativeEvent.pointerInside;
-      if (closure_0.pointerInside !== pointerInside) {
-        if (pointerInside) {
-          closure_0.onMoveIn();
-        } else {
-          closure_0.onMoveOut();
+    tmp3Result.handleEvent = (nativeEvent) => {
+      nativeEvent = nativeEvent.nativeEvent;
+      ({ state, pointerInside } = nativeEvent);
+      let tmp = pointerInside;
+      if (pointerInside) {
+        let tmp4 = state === InnerBorderlessButton(5455).State.BEGAN;
+        if (!tmp4) {
+          tmp4 = state === InnerBorderlessButton(5455).State.ACTIVE;
         }
+        tmp = tmp4;
       }
-      closure_0.pointerInside = pointerInside;
-    };
-    tmp3Result.onHandlerStateChange = (nativeEvent) => {
-      state = nativeEvent.nativeEvent.state;
-      if (state !== GenericTouchable(5435).State.CANCELLED) {
-        if (state !== GenericTouchable(5435).State.FAILED) {
-          if (state === GenericTouchable(5435).State.BEGAN) {
-            if (closure_0.STATE === closure_0.UNDETERMINED) {
-              closure_0.handlePressIn();
+      if (tmp8) {
+        const props = closure_0.props;
+        props.onActiveStateChange(tmp);
+      }
+      const longPressDetected = closure_0.longPressDetected;
+      let onPress = !longPressDetected;
+      if (!longPressDetected) {
+        onPress = nativeEvent.oldState === InnerBorderlessButton(5455).State.ACTIVE;
+      }
+      if (onPress) {
+        onPress = state !== InnerBorderlessButton(5455).State.CANCELLED;
+      }
+      if (onPress) {
+        onPress = closure_0.lastIsPressed;
+      }
+      if (onPress) {
+        onPress = closure_0.props.onPress;
+      }
+      if (onPress) {
+        const props2 = closure_0.props;
+        props2.onPress(pointerInside);
+      }
+      if (!closure_0.lastIsPressed) {
+        if (state === InnerBorderlessButton(5455).State.BEGAN) {
+          if (pointerInside) {
+            closure_0.longPressDetected = false;
+            if (closure_0.props.onLongPress) {
+              const _setTimeout = setTimeout;
+              closure_0.longPressTimeout = setTimeout(closure_0.onLongPress, closure_0.props.delayLongPress);
             }
           }
-          if (state === GenericTouchable(5435).State.END) {
-            const longPressDetected = closure_0.longPressDetected;
-            let tmp5 = !longPressDetected;
-            if (!longPressDetected) {
-              tmp5 = closure_0.STATE !== closure_0.MOVED_OUTSIDE;
-            }
-            if (tmp5) {
-              tmp5 = undefined === closure_0.pressOutTimeout;
-            }
-            const result = closure_0.handleGoToUndetermined();
-            if (tmp5) {
-              const props = closure_0.props;
-              const onPress = props.onPress;
-              if (onPress != null) {
-                onPress();
-              }
-            }
-          }
+          closure_0.lastIsPressed = tmp;
         }
       }
-      closure_0.moveToState(closure_0.UNDETERMINED);
+      let tmp18 = state !== InnerBorderlessButton(5455).State.ACTIVE || pointerInside || undefined === closure_0.longPressTimeout;
+      if (tmp18) {
+        let tmp19 = undefined === closure_0.longPressTimeout;
+        if (!tmp19) {
+          let tmp22 = state !== InnerBorderlessButton(5455).State.END;
+          if (tmp22) {
+            tmp22 = state !== InnerBorderlessButton(5455).State.CANCELLED;
+          }
+          if (tmp22) {
+            tmp22 = state !== InnerBorderlessButton(5455).State.FAILED;
+          }
+          tmp19 = tmp22;
+        }
+        tmp18 = tmp19;
+      }
+      if (!tmp18) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(closure_0.longPressTimeout);
+        closure_0.longPressTimeout = undefined;
+      }
+      tmp8 = tmp !== closure_0.lastIsPressed && closure_0.props.onActiveStateChange;
     };
-    tmp3Result.onLongPressDetected = () => {
+    tmp3Result.onLongPress = () => {
       closure_0.longPressDetected = true;
       const props = closure_0.props;
       const onLongPress = props.onLongPress;
@@ -100,237 +140,177 @@ class GenericTouchable {
         onLongPress();
       }
     };
+    tmp3Result.onHandlerStateChange = (arg0) => {
+      const props = closure_0.props;
+      if (props.onHandlerStateChange != null) {
+        onHandlerStateChange(arg0);
+      }
+      closure_0.handleEvent(arg0);
+    };
+    tmp3Result.onGestureEvent = (arg0) => {
+      const props = closure_0.props;
+      const onGestureEvent = props.onGestureEvent;
+      if (onGestureEvent != null) {
+        onGestureEvent(arg0);
+      }
+      closure_0.handleEvent(arg0);
+    };
+    tmp3Result.lastIsPressed = false;
+    tmp3Result.longPressDetected = false;
     return tmp3Result;
   }
 }
-_inherits(GenericTouchable, fn(19).Component);
+InnerBorderlessButton = InnerBaseButton;
+_inherits(InnerBaseButton, noop.Component);
 const entry = {
-  key: "handlePressIn",
-  value: function handlePressIn() {
-    const self = this;
-    if (this.props.delayPressIn) {
-      const _setTimeout = setTimeout;
-      self.pressInTimeout = setTimeout(() => {
-        self.moveToState(obj.BEGAN);
-        self.pressInTimeout = undefined;
-      }, self.props.delayPressIn);
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    const obj = { ref: this.props.innerRef, rippleColor: props.rippleColor };
+    const merged = Object.assign(_objectWithoutProperties(props, closure_3));
+    ({ onGestureEvent: obj.onGestureEvent, onHandlerStateChange: obj.onHandlerStateChange } = this);
+    return application_id(LegacyRawButton, obj);
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(InnerBaseButton, items);
+importDefaultResultResult.defaultProps = { delayLongPress: 600 };
+let closure_18 = Animated.createAnimatedComponent(importDefaultResultResult);
+class LegacyBaseButton {
+  constructor(arg0) {
+    obj = { innerRef: global.ref };
+    merged = Object.assign(Object.assign(global, Object.assign({ ref: 0 })));
+    return jsx(closure_17, obj);
+  }
+}
+function AnimatedBaseButton(innerRef) {
+  const merged = Object.assign(Object.assign(innerRef, Object.assign({ ref: 0 })));
+  return application_id(closure_18, { innerRef: innerRef.ref });
+}
+const underlay = StyleSheet.create({ underlay: { position: "absolute", left: 0, right: 0, bottom: 0, top: 0 } });
+class InnerRectButton {
+  constructor(arg0) {
+    self = this;
+    tmp = metroImportDefault(this, InnerBorderlessButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_9;
+    obj = closure_9(InnerBorderlessButton);
+    tmp3 = closure_8;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      self.moveToState(obj.BEGAN);
+      constructResult = obj.apply(self, items);
     }
-    if (self.props.onLongPress) {
-      const _setTimeout2 = setTimeout;
-      self.longPressTimeout = setTimeout(
-        self.onLongPressDetected,
-        (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0),
-      );
-      const tmp4 = self.props.delayPressIn || 0;
-      const tmp5 = self.props.delayLongPress || 0;
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.onActiveStateChange = (arg0) => {
+      props = props.props;
+      const onActiveStateChange = props.onActiveStateChange;
+      if (onActiveStateChange != null) {
+        onActiveStateChange(arg0);
+      }
+    };
+    value = new closure_10.Value(0);
+    tmp3Result.opacity = value;
+    return tmp3Result;
+  }
+}
+InnerBorderlessButton = InnerRectButton;
+_inherits(InnerRectButton, noop.Component);
+const entry1 = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ children, style } = props);
+    let flattenResult = StyleSheet.flatten(style);
+    if (flattenResult == null) {
+      flattenResult = {};
     }
-  },
+    const obj = {};
+    const merged = Object.assign(_objectWithoutProperties(props, closure_4));
+    obj.ref = self.props.innerRef;
+    obj.style = flattenResult;
+    obj.onActiveStateChange = self.onActiveStateChange;
+    const obj2 = { style: null };
+    items = [underlay.underlay, { opacity: self.opacity }, { backgroundColor: self.props.underlayColor, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
+    obj2.style = items;
+    const items1 = [application_id(Animated.View, obj2), children];
+    obj.children = items1;
+    return state(LegacyBaseButton, obj);
+  }
 };
-let items = [
-  entry,
-  {
-    key: "handleMoveOutside",
-    value: function handleMoveOutside() {
-      const self = this;
-      if (this.props.delayPressOut) {
-        let pressOutTimeout = self.pressOutTimeout;
-        if (!pressOutTimeout) {
-          const _setTimeout = setTimeout;
-          pressOutTimeout = setTimeout(() => {
-            self.moveToState(obj.MOVED_OUTSIDE);
-            self.pressOutTimeout = undefined;
-          }, self.props.delayPressOut);
-        }
-        self.pressOutTimeout = pressOutTimeout;
-      } else {
-        self.moveToState(obj.MOVED_OUTSIDE);
+let items1 = [entry1];
+const importDefaultResultResult1 = _createClass(InnerRectButton, items1);
+importDefaultResultResult1.defaultProps = { activeOpacity: 0.105, underlayColor: "black" };
+class InnerBorderlessButton {
+  constructor(arg0) {
+    self = this;
+    tmp = metroImportDefault(this, InnerBorderlessButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_9;
+    obj = closure_9(InnerBorderlessButton);
+    tmp3 = closure_8;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.onActiveStateChange = (arg0) => {
+      props = props.props;
+      const onActiveStateChange = props.onActiveStateChange;
+      if (onActiveStateChange != null) {
+        onActiveStateChange(arg0);
       }
-    },
-  },
-  {
-    key: "handleGoToUndetermined",
-    value: function handleGoToUndetermined() {
-      const self = this;
-      clearTimeout(this.pressOutTimeout);
-      if (this.props.delayPressOut) {
-        const _setTimeout = setTimeout;
-        self.pressOutTimeout = setTimeout(() => {
-          if (self.STATE === self.UNDETERMINED) {
-            self.moveToState(self.BEGAN);
-          }
-          self.moveToState(self.UNDETERMINED);
-          self.pressOutTimeout = undefined;
-        }, self.props.delayPressOut);
-      } else {
-        if (self.STATE === obj.UNDETERMINED) {
-          self.moveToState(obj.BEGAN);
-        }
-        self.moveToState(obj.UNDETERMINED);
-      }
-    },
-  },
-  {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.reset();
-    },
-  },
-  {
-    key: "reset",
-    value: function reset() {
-      const obj = { longPressDetected: false, pointerInside: true };
-      clearTimeout(obj.pressInTimeout);
-      clearTimeout(obj.pressOutTimeout);
-      clearTimeout(obj.longPressTimeout);
-      obj.pressOutTimeout = undefined;
-      obj.longPressTimeout = undefined;
-      obj.pressInTimeout = undefined;
-    },
-  },
-  {
-    key: "moveToState",
-    value: function moveToState(BEGAN) {
-      const self = this;
-      if (BEGAN !== this.STATE) {
-        if (BEGAN === obj.BEGAN) {
-          const props3 = self.props;
-          const onPressIn = props3.onPressIn;
-          if (onPressIn != null) {
-            onPressIn();
-          }
-        } else if (BEGAN === obj.MOVED_OUTSIDE) {
-          const props2 = self.props;
-          const onPressOut2 = props2.onPressOut;
-          if (onPressOut2 != null) {
-            onPressOut2();
-          }
-        } else if (BEGAN === obj.UNDETERMINED) {
-          self.reset();
-          if (self.STATE === obj.BEGAN) {
-            const props = self.props;
-            const onPressOut = props.onPressOut;
-            if (onPressOut != null) {
-              onPressOut();
-            }
-          }
-        }
-        const props4 = self.props;
-        const onStateChange = props4.onStateChange;
-        if (onStateChange != null) {
-          onStateChange(self.STATE, BEGAN);
-        }
-        self.STATE = BEGAN;
-      }
-    },
-  },
-  {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.reset();
-    },
-  },
-  {
-    key: "onMoveIn",
-    value: function onMoveIn() {
-      const self = this;
-      if (this.STATE === obj.MOVED_OUTSIDE) {
-        self.moveToState(tmp.BEGAN);
-      }
-    },
-  },
-  {
-    key: "onMoveOut",
-    value: function onMoveOut() {
-      const self = this;
-      clearTimeout(this.longPressTimeout);
-      this.longPressTimeout = undefined;
-      if (this.STATE === obj.BEGAN) {
-        self.handleMoveOutside();
-      }
-    },
-  },
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      if (typeof this.props.hitSlop === "number") {
-        const rect = {
-          top: self.props.hitSlop,
-          left: self.props.hitSlop,
-          bottom: self.props.hitSlop,
-          right: self.props.hitSlop,
-        };
-        let hitSlop = rect;
-      } else {
-        hitSlop = self.props.hitSlop;
-      }
-      const obj2 = {
-        style: self.props.containerStyle,
-        onHandlerStateChange: null,
-        onGestureEvent: null,
-        hitSlop: null,
-        userSelect: null,
-        shouldActivateOnStart: null,
-        disallowInterruption: null,
-        testID: null,
-        touchSoundDisabled: null,
-        enabled: null,
-      };
-      let onHandlerStateChange;
-      if (!self.props.disabled) {
-        onHandlerStateChange = self.onHandlerStateChange;
-      }
-      obj2.onHandlerStateChange = onHandlerStateChange;
-      obj2.onGestureEvent = self.onGestureEvent;
-      obj2.hitSlop = hitSlop;
-      obj2.userSelect = self.props.userSelect;
-      obj2.shouldActivateOnStart = self.props.shouldActivateOnStart;
-      obj2.disallowInterruption = self.props.disallowInterruption;
-      obj2.testID = self.props.testID;
-      let flag = self.props.touchSoundDisabled;
-      if (flag == null) {
-        flag = false;
-      }
-      obj2.touchSoundDisabled = flag;
-      obj2.enabled = !self.props.disabled;
-      const merged = Object.assign(self.props.extraButtonProps);
-      const obj3 = {};
-      const merged1 = Object.assign({
-        accessible: false !== self.props.accessible,
-        accessibilityLabel: self.props.accessibilityLabel,
-        accessibilityHint: self.props.accessibilityHint,
-        accessibilityRole: self.props.accessibilityRole,
-        accessibilityState: self.props.accessibilityState,
-        accessibilityActions: self.props.accessibilityActions,
-        onAccessibilityAction: self.props.onAccessibilityAction,
-        nativeID: self.props.nativeID,
-        onLayout: self.props.onLayout,
-      });
-      obj3.style = self.props.style;
-      obj3.children = self.props.children;
-      obj2.children = <Animated.View />;
-      return jsx(GenericTouchable(5553).LegacyBaseButton, {
-        style: self.props.containerStyle,
-        onHandlerStateChange: null,
-        onGestureEvent: null,
-        hitSlop: null,
-        userSelect: null,
-        shouldActivateOnStart: null,
-        disallowInterruption: null,
-        testID: null,
-        touchSoundDisabled: null,
-        enabled: null,
-      });
-    },
-  },
-];
-const importDefaultResultResult = _createClass(GenericTouchable, items);
-importDefaultResultResult.defaultProps = {
-  delayLongPress: 600,
-  extraButtonProps: { rippleColor: "transparent", exclusive: true },
+    };
+    value = new closure_10.Value(1);
+    tmp3Result.opacity = value;
+    return tmp3Result;
+  }
+}
+_inherits(InnerBorderlessButton, noop.Component);
+const entry2 = {
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    ({ children, style, innerRef } = props);
+    const obj = {};
+    const merged = Object.assign(_objectWithoutProperties(props, closure_5));
+    obj.innerRef = innerRef;
+    obj.onActiveStateChange = this.onActiveStateChange;
+    items = [style, false];
+    obj.style = items;
+    obj.children = children;
+    return application_id(AnimatedBaseButton, obj);
+  }
 };
+const items2 = [entry2];
+const importDefaultResultResult2 = _createClass(InnerBorderlessButton, items2);
+importDefaultResultResult2.defaultProps = { activeOpacity: 0.3, borderless: true };
 
-export default importDefaultResultResult;
-export { TOUCHABLE_STATE };
+export { LegacyRawButton };
+export { LegacyBaseButton };
+export (innerRef) => {
+  const merged = Object.assign(Object.assign(innerRef, Object.assign({ ref: 0 })));
+  return application_id(importDefaultResultResult1, { innerRef: innerRef.ref });
+}
+export (innerRef) => {
+  const merged = Object.assign(Object.assign(innerRef, Object.assign({ ref: 0 })));
+  return application_id(importDefaultResultResult2, { innerRef: innerRef.ref });
+}
+export (ref) => {
+  const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+  const obj = {};
+  const merged1 = Object.assign(merged);
+  obj.ref = ref.ref;
+  obj.needsOffscreenAlphaCompositing = true;
+  return application_id(ButtonComponentDefault, obj);
+}

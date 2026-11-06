@@ -1,7 +1,13 @@
 // _runtime/metro/13163__.js
+import registerAsset from "01119__.js";
 
-export default {
-  parse: function selectorList() {
-    return this.createSingleNodeList(this.SelectorList());
-  },
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/conjure/home/images",
+  width: 640,
+  height: 360,
+  scales: [1],
+  hash: "4e5bae29363ccb3adb92755885f5263f",
+  name: "conjure-home-spoilers-automod",
+  type: "svg",
+});

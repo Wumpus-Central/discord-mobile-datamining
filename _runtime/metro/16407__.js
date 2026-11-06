@@ -1,11 +1,4 @@
 // _runtime/metro/16407__.js
-import _mod16386 from "16386__.js";
+import _mod16393 from "16393__.js";
 
-const tmp = _mod16386.navigator && _mod16386.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
-
-export default str;
+export default (arg0) => Object(_mod16393(arg0));

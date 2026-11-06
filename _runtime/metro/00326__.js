@@ -265,7 +265,7 @@ class VirtualizedSectionList {
       _modDef38(null != index.index, "Received a broken ViewToken");
       const _subExtractorResult = closure_0._subExtractor(index.index);
       if (_subExtractorResult) {
-        const keyExtractor = _subExtractorResult.section.keyExtractor;
+        keyExtractor = _subExtractorResult.section.keyExtractor;
         let keyExtractor2 = closure_0.props.keyExtractor;
         if (!keyExtractor2) {
           keyExtractor2 = VirtualizedSectionList(313).keyExtractor;
@@ -598,7 +598,7 @@ let items = [
             trailingItem: null,
             trailingSection: null,
           };
-          let keyExtractor = tmp3.keyExtractor;
+          keyExtractor = tmp3.keyExtractor;
           const text = `${key}:`;
           if (!keyExtractor) {
             keyExtractor = tmp2;

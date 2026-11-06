@@ -26,14 +26,15 @@ let closure_129_4;
 let closure_129_5;
 let closure_129_6;
 [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9] = items;
-function mutableGuestDecorator(arg0, prototype, arg2) {
+function mutableGuestDecorator(arg0, arg1, arg2) {
+  closure_0 = arg1;
   const dirty = arg2;
   closure_2 = arg0;
   const obj = {
     value: {
       get() {
         if (1 !== globalThis.__RUNTIME_KIND) {
-          let sync = prototype.getSync();
+          let sync = closure_0.getSync();
         } else {
           require();
           if (dirty.getDirty()) {
@@ -45,7 +46,7 @@ function mutableGuestDecorator(arg0, prototype, arg2) {
             }
             pnpm_mutablesNativeTs1.__workletHash = 4312510271641;
             pnpm_mutablesNativeTs1.__initData = tmp3;
-            sync = dependencyMap(pnpm_mutablesNativeTs1, prototype);
+            sync = dependencyMap(pnpm_mutablesNativeTs1, closure_0);
           }
         }
         return sync;
@@ -53,7 +54,7 @@ function mutableGuestDecorator(arg0, prototype, arg2) {
       set(arg0) {
         if (1 === globalThis.__RUNTIME_KIND) {
           closure_3();
-          items = [hasOwnProperty, prototype, arg0];
+          items = [hasOwnProperty, closure_0, arg0];
           c0 = undefined;
           c1 = undefined;
           [tmp8, tmp9, tmp10] = items;
@@ -66,7 +67,7 @@ function mutableGuestDecorator(arg0, prototype, arg2) {
           pnpm_mutablesNativeTs2.__initData = tmp8;
           closure_4(pnpm_mutablesNativeTs2);
         } else {
-          prototype.setAsync(arg0);
+          closure_0.setAsync(arg0);
         }
       },
       enumerable: true,
@@ -74,7 +75,7 @@ function mutableGuestDecorator(arg0, prototype, arg2) {
     },
     get: {
       value() {
-        return prototype.value;
+        return closure_0.value;
       },
       configurable: false,
       enumerable: false,
@@ -83,10 +84,10 @@ function mutableGuestDecorator(arg0, prototype, arg2) {
       value(__isAnimationDefinition) {
         if (typeof __isAnimationDefinition === "function") {
           if (!__isAnimationDefinition.__isAnimationDefinition) {
-            prototype.value = __isAnimationDefinition(prototype.value);
+            closure_0.value = __isAnimationDefinition(closure_0.value);
           }
         }
-        prototype.value = __isAnimationDefinition;
+        closure_0.value = __isAnimationDefinition;
       },
       configurable: false,
       enumerable: false,
@@ -114,7 +115,7 @@ function mutableGuestDecorator(arg0, prototype, arg2) {
         items = [timestampProducer, closure_0, arg0, flag];
         [tmp, tmp2, tmp3, tmp4] = items;
         function pnpm_mutablesNativeTs3() {
-          prototype.modify(dirty, closure_1_2);
+          closure_1_0.modify(dirty, closure_1_2);
         }
         const items1 = [tmp2, tmp3, tmp4];
         pnpm_mutablesNativeTs3.__closure = items1;
@@ -152,8 +153,8 @@ function mutableGuestDecorator(arg0, prototype, arg2) {
     },
     _isReanimatedSharedValue: { value: true, writable: true, enumerable: true, configurable: true },
   };
-  Object.defineProperties(prototype, obj);
-  return prototype;
+  Object.defineProperties(arg1, obj);
+  return arg1;
 }
 let items1 = [tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9];
 mutableGuestDecorator.__closure = items1;

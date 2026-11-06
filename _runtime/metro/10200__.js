@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 240,
-  height: 152,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "99a0c83db7ec93ecc4f9138bd68cba05",
-  name: "img_guild_cap_upsell_dark",
+  hash: "3246c14a68781de782d6622fffa7ce47",
+  name: "StarOutlineIcon",
   type: "png",
 });

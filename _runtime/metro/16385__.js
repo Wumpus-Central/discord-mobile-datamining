@@ -1,77 +1,28 @@
 // _runtime/metro/16385__.js
 import _mod16386 from "16386__.js";
-import _mod16387 from "16387__.js";
 import _mod16388 from "16388__.js";
-import _mod16425 from "16425__.js";
-import _mod16426 from "16426__.js";
-import _mod16442 from "16442__.js";
-import _mod16443 from "16443__.js";
+import text from "../16395_text.js";
+import _mod16406 from "16406__.js";
+import _mod16416 from "16416__.js";
+import _mod16418 from "16418__.js";
+import _mod16420 from "16420__.js";
+import _mod16421 from "16421__.js";
 
-export default (dontCallGetSet, obj) => {
-  ({ target, global: _global, stat } = dontCallGetSet);
-  const tmp3 = _mod16386;
-  if (_global) {
-    let prototype = tmp3;
-  } else {
-    let tmp4 = tmp3[target];
-    if (stat) {
-      if (!tmp4) {
-        tmp4 = _mod16387(target, {});
+if (!_mod16386) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod16388(arg0);
+    const tmp4 = text(arg1);
+    if (!_mod16418) {
+      if (_mod16406(tmp3, tmp4)) {
+        const tmpResult = _mod16420;
+        return tmpResult(!_mod16416(_mod16421.f, tmp3, tmp4), tmp3[tmp4]);
       }
-      prototype = tmp4;
     } else {
-      prototype = tmp4;
-      if (tmp4) {
-        prototype = _mod16386[target].prototype;
-      }
+      try {
+        return getOwnPropertyDescriptor(tmp3, tmp4);
+      } catch (err) {}
     }
-  }
-  if (prototype) {
-    for (const key10024 in arg1) {
-      let tmp21 = arg1[key10024];
-      if (arg0.dontCallGetSet) {
-        obj = _mod16388;
-        let iter = obj.f(prototype, key10024);
-        value = iter;
-        if (iter) {
-          value = iter.value;
-        }
-        let tmp7 = value;
-      } else {
-        tmp7 = prototype[key10024];
-      }
-      let sum = key10024;
-      let tmp12 = _mod16425;
-      if (!_global) {
-        let str4 = "#";
-        if (stat) {
-          str4 = ".";
-        }
-        sum = target + str4 + key10024;
-      }
-      if (!tmp12(sum, arg0.forced)) {
-        if (undefined !== tmp7) {
-          if (typeof tmp21 === typeof tmp7) {
-            continue;
-          } else {
-            let tmp22 = _mod16426(tmp21, tmp7);
-          }
-        }
-        continue;
-      }
-      let sham = arg0.sham;
-      if (!sham) {
-        let sham2 = tmp7;
-        if (tmp7) {
-          sham2 = tmp7.sham;
-        }
-        sham = sham2;
-      }
-      if (sham) {
-        let tmp14 = _mod16442(tmp21, "sham", true);
-      }
-      let tmp19 = _mod16443(prototype, key10024, tmp21, arg0);
-      continue;
-    }
-  }
-};
+  };
+}
+
+export const f = getOwnPropertyDescriptor;

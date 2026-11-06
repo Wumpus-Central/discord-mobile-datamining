@@ -1,36 +1,7 @@
 // _runtime/metro/04577__.js
-import module_4427_mod from "04427__.js";
-import module_4578_mod from "04578__.js";
-import requiredArgs_mod from "../04424_requiredArgs.js";
+let closure_0 = { lastWeek: "'i' EEEE's kl.' p", yesterday: "'ig\u00E5r kl.' p", today: "'idag kl.' p", tomorrow: "'imorgon kl.' p", nextWeek: "EEEE 'kl.' p", other: "P" };
 
-let module_4427 = module_4427_mod;
-if (!module_4427) {
-  const obj = { default: module_4427 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4427;
-}
-module_4427 = tmp3;
-let module_4578 = module_4578_mod;
-if (!module_4578) {
-  const obj2 = { default: module_4578 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4578;
-}
-module_4578 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-let c3 = 3600000;
-
-export default function addHours(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4578.default(interval, module_4427.default(arg1) * c3);
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
 };
 export default exports.default;

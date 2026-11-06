@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "6dfdeab813b7b4024164980d2fd4bf7a",
-  name: "img_account_sync_league_of_legends_light_and_dark",
+  hash: "8fce658b14b12e381e1ecc554a57f171",
+  name: "img_roblox_white",
   type: "png",
 });

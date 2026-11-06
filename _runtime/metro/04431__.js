@@ -1,42 +1,12 @@
 // _runtime/metro/04431__.js
-import 04432__ from "04432__.js";
-import 04433__ from "04433__.js";
-import 04434__ from "04434__.js";
-import date_mod from "04435__.js";
-import date_mod from "04436__.js";
+import registerAsset from "01119__.js";
 
-if (!module_4432) {
-  const obj = { default: module_4432 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4432;
-}
-if (!module_4433) {
-  const obj2 = { default: module_4433 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4433;
-}
-if (!module_4434) {
-  const obj3 = { default: module_4434 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4434;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "cs", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation:
+    "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==",
+  scales: [1],
+  hash: "162de91721673a5c6627b9c9da46dc9a",
+  name: "ro.messages.162de91721673a5c6627b9c9da46dc9a.compiled.messages",
+  type: "jsona",
+});
